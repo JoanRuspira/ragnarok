@@ -1,0 +1,33 @@
+moc_fild12,157,375,4	script	Morroc Guard#moc::mocf2	946,{
+	npctalk "Morroc Guard:  Welcome to the Morroc.";
+	end;
+}
+moc_fild12,162,375,4	script	Morroc Guard#moc::mocf1	946,{
+	npctalk "Morroc Guard:  Welcome to the Morroc.";
+	end;
+}
+
+moc_fild12,157,377,5	script	Morroc Guard#moc::mocf3	707,{
+	npctalk "Morroc Guard:  Welcome to the Morroc.";
+	end;
+}
+
+moc_fild12,159,365,5	script	xxx#moc::mocf4	430,{
+	npctalk "xxxx:  xxxxx.";
+	end;
+}
+
+moc_fild12,164,365,2	script	xxx#moc::mocf5	644,{
+	npctalk "xxxx:  xxxxx.";
+	end;
+}
+
+moc_fild12,164,370,3	script	xxx#moc::mocf6	642,{
+	npctalk "xxxx:  xxxxx.";
+	end;
+}
+
+moc_fild12,160,354,4	script	xxx#moc::mocf7	648,{
+	npctalk "xxxx:  xxxxx.";
+	end;
+}

@@ -1,0 +1,432 @@
+
+izlude,49,103,5	script	Inding Wervanion#iz_dog_owner::iz_dog_owner	66,{
+	npctalk "Inding Wervanion: Check my dog! Cool eeh?";
+	end;
+}
+
+izlude,52,103,3	script	Dog#iz_dog::iz_dog	81,{
+	npctalk "Dog: grr...";
+	end;
+}
+
+izlude,44,90,4	script	Celenwe Galamin#iz_man::iz_man	70,{
+	npctalk "Celenwe Galamin: It´s a nice view from here.";
+	end;
+}
+
+izlude,57,93,2	script	Falk deGrey#iz_young_man::iz_young_man	86,{
+	npctalk "Falk deGrey: Hey, go north if you are going to Prontera.";
+	end;
+}
+
+izlude,54,93,6	script	Cottolm Beddye#iz_young_man2::iz_young_man2	89,{
+	npctalk "Cottolm Beddye: Prontera is wortha visit. Largest city in the kingdom.";
+	end;
+}
+
+izlude,32,100,6	script	Ryia Serpentwind#iz_woman::iz_woman	93,{
+	npctalk "Ryia Serpentwind: The airship stops in this city. It can take you to Yuno or Rachel!";
+	end;
+}
+
+izlude,106,103,6	script	Ukhund Bottlehelm#iz_merchant::iz_merchant	95,{
+	npctalk "Ukhund Bottlehelm: We come from the merchant guild in Alberta, south from Payon.";
+	end;
+}
+
+izlude,108,103,2	script	Loreena Mournhell#iz_alchemist::iz_alchemist	665,{
+	npctalk "Loreena Mournhell: I am training my friend to be an alchemist.";
+	end;
+}
+
+izlude,94,94,4	script	Gorvenal Redstream#iz_oldsailor::iz_oldsailor	100,{
+	npctalk "Gorvenal Redstream: Aah the sea... Always loved it with passion.";
+	end;
+}
+
+izlude,131,102,4	script	Finethil Orren#iz_bard::iz_bard	429,{
+	npctalk "Finethil Orren: What is your favourite town?";
+	end;
+}
+
+izlude,130,98,7	script	Urin Sapphirebraids#iz_merchant2::iz_merchant2	482,{
+	npctalk "Telchar Choralbraids: My facourite city is Comodo.";
+	end;
+}
+
+izlude,133,99,2	script	Telchar Goldback#iz_npc::iz_npc	484,{
+	npctalk "Urin Goldback: My facourite city is Einbroch.";
+	end;
+}
+
+
+izlude,123,125,5	script	Ophin Talraidal#iz_npc2::iz_npc2	470,{
+	npctalk "Ophin Talraidal: We used to be swordsmen. We are knights now.";
+	end;
+}
+
+izlude,125,125,4	script	Hildegard Montagu#iz_npc3::iz_npc3	469,{
+	npctalk "Hildegard Montagu: Welcome to izlude.";
+	end;
+}
+
+izlude,110,123,0	script	Monlanyn Zanonsath#iz_npc4::iz_npc4	727,{
+	npctalk "Monlanyn Zanonsath: Nice park eh.";
+	end;
+}
+
+izlude,112,126,3	script	Loinarv Reddigger#iz_npc5::iz_npc5	740,{
+	npctalk "Loinarv Reddigger: This is a great spot for resting.";
+	end;
+}
+
+izlude,108,126,5	script	Ghak Hellaxe#iz_npc5a::iz_npc5a	754,{
+	npctalk "Ghak Hellaxe: Check out the dock if you want to go to Alberta.";
+	end;
+}
+
+izlude,152,142,4	script	Bess Morningfall#iz_npc6::iz_npc6	726,{
+	npctalk "Bess Morningfall: Good luck refining!";
+	end;
+}
+
+izlude,130,160,5	script	Borin Montagu#iz_npc7::iz_npc7	97,{
+	npctalk "Borin Montagu: Some fried fish?";
+	end;
+}
+
+izlude,127,168,0	script	Ilmindel Dlaralthor#iz_npc7::iz_npc7a	123,{
+	npctalk "Ilmindel Dlaralthor: What can I get you?";
+	end;
+}
+
+izlude,119,163,2	script	Angmar Cleves#iz_npc7::iz_npc7b	125,{
+	npctalk "Angmar Cleves: Welcome to the market.";
+	end;
+}
+
+izlude,126,157,4	script	Olond Yraudhen#iz_npc8::iz_npc8	830,{
+	npctalk "Olond Yraudhen: Best pizzas in town.";
+	end;
+}
+
+izlude,133,168,5	script	Cat#iz_npc8::iz_npc8ab	554,{
+	npctalk "Cat: ZzZzZz...";
+	end;
+}
+
+izlude,112,151,5	script	Giet#iz_npc8a::iz_npc8a	95,{
+	npctalk "Giet: Check the Arena on the west part of Izlude!";
+	end;
+}
+
+izlude,124,139,7	script	Imrodel Runelenrin#iz_npc9::iz_npc9	778,{
+	npctalk "Imrodel Runelenrin: I am storing my loot with Kafra.";
+	end;
+}
+
+izlude,127,139,3	script	Gharol Skullbinder#iz_npc10::iz_npc10	745,{
+	npctalk "Gharol Skullbinder: We just came back from Byalan island.";
+	end;
+}
+
+izlude,126,143,4	script	Endell Maycey#iz_npc11::iz_npc11	832,{
+	npctalk "Endell Maycey: There is an undersea cave in Byalan.";
+	end;
+}
+
+izlude,141,147,2	script	Telchar Goldback#iz_npc12::iz_npc12	828,{
+	npctalk "Tigerstalker: Check out the gear shop on the opposite side of the square.";
+	end;
+}
+
+izlude,137,174,3	script	Krea Fenwick#iz_npc13::iz_npc13	430,{
+	npctalk "Krea Fenwick: I love to take a walk around the market.";
+	end;
+}
+
+
+izlude,151,154,4	script	Althalos Bladewalker#iz_npc14::iz_npc14	915,{
+	npctalk "Althalos Bladewalker: We come from Freyas grand temple in Rachel.";
+	end;
+}
+
+izlude,150,151,0	script	Carac Duststone#iz_npc15::iz_npc15	917,{
+	npctalk "Carac Duststone: We have traleved a long way.";
+	end;
+}
+
+izlude,136,157,1	script	Zog Doommaul#iz_npc16::iz_npc16	851,{
+	npctalk "Zog Doommaul: Not sure what to buy today.";
+	end;
+}
+
+izlude,156,164,2	script	Idrinden Dlaralthor#iz_npc17::iz_npc17	864,{
+	npctalk "Idrinden Dlaralthor: Do you think we are ready for the Arena?";
+	end;
+}
+
+izlude,153,164,6	script	Duli Brightmaster#iz_npc18::iz_npc18	884,{
+	npctalk "Duli Brightmaster: Do you think we are ready for the Arena?";
+	end;
+}
+
+izlude,109,172,5	script	Hoot #iz_npc20::iz_npc20	883,{
+	npctalk "Hoot : Go to the stylist on the other side of the square to improve your looks.";
+	end;
+}
+
+izlude,120,171,5	script	Bilcorin Tohim#iz_npc21::iz_npc21	863,{
+	npctalk "Bilcorin Tohim: Nice fruit in this store.";
+	end;
+}
+
+izlude,88,166,5	script	Ervina Dane#iz_npc21a::iz_npc21a	629,{
+	npctalk "Ervina Dane: The swordsmen guild is across the bridge.";
+	end;
+}
+
+izlude,91,166,2	script	Serelath#iz_npc22::iz_npc22	779,{
+	npctalk "Serelath: Good luck if you are applying!";
+	end;
+}
+
+izlude,105,163,5	script	Bifund Blackbender#iz_npc23::iz_npc23	774,{
+	npctalk "Bifund Blackbender: I have heard of a turtle shaped island not far from Alberta...";
+	end;
+}
+
+izlude,120,187,4	script	Reward Smallburrow#iz_npc24::iz_npc24	797,{
+	npctalk "Reward Smallburrow: Its so warm today!";
+	end;
+}
+
+izlude,127,183,0	script	Findelye Dlaralthor#iz_npc25::iz_npc25	798,{
+	npctalk "Findelye Dlaralthor: Always pick cards if monsters drop them.";
+	end;
+}
+
+izlude,147,192,0	script	Inding Runlithmae#iz_npc26::iz_npc26	807,{
+	npctalk "Inding Runlithmae: The dock is down that way.";
+	end;
+}
+
+izlude,178,207,3	script	Gonk Battlefury#iz_npc27::iz_npc27	83,{
+	npctalk "Gonk Battlefury: The sailors can take you far away. I come from Amatsu! Had to stop in Alberta first...";
+	end;
+}
+
+izlude,194,214,4	script	Gonk Battlefury#iz_npc27::iz_npc27a	105,{
+	npctalk "Dock Guard: Welcome to the izlude dock.";
+	end;
+}
+
+izlude,197,214,4	script	Gonk Battlefury#iz_npc27::iz_npc27b	105,{
+	npctalk "Dock Guard: Welcome to the izlude dock.";
+	end;
+}
+
+izlude,184,212,2	script	xxxxx#iz_npc27::iz_npc27c	76,{
+	npctalk "xxxx: xxxxxx.";
+	end;
+}
+
+izlude,163,205,5	script	xxxxx#iz_npc27::iz_npc27d	85,{
+	npctalk "xxxx: xxxxxxx.";
+	end;
+}
+
+izlude,154,199,5	script	xxxxx#iz_npc27::iz_npc27e	75,{
+	npctalk "xxxx: Want some flowers?";
+	end;
+}
+
+izlude,95,168,0	script	Butcher#iz_merchant::iz_merchantf	85,{
+	npctalk "Butcher: I'm closing for today.";
+	end;
+}
+
+izlude,90,147,6	script	xxxx#iz_merchant::iz_merchantg	688,{
+	npctalk "xxxx: xxx.";
+	end;
+}
+
+izlude,93,145,3	script	xxxx#iz_merchant::iz_merchanth	693,{
+	npctalk "xxxx: xxx.";
+	end;
+}
+
+izlude,97,134,6	script	xxxx#iz_merchant::iz_merchanti	74,{
+	npctalk "xxxx: xxx.";
+	end;
+}
+
+izlude,106,138,3	script	xxxx#iz_merchant::iz_merchantj	82,{
+	npctalk "xxxx: xxx.";
+	end;
+}
+
+izlude,107,135,3	script	xxxx#iz_merchant::iz_merchantk	81,{
+	npctalk "xxxx: xxx.";
+	end;
+}
+
+izlude,75,252,3	script	xxxx#iz_merchant::iz_merchantl	813,{
+	npctalk "xxxx: We are making repairs to this building.";
+	end;
+}
+
+izlude,77,246,3	script	xxxx#iz_merchant::iz_merchantm	726,{
+	npctalk "xxxx: Watch out.";
+	end;
+}
+
+izlude,79,250,6	script	xxxx#iz_merchant::iz_merchantn	105,{
+	npctalk "Guard: This academy building is closed to the public.";
+	end;
+}
+
+izlude,109,246,5	script	xxxx#iz_merchant::iz_merchanto	567,{
+	npctalk "xxxx: Hello.";
+	end;
+}
+
+izlude,69,210,0	script	xxxx#iz_merchant::iz_merchantp	654,{
+	npctalk "xxxx: This is a statue of the founder of Izlude.";
+	end;
+}
+
+izlude,64,204,3	script	xxxx#iz_merchant::iz_merchantq	698,{
+	npctalk "xxxx: Not many people know this resting spot.";
+	end;
+}
+
+izlude,146,135,2	script	xxxx#iz_merchant::iz_merchantr	79,{
+	npctalk "xxxx: My refinement failed...";
+	end;
+}
+
+izlude,142,121,5	script	xxxx#iz_merchant::iz_merchants	84,{
+	npctalk "xxxx: Hello.";
+	end;
+}
+
+izlude,130,202,4	script	Gorvenal Montagu#iz_npc28::iz_npc28	753,{
+	npctalk "Gorvenal Montagu: I have just visited the Izlude Academy.";
+	end;
+}
+
+izlude,115,255,5	script	Nelal Gwamiel#iz_npc29::iz_npc29	755,{
+	npctalk "Nelal Gwamiel: I am a professor at the academy.";
+	end;
+}
+
+izlude,123,242,5	script	Iririen Lithtaur#iz_npc30::iz_npc30	754,{
+	npctalk "Iririen Lithtaur: I will be a professor one day.";
+	end;
+}
+
+izlude,125,242,3	script	Wise Hummingbird#iz_npc31::iz_npc31	750,{
+	npctalk "Wise Hummingbird: We are preparing for exams here.";
+	end;
+}
+
+izlude,124,237,1	script	Thrinain Largegut#iz_npc32::iz_npc32	748,{
+	npctalk "Thrinain Largegut: I hope the exams this year are easy...";
+	end;
+}
+
+izlude,130,223,6	script	Halfo Twofoot#iz_npc33::iz_npc33	751,{
+	npctalk "Halfo Twofoot: The thief guild is in the pyramids near Morroc.";
+	end;
+}
+
+izlude,133,223,2	script	Leo Cleves#iz_npc34::iz_npc34	538,{
+	npctalk "Leo Cleves: I want to become a thief. Their guild is far away!";
+	end;
+}
+
+izlude,133,190,2	script	Miath LB#iz_npc35::iz_npc35	732,{
+	npctalk "Miath LB: Acolytes are trained in the Prontera church.";
+	end;
+}
+
+izlude,124,83,4	script	Hily Mynge#iz_npc36::iz_npc36	808,{
+	npctalk "Hily Mynge: The airship stop is this way.";
+	end;
+}
+
+izlude,128,67,5	script	Terrowin Montagu#iz_npc37::iz_npc37	804,{
+	npctalk "Terrowin Montagu: I used to captain one of the airships.";
+	end;
+}
+
+izlude,130,65,1	script	Snak Burningarm#iz_npc38::iz_npc38	542,{
+	npctalk "Snak Burningarm: Does this airship go to Veins?";
+	end;
+}
+
+izlude,127,52,7	script	Maerwynn Mournhell#iz_npc39::iz_npc39	571,{
+	npctalk "Maerwynn Mournhell: I am already tired! I need to level up!";
+	end;
+}
+
+izlude,147,60,6	script	Keen Eye#iz_npc40::iz_npc40	702,{
+	npctalk "Keen Eye: We are leaving to Yuno shortly.";
+	end;
+}
+
+izlude,149,60,2	script	Atiel Elervir#iz_npc41::iz_npc41	703,{
+	npctalk "Atiel Elervir: We have got tickets for the airship already.";
+	end;
+}
+
+izlude,147,58,0	script	Letholdus Cromwell#iz_npc42::iz_npc42	696,{
+	npctalk "Letholdus Cromwell: We bought tickets yesterday.";
+	end;
+}
+
+izlude,124,60,5	script	Ahan Earthdelver#iz_npc43::iz_npc43	895,{
+	npctalk "Ahan Earthdelver: Check the mission board on the central square to level up faster.";
+	end;
+}
+
+izlude,154,52,5	script	Alianor Serpentwind#iz_npc44::iz_npc44	896,{
+	npctalk "Alianor Serpentwind: The card remover can remove cards from your equipment.";
+	end;
+}
+
+izlude,169,59,3	script	Golemmoth Tathviel#iz_npc45::iz_npc45	900,{
+	npctalk "Golemmoth Tathviel: I heard of a boat wreckage you can visit. Maybe a salor can take you there.";
+	end;
+}
+
+izlude,185,76,5	script	Borin Morningfall#iz_npc46::iz_npc46	741,{
+	npctalk "Borin Morningfall: I am witing for the next airship service.";
+	end;
+}
+
+izlude,189,67,1	script	Dirinor Tathviel#iz_npc47::iz_npc47	420,{
+	npctalk "Dirinor Tathviel: I thought the airship had a stop in Payon, but I was wrong.";
+	end;
+}
+
+izlude,119,150,5	script	Cassius Duststone#iz_npc48::iz_npc48	752,{
+	npctalk "Cassius Duststone: Check the mission board for faster EXP!";
+	end;
+}
+
+izlude,202,165,3	script	Rime Longfoot#iz_npc49::iz_npc49	64,{
+	npctalk "Rime Longfoot: I just cleared the arena. You think you are ready?";
+	end;
+}
+
+izlude,205,158,6	script	Rainydayas Serpentwind#iz_npc50::iz_npc50	430,{
+	npctalk "Rainydayas Serpentwind: Should I go inside?";
+	end;
+}
+
+izlude,145,166,3	script	Cedany Truegust#iz_npc51::iz_npc51	118,{
+	npctalk "Cedany Truegust: Go to the Academia here in Izlude to learn all about 1st jobs!";
+	end;
+}

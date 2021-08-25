@@ -1,0 +1,50 @@
+
+prt_fild08,165,369,4	script	Prontera Guard#prt_guard::prt_guard	105,{
+	npctalk "Welcome to Prontera, capital of the Rune Midgard kingom.";
+	end;
+}
+
+prt_fild08,338,203,3	script	Prontera Guard#pf_npc:pf_npc	751,{
+	npctalk "William Cartwright: I visited the Prontera sewers. The enrance is in the field west from the city.";
+	end;
+}
+
+prt_fild08,347,216,5	script	Izlude Captain#pf_npc1:pf_npc1	733,{
+	npctalk "Izlude Captain: Welcome to Izlude.";
+	end;
+}
+
+prt_fild08,162,355,5	script	Janshai Cleves#prt_srdmn::prt_srdmn	688,{
+	npctalk  "Janshai Cleves: Take a rest if you need to recover after a battle.";
+	end;
+}
+
+prt_fild08,165,354,1	script	Atheena Crewe#prt_srdmn2::prt_srdmn2	1,{
+	npctalk "Atheena Crewe: The swordsman guild is located in Izlude, go check it out to apply!";
+	end;
+}
+
+prt_fild08,177,360,5	script	Umund Bottlehelm#prt_novice::prt_novice	0,{
+	npctalk "Umund Bottlehelm: Remember to pick up your loots!";
+	end;
+}
+
+prt_fild08,340,220,3	script	Winifred Mistsplitter#prt_advnt::prt_advnt	70,{
+	npctalk "Winifred Mistsplitter: I am thinking of going to the archer village north of Payon to become an archer. It is a long way from here...";
+	end;
+}
+
+prt_fild08,159,363,5	script	Gilme Orrina#pf_npc3::pf_npc3	727,{
+	npctalk "Gilme Orrina: There is an interesting cave in the archer village, north of Payon.";
+	end;
+}
+
+prt_fild08,180,367,1	script	Sybbyl Cartwright#pf_npc5::pf_npc5	669,{
+	npctalk "Sybbyl Cartwright: So this is Prontera...";
+	end;
+}
+
+prt_fild08,344,206,5	script	Finaeli Orren#pf_npc4::pf_npc4	682,{
+	npctalk "Finaeli Orren: You will get to the sograt desert if you keep south. Morroc and the thief guild are there.";
+	end;
+}

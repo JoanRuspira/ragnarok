@@ -1,0 +1,117 @@
+//JobNo,Skill-ID,MaxLv{,BaseLvReq,JobLvReq},Prerequisite Skill-ID-1,Prerequisite Skill-ID-1-Lv,PrereqSkill-ID-2,PrereqSkill-ID-2-Lv,PrereqSkill-ID-3,PrereqSkill-ID-3-Lv,PrereqSkill-ID-4,PrereqSkill-ID-4-Lv,PrereqSkill-ID-5,PrereqSkill-ID-5-Lv//CLASS_SKILLNAME#Skill Name#
+//Novice
+0,1,9,0,0,0,0,0,0,0,0,0,0 //NV_BASIC#Basic Skill#
+0,142,1,0,0,0,0,0,0,0,0,0,0 //NV_FIRSTAID#First Aid#
+0,143,1,0,0,0,0,0,0,0,0,0,0 //NV_TRICKDEAD#Act Dead#
+0,410,1,0,0,0,0,0,0,0,0,0,0 //WE_CALLBABY#Call Baby#
+
+//Archer
+3,1,9,0,0,0,0,0,0,0,0,0,0 //NV_BASIC#Basic Skill#
+3,142,1,0,0,0,0,0,0,0,0,0,0 //NV_FIRSTAID#First Aid#
+3,43,5,0,0,0,0,0,0,0,0,0,0 //AC_OWL#Owl's Eye#
+3,44,5,0,0,0,0,0,0,0,0,0,0 //AC_VULTURE#Vulture's Eye#
+3,29,5,0,0,0,0,0,0,0,0,0,0 //AL_INCAGI#Increase AGI#
+3,45,5,0,0,0,0,0,0,0,0,0,0 //AC_CONCENTRATION#Improve Concentration#
+3,46,5,0,0,0,0,0,0,0,0,0,0 //AC_DOUBLE#Double Strafe#
+3,47,5,0,0,0,0,0,0,0,0,0,0 //AC_SHOWER#Arrow Shower#
+3,315,5,0,0,0,0,0,0,0,0,0,0 //BA_MUSICALLESSON#Music Lesson#
+3,2412,5,0,0,0,0,0,0,0,0,0,0 //WM_LESSON#Voice Lesson#
+3,147,1,0,0,0,0,0,0,0,0,0,0 //AC_MAKINGARROW#Arrow Crafting#
+3,265,5,0,0,0,0,0,0,0,0,0,0 //MO_DODGE#Flee#
+3,9,5,0,0,0,0,0,0,0,0,0,0 //WM_LESSON#SP recovery#
+3,363,5,0,0,0,0,0,0,0,0,0,0 //HP_MEDITATIO#Meditatio#
+3,48,5,0,0,0,0,0,0,0,0,0,0 //TF_DOUBLE#Double attack#
+3,128,5,0,0,0,0,0,0,0,0,0,0 //HT_STEELCROW#Steel crow#
+3,2245,5,0,0,0,0,0,0,0,0,0,0 //RA_TOOTHOFWUG#Tooth of warg#
+3,2430,5,0,0,0,0,0,0,0,0,0,0 //AC_BOW#Bow Mastery#
+
+//Bard
+19,1,9,0,0,0,0,0,0,0,0,0,0 //NV_BASIC#Basic Skill#
+19,142,1,0,0,0,0,0,0,0,0,0,0 //NV_FIRSTAID#First Aid#
+19,43,5,0,0,0,0,0,0,0,0,0,0 //AC_OWL#Owl's Eye#
+19,44,5,0,0,0,0,0,0,0,0,0,0 //AC_VULTURE#Vulture's Eye#
+19,29,5,0,0,0,0,0,0,0,0,0,0 //AL_INCAGI#Increase AGI#
+19,45,5,0,0,0,0,0,0,0,0,0,0 //AC_CONCENTRATION#Improve Concentration#
+19,46,5,0,0,0,0,0,0,0,0,0,0 //AC_DOUBLE#Double Strafe#
+19,47,5,0,0,0,0,0,0,0,0,0,0 //AC_SHOWER#Arrow Shower#
+19,315,5,0,0,0,0,0,0,0,0,0,0 //BA_MUSICALLESSON#Music Lesson#
+19,2412,5,0,0,0,0,0,0,0,0,0,0 //WM_LESSON#Voice Lesson#
+19,147,1,0,0,0,0,0,0,0,0,0,0 //AC_MAKINGARROW#Arrow Crafting#
+19,265,5,0,0,0,0,0,0,0,0,0,0 //MO_DODGE#Flee#
+19,9,5,0,0,0,0,0,0,0,0,0,0 //WM_LESSON#SP recovery#
+19,363,5,0,0,0,0,0,0,0,0,0,0 //HP_MEDITATIO#Meditatio#
+19,48,5,0,0,0,0,0,0,0,0,0,0 //TF_DOUBLE#Double attack#
+19,128,5,0,0,0,0,0,0,0,0,0,0 //HT_STEELCROW#Steel crow#
+19,2245,5,0,0,0,0,0,0,0,0,0,0 //RA_TOOTHOFWUG#Tooth of warg#
+19,2430,5,0,0,0,0,0,0,0,0,0,0 //AC_BOW#Bow Mastery#
+
+19,2381,5,0,0,0,0,0,0,0,0,0,0 //MI_RUSH_WINDMILL#Windmill Rush Attack#
+19,321,5,2381,5,0,0,0,0,0,0,0,0 //BA_POEMBRAGI#Magic Strings#
+19,309,5,321,5,0,0,0,0,0,0,0,0 //BD_DRUMBATTLEFIELD#Battle Theme#
+19,487,5,309,5,0,0,0,3,0,0,0,0 //CG_LONGINGFREEDOM#Longing for freedom#
+
+19,304,1,321,2,316,2,0,0,0,0,0,0 //BD_ADAPTATION#Amp#
+19,2293,5,304,1,0,0,0,0,0,0,0,0 //WM_LULLABY_DEEPSLEEP#Deep Sleep Lullaby#
+
+19,316,5,0,0,0,0,0,0,0,0,0,0 //BA_MUSICALSTRIKE#Melody Strike#
+19,320,5,316,5,0,0,0,0,0,0,0,0 //BA_ASSASSINCROSS#Impressive Riff#
+19,2288,5,320,5,0,0,0,0,0,0,0,0 //SC_TRIANGLESHOT#Triangle Shot#
+19,2426,5,2288,5,0,0,0,0,0,0,0,0 //WM_GREAT_ECHO#Great Echo#
+
+19,305,1,316,2,322,2,0,0,0,0,0,0 //BD_ENCORE#Encore#
+19,2413,5,305,1,0,0,0,0,0,0,0,0 //WM_METALICSOUND#Metallic Sound#
+
+19,2382,5,0,0,0,0,0,0,0,0,0,0 //MI_ECHOSONG#Echo Song#
+19,322,5,2382,5,0,0,0,0,0,0,0,0 //BA_APPLEIDUN#Song of Lutie#
+19,2423,5,322,5,0,0,0,0,0,0,0,0 //WM_SIRCLEOFNATURE#Circle Of Nature's Sound#
+19,5007,5,2423,5,0,0,0,0,0,0,0,0 //WM_FRIGG_SONG#
+//Clown
+4020,1,9,0,0,0,0,0,0,0,0,0,0 //NV_BASIC#Basic Skill#
+4020,142,1,0,0,0,0,0,0,0,0,0,0 //NV_FIRSTAID#First Aid#
+4020,43,5,0,0,0,0,0,0,0,0,0,0 //AC_OWL#Owl's Eye#
+4020,44,5,0,0,0,0,0,0,0,0,0,0 //AC_VULTURE#Vulture's Eye#
+4020,29,5,0,0,0,0,0,0,0,0,0,0 //AL_INCAGI#Increase AGI#
+4020,45,5,0,0,0,0,0,0,0,0,0,0 //AC_CONCENTRATION#Improve Concentration#
+4020,46,5,0,0,0,0,0,0,0,0,0,0 //AC_DOUBLE#Double Strafe#
+4020,47,5,0,0,0,0,0,0,0,0,0,0 //AC_SHOWER#Arrow Shower#
+4020,315,5,0,0,0,0,0,0,0,0,0,0 //BA_MUSICALLESSON#Music Lesson#
+4020,2412,5,0,0,0,0,0,0,0,0,0,0 //WM_LESSON#Voice Lesson#
+4020,147,1,0,0,0,0,0,0,0,0,0,0 //AC_MAKINGARROW#Arrow Crafting#
+4020,265,5,0,0,0,0,0,0,0,0,0,0 //MO_DODGE#Flee#
+4020,9,5,0,0,0,0,0,0,0,0,0,0 //WM_LESSON#SP recovery#
+4020,363,5,0,0,0,0,0,0,0,0,0,0 //HP_MEDITATIO#Meditatio#
+4020,48,5,0,0,0,0,0,0,0,0,0,0 //TF_DOUBLE#Double attack#
+4020,128,5,0,0,0,0,0,0,0,0,0,0 //HT_STEELCROW#Steel crow#
+4020,2245,5,0,0,0,0,0,0,0,0,0,0 //RA_TOOTHOFWUG#Tooth of warg#
+4020,2430,5,0,0,0,0,0,0,0,0,0,0 //AC_BOW#Bow Mastery#
+
+4020,2381,5,0,0,0,0,0,0,0,0,0,0 //MI_RUSH_WINDMILL#Windmill Rush Attack#
+4020,321,5,2381,5,0,0,0,0,0,0,0,0 //BA_POEMBRAGI#Magic Strings#
+4020,309,5,321,5,0,0,0,0,0,0,0,0 //BD_DRUMBATTLEFIELD#Battle Theme#
+4020,487,5,309,5,0,0,0,3,0,0,0,0 //CG_LONGINGFREEDOM#Longing for freedom#
+4020,380,5,487,5,0,0,0,0,0,0,0,0 //SN_SIGHT#Falcon Eyes#
+4020,5002,5,380,5,0,0,0,0,0,0,0,0 //RA_UNLIMIT#Unlimit#
+
+4020,304,1,321,2,316,2,0,0,0,0,0,0 //BD_ADAPTATION#Amp#
+4020,2293,5,304,1,0,0,0,0,0,0,0,0 //SC_GROOMY#Masquerade-Gloomy#
+4020,489,5,2293,5,0,0,0,0,0,0,0,0 //CG_TAROTCARD#Gloomy Day#
+4020,2383,5,489,5,0,0,0,0,0,0,0,0 //MI_HARMONIZE#Harmonize#
+
+4020,316,5,0,0,0,0,0,0,0,0,0,0 //BA_MUSICALSTRIKE#Melody Strike#
+4020,320,5,316,5,0,0,0,0,0,0,0,0 //BA_ASSASSINCROSS#Impressive Riff#
+4020,2288,5,320,5,0,0,0,0,0,0,0,0 //SC_TRIANGLESHOT#Triangle Shot#
+4020,2426,5,2288,5,0,0,0,0,0,0,0,0 //WM_GREAT_ECHO#Great Echo#
+4020,2418,5,2426,5,0,0,0,0,0,0,0,0 //WM_SEVERE_RAINSTORM#Severe Rainstorm#
+4020,394,5,2418,5,0,0,0,0,0,0,0,0 //CG_ARROWVULCAN#Vulcan Arrow#
+
+4020,305,1,316,2,322,2,0,0,0,0,0,0 //BD_ENCORE#Encore#
+4020,2413,5,305,1,0,0,0,0,0,0,0,0 //WM_METALICSOUND#Metallic Sound#
+4020,2352,5,2413,5,0,0,0,0,0,0,0,0 //WA_MOONLIT_SERENADE#Moonlit Serenade#
+4020,2414,5,2352,5,0,0,0,0,0,0,0,0 //WM_REVERBERATION#Reverberation#
+
+4020,2382,5,0,0,0,0,0,0,0,0,0,0 //MI_ECHOSONG#Echo Song#
+4020,322,5,2382,5,0,0,0,0,0,0,0,0 //BA_APPLEIDUN#Song of Lutie#
+4020,2423,5,322,5,0,0,0,0,0,0,0,0 //WM_SIRCLEOFNATURE#Circle Of Nature's Sound#
+4020,5007,5,2423,5,0,0,0,0,0,0,0,0 //WM_FRIGG_SONG#
+4020,2427,5,5007,5,0,0,0,0,0,0,0,0 //WM_SONG_OF_MANA#Song Of Mana#
+4020,2431,5,2427,5,0,0,0,0,0,0,0,0 //WM_LERADS_DEW#Lerads Dew#

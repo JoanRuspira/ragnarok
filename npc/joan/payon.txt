@@ -1,0 +1,396 @@
+
+payon,168,67,4	script	PayonGuard#pay_arche::pay_npc1	708,{
+	npctalk "Payon Guard: Welcome to Payon.";
+	end;
+}
+
+
+payon,168,64,2	script	PayonGuard#pay_arche::pay_npc2	708,{
+	npctalk "Payon Guard: Welcome to Payon.";
+	end;
+}
+
+payon,152,98,6	script	Edun Thorntown#pay_arche::pay_npc3	688,{  //m
+	npctalk "Edun Thorntown: I'm so hungry!";
+	end;
+}
+
+payon,156,101,3	script	Sharn Redbleeder#pay_arche::pay_npc4	693,{  //f
+	npctalk "Sharn Redbleeder: This is our favourite place.";
+	end;
+}
+
+payon,163,100,2	script	Kulmey#pay_arche::pay_npc5	748,{ // m
+	npctalk "Kulmey: Where is my stuff!?.";
+	end;
+}
+
+payon,152,89,5	script	Leofrick de Mowbray#pay_arche::pay_npc6	766,{ //m
+	npctalk "Leofrick de Mowbray: I used to own the armor shop here.";
+	end;
+}
+
+payon,164,87,6	script	Asher Lunadream#pay_arche::pay_npc7	742,{ //m
+	npctalk "Asher Lunadream: This town is wonderful.";
+	end;
+}
+
+payon,175,111,3	script	Duli Forgemaul#pay_arche::pay_npc8	733,{ //m
+	npctalk "Duli Forgemaul: The palace is north from here. If that is what you are looking for.";
+	end;
+}
+
+payon,178,111,3	script	Ophin Dlaralthor#pay_arche::pay_npc9	728,{ //f
+	npctalk "Ophin Dlaralthor: We are knights sent from Prontera.";
+	end;
+}
+
+payon,174,96,3	script	Egoron Runelenrin#pay_arche::pay_npc10	482,{ //f
+	npctalk "Egoron Runelenrin: That tool dealer doesn´t have much stuff...";
+	end;
+}
+
+payon,161,126,6	script	Holme Gerubb#pay_arche::pay_npc11	777,{ //m
+	npctalk "Holme Gerubb: Are you looking for the quests board? It's just further north.";
+	end;
+}
+
+payon,172,120,1	script	Umbaroth#pay_arche::pay_npc12	770,{ //f
+	npctalk "Umbaroth: I love how peaceful this place is.";
+	end;
+}
+
+payon,173,176,4	script	Enereg Falavaul#pay_arche::pay_npc13	772,{ //f
+	npctalk "Enereg Falavaul: Please get off the board.";
+	end;
+}
+
+payon,176,176,4	script	Eckhart Cloudfang#pay_arche::pay_npc14	485,{ //f
+	npctalk "Eckhart Cloudfang: We will be starting soon.";
+	end;
+}
+
+payon,170,178,4	script	Orpip Saljin#pay_arche::pay_npc15	741,{ //m
+	npctalk "Orpip Saljin: Let us get ready for our next show.";
+	end;
+}
+
+payon,173,168,0	script	Brom Cloudfang#pay_arche::pay_npc16	774,{ //m
+	npctalk "Brom Cloudfang: When are they starting?";
+	end;
+}
+
+payon,176,165,0	script	Dirinor Birlond#pay_arche::pay_npc17	97,{ //m
+	npctalk "Dirinor Birlond: When are they starting?";
+	end;
+}
+
+payon,170,169,7	script	Findire Birlond#pay_arche::pay_npc18	582,{ //m
+	npctalk "Findire Birlond: Are they starting again?";
+	end;
+}
+
+payon,159,160,2	script	Sadon Fenwick#pay_arche::pay_npc19	98,{ //f
+	npctalk "Sadon Fenwick: Good luck refining!";
+	end;
+}
+
+payon,166,155,7	script	Dhohlos Pogenath#pay_arche::pay_npc21	106,{ //f
+	npctalk "Dhohlos Pogenath: Do you know where the card remover is?";
+	end;
+}
+
+payon,149,215,6	script	Holfo Headstrong#pay_arche::pay_npc20	790,{ //m
+	npctalk "Holfo Headstrong: What can I get you?";
+	end;
+}
+
+payon,160,221,0	script	Grapip Ummop Jelen Fargrim#pay_arche::pay_npc22	788,{ //m
+	npctalk "Grapip Ummop Jelen Fargrim: You won't find much people from Umbala here.";
+	end;
+}
+
+payon,158,220,0	script	Xyronoa Elwyse Lilfyx Klorhana#pay_arche::pay_npc23	787,{ //m
+	npctalk "Xyronoa Elwyse Lilfyx Klorhana: We come from far away!";
+	end;
+}
+
+payon,152,209,4	script	Akan Hammermail#pay_arche::pay_npc24	798,{ //m
+	npctalk "Akan Hammermail: I was impressed with the palace.";
+	end;
+}
+
+payon,145,232,4	script	PalaceGuard#pay_arche::pay_npc25	780,{ 
+	npctalk "Palace Guard: Welcome to the Payon palace.";
+	end;
+}
+
+payon,148,232,4	script	PalaceGuard#pay_arche::pay_npc26	780,{ 
+	npctalk "Palace Guard: Welcome to the Payon palace.";
+	end;
+}
+
+payon,164,232,4	script	PalaceGuard#pay_arche::pay_npc27	780,{ 
+	npctalk "Palace Guard: Welcome to the Payon palace.";
+	end;
+}
+
+payon,167,232,4	script	PalaceGuard#pay_arche::pay_npc28	780,{ 
+	npctalk "Palace Guard: Welcome to the Payon palace.";
+	end;
+}
+
+payon,140,196,2	script	PalaceGuard#pay_arche::pay_npc29	634,{ 
+	npctalk "Payon Archer: Let me practice my strafing.";
+	end;
+}
+
+payon,144,205,6	script	Geda Hardcloak#pay_arche::pay_npc30	107,{ 
+	npctalk "Geda Hardcloak: Sit here and rest.";
+	end;
+}
+
+payon,137,223,4	script	Latelch Barrelchin#pay_arche::pay_npc31	881,{ 
+	npctalk "Latelch Barrelchin: These gardens are beautiful.";
+	end;
+}
+
+payon,166,205,7	script	Imrodel Cromelon#pay_arche::pay_npc32	50,{ 
+	npctalk "Imrodel Cromelon: These are the palace gardens.";
+	end;
+}
+
+payon,166,205,7	script	Perrath#pay_arche::pay_npc32a	50,{ 
+	npctalk "Perrath: These are the palace gardens.";
+	end;
+}
+
+payon,174,214,1	script	Quinn de Mowbray#pay_arche::pay_npc33	483,{ 
+	npctalk "Quinn de Mowbray: Have you visited the norh cave?";
+	end;
+}
+
+payon,218,254,6	script	PalaceGuard#pay_arche::pay_npc34	708,{ 
+	npctalk "Palace Guard: Welcome to the Payon Palace grounds.";
+	end;
+}
+
+payon,218,246,6	script	PalaceGuard#pay_arche::pay_npc35	708,{ 
+	npctalk "Palace Guard: Welcome to the Payon Palace grounds.";
+	end;
+}
+
+payon,192,255,3	script	Gili Forgegrog#pay_arche::pay_npc36	700,{ 
+	npctalk "Gili Forgegrog: I am here to visit the palace.";
+	end;
+}
+
+payon,199,107,6	script	Inding Kithollal#pay_arche::pay_npc37	695,{ 
+	npctalk "Inding Kithollal: I am here rest a bit.";
+	end;
+}
+
+payon,206,110,2	script	Brom Writingham#pay_arche::pay_npc38	693,{ 
+	npctalk "Brom Writingham: This is a nice place.";
+	end;
+}
+
+payon,220,104,4	script	Galaser Runlithmae#pay_arche::pay_npc39	698,{ 
+	npctalk "Galaser Runlithmae: Mind giving me some privacy?";
+	end;
+}
+
+payon,202,125,4	script	Imithren Kithollal#pay_arche::pay_npc40	474,{ 
+	npctalk "Imithren Kithollal: That man is yelling too much!";
+	end;
+}
+
+payon,226,152,4	script	Uhela deNart#pay_arche::pay_npc41	840,{ 
+	npctalk "Uhela deNart: Want some tea?";
+	end;
+}
+
+payon,212,163,0	script	Benevolence Cartwright#pay_arche::pay_npc42	532,{ 
+	npctalk "Benevolence Cartwright: Follow this path north to the Archer village.";
+	end;
+}
+
+payon,210,216,6	script	Gluronk Deathsong#pay_arche::pay_npc43	410,{ 
+	npctalk "Gluronk Deathsong: I tried to find Eddga in the south forest.";
+	end;
+}
+
+payon,226,225,3	script	Altalas Kevadirtinu#pay_arche::pay_npc44	98,{ 
+	npctalk "Altalas Kevadirtinu: This path is a nice walk for us.";
+	end;
+}
+
+payon,229,220,5	script	DogPa#pay_arche::pay_npc45	81,{ 
+	npctalk "Dog: ...";
+	end;
+}
+
+payon,236,285,0	script	Akag Reddigger#pay_arche::pay_npc46	79,{ 
+	npctalk "Akag Reddigger: Next stop, the cave!";
+	end;
+}
+
+payon,238,283,1	script	Harley Chaucer#pay_arche::pay_npc47	67,{ 
+	npctalk "Harley Chaucer: We have just visited the palace.";
+	end;
+}
+
+payon,84,178,4	script	PalaceGuard#pay_arche::pay_npc48	708,{ 
+	npctalk "Payon Guard: Welcome to Payon.";
+	end;
+}
+
+payon,92,178,4	script	PalaceGuard#pay_arche::pay_npc49	708,{ 
+	npctalk "Payon Guard: Welcome to Payon.";
+	end;
+}
+
+payon,95,223,5	script	Tavrinth#pay_arche::pay_npc50	103,{ 
+	npctalk "Tavrinth: Glad to see someone here.";
+	end;
+}
+
+payon,112,230,0	script	Khainan Rubyminer#pay_arche::pay_npc51	99,{ 
+	npctalk "Khainan Rubyminer: What is on the other side of the bridge?.";
+	end;
+}
+
+payon,109,324,4	script	PalaceGuard#pay_arche::pay_npc52	708,{ 
+	npctalk "Palace Guard: This part of the palace is not open to visitors.";
+	end;
+}
+
+payon,105,324,4	script	PalaceGuard#pay_arche::pay_npc53	708,{ 
+	npctalk "Palace Guard: This part of the palace is not open to visitors.";
+	end;
+}
+
+payon,104,313,6	script	Dwali Blackbender#pay_arche::pay_npc54	666,{ 
+	npctalk "Dwali Blackbender: All these stairs and I can't go in?";
+	end;
+}
+
+payon,113,318,3	script	Jhank#pay_arche::pay_npc55	742,{ 
+	npctalk "Jhank: That is disappointing...";
+	end;
+}
+
+payon,81,318,0	script	Fay Crewe#pay_arche::pay_npc56	741,{ 
+	npctalk "Fay Crewe: Cool visit.";
+	end;
+}
+
+payon,152,317,2	script	Eghuglat Doomhorn#pay_arche::pay_npc57	740,{ 
+	npctalk "Eghuglat Doomhorn: At least this part is open to visitors.";
+	end;
+}
+
+payon,190,301,5	script	Umbaroth#pay_arche::pay_npc58	753,{ 
+	npctalk "Umbaroth: One can see the whole town from here.";
+	end;
+}
+
+payon,123,105,7	script	Endinwel Tathviel#pay_arche::pay_npc59	732,{ 
+	npctalk "Endinwel Tathviel: I've just finished my house.";
+	end;
+}
+
+payon,100,150,4	script	Tristan Rowntree#pay_arche::pay_npc60	754,{ 
+	npctalk "Tristan Rowntree: This path is not that well known.";
+	end;
+}
+
+payon,98,148,7	script	Finde Dlarraithar#pay_arche::pay_npc61	763,{ 
+	npctalk "Finde Dlarraithar : Makes it ideal for a nice walk.";
+	end;
+}
+
+payon,109,116,3	script	Brom Keenseeker#pay_arche::pay_npc62	765,{ 
+	npctalk "Brom Keenseeker: Have you been to Greenwood Lake, west of here?";
+	end;
+}
+
+payon,131,61,3	script	Sadon Redstream#pay_arche::pay_npc63	750,{ 
+	npctalk "Sadon Redstream: We come across the forest from Alberta.";
+	end;
+}
+
+payon,128,60,3	script	Whirr#pay_arche::pay_npc64	735,{ 
+	npctalk "Whirr: It's been a long walk.";
+	end;
+}
+
+payon,78,66,4	script	Simon Bladewalker#pay_arche::pay_npc65	107,{ 
+	npctalk "Simon Bladewalker: This is my meditating spot.";
+	end;
+}
+
+payon,73,106,0	script	Kondos Ughazath#pay_arche::pay_npc66	757,{ 
+	npctalk "Kondos Ughazath: Are you here to visit the Greenwood Lake? Just cross the bridge.";
+	end;
+}
+
+payon,19,147,6	script	LakeGuard#pay_arche::pay_npc67	708,{ 
+	npctalk "Lake Guard: Over here for the Greenwood Lake.";
+	end;
+}
+
+payon,239,59,4	script	Anne Gwamiel #pay_arche::pay_npc68	474,{ 
+	npctalk "Anne Mournhell: Hello.";
+	end;
+}
+
+payon,235,56,6	script	Egos Gwamiel #pay_arche::pay_npc69	881,{ 
+	npctalk "Egos Gwamiel: What brings you here?";
+	end;
+}
+
+payon,238,91,2	script	Joseph Cleves#pay_arche::pay_npc70	570,{ 
+	npctalk "Joseph Cleves: Payon ends here. Be careful with Eddga in the forest!";
+	end;
+}
+
+payon_in03,87,179,6	script	Malkyn Cleves#pay_arche::pay_npc71	47,{ 
+	npctalk "Malkyn Cleves: This is the Palace's hall. Important matters are decided here.";
+	end;
+}
+
+payon_in03,94,168,7	script	Alexia Truegust#pay_arche::pay_npc72	28,{ 
+	npctalk "Alexia Truegust: I love this place.";
+	end;
+}
+
+payon_in03,108,172,7	script	Gregory Montagu#pay_arche::pay_npc73	107,{ 
+	npctalk "Gregory Montagu: Let me work please.";
+	end;
+}
+
+payon_in03,79,169,0	script	Enndolynn Farlight#pay_arche::pay_npc73a	25,{ 
+	npctalk "Enndolynn Farlight: Greetings.";
+	end;
+}
+
+payon_in03,117,177,3	script	Peronell de Bolbec#pay_arche::pay_npc73b	51,{ 
+	npctalk "Peronell de Bolbec: Hello there!";
+	end;
+}
+
+payon_in03,96,180,5	script	Palace Guard#pay_arche::pay_npc74	708,{ 
+	npctalk "Palace Guard: What is your business with the elder?";
+	end;
+}
+
+payon_in03,103,180,5	script	Palace Guard#pay_arche::pay_npc75	708,{ 
+	npctalk "Palace Guard: What is your business with the elder?";
+	end;
+}
+
+payon_in03,104,159,5	script	Ilmindel Wervanion#pay_arche::pay_npc76	542,{ 
+	npctalk "Ilmindel Wervanion: Welcome to the castle hall.";
+	end;
+}

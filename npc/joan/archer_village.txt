@@ -1,0 +1,125 @@
+
+pay_arche,48,139,5	script	Barda Ashglade#pay_arche::pay_arche1	64,{
+	npctalk "Barda Ashglade: There´s an MVP deep in the cave.";
+	end;
+}
+
+pay_arche,50,136,1	script	Kelvin Glorybluff#pay_arche::pay_arche2	570,{
+	npctalk "Kelvin Glorybluff: I am sure I can take it!";
+	end;
+}
+
+pay_arche,47,136,7	script	Dog#pay_arche::pay_arche3	81,{
+	npctalk "Dog: ...";
+	end;
+}
+
+pay_arche,52,127,3	script	Thomas de Mowbray#pay_arche::pay_arche4	89,{
+	npctalk "Thomas de Mowbray: Do you come from Payon?";
+	end;
+}
+
+pay_arche,43,128,6	script	Destrian Cornwallis#pay_arche::pay_arche5	695,{
+	npctalk "Destrian Cornwallis: Ooof, I almost died in there...";
+	end;
+}
+
+pay_arche,59,140,4	script	Doran Commonbrook#pay_arche::pay_arche6	690,{
+	npctalk "Doran Commonbrook: There is a shop over there If you need anything.";
+	end;
+}
+
+pay_arche,39,128,6	script	Archer Village Guard#pay_arche::pay_arche7	825,{
+	npctalk "Archer Village Guard: Remember to take potions and fly wings before going to deep in the cave.";
+	end;
+}
+
+pay_arche,68,136,6	script	Donald Hillless#pay_arche::pay_arche8	634,{
+	npctalk "Donald Hillless: Double Strafe!!";
+	end;
+}
+
+pay_arche,132,157,4	script	Iririen Nhaendrin#pay_arche::pay_arche9	727,{
+	npctalk "Iririen Nhaendrin: Are you here to visit the archer guild?";
+	end;
+}
+
+pay_arche,140,148,5	script	Ushug Clanripper#pay_arche::pay_arche10	11,{
+	npctalk "Ushug Clanripper: I remember the first time I was here.";
+	end;
+}
+
+pay_arche,139,164,3	script	Archer Village Guard#pay_arche::pay_arche11	825,{
+	npctalk "Archer Village Guard: Welcome to the Archer guild.";
+	end;
+}
+
+pay_arche,144,158,3	script	Archer Village Guard#pay_arche::pay_arche12	825,{
+	npctalk "Archer Village Guard: Welcome to the Archer guild.";
+	end;
+}
+
+pay_arche,124,108,7	script	Arkud Flintgranite#pay_arche::pay_arche13	798,{
+	npctalk "Arkud Flintgranite: There's always good deals around here.";
+	end;
+}
+
+pay_arche,65,90,1	script	Fastolph Gerop#pay_arche::pay_arche14	765,{
+	npctalk "Fastolph Gerop: We walk to the cave entrance every day.";
+	end;
+}
+
+pay_arche,63,89,1	script	Mentha Twofoot#pay_arche::pay_arche15	760,{
+	npctalk "Mentha Twofoot: We walk to the cave entrance every day.";
+	end;
+}
+
+pay_arche,90,92,2	script	Archer Village Guide#pay_arche::pay_arche16	767,{
+	npctalk "Archer Village Guide: This way to the mercenary centre and Archer guild.";
+	end;
+}
+
+pay_arche,75,81,6	script	Archer Village Guide#pay_arche::pay_arche17	767,{
+	npctalk "Archer Village Guide: This way to the cave.";
+	end;
+}
+
+pay_arche,93,64,0	script	Archer Village Guide#pay_arche::pay_arche18	767,{
+	npctalk "Archer Village Guide: This way to Payon Monument.";
+	end;
+}
+
+pay_arche,81,52,4	script	Doran Stonesworn#pay_arche::pay_arche19	706,{
+	npctalk "Doran Stonesworn: We saw the famous cave!";
+	end;
+}
+
+pay_arche,83,52,4	script	Elered Stonesworn#pay_arche::pay_arche20	764,{
+	npctalk "Elered Stonesworn: It's our first time visiting the village.";
+	end;
+}
+
+pay_arche,132,38,5	script	Isolde Laughingsteel#pay_arche::pay_arche21	758,{
+	npctalk "Isolde Laughingsteel: This is the Payon monument, it brings good fortune to travellers.";
+	end;
+}
+
+pay_arche,136,33,5	script	Kelvin Darkdraft#pay_arche::pay_arche22	751,{
+	npctalk "Kelvin Darkdraft: I hope this brings me fortune.";
+	end;
+}
+
+pay_arche,127,37,5	script	Irim Hammermail#pay_arche::pay_arche23	743,{
+	npctalk "Irim Hammermail: I am here to study the monument.";
+	end;
+}
+
+pay_arche,122,69,5	script	Ella Fenwick#pay_arche::pay_arche24	746,{
+	npctalk "Ella Fenwick: This is a good spot to practice skills";
+	end;
+}
+
+pay_arche,126,65,1	script	Benedict Duststone#pay_arche::pay_arche25	753,{
+	npctalk "Benedict Duststone: Should we keep practicing?";
+	end;
+}

@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source Files\criticalhitCalculator">
+      <UniqueIdentifier>{853b337b-a952-4d46-86b5-f83872b4ae85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\skillBaseDamageCalculator">
+      <UniqueIdentifier>{3ad6d71c-d297-4d3d-b61f-4b9e366fe7cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\criticalHitCalculator">
+      <UniqueIdentifier>{c6dfa518-6074-4e5e-b598-412465dbf3bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\skillAtkRatioCalculator">
+      <UniqueIdentifier>{9d21aacc-55bc-4e54-a58c-f4a12522f99d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\skillBaseDamageCalculator">
+      <UniqueIdentifier>{615ca4da-09f8-4771-8474-cdb50d40ecdd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\skillMatkRatioCalculator">
+      <UniqueIdentifier>{d0d36d65-86c5-44ab-8b96-a847d2cd9c56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\structures">
+      <UniqueIdentifier>{fc32a67e-0d23-4756-8966-e017039fcf78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\skillMatkRatioCalculator\crusader">
+      <UniqueIdentifier>{fd894390-e9d3-4352-8e27-cf793a8d6011}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\skillAtkRatioCalculator\crusader">
+      <UniqueIdentifier>{a398dae7-900f-4f3f-acbe-5ae2fd857fc6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\skillAtkRatioCalculator\knight">
+      <UniqueIdentifier>{fc5acfa8-1f66-4881-83bf-fe3f32e58ae1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\skillAtkRatioCalculator\swordsman">
+      <UniqueIdentifier>{65150508-03eb-4e62-8ec7-26bfdeeca3fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\skillAtkRatioCalculator\archer">
+      <UniqueIdentifier>{44935ede-9b2e-416b-956c-a1bbf30a0775}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\skillMAtkRatioCalculator">
+      <UniqueIdentifier>{27441732-9ef4-4e2b-be6b-48e8a345f04e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\skillMAtkRatioCalculator\crusader">
+      <UniqueIdentifier>{49b86a60-338a-4322-a35f-3b0e6bc52ec3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\skillAtkRatioCalculator">
+      <UniqueIdentifier>{e482c4ab-044e-499a-9d08-c5974ce62579}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\skillAtkRatioCalculator\crusader">
+      <UniqueIdentifier>{09572755-1354-43d4-935f-643abe91d8ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\skillAtkRatioCalculator\knight">
+      <UniqueIdentifier>{fdb0c836-1e7f-4176-ac30-0b18efefb2b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\skillAtkRatioCalculator\swordsman">
+      <UniqueIdentifier>{bdbafa5b-d0bf-4a93-becd-3251e5ad39a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\skillAtkRatioCalculator\archer">
+      <UniqueIdentifier>{8049a975-8c4f-473c-9fde-95d94e6ca09c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="achievement.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="atcommand.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="battle.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="battleground.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="buyingstore.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cashshop.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="channel.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chat.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chrif.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clan.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clif.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clif_obfuscation.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clif_packetdb.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clif_shuffle.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="date.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="duel.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="elemental.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="guild.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="homunculus.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="instance.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intif.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="itemdb.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="log.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mail.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="map.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mapreg.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mercenary.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mob.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="npc.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="packets.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="packets_struct.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="party.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="path.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pc.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pc_groups.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pet.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="quest.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="script.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="script_constants.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="searchstore.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="skill.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="status.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="storage.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="trade.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unit.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vending.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CrusaderSkillAtkRatioCalculator.h">
+      <Filter>Header Files\skillAtkRatioCalculator\crusader</Filter>
+    </ClInclude>
+    <ClInclude Include="CrusaderSkillMatkRatioCalculator.h">
+      <Filter>Header Files\skillMatkRatioCalculator\crusader</Filter>
+    </ClInclude>
+    <ClInclude Include="EquipmentAttackCalculator.h">
+      <Filter>Header Files\skillBaseDamageCalculator</Filter>
+    </ClInclude>
+    <ClInclude Include="KnightSkillAtkRatioCalculator.h">
+      <Filter>Header Files\skillAtkRatioCalculator\knight</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillBaseDamageCalculator.h">
+      <Filter>Header Files\skillBaseDamageCalculator</Filter>
+    </ClInclude>
+    <ClInclude Include="SwordsmanSkillAtkRatioCalculator.h">
+      <Filter>Header Files\skillAtkRatioCalculator\swordsman</Filter>
+    </ClInclude>
+    <ClInclude Include="CriticalHitCalculator.h">
+      <Filter>Header Files\criticalHitCalculator</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Damage.h">
+      <Filter>Header Files\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="ArcherSkillAtkRatioCalculator.h">
+      <Filter>Header Files\skillAtkRatioCalculator\archer</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="achievement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="atcommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="battle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="battleground.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="buyingstore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cashshop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="channel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chrif.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="clan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="clif.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="date.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="duel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="elemental.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="guild.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="homunculus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="instance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intif.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="itemdb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="log.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mail.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="map.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mapreg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mercenary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mob.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="npc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="npc_chat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="party.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="path.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pc_groups.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="quest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="script.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="searchstore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="skill.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="status.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="storage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="trade.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vending.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CriticalHitCalculator.cpp">
+      <Filter>Source Files\criticalhitCalculator</Filter>
+    </ClCompile>
+    <ClCompile Include="EquipmentAttackCalculator.cpp">
+      <Filter>Source Files\skillBaseDamageCalculator</Filter>
+    </ClCompile>
+    <ClCompile Include="SkillBaseDamageCalculator.cpp">
+      <Filter>Source Files\skillBaseDamageCalculator</Filter>
+    </ClCompile>
+    <ClCompile Include="CrusaderSkillMatkRatioCalculator.cpp">
+      <Filter>Source Files\skillMAtkRatioCalculator\crusader</Filter>
+    </ClCompile>
+    <ClCompile Include="SwordsmanSkillAtkRatioCalculator.cpp">
+      <Filter>Source Files\skillAtkRatioCalculator\swordsman</Filter>
+    </ClCompile>
+    <ClCompile Include="KnightSkillAtkRatioCalculator.cpp">
+      <Filter>Source Files\skillAtkRatioCalculator\knight</Filter>
+    </ClCompile>
+    <ClCompile Include="CrusaderSkillAtkRatioCalculator.cpp">
+      <Filter>Source Files\skillAtkRatioCalculator\crusader</Filter>
+    </ClCompile>
+    <ClCompile Include="ArcherSkillAtkRatioCalculator.cpp">
+      <Filter>Source Files\skillAtkRatioCalculator\archer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="map-server.rc" />
+  </ItemGroup>
+</Project>
