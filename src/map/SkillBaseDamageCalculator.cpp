@@ -349,8 +349,8 @@ void SkillBaseDamageCalculator::battle_calc_attack_masteries(Damage * wd, block_
 			if (sd) {
 				skill = pc_checkskill(sd, RA_TOOTHOFWUG);
 
-				ATK_ADD(wd->damage, wd->damage2, 30 * skill);
-				ATK_ADD(wd->masteryAtk, wd->masteryAtk2, 30 * skill);
+				ATK_ADD(wd->damage, wd->damage2, 30 * skill * 2);
+				ATK_ADD(wd->masteryAtk, wd->masteryAtk2, 30 * skill * 2);
 			}
 			break;
 		}
