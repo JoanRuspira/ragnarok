@@ -4231,7 +4231,7 @@ bool MobDatabase::parseDropNode(std::string nodeName, YAML::Node node, uint8 max
 		item_data *item = itemdb_search_aegisname(item_name.c_str());
 
 		if (item == nullptr) {
-			this->invalidWarning(dropit["Item"], "Monster %s item %s does not exist, skipping.\n", nodeName.c_str(), item_name.c_str());
+			//this->invalidWarning(dropit["Item"], "Monster %s item %s does not exist, skipping.\n", nodeName.c_str(), item_name.c_str());
 			continue;
 		}
 
