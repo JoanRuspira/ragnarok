@@ -425,7 +425,7 @@ morocc,288,199,2	script	xxxx#moc::moc382	66,{
 }
 
 morocc,296,300,2	script	Morroc Guard#moc::moc383	946,{
-	npctalk "MOrroc Guard: Welcome to Morroc.";
+	npctalk "Morroc Guard: Welcome to Morroc.";
 	end;
 }
 
@@ -449,14 +449,6 @@ morocc,156,25,0	script	Morroc Guard#moc::moc387	946,{
 	npctalk "Morroc Guard: Welcome to Morroc.";
 	end;
 }
-
-
-
-
-
-
-
-
 
 morocc,273,222,3	script	xxxxx#moc::moc3871	654,{
 	npctalk "xxxx: xxxx.";
@@ -692,3 +684,338 @@ morocc,155,228,0	script	Palace Guard#moc::moc2010	946,{
 	npctalk "Palace Guard:  Welcome to the Morroc Palace Grounds.";
 	end;
 }
+
+morocc,140,90,0	script	xxxxxx#moc::moc2010a	642,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,132,99,3	script	xxxxxx#moc::moc2010s	648,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,140,97,5	script	xxxxxx#moc::moc2010w	641,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,127,93,4	script	xxxxxx#moc::moc2010e	677,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,117,92,5	script	xxxxxx#moc::moc2010r	805,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+
+morocc,120,78,4	script	xxxxxx#moc::moc2010t	647,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,112,83,7	script	xxxxxx#moc::moc2010y	930,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,103,80,5	script	xxxxxx#moc::moc2010u	931,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,110,77,7	script	xxxxxx#moc::moc2010i	942,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,145,43,0	script	xxxxxx#moc::moc2010o	943,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,147,52,4	script	xxxxxx#moc::moc2010p	951,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,138,53,1	script	xxxxxx#moc::moc2010a1c	967,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+
+morocc,130,59,4	script	xxxxxx#moc::moc2010d	996,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,128,50,3	script	xxxxxx#moc::moc2010f	997,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,119,50,6	script	xxxxxx#moc::moc2010g	983,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,119,50,6	script	xxxxxx#moc::moc2010h	993,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,112,53,3	script	xxxxxx#moc::moc2010j	975,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,110,44,6	script	xxxxxx#moc::moc2010k	995,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,110,44,6	script	xxxxxx#moc::moc2010l	995,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,104,49,2	script	xxxxxx#moc::moc2010z	998,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+
+morocc,100,41,3	script	xxxxxx#moc::moc2010x	935,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+
+morocc,91,47,4	script	xxxxxx#moc::moc2010c	940,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+
+morocc,93,37,7	script	xxxxxx#moc::moc2010v	892,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+
+morocc,84,39,1	script	xxxxxx#moc::moc2010b	895,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+
+morocc,80,52,4	script	xxxxxx#moc::moc2010n	896,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,75,41,0	script	xxxxxx#moc::moc2010m	901,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+
+morocc,71,51,7	script	xxxxxx#moc::moc2010qq	897,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+
+morocc,73,72,4	script	xxxxxx#moc::moc2010ww	475,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,54,48,7	script	xxxxxx#moc::moc2010ee	470,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,56,56,3	script	xxxxxx#moc::moc2010rr	481,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,62,51,6	script	xxxxxx#moc::moc2010tt	459,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,62,74,5	script	xxxxxx#moc::moc2010yy	526,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+
+morocc,56,82,7	script	xxxxxx#moc::moc2010uu	504,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+
+morocc,60,90,0	script	xxxxxx#moc::moc2010ii	542,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+
+morocc,65,80,2	script	xxxxxx#moc::moc2010oo	536,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,68,94,1	script	xxxxxx#moc::moc2010pp	581,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,53,92,6	script	xxxxxx#moc::moc2010aa	583,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,53,92,6	script	xxxxxx#moc::moc2010ss	583,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,53,88,0	script	xxxxxx#moc::moc2010dd	603,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,57,109,7	script	xxxxxx#moc::moc2010ff	814,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+
+morocc,73,113,5	script	xxxxxx#moc::moc2010gg	819,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+
+morocc,76,107,1	script	xxxxxx#moc::moc2010hh	847,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+
+morocc,54,120,6	script	xxxxxx#moc::moc2010jj	843,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,35,171,4	script	xxxxxx#moc::moc2010kk	831,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,44,167,5	script	xxxxxx#moc::moc2010ll	832,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+
+morocc,52,171,6	script	xxxxxx#moc::moc2010zz	828,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,54,161,1	script	xxxxxx#moc::moc2010xx	884,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,59,151,5	script	xxxxxx#moc::moc2010cc	733,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,66,144,4	script	xxxxxx#moc::moc2010vv	732,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,62,136,0	script	xxxxxx#moc::moc2010bb	755,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,69,126,2	script	xxxxxx#moc::moc2010nn	54,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+morocc,70,152,3	script	xxxxxx#moc::moc2010mm	58,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+
+morocc,36,163,1	script	xxxxxx#moc::moc2010qqq	72,{
+	npctalk "xxxxxx: xxxxxx.";
+	end;
+}
+
+
+morocc,27,168,6	script	Morroc Guard#moc::moc383www	946,{
+	npctalk "Morroc Guard: Welcome to Morroc.";
+	end;
+}
+
+morocc,27,160,6	script	Morroc Guard#moc::moc383eee	946,{
+	npctalk "Morroc Guard: Welcome to Morroc.";
+	end;
+}
+
+morocc,44,143,3	script	Morroc Guard#moc::moc383rrr	67,{
+	npctalk "Morroc Guard: Welcome to Morroc.";
+	end;
+}
+
+morocc,41,140,7	script	Morroc Guard#moc::moc383ttt	66,{
+	npctalk "Morroc Guard: Welcome to Morroc.";
+	end;
+}
+
+
+morocc,65,168,3	script	Morroc Guard#moc::moc383yyy	65,{
+	npctalk "Morroc Guard: Welcome to Morroc.";
+	end;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

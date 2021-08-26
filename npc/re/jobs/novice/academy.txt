@@ -51,17 +51,6 @@ iz_int02,18,30,0	duplicate(iz_int#intro_start)	iz_int02#intro_start	HIDDEN_WARP_
 iz_int03,18,30,0	duplicate(iz_int#intro_start)	iz_int03#intro_start	HIDDEN_WARP_NPC,6,6
 iz_int04,18,30,0	duplicate(iz_int#intro_start)	iz_int04#intro_start	HIDDEN_WARP_NPC,6,6
 
-iz_int,51,30,0	script	iz_int#intro_evt02	HIDDEN_WARP_NPC,1,1,{
-	end;
-OnTouch:
-	navigateto("int_land", 75, 100, NAV_NONE, 1);
-	end;
-}
-iz_int01,51,30,0	duplicate(iz_int#intro_evt02)	iz_int01#intro_evt02	HIDDEN_WARP_NPC,1,1
-iz_int02,51,30,0	duplicate(iz_int#intro_evt02)	iz_int02#intro_evt02	HIDDEN_WARP_NPC,1,1
-iz_int03,51,30,0	duplicate(iz_int#intro_evt02)	iz_int03#intro_evt02	HIDDEN_WARP_NPC,1,1
-iz_int04,51,30,0	duplicate(iz_int#intro_evt02)	iz_int04#intro_evt02	HIDDEN_WARP_NPC,1,1
-
 //== Wounded Swordsman (iz_int) =================================
 iz_int,56,32,3	script	Wounded Swordsman#intro_npc01_iz_int	4_TOWER_01,5,5,{
 	npctalk "Oh...", "", bc_self;
@@ -126,261 +115,6 @@ iz_int01,56,32,3	duplicate(Wounded Swordsman#intro_npc02_iz_int)	Wounded Swordsm
 iz_int02,56,32,3	duplicate(Wounded Swordsman#intro_npc02_iz_int)	Wounded Swordsman#intro_npc02_iz_int02	4_TOWER_02
 iz_int03,56,32,3	duplicate(Wounded Swordsman#intro_npc02_iz_int)	Wounded Swordsman#intro_npc02_iz_int03	4_TOWER_02
 iz_int04,56,32,3	duplicate(Wounded Swordsman#intro_npc02_iz_int)	Wounded Swordsman#intro_npc02_iz_int04	4_TOWER_02
-
-// - Captain Carocc (Ship)
-// -----------------------------------------------------------------------------
-int_land,78,103,5	script	Captain Carocc#intro_npc03	4_M_REINDEER,{
-	switch( isbegin_quest(21008) ) {
-	case 0:
-		mes "[Captain Carocc]";
-		mes "There are still people in the cabins?!";
-		mes "At least you are safe.";
-		mes "Are you alright?";
-		next;
-		if (select("I'm alright, but others need help.", "I think I am the last?") == 1) {
-			mes "[Captain Carocc]";
-			mes "There are more people left?";
-			mes "I will send a rescue team to them.";
-			mes "Thank you for your report.";
-		} else {
-			mes "[Captain Carocc]";
-			mes "Alright, that's good.";
-			mes "The storm came unexpectedly but I never thought it would hit us that hard.";
-		}
-		next;
-		mes "[Captain Carocc]";
-		mes "At least most people made it to safety.";
-		next;
-		mes "[Captain Carocc]";
-		mes "Look at the trees there, ^4d4dfffollow them to the southwest^000000 to find a new ship.";
-		mes "The ship will take you to ^4d4dffIzlude^000000, our original destination.";
-		next;
-		mes "[Captain Carocc]";
-		mes "Ah! Speaking of it, those ^4d4dffPorings^000000 on this island drop several materials we could use for repairs.";
-		next;
-		mes "[Captain Carocc]";
-		mes "^4d4dffKill the Porings and bring 2 Lumbers to the southern crew^000000.";
-		next;
-		mes "[Captain Carocc]";
-		mes "It is a hard task, but you look tough enough.";
-		specialeffect2 EF_HEAL2;
-		heal 9999,0;
-		skilleffect 34,0;
-		sc_start SC_BLESSING,240000,10;
-		skilleffect 29,0;
-		sc_start SC_INCREASEAGI,240000,10;
-		if (isbegin_quest(21001) == 1) {
-			completequest 21001;
-			getexp 600,600;
-		}
-		setquest 21008;
-		next;
-		mes "[Captain Carocc]";
-		mes "Speaking of Porings, you have to equip your gears.";
-		mes "You should have a ^4d4dffweapon and an armor^000000 equipped.";
-		next;
-		cutin "tutorial03",4;
-		mes "!- Information -!";
-		mes "^4d4dffYou can equip gear or use items by simply double clicking them.";
-		mes "The item window can be opened by pressing Alt + E or using the menu button.^000000";
-		next;
-		mes "!- Information -!";
-		mes "^4d4dffEquipped Items can be seen by pressing Alt + Q.";
-		mes "Either double click or drag & drop to equip or unequip them.^000000";
-		next;
-		cutin "",255;
-		mes "[Captain Carlock]";
-		mes "Did you check all your equipment?";
-		mes "^4d4dffSkill distribution^000000 should be done.";
-		next;
-		mes "[Captain Carlock]";
-		mes "For a smooth battle, you have to distribute your abilities properly.";
-		mes "^4d4dffIf you want to increase your strength, you need to raise Str^000000. ^4d4dffIf you want to increase your hit, you must raise Dex^000000.";
-		break;
-	case 1:
-		mes "[Captain Carocc]";
-		specialeffect2 EF_HEAL2;
-		heal 9999, 0;
-		skilleffect 34,0;
-		sc_start SC_BLESSING,240000,10;
-		skilleffect 29,0;
-		sc_start SC_INCREASEAGI,240000,10;
-		mes "^4d4dffThe Ship^000000 is anchored in the southwest. It will take you to Izlude.";
-		mes "Don't forget to ^4d4dffget some Lumber^000000 for the ship.";
-		next;
-		mes "[Captain Carocc]";
-		mes "Don't forget to raise your ^4d4dffskills^000000.";
-		break;
-	case 2:
-		mes "[Captain Carocc]";
-		mes "Everything is ready to sail over to Izlude.";
-		mes "The ship is located at the south-western part of the island.";
-		close;
-	}
-	next;
-	mes "! - Information -!";
-	mes "^4d4dffYou get a stats bonus for every level you raise.";
-	mes "The status window can be opened and closed with the shortcut Alt + A^000000.";
-	next;
-	mes "! - Information -!";
-	mes "^4d4dffPlease properly allocate the stats you need to battle^000000.";
-	next;
-	mes "[Captain Carocc]";
-	mes "Kill Porings and bring the Lumber to the crew.";
-	mes "Good luck!";
-	close;
-
-OnInit:
-	questinfo( QTYPE_QUEST, QMARK_YELLOW, "!isbegin_quest(21008) && Class == Job_Novice" );
-	end;
-}
-
-int_land01,78,103,5	duplicate(Captain Carocc#intro_npc03)	Captain Carocc#intro_npc03_01	4_M_REINDEER
-int_land02,78,103,5	duplicate(Captain Carocc#intro_npc03)	Captain Carocc#intro_npc03_02	4_M_REINDEER
-int_land03,78,103,5	duplicate(Captain Carocc#intro_npc03)	Captain Carocc#intro_npc03_03	4_M_REINDEER
-int_land04,78,103,5	duplicate(Captain Carocc#intro_npc03)	Captain Carocc#intro_npc03_04	4_M_REINDEER
-
-//== Lumin (int_land) ==========================================
-int_land,73,100,3	script	Lumin#new_ship	4_M_NOV_RUMIN,{
-	if (isbegin_quest(7471) == 0) {
-		cutin "nov_lumin01.bmp",0;
-		mes "[Lumin]";
-		mes ".............";
-		mes "..?";
-		next;
-		cutin "fly_trock.bmp",2;
-		mes "[Captain Carocc]";
-		mes "Had a good dream?";
-		mes "Soon, we will get to Izlude. And you can talk to other people like you just talked to me.";
-		next;
-		mes "[Captain Carocc]";
-		mes "I think that guy over there lost his memory. I gave him a new name.";
-		mes "Lumin.";
-		next;
-		mes "[Captain Carocc]";
-		mes "Many youngsters visit the ^4d4dffRune-Midgarts Kingdom^000000 to chase their dreams.";
-		mes "Izlude is a satellite city of Prontera, the capital of the Rune-Midgarts Kingdom.";
-		next;
-		mes "[Captain Carocc]";
-		mes "Izlude always welcomes young adventurers like you who have just started their journey through the world.";
-		mes "You are one of them, of course.";
-		next;
-		mes "[Captain Carocc]";
-		mes "I would like to tell you more stories, but it's time to get ready for arrival.";
-		mes "There is an academy in Izlude for newcomers like yourself.";
-		next;
-		mes "[Captain Carocc]";
-		mes "Let me give you more details later. See you back at the harbor deck.";
-		next;
-		mes "[Captain Carocc]";
-		mes "To get off this ship, you should enter the ^4d4dffShining Portal^000000 over there.";
-		mes "All transportation is made through the portals.";
-		setquest 7471;
-		completequest 7471;
-		next;
-		cutin "nov_lumin01.bmp", 0;
-		mes "[Lumin]";
-		mes "Yes.";
-		next;
-		cloakonnpc strnpcinfo(0), getcharid(0);
-		cutin "fly_trock.bmp",2;
-		mes "[Captain Carocc]";
-		mes "Oh boy.";
-		mes "What a cute reaction.";
-		close2;
-		cutin "",255;
-		end;
-	}
-	cutin "nov_lumin01.bmp",0;
-	mes "[Lumin]";
-	mes ".....";
-	next;
-	select("Should I introduce myself?", "My name is ~!");
-	mes "[" + strcharinfo(0) + "]";
-	mes "I am " + strcharinfo(0) + "!";
-	next;
-	mes "[Lu]";
-	mes ".....";
-	next;
-	mes "[Lu]";
-	mes ".....";
-	mes "....So?";
-	next;
-	cloakonnpc strnpcinfo(0), getcharid(0);
-	mes "- Lu just walked away with a cynical look on his face.";
-	next;
-	cutin "fly_trock.bmp",2;
-	mes "[Captain Carocc]";
-	mes "Looks like... he has a shy personality.";
-	mes "When you go to Izlude, will you check on him?";
-	next;
-	mes "[Captain Carocc]";
-	mes "From now on I'll be sailing the ship around the island.";
-	mes "Let's go, shall we?";
-	close2;
-	cutin "",255;
-	end;
-
-OnInit:
-	questinfo( QTYPE_QUEST, QMARK_YELLOW, "Class == Job_Novice && !isbegin_quest(7471) && isbegin_quest(21008) == 1" );
-	end;
-}
-int_land01,73,100,3	duplicate(Lumin#new_ship)	Lumin#new_ship01	4_M_NOV_RUMIN
-int_land02,73,100,3	duplicate(Lumin#new_ship)	Lumin#new_ship02	4_M_NOV_RUMIN
-int_land03,73,100,3	duplicate(Lumin#new_ship)	Lumin#new_ship03	4_M_NOV_RUMIN
-int_land04,73,100,3	duplicate(Lumin#new_ship)	Lumin#new_ship04	4_M_NOV_RUMIN
-
-int_land,58,69,5	script	Sailor#intro_npc04	4W_SAILOR,{
-	if (isbegin_quest(21008) == 1) {
-		if (countitem(6008) < 2) {
-			mes "[Sailor]";
-			mes "These Porings stole my materials to repair the ship. Can you help me to get them back?";
-			mes "There are plenty of Porings on this island.";
-			next;
-			mes "[Sailor]";
-			mes "I would really appreciate it if you help me.";
-			mes "I am not allowed to set foot on this island.";
-			mes "That's why I ask for your help~";
-			close;
-		}
-		mes "[Sailor]";
-		mes "Unbelievable, perfect! Any chance you want to join my crew?";
-		mes "Enough talking!!";
-		mes "Come on, we're ready to set sail!";
-		mes "Thank you so much!";
-		next;
-		mes "[Sailor]";
-		mes "If you want to sail with us to Izlude, jump on board!";
-		delitem 6008,2;
-		getexp 100,100;
-		getitem 611,5;
-		completequest 21008;
-		next;
-		mes "[Sailor]";
-		mes "Oh, and take these ^4d4dffMagnifiers^000000.";
-		mes "When you hunt monsters you can find ^4d4dffunidentified items^000000.";
-		next;
-		mes "[Sailor]";
-		mes "Using a Magnifier will identify the item.";
-		next;
-		mes "[Sailor]";
-		mes "Maybe you already have some unidentified items from your fights with those Porings?";
-		close;
-	}
-	mes "[Sailor]";
-	mes "The ship is heading to Izlude soon~!";
-	mes "I'll let you know when we set sail~!";
-	close;
-
-OnInit:
-	questinfo( QTYPE_QUEST, QMARK_YELLOW, "Class == Job_Novice && !isbegin_quest(21002) && isbegin_quest(21008) == 1" );
-	end;
-}
-
-int_land01,58,69,5	duplicate(Sailor#intro_npc04)	Sailor#intro_npc04_01	4W_SAILOR
-int_land02,58,69,5	duplicate(Sailor#intro_npc04)	Sailor#intro_npc04_02	4W_SAILOR
-int_land03,58,69,5	duplicate(Sailor#intro_npc04)	Sailor#intro_npc04_03	4W_SAILOR
-int_land04,58,69,5	duplicate(Sailor#intro_npc04)	Sailor#intro_npc04_04	4W_SAILOR
 
 // - Captain Carocc
 // -----------------------------------------------------------------------------
@@ -3831,31 +3565,6 @@ iz_ac01_b,53,74,3	duplicate(Attribute Expert#ac)	Attribute Expert#ac_b	1_M_WIZAR
 iz_ac01_c,53,74,3	duplicate(Attribute Expert#ac)	Attribute Expert#ac_c	1_M_WIZARD
 iz_ac01_d,53,74,3	duplicate(Attribute Expert#ac)	Attribute Expert#ac_d	1_M_WIZARD
 
-iz_ac01,47,68	monster	Lv 10 (Fire)	2413,1,5000,0,0
-iz_ac01,50,68	monster	Lv 10 (Fire)	2413,1,5000,0,0
-iz_ac01,53,68	monster	Lv 10	2408,1,5000
-iz_ac01,56,68	monster	Lv 10	2408,1,5000
-
-iz_ac01_a,47,68	monster	Lv 10 (Fire)	2413,1,5000,0,0
-iz_ac01_a,50,68	monster	Lv 10 (Fire)	2413,1,5000,0,0
-iz_ac01_a,53,68	monster	Lv 10	2408,1,5000
-iz_ac01_a,56,68	monster	Lv 10	2408,1,5000
-
-iz_ac01_b,47,68	monster	Lv 10 (Fire)	2413,1,5000,0,0
-iz_ac01_b,50,68	monster	Lv 10 (Fire)	2413,1,5000,0,0
-iz_ac01_b,53,68	monster	Lv 10	2408,1,5000
-iz_ac01_b,56,68	monster	Lv 10	2408,1,5000
-
-iz_ac01_c,47,68	monster	Lv 10 (Fire)	2413,1,5000,0,0
-iz_ac01_c,50,68	monster	Lv 10 (Fire)	2413,1,5000,0,0
-iz_ac01_c,53,68	monster	Lv 10	2408,1,5000
-iz_ac01_c,56,68	monster	Lv 10	2408,1,5000
-
-iz_ac01_d,47,68	monster	Lv 10 (Fire)	2413,1,5000,0,0
-iz_ac01_d,50,68	monster	Lv 10 (Fire)	2413,1,5000,0,0
-iz_ac01_d,53,68	monster	Lv 10	2408,1,5000
-iz_ac01_d,56,68	monster	Lv 10	2408,1,5000
-
 // - Dacquoise
 // - Teaches the player about Cooking.
 // -----------------------------------------------------------------------------
@@ -4247,11 +3956,11 @@ iz_ac01,147,50,3	script	Dacquoise#ac	4_COOK,{
 				mes "[Mille Feuille]";
 				mes "Ingredients- ^0000cd1 Clover, 1 Green Herb, 1 Red Herb^000000.";
 				next;
-				cutin "·ç³ªÆ½Ä«µå.bmp", 3;
+				cutin "ï¿½ç³ªÆ½Ä«ï¿½ï¿½.bmp", 3;
 				mes "[Dacquoise]";
 				mes "Clover and the Red Herb are dropped by Lunatic or Fabre monsters wandering everywhere on the field outside Izlude.";
 				next;
-				cutin "ÆÄºê¸£Ä«µå.bmp", 3;
+				cutin "ï¿½Äºê¸£Ä«ï¿½ï¿½.bmp", 3;
 				mes "[Eclaire]";
 				mes "Green Herbs are dropped by Fabres.";
 				next;
@@ -4273,11 +3982,11 @@ iz_ac01,147,50,3	script	Dacquoise#ac	4_COOK,{
 				mes "[Mille Feuille]";
 				mes "Ingredients are ^0000cd1 Apple & 2 Carrots^000000.";
 				next;
-				cutin "Æ÷¸µÄ«µå.bmp", 3;
+				cutin "ï¿½ï¿½ï¿½ï¿½Ä«ï¿½ï¿½.bmp", 3;
 				mes "[Dacquoise]";
 				mes "Apples are dropped by Porings bouncing around the field outside of Izlude.";
 				next;
-				cutin "·ç³ªÆ½Ä«µå.bmp", 3;
+				cutin "ï¿½ç³ªÆ½Ä«ï¿½ï¿½.bmp", 3;
 				mes "[Eclaire]";
 				mes "Carrots are given by Lunatics.";
 				next;
@@ -4299,15 +4008,15 @@ iz_ac01,147,50,3	script	Dacquoise#ac	4_COOK,{
 				mes "[Mille Feuille]";
 				mes "Ingredients are ^0000cd1 Jellopy, 1 Fluff, 1 Feather^000000.";
 				next;
-				cutin "Æ÷¸µÄ«µå.bmp", 3;
+				cutin "ï¿½ï¿½ï¿½ï¿½Ä«ï¿½ï¿½.bmp", 3;
 				mes "[Dacquoise]";
 				mes "Jellopy are dropped by Porings bouncing around the field of Izlude.";
 				next;
-				cutin "ÆÄºê¸£Ä«µå.bmp", 3;
+				cutin "ï¿½Äºê¸£Ä«ï¿½ï¿½.bmp", 3;
 				mes "[Eclaire]";
 				mes "Fluff can be received from Fabre or Lunatic.";
 				next;
-				cutin "·ç³ªÆ½Ä«µå.bmp", 3;
+				cutin "ï¿½ç³ªÆ½Ä«ï¿½ï¿½.bmp", 3;
 				mes "[Mille Feuille]";
 				mes "Feathers are dropped by Lunatics or Fabres.";
 				next;
@@ -4329,11 +4038,11 @@ iz_ac01,147,50,3	script	Dacquoise#ac	4_COOK,{
 				mes "[Mille Feuille]";
 				mes "Ingredients are-^0000cd 1 Apple & 1 Clover^000000.";
 				next;
-				cutin "Æ÷¸µÄ«µå.bmp", 3;
+				cutin "ï¿½ï¿½ï¿½ï¿½Ä«ï¿½ï¿½.bmp", 3;
 				mes "[Dacquoise]";
 				mes "Apple can be found in Porings in the field outside of Izlude.";
 				next;
-				cutin "·ç³ªÆ½Ä«µå.bmp", 3;
+				cutin "ï¿½ç³ªÆ½Ä«ï¿½ï¿½.bmp", 3;
 				mes "[Eclaire]";
 				mes "Clovers are dropped by Lunatics or Fabre in the field outside Izlude.";
 				next;
@@ -4917,7 +4626,6 @@ iz_ac01_d,43,80,7	duplicate(Adventurer's Pet#ac)	Adventurer's Pet#ac_d	4_DEVIRUC
 
 // - Monster Spawn
 // -----------------------------------------------------------------------------
-new_1-3,0,0	monster	Little Poring	2398,30,50000
 
 // - Adept Adventurer (Cont...)
 // - Teaches the player about Pets.

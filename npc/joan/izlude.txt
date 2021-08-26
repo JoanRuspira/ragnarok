@@ -430,3 +430,135 @@ izlude,145,166,3	script	Cedany Truegust#iz_npc51::iz_npc51	118,{
 	npctalk "Cedany Truegust: Go to the Academia here in Izlude to learn all about 1st jobs!";
 	end;
 }
+
+iz_ac01,96,44,4	script	Academy Receptionist#iz_npc51::iz_npc510	74,{
+	npctalk "Academy Receptionist: Welcome to the Izlude academy!";
+	end;
+}
+
+iz_ac01,102,45,4	script	Academy Receptionist#iz_npc51::iz_npc511	77,{
+	npctalk "Academy Receptionist: Head to the top floor for info of classes.";
+	end;
+}
+
+iz_ac01,111,44,4	script	Academy Guard#iz_npc51::iz_npc512	867,{
+	npctalk "Academy Guard: Access beyond this point is restricted to staff.";
+	end;
+}
+
+
+iz_ac01,88,44,4	script	Academy Guard#iz_npc51::iz_npc513	868,{
+	npctalk "Academy Guard: Access beyond this point is restricted to staff.";
+	end;
+}
+
+iz_ac01,147,50,3	script	Academy Chef#iz_npc51::iz_npc514	820,{
+	npctalk "Academy Chef: Food is restricted to members of the Academy.";
+	end;
+}
+
+iz_ac01,150,50,3	script	Academy Chef#iz_npc51::iz_npc515	701,{
+	npctalk "Academy Chef: Food is restricted to members of the Academy.";
+	end;
+}
+
+iz_ac01,160,50,3	script	Academy Chef#iz_npc51::iz_npc516	886,{
+	npctalk "Academy Chef: Food is restricted to members of the Academy.";
+	end;
+}
+
+iz_ac01,164,36,3	script	Academy Chef#iz_npc51::iz_npc571	80,{
+	npctalk "Academy Chef: Food is restricted to members of the Academy.";
+	end;
+}
+
+iz_ac01,159,41,1	script	Janshai Stonesworn#iz_npc51::iz_npc518	729,{
+	npctalk "Janshai Stonesworn: What class do you want to be?";
+	end;
+}
+
+iz_ac01,151,36,7	script	Elel Galathaniel#iz_npc51::iz_npc519	430,{
+	npctalk "Elel Galathaniel: I'm hungry.";
+	end;
+}
+
+iz_ac01,148,44,0	script	Egoron Elervir#iz_npc51::iz_npc521	429,{
+	npctalk "Egoron Elervir: The food looks good today!";
+	end;
+}
+
+iz_ac01,133,50,4	script	Leofrick Crewe#iz_npc51::iz_npc5341	410,{
+	npctalk "Leofrick Crewe: Hello.";
+	end;
+}
+
+iz_ac01,133,43,3	script	Berinon Commonbrook#iz_npc51::iz_npc541	625,{
+	npctalk "Berinon Commonbrook: Do you know what job will you pick?";
+	end;
+}
+
+iz_ac01,131,36,0	script	Sybeatr Nete#iz_npc51::iz_npc551	644,{
+	npctalk "Sybeatr Nete: I was a novice before.";
+	end;
+}
+
+
+iz_ac01,91,35,5	script	Adademy Professor#iz_npc51::iz_npc561	743,{
+	npctalk "Adademy Professor: Go upstairs for info on thief, swordsman and archer jobs.";
+	end;
+}
+
+iz_ac01,121,34,3	script	Adademy Professor#iz_npc51::iz_npc571s	754,{
+	npctalk "Adademy Professor: This way for info on mage, acolyte and merchant jobs.";
+	end;
+}
+
+iz_ac01,107,29,1	script	Aninyel Dlaralthor#iz_npc51::iz_npc581	125,{
+	npctalk "Aninyel Dlaralthor: Are you here to learn about job classes?";
+	end;
+}
+
+iz_ac01,36,48,4	script	Uslyn Dhugozath#iz_npc51::iz_npc5112	532,{
+	npctalk "Uslyn Dhugozath: Hello.";
+	end;
+}
+
+iz_ac01,45,42,5	script	Ayleth Crewe#iz_npc51::iz_npc5134	0,{
+	npctalk "Ayleth Crewe: I just joined the Academy.";
+	end;
+}
+
+iz_ac01,38,32,3	script	Ingon Aeraagamae#iz_npc51::iz_npc5178	533,{
+	npctalk "Ingon Aeraagamae: Privacy please.";
+	end;
+}
+
+iz_ac01,56,45,1	script	Brom Cleves#iz_npc51::iz_npc5187	97,{
+	npctalk "Brom Cleves: Privacy please.";
+	end;
+}
+
+iz_ac01,68,49,3	script	Glush Skullbinder#iz_npc51::iz_npc5164	106,{
+	npctalk "Glush Skullbinder: These are the Academy rooms.";
+	end;
+}
+
+iz_ac01,67,37,3	script	Glush Skullbinder#iz_npc51::iz_npc5181	98,{
+	npctalk "Enengod Wervanion: Hi there.";
+	end;
+}
+
+iz_ac01,66,32,0	script	Academy Staff#iz_npc51::iz_npc5128	124,{
+	npctalk "Academy Staff: What can I do for you?.";
+	end;
+}
+
+izlude,134,200,1	script	Zigil Noblebringer#iz_npc51::iz_npc51d	814,{
+	npctalk "Zigil Noblebringer: Hello.";
+	end;
+}
+
+izlude,47,167,5	script	Arthur Lunadream#iz_npc51::iz_npc513d	688,{
+	npctalk "Arthur Lunadream: I just became a swordsman.";
+	end;
+}

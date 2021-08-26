@@ -511,8 +511,8 @@ morocc_in,73,38,6	script	Aragham	99,{
 	callfunc "refinemain","Aragham",0;
 	end;
 }
-payon,144,173,5	script	Antonio	88,{
-	callfunc "refinemain","Antonio",0;
+payon,141,65,5	script	Payon Refiner	726,{
+	callfunc "refinemain","Payon Refiner",0;
 	end;
 }
 alberta_in,28,58,0	script	Fredrik	85,{
@@ -532,8 +532,8 @@ lhz_in02,282,20,7	script	Fulerr	869,{
 	end;
 }
 
-izlude,154,119,3	script	Refinment Blacksmith	63,{
-	callfunc "refinemain","Refinment Blacksmith",0;
+izlude,154,119,3	script	Izlude Refiner	63,{
+	callfunc "refinemain","Izlude Refiner",0;
 	end;
 }
 
@@ -831,16 +831,16 @@ function	script	refinemain	{
 
 // Material Salesmen
 //============================================================
-izlude,154,130,2	script	Material Merchant	85,{
-	callfunc "phramain","Material Merchant ";
+izlude,154,130,2	script	Izlude Material Merchant	85,{
+	callfunc "phramain","Izlude Material Merchant ";
 	end;
 }
 prt_in,56,68,5	script	Vurewell	86,{
 	callfunc "phramain","Vurewell";
 	end;
 }
-payon,145,178,3	script	Begnahd	88,{
-	callfunc "phramain","Begnahd";
+payon,147,172,4	script	Payon Material Merchant	88,{
+	callfunc "phramain","Payon Material Merchant";
 	end;
 }
 morocc_in,63,32,6	script	Sade	99,{
@@ -949,8 +949,8 @@ function	script	phramain	{
 
 // Ori/Elu Refiners
 //============================================================
-izlude,147,129,5	script	Polisher	88,{
-	callfunc "orimain","Polisher";
+izlude,147,129,5	script	Izlude Polisher	88,{
+	callfunc "orimain","Izlude Polisher";
 	end;
 }
 
@@ -958,8 +958,8 @@ prt_in,63,69,3	script	Dietrich	84,{
 	callfunc "orimain","Dietrich";
 	end;
 }
-payon,137,178,5	script	Hakhim	88,{
-	callfunc "orimain","Hakhim";
+payon,142,181,7	script	Payon Polisher	85,{
+	callfunc "orimain","Payon Polisher";
 	end;
 }
 morocc_in,72,32,6	script	Abdula	99,{
@@ -1055,8 +1055,8 @@ function	script	orimain	{
 
 // Equipment Repairmen
 //============================================================
-izlude,150,122,4	script	Repairman#izl	813,{
-	callfunc "repairmain","Repairman";
+izlude,150,122,4	script	Izlude Repairman#izl	813,{
+	callfunc "repairmain","Izlude Repairman";
 	end;
 }
 
@@ -1070,8 +1070,8 @@ moc_ruins,107,94,4	script	Repairman#moc	99,{
 	end;
 }
 
-payon,143,165,4	script	Repairman#pay	88,{
-	callfunc "repairmain","Repairman";
+payon,139,173,4	script	Payon Repairman#pay	731,{
+	callfunc "repairmain","Payon Repairman";
 	end;
 }
 

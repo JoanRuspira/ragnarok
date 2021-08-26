@@ -394,3 +394,13 @@ payon_in03,104,159,5	script	Ilmindel Wervanion#pay_arche::pay_npc76	542,{
 	npctalk "Ilmindel Wervanion: Welcome to the castle hall.";
 	end;
 }
+
+payon_in01,13,127,7	script	Ilmindel Wervanion#pay_arche::pay_npc76s	778,{ 
+	npctalk "Ilmindel Wervanion: I am looking for new gear.";
+	end;
+}
+
+payon_in01,8,125,1	script	Khainan Forgemaul#pay_arche::pay_npc76f	805,{ 
+	npctalk "Khainan Forgemaul: Have you tried costumes?";
+	end;
+}
