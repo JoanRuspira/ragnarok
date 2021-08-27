@@ -40370,3 +40370,154 @@ Body:
       Costume_Head_Top: true
     EquipLevelMin: 1
     View: 654
+  - Id: 19796
+    AegisName: C_Bone_Helm
+    Name: Costume Bone Helm
+    Type: Armor
+    Buy: 10
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 103
+  - Id: 19526
+    AegisName: C_Helm
+    Name: Costume Helm
+    Type: Armor
+    Buy: 10
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 40
+  - Id: 20507
+    AegisName: C_Poring_Bag
+    Name: Costume Poring Bag
+    Type: Armor
+    Buy: 10
+    Locations:
+      Costume_Garment: true
+    EquipLevelMin: 1
+    View: 16
+  - Id: 20510
+    AegisName: C_SwordWing
+    Name: Costume Sword Wing
+    Type: Armor
+    Buy: 10
+    Locations:
+      Costume_Garment: true
+    EquipLevelMin: 1
+    View: 19
+  - Id: 20512
+    AegisName: C_Bag_of_Adventurer_j
+    Name: Costume Adventurer's Backpack
+    Type: Armor
+    Buy: 10
+    Locations:
+      Costume_Garment: true
+    EquipLevelMin: 1
+    View: 2
+  - Id: 20548
+    AegisName: Costume_Popping_Poring_Aura
+    Name: Costume Popping Poring Aura
+    Type: Armor
+    Buy: 10
+    Locations:
+      Costume_Garment: true
+    EquipLevelMin: 1
+  - Id: 20514
+    AegisName: C_Thanatos_Sword
+    Name: Costume Thanatos Sword
+    Type: Armor
+    Buy: 10
+    Locations:
+      Costume_Garment: true
+    EquipLevelMin: 1
+    View: 23
+  - Id: 20575
+    AegisName: C_School_Bag_BL
+    Name: Costume Backpack (Black)
+    Type: Armor
+    View: 52
+    Buy: 10
+    Locations:
+      Costume_Garment: true
+  - Id: 20582
+    AegisName: C_T_Bear_Bag
+    Name: Costume Bear Backpack
+    Type: Armor
+    Buy: 10
+    Locations:
+      Costume_Garment: true
+    EquipLevelMin: 1
+    View: 60
+  - Id: 20595
+    AegisName: C_School_Bag_RD_E
+    Name: Costume beginners red backpack    # !todo check english name
+    Type: Armor
+    Buy: 10
+    View: 51
+    Locations:
+      Costume_Garment: true
+  - Id: 19528
+    AegisName: C_Iron_Cane
+    Name: Costume Iron Cain
+    Type: Armor
+    Buy: 10
+    Locations:
+      Costume_Head_Low: true
+    EquipLevelMin: 1
+    View: 53
+  - Id: 19515
+    AegisName: Yellow_Hat
+    Name: Yellow Hat
+    Type: Armor
+    Buy: 10
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 701
+  - Id: 19516
+    AegisName: Singing_Bird
+    Name: Singing Bird
+    Type: Armor
+    Buy: 10
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 702
+  - Id: 19549
+    AegisName: C_Magestic_Goat
+    Name: Costume Magestic Goat
+    Type: Armor
+    Buy: 10
+    Buy: 20
+    Weight: 100
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 100
+    View: 41
+  - Id: 19619
+    AegisName: C_Corsair
+    Name: Costume Corsair
+    Type: Armor
+    Buy: 10
+    Locations:
+      Costume_Head_Top: true
+    View: 105
+  - Id: 19641
+    AegisName: C_Helm_of_Darkness
+    Name: Costume Helm of Darkness
+    Type: Armor
+    Buy: 10
+    Locations:
+      Costume_Head_Top: true
+      Costume_Head_Mid: true
+    EquipLevelMin: 1
+    View: 233
+  - Id: 20472
+    AegisName: C_Helm_Of_Angel
+    Name: Costume Helm of Angel
+    Type: Armor
+    Buy: 10
+    View: 110
+    Locations:
+      Costume_Head_Top: true

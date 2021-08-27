@@ -511,7 +511,7 @@ morocc_in,73,38,6	script	Aragham	99,{
 	callfunc "refinemain","Aragham",0;
 	end;
 }
-payon,141,65,5	script	Payon Refiner	726,{
+payon,141,164,5	script	Payon Refiner	726,{
 	callfunc "refinemain","Payon Refiner",0;
 	end;
 }
