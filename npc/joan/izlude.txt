@@ -562,3 +562,18 @@ izlude,47,167,5	script	Arthur Lunadream#iz_npc51::iz_npc513d	688,{
 	npctalk "Arthur Lunadream: I just became a swordsman.";
 	end;
 }
+
+izlude_in,63,122,1	script	Efrey Guyak#iz_npc51::iz_npc518d	641,{
+	npctalk "Efrey Guyak: I'm here for armor.";
+	end;
+}
+
+izlude_in,69,118,4	script	Afar Endell#iz_npc51::iz_npc519d	642,{
+	npctalk "Afar Endell: I'm here for armor.";
+	end;
+}
+
+izlude_in,63,104,4	script	Zygu Madsk#iz_npc51::iz_npc510d	480,{
+	npctalk "Zygu Madsk: have you tried costumes?";
+	end;
+}
