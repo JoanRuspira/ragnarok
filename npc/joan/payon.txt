@@ -286,7 +286,7 @@ payon,81,318,0	script	Fay Crewe#pay_arche::pay_npc56	741,{
 }
 
 payon,152,317,2	script	Eghuglat Doomhorn#pay_arche::pay_npc57	740,{ 
-	npctalk "Eghuglat Doomhorn: At least this part is open to visitors.";
+	npctalk "Eghuglat Doomhorn: At least the outside part is open to visitors...";
 	end;
 }
 
@@ -402,5 +402,30 @@ payon_in01,13,127,7	script	Ilmindel Wervanion#pay_arche::pay_npc76s	778,{
 
 payon_in01,8,125,1	script	Khainan Forgemaul#pay_arche::pay_npc76f	805,{ 
 	npctalk "Khainan Forgemaul: Have you tried costumes?";
+	end;
+}
+
+payon_in01,192,36,1	script	Cook#pay_arche::pay_npc76f2	820,{ 
+	npctalk "Cook: What do you want?";
+	end;
+}
+
+payon_in01,188,37,5	script	Cook#pay_arche::pay_npc76f2f	820,{ 
+	npctalk "Cook: We don't take orders.";
+	end;
+}
+
+payon_in01,193,30,7	script	Chefook#pay_arche::pay_npc76f2d	886,{ 
+	npctalk "Chef: Please let us work.";
+	end;
+}
+
+payon_in01,179,30,5	script	Waitress#pay_arche::pay_npc6f2d	80,{ 
+	npctalk "Waitress: Hello.";
+	end;
+}
+
+payon,155,324,4	script	PalaceGuard#pay_arche::pay_npc53f2	708,{ 
+	npctalk "Palace Guard: This part of the palace is not open to visitors.";
 	end;
 }

@@ -40520,3 +40520,63 @@ Body:
     View: 110
     Locations:
       Costume_Head_Top: true
+  - Id: 20223
+    AegisName: C_Centimental_Leaf
+    Name: Costume Romantic Leaf
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Low: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 57
+  - Id: 19541
+    AegisName: C_Romantic_White_Flower
+    Name: Costume Romantic White Flower
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Low: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 259     
+  - Id: 20058
+    AegisName: C_Hot_Blood_Headband
+    Name: Costume Hot Blood Headband
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 154
+  - Id: 19639
+    AegisName: C_Sahkkat
+    Name: Costume Sakkat
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 67
+  - Id: 19797
+    AegisName: C_Apple_Of_Archer
+    Name: Costume Apple of Archer
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 72
+  - Id: 20203
+    AegisName: C_Bandana
+    Name: Costume Bandana
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 6
