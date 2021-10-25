@@ -1,5 +1,5 @@
 morocc,161,102,7	script	xxxxx#moc::moc1	945,{
-	npctalk "xxxxx: xxxxxx.";
+	npctalk "xxxxx: Is it your first time in Morroc?";
 	end;
 }
 
@@ -8,419 +8,379 @@ morocc,155,115,4	script	Palace Guard#moc::moc2	946,{
 	end;
 }
 
-morocc,164,115,4	script	Asher Lunadream#moc::moc3	946,{
+morocc,164,115,4	script	Palace Guard#moc::moc3	946,{
 	npctalk "Palace Guard: Welcome to the Morroc Palace Grounds.";
 	end;
 }
 
 morocc,150,91,5	script	xxxx#moc::moc34	941,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: Hello.";
 	end;
 }
 
 morocc,152,92,3	script	xxxx#moc::moc35	880,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: I love to try different costumes.";
 	end;
 }
 
 morocc,163,96,6	script	xxxx#moc::moc36	881,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: Go to the boards for quests and exp.";
 	end;
 }
 
 morocc,161,78,3	script	xxxx#moc::moc37	885,{
-	npctalk "xxxx: xxxxxxx.";
-	end;
-}
-
-morocc,147,104,5	script	xxxx#moc::moc38	879,{
-	npctalk "xxxx: xxxxxxx.";
-	end;
-}
-
-morocc,169,84,1	script	xxxx#moc::moc39	583,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: Have you visited the Pyramids?";
 	end;
 }
 
 morocc,168,74,3	script	xxxx#moc::moc30	603,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: They say the thief guild is around here somewhere.";
 	end;
 }
 
 morocc,155,84,7	script	xxxx#moc::moc311	526,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: I need some rest.";
 	end;
 }
 
 morocc,163,87,5	script	xxxx#moc::moc312	459,{
-	npctalk "xxxx: xxxxxxx.";
-	end;
-}
-
-morocc,172,102,4	script	xxxx#moc::moc313	89,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: There´s loads of vendors in this city!";
 	end;
 }
 
 morocc,182,86,6	script	xxxx#moc::moc314	998,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: Hello.";
 	end;
 }
 
 morocc,194,94,3	script	xxxx#moc::moc315	882,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: There´s a couple of inns around here.";
 	end;
 }
 
 
 morocc,183,96,5	script	xxxx#moc::moc316	706,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: I crossed the desert from Prontera.";
 	end;
 }
 
 morocc,186,93,1	script	xxxx#moc::moc317	667,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: There is a cave filled with ants in the desert.";
 	end;
 }
 
 morocc,196,83,6	script	xxxx#moc::moc319	747,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: Have you visited the palace?";
 	end;
 }
 
-morocc,207,88,4	script	xxxx#moc::moc318	742,{
-	npctalk "xxxx: xxxxxxx.";
-	end;
-}
 
 morocc,219,81,5	script	xxxx#moc::moc320	667,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: The back alleys don't get much visitors.";
 	end;
 }
 
 morocc,219,92,1	script	xxxx#moc::moc321	695,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: I´m on my way to see the ancient Sphynx.";
 	end;
 }
  
 morocc,229,72,1	script	xxxx#moc::moc322	727,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: Be careful when going to deep into dungeons.";
 	end;
 }
 
 morocc,203,66,5	script	xxxx#moc::moc323	735,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: There are rare monsters in the desert.";
 	end;
 }
 
 morocc,207,52,5	script	xxxx#moc::moc324	751,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: I have nothing to say to you.";
 	end;
 }
 
 morocc,207,52,5	script	xxxx#moc::moc325	751,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: I love exploring.";
 	end;
 }
 
 morocc,214,57,2	script	xxxx#moc::moc326	805,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: One day I´ll visit the Arunafeltz states.";
 	end;
 }
 
 morocc,214,66,7	script	xxxx#moc::moc327	809,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: Hello.";
 	end;
 }
 
 morocc,236,61,4	script	xxxx#moc::moc328	884,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: Have you checked the herb vendor?";
 	end;
 }
 
-morocc,154,70,6	script	xxxx#moc::moc329	898,{
-	npctalk "xxxx: xxxxxxx.";
-	end;
-}
 
 morocc,159,59,0	script	xxxx#moc::moc330	919,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: This is my favourite town.";
 	end;
 }
 
-morocc,173,51,5	script	xxxx#moc::moc331	943,{
-	npctalk "xxxx: xxxxxxx.";
-	end;
-}
 
 morocc,163,53,3	script	xxxx#moc::moc332	942,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: I'm from Alberta.";
 	end;
 }
 
 morocc,156,45,5	script	xxxx#moc::moc333	864,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: I saw Phreeoni once, in the desert.";
 	end;
 }
 
 morocc,158,42,1	script	xxxx#moc::moc334	74,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: Do you have any pets?";
 	end;
 }
 
 morocc,168,43,6	script	xxxx#moc::moc335	878,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: My brother is a vendor in the market.";
 	end;
 }
 
 morocc,176,45,7	script	xxxx#moc::moc336	698,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: I want to become a guard.";
 	end;
 }
 
 morocc,186,52,6	script	xxxx#moc::moc337	542,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: The Pyramids are on the north west from Morroc.";
 	end;
 }
 
 morocc,191,48,2	script	xxxx#moc::moc38888	494,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: There´s a couple of oasis around here.";
 	end;
 }
 
 
 morocc,200,55,0	script	xxxx#moc::moc338	554,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: I´m looking for the fortress of Saint Darmain.";
 	end;
 }
 
 morocc,194,41,1	script	xxxx#moc::moc339	467,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: Hello.";
 	end;
 }
 
 morocc,210,42,5	script	xxxx#moc::moc340	479,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: What do you want?";
 	end;
 }
 
 morocc,154,108,5	script	xxxx#moc::moc341	481,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: This is a large city.";
 	end;
 }
 
 morocc,213,41,1	script	xxxx#moc::moc342	485,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: I´ve heard the chief is looking for experienced assassins.";
 	end;
 }
 
 morocc,228,55,6	script	xxxx#moc::moc343	929,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: Where can I find the Sphynx?";
 	end;
 }
 
 morocc,224,67,4	script	xxxx#moc::moc344	900,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: I am headed for Comodo.";
 	end;
 }
 
 morocc,249,57,2	script	xxxx#moc::moc345	883,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: Have you explored the desert?";
 	end;
 }
 
 morocc,249,77,7	script	xxxx#moc::moc346	878,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: There's a lot of people here.";
 	end;
 }
 
 morocc,259,72,3	script	xxxx#moc::moc347	882,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: They say the rogue guild is in a fortress south east from here.";
 	end;
 }
 
 morocc,254,87,0	script	xxxx#moc::moc348	832,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: Hello.";
 	end;
 }
 
 morocc,262,88,4	script	xxxx#moc::moc349	82,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: The thief guild is in the Pyramid´s basement.";
 	end;
 }
 
 morocc,250,99,0	script	xxxx#moc::moc350	89,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: I bought juices from one of the vendors here.";
 	end;
 }
 
 morocc,250,104,4	script	xxxx#moc::moc351	93,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: Where are you going?";
 	end;
 }
 
 morocc,264,100,3	script	xxxx#moc::moc352	842,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: Have you visited the palace?";
 	end;
 }
 
 morocc,259,114,0	script	xxxx#moc::moc353	943,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: Beacon island is south west from here.";
 	end;
 }
 
 morocc,265,118,3	script	xxxx#moc::moc354	945,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: This is the second langest city in the kingdom.";
 	end;
 }
 
 
 morocc,253,116,5	script	xxxx#moc::moc355	779,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: The back alleys can be scary sometimes.";
 	end;
 }
 
 morocc,278,70,3	script	xxxx#moc::moc356	690,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: Look out! There's thieves in this town.";
 	end;
 }
 
 morocc,276,66,0	script	xxxx#moc::moc357	688,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: Are you from around here?";
 	end;
 }
 
 morocc,282,91,4	script	xxxx#moc::moc358	538,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: The palace was built on a natural oasis.";
 	end;
 }
 
 morocc,284,131,4	script	xxxx#moc::moc359	537,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: The market is always open.";
 	end;
 }
 
 morocc,283,126,0	script	xxxx#moc::moc360	536,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: Every large town has a smith.";
 	end;
 }
 
-morocc,243,136,6	script	xxxx#moc::moc362	581,{
-	npctalk "xxxx: xxxxxxx.";
-	end;
-}
 
 morocc,263,136,2	script	xxxx#moc::moc361	474,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: I keep all my things in my storage.";
 	end;
 }
 
 
 morocc,255,143,5	script	xxxx#moc::moc363	603,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: Hello.";
 	end;
 }
 
 morocc,257,140,1	script	xxxx#moc::moc365	534,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: Excuse me.";
 	end;
 }
 
 morocc,253,153,5	script	xxxx#moc::moc364	601,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: My sister works in the market.";
 	end;
 }
 
 
 morocc,260,151,0	script	xxxx#moc::moc366	602,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: The Sphynx is west from here.";
 	end;
 }
 
 morocc,241,169,6	script	xxxx#moc::moc3999	880,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: Be careful when crossing Sograt desert.";
 	end;
 }
 
 morocc,243,183,7	script	xxxx#moc::moc367	828,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: Sograt was an ancient God here.";
 	end;
 }
 
-morocc,256,189,5	script	xxxx#moc::moc368	879,{
-	npctalk "xxxx: xxxxxxx.";
-	end;
-}
-
-morocc,268,193,1	script	xxxx#moc::moc369	851,{
-	npctalk "xxxx: xxxxxxx.";
-	end;
-}
 
 morocc,244,206,3	script	xxxx#moc::moc370	870,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: There are mummys in the Pyramids.";
 	end;
 }
 
 morocc,262,202,5	script	xxxx#moc::moc371	869,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: What?";
 	end;
 }
 
 morocc,269,207,2	script	xxxx#moc::moc372	875,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: Always carry potions.";
 	end;
 }
 
 morocc,261,214,5	script	xxxx#moc::moc373	567,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: Are you from Prontera?";
 	end;
 }
 
 morocc,257,177,0	script	xxxx#moc::moc374	51,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: Hey!";
 	end;
 }
 
 morocc,261,169,4	script	xxxx#moc::moc375	50,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: Have you ever been to Yuno?";
 	end;
 }
 
 morocc,258,157,6	script	xxxx#moc::moc376	48,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: I used to have a peco.";
 	end;
 }
 
 morocc,282,182,5	script	xxxx#moc::moc377	47,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: This is the city of thieves.";
 	end;
 }
 
 morocc,282,182,6	script	xxxx#moc::moc378	47,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: There's a jungle on the west, past the desert.";
 	end;
 }
 
 
 morocc,285,187,2	script	xxxx#moc::moc379	54,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: I just got here.";
 	end;
 }
 
 morocc,278,201,7	script	xxxx#moc::moc380	58,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: There's dangerous monsters in the wilds.";
 	end;
 }
 
 morocc,285,205,6	script	xxxx#moc::moc381	59,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: Hello.";
 	end;
 }
 
 morocc,288,199,2	script	xxxx#moc::moc382	66,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: Whre are the quest boards in this city?";
 	end;
 }
 
@@ -451,197 +411,182 @@ morocc,156,25,0	script	Morroc Guard#moc::moc387	946,{
 }
 
 morocc,273,222,3	script	xxxxx#moc::moc3871	654,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: Have you visited the market tents?";
 	end;
 }
 
 morocc,258,228,6	script	xxxxx#moc::moc3872	683,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: Bye.";
 	end;
 }
 
 morocc,264,237,0	script	xxxxx#moc::moc3873	123,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: Rune Midgard is huge.";
 	end;
 }
 
 
 morocc,257,248,5	script	xxxxx#moc::moc3874	118,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: I found the Ant Hell once, deep in the desert.";
 	end;
 }
 
 morocc,268,254,3	script	xxxxx#moc::moc3875	58,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: The Pyramids and Sphynx attract lots of visitors.";
 	end;
 }
 
 morocc,286,264,3	script	xxxxx#moc::moc3876	66,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: Where are you going?";
 	end;
 }
 
 
 morocc,284,259,0	script	xxxxx#moc::moc3877	83,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: Morroc is one of the southernmost cities in Midgard.";
 	end;
 }
 
 morocc,265,232,3	script	xxxxx#moc::moc3878	84,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: Carry supplies when crossing the desert.";
 	end;
 }
 
 morocc,258,267,1	script	xxxxx#moc::moc3879	93,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: My brother is a palace guard.";
 	end;
 }
 
 morocc,262,263,1	script	xxxxx#moc::moc3870	81,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: I was born in Arunafeltz.";
 	end;
 }
 
 morocc,269,261,0	script	xxxxx#moc::moc387220	74,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: Hello.";
 	end;
 }
 
 morocc,253,258,5	script	xxxxx#moc::moc38711	98,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: Lots of visitors here.";
 	end;
 }
 
 morocc,247,291,0	script	xxxxx#moc::moc38733	97,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: Welcome to Morroc.";
 	end;
 }
 
 morocc,259,286,3	script	xxxxx#moc::moc38744	99,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: Hey!";
 	end;
 }
 
 morocc,261,277,5	script	xxxxx#moc::moc38755	101,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: Do you own a pet?";
 	end;
 }
 
 morocc,245,267,5	script	xxxxx#moc::moc38766	727,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: Osiris lives on the top Pyramid floor.";
 	end;
 }
 
 morocc,234,277,5	script	xxxxx#moc::moc38777	729,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: Always carry potions.";
 	end;
 }
 
 morocc,234,277,5	script	xxxxx#moc::moc38788	729,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: There's caves filled with insects in the desert.";
 	end;
 }
 
 morocc,236,274,1	script	xxxxx#moc::moc38799	732,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: Watch out for scorpions!";
 	end;
 }
 
 morocc,236,274,1	script	xxxxx#moc::moc38712	732,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: I don't like to talk to strangers.";
 	end;
 }
 
 morocc,236,265,2	script	xxxxx#moc::moc38713	929,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: The city chief is looking for high skilled assassins.";
 	end;
 }
 
 morocc,239,231,6	script	xxxxx#moc::moc38714	928,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: Look for guides to find specific places.";
 	end;
 }
 
 morocc,225,266,5	script	xxxxx#moc::moc38715	921,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: Check the restaurant in the north west quarter.";
 	end;
 }
 
 morocc,221,263,4	script	xxxxx#moc::moc38721	914,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: Hello.";
 	end;
 }
 
 morocc,219,283,3	script	xxxxx#moc::moc38722	919,{
-	npctalk "xxxx: xxxx.";
-	end;
-}
-
-morocc,207,251,1	script	xxxxx#moc::moc38723	931,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: Looking for something?";
 	end;
 }
 
 
 morocc,223,250,7	script	xxxxx#moc::moc38724	951,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: Complete quests for more exp!";
 	end;
 }
 
 morocc,204,262,5	script	xxxxx#moc::moc38725	997,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: Wizards are really intelligent.";
 	end;
 }
 
 morocc,183,250,3	script	xxxxx#moc::moc38726	998,{
-	npctalk "xxxx: xxxx.";
-	end;
-}
-
-morocc,187,259,4	script	xxxxx#moc::moc38731	996,{
-	npctalk "xxxx: xxxx.";
-	end;
-}
-
-morocc,195,259,6	script	xxxxx#moc::moc38732	993,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: What?";
 	end;
 }
 
 morocc,191,238,4	script	xxxxx#moc::moc387330	945,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: Have you heard of Nifflheim? I think it's not real.";
 	end;
 }
 
 morocc,139,245,0	script	xxxxx#moc::moc38734	942,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: Try to stay close to the oasis.";
 	end;
 }
 
 morocc,171,253,3	script	xxxxx#moc::moc38745	893,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: It's easy to get lost in the desert.";
 	end;
 }
 
 morocc,163,246,2	script	xxxxx#moc::moc387545	895,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: Where did you get that world map?";
 	end;
 }
 
 
 morocc,153,251,5	script	xxxxx#moc::moc387344	901,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: Most people around here have not been past the desert.";
 	end;
 }
 
 morocc,153,276,6	script	xxxxx#moc::moc38701	603,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: Bye.";
 	end;
 }
 
 
 morocc,162,268,3	script	xxxxx#moc::moc38702	558,{
-	npctalk "xxxx: xxxx.";
+	npctalk "xxxx: I want to visit the palace.";
 	end;
 }
 
@@ -665,11 +610,6 @@ morocc,205,285,4	script	Morroc Guard#moc::moc38706	648,{
 	end;
 }
 
-morocc,150,245,7	script	Morroc Guard#moc::moc38707	921,{
-	npctalk "Morroc Guard: Welcome to Morroc.";
-	end;
-}
-
 morocc,160,236,5	script	Morroc Guard#moc::moc38708	875,{
 	npctalk "Morroc Guard: Welcome to Morroc.";
 	end;
@@ -686,284 +626,273 @@ morocc,155,228,0	script	Palace Guard#moc::moc2010	946,{
 }
 
 morocc,140,90,0	script	xxxxxx#moc::moc2010a	642,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: Another tourist...";
 	end;
 }
 
 morocc,132,99,3	script	xxxxxx#moc::moc2010s	648,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: My sister is a vendor in the market.";
 	end;
 }
 
 morocc,140,97,5	script	xxxxxx#moc::moc2010w	641,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: Always carry healing items.";
 	end;
 }
 
 morocc,127,93,4	script	xxxxxx#moc::moc2010e	677,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: Some food will improve your stats.";
 	end;
 }
 
 morocc,117,92,5	script	xxxxxx#moc::moc2010r	805,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: People in the desert get attacked by monsters.";
 	end;
 }
 
 
 morocc,120,78,4	script	xxxxxx#moc::moc2010t	647,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: Don't wander too far from the city if you are low level.";
 	end;
 }
 
 morocc,112,83,7	script	xxxxxx#moc::moc2010y	930,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: Hello.";
 	end;
 }
 
 morocc,103,80,5	script	xxxxxx#moc::moc2010u	931,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: Look out for thieves here.";
 	end;
 }
 
 morocc,110,77,7	script	xxxxxx#moc::moc2010i	942,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: What.";
 	end;
 }
 
 morocc,145,43,0	script	xxxxxx#moc::moc2010o	943,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: I'm out of supplies, sorry.";
 	end;
 }
 
 morocc,147,52,4	script	xxxxxx#moc::moc2010p	951,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: I don't like to talk to strangers.";
 	end;
 }
 
 morocc,138,53,1	script	xxxxxx#moc::moc2010a1c	967,{
-	npctalk "xxxxxx: xxxxxx.";
-	end;
-}
-
-
-morocc,130,59,4	script	xxxxxx#moc::moc2010d	996,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: I have never left this city.";
 	end;
 }
 
 morocc,128,50,3	script	xxxxxx#moc::moc2010f	997,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: I want to leave Rune Midgard someday.";
 	end;
 }
 
 morocc,119,50,6	script	xxxxxx#moc::moc2010g	983,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: Have you been to another country?";
 	end;
 }
 
 morocc,119,50,6	script	xxxxxx#moc::moc2010h	993,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: Bye.";
 	end;
 }
 
 morocc,112,53,3	script	xxxxxx#moc::moc2010j	975,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: Check the vendors here!";
 	end;
 }
 
 morocc,110,44,6	script	xxxxxx#moc::moc2010k	995,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: Yggdrassil, the sacred tree is in a town far west from here.";
 	end;
 }
 
 morocc,110,44,6	script	xxxxxx#moc::moc2010l	995,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: The back alleys don't often get visitors.";
 	end;
 }
 
 morocc,104,49,2	script	xxxxxx#moc::moc2010z	998,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: Welcome to Morroc.";
 	end;
 }
 
 
 morocc,100,41,3	script	xxxxxx#moc::moc2010x	935,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: Life can be hard in the desert.";
 	end;
 }
 
 
 morocc,91,47,4	script	xxxxxx#moc::moc2010c	940,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: Sograt was an ancient God here, some still believe.";
 	end;
 }
 
 
 morocc,93,37,7	script	xxxxxx#moc::moc2010v	892,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: Need food? Try an inn.";
 	end;
 }
 
 
 morocc,84,39,1	script	xxxxxx#moc::moc2010b	895,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: I am looking for oridecon to refine my weapons.";
 	end;
 }
 
 
 morocc,80,52,4	script	xxxxxx#moc::moc2010n	896,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: People here respect the desert a lot.";
 	end;
 }
 
 morocc,75,41,0	script	xxxxxx#moc::moc2010m	901,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: The rogue and assassin guild? Somewhere in the desert I've heard";
 	end;
 }
 
 
 morocc,71,51,7	script	xxxxxx#moc::moc2010qq	897,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: Do you like it here?";
 	end;
 }
 
 
 morocc,73,72,4	script	xxxxxx#moc::moc2010ww	475,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: Always carry butterfly wings in case you get lost.";
 	end;
 }
 
 morocc,54,48,7	script	xxxxxx#moc::moc2010ee	470,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: Hello.";
 	end;
 }
 
 morocc,56,56,3	script	xxxxxx#moc::moc2010rr	481,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: My friend is a vendor in the market.";
 	end;
 }
 
 morocc,62,51,6	script	xxxxxx#moc::moc2010tt	459,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: The pyramids can be dangerous.";
 	end;
 }
 
 morocc,62,74,5	script	xxxxxx#moc::moc2010yy	526,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: Bye.";
 	end;
 }
 
 
 morocc,56,82,7	script	xxxxxx#moc::moc2010uu	504,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: This is one of my favourite cities.";
 	end;
 }
 
 
 morocc,60,90,0	script	xxxxxx#moc::moc2010ii	542,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: I was raised far from here.";
 	end;
 }
 
 
 morocc,65,80,2	script	xxxxxx#moc::moc2010oo	536,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: Smiths need to be strong.";
 	end;
 }
 
 morocc,68,94,1	script	xxxxxx#moc::moc2010pp	581,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: Hey! Want something from me?";
 	end;
 }
 
 morocc,53,92,6	script	xxxxxx#moc::moc2010aa	583,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: There's a beach town to the west. I'll go there!";
 	end;
 }
 
 morocc,53,92,6	script	xxxxxx#moc::moc2010ss	583,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: Sant Darmain was abandoned a long time ago.";
 	end;
 }
 
 morocc,53,88,0	script	xxxxxx#moc::moc2010dd	603,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: Sorry...";
 	end;
 }
 
 morocc,57,109,7	script	xxxxxx#moc::moc2010ff	814,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: The desert caves are full of insects.";
 	end;
 }
 
 
 morocc,73,113,5	script	xxxxxx#moc::moc2010gg	819,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: Some people here don't talk to outsiders.";
 	end;
 }
 
 
 morocc,76,107,1	script	xxxxxx#moc::moc2010hh	847,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: What are you looking for?";
 	end;
 }
 
 
 morocc,54,120,6	script	xxxxxx#moc::moc2010jj	843,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: This city has some spots worth visiting.";
 	end;
 }
 
 morocc,35,171,4	script	xxxxxx#moc::moc2010kk	831,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: Check the Sphynx today! Free entrance!";
 	end;
 }
 
 morocc,44,167,5	script	xxxxxx#moc::moc2010ll	832,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: Hello.";
 	end;
 }
 
 
 morocc,52,171,6	script	xxxxxx#moc::moc2010zz	828,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: I just visited the Sphynx.";
 	end;
 }
 
 morocc,54,161,1	script	xxxxxx#moc::moc2010xx	884,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: The desert can be tough.";
 	end;
 }
 
 morocc,59,151,5	script	xxxxxx#moc::moc2010cc	733,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: I grew up here.";
 	end;
 }
 
 morocc,66,144,4	script	xxxxxx#moc::moc2010vv	732,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: Where are you from?";
 	end;
 }
 
 morocc,62,136,0	script	xxxxxx#moc::moc2010bb	755,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: Ask a guide if you are lost.";
 	end;
 }
 
 morocc,69,126,2	script	xxxxxx#moc::moc2010nn	54,{
-	npctalk "xxxxxx: xxxxxx.";
-	end;
-}
-
-morocc,70,152,3	script	xxxxxx#moc::moc2010mm	58,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: There's a vendor here that sells exotic berries.";
 	end;
 }
 
 
 morocc,36,163,1	script	xxxxxx#moc::moc2010qqq	72,{
-	npctalk "xxxxxx: xxxxxx.";
+	npctalk "xxxxxx: Bye.";
 	end;
 }
 
@@ -995,73 +924,73 @@ morocc,65,168,3	script	Morroc Guard#moc::moc383yyy	65,{
 }
 
 morocc,140,265,2	script	xxxxx#moc::moc383yyyq	82,{
-	npctalk "xxxxx: xxxxx.";
+	npctalk "xxxxx: Pharos is an important landmark for rogues, you know?";
 	end;
 }
 
 morocc,128,269,5	script	xxxxx#moc::moc383yyyw	93,{
-	npctalk "xxxxx: xxxxx.";
+	npctalk "xxxxx: Hello.";
 	end;
 }
 
 morocc,123,260,3	script	xxxxx#moc::moc383yyye	79,{
-	npctalk "xxxxx: xxxxx.";
+	npctalk "xxxxx: My friend is a city guard.";
 	end;
 }
 
 morocc,119,269,6	script	xxxxx#moc::moc383yyyr	412,{
-	npctalk "xxxxx: xxxxx.";
+	npctalk "xxxxx: I need more zeny.";
 	end;
 }
 
 morocc,106,260,3	script	xxxxx#moc::moc383yyyt	466,{
-	npctalk "xxxxx: xxxxx.";
+	npctalk "xxxxx: Have you tried Yggdrasil berries?";
 	end;
 }
 
 morocc,108,253,6	script	xxxxx#moc::moc383yyyy	494,{
-	npctalk "xxxxx: xxxxx.";
+	npctalk "xxxxx: I am going shopping.";
 	end;
 }
 
-morocc,96,250,7	script	xxxxx#moc::moc383yyyu	504,{
-	npctalk "xxxxx: xxxxx.";
+morocc,96,250,7	script	Morroc Vendor#moc::moc383yyyu	504,{
+	npctalk "Morroc Vendor: I´m closed for today.";
 	end;
 }
 
 morocc,74,255,1	script	xxxxx#moc::moc383yyyi	581,{
-	npctalk "xxxxx: xxxxx.";
+	npctalk "xxxxx: I can't remember where the costume shop was.";
 	end;
 }
 
 morocc,65,257,5	script	xxxxx#moc::moc383yyyo	603,{
-	npctalk "xxxxx: xxxxx.";
+	npctalk "xxxxx: Bye.";
 	end;
 }
 
 
 morocc,123,187,6	script	xxxxx#moc::moc383yyyp	641,{
-	npctalk "xxxxx: xxxxx.";
+	npctalk "xxxxx: Thieves tend to go to the Pyramid's basement.";
 	end;
 }
 
 morocc,136,204,1	script	xxxxx#moc::moc383yyya	642,{
-	npctalk "xxxxx: xxxxx.";
+	npctalk "xxxxx: Another tourist...";
 	end;
 }
 
 morocc,66,268,2	script	xxxxx#moc::moc383yyys	665,{
-	npctalk "xxxxx: xxxxx.";
+	npctalk "xxxxx: How can I help?";
 	end;
 }
 
 morocc,77,287,4	script	xxxxx#moc::moc383yyyd	706,{
-	npctalk "xxxxx: xxxxx.";
+	npctalk "xxxxx: I'm looking for fast exp.";
 	end;
 }
 
-morocc,53,286,5	script	xxxxx#moc::moc383yyy	754,{
-	npctalk "xxxxx: xxxxx.";
+morocc,53,286,5	script	xxxxx#moc::moc383yyddy	754,{
+	npctalk "xxxxx: My friend owns one of the inns here.";
 	end;
 }
 
@@ -1076,73 +1005,255 @@ morocc,26,288,6	script	Morroc Guard#moc::moc383g	946,{
 }
 
 morocc,35,280,1	script	xxxxx#moc::moc383yyyg	745,{
-	npctalk "xxxxx: xxxxx.";
+	npctalk "xxxxx: I'm looking for some food.";
 	end;
 }
 
 morocc,71,241,1	script	xxxxx#moc::moc383yyyf	66,{
-	npctalk "xxxxx: xxxxx.";
+	npctalk "xxxxx: Some pople are just rude.";
 	end;
 }
 
 morocc,61,237,6	script	xxxxx#moc::moc383yyyh	73,{
-	npctalk "xxxxx: xxxxx.";
+	npctalk "xxxxx: Always carry fly wings when exploring.";
 	end;
 }
 
 morocc,65,228,4	script	xxxxx#moc::moc383yyyj	84,{
-	npctalk "xxxxx: xxxxx.";
+	npctalk "xxxxx: I wish I could teleport.";
 	end;
 }
 
-morocc,86,225,0	script	xxxxx#moc::moc383yyy	88,{
-	npctalk "xxxxx: xxxxx.";
+morocc,86,225,0	script	xxxxx#moc::moc383yyytu	88,{
+	npctalk "xxxxx: I think I should move.";
 	end;
 }
 
 
 morocc,69,221,7	script	xxxxx#moc::moc383yyyk	89,{
-	npctalk "xxxxx: xxxxx.";
+	npctalk "xxxxx: I own a place in the market.";
 	end;
 }
 
 morocc,59,215,4	script	xxxxx#moc::moc383yyyl	93,{
-	npctalk "xxxxx: xxxxx.";
+	npctalk "xxxxx: I need more AGI.";
 	end;
 }
 
 morocc,66,210,0	script	xxxxx#moc::moc383yyyz	99,{
-	npctalk "xxxxx: xxxxx.";
+	npctalk "xxxxx: The market can get crowded sometimes.";
 	end;
 }
 
 morocc,74,202,2	script	xxxxx#moc::moc383yyyx	123,{
-	npctalk "xxxxx: xxxxx.";
+	npctalk "xxxxx: Look out for thieves here.";
 	end;
 }
 
 morocc,63,191,5	script	xxxxx#moc::moc383yyyc	673,{
-	npctalk "xxxxx: xxxxx.";
-	end;
-}
-
-morocc,78,186,2	script	xxxxx#moc::moc383yyyv	665,{
-	npctalk "xxxxx: xxxxx.";
+	npctalk "xxxxx: Bye.";
 	end;
 }
 
 morocc,35,246,2	script	xxxxx#moc::moc383yyyb	682,{
-	npctalk "xxxxx: xxxxx.";
+	npctalk "xxxxx: There's a large oasis to the east.";
 	end;
 }
 
 
 morocc,32,232,5	script	xxxxx#moc::moc383yyyn	706,{
-	npctalk "xxxxx: xxxxx.";
+	npctalk "xxxxx: Check the ruins west.";
 	end;
 }
 
 morocc,45,227,3	script	xxxxx#moc::moc383yyym	729,{
-	npctalk "xxxxx: xxxxx.";
+	npctalk "xxxxx: I want to buy potions.";
+	end;
+}
+
+morocc_in,40,167,7	script	xxxxx#moc::moc383yyymj	430,{
+	npctalk "xxxxx: Hey!";
+	end;
+}
+
+morocc_in,45,157,1	script	xxxxx#moc::moc383yyymh	735,{
+	npctalk "xxxxx: Have you been to Schwartzvald?";
+	end;
+}
+
+morocc_in,15,158,7	script	xxxxx#moc::moc383yyymg	748,{
+	npctalk "xxxxx: Some people here don't like tourists.";
+	end;
+}
+
+morocc_in,78,164,4	script	xxxxx#moc::moc383yyymf	744,{
+	npctalk "xxxxx: It takes skill to beat MVP's.";
+	end;
+}
+
+morocc_in,178,73,3	script	xxxxx#moc::moc383yyymd	750,{
+	npctalk "xxxxx: What's the strongest monster you've fought?";
+	end;
+}
+
+
+morocc_in,168,69,0	script	xxxxx#moc::moc383yyyms	741,{
+	npctalk "xxxxx: The Sphynx is to the west.";
+	end;
+}
+
+morocc_in,168,62,7	script	xxxxx#moc::moc383yyyma	778,{
+	npctalk "xxxxx: Another tourist?";
+	end;
+}
+
+morocc_in,177,30,5	script	xxxxx#moc::moc383yyymr	805,{
+	npctalk "xxxxx: Hello.";
+	end;
+}
+
+morocc_in,141,130,7	script	xxxxx#moc::moc383yyymra	804,{
+	npctalk "xxxxx: Archers are usually very dextrous.";
+	end;
+}
+
+morocc_in,177,140,3	script	xxxxx#moc::moc383yyymrs	690,{
+	npctalk "xxxxx: Have you been to the hypnotist?";
+	end;
+}
+
+morocc_in,177,130,3	script	xxxxx#moc::moc383yyymrd	688,{
+	npctalk "xxxxx: Allways collect your drop.";
+	end;
+}
+
+morocc_in,167,103,7	script	xxxxx#moc::moc383yyymrf	882,{
+	npctalk "xxxxx: Be careful if going to Saint Darmain.";
+	end;
+}
+
+morocc_in,141,145,6	script	xxxxx#moc::moc383yyymrg0	98,{
+	npctalk "xxxxx: What!";
+	end;
+}
+
+morocc_in,135,65,5	script	xxxxx#moc::moc383yyymrgfi	123,{
+	npctalk "xxxxx: Where are you from?";
+	end;
+}
+
+morocc_in,74,95,0	script	xxxxx#moc::moc383yyymrgq	118,{
+	npctalk "xxxxx: My brother is a city guard.";
+	end;
+}
+
+
+morocc_in,115,101,1	script	xxxxx#moc::moc383yyymrga	95,{
+	npctalk "xxxxx: Be careful when refining armor past +4.";
+	end;
+}
+
+morocc_in,84,127,1	script	xxxxx#moc::moc383yyymrgs	567,{
+	npctalk "xxxxx: Bye.";
+	end;
+}
+
+morocc_in,75,127,1	script	xxxxx#moc::moc383yyymrg	698,{
+	npctalk "xxxxx: Do you wear costumes?";
+	end;
+}
+
+morocc_in,44,129,6	script	xxxxx#moc::moc383yyymrgd	693,{
+	npctalk "xxxxx: Check the market for exotic supplies.";
+	end;
+}
+
+morocc_in,48,99,6	script	xxxxx#moc::moc383yyymrgf	459,{
+	npctalk "xxxxx: Watch out for thieves!";
+	end;
+}
+
+morocc,161,134,0	script	xxxxx#moc::oc383yyymrgf	459,{
+	npctalk "xxxxx: This city is so different.";
+	end;
+}
+
+morocc,152,143,2	script	xxxxx#moc::m383yyymrgf	479,{
+	npctalk "xxxxx: I love it here.";
+	end;
+}
+
+morocc,144,154,5	script	xxxxx#moc::mocoymrgf	410,{
+	npctalk "xxxxx: Morroc is the second largest city in Rune Midgard.";
+	end;
+}
+
+morocc,157,160,6	script	xxxxx#moc::moc6rgf	97,{
+	npctalk "xxxxx: Amon ra lives in the Pyramid's basement.";
+	end;
+}
+
+morocc,160,160,2	script	xxxxx#moc::moc38trgf	95,{
+	npctalk "xxxxx: Hey!";
+	end;
+}
+
+morocc,144,170,7	script	xxxxx#moc::mocjrgf	68,{
+	npctalk "xxxxx: I gained nice exp in the Sphynx.";
+	end;
+}
+
+morocc,146,187,1	script	xxxxx#moc::mocgmrgf	82,{
+	npctalk "xxxxx: Want anything?";
+	end;
+}
+
+morocc,163,184,0	script	xxxxx#moc::mociirgf	946,{
+	npctalk "Palace Guard: The palace entrance is restricted for now.";
+	end;
+}
+
+morocc,156,184,0	script	xxxxx#moc::pgf	946,{
+	npctalk "Palace Guard: The palace entrance is restricted for now.";
+	end;
+}
+
+morocc,177,180,2	script	xxxxx#moc::moc10ymrgf	89,{
+	npctalk "xxxxx: Hello.";
+	end;
+}
+
+morocc,176,162,3	script	xxxxx#moc::mocuygf	92,{
+	npctalk "xxxxx: I work in the palace, so I am allowed in.";
+	end;
+}
+
+morocc,172,147,2	script	xxxxx#moc::mo104mrgf	79,{
+	npctalk "xxxxx: Why is it closed?.";
+	end;
+}
+
+morocc,175,145,5	script	Dog#moc::moc8mrgf	81,{
+	npctalk "Dog: ...";
+	end;
+}
+
+morocc,163,126,4	script	xxxxx#moc::mocpmrgf	93,{
+	npctalk "xxxxx: The palace is nice.";
+	end;
+}
+
+morocc,156,200,0	script	xxxxx#moc::moc38plmrgf	644,{
+	npctalk "xxxxx: Want some food? Find a restaurant!";
+	end;
+}
+
+morocc,160,211,3	script	xxxxx#moc::i383yyymrgf	648,{
+	npctalk "xxxxx: I need some rest?";
+	end;
+}
+
+morocc,159,224,4	script	xxxxx#moc::moooyymrgf	628,{
+	npctalk "xxxxx: Hello.";
 	end;
 }

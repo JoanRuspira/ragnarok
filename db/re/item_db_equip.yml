@@ -40580,3 +40580,94 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 1
     View: 6
+  - Id: 19849
+    AegisName: C_Munak_Turban
+    Name: Costume Munak Hat
+    Type: Armor
+    Buy: 500000
+    Weight: 10
+    Locations:
+      Costume_Head_Top: true
+      Costume_Head_Mid: true
+      Costume_Head_Low: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 51
+  - Id: 19850
+    AegisName: C_Bongun_Hat
+    Name: Costume Bongun Hat
+    Type: Armor
+    Buy: 500000
+    Weight: 10
+    Locations:
+      Costume_Head_Top: true
+      Costume_Head_Mid: true
+      Costume_Head_Low: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 139
+
+  - Id: 19580
+    AegisName: C_Sphinx_Helm
+    Name: Costume Sphinx Helm
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+      Costume_Head_Low: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 137
+  - Id: 19578
+    AegisName: C_Goggle
+    Name: Costume Googles
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+      Costume_Head_Mid: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 1
+  - Id: 20405
+    AegisName: C_Eremes_Scarf
+    Name: Costume Eremes Scarf
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Low: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 1416
+  - Id: 20320
+    AegisName: C_Red_Bandana
+    Name: Costume Red Bandana
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 62
+  - Id: 20590
+    AegisName: C_Evil_Druid_Cross
+    Name: Costume Evil Druid Cross
+    Type: Armor
+    Buy: 500000
+    View: 67
+    Locations:
+      Costume_Garment: true
+    ArmorLevel: 1
+  - Id: 20537
+    AegisName: C_Maple_Which_Falls_Rd
+    Name: Costume Falling Red Foliage
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Script: |
+      hateffect(HAT_EF_C_MAPLE_WHICH_FALLS_RD,true);
+    UnEquipScript: |
+      hateffect(HAT_EF_C_MAPLE_WHICH_FALLS_RD,false);

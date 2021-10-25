@@ -943,6 +943,7 @@ Body:
     Name: Jam Pancake
     Type: Healing
     Weight: 150
+    Buy: 200
     Flags:
       BuyingStore: true
     Script: |
@@ -958,6 +959,7 @@ Body:
     Name: Honey Pancake
     Type: Healing
     Weight: 150
+    Buy: 200
     Flags:
       BuyingStore: true
     Script: |
@@ -973,6 +975,7 @@ Body:
     Name: Sour-Cream Pancake
     Type: Healing
     Weight: 150
+    Buy: 200
     Flags:
       BuyingStore: true
     Script: |
@@ -988,6 +991,7 @@ Body:
     Name: Mushroom Pancake
     Type: Healing
     Weight: 150
+    Buy: 200
     Flags:
       BuyingStore: true
     Script: |

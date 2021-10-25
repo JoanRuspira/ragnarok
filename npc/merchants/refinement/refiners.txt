@@ -507,7 +507,7 @@ prt_in,63,60,0	script	Hollgrehenn	85,{
 	callfunc "refinemain","Hollgrehenn",0;
 	end;
 }
-morocc_in,73,38,6	script	Aragham	99,{
+morocc_in,73,38,4	script	Aragham	731,{
 	callfunc "refinemain","Aragham",0;
 	end;
 }
@@ -843,7 +843,7 @@ payon,147,172,4	script	Payon Material Merchant	88,{
 	callfunc "phramain","Payon Material Merchant";
 	end;
 }
-morocc_in,63,32,6	script	Sade	99,{
+morocc_in,63,36,0	script	Sade	726,{
 	callfunc "phramain","Sade";
 	end;
 }
@@ -962,7 +962,7 @@ payon,142,181,7	script	Payon Polisher	85,{
 	callfunc "orimain","Payon Polisher";
 	end;
 }
-morocc_in,72,32,6	script	Abdula	99,{
+morocc_in,72,32,3	script	Abdula	63,{
 	callfunc "orimain","Abdula";
 	end;
 }
