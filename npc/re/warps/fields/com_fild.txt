@@ -43,7 +43,7 @@ cmd_fild08,25,170,0	warp	cmd_fild08-2	1,1,cmd_fild06,374,167
 cmd_fild08,15,102,0	warp	cmd_fild08-3	1,1,cmd_fild06,361,96
 cmd_fild08,76,31,0	warp	cmd_fild08-4	2,1,cmd_fild09,76,375
 cmd_fild08,309,48,0	warp	cmd_fild08-5	2,1,cmd_fild09,307,374
-cmd_fild08,354,324,0	warp	cmd_fild08-6	1,1,moc_fild12,26,305
+cmd_fild08,355,329,0	warp	cmd_fild08-6	1,1,moc_fild12,26,305
 cmd_fild09,12,170,0	warp	cmd_fild09-1	1,4,cmd_fild07,382,184
 cmd_fild09,369,164,0	warp	cmd_fild09-2	2,2,moc_fild18,55,170
 cmd_fild09,309,381,0	warp	cmd_fild09-3	2,1,cmd_fild08,309,60

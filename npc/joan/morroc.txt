@@ -1257,3 +1257,68 @@ morocc,159,224,4	script	xxxxx#moc::moooyymrgf	628,{
 	npctalk "xxxxx: Hello.";
 	end;
 }
+
+moc_fild19,148,103,4	script	xxxxx#moc::nnn334	636,{
+	npctalk "xxxxx: The Sphynx is tough.";
+	end;
+}
+
+moc_fild19,153,98,2	script	xxxxx#moc::aaa1212	645,{
+	npctalk "xxxxx: Are you going in?";
+	end;
+}
+
+moc_fild19,144,94,6	script	xxxxx#moc::mjs998	695,{
+	npctalk "xxxxx: I almost died there.";
+	end;
+}
+
+moc_fild19,155,106,3	script	xxxxx#moc::mio22	603,{
+	npctalk "xxxxx: Prepare before entering the Shpynx.";
+	end;
+}
+
+moc_fild07,200,27,0	script	Morroc Guard#moc::mo1220	946,{
+	npctalk "Morroc Guard: Welcome to Morroc.";
+	end;
+}
+
+moc_fild07,195,27,0	script	Morroc Guard#moc::moojjf	946,{
+	npctalk "Morroc Guard: Welcome to Morroc.";
+	end;
+}
+
+moc_fild07,194,39,3	script	xxxxx#moc::mo1234	602,{
+	npctalk "xxxxx: This area is nice for young adventurers.";
+	end;
+}
+
+moc_fild07,201,41,7	script	xxxxx#moc::mo123	567,{
+	npctalk "xxxxx: Zeny plz.";
+	end;
+}
+
+moc_fild07,197,47,0	script	xxxxx#moc::morrc	634,{
+	npctalk "xxxxx: I'm here for drops.";
+	end;
+}
+
+moc_fild10,24,210,6	script	Morroc Guard#moc::moojf	946,{
+	npctalk "Morroc Guard: Welcome to Morroc.";
+	end;
+}
+
+moc_fild10,24,205,6	script	Morroc Guard#moc::moojjf4	946,{
+	npctalk "Morroc Guard: Welcome to Morroc.";
+	end;
+}
+
+moc_fild10,31,210,5	script	xxxxx#moc::moojjf5	95,{
+	npctalk "xxxxx: Hello.";
+	end;
+}
+
+moc_fild10,33,204,2	script	xxxxx#moc::moojjfdd	97,{
+	npctalk "xxxxx: Morroc! Finally!!";
+	end;
+}

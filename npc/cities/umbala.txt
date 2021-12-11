@@ -158,7 +158,7 @@ cmd_in01,175,120,3	script	Iriya#um	69,{
 	close;
 }
 
-cmd_in01,164,115,1	script	Niels#um	731,{
+cmd_in01,165,117,1	script	Niels#um	731,{
 	mes "[Niels]";
 	mes "Hmm? What's that look for?";
 	mes "Ah~ You must of heard the rumors";

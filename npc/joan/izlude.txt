@@ -227,12 +227,12 @@ izlude,197,214,4	script	Gonk Battlefury#iz_npc27::iz_npc27b	105,{
 }
 
 izlude,184,212,2	script	xxxxx#iz_npc27::iz_npc27c	76,{
-	npctalk "xxxx: xxxxxx.";
+	npctalk "xxxx: Hello.";
 	end;
 }
 
 izlude,163,205,5	script	xxxxx#iz_npc27::iz_npc27d	85,{
-	npctalk "xxxx: xxxxxxx.";
+	npctalk "xxxx: Can I help you?";
 	end;
 }
 
@@ -247,27 +247,27 @@ izlude,95,168,0	script	Butcher#iz_merchant::iz_merchantf	85,{
 }
 
 izlude,90,147,6	script	xxxx#iz_merchant::iz_merchantg	688,{
-	npctalk "xxxx: xxx.";
+	npctalk "xxxx: Hey!";
 	end;
 }
 
 izlude,93,145,3	script	xxxx#iz_merchant::iz_merchanth	693,{
-	npctalk "xxxx: xxx.";
+	npctalk "xxxx: Bye.";
 	end;
 }
 
 izlude,97,134,6	script	xxxx#iz_merchant::iz_merchanti	74,{
-	npctalk "xxxx: xxx.";
+	npctalk "xxxx: I need some rest.";
 	end;
 }
 
 izlude,106,138,3	script	xxxx#iz_merchant::iz_merchantj	82,{
-	npctalk "xxxx: xxx.";
+	npctalk "xxxx: Hello.";
 	end;
 }
 
 izlude,107,135,3	script	xxxx#iz_merchant::iz_merchantk	81,{
-	npctalk "xxxx: xxx.";
+	npctalk "xxxx: What do you want?";
 	end;
 }
 
