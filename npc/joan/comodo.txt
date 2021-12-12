@@ -1,754 +1,754 @@
-comodo,327,177,4	script	xxxxx#moc::cm01	825,{
+comodo,327,177,4	script	Comodo Guard#moc::cm01	825,{
 	npctalk "Comodo Guard: Welcome to Comodo.";
 	end;
 }
 
 
-comodo,32,218,4	script	xxxxx#moc::cm0i1	825,{
+comodo,32,218,4	script	Comodo Guard#moc::cm0i1	825,{
 	npctalk "Comodo Guard: Welcome to Comodo.";
 	end;
 }
 
-comodo,173,354,4	script	xxxxx#moc::cm0d1	825,{
+comodo,173,354,4	script	Comodo Guard#moc::cm0d1	825,{
 	npctalk "Comodo Guard: Welcome to Comodo.";
 	end;
 }
 
-comodo,178,354,4	script	xxxxx#moc::cm0f1	825,{
+comodo,178,354,4	script	Comodo Guard#moc::cm0f1	825,{
 	npctalk "Comodo Guard: Welcome to Comodo.";
 	end;
 }
 
-comodo,186,164,4	script	xxxxx#moc::cm0g1	647,{
-	npctalk "xxxxx: Hey! Get down!";
+comodo,186,164,4	script	Comodo Villager#moc::cm0g1	647,{
+	npctalk "Hey! Get down!";
 	end;
 }
 
-comodo,191,164,4	script	xxxxx#moc::cm02	20,{
-	npctalk "xxxxx: Excuse me!";
+comodo,191,164,4	script	Comodo Villager#moc::cm02	20,{
+	npctalk "Excuse me!";
 	end;
 }
 
-comodo,188,166,4	script	xxxxx#moc::cm03	715,{
-	npctalk "xxxxx: Let us work.";
+comodo,188,166,4	script	Comodo Villager#moc::cm03	715,{
+	npctalk "Let us work.";
 	end;
 }
 
-comodo,185,171,4	script	xxxxx#moc::cm04	741,{
-	npctalk "xxxxx: I'm after them so I need to focus.";
+comodo,185,171,4	script	Comodo Villager#moc::cm04	741,{
+	npctalk "I'm after them so I need to focus.";
 	end;
 }
 
-comodo,195,172,3	script	xxxxx#moc::cm05	479,{
-	npctalk "xxxxx: I will make you a bard.";
+comodo,195,172,3	script	Comodo Villager#moc::cm05	479,{
+	npctalk "I will make you a bard.";
 	end;
 }
 
-comodo,193,174,3	script	xxxxx#moc::cm06	485,{
-	npctalk "xxxxx: I will make you a dancer.";
+comodo,193,174,3	script	Comodo Villager#moc::cm06	485,{
+	npctalk "I will make you a dancer.";
 	end;
 }
 
-comodo,188,154,0	script	xxxxx#moc::cm061	642,{
-	npctalk "xxxxx: What a great show!";
+comodo,188,154,0	script	Comodo Villager#moc::cm061	642,{
+	npctalk "What a great show!";
 	end;
 }
 
-comodo,191,156,0	script	xxxxx#moc::cm063	643,{
-	npctalk "xxxxx: Not bad I gues...";
+comodo,191,156,0	script	Comodo Villager#moc::cm063	643,{
+	npctalk "Not bad I gues...";
 	end;
 }
 
-comodo,184,159,7	script	xxxxx#moc::cm064	644,{
-	npctalk "xxxxx: They are great.";
+comodo,184,159,7	script	Comodo Villager#moc::cm064	644,{
+	npctalk "They are great.";
 	end;
 }
 
-comodo,194,155,1	script	xxxxx#moc::cm065	45,{
-	npctalk "xxxxx: Shh...";
+comodo,194,155,1	script	Comodo Villager#moc::cm065	501,{
+	npctalk "Shh...";
 	end;
 }
 
-comodo,184,144,5	script	xxxxx#moc::cm066	678,{
-	npctalk "xxxxx: Welcome to the beach!";
+comodo,184,144,5	script	Comodo Villager#moc::cm066	678,{
+	npctalk "Welcome to the beach!";
 	end;
 }
 
-comodo,196,140,6	script	xxxxx#moc::cm067	47,{
-	npctalk "xxxxx: This town is built in a cove.";
+comodo,196,140,6	script	Comodo Villager#moc::cm067	47,{
+	npctalk "This town is built in a cove.";
 	end;
 }
 
 
 
-comodo,206,150,4	script	xxxxx#moc::cm068	48,{
-	npctalk "xxxxx: Have you checked the caves here?";
+comodo,206,150,4	script	Comodo Villager#moc::cm068	48,{
+	npctalk "Have you checked the caves here?";
 	end;
 }
 
-comodo,130,332,5	script	xxxxx#moc::cm069	49,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,130,332,5	script	Comodo Villager#moc::cm069	49,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,135,323,3	script	xxxxx#moc::cm060	50,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,135,323,3	script	Comodo Villager#moc::cm060	50,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,146,321,1	script	xxxxx#moc::cm0611	54,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,146,321,1	script	Comodo Villager#moc::cm0611	54,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,154,327,6	script	xxxxx#moc::cm0612	55,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,154,327,6	script	Comodo Villager#moc::cm0612	55,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,159,316,1	script	xxxxx#moc::cm0613	56,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,159,316,1	script	Comodo Villager#moc::cm0613	56,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,169,317,3	script	xxxxx#moc::cm0622	677,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,169,317,3	script	Comodo Villager#moc::cm0622	677,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,173,332,0	script	xxxxx#moc::cm0633	58,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,173,332,0	script	Comodo Villager#moc::cm0633	58,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,185,325,5	script	xxxxx#moc::cm0644	59,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,185,325,5	script	Comodo Villager#moc::cm0644	59,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,178,312,3	script	xxxxx#moc::cm0655	62,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,178,312,3	script	Comodo Villager#moc::cm0655	62,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,162,309,1	script	xxxxx#moc::cm0666	66,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,162,309,1	script	Comodo Villager#moc::cm0666	66,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,145,305,4	script	xxxxx#moc::cm0677	67,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,145,305,4	script	Comodo Villager#moc::cm0677	67,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,192,312,6	script	xxxxx#moc::cm0688	675,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,192,312,6	script	Comodo Villager#moc::cm0688	675,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,199,308,6	script	xxxxx#moc::cm0699	69,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,199,308,6	script	Comodo Villager#moc::cm0699	69,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,204,310,2	script	xxxxx#moc::cm0600	82,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,204,310,2	script	Comodo Villager#moc::cm0600	82,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,213,308,5	script	xxxxx#moc::cm1	81,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,213,308,5	script	Comodo Villager#moc::cm1	81,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,221,310,1	script	xxxxx#moc::cm11	727,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,221,310,1	script	Comodo Villager#moc::cm11	727,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,223,319,0	script	xxxxx#moc::cm111	123,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,223,319,0	script	Comodo Villager#moc::cm111	123,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,225,300,3	script	xxxxx#moc::cm1111	430,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,225,300,3	script	Comodo Villager#moc::cm1111	430,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,210,290,4	script	xxxxx#moc::cm2	570,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,210,290,4	script	Comodo Villager#moc::cm2	570,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,196,291,7	script	xxxxx#moc::cm22	571,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,196,291,7	script	Comodo Villager#moc::cm22	571,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,215,298,6	script	xxxxx#moc::cm222	576,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,215,298,6	script	Comodo Villager#moc::cm222	576,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,234,294,2	script	xxxxx#moc::cm2222	733,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,234,294,2	script	Comodo Villager#moc::cm2222	733,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,245,299,3	script	xxxxx#moc::cm3	578,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,245,299,3	script	Comodo Villager#moc::cm3	578,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,239,289,5	script	xxxxx#moc::cm33	579,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,239,289,5	script	Comodo Villager#moc::cm33	579,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,255,87,2	script	xxxxx#moc::cm313	581,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,255,87,2	script	Comodo Villager#moc::cm313	581,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,246,96,0	script	xxxxx#moc::cm330	582,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,246,96,0	script	Comodo Villager#moc::cm330	582,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,234,87,4	script	xxxxx#moc::cm331	756,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,234,87,4	script	Comodo Villager#moc::cm331	756,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,217,92,3	script	xxxxx#moc::cm332001	672,{
+comodo,217,92,3	script	Comodo Villager#moc::cm332001	672,{
 	npctalk "xxxxx: I love my boat.";
 	end;
 }
 
-comodo,205,97,6	script	xxxxx#moc::cm333	504,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,205,97,6	script	Comodo Villager#moc::cm333	504,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,201,97,76	script	xxxxx#moc::cm343	531,{
+comodo,201,97,76	script	Comodo Villager#moc::cm343	531,{
 	npctalk "xxxxx: Do you own a boat?";
 	end;
 }
 
-comodo,190,92,5	script	xxxxx#moc::cm334	532,{
+comodo,190,92,5	script	Comodo Villager#moc::cm334	532,{
 	npctalk "xxxxx: Look at this mess...";
 	end;
 }
 
-comodo,176,84,5	script	xxxxx#moc::cm335	533,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,176,84,5	script	Comodo Villager#moc::cm335	533,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,78,82,1	script	xxxxx#moc::cm336	534,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,78,82,1	script	Comodo Villager#moc::cm336	534,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,163,88,4	script	xxxxx#moc::cm33	535,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,163,88,4	script	Comodo Villager#moc::cm33hhhd	535,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,162,97,0	script	xxxxx#moc::cm337	765,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,162,97,0	script	Comodo Villager#moc::cm337	765,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,200,110,6	script	xxxxx#moc::cm339	536,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,200,110,6	script	Comodo Villager#moc::cm339	536,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,202,112,3	script	xxxxx#moc::cm338	537,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,202,112,3	script	Comodo Villager#moc::cm338	537,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,200,101,2	script	xxxxx#moc::cm33000u	681,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,200,101,2	script	Comodo Villager#moc::cm33000u	681,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,284,127,1	script	xxxxx#moc::cm3323	538,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,284,127,1	script	Comodo Villager#moc::cm3323	538,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,284,137,7	script	xxxxx#moc::cm3333	539,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,284,137,7	script	Comodo Villager#moc::cm3333	539,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,273,142,5	script	xxxxx#moc::cm3332	543,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,273,142,5	script	Comodo Villager#moc::cm3332	543,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,254,147,2	script	xxxxx#moc::cm3331	744,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,254,147,2	script	Comodo Villager#moc::cm3331	744,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,236,151,6	script	xxxxx#moc::cm3334	558,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,236,151,6	script	Comodo Villager#moc::cm3334	558,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,78,168,6	script	xxxxx#moc::cm3345	92,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,78,168,6	script	Comodo Villager#moc::cm3345	92,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,89,170,0	script	xxxxx#moc::cm3336	93,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,89,170,0	script	Comodo Villager#moc::cm3336	93,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,98,165,6	script	xxxxx#moc::cm3337	95,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,98,165,6	script	Comodo Villager#moc::cm3337	95,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,101,165,2	script	xxxxx#moc::cm3338	96,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,101,165,2	script	Comodo Villager#moc::cm3338	96,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,97,150,4	script	xxxxx#moc::cm3330	97,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,97,150,4	script	Comodo Villager#moc::cm3330	97,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,101,134,0	script	xxxxx#moc::cm33300009	754,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,101,134,0	script	Comodo Villager#moc::cm33300009	754,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,74,124,2	script	xxxxx#moc::cm3341	98,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,74,124,2	script	Comodo Villager#moc::cm3341	98,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,65,141,3	script	xxxxx#moc::cm3342	99,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,65,141,3	script	Comodo Villager#moc::cm3342	99,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,69,157,0	script	xxxxx#moc::cm3343	100,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,69,157,0	script	Comodo Villager#moc::cm3343	100,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,89,105,7	script	xxxxx#moc::cm3344	101,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,89,105,7	script	Comodo Villager#moc::cm3344	101,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,97,96,6	script	xxxxx#moc::cm334000s5	755,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,97,96,6	script	Comodo Villager#moc::cm334000s5	755,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,100,96,2	script	xxxxx#moc::cm3346	123,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,100,96,2	script	Comodo Villager#moc::cm3346	123,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,116,100,0	script	xxxxx#moc::cm3347	124,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,116,100,0	script	Comodo Villager#moc::cm3347	124,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,108,134,7	script	xxxxx#moc::cm3348	751,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,108,134,7	script	Comodo Villager#moc::cm3348	751,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,127,133,0	script	xxxxx#moc::cm3350	125,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,127,133,0	script	Comodo Villager#moc::cm3350	125,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,126,119,4	script	xxxxx#moc::cm3349	500,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,126,119,4	script	Comodo Villager#moc::cm3349	500,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,134,115,7	script	xxxxx#moc::cm3352	502,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,134,115,7	script	Comodo Villager#moc::cm3352	502,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,145,124,0	script	xxxxx#moc::cm3351	503,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,145,124,0	script	Comodo Villager#moc::cm3351	503,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,149,133,5	script	xxxxx#moc::cm3353	779,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,149,133,5	script	Comodo Villager#moc::cm3353	779,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,145,146,6	script	xxxxx#moc::cm3354	532,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,145,146,6	script	Comodo Villager#moc::cm3354	532,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,147,146,2	script	xxxxx#moc::cm3355	533,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,147,146,2	script	Comodo Villager#moc::cm3355	533,{
+	npctalk "npcdialog";
 	end;
 }
 
 
-comodo,83,217,2	script	xxxxx#moc::cm3356	534,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,83,217,2	script	Comodo Villager#moc::cm3356	534,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,90,213,5	script	xxxxx#moc::cm3357	536,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,90,213,5	script	Comodo Villager#moc::cm3357	536,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,94,208,2	script	xxxxx#moc::cm3358	537,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,94,208,2	script	Comodo Villager#moc::cm3358	537,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,100,221,7	script	xxxxx#moc::cm3359	798,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,100,221,7	script	Comodo Villager#moc::cm3359	798,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,103,210,4	script	xxxxx#moc::cm3370	80,{
+comodo,103,210,4	script	Comodo Villager#moc::cm3370	80,{
 	npctalk "xxxxx: Camarer";
 	end;
 }
 
-comodo,98,200,6	script	xxxxx#moc::cm3371	539,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,98,200,6	script	Comodo Villager#moc::cm3371	539,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,103,196,1	script	xxxxx#moc::cm3372	46,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,103,196,1	script	Comodo Villager#moc::cm3372	46,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,112,208,2	script	xxxxx#moc::cm3373	47,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,112,208,2	script	Comodo Villager#moc::cm3373	47,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,109,209,6	script	xxxxx#moc::cm3374	48,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,109,209,6	script	Comodo Villager#moc::cm3374	48,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,90,265,7	script	xxxxx#moc::cm3375	774,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,90,265,7	script	Comodo Villager#moc::cm3375	774,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,101,268,6	script	xxxxx#moc::cm3377	50,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,101,268,6	script	Comodo Villager#moc::cm3377	50,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,98,273,5	script	xxxxx#moc::cm3378	532,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,98,273,5	script	Comodo Villager#moc::cm3378	532,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,114,285,4	script	xxxxx#moc::cm3379	533,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,114,285,4	script	Comodo Villager#moc::cm3379	533,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,109,288,1	script	xxxxx#moc::cm3380	484,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,109,288,1	script	Comodo Villager#moc::cm3380	484,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,161,288,1	script	xxxxx#moc::cm3381	770,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,161,288,1	script	Comodo Villager#moc::cm3381	770,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,157,291,5	script	xxxxx#moc::cm3382	54,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,157,291,5	script	Comodo Villager#moc::cm3382	54,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,163,281,0	script	xxxxx#moc::cm3383	55,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,163,281,0	script	Comodo Villager#moc::cm3383	55,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,170,290,6	script	xxxxx#moc::cm3384	56,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,170,290,6	script	Comodo Villager#moc::cm3384	56,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,173,288,2	script	xxxxx#moc::cm3385	57,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,173,288,2	script	Comodo Villager#moc::cm3385	57,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,175,282,3	script	xxxxx#moc::cm3386	815,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,175,282,3	script	Comodo Villager#moc::cm3386	815,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,233,270,0	script	xxxxx#moc::cm3387	58,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,233,270,0	script	Comodo Villager#moc::cm3387	58,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,238,251,4	script	xxxxx#moc::cm3388	59,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,238,251,4	script	Comodo Villager#moc::cm3388	59,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,243,232,6	script	xxxxx#moc::cm3389	71,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,243,232,6	script	Comodo Villager#moc::cm3389	71,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,193,280,2	script	xxxxx#moc::cm3390	72,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,193,280,2	script	Comodo Villager#moc::cm3390	72,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,221,334,4	script	xxxxx#moc::cm3392	73,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,221,334,4	script	Comodo Villager#moc::cm3392	73,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,230,331,6	script	xxxxx#moc::cm3391	828,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,230,331,6	script	Comodo Villager#moc::cm3391	828,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,268,276,1	script	xxxxx#moc::cm3393	74,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,268,276,1	script	Comodo Villager#moc::cm3393	74,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,109,183,0	script	xxxxx#moc::cm3394	75,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,109,183,0	script	Comodo Villager#moc::cm3394	75,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,112,188,4	script	xxxxx#moc::cm3396	82,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,112,188,4	script	Comodo Villager#moc::cm3396	82,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,125,168,5	script	xxxxx#moc::cm3395	83,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,125,168,5	script	Comodo Villager#moc::cm3395	83,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,118,170,3	script	xxxxx#moc::cm3397	84,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,118,170,3	script	Comodo Villager#moc::cm3397	84,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,138,179,5	script	xxxxx#moc::cm3398	839,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,138,179,5	script	Comodo Villager#moc::cm3398	839,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,137,165,5	script	xxxxx#moc::cm3399	85,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,137,165,5	script	Comodo Villager#moc::cm3399	85,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,140,162,1	script	xxxxx#moc::cm3300	86,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,140,162,1	script	Comodo Villager#moc::cm3300	86,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,148,176,2	script	xxxxx#moc::cm33001	88,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,148,176,2	script	Comodo Villager#moc::cm33001	88,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,157,164,5	script	xxxxx#moc::cm33002	846,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,157,164,5	script	Comodo Villager#moc::cm33002	846,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,167,145,7	script	xxxxx#moc::cm33003	89,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,167,145,7	script	Comodo Villager#moc::cm33003	89,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,172,146,3	script	xxxxx#moc::cm33004	90,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,172,146,3	script	Comodo Villager#moc::cm33004	90,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,171,157,0	script	xxxxx#moc::cm33005	91,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,171,157,0	script	Comodo Villager#moc::cm33005	91,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,210,125,6	script	xxxxx#moc::cm33006	92,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,210,125,6	script	Comodo Villager#moc::cm33006	92,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,219,237,6	script	xxxxx#moc::cm33007	93,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,219,237,6	script	Comodo Villager#moc::cm33007	93,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,221,134,1	script	xxxxx#moc::cm33008	95,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,221,134,1	script	Comodo Villager#moc::cm33008	95,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,256,125,6	script	xxxxx#moc::cm33009	847,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,256,125,6	script	Comodo Villager#moc::cm33009	847,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,258,125,2	script	xxxxx#moc::cm33010	96,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,258,125,2	script	Comodo Villager#moc::cm33010	96,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,218,155,7	script	xxxxx#moc::cm33011	97,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,218,155,7	script	Comodo Villager#moc::cm33011	97,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,235,188,6	script	xxxxx#moc::cm33012	98,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,235,188,6	script	Comodo Villager#moc::cm33012	98,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,250,204,0	script	xxxxx#moc::cm33013	878,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,250,204,0	script	Comodo Villager#moc::cm33013	878,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,274,177,2	script	xxxxx#moc::cm33014	99,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,274,177,2	script	Comodo Villager#moc::cm33014	99,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,270,177,6	script	xxxxx#moc::cm33015	100,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,270,177,6	script	Comodo Villager#moc::cm33015	100,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,288,185,6	script	xxxxx#moc::cm33016	735,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,288,185,6	script	Comodo Villager#moc::cm33016	735,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,243,178,5	script	xxxxx#moc::cm33999	101,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,243,178,5	script	Comodo Villager#moc::cm33999	101,{
+	npctalk "npcdialog";
 	end;
 }
 
-comodo,244,174,0	script	xxxxx#moc::cm33888	123,{
-	npctalk "xxxxx: xxxxxxx";
+comodo,244,174,0	script	Comodo Villager#moc::cm33888	123,{
+	npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,145,176,0	script	xxxxx#moc::cam1	634,{
-	npctalk "xxxxx: xxxxxxx";
+cmd_in02,145,176,0	script	Comodo Villager#moc::cam1	634,{
+	npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,153,180,6	script	xxxxx#moc::cam2	635,{
-	npctalk "xxxxx: xxxxxxx";
+cmd_in02,153,180,6	script	Comodo Villager#moc::cam2	635,{
+	npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,173,185,4	script	xxxxx#moc::cam3	636,{
-	npctalk "xxxxx: xxxxxxx";
+cmd_in02,173,185,4	script	Comodo Villager#moc::cam3	636,{
+	npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,183,187,2	script	xxxxx#moc::cam4	637,{
-	npctalk "xxxxx: xxxxxxx";
+cmd_in02,183,187,2	script	Comodo Villager#moc::cam4	637,{
+	npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,181,173,3	script	xxxxx#moc::cam5	638,{
-	npctalk "xxxxx: xxxxxxx";
+cmd_in02,181,173,3	script	Comodo Villager#moc::cam5	638,{
+	npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,211,201,7	script	xxxxx#moc::cam6	73,{
-	npctalk "xxxxx: xxxxxxx";
+cmd_in02,211,201,7	script	Comodo Villager#moc::cam6	73,{
+	npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,98,201,5	script	xxxxx#moc::cam7	74,{
-	npctalk "xxxxx: xxxxxxx";
+cmd_in02,98,201,5	script	Comodo Villager#moc::cam7	74,{
+	npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,154,208,4	script	xxxxx#moc::cam8	75,{
-	npctalk "xxxxx: xxxxxxx";
+cmd_in02,154,208,4	script	Comodo Villager#moc::cam8	75,{
+	npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,154,197,1	script	xxxxx#moc::cam9	93,{
-	npctalk "xxxxx: xxxxxxx";
+cmd_in02,154,197,1	script	Comodo Villager#moc::cam9	93,{
+	npctalk "npcdialog";
 	end;
 }
 
-cmd_in01,117,82,4	script	xxxxx#moc::cam10	84,{
-	npctalk "xxxxx: xxxxxxx";
+cmd_in01,117,82,4	script	Comodo Villager#moc::cam10	84,{
+	npctalk "npcdialog";
 	end;
 }
 
-cmd_in01,122,72,1	script	xxxxx#moc::cam11	94,{
-	npctalk "xxxxx: xxxxxxx";
+cmd_in01,122,72,1	script	Comodo Villager#moc::cam11	94,{
+	npctalk "npcdialog";
 	end;
 }
 
-cmd_in01,124,171,4	script	xxxxx#moc::cam12	85,{
+cmd_in01,124,171,4	script	Comodo Villager#moc::cam12	85,{
 	npctalk "xxxxx: What are you buying?";
 	end;
 }
 
-cmd_in01,78,173,2	script	xxxxx#moc::cam13	49,{
+cmd_in01,78,173,2	script	Comodo Villager#moc::cam13	49,{
 	npctalk "xxxxx: What are you buying?";
 	end;
 }
 
 
-comodo,35,211,0	script	xxxxx#moc::cam14	86,{
+comodo,35,211,0	script	Comodo Villager#moc::cam14	86,{
 	npctalk "xxxxx: Be careful in the cave.";
 	end;
 }
 
-comodo,42,216,6	script	xxxxx#moc::cam15	682,{
+comodo,42,216,6	script	Comodo Villager#moc::cam15	682,{
 	npctalk "xxxxx: Are you visiting Karu?";
 	end;
 }
 
-comodo,174,211,5	script	xxxxx#moc::cam16	47,{
+comodo,174,211,5	script	Comodo Villager#moc::cam16	47,{
 	npctalk "xxxxx: Carry potions!";
 	end;
 }
 
-comodo,317,175,2	script	xxxxx#moc::cam17	681,{
+comodo,317,175,2	script	Comodo Villager#moc::cam17	681,{
 	npctalk "xxxxx: I am going to Kokomo beach.";
 	end;
 }
