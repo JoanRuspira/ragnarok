@@ -45,28 +45,34 @@
 //=======================================================
 // Alberta
 //=======================================================
-alb2trea,87,65,5	shop	Tool Dealer#alb	83,1750:-1,1751:-1,1752:-1,501:-1,502:-1,503:-1,504:-1,506:-1,645:-1,656:-1
-alberta_in,165,96,0	shop	Item Collector#alb	74,911:-1,528:-1
+alb2trea,87,65,5	shop	Tool Dealer#alb0	83,1750:-1,1751:-1,1752:-1,501:-1,502:-1,503:-1,504:-1,506:-1,645:-1,656:-1
+alberta_in,165,96,0	shop	Item Collector#alb1	74,911:-1,528:-1
 alberta_in,182,97,0	shop	Tool Dealer#alb2	73,1750:-1,611:-1,501:-1,502:-1,503:-1,504:-1,506:-1,645:-1,656:-1,601:-1,602:-1,2243:-1
-alberta_in,180,15,0	shop	Armor Dealer#alb	101,2101:-1,2103:-1,2401:-1,2403:-1,2405:-1,2501:-1,2503:-1,2505:-1,2203:-1,2201:-1,2205:-1,2226:-1,2301:-1,2303:-1,2305:-1,2321:-1,2328:-1,2332:-1,2307:-1,2309:-1,2312:-1,2314:-1,2628:-1
-alberta_in,188,21,0	shop	Weapon Dealer#alb	49,1750:-1,1751:-1,1101:-1,1104:-1,1107:-1,1201:-1,1204:-1,1207:-1,1601:-1,1701:-1,1301:-1,1351:-1,1354:-1,1357:-1,1360:-1
-alberta_in,175,97,4	shop	Weapon Dealer#alb2	82,1146:-1,1245:-1
-//alberta_in,176,81,3	shop	Trading Merchant#alb	900,13200:-1,13201:-1,13202:-1,13150:-1,13102:-1,13151:-1,13154:-1,13155:-1,13163:-1,13165:-1,13168:-1
-alberta,70,44,0	shop	Flower Vendor#albi	90,712:-1,744:-1,748:-1
-alberta,188,65,2	shop	Fruit Vendor#albe	102,512:-1,513:-1
-alberta,194,74,3	shop	Vendor from Milk Ranch#albe	90,519:-1
-alberta,209,72,4	shop	Fish Vendor#albs	83,544:-1,579:-1,584:-1
-alberta,209,51,6	shop	Market Fish Vendor#albe	84,544:-1,579:-1,584:-1
-alberta,217,87,7	shop	Vegetable Shop#alb	892,522:-1,512:-1,513:-1,515:-1,516:-1,535:-1
-alberta,132,166,6	shop	Vegetable Shop#al	892,522:-1,512:-1,513:-1,515:-1,516:-1,535:-1
-alberta,147,179,1	shop	Fish Vendor#alb	83,544:-1,579:-1,584:-1
-alberta,131,180,6	shop	Baker#al	91,580:-1,592:-1,593:-1,594:-1,595:-1
-alberta,145,202,7	shop	Market Fish Vendor#alber	84,544:-1,579:-1,584:-1
-alberta,140,189,4	shop	Fruit Vendor#alber	102,512:-1,513:-1
-alberta,134,202,0	shop	Market Butcher#alb	87,517:-1,528:-1
-alberta,132,195,1	shop	Baker#alb	91,580:-1,592:-1,593:-1,594:-1,595:-1
-alberta,132,210,6	shop	Pet Groomer#alb	125,537:-1,643:-1,10013:-1,10014:-1,554:-1,6113:-1,6114:-1,6115:-1
-alberta,48,158,6	shop	Gift Merchant#alb	91,734:-1,735:-1,736:-1,737:-1,746:-1
+alberta_in,180,15,0	shop	Armor Dealer#alb3	101,2101:-1,2103:-1,2401:-1,2403:-1,2405:-1,2501:-1,2503:-1,2505:-1,2203:-1,2201:-1,2205:-1,2226:-1,2301:-1,2303:-1,2305:-1,2321:-1,2328:-1,2332:-1,2307:-1,2309:-1,2312:-1,2314:-1,2628:-1
+alberta_in,188,21,0	shop	Weapon Dealer#alb4	49,1750:-1,1751:-1,1101:-1,1104:-1,1107:-1,1201:-1,1204:-1,1207:-1,1601:-1,1701:-1,1301:-1,1351:-1,1354:-1,1357:-1,1360:-1
+alberta_in,175,97,4	shop	Weapon Dealer#alb5	82,1146:-1,1245:-1
+alberta_in,175,79,2	shop	Costume Dealer#iz	900,19585:-1,19545:-1,19584:-1,19598:-1,19605:-1,20582:-1,20584:-1
+//alberta_in,176,81,3	shop	Trading Merchant#alb6	900,13200:-1,13201:-1,13202:-1,13150:-1,13102:-1,13151:-1,13154:-1,13155:-1,13163:-1,13165:-1,13168:-1
+alberta,70,44,0	shop	Flower Vendor#albi7	90,712:-1,744:-1,748:-1
+alberta,188,65,2	shop	Fruit Vendor#albe8	102,512:-1,513:-1
+alberta,194,74,3	shop	Vendor from Milk Ranch#albe9	90,519:-1
+alberta,209,72,4	shop	Fish Vendor#albs9	83,544:-1,579:-1,584:-1
+alberta,209,51,6	shop	Market Fish Vendor#albe10	84,544:-1,579:-1,584:-1
+alberta,217,87,7	shop	Vegetable Shop#alb11	892,522:-1,512:-1,513:-1,515:-1,516:-1,535:-1
+alberta,132,166,6	shop	Vegetable Shop#al12	892,522:-1,512:-1,513:-1,515:-1,516:-1,535:-1
+alberta,147,179,1	shop	Fish Vendor#alb13	83,544:-1,579:-1,584:-1
+alberta,131,180,6	shop	Baker#al14	91,580:-1,592:-1,593:-1,594:-1,595:-1
+alberta,145,202,7	shop	Market Fish Vendor#alber15	84,544:-1,579:-1,584:-1
+alberta,140,189,4	shop	Fruit Vendor#alber16	102,512:-1,513:-1
+alberta,134,202,0	shop	Market Butcher#alb17	87,517:-1,528:-1
+alberta,132,195,1	shop	Baker#alb18	91,580:-1,592:-1,593:-1,594:-1,595:-1
+alberta,132,210,6	shop	Pet Groomer#alb19	125,537:-1,643:-1,10013:-1,10014:-1,554:-1,6113:-1,6114:-1,6115:-1
+alberta,48,158,6	shop	Gift Merchant#alb20	91,734:-1,735:-1,736:-1,737:-1,746:-1
+alberta,131,227,5	shop	Market Butcher#alb21	87,517:-1,528:-1
+alberta,103,222,6	shop	Waiter#alb22	61,12711:-1,12712:-1,12713:-1,539:-1,544:-1,549:-1
+alberta_in,29,141,2	shop	Inn Keeper#alb23	61,12711:-1,12712:-1,12713:-1,539:-1,544:-1,549:-1
+alberta_in,28,29,2	shop	Potion Master#alb24	18,501:-1,502:-1,503:-1,504:-1,505:-1,506:-1
+
 
 //=======================================================
 // Al De Baran
@@ -171,8 +177,18 @@ gonryun,173,84,3	shop	Armor Dealer#gon	770,2211:-1,2401:-1,2403:-1,2501:-1,2503:
 //=======================================================
 // Hugel
 //=======================================================
-hugel,105,169,5	shop	Vendor from Milk Ranch#h	90,519:-1
-hugel,77,167,3	shop	Vegetable Gardener#hu	892,522:-1,512:-1,513:-1,515:-1,516:-1,535:-1
+hugel,105,169,5	shop	Milk Vendor#hugel1	90,519:-1
+hugel,77,167,3	shop	Vegetable Gardener#hugel2	892,522:-1,512:-1,513:-1,515:-1,516:-1,535:-1
+hugel,70,143,5	shop	Market Butcher#hugel3	87,517:-1,528:-1
+hugel,69,134,6	shop	Baker#hugel4	91,580:-1,592:-1,593:-1,594:-1,595:-1
+hugel,73,127,5	shop	Pizza Vendor#hugel5	830,563:-1
+hugel,81,117,6	shop	Baker#hugel6	95,580:-1,592:-1,593:-1,594:-1,595:-1
+hugel,83,150,3	shop	Pet Groomer#hugel7	125,537:-1,643:-1,10013:-1,10014:-1,554:-1,6113:-1,6114:-1,6115:-1
+hugel,102,170,3	shop	Baker#hugel8	95,580:-1,592:-1,593:-1,594:-1,595:-1
+hugel,102,183,7	shop	Market Vegeable Gardener#hugel9	91,515:-1,516:-1,535:-1
+hugel,74,185,2	shop	Market Fish Vendor#hugel10	84,544:-1,579:-1,584:-1
+hugel,82,98,4	shop	Baker#hugel11	95,580:-1,592:-1,593:-1,594:-1,595:-1
+hugel,73,175,1	shop	Market Vegeable Gardener#hugel12	91,515:-1,516:-1,535:-1
 hu_in01,241,368,2	shop	Tool Dealer#hu	53,1750:-1,611:-1,501:-1,502:-1,503:-1,504:-1,506:-1,645:-1,656:-1,601:-1,602:-1,1065:-1
 hu_in01,252,368,3	shop	Tool Dealer#hu2	90,717:-1,2201:-1,910:-1,528:-1
 hu_in01,100,390,3	shop	Bow Dealer#hu	86,1701:-1,1707:-1,1718:-1,1714:-1

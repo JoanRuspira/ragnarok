@@ -3,9 +3,9 @@ import uuid
 from lists import * 
 
 #input file
-fin = open("aldebaran_template.txt", "rt")
+fin = open("hugel_template.txt", "rt")
 #output file to write the result to
-fout = open("aldebaran_tmp.txt", "wt")
+fout = open("hugel_tmp.txt", "wt")
 #for each line in the input file
 for line in fin:
 	#read replace the string and write to output file
@@ -17,9 +17,9 @@ fout.close()
 
 
 #input file
-fin = open("aldebaran_tmp.txt", "rt")
+fin = open("hugel_tmp.txt", "rt")
 #output file to write the result to
-fout = open("../npc/joan/aldebaran.txt", "wt")
+fout = open("../npc/joan/hugel.txt", "wt")
 #for each line in the input file
 
 for line in fin:

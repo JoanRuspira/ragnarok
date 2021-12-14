@@ -515,7 +515,7 @@ payon,141,164,5	script	Payon Refiner	726,{
 	callfunc "refinemain","Payon Refiner",0;
 	end;
 }
-alberta_in,28,58,0	script	Fredrik	85,{
+alberta_in,28,58,0	script	Fredrik	63,{
 	callfunc "refinemain","Fredrik",0;
 	end;
 }
@@ -847,7 +847,7 @@ morocc_in,63,36,0	script	Sade	726,{
 	callfunc "phramain","Sade";
 	end;
 }
-alberta_in,13,71,3	script	Kahlamanlith	86,{
+alberta_in,15,65,5	script	Kahlamanlith	10,{
 	callfunc "phramain","Kahlamanlith";
 	end;
 }
@@ -966,7 +966,7 @@ morocc_in,72,32,3	script	Abdula	63,{
 	callfunc "orimain","Abdula";
 	end;
 }
-alberta_in,21,63,5	script	Xenophon	84,{
+alberta_in,21,63,5	script	Xenophon	726,{
 	callfunc "orimain","Xenophon Zolotas";
 	end;
 }

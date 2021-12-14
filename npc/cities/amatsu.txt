@@ -23,6 +23,7 @@
 	mes "Have you ever heard that there";
 	mes "are totally different countries";
 	mes "than the Rune-Midgarts Kingdom?";
+	mes "Have you heard about Amatsu?";
 	next;
 	switch(select("About Amatsu...:Go to Amatsu:Cancel")) {
 	case 1:
@@ -126,7 +127,7 @@
 
 amatsu,194,79,5	script	Sea Captain#ama2	709,{
 	mes "[Walter Moers]";
-	mes "You came... Did you enjoy";
+	mes "Did you enjoy";
 	mes "your trip to Amatsu...?";
 	mes "Alright, I will take you";
 	mes "back to Alberta.";

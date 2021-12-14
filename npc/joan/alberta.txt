@@ -153,11 +153,6 @@ alberta,55,52,6	script	Alberta Villager#moc:d015e020	89,{
 	end;
 }
 
-alberta,50,43,2	script	Alberta Villager#moc:f9ec3706	503,{
-	npctalk "npcdialog";
-	end;
-}
-
 alberta,42,45,4	script	Alberta Villager#moc:0f035a44	69,{
 	npctalk "npcdialog";
 	end;
@@ -677,3 +672,69 @@ alberta,209,198,7	script	Alberta Villager#moc:bb05254c	504,{
 	npctalk "npcdialog";
 	end;
 }
+
+alberta_in,15,179,4	script	Alberta Villager#moc:bb04254c	567,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta_in,22,100,1	script	Alberta Villager#moc:xb04254c	698,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta_in,12,104,7	script	Alberta Villager#moc:xx04254c	693,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta_in,22,144,1	script	Alberta Villager#moc:dx04254c	744,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta_in,25,136,1	script	Alberta Villager#moc:xl04254c	70,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta_in,70,42,1	script	Alberta Villager#moc:sasdsa	5,{
+	npctalk "Welcome to the merchant's guild.";
+	end;
+}
+
+alberta_in,68,51,5	script	Alberta Villager#moc:dasdsa	900,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta_in,69,36,7	script	Alberta Villager#moc:asdasd	58,{
+	npctalk "Are you here to become a merchant?";
+	end;
+}
+
+alberta_in,74,45,2	script	Alberta Villager#moc:npddscid	73,{
+	npctalk "Blacksmith or Alchemist? Tough choice...";
+	end;
+}
+
+alberta_in,53,44,7	script	Merchant Guildmaster#moc:asdaae	10380,{
+	npctalk "I will make you a merchant";
+	end;
+}
+
+alberta_in,178,23,4	script	Alberta Villager#moc:qsas	535,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta_in,184,27,3	script	Alberta Villager#moc:ssadfvq	629,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta_in,173,89,1	script	Merchant Guildmaster#moc:npcioodd	100,{
+	npctalk "I will make you a merchant";
+	end;
+}
+

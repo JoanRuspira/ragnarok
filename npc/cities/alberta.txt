@@ -195,13 +195,13 @@ alberta,93,174,2	script	Grandmother Alma	103,{
 	close;
 }
 
-alberta,189,151,5	script	Fisk	4W_SAILOR,{
+alberta,246,84,3	script	Fisk	4W_SAILOR,{
 	mes "[Fisk]";
-	mes "Ahoy mate,";
+	mes "Ahoy!";
 	mes "where'd ya";
 	mes "wanna go?";
 	next;
-	switch(select("Sunken Ship -> 250 zeny.","Izlude Marina -> 500 zeny.","Never mind.")) {
+	switch(select("Alberta Island -> 250 zeny.","Izlude Marina -> 500 zeny.", "Never mind.")) {
 	case 1:
 		if (Zeny < 250) {
 			mes "[Fisk]";

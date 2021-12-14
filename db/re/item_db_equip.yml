@@ -40671,3 +40671,72 @@ Body:
       hateffect(HAT_EF_C_MAPLE_WHICH_FALLS_RD,true);
     UnEquipScript: |
       hateffect(HAT_EF_C_MAPLE_WHICH_FALLS_RD,false);
+  - Id: 19585
+    AegisName: C_Feather_Beret
+    Name: Costume Feather Beret
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 224
+  - Id: 19545
+    AegisName: C_Boys_Cap
+    Name: Costume Boy's Cap
+    Type: Armor
+    Buy: 500000
+    Buy: 20
+    Weight: 100
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 100
+    View: 102
+  - Id: 19584
+    AegisName: C_Pirate_Dagger
+    Name: Costume Dagger In Mouth
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Low: true
+    EquipLevelMin: 1
+    View: 327
+  - Id: 19598
+    AegisName: C_Wondering_Wolf_Helm
+    Name: Costume Wandering Wolf Hat
+    Type: Armor
+    Buy: 500000
+    Buy: 20
+    Locations:
+      Costume_Head_Top: true
+      Costume_Head_Mid: true
+    View: 490
+    Trade:
+      Override: 100
+      NoDrop: true
+  - Id: 19605
+    AegisName: C_Gang_Scarf
+    Name: Costume Gang Scarf
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Low: true
+    EquipLevelMin: 1
+    View: 369
+  - Id: 20582
+    AegisName: C_T_Bear_Bag
+    Name: Costume Bear Backpack
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Garment: true
+    EquipLevelMin: 1
+    View: 60
+  - Id: 20584
+    AegisName: C_Big_Foxtail
+    Name: Costume Fox Tail
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Garment: true
+    EquipLevelMin: 1
+    View: 62
