@@ -1,579 +1,579 @@
 
-izlude,49,103,5	script	Inding Wervanion#iz_dog_owner::iz_dog_owner	66,{
-	npctalk "Inding Wervanion: Check my dog! Cool eeh?";
+izlude,49,103,5	script	Izlude Villager#iz_dog_owner::iz_dog_owner	66,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,52,103,3	script	Dog#iz_dog::iz_dog	81,{
-	npctalk "Dog: grr...";
+izlude,52,103,3	script	Izlude Villager#iz_dog::iz_dog	81,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,44,90,4	script	Celenwe Galamin#iz_man::iz_man	70,{
-	npctalk "Celenwe Galamin: It´s a nice view from here.";
+izlude,44,90,4	script	Izlude Villager#iz_man::iz_man	70,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,57,93,2	script	Falk deGrey#iz_young_man::iz_young_man	86,{
-	npctalk "Falk deGrey: Hey, go north if you are going to Prontera.";
+izlude,57,93,2	script	Izlude Villager#iz_young_man::iz_young_man	86,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,54,93,6	script	Cottolm Beddye#iz_young_man2::iz_young_man2	89,{
-	npctalk "Cottolm Beddye: Prontera is wortha visit. Largest city in the kingdom.";
+izlude,54,93,6	script	Izlude Villager#iz_young_man2::iz_young_man2	89,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,32,100,6	script	Ryia Serpentwind#iz_woman::iz_woman	93,{
-	npctalk "Ryia Serpentwind: The airship stops in this city. It can take you to Yuno or Rachel!";
+izlude,32,100,6	script	Izlude Villager#iz_woman::iz_woman	93,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,106,103,6	script	Ukhund Bottlehelm#iz_merchant::iz_merchant	95,{
-	npctalk "Ukhund Bottlehelm: We come from the merchant guild in Alberta, south from Payon.";
+izlude,106,103,6	script	Izlude Villager#iz_merchant::iz_merchant	95,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,108,103,2	script	Loreena Mournhell#iz_alchemist::iz_alchemist	665,{
-	npctalk "Loreena Mournhell: I am training my friend to be an alchemist.";
+izlude,108,103,2	script	Izlude Villager#iz_alchemist::iz_alchemist	665,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,94,94,4	script	Gorvenal Redstream#iz_oldsailor::iz_oldsailor	100,{
-	npctalk "Gorvenal Redstream: Aah the sea... Always loved it with passion.";
+izlude,94,94,4	script	Izlude Villager#iz_oldsailor::iz_oldsailor	100,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,131,102,4	script	Finethil Orren#iz_bard::iz_bard	429,{
-	npctalk "Finethil Orren: What is your favourite town?";
+izlude,131,102,4	script	Izlude Villager#iz_bard::iz_bard	429,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,130,98,7	script	Urin Sapphirebraids#iz_merchant2::iz_merchant2	482,{
-	npctalk "Telchar Choralbraids: My facourite city is Comodo.";
+izlude,130,98,7	script	Izlude Villager#iz_merchant2::iz_merchant2	482,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,133,99,2	script	Telchar Goldback#iz_npc::iz_npc	484,{
-	npctalk "Urin Goldback: My facourite city is Einbroch.";
+izlude,133,99,2	script	Izlude Villager#iz_npc::iz_npc	484,{
+	npctalk "npcdialog";
 	end;
 }
 
 
-izlude,123,125,5	script	Ophin Talraidal#iz_npc2::iz_npc2	470,{
-	npctalk "Ophin Talraidal: We used to be swordsmen. We are knights now.";
+izlude,123,125,5	script	Izlude Villager#iz_npc2::iz_npc2	470,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,125,125,4	script	Hildegard Montagu#iz_npc3::iz_npc3	469,{
-	npctalk "Hildegard Montagu: Welcome to izlude.";
+izlude,125,125,4	script	Izlude Villager#iz_npc3::iz_npc3	469,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,110,123,0	script	Monlanyn Zanonsath#iz_npc4::iz_npc4	727,{
-	npctalk "Monlanyn Zanonsath: Nice park eh.";
+izlude,110,123,0	script	Izlude Villager#iz_npc4::iz_npc4	727,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,112,126,3	script	Loinarv Reddigger#iz_npc5::iz_npc5	740,{
-	npctalk "Loinarv Reddigger: This is a great spot for resting.";
+izlude,112,126,3	script	Izlude Villager#iz_npc5::iz_npc5	740,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,108,126,5	script	Ghak Hellaxe#iz_npc5a::iz_npc5a	754,{
-	npctalk "Ghak Hellaxe: Check out the dock if you want to go to Alberta.";
+izlude,108,126,5	script	Izlude Villager#iz_npc5a::iz_npc5a	754,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,152,142,4	script	Bess Morningfall#iz_npc6::iz_npc6	726,{
-	npctalk "Bess Morningfall: Good luck refining!";
+izlude,152,142,4	script	Izlude Villager#iz_npc6::iz_npc6	726,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,130,160,5	script	Borin Montagu#iz_npc7::iz_npc7	97,{
-	npctalk "Borin Montagu: Some fried fish?";
+izlude,130,160,5	script	Izlude Villager#iz_npc7::iz_npc7	97,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,127,168,0	script	Ilmindel Dlaralthor#iz_npc7::iz_npc7a	123,{
-	npctalk "Ilmindel Dlaralthor: What can I get you?";
+izlude,127,168,0	script	Izlude Villager#iz_npc7::iz_npc7a	123,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,119,163,2	script	Angmar Cleves#iz_npc7::iz_npc7b	125,{
-	npctalk "Angmar Cleves: Welcome to the market.";
+izlude,119,163,2	script	Izlude Villager#iz_npc7::iz_npc7b	125,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,126,157,4	script	Olond Yraudhen#iz_npc8::iz_npc8	830,{
-	npctalk "Olond Yraudhen: Best pizzas in town.";
+izlude,126,157,4	script	Izlude Villager#iz_npc8::iz_npc8	830,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,133,168,5	script	Cat#iz_npc8::iz_npc8ab	554,{
-	npctalk "Cat: ZzZzZz...";
+izlude,133,168,5	script	Izlude Villager#iz_npc8::iz_npc8ab	554,{
+	npctalk "...";
 	end;
 }
 
-izlude,112,151,5	script	Giet#iz_npc8a::iz_npc8a	95,{
-	npctalk "Giet: Check the Arena on the west part of Izlude!";
+izlude,112,151,5	script	Izlude Villager#iz_npc8a::iz_npc8a	95,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,124,139,7	script	Imrodel Runelenrin#iz_npc9::iz_npc9	778,{
-	npctalk "Imrodel Runelenrin: I am storing my loot with Kafra.";
+izlude,124,139,7	script	Izlude Villager#iz_npc9::iz_npc9	778,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,127,139,3	script	Gharol Skullbinder#iz_npc10::iz_npc10	745,{
-	npctalk "Gharol Skullbinder: We just came back from Byalan island.";
+izlude,127,139,3	script	Izlude Villager#iz_npc10::iz_npc10	745,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,126,143,4	script	Endell Maycey#iz_npc11::iz_npc11	832,{
-	npctalk "Endell Maycey: There is an undersea cave in Byalan.";
+izlude,126,143,4	script	Izlude Villager#iz_npc11::iz_npc11	832,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,141,147,2	script	Telchar Goldback#iz_npc12::iz_npc12	828,{
-	npctalk "Tigerstalker: Check out the gear shop on the opposite side of the square.";
+izlude,141,147,2	script	Izlude Villager#iz_npc12::iz_npc12	828,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,137,174,3	script	Krea Fenwick#iz_npc13::iz_npc13	430,{
-	npctalk "Krea Fenwick: I love to take a walk around the market.";
+izlude,137,174,3	script	Izlude Villager#iz_npc13::iz_npc13	430,{
+	npctalk "npcdialog";
 	end;
 }
 
 
-izlude,151,154,4	script	Althalos Bladewalker#iz_npc14::iz_npc14	915,{
-	npctalk "Althalos Bladewalker: We come from Freyas grand temple in Rachel.";
+izlude,151,154,4	script	Izlude Villager#iz_npc14::iz_npc14	915,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,150,151,0	script	Carac Duststone#iz_npc15::iz_npc15	917,{
-	npctalk "Carac Duststone: We have traleved a long way.";
+izlude,150,151,0	script	Izlude Villager#iz_npc15::iz_npc15	917,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,136,157,1	script	Zog Doommaul#iz_npc16::iz_npc16	851,{
-	npctalk "Zog Doommaul: Not sure what to buy today.";
+izlude,136,157,1	script	Izlude Villager#iz_npc16::iz_npc16	851,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,156,164,2	script	Idrinden Dlaralthor#iz_npc17::iz_npc17	864,{
-	npctalk "Idrinden Dlaralthor: Do you think we are ready for the Arena?";
+izlude,156,164,2	script	Izlude Villager#iz_npc17::iz_npc17	864,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,153,164,6	script	Duli Brightmaster#iz_npc18::iz_npc18	884,{
-	npctalk "Duli Brightmaster: Do you think we are ready for the Arena?";
+izlude,153,164,6	script	Izlude Villager#iz_npc18::iz_npc18	884,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,109,172,5	script	Hoot #iz_npc20::iz_npc20	883,{
-	npctalk "Hoot : Go to the stylist on the other side of the square to improve your looks.";
+izlude,109,172,5	script	Izlude Villager#iz_npc20::iz_npc20	883,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,120,171,5	script	Bilcorin Tohim#iz_npc21::iz_npc21	863,{
-	npctalk "Bilcorin Tohim: Nice fruit in this store.";
+izlude,120,171,5	script	Izlude Villager#iz_npc21::iz_npc21	863,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,88,166,5	script	Ervina Dane#iz_npc21a::iz_npc21a	629,{
-	npctalk "Ervina Dane: The swordsmen guild is across the bridge.";
+izlude,88,166,5	script	Izlude Villager#iz_npc21a::iz_npc21a	629,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,91,166,2	script	Serelath#iz_npc22::iz_npc22	779,{
-	npctalk "Serelath: Good luck if you are applying!";
+izlude,91,166,2	script	Izlude Villager#iz_npc22::iz_npc22	779,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,105,163,5	script	Bifund Blackbender#iz_npc23::iz_npc23	774,{
-	npctalk "Bifund Blackbender: I have heard of a turtle shaped island not far from Alberta...";
+izlude,105,163,5	script	Izlude Villager#iz_npc23::iz_npc23	774,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,120,187,4	script	Reward Smallburrow#iz_npc24::iz_npc24	797,{
-	npctalk "Reward Smallburrow: Its so warm today!";
+izlude,120,187,4	script	Izlude Villager#iz_npc24::iz_npc24	797,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,127,183,0	script	Findelye Dlaralthor#iz_npc25::iz_npc25	798,{
-	npctalk "Findelye Dlaralthor: Always pick cards if monsters drop them.";
+izlude,127,183,0	script	Izlude Villager#iz_npc25::iz_npc25	798,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,147,192,0	script	Inding Runlithmae#iz_npc26::iz_npc26	807,{
-	npctalk "Inding Runlithmae: The dock is down that way.";
+izlude,147,192,0	script	Izlude Villager#iz_npc26::iz_npc26	807,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,178,207,3	script	Gonk Battlefury#iz_npc27::iz_npc27	83,{
-	npctalk "Gonk Battlefury: The sailors can take you far away. I come from Amatsu! Had to stop in Alberta first...";
+izlude,178,207,3	script	Izlude Villager#iz_npc27::iz_npc27	83,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,194,214,4	script	Gonk Battlefury#iz_npc27::iz_npc27a	105,{
-	npctalk "Dock Guard: Welcome to the izlude dock.";
+izlude,194,214,4	script	Izlude Guard#iz_npc27::iz_npc27a	105,{
+	npctalk "Welcome to Izlude";
 	end;
 }
 
-izlude,197,214,4	script	Gonk Battlefury#iz_npc27::iz_npc27b	105,{
-	npctalk "Dock Guard: Welcome to the izlude dock.";
+izlude,197,214,4	script	Izlude Guard#iz_npc27::iz_npc27b	105,{
+	npctalk "Welcome to Izlude";
 	end;
 }
 
-izlude,184,212,2	script	xxxxx#iz_npc27::iz_npc27c	76,{
-	npctalk "xxxx: Hello.";
+izlude,184,212,2	script	Izlude Villager#iz_npc27::iz_npc27c	76,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,163,205,5	script	xxxxx#iz_npc27::iz_npc27d	85,{
-	npctalk "xxxx: Can I help you?";
+izlude,163,205,5	script	Izlude Villager#iz_npc27::iz_npc27d	85,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,154,199,5	script	xxxxx#iz_npc27::iz_npc27e	75,{
-	npctalk "xxxx: Want some flowers?";
+izlude,154,199,5	script	Izlude Villager#iz_npc27::iz_npc27e	75,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,95,168,0	script	Butcher#iz_merchant::iz_merchantf	85,{
-	npctalk "Butcher: I'm closing for today.";
+izlude,95,168,0	script	Izlude Villager#iz_merchant::iz_merchantf	85,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,90,147,6	script	xxxx#iz_merchant::iz_merchantg	688,{
-	npctalk "xxxx: Hey!";
+izlude,90,147,6	script	Izlude Villager#iz_merchant::iz_merchantg	688,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,93,145,3	script	xxxx#iz_merchant::iz_merchanth	693,{
-	npctalk "xxxx: Bye.";
+izlude,93,145,3	script	Izlude Villager#iz_merchant::iz_merchanth	693,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,97,134,6	script	xxxx#iz_merchant::iz_merchanti	74,{
-	npctalk "xxxx: I need some rest.";
+izlude,97,134,6	script	Izlude Villager#iz_merchant::iz_merchanti	74,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,106,138,3	script	xxxx#iz_merchant::iz_merchantj	82,{
-	npctalk "xxxx: Hello.";
+izlude,106,138,3	script	Izlude Villager#iz_merchant::iz_merchantj	82,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,107,135,3	script	xxxx#iz_merchant::iz_merchantk	81,{
-	npctalk "xxxx: What do you want?";
+izlude,107,135,3	script	Izlude Villager#iz_merchant::iz_merchantk	81,{
+	npctalk "...";
 	end;
 }
 
-izlude,75,252,3	script	xxxx#iz_merchant::iz_merchantl	813,{
-	npctalk "xxxx: We are making repairs to this building.";
+izlude,75,252,3	script	Izlude Villager#iz_merchant::iz_merchantl	813,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,77,246,3	script	xxxx#iz_merchant::iz_merchantm	726,{
-	npctalk "xxxx: Watch out.";
+izlude,77,246,3	script	Izlude Villager#iz_merchant::iz_merchantm	726,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,79,250,6	script	xxxx#iz_merchant::iz_merchantn	105,{
-	npctalk "Guard: This academy building is closed to the public.";
+izlude,79,250,6	script	Academy Guard#iz_merchant::iz_merchantn	867,{
+	npctalk "Access beyond this point is restricted to staff.";
 	end;
 }
 
-izlude,109,246,5	script	xxxx#iz_merchant::iz_merchanto	567,{
-	npctalk "xxxx: Hello.";
+izlude,109,246,5	script	Izlude Villager#iz_merchant::iz_merchanto	567,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,69,210,0	script	xxxx#iz_merchant::iz_merchantp	654,{
-	npctalk "xxxx: This is a statue of the founder of Izlude.";
+izlude,69,210,0	script	Izlude Villager#iz_merchant::iz_merchantp	654,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,64,204,3	script	xxxx#iz_merchant::iz_merchantq	698,{
-	npctalk "xxxx: Not many people know this resting spot.";
+izlude,64,204,3	script	Izlude Villager#iz_merchant::iz_merchantq	698,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,146,135,2	script	xxxx#iz_merchant::iz_merchantr	79,{
-	npctalk "xxxx: My refinement failed...";
+izlude,146,135,2	script	Izlude Villager#iz_merchant::iz_merchantr	79,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,142,121,5	script	xxxx#iz_merchant::iz_merchants	84,{
-	npctalk "xxxx: Hello.";
+izlude,142,121,5	script	Izlude Villager#iz_merchant::iz_merchants	84,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,130,202,4	script	Gorvenal Montagu#iz_npc28::iz_npc28	753,{
-	npctalk "Gorvenal Montagu: I have just visited the Izlude Academy.";
+izlude,130,202,4	script	Izlude Villager#iz_npc28::iz_npc28	753,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,115,255,5	script	Nelal Gwamiel#iz_npc29::iz_npc29	755,{
-	npctalk "Nelal Gwamiel: I am a professor at the academy.";
+izlude,115,255,5	script	Izlude Villager#iz_npc29::iz_npc29	755,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,123,242,5	script	Iririen Lithtaur#iz_npc30::iz_npc30	754,{
-	npctalk "Iririen Lithtaur: I will be a professor one day.";
+izlude,123,242,5	script	Izlude Villager#iz_npc30::iz_npc30	754,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,125,242,3	script	Wise Hummingbird#iz_npc31::iz_npc31	750,{
-	npctalk "Wise Hummingbird: We are preparing for exams here.";
+izlude,125,242,3	script	Izlude Villager#iz_npc31::iz_npc31	750,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,124,237,1	script	Thrinain Largegut#iz_npc32::iz_npc32	748,{
-	npctalk "Thrinain Largegut: I hope the exams this year are easy...";
+izlude,124,237,1	script	Izlude Villager#iz_npc32::iz_npc32	748,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,130,223,6	script	Halfo Twofoot#iz_npc33::iz_npc33	751,{
-	npctalk "Halfo Twofoot: The thief guild is in the pyramids near Morroc.";
+izlude,130,223,6	script	Izlude Villager#iz_npc33::iz_npc33	751,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,133,223,2	script	Leo Cleves#iz_npc34::iz_npc34	538,{
-	npctalk "Leo Cleves: I want to become a thief. Their guild is far away!";
+izlude,133,223,2	script	Izlude Villager#iz_npc34::iz_npc34	538,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,133,190,2	script	Miath LB#iz_npc35::iz_npc35	732,{
-	npctalk "Miath LB: Acolytes are trained in the Prontera church.";
+izlude,133,190,2	script	Izlude Villager#iz_npc35::iz_npc35	732,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,124,83,4	script	Hily Mynge#iz_npc36::iz_npc36	808,{
-	npctalk "Hily Mynge: The airship stop is this way.";
+izlude,124,83,4	script	Izlude Villager#iz_npc36::iz_npc36	808,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,128,67,5	script	Terrowin Montagu#iz_npc37::iz_npc37	804,{
-	npctalk "Terrowin Montagu: I used to captain one of the airships.";
+izlude,128,67,5	script	Izlude Villager#iz_npc37::iz_npc37	804,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,130,65,1	script	Snak Burningarm#iz_npc38::iz_npc38	542,{
-	npctalk "Snak Burningarm: Does this airship go to Veins?";
+izlude,130,65,1	script	Izlude Villager#iz_npc38::iz_npc38	542,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,127,52,7	script	Maerwynn Mournhell#iz_npc39::iz_npc39	571,{
-	npctalk "Maerwynn Mournhell: I am already tired! I need to level up!";
+izlude,127,52,7	script	Izlude Villager#iz_npc39::iz_npc39	571,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,147,60,6	script	Keen Eye#iz_npc40::iz_npc40	702,{
-	npctalk "Keen Eye: We are leaving to Yuno shortly.";
+izlude,147,60,6	script	Izlude Villager#iz_npc40::iz_npc40	702,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,149,60,2	script	Atiel Elervir#iz_npc41::iz_npc41	703,{
-	npctalk "Atiel Elervir: We have got tickets for the airship already.";
+izlude,149,60,2	script	Izlude Villager#iz_npc41::iz_npc41	703,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,147,58,0	script	Letholdus Cromwell#iz_npc42::iz_npc42	696,{
-	npctalk "Letholdus Cromwell: We bought tickets yesterday.";
+izlude,147,58,0	script	Izlude Villager#iz_npc42::iz_npc42	696,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,124,60,5	script	Ahan Earthdelver#iz_npc43::iz_npc43	895,{
-	npctalk "Ahan Earthdelver: Check the mission board on the central square to level up faster.";
+izlude,124,60,5	script	Izlude Villager#iz_npc43::iz_npc43	895,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,154,52,5	script	Alianor Serpentwind#iz_npc44::iz_npc44	896,{
-	npctalk "Alianor Serpentwind: The card remover can remove cards from your equipment.";
+izlude,154,52,5	script	Izlude Villager#iz_npc44::iz_npc44	896,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,169,59,3	script	Golemmoth Tathviel#iz_npc45::iz_npc45	900,{
-	npctalk "Golemmoth Tathviel: I heard of a boat wreckage you can visit. Maybe a salor can take you there.";
+izlude,169,59,3	script	Izlude Villager#iz_npc45::iz_npc45	900,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,185,76,5	script	Borin Morningfall#iz_npc46::iz_npc46	741,{
-	npctalk "Borin Morningfall: I am witing for the next airship service.";
+izlude,185,76,5	script	Izlude Villager#iz_npc46::iz_npc46	741,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,189,67,1	script	Dirinor Tathviel#iz_npc47::iz_npc47	420,{
-	npctalk "Dirinor Tathviel: I thought the airship had a stop in Payon, but I was wrong.";
+izlude,189,67,1	script	Izlude Villager#iz_npc47::iz_npc47	420,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,119,150,5	script	Cassius Duststone#iz_npc48::iz_npc48	752,{
-	npctalk "Cassius Duststone: Check the mission board for faster EXP!";
+izlude,119,150,5	script	Izlude Villager#iz_npc48::iz_npc48	752,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,202,165,3	script	Rime Longfoot#iz_npc49::iz_npc49	64,{
-	npctalk "Rime Longfoot: I just cleared the arena. You think you are ready?";
+izlude,202,165,3	script	Izlude Villager#iz_npc49::iz_npc49	64,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,205,158,6	script	Rainydayas Serpentwind#iz_npc50::iz_npc50	430,{
-	npctalk "Rainydayas Serpentwind: Should I go inside?";
+izlude,205,158,6	script	Izlude Villager#iz_npc50::iz_npc50	430,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,145,166,3	script	Cedany Truegust#iz_npc51::iz_npc51	118,{
-	npctalk "Cedany Truegust: Go to the Academia here in Izlude to learn all about 1st jobs!";
+izlude,145,166,3	script	Izlude Villager#iz_npc51::iz_npc51	118,{
+	npctalk "npcdialog";
 	end;
 }
 
-iz_ac01,96,44,4	script	Academy Receptionist#iz_npc51::iz_npc510	74,{
-	npctalk "Academy Receptionist: Welcome to the Izlude academy!";
+iz_ac01,96,44,4	script	Izlude Villager#iz_npc51::iz_npc510	74,{
+	npctalk "npcdialog";
 	end;
 }
 
-iz_ac01,102,45,4	script	Academy Receptionist#iz_npc51::iz_npc511	77,{
-	npctalk "Academy Receptionist: Head to the top floor for info of classes.";
+iz_ac01,102,45,4	script	Izlude Villager#iz_npc51::iz_npc511	77,{
+	npctalk "npcdialog";
 	end;
 }
 
 iz_ac01,111,44,4	script	Academy Guard#iz_npc51::iz_npc512	867,{
-	npctalk "Academy Guard: Access beyond this point is restricted to staff.";
+	npctalk "Access beyond this point is restricted to staff.";
 	end;
 }
 
 
 iz_ac01,88,44,4	script	Academy Guard#iz_npc51::iz_npc513	868,{
-	npctalk "Academy Guard: Access beyond this point is restricted to staff.";
+	npctalk "Access beyond this point is restricted to staff.";
 	end;
 }
 
-iz_ac01,147,50,3	script	Academy Chef#iz_npc51::iz_npc514	820,{
-	npctalk "Academy Chef: Food is restricted to members of the Academy.";
+iz_ac01,147,50,3	script	Izlude Villager#iz_npc51::iz_npc514	820,{
+	npctalk "npcdialog";
 	end;
 }
 
-iz_ac01,150,50,3	script	Academy Chef#iz_npc51::iz_npc515	701,{
-	npctalk "Academy Chef: Food is restricted to members of the Academy.";
+iz_ac01,150,50,3	script	Izlude Villager#iz_npc51::iz_npc515	701,{
+	npctalk "npcdialog";
 	end;
 }
 
-iz_ac01,160,50,3	script	Academy Chef#iz_npc51::iz_npc516	886,{
-	npctalk "Academy Chef: Food is restricted to members of the Academy.";
+iz_ac01,160,50,3	script	Izlude Villager#iz_npc51::iz_npc516	886,{
+	npctalk "npcdialog";
 	end;
 }
 
-iz_ac01,164,36,3	script	Academy Chef#iz_npc51::iz_npc571	80,{
-	npctalk "Academy Chef: Food is restricted to members of the Academy.";
+iz_ac01,164,36,3	script	Izlude Villager#iz_npc51::iz_npc571	80,{
+	npctalk "npcdialog";
 	end;
 }
 
-iz_ac01,159,41,1	script	Janshai Stonesworn#iz_npc51::iz_npc518	729,{
-	npctalk "Janshai Stonesworn: What class do you want to be?";
+iz_ac01,159,41,1	script	Izlude Villager#iz_npc51::iz_npc518	729,{
+	npctalk "npcdialog";
 	end;
 }
 
-iz_ac01,151,36,7	script	Elel Galathaniel#iz_npc51::iz_npc519	430,{
-	npctalk "Elel Galathaniel: I'm hungry.";
+iz_ac01,151,36,7	script	Izlude Villager#iz_npc51::iz_npc519	430,{
+	npctalk "npcdialog";
 	end;
 }
 
-iz_ac01,148,44,0	script	Egoron Elervir#iz_npc51::iz_npc521	429,{
-	npctalk "Egoron Elervir: The food looks good today!";
+iz_ac01,148,44,0	script	Izlude Villager#iz_npc51::iz_npc521	429,{
+	npctalk "npcdialog";
 	end;
 }
 
-iz_ac01,133,50,4	script	Leofrick Crewe#iz_npc51::iz_npc5341	410,{
-	npctalk "Leofrick Crewe: Hello.";
+iz_ac01,133,50,4	script	Izlude Villager#iz_npc51::iz_npc5341	410,{
+	npctalk "npcdialog";
 	end;
 }
 
-iz_ac01,133,43,3	script	Berinon Commonbrook#iz_npc51::iz_npc541	625,{
-	npctalk "Berinon Commonbrook: Do you know what job will you pick?";
+iz_ac01,133,43,3	script	Izlude Villager#iz_npc51::iz_npc541	625,{
+	npctalk "npcdialog";
 	end;
 }
 
-iz_ac01,131,36,0	script	Sybeatr Nete#iz_npc51::iz_npc551	644,{
-	npctalk "Sybeatr Nete: I was a novice before.";
+iz_ac01,131,36,0	script	Izlude Villager#iz_npc51::iz_npc551	644,{
+	npctalk "npcdialog";
 	end;
 }
 
 
-iz_ac01,91,35,5	script	Adademy Professor#iz_npc51::iz_npc561	743,{
-	npctalk "Adademy Professor: Go upstairs for info on thief, swordsman and archer jobs.";
+iz_ac01,91,35,5	script	Izlude Villager#iz_npc51::iz_npc561	743,{
+	npctalk "npcdialog";
 	end;
 }
 
-iz_ac01,121,34,3	script	Adademy Professor#iz_npc51::iz_npc571s	754,{
-	npctalk "Adademy Professor: This way for info on mage, acolyte and merchant jobs.";
+iz_ac01,121,34,3	script	Izlude Villager#iz_npc51::iz_npc571s	754,{
+	npctalk "npcdialog";
 	end;
 }
 
-iz_ac01,107,29,1	script	Aninyel Dlaralthor#iz_npc51::iz_npc581	125,{
-	npctalk "Aninyel Dlaralthor: Are you here to learn about job classes?";
+iz_ac01,107,29,1	script	Izlude Villager#iz_npc51::iz_npc581	125,{
+	npctalk "npcdialog";
 	end;
 }
 
-iz_ac01,36,48,4	script	Uslyn Dhugozath#iz_npc51::iz_npc5112	532,{
-	npctalk "Uslyn Dhugozath: Hello.";
+iz_ac01,36,48,4	script	Izlude Villager#iz_npc51::iz_npc5112	532,{
+	npctalk "npcdialog";
 	end;
 }
 
-iz_ac01,45,42,5	script	Ayleth Crewe#iz_npc51::iz_npc5134	0,{
-	npctalk "Ayleth Crewe: I just joined the Academy.";
+iz_ac01,45,42,5	script	Izlude Villager#iz_npc51::iz_npc5134	0,{
+	npctalk "npcdialog";
 	end;
 }
 
-iz_ac01,38,32,3	script	Ingon Aeraagamae#iz_npc51::iz_npc5178	533,{
-	npctalk "Ingon Aeraagamae: Privacy please.";
+iz_ac01,38,32,3	script	Izlude Villager#iz_npc51::iz_npc5178	533,{
+	npctalk "npcdialog";
 	end;
 }
 
-iz_ac01,56,45,1	script	Brom Cleves#iz_npc51::iz_npc5187	97,{
-	npctalk "Brom Cleves: Privacy please.";
+iz_ac01,56,45,1	script	Izlude Villager#iz_npc51::iz_npc5187	97,{
+	npctalk "npcdialog";
 	end;
 }
 
-iz_ac01,68,49,3	script	Glush Skullbinder#iz_npc51::iz_npc5164	106,{
-	npctalk "Glush Skullbinder: These are the Academy rooms.";
+iz_ac01,68,49,3	script	Izlude Villager#iz_npc51::iz_npc5164	106,{
+	npctalk "npcdialog";
 	end;
 }
 
-iz_ac01,67,37,3	script	Glush Skullbinder#iz_npc51::iz_npc5181	98,{
-	npctalk "Enengod Wervanion: Hi there.";
+iz_ac01,67,37,3	script	Izlude Villager#iz_npc51::iz_npc5181	98,{
+	npctalk "npcdialog";
 	end;
 }
 
-iz_ac01,66,32,0	script	Academy Staff#iz_npc51::iz_npc5128	124,{
-	npctalk "Academy Staff: What can I do for you?.";
+iz_ac01,66,32,0	script	Izlude Villager#iz_npc51::iz_npc5128	124,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,134,200,1	script	Zigil Noblebringer#iz_npc51::iz_npc51d	814,{
-	npctalk "Zigil Noblebringer: Hello.";
+izlude,134,200,1	script	Izlude Villager#iz_npc51::iz_npc51d	814,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude,47,167,5	script	Arthur Lunadream#iz_npc51::iz_npc513d	688,{
-	npctalk "Arthur Lunadream: I just became a swordsman.";
+izlude,47,167,5	script	Izlude Villager#iz_npc51::iz_npc513d	688,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude_in,63,122,1	script	Efrey Guyak#iz_npc51::iz_npc518d	641,{
-	npctalk "Efrey Guyak: I'm here for armor.";
+izlude_in,63,122,1	script	Izlude Villager#iz_npc51::iz_npc518d	641,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude_in,69,118,4	script	Afar Endell#iz_npc51::iz_npc519d	642,{
-	npctalk "Afar Endell: I'm here for armor.";
+izlude_in,69,118,4	script	Izlude Villager#iz_npc51::iz_npc519d	642,{
+	npctalk "npcdialog";
 	end;
 }
 
-izlude_in,63,104,4	script	Zygu Madsk#iz_npc51::iz_npc510d	480,{
-	npctalk "Zygu Madsk: have you tried costumes?";
+izlude_in,63,104,4	script	Izlude Villager#iz_npc51::iz_npc510d	480,{
+	npctalk "npcdialog";
 	end;
 }

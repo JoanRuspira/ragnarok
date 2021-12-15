@@ -1,0 +1,431 @@
+
+payon,168,67,4	script	Payon Guard#pay_arche::pay_npc1	708,{
+	npctalk "Welcome to Payon";
+	end;
+}
+
+
+payon,168,64,2	script	Payon Guard#pay_arche::pay_npc2	708,{
+	npctalk "Welcome to Payon";
+	end;
+}
+
+payon,152,98,6	script	Payon Villagerizl::npcid	spriteid,{  //m
+	npctalk "npcdialog";
+	end;
+}
+
+payon,156,101,3	script	Payon Villagerizl::npcid	spriteid,{  //f
+	npctalk "npcdialog";
+	end;
+}
+
+payon,163,100,2	script	Payon Villagerizl::npcid	spriteid,{ // m
+	npctalk "npcdialog";
+	end;
+}
+
+payon,152,89,5	script	Payon Villagerizl::npcid	spriteid,{ //m
+	npctalk "npcdialog";
+	end;
+}
+
+payon,164,87,6	script	Payon Villagerizl::npcid	spriteid,{ //m
+	npctalk "npcdialog";
+	end;
+}
+
+payon,175,111,3	script	Payon Villagerizl::npcid	spriteid,{ //m
+	npctalk "npcdialog";
+	end;
+}
+
+payon,178,111,3	script	Payon Villagerizl::npcid	spriteid,{ //f
+	npctalk "npcdialog";
+	end;
+}
+
+payon,174,96,3	script	Payon Villagerizl::npcid	spriteid,{ //f
+	npctalk "npcdialog";
+	end;
+}
+
+payon,161,126,6	script	Payon Villagerizl::npcid	spriteid,{ //m
+	npctalk "npcdialog";
+	end;
+}
+
+payon,172,120,1	script	Payon Villagerizl::npcid	spriteid,{ //f
+	npctalk "npcdialog";
+	end;
+}
+
+payon,173,176,4	script	Payon Villagerizl::npcid	spriteid,{ //f
+	npctalk "npcdialog";
+	end;
+}
+
+payon,176,176,4	script	Payon Villagerizl::npcid	spriteid,{ //f
+	npctalk "npcdialog";
+	end;
+}
+
+payon,170,178,4	script	Payon Villagerizl::npcid	spriteid,{ //m
+	npctalk "npcdialog";
+	end;
+}
+
+payon,173,168,0	script	Payon Villagerizl::npcid	spriteid,{ //m
+	npctalk "npcdialog";
+	end;
+}
+
+payon,176,165,0	script	Payon Villagerizl::npcid	spriteid,{ //m
+	npctalk "npcdialog";
+	end;
+}
+
+payon,170,169,7	script	Payon Villagerizl::npcid	spriteid,{ //m
+	npctalk "npcdialog";
+	end;
+}
+
+payon,159,160,2	script	Payon Villagerizl::npcid	spriteid,{ //f
+	npctalk "npcdialog";
+	end;
+}
+
+payon,166,155,7	script	Payon Villagerizl::npcid	spriteid,{ //f
+	npctalk "npcdialog";
+	end;
+}
+
+payon,149,215,6	script	Payon Villagerizl::npcid	spriteid,{ //m
+	npctalk "npcdialog";
+	end;
+}
+
+payon,160,221,0	script	Payon Villagerizl::npcid	spriteid,{ //m
+	npctalk "npcdialog";
+	end;
+}
+
+payon,158,220,0	script	Payon Villagerizl::npcid	spriteid,{ //m
+	npctalk "npcdialog";
+	end;
+}
+
+payon,152,209,4	script	Payon Villagerizl::npcid	spriteid,{ //m
+	npctalk "npcdialog";
+	end;
+}
+
+payon,145,232,4	script	Palace Guard#pay_arche::pay_npc25	780,{ 
+	npctalk "Welcome to the Payon Palace.";
+	end;
+}
+
+payon,148,232,4	script	Palace Guard#pay_arche::pay_npc26	780,{ 
+	npctalk "Welcome to the Payon Palace.";
+	end;
+}
+
+payon,164,232,4	script	Palace Guard#pay_arche::pay_npc27	780,{ 
+	npctalk "Welcome to the Payon Palace.";
+	end;
+}
+
+payon,167,232,4	script	Palace Guard#pay_arche::pay_npc28	780,{ 
+	npctalk "Welcome to the Payon Palace.";
+	end;
+}
+
+payon,140,196,2	script	Palace Guard#pay_arche::pay_npc29	634,{ 
+	npctalk "Welcome to the Payon Palace.";
+	end;
+}
+
+payon,144,205,6	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,137,223,4	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,166,205,7	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,166,205,7	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,174,214,1	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,218,254,6	script	Palace Guard#pay_arche::pay_npc34	708,{ 
+	npctalk "Welcome to the Payon Palace.";
+	end;
+}
+
+payon,218,246,6	script	Palace Guard#pay_arche::pay_npc35	708,{ 
+	npctalk "Welcome to the Payon Palace.";
+	end;
+}
+
+payon,192,255,3	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,199,107,6	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,206,110,2	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,220,104,4	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,202,125,4	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,226,152,4	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,212,163,0	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,210,216,6	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,226,225,3	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,229,220,5	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,236,285,0	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,238,283,1	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,84,178,4	script	Payon Guard#pay_arche::pay_npc48	708,{ 
+	npctalk "Welcome to Payon";
+	end;
+}
+
+payon,92,178,4	script	Payon Guard#pay_arche::pay_npc49	708,{ 
+	npctalk "Welcome to Payon";
+	end;
+}
+
+payon,95,223,5	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,112,230,0	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,109,324,4	script	Palace Guard#pay_arche::pay_npc52	708,{ 
+	npctalk "Welcome to the Payon Palace.";
+	end;
+}
+
+payon,105,324,4	script	Palace Guard#pay_arche::pay_npc53	708,{ 
+	npctalk "Welcome to the Payon Palace.";
+	end;
+}
+
+payon,104,313,6	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,113,318,3	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,81,318,0	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,152,317,2	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,190,301,5	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,123,105,7	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,100,150,4	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,98,148,7	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,109,116,3	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,131,61,3	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,128,60,3	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,78,66,4	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,73,106,0	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,19,147,6	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,239,59,4	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,235,56,6	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,238,91,2	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon_in03,87,179,6	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon_in03,94,168,7	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon_in03,108,172,7	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon_in03,79,169,0	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon_in03,117,177,3	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon_in03,96,180,5	script	Palace Guard#pay_arche::pay_npc74	708,{ 
+	npctalk "Welcome to the Payon Palace.";
+	end;
+}
+
+payon_in03,103,180,5	script	Palace Guard#pay_arche::pay_npc75	708,{ 
+	npctalk "Welcome to the Payon Palace.";
+	end;
+}
+
+payon_in03,104,159,5	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon_in01,13,127,7	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon_in01,8,125,1	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon_in01,192,36,1	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon_in01,188,37,5	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon_in01,193,30,7	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon_in01,179,30,5	script	Payon Villagerizl::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,155,324,4	script	Palace Guard#pay_arche::pay_npc53f2	708,{ 
+	npctalk "Welcome to the Payon Palace.";
+	end;
+}
