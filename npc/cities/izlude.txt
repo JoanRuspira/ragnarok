@@ -51,7 +51,7 @@
 			close;
 		}
 		set Zeny, Zeny - 150;
-		warp "izlu2dun",107,50;
+		warp "izlu2dun",108,31;
 		end;
 	case 2:
 		if (Zeny < 500) {
@@ -61,9 +61,32 @@
 			close;
 		}
 		set Zeny, Zeny - 500;
-		warp "alberta",188,169;
+		warp "alberta",245,88;
 		end;
 	case 3:
+		close;
+	}
+}
+
+-	script	::Sailor_Turtle	-1,{
+	mes "[Explorer]";
+	mes "Apparently there's an island";
+	mes "shaped like a turtle. I think";
+	mes "few people have ever visited it.";
+	mes "I can make space for you in my boat";
+	mes "for 2500 Zeny.";
+	next;
+	switch(select("Yeah, sure!:Cancel.")) {
+	case 1:
+		if (Zeny < 2500) {
+			mes "[Explorer]";
+			mes "You don't have enough money...";
+			close;
+		}
+		set Zeny, Zeny - 2500;
+		warp "tur_dun01",160,34;
+		end;
+	case 2:
 		close;
 	}
 }

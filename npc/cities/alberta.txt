@@ -219,9 +219,9 @@ alberta,246,84,3	script	Fisk	4W_SAILOR,{
 		}
 		Zeny = Zeny - 500;
 		if (checkre(0))
-			warp "izlude",195,212;
+			warp "izlude",201,210;
 		else
-			warp "izlude",176,182;
+			warp "izlude",201,210;
 		end;
 	case 3:
 		mes "[Fisk]";
@@ -236,7 +236,7 @@ alb2trea,39,50,6	script	Fisk#a2t	4W_SAILOR,{
 	mes "So you wanna head back to the mainland in Alberta, eh?";
 	next;
 	if (select("Yes please.","I changed my mind.") == 1)
-		warp "alberta",192,169;
+		warp "alberta",244,87;
 	close;
 }
 

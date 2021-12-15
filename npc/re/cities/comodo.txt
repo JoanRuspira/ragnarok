@@ -1,0 +1,28 @@
+//===== rAthena Script =======================================
+//= Alberta Town Renewal
+//===== By: ==================================================
+//= Euphy
+//===== Current Version: =====================================
+//= 1.0
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Description: =========================================
+//= [Official Conversion]
+//= Alberta town NPCs.
+//===== Additional Comments: =================================
+//= 1.0 First Version.
+//============================================================
+
+// cities/louyang.txt
+//============================================================
+comodo,202,75,0	duplicate(Girl_louyang)	Louyang Merchant#0lou	643
+comodo,233,86,0	duplicate(Sailor_Turtle)	Explorer#turtle	832
+
+tur_dun01,162,32,1	script	Explorer#a2t	832,{
+	mes "[Explorer]";
+	mes "How did it go? Ready to go back to Comodo?";
+	next;
+	if (select("Yes please.","Not yet.") == 1)
+		warp "comodo",234,89;
+	close;
+}

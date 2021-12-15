@@ -22,116 +22,102 @@
 // Luoyang Transportation
 //============================================================
 -	script	::Girl_louyang	-1,{
-	mes "[Girl]";
-	mes "La la la la~";
-	mes "I feel so good today~";
-	mes "I'm in the mood to go";
-	mes "on a picnic somewhere~";
-	mes "La la la la~";
+	mes "[Louyang Merchant]";
+	mes "I am a merchant covering";
+	mes "The Louyang-Comodo";
+	mes "trade route.";
 	next;
 	switch(select("About Luoyang.:Go to Luoyang.:Cancel.")) {
 	case 1:
-		mes "[Girl]";
+		mes "[Louyang Merchant]";
 		mes "Oh, are you";
 		mes "interested in Luoyang?";
 		mes "It's a nice place to";
 		mes "visit for travelers.";
 		next;
-		mes "[Girl]";
+		mes "[Louyang Merchant]";
 		mes "Luoyang has a long history";
 		mes "with stories of ancient magic and warriors. It's also rumored that many evil beasts roam the";
 		mes "Luoyang area.";
 		next;
-		mes "[Girl]";
+		mes "[Louyang Merchant]";
 		mes "You can find cure-all medicines, mysterious occurrences, and";
 		mes "martial artists all in one place!";
 		next;
-		mes "[Girl]";
+		mes "[Louyang Merchant]";
 		mes "I used to train in the martial arts every morning back when I was in Luoyang. I might not look like it, but I'm pretty strong!";
 		next;
-		mes "[Girl]";
+		mes "[Louyang Merchant]";
 		mes "If you want to visit";
 		mes "Luoyang, feel free to";
 		mes "tell me. Just give me";
 		mes "some Zeny and we'll go~";
 		close;
 	case 2:
-		mes "[Girl]";
+		mes "[Louyang Merchant]";
 		mes "I'll guide you to";
 		mes "Luoyang right away.";
 		mes "For my service, I am";
 		mes "accepting 10,000 Zeny.";
 		next;
-		mes "[Girl]";
+		mes "[Louyang Sailor]";
 		mes "So, are you ready?";
 		next;
 		if (select("Yes!:No.") == 1) {
 			if (Zeny > 9999) {
-				mes "[Girl]";
+				mes "[Louyang Merchant]";
 				mes "Okay~";
 				mes "Ready!";
-				mes "Have fun!";
+				mes "Get on board!";
 				close2;
 				set Zeny, Zeny-10000;
 				warp "lou_fild01",190,101;
 				end;
 			}
-			mes "[Girl]";
+			mes "[Louyang Merchant]";
 			mes "...";
 			mes "You don't seem";
 			mes "to have 10,000 Zeny...";
 			mes "Go get some money first!";
 			close;
 		}
-		mes "[Girl]";
+		mes "[Louyang Merchant]";
 		mes "Oh...";
 		mes "It's so disappointing";
 		mes "to hear you say that.";
 		mes "Well, have a good day!";
 		close;
 	case 3:
-		mes "[Girl]";
+		mes "[Louyang Merchant]";
 		mes "Oh...";
 		mes "Have a good day!";
 		close;
 	}
 }
 
-lou_fild01,190,100,7	script	Girl#1lou	815,{
-	mes "[Girl]";
+lou_fild01,190,100,7	script	Louyang Merchant#1lou	643,{
+	mes "[Louyang Merchant]";
 	mes "Would you";
 	mes "like to go back";
-	mes "to Alberta?";
+	mes "to Comodo?";
 	next;
-	if (select("Go back to Alberta.:Cancel.") == 1) {
-		mes "[Girl]";
+	if (select("Yeah!:Not yet.") == 1) {
+		mes "[Louyang Merchant]";
 		mes "I hope to";
 		mes "see you again!";
 		mes "Bye bye!";
 		close2;
 		if (checkre(0))
-			warp "alberta",236,40;
+			warp "comodo",203,78;
 		else
-			warp "alberta",235,45;
+			warp "comodo",203,78;
 		end;
 	}
-	mes "[Girl]";
+	mes "[Louyang Merchant]";
 	mes "If you like this";
 	mes "area, why don't you";
 	mes "stay and enjoy the";
 	mes "the food and the sights!";
-	next;
-	if (Sex == SEX_MALE) {
-		mes "[Girl]";
-		mes "And by sights...";
-		mes "I mean girls!";
-		mes "Tee hee~";
-	}
-	else {
-		mes "[Girl]";
-		mes "And the boys here";
-		mes "aren't bad looking~";
-	}
 	close;
 }
 
