@@ -1,385 +1,385 @@
-morocc,161,102,7	script	Morroc Villager#moc::moc1	945,{
+morocc,161,102,7	script	Morroc Villager#moc::950cc82c	654,{
 	npctalk "npcdialog";
 	end;
 }
 
 morocc,155,115,4	script	Palace Guard#moc::moc2	946,{
-	npctalk "Welcome to the Morroc Palace";
+	npctalk "npcdialog";
 	end;
 }
 
 morocc,164,115,4	script	Palace Guard#moc::moc3	946,{
-	npctalk "Welcome to the Morroc Palace";
-	end;
-}
-
-morocc,150,91,5	script	Morroc Villager#moc::moc34	941,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,152,92,3	script	Morroc Villager#moc::moc35	880,{
+morocc,150,91,5	script	Morroc Villager#moc::1ca8b895	989,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,163,96,6	script	Morroc Villager#moc::moc36	881,{
+morocc,152,92,3	script	Morroc Villager#moc::4b97ca05	757,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,161,78,3	script	Morroc Villager#moc::moc37	885,{
+morocc,163,96,6	script	Morroc Villager#moc::78ed3873	79,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,168,74,3	script	Morroc Villager#moc::moc30	603,{
+morocc,161,78,3	script	Morroc Villager#moc::416c3936	575,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,155,84,7	script	Morroc Villager#moc::moc311	526,{
+morocc,168,74,3	script	Morroc Villager#moc::7e499e75	79,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,163,87,5	script	Morroc Villager#moc::moc312	459,{
+morocc,155,84,7	script	Morroc Villager#moc::eefb32e5	942,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,182,86,6	script	Morroc Villager#moc::moc314	998,{
+morocc,163,87,5	script	Morroc Villager#moc::86c195d7	728,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,194,94,3	script	Morroc Villager#moc::moc315	882,{
+morocc,182,86,6	script	Morroc Villager#moc::19e764d9	680,{
 	npctalk "npcdialog";
 	end;
 }
 
-
-morocc,183,96,5	script	Morroc Villager#moc::moc316	706,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,186,93,1	script	Morroc Villager#moc::moc317	667,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,196,83,6	script	Morroc Villager#moc::moc319	747,{
+morocc,194,94,3	script	Morroc Villager#moc::857d4111	91,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-morocc,219,81,5	script	Morroc Villager#moc::moc320	667,{
+morocc,183,96,5	script	Morroc Villager#moc::7527cad2	944,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,219,92,1	script	Morroc Villager#moc::moc321	695,{
+morocc,186,93,1	script	Morroc Villager#moc::83d4052d	754,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,196,83,6	script	Morroc Villager#moc::43bfdeab	684,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+morocc,219,81,5	script	Morroc Villager#moc::0a5b630d	838,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,219,92,1	script	Morroc Villager#moc::282146f5	761,{
 	npctalk "npcdialog";
 	end;
 }
  
-morocc,229,72,1	script	Morroc Villager#moc::moc322	727,{
+morocc,229,72,1	script	Morroc Villager#moc::ac64a261	96,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,203,66,5	script	Morroc Villager#moc::moc323	735,{
+morocc,203,66,5	script	Morroc Villager#moc::d45e5055	958,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,207,52,5	script	Morroc Villager#moc::moc324	751,{
+morocc,207,52,5	script	Morroc Villager#moc::6073e8bc	664,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,207,52,5	script	Morroc Villager#moc::moc325	751,{
+morocc,207,52,5	script	Morroc Villager#moc::1536b157	993,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,214,57,2	script	Morroc Villager#moc::moc326	805,{
+morocc,214,57,2	script	Morroc Villager#moc::0abdeff0	766,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,214,66,7	script	Morroc Villager#moc::moc327	809,{
+morocc,214,66,7	script	Morroc Villager#moc::537049f0	78,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,236,61,4	script	Morroc Villager#moc::moc328	884,{
-	npctalk "npcdialog";
-	end;
-}
-
-
-morocc,159,59,0	script	Morroc Villager#moc::moc330	919,{
+morocc,236,61,4	script	Morroc Villager#moc::f96711e5	838,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-morocc,163,53,3	script	Morroc Villager#moc::moc332	942,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,156,45,5	script	Morroc Villager#moc::moc333	864,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,158,42,1	script	Morroc Villager#moc::moc334	74,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,168,43,6	script	Morroc Villager#moc::moc335	878,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,176,45,7	script	Morroc Villager#moc::moc336	698,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,186,52,6	script	Morroc Villager#moc::moc337	542,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,191,48,2	script	Morroc Villager#moc::moc38888	494,{
+morocc,159,59,0	script	Morroc Villager#moc::77c0ee4d	863,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-morocc,200,55,0	script	Morroc Villager#moc::moc338	554,{
-	npctalk "...";
-	end;
-}
-
-morocc,194,41,1	script	Morroc Villager#moc::moc339	467,{
+morocc,163,53,3	script	Morroc Villager#moc::db3f89af	429,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,210,42,5	script	Morroc Villager#moc::moc340	479,{
+morocc,156,45,5	script	Morroc Villager#moc::92329e04	125,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,154,108,5	script	Morroc Villager#moc::moc341	481,{
+morocc,158,42,1	script	Morroc Villager#moc::7f064d0d	760,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,213,41,1	script	Morroc Villager#moc::moc342	485,{
+morocc,168,43,6	script	Morroc Villager#moc::c8fd9ec5	817,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,228,55,6	script	Morroc Villager#moc::moc343	929,{
+morocc,176,45,7	script	Morroc Villager#moc::05817317	958,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,224,67,4	script	Morroc Villager#moc::moc344	900,{
+morocc,186,52,6	script	Morroc Villager#moc::d38ed9c3	674,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,249,57,2	script	Morroc Villager#moc::moc345	883,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,249,77,7	script	Morroc Villager#moc::moc346	878,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,259,72,3	script	Morroc Villager#moc::moc347	882,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,254,87,0	script	Morroc Villager#moc::moc348	832,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,262,88,4	script	Morroc Villager#moc::moc349	82,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,250,99,0	script	Morroc Villager#moc::moc350	89,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,250,104,4	script	Morroc Villager#moc::moc351	93,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,264,100,3	script	Morroc Villager#moc::moc352	842,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,259,114,0	script	Morroc Villager#moc::moc353	943,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,265,118,3	script	Morroc Villager#moc::moc354	945,{
+morocc,191,48,2	script	Morroc Villager#moc::474aa19f	469,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-morocc,253,116,5	script	Morroc Villager#moc::moc355	779,{
+morocc,200,55,0	script	Morroc Villager#moc::68cf5808	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,278,70,3	script	Morroc Villager#moc::moc356	690,{
+morocc,194,41,1	script	Morroc Villager#moc::bedfedf0	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,276,66,0	script	Morroc Villager#moc::moc357	688,{
+morocc,210,42,5	script	Morroc Villager#moc::478addee	879,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,282,91,4	script	Morroc Villager#moc::moc358	538,{
+morocc,154,108,5	script	Morroc Villager#moc::4edac792	570,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,284,131,4	script	Morroc Villager#moc::moc359	537,{
+morocc,213,41,1	script	Morroc Villager#moc::65aca37c	502,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,283,126,0	script	Morroc Villager#moc::moc360	536,{
+morocc,228,55,6	script	Morroc Villager#moc::077e1c00	628,{
 	npctalk "npcdialog";
 	end;
 }
 
-
-morocc,263,136,2	script	Morroc Villager#moc::moc361	474,{
+morocc,224,67,4	script	Morroc Villager#moc::7f26a8f4	644,{
 	npctalk "npcdialog";
 	end;
 }
 
-
-morocc,255,143,5	script	Morroc Villager#moc::moc363	603,{
+morocc,249,57,2	script	Morroc Villager#moc::99bfd8c5	98,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,257,140,1	script	Morroc Villager#moc::moc365	534,{
+morocc,249,77,7	script	Morroc Villager#moc::516fe3b2	466,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,253,153,5	script	Morroc Villager#moc::moc364	601,{
+morocc,259,72,3	script	Morroc Villager#moc::aed3d214	841,{
 	npctalk "npcdialog";
 	end;
 }
 
-
-morocc,260,151,0	script	Morroc Villager#moc::moc366	602,{
+morocc,254,87,0	script	Morroc Villager#moc::e4d2aaba	533,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,241,169,6	script	Morroc Villager#moc::moc3999	880,{
+morocc,262,88,4	script	Morroc Villager#moc::e6c76e7d	644,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,243,183,7	script	Morroc Villager#moc::moc367	828,{
+morocc,250,99,0	script	Morroc Villager#moc::1801ea82	940,{
 	npctalk "npcdialog";
 	end;
 }
 
-
-morocc,244,206,3	script	Morroc Villager#moc::moc370	870,{
+morocc,250,104,4	script	Morroc Villager#moc::3f1c49b9	892,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,262,202,5	script	Morroc Villager#moc::moc371	869,{
+morocc,264,100,3	script	Morroc Villager#moc::381bef0b	720,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,269,207,2	script	Morroc Villager#moc::moc372	875,{
+morocc,259,114,0	script	Morroc Villager#moc::3354683b	93,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,261,214,5	script	Morroc Villager#moc::moc373	567,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,257,177,0	script	Morroc Villager#moc::moc374	51,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,261,169,4	script	Morroc Villager#moc::moc375	50,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,258,157,6	script	Morroc Villager#moc::moc376	48,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,282,182,5	script	Morroc Villager#moc::moc377	47,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,282,182,6	script	Morroc Villager#moc::moc378	47,{
+morocc,265,118,3	script	Morroc Villager#moc::6be733b9	900,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-morocc,285,187,2	script	Morroc Villager#moc::moc379	54,{
+morocc,253,116,5	script	Morroc Villager#moc::2656c7e6	941,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,278,201,7	script	Morroc Villager#moc::moc380	58,{
+morocc,278,70,3	script	Morroc Villager#moc::e391dea1	897,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,285,205,6	script	Morroc Villager#moc::moc381	59,{
+morocc,276,66,0	script	Morroc Villager#moc::575c7b6c	761,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,288,199,2	script	Morroc Villager#moc::moc382	66,{
+morocc,282,91,4	script	Morroc Villager#moc::12eedcc0	961,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,284,131,4	script	Morroc Villager#moc::bd58f125	101,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,283,126,0	script	Morroc Villager#moc::0782ea59	579,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+morocc,263,136,2	script	Morroc Villager#moc::f2ee6739	538,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+morocc,255,143,5	script	Morroc Villager#moc::8c2b2f20	98,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,257,140,1	script	Morroc Villager#moc::4142de46	578,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,253,153,5	script	Morroc Villager#moc::cda221b4	943,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+morocc,260,151,0	script	Morroc Villager#moc::756041a3	761,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,241,169,6	script	Morroc Villager#moc::e1a6f9c1	921,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,243,183,7	script	Morroc Villager#moc::bf7c74c4	677,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+morocc,244,206,3	script	Morroc Villager#moc::52eee0e0	459,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,262,202,5	script	Morroc Villager#moc::19853b37	750,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,269,207,2	script	Morroc Villager#moc::c3248a05	744,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,261,214,5	script	Morroc Villager#moc::7d0379fc	816,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,257,177,0	script	Morroc Villager#moc::8fc93e2b	493,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,261,169,4	script	Morroc Villager#moc::9c992060	750,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,258,157,6	script	Morroc Villager#moc::e99e37ba	731,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,282,182,5	script	Morroc Villager#moc::3c874675	841,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,282,182,6	script	Morroc Villager#moc::7cd32f8a	71,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+morocc,285,187,2	script	Morroc Villager#moc::13af5107	85,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,278,201,7	script	Morroc Villager#moc::a7dd256c	892,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,285,205,6	script	Morroc Villager#moc::e3c6916b	97,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,288,199,2	script	Morroc Villager#moc::3803880d	575,{
 	npctalk "npcdialog";
 	end;
 }
@@ -410,182 +410,182 @@ morocc,156,25,0	script	Morroc Guard#moc::moc387	946,{
 	end;
 }
 
-morocc,273,222,3	script	Morroc Villager#moc::moc3871	654,{
+morocc,273,222,3	script	Morroc Villager#moc::150c1fb1	883,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,258,228,6	script	Morroc Villager#moc::moc3872	683,{
+morocc,258,228,6	script	Morroc Villager#moc::8e6b5e60	484,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,264,237,0	script	Morroc Villager#moc::moc3873	123,{
-	npctalk "npcdialog";
-	end;
-}
-
-
-morocc,257,248,5	script	Morroc Villager#moc::moc3874	118,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,268,254,3	script	Morroc Villager#moc::moc3875	58,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,286,264,3	script	Morroc Villager#moc::moc3876	66,{
+morocc,264,237,0	script	Morroc Villager#moc::d4dce1ed	863,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-morocc,284,259,0	script	Morroc Villager#moc::moc3877	83,{
+morocc,257,248,5	script	Morroc Villager#moc::bd82e129	828,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,265,232,3	script	Morroc Villager#moc::moc3878	84,{
+morocc,268,254,3	script	Morroc Villager#moc::a4f0fbe6	486,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,258,267,1	script	Morroc Villager#moc::moc3879	93,{
+morocc,286,264,3	script	Morroc Villager#moc::b5de4c5b	758,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,262,263,1	script	Morroc Villager#moc::moc3870	81,{
+
+morocc,284,259,0	script	Morroc Villager#moc::c1fc7922	469,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,269,261,0	script	Morroc Villager#moc::moc387220	74,{
+morocc,265,232,3	script	Morroc Villager#moc::7d5b96b2	904,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,253,258,5	script	Morroc Villager#moc::moc38711	98,{
+morocc,258,267,1	script	Morroc Villager#moc::f0d3f466	961,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,247,291,0	script	Morroc Villager#moc::moc38733	97,{
+morocc,262,263,1	script	Morroc Villager#moc::46a3a184	538,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,269,261,0	script	Morroc Villager#moc::29dc59e2	91,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,253,258,5	script	Morroc Villager#moc::7ef0ec14	54,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,247,291,0	script	Morroc Villager#moc::3f626f09	581,{
 	npctalk "Welcome to Morroc";
 	end;
 }
 
-morocc,259,286,3	script	Morroc Villager#moc::moc38744	99,{
+morocc,259,286,3	script	Morroc Villager#moc::e451b4a5	931,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,261,277,5	script	Morroc Villager#moc::moc38755	101,{
+morocc,261,277,5	script	Morroc Villager#moc::754f4b8a	49,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,245,267,5	script	Morroc Villager#moc::moc38766	727,{
+morocc,245,267,5	script	Morroc Villager#moc::4ab98c06	779,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,234,277,5	script	Morroc Villager#moc::moc38777	729,{
+morocc,234,277,5	script	Morroc Villager#moc::847a0b35	91,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,234,277,5	script	Morroc Villager#moc::moc38788	729,{
+morocc,234,277,5	script	Morroc Villager#moc::992d3a5a	727,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,236,274,1	script	Morroc Villager#moc::moc38799	732,{
+morocc,236,274,1	script	Morroc Villager#moc::bb4e76b1	578,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,236,274,1	script	Morroc Villager#moc::moc38712	732,{
+morocc,236,274,1	script	Morroc Villager#moc::800bea63	963,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,236,265,2	script	Morroc Villager#moc::moc38713	929,{
+morocc,236,265,2	script	Morroc Villager#moc::6b717114	578,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,239,231,6	script	Morroc Villager#moc::moc38714	928,{
+morocc,239,231,6	script	Morroc Villager#moc::3885dba9	895,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,225,266,5	script	Morroc Villager#moc::moc38715	921,{
+morocc,225,266,5	script	Morroc Villager#moc::56dc8db2	989,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,221,263,4	script	Morroc Villager#moc::moc38721	914,{
+morocc,221,263,4	script	Morroc Villager#moc::ef43ed73	945,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,219,283,3	script	Morroc Villager#moc::moc38722	919,{
-	npctalk "npcdialog";
-	end;
-}
-
-
-morocc,223,250,7	script	Morroc Villager#moc::moc38724	951,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,204,262,5	script	Morroc Villager#moc::moc38725	997,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,183,250,3	script	Morroc Villager#moc::moc38726	998,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,191,238,4	script	Morroc Villager#moc::moc387330	945,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,139,245,0	script	Morroc Villager#moc::moc38734	942,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,171,253,3	script	Morroc Villager#moc::moc38745	893,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,163,246,2	script	Morroc Villager#moc::moc387545	895,{
+morocc,219,283,3	script	Morroc Villager#moc::fd8b8808	863,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-morocc,153,251,5	script	Morroc Villager#moc::moc387344	901,{
+morocc,223,250,7	script	Morroc Villager#moc::b064e78f	731,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,153,276,6	script	Morroc Villager#moc::moc38701	603,{
+morocc,204,262,5	script	Morroc Villager#moc::e03e5f91	805,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,183,250,3	script	Morroc Villager#moc::85b75490	753,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,191,238,4	script	Morroc Villager#moc::5c0b0366	879,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,139,245,0	script	Morroc Villager#moc::bdc6011f	866,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,171,253,3	script	Morroc Villager#moc::002f267f	854,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,163,246,2	script	Morroc Villager#moc::f8a3e6ff	682,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-morocc,162,268,3	script	Morroc Villager#moc::moc38702	558,{
+morocc,153,251,5	script	Morroc Villager#moc::512eefad	641,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,153,276,6	script	Morroc Villager#moc::becb7904	536,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+morocc,162,268,3	script	Morroc Villager#moc::3beb40ac	466,{
 	npctalk "npcdialog";
 	end;
 }
@@ -616,282 +616,282 @@ morocc,160,236,5	script	Morroc Guard#moc::moc38708	875,{
 }
 
 morocc,164,228,0	script	Palace Guard#moc::moc209	946,{
-	npctalk "Welcome to the Morroc Palace";
+	npctalk "npcdialog";
 	end;
 }
 
 morocc,155,228,0	script	Palace Guard#moc::moc2010	946,{
-	npctalk "Welcome to the Morroc Palace";
-	end;
-}
-
-morocc,140,90,0	script	Morroc Villager#moc::moc2010a	642,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,132,99,3	script	Morroc Villager#moc::moc2010s	648,{
+morocc,140,90,0	script	Morroc Villager#moc::98eea1ec	897,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,140,97,5	script	Morroc Villager#moc::moc2010w	641,{
+morocc,132,99,3	script	Morroc Villager#moc::e3956e98	500,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,127,93,4	script	Morroc Villager#moc::moc2010e	677,{
+morocc,140,97,5	script	Morroc Villager#moc::cf8b311e	870,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,117,92,5	script	Morroc Villager#moc::moc2010r	805,{
+morocc,127,93,4	script	Morroc Villager#moc::52c0a83a	816,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,117,92,5	script	Morroc Villager#moc::0d35d880	904,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-morocc,120,78,4	script	Morroc Villager#moc::moc2010t	647,{
+morocc,120,78,4	script	Morroc Villager#moc::86e9e0b3	866,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,112,83,7	script	Morroc Villager#moc::moc2010y	930,{
+morocc,112,83,7	script	Morroc Villager#moc::a1cd3bc0	681,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,103,80,5	script	Morroc Villager#moc::moc2010u	931,{
+morocc,103,80,5	script	Morroc Villager#moc::4b1014fd	841,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,110,77,7	script	Morroc Villager#moc::moc2010i	942,{
+morocc,110,77,7	script	Morroc Villager#moc::f52a0783	930,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,145,43,0	script	Morroc Villager#moc::moc2010o	943,{
+morocc,145,43,0	script	Morroc Villager#moc::e7940f12	480,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,147,52,4	script	Morroc Villager#moc::moc2010p	951,{
+morocc,147,52,4	script	Morroc Villager#moc::1483f160	667,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,138,53,1	script	Morroc Villager#moc::moc2010a1c	967,{
+morocc,138,53,1	script	Morroc Villager#moc::581b9bf3	753,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,128,50,3	script	Morroc Villager#moc::moc2010f	997,{
+morocc,128,50,3	script	Morroc Villager#moc::6f2c3656	466,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,119,50,6	script	Morroc Villager#moc::moc2010g	983,{
+morocc,119,50,6	script	Morroc Villager#moc::b9b8b325	819,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,119,50,6	script	Morroc Villager#moc::moc2010h	993,{
+morocc,119,50,6	script	Morroc Villager#moc::cbf7019c	706,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,112,53,3	script	Morroc Villager#moc::moc2010j	975,{
+morocc,112,53,3	script	Morroc Villager#moc::9b2de24f	667,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,110,44,6	script	Morroc Villager#moc::moc2010k	995,{
+morocc,110,44,6	script	Morroc Villager#moc::fe773eac	99,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,110,44,6	script	Morroc Villager#moc::moc2010l	995,{
+morocc,110,44,6	script	Morroc Villager#moc::b1763f81	995,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,104,49,2	script	Morroc Villager#moc::moc2010z	998,{
+morocc,104,49,2	script	Morroc Villager#moc::d38a89d2	91,{
 	npctalk "Welcome to Morroc";
 	end;
 }
 
 
-morocc,100,41,3	script	Morroc Villager#moc::moc2010x	935,{
+morocc,100,41,3	script	Morroc Villager#moc::2090ef4c	616,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-morocc,91,47,4	script	Morroc Villager#moc::moc2010c	940,{
+morocc,91,47,4	script	Morroc Villager#moc::3489a287	123,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-morocc,93,37,7	script	Morroc Villager#moc::moc2010v	892,{
+morocc,93,37,7	script	Morroc Villager#moc::88df03b6	855,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-morocc,84,39,1	script	Morroc Villager#moc::moc2010b	895,{
+morocc,84,39,1	script	Morroc Villager#moc::c56a3b06	804,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-morocc,80,52,4	script	Morroc Villager#moc::moc2010n	896,{
+morocc,80,52,4	script	Morroc Villager#moc::c6a55e39	880,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,75,41,0	script	Morroc Villager#moc::moc2010m	901,{
-	npctalk "npcdialog";
-	end;
-}
-
-
-morocc,71,51,7	script	Morroc Villager#moc::moc2010qq	897,{
+morocc,75,41,0	script	Morroc Villager#moc::20f7f716	95,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-morocc,73,72,4	script	Morroc Villager#moc::moc2010ww	475,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,54,48,7	script	Morroc Villager#moc::moc2010ee	470,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,56,56,3	script	Morroc Villager#moc::moc2010rr	481,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,62,51,6	script	Morroc Villager#moc::moc2010tt	459,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,62,74,5	script	Morroc Villager#moc::moc2010yy	526,{
+morocc,71,51,7	script	Morroc Villager#moc::86f11ddc	814,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-morocc,56,82,7	script	Morroc Villager#moc::moc2010uu	504,{
+morocc,73,72,4	script	Morroc Villager#moc::3c0a24e7	642,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,54,48,7	script	Morroc Villager#moc::36bf476c	84,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,56,56,3	script	Morroc Villager#moc::329f72d1	78,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,62,51,6	script	Morroc Villager#moc::b32877b0	696,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,62,74,5	script	Morroc Villager#moc::094f0f0b	879,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-morocc,60,90,0	script	Morroc Villager#moc::moc2010ii	542,{
+morocc,56,82,7	script	Morroc Villager#moc::927b3ab8	542,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-morocc,65,80,2	script	Morroc Villager#moc::moc2010oo	536,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,68,94,1	script	Morroc Villager#moc::moc2010pp	581,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,53,92,6	script	Morroc Villager#moc::moc2010aa	583,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,53,92,6	script	Morroc Villager#moc::moc2010ss	583,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,53,88,0	script	Morroc Villager#moc::moc2010dd	603,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,57,109,7	script	Morroc Villager#moc::moc2010ff	814,{
+morocc,60,90,0	script	Morroc Villager#moc::e7f6d64a	914,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-morocc,73,113,5	script	Morroc Villager#moc::moc2010gg	819,{
+morocc,65,80,2	script	Morroc Villager#moc::21d4fdbf	97,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,68,94,1	script	Morroc Villager#moc::24f88c7f	817,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,53,92,6	script	Morroc Villager#moc::91f18020	637,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,53,92,6	script	Morroc Villager#moc::d196ee50	47,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,53,88,0	script	Morroc Villager#moc::f818c498	880,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,57,109,7	script	Morroc Villager#moc::3861f095	819,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-morocc,76,107,1	script	Morroc Villager#moc::moc2010hh	847,{
+morocc,73,113,5	script	Morroc Villager#moc::7f4cdc15	535,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-morocc,54,120,6	script	Morroc Villager#moc::moc2010jj	843,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,35,171,4	script	Morroc Villager#moc::moc2010kk	831,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,44,167,5	script	Morroc Villager#moc::moc2010ll	832,{
+morocc,76,107,1	script	Morroc Villager#moc::43424afc	683,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-morocc,52,171,6	script	Morroc Villager#moc::moc2010zz	828,{
+morocc,54,120,6	script	Morroc Villager#moc::de3bfcbd	983,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,54,161,1	script	Morroc Villager#moc::moc2010xx	884,{
+morocc,35,171,4	script	Morroc Villager#moc::7cf0b0a9	958,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,59,151,5	script	Morroc Villager#moc::moc2010cc	733,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,66,144,4	script	Morroc Villager#moc::moc2010vv	732,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,62,136,0	script	Morroc Villager#moc::moc2010bb	755,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,69,126,2	script	Morroc Villager#moc::moc2010nn	54,{
+morocc,44,167,5	script	Morroc Villager#moc::9c94eca0	863,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-morocc,36,163,1	script	Morroc Villager#moc::moc2010qqq	72,{
+morocc,52,171,6	script	Morroc Villager#moc::5cc99a13	98,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,54,161,1	script	Morroc Villager#moc::73139084	854,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,59,151,5	script	Morroc Villager#moc::691e271b	538,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,66,144,4	script	Morroc Villager#moc::2b10411d	919,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,62,136,0	script	Morroc Villager#moc::a8c51235	664,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,69,126,2	script	Morroc Villager#moc::f334fb6f	704,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+morocc,36,163,1	script	Morroc Villager#moc::dc41cb33	47,{
 	npctalk "npcdialog";
 	end;
 }
@@ -923,73 +923,73 @@ morocc,65,168,3	script	Morroc Guard#moc::moc383yyy	65,{
 	end;
 }
 
-morocc,140,265,2	script	Morroc Villager#moc::moc383yyyq	82,{
+morocc,140,265,2	script	Morroc Villager#moc::6e7106f5	901,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,128,269,5	script	Morroc Villager#moc::moc383yyyw	93,{
+morocc,128,269,5	script	Morroc Villager#moc::a5e8d18c	534,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,123,260,3	script	Morroc Villager#moc::moc383yyye	79,{
+morocc,123,260,3	script	Morroc Villager#moc::0c3eadb5	573,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,119,269,6	script	Morroc Villager#moc::moc383yyyr	412,{
+morocc,119,269,6	script	Morroc Villager#moc::d2f1006a	806,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,106,260,3	script	Morroc Villager#moc::moc383yyyt	466,{
+morocc,106,260,3	script	Morroc Villager#moc::051917bf	733,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,108,253,6	script	Morroc Villager#moc::moc383yyyy	494,{
+morocc,108,253,6	script	Morroc Villager#moc::2ce59057	959,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,96,250,7	script	Morroc Villager#moc::moc383yyyu	504,{
+morocc,96,250,7	script	Morroc Villager#moc::a6e7b9bd	430,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,74,255,1	script	Morroc Villager#moc::moc383yyyi	581,{
+morocc,74,255,1	script	Morroc Villager#moc::ebe63726	538,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,65,257,5	script	Morroc Villager#moc::moc383yyyo	603,{
+morocc,65,257,5	script	Morroc Villager#moc::e4051061	92,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-morocc,123,187,6	script	Morroc Villager#moc::moc383yyyp	641,{
+morocc,123,187,6	script	Morroc Villager#moc::9e84a097	727,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,136,204,1	script	Morroc Villager#moc::moc383yyya	642,{
+morocc,136,204,1	script	Morroc Villager#moc::240db4aa	49,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,66,268,2	script	Morroc Villager#moc::moc383yyys	665,{
+morocc,66,268,2	script	Morroc Villager#moc::44634aed	746,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,77,287,4	script	Morroc Villager#moc::moc383yyyd	706,{
+morocc,77,287,4	script	Morroc Villager#moc::3692d231	575,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,53,286,5	script	Morroc Villager#moc::moc383yyddy	754,{
+morocc,53,286,5	script	Morroc Villager#moc::f23f1a05	898,{
 	npctalk "npcdialog";
 	end;
 }
@@ -1004,276 +1004,276 @@ morocc,26,288,6	script	Morroc Guard#moc::moc383g	946,{
 	end;
 }
 
-morocc,35,280,1	script	Morroc Villager#moc::moc383yyyg	745,{
+morocc,35,280,1	script	Morroc Villager#moc::e629cd2e	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,71,241,1	script	Morroc Villager#moc::moc383yyyf	66,{
+morocc,71,241,1	script	Morroc Villager#moc::8fdcfe99	642,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,61,237,6	script	Morroc Villager#moc::moc383yyyh	73,{
+morocc,61,237,6	script	Morroc Villager#moc::ecb46b9d	897,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,65,228,4	script	Morroc Villager#moc::moc383yyyj	84,{
+morocc,65,228,4	script	Morroc Villager#moc::1f9765b0	75,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,86,225,0	script	Morroc Villager#moc::moc383yyytu	88,{
-	npctalk "npcdialog";
-	end;
-}
-
-
-morocc,69,221,7	script	Morroc Villager#moc::moc383yyyk	89,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,59,215,4	script	Morroc Villager#moc::moc383yyyl	93,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,66,210,0	script	Morroc Villager#moc::moc383yyyz	99,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,74,202,2	script	Morroc Villager#moc::moc383yyyx	123,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,63,191,5	script	Morroc Villager#moc::moc383yyyc	673,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,35,246,2	script	Morroc Villager#moc::moc383yyyb	682,{
+morocc,86,225,0	script	Morroc Villager#moc::3935c2e5	77,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-morocc,32,232,5	script	Morroc Villager#moc::moc383yyyn	706,{
+morocc,69,221,7	script	Morroc Villager#moc::30fc08a6	822,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,45,227,3	script	Morroc Villager#moc::moc383yyym	729,{
+morocc,59,215,4	script	Morroc Villager#moc::346044dd	536,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc_in,40,167,7	script	Morroc Villager#moc::moc383yyymj	430,{
+morocc,66,210,0	script	Morroc Villager#moc::efe68904	669,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc_in,45,157,1	script	Morroc Villager#moc::moc383yyymh	735,{
+morocc,74,202,2	script	Morroc Villager#moc::0b134906	941,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc_in,15,158,7	script	Morroc Villager#moc::moc383yyymg	748,{
+morocc,63,191,5	script	Morroc Villager#moc::1531d941	575,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc_in,78,164,4	script	Morroc Villager#moc::moc383yyymf	744,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc_in,178,73,3	script	Morroc Villager#moc::moc383yyymd	750,{
+morocc,35,246,2	script	Morroc Villager#moc::e1cee929	456,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-morocc_in,168,69,0	script	Morroc Villager#moc::moc383yyyms	741,{
+morocc,32,232,5	script	Morroc Villager#moc::160ef7fa	54,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc_in,168,62,7	script	Morroc Villager#moc::moc383yyyma	778,{
+morocc,45,227,3	script	Morroc Villager#moc::66a61b0d	576,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc_in,177,30,5	script	Morroc Villager#moc::moc383yyymr	805,{
+morocc_in,40,167,7	script	Morroc Villager#moc::2601620d	70,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc_in,141,130,7	script	Morroc Villager#moc::moc383yyymra	804,{
+morocc_in,45,157,1	script	Morroc Villager#moc::a26efccb	682,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc_in,177,140,3	script	Morroc Villager#moc::moc383yyymrs	690,{
+morocc_in,15,158,7	script	Morroc Villager#moc::26a99943	101,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc_in,177,130,3	script	Morroc Villager#moc::moc383yyymrd	688,{
+morocc_in,78,164,4	script	Morroc Villager#moc::f1a4c232	502,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc_in,167,103,7	script	Morroc Villager#moc::moc383yyymrf	882,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc_in,141,145,6	script	Morroc Villager#moc::moc383yyymrg0	98,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc_in,135,65,5	script	Morroc Villager#moc::moc383yyymrgfi	123,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc_in,74,95,0	script	Morroc Villager#moc::moc383yyymrgq	118,{
+morocc_in,178,73,3	script	Morroc Villager#moc::a10ea26b	944,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-morocc_in,115,101,1	script	Morroc Villager#moc::moc383yyymrga	95,{
+morocc_in,168,69,0	script	Morroc Villager#moc::dd544e1d	101,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc_in,84,127,1	script	Morroc Villager#moc::moc383yyymrgs	567,{
+morocc_in,168,62,7	script	Morroc Villager#moc::e605b739	669,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc_in,75,127,1	script	Morroc Villager#moc::moc383yyymrg	698,{
+morocc_in,177,30,5	script	Morroc Villager#moc::c9b7311e	885,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc_in,44,129,6	script	Morroc Villager#moc::moc383yyymrgd	693,{
+morocc_in,141,130,7	script	Morroc Villager#moc::cae11c57	682,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc_in,48,99,6	script	Morroc Villager#moc::moc383yyymrgf	459,{
+morocc_in,177,140,3	script	Morroc Villager#moc::d309613c	751,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,161,134,0	script	Morroc Villager#moc::oc383yyymrgf	459,{
+morocc_in,177,130,3	script	Morroc Villager#moc::fe0f0027	526,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,152,143,2	script	Morroc Villager#moc::m383yyymrgf	479,{
+morocc_in,167,103,7	script	Morroc Villager#moc::1d030d2f	77,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,144,154,5	script	Morroc Villager#moc::mocoymrgf	410,{
+morocc_in,141,145,6	script	Morroc Villager#moc::ba660642	501,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,157,160,6	script	Morroc Villager#moc::moc6rgf	97,{
+morocc_in,135,65,5	script	Morroc Villager#moc::ce2345be	863,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,160,160,2	script	Morroc Villager#moc::moc38trgf	95,{
+morocc_in,74,95,0	script	Morroc Villager#moc::983fe248	805,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,144,170,7	script	Morroc Villager#moc::mocjrgf	68,{
+
+morocc_in,115,101,1	script	Morroc Villager#moc::56af948e	893,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,146,187,1	script	Morroc Villager#moc::mocgmrgf	82,{
+morocc_in,84,127,1	script	Morroc Villager#moc::d6388128	804,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,163,184,0	script	Morroc Villager#moc::mociirgf	946,{
+morocc_in,75,127,1	script	Morroc Villager#moc::3486c762	838,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,156,184,0	script	Morroc Villager#moc::pgf	946,{
+morocc_in,44,129,6	script	Morroc Villager#moc::ce26cbd9	642,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,177,180,2	script	Morroc Villager#moc::moc10ymrgf	89,{
+morocc_in,48,99,6	script	Morroc Villager#moc::769cf5f8	744,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,176,162,3	script	Morroc Villager#moc::mocuygf	92,{
+morocc,161,134,0	script	Morroc Villager#moc::b8b9e7ac	869,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,172,147,2	script	Morroc Villager#moc::mo104mrgf	79,{
+morocc,152,143,2	script	Morroc Villager#moc::e53db524	581,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,175,145,5	script	Morroc Villager#moc::moc8mrgf	81,{
-	npctalk "...";
-	end;
-}
-
-morocc,163,126,4	script	Morroc Villager#moc::mocpmrgf	93,{
+morocc,144,154,5	script	Morroc Villager#moc::48798890	941,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,156,200,0	script	Morroc Villager#moc::moc38plmrgf	644,{
+morocc,157,160,6	script	Morroc Villager#moc::b4b7b83e	96,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,160,211,3	script	Morroc Villager#moc::i383yyymrgf	648,{
+morocc,160,160,2	script	Morroc Villager#moc::303dfae8	582,{
 	npctalk "npcdialog";
 	end;
 }
 
-morocc,159,224,4	script	Morroc Villager#moc::moooyymrgf	628,{
+morocc,144,170,7	script	Morroc Villager#moc::8d9875bc	958,{
 	npctalk "npcdialog";
 	end;
 }
 
-moc_fild19,148,103,4	script	Morroc Villager#moc::nnn334	636,{
+morocc,146,187,1	script	Morroc Villager#moc::01dcd235	603,{
 	npctalk "npcdialog";
 	end;
 }
 
-moc_fild19,153,98,2	script	Morroc Villager#moc::aaa1212	645,{
+morocc,163,184,0	script	Morroc Villager#moc::fc8678f3	665,{
 	npctalk "npcdialog";
 	end;
 }
 
-moc_fild19,144,94,6	script	Morroc Villager#moc::mjs998	695,{
+morocc,156,184,0	script	Morroc Villager#moc::62ebdca6	680,{
 	npctalk "npcdialog";
 	end;
 }
 
-moc_fild19,155,106,3	script	Morroc Villager#moc::mio22	603,{
+morocc,177,180,2	script	Morroc Villager#moc::ea22af77	998,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,176,162,3	script	Morroc Villager#moc::30d22343	538,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,172,147,2	script	Morroc Villager#moc::1ff6b05c	760,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,175,145,5	script	Morroc Villager#moc::384efa07	720,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,163,126,4	script	Morroc Villager#moc::d2e006fe	93,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,156,200,0	script	Morroc Villager#moc::b497dc31	494,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,160,211,3	script	Morroc Villager#moc::e6f64503	760,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,159,224,4	script	Morroc Villager#moc::8ae20877	486,{
+	npctalk "npcdialog";
+	end;
+}
+
+moc_fild19,148,103,4	script	Morroc Villager#moc::8e4cb085	664,{
+	npctalk "npcdialog";
+	end;
+}
+
+moc_fild19,153,98,2	script	Morroc Villager#moc::991b157d	804,{
+	npctalk "npcdialog";
+	end;
+}
+
+moc_fild19,144,94,6	script	Morroc Villager#moc::dd33f77e	838,{
+	npctalk "npcdialog";
+	end;
+}
+
+moc_fild19,155,106,3	script	Morroc Villager#moc::f3e1690e	124,{
 	npctalk "npcdialog";
 	end;
 }
@@ -1288,17 +1288,17 @@ moc_fild07,195,27,0	script	Morroc Guard#moc::moojjf	946,{
 	end;
 }
 
-moc_fild07,194,39,3	script	Morroc Villager#moc::mo1234	602,{
+moc_fild07,194,39,3	script	Morroc Villager#moc::546c2e03	482,{
 	npctalk "npcdialog";
 	end;
 }
 
-moc_fild07,201,41,7	script	Morroc Villager#moc::mo123	567,{
+moc_fild07,201,41,7	script	Morroc Villager#moc::01b68363	951,{
 	npctalk "npcdialog";
 	end;
 }
 
-moc_fild07,197,47,0	script	Morroc Villager#moc::morrc	634,{
+moc_fild07,197,47,0	script	Morroc Villager#moc::98cd8c5b	744,{
 	npctalk "npcdialog";
 	end;
 }
@@ -1313,12 +1313,12 @@ moc_fild10,24,205,6	script	Morroc Guard#moc::moojjf4	946,{
 	end;
 }
 
-moc_fild10,31,210,5	script	Morroc Villager#moc::moojjf5	95,{
+moc_fild10,31,210,5	script	Morroc Villager#moc::d03a3be3	78,{
 	npctalk "npcdialog";
 	end;
 }
 
-moc_fild10,33,204,2	script	Morroc Villager#moc::moojjfdd	97,{
+moc_fild10,33,204,2	script	Morroc Villager#moc::d053da1e	646,{
 	npctalk "npcdialog";
 	end;
 }

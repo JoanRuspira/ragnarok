@@ -105,7 +105,7 @@ izlude,119,163,2	script	Izlude Villager#izl::npcid	spriteid,{
 	end;
 }
 
-izlude,126,157,4	script	Izlude Villager#izl::npcid	spriteid,{
+izlude,76,163,2	script	Izlude Villager#izl::npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
@@ -241,7 +241,7 @@ izlude,154,199,5	script	Izlude Villager#izl::npcid	spriteid,{
 	end;
 }
 
-izlude,95,168,0	script	Izlude Villager#izl::npcid	spriteid,{
+izlude,95,156,0	script	Izlude Villager#izl::npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
@@ -574,6 +574,96 @@ izlude_in,69,118,4	script	Izlude Villager#izl::npcid	spriteid,{
 }
 
 izlude_in,63,104,4	script	Izlude Villager#izl::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+izlude,193,75,2	script	Izlude Villager#izl::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+izlude,179,69,1	script	Izlude Villager#izl::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+izlude,69,173,4	script	Izlude Villager#izl::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+izlude,134,56,5	script	Izlude Villager#izl::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+izlude,132,79,0	script	Izlude Villager#izl::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+izlude,121,101,3	script	Izlude Villager#izl::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+izlude,105,97,6	script	Izlude Villager#izl::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+izlude,80,98,3	script	Izlude Villager#izl::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+izlude,63,101,0	script	Izlude Villager#izl::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+izlude,39,97,3	script	Izlude Villager#izl::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+izlude,24,100,4	script	Izlude Villager#izl::npcid	105,{
+	npctalk "Welcome to Izlude.";
+	end;
+}
+
+izlude,131,130,7	script	Izlude Villager#izl::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+izlude,103,154,7	script	Izlude Villager#izl::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+izlude,117,182,3	script	Izlude Villager#izl::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+izlude,122,206,4	script	Izlude Villager#izl::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+izlude,123,227,7	script	Izlude Villager#izl::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+izlude,136,249,2	script	Izlude Villager#izl::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+izlude,187,161,6	script	Izlude Villager#izl::npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }

@@ -1,335 +1,335 @@
-umbala,131,83,4	script	Umbala Guard#umb:ddf6ac4d	789,{
+umbala,131,83,4	script	Umbala Soldier#umb:86e77870	789,{
+	npctalk "Welcome to umbala.";
+	end;
+}
+
+umbala,111,286,4	script	Umbala Soldier#umb:7db8756d	789,{
 	npctalk "Welcome to Umbala.";
 	end;
 }
 
-umbala,111,286,4	script	Umbala Guard#umb:014b2d8a	789,{
-	npctalk "Welcome to Umbala.";
+//UMBALANS
+umbala,127,88,1	script	Umbala Villager#umb:011dc843	760,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,127,88,1	script	Umbala Villager#umb:d3768fb2	785,{
-	npctalk "npcdialog_umb";
+umbala,141,91,6	script	Umbala Villager#umb:da1b0abc	92,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,141,91,6	script	Umbala Villager#umb:8db1c656	783,{
-	npctalk "npcdialog_umb";
+umbala,174,96,2	script	Umbala Villager#umb:57019de9	798,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,174,96,2	script	Umbala Villager#umb:3752c8f4	788,{
-	npctalk "npcdialog_umb";
+umbala,198,91,0	script	Umbala Villager#umb:04909cc5	824,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,198,91,0	script	Umbala Villager#umb:eac8dbc9	786,{
-	npctalk "npcdialog_umb";
+umbala,177,140,5	script	Umbala Villager#umb:f372c577	878,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,177,140,5	script	Umbala Villager#umb:6e787886	786,{
-	npctalk "npcdialog_umb";
+umbala,190,176,0	script	Umbala Villager#umb:4414ca9c	92,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,190,176,0	script	Umbala Villager#umb:b1609abc	783,{
-	npctalk "npcdialog_umb";
+umbala,205,201,7	script	Umbala Villager#umb:20403a89	412,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,205,201,7	script	Umbala Villager#umb:8bf61284	785,{
-	npctalk "npcdialog_umb";
+umbala,161,245,3	script	Umbala Villager#umb:30c65f5d	940,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,161,245,3	script	Umbala Villager#umb:5712aa3c	786,{
-	npctalk "npcdialog_umb";
+umbala,121,274,1	script	Umbala Villager#umb:e82ef5cb	456,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,121,274,1	script	Umbala Villager#umb:ccb05870	785,{
-	npctalk "npcdialog_umb";
+umbala,150,215,4	script	Umbala Villager#umb:7e182291	493,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,150,215,4	script	Umbala Villager#umb:fa70a132	786,{
-	npctalk "npcdialog_umb";
+umbala,133,222,2	script	Umbala Villager#umb:0fda9e29	892,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,133,222,2	script	Umbala Villager#umb:c0d9c607	783,{
-	npctalk "npcdialog_umb";
+umbala,107,206,5	script	Umbala Villager#umb:81d77163	558,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,107,206,5	script	Umbala Villager#umb:bae8a034	783,{
-	npctalk "npcdialog_umb";
+umbala,84,187,1	script	Umbala Villager#umb:e5207d86	533,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,84,187,1	script	Umbala Villager#umb:3586f2f0	787,{
-	npctalk "npcdialog_umb";
+umbala,80,232,0	script	Umbala Villager#umb:f3f33576	124,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,80,232,0	script	Umbala Villager#umb:96250f03	781,{
-	npctalk "npcdialog_umb";
+umbala,83,246,6	script	Umbala Villager#umb:7f108281	54,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,83,246,6	script	Umbala Villager#umb:68a73561	786,{
-	npctalk "npcdialog_umb";
+umbala,77,176,5	script	Umbala Villager#umb:7a144ddb	669,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,77,176,5	script	Umbala Villager#umb:1b1b5108	782,{
-	npctalk "npcdialog_umb";
+umbala,86,153,7	script	Umbala Villager#umb:781e554b	667,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,86,153,7	script	Umbala Villager#umb:07121ff8	788,{
-	npctalk "npcdialog_umb";
+umbala,70,137,6	script	Umbala Villager#umb:b57b881f	878,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,70,137,6	script	Umbala Villager#umb:90d80e77	783,{
-	npctalk "npcdialog_umb";
+umbala,78,115,1	script	Umbala Villager#umb:36999f7c	542,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,78,115,1	script	Umbala Villager#umb:232e1511	783,{
-	npctalk "npcdialog_umb";
+umbala,98,101,6	script	Umbala Villager#umb:18bc15da	493,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,98,101,6	script	Umbala Villager#umb:e1142764	786,{
-	npctalk "npcdialog_umb";
+umbala,139,110,4	script	Umbala Villager#umb:7732f58a	751,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,139,110,4	script	Umbala Villager#umb:3d38b1bb	787,{
-	npctalk "npcdialog_umb";
+umbala,146,118,5	script	Umbala Villager#umb:691b8c1d	995,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,146,118,5	script	Umbala Villager#umb:d0076174	783,{
-	npctalk "npcdialog_umb";
+umbala,132,126,3	script	Umbala Villager#umb:742194fa	730,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,132,126,3	script	Umbala Villager#umb:d6114099	781,{
-	npctalk "npcdialog_umb";
+umbala,124,145,7	script	Umbala Villager#umb:6569804a	430,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,124,145,7	script	Umbala Villager#umb:13e7a72d	782,{
-	npctalk "npcdialog_umb";
+umbala,108,124,4	script	Umbala Villager#umb:d095374d	579,{
+	npctalk "npcdialog";
 	end;
 }
-
-umbala,108,124,4	script	Umbala Villager#umb:cbfe123e	788,{
-	npctalk "npcdialog_umb";
-	end;
-}
-
-
-umbala,124,84,1	script	Umbala Villager#umb:13cee7c3	682,{
-	npctalk "npcdialog_noumb";
+//END UMBALANS
+umbala,124,84,1	script	Umbala Villager#umb:0c365fd9	85,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,157,93,6	script	Umbala Villager#umb:c61f5794	745,{
-	npctalk "npcdialog_noumb";
+umbala,157,93,6	script	Umbala Villager#umb:6f3f7f31	838,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,159,93,2	script	Umbala Villager#umb:3bfbefa3	124,{
-	npctalk "npcdialog_noumb";
+umbala,159,93,2	script	Umbala Villager#umb:18b89484	66,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,188,94,0	script	Umbala Villager#umb:2c1b45cf	643,{
-	npctalk "npcdialog_noumb";
+umbala,188,94,0	script	Umbala Villager#umb:e49c913f	765,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,203,103,7	script	Umbala Villager#umb:325e54d2	576,{
-	npctalk "npcdialog_noumb";
+umbala,203,103,7	script	Umbala Villager#umb:66d0f395	960,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,186,129,4	script	Umbala Villager#umb:54ce970d	534,{
-	npctalk "npcdialog_noumb";
+umbala,186,129,4	script	Umbala Villager#umb:b05d1d98	960,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,187,150,1	script	Umbala Villager#umb:1619fef8	538,{
-	npctalk "npcdialog_noumb";
+umbala,187,150,1	script	Umbala Villager#umb:13c0bad3	539,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,191,179,4	script	Umbala Villager#umb:410bc4d0	479,{
-	npctalk "npcdialog_noumb";
+umbala,191,179,4	script	Umbala Villager#umb:358c7a0f	851,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,198,194,0	script	Umbala Villager#umb:42791a9f	648,{
-	npctalk "npcdialog_noumb";
+umbala,198,194,0	script	Umbala Villager#umb:454507f7	581,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,211,208,6	script	Umbala Villager#umb:d6c6f0e6	99,{
-	npctalk "npcdialog_noumb";
+umbala,211,208,6	script	Umbala Villager#umb:a0e00d83	570,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,215,187,3	script	Umbala Villager#umb:0ee307c2	542,{
-	npctalk "npcdialog_noumb";
+umbala,215,187,3	script	Umbala Villager#umb:6bb119c4	630,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,194,221,1	script	Umbala Villager#umb:654b8622	53,{
-	npctalk "npcdialog_noumb";
+umbala,194,221,1	script	Umbala Villager#umb:0af0960c	727,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,176,239,5	script	Umbala Villager#umb:7872b9e1	741,{
-	npctalk "npcdialog_noumb";
+umbala,176,239,5	script	Umbala Villager#umb:c2bf8989	765,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,159,243,7	script	Umbala Villager#umb:be72ef98	571,{
-	npctalk "npcdialog_noumb";
+umbala,159,243,7	script	Umbala Villager#umb:196562fa	51,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,142,263,2	script	Umbala Villager#umb:122225fa	56,{
-	npctalk "npcdialog_noumb";
+umbala,142,263,2	script	Umbala Villager#umb:b17b23dd	558,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,129,267,5	script	Umbala Villager#umb:4bb187b2	643,{
-	npctalk "npcdialog_noumb";
+umbala,129,267,5	script	Umbala Villager#umb:f41043b9	897,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,113,280,2	script	Umbala Villager#umb:8f3cf53d	647,{
-	npctalk "npcdialog_noumb";
+umbala,113,280,2	script	Umbala Villager#umb:cfdf5383	958,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,145,202,1	script	Umbala Villager#umb:3f020fec	747,{
-	npctalk "npcdialog_noumb";
+umbala,145,202,1	script	Umbala Villager#umb:e39e73c3	665,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,133,213,0	script	Umbala Villager#umb:df37b49f	579,{
-	npctalk "npcdialog_noumb";
+umbala,133,213,0	script	Umbala Villager#umb:c73ee3e9	578,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,144,222,3	script	Umbala Villager#umb:c1ee7fff	77,{
-	npctalk "npcdialog_noumb";
+umbala,144,222,3	script	Umbala Villager#umb:f324c34b	731,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,117,216,3	script	Umbala Villager#umb:5892cfac	601,{
-	npctalk "npcdialog_noumb";
+umbala,117,216,3	script	Umbala Villager#umb:fad1d51a	532,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,100,188,2	script	Umbala Villager#umb:24d83237	430,{
-	npctalk "npcdialog_noumb";
+umbala,100,188,2	script	Umbala Villager#umb:40cb3d2c	636,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,102,187,6	script	Umbala Villager#umb:560f46d9	542,{
-	npctalk "npcdialog_noumb";
+umbala,102,187,6	script	Umbala Villager#umb:51066b1f	482,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,90,178,4	script	Umbala Villager#umb:3385f755	420,{
-	npctalk "npcdialog_noumb";
+umbala,90,178,4	script	Umbala Villager#umb:ec674f73	575,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,104,166,5	script	Umbala Villager#umb:e367ce3e	55,{
-	npctalk "npcdialog_noumb";
+umbala,104,166,5	script	Umbala Villager#umb:cb2171f4	642,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,93,15,3	script	Umbala Villager#umb:09e70cfd	773,{
-	npctalk "npcdialog_noumb";
+umbala,93,15,3	script	Umbala Villager#umb:d81dc778	77,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,76,169,7	script	Umbala Villager#umb:98f094c5	64,{
-	npctalk "npcdialog_noumb";
+umbala,76,169,7	script	Umbala Villager#umb:fe524563	919,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,92,180,6	script	Umbala Villager#umb:b4a7da3c	577,{
-	npctalk "npcdialog_noumb";
+umbala,92,180,6	script	Umbala Villager#umb:90861e80	682,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,83,204,1	script	Umbala Villager#umb:09089514	571,{
-	npctalk "npcdialog_noumb";
+umbala,83,204,1	script	Umbala Villager#umb:6d7b29e1	914,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,80,234,5	script	Umbala Villager#umb:644a86ba	735,{
-	npctalk "npcdialog_noumb";
+umbala,80,234,5	script	Umbala Villager#umb:28e3c3b5	838,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,68,244,2	script	Umbala Villager#umb:6b5a59c1	85,{
-	npctalk "npcdialog_noumb";
+umbala,68,244,2	script	Umbala Villager#umb:3078a5a5	680,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,73,124,5	script	Umbala Villager#umb:0227f13a	500,{
-	npctalk "npcdialog_noumb";
+umbala,73,124,5	script	Umbala Villager#umb:edf395b6	750,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,62,115,0	script	Umbala Villager#umb:d742415a	774,{
-	npctalk "npcdialog_noumb";
+umbala,62,115,0	script	Umbala Villager#umb:dbd933d7	573,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,77,106,6	script	Umbala Villager#umb:ce07c23c	92,{
-	npctalk "npcdialog_noumb";
+umbala,77,106,6	script	Umbala Villager#umb:d6d511ca	70,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,113,96,3	script	Umbala Villager#umb:ec261b74	679,{
-	npctalk "npcdialog_noumb";
+umbala,113,96,3	script	Umbala Villager#umb:6f19b69e	842,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,154,98,0	script	Umbala Villager#umb:f071e34f	95,{
-	npctalk "npcdialog_noumb";
+umbala,154,98,0	script	Umbala Villager#umb:7d8e8972	895,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,136,121,5	script	Umbala Villager#umb:f1744154	542,{
-	npctalk "npcdialog_noumb";
+umbala,136,121,5	script	Umbala Villager#umb:f21c112f	637,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,116,121,1	script	Umbala Villager#umb:3defeb3a	776,{
-	npctalk "npcdialog_noumb";
+umbala,116,121,1	script	Umbala Villager#umb:143dad52	484,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,138,147,7	script	Umbala Villager#umb:13b8663b	583,{
-	npctalk "npcdialog_noumb";
+umbala,138,147,7	script	Umbala Villager#umb:89ae8ff7	653,{
+	npctalk "npcdialog";
 	end;
 }
 
-umbala,160,170,1	script	Umbala Villager#umb:7431926e	534,{
-	npctalk "npcdialog_noumb";
+umbala,160,170,1	script	Umbala Villager#umb:f0b326f1	740,{
+	npctalk "npcdialog";
 	end;
 }

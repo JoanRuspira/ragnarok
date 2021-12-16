@@ -3,14 +3,34 @@ import uuid
 import os
 from lists import * 
 
+def getCommonSprites():
+	return [x for x in allsprites if x not in morroc + geffen + izlude + comodo + hugel]
+
+def getCityNPCS(city):
+    match city:
+        case "izlude" | "payon" | "alberta" | "aldebaran":
+            return getCommonSprites() + izlude
+        case "geffen":
+            return getCommonSprites() + geffen
+        case "morroc":
+            return getCommonSprites() + morroc
+        case "comodo":
+            return getCommonSprites() + comodo
+        case "hugel":
+            return getCommonSprites() + hugel
+        case _:
+            return allsprites
+
+
 def buildCity(city):
 
     #randomize sprite ids
 	fin = open("./templates/cities/" + city + "_template.txt", "rt")
 	fout = open("./" + city + "_tmp.txt", "wt")
 
+	#citySprites = getCityNPCS(city)
 	for line in fin:
-		fout.write(line.replace('spriteid', str(random.choice(sprites))))
+		fout.write(line.replace('spriteid', str(random.choice(allsprites))))
 	fout.close()
 	fin.close()
 
