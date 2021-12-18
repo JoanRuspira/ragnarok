@@ -50,7 +50,7 @@ def build(inputParameter):
 
     cities = [inputParameter]
     if inputParameter == 'all':
-        cities = ["umbala", "comodo", "morroc", "payon", "alberta", "izlude", "geffen", "aldebaran", "hugel"]
+        cities = ["umbala", "comodo", "morroc", "payon", "alberta", "izlude", "geffen", "aldebaran", "hugel", "einbroch", "einbech"]
     
     for city in cities:
         buildCity(city)

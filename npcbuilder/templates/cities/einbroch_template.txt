@@ -1,0 +1,1940 @@
+einbroch,155,319,5	script	Einbroch Guard#ein:npcid	852,{
+	npctalk "Welome to Einbroch.";
+	end;
+}
+
+einbroch,160,319,3	script	Einbroch Guard#ein:npcid	852,{
+	npctalk "Welome to Einbroch.";
+	end;
+}
+
+einbroch,147,36,7	script	Einbroch Guard#ein:npcid	852,{
+	npctalk "Welome to Einbroch.";
+	end;
+}
+
+einbroch,152,36,1	script	Einbroch Guard#ein:npcid	852,{
+	npctalk "Welome to Einbroch.";
+	end;
+}
+
+einbroch,28,190,6	script	Einbroch Guard#ein:npcid	852,{
+	npctalk "This exit is under construction.";
+	end;
+}
+
+einbroch,124,317,6	script	Einbroch Guard#ein:npcid	852,{
+	npctalk "Access to the shipyard is restricted.";
+	end;
+}
+
+einbroch,298,296,5	script	Einbroch Guard#ein:npcid	848,{
+	npctalk "We are expanding the city.";
+	end;
+}
+
+einbroch,284,191,1	script	Einbroch Guard#ein:npcid	848,{
+	npctalk "Let me work please.";
+	end;
+}
+
+einbroch,281,159,3	script	Einbroch Guard#ein:npcid	848,{
+	npctalk "We are expanding the city.";
+	end;
+}
+
+einbroch,286,139,7	script	Einbroch Guard#ein:npcid	848,{
+	npctalk "Let me work please.";
+	end;
+}
+
+//end guards
+einbroch,143,38,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,142,45,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,133,44,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,137,50,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,144,57,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,136,62,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,143,70,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,126,67,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,123,76,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,125,76,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,122,87,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,129,84,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,127,92,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,136,94,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,141,98,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,138,104,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,148,114,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,144,143,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,150,148,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,161,150,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,165,147,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,175,148,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,168,142,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,178,138,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,185,139,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,189,144,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,187,150,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,189,159,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,181,160,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,174,158,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,172,158,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,174,163,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,180,165,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,184,169,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,190,167,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,190,173,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,180,172,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,170,169,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,164,166,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,165,160,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,158,163,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,155,155,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,152,163,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,153,173,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,187,133,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,193,137,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,202,135,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,202,137,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,209,138,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,218,135,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,224,139,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,229,137,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,238,136,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,240,141,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,237,147,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,239,152,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,242,159,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,235,165,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,244,170,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,257,178,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,251,184,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,243,186,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,241,186,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,241,195,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,248,200,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,234,199,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,235,207,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,228,205,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,229,199,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,223,198,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,222,192,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,217,187,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,218,181,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,225,180,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,229,185,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,231,156,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,222,152,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,221,163,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,230,172,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,235,182,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,249,153,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,216,208,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,237,219,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,248,118,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,235,225,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,238,233,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,243,214,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,241,244,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,235,250,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,239,258,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,237,258,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,238,265,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,235,269,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,227,263,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,225,259,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,227,252,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,226,245,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,249,255,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,251,248,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,257,251,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,257,258,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,264,255,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,252,241,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,270,318,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,265,322,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,271,328,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,277,319,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,284,315,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,287,310,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,301,318,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,299,318,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,301,326,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,312,322,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,295,322,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,290,336,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,284,333,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,258,316,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,256,306,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,244,303,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,246,309,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,243,316,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,247,323,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,246,322,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,257,334,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,239,331,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,233,324,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,255,316,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,224,326,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,225,335,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,227,335,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,274,237,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,280,227,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,273,221,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,285,222,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,291,220,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,250,140,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,257,139,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,266,141,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,268,141,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,274,137,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,273,139,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,269,123,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,259,124,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,253,114,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,253,124,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,242,120,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,237,115,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,238,125,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,242,131,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,230,117,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,228,112,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,231,114,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,217,120,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,216,109,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,222,101,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,215,96,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,216,87,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,210,81,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,213,75,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,222,67,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,213,63,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,218,53,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,227,55,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,235,51,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,245,54,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,217,45,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,219,45,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,218,51,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,203,43,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,194,46,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,186,50,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,181,42,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,164,44,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,171,41,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,176,35,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,167,34,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,169,54,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,172,64,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,170,71,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,177,70,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,187,71,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,260,192,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,269,200,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,273,208,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,273,197,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,258,193,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,266,186,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,273,177,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,260,165,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,251,163,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,114,82,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,104,91,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,106,98,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,103,106,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,97,119,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,110,116,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,119,117,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,125,133,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,127,144,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,131,145,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,138,150,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,137,162,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,147,166,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,126,158,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,126,170,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,112,172,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,97,170,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,83,177,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,83,175,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,72,173,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,66,175,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,60,171,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,54,176,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,49,173,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,44,175,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,40,166,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,44,159,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,46,154,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,43,144,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,46,136,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,43,129,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,45,129,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,47,121,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,44,113,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,50,107,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,40,103,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,100,81,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,91,81,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,85,76,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,86,84,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,89,91,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,86,97,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,93,98,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,86,106,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,88,106,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,94,110,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,76,109,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,71,108,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,64,112,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,60,107,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,47,97,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,54,88,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,61,86,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,74,88,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,75,79,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,26,89,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,24,94,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,29,98,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,31,98,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,35,95,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,44,91,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,21,106,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,24,116,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,22,127,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,33,155,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,26,155,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,31,160,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,26,165,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,30,176,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,75,114,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,80,112,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,114,128,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,117,135,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,114,143,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,117,150,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,107,124,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,101,163,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,116,164,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,83,163,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,63,165,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,70,151,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,82,150,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,95,152,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,103,140,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,63,181,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,68,190,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,70,190,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,77,195,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,79,189,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,86,194,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,76,203,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,124,178,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,126,187,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,125,200,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,127,207,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,115,205,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,116,193,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,107,199,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,96,201,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,99,210,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,93,206,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,96,190,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,96,187,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,102,189,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,216,251,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,214,257,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,207,255,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,206,250,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,213,238,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,200,254,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,194,250,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,187,252,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,180,254,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,173,260,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,174,246,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,167,248,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,161,252,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,164,241,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,172,236,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,168,231,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,180,230,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,188,234,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,186,234,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,150,253,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,150,245,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,140,245,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,133,249,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,129,243,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,124,249,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,120,241,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,154,234,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,125,220,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,130,262,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,112,241,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,106,239,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,98,246,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,102,236,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,103,224,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,186,237,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,90,228,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,133,320,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,127,316,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,142,316,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,142,308,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,140,296,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,144,288,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,143,279,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,145,272,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,151,282,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,158,280,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,165,284,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,171,281,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,171,279,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,175,271,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,173,289,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,175,299,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,173,307,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,175,307,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,172,318,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,157,323,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,151,313,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,156,310,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,164,309,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,167,302,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,160,301,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,152,303,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,147,308,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,148,299,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,151,292,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,157,295,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,166,296,3	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,158,291,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,155,283,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,160,273,0	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,156,265,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,64,198,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,59,193,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,56,198,7	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,50,202,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,50,194,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,55,188,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,52,188,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,47,191,1	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,45,197,4	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,41,203,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,40,189,2	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,34,212,5	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbroch,30,215,6	script	Einbroch Villager#ein:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
