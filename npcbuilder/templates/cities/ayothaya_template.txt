@@ -1,0 +1,624 @@
+ayothaya,148,71,5	script	Ayothaya Guard#ayo:npcid	825,{
+	npctalk "Welcome to Ayothaya.";
+	end;
+}
+
+ayothaya,274,180,2	script	Ayothaya Guard#ayo:npcid	825,{
+	npctalk "Welcome to Ayothaya.";
+	end;
+}
+
+ayothaya,274,172,2	script	Ayothaya Guard#ayo:npcid	825,{
+	npctalk "Welcome to Ayothaya.";
+	end;
+}
+
+ayothaya,157,74,0	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,154,81,6	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,156,94,0	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,156,97,4	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,161,91,3	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,144,93,1	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,137,84,7	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,143,79,4	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,142,70,6	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,137,99,2	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,123,105,5	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,112,104,1	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,95,106,6	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,97,106,2	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,90,98,4	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,83,94,1	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,67,91,3	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,67,103,7	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,63,116,6	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,65,116,2	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,54,125,4	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,60,146,5	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,69,149,1	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,93,114,7	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,84,134,3	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,84,158,6	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,76,168,4	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,105,143,6	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,107,143,2	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,122,145,5	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,134,143,3	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,147,107,6	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,149,107,2	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,145,114,7	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,156,108,4	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,150,118,0	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,147,128,5	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,150,133,0	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,114,150,1	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,113,163,3	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,116,180,7	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,119,192,6	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,121,192,2	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,119,206,5	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,118,234,6	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,124,238,3	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,138,145,5	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,146,236,4	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,148,236,4	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,150,253,1	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,145,267,4	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,155,272,2	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,160,270,7	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,170,275,4	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,166,261,5	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,180,263,6	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,182,263,2	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,194,259,1	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,203,265,5	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,210,271,4	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,211,257,3	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,205,251,0	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,210,235,4	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,210,233,0	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,205,233,5	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,208,213,7	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,205,200,6	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,208,193,1	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,215,187,5	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,217,185,1	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,215,176,6	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,219,171,3	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,218,160,0	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,207,166,2	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,192,164,0	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,196,173,7	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,202,187,2	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,186,168,3	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,187,154,0	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,188,140,5	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,217,133,3	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,211,127,6	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,204,130,3	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,205,118,6	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,207,118,2	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,208,107,5	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,221,104,3	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,225,102,3	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,245,96,2	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,255,98,6	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,230,92,4	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,233,85,0	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,197,104,3	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,186,100,5	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,182,91,4	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,184,82,0	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,177,72,6	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,179,72,2	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,194,128,3	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,182,126,5	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,173,133,0	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,175,146,7	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,182,150,2	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,166,141,1	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,160,147,3	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,158,158,5	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,175,164,7	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,168,169,2	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,160,166,1	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,151,173,6	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,153,173,2	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,141,168,5	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,140,160,4	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,140,158,0	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,143,152,7	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,156,138,1	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,230,175,6	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,237,177,2	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,246,178,6	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,248,178,2	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,257,172,7	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ayothaya,264,178,3	script	Ayothaya Villager#ayo:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
