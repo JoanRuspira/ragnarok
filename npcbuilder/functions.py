@@ -52,9 +52,9 @@ def buildCity(city):
 	fin = open("./templates/cities/" + city + "_template.txt", "rt")
 	fout = open("./" + city + "_tmp.txt", "wt")
 
-	#citySprites = getCityNPCS(city)
+	citySprites = getCityNPCS(city)
 	for line in fin:
-		fout.write(line.replace('spriteid', str(random.choice(allsprites))))
+		fout.write(line.replace('spriteid', str(random.choice(citySprites))))
 	fout.close()
 	fin.close()
 
@@ -74,7 +74,9 @@ def build(inputParameter):
 
     cities = [inputParameter]
     if inputParameter == 'all':
-        cities = ["umbala_natives", "umbala", "comodo", "morroc", "payon", "archer_village", "alberta", "ayothaya", "izlude", "geffen", "aldebaran", "hugel", "einbroch", "einbech", "lighthalzen", "lighthalzen_slums"]
+        cities = ["umbala_natives", "umbala", "comodo", "morroc", "payon", "archer_village",
+         "alberta", "ayothaya", "izlude", "geffen", "aldebaran", "hugel", "einbroch", "einbech", 
+         "lighthalzen", "lighthalzen_slums"]
         # louyang, amatsu, prontera, yuno, rachel, sanctuary, dicastes, veins, niff
     
     for city in cities:
