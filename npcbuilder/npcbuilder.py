@@ -36,18 +36,18 @@ else:
 
 
 
-# fin = open("../npc/joan/payon.txt", "rt")
+# fin = open("../npc/joan/archer_village.txt", "rt")
 # replacement = ""
 
 # for line in fin:
 
-# 	if "#" in line and "Payon Guard" not in line and "Palace Guard" not in line: 
+# 	if "#" in line and "Archer Village Guard" not in line and "Palace Guard" not in line: 
 # 		fromindex = line.find("#")
 # 		toindex = line.find(",{")
-# 		line = line[:fromindex] + "izl::npcid	spriteid," + line[toindex + 1:]
+# 		line = line[:fromindex] + "#arch::npcid	spriteid," + line[toindex + 1:]
 # 	if line != '':
 # 		if "npctalk" in line: 
-# 			if "Welcome to Payon" in line:
+# 			if "Welcome to the Archer Village" in line:
 # 				replacement = replacement + 'npctalk "Welcome to Payon";\n'
 # 			else:
 # 				replacement = replacement + 'npctalk "npcdialog";\n'

@@ -8,18 +8,42 @@ def getCommonSprites():
 
 def getCityNPCS(city):
     match city:
-        case "izlude" | "payon" | "alberta" | "aldebaran":
-            return getCommonSprites() + izlude
-        case "geffen":
-            return getCommonSprites() + geffen
-        case "morroc":
-            return getCommonSprites() + morroc
+        case "umbala":
+            return generic + umbala
+        case "umbala_natives":
+            return generic + umbala_natives
+        case "amatsu" | "louyang":
+            return generic + amatsu
         case "comodo":
-            return getCommonSprites() + comodo
+            return generic + comodo
+        case "morroc" | "veins":
+            return generic + morroc
+        case "alberta":
+            return generic + alberta
+        case "ayothaya":
+            return generic + ayothaya
+        case "payon" | "archer_village":
+            return generic + payon
+        case "izlude" | "prontera":
+            return generic + prontera
+        case "geffen" | "yuno":
+            return generic + geffen
+        case "aldebaran":
+            return generic + aldebaran
         case "hugel":
-            return getCommonSprites() + hugel
+            return generic + hugel
+        case "einbech":
+            return generic + einbech
+        case "einbroch":
+            return generic + einbroch
+        case "lighthalzen":
+            return generic + lighthalzen
+        case "dicastes":
+            return generic + dicastes
+        case "rachel":
+            return generic + morroc + rachel
         case _:
-            return allsprites
+            return generic
 
 
 def buildCity(city):
@@ -50,7 +74,8 @@ def build(inputParameter):
 
     cities = [inputParameter]
     if inputParameter == 'all':
-        cities = ["umbala", "comodo", "morroc", "payon", "alberta", "izlude", "geffen", "aldebaran", "hugel", "einbroch", "einbech"]
+        cities = ["umbala_natives", "umbala", "comodo", "morroc", "payon", "archer_village", "alberta", "ayothaya", "izlude", "geffen", "aldebaran", "hugel", "einbroch", "einbech", "lighthalzen", "lighthalzen_slums"]
+        # louyang, amatsu, prontera, yuno, rachel, sanctuary, dicastes, veins, niff
     
     for city in cities:
         buildCity(city)
