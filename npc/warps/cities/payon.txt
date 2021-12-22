@@ -31,6 +31,7 @@ pay_arche,81,18,0	warp	payonwarp008	5,2,payon,228,326
 
 // -- Inn --
 payon,223,117,0	warp	payonwarp009	2,2,payon_in01,175,11
+payon_in01,72,10,0	warp	payonwarp999	2,2,payon,220,117
 
 // -- Sort of Mill --
 payon,140,85,0	warp	payonwarp017	2,2,payon_in01,14,51
@@ -46,9 +47,6 @@ payon_in01,23,129,0	warp	payonwarp025	2,2,payon,138,158
 payon,130,169,0	warp	payonwarp026	2,2,payon_in01,13,136
 payon_in01,13,139,0	warp	payonwarp027	2,2,payon,130,172
 
-// -- House --
-payon,151,127,0	warp	payonwarp028	2,2,payon_in01,56,53
-payon_in01,56,50,0	warp	payonwarp029	2,2,payon,151,124
 
 // -- Middle Castle --
 payon,155,248,0	warp	payonwarp030	4,1,payon_in03,98,117

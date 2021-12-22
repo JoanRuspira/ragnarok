@@ -667,3 +667,24 @@ izlude,187,161,6	script	Izlude Villager#izl::npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
+
+
+izlude_in,74,172,5	script	Swordman Guild Master#izl::npcid	119,{
+	npctalk "I will make you a swordsman";
+	end;
+}
+
+izlude_in,115,171,5	script	Izlude Villager#izl::npcid	1,{
+	npctalk "npcdialog";
+	end;
+}
+
+izlude_in,77,165,1	script	Izlude Villager#izl::npcid	418,{
+	npctalk "npcdialog";
+	end;
+}
+
+izlude_in,65,166,7	script	Izlude Villager#izl::npcid	688,{
+	npctalk "npcdialog";
+	end;
+}

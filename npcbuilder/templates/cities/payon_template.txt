@@ -1,431 +1,853 @@
 
-payon,168,67,4	script	Payon Guard#pay_arche::pay_npc1	708,{
+payon,168,67,4	script	Payon Guard#payn::pay_npc1	708,{
 	npctalk "Welcome to Payon";
 	end;
 }
 
 
-payon,168,64,2	script	Payon Guard#pay_arche::pay_npc2	708,{
+payon,168,64,2	script	Payon Guard#payn::pay_npc2	708,{
 	npctalk "Welcome to Payon";
 	end;
 }
 
-payon,152,98,6	script	Payon Villager#izl::npcid	spriteid,{  //m
+payon,152,98,6	script	Payon Villager#payn::npcid	spriteid,{  //m
 	npctalk "npcdialog";
 	end;
 }
 
-payon,156,101,3	script	Payon Villager#izl::npcid	spriteid,{  //f
+payon,156,101,3	script	Payon Villager#payn::npcid	spriteid,{  //f
 	npctalk "npcdialog";
 	end;
 }
 
-payon,163,100,2	script	Payon Villager#izl::npcid	spriteid,{ // m
+payon,163,100,2	script	Payon Villager#payn::npcid	spriteid,{ // m
 	npctalk "npcdialog";
 	end;
 }
 
-payon,152,89,5	script	Payon Villager#izl::npcid	spriteid,{ //m
+payon,152,89,5	script	Payon Villager#payn::npcid	spriteid,{ //m
 	npctalk "npcdialog";
 	end;
 }
 
-payon,164,87,6	script	Payon Villager#izl::npcid	spriteid,{ //m
+payon,164,87,6	script	Payon Villager#payn::npcid	spriteid,{ //m
 	npctalk "npcdialog";
 	end;
 }
 
-payon,175,111,3	script	Payon Villager#izl::npcid	spriteid,{ //m
+payon,175,111,3	script	Payon Villager#payn::npcid	spriteid,{ //m
 	npctalk "npcdialog";
 	end;
 }
 
-payon,178,111,3	script	Payon Villager#izl::npcid	spriteid,{ //f
+payon,178,111,3	script	Payon Villager#payn::npcid	spriteid,{ //f
 	npctalk "npcdialog";
 	end;
 }
 
-payon,174,96,3	script	Payon Villager#izl::npcid	spriteid,{ //f
+payon,174,96,3	script	Payon Villager#payn::npcid	spriteid,{ //f
 	npctalk "npcdialog";
 	end;
 }
 
-payon,161,126,6	script	Payon Villager#izl::npcid	spriteid,{ //m
+payon,161,126,6	script	Payon Villager#payn::npcid	spriteid,{ //m
 	npctalk "npcdialog";
 	end;
 }
 
-payon,172,120,1	script	Payon Villager#izl::npcid	spriteid,{ //f
+payon,172,120,1	script	Payon Villager#payn::npcid	spriteid,{ //f
 	npctalk "npcdialog";
 	end;
 }
 
-payon,173,176,4	script	Payon Villager#izl::npcid	spriteid,{ //f
+payon,173,176,4	script	Payon Villager#payn::npcid	spriteid,{ //f
 	npctalk "npcdialog";
 	end;
 }
 
-payon,176,176,4	script	Payon Villager#izl::npcid	spriteid,{ //f
+payon,176,176,4	script	Payon Villager#payn::npcid	spriteid,{ //f
 	npctalk "npcdialog";
 	end;
 }
 
-payon,170,178,4	script	Payon Villager#izl::npcid	spriteid,{ //m
+payon,170,178,4	script	Payon Villager#payn::npcid	spriteid,{ //m
 	npctalk "npcdialog";
 	end;
 }
 
-payon,173,168,0	script	Payon Villager#izl::npcid	spriteid,{ //m
+payon,173,168,0	script	Payon Villager#payn::npcid	spriteid,{ //m
 	npctalk "npcdialog";
 	end;
 }
 
-payon,176,165,0	script	Payon Villager#izl::npcid	spriteid,{ //m
+payon,176,165,0	script	Payon Villager#payn::npcid	spriteid,{ //m
 	npctalk "npcdialog";
 	end;
 }
 
-payon,170,169,7	script	Payon Villager#izl::npcid	spriteid,{ //m
+payon,170,169,7	script	Payon Villager#payn::npcid	spriteid,{ //m
 	npctalk "npcdialog";
 	end;
 }
 
-payon,159,160,2	script	Payon Villager#izl::npcid	spriteid,{ //f
+payon,159,160,2	script	Payon Villager#payn::npcid	spriteid,{ //f
 	npctalk "npcdialog";
 	end;
 }
 
-payon,166,155,7	script	Payon Villager#izl::npcid	spriteid,{ //f
+payon,166,155,7	script	Payon Villager#payn::npcid	spriteid,{ //f
 	npctalk "npcdialog";
 	end;
 }
 
-payon,149,215,6	script	Payon Villager#izl::npcid	spriteid,{ //m
+payon,149,215,6	script	Payon Villager#payn::npcid	spriteid,{ //m
 	npctalk "npcdialog";
 	end;
 }
 
-payon,160,221,0	script	Payon Villager#izl::npcid	spriteid,{ //m
+payon,160,221,0	script	Payon Villager#payn::npcid	spriteid,{ //m
 	npctalk "npcdialog";
 	end;
 }
 
-payon,158,220,0	script	Payon Villager#izl::npcid	spriteid,{ //m
+payon,158,220,0	script	Payon Villager#payn::npcid	spriteid,{ //m
 	npctalk "npcdialog";
 	end;
 }
 
-payon,152,209,4	script	Payon Villager#izl::npcid	spriteid,{ //m
+payon,152,209,4	script	Payon Villager#payn::npcid	spriteid,{ //m
 	npctalk "npcdialog";
 	end;
 }
 
-payon,145,232,4	script	Palace Guard#pay_arche::pay_npc25	780,{ 
+payon,145,232,4	script	Palace Guard#payn::pay_npc25	708,{ 
 	npctalk "Welcome to the Payon Palace.";
 	end;
 }
 
-payon,148,232,4	script	Palace Guard#pay_arche::pay_npc26	780,{ 
+payon,148,232,4	script	Palace Guard#payn::pay_npc26	708,{ 
 	npctalk "Welcome to the Payon Palace.";
 	end;
 }
 
-payon,164,232,4	script	Palace Guard#pay_arche::pay_npc27	780,{ 
+payon,164,232,4	script	Palace Guard#payn::pay_npc27	708,{ 
 	npctalk "Welcome to the Payon Palace.";
 	end;
 }
 
-payon,167,232,4	script	Palace Guard#pay_arche::pay_npc28	780,{ 
+payon,167,232,4	script	Palace Guard#payn::pay_npc28	708,{ 
 	npctalk "Welcome to the Payon Palace.";
 	end;
 }
 
-payon,140,196,2	script	Palace Guard#pay_arche::pay_npc29	634,{ 
+payon,140,196,2	script	Payon Villager#payn::pay_npc29	634,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,144,205,6	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,137,223,4	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,166,205,7	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,166,205,7	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,174,214,1	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,218,254,6	script	Palace Guard#payn::pay_npc34	708,{ 
 	npctalk "Welcome to the Payon Palace.";
 	end;
 }
 
-payon,144,205,6	script	Payon Villager#izl::npcid	spriteid,{ 
-	npctalk "npcdialog";
-	end;
-}
-
-payon,137,223,4	script	Payon Villager#izl::npcid	spriteid,{ 
-	npctalk "npcdialog";
-	end;
-}
-
-payon,166,205,7	script	Payon Villager#izl::npcid	spriteid,{ 
-	npctalk "npcdialog";
-	end;
-}
-
-payon,166,205,7	script	Payon Villager#izl::npcid	spriteid,{ 
-	npctalk "npcdialog";
-	end;
-}
-
-payon,174,214,1	script	Payon Villager#izl::npcid	spriteid,{ 
-	npctalk "npcdialog";
-	end;
-}
-
-payon,218,254,6	script	Palace Guard#pay_arche::pay_npc34	708,{ 
+payon,218,246,6	script	Palace Guard#payn::pay_npc35	708,{ 
 	npctalk "Welcome to the Payon Palace.";
 	end;
 }
 
-payon,218,246,6	script	Palace Guard#pay_arche::pay_npc35	708,{ 
-	npctalk "Welcome to the Payon Palace.";
-	end;
-}
-
-payon,192,255,3	script	Payon Villager#izl::npcid	spriteid,{ 
+payon,192,255,3	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,199,107,6	script	Payon Villager#izl::npcid	spriteid,{ 
+payon,199,107,6	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,206,110,2	script	Payon Villager#izl::npcid	spriteid,{ 
+payon,206,110,2	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,220,104,4	script	Payon Villager#izl::npcid	spriteid,{ 
+payon,220,104,4	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,202,125,4	script	Payon Villager#izl::npcid	spriteid,{ 
+payon,202,125,4	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,226,152,4	script	Payon Villager#izl::npcid	spriteid,{ 
+payon,226,152,4	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,212,163,0	script	Payon Villager#izl::npcid	spriteid,{ 
+payon,212,163,0	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,210,216,6	script	Payon Villager#izl::npcid	spriteid,{ 
+payon,210,216,6	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,226,225,3	script	Payon Villager#izl::npcid	spriteid,{ 
+payon,226,225,3	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,229,220,5	script	Payon Villager#izl::npcid	spriteid,{ 
+payon,229,220,5	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,236,285,0	script	Payon Villager#izl::npcid	spriteid,{ 
+payon,236,285,0	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,238,283,1	script	Payon Villager#izl::npcid	spriteid,{ 
+payon,238,283,1	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,84,178,4	script	Payon Guard#pay_arche::pay_npc48	708,{ 
+payon,84,178,4	script	Payon Guard#payn::pay_npc48	708,{ 
 	npctalk "Welcome to Payon";
 	end;
 }
 
-payon,92,178,4	script	Payon Guard#pay_arche::pay_npc49	708,{ 
+payon,92,178,4	script	Payon Guard#payn::pay_npc49	708,{ 
 	npctalk "Welcome to Payon";
 	end;
 }
 
-payon,95,223,5	script	Payon Villager#izl::npcid	spriteid,{ 
+payon,95,223,5	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,112,230,0	script	Payon Villager#izl::npcid	spriteid,{ 
+payon,112,230,0	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,109,324,4	script	Palace Guard#pay_arche::pay_npc52	708,{ 
+payon,109,324,4	script	Palace Guard#payn::pay_npc52	708,{ 
 	npctalk "Welcome to the Payon Palace.";
 	end;
 }
 
-payon,105,324,4	script	Palace Guard#pay_arche::pay_npc53	708,{ 
+payon,105,324,4	script	Palace Guard#payn::pay_npc53	708,{ 
 	npctalk "Welcome to the Payon Palace.";
 	end;
 }
 
-payon,104,313,6	script	Payon Villager#izl::npcid	spriteid,{ 
+payon,104,313,6	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,113,318,3	script	Payon Villager#izl::npcid	spriteid,{ 
+payon,113,318,3	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,81,318,0	script	Payon Villager#izl::npcid	spriteid,{ 
+payon,81,318,0	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,152,317,2	script	Payon Villager#izl::npcid	spriteid,{ 
+payon,152,317,2	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,190,301,5	script	Payon Villager#izl::npcid	spriteid,{ 
+payon,190,301,5	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,123,105,7	script	Payon Villager#izl::npcid	spriteid,{ 
+payon,123,105,7	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,100,150,4	script	Payon Villager#izl::npcid	spriteid,{ 
+payon,100,150,4	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,98,148,7	script	Payon Villager#izl::npcid	spriteid,{ 
+payon,98,148,7	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,109,116,3	script	Payon Villager#izl::npcid	spriteid,{ 
+payon,109,116,3	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,131,61,3	script	Payon Villager#izl::npcid	spriteid,{ 
+payon,131,61,3	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,128,60,3	script	Payon Villager#izl::npcid	spriteid,{ 
+payon,128,60,3	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,78,66,4	script	Payon Villager#izl::npcid	spriteid,{ 
+payon,78,66,4	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,73,106,0	script	Payon Villager#izl::npcid	spriteid,{ 
+payon,73,106,0	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,19,147,6	script	Payon Villager#izl::npcid	spriteid,{ 
+payon,19,147,6	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,239,59,4	script	Payon Villager#izl::npcid	spriteid,{ 
+payon,239,59,4	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,235,56,6	script	Payon Villager#izl::npcid	spriteid,{ 
+payon,235,56,6	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,238,91,2	script	Payon Villager#izl::npcid	spriteid,{ 
+payon,238,91,2	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in03,87,179,6	script	Payon Villager#izl::npcid	spriteid,{ 
+payon_in03,87,179,6	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in03,94,168,7	script	Payon Villager#izl::npcid	spriteid,{ 
+payon_in03,94,168,7	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in03,108,172,7	script	Payon Villager#izl::npcid	spriteid,{ 
+payon_in03,108,172,7	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in03,79,169,0	script	Payon Villager#izl::npcid	spriteid,{ 
+payon_in03,79,169,0	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in03,117,177,3	script	Payon Villager#izl::npcid	spriteid,{ 
+payon_in03,117,177,3	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in03,96,180,5	script	Palace Guard#pay_arche::pay_npc74	708,{ 
+payon_in03,96,180,5	script	Palace Guard#payn::pay_npc74	708,{ 
 	npctalk "Welcome to the Payon Palace.";
 	end;
 }
 
-payon_in03,103,180,5	script	Palace Guard#pay_arche::pay_npc75	708,{ 
+payon_in03,103,180,5	script	Palace Guard#payn::pay_npc75	708,{ 
 	npctalk "Welcome to the Payon Palace.";
 	end;
 }
 
-payon_in03,104,159,5	script	Payon Villager#izl::npcid	spriteid,{ 
+payon_in03,104,159,5	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in01,13,127,7	script	Payon Villager#izl::npcid	spriteid,{ 
+payon_in01,13,127,7	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in01,8,125,1	script	Payon Villager#izl::npcid	spriteid,{ 
+payon_in01,8,125,1	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in01,192,36,1	script	Payon Villager#izl::npcid	spriteid,{ 
+payon_in01,192,36,1	script	Chef#payn::npcid	886,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in01,188,37,5	script	Payon Villager#izl::npcid	spriteid,{ 
+payon_in01,188,37,5	script	Chef#payn::npcid	820,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in01,193,30,7	script	Payon Villager#izl::npcid	spriteid,{ 
+payon_in01,193,30,7	script	Chef#payn::npcid	820,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in01,179,30,5	script	Payon Villager#izl::npcid	spriteid,{ 
+payon_in01,179,30,5	script	Waitress#payn::npcid	80,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,155,324,4	script	Palace Guard#pay_arche::pay_npc53f2	708,{ 
+payon,155,324,4	script	Palace Guard#payn::pay_npc53f2	708,{ 
 	npctalk "Welcome to the Payon Palace.";
+	end;
+}
+
+
+
+payon,155,192,4	script	Payon Village#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+
+payon,173,194,1	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+
+payon,156,172,6	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,158,172,2	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,144,155,0	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,162,142,5	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,172,139,2	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,154,119,4	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,165,114,3	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,189,125,5	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,193,131,1	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,192,110,2	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,190,93,1	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,157,179,7	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon_in01,11,45,2	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+
+payon_in01,6,13,7	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+
+payon,212,94,3	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+
+payon,188,222,1	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,183,239,4	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,202,250,6	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,224,252,6	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,226,252,2	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,232,268,0	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,247,292,1	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,250,280,4	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,226,319,5	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,223,200,1	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,133,195,3	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,222,186,6	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,224,186,2	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,221,168,4	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,194,155,7	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,181,153,6	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,189,174,3	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,220,145,1	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,212,65,7	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,239,68,1	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,221,60,3	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,203,55,7	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,179,63,6	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,181,63,2	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,164,54,0	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,119,76,0	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,110,98,6	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,112,98,2	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,89,167,0	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,87,201,7	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,88,223,6	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,90,223,2	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,80,243,0	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,82,269,4	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,82,298,5	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,87,328,5	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,111,289,4	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,118,281,6	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,120,281,2	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,102,285,0	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,106,293,3	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,111,304,7	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,106,271,4	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,108,253,6	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,156,235,0	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,147,243,2	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,145,243,6	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,166,245,4	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,159,197,2	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,256,138,1	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,262,149,2	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,248,144,5	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,233,195,2	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon_in03,130,129,2	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon_in03,122,126,4	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon_in03,129,118,1	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon_in03,135,120,1	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon_in03,72,119,1	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon_in03,62,129,4	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon_in03,61,122,7	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon_in03,70,130,4	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon_in03,94,128,5	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon_in03,104,120,1	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon_in03,81,175,1	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon_in03,91,172,6	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon_in03,101,169,5	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
 	end;
 }

@@ -20,9 +20,9 @@
 -	script	::Sea_Captain_amatsu	-1,{
 	mes "[Walter Moers]";
 	mes "Hey, there.";
-	mes "Have you ever heard that there";
-	mes "are totally different countries";
-	mes "than the Rune-Midgarts Kingdom?";
+	mes "Have you ever heard about";
+	mes "the independant islands outside";
+	mes "of the Rune-Midgarts Kingdom?";
 	mes "Have you heard about Amatsu?";
 	next;
 	switch(select("About Amatsu...:Go to Amatsu:Cancel")) {

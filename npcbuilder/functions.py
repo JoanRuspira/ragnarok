@@ -38,6 +38,8 @@ def getCityNPCS(city):
             return generic + einbroch
         case "lighthalzen":
             return generic + lighthalzen
+        case "lighthalzen_slums":
+            return lighthalzen_slums
         case "dicastes":
             return generic + dicastes
         case "rachel":

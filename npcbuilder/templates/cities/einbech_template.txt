@@ -365,7 +365,7 @@ einbech,179,213,3	script	Einbech Villager#einb:npcid	spriteid,{
 	end;
 }
 
-einbech,103,201,6	script	Einbech Villager#einb:npcid	spriteid,{
+einbech,106,208,6	script	Einbech Villager#einb:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }

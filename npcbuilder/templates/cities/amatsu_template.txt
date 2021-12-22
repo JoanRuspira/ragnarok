@@ -1,0 +1,1021 @@
+
+amatsu,244,283,5	script	Amatsu Guard#amat::npcid	767,{
+	npctalk "Welcome to Amatsu.";
+	end;
+}
+
+amatsu,251,283,3	script	Amatsu Guard#amat::npcid	767,{
+	npctalk "Welcome to Amatsu.";
+	end;
+}
+
+amatsu,193,93,5	script	Amatsu Guard#amat::npcid	767,{
+	npctalk "Welcome to Amatsu.";
+	end;
+}
+
+amatsu,202,93,3	script	Amatsu Guard#amat::npcid	767,{
+	npctalk "Welcome to Amatsu.";
+	end;
+}
+
+amatsu,195,253,6	script	Amatsu Guard#amat::npcid	767,{
+	npctalk "Welcome to the Amatsu Palace grounds.";
+	end;
+}
+
+amatsu,195,246,6	script	Amatsu Guard#amat::npcid	767,{
+	npctalk "Welcome to the Amatsu Palace grounds.";
+	end;
+}
+
+amatsu,112,165,4	script	Amatsu Guard#amat::npcid	767,{
+	npctalk "Welcome to the Amatsu Palace grounds.";
+	end;
+}
+
+amatsu,119,165,4	script	Amatsu Guard#amat::npcid	767,{
+	npctalk "Welcome to the Amatsu Palace grounds.";
+	end;
+}
+
+amatsu,197,104,1	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,205,111,6	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,207,111,2	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,220,103,5	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,228,97,4	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,231,87,2	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,235,82,0	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,241,86,7	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,245,99,2	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,251,116,5	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,267,114,1	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,270,126,0	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,275,117,3	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,271,141,2	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,263,142,3	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,247,142,5	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,236,128,4	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,252,125,0	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,244,157,3	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,237,166,0	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,228,165,5	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,223,152,6	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,225,152,2	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,226,130,0	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,217,169,7	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,226,176,4	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,247,173,5	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+amatsu,215,190,1	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,192,188,5	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,198,177,2	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,196,177,6	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,191,165,7	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,198,163,4	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,192,153,7	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,199,146,3	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,205,137,1	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,193,138,6	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,196,130,5	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,200,125,0	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,206,120,1	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,194,117,3	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,205,102,3	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,186,108,4	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,189,104,2	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,181,113,7	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,176,118,3	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,173,108,4	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,172,105,7	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,174,97,5	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,185,91,4	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,209,83,6	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,186,134,2	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,225,208,6	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,227,208,2	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,234,200,0	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,253,201,6	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,261,192,0	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,268,199,3	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,231,210,2	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,215,224,4	script	Amatsu Villager#amat::npcid	840,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,216,233,6	script	Amatsu Villager#amat::npcid	693,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,219,230,2	script	Amatsu Villager#amat::npcid	695,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,229,232,6	script	Amatsu Villager#amat::npcid	882,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,221,260,6	script	Amatsu Villager#amat::npcid	840,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,223,262,2	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,232,260,7	script	Amatsu Villager#amat::npcid	688,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,202,213,0	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,205,231,3	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,201,242,6	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,203,242,2	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,216,252,6	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,229,249,1	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,241,252,7	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,252,247,3	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,244,238,0	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,238,225,3	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,266,232,6	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,276,238,6	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,279,262,2	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,294,123,2	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,280,154,1	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,278,166,7	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,261,170,2	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,276,170,4	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,287,196,0	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,280,224,3	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,281,284,5	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,264,281,3	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,246,276,4	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,250,265,3	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,201,283,4	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,199,266,5	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,204,255,2	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,224,222,2	script	Amatsu Villager#amat::npcid	688,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,178,160,2	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,165,173,4	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,173,177,5	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,176,198,5	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,165,154,0	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,163,133,3	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,155,128,6	script	Amatsu Villager#amat::npcid	690,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,151,132,1	script	Amatsu Villager#amat::npcid	693,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,159,132,6	script	Amatsu Villager#amat::npcid	698,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,161,130,4	script	Amatsu Villager#amat::npcid	882,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,145,137,2	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,161,119,0	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,162,106,3	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,150,101,6	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,152,101,2	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,146,114,0	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,136,97,3	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,131,86,6	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,115,98,1	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,101,91,3	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,99,106,0	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,111,104,7	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,119,114,5	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,104,126,6	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,106,126,2	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,109,135,4	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,119,144,7	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,125,151,2	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,130,163,6	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,143,166,3	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,132,134,1	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,121,92,5	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,127,121,1	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,120,133,7	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,116,158,3	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,105,103,5	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,107,154,4	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,104,143,7	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,110,120,7	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,79,101,4	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,46,111,6	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,49,102,1	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,56,109,7	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,53,118,4	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,63,116,2	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,65,106,3	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,33,96,6	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,20,100,7	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,25,109,4	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,27,125,0	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,27,142,7	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,25,160,6	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,29,168,3	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,43,121,5	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,47,134,6	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,57,140,3	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,51,141,4	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,56,127,3	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,43,155,0	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,89,165,2	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,85,155,0	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,86,142,3	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,75,138,6	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,77,138,2	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,72,152,4	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,77,126,0	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,88,250,6	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,94,233,0	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,87,228,4	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,96,250,1	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,84,258,3	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,66,253,7	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,76,262,2	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,61,264,6	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,82,268,5	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,96,257,5	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,112,153,2	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,121,255,0	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,134,258,7	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,141,260,3	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,147,253,0	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,154,247,6	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,156,247,2	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,161,238,0	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,159,230,3	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,169,233,7	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,173,247,3	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,171,263,5	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,185,251,6	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,149,232,2	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,134,229,6	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,116,222,4	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,124,212,1	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,126,201,3	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,117,200,1	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,105,199,6	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,92,201,5	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,83,196,1	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,71,200,5	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,116,187,4	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,113,117,7	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,118,172,6	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
