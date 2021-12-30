@@ -44,6 +44,8 @@ def getCityNPCS(city):
             return generic + dicastes
         case "rachel":
             return generic + morroc + rachel
+        case "nifflheim":
+            return generic + nifflheim
         case _:
             return generic
 
@@ -78,7 +80,7 @@ def build(inputParameter):
     if inputParameter == 'all':
         cities = ["umbala_natives", "umbala", "comodo", "morroc", "payon", "archer_village",
          "alberta", "ayothaya", "izlude", "geffen", "aldebaran", "hugel", "einbroch", "einbech", 
-         "lighthalzen", "lighthalzen_slums"]
+         "lighthalzen", "lighthalzen_slums", "amatsu", "louyang", "veins", "nifflheim"]
         # louyang, amatsu, prontera, yuno, rachel, sanctuary, dicastes, veins, niff
     
     for city in cities:

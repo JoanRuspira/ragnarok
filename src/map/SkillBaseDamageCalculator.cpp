@@ -75,15 +75,16 @@ void SkillBaseDamageCalculator::battle_calc_skill_base_damage(Damage * wd, block
 			wd->damage = ((TBL_HOM*)src)->homunculus.intimacy;
 	}
 
-	if (sd)
+	if (sd) {
 		battle_calc_damage_parts(wd, src, target, skill_id, skill_lv);
-	else {
+	} else {
 		i = (CriticalHitCalculator::is_attack_critical(wd, src, target, skill_id, skill_lv, false) ? 1 : 0) |
 			(!skill_id && sc && sc->data[SC_CHANGE] ? 4 : 0);
 
 		wd->damage = battle_calc_base_damage(src, sstatus, &sstatus->rhw, sc, tstatus->size, i);
-		if (EquipmentAttackCalculator::is_attack_left_handed(src, skill_id))
+		if (EquipmentAttackCalculator::is_attack_left_handed(src, skill_id)) {
 			wd->damage2 = battle_calc_base_damage(src, sstatus, &sstatus->lhw, sc, tstatus->size, i);
+		}
 	}
 
 	if (nk[NK_SPLASHSPLIT]) { // Divide ATK among targets
@@ -136,8 +137,7 @@ int64 SkillBaseDamageCalculator::battle_calc_base_damage(block_list * src, statu
 	short type = 0;
 	int64 damage = 0;
 	struct map_session_data *sd = NULL;
-
-	nullpo_ret(damage, src);
+	// nullpo_ret(damage, src);
 
 	sd = BL_CAST(BL_PC, src);
 

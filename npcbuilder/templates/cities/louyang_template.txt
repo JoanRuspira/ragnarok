@@ -1,3 +1,160 @@
+// muralla
+louyang,260,320,0	script	Louyang Guard#lou::npcid	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+
+louyang,222,320,0	script	Louyang Guard#lou::npcid	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+
+louyang,181,318,1	script	Louyang Guard#lou::npcid	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+
+louyang,138,298,1	script	Louyang Guard#lou::npcid	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+
+louyang,92,291,7	script	Louyang Guard#lou::npcid	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,45,308,1	script	Louyang Guard#lou::npcid	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,229,26,4	script	Louyang Guard#lou::npcid	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,288,26,4	script	Louyang Guard#lou::npcid	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,336,34,6	script	Louyang Guard#lou::npcid	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,336,88,6	script	Louyang Guard#lou::npcid	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,336,144,6	script	Louyang Guard#lou::npcid	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,336,188,6	script	Louyang Guard#lou::npcid	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,336,238,7	script	Louyang Guard#lou::npcid	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+
+louyang,324,276,0	script	Louyang Guard#lou::npcid	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,287,286,0	script	Louyang Guard#lou::npcid	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,205,26,4	script	Louyang Guard#lou::npcid	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,268,26,4	script	Louyang Guard#lou::npcid	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,123,26,4	script	Louyang Guard#lou::npcid	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,85,37,3	script	Louyang Guard#lou::npcid	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,66,69,2	script	Louyang Guard#lou::npcid	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,50,103,2	script	Louyang Guard#lou::npcid	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,48,150,2	script	Louyang Guard#lou::npcid	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,45,201,2	script	Louyang Guard#lou::npcid	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,35,257,1	script	Louyang Guard#lou::npcid	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+// end muralla
+
+louyang,42,268,6	script	Louyang Guard#lou::npcid	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,37,277,6	script	Louyang Guard#lou::npcid	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,215,20,4	script	Louyang Guard#lou::npcid	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,220,20,4	script	Louyang Guard#lou::npcid	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,213,214,4	script	Palace Guard#lou::npcid	780,{
+	npctalk "Welcome to the Louyang Palace.";
+	end;
+}
+
+louyang,222,214,4	script	Palace Guard#lou::npcid	780,{
+	npctalk "Welcome to the Louyang Palace.";
+	end;
+}
 
 louyang,216,30,7	script	Louyang Villager#lou::npcid	spriteid,{
 	npctalk "npcdialog";
@@ -414,7 +571,7 @@ louyang,183,65,6	script	Louyang Villager#lou::npcid	spriteid,{
 	end;
 }
 
-louyang,185,65,7	script	Louyang Villager#lou::npcid	spriteid,{
+louyang,185,65,2	script	Louyang Villager#lou::npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
@@ -1180,6 +1337,116 @@ louyang,261,242,4	script	Louyang Villager#lou::npcid	spriteid,{
 }
 
 louyang,247,241,5	script	Louyang Villager#lou::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,102,60,1	script	Louyang Villager#lou::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,87,75,5	script	Louyang Villager#lou::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,78,89,0	script	Louyang Villager#lou::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,72,104,4	script	Louyang Villager#lou::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,62,70,5	script	Louyang Villager#lou::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,62,136,4	script	Louyang Villager#lou::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,54,159,7	script	Louyang Villager#lou::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,59,183,4	script	Louyang Villager#lou::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,66,205,1	script	Louyang Villager#lou::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,53,228,6	script	Louyang Villager#lou::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,55,228,2	script	Louyang Villager#lou::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,55,249,1	script	Louyang Villager#lou::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,49,271,5	script	Louyang Villager#lou::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,43,278,2	script	Louyang Villager#lou::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,74,207,6	script	Louyang Villager#lou::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,69,214,4	script	Louyang Villager#lou::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,88,207,6	script	Louyang Villager#lou::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,90,206,2	script	Louyang Villager#lou::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,89,209,4	script	Louyang Villager#lou::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,98,213,5	script	Louyang Villager#lou::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,108,206,6	script	Louyang Villager#lou::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,102,219,7	script	Louyang Villager#lou::npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }

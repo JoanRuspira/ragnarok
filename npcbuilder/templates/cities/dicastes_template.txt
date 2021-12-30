@@ -48,12 +48,12 @@ dicastes01,197,140,7	script	Dicastes Villager#dic:npcid	spriteid,{
 	end;
 }
 
-dicastes01,200,156,6	script	Dicastes Villager#dic:npcid	spriteid,{
+dicastes01,200,156,2	script	Dicastes Villager#dic:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
 
-dicastes01,198,156,2	script	Dicastes Villager#dic:npcid	spriteid,{
+dicastes01,198,156,6	script	Dicastes Villager#dic:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
@@ -679,16 +679,6 @@ dicastes01,255,188,7	script	Dicastes Villager#dic:npcid	spriteid,{
 	end;
 }
 
-
-
-
-
-
-
-
-
-
-
 dicastes01,252,141,6	script	Dicastes Villager#dic:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
@@ -821,29 +811,4 @@ dicastes01,219,225,6	script	Dicastes Villager#dic:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
-
-dicastes01,196,353,7	script	Dicastes Miner#dic:npcid	848,{
-	npctalk "We are building a road to the north sea.";
-	end;
-}
-
-dicastes01,199,353,1	script	Dicastes Miner#dic:npcid	848,{
-	npctalk "We are building a road to the north sea.";
-	end;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
