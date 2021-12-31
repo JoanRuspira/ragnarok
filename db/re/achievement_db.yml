@@ -1508,7 +1508,7 @@ Body:
       120009: true
       120010: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
     Score: 20
   - Id: 129002
     Group: Adventure
@@ -1522,7 +1522,7 @@ Body:
       120016: true
       120017: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
     Score: 20
   - Id: 129003
     Group: Adventure
@@ -1535,7 +1535,7 @@ Body:
       120022: true
       120023: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
     Score: 20
   - Id: 129004
     Group: Adventure
@@ -1550,7 +1550,7 @@ Body:
       120030: true
       120031: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
     Score: 20
   - Id: 129005
     Group: Adventure
@@ -1562,7 +1562,7 @@ Body:
       120035: true
       120036: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
     Score: 20
   - Id: 129006
     Group: Adventure
@@ -1576,7 +1576,7 @@ Body:
       120042: true
       120043: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
     Score: 20
   - Id: 129007
     Group: Adventure
@@ -1591,7 +1591,7 @@ Body:
       120050: true
       120051: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
     Score: 20
   - Id: 129008
     Group: Adventure
@@ -1605,7 +1605,7 @@ Body:
       129006: true
       129007: true
     Rewards:
-      Item: Old_Violet_Box
+      Item: Magic_Card_Album
     Score: 50
   - Id: 129009
     Group: Adventure
@@ -1622,7 +1622,7 @@ Body:
       120060: true
       120061: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
     Score: 20
   - Id: 129010
     Group: Adventure
@@ -1634,7 +1634,7 @@ Body:
       120065: true
       120066: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
     Score: 20
   - Id: 129011
     Group: Adventure
@@ -1649,7 +1649,7 @@ Body:
       120073: true
       120074: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
     Score: 20
   - Id: 129012
     Group: Adventure
@@ -1659,7 +1659,7 @@ Body:
       120076: true
       120077: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
     Score: 20
   - Id: 129013
     Group: Adventure
@@ -1670,7 +1670,7 @@ Body:
       129011: true
       129012: true
     Rewards:
-      Item: Old_Violet_Box
+      Item: Magic_Card_Album
     Score: 50
   - Id: 129014
     Group: Adventure
@@ -1684,7 +1684,7 @@ Body:
       120083: true
       120084: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
     Score: 20
   - Id: 129015
     Group: Adventure
@@ -1696,7 +1696,7 @@ Body:
       120088: true
       120089: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
     Score: 20
   - Id: 129016
     Group: Adventure
@@ -1705,7 +1705,7 @@ Body:
       129014: true
       129015: true
     Rewards:
-      Item: Old_Violet_Box
+      Item: Magic_Card_Album
     Score: 50
   - Id: 129017
     Group: Adventure
@@ -1718,7 +1718,7 @@ Body:
       120094: true
       120095: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
     Score: 20
   - Id: 129018
     Group: Adventure
@@ -1730,7 +1730,7 @@ Body:
       120099: true
       120100: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
     Score: 20
   - Id: 129019
     Group: Adventure
@@ -1739,7 +1739,7 @@ Body:
       129017: true
       129018: true
     Rewards:
-      Item: Old_Violet_Box
+      Item: Magic_Card_Album
     Score: 50
   - Id: 129020
     Group: Adventure
@@ -1755,7 +1755,7 @@ Body:
       120108: true
       120109: true
     Rewards:
-      Item: Old_Violet_Box
+      Item: Magic_Card_Album
     Score: 50
   - Id: 129021
     Group: Battle
@@ -1840,7 +1840,7 @@ Body:
     Name: Master Job level!
     Condition: " JobLevel >= 50 "
     Rewards:
-      Item: Old_Violet_Box
+      Item: Magic_Card_Album
       Script: " specialeffect2 EF_BLESSING; sc_start SC_BLESSING,30000,10; "
       TitleId: 1003
     Score: 30
@@ -2560,7 +2560,7 @@ Body:
     Name: Reaching Level 1
     Condition: " AchievementLevel >= 1 "
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
       Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
     Score: 10
   - Id: 240002
@@ -2570,7 +2570,7 @@ Body:
     Dependents:
       240001: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
       Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
     Score: 10
   - Id: 240003
@@ -2580,7 +2580,7 @@ Body:
     Dependents:
       240002: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
       Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
     Score: 10
   - Id: 240004
@@ -2590,7 +2590,7 @@ Body:
     Dependents:
       240003: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
       Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
     Score: 10
   - Id: 240005
@@ -2600,7 +2600,7 @@ Body:
     Dependents:
       240004: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
       Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
     Score: 10
   - Id: 240006
@@ -2610,7 +2610,7 @@ Body:
     Dependents:
       240005: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
       Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
     Score: 10
   - Id: 240007
@@ -2620,7 +2620,7 @@ Body:
     Dependents:
       240006: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
       Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
     Score: 10
   - Id: 240008
@@ -2630,7 +2630,7 @@ Body:
     Dependents:
       240007: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
       Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
     Score: 10
   - Id: 240009
@@ -2640,7 +2640,7 @@ Body:
     Dependents:
       240008: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
       Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
     Score: 10
   - Id: 240010
@@ -2650,7 +2650,7 @@ Body:
     Dependents:
       240009: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
       Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
       TitleId: 1023
     Score: 10
@@ -2661,7 +2661,7 @@ Body:
     Dependents:
       240010: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
       Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
     Score: 10
   - Id: 240012
@@ -2671,7 +2671,7 @@ Body:
     Dependents:
       240011: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
       Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
     Score: 10
   - Id: 240013
@@ -2681,7 +2681,7 @@ Body:
     Dependents:
       240012: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
       Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
     Score: 10
   - Id: 240014
@@ -2691,7 +2691,7 @@ Body:
     Dependents:
       240013: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
       Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
     Score: 10
   - Id: 240015
@@ -2701,7 +2701,7 @@ Body:
     Dependents:
       240014: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
       Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
     Score: 10
   - Id: 240016
@@ -2711,7 +2711,7 @@ Body:
     Dependents:
       240015: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
       Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
     Score: 10
   - Id: 240017
@@ -2721,7 +2721,7 @@ Body:
     Dependents:
       240016: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
       Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
     Score: 10
   - Id: 240018
@@ -2731,7 +2731,7 @@ Body:
     Dependents:
       240017: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
       Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
     Score: 10
   - Id: 240019
@@ -2741,7 +2741,7 @@ Body:
     Dependents:
       240018: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
       Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
     Score: 10
   - Id: 240020
@@ -2751,7 +2751,7 @@ Body:
     Dependents:
       240019: true
     Rewards:
-      Item: Gift_Box
+      Item: Magic_Card_Album
       Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
       TitleId: 1024
     Score: 10

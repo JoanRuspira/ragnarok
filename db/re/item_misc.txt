@@ -62,9 +62,9 @@ IG_Juice,534,1	// Carrot Juice
 IG_Fish,544,1	// Raw Fish
 IG_Fish,551,1	// Sushi
 // Boxes
-IG_Box,603,1	// Old Blue Box
-IG_Box,617,1	// Old Purple Box
-IG_Box,644,1	// Gift Box
+//IG_Box,603,1	// Old Blue Box
+//IG_Box,617,1	// Old Purple Box
+//IG_Box,644,1	// Gift Box
 // Gemstones
 IG_Gemstone,715,1	// Yellow Gemstone
 IG_Gemstone,716,1	// Red Gemstone
@@ -401,7 +401,7 @@ IG_RedBox_2,5140,10	// Kawaii Ribbon
 // Old Bleu Box
 IG_BleuBox,519,1	// Milk
 IG_BleuBox,538,1	// Well-baked Cookie
-IG_BleuBox,644,1	// Gift Box
+//IG_BleuBox,644,1	// Gift Box
 IG_BleuBox,687,1	// Level 5 Earth Spike
 IG_BleuBox,689,1	// Level 5 Cold Bolt
 IG_BleuBox,691,1	// Level 5 Fire Bolt
@@ -457,7 +457,7 @@ IG_Masquerade,5297,1	// Soul Wing
 IG_Masquerade,5298,10	// Dokebi's Wig
 IG_Masquerade,5299,10	// Pagdayaw
 // Tresure Box WoE
-IG_Tresure_Box_WoE,603,6	// Old Blue Box
+//IG_Tresure_Box_WoE,603,6	// Old Blue Box
 IG_Tresure_Box_WoE,658,6	// Tribal Solidarity
 IG_Tresure_Box_WoE,678,3	// Poison Bottle
 IG_Tresure_Box_WoE,732,9	// 3carat Diamond
@@ -498,10 +498,10 @@ IG_Easter_Scroll,5046,1	// Bongun Hat
 IG_Easter_Scroll,5167,1	// Munak Hat [1]
 IG_Easter_Scroll,5168,1	// Bongun Hat [1]
 // Pierre Treasurebox
-IG_Pierre_Treasurebox,603,11	// Old Blue Box
+//IG_Pierre_Treasurebox,603,11	// Old Blue Box
 IG_Pierre_Treasurebox,604,3	// Dead Branch
-IG_Pierre_Treasurebox,617,5	// Old Purple Box
-IG_Pierre_Treasurebox,644,3	// Gift Box
+//IG_Pierre_Treasurebox,617,5	// Old Purple Box
+//IG_Pierre_Treasurebox,644,3	// Gift Box
 IG_Pierre_Treasurebox,975,3	// Scarlet Dyestuff
 IG_Pierre_Treasurebox,976,3	// Lemon Dyestuff
 IG_Pierre_Treasurebox,978,3	// Cobaltblue Dyestuff
@@ -543,8 +543,8 @@ IG_Louise_Costume_Box,12260,2	// Cool_Summer_Outfit
 IG_Xmas_Gift,559,18	// Light_Orange_Pot
 IG_Xmas_Gift,560,18	// HandMade_Chocolate_
 IG_Xmas_Gift,573,18	// Chocolate_Drink
-IG_Xmas_Gift,603,24	// Old_Blue_Box
-IG_Xmas_Gift,644,66	// Gift_Box
+//IG_Xmas_Gift,603,24	// Old_Blue_Box
+//IG_Xmas_Gift,644,66	// Gift_Box
 IG_Xmas_Gift,732,12	// Crystal_Jewel__
 IG_Xmas_Gift,5136,12	// Santa's_Hat_
 IG_Xmas_Gift,12016,12	// Speed_Up_Potion

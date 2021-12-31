@@ -1054,17 +1054,6 @@ Body:
       BuyingStore: true
     Script: |
       itemskill "AL_TELEPORT",3;
-  - Id: 603
-    AegisName: Old_Blue_Box
-    Name: Old Blue Box
-    Type: Usable
-    Buy: 10000
-    Weight: 200
-    Flags:
-      BuyingStore: true
-      Container: true
-    Script: |
-      getrandgroupitem(IG_BlueBox),1;
   - Id: 604
     AegisName: Branch_Of_Dead_Tree
     Name: Dead Branch
@@ -1204,17 +1193,6 @@ Body:
       Container: true
     Script: |
       getrandgroupitem(IG_CardAlbum),1;
-  - Id: 617
-    AegisName: Old_Violet_Box
-    Name: Old Purple Box
-    Type: Usable
-    Buy: 10000
-    Weight: 200
-    Flags:
-      BuyingStore: true
-      Container: true
-    Script: |
-      getrandgroupitem(IG_VioletBox),1;
   - Id: 618
     AegisName: Worn_Out_Scroll
     Name: Worn Out Scroll
@@ -1546,17 +1524,6 @@ Body:
       BuyingStore: true
     Script: |
       bpet;
-  - Id: 644
-    AegisName: Gift_Box
-    Name: Gift Box
-    Type: Usable
-    Buy: 1000
-    Weight: 200
-    Flags:
-      BuyingStore: true
-      Container: true
-    Script: |
-      getrandgroupitem(IG_GiftBox),1;
   - Id: 645
     AegisName: Center_Potion
     Name: Concentration Potion
@@ -1695,50 +1662,6 @@ Body:
       BuyingStore: true
     Script: |
       percentheal 10,0;
-  - Id: 664
-    AegisName: Gift_Box_1
-    Name: Gift Box
-    Type: Usable
-    Buy: 1000
-    Weight: 200
-    Flags:
-      BuyingStore: true
-      Container: true
-    Script: |
-      getrandgroupitem(IG_GiftBox_1),1;
-  - Id: 665
-    AegisName: Gift_Box_2
-    Name: Gift Box
-    Type: Usable
-    Buy: 1000
-    Weight: 200
-    Flags:
-      BuyingStore: true
-      Container: true
-    Script: |
-      getrandgroupitem(IG_GiftBox_2),1;
-  - Id: 666
-    AegisName: Gift_Box_3
-    Name: Gift Box
-    Type: Usable
-    Buy: 1000
-    Weight: 200
-    Flags:
-      BuyingStore: true
-      Container: true
-    Script: |
-      getrandgroupitem(IG_GiftBox_3),1;
-  - Id: 667
-    AegisName: Gift_Box_4
-    Name: Gift Box
-    Type: Usable
-    Buy: 1000
-    Weight: 200
-    Flags:
-      BuyingStore: true
-      Container: true
-    Script: |
-      getrandgroupitem(IG_GiftBox_4),1;
   - Id: 668
     AegisName: Handsei
     Name: Red Envelope
@@ -8935,11 +8858,6 @@ Body:
       Third: true
       Third_Upper: true
       Third_Baby: true
-  - Id: 12701
-    AegisName: Old_Blue_Box_F
-    Name: Old Blue Box
-    Type: Usable
-    Weight: 10
   - Id: 12702
     AegisName: Old_Bleu_Box
     Name: Old Navy Box
