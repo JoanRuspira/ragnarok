@@ -789,10 +789,3 @@ prt_fild08,361,214,2	script	Adventurer#izl::npcid	603,{
 	npctalk "npcdialog";
 	end;
 }
-
-prt_fild08,250,205,4	script	Sign#izl::npcid	835,{
-	mes "North to Prontera.";
-	mes "East to Izlude.";
-	mes "South to Sograt Desert.";
-	close;
-}

@@ -48,3 +48,7 @@ pay_fild10,16,290,0	warp	payf12-1	2,5,pay_fild07,379,290
 pay_fild10,99,13,0	warp	w1034	1,1,pay_fild10,148,252
 pay_fild11,297,135,0	warp	payf06-1	2,4,pay_fild02,19,175
 pay_fild11,38,330,0	warp	payf004	4,2,moc_fild03,179,19
+moc_fild02,379,273,0	warp	paygld1	4,2,pay_gld,20,275
+pay_gld,15,275,0	warp	paygld2	4,2,moc_fild02,374,273
+pay_gld,375,149,0	warp	paygld3	4,2,payon,19,143
+payon,14,143,0	warp	paygld4	4,2,pay_gld,370,149

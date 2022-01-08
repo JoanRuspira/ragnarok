@@ -1,0 +1,106 @@
+izlu2dun,112,54,3	script	Bulletin Board#sgn::1	837,{
+	mes "Byalan Island.";
+	mes "Head to centre of island for the ";
+	mes "undersea tunnel access.";
+	close;
+}
+
+izlu2dun,103,86,0	script	Board#sgn::2	858,{
+	mes "Undersea Tunnel Entrance.";
+	close;
+}
+
+prt_fild08,250,205,4	script	Sign#sgn::3	835,{
+	mes "North to Prontera.";
+	mes "East to Izlude.";
+	mes "South to Sograt Desert.";
+	close;
+}
+
+prt_fild08,238,144,6	script	Sign#sgn::4	835,{
+	mes "North to Prontera.";
+	mes "East to Izlude.";
+	mes "South to Sograt Desert.";
+	close;
+}
+
+prt_fild08,241,21,1	script	Board#sgn::5	858,{
+	mes "Attention: Path to the Sograt Desert.";
+	close;
+}
+
+moc_fild01,244,378,1	script	Bulletin Board#sgn::6	837,{
+	mes "You are now entering the Sograt Desert.";
+	close;
+}
+
+pay_fild04,23,169,5	script	Board#sgn::5a	858,{
+	mes "Attention: Path to the Sograt Desert.";
+	close;
+}
+
+moc_fild01,375,157,0	script	Bulletin Board#sgn::7	837,{
+	mes "You are now entering the Sograt Desert.";
+	close;
+}
+
+moc_fild02,222,268,4	script	Bulletin Board#sgn::8	837,{
+	mes "You are now entering the Sograt Desert.";
+	close;
+}
+
+moc_fild02,331,262,1	script	Bulletin Board#sgn::9	837,{
+	mes "You are now entering the Payon Forest.";
+	close;
+}
+
+moc_fild02,274,269,4	script	Sign#sgn::10	835,{
+	mes "East to Payon.";
+	mes "West to Sograt Desert.";
+	close;
+}
+
+moc_fild02,345,334,0	script	Bulletin Board#sgn::11	837,{
+	mes "You are now entering the Payon Forest.";
+	close;
+}
+
+pay_gld,27,277,3	script	Board#sgn::12	858,{
+	mes "Greenwood Lake castles";
+	mes "have been decomissioned";
+	mes "and access is forbidden.";
+	mes "Please beware of monsters";
+	mes "escaped from the old Guild Dungeons.";
+	close;
+}
+
+pay_gld,201,181,4	script	Sign#sgn::13	835,{
+	mes "East to Payon.";
+	mes "West to Sograt Desert.";
+	close;
+}
+
+pay_gld,368,154,5	script	Board#sgn::14	858,{
+	mes "Greenwood Lake castles";
+	mes "have been decomissioned";
+	mes "and access is forbidden.";
+	mes "Please beware of monsters";
+	mes "escaped from the old Guild Dungeons.";
+	close;
+}
+
+moc_fild13,120,283,5	script	Bulletin Board#sgn::15	837,{
+	mes "You are now entering the Sograt Desert.";
+	close;
+}
+
+moc_fild13,205,260,4	script	Sign#sgn::16	835,{
+	mes "North-East to Payon.";
+	mes "West to Sograt Desert.";
+	close;
+}
+
+moc_fild13,246,193,3	script	Bulletin Board#sgn::17	837,{
+	mes "You are now entering the Payon Forest.";
+	close;
+}

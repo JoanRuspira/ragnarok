@@ -4,6 +4,15 @@ payon,168,67,4	script	Payon Guard#payn::pay_npc1	708,{
 	end;
 }
 
+payon,16,148,6	script	Payon Guard#payn::pay_npc0	708,{
+	npctalk "Welcome to Payon";
+	end;
+}
+
+payon,16,138,6	script	Payon Guard#payn::pay_npc00	708,{
+	npctalk "Welcome to Payon";
+	end;
+}
 
 payon,168,64,2	script	Payon Guard#payn::pay_npc2	708,{
 	npctalk "Welcome to Payon";
