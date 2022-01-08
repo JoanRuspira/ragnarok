@@ -76,11 +76,11 @@ izlude_d,165,156,2	duplicate(Soldier_izlude)	Soldier#izlude_d	8W_SOLDIER
 	mes "Welcome to Izlude.";
 	close;
 }
-prt_fild08,350,219,4	duplicate(Guard_izlude)	Guard#izlude	8W_SOLDIER
-prt_fild08a,350,219,4	duplicate(Guard_izlude)	Guard#izlude_a	8W_SOLDIER
-prt_fild08b,350,219,4	duplicate(Guard_izlude)	Guard#izlude_b	8W_SOLDIER
-prt_fild08c,350,219,4	duplicate(Guard_izlude)	Guard#izlude_c	8W_SOLDIER
-prt_fild08d,350,219,4	duplicate(Guard_izlude)	Guard#izlude_d	8W_SOLDIER
+prt_fild08,350,217,4	duplicate(Guard_izlude)	Guard#izlude	8W_SOLDIER
+prt_fild08a,350,217,4	duplicate(Guard_izlude)	Guard#izlude_a	8W_SOLDIER
+prt_fild08b,350,217,4	duplicate(Guard_izlude)	Guard#izlude_b	8W_SOLDIER
+prt_fild08c,350,217,4	duplicate(Guard_izlude)	Guard#izlude_c	8W_SOLDIER
+prt_fild08d,350,217,4	duplicate(Guard_izlude)	Guard#izlude_d	8W_SOLDIER
 
 // Channel Warper :: channel
 //============================================================

@@ -8,6 +8,7 @@ morocc,163,106,3	script	Quest Board#TutoMorroc	4_BOARD3,{
 	if (BaseLevel < 11) {
 		mes " - There are no tasks - ";
 		mes " - open for you right now. - ";
+		mes " - Get to at least level 11! - ";
 		close;
 	}
 

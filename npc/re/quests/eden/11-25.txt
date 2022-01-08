@@ -47,6 +47,7 @@ moc_para01,36,38,3	script	Mission [11 - 25]#Tuto	4_BOARD3,{
 	if (BaseLevel < 11) {
 		mes " - There are no tasks - ";
 		mes " - open for you right now. - ";
+		mes " - Get to at least level 11! - ";
 		close;
 	}
 	if (BaseLevel > 25) {

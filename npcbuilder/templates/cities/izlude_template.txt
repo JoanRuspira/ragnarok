@@ -431,13 +431,13 @@ izlude,145,166,3	script	Izlude Villager#izl::npcid	spriteid,{
 	end;
 }
 
-iz_ac01,96,44,4	script	Izlude Villager#izl::npcid	spriteid,{
-	npctalk "npcdialog";
+iz_ac01,96,45,4	script	Academy Staff#izl::npcid	47,{
+	npctalk "Welcome to the Cryptura Academy.";
 	end;
 }
 
-iz_ac01,102,45,4	script	Izlude Villager#izl::npcid	spriteid,{
-	npctalk "npcdialog";
+iz_ac01,102,45,4	script	Academy Staff#izl::npcid	50,{
+	npctalk "Welcome to the Cryptura Academy.";
 	end;
 }
 
@@ -452,23 +452,23 @@ iz_ac01,88,44,4	script	Academy Guard#iz_npc51::iz_npc513	868,{
 	end;
 }
 
-iz_ac01,147,50,3	script	Izlude Villager#izl::npcid	spriteid,{
-	npctalk "npcdialog";
+iz_ac01,147,50,3	script	Academy Cook#izl::npcid	820,{
+	npctalk "Hello.";
 	end;
 }
 
-iz_ac01,150,50,3	script	Izlude Villager#izl::npcid	spriteid,{
-	npctalk "npcdialog";
+iz_ac01,150,50,3	script	Academy Chef#izl::npcid	886,{
+	npctalk "Food is restricted to students and staff.";
 	end;
 }
 
-iz_ac01,160,50,3	script	Izlude Villager#izl::npcid	spriteid,{
-	npctalk "npcdialog";
+iz_ac01,160,50,3	script	Academy Cook#izl::npcid	820,{
+	npctalk "Please let me work.";
 	end;
 }
 
-iz_ac01,164,36,3	script	Izlude Villager#izl::npcid	spriteid,{
-	npctalk "npcdialog";
+iz_ac01,164,36,3	script	Academy Staff#izl::68795e34	80,{
+	npctalk "Please let me work.";
 	end;
 }
 
@@ -548,8 +548,8 @@ iz_ac01,67,37,3	script	Izlude Villager#izl::npcid	spriteid,{
 	end;
 }
 
-iz_ac01,66,32,0	script	Izlude Villager#izl::npcid	spriteid,{
-	npctalk "npcdialog";
+iz_ac01,66,32,0	script	Academy Guide#izl::npcid	47,{
+	npctalk "Go to the upstairs levels to find the class guides.";
 	end;
 }
 
@@ -730,4 +730,69 @@ izlude,63,163,5	script	Izlude Villager#izl::npcid	spriteid,{
 	end;
 }
 
+iz_ac02,158,111,6	script	Academy Novice#izl::npcid	0,{
+	npctalk "npcdialog";
+	end;
+}
 
+iz_ac02,160,106,7	script	Academy Novice#izl::npcid	567,{
+	npctalk "npcdialog";
+	end;
+}
+
+iz_ac02,144,105,0	script	Academy Novice#izl::npcid	729,{
+	npctalk "npcdialog";
+	end;
+}
+
+iz_ac02,146,117,2	script	Academy Novice#izl::npcid	23,{
+	npctalk "npcdialog";
+	end;
+}
+
+iz_ac02,70,173,0	script	Academy Novice#izl::npcid	0,{
+	npctalk "npcdialog";
+	end;
+}
+
+iz_ac02,48,167,1	script	Academy Novice#izl::npcid	567,{
+	npctalk "npcdialog";
+	end;
+}
+
+iz_ac02,56,172,4	script	Academy Novice#izl::npcid	729,{
+	npctalk "npcdialog";
+	end;
+}
+
+iz_ac02,65,164,0	script	Academy Novice#izl::npcid	23,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_fild08,341,207,2	script	Adventurer#izl::npcid	567,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_fild08,347,211,3	script	Adventurer#izl::npcid	882,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_fild08,340,219,3	script	Adventurer#izl::npcid	690,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_fild08,361,214,2	script	Adventurer#izl::npcid	603,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_fild08,250,205,4	script	Sign#izl::npcid	835,{
+	mes "North to Prontera.";
+	mes "East to Izlude.";
+	mes "South to Sograt Desert.";
+	close;
+}

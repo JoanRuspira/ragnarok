@@ -71,7 +71,7 @@ izlude,125,257,0	warp	#to_ac01	2,2,iz_ac01,99,29
 izlude,130,257,0	warp	#to_ac02	2,2,iz_ac01,99,29
 iz_ac01,100,24,0	warp	#to_ac01-1	2,2,izlude,127,253
 iz_ac01,78,25,0	warp	#to_ac2f01	2,2,iz_ac02,80,168
-iz_ac01,122,25,0	warp	#to_ac2f02	2,2,iz_ac02,126,107
+iz_ac01,122,25,0	warp	#to_ac2f02	2,2,iz_ac02,129,107
 
 iz_ac02,83,167,0	warp	#to_ac1f01	2,2,iz_ac01,78,28
 iz_ac02,124,107,0	warp	#to_ac1f02	2,2,iz_ac01,122,28
