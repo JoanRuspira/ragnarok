@@ -1,0 +1,43 @@
+-	script	Inn Keeper#newbe10::InKpr	-1,{
+	mes "[Inn Keeper]";
+	mes "Hello, Please feel free to use our facilities.";
+	mes "How can I help you? We offer a couple of services";
+	next;
+	switch(select("Save Respawn -> 100z:Rest and recover -> 1000z.:Cancel.")) {
+	case 1:
+		if (Zeny > 99) {
+			mes "[Inn Keeper]";
+			mes "Your respawn point has been saved here.";
+			close2;
+			set Zeny, Zeny-100;
+			savepoint "izlude_in",111,74,4,1;
+			end;
+			close;
+		}
+		mes "[Inn Keeper]";
+		mes "I'm sorry, it looks like you can't pay for this service...";
+		close;
+	case 2:
+		if (Zeny > 999) {
+			mes "[Inn Keeper]";
+			mes "Sure, please rest here if you want!";
+			close2;
+			set Zeny, Zeny-1000;
+			specialeffect2 EF_HEAL2;
+			percentheal 100,100;
+			end;
+			close;
+		}
+		mes "[Inn Keeper]";
+		mes "I'm sorry, it looks like you can't pay for this service...";
+		close;
+	case 3:
+		mes "[Inn Keeper]";
+		mes "Plese let me know if I can help.";
+		mes "See you soon!";
+		close;
+	}
+}
+
+izlude_in,116,76,5	duplicate(InKpr)	Inn Keeper#inkp1	798
+
