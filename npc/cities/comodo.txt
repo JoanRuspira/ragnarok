@@ -465,3 +465,13 @@ moc_fild12,25,308,5	script	Serutero#cmd	59,{
 		close;
 	}
 }
+
+
+tur_dun01,162,32,1	script	Explorer#a2t	832,{
+	mes "[Explorer]";
+	mes "How did it go? Ready to go back to Comodo?";
+	next;
+	if (select("Yes please.","Not yet.") == 1)
+		warp "comodo",234,89;
+	close;
+}

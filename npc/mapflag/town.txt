@@ -9,28 +9,11 @@
 //===== Description: ========================================= 
 //= Designates a map as a town, granting mailbox access.
 //===== Additional Comments: ================================= 
-//= 1.0 Initial script.
-//= 1.1 Renewal split. [Euphy]
+//= 1.0 Renewal split. [Euphy]
+//= 1.1 Added Izlude duplicates. [Euphy]
 //============================================================
 
-prontera	mapflag	town
-izlude	mapflag	town
-moc_ruins	mapflag	town
-geffen	mapflag	town
-payon	mapflag	town
-pay_arche	mapflag	town
-alberta	mapflag	town
-aldebaran	mapflag	town
-yuno	mapflag	town
-lighthalzen	mapflag	town
-einbroch	mapflag	town
-einbech	mapflag	town
-comodo	mapflag	town
-umbala	mapflag	town
-amatsu	mapflag	town
-gonryun	mapflag	town
-ayothaya	mapflag	town
-louyang	mapflag	town
-hugel	mapflag	town
-rachel	mapflag	town
-veins	mapflag	town
+izlude_a	mapflag	town
+izlude_b	mapflag	town
+izlude_c	mapflag	town
+izlude_d	mapflag	town

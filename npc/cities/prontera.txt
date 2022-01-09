@@ -728,3 +728,6 @@ prt_maze02,110,69,0	script	Soldier#2pront	105,{
 	mes "Whaaaat a stupid guy. Why would anyone want to throw his life away just to collect some silly Herbs?";
 	close;
 }
+
+prontera,52,344,5	duplicate(prtguard)	Guard#1pront	105
+
