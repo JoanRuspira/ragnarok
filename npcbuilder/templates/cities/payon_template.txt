@@ -164,7 +164,7 @@ payon,137,223,4	script	Payon Villager#payn::npcid	spriteid,{
 	end;
 }
 
-payon,166,205,7	script	Payon Villager#payn::npcid	spriteid,{ 
+payon,158,206,0	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }

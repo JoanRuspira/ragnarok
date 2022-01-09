@@ -104,3 +104,12 @@ moc_fild13,246,193,3	script	Bulletin Board#sgn::17	837,{
 	mes "You are now entering the Payon Forest.";
 	close;
 }
+
+izlude,131,151,4	script	Bulletin Board#sgn::18	837,{
+	mes "Izlude, the Market town.";
+	mes "Home of the Cryptura Academy,";
+	mes "the Central Market,";
+	mes "and the Swordman Guild.";
+	close;
+}
+

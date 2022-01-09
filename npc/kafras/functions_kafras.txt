@@ -119,27 +119,16 @@ function	script	F_Kafra	{
 		setarray .@K_Menu0$[0], "Use Storage", "Use Guild Storage", "Rent a Pushcart", "Use Teleport Service", "Cancel";
 	else {
 		switch(.@menu_num) {
-			// Save and Storage only
-			case 1:	setarray .@K_Menu0$[0],"Save","Use Storage","Cancel"; break;
-			// Storage only
+			case 1:	setarray .@K_Menu0$[0],"Use Storage","Cancel"; break;
 			case 2:	setarray .@K_Menu0$[0],"Use Storage","Cancel"; break;
-			// No Teleport (Common)
-			case 3: setarray .@K_Menu0$[0],"Save","Use Storage","Rent a Pushcart","Cancel"; break;
-			// Case 4 is Einbroch no tele message.
-			// No save, or teleport. (Common)
+			case 3: setarray .@K_Menu0$[0],"Use Storage","Rent a Pushcart","Cancel"; break;
 			case 5:	setarray .@K_Menu0$[0],"Use Storage","Rent a Pushcart","Cancel"; break;
-			// Storage and Check Other Information only.
 			case 6:	setarray .@K_Menu0$[0],"Use Storage","Cancel"; break;
-			// Save, Storage, and Pushcart only (Kafra Warehouse)
-			case 7:	setarray .@K_Menu0$[0],"Save","Use Storage","Rent a Pushcart","Cancel"; break;
-			// Save, Storage, Other Check information. (Turbo track)
-			case 8: setarray .@K_Menu0$[0],"Save","Use Storage","Cancel"; break;
-			// No Save (Rune Knight)
+			case 7:	setarray .@K_Menu0$[0],"Use Storage","Rent a Pushcart","Cancel"; break;
+			case 8: setarray .@K_Menu0$[0],"Use Storage","Cancel"; break;
 			case 9: setarray .@K_Menu0$[0],"Use Storage","Rent a Pushcart","Use Teleport Service","Cancel"; break;
-			// Storage, Save, and Pushcart (Dewata, reorder of case 7)
-			case 10: setarray .@K_Menu0$[0],"Use Storage","Save","Rent a Pushcart","Cancel"; break;
-			// Default message (obsolete)
-			default: setarray .@K_Menu0$[0],"Save","Use Storage","Use Teleport Service","Rent a Pushcart","Cancel"; break;
+			case 10: setarray .@K_Menu0$[0],"Use Storage","Rent a Pushcart","Cancel"; break;
+			default: setarray .@K_Menu0$[0],"Use Storage","Use Teleport Service","Rent a Pushcart","Cancel"; break;
 		}
 	}
 	.@menu$ = implode(.@K_Menu0$,":");

@@ -10,7 +10,7 @@
 			mes "Your respawn point has been saved here.";
 			close2;
 			set Zeny, Zeny-100;
-			savepoint "izlude_in",111,74,4,1;
+			savepoint "izlude_in",111,74,4,4;
 			end;
 			close;
 		}

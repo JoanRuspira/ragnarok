@@ -90,7 +90,7 @@ izlude,152,142,4	script	Izlude Villager#izl::npcid	spriteid,{
 	end;
 }
 
-izlude,130,160,5	script	Izlude Villager#izl::npcid	spriteid,{
+izlude,143,157,5	script	Izlude Villager#izl::npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
