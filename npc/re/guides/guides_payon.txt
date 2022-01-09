@@ -12,16 +12,16 @@ payon,160,67,3	script	Guide#01payon::GuidePayon	708,{
 	cutin "pay_soldier",2;
 	mes "[Payon Guide]";
 	mes "Welcome to ^8B4513Payon^000000,";
-	mes "the Mountain Village.";
-	mes "Do you need help navigating the village?";
+	mes "the Forest Town.";
+	mes "Do you need help navigating the town?";
 	F_Navi("[Payon Guide]");
 	next;
 	while (1) {
-		switch(select("[ Main Facilities ]:[ Merchants & Helpers ]:Remove Marks from Mini-Map:Cancel")) {
+		switch(select("Main Facilities:Remove Marks from Mini-Map:Cancel")) {
 		case 1:
 			set .@loop,1;
 			while (.@loop) {
-				switch(select("[ Archer Village ]:[ Tool Shop ]:[ Weapon & Armor Shop ]:[ Inn & Tavern ]:[ Central Palace ]:[ Palace Court ]:[ Royal Kitchen ]:Previous Menu")) {
+				switch(select("Archer Village:Tool Shop:Weapon & Armor Shop:Inn & Tavern:Central Palace:Crossbow Clan:Previous Menu")) {
 				case 1:
 					mes "[Payon Guide]";
 					mes F_Navi("Archer Village","payon,227,328","^B9062F")+" is where";
@@ -52,16 +52,11 @@ payon,160,67,3	script	Guide#01payon::GuidePayon	708,{
 					next;
 					break;
 				case 6:
-					callsub L_Mark, F_Navi("Palace Court","payon,107,325","^800080");
-					viewpoint 1,107,325,5,0xDA70D6;
+					callsub L_Mark, F_Navi("Crossbow Clan","payon,263,156","^800080");
+					viewpoint 1,263,156,5,0xDA70D6;
 					next;
 					break;
 				case 7:
-					callsub L_Mark, F_Navi("Royal Kitchen","payon,154,325","^B9062F");
-					viewpoint 1,154,325,6,0xFF0000;
-					next;
-					break;
-				case 8:
 					set .@loop,0;
 					break;
 				}

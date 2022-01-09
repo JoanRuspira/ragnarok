@@ -69,17 +69,12 @@ payon,172,120,1	script	Payon Villager#payn::npcid	spriteid,{ //f
 	end;
 }
 
-payon,173,176,4	script	Payon Villager#payn::npcid	spriteid,{ //f
+payon,173,176,4	script	Payon Villager#payn::npcid	772,{ //f
 	npctalk "npcdialog";
 	end;
 }
 
-payon,176,176,4	script	Payon Villager#payn::npcid	spriteid,{ //f
-	npctalk "npcdialog";
-	end;
-}
-
-payon,170,178,4	script	Payon Villager#payn::npcid	spriteid,{ //m
+payon,176,176,4	script	Payon Villager#payn::npcid	775,{ //f
 	npctalk "npcdialog";
 	end;
 }
@@ -483,7 +478,7 @@ payon,154,119,4	script	Payon Villager#payn::npcid	spriteid,{
 	end;
 }
 
-payon,165,114,3	script	Payon Villager#payn::npcid	spriteid,{ 
+payon,169,108,3	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
@@ -781,11 +776,6 @@ payon,256,138,1	script	Payon Villager#payn::npcid	spriteid,{
 	end;
 }
 
-payon,262,149,2	script	Payon Villager#payn::npcid	spriteid,{ 
-	npctalk "npcdialog";
-	end;
-}
-
 payon,248,144,5	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
@@ -902,6 +892,31 @@ payon,32,140,4	script	Payon Villager#payn::npcid	spriteid,{
 }
 
 payon,21,141,2	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,258,151,0	script	Crossbow Clan Recruit#payn::npcid	634,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,263,151,0	script	Crossbow Clan Recruit#payn::npcid	727,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,265,145,0	script	Crossbow Clan Recruit#payn::npcid	3,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,261,145,0	script	Crossbow Clan Recruit#payn::npcid	732,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,263,143,0	script	Crossbow Clan Recruit#payn::npcid	4021,{ 
 	npctalk "npcdialog";
 	end;
 }

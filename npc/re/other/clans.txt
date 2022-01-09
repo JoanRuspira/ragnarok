@@ -478,7 +478,7 @@ OnInit:
 	end;
 }
 
-prt_in,39,114,5	script	Shaam Rumi	10027,{
+payon,263,157,3	script	Crossbow Clan Leader	10027,{
 	cutin "sham01.bmp", 2;
 	mes "[Shaam Rumi]";
 	mes "Hi, there! I'm Shaam, master of the ^3131FFCrossbow Clan^000000";
@@ -546,7 +546,6 @@ prt_in,39,114,5	script	Shaam Rumi	10027,{
 			mes "Let's check the Clan policy then to begin admission procedures.";
 			next;
 			mes "[Shaam Rumi]";
-			mes "^3131FFClansmen^000000 cannot participate in the Siege.";
 			mes "As our new member, you'll receive the following stat bonuses: ^FF0000<DEX+1, AGI+1, MHP+30, MSP+10>^000000.";
 			mes "Do you agree?";
 			next;
