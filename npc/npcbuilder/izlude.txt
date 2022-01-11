@@ -741,10 +741,7 @@ izlude_in,127,66,4	script	Izlude Villager#izl::1225872e	995,{
 	end;
 }
 
-
-
-
-izlude,127,253,1	script	Izlude Villager#izl::6930d95b	459,{
+izlude,131,254,1	script	Izlude Villager#izl::6930d95b	459,{
 	npctalk "npcdialog";
 	end;
 }
