@@ -49,7 +49,7 @@ pay_arche,140,148,5	script	Archer Villager#pay_arche::npcid	spriteid,{
 	end;
 }
 
-pay_arche,139,164,3	script	Archer Villager#pay_arche::npcid	spriteid,{
+pay_arche,135,163,3	script	Archer Villager#pay_arche::npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
@@ -155,6 +155,112 @@ payon_in02,20,33,5	script	Archer Villager#pay_arche::npcid	727,{
 }
 
 payon_in02,28,25,4	script	Archer Villager#pay_arche::npcid	486,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+pay_arche,151,119,3	script	Archer Villager#pay_arche::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+pay_arche,145,127,2	script	Archer Villager#pay_arche::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+pay_arche,128,128,1	script	Archer Villager#pay_arche::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+pay_arche,127,144,7	script	Archer Villager#pay_arche::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+pay_arche,113,155,5	script	Archer Villager#pay_arche::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+pay_arche,102,164,2	script	Archer Villager#pay_arche::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+pay_arche,100,164,6	script	Archer Villager#pay_arche::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+pay_arche,92,161,0	script	Archer Villager#pay_arche::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+pay_arche,118,114,1	script	Archer Villager#pay_arche::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+pay_arche,105,110,6	script	Archer Villager#pay_arche::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+pay_arche,89,103,2	script	Archer Villager#pay_arche::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+pay_arche,56,106,5	script	Archer Villager#pay_arche::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+pay_arche,98,131,6	script	Archer Villager#pay_arche::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+pay_arche,88,137,3	script	Archer Villager#pay_arche::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+payon_in02,79,36,7	script	Archer Villager#pay_arche::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+pay_in02,79,27,1	script	Archer Villager#pay_arche::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+pay_arche,79,68,0	script	Archer Villager#pay_arche::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+pay_arche,117,51,5	script	Archer Villager#pay_arche::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+pay_arche,106,68,2	script	Archer Villager#pay_arche::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+payon_in02,65,72,5	script	Archer Villager#pay_arche::npcid	727,{
+	npctalk "I will make you an archer";
+	end;
+}
+
+payon_in02,60,10,3	script	Archer Villager#pay_arche::npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }

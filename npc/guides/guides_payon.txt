@@ -21,7 +21,7 @@ payon,160,67,3	script	Guide#01payon::GuidePayon	708,{
 		case 1:
 			set .@loop,1;
 			while (.@loop) {
-				switch(select("Archer Village:Tool Shop:Weapon & Armor Shop:Inn & Tavern:Central Palace:Crossbow Clan:Previous Menu")) {
+				switch(select("Archer Village:Tool Shop:Weapon & Armor Shop:Inn & Tavern:Central Palace:Crossbow Clan:North Market:Previous Menu")) {
 				case 1:
 					mes "[Payon Guide]";
 					mes F_Navi("Archer Village","payon,227,328","^B9062F")+" is where";
@@ -57,6 +57,11 @@ payon,160,67,3	script	Guide#01payon::GuidePayon	708,{
 					next;
 					break;
 				case 7:
+					callsub L_Mark, F_Navi("North Market","payon,107,318","^800080");
+					viewpoint 1,107,318,5,0xDA70D6;
+					next;
+					break;
+				case 8:
 					set .@loop,0;
 					break;
 				}
@@ -185,7 +190,7 @@ payon,151,182,6	duplicate(GuidePayon)	Guide#02payon	708
 payon,221,85,6	duplicate(GuidePayon)	Guide#03payon	708
 payon,233,324,4	duplicate(GuidePayon)	Guide#04payon	708
 
-pay_arche,86,33,4	script	Guide#05payon	708,{
+pay_arche,86,78,4	script	Guide#05payon	708,{
 	cutin "pay_soldier",2;
 	mes "[Payon Guide]";
 	mes "Welcome to ^8B4513Archer Village^000000,";
@@ -195,11 +200,11 @@ pay_arche,86,33,4	script	Guide#05payon	708,{
 	next;
 	set .@str$,"Would you like to check any other locations?";
 	while (1) {
-		switch(select("[ Payon Dungeon ]:[ Archer Guild ]:[ Tool Shop ]:[ Kafra Employee ]:[ Mercenary Guildsman ]:[ Alchemist Guildsman ]:[ Eden Teleport Officer ]:Remove Marks from Mini-Map:Cancel")) {
+		switch(select("Payon Cave:Archer Guild:Tool Shop:Kafra Employee:Inn:Market:Remove Marks from Mini-Map:Cancel")) {
 		case 1:
 			mes "[Payon Guide]";
 			mes "Let me mark the entrance of";
-			mes "the "+F_Navi("Payon Dungeon","pay_arche,38,131","^B9062F");
+			mes "the "+F_Navi("Payon Cave","pay_arche,38,131","^B9062F");
 			mes "on your mini-map.";
 			mes .@str$;
 			viewpoint 1,38,131,0,0xFF0000;
@@ -234,31 +239,22 @@ pay_arche,86,33,4	script	Guide#05payon	708,{
 		case 5:
 			mes "[Payon Guide]";
 			mes "Let me mark the location of the";
-			mes F_Navi("Mercenary Guildsman","pay_arche,101,166","^7F3300");
+			mes F_Navi("Inn","pay_arche,95,167","^7F3300");
 			mes "on your mini-map.";
 			mes .@str$;
-			viewpoint 1,101,166,4,0xD2691E;
+			viewpoint 1,95,167,4,0xD2691E;
 			next;
 			break;
 		case 6:
 			mes "[Payon Guide]";
 			mes "Let me mark the location of the";
-			mes F_Navi("Alchemist Guildsman","pay_arche,126,113,","^800080");
+			mes F_Navi("Market","pay_arche,123,112,","^800080");
 			mes "on your mini-map.";
 			mes .@str$;
-			viewpoint 1,127,113,5,0xDA70D6;
+			viewpoint 1,123,112,5,0xDA70D6;
 			next;
 			break;
 		case 7:
-			mes "[Payon Guide]";
-			mes "The "+F_Navi("Eden Teleport Officer","pay_arche,143,164","^0000FF");
-			mes "is currently staying inside";
-			mes "the Archer Guild building.";
-			mes .@str$;
-			viewpoint 1,143,164,6,0x0A82FF;
-			next;
-			break;
-		case 8:
 			mes "[Payon Guide]";
 			mes "Sure, I'll remove all marks from your mini-map.";
 			mes .@str$;

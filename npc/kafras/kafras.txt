@@ -207,7 +207,7 @@ payon,175,226,4	script	Kafra Employee::kaf_payon2	116,{
 	callfunc "F_KafEnd",0,1,"in the city of Payon";
 }
 
-pay_arche,55,123,0	script	Kafra Employee::kaf_payon3	4_F_KAFRA1,{
+pay_arche,55,123,3	script	Kafra Employee::kaf_payon3	4_F_KAFRA1,{
 	cutin "kafra_03",2;
 	callfunc "F_KafSet";
 	mes "[Kafra Employee]";

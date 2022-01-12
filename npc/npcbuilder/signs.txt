@@ -106,10 +106,25 @@ moc_fild13,246,193,3	script	Bulletin Board#sgn::17	837,{
 }
 
 izlude,131,151,4	script	Bulletin Board#sgn::18	837,{
-	mes "Izlude, the Market town.";
+	mes "Izlude, the Market Town.";
 	mes "Home of the Cryptura Academy,";
 	mes "the Central Market,";
 	mes "and the Swordman Guild.";
+	close;
+}
+
+payon,165,211,4	script	Bulletin Board#sgn::18	837,{
+	mes "Payon, the peaceful Forest Town.";
+	mes "Discover the Payon Palace,";
+	mes "the Crossbow Clan and";
+	mes "the North Market.";
+	mes "All with good food!";
+	close;
+}
+
+pay_arche,77,30,4	script	Sign#sgn::16	835,{
+	mes "North to the Archer Village.";
+	mes "South to Payon.";
 	close;
 }
 

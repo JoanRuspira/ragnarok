@@ -264,16 +264,6 @@ payon,112,230,0	script	Payon Villager#payn::npcid	spriteid,{
 	end;
 }
 
-payon,109,324,4	script	Palace Guard#payn::pay_npc52	708,{ 
-	npctalk "Welcome to the Payon Palace.";
-	end;
-}
-
-payon,105,324,4	script	Palace Guard#payn::pay_npc53	708,{ 
-	npctalk "Welcome to the Payon Palace.";
-	end;
-}
-
 payon,104,313,6	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
@@ -429,13 +419,6 @@ payon_in01,179,30,5	script	Waitress#payn::npcid	80,{
 	end;
 }
 
-payon,155,324,4	script	Palace Guard#payn::pay_npc53f2	708,{ 
-	npctalk "Welcome to the Payon Palace.";
-	end;
-}
-
-
-
 payon,155,192,4	script	Payon Village#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
@@ -556,12 +539,8 @@ payon,232,268,0	script	Payon Villager#payn::npcid	spriteid,{
 	end;
 }
 
-payon,247,292,1	script	Payon Villager#payn::npcid	spriteid,{ 
-	npctalk "npcdialog";
-	end;
-}
 
-payon,250,280,4	script	Payon Villager#payn::npcid	spriteid,{ 
+payon,234,304,4	script	Payon Villager#payn::npcid	spriteid,{ 
 	npctalk "npcdialog";
 	end;
 }
@@ -918,5 +897,103 @@ payon,261,145,0	script	Crossbow Clan Recruit#payn::npcid	732,{
 
 payon,263,143,0	script	Crossbow Clan Recruit#payn::npcid	4021,{ 
 	npctalk "npcdialog";
+	end;
+}
+
+
+
+payon,74,325,5	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,86,311,0	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,97,321,3	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,100,302,7	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,123,313,4	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,139,309,6	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,83,256,4	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,82,283,0	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,80,228,5	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,106,218,2	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,106,243,7	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,111,283,0	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon,89,210,1	script	Payon Villager#payn::npcid	spriteid,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+
+payon,248,301,4	script	Peco#payn::npcid	428,{ 
+	npctalk "...";
+	end;
+}
+
+payon,253,299,1	script	Peco#payn::npcid	428,{ 
+	npctalk "...";
+	end;
+}
+
+payon,252,305,7	script	Peco#payn::npcid	428,{ 
+	npctalk "...";
+	end;
+}
+
+payon,245,308,2	script	Peco#payn::npcid	428,{ 
+	npctalk "...";
+	end;
+}
+
+payon,251,283,2	script	Peco#payn::npcid	428,{ 
+	npctalk "...";
+	end;
+}
+
+payon,255,279,6	script	Peco#payn::npcid	428,{ 
+	npctalk "...";
 	end;
 }

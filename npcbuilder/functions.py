@@ -65,7 +65,7 @@ def buildCity(city):
 
     #generate npc ids
 	fin2 = open("./" + city + "_tmp.txt", "rt")
-	fout2 = open("../npc/joan/" + city + ".txt", "wt")
+	fout2 = open("../npc/npcbuilder/" + city + ".txt", "wt")
 
 	for line in fin2:
 		fout2.write(line.replace('npcid', str(uuid.uuid4())[:8]))
