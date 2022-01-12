@@ -235,7 +235,7 @@ payon_in02,79,36,7	script	Archer Villager#pay_arche::3964117e	92,{
 	end;
 }
 
-pay_in02,79,27,1	script	Archer Villager#pay_arche::46e7fbfb	742,{
+payon_in02,79,27,1	script	Archer Villager#pay_arche::46e7fbfb	742,{
 	npctalk "npcdialog";
 	end;
 }
