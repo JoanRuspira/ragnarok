@@ -201,7 +201,7 @@ alberta,246,84,3	script	Fisk	4W_SAILOR,{
 	mes "where'd ya";
 	mes "wanna go?";
 	next;
-	switch(select("Alberta Island -> 250 zeny.","Izlude Marina -> 500 zeny.", "Never mind.")) {
+	switch(select("Avalon Isle -> 250 zeny.","Izlude Marina -> 500 zeny.", "Never mind.")) {
 	case 1:
 		if (Zeny < 250) {
 			mes "[Fisk]";
@@ -231,7 +231,7 @@ alberta,246,84,3	script	Fisk	4W_SAILOR,{
 	}
 }
 
-alb2trea,39,50,6	script	Fisk#a2t	4W_SAILOR,{
+alb2trea,56,62,7	script	Fisk#a2t	4W_SAILOR,{
 	mes "[Fisk]";
 	mes "So you wanna head back to the mainland in Alberta, eh?";
 	next;

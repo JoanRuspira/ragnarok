@@ -94,7 +94,7 @@ moc_fild13,120,283,5	script	Bulletin Board#sgn::15	837,{
 	close;
 }
 
-moc_fild13,205,260,4	script	Sign#sgn::16	835,{
+moc_fild13,205,260,4	script	Sign#sgn::16a	835,{
 	mes "North-East to Payon.";
 	mes "West to Sograt Desert.";
 	close;
@@ -113,7 +113,7 @@ izlude,131,151,4	script	Bulletin Board#sgn::18	837,{
 	close;
 }
 
-payon,165,211,4	script	Bulletin Board#sgn::18	837,{
+payon,165,211,4	script	Bulletin Board#sgn::18a	837,{
 	mes "Payon, the peaceful Forest Town.";
 	mes "Discover the Payon Palace,";
 	mes "the Crossbow Clan and";
@@ -122,9 +122,71 @@ payon,165,211,4	script	Bulletin Board#sgn::18	837,{
 	close;
 }
 
-pay_arche,77,30,4	script	Sign#sgn::16	835,{
+pay_arche,77,30,4	script	Sign#sgn::19	835,{
 	mes "North to the Archer Village.";
 	mes "South to Payon.";
 	close;
 }
 
+pay_arche,40,136,5	script	Board#sgn::20	858,{
+	mes "Payon Cave Entrance.";
+	close;
+}
+
+pay_arche,78,91,4	script	Bulletin Board#sgn::21	837,{
+	mes "Archer Village.";
+	mes "Enjoy your visit";
+	mes "to the Archer Guild";
+	mes "or the Payon Cave.";
+	close;
+}
+
+
+pay_fild01,325,348,7	script	Bulletin Board#sgn::22	837,{
+	mes "You are now entering the Payon Forest.";
+	close;
+}
+
+payon,257,97,4	script	Bulletin Board#sgn::23	837,{
+	mes "You are now entering the Payon Forest.";
+	close;
+}
+
+
+pay_fild02,77,30,4	script	Sign#sgn::24	835,{
+	mes "North to Payon.";
+	mes "West to Alberta.";
+	close;
+}
+
+pay_fild03,42,107,2	script	Sign#sgn::25	835,{
+	mes "North to Payon.";
+	mes "West to Alberta.";
+	close;
+}
+
+pay_fild03,383,81,4	script	Bulletin Board#sgn::26	837,{
+	mes "You are now entering the Payon Forest.";
+	close;
+}
+
+alberta,37,241,4	script	Bulletin Board#sgn::27	837,{
+	mes "Alberta...";
+	mes "Enjoy the largest harbour";
+	mes "in Midgard, and the door to";
+	mes "strange new lands. Visit our";
+	mes "Merchant Guild!";
+	close;
+}
+
+alb2trea,71,97,4	script	Board#sgn::28	858,{
+	mes "Attention: Sunken Ship entrance down the ladder.";
+	mes "Proceed at your own risk.";
+	close;
+}
+
+alb2trea,69,78,4	script	Bulletin Board#sgn::29	837,{
+	mes "You are on Avalon Isle,";
+	mes "off the coast of Alberta.";
+	close;
+}

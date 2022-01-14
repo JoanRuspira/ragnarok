@@ -1,0 +1,160 @@
+//===== rAthena Script =======================================
+//= Stylist
+//===== By: ==================================================
+//= Euphy
+//===== Current Version: =====================================
+//= 1.1
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Description: =========================================
+//= Changes your hair style, hair color, and cloth color.
+//===== Additional Comments: =================================
+//= 1.0 Initial script.
+//= 1.1 Switched to 'getbattleflag', credits to Saithis. [Euphy]
+//============================================================
+
+alberta,227,54,1	script	Dyer Ginedin Rephere#custom_stylist	122,{
+	set .n$,"[Dyer Ginedin Rephere]";
+	mes .n$;
+	mes "11... 12... Mmm... good. I think I'll be able to finish before tonight's party. Oh! I didn't notice you were here!";
+	next;
+	switch(select("Talk:Dye Clothing:Price List:Cancel")) {
+		case 1:
+			mes .n$;
+			mes "Life may have gotten a bit better, but when I look at all of the orders I've received... Whew!";
+			mes "It seems that the young women of Rune-Midgarts must be very well off these days.";
+			next;
+			mes .n$;
+			mes "Not that I think that they are indulging in anything luxurious, mind you.";
+			mes "I don't think there is anything wrong with the pursuit of beauty and being fashionable.";
+			next;
+			mes .n$;
+			mes "For us humans, who have no colorful fur or decorative scales, clothes are one of the few ways we have to display our personality, style, and beauty.";
+			next;
+			mes .n$;
+			mes "Haha... When I think about it, I really feel that my job is worthwhile.  I believe that I provide a service that the people desire.";
+			next;
+			mes .n$;
+			mes "Can you feel it too? The energy that is released when rough fabric and leather are brought to life with color?.....";
+			next;
+			mes .n$;
+			mes "Although the process is very tedious and time consuming, the joy and happiness I feel when a dress is finished more than makes up for all of the hard work!!";
+			close;
+		case 2:
+			mes .n$;
+			mes "Oh... you need my work? Well... okay, sounds good.";
+			next;
+			if (Zeny < 10000) {
+				mes .n$;
+				mes "Hmm... you can't afford my services...";
+				close;
+			}
+			mes .n$;
+			mes "Please choose a color";
+			mes "that suits you.";
+			next;
+			switch(select("Default:Red:Blue:Yellow:Orange:Green:Violet:Black:White")) {
+				case 1:
+					setlook 7,1;
+					set Zeny, Zeny-10000;
+					mes .n$;
+					mes "Here you go.";
+					mes "Enjoy your new look!";
+					close;
+				case 2:
+					if (countitem(975) > 0) {
+						setlook 7,2;
+						set Zeny, Zeny-10000;
+						delitem 975,1;
+						mes .n$;
+						mes "Here you go.";
+						mes "Enjoy your new look!";
+						close;
+					}
+				case 3:
+					if (countitem(978) > 0) {
+						setlook 7,3;
+						set Zeny, Zeny-10000;
+						delitem 978,1;
+						close;
+					}
+				case 4:
+					if (countitem(976) > 0) {
+						setlook 7,4;
+						set Zeny, Zeny-10000;
+						delitem 976,1;
+						mes .n$;
+						mes "Here you go.";
+						mes "Enjoy your new look!";
+						close;
+					}
+				case 5:
+					if (countitem(980) > 0) {
+						setlook 7,5;
+						set Zeny, Zeny-10000;
+						delitem 980,1;
+						mes .n$;
+						mes "Here you go.";
+						mes "Enjoy your new look!";
+						close;
+					}
+				case 6:
+					if (countitem(979) > 0) {
+						setlook 7,6;
+						set Zeny, Zeny-10000;
+						delitem 979,1;
+						mes .n$;
+						mes "Here you go.";
+						mes "Enjoy your new look!";
+						close;
+					}
+				case 7:
+					if (countitem(981) > 0) {
+						setlook 7,7;
+						set Zeny, Zeny-10000;
+						delitem 981,1;
+						mes .n$;
+						mes "Here you go.";
+						mes "Enjoy your new look!";
+						close;
+					}
+				case 8:
+					if (countitem(983) > 0) {
+						setlook 7,8;
+						set Zeny, Zeny-10000;
+						delitem 983,1;
+						mes .n$;
+						mes "Here you go.";
+						mes "Enjoy your new look!";
+						close;
+					}
+				case 9:
+					if (countitem(982) > 0) {
+						setlook 7,9;
+						set Zeny, Zeny-10000;
+						delitem 982,1;
+						mes .n$;
+						mes "Here you go.";
+						mes "Enjoy your new look!";
+						close;
+					}
+			}
+			mes .n$;
+			mes "You have to provide the correct Dyestuffs.";
+			close;
+		case 3:
+			mes .n$;
+			mes "Each color costs 10000z and 1 dye:";
+			mes " ";
+			mes " - Default: No Dyestuffs required";
+			mes " - ^FF4422Red^000000: Scarlet Dyestuffs";
+			mes " - ^D5A500Yellow^000000: Lemon Dyestuffs";
+			mes " - ^AA00AAViolet^000000: Violet Dyestuffs";
+			mes " - ^FF8800Orange^000000: Orange Dyestuffs";
+			mes " - ^4422FFBlue^000000: CobaltBlue Dyestuffs";
+			mes " - ^009500Green^000000: DarkGreen Dyestuffs";
+			mes " - Black: Black Dyestuffs";
+			mes " - White: White Dyestuffs";
+			close;
+	}	
+}

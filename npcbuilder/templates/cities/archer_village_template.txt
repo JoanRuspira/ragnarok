@@ -255,7 +255,7 @@ pay_arche,106,68,2	script	Archer Villager#pay_arche::npcid	spriteid,{
 	end;
 }
 
-payon_in02,65,72,5	script	Archer Villager#pay_arche::npcid	727,{
+payon_in02,65,72,5	script	Archer Guildmaster#pay_arche::npcid	727,{
 	npctalk "I will make you an archer";
 	end;
 }

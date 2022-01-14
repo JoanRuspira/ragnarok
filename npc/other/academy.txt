@@ -235,9 +235,103 @@
 	}
 }
 
+
+
+
+-	script	Academy Teleporter#newbe11::NvTeleport	-1,{
+	mes "[Academy Teleporter]";
+	mes "Hello new adventurer!";
+	mes "I offer a free teleport service for novices,";
+	mes "and can send you to one of the cities";
+	mes "containing basic job guilds. I'm excluding";
+	mes "the local Swordman Guild as it is located";
+	mes "here in Izlude.";
+	mes "Sound good?";
+	next;
+	switch(select("Yeah!:I'd rather stay here")) {
+		case 1:
+			mes "[Academy Teleporter]";
+			mes "Excellent! Where would you want";
+			mes "to go?";
+			next;
+			switch(select("Prontera:Payon:Alberta:Morroc:Geffen")) {
+				case 1:
+					mes "[Academy Teleporter]";
+					mes "The Acolite Guild is part of";
+					mes "The Prontera church. I'll send you";
+					mes "to Prontera now.";
+					next;
+					mes "[Academy Teleporter]";
+					mes "I suggest finding a local inn and";
+					mes "saving your respawn there.";
+					next;
+					warp "prontera",163,77;
+					close;
+				case 2:
+					mes "[Academy Teleporter]";
+					mes "The Archer Guild is in the ";
+					mes "Archer Village, north of";
+					mes "Payon. I'll send you to Payon now.";
+					next;
+					mes "[Academy Teleporter]";
+					mes "I suggest finding a local inn and";
+					mes "saving your respawn there.";
+					next;
+					warp "payon",175,103;
+					close;
+				case 3:
+					mes "[Academy Teleporter]";
+					mes "The Merchant Guild is located ";
+					mes "in Alberta. I'll send you to Alberta now.";
+					next;
+					mes "[Academy Teleporter]";
+					mes "I suggest finding a local inn and";
+					mes "saving your respawn there.";
+					next;
+					warp "alberta",30,244;
+					close;
+				case 4:
+					mes "[Academy Teleporter]";
+					mes "The Thief Guild is located ";
+					mes "under the Morroc Pyramids.";
+					mes "I'll send you to Morroc now.";
+					next;
+					mes "[Academy Teleporter]";
+					mes "I suggest finding a local inn and";
+					mes "saving your respawn there.";
+					next;
+					warp "morroc",146,85;
+					close;
+				case 5:
+					mes "[Academy Teleporter]";
+					mes "The Mage Guild is located in Geffen.";
+					mes "I'll send you to Morroc now.";
+					next;
+					mes "[Academy Teleporter]";
+					mes "I suggest finding a local inn and";
+					mes "saving your respawn there.";
+					next;
+					warp "geffen",110,60;
+					close;
+			}
+			close;
+		case 2:
+			mes "[Archer Guildsman]";
+			mes "No problem!";
+			mes "Ask for help if you need it.";
+			close;
+		}
+}
+
+
+
+
+
+
 iz_ac02,66,179,5	duplicate(NvSwordman)	Swordman Guide#nv1	728
 iz_ac02,58,177,4	duplicate(NvMage)	Mage Guide#nv1	123
 iz_ac02,43,170,6	duplicate(NvMerchant)	Merchant Guide#nv1	97
 iz_ac02,142,118,5	duplicate(NvThief)	Thief Guide#nv1	118
 iz_ac02,146,111,5	duplicate(NvAcolyte)	Acolyte Guide#nv1	95
 iz_ac02,164,109,2	duplicate(NvArcher)	Archer Guide#nv1	727
+iz_ac01,96,45,4	duplicate(NvTeleport)	Academy Teleporter#nv1	47

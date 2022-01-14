@@ -163,10 +163,6 @@ alberta,65,67,7	script	Alberta Villager#alb:npcid	spriteid,{
 	end;
 }
 
-alberta,50,43,2	script	Alberta Villager#alb:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
 
 alberta,75,64,1	script	Alberta Villager#alb:npcid	spriteid,{
 	npctalk "npcdialog";
@@ -283,10 +279,6 @@ alberta,106,177,4	script	Alberta Villager#alb:npcid	708,{
 	end;
 }
 
-alberta,93,195,4	script	Alberta Villager#alb:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
 
 alberta,93,191,0	script	Alberta Villager#alb:npcid	spriteid,{
 	npctalk "npcdialog";
@@ -303,10 +295,6 @@ alberta,106,204,7	script	Alberta Villager#alb:npcid	spriteid,{
 	end;
 }
 
-alberta,93,195,3	script	Alberta Villager#alb:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
 
 alberta,102,218,6	script	Alberta Villager#alb:npcid	spriteid,{
 	npctalk "npcdialog";
@@ -734,7 +722,412 @@ alberta_in,184,27,3	script	Alberta Villager#alb:npcid	spriteid,{
 	end;
 }
 
-alberta_in,173,89,1	script	Merchant Guildmaster#alb:npcid	10380,{
-	npctalk "I will make you a merchant";
+alberta_in,173,89,1	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,21,232,2	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,26,244,5	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,41,229,6	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,51,212,5	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,55,203,5	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta_in,170,96,3	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,56,217,6	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,46,197,4	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,53,173,0	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,75,169,3	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,88,167,6	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,103,165,7	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,102,188,3	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,111,196,4	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,96,204,5	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,111,212,1	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,115,228,5	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,110,168,3	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,105,154,0	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,116,150,6	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,129,149,3	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,141,156,0	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,142,184,7	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,145,215,7	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,134,224,1	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,140,232,4	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,165,191,2	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,188,194,7	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,204,193,4	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,193,215,7	script	Alberta Sailor#alb:npcid	100,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,204,224,3	script	Alberta Sailor#alb:npcid	100,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,181,225,2	script	Alberta Sailor#alb:npcid	100,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,173,220,4	script	Alberta Sailor#alb:npcid	100,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,175,213,6	script	Alberta Sailor#alb:npcid	100,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,201,213,4	script	Alberta Sailor#alb:npcid	100,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,152,148,0	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,153,131,6	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,213,100,3	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,230,108,4	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,230,89,0	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,241,75,5	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,238,45,0	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,208,44,1	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,219,57,6	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,192,52,3	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,185,58,7	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,184,75,6	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,191,94,4	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,162,81,5	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,171,57,3	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,163,47,7	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,175,33,1	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,140,44,3	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,102,38,1	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,96,88,0	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,101,106,3	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,111,121,7	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,90,128,6	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,103,136,7	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,116,134,1	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,45,133,5	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,50,125,0	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,53,100,4	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,64,85,3	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,84,48,7	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,63,146,4	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,65,139,3	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,67,105,6	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,69,97,1	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,68,183,5	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,58,137,1	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta_in,64,147,4	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta_in,61,137,7	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta_in,68,105,5	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta_in,70,96,1	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta_in,72,174,1	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta_in,65,184,5	script	Alberta Villager#alb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,181,165,2	script	Alberta Sailor#alb:npcid2	100,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,173,172,5	script	Alberta Sailor#alb:npcid3	100,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,205,175,0	script	Alberta Sailor#alb:npcid4	100,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta,198,164,5	script	Alberta Sailor#alb:npcid5	100,{
+	npctalk "npcdialog";
 	end;
 }

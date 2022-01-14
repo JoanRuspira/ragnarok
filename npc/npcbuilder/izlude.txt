@@ -431,10 +431,6 @@ izlude,145,166,3	script	Izlude Villager#izl::76289f0d	86,{
 	end;
 }
 
-iz_ac01,96,45,4	script	Academy Staff#izl::be05ef8d	47,{
-	npctalk "Welcome to the Cryptura Academy.";
-	end;
-}
 
 iz_ac01,102,45,4	script	Academy Staff#izl::f0aaa4eb	50,{
 	npctalk "Welcome to the Cryptura Academy.";
@@ -669,7 +665,7 @@ izlude,187,161,6	script	Izlude Villager#izl::e4daac3b	570,{
 }
 
 
-izlude_in,74,172,5	script	Swordman Guild Master#izl::083582f3	119,{
+izlude_in,74,172,5	script	Swordman Guildmaster#izl::083582f3	119,{
 	npctalk "I will make you a swordsman";
 	end;
 }
