@@ -247,3 +247,155 @@ gef_fild06,375,216,5	script	Bulletin Board#sgn::37	837,{
 	mes "You are now entering the Kordt Forest.";
 	close;
 }
+
+gef_fild06,29,310,5	script	Board#sgn::38	858,{
+	mes "Attention! Glast Heim Fortress ruins ahead.";
+	mes "Please exercise caution.";
+	close;
+}
+
+glast_01,367,309,5	script	Board#sgn::39	837,{
+	mes "You are now on the Glast Heim";
+	mes "Fortess ruins. This is a place";
+	mes "overtaken by dark forces.";
+	mes "Please be careful when exploring.";
+	close;
+}
+
+
+glast_01,196,292,5	script	Board#sgn::40	858,{
+	mes "Glast Heim Castle.";
+	close;
+}
+
+glast_01,205,137,3	script	Board#sgn::41	858,{
+	mes "Glast Heim Church.";
+	close;
+}
+
+glast_01,75,198,3	script	Board#sgn::42	858,{
+	mes "Glast Heim Chivalry.";
+	close;
+}
+
+glast_01,58,109,5	script	Board#sgn::43	858,{
+	mes "Glast Heim Staircase.";
+	close;
+}
+
+gef_fild07,44,199,4	script	Board#sgn::44	835,{
+	mes "West to Kordt Forest.";
+	mes "East to Payon.";
+	mes "South to Britoniah.";
+	mes "South to the Orc Village.";
+	close;
+}
+
+gef_fild13,38,358,0	script	Board#sgn::45	858,{
+	mes "Britoniah castles";
+	mes "have been abandoned";
+	mes "and access is forbidden.";
+	mes "Please beware of monsters";
+	mes "escaped from the old Guild Dungeons.";
+	close;
+}
+
+gef_fild12,363,53,5	script	Bulletin Board#sgn::46	837,{
+	mes "You are now entering the Kordt Forest.";
+	close;
+}
+
+gef_fild09,35,85,4	script	Board#sgn::47	835,{
+	mes "North to Geffen";
+	mes "West to Prontera.";
+	close;
+}
+
+
+gef_fild09,223,54,4	script	Board#sgn::48	836,{
+	mes "South to the Orc Village";
+	mes "East to Prontera.";
+	mes "West to Britoniah.";
+	close;
+}
+
+gef_fild10,241,365,7	script	Board#sgn::49	837,{
+	mes "OrK Village!";
+	mes "Human stay away!";
+	mes "Away!";
+	close;
+}
+
+in_orcs01,25,164,5	script	Board#sgn::50	858,{
+	mes "Orc Dungeon entrance.";
+	close;
+}
+
+in_orcs01,112,99,5	script	Board#sgn::51	858,{
+	mes "Orc Dungeon entrance.";
+	close;
+}
+
+gef_fild13,198,36,4	script	Board#sgn::52	835,{
+	mes "North to Geffen.";
+	mes "South West to the Orc Village.";
+	close;
+}
+
+gef_fild13,189,39,5	script	Board#sgn::53	858,{
+	mes "Britoniah castles";
+	mes "have been abandoned";
+	mes "and access is forbidden.";
+	mes "Please beware of monsters";
+	mes "escaped from the old Guild Dungeons.";
+	close;
+}
+
+gef_fild13,370,58,5	script	Board#sgn::54	858,{
+	mes "Britoniah castles";
+	mes "have been abandoned";
+	mes "and access is forbidden.";
+	mes "Please beware of monsters";
+	mes "escaped from the old Guild Dungeons.";
+	close;
+}
+
+gef_fild10,101,27,7	script	Board#sgn::55	837,{
+	mes "OrK Village!";
+	mes "Human stay away!";
+	mes "Away!";
+	close;
+}
+
+gef_fild10,367,63,5	script	Board#sgn::56	837,{
+	mes "OrK Village!";
+	mes "Human stay away!";
+	mes "Away!";
+	close;
+}
+
+gef_fild03,372,281,4	script	Board#sgn::57	836,{
+	mes "West to the Orc Village";
+	mes "East to Prontera.";
+	close;
+}
+
+prt_fild09,84,373,0	script	Bulletin Board#sgn::58	837,{
+	mes "You are now entering the Sograt Desert.";
+	close;
+}
+
+prt_fild09,223,367,0	script	Bulletin Board#sgn::59	837,{
+	mes "You are now entering the Sograt Desert.";
+	close;
+}
+
+prt_fild09,22,143,4	script	Bulletin Board#sgn::60	837,{
+	mes "You are now entering the Sograt Desert.";
+	close;
+}
+
+prt_fild10,259,25,0	script	Bulletin Board#sgn::61	837,{
+	mes "You are now entering the Sograt Desert.";
+	close;
+}

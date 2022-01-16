@@ -572,7 +572,7 @@ izlu2dun,106,58,4	script	Kafra Employee::kaf_izlu2dun	4_F_KAFRA2,{
 }
 
 // - Culvert Sewers
-prt_fild05,290,224,3	script	Kafra Employee::prt_fild05	114,{
+prt_fild05,274,216,5	script	Kafra Employee::prt_fild05	114,{
 	cutin "kafra_04",2;
 	mes "[Kafra Employee]";
 	mes "Welcome!";
@@ -613,7 +613,7 @@ moc_ruins,59,157,5	script	Kafra Employee::moc_ruins	114,{
 }
 
 // - Orc Dungeon
-gef_fild10,73,340,5	script	Kafra Employee::kaf_gef_fild10	116,{
+in_orcs01,34,164,5	script	Kafra Employee::kaf_gef_fild10	116,{
 	cutin "kafra_02",2;
 	mes "[Kafra Employee]";
 	mes "Welcome to the";
@@ -642,7 +642,7 @@ alb2trea,59,69,5	script	Kafra Employee::kaf_alb2trea	117,{
 
 // Glastheim
 //============================================================
-glast_01,200,275,0	script	Kafra Employee::kaf_glast	4_F_KAFRA3,{
+glast_01,360,308,5	script	Kafra Employee::kaf_glast	4_F_KAFRA3,{
 	cutin "kafra_03",2;
 	callfunc "F_Kafra",0,3,2,500,700;
 	savepoint "glast_01",200,272,1,1;

@@ -11,15 +11,109 @@
 //=	Changed set -> setarray, Improved text with F_InsertPlural
 //= 1.5 Added sc_end_class to reset related status changes [sader1992]
 //============================================================
-prontera,150,193,4	script	Reset Girl	124,{
+gef_fild05,205,263,5	script	Hypnotist	771,{
 	//	 		Skills,	Stats,	Both,	Limit
 	setarray .@Reset,	5000,	5000,	9000,	0;
-	mes "[Reset Girl]";
-	if(.@Reset[3] && reset_limit > .@Reset[3]) {
-		mes "Sorry you can only reset "+callfunc("F_InsertPlural",.@Reset[3],"time")+" in your life.";
-		close;
+	mes "[Hypnotist]";
+	mes "I am the Camp's Hypnotist.";
+	mes "I can make you forget your abilites.";
+	mes "for a certain price, you know...";
+	next;
+	mes "[Hypnotist]";
+	mes "Is this something you";
+	mes "are interested in?";
+	next;
+	switch(select("Yes:No")) {
+		case 1:
+			mes "[Hypnotist]";
+			mes "Good... the price I charge is 50000z.";
+			mes "I can make you forget your skills";
+			mes "or your status.";
+			next;
+			mes "[Hypnotist]";
+			mes "What do you want to forget?";
+			next;
+			if (Zeny < 50000) {
+				mes "[Hypnotist]";
+				mes "Wait a minute...";
+				mes "I don't think you can";
+				mes "pay for this service.";
+				close;
+			}
+			switch(select("My skills:My status")) {
+				case 1:
+					mes "[Hypnotist]";
+					mes "Ok then... Look at my eyes...";
+					mes "Don't think of anything.";
+					mes "Leave your mind in blank...";
+					mes "And count with me.";
+					next;
+					mes "[Hypnotist]";
+					mes "3...";
+					next;
+					mes "[Hypnotist]";
+					mes "2...";
+					next;
+					mes "[Hypnotist]";
+					mes "1...";
+					next;
+					mes "[Hypnotist]";
+					mes "...";
+					next;
+					ResetSkill;
+					set Zeny, Zeny-50000;
+					specialeffect2 EF_TATAMI;
+					mes "[Hypnotist]";
+					mes "Done! You should have forgotten";
+					mes "your skills now.";
+					next;
+					mes "[Hypnotist]";
+					mes "Come again if you need my services.";
+					mes "We need the money to sustain";
+					mes "our camp.";
+					close;
+				case 2:
+					mes "[Hypnotist]";
+					mes "Ok then... Look at my eyes...";
+					mes "Don't think of anything.";
+					mes "Leave your mind in blank...";
+					mes "And count with me.";
+					next;
+					mes "[Hypnotist]";
+					mes "3...";
+					next;
+					mes "[Hypnotist]";
+					mes "2...";
+					next;
+					mes "[Hypnotist]";
+					mes "1...";
+					next;
+					mes "[Hypnotist]";
+					mes "...";
+					next;
+					ResetStatus;
+					set Zeny, Zeny-50000;
+					specialeffect2 EF_TATAMI;
+					mes "[Hypnotist]";
+					mes "Done! You should have forgotten";
+					mes "your status now.";
+					next;
+					mes "[Hypnotist]";
+					mes "Come again if you need my services.";
+					mes "We need the money to sustain";
+					mes "our camp.";
+					close;
+			}
+		case 2:
+			mes "[Hypnotist]";
+			mes "No problem dear,";
+			mes "Please come again if you change";
+			mes "your mind. We need the money";
+			mes "for our camp.";
+			close;
 	}
-	mes "I am the Reset Girl.";
+
+
 	mes "Reset Stats: "+ callfunc("F_InsertComma",.@Reset[1]) +"z";
 	mes "Reset Skills: "+ callfunc("F_InsertComma",.@Reset[0]) +"z";
 	mes "Reset Both: "+ callfunc("F_InsertComma",.@Reset[2]) +"z";
@@ -28,7 +122,7 @@ prontera,150,193,4	script	Reset Girl	124,{
 	next;
 	set .@i,(select("^FF3355Reset Skills:Reset Stats:Reset Both^000000:Cancel"));
 	if(.@i > 3) close;
-	mes "[Reset Girl]";
+	mes "[Hypnotist]";
 	if (Zeny < .@Reset[.@i-1]) {
 		mes "Sorry, you don't have enough Zeny.";
 		close;
@@ -47,3 +141,5 @@ prontera,150,193,4	script	Reset Girl	124,{
 	if(.@Reset[3]) set reset_limit,reset_limit + 1;
 	close;
 }
+
+//joana-p@hotmail.es

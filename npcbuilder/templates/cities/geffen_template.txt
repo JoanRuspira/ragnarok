@@ -1191,3 +1191,390 @@ mjolnir_02,75,351,7	script	Geffen Adventurer#geff:npcid	686,{
 }
 
 
+
+
+
+
+gef_fild05,84,122,7	script	Ifir Camper#geff:npcid	668,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+
+gef_fild05,88,118,2	script	Ifir Camper#geff:npcid	581,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,77,141,6	script	Ifir Camper#geff:npcid	647,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+
+gef_fild05,111,186,5	script	Ifir Camper#geff:npcid	646,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+
+gef_fild05,123,194,7	script	Ifir Camper#geff:npcid	706,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,125,189,0	script	Ifir Camper#geff:npcid	741,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,110,117,1	script	Ifir Camper#geff:npcid	773,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,122,122,4	script	Ifir Camper#geff:npcid	778,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,134,141,2	script	Ifir Camper#geff:npcid	798,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,129,137,7	script	Ifir Camper#geff:npcid	803,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,134,163,1	script	Ifir Camper#geff:npcid	536,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,84,122,7	script	Ifir Camper#geff:npcid	668,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,133,158,0	script	Ifir Camper#geff:npcid	706,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,140,185,4	script	Ifir Camper#geff:npcid	847,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,139,178,0	script	Ifir Camper#geff:npcid	838,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,200,253,7	script	Ifir Camper#geff:npcid	70,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,185,253,4	script	Ifir Camper#geff:npcid	58,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,214,273,4	script	Ifir Camper#geff:npcid	668,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,221,263,6	script	Ifir Camper#geff:npcid	77,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,228,249,0	script	Ifir Camper#geff:npcid	82,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,243,264,5	script	Ifir Camper#geff:npcid	93,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,252,253,3	script	Ifir Camper#geff:npcid	89,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,224,322,3	script	Ifir Camper#geff:npcid	51,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+
+gef_fild05,214,324,0	script	Ifir Camper#geff:npcid	668,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+
+gef_fild05,161,331,4	script	Ifir Camper#geff:npcid	581,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,138,323,7	script	Ifir Camper#geff:npcid	647,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,141,328,3	script	Ifir Camper#geff:npcid	646,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,96,310,5	script	Ifir Camper#geff:npcid	846,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,87,304,6	script	Ifir Camper#geff:npcid	706,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,65,290,5	script	Ifir Camper#geff:npcid	741,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,62,182,1	script	Ifir Camper#geff:npcid	773,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,73,251,6	script	Ifir Camper#geff:npcid	778,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,81,244,1	script	Ifir Camper#geff:npcid	803,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,86,242,5	script	Ifir Camper#geff:npcid	536,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,68,175,7	script	Ifir Camper#geff:npcid	668,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,98,223,4	script	Ifir Camper#geff:npcid	847,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,107,228,1	script	Ifir Camper#geff:npcid	838,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,157,261,5	script	Ifir Camper#geff:npcid	70,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,170,259,2	script	Ifir Camper#geff:npcid	48,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,119,268,1	script	Ifir Camper#geff:npcid	668,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,123,277,4	script	Ifir Camper#geff:npcid	77,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+
+gef_fild05,129,282,5	script	Ifir Camper#geff:npcid	82,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,154,299,5	script	Ifir Camper#geff:npcid	93,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,160,296,2	script	Ifir Camper#geff:npcid	89,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,159,290,1	script	Ifir Camper#geff:npcid	846,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,197,269,5	script	Ifir Camper#geff:npcid	51,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,259,241,0	script	Ifir Camper#geff:npcid	706,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,306,282,6	script	Ifir Camper#geff:npcid	741,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,313,290,3	script	Ifir Camper#geff:npcid	773,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,319,275,1	script	Ifir Camper#geff:npcid	778,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+
+glast_01,365,306,5	script	Glast Heim Adventurer#geff:npcid	484,{
+	npctalk "npcdialog";
+	end;
+}
+
+glast_01,369,304,2	script	Glast Heim Adventurer#geff:npcid	501,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+glast_01,362,301,4	script	Glast Heim Adventurer#geff:npcid	512,{
+	npctalk "npcdialog";
+	end;
+}
+
+glast_01,368,298,1	script	Glast Heim Adventurer#geff:npcid	542,{
+	npctalk "npcdialog";
+	end;
+}
+
+glast_01,201,290,0	script	Glast Heim Adventurer#geff:npcid	881,{
+	npctalk "npcdialog";
+	end;
+}
+
+glast_01,198,287,7	script	Glast Heim Adventurer#geff:npcid	882,{
+	npctalk "npcdialog";
+	end;
+}
+
+glast_01,203,294,3	script	Glast Heim Adventurer#geff:npcid	773,{
+	npctalk "npcdialog";
+	end;
+}
+
+glast_01,197,133,5	script	Glast Heim Adventurer#geff:npcid	875,{
+	npctalk "npcdialog";
+	end;
+}
+
+glast_01,202,135,3	script	Glast Heim Adventurer#geff:npcid	7,{
+	npctalk "npcdialog";
+	end;
+}
+
+glast_01,200,130,0	script	Glast Heim Adventurer#geff:npcid	695,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+glast_01,71,195,5	script	Glast Heim Adventurer#geff:npcid	468,{
+	npctalk "npcdialog";
+	end;
+}
+
+glast_01,73,190,1	script	Glast Heim Adventurer#geff:npcid	734,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+glast_01,62,108,6	script	Glast Heim Adventurer#geff:npcid	698,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+glast_01,62,108,1	script	Glast Heim Adventurer#geff:npcid	734,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+glast_01,60,104,7	script	Glast Heim Adventurer#geff:npcid	734,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+glast_01,66,106,2	script	Glast Heim Adventurer#geff:npcid	469,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+in_orcs01,32,174,1	script	Orc Dungeon Adventurer#geff:npcid	688,{
+	npctalk "npcdialog";
+	end;
+}
+
+in_orcs01,20,172,1	script	Orc Dungeon Adventurer#geff:npcid	882,{
+	npctalk "npcdialog";
+	end;
+}
+
+in_orcs01,28,163,1	script	Orc Dungeon Adventurer#geff:npcid	686,{
+	npctalk "npcdialog";
+	end;
+}
+
+in_orcs01,37,173,4	script	Orc Dungeon Adventurer#geff:npcid	728,{
+	npctalk "npcdialog";
+	end;
+}
+
+in_orcs01,109,104,1	script	Orc Dungeon Adventurer#geff:npcid	644,{
+	npctalk "npcdialog";
+	end;
+}
+
+in_orcs01,102,98,7	script	Orc Dungeon Adventurer#geff:npcid	634,{
+	npctalk "npcdialog";
+	end;
+}
+
+in_orcs01,107,96,1	script	Orc Dungeon Adventurer#geff:npcid	645,{
+	npctalk "npcdialog";
+	end;
+}
+
+in_orcs01,117,98,3	script	Orc Dungeon Adventurer#geff:npcid	648,{
+	npctalk "npcdialog";
+	end;
+}
