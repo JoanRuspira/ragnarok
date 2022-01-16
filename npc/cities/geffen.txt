@@ -66,33 +66,7 @@ geffen,156,190,0	script	Orwalk	82,{
 	close;
 }
 
-geffen_in,164,109,0	script	Wizard Stanza	64,{
-	mes "[Stanza]";
-	mes "I sense the presence of a mighty spirit. Can it be you...?";
-	next;
-	mes "[Stanza]";
-	if (BaseJob == Job_Mage)
-		mes "It seems that you are trained in the mystic arts. Magic... Its power is governed by the law of cause and effect.";
-	else if (BaseJob == Job_Acolyte) {
-		mes "Ah...";
-		mes "I see that you wield holy power in one way or another. I suppose Holy power may be considered one form of mystical energy.";
-	}
-	else if (Class == Job_Novice)
-		mes "Although you may not be able to use magic or any other kind of powerful skills for now, this knowledge may be helpful in the future, young Novice...";
-	else
-		mes "Although you are not formally trained in the use of magic, you use skills which draw upon otherworldly energies, whether you know it or not...";
-	next;
-	mes "[Stanza]";
-	mes "If you use mystic energy for the purpose of harming others, or to defy the rules set by Mother Nature, that power will naturally be turned against you. Remember, you reap what you sow.";
-	next;
-	mes "[Stanza]";
-	mes "But there is an item that can protect the caster from ill consequence, allowing the safe use of certain magics. These are the shining, mystical stones known as Gemstones.";
-	next;
-	mes "[Stanza]";
-	mes "Gemstone...";
-	mes "If you wish to use your powers to the fullest, remember this item.";
-	close;
-}
+
 
 geffen,147,26,0	script	Ralphie	97,{
 	mes "[Ralphie]";
@@ -425,7 +399,7 @@ OnTouch_:
 	close;
 }
 
-geffen_in,22,125,1	script	Crumpler	52,{
+geffen_in,22,126,1	script	Crumpler	52,{
 	mes "[Crumpler]";
 	mes "Ooooh~!";
 	mes "You sure are dressed pretty,";
@@ -523,7 +497,7 @@ geffen_in,22,125,1	script	Crumpler	52,{
 	}
 }
 
-geffen_in,59,61,1	script	Skyler	61,{
+geffen_in,62,62,1	script	Skyler	61,{
 	mes "[Skyler]";
 	mes "Hello hello.";
 	mes "You're not looking";
@@ -548,7 +522,7 @@ geffen_in,59,61,1	script	Skyler	61,{
 	close;
 }
 
-geffen_in,27,134,5	script	Waitress#elen	91,{
+geffen_in,27,135,5	script	Waitress#elen	91,{
 	mes "[Elenore]";
 	mes "This place...";
 	mes "Certainly has";
@@ -808,7 +782,7 @@ geffen_in,70,67,3	script	Waitress#elise	90,{
 	close;
 }
 
-geffen_in,79,76,2	script	Merchant Daven	120,{
+geffen_in,80,75,2	script	Merchant Daven	120,{
 	mes "[Merchant Daven]";
 	mes "I remember Geffen";
 	mes "back when it was boring. ";
@@ -921,7 +895,7 @@ geffen_in,114,73,5	script	Hadenheim	709,{
 	close;
 }
 
-geffen_in,39,127,2	script	Psychic Advisor	704,{
+geffen_in,39,125,1	script	Psychic Advisor	704,{
 	mes "[Psychic Advisor]";
 	mes "Ah...";
 	mes "Don't tell me! You've come to have your fortune told, yes? I know,";

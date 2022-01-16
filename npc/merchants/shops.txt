@@ -128,10 +128,11 @@ einbroch,82,199,4	shop	Paddler#ein	855,512:-1,645:-1,1750:-1,501:-1
 //=======================================================
 geffen_in,26,178,4	shop	Armor Dealer#gef	66,2628:-1,2101:-1,2107:-1,2401:-1,2501:-1,2230:-1,2301:-1,2303:-1,2305:-1,2321:-1,2332:-1
 geffen_in,30,178,4	shop	Weapon Dealer#gef2	47,1750:-1,1751:-1,1101:-1,1701:-1,1201:-1,1204:-1,1207:-1,1210:-1,1213:-1,1216:-1,1601:-1,1604:-1,1607:-1,1610:-1
-geffen_in,74,144,0	shop	Trader#gef	66,911:-1,910:-1,912:-1
-geffen_in,77,167,0	shop	Tool Dealer#gef	68,1750:-1,611:-1,501:-1,502:-1,503:-1,504:-1,506:-1,645:-1,656:-1,601:-1,602:-1,2241:-1
-geffen_in,77,173,0	shop	Magical Item Seller#gef	64,717:-1,1601:-1,1604:-1,1607:-1,1610:-1,2232:-1,2321:-1,2332:-1
-geffen_in,171,123,4	shop	Tool Dealer#gef2	64,1092:-1,1093:-1
+geffen_in,74,145,0	shop	Trader#gef	66,911:-1,910:-1,912:-1
+geffen_in,78,167,0	shop	Tool Dealer#gef	68,1750:-1,611:-1,501:-1,502:-1,503:-1,504:-1,506:-1,645:-1,656:-1,601:-1,602:-1,2241:-1
+geffen_in,78,174,0	shop	Magical Item Seller#gef	64,715:-1,716:-1,717:-1,1601:-1,1604:-1,1607:-1,1610:-1,2232:-1,2321:-1,2332:-1
+geffen_in,174,112,4	shop	Spell Book Dealer#gef2a	476,6189:-1,6190:-1,6191:-1,6197:-1
+gef_tower,116,37,4	shop	Spell Book Dealer#gef2aa	476,6192:-1,6193:-1,6194:-1,6198:-1,6199:-1,6200:-1,6201:-1
 geffen,177,71,1	shop	Baker#geffen_shop1	91,580:-1,592:-1,593:-1,594:-1,595:-1
 geffen,188,76,5	shop	Butcher#geffen_shop2	996,517:-1,528:-1,12102:-1
 geffen,190,85,7	shop	Fruit Shop#geffen_shop3	102,512:-1,513:-1
@@ -141,7 +142,7 @@ geffen,208,106,3	shop	Baker#geffen_shop6	91,580:-1,592:-1,593:-1,594:-1,595:-1
 geffen,209,100,1	shop	Vegetable Gardener#geffen_shop7	892,522:-1,512:-1,513:-1,515:-1,516:-1,535:-1
 geffen,179,94,5	shop	Butcher#geffen_shop8	996,517:-1,528:-1,12102:-1
 geffen,172,87,3	shop	Potion Master#geffen_shop9	749,501:-1,502:-1,503:-1,504:-1,505:-1,506:-1
-geffen,157,82,5	shop	Flower Merchant#geffen_shop10	90,712:-1,744:-1,748:-1
+geffen,157,82,5	shop	Scroll Merchant#geffen_shop10	90,12215:-1,12216:-1,12217:-1
 geffen,174,107,0	shop	Baker#geffen_shop11	92,580:-1,592:-1,593:-1,594:-1,595:-1
 geffen,180,101,7	shop	Fruit Shop#geffen_shop12	102,512:-1,513:-1
 geffen,208,141,3	shop	Butcher#geffen_shop13	54,517:-1
@@ -152,7 +153,7 @@ geffen,196,139,2	shop	Fruit Shop#geffen_shop17	102,512:-1,513:-1
 geffen,209,156,3	shop	Pet Groomer#geffen_shop18	124,537:-1,643:-1,10013:-1,10014:-1,554:-1,6113:-1,6114:-1,6115:-1
 geffen,188,158,4	shop	Market Fish Vendor#geffen_shop19	84,544:-1,579:-1,584:-1
 geffen,194,153,1	shop	Butcher#geffen_shop20	54,517:-1
-geffen,181,142,6	shop	Milk Vendor#geffen_shop21	90,519:-1
+geffen,181,142,6	shop	Pet Vendor#geffen_shop21	90,9013:-1,9017:-1,9023:-1,9045:-1
 geffen,193,169,5	shop	Vegetable Gardener#geffen_shop22	892,522:-1,512:-1,513:-1,515:-1,516:-1,535:-1
 geffen,197,174,4	shop	Baker#geffen_shop23	92,580:-1,592:-1,593:-1,594:-1,595:-1
 geffen,205,167,3	shop	Flower Vendor#geffen_shop24	90,712:-1,744:-1,748:-1
@@ -165,6 +166,9 @@ geffen,99,37,7	shop	Fruit Shop#geffen_shop30	102,512:-1,513:-1
 geffen,98,31,6	shop	Baker#geffen_shop31	66,580:-1,592:-1,593:-1,594:-1,595:-1
 geffen,107,64,5	shop	Jeweler#geffen_shop32	91,721:-1,723:-1,726:-1,728:-1,729:-1,730:-1,2613:-1
 geffen,89,131,5	shop	Vegetable Gardener#geffen_shop33	892,522:-1,512:-1,513:-1,515:-1,516:-1,535:-1
+geffen_in,30,135,4	shop	Waitress#geffen_shop34	74,12045:-1,12055:-1,12050:-1,12065:-1,12060:-1,12070:-1
+gef_tower,51,101,4	shop	Costume Merchant#geffen_shop35	900,18744:-1,19597:-1,19678:-1,19689:-1,20515:-1,20517:-1
+mjolnir_02,76,355,4	shop	Tool Dealer#geffen_shop36	68,1750:-1,611:-1,501:-1,502:-1,503:-1,504:-1,506:-1,645:-1,656:-1,601:-1,602:-1,2241:-1
 
 //=======================================================
 // Kunlun
@@ -228,7 +232,7 @@ yuno,218,97,5	shop	Tool Dealer#yuno	84,1750:-1,611:-1,501:-1,502:-1,503:-1,504:-
 yuno,226,107,5	shop	Tool Dealer#yuno1	83,911:-1,910:-1,912:-1
 yuno,197,114,4	shop	Pet Groomer#yuno	124,537:-1,643:-1,10013:-1,10014:-1,6115:-1,554:-1,6114:-1,6113:-1,6110:-1,6115:-1,6100:-1,6098:-1,6112:-1,6104:-1,6108:-1,6111:-1,6095:-1,6099:-1,6096:-1,6097:-1
 yuno,205,103,4	shop	Mr. King's Shop#yuno	125,2340:-1,2341:-1,2411:-1,2222:-1,2230:-1,1721:-1
-yuno,163,187,5	shop	Magical Item Seller#yuno	90,717:-1,1601:-1,1604:-1,1607:-1,1610:-1,2232:-1,2321:-1,2332:-1
+yuno,163,187,5	shop	Magical Item Seller#yuno	90,715:-1,716:-1,717:-1,1601:-1,1604:-1,1607:-1,1610:-1,2232:-1,2321:-1,2332:-1
 yuno_in01,25,34,5	shop	Tool Dealer#yuno2	83,1750:-1,611:-1,501:-1,502:-1,503:-1,504:-1,506:-1,645:-1,656:-1,601:-1,602:-1
 yuno_in01,103,35,2	shop	Weapon Dealer#yuno	49,1750:-1,1751:-1,1101:-1,1701:-1,1201:-1,1204:-1,1207:-1,1210:-1,1213:-1,1216:-1,1601:-1,1604:-1,1607:-1,1610:-1
 yuno_in01,112,26,4	shop	Armor Dealer#yuno	101,2628:-1,2101:-1,2107:-1,2401:-1,2501:-1,2230:-1,2301:-1,2303:-1,2305:-1,2321:-1,2332:-1
@@ -339,7 +343,7 @@ payon,167,180,3	shop	Performer Vendor#pay27	70,11513:-1,6144:-1
 payon,98,326,4	shop	Gemstone Dealer#pay28	58,715:-1,716:-1,717:-1
 payon,93,323,4	shop	Elemental Vendor#pay29	76,990:-1,991:-1,992:-1,993:-1
 payon,109,322,4	shop	Material Dealer#pay30	88,998:-1,999:-1,1010:-1,1011:-1
-payon,115,325,4	shop	Pet Vendor#pay31	536,9012:-1,9019:-1,9018:-1,9020:-1
+payon,115,325,4	shop	Pet Vendor#pay31	536,9012:-1,9019:-1,9018:-1,9020:-1,9025:-1
 payon,119,323,4	shop	Tool Dealer#pay32	533,1750:-1,611:-1,501:-1,502:-1,503:-1,504:-1,506:-1,645:-1,656:-1,601:-1,602:-1,1065:-1
 payon,154,323,4	shop	Arrow Vendor#pay33	732,1750:-1,1751:-1,1752:-1,1753:-1,1754:-1,1755:-1,1756:-1,1757:-1
 payon,248,292,3	shop	Peco Breeder#pay34	807,12622:-1

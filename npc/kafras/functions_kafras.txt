@@ -619,7 +619,7 @@ function	script	F_KafSet	{
 		setarray @wrpD$[0], "Comodo", "Morocc";
 		setarray @wrpP[0], 1200, 1200;
 	} else if (.@map$ == "geffen") {
-		setarray @wrpD$[0], "Prontera", "Al De Baran", "Orc Dungeon", "Mjolnir Dead Pit";
+		setarray @wrpD$[0], "Prontera";
 		setarray @wrpP[0], 1200, 1200, 1700, 1700;
 		setarray @viewpX[0], 120, 203;
 		setarray @viewpY[0], 62, 123;

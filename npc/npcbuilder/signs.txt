@@ -190,3 +190,60 @@ alb2trea,69,78,4	script	Bulletin Board#sgn::29	837,{
 	mes "off the coast of Alberta.";
 	close;
 }
+
+moc_fild10,206,239,7	script	Board#sgn::28a	858,{
+	mes "Morroc Oasis";
+	close;
+}
+
+moc_fild05,213,265,6	script	Sign#sgn::29a	835,{
+	mes "West to Morroc.";
+	mes "East to Payon.";
+	close;
+}
+
+moc_fild15,269,264,7	script	Board#sgn::30	858,{
+	mes "Anthell entrance ahead.";
+	close;
+}
+
+moc_fild15,249,244,3	script	Board#sgn::31	858,{
+	mes "Anthell entrance ahead.";
+	close;
+}
+
+geffen,120,190,4	script	Board#sgn::32	835,{
+	mes "South to City Centre.";
+	mes "West to Mague Guild.";
+	mes "East to Market and Inn.";
+	mes "North to Exit.";
+	close;
+}
+
+geffen,107,117,4	script	Bulletin Board#sgn::33	837,{
+	mes "Geffen, the City of Magic.";
+	mes "Visit the Mague Guild";
+	mes "and the Geffen tower.";
+	mes "The greatest wizard destination.";
+	close;
+}
+
+gef_tower,161,115,1	script	Board#sgn::34	858,{
+	mes "Geffen Tower Dungeon ahead.";
+	close;
+}
+
+mjolnir_02,77,361,4	script	Board#sgn::35	858,{
+	mes "Caution: Old Coal Mine entrance ahead.";
+	close;
+}
+
+gef_fild08,352,193,5	script	Bulletin Board#sgn::36	837,{
+	mes "You are now entering the Kordt Forest.";
+	close;
+}
+
+gef_fild06,375,216,5	script	Bulletin Board#sgn::37	837,{
+	mes "You are now entering the Kordt Forest.";
+	close;
+}

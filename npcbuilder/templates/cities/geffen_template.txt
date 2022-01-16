@@ -230,7 +230,7 @@ geffen,87,174,0	script	Geffen Villager#geff:npcid	spriteid,{
 	end;
 }
 
-geffen,53,120,0	script	Geffen Villager#geff:npcid	spriteid,{
+geffen,65,96,4	script	Geffen Villager#geff:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
@@ -245,12 +245,12 @@ geffen,76,190,0	script	Geffen Villager#geff:npcid	spriteid,{
 	end;
 }
 
-geffen,90,197,2	script	Geffen Villager#geff:npcid	spriteid,{
+geffen,90,197,6	script	Geffen Villager#geff:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,92,197,6	script	Geffen Villager#geff:npcid	spriteid,{
+geffen,92,197,2	script	Geffen Villager#geff:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
@@ -295,12 +295,12 @@ geffen,117,183,4	script	Geffen Villager#geff:npcid	spriteid,{
 	end;
 }
 
-geffen,121,174,6	script	Geffen Villager#geff:npcid	spriteid,{
+geffen,121,174,2	script	Geffen Villager#geff:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,119,174,2	script	Geffen Villager#geff:npcid	spriteid,{
+geffen,119,174,6	script	Geffen Villager#geff:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
@@ -679,3 +679,515 @@ geffen,121,159,4	script	Geffen Villager#geff:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
+
+
+geffen,138,69,3	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen,158,67,1	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+geffen,163,80,2	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen,174,61,5	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen,200,88,1	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen,202,136,5	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen,205,158,3	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen,197,167,5	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen,165,193,3	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen,131,210,4	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,163,116,5	script	Mage Guildmaster#geff:npcid	64,{
+	npctalk "I will make you a mage";
+	end;
+}
+
+geffen_in,156,122,7	script	Geffen Villager#geff:npcid	9,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,159,102,1	script	Geffen Villager#geff:npcid	502,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,171,105,4	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,167,124,1	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,28,127,1	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,33,120,1	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,38,122,4	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,33,126,5	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,25,130,1	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,16,124,0	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,20,117,1	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,23,120,0	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,29,112,4	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,30,165,1	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,25,170,4	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,21,163,0	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,65,58,4	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,63,53,1	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,62,73,3	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,61,76,7	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,66,79,4	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,74,77,6	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,78,62,6	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,80,57,3	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,74,56,7	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,69,56,1	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,25,71,3	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,32,36,4	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,35,30,1	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,25,28,0	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,35,63,2	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,107,36,3	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,110,30,5	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,71,73,1	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,70,108,7	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,112,111,3	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,106,104,7	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,66,141,7	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,66,171,6	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,71,169,3	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,61,164,7	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,101,171,6	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,135,165,7	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen_in,138,140,4	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+geffen,61,63,7	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen,96,99,4	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+geffen,118,153,0	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_tower,111,37,5	script	Wizard Guildmaster#geff:npcid	735,{
+	npctalk "I will make you a wizard.";
+	end;
+}
+
+gef_tower,107,28,1	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_tower,120,26,4	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_tower,112,76,5	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog.";
+	end;
+}
+
+gef_tower,109,66,1	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_tower,110,108,1	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_tower,112,119,4	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_tower,123,111,3	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_tower,119,170,4	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_tower,104,164,7	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_tower,40,29,7	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_tower,49,48,5	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_tower,55,30,1	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_tower,64,28,4	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_tower,60,97,3	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_tower,52,90,7	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_tower,42,99,4	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_tower,50,81,0	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_tower,36,151,4	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_tower,50,169,7	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_tower,50,167,5	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_tower,53,156,1	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_tower,51,146,1	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_tower,59,151,4	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_tower,66,166,7	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_tower,73,152,4	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+gef_tower,158,109,1	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+gef_tower,154,116,6	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+gef_tower,154,111,1	script	Geffen Villager#geff:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+gef_fild07,326,190,3	script	Geffen Adventurer#geff:npcid	486,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_fild07,321,183,7	script	Geffen Adventurer#geff:npcid	695,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_fild07,318,191,6	script	Geffen Adventurer#geff:npcid	688,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_fild07,330,186,4	script	Geffen Adventurer#geff:npcid	779,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_fild04,187,54,0	script	Geffen Adventurer#geff:npcid	567,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_fild04,191,51,0	script	Geffen Adventurer#geff:npcid	693,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_fild04,183,59,5	script	Geffen Adventurer#geff:npcid	602,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_fild00,52,206,5	script	Geffen Adventurer#geff:npcid	603,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_fild00,54,199,1	script	Geffen Adventurer#geff:npcid	616,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_fild00,58,203,2	script	Geffen Adventurer#geff:npcid	634,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_fild00,61,206,6	script	Geffen Adventurer#geff:npcid	637,{
+	npctalk "npcdialog";
+	end;
+}
+
+mjolnir_02,81,356,7	script	Geffen Adventurer#geff:npcid	558,{
+	npctalk "npcdialog";
+	end;
+}
+
+mjolnir_02,85,358,3	script	Geffen Adventurer#geff:npcid	681,{
+	npctalk "npcdialog";
+	end;
+}
+
+mjolnir_02,75,351,7	script	Geffen Adventurer#geff:npcid	686,{
+	npctalk "npcdialog";
+	end;
+}
+
+

@@ -4904,7 +4904,7 @@ Body:
     AegisName: Blessing_10_Scroll
     Name: LV10 Blessing Scroll
     Type: Usable
-    Buy: 2
+    Buy: 2000
     Weight: 10
     NoUse:
       Override: 100
@@ -4925,7 +4925,7 @@ Body:
     AegisName: Inc_Agi_10_Scroll
     Name: LV10 Agil Scroll
     Type: Usable
-    Buy: 2
+    Buy: 2000
     Weight: 10
     NoUse:
       Override: 100
@@ -4949,7 +4949,7 @@ Body:
     AegisName: Aspersio_5_Scroll
     Name: LV5 Aspersio Scroll
     Type: Usable
-    Buy: 2
+    Buy: 2000
     Weight: 10
     NoUse:
       Override: 100

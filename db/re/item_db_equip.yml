@@ -33858,7 +33858,7 @@ Body:
     AegisName: Poison_Spore_Egg
     Name: Poison Spore Egg
     Type: Petegg
-    Buy: 20
+    Buy: 100000
   - Id: 9014
     AegisName: PecoPeco_Egg
     Name: Peco Peco Egg
@@ -33908,7 +33908,7 @@ Body:
     AegisName: Deviruchi_Egg
     Name: Deviruchi Egg
     Type: Petegg
-    Buy: 20
+    Buy: 100000
   - Id: 9024
     AegisName: Bapho_Jr._Egg
     Name: Bapho Jr. Egg
@@ -33918,7 +33918,7 @@ Body:
     AegisName: Bongun_Egg
     Name: Bongun Egg
     Type: Petegg
-    Buy: 20
+    Buy: 100000
   - Id: 9026
     AegisName: Zherlthsh_Egg
     Name: Zealotus Egg
@@ -34025,7 +34025,7 @@ Body:
     AegisName: Whisper_Egg
     Name: Whisper Egg
     Type: Petegg
-    Buy: 20
+    Buy: 100000
   - Id: 9046
     AegisName: Goblin_Leader_Egg
     Name: Goblin Leader Egg
@@ -37100,3 +37100,65 @@ Body:
       Costume_Garment: true
     EquipLevelMin: 1
     View: 62
+  - Id: 18744
+    AegisName: C_World_Star
+    Name: Costume Twilight
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Mid: true
+    View: 883
+    EquipScript: |
+      sc_start SC_SUPER_STAR,INFINITE_TICK,0;
+    UnEquipScript: |
+      sc_end SC_SUPER_STAR;
+  - Id: 19597
+    AegisName: C_Magic_Eyes
+    Name: Costume Magic Eyes
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 209
+  - Id: 19678
+    AegisName: C_Bell_Ribbon
+    Name: Costume Bell Ribbon
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 388
+  - Id: 19689
+    AegisName: C_Ati_Atihan_Hat
+    Name: Costume Ati Atihan
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+      Costume_Head_Mid: true
+      Costume_Head_Low: true
+    EquipLevelMin: 1
+    View: 303
+  - Id: 20515
+    AegisName: C_Magic_Circle
+    Name: Costume Magic Circle
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Garment: true
+    EquipLevelMin: 1
+    Script: |
+      hateffect(HAT_EF_MAGICCIRCLE,true);
+    UnEquipScript: |
+      hateffect(HAT_EF_MAGICCIRCLE,false);
+  - Id: 20517
+    AegisName: C_GiantCatBag_TW
+    Name: Costume Giant Cat Bag
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Garment: true
+    EquipLevelMin: 1
+    View: 25

@@ -537,6 +537,11 @@ izlude,154,119,3	script	Izlude Refiner	63,{
 	end;
 }
 
+geffen_in,103,162,1	script	Geffen Refiner	726,{
+	callfunc "refinemain","Geffen Refiner",0;
+	end;
+}
+
 //============================================================
 //= Main Refiner Function
 //============================================================
@@ -1085,8 +1090,8 @@ yuno_in01,175,28,3	script	Repairman#juno	86,{
 	end;
 }
 
-geffen_in,34,166,3	script	Repairman#gef	99,{
-	callfunc "repairmain","Repairman";
+geffen_in,144,171,3	script	Geffen Repairman#gef	99,{
+	callfunc "repairmain","Geffen Repairman";
 	end;
 }
 

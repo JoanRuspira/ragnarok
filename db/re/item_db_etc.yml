@@ -10799,36 +10799,42 @@ Body:
   - Id: 6189
     AegisName: Magic_Book_FB
     Name: Spell Book (Fire Bolt)
+    Buy: 25000
     Type: Etc
     Flags:
       BuyingStore: true
   - Id: 6190
     AegisName: Magic_Book_CB
     Name: Spell Book (Cold Bolt)
+    Buy: 25000
     Type: Etc
     Flags:
       BuyingStore: true
   - Id: 6191
     AegisName: Magic_Book_LB
     Name: Spell Book (Lightening Bolt)
+    Buy: 25000
     Type: Etc
     Flags:
       BuyingStore: true
   - Id: 6192
     AegisName: Magic_Book_SG
     Name: Spell Book (Storm Gust)
+    Buy: 50000
     Type: Etc
     Flags:
       BuyingStore: true
   - Id: 6193
     AegisName: Magic_Book_LOV
     Name: Spell Book (Lord Of Vermilion)
+    Buy: 50000
     Type: Etc
     Flags:
       BuyingStore: true
   - Id: 6194
     AegisName: Magic_Book_MS
     Name: Spell Book (Meteor Storm)
+    Buy: 50000
     Type: Etc
     Flags:
       BuyingStore: true
@@ -10847,30 +10853,35 @@ Body:
   - Id: 6197
     AegisName: Magic_Book_TS
     Name: Spell Book (Thunder Storm)
+    Buy: 50000
     Type: Etc
     Flags:
       BuyingStore: true
   - Id: 6198
     AegisName: Magic_Book_JT
     Name: Spell Book (Jupitel Thunder)
+    Buy: 50000
     Type: Etc
     Flags:
       BuyingStore: true
   - Id: 6199
     AegisName: Magic_Book_WB
     Name: Spell Book (Water Ball)
+    Buy: 50000
     Type: Etc
     Flags:
       BuyingStore: true
   - Id: 6200
     AegisName: Magic_Book_HD
     Name: Spell Book (Heaven's Drive)
+    Buy: 50000
     Type: Etc
     Flags:
       BuyingStore: true
   - Id: 6201
     AegisName: Magic_Book_ES
     Name: Spell Book (Earth Spike)
+    Buy: 50000
     Type: Etc
     Flags:
       BuyingStore: true
