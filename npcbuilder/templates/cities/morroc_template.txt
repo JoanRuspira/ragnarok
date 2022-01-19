@@ -358,11 +358,6 @@ morocc,282,182,5	script	Morroc Villager#moc::npcid	spriteid,{
 	end;
 }
 
-morocc,282,182,6	script	Morroc Villager#moc::npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
 
 morocc,285,187,2	script	Morroc Villager#moc::npcid	spriteid,{
 	npctalk "npcdialog";
@@ -671,11 +666,6 @@ morocc,110,77,7	script	Morroc Villager#moc::npcid	spriteid,{
 	end;
 }
 
-morocc,145,43,0	script	Morroc Villager#moc::npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
 morocc,147,52,4	script	Morroc Villager#moc::npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
@@ -816,10 +806,6 @@ morocc,53,92,6	script	Morroc Villager#moc::npcid	spriteid,{
 	end;
 }
 
-morocc,53,92,6	script	Morroc Villager#moc::npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
 
 morocc,53,88,0	script	Morroc Villager#moc::npcid	spriteid,{
 	npctalk "npcdialog";
@@ -1319,6 +1305,658 @@ moc_fild10,31,210,5	script	Morroc Villager#moc::npcid	spriteid,{
 }
 
 moc_fild10,33,204,2	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+moc_fild15,246,250,5	script	Sograt Adventurer#moc::npcid	696,{
+	npctalk "npcdialog";
+	end;
+}
+
+moc_fild15,248,246,7	script	Sograt Adventurer#moc::npcid	681,{
+	npctalk "npcdialog";
+	end;
+}
+
+moc_fild15,242,246,2	script	Sograt Adventurer#moc::npcid	653,{
+	npctalk "npcdialog";
+	end;
+}
+
+moc_fild15,272,261,3	script	Sograt Adventurer#moc::npcid	642,{
+	npctalk "npcdialog";
+	end;
+}
+
+moc_fild15,266,263,4	script	Sograt Adventurer#moc::npcid	643,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+moc_fild04,234,326,5	script	Sograt Adventurer#moc::npcid	698,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+moc_fild04,236,332,2	script	Sograt Adventurer#moc::npcid	695,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+moc_fild04,232,337,4	script	Sograt Adventurer#moc::npcid	728,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+moc_fild04,205,325,3	script	Sograt Adventurer#moc::npcid	740,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+moc_fild04,201,330,5	script	Sograt Adventurer#moc::npcid	754,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+moc_fild04,199,326,6	script	Sograt Adventurer#moc::npcid	688,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+moc_ruins,101,106,7	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+moc_ruins,109,117,2	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+moc_ruins,96,120,4	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+moc_ruins,88,123,1	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+moc_ruins,81,187,5	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+moc_ruins,86,143,3	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+moc_ruins,65,161,2	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+moc_ruins,63,153,3	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+moc_ruins,57,152,7	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+moc_ruins,73,160,1	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+moc_ruins,64,167,4	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+moc_ruins,128,150,3	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+moc_ruins,121,135,7	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+moc_ruins,134,130,2	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+moc_ruins,133,149,4	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+moc_ruins,123,122,2	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+moc_ruins,120,127,5	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+moc_ruins,96,104,7	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+moc_ruins,104,95,1	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+moc_ruins,85,163,5	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,208,103,3	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,215,110,1	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,228,99,5	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,241,90,3	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,235,107,0	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,227,127,1	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,231,149,5	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,235,160,2	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,225,172,4	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,223,189,5	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,226,200,1	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,224,220,6	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,236,223,7	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,249,230,1	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,250,241,5	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,233,243,3	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,224,237,1	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,211,228,4	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,203,243,1	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,172,234,1	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,171,265,0	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,167,282,1	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,175,288,6	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,185,284,1	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,196,274,5	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,209,274,0	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,229,287,7	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,248,282,4	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,281,289,5	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,288,279,1	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,295,284,2	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,287,245,3	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,294,234,0	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,280,230,6	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,275,168,3	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,271,155,0	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,287,110,3	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,280,99,7	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,289,75,2	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,285,54,1	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,241,40,1	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,227,37,0	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,201,32,0	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,181,29,1	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,170,32,2	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,130,38,7	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,121,31,2	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,122,107,2	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,104,113,0	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,105,100,4	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,85,84,3	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,81,97,6	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,93,102,3	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,87,128,6	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,95,140,1	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,89,155,4	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,97,169,6	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,81,182,2	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,91,197,1	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,94,219,4	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,109,237,0	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,128,238,5	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,133,286,3	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,117,284,6	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,107,279,7	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,91,290,4	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,84,274,7	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,88,261,5	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,58,273,4	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,31,265,5	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,31,218,7	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,44,209,1	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,42,186,4	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,36,124,4	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,30,105,7	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,33,91,3	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,25,274,7	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,41,70,3	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,53,66,1	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+
+
+
+morocc_in,69,67,3	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc_in,42,94,7	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc_in,114,93,3	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc_in,48,122,7	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc_in,118,125,3	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc_in,130,57,0	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc_in,104,172,5	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc_in,107,165,2	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc_in,106,153,0	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc_in,142,175,2	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc_in,137,172,0	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc_in,144,98,1	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc_in,170,144,5	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc_in,178,177,1	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc_in,166,175,6	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc_in,174,62,6	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,70,181,4	script	Morroc Villager#moc::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+morocc,82,170,1	script	Morroc Villager#moc::npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }

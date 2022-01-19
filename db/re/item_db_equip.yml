@@ -33803,7 +33803,7 @@ Body:
     AegisName: Drops_Egg
     Name: Drops Egg
     Type: Petegg
-    Buy: 20
+    Buy: 100000
   - Id: 9003
     AegisName: Poporing_Egg
     Name: Poporing Egg
@@ -33898,6 +33898,7 @@ Body:
     AegisName: Isis_Egg
     Name: Isis Egg
     Type: Petegg
+    Buy: 100000
     Buy: 20
   - Id: 9022
     AegisName: Green_Petite_Egg
@@ -37162,3 +37163,58 @@ Body:
       Costume_Garment: true
     EquipLevelMin: 1
     View: 25
+  - Id: 31131
+    AegisName: C_Monk_Hat
+    Name: Costume Monk Hat
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 35
+  - Id: 31161
+    AegisName: C_Tiger_Mask
+    Name: Costume Tiger Mask
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+      Costume_Head_Mid: true
+    EquipLevelMin: 1
+    View: 181
+  - Id: 31138
+    AegisName: C_Piamette_Red_Hood
+    Name: Costume Piamette's Red Hood
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 1557
+  - Id: 31142
+    AegisName: C_Time_Prison
+    Name: Costume Prison of Time
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Low: true
+    EquipLevelMin: 1
+    View: 1309
+    EquipScript: |
+      sc_start SC_TIME_ACCESSORY,INFINITE_TICK,0;
+    UnEquipScript: |
+      sc_end SC_TIME_ACCESSORY;
+  - Id: 31160
+    AegisName: C_RuneHelm
+    Name: Costume Rune Helm
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 1361
+  - Id: 9102
+    AegisName: Mummy_Egg
+    Name: Mummy Egg
+    Type: Petegg
+    Buy: 100000

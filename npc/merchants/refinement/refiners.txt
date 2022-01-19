@@ -1070,11 +1070,6 @@ alberta_in,31,65,4	script	Alberta Repairman#alb	86,{
 	end;
 }
 
-moc_ruins,107,94,4	script	Repairman#moc	99,{
-	callfunc "repairmain","Repairman";
-	end;
-}
-
 payon,139,173,4	script	Payon Repairman#pay	731,{
 	callfunc "repairmain","Payon Repairman";
 	end;

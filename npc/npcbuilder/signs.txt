@@ -203,12 +203,12 @@ moc_fild05,213,265,6	script	Sign#sgn::29a	835,{
 }
 
 moc_fild15,269,264,7	script	Board#sgn::30	858,{
-	mes "Anthell entrance ahead.";
+	mes "Caution: Anthell south entrance.";
 	close;
 }
 
 moc_fild15,249,244,3	script	Board#sgn::31	858,{
-	mes "Anthell entrance ahead.";
+	mes "Caution: Anthell south entrance.";
 	close;
 }
 
@@ -249,13 +249,13 @@ gef_fild06,375,216,5	script	Bulletin Board#sgn::37	837,{
 }
 
 gef_fild06,29,310,5	script	Board#sgn::38	858,{
-	mes "Attention! Glast Heim Fortress ruins ahead.";
+	mes "Attention! Glastheim Fortress ruins ahead.";
 	mes "Please exercise caution.";
 	close;
 }
 
 glast_01,367,309,5	script	Board#sgn::39	837,{
-	mes "You are now on the Glast Heim";
+	mes "You are now on the Glastheim";
 	mes "Fortess ruins. This is a place";
 	mes "overtaken by dark forces.";
 	mes "Please be careful when exploring.";
@@ -264,22 +264,22 @@ glast_01,367,309,5	script	Board#sgn::39	837,{
 
 
 glast_01,196,292,5	script	Board#sgn::40	858,{
-	mes "Glast Heim Castle.";
+	mes "Glastheim Castle.";
 	close;
 }
 
 glast_01,205,137,3	script	Board#sgn::41	858,{
-	mes "Glast Heim Church.";
+	mes "Glastheim Church.";
 	close;
 }
 
 glast_01,75,198,3	script	Board#sgn::42	858,{
-	mes "Glast Heim Chivalry.";
+	mes "Glastheim Chivalry.";
 	close;
 }
 
 glast_01,58,109,5	script	Board#sgn::43	858,{
-	mes "Glast Heim Staircase.";
+	mes "Glastheim Staircase.";
 	close;
 }
 
@@ -397,5 +397,85 @@ prt_fild09,22,143,4	script	Bulletin Board#sgn::60	837,{
 
 prt_fild10,259,25,0	script	Bulletin Board#sgn::61	837,{
 	mes "You are now entering the Sograt Desert.";
+	close;
+}
+
+prt_fild05,228,223,4	script	Board#sgn::62	835,{
+	mes "North to Mt. Mjolnir.";
+	mes "West to Geffen.";
+	mes "East to Prontera.";
+	close;
+}
+
+mjolnir_09,209,109,4	script	Board#sgn::63	835,{
+	mes "North to Mt. Mjolnir.";
+	mes "West to Geffen.";
+	mes "South to Prontera.";
+	close;
+}
+
+mjolnir_08,188,164,4	script	Board#sgn::64	835,{
+	mes "North to Mt. Mjolnir.";
+	mes "South to Prontera.";
+	close;
+}
+
+mjolnir_04,158,86,4	script	Board#sgn::65	837,{
+	mes "Mt. Mjolnir";
+	mes "East Peak ahead.";
+	close;
+}
+
+mjolnir_04,356,181,5	script	Board#sgn::66	837,{
+	mes "Mt. Mjolnir";
+	mes "East Peak ahead.";
+	close;
+}
+
+mjolnir_03,209,102,5	script	Board#sgn::67	837,{
+	mes "Mt. Mjolnir";
+	mes "West Peak ahead.";
+	close;
+}
+
+mjolnir_03,81,264,3	script	Board#sgn::68	837,{
+	mes "Mt. Mjolnir";
+	mes "West Peak ahead.";
+	close;
+}
+
+mjolnir_08,81,261,4	script	Board#sgn::69	835,{
+	mes "North to the Coal Mine";
+	mes "East to Mt. Mjolnir.";
+	mes "West to Glastheim.";
+	close;
+}
+
+prt_fild02,299,63,4	script	Board#sgn::70	835,{
+	mes "East to St. Capitonlina Abbey";
+	mes "West to Mt. Mjolnir.";
+	mes "South to Prontera.";
+	close;
+}
+
+prt_fild03,25,256,4	script	Board#sgn::71	835,{
+	mes "East to St. Capitonlina Abbey";
+	mes "West to Mt. Mjolnir.";
+	close;
+}
+
+prt_monk,52,257,3	script	Board#sgn::72	837,{
+	mes "St. Capitolina Abbey.";
+	mes "Reference for monks across all Midgard.";
+	close;
+}
+
+moc_fild04,231,332,5	script	Board#sgn::73	858,{
+	mes "Caution: Anthell north entrance.";
+	close;
+}
+
+moc_fild04,207,331,4	script	Board#sgn::74	858,{
+	mes "Caution: Anthell north entrance.";
 	close;
 }
