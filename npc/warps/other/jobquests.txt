@@ -108,7 +108,7 @@ alde_alche,158,163,0	warp	alche#r5_b1	1,1,alde_alche,129,103
 //==============================================================================
 cmd_fild07,193,117,0	warp	fild07-rogue00	1,1,in_rogue,379,46
 in_rogue,375,46,0	warp	rogue00-fild07	1,1,cmd_fild07,196,117
-in_rogue,375,34,0	warp	rogue01-02	1,1,in_rogue,380,125
+//in_rogue,375,34,0	warp	rogue01-02	1,1,in_rogue,380,125
 in_rogue,375,125,0	warp	rogue02-01	1,1,in_rogue,379,33
 cmd_fild07,355,286,0	warp	fild07-rogue03	1,1,in_rogue,247,126
 in_rogue,247,122,0	warp	rogue03-fild07	1,1,cmd_fild07,349,285

@@ -290,7 +290,7 @@ cmd_fild04,267,137,4	script	Daeguro#cmd	703,{
 	close;
 }
 
-cmd_fild07,192,58,4	script	Rahasu#cmd	100,{
+cmd_fild07,195,60,4	script	Rahasu#cmd	100,{
 	mes "[Rahasu]";
 	mes "Hey, I'm Rahasu.";
 	mes "If you want to learn";
@@ -373,7 +373,7 @@ cmd_fild07,299,83,4	script	Zain#cmd	100,{
 	mes "zeny for the boarding fare.";
 	close;
 }
-cmd_fild07,94,134,4	duplicate(Zain#cmd)	Sarumane#cmd	100
+cmd_fild07,94,134,7	duplicate(Zain#cmd)	Sarumane#cmd	100
 
 cmd_in02,143,183,4	script	Kafra Employee::kaf_comodo2	721,{
 	cutin "kafra_07",2;

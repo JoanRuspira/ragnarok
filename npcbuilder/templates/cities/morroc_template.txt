@@ -939,11 +939,6 @@ morocc,108,253,6	script	Morroc Villager#moc::npcid	spriteid,{
 	end;
 }
 
-morocc,96,250,7	script	Morroc Villager#moc::npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
 morocc,74,255,1	script	Morroc Villager#moc::npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
@@ -1960,3 +1955,34 @@ morocc,82,170,1	script	Morroc Villager#moc::npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
+
+moc_prydb1,39,131,5	script	Thief Guildmaster#moc::npcid	638,{
+	npctalk "I will make you a thief.";
+	end;
+}
+
+moc_prydb1,50,126,3	script	Morroc Thief#moc::npcid	6,{
+	npctalk "npcdialog";
+	end;
+}
+
+moc_prydb1,44,119,0	script	Morroc Rogue#moc::npcid	828,{
+	npctalk "npcdialog";
+	end;
+}
+
+moc_prydb1,156,125,4	script	Morroc Thief#moc::npcid	118,{
+	npctalk "npcdialog";
+	end;
+}
+
+moc_prydb1,162,129,3	script	Morroc Assassin#moc::npcid	12,{
+	npctalk "npcdialog";
+	end;
+}
+
+moc_prydb1,160,119,1	script	Morroc Novice#moc::npcid	642,{
+	npctalk "npcdialog";
+	end;
+}
+

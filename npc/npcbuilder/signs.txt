@@ -479,3 +479,92 @@ moc_fild04,207,331,4	script	Board#sgn::74	858,{
 	mes "Caution: Anthell north entrance.";
 	close;
 }
+
+cmd_fild07,186,342,4	script	Board#sgn::75	835,{
+	mes "South to Pharos.";
+	mes "East or north to Saint Darmain.";
+	close;
+}
+
+cmd_fild06,186,342,4	script	Board#sgn::76	835,{
+	mes "South to Pharos.";
+	mes "East to Saint Darmain.";
+	mes "West to Comodo.";
+	close;
+}
+
+cmd_fild06,205,128,3	script	Board#sgn::77	837,{
+	mes "You are entering the ruins";
+	mes "of the Saint Darmain Fortress.";
+	close;
+}
+
+cmd_fild05,148,30,4	script	Board#sgn::78	837,{
+	mes "Papuchica Forest ahead.";
+	close;
+}
+
+cmd_fild08,205,177,5	script	Board#sgn::79	837,{
+	mes "You are entering the ruins";
+	mes "of the Saint Darmain Fortress.";
+	close;
+}
+
+cmd_fild08,326,181,4	script	Board#sgn::80	835,{
+	mes "East to Morroc.";
+	mes "West to Saint Darmain.";
+	close;
+}
+
+cmd_fild09,292,171,5	script	Board#sgn::81	837,{
+	mes "You are entering the ruins";
+	mes "of the Saint Darmain Fortress.";
+	close;
+}
+
+cmd_fild09,326,181,4	script	Board#sgn::82	835,{
+	mes "West to Pharos.";
+	mes "North east to Morroc.";
+	close;
+}
+
+cmd_fild03,180,130,5	script	Board#sgn::83	837,{
+	mes "Papuchica Forest ahead.";
+	close;
+}
+
+cmd_fild04,187,363,1	script	Board#sgn::84	837,{
+	mes "Kokomo Beach ahead.";
+	close;
+}
+
+cmd_fild02,217,370,7	script	Board#sgn::85	837,{
+	mes "Kokomo Beach ahead.";
+	close;
+}
+
+cmd_fild01,220,41,4	script	Board#sgn::86	837,{
+	mes "You are entering the Papuchica Forest.";
+	close;
+}
+
+cmd_fild01,32,321,4	script	Board#sgn::87	837,{
+	mes "You are entering the Papuchica Forest.";
+	close;
+}
+
+cmd_fild01,42,323,4	script	Board#sgn::88	835,{
+	mes "West to Comodo.";
+	mes "South to Kokomo Beach";
+	close;
+}
+
+cmd_fild01,70,361,7	script	Board#sgn::89	837,{
+	mes "You are entering the Papuchica Forest.";
+	close;
+}
+
+cmd_fild01,170,362,7	script	Board#sgn::90	837,{
+	mes "Papuchica Forest ahead.";
+	close;
+}

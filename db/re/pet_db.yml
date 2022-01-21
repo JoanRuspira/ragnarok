@@ -56,7 +56,7 @@ Header:
 
 Body:
   - Mob: PORING
-    TameItem: Unripe_Apple
+    TameItem: Knife_Goblin_Ring
     EggItem: Poring_Egg
     EquipItem: Backpack
     FoodItem: Apple_Juice
@@ -71,7 +71,7 @@ Body:
         bonus bCritical,1;
       }
   - Mob: DROPS
-    TameItem: Orange_Juice
+    TameItem: Knife_Goblin_Ring
     EggItem: Drops_Egg
     EquipItem: Backpack
     FoodItem: Yellow_Herb
@@ -86,7 +86,7 @@ Body:
         bonus bAtk,3;
       }
   - Mob: POPORING
-    TameItem: Bitter_Herb
+    TameItem: Knife_Goblin_Ring
     EggItem: Poporing_Egg
     EquipItem: Backpack
     FoodItem: Green_Herb
@@ -101,7 +101,7 @@ Body:
         bonus2 bSubEle,Ele_Poison,10;
       }
   - Mob: LUNATIC
-    TameItem: Rainbow_Carrot
+    TameItem: Knife_Goblin_Ring
     EggItem: Lunatic_Egg
     EquipItem: Silk_Ribbon
     FoodItem: Carrot_Juice
@@ -117,7 +117,7 @@ Body:
         bonus bAtk,2;
       }
   - Mob: PICKY
-    TameItem: Earthworm_The_Dude
+    TameItem: Knife_Goblin_Ring
     EggItem: Picky_Egg
     EquipItem: Tiny_Egg_Shell
     FoodItem: Red_Herb
@@ -132,7 +132,7 @@ Body:
         bonus bAtk,5;
       }
   - Mob: CHONCHON
-    TameItem: Rotten_Fish
+    TameItem: Knife_Goblin_Ring
     EggItem: Chonchon_Egg
     EquipItem: Monster_Oxygen_Mask
     FoodItem: Pet_Food
@@ -147,7 +147,7 @@ Body:
         bonus bFlee,2;
       }
   - Mob: STEEL_CHONCHON
-    TameItem: Lusty_Iron
+    TameItem: Knife_Goblin_Ring
     EggItem: Steel_Chonchon_Egg
     EquipItem: Monster_Oxygen_Mask
     FoodItem: Iron_Ore
@@ -162,7 +162,7 @@ Body:
         bonus bAgi,-1;
       }
   - Mob: HUNTER_FLY
-    TameItem: Monster_Juice
+    TameItem: Knife_Goblin_Ring
     EggItem: Hunter_Fly_Egg
     EquipItem: Monster_Oxygen_Mask
     FoodItem: Red_Gemstone
@@ -177,7 +177,7 @@ Body:
         bonus bFlee2,2;
       }
   - Mob: SAVAGE_BABE
-    TameItem: Sweet_Milk
+    TameItem: Knife_Goblin_Ring
     EggItem: Savage_Bebe_Egg
     EquipItem: Green_Lace
     FoodItem: Pet_Food
@@ -193,7 +193,7 @@ Body:
         bonus bMaxHP,50;
       }
   - Mob: DESERT_WOLF_B
-    TameItem: Well_Dried_Bone
+    TameItem: Knife_Goblin_Ring
     EggItem: Baby_Desert_Wolf_Egg
     EquipItem: Transparent_Headgear
     FoodItem: Pet_Food
@@ -209,7 +209,7 @@ Body:
         bonus bMaxSP,50;
       }
   - Mob: ROCKER
-    TameItem: Singing_Flower
+    TameItem: Knife_Goblin_Ring
     EggItem: Rocker_Egg
     EquipItem: Rocker_Glasses
     FoodItem: Pet_Food
@@ -225,7 +225,7 @@ Body:
         bonus bMaxHP,25;
       }
   - Mob: SPORE
-    TameItem: Dew_Laden_Moss
+    TameItem: Knife_Goblin_Ring
     EggItem: Spore_Egg
     EquipItem: Bark_Shorts
     FoodItem: Pet_Food
@@ -241,7 +241,7 @@ Body:
         bonus bAtk,-2;
       }
   - Mob: POISON_SPORE
-    TameItem: Deadly_Noxious_Herb
+    TameItem: Knife_Goblin_Ring
     EggItem: Poison_Spore_Egg
     EquipItem: Bark_Shorts
     FoodItem: Pet_Food
@@ -257,7 +257,7 @@ Body:
         bonus bInt,1;
       }
   - Mob: PECOPECO
-    TameItem: Fatty_Chubby_Earthworm
+    TameItem: Knife_Goblin_Ring
     EggItem: PecoPeco_Egg
     EquipItem: Battered_Pot
     FoodItem: Pet_Food
@@ -272,7 +272,7 @@ Body:
         bonus bMaxSP,-10;
       }
   - Mob: SMOKIE
-    TameItem: Baked_Yam
+    TameItem: Knife_Goblin_Ring
     EggItem: Smokie_Egg
     EquipItem: Red_Muffler
     FoodItem: Pet_Food
@@ -287,7 +287,7 @@ Body:
         bonus bFlee2,1;
       }
   - Mob: YOYO
-    TameItem: Tropical_Banana
+    TameItem: Knife_Goblin_Ring
     EggItem: Yoyo_Egg
     EquipItem: Monkey_Circlet
     FoodItem: Banana_Juice
@@ -302,7 +302,7 @@ Body:
         bonus bLuk,-1;
       }
   - Mob: ORK_WARRIOR
-    TameItem: Horror_Of_Tribe
+    TameItem: Knife_Goblin_Ring
     EggItem: Orc_Warrior_Egg
     EquipItem: Wild_Flower
     FoodItem: Pet_Food
@@ -317,7 +317,7 @@ Body:
         bonus bDef,-3;
       }
   - Mob: MUNAK
-    TameItem: No_Recipient
+    TameItem: Knife_Goblin_Ring
     EggItem: Munak_Egg
     EquipItem: Punisher
     FoodItem: Pet_Food
@@ -333,7 +333,7 @@ Body:
         bonus bDef,1;
       }
   - Mob: DOKEBI
-    TameItem: Old_Broom
+    TameItem: Knife_Goblin_Ring
     EggItem: Dokkaebi_Egg
     EquipItem: Wig
     FoodItem: Pet_Food
@@ -349,7 +349,7 @@ Body:
         bonus bAtkRate,-1;
       }
   - Mob: SOHEE
-    TameItem: Silver_Knife_Of_Chaste
+    TameItem: Knife_Goblin_Ring
     EggItem: Sohee_Egg
     EquipItem: Golden_Bell
     FoodItem: Pet_Food
@@ -365,7 +365,7 @@ Body:
         bonus bDex,1;
       }
   - Mob: ISIS
-    TameItem: Armlet_Of_Obedience
+    TameItem: Knife_Goblin_Ring
     EggItem: Isis_Egg
     EquipItem: Queen's_Hair_Ornament
     FoodItem: Pet_Food
@@ -381,7 +381,7 @@ Body:
         bonus bAtkRate,1;
       }
   - Mob: PETIT
-    TameItem: Shining_Stone
+    TameItem: Knife_Goblin_Ring
     EggItem: Green_Petite_Egg
     EquipItem: Stellar_Hairpin
     FoodItem: Pet_Food
@@ -398,7 +398,7 @@ Body:
         bonus bAspdRate,1;
       }
   - Mob: DEVIRUCHI
-    TameItem: Contracts_In_Shadow
+    TameItem: Knife_Goblin_Ring
     EggItem: Deviruchi_Egg
     EquipItem: Pacifier
     FoodItem: Shoot
@@ -416,7 +416,7 @@ Body:
         bonus bMaxSPrate,-3;
       }
   - Mob: BAPHOMET_
-    TameItem: Book_Of_Devil
+    TameItem: Knife_Goblin_Ring
     EggItem: Bapho_Jr._Egg
     EquipItem: Skull_Helm
     FoodItem: Honey
@@ -433,7 +433,7 @@ Body:
         bonus2 bResEff,Eff_Stun,-100;
       }
   - Mob: BON_GUN
-    TameItem: Heart_Of_Her
+    TameItem: Knife_Goblin_Ring
     EggItem: Bongun_Egg
     EquipItem: Sword_Of_Grave_Keeper
     FoodItem: Pet_Food
@@ -448,7 +448,7 @@ Body:
         bonus2 bResEff,Eff_Stun,100;
       }
   - Mob: ZHERLTHSH
-    TameItem: Prohibition_Red_Candle
+    TameItem: Knife_Goblin_Ring
     EggItem: Zherlthsh_Egg
     FoodItem: Immortal_Heart
     Fullness: 7
@@ -465,7 +465,7 @@ Body:
         bonus2 bMagicAddRace,RC_Player_Human,2;
       }
   - Mob: ALICE
-    TameItem: Sway_Apron
+    TameItem: Knife_Goblin_Ring
     EggItem: Alice_Egg
     FoodItem: White_Potion
     Fullness: 2
@@ -494,7 +494,7 @@ Body:
         bonus bMaxHPrate,-1;
       }
   - Mob: GOBLINE_XMAS
-    TameItem: Sweet_Candy_Striper
+    TameItem: Knife_Goblin_Ring
     EggItem: Santa_Goblin_Egg
     FoodItem: Scell
     Fullness: 3
@@ -509,7 +509,7 @@ Body:
         bonus2 bSubEle,Ele_Water,1;
       }
   - Mob: CHUNG_E
-    TameItem: Tantanmen
+    TameItem: Knife_Goblin_Ring
     EggItem: Chung_E_Egg
     FoodItem: Bun_
     Fullness: 3
@@ -540,7 +540,7 @@ Body:
     CaptureRate: 800
     SpecialPerformance: false
   - Mob: GOBLIN_2
-    TameItem: Flail_Goblin_Ring
+    TameItem: Knife_Goblin_Ring
     EggItem: Flail_Goblin_Egg
     FoodItem: Green_Apple
     Fullness: 3
@@ -548,7 +548,7 @@ Body:
     CaptureRate: 800
     SpecialPerformance: false
   - Mob: GOBLIN_4
-    TameItem: Hammer_Goblin_Ring
+    TameItem: Knife_Goblin_Ring
     EggItem: Hammer_Goblin_Egg
     FoodItem: Green_Apple
     Fullness: 3
@@ -556,7 +556,7 @@ Body:
     CaptureRate: 800
     SpecialPerformance: false
   - Mob: DELETER_
-    TameItem: Holy_Marble
+    TameItem: Knife_Goblin_Ring
     EggItem: Red_Deleter_Egg
     FoodItem: Whole_Barbecue
     Fullness: 4
@@ -564,7 +564,7 @@ Body:
     CaptureRate: 800
     SpecialPerformance: false
   - Mob: DIABOLIC
-    TameItem: Red_Burning_Stone
+    TameItem: Knife_Goblin_Ring
     EggItem: Diabolic_Egg
     FoodItem: Meat_Veg_Skewer
     Fullness: 2
@@ -572,7 +572,7 @@ Body:
     CaptureRate: 800
     SpecialPerformance: false
   - Mob: WANDER_MAN
-    TameItem: Skull_Of_Vagabond
+    TameItem: Knife_Goblin_Ring
     EggItem: Wanderer_Egg
     FoodItem: Spirit_Liquor
     Fullness: 2
@@ -594,7 +594,7 @@ Body:
     CaptureRate: 800
     SpecialPerformance: false
   - Mob: GOLEM
-    TameItem: Magical_Lithography
+    TameItem: Knife_Goblin_Ring
     EggItem: Golem_Egg
     EquipItem: Windup_Spring
     FoodItem: Mystic_Stone
@@ -610,7 +610,7 @@ Body:
         bonus bFlee,-5;
       }
   - Mob: MARIONETTE
-    TameItem: Delicious_Shaved_Ice
+    TameItem: Knife_Goblin_Ring
     EggItem: Marionette_Egg
     EquipItem: Star_Hairband
     FoodItem: Small_Snow_Flower
@@ -625,7 +625,7 @@ Body:
         bonus bSPrecovRate,3;
       }
   - Mob: MEDUSA
-    TameItem: Splendid_Mirror
+    TameItem: Knife_Goblin_Ring
     EggItem: Medusa_Egg
     EquipItem: Queen's_Coronet
     FoodItem: Apple_Pudding
@@ -657,7 +657,7 @@ Body:
         bonus bDef,-3;
       }
   - Mob: GOBLIN_LEADER
-    TameItem: Staff_Of_Leader
+    TameItem: Knife_Goblin_Ring
     EggItem: Goblin_Leader_Egg
     EquipItem: Nice_Badge
     FoodItem: Big_Cell
@@ -673,7 +673,7 @@ Body:
         bonus2 bAddRace,RC_Player_Human,3;
       }
   - Mob: SUCCUBUS
-    TameItem: Boy's_Naivety
+    TameItem: Knife_Goblin_Ring
     EggItem: Succubus_Egg
     EquipItem: Black_Butterfly_Mask
     FoodItem: Vital_Flower_
@@ -688,7 +688,7 @@ Body:
         bonus2 bHpDrainRate,50,5;
       }
   - Mob: INCUBUS
-    TameItem: Gril's_Naivety
+    TameItem: Knife_Goblin_Ring
     EggItem: Incubus_Egg
     EquipItem: Ball_Mask
     FoodItem: Vital_Flower
@@ -703,7 +703,7 @@ Body:
         bonus bMaxSPRate,3;
       }
   - Mob: NIGHTMARE_TERROR
-    TameItem: Hell_Contract
+    TameItem: Knife_Goblin_Ring
     EggItem: Nightmare_Terror_Egg
     EquipItem: Hell_Horn
     FoodItem: Fresh_Plant
@@ -718,7 +718,7 @@ Body:
         bonus2 bResEff,Eff_Sleep,10000;
       }
   - Mob: SHINOBI
-    TameItem: Kuloren
+    TameItem: Knife_Goblin_Ring
     EggItem: Shinobi_Egg
     EquipItem: Wine_On_Sleeve
     FoodItem: Grilled_Rice_Cake
@@ -733,7 +733,7 @@ Body:
         bonus bAgi,2;
       }
   - Mob: MIYABI_NINGYO
-    TameItem: Gril_Doll
+    TameItem: Knife_Goblin_Ring
     EggItem: Miyabi_Ningyo_Egg
     EquipItem: Summer_Fan
     FoodItem: Well_Ripened_Berry
@@ -749,7 +749,7 @@ Body:
         bonus bCastrate,-3;
       }
   - Mob: WICKED_NYMPH
-    TameItem: Charming_Lotus
+    TameItem: Knife_Goblin_Ring
     EggItem: Wicked_Nymph_Egg
     EquipItem: Jade_Trinket
     FoodItem: Morning_Dew
@@ -765,7 +765,7 @@ Body:
         bonus bSPrecovRate,5;
       }
   - Mob: STONE_SHOOTER
-    TameItem: Oilpalm_Coconut
+    TameItem: Knife_Goblin_Ring
     EggItem: Stone_Shooter_Egg
     EquipItem: Apro_Hair
     FoodItem: Plant_Neutrient
@@ -780,7 +780,7 @@ Body:
         bonus2 bSubEle,Ele_Fire,3;
       }
   - Mob: DULLAHAN
-    TameItem: Luxury_Whisky_Bottle
+    TameItem: Knife_Goblin_Ring
     EggItem: Dullahan_Egg
     EquipItem: Death_Coil
     FoodItem: Sunset_On_The_Rock
@@ -795,7 +795,7 @@ Body:
         bonus bCritAtkRate,5;
       }
   - Mob: LOLI_RURI
-    TameItem: Very_Red_Juice
+    TameItem: Knife_Goblin_Ring
     EggItem: Loli_Ruri_Egg
     EquipItem: Fashionable_Glasses
     FoodItem: Pumpkin_Pie_
@@ -811,7 +811,7 @@ Body:
         bonus3 bAutoSpellWhenHit,"AL_HEAL",1,10;
       }
   - Mob: CIVIL_SERVANT
-    TameItem: Fan_Of_Wind
+    TameItem: Knife_Goblin_Ring
     EggItem: Civil_Servant_Egg
     EquipItem: Golden_Earing
     FoodItem: Flavored_Alcohol
@@ -826,7 +826,7 @@ Body:
         bonus bMaxSP,10;
       }
   - Mob: LEAF_CAT
-    TameItem: Very_Soft_Plant
+    TameItem: Knife_Goblin_Ring
     EggItem: Leaf_Cat_Egg
     EquipItem: Green_Lucky_Bag
     FoodItem: Fish_With_Blue_Back

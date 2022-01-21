@@ -37218,3 +37218,61 @@ Body:
     Name: Mummy Egg
     Type: Petegg
     Buy: 100000
+  - Id: 19852
+    AegisName: C_Galapago_Cap
+    Name: Costume Galapago Cap
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 192
+  - Id: 20321
+    AegisName: C_Pterios_Fins
+    Name: Costume Pterios Fins
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Mid: true
+    EquipLevelMin: 1
+    View: 1009
+  - Id: 20322
+    AegisName: C_Seal_Hat
+    Name: Costume Seal Hat
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 540
+  - Id: 20323
+    AegisName: C_Sparkling_Sound
+    Name: Costume Sparkling Sound
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Low: true
+    EquipLevelMin: 1
+    View: 1074
+    EquipScript: |
+      sc_start SC_DECORATION_OF_MUSIC,INFINITE_TICK,0;
+    UnEquipScript: |
+      sc_end SC_DECORATION_OF_MUSIC;
+  - Id: 20324
+    AegisName: C_Pigeon_Hat
+    Name: Costume Pigeon Hat
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 1362
+  - Id: 20325
+    AegisName: C_Little_Aquarium
+    Name: Costume Little Aquarium
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Mid: true
+    EquipLevelMin: 1
+    View: 1363
