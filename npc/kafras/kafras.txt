@@ -356,7 +356,7 @@ alberta,113,60,6	script	Kafra Employee::kaf_alberta2	112,{
 
 // Comodo
 //============================================================
-comodo,195,150,4	script	Kafra Employee::kaf_comodo	721,{
+comodo,202,319,4	script	Kafra Employee::kaf_comodo	721,{
 	cutin "kafra_07",2;
 	callfunc "F_KafSet";
 	mes "[Kafra Employee]";

@@ -299,21 +299,18 @@ function	script	F_KafTele	{
 	}
 	cutin "", 255;
 	if (@wrpD$[.@j] == "Al De Baran") warp "aldebaran",168,112;
-	else if (@wrpD$[.@j] == "Alberta") warp "alberta", 117, 56;
-	else if (@wrpD$[.@j] == "Comodo") warp "comodo", 209, 143;
-	else if (@wrpD$[.@j] == "Comodo Pharos Beacon") warp "cmd_fild07", 127, 134;
-	else if (@wrpD$[.@j] == "Geffen") warp "geffen", 120, 39;
+	else if (@wrpD$[.@j] == "Alberta") warp "alberta", 32, 235;
+	else if (@wrpD$[.@j] == "Comodo") warp "comodo", 197, 319;
+	else if (@wrpD$[.@j] == "Pharos Islet") warp "cmd_fild07", 138, 132;
+	else if (@wrpD$[.@j] == "Geffen") warp "geffen", 124, 64;
 	else if (@wrpD$[.@j] == "Izlude") {
-		if (checkre(0) == true)
-			warp "izlude", 128, 98;
-		else
-			warp "izlude", 91, 105;
+			warp "izlude", 130, 145;
 	}
 	else if (@wrpD$[.@j] == "Juno") warp "yuno", 158, 125;
 	else if (@wrpD$[.@j] == "Mjolnir Dead Pit") warp "mjolnir_02", 99, 351;
-	else if (@wrpD$[.@j] == "Morocc") warp "morocc", 156, 46;
+	else if (@wrpD$[.@j] == "Morocc") warp "morocc", 158, 95;
 	else if (@wrpD$[.@j] == "Orc Dungeon") warp "gef_fild10", 52, 326;
-	else if (@wrpD$[.@j] == "Payon") warp "payon", 161, 58;
+	else if (@wrpD$[.@j] == "Payon") warp "payon", 177, 104;
 	else if (@wrpD$[.@j] == "Prontera") warp "prontera", 116, 72;
 	else if (@wrpD$[.@j] == "Umbala") warp "umbala", 100, 154;
 	end;
@@ -613,7 +610,7 @@ function	script	F_KafSet	{
 		setarray @wrpP[0], 1200, 1200, 1800, 1700;
 		setarray @wrpD$[0], "Geffen", "Juno" , "Izlude", "Mjolnir Dead Pit";
 	} else if (.@map$ == "comodo" ) {
-		setarray @wrpD$[0], "Morocc", "Comodo Pharos Beacon", "Umbala";
+		setarray @wrpD$[0], "Morocc", "Pharos Islet", "Umbala";
 		setarray @wrpP[0], 1800, 1200, 1800;
 	} else if (.@map$ == "cmd_fild07") {
 		setarray @wrpD$[0], "Comodo", "Morocc";
@@ -627,7 +624,7 @@ function	script	F_KafSet	{
 		setarray @wrpD$[0], "Prontera", "Payon";
 		setarray @wrpP[0], 600, 1200;
 	} else if (.@map$ == "morocc") {
-		setarray @wrpD$[0], "Prontera", "Comodo";
+		setarray @wrpD$[0], "Prontera", "Pharos Islet", "Comodo";
 		setarray @wrpP[0], 1200, 1200, 1800, 1800, 1200;
 		setarray @viewpX[0], 156, 163, 28, 292;
 		setarray @viewpY[0], 97, 260, 167, 211;

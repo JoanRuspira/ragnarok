@@ -568,3 +568,34 @@ cmd_fild01,170,362,7	script	Board#sgn::90	837,{
 	mes "Papuchica Forest ahead.";
 	close;
 }
+
+moc_fild18,162,358,4	script	Board#sgn::91	835,{
+	mes "West to St Darmain Fortress.";
+	mes "East to Sandstorm Island.";
+	mes "North to Morroc.";
+	close;
+}
+
+
+moc_fild17,43,293,4	script	Board#sgn::92	835,{
+	mes "West to St Darmain Fortress.";
+	mes "East to Sandstorm Island.";
+	mes "North east to Morroc.";
+	close;
+}
+
+moc_fild16,150,299,3	script	Board#sgn::93	837,{
+	mes "Sandstorm Island.";
+	close;
+}
+
+moc_fild16,260,326,5	script	Board#sgn::94	837,{
+	mes "Sandstorm Island.";
+	close;
+}
+
+moc_fild15,350,32,4	script	Board#sgn::95	835,{
+	mes "West to Morroc.";
+	mes "South to Sandstorm Island.";
+	close;
+}
