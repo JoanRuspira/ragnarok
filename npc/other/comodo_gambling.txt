@@ -28,6 +28,71 @@
 //= 1.4c Another clean-up. [Capuche]
 //============================================================ 
 //cutin "katsua01.bmp",2;
+function	script	ComodoBlackJack	{
+	callfunc "F_ClearGarbage"; // Clear outdated, unused variables
+	.@quantity = getarg(0);
+	callfunc "F_ClearGarbage";
+	if (countitem(7517) < .@quantity) {
+		mes "[Blackjack Dealer]";
+		mes "Wait a minute...";
+		mes "You don't have that many coins to bet...";
+		mes "See you soon!";
+		close;
+	}
+	delitem 7517,.@quantity;
+	mes "[Blackjack Dealer]";
+	mes "I will draw you cards until you want to stop. Cards start at Ace with 1 point and end up with King at 13 points";
+	next;
+	mes "[Blackjack Dealer]";
+	mes "Remember, goal is at 21. If you nail it, you multiply your bet times 5 as a benefit. If you go over, you lose. Let's begin!";
+	next;
+	.@points = 0;
+	mes "[Blackjack Dealer]";
+	mes "I will draw the first card for you!";
+	mes "[Deals a Card]";
+	mes "...";
+	next;
+	.@card = rand(1,13);
+	mes "[Blackjack Dealer]";
+	.@points += .@card;
+	mes .@card + "! That sets you to " + .@points + " points.";
+	next;
+	while(.@points < 21) {
+		mes "[Blackjack Dealer]";
+		mes "You are currently at " + .@points  + " points. Do you want to keep going?";
+		next;
+		switch(select("Yes, keep going.")) {
+			case 1:
+				mes "[Blackjack Dealer]";
+				mes "Keep going then!";
+				mes "[Deals a Card]";
+				mes "...";
+				next;
+				.@card = rand(1,13);
+				mes "[Blackjack Dealer]";
+				.@points += .@card;
+				mes .@card + "! That sets you to " + .@points + " points.";
+				next;
+		}
+	}
+	if (.@points == 21) {
+		mes "[Blackjack Dealer]";
+		mes "Oh wow! you got to even 21! Congratulations!";
+		mes "I'll hand in the prize now.";
+		mes "See you soon!";
+		emotion ET_SMILE;
+		getitem 7517,.@quantity * 5;
+		close;
+	} else {
+		mes "[Blackjack Dealer]";
+		mes "Oh... You went over 21... We will be keeping your bet.";
+		mes "I hope you have better luck next time.";
+		mes "See you soon!";
+		emotion ET_HUK;
+		close;
+	}
+}
+
 
 function	script	ComodoBet	{
 	callfunc "F_ClearGarbage"; // Clear outdated, unused variables
@@ -414,16 +479,61 @@ function	script	ComodoBet	{
 
 
 
-	
 
+-	script	Blackjack Dealer#newbe10::BlackjackDealer	-1,{
+	mes "[Blackjack Dealer]";
+	mes "Welcome to the Blackjack table!";
+	mes "You can place a bet and try your luck with the cards.";
+	next;
+	mes "[Blackjack Dealer]";
+	mes "Cool! How many Casino Coins do you want to bet today?";
+	next;
+	switch(select("10 Coins.:20 Coins.:30 Coins.:40 Coins.:50 Coins.:75 Coins.:100 Coins.:I don't want to bet.")) {
+		case 1:
+			callfunc "ComodoBlackJack",10;
+			close;
+		case 2:
+			callfunc "ComodoBlackJack",20;
+			close;
+		case 3:
+			callfunc "ComodoBlackJack",30;
+			close;
+		case 4:
+			callfunc "ComodoBlackJack",40;
+			close;
+		case 5:
+			callfunc "ComodoBlackJack",50;
+			close;
+		case 6:
+			callfunc "ComodoBlackJack",75;
+			close;
+		case 7:
+			callfunc "ComodoBlackJack",100;
+			close;
+		case 8:
+			mes "[Roulette Dealer]";
+			mes "No problem. Please come again if you change your mind. See you soon!";
+			close;
+	}	
+	next;
+}
+
+			
 //set .@str$,"Would you like to know more locations?";
 
 cmd_in02,174,132,6	duplicate(CoinDealer)	Casino Coin Dealer#coin01	798
 cmd_in02,211,101,5	duplicate(CoinDealer)	Casino Coin Dealer#coin02	904
 cmd_in02,145,102,2	duplicate(CoinDealer)	Casino Coin Dealer#coin03	895
 cmd_in02,57,65,6	duplicate(CoinDealer)	Casino Coin Dealer#coin04	898
-
-
 cmd_in02,180,101,4	duplicate(RouletteDealer)	Roulette Dealer#roul01	904
 cmd_in02,90,71,4	duplicate(RouletteDealer)	Roulette Dealer#roul02	895
 cmd_in02,58,40,0	duplicate(RouletteDealer)	Roulette Dealer#roul03	904
+cmd_in02,71,87,5	duplicate(BlackjackDealer)	Blackjack Dealer#blackj01	798
+cmd_in02,105,58,4	duplicate(BlackjackDealer)	Blackjack Dealer#blackj02	904
+cmd_in02,90,45,1	duplicate(BlackjackDealer)	Blackjack Dealer#blackj03	898
+cmd_in02,43,58,6	duplicate(BlackjackDealer)	Blackjack Dealer#blackj04	798
+cmd_in02,168,89,0	duplicate(BlackjackDealer)	Blackjack Dealer#blackj05	904
+cmd_in02,178,86,1	duplicate(BlackjackDealer)	Blackjack Dealer#blackj06	898
+cmd_in02,189,90,2	duplicate(BlackjackDealer)	Blackjack Dealer#blackj07	798
+
+

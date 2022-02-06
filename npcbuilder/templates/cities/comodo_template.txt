@@ -19,33 +19,28 @@ npctalk "Welcome to Comodo";
 	end;
 }
 
-comodo,186,164,4	script	Comodo Villager#com::npcid	spriteid,{
+comodo,186,164,4	script	Comodo Performer#com::npcid	4021,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,191,164,4	script	Comodo Villager#com::npcid	spriteid,{
+comodo,191,164,4	script	Comodo Performer#com::npcid	647,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,188,166,4	script	Comodo Villager#com::npcid	spriteid,{
+comodo,188,166,4	script	Comodo Performer#com::npcid	715,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,185,171,4	script	Comodo Villager#com::npcid	spriteid,{
-npctalk "npcdialog";
+comodo,193,172,3	script	Dancer Guildmaster#com::npcid	724,{
+npctalk "I will make you a dancer.";
 	end;
 }
 
-comodo,195,172,3	script	Comodo Villager#com::npcid	spriteid,{
-npctalk "npcdialog";
-	end;
-}
-
-comodo,193,174,3	script	Comodo Villager#com::npcid	spriteid,{
-npctalk "npcdialog";
+comodo,184,172,5	script	Bard Guildmaster#com::npcid	741,{
+npctalk "I will make you a bard.";
 	end;
 }
 
@@ -1002,3 +997,69 @@ cmd_in02,194,114,3	script	Comodo Villager#com::npcid	spriteid,{
 npctalk "npcdialog";
 	end;
 }
+
+comodo,160,190,1	script	Comodo Villager#com::npcid	spriteid,{
+npctalk "npcdialog";
+	end;
+}
+
+
+comodo,157,206,5	script	Comodo Villager#com::npcid	spriteid,{
+npctalk "npcdialog";
+	end;
+}
+
+
+comodo,149,227,2	script	Comodo Villager#com::npcid	spriteid,{
+npctalk "npcdialog";
+	end;
+}
+
+comodo,156,256,6	script	Comodo Villager#com::npcid	spriteid,{
+npctalk "npcdialog";
+	end;
+}
+
+comodo,202,263,2	script	Comodo Villager#com::npcid	spriteid,{
+npctalk "npcdialog";
+	end;
+}
+
+comodo,215,248,3	script	Comodo Villager#com::npcid	spriteid,{
+npctalk "npcdialog";
+	end;
+}
+
+comodo,209,225,4	script	Comodo Villager#com::npcid	spriteid,{
+npctalk "npcdialog";
+	end;
+}
+
+comodo,191,205,7	script	Comodo Villager#com::npcid	spriteid,{
+npctalk "npcdialog";
+	end;
+}
+
+comodo,167,217,1	script	Comodo Villager#com::npcid	spriteid,{
+npctalk "npcdialog";
+	end;
+}
+
+comodo,164,239,3	script	Comodo Villager#com::npcid	spriteid,{
+npctalk "npcdialog";
+	end;
+}
+
+comodo,185,244,4	script	Comodo Villager#com::npcid	spriteid,{
+npctalk "npcdialog";
+	end;
+}
+
+comodo,193,223,1	script	Comodo Villager#com::npcid	spriteid,{
+npctalk "npcdialog";
+	end;
+}
+
+
+
+

@@ -132,3 +132,75 @@ umbala,108,124,4	script	Umbala Villager#umb:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
+
+um_in,144,44,1	script	Umbala Villager#umb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+um_in,149,50,2	script	Umbala Villager#umb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+um_in,96,69,7	script	Umbala Villager#umb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+um_in,102,68,3	script	Umbala Villager#umb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+um_in,153,120,0	script	Umbala Villager#umb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+um_in,160,117,2	script	Umbala Villager#umb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+um_in,101,116,4	script	Umbala Villager#umb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+um_in,95,122,7	script	Umbala Villager#umb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+um_in,35,122,7	script	Umbala Villager#umb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+um_in,38,116,1	script	Umbala Villager#umb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+um_in,44,120,3	script	Umbala Villager#umb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+um_in,33,115,0	script	Umbala Villager#umb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+um_in,39,125,5	script	Umbala Chief#umb:npcid	784,{
+	npctalk "npcdialog";
+	end;
+}

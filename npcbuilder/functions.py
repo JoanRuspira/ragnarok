@@ -11,7 +11,7 @@ def getCityNPCS(city):
         case "umbala":
             return generic + umbala
         case "umbala_natives":
-            return generic + umbala_natives
+            return umbala_natives
         case "amatsu" | "louyang":
             return generic + amatsu
         case "comodo", "pharos":

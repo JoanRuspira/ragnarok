@@ -1092,7 +1092,7 @@ Body:
     AegisName: Yggdrasilberry
     Name: Yggdrasil Berry
     Type: Healing
-    Buy: 5000
+    Buy: 50000
     Weight: 300
     Flags:
       BuyingStore: true
@@ -1105,7 +1105,7 @@ Body:
     AegisName: Seed_Of_Yggdrasil
     Name: Yggdrasil Seed
     Type: Healing
-    Buy: 5000
+    Buy: 25000
     Weight: 300
     Flags:
       BuyingStore: true

@@ -19,986 +19,1047 @@ npctalk "Welcome to Comodo";
 	end;
 }
 
-comodo,186,164,4	script	Comodo Villager#com::c5aba46f	70,{
+comodo,186,164,4	script	Comodo Performer#com::b398fbe1	4021,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,191,164,4	script	Comodo Villager#com::5a985766	17,{
+comodo,191,164,4	script	Comodo Performer#com::b514fd92	647,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,188,166,4	script	Comodo Villager#com::26267756	95,{
+comodo,188,166,4	script	Comodo Performer#com::7ea3b1f7	715,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,185,171,4	script	Comodo Villager#com::8ad83d52	798,{
+comodo,193,172,3	script	Dancer Guildmaster#com::bc94b789	724,{
+npctalk "I will make you a dancer.";
+	end;
+}
+
+comodo,184,172,5	script	Bard Guildmaster#com::116a1f2a	741,{
+npctalk "I will make you a bard.";
+	end;
+}
+
+comodo,188,154,0	script	Comodo Villager#com::2e3dad07	753,{
+npctalk "npcdialog";
+	end;
+}
+
+comodo,191,156,0	script	Comodo Villager#com::8d120ed1	908,{
+npctalk "npcdialog";
+	end;
+}
+
+comodo,184,159,7	script	Comodo Villager#com::d54e6a72	645,{
+npctalk "npcdialog";
+	end;
+}
+
+comodo,194,155,1	script	Comodo Villager#com::534d57ea	879,{
+npctalk "npcdialog";
+	end;
+}
+
+comodo,184,144,5	script	Comodo Villager#com::08c18512	779,{
+npctalk "npcdialog";
+	end;
+}
+
+comodo,196,140,6	script	Comodo Villager#com::81261e7b	908,{
 npctalk "npcdialog";
 	end;
 }
+
 
-comodo,195,172,3	script	Comodo Villager#com::f3fbae3f	8,{
+
+comodo,206,150,4	script	Comodo Villager#com::8ed56bb0	68,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,193,174,3	script	Comodo Villager#com::042c6363	635,{
+comodo,130,332,5	script	Comodo Villager#com::c2e562fb	779,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,188,154,0	script	Comodo Villager#com::32a85a02	732,{
+comodo,135,323,3	script	Comodo Villager#com::a5f491b9	68,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,191,156,0	script	Comodo Villager#com::4cd3e78f	754,{
+comodo,146,321,1	script	Comodo Villager#com::7aaf7e61	644,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,184,159,7	script	Comodo Villager#com::8d9d3f58	745,{
+comodo,154,327,6	script	Comodo Villager#com::6b49a521	637,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,194,155,1	script	Comodo Villager#com::dc44f870	49,{
+comodo,159,316,1	script	Comodo Villager#com::a7477988	641,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,184,144,5	script	Comodo Villager#com::3e15176f	741,{
+comodo,169,317,3	script	Comodo Villager#com::5e7f23f0	828,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,196,140,6	script	Comodo Villager#com::cbb90b83	642,{
+comodo,173,332,0	script	Comodo Villager#com::b683f69e	85,{
 npctalk "npcdialog";
 	end;
 }
 
+comodo,185,325,5	script	Comodo Villager#com::921f465d	62,{
+npctalk "npcdialog";
+	end;
+}
 
+comodo,178,312,3	script	Comodo Villager#com::713ab4c6	908,{
+npctalk "npcdialog";
+	end;
+}
 
-comodo,206,150,4	script	Comodo Villager#com::96553d98	644,{
+comodo,162,309,1	script	Comodo Villager#com::b185cc8a	49,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,130,332,5	script	Comodo Villager#com::4d6228b2	25,{
+comodo,145,305,4	script	Comodo Villager#com::f3dea692	644,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,135,323,3	script	Comodo Villager#com::d1e5d2ce	9,{
+comodo,192,312,6	script	Comodo Villager#com::702adbae	51,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,146,321,1	script	Comodo Villager#com::948d56de	51,{
+comodo,199,308,6	script	Comodo Villager#com::98f67aac	732,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,154,327,6	script	Comodo Villager#com::2eef5279	732,{
+comodo,204,310,2	script	Comodo Villager#com::03a560f6	798,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,159,316,1	script	Comodo Villager#com::d967c4a6	70,{
+comodo,213,308,5	script	Comodo Villager#com::7c5c8955	732,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,169,317,3	script	Comodo Villager#com::ada02bea	125,{
+comodo,221,310,1	script	Comodo Villager#com::31f6f100	744,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,173,332,0	script	Comodo Villager#com::9770d97e	744,{
+comodo,223,319,0	script	Comodo Villager#com::637f8def	779,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,185,325,5	script	Comodo Villager#com::c75919d3	12,{
+comodo,225,300,3	script	Comodo Villager#com::b01094c0	641,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,178,312,3	script	Comodo Villager#com::95aa0ad6	744,{
+comodo,210,290,4	script	Comodo Villager#com::a9f5f743	908,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,162,309,1	script	Comodo Villager#com::e78a004d	67,{
+comodo,196,291,7	script	Comodo Villager#com::9644ee0e	49,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,145,305,4	script	Comodo Villager#com::7fac42ad	1,{
+comodo,215,298,6	script	Comodo Villager#com::e4da1f6f	51,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,192,312,6	script	Comodo Villager#com::1f2e7df1	79,{
+comodo,234,294,2	script	Comodo Villager#com::47a1c912	92,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,199,308,6	script	Comodo Villager#com::874f24a8	745,{
+comodo,245,299,3	script	Comodo Villager#com::122be505	51,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,204,310,2	script	Comodo Villager#com::33c20184	742,{
+comodo,239,289,5	script	Comodo Villager#com::cd0161e2	634,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,213,308,5	script	Comodo Villager#com::5e2160ae	636,{
+comodo,255,87,2	script	Comodo Villager#com::f5c808ad	742,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,221,310,1	script	Comodo Villager#com::0a22b602	92,{
+comodo,246,96,0	script	Comodo Villager#com::ebf00a26	641,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,223,319,0	script	Comodo Villager#com::801eaf1d	49,{
+comodo,237,92,4	script	Comodo Villager#com::c548e814	85,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,225,300,3	script	Comodo Villager#com::e069433f	95,{
+comodo,217,92,3	script	Comodo Villager#com::3271668c	125,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,210,290,4	script	Comodo Villager#com::146035f4	11,{
+comodo,205,97,6	script	Comodo Villager#com::4cd4b724	70,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,196,291,7	script	Comodo Villager#com::92ebac86	3,{
+comodo,201,97,76	script	Comodo Villager#com::1cde2ed3	89,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,215,298,6	script	Comodo Villager#com::86ddc0cd	83,{
+comodo,190,92,5	script	Comodo Villager#com::93aadf5d	755,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,234,294,2	script	Comodo Villager#com::a4c2998d	11,{
+comodo,176,84,5	script	Comodo Villager#com::d5520b79	70,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,245,299,3	script	Comodo Villager#com::aec51a10	11,{
+comodo,78,82,1	script	Comodo Villager#com::4eb1de3d	879,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,239,289,5	script	Comodo Villager#com::63d80cd0	16,{
+comodo,163,88,4	script	Comodo Villager#com::5326d03c	798,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,255,87,2	script	Comodo Villager#com::54d4d233	637,{
+comodo,162,97,0	script	Comodo Villager#com::33fd7ea3	754,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,246,96,0	script	Comodo Villager#com::1826daf9	754,{
+comodo,200,110,6	script	Comodo Villager#com::02bef2e8	634,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,237,92,4	script	Comodo Villager#com::5ca95dc0	68,{
+comodo,202,112,3	script	Comodo Villager#com::5ac64a86	83,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,217,92,3	script	Comodo Villager#com::fe510031	645,{
+comodo,200,101,2	script	Comodo Villager#com::1a9a1ead	635,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,205,97,6	script	Comodo Villager#com::a3928301	16,{
+comodo,284,127,1	script	Comodo Villager#com::95f31201	125,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,201,97,76	script	Comodo Villager#com::ab171726	732,{
+comodo,284,137,7	script	Comodo Villager#com::84b81c33	742,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,190,92,5	script	Comodo Villager#com::2743a67a	745,{
+comodo,273,142,5	script	Comodo Villager#com::0c4e0915	754,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,176,84,5	script	Comodo Villager#com::656dbef2	9,{
+comodo,254,147,2	script	Comodo Villager#com::39678d98	879,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,78,82,1	script	Comodo Villager#com::da7d663d	2,{
+comodo,236,151,6	script	Comodo Villager#com::b202523d	733,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,163,88,4	script	Comodo Villager#com::d4599e9b	92,{
+comodo,78,168,6	script	Comodo Villager#com::8de02609	124,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,162,97,0	script	Comodo Villager#com::507796f3	2,{
+comodo,89,170,0	script	Comodo Villager#com::6fcefbc4	740,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,200,110,6	script	Comodo Villager#com::ec99c29d	637,{
+comodo,98,165,6	script	Comodo Villager#com::657f3353	755,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,202,112,3	script	Comodo Villager#com::1c3cdd7c	68,{
+comodo,101,165,2	script	Comodo Villager#com::7c4560e6	828,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,200,101,2	script	Comodo Villager#com::98d2a207	734,{
+comodo,97,150,4	script	Comodo Villager#com::31d3ccb6	92,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,284,127,1	script	Comodo Villager#com::d3536648	10,{
+comodo,101,134,0	script	Comodo Villager#com::4c062d09	754,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,284,137,7	script	Comodo Villager#com::419b9741	5,{
+comodo,74,124,2	script	Comodo Villager#com::74614adb	745,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,273,142,5	script	Comodo Villager#com::5fb74a05	69,{
+comodo,65,141,3	script	Comodo Villager#com::e95814a3	879,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,254,147,2	script	Comodo Villager#com::261e1c72	6,{
+comodo,69,157,0	script	Comodo Villager#com::7f82fe01	779,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,236,151,6	script	Comodo Villager#com::5288e57d	745,{
+comodo,89,105,7	script	Comodo Villager#com::d4480b03	636,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,78,168,6	script	Comodo Villager#com::61352482	12,{
+comodo,97,96,6	script	Comodo Villager#com::cb1bfdb9	828,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,89,170,0	script	Comodo Villager#com::2be3815d	124,{
+comodo,100,96,2	script	Comodo Villager#com::12cf4fc3	636,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,98,165,6	script	Comodo Villager#com::f5d04b3f	92,{
+comodo,116,100,0	script	Comodo Villager#com::f1e669fe	644,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,101,165,2	script	Comodo Villager#com::e2ffd0ab	17,{
+comodo,108,134,7	script	Comodo Villager#com::59286464	755,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,97,150,4	script	Comodo Villager#com::c8bf34d7	68,{
+comodo,127,133,0	script	Comodo Villager#com::4f736b2c	644,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,101,134,0	script	Comodo Villager#com::051d56a3	0,{
+comodo,126,119,4	script	Comodo Villager#com::229a0276	745,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,74,124,2	script	Comodo Villager#com::01f47791	0,{
+comodo,134,115,7	script	Comodo Villager#com::a531e896	636,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,65,141,3	script	Comodo Villager#com::5a78fca9	12,{
+comodo,145,124,0	script	Comodo Villager#com::17d63b37	68,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,69,157,0	script	Comodo Villager#com::97cb605c	733,{
+comodo,149,133,5	script	Comodo Villager#com::6a4d7c05	755,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,89,105,7	script	Comodo Villager#com::a7642d78	8,{
+comodo,145,146,6	script	Comodo Villager#com::c5bde851	644,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,97,96,6	script	Comodo Villager#com::ddf19024	18,{
+comodo,147,146,2	script	Comodo Villager#com::21dddfea	636,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,100,96,2	script	Comodo Villager#com::df9c0c97	12,{
+
+comodo,83,217,2	script	Comodo Villager#com::f4b133d4	92,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,116,100,0	script	Comodo Villager#com::c9aab162	14,{
+comodo,90,213,5	script	Comodo Villager#com::00f94da2	51,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,108,134,7	script	Comodo Villager#com::f82ac5c4	0,{
+comodo,94,208,2	script	Comodo Villager#com::54fc6293	754,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,127,133,0	script	Comodo Villager#com::d1ecf99a	95,{
+comodo,100,221,7	script	Comodo Villager#com::44e713dd	742,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,126,119,4	script	Comodo Villager#com::c55e55fe	430,{
+comodo,103,210,4	script	Comodo Villager#com::17f3788d	744,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,134,115,7	script	Comodo Villager#com::3b974126	741,{
+comodo,98,200,6	script	Comodo Villager#com::3eac2d01	753,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,145,124,0	script	Comodo Villager#com::12f345e1	740,{
+comodo,103,196,1	script	Comodo Villager#com::2072e6ed	779,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,149,133,5	script	Comodo Villager#com::4791092f	12,{
+comodo,112,208,2	script	Comodo Villager#com::3e525fe4	637,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,145,146,6	script	Comodo Villager#com::800ac3d1	779,{
+comodo,109,209,6	script	Comodo Villager#com::7c47d7a0	69,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,147,146,2	script	Comodo Villager#com::55fbcbd4	741,{
+comodo,90,265,7	script	Comodo Villager#com::202656e7	637,{
 npctalk "npcdialog";
 	end;
 }
 
+comodo,101,268,6	script	Comodo Villager#com::8f443862	634,{
+npctalk "npcdialog";
+	end;
+}
 
-comodo,83,217,2	script	Comodo Villager#com::27dee3ff	67,{
+comodo,98,273,5	script	Comodo Villager#com::e0ffee49	751,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,90,213,5	script	Comodo Villager#com::5e2cf1b7	732,{
+comodo,114,285,4	script	Comodo Villager#com::57391ccb	828,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,94,208,2	script	Comodo Villager#com::b3772ad6	732,{
+comodo,109,288,1	script	Comodo Villager#com::f3fab06e	754,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,100,221,7	script	Comodo Villager#com::f8fd55b8	86,{
+comodo,161,288,1	script	Comodo Villager#com::c2641a2e	79,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,103,210,4	script	Comodo Villager#com::394ccf03	0,{
+comodo,157,291,5	script	Comodo Villager#com::702e38a4	79,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,98,200,6	script	Comodo Villager#com::b4370b1e	644,{
+comodo,163,281,0	script	Comodo Villager#com::23af13dc	67,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,103,196,1	script	Comodo Villager#com::3db9b58a	86,{
+comodo,170,290,6	script	Comodo Villager#com::c6ed9a6b	67,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,112,208,2	script	Comodo Villager#com::0f53d6d6	745,{
+comodo,173,288,2	script	Comodo Villager#com::d4e64c7d	641,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,109,209,6	script	Comodo Villager#com::8f2d03d7	634,{
+comodo,175,282,3	script	Comodo Villager#com::fb46637c	69,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,90,265,7	script	Comodo Villager#com::7793b27f	51,{
+comodo,233,270,0	script	Comodo Villager#com::16bbd504	635,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,101,268,6	script	Comodo Villager#com::84bf39f3	637,{
+comodo,238,251,4	script	Comodo Villager#com::d3102a72	644,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,98,273,5	script	Comodo Villager#com::b8c87c24	125,{
+comodo,243,232,6	script	Comodo Villager#com::4ffa2339	89,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,114,285,4	script	Comodo Villager#com::35002eb6	828,{
+comodo,193,280,2	script	Comodo Villager#com::fb99dd49	70,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,109,288,1	script	Comodo Villager#com::06a92cc4	744,{
+comodo,221,334,4	script	Comodo Villager#com::b87b7a1d	79,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,161,288,1	script	Comodo Villager#com::ba132c65	12,{
+comodo,230,331,6	script	Comodo Villager#com::94e3e468	49,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,157,291,5	script	Comodo Villager#com::37e53f24	636,{
+comodo,268,276,1	script	Comodo Villager#com::a4cd252f	751,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,163,281,0	script	Comodo Villager#com::13071d83	9,{
+comodo,109,183,0	script	Comodo Villager#com::fe96f9bb	798,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,170,290,6	script	Comodo Villager#com::ce79b399	8,{
+comodo,112,188,4	script	Comodo Villager#com::c78bc4c1	430,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,173,288,2	script	Comodo Villager#com::a7c3270f	17,{
+comodo,125,168,5	script	Comodo Villager#com::9c91459d	740,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,175,282,3	script	Comodo Villager#com::f77bfe39	634,{
+comodo,118,170,3	script	Comodo Villager#com::2cabb62e	734,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,233,270,0	script	Comodo Villager#com::3bb0e162	51,{
+comodo,138,179,5	script	Comodo Villager#com::13edec5b	51,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,238,251,4	script	Comodo Villager#com::d7242a7b	635,{
+comodo,137,165,5	script	Comodo Villager#com::beb0084b	908,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,243,232,6	script	Comodo Villager#com::b97d1618	798,{
+comodo,140,162,1	script	Comodo Villager#com::9fabc358	89,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,193,280,2	script	Comodo Villager#com::a06902cb	732,{
+comodo,148,176,2	script	Comodo Villager#com::a71cc5b3	798,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,221,334,4	script	Comodo Villager#com::e8213d8e	7,{
+comodo,157,164,5	script	Comodo Villager#com::a9f0e9db	742,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,230,331,6	script	Comodo Villager#com::0913aaf0	641,{
+comodo,167,145,7	script	Comodo Villager#com::9c9caf51	645,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,268,276,1	script	Comodo Villager#com::1e626557	908,{
+comodo,172,146,3	script	Comodo Villager#com::78810449	908,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,109,183,0	script	Comodo Villager#com::8a10fa49	4,{
+comodo,171,157,0	script	Comodo Villager#com::344a0dcc	908,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,112,188,4	script	Comodo Villager#com::0db0e78f	84,{
+comodo,210,125,6	script	Comodo Villager#com::400eedcf	745,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,125,168,5	script	Comodo Villager#com::2f7708f0	85,{
+comodo,219,237,6	script	Comodo Villager#com::dc209dbf	645,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,118,170,3	script	Comodo Villager#com::ffda4c02	733,{
+comodo,221,134,1	script	Comodo Villager#com::ab1d49b0	642,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,138,179,5	script	Comodo Villager#com::b47bad20	12,{
+comodo,256,125,6	script	Comodo Villager#com::3e7861fc	734,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,137,165,5	script	Comodo Villager#com::62811707	753,{
+comodo,258,125,2	script	Comodo Villager#com::4fa9fa54	84,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,140,162,1	script	Comodo Villager#com::69027c75	637,{
+comodo,218,155,7	script	Comodo Villager#com::ec5192bc	755,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,148,176,2	script	Comodo Villager#com::792fda3f	18,{
+comodo,235,188,6	script	Comodo Villager#com::57aecd4a	745,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,157,164,5	script	Comodo Villager#com::642ae101	49,{
+comodo,250,204,0	script	Comodo Villager#com::e2aae8c5	70,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,167,145,7	script	Comodo Villager#com::0d048396	755,{
+comodo,274,177,2	script	Comodo Villager#com::e39ea482	68,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,172,146,3	script	Comodo Villager#com::d4bca77d	755,{
+comodo,270,177,6	script	Comodo Villager#com::aa153a4d	89,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,171,157,0	script	Comodo Villager#com::a9ce1b12	86,{
+comodo,288,185,6	script	Comodo Villager#com::5ba43f08	828,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,210,125,6	script	Comodo Villager#com::4a953f82	125,{
+comodo,243,178,5	script	Comodo Villager#com::6d58451a	636,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,219,237,6	script	Comodo Villager#com::3a84d469	634,{
+comodo,244,174,0	script	Comodo Villager#com::aeeef222	745,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,221,134,1	script	Comodo Villager#com::2ea9badd	25,{
+cmd_in02,145,176,0	script	Comodo Villager#com::7395780a	95,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,256,125,6	script	Comodo Villager#com::8899734e	14,{
+cmd_in02,153,180,6	script	Comodo Villager#com::9216dad7	637,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,258,125,2	script	Comodo Villager#com::63131a31	11,{
+cmd_in02,173,185,4	script	Comodo Villager#com::9fb2f33d	636,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,218,155,7	script	Comodo Villager#com::2bf3b311	67,{
+cmd_in02,183,187,2	script	Comodo Villager#com::bd731890	740,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,235,188,6	script	Comodo Villager#com::17b9e6bf	69,{
+cmd_in02,181,173,3	script	Comodo Villager#com::3606c208	68,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,250,204,0	script	Comodo Villager#com::0277dcda	85,{
+cmd_in02,211,201,7	script	Comodo Villager#com::8ac5972a	779,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,274,177,2	script	Comodo Villager#com::68c369ee	637,{
+cmd_in02,98,201,5	script	Comodo Villager#com::2b45e2be	755,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,270,177,6	script	Comodo Villager#com::c0ad1198	14,{
+cmd_in02,154,208,4	script	Comodo Villager#com::2c69b2cb	51,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,288,185,6	script	Comodo Villager#com::2de6b01a	430,{
+cmd_in02,154,197,1	script	Comodo Villager#com::8415084b	636,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,243,178,5	script	Comodo Villager#com::0dad2938	49,{
+cmd_in01,117,82,4	script	Comodo Villager#com::476d16a5	70,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,244,174,0	script	Comodo Villager#com::086335f4	25,{
+cmd_in01,122,72,1	script	Comodo Villager#com::99862e39	85,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,145,176,0	script	Comodo Villager#com::7650db3c	745,{
+cmd_in01,124,171,4	script	Comodo Villager#com::0a316887	89,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,153,180,6	script	Comodo Villager#com::42e969d8	4,{
+cmd_in01,78,173,2	script	Comodo Villager#com::fda01bab	430,{
 npctalk "npcdialog";
 	end;
 }
+
 
-cmd_in02,173,185,4	script	Comodo Villager#com::a9066161	753,{
+comodo,35,211,0	script	Comodo Villager#com::d9e934d8	67,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,183,187,2	script	Comodo Villager#com::84553aa9	2,{
+comodo,42,216,6	script	Comodo Villager#com::8bf01ab0	430,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,181,173,3	script	Comodo Villager#com::5e875f6e	740,{
+comodo,174,211,5	script	Comodo Villager#com::62afbcad	742,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,211,201,7	script	Comodo Villager#com::799f75bb	645,{
+comodo,317,175,2	script	Comodo Villager#com::6c54863e	740,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,98,201,5	script	Comodo Villager#com::7ea2470f	645,{
+cmd_in02,180,131,4	script	Comodo Villager#com::45945446	644,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,154,208,4	script	Comodo Villager#com::df50bffd	69,{
+cmd_in02,180,131,4	script	Comodo Villager#com::8c63852b	62,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,154,197,1	script	Comodo Villager#com::998aab1d	732,{
+cmd_in02,178,116,1	script	Comodo Villager#com::502f3a8d	733,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in01,117,82,4	script	Comodo Villager#com::1d49b9d7	85,{
+cmd_in02,180,131,4	script	Comodo Villager#com::97944bbc	89,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in01,122,72,1	script	Comodo Villager#com::35e17bf5	17,{
+cmd_in02,179,107,2	script	Comodo Villager#com::9343f12b	908,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in01,124,171,4	script	Comodo Villager#com::d03264f6	641,{
+cmd_in02,186,105,1	script	Comodo Villager#com::db50e1c7	79,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in01,78,173,2	script	Comodo Villager#com::8cf3d0cc	636,{
+cmd_in02,182,105,1	script	Comodo Villager#com::a9d75f40	68,{
 npctalk "npcdialog";
 	end;
 }
 
+cmd_in02,105,99,1	script	Comodo Villager#com::2625a164	637,{
+npctalk "npcdialog";
+	end;
+}
 
-comodo,35,211,0	script	Comodo Villager#com::34f80bf8	18,{
+cmd_in02,189,99,1	script	Comodo Villager#com::650fa1bc	740,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,42,216,6	script	Comodo Villager#com::efa2c39d	83,{
+cmd_in02,166,99,1	script	Comodo Villager#com::2e7cf3ec	753,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,174,211,5	script	Comodo Villager#com::55945ddd	3,{
+cmd_in02,168,105,1	script	Comodo Villager#com::65ceaac2	779,{
 npctalk "npcdialog";
 	end;
 }
 
-comodo,317,175,2	script	Comodo Villager#com::fe6c1ce4	645,{
+cmd_in02,164,95,6	script	Comodo Villager#com::58176ab7	742,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,180,131,4	script	Comodo Villager#com::9de11b8e	755,{
+cmd_in02,174,95,7	script	Comodo Villager#com::56622a96	641,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,180,131,4	script	Comodo Villager#com::6654f430	755,{
+cmd_in02,181,97,2	script	Comodo Villager#com::3b3c51ba	641,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,178,116,1	script	Comodo Villager#com::1eeb8e94	92,{
+cmd_in02,180,92,4	script	Comodo Villager#com::ddcfca30	740,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,180,131,4	script	Comodo Villager#com::0bfa32a1	828,{
+cmd_in02,170,95,4	script	Comodo Villager#com::59a3fef6	637,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,179,107,2	script	Comodo Villager#com::f79d514d	732,{
+cmd_in02,173,79,4	script	Comodo Villager#com::ec743ce1	85,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,186,105,1	script	Comodo Villager#com::b3e6a5dd	753,{
+cmd_in02,169,73,2	script	Comodo Villager#com::056c8494	124,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,182,105,1	script	Comodo Villager#com::7011d01a	744,{
+cmd_in02,163,74,6	script	Comodo Villager#com::53f42778	744,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,105,99,1	script	Comodo Villager#com::d857b814	16,{
+cmd_in02,176,71,0	script	Comodo Villager#com::e28dca7d	741,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,189,99,1	script	Comodo Villager#com::10855368	744,{
+cmd_in02,170,65,6	script	Comodo Villager#com::01108d23	754,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,166,99,1	script	Comodo Villager#com::9b6eba65	12,{
+cmd_in02,177,62,7	script	Comodo Villager#com::e0d2284f	744,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,168,105,1	script	Comodo Villager#com::9173f297	10,{
+cmd_in02,191,76,2	script	Comodo Villager#com::7e4cc16c	79,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,164,95,6	script	Comodo Villager#com::ea9450d9	11,{
+cmd_in02,203,97,6	script	Comodo Villager#com::4775ebb0	742,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,174,95,7	script	Comodo Villager#com::d5fa167e	89,{
+cmd_in02,211,94,0	script	Comodo Villager#com::4b945b05	745,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,181,97,2	script	Comodo Villager#com::d313b4ff	67,{
+cmd_in02,161,131,2	script	Comodo Villager#com::34528893	49,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,180,92,4	script	Comodo Villager#com::41889f9a	0,{
+cmd_in02,147,96,6	script	Comodo Villager#com::b24d2904	645,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,170,95,4	script	Comodo Villager#com::8ebc85ab	744,{
+cmd_in02,159,113,7	script	Comodo Villager#com::25664b3a	645,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,173,79,4	script	Comodo Villager#com::35f0f822	84,{
+cmd_in02,66,73,2	script	Comodo Villager#com::97a869e7	740,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,169,73,2	script	Comodo Villager#com::cde409f6	18,{
+cmd_in02,78,83,2	script	Comodo Villager#com::ed7347f1	798,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,163,74,6	script	Comodo Villager#com::4fa9e54e	734,{
+cmd_in02,69,82,1	script	Comodo Villager#com::36e3bc9e	125,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,176,71,0	script	Comodo Villager#com::e38b548a	754,{
+cmd_in02,75,68,4	script	Comodo Villager#com::7427e4a1	636,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,170,65,6	script	Comodo Villager#com::bda71d4a	430,{
+cmd_in02,63,62,2	script	Comodo Villager#com::fda37023	79,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,177,62,7	script	Comodo Villager#com::afcab1a4	85,{
+cmd_in02,61,52,4	script	Comodo Villager#com::0364f9e4	798,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,191,76,2	script	Comodo Villager#com::b4753f7d	6,{
+cmd_in02,47,51,1	script	Comodo Villager#com::4ac979cf	430,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,203,97,6	script	Comodo Villager#com::f168be35	25,{
+cmd_in02,62,47,4	script	Comodo Villager#com::76c52cff	755,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,211,94,0	script	Comodo Villager#com::fe3e1041	4,{
+cmd_in02,84,48,6	script	Comodo Villager#com::58952519	742,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,161,131,2	script	Comodo Villager#com::e68f1f3b	89,{
+cmd_in02,89,51,4	script	Comodo Villager#com::86dffbd0	67,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,147,96,6	script	Comodo Villager#com::505facf8	828,{
+cmd_in02,86,65,0	script	Comodo Villager#com::59723f44	732,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,159,113,7	script	Comodo Villager#com::ad7b00e2	879,{
+cmd_in02,98,56,6	script	Comodo Villager#com::f610a802	635,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,66,73,2	script	Comodo Villager#com::defd330e	14,{
+cmd_in02,102,51,0	script	Comodo Villager#com::000d526f	644,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,78,83,2	script	Comodo Villager#com::3dabab8c	740,{
+cmd_in02,85,57,2	script	Comodo Villager#com::1740e2c6	95,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,69,82,1	script	Comodo Villager#com::b45458c3	779,{
+cmd_in02,74,56,1	script	Comodo Villager#com::40a80f5d	751,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,75,68,4	script	Comodo Villager#com::4b85c6e8	16,{
+cmd_in02,72,48,6	script	Comodo Villager#com::b66abbac	86,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,63,62,2	script	Comodo Villager#com::f6c174aa	733,{
+cmd_in02,81,38,2	script	Comodo Villager#com::5e1801a6	635,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,61,52,4	script	Comodo Villager#com::7c54a2be	14,{
+cmd_in02,72,34,1	script	Comodo Villager#com::92ec553e	641,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,47,51,1	script	Comodo Villager#com::26f79f97	7,{
+cmd_in02,73,31,2	script	Comodo Villager#com::a1c7640a	751,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,62,47,4	script	Comodo Villager#com::b7e720c7	744,{
+cmd_in02,70,28,7	script	Comodo Villager#com::6a593d96	125,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,84,48,6	script	Comodo Villager#com::6a19ba9f	741,{
+cmd_in02,76,25,0	script	Comodo Villager#com::5e9b6530	634,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,89,51,4	script	Comodo Villager#com::101d0acf	828,{
+cmd_in02,194,114,3	script	Comodo Villager#com::44a4d781	740,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,86,65,0	script	Comodo Villager#com::3c9f5387	85,{
+comodo,160,190,1	script	Comodo Villager#com::d32d6404	124,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,98,56,6	script	Comodo Villager#com::d0253459	744,{
+
+comodo,157,206,5	script	Comodo Villager#com::2f6cf5c9	754,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,102,51,0	script	Comodo Villager#com::62d3c439	745,{
+
+comodo,149,227,2	script	Comodo Villager#com::f6204271	742,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,85,57,2	script	Comodo Villager#com::3cd7b9fc	642,{
+comodo,156,256,6	script	Comodo Villager#com::59ccb4fa	753,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,74,56,1	script	Comodo Villager#com::c6f78a6d	70,{
+comodo,202,263,2	script	Comodo Villager#com::5e82eeb7	635,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,72,48,6	script	Comodo Villager#com::1c232d5b	84,{
+comodo,215,248,3	script	Comodo Villager#com::dbaed22a	95,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,81,38,2	script	Comodo Villager#com::049577b9	5,{
+comodo,209,225,4	script	Comodo Villager#com::bda84acc	430,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,72,34,1	script	Comodo Villager#com::79fa051f	68,{
+comodo,191,205,7	script	Comodo Villager#com::0749f6f5	753,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,73,31,2	script	Comodo Villager#com::a7436d51	2,{
+comodo,167,217,1	script	Comodo Villager#com::f37a17e7	637,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,70,28,7	script	Comodo Villager#com::ec0f1b5e	86,{
+comodo,164,239,3	script	Comodo Villager#com::6617f6f1	635,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,76,25,0	script	Comodo Villager#com::ef299699	10,{
+comodo,185,244,4	script	Comodo Villager#com::49dd53e3	79,{
 npctalk "npcdialog";
 	end;
 }
 
-cmd_in02,194,114,3	script	Comodo Villager#com::bb661d87	16,{
+comodo,193,223,1	script	Comodo Villager#com::0640d51c	755,{
 npctalk "npcdialog";
 	end;
 }
+
+
+
+

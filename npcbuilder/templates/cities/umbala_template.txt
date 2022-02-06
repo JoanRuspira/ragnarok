@@ -197,3 +197,14 @@ umbala,160,170,1	script	Umbala Villager#umb:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
+
+um_in,153,63,2	script	Umbala Villager#umb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+um_in,137,49,0	script	Umbala Villager#umb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}

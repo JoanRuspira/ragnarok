@@ -239,6 +239,7 @@ cmd_in01,165,117,1	script	Niels#um	731,{
 }
 
 umbala,70,106,3	script	Utan Kid#um	781,{
+	set event_umbala,7;
 	if (event_umbala >= 3) {
 		mes "[???]";
 		mes "Huh?";
@@ -364,6 +365,7 @@ umbala,70,106,3	script	Utan Kid#um	781,{
 }
 
 umbala,59,243,5	script	Utan Kid#1	787,{
+	set event_umbala,7;
 	if (event_umbala >= 3) {
 		mes "[Kotan]";
 		mes "............";
@@ -545,6 +547,7 @@ umbala,80,146,4	script	Yuwooki#um	753,{
 }
 
 umbala,140,157,6	script	Utan Man#1	785,{
+	set event_umbala,7;
 	if (event_umbala >= 3) {
 		mes "[Jertan]";
 		mes "Bungee jumping can be dangerous,";
@@ -565,6 +568,7 @@ umbala,140,157,6	script	Utan Man#1	785,{
 }
 
 umbala,146,157,4	script	Utan Man#2	786,{
+	set event_umbala,7;
 	if (event_umbala >= 3) {
 		mes "[Arotan]";
 		mes "Completing the bungee jump";
@@ -583,6 +587,7 @@ umbala,146,157,4	script	Utan Man#2	786,{
 }
 
 umbala,149,165,4	script	Utan Kid#3	781,{
+	set event_umbala,7;
 	if (event_umbala >= 3) {
 		mes "[Klumatan]";
 		mes "It's really scary, falling from";
@@ -609,6 +614,7 @@ umbala,149,165,4	script	Utan Kid#3	781,{
 }
 
 umbala,92,159,4	script	Bertan#um	785,{
+	set event_umbala,7;
 	if (event_umbala >= 3) {
 		mes "[Bertan]";
 		mes "What up, loser!";
@@ -805,6 +811,7 @@ umbala,92,159,4	script	Bertan#um	785,{
 }
 
 umbala,194,104,4	script	Utan Kid#2	787,{
+	set event_umbala,7;
 	if (event_umbala >= 3) {
 		mes "[Boorkatan]";
 		mes "Huh? You're from Rune-Midgarts,";
@@ -848,6 +855,7 @@ umbala,194,104,4	script	Utan Kid#2	787,{
 }
 
 umbala,193,208,6	script	Utan Man#3	789,{
+	set event_umbala,7;
 	if (event_umbala >= 3) {
 		mes "[Weitan]";
 		mes "I too did the bungee jump when I";
@@ -876,6 +884,7 @@ umbala,193,208,6	script	Utan Man#3	789,{
 }
 
 umbala,139,205,4	script	Utan Man#5	785,{
+	set event_umbala,7;
 	if (event_umbala >= 3) {
 		mes "[Jooltan]";
 		mes "It's been a long time since I last";
@@ -931,6 +940,7 @@ umbala,139,205,4	script	Utan Man#5	785,{
 }
 
 um_in,158,71,3	script	Utan villager#um	787,{
+	set event_umbala,7;
 	if (event_umbala >= 3) {
 		mes "[Mutakutan]";
 		mes "Umbala has many many trees!";

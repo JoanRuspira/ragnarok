@@ -599,3 +599,101 @@ moc_fild15,350,32,4	script	Board#sgn::95	835,{
 	mes "South to Sandstorm Island.";
 	close;
 }
+
+morocc,146,83,7	script	Bulletin Board#sgn::96	837,{
+	mes "Enjoy Morroc!";
+	mes "Visit the Palace, the thief guild, the Pyramids and Sphinx. Browse rare goods in the largest market around!";
+	close;
+}
+
+cmd_fild07,123,136,5	script	Bulletin Board#sgn::97	837,{
+	mes "Pharos Islet, where the last standing post of the old Sanint Darmain fortress stands.";
+	close;
+}
+
+comodo,210,155,4	script	Bulletin Board#sgn::98	837,{
+	mes "Comodo, the beach town. Home of the greatest endertainment in Midgard.";
+	close;
+}
+
+comodo,326,172,1	script	Board#sgn::99	858,{
+	mes "Mao, the east cave entrance.";
+	close;
+}
+
+cmd_fild01,29,314,7	script	Board#sgn::100	858,{
+	mes "Mao, the east cave entrance.";
+	close;
+}
+
+comodo,33,209,7	script	Board#sgn::101	858,{
+	mes "Karu, the west cave entrance.";
+	close;
+}
+
+comodo,171,349,5	script	Board#sgn::102	858,{
+	mes "Luanda, the north cave entrance.";
+	close;
+}
+
+comodo,157,179,4	script	Board#sgn::103	835,{
+	mes "Up the stairs for the volcano climb.";
+	close;
+}
+
+
+comodo,162,179,4	script	Board#sgn::104	835,{
+	mes "Up the stairs for the volcano climb.";
+	close;
+}
+
+
+um_fild01,33,276,7	script	Board#sgn::105	858,{
+	mes "Luanda, the north cave entrance.";
+	close;
+}
+
+
+um_fild01,43,287,4	script	Bulletin Board#sgn::106	837,{
+	mes "Luluka Jungle ahead.";
+	close;
+}
+
+
+um_fild04,174,104,4	script	Board#sgn::107	835,{
+	mes "North to Umbala.";
+	mes "South to Comodo.";
+	close;
+}
+
+
+umbala,109,288,4	script	Board#sgn::108	858,{
+	mes "Yggdrasil Tree entrance.";
+	close;
+}
+
+
+umbala,136,163,4	script	Bulletin Board#sgn::109	837,{
+	mes "Umbala, the hidden jungle town. Home of the Umbalan tribe and the Yggdrasil Tree.";
+	close;
+}
+
+mjolnir_12,190,42,5	script	Bulletin Board#sgn::110	837,{
+	mes "You are now in the Rune Midgard Kingdom.";
+	close;
+}
+
+mjolnir_12,200,97,3	script	Board#sgn::111	858,{
+	mes "Attention! You are leaving the Rune Midgard Kingdom.";
+	close;
+}
+
+mjolnir_12,188,278,7	script	Board#sgn::112	858,{
+	mes "Attention! You are leaving the Schwartzvald Republic.";
+	close;
+}
+
+mjolnir_12,193,341,4	script	Bulletin Board#sgn::113	837,{
+	mes "You are now in the Schwartzvald Republic.";
+	close;
+}

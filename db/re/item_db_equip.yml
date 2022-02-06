@@ -37276,3 +37276,87 @@ Body:
       Costume_Head_Mid: true
     EquipLevelMin: 1
     View: 1363
+  - Id: 20330
+    AegisName: C_Sombrero
+    Name: Costume Sombrero
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 151
+  - Id: 20331
+    AegisName: C_Desert_Prince
+    Name: Costume Desert Prince
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 567
+  - Id: 20332
+    AegisName: C_Pure_White_Ribbon
+    Name: Costume Pure White Ribbon
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 1175
+  - Id: 20338
+    AegisName: C_Colorful_Dancing_Octopus
+    Name: Costume Colorful Dancing Octopus
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 1007
+  - Id: 20349
+    AegisName: C_FlyingGalapago
+    Name: Costume Flying Galapago
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Low: true
+    EquipLevelMin: 1
+    View: 1358
+  - Id: 20373
+    AegisName: C_Watermelon_Hat
+    Name: Costume Watermelon Hat
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 690
+  - Id: 20548
+    AegisName: Costume_Popping_Poring_Aura
+    Name: Costume Popping Poring Aura
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Garment: true
+    EquipLevelMin: 1
+    Script: |
+      hateffect(HAT_EF_C_POPPING_PORING_AURA,true);
+    UnEquipScript: |
+      hateffect(HAT_EF_C_POPPING_PORING_AURA,false);
+  - Id: 20570
+    AegisName: C_HeartChocoBag
+    Name: Costume HeartChocoBag
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Garment: true
+    EquipLevelMin: 1
+    View: 47
+  - Id: 20582
+    AegisName: C_T_Bear_Bag
+    Name: Costume Bear Backpack
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Garment: true
+    EquipLevelMin: 1
+    View: 60
