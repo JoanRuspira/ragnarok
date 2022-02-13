@@ -62,7 +62,7 @@ yuno_fild04,42,369,0	warp	newjun14	1,1,yuno_fild05,59,30
 yuno_fild05,59,28,0	warp	newjun14a	1,1,yuno_fild04,42,367
 
 
-//= Al de Baran <-> Juno Connection ==========================
+//= Aldebaran <-> Juno Connection ==========================
 aldebaran,140,244,0	warp	alde-yunfild	1,1,yuno_fild01,208,19
 yuno_fild01,208,17,0	warp	yunfild-alde	1,1,aldebaran,140,242
 

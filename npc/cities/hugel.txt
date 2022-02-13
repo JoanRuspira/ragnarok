@@ -122,24 +122,9 @@ hugel,175,115,5	script	Marius	897,{
 
 // Inside Hugel
 //============================================================
-hu_in01,111,386,4	script	Chris	86,{
-	mes "[Chris]";
-	mes "You know, the people don't";
-	mes "fight harmful monsters, they";
-	mes "just protect themselves by";
-	mes "equipping armor. That's";
-	mes "just the way they are.";
-	next;
-	mes "[Chris]";
-	mes "If you want to buy";
-	mes "some nicer armors,";
-	mes "then I suggest buying";
-	mes "some in a bigger city.";
-	close;
-}
 
-hu_in01,23,311,4	script	Party Supplies Shop	898,{
-	mes "[Shopkeeper]";
+hu_in01,23,311,6	script	Fireckracker Vendor	898,{
+	mes "[Fireckracker Vendor]";
 	mes "Welcome to the party supplies";
 	mes "shop!";
 	mes "Why don't you enjoy some";
@@ -151,19 +136,19 @@ hu_in01,23,311,4	script	Party Supplies Shop	898,{
 	switch (select("Buy:Cancel")) {
 		case 1:
 			if (Zeny < 500) {
-				mes "[Shopkeeper]";
+				mes "[Fireckracker Vendor]";
 				mes "I am sorry, but you don't have";
 				mes "enough money~";
 				close;
 			}
 			set Zeny,Zeny-500;
 			getitem 12018,5;	// Fire_Cracker
-			mes "[Shopkeeper]";
+			mes "[Fireckracker Vendor]";
 			mes "Here you go!";
 			mes "Have fun with them!";
 			close;
 		case 2:
-			mes "[Shopkeeper]";
+			mes "[Fireckracker Vendor]";
 			mes "Thank you, please come again.";
 			close;
 	}

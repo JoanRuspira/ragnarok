@@ -697,3 +697,38 @@ mjolnir_12,193,341,4	script	Bulletin Board#sgn::113	837,{
 	mes "You are now in the Schwartzvald Republic.";
 	close;
 }
+
+prt_fild05,267,210,6	script	Board#sgn::114	858,{
+	mes "Prontera Culvert entrance.";
+	close;
+}
+
+prt_fild01,140,366,4	script	Board#sgn::115	858,{
+	mes "Labyrinth Forest entrance. Enter at your own risk.";
+	close;
+}
+
+yuno_fild08,217,196,5	script	Bulletin Board#sgn::116	837,{
+	mes "Kiel Hyre´s old academy. Abandoned now.";
+	close;
+}
+
+yuno_fild08,190,245,7	script	Bulletin Board#sgn::117	837,{
+	mes "Kiel Hyre´s old academy. Abandoned now.";
+	close;
+}
+
+yuno_fild08,217,196,5	script	Bulletin Board#sgn::118	837,{
+	mes "Kiel Hyre´s old academy. Abandoned now.";
+	close;
+}
+
+yuno_fild08,158,194,6	script	Board#sgn::119	858,{
+	mes "Kiel Hyre's Academy entrance, caution!";
+	close;
+}
+
+jupe_cave,55,49,7	script	Board#sgn::120	858,{
+	mes "Attention! Juperos Ruins entrance ahead. Please be carefull.";
+	close;
+}

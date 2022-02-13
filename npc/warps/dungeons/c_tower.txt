@@ -1,5 +1,5 @@
 //===== rAthena Script =======================================
-//= Al de Baran Clock Tower Warp Script
+//= Aldebaran Clock Tower Warp Script
 //===== By: ==================================================
 //= Nana (1.0)
 //===== Current Version: =====================================
@@ -12,7 +12,7 @@
 //= 1.0 Split from combined warp file alberta_duns. [L0ne_W0lf]
 //============================================================
 
-//= Al De Baran Clock Tower
+//= Aldebaran Clock Tower
 aldebaran,139,135,0	warp	ald002	1,1,c_tower1,199,159
 c_tower1,200,157,0	warp	ald003	1,1,aldebaran,139,131
 c_tower1,235,226,0	warp	clt001	1,1,c_tower2,268,26

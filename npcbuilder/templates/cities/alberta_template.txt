@@ -1131,3 +1131,24 @@ alberta,198,164,5	script	Alberta Sailor#alb:npcid5	100,{
 	npctalk "npcdialog";
 	end;
 }
+
+pay_fild03,384,64,1	script	Alberta Adventurer#alb:npcid5	430,{
+	npctalk "npcdialog";
+	end;
+}
+
+pay_fild03,388,69,4	script	Alberta Adventurer#alb:npcid5	429,{
+	npctalk "npcdialog";
+	end;
+}
+
+pay_fild03,381,75,3	script	Alberta Adventurer#alb:npcid5	695,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+pay_fild03,374,62,7	script	Alberta Adventurer#alb:npcid5	567,{
+	npctalk "npcdialog";
+	end;
+}

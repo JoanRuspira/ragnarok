@@ -419,7 +419,7 @@ prt_in,177,20,2	script	TenSue#pront	97,{
 
 	case 2:
 		mes "[TenSue]";
-		mes "One time I walked all the way to Al de Baran, instead of taking a warp. It was pretty dangerous with all those monsters!";
+		mes "One time I walked all the way to Aldebaran, instead of taking a warp. It was pretty dangerous with all those monsters!";
 		next;
 		mes "[TenSue]";
 		mes "I almost died! Some of those monsters just kept following me and trying to kill me, even though I did nothing to them! It was pretty crazy.";
@@ -428,10 +428,10 @@ prt_in,177,20,2	script	TenSue#pront	97,{
 		mes "Well, still, I feel that taking the scenic route was worth it. There were some pretty magnificent sights on the way.";
 		next;
 		mes "[TenSue]";
-		mes "Even the city of Al de Baran is a splendid vision to the eyes, with its elegant architecture and romantic canal.";
+		mes "Even the city of Aldebaran is a splendid vision to the eyes, with its elegant architecture and romantic canal.";
 		next;
 		mes "[TenSue]";
-		mes "The headquarters of Kafra Corporation is also located in Al de Baran. You should really stop by and check it out for yourself.";
+		mes "The headquarters of Kafra Corporation is also located in Aldebaran. You should really stop by and check it out for yourself.";
 		close;
 	Default:
 		mes "[TenSue]";

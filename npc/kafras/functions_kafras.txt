@@ -144,22 +144,7 @@ function	script	F_Kafra	{
 			next;
 		}
 		else if (.@K_Menu0$[.@j] == "Use Teleport Service") {
-			if (.@menu_num != 4)// Display Einbroch "No Teleport Service" notice.
-				callfunc "F_KafTele",.@welcome;
-			else {
-				mes "[Kafra Employee]";
-				mes "Because of the ^FF0000Limited";
-				mes "Transport Agreement^000000, the";
-				mes "Kafra Corporation cannot";
-				mes "provide Teleport Services";
-				mes "in the Schwarzwald Republic.";
-				next;
-				mes "[Kafra Employee]";
-				mes "We ask that you please";
-				mes "use the Airship Service";
-				mes "instead. Thank you for your";
-				mes "understanding and cooperation.";
-			}
+			callfunc "F_KafTele",.@welcome;
 			next;
 		}
 		else if (.@K_Menu0$[.@j] == "Rent a Pushcart") {
@@ -298,20 +283,22 @@ function	script	F_KafTele	{
 		RESRVPTS += (@wrpP[.@j]/16);
 	}
 	cutin "", 255;
-	if (@wrpD$[.@j] == "Al De Baran") warp "aldebaran",168,112;
+	if (@wrpD$[.@j] == "Aldebaran") warp "aldebaran",140,119;
 	else if (@wrpD$[.@j] == "Alberta") warp "alberta", 32, 235;
 	else if (@wrpD$[.@j] == "Comodo") warp "comodo", 197, 319;
 	else if (@wrpD$[.@j] == "Pharos Islet") warp "cmd_fild07", 138, 132;
+	else if (@wrpD$[.@j] == "Hugel") warp "hugel", 98, 127;
+	else if (@wrpD$[.@j] == "Einbroch") warp "einbroch", 246, 208;
 	else if (@wrpD$[.@j] == "Geffen") warp "geffen", 124, 64;
 	else if (@wrpD$[.@j] == "Izlude") {
 			warp "izlude", 130, 145;
 	}
-	else if (@wrpD$[.@j] == "Juno") warp "yuno", 158, 125;
+	else if (@wrpD$[.@j] == "Yuno") warp "yuno", 157, 187;
 	else if (@wrpD$[.@j] == "Mjolnir Dead Pit") warp "mjolnir_02", 99, 351;
 	else if (@wrpD$[.@j] == "Morocc") warp "morocc", 158, 95;
 	else if (@wrpD$[.@j] == "Orc Dungeon") warp "gef_fild10", 52, 326;
 	else if (@wrpD$[.@j] == "Payon") warp "payon", 177, 104;
-	else if (@wrpD$[.@j] == "Prontera") warp "prontera", 116, 72;
+	else if (@wrpD$[.@j] == "Prontera") warp "prontera", 157, 187;
 	else if (@wrpD$[.@j] == "Umbala") warp "umbala", 100, 154;
 	end;
 }
@@ -405,7 +392,7 @@ function	script	F_KafInfo	{
 			mes "[Kafra Employee]";
 			mes "You can exchange your";
 			mes "Special Reserve Points for";
-			mes "rewards at the Kafra Main Office in Al De Baran. Please use our";
+			mes "rewards at the Kafra Main Office in Aldebaran. Please use our";
 			mes "convenient services to see the benefits of our rewards program.";
 			if (getarg(0) == 1)
 				return;
@@ -608,7 +595,10 @@ function	script	F_KafSet	{
 		setarray @viewpY[0], 229, 60, 0, 0;
 	} else if (.@map$ == "aldebaran") {
 		setarray @wrpP[0], 1200, 1200, 1800, 1700;
-		setarray @wrpD$[0], "Geffen", "Juno" , "Izlude", "Mjolnir Dead Pit";
+		setarray @wrpD$[0], "Yuno";
+	} else if (.@map$ == "hugel") {
+		setarray @wrpP[0], 1200, 1200, 1800, 1700;
+		setarray @wrpD$[0], "Yuno";
 	} else if (.@map$ == "comodo" ) {
 		setarray @wrpD$[0], "Morocc", "Pharos Islet", "Umbala";
 		setarray @wrpP[0], 1800, 1200, 1800;
@@ -634,9 +624,12 @@ function	script	F_KafSet	{
 	} else if (.@map$ == "payon") {
 		setarray @wrpD$[0], "Prontera", "Alberta";
 		setarray @wrpP[0], 1200, 1200, 1200;
-	} else if (.@map$ == "yuno") {
-		setarray @wrpD$[0], "Al De Baran";
+	} else if (.@map$ == "einbroch") {
+		setarray @wrpD$[0], "Yuno";
 		setarray @wrpP[0], 1200;
+	} else if (.@map$ == "yuno") {
+		setarray @wrpD$[0], "Aldebaran", "Einbroch", "Hugel";
+		setarray @wrpP[0], 1200, 1200, 1200;
 		setarray @viewpX[0], 328, 278, 153, 0;
 		setarray @viewpY[0], 108, 221, 187, 0;
 	} else if (.@map$ == "job3_rune01") {

@@ -17,7 +17,8 @@
 
 // Hair Dresser Veronica
 // ============================================================
-payon,104,324,4	script	Hairstyler	612,{
+
+-	script	Hairstyler#stl::Hairstyler	-1,{
 	mes "[Veronica]";
 	mes "Welcome to Veronica's hair salon.";
 	mes "We have a fixed price of 10000z.";
@@ -185,3 +186,6 @@ L_cutin:
 	}
 	return;
 }
+
+payon,104,324,4	duplicate(Stylist)	Hairstyler#hairstyler1	612
+hugel,143,112,4	duplicate(Stylist)	Hairstyler#hairstyler2	612

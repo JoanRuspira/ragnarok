@@ -1,0 +1,35 @@
+
+prt_fild05,287,221,3	script	Prontera Adventurer#prt:npcid	14,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_fild05,278,215,0	script	Prontera Adventurer#prt:npcid	118,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_fild05,273,201,1	script	Prontera Adventurer#prt:npcid	123,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_fild01,135,363,5	script	Prontera Adventurer#prt:npcid	11,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_fild01,141,362,1	script	Prontera Adventurer#prt:npcid	486,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_fild01,136,361,0	script	Prontera Adventurer#prt:npcid	466,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_fild01,139,358,3	script	Prontera Adventurer#prt:npcid	500,{
+	npctalk "npcdialog";
+	end;
+}

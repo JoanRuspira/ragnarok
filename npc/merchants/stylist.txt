@@ -13,8 +13,10 @@
 //= 1.1 Switched to 'getbattleflag', credits to Saithis. [Euphy]
 //============================================================
 
-alberta,227,54,1	script	Dyer Ginedin Rephere#custom_stylist	122,{
-	set .n$,"[Dyer Ginedin Rephere]";
+
+
+-	script	Stylist#stl::Stylist	-1,{
+	set .n$,"[Dyer]";
 	mes .n$;
 	mes "11... 12... Mmm... good. I think I'll be able to finish before tonight's party. Oh! I didn't notice you were here!";
 	next;
@@ -158,3 +160,6 @@ alberta,227,54,1	script	Dyer Ginedin Rephere#custom_stylist	122,{
 			close;
 	}	
 }
+
+alberta,227,54,1	duplicate(Stylist)	Dyer Ginedin Rephere#dyer1	122
+aldebaran,213,226,3	duplicate(Stylist)	Dyer Enaal Fumuruh#dyer2	606

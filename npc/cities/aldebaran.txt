@@ -1,5 +1,5 @@
 //===== rAthena Script =======================================
-//= Al De Baran Town
+//= Aldebaran Town
 //===== By: ==================================================
 //= rAthena Dev Team; L0ne_W0lf
 //===== Current Version: =====================================
@@ -8,7 +8,7 @@
 //= rAthena Project
 //===== Description: =========================================
 //= [Official Conversion]
-//= Al De Baran Town NPCs
+//= Aldebaran Town NPCs
 //===== Additional Comments: =================================
 //= 1.1 Added RS125 NPC.  Added another Kafra Reserve points agent.
 //=     The 2nd reserve points agent is not complete yet.
@@ -32,12 +32,12 @@
 //= 2.4 Updated Kafra Reserve to official dialog. [Capuche]
 //============================================================
 
-// Al De Baran
+// Aldebaran
 //============================================================
 aldebaran,113,70,4	script	Forger Munster#alde	48,{
 	mes "[Munster]";
 	mes "My family used to live in Geffen. So I guess it was natural that we studied forging and eventually became Blacksmiths. Then, we finally moved to this town,";
-	mes "Al De Baran.";
+	mes "Aldebaran.";
 	next;
 	if (select("About ^3355FFItem Upgrade^000000:Quit") == 1) {
 		mes "[Munster]";
@@ -55,7 +55,7 @@ aldebaran,113,70,4	script	Forger Munster#alde	48,{
 	}
 	mes "[Munster]";
 	mes "Hmm...";
-	mes "If you get a chance, try to visit my father's workshop here in Al de Baran. If I may say so, he's a pretty talented Blacksmith.";
+	mes "If you get a chance, try to visit my father's workshop here in Aldebaran. If I may say so, he's a pretty talented Blacksmith.";
 	close;
 }
 
@@ -75,7 +75,7 @@ aldebaran,64,104,4	script	Smithing Guy#alde	55,{
 		close;
 	}
 	mes "[Quatro]";
-	mes "This Blacksmith's family lives here, since his wife is sick and weak. Because of her condition, she needs to take medicinal herbs that grow near Al de Baran.";
+	mes "This Blacksmith's family lives here, since his wife is sick and weak. Because of her condition, she needs to take medicinal herbs that grow near Aldebaran.";
 	next;
 	mes "[Quatro]";
 	mes "They also have a dutiful son who's always helping out with the family business. I'm sure that kid will grow up to become a good Blacksmith like his father.";
@@ -125,7 +125,7 @@ aldebaran,81,61,4	script	Shell Gathering Lady#ald	101,{
 
 aldebaran,46,129,4	script	Canal Guy#alde	97,{
 	mes "[Panama]";
-	mes "Al De Baran is known world wide as the City of Canals. The waterways really add a sophisticated, romantic touch to our fair city.";
+	mes "Aldebaran is known world wide as the City of Canals. The waterways really add a sophisticated, romantic touch to our fair city.";
 	next;
 	switch(select("About the Canals:End Conversation")) {
 	case 1:
@@ -139,7 +139,7 @@ aldebaran,46,129,4	script	Canal Guy#alde	97,{
 		break;
 	case 2:
 		mes "[Panama]";
-		mes "I have that you will enjoy your stay in Al De Baran.";
+		mes "I have that you will enjoy your stay in Aldebaran.";
 		close;
 		break;
 	}
@@ -247,7 +247,7 @@ aldebaran,117,181,4	script	Phracon Guy#alde	48,{
 
 aldebaran,121,231,4	script	Alchemy Guy#alde	49,{
 	mes "[Chemirre]";
-	mes "Alchemists, one of the 2nd Jobs, are able to create items out of several materials using knowledge from the ancient age of Al De Baran.";
+	mes "Alchemists, one of the 2nd Jobs, are able to create items out of several materials using knowledge from the ancient age of Aldebaran.";
 	next;
 	switch(select("About Alchemy in Payon:Definition of Alchemy:. . . . .:End Conversation")) {
 	case 1:
@@ -255,10 +255,10 @@ aldebaran,121,231,4	script	Alchemy Guy#alde	49,{
 		mes "Most people don't know that there was an oriental form of Alchemy that developed in Payon.";
 		next;
 		mes "[Chemirre]";
-		mes "These Payon Alchemists were able to create Gold out of different materials. However, Payon Alchemy never advanced as much as the Alchemy in Al De Baran.";
+		mes "These Payon Alchemists were able to create Gold out of different materials. However, Payon Alchemy never advanced as much as the Alchemy in Aldebaran.";
 		next;
 		mes "[Chemirre]";
-		mes "Materials for Alchemy in Payon were scarse and interest in that field eventually waned. Now, you can only study Alchemy here in Al De Baran.";
+		mes "Materials for Alchemy in Payon were scarse and interest in that field eventually waned. Now, you can only study Alchemy here in Aldebaran.";
 		next;
 		mes "[Chemirre]";
 		mes "Still, I can't help but wonder what secrets were lost after the Payon art of Alchemy disappeared from the face of the Earth...";
@@ -310,7 +310,7 @@ aldebaran,121,231,4	script	Alchemy Guy#alde	49,{
 	case 4:
 		mes "[Chemirre]";
 		mes "You can talk about Rune-Midgarts' alchemy";
-		mes "without talking about the Al De Baran Alchemist Guild!";
+		mes "without talking about the Aldebaran Alchemist Guild!";
 		mes "Long Live Alchemists!";
 		close;
 	}
@@ -381,7 +381,7 @@ aldebaran,159,242,4	script	Insect Guy#alde	119,{
 
 aldebaran,60,70,4	script	Sylvia#alde	69,{
 	mes "[Sylvia]";
-	mes "I came all the way here from Prontera because I heard the Kafra Main Office was somewhere here in Al De Baran.";
+	mes "I came all the way here from Prontera because I heard the Kafra Main Office was somewhere here in Aldebaran.";
 	next;
 	mes "[Sylvia]";
 	mes "It shouldn't be that hard to find, but I'm awful at following directions. I always get lost, no matter how hard I try!";
@@ -411,7 +411,7 @@ aldebaran,60,70,4	script	Sylvia#alde	69,{
 
 aldebaran,93,80,4	script	Issei#alde	48,{
 	mes "[Issei]";
-	mes "Al De Baran is such a wonderful place with its romantic canals and classic architecture. I love nothing more than to stroll through this city with my beautiful girlfriend.";
+	mes "Aldebaran is such a wonderful place with its romantic canals and classic architecture. I love nothing more than to stroll through this city with my beautiful girlfriend.";
 	next;
 	if (select("You have a girlfriend?:End Conversation.") == 1) {
 		mes "[Issei]";
@@ -442,7 +442,7 @@ aldebaran,180,46,4	script	Joo Jahk#alde	88,{
 	mes "the City of Forests.";
 	next;
 	mes "[Joo Jahk]";
-	mes "The tempature here in Al De Baran is very cool, probably because of the waterways. Do you think the water in the canals is drinkable?";
+	mes "The tempature here in Aldebaran is very cool, probably because of the waterways. Do you think the water in the canals is drinkable?";
 	next;
 	mes "[Joo Jahk]";
 	mes "Well, it's too late for me, since I already drank some. Still, I'm a little worried...";
@@ -464,7 +464,7 @@ aldebaran,212,122,4	script	Citizen#alde	97,{
 	mes "[Gavin]";
 	mes "Welcome!";
 	mes "The town of";
-	mes "Al De Baran";
+	mes "Aldebaran";
 	mes "welcomes you!";
 	next;
 	mes "[Gavin]";
@@ -538,7 +538,7 @@ aldebaran,143,136,4	script	Bell Keeper#A	89,{
 	close;
 }
 
-// Inside Al De Baran
+// Inside Aldebaran
 //============================================================
 aldeba_in,232,241,4	script	RS125#alde	48,{
 	mes "[RS125]";
@@ -547,18 +547,18 @@ aldeba_in,232,241,4	script	RS125#alde	48,{
 	next;
 	mes "[RS125]";
 	mes "I may have a machine heart and I may disturb you with loud noises from the heart,";
-	mes "that will never stop me from running for future of Al De Baran.";
+	mes "that will never stop me from running for future of Aldebaran.";
 	next;
 	if (select("Listen to his story.:End Conversation") == 1) {
 		mes "[RS125]";
 		mes "It's been 3 years already.";
-		mes "My brother 996 used to be a short track athlete in the Al De Baran city field team.";
-		mes "Back then, people gave him a nickname, 'Al De Baran's Pco Peco',";
+		mes "My brother 996 used to be a short track athlete in the Aldebaran city field team.";
+		mes "Back then, people gave him a nickname, 'Aldebaran's Pco Peco',";
 		mes "for his amazingly fast legs...";
 		next;
 		mes "[RS125]";
 		mes "He became so popular for his exciting play,";
-		mes "so every time when the 'Al De Baran Turbo Track' was held once every 4 years,";
+		mes "so every time when the 'Aldebaran Turbo Track' was held once every 4 years,";
 		mes "many people from all over the continent came to this city only to see my brother.";
 		mes "I was his manager at the time and I was so stressed out because of his fans.";
 		next;
@@ -572,7 +572,7 @@ aldeba_in,232,241,4	script	RS125#alde	48,{
 		mes "He is still in bed.";
 		next;
 		mes "[RS125]";
-		mes "I am my brother's only hope and the future of Al De Baran!";
+		mes "I am my brother's only hope and the future of Aldebaran!";
 		mes "Please wish me luck, I will beat her, 'Breezy Havana' from Payon!";
 		close;
 	}
@@ -629,7 +629,7 @@ aldeba_in,223,121,4	script	Threatening-Looking Man	63,{
 	close;
 }
 
-aldeba_in,219,61,4	script	Friendly-Looking Man#ald	109,{
+aldeba_in,219,61,4	script	Friendly-Looking Man#ald	125,{
 	mes "[Friendly-Looking Man]";
 	mes "You don't have to listen to a guy right next to my room.";
 	mes "Two years ago, he was in a mercenary training center and fell off from a tree";
@@ -673,9 +673,9 @@ aldeba_in,152,47,4	script	Fussy Man#alde	97,{
 	close;
 }
 
-aldeba_in,156,179,4	script	Master#alde	61,{
+aldeba_in,157,174,4	script	Master#alde	61,{
 	mes "[Master]";
-	mes "The Kafra Corporation Headquarters is located here in Al De Baran.";
+	mes "The Kafra Corporation Headquarters is located here in Aldebaran.";
 	mes "Do you know";
 	mes "what that means?";
 	next;
@@ -762,7 +762,7 @@ aldeba_in,156,179,4	script	Master#alde	61,{
 	close;
 }
 
-aldeba_in,84,166,4	script	Kafra Service#alde	117,{
+aldeba_in,75,166,7	script	Kafra Service#alde	117,{
 	cutin "kafra_01",2;
 	mes "[Kafra Pavianne]";
 	mes "Welcome! I'm Pavianne,";
@@ -894,7 +894,7 @@ aldeba_in,24,245,4	script	Kafra Jasmine#alde	115,{
 	mes "always on your side.";
 	next;
 	mes "[Kafra Jasmine]";
-	mes "Thank you for coming all the way to visit us at the Kafra Corporation Headquarters here in Al De Baran!";
+	mes "Thank you for coming all the way to visit us at the Kafra Corporation Headquarters here in Aldebaran!";
 	next;
 	mes "[Kafra Jasmine]";
 	mes "The Kafra Service is always behind our customers with a dependable reputation that has been established over five thousand, eight hundred years...";
@@ -946,7 +946,7 @@ aldeba_in,24,245,4	script	Kafra Jasmine#alde	115,{
 	end;
 }
 
-aldeba_in,142,238,4	script	Kafra Service#3alde	114,{
+aldeba_in,148,243,4	script	Kafra Service#3alde	114,{
 	cutin "kafra_04",2;
 	mes "[Kafra Roxie]";
 	mes "Welcome~!";
@@ -998,7 +998,7 @@ aldeba_in,142,238,4	script	Kafra Service#3alde	114,{
 			mes "Also, it'd be really impractical to rent carts out to people who couldn't create or sell goods.";
 			next;
 			mes "[Kafra Roxie]";
-			mes "As for Super Novices, well, we're really not supposed to rent carts to them since the Super Novice Society in Al De Baran doesn't have a contract with us.";
+			mes "As for Super Novices, well, we're really not supposed to rent carts to them since the Super Novice Society in Aldebaran doesn't have a contract with us.";
 			next;
 			mes "[Kafra Roxie]";
 			mes "If a Kafra Employee rented a Cart to a Super Novice, she'd probably get in big trouble with Leilah...";
@@ -1430,7 +1430,7 @@ aldeba_in,88,161,3	script	Kafra Employee#reserve2	4_F_KAFRA3,{
 					getitem 504,30;// White_Potion
 					mes "What a pity!";
 					mes "You got the 4th prize!!";
-					mes "The prize is ^00FF00White_Potion 30°³~^000000";
+					mes "The prize is ^00FF00White_Potion 30ï¿½ï¿½~^000000";
 					next;
 					mes "[Kafra Employee]";
 					mes "The greatest among potions! Use it before you fall into faint~";

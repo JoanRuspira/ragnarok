@@ -33823,7 +33823,7 @@ Body:
     AegisName: Chonchon_Egg
     Name: Chonchon Egg
     Type: Petegg
-    Buy: 20
+    Buy: 100000
   - Id: 9007
     AegisName: Steel_Chonchon_Egg
     Name: Steel Chonchon Egg
@@ -33868,7 +33868,7 @@ Body:
     AegisName: Smokie_Egg
     Name: Smokie Egg
     Type: Petegg
-    Buy: 20
+    Buy: 100000
   - Id: 9016
     AegisName: Yoyo_Egg
     Name: Yoyo Egg
@@ -33929,7 +33929,7 @@ Body:
     AegisName: Alice_Egg
     Name: Alice Egg
     Type: Petegg
-    Buy: 20
+    Buy: 100000
   - Id: 9028
     AegisName: Rice_Cake_Egg
     Name: Hard Rice Cake
@@ -33956,7 +33956,7 @@ Body:
     AegisName: Spring_Rabbit_Egg
     Name: Spring Rabbit Egg
     Type: Petegg
-    Buy: 20
+    Buy: 100000
   - Id: 9032
     AegisName: Knife_Goblin_Egg
     Name: Knife Goblin Egg
@@ -37360,3 +37360,156 @@ Body:
       Costume_Garment: true
     EquipLevelMin: 1
     View: 60
+  - Id: 31732
+    AegisName: Costume_Bear_Balloon
+    Name: C Bear Balloon
+    Type: Armor
+    Buy: 250000
+    Locations:
+      Costume_Head_Low: true
+    EquipLevelMin: 1
+    View: 1734
+  - Id: 400076
+    AegisName: C_20th_Anniversary
+    Name: Costume Gravity 20th Anniversary Balloon    # !todo check english name
+    Type: Armor
+    Buy: 250000
+    View: 2005
+    Locations:
+      Costume_Head_Low: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+  - Id: 20577
+    AegisName: C_Balloon_Wing
+    Name: Costume inflatable wings    # !todo check english name
+    Type: Armor
+    Buy: 250000
+    View: 54
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Costume_Garment: true
+  - Id: 20416
+    AegisName: C_1Grade_Balloon
+    Name: Costume Grade 1 Balloon
+    Type: Armor
+    Buy: 250000
+    Locations:
+      Costume_Head_Low: true
+    EquipLevelMin: 1
+    View: 1426
+  - Id: 20417
+    AegisName: C_2Grade_Balloon
+    Name: Costume Grade 2 Balloon
+    Type: Armor
+    Buy: 250000
+    Locations:
+      Costume_Head_Low: true
+    EquipLevelMin: 1
+    View: 1427
+  - Id: 20418
+    AegisName: C_3Grade_Balloon
+    Name: Costume Grade 3 Balloon
+    Type: Armor
+    Buy: 250000
+    Locations:
+      Costume_Head_Low: true
+    EquipLevelMin: 1
+    View: 1428
+  - Id: 20419
+    AegisName: C_4Grade_Balloon
+    Name: Costume Grade 4 Balloon
+    Type: Armor
+    Buy: 250000
+    Locations:
+      Costume_Head_Low: true
+    EquipLevelMin: 1
+    View: 1429
+  - Id: 20420
+    AegisName: C_5Grade_Balloon
+    Name: Costume Grade 5 Balloon
+    Type: Armor
+    Buy: 250000
+    Locations:
+      Costume_Head_Low: true
+    EquipLevelMin: 1
+    View: 1430
+  - Id: 20421
+    AegisName: C_6Grade_Balloon
+    Name: Costume Grade 6 Balloon
+    Type: Armor
+    Buy: 250000
+    Locations:
+      Costume_Head_Low: true
+    EquipLevelMin: 1
+    View: 1431
+  - Id: 20424
+    AegisName: C_9Grade_Balloon
+    Name: Costume Grade 9 Balloon
+    Type: Armor
+    Buy: 250000
+    Locations:
+      Costume_Head_Low: true
+    EquipLevelMin: 1
+    View: 1434
+  - Id: 20425
+    AegisName: C_10Grade_Balloon
+    Name: Costume Grade 10 Balloon
+    Type: Armor
+    Buy: 250000
+    Locations:
+      Costume_Head_Low: true
+    EquipLevelMin: 1
+    View: 1435
+  - Id: 20426
+    AegisName: C_11Grade_Balloon
+    Name: Costume Grade 11 Balloon
+    Type: Armor
+    Buy: 250000
+    Locations:
+      Costume_Head_Low: true
+    EquipLevelMin: 1
+    View: 1436
+  - Id: 20427
+    AegisName: C_12Grade_Balloon
+    Name: Costume Grade 12 Balloon
+    Type: Armor
+    Buy: 250000
+    Locations:
+      Costume_Head_Low: true
+    EquipLevelMin: 1
+    View: 1437
+  - Id: 20344
+    AegisName: C_Happy_Balloon_J
+    Name: "Costume: Happy Balloon"
+    Type: Armor
+    Buy: 250000
+    Locations:
+      Costume_Head_Low: true
+    EquipLevelMin: 1
+    View: 1289
+  - Id: 20277
+    AegisName: C_Balloon_Hat
+    Name: Costume Balloon Hat
+    Type: Armor
+    Buy: 250000
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 385
+  - Id: 20202
+    AegisName: C_Deviruchi_Balloon
+    Name: Costume Deviruchi Balloon
+    Type: Armor
+    Buy: 250000
+    Locations:
+      Costume_Head_Low: true
+    EquipLevelMin: 1
+    View: 1082

@@ -398,3 +398,274 @@ hugel,79,89,7	script	Hugel Villager#hugel:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
+
+hu_fild05,187,207,3	script	Abyss Lake Adventurer#alde:npcid	690,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_fild05,188,199,1	script	Abyss Lake Adventurer#alde:npcid	677,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_fild05,183,200,0	script	Abyss Lake Adventurer#alde:npcid	695,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_fild05,180,206,6	script	Abyss Lake Adventurer#alde:npcid	704,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_fild05,181,195,7	script	Abyss Lake Adventurer#alde:npcid	682,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,375,303,1	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,385,307,4	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,386,319,2	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,377,385,5	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,378,371,1	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,387,375,3	script	Hunter Guildmaster#hugel:npcid	732,{
+	npctalk "I will make you a hunter.";
+	end;
+}
+
+hugel,210,221,4	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hugel,198,214,5	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hugel,196,197,2	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hugel,178,189,6	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hugel,180,189,2	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,241,387,6	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,248,375,1	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,245,364,7	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,230,379,2	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,218,379,7	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,114,378,1	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,107,382,5	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,97,376,1	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,95,384,7	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,110,313,2	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,103,308,0	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,98,319,4	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,29,314,3	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,33,305,1	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,223,219,3	script	Hugel Priest#hugel:npcid	110,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,201,210,7	script	Hugel Priest#hugel:npcid	8,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,223,219,3	script	Hugel Priest#hugel:npcid	110,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,207,192,5	script	Hugel Acolyte#hugel:npcid	4,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,223,201,4	script	Hugel Priest#hugel:npcid	616,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,216,195,1	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,212,181,5	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,208,205,0	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,218,209,1	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,216,201,1	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,202,219,6	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hugel,48,64,7	script	Peco#hugel:npcid	428,{
+	npctalk "...";
+	end;
+}
+
+hugel,46,58,3	script	Peco#hugel:npcid	428,{
+	npctalk "...";
+	end;
+}
+
+hugel,59,76,5	script	Peco#hugel:npcid	428,{
+	npctalk "...";
+	end;
+}
+
+hugel,64,70,1	script	Peco#hugel:npcid	428,{
+	npctalk "...";
+	end;
+}
+
+
+hu_in01,239,116,7	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,251,122,4	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,257,110,7	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,247,100,3	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,241,92,0	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,263,98,6	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,259,92,7	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,265,114,4	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_in01,262,123,3	script	Hugel Villager#hugel:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}

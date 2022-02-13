@@ -16,3 +16,27 @@ OnInit:
 	cloakonnpc strnpcinfo(0);
 	end;
 }
+
+
+-	script	Prontera Culvert Guard#culvert::prt_cl_guard	-1,{
+	mes "[Prontera Culvert Guard]";
+	mes "Hello adventurer!";
+	mes "Behind me is the entrance to the Prontera culvert.";
+	mes "I can let you in, but be careful.";
+	mes "Aggressive creatures can be found inside.";
+	mes "Do you want to get in?";
+	next;
+	switch(select("Yes:No")) {
+		case 1:
+			mes "[Prontera Culvert Guard]";
+			mes "Great, go through the door behind me.";
+			warp "prt_sewb1",132,248;
+			close;
+		case 2:
+			mes "[Prontera Culvert Guard]";
+			mes "Ok, let me know if you change your mind.";
+			close;
+	}
+}
+
+prt_fild05,271,211,5	duplicate(prt_cl_guard)	Prontera Culvert Guard#prt_cl_guard01	105

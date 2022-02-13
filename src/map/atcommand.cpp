@@ -1959,7 +1959,7 @@ ACMD_FUNC(go)
 #else
 		{ MAP_IZLUDE,      128, 114 }, //  5=Izlude
 #endif
-		{ MAP_ALDEBARAN,   140, 131 }, //  6=Al de Baran
+		{ MAP_ALDEBARAN,   140, 131 }, //  6=Aldebaran
 		{ MAP_LUTIE,       147, 134 }, //  7=Lutie
 		{ MAP_COMODO,      209, 143 }, //  8=Comodo
 		{ MAP_YUNO,        157,  51 }, //  9=Yuno
