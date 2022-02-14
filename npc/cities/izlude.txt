@@ -91,6 +91,39 @@
 	}
 }
 
+-	script	::Sailor_Odin	-1,{
+	mes "[Explorer]";
+	mes "I organize adventurer trips to the ancient realm of Odin.";
+	mes "It's a large island off the Schwarzwald coast home of an ancient civilization, so it's in ruins now. ";
+	next;
+	mes "[Explorer]";
+	mes "I can get you on the next trip for a 10000 Zeny fee. It's a dangerous place, but is this something that interests you?"; 
+	next;
+	switch(select("Sure!:Naah, sorry.")) {
+	case 1:
+		if (Zeny < 10000) {
+			mes "[Explorer]";
+			mes "You don't have enough money...";
+			close;
+		}
+		set Zeny, Zeny - 10000;
+		warp "odin_tem01",98,145;
+		end;
+	case 2:
+		close;
+	}
+}
+
+-	script	::Sailor_Odin_Return	-1,{
+	mes "[Explorer]";
+	mes "Hello! Do you want to go back to Hugel?";
+	next;
+	if (select("Yes please.","Not yet.") == 1)
+		warp "hugel",203,109;
+	close;
+}
+
+
 -	script	::Bonne_izlude	-1,{
 	mes "[Bonne]";
 	mes "Greetings!";
@@ -815,3 +848,5 @@ prt_fild08b,338,217,7	duplicate(Resting Adventurer#iz)	Resting Adventurer#izb	4_
 prt_fild08c,338,217,7	duplicate(Resting Adventurer#iz)	Resting Adventurer#izc	4_F_SITDOWN
 prt_fild08d,338,217,7	duplicate(Resting Adventurer#iz)	Resting Adventurer#izd	4_F_SITDOWN
 comodo,233,86,0	duplicate(Sailor_Turtle)	Explorer#turtle	832
+hugel,208,109,2	duplicate(Sailor_Odin)	Odin Expeditioner#odintrip	702
+odin_tem01,93,145,6	duplicate(Sailor_Odin_Return)	Odin Expeditioner#odinreturn	702

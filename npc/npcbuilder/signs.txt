@@ -732,3 +732,13 @@ jupe_cave,55,49,7	script	Board#sgn::120	858,{
 	mes "Attention! Juperos Ruins entrance ahead. Please be carefull.";
 	close;
 }
+
+yuno_fild03,38,144,5	script	Board#sgn::121	858,{
+	mes "Magma Dungeon entrance.";
+	close;
+}
+
+hugel,91,152,4	script	Bulletin Board#sgn::122	837,{
+	mes "Hugel, the quaint garden village. Relax and enjoy our market and the hunter guild. Don't forget to hire a trip to the Odin ruins.";
+	close;
+}
