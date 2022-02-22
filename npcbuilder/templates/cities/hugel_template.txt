@@ -669,3 +669,43 @@ hu_in01,262,123,3	script	Hugel Villager#hugel:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
+
+yuno_fild03,41,139,2	script	Yuno Adventurer#hugel:npcid	698,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_fild03,36,136,0	script	Yuno Adventurer#hugel:npcid	696,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_fild03,36,143,3	script	Yuno Adventurer#hugel:npcid	704,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_fild03,42,143,5	script	Yuno Adventurer#hugel:npcid	693,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_fild06,195,368,5	script	Hugel Adventurer#hugel:npcid	570,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_fild06,201,363,0	script	Hugel Adventurer#hugel:npcid	645,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_fild06,204,366,3	script	Hugel Adventurer#hugel:npcid	686,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_fild06,195,359,7	script	Hugel Adventurer#hugel:npcid	670,{
+	npctalk "npcdialog";
+	end;
+}

@@ -223,28 +223,10 @@ einbech,67,37,4	script	Einbech Guide#einbech01::GuideEinbech	852,{
 	F_Navi("[Einbech Guide]");
 	next;
 	while (1) {
-		switch(select("[ Tavern ]:[ Tool Shop ]:[ Train Station ]:[ Mine ]:[ Kafra Employee ]:Remove Marks from Mini-Map:Cancel")) {
+		switch(select("Train Station:Mine:Sword Clan:Remove Marks from Mini-Map:Cancel")) {
 		case 1:
 			mes "[Einbech Guide]";
-			mes "The "+F_Navi("Tavern","einbech,157,106")+" is located";
-			mes "in the southern part of";
-			mes "Einbech. It's a nice place";
-			mes "to relax after a long day.";
-			viewpoint 1,157,106,0,0x497649;
-			next;
-			break;
-		case 2:
-			mes "[Einbech Guide]";
-			mes "You can find the "+F_Navi("Tool Shop","einbech,177,133")+" in the center of";
-			mes "Einbech. There, you can";
-			mes "purchase any tools you";
-			mes "might need for your travels.";
-			viewpoint 1,177,133,1,0xFA8072;
-			next;
-			break;
-		case 3:
-			mes "[Einbech Guide]";
-			mes "The "+F_Navi("Train Stations","einbech,39,215")+" are";
+			mes "The "+F_Navi("Train Station","einbech,39,215")+" is";
 			mes "located in the northwest";
 			mes "and northeast parts of";
 			mes "Einbech. There, you can";
@@ -252,7 +234,7 @@ einbech,67,37,4	script	Einbech Guide#einbech01::GuideEinbech	852,{
 			viewpoint 1,39,215,2,0xCD1039;
 			next;
 			break;
-		case 4:
+		case 2:
 			mes "[Einbech Guide]";
 			mes "The "+F_Navi("Mine","einbech,137,248")+", which is";
 			mes "Einbech's major industry,";
@@ -262,16 +244,15 @@ einbech,67,37,4	script	Einbech Guide#einbech01::GuideEinbech	852,{
 			viewpoint 1,137,248,3,0xDA70D6;
 			next;
 			break;
-		case 5:
+		case 3:
 			mes "[Einbech Guide]";
-			mes "I will mark the location";
-			mes "of the ^FF1493Kafra Employee^000000";
-			mes "on your mini-map.";
+			mes "The "+F_Navi("Sword Clan","einbech,251,109")+", is";
+			mes "in the east part of town.";
 			mes "Would you like to check any other locations?";
-			viewpoint 1,181,132,4,0xFF1493;
+			viewpoint 1,251,109,4,0xFF1493;
 			next;
 			break;
-		case 6:
+		case 4:
 			mes "[Einbech Guide]";
 			mes "I'll remove the marks from your mini-map.";
 			mes "Do you need any other help?";
@@ -282,7 +263,7 @@ einbech,67,37,4	script	Einbech Guide#einbech01::GuideEinbech	852,{
 			viewpoint 2,181,132,4,0xFFFFFF;
 			next;
 			break;
-		case 7:
+		case 5:
 			mes "[Einbech Guide]";
 			mes "Have a safe journey!";
 			close2;

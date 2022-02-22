@@ -742,3 +742,76 @@ hugel,91,152,4	script	Bulletin Board#sgn::122	837,{
 	mes "Hugel, the quaint garden village. Relax and enjoy our market and the hunter guild. Don't forget to hire a trip to the Odin ruins.";
 	close;
 }
+
+einbech,164,148,4	script	Bulletin Board#sgn::122	837,{
+	mes "Einbech, Schwartzvald's mining town. Home of the Einbech Mine and the Sword Clan.";
+	close;
+}
+
+hu_fild05,348,133,4	script	Board#sgn::123	835,{
+	mes "West to Yuno.";
+	mes "East to Hugel.";
+	close;
+}
+
+hu_fild07,173,109,4	script	Board#sgn::124	835,{
+	mes "South to Aldebaran.";
+	mes "North to Hugel.";
+	close;
+}
+
+hu_fild04,375,189,4	script	Board#sgn::125	835,{
+	mes "West to Yuno.";
+	mes "East to Hugel.";
+	close;
+}
+
+hu_fild04,33,131,4	script	Board#sgn::126	835,{
+	mes "West to Yuno.";
+	mes "East to Hugel.";
+	close;
+}
+
+
+ein_fild06,134,45,4	script	Board#sgn::127	835,{
+	mes "North to Yuno.";
+	mes "South to Einbech.";
+	close;
+}
+
+ein_fild06,255,357,2	script	Board#sgn::128	835,{
+	mes "North to Yuno.";
+	mes "South to Einbech.";
+	close;
+}
+
+yuno_fild04,255,40,2	script	Board#sgn::129	835,{
+	mes "North to Yuno.";
+	mes "South to Einbech.";
+	close;
+}
+
+ein_fild10,201,365,2	script	Board#sgn::130	835,{
+	mes "West to Einbech.";
+	mes "West to Einbroch.";
+	mes "North to Yuno.";
+	close;
+}
+
+ein_fild09,39,138,4	script	Board#sgn::131	835,{
+	mes "North to Einbech.";
+	mes "West to Einbroch.";
+	close;
+}
+
+ein_fild09,325,351,4	script	Board#sgn::132	835,{
+	mes "North to Einbech.";
+	mes "West to Einbroch.";
+	close;
+}
+
+ein_fild08,360,136,4	script	Board#sgn::133	835,{
+	mes "North to Einbroch.";
+	mes "East to Einbech.";
+	close;
+}

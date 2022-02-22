@@ -404,3 +404,139 @@ einbech,125,211,5	script	Einbech Villager#einb:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
+
+einbech,140,246,1	script	Einbech Adventurer#einb:npcid	695,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbech,137,243,5	script	Einbech Adventurer#einb:npcid	690,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,277,89,7	script	Einbech Villager#einb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,275,98,3	script	Einbech Villager#einb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,272,102,1	script	Einbech Villager#einb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,267,100,6	script	Einbech Villager#einb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,271,89,4	script	Einbech Villager#einb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,267,85,0	script	Einbech Villager#einb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,275,100,3	script	Einbech Villager#einb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,283,108,0	script	Einbech Villager#einb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,285,101,4	script	Einbech Villager#einb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,285,97,2	script	Einbech Villager#einb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,283,88,5	script	Einbech Villager#einb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,193,24,3	script	Einbech Villager#einb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,185,21,2	script	Einbech Villager#einb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,175,16,7	script	Einbech Villager#einb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,200,16,3	script	Einbech Villager#einb:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+ein_in01,162,166,7	script	Sword Clan Recruit#payn::npcid	692,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,170,168,4	script	Sword Clan Recruit#payn::npcid	645,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,158,157,4	script	Sword Clan Recruit#payn::npcid	1,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,163,142,7	script	Sword Clan Recruit#payn::npcid	635,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,166,135,1	script	Sword Clan Recruit#payn::npcid	728,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,156,135,0	script	Sword Clan Recruit#payn::npcid	733,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,153,148,0	script	Sword Clan Recruit#payn::npcid	734,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+ein_fild09,73,352,2	script	Einbech Adventurer#hugel:npcid	459,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_fild09,71,346,7	script	Einbech Adventurer#hugel:npcid	688,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_fild09,79,348,5	script	Einbech Adventurer#hugel:npcid	733,{
+	npctalk "npcdialog";
+	end;
+}

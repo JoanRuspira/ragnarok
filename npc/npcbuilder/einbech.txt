@@ -1,406 +1,542 @@
-einbech,58,38,5	script	Einbech Guard#einb:d2e48808	852,{
+einbech,58,38,5	script	Einbech Guard#einb:bfaec655	852,{
 	npctalk "Welcome to Einbech.";
 	end;
 }
 
 
-einbech,67,106,5	script	Einbech Guard#einb:8128e80b	852,{
+einbech,67,106,5	script	Einbech Guard#einb:609a8a7f	852,{
 	npctalk "Welcome to Einbech.";
 	end;
 }
 
 
-einbech,64,59,4	script	Einbech Villager#einb:708bc4dd	779,{
+einbech,64,59,4	script	Einbech Villager#einb:3f1ac90b	125,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,69,75,1	script	Einbech Villager#einb:e35e7abb	49,{
+einbech,69,75,1	script	Einbech Villager#einb:ace934e4	49,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,67,90,6	script	Einbech Villager#einb:bca864cc	850,{
+einbech,67,90,6	script	Einbech Villager#einb:073cc4a7	634,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,69,90,2	script	Einbech Villager#einb:255d505f	798,{
+einbech,69,90,2	script	Einbech Villager#einb:7eaae3ae	84,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,76,110,7	script	Einbech Villager#einb:12957ed6	92,{
+einbech,76,110,7	script	Einbech Villager#einb:a566876d	89,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,80,119,4	script	Einbech Villager#einb:28122d43	83,{
+einbech,80,119,4	script	Einbech Villager#einb:bc38555e	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,95,126,3	script	Einbech Villager#einb:16d844a3	84,{
+einbech,95,126,3	script	Einbech Villager#einb:7e276a12	847,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,108,136,6	script	Einbech Villager#einb:4d2c1cba	641,{
+einbech,108,136,6	script	Einbech Villager#einb:5dde0bfe	95,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,119,148,0	script	Einbech Villager#einb:8eb14a9f	733,{
+einbech,119,148,0	script	Einbech Villager#einb:1be08566	753,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,122,163,1	script	Einbech Villager#einb:f934d4f5	741,{
+einbech,122,163,1	script	Einbech Villager#einb:a8eb5a05	850,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,108,170,5	script	Einbech Villager#einb:4bf7870a	751,{
+einbech,108,170,5	script	Einbech Villager#einb:01eebcef	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,99,210,4	script	Einbech Villager#einb:1b8307fe	125,{
+einbech,99,210,4	script	Einbech Villager#einb:3551d1e6	855,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,97,221,2	script	Einbech Villager#einb:c23321b3	62,{
+einbech,97,221,2	script	Einbech Villager#einb:e4be7dac	51,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,95,221,6	script	Einbech Villager#einb:bce0b2ef	744,{
+einbech,95,221,6	script	Einbech Villager#einb:6ebe8211	755,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,86,218,2	script	Einbech Villager#einb:f88abbcb	79,{
+einbech,86,218,2	script	Einbech Villager#einb:b14f4c87	86,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,73,215,0	script	Einbech Villager#einb:3762c3c1	69,{
+einbech,73,215,0	script	Einbech Villager#einb:1fc0d037	637,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,57,215,2	script	Einbech Villager#einb:92655d81	83,{
+einbech,57,215,2	script	Einbech Villager#einb:2d472082	86,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,38,207,5	script	Einbech Villager#einb:1fe12e1e	733,{
+einbech,38,207,5	script	Einbech Villager#einb:2000b889	751,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,48,206,7	script	Einbech Villager#einb:0da007c7	642,{
+einbech,48,206,7	script	Einbech Villager#einb:606ff30b	85,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,57,209,3	script	Einbech Villager#einb:9039bf75	70,{
+einbech,57,209,3	script	Einbech Villager#einb:1fce91e4	751,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,62,207,6	script	Einbech Villager#einb:c55601df	779,{
+einbech,62,207,6	script	Einbech Villager#einb:9373fe9e	89,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,78,209,7	script	Einbech Villager#einb:c301dc27	850,{
+einbech,78,209,7	script	Einbech Villager#einb:4578ae4f	879,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,74,173,5	script	Einbech Villager#einb:ec26b9ab	753,{
+einbech,74,173,5	script	Einbech Villager#einb:19381582	732,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,130,150,1	script	Einbech Villager#einb:8067217f	62,{
+einbech,130,150,1	script	Einbech Villager#einb:16c79c57	753,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,139,145,6	script	Einbech Villager#einb:ceda2e9a	754,{
+einbech,139,145,6	script	Einbech Villager#einb:14125184	70,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,146,148,2	script	Einbech Villager#einb:60174af2	879,{
+einbech,146,148,2	script	Einbech Villager#einb:6cc00ea6	95,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,161,145,5	script	Einbech Villager#einb:a1150ab1	744,{
+einbech,161,145,5	script	Einbech Villager#einb:f90181ae	847,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,168,133,6	script	Einbech Villager#einb:8e60875f	734,{
+einbech,168,133,6	script	Einbech Villager#einb:40fb8055	642,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,175,126,1	script	Einbech Villager#einb:8921c23f	755,{
+einbech,175,126,1	script	Einbech Villager#einb:9fbbf0dd	753,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,177,116,4	script	Einbech Villager#einb:bb2e7d31	850,{
+einbech,177,116,4	script	Einbech Villager#einb:82b5160e	642,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,170,108,2	script	Einbech Villager#einb:09be5d2e	734,{
+einbech,170,108,2	script	Einbech Villager#einb:a21cbf4a	67,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,164,108,5	script	Einbech Villager#einb:33c6927f	740,{
+einbech,164,108,5	script	Einbech Villager#einb:8f2ad2a5	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,171,103,1	script	Einbech Villager#einb:c3e352c5	125,{
+einbech,171,103,1	script	Einbech Villager#einb:0bf45a65	908,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,160,111,7	script	Einbech Villager#einb:9cc60db3	95,{
+einbech,160,111,7	script	Einbech Villager#einb:3d8a45e6	636,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,163,116,3	script	Einbech Villager#einb:5d378f74	779,{
+einbech,163,116,3	script	Einbech Villager#einb:60ee25da	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,168,113,6	script	Einbech Villager#einb:390e8437	67,{
+einbech,168,113,6	script	Einbech Villager#einb:909872c3	850,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,170,110,0	script	Einbech Villager#einb:3642a353	67,{
+einbech,170,110,0	script	Einbech Villager#einb:0083a8b2	637,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,189,117,1	script	Einbech Villager#einb:e59cbb6b	854,{
+einbech,189,117,1	script	Einbech Villager#einb:529024ab	733,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,193,123,2	script	Einbech Villager#einb:65e8f14b	67,{
+einbech,193,123,2	script	Einbech Villager#einb:6edb434d	908,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,199,231,4	script	Einbech Villager#einb:af8f5fbb	742,{
+einbech,199,231,4	script	Einbech Villager#einb:ad15be27	779,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,189,138,5	script	Einbech Villager#einb:61651201	637,{
+einbech,189,138,5	script	Einbech Villager#einb:6c17d5af	124,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,207,118,2	script	Einbech Villager#einb:a9ba5856	846,{
+einbech,207,118,2	script	Einbech Villager#einb:587059b9	51,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,199,116,5	script	Einbech Villager#einb:e9b2a97d	753,{
+einbech,199,116,5	script	Einbech Villager#einb:fc9d0606	734,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,220,112,2	script	Einbech Villager#einb:b5b2e1ab	642,{
+einbech,220,112,2	script	Einbech Villager#einb:b776c113	49,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,229,113,5	script	Einbech Villager#einb:4a950def	83,{
+einbech,229,113,5	script	Einbech Villager#einb:5ccf358c	753,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,222,101,0	script	Einbech Villager#einb:896d31c9	70,{
+einbech,222,101,0	script	Einbech Villager#einb:641c1315	86,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,236,108,2	script	Einbech Villager#einb:bb152a7b	847,{
+einbech,236,108,2	script	Einbech Villager#einb:fed9f991	846,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,245,111,5	script	Einbech Villager#einb:67677678	733,{
+einbech,245,111,5	script	Einbech Villager#einb:ac9af94d	83,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,254,97,0	script	Einbech Villager#einb:8f395fff	744,{
+einbech,254,97,0	script	Einbech Villager#einb:01814520	125,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,252,126,4	script	Einbech Villager#einb:4378f666	740,{
+einbech,252,126,4	script	Einbech Villager#einb:d53a2117	86,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,199,206,3	script	Einbech Villager#einb:a320d184	636,{
+einbech,199,206,3	script	Einbech Villager#einb:39ddd0ed	67,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,194,97,0	script	Einbech Villager#einb:6611d75e	125,{
+einbech,194,97,0	script	Einbech Villager#einb:496375fa	95,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,190,89,3	script	Einbech Villager#einb:4d0ff1c6	732,{
+einbech,190,89,3	script	Einbech Villager#einb:18e2c880	49,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,249,118,2	script	Einbech Villager#einb:e57430ca	85,{
+einbech,249,118,2	script	Einbech Villager#einb:7e17c968	734,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,140,112,3	script	Einbech Villager#einb:fdbfc991	634,{
+einbech,140,112,3	script	Einbech Villager#einb:b1fd8d41	85,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,140,95,6	script	Einbech Villager#einb:cd37411e	854,{
+einbech,140,95,6	script	Einbech Villager#einb:4f20e8ac	68,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,145,86,0	script	Einbech Villager#einb:1740a6e7	86,{
+einbech,145,86,0	script	Einbech Villager#einb:78c798ea	125,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,143,86,0	script	Einbech Villager#einb:627bd033	742,{
+einbech,143,86,0	script	Einbech Villager#einb:e7bab652	847,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,158,93,3	script	Einbech Villager#einb:7e2eaeba	641,{
+einbech,158,93,3	script	Einbech Villager#einb:0571414b	125,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,168,89,2	script	Einbech Villager#einb:864e5db5	86,{
+einbech,168,89,2	script	Einbech Villager#einb:ddaf5f1c	753,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,95,103,6	script	Einbech Villager#einb:47b9072f	751,{
+einbech,95,103,6	script	Einbech Villager#einb:2bd38831	67,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,113,100,1	script	Einbech Villager#einb:f50f0632	753,{
+einbech,113,100,1	script	Einbech Villager#einb:cec55152	908,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,123,106,6	script	Einbech Villager#einb:2a0585bf	847,{
+einbech,123,106,6	script	Einbech Villager#einb:d8cb43cc	828,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,125,106,2	script	Einbech Villager#einb:0dac47f4	124,{
+einbech,125,106,2	script	Einbech Villager#einb:873d9dc3	89,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,122,124,7	script	Einbech Villager#einb:0986d7b7	734,{
+einbech,122,124,7	script	Einbech Villager#einb:563f17fa	908,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,126,176,3	script	Einbech Villager#einb:ecb61ddb	637,{
+einbech,126,176,3	script	Einbech Villager#einb:9a162fe4	70,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,148,186,4	script	Einbech Villager#einb:0521c401	62,{
+einbech,148,186,4	script	Einbech Villager#einb:37629cc3	734,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,148,183,0	script	Einbech Villager#einb:867553a0	753,{
+einbech,148,183,0	script	Einbech Villager#einb:1ee784d8	755,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,155,193,2	script	Einbech Villager#einb:6f1535ea	92,{
+einbech,155,193,2	script	Einbech Villager#einb:8495dc6c	430,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,141,216,6	script	Einbech Villager#einb:6617ecb4	732,{
+einbech,141,216,6	script	Einbech Villager#einb:63763957	908,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,179,213,3	script	Einbech Villager#einb:4ac7befe	67,{
+einbech,179,213,3	script	Einbech Villager#einb:b001fa02	430,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,106,208,6	script	Einbech Villager#einb:2078e65f	62,{
+einbech,106,208,6	script	Einbech Villager#einb:83a1c8c0	755,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,134,225,0	script	Einbech Villager#einb:c6ba98dc	798,{
+einbech,134,225,0	script	Einbech Villager#einb:035b875c	85,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,133,245,5	script	Einbech Villager#einb:1d6e4d7c	69,{
+einbech,133,245,5	script	Einbech Villager#einb:80ea8ef0	85,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,143,240,1	script	Einbech Villager#einb:d5466048	86,{
+einbech,143,240,1	script	Einbech Villager#einb:4bbcc35e	733,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,156,235,7	script	Einbech Villager#einb:4eeedcc9	847,{
+einbech,156,235,7	script	Einbech Villager#einb:28572a3d	855,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,162,251,1	script	Einbech Villager#einb:9ea2e359	732,{
+einbech,162,251,1	script	Einbech Villager#einb:7c25a2f2	734,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,152,258,4	script	Einbech Villager#einb:c506ed71	798,{
+einbech,152,258,4	script	Einbech Villager#einb:658bb347	635,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbech,125,211,5	script	Einbech Villager#einb:1730187a	798,{
+einbech,125,211,5	script	Einbech Villager#einb:fd5ed8ab	850,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbech,140,246,1	script	Einbech Adventurer#einb:7e3922f0	695,{
+	npctalk "npcdialog";
+	end;
+}
+
+einbech,137,243,5	script	Einbech Adventurer#einb:b5aa9718	690,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,277,89,7	script	Einbech Villager#einb:0b5c5895	732,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,275,98,3	script	Einbech Villager#einb:508c1739	95,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,272,102,1	script	Einbech Villager#einb:56af79e8	95,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,267,100,6	script	Einbech Villager#einb:bb4cd204	70,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,271,89,4	script	Einbech Villager#einb:0118b6ed	637,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,267,85,0	script	Einbech Villager#einb:d2deb75c	69,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,275,100,3	script	Einbech Villager#einb:a675c4bf	84,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,283,108,0	script	Einbech Villager#einb:349d2845	642,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,285,101,4	script	Einbech Villager#einb:97dd7377	846,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,285,97,2	script	Einbech Villager#einb:6d850c64	733,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,283,88,5	script	Einbech Villager#einb:53e07783	734,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,193,24,3	script	Einbech Villager#einb:b6b6e36c	798,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,185,21,2	script	Einbech Villager#einb:5d7d57bb	734,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,175,16,7	script	Einbech Villager#einb:63d57a2e	855,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,200,16,3	script	Einbech Villager#einb:4b1e9a3c	854,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+ein_in01,162,166,7	script	Sword Clan Recruit#payn::62b748dd	692,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,170,168,4	script	Sword Clan Recruit#payn::8f137888	645,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,158,157,4	script	Sword Clan Recruit#payn::d364163d	1,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,163,142,7	script	Sword Clan Recruit#payn::fb90e405	635,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,166,135,1	script	Sword Clan Recruit#payn::e84764a9	728,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,156,135,0	script	Sword Clan Recruit#payn::f3844b83	733,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+ein_in01,153,148,0	script	Sword Clan Recruit#payn::5b85b14d	734,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+ein_fild09,73,352,2	script	Einbech Adventurer#hugel:e0927f71	459,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_fild09,71,346,7	script	Einbech Adventurer#hugel:bd7909b4	688,{
+	npctalk "npcdialog";
+	end;
+}
+
+ein_fild09,79,348,5	script	Einbech Adventurer#hugel:aae83634	733,{
 	npctalk "npcdialog";
 	end;
 }

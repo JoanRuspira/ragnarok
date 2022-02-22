@@ -408,7 +408,7 @@ einbech,181,127,5	script	Bulletin Board#einbech03	858,{
 	close;
 }
 
-ein_in01,279,92,3	script	Tavern Lady#ein	854,{
+ein_in01,280,92,3	script	Tavern Lady#ein	854,{
 	mes "[Tavern Lady]";
 	mes "Most Einbech men are";
 	mes "crude and primitive male";
@@ -481,17 +481,6 @@ ein_in01,277,95,7	script	Ryan Danger#air#einbech	855,{
 	mes "(Th-this guy";
 	mes "must be drunk out";
 	mes "of his freakin' mind!)";
-	close;
-}
-
-ein_in01,281,85,3	script	Drunken Man#einbech	849,{
-	mes "[Drunken Man]";
-	mes "...^333333*Hiccup*^000000...";
-	mes "^333333*Hiccup*^000000...";
-	mes "^333333*Yawn*^000000.....";
-	mes ".................";
-	mes "..^333333*Hiccup*^000000.....";
-	mes "^333333*Hiccup*^000000..";
 	close;
 }
 

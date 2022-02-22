@@ -25,7 +25,7 @@ prontera,138,183,7	script	Clan Helper	703,{
 	close;
 }
 
-prt_in,33,114,5	script	Raffam Oranpere	10058,{
+ein_in01,164,153,2	script	Sword Clan Leader	10058,{
 	cutin "laperm01.bmp", 2;
 	mes "[Raffam Oranpere]";
 	mes "Hi! I'm Raffam, master of the ^3131FFSword Clan^000000 in the Rune-Midgarts Kingdom.";
@@ -81,7 +81,6 @@ prt_in,33,114,5	script	Raffam Oranpere	10058,{
 			mes "Let's check the Clan policy then to begin admission procedures.";
 			next;
 			mes "[Raffam Oranpere]";
-			mes "^3131FFClansmen^000000 cannot participate in the Siege.";
 			mes "New members are given these stat bonuses: ^FF0000<STR+1, VIT+1, MHP+30, MSP+10>^000000.";
 			mes "You with me so far?";
 			next;
