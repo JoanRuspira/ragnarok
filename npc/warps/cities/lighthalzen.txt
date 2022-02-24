@@ -12,6 +12,8 @@
 //= 1.9 Rescripted to Aegis 10.3 standards. [L0ne_W0lf]
 //============================================================
 
+ra_fild06,377,222,0	warp	reaper01	1,1,ein_fild03,71,182
+ein_fild03,66,179,0	warp	reaper02	1,1,ra_fild06,373,223
 lighthalzen,269,201,0	warp	lighthalzen-1	1,1,lighthalzen,298,226
 lighthalzen,293,228,0	warp	lighthalzen-2	1,1,lighthalzen,265,201
 lighthalzen,101,248,0	warp	lhz_rekenber1-1	1,1,lhz_in01,111,126

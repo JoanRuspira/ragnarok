@@ -1,711 +1,741 @@
-hugel,99,32,4	script	Hugel Guard#hugel:4ba8f909	419,{
+hugel,99,32,4	script	Hugel Guard#hugel:a78faf1a	419,{
 	npctalk "Welcome to Hugel.";
 	end;
 }
 
 
-hugel,92,32,4	script	Hugel Guard#hugel:8d89db0e	420,{
+hugel,92,32,4	script	Hugel Guard#hugel:7fbefa1d	420,{
 	npctalk "Welcome to Hugel.";
 	end;
 }
 
-hugel,189,172,4	script	Hugel Guard#hugel:bd7ccb44	420,{
+hugel,189,172,4	script	Hugel Guard#hugel:be208fc8	420,{
 	npctalk "Welcome to Hugel.";
 	end;
 }
 
-hugel,94,51,0	script	Hugel Villager#hugel:c24cd7c7	895,{
+hugel,94,51,0	script	Hugel Villager#hugel:9a555a8a	79,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,96,39,5	script	Hugel Villager#hugel:a0b2c864	891,{
+hugel,96,39,5	script	Hugel Villager#hugel:8d75114a	85,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,94,64,7	script	Hugel Villager#hugel:13995667	635,{
+hugel,94,64,7	script	Hugel Villager#hugel:ee8d2471	798,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,105,51,2	script	Hugel Villager#hugel:f85699ad	69,{
+hugel,105,51,2	script	Hugel Villager#hugel:6b080897	69,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,117,71,3	script	Hugel Villager#hugel:d06826ae	779,{
+hugel,117,71,3	script	Hugel Villager#hugel:e088b9d8	879,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,125,63,7	script	Hugel Villager#hugel:b140b12a	908,{
+hugel,125,63,7	script	Hugel Villager#hugel:235afe62	828,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,106,76,3	script	Hugel Villager#hugel:90a59e3a	798,{
+hugel,106,76,3	script	Hugel Villager#hugel:2c41f9ce	636,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,96,79,4	script	Hugel Villager#hugel:1bf5a16f	828,{
+hugel,96,79,4	script	Hugel Villager#hugel:84c84579	70,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,94,97,1	script	Hugel Villager#hugel:ef80b9dc	798,{
+hugel,94,97,1	script	Hugel Villager#hugel:63ca6948	828,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,97,115,3	script	Hugel Villager#hugel:0d6714f3	89,{
+hugel,97,115,3	script	Hugel Villager#hugel:1bfef436	532,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,93,127,6	script	Hugel Villager#hugel:7723aa89	49,{
+hugel,93,127,6	script	Hugel Villager#hugel:d8aa15e4	532,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,84,125,1	script	Hugel Villager#hugel:ff7492ad	755,{
+hugel,84,125,1	script	Hugel Villager#hugel:ff6b26bd	892,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,79,125,6	script	Hugel Villager#hugel:d0369a05	636,{
+hugel,79,125,6	script	Hugel Villager#hugel:8907c823	893,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,75,134,7	script	Hugel Villager#hugel:5d0dea6a	637,{
+hugel,75,134,7	script	Hugel Villager#hugel:dd6b5502	124,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,84,142,6	script	Hugel Villager#hugel:77303ae0	68,{
+hugel,84,142,6	script	Hugel Villager#hugel:ebe33d7b	897,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,89,142,2	script	Hugel Villager#hugel:ca753354	67,{
+hugel,89,142,2	script	Hugel Villager#hugel:aaf7ad02	70,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,101,137,7	script	Hugel Villager#hugel:d91a5014	645,{
+hugel,101,137,7	script	Hugel Villager#hugel:fe355a73	754,{
 	npctalk "npcdialog";
 	end;
 }
-hugel,99,148,2	script	Hugel Villager#hugel:da96f993	430,{
-	npctalk "npcdialog";
-	end;
-}
-
-hugel,97,148,6	script	Hugel Villager#hugel:99f41331	69,{
+hugel,99,148,2	script	Hugel Villager#hugel:77ee3b37	70,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,94,156,0	script	Hugel Villager#hugel:6ff58640	755,{
+hugel,97,148,6	script	Hugel Villager#hugel:b7d8cc07	49,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,78,161,4	script	Hugel Villager#hugel:35ac1899	642,{
+hugel,94,156,0	script	Hugel Villager#hugel:31dea594	86,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,76,150,7	script	Hugel Villager#hugel:cfec00bd	637,{
+hugel,78,161,4	script	Hugel Villager#hugel:b031c05a	904,{
+	npctalk "npcdialog";
+	end;
+}
+
+hugel,76,150,7	script	Hugel Villager#hugel:2b448207	124,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-hugel,89,134,5	script	Hugel Villager#hugel:25c75a0d	894,{
+hugel,89,134,5	script	Hugel Villager#hugel:71f841b8	634,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,104,159,0	script	Hugel Villager#hugel:b75fcca8	895,{
+hugel,104,159,0	script	Hugel Villager#hugel:3f6669fb	86,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,119,156,2	script	Hugel Villager#hugel:f2b0f8d4	898,{
+hugel,119,156,2	script	Hugel Villager#hugel:5023fa29	83,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,113,165,0	script	Hugel Villager#hugel:e32858a6	879,{
+hugel,113,165,0	script	Hugel Villager#hugel:19144947	798,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,114,170,7	script	Dog#hugel:8761671b	81,{
+hugel,114,170,7	script	Dog#hugel:4251fc80	81,{
 	npctalk "...";
 	end;
 }
 
-hugel,132,157,5	script	Hugel Villager#hugel:e5b6b68a	894,{
+hugel,132,157,5	script	Hugel Villager#hugel:9e70c814	634,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,139,147,4	script	Hugel Villager#hugel:a5e61fcc	68,{
+hugel,139,147,4	script	Hugel Villager#hugel:3b3cf4fc	798,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,146,140,0	script	Cat#hugel:dacbf848	554,{
+hugel,146,140,0	script	Cat#hugel:656f36cb	554,{
 	npctalk "...";
 	end;
 }
 
-hugel,155,147,2	script	Hugel Villager#hugel:3bfb3592	125,{
+hugel,155,147,2	script	Hugel Villager#hugel:21486e46	69,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,165,140,1	script	Hugel Villager#hugel:629b83f9	83,{
+hugel,165,140,1	script	Hugel Villager#hugel:e0434e5c	642,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,174,144,6	script	Hugel Villager#hugel:1335d9e2	49,{
+hugel,174,144,6	script	Hugel Villager#hugel:2e77d512	779,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,172,163,0	script	Hugel Villager#hugel:d0a2933e	67,{
+hugel,172,163,0	script	Hugel Villager#hugel:5d6b5a89	734,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,183,167,6	script	Hugel Villager#hugel:ee1df7c9	734,{
+hugel,183,167,6	script	Hugel Villager#hugel:bf4364d6	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,195,161,4	script	Hugel Villager#hugel:ea11a18d	893,{
+hugel,195,161,4	script	Hugel Villager#hugel:b765d906	69,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,182,149,5	script	Hugel Villager#hugel:01d9ec3c	733,{
+hugel,182,149,5	script	Hugel Villager#hugel:0a011986	892,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,188,151,6	script	Hugel Villager#hugel:e95d2b38	95,{
+hugel,188,151,6	script	Hugel Villager#hugel:acaf8dff	732,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,189,157,0	script	Hugel Villager#hugel:50a64324	83,{
+hugel,189,157,0	script	Hugel Villager#hugel:7ecb0790	430,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,146,122,2	script	Hugel Villager#hugel:a19f17da	69,{
+hugel,146,122,2	script	Hugel Villager#hugel:7117ef2c	430,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,148,206,4	script	Hugel Villager#hugel:ea7f1b0d	745,{
+hugel,148,206,4	script	Hugel Villager#hugel:b68b8721	70,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,142,193,7	script	Hugel Villager#hugel:eb867431	892,{
+hugel,142,193,7	script	Hugel Villager#hugel:8906ffec	745,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,125,181,4	script	Hugel Villager#hugel:4ae34af3	896,{
+hugel,125,181,4	script	Hugel Villager#hugel:5dee0eae	751,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,126,206,0	script	Hugel Villager#hugel:46382420	68,{
+hugel,126,206,0	script	Hugel Villager#hugel:6dfc633f	84,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,107,189,3	script	Hugel Villager#hugel:9768ea92	533,{
+hugel,107,189,3	script	Hugel Villager#hugel:a92e9d30	67,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,93,199,4	script	Hugel Villager#hugel:cea120c6	744,{
+hugel,93,199,4	script	Hugel Villager#hugel:7a6480f1	732,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,100,199,6	script	Hugel Villager#hugel:33377ab6	754,{
+hugel,100,199,6	script	Hugel Villager#hugel:f96b6562	637,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,79,200,1	script	Hugel Villager#hugel:3082d88b	430,{
+hugel,79,200,1	script	Hugel Villager#hugel:74bc2b3f	85,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,68,204,2	script	Hugel Villager#hugel:67ecd6f7	741,{
+hugel,68,204,2	script	Hugel Villager#hugel:c1ea0aa2	894,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,62,209,0	script	Hugel Villager#hugel:773a7523	741,{
+hugel,62,209,0	script	Hugel Villager#hugel:569183b1	894,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,67,210,3	script	Hugel Villager#hugel:cd97ba11	532,{
+hugel,67,210,3	script	Hugel Villager#hugel:c246974f	745,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,54,197,6	script	Hugel Villager#hugel:095abd9f	125,{
+hugel,54,197,6	script	Hugel Villager#hugel:75486b08	897,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,58,187,7	script	Hugel Villager#hugel:ba7c82a9	734,{
+hugel,58,187,7	script	Hugel Villager#hugel:2797d839	430,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,70,190,3	script	Hugel Villager#hugel:d7a25f26	84,{
+hugel,70,190,3	script	Hugel Villager#hugel:49c8623e	642,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,80,176,2	script	Hugel Villager#hugel:63d27da2	754,{
+hugel,80,176,2	script	Hugel Villager#hugel:98526ea5	828,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,52,149,0	script	Hugel Villager#hugel:6557b3d2	70,{
+hugel,52,149,0	script	Hugel Villager#hugel:a3d2bb15	879,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,53,102,6	script	Hugel Villager#hugel:af5b748f	733,{
+hugel,53,102,6	script	Hugel Villager#hugel:fed9d80e	62,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,56,102,2	script	Hugel Villager#hugel:59a26393	641,{
+hugel,56,102,2	script	Hugel Villager#hugel:fa4cec59	891,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,66,96,5	script	Hugel Villager#hugel:cd196408	634,{
+hugel,66,96,5	script	Hugel Villager#hugel:16a5a5e2	635,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,70,77,7	script	Hugel Villager#hugel:ad437774	755,{
+hugel,70,77,7	script	Hugel Villager#hugel:990793da	828,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,70,67,0	script	Hugel Villager#hugel:888717d9	893,{
+hugel,70,67,0	script	Hugel Villager#hugel:238c79cf	644,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,116,100,2	script	Hugel Villager#hugel:9a3c1e4a	92,{
+hugel,116,100,2	script	Hugel Villager#hugel:b4679ddf	635,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,129,85,4	script	Hugel Villager#hugel:f5ffa1c0	879,{
+hugel,129,85,4	script	Hugel Villager#hugel:5b376b13	645,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,142,78,7	script	Hugel Villager#hugel:f7594a62	644,{
+hugel,142,78,7	script	Hugel Villager#hugel:eea439be	896,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,147,87,0	script	Hugel Villager#hugel:2a547173	892,{
+hugel,147,87,0	script	Hugel Villager#hugel:b405b64c	124,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,157,97,3	script	Hugel Villager#hugel:c20fe2b3	68,{
+hugel,157,97,3	script	Hugel Villager#hugel:81814ce2	892,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,141,107,1	script	Hugel Villager#hugel:5b0d845b	532,{
+hugel,141,107,1	script	Hugel Villager#hugel:6c583975	641,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,123,121,4	script	Hugel Villager#hugel:ac20aee2	898,{
+hugel,123,121,4	script	Hugel Villager#hugel:4796dfd1	740,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,117,124,5	script	Hugel Villager#hugel:6e1ce5a7	62,{
+hugel,117,124,5	script	Hugel Villager#hugel:65d87782	745,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,121,136,0	script	Hugel Villager#hugel:6ea1cf54	51,{
+hugel,121,136,0	script	Hugel Villager#hugel:4bde2b48	95,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,158,137,4	script	Hugel Villager#hugel:d7ec0ca6	70,{
+hugel,158,137,4	script	Hugel Villager#hugel:fdb9c190	92,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,162,119,5	script	Hugel Villager#hugel:0ec0d2d6	637,{
+hugel,162,119,5	script	Hugel Villager#hugel:c42adf22	642,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,160,105,2	script	Hugel Villager#hugel:f6e0eb63	92,{
+hugel,160,105,2	script	Hugel Villager#hugel:e8b42095	779,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,176,105,7	script	Hugel Villager#hugel:466eb548	636,{
+hugel,176,105,7	script	Hugel Villager#hugel:793a576c	89,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,189,110,3	script	Hugel Villager#hugel:72ad9b01	828,{
+hugel,189,110,3	script	Hugel Villager#hugel:dd5d0f32	733,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,199,108,0	script	Hugel Villager#hugel:c29162db	634,{
+hugel,199,108,0	script	Hugel Villager#hugel:a9694f82	740,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,79,89,7	script	Hugel Villager#hugel:4191d8a5	879,{
+hugel,79,89,7	script	Hugel Villager#hugel:d982a71a	891,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_fild05,187,207,3	script	Abyss Lake Adventurer#alde:216bdddd	690,{
+hu_fild05,187,207,3	script	Abyss Lake Adventurer#alde:1a67656d	690,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_fild05,188,199,1	script	Abyss Lake Adventurer#alde:ec0c3e31	677,{
+hu_fild05,188,199,1	script	Abyss Lake Adventurer#alde:5c8ad0e1	677,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_fild05,183,200,0	script	Abyss Lake Adventurer#alde:5fa25bbd	695,{
+hu_fild05,183,200,0	script	Abyss Lake Adventurer#alde:7febb162	695,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_fild05,180,206,6	script	Abyss Lake Adventurer#alde:6863039d	704,{
+hu_fild05,180,206,6	script	Abyss Lake Adventurer#alde:f5e210cd	704,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_fild05,181,195,7	script	Abyss Lake Adventurer#alde:bd7a23b3	682,{
+hu_fild05,181,195,7	script	Abyss Lake Adventurer#alde:224ffcbd	682,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,375,303,1	script	Hugel Villager#hugel:69dcbcf9	85,{
+hu_in01,375,303,1	script	Hugel Villager#hugel:2bf5720e	637,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,385,307,4	script	Hugel Villager#hugel:ae72a255	532,{
+hu_in01,385,307,4	script	Hugel Villager#hugel:135eb791	533,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,386,319,2	script	Hugel Villager#hugel:1847f511	85,{
+hu_in01,386,319,2	script	Hugel Villager#hugel:3166ce3d	745,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,377,385,5	script	Hugel Villager#hugel:4793bcf7	740,{
+hu_in01,377,385,5	script	Hugel Villager#hugel:f4c7f94c	124,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,378,371,1	script	Hugel Villager#hugel:5669f112	89,{
+hu_in01,378,371,1	script	Hugel Villager#hugel:623db238	641,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,387,375,3	script	Hunter Guildmaster#hugel:09083840	732,{
+hu_in01,387,375,3	script	Hunter Guildmaster#hugel:6b0c3be4	732,{
 	npctalk "I will make you a hunter.";
 	end;
 }
 
-hugel,210,221,4	script	Hugel Villager#hugel:fc1d5265	85,{
+hugel,210,221,4	script	Hugel Villager#hugel:c301e4d8	896,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,198,214,5	script	Hugel Villager#hugel:8dc11170	124,{
+hugel,198,214,5	script	Hugel Villager#hugel:71d799ab	69,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,196,197,2	script	Hugel Villager#hugel:21f7b0ad	904,{
+hugel,196,197,2	script	Hugel Villager#hugel:83a8f59f	644,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,178,189,6	script	Hugel Villager#hugel:08016caf	532,{
+hugel,178,189,6	script	Hugel Villager#hugel:59e8991b	904,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,180,189,2	script	Hugel Villager#hugel:611e77bb	637,{
+hugel,180,189,2	script	Hugel Villager#hugel:a8c04a86	85,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,241,387,6	script	Hugel Villager#hugel:f2bbf2a7	744,{
+hu_in01,241,387,6	script	Hugel Villager#hugel:91dd2c16	779,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,248,375,1	script	Hugel Villager#hugel:03d89a8c	49,{
+hu_in01,248,375,1	script	Hugel Villager#hugel:4e573e97	635,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,245,364,7	script	Hugel Villager#hugel:caf9cd54	754,{
+hu_in01,245,364,7	script	Hugel Villager#hugel:137a0add	895,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,230,379,2	script	Hugel Villager#hugel:06e3833f	742,{
+hu_in01,230,379,2	script	Hugel Villager#hugel:6f0aaa0b	644,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,218,379,7	script	Hugel Villager#hugel:10e5474d	635,{
+hu_in01,218,379,7	script	Hugel Villager#hugel:9a37a132	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,114,378,1	script	Hugel Villager#hugel:503448ff	740,{
+hu_in01,114,378,1	script	Hugel Villager#hugel:44e2e77f	49,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,107,382,5	script	Hugel Villager#hugel:ec51f0d6	635,{
+hu_in01,107,382,5	script	Hugel Villager#hugel:68829b1a	751,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,97,376,1	script	Hugel Villager#hugel:c6e40230	69,{
+hu_in01,97,376,1	script	Hugel Villager#hugel:71de89ab	92,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,95,384,7	script	Hugel Villager#hugel:86482a7d	645,{
+hu_in01,95,384,7	script	Hugel Villager#hugel:b6c8f375	732,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,110,313,2	script	Hugel Villager#hugel:9b2b920d	637,{
+hu_in01,110,313,2	script	Hugel Villager#hugel:286b08a4	70,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,103,308,0	script	Hugel Villager#hugel:4dbe437a	641,{
+hu_in01,103,308,0	script	Hugel Villager#hugel:2612c673	744,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,98,319,4	script	Hugel Villager#hugel:ea38e46b	779,{
+hu_in01,98,319,4	script	Hugel Villager#hugel:241e32fe	89,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,29,314,3	script	Hugel Villager#hugel:f8195f1e	741,{
+hu_in01,29,314,3	script	Hugel Villager#hugel:cac0613b	89,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,33,305,1	script	Hugel Villager#hugel:8368726f	430,{
+hu_in01,33,305,1	script	Hugel Villager#hugel:344275c8	85,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,223,219,3	script	Hugel Priest#hugel:563b2d52	110,{
+hu_in01,223,219,3	script	Hugel Priest#hugel:116eee83	110,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,201,210,7	script	Hugel Priest#hugel:288faf7b	8,{
+hu_in01,201,210,7	script	Hugel Priest#hugel:b0e7c74b	8,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,223,219,3	script	Hugel Priest#hugel:f925751a	110,{
+hu_in01,223,219,3	script	Hugel Priest#hugel:08ab0c2c	110,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,207,192,5	script	Hugel Acolyte#hugel:7b4b7e2b	4,{
+hu_in01,207,192,5	script	Hugel Acolyte#hugel:2b41d3cf	4,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,223,201,4	script	Hugel Priest#hugel:b718ca3c	616,{
+hu_in01,223,201,4	script	Hugel Priest#hugel:ca0cecf2	616,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,216,195,1	script	Hugel Villager#hugel:58abd037	908,{
+hu_in01,216,195,1	script	Hugel Villager#hugel:4147953e	645,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,212,181,5	script	Hugel Villager#hugel:c955e9c6	754,{
+hu_in01,212,181,5	script	Hugel Villager#hugel:b4cde294	641,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,208,205,0	script	Hugel Villager#hugel:af52fc33	893,{
+hu_in01,208,205,0	script	Hugel Villager#hugel:6577bb25	828,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,218,209,1	script	Hugel Villager#hugel:3165868f	69,{
+hu_in01,218,209,1	script	Hugel Villager#hugel:c8ce5a8e	532,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,216,201,1	script	Hugel Villager#hugel:acb21b1c	634,{
+hu_in01,216,201,1	script	Hugel Villager#hugel:1d3d5e66	904,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,202,219,6	script	Hugel Villager#hugel:b15e3757	901,{
+hu_in01,202,219,6	script	Hugel Villager#hugel:7daeff61	634,{
 	npctalk "npcdialog";
 	end;
 }
 
-hugel,48,64,7	script	Peco#hugel:9048484a	428,{
+hugel,48,64,7	script	Peco#hugel:9a719b11	428,{
 	npctalk "...";
 	end;
 }
 
-hugel,46,58,3	script	Peco#hugel:24ce8f93	428,{
+hugel,46,58,3	script	Peco#hugel:eb668a29	428,{
 	npctalk "...";
 	end;
 }
 
-hugel,59,76,5	script	Peco#hugel:529461d9	428,{
+hugel,59,76,5	script	Peco#hugel:76c5233d	428,{
 	npctalk "...";
 	end;
 }
 
-hugel,64,70,1	script	Peco#hugel:957f653a	428,{
+hugel,64,70,1	script	Peco#hugel:34c8d135	428,{
 	npctalk "...";
 	end;
 }
 
 
-hu_in01,239,116,7	script	Hugel Villager#hugel:3c6c2d48	634,{
+hu_in01,239,116,7	script	Hugel Villager#hugel:83e31919	636,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,251,122,4	script	Hugel Villager#hugel:48a5c67c	67,{
+hu_in01,251,122,4	script	Hugel Villager#hugel:3e7abe8c	83,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,257,110,7	script	Hugel Villager#hugel:af85ee8e	89,{
+hu_in01,257,110,7	script	Hugel Villager#hugel:7172335f	891,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,247,100,3	script	Hugel Villager#hugel:17eb7b27	898,{
+hu_in01,247,100,3	script	Hugel Villager#hugel:8904552d	67,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,241,92,0	script	Hugel Villager#hugel:ecc10301	83,{
+hu_in01,241,92,0	script	Hugel Villager#hugel:82af09b7	89,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,263,98,6	script	Hugel Villager#hugel:c7dbce11	533,{
+hu_in01,263,98,6	script	Hugel Villager#hugel:783c6127	896,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,259,92,7	script	Hugel Villager#hugel:d5391dd8	634,{
+hu_in01,259,92,7	script	Hugel Villager#hugel:e075735a	532,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,265,114,4	script	Hugel Villager#hugel:0b470329	740,{
+hu_in01,265,114,4	script	Hugel Villager#hugel:812885d3	740,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_in01,262,123,3	script	Hugel Villager#hugel:16a99a2b	644,{
+hu_in01,262,123,3	script	Hugel Villager#hugel:251b84c7	84,{
 	npctalk "npcdialog";
 	end;
 }
 
-yuno_fild03,41,139,2	script	Yuno Adventurer#hugel:9f1ae63e	698,{
+yuno_fild03,41,139,2	script	Yuno Adventurer#hugel:80af1ec9	698,{
 	npctalk "npcdialog";
 	end;
 }
 
-yuno_fild03,36,136,0	script	Yuno Adventurer#hugel:08add546	696,{
+yuno_fild03,36,136,0	script	Yuno Adventurer#hugel:7260794b	696,{
 	npctalk "npcdialog";
 	end;
 }
 
-yuno_fild03,36,143,3	script	Yuno Adventurer#hugel:543f36fb	704,{
+yuno_fild03,36,143,3	script	Yuno Adventurer#hugel:eca98e08	704,{
 	npctalk "npcdialog";
 	end;
 }
 
-yuno_fild03,42,143,5	script	Yuno Adventurer#hugel:a5ca364c	693,{
+yuno_fild03,42,143,5	script	Yuno Adventurer#hugel:889c3efc	693,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_fild06,195,368,5	script	Hugel Adventurer#hugel:56942311	570,{
+hu_fild06,195,368,5	script	Hugel Adventurer#hugel:a29b8ecf	570,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_fild06,201,363,0	script	Hugel Adventurer#hugel:5d7c4ed4	645,{
+hu_fild06,201,363,0	script	Hugel Adventurer#hugel:6ab01f34	645,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_fild06,204,366,3	script	Hugel Adventurer#hugel:3189d1bc	686,{
+hu_fild06,204,366,3	script	Hugel Adventurer#hugel:2de35cfe	686,{
 	npctalk "npcdialog";
 	end;
 }
 
-hu_fild06,195,359,7	script	Hugel Adventurer#hugel:f73c9f12	670,{
+hu_fild06,195,359,7	script	Hugel Adventurer#hugel:e21c4959	670,{
 	npctalk "npcdialog";
+	end;
+}
+
+tha_scene01,141,201,7	script	Schwartzvald Adventurer#hugel:e546bb98	885,{
+	npctalk "npcdialog";
+	end;
+}
+
+tha_scene01,139,205,3	script	Schwartzvald Adventurer#hugel:43667858	875,{
+	npctalk "npcdialog";
+	end;
+}
+
+tha_scene01,132,212,7	script	Schwartzvald Adventurer#hugel:3905691a	871,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_fild01,145,154,1	script	Schwartzvald Adventurer#hugel:4d50c5e9	558,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_fild01,134,156,7	script	Schwartzvald Adventurer#hugel:827ce390	468,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_fild01,138,162,4	script	Thanatos Tower Guard #hugel:1e83981f	417,{
+	npctalk "Welcome to the abandoned Thanatos Tower entrance.";
 	end;
 }

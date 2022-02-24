@@ -743,8 +743,13 @@ hugel,91,152,4	script	Bulletin Board#sgn::122	837,{
 	close;
 }
 
-einbech,164,148,4	script	Bulletin Board#sgn::122	837,{
+einbech,164,148,4	script	Bulletin Board#sgn::122a	837,{
 	mes "Einbech, Schwartzvald's mining town. Home of the Einbech Mine and the Sword Clan.";
+	close;
+}
+
+einbroch,46,204,5	script	Bulletin Board#sgn::122aa	837,{
+	mes "Einbroch, city of steel, blacksmiths and airships. Beware the polution.";
 	close;
 }
 
@@ -813,5 +818,114 @@ ein_fild09,325,351,4	script	Board#sgn::132	835,{
 ein_fild08,360,136,4	script	Board#sgn::133	835,{
 	mes "North to Einbroch.";
 	mes "East to Einbech.";
+	close;
+}
+
+tha_scene01,143,202,4	script	Board#sgn::134	858,{
+	mes "Attention! Entance to Thanatos Tower ahead. The tower has recently been abandoned and is now habitated by monsters.";
+	close;
+}
+
+
+lhz_fild03,219,104,1	script	Bulletin Board#sgn::135	837,{
+	mes "You are now in the Schwartzvald Republic.";
+	close;
+}
+
+lhz_fild03,147,112,5	script	Bulletin Board#sgn::136	837,{
+	mes "You are now in the Arunafeltz States.";
+	close;
+}
+
+lhz_fild03,214,300,2	script	Bulletin Board#sgn::137	837,{
+	mes "You are now in the Schwartzvald Republic.";
+	close;
+}
+
+lhz_fild03,156,331,5	script	Bulletin Board#sgn::138	837,{
+	mes "You are now in the Arunafeltz States.";
+	close;
+}
+
+lhz_fild03,360,136,4	script	Board#sgn::139	835,{
+	mes "East to Einbroch.";
+	mes "West to Lighthalzen.";
+	close;
+}
+
+lhz_fild03,163,346,2	script	Board#sgn::140	835,{
+	mes "East to Einbroch.";
+	mes "North to Lighthalzen.";
+	mes "North to Dicastes.";
+	close;
+}
+
+lhz_fild02,36,215,0	script	Board#sgn::141	835,{
+	mes "East to Einbroch.";
+	mes "West to Lighthalzen.";
+	mes "North-West to Dicastes.";
+	close;
+}
+
+lhz_fild01,291,378,6	script	Board#sgn::142	835,{
+	mes "South to Lighthalzen.";
+	mes "North to Dicastes.";
+	close;
+}
+
+ra_fild06,254,373,2	script	Board#sgn::143	835,{
+	mes "West to Rachel.";
+	mes "South to Lighthalzen.";
+	mes "North to Dicastes.";
+	close;
+}
+
+ra_fild06,368,228,4	script	Board#sgn::144	835,{
+	mes "West to Rachel.";
+	mes "South to Lighthalzen.";
+	mes "North to Dicastes.";
+	close;
+}
+
+dic_fild01,67,36,4	script	Board#sgn::145	835,{
+	mes "South to Lighthalzen.";
+	mes "North to Dicastes.";
+	close;
+}
+
+
+ein_fild05,167,363,7	script	Board#sgn::146	858,{
+	mes "Einbroch Mining Complex ahead.";
+	close;
+}
+
+
+ein_fild05,366,186,5	script	Board#sgn::147	858,{
+	mes "Einbroch Mining Complex ahead.";
+	close;
+}
+
+ein_fild04,188,114,4	script	Board#sgn::148	858,{
+	mes "Einbroch Mining Complex ahead.";
+	close;
+}
+
+ein_fild03,292,181,7	script	Board#sgn::149	858,{
+	mes "Einbroch Mining Complex ahead. -  Schwartzvald Section.";
+	close;
+}
+
+ein_fild03,147,270,0	script	Board#sgn::150	858,{
+	mes "Einbroch Mining Complex ahead. -  Schwartzvald Section.";
+	close;
+}
+
+ein_fild03,97,178,3	script	Board#sgn::151	858,{
+	mes "Einbroch Mining Complex ahead. -  Arunafeltz Section.";
+	close;
+}
+
+ein_fild03,137,35,6	script	Board#sgn::152	858,{
+	mes "Einbroch Mining Complex ahead. -  Arunafeltz Section.";
 	close;
 }

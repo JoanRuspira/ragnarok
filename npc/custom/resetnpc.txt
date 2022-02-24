@@ -276,3 +276,137 @@ um_in,37,72,3	script	Shaman	785,{
 	if(.@Reset[3]) set reset_limit,reset_limit + 1;
 	close;
 }
+
+
+ein_in01,277,25,7	script	Researcher	402,{
+	//	 		Skills,	Stats,	Both,	Limit
+	setarray .@Reset,	5000,	5000,	9000,	0;
+	mes "[Researcher]";
+	mes "I am in charge of this lab,";
+	mes "and I have been woking in a";
+	mes "very special solution.";
+	mes "I can make you forget your abilites.";
+	mes "for a certain price, you know...";
+	next;
+	mes "[Researcher]";
+	mes "Is this something you";
+	mes "are interested in?";
+	next;
+	switch(select("Yes:No")) {
+		case 1:
+			mes "[Researcher]";
+			mes "Good... the price I charge is 50000z.";
+			mes "I can make you forget your skills";
+			mes "or your status.";
+			next;
+			mes "[Researcher]";
+			mes "What do you want to forget?";
+			next;
+			if (Zeny < 50000) {
+				mes "[Researcher]";
+				mes "Wait a minute...";
+				mes "I don't think you can";
+				mes "pay for my research.";
+				close;
+			}
+			switch(select("My skills:My status")) {
+				case 1:
+					mes "[Researcher]";
+					mes "Ok then...";
+					mes "One second.";
+					mes "[Finishes equation...]";
+					mes "[Prepares solution...]";
+					mes "Drink this!";
+					next;
+					mes "[Researcher]";
+					mes "Wait for it to take effect.";
+					next;
+					mes "[You feel the efects of the potion]";
+					mes "3...";
+					next;
+					mes "2...";
+					next;
+					mes "1...";
+					next;
+					mes "...";
+					next;
+					ResetSkill;
+					set Zeny, Zeny-50000;
+					specialeffect2 EF_TATAMI;
+					mes "[Researcher]";
+					mes "Done! You should have forgotten";
+					mes "your skills now.";
+					next;
+					mes "[Researcher]";
+					mes "Come again if you need my research.";
+					mes "I want to open a second lab in Arunafeltz.";
+					close;
+				case 2:
+					mes "[Researcher]";
+					mes "Ok then...";
+					mes "One second.";
+					mes "[Finishes equation...]";
+					mes "[Prepares Solution...]";
+					mes "Drink this!";
+					next;
+					mes "[Researcher]";
+					mes "Wait for it to take effect.";
+					next;
+					mes "[You feel the efects of the potion]";
+					mes "3...";
+					next;
+					mes "2...";
+					next;
+					mes "1...";
+					next;
+					mes "...";
+					next;
+					ResetStatus;
+					set Zeny, Zeny-50000;
+					specialeffect2 EF_TATAMI;
+					mes "[Researcher]";
+					mes "Done! You should have forgotten";
+					mes "your status now.";
+					next;
+					mes "[Researcher]";
+					mes "Come again if you need my research.";
+					mes "I want to open a second lab in Arunafeltz.";
+					close;
+			}
+		case 2:
+			mes "[Researcher]";
+			mes "No problem,";
+			mes "Please come again if you change";
+			mes "your mind. I want to open a second lab in Arunafeltz.";
+			close;
+	}
+
+
+	mes "Reset Stats: "+ callfunc("F_InsertComma",.@Reset[1]) +"z";
+	mes "Reset Skills: "+ callfunc("F_InsertComma",.@Reset[0]) +"z";
+	mes "Reset Both: "+ callfunc("F_InsertComma",.@Reset[2]) +"z";
+	if(.@Reset[3]) mes "You may only reset "+callfunc("F_InsertPlural",.@Reset[3],"time")+", so use "+((.@Reset[3]>1)?"them":"it")+" wisely.";
+	mes "Please select the service you want:";
+	next;
+	set .@i,(select("^FF3355Reset Skills:Reset Stats:Reset Both^000000:Cancel"));
+	if(.@i > 3) close;
+	mes "[Shaman]";
+	if (Zeny < .@Reset[.@i-1]) {
+		mes "Sorry, you don't have enough Zeny.";
+		close;
+	}
+	if(.@Reset[3]){
+		mes "You can only reset "+callfunc("F_InsertPlural",.@Reset[3],"time")+" in your life, are you sure?";
+		if(select("Let me think:That's fine") == 1) close;
+	}
+	set Zeny, Zeny-.@Reset[.@i-1];
+	if(.@i&1){
+		sc_end_class;
+		ResetSkill;
+	}
+	if(.@i&2) ResetStatus;
+	mes "There you go!";
+	if(.@Reset[3]) set reset_limit,reset_limit + 1;
+	close;
+}
+

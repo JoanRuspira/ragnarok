@@ -15,8 +15,11 @@
 //=     Corrected coordinated for some of the other warps.
 //============================================================
 
+
+yuno_fild08,149,189,0	warp	kh_dun_99	1,1,kh_dun01,74,174
+
 //= Kiel Dungeon =============================================
-kh_dun01,3,234,0	warp	kh_dun_00	1,1,yuno_fild08,74,174
+kh_dun01,3,234,0	warp	kh_dun_00	1,1,yuno_fild08,152,189
 
 //Factory Restricted Area Exit
 kh_dun01,232,226,0	warp	kh_dun_01	1,1,kh_dun01,13,12

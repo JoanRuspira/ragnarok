@@ -783,7 +783,7 @@ ein_in01,43,252,3	script	Canphotii#ein	852,{
 	close;
 }
 
-ein_in01,206,224,3	script	Hotel Employee#ein	855,{
+ein_in01,207,224,3	script	Hotel Employee#ein	798,{
 	mes "[Hotel Employee]";
 	mes "Good day, welcome to the";
 	mes "Einbroch Hotel. The staff is";

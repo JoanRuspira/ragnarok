@@ -709,3 +709,33 @@ hu_fild06,195,359,7	script	Hugel Adventurer#hugel:npcid	670,{
 	npctalk "npcdialog";
 	end;
 }
+
+tha_scene01,141,201,7	script	Schwartzvald Adventurer#hugel:npcid	885,{
+	npctalk "npcdialog";
+	end;
+}
+
+tha_scene01,139,205,3	script	Schwartzvald Adventurer#hugel:npcid	875,{
+	npctalk "npcdialog";
+	end;
+}
+
+tha_scene01,132,212,7	script	Schwartzvald Adventurer#hugel:npcid	871,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_fild01,145,154,1	script	Schwartzvald Adventurer#hugel:npcid	558,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_fild01,134,156,7	script	Schwartzvald Adventurer#hugel:npcid	468,{
+	npctalk "npcdialog";
+	end;
+}
+
+hu_fild01,138,162,4	script	Thanatos Tower Guard #hugel:npcid	417,{
+	npctalk "Welcome to the abandoned Thanatos Tower entrance.";
+	end;
+}

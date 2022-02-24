@@ -91,6 +91,25 @@
 	}
 }
 
+-	script	::Thanatos_guide	-1,{
+	mes "[Thanatos Tower Guide]";
+	mes "My job is to help adventurers reach the Thanatos Tower. I can show you the path down the scar if that is something you want. But be careful, Thanatos Tower is a dangerous place.";
+	next;
+	switch(select("Yes please:I'm good, thanks.")) {
+	case 1:
+		mes "[Thanatos Tower Guide]";
+		mes "Okay. Follow me!";
+		next;
+		warp "tha_scene01",132,221;
+		end;
+	case 2:
+		mes "[Thanatos Tower Guide]";
+		mes "Okay. No problem.";
+		close;
+	}
+}
+
+
 -	script	::Sailor_Odin	-1,{
 	mes "[Explorer]";
 	mes "I organize adventurer trips to the ancient realm of Odin.";
@@ -850,3 +869,4 @@ prt_fild08d,338,217,7	duplicate(Resting Adventurer#iz)	Resting Adventurer#izd	4_
 comodo,233,86,0	duplicate(Sailor_Turtle)	Explorer#turtle	832
 hugel,208,109,2	duplicate(Sailor_Odin)	Odin Expeditioner#odintrip	702
 odin_tem01,93,145,6	duplicate(Sailor_Odin_Return)	Odin Expeditioner#odinreturn	702
+hu_fild01,140,162,4	duplicate(Thanatos_guide)	Thanatos Tower Guide#thantosguide	418
