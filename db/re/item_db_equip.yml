@@ -37704,3 +37704,70 @@ Body:
       Costume_Head_Mid: true
     EquipLevelMin: 1
     View: 1198
+  - Id: 20988
+    AegisName: C_Mechanical_Butterfly
+    Name: "Costume: Mechanical Butterfly"
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Garment: true
+    View: 92
+  - Id: 20990
+    AegisName: C_Rotating_Gears
+    Name: "Costume: Rotating Gears"
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Garment: true
+  - Id: 480071
+    AegisName: Calabash
+    Name: Costume Vial
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Garment: true
+    View: 82
+  - Id: 20506
+    AegisName: Invisible_Manteau
+    Name: Invisible Manteau
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Garment: true
+  - Id: 20510
+    AegisName: C_SwordWing
+    Name: Costume Sword Wing
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Garment: true
+    EquipLevelMin: 1
+    View: 19
+  - Id: 20514
+    AegisName: C_Thanatos_Sword
+    Name: Costume Thanatos Sword
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Garment: true
+    EquipLevelMin: 1
+    View: 23
+  - Id: 31311
+    AegisName: C_Dolor_Thanatos_Mask
+    Name: C Dolor Thanatos Mask
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Mid: true
+      Costume_Head_Low: true
+    EquipLevelMin: 1
+    View: 666
+  - Id: 31312
+    AegisName: C_Hades_Helm
+    Name: C Hades Helm
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 523

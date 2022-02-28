@@ -1544,7 +1544,7 @@ lhz_in03,192,19,3	script	Haggar#zen1	855,{
 	close;
 }
 
-lhz_in03,193,25,2	script	Bartender#12	61,{
+lhz_in03,194,25,2	script	Bartender#12	61,{
 	mes "[Tony]";
 	if (Sex == SEX_MALE) {
 		mes "Hey man, I know this";
@@ -1576,7 +1576,7 @@ lhz_in03,193,25,2	script	Bartender#12	61,{
 	close;
 }
 
-lhz_in03,185,20,6	script	Bad Drunk#amano06	869,2,2,{
+lhz_in03,185,20,0	script	Bad Drunk#amano06	84,2,2,{
 	mes "[Garry]";
 	mes "Hey! Hey you...!";
 	mes "D'you wanna, you";
@@ -1630,7 +1630,7 @@ lhz_in02,265,273,6	script	Lab Staff#amano08	865,{
 	close;
 }
 
-lhz_in03,192,93,3	script	City Girl#amano05	862,{
+lhz_in03,193,91,3	script	City Girl#amano05	862,{
 	mes "[Lanko]";
 	mes "Oh, I'm only here";
 	mes "working as a waitress";
@@ -1787,34 +1787,25 @@ lhz_in01,73,188,0	script	Guide#lt2	862,{
 	close;
 }
 
-lhz_in01,35,226,5	script	Rekenber Guard#li01	867,{
-	if (isequipped(2241) && isequipped(2243)) {
+lhz_in01,35,226,4	script	Rekenber Guard#li01	867,{
+	mes "[Rekenber Guard]";
+	mes "There has been a reported breach in the lab. I can let you in, but please proceed with caution.";
+	next;
+	mes "[Rekenber Guard]";
+	mes "The Rekenber Corporartion will not be held responsible for what happens to you if you go ahead.";
+	next;
+	switch(select("Please let me in.:I am not going then.")) {
+	case 1:
 		mes "[Rekenber Guard]";
-		mes "^3355FF(Whoa, it's a member";
-		mes "of the staff!)^000000 Good day!";
+		mes "Ok, go ahed.";
 		close2;
 		warp "lhz_in01",37,225;
 		end;
-	}
-	mes "[Rekenber Guard]";
-	mes "This is a restricted";
-	mes "area! Please show";
-	mes "some ID immediately!";
-	next;
-	if (select("ID?:Cancel") == 1) {
+	case 2:
 		mes "[Rekenber Guard]";
-		mes "I don't know how you";
-		mes "adventurers do things in";
-		mes "Rune-Midgarts, but over here";
-		mes "we have laws about trespassing!";
+		mes "Wise choice";
 		close;
 	}
-	mes "[Rekenber Guard]";
-	mes "Unless you have special";
-	mes "authorization, nobody is";
-	mes "allowed into the Underground";
-	mes "Laboratory for security reasons.";
-	close;
 }
 
 lhz_in01,23,132,3	script	Rekenber Guard#li02	867,5,5,{

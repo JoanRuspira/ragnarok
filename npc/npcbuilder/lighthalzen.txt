@@ -1,1000 +1,1320 @@
-lighthalzen,209,325,5	script	Lighthalzen Guard#lght:62168776	868,{
+lighthalzen,209,325,5	script	Lighthalzen Guard#lght:1b550b4a	868,{
 	npctalk "Welcome to Lighthalzen.";
 	end;
 }
 
-lighthalzen,218,325,3	script	Lighthalzen Guard#lght:2c9ead2d	868,{
+lighthalzen,218,325,3	script	Lighthalzen Guard#lght:278bcc5d	868,{
 	npctalk "Welcome to Lighthalzen.";
 	end;
 }
 
-lighthalzen,209,322,3	script	Lighthalzen Guard#lght:2e07459a	867,{
+lighthalzen,209,322,3	script	Lighthalzen Guard#lght:f437af8a	867,{
 	npctalk "Welcome to Lighthalzen.";
 	end;
 }
 
-lighthalzen,266,205,3	script	Lighthalzen Guard#lght:2bb641c4	867,{
+lighthalzen,266,205,3	script	Lighthalzen Guard#lght:cd1deb0d	867,{
 	npctalk "Be careful when going to the slums.";
 	end;
 }
 
-lighthalzen,299,231,5	script	Lighthalzen Guard#lght:279baafb	868,{
+lighthalzen,299,231,5	script	Lighthalzen Guard#lght:d0e8d72f	868,{
 	npctalk "We don't allow slums citizens past this point.";
 	end;
 }
 
-lighthalzen,254,81,5	script	Lighthalzen Guard#lght:5105c804	867,{
+lighthalzen,254,81,5	script	Lighthalzen Guard#lght:49f23b99	867,{
 	npctalk "Welcome to Lighthalzen.";
 	end;
 }
 
-lighthalzen,256,81,5	script	Lighthalzen Guard#lght:0cd09691	868,{
+lighthalzen,256,81,5	script	Lighthalzen Guard#lght:05db2351	868,{
 	npctalk "Welcome to Lighthalzen.";
 	end;
 }
 
-lighthalzen,106,166,3	script	Rekenber Guard#lght:4b060158	868,{
+lighthalzen,106,166,3	script	Rekenber Guard#lght:619feef4	868,{
 	npctalk "Welcome to the Rekenber Corporation Gardens.";
 	end;
 }
 
-lighthalzen,101,166,5	script	Rekenber Guard#lght:d181a4e5	868,{
+lighthalzen,101,166,5	script	Rekenber Guard#lght:0ec7b561	868,{
 	npctalk "Welcome to the Rekenber Corporation Gardens";
 	end;
 }
 
-lighthalzen,214,319,4	script	Lighthalzen Villager#lght:2d93a519	641,{
+lighthalzen,214,319,4	script	Lighthalzen Villager#lght:744b879f	654,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,210,313,7	script	Lighthalzen Villager#lght:8a823d5b	57,{
+lighthalzen,210,313,7	script	Lighthalzen Villager#lght:c9d5a39b	701,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,217,306,2	script	Lighthalzen Villager#lght:e4d83f4f	71,{
+lighthalzen,217,306,2	script	Lighthalzen Villager#lght:0d31448d	734,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,215,305,6	script	Lighthalzen Villager#lght:de91411c	740,{
+lighthalzen,215,305,6	script	Lighthalzen Villager#lght:d5e014d1	61,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,210,299,4	script	Lighthalzen Villager#lght:e6947e21	701,{
+lighthalzen,210,299,4	script	Lighthalzen Villager#lght:cfabb6e9	878,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,214,290,1	script	Lighthalzen Villager#lght:6a3eeea0	71,{
+lighthalzen,214,290,1	script	Lighthalzen Villager#lght:3922dac7	430,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,209,278,5	script	Lighthalzen Villager#lght:93cdf13b	636,{
+lighthalzen,209,278,5	script	Lighthalzen Villager#lght:b93c8fd4	745,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,215,281,2	script	Lighthalzen Villager#lght:46e4fa5b	430,{
+lighthalzen,215,281,2	script	Lighthalzen Villager#lght:a09ef1ee	744,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,214,263,3	script	Lighthalzen Villager#lght:d5bbda22	89,{
+lighthalzen,214,263,3	script	Lighthalzen Villager#lght:79d0aa63	68,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,210,258,6	script	Lighthalzen Villager#lght:0cc77aa0	741,{
+lighthalzen,210,258,6	script	Lighthalzen Villager#lght:9059925d	806,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,214,250,5	script	Lighthalzen Villager#lght:cabfad95	76,{
+lighthalzen,214,250,5	script	Lighthalzen Villager#lght:c4929c84	734,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,209,239,6	script	Lighthalzen Villager#lght:7f7878e5	740,{
+lighthalzen,209,239,6	script	Lighthalzen Villager#lght:7555c94b	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,211,239,2	script	Lighthalzen Villager#lght:f3f13150	751,{
+lighthalzen,211,239,2	script	Lighthalzen Villager#lght:cfdf84bc	91,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-lighthalzen,220,230,4	script	Lighthalzen Villager#lght:3a715ef6	410,{
+lighthalzen,220,230,4	script	Lighthalzen Villager#lght:33278dac	853,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,220,228,0	script	Lighthalzen Villager#lght:790c727e	531,{
+lighthalzen,220,228,0	script	Lighthalzen Villager#lght:8b5b65cc	635,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,212,225,5	script	Lighthalzen Villager#lght:c968c573	636,{
+lighthalzen,212,225,5	script	Lighthalzen Villager#lght:36907b38	727,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,215,228,0	script	Lighthalzen Villager#lght:2c4046fc	755,{
+lighthalzen,215,228,0	script	Lighthalzen Villager#lght:b7028d13	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,210,212,1	script	Lighthalzen Villager#lght:01eca986	755,{
+lighthalzen,210,212,1	script	Lighthalzen Villager#lght:c505ae3a	636,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,216,206,2	script	Lighthalzen Villager#lght:fc6b7efe	751,{
+lighthalzen,216,206,2	script	Lighthalzen Villager#lght:977e6d81	71,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,211,198,6	script	Lighthalzen Villager#lght:e8d034f0	47,{
+lighthalzen,211,198,6	script	Lighthalzen Villager#lght:67fb37c0	864,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,226,201,3	script	Lighthalzen Villager#lght:bd4fb66d	634,{
+lighthalzen,226,201,3	script	Lighthalzen Villager#lght:bbebfdb2	864,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,233,196,7	script	Lighthalzen Villager#lght:3e0fad89	742,{
+lighthalzen,233,196,7	script	Lighthalzen Villager#lght:bde91e3f	806,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,240,202,1	script	Lighthalzen Villager#lght:bdde917e	872,{
+lighthalzen,240,202,1	script	Lighthalzen Villager#lght:ec26fce0	642,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,253,197,0	script	Lighthalzen Villager#lght:579a9c90	51,{
+lighthalzen,253,197,0	script	Lighthalzen Villager#lght:d27da5b0	125,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,262,198,6	script	Lighthalzen Villager#lght:1dc23415	645,{
+lighthalzen,262,198,6	script	Lighthalzen Villager#lght:ec7bca25	97,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,264,198,2	script	Lighthalzen Villager#lght:e63626cc	71,{
+lighthalzen,264,198,2	script	Lighthalzen Villager#lght:84e05f3d	57,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,185,324,6	script	Lighthalzen Villager#lght:e1b381c8	741,{
+lighthalzen,185,324,6	script	Lighthalzen Villager#lght:d822f069	635,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,188,312,7	script	Lighthalzen Villager#lght:cabcc0ad	573,{
+lighthalzen,188,312,7	script	Lighthalzen Villager#lght:dbe9315c	654,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,186,300,6	script	Lighthalzen Villager#lght:24d9f934	77,{
+lighthalzen,186,300,6	script	Lighthalzen Villager#lght:b7ce30f3	76,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,188,300,2	script	Lighthalzen Villager#lght:19045d85	83,{
+lighthalzen,188,300,2	script	Lighthalzen Villager#lght:0f7c93ab	57,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,195,308,1	script	Lighthalzen Villager#lght:316f73b9	740,{
+lighthalzen,195,308,1	script	Lighthalzen Villager#lght:ab6bb6f1	71,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,198,316,2	script	Lighthalzen Villager#lght:57283f6a	84,{
+lighthalzen,198,316,2	script	Lighthalzen Villager#lght:6ca8bf84	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,202,301,5	script	Lighthalzen Villager#lght:fcb11329	804,{
+lighthalzen,202,301,5	script	Lighthalzen Villager#lght:4ad4f253	83,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,230,309,1	script	Lighthalzen Villager#lght:9589a14e	83,{
+lighthalzen,230,309,1	script	Lighthalzen Villager#lght:f1343e8b	89,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,226,301,3	script	Lighthalzen Villager#lght:50a06465	751,{
+lighthalzen,226,301,3	script	Lighthalzen Villager#lght:edb22333	91,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,238,294,6	script	Lighthalzen Villager#lght:2e39de4e	742,{
+lighthalzen,238,294,6	script	Lighthalzen Villager#lght:d6b72f72	77,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,244,305,3	script	Lighthalzen Villager#lght:e07f1331	69,{
+lighthalzen,244,305,3	script	Lighthalzen Villager#lght:cb0e8438	862,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,250,308,2	script	Lighthalzen Villager#lght:ea5221d2	878,{
+lighthalzen,250,308,2	script	Lighthalzen Villager#lght:137eb627	89,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,223,292,3	script	Lighthalzen Villager#lght:8383e547	92,{
+lighthalzen,223,292,3	script	Lighthalzen Villager#lght:00fa4a56	125,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,229,274,1	script	Lighthalzen Villager#lght:11b76720	70,{
+lighthalzen,229,274,1	script	Lighthalzen Villager#lght:d2154119	57,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,231,283,4	script	Lighthalzen Villager#lght:e1cb8a9c	90,{
+lighthalzen,231,283,4	script	Lighthalzen Villager#lght:46e4a0b0	751,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,198,232,6	script	Lighthalzen Villager#lght:0f40a818	57,{
+lighthalzen,198,232,6	script	Lighthalzen Villager#lght:e2a32fc1	91,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,253,218,5	script	Lighthalzen Villager#lght:92597787	732,{
+lighthalzen,253,218,5	script	Lighthalzen Villager#lght:f0ba6f99	109,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,242,211,2	script	Lighthalzen Villager#lght:6aa0fb30	754,{
+lighthalzen,242,211,2	script	Lighthalzen Villager#lght:38345588	86,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,232,218,4	script	Lighthalzen Villager#lght:014be0f4	84,{
+lighthalzen,232,218,4	script	Lighthalzen Villager#lght:97d3a91a	641,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,192,189,7	script	Lighthalzen Villager#lght:23be5ca5	862,{
+lighthalzen,192,189,7	script	Lighthalzen Villager#lght:3d087700	755,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,200,192,1	script	Lighthalzen Villager#lght:a799971b	754,{
+lighthalzen,200,192,1	script	Lighthalzen Villager#lght:40ff35b8	125,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,193,202,4	script	Lighthalzen Villager#lght:1ae71aa5	67,{
+lighthalzen,193,202,4	script	Lighthalzen Villager#lght:8a494843	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,216,188,3	script	Lighthalzen Villager#lght:394dd2c0	90,{
+lighthalzen,216,188,3	script	Lighthalzen Villager#lght:e2ade2e7	85,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,222,189,1	script	Lighthalzen Villager#lght:5cbdde64	879,{
+lighthalzen,222,189,1	script	Lighthalzen Villager#lght:dcf5967d	804,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,209,184,7	script	Lighthalzen Villager#lght:69572a13	97,{
+lighthalzen,209,184,7	script	Lighthalzen Villager#lght:75971359	908,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,214,178,4	script	Lighthalzen Villager#lght:fcf41898	864,{
+lighthalzen,214,178,4	script	Lighthalzen Villager#lght:de7eb290	642,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,217,171,0	script	Lighthalzen Villager#lght:37d9b3ce	95,{
+lighthalzen,217,171,0	script	Lighthalzen Villager#lght:d73140b6	654,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,204,168,3	script	Lighthalzen Villager#lght:a05cc176	69,{
+lighthalzen,204,168,3	script	Lighthalzen Villager#lght:86d60ecd	734,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,229,171,4	script	Lighthalzen Villager#lght:b71bb88d	641,{
+lighthalzen,229,171,4	script	Lighthalzen Villager#lght:df59aa25	90,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,223,176,2	script	Lighthalzen Villager#lght:5e0a2479	124,{
+lighthalzen,223,176,2	script	Lighthalzen Villager#lght:9d659e94	755,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,241,181,6	script	Lighthalzen Villager#lght:3ed4ef18	92,{
+lighthalzen,241,181,6	script	Lighthalzen Villager#lght:428d988d	645,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,238,164,2	script	Lighthalzen Villager#lght:08d354ba	740,{
+lighthalzen,238,164,2	script	Lighthalzen Villager#lght:96f37b19	57,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,228,165,6	script	Lighthalzen Villager#lght:aa08d61e	879,{
+lighthalzen,228,165,6	script	Lighthalzen Villager#lght:7c5669fc	51,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,221,161,1	script	Lighthalzen Villager#lght:e086e992	97,{
+lighthalzen,221,161,1	script	Lighthalzen Villager#lght:b7981948	908,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,228,147,2	script	Lighthalzen Villager#lght:c5322714	754,{
+lighthalzen,228,147,2	script	Lighthalzen Villager#lght:46ce1803	853,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,226,147,6	script	Lighthalzen Villager#lght:61f88b9d	84,{
+lighthalzen,226,147,6	script	Lighthalzen Villager#lght:d7d61058	805,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,241,127,4	script	Lighthalzen Villager#lght:09e0edf3	77,{
+lighthalzen,241,127,4	script	Lighthalzen Villager#lght:cbc8a69a	84,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,231,131,6	script	Lighthalzen Villager#lght:c2a47c34	109,{
+lighthalzen,231,131,6	script	Lighthalzen Villager#lght:65985cde	51,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,240,147,6	script	Lighthalzen Villager#lght:1d569aa1	805,{
+lighthalzen,240,147,6	script	Lighthalzen Villager#lght:819000cd	76,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,249,134,5	script	Lighthalzen Villager#lght:35efd9ba	740,{
+lighthalzen,249,134,5	script	Lighthalzen Villager#lght:909a85ff	636,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,258,123,7	script	Lighthalzen Villager#lght:a7838cd2	125,{
+lighthalzen,258,123,7	script	Lighthalzen Villager#lght:33eccd37	85,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,256,115,7	script	Lighthalzen Villager#lght:37e62d07	864,{
+lighthalzen,256,115,7	script	Lighthalzen Villager#lght:673c3da7	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,260,116,3	script	Lighthalzen Villager#lght:037b7935	430,{
+lighthalzen,260,116,3	script	Lighthalzen Villager#lght:c1a4760f	573,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,248,100,7	script	Lighthalzen Villager#lght:1b1b60af	744,{
+lighthalzen,248,100,7	script	Lighthalzen Villager#lght:f821de22	124,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,253,102,2	script	Lighthalzen Villager#lght:61ce4246	751,{
+lighthalzen,253,102,2	script	Lighthalzen Villager#lght:c39edd40	733,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,242,97,0	script	Lighthalzen Villager#lght:45bad1db	754,{
+lighthalzen,242,97,0	script	Lighthalzen Villager#lght:63a26237	68,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,235,111,7	script	Lighthalzen Villager#lght:594def4e	745,{
+lighthalzen,235,111,7	script	Lighthalzen Villager#lght:e896abb4	49,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,242,125,6	script	Lighthalzen Villager#lght:72886706	641,{
+lighthalzen,242,125,6	script	Lighthalzen Villager#lght:4a32fb10	745,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,223,109,3	script	Lighthalzen Villager#lght:3a396085	727,{
+lighthalzen,223,109,3	script	Lighthalzen Villager#lght:611e6ab0	47,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,203,157,5	script	Lighthalzen Villager#lght:d5e4060e	49,{
+lighthalzen,203,157,5	script	Lighthalzen Villager#lght:28d3eddb	744,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,214,152,4	script	Lighthalzen Villager#lght:a434ff92	29,{
+lighthalzen,214,152,4	script	Lighthalzen Villager#lght:2d7c26e6	124,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,209,141,7	script	Lighthalzen Villager#lght:ffe816b2	862,{
+lighthalzen,209,141,7	script	Lighthalzen Villager#lght:4da613ba	727,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,215,136,2	script	Lighthalzen Villager#lght:cbf1b5b6	410,{
+lighthalzen,215,136,2	script	Lighthalzen Villager#lght:6d55dfcf	531,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,211,126,4	script	Lighthalzen Villager#lght:1806ce13	49,{
+lighthalzen,211,126,4	script	Lighthalzen Villager#lght:8ec06e71	702,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,211,124,0	script	Lighthalzen Villager#lght:7e36221a	28,{
+lighthalzen,211,124,0	script	Lighthalzen Villager#lght:38c269ec	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,214,115,7	script	Lighthalzen Villager#lght:06c37705	644,{
+lighthalzen,214,115,7	script	Lighthalzen Villager#lght:ede8f57e	702,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,210,105,5	script	Lighthalzen Villager#lght:6e64a3ff	878,{
+lighthalzen,210,105,5	script	Lighthalzen Villager#lght:cdc93405	805,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,202,109,6	script	Lighthalzen Villager#lght:75491d3e	701,{
+lighthalzen,202,109,6	script	Lighthalzen Villager#lght:7bc78adc	97,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,204,109,2	script	Lighthalzen Villager#lght:179409ef	644,{
+lighthalzen,204,109,2	script	Lighthalzen Villager#lght:507b2cc0	62,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,216,98,1	script	Lighthalzen Villager#lght:b9534b6e	734,{
+lighthalzen,216,98,1	script	Lighthalzen Villager#lght:829086c7	70,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,213,85,0	script	Lighthalzen Villager#lght:cba045c1	79,{
+lighthalzen,213,85,0	script	Lighthalzen Villager#lght:4b6871b9	864,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,224,79,3	script	Lighthalzen Villager#lght:960b0824	635,{
+lighthalzen,224,79,3	script	Lighthalzen Villager#lght:9a21d65e	734,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,226,74,6	script	Lighthalzen Villager#lght:8f14a019	754,{
+lighthalzen,226,74,6	script	Lighthalzen Villager#lght:ad9f5257	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,235,77,1	script	Lighthalzen Villager#lght:430301ba	85,{
+lighthalzen,235,77,1	script	Lighthalzen Villager#lght:735abd68	644,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,241,74,6	script	Lighthalzen Villager#lght:d0012ca0	864,{
+lighthalzen,241,74,6	script	Lighthalzen Villager#lght:5161b3bc	864,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,243,74,2	script	Lighthalzen Villager#lght:921611b3	61,{
+lighthalzen,243,74,2	script	Lighthalzen Villager#lght:97fa74da	644,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,250,76,1	script	Lighthalzen Villager#lght:5403217c	654,{
+lighthalzen,250,76,1	script	Lighthalzen Villager#lght:51668705	61,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,255,71,7	script	Lighthalzen Villager#lght:1ea72b4c	89,{
+lighthalzen,255,71,7	script	Lighthalzen Villager#lght:ca9b3b80	753,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,261,78,3	script	Lighthalzen Villager#lght:be236115	864,{
+lighthalzen,261,78,3	script	Lighthalzen Villager#lght:f5a38ac7	853,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,262,68,0	script	Lighthalzen Villager#lght:3c776d91	69,{
+lighthalzen,262,68,0	script	Lighthalzen Villager#lght:32176782	57,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,230,61,1	script	Lighthalzen Villager#lght:4de46828	637,{
+lighthalzen,230,61,1	script	Lighthalzen Villager#lght:afaec0ef	755,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,254,49,1	script	Lighthalzen Villager#lght:26e751d6	755,{
+lighthalzen,254,49,1	script	Lighthalzen Villager#lght:6f9a1e7a	755,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,260,54,4	script	Lighthalzen Villager#lght:c3b23607	741,{
+lighthalzen,260,54,4	script	Lighthalzen Villager#lght:d3811a5b	645,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,262,44,0	script	Lighthalzen Villager#lght:8b4649e1	49,{
+lighthalzen,262,44,0	script	Lighthalzen Villager#lght:10436a3a	493,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,238,58,2	script	Lighthalzen Villager#lght:aa808684	742,{
+lighthalzen,238,58,2	script	Lighthalzen Villager#lght:45b21e58	84,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,214,75,2	script	Lighthalzen Villager#lght:20a375ea	805,{
+lighthalzen,214,75,2	script	Lighthalzen Villager#lght:ceb11003	654,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,263,319,4	script	Lighthalzen Villager#lght:8ef70858	83,{
+lighthalzen,263,319,4	script	Lighthalzen Villager#lght:3185d169	635,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,203,82,1	script	Lighthalzen Villager#lght:d78aaeea	654,{
+lighthalzen,203,82,1	script	Lighthalzen Villager#lght:cbd09aec	654,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,193,87,5	script	Lighthalzen Villager#lght:f2a2cbd9	79,{
+lighthalzen,193,87,5	script	Lighthalzen Villager#lght:0aa96fd4	740,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,187,96,6	script	Lighthalzen Villager#lght:2351f25c	430,{
+lighthalzen,187,96,6	script	Lighthalzen Villager#lght:42549663	879,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,181,110,7	script	Lighthalzen Villager#lght:e1f2ef43	644,{
+lighthalzen,181,110,7	script	Lighthalzen Villager#lght:9daa7485	806,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,188,120,6	script	Lighthalzen Villager#lght:fd65baad	641,{
+lighthalzen,188,120,6	script	Lighthalzen Villager#lght:18bbe97b	862,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,190,120,2	script	Lighthalzen Villager#lght:d4ba351d	804,{
+lighthalzen,190,120,2	script	Lighthalzen Villager#lght:46fa1736	755,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,199,126,7	script	Lighthalzen Villager#lght:dc525cdc	410,{
+lighthalzen,199,126,7	script	Lighthalzen Villager#lght:b2106268	864,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,171,98,5	script	Lighthalzen Villager#lght:a9784f47	573,{
+lighthalzen,171,98,5	script	Lighthalzen Villager#lght:26d70089	751,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,166,91,2	script	Lighthalzen Villager#lght:9da677d8	92,{
+lighthalzen,166,91,2	script	Lighthalzen Villager#lght:9c5ddc30	634,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,159,93,0	script	Lighthalzen Villager#lght:3ca436b4	57,{
+lighthalzen,159,93,0	script	Lighthalzen Villager#lght:7df43581	86,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,160,104,1	script	Lighthalzen Villager#lght:a0fc31b1	79,{
+lighthalzen,160,104,1	script	Lighthalzen Villager#lght:7892a427	732,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,155,114,4	script	Lighthalzen Villager#lght:8709e440	83,{
+lighthalzen,155,114,4	script	Lighthalzen Villager#lght:057e5acb	862,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,155,112,0	script	Lighthalzen Villager#lght:2e2ddcfb	61,{
+lighthalzen,155,112,0	script	Lighthalzen Villager#lght:ecd7bee5	72,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,158,121,0	script	Lighthalzen Villager#lght:8d812874	654,{
+lighthalzen,158,121,0	script	Lighthalzen Villager#lght:989138b1	908,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,162,126,3	script	Lighthalzen Villager#lght:a7bf663f	741,{
+lighthalzen,162,126,3	script	Lighthalzen Villager#lght:3539042b	740,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,184,55,2	script	Lighthalzen Villager#lght:311078d0	49,{
+lighthalzen,184,55,2	script	Lighthalzen Villager#lght:6a2e83b2	79,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,175,58,5	script	Lighthalzen Villager#lght:fdb1770f	79,{
+lighthalzen,175,58,5	script	Lighthalzen Villager#lght:fba757e8	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,165,54,1	script	Lighthalzen Villager#lght:b14df5bf	741,{
+lighthalzen,165,54,1	script	Lighthalzen Villager#lght:4e02c656	878,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,177,46,7	script	Lighthalzen Villager#lght:6e0d7b48	125,{
+lighthalzen,177,46,7	script	Lighthalzen Villager#lght:3266511f	733,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,158,46,0	script	Lighthalzen Villager#lght:98a78761	430,{
+lighthalzen,158,46,0	script	Lighthalzen Villager#lght:b2cdd7f5	635,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,156,64,6	script	Lighthalzen Villager#lght:86914903	879,{
+lighthalzen,156,64,6	script	Lighthalzen Villager#lght:6be37f3f	869,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,158,64,2	script	Lighthalzen Villager#lght:cfa0d130	72,{
+lighthalzen,158,64,2	script	Lighthalzen Villager#lght:485742d5	745,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,161,76,0	script	Lighthalzen Villager#lght:d5e12c14	755,{
+lighthalzen,161,76,0	script	Lighthalzen Villager#lght:ed7f831d	751,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,152,87,1	script	Lighthalzen Villager#lght:d8729ee5	804,{
+lighthalzen,152,87,1	script	Lighthalzen Villager#lght:3dcbe808	733,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,144,98,6	script	Lighthalzen Villager#lght:ed4e6874	879,{
+lighthalzen,144,98,6	script	Lighthalzen Villager#lght:453a6400	49,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,148,55,1	script	Lighthalzen Villager#lght:7091c6ff	89,{
+lighthalzen,148,55,1	script	Lighthalzen Villager#lght:5f8676ac	744,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,140,58,5	script	Lighthalzen Villager#lght:79036627	72,{
+lighthalzen,140,58,5	script	Lighthalzen Villager#lght:557c0b7b	634,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,130,54,1	script	Lighthalzen Villager#lght:d7f48dc1	642,{
+lighthalzen,130,54,1	script	Lighthalzen Villager#lght:7ea0abde	755,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,117,61,6	script	Lighthalzen Villager#lght:0943bab0	732,{
+lighthalzen,117,61,6	script	Lighthalzen Villager#lght:4f11a6c7	430,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,111,72,3	script	Lighthalzen Villager#lght:21eef160	853,{
+lighthalzen,111,72,3	script	Lighthalzen Villager#lght:5d127363	86,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,115,83,7	script	Lighthalzen Villager#lght:6b643f09	531,{
+lighthalzen,115,83,7	script	Lighthalzen Villager#lght:0821c8b2	70,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,125,92,3	script	Lighthalzen Villager#lght:9ba0cf5e	91,{
+lighthalzen,125,92,3	script	Lighthalzen Villager#lght:6c43aa8d	804,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,138,105,6	script	Lighthalzen Villager#lght:ca3aa0e8	753,{
+lighthalzen,138,105,6	script	Lighthalzen Villager#lght:f0c2876d	745,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,102,81,0	script	Lighthalzen Villager#lght:2ca11eca	853,{
+lighthalzen,102,81,0	script	Lighthalzen Villager#lght:692da507	828,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,106,91,3	script	Lighthalzen Villager#lght:2cbab8db	637,{
+lighthalzen,106,91,3	script	Lighthalzen Villager#lght:51d07e78	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,100,100,6	script	Lighthalzen Villager#lght:195e9424	47,{
+lighthalzen,100,100,6	script	Lighthalzen Villager#lght:10b78284	755,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,99,114,7	script	Lighthalzen Villager#lght:8864b737	872,{
+lighthalzen,99,114,7	script	Lighthalzen Villager#lght:607644d0	744,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,105,118,3	script	Lighthalzen Villager#lght:41d0a882	753,{
+lighthalzen,105,118,3	script	Lighthalzen Villager#lght:6f9d28b2	71,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,102,128,6	script	Lighthalzen Villager#lght:e356bded	755,{
+lighthalzen,102,128,6	script	Lighthalzen Villager#lght:60a03e69	878,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,104,128,2	script	Lighthalzen Villager#lght:3c71e751	645,{
+lighthalzen,104,128,2	script	Lighthalzen Villager#lght:ed07a574	641,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,115,129,5	script	Lighthalzen Villager#lght:2232976f	701,{
+lighthalzen,115,129,5	script	Lighthalzen Villager#lght:c16e0bd1	908,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,124,119,1	script	Lighthalzen Villager#lght:4e83d448	637,{
+lighthalzen,124,119,1	script	Lighthalzen Villager#lght:1a9c230f	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,135,114,3	script	Lighthalzen Villager#lght:5ea943ea	573,{
+lighthalzen,135,114,3	script	Lighthalzen Villager#lght:e6961405	76,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,94,133,2	script	Lighthalzen Villager#lght:2ded6c97	635,{
+lighthalzen,94,133,2	script	Lighthalzen Villager#lght:bdb047f7	410,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,85,129,7	script	Lighthalzen Villager#lght:a80660f1	751,{
+lighthalzen,85,129,7	script	Lighthalzen Villager#lght:8a68e6e2	853,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,78,136,3	script	Lighthalzen Villager#lght:6f00b6d8	90,{
+lighthalzen,78,136,3	script	Lighthalzen Villager#lght:cd9f3c66	734,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,73,130,6	script	Lighthalzen Villager#lght:4ad2645e	702,{
+lighthalzen,73,130,6	script	Lighthalzen Villager#lght:37fedc23	90,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,72,118,4	script	Lighthalzen Villager#lght:e4e5598c	864,{
+lighthalzen,72,118,4	script	Lighthalzen Villager#lght:1a4c48f6	67,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,75,108,0	script	Lighthalzen Villager#lght:2b697671	71,{
+lighthalzen,75,108,0	script	Lighthalzen Villager#lght:1c7e7464	853,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,73,99,1	script	Lighthalzen Villager#lght:f85a801c	635,{
+lighthalzen,73,99,1	script	Lighthalzen Villager#lght:f4d3e8e0	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,75,87,6	script	Lighthalzen Villager#lght:907746f3	908,{
+lighthalzen,75,87,6	script	Lighthalzen Villager#lght:7710e75b	430,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,86,89,5	script	Lighthalzen Villager#lght:50e51147	864,{
+lighthalzen,86,89,5	script	Lighthalzen Villager#lght:879470f5	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,93,86,1	script	Lighthalzen Villager#lght:2fdb7be0	531,{
+lighthalzen,93,86,1	script	Lighthalzen Villager#lght:4f945a89	69,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,73,74,1	script	Lighthalzen Villager#lght:03d738e7	637,{
+lighthalzen,73,74,1	script	Lighthalzen Villager#lght:7a8002f9	864,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,82,70,6	script	Lighthalzen Villager#lght:37e4e721	741,{
+lighthalzen,82,70,6	script	Lighthalzen Villager#lght:ea545d03	642,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,86,59,4	script	Lighthalzen Villager#lght:f70b14eb	753,{
+lighthalzen,86,59,4	script	Lighthalzen Villager#lght:7cfe73d4	47,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,92,49,7	script	Lighthalzen Villager#lght:019995fb	734,{
+lighthalzen,92,49,7	script	Lighthalzen Villager#lght:4c6f0120	745,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,101,50,2	script	Lighthalzen Villager#lght:be920747	72,{
+lighthalzen,101,50,2	script	Lighthalzen Villager#lght:5adade31	72,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,60,69,1	script	Lighthalzen Villager#lght:d63b21ac	69,{
+lighthalzen,60,69,1	script	Lighthalzen Villager#lght:1cfbf28c	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,50,56,4	script	Lighthalzen Villager#lght:b5c3a183	91,{
+lighthalzen,50,56,4	script	Lighthalzen Villager#lght:714a6946	828,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,35,54,7	script	Lighthalzen Villager#lght:4a0be27d	869,{
+lighthalzen,35,54,7	script	Lighthalzen Villager#lght:63b633ac	62,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,54,72,6	script	Lighthalzen Villager#lght:8f631ff5	57,{
+lighthalzen,54,72,6	script	Lighthalzen Villager#lght:38861b89	67,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,56,72,2	script	Lighthalzen Villager#lght:8f0730e5	92,{
+lighthalzen,56,72,2	script	Lighthalzen Villager#lght:a8b52db8	654,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,57,85,7	script	Lighthalzen Villager#lght:7adb2de7	68,{
+lighthalzen,57,85,7	script	Lighthalzen Villager#lght:0850060b	49,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,50,100,1	script	Lighthalzen Villager#lght:7469c77a	67,{
+lighthalzen,50,100,1	script	Lighthalzen Villager#lght:9762f14a	67,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,47,115,5	script	Lighthalzen Villager#lght:3118c173	91,{
+lighthalzen,47,115,5	script	Lighthalzen Villager#lght:f84cfab3	109,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,59,116,7	script	Lighthalzen Villager#lght:85d48088	753,{
+lighthalzen,59,116,7	script	Lighthalzen Villager#lght:857c9ec1	573,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,61,129,5	script	Lighthalzen Villager#lght:e72b3776	869,{
+lighthalzen,61,129,5	script	Lighthalzen Villager#lght:66a7f14c	90,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,63,145,7	script	Lighthalzen Villager#lght:7ac0a969	125,{
+lighthalzen,63,145,7	script	Lighthalzen Villager#lght:6c118794	798,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,70,150,3	script	Lighthalzen Villager#lght:a697ae1f	645,{
+lighthalzen,70,150,3	script	Lighthalzen Villager#lght:b332fe35	872,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,64,128,2	script	Lighthalzen Villager#lght:789d636b	908,{
+lighthalzen,64,128,2	script	Lighthalzen Villager#lght:ba592d0f	701,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,53,150,1	script	Lighthalzen Villager#lght:c504ee68	753,{
+lighthalzen,53,150,1	script	Lighthalzen Villager#lght:73303ae5	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,42,155,6	script	Lighthalzen Villager#lght:3274d512	637,{
+lighthalzen,42,155,6	script	Lighthalzen Villager#lght:c3dcb4b5	636,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,85,145,0	script	Lighthalzen Villager#lght:b6300ff3	742,{
+lighthalzen,85,145,0	script	Lighthalzen Villager#lght:94fed6c6	862,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,91,155,3	script	Lighthalzen Villager#lght:a6c6e7bd	733,{
+lighthalzen,91,155,3	script	Lighthalzen Villager#lght:39b84f4e	493,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,58,161,5	script	Lighthalzen Villager#lght:79fa4174	47,{
+lighthalzen,58,161,5	script	Lighthalzen Villager#lght:8c75e791	86,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,107,139,1	script	Lighthalzen Villager#lght:1aad4365	634,{
+lighthalzen,107,139,1	script	Lighthalzen Villager#lght:1b9fd3c0	85,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,101,149,6	script	Lighthalzen Villager#lght:ad48dd61	69,{
+lighthalzen,101,149,6	script	Lighthalzen Villager#lght:3a9776c9	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,103,149,2	script	Lighthalzen Villager#lght:d7923e24	733,{
+lighthalzen,103,149,2	script	Lighthalzen Villager#lght:a123de9a	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,105,161,5	script	Lighthalzen Villager#lght:6d7ab252	754,{
+lighthalzen,105,161,5	script	Lighthalzen Villager#lght:6bd628fb	91,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,120,154,7	script	Lighthalzen Villager#lght:0c8640a7	124,{
+lighthalzen,120,154,7	script	Lighthalzen Villager#lght:853dcc03	879,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,133,159,3	script	Lighthalzen Villager#lght:f0a832f7	634,{
+lighthalzen,133,159,3	script	Lighthalzen Villager#lght:506fb3e8	879,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,138,155,6	script	Lighthalzen Villager#lght:b2db6c97	878,{
+lighthalzen,138,155,6	script	Lighthalzen Villager#lght:99931798	62,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,155,157,3	script	Lighthalzen Villager#lght:9f9064d8	741,{
+lighthalzen,155,157,3	script	Lighthalzen Villager#lght:3717c6c3	753,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,167,152,0	script	Lighthalzen Villager#lght:c0a391f4	72,{
+lighthalzen,167,152,0	script	Lighthalzen Villager#lght:60bb7e6f	634,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,167,154,4	script	Lighthalzen Villager#lght:7a5fe971	61,{
+lighthalzen,167,154,4	script	Lighthalzen Villager#lght:b8a55394	410,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,179,156,7	script	Lighthalzen Villager#lght:24b00375	645,{
+lighthalzen,179,156,7	script	Lighthalzen Villager#lght:3e7ea445	71,{
 	npctalk "npcdialog";
 	end;
 }
 
-lighthalzen,192,154,1	script	Lighthalzen Villager#lght:55efc826	755,{
+lighthalzen,192,154,1	script	Lighthalzen Villager#lght:a9d01ac5	733,{
 	npctalk "npcdialog";
+	end;
+}
+
+
+lhz_in02,24,201,2	script	Lighthalzen Villager#lght:2c3bf3c8	71,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,24,212,6	script	Lighthalzen Villager#lght:eb9f0c0c	869,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,13,215,0	script	Lighthalzen Villager#lght:205dedd4	645,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,30,214,0	script	Lighthalzen Villager#lght:1ea23df1	635,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,45,141,7	script	Lighthalzen Villager#lght:50b1ecb7	75,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,35,162,4	script	Lighthalzen Villager#lght:3d23a59b	644,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,21,144,0	script	Lighthalzen Villager#lght:253d60aa	732,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,30,138,1	script	Lighthalzen Villager#lght:03c1a947	84,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,89,213,7	script	Lighthalzen Villager#lght:7ec8b0aa	645,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,86,222,3	script	Lighthalzen Villager#lght:2158e305	62,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,199,146,4	script	Lighthalzen Villager#lght:2aae9c4e	67,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,96,137,7	script	Lighthalzen Villager#lght:b71adee1	109,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,95,155,6	script	Lighthalzen Villager#lght:684d81b3	69,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,97,37,4	script	Lighthalzen Villager#lght:a7a934c9	573,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,103,29,6	script	Lighthalzen Villager#lght:f22d6da3	79,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,92,24,0	script	Lighthalzen Villager#lght:bddc3349	741,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,96,15,2	script	Lighthalzen Villager#lght:d9ca18bb	125,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,283,89,3	script	Lighthalzen Villager#lght:51814cad	47,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,271,88,0	script	Lighthalzen Villager#lght:96e0e6ef	741,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,264,93,5	script	Lighthalzen Villager#lght:32d4cef3	754,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,279,32,3	script	Lighthalzen Villager#lght:e3aab55a	636,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,235,267,2	script	Lighthalzen Villager#lght:494328a1	493,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,226,273,7	script	Lighthalzen Villager#lght:7aae5885	642,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,216,281,5	script	Lighthalzen Villager#lght:31292ff0	49,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,212,269,0	script	Lighthalzen Villager#lght:c8f9adef	908,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,201,274,1	script	Lighthalzen Villager#lght:e2759147	642,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,245,218,5	script	Lighthalzen Villager#lght:14da1639	644,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,239,206,1	script	Lighthalzen Villager#lght:52ec39ce	97,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,243,192,4	script	Lighthalzen Villager#lght:2f92a186	741,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,238,182,7	script	Lighthalzen Villager#lght:13014c53	744,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,234,146,1	script	Lighthalzen Villager#lght:a01a646b	742,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,220,145,6	script	Lighthalzen Villager#lght:5f3d4a81	878,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,205,207,6	script	Lighthalzen Villager#lght:162db158	71,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,278,214,2	script	Lighthalzen Villager#lght:ebe0a11d	753,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_in02,286,207,4	script	Lighthalzen Villager#lght:7b848454	72,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+lhz_airport,143,19,5	script	Lighthalzen Villager#lght:1eb06891	84,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_airport,154,26,1	script	Lighthalzen Villager#lght:b40bd3a7	745,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_airport,149,33,5	script	Lighthalzen Villager#lght:e452146f	701,{
+	npctalk "npcdialog";
+	end;
+}
+lhz_airport,151,36,4	script	Lighthalzen Villager#lght:4806eb3c	71,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_airport,175,38,3	script	Lighthalzen Villager#lght:c5d2e147	645,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_airport,184,41,5	script	Lighthalzen Villager#lght:8ff43682	97,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_airport,154,40,2	script	Lighthalzen Villager#lght:f96bca1f	853,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_airport,142,38,0	script	Lighthalzen Villager#lght:2e949fd0	75,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_airport,130,38,6	script	Lighthalzen Villager#lght:3e49437a	740,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_airport,118,36,0	script	Lighthalzen Villager#lght:f1d3f4f3	853,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_airport,105,37,7	script	Lighthalzen Villager#lght:d26b87b8	879,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_airport,125,26,7	script	Lighthalzen Villager#lght:bf4f21ba	92,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_airport,135,31,3	script	Lighthalzen Villager#lght:388db538	806,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_airport,136,20,0	script	Lighthalzen Villager#lght:27780f8f	86,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_airport,155,65,4	script	Lighthalzen Villager#lght:57886960	49,{
+	npctalk "npcdialog";
+	end;
+}
+lhz_airport,163,70,3	script	Lighthalzen Villager#lght:bccb49e1	645,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_airport,154,53,0	script	Lighthalzen Villager#lght:a258160b	124,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_airport,143,55,4	script	Lighthalzen Villager#lght:93b391d4	654,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_airport,126,56,6	script	Lighthalzen Villager#lght:ab00c311	75,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_airport,129,64,4	script	Lighthalzen Villager#lght:c795672b	733,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_airport,204,78,3	script	Lighthalzen Villager#lght:1cb1aca3	531,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_airport,299,73,0	script	Lighthalzen Villager#lght:7c706361	742,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_fild01,212,61,3	script	Lighthalzen Adventurer#lght:1a917c2b	728,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_fild01,207,53,0	script	Lighthalzen Adventurer#lght:e56ba98a	884,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_fild01,211,46,1	script	Lighthalzen Adventurer#lght:6ccd0012	883,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_fild01,207,34,6	script	Lighthalzen Adventurer#lght:a779df59	875,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_fild01,209,34,2	script	Lighthalzen Adventurer#lght:17566eea	468,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_fild01,214,21,0	script	Lighthalzen Guard#lght:a8253aa7	867,{
+	npctalk "Welcome to Lighthalzen.";
+	end;
+}
+
+lhz_fild01,205,21,0	script	Lighthalzen Guard#lght:e02dc860	868,{
+	npctalk "Welcome to Lighthalzen.";
 	end;
 }

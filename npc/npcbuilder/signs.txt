@@ -929,3 +929,8 @@ ein_fild03,137,35,6	script	Board#sgn::152	858,{
 	mes "Einbroch Mining Complex ahead. -  Arunafeltz Section.";
 	close;
 }
+
+lighthalzen,204,313,4	script	Bulletin Board#sgn::122	837,{
+	mes "Lighthalzen, the Prosperity State. Our flourishing city-state is the home of Midgard´s largest companies and with state of the art research techniques.";
+	close;
+}
