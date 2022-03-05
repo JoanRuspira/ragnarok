@@ -57,7 +57,7 @@ geffen,203,116,4	script	Guide#01geffen::GuideGeffen	705,{
 			}
 			break;
 		case 2:
-			mes "[Geffen Guide]";
+			mes "[Dicastes Guide]";
 			mes "Sure, I'll remove all marks from your mini-map.";
 			mes "Is there anything else I can do for you?";
 			viewpoint 2,1,1,0,0xFFFF00;
@@ -75,13 +75,14 @@ geffen,203,116,4	script	Guide#01geffen::GuideGeffen	705,{
 			viewpoint 2,1,1,12,0xFFFF00;
 			viewpoint 2,1,1,13,0xFFFF00;
 			viewpoint 2,1,1,14,0xFFFF00;
+			viewpoint 2,1,1,14,0x00FF00;
+			viewpoint 2,1,1,15,0x0000FF;
 			next;
 			break;
-		case 4:
-			mes "[Geffen Guide]";
+		case 3:
+			mes "[Dicastes Guide]";
 			mes "Enjoy your stay.";
 			close2;
-			cutin "gef_soldier",255;
 			end;
 		}
 	}

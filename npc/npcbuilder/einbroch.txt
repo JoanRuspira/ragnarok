@@ -2125,7 +2125,7 @@ ein_in01,27,83,7	script	Einbroch Villager#ein:132244c0	67,{
 	end;
 }
 
-ein_in01,18,28,4	script	Blacksmith GuildMaster#ein:3ccde996	731,{
+ein_in01,18,28,4	script	Blacksmith GuildMaster#ein:3ccde996	10,{
 	npctalk "I will make you a Blacksmith";
 	end;
 }

@@ -1152,3 +1152,18 @@ pay_fild03,374,62,7	script	Alberta Adventurer#alb:2355s	567,{
 	npctalk "npcdialog";
 	end;
 }
+
+alberta_in,17,59,0	script	Alberta Villager#alb:npcid34hd	51,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta_in,19,28,7	script	Alberta Villager#alb:npcid234sds	754,{
+	npctalk "npcdialog";
+	end;
+}
+
+alberta_in,18,20,2	script	Alberta Villager#alb:npcidsad3	908,{
+	npctalk "npcdialog";
+	end;
+}

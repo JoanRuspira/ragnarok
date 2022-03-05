@@ -812,3 +812,133 @@ dicastes01,219,225,6	script	Dicastes Villager#dic:npcid	spriteid,{
 	end;
 }
 
+man_fild02,137,48,7	script	Dicastes Adventurer#dic:npcid	665,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+man_fild02,141,54,4	script	Dicastes Adventurer#dic:npcid	602,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,194,80,4	script	Dicastes Adventurer#dic:npcid	747,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,200,78,1	script	Dicastes Adventurer#dic:npcid	64,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,197,72,3	script	Dicastes Adventurer#dic:npcid	875,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,202,67,1	script	Dicastes Adventurer#dic:npcid	123,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+
+dic_in01,375,266,1	script	Dicastes Villager#dic:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+dic_in01,365,273,5	script	Dicastes Villager#dic:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+dic_in01,357,268,0	script	Dicastes Villager#dic:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+dic_in01,347,271,6	script	Dicastes Villager#dic:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+dic_in01,218,37,3	script	Dicastes Villager#dic:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+dic_in01,201,38,1	script	Dicastes Villager#dic:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+dic_in01,190,52,4	script	Dicastes Villager#dic:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+dic_in01,134,279,4	script	Dicastes Villager#dic:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+dic_in01,128,265,7	script	Dicastes Villager#dic:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+dic_in01,118,261,2	script	Dicastes Villager#dic:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+dic_in01,113,272,0	script	Dicastes Villager#dic:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,214,247,5	script	Dicastes Villager#dic:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,220,244,2	script	Dicastes Villager#dic:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+dic_in01,212,278,5	script	Dicastes Villager#dic:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+dic_in01,221,271,5	script	Dicastes Villager#dic:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+dic_in01,227,257,1	script	Dicastes Villager#dic:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+dic_in01,226,280,5	script	Operation Mastersmith#dic:npcid	731,{
+	npctalk "I will make you a mastersmith.";
+	end;
+}
+
+
+dicastes01,265,142,1	script	Performer#dic:npcid	647,{
+	npctalk "...";
+	end;
+}
+
+dicastes01,263,140,1	script	Performer#dic:npcid	678,{
+	npctalk "...";
+	end;
+}
+

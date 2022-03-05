@@ -1318,3 +1318,79 @@ lhz_fild01,205,21,0	script	Lighthalzen Guard#lght:npcid	868,{
 	npctalk "Welcome to Lighthalzen.";
 	end;
 }
+
+lhz_fild01,230,139,1	script	Lighthalzen Villager#lght:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_fild01,236,141,4	script	Lighthalzen Villager#lght:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_fild01,246,132,2	script	Lighthalzen Villager#lght:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_fild01,239,112,1	script	Lighthalzen Villager#lght:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_fild01,210,123,0	script	Lighthalzen Villager#lght:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+lhz_fild01,210,136,5	script	Lighthalzen Villager#lght:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ra_fild06,272,53,5	script	Fort Luna Believer#lght:npcid	616,{
+	npctalk "npcdialog";
+	end;
+}
+
+ra_fild06,288,50,6	script	Fort Luna Believer#lght:npcid	79,{
+	npctalk "npcdialog";
+	end;
+}
+
+ra_fild06,290,50,2	script	Fort Luna Believer#lght:npcid	733,{
+	npctalk "npcdialog";
+	end;
+}
+
+ra_fild06,288,69,3	script	Fort Luna Believer#lght:npcid	641,{
+	npctalk "npcdialog";
+	end;
+}
+
+ra_fild06,271,68,7	script	Fort Luna Believer#lght:npcid	60,{
+	npctalk "npcdialog";
+	end;
+}
+
+ra_fild06,283,65,4	script	Fort Luna Believer#lght:npcid	8,{
+	npctalk "npcdialog";
+	end;
+}
+
+ra_fild06,274,86,7	script	Fort Luna Believer#lght:npcid	483,{
+	npctalk "npcdialog";
+	end;
+}
+
+ra_fild06,275,76,4	script	Fort Luna Believer#lght:npcid	110,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+lhz_in02,278,17,3	script	Lighthalzen Villager#lght:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}

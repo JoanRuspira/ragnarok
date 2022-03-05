@@ -37771,3 +37771,70 @@ Body:
       Costume_Head_Top: true
     EquipLevelMin: 1
     View: 523
+  - Id: 20592
+    AegisName: C_Santa_Backpack
+    Name: Costume Santa's Pocket
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Garment: true
+    EquipLevelMin: 1
+    View: 70
+  - Id: 19682
+    AegisName: C_Santa_Poring_Hat
+    Name: Costume SantaPoring Cap
+    Type: Armor
+    Buy: 500000
+    Weight: 100
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 387
+  - Id: 19686
+    AegisName: C_SantaHairband
+    Name: Costume Santa Hairband
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 964
+  - Id: 19685
+    AegisName: C_ShineSantaPoring
+    Name: Costume Shining Santa Poring
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 961
+  - Id: 18745
+    AegisName: Choco_Stick_In_Mouth
+    Name: Choco Stick In Mouth
+    Type: Armor
+    Buy: 500000
+    Weight: 100
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 10
+    View: 884
+    Script: |
+      bonus bMaxSP,50;
+  - Id: 19992
+    AegisName: C_Chilly_Breath
+    Name: Costume Chilly Breath
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Low: true
+    EquipLevelMin: 1
+    View: 885
+  - Id: 20030
+    AegisName: C_Choco_Donut_in_Mouth
+    Name: Costume Choco Donut in Mouth
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Low: true
+    EquipLevelMin: 1
+    View: 653

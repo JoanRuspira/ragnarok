@@ -15,78 +15,100 @@
 //= 1.2 Navigation system update. [Euphy]
 //============================================================ 
 
-dicastes01,189,191,5	script	Traveler Ichack#info	481,2,2,{
-	mes "[Traveler Ichack]";
-	mes "Oh!! You are a stranger!";
-	mes "I'm Ichack, the first adventurer that arrived here in El Dicastes!";
+
+dicastes01,189,191,4	script	Guide#01dicastes::GuideDicastes	459,{
+	mes "[Dicastes Guide]";
+	mes "Welcome to Dicastes!";
+	mes "Where do you want me to point you to?";
 	next;
-	mes "[Traveler Ichack]";
-	mes "There was someone in the expedition team claiming that he was the first, but it WAS me. That's right.";
-	next;
-	mes "[Traveler Ichack]";
-	mes "That's why I will provide a service to guide adventurers from Midgard.";
-	mes "What would you like to know?";
-	F_Navi("[Traveler Ichack]");
-	next;
-	switch(select("Dicastes Diel:Residential Area:Training Room:Factory:Pub:Cat Paw Caravan")) {
-	case 1:
-		mes "[Traveler Ichack]";
-		mes "Ah~ That's a beautiful building.";
-		mes "It's said they discuss important things...";
-		next;
-		mes "[Traveler Ichack]";
-		mes "Please make sure you signed in at the "+F_Navi("Diel","dicastes01,198,351")+", otherwise you'll get in trouble.";
-		mes "Go directly north from here and you can't miss it.";
-		viewpoint 1,198,351,0,0x00FF00;
-		close;
-	case 2:
-		mes "[Traveler Ichack]";
-		mes "The Sapha tribe is so weird. How can they sleep in there?";
-		next;
-		mes "[Traveler Ichack]";
-		mes "You don't understand?";
-		mes "You won't believe me until you see it! Go see it for yourself!";
-		next;
-		mes "[Traveler Ichack]";
-		mes "The residential area is divided into 2 areas.";
-		mes "The "+F_Navi("lower residential area","dicastes01,136,106")+" is around 7 o'clock, and the ";
-		mes F_Navi("upper area","dicastes01,280,283")+" is around 1 o'clock.";
-		viewpoint 1,280,283,1,0x01FF01;
-		viewpoint 1,136,106,2,0x0066FF;
-		close;
-	case 3:
-		mes "[Traveler Ichack]";
-		mes "Because of the dangers here, we need better security...";
-		mes "Have you ever been to the ";
-		mes F_Navi("training room","dicastes01,255,172")+"? The training guards seem to never sleep!";
-		viewpoint 1,255,172,3,0xFFCCCC;
-		close;
-	case 4:
-		mes "[Traveler Ichack]";
-		mes "This is one of the most important reasons why they live here.";
-		mes "If you go to the "+F_Navi("factory","dicastes01,97,256")+", you can see the recently refined Bradium.";
-		viewpoint 1,97,256,4,0x0066FF;
-		close;
-	case 5:
-		mes "[Traveler Ichack]";
-		mes "Although I arrived here as the first adventurer, the owner of the pub was the first person here.";
-		mes F_Navi("Bumen Florine's pub","dicastes01,136,106")+" is located underground in the lower residential area.";
-		mes "He might have some valuable information for you.";
-		viewpoint 1,136,106,5,0xFF3300;
-		close;
-	case 6:
-		mes "[Traveler Ichack]";
-		mes "The "+F_Navi("cats","dicastes01,199,39")+" don't seem to have a good relationship with the Sapha like we do.";
-		mes "Perhaps it's because trading is involved.";
-		mes "Poor cats. They must be shivering from the cold out there.";
-		next;
-		mes "[Traveler Ichack]";
-		mes "You can find their caravan just outside the gates.";
-		viewpoint 1,199,39,6,0x9933FF;
-		close;
-	}
+	switch(select("Main Facilities:Remove Marks from Mini-Map:Cancel")) {
+		case 1:
+			set .@loop,1;
+			while (.@loop) {
+				switch(select("Mining District:Shopping District:Residential District:Festival Area:Previous Menu")) {
+					case 1:
+						mes "[Dicastes Guide]";
+						mes "Ah~ Dicaste's industrial zone.";
+						next;
+						mes "[Dicastes Guide]";
+						mes "Let me mark the location of the "+F_Navi("Mining District","dicastes01,127,236")+", on your minimap.";
+						mes "It's on the north west part of town.";
+						viewpoint 1,127,236,0,0x00FF00;
+						close;
+					case 2:
+						mes "[Dicastes Guide]";
+						mes "Ah~ Dicaste's shopping district.";
+						next;
+						mes "[Dicastes Guide]";
+						mes "Let me mark the location of the "+F_Navi("Shopping District","dicastes01,254,262")+", on your minimap.";
+						mes "It's on the north east part of town.";
+						viewpoint 1,254,262,0,0xFF0000;
+						close;
+					case 3:
+						mes "[Dicastes Guide]";
+						mes "Ah~ Dicaste's residential zone.";
+						next;
+						mes "[Dicastes Guide]";
+						mes "Let me mark the location of the "+F_Navi("Residential District","dicastes01,148,154")+", on your minimap.";
+						mes "It's on the north west part of town.";
+						viewpoint 1,148,154,0,0x0000FF;
+						close;
+					case 4:
+						mes "[Dicastes Guide]";
+						mes "Ah~ Dicaste's festival area.";
+						next;
+						mes "[Dicastes Guide]";
+						mes "Let me mark the location of the "+F_Navi("Festval Area","dicastes01,248,140")+", on your minimap.";
+						mes "It's on the south east part of town.";
+						viewpoint 1,248,150,0,0x00FFFF;
+						close;
+					case 5:
+						set .@loop,0;
+						break;
+				}
+			}
+			break;
+		case 2:
+			mes "[Dicastes Guide]";
+			mes "Sure, I'll remove all marks from your mini-map.";
+			mes "Is there anything else I can do for you?";
+			viewpoint 2,1,1,0,0xFFFF00;
+			viewpoint 2,1,1,1,0x000000;
+			viewpoint 2,1,1,2,0xFF0000;
+			viewpoint 2,1,1,3,0xFFFF00;
+			viewpoint 2,1,1,4,0xFFFF00;
+			viewpoint 2,1,1,5,0xFFFF00;
+			viewpoint 2,1,1,6,0xFFFF00;
+			viewpoint 2,1,1,7,0xFFFF00;
+			viewpoint 2,1,1,8,0xFFFF00;
+			viewpoint 2,1,1,9,0xFFFF00;
+			viewpoint 2,1,1,10,0xFFFF00;
+			viewpoint 2,1,1,11,0xFFFF00;
+			viewpoint 2,1,1,12,0xFFFF00;
+			viewpoint 2,1,1,13,0xFFFF00;
+			viewpoint 2,1,1,14,0xFFFF00;
+			next;
+			break;
+		case 3:
+			mes "[Dicastes Guide]";
+			mes "Enjoy your stay.";
+			close2;
+			cutin "gef_soldier",255;
+			end;
+		}
 OnTouch:
 	if (ep13_3_invite == 6) 
 		emotion ET_SURPRISE;
 	end;
 }
+
+
+dicastes01,288,210,3	duplicate(GuideDicastes)	Guide#02dicastes	459
+dicastes01,201,332,2	duplicate(GuideDicastes)	Guide#03dicastes	459
+dicastes01,201,101,2	duplicate(GuideDicastes)	Guide#04dicastes	459
+
+
+
+
+
+

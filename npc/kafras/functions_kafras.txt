@@ -288,6 +288,8 @@ function	script	F_KafTele	{
 	else if (@wrpD$[.@j] == "Comodo") warp "comodo", 197, 319;
 	else if (@wrpD$[.@j] == "Pharos Islet") warp "cmd_fild07", 138, 132;
 	else if (@wrpD$[.@j] == "Hugel") warp "hugel", 98, 127;
+	else if (@wrpD$[.@j] == "Dicastes") warp "dicastes01", 199, 224;
+	else if (@wrpD$[.@j] == "Lighthalzen") warp "lighthalzen", 162, 95;
 	else if (@wrpD$[.@j] == "Einbroch") warp "einbroch", 246, 208;
 	else if (@wrpD$[.@j] == "Geffen") warp "geffen", 124, 64;
 	else if (@wrpD$[.@j] == "Izlude") {
@@ -599,6 +601,12 @@ function	script	F_KafSet	{
 	} else if (.@map$ == "hugel") {
 		setarray @wrpP[0], 1200, 1200, 1800, 1700;
 		setarray @wrpD$[0], "Yuno";
+	} else if (.@map$ == "lighthalzen") {
+		setarray @wrpP[0], 1200, 1500;
+		setarray @wrpD$[0], "Rachel", "Dicastes";
+	} else if (.@map$ == "dicastes01") {
+		setarray @wrpP[0], 1500;
+		setarray @wrpD$[0], "Lighthalzen";
 	} else if (.@map$ == "comodo" ) {
 		setarray @wrpD$[0], "Morocc", "Pharos Islet", "Umbala";
 		setarray @wrpP[0], 1800, 1200, 1800;
