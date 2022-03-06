@@ -531,6 +531,11 @@ morocc_in,63,36,0	script	Material Merchant#matmch6	726,{
 	end;
 }
 
+mid_camp,153,269,7	script	Material Merchant#matmch7	726,{
+	callfunc "phramain","Material Merchant";
+	end;
+}
+
 
 
 
@@ -572,7 +577,10 @@ morocc_in,72,32,3	script	Material Polisher#matpol6	63,{
 	callfunc "orimain","Material Polisher";
 	end;
 }
-
+mid_camp,152,253,0	script	Material Polisher#matpol7	63,{
+	callfunc "orimain","Material Polisher";
+	end;
+}
 
 
 
@@ -646,7 +654,10 @@ cmd_fild07,112,186,3	script	Repairman#rpmn13	10,{
 	end;
 }
 
-
+mid_camp,152,240,3	script	Repairman#rpmn14	10,{
+	callfunc "repairmain","Repairman";
+	end;
+}
 
 
 
@@ -726,6 +737,11 @@ umbala,171,143,7	script	Refiner#rfnr14	826,{
 	callfunc "refinemain","Refiner",0;
 	end;
 }
+mid_camp,163,240,5	script	Refiner#rfnr15	826,{
+	callfunc "refinemain","Refiner",0;
+	end;
+}
+
 
 
 

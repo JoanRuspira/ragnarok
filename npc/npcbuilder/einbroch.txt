@@ -2721,3 +2721,38 @@ ein_fild03,100,166,1	script	Arunafeltz Worker#ein:bf627c56	848,{
 	npctalk "npcdialog";
 	end;
 }
+
+ein_fild08,155,28,5	script	Schwartzvald Worker#ein:asdasd33	848,{
+	npctalk "The path to the rest of the island is closed, sorry.";
+	end;
+}
+
+ein_fild08,159,26,3	script	Schwartzvald Worker#ein:3423sds	848,{
+	npctalk "Einbroch gets most of it's steel from this mining operation.";
+	end;
+}
+
+ein_fild08,152,31,3	script	Schwartzvald Worker#ein:npcfififid	848,{
+	npctalk "The path to the rest of the island is closed, sorry.";
+	end;
+}
+
+ein_fild06,211,139,3	script	Schwartzvald Worker#ein:2dsad	855,{
+	npctalk "This post is a combined effort of Yuno and Einbroch.";
+	end;
+}
+
+ein_fild06,205,133,0	script	Schwartzvald Worker#ein:4tdf	854,{
+	npctalk "This operation runs almost automatically.";
+	end;
+}
+
+ein_fild06,164,173,3	script	Schwartzvald Worker#ein:kkdi	855,{
+	npctalk "This operation runs almost automatically.";
+	end;
+}
+
+ein_fild06,160,183,2	script	Schwartzvald Worker#ein:vnvnd	854,{
+	npctalk "This post is a combined effort of Yuno and Einbroch.";
+	end;
+}

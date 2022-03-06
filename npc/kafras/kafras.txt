@@ -509,38 +509,54 @@ gonryun,159,122,4	script	Kafra Employee::kaf_gonryun	116,{
 //============================================================
 lighthalzen,164,100,4	script	Kafra Employee::kaf_lighthalzen	860,{
 	cutin "kafra_08",2;
+	callfunc "F_KafSet";
 	mes "[Kafra Employee]";
-	mes "Welcome to the";
-	mes "Kafra Corporation.";
-	mes "The Kafra services";
+	mes "Welcome~!";
+	mes "The Kafra Services";
 	mes "are always on your side.";
-	mes "How may I assist you?";
-	callfunc "F_Kafra",5,4,1,40,800;
+	mes "So how can I help you?";
+	callfunc "F_Kafra",5,0,1,20,600;
 	callfunc "F_KafEnd",0,1,"in the city of Lighthalzen";
 }
 
 lighthalzen,191,320,4	script	Kafra Employee::kaf_lighthalzen2	861,{
 	cutin "kafra_09",2;
+	callfunc "F_KafSet";
 	mes "[Kafra Employee]";
 	mes "Welcome~!";
 	mes "The Kafra Services";
 	mes "are always on your side.";
 	mes "So how can I help you?";
-	callfunc "F_Kafra",5,4,1,40,800;
+	callfunc "F_Kafra",5,0,1,20,600;
 	callfunc "F_KafEnd",0,1,"in the city of Lighthalzen";
 }
 
 lhz_in02,237,284,4	script	Kafra Employee::kaf_lhz_in02	861,{
 	cutin "kafra_09",2;
+	callfunc "F_KafSet";
 	mes "[Kafra Employee]";
 	mes "Welcome~!";
 	mes "The Kafra Services";
 	mes "are always on your side.";
 	mes "So how can I help you?";
-	callfunc "F_Kafra",5,4,1,40,800;
+	callfunc "F_Kafra",5,0,1,20,600;
 	callfunc "F_KafEnd",0,1,"in the city of Lighthalzen";
 }
 
+
+// Hel Camp
+//============================================================
+mid_camp,138,280,5	script	Kafra Employee::kaf_mid_camp	4_F_KAFRA2,{
+	cutin "kafra_01",2;
+	callfunc "F_KafSet";
+	mes "[Kafra Employee]";
+	mes "Welcome~!";
+	mes "The Kafra Services";
+	mes "are always on your side.";
+	mes "So how can I help you?";
+	callfunc "F_Kafra",5,0,1,20,600;
+	callfunc "F_KafEnd",0,1,"in Hel's Camp";
+}
 // Luoyang
 //============================================================
 louyang,210,104,5	script	Kafra Employee::kaf_louyang	4_F_KAFRA2,{

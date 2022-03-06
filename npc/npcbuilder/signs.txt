@@ -950,3 +950,386 @@ dicastes01,211,208,5	script	Bulletin Board#sgn::156	837,{
 	mes "Dicastes, the city hidden in Arunafeltz's Mountain State.";
 	close;
 }
+
+
+ra_fild04,314,372,4	script	Board#sgn::157	835,{
+	mes "South to Rachel.";
+	mes "North to Hel's Camp.";
+	close;
+}
+
+ra_fild04,267,62,2	script	Board#sgn::158	835,{
+	mes "South to Rachel.";
+	mes "North to Hel's Camp.";
+	close;
+}
+
+ra_fild01,63,244,4	script	Board#sgn::159	858,{
+	mes "Mountain path to Hel's Pass ahead.";
+	close;
+}
+
+ra_fild01,237,328,4	script	Board#sgn::160	858,{
+	mes "Ice Cave entrance.";
+	close;
+}
+
+
+
+
+
+
+lhz_fild01,360,227,4	script	Bulletin Board#sgn::161	837,{
+	mes "You are now in Fortu Luna.";
+	close;
+}
+
+
+lhz_fild02,39,233,3	script	Bulletin Board#sgn::162	837,{
+	mes "Grim Reaper's Chasm ahead.";
+	close;
+}
+
+
+lhz_fild03,357,290,4	script	Bulletin Board#sgn::163	837,{
+	mes "Grim Reaper's Chasm ahead.";
+	close;
+}
+
+
+ein_fild03,73,183,3	script	Bulletin Board#sgn::164	837,{
+	mes "Grim Reaper's Chasm ahead.";
+	close;
+}
+
+ein_fild03,260,166,7	script	Bulletin Board#sgn::165	837,{
+	mes "Grim Reaper's Chasm ahead.";
+	close;
+}
+
+ein_fild03,157,267,6	script	Bulletin Board#sgn::166	837,{
+	mes "Grim Reaper's Chasm ahead.";
+	close;
+}
+
+ra_fild06,364,218,7	script	Bulletin Board#sgn::167	837,{
+	mes "You are now in Fortu Luna.";
+	close;
+}
+
+ra_fild06,24,285,3	script	Bulletin Board#sgn::168	837,{
+	mes "You are now in Fortu Luna.";
+	close;
+}
+
+ra_fild05,342,265,7	script	Bulletin Board#sgn::169	837,{
+	mes "Audumura Grasslands ahead.";
+	close;
+}
+
+ra_fild04,30,183,3	script	Bulletin Board#sgn::170	837,{
+	mes "Audumura Grasslands ahead.";
+	close;
+}
+
+
+ra_fild03,364,168,6	script	Bulletin Board#sgn::171	837,{
+	mes "Entering the Ida Plane.";
+	close;
+}
+
+ra_fild04,259,67,5	script	Bulletin Board#sgn::172	837,{
+	mes "Audumura Grasslands ahead.";
+	close;
+}
+
+ra_fild08,291,360,0	script	Bulletin Board#sgn::173	837,{
+	mes "Entering the Ida Plane.";
+	close;
+}
+
+ra_fild06,241,373,7	script	Bulletin Board#sgn::174	837,{
+	mes "You are now in Fortu Luna.";
+	close;
+}
+
+dic_fild01,74,43,4	script	Bulletin Board#sgn::175	837,{
+	mes "Entering the Kamidal Mountains.";
+	close;
+}
+
+ein_fild07,242,102,0	script	Bulletin Board#sgn::176	837,{
+	mes "Meridel River Bridge.";
+	close;
+}
+
+ein_fild07,195,71,3	script	Bulletin Board#sgn::177	837,{
+	mes "Meridel River Bridge.";
+	close;
+}
+
+ein_fild10,200,255,0	script	Bulletin Board#sgn::177a	837,{
+	mes "Steel Islands Bridge.";
+	close;
+}
+
+ein_fild10,193,136,5	script	Bulletin Board#sgn::177b	837,{
+	mes "Steel Islands Bridge.";
+	close;
+}
+
+ein_fild09,187,72,5	script	Bulletin Board#sgn::178	837,{
+	mes "Steel Islands Bridge.";
+	close;
+}
+
+ein_fild09,136,116,1	script	Bulletin Board#sgn::179	837,{
+	mes "Steel Islands Bridge.";
+	close;
+}
+
+ein_fild08,176,66,5	script	Bulletin Board#sgn::180	837,{
+	mes "Steel Islands Bridge.";
+	close;
+}
+
+ein_fild08,153,97,1	script	Bulletin Board#sgn::181	837,{
+	mes "Steel Islands Bridge.";
+	close;
+}
+
+ein_fild08,161,37,7	script	Board#sgn::182	858,{
+	mes "Attention: Path closed. Mining Operation in Progress.";
+	close;
+}
+
+
+ein_fild06,153,97,1	script	Bulletin Board#sgn::183	837,{
+	mes "El Mes Plateau ahead.";
+	close;
+}
+
+
+ein_fild06,52,169,3	script	Bulletin Board#sgn::184	837,{
+	mes "You are now on El Mes Plateau.";
+	close;
+}
+
+
+ein_fild06,335,176,5	script	Bulletin Board#sgn::185	837,{
+	mes "You are now on El Mes Plateau.";
+	close;
+}
+
+yuno_fild07,85,220,2	script	Bulletin Board#sgn::186	837,{
+	mes "You are now on El Mes Gorge.";
+	close;
+}
+
+yuno_fild07,90,105,3	script	Bulletin Board#sgn::187	837,{
+	mes "El Mes Gorge ahead.";
+	close;
+}
+
+yuno_fild07,334,280,7	script	Bulletin Board#sgn::188	837,{
+	mes "El Mes Gorge ahead.";
+	close;
+}
+
+yuno_fild08,37,284,4	script	Bulletin Board#sgn::189	837,{
+	mes "The Barren Lands.";
+	close;
+}
+
+yuno_fild07,184,343,1	script	Bulletin Board#sgn::190	837,{
+	mes "El Mes Gorge ahead.";
+	close;
+}
+
+yuno_fild03,180,31,4	script	Bulletin Board#sgn::191	837,{
+	mes "El Mes Plateau ahead.";
+	close;
+}
+
+yuno_fild07,356,81,4	script	Bulletin Board#sgn::192	837,{
+	mes "El Mes Gorge ahead.";
+	close;
+}
+
+yuno_fild08,51,82,4	script	Bulletin Board#sgn::193	837,{
+	mes "The Barren Lands.";
+	close;
+}
+
+yuno_fild09,290,50,3	script	Bulletin Board#sgn::194	837,{
+	mes "The Barren Lands.";
+	close;
+}
+
+yuno_fild09,77,28,3	script	Bulletin Board#sgn::195	837,{
+	mes "The Barren Lands.";
+	close;
+}
+
+yuno_fild09,47,364,0	script	Bulletin Board#sgn::196	837,{
+	mes "The Barren Lands.";
+	close;
+}
+
+
+yuno_fild09,54,367,2	script	Board#sgn::197	835,{
+	mes "South to Aldebaran.";
+	mes "North to Hugel.";
+	close;
+}
+
+hu_fild07,81,60,3	script	Bulletin Board#sgn::198	837,{
+	mes "Dragonira ahead.";
+	close;
+}
+
+
+hu_fild07,237,133,4	script	Bulletin Board#sgn::199	837,{
+	mes "Dragonira ahead.";
+	close;
+}
+
+hu_fild07,224,141,5	script	Board#sgn::200	835,{
+	mes "South to Aldebaran.";
+	mes "North to Hugel.";
+	close;
+}
+
+
+yuno_fild02,117,366,0	script	Bulletin Board#sgn::201	837,{
+	mes "The Barren Lands.";
+	close;
+}
+
+hu_fild04,121,141,4	script	Bulletin Board#sgn::202	837,{
+	mes "Dragonira ahead.";
+	close;
+}
+
+yuno_fild02,23,345,4	script	Bulletin Board#sgn::6aaa	837,{
+	mes "The Barren Lands.";
+	close;
+}
+
+yuno_fild03,372,331,6	script	Bulletin Board#sgn::203	837,{
+	mes "You are now in El Mes Plateau.";
+	close;
+}
+
+yuno_fild03,379,333,4	script	Board#sgn::204	835,{
+	mes "West to Yuno.";
+	mes "North East to Hugel.";
+	mes "South East to Aldebaran.";
+	close;
+}
+
+yuno_fild06,160,363,1	script	Bulletin Board#sgn::205	837,{
+	mes "You are now in El Mes Plateau.";
+	close;
+}
+
+yuno_fild06,166,369,4	script	Board#sgn::206	835,{
+	mes "South to Yuno.";
+	close;
+}
+
+hu_fild01,129,41,5	script	Bulletin Board#sgn::207	837,{
+	mes "Thanatos Scar ahead.";
+	close;
+}
+
+hu_fild01,362,195,4	script	Bulletin Board#sgn::208	837,{
+	mes "Thanatos Scar ahead.";
+	close;
+}
+
+hu_fild02,32,163,1	script	Bulletin Board#sgn::209	837,{
+	mes "You are now in Dragonira.";
+	close;
+}
+
+hu_fild02,37,174,4	script	Board#sgn::210	835,{
+	mes "East to Hugel.";
+	close;
+}
+
+hu_fild06,34,122,3	script	Bulletin Board#sgn::211	837,{
+	mes "Odin's Beach ahead.";
+	close;
+}
+
+mjolnir_05,217,376,0	script	Bulletin Board#sgn::212	837,{
+	mes "Prontera Forest ahead.";
+	close;
+}
+
+mjolnir_05,235,56,4	script	Board#sgn::213	835,{
+	mes "South to Prontera.";
+	close;
+}
+
+mjolnir_05,88,173,3	script	Bulletin Board#sgn::214	837,{
+	mes "Prontera Forest.";
+	close;
+}
+
+ein_fild02,346,253,5	script	Bulletin Board#sgn::215	837,{
+	mes "Autum Path.";
+	close;
+}
+
+yuno_fild04,38,287,3	script	Bulletin Board#sgn::216	837,{
+	mes "El Mes Plateau.";
+	close;
+}
+
+ein_fild02,139,57,4	script	Bulletin Board#sgn::217a	837,{
+	mes "Autum Path.";
+	close;
+}
+
+ein_fild01,336,371,5	script	Bulletin Board#sgn::217	837,{
+	mes "Autum Path.";
+	close;
+}
+
+yuno_fild05,53,343,1	script	Bulletin Board#sgn::218	837,{
+	mes "El Mes Plateau ahead.";
+	close;
+}
+
+mid_camp,321,140,1	script	Board#sgn::219	858,{
+	mes "Mountain path Audumura Grasslands ahead.";
+	close;
+}
+
+mid_camp,15,148,5	script	Board#sgn::220	858,{
+	mes "Attention: Path to Nifflheim Forest.";
+	close;
+}
+
+mid_camp,12,211,7	script	Board#sgn::221	858,{
+	mes "Attention: Path to Nifflheim Forest.";
+	close;
+}
+
+niflheim,345,233,5	script	Bulletin Board#sgn::222	837,{
+	mes "Nifflheim ahead.";
+	close;
+}
+
+niflheim,323,179,7	script	Bulletin Board#sgn::223	837,{
+	mes "Nifflheim ahead.";
+	close;
+}
+
+
+mid_camp,211,237,4	script	Bulletin Board#sgn::224	837,{
+	mes "Hel's Camp. Expanding the Arunafeltz civilization. Join our settlers to build the next big State!";
+	close;
+}
