@@ -1263,6 +1263,11 @@ gef_fild05,133,158,0	script	Ifir Camper#geff:npcid	706,{
 	end;
 }
 
+gef_fild05,101,310,5	script	Ifir Gipsy#geff:npcid	678,{
+	npctalk "I will make you a Gipsy.";
+	end;
+}
+
 gef_fild05,140,185,4	script	Ifir Camper#geff:npcid	847,{
 	npctalk "npcdialoggypsy";
 	end;

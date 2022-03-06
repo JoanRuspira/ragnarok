@@ -479,3 +479,8 @@ lighthalzen,106,176,3	script	Rekenber Employee#lght:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
+
+lhz_in01,134,260,5	script	Lead Biochemist#lght:asddd288o	665,{
+	npctalk "I will make you a biochemist.";
+	end;
+}

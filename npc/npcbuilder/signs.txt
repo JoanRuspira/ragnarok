@@ -1333,3 +1333,29 @@ mid_camp,211,237,4	script	Bulletin Board#sgn::224	837,{
 	mes "Hel's Camp. Expanding the Arunafeltz civilization. Join our settlers to build the next big State!";
 	close;
 }
+
+
+niflheim,201,188,3	script	Bulletin Board#sgn::224a	837,{
+	mes "Nifflheim, the Death State. The land where all the souls of Midgard go to rest.";
+	close;
+}
+
+niflheim,21,156,5	script	Board#sgn::225	858,{
+	mes "Attention: Valley of Gyoll path to the West. It has been abandoned and taken by monsters.";
+	close;
+}
+nif_fild01,339,327,3	script	Board#sgn::226	858,{
+	mes "Attention: Valley of Gyoll path to the East. It has been abandoned and taken by monsters.";
+	close;
+}
+
+nif_fild01,338,315,7	script	Board#sgn::227	858,{
+	mes "Skellington ruins ahead.";
+	close;
+}
+
+nif_fild02,32,315,4	script	Board#sgn::228	835,{
+	mes "East to Nifflheim.";
+	mes "West to Skellington ruins.";
+	close;
+}

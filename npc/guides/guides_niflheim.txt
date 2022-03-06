@@ -14,8 +14,7 @@
 //= 1.1 Optimized. [Euphy]
 //= 1.2 Navigation system update. [Euphy]
 //============================================================ 
-
-niflheim,201,187,3	script	Niflheim Guide#01nif	705,{
+niflheim,226,268,5	script	Guide#01niflheim::GuideNiflheim	705,{
 	mes "[Niflheim Guide]";
 	mes "Welcome to.. ^8B4513Niflheim^000000...";
 	mes "the Realm of the Dead...";
@@ -27,24 +26,16 @@ niflheim,201,187,3	script	Niflheim Guide#01nif	705,{
 	}
 	while (1) {
 		next;
-		switch(select("[ Tool Shop ]:[ Pub ]:[ Weapon Shop ]:[ Witch's Castle ]:Remove Marks from Mini-Map:Cancel")) {
+		switch(select("Market:Master Witch's Mansion:Remove Marks from Mini-Map:Cancel")) {
 		case 1:
-			callsub L_Mark, F_Navi("Tool Shop","niflheim,218,196","^0000FF");
-			viewpoint 1,218,196,0,0x0A82FF;
+			callsub L_Mark, F_Navi("Market","niflheim,221,149","^0000FF");
+			viewpoint 1,221,149,0,0x0A82FF;
 			break;
 		case 2:
-			callsub L_Mark, F_Navi("Pub","niflheim,189,208","^006400");
-			viewpoint 1,189,208,1,0xAAFF00;
-			break;
-		case 3:
-			callsub L_Mark, F_Navi("Weapon Shop","niflheim,218,170","^800080");
-			viewpoint 1,218,170,2,0xDA70D6;
-			break;
-		case 4:
-			callsub L_Mark, F_Navi("Witch's Castle","niflheim,255,195","^FF1493");
+			callsub L_Mark, F_Navi("Master Witch's Mansion","niflheim,255,195","^FF1493");
 			viewpoint 1,255,195,3,0xFF1493;
 			break;
-		case 5:
+		case 3:
 			mes "[Niflheim Guide]";
 			mes "Sure, I'll remove all marks from your mini-map...";
 			mes "Is there anything else I can do for you...?";
@@ -53,7 +44,7 @@ niflheim,201,187,3	script	Niflheim Guide#01nif	705,{
 			viewpoint 2,1,1,2,0xFFFFFF;
 			viewpoint 2,1,1,3,0xFFFFFF;
 			break;
-		case 6:
+		case 4:
 			mes "[Niflheim Guide]";
 			mes "......Bye~!..";
 			close;
@@ -68,3 +59,7 @@ L_Mark:
 	mes "Would you like to check any other locations?";
 	return;
 }
+
+
+niflheim,172,68,7	duplicate(GuideNiflheim)	Guide#02niflheim	705
+niflheim,125,149,7	duplicate(GuideNiflheim)	Guide#03niflheim	705

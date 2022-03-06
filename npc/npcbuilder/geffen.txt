@@ -19,6 +19,10 @@ geffen,200,123,4	script	Geffen Guard#geff:65f0b91f	420,{
 }
 
 
+gef_fild05,101,310,5	script	Ifir Gipsy#geff:asdsfd222	678,{
+	npctalk "I will make you a Gipsy.";
+	end;
+}
 
 geffen,128,49,6	script	Geffen Villager#geff:46076a60	833,{
 	npctalk "npcdialog";

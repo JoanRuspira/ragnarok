@@ -1379,11 +1379,6 @@ ra_fild06,283,65,4	script	Fort Luna Believer#lght:d98d66e3	8,{
 	end;
 }
 
-ra_fild06,274,86,7	script	Fort Luna Believer#lght:b1dd30b9	483,{
-	npctalk "npcdialog";
-	end;
-}
-
 ra_fild06,275,76,4	script	Fort Luna Believer#lght:05d97c0e	110,{
 	npctalk "npcdialog";
 	end;
@@ -1392,5 +1387,10 @@ ra_fild06,275,76,4	script	Fort Luna Believer#lght:05d97c0e	110,{
 
 lhz_in02,278,17,3	script	Lighthalzen Villager#lght:npcidsadasd	634,{
 	npctalk "npcdialog";
+	end;
+}
+
+ra_fild06,290,75,3	script	Fort Luna Champion#lght:sad8ool	483,{
+	npctalk "I will make you a champion.";
 	end;
 }

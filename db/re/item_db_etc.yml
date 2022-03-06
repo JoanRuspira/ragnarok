@@ -10888,24 +10888,28 @@ Body:
   - Id: 6202
     AegisName: Magic_Book_ES_
     Name: Spell Book (Earth Strain)
+    Buy: 200000
     Type: Etc
     Flags:
       BuyingStore: true
   - Id: 6203
     AegisName: Magic_Book_CL
     Name: Spell Book (Chain Lightning)
+    Buy: 200000
     Type: Etc
     Flags:
       BuyingStore: true
   - Id: 6204
     AegisName: Magic_Book_CR
     Name: Spell Book (Crimson Rock)
+    Buy: 200000
     Type: Etc
     Flags:
       BuyingStore: true
   - Id: 6205
     AegisName: Magic_Book_DL
     Name: Spell Book (Drain Life)
+    Buy: 200000
     Type: Etc
     Flags:
       BuyingStore: true

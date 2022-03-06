@@ -588,9 +588,16 @@ umbala,87,160,4	script	Kafra Employee::kaf_umbala	721,{
 
 // Niflheim
 //============================================================
-niflheim,202,180,3	script	Kafra Employee::kaf_niflheim	791,{
-	callfunc "F_Kafra",1,2,1,150,0;
-	callfunc "F_KafEnd",1,1,"in the city of Niflheim";
+niflheim,180,179,6	script	Kafra Employee::kaf_nif	113,{
+	cutin "kafra_05",2;
+	callfunc "F_KafSet";
+	mes "[Kafra Employee]";
+	mes "The Kafra Corporation";
+	mes "is always working to provide";
+	mes "you with convenient services.";
+	mes "How may I be of assistance?";
+	callfunc "F_Kafra",5,0,1,20,600;
+	callfunc "F_KafEnd",0,1,"in the city of Nifflheim";
 }
 
 // Dungeons and Fields

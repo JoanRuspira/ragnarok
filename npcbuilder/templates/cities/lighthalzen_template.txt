@@ -1379,11 +1379,6 @@ ra_fild06,283,65,4	script	Fort Luna Believer#lght:npcid	8,{
 	end;
 }
 
-ra_fild06,274,86,7	script	Fort Luna Believer#lght:npcid	483,{
-	npctalk "npcdialog";
-	end;
-}
-
 ra_fild06,275,76,4	script	Fort Luna Believer#lght:npcid	110,{
 	npctalk "npcdialog";
 	end;
@@ -1391,6 +1386,11 @@ ra_fild06,275,76,4	script	Fort Luna Believer#lght:npcid	110,{
 
 
 lhz_in02,278,17,3	script	Lighthalzen Villager#lght:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ra_fild06,290,75,3	script	Fort Luna Champion#lght:npcid	483,{
 	npctalk "npcdialog";
 	end;
 }
