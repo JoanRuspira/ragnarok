@@ -34011,7 +34011,7 @@ Body:
     AegisName: Loli_Ruri_Egg
     Name: Loli Ruri Egg
     Type: Petegg
-    Buy: 20
+    Buy: 200000
   - Id: 9043
     AegisName: Marionette_Egg
     Name: Marionette Egg
@@ -34046,7 +34046,7 @@ Body:
     AegisName: Dullahan_Egg
     Name: Dullahan Egg
     Type: Petegg
-    Buy: 20
+    Buy: 200000
   - Id: 9050
     AegisName: Medusa_Egg
     Name: Medusa Egg
@@ -37838,3 +37838,104 @@ Body:
       Costume_Head_Low: true
     EquipLevelMin: 1
     View: 653
+  - Id: 20034
+    AegisName: C_Jack_Castle_Bat
+    Name: Costume Jack Castle Bat
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Low: true
+    EquipLevelMin: 1
+    View: 1041
+  - Id: 19574
+    AegisName: C_Lord_of_Death
+    Name: Costume Lord of Death
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+      Costume_Head_Mid: true
+    View: 742
+    Trade:
+      Override: 100
+      NoDrop: true
+    Script: |
+      bonus bUnbreakableHelm;
+  - Id: 20586
+    AegisName: C_Loli_Ruri_Moon
+    Name: "Costume: Loli Ruri's Crescent"
+    Type: Armor
+    Buy: 500000
+    View: 64
+    Locations:
+      Costume_Garment: true
+  - Id: 20588
+    AegisName: C_Nifl_Bloom
+    Name: Costume Broom of Witch
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Garment: true
+    EquipLevelMin: 1
+    View: 65
+  - Id: 20594
+    AegisName: C_Big_Ribbon_Cloak
+    Name: Costume Big Ribbon Manteau
+    Type: Armor
+    Buy: 500000
+    View: 76
+    Locations:
+      Costume_Garment: true
+  - Id: 20036
+    AegisName: C_Sword_Master_Crown
+    Name: Costume Sword Master Crown
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 981
+  - Id: 20037
+    AegisName: C_Owlduke_Silk_Hat
+    Name: Costume Owlduke Silk Hat
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 982
+  - Id: 20038
+    AegisName: C_Alphonse_Helmet
+    Name: Costume Alphonse Helmet
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    View: 1214
+  - Id: 20042
+    AegisName: C_Hermose_Cap
+    Name: Costume Hermos Cap
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 478
+  - Id: 20043
+    AegisName: C_Red_Cherry_Blossom
+    Name: Costume Cherryblossom in Mouth
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Low: true
+    EquipLevelMin: 1
+    View: 823
+  - Id: 20048
+    AegisName: C_Wind_Of_The_Prairie
+    Name: Costume Wind Prairie
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 1224

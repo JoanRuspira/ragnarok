@@ -218,6 +218,7 @@ payon,181,104,4	script	Kafra Employee::kaf_payon	113,{
 	callfunc "F_KafEnd",0,1,"in the city of Payon";
 }
 
+
 payon,175,226,4	script	Kafra Employee::kaf_payon2	116,{
 	cutin "kafra_02",2;
 	callfunc "F_KafSet";
@@ -229,6 +230,20 @@ payon,175,226,4	script	Kafra Employee::kaf_payon2	116,{
 	mes "How may I assist you?";
 	callfunc "F_Kafra",5,0,1,60,930;
 	callfunc "F_KafEnd",0,1,"in the city of Payon";
+}
+
+// Veins
+//============================================================
+veins,208,128,5	script	Kafra Employee::kaf_veins	116,{
+	cutin "kafra_02",2;
+	callfunc "F_KafSet";
+	mes "[Kafra Employee]";
+	mes "The Kafra Corporation";
+	mes "is always working to provide";
+	mes "you with convenient services.";
+	mes "How may I be of assistance?";
+	callfunc "F_Kafra",5,0,1,20,600;
+	callfunc "F_KafEnd",0,1,"in the city of Veins";
 }
 
 pay_arche,55,123,3	script	Kafra Employee::kaf_payon3	4_F_KAFRA1,{

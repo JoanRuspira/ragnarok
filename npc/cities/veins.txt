@@ -602,41 +602,6 @@ ve_in,90,298,3	script	Towner#ve17	849,{
 	close;
 }
 
-ve_in,361,243,5	script	Towner#ve18	849,{
-	mes "[Towner]";
-	mes "...............";
-	mes "...............";
-	mes "...............";
-	next;
-	mes "[Towner]";
-	mes "...............";
-	mes "...............";
-	mes "...............";
-	next;
-	mes "[Towner]";
-	mes "Tricked you!";
-	mes "Thought I was dead,";
-	mes "didn't you? Hahaha~";
-	close;
-}
-
-ve_in,242,124,3	script	Towner#ve19	849,{
-	mes "[Towner]";
-	mes "The drinks in this";
-	mes "town are so... They're...";
-	mes "They're so damn strong!";
-	next;
-	mes "[Towner]";
-	mes "Why...";
-	mes "Why does the ground";
-	mes "keep wobbling?! It's...";
-	mes "It's like it's trying to";
-	mes "betray me! Every time!";
-	next;
-	mes "[Towner]";
-	mes "^333333*Hiccup*^000000";
-	close;
-}
 
 ve_in,180,232,5	script	Towner#ve20	946,{
 	mes "[Towner]";
@@ -745,65 +710,4 @@ ve_in,222,122,1	script	Towner#ve25	940,{
 	close;
 }
 
-ve_in,232,135,5	script	Towner#ve26	946,{
-	mes "[Towner]";
-	mes "If you enjoy a good,";
-	mes "stiff drink, then you have";
-	mes "to stop by Veins Tavern~";
-	next;
-	mes "[Towner]";
-	mes "If you don't love";
-	mes "drinking, then Veins";
-	mes "Tavern is the perfect";
-	mes "place to learn! ...To";
-	mes "love... drinking...";
-	close;
-}
 
-ve_in,239,135,5	script	Towner#ve27	946,{
-	mes "[Towner]";
-	mes "Isn't the sun so hot?";
-	mes "Doesn't it make you feel";
-	mes "so thirsty? Well, you may";
-	mes "want to consider quenching";
-	mes "that nasty thirst with liquor!";
-	next;
-	mes "[Towner]";
-	mes "My job is to serve";
-	mes "delicious, life giving";
-	mes "liquor to my customers to";
-	mes "relieve their parched throats.";
-	mes "Seeing their drunken smiles";
-	mes "really makes my day~";
-	close;
-}
-
-ve_in,232,124,5	script	Towner#ve28	943,{
-	mes "[Towner]";
-	mes "A lone wolf of the desert.";
-	mes "That's me. Well, that's why";
-	mes "I'm drinking here alone.";
-	next;
-	mes "[Towner]";
-	mes "Sweet Freya, these";
-	mes "drinks are so good.";
-	mes "I could drink all day.";
-	close;
-}
-
-ve_in,234,105,3	script	Towner#ve29	946,{
-	mes "[Towner]";
-	mes "Man, the world is just...";
-	mes "It's just desires...!";
-	mes "Faith? It helps, you";
-	mes "know? Cuz-cuz desires";
-	mes "are all just nothing!";
-	mes "They're nooooooothing!";
-	next;
-	mes "[Towner]";
-	mes "Argh! What is life?!";
-	mes "I don't know what to";
-	mes "believe anymore! Freya!";
-	mes "Freya looooves you!";
-	close;
-}

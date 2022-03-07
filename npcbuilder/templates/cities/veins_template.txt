@@ -1132,3 +1132,297 @@ veins,136,166,0	script	Veins Villager#vns:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
+
+veins,343,287,3	script	Suspicious Man#vns:npcid	481,{
+	npctalk "I will make you a Stalker.";
+	end;
+}
+
+veins,341,282,7	script	Suspicious Woman#vns:npcid	482,{
+	npctalk "What!";
+	end;
+}
+
+veins,345,282,2	script	Suspicious Man#vns:npcid	494,{
+	npctalk "Leave.";
+	end;
+}
+
+
+
+
+
+
+ve_in,246,292,5	script	Veins Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,258,293,1	script	Veins Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,260,304,4	script	Veins Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,177,302,1	script	Veins Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,176,309,6	script	Veins Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+ve_in,344,228,7	script	Veins Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,253,236,2	script	Veins Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,364,239,7	script	Veins Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,374,241,1	script	Veins Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,377,252,6	script	Veins Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,356,253,2	script	Veins Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,338,243,1	script	Veins Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,82,261,5	script	Veins Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,78,147,0	script	Veins Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,87,145,7	script	Veins Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,99,155,1	script	Veins Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,118,146,3	script	Veins Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,121,159,5	script	Veins Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,74,220,7	script	Veins Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,100,226,3	script	Veins Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in02,28,21,7	script	Veins Villager#vns:npcid	851,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in02,45,26,3	script	Veins Villager#vns:npcid	854,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in02,31,42,6	script	Veins Villager#vns:npcid	850,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in02,36,58,7	script	Veins Villager#vns:npcid	853,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in02,68,60,3	script	Veins Villager#vns:npcid	855,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in02,82,42,1	script	Veins Villager#vns:npcid	851,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in02,52,47,3	script	Veins Villager#vns:npcid	854,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in02,64,38,5	script	Veins Villager#vns:npcid	850,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,363,329,1	script	Veins Priest#hugel:npcid	110,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,362,345,3	script	Veins Priest#hugel:npcid	8,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,352,337,5	script	Veins Priest#hugel:npcid	110,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,340,329,7	script	Veins Acolyte#hugel:npcid	4,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,351,353,4	script	Veins Priest#hugel:npcid	616,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,354,326,1	script	Veins Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,357,338,2	script	Veins Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,337,338,0	script	Veins Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,365,355,4	script	Veins Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+ve_in,336,353,1	script	Golden Mace Recruit#vns:npcid	8,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,342,251,1	script	Golden Mace Recruit#vns:npcid	993,{
+	npctalk "npcdialog";
+	end;
+}
+ve_in,338,349,0	script	Golden Mace Recruit#vns:npcid	602,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+ve_fild04,112,57,7	script	Veins Adventurer#vns:npcid	693,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_fild04,119,61,4	script	Veins Adventurer#vns:npcid	628,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_fild04,125,56,3	script	Veins Adventurer#vns:npcid	688,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_fild07,154,370,2	script	Veins Adventurer#vns:npcid	690,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_fild07,149,360,0	script	Veins Adventurer#vns:npcid	5,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_fild07,155,362,1	script	Veins Adventurer#vns:npcid	747,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_fild07,158,367,5	script	Veins Adventurer#vns:npcid	875,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+
+ve_in,223,109,7	script	Veins Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,230,116,6	script	Veins Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,238,115,0	script	Veins Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,242,120,4	script	Veins Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,247,111,1	script	Veins Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,233,126,5	script	Veins Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,234,104,3	script	Veins Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}

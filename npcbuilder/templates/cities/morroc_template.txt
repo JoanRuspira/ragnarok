@@ -1189,13 +1189,13 @@ morocc,146,187,1	script	Morroc Villager#moc::npcid	spriteid,{
 	end;
 }
 
-morocc,163,184,0	script	Morroc Villager#moc::npcid	spriteid,{
-	npctalk "npcdialog";
+morocc,163,184,0	script	Palace Guard#moc::npcid	946,{
+	npctalk "Welcome to the Morroc Palace.";
 	end;
 }
 
-morocc,156,184,0	script	Morroc Villager#moc::npcid	spriteid,{
-	npctalk "npcdialog";
+morocc,156,184,0	script	Palace Guard#moc::npcid	946,{
+	npctalk "Welcome to the Morroc Palace.";
 	end;
 }
 
@@ -2015,5 +2015,35 @@ moc_fild12,156,374,7	script	Morroc Adventurer#moc::npcid	3,{
 
 moc_fild12,150,367,3	script	Morroc Adventurer#moc::npcid	882,{
 	npctalk "npcdialog";
+	end;
+}
+
+moc_castle,84,164,7	script	Palace Guard#moc::npcid	946,{
+	npctalk "The acess is restricted.";
+	end;
+}
+
+moc_castle,104,164,3	script	Palace Guard#moc::npcid	946,{
+	npctalk "The acess is restricted.";
+	end;
+}
+
+moc_castle,93,157,1	script	Palace Guard#moc::npcid	946,{
+	npctalk "The acess is restricted.";
+	end;
+}
+
+moc_castle,90,168,7	script	Elite Palace Guard#moc::npcid	512,{
+	npctalk "...";
+	end;
+}
+
+moc_castle,98,168,3	script	Elite Palace Guard#moc::npcid	667,{
+	npctalk "...";
+	end;
+}
+
+moc_castle,94,164,1	script	Morroc Lord#moc::npcid	106,{
+	npctalk "I will make you an Assassin Cross.";
 	end;
 }

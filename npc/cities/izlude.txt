@@ -110,6 +110,37 @@
 }
 
 
+-	script	::Sailor_Nameless	-1,{
+	mes "[Sailor]";
+	mes "Hello! I know of an island south from here with an old abbey on it. I can get you there if you want?";
+	next;
+	mes "I'm thinking a 10000 Zeny fee. I think it's a dangerous place, so be careful once we get there ok?"; 
+	next;
+	switch(select("Sure!:No, sorry.")) {
+	case 1:
+		if (Zeny < 10000) {
+			mes "[Sailor]";
+			mes "You don't have enough money...";
+			close;
+		}
+		set Zeny, Zeny - 10000;
+		warp "nameless_n",248,234;
+		end;
+	case 2:
+		close;
+	}
+}
+
+-	script	::Sailor_Nameless_Return	-1,{
+	mes "[Salior]";
+	mes "Hello! Do you want to go back to Veins shore?";
+	next;
+	if (select("Yes please.","Not yet.") == 1)
+		warp "ve_fild07",125,137;
+	close;
+}
+
+
 -	script	::Sailor_Odin	-1,{
 	mes "[Explorer]";
 	mes "I organize adventurer trips to the ancient realm of Odin.";
@@ -869,4 +900,6 @@ prt_fild08d,338,217,7	duplicate(Resting Adventurer#iz)	Resting Adventurer#izd	4_
 comodo,233,86,0	duplicate(Sailor_Turtle)	Explorer#turtle	832
 hugel,208,109,2	duplicate(Sailor_Odin)	Odin Expeditioner#odintrip	702
 odin_tem01,93,145,6	duplicate(Sailor_Odin_Return)	Odin Expeditioner#odinreturn	702
+ve_fild07,128,132,3	duplicate(Sailor_Nameless)	Odin Expeditioner#namtrip	709
+nameless_n,250,233,3	duplicate(Sailor_Nameless_Return)	Odin Expeditioner#namtripreturn	709
 hu_fild01,140,162,4	duplicate(Thanatos_guide)	Thanatos Tower Guide#thantosguide	418

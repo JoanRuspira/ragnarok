@@ -1041,3 +1041,8 @@ pay_fild01,341,348,0	script	Payon Adventurer#payn::npcid	567,{
 	npctalk "npcdialog";
 	end;
 }
+
+payon_in03,99,190,4	script	Payon Elder#payn::npcid	107,{ 
+	npctalk "I will make you a Ranger.";
+	end;
+}
