@@ -232,6 +232,20 @@ payon,175,226,4	script	Kafra Employee::kaf_payon2	116,{
 	callfunc "F_KafEnd",0,1,"in the city of Payon";
 }
 
+
+// Vanishing
+//============================================================
+nameless_n,219,188,4	script	Kafra Employee::kaf_vanishing	4_F_KAFRA1,{
+	callfunc "F_KafSet";
+	mes "[Kafra Employee]";
+	mes "The Kafra Corporation";
+	mes "is always working to provide";
+	mes "you with convenient services.";
+	mes "How may I be of assistance?";
+	callfunc "F_Kafra",5,0,1,20,600;
+	callfunc "F_KafEnd",0,1,"in the Tidal Island";
+}
+
 // Veins
 //============================================================
 veins,208,128,5	script	Kafra Employee::kaf_veins	116,{

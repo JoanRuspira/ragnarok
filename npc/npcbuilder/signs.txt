@@ -1365,100 +1365,141 @@ veins,223,112,5	script	Bulletin Board#sgn::229	837,{
 	close;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-ve_fild04,112,72,5	script	Bulletin Board#sgn::215	837,{
+ve_fild04,112,72,5	script	Bulletin Board#sgn::230	837,{
 	mes "Black Canyon Trail.";
 	close;
 }
 
-ve_fild04,52,253,3	script	Bulletin Board#sgn::215	837,{
+ve_fild04,52,253,3	script	Bulletin Board#sgn::231	837,{
 	mes "Black Canyon Trail.";
 	close;
 }
 
-ve_fild01,189,32,4	script	Board#sgn::204	835,{
+ve_fild01,189,32,4	script	Board#sgn::232	835,{
 	mes "North East to Rachel.";
 	mes "South to Veins.";
 	close;
 }
 
-ve_fild01,250,360,1	script	Bulletin Board#sgn::215	837,{
+ve_fild01,250,360,1	script	Bulletin Board#sgn::233	837,{
 	mes "Entering Black Canyon Trail.";
 	close;
 }
 
-ra_fild11,221,46,4	script	Bulletin Board#sgn::215	837,{
+ra_fild11,221,46,4	script	Bulletin Board#sgn::234	837,{
 	mes "You are now on Ida Plane.";
 	close;
 }
 
-ra_fild10,373,294,5	script	Bulletin Board#sgn::215	837,{
+ra_fild10,373,294,5	script	Bulletin Board#sgn::235	837,{
 	mes "Oz Cliffs ahead.";
 	close;
 }
 
-ra_fild11,30,297,4	script	Board#sgn::204	835,{
+ra_fild11,30,297,4	script	Board#sgn::236	835,{
 	mes "East to Rachel.";
 	mes "South to Veins.";
 	close;
 }
 
-ra_fild11,196,325,7	script	Bulletin Board#sgn::215	837,{
+ra_fild11,196,325,7	script	Bulletin Board#sgn::237	837,{
 	mes "Ida Plane.";
 	close;
 }
 
-ra_fild07,215,45,4	script	Bulletin Board#sgn::215	837,{
+ra_fild07,215,45,4	script	Bulletin Board#sgn::238	837,{
 	mes "Oz Cliffs ahead.";
 	close;
 }
 
-ra_fild02,356,265,6	script	Bulletin Board#sgn::215	837,{
+ra_fild02,356,265,6	script	Bulletin Board#sgn::239	837,{
 	mes "Oz Cliffs ahead.";
 	close;
 }
 
-ve_fild01,189,32,4	script	Board#sgn::204	835,{
+ve_fild01,189,32,4	script	Board#sgn::240	835,{
 	mes "East to Lighthalzen and Dicastes.";
 	mes "South to Rachel and Veins.";
 	close;
 }
 
-ra_fild03,33,300,3	script	Bulletin Board#sgn::215	837,{
+ra_fild03,33,300,3	script	Bulletin Board#sgn::241	837,{
 	mes "You are now on the Ida Plane.";
 	close;
 }
 
-ra_fild13,286,338,7	script	Bulletin Board#sgn::215	837,{
+ra_fild13,286,338,7	script	Bulletin Board#sgn::242	837,{
 	mes "Beach of Tears ahead.";
 	close;
 }
 
-ra_fild12,309,39,3	script	Bulletin Board#sgn::215	837,{
+ra_fild12,309,39,3	script	Bulletin Board#sgn::243	837,{
 	mes "You are now on the Ida Plane.";
 	close;
 }
 
-ra_fild13,36,313,3	script	Bulletin Board#sgn::215	837,{
+ra_fild13,36,313,3	script	Bulletin Board#sgn::244	837,{
 	mes "Beach of Tears ahead.";
 	close;
 }
 
-ve_fild02,376,301,7	script	Bulletin Board#sgn::215	837,{
+ve_fild02,376,301,7	script	Bulletin Board#sgn::245	837,{
 	mes "Black Canyon Trail.";
+	close;
+}
+
+ra_fild12,286,210,4	script	Board#sgn::246	835,{
+	mes "West to Rachel.";
+	close;
+}
+
+ra_fild12,289,209,4	script	Bulletin Board#sgn::247	837,{
+	mes "Welcome to Arunafeltz's Ida Plane.";
+	close;
+}
+
+ra_fild12,296,201,3	script	Board#sgn::248	858,{
+	mes "Arunafeltz International Airship Station.";
+	next;
+	mes "Ida Plane - Yuno - Izlude route.";
+	close;
+}
+
+ve_fild03,174,239,3	script	Board#sgn::249	858,{
+	mes "Thor Volcano entrance. Proceed with extreme caution.";
+	close;
+}
+
+nameless_n,240,237,4	script	Bulletin Board#sgn::250	837,{
+	mes "Welcome to Tidal Island. Stay away from the Central Abbey.";
+	close;
+}
+
+aru_gld,199,257,1	script	Board#sgn::251	858,{
+	mes "Valfreyja castles";
+	mes "have been decomissioned";
+	mes "and access is forbidden.";
+	mes "Please beware of monsters";
+	mes "escaped from the old Guild Dungeons.";
+	close;
+}
+
+ve_fild02,205,31,3	script	Bulletin Board#sgn::252	837,{
+	mes "You are now on the Black Canyon Trail.";
+	close;
+}
+
+nameless_n,172,189,5	script	Board#sgn::253	858,{
+	mes "Cursed Abbey entrance. Proceed with extreme caution.";
+	close;
+}
+
+prt_fild04,336,323,5	script	Bulletin Board#sgn::254	837,{
+	mes "Geffen Delta and Bay ahead.";
+	close;
+}
+
+prt_fild04,367,163,5	script	Bulletin Board#sgn::255	837,{
+	mes "Geffen Delta and Bay ahead.";
 	close;
 }

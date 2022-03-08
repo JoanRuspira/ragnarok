@@ -112,18 +112,18 @@
 
 -	script	::Sailor_Nameless	-1,{
 	mes "[Sailor]";
-	mes "Hello! I know of an island south from here with an old abbey on it. I can get you there if you want?";
+	mes "Hello! I am delivering goods to the Tidal Island merchants. I can get you there if you want.";
 	next;
-	mes "I'm thinking a 10000 Zeny fee. I think it's a dangerous place, so be careful once we get there ok?"; 
+	mes "I'm thinking a 1000 Zeny fee. Sounds good?"; 
 	next;
 	switch(select("Sure!:No, sorry.")) {
 	case 1:
-		if (Zeny < 10000) {
+		if (Zeny < 1000) {
 			mes "[Sailor]";
 			mes "You don't have enough money...";
 			close;
 		}
-		set Zeny, Zeny - 10000;
+		set Zeny, Zeny - 1000;
 		warp "nameless_n",248,234;
 		end;
 	case 2:
@@ -133,7 +133,7 @@
 
 -	script	::Sailor_Nameless_Return	-1,{
 	mes "[Salior]";
-	mes "Hello! Do you want to go back to Veins shore?";
+	mes "Hello! We are heading back to the Veins shore. Do you want to come along?";
 	next;
 	if (select("Yes please.","Not yet.") == 1)
 		warp "ve_fild07",125,137;
@@ -151,12 +151,12 @@
 	next;
 	switch(select("Sure!:Naah, sorry.")) {
 	case 1:
-		if (Zeny < 10000) {
+		if (Zeny < 2500) {
 			mes "[Explorer]";
 			mes "You don't have enough money...";
 			close;
 		}
-		set Zeny, Zeny - 10000;
+		set Zeny, Zeny - 2500;
 		warp "odin_tem01",98,145;
 		end;
 	case 2:
@@ -900,6 +900,6 @@ prt_fild08d,338,217,7	duplicate(Resting Adventurer#iz)	Resting Adventurer#izd	4_
 comodo,233,86,0	duplicate(Sailor_Turtle)	Explorer#turtle	832
 hugel,208,109,2	duplicate(Sailor_Odin)	Odin Expeditioner#odintrip	702
 odin_tem01,93,145,6	duplicate(Sailor_Odin_Return)	Odin Expeditioner#odinreturn	702
-ve_fild07,128,132,3	duplicate(Sailor_Nameless)	Odin Expeditioner#namtrip	709
-nameless_n,250,233,3	duplicate(Sailor_Nameless_Return)	Odin Expeditioner#namtripreturn	709
+ve_fild07,128,132,3	duplicate(Sailor_Nameless)	Trading Salor#namtrip	709
+nameless_n,250,233,3	duplicate(Sailor_Nameless_Return)	Trading Salor#namtripreturn	709
 hu_fild01,140,162,4	duplicate(Thanatos_guide)	Thanatos Tower Guide#thantosguide	418

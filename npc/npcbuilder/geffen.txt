@@ -1,1584 +1,1585 @@
-geffen,39,123,4	script	Geffen Guard#geff:18df9fd2	417,{
+geffen,39,123,4	script	Geffen Guard#geff:8c8ee5fb	417,{
 	npctalk "Welcome to Geffen.";
 	end;
 }
 
-geffen,116,203,4	script	Geffen Guard#geff:b5e05b19	417,{
+geffen,116,203,4	script	Geffen Guard#geff:f71a9938	417,{
 	npctalk "Welcome to Geffen.";
 	end;
 }
 
-geffen,123,201,4	script	Geffen Guard#geff:2d18ff0a	420,{
+geffen,123,201,4	script	Geffen Guard#geff:19e098d4	420,{
 	npctalk "Welcome to Geffen.";
 	end;
 }
 
-geffen,200,123,4	script	Geffen Guard#geff:65f0b91f	420,{
+geffen,200,123,4	script	Geffen Guard#geff:e054c4e9	420,{
 	npctalk "Welcome to Geffen.";
 	end;
 }
 
 
-gef_fild05,101,310,5	script	Ifir Gipsy#geff:asdsfd222	678,{
-	npctalk "I will make you a Gipsy.";
-	end;
-}
 
-geffen,128,49,6	script	Geffen Villager#geff:46076a60	833,{
+geffen,128,49,6	script	Geffen Villager#geff:402c0e68	124,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,130,56,5	script	Geffen Villager#geff:fcd9ed39	75,{
+geffen,130,56,5	script	Geffen Villager#geff:5a5a8de7	47,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,132,54,1	script	Geffen Villager#geff:9980d23d	51,{
+geffen,132,54,1	script	Geffen Villager#geff:212325ec	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,132,42,3	script	Geffen Villager#geff:7920c680	64,{
+geffen,132,42,3	script	Geffen Villager#geff:bd132009	575,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,121,37,2	script	Geffen Villager#geff:581874c7	833,{
+geffen,121,37,2	script	Geffen Villager#geff:9a009412	641,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,111,39,5	script	Geffen Villager#geff:90c22de8	75,{
+geffen,111,39,5	script	Geffen Villager#geff:8da67b7c	86,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,105,46,1	script	Geffen Villager#geff:285812e0	634,{
+geffen,105,46,1	script	Geffen Villager#geff:43f6e0e9	57,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,107,55,6	script	Geffen Villager#geff:3af57790	878,{
+geffen,107,55,6	script	Geffen Villager#geff:c5b99a62	735,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,119,56,7	script	Geffen Villager#geff:aedd583f	740,{
+geffen,119,56,7	script	Geffen Villager#geff:fdf26875	125,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,99,51,2	script	Geffen Villager#geff:8bc06f1c	735,{
+geffen,99,51,2	script	Geffen Villager#geff:eb4a1e0b	57,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,89,51,0	script	Geffen Villager#geff:e3f8e833	734,{
+geffen,89,51,0	script	Geffen Villager#geff:df74d7ce	879,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,88,60,0	script	Geffen Villager#geff:fd86fc8c	733,{
+geffen,88,60,0	script	Geffen Villager#geff:eca92482	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,76,62,6	script	Geffen Villager#geff:d71ee33a	533,{
+geffen,76,62,6	script	Geffen Villager#geff:347f5515	532,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,85,72,2	script	Geffen Villager#geff:62da2c40	49,{
+geffen,85,72,2	script	Geffen Villager#geff:53580e3c	833,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,82,73,6	script	Geffen Villager#geff:782b2aab	735,{
+geffen,82,73,6	script	Geffen Villager#geff:72f53efa	635,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,73,71,1	script	Geffen Villager#geff:4f4ba0b7	654,{
+geffen,73,71,1	script	Geffen Villager#geff:1004e92a	641,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,60,73,7	script	Geffen Villager#geff:721dc1b6	634,{
+geffen,60,73,7	script	Geffen Villager#geff:aec39c1f	706,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,60,84,4	script	Geffen Villager#geff:26f48501	635,{
+geffen,60,84,4	script	Geffen Villager#geff:00414e2b	735,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,75,86,3	script	Geffen Villager#geff:f57ddd6d	574,{
+geffen,75,86,3	script	Geffen Villager#geff:0d924c34	49,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,50,87,0	script	Geffen Villager#geff:8784da05	95,{
+geffen,50,87,0	script	Geffen Villager#geff:a8c8835a	67,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,45,96,7	script	Geffen Villager#geff:d7d73ed8	641,{
+geffen,45,96,7	script	Geffen Villager#geff:7512e956	51,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,53,96,4	script	Geffen Villager#geff:51ba8cef	879,{
+geffen,53,96,4	script	Geffen Villager#geff:7f2a625e	635,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,58,107,2	script	Geffen Villager#geff:d7f7a090	575,{
+geffen,58,107,2	script	Geffen Villager#geff:b4f527e3	85,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,40,107,4	script	Geffen Villager#geff:a0fbe1c4	741,{
+geffen,40,107,4	script	Geffen Villager#geff:5ab74817	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,40,104,0	script	Geffen Villager#geff:83aff8f7	124,{
+geffen,40,104,0	script	Geffen Villager#geff:60e795f9	733,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,48,106,5	script	Geffen Villager#geff:e53f0103	741,{
+geffen,48,106,5	script	Geffen Villager#geff:4f58fd24	89,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,46,116,2	script	Geffen Villager#geff:6a58e843	79,{
+geffen,46,116,2	script	Geffen Villager#geff:2d7e5012	908,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,53,120,0	script	Geffen Villager#geff:88b15d31	72,{
+geffen,53,120,0	script	Geffen Villager#geff:366d0e98	49,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,44,131,6	script	Geffen Villager#geff:b68d86aa	95,{
+geffen,44,131,6	script	Geffen Villager#geff:c99fd0dc	720,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,31,118,6	script	Geffen Villager#geff:0032ae14	70,{
+geffen,31,118,6	script	Geffen Villager#geff:6e8d4612	124,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,50,133,7	script	Geffen Villager#geff:8b0a0c02	79,{
+geffen,50,133,7	script	Geffen Villager#geff:42715ecf	645,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,43,144,4	script	Geffen Villager#geff:84d25718	49,{
+geffen,43,144,4	script	Geffen Villager#geff:9a04a434	733,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,42,142,0	script	Geffen Villager#geff:1d0e0079	745,{
+geffen,42,142,0	script	Geffen Villager#geff:cbdf35a8	124,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,42,145,4	script	Geffen Villager#geff:7787213a	49,{
+geffen,42,145,4	script	Geffen Villager#geff:ddc4e768	637,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,51,151,5	script	Geffen Villager#geff:2c3a69de	92,{
+geffen,51,151,5	script	Geffen Villager#geff:bfb296c2	745,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,60,155,1	script	Geffen Villager#geff:29bf6bef	64,{
+geffen,60,155,1	script	Geffen Villager#geff:234e829e	67,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,63,166,7	script	Geffen Villager#geff:0a529d05	85,{
+geffen,63,166,7	script	Geffen Villager#geff:b3c0b5dc	84,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,68,159,2	script	Geffen Villager#geff:f95e7a43	733,{
+geffen,68,159,2	script	Geffen Villager#geff:6947fa61	743,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,78,162,1	script	Geffen Villager#geff:cb2511c9	733,{
+geffen,78,162,1	script	Geffen Villager#geff:6f1c1821	634,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,68,176,3	script	Geffen Villager#geff:ef8e8344	755,{
+geffen,68,176,3	script	Geffen Villager#geff:7d2ba573	743,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,76,175,2	script	Geffen Villager#geff:e5f9cca9	732,{
+geffen,76,175,2	script	Geffen Villager#geff:e747301c	779,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,87,174,0	script	Geffen Villager#geff:ed641e24	742,{
+geffen,87,174,0	script	Geffen Villager#geff:91d368de	72,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,65,96,4	script	Geffen Villager#geff:a6624a0e	833,{
+geffen,65,96,4	script	Geffen Villager#geff:4ba8b4d0	71,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,85,181,7	script	Geffen Villager#geff:69947d98	637,{
+geffen,85,181,7	script	Geffen Villager#geff:f5b01971	49,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,76,190,0	script	Geffen Villager#geff:9125000c	51,{
+geffen,76,190,0	script	Geffen Villager#geff:e48d51ea	893,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,90,197,6	script	Geffen Villager#geff:e9396d36	92,{
+geffen,90,197,6	script	Geffen Villager#geff:f67c4890	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,92,197,2	script	Geffen Villager#geff:7fcebf98	125,{
+geffen,92,197,2	script	Geffen Villager#geff:cd61b1c7	664,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,103,192,5	script	Geffen Villager#geff:600cb5bb	637,{
+geffen,103,192,5	script	Geffen Villager#geff:d6437004	125,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,94,189,3	script	Geffen Villager#geff:81ab9a73	878,{
+geffen,94,189,3	script	Geffen Villager#geff:e9494fb8	637,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,107,185,1	script	Geffen Villager#geff:cfc89e25	732,{
+geffen,107,185,1	script	Geffen Villager#geff:aed9caa3	879,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,110,197,5	script	Geffen Villager#geff:572c5c8c	720,{
+geffen,110,197,5	script	Geffen Villager#geff:d2cab502	68,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,118,193,6	script	Geffen Villager#geff:65b64d15	574,{
+geffen,118,193,6	script	Geffen Villager#geff:6e0a8df0	755,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,118,207,0	script	Geffen Villager#geff:6bc22035	798,{
+geffen,118,207,0	script	Geffen Villager#geff:5a3dae8f	49,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,124,189,5	script	Geffen Villager#geff:face4523	740,{
+geffen,124,189,5	script	Geffen Villager#geff:0446df16	92,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,117,183,4	script	Geffen Villager#geff:88628b86	83,{
+geffen,117,183,4	script	Geffen Villager#geff:99d230ca	704,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,121,174,2	script	Geffen Villager#geff:c0fa49b8	71,{
+geffen,121,174,2	script	Geffen Villager#geff:2d6072c7	644,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,119,174,6	script	Geffen Villager#geff:d0c18d97	430,{
+geffen,119,174,6	script	Geffen Villager#geff:a99789f4	720,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,130,193,5	script	Geffen Villager#geff:44d6a4b9	69,{
+geffen,130,193,5	script	Geffen Villager#geff:d1214486	430,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,136,184,7	script	Geffen Villager#geff:924c478a	641,{
+geffen,136,184,7	script	Geffen Villager#geff:8495f649	637,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,140,191,2	script	Geffen Villager#geff:e463d8d9	645,{
+geffen,140,191,2	script	Geffen Villager#geff:e3e2ea86	635,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,146,183,6	script	Geffen Villager#geff:66bfaed2	72,{
+geffen,146,183,6	script	Geffen Villager#geff:5b84e832	79,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,140,176,7	script	Geffen Villager#geff:47c5fe9b	69,{
+geffen,140,176,7	script	Geffen Villager#geff:0bf7fa41	805,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,117,183,4	script	Geffen Villager#geff:bcec2d2a	828,{
+geffen,117,183,4	script	Geffen Villager#geff:26ac0b95	430,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,141,200,2	script	Geffen Villager#geff:4f42756d	47,{
+geffen,141,200,2	script	Geffen Villager#geff:ca1cf1a3	641,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,153,183,1	script	Geffen Villager#geff:c5586c1f	755,{
+geffen,153,183,1	script	Geffen Villager#geff:032e7913	735,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,156,175,6	script	Geffen Villager#geff:fb2b5f6c	878,{
+geffen,156,175,6	script	Geffen Villager#geff:e51d2ab9	85,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,165,175,3	script	Geffen Villager#geff:fd2921bf	125,{
+geffen,165,175,3	script	Geffen Villager#geff:ff2be53e	755,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,164,168,7	script	Geffen Villager#geff:4322940f	805,{
+geffen,164,168,7	script	Geffen Villager#geff:a380c41a	69,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,174,165,2	script	Geffen Villager#geff:1a80e892	575,{
+geffen,174,165,2	script	Geffen Villager#geff:68bca213	64,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,173,157,7	script	Geffen Villager#geff:4d61584b	742,{
+geffen,173,157,7	script	Geffen Villager#geff:5c5598ea	733,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,181,155,1	script	Geffen Villager#geff:932c6843	743,{
+geffen,181,155,1	script	Geffen Villager#geff:29c3aada	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,184,148,3	script	Geffen Villager#geff:2cda000b	644,{
+geffen,184,148,3	script	Geffen Villager#geff:fe373880	641,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,191,143,4	script	Geffen Villager#geff:a6e9b98b	55,{
+geffen,191,143,4	script	Geffen Villager#geff:52ca4d75	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,186,136,0	script	Geffen Villager#geff:8c160251	753,{
+geffen,186,136,0	script	Geffen Villager#geff:6901a5a5	734,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,188,130,6	script	Geffen Villager#geff:6b60cdb9	125,{
+geffen,188,130,6	script	Geffen Villager#geff:c79c0f5f	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,190,130,2	script	Geffen Villager#geff:866a0821	637,{
+geffen,190,130,2	script	Geffen Villager#geff:6a391bb2	573,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,185,123,4	script	Geffen Villager#geff:b855dbb7	740,{
+geffen,185,123,4	script	Geffen Villager#geff:182f00aa	645,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,191,119,1	script	Geffen Villager#geff:3f523161	744,{
+geffen,191,119,1	script	Geffen Villager#geff:6506d5bd	95,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,212,117,6	script	Geffen Villager#geff:ae02373b	641,{
+geffen,212,117,6	script	Geffen Villager#geff:d1d2b780	733,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,197,119,5	script	Geffen Villager#geff:d1ef07a4	125,{
+geffen,197,119,5	script	Geffen Villager#geff:a45cbdc6	636,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,183,110,5	script	Geffen Villager#geff:276f7c51	89,{
+geffen,183,110,5	script	Geffen Villager#geff:428f82e2	642,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,188,107,6	script	Geffen Villager#geff:947e1aa8	879,{
+geffen,188,107,6	script	Geffen Villager#geff:5e44d6e0	124,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,192,102,3	script	Geffen Villager#geff:45de1468	89,{
+geffen,192,102,3	script	Geffen Villager#geff:31f87288	879,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,185,98,7	script	Geffen Villager#geff:0b8820e7	879,{
+geffen,185,98,7	script	Geffen Villager#geff:3ea19521	704,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,190,92,2	script	Geffen Villager#geff:b68b952a	754,{
+geffen,190,92,2	script	Geffen Villager#geff:7284e297	743,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,179,87,6	script	Geffen Villager#geff:e807f9a3	741,{
+geffen,179,87,6	script	Geffen Villager#geff:366c88a4	779,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,181,87,2	script	Geffen Villager#geff:1cb21f56	755,{
+geffen,181,87,2	script	Geffen Villager#geff:fc007460	85,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,173,82,3	script	Geffen Villager#geff:6d126ede	733,{
+geffen,173,82,3	script	Geffen Villager#geff:8a0f8457	798,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,174,74,7	script	Geffen Villager#geff:5cca494a	742,{
+geffen,174,74,7	script	Geffen Villager#geff:cd4fc94a	751,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,165,71,2	script	Geffen Villager#geff:03c13990	124,{
+geffen,165,71,2	script	Geffen Villager#geff:b48cba41	72,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,164,63,5	script	Geffen Villager#geff:fff3ff1f	704,{
+geffen,164,63,5	script	Geffen Villager#geff:18f30c85	69,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,75,160,0	script	Geffen Villager#geff:a814ac12	83,{
+geffen,75,160,0	script	Geffen Villager#geff:e6e9a61a	706,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,151,68,4	script	Geffen Villager#geff:7aad0886	574,{
+geffen,151,68,4	script	Geffen Villager#geff:85e90a07	68,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,153,57,7	script	Geffen Villager#geff:0446241a	533,{
+geffen,153,57,7	script	Geffen Villager#geff:00c64b82	575,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,156,46,0	script	Geffen Villager#geff:002bc838	754,{
+geffen,156,46,0	script	Geffen Villager#geff:da94a241	68,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,151,41,1	script	Geffen Villager#geff:7b46450c	124,{
+geffen,151,41,1	script	Geffen Villager#geff:ce29f222	641,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,146,51,0	script	Geffen Villager#geff:0cb08689	77,{
+geffen,146,51,0	script	Geffen Villager#geff:62c06645	879,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,138,48,6	script	Geffen Villager#geff:7b55f4e9	755,{
+geffen,138,48,6	script	Geffen Villager#geff:90de513c	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,125,110,4	script	Geffen Villager#geff:129fb247	83,{
+geffen,125,110,4	script	Geffen Villager#geff:8e894be3	68,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,204,101,0	script	Geffen Villager#geff:1583692f	740,{
+geffen,204,101,0	script	Geffen Villager#geff:99b7abfe	740,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,119,73,0	script	Geffen Villager#geff:b2c0783c	751,{
+geffen,119,73,0	script	Geffen Villager#geff:1e535b82	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,117,88,5	script	Geffen Villager#geff:0c3b80b2	634,{
+geffen,117,88,5	script	Geffen Villager#geff:36432763	55,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,124,95,7	script	Geffen Villager#geff:035334cb	72,{
+geffen,124,95,7	script	Geffen Villager#geff:faaaf810	79,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,130,102,3	script	Geffen Villager#geff:531b08ab	755,{
+geffen,130,102,3	script	Geffen Villager#geff:45c0fb87	637,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,130,113,2	script	Geffen Villager#geff:7f48bc2b	79,{
+geffen,130,113,2	script	Geffen Villager#geff:93b6255f	654,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,138,110,5	script	Geffen Villager#geff:c2488f81	743,{
+geffen,138,110,5	script	Geffen Villager#geff:814485cc	57,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,138,102,0	script	Geffen Villager#geff:e5b55eab	83,{
+geffen,138,102,0	script	Geffen Villager#geff:1754828a	575,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,136,118,2	script	Geffen Villager#geff:c16e9947	879,{
+geffen,136,118,2	script	Geffen Villager#geff:b126fa8f	532,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,144,120,7	script	Geffen Villager#geff:5d24101d	645,{
+geffen,144,120,7	script	Geffen Villager#geff:8daec6eb	755,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,152,121,6	script	Geffen Villager#geff:475b95aa	733,{
+geffen,152,121,6	script	Geffen Villager#geff:7455b55f	85,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,163,117,3	script	Geffen Villager#geff:b9d18fe1	92,{
+geffen,163,117,3	script	Geffen Villager#geff:e2a1441f	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,175,120,7	script	Geffen Villager#geff:7a92a550	62,{
+geffen,175,120,7	script	Geffen Villager#geff:154e9b7c	47,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,140,131,2	script	Geffen Villager#geff:4f4f31fa	125,{
+geffen,140,131,2	script	Geffen Villager#geff:f24dff1b	641,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,130,130,7	script	Geffen Villager#geff:c792d449	742,{
+geffen,130,130,7	script	Geffen Villager#geff:5e761c80	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,132,140,3	script	Geffen Villager#geff:7f0f5c09	95,{
+geffen,132,140,3	script	Geffen Villager#geff:ec2ed8df	70,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,124,141,0	script	Geffen Villager#geff:154358f7	641,{
+geffen,124,141,0	script	Geffen Villager#geff:68d9a415	574,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,115,147,2	script	Geffen Villager#geff:1585a056	75,{
+geffen,115,147,2	script	Geffen Villager#geff:80b9231e	69,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,108,138,4	script	Geffen Villager#geff:fad6dd2c	654,{
+geffen,108,138,4	script	Geffen Villager#geff:5edf763d	83,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,108,134,0	script	Geffen Villager#geff:e30243a5	76,{
+geffen,108,134,0	script	Geffen Villager#geff:b9e5324b	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,100,130,2	script	Geffen Villager#geff:389a7517	641,{
+geffen,100,130,2	script	Geffen Villager#geff:ebc1b1e1	532,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,96,125,4	script	Geffen Villager#geff:4c0f4ddf	575,{
+geffen,96,125,4	script	Geffen Villager#geff:97846d85	744,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,101,119,7	script	Geffen Villager#geff:5af68df9	642,{
+geffen,101,119,7	script	Geffen Villager#geff:2c1390d1	95,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,86,120,2	script	Geffen Villager#geff:df95df97	735,{
+geffen,86,120,2	script	Geffen Villager#geff:e64aee97	706,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,75,118,6	script	Geffen Villager#geff:15d3468e	732,{
+geffen,75,118,6	script	Geffen Villager#geff:ee75afa5	634,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,61,125,4	script	Geffen Villager#geff:703b7f7f	635,{
+geffen,61,125,4	script	Geffen Villager#geff:e8a11baa	732,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,97,115,5	script	Geffen Villager#geff:36560dbc	754,{
+geffen,97,115,5	script	Geffen Villager#geff:cf8caa3f	64,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,102,110,1	script	Geffen Villager#geff:58c45b51	86,{
+geffen,102,110,1	script	Geffen Villager#geff:bf96dd51	635,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,103,103,0	script	Geffen Villager#geff:2b3bbfef	641,{
+geffen,103,103,0	script	Geffen Villager#geff:05ba1ba8	68,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,110,111,4	script	Geffen Villager#geff:850d31d5	532,{
+geffen,110,111,4	script	Geffen Villager#geff:d4be355f	575,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,112,102,6	script	Geffen Villager#geff:b730ca29	635,{
+geffen,112,102,6	script	Geffen Villager#geff:1a0c1211	828,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,115,95,4	script	Geffen Villager#geff:9924e0e6	575,{
+geffen,115,95,4	script	Geffen Villager#geff:734ff4bd	49,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,121,159,4	script	Geffen Villager#geff:ccd88f3d	745,{
+geffen,121,159,4	script	Geffen Villager#geff:8acbe51d	634,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-geffen,138,69,3	script	Geffen Villager#geff:0bd649a4	833,{
+geffen,138,69,3	script	Geffen Villager#geff:776a0944	706,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,158,67,1	script	Geffen Villager#geff:f31d3df2	55,{
+geffen,158,67,1	script	Geffen Villager#geff:987946f8	635,{
 	npctalk "npcdialog";
 	end;
 }
-geffen,163,80,2	script	Geffen Villager#geff:cb5b66ce	740,{
+geffen,163,80,2	script	Geffen Villager#geff:18d9ab3a	75,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,174,61,5	script	Geffen Villager#geff:2c8af8d2	893,{
+geffen,174,61,5	script	Geffen Villager#geff:40ab3a31	96,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,200,88,1	script	Geffen Villager#geff:95d16b7f	89,{
+geffen,200,88,1	script	Geffen Villager#geff:58bdf836	641,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,202,136,5	script	Geffen Villager#geff:1b32c857	733,{
+geffen,202,136,5	script	Geffen Villager#geff:af12029c	642,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,205,158,3	script	Geffen Villager#geff:3bc9005e	733,{
+geffen,205,158,3	script	Geffen Villager#geff:c02db407	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,197,167,5	script	Geffen Villager#geff:24ff4b6c	732,{
+geffen,197,167,5	script	Geffen Villager#geff:e04b9ae8	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,165,193,3	script	Geffen Villager#geff:6317dc6b	828,{
+geffen,165,193,3	script	Geffen Villager#geff:47546d4d	96,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,131,210,4	script	Geffen Villager#geff:3f215d57	735,{
+geffen,131,210,4	script	Geffen Villager#geff:f21cb1f2	86,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,163,116,5	script	Mage Guildmaster#geff:1c79c9ef	64,{
+geffen_in,163,116,5	script	Mage Guildmaster#geff:06f3c9af	64,{
 	npctalk "I will make you a mage";
 	end;
 }
 
-geffen_in,156,122,7	script	Geffen Villager#geff:de32b0c1	9,{
+geffen_in,156,122,7	script	Geffen Villager#geff:fd583653	9,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,159,102,1	script	Geffen Villager#geff:749a9ccf	502,{
+geffen_in,159,102,1	script	Geffen Villager#geff:06dc018c	502,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,171,105,4	script	Geffen Villager#geff:761942aa	575,{
+geffen_in,171,105,4	script	Geffen Villager#geff:489ca9a5	84,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,167,124,1	script	Geffen Villager#geff:b3392a5f	57,{
+geffen_in,167,124,1	script	Geffen Villager#geff:b970a466	69,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,28,127,1	script	Geffen Villager#geff:5d6572d9	62,{
+geffen_in,28,127,1	script	Geffen Villager#geff:7866bb3c	478,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,33,120,1	script	Geffen Villager#geff:0c01b031	732,{
+geffen_in,33,120,1	script	Geffen Villager#geff:3552fc7f	532,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,38,122,4	script	Geffen Villager#geff:a3c28bf0	637,{
+geffen_in,38,122,4	script	Geffen Villager#geff:ff244a3e	84,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,33,126,5	script	Geffen Villager#geff:245441bc	62,{
+geffen_in,33,126,5	script	Geffen Villager#geff:4bed7ade	706,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,25,130,1	script	Geffen Villager#geff:fded2f80	755,{
+geffen_in,25,130,1	script	Geffen Villager#geff:7286c561	69,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,16,124,0	script	Geffen Villager#geff:bc03c354	125,{
+geffen_in,16,124,0	script	Geffen Villager#geff:c5f9ccfa	642,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,20,117,1	script	Geffen Villager#geff:55b0087e	798,{
+geffen_in,20,117,1	script	Geffen Villager#geff:060dad22	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,23,120,0	script	Geffen Villager#geff:cf72e5d3	125,{
+geffen_in,23,120,0	script	Geffen Villager#geff:f4838001	532,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,29,112,4	script	Geffen Villager#geff:134d713d	893,{
+geffen_in,29,112,4	script	Geffen Villager#geff:1c41f822	744,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,30,165,1	script	Geffen Villager#geff:84f41fff	742,{
+geffen_in,30,165,1	script	Geffen Villager#geff:e8a1be6f	124,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,25,170,4	script	Geffen Villager#geff:5b978150	71,{
+geffen_in,25,170,4	script	Geffen Villager#geff:f9d6906a	636,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,21,163,0	script	Geffen Villager#geff:9f369ace	64,{
+geffen_in,21,163,0	script	Geffen Villager#geff:2106e188	575,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,65,58,4	script	Geffen Villager#geff:d986a594	51,{
+geffen_in,65,58,4	script	Geffen Villager#geff:aa4e7e04	734,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,63,53,1	script	Geffen Villager#geff:ae772a63	573,{
+geffen_in,63,53,1	script	Geffen Villager#geff:bad8e4f6	77,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,62,73,3	script	Geffen Villager#geff:f498cdad	575,{
+geffen_in,62,73,3	script	Geffen Villager#geff:0db83974	575,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,61,76,7	script	Geffen Villager#geff:42bcd789	654,{
+geffen_in,61,76,7	script	Geffen Villager#geff:c884a2c7	68,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,66,79,4	script	Geffen Villager#geff:15707641	637,{
+geffen_in,66,79,4	script	Geffen Villager#geff:8fbf0800	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,74,77,6	script	Geffen Villager#geff:b6b41b9f	833,{
+geffen_in,74,77,6	script	Geffen Villager#geff:f854d548	753,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,78,62,6	script	Geffen Villager#geff:26ba21c9	83,{
+geffen_in,78,62,6	script	Geffen Villager#geff:1a08f7d3	644,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,80,57,3	script	Geffen Villager#geff:086a0bfd	124,{
+geffen_in,80,57,3	script	Geffen Villager#geff:19c0b136	644,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,74,56,7	script	Geffen Villager#geff:bf788533	533,{
+geffen_in,74,56,7	script	Geffen Villager#geff:2dc16869	644,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,69,56,1	script	Geffen Villager#geff:17280b82	645,{
+geffen_in,69,56,1	script	Geffen Villager#geff:0c155b78	124,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,25,71,3	script	Geffen Villager#geff:8597fdfa	745,{
+geffen_in,25,71,3	script	Geffen Villager#geff:bd814548	92,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,32,36,4	script	Geffen Villager#geff:0950c207	879,{
+geffen_in,32,36,4	script	Geffen Villager#geff:7b388f5d	55,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,35,30,1	script	Geffen Villager#geff:5cd6ff88	733,{
+geffen_in,35,30,1	script	Geffen Villager#geff:d82b879d	637,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,25,28,0	script	Geffen Villager#geff:7e2824fa	805,{
+geffen_in,25,28,0	script	Geffen Villager#geff:824c404c	644,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,35,63,2	script	Geffen Villager#geff:19d089a9	644,{
+geffen_in,35,63,2	script	Geffen Villager#geff:58da8007	779,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,107,36,3	script	Geffen Villager#geff:6d80ac39	735,{
+geffen_in,107,36,3	script	Geffen Villager#geff:9d1e99e3	634,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,110,30,5	script	Geffen Villager#geff:e5d1617b	740,{
+geffen_in,110,30,5	script	Geffen Villager#geff:9f6c478a	645,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,71,73,1	script	Geffen Villager#geff:bafb4e7d	754,{
+geffen_in,71,73,1	script	Geffen Villager#geff:a2f50b17	720,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,70,108,7	script	Geffen Villager#geff:27655aa5	533,{
+geffen_in,70,108,7	script	Geffen Villager#geff:aabeed4a	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,112,111,3	script	Geffen Villager#geff:146e2f5e	751,{
+geffen_in,112,111,3	script	Geffen Villager#geff:3377a64d	51,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,106,104,7	script	Geffen Villager#geff:ae1991c5	745,{
+geffen_in,106,104,7	script	Geffen Villager#geff:f303a41f	637,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,66,141,7	script	Geffen Villager#geff:240025c4	49,{
+geffen_in,66,141,7	script	Geffen Villager#geff:24339716	735,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,66,171,6	script	Geffen Villager#geff:2cf1c159	744,{
+geffen_in,66,171,6	script	Geffen Villager#geff:51b5d8cb	893,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,71,169,3	script	Geffen Villager#geff:0fb1e5ef	908,{
+geffen_in,71,169,3	script	Geffen Villager#geff:8ce0a05b	641,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,61,164,7	script	Geffen Villager#geff:03a7830d	70,{
+geffen_in,61,164,7	script	Geffen Villager#geff:655347e6	706,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,101,171,6	script	Geffen Villager#geff:ac23d16f	89,{
+geffen_in,101,171,6	script	Geffen Villager#geff:87803994	72,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,135,165,7	script	Geffen Villager#geff:196f940c	742,{
+geffen_in,135,165,7	script	Geffen Villager#geff:13ef0a53	86,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen_in,138,140,4	script	Geffen Villager#geff:298e8bf8	635,{
+geffen_in,138,140,4	script	Geffen Villager#geff:af23ca9f	642,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-geffen,61,63,7	script	Geffen Villager#geff:13a06b15	55,{
+geffen,61,63,7	script	Geffen Villager#geff:1511b3e3	828,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,96,99,4	script	Geffen Villager#geff:778bb8cc	741,{
+geffen,96,99,4	script	Geffen Villager#geff:43b755c5	84,{
 	npctalk "npcdialog";
 	end;
 }
 
-geffen,118,153,0	script	Geffen Villager#geff:468bfb8a	574,{
+geffen,118,153,0	script	Geffen Villager#geff:7d309ab0	96,{
 	npctalk "npcdialog";
 	end;
 }
 
-gef_tower,111,37,5	script	Wizard Guildmaster#geff:bbb86ea3	735,{
+gef_tower,111,37,5	script	Wizard Guildmaster#geff:670b6e06	735,{
 	npctalk "I will make you a wizard.";
 	end;
 }
 
-gef_tower,107,28,1	script	Geffen Villager#geff:5d91c2d7	706,{
+gef_tower,107,28,1	script	Geffen Villager#geff:15b2a40f	478,{
 	npctalk "npcdialog";
 	end;
 }
 
-gef_tower,120,26,4	script	Geffen Villager#geff:767883dc	798,{
+gef_tower,120,26,4	script	Geffen Villager#geff:26037ad7	805,{
 	npctalk "npcdialog";
 	end;
 }
 
-gef_tower,112,76,5	script	Geffen Villager#geff:4d978c82	64,{
+gef_tower,112,76,5	script	Geffen Villager#geff:900e940c	641,{
 	npctalk "npcdialog.";
 	end;
 }
 
-gef_tower,109,66,1	script	Geffen Villager#geff:2c723909	641,{
+gef_tower,109,66,1	script	Geffen Villager#geff:46bce8d3	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-gef_tower,110,108,1	script	Geffen Villager#geff:2954968e	637,{
+gef_tower,110,108,1	script	Geffen Villager#geff:d16a4fd1	644,{
 	npctalk "npcdialog";
 	end;
 }
 
-gef_tower,112,119,4	script	Geffen Villager#geff:20240554	89,{
+gef_tower,112,119,4	script	Geffen Villager#geff:17bc8558	634,{
 	npctalk "npcdialog";
 	end;
 }
 
-gef_tower,123,111,3	script	Geffen Villager#geff:dfdc38e4	754,{
+gef_tower,123,111,3	script	Geffen Villager#geff:fa00bba7	833,{
 	npctalk "npcdialog";
 	end;
 }
 
-gef_tower,119,170,4	script	Geffen Villager#geff:2092a003	55,{
+gef_tower,119,170,4	script	Geffen Villager#geff:96dccd68	49,{
 	npctalk "npcdialog";
 	end;
 }
 
-gef_tower,104,164,7	script	Geffen Villager#geff:30ffcc43	755,{
+gef_tower,104,164,7	script	Geffen Villager#geff:f79daf7c	96,{
 	npctalk "npcdialog";
 	end;
 }
 
-gef_tower,40,29,7	script	Geffen Villager#geff:c6feea2e	84,{
+gef_tower,40,29,7	script	Geffen Villager#geff:4561484c	641,{
 	npctalk "npcdialog";
 	end;
 }
 
-gef_tower,49,48,5	script	Geffen Villager#geff:b56787b2	742,{
+gef_tower,49,48,5	script	Geffen Villager#geff:0e8d425d	71,{
 	npctalk "npcdialog";
 	end;
 }
 
-gef_tower,55,30,1	script	Geffen Villager#geff:952b6c06	636,{
+gef_tower,55,30,1	script	Geffen Villager#geff:0873d526	92,{
 	npctalk "npcdialog";
 	end;
 }
 
-gef_tower,64,28,4	script	Geffen Villager#geff:8b4bb09b	72,{
+gef_tower,64,28,4	script	Geffen Villager#geff:694fd547	124,{
 	npctalk "npcdialog";
 	end;
 }
 
-gef_tower,60,97,3	script	Geffen Villager#geff:68c2dc5b	70,{
+gef_tower,60,97,3	script	Geffen Villager#geff:b8b73d84	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-gef_tower,52,90,7	script	Geffen Villager#geff:74e8796d	745,{
+gef_tower,52,90,7	script	Geffen Villager#geff:c1f30ad1	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-gef_tower,42,99,4	script	Geffen Villager#geff:fd24a1ba	67,{
+gef_tower,42,99,4	script	Geffen Villager#geff:b366b869	755,{
 	npctalk "npcdialog";
 	end;
 }
 
-gef_tower,50,81,0	script	Geffen Villager#geff:139fc37a	833,{
+gef_tower,50,81,0	script	Geffen Villager#geff:dcb0b419	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-gef_tower,36,151,4	script	Geffen Villager#geff:6dbfcd4f	720,{
+gef_tower,36,151,4	script	Geffen Villager#geff:03771598	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-gef_tower,50,169,7	script	Geffen Villager#geff:d5ed6204	67,{
+gef_tower,50,169,7	script	Geffen Villager#geff:03ef229a	89,{
 	npctalk "npcdialog";
 	end;
 }
 
-gef_tower,50,167,5	script	Geffen Villager#geff:e8c18f05	430,{
+gef_tower,50,167,5	script	Geffen Villager#geff:782eb91e	654,{
 	npctalk "npcdialog";
 	end;
 }
 
-gef_tower,53,156,1	script	Geffen Villager#geff:bf6bda17	69,{
+gef_tower,53,156,1	script	Geffen Villager#geff:02c9a245	96,{
 	npctalk "npcdialog";
 	end;
 }
 
-gef_tower,51,146,1	script	Geffen Villager#geff:d0dc8b65	637,{
+gef_tower,51,146,1	script	Geffen Villager#geff:c45c1f41	743,{
 	npctalk "npcdialog";
 	end;
 }
 
-gef_tower,59,151,4	script	Geffen Villager#geff:1e44c190	125,{
+gef_tower,59,151,4	script	Geffen Villager#geff:7d52ae53	755,{
 	npctalk "npcdialog";
 	end;
 }
 
-gef_tower,66,166,7	script	Geffen Villager#geff:ddefeca9	654,{
+gef_tower,66,166,7	script	Geffen Villager#geff:7de1fc22	55,{
 	npctalk "npcdialog";
 	end;
 }
 
-gef_tower,73,152,4	script	Geffen Villager#geff:b2219d0b	637,{
-	npctalk "npcdialog";
-	end;
-}
-
-
-gef_tower,158,109,1	script	Geffen Villager#geff:dc71ee10	779,{
+gef_tower,73,152,4	script	Geffen Villager#geff:36e71de4	64,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-gef_tower,154,116,6	script	Geffen Villager#geff:a15e8794	642,{
+gef_tower,158,109,1	script	Geffen Villager#geff:81720637	95,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-gef_tower,154,111,1	script	Geffen Villager#geff:0c2a9bcc	636,{
+gef_tower,154,116,6	script	Geffen Villager#geff:de6ebef2	478,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-gef_fild07,326,190,3	script	Geffen Adventurer#geff:e838f99e	486,{
-	npctalk "npcdialog";
-	end;
-}
-
-gef_fild07,321,183,7	script	Geffen Adventurer#geff:0acd22da	695,{
-	npctalk "npcdialog";
-	end;
-}
-
-gef_fild07,318,191,6	script	Geffen Adventurer#geff:741a80c5	688,{
-	npctalk "npcdialog";
-	end;
-}
-
-gef_fild07,330,186,4	script	Geffen Adventurer#geff:e3e9ce24	779,{
-	npctalk "npcdialog";
-	end;
-}
-
-gef_fild04,187,54,0	script	Geffen Adventurer#geff:68281338	567,{
-	npctalk "npcdialog";
-	end;
-}
-
-gef_fild04,191,51,0	script	Geffen Adventurer#geff:63910554	693,{
-	npctalk "npcdialog";
-	end;
-}
-
-gef_fild04,183,59,5	script	Geffen Adventurer#geff:c4590a26	602,{
-	npctalk "npcdialog";
-	end;
-}
-
-gef_fild00,52,206,5	script	Geffen Adventurer#geff:682e91f3	603,{
-	npctalk "npcdialog";
-	end;
-}
-
-gef_fild00,54,199,1	script	Geffen Adventurer#geff:4faa0e6c	616,{
-	npctalk "npcdialog";
-	end;
-}
-
-gef_fild00,58,203,2	script	Geffen Adventurer#geff:ddedaf27	634,{
-	npctalk "npcdialog";
-	end;
-}
-
-gef_fild00,61,206,6	script	Geffen Adventurer#geff:3b3278d1	637,{
-	npctalk "npcdialog";
-	end;
-}
-
-mjolnir_02,81,356,7	script	Geffen Adventurer#geff:1746824d	558,{
-	npctalk "npcdialog";
-	end;
-}
-
-mjolnir_02,85,358,3	script	Geffen Adventurer#geff:6ae98315	681,{
-	npctalk "npcdialog";
-	end;
-}
-
-mjolnir_02,75,351,7	script	Geffen Adventurer#geff:97e81302	686,{
+gef_tower,154,111,1	script	Geffen Villager#geff:f10373f6	76,{
 	npctalk "npcdialog";
 	end;
 }
 
 
+gef_fild07,326,190,3	script	Geffen Adventurer#geff:8ac4ea03	486,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_fild07,321,183,7	script	Geffen Adventurer#geff:cb377270	695,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_fild07,318,191,6	script	Geffen Adventurer#geff:ea82f70a	688,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_fild07,330,186,4	script	Geffen Adventurer#geff:d31deb5b	779,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_fild04,187,54,0	script	Geffen Adventurer#geff:5989edc3	567,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_fild04,191,51,0	script	Geffen Adventurer#geff:d0935921	693,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_fild04,183,59,5	script	Geffen Adventurer#geff:7b64bb89	602,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_fild00,52,206,5	script	Geffen Adventurer#geff:d55a32c3	603,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_fild00,54,199,1	script	Geffen Adventurer#geff:1765d1ef	616,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_fild00,58,203,2	script	Geffen Adventurer#geff:c6181959	634,{
+	npctalk "npcdialog";
+	end;
+}
+
+gef_fild00,61,206,6	script	Geffen Adventurer#geff:7bc76a32	637,{
+	npctalk "npcdialog";
+	end;
+}
+
+mjolnir_02,81,356,7	script	Geffen Adventurer#geff:c5827894	558,{
+	npctalk "npcdialog";
+	end;
+}
+
+mjolnir_02,85,358,3	script	Geffen Adventurer#geff:f5d73eb7	681,{
+	npctalk "npcdialog";
+	end;
+}
+
+mjolnir_02,75,351,7	script	Geffen Adventurer#geff:484c40b2	686,{
+	npctalk "npcdialog";
+	end;
+}
 
 
 
 
-gef_fild05,84,122,7	script	Ifir Camper#geff:215b6926	668,{
+
+
+gef_fild05,84,122,7	script	Ifir Camper#geff:58842186	668,{
 	npctalk "npcdialoggypsy";
 	end;
 }
 
 
-gef_fild05,88,118,2	script	Ifir Camper#geff:05c5bb91	581,{
+gef_fild05,88,118,2	script	Ifir Camper#geff:6243c05f	581,{
 	npctalk "npcdialoggypsy";
 	end;
 }
 
-gef_fild05,77,141,6	script	Ifir Camper#geff:02f797b1	647,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-
-gef_fild05,111,186,5	script	Ifir Camper#geff:8d9ec91c	646,{
+gef_fild05,77,141,6	script	Ifir Camper#geff:824d0e73	647,{
 	npctalk "npcdialoggypsy";
 	end;
 }
 
 
-gef_fild05,123,194,7	script	Ifir Camper#geff:8ed979f5	706,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,125,189,0	script	Ifir Camper#geff:2e9f652a	741,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,110,117,1	script	Ifir Camper#geff:8850520a	773,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,122,122,4	script	Ifir Camper#geff:9a0f81a4	778,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,134,141,2	script	Ifir Camper#geff:582f18f1	798,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,129,137,7	script	Ifir Camper#geff:f947b467	803,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,134,163,1	script	Ifir Camper#geff:c50595eb	536,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,84,122,7	script	Ifir Camper#geff:af667a62	668,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,133,158,0	script	Ifir Camper#geff:4f6bd654	706,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,140,185,4	script	Ifir Camper#geff:0c6c97da	847,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,139,178,0	script	Ifir Camper#geff:12199fb7	838,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,200,253,7	script	Ifir Camper#geff:2e871bd2	70,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,185,253,4	script	Ifir Camper#geff:606d17cf	58,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,214,273,4	script	Ifir Camper#geff:d358760b	668,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,221,263,6	script	Ifir Camper#geff:5435836d	77,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,228,249,0	script	Ifir Camper#geff:5a9ef2bc	82,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,243,264,5	script	Ifir Camper#geff:1dc9ebbb	93,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,252,253,3	script	Ifir Camper#geff:e0bb9e62	89,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,224,322,3	script	Ifir Camper#geff:1194da33	51,{
+gef_fild05,111,186,5	script	Ifir Camper#geff:ff8f0e5a	646,{
 	npctalk "npcdialoggypsy";
 	end;
 }
 
 
-gef_fild05,214,324,0	script	Ifir Camper#geff:5d2a7343	668,{
+gef_fild05,123,194,7	script	Ifir Camper#geff:79403821	706,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,125,189,0	script	Ifir Camper#geff:b23508f4	741,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,110,117,1	script	Ifir Camper#geff:5cb6910c	773,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,122,122,4	script	Ifir Camper#geff:1ca5bd81	778,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,134,141,2	script	Ifir Camper#geff:e000943a	798,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,129,137,7	script	Ifir Camper#geff:a3a474c4	803,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,134,163,1	script	Ifir Camper#geff:63a4a974	536,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,84,122,7	script	Ifir Camper#geff:5cadbd06	668,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,133,158,0	script	Ifir Camper#geff:cd43e7f8	706,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,101,310,5	script	Ifir Gipsy#geff:5ffd7076	678,{
+	npctalk "I will make you a Gipsy.";
+	end;
+}
+
+gef_fild05,140,185,4	script	Ifir Camper#geff:071897e5	847,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,139,178,0	script	Ifir Camper#geff:ec8304c1	838,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,200,253,7	script	Ifir Camper#geff:ead4adbe	70,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,185,253,4	script	Ifir Camper#geff:785fad16	58,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,214,273,4	script	Ifir Camper#geff:972d296b	668,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,221,263,6	script	Ifir Camper#geff:530adef0	77,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,228,249,0	script	Ifir Camper#geff:b42d561f	82,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,243,264,5	script	Ifir Camper#geff:56409686	93,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,252,253,3	script	Ifir Camper#geff:f7d66acf	89,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,224,322,3	script	Ifir Camper#geff:12ae58dc	51,{
 	npctalk "npcdialoggypsy";
 	end;
 }
 
 
-gef_fild05,161,331,4	script	Ifir Camper#geff:8002eec1	581,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,138,323,7	script	Ifir Camper#geff:c2741915	647,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,141,328,3	script	Ifir Camper#geff:79cb63a8	646,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,96,310,5	script	Ifir Camper#geff:d6e303e6	846,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,87,304,6	script	Ifir Camper#geff:931405bc	706,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,65,290,5	script	Ifir Camper#geff:f3db9656	741,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,62,182,1	script	Ifir Camper#geff:e881ee78	773,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,73,251,6	script	Ifir Camper#geff:831891b2	778,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,81,244,1	script	Ifir Camper#geff:c937e89d	803,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,86,242,5	script	Ifir Camper#geff:936cad2a	536,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,68,175,7	script	Ifir Camper#geff:721773a7	668,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,98,223,4	script	Ifir Camper#geff:088b750e	847,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,107,228,1	script	Ifir Camper#geff:a0dcceee	838,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,157,261,5	script	Ifir Camper#geff:13f1e78b	70,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,170,259,2	script	Ifir Camper#geff:fc05e25c	48,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,119,268,1	script	Ifir Camper#geff:01ed9dfc	668,{
-	npctalk "npcdialoggypsy";
-	end;
-}
-
-gef_fild05,123,277,4	script	Ifir Camper#geff:1e63153c	77,{
+gef_fild05,214,324,0	script	Ifir Camper#geff:7baaf821	668,{
 	npctalk "npcdialoggypsy";
 	end;
 }
 
 
-gef_fild05,129,282,5	script	Ifir Camper#geff:46077770	82,{
+gef_fild05,161,331,4	script	Ifir Camper#geff:7d588fb3	581,{
 	npctalk "npcdialoggypsy";
 	end;
 }
 
-gef_fild05,154,299,5	script	Ifir Camper#geff:6cd37912	93,{
+gef_fild05,138,323,7	script	Ifir Camper#geff:b80c62a0	647,{
 	npctalk "npcdialoggypsy";
 	end;
 }
 
-gef_fild05,160,296,2	script	Ifir Camper#geff:555a89a0	89,{
+gef_fild05,141,328,3	script	Ifir Camper#geff:f4c0bf32	646,{
 	npctalk "npcdialoggypsy";
 	end;
 }
 
-gef_fild05,159,290,1	script	Ifir Camper#geff:9cb25a63	846,{
+gef_fild05,96,310,5	script	Ifir Camper#geff:27036a63	846,{
 	npctalk "npcdialoggypsy";
 	end;
 }
 
-gef_fild05,197,269,5	script	Ifir Camper#geff:d9056c76	51,{
+gef_fild05,87,304,6	script	Ifir Camper#geff:be41b700	706,{
 	npctalk "npcdialoggypsy";
 	end;
 }
 
-gef_fild05,259,241,0	script	Ifir Camper#geff:91f0caa7	706,{
+gef_fild05,65,290,5	script	Ifir Camper#geff:7502d5e5	741,{
 	npctalk "npcdialoggypsy";
 	end;
 }
 
-gef_fild05,306,282,6	script	Ifir Camper#geff:8126694b	741,{
+gef_fild05,62,182,1	script	Ifir Camper#geff:fbf2da2a	773,{
 	npctalk "npcdialoggypsy";
 	end;
 }
 
-gef_fild05,313,290,3	script	Ifir Camper#geff:d9ea93aa	773,{
+gef_fild05,73,251,6	script	Ifir Camper#geff:1e0f588e	778,{
 	npctalk "npcdialoggypsy";
 	end;
 }
 
-gef_fild05,319,275,1	script	Ifir Camper#geff:7814af2e	778,{
+gef_fild05,81,244,1	script	Ifir Camper#geff:743a235b	803,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,86,242,5	script	Ifir Camper#geff:e029d56e	536,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,68,175,7	script	Ifir Camper#geff:a756d27d	668,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,98,223,4	script	Ifir Camper#geff:736c0059	847,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,107,228,1	script	Ifir Camper#geff:832fc58e	838,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,157,261,5	script	Ifir Camper#geff:75c068ff	70,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,170,259,2	script	Ifir Camper#geff:37019e65	48,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,119,268,1	script	Ifir Camper#geff:24dd3137	668,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,123,277,4	script	Ifir Camper#geff:6c0daf5b	77,{
 	npctalk "npcdialoggypsy";
 	end;
 }
 
 
-glast_01,365,306,5	script	Glast Heim Adventurer#geff:2a9a447f	484,{
+gef_fild05,129,282,5	script	Ifir Camper#geff:4859808a	82,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,154,299,5	script	Ifir Camper#geff:fc79f411	93,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,160,296,2	script	Ifir Camper#geff:35f6d450	89,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,159,290,1	script	Ifir Camper#geff:300c50cb	846,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,197,269,5	script	Ifir Camper#geff:7b752e5f	51,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,259,241,0	script	Ifir Camper#geff:eca234b6	706,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,306,282,6	script	Ifir Camper#geff:32031dbf	741,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,313,290,3	script	Ifir Camper#geff:b7c0096f	773,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+gef_fild05,319,275,1	script	Ifir Camper#geff:fac15fde	778,{
+	npctalk "npcdialoggypsy";
+	end;
+}
+
+
+glast_01,365,306,5	script	Glast Heim Adventurer#geff:2804c425	484,{
 	npctalk "npcdialog";
 	end;
 }
 
-glast_01,369,304,2	script	Glast Heim Adventurer#geff:1b294c3e	501,{
-	npctalk "npcdialog";
-	end;
-}
-
-
-glast_01,362,301,4	script	Glast Heim Adventurer#geff:f993728b	512,{
-	npctalk "npcdialog";
-	end;
-}
-
-glast_01,368,298,1	script	Glast Heim Adventurer#geff:604a62e3	542,{
-	npctalk "npcdialog";
-	end;
-}
-
-glast_01,201,290,0	script	Glast Heim Adventurer#geff:3566c23e	881,{
-	npctalk "npcdialog";
-	end;
-}
-
-glast_01,198,287,7	script	Glast Heim Adventurer#geff:34875f1b	882,{
-	npctalk "npcdialog";
-	end;
-}
-
-glast_01,203,294,3	script	Glast Heim Adventurer#geff:5f00a735	773,{
-	npctalk "npcdialog";
-	end;
-}
-
-glast_01,197,133,5	script	Glast Heim Adventurer#geff:31e46acb	875,{
-	npctalk "npcdialog";
-	end;
-}
-
-glast_01,202,135,3	script	Glast Heim Adventurer#geff:5b4caeae	7,{
-	npctalk "npcdialog";
-	end;
-}
-
-glast_01,200,130,0	script	Glast Heim Adventurer#geff:158c1454	695,{
+glast_01,369,304,2	script	Glast Heim Adventurer#geff:fe6479c9	501,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-glast_01,71,195,5	script	Glast Heim Adventurer#geff:ac54fc0e	468,{
+glast_01,362,301,4	script	Glast Heim Adventurer#geff:074f6fe8	512,{
 	npctalk "npcdialog";
 	end;
 }
 
-glast_01,73,190,1	script	Glast Heim Adventurer#geff:25ca9770	734,{
+glast_01,368,298,1	script	Glast Heim Adventurer#geff:27fcb94b	542,{
+	npctalk "npcdialog";
+	end;
+}
+
+glast_01,201,290,0	script	Glast Heim Adventurer#geff:8c351bfd	881,{
+	npctalk "npcdialog";
+	end;
+}
+
+glast_01,198,287,7	script	Glast Heim Adventurer#geff:025032d7	882,{
+	npctalk "npcdialog";
+	end;
+}
+
+glast_01,203,294,3	script	Glast Heim Adventurer#geff:18cc57e0	773,{
+	npctalk "npcdialog";
+	end;
+}
+
+glast_01,197,133,5	script	Glast Heim Adventurer#geff:c3113bc7	875,{
+	npctalk "npcdialog";
+	end;
+}
+
+glast_01,202,135,3	script	Glast Heim Adventurer#geff:7816d90e	7,{
+	npctalk "npcdialog";
+	end;
+}
+
+glast_01,200,130,0	script	Glast Heim Adventurer#geff:34a8723f	695,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-glast_01,62,108,6	script	Glast Heim Adventurer#geff:cb0a13fd	698,{
+glast_01,71,195,5	script	Glast Heim Adventurer#geff:ef97d3cc	468,{
+	npctalk "npcdialog";
+	end;
+}
+
+glast_01,73,190,1	script	Glast Heim Adventurer#geff:beef729f	734,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-glast_01,62,108,1	script	Glast Heim Adventurer#geff:b1b64d23	734,{
+glast_01,62,108,6	script	Glast Heim Adventurer#geff:7651c1be	698,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-glast_01,60,104,7	script	Glast Heim Adventurer#geff:5b680839	734,{
+glast_01,62,108,1	script	Glast Heim Adventurer#geff:bb02eabf	734,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-glast_01,66,106,2	script	Glast Heim Adventurer#geff:542471b5	469,{
+glast_01,60,104,7	script	Glast Heim Adventurer#geff:0982dcb9	734,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-in_orcs01,32,174,1	script	Orc Dungeon Adventurer#geff:19210f48	688,{
+glast_01,66,106,2	script	Glast Heim Adventurer#geff:3e59a5ba	469,{
 	npctalk "npcdialog";
 	end;
 }
 
-in_orcs01,20,172,1	script	Orc Dungeon Adventurer#geff:301223a9	882,{
+
+in_orcs01,32,174,1	script	Orc Dungeon Adventurer#geff:4adef9c7	688,{
 	npctalk "npcdialog";
 	end;
 }
 
-in_orcs01,28,163,1	script	Orc Dungeon Adventurer#geff:888f6642	686,{
+in_orcs01,20,172,1	script	Orc Dungeon Adventurer#geff:8d189064	882,{
 	npctalk "npcdialog";
 	end;
 }
 
-in_orcs01,37,173,4	script	Orc Dungeon Adventurer#geff:f24cb72d	728,{
+in_orcs01,28,163,1	script	Orc Dungeon Adventurer#geff:d754a23c	686,{
 	npctalk "npcdialog";
 	end;
 }
 
-in_orcs01,109,104,1	script	Orc Dungeon Adventurer#geff:96ba2f81	644,{
+in_orcs01,37,173,4	script	Orc Dungeon Adventurer#geff:eeae432e	728,{
 	npctalk "npcdialog";
 	end;
 }
 
-in_orcs01,102,98,7	script	Orc Dungeon Adventurer#geff:14a21448	634,{
+in_orcs01,109,104,1	script	Orc Dungeon Adventurer#geff:46a35ec1	644,{
 	npctalk "npcdialog";
 	end;
 }
 
-in_orcs01,107,96,1	script	Orc Dungeon Adventurer#geff:25473f35	645,{
+in_orcs01,102,98,7	script	Orc Dungeon Adventurer#geff:9a99c60e	634,{
 	npctalk "npcdialog";
 	end;
 }
 
-in_orcs01,117,98,3	script	Orc Dungeon Adventurer#geff:8761ddfd	648,{
+in_orcs01,107,96,1	script	Orc Dungeon Adventurer#geff:50ffd2b4	645,{
+	npctalk "npcdialog";
+	end;
+}
+
+in_orcs01,117,98,3	script	Orc Dungeon Adventurer#geff:b3614f0f	648,{
 	npctalk "npcdialog";
 	end;
 }

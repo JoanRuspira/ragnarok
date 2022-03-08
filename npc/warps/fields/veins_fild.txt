@@ -13,6 +13,12 @@
 //= 1.5 Renewal warp adjustments.
 //============================================================
 
+
+ve_fild02,190,19,0	warp	ve_fild1-1a	1,1,aru_gld,194,357
+aru_gld,194,361,0	warp	ve_fild1-1aa	1,1,ve_fild02,194,23
+
+
+
 ve_fild01,366,267,0	warp	ve_fild1-1	1,1,ve_fild02,36,263
 ve_fild01,184,20,0	warp	ve_fild1-2	1,1,ve_fild04,174,334
 ra_fild11,233,27,0	warp	ve_fild1-3	1,1,ve_fild01,243,363

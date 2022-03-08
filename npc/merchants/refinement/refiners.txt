@@ -664,6 +664,10 @@ ve_in02,56,16,1	script	Repairman#rpmn15	63,{
 	callfunc "repairmain","Repairman";
 	end;
 }
+nameless_n,84,260,4	script	Repairman#rpmn16	826,{
+	callfunc "repairmain","Repairman";
+	end;
+}
 
 
 

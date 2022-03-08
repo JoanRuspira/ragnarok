@@ -58,26 +58,26 @@
 		mes "I'll guide you to";
 		mes "Luoyang right away.";
 		mes "For my service, I am";
-		mes "accepting 10,000 Zeny.";
+		mes "accepting 5000 Zeny.";
 		next;
 		mes "[Louyang Sailor]";
 		mes "So, are you ready?";
 		next;
 		if (select("Yes!:No.") == 1) {
-			if (Zeny > 9999) {
+			if (Zeny > 4999) {
 				mes "[Louyang Merchant]";
 				mes "Okay~";
 				mes "Ready!";
 				mes "Get on board!";
 				close2;
-				set Zeny, Zeny-10000;
+				set Zeny, Zeny-5000;
 				warp "lou_fild01",190,101;
 				end;
 			}
 			mes "[Louyang Merchant]";
 			mes "...";
 			mes "You don't seem";
-			mes "to have 10,000 Zeny...";
+			mes "to have 5000 Zeny...";
 			mes "Go get some money first!";
 			close;
 		}

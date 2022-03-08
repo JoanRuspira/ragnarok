@@ -1426,3 +1426,176 @@ ve_in,234,104,3	script	Veins Villager#vns:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
+
+ra_fild12,293,209,4	script	Airport Staff#vns:npcid	100,{
+	npctalk "Welcome to Arunafeltz.";
+	end;
+}
+
+ra_fild12,294,199,1	script	Arunafeltz Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ra_fild12,303,195,2	script	Arunafeltz Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ra_fild12,298,190,4	script	Arunafeltz Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ra_fild12,287,190,7	script	Arunafeltz Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ra_fild12,278,184,3	script	Arunafeltz Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ra_fild12,273,176,7	script	Arunafeltz Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ra_fild12,266,180,2	script	Arunafeltz Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ra_fild12,264,187,7	script	Arunafeltz Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ra_fild12,274,193,0	script	Arunafeltz Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ra_fild12,278,201,3	script	Arunafeltz Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ra_fild12,281,215,2	script	Arunafeltz Villager#vns:npcid	spriteid,{
+	npctalk "npcdialog.";
+	end;
+}
+
+
+ve_fild03,165,233,3	script	Arunafeltz Adventurer#vns:npcid	741,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ve_fild03,170,230,0	script	Arunafeltz Adventurer#vns:npcid	735,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ve_fild03,176,232,1	script	Arunafeltz Adventurer#vns:npcid	603,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ve_fild03,162,232,5	script	Arunafeltz Adventurer#vns:npcid	500,{
+	npctalk "npcdialog.";
+	end;
+}
+
+
+
+ve_fild02,119,73,5	script	Arunafeltz Camper#vns:npcid	spriteid,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ve_fild02,125,81,7	script	Arunafeltz Camper#vns:npcid	spriteid,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ve_fild02,130,93,3	script	Arunafeltz Camper#vns:npcid	spriteid,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ve_fild02,142,100,1	script	Arunafeltz Camper#vns:npcid	spriteid,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ve_fild02,147,100,6	script	Arunafeltz Camper#vns:npcid	spriteid,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ve_fild02,162,105,4	script	Arunafeltz Camper#vns:npcid	spriteid,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ve_fild02,170,101,3	script	Arunafeltz Camper#vns:npcid	spriteid,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ve_fild02,140,80,0	script	Arunafeltz Camper#vns:npcid	spriteid,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ve_fild02,150,84,5	script	Arunafeltz Camper#vns:npcid	spriteid,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ve_fild02,60,25,5	script	Arunafeltz Camper#vns:npcid	spriteid,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ve_fild02,63,33,6	script	Arunafeltz Camper#vns:npcid	spriteid,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ve_fild02,68,190,1	script	Arunafeltz Camper#vns:npcid	spriteid,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ve_fild02,59,194,3	script	Arunafeltz Camper#vns:npcid	spriteid,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ve_fild02,74,199,6	script	Arunafeltz Camper#vns:npcid	spriteid,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ve_fild04,261,304,3	script	Arunafeltz Camper#vns:npcid	spriteid,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ve_fild04,262,295,7	script	Arunafeltz Camper#vns:npcid	spriteid,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ve_fild04,271,276,5	script	Arunafeltz Camper#vns:npcid	spriteid,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ve_fild04,281,273,2	script	Arunafeltz Camper#vns:npcid	spriteid,{
+	npctalk "npcdialog.";
+	end;
+}
