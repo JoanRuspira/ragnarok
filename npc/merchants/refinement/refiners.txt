@@ -585,7 +585,10 @@ ve_in02,43,22,1	script	Material Polisher#matpol8	85,{
 	callfunc "orimain","Material Polisher";
 	end;
 }
-
+ama_in01,18,102,0	script	Material Polisher#matpol9	85,{
+	callfunc "orimain","Material Polisher";
+	end;
+}
 
 
 
@@ -668,7 +671,10 @@ nameless_n,84,260,4	script	Repairman#rpmn16	826,{
 	callfunc "repairmain","Repairman";
 	end;
 }
-
+ama_in01,17,109,7	script	Repairman#rpmn17	826,{
+	callfunc "repairmain","Repairman";
+	end;
+}
 
 
 
@@ -758,6 +764,12 @@ niflheim,321,64,5	script	Refiner#rfnr17	63,{
 	callfunc "refinemain","Refiner",0;
 	end;
 }
+
+ama_in01,26,105,0	script	Refiner#rfnr18	63,{
+	callfunc "refinemain","Refiner",0;
+	end;
+}
+
 
 
 prt_in,63,60,0	script	#rfnrRefiner00	85,{

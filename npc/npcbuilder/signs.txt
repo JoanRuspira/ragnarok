@@ -1503,3 +1503,8 @@ prt_fild04,367,163,5	script	Bulletin Board#sgn::255	837,{
 	mes "Geffen Delta and Bay ahead.";
 	close;
 }
+
+ama_fild01,169,326,5	script	Board#sgn::256	858,{
+	mes "Tatami Maze ahead.";
+	close;
+}

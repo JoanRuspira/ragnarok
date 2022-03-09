@@ -840,27 +840,12 @@ amatsu,77,126,0	script	Amatsu Villager#amat::npcid	spriteid,{
 	end;
 }
 
-amatsu,88,250,6	script	Amatsu Villager#amat::npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
 amatsu,94,233,0	script	Amatsu Villager#amat::npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
 
 amatsu,87,228,4	script	Amatsu Villager#amat::npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-amatsu,96,250,1	script	Amatsu Villager#amat::npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-amatsu,84,258,3	script	Amatsu Villager#amat::npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
@@ -885,10 +870,7 @@ amatsu,82,268,5	script	Amatsu Villager#amat::npcid	spriteid,{
 	end;
 }
 
-amatsu,96,257,5	script	Amatsu Villager#amat::npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
+
 
 amatsu,112,153,2	script	Amatsu Villager#amat::npcid	spriteid,{
 	npctalk "npcdialog";
@@ -1016,6 +998,159 @@ amatsu,113,117,7	script	Amatsu Villager#amat::npcid	spriteid,{
 }
 
 amatsu,118,172,6	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ama_in01,19,21,7	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ama_in01,94,26,2	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ama_in01,96,18,0	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ama_in01,162,31,1	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ama_in01,170,32,6	script	Amatsu Villager#amat::npcid	688,{
+	npctalk "npcdialog";
+	end;
+}
+
+ama_in01,178,19,2	script	Amatsu Villager#amat::npcid	693,{
+	npctalk "npcdialog";
+	end;
+}
+
+ama_in01,175,22,5	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ama_in01,179,34,4	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ama_in01,170,82,4	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ama_in01,79,73,3	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ama_in01,82,178,0	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ama_in01,35,109,3	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,90,262,4	script	Knight Captain#amat::npcid	734,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,87,259,0	script	Training Knight#amat::npcid	686,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,90,259,0	script	Training Knight#amat::npcid	728,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,93,259,0	script	Training Knight#amat::npcid	728,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,87,256,0	script	Training Knight#amat::npcid	686,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,90,256,0	script	Training Knight#amat::npcid	728,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,93,256,0	script	Training Knight#amat::npcid	686,{
+	npctalk "npcdialog";
+	end;
+}
+
+amatsu,96,261,3	script	Fortress Lord#amat::npcid	628,{
+	npctalk "I will make you a Lord Knight.";
+	end;
+}
+
+
+ama_fild01,66,40,7	script	Amatsu Adventurer#amat::npcid	677,{
+	npctalk "npcdialog";
+	end;
+}
+
+ama_fild01,75,39,4	script	Amatsu Adventurer#amat::npcid	681,{
+	npctalk "npcdialog";
+	end;
+}
+
+ama_fild01,71,47,1	script	Amatsu Adventurer#amat::npcid	683,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+ama_fild01,172,323,3	script	Amatsu Adventurer#amat::npcid	665,{
+	npctalk "npcdialog";
+	end;
+}
+
+ama_fild01,175,318,0	script	Amatsu Adventurer#amat::npcid	666,{
+	npctalk "npcdialog";
+	end;
+}
+
+ama_fild01,169,320,7	script	Amatsu Adventurer#amat::npcid	679,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+ama_fild01,326,130,5	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ama_fild01,330,117,0	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ama_fild01,341,129,2	script	Amatsu Villager#amat::npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+ama_fild01,342,144,3	script	Amatsu Villager#amat::npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
