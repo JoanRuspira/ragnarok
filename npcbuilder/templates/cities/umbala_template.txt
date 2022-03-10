@@ -103,7 +103,7 @@ umbala,117,216,3	script	Umbala Villager#umb:npcid	spriteid,{
 	end;
 }
 
-umbala,100,188,2	script	Umbala Villager#umb:npcid	spriteid,{
+umbala,100,188,6	script	Umbala Villager#umb:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }

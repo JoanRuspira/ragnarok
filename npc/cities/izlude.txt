@@ -91,6 +91,41 @@
 	}
 }
 
+-	script	::Iao_vale_guide	-1,{
+	mes "[Iao Vale Guide]";
+	mes "My job is to help adventurers descent the Iao Vale. I can show you the path down the vale if that is something you want.";
+	next;
+	switch(select("Yes please:I'm good, thanks.")) {
+	case 1:
+		mes "[Iao Vale Guide]";
+		mes "Okay. Follow me!";
+		next;
+		warp "ayo_fild02",40,198;
+		end;
+	case 2:
+		mes "[Iao Vale Guide]";
+		mes "Okay. No problem.";
+		close;
+	}
+}
+
+-	script	::Iao_vale_guide_up	-1,{
+	mes "[Iao Vale Guide]";
+	mes "My job is to help adventurers ascend the Iao Vale. I can show you the path up the vale if that is something you want.";
+	next;
+	switch(select("Yes please:I'm good, thanks.")) {
+	case 1:
+		mes "[Iao Vale Guide]";
+		mes "Okay. Follow me!";
+		next;
+		warp "ayo_fild01",137,276;
+		end;
+	case 2:
+		mes "[Iao Vale Guide]";
+		mes "Okay. No problem.";
+		close;
+	}
+}
 -	script	::Thanatos_guide	-1,{
 	mes "[Thanatos Tower Guide]";
 	mes "My job is to help adventurers reach the Thanatos Tower. I can show you the path down the scar if that is something you want. But be careful, Thanatos Tower is a dangerous place.";
@@ -903,3 +938,5 @@ odin_tem01,93,145,6	duplicate(Sailor_Odin_Return)	Odin Expeditioner#odinreturn	7
 ve_fild07,128,132,3	duplicate(Sailor_Nameless)	Trading Salor#namtrip	709
 nameless_n,250,233,3	duplicate(Sailor_Nameless_Return)	Trading Salor#namtripreturn	709
 hu_fild01,140,162,4	duplicate(Thanatos_guide)	Thanatos Tower Guide#thantosguide	418
+ayo_fild01,140,279,3	duplicate(Iao_vale_guide)	Iao Vale Guide#iaovaleguide	825
+ayo_fild02,38,200,5	duplicate(Iao_vale_guide_up)	Iao Vale Guide#iaovaleguideup	825

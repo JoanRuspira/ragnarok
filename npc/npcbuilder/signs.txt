@@ -1508,3 +1508,23 @@ ama_fild01,169,326,5	script	Board#sgn::256	858,{
 	mes "Tatami Maze ahead.";
 	close;
 }
+
+ayothaya,203,176,3	script	Bulletin Board#sgn::257	837,{
+	mes "Welcome to Ayothaya, the far east independant island-state. Enjoy our fish and a visit to our palace.";
+	close;
+}
+
+amatsu,184,166,4	script	Bulletin Board#sgn::258	837,{
+	mes "Amatu, the land of destiny. Brave knights train at our fortress.";
+	close;
+}
+
+ayo_fild01,65,235,3	script	Bulletin Board#sgn::259	837,{
+	mes "Iao Vale ahead.";
+	close;
+}
+
+ayo_fild02,276,153,3	script	Board#sgn::260	858,{
+	mes "Ayothaya Ruins entrance.";
+	close;
+}

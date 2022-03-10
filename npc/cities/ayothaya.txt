@@ -59,7 +59,7 @@
 				mes "beautiful Ayothaya!";
 				close2;
 				set Zeny, Zeny-5000;
-				warp "ayothaya",149,71;
+				warp "ayothaya",149,65;
 				end;
 			}
 			mes "[Aibakthing]";

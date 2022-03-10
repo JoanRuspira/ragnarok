@@ -467,7 +467,7 @@ amatsu,102,149,6	script	Kafra Employee::kaf_amatsu	116,{
 
 // Ayothaya
 //============================================================
-ayothaya,212,169,5	script	Kafra Employee::kaf_ayothaya	116,{
+ayothaya,162,171,5	script	Kafra Employee::kaf_ayothaya	116,{
 	cutin "kafra_02",2;
 	mes "[Kafra Employee]";
 	mes "Welcome to the";

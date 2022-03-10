@@ -675,6 +675,11 @@ ama_in01,17,109,7	script	Repairman#rpmn17	826,{
 	callfunc "repairmain","Repairman";
 	end;
 }
+ayo_in01,184,171,1	script	Repairman#rpmn18	731,{
+	callfunc "repairmain","Repairman";
+	end;
+}
+
 
 
 
@@ -766,6 +771,11 @@ niflheim,321,64,5	script	Refiner#rfnr17	63,{
 }
 
 ama_in01,26,105,0	script	Refiner#rfnr18	63,{
+	callfunc "refinemain","Refiner",0;
+	end;
+}
+
+ayo_in01,180,192,5	script	Refiner#rfnr19	726,{
 	callfunc "refinemain","Refiner",0;
 	end;
 }
