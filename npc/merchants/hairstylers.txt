@@ -1,32 +1,16 @@
-//===== rAthena Script =======================================
-//= Hair Dresser
-//===== By: ==================================================
-//= Muad_Dib, Samuray22, Kisuka
-//===== Current Version: =====================================
-//= 1.4
-//===== Compatible With: =====================================
-//= rAthena Project
-//===== Description: =========================================
-//= [Official Conversion]
-//= Allows you to change your hairstyle.
-//===== Additional Comments: =================================
-//= 1.2 Rescripted to the Aegis 10.3 Standards. [Samuray22]
-//= 1.3 Updated to match AEGIS script. [Kisuka]
-//= 1.4 Added Lighthalzen Hair Dresser. [L0ne_W0lf]
-//============================================================
-
-// Hair Dresser Veronica
-// ============================================================
+//===== Script =======================================
+// Hairstyle NPCs
+//====================================================
 
 -	script	Hairstyler#stl::Hairstyler	-1,{
-	mes "[Veronica]";
-	mes "Welcome to Veronica's hair salon.";
-	mes "We have a fixed price of 10000z.";
+	mes "[Hairstyler]";
+	mes "Welcome to my hair salon.";
+	mes "We have a fixed price of 10000z for each style change.";
 	mes "How can I help you?";
 	next;
 	switch(select("See available hair styles.:Change hair style.:End conversation.")) {
 	case 1:
-		mes "[Veronica]";
+		mes "[Hairstyler]";
 		mes "We have a total of 19 styles, available from no.1 to no.19.";
 		mes "Which one do you want to see?";
 		mes "If you wish to cancel,";
@@ -34,14 +18,14 @@
 		next;
 		input .@style;
 		if(.@style > 19) {
-			mes "[Veronica]";
+			mes "[Hairstyler]";
 			mes "Oops, I'm sorry, but that";
 			mes "style is not available.";
 			mes "Remember to enter a number";
 			mes "from 1 to 19.";
 			next;
 		} else if(.@style == 0) {
-			mes "[Veronica]";
+			mes "[Hairstyler]";
 			mes "So, how do you like the style?";
 			mes "Feel free to ask me about any";
 			mes "available hairstyle. It will";
@@ -54,12 +38,12 @@
 		}
 	case 2:
 		if (Zeny < 9999) {
-			mes "[Veronica]";
+			mes "[Hairstyler]";
 			mes "Sorry, looks like you can't pay";
 			mes "for the new hairstyle...";
 			close;
 		}
-		mes "[Veronica]";
+		mes "[Hairstyler]";
 		mes "Okay now, please choose the style";
 		mes "you desire from styles no.1 to";
 		mes "no.19.  I will do my best to";
@@ -67,16 +51,16 @@
 		next;
 		input .@style;
 		if(.@style > 19) {
-			mes "[Veronica]";
+			mes "[Hairstyler]";
 			mes "I am sorry, you chose an unavailable style.";
 			mes "Make sure you enter the correct number.";
 			close;
 		} else if(.@style == 0) {
-			mes "[Veronica]";
+			mes "[Hairstyler]";
 			mes "You have canceled your request.";
 			close;
 		} else if(getlook(1) == .@style) {
-			mes "[Veronica]";
+			mes "[Hairstyler]";
 			mes "I am sorry, but you are already";
 			mes "wearing the style you have";
 			mes "requested. Would you please";
@@ -84,13 +68,13 @@
 			close;
 		}
 			callsub L_cutin,.@style;
-			mes "[Veronica]";
+			mes "[Hairstyler]";
 			mes "You have chosen style no. (" + .@style + ").";
 			mes "I shall proceed with your request.";
 			mes "Would you mind?";
 			next;
 			if(select("No, I don't mind.:Yes, let me choose another one.") == 1) {
-					mes "[Veronica]";
+					mes "[Hairstyler]";
 					mes "Oh, my, you haven't dyed your hair";
 					mes "at all. You would look even more";
 					mes "fabulous if you dyed your hair...";
@@ -123,21 +107,21 @@
 						set .@pallete,7;
 						break;
 					case 9:
-						mes "[Veronica]";
+						mes "[Hairstyler]";
 						mes "Oh, I was gonna do it for free.";
 						mes "Well, if you change your mind, please come again.";
 						mes "The color of your hair enhances your look.";
 						close;
 					}
 				nude;
-				mes "[Veronica]";
+				mes "[Hairstyler]";
 				mes "Now, let's get started. Try to";
 				mes "stay still, dear. If you move,";
 				mes "it might ruin the perfect look";
 				mes "I intend to give you. Trust me,";
 				mes "I will make you look fabulous~";
 				next;
-				mes "[Veronica]";
+				mes "[Hairstyler]";
 				mes "- *snip snip snip snip* -";
 				mes "- *bzzzzzzz bzzzzzzz bzzzzzzz bzzzzzzz* -";
 				mes "- *snip snip snip snip* -";
@@ -147,7 +131,7 @@
 				setlook 1,.@style;
 				setlook 6,.@pallete;
 				cutin "",255;
-				mes "[Veronica]";
+				mes "[Hairstyler]";
 				mes "Alright, it's done~";
 				mes "I hope you like";
 				mes "this style no.(" + .@style + ").";
@@ -157,13 +141,13 @@
 				setlook 6,.@pallete;
 				close;
 			}
-			mes "[Veronica]";
+			mes "[Hairstyler]";
 			mes "Okay then, please choose one";
 			mes "a hairstyle again. I believe";
 			mes "you will find the look that's best for you.";
 			close;
 	case 3:
-		mes "[Veronica]";
+		mes "[Hairstyler]";
 		mes "Everybody deserves the right to";
 		mes "pursue beauty. I hope that you";
 		mes "will find the right hairstyle";

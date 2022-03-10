@@ -1169,3 +1169,56 @@ alberta_in,18,20,2	script	Alberta Villager#alb:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
+
+
+
+alb2trea,30,55,5	script	Alberta Sailor#alb::npcid	100,{
+	npctalk "npcdialog";
+	end;
+}
+
+alb2trea,38,60,7	script	Alberta Sailor#alb::npcid	100,{
+	npctalk "npcdialog";
+	end;
+}
+
+alb2trea,47,49,1	script	Alberta Sailor#alb::npcid	100,{
+	npctalk "npcdialog";
+	end;
+}
+
+alb2trea,51,35,2	script	Alberta Sailor#alb::npcid	100,{
+	npctalk "npcdialog";
+	end;
+}
+
+alb2trea,37,42,3	script	Alberta Sailor#alb::npcid	100,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+alb2trea,63,74,7	script	Alberta Adventurer#alb::npcid	25,{
+	npctalk "npcdialog";
+	end;
+}
+
+alb2trea,68,62,2	script	Alberta Adventurer#alb::npcid	483,{
+	npctalk "npcdialog";
+	end;
+}
+
+alb2trea,56,74,4	script	Alberta Adventurer#alb::npcid	542,{
+	npctalk "npcdialog";
+	end;
+}
+
+alb2trea,74,96,7	script	Alberta Adventurer#alb::npcid	882,{
+	npctalk "npcdialog";
+	end;
+}
+
+alb2trea,77,93,2	script	Alberta Adventurer#alb::npcid	690,{
+	npctalk "npcdialog";
+	end;
+}

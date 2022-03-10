@@ -1,4 +1,8 @@
--	script	Inn Keeper#newbe10::InKpr	-1,{
+//===== Script =======================================
+// Innkeeper NPCs
+//====================================================
+
+-	script	Inn Keeper#inkpr::InKpr	-1,{
 	mes "[Inn Keeper]";
 	mes "Hello, Please feel free to use our facilities.";
 	mes "How can I help you? We offer a couple of services";

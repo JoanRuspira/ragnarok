@@ -1,0 +1,1530 @@
+izlu2dun,112,54,3	script	Bulletin Board#sgn::1	837,{
+	mes "Byalan Island.";
+	mes "Head to centre of island for the ";
+	mes "undersea tunnel access.";
+	close;
+}
+
+izlu2dun,103,86,0	script	Board#sgn::2	858,{
+	mes "Undersea Tunnel Entrance.";
+	close;
+}
+
+prt_fild08,250,205,4	script	Sign#sgn::3	835,{
+	mes "North to Prontera.";
+	mes "East to Izlude.";
+	mes "South to Sograt Desert.";
+	close;
+}
+
+prt_fild08,238,144,6	script	Sign#sgn::4	835,{
+	mes "North to Prontera.";
+	mes "East to Izlude.";
+	mes "South to Sograt Desert.";
+	close;
+}
+
+prt_fild08,241,21,1	script	Board#sgn::5	858,{
+	mes "Attention: Path to the Sograt Desert.";
+	close;
+}
+
+moc_fild01,244,378,1	script	Bulletin Board#sgn::6	837,{
+	mes "You are now entering the Sograt Desert.";
+	close;
+}
+
+pay_fild04,23,169,5	script	Board#sgn::5a	858,{
+	mes "Attention: Path to the Sograt Desert.";
+	close;
+}
+
+moc_fild01,375,157,0	script	Bulletin Board#sgn::7	837,{
+	mes "You are now entering the Sograt Desert.";
+	close;
+}
+
+moc_fild02,222,268,4	script	Bulletin Board#sgn::8	837,{
+	mes "You are now entering the Sograt Desert.";
+	close;
+}
+
+moc_fild02,331,262,1	script	Bulletin Board#sgn::9	837,{
+	mes "You are now entering the Payon Forest.";
+	close;
+}
+
+moc_fild02,274,269,4	script	Sign#sgn::10	835,{
+	mes "East to Payon.";
+	mes "West to Sograt Desert.";
+	close;
+}
+
+moc_fild02,345,334,0	script	Bulletin Board#sgn::11	837,{
+	mes "You are now entering the Payon Forest.";
+	close;
+}
+
+pay_gld,27,277,3	script	Board#sgn::12	858,{
+	mes "Greenwood Lake castles";
+	mes "have been decomissioned";
+	mes "and access is forbidden.";
+	mes "Please beware of monsters";
+	mes "escaped from the old Guild Dungeons.";
+	close;
+}
+
+pay_gld,201,181,4	script	Sign#sgn::13	835,{
+	mes "East to Payon.";
+	mes "West to Sograt Desert.";
+	close;
+}
+
+pay_gld,368,154,5	script	Board#sgn::14	858,{
+	mes "Greenwood Lake castles";
+	mes "have been decomissioned";
+	mes "and access is forbidden.";
+	mes "Please beware of monsters";
+	mes "escaped from the old Guild Dungeons.";
+	close;
+}
+
+moc_fild13,120,283,5	script	Bulletin Board#sgn::15	837,{
+	mes "You are now entering the Sograt Desert.";
+	close;
+}
+
+moc_fild13,205,260,4	script	Sign#sgn::16a	835,{
+	mes "North-East to Payon.";
+	mes "West to Sograt Desert.";
+	close;
+}
+
+moc_fild13,246,193,3	script	Bulletin Board#sgn::17	837,{
+	mes "You are now entering the Payon Forest.";
+	close;
+}
+
+izlude,131,151,4	script	Bulletin Board#sgn::18	837,{
+	mes "Izlude, the Market Town.";
+	mes "Home of the Cryptura Academy,";
+	mes "the Central Market,";
+	mes "and the Swordman Guild.";
+	close;
+}
+
+payon,165,211,4	script	Bulletin Board#sgn::18a	837,{
+	mes "Payon, the peaceful Forest Town.";
+	mes "Discover the Payon Palace,";
+	mes "the Crossbow Clan and";
+	mes "the North Market.";
+	mes "All with good food!";
+	close;
+}
+
+pay_arche,77,30,4	script	Sign#sgn::19	835,{
+	mes "North to the Archer Village.";
+	mes "South to Payon.";
+	close;
+}
+
+pay_arche,40,136,5	script	Board#sgn::20	858,{
+	mes "Payon Cave Entrance.";
+	close;
+}
+
+pay_arche,78,91,4	script	Bulletin Board#sgn::21	837,{
+	mes "Archer Village.";
+	mes "Enjoy your visit";
+	mes "to the Archer Guild";
+	mes "or the Payon Cave.";
+	close;
+}
+
+
+pay_fild01,325,348,7	script	Bulletin Board#sgn::22	837,{
+	mes "You are now entering the Payon Forest.";
+	close;
+}
+
+payon,257,97,4	script	Bulletin Board#sgn::23	837,{
+	mes "You are now entering the Payon Forest.";
+	close;
+}
+
+
+pay_fild02,77,30,4	script	Sign#sgn::24	835,{
+	mes "North to Payon.";
+	mes "West to Alberta.";
+	close;
+}
+
+pay_fild03,42,107,2	script	Sign#sgn::25	835,{
+	mes "North to Payon.";
+	mes "West to Alberta.";
+	close;
+}
+
+pay_fild03,383,81,4	script	Bulletin Board#sgn::26	837,{
+	mes "You are now entering the Payon Forest.";
+	close;
+}
+
+alberta,37,241,4	script	Bulletin Board#sgn::27	837,{
+	mes "Alberta...";
+	mes "Enjoy the largest harbour";
+	mes "in Midgard, and the door to";
+	mes "strange new lands. Visit our";
+	mes "Merchant Guild!";
+	close;
+}
+
+alb2trea,71,97,4	script	Board#sgn::28	858,{
+	mes "Attention: Sunken Ship entrance down the ladder.";
+	mes "Proceed at your own risk.";
+	close;
+}
+
+alb2trea,69,78,4	script	Bulletin Board#sgn::29	837,{
+	mes "You are on Avalon Isle,";
+	mes "off the coast of Alberta.";
+	close;
+}
+
+moc_fild10,206,239,7	script	Board#sgn::28a	858,{
+	mes "Morroc Oasis";
+	close;
+}
+
+moc_fild05,213,265,6	script	Sign#sgn::29a	835,{
+	mes "West to Morroc.";
+	mes "East to Payon.";
+	close;
+}
+
+moc_fild15,269,264,7	script	Board#sgn::30	858,{
+	mes "Caution: Anthell south entrance.";
+	close;
+}
+
+moc_fild15,249,244,3	script	Board#sgn::31	858,{
+	mes "Caution: Anthell south entrance.";
+	close;
+}
+
+geffen,120,190,4	script	Board#sgn::32	835,{
+	mes "South to City Centre.";
+	mes "West to Mague Guild.";
+	mes "East to Market and Inn.";
+	mes "North to Exit.";
+	close;
+}
+
+geffen,107,117,4	script	Bulletin Board#sgn::33	837,{
+	mes "Geffen, the City of Magic.";
+	mes "Visit the Mague Guild";
+	mes "and the Geffen tower.";
+	mes "The greatest wizard destination.";
+	close;
+}
+
+gef_tower,161,115,1	script	Board#sgn::34	858,{
+	mes "Geffen Tower Dungeon ahead.";
+	close;
+}
+
+mjolnir_02,77,361,4	script	Board#sgn::35	858,{
+	mes "Caution: Old Coal Mine entrance ahead.";
+	close;
+}
+
+gef_fild08,352,193,5	script	Bulletin Board#sgn::36	837,{
+	mes "You are now entering the Kordt Forest.";
+	close;
+}
+
+gef_fild06,375,216,5	script	Bulletin Board#sgn::37	837,{
+	mes "You are now entering the Kordt Forest.";
+	close;
+}
+
+gef_fild06,29,310,5	script	Board#sgn::38	858,{
+	mes "Attention! Glastheim Fortress ruins ahead.";
+	mes "Please exercise caution.";
+	close;
+}
+
+glast_01,367,309,5	script	Board#sgn::39	837,{
+	mes "You are now on the Glastheim";
+	mes "Fortess ruins. This is a place";
+	mes "overtaken by dark forces.";
+	mes "Please be careful when exploring.";
+	close;
+}
+
+
+glast_01,196,292,5	script	Board#sgn::40	858,{
+	mes "Glastheim Castle.";
+	close;
+}
+
+glast_01,205,137,3	script	Board#sgn::41	858,{
+	mes "Glastheim Church.";
+	close;
+}
+
+glast_01,75,198,3	script	Board#sgn::42	858,{
+	mes "Glastheim Chivalry.";
+	close;
+}
+
+glast_01,58,109,5	script	Board#sgn::43	858,{
+	mes "Glastheim Staircase.";
+	close;
+}
+
+gef_fild07,44,199,4	script	Board#sgn::44	835,{
+	mes "West to Kordt Forest.";
+	mes "East to Payon.";
+	mes "South to Britoniah.";
+	mes "South to the Orc Village.";
+	close;
+}
+
+gef_fild13,38,358,0	script	Board#sgn::45	858,{
+	mes "Britoniah castles";
+	mes "have been abandoned";
+	mes "and access is forbidden.";
+	mes "Please beware of monsters";
+	mes "escaped from the old Guild Dungeons.";
+	close;
+}
+
+gef_fild12,363,53,5	script	Bulletin Board#sgn::46	837,{
+	mes "You are now entering the Kordt Forest.";
+	close;
+}
+
+gef_fild09,35,85,4	script	Board#sgn::47	835,{
+	mes "North to Geffen";
+	mes "West to Prontera.";
+	close;
+}
+
+
+gef_fild09,223,54,4	script	Board#sgn::48	836,{
+	mes "South to the Orc Village";
+	mes "East to Prontera.";
+	mes "West to Britoniah.";
+	close;
+}
+
+gef_fild10,241,365,7	script	Board#sgn::49	837,{
+	mes "OrK Village!";
+	mes "Human stay away!";
+	mes "Away!";
+	close;
+}
+
+in_orcs01,25,164,5	script	Board#sgn::50	858,{
+	mes "Orc Dungeon entrance.";
+	close;
+}
+
+in_orcs01,112,99,5	script	Board#sgn::51	858,{
+	mes "Orc Dungeon entrance.";
+	close;
+}
+
+gef_fild13,198,36,4	script	Board#sgn::52	835,{
+	mes "North to Geffen.";
+	mes "South West to the Orc Village.";
+	close;
+}
+
+gef_fild13,189,39,5	script	Board#sgn::53	858,{
+	mes "Britoniah castles";
+	mes "have been abandoned";
+	mes "and access is forbidden.";
+	mes "Please beware of monsters";
+	mes "escaped from the old Guild Dungeons.";
+	close;
+}
+
+gef_fild13,370,58,5	script	Board#sgn::54	858,{
+	mes "Britoniah castles";
+	mes "have been abandoned";
+	mes "and access is forbidden.";
+	mes "Please beware of monsters";
+	mes "escaped from the old Guild Dungeons.";
+	close;
+}
+
+gef_fild10,101,27,7	script	Board#sgn::55	837,{
+	mes "OrK Village!";
+	mes "Human stay away!";
+	mes "Away!";
+	close;
+}
+
+gef_fild10,367,63,5	script	Board#sgn::56	837,{
+	mes "OrK Village!";
+	mes "Human stay away!";
+	mes "Away!";
+	close;
+}
+
+gef_fild03,372,281,4	script	Board#sgn::57	836,{
+	mes "West to the Orc Village";
+	mes "East to Prontera.";
+	close;
+}
+
+prt_fild09,84,373,0	script	Bulletin Board#sgn::58	837,{
+	mes "You are now entering the Sograt Desert.";
+	close;
+}
+
+prt_fild09,223,367,0	script	Bulletin Board#sgn::59	837,{
+	mes "You are now entering the Sograt Desert.";
+	close;
+}
+
+prt_fild09,22,143,4	script	Bulletin Board#sgn::60	837,{
+	mes "You are now entering the Sograt Desert.";
+	close;
+}
+
+prt_fild10,259,25,0	script	Bulletin Board#sgn::61	837,{
+	mes "You are now entering the Sograt Desert.";
+	close;
+}
+
+prt_fild05,228,223,4	script	Board#sgn::62	835,{
+	mes "North to Mt. Mjolnir.";
+	mes "West to Geffen.";
+	mes "East to Prontera.";
+	close;
+}
+
+mjolnir_09,209,109,4	script	Board#sgn::63	835,{
+	mes "North to Mt. Mjolnir.";
+	mes "West to Geffen.";
+	mes "South to Prontera.";
+	close;
+}
+
+mjolnir_08,188,164,4	script	Board#sgn::64	835,{
+	mes "North to Mt. Mjolnir.";
+	mes "South to Prontera.";
+	close;
+}
+
+mjolnir_04,158,86,4	script	Board#sgn::65	837,{
+	mes "Mt. Mjolnir";
+	mes "East Peak ahead.";
+	close;
+}
+
+mjolnir_04,356,181,5	script	Board#sgn::66	837,{
+	mes "Mt. Mjolnir";
+	mes "East Peak ahead.";
+	close;
+}
+
+mjolnir_03,209,102,5	script	Board#sgn::67	837,{
+	mes "Mt. Mjolnir";
+	mes "West Peak ahead.";
+	close;
+}
+
+mjolnir_03,81,264,3	script	Board#sgn::68	837,{
+	mes "Mt. Mjolnir";
+	mes "West Peak ahead.";
+	close;
+}
+
+mjolnir_08,81,261,4	script	Board#sgn::69	835,{
+	mes "North to the Coal Mine";
+	mes "East to Mt. Mjolnir.";
+	mes "West to Glastheim.";
+	close;
+}
+
+prt_fild02,299,63,4	script	Board#sgn::70	835,{
+	mes "East to St. Capitonlina Abbey";
+	mes "West to Mt. Mjolnir.";
+	mes "South to Prontera.";
+	close;
+}
+
+prt_fild03,25,256,4	script	Board#sgn::71	835,{
+	mes "East to St. Capitonlina Abbey";
+	mes "West to Mt. Mjolnir.";
+	close;
+}
+
+prt_monk,52,257,3	script	Board#sgn::72	837,{
+	mes "St. Capitolina Abbey.";
+	mes "Reference for monks across all Midgard.";
+	close;
+}
+
+moc_fild04,231,332,5	script	Board#sgn::73	858,{
+	mes "Caution: Anthell north entrance.";
+	close;
+}
+
+moc_fild04,207,331,4	script	Board#sgn::74	858,{
+	mes "Caution: Anthell north entrance.";
+	close;
+}
+
+cmd_fild07,186,342,4	script	Board#sgn::75	835,{
+	mes "South to Pharos.";
+	mes "East or north to Saint Darmain.";
+	close;
+}
+
+cmd_fild06,186,342,4	script	Board#sgn::76	835,{
+	mes "South to Pharos.";
+	mes "East to Saint Darmain.";
+	mes "West to Comodo.";
+	close;
+}
+
+cmd_fild06,205,128,3	script	Board#sgn::77	837,{
+	mes "You are entering the ruins";
+	mes "of the Saint Darmain Fortress.";
+	close;
+}
+
+cmd_fild05,148,30,4	script	Board#sgn::78	837,{
+	mes "Papuchica Forest ahead.";
+	close;
+}
+
+cmd_fild08,205,177,5	script	Board#sgn::79	837,{
+	mes "You are entering the ruins";
+	mes "of the Saint Darmain Fortress.";
+	close;
+}
+
+cmd_fild08,326,181,4	script	Board#sgn::80	835,{
+	mes "East to Morroc.";
+	mes "West to Saint Darmain.";
+	close;
+}
+
+cmd_fild09,292,171,5	script	Board#sgn::81	837,{
+	mes "You are entering the ruins";
+	mes "of the Saint Darmain Fortress.";
+	close;
+}
+
+cmd_fild09,326,181,4	script	Board#sgn::82	835,{
+	mes "West to Pharos.";
+	mes "North east to Morroc.";
+	close;
+}
+
+cmd_fild03,180,130,5	script	Board#sgn::83	837,{
+	mes "Papuchica Forest ahead.";
+	close;
+}
+
+cmd_fild04,187,363,1	script	Board#sgn::84	837,{
+	mes "Kokomo Beach ahead.";
+	close;
+}
+
+cmd_fild02,217,370,7	script	Board#sgn::85	837,{
+	mes "Kokomo Beach ahead.";
+	close;
+}
+
+cmd_fild01,220,41,4	script	Board#sgn::86	837,{
+	mes "You are entering the Papuchica Forest.";
+	close;
+}
+
+cmd_fild01,32,321,4	script	Board#sgn::87	837,{
+	mes "You are entering the Papuchica Forest.";
+	close;
+}
+
+cmd_fild01,42,323,4	script	Board#sgn::88	835,{
+	mes "West to Comodo.";
+	mes "South to Kokomo Beach";
+	close;
+}
+
+cmd_fild01,70,361,7	script	Board#sgn::89	837,{
+	mes "You are entering the Papuchica Forest.";
+	close;
+}
+
+cmd_fild01,170,362,7	script	Board#sgn::90	837,{
+	mes "Papuchica Forest ahead.";
+	close;
+}
+
+moc_fild18,162,358,4	script	Board#sgn::91	835,{
+	mes "West to St Darmain Fortress.";
+	mes "East to Sandstorm Island.";
+	mes "North to Morroc.";
+	close;
+}
+
+
+moc_fild17,43,293,4	script	Board#sgn::92	835,{
+	mes "West to St Darmain Fortress.";
+	mes "East to Sandstorm Island.";
+	mes "North east to Morroc.";
+	close;
+}
+
+moc_fild16,150,299,3	script	Board#sgn::93	837,{
+	mes "Sandstorm Island.";
+	close;
+}
+
+moc_fild16,260,326,5	script	Board#sgn::94	837,{
+	mes "Sandstorm Island.";
+	close;
+}
+
+moc_fild15,350,32,4	script	Board#sgn::95	835,{
+	mes "West to Morroc.";
+	mes "South to Sandstorm Island.";
+	close;
+}
+
+morocc,146,83,7	script	Bulletin Board#sgn::96	837,{
+	mes "Enjoy Morroc!";
+	mes "Visit the Palace, the thief guild, the Pyramids and Sphinx. Browse rare goods in the largest market around!";
+	close;
+}
+
+cmd_fild07,123,136,5	script	Bulletin Board#sgn::97	837,{
+	mes "Pharos Islet, where the last standing post of the old Sanint Darmain fortress stands.";
+	close;
+}
+
+comodo,210,155,4	script	Bulletin Board#sgn::98	837,{
+	mes "Comodo, the beach town. Home of the greatest endertainment in Midgard.";
+	close;
+}
+
+comodo,326,172,1	script	Board#sgn::99	858,{
+	mes "Mao, the east cave entrance.";
+	close;
+}
+
+cmd_fild01,29,314,7	script	Board#sgn::100	858,{
+	mes "Mao, the east cave entrance.";
+	close;
+}
+
+comodo,33,209,7	script	Board#sgn::101	858,{
+	mes "Karu, the west cave entrance.";
+	close;
+}
+
+comodo,171,349,5	script	Board#sgn::102	858,{
+	mes "Luanda, the north cave entrance.";
+	close;
+}
+
+comodo,157,179,4	script	Board#sgn::103	835,{
+	mes "Up the stairs for the volcano climb.";
+	close;
+}
+
+
+comodo,162,179,4	script	Board#sgn::104	835,{
+	mes "Up the stairs for the volcano climb.";
+	close;
+}
+
+
+um_fild01,33,276,7	script	Board#sgn::105	858,{
+	mes "Luanda, the north cave entrance.";
+	close;
+}
+
+
+um_fild01,43,287,4	script	Bulletin Board#sgn::106	837,{
+	mes "Luluka Jungle ahead.";
+	close;
+}
+
+
+um_fild04,174,104,4	script	Board#sgn::107	835,{
+	mes "North to Umbala.";
+	mes "South to Comodo.";
+	close;
+}
+
+
+umbala,109,288,4	script	Board#sgn::108	858,{
+	mes "Yggdrasil Tree entrance.";
+	close;
+}
+
+
+umbala,136,163,4	script	Bulletin Board#sgn::109	837,{
+	mes "Umbala, the hidden jungle town. Home of the Umbalan tribe and the Yggdrasil Tree.";
+	close;
+}
+
+mjolnir_12,190,42,5	script	Bulletin Board#sgn::110	837,{
+	mes "You are now in the Rune Midgard Kingdom.";
+	close;
+}
+
+mjolnir_12,200,97,3	script	Board#sgn::111	858,{
+	mes "Attention! You are leaving the Rune Midgard Kingdom.";
+	close;
+}
+
+mjolnir_12,188,278,7	script	Board#sgn::112	858,{
+	mes "Attention! You are leaving the Schwartzvald Republic.";
+	close;
+}
+
+mjolnir_12,193,341,4	script	Bulletin Board#sgn::113	837,{
+	mes "You are now in the Schwartzvald Republic.";
+	close;
+}
+
+prt_fild05,267,210,6	script	Board#sgn::114	858,{
+	mes "Prontera Culvert entrance.";
+	close;
+}
+
+prt_fild01,140,366,4	script	Board#sgn::115	858,{
+	mes "Labyrinth Forest entrance. Enter at your own risk.";
+	close;
+}
+
+yuno_fild08,217,196,5	script	Bulletin Board#sgn::116	837,{
+	mes "Kiel Hyre´s old academy. Abandoned now.";
+	close;
+}
+
+yuno_fild08,190,245,7	script	Bulletin Board#sgn::117	837,{
+	mes "Kiel Hyre´s old academy. Abandoned now.";
+	close;
+}
+
+yuno_fild08,217,196,5	script	Bulletin Board#sgn::118	837,{
+	mes "Kiel Hyre´s old academy. Abandoned now.";
+	close;
+}
+
+yuno_fild08,158,194,6	script	Board#sgn::119	858,{
+	mes "Kiel Hyre's Academy entrance, caution!";
+	close;
+}
+
+jupe_cave,55,49,7	script	Board#sgn::120	858,{
+	mes "Attention! Juperos Ruins entrance ahead. Please be carefull.";
+	close;
+}
+
+yuno_fild03,38,144,5	script	Board#sgn::121	858,{
+	mes "Magma Dungeon entrance.";
+	close;
+}
+
+hugel,91,152,4	script	Bulletin Board#sgn::122	837,{
+	mes "Hugel, the quaint garden village. Relax and enjoy our market and the hunter guild. Don't forget to hire a trip to the Odin ruins.";
+	close;
+}
+
+einbech,164,148,4	script	Bulletin Board#sgn::122a	837,{
+	mes "Einbech, Schwartzvald's mining town. Home of the Einbech Mine and the Sword Clan.";
+	close;
+}
+
+einbroch,46,204,5	script	Bulletin Board#sgn::122aa	837,{
+	mes "Einbroch, city of steel, blacksmiths and airships. Beware the polution.";
+	close;
+}
+
+hu_fild05,348,133,4	script	Board#sgn::123	835,{
+	mes "West to Yuno.";
+	mes "East to Hugel.";
+	close;
+}
+
+hu_fild07,173,109,4	script	Board#sgn::124	835,{
+	mes "South to Aldebaran.";
+	mes "North to Hugel.";
+	close;
+}
+
+hu_fild04,375,189,4	script	Board#sgn::125	835,{
+	mes "West to Yuno.";
+	mes "East to Hugel.";
+	close;
+}
+
+hu_fild04,33,131,4	script	Board#sgn::126	835,{
+	mes "West to Yuno.";
+	mes "East to Hugel.";
+	close;
+}
+
+
+ein_fild06,134,45,4	script	Board#sgn::127	835,{
+	mes "North to Yuno.";
+	mes "South to Einbech.";
+	close;
+}
+
+ein_fild06,255,357,2	script	Board#sgn::128	835,{
+	mes "North to Yuno.";
+	mes "South to Einbech.";
+	close;
+}
+
+yuno_fild04,255,40,2	script	Board#sgn::129	835,{
+	mes "North to Yuno.";
+	mes "South to Einbech.";
+	close;
+}
+
+ein_fild10,201,365,2	script	Board#sgn::130	835,{
+	mes "West to Einbech.";
+	mes "West to Einbroch.";
+	mes "North to Yuno.";
+	close;
+}
+
+ein_fild09,39,138,4	script	Board#sgn::131	835,{
+	mes "North to Einbech.";
+	mes "West to Einbroch.";
+	close;
+}
+
+ein_fild09,325,351,4	script	Board#sgn::132	835,{
+	mes "North to Einbech.";
+	mes "West to Einbroch.";
+	close;
+}
+
+ein_fild08,360,136,4	script	Board#sgn::133	835,{
+	mes "North to Einbroch.";
+	mes "East to Einbech.";
+	close;
+}
+
+tha_scene01,143,202,4	script	Board#sgn::134	858,{
+	mes "Attention! Entance to Thanatos Tower ahead. The tower has recently been abandoned and is now habitated by monsters.";
+	close;
+}
+
+
+lhz_fild03,219,104,1	script	Bulletin Board#sgn::135	837,{
+	mes "You are now in the Schwartzvald Republic.";
+	close;
+}
+
+lhz_fild03,147,112,5	script	Bulletin Board#sgn::136	837,{
+	mes "You are now in the Arunafeltz States.";
+	close;
+}
+
+lhz_fild03,214,300,2	script	Bulletin Board#sgn::137	837,{
+	mes "You are now in the Schwartzvald Republic.";
+	close;
+}
+
+lhz_fild03,156,331,5	script	Bulletin Board#sgn::138	837,{
+	mes "You are now in the Arunafeltz States.";
+	close;
+}
+
+lhz_fild03,360,136,4	script	Board#sgn::139	835,{
+	mes "East to Einbroch.";
+	mes "West to Lighthalzen.";
+	close;
+}
+
+lhz_fild03,163,346,2	script	Board#sgn::140	835,{
+	mes "East to Einbroch.";
+	mes "North to Lighthalzen.";
+	mes "North to Dicastes.";
+	close;
+}
+
+lhz_fild02,36,215,0	script	Board#sgn::141	835,{
+	mes "East to Einbroch.";
+	mes "West to Lighthalzen.";
+	mes "North-West to Dicastes.";
+	close;
+}
+
+lhz_fild01,291,378,6	script	Board#sgn::142	835,{
+	mes "South to Lighthalzen.";
+	mes "North to Dicastes.";
+	close;
+}
+
+ra_fild06,254,373,2	script	Board#sgn::143	835,{
+	mes "West to Rachel.";
+	mes "South to Lighthalzen.";
+	mes "North to Dicastes.";
+	close;
+}
+
+ra_fild06,368,228,4	script	Board#sgn::144	835,{
+	mes "West to Rachel.";
+	mes "South to Lighthalzen.";
+	mes "North to Dicastes.";
+	close;
+}
+
+dic_fild01,67,36,4	script	Board#sgn::145	835,{
+	mes "South to Lighthalzen.";
+	mes "North to Dicastes.";
+	close;
+}
+
+
+ein_fild05,167,363,7	script	Board#sgn::146	858,{
+	mes "Einbroch Mining Complex ahead.";
+	close;
+}
+
+
+ein_fild05,366,186,5	script	Board#sgn::147	858,{
+	mes "Einbroch Mining Complex ahead.";
+	close;
+}
+
+ein_fild04,188,114,4	script	Board#sgn::148	858,{
+	mes "Einbroch Mining Complex ahead.";
+	close;
+}
+
+ein_fild03,292,181,7	script	Board#sgn::149	858,{
+	mes "Einbroch Mining Complex ahead. -  Schwartzvald Section.";
+	close;
+}
+
+ein_fild03,147,270,0	script	Board#sgn::150	858,{
+	mes "Einbroch Mining Complex ahead. -  Schwartzvald Section.";
+	close;
+}
+
+ein_fild03,97,178,3	script	Board#sgn::151	858,{
+	mes "Einbroch Mining Complex ahead. -  Arunafeltz Section.";
+	close;
+}
+
+ein_fild03,137,35,6	script	Board#sgn::152	858,{
+	mes "Einbroch Mining Complex ahead. -  Arunafeltz Section.";
+	close;
+}
+
+lighthalzen,204,313,4	script	Bulletin Board#sgn::153	837,{
+	mes "Lighthalzen, the Prosperity State. Our flourishing city-state is the home of Midgard´s largest companies and with state of the art research techniques.";
+	close;
+}
+
+
+lhz_fild01,227,102,4	script	Board#sgn::154	858,{
+	mes "Monument of Success.";
+	close;
+}
+
+lhz_fild01,224,143,0	script	Board#sgn::155	858,{
+	mes "Monument of Success.";
+	close;
+}
+
+dicastes01,211,208,5	script	Bulletin Board#sgn::156	837,{
+	mes "Dicastes, the city hidden in Arunafeltz's Mountain State.";
+	close;
+}
+
+
+ra_fild04,314,372,4	script	Board#sgn::157	835,{
+	mes "South to Rachel.";
+	mes "North to Hel's Camp.";
+	close;
+}
+
+ra_fild04,267,62,2	script	Board#sgn::158	835,{
+	mes "South to Rachel.";
+	mes "North to Hel's Camp.";
+	close;
+}
+
+ra_fild01,63,244,4	script	Board#sgn::159	858,{
+	mes "Mountain path to Hel's Pass ahead.";
+	close;
+}
+
+ra_fild01,237,328,4	script	Board#sgn::160	858,{
+	mes "Ice Cave entrance.";
+	close;
+}
+
+
+
+
+
+
+lhz_fild01,360,227,4	script	Bulletin Board#sgn::161	837,{
+	mes "You are now in Fortu Luna.";
+	close;
+}
+
+
+lhz_fild02,39,233,3	script	Bulletin Board#sgn::162	837,{
+	mes "Grim Reaper's Chasm ahead.";
+	close;
+}
+
+
+lhz_fild03,357,290,4	script	Bulletin Board#sgn::163	837,{
+	mes "Grim Reaper's Chasm ahead.";
+	close;
+}
+
+
+ein_fild03,73,183,3	script	Bulletin Board#sgn::164	837,{
+	mes "Grim Reaper's Chasm ahead.";
+	close;
+}
+
+ein_fild03,260,166,7	script	Bulletin Board#sgn::165	837,{
+	mes "Grim Reaper's Chasm ahead.";
+	close;
+}
+
+ein_fild03,157,267,6	script	Bulletin Board#sgn::166	837,{
+	mes "Grim Reaper's Chasm ahead.";
+	close;
+}
+
+ra_fild06,364,218,7	script	Bulletin Board#sgn::167	837,{
+	mes "You are now in Fortu Luna.";
+	close;
+}
+
+ra_fild06,24,285,3	script	Bulletin Board#sgn::168	837,{
+	mes "You are now in Fortu Luna.";
+	close;
+}
+
+ra_fild05,342,265,7	script	Bulletin Board#sgn::169	837,{
+	mes "Audumura Grasslands ahead.";
+	close;
+}
+
+ra_fild04,30,183,3	script	Bulletin Board#sgn::170	837,{
+	mes "Audumura Grasslands ahead.";
+	close;
+}
+
+
+ra_fild03,364,168,6	script	Bulletin Board#sgn::171	837,{
+	mes "Entering the Ida Plane.";
+	close;
+}
+
+ra_fild04,259,67,5	script	Bulletin Board#sgn::172	837,{
+	mes "Audumura Grasslands ahead.";
+	close;
+}
+
+ra_fild08,291,360,0	script	Bulletin Board#sgn::173	837,{
+	mes "Entering the Ida Plane.";
+	close;
+}
+
+ra_fild06,241,373,7	script	Bulletin Board#sgn::174	837,{
+	mes "You are now in Fortu Luna.";
+	close;
+}
+
+dic_fild01,74,43,4	script	Bulletin Board#sgn::175	837,{
+	mes "Entering the Kamidal Mountains.";
+	close;
+}
+
+ein_fild07,242,102,0	script	Bulletin Board#sgn::176	837,{
+	mes "Meridel River Bridge.";
+	close;
+}
+
+ein_fild07,195,71,3	script	Bulletin Board#sgn::177	837,{
+	mes "Meridel River Bridge.";
+	close;
+}
+
+ein_fild10,200,255,0	script	Bulletin Board#sgn::177a	837,{
+	mes "Steel Islands Bridge.";
+	close;
+}
+
+ein_fild10,193,136,5	script	Bulletin Board#sgn::177b	837,{
+	mes "Steel Islands Bridge.";
+	close;
+}
+
+ein_fild09,187,72,5	script	Bulletin Board#sgn::178	837,{
+	mes "Steel Islands Bridge.";
+	close;
+}
+
+ein_fild09,136,116,1	script	Bulletin Board#sgn::179	837,{
+	mes "Steel Islands Bridge.";
+	close;
+}
+
+ein_fild08,176,66,5	script	Bulletin Board#sgn::180	837,{
+	mes "Steel Islands Bridge.";
+	close;
+}
+
+ein_fild08,153,97,1	script	Bulletin Board#sgn::181	837,{
+	mes "Steel Islands Bridge.";
+	close;
+}
+
+ein_fild08,161,37,7	script	Board#sgn::182	858,{
+	mes "Attention: Path closed. Mining Operation in Progress.";
+	close;
+}
+
+
+ein_fild06,153,97,1	script	Bulletin Board#sgn::183	837,{
+	mes "El Mes Plateau ahead.";
+	close;
+}
+
+
+ein_fild06,52,169,3	script	Bulletin Board#sgn::184	837,{
+	mes "You are now on El Mes Plateau.";
+	close;
+}
+
+
+ein_fild06,335,176,5	script	Bulletin Board#sgn::185	837,{
+	mes "You are now on El Mes Plateau.";
+	close;
+}
+
+yuno_fild07,85,220,2	script	Bulletin Board#sgn::186	837,{
+	mes "You are now on El Mes Gorge.";
+	close;
+}
+
+yuno_fild07,90,105,3	script	Bulletin Board#sgn::187	837,{
+	mes "El Mes Gorge ahead.";
+	close;
+}
+
+yuno_fild07,334,280,7	script	Bulletin Board#sgn::188	837,{
+	mes "El Mes Gorge ahead.";
+	close;
+}
+
+yuno_fild08,37,284,4	script	Bulletin Board#sgn::189	837,{
+	mes "The Barren Lands.";
+	close;
+}
+
+yuno_fild07,184,343,1	script	Bulletin Board#sgn::190	837,{
+	mes "El Mes Gorge ahead.";
+	close;
+}
+
+yuno_fild03,180,31,4	script	Bulletin Board#sgn::191	837,{
+	mes "El Mes Plateau ahead.";
+	close;
+}
+
+yuno_fild07,356,81,4	script	Bulletin Board#sgn::192	837,{
+	mes "El Mes Gorge ahead.";
+	close;
+}
+
+yuno_fild08,51,82,4	script	Bulletin Board#sgn::193	837,{
+	mes "The Barren Lands.";
+	close;
+}
+
+yuno_fild09,290,50,3	script	Bulletin Board#sgn::194	837,{
+	mes "The Barren Lands.";
+	close;
+}
+
+yuno_fild09,77,28,3	script	Bulletin Board#sgn::195	837,{
+	mes "The Barren Lands.";
+	close;
+}
+
+yuno_fild09,47,364,0	script	Bulletin Board#sgn::196	837,{
+	mes "The Barren Lands.";
+	close;
+}
+
+
+yuno_fild09,54,367,2	script	Board#sgn::197	835,{
+	mes "South to Aldebaran.";
+	mes "North to Hugel.";
+	close;
+}
+
+hu_fild07,81,60,3	script	Bulletin Board#sgn::198	837,{
+	mes "Dragonira ahead.";
+	close;
+}
+
+
+hu_fild07,237,133,4	script	Bulletin Board#sgn::199	837,{
+	mes "Dragonira ahead.";
+	close;
+}
+
+hu_fild07,224,141,5	script	Board#sgn::200	835,{
+	mes "South to Aldebaran.";
+	mes "North to Hugel.";
+	close;
+}
+
+
+yuno_fild02,117,366,0	script	Bulletin Board#sgn::201	837,{
+	mes "The Barren Lands.";
+	close;
+}
+
+hu_fild04,121,141,4	script	Bulletin Board#sgn::202	837,{
+	mes "Dragonira ahead.";
+	close;
+}
+
+yuno_fild02,23,345,4	script	Bulletin Board#sgn::6aaa	837,{
+	mes "The Barren Lands.";
+	close;
+}
+
+yuno_fild03,372,331,6	script	Bulletin Board#sgn::203	837,{
+	mes "You are now in El Mes Plateau.";
+	close;
+}
+
+yuno_fild03,379,333,4	script	Board#sgn::204	835,{
+	mes "West to Yuno.";
+	mes "North East to Hugel.";
+	mes "South East to Aldebaran.";
+	close;
+}
+
+yuno_fild06,160,363,1	script	Bulletin Board#sgn::205	837,{
+	mes "You are now in El Mes Plateau.";
+	close;
+}
+
+yuno_fild06,166,369,4	script	Board#sgn::206	835,{
+	mes "South to Yuno.";
+	close;
+}
+
+hu_fild01,129,41,5	script	Bulletin Board#sgn::207	837,{
+	mes "Thanatos Scar ahead.";
+	close;
+}
+
+hu_fild01,362,195,4	script	Bulletin Board#sgn::208	837,{
+	mes "Thanatos Scar ahead.";
+	close;
+}
+
+hu_fild02,32,163,1	script	Bulletin Board#sgn::209	837,{
+	mes "You are now in Dragonira.";
+	close;
+}
+
+hu_fild02,37,174,4	script	Board#sgn::210	835,{
+	mes "East to Hugel.";
+	close;
+}
+
+hu_fild06,34,122,3	script	Bulletin Board#sgn::211	837,{
+	mes "Odin's Beach ahead.";
+	close;
+}
+
+mjolnir_05,217,376,0	script	Bulletin Board#sgn::212	837,{
+	mes "Prontera Forest ahead.";
+	close;
+}
+
+mjolnir_05,235,56,4	script	Board#sgn::213	835,{
+	mes "South to Prontera.";
+	close;
+}
+
+mjolnir_05,88,173,3	script	Bulletin Board#sgn::214	837,{
+	mes "Prontera Forest.";
+	close;
+}
+
+ein_fild02,346,253,5	script	Bulletin Board#sgn::215	837,{
+	mes "Autum Path.";
+	close;
+}
+
+yuno_fild04,38,287,3	script	Bulletin Board#sgn::216	837,{
+	mes "El Mes Plateau.";
+	close;
+}
+
+ein_fild02,139,57,4	script	Bulletin Board#sgn::217a	837,{
+	mes "Autum Path.";
+	close;
+}
+
+ein_fild01,336,371,5	script	Bulletin Board#sgn::217	837,{
+	mes "Autum Path.";
+	close;
+}
+
+yuno_fild05,53,343,1	script	Bulletin Board#sgn::218	837,{
+	mes "El Mes Plateau ahead.";
+	close;
+}
+
+mid_camp,321,140,1	script	Board#sgn::219	858,{
+	mes "Mountain path Audumura Grasslands ahead.";
+	close;
+}
+
+mid_camp,15,148,5	script	Board#sgn::220	858,{
+	mes "Attention: Path to Nifflheim Forest.";
+	close;
+}
+
+mid_camp,12,211,7	script	Board#sgn::221	858,{
+	mes "Attention: Path to Nifflheim Forest.";
+	close;
+}
+
+niflheim,345,233,5	script	Bulletin Board#sgn::222	837,{
+	mes "Nifflheim ahead.";
+	close;
+}
+
+niflheim,323,179,7	script	Bulletin Board#sgn::223	837,{
+	mes "Nifflheim ahead.";
+	close;
+}
+
+
+mid_camp,211,237,4	script	Bulletin Board#sgn::224	837,{
+	mes "Hel's Camp. Expanding the Arunafeltz civilization. Join our settlers to build the next big State!";
+	close;
+}
+
+
+niflheim,201,188,3	script	Bulletin Board#sgn::224a	837,{
+	mes "Nifflheim, the Death State. The land where all the souls of Midgard go to rest.";
+	close;
+}
+
+niflheim,21,156,5	script	Board#sgn::225	858,{
+	mes "Attention: Valley of Gyoll path to the West. It has been abandoned and taken by monsters.";
+	close;
+}
+nif_fild01,339,327,3	script	Board#sgn::226	858,{
+	mes "Attention: Valley of Gyoll path to the East. It has been abandoned and taken by monsters.";
+	close;
+}
+
+nif_fild01,338,315,7	script	Board#sgn::227	858,{
+	mes "Skellington ruins ahead.";
+	close;
+}
+
+nif_fild02,32,315,4	script	Board#sgn::228	835,{
+	mes "East to Nifflheim.";
+	mes "West to Skellington ruins.";
+	close;
+}
+
+veins,223,112,5	script	Bulletin Board#sgn::229	837,{
+	mes "Veins, the Canyon State. The last border in Arunafeltz. Home to the Crossbow clan. Beware of stalkers.";
+	close;
+}
+
+ve_fild04,112,72,5	script	Bulletin Board#sgn::230	837,{
+	mes "Black Canyon Trail.";
+	close;
+}
+
+ve_fild04,52,253,3	script	Bulletin Board#sgn::231	837,{
+	mes "Black Canyon Trail.";
+	close;
+}
+
+ve_fild01,189,32,4	script	Board#sgn::232	835,{
+	mes "North East to Rachel.";
+	mes "South to Veins.";
+	close;
+}
+
+ve_fild01,250,360,1	script	Bulletin Board#sgn::233	837,{
+	mes "Entering Black Canyon Trail.";
+	close;
+}
+
+ra_fild11,221,46,4	script	Bulletin Board#sgn::234	837,{
+	mes "You are now on Ida Plane.";
+	close;
+}
+
+ra_fild10,373,294,5	script	Bulletin Board#sgn::235	837,{
+	mes "Oz Cliffs ahead.";
+	close;
+}
+
+ra_fild11,30,297,4	script	Board#sgn::236	835,{
+	mes "East to Rachel.";
+	mes "South to Veins.";
+	close;
+}
+
+ra_fild11,196,325,7	script	Bulletin Board#sgn::237	837,{
+	mes "Ida Plane.";
+	close;
+}
+
+ra_fild07,215,45,4	script	Bulletin Board#sgn::238	837,{
+	mes "Oz Cliffs ahead.";
+	close;
+}
+
+ra_fild02,356,265,6	script	Bulletin Board#sgn::239	837,{
+	mes "Oz Cliffs ahead.";
+	close;
+}
+
+ve_fild01,189,32,4	script	Board#sgn::240	835,{
+	mes "East to Lighthalzen and Dicastes.";
+	mes "South to Rachel and Veins.";
+	close;
+}
+
+ra_fild03,33,300,3	script	Bulletin Board#sgn::241	837,{
+	mes "You are now on the Ida Plane.";
+	close;
+}
+
+ra_fild13,286,338,7	script	Bulletin Board#sgn::242	837,{
+	mes "Beach of Tears ahead.";
+	close;
+}
+
+ra_fild12,309,39,3	script	Bulletin Board#sgn::243	837,{
+	mes "You are now on the Ida Plane.";
+	close;
+}
+
+ra_fild13,36,313,3	script	Bulletin Board#sgn::244	837,{
+	mes "Beach of Tears ahead.";
+	close;
+}
+
+ve_fild02,376,301,7	script	Bulletin Board#sgn::245	837,{
+	mes "Black Canyon Trail.";
+	close;
+}
+
+ra_fild12,286,210,4	script	Board#sgn::246	835,{
+	mes "West to Rachel.";
+	close;
+}
+
+ra_fild12,289,209,4	script	Bulletin Board#sgn::247	837,{
+	mes "Welcome to Arunafeltz's Ida Plane.";
+	close;
+}
+
+ra_fild12,296,201,3	script	Board#sgn::248	858,{
+	mes "Arunafeltz International Airship Station.";
+	next;
+	mes "Ida Plane - Yuno - Izlude route.";
+	close;
+}
+
+ve_fild03,174,239,3	script	Board#sgn::249	858,{
+	mes "Thor Volcano entrance. Proceed with extreme caution.";
+	close;
+}
+
+nameless_n,240,237,4	script	Bulletin Board#sgn::250	837,{
+	mes "Welcome to Tidal Island. Stay away from the Central Abbey.";
+	close;
+}
+
+aru_gld,199,257,1	script	Board#sgn::251	858,{
+	mes "Valfreyja castles";
+	mes "have been decomissioned";
+	mes "and access is forbidden.";
+	mes "Please beware of monsters";
+	mes "escaped from the old Guild Dungeons.";
+	close;
+}
+
+ve_fild02,205,31,3	script	Bulletin Board#sgn::252	837,{
+	mes "You are now on the Black Canyon Trail.";
+	close;
+}
+
+nameless_n,172,189,5	script	Board#sgn::253	858,{
+	mes "Cursed Abbey entrance. Proceed with extreme caution.";
+	close;
+}
+
+prt_fild04,336,323,5	script	Bulletin Board#sgn::254	837,{
+	mes "Geffen Delta and Bay ahead.";
+	close;
+}
+
+prt_fild04,367,163,5	script	Bulletin Board#sgn::255	837,{
+	mes "Geffen Delta and Bay ahead.";
+	close;
+}
+
+ama_fild01,169,326,5	script	Board#sgn::256	858,{
+	mes "Tatami Maze ahead.";
+	close;
+}
+
+ayothaya,203,176,3	script	Bulletin Board#sgn::257	837,{
+	mes "Welcome to Ayothaya, the far east independant island-state. Enjoy our fish and a visit to our palace.";
+	close;
+}
+
+amatsu,184,166,4	script	Bulletin Board#sgn::258	837,{
+	mes "Amatu, the land of destiny. Brave knights train at our fortress.";
+	close;
+}
+
+ayo_fild01,65,235,3	script	Bulletin Board#sgn::259	837,{
+	mes "Iao Vale ahead.";
+	close;
+}
+
+ayo_fild02,276,153,3	script	Board#sgn::260	858,{
+	mes "Ayothaya Ruins entrance.";
+	close;
+}

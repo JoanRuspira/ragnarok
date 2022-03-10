@@ -1,30 +1,3 @@
-//===== rAthena Script =======================================
-//= Clan masters
-//===== Description: =========================================
-//= The clan master NPCs that allow you to join and leave
-//= one of the clans.
-//===== Changelogs: ==========================================
-//= 1.0 Initial release. [Lemongrass]
-//= 1.1 iRO translation. [RagnarokNova]
-//= 1.2 Dialogue cleanup. [Aleos]
-//= 1.3 Added clan helper. [exneval]
-//============================================================
-
-prontera,138,183,7	script	Clan Helper	703,{
-	mes "[Clan Helper]";
-	mes "Do you want to build connections without being in a guild?";
-	next;
-	mes "[Clan Helper]";
-	mes "Can't find the perfect guild for yourself?";
-	next;
-	mes "[Clan Helper]";
-	mes "You can join or leave clans freely! Just join!";
-	next;
-	mes "[Clan Helper]";
-	mes "Now, come on in and meet the masters of the Kingdom's best clans!";
-	close;
-}
-
 ein_in01,164,153,2	script	Sword Clan Leader	10058,{
 	cutin "laperm01.bmp", 2;
 	mes "[Raffam Oranpere]";

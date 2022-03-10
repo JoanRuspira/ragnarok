@@ -1,33 +1,4 @@
-//===== rAthena Script =======================================
-//= Comodo Gambling
-//===== By: ==================================================
-//= Reddozen, Cypress, Zefris
-//===== Current Version: =====================================
-//= 1.4c
-//===== Compatible With: =====================================
-//= rAthena Project
-//===== Description: =========================================
-//= Comodo Gambling: Win random Items with 3 Carat Diamonds.
-//===== Additional Comments: =================================
-//= 0.1- so far just a basic setup, and working on the function
-//= 0.2- fixed some spelling errors and set zeny,zeny - (@amount * 55000)[Cypress]
-//= 0.3- Revised the gambling NPC using the official Aegis script [MasterOfMuppets]
-//=      for information. Thanks to Zefris for doing it for me.
-//= 0.4- Fixed an exploit. thanks to reddozen [MasterOfMuppets]
-//= 0.5- Moved item check to the proper place [Lupus]
-//= 1.0- Synced the script with aegis and reformatted it for readability [ultramage]
-//=      Corrected the npc giving you Cotton Shirt instead of Adventurer's Suit[1]
-//=      Added comments to items so people know what the NPC is about
-//=      Added missing emotions and cutins
-//= 1.1- Updated prizes according to 11.1 NPC [Paradox924X]
-//= 1.2 Corrected NPC names to fall within proper restrictions. [L0ne_W0lf]
-//= 1.3 Added missing item. [Kisuka]
-//= 1.4 Updated Script to match AEGIS file. [Masao]
-//= 1.4a Minor script updates. [Euphy]
-//= 1.4b Minor fix about Weight and miscs updates. [Capuche]
-//= 1.4c Another clean-up. [Capuche]
-//============================================================ 
-//cutin "katsua01.bmp",2;
+
 function	script	ComodoBlackJack	{
 	callfunc "F_ClearGarbage"; // Clear outdated, unused variables
 	.@quantity = getarg(0);
@@ -93,7 +64,6 @@ function	script	ComodoBlackJack	{
 	}
 }
 
-
 function	script	ComodoBet	{
 	callfunc "F_ClearGarbage"; // Clear outdated, unused variables
 	.@type$ = getarg(0);
@@ -135,7 +105,6 @@ function	script	ComodoBet	{
 	delitem 7517,.@quantity;
 	close;
 }
-
 
 -	script	Coin Dealer#newbe10::CoinDealer	-1,{
 	mes "[Coin Dealer]";
@@ -295,7 +264,6 @@ function	script	ComodoBet	{
 		close;
 	}
 }
-
 
 -	script	Roulette Dealer#newbe10::RouletteDealer	-1,{
 	mes "[Roulette Dealer]";
@@ -477,9 +445,6 @@ function	script	ComodoBet	{
 	}
 }
 
-
-
-
 -	script	Blackjack Dealer#newbe10::BlackjackDealer	-1,{
 	mes "[Blackjack Dealer]";
 	mes "Welcome to the Blackjack table!";
@@ -517,9 +482,6 @@ function	script	ComodoBet	{
 	}	
 	next;
 }
-
-			
-//set .@str$,"Would you like to know more locations?";
 
 cmd_in02,174,132,6	duplicate(CoinDealer)	Casino Coin Dealer#coin01	798
 cmd_in02,211,101,5	duplicate(CoinDealer)	Casino Coin Dealer#coin02	904
