@@ -1525,6 +1525,11 @@ ayo_fild01,65,235,3	script	Bulletin Board#sgn::259	837,{
 }
 
 ayo_fild02,276,153,3	script	Board#sgn::260	858,{
-	mes "Ayothaya Ruins entrance.";
+	mes "Ancient Shrine entrance.";
+	close;
+}
+
+ama_fild01,61,68,3	script	Bulletin Board#sgn::261	837,{
+	mes "Amatsu Forest.";
 	close;
 }

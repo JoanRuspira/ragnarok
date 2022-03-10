@@ -37939,3 +37939,169 @@ Body:
       Costume_Head_Top: true
     EquipLevelMin: 1
     View: 1224
+  - Id: 19618
+    AegisName: C_Mask_Of_Fox
+    Name: Costume Kitsune Mask
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    View: 153
+  - Id: 19624
+    AegisName: C_Round_Eyes
+    Name: Costume Blank Eyes
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Mid: true
+    View: 185
+  - Id: 20149
+    AegisName: C_Hexagon_Spectacles
+    Name: Costume Hexagon Glasses
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Mid: true
+    EquipLevelMin: 1
+    View: 822
+  - Id: 20150
+    AegisName: C_Wind_Fan
+    Name: Costume Wind Fan
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Low: true
+    EquipLevelMin: 1
+    View: 1051
+  - Id: 20152
+    AegisName: C_Straw_Rice_Bag
+    Name: Costume Straw Rice Bag
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+      Costume_Head_Mid: true
+      Costume_Head_Low: true
+    EquipLevelMin: 1
+    View: 1273
+  - Id: 20153
+    AegisName: C_Monochrome_Cap
+    Name: Costume Monochrome Cap
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 1274
+  - Id: 20154
+    AegisName: C_Maple_Which_Falls
+    Name: Costume Maple Which Falls
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Mid: true
+    EquipLevelMin: 1
+    View: 1275
+    EquipScript: |
+      sc_start SC_MAPLE_FALLS,INFINITE_TICK,0;
+    UnEquipScript: |
+      sc_end SC_MAPLE_FALLS;
+  - Id: 20105
+    AegisName: C_Fish_Head_Hat
+    Name: Costume Fish Head
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 386
+  - Id: 20106
+    AegisName: C_Classic_Hat
+    Name: Costume Classic Hat
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 475
+  - Id: 20107
+    AegisName: C_Fish_In_Mouth
+    Name: Costume Fish In Mouth
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Low: true
+    EquipLevelMin: 1
+    View: 406
+  - Id: 20108
+    AegisName: C_Blind_Glasses
+    Name: Costume Blind Glasses
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Mid: true
+    EquipLevelMin: 1
+    View: 813
+  - Id: 20109
+    AegisName: C_Jolly_Roger
+    Name: Costume Jolly Roger Hat
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 962
+  - Id: 20110
+    AegisName: C_Coiledup_Snake
+    Name: Costume Coiledup Snake
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 1258
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+  - Id: 31058
+    AegisName: C_Gelato_Hat
+    Name: Costume Gelato Hat
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 777
+  - Id: 31059
+    AegisName: C_Sailor_Hat
+    Name: Costume Sailor Hat
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 798
+  - Id: 31060
+    AegisName: C_Starfish_Headband
+    Name: Costume Starfish Headband
+    Type: Armor
+    Buy: 500000
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 1
+    View: 793
+  - Id: 19830
+    AegisName: C_Sunglasses
+    Name: Costume Sunglasses
+    Type: Armor
+    Buy: 500000
+    Buy: 10
+    Locations:
+      Costume_Head_Mid: true
+    EquipLevelMin: 1
+    View: 12
