@@ -1,359 +1,359 @@
-cmd_fild07,265,140,1	script	Pharos Guard#pharos:601a33c2	825,{
+cmd_fild07,265,140,1	script	Pharos Guard#pharos:f3652113	825,{
 	npctalk "Welcome to Pharos";
 	end;
 }
 
-cmd_fild07,175,171,7	script	Pharos Guard#pharos:8a4fd76d	825,{
+cmd_fild07,175,171,7	script	Pharos Guard#pharos:7ed8e89e	825,{
 	npctalk "Welcome to Pharos";
 	end;
 }
 
-cmd_fild07,280,92,3	script	Pharos Visitor#pharos:ec7ee2f1	828,{
+cmd_fild07,280,92,3	script	Pharos Visitor#pharos:90584ca6	636,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,292,91,4	script	Pharos Visitor#pharos:645263f7	51,{
+cmd_fild07,292,91,4	script	Pharos Visitor#pharos:35d57649	69,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,292,71,7	script	Pharos Visitor#pharos:e3323a17	879,{
+cmd_fild07,292,71,7	script	Pharos Visitor#pharos:8e41c605	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,276,58,2	script	Pharos Visitor#pharos:1a202735	751,{
+cmd_fild07,276,58,2	script	Pharos Visitor#pharos:812fab6e	86,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,274,58,6	script	Pharos Visitor#pharos:8b990f54	740,{
+cmd_fild07,274,58,6	script	Pharos Visitor#pharos:31f2e8aa	751,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,270,92,6	script	Pharos Visitor#pharos:a1b38adc	740,{
+cmd_fild07,270,92,6	script	Pharos Visitor#pharos:9756ce5f	798,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,279,119,7	script	Pharos Visitor#pharos:44ce469c	744,{
+cmd_fild07,279,119,7	script	Pharos Visitor#pharos:c67f486a	908,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,300,114,1	script	Pharos Visitor#pharos:d615bcbe	85,{
+cmd_fild07,300,114,1	script	Pharos Visitor#pharos:902bde9c	125,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,284,108,5	script	Pharos Visitor#pharos:916df547	86,{
+cmd_fild07,284,108,5	script	Pharos Visitor#pharos:8a31f2c2	86,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,263,132,4	script	Pharos Visitor#pharos:9dd381db	741,{
+cmd_fild07,263,132,4	script	Pharos Visitor#pharos:df350aa9	84,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,254,116,7	script	Pharos Visitor#pharos:44283477	644,{
+cmd_fild07,254,116,7	script	Pharos Visitor#pharos:d31ce8c5	642,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,238,119,1	script	Pharos Visitor#pharos:3fe885c5	49,{
+cmd_fild07,238,119,1	script	Pharos Visitor#pharos:efa6f40e	779,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,221,124,6	script	Pharos Visitor#pharos:f80840e6	742,{
+cmd_fild07,221,124,6	script	Pharos Visitor#pharos:52a1e8a6	733,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,224,105,5	script	Pharos Visitor#pharos:c245fe13	89,{
+cmd_fild07,224,105,5	script	Pharos Visitor#pharos:738f8677	732,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,227,93,0	script	Pharos Visitor#pharos:4643008c	644,{
+cmd_fild07,227,93,0	script	Pharos Visitor#pharos:39937298	70,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,215,81,2	script	Pharos Visitor#pharos:622121be	734,{
+cmd_fild07,215,81,2	script	Pharos Visitor#pharos:7eed6c60	84,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,202,103,1	script	Pharos Visitor#pharos:ccfdcbb9	79,{
+cmd_fild07,202,103,1	script	Pharos Visitor#pharos:07bcfdbd	70,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,187,106,6	script	Pharos Visitor#pharos:0d7fb149	734,{
+cmd_fild07,187,106,6	script	Pharos Visitor#pharos:a4d9c9e6	645,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,178,118,0	script	Pharos Visitor#pharos:82b0e0e9	755,{
+cmd_fild07,178,118,0	script	Pharos Visitor#pharos:0a447210	89,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,182,131,1	script	Pharos Visitor#pharos:1887e046	741,{
+cmd_fild07,182,131,1	script	Pharos Visitor#pharos:4ee50d9e	751,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,174,135,4	script	Pharos Visitor#pharos:bed6288f	828,{
+cmd_fild07,174,135,4	script	Pharos Visitor#pharos:445330f1	828,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,178,143,3	script	Pharos Visitor#pharos:0b58c213	69,{
+cmd_fild07,178,143,3	script	Pharos Visitor#pharos:f6a0e6de	79,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,175,152,7	script	Pharos Visitor#pharos:0d9f020f	70,{
+cmd_fild07,175,152,7	script	Pharos Visitor#pharos:8a0c629e	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,189,162,5	script	Pharos Visitor#pharos:e2170b1e	69,{
+cmd_fild07,189,162,5	script	Pharos Visitor#pharos:ba8f5e51	124,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,176,165,4	script	Pharos Visitor#pharos:582e0cce	67,{
+cmd_fild07,176,165,4	script	Pharos Visitor#pharos:a45e7a84	642,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,127,132,5	script	Pharos Visitor#pharos:f9e081e9	751,{
+cmd_fild07,127,132,5	script	Pharos Visitor#pharos:d51a540f	67,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,128,139,7	script	Pharos Visitor#pharos:2da42b51	79,{
+cmd_fild07,128,139,7	script	Pharos Visitor#pharos:d07860d3	67,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,138,126,1	script	Pharos Visitor#pharos:4c698348	753,{
+cmd_fild07,138,126,1	script	Pharos Visitor#pharos:71c6a14e	95,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,130,234,6	script	Pharos Visitor#pharos:e37f6e55	84,{
+cmd_fild07,130,234,6	script	Pharos Visitor#pharos:54bdc123	124,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,132,124,2	script	Pharos Visitor#pharos:853b7afd	68,{
+cmd_fild07,132,124,2	script	Pharos Visitor#pharos:2a9c538d	740,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,120,114,6	script	Pharos Visitor#pharos:4de38df5	755,{
+cmd_fild07,120,114,6	script	Pharos Visitor#pharos:ecac5b27	430,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,144,120,7	script	Pharos Visitor#pharos:bd4fd4e4	69,{
+cmd_fild07,144,120,7	script	Pharos Visitor#pharos:89b1c5fd	85,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,162,130,5	script	Pharos Visitor#pharos:c7361f7d	741,{
+cmd_fild07,162,130,5	script	Pharos Visitor#pharos:305b79ef	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,137,115,1	script	Pharos Visitor#pharos:96c6c28e	754,{
+cmd_fild07,137,115,1	script	Pharos Visitor#pharos:3937fa5a	908,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,107,122,7	script	Pharos Visitor#pharos:b03c6c5a	95,{
+cmd_fild07,107,122,7	script	Pharos Visitor#pharos:d7dd0cb5	744,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,103,140,2	script	Pharos Visitor#pharos:d708c623	751,{
+cmd_fild07,103,140,2	script	Pharos Visitor#pharos:a01607bb	635,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,90,140,1	script	Pharos Visitor#pharos:80ade6ad	92,{
+cmd_fild07,90,140,1	script	Pharos Visitor#pharos:2fe9f5fd	92,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,98,153,3	script	Pharos Visitor#pharos:13f31108	798,{
+cmd_fild07,98,153,3	script	Pharos Visitor#pharos:6b473d81	124,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,86,167,7	script	Pharos Visitor#pharos:23b0be52	636,{
+cmd_fild07,86,167,7	script	Pharos Visitor#pharos:ff539c7f	86,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,104,162,4	script	Pharos Visitor#pharos:3769e621	95,{
+cmd_fild07,104,162,4	script	Pharos Visitor#pharos:a6024e30	86,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,96,172,7	script	Pharos Visitor#pharos:6d362ae5	642,{
+cmd_fild07,96,172,7	script	Pharos Visitor#pharos:ed05e0e1	79,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,103,185,3	script	Pharos Visitor#pharos:44307b46	92,{
+cmd_fild07,103,185,3	script	Pharos Visitor#pharos:19615508	51,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,94,185,5	script	Pharos Visitor#pharos:f4f252d9	70,{
+cmd_fild07,94,185,5	script	Pharos Visitor#pharos:58cc6053	879,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,83,198,4	script	Pharos Visitor#pharos:73009f16	753,{
+cmd_fild07,83,198,4	script	Pharos Visitor#pharos:a5ad75b7	744,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,79,232,5	script	Pharos Visitor#pharos:8fdd59b6	68,{
+cmd_fild07,79,232,5	script	Pharos Visitor#pharos:0a4517a6	645,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,83,246,0	script	Pharos Visitor#pharos:9c417031	755,{
+cmd_fild07,83,246,0	script	Pharos Visitor#pharos:c87f8958	644,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,90,235,3	script	Pharos Visitor#pharos:d7ecdb6f	645,{
+cmd_fild07,90,235,3	script	Pharos Visitor#pharos:ecd50d9e	733,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,104,233,6	script	Pharos Visitor#pharos:899f24ce	751,{
+cmd_fild07,104,233,6	script	Pharos Visitor#pharos:ce9daea1	430,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,104,208,3	script	Pharos Visitor#pharos:25d60d55	732,{
+cmd_fild07,104,208,3	script	Pharos Visitor#pharos:f654bba2	85,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,90,206,7	script	Pharos Visitor#pharos:75f67443	741,{
+cmd_fild07,90,206,7	script	Pharos Visitor#pharos:96731279	83,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,54,272,4	script	Pharos Visitor#pharos:cb0fde47	751,{
+cmd_fild07,54,272,4	script	Pharos Visitor#pharos:59a795d5	733,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,67,268,5	script	Pharos Visitor#pharos:5edebcc3	125,{
+cmd_fild07,67,268,5	script	Pharos Visitor#pharos:8fb7d9f8	67,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,81,273,2	script	Pharos Visitor#pharos:e289b50e	95,{
+cmd_fild07,81,273,2	script	Pharos Visitor#pharos:bc0e7f36	798,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,192,83,7	script	Pharos Visitor#pharos:4de63972	751,{
+cmd_fild07,192,83,7	script	Pharos Visitor#pharos:b2a75086	641,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,196,154,0	script	Pharos Visitor#pharos:542c7b16	89,{
+cmd_fild07,196,154,0	script	Pharos Visitor#pharos:25026e89	51,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,194,146,5	script	Pharos Visitor#pharos:6f19bc72	755,{
+cmd_fild07,194,146,5	script	Pharos Visitor#pharos:9b696b77	740,{
 	npctalk "npcdialog";
 	end;
 }
-cmd_fild07,187,42,3	script	Pharos Visitor#pharos:5ec9eeb8	741,{
+cmd_fild07,187,42,3	script	Pharos Visitor#pharos:b718aa18	69,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,189,52,5	script	Pharos Visitor#pharos:9d7527b9	745,{
+cmd_fild07,189,52,5	script	Pharos Visitor#pharos:a34cdeab	744,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,199,37,6	script	Pharos Visitor#pharos:f8273798	49,{
+cmd_fild07,199,37,6	script	Pharos Visitor#pharos:d8af5a8c	95,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,211,144,7	script	Pharos Visitor#pharos:dbd56dae	641,{
+cmd_fild07,211,144,7	script	Pharos Visitor#pharos:1c5621ca	908,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,220,59,4	script	Pharos Visitor#pharos:f3855d70	79,{
+cmd_fild07,220,59,4	script	Pharos Visitor#pharos:ca1222be	644,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,228,75,1	script	Pharos Visitor#pharos:f73e579e	742,{
+cmd_fild07,228,75,1	script	Pharos Visitor#pharos:0012249a	84,{
 	npctalk "npcdialog";
 	end;
 }
 
-cmd_fild07,196,94,1	script	Pharos Visitor#pharos:62cd5698	84,{
+cmd_fild07,196,94,1	script	Pharos Visitor#pharos:07181657	637,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-in_rogue,356,27,6	script	Rogue Guild Member#pharos:db0d8ff8	17,{
+in_rogue,356,27,6	script	Rogue Guild Member#pharos:17bb693e	17,{
 	npctalk "npcdialog";
 	end;
 }
 
-in_rogue,357,17,4	script	Rogue Guild Member#pharos:2117d2e8	747,{
+in_rogue,357,17,4	script	Rogue Guild Member#pharos:cafc7031	747,{
 	npctalk "npcdialog";
 	end;
 }
 
-in_rogue,378,17,6	script	Rogue Guild Member#pharos:8bf571fa	779,{
+in_rogue,378,17,6	script	Rogue Guild Member#pharos:3b89e3a3	779,{
 	npctalk "npcdialog";
 	end;
 }
 
-in_rogue,367,13,0	script	Rogue Guild Member#pharos:4f9646b8	828,{
+in_rogue,367,13,0	script	Rogue Guild Member#pharos:c22d9bea	828,{
 	npctalk "npcdialog";
 	end;
 }
 
-in_rogue,370,35,1	script	Rogue Guild Member#pharos:1f366056	118,{
+in_rogue,370,35,1	script	Rogue Guild Member#pharos:4be15429	118,{
 	npctalk "npcdialog";
 	end;
 }
 
-in_rogue,356,41,4	script	Rogue Guild Member#pharos:73739b6e	638,{
+in_rogue,356,41,4	script	Rogue Guild Member#pharos:319219cc	638,{
 	npctalk "npcdialog";
 	end;
 }
 
-in_rogue,383,24,4	script	Rogue Guildmaster#pharos:b34a3711	810,{
+in_rogue,383,24,4	script	Rogue Guildmaster#pharos:8ceb5e38	810,{
 	npctalk "I will make you a rogue.";
 	end;
 }

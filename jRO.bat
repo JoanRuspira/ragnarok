@@ -5,6 +5,11 @@ rem more easily identified
 rem Writen by Jbain
 rem modified by lighta
 
+rem Run npcbuilder
+cd npcbuilder
+py npcbuilder.py all
+cd ..
+
 set SOURCE_DIR=%~dp0
 cd %SOURCE_DIR%
 
