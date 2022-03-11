@@ -550,7 +550,7 @@ int npc_event_doall(const char* name)
 
 // runs the specified event(global only) and reports call count
 void npc_event_runall( const char* eventname ){
-	ShowStatus( "Event '" CL_WHITE "%s" CL_RESET "' executed with '" CL_WHITE "%d" CL_RESET "' NPCs.\n", eventname, npc_event_doall( eventname ) );
+	//ShowStatus( "Event '" CL_WHITE "%s" CL_RESET "' executed with '" CL_WHITE "%d" CL_RESET "' NPCs.\n", eventname, npc_event_doall( eventname ) );
 }
 
 // runs the specified event, with a RID attached (global only)
@@ -579,7 +579,7 @@ int npc_event_doall_path( const char* event_name, const char* path ){
 		}
 	}
 
-	ShowStatus( "Event '" CL_WHITE "%s" CL_RESET "' executed with '" CL_WHITE "%d" CL_RESET "' NPCs.\n", event_name, count );
+	//ShowStatus( "Event '" CL_WHITE "%s" CL_RESET "' executed with '" CL_WHITE "%d" CL_RESET "' NPCs.\n", event_name, count );
 
 	mapit_free(iter);
 	return count;
@@ -3794,7 +3794,7 @@ static void npc_market_fromsql(void) {
 	}
 	Sql_FreeResult(mmysql_handle);
 
-	ShowStatus("Done loading '" CL_WHITE "%d" CL_RESET "' entries for '" CL_WHITE "%d" CL_RESET "' NPC Markets from '" CL_WHITE "%s" CL_RESET "' table.\n", count, db_size(NPCMarketDB), market_table);
+	//ShowStatus("Done loading '" CL_WHITE "%d" CL_RESET "' entries for '" CL_WHITE "%d" CL_RESET "' NPC Markets from '" CL_WHITE "%s" CL_RESET "' table.\n", count, db_size(NPCMarketDB), market_table);
 }
 #endif
 
@@ -4775,14 +4775,15 @@ int npc_reload(void) {
 		ShowStatus("Loading NPC file: %s" CL_CLL "\r", nsl->name);
 		npc_parsesrcfile(nsl->name);
 	}
-	ShowInfo ("Done loading '" CL_WHITE "%d" CL_RESET "' NPCs:" CL_CLL "\n"
-		"\t-'" CL_WHITE "%d" CL_RESET "' Warps\n"
-		"\t-'" CL_WHITE "%d" CL_RESET "' Shops\n"
-		"\t-'" CL_WHITE "%d" CL_RESET "' Scripts\n"
-		"\t-'" CL_WHITE "%d" CL_RESET "' Spawn sets\n"
-		"\t-'" CL_WHITE "%d" CL_RESET "' Mobs Cached\n"
-		"\t-'" CL_WHITE "%d" CL_RESET "' Mobs Not Cached\n",
-		npc_id - npc_new_min, npc_warp, npc_shop, npc_script, npc_mob, npc_cache_mob, npc_delay_mob);
+	ShowInfo ("Done loading all NPCs\n");
+	// ShowInfo ("Done loading '" CL_WHITE "%d" CL_RESET "' NPCs:" CL_CLL "\n"
+	// 	"\t-'" CL_WHITE "%d" CL_RESET "' Warps\n"
+	// 	"\t-'" CL_WHITE "%d" CL_RESET "' Shops\n"
+	// 	"\t-'" CL_WHITE "%d" CL_RESET "' Scripts\n"
+	// 	"\t-'" CL_WHITE "%d" CL_RESET "' Spawn sets\n"
+	// 	"\t-'" CL_WHITE "%d" CL_RESET "' Mobs Cached\n"
+	// 	"\t-'" CL_WHITE "%d" CL_RESET "' Mobs Not Cached\n",
+	// 	npc_id - npc_new_min, npc_warp, npc_shop, npc_script, npc_mob, npc_cache_mob, npc_delay_mob);
 
 	//Re-read the NPC Script Events cache.
 	npc_read_event_script();
@@ -4926,14 +4927,15 @@ void do_init_npc(void){
 		ShowStatus("Loading NPC file: %s" CL_CLL "\r", file->name);
 		npc_parsesrcfile(file->name);
 	}
-	ShowInfo ("Done loading '" CL_WHITE "%d" CL_RESET "' NPCs:" CL_CLL "\n"
-		"\t-'" CL_WHITE "%d" CL_RESET "' Warps\n"
-		"\t-'" CL_WHITE "%d" CL_RESET "' Shops\n"
-		"\t-'" CL_WHITE "%d" CL_RESET "' Scripts\n"
-		"\t-'" CL_WHITE "%d" CL_RESET "' Spawn sets\n"
-		"\t-'" CL_WHITE "%d" CL_RESET "' Mobs Cached\n"
-		"\t-'" CL_WHITE "%d" CL_RESET "' Mobs Not Cached\n",
-		npc_id - START_NPC_NUM, npc_warp, npc_shop, npc_script, npc_mob, npc_cache_mob, npc_delay_mob);
+	ShowInfo ("Done loading all NPCs\n");
+	// ShowInfo ("Done loading '" CL_WHITE "%d" CL_RESET "' NPCs:" CL_CLL "\n"
+	// 	"\t-'" CL_WHITE "%d" CL_RESET "' Warps\n"
+	// 	"\t-'" CL_WHITE "%d" CL_RESET "' Shops\n"
+	// 	"\t-'" CL_WHITE "%d" CL_RESET "' Scripts\n"
+	// 	"\t-'" CL_WHITE "%d" CL_RESET "' Spawn sets\n"
+	// 	"\t-'" CL_WHITE "%d" CL_RESET "' Mobs Cached\n"
+	// 	"\t-'" CL_WHITE "%d" CL_RESET "' Mobs Not Cached\n",
+	// 	npc_id - START_NPC_NUM, npc_warp, npc_shop, npc_script, npc_mob, npc_cache_mob, npc_delay_mob);
 
 	// set up the events cache
 	npc_read_event_script();

@@ -4225,7 +4225,7 @@ int inter_config_read(const char *cfgName)
 		else
 		if(strcmpi(w1,"use_sql_db")==0) {
 			db_use_sqldbs = config_switch(w2);
-			ShowStatus ("Using SQL dbs: %s\n",w2);
+			//ShowStatus ("Using SQL dbs: %s\n",w2);
 		} else
 		if(strcmpi(w1,"log_db_ip")==0)
 			safestrncpy(log_db_ip, w2, sizeof(log_db_ip));
@@ -4309,7 +4309,7 @@ int log_sql_init(void)
 	// log db connection
 	logmysql_handle = Sql_Malloc();
 
-	ShowInfo("" CL_WHITE "[SQL]" CL_RESET ": Connecting to the Log Database " CL_WHITE "%s" CL_RESET " At " CL_WHITE "%s" CL_RESET "...\n",log_db_db,log_db_ip);
+	//ShowInfo("" CL_WHITE "[SQL]" CL_RESET ": Connecting to the Log Database " CL_WHITE "%s" CL_RESET " At " CL_WHITE "%s" CL_RESET "...\n",log_db_db,log_db_ip);
 	if ( SQL_ERROR == Sql_Connect(logmysql_handle, log_db_id, log_db_pw, log_db_ip, log_db_port, log_db_db) ){
 		ShowError("Couldn't connect with uname='%s',passwd='%s',host='%s',port='%d',database='%s'\n",
 			log_db_id, log_db_pw, log_db_ip, log_db_port, log_db_db);
@@ -4317,7 +4317,7 @@ int log_sql_init(void)
 		Sql_Free(logmysql_handle);
 		exit(EXIT_FAILURE);
 	}
-	ShowStatus("" CL_WHITE "[SQL]" CL_RESET ": Successfully '" CL_GREEN "connected" CL_RESET "' to Database '" CL_WHITE "%s" CL_RESET "'.\n", log_db_db);
+	//ShowStatus("" CL_WHITE "[SQL]" CL_RESET ": Successfully '" CL_GREEN "connected" CL_RESET "' to Database '" CL_WHITE "%s" CL_RESET "'.\n", log_db_db);
 
 	if( strlen(default_codepage) > 0 )
 		if ( SQL_ERROR == Sql_SetEncoding(logmysql_handle, default_codepage) )
@@ -5161,7 +5161,7 @@ int do_init(int argc, char *argv[])
 
 		// Skip this warning if the server is run with run-once flag
 		if( runflag != CORE_ST_STOP ){
-			ShowWarning("Not all IP addresses in map_athena.conf configured, autodetecting...\n");
+			ShowInfo("Not all IP addresses in map_athena.conf configured, autodetecting...\n");
 		}
 
 		if (naddr_ == 0)

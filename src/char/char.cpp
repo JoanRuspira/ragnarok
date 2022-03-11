@@ -1240,7 +1240,7 @@ int char_mmo_char_fromsql(uint32 char_id, struct mmo_charstatus* p, bool load_ev
 int char_mmo_sql_init(void) {
 	char_db_= idb_alloc(DB_OPT_RELEASE_DATA);
 
-	ShowStatus("Characters per Account: '%d'.\n", charserv_config.char_config.char_per_account);
+	//ShowStatus("Characters per Account: '%d'.\n", charserv_config.char_config.char_per_account);
 
 	//the 'set offline' part is now in check_login_conn ...
 	//if the server connects to loginserver
@@ -2301,7 +2301,7 @@ bool char_checkdb(void){
 		schema_config.elemental_db, schema_config.skillcooldown_db, schema_config.bonus_script_db,
 		schema_config.clan_table, schema_config.clan_alliance_table, schema_config.mail_attachment_db, schema_config.achievement_table
 	};
-	ShowInfo("Start checking DB integrity\n");
+	// ShowInfo("Start checking DB integrity\n");
 	for (i=0; i<ARRAYLENGTH(sqltable); i++){ //check if they all exist and we can acces them in sql-server
 		if( SQL_ERROR == Sql_Query(sql_handle, "SELECT 1 FROM `%s` LIMIT 1;", sqltable[i]) ){
 			Sql_ShowDebug(sql_handle);
@@ -2543,7 +2543,7 @@ bool char_checkdb(void){
 		return false;
 	}
 	Sql_FreeResult(sql_handle);
-	ShowInfo("DB integrity check finished with success\n");
+	//ShowInfo("DB integrity check finished with success\n");
 	return true;
 }
 
@@ -2644,7 +2644,7 @@ void char_sql_config_read(const char* cfgName) {
 			char_sql_config_read(w2);
 	}
 	fclose(fp);
-	ShowInfo("Done reading %s.\n", cfgName);
+	//ShowInfo("Done reading %s.\n", cfgName);
 }
 
 
@@ -3080,7 +3080,7 @@ bool char_config_read(const char* cfgName, bool normal){
 	}
 	fclose(fp);
 
-	ShowInfo("Done reading %s.\n", cfgName);
+	//ShowInfo("Done reading %s.\n", cfgName);
 	return true;
 }
 
@@ -3216,7 +3216,7 @@ int do_init(int argc, char **argv)
 		if (naddr_ > 1)
 			ShowStatus("Multiple interfaces detected..  using %s as our IP address\n", ip_str);
 		else
-			ShowStatus("Defaulting to %s as our IP address\n", ip_str);
+			// ShowStatus("Defaulting to %s as our IP address\n", ip_str);
 		if (!(charserv_config.login_ip) ) {
 			safestrncpy(charserv_config.login_ip_str, ip_str, sizeof(charserv_config.login_ip_str));
 			charserv_config.login_ip = str2ip(charserv_config.login_ip_str);
@@ -3286,7 +3286,7 @@ int do_init(int argc, char **argv)
 
 	do_init_chcnslif();
 	mapindex_check_mapdefault(charserv_config.default_map);
-	ShowInfo("Default map: '" CL_WHITE "%s %d,%d" CL_RESET "'\n", charserv_config.default_map, charserv_config.default_map_x, charserv_config.default_map_y);
+	//ShowInfo("Default map: '" CL_WHITE "%s %d,%d" CL_RESET "'\n", charserv_config.default_map, charserv_config.default_map_x, charserv_config.default_map_y);
 
 	ShowStatus("The char-server is " CL_GREEN "ready" CL_RESET " (Server is listening on the port %d).\n\n", charserv_config.char_port);
 

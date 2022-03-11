@@ -87,8 +87,8 @@ struct clan* inter_clan_fromsql(int clan_id){
 
 	idb_put( clan_db, clan_id, clan);
 
-	if (charserv_config.save_log)
-		ShowInfo("Clan loaded (%d - %s)\n", clan_id, clan->name);
+	// if (charserv_config.save_log)
+	// 	ShowInfo("Clan loaded (%d - %s)\n", clan_id, clan->name);
 
 	return clan;
 }

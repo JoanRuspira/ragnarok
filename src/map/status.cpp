@@ -15700,7 +15700,7 @@ static void status_yaml_readdb_refine(const std::string &directory, const std::s
 		if (node.IsDefined() && status_yaml_readdb_refine_sub(node, i, current_file))
 			count++;
 	}
-	ShowStatus("Done reading '" CL_WHITE "%d" CL_RESET "' entries in '" CL_WHITE "%s" CL_RESET "'.\n", count, current_file.c_str());
+	//ShowStatus("Done reading '" CL_WHITE "%d" CL_RESET "' entries in '" CL_WHITE "%s" CL_RESET "'.\n", count, current_file.c_str());
 }
 
 /**
@@ -15764,7 +15764,7 @@ static bool status_readdb_attrfix(const char *basedir,bool silent)
 		entries++;
 	}
 	fclose(fp);
-	ShowStatus("Done reading '" CL_WHITE "%d" CL_RESET "' entries in '" CL_WHITE "%s" CL_RESET "'.\n", entries, path);
+	//ShowStatus("Done reading '" CL_WHITE "%d" CL_RESET "' entries in '" CL_WHITE "%s" CL_RESET "'.\n", entries, path);
 	return true;
 }
 

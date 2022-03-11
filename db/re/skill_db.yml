@@ -21799,7 +21799,7 @@ Body:
   - Id: 2293
     Name: SC_GROOMY
     Description: Masquerade - Gloomy
-    MaxLevel: 3
+    MaxLevel: 5
     TargetType: Attack
     DamageFlags:
       NoDamage: true
@@ -33695,6 +33695,19 @@ Body:
   - Id: 10015
     Name: GD_ITEMEMERGENCYCALL
     Description: Item Emergency Call
+    MaxLevel: 3
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+      Splash: true
+    Flags:
+      IsGuild: true
+      IgnoreKagehumi: true
+    CastCancel: true
+    Duration2: 300000
+  - Id: 10019
+    Name: DUMMY_SKILL
+    Description: A dummy skill
     MaxLevel: 3
     TargetType: Self
     DamageFlags:

@@ -63,7 +63,7 @@
 
 #define CL_WTBL			"\033[37;44m"	// white on blue
 #define CL_XXBL			"\033[0;44m"	// default on blue
-#define CL_PASS			"\033[0;32;42m"	// green on green
+#define CL_BLUE			"\033[1;34;40m"	//blue
 
 #define CL_SPACE		"           "	// space aquivalent of the print messages
 

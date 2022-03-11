@@ -739,7 +739,7 @@ void do_init_buyingstore_autotrade( void ) {
 			}
 			dbi_destroy(iter);
 
-			ShowStatus("Done loading '" CL_WHITE "%d" CL_RESET "' buyingstore autotraders with '" CL_WHITE "%d" CL_RESET "' items.\n", db_size(buyingstore_autotrader_db), items);
+			//ShowStatus("Done loading '" CL_WHITE "%d" CL_RESET "' buyingstore autotraders with '" CL_WHITE "%d" CL_RESET "' items.\n", db_size(buyingstore_autotrader_db), items);
 		}
 	}
 

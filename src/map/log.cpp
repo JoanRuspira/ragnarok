@@ -688,37 +688,37 @@ int log_config_read(const char* cfgName)
 
 		if( log_config.enable_logs && log_config.filter )
 		{
-			ShowInfo("Logging item transactions to %s '%s'.\n", target, log_config.log_pick);
+			//ShowInfo("Logging item transactions to %s '%s'.\n", target, log_config.log_pick);
 		}
 		if( log_config.branch )
 		{
-			ShowInfo("Logging monster summon item usage to %s '%s'.\n", target, log_config.log_pick);
+			//ShowInfo("Logging monster summon item usage to %s '%s'.\n", target, log_config.log_pick);
 		}
 		if( log_config.chat )
 		{
-			ShowInfo("Logging chat to %s '%s'.\n", target, log_config.log_chat);
+			//ShowInfo("Logging chat to %s '%s'.\n", target, log_config.log_chat);
 		}
 		if( log_config.commands )
 		{
-			ShowInfo("Logging commands to %s '%s'.\n", target, log_config.log_gm);
+			//ShowInfo("Logging commands to %s '%s'.\n", target, log_config.log_gm);
 		}
 		if( log_config.mvpdrop )
 		{
-			ShowInfo("Logging MVP monster rewards to %s '%s'.\n", target, log_config.log_mvpdrop);
+			//ShowInfo("Logging MVP monster rewards to %s '%s'.\n", target, log_config.log_mvpdrop);
 		}
 		if( log_config.npc )
 		{
-			ShowInfo("Logging 'logmes' messages to %s '%s'.\n", target, log_config.log_npc);
+			//ShowInfo("Logging 'logmes' messages to %s '%s'.\n", target, log_config.log_npc);
 		}
 		if( log_config.zeny )
 		{
-			ShowInfo("Logging Zeny transactions to %s '%s'.\n", target, log_config.log_zeny);
+			//ShowInfo("Logging Zeny transactions to %s '%s'.\n", target, log_config.log_zeny);
 		}
 		if( log_config.cash ){
-			ShowInfo( "Logging Cash transactions to %s '%s'.\n", target, log_config.log_cash );
+			//ShowInfo( "Logging Cash transactions to %s '%s'.\n", target, log_config.log_cash );
 		}
 		if( log_config.feeding ){
-			ShowInfo( "Logging Feeding items to %s '%s'.\n", target, log_config.log_feeding );
+			//ShowInfo( "Logging Feeding items to %s '%s'.\n", target, log_config.log_feeding );
 		}
 	}
 

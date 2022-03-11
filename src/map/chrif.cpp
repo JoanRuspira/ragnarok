@@ -257,7 +257,7 @@ int chrif_setip(const char* ip) {
 	char ip_str[16];
 
 	if ( !( char_ip = host2ip(ip) ) ) {
-		ShowWarning("Failed to Resolve Char Server Address! (%s)\n", ip);
+		//ShowWarning("Failed to Resolve Char Server Address! (%s)\n", ip);
 
 		return 0;
 	}
@@ -1273,7 +1273,7 @@ int chrif_recvfamelist(int fd) {
 
 	total += num;
 
-	ShowInfo("Received Fame List of '" CL_WHITE "%d" CL_RESET "' characters.\n", total);
+	//ShowInfo("Received Fame List of '" CL_WHITE "%d" CL_RESET "' characters.\n", total);
 
 	return 0;
 }

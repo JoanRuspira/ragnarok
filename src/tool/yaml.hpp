@@ -516,7 +516,7 @@ static bool parse_item_constants_txt(const char *path) {
 
 	fclose(fp);
 
-	ShowStatus("Done reading '" CL_WHITE "%u" CL_RESET "' entries in '" CL_WHITE "%s" CL_RESET "'.\n", count, path);
+	//ShowStatus("Done reading '" CL_WHITE "%u" CL_RESET "' entries in '" CL_WHITE "%s" CL_RESET "'.\n", count, path);
 
 	return true;
 }

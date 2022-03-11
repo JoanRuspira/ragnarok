@@ -516,7 +516,7 @@ static bool pet_read_db( const char* file ){
 	}
 
 	fclose(fp);
-	ShowStatus("Done reading '" CL_WHITE "%d" CL_RESET "' pets in '" CL_WHITE "%s" CL_RESET "'.\n", entries, file );
+	//ShowStatus("Done reading '" CL_WHITE "%d" CL_RESET "' pets in '" CL_WHITE "%s" CL_RESET "'.\n", entries, file );
 
 	return true;
 }
@@ -2718,7 +2718,7 @@ static bool itemdb_read_db(const char* file) {
 	}
 
 	fclose(fp);
-	ShowStatus("Done reading '" CL_WHITE "%d" CL_RESET "' items in '" CL_WHITE "%s" CL_RESET "'.\n", entries, file);
+	//ShowStatus("Done reading '" CL_WHITE "%d" CL_RESET "' items in '" CL_WHITE "%s" CL_RESET "'.\n", entries, file);
 
 	return true;
 }
@@ -2795,7 +2795,7 @@ static bool itemdb_read_randomopt(const char* file) {
 	}
 
 	fclose(fp);
-	ShowStatus("Done reading '" CL_WHITE "%d" CL_RESET "' entries in '" CL_WHITE "%s" CL_RESET "'.\n", count, file);
+	//ShowStatus("Done reading '" CL_WHITE "%d" CL_RESET "' entries in '" CL_WHITE "%s" CL_RESET "'.\n", count, file);
 
 	return true;
 }

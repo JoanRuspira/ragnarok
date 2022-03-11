@@ -1821,7 +1821,7 @@ static void itemdb_read_combos(const char* basedir, bool silent) {
 	}
 	fclose(fp);
 
-	ShowStatus("Done reading '" CL_WHITE "%u" CL_RESET "' entries in '" CL_WHITE "%s" CL_RESET "'.\n",count,path);
+	//ShowStatus("Done reading '" CL_WHITE "%u" CL_RESET "' entries in '" CL_WHITE "%s" CL_RESET "'.\n",count,path);
 
 	return;
 }
@@ -1899,7 +1899,7 @@ bool itemdb_parse_roulette_db(void)
 		}
 
 		/** this scenario = rd.items[i] < limit **/
-		ShowWarning("itemdb_parse_roulette_db: Level %d has %d items, %d are required. Filling with Apples...\n", i + 1, rd.items[i], limit);
+		//ShowWarning("itemdb_parse_roulette_db: Level %d has %d items, %d are required. Filling with Apples...\n", i + 1, rd.items[i], limit);
 
 		rd.items[i] = limit;
 		RECREATE(rd.nameid[i], t_itemid, rd.items[i]);
@@ -1916,7 +1916,7 @@ bool itemdb_parse_roulette_db(void)
 		}
 	}
 
-	ShowStatus("Done reading '" CL_WHITE "%u" CL_RESET "' entries in '" CL_WHITE "%s" CL_RESET "'.\n", count, roulette_table);
+	//ShowStatus("Done reading '" CL_WHITE "%u" CL_RESET "' entries in '" CL_WHITE "%s" CL_RESET "'.\n", count, roulette_table);
 
 	return true;
 }
@@ -2259,7 +2259,7 @@ static int itemdb_read_sqldb(void) {
 		// free the query result
 		Sql_FreeResult(mmysql_handle);
 
-		ShowStatus("Done reading '" CL_WHITE "%" PRIu64 CL_RESET "' entries in '" CL_WHITE "%s" CL_RESET "'.\n", count, item_db_name[fi]);
+		//ShowStatus("Done reading '" CL_WHITE "%" PRIu64 CL_RESET "' entries in '" CL_WHITE "%s" CL_RESET "'.\n", count, item_db_name[fi]);
 	}
 
 	item_db.loadingFinished();

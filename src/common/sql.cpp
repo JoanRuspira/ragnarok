@@ -215,7 +215,7 @@ int Sql_Ping(Sql* self)
 /// @private
 static TIMER_FUNC(Sql_P_KeepaliveTimer){
 	Sql* self = (Sql*)data;
-	ShowInfo("Pinging SQL server to keep connection alive...\n");
+	//ShowInfo("Pinging SQL server to keep connection alive...\n");
 	Sql_Ping(self);
 	return 0;
 }

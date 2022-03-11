@@ -292,7 +292,7 @@ int clif_setip(const char* ip) {
 	char ip_str[16];
 	map_ip = host2ip(ip);
 	if (!map_ip) {
-		ShowWarning("Failed to Resolve Map Server Address! (%s)\n", ip);
+		//ShowWarning("Failed to Resolve Map Server Address! (%s)\n", ip);
 		return 0;
 	}
 
@@ -308,7 +308,7 @@ void clif_setbindip(const char* ip)
 		char ip_str[16];
 		ShowInfo("Map Server Bind IP Address : '" CL_WHITE "%s" CL_RESET "' -> '" CL_WHITE "%s" CL_RESET "'.\n", ip, ip2str(bind_ip, ip_str));
 	} else {
-		ShowWarning("Failed to Resolve Map Server Address! (%s)\n", ip);
+		//ShowWarning("Failed to Resolve Map Server Address! (%s)\n", ip);
 	}
 }
 
@@ -21853,12 +21853,12 @@ void packetdb_readdb(){
 #include "clif_packetdb.hpp"
 #include "clif_shuffle.hpp"
 
-	ShowStatus("Using packet version: " CL_WHITE "%d" CL_RESET ".\n", PACKETVER);
+	//ShowStatus("Using packet version: " CL_WHITE "%d" CL_RESET ".\n", PACKETVER);
 
 #ifdef PACKET_OBFUSCATION
-	ShowStatus("Packet Obfuscation: " CL_GREEN "Enabled" CL_RESET ". Keys: " CL_WHITE "0x%08X, 0x%08X, 0x%08X" CL_RESET "\n", clif_cryptKey[0], clif_cryptKey[1], clif_cryptKey[2]);
+	//ShowStatus("Packet Obfuscation: " CL_GREEN "Enabled" CL_RESET ". Keys: " CL_WHITE "0x%08X, 0x%08X, 0x%08X" CL_RESET "\n", clif_cryptKey[0], clif_cryptKey[1], clif_cryptKey[2]);
 #else
-	ShowStatus("Packet Obfuscation: " CL_RED "Disabled" CL_RESET ".\n");
+	//ShowStatus("Packet Obfuscation: " CL_RED "Disabled" CL_RESET ".\n");
 #endif
 }
 

@@ -1583,7 +1583,7 @@ void socket_init(void)
 #ifndef SOCKET_EPOLL
 	// Select based Event Dispatcher:
 	sFD_ZERO(&readfds);
-	ShowInfo( "Server uses '" CL_WHITE "select" CL_RESET "' as event dispatcher\n" );
+	//ShowInfo( "Server uses '" CL_WHITE "select" CL_RESET "' as event dispatcher\n" );
 #else
 	// Epoll based Event Dispatcher
 	epfd = epoll_create( MAXCONN ); // 2.6.8 or newer ignores the expected socket amount argument

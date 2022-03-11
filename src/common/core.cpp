@@ -286,25 +286,56 @@ const char *get_git_hash (void) {
 	return GitHash;
 }
 
+
+static void display_title_map_server() {
+	ShowMessage("" CL_BLUE "     " CL_BOLD "           ____________ _________                 _____      _____ __________     " CL_BLUE "" CL_CLL "" CL_NORMAL "\n");
+	ShowMessage("" CL_BLUE "     " CL_BOLD "           |__\\______   \\_____   \\               /     \\    /  _  \\______    \\   " CL_BLUE "" CL_CLL "" CL_NORMAL "\n");
+	ShowMessage("" CL_BLUE "     " CL_BOLD "           |  ||       _/ /   |   \\    ______   /  \\ /  \\  /  /_\\  \\|     ___/   " CL_BLUE "" CL_CLL "" CL_NORMAL "\n");
+	ShowMessage("" CL_BLUE "     " CL_BOLD "           |  ||    |   \\/    |    \\  /_____/  /    Y    \\/    |    \\    |       " CL_BLUE "" CL_CLL "" CL_NORMAL "\n");
+	ShowMessage("" CL_BLUE "     " CL_BOLD "       /\\__|  ||____|_  /\\_______  /           \\____|__  /\\____|__  /____|      " CL_BLUE "" CL_CLL "" CL_NORMAL "\n");
+	ShowMessage("" CL_BLUE "     " CL_BOLD "       \\______|       \\/         \\/                    \\/         \\/             " CL_BLUE "" CL_CLL "" CL_NORMAL "\n");
+	ShowMessage("" CL_LT_CYAN "     " CL_BOLD "                                  Ragnarok Offline                               " CL_LT_CYAN "" CL_CLL "" CL_NORMAL "\n");
+}
+
+static void display_title_char_server() {
+	ShowMessage("" CL_LT_MAGENTA "     " CL_BOLD "            ____________ ________              _________   ___ ___    _____ __________  " CL_LT_MAGENTA "" CL_CLL "" CL_NORMAL "\n");
+	ShowMessage("" CL_LT_MAGENTA "     " CL_BOLD "           |__\\______   \\_____   \\             \\_   ___ \\ /   |   \\  /  _  \\______    \\ " CL_LT_MAGENTA "" CL_CLL "" CL_NORMAL "\n");
+	ShowMessage("" CL_LT_MAGENTA "     " CL_BOLD "           |  ||       _/ /   |   \\    ______  /    \\  \\//    ~    \\/  /_\\  \\|       _/ " CL_LT_MAGENTA "" CL_CLL "" CL_NORMAL "\n");
+	ShowMessage("" CL_LT_MAGENTA "     " CL_BOLD "           |  ||    |   \\/    |    \\  /_____/  \\     \\___\\    Y    /    |    \\    |   \\ " CL_LT_MAGENTA "" CL_CLL "" CL_NORMAL "\n");
+	ShowMessage("" CL_LT_MAGENTA "     " CL_BOLD "       /\\__|  ||____|_  /\\_______  /            \\______  /\\___|_  /\\____|__  /____|_  / " CL_LT_MAGENTA "" CL_CLL "" CL_NORMAL "\n");
+	ShowMessage("" CL_LT_MAGENTA "     " CL_BOLD "       \\______|       \\/         \\/                    \\/       \\/         \\/       \\/ " CL_LT_MAGENTA "" CL_CLL "" CL_NORMAL "\n");
+	ShowMessage("" CL_BT_RED "     " CL_BOLD "                                  Ragnarok Offline                               " CL_BT_RED "" CL_CLL "" CL_NORMAL "\n");
+}
+
+static void display_title_login_server() {
+	ShowMessage("" CL_LT_YELLOW "     " CL_BOLD "            ____________ ________              .____    ________    ________.___ _______    " CL_LT_YELLOW "" CL_CLL "" CL_NORMAL "\n");
+	ShowMessage("" CL_LT_YELLOW "     " CL_BOLD "           |__\\______   \\_____   \\             |    |   \\_____  \\  /  _____/|   |\\      \\   " CL_LT_YELLOW "" CL_CLL "" CL_NORMAL "\n");
+	ShowMessage("" CL_LT_YELLOW "     " CL_BOLD "           |  ||       _/ /   |   \\    ______  |    |    /   |   \\/   \\  ___|   |/   |   \\  " CL_LT_YELLOW "" CL_CLL "" CL_NORMAL "\n");
+	ShowMessage("" CL_LT_YELLOW "     " CL_BOLD "           |  ||    |   \\/    |    \\  /_____/  |    |___/    |    \\    \\_\\  \\   /    |    \\ " CL_LT_YELLOW "" CL_CLL "" CL_NORMAL "\n");
+	ShowMessage("" CL_LT_YELLOW "     " CL_BOLD "       /\\__|  ||____|_  /\\_______  /           |_______ \\_______  /\\______  /___\\____|__  / " CL_LT_YELLOW "" CL_CLL "" CL_NORMAL "\n");
+	ShowMessage("" CL_LT_YELLOW "     " CL_BOLD "       \\______|       \\/         \\/                    \\/       \\/        \\/            \\/  " CL_LT_YELLOW "" CL_CLL "" CL_NORMAL "\n");
+	ShowMessage("" CL_LT_GREEN "     " CL_BOLD "                                  Ragnarok Offline                               " CL_LT_GREEN "" CL_CLL "" CL_NORMAL "\n");
+}
+
 /*======================================
  *	CORE : Display title
- *  ASCII By CalciumKid 1/12/2011
+ *  ASCII
  *--------------------------------------*/
-static void display_title(void) {
+static void display_title() {
 	const char* svn = get_svn_revision();
 	const char* git = get_git_hash();
 
-	ShowMessage("\n");
-	ShowMessage("" CL_PASS "     " CL_BOLD "                                                                 " CL_PASS"" CL_CLL "" CL_NORMAL "\n");
-	ShowMessage("" CL_PASS "       " CL_BT_WHITE "            rAthena Development Team presents                  " CL_PASS "" CL_CLL "" CL_NORMAL "\n");
-	ShowMessage("" CL_PASS "     " CL_BOLD "                 ___   __  __                                    " CL_PASS "" CL_CLL "" CL_NORMAL "\n");
-	ShowMessage("" CL_PASS "     " CL_BOLD "           _____/   | / /_/ /_  ___  ____  ____ _                " CL_PASS "" CL_CLL "" CL_NORMAL "\n");
-	ShowMessage("" CL_PASS "     " CL_BOLD "          / ___/ /| |/ __/ __ \\/ _ \\/ __ \\/ __ `/                " CL_PASS "" CL_CLL "" CL_NORMAL "\n");
-	ShowMessage("" CL_PASS "     " CL_BOLD "         / /  / ___ / /_/ / / /  __/ / / / /_/ /                 " CL_PASS "" CL_CLL "" CL_NORMAL "\n");
-	ShowMessage("" CL_PASS "     " CL_BOLD "        /_/  /_/  |_\\__/_/ /_/\\___/_/ /_/\\__,_/                  " CL_PASS "" CL_CLL "" CL_NORMAL "\n");
-	ShowMessage("" CL_PASS "     " CL_BOLD "                                                                 " CL_PASS "" CL_CLL "" CL_NORMAL "\n");
-	ShowMessage("" CL_PASS "       " CL_GREEN "              http://rathena.org/board/                        " CL_PASS "" CL_CLL "" CL_NORMAL "\n");
-	ShowMessage("" CL_PASS "     " CL_BOLD "                                                                 " CL_PASS "" CL_CLL "" CL_NORMAL "\n");
+	if (strcmp(SERVER_NAME, "map-server.exe") == 0) {
+		display_title_map_server();
+	}
+
+	if (strcmp(SERVER_NAME, "char-server.exe") == 0) {
+		display_title_char_server();
+	}
+	
+	if (strcmp(SERVER_NAME, "login-server.exe") == 0) {
+		display_title_login_server();
+	}
 
 	if( svn[0] != UNKNOWN_VERSION )
 		ShowInfo("SVN Revision: '" CL_WHITE "%s" CL_RESET "'\n", svn);

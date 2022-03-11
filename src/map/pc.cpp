@@ -12350,7 +12350,7 @@ static int pc_read_statsdb(const char *basedir, int last_s, bool silent){
 			entries++;
 		}
 		fclose(fp);
-		ShowStatus("Done reading '" CL_WHITE "%d" CL_RESET "' entries in '" CL_WHITE "%s/%s" CL_RESET "'.\n", entries, basedir,"statpoint.txt");
+		//ShowStatus("Done reading '" CL_WHITE "%d" CL_RESET "' entries in '" CL_WHITE "%s/%s" CL_RESET "'.\n", entries, basedir,"statpoint.txt");
 	}
 	return max(last_s,i);
 }
@@ -12490,7 +12490,7 @@ int pc_read_motd(void)
 			entries++;
 		}
 		fclose(fp);
-		ShowStatus("Done reading '" CL_WHITE "%u" CL_RESET "' entries in '" CL_WHITE "%s" CL_RESET "'.\n", entries, motd_txt);
+		//ShowStatus("Done reading '" CL_WHITE "%u" CL_RESET "' entries in '" CL_WHITE "%s" CL_RESET "'.\n", entries, motd_txt);
 	}
 	else
 		ShowWarning("File '" CL_WHITE "%s" CL_RESET "' not found.\n", motd_txt);

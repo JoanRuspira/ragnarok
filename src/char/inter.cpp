@@ -364,7 +364,7 @@ void geoip_readdb(void){
 	geoip_cache = (unsigned char *) aMalloc(sizeof(unsigned char) * bufa.st_size);
 	if(fread(geoip_cache, sizeof(unsigned char), bufa.st_size, db) != bufa.st_size) { ShowError("geoip_cache reading didn't read all elements \n"); }
 	fclose(db);
-	ShowStatus("Finished Reading " CL_GREEN "GeoIP" CL_RESET " Database.\n");
+	// ShowStatus("Finished Reading " CL_GREEN "GeoIP" CL_RESET " Database.\n");
 }
 /* [Dekamaster/Nightroad] */
 /* WHY NOT A DBMAP: There are millions of entries in GeoIP and it has its own algorithm to go quickly through them, a DBMap wouldn't be efficient */
@@ -828,7 +828,7 @@ int inter_config_read(const char* cfgName)
 	}
 	fclose(fp);
 
-	ShowInfo ("Done reading %s.\n", cfgName);
+	//ShowInfo ("Done reading %s.\n", cfgName);
 
 	return 0;
 }
