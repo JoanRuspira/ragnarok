@@ -4,181 +4,6 @@
 
 // Izlude
 //============================================================
--	script	::Sailor_izlude	-1,{
-	mes "[Sailor]";
-	mes "Hey everybody!";
-	mes "Attention, attention!";
-	mes "Come and ride the wind";
-	mes "on a fascinating Ship!";
-	mes "Hurry, hurry!";
-	next;
-	switch(select("Byalan Island -> 150 Zeny.:Alberta Marina  -> 500 Zeny.:Cancel.")) {
-	case 1:
-		if (Zeny < 150) {
-			mes "[Sailor]";
-			mes "150 Zeny!";
-			mes "Only 150 Zeny to ride!";
-			close;
-		}
-		set Zeny, Zeny - 150;
-		warp "izlu2dun",108,31;
-		end;
-	case 2:
-		if (Zeny < 500) {
-			mes "[Sailor]";
-			mes "500 Zeny!";
-			mes "Only 500 Zeny to ride!";
-			close;
-		}
-		set Zeny, Zeny - 500;
-		warp "alberta",245,88;
-		end;
-	case 3:
-		close;
-	}
-}
-
--	script	::Sailor_Turtle	-1,{
-	mes "[Explorer]";
-	mes "Apparently there's an island";
-	mes "shaped like a turtle. I think";
-	mes "few people have ever visited it.";
-	mes "I can make space for you in my boat";
-	mes "for 2500 Zeny.";
-	next;
-	switch(select("Yeah, sure!:Cancel.")) {
-	case 1:
-		if (Zeny < 2500) {
-			mes "[Explorer]";
-			mes "You don't have enough money...";
-			close;
-		}
-		set Zeny, Zeny - 2500;
-		warp "tur_dun01",160,34;
-		end;
-	case 2:
-		close;
-	}
-}
-
--	script	::Iao_vale_guide	-1,{
-	mes "[Iao Vale Guide]";
-	mes "My job is to help adventurers descent the Iao Vale. I can show you the path down the vale if that is something you want.";
-	next;
-	switch(select("Yes please:I'm good, thanks.")) {
-	case 1:
-		mes "[Iao Vale Guide]";
-		mes "Okay. Follow me!";
-		next;
-		warp "ayo_fild02",40,198;
-		end;
-	case 2:
-		mes "[Iao Vale Guide]";
-		mes "Okay. No problem.";
-		close;
-	}
-}
-
--	script	::Iao_vale_guide_up	-1,{
-	mes "[Iao Vale Guide]";
-	mes "My job is to help adventurers ascend the Iao Vale. I can show you the path up the vale if that is something you want.";
-	next;
-	switch(select("Yes please:I'm good, thanks.")) {
-	case 1:
-		mes "[Iao Vale Guide]";
-		mes "Okay. Follow me!";
-		next;
-		warp "ayo_fild01",137,276;
-		end;
-	case 2:
-		mes "[Iao Vale Guide]";
-		mes "Okay. No problem.";
-		close;
-	}
-}
--	script	::Thanatos_guide	-1,{
-	mes "[Thanatos Tower Guide]";
-	mes "My job is to help adventurers reach the Thanatos Tower. I can show you the path down the scar if that is something you want. But be careful, Thanatos Tower is a dangerous place.";
-	next;
-	switch(select("Yes please:I'm good, thanks.")) {
-	case 1:
-		mes "[Thanatos Tower Guide]";
-		mes "Okay. Follow me!";
-		next;
-		warp "tha_scene01",132,221;
-		end;
-	case 2:
-		mes "[Thanatos Tower Guide]";
-		mes "Okay. No problem.";
-		close;
-	}
-}
-
-
--	script	::Sailor_Nameless	-1,{
-	mes "[Sailor]";
-	mes "Hello! I am delivering goods to the Tidal Island merchants. I can get you there if you want.";
-	next;
-	mes "I'm thinking a 1000 Zeny fee. Sounds good?"; 
-	next;
-	switch(select("Sure!:No, sorry.")) {
-	case 1:
-		if (Zeny < 1000) {
-			mes "[Sailor]";
-			mes "You don't have enough money...";
-			close;
-		}
-		set Zeny, Zeny - 1000;
-		warp "nameless_n",248,234;
-		end;
-	case 2:
-		close;
-	}
-}
-
--	script	::Sailor_Nameless_Return	-1,{
-	mes "[Salior]";
-	mes "Hello! We are heading back to the Veins shore. Do you want to come along?";
-	next;
-	if (select("Yes please.","Not yet.") == 1)
-		warp "ve_fild07",125,137;
-	close;
-}
-
-
--	script	::Sailor_Odin	-1,{
-	mes "[Explorer]";
-	mes "I organize adventurer trips to the ancient realm of Odin.";
-	mes "It's a large island off the Schwarzwald coast home of an ancient civilization, so it's in ruins now. ";
-	next;
-	mes "[Explorer]";
-	mes "I can get you on the next trip for a 10000 Zeny fee. It's a dangerous place, but is this something that interests you?"; 
-	next;
-	switch(select("Sure!:Naah, sorry.")) {
-	case 1:
-		if (Zeny < 2500) {
-			mes "[Explorer]";
-			mes "You don't have enough money...";
-			close;
-		}
-		set Zeny, Zeny - 2500;
-		warp "odin_tem01",98,145;
-		end;
-	case 2:
-		close;
-	}
-}
-
--	script	::Sailor_Odin_Return	-1,{
-	mes "[Explorer]";
-	mes "Hello! Do you want to go back to Hugel?";
-	next;
-	if (select("Yes please.","Not yet.") == 1)
-		warp "hugel",203,109;
-	close;
-}
-
-
 -	script	::Bonne_izlude	-1,{
 	mes "[Bonne]";
 	mes "Greetings!";
@@ -332,23 +157,7 @@
 		}
 	}
 }
--	script	DaynNight	-1,{
-	OnInit:
-		if(gettime(3) >= 18 || gettime(3) < 6) {
-			night;
-		} else {
-			day;
-		}
-		end;
 
-	OnClock0600:
-		day;
-		end;
-
-	OnClock1800:
-		night;
-		end;
-}
 -	script	::Kylick_izlude	-1,{
 	if (!checkre(0) && rand(2)) {
 		mes "[Kylick]";
@@ -585,6 +394,40 @@
 	close;
 }
 
+-	script	::Sailor_izlude	-1,{
+	mes "[Sailor]";
+	mes "Hey everybody!";
+	mes "Attention, attention!";
+	mes "Come and ride the wind";
+	mes "on a fascinating Ship!";
+	mes "Hurry, hurry!";
+	next;
+	switch(select("Byalan Island -> 150 Zeny.:Alberta Marina  -> 500 Zeny.:Cancel.")) {
+	case 1:
+		if (Zeny < 150) {
+			mes "[Sailor]";
+			mes "150 Zeny!";
+			mes "Only 150 Zeny to ride!";
+			close;
+		}
+		set Zeny, Zeny - 150;
+		warp "izlu2dun",108,31;
+		end;
+	case 2:
+		if (Zeny < 500) {
+			mes "[Sailor]";
+			mes "500 Zeny!";
+			mes "Only 500 Zeny to ride!";
+			close;
+		}
+		set Zeny, Zeny - 500;
+		warp "alberta",245,88;
+		end;
+	case 3:
+		close;
+	}
+}
+
 // Inside Izlude
 //============================================================
 izlude_in,125,164,2	script	Aaron#izlude	65,{
@@ -709,30 +552,6 @@ prt_fild08a,350,217,4	duplicate(Guard_izlude)	Guard#izlude_a	8W_SOLDIER
 prt_fild08b,350,217,4	duplicate(Guard_izlude)	Guard#izlude_b	8W_SOLDIER
 prt_fild08c,350,217,4	duplicate(Guard_izlude)	Guard#izlude_c	8W_SOLDIER
 prt_fild08d,350,217,4	duplicate(Guard_izlude)	Guard#izlude_d	8W_SOLDIER
-
-// Channel Warper :: channel
-//============================================================
-function	script	F_IzludeChannel	{
-	mes "[Channel Warp Official]";
-	mes "Izlude is a verly lively place is it not?";
-	mes "I am here to help make Izlude feel more smooth!";
-	mes "I can send you to another copy of Izlude.";
-	mes "Do you want to go to another copy?";
-	next;
-	set .@i, select(getarg(0)+":Never mind");
-	if (.@i < 6) {
-		setarray .@maps$[1],"izlude","izlude_a","izlude_b","izlude_c","izlude_d";
-		savepoint .@maps$[.@i],128,98,1,1;
-		warp .@maps$[.@i],128,98;
-		end;
-	}
-	close;
-}
-//izlude,122,105,5	script	Channel Warp Official	1_M_WIZARD,{ callfunc "F_IzludeChannel",":Go to copy 2:Go to copy 3:Go to copy 4:Go to copy 5"; }
-//izlude_a,122,105,5	script	Channel Warp Official#_a	1_M_WIZARD,{ callfunc "F_IzludeChannel","Go to copy 1::Go to copy 3:Go to copy 4:Go to copy 5"; }
-//izlude_b,122,105,5	script	Channel Warp Official#_b	1_M_WIZARD,{ callfunc "F_IzludeChannel","Go to copy 1:Go to copy 2::Go to copy 4:Go to copy 5"; }
-//izlude_c,122,105,5	script	Channel Warp Official#_c	1_M_WIZARD,{ callfunc "F_IzludeChannel","Go to copy 1:Go to copy 2:Go to copy 3::Go to copy 5"; }
-//izlude_d,122,105,5	script	Channel Warp Official#_d	1_M_WIZARD,{ callfunc "F_IzludeChannel","Go to copy 1:Go to copy 2:Go to copy 3:Go to copy 4:"; }
 
 // Talking NPCs
 //============================================================
@@ -902,11 +721,3 @@ prt_fild08a,338,217,7	duplicate(Resting Adventurer#iz)	Resting Adventurer#iza	4_
 prt_fild08b,338,217,7	duplicate(Resting Adventurer#iz)	Resting Adventurer#izb	4_F_SITDOWN
 prt_fild08c,338,217,7	duplicate(Resting Adventurer#iz)	Resting Adventurer#izc	4_F_SITDOWN
 prt_fild08d,338,217,7	duplicate(Resting Adventurer#iz)	Resting Adventurer#izd	4_F_SITDOWN
-comodo,233,86,0	duplicate(Sailor_Turtle)	Explorer#turtle	832
-hugel,208,109,2	duplicate(Sailor_Odin)	Odin Expeditioner#odintrip	702
-odin_tem01,93,145,6	duplicate(Sailor_Odin_Return)	Odin Expeditioner#odinreturn	702
-ve_fild07,128,132,3	duplicate(Sailor_Nameless)	Trading Salor#namtrip	709
-nameless_n,250,233,3	duplicate(Sailor_Nameless_Return)	Trading Salor#namtripreturn	709
-hu_fild01,140,162,4	duplicate(Thanatos_guide)	Thanatos Tower Guide#thantosguide	418
-ayo_fild01,140,279,3	duplicate(Iao_vale_guide)	Iao Vale Guide#iaovaleguide	825
-ayo_fild02,38,200,5	duplicate(Iao_vale_guide_up)	Iao Vale Guide#iaovaleguideup	825

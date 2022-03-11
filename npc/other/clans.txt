@@ -1,3 +1,7 @@
+//===== Script =======================================
+// Clan Leaders NPCs
+//====================================================
+
 ein_in01,164,153,2	script	Sword Clan Leader	10058,{
 	cutin "laperm01.bmp", 2;
 	mes "[Raffam Oranpere]";

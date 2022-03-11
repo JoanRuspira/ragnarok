@@ -1,3 +1,7 @@
+//===== Script =======================================
+// Comodo Casino Gambling NPCs
+//====================================================
+
 
 function	script	ComodoBlackJack	{
 	callfunc "F_ClearGarbage"; // Clear outdated, unused variables

@@ -1,16 +1,6 @@
-//===== rAthena Script ======================================= 
-//= Einbroch Airport Staff
-//===== By: ================================================== 
-//= L0ne_W0lf, Muad_Dib
-//===== Current Version: =====================================
-//= 1.0
-//===== Compatible With: ===================================== 
-//= rAthena Project
-//===== Description: ========================================= 
-//= Einbroch Airport Staff
-//===== Additional Comments: ================================= 
-//= 1.0 First version.
-//============================================================ 
+//===== Script =======================================
+// Einbroch Airport NPCs
+//====================================================
 
 airport,143,43,5	script	Airport Staff#airport1a::airport1	90,{
 	mes "[Airport Staff]";

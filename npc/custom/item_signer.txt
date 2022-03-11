@@ -1,17 +1,6 @@
-//===== rAthena Script =======================================
-//= Sign Your Items
-//===== By: ==================================================
-//= Lupus
-//===== Current Version: =====================================
-//= 1.1a
-//===== Compatible With: =====================================
-//= rAthena Project
-//===== Description: =========================================
-//= Write you name on your rare equipment or weapon ^_-
-//===== Additional Comments: =================================
-//= 1.1 Cleaned and edited for general use. [Euphy]
-//= 1.1a Added 'disable_items' command. [Euphy]
-//============================================================
+//===== Script =======================================
+// Item Signer NPCs
+//====================================================
 
 prt_in,24,61,7	script	Perchik	47,{
 	

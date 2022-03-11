@@ -1,3 +1,6 @@
+//===== Script =======================================
+// Izlude Academy NPCs
+//====================================================
 
 -	script	Swordman Guide#newbe10::NvSwordman	-1,{
 	mes "[Swordman Guildsman]";
@@ -46,8 +49,6 @@
 	}
 }
 
-
-
 -	script	Mage Guide#newbe10::NvMage	-1,{
 	mes "[Mage Guild Member]";
 	mes "What can I help you with?";
@@ -91,7 +92,6 @@
 	}
 }
 
-
 -	script	Merchant Guide#newbe10::NvMerchant	-1,{
 	mes "[Merchant Guildsman]";
 	mes "What can I help you with?";
@@ -128,7 +128,6 @@
 	}
 }
 
-
 -	script	Thief Guide#newbe10::NvThief	-1,{
 
 	mes "[Thief Guild Member]";
@@ -162,7 +161,6 @@
 		close;
 	}
 }
-
 
 -	script	Acolyte Guide#newbe10::NvAcolyte	-1,{
 	mes "[Prontera Acolyte]";
@@ -235,10 +233,13 @@
 	}
 }
 
-
-
-
 -	script	Academy Teleporter#newbe11::NvTeleport	-1,{
+	if (BaseLevel > 10) {
+        mes "[Academy Teleporter]";
+		mes "I am the Academy Teleporter!";
+		mes "We only offer teleportation services to people up to lvl 10.";
+		close;
+	}
 	mes "[Academy Teleporter]";
 	mes "Hello new adventurer!";
 	mes "I offer a free teleport service for novices,";
@@ -322,11 +323,6 @@
 			close;
 		}
 }
-
-
-
-
-
 
 iz_ac02,66,179,5	duplicate(NvSwordman)	Swordman Guide#nv1	728
 iz_ac02,58,177,4	duplicate(NvMage)	Mage Guide#nv1	123
