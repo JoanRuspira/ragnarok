@@ -4,9 +4,31 @@ import os
 import re
 from lists import * 
 
+iterations = 2
+initial_mob_id = 20021
+
 def buildDynamic():
     buildMobsfile()
     buildMobsAvailfile()
+    buildCityMobs()
+    
+
+def buildCityMobs():
+    fout = open("../npc/mobs/fields/izlude_npcbuilder.txt", "wt")
+
+    mob_names = mobs_novice + mobs_first_job + mobs_second_job + mobs_advanced_job
+    for _ in range(iterations):
+        mob_names += mob_names.copy()
+
+    mob_id = initial_mob_id
+    for mob_name in mob_names:
+        mob_title = mob_name.lower().replace("job_", "").replace("_", "").title()
+        mob_line = "izlude,0,0	monster	" + mob_title + "	" + str(mob_id) + ",1,5000\n"
+        mob_id += 1
+        fout.write(mob_line)
+    
+    fout.close()
+    
 
 def buildMobsfile():  
     mobs = buildMobs()
@@ -33,12 +55,12 @@ def buildMobsAvailfile():
     fout.close()
 
 def buildMobs():
-    mob_names = mobs_novice + mobs_first_job + mobs_second_job + mobs_advanced_job + mobs_third_job
-    # for _ in range(3):
-    #     mob_names += mob_names.copy()
+    mob_names = mobs_novice + mobs_first_job + mobs_second_job + mobs_advanced_job
+    for _ in range(iterations):
+        mob_names += mob_names.copy()
 
     mobs = []
-    mob_id = 3900
+    mob_id = initial_mob_id
     for mob_name in mob_names:
         mob = buildMob(mob_id, mob_name)
         mob_id += 1
@@ -46,19 +68,21 @@ def buildMobs():
     return mobs
 
 def buildMobsAvail():
-    mob_names = mobs_novice + mobs_first_job + mobs_second_job + mobs_advanced_job + mobs_third_job
-    # for _ in range(3):
-    #     mob_names += mob_names.copy()
+    mob_names = mobs_novice + mobs_first_job + mobs_second_job + mobs_advanced_job
+    for _ in range(iterations):
+        mob_names += mob_names.copy()
 
     mobs_avail = []
+    mob_id = initial_mob_id
     for mob_name in mob_names:    
-        mob_avail = buildMobAvail(mob_name)
+        mob_avail = buildMobAvail(mob_id, mob_name)
+        mob_id += 1
         mobs_avail.append(mob_avail)
     return mobs_avail
 
 def buildMob(mob_id, mob_name):
     mob = "  - Id: " + str(mob_id) + "\n"
-    mob += "    AegisName: " + mob_name + "\n"
+    mob += "    AegisName: " + mob_name + "_" + str(mob_id) + "\n"
     mob += "    Name: " + mob_name.lower().replace("job_", "").replace("_", "").title() + "\n"
     mob += "    Level: 1\n"
     mob += "    Hp: 60\n"
@@ -66,15 +90,15 @@ def buildMob(mob_id, mob_name):
     mob += "    Ai: 01\n"
     return mob
 
-def buildMobAvail(mob_name):
-    seksInt = str(random.randint(0, 1))
-    if(seksInt == 0):
-        seks = "Male"
+def buildMobAvail(mob_id, mob_name):
+    theseksInt = str(random.randint(0, 1))
+    if(theseksInt == 0):
+        theseks = "Male"
     else:
-        seks = "Female"
-    mobAvail = "  - Mob: " + mob_name + "\n"
+        theseks = "Female"
+    mobAvail = "  - Mob: " + mob_name + "_" + str(mob_id) + "\n"
     mobAvail += "    Sprite: " + mob_name + "\n"
-    mobAvail += "    Sex: " + seks + "\n"
+    mobAvail += "    Sex: " + theseks + "\n"
     mobAvail += "    HairStyle: " + str(random.randint(0, 8)) + "\n"
     mobAvail += "    HairColor: " + str(random.randint(0, 8)) + "\n"
     mobAvail += "    ClothColor: " + str(random.randint(0, 3)) + "\n"
