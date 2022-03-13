@@ -1,7 +1,19 @@
 import random
 import uuid
 import os
+import re
 from lists import * 
+
+
+def buildStatic(inputParameter):
+    cities = [inputParameter]
+    if inputParameter == 'all':
+        cities = ["monk", "umbala_natives", "umbala", "comodo", "morroc", "payon", "archer_village",
+         "alberta", "ayothaya", "izlude", "geffen", "aldebaran", "hugel", "einbroch", "einbech", "hel_camp",
+         "lighthalzen", "lighthalzen_slums", "lighthalzen_rekenber", "dicastes", "pharos", "amatsu",
+          "louyang", "veins", "nifflheim", "vanishing", "prontera"]
+    for city in cities:
+        buildCity(city)
 
 def getCommonSprites():
 	return [x for x in allsprites if x not in morroc + geffen + izlude + comodo + hugel]
@@ -57,11 +69,9 @@ def getCityNPCS(city):
         case _:
             return generic
 
-
 def buildCity(city):
-
     #randomize sprite ids
-	fin = open("./templates/cities/" + city + "_template.txt", "rt")
+	fin = open("./templates/static/" + city + "_template.txt", "rt")
 	fout = open("./" + city + "_tmp.txt", "wt")
 
 	citySprites = getCityNPCS(city)
@@ -69,7 +79,6 @@ def buildCity(city):
 		fout.write(line.replace('spriteid', str(random.choice(citySprites))))
 	fout.close()
 	fin.close()
-
 
     #generate npc ids
 	fin2 = open("./" + city + "_tmp.txt", "rt")
@@ -81,16 +90,3 @@ def buildCity(city):
 	fin2.close()
 	os.remove("./" + city + "_tmp.txt")
 
-
-def build(inputParameter):
-
-    cities = [inputParameter]
-    if inputParameter == 'all':
-        cities = ["monk", "umbala_natives", "umbala", "comodo", "morroc", "payon", "archer_village",
-         "alberta", "ayothaya", "izlude", "geffen", "aldebaran", "hugel", "einbroch", "einbech", "hel_camp",
-         "lighthalzen", "lighthalzen_slums", "lighthalzen_rekenber", "dicastes", "pharos", "amatsu",
-          "louyang", "veins", "nifflheim", "vanishing", "prontera"]
-        # louyang, amatsu, prontera, yuno, rachel, sanctuary, dicastes, veins, niff
-    
-    for city in cities:
-        buildCity(city)
