@@ -1,0 +1,949 @@
+niflheim,52,151,2	script	Niflheim Guard#nif::5f6882fc	655,{
+	npctalk "Welcome to Nifflheim.";
+	end;
+}
+
+niflheim,53,144,2	script	Niflheim Guard#nif::71972298	655,{
+	npctalk "Welcome to Nifflheim.";
+	end;
+}
+
+niflheim,228,270,7	script	Niflheim Guard#nif::d9d914cc	655,{
+	npctalk "Welcome to Nifflheim.";
+	end;
+}
+
+niflheim,233,266,7	script	Niflheim Guard#nif::72cb466b	655,{
+	npctalk "Welcome to Nifflheim.";
+	end;
+}
+
+niflheim,188,204,5	script	Niflheim Villager#nif::dc8ce7a3	69,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,197,200,7	script	Niflheim Villager#nif::4f6291c6	574,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,208,205,3	script	Niflheim Villager#nif::43540a51	85,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,215,196,4	script	Niflheim Villager#nif::7267f304	740,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,221,190,1	script	Niflheim Villager#nif::b5943698	69,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,214,179,2	script	Niflheim Villager#nif::28fd5418	634,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,208,170,3	script	Niflheim Villager#nif::e0bfa7d8	85,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,198,161,1	script	Niflheim Villager#nif::c7710802	636,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,197,175,6	script	Niflheim Villager#nif::3a8b668e	60,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,199,175,2	script	Niflheim Villager#nif::921606b9	605,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,189,182,7	script	Niflheim Villager#nif::13aa693a	742,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,181,189,3	script	Niflheim Villager#nif::714a670a	82,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,204,195,6	script	Niflheim Villager#nif::ae4ad3be	734,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,181,211,0	script	Niflheim Villager#nif::9e95c5f4	89,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,179,225,3	script	Niflheim Villager#nif::7c503e1a	477,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,169,227,7	script	Niflheim Villager#nif::418bbd91	644,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,169,243,1	script	Niflheim Villager#nif::ff5ad708	636,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,159,252,6	script	Niflheim Villager#nif::5bc0bccf	575,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,161,252,2	script	Niflheim Villager#nif::b95ad07d	89,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,164,263,5	script	Niflheim Villager#nif::e9ac2a4e	667,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,182,260,1	script	Niflheim Villager#nif::058ad56e	60,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,184,249,4	script	Niflheim Villager#nif::95293298	794,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,178,241,7	script	Niflheim Villager#nif::bf269520	745,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,191,237,5	script	Niflheim Villager#nif::6403456a	83,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,144,259,5	script	Niflheim Villager#nif::869ff075	755,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,133,265,4	script	Niflheim Villager#nif::768d6085	642,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,119,255,7	script	Niflheim Villager#nif::f017ff27	51,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,106,245,4	script	Niflheim Villager#nif::40d6d8ec	84,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,95,249,5	script	Niflheim Villager#nif::a28bf433	86,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,101,228,6	script	Niflheim Villager#nif::f1307e5d	667,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,103,228,2	script	Niflheim Villager#nif::30ff2b63	82,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,94,220,1	script	Niflheim Villager#nif::9a344348	753,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,81,242,4	script	Niflheim Villager#nif::95f8c4b8	51,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,81,194,5	script	Niflheim Villager#nif::fea6d2a4	644,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,94,181,6	script	Niflheim Villager#nif::91fcacb8	83,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,109,179,0	script	Niflheim Villager#nif::ec12d57d	69,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,126,173,2	script	Niflheim Villager#nif::b2b08a25	477,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,136,180,1	script	Niflheim Villager#nif::7b131a70	735,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,141,198,6	script	Niflheim Villager#nif::98d4597c	636,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,143,198,2	script	Niflheim Villager#nif::986212d5	686,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,149,216,3	script	Niflheim Villager#nif::f3d1dec2	795,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,151,185,0	script	Niflheim Villager#nif::477a2934	430,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,158,218,7	script	Niflheim Villager#nif::1b36bdd6	732,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,157,206,5	script	Niflheim Villager#nif::e0ed13b8	642,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,164,198,0	script	Niflheim Villager#nif::178890a9	732,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,150,183,1	script	Niflheim Villager#nif::0c1b6497	125,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,170,182,6	script	Niflheim Villager#nif::4b8e62a3	92,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,176,176,5	script	Niflheim Villager#nif::b7c7d32a	732,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,184,170,2	script	Niflheim Villager#nif::12951f0d	645,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,195,256,7	script	Niflheim Villager#nif::84188331	89,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,208,266,3	script	Niflheim Villager#nif::83a16f2a	60,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,207,249,1	script	Niflheim Villager#nif::b373661b	476,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,209,239,4	script	Niflheim Villager#nif::599575f9	89,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,197,232,2	script	Niflheim Villager#nif::a039c71b	754,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,215,232,7	script	Niflheim Villager#nif::7ff56958	68,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,227,240,5	script	Niflheim Villager#nif::01d59db3	741,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,221,250,6	script	Niflheim Villager#nif::753017f0	908,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,223,250,2	script	Niflheim Villager#nif::ccf669ed	637,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,222,252,4	script	Niflheim Villager#nif::558b090b	125,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,226,260,1	script	Niflheim Villager#nif::9900ca42	741,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,214,264,6	script	Niflheim Villager#nif::c127d956	67,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,209,219,4	script	Niflheim Villager#nif::f4c2a61c	798,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,232,230,1	script	Niflheim Villager#nif::56dcc211	744,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,229,216,4	script	Niflheim Villager#nif::d9b2f0e1	60,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,232,203,0	script	Niflheim Villager#nif::66b53b51	85,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,233,184,3	script	Niflheim Villager#nif::9bccacdb	67,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,240,192,4	script	Niflheim Villager#nif::d355d182	641,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,232,169,0	script	Niflheim Villager#nif::edfc8d09	792,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,230,154,7	script	Niflheim Villager#nif::ced54967	605,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,234,132,3	script	Niflheim Villager#nif::95bd6489	754,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,216,139,1	script	Niflheim Villager#nif::55aa2766	89,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,216,159,0	script	Niflheim Villager#nif::52c1f8d1	641,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,197,147,5	script	Niflheim Villager#nif::39748917	779,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,184,140,2	script	Niflheim Villager#nif::01c59468	645,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,175,132,3	script	Niflheim Villager#nif::44cab951	84,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,170,148,1	script	Niflheim Villager#nif::c0d22500	641,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,170,164,6	script	Niflheim Villager#nif::8ec1215e	733,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,154,157,2	script	Niflheim Villager#nif::fd19426e	644,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,150,169,3	script	Niflheim Villager#nif::90d6c747	798,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,136,165,3	script	Niflheim Villager#nif::528b265d	630,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,127,157,0	script	Niflheim Villager#nif::ec1f1e96	792,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,135,149,4	script	Niflheim Villager#nif::960e95c5	70,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,145,143,7	script	Niflheim Villager#nif::7a3a47bb	68,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,158,133,5	script	Niflheim Villager#nif::6697773e	751,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,164,124,6	script	Niflheim Villager#nif::dfd06c58	124,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,166,124,2	script	Niflheim Villager#nif::a155faeb	476,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,169,115,1	script	Niflheim Villager#nif::11e477bf	734,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,171,106,4	script	Niflheim Villager#nif::770594aa	64,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,163,99,2	script	Niflheim Villager#nif::e298e652	95,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,154,85,7	script	Niflheim Villager#nif::19868ad9	879,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,172,93,3	script	Niflheim Villager#nif::131e8268	634,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,169,75,0	script	Niflheim Villager#nif::a9c93a88	477,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,180,77,6	script	Niflheim Villager#nif::63698e36	89,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,188,80,4	script	Niflheim Villager#nif::bca072bf	89,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,190,66,1	script	Niflheim Villager#nif::1c3b1e9e	753,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,226,102,5	script	Niflheim Villager#nif::2bd74d8a	755,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,190,122,2	script	Niflheim Villager#nif::bb15177c	686,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,136,130,6	script	Niflheim Villager#nif::eb719ce4	430,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,143,118,3	script	Niflheim Villager#nif::cbf0b54d	908,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,140,177,4	script	Niflheim Villager#nif::3dedd2f7	751,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,149,109,1	script	Niflheim Villager#nif::5cd539ff	630,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,140,97,6	script	Niflheim Villager#nif::46aa3244	62,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,142,97,2	script	Niflheim Villager#nif::538274af	605,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,151,95,3	script	Niflheim Villager#nif::a3b615dc	67,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,154,106,4	script	Niflheim Villager#nif::c716c5cc	51,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,114,152,2	script	Niflheim Villager#nif::723a60fd	745,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,101,156,5	script	Niflheim Villager#nif::dfe92ea2	70,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,81,161,3	script	Niflheim Villager#nif::d4ec270f	642,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,87,154,7	script	Niflheim Villager#nif::330e7462	644,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,72,149,4	script	Niflheim Villager#nif::188dbed2	604,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,63,150,6	script	Niflheim Villager#nif::cbd2539d	634,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,118,126,3	script	Niflheim Villager#nif::3913e69d	630,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,104,124,7	script	Niflheim Villager#nif::4d31c12d	86,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,90,118,2	script	Niflheim Villager#nif::899a2095	828,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,86,130,0	script	Niflheim Villager#nif::9f855b56	879,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,84,105,0	script	Niflheim Villager#nif::77068194	642,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,104,79,0	script	Niflheim Villager#nif::ab2f662e	779,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,116,71,7	script	Niflheim Villager#nif::2fef7b2c	430,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,127,82,1	script	Niflheim Villager#nif::0ce43d73	634,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,139,88,7	script	Niflheim Villager#nif::ca38a20f	79,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,185,108,7	script	Niflheim Villager#nif::12059d91	630,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,188,95,3	script	Niflheim Villager#nif::55757d46	86,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,200,92,7	script	Niflheim Villager#nif::c35e4e9e	744,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,200,110,0	script	Niflheim Villager#nif::c352cb37	49,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,233,272,3	script	Niflheim Villager#nif::70202e0a	69,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,254,276,6	script	Niflheim Villager#nif::f939446d	795,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,289,264,5	script	Niflheim Villager#nif::d6e96eb9	604,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,293,238,0	script	Niflheim Villager#nif::d793f149	98,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,338,255,7	script	Niflheim Villager#nif::8348cfea	734,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,315,247,3	script	Niflheim Villager#nif::f0e92b7f	574,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,299,79,3	script	Niflheim Villager#nif::b2e13a72	84,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,305,67,5	script	Niflheim Villager#nif::e3349d50	751,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,315,64,2	script	Niflheim Villager#nif::1647eed0	83,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,330,64,1	script	Niflheim Villager#nif::0209cfa6	908,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,331,55,0	script	Niflheim Villager#nif::3c83b7fa	753,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,330,40,7	script	Niflheim Villager#nif::6e70660a	630,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,314,40,2	script	Niflheim Villager#nif::a97a26da	792,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,297,38,7	script	Niflheim Villager#nif::33e5b867	908,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,281,42,6	script	Niflheim Villager#nif::5d726ecc	795,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,265,51,0	script	Niflheim Villager#nif::8844e058	430,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,250,51,1	script	Niflheim Villager#nif::dc772551	732,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,235,56,5	script	Niflheim Villager#nif::222ee761	89,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,240,72,7	script	Niflheim Villager#nif::49e8393c	70,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,256,109,6	script	Niflheim Villager#nif::53eb9149	644,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,216,47,1	script	Niflheim Villager#nif::db46485c	755,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,192,51,6	script	Niflheim Villager#nif::b5b373c7	49,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,194,51,2	script	Niflheim Villager#nif::2a032785	637,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,175,36,4	script	Niflheim Villager#nif::924548ff	634,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,159,45,6	script	Niflheim Villager#nif::65e2b72d	51,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,131,49,1	script	Niflheim Villager#nif::191640ef	83,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,293,218,7	script	Niflheim Villager#nif::bca32392	62,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,321,220,3	script	Niflheim Villager#nif::c258fbaa	751,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,289,197,7	script	Niflheim Villager#nif::6982f732	79,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,300,185,4	script	Niflheim Villager#nif::c669fb46	630,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,287,166,0	script	Niflheim Villager#nif::0a9cea6d	732,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,252,177,3	script	Niflheim Villager#nif::0347ea04	735,{
+	npctalk "npcdialog";
+	end;
+}
+
+niflheim,251,189,5	script	Niflheim Villager#nif::1329d71c	630,{
+	npctalk "npcdialog";
+	end;
+}
+
+nif_in,183,114,5	script	Roda Frog#nif::80d55dde	1012,{
+	npctalk "...";
+	end;
+}
+
+
+nif_in,118,179,5	script	Master Witch#nif::97cd4447	656,{
+	npctalk "I will make you a High Wizard.";
+	end;
+}
+
+
+
+
+
+nif_in,126,177,7	script	Niflheim Villager#nif::750cde8b	64,{
+	npctalk "npcdialog";
+	end;
+}
+
+nif_in,116,163,1	script	Niflheim Villager#nif::bad59cc3	751,{
+	npctalk "npcdialog";
+	end;
+}
+
+nif_in,103,175,6	script	Niflheim Villager#nif::89ae6339	740,{
+	npctalk "npcdialog";
+	end;
+}
+
+nif_in,59,160,1	script	Niflheim Villager#nif::53ec3c98	667,{
+	npctalk "npcdialog";
+	end;
+}
+
+nif_in,48,152,0	script	Niflheim Villager#nif::84f49568	735,{
+	npctalk "npcdialog";
+	end;
+}
+
+nif_in,32,167,3	script	Niflheim Villager#nif::2bca6dd7	642,{
+	npctalk "npcdialog";
+	end;
+}
+
+nif_in,49,164,1	script	Niflheim Villager#nif::fc24573f	798,{
+	npctalk "npcdialog";
+	end;
+}
+
+nif_in,15,171,7	script	Niflheim Villager#nif::81346d4b	49,{
+	npctalk "npcdialog";
+	end;
+}
+
+nif_in,40,184,4	script	Niflheim Villager#nif::364f8ee4	67,{
+	npctalk "npcdialog";
+	end;
+}
+
+nif_in,26,156,1	script	Niflheim Villager#nif::c013bd94	642,{
+	npctalk "npcdialog";
+	end;
+}
+
+nif_in,156,92,3	script	Niflheim Villager#nif::2e8405f6	733,{
+	npctalk "npcdialog";
+	end;
+}
+
+nif_in,161,83,5	script	Niflheim Villager#nif::a1db5b2e	754,{
+	npctalk "npcdialog";
+	end;
+}
+
+nif_in,170,76,2	script	Niflheim Villager#nif::3a865876	98,{
+	npctalk "npcdialog";
+	end;
+}
+
+nif_in,23,25,5	script	Niflheim Villager#nif::f7e40d30	779,{
+	npctalk "npcdialog";
+	end;
+}
+
+nif_in,17,21,2	script	Niflheim Villager#nif::d99283fe	634,{
+	npctalk "npcdialog";
+	end;
+}
+
+nif_in,14,25,6	script	Niflheim Villager#nif::1873c459	477,{
+	npctalk "npcdialog";
+	end;
+}
+
+nif_in,16,33,3	script	Niflheim Villager#nif::347b6c9a	476,{
+	npctalk "npcdialog";
+	end;
+}
+
+nif_in,26,31,7	script	Niflheim Villager#nif::b8c3114e	64,{
+	npctalk "npcdialog";
+	end;
+}
+
+nif_in,80,30,2	script	Niflheim Villager#nif::2b91b40d	644,{
+	npctalk "npcdialog";
+	end;
+}
+
+nif_in,69,28,0	script	Niflheim Villager#nif::49d6e791	95,{
+	npctalk "npcdialog";
+	end;
+}
+
+nif_in,86,16,1	script	Niflheim Villager#nif::92a968b1	753,{
+	npctalk "npcdialog";
+	end;
+}
+
+nif_in,74,16,5	script	Niflheim Villager#nif::d920bdb7	430,{
+	npctalk "npcdialog";
+	end;
+}
+
+nif_in,137,23,7	script	Niflheim Villager#nif::767ee321	64,{
+	npctalk "npcdialog";
+	end;
+}
+
+nif_in,150,16,4	script	Niflheim Villager#nif::ee0bb6c7	637,{
+	npctalk "npcdialog";
+	end;
+}
+
+nif_in,27,91,7	script	Niflheim Villager#nif::df25a61f	476,{
+	npctalk "npcdialog";
+	end;
+}
+
+nif_in,31,78,2	script	Niflheim Villager#nif::48962483	124,{
+	npctalk "npcdialog";
+	end;
+}

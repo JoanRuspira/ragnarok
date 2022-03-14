@@ -8,10 +8,7 @@ from lists import *
 def buildStatic(inputParameter):
     cities = [inputParameter]
     if inputParameter == 'all':
-        cities = ["monk", "umbala_natives", "umbala", "comodo", "morroc", "payon", "archer_village",
-         "alberta", "ayothaya", "izlude", "geffen", "aldebaran", "hugel", "einbroch", "einbech", "hel_camp",
-         "lighthalzen", "lighthalzen_slums", "lighthalzen_rekenber", "dicastes", "pharos", "amatsu",
-          "louyang", "veins", "nifflheim", "vanishing", "prontera"]
+        cities = all_cities
     for city in cities:
         buildCity(city)
 
@@ -26,15 +23,15 @@ def getCityNPCS(city):
             return umbala_natives
         case "amatsu" | "louyang":
             return generic + amatsu
-        case "comodo", "pharos":
+        case "comodo", "cmd_fild07":
             return generic + comodo
-        case "morroc" | "veins":
+        case "morocc" | "veins":
             return generic + morroc
         case "alberta":
             return generic + alberta
         case "ayothaya":
             return generic + ayothaya
-        case "payon" | "archer_village":
+        case "payon" | "pay_arche":
             return generic + payon
         case "izlude" | "prontera":
             return generic + prontera
@@ -54,18 +51,18 @@ def getCityNPCS(city):
             return lighthalzen_slums
         case "lighthalzen_rekenber":
             return lighthalzen_rekenber
-        case "dicastes":
+        case "dicastes01":
             return generic + dicastes
         case "rachel":
             return generic + morroc + rachel
-        case "nifflheim":
+        case "niflheim":
             return generic + nifflheim
         case "monk":
             return monk
-        case "hel_camp":
+        case "mid_camp":
             return generic
-        case "vanishing":
-            return vanishing
+        case "nameless_n":
+            return nameless_n
         case _:
             return generic
 

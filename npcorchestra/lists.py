@@ -20,7 +20,7 @@ nifflheim = [60,64,82,89,98,476,477,574,575,604,605,630,667,686,735,792,794,795]
 generic = [49,51,62,67,68,69,70,79,83,84,85,86,89,92,95,124,125,430,634,635,636,637,641,642,644,645,732,733,734,740,741,742,744,745,751,753,754,755,779,798,879,908,828]
 monk = [15,52,483,484,629,672,690,746,753,823,819,827,834,843,8,60,501,630,641]
 lighthalzen_rekenber = [853,864,865,869,878,121,109,402,90,86,982,410,531,542,558,749,750,806,57]
-vanishing = [48,50,54,53,59,60,66,67,68,69,78,79,82,83,84,85,92,93,110,630,642,641,644,654,701,704,755,777,778,798]
+nameless_n = [48,50,54,53,59,60,66,67,68,69,78,79,82,83,84,85,92,93,110,630,642,641,644,654,701,704,755,777,778,798]
 
 mobs_novice = ["JOB_NOVICE"]
 mobs_first_job = ["JOB_SWORDMAN","JOB_MAGE","JOB_ARCHER","JOB_ACOLYTE","JOB_MERCHANT","JOB_THIEF"]
@@ -28,6 +28,11 @@ mobs_second_job = ["JOB_KNIGHT","JOB_PRIEST","JOB_WIZARD","JOB_BLACKSMITH","JOB_
 mobs_advanced_job = ["JOB_LORD_KNIGHT","JOB_HIGH_PRIEST","JOB_HIGH_WIZARD","JOB_WHITESMITH","JOB_SNIPER","JOB_ASSASSIN_CROSS","JOB_PALADIN","JOB_CHAMPION","JOB_PROFESSOR","JOB_STALKER","JOB_CREATOR","JOB_CLOWN","JOB_GYPSY"]
 mobs_third_job = ["JOB_RUNE_KNIGHT","JOB_WARLOCK","JOB_RANGER","JOB_ARCH_BISHOP","JOB_MECHANIC","JOB_GUILLOTINE_CROSS","JOB_ROYAL_GUARD","JOB_SORCERER","JOB_MINSTREL","JOB_WANDERER","JOB_SURA","JOB_GENETIC","JOB_SHADOW_CHASER"]
 
+
+all_cities = ["prt_monk", "umbala_natives", "umbala", "comodo", "morocc", "payon", "pay_arche","alberta", "ayothaya", "izlude", "geffen", "aldebaran", "hugel", "einbroch", "einbech", "mid_camp","lighthalzen", "lighthalzen_slums", "lighthalzen_rekenber", "dicastes01", "cmd_fild07", "amatsu", "veins", "niflheim", "nameless_n", "louyang"]
+
+# louyang
+# prontera
 # JOB_CRUSADER2
 # JOB_LORD_KNIGHT2
 # JOB_KNIGHT2

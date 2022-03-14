@@ -1003,6 +1003,930 @@ Body:
     Hp: 60
     WalkSpeed: 200
     Ai: 01
+  - Id: 20153
+    AegisName: JOB_NOVICE_20153
+    Name: Novice
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20154
+    AegisName: JOB_SWORDMAN_20154
+    Name: Swordman
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20155
+    AegisName: JOB_MAGE_20155
+    Name: Mage
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20156
+    AegisName: JOB_ARCHER_20156
+    Name: Archer
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20157
+    AegisName: JOB_ACOLYTE_20157
+    Name: Acolyte
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20158
+    AegisName: JOB_MERCHANT_20158
+    Name: Merchant
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20159
+    AegisName: JOB_THIEF_20159
+    Name: Thief
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20160
+    AegisName: JOB_KNIGHT_20160
+    Name: Knight
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20161
+    AegisName: JOB_PRIEST_20161
+    Name: Priest
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20162
+    AegisName: JOB_WIZARD_20162
+    Name: Wizard
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20163
+    AegisName: JOB_BLACKSMITH_20163
+    Name: Blacksmith
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20164
+    AegisName: JOB_HUNTER_20164
+    Name: Hunter
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20165
+    AegisName: JOB_ASSASSIN_20165
+    Name: Assassin
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20166
+    AegisName: JOB_CRUSADER_20166
+    Name: Crusader
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20167
+    AegisName: JOB_MONK_20167
+    Name: Monk
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20168
+    AegisName: JOB_SAGE_20168
+    Name: Sage
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20169
+    AegisName: JOB_ROGUE_20169
+    Name: Rogue
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20170
+    AegisName: JOB_ALCHEMIST_20170
+    Name: Alchemist
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20171
+    AegisName: JOB_BARD_20171
+    Name: Bard
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20172
+    AegisName: JOB_DANCER_20172
+    Name: Dancer
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20173
+    AegisName: JOB_LORD_KNIGHT_20173
+    Name: Lordknight
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20174
+    AegisName: JOB_HIGH_PRIEST_20174
+    Name: Highpriest
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20175
+    AegisName: JOB_HIGH_WIZARD_20175
+    Name: Highwizard
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20176
+    AegisName: JOB_WHITESMITH_20176
+    Name: Whitesmith
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20177
+    AegisName: JOB_SNIPER_20177
+    Name: Sniper
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20178
+    AegisName: JOB_ASSASSIN_CROSS_20178
+    Name: Assassincross
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20179
+    AegisName: JOB_PALADIN_20179
+    Name: Paladin
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20180
+    AegisName: JOB_CHAMPION_20180
+    Name: Champion
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20181
+    AegisName: JOB_PROFESSOR_20181
+    Name: Professor
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20182
+    AegisName: JOB_STALKER_20182
+    Name: Stalker
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20183
+    AegisName: JOB_CREATOR_20183
+    Name: Creator
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20184
+    AegisName: JOB_CLOWN_20184
+    Name: Clown
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20185
+    AegisName: JOB_GYPSY_20185
+    Name: Gypsy
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20186
+    AegisName: JOB_NOVICE_20186
+    Name: Novice
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20187
+    AegisName: JOB_SWORDMAN_20187
+    Name: Swordman
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20188
+    AegisName: JOB_MAGE_20188
+    Name: Mage
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20189
+    AegisName: JOB_ARCHER_20189
+    Name: Archer
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20190
+    AegisName: JOB_ACOLYTE_20190
+    Name: Acolyte
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20191
+    AegisName: JOB_MERCHANT_20191
+    Name: Merchant
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20192
+    AegisName: JOB_THIEF_20192
+    Name: Thief
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20193
+    AegisName: JOB_KNIGHT_20193
+    Name: Knight
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20194
+    AegisName: JOB_PRIEST_20194
+    Name: Priest
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20195
+    AegisName: JOB_WIZARD_20195
+    Name: Wizard
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20196
+    AegisName: JOB_BLACKSMITH_20196
+    Name: Blacksmith
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20197
+    AegisName: JOB_HUNTER_20197
+    Name: Hunter
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20198
+    AegisName: JOB_ASSASSIN_20198
+    Name: Assassin
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20199
+    AegisName: JOB_CRUSADER_20199
+    Name: Crusader
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20200
+    AegisName: JOB_MONK_20200
+    Name: Monk
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20201
+    AegisName: JOB_SAGE_20201
+    Name: Sage
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20202
+    AegisName: JOB_ROGUE_20202
+    Name: Rogue
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20203
+    AegisName: JOB_ALCHEMIST_20203
+    Name: Alchemist
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20204
+    AegisName: JOB_BARD_20204
+    Name: Bard
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20205
+    AegisName: JOB_DANCER_20205
+    Name: Dancer
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20206
+    AegisName: JOB_LORD_KNIGHT_20206
+    Name: Lordknight
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20207
+    AegisName: JOB_HIGH_PRIEST_20207
+    Name: Highpriest
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20208
+    AegisName: JOB_HIGH_WIZARD_20208
+    Name: Highwizard
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20209
+    AegisName: JOB_WHITESMITH_20209
+    Name: Whitesmith
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20210
+    AegisName: JOB_SNIPER_20210
+    Name: Sniper
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20211
+    AegisName: JOB_ASSASSIN_CROSS_20211
+    Name: Assassincross
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20212
+    AegisName: JOB_PALADIN_20212
+    Name: Paladin
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20213
+    AegisName: JOB_CHAMPION_20213
+    Name: Champion
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20214
+    AegisName: JOB_PROFESSOR_20214
+    Name: Professor
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20215
+    AegisName: JOB_STALKER_20215
+    Name: Stalker
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20216
+    AegisName: JOB_CREATOR_20216
+    Name: Creator
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20217
+    AegisName: JOB_CLOWN_20217
+    Name: Clown
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20218
+    AegisName: JOB_GYPSY_20218
+    Name: Gypsy
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20219
+    AegisName: JOB_NOVICE_20219
+    Name: Novice
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20220
+    AegisName: JOB_SWORDMAN_20220
+    Name: Swordman
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20221
+    AegisName: JOB_MAGE_20221
+    Name: Mage
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20222
+    AegisName: JOB_ARCHER_20222
+    Name: Archer
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20223
+    AegisName: JOB_ACOLYTE_20223
+    Name: Acolyte
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20224
+    AegisName: JOB_MERCHANT_20224
+    Name: Merchant
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20225
+    AegisName: JOB_THIEF_20225
+    Name: Thief
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20226
+    AegisName: JOB_KNIGHT_20226
+    Name: Knight
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20227
+    AegisName: JOB_PRIEST_20227
+    Name: Priest
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20228
+    AegisName: JOB_WIZARD_20228
+    Name: Wizard
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20229
+    AegisName: JOB_BLACKSMITH_20229
+    Name: Blacksmith
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20230
+    AegisName: JOB_HUNTER_20230
+    Name: Hunter
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20231
+    AegisName: JOB_ASSASSIN_20231
+    Name: Assassin
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20232
+    AegisName: JOB_CRUSADER_20232
+    Name: Crusader
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20233
+    AegisName: JOB_MONK_20233
+    Name: Monk
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20234
+    AegisName: JOB_SAGE_20234
+    Name: Sage
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20235
+    AegisName: JOB_ROGUE_20235
+    Name: Rogue
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20236
+    AegisName: JOB_ALCHEMIST_20236
+    Name: Alchemist
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20237
+    AegisName: JOB_BARD_20237
+    Name: Bard
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20238
+    AegisName: JOB_DANCER_20238
+    Name: Dancer
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20239
+    AegisName: JOB_LORD_KNIGHT_20239
+    Name: Lordknight
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20240
+    AegisName: JOB_HIGH_PRIEST_20240
+    Name: Highpriest
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20241
+    AegisName: JOB_HIGH_WIZARD_20241
+    Name: Highwizard
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20242
+    AegisName: JOB_WHITESMITH_20242
+    Name: Whitesmith
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20243
+    AegisName: JOB_SNIPER_20243
+    Name: Sniper
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20244
+    AegisName: JOB_ASSASSIN_CROSS_20244
+    Name: Assassincross
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20245
+    AegisName: JOB_PALADIN_20245
+    Name: Paladin
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20246
+    AegisName: JOB_CHAMPION_20246
+    Name: Champion
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20247
+    AegisName: JOB_PROFESSOR_20247
+    Name: Professor
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20248
+    AegisName: JOB_STALKER_20248
+    Name: Stalker
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20249
+    AegisName: JOB_CREATOR_20249
+    Name: Creator
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20250
+    AegisName: JOB_CLOWN_20250
+    Name: Clown
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20251
+    AegisName: JOB_GYPSY_20251
+    Name: Gypsy
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20252
+    AegisName: JOB_NOVICE_20252
+    Name: Novice
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20253
+    AegisName: JOB_SWORDMAN_20253
+    Name: Swordman
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20254
+    AegisName: JOB_MAGE_20254
+    Name: Mage
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20255
+    AegisName: JOB_ARCHER_20255
+    Name: Archer
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20256
+    AegisName: JOB_ACOLYTE_20256
+    Name: Acolyte
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20257
+    AegisName: JOB_MERCHANT_20257
+    Name: Merchant
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20258
+    AegisName: JOB_THIEF_20258
+    Name: Thief
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20259
+    AegisName: JOB_KNIGHT_20259
+    Name: Knight
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20260
+    AegisName: JOB_PRIEST_20260
+    Name: Priest
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20261
+    AegisName: JOB_WIZARD_20261
+    Name: Wizard
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20262
+    AegisName: JOB_BLACKSMITH_20262
+    Name: Blacksmith
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20263
+    AegisName: JOB_HUNTER_20263
+    Name: Hunter
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20264
+    AegisName: JOB_ASSASSIN_20264
+    Name: Assassin
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20265
+    AegisName: JOB_CRUSADER_20265
+    Name: Crusader
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20266
+    AegisName: JOB_MONK_20266
+    Name: Monk
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20267
+    AegisName: JOB_SAGE_20267
+    Name: Sage
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20268
+    AegisName: JOB_ROGUE_20268
+    Name: Rogue
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20269
+    AegisName: JOB_ALCHEMIST_20269
+    Name: Alchemist
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20270
+    AegisName: JOB_BARD_20270
+    Name: Bard
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20271
+    AegisName: JOB_DANCER_20271
+    Name: Dancer
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20272
+    AegisName: JOB_LORD_KNIGHT_20272
+    Name: Lordknight
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20273
+    AegisName: JOB_HIGH_PRIEST_20273
+    Name: Highpriest
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20274
+    AegisName: JOB_HIGH_WIZARD_20274
+    Name: Highwizard
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20275
+    AegisName: JOB_WHITESMITH_20275
+    Name: Whitesmith
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20276
+    AegisName: JOB_SNIPER_20276
+    Name: Sniper
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20277
+    AegisName: JOB_ASSASSIN_CROSS_20277
+    Name: Assassincross
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20278
+    AegisName: JOB_PALADIN_20278
+    Name: Paladin
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20279
+    AegisName: JOB_CHAMPION_20279
+    Name: Champion
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20280
+    AegisName: JOB_PROFESSOR_20280
+    Name: Professor
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20281
+    AegisName: JOB_STALKER_20281
+    Name: Stalker
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20282
+    AegisName: JOB_CREATOR_20282
+    Name: Creator
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20283
+    AegisName: JOB_CLOWN_20283
+    Name: Clown
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
+  - Id: 20284
+    AegisName: JOB_GYPSY_20284
+    Name: Gypsy
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 01
 #END_NPCBUILDER_MOBS
   - Id: 1001
     AegisName: SCORPION

@@ -2,33 +2,33 @@ import random
 import uuid
 import os
 import re
-from lists import * 
+from lists import *
 
-iterations = 2
+iterations = 3
 initial_mob_id = 20021
+
+# 1000-3999 or 20020-31999
 
 def buildDynamic():
     buildMobsfile()
     buildMobsAvailfile()
-    buildCityMobs()
+    buildMobsCities()
+
+def buildMobsCities():
+    end_mob_id = calculateEndMobId()
+    for city in all_cities:
+        buildMobsCitiy(city, end_mob_id)
+
+def buildMobsCitiy(city, end_mob_id):   
+    fout = open("../npc/mobs/npcorchestra/" + city + "_npcorchestra.txt", "wt")
+    city_mobs = []
+    for _ in range(50):
+        city_mobs.append(random.randint(initial_mob_id, end_mob_id))
     
-
-def buildCityMobs():
-    fout = open("../npc/mobs/fields/izlude_npcbuilder.txt", "wt")
-
-    mob_names = mobs_novice + mobs_first_job + mobs_second_job + mobs_advanced_job
-    for _ in range(iterations):
-        mob_names += mob_names.copy()
-
-    mob_id = initial_mob_id
-    for mob_name in mob_names:
-        mob_title = mob_name.lower().replace("job_", "").replace("_", "").title()
-        mob_line = "izlude,0,0	monster	" + mob_title + "	" + str(mob_id) + ",1,5000\n"
-        mob_id += 1
+    for city_mob_id in city_mobs:
+        mob_line = city + ",0,0	monster	" + city + " Adventurer	" + str(city_mob_id) + ",1,5000\n"
         fout.write(mob_line)
-    
     fout.close()
-    
 
 def buildMobsfile():  
     mobs = buildMobs()
@@ -55,10 +55,7 @@ def buildMobsAvailfile():
     fout.close()
 
 def buildMobs():
-    mob_names = mobs_novice + mobs_first_job + mobs_second_job + mobs_advanced_job
-    for _ in range(iterations):
-        mob_names += mob_names.copy()
-
+    mob_names = buildMobArrayIterations()
     mobs = []
     mob_id = initial_mob_id
     for mob_name in mob_names:
@@ -68,10 +65,7 @@ def buildMobs():
     return mobs
 
 def buildMobsAvail():
-    mob_names = mobs_novice + mobs_first_job + mobs_second_job + mobs_advanced_job
-    for _ in range(iterations):
-        mob_names += mob_names.copy()
-
+    mob_names = buildMobArrayIterations()
     mobs_avail = []
     mob_id = initial_mob_id
     for mob_name in mob_names:    
@@ -106,4 +100,16 @@ def buildMobAvail(mob_id, mob_name):
     mobAvail += "    Shield: Guard\n"
     return mobAvail
 
-    # 1000-3999 or 20020-31999
+def buildMobArrayIterations():
+    mob_names = mobs_novice + mobs_first_job + mobs_second_job + mobs_advanced_job
+    for _ in range(iterations):
+        mob_names += mob_names.copy()
+    return mob_names
+
+def calculateEndMobId():
+    mob_names = buildMobArrayIterations()
+    end_mob_id = initial_mob_id
+    for mob_name in mob_names:
+        end_mob_id += 1
+    end_mob_id -= 1
+    return end_mob_id

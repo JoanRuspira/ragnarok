@@ -1,0 +1,944 @@
+dicastes01,194,95,4	script	Dicastes Guard#dic:710fe0ba	966,{
+	npctalk "Welcome to Dicastes.";
+	end;
+}
+
+dicastes01,201,95,4	script	Dicastes Guard#dic:14e479ae	966,{
+	npctalk "Welcome to Dicastes.";
+	end;
+}
+
+dicastes01,194,335,4	script	Dicastes Guard#dic:077df239	966,{
+	npctalk "Welcome to Dicastes.";
+	end;
+}
+
+dicastes01,201,334,4	script	Dicastes Guard#dic:e054adf3	966,{
+	npctalk "Welcome to Dicastes.";
+	end;
+}
+
+dicastes01,196,103,1	script	Dicastes Villager#dic:9dee8368	732,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,192,120,6	script	Dicastes Villager#dic:2e4a61bb	125,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,192,118,6	script	Dicastes Villager#dic:0d1ea6dd	753,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,199,127,3	script	Dicastes Villager#dic:31917d8d	716,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,189,143,6	script	Dicastes Villager#dic:844f5d4b	70,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,197,140,7	script	Dicastes Villager#dic:def8ab59	855,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,200,156,2	script	Dicastes Villager#dic:500c6da8	83,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,198,156,6	script	Dicastes Villager#dic:4925c79e	70,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,195,171,5	script	Dicastes Villager#dic:44f6e849	641,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,200,177,1	script	Dicastes Villager#dic:2f30d8a0	587,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,193,188,6	script	Dicastes Villager#dic:2f6bdeac	83,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,185,185,0	script	Dicastes Villager#dic:d3ccb499	69,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,177,199,6	script	Dicastes Villager#dic:5e34a3d9	86,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,179,199,2	script	Dicastes Villager#dic:76e464d5	95,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,184,209,4	script	Dicastes Villager#dic:4568d705	854,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,182,221,1	script	Dicastes Villager#dic:2c7eaa63	51,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,194,223,6	script	Dicastes Villager#dic:dbb60d45	79,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,203,219,3	script	Dicastes Villager#dic:321a2e1c	732,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,213,217,4	script	Dicastes Villager#dic:2d88f4cd	908,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,219,205,2	script	Dicastes Villager#dic:5612c55d	753,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,215,195,0	script	Dicastes Villager#dic:48c5e94f	712,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,210,188,3	script	Dicastes Villager#dic:979243ca	847,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,205,208,3	script	Dicastes Villager#dic:7bc09496	85,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,200,194,0	script	Dicastes Villager#dic:25fc23b4	62,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,189,204,3	script	Dicastes Villager#dic:c910f06a	879,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,167,204,2	script	Dicastes Villager#dic:29b34e50	641,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,154,201,7	script	Dicastes Villager#dic:7da2541c	430,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,148,209,4	script	Dicastes Villager#dic:1b6dec04	79,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,146,209,4	script	Dicastes Villager#dic:34297602	68,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,138,205,3	script	Dicastes Villager#dic:2dc5ea58	79,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,143,189,1	script	Dicastes Villager#dic:862b7180	798,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,153,186,7	script	Dicastes Villager#dic:a7bc1443	741,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,160,177,0	script	Dicastes Villager#dic:878aa396	716,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,153,164,3	script	Dicastes Villager#dic:30d54a55	124,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,139,157,6	script	Dicastes Villager#dic:5a5a2734	753,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,141,157,2	script	Dicastes Villager#dic:d045f344	62,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,142,143,3	script	Dicastes Villager#dic:8d6158b2	634,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,151,145,5	script	Dicastes Villager#dic:309112eb	70,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,165,135,1	script	Dicastes Villager#dic:3fbeed3c	740,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,177,127,6	script	Dicastes Villager#dic:74f00403	89,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,139,130,7	script	Dicastes Villager#dic:8c4f6fa3	603,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,138,118,0	script	Dicastes Villager#dic:03ea4de1	828,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,141,113,0	script	Dicastes Villager#dic:1e3de87f	711,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,156,110,2	script	Dicastes Villager#dic:c701a289	793,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,165,101,4	script	Dicastes Villager#dic:6de9c888	741,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,123,129,0	script	Dicastes Villager#dic:166f8912	62,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,110,141,4	script	Dicastes Villager#dic:26ec29a1	754,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,92,131,5	script	Dicastes Villager#dic:02a3b7f4	68,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,92,123,0	script	Dicastes Villager#dic:0997cf28	741,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,98,152,6	script	Dicastes Villager#dic:8bc4bf4b	855,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,100,152,2	script	Dicastes Villager#dic:191be20a	711,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,98,166,3	script	Dicastes Villager#dic:7db139da	716,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,110,172,1	script	Dicastes Villager#dic:773e8104	124,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,116,169,4	script	Dicastes Villager#dic:e25de582	908,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,126,165,1	script	Dicastes Villager#dic:5dc215b5	645,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,177,166,4	script	Dicastes Villager#dic:be691b06	713,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,179,161,7	script	Dicastes Villager#dic:f14f3233	124,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,182,166,2	script	Dicastes Villager#dic:9dd5abab	634,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,185,154,6	script	Dicastes Villager#dic:d8b1f184	642,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,169,164,7	script	Dicastes Villager#dic:752d0bc4	879,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,165,218,4	script	Dicastes Villager#dic:7c7640a2	879,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,173,229,1	script	Dicastes Villager#dic:14b06110	712,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,186,239,0	script	Dicastes Villager#dic:05822d3f	854,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,184,250,6	script	Dicastes Villager#dic:fcf52ffc	83,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,198,241,0	script	Dicastes Villager#dic:77241283	634,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,195,255,6	script	Dicastes Villager#dic:a1888615	716,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,197,255,2	script	Dicastes Villager#dic:84c04216	847,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,200,266,4	script	Dicastes Villager#dic:7906bd4b	79,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,194,281,7	script	Dicastes Villager#dic:5478ebc7	89,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,198,291,4	script	Dicastes Villager#dic:6c770c8a	635,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,202,304,2	script	Dicastes Villager#dic:3cdfe2cb	733,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,199,321,6	script	Dicastes Villager#dic:366e4dc3	430,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,201,321,2	script	Dicastes Villager#dic:da615cf9	641,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,190,327,5	script	Dicastes Villager#dic:93b79bd8	616,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,119,211,7	script	Dicastes Miner#dic:91092040	848,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+dicastes01,114,202,3	script	Dicastes Miner#dic:d6e4cbac	848,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+dicastes01,120,235,7	script	Dicastes Miner#dic:dc977cc0	848,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+dicastes01,110,240,5	script	Dicastes Miner#dic:89ced0ac	848,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+dicastes01,96,251,2	script	Dicastes Miner#dic:7f0d61ef	848,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+dicastes01,100,260,1	script	Dicastes Miner#dic:cffc8b6b	848,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+dicastes01,116,262,0	script	Dicastes Miner#dic:4ca21782	848,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+dicastes01,114,276,4	script	Dicastes Miner#dic:fc99c287	848,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+dicastes01,130,254,7	script	Dicastes Miner#dic:baafd8d3	848,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+dicastes01,145,243,1	script	Dicastes Miner#dic:ab470e74	848,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+dicastes01,144,233,2	script	Dicastes Miner#dic:4e159986	848,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+dicastes01,167,253,2	script	Dicastes Miner#dic:91183be0	848,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+dicastes01,141,306,6	script	Dicastes Miner#dic:ef09107f	848,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+dicastes01,155,290,7	script	Dicastes Miner#dic:af1a3560	848,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+dicastes01,175,294,1	script	Dicastes Miner#dic:66b30993	848,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,177,282,3	script	Dicastes Villager#dic:d75d54c3	62,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+dicastes01,179,262,1	script	Dicastes Villager#dic:3c02259e	854,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,217,167,6	script	Dicastes Villager#dic:b04f629e	67,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,222,169,3	script	Dicastes Villager#dic:4201857d	605,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,220,169,0	script	Dicastes Villager#dic:e04781b6	605,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,216,179,7	script	Dicastes Villager#dic:626e5764	732,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,231,173,2	script	Dicastes Villager#dic:d1ed9bd8	847,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,231,157,4	script	Dicastes Villager#dic:8523c052	86,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,232,134,6	script	Dicastes Villager#dic:fa8c5640	779,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,225,210,3	script	Dicastes Villager#dic:eacd2838	68,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,212,105,4	script	Dicastes Villager#dic:4bedfe12	486,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,204,112,6	script	Dicastes Villager#dic:020c40c7	753,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,239,119,6	script	Dicastes Villager#dic:20e31f67	733,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,241,119,2	script	Dicastes Villager#dic:995c9d06	645,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,252,122,3	script	Dicastes Villager#dic:efb8329b	636,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,238,136,7	script	Dicastes Villager#dic:98731b81	430,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,244,148,3	script	Dicastes Villager#dic:b3e4f053	793,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,240,165,1	script	Dicastes Villager#dic:89e9f1c6	850,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,251,162,6	script	Dicastes Villager#dic:47f9426f	798,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,255,171,4	script	Dicastes Villager#dic:b51a0d13	92,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,265,165,6	script	Dicastes Villager#dic:9748b276	636,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,267,165,2	script	Dicastes Villager#dic:31c9abcc	854,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,266,153,3	script	Dicastes Villager#dic:6c55f136	67,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,276,173,0	script	Dicastes Villager#dic:ae3c9c48	70,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,279,191,1	script	Dicastes Villager#dic:19be4858	855,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,272,206,2	script	Dicastes Villager#dic:859e3b24	603,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,233,195,7	script	Dicastes Villager#dic:df992b4e	755,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,241,207,5	script	Dicastes Villager#dic:acda1bf7	754,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+dicastes01,261,200,0	script	Dicastes Villager#dic:4ba4563a	95,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,304,169,4	script	Dicastes Villager#dic:3b22951b	86,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,301,159,1	script	Dicastes Villager#dic:bc4e64bb	645,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,267,181,0	script	Dicastes Villager#dic:defbc9cd	635,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,273,200,7	script	Dicastes Villager#dic:94a2cc97	125,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,261,206,3	script	Dicastes Villager#dic:0f15f35a	797,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,249,204,6	script	Dicastes Villager#dic:51f2ba3b	635,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,251,204,2	script	Dicastes Villager#dic:27314f28	603,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,239,210,4	script	Dicastes Villager#dic:e9ecbdd4	754,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,244,149,1	script	Dicastes Villager#dic:fe3b48e9	605,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,230,201,2	script	Dicastes Villager#dic:2fca5bbb	83,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,255,188,7	script	Dicastes Villager#dic:51e1f12b	125,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,252,141,6	script	Dicastes Villager#dic:268559cd	754,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,255,155,5	script	Dicastes Villager#dic:abe0c2e5	847,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+dicastes01,283,164,1	script	Dicastes Villager#dic:d89fc716	605,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+dicastes01,287,204,1	script	Dicastes Villager#dic:077a1947	798,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,295,206,6	script	Dicastes Villager#dic:268f0152	645,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,295,203,6	script	Dicastes Villager#dic:7fea135b	734,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+dicastes01,304,209,4	script	Dicastes Villager#dic:ddbf1ec9	79,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,279,217,0	script	Dicastes Villager#dic:43a20395	587,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,277,233,4	script	Dicastes Villager#dic:d6d857bc	645,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,277,253,5	script	Dicastes Villager#dic:b68720ed	850,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,282,256,1	script	Dicastes Villager#dic:7e8dd196	742,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,268,267,6	script	Dicastes Villager#dic:4211651e	603,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,273,276,2	script	Dicastes Villager#dic:633caec4	644,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,280,285,3	script	Dicastes Villager#dic:8024f398	744,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,258,279,3	script	Dicastes Villager#dic:4ce942ba	644,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,248,282,6	script	Dicastes Villager#dic:24937adb	742,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,250,282,2	script	Dicastes Villager#dic:896f370e	636,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,255,265,1	script	Dicastes Villager#dic:c58e30e6	732,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,261,251,5	script	Dicastes Villager#dic:fdfad232	742,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,263,241,1	script	Dicastes Villager#dic:cd47ff29	797,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,241,266,2	script	Dicastes Villager#dic:0393632d	92,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,234,269,5	script	Dicastes Villager#dic:c2c112df	793,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,249,253,6	script	Dicastes Villager#dic:c102f1c4	779,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,237,244,3	script	Dicastes Villager#dic:522c278f	124,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,232,230,7	script	Dicastes Villager#dic:cd27622b	636,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,219,225,6	script	Dicastes Villager#dic:9dc0d363	798,{
+	npctalk "npcdialog";
+	end;
+}
+
+man_fild02,137,48,7	script	Dicastes Adventurer#dic:dc242a20	665,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+man_fild02,141,54,4	script	Dicastes Adventurer#dic:3721fb24	602,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,194,80,4	script	Dicastes Adventurer#dic:c7459432	747,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,200,78,1	script	Dicastes Adventurer#dic:b8c7963f	64,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,197,72,3	script	Dicastes Adventurer#dic:b78d52fd	875,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,202,67,1	script	Dicastes Adventurer#dic:a9457889	123,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+
+dic_in01,375,266,1	script	Dicastes Villager#dic:6b397ef2	645,{
+	npctalk "npcdialog";
+	end;
+}
+
+dic_in01,365,273,5	script	Dicastes Villager#dic:88765285	879,{
+	npctalk "npcdialog";
+	end;
+}
+
+dic_in01,357,268,0	script	Dicastes Villager#dic:351ba43b	740,{
+	npctalk "npcdialog";
+	end;
+}
+
+dic_in01,347,271,6	script	Dicastes Villager#dic:061541d5	645,{
+	npctalk "npcdialog";
+	end;
+}
+
+dic_in01,218,37,3	script	Dicastes Villager#dic:a12587a9	86,{
+	npctalk "npcdialog";
+	end;
+}
+
+dic_in01,201,38,1	script	Dicastes Villager#dic:7a0fff2a	486,{
+	npctalk "npcdialog";
+	end;
+}
+
+dic_in01,190,52,4	script	Dicastes Villager#dic:b3492199	908,{
+	npctalk "npcdialog";
+	end;
+}
+
+dic_in01,134,279,4	script	Dicastes Villager#dic:0bffeb29	793,{
+	npctalk "npcdialog";
+	end;
+}
+
+dic_in01,128,265,7	script	Dicastes Villager#dic:18aaf727	740,{
+	npctalk "npcdialog";
+	end;
+}
+
+dic_in01,118,261,2	script	Dicastes Villager#dic:14637682	83,{
+	npctalk "npcdialog";
+	end;
+}
+
+dic_in01,113,272,0	script	Dicastes Villager#dic:57b4122d	430,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,214,247,5	script	Dicastes Villager#dic:475a9030	124,{
+	npctalk "npcdialog";
+	end;
+}
+
+dicastes01,220,244,2	script	Dicastes Villager#dic:6b81099d	587,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+dic_in01,212,278,5	script	Dicastes Villager#dic:7f61a1b0	847,{
+	npctalk "npcdialog";
+	end;
+}
+
+dic_in01,221,271,5	script	Dicastes Villager#dic:f6446f2c	644,{
+	npctalk "npcdialog";
+	end;
+}
+
+dic_in01,227,257,1	script	Dicastes Villager#dic:5dd96b33	879,{
+	npctalk "npcdialog";
+	end;
+}
+
+dic_in01,226,280,5	script	Operation Mastersmith#dic:15315476	731,{
+	npctalk "I will make you a mastersmith.";
+	end;
+}
+
+
+dicastes01,265,142,1	script	Performer#dic:3e9a5861	647,{
+	npctalk "...";
+	end;
+}
+
+dicastes01,263,140,1	script	Performer#dic:b94fd68d	678,{
+	npctalk "...";
+	end;
+}
+

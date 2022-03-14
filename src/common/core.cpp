@@ -289,12 +289,12 @@ const char *get_git_hash (void) {
 
 static void display_title_map_server() {
 	ShowMessage("" CL_LT_CYAN "     " CL_BOLD "rAthena Ragnarok Offline                               " CL_LT_CYAN "" CL_CLL "" CL_NORMAL "\n");
-	ShowMessage("" CL_BLUE "     " CL_BOLD "           ____________ _________                 _____      _____ __________     " CL_BLUE "" CL_CLL "" CL_NORMAL "\n");
+	ShowMessage("" CL_BLUE "     " CL_BOLD "           ______________________                 _____      _____ __________     " CL_BLUE "" CL_CLL "" CL_NORMAL "\n");
 	ShowMessage("" CL_BLUE "     " CL_BOLD "           |__\\______   \\_____   \\               /     \\    /  _  \\______    \\   " CL_BLUE "" CL_CLL "" CL_NORMAL "\n");
 	ShowMessage("" CL_BLUE "     " CL_BOLD "           |  ||       _/ /   |   \\    ______   /  \\ /  \\  /  /_\\  \\|     ___/   " CL_BLUE "" CL_CLL "" CL_NORMAL "\n");
 	ShowMessage("" CL_BLUE "     " CL_BOLD "           |  ||    |   \\/    |    \\  /_____/  /    Y    \\/    |    \\    |       " CL_BLUE "" CL_CLL "" CL_NORMAL "\n");
 	ShowMessage("" CL_BLUE "     " CL_BOLD "       /\\__|  ||____|_  /\\_______  /           \\____|__  /\\____|__  /____|      " CL_BLUE "" CL_CLL "" CL_NORMAL "\n");
-	ShowMessage("" CL_BLUE "     " CL_BOLD "       \\______|       \\/         \\/                    \\/         \\/             " CL_BLUE "" CL_CLL "" CL_NORMAL "\n");
+	ShowMessage("" CL_BLUE "     " CL_BOLD "       \\______|       \\/         \\/                    \\/         \\/             " CL_BLUE "" CL_CLL "" CL_NORMAL "\n\n");
 }
 
 static void display_title_char_server() {
@@ -304,7 +304,7 @@ static void display_title_char_server() {
 	ShowMessage("" CL_LT_MAGENTA "     " CL_BOLD "           |  ||       _/ /   |   \\    ______  /    \\  \\//    ~    \\/  /_\\  \\|       _/ " CL_LT_MAGENTA "" CL_CLL "" CL_NORMAL "\n");
 	ShowMessage("" CL_LT_MAGENTA "     " CL_BOLD "           |  ||    |   \\/    |    \\  /_____/  \\     \\___\\    Y    /    |    \\    |   \\ " CL_LT_MAGENTA "" CL_CLL "" CL_NORMAL "\n");
 	ShowMessage("" CL_LT_MAGENTA "     " CL_BOLD "       /\\__|  ||____|_  /\\_______  /            \\______  /\\___|_  /\\____|__  /____|_  / " CL_LT_MAGENTA "" CL_CLL "" CL_NORMAL "\n");
-	ShowMessage("" CL_LT_MAGENTA "     " CL_BOLD "       \\______|       \\/         \\/                    \\/       \\/         \\/       \\/ " CL_LT_MAGENTA "" CL_CLL "" CL_NORMAL "\n");
+	ShowMessage("" CL_LT_MAGENTA "     " CL_BOLD "       \\______|       \\/         \\/                    \\/       \\/         \\/       \\/ " CL_LT_MAGENTA "" CL_CLL "" CL_NORMAL "\n\n");
 }
 
 static void display_title_login_server() {
@@ -314,7 +314,7 @@ static void display_title_login_server() {
 	ShowMessage("" CL_LT_YELLOW "     " CL_BOLD "           |  ||       _/ /   |   \\    ______  |    |    /   |   \\/   \\  ___|   |/   |   \\  " CL_LT_YELLOW "" CL_CLL "" CL_NORMAL "\n");
 	ShowMessage("" CL_LT_YELLOW "     " CL_BOLD "           |  ||    |   \\/    |    \\  /_____/  |    |___/    |    \\    \\_\\  \\   /    |    \\ " CL_LT_YELLOW "" CL_CLL "" CL_NORMAL "\n");
 	ShowMessage("" CL_LT_YELLOW "     " CL_BOLD "       /\\__|  ||____|_  /\\_______  /           |_______ \\_______  /\\______  /___\\____|__  / " CL_LT_YELLOW "" CL_CLL "" CL_NORMAL "\n");
-	ShowMessage("" CL_LT_YELLOW "     " CL_BOLD "       \\______|       \\/         \\/                    \\/       \\/        \\/            \\/  " CL_LT_YELLOW "" CL_CLL "" CL_NORMAL "\n");
+	ShowMessage("" CL_LT_YELLOW "     " CL_BOLD "       \\______|       \\/         \\/                    \\/       \\/        \\/            \\/  " CL_LT_YELLOW "" CL_CLL "" CL_NORMAL "\n\n");
 }
 
 /*======================================
