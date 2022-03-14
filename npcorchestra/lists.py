@@ -29,7 +29,56 @@ mobs_advanced_job = ["JOB_LORD_KNIGHT","JOB_HIGH_PRIEST","JOB_HIGH_WIZARD","JOB_
 mobs_third_job = ["JOB_RUNE_KNIGHT","JOB_WARLOCK","JOB_RANGER","JOB_ARCH_BISHOP","JOB_MECHANIC","JOB_GUILLOTINE_CROSS","JOB_ROYAL_GUARD","JOB_SORCERER","JOB_MINSTREL","JOB_WANDERER","JOB_SURA","JOB_GENETIC","JOB_SHADOW_CHASER"]
 
 
-all_cities = ["prt_monk", "umbala_natives", "umbala", "comodo", "morocc", "payon", "pay_arche","alberta", "ayothaya", "izlude", "geffen", "aldebaran", "hugel", "einbroch", "einbech", "mid_camp","lighthalzen", "lighthalzen_slums", "lighthalzen_rekenber", "dicastes01", "cmd_fild07", "amatsu", "veins", "niflheim", "nameless_n", "louyang"]
+all_cities = ["prt_monk", "umbala_natives", "umbala", "comodo", "morocc", "payon", "pay_arche","alberta", "ayothaya", "izlude",
+ "geffen", "aldebaran", "hugel", "einbroch", "einbech", "mid_camp","lighthalzen", "lighthalzen_slums", "lighthalzen_rekenber",
+  "dicastes01", "cmd_fild07", "amatsu", "veins", "niflheim", "nameless_n", "louyang"]
+
+cities_density = [
+60,  #prt_monk
+0, #umbala natives
+60, #umbala
+90, #comodo
+100, #morroc
+60, #payon
+50, #archer village
+120, #alberta
+70, #ayothaya
+50,#izlude
+70, #geffen
+70, #aldebaran
+60, #hugel
+100, #einbroch
+60, #einbech
+50, #hel camp
+70, #lighthalzen
+0, #lighthalzen slums
+0, #lighthalzen rekenber 
+70, #dicastes
+60, #pharos
+60, #amatsu
+70, #veins
+70, #niff
+30, #nameless
+0 #louyang
+]
+
+
+top_headgears = ["Alice_Doll","Anubis_Helm","Apple_Of_Archer","Prontera_Army_Cap","Ayothaya_Hat","Banana_Hat","Bandana","Magestic_Goat",
+"Beret","Biretta","Bone_Head","Bone_Helm","Bongun_Hat","Boy's_Cap","Fedora","Cap","Hat_Of_Cook","Circlet","Classic_Hat","Corsair","Cowboy_Hat","Crown","Headgear_Of_Queen",
+"C_Desert_Prince","Dragon_Skull","Egg_Shell","Feather_Beret","Feather_Bonnet","Fricca_Circlet","Galapago_Cap","Gemmed_Sallet",
+"Goibne's_Helmet", "Golden_Gear", "Loard_Circlet", "Helm", "Helm_Of_Abyss", "Helm_Of_Angel","Headband_Of_Power","Hunting_Cap",
+"Indian_Headband","Gemmed_Crown","Joker_Jester","Mask_Of_Fox", "Soldier_Hat","Wizardry_Hat","Magni_Cap","Marionette_Doll","Mine_Helm",
+"Holy_Bonnet","Morrigane's_Helm","Munak_Turban","Viking_Helm","Pirate_Bandana","Poo_Poo_Hat","Cowboy_Hat_J","Mottled_Egg_Shell",
+"Red_Wizardry_Hat","Coke_Hat","Detective_Hat","Oldman's_Romance","Sahkkat","Sea_Otter_Cap","J_Captain_Hat","Skull_Cap","Sombrero",
+"Straw_Hat","Ulle_Cap_I","Valkyrie_Helm","Minstrel_Hat","Western_Grace","Star_Sparkling",
+"Cap_Of_Blindness","Diabolus_Helmet","Necromencer's_Hood","Spinx_Helm"]
+ 
+mid_headgears = ["Ear_Of_Angel's_Wing","Dark_Blindfold","Blinker","Elven_Ears_","Ear_Of_Devil's_Wing",
+"Hawk_Eyes01","Machoman_Glasses","Opera_Ghost_Mask","Pecopeco_Wing_Ears","Luxury_Sunglasses","Sunglasses"]
+
+low_headgears = ["Angry_Mouth","Assassin_Mask","Antique_Pipe","Choco_Donut_In_Mouth","Cigar","Pierrot_Nose","Well_Baked_Toast",
+"Donut_In_Mouth","Gang_Scarf","Fish_In_Mouth","Smoking_Pipe","Pirate_Dagger","Rainbow_Scarf","Centimental_Flower","Centimental_Leaf",
+"Romantic_White_Flower","Toast_C","Pencil_In_Mouth"]
 
 # louyang
 # prontera
@@ -37,3 +86,7 @@ all_cities = ["prt_monk", "umbala_natives", "umbala", "comodo", "morocc", "payon
 # JOB_LORD_KNIGHT2
 # JOB_KNIGHT2
 # JOB_PALADIN2
+
+# mid_low_headgears = ["Alarm_Mask","Phantom_Of_Opera"]
+
+# all = ["Cap_Of_Blindness","Diabolus_Helmet","Necromencer's_Hood","Spinx_Helm"] 

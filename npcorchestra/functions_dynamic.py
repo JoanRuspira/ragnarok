@@ -4,7 +4,7 @@ import os
 import re
 from lists import *
 
-iterations = 3
+iterations = 4 #16 of each job
 initial_mob_id = 20021
 
 # 1000-3999 or 20020-31999
@@ -16,17 +16,20 @@ def buildDynamic():
 
 def buildMobsCities():
     end_mob_id = calculateEndMobId()
+    city_id = 0
     for city in all_cities:
-        buildMobsCitiy(city, end_mob_id)
+        city_density = cities_density[city_id]
+        buildMobsCitiy(city,city_density,end_mob_id)
+        city_id += 1
 
-def buildMobsCitiy(city, end_mob_id):   
+def buildMobsCitiy(city, city_density, end_mob_id):   
     fout = open("../npc/mobs/npcorchestra/" + city + "_npcorchestra.txt", "wt")
     city_mobs = []
-    for _ in range(50):
+    for _ in range(city_density):
         city_mobs.append(random.randint(initial_mob_id, end_mob_id))
     
     for city_mob_id in city_mobs:
-        mob_line = city + ",0,0	monster	" + city + " Adventurer	" + str(city_mob_id) + ",1,5000\n"
+        mob_line = city + ",0,0	monster	 Adventurer	" + str(city_mob_id) + ",1,5000\n"
         fout.write(mob_line)
     fout.close()
 
@@ -85,8 +88,8 @@ def buildMob(mob_id, mob_name):
     return mob
 
 def buildMobAvail(mob_id, mob_name):
-    theseksInt = str(random.randint(0, 1))
-    if(theseksInt == 0):
+    theseksInt = random.randint(1, 2)
+    if(theseksInt == 1):
         theseks = "Male"
     else:
         theseks = "Female"
@@ -98,6 +101,27 @@ def buildMobAvail(mob_id, mob_name):
     mobAvail += "    ClothColor: " + str(random.randint(0, 3)) + "\n"
     mobAvail += "    Weapon: Gladius\n"
     mobAvail += "    Shield: Guard\n"
+    mobAvail += "    HeadTop: " + random.choice(top_headgears) + "\n"
+    mobAvail += "    HeadMid: " + random.choice(mid_headgears) + "\n"
+    mobAvail += "    HeadLow: " + random.choice(low_headgears) + "\n"
+
+    jobs_falcon = ["JOB_HUNTER", "JOB_SNIPER"]
+    if mob_name in jobs_falcon:
+        mobAvail += "    Options:\n"
+        mobAvail += "      Falcon: true\n"
+
+    jobs_cart = ["JOB_MERCHANT", "JOB_BLACKSMITH", "JOB_ALCHEMIST", "JOB_WHITESMITH", "JOB_CREATOR"]
+    if mob_name in jobs_cart:
+        mobAvail += "    PushCart: true\n"
+        # mobAvail += "      Cart1: true\n"
+
+    jobs_riding = ["JOB_KNIGHT", "JOB_CRUSADER", "JOB_LORD_KNIGHT", "JOB_PALAIN"]
+    mob_riding = random.randint(1, 2)
+    if mob_name in jobs_riding:
+        if(mob_riding == 1):
+            mobAvail += "    Options:\n"
+            mobAvail += "      Riding: true\n"
+
     return mobAvail
 
 def buildMobArrayIterations():
