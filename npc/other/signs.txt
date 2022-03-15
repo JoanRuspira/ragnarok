@@ -640,11 +640,6 @@ comodo,171,349,5	script	Board#sgn::102	858,{
 	close;
 }
 
-comodo,157,179,4	script	Board#sgn::103	835,{
-	mes "Up the stairs for the volcano climb.";
-	close;
-}
-
 
 comodo,162,179,4	script	Board#sgn::104	835,{
 	mes "Up the stairs for the volcano climb.";

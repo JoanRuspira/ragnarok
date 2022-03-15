@@ -1,2131 +1,2131 @@
-einbroch,155,319,5	script	Einbroch Guard#ein:c6960011	852,{
+einbroch,155,319,5	script	Einbroch Guard#ein:35fef5d2	852,{
 	npctalk "Welome to Einbroch.";
 	end;
 }
 
-einbroch,160,319,3	script	Einbroch Guard#ein:6b9dadde	852,{
+einbroch,160,319,3	script	Einbroch Guard#ein:4efaea88	852,{
 	npctalk "Welome to Einbroch.";
 	end;
 }
 
-einbroch,147,36,7	script	Einbroch Guard#ein:e0d1282c	852,{
+einbroch,147,36,7	script	Einbroch Guard#ein:6d4a8d03	852,{
 	npctalk "Welome to Einbroch.";
 	end;
 }
 
-einbroch,152,36,1	script	Einbroch Guard#ein:1e2d15b3	852,{
+einbroch,152,36,1	script	Einbroch Guard#ein:0e6b303e	852,{
 	npctalk "Welome to Einbroch.";
 	end;
 }
 
-einbroch,28,190,6	script	Einbroch Guard#ein:cadc71ab	852,{
+einbroch,28,190,6	script	Einbroch Guard#ein:7b8d31ed	852,{
 	npctalk "This exit is under construction.";
 	end;
 }
 
-einbroch,124,317,6	script	Einbroch Guard#ein:e87e52ef	852,{
+einbroch,124,317,6	script	Einbroch Guard#ein:880b0b41	852,{
 	npctalk "Access to the shipyard is restricted.";
 	end;
 }
 
-einbroch,298,296,5	script	Einbroch Guard#ein:64f5f90e	848,{
+einbroch,298,296,5	script	Einbroch Guard#ein:3b48b40e	848,{
 	npctalk "We are expanding the city.";
 	end;
 }
 
-einbroch,284,191,1	script	Einbroch Guard#ein:3128241e	848,{
+einbroch,284,191,1	script	Einbroch Guard#ein:da5fb474	848,{
 	npctalk "Let me work please.";
 	end;
 }
 
-einbroch,281,159,3	script	Einbroch Guard#ein:0232cea6	848,{
+einbroch,281,159,3	script	Einbroch Guard#ein:8284df23	848,{
 	npctalk "We are expanding the city.";
 	end;
 }
 
-einbroch,286,139,7	script	Einbroch Guard#ein:4c3f69fc	848,{
+einbroch,286,139,7	script	Einbroch Guard#ein:fd80b3ee	848,{
 	npctalk "Let me work please.";
 	end;
 }
 
 //end guards
-einbroch,143,38,0	script	Einbroch Villager#ein:36efe170	741,{
+einbroch,143,38,0	script	Einbroch Villager#ein:2d74350b	645,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,142,45,5	script	Einbroch Villager#ein:83a885d1	49,{
+einbroch,142,45,5	script	Einbroch Villager#ein:38bfa0c4	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,133,44,4	script	Einbroch Villager#ein:733f9346	727,{
+einbroch,133,44,4	script	Einbroch Villager#ein:b60d7eac	798,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,137,50,7	script	Einbroch Villager#ein:5dcbf321	76,{
+einbroch,137,50,7	script	Einbroch Villager#ein:cec0ccdd	734,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,144,57,2	script	Einbroch Villager#ein:02795ddf	67,{
+einbroch,144,57,2	script	Einbroch Villager#ein:1696ef54	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,136,62,6	script	Einbroch Villager#ein:324bd643	855,{
+einbroch,136,62,6	script	Einbroch Villager#ein:fe94ff9e	68,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,143,70,3	script	Einbroch Villager#ein:967d5eed	742,{
+einbroch,143,70,3	script	Einbroch Villager#ein:797065eb	124,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,126,67,0	script	Einbroch Villager#ein:cbf71610	804,{
+einbroch,126,67,0	script	Einbroch Villager#ein:a6552c75	702,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,123,76,6	script	Einbroch Villager#ein:e5db3607	75,{
+einbroch,123,76,6	script	Einbroch Villager#ein:be2d78de	51,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,125,76,2	script	Einbroch Villager#ein:340364f2	779,{
+einbroch,125,76,2	script	Einbroch Villager#ein:de567ba7	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,122,87,5	script	Einbroch Villager#ein:154ef258	641,{
+einbroch,122,87,5	script	Einbroch Villager#ein:1bb4be19	804,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,129,84,3	script	Einbroch Villager#ein:10466b8a	79,{
+einbroch,129,84,3	script	Einbroch Villager#ein:9c1df8f3	727,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,127,92,4	script	Einbroch Villager#ein:0b1cca11	908,{
+einbroch,127,92,4	script	Einbroch Villager#ein:71cc10c3	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,136,94,6	script	Einbroch Villager#ein:279bf560	741,{
+einbroch,136,94,6	script	Einbroch Villager#ein:1252f3ce	109,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,141,98,1	script	Einbroch Villager#ein:1bb0fe3e	742,{
+einbroch,141,98,1	script	Einbroch Villager#ein:7dd6eed9	77,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,138,104,6	script	Einbroch Villager#ein:35555ec8	89,{
+einbroch,138,104,6	script	Einbroch Villager#ein:f24f189a	645,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,148,114,3	script	Einbroch Villager#ein:b57a7d7a	742,{
+einbroch,148,114,3	script	Einbroch Villager#ein:675962d5	76,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,144,143,2	script	Einbroch Villager#ein:5c6cf754	51,{
+einbroch,144,143,2	script	Einbroch Villager#ein:9585d762	573,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,150,148,7	script	Einbroch Villager#ein:32cce736	47,{
+einbroch,150,148,7	script	Einbroch Villager#ein:6eb6dc70	83,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,161,150,6	script	Einbroch Villager#ein:564bdc6c	49,{
+einbroch,161,150,6	script	Einbroch Villager#ein:86ed14f5	853,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,165,147,2	script	Einbroch Villager#ein:cc149dcd	642,{
+einbroch,165,147,2	script	Einbroch Villager#ein:ce97a26b	744,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,175,148,4	script	Einbroch Villager#ein:9aca325d	745,{
+einbroch,175,148,4	script	Einbroch Villager#ein:713a100c	49,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,168,142,7	script	Einbroch Villager#ein:ab1cadd6	67,{
+einbroch,168,142,7	script	Einbroch Villager#ein:ca7ec6a4	62,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,178,138,1	script	Einbroch Villager#ein:fe90d31e	744,{
+einbroch,178,138,1	script	Einbroch Villager#ein:c334d454	745,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,185,139,0	script	Einbroch Villager#ein:6ed1e5ae	90,{
+einbroch,185,139,0	script	Einbroch Villager#ein:29cc6f0d	727,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,189,144,3	script	Einbroch Villager#ein:c20c4888	850,{
+einbroch,189,144,3	script	Einbroch Villager#ein:65d2ab2c	89,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,187,150,4	script	Einbroch Villager#ein:c0a0f28d	69,{
+einbroch,187,150,4	script	Einbroch Villager#ein:c38d0658	90,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,189,159,2	script	Einbroch Villager#ein:dd34d5ac	61,{
+einbroch,189,159,2	script	Einbroch Villager#ein:9ef7100a	642,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,181,160,1	script	Einbroch Villager#ein:d338263f	634,{
+einbroch,181,160,1	script	Einbroch Villager#ein:cc5aa1e5	908,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,174,158,2	script	Einbroch Villager#ein:9bb6f273	641,{
+einbroch,174,158,2	script	Einbroch Villager#ein:e657a602	805,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,172,158,6	script	Einbroch Villager#ein:cb5bdc49	741,{
+einbroch,172,158,6	script	Einbroch Villager#ein:58bad656	744,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,174,163,7	script	Einbroch Villager#ein:b4b30ebb	753,{
+einbroch,174,163,7	script	Einbroch Villager#ein:59ab908d	70,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,180,165,1	script	Einbroch Villager#ein:1d1cf2b6	125,{
+einbroch,180,165,1	script	Einbroch Villager#ein:ad20ddf1	109,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,184,169,0	script	Einbroch Villager#ein:92653e33	779,{
+einbroch,184,169,0	script	Einbroch Villager#ein:a51253f6	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,190,167,6	script	Einbroch Villager#ein:37dc6809	76,{
+einbroch,190,167,6	script	Einbroch Villager#ein:32544a00	430,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,190,173,3	script	Einbroch Villager#ein:07516847	95,{
+einbroch,190,173,3	script	Einbroch Villager#ein:aa761227	641,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,180,172,2	script	Einbroch Villager#ein:96339630	86,{
+einbroch,180,172,2	script	Einbroch Villager#ein:ebc658c5	75,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,170,169,5	script	Einbroch Villager#ein:7927c35f	742,{
+einbroch,170,169,5	script	Einbroch Villager#ein:ce57df55	636,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,164,166,6	script	Einbroch Villager#ein:10d0bfb2	850,{
+einbroch,164,166,6	script	Einbroch Villager#ein:98e38c04	75,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,165,160,4	script	Einbroch Villager#ein:7f26528b	734,{
+einbroch,165,160,4	script	Einbroch Villager#ein:d500ca61	732,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,158,163,3	script	Einbroch Villager#ein:fd362f4a	645,{
+einbroch,158,163,3	script	Einbroch Villager#ein:a87ae60c	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,155,155,0	script	Einbroch Villager#ein:bf61536e	850,{
+einbroch,155,155,0	script	Einbroch Villager#ein:7f7a9aed	701,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,152,163,6	script	Einbroch Villager#ein:4083c61d	430,{
+einbroch,152,163,6	script	Einbroch Villager#ein:93deb643	76,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,153,173,7	script	Einbroch Villager#ein:d26c478b	853,{
+einbroch,153,173,7	script	Einbroch Villager#ein:95b60bc2	49,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,187,133,6	script	Einbroch Villager#ein:d7dc8709	742,{
+einbroch,187,133,6	script	Einbroch Villager#ein:d92cf5e5	49,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,193,137,2	script	Einbroch Villager#ein:06a2d6f2	84,{
+einbroch,193,137,2	script	Einbroch Villager#ein:00ea12ae	72,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,202,135,0	script	Einbroch Villager#ein:ea0dbd58	69,{
+einbroch,202,135,0	script	Einbroch Villager#ein:f3f87c73	83,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,202,137,4	script	Einbroch Villager#ein:ede493a3	753,{
+einbroch,202,137,4	script	Einbroch Villager#ein:7a52d951	430,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,209,138,2	script	Einbroch Villager#ein:a3b1c641	70,{
+einbroch,209,138,2	script	Einbroch Villager#ein:09ed72ef	853,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,218,135,7	script	Einbroch Villager#ein:f501c9a4	89,{
+einbroch,218,135,7	script	Einbroch Villager#ein:87801ff3	855,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,224,139,3	script	Einbroch Villager#ein:6191429c	741,{
+einbroch,224,139,3	script	Einbroch Villager#ein:acf4a65f	733,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,229,137,1	script	Einbroch Villager#ein:186eeea6	92,{
+einbroch,229,137,1	script	Einbroch Villager#ein:b65280a4	751,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,238,136,1	script	Einbroch Villager#ein:26c4d41c	645,{
+einbroch,238,136,1	script	Einbroch Villager#ein:f680c40d	740,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,240,141,0	script	Einbroch Villager#ein:7af92032	744,{
+einbroch,240,141,0	script	Einbroch Villager#ein:e93893f5	49,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,237,147,5	script	Einbroch Villager#ein:f6f45c50	642,{
+einbroch,237,147,5	script	Einbroch Villager#ein:12f1d401	77,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,239,152,7	script	Einbroch Villager#ein:da4ef89f	654,{
+einbroch,239,152,7	script	Einbroch Villager#ein:f5b55180	95,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,242,159,2	script	Einbroch Villager#ein:794971fb	744,{
+einbroch,242,159,2	script	Einbroch Villager#ein:ac5c4fb8	702,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,235,165,5	script	Einbroch Villager#ein:755c49f6	49,{
+einbroch,235,165,5	script	Einbroch Villager#ein:598cd727	734,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,244,170,1	script	Einbroch Villager#ein:0296a9cc	531,{
+einbroch,244,170,1	script	Einbroch Villager#ein:2375d127	61,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,257,178,4	script	Einbroch Villager#ein:247d50b6	573,{
+einbroch,257,178,4	script	Einbroch Villager#ein:11946e67	740,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,251,184,2	script	Einbroch Villager#ein:cc1e83f9	61,{
+einbroch,251,184,2	script	Einbroch Villager#ein:8087f87a	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,243,186,2	script	Einbroch Villager#ein:0c13629a	79,{
+einbroch,243,186,2	script	Einbroch Villager#ein:6be908d8	71,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,241,186,6	script	Einbroch Villager#ein:dace8be0	855,{
+einbroch,241,186,6	script	Einbroch Villager#ein:cdb44f1c	755,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,241,195,0	script	Einbroch Villager#ein:cb9bf88f	850,{
+einbroch,241,195,0	script	Einbroch Villager#ein:e5316e06	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,248,200,2	script	Einbroch Villager#ein:cff564af	86,{
+einbroch,248,200,2	script	Einbroch Villager#ein:7dc69690	91,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,234,199,1	script	Einbroch Villager#ein:53f7ec23	879,{
+einbroch,234,199,1	script	Einbroch Villager#ein:4178767a	47,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,235,207,7	script	Einbroch Villager#ein:c846f4ef	804,{
+einbroch,235,207,7	script	Einbroch Villager#ein:a29dc1c0	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,228,205,3	script	Einbroch Villager#ein:6a5889bd	641,{
+einbroch,228,205,3	script	Einbroch Villager#ein:4dd030e5	430,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,229,199,1	script	Einbroch Villager#ein:8b97848f	806,{
+einbroch,229,199,1	script	Einbroch Villager#ein:c4925b7e	634,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,223,198,0	script	Einbroch Villager#ein:f2ba595a	742,{
+einbroch,223,198,0	script	Einbroch Villager#ein:17f02562	97,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,222,192,5	script	Einbroch Villager#ein:d6ebcfb0	636,{
+einbroch,222,192,5	script	Einbroch Villager#ein:c9c74f90	125,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,217,187,7	script	Einbroch Villager#ein:572080ec	754,{
+einbroch,217,187,7	script	Einbroch Villager#ein:5e44dc64	734,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,218,181,6	script	Einbroch Villager#ein:c00d9da1	68,{
+einbroch,218,181,6	script	Einbroch Villager#ein:01b62415	828,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,225,180,7	script	Einbroch Villager#ein:01d6fb73	79,{
+einbroch,225,180,7	script	Einbroch Villager#ein:d8f74fb6	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,229,185,1	script	Einbroch Villager#ein:daebe0a4	879,{
+einbroch,229,185,1	script	Einbroch Villager#ein:877782a6	72,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,231,156,2	script	Einbroch Villager#ein:c408fe44	850,{
+einbroch,231,156,2	script	Einbroch Villager#ein:e8214dc1	804,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,222,152,7	script	Einbroch Villager#ein:287218b1	109,{
+einbroch,222,152,7	script	Einbroch Villager#ein:8a263baa	124,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,221,163,5	script	Einbroch Villager#ein:f2462cec	71,{
+einbroch,221,163,5	script	Einbroch Villager#ein:ffe10e41	70,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,230,172,1	script	Einbroch Villager#ein:6a0fd737	855,{
+einbroch,230,172,1	script	Einbroch Villager#ein:cdd8699c	68,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,235,182,3	script	Einbroch Villager#ein:65c5eb4c	634,{
+einbroch,235,182,3	script	Einbroch Villager#ein:22ce1c04	805,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,249,153,1	script	Einbroch Villager#ein:75b1ba77	95,{
+einbroch,249,153,1	script	Einbroch Villager#ein:81193981	854,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,216,208,3	script	Einbroch Villager#ein:d9cfe0c1	804,{
+einbroch,216,208,3	script	Einbroch Villager#ein:ecf04298	744,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,237,219,5	script	Einbroch Villager#ein:9ae7e4ee	573,{
+einbroch,237,219,5	script	Einbroch Villager#ein:f4c18786	97,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,248,118,0	script	Einbroch Villager#ein:b46296a1	854,{
+einbroch,248,118,0	script	Einbroch Villager#ein:196284ad	84,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,235,225,5	script	Einbroch Villager#ein:75249be8	855,{
+einbroch,235,225,5	script	Einbroch Villager#ein:20dd654d	70,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,238,233,1	script	Einbroch Villager#ein:7ab41468	642,{
+einbroch,238,233,1	script	Einbroch Villager#ein:5c6d0f01	69,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,243,214,7	script	Einbroch Villager#ein:5202eb63	636,{
+einbroch,243,214,7	script	Einbroch Villager#ein:cf38095f	79,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,241,244,1	script	Einbroch Villager#ein:9bdc5a95	641,{
+einbroch,241,244,1	script	Einbroch Villager#ein:2af183d2	109,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,235,250,6	script	Einbroch Villager#ein:3fb4569b	531,{
+einbroch,235,250,6	script	Einbroch Villager#ein:8f384ddf	806,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,239,258,2	script	Einbroch Villager#ein:1af8c683	125,{
+einbroch,239,258,2	script	Einbroch Villager#ein:07797e5a	740,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,237,258,6	script	Einbroch Villager#ein:2461c50a	654,{
+einbroch,237,258,6	script	Einbroch Villager#ein:9608f013	701,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,238,265,0	script	Einbroch Villager#ein:a7628ac4	86,{
+einbroch,238,265,0	script	Einbroch Villager#ein:c7b59c53	89,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,235,269,3	script	Einbroch Villager#ein:58a5f122	851,{
+einbroch,235,269,3	script	Einbroch Villager#ein:149ca4d5	69,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,227,263,4	script	Einbroch Villager#ein:c70ae5dd	853,{
+einbroch,227,263,4	script	Einbroch Villager#ein:f6113934	855,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,225,259,0	script	Einbroch Villager#ein:c608052f	754,{
+einbroch,225,259,0	script	Einbroch Villager#ein:1011ce6d	805,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,227,252,5	script	Einbroch Villager#ein:6911da14	57,{
+einbroch,227,252,5	script	Einbroch Villager#ein:cb7cdc90	702,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,226,245,3	script	Einbroch Villager#ein:fc5ff07f	642,{
+einbroch,226,245,3	script	Einbroch Villager#ein:a2c3e05c	77,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,249,255,0	script	Einbroch Villager#ein:f4ad5d36	430,{
+einbroch,249,255,0	script	Einbroch Villager#ein:c0c4299a	855,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,251,248,3	script	Einbroch Villager#ein:faeb2f32	72,{
+einbroch,251,248,3	script	Einbroch Villager#ein:2cb656a8	83,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,257,251,1	script	Einbroch Villager#ein:8831a0f3	92,{
+einbroch,257,251,1	script	Einbroch Villager#ein:4fa11c25	805,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,257,258,1	script	Einbroch Villager#ein:8dcaca42	855,{
+einbroch,257,258,1	script	Einbroch Villager#ein:32ff2d73	642,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,264,255,3	script	Einbroch Villager#ein:9394b7cb	634,{
+einbroch,264,255,3	script	Einbroch Villager#ein:fd079f8d	125,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,252,241,2	script	Einbroch Villager#ein:0c0097e3	90,{
+einbroch,252,241,2	script	Einbroch Villager#ein:db33dc0c	732,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,270,318,0	script	Einbroch Villager#ein:b4461981	410,{
+einbroch,270,318,0	script	Einbroch Villager#ein:202a8a59	47,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,265,322,6	script	Einbroch Villager#ein:509d398f	851,{
+einbroch,265,322,6	script	Einbroch Villager#ein:d6004417	573,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,271,328,7	script	Einbroch Villager#ein:10b17afe	745,{
+einbroch,271,328,7	script	Einbroch Villager#ein:b2504a0b	124,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,277,319,5	script	Einbroch Villager#ein:3daca4c4	47,{
+einbroch,277,319,5	script	Einbroch Villager#ein:aed6beea	573,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,284,315,4	script	Einbroch Villager#ein:2180ae5b	908,{
+einbroch,284,315,4	script	Einbroch Villager#ein:35707202	645,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,287,310,6	script	Einbroch Villager#ein:b70d1a7b	742,{
+einbroch,287,310,6	script	Einbroch Villager#ein:885b1f57	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,301,318,2	script	Einbroch Villager#ein:8718290d	97,{
+einbroch,301,318,2	script	Einbroch Villager#ein:8256dbad	745,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,299,318,0	script	Einbroch Villager#ein:7d6bf2b9	742,{
+einbroch,299,318,0	script	Einbroch Villager#ein:aa704ee8	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,301,326,3	script	Einbroch Villager#ein:3f555754	75,{
+einbroch,301,326,3	script	Einbroch Villager#ein:0b4a5f5f	855,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,312,322,2	script	Einbroch Villager#ein:786a8e5e	92,{
+einbroch,312,322,2	script	Einbroch Villager#ein:ed33758c	755,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,295,322,1	script	Einbroch Villager#ein:8d7b12c9	124,{
+einbroch,295,322,1	script	Einbroch Villager#ein:5c5c8652	62,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,290,336,6	script	Einbroch Villager#ein:46a9b94f	798,{
+einbroch,290,336,6	script	Einbroch Villager#ein:2cb159ed	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,284,333,3	script	Einbroch Villager#ein:801a364e	430,{
+einbroch,284,333,3	script	Einbroch Villager#ein:de752770	753,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,258,316,4	script	Einbroch Villager#ein:83cf363b	61,{
+einbroch,258,316,4	script	Einbroch Villager#ein:4a5ebca6	642,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,256,306,7	script	Einbroch Villager#ein:91f9b2fb	67,{
+einbroch,256,306,7	script	Einbroch Villager#ein:87264476	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,244,303,0	script	Einbroch Villager#ein:e415cf15	733,{
+einbroch,244,303,0	script	Einbroch Villager#ein:0927b9a8	89,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,246,309,3	script	Einbroch Villager#ein:11c5fb6b	654,{
+einbroch,246,309,3	script	Einbroch Villager#ein:168fbd10	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,243,316,7	script	Einbroch Villager#ein:45ec0116	75,{
+einbroch,243,316,7	script	Einbroch Villager#ein:7ad32fa1	645,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,247,323,6	script	Einbroch Villager#ein:4149c0b2	573,{
+einbroch,247,323,6	script	Einbroch Villager#ein:86dff36a	733,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,246,322,2	script	Einbroch Villager#ein:c3243a10	47,{
+einbroch,246,322,2	script	Einbroch Villager#ein:2b3f871b	798,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,257,334,6	script	Einbroch Villager#ein:1fea7cab	742,{
+einbroch,257,334,6	script	Einbroch Villager#ein:b3450299	86,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,239,331,3	script	Einbroch Villager#ein:ea4ad1e9	645,{
+einbroch,239,331,3	script	Einbroch Villager#ein:738af039	654,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,233,324,5	script	Einbroch Villager#ein:a85fd3d5	636,{
+einbroch,233,324,5	script	Einbroch Villager#ein:b1a5fb9c	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,255,316,0	script	Einbroch Villager#ein:68de4c9b	798,{
+einbroch,255,316,0	script	Einbroch Villager#ein:3aa0b90b	124,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,224,326,5	script	Einbroch Villager#ein:3b1e44be	853,{
+einbroch,224,326,5	script	Einbroch Villager#ein:2b3b75fc	755,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,225,335,6	script	Einbroch Villager#ein:dd6e0160	854,{
+einbroch,225,335,6	script	Einbroch Villager#ein:5875fc15	636,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,227,335,2	script	Einbroch Villager#ein:5c7c8ce4	798,{
+einbroch,227,335,2	script	Einbroch Villager#ein:c01f617a	90,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,274,237,1	script	Einbroch Villager#ein:ab8b736b	854,{
+einbroch,274,237,1	script	Einbroch Villager#ein:faf8a982	68,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,280,227,2	script	Einbroch Villager#ein:54699187	84,{
+einbroch,280,227,2	script	Einbroch Villager#ein:7438436a	642,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,273,221,6	script	Einbroch Villager#ein:ecb2e1b5	109,{
+einbroch,273,221,6	script	Einbroch Villager#ein:d27e2916	734,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,285,222,6	script	Einbroch Villager#ein:532b050a	91,{
+einbroch,285,222,6	script	Einbroch Villager#ein:101a29d8	97,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,291,220,4	script	Einbroch Villager#ein:76186454	742,{
+einbroch,291,220,4	script	Einbroch Villager#ein:38752828	637,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,250,140,2	script	Einbroch Villager#ein:3e201279	77,{
+einbroch,250,140,2	script	Einbroch Villager#ein:1d88c068	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,257,139,6	script	Einbroch Villager#ein:6b2f76da	727,{
+einbroch,257,139,6	script	Einbroch Villager#ein:4fbb1797	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,266,141,6	script	Einbroch Villager#ein:8dfb57a9	879,{
+einbroch,266,141,6	script	Einbroch Villager#ein:97f2831a	740,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,268,141,2	script	Einbroch Villager#ein:577cf51e	47,{
+einbroch,268,141,2	script	Einbroch Villager#ein:363f434d	75,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,274,137,7	script	Einbroch Villager#ein:a5cab8d4	741,{
+einbroch,274,137,7	script	Einbroch Villager#ein:c4a21be7	573,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,273,139,3	script	Einbroch Villager#ein:bdebc89c	733,{
+einbroch,273,139,3	script	Einbroch Villager#ein:7d95f2f5	855,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,269,123,5	script	Einbroch Villager#ein:4f914138	84,{
+einbroch,269,123,5	script	Einbroch Villager#ein:9764c943	733,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,259,124,6	script	Einbroch Villager#ein:ad4705a1	430,{
+einbroch,259,124,6	script	Einbroch Villager#ein:de14347f	635,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,253,114,0	script	Einbroch Villager#ein:b4169077	742,{
+einbroch,253,114,0	script	Einbroch Villager#ein:3ff583be	573,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,253,124,4	script	Einbroch Villager#ein:bc5478a6	69,{
+einbroch,253,124,4	script	Einbroch Villager#ein:936c3d4d	755,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,242,120,1	script	Einbroch Villager#ein:4e575cd3	61,{
+einbroch,242,120,1	script	Einbroch Villager#ein:f0189dc0	90,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,237,115,7	script	Einbroch Villager#ein:a3971277	701,{
+einbroch,237,115,7	script	Einbroch Villager#ein:d93b3f9e	751,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,238,125,0	script	Einbroch Villager#ein:03700e1b	85,{
+einbroch,238,125,0	script	Einbroch Villager#ein:1fda9cef	733,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,242,131,1	script	Einbroch Villager#ein:ba44196b	90,{
+einbroch,242,131,1	script	Einbroch Villager#ein:649ce1e0	855,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,230,117,3	script	Einbroch Villager#ein:64b877af	798,{
+einbroch,230,117,3	script	Einbroch Villager#ein:a4724896	733,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,228,112,7	script	Einbroch Villager#ein:8d817031	806,{
+einbroch,228,112,7	script	Einbroch Villager#ein:de4c1436	853,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,231,114,2	script	Einbroch Villager#ein:9e0e23d5	755,{
+einbroch,231,114,2	script	Einbroch Villager#ein:c9841a01	734,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,217,120,4	script	Einbroch Villager#ein:679487d7	61,{
+einbroch,217,120,4	script	Einbroch Villager#ein:5d4cc1a6	851,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,216,109,7	script	Einbroch Villager#ein:22402e4a	853,{
+einbroch,216,109,7	script	Einbroch Villager#ein:1d41fc16	636,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,222,101,1	script	Einbroch Villager#ein:d82a9868	61,{
+einbroch,222,101,1	script	Einbroch Villager#ein:7d152a80	701,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,215,96,4	script	Einbroch Villager#ein:af7be07a	755,{
+einbroch,215,96,4	script	Einbroch Villager#ein:4fd19895	644,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,216,87,0	script	Einbroch Villager#ein:2d868a0f	751,{
+einbroch,216,87,0	script	Einbroch Villager#ein:0b2c618d	751,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,210,81,7	script	Einbroch Villager#ein:8206ab24	854,{
+einbroch,210,81,7	script	Einbroch Villager#ein:d7306268	855,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,213,75,5	script	Einbroch Villager#ein:912bdb0c	573,{
+einbroch,213,75,5	script	Einbroch Villager#ein:45163918	410,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,222,67,2	script	Einbroch Villager#ein:059b932b	644,{
+einbroch,222,67,2	script	Einbroch Villager#ein:65f9b4db	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,213,63,1	script	Einbroch Villager#ein:9b93bc91	828,{
+einbroch,213,63,1	script	Einbroch Villager#ein:c5168294	855,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,218,53,5	script	Einbroch Villager#ein:eb5a03b9	727,{
+einbroch,218,53,5	script	Einbroch Villager#ein:0ff4d949	92,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,227,55,2	script	Einbroch Villager#ein:337277a8	95,{
+einbroch,227,55,2	script	Einbroch Villager#ein:f0f1163a	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,235,51,7	script	Einbroch Villager#ein:ec6b2f98	635,{
+einbroch,235,51,7	script	Einbroch Villager#ein:151b7072	124,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,245,54,4	script	Einbroch Villager#ein:32edeab4	410,{
+einbroch,245,54,4	script	Einbroch Villager#ein:e5644040	908,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,217,45,6	script	Einbroch Villager#ein:21557bbd	741,{
+einbroch,217,45,6	script	Einbroch Villager#ein:271f706e	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,219,45,2	script	Einbroch Villager#ein:7c46ccef	124,{
+einbroch,219,45,2	script	Einbroch Villager#ein:a9792445	755,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,218,51,1	script	Einbroch Villager#ein:4db280bc	754,{
+einbroch,218,51,1	script	Einbroch Villager#ein:9b43001e	84,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,203,43,2	script	Einbroch Villager#ein:9a9af5b2	97,{
+einbroch,203,43,2	script	Einbroch Villager#ein:d2b3775b	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,194,46,5	script	Einbroch Villager#ein:9e38ca16	879,{
+einbroch,194,46,5	script	Einbroch Villager#ein:632bc451	57,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,186,50,3	script	Einbroch Villager#ein:6c7c0ad3	644,{
+einbroch,186,50,3	script	Einbroch Villager#ein:7e17144a	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,181,42,7	script	Einbroch Villager#ein:12167b77	654,{
+einbroch,181,42,7	script	Einbroch Villager#ein:819e8e72	853,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,164,44,6	script	Einbroch Villager#ein:5fdbfa73	636,{
+einbroch,164,44,6	script	Einbroch Villager#ein:ca469771	755,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,171,41,4	script	Einbroch Villager#ein:2c72ca27	635,{
+einbroch,171,41,4	script	Einbroch Villager#ein:13821e61	908,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,176,35,0	script	Einbroch Villager#ein:583046a1	76,{
+einbroch,176,35,0	script	Einbroch Villager#ein:39ae791a	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,167,34,1	script	Einbroch Villager#ein:aec2a3c1	853,{
+einbroch,167,34,1	script	Einbroch Villager#ein:05cba92d	634,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,169,54,0	script	Einbroch Villager#ein:7b149521	779,{
+einbroch,169,54,0	script	Einbroch Villager#ein:8e545a2f	727,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,172,64,5	script	Einbroch Villager#ein:460349a5	806,{
+einbroch,172,64,5	script	Einbroch Villager#ein:68a435da	641,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,170,71,6	script	Einbroch Villager#ein:f4e0afef	733,{
+einbroch,170,71,6	script	Einbroch Villager#ein:26e89c31	61,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,177,70,2	script	Einbroch Villager#ein:d36b97e5	727,{
+einbroch,177,70,2	script	Einbroch Villager#ein:0979069d	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,187,71,5	script	Einbroch Villager#ein:9c9ca00f	83,{
+einbroch,187,71,5	script	Einbroch Villager#ein:46b08508	76,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,260,192,2	script	Einbroch Villager#ein:49fad76f	72,{
+einbroch,260,192,2	script	Einbroch Villager#ein:09fd0815	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,269,200,0	script	Einbroch Villager#ein:8082e9b6	742,{
+einbroch,269,200,0	script	Einbroch Villager#ein:597acdd5	854,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,273,208,5	script	Einbroch Villager#ein:aff47232	76,{
+einbroch,273,208,5	script	Einbroch Villager#ein:613bdabf	79,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,273,197,3	script	Einbroch Villager#ein:6c94c8b6	755,{
+einbroch,273,197,3	script	Einbroch Villager#ein:4c32684d	62,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,258,193,2	script	Einbroch Villager#ein:1fd415e2	125,{
+einbroch,258,193,2	script	Einbroch Villager#ein:707ab9da	644,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,266,186,5	script	Einbroch Villager#ein:45240e6c	49,{
+einbroch,266,186,5	script	Einbroch Villager#ein:b3f8323c	805,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,273,177,0	script	Einbroch Villager#ein:1898a6de	573,{
+einbroch,273,177,0	script	Einbroch Villager#ein:fbdf8ccf	92,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,260,165,6	script	Einbroch Villager#ein:d8d04a94	76,{
+einbroch,260,165,6	script	Einbroch Villager#ein:306121f7	805,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,251,163,2	script	Einbroch Villager#ein:8ebfc92c	734,{
+einbroch,251,163,2	script	Einbroch Villager#ein:06a21f2d	753,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,114,82,2	script	Einbroch Villager#ein:f9adcd1d	83,{
+einbroch,114,82,2	script	Einbroch Villager#ein:b913f768	745,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,104,91,0	script	Einbroch Villager#ein:42dd2f2f	69,{
+einbroch,104,91,0	script	Einbroch Villager#ein:f0159c0f	806,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,106,98,3	script	Einbroch Villager#ein:b4d6b33b	89,{
+einbroch,106,98,3	script	Einbroch Villager#ein:839a8db7	410,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,103,106,4	script	Einbroch Villager#ein:65e6b482	72,{
+einbroch,103,106,4	script	Einbroch Villager#ein:cb5d3a04	753,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,97,119,6	script	Einbroch Villager#ein:70110056	69,{
+einbroch,97,119,6	script	Einbroch Villager#ein:d969d7ae	701,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,110,116,3	script	Einbroch Villager#ein:b732d324	741,{
+einbroch,110,116,3	script	Einbroch Villager#ein:d909c26c	47,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,119,117,5	script	Einbroch Villager#ein:f0404861	908,{
+einbroch,119,117,5	script	Einbroch Villager#ein:0ba4d5b5	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,125,133,0	script	Einbroch Villager#ein:3f72a0a8	635,{
+einbroch,125,133,0	script	Einbroch Villager#ein:36c082a2	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,127,144,4	script	Einbroch Villager#ein:86d388df	72,{
+einbroch,127,144,4	script	Einbroch Villager#ein:75314b16	635,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,131,145,2	script	Einbroch Villager#ein:ca88fa40	740,{
+einbroch,131,145,2	script	Einbroch Villager#ein:5ebcaee8	908,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,138,150,0	script	Einbroch Villager#ein:2ac371ab	89,{
+einbroch,138,150,0	script	Einbroch Villager#ein:c737ced4	732,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,137,162,7	script	Einbroch Villager#ein:235bc173	732,{
+einbroch,137,162,7	script	Einbroch Villager#ein:8aa19bf6	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,147,166,6	script	Einbroch Villager#ein:a1e29ca0	745,{
+einbroch,147,166,6	script	Einbroch Villager#ein:2232dd78	745,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,126,158,0	script	Einbroch Villager#ein:c510a67d	755,{
+einbroch,126,158,0	script	Einbroch Villager#ein:a95d3f7f	854,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,126,170,5	script	Einbroch Villager#ein:55453447	109,{
+einbroch,126,170,5	script	Einbroch Villager#ein:bbf190c5	745,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,112,172,2	script	Einbroch Villager#ein:3c1cfd84	84,{
+einbroch,112,172,2	script	Einbroch Villager#ein:46758d84	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,97,170,6	script	Einbroch Villager#ein:cc98f61f	754,{
+einbroch,97,170,6	script	Einbroch Villager#ein:0b23a748	654,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,83,177,4	script	Einbroch Villager#ein:cf8a7846	644,{
+einbroch,83,177,4	script	Einbroch Villager#ein:4df927f4	573,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,83,175,0	script	Einbroch Villager#ein:6a3ad465	635,{
+einbroch,83,175,0	script	Einbroch Villager#ein:7d30b561	734,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,72,173,6	script	Einbroch Villager#ein:d600cdbd	86,{
+einbroch,72,173,6	script	Einbroch Villager#ein:2b517adb	125,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,66,175,1	script	Einbroch Villager#ein:5053c9df	740,{
+einbroch,66,175,1	script	Einbroch Villager#ein:b59aedae	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,60,171,2	script	Einbroch Villager#ein:f5a7128a	62,{
+einbroch,60,171,2	script	Einbroch Villager#ein:394aaba2	642,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,54,176,3	script	Einbroch Villager#ein:c3b57586	798,{
+einbroch,54,176,3	script	Einbroch Villager#ein:0b8a0d66	855,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,49,173,1	script	Einbroch Villager#ein:fde813dc	727,{
+einbroch,49,173,1	script	Einbroch Villager#ein:64526b18	635,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,44,175,5	script	Einbroch Villager#ein:f0a8e399	51,{
+einbroch,44,175,5	script	Einbroch Villager#ein:7891f30a	69,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,40,166,0	script	Einbroch Villager#ein:2520bbc4	69,{
+einbroch,40,166,0	script	Einbroch Villager#ein:5af91011	92,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,44,159,3	script	Einbroch Villager#ein:d822c62a	57,{
+einbroch,44,159,3	script	Einbroch Villager#ein:0db5c172	75,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,46,154,1	script	Einbroch Villager#ein:fb31ac08	51,{
+einbroch,46,154,1	script	Einbroch Villager#ein:68475179	69,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,43,144,7	script	Einbroch Villager#ein:8b51db9b	76,{
+einbroch,43,144,7	script	Einbroch Villager#ein:11351047	755,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,46,136,3	script	Einbroch Villager#ein:9c5587bb	751,{
+einbroch,46,136,3	script	Einbroch Villager#ein:d317596b	573,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,43,129,6	script	Einbroch Villager#ein:5f676146	62,{
+einbroch,43,129,6	script	Einbroch Villager#ein:808d0a81	79,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,45,129,2	script	Einbroch Villager#ein:7ffafd12	642,{
+einbroch,45,129,2	script	Einbroch Villager#ein:b58422be	908,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,47,121,4	script	Einbroch Villager#ein:2f480f10	644,{
+einbroch,47,121,4	script	Einbroch Villager#ein:d63bd2ba	531,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,44,113,0	script	Einbroch Villager#ein:fb8039ac	754,{
+einbroch,44,113,0	script	Einbroch Villager#ein:2cb59833	430,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,50,107,2	script	Einbroch Villager#ein:6e952246	410,{
+einbroch,50,107,2	script	Einbroch Villager#ein:9b4fa505	97,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,40,103,7	script	Einbroch Villager#ein:dd1085a1	68,{
+einbroch,40,103,7	script	Einbroch Villager#ein:5e5ac4ca	645,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,100,81,2	script	Einbroch Villager#ein:ac6fe0dc	734,{
+einbroch,100,81,2	script	Einbroch Villager#ein:52a065d5	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,91,81,6	script	Einbroch Villager#ein:1f49b120	636,{
+einbroch,91,81,6	script	Einbroch Villager#ein:7a782148	745,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,85,76,7	script	Einbroch Villager#ein:0129ba5b	636,{
+einbroch,85,76,7	script	Einbroch Villager#ein:772dd8c2	645,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,86,84,0	script	Einbroch Villager#ein:3d19ac24	745,{
+einbroch,86,84,0	script	Einbroch Villager#ein:00ff664d	68,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,89,91,2	script	Einbroch Villager#ein:2b006cca	908,{
+einbroch,89,91,2	script	Einbroch Villager#ein:c329b7f6	734,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,86,97,6	script	Einbroch Villager#ein:939493c1	851,{
+einbroch,86,97,6	script	Einbroch Villager#ein:d7246f6f	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,93,98,1	script	Einbroch Villager#ein:073fa803	741,{
+einbroch,93,98,1	script	Einbroch Villager#ein:d41eb233	47,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,86,106,6	script	Einbroch Villager#ein:3fa44d66	755,{
+einbroch,86,106,6	script	Einbroch Villager#ein:46f8b0f6	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,88,106,2	script	Einbroch Villager#ein:11f4a0c0	779,{
+einbroch,88,106,2	script	Einbroch Villager#ein:1dcc8cf3	573,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,94,110,0	script	Einbroch Villager#ein:fe7e8635	804,{
+einbroch,94,110,0	script	Einbroch Villager#ein:79d01288	654,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,76,109,2	script	Einbroch Villager#ein:20149fdd	745,{
+einbroch,76,109,2	script	Einbroch Villager#ein:53646395	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,71,108,1	script	Einbroch Villager#ein:ad5ad126	61,{
+einbroch,71,108,1	script	Einbroch Villager#ein:a704cda3	71,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,64,112,5	script	Einbroch Villager#ein:4b942510	740,{
+einbroch,64,112,5	script	Einbroch Villager#ein:cbb24505	84,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,60,107,1	script	Einbroch Villager#ein:af720c31	69,{
+einbroch,60,107,1	script	Einbroch Villager#ein:21fef4fb	84,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,47,97,3	script	Einbroch Villager#ein:f1f124fb	84,{
+einbroch,47,97,3	script	Einbroch Villager#ein:68cf6f43	67,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,54,88,6	script	Einbroch Villager#ein:c4c1fba0	742,{
+einbroch,54,88,6	script	Einbroch Villager#ein:917bfaf7	89,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,61,86,1	script	Einbroch Villager#ein:1a0a2e5c	850,{
+einbroch,61,86,1	script	Einbroch Villager#ein:01c9a28e	62,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,74,88,4	script	Einbroch Villager#ein:278a9488	727,{
+einbroch,74,88,4	script	Einbroch Villager#ein:38e3f4f6	804,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,75,79,0	script	Einbroch Villager#ein:c3acc9b2	86,{
+einbroch,75,79,0	script	Einbroch Villager#ein:2a01da44	744,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,26,89,0	script	Einbroch Villager#ein:a3fa2fa3	755,{
+einbroch,26,89,0	script	Einbroch Villager#ein:37168b78	84,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,24,94,7	script	Einbroch Villager#ein:8a3461b8	806,{
+einbroch,24,94,7	script	Einbroch Villager#ein:0624c9fa	779,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,29,98,2	script	Einbroch Villager#ein:680e0224	62,{
+einbroch,29,98,2	script	Einbroch Villager#ein:31eda16b	654,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,31,98,6	script	Einbroch Villager#ein:bec129ba	85,{
+einbroch,31,98,6	script	Einbroch Villager#ein:419a7310	67,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,35,95,7	script	Einbroch Villager#ein:04881842	72,{
+einbroch,35,95,7	script	Einbroch Villager#ein:2813c17d	779,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,44,91,1	script	Einbroch Villager#ein:2f24bdde	853,{
+einbroch,44,91,1	script	Einbroch Villager#ein:7bc4bbdb	654,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,21,106,0	script	Einbroch Villager#ein:423ff0c9	91,{
+einbroch,21,106,0	script	Einbroch Villager#ein:75bbac5e	79,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,24,116,3	script	Einbroch Villager#ein:dc93451c	879,{
+einbroch,24,116,3	script	Einbroch Villager#ein:fd8746b1	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,22,127,4	script	Einbroch Villager#ein:9df4aef2	125,{
+einbroch,22,127,4	script	Einbroch Villager#ein:d847e7ac	879,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,33,155,6	script	Einbroch Villager#ein:406cda0b	850,{
+einbroch,33,155,6	script	Einbroch Villager#ein:305dcf98	430,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,26,155,7	script	Einbroch Villager#ein:9abd534b	635,{
+einbroch,26,155,7	script	Einbroch Villager#ein:b7fe5a38	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,31,160,5	script	Einbroch Villager#ein:d3f3ac51	745,{
+einbroch,31,160,5	script	Einbroch Villager#ein:871f512a	753,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,26,165,0	script	Einbroch Villager#ein:955082f5	76,{
+einbroch,26,165,0	script	Einbroch Villager#ein:ff30c1b2	70,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,30,176,6	script	Einbroch Villager#ein:40edbe5e	92,{
+einbroch,30,176,6	script	Einbroch Villager#ein:92d0dc59	740,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,75,114,7	script	Einbroch Villager#ein:34d4ab6e	753,{
+einbroch,75,114,7	script	Einbroch Villager#ein:ee827fcd	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,80,112,3	script	Einbroch Villager#ein:739f7397	854,{
+einbroch,80,112,3	script	Einbroch Villager#ein:f129acf2	637,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,114,128,1	script	Einbroch Villager#ein:de307dd6	62,{
+einbroch,114,128,1	script	Einbroch Villager#ein:e64a07c1	751,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,117,135,4	script	Einbroch Villager#ein:5831d23d	77,{
+einbroch,117,135,4	script	Einbroch Villager#ein:10498c10	92,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,114,143,7	script	Einbroch Villager#ein:9c5d9a13	125,{
+einbroch,114,143,7	script	Einbroch Villager#ein:acf49db6	92,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,117,150,4	script	Einbroch Villager#ein:4d4fe079	109,{
+einbroch,117,150,4	script	Einbroch Villager#ein:4563ced6	635,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,107,124,1	script	Einbroch Villager#ein:c9b862bd	49,{
+einbroch,107,124,1	script	Einbroch Villager#ein:d81d7e27	75,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,101,163,6	script	Einbroch Villager#ein:301b11eb	75,{
+einbroch,101,163,6	script	Einbroch Villager#ein:e7f0c850	855,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,116,164,2	script	Einbroch Villager#ein:2464127a	95,{
+einbroch,116,164,2	script	Einbroch Villager#ein:be18c446	531,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,83,163,1	script	Einbroch Villager#ein:a6bce84b	86,{
+einbroch,83,163,1	script	Einbroch Villager#ein:aabacc30	86,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,63,165,4	script	Einbroch Villager#ein:1c9a06a6	85,{
+einbroch,63,165,4	script	Einbroch Villager#ein:d7082614	879,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,70,151,7	script	Einbroch Villager#ein:4134b15e	76,{
+einbroch,70,151,7	script	Einbroch Villager#ein:c23fc379	531,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,82,150,1	script	Einbroch Villager#ein:d63a0f7a	644,{
+einbroch,82,150,1	script	Einbroch Villager#ein:9f026317	806,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,95,152,5	script	Einbroch Villager#ein:10d090fb	828,{
+einbroch,95,152,5	script	Einbroch Villager#ein:6e91c7c6	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,103,140,4	script	Einbroch Villager#ein:f9963851	854,{
+einbroch,103,140,4	script	Einbroch Villager#ein:8a45f21f	635,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,63,181,0	script	Einbroch Villager#ein:f494ca9e	47,{
+einbroch,63,181,0	script	Einbroch Villager#ein:f08c7194	95,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,68,190,6	script	Einbroch Villager#ein:1d2f70ae	410,{
+einbroch,68,190,6	script	Einbroch Villager#ein:cf89625d	77,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,70,190,2	script	Einbroch Villager#ein:025e26f1	742,{
+einbroch,70,190,2	script	Einbroch Villager#ein:11982fd4	125,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,77,195,3	script	Einbroch Villager#ein:07338299	798,{
+einbroch,77,195,3	script	Einbroch Villager#ein:9ca52162	75,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,79,189,7	script	Einbroch Villager#ein:990cb994	69,{
+einbroch,79,189,7	script	Einbroch Villager#ein:9a2be7f0	851,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,86,194,1	script	Einbroch Villager#ein:7f75169f	702,{
+einbroch,86,194,1	script	Einbroch Villager#ein:85d0aa24	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,76,203,4	script	Einbroch Villager#ein:e3a6b3e7	97,{
+einbroch,76,203,4	script	Einbroch Villager#ein:f46f5166	755,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,124,178,0	script	Einbroch Villager#ein:42f35259	95,{
+einbroch,124,178,0	script	Einbroch Villager#ein:0002e933	57,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,126,187,3	script	Einbroch Villager#ein:b14154f9	745,{
+einbroch,126,187,3	script	Einbroch Villager#ein:3c9b71dd	634,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,125,200,2	script	Einbroch Villager#ein:47d2c253	732,{
+einbroch,125,200,2	script	Einbroch Villager#ein:eab31073	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,127,207,5	script	Einbroch Villager#ein:858b3575	732,{
+einbroch,127,207,5	script	Einbroch Villager#ein:bc680ffe	86,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,115,205,4	script	Einbroch Villager#ein:f35a6dda	853,{
+einbroch,115,205,4	script	Einbroch Villager#ein:e530a01a	828,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,116,193,0	script	Einbroch Villager#ein:dde4739b	645,{
+einbroch,116,193,0	script	Einbroch Villager#ein:9af20548	642,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,107,199,2	script	Einbroch Villager#ein:63c4b68f	637,{
+einbroch,107,199,2	script	Einbroch Villager#ein:7a55b64c	70,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,96,201,6	script	Einbroch Villager#ein:49af9bcd	754,{
+einbroch,96,201,6	script	Einbroch Villager#ein:7406cf63	642,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,99,210,5	script	Einbroch Villager#ein:d1af0d43	125,{
+einbroch,99,210,5	script	Einbroch Villager#ein:e71e5438	71,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,93,206,1	script	Einbroch Villager#ein:fead894e	702,{
+einbroch,93,206,1	script	Einbroch Villager#ein:211e40bf	755,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,96,190,4	script	Einbroch Villager#ein:cd63a695	84,{
+einbroch,96,190,4	script	Einbroch Villager#ein:b2a4fa50	654,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,96,187,0	script	Einbroch Villager#ein:7cfbd8c4	755,{
+einbroch,96,187,0	script	Einbroch Villager#ein:aa2b40b9	805,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,102,189,1	script	Einbroch Villager#ein:7fc3a86c	701,{
+einbroch,102,189,1	script	Einbroch Villager#ein:47f23621	637,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,216,251,3	script	Einbroch Villager#ein:b632ad19	806,{
+einbroch,216,251,3	script	Einbroch Villager#ein:dc1cc50a	637,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,214,257,0	script	Einbroch Villager#ein:a4e8eb82	61,{
+einbroch,214,257,0	script	Einbroch Villager#ein:cd5a65a4	853,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,207,255,6	script	Einbroch Villager#ein:2489cce7	805,{
+einbroch,207,255,6	script	Einbroch Villager#ein:10a32f1a	702,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,206,250,1	script	Einbroch Villager#ein:231e528e	47,{
+einbroch,206,250,1	script	Einbroch Villager#ein:e3b8d513	76,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,213,238,6	script	Einbroch Villager#ein:3d992ca7	641,{
+einbroch,213,238,6	script	Einbroch Villager#ein:4cf5f03f	908,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,200,254,2	script	Einbroch Villager#ein:eaa81090	804,{
+einbroch,200,254,2	script	Einbroch Villager#ein:7d239dcf	804,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,194,250,7	script	Einbroch Villager#ein:f993279f	755,{
+einbroch,194,250,7	script	Einbroch Villager#ein:735d160f	77,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,187,252,2	script	Einbroch Villager#ein:d0254e59	51,{
+einbroch,187,252,2	script	Einbroch Villager#ein:65deba44	879,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,180,254,3	script	Einbroch Villager#ein:8453d665	741,{
+einbroch,180,254,3	script	Einbroch Villager#ein:653f2d8c	805,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,173,260,4	script	Einbroch Villager#ein:27ba8b42	71,{
+einbroch,173,260,4	script	Einbroch Villager#ein:f2e69e03	805,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,174,246,7	script	Einbroch Villager#ein:9504a262	753,{
+einbroch,174,246,7	script	Einbroch Villager#ein:ec0467bf	49,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,167,248,1	script	Einbroch Villager#ein:e31adee5	67,{
+einbroch,167,248,1	script	Einbroch Villager#ein:02ae3f99	125,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,161,252,5	script	Einbroch Villager#ein:2f167f85	804,{
+einbroch,161,252,5	script	Einbroch Villager#ein:d79a2f7f	109,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,164,241,6	script	Einbroch Villager#ein:1b13fadf	779,{
+einbroch,164,241,6	script	Einbroch Villager#ein:53ae7cc3	125,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,172,236,0	script	Einbroch Villager#ein:41b5885f	634,{
+einbroch,172,236,0	script	Einbroch Villager#ein:65899577	805,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,168,231,3	script	Einbroch Villager#ein:f6de64ae	92,{
+einbroch,168,231,3	script	Einbroch Villager#ein:4ae270c9	75,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,180,230,6	script	Einbroch Villager#ein:f1ca3663	68,{
+einbroch,180,230,6	script	Einbroch Villager#ein:4f3c2501	430,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,188,234,2	script	Einbroch Villager#ein:a0a6eab9	430,{
+einbroch,188,234,2	script	Einbroch Villager#ein:444675a9	798,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,186,234,6	script	Einbroch Villager#ein:17391fe6	79,{
+einbroch,186,234,6	script	Einbroch Villager#ein:a357f807	410,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,150,253,5	script	Einbroch Villager#ein:c42347cb	798,{
+einbroch,150,253,5	script	Einbroch Villager#ein:5fcd0aa4	636,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,150,245,6	script	Einbroch Villager#ein:d443c25c	702,{
+einbroch,150,245,6	script	Einbroch Villager#ein:606b669b	855,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,140,245,1	script	Einbroch Villager#ein:35b978b3	573,{
+einbroch,140,245,1	script	Einbroch Villager#ein:461d85fa	109,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,133,249,4	script	Einbroch Villager#ein:29315e60	635,{
+einbroch,133,249,4	script	Einbroch Villager#ein:65e538f2	124,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,129,243,3	script	Einbroch Villager#ein:ae3c2f70	68,{
+einbroch,129,243,3	script	Einbroch Villager#ein:83074b67	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,124,249,2	script	Einbroch Villager#ein:0e3f8bbf	851,{
+einbroch,124,249,2	script	Einbroch Villager#ein:28987559	51,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,120,241,7	script	Einbroch Villager#ein:daeee811	69,{
+einbroch,120,241,7	script	Einbroch Villager#ein:567a7e03	68,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,154,234,4	script	Einbroch Villager#ein:00ffb7ec	91,{
+einbroch,154,234,4	script	Einbroch Villager#ein:1bc99719	76,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,125,220,0	script	Einbroch Villager#ein:dd63c08a	644,{
+einbroch,125,220,0	script	Einbroch Villager#ein:713b2b69	637,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,130,262,4	script	Einbroch Villager#ein:d8d5ecf7	742,{
+einbroch,130,262,4	script	Einbroch Villager#ein:44ddb2ed	855,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,112,241,2	script	Einbroch Villager#ein:02f1b2c6	879,{
+einbroch,112,241,2	script	Einbroch Villager#ein:3d425100	745,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,106,239,7	script	Einbroch Villager#ein:627df544	742,{
+einbroch,106,239,7	script	Einbroch Villager#ein:af1352f5	879,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,98,246,4	script	Einbroch Villager#ein:5ea5b59e	47,{
+einbroch,98,246,4	script	Einbroch Villager#ein:17ad0b40	908,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,102,236,4	script	Einbroch Villager#ein:72684546	635,{
+einbroch,102,236,4	script	Einbroch Villager#ein:17716e99	637,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,103,224,0	script	Einbroch Villager#ein:343de721	741,{
+einbroch,103,224,0	script	Einbroch Villager#ein:84e37927	644,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,186,237,0	script	Einbroch Villager#ein:ccf22615	85,{
+einbroch,186,237,0	script	Einbroch Villager#ein:31f06085	67,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,90,228,6	script	Einbroch Villager#ein:426b6e4a	86,{
+einbroch,90,228,6	script	Einbroch Villager#ein:192cb41e	908,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,133,320,6	script	Einbroch Villager#ein:1dfe26fa	742,{
+einbroch,133,320,6	script	Einbroch Villager#ein:61c3cc96	732,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,127,316,1	script	Einbroch Villager#ein:0efdbdfd	742,{
+einbroch,127,316,1	script	Einbroch Villager#ein:5afe638a	855,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,142,316,5	script	Einbroch Villager#ein:b214047e	805,{
+einbroch,142,316,5	script	Einbroch Villager#ein:e889545c	57,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,142,308,4	script	Einbroch Villager#ein:7081a07f	753,{
+einbroch,142,308,4	script	Einbroch Villager#ein:074051f1	879,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,140,296,7	script	Einbroch Villager#ein:b4441fe5	79,{
+einbroch,140,296,7	script	Einbroch Villager#ein:4e440c15	90,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,144,288,3	script	Einbroch Villager#ein:9e8077b6	742,{
+einbroch,144,288,3	script	Einbroch Villager#ein:4f652053	83,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,143,279,6	script	Einbroch Villager#ein:a094f760	779,{
+einbroch,143,279,6	script	Einbroch Villager#ein:fcd8f3c4	701,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,145,272,0	script	Einbroch Villager#ein:26c59cf5	742,{
+einbroch,145,272,0	script	Einbroch Villager#ein:1458963a	109,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,151,282,5	script	Einbroch Villager#ein:d316217a	430,{
+einbroch,151,282,5	script	Einbroch Villager#ein:44fd2491	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,158,280,3	script	Einbroch Villager#ein:ecd4d894	645,{
+einbroch,158,280,3	script	Einbroch Villager#ein:226eaeed	70,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,165,284,7	script	Einbroch Villager#ein:08d884d7	754,{
+einbroch,165,284,7	script	Einbroch Villager#ein:6c4186e5	70,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,171,281,4	script	Einbroch Villager#ein:0e8e4fbe	702,{
+einbroch,171,281,4	script	Einbroch Villager#ein:948f1161	84,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,171,279,0	script	Einbroch Villager#ein:f3e8557f	644,{
+einbroch,171,279,0	script	Einbroch Villager#ein:838e77ba	806,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,175,271,1	script	Einbroch Villager#ein:846d96c6	851,{
+einbroch,175,271,1	script	Einbroch Villager#ein:9f36842e	908,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,173,289,3	script	Einbroch Villager#ein:14022b1c	806,{
+einbroch,173,289,3	script	Einbroch Villager#ein:fa11b015	125,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,175,299,1	script	Einbroch Villager#ein:b72a2787	879,{
+einbroch,175,299,1	script	Einbroch Villager#ein:bfc6af31	806,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,173,307,6	script	Einbroch Villager#ein:e467e025	92,{
+einbroch,173,307,6	script	Einbroch Villager#ein:5e74dfc3	84,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,175,307,2	script	Einbroch Villager#ein:6768cf56	645,{
+einbroch,175,307,2	script	Einbroch Villager#ein:8f7cf89f	879,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,172,318,4	script	Einbroch Villager#ein:661f6d1a	742,{
+einbroch,172,318,4	script	Einbroch Villager#ein:80f4dcc3	879,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,157,323,0	script	Einbroch Villager#ein:044a36f5	124,{
+einbroch,157,323,0	script	Einbroch Villager#ein:f84591fe	744,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,151,313,5	script	Einbroch Villager#ein:84577e8b	855,{
+einbroch,151,313,5	script	Einbroch Villager#ein:af0bbc65	109,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,156,310,1	script	Einbroch Villager#ein:10d673a5	635,{
+einbroch,156,310,1	script	Einbroch Villager#ein:cc34a750	97,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,164,309,4	script	Einbroch Villager#ein:9008eeca	70,{
+einbroch,164,309,4	script	Einbroch Villager#ein:bda97845	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,167,302,7	script	Einbroch Villager#ein:9add66ee	654,{
+einbroch,167,302,7	script	Einbroch Villager#ein:f6beb97d	644,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,160,301,2	script	Einbroch Villager#ein:b653a79a	753,{
+einbroch,160,301,2	script	Einbroch Villager#ein:3304c113	755,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,152,303,5	script	Einbroch Villager#ein:ed204cb5	634,{
+einbroch,152,303,5	script	Einbroch Villager#ein:fde8bd38	124,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,147,308,1	script	Einbroch Villager#ein:ff52b7c6	645,{
+einbroch,147,308,1	script	Einbroch Villager#ein:e441c728	779,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,148,299,5	script	Einbroch Villager#ein:6908ebd5	76,{
+einbroch,148,299,5	script	Einbroch Villager#ein:21c96e7c	879,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,151,292,7	script	Einbroch Villager#ein:77a56143	61,{
+einbroch,151,292,7	script	Einbroch Villager#ein:279fd779	77,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,157,295,0	script	Einbroch Villager#ein:92fb0448	92,{
+einbroch,157,295,0	script	Einbroch Villager#ein:98fc01dd	47,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,166,296,3	script	Einbroch Villager#ein:b714804c	92,{
+einbroch,166,296,3	script	Einbroch Villager#ein:637c6d93	70,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,158,291,4	script	Einbroch Villager#ein:1eb6e1ba	755,{
+einbroch,158,291,4	script	Einbroch Villager#ein:cf0d6925	67,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,155,283,5	script	Einbroch Villager#ein:2e11e3a2	879,{
+einbroch,155,283,5	script	Einbroch Villager#ein:7ad9112e	67,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,160,273,0	script	Einbroch Villager#ein:4c53cf56	86,{
+einbroch,160,273,0	script	Einbroch Villager#ein:9cf5bf93	779,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,156,265,5	script	Einbroch Villager#ein:d8741d0f	531,{
+einbroch,156,265,5	script	Einbroch Villager#ein:33c3ce27	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,64,198,1	script	Einbroch Villager#ein:27555f50	734,{
+einbroch,64,198,1	script	Einbroch Villager#ein:cb30736f	642,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,59,193,4	script	Einbroch Villager#ein:cbacaba3	754,{
+einbroch,59,193,4	script	Einbroch Villager#ein:046e11f3	86,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,56,198,7	script	Einbroch Villager#ein:a521c996	740,{
+einbroch,56,198,7	script	Einbroch Villager#ein:716e631a	798,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,50,202,4	script	Einbroch Villager#ein:e739601f	71,{
+einbroch,50,202,4	script	Einbroch Villager#ein:6e877280	95,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,50,194,5	script	Einbroch Villager#ein:47e4baf0	125,{
+einbroch,50,194,5	script	Einbroch Villager#ein:05734a47	90,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,55,188,2	script	Einbroch Villager#ein:b5cdfa2a	754,{
+einbroch,55,188,2	script	Einbroch Villager#ein:bd074014	645,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,52,188,6	script	Einbroch Villager#ein:b94c9591	879,{
+einbroch,52,188,6	script	Einbroch Villager#ein:2619f470	851,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,47,191,1	script	Einbroch Villager#ein:85864d13	573,{
+einbroch,47,191,1	script	Einbroch Villager#ein:4b252453	89,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,45,197,4	script	Einbroch Villager#ein:b2be764b	742,{
+einbroch,45,197,4	script	Einbroch Villager#ein:eb368cab	654,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,41,203,6	script	Einbroch Villager#ein:6f339c9c	742,{
+einbroch,41,203,6	script	Einbroch Villager#ein:08598201	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,40,189,2	script	Einbroch Villager#ein:9254d68e	92,{
+einbroch,40,189,2	script	Einbroch Villager#ein:ac937e2a	740,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,34,212,5	script	Einbroch Villager#ein:a1d6706e	734,{
+einbroch,34,212,5	script	Einbroch Villager#ein:83478311	806,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,30,215,6	script	Einbroch Villager#ein:e19d13b7	95,{
+einbroch,30,215,6	script	Einbroch Villager#ein:f6bd97a6	805,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,79,65,2	script	Einbroch Villager#ein:0c9e522b	573,{
+einbroch,79,65,2	script	Einbroch Villager#ein:6fa6fd57	637,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,71,71,5	script	Einbroch Villager#ein:87de4422	95,{
+einbroch,71,71,5	script	Einbroch Villager#ein:e3c9c21c	125,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,84,50,3	script	Einbroch Villager#ein:d61fad4d	779,{
+einbroch,84,50,3	script	Einbroch Villager#ein:8766d91c	727,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,75,44,7	script	Einbroch Villager#ein:88cda422	77,{
+einbroch,75,44,7	script	Einbroch Villager#ein:a2a797c7	854,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,67,53,0	script	Einbroch Villager#ein:e0f927b4	70,{
+einbroch,67,53,0	script	Einbroch Villager#ein:9e4fc21a	733,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,60,64,6	script	Einbroch Villager#ein:2e600e21	125,{
+einbroch,60,64,6	script	Einbroch Villager#ein:6fc43fb5	125,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,52,61,5	script	Einbroch Villager#ein:d6a60fa2	740,{
+einbroch,52,61,5	script	Einbroch Villager#ein:1fe4d55e	828,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,61,53,1	script	Einbroch Villager#ein:a8ad42f3	644,{
+einbroch,61,53,1	script	Einbroch Villager#ein:a2c75a0d	68,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,58,38,2	script	Einbroch Villager#ein:cad38906	76,{
+einbroch,58,38,2	script	Einbroch Villager#ein:e419b1b2	67,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-ein_in01,98,23,7	script	Einbroch Villager#ein:43330f60	644,{
+ein_in01,98,23,7	script	Einbroch Villager#ein:3c4ef584	727,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_in01,109,21,1	script	Einbroch Villager#ein:cd2abcb8	62,{
+ein_in01,109,21,1	script	Einbroch Villager#ein:17336a8d	635,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_in01,116,22,5	script	Einbroch Villager#ein:7844c882	71,{
+ein_in01,116,22,5	script	Einbroch Villager#ein:f14da136	732,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_in01,201,227,1	script	Einbroch Villager#ein:bad3fe30	95,{
+ein_in01,201,227,1	script	Einbroch Villager#ein:87c26423	850,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_in01,206,215,3	script	Einbroch Villager#ein:00be258d	727,{
+ein_in01,206,215,3	script	Einbroch Villager#ein:9599aff8	879,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_in01,197,221,3	script	Einbroch Villager#ein:bf6b0e01	637,{
+ein_in01,197,221,3	script	Einbroch Villager#ein:26a68b94	84,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_in01,275,224,7	script	Einbroch Villager#ein:c45bc585	740,{
+ein_in01,275,224,7	script	Einbroch Villager#ein:e145d48a	92,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_in01,271,239,2	script	Einbroch Villager#ein:2c346b85	742,{
+ein_in01,271,239,2	script	Einbroch Villager#ein:3fb1d4a2	47,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_in01,226,280,0	script	Einbroch Villager#ein:7284437c	908,{
+ein_in01,226,280,0	script	Einbroch Villager#ein:e9f1e568	68,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_in01,217,282,7	script	Einbroch Villager#ein:0ad0086a	805,{
+ein_in01,217,282,7	script	Einbroch Villager#ein:e2c986b3	733,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_in01,277,212,2	script	Einbroch Villager#ein:1211ef75	531,{
+ein_in01,277,212,2	script	Einbroch Villager#ein:ee2f0944	636,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_in01,267,209,4	script	Einbroch Villager#ein:d592d266	742,{
+ein_in01,267,209,4	script	Einbroch Villager#ein:28f39526	573,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_in01,226,168,0	script	Einbroch Villager#ein:865b827b	701,{
+ein_in01,226,168,0	script	Einbroch Villager#ein:b33e9a67	804,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_in01,273,165,1	script	Einbroch Villager#ein:1f251811	727,{
+ein_in01,273,165,1	script	Einbroch Villager#ein:11beddca	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_in01,270,172,5	script	Einbroch Villager#ein:0baa5add	740,{
+ein_in01,270,172,5	script	Einbroch Villager#ein:55664059	854,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_in01,170,283,4	script	Einbroch Villager#ein:6e03d357	124,{
+ein_in01,170,283,4	script	Einbroch Villager#ein:29572b54	853,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_in01,175,272,7	script	Einbroch Villager#ein:a443eeea	732,{
+ein_in01,175,272,7	script	Einbroch Villager#ein:61cbd31a	90,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_in01,165,267,0	script	Einbroch Villager#ein:b53ed0a2	68,{
+ein_in01,165,267,0	script	Einbroch Villager#ein:56b12088	733,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_in01,164,263,6	script	Einbroch Villager#ein:c143dff6	84,{
+ein_in01,164,263,6	script	Einbroch Villager#ein:f734ac92	745,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_in01,19,148,3	script	Einbroch Villager#ein:654e67e2	854,{
+ein_in01,19,148,3	script	Einbroch Villager#ein:97e472e5	645,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_in01,29,137,2	script	Einbroch Villager#ein:3d4c9431	109,{
+ein_in01,29,137,2	script	Einbroch Villager#ein:224ae54e	636,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_in01,29,149,4	script	Einbroch Villager#ein:68368a69	90,{
+ein_in01,29,149,4	script	Einbroch Villager#ein:3ec85b5b	727,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_in01,275,32,5	script	Einbroch Villager#ein:c551cfbd	641,{
+ein_in01,275,32,5	script	Einbroch Villager#ein:45fe8e0b	745,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_in01,25,37,6	script	Einbroch Villager#ein:6cf7ce39	89,{
+ein_in01,25,37,6	script	Einbroch Villager#ein:46d8fe1f	573,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_in01,27,26,1	script	Einbroch Villager#ein:840070a7	125,{
+ein_in01,27,26,1	script	Einbroch Villager#ein:9855106c	125,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_in01,31,20,0	script	Einbroch Villager#ein:5d57f2c1	85,{
+ein_in01,31,20,0	script	Einbroch Villager#ein:0d8f3cc5	908,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_in01,18,20,3	script	Einbroch Villager#ein:4a659990	61,{
+ein_in01,18,20,3	script	Einbroch Villager#ein:5dc4ea1b	91,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_in01,27,83,7	script	Einbroch Villager#ein:f3085299	71,{
+ein_in01,27,83,7	script	Einbroch Villager#ein:e2c77732	701,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_in01,18,28,4	script	Blacksmith GuildMaster#ein:d04b5930	731,{
+ein_in01,18,28,4	script	Blacksmith GuildMaster#ein:a9ff0496	731,{
 	npctalk "I will make you a Blacksmith";
 	end;
 }
@@ -2136,253 +2136,253 @@ ein_in01,18,28,4	script	Blacksmith GuildMaster#ein:d04b5930	731,{
 
 
 
-airport,158,32,4	script	Einbroch Villager#ein:99ea32bc	109,{
+airport,158,32,4	script	Einbroch Villager#ein:0f0ac61b	855,{
 	npctalk "npcdialog";
 	end;
 }
 
-airport,167,37,7	script	Einbroch Villager#ein:e48fb8c6	908,{
+airport,167,37,7	script	Einbroch Villager#ein:2602ea60	804,{
 	npctalk "npcdialog";
 	end;
 }
 
-airport,181,35,3	script	Einbroch Villager#ein:afe04b83	95,{
+airport,181,35,3	script	Einbroch Villager#ein:b0dcaffa	410,{
 	npctalk "npcdialog";
 	end;
 }
 
-airport,190,40,4	script	Einbroch Villager#ein:1a6168d6	75,{
+airport,190,40,4	script	Einbroch Villager#ein:19415f9a	733,{
 	npctalk "npcdialog";
 	end;
 }
 
-airport,160,25,2	script	Einbroch Villager#ein:93f8df95	745,{
+airport,160,25,2	script	Einbroch Villager#ein:97e763fb	702,{
 	npctalk "npcdialog";
 	end;
 }
 
-airport,145,19,1	script	Einbroch Villager#ein:b2cb3e94	645,{
+airport,145,19,1	script	Einbroch Villager#ein:4d6f7516	641,{
 	npctalk "npcdialog";
 	end;
 }
 
-airport,140,27,4	script	Einbroch Villager#ein:87bf6b9c	83,{
+airport,140,27,4	script	Einbroch Villager#ein:bf814ce3	67,{
 	npctalk "npcdialog";
 	end;
 }
 
-airport,133,21,1	script	Einbroch Villager#ein:fbad9095	84,{
+airport,133,21,1	script	Einbroch Villager#ein:a073d136	79,{
 	npctalk "npcdialog";
 	end;
 }
 
-airport,126,38,4	script	Einbroch Villager#ein:1566108e	57,{
+airport,126,38,4	script	Einbroch Villager#ein:22b306bf	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-airport,124,24,0	script	Einbroch Villager#ein:7a401d0d	755,{
+airport,124,24,0	script	Einbroch Villager#ein:fcd6a5e3	805,{
 	npctalk "npcdialog";
 	end;
 }
 
-airport,109,37,7	script	Einbroch Villager#ein:d20bcfb2	85,{
+airport,109,37,7	script	Einbroch Villager#ein:9eb8bd17	67,{
 	npctalk "npcdialog";
 	end;
 }
 
-airport,101,40,4	script	Einbroch Villager#ein:2415fe75	798,{
+airport,101,40,4	script	Einbroch Villager#ein:74f3e935	67,{
 	npctalk "npcdialog";
 	end;
 }
 
-airport,141,38,0	script	Einbroch Villager#ein:be8419b8	727,{
+airport,141,38,0	script	Einbroch Villager#ein:d2722d16	77,{
 	npctalk "npcdialog";
 	end;
 }
 
-airport,163,40,2	script	Einbroch Villager#ein:eb96d40f	908,{
+airport,163,40,2	script	Einbroch Villager#ein:947ea538	744,{
 	npctalk "npcdialog";
 	end;
 }
 
-airport,157,71,4	script	Einbroch Villager#ein:56acab52	62,{
+airport,157,71,4	script	Einbroch Villager#ein:59b8285e	86,{
 	npctalk "npcdialog";
 	end;
 }
 
-airport,163,65,2	script	Einbroch Villager#ein:1483f04a	70,{
+airport,163,65,2	script	Einbroch Villager#ein:ececec85	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-airport,158,58,1	script	Einbroch Villager#ein:86a37c2e	89,{
+airport,158,58,1	script	Einbroch Villager#ein:bb57d7aa	531,{
 	npctalk "npcdialog";
 	end;
 }
 
-airport,154,54,4	script	Einbroch Villager#ein:927173a5	851,{
+airport,154,54,4	script	Einbroch Villager#ein:413251b9	83,{
 	npctalk "npcdialog";
 	end;
 }
 
-airport,144,56,1	script	Einbroch Villager#ein:15e096ff	742,{
+airport,144,56,1	script	Einbroch Villager#ein:f44cd0cb	47,{
 	npctalk "npcdialog";
 	end;
 }
 
-airport,135,51,2	script	Einbroch Villager#ein:e88fdee6	779,{
+airport,135,51,2	script	Einbroch Villager#ein:3c4fddf1	83,{
 	npctalk "npcdialog";
 	end;
 }
 
-airport,128,58,1	script	Einbroch Villager#ein:7a50df5a	70,{
+airport,128,58,1	script	Einbroch Villager#ein:5d6fc353	804,{
 	npctalk "npcdialog";
 	end;
 }
 
-airport,118,53,7	script	Einbroch Villager#ein:29ce104d	642,{
+airport,118,53,7	script	Einbroch Villager#ein:80741462	908,{
 	npctalk "npcdialog";
 	end;
 }
 
-airport,123,64,1	script	Einbroch Villager#ein:a83537c5	125,{
+airport,123,64,1	script	Einbroch Villager#ein:7809efad	86,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,57,252,1	script	Einbroch Villager#ein:f6138a16	828,{
+einbroch,57,252,1	script	Einbroch Villager#ein:4d3f6e36	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,61,257,4	script	Einbroch Villager#ein:0f70057c	850,{
+einbroch,61,257,4	script	Einbroch Villager#ein:71df716a	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,48,257,0	script	Einbroch Villager#ein:cb8d55ff	635,{
+einbroch,48,257,0	script	Einbroch Villager#ein:b648ed44	573,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,56,264,6	script	Einbroch Villager#ein:9c157a8a	751,{
+einbroch,56,264,6	script	Einbroch Villager#ein:6f5f0be1	84,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,65,266,2	script	Einbroch Villager#ein:ac0b00aa	798,{
+einbroch,65,266,2	script	Einbroch Villager#ein:60058997	410,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,74,257,5	script	Einbroch Villager#ein:86c52d09	89,{
+einbroch,74,257,5	script	Einbroch Villager#ein:044e6d74	701,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,75,265,4	script	Einbroch Villager#ein:af191696	853,{
+einbroch,75,265,4	script	Einbroch Villager#ein:0be88c13	745,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,80,262,0	script	Einbroch Villager#ein:cc45592f	798,{
+einbroch,80,262,0	script	Einbroch Villager#ein:33ca6b2c	124,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,91,271,4	script	Einbroch Villager#ein:175c5ed1	84,{
+einbroch,91,271,4	script	Einbroch Villager#ein:983e768f	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,82,272,6	script	Einbroch Villager#ein:c4a2bdb9	751,{
+einbroch,82,272,6	script	Einbroch Villager#ein:1b79cbdd	92,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,90,261,5	script	Einbroch Villager#ein:60dfdcf6	742,{
+einbroch,90,261,5	script	Einbroch Villager#ein:cd08ca49	49,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,94,255,2	script	Einbroch Villager#ein:c0a3900d	806,{
+einbroch,94,255,2	script	Einbroch Villager#ein:9a38e455	79,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-airport,132,33,6	script	Einbroch Villager#ein:7db45d24	635,{
+airport,132,33,6	script	Einbroch Villager#ein:53df92a8	855,{
 	npctalk "npcdialog";
 	end;
 }
 
-airport,149,33,7	script	Einbroch Villager#ein:d1f66b9d	805,{
+airport,149,33,7	script	Einbroch Villager#ein:28e17dda	125,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,171,205,1	script	Einbroch Villager#ein:c663eb19	828,{
+einbroch,171,205,1	script	Einbroch Villager#ein:da9cbc47	90,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,173,193,4	script	Einbroch Villager#ein:816efc75	755,{
+einbroch,173,193,4	script	Einbroch Villager#ein:acd5dad1	90,{
 	npctalk "npcdialog";
 	end;
 }
 
-einbroch,182,198,6	script	Einbroch Villager#ein:89cce008	645,{
+einbroch,182,198,6	script	Einbroch Villager#ein:9457dffb	430,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild04,179,46,7	script	Einbroch Adventurer#ein:39910a57	494,{
+ein_fild04,179,46,7	script	Einbroch Adventurer#ein:42bc2555	494,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild04,186,55,4	script	Einbroch Adventurer#ein:f22e3461	500,{
+ein_fild04,186,55,4	script	Einbroch Adventurer#ein:c656be3d	500,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild04,190,43,3	script	Einbroch Adventurer#ein:131a0e59	542,{
+ein_fild04,190,43,3	script	Einbroch Adventurer#ein:0ba66469	542,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild04,185,35,0	script	Einbroch Adventurer#ein:0efd27c4	430,{
+ein_fild04,185,35,0	script	Einbroch Adventurer#ein:91493eba	430,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild04,180,32,6	script	Einbroch Adventurer#ein:2b712dbf	695,{
+ein_fild04,180,32,6	script	Einbroch Adventurer#ein:a20531e2	695,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild08,161,374,5	script	Einbroch Adventurer#ein:6aa91171	735,{
+ein_fild08,161,374,5	script	Einbroch Adventurer#ein:3f5a6ab6	735,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild08,164,370,0	script	Einbroch Adventurer#ein:33a6546a	7,{
+ein_fild08,164,370,0	script	Einbroch Adventurer#ein:74c2180d	7,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild08,161,362,7	script	Einbroch Adventurer#ein:70cc24c3	733,{
+ein_fild08,161,362,7	script	Einbroch Adventurer#ein:5b84fedd	733,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild08,169,357,3	script	Einbroch Adventurer#ein:3a80adaf	690,{
+ein_fild08,169,357,3	script	Einbroch Adventurer#ein:7eb3788d	690,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild08,158,364,6	script	Einbroch Adventurer#ein:c0926433	882,{
+ein_fild08,158,364,6	script	Einbroch Adventurer#ein:3b26c7e2	882,{
 	npctalk "npcdialog";
 	end;
 }
@@ -2390,77 +2390,77 @@ ein_fild08,158,364,6	script	Einbroch Adventurer#ein:c0926433	882,{
 
 
 
-ein_fild09,307,247,3	script	Schwarzwald Villager#ein:1683a9d0	75,{
+ein_fild09,307,247,3	script	Schwarzwald Villager#ein:5c270c02	854,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild09,304,245,7	script	Schwarzwald Villager#ein:2e32e780	125,{
+ein_fild09,304,245,7	script	Schwarzwald Villager#ein:7dbcf694	68,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild09,332,265,2	script	Schwarzwald Villager#ein:5a914973	531,{
+ein_fild09,332,265,2	script	Schwarzwald Villager#ein:037d21fa	641,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild09,316,275,5	script	Schwarzwald Villager#ein:da55d239	573,{
+ein_fild09,316,275,5	script	Schwarzwald Villager#ein:d89f600f	49,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild09,268,241,2	script	Schwarzwald Villager#ein:cbe59608	89,{
+ein_fild09,268,241,2	script	Schwarzwald Villager#ein:4dcd9b63	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild09,247,225,4	script	Schwarzwald Villager#ein:ad6fdc1a	410,{
+ein_fild09,247,225,4	script	Schwarzwald Villager#ein:98e64d1f	49,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild09,233,217,0	script	Schwarzwald Villager#ein:2b275688	779,{
+ein_fild09,233,217,0	script	Schwarzwald Villager#ein:becf9238	124,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild09,238,221,2	script	Schwarzwald Villager#ein:03ad3883	745,{
+ein_fild09,238,221,2	script	Schwarzwald Villager#ein:7d3fcec6	70,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild09,269,205,4	script	Schwarzwald Villager#ein:53bae4d7	745,{
+ein_fild09,269,205,4	script	Schwarzwald Villager#ein:1adebb9f	645,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild09,165,169,0	script	Schwarzwald Villager#ein:dc4ac87a	85,{
+ein_fild09,165,169,0	script	Schwarzwald Villager#ein:b639d8dc	702,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild09,179,182,6	script	Schwarzwald Villager#ein:25433334	701,{
+ein_fild09,179,182,6	script	Schwarzwald Villager#ein:cebb5c65	91,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild09,173,197,1	script	Schwarzwald Villager#ein:5e6d69bc	71,{
+ein_fild09,173,197,1	script	Schwarzwald Villager#ein:8c8c9a01	70,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild09,151,207,3	script	Schwarzwald Villager#ein:3504f4c0	853,{
+ein_fild09,151,207,3	script	Schwarzwald Villager#ein:54131b10	642,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild09,135,200,5	script	Schwarzwald Villager#ein:b66bb3d2	734,{
+ein_fild09,135,200,5	script	Schwarzwald Villager#ein:76b65bf6	751,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild09,123,184,0	script	Schwarzwald Villager#ein:3eed9d84	642,{
+ein_fild09,123,184,0	script	Schwarzwald Villager#ein:01e567c7	855,{
 	npctalk "npcdialog";
 	end;
 }
@@ -2469,291 +2469,291 @@ ein_fild09,123,184,0	script	Schwarzwald Villager#ein:3eed9d84	642,{
 
 
 
-lhz_fild03,210,110,6	script	Schwarzwald Guard#ein:f1c44785	413,{
+lhz_fild03,210,110,6	script	Schwarzwald Guard#ein:44f1730a	413,{
 	npctalk "Welcome to the Schwarzwald Republic.";
 	end;
 }
 
-lhz_fild03,210,104,6	script	Schwarzwald Guard#ein:c6ba8729	413,{
+lhz_fild03,210,104,6	script	Schwarzwald Guard#ein:ed4d9d3a	413,{
 	npctalk "Welcome to the Schwarzwald Republic.";
 	end;
 }
 
-lhz_fild03,212,111,4	script	Schwarzwald Guard#ein:c24f386d	416,{
+lhz_fild03,212,111,4	script	Schwarzwald Guard#ein:bc1b6e00	416,{
 	npctalk "You yill be leaving the Schwarzwald Republic by crossing the bridge.";
 	end;
 }
 
 
-lhz_fild03,207,303,5	script	Schwarzwald Guard#ein:0b17b4c9	413,{
+lhz_fild03,207,303,5	script	Schwarzwald Guard#ein:67c2127f	413,{
 	npctalk "Welcome to the Schwarzwald Republic.";
 	end;
 }
 
-lhz_fild03,204,298,5	script	Schwarzwald Guard#ein:a341e5bf	413,{
+lhz_fild03,204,298,5	script	Schwarzwald Guard#ein:cb2a642f	413,{
 	npctalk "Welcome to the Schwarzwald Republic.";
 	end;
 }
 
-lhz_fild03,207,295,0	script	Schwarzwald Guard#ein:1400ad45	416,{
+lhz_fild03,207,295,0	script	Schwarzwald Guard#ein:9e883e4f	416,{
 	npctalk "You yill be leaving the Schwarzwald Republic by crossing the bridge.";
 	end;
 }
 
-lhz_fild03,162,327,5	script	Arunafeltz Guard#ein:54320124	966,{
+lhz_fild03,162,327,5	script	Arunafeltz Guard#ein:e419db6e	966,{
 	npctalk "Welcome to the Arunafeltz States.";
 	end;
 }
 
-lhz_fild03,160,330,4	script	Arunafeltz Guard#ein:6a8a9236	966,{
+lhz_fild03,160,330,4	script	Arunafeltz Guard#ein:266678b6	966,{
 	npctalk "Welcome to the Arunafeltz States.";
 	end;
 }
 
-lhz_fild03,158,323,0	script	Arunafeltz Guard#ein:c45e8713	934,{
+lhz_fild03,158,323,0	script	Arunafeltz Guard#ein:cdff55c3	934,{
 	npctalk "You yill be leaving the Arunafeltz States by crossing the bridge.";
 	end;
 }
 
 
-lhz_fild03,156,110,2	script	Arunafeltz Guard#ein:94c3ff28	966,{
+lhz_fild03,156,110,2	script	Arunafeltz Guard#ein:e289d62b	966,{
 	npctalk "Welcome to the Arunafeltz States.";
 	end;
 }
 
-lhz_fild03,156,103,2	script	Arunafeltz Guard#ein:76cbd9c1	966,{
+lhz_fild03,156,103,2	script	Arunafeltz Guard#ein:6c061923	966,{
 	npctalk "Welcome to the Arunafeltz States.";
 	end;
 }
 
-lhz_fild03,152,110,4	script	Arunafeltz Guard#ein:7f3d16b8	934,{
+lhz_fild03,152,110,4	script	Arunafeltz Guard#ein:340d5461	934,{
 	npctalk "You yill be leaving the Arunafeltz States by crossing the bridge.";
 	end;
 }
 
 
 
-ein_fild03,118,180,5	script	Arunafeltz Worker#ein:73916211	953,{
+ein_fild03,118,180,5	script	Arunafeltz Worker#ein:1da4ab6f	953,{
 	npctalk "Hey! Do you come from Schwartzvald?";
 	end;
 }
 
 
-ein_fild03,110,176,1	script	Arunafeltz Worker#ein:0ec35ca5	951,{
+ein_fild03,110,176,1	script	Arunafeltz Worker#ein:df9ec7f7	951,{
 	npctalk "This minig operation is multinational.";
 	end;
 }
 
-ein_fild03,147,66,1	script	Arunafeltz Worker#ein:f4845230	953,{
+ein_fild03,147,66,1	script	Arunafeltz Worker#ein:31b8f4bb	953,{
 	npctalk "Hey! Do you come from Schwartzvald?";
 	end;
 }
 
-ein_fild03,147,52,3	script	Arunafeltz Worker#ein:14ac0b7b	848,{
+ein_fild03,147,52,3	script	Arunafeltz Worker#ein:e318cea3	848,{
 	npctalk "This minig operation is multinational.";
 	end;
 }
 
 
-ein_fild03,140,263,5	script	Schwartzvald Worker#ein:ca1e5d35	848,{
+ein_fild03,140,263,5	script	Schwartzvald Worker#ein:de413dcc	848,{
 	npctalk "This minig operation is multinational.";
 	end;
 }
 
-ein_fild03,149,257,1	script	Schwartzvald Worker#ein:ecb8661a	848,{
+ein_fild03,149,257,1	script	Schwartzvald Worker#ein:f5e58bae	848,{
 	npctalk "This minig operation is multinational.";
 	end;
 }
 
-ein_fild03,254,161,1	script	Schwartzvald Worker#ein:9034f12c	848,{
+ein_fild03,254,161,1	script	Schwartzvald Worker#ein:0e0cc35a	848,{
 	npctalk "This minig operation is multinational.";
 	end;
 }
 
-ein_fild03,252,170,4	script	Schwartzvald Worker#ein:5cf7c12a	953,{
+ein_fild03,252,170,4	script	Schwartzvald Worker#ein:848ae515	953,{
 	npctalk "Hey! Do you come from Arunafeltz?";
 	end;
 }
 
 
 
-ein_fild04,132,265,5	script	Schwartzvald Villager#ein:3448e07e	644,{
+ein_fild04,132,265,5	script	Schwartzvald Villager#ein:baa03b42	644,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild04,156,263,2	script	Schwartzvald Villager#ein:5cb78466	636,{
+ein_fild04,156,263,2	script	Schwartzvald Villager#ein:088d80c8	634,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild04,189,252,1	script	Schwartzvald Worker#ein:82973f3b	848,{
+ein_fild04,189,252,1	script	Schwartzvald Worker#ein:ba6742e9	848,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild04,205,233,5	script	Schwartzvald Worker#ein:c82210c9	848,{
+ein_fild04,205,233,5	script	Schwartzvald Worker#ein:259c91c5	848,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild04,225,191,2	script	Schwartzvald Worker#ein:4795f8db	848,{
+ein_fild04,225,191,2	script	Schwartzvald Worker#ein:cfc1f013	848,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild04,213,254,6	script	Schwartzvald Worker#ein:05af0ed3	848,{
+ein_fild04,213,254,6	script	Schwartzvald Worker#ein:e4ffa547	848,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild04,135,321,3	script	Schwartzvald Worker#ein:66e82695	848,{
+ein_fild04,135,321,3	script	Schwartzvald Worker#ein:d40702b8	848,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild04,112,283,5	script	Schwartzvald Worker#ein:49499e96	848,{
+ein_fild04,112,283,5	script	Schwartzvald Worker#ein:6b6f04e3	848,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild04,161,212,1	script	Schwartzvald Worker#ein:b3101fbd	848,{
+ein_fild04,161,212,1	script	Schwartzvald Worker#ein:47cb65e1	848,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild04,178,128,6	script	Schwartzvald Worker#ein:e497c4bf	848,{
+ein_fild04,178,128,6	script	Schwartzvald Worker#ein:a082e311	848,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild04,198,124,4	script	Schwartzvald Worker#ein:4fa2a212	848,{
+ein_fild04,198,124,4	script	Schwartzvald Worker#ein:ffb80531	848,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild04,224,97,0	script	Schwartzvald Worker#ein:619e3851	848,{
+ein_fild04,224,97,0	script	Schwartzvald Worker#ein:fd1d768d	848,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild04,204,58,6	script	Schwartzvald Worker#ein:48ebbab4	848,{
+ein_fild04,204,58,6	script	Schwartzvald Worker#ein:24c479dd	848,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild04,258,236,1	script	Schwartzvald Worker#ein:e8a0b566	848,{
+ein_fild04,258,236,1	script	Schwartzvald Worker#ein:1fb6cf11	848,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild05,211,137,5	script	Schwartzvald Worker#ein:e4124b33	848,{
+ein_fild05,211,137,5	script	Schwartzvald Worker#ein:f6a0f379	848,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild05,169,334,2	script	Schwartzvald Worker#ein:85c7fe12	848,{
+ein_fild05,169,334,2	script	Schwartzvald Worker#ein:b9119a6b	848,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild05,156,267,4	script	Schwartzvald Worker#ein:a3038d97	848,{
+ein_fild05,156,267,4	script	Schwartzvald Worker#ein:7ab78b0d	848,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild05,162,287,4	script	Schwartzvald Worker#ein:aa36fe6a	953,{
+ein_fild05,162,287,4	script	Schwartzvald Worker#ein:4f8e783c	953,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild05,149,282,0	script	Schwartzvald Worker#ein:64eb1931	952,{
+ein_fild05,149,282,0	script	Schwartzvald Worker#ein:cef794d1	952,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild05,176,309,1	script	Schwartzvald Worker#ein:379c043f	848,{
+ein_fild05,176,309,1	script	Schwartzvald Worker#ein:c9c36cf6	848,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild04,335,299,5	script	Schwartzvald Worker#ein:185a0347	848,{
+ein_fild04,335,299,5	script	Schwartzvald Worker#ein:de88602f	848,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild03,176,271,5	script	Schwartzvald Worker#ein:6c22b782	848,{
+ein_fild03,176,271,5	script	Schwartzvald Worker#ein:23135b92	848,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild03,184,263,1	script	Schwartzvald Worker#ein:71714b66	848,{
+ein_fild03,184,263,1	script	Schwartzvald Worker#ein:60e49739	848,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild03,226,198,2	script	Schwartzvald Worker#ein:f33804f5	848,{
+ein_fild03,226,198,2	script	Schwartzvald Worker#ein:ceff71fb	848,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild03,248,182,7	script	Schwartzvald Worker#ein:1b5088eb	848,{
+ein_fild03,248,182,7	script	Schwartzvald Worker#ein:3e3fc9e3	848,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild03,279,178,2	script	Schwartzvald Worker#ein:4f0bcb9c	848,{
+ein_fild03,279,178,2	script	Schwartzvald Worker#ein:a668c55e	848,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild03,304,185,7	script	Schwartzvald Worker#ein:03c179d0	848,{
+ein_fild03,304,185,7	script	Schwartzvald Worker#ein:055ad2d0	848,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild03,136,156,7	script	Arunafeltz Worker#ein:c4ef5e72	848,{
+ein_fild03,136,156,7	script	Arunafeltz Worker#ein:fb1462fb	848,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild03,100,166,1	script	Arunafeltz Worker#ein:6908308c	848,{
+ein_fild03,100,166,1	script	Arunafeltz Worker#ein:0b532492	848,{
 	npctalk "npcdialog";
 	end;
 }
 
-ein_fild08,155,28,5	script	Schwartzvald Worker#ein:bb3ef65f	848,{
+ein_fild08,155,28,5	script	Schwartzvald Worker#ein:e6c80ead	848,{
 	npctalk "The path to the rest of the island is closed, sorry.";
 	end;
 }
 
-ein_fild08,159,26,3	script	Schwartzvald Worker#ein:67d0bc16	848,{
+ein_fild08,159,26,3	script	Schwartzvald Worker#ein:95cfbadb	848,{
 	npctalk "Einbroch gets most of it's steel from this mining operation.";
 	end;
 }
 
-ein_fild08,152,31,3	script	Schwartzvald Worker#ein:9de2717c	848,{
+ein_fild08,152,31,3	script	Schwartzvald Worker#ein:175e320d	848,{
 	npctalk "The path to the rest of the island is closed, sorry.";
 	end;
 }
 
 
-ein_fild06,211,139,3	script	Schwartzvald Worker#ein:675f5c93	855,{
+ein_fild06,211,139,3	script	Schwartzvald Worker#ein:0c69a4f1	855,{
 	npctalk "This post is a combined effort of Yuno and Einbroch.";
 	end;
 }
 
-ein_fild06,205,133,0	script	Schwartzvald Worker#ein:283df974	854,{
+ein_fild06,205,133,0	script	Schwartzvald Worker#ein:28ac7eba	854,{
 	npctalk "This operation runs almost automatically.";
 	end;
 }
 
-ein_fild06,164,173,3	script	Schwartzvald Worker#ein:4bcd9b0f	855,{
+ein_fild06,164,173,3	script	Schwartzvald Worker#ein:aecc37eb	855,{
 	npctalk "This operation runs almost automatically.";
 	end;
 }
 
-ein_fild06,160,183,2	script	Schwartzvald Worker#ein:3be895ae	854,{
+ein_fild06,160,183,2	script	Schwartzvald Worker#ein:a22d52ed	854,{
 	npctalk "This post is a combined effort of Yuno and Einbroch.";
 	end;
 }

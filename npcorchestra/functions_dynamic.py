@@ -17,15 +17,16 @@ def buildDynamic():
 def buildMobsCities():
     end_mob_id = calculateEndMobId()
     city_id = 0
-    for city in all_cities:
-        city_density = cities_density[city_id]
-        buildMobsCitiy(city,city_density,end_mob_id)
+    map_densities = cities_density + ins_density
+    for city in all_cities + all_ins:
+        map_density = map_densities[city_id]
+        buildMobsMap(city,map_density,end_mob_id)
         city_id += 1
 
-def buildMobsCitiy(city, city_density, end_mob_id):   
+def buildMobsMap(city, map_density, end_mob_id):   
     fout = open("../npc/mobs/npcorchestra/" + city + "_npcorchestra.txt", "wt")
     city_mobs = []
-    for _ in range(city_density):
+    for _ in range(map_density):
         city_mobs.append(random.randint(initial_mob_id, end_mob_id))
     
     for city_mob_id in city_mobs:
@@ -93,36 +94,48 @@ def buildMobAvail(mob_id, mob_name):
         theseks = "Male"
     else:
         theseks = "Female"
-    mobAvail = "  - Mob: " + mob_name + "_" + str(mob_id) + "\n"
-    mobAvail += "    Sprite: " + mob_name + "\n"
-    mobAvail += "    Sex: " + theseks + "\n"
-    mobAvail += "    HairStyle: " + str(random.randint(0, 8)) + "\n"
-    mobAvail += "    HairColor: " + str(random.randint(0, 8)) + "\n"
-    mobAvail += "    ClothColor: " + str(random.randint(0, 3)) + "\n"
-    mobAvail += "    Weapon: Gladius\n"
-    mobAvail += "    Shield: Guard\n"
-    mobAvail += "    HeadTop: " + random.choice(top_headgears) + "\n"
-    mobAvail += "    HeadMid: " + random.choice(mid_headgears) + "\n"
-    mobAvail += "    HeadLow: " + random.choice(low_headgears) + "\n"
+    mob_avail = "  - Mob: " + mob_name + "_" + str(mob_id) + "\n"
+    mob_avail += "    Sprite: " + mob_name + "\n"
+    mob_avail += "    Sex: " + theseks + "\n"
+    mob_avail += "    HairStyle: " + str(random.randint(0, 8)) + "\n"
+    mob_avail += "    HairColor: " + str(random.randint(0, 8)) + "\n"
+    mob_avail += "    ClothColor: " + str(random.randint(0, 3)) + "\n"
+    mob_avail += "    Weapon: Gladius\n"
+    mob_avail += "    Shield: Guard\n"
 
+    mob_avail = build_headgear_section(mob_avail)
+    mob_avail = build_special_options_section(mob_avail, mob_name)
+
+    return mob_avail
+
+def build_headgear_section(mob_avail):
+    has_headgear = random.randint(0, 9)
+    if(has_headgear not in [9]):
+        mob_avail += "    HeadTop: " + random.choice(top_headgears) + "\n"
+    if(has_headgear in [0,1,2,3,4]):
+        mob_avail += "    HeadMid: " + random.choice(mid_headgears) + "\n"
+    if(has_headgear in [5,6,7,8,9]):
+        mob_avail += "    HeadLow: " + random.choice(low_headgears) + "\n"
+    return mob_avail
+
+def build_special_options_section(mob_avail, mob_name):
     jobs_falcon = ["JOB_HUNTER", "JOB_SNIPER"]
     if mob_name in jobs_falcon:
-        mobAvail += "    Options:\n"
-        mobAvail += "      Falcon: true\n"
+        mob_avail += "    Options:\n"
+        mob_avail += "      Falcon: true\n"
 
     jobs_cart = ["JOB_MERCHANT", "JOB_BLACKSMITH", "JOB_ALCHEMIST", "JOB_WHITESMITH", "JOB_CREATOR"]
     if mob_name in jobs_cart:
-        mobAvail += "    PushCart: true\n"
-        # mobAvail += "      Cart1: true\n"
+        mob_avail += "    Options:\n"
+        mob_avail += "      Cart2: true\n"
 
     jobs_riding = ["JOB_KNIGHT", "JOB_CRUSADER", "JOB_LORD_KNIGHT", "JOB_PALAIN"]
     mob_riding = random.randint(1, 2)
     if mob_name in jobs_riding:
         if(mob_riding == 1):
-            mobAvail += "    Options:\n"
-            mobAvail += "      Riding: true\n"
-
-    return mobAvail
+            mob_avail += "    Options:\n"
+            mob_avail += "      Riding: true\n"
+    return mob_avail
 
 def buildMobArrayIterations():
     mob_names = mobs_novice + mobs_first_job + mobs_second_job + mobs_advanced_job
