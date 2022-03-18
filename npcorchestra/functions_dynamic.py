@@ -14,6 +14,51 @@ def buildDynamic():
     buildMobsAvailfile()
     buildMobsCities()
 
+def buildMobsfile():  
+    mobs = buildMobs()
+    fin = open("./templates/dynamic/mob_db_template.yml", "rt")
+    fout = open("../db/re/mob_db.yml", "wt")
+    for line in fin:
+        if "#END_NPCBUILDER_MOBS" in line:
+            for mob in mobs:
+                fout.write(mob)
+        fout.write(line)   
+    fin.close()
+    fout.close()
+
+def buildMobs():
+    mob_names = buildMobArrayIterations()
+    mobs = []
+    mob_id = initial_mob_id
+    for mob_name in mob_names:
+        mob = buildMob(mob_id, mob_name, "01")
+        mob_id += 1
+        mobs.append(mob)
+    
+    mob = buildMob(mob_id, "MORROC_GUARD", "10")
+    mobs.append(mob)
+    return mobs
+
+
+def buildMob(mob_id, mob_name, ai):
+    mob = "  - Id: " + str(mob_id) + "\n"
+    mob += "    AegisName: " + mob_name + "_" + str(mob_id) + "\n"
+    mob += "    Name: " + mob_name.lower().replace("job_", "").replace("_", "").title() + "\n"
+    mob += "    Level: 1\n"
+    mob += "    Hp: 60\n"
+    mob += "    WalkSpeed: 200\n"
+    mob += "    Ai: " + ai + "\n"
+    return mob
+
+
+
+
+
+
+
+
+
+
 def buildMobsCities():
     end_mob_id = calculateEndMobId()
     city_id = 0
@@ -34,17 +79,7 @@ def buildMobsMap(city, map_density, end_mob_id):
         fout.write(mob_line)
     fout.close()
 
-def buildMobsfile():  
-    mobs = buildMobs()
-    fin = open("./templates/dynamic/mob_db_template.yml", "rt")
-    fout = open("../db/re/mob_db.yml", "wt")
-    for line in fin:
-        if "#END_NPCBUILDER_MOBS" in line:
-            for mob in mobs:
-                fout.write(mob)
-        fout.write(line)
-    fin.close()
-    fout.close()
+
 
 def buildMobsAvailfile():
     mobs_avail = buildMobsAvail()
@@ -58,15 +93,6 @@ def buildMobsAvailfile():
     fin.close()
     fout.close()
 
-def buildMobs():
-    mob_names = buildMobArrayIterations()
-    mobs = []
-    mob_id = initial_mob_id
-    for mob_name in mob_names:
-        mob = buildMob(mob_id, mob_name)
-        mob_id += 1
-        mobs.append(mob)
-    return mobs
 
 def buildMobsAvail():
     mob_names = buildMobArrayIterations()
@@ -78,15 +104,7 @@ def buildMobsAvail():
         mobs_avail.append(mob_avail)
     return mobs_avail
 
-def buildMob(mob_id, mob_name):
-    mob = "  - Id: " + str(mob_id) + "\n"
-    mob += "    AegisName: " + mob_name + "_" + str(mob_id) + "\n"
-    mob += "    Name: " + mob_name.lower().replace("job_", "").replace("_", "").title() + "\n"
-    mob += "    Level: 1\n"
-    mob += "    Hp: 60\n"
-    mob += "    WalkSpeed: 200\n"
-    mob += "    Ai: 01\n"
-    return mob
+
 
 def buildMobAvail(mob_id, mob_name):
     theseksInt = random.randint(1, 2)
@@ -124,10 +142,10 @@ def build_special_options_section(mob_avail, mob_name):
         mob_avail += "    Options:\n"
         mob_avail += "      Falcon: true\n"
 
-    jobs_cart = ["JOB_MERCHANT", "JOB_BLACKSMITH", "JOB_ALCHEMIST", "JOB_WHITESMITH", "JOB_CREATOR"]
-    if mob_name in jobs_cart:
-        mob_avail += "    Options:\n"
-        mob_avail += "      Cart2: true\n"
+    # jobs_cart = ["JOB_MERCHANT", "JOB_BLACKSMITH", "JOB_ALCHEMIST", "JOB_WHITESMITH", "JOB_CREATOR"]
+    # if mob_name in jobs_cart:
+    #     mob_avail += "    Options:\n"
+    #     mob_avail += "      Cart2: true\n"
 
     jobs_riding = ["JOB_KNIGHT", "JOB_CRUSADER", "JOB_LORD_KNIGHT", "JOB_PALAIN"]
     mob_riding = random.randint(1, 2)

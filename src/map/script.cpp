@@ -10589,7 +10589,7 @@ BUILDIN_FUNC(monster)
 			return SCRIPT_CMD_FAILURE;
 		}
 	}
-
+	
 	if (class_ >= 0 && !mobdb_checkid(class_)) {
 		ShowWarning("buildin_monster: Attempted to spawn non-existing monster class %d\n", class_);
 		return SCRIPT_CMD_FAILURE;

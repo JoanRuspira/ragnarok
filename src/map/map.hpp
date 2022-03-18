@@ -383,7 +383,7 @@ enum auto_trigger_flag {
 struct block_list {
 	struct block_list *next,*prev;
 	int id;
-	int16 m,x,y;
+	int16 m,x,y,dir;
 	enum bl_type type;
 };
 
@@ -392,7 +392,7 @@ struct block_list {
 // Expanded to specify all mob-related spawn data by [Skotlex]
 struct spawn_data {
 	short id; //ID, used because a mob can change it's class
-	unsigned short m, x, y;	//Spawn information (map, point, spawn-area around point)
+	unsigned short m, x, y, dir;	//Spawn information (map, point, spawn-area around point)
 	signed short xs, ys;
 	unsigned short num; //Number of mobs using this structure
 	unsigned short active;//Number of mobs that are already spawned (for mob_remove_damaged: no)

@@ -36,7 +36,7 @@ all_cities = ["prt_monk", "umbala_natives", "umbala", "comodo", "morocc", "payon
 cities_density = [
 60,  #prt_monk
 0, #umbala natives
-60, #umbala
+75, #umbala
 105, #comodo
 150, #morroc
 120, #payon
@@ -44,8 +44,8 @@ cities_density = [
 130, #alberta
 70, #ayothaya
 60,#izlude
-70, #geffen
-70, #aldebaran
+120, #geffen
+120, #aldebaran
 60, #hugel
 100, #einbroch
 60, #einbech
@@ -63,7 +63,7 @@ cities_density = [
 ]
 
 all_ins = ["alberta_in","payon_in01","payon_in02","payon_in03","izlude_in","morocc_in","moc_ruins","izlu2dun","alb2trea","in_rogue", "moc_prydb1",
-"cmd_in01","cmd_in02"]
+"cmd_in01","cmd_in02","um_in","geffen_in","aldeba_in","alde_alche","moc_fild19"]
 ins_density = [20, #alberta_in
 20, #payon_in01
 12, #payon_in02
@@ -77,6 +77,11 @@ ins_density = [20, #alberta_in
 12, #moc_prydb1 thief guild
 15, #cmd_in01
 25, #cmd_in02
+15, #um_in
+25, #geffen_in
+25, #aldeba_in
+10, #alde_alche
+45, #moc_fild19 sphinx
 ]
 
 top_headgears = ["Alice_Doll","Anubis_Helm","Apple_Of_Archer","Prontera_Army_Cap","Ayothaya_Hat","Banana_Hat","Bandana","Magestic_Goat",

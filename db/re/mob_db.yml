@@ -3775,6 +3775,13 @@ Body:
     Hp: 60
     WalkSpeed: 200
     Ai: 01
+  - Id: 20549
+    AegisName: MORROC_GUARD_20549
+    Name: Morrocguard
+    Level: 1
+    Hp: 60
+    WalkSpeed: 200
+    Ai: 10
 #END_NPCBUILDER_MOBS
   - Id: 1001
     AegisName: SCORPION

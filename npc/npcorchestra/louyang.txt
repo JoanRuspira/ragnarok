@@ -1,0 +1,1452 @@
+// muralla
+louyang,260,320,0	script	Louyang Guard#lou::4b9d4184	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+
+louyang,222,320,0	script	Louyang Guard#lou::f65d8fbb	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+
+louyang,181,318,1	script	Louyang Guard#lou::de1de238	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+
+louyang,138,298,1	script	Louyang Guard#lou::d2501cc2	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+
+louyang,92,291,7	script	Louyang Guard#lou::51c35e22	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,45,308,1	script	Louyang Guard#lou::11de9c0d	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,229,26,4	script	Louyang Guard#lou::ff426a73	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,288,26,4	script	Louyang Guard#lou::d45aeb41	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,336,34,6	script	Louyang Guard#lou::30108239	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,336,88,6	script	Louyang Guard#lou::b10adb65	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,336,144,6	script	Louyang Guard#lou::fdd86d38	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,336,188,6	script	Louyang Guard#lou::33551b52	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,336,238,7	script	Louyang Guard#lou::391ff9a4	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+
+louyang,324,276,0	script	Louyang Guard#lou::b935535e	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,287,286,0	script	Louyang Guard#lou::a27db94b	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,205,26,4	script	Louyang Guard#lou::b2df72bd	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,268,26,4	script	Louyang Guard#lou::13b87b74	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,123,26,4	script	Louyang Guard#lou::71cf8bc4	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,85,37,3	script	Louyang Guard#lou::a85dccb4	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,66,69,2	script	Louyang Guard#lou::a75384d4	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,50,103,2	script	Louyang Guard#lou::08c11570	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,48,150,2	script	Louyang Guard#lou::8de440a4	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,45,201,2	script	Louyang Guard#lou::ced5f0e4	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,35,257,1	script	Louyang Guard#lou::d2c912b8	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+// end muralla
+
+louyang,42,268,6	script	Louyang Guard#lou::99a1d5c5	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,37,277,6	script	Louyang Guard#lou::fe96a451	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,215,20,4	script	Louyang Guard#lou::6a3386c0	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,220,20,4	script	Louyang Guard#lou::fd43f965	780,{
+	npctalk "Welcome to Louyang.";
+	end;
+}
+
+louyang,213,214,4	script	Palace Guard#lou::ab54bdf3	780,{
+	npctalk "Welcome to the Louyang Palace.";
+	end;
+}
+
+louyang,222,214,4	script	Palace Guard#lou::02aa68ca	780,{
+	npctalk "Welcome to the Louyang Palace.";
+	end;
+}
+
+louyang,216,30,7	script	Louyang Villager#lou::49a00836	86,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,220,40,3	script	Louyang Villager#lou::ab9d7e0f	742,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,216,47,1	script	Louyang Villager#lou::9f65f57a	634,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,214,58,7	script	Louyang Villager#lou::f4f6a751	764,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,219,62,4	script	Louyang Villager#lou::31bbb58d	79,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,216,70,6	script	Louyang Villager#lou::af7aef49	642,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,218,70,2	script	Louyang Villager#lou::ea66c974	822,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,214,82,9	script	Louyang Villager#lou::cc062194	816,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,219,90,6	script	Louyang Villager#lou::fe9c9357	842,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,215,100,3	script	Louyang Villager#lou::bc0a341c	430,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,221,97,1	script	Louyang Villager#lou::fa1a040c	583,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,218,109,7	script	Louyang Villager#lou::f4fcee97	49,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,226,113,6	script	Louyang Villager#lou::1024c5e3	644,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,228,113,2	script	Louyang Villager#lou::69ef8975	583,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,227,116,4	script	Louyang Villager#lou::6a43c056	581,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,235,121,5	script	Louyang Villager#lou::fc534328	815,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,239,110,0	script	Louyang Villager#lou::baed7a0a	634,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,244,117,7	script	Louyang Villager#lou::aebd5799	62,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,241,130,1	script	Louyang Villager#lou::07785661	51,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,234,137,6	script	Louyang Villager#lou::3f294b0d	645,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,243,141,2	script	Louyang Villager#lou::9711ef0c	879,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,227,128,4	script	Louyang Villager#lou::5c980698	79,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,216,119,4	script	Louyang Villager#lou::3cff5bf1	642,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,218,119,4	script	Louyang Villager#lou::450bfc56	69,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,223,139,2	script	Louyang Villager#lou::7d5b00e8	86,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,218,134,0	script	Louyang Villager#lou::49dd0092	819,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,211,140,3	script	Louyang Villager#lou::fbacc611	822,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,206,134,7	script	Louyang Villager#lou::980b5de6	879,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,207,126,1	script	Louyang Villager#lou::28e32263	841,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,210,113,6	script	Louyang Villager#lou::82c11c29	734,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,201,110,0	script	Louyang Villager#lou::5094b353	734,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,196,118,5	script	Louyang Villager#lou::a9fa3075	92,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,193,130,6	script	Louyang Villager#lou::0708cab5	822,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,195,129,2	script	Louyang Villager#lou::e5c24719	841,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,192,140,1	script	Louyang Villager#lou::e987f58e	83,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,217,149,7	script	Louyang Villager#lou::05253ad1	765,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,206,91,3	script	Louyang Villager#lou::139fbd7f	798,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,198,86,7	script	Louyang Villager#lou::7954f176	636,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,193,98,6	script	Louyang Villager#lou::b37bf850	762,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,184,95,5	script	Louyang Villager#lou::5cbd6b43	733,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,172,97,1	script	Louyang Villager#lou::eea80975	95,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,167,109,4	script	Louyang Villager#lou::4d5f75b9	740,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,158,101,6	script	Louyang Villager#lou::6d496dad	759,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,160,101,2	script	Louyang Villager#lou::baf7ac6b	62,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,157,117,7	script	Louyang Villager#lou::012a6384	818,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,148,108,3	script	Louyang Villager#lou::5a4796b8	754,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,155,86,0	script	Louyang Villager#lou::11845199	740,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,140,104,4	script	Louyang Villager#lou::e190f292	741,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,127,110,7	script	Louyang Villager#lou::b0546859	744,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,130,101,5	script	Louyang Villager#lou::849d3596	766,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,116,119,6	script	Louyang Villager#lou::072d9ff6	841,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,113,109,0	script	Louyang Villager#lou::84c1fcfa	744,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,130,120,5	script	Louyang Villager#lou::32286a53	828,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,151,131,0	script	Louyang Villager#lou::33f12a18	636,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,153,142,2	script	Louyang Villager#lou::f8853b61	798,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,162,136,7	script	Louyang Villager#lou::58a74f20	822,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,162,154,4	script	Louyang Villager#lou::e39fb1a7	763,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,171,128,3	script	Louyang Villager#lou::2faf9fa0	85,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,175,141,6	script	Louyang Villager#lou::6bca3411	760,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,177,141,2	script	Louyang Villager#lou::86d66209	816,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,185,127,0	script	Louyang Villager#lou::415d29a9	757,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,188,107,3	script	Louyang Villager#lou::2a710329	644,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,179,151,2	script	Louyang Villager#lou::5326cbd2	635,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,160,169,5	script	Louyang Villager#lou::904a9a9b	741,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,169,176,2	script	Louyang Villager#lou::578720d3	766,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,179,173,5	script	Louyang Villager#lou::c849d083	70,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,173,162,0	script	Louyang Villager#lou::96a31a5e	758,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,184,160,6	script	Louyang Villager#lou::a14c95c6	815,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,148,164,1	script	Louyang Villager#lou::6020ac47	744,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,138,154,7	script	Louyang Villager#lou::1472c8a3	86,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,141,140,0	script	Louyang Villager#lou::1c0b541b	815,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,123,160,6	script	Louyang Villager#lou::de311308	760,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,125,160,2	script	Louyang Villager#lou::bb1d60b5	762,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,134,178,4	script	Louyang Villager#lou::65ea2be5	763,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,108,154,7	script	Louyang Villager#lou::d6c847c1	92,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,101,146,5	script	Louyang Villager#lou::27541bb3	582,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,191,73,5	script	Louyang Villager#lou::fa9ccf54	68,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,196,61,3	script	Louyang Villager#lou::be3220a5	824,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,207,51,6	script	Louyang Villager#lou::361627b0	817,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,199,44,2	script	Louyang Villager#lou::e944d234	798,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,186,45,7	script	Louyang Villager#lou::e605a400	815,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,177,51,3	script	Louyang Villager#lou::1f919615	742,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,183,65,6	script	Louyang Villager#lou::aa5cf9ff	751,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,185,65,2	script	Louyang Villager#lou::09cf27f2	779,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,162,53,2	script	Louyang Villager#lou::f7f4b933	125,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,153,59,4	script	Louyang Villager#lou::bca56a2d	764,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,149,46,7	script	Louyang Villager#lou::0a194869	635,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,146,55,6	script	Louyang Villager#lou::93f4e216	839,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,133,42,0	script	Louyang Villager#lou::dcfc85c2	842,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,134,59,5	script	Louyang Villager#lou::d887d1de	764,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,145,67,0	script	Louyang Villager#lou::0e539e74	760,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,123,50,2	script	Louyang Villager#lou::1e0794c3	741,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,227,50,7	script	Louyang Villager#lou::3a8ebf11	430,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,231,67,5	script	Louyang Villager#lou::f14176d7	754,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,237,57,4	script	Louyang Villager#lou::18e8b3c4	732,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,232,40,1	script	Louyang Villager#lou::7e16fff3	817,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,246,54,6	script	Louyang Villager#lou::a3edd6a8	641,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,248,54,2	script	Louyang Villager#lou::0cce49f4	762,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,256,62,5	script	Louyang Villager#lou::2c80fad5	764,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,243,68,0	script	Louyang Villager#lou::bd001bf2	645,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,266,56,3	script	Louyang Villager#lou::3031939f	745,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,275,55,6	script	Louyang Villager#lou::f950b00d	51,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,288,47,1	script	Louyang Villager#lou::c03b05bd	70,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,295,52,6	script	Louyang Villager#lou::48cde88b	745,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,297,52,2	script	Louyang Villager#lou::ffbf67fd	842,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,310,45,1	script	Louyang Villager#lou::7b38afc2	842,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,309,58,0	script	Louyang Villager#lou::04c208aa	819,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,318,53,6	script	Louyang Villager#lou::b5f6d9ed	828,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,313,74,2	script	Louyang Villager#lou::8a374358	816,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,311,74,6	script	Louyang Villager#lou::c7eb1997	83,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,299,71,5	script	Louyang Villager#lou::681d0bf7	762,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,284,83,4	script	Louyang Villager#lou::ab1dff69	645,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,282,61,4	script	Louyang Villager#lou::ee9197e7	822,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,243,86,1	script	Louyang Villager#lou::73d1fc3b	908,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,230,90,6	script	Louyang Villager#lou::4c0f36d3	70,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,240,98,5	script	Louyang Villager#lou::cf520332	732,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,250,92,6	script	Louyang Villager#lou::ce3b462f	839,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,259,98,1	script	Louyang Villager#lou::a42db14d	641,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,253,105,4	script	Louyang Villager#lou::48f2db80	740,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,249,117,7	script	Louyang Villager#lou::61d47b98	758,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,265,120,3	script	Louyang Villager#lou::605e5485	83,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,265,139,5	script	Louyang Villager#lou::07fc3a35	828,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,278,117,0	script	Louyang Villager#lou::7104ef35	814,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,285,122,2	script	Louyang Villager#lou::596e45fc	815,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,299,105,0	script	Louyang Villager#lou::37190730	733,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,296,123,7	script	Louyang Villager#lou::795cebcc	51,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,290,135,2	script	Louyang Villager#lou::3080e7c9	634,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,309,132,5	script	Louyang Villager#lou::617ff25d	95,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,314,116,3	script	Louyang Villager#lou::8439977b	822,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,309,109,0	script	Louyang Villager#lou::f386cd85	762,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,313,139,7	script	Louyang Villager#lou::0e703d07	816,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,323,132,3	script	Louyang Villager#lou::b62dcfec	637,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,331,135,0	script	Louyang Villager#lou::15815069	763,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,318,148,2	script	Louyang Villager#lou::703d0089	49,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,308,158,0	script	Louyang Villager#lou::68afd711	744,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,316,170,6	script	Louyang Villager#lou::530ebb1b	742,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,318,170,2	script	Louyang Villager#lou::1e2fa2ce	908,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,311,172,4	script	Louyang Villager#lou::4b8de90e	754,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,330,166,3	script	Louyang Villager#lou::86acd227	642,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,324,184,0	script	Louyang Villager#lou::967eed76	816,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,279,147,1	script	Louyang Villager#lou::b1f224d8	124,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,274,145,4	script	Louyang Villager#lou::b5b143be	763,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,252,130,4	script	Louyang Villager#lou::107d7d02	125,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,249,145,1	script	Louyang Villager#lou::614348af	908,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,278,159,7	script	Louyang Villager#lou::3204547d	740,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,282,162,4	script	Louyang Villager#lou::b7184d9f	759,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,292,158,1	script	Louyang Villager#lou::621aa280	641,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,261,167,7	script	Louyang Villager#lou::375ccca4	583,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,195,158,6	script	Louyang Villager#lou::d9124f62	68,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,206,153,7	script	Louyang Villager#lou::e213729e	734,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,213,163,0	script	Louyang Villager#lou::08c95cbf	908,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,217,169,4	script	Louyang Villager#lou::21879ef3	92,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,222,160,3	script	Louyang Villager#lou::3c4188ee	814,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,229,153,7	script	Louyang Villager#lou::a3f70323	634,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,236,160,4	script	Louyang Villager#lou::5fa353f5	92,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,244,167,6	script	Louyang Villager#lou::dd54ceb1	822,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,246,167,2	script	Louyang Villager#lou::eba74765	754,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,250,177,1	script	Louyang Villager#lou::3c72b731	765,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,243,189,4	script	Louyang Villager#lou::bf558f5f	745,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,230,186,1	script	Louyang Villager#lou::222bea8f	814,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,217,180,0	script	Louyang Villager#lou::e6199dd1	816,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,220,193,1	script	Louyang Villager#lou::b8f98b29	741,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,215,201,6	script	Louyang Villager#lou::1983de97	583,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,217,201,2	script	Louyang Villager#lou::8c64b307	430,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,220,212,0	script	Louyang Villager#lou::241b43df	634,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,217,218,4	script	Louyang Villager#lou::38eb8417	68,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,234,170,0	script	Louyang Villager#lou::d12e18db	817,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,192,173,7	script	Louyang Villager#lou::79c00fea	745,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,237,199,0	script	Louyang Villager#lou::7efaaae6	764,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,240,213,2	script	Louyang Villager#lou::0828abee	642,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,226,207,3	script	Louyang Villager#lou::6e0bd906	124,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,208,207,1	script	Louyang Villager#lou::e13095b0	816,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,199,212,4	script	Louyang Villager#lou::6560a873	741,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,200,200,6	script	Louyang Villager#lou::4176ab0f	841,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,208,190,1	script	Louyang Villager#lou::a732a0c2	745,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,193,184,4	script	Louyang Villager#lou::4fa910c6	755,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,195,202,2	script	Louyang Villager#lou::d7b45c48	764,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,184,205,1	script	Louyang Villager#lou::55e58d7b	644,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,177,195,0	script	Louyang Villager#lou::ada58550	741,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,151,97,6	script	Louyang Villager#lou::ee312da7	764,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,128,196,7	script	Louyang Villager#lou::84db4f07	69,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,146,213,6	script	Louyang Villager#lou::caf720df	83,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,148,213,2	script	Louyang Villager#lou::a802c801	742,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,167,213,4	script	Louyang Villager#lou::b7646963	79,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,246,203,6	script	Louyang Villager#lou::98a37fbb	758,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,254,208,6	script	Louyang Villager#lou::1d4e53e2	634,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,269,213,4	script	Louyang Villager#lou::8a4211b4	644,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,278,213,6	script	Louyang Villager#lou::2e971fc9	817,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,280,213,2	script	Louyang Villager#lou::fd4ea824	642,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,293,215,0	script	Louyang Villager#lou::2865bfdc	814,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,294,230,7	script	Louyang Villager#lou::a0f786a7	822,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,299,246,2	script	Louyang Villager#lou::736f780e	733,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,297,246,6	script	Louyang Villager#lou::ed05ef79	583,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,312,253,4	script	Louyang Villager#lou::95ccaa13	637,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,322,256,6	script	Louyang Villager#lou::9808761d	879,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,324,256,2	script	Louyang Villager#lou::a32df3a9	814,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,323,242,0	script	Louyang Villager#lou::7613eec4	751,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,315,226,1	script	Louyang Villager#lou::7d34754c	89,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,320,217,2	script	Louyang Villager#lou::b372876e	83,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,328,210,1	script	Louyang Villager#lou::5584b675	842,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,313,197,0	script	Louyang Villager#lou::c9e3307f	761,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,293,197,1	script	Louyang Villager#lou::61159501	68,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,268,197,6	script	Louyang Villager#lou::847eb251	818,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,217,225,0	script	Louyang Villager#lou::97c80cf5	879,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,211,230,5	script	Louyang Villager#lou::63ba60c9	645,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,213,236,0	script	Louyang Villager#lou::c11efb1a	822,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,210,242,4	script	Louyang Villager#lou::df9659f2	85,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,219,240,0	script	Louyang Villager#lou::9b11da6c	817,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,218,234,4	script	Louyang Villager#lou::d1c4efb4	751,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,226,230,1	script	Louyang Villager#lou::fbbe66cf	838,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,224,239,4	script	Louyang Villager#lou::44790b88	92,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,224,247,2	script	Louyang Villager#lou::2390bc19	92,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,217,248,0	script	Louyang Villager#lou::3123db19	734,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,204,238,3	script	Louyang Villager#lou::0a0c4f56	86,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,217,273,6	script	Louyang Villager#lou::25d1047c	79,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,235,273,2	script	Louyang Villager#lou::579dd72c	828,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,236,261,6	script	Louyang Villager#lou::4134840f	49,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,198,263,1	script	Louyang Villager#lou::c0b0c182	636,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,207,226,1	script	Louyang Villager#lou::37d61c74	84,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,192,227,0	script	Louyang Villager#lou::70797d9e	583,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,165,225,6	script	Louyang Villager#lou::502df974	67,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,167,225,2	script	Louyang Villager#lou::be9cc87b	95,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,142,226,7	script	Louyang Villager#lou::faac15ea	741,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,140,246,5	script	Louyang Villager#lou::dfc8fb95	430,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,151,241,4	script	Louyang Villager#lou::a2672dbf	583,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,163,243,2	script	Louyang Villager#lou::8a592973	764,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,174,241,3	script	Louyang Villager#lou::dbb92b2a	583,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,187,240,4	script	Louyang Villager#lou::ca380dcb	70,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,228,227,6	script	Louyang Villager#lou::caf667a6	70,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,248,227,1	script	Louyang Villager#lou::95770adf	744,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,271,226,0	script	Louyang Villager#lou::79861bc7	760,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,284,232,0	script	Louyang Villager#lou::49a3de75	766,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,275,244,6	script	Louyang Villager#lou::f282f9b2	95,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,277,224,2	script	Louyang Villager#lou::1fc8180f	760,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,276,246,4	script	Louyang Villager#lou::3a16e1b6	582,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,261,242,4	script	Louyang Villager#lou::8acf22db	634,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,247,241,5	script	Louyang Villager#lou::114bb582	734,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,102,60,1	script	Louyang Villager#lou::79cc6158	83,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,87,75,5	script	Louyang Villager#lou::ce756713	583,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,78,89,0	script	Louyang Villager#lou::2db4e9eb	644,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,72,104,4	script	Louyang Villager#lou::455b2f57	69,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,62,70,5	script	Louyang Villager#lou::571d7e0a	822,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,62,136,4	script	Louyang Villager#lou::b506f8cf	70,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,54,159,7	script	Louyang Villager#lou::f424a834	763,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,59,183,4	script	Louyang Villager#lou::f1786adf	84,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,66,205,1	script	Louyang Villager#lou::17a65203	762,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,53,228,6	script	Louyang Villager#lou::97c0b348	49,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,55,228,2	script	Louyang Villager#lou::82385a22	89,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,55,249,1	script	Louyang Villager#lou::bb38b919	822,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,49,271,5	script	Louyang Villager#lou::47b4314b	642,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,43,278,2	script	Louyang Villager#lou::a7f4e3b5	754,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,74,207,6	script	Louyang Villager#lou::5288f2f0	839,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,69,214,4	script	Louyang Villager#lou::34e5af49	765,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,88,207,6	script	Louyang Villager#lou::64533a45	760,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,90,206,2	script	Louyang Villager#lou::93f3288e	582,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,89,209,4	script	Louyang Villager#lou::ccce590b	822,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,98,213,5	script	Louyang Villager#lou::1f432dec	733,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,108,206,6	script	Louyang Villager#lou::4bf79717	816,{
+	npctalk "npcdialog";
+	end;
+}
+
+louyang,102,219,7	script	Louyang Villager#lou::65ecb112	824,{
+	npctalk "npcdialog";
+	end;
+}
