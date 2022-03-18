@@ -1532,3 +1532,8 @@ ama_fild01,61,68,3	script	Bulletin Board#sgn::261	837,{
 	mes "Amatsu Forest.";
 	close;
 }
+
+louyang,212,120,4	script	Bulletin Board#sgn::2262	837,{
+	mes "Louyang, the ancient highland. The renewed city of the Louyang Island. Discover our secrets and history.";
+	close;
+}

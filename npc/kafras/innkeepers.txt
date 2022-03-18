@@ -23,7 +23,7 @@ ra_in01,376,69,4	script	Inn Keeper#Annie	931,{
 
 //====================== Ayothaya ===================================
 ayo_in01,31,95,3	script	Inn Keeper#Ayothaya	61,{
-	callfunc "F_InnMaid","[Inn Keeper]","'The Amatsu Tavern & Inn'","ayo_in01",26,96;
+	callfunc "F_InnMaid","[Inn Keeper]","'The Ancient Snake Inn'","ayo_in01",26,96;
 	warp "ayo_in01",20,22; end;
 }
 
@@ -33,7 +33,20 @@ ama_in01,162,17,2	script	Inn Keeper#Amatsu	760,{
 	warp "ama_in01",178,74; end;
 }
 
-//====================== Veins ===================================
+//====================== Louyang North ===================================
+lou_in02,55,184,2	script	Inn Keeper#Louyang1	53,{
+	callfunc "F_InnMaid","[Inn Keeper]","'Louyang Tavern & Inn'","lou_in02",55,179;
+	warp "lou_in02",42,128; end;
+}
+
+//====================== Louyang South ===================================
+lou_in02,254,56,3	script	Inn Keeper#Louyang2	760,{
+	callfunc "F_InnMaid","[Inn Keeper]","'The Secret Dragon Inn'","lou_in02",249,57;
+	warp "lou_in02",266,69; end;
+}
+
+
+//====================== TidalIsland ===================================
 nameless_n,250,130,3	script	Inn Keeper#Tidal	53,{
 	callfunc "F_InnMaid","[Inn Keeper]","'The Tidal Inn'","nameless_n",247,127;
 	warp "nameless_n",247,127; end;

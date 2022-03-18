@@ -230,51 +230,6 @@ louyang,272,133,0	duplicate(LouTrainee)	Trainee#10lou	819
 louyang,272,131,0	duplicate(LouTrainee)	Trainee#11lou	819
 louyang,272,129,0	duplicate(LouTrainee)	Trainee#12lou	819
 
-// Luoyang Viewing Tower
-//============================================================
-lou_in01,25,23,5	script	Friendly Looking Lady#lo	817,{
-	mes "[Hong Miao]";
-	mes "Welcome.";
-	next;
-	mes "[Hong Miao]";
-	mes "This is an elevator which leads";
-	mes "to the Observation Tower. We are providing you a safe and fast transfer service for an affordable fee. Would you like to use this service?";
-	next;
-	switch(select("Information.:Yes.:Maybe next time.")) {
-	case 1:
-		mes "[Hong Miao]";
-		mes "After many suggestions and proposals were sent to the Luoyang tourism office, the Observation Tower was built so tourists can enjoy the sights.";
-		next;
-		mes "[Hong Miao]";
-		mes "Due to the geographical";
-		mes "features of Luoyang, it's difficult to enjoy the breath taking view that our land has to offer.";
-		next;
-		mes "[Hong Miao]";
-		mes "You can come up to the tower by taking the elevator right here. We are providing this quick and safe transfer service for 500 zeny per person.";
-		close;
-	case 2:
-		if (Zeny < 500) {
-			mes "[Hong Miao]";
-			mes "I'm sorry, but you do not have enough zeny. I hope you'll come back later to enjoy the Observation Tower. Have a good day.";
-			close;
-		}
-		mes "[Hong Miao]";
-		mes "Thank you for your patronage.";
-		mes "We are trying to provide you with the best of service. Please";
-		mes "come again.";
-		next;
-		set Zeny, Zeny-500;
-		warp "lou_in01",17,19;
-		end;
-	case 3:
-		mes "[Hong Miao]";
-		mes "Please come";
-		mes "back later.";
-		mes "Have a good day.";
-		close;
-	}
-}
-
 louyang,84,254,0	script	Exit#lou	111,{
 	mes "^3355FFThere is some sort";
 	mes "of descent apparatus.";
