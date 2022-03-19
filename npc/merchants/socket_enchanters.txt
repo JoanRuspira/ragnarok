@@ -312,9 +312,6 @@ function	script	Func_Socket	{
 	}
 }
 
-morocc_in,114,167,3	duplicate(SocketEnchant)	Socket Enchanter Apprentice#pay	84
-
-
 -	script	Young Man#dummy::SocketMan	-1,{
 	mes "[Young Man]";
 	mes "I'm considering becoming a Slotting Engineer.";
@@ -332,4 +329,8 @@ morocc_in,114,167,3	duplicate(SocketEnchant)	Socket Enchanter Apprentice#pay	84
 	close;
 }
 
-morocc_in,114,162,3	duplicate(SocketMan)	Socket Enchanter Master#prt	97
+morocc_in,114,161,3	duplicate(SocketMan)	Socket Enchanter Info#scktinfomrc	97
+
+morocc_in,114,167,3	duplicate(SocketEnchant)	Socket Enchanter Master#scktmrc	84
+
+lou_in02,118,36,6	duplicate(SocketEnchant)	Socket Enchanter Master#scktlou	84

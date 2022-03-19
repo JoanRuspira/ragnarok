@@ -24,107 +24,107 @@ payon,215,79,5	script	Payon Guard#payn::pay_npc24	708,{
 	end;
 }
 
-payon,152,98,6	script	Payon Villager#payn::54a1f175	83,{  //m
+payon,152,98,6	script	Payon Villager#payn::5cbdc939	963,{  //m
 	npctalk "npcdialog";
 	end;
 }
 
-payon,156,101,3	script	Payon Villager#payn::75a13e62	777,{  //f
+payon,156,101,3	script	Payon Villager#payn::489c1db9	92,{  //f
 	npctalk "npcdialog";
 	end;
 }
 
-payon,163,100,2	script	Payon Villager#payn::934bf064	644,{ // m
+payon,163,100,2	script	Payon Villager#payn::d3684d49	828,{ // m
 	npctalk "npcdialog";
 	end;
 }
 
-payon,152,89,5	script	Payon Villager#payn::883a3422	755,{ //m
+payon,152,89,5	script	Payon Villager#payn::5571c4c5	124,{ //m
 	npctalk "npcdialog";
 	end;
 }
 
-payon,164,87,6	script	Payon Villager#payn::316a14a2	751,{ //m
+payon,164,87,6	script	Payon Villager#payn::e3db904a	732,{ //m
 	npctalk "npcdialog";
 	end;
 }
 
-payon,175,111,3	script	Payon Villager#payn::a62e8062	753,{ //m
+payon,175,111,3	script	Payon Villager#payn::ec0c7177	773,{ //m
 	npctalk "npcdialog";
 	end;
 }
 
-payon,178,111,3	script	Payon Villager#payn::47fec311	92,{ //f
+payon,178,111,3	script	Payon Villager#payn::b2d189ca	744,{ //f
 	npctalk "npcdialog";
 	end;
 }
 
-payon,174,96,3	script	Payon Villager#payn::475db9f1	535,{ //f
+payon,174,96,3	script	Payon Villager#payn::d545076e	85,{ //f
 	npctalk "npcdialog";
 	end;
 }
 
-payon,161,126,6	script	Payon Villager#payn::696bc118	84,{ //m
+payon,161,126,6	script	Payon Villager#payn::f5699d16	62,{ //m
 	npctalk "npcdialog";
 	end;
 }
 
-payon,172,120,1	script	Payon Villager#payn::ec37a85a	49,{ //f
+payon,172,120,1	script	Payon Villager#payn::91d82d89	536,{ //f
 	npctalk "npcdialog";
 	end;
 }
 
-payon,173,176,4	script	Payon Villager#payn::073c005d	772,{ //f
+payon,173,176,4	script	Payon Villager#payn::3e9141ae	772,{ //f
 	npctalk "npcdialog";
 	end;
 }
 
-payon,176,176,4	script	Payon Villager#payn::af4e81c4	775,{ //f
+payon,176,176,4	script	Payon Villager#payn::3895e3a8	775,{ //f
 	npctalk "npcdialog";
 	end;
 }
 
-payon,173,168,0	script	Payon Villager#payn::d271a384	771,{ //m
+payon,173,168,0	script	Payon Villager#payn::9f56a882	734,{ //m
 	npctalk "npcdialog";
 	end;
 }
 
-payon,176,165,0	script	Payon Villager#payn::cc5a0d66	754,{ //m
+payon,176,165,0	script	Payon Villager#payn::87f22fec	776,{ //m
 	npctalk "npcdialog";
 	end;
 }
 
-payon,170,169,7	script	Payon Villager#payn::17eb80d8	539,{ //m
+payon,170,169,7	script	Payon Villager#payn::c13e19ab	642,{ //m
 	npctalk "npcdialog";
 	end;
 }
 
-payon,159,160,2	script	Payon Villager#payn::5524fbc9	79,{ //f
+payon,159,160,2	script	Payon Villager#payn::add61c02	753,{ //f
 	npctalk "npcdialog";
 	end;
 }
 
-payon,166,155,7	script	Payon Villager#payn::c08575e3	576,{ //f
+payon,166,155,7	script	Payon Villager#payn::ab8c0ff5	959,{ //f
 	npctalk "npcdialog";
 	end;
 }
 
-payon,149,215,6	script	Payon Villager#payn::46bf0e00	534,{ //m
+payon,149,215,6	script	Payon Villager#payn::c8ea6f38	645,{ //m
 	npctalk "npcdialog";
 	end;
 }
 
-payon,160,221,0	script	Payon Villager#payn::adf5f227	641,{ //m
+payon,160,221,0	script	Payon Villager#payn::6e9f5c7b	745,{ //m
 	npctalk "npcdialog";
 	end;
 }
 
-payon,158,220,0	script	Payon Villager#payn::d7efe6a7	430,{ //m
+payon,158,220,0	script	Payon Villager#payn::5f1e53f3	742,{ //m
 	npctalk "npcdialog";
 	end;
 }
 
-payon,152,209,4	script	Payon Villager#payn::504e8ffd	904,{ //m
+payon,152,209,4	script	Payon Villager#payn::7dbd7ddd	637,{ //m
 	npctalk "npcdialog";
 	end;
 }
@@ -154,27 +154,27 @@ payon,140,196,2	script	Payon Villager#payn::pay_npc29	634,{
 	end;
 }
 
-payon,144,205,6	script	Payon Villager#payn::d448e4e3	89,{ 
+payon,144,205,6	script	Payon Villager#payn::4a530f11	754,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,137,223,4	script	Payon Villager#payn::61d7c08e	732,{ 
+payon,137,223,4	script	Payon Villager#payn::84dc34e4	70,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,158,206,0	script	Payon Villager#payn::1c692059	581,{ 
+payon,158,206,0	script	Payon Villager#payn::7723121d	69,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,166,205,7	script	Payon Villager#payn::8d46170a	3,{ 
+payon,166,205,7	script	Payon Villager#payn::0ad8c85b	734,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,174,214,1	script	Payon Villager#payn::d0d279e8	536,{ 
+payon,174,214,1	script	Payon Villager#payn::315aa959	89,{ 
 	npctalk "npcdialog";
 	end;
 }
@@ -189,62 +189,62 @@ payon,218,246,6	script	Palace Guard#payn::pay_npc35	708,{
 	end;
 }
 
-payon,192,255,3	script	Payon Villager#payn::eb50793b	68,{ 
+payon,192,255,3	script	Payon Villager#payn::217cc650	95,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,199,107,6	script	Payon Villager#payn::ea10fa67	773,{ 
+payon,199,107,6	script	Payon Villager#payn::4b082876	49,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,206,110,2	script	Payon Villager#payn::e0784f14	68,{ 
+payon,206,110,2	script	Payon Villager#payn::097d5f31	644,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,220,104,4	script	Payon Villager#payn::49d9fc31	535,{ 
+payon,220,104,4	script	Payon Villager#payn::10555993	51,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,202,125,4	script	Payon Villager#payn::01ef7051	770,{ 
+payon,202,125,4	script	Payon Villager#payn::55e26f93	798,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,226,152,4	script	Payon Villager#payn::2fa4b9d5	776,{ 
+payon,226,152,4	script	Payon Villager#payn::b8547fdd	904,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,212,163,0	script	Payon Villager#payn::adcf4867	536,{ 
+payon,212,163,0	script	Payon Villager#payn::0c2cc1cf	634,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,210,216,6	script	Payon Villager#payn::ba31b644	51,{ 
+payon,210,216,6	script	Payon Villager#payn::47341548	641,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,226,225,3	script	Payon Villager#payn::6b709683	84,{ 
+payon,226,225,3	script	Payon Villager#payn::f3a9bbc7	741,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,229,220,5	script	Payon Villager#payn::3abb62aa	576,{ 
+payon,229,220,5	script	Payon Villager#payn::4f2710e8	771,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,236,285,0	script	Payon Villager#payn::688286e7	49,{ 
+payon,236,285,0	script	Payon Villager#payn::09591635	534,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,238,283,1	script	Payon Villager#payn::e9029bbd	85,{ 
+payon,238,283,1	script	Payon Villager#payn::2ba22fbb	86,{ 
 	npctalk "npcdialog";
 	end;
 }
@@ -259,122 +259,122 @@ payon,92,178,4	script	Payon Guard#payn::pay_npc49	708,{
 	end;
 }
 
-payon,95,223,5	script	Payon Villager#payn::3e021030	430,{ 
+payon,95,223,5	script	Payon Villager#payn::2f61d233	577,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,112,230,0	script	Payon Villager#payn::e87a318d	89,{ 
+payon,112,230,0	script	Payon Villager#payn::99e4eb26	538,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,104,313,6	script	Payon Villager#payn::3215cdef	644,{ 
+payon,104,313,6	script	Payon Villager#payn::38cee00a	86,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,113,318,3	script	Payon Villager#payn::22ab12f1	967,{ 
+payon,113,318,3	script	Payon Villager#payn::ed3001b9	908,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,81,318,0	script	Payon Villager#payn::c7a248ec	67,{ 
+payon,81,318,0	script	Payon Villager#payn::0404dc33	744,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,152,317,2	script	Payon Villager#payn::64b2c104	536,{ 
+payon,152,317,2	script	Payon Villager#payn::5bb6f8ae	83,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,190,301,5	script	Payon Villager#payn::d30cf31c	62,{ 
+payon,190,301,5	script	Payon Villager#payn::d906cd0f	576,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,123,105,7	script	Payon Villager#payn::822f8e87	86,{ 
+payon,123,105,7	script	Payon Villager#payn::9955b267	84,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,100,150,4	script	Payon Villager#payn::943ede51	536,{ 
+payon,100,150,4	script	Payon Villager#payn::089ce973	67,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,98,148,7	script	Payon Villager#payn::03c1eeba	733,{ 
+payon,98,148,7	script	Payon Villager#payn::8b2a5140	62,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,109,116,3	script	Payon Villager#payn::0ee50936	644,{ 
+payon,109,116,3	script	Payon Villager#payn::3bda84a6	576,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,131,61,3	script	Payon Villager#payn::b8c3e950	582,{ 
+payon,131,61,3	script	Payon Villager#payn::c5f75cd4	733,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,128,60,3	script	Payon Villager#payn::4a6b763b	430,{ 
+payon,128,60,3	script	Payon Villager#payn::fbfd22a7	779,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,78,66,4	script	Payon Villager#payn::30549d43	740,{ 
+payon,78,66,4	script	Payon Villager#payn::f56061dd	636,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,73,106,0	script	Payon Villager#payn::92cbb025	828,{ 
+payon,73,106,0	script	Payon Villager#payn::92a75038	879,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,19,147,6	script	Payon Villager#payn::1f0c180c	634,{ 
+payon,19,147,6	script	Payon Villager#payn::8a6434c3	62,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,239,59,4	script	Payon Villager#payn::2cabb96a	770,{ 
+payon,239,59,4	script	Payon Villager#payn::072a12ef	751,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,235,56,6	script	Payon Villager#payn::1dc49b28	68,{ 
+payon,235,56,6	script	Payon Villager#payn::2d17f4c0	959,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,238,91,2	script	Payon Villager#payn::33221d2e	644,{ 
+payon,238,91,2	script	Payon Villager#payn::28035cab	84,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in03,87,179,6	script	Payon Villager#payn::1555d82d	3,{ 
+payon_in03,87,179,6	script	Payon Villager#payn::dee1671c	634,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in03,94,168,7	script	Payon Villager#payn::4ef2c3ee	535,{ 
+payon_in03,94,168,7	script	Payon Villager#payn::541f624f	538,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in03,108,172,7	script	Payon Villager#payn::bba3dd87	635,{ 
+payon_in03,108,172,7	script	Payon Villager#payn::0fae26d4	430,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in03,79,169,0	script	Payon Villager#payn::1b72b476	798,{ 
+payon_in03,79,169,0	script	Payon Villager#payn::f5d5b5d7	959,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in03,117,177,3	script	Payon Villager#payn::7afe43ed	69,{ 
+payon_in03,117,177,3	script	Payon Villager#payn::0a06cb44	771,{ 
 	npctalk "npcdialog";
 	end;
 }
@@ -389,660 +389,660 @@ payon_in03,103,180,5	script	Palace Guard#payn::pay_npc75	708,{
 	end;
 }
 
-payon_in03,104,159,5	script	Payon Villager#payn::ca2a219f	634,{ 
+payon_in03,104,159,5	script	Payon Villager#payn::863d4417	55,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in01,13,127,7	script	Payon Villager#payn::affb5164	537,{ 
+payon_in01,13,127,7	script	Payon Villager#payn::579ae282	92,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in01,8,125,1	script	Payon Villager#payn::1c1f3f57	430,{ 
+payon_in01,8,125,1	script	Payon Villager#payn::82be2ee7	636,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in01,192,36,1	script	Chef#payn::bc4c9b38	886,{ 
+payon_in01,192,36,1	script	Chef#payn::7d420b13	886,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in01,188,37,5	script	Chef#payn::be68d03d	820,{ 
+payon_in01,188,37,5	script	Chef#payn::05c3bbbd	820,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in01,193,30,7	script	Chef#payn::f6939db8	820,{ 
+payon_in01,193,30,7	script	Chef#payn::b0d83401	820,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in01,179,30,5	script	Waitress#payn::f71020fb	80,{ 
+payon_in01,179,30,5	script	Waitress#payn::fa02fca9	80,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,155,192,4	script	Payon Village#payn::59190f68	905,{ 
+payon,155,192,4	script	Payon Village#payn::e6f819ec	734,{ 
 	npctalk "npcdialog";
 	end;
 }
 
 
-payon,173,194,1	script	Payon Villager#payn::cd8f0d5d	534,{ 
+payon,173,194,1	script	Payon Villager#payn::cacef27b	779,{ 
 	npctalk "npcdialog";
 	end;
 }
 
 
-payon,156,172,6	script	Payon Villager#payn::7cadcf04	68,{ 
+payon,156,172,6	script	Payon Villager#payn::b39006e2	92,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,158,172,2	script	Payon Villager#payn::ce80e306	734,{ 
+payon,158,172,2	script	Payon Villager#payn::3a06d6fd	581,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,144,155,0	script	Payon Villager#payn::91cfa710	742,{ 
+payon,144,155,0	script	Payon Villager#payn::f59e105c	879,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,162,142,5	script	Payon Villager#payn::29440b7e	92,{ 
+payon,162,142,5	script	Payon Villager#payn::f45d1c93	86,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,172,139,2	script	Payon Villager#payn::404b31e5	92,{ 
+payon,172,139,2	script	Payon Villager#payn::05c2cead	67,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,154,119,4	script	Payon Villager#payn::abbd78e6	83,{ 
+payon,154,119,4	script	Payon Villager#payn::a2cb21e1	583,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,169,108,3	script	Payon Villager#payn::52633ca8	430,{ 
+payon,169,108,3	script	Payon Villager#payn::32e958c3	634,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,189,125,5	script	Payon Villager#payn::4534baef	645,{ 
+payon,189,125,5	script	Payon Villager#payn::d043ef78	636,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,193,131,1	script	Payon Villager#payn::4c8a96f6	779,{ 
+payon,193,131,1	script	Payon Villager#payn::b39e4645	905,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,192,110,2	script	Payon Villager#payn::ce5c37b3	779,{ 
+payon,192,110,2	script	Payon Villager#payn::f29bbdf0	771,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,190,93,1	script	Payon Villager#payn::4a80d7dd	124,{ 
+payon,190,93,1	script	Payon Villager#payn::7bdbbf55	744,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,157,179,7	script	Payon Villager#payn::e64f68c9	645,{ 
+payon,157,179,7	script	Payon Villager#payn::5cd73e42	62,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in01,11,45,2	script	Payon Villager#payn::77ceaa18	959,{ 
+payon_in01,11,45,2	script	Payon Villager#payn::0d71fe54	637,{ 
 	npctalk "npcdialog";
 	end;
 }
 
 
-payon_in01,6,13,7	script	Payon Villager#payn::777b27b9	879,{ 
+payon_in01,6,13,7	script	Payon Villager#payn::c51f25b2	777,{ 
 	npctalk "npcdialog";
 	end;
 }
 
 
-payon,212,94,3	script	Payon Villager#payn::c41e902e	124,{ 
+payon,212,94,3	script	Payon Villager#payn::596bbe69	963,{ 
 	npctalk "npcdialog";
 	end;
 }
 
 
-payon,188,222,1	script	Payon Villager#payn::7dd8d76d	741,{ 
+payon,188,222,1	script	Payon Villager#payn::c1ee915e	645,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,183,239,4	script	Payon Villager#payn::c32d5a1c	577,{ 
+payon,183,239,4	script	Payon Villager#payn::55930424	641,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,202,250,6	script	Payon Villager#payn::194e6afe	771,{ 
+payon,202,250,6	script	Payon Villager#payn::c56d512a	634,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,224,252,6	script	Payon Villager#payn::c1001673	634,{ 
+payon,224,252,6	script	Payon Villager#payn::72099a17	908,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,226,252,2	script	Payon Villager#payn::854ac217	770,{ 
+payon,226,252,2	script	Payon Villager#payn::4239caab	635,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,232,268,0	script	Payon Villager#payn::7d75e960	742,{ 
+payon,232,268,0	script	Payon Villager#payn::8b538d33	69,{ 
 	npctalk "npcdialog";
 	end;
 }
 
 
-payon,234,304,4	script	Payon Villager#payn::50b575d6	745,{ 
+payon,234,304,4	script	Payon Villager#payn::f2fea470	732,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,226,319,5	script	Payon Villager#payn::2f8e286f	744,{ 
+payon,226,319,5	script	Payon Villager#payn::7dc77298	85,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,223,200,1	script	Payon Villager#payn::1e1944d8	776,{ 
+payon,223,200,1	script	Payon Villager#payn::87dbc144	642,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,133,195,3	script	Payon Villager#payn::5f13c1aa	771,{ 
+payon,133,195,3	script	Payon Villager#payn::9705e931	68,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,222,186,6	script	Payon Villager#payn::e472d5ff	779,{ 
+payon,222,186,6	script	Payon Villager#payn::baa333f6	637,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,224,186,2	script	Payon Villager#payn::e2633a4e	539,{ 
+payon,224,186,2	script	Payon Villager#payn::9a8dd48c	86,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,221,168,4	script	Payon Villager#payn::3226c08c	55,{ 
+payon,221,168,4	script	Payon Villager#payn::5c3520d2	742,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,194,155,7	script	Payon Villager#payn::2e715a53	770,{ 
+payon,194,155,7	script	Payon Villager#payn::40a08dde	733,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,181,153,6	script	Payon Villager#payn::43efbb5c	755,{ 
+payon,181,153,6	script	Payon Villager#payn::5a789d5e	84,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,189,174,3	script	Payon Villager#payn::53f02c07	745,{ 
+payon,189,174,3	script	Payon Villager#payn::02d5aeae	67,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,220,145,1	script	Payon Villager#payn::f1b7241d	645,{ 
+payon,220,145,1	script	Payon Villager#payn::fd2d38c0	125,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,212,65,7	script	Payon Villager#payn::c0fd8c5d	745,{ 
+payon,212,65,7	script	Payon Villager#payn::dd45f0bb	773,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,239,68,1	script	Payon Villager#payn::06f7e438	70,{ 
+payon,239,68,1	script	Payon Villager#payn::5010428e	742,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,221,60,3	script	Payon Villager#payn::7871cd70	539,{ 
+payon,221,60,3	script	Payon Villager#payn::7928352d	637,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,203,55,7	script	Payon Villager#payn::eaa8dfd4	430,{ 
+payon,203,55,7	script	Payon Villager#payn::a2f930ae	741,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,179,63,6	script	Payon Villager#payn::fd47b6db	577,{ 
+payon,179,63,6	script	Payon Villager#payn::51b6fca9	645,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,181,63,2	script	Payon Villager#payn::7f08bcc1	538,{ 
+payon,181,63,2	script	Payon Villager#payn::89441514	779,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,164,54,0	script	Payon Villager#payn::8adc8d7e	744,{ 
+payon,164,54,0	script	Payon Villager#payn::578e3ddf	778,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,119,76,0	script	Payon Villager#payn::535c766d	3,{ 
+payon,119,76,0	script	Payon Villager#payn::a6f63198	68,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,110,98,6	script	Payon Villager#payn::315a7246	49,{ 
+payon,110,98,6	script	Payon Villager#payn::2de39b75	773,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,112,98,2	script	Payon Villager#payn::af8b4ea2	62,{ 
+payon,112,98,2	script	Payon Villager#payn::5125ef41	959,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,89,167,0	script	Payon Villager#payn::18ddffd4	742,{ 
+payon,89,167,0	script	Payon Villager#payn::cc3ca337	55,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,87,201,7	script	Payon Villager#payn::95cb82df	755,{ 
+payon,87,201,7	script	Payon Villager#payn::624167b4	84,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,88,223,6	script	Payon Villager#payn::ac8f550c	583,{ 
+payon,88,223,6	script	Payon Villager#payn::d95ffd76	637,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,90,223,2	script	Payon Villager#payn::207f06c9	55,{ 
+payon,90,223,2	script	Payon Villager#payn::1a8a4d64	634,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,80,243,0	script	Payon Villager#payn::76747d30	55,{ 
+payon,80,243,0	script	Payon Villager#payn::10847a55	967,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,82,269,4	script	Payon Villager#payn::15d26b9b	770,{ 
+payon,82,269,4	script	Payon Villager#payn::2c17c2fc	536,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,82,298,5	script	Payon Villager#payn::f886bdcf	733,{ 
+payon,82,298,5	script	Payon Villager#payn::364364d0	67,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,87,328,5	script	Payon Villager#payn::0ed4c7c6	3,{ 
+payon,87,328,5	script	Payon Villager#payn::263b7a9c	51,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,111,289,4	script	Payon Villager#payn::1671b350	581,{ 
+payon,111,289,4	script	Payon Villager#payn::9ef95d35	777,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,118,281,6	script	Payon Villager#payn::ad62a416	95,{ 
+payon,118,281,6	script	Payon Villager#payn::12444c2a	740,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,120,281,2	script	Payon Villager#payn::67676e39	634,{ 
+payon,120,281,2	script	Payon Villager#payn::33096d24	755,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,102,285,0	script	Payon Villager#payn::1497f75a	774,{ 
+payon,102,285,0	script	Payon Villager#payn::c4debcde	742,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,106,293,3	script	Payon Villager#payn::3697ac85	92,{ 
+payon,106,293,3	script	Payon Villager#payn::e9c34c27	68,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,111,304,7	script	Payon Villager#payn::6ef6f9fb	771,{ 
+payon,111,304,7	script	Payon Villager#payn::774bcf78	634,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,106,271,4	script	Payon Villager#payn::8b1d2d49	773,{ 
+payon,106,271,4	script	Payon Villager#payn::e7de6550	741,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,108,253,6	script	Payon Villager#payn::122ebcf7	828,{ 
+payon,108,253,6	script	Payon Villager#payn::64d26b34	770,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,156,235,0	script	Payon Villager#payn::f50cdb3b	742,{ 
+payon,156,235,0	script	Payon Villager#payn::ece2ddb8	753,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,147,243,2	script	Payon Villager#payn::19f36cd6	754,{ 
+payon,147,243,2	script	Payon Villager#payn::0ccb5a53	908,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,145,243,6	script	Payon Villager#payn::969b6876	70,{ 
+payon,145,243,6	script	Payon Villager#payn::48b9b90c	51,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,166,245,4	script	Payon Villager#payn::13a22f04	634,{ 
+payon,166,245,4	script	Payon Villager#payn::1c604793	430,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,159,197,2	script	Payon Villager#payn::82abae99	538,{ 
+payon,159,197,2	script	Payon Villager#payn::d39f1e15	778,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,256,138,1	script	Payon Villager#payn::dff43d38	536,{ 
+payon,256,138,1	script	Payon Villager#payn::9d781ae8	771,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,248,144,5	script	Payon Villager#payn::4806f173	776,{ 
+payon,248,144,5	script	Payon Villager#payn::bff92212	879,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,233,195,2	script	Payon Villager#payn::c7993a1f	92,{ 
+payon,233,195,2	script	Payon Villager#payn::13684caa	771,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in03,130,129,2	script	Payon Villager#payn::767d7944	581,{ 
+payon_in03,130,129,2	script	Payon Villager#payn::384eabdc	634,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in03,122,126,4	script	Payon Villager#payn::6c79b70b	67,{ 
+payon_in03,122,126,4	script	Payon Villager#payn::b365f1e6	905,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in03,129,118,1	script	Payon Villager#payn::a784d4fa	51,{ 
+payon_in03,129,118,1	script	Payon Villager#payn::24ee6e5f	905,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in03,135,120,1	script	Payon Villager#payn::2435ad0f	963,{ 
+payon_in03,135,120,1	script	Payon Villager#payn::dfcbc6e2	534,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in03,72,119,1	script	Payon Villager#payn::eaa5ed9a	734,{ 
+payon_in03,72,119,1	script	Payon Villager#payn::44ec3107	774,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in03,62,129,4	script	Payon Villager#payn::a5e4175e	583,{ 
+payon_in03,62,129,4	script	Payon Villager#payn::dd286bba	733,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in03,61,122,7	script	Payon Villager#payn::d989428a	83,{ 
+payon_in03,61,122,7	script	Payon Villager#payn::9b14c9ad	732,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in03,70,130,4	script	Payon Villager#payn::fd5247a9	732,{ 
+payon_in03,70,130,4	script	Payon Villager#payn::39c406d6	905,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in03,94,128,5	script	Payon Villager#payn::752db557	635,{ 
+payon_in03,94,128,5	script	Payon Villager#payn::5568fe20	3,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in03,104,120,1	script	Payon Villager#payn::4080752e	798,{ 
+payon_in03,104,120,1	script	Payon Villager#payn::b41f2a30	125,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in03,81,175,1	script	Payon Villager#payn::e7f7f154	754,{ 
+payon_in03,81,175,1	script	Payon Villager#payn::7932bed4	732,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in03,91,172,6	script	Payon Villager#payn::d7fbe2bb	744,{ 
+payon_in03,91,172,6	script	Payon Villager#payn::167523a2	963,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in03,101,169,5	script	Payon Villager#payn::0a038cfc	79,{ 
+payon_in03,101,169,5	script	Payon Villager#payn::1b0d395d	905,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,215,101,6	script	Payon Villager#payn::25f60879	754,{ 
+payon,215,101,6	script	Payon Villager#payn::b9cde261	55,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,211,105,0	script	Payon Villager#payn::ac39db2e	89,{ 
+payon,211,105,0	script	Payon Villager#payn::a61c3cd7	536,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,198,117,7	script	Payon Villager#payn::d4135a79	577,{ 
+payon,198,117,7	script	Payon Villager#payn::741d3e34	777,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,159,77,0	script	Payon Villager#payn::3d765e1f	744,{ 
+payon,159,77,0	script	Payon Villager#payn::d39b35e9	534,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,80,91,4	script	Payon Villager#payn::fe26f4aa	69,{ 
+payon,80,91,4	script	Payon Villager#payn::a28e9c12	754,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,78,135,1	script	Payon Villager#payn::a0effc35	83,{ 
+payon,78,135,1	script	Payon Villager#payn::c0aa6621	637,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,50,143,2	script	Payon Villager#payn::a60ac0bc	778,{ 
+payon,50,143,2	script	Payon Villager#payn::69d98158	92,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,32,140,4	script	Payon Villager#payn::9761bbed	70,{ 
+payon,32,140,4	script	Payon Villager#payn::e8c048ef	740,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,21,141,2	script	Payon Villager#payn::8ec6d416	583,{ 
+payon,21,141,2	script	Payon Villager#payn::38e4655e	576,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,258,151,0	script	Crossbow Clan Recruit#payn::59fd80ae	634,{ 
+payon,258,151,0	script	Crossbow Clan Recruit#payn::f4923b7c	634,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,263,151,0	script	Crossbow Clan Recruit#payn::62aae5e5	727,{ 
+payon,263,151,0	script	Crossbow Clan Recruit#payn::7351e66c	727,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,265,145,0	script	Crossbow Clan Recruit#payn::7b585ed7	3,{ 
+payon,265,145,0	script	Crossbow Clan Recruit#payn::6e06c7ee	3,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,261,145,0	script	Crossbow Clan Recruit#payn::10f03920	732,{ 
+payon,261,145,0	script	Crossbow Clan Recruit#payn::2af10a85	732,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,263,143,0	script	Crossbow Clan Recruit#payn::191a8eb3	4021,{ 
+payon,263,143,0	script	Crossbow Clan Recruit#payn::12c13748	4021,{ 
 	npctalk "npcdialog";
 	end;
 }
 
 
 
-payon,74,325,5	script	Payon Villager#payn::9d91ac85	89,{ 
+payon,74,325,5	script	Payon Villager#payn::8a6cc16d	535,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,86,311,0	script	Payon Villager#payn::148d8db9	905,{ 
+payon,86,311,0	script	Payon Villager#payn::deb0c3e2	69,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,97,321,3	script	Payon Villager#payn::3d8677dd	641,{ 
+payon,97,321,3	script	Payon Villager#payn::83a588e9	577,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,100,302,7	script	Payon Villager#payn::8a3ef335	534,{ 
+payon,100,302,7	script	Payon Villager#payn::20f5fa18	62,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,123,313,4	script	Payon Villager#payn::01bffb05	753,{ 
+payon,123,313,4	script	Payon Villager#payn::67a5c8b2	537,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,139,309,6	script	Payon Villager#payn::32af8b43	577,{ 
+payon,139,309,6	script	Payon Villager#payn::fee8ea3b	125,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,83,256,4	script	Payon Villager#payn::3c570534	577,{ 
+payon,83,256,4	script	Payon Villager#payn::45fc5568	644,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,82,283,0	script	Payon Villager#payn::bc89bf3a	430,{ 
+payon,82,283,0	script	Payon Villager#payn::87c72a02	95,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,80,228,5	script	Payon Villager#payn::015111c8	732,{ 
+payon,80,228,5	script	Payon Villager#payn::c642cb99	536,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,106,218,2	script	Payon Villager#payn::bfdbf64d	634,{ 
+payon,106,218,2	script	Payon Villager#payn::14a0e88a	879,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,106,243,7	script	Payon Villager#payn::23c054a1	778,{ 
+payon,106,243,7	script	Payon Villager#payn::8f6cf362	753,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,111,283,0	script	Payon Villager#payn::9f5a4af0	774,{ 
+payon,111,283,0	script	Payon Villager#payn::9400459f	62,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,89,210,1	script	Payon Villager#payn::510c72c9	55,{ 
+payon,89,210,1	script	Payon Villager#payn::acbbee7c	539,{ 
 	npctalk "npcdialog";
 	end;
 }
 
 
-payon,248,301,4	script	Peco#payn::ed2f5ef2	428,{ 
+payon,248,301,4	script	Peco#payn::4438c570	428,{ 
 	npctalk "...";
 	end;
 }
 
-payon,253,299,1	script	Peco#payn::d3e897b5	428,{ 
+payon,253,299,1	script	Peco#payn::105aa36f	428,{ 
 	npctalk "...";
 	end;
 }
 
-payon,252,305,7	script	Peco#payn::943e252d	428,{ 
+payon,252,305,7	script	Peco#payn::8cea0b9f	428,{ 
 	npctalk "...";
 	end;
 }
 
-payon,245,308,2	script	Peco#payn::e588f347	428,{ 
+payon,245,308,2	script	Peco#payn::24e00ba0	428,{ 
 	npctalk "...";
 	end;
 }
 
-payon,251,283,2	script	Peco#payn::10f7fb8f	428,{ 
+payon,251,283,2	script	Peco#payn::40a38852	428,{ 
 	npctalk "...";
 	end;
 }
 
-payon,255,279,6	script	Peco#payn::32969533	428,{ 
+payon,255,279,6	script	Peco#payn::01118f30	428,{ 
 	npctalk "...";
 	end;
 }
 
-payon,120,140,7	script	Payon Villager#payn::b48b5a8d	905,{ 
+payon,120,140,7	script	Payon Villager#payn::db2b28b5	645,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,115,52,1	script	Payon Villager#payn::b1a51269	751,{ 
+payon,115,52,1	script	Payon Villager#payn::c5b37b6b	124,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon,125,32,6	script	Payon Villager#payn::3cad2aa0	92,{ 
+payon,125,32,6	script	Payon Villager#payn::418bff86	770,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-pay_fild01,330,352,4	script	Payon Guard#payn::24e67e0f	708,{ 
+pay_fild01,330,352,4	script	Payon Guard#payn::7455e12c	708,{ 
 	npctalk "Welcome to Payon";
 	end;
 }
 
-pay_fild01,337,352,4	script	Payon Guard#payn::516c0c13	708,{ 
+pay_fild01,337,352,4	script	Payon Guard#payn::e4ec1ca9	708,{ 
 	npctalk "Welcome to Payon";
 	end;
 }
 
-pay_fild01,332,347,0	script	Payon Adventurer#payn::3a77fc59	645,{ 
+pay_fild01,332,347,0	script	Payon Adventurer#payn::c7415eae	645,{ 
 	npctalk "npcdialog";
 	end;
 }
-pay_fild01,337,344,5	script	Payon Adventurer#payn::cc5b6147	118,{ 
-	npctalk "npcdialog";
-	end;
-}
-
-pay_fild01,341,348,0	script	Payon Adventurer#payn::c6921a62	567,{ 
+pay_fild01,337,344,5	script	Payon Adventurer#payn::a32050ca	118,{ 
 	npctalk "npcdialog";
 	end;
 }
 
-payon_in03,99,190,4	script	Payon Elder#payn::14f20e4b	107,{ 
+pay_fild01,341,348,0	script	Payon Adventurer#payn::792afc00	567,{ 
+	npctalk "npcdialog";
+	end;
+}
+
+payon_in03,99,190,4	script	Payon Elder#payn::633f7ef1	107,{ 
 	npctalk "I will make you a Ranger.";
 	end;
 }

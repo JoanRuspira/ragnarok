@@ -41,11 +41,11 @@ lou_in02,242,59,0	warp	lou_hospital1-2	1,1,louyang,260,93
 
 
 
-
+//costume
 louyang,130,63,0	warp	lou_house11-1	1,1,lou_in02,72,31
 lou_in02,72,28,0	warp	lou_house11-2	1,1,louyang,130,60
 
-
+//socket
 louyang,317,176,0	warp	lou_house21-1	1,1,lou_in02,121,31
 lou_in02,121,28,0	warp	lou_house21-2	1,1,louyang,317,173
 
