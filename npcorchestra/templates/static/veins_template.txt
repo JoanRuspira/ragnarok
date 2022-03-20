@@ -18,6 +18,16 @@ veins,223,359,2	script	Veins Guard#vns:npcid	939,{
 	end;
 }
 
+veins,67,209,5	script	Veins Guard#vns:npcid	939,{
+	npctalk "Welcome to Veins.";
+	end;
+}
+
+veins,72,209,3	script	Veins Guard#vns:npcid	939,{
+	npctalk "Welcome to Veins.";
+	end;
+}
+
 veins,328,137,7	script	Veins Villager#vns:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;

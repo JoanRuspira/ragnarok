@@ -53,7 +53,7 @@ def getCityNPCS(city):
             return lighthalzen_rekenber
         case "dicastes01":
             return generic + dicastes
-        case "rachel":
+        case "rachel" | "ra_temple":
             return generic + morroc + rachel
         case "niflheim":
             return generic + nifflheim
