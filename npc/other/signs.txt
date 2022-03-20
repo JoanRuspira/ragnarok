@@ -1533,7 +1533,12 @@ ama_fild01,61,68,3	script	Bulletin Board#sgn::261	837,{
 	close;
 }
 
-louyang,212,120,4	script	Bulletin Board#sgn::2262	837,{
+louyang,212,120,4	script	Bulletin Board#sgn::262	837,{
 	mes "Louyang, the ancient highland. The renewed city of the Louyang Island. Discover our secrets and history.";
+	close;
+}
+
+rachel,136,120,5	script	Bulletin Board#sgn::263	837,{
+	mes "Welcome to Rachel, the capital city of the Arunafeltz States. Visit Freya's Grand Temple and discover the beauty of this land.";
 	close;
 }

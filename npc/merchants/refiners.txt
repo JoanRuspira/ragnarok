@@ -36,6 +36,10 @@ lou_in01,25,23,5	script	Material Merchant#matmch10	726,{
 	callfunc "phramain","Material Merchant";
 	end;
 }
+rachel,195,49,0	script	Material Merchant#matmch11	726,{
+	callfunc "phramain","Material Merchant";
+	end;
+}
 prt_in,56,68,5	script	Material Merchant#matmch8	86,{
 	callfunc "phramain","Material Merchant";
 	end;
@@ -172,16 +176,18 @@ ayo_in01,184,171,1	script	Repairman#rpmn18	731,{
 	callfunc "repairmain","Repairman";
 	end;
 }
-prt_in,63,54,2	script	Repairman#rpmn00	86,{
-	callfunc "repairmain","Repairman";
-	end;
-}
-
 lou_in01,16,26,5	script	Repairman#rpmn19	10,{
 	callfunc "repairmain","Repairman";
 	end;
 }
-
+rachel,191,77,5	script	Repairman#rpmn20	731,{
+	callfunc "repairmain","Repairman";
+	end;
+}
+prt_in,63,54,2	script	Repairman#rpmn00	86,{
+	callfunc "repairmain","Repairman";
+	end;
+}
 yuno_in01,175,28,3	script	Repairman#rpmn000	86,{
 	callfunc "repairmain","Repairman";
 	end;
@@ -268,6 +274,10 @@ ayo_in01,180,192,5	script	Refiner#rfnr19	726,{
 	end;
 }
 lou_in01,15,14,6	script	Refiner#rfnr20	63,{
+	callfunc "refinemain","Refiner",0;
+	end;
+}
+rachel,194,79,4	script	Refiner#rfnr21	63,{
 	callfunc "refinemain","Refiner",0;
 	end;
 }

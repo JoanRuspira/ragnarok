@@ -117,18 +117,18 @@ rachel,74,150,7	script	Girl#1	914,{
 	close;
 }
 
-rachel,144,243,5	script	Cheshrumnir Guard::ChesGuard	934,{
-	mes "[Cheshrumnir Guard]";
-	mes "You are at Cheshrumnir,";
+rachel,144,243,5	script	Freya Temple Guard::ChesGuard	934,{
+	mes "[Freya Temple Guard]";
+	mes "You are at Freya's Temple,";
 	mes "the hallowed grounds occupied";
 	mes "by our pope, Freya's mortal";
 	mes "incarnation. In respect for";
-	mes "her Excellency, I expect you";
+	mes "her Excellency. We expect you";
 	mes "to enter with a pious heart.";
 	close;
 }
 
-rachel,155,243,3	duplicate(ChesGuard)	Cheshrumnir Guard	934
+rachel,155,243,3	duplicate(ChesGuard)	Freya Temple Guard	934
 
 
 rachel,209,198,3	script	Kinos#aru	921,{
@@ -331,7 +331,7 @@ rachel,197,137,3	script	Bard#aru	51,{
 
 ra_temple,148,91,3	script	Follower Akarna	916,{
 	mes "[Follower Akarna]";
-	mes "Cheshrumnir...";
+	mes "Freya Temple...";
 	mes "It is said that one";
 	mes "day, our goddess Freya";
 	mes "will descend to this place";

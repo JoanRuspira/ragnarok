@@ -21,19 +21,25 @@
 //============================================================
 
 rachel,150,249,0	warp	rachel01	1,1,ra_temple,120,30
-
+//inn
 rachel,81,33,0	warp	rachel02	1,1,ra_in01,237,198
 rachel,61,33,0	warp	rachel03	1,1,ra_in01,181,198
-rachel,217,55,0	warp	rachel04	1,1,ra_in01,250,34
-rachel,179,220,0	warp	rachel05	1,1,ra_in01,295,352
-rachel,103,240,0	warp	rachel06	1,1,ra_in01,343,193
+
+//small house
 rachel,216,160,0	warp	rachel07	1,1,ra_in01,135,282
+
+//weaparmor
 rachel,42,87,0	warp	rachel08	1,1,ra_in01,171,359
 rachel,42,109,0	warp	rachel09	1,1,ra_in01,171,388
+
+//tool dealer shops
 rachel,83,78,0	warp	rachel10	1,1,ra_in01,249,266
+
+//inn
 rachel,115,149,0	warp	rachel11	1,1,ra_in01,386,43
+
+//small rich house
 rachel,90,189,0	warp	rachel12	1,1,ra_in01,192,148
-rachel,108,200,0	warp	rachel13	1,1,ra_in01,213,83
 
 ra_in01,188,189,0	warp	rachel14	1,1,ra_in01,263,144
 ra_in01,296,144,0	warp	rachel15	1,1,ra_in01,235,189
@@ -47,7 +53,7 @@ ra_in01,367,255,0	warp	rachel22	1,1,ra_in01,326,296
 ra_in01,319,303,0	warp	rachel23	1,1,ra_in01,381,320
 ra_in01,178,370,0	warp	rachel24	1,1,ra_in01,113,385
 ra_in01,165,369,0	warp	rachel25	1,1,ra_in01,122,334
-ra_in01,241,299,0	warp	rachel26	1,1,ra_in01,193,312
+//ra_in01,241,299,0	warp	rachel26	1,1,ra_in01,193,312
 ra_in01,185,303,0	warp	rachel27	1,1,ra_in01,194,249
 ra_in01,357,61,0	warp	rachel28	1,1,ra_in01,310,62
 ra_in01,297,59,0	warp	rachel29	1,1,ra_in01,339,116

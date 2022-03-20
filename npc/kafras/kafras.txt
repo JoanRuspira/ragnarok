@@ -154,6 +154,32 @@ geffen,203,123,2	script	Kafra Employee::geffen2	114,{
 	callfunc "F_KafEnd",0,1,"in the city of Geffen";
 }
 
+// Rachel
+//============================================================
+rachel,137,107,3	script	Kafra Employee::kaf_rachel1	113,{
+	cutin "kafra_05",2;
+	callfunc "F_KafSet";
+	mes "[Kafra Employee]";
+	mes "The Kafra Corporation";
+	mes "is always working to provide";
+	mes "you with convenient services.";
+	mes "How may I be of assistance?";
+	callfunc "F_Kafra",5,0,0,60,930;
+	callfunc "F_KafEnd",0,1,"in the city of Rachel";
+}
+
+rachel,269,135,3	script	Kafra Employee::kaf_rachel2	114,{
+	cutin "kafra_04",2;
+	callfunc "F_KafSet";
+	mes "[Kafra Employee]";
+	mes "The Kafra Corporation";
+	mes "is always working to provide";
+	mes "you with convenient services.";
+	mes "How may I be of assistance?";
+	callfunc "F_Kafra",5,0,0,60,930;
+	callfunc "F_KafEnd",0,1,"in the city of Rachel";
+}
+
 // Morocc
 //============================================================
 morocc,156,97,4	script	Kafra Employee::kaf_morocc	113,{
