@@ -1,1149 +1,1159 @@
-veins,142,32,6	script	Veins Guard#vns:04a8f718	939,{
+veins,142,32,6	script	Veins Guard#vns:ca15701a	939,{
 	npctalk "Welcome to Veins.";
 	end;
 }
 
-veins,151,32,2	script	Veins Guard#vns:7fc56874	939,{
+veins,151,32,2	script	Veins Guard#vns:1905a8b1	939,{
 	npctalk "Welcome to Veins.";
 	end;
 }
 
-veins,212,359,6	script	Veins Guard#vns:38f05a26	939,{
+veins,212,359,6	script	Veins Guard#vns:fc2216a1	939,{
 	npctalk "Welcome to Veins.";
 	end;
 }
 
-veins,223,359,2	script	Veins Guard#vns:3d371a96	939,{
+veins,223,359,2	script	Veins Guard#vns:f7abee1e	939,{
 	npctalk "Welcome to Veins.";
 	end;
 }
 
-veins,328,137,7	script	Veins Villager#vns:6a375503	494,{
+veins,67,209,5	script	Veins Guard#vns:a483a639	939,{
+	npctalk "Welcome to Veins.";
+	end;
+}
+
+veins,72,209,3	script	Veins Guard#vns:e34bcd1f	939,{
+	npctalk "Welcome to Veins.";
+	end;
+}
+
+veins,328,137,7	script	Veins Villager#vns:e6039971	908,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,331,144,4	script	Veins Villager#vns:9dd77c7e	745,{
+veins,331,144,4	script	Veins Villager#vns:ba58dd7d	79,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,335,160,1	script	Veins Villager#vns:4aeb6cfe	779,{
+veins,335,160,1	script	Veins Villager#vns:87d177a2	603,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,328,174,5	script	Veins Villager#vns:d0d8791e	69,{
+veins,328,174,5	script	Veins Villager#vns:55ec8118	648,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,326,187,3	script	Veins Villager#vns:a5a2a72c	908,{
+veins,326,187,3	script	Veins Villager#vns:dd1e4e3d	732,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,317,187,7	script	Veins Villager#vns:a6a16d73	124,{
+veins,317,187,7	script	Veins Villager#vns:2d553c14	79,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,305,189,0	script	Veins Villager#vns:3246f462	526,{
+veins,305,189,0	script	Veins Villager#vns:957521e4	124,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,295,195,6	script	Veins Villager#vns:d6c91fc7	635,{
+veins,295,195,6	script	Veins Villager#vns:34103a3a	84,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,297,195,2	script	Veins Villager#vns:a17809c7	941,{
+veins,297,195,2	script	Veins Villager#vns:568c870d	481,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,301,208,7	script	Veins Villager#vns:6b6c62fd	745,{
+veins,301,208,7	script	Veins Villager#vns:3a6f2dbc	940,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,309,213,3	script	Veins Villager#vns:064deb70	637,{
+veins,309,213,3	script	Veins Villager#vns:f129f6fe	95,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,320,216,2	script	Veins Villager#vns:5b639408	494,{
+veins,320,216,2	script	Veins Villager#vns:eec9ebc2	49,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,324,226,6	script	Veins Villager#vns:dc41c975	430,{
+veins,324,226,6	script	Veins Villager#vns:a4f43208	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,326,226,2	script	Veins Villager#vns:05cdbb92	908,{
+veins,326,226,2	script	Veins Villager#vns:a7c6f8f3	79,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,330,236,1	script	Veins Villager#vns:79deb764	69,{
+veins,330,236,1	script	Veins Villager#vns:b447697b	644,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,323,243,5	script	Veins Villager#vns:ddc37c4e	89,{
+veins,323,243,5	script	Veins Villager#vns:91ec96fd	95,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,326,249,0	script	Veins Villager#vns:706b517b	930,{
+veins,326,249,0	script	Veins Villager#vns:d50b7199	744,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,332,253,1	script	Veins Villager#vns:c9657cb9	798,{
+veins,332,253,1	script	Veins Villager#vns:a1fb4a85	482,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,329,260,7	script	Veins Villager#vns:7a7044aa	95,{
+veins,329,260,7	script	Veins Villager#vns:4bfbc591	921,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,332,271,4	script	Veins Villager#vns:95362ea2	919,{
+veins,332,271,4	script	Veins Villager#vns:f7acf92b	733,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,330,278,5	script	Veins Villager#vns:ef9a8a92	70,{
+veins,330,278,5	script	Veins Villager#vns:275ebd3a	125,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,344,274,2	script	Veins Villager#vns:5d974d5e	929,{
+veins,344,274,2	script	Veins Villager#vns:990a7145	998,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,337,284,3	script	Veins Villager#vns:3e570235	667,{
+veins,337,284,3	script	Veins Villager#vns:4d6cf596	83,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,329,292,6	script	Veins Villager#vns:611d4a3d	930,{
+veins,329,292,6	script	Veins Villager#vns:f69e1ad1	482,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,333,298,4	script	Veins Villager#vns:636e5cac	85,{
+veins,333,298,4	script	Veins Villager#vns:268e10dc	734,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,336,307,2	script	Veins Villager#vns:c5e23194	85,{
+veins,336,307,2	script	Veins Villager#vns:67925ec2	70,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,289,216,1	script	Veins Villager#vns:1d0e6c09	644,{
+veins,289,216,1	script	Veins Villager#vns:db1166a0	69,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,285,227,4	script	Veins Villager#vns:60533848	740,{
+veins,285,227,4	script	Veins Villager#vns:58106b77	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,288,237,2	script	Veins Villager#vns:10fe39e6	84,{
+veins,288,237,2	script	Veins Villager#vns:efa1bf03	51,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,286,237,6	script	Veins Villager#vns:e5b769c0	99,{
+veins,286,237,6	script	Veins Villager#vns:023c63c0	526,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,276,230,7	script	Veins Villager#vns:a423e74d	95,{
+veins,276,230,7	script	Veins Villager#vns:1b4f2169	940,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,276,246,6	script	Veins Villager#vns:484757d7	79,{
+veins,276,246,6	script	Veins Villager#vns:25f0d597	494,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,282,251,0	script	Veins Villager#vns:b805b0d1	751,{
+veins,282,251,0	script	Veins Villager#vns:95d6fc91	635,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,275,260,5	script	Veins Villager#vns:7e5b150a	635,{
+veins,275,260,5	script	Veins Villager#vns:980e59fe	941,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,294,249,1	script	Veins Villager#vns:30cc1574	482,{
+veins,294,249,1	script	Veins Villager#vns:ad997861	84,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,303,240,6	script	Veins Villager#vns:b465fe48	745,{
+veins,303,240,6	script	Veins Villager#vns:5fc21126	828,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,302,248,2	script	Veins Villager#vns:4628f696	642,{
+veins,302,248,2	script	Veins Villager#vns:2be1e24d	93,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,297,263,4	script	Veins Villager#vns:3a9e5114	879,{
+veins,297,263,4	script	Veins Villager#vns:cea59bbc	637,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,300,278,1	script	Veins Villager#vns:5da7028a	745,{
+veins,300,278,1	script	Veins Villager#vns:ad8783af	930,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,285,263,3	script	Veins Villager#vns:b160c3d2	753,{
+veins,285,263,3	script	Veins Villager#vns:773053c7	798,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,275,271,6	script	Veins Villager#vns:7dca8525	740,{
+veins,275,271,6	script	Veins Villager#vns:965c6fb3	733,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,277,270,2	script	Veins Villager#vns:dbff94fb	744,{
+veins,277,270,2	script	Veins Villager#vns:8b752e6f	997,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,274,281,1	script	Veins Villager#vns:cbed7db1	998,{
+veins,274,281,1	script	Veins Villager#vns:e5fe7f75	95,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,285,276,5	script	Veins Villager#vns:aa4b86d8	89,{
+veins,285,276,5	script	Veins Villager#vns:a9347869	732,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,292,276,2	script	Veins Villager#vns:f48e787d	84,{
+veins,292,276,2	script	Veins Villager#vns:755426be	921,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,256,287,1	script	Veins Villager#vns:aa89edb3	645,{
+veins,256,287,1	script	Veins Villager#vns:e2abf285	642,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,246,294,5	script	Veins Villager#vns:b8c9f896	125,{
+veins,246,294,5	script	Veins Villager#vns:203bc5f1	430,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,238,309,7	script	Veins Villager#vns:d3afe00c	51,{
+veins,238,309,7	script	Veins Villager#vns:8a2e7ba4	58,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,227,327,4	script	Veins Villager#vns:bec7848b	68,{
+veins,227,327,4	script	Veins Villager#vns:3e00c9cc	635,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,221,338,3	script	Veins Villager#vns:6905daed	62,{
+veins,221,338,3	script	Veins Villager#vns:fd30ce83	940,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,217,352,5	script	Veins Villager#vns:e0865a3c	69,{
+veins,217,352,5	script	Veins Villager#vns:98f290b3	745,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,209,333,1	script	Veins Villager#vns:a7d6b52e	430,{
+veins,209,333,1	script	Veins Villager#vns:4579ac33	124,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,196,337,6	script	Veins Villager#vns:2840a1d0	921,{
+veins,196,337,6	script	Veins Villager#vns:8d2a83e8	779,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,204,318,7	script	Veins Villager#vns:ca02ded6	828,{
+veins,204,318,7	script	Veins Villager#vns:dccd49a5	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,212,310,4	script	Veins Villager#vns:caa4de0f	733,{
+veins,212,310,4	script	Veins Villager#vns:49539bc5	667,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,219,297,1	script	Veins Villager#vns:af052307	456,{
+veins,219,297,1	script	Veins Villager#vns:ba2f62d9	482,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,222,283,6	script	Veins Villager#vns:e6fc797b	69,{
+veins,222,283,6	script	Veins Villager#vns:2ce85a4e	83,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,224,283,2	script	Veins Villager#vns:5f489a42	92,{
+veins,224,283,2	script	Veins Villager#vns:a644b17e	583,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,230,271,4	script	Veins Villager#vns:5353fc15	648,{
+veins,230,271,4	script	Veins Villager#vns:f8b61405	635,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,226,256,6	script	Veins Villager#vns:266b17e9	733,{
+veins,226,256,6	script	Veins Villager#vns:55121db5	89,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,233,245,1	script	Veins Villager#vns:389d2264	456,{
+veins,233,245,1	script	Veins Villager#vns:cd1edf83	941,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,226,231,1	script	Veins Villager#vns:968e283f	641,{
+veins,226,231,1	script	Veins Villager#vns:c677d4b7	69,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,230,220,2	script	Veins Villager#vns:e1dd0811	929,{
+veins,230,220,2	script	Veins Villager#vns:eaf66cc9	93,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,224,212,7	script	Veins Villager#vns:d931ca84	95,{
+veins,224,212,7	script	Veins Villager#vns:7ade7548	95,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,233,206,1	script	Veins Villager#vns:b410ea44	828,{
+veins,233,206,1	script	Veins Villager#vns:11187852	51,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,231,192,5	script	Veins Villager#vns:e3d58439	732,{
+veins,231,192,5	script	Veins Villager#vns:8bc5f259	648,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,234,178,3	script	Veins Villager#vns:dc9373b2	745,{
+veins,234,178,3	script	Veins Villager#vns:863de845	642,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,211,227,3	script	Veins Villager#vns:2619924c	641,{
+veins,211,227,3	script	Veins Villager#vns:47c6195c	583,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,199,230,0	script	Veins Villager#vns:b6bb43d5	908,{
+veins,199,230,0	script	Veins Villager#vns:f770ed50	51,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,196,244,4	script	Veins Villager#vns:aaa4773e	494,{
+veins,196,244,4	script	Veins Villager#vns:092b6ccc	84,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,194,256,7	script	Veins Villager#vns:baeb2b7d	908,{
+veins,194,256,7	script	Veins Villager#vns:87fc5406	921,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,184,232,1	script	Veins Villager#vns:7722441d	456,{
+veins,184,232,1	script	Veins Villager#vns:f6bac445	740,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,170,241,6	script	Veins Villager#vns:e72e2775	51,{
+veins,170,241,6	script	Veins Villager#vns:f262b66e	51,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,172,241,2	script	Veins Villager#vns:c65ca58e	921,{
+veins,172,241,2	script	Veins Villager#vns:01b496b2	49,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,164,251,5	script	Veins Villager#vns:4c28a582	828,{
+veins,164,251,5	script	Veins Villager#vns:696c910b	79,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,154,263,0	script	Veins Villager#vns:9e9c3055	941,{
+veins,154,263,0	script	Veins Villager#vns:61b538cc	634,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,149,279,4	script	Veins Villager#vns:2224c45c	86,{
+veins,149,279,4	script	Veins Villager#vns:234d2fc5	732,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,153,286,2	script	Veins Villager#vns:abf1e693	634,{
+veins,153,286,2	script	Veins Villager#vns:8d3fe892	642,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,156,296,7	script	Veins Villager#vns:c80d952c	733,{
+veins,156,296,7	script	Veins Villager#vns:2c0c3795	941,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,163,310,0	script	Veins Villager#vns:6ccede0d	734,{
+veins,163,310,0	script	Veins Villager#vns:a7bd13af	636,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,145,290,6	script	Veins Villager#vns:6ae8df16	637,{
+veins,145,290,6	script	Veins Villager#vns:df154629	635,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,147,290,2	script	Veins Villager#vns:918f1cec	79,{
+veins,147,290,2	script	Veins Villager#vns:180daeb0	124,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,146,306,7	script	Veins Villager#vns:396bad3c	636,{
+veins,146,306,7	script	Veins Villager#vns:39916dc5	79,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,154,323,6	script	Veins Villager#vns:0b672a01	456,{
+veins,154,323,6	script	Veins Villager#vns:4fd325f9	744,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,166,329,1	script	Veins Villager#vns:7757375d	828,{
+veins,166,329,1	script	Veins Villager#vns:d6cf2dc2	930,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,182,329,5	script	Veins Villager#vns:8c3a043b	828,{
+veins,182,329,5	script	Veins Villager#vns:49f7a7b2	921,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,136,290,3	script	Veins Villager#vns:fa8c8fdc	798,{
+veins,136,290,3	script	Veins Villager#vns:6d123fd9	86,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,118,276,0	script	Veins Villager#vns:2c6efdb8	642,{
+veins,118,276,0	script	Veins Villager#vns:12ccf112	85,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,125,262,4	script	Veins Villager#vns:898b5fc6	637,{
+veins,125,262,4	script	Veins Villager#vns:05e81ad0	84,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,133,225,1	script	Veins Villager#vns:5ea04649	919,{
+veins,133,225,1	script	Veins Villager#vns:2d80c641	779,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,126,246,0	script	Veins Villager#vns:be6dbe63	642,{
+veins,126,246,0	script	Veins Villager#vns:e6d7d20c	481,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,122,231,1	script	Veins Villager#vns:1c853356	753,{
+veins,122,231,1	script	Veins Villager#vns:ebcfb837	482,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,130,214,5	script	Veins Villager#vns:4163e564	125,{
+veins,130,214,5	script	Veins Villager#vns:f4a71ae8	642,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,146,214,7	script	Veins Villager#vns:f6cf8572	79,{
+veins,146,214,7	script	Veins Villager#vns:df5aad67	51,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,162,207,4	script	Veins Villager#vns:c67344f6	648,{
+veins,162,207,4	script	Veins Villager#vns:9f2e0452	648,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,165,194,4	script	Veins Villager#vns:9d50ab02	754,{
+veins,165,194,4	script	Veins Villager#vns:d281703c	779,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,182,182,5	script	Veins Villager#vns:25d8e114	944,{
+veins,182,182,5	script	Veins Villager#vns:3e321226	732,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,196,177,0	script	Veins Villager#vns:383ce98c	93,{
+veins,196,177,0	script	Veins Villager#vns:9f7c1ddd	930,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,189,185,7	script	Veins Villager#vns:cbe4b2a7	603,{
+veins,189,185,7	script	Veins Villager#vns:b8fd7fd1	641,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,186,193,4	script	Veins Villager#vns:0018db75	929,{
+veins,186,193,4	script	Veins Villager#vns:990fe9a5	635,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,171,208,1	script	Veins Villager#vns:4277ff5e	943,{
+veins,171,208,1	script	Veins Villager#vns:4fbe2e27	83,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,181,211,3	script	Veins Villager#vns:2e81842f	943,{
+veins,181,211,3	script	Veins Villager#vns:239a4a24	667,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,136,304,2	script	Veins Villager#vns:1a41aeab	95,{
+veins,136,304,2	script	Veins Villager#vns:ef6694d9	931,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,127,307,6	script	Veins Villager#vns:d9c410de	124,{
+veins,127,307,6	script	Veins Villager#vns:af710a42	940,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,117,305,3	script	Veins Villager#vns:5cf4843c	124,{
+veins,117,305,3	script	Veins Villager#vns:811e718f	779,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,107,301,7	script	Veins Villager#vns:6dbd2630	430,{
+veins,107,301,7	script	Veins Villager#vns:365a7324	745,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,109,288,0	script	Veins Villager#vns:a36931db	635,{
+veins,109,288,0	script	Veins Villager#vns:51452b7f	526,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,110,278,1	script	Veins Villager#vns:4bacb44b	642,{
+veins,110,278,1	script	Veins Villager#vns:6c0fe382	642,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,99,272,7	script	Veins Villager#vns:45c0858f	755,{
+veins,99,272,7	script	Veins Villager#vns:302bb608	85,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,103,267,4	script	Veins Villager#vns:5fa18804	67,{
+veins,103,267,4	script	Veins Villager#vns:81bec6e1	942,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,104,247,2	script	Veins Villager#vns:5ccd1dd1	58,{
+veins,104,247,2	script	Veins Villager#vns:f0e5a756	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,102,247,6	script	Veins Villager#vns:87db0fbc	828,{
+veins,102,247,6	script	Veins Villager#vns:8bb56ceb	879,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,94,241,3	script	Veins Villager#vns:dc157489	634,{
+veins,94,241,3	script	Veins Villager#vns:7c1eaa6b	667,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,100,231,0	script	Veins Villager#vns:b32138d0	635,{
+veins,100,231,0	script	Veins Villager#vns:e135fcd1	84,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,110,222,1	script	Veins Villager#vns:797cbb57	79,{
+veins,110,222,1	script	Veins Villager#vns:1bf8c4e3	95,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,108,214,7	script	Veins Villager#vns:4a20caad	634,{
+veins,108,214,7	script	Veins Villager#vns:cc9890e7	86,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,115,218,6	script	Veins Villager#vns:08c8db2f	732,{
+veins,115,218,6	script	Veins Villager#vns:41b838d6	998,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,106,200,7	script	Veins Villager#vns:c56c9c4c	62,{
+veins,106,200,7	script	Veins Villager#vns:3867215a	644,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,119,205,1	script	Veins Villager#vns:4f8c2b13	945,{
+veins,119,205,1	script	Veins Villager#vns:b03f9b05	634,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,106,191,5	script	Veins Villager#vns:281e96e8	636,{
+veins,106,191,5	script	Veins Villager#vns:9cbc6804	62,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,124,192,2	script	Veins Villager#vns:5b6f0a94	645,{
+veins,124,192,2	script	Veins Villager#vns:37a692ea	921,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,132,189,5	script	Veins Villager#vns:78604445	84,{
+veins,132,189,5	script	Veins Villager#vns:6411ff1b	58,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,124,184,1	script	Veins Villager#vns:147eadb9	636,{
+veins,124,184,1	script	Veins Villager#vns:db38eaf9	583,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,115,174,6	script	Veins Villager#vns:73e3a105	740,{
+veins,115,174,6	script	Veins Villager#vns:7d235d14	753,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,117,174,2	script	Veins Villager#vns:a88d284c	58,{
+veins,117,174,2	script	Veins Villager#vns:09c8eeb1	482,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,109,182,7	script	Veins Villager#vns:680d12b3	931,{
+veins,109,182,7	script	Veins Villager#vns:20cae4c6	93,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,105,170,2	script	Veins Villager#vns:8c88e8a7	908,{
+veins,105,170,2	script	Veins Villager#vns:ae048651	58,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,69,201,0	script	Veins Villager#vns:bd9eee90	734,{
+veins,69,201,0	script	Veins Villager#vns:a83cf9a9	95,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,69,213,7	script	Veins Villager#vns:65e7d87c	83,{
+veins,69,213,7	script	Veins Villager#vns:253efe6e	667,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,77,219,2	script	Veins Villager#vns:222a0087	944,{
+veins,77,219,2	script	Veins Villager#vns:eee3d56f	67,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,86,207,0	script	Veins Villager#vns:02c74b88	79,{
+veins,86,207,0	script	Veins Villager#vns:b9c50f7d	667,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,125,161,1	script	Veins Villager#vns:c3ae2d8d	940,{
+veins,125,161,1	script	Veins Villager#vns:5659bb68	945,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,109,158,4	script	Veins Villager#vns:b33d5b03	744,{
+veins,109,158,4	script	Veins Villager#vns:36ed1b2e	641,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,102,149,7	script	Veins Villager#vns:6e80dc1c	58,{
+veins,102,149,7	script	Veins Villager#vns:88041188	636,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,109,144,4	script	Veins Villager#vns:6502b52e	70,{
+veins,109,144,4	script	Veins Villager#vns:973db4b0	85,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,91,147,2	script	Veins Villager#vns:6064214b	84,{
+veins,91,147,2	script	Veins Villager#vns:d7147b95	942,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,82,143,7	script	Veins Villager#vns:82a170c3	51,{
+veins,82,143,7	script	Veins Villager#vns:1975b454	69,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,93,159,0	script	Veins Villager#vns:2e03458d	70,{
+veins,93,159,0	script	Veins Villager#vns:6b465abe	482,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,87,164,5	script	Veins Villager#vns:c794688f	754,{
+veins,87,164,5	script	Veins Villager#vns:575d91ff	58,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,109,133,5	script	Veins Villager#vns:44c5db50	751,{
+veins,109,133,5	script	Veins Villager#vns:40dd950d	69,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,119,127,1	script	Veins Villager#vns:5f0f0dcc	803,{
+veins,119,127,1	script	Veins Villager#vns:a83a3513	943,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,125,117,7	script	Veins Villager#vns:69e9d0da	908,{
+veins,125,117,7	script	Veins Villager#vns:42016ec9	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,132,122,2	script	Veins Villager#vns:6ba9d5cc	636,{
+veins,132,122,2	script	Veins Villager#vns:8d392d5b	754,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,134,112,0	script	Veins Villager#vns:305b60e6	744,{
+veins,134,112,0	script	Veins Villager#vns:afcfee10	755,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,136,106,7	script	Veins Villager#vns:50dfdcf5	494,{
+veins,136,106,7	script	Veins Villager#vns:907f6ff0	779,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,144,109,4	script	Veins Villager#vns:1ad61551	644,{
+veins,144,109,4	script	Veins Villager#vns:e22d873b	92,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,142,119,7	script	Veins Villager#vns:d11bae13	86,{
+veins,142,119,7	script	Veins Villager#vns:783ba8d0	124,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,147,128,3	script	Veins Villager#vns:acc3e080	919,{
+veins,147,128,3	script	Veins Villager#vns:72a4f871	667,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,151,106,2	script	Veins Villager#vns:1edfb35d	742,{
+veins,151,106,2	script	Veins Villager#vns:e3298fe4	583,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,144,99,7	script	Veins Villager#vns:eaad1a5c	67,{
+veins,144,99,7	script	Veins Villager#vns:c5197c2c	70,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,151,94,6	script	Veins Villager#vns:28a58a69	642,{
+veins,151,94,6	script	Veins Villager#vns:ef296773	68,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,150,88,5	script	Veins Villager#vns:4595f666	456,{
+veins,150,88,5	script	Veins Villager#vns:d415f8b9	68,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,161,91,1	script	Veins Villager#vns:335a5d88	603,{
+veins,161,91,1	script	Veins Villager#vns:df4e6501	733,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,170,86,6	script	Veins Villager#vns:49236652	456,{
+veins,170,86,6	script	Veins Villager#vns:a4f9e8a8	89,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,172,86,2	script	Veins Villager#vns:f204897f	803,{
+veins,172,86,2	script	Veins Villager#vns:a31b80e4	931,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,176,80,7	script	Veins Villager#vns:fa016071	635,{
+veins,176,80,7	script	Veins Villager#vns:44f3a62b	941,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,181,88,4	script	Veins Villager#vns:96fcb432	641,{
+veins,181,88,4	script	Veins Villager#vns:bc82bef6	125,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,188,82,7	script	Veins Villager#vns:ded9d2f9	85,{
+veins,188,82,7	script	Veins Villager#vns:54dc20cf	942,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,189,70,2	script	Veins Villager#vns:d9ad3a06	798,{
+veins,189,70,2	script	Veins Villager#vns:b5201fc7	828,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,176,69,1	script	Veins Villager#vns:55c20fa0	753,{
+veins,176,69,1	script	Veins Villager#vns:d4fb0bcf	919,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,173,61,3	script	Veins Villager#vns:ddb2f36d	637,{
+veins,173,61,3	script	Veins Villager#vns:8a5462ed	753,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,133,59,1	script	Veins Villager#vns:d60b9422	751,{
+veins,133,59,1	script	Veins Villager#vns:22949007	940,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,124,55,0	script	Veins Villager#vns:d105abcd	733,{
+veins,124,55,0	script	Veins Villager#vns:279418fd	583,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,115,66,4	script	Veins Villager#vns:b535f43f	68,{
+veins,115,66,4	script	Veins Villager#vns:1dfdca9a	86,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,147,61,5	script	Veins Villager#vns:59558471	124,{
+veins,147,61,5	script	Veins Villager#vns:80858f82	667,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,153,51,1	script	Veins Villager#vns:575321bc	742,{
+veins,153,51,1	script	Veins Villager#vns:d4d27c1b	68,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,159,54,6	script	Veins Villager#vns:b9cc73b5	634,{
+veins,159,54,6	script	Veins Villager#vns:20e4f2c7	430,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,155,54,3	script	Veins Villager#vns:1d648bcc	494,{
+veins,155,54,3	script	Veins Villager#vns:f304d569	919,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,177,50,7	script	Veins Villager#vns:918cd9bd	430,{
+veins,177,50,7	script	Veins Villager#vns:432bd3e8	51,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,198,87,1	script	Veins Villager#vns:fb12624b	742,{
+veins,198,87,1	script	Veins Villager#vns:35208110	732,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,195,95,7	script	Veins Villager#vns:36abe4e8	879,{
+veins,195,95,7	script	Veins Villager#vns:47ef0df2	779,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,191,110,6	script	Veins Villager#vns:0892ec15	645,{
+veins,191,110,6	script	Veins Villager#vns:a8a0a9f3	931,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,201,102,7	script	Veins Villager#vns:bc34965f	741,{
+veins,201,102,7	script	Veins Villager#vns:4c95ce7b	779,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,208,98,0	script	Veins Villager#vns:c30d7ca0	526,{
+veins,208,98,0	script	Veins Villager#vns:712f80aa	68,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,202,92,0	script	Veins Villager#vns:b00e30fc	745,{
+veins,202,92,0	script	Veins Villager#vns:0e0e21c8	667,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,204,104,3	script	Veins Villager#vns:5100d400	70,{
+veins,204,104,3	script	Veins Villager#vns:24c6e4a0	583,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,207,103,1	script	Veins Villager#vns:4298817e	68,{
+veins,207,103,1	script	Veins Villager#vns:74ae980d	753,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,197,115,6	script	Veins Villager#vns:c5cf3ad9	943,{
+veins,197,115,6	script	Veins Villager#vns:b808c742	583,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,205,125,4	script	Veins Villager#vns:fac243eb	745,{
+veins,205,125,4	script	Veins Villager#vns:4c455f62	942,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,215,123,7	script	Veins Villager#vns:1250446f	494,{
+veins,215,123,7	script	Veins Villager#vns:293eb9c7	944,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,223,122,2	script	Veins Villager#vns:40eeeb72	745,{
+veins,223,122,2	script	Veins Villager#vns:fe255e23	92,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,228,114,3	script	Veins Villager#vns:d46bacf5	99,{
+veins,228,114,3	script	Veins Villager#vns:96e3db99	642,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,224,101,0	script	Veins Villager#vns:e15a05c7	943,{
+veins,224,101,0	script	Veins Villager#vns:c4101adb	753,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,232,110,1	script	Veins Villager#vns:053be9aa	779,{
+veins,232,110,1	script	Veins Villager#vns:39c7b21d	803,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,242,113,0	script	Veins Villager#vns:ed624b8b	93,{
+veins,242,113,0	script	Veins Villager#vns:026a7bbb	798,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,236,121,6	script	Veins Villager#vns:22777913	642,{
+veins,236,121,6	script	Veins Villager#vns:ab342a7e	930,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,223,126,1	script	Veins Villager#vns:09c87d37	51,{
+veins,223,126,1	script	Veins Villager#vns:3fe2111a	67,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,216,135,4	script	Veins Villager#vns:604b486e	942,{
+veins,216,135,4	script	Veins Villager#vns:05c8aa0b	51,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,215,148,1	script	Veins Villager#vns:0cd762e1	779,{
+veins,215,148,1	script	Veins Villager#vns:bb517468	645,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,200,150,5	script	Veins Villager#vns:470d2022	744,{
+veins,200,150,5	script	Veins Villager#vns:47a00f47	125,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,205,155,6	script	Veins Villager#vns:9253ce9f	930,{
+veins,205,155,6	script	Veins Villager#vns:615b71be	929,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,216,156,0	script	Veins Villager#vns:e2596eeb	930,{
+veins,216,156,0	script	Veins Villager#vns:1b0cb60a	943,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,219,162,3	script	Veins Villager#vns:6d72aeb3	99,{
+veins,219,162,3	script	Veins Villager#vns:474cba7d	921,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,200,162,4	script	Veins Villager#vns:4d79753a	481,{
+veins,200,162,4	script	Veins Villager#vns:be0973ba	753,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,230,129,6	script	Veins Villager#vns:c244b171	930,{
+veins,230,129,6	script	Veins Villager#vns:2bf87c6e	997,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,235,126,1	script	Veins Villager#vns:5073f4d6	79,{
+veins,235,126,1	script	Veins Villager#vns:7abbcace	124,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,250,119,7	script	Veins Villager#vns:c2551a25	754,{
+veins,250,119,7	script	Veins Villager#vns:417a6c41	70,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,257,123,0	script	Veins Villager#vns:a03c969c	931,{
+veins,257,123,0	script	Veins Villager#vns:ca7213f2	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,265,128,1	script	Veins Villager#vns:e7daebfc	89,{
+veins,265,128,1	script	Veins Villager#vns:fd1baa78	940,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,270,136,2	script	Veins Villager#vns:ec0f3f25	637,{
+veins,270,136,2	script	Veins Villager#vns:cab21d0a	69,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,274,154,1	script	Veins Villager#vns:66b4c8a8	49,{
+veins,274,154,1	script	Veins Villager#vns:3b9fdf89	642,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,293,167,6	script	Veins Villager#vns:1bedf317	62,{
+veins,293,167,6	script	Veins Villager#vns:bccb6ae1	919,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,188,176,3	script	Veins Villager#vns:fd860c90	945,{
+veins,188,176,3	script	Veins Villager#vns:467eb3d2	931,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,274,190,7	script	Veins Villager#vns:4afc23fc	734,{
+veins,274,190,7	script	Veins Villager#vns:c3075a44	940,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,281,188,4	script	Veins Villager#vns:e2f4c5fa	733,{
+veins,281,188,4	script	Veins Villager#vns:619e5c87	58,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,277,179,7	script	Veins Villager#vns:56fd2f79	70,{
+veins,277,179,7	script	Veins Villager#vns:64317f39	734,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,282,173,3	script	Veins Villager#vns:76892754	908,{
+veins,282,173,3	script	Veins Villager#vns:6fbc2c36	742,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,277,161,0	script	Veins Villager#vns:e0819a0c	942,{
+veins,277,161,0	script	Veins Villager#vns:78fae51f	86,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,277,161,4	script	Veins Villager#vns:68f32da4	69,{
+veins,277,161,4	script	Veins Villager#vns:2249a166	744,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,262,136,3	script	Veins Villager#vns:62efd0f4	919,{
+veins,262,136,3	script	Veins Villager#vns:7f3e7aac	741,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,249,123,2	script	Veins Villager#vns:a37de5a4	634,{
+veins,249,123,2	script	Veins Villager#vns:b9abdfb5	456,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,243,132,4	script	Veins Villager#vns:cf9d4298	67,{
+veins,243,132,4	script	Veins Villager#vns:f969f0ef	930,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,241,143,0	script	Veins Villager#vns:36720a74	83,{
+veins,241,143,0	script	Veins Villager#vns:0cfa8264	931,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,227,146,6	script	Veins Villager#vns:95e0dac7	732,{
+veins,227,146,6	script	Veins Villager#vns:aba3ce95	779,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,231,160,4	script	Veins Villager#vns:fc5afac9	58,{
+veins,231,160,4	script	Veins Villager#vns:c3383142	79,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,252,146,5	script	Veins Villager#vns:a63d6797	124,{
+veins,252,146,5	script	Veins Villager#vns:1e82374a	751,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,183,140,1	script	Veins Villager#vns:1c806509	482,{
+veins,183,140,1	script	Veins Villager#vns:68f6645b	635,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,179,159,4	script	Veins Villager#vns:1aa6741f	919,{
+veins,179,159,4	script	Veins Villager#vns:229722c9	921,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,170,161,1	script	Veins Villager#vns:3dd3b71a	940,{
+veins,170,161,1	script	Veins Villager#vns:db32d983	49,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,158,164,6	script	Veins Villager#vns:ddf2446a	908,{
+veins,158,164,6	script	Veins Villager#vns:aadb2ebe	430,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,152,170,3	script	Veins Villager#vns:4bee0776	908,{
+veins,152,170,3	script	Veins Villager#vns:958a22ac	945,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,144,169,7	script	Veins Villager#vns:386b0119	92,{
+veins,144,169,7	script	Veins Villager#vns:f533410d	69,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,136,166,0	script	Veins Villager#vns:6172a9df	70,{
+veins,136,166,0	script	Veins Villager#vns:3e3c0721	648,{
 	npctalk "npcdialog";
 	end;
 }
 
-veins,343,287,3	script	Suspicious Man#vns:98bcfbc1	481,{
+veins,343,287,3	script	Suspicious Man#vns:09b68e46	481,{
 	npctalk "I will make you a Stalker.";
 	end;
 }
 
-veins,341,282,7	script	Suspicious Woman#vns:98d76790	482,{
+veins,341,282,7	script	Suspicious Woman#vns:7442a440	482,{
 	npctalk "What!";
 	end;
 }
 
-veins,345,282,2	script	Suspicious Man#vns:51a3ca41	494,{
+veins,345,282,2	script	Suspicious Man#vns:f0fb4bad	494,{
 	npctalk "Leave.";
 	end;
 }
@@ -1153,449 +1163,479 @@ veins,345,282,2	script	Suspicious Man#vns:51a3ca41	494,{
 
 
 
-ve_in,246,292,5	script	Veins Villager#vns:f3bf3ec1	68,{
+ve_in,246,292,5	script	Veins Villager#vns:ac36e475	798,{
 	npctalk "npcdialog";
 	end;
 }
 
-ve_in,258,293,1	script	Veins Villager#vns:3aeffbc1	921,{
+ve_in,258,293,1	script	Veins Villager#vns:e940d776	124,{
 	npctalk "npcdialog";
 	end;
 }
 
-ve_in,260,304,4	script	Veins Villager#vns:23cefd89	124,{
+ve_in,260,304,4	script	Veins Villager#vns:8c39ccd6	733,{
 	npctalk "npcdialog";
 	end;
 }
 
-ve_in,177,302,1	script	Veins Villager#vns:05aa5afe	85,{
+ve_in,177,302,1	script	Veins Villager#vns:6285f1b9	921,{
 	npctalk "npcdialog";
 	end;
 }
 
-ve_in,176,309,6	script	Veins Villager#vns:bf9b7a0b	997,{
-	npctalk "npcdialog";
-	end;
-}
-
-
-ve_in,344,228,7	script	Veins Villager#vns:483cd32b	456,{
-	npctalk "npcdialog";
-	end;
-}
-
-ve_in,253,236,2	script	Veins Villager#vns:4152f550	751,{
-	npctalk "npcdialog";
-	end;
-}
-
-ve_in,364,239,7	script	Veins Villager#vns:42b3cc3a	641,{
-	npctalk "npcdialog";
-	end;
-}
-
-ve_in,374,241,1	script	Veins Villager#vns:00bbb158	742,{
-	npctalk "npcdialog";
-	end;
-}
-
-ve_in,377,252,6	script	Veins Villager#vns:823f2f08	67,{
-	npctalk "npcdialog";
-	end;
-}
-
-ve_in,356,253,2	script	Veins Villager#vns:66567cf5	125,{
-	npctalk "npcdialog";
-	end;
-}
-
-ve_in,338,243,1	script	Veins Villager#vns:140d0224	931,{
-	npctalk "npcdialog";
-	end;
-}
-
-ve_in,82,261,5	script	Veins Villager#vns:3d13da77	68,{
-	npctalk "npcdialog";
-	end;
-}
-
-ve_in,78,147,0	script	Veins Villager#vns:c242037b	125,{
-	npctalk "npcdialog";
-	end;
-}
-
-ve_in,87,145,7	script	Veins Villager#vns:9ea96180	49,{
-	npctalk "npcdialog";
-	end;
-}
-
-ve_in,99,155,1	script	Veins Villager#vns:9753be35	779,{
-	npctalk "npcdialog";
-	end;
-}
-
-ve_in,118,146,3	script	Veins Villager#vns:66849db4	740,{
-	npctalk "npcdialog";
-	end;
-}
-
-ve_in,121,159,5	script	Veins Villager#vns:6b734661	68,{
-	npctalk "npcdialog";
-	end;
-}
-
-ve_in,74,220,7	script	Veins Villager#vns:130b2cf7	942,{
-	npctalk "npcdialog";
-	end;
-}
-
-ve_in,100,226,3	script	Veins Villager#vns:3982ada4	753,{
-	npctalk "npcdialog";
-	end;
-}
-
-ve_in02,28,21,7	script	Veins Villager#vns:ea57a4a4	851,{
-	npctalk "npcdialog";
-	end;
-}
-
-ve_in02,45,26,3	script	Veins Villager#vns:606bf0f2	854,{
-	npctalk "npcdialog";
-	end;
-}
-
-ve_in02,31,42,6	script	Veins Villager#vns:65b127bb	850,{
-	npctalk "npcdialog";
-	end;
-}
-
-ve_in02,36,58,7	script	Veins Villager#vns:9313b6d2	853,{
-	npctalk "npcdialog";
-	end;
-}
-
-ve_in02,68,60,3	script	Veins Villager#vns:4b3fd160	855,{
-	npctalk "npcdialog";
-	end;
-}
-
-ve_in02,82,42,1	script	Veins Villager#vns:34baac0d	851,{
-	npctalk "npcdialog";
-	end;
-}
-
-ve_in02,52,47,3	script	Veins Villager#vns:fcf9f4cc	854,{
-	npctalk "npcdialog";
-	end;
-}
-
-ve_in02,64,38,5	script	Veins Villager#vns:f168f3fd	850,{
-	npctalk "npcdialog";
-	end;
-}
-
-ve_in,363,329,1	script	Veins Priest#hugel:eca0a87d	110,{
-	npctalk "npcdialog";
-	end;
-}
-
-ve_in,362,345,3	script	Veins Priest#hugel:758c9ae6	8,{
-	npctalk "npcdialog";
-	end;
-}
-
-ve_in,352,337,5	script	Veins Priest#hugel:d8bf7d4d	110,{
-	npctalk "npcdialog";
-	end;
-}
-
-ve_in,340,329,7	script	Veins Acolyte#hugel:ef9e9f36	4,{
-	npctalk "npcdialog";
-	end;
-}
-
-ve_in,351,353,4	script	Veins Priest#hugel:31ade723	616,{
-	npctalk "npcdialog";
-	end;
-}
-
-ve_in,354,326,1	script	Veins Villager#vns:3c7206b7	644,{
-	npctalk "npcdialog";
-	end;
-}
-
-ve_in,357,338,2	script	Veins Villager#vns:14d59b24	751,{
-	npctalk "npcdialog";
-	end;
-}
-
-ve_in,337,338,0	script	Veins Villager#vns:77a60f2b	828,{
-	npctalk "npcdialog";
-	end;
-}
-
-ve_in,365,355,4	script	Veins Villager#vns:028ad638	648,{
+ve_in,176,309,6	script	Veins Villager#vns:e08dd421	930,{
 	npctalk "npcdialog";
 	end;
 }
 
 
-ve_in,336,353,1	script	Golden Mace Recruit#vns:1ff22a58	8,{
+ve_in,344,228,7	script	Veins Villager#vns:9f5e88ee	945,{
 	npctalk "npcdialog";
 	end;
 }
 
-ve_in,342,251,1	script	Golden Mace Recruit#vns:4d1cac82	993,{
-	npctalk "npcdialog";
-	end;
-}
-ve_in,338,349,0	script	Golden Mace Recruit#vns:768d57ff	602,{
+ve_in,253,236,2	script	Veins Villager#vns:493a7193	68,{
 	npctalk "npcdialog";
 	end;
 }
 
-
-ve_fild04,112,57,7	script	Veins Adventurer#vns:5427392f	693,{
+ve_in,364,239,7	script	Veins Villager#vns:0ec33ca3	86,{
 	npctalk "npcdialog";
 	end;
 }
 
-ve_fild04,119,61,4	script	Veins Adventurer#vns:ab6c22db	628,{
+ve_in,374,241,1	script	Veins Villager#vns:acf55dda	734,{
 	npctalk "npcdialog";
 	end;
 }
 
-ve_fild04,125,56,3	script	Veins Adventurer#vns:26fe4bb7	688,{
+ve_in,377,252,6	script	Veins Villager#vns:778a3244	940,{
 	npctalk "npcdialog";
 	end;
 }
 
-ve_fild07,154,370,2	script	Veins Adventurer#vns:e8c998fa	690,{
+ve_in,356,253,2	script	Veins Villager#vns:40795221	69,{
 	npctalk "npcdialog";
 	end;
 }
 
-ve_fild07,149,360,0	script	Veins Adventurer#vns:728cfba4	5,{
+ve_in,338,243,1	script	Veins Villager#vns:d10ff5c6	85,{
 	npctalk "npcdialog";
 	end;
 }
 
-ve_fild07,155,362,1	script	Veins Adventurer#vns:bf50658c	747,{
+ve_in,82,261,5	script	Veins Villager#vns:9c1c1d50	86,{
 	npctalk "npcdialog";
 	end;
 }
 
-ve_fild07,158,367,5	script	Veins Adventurer#vns:b4d52a67	875,{
+ve_in,78,147,0	script	Veins Villager#vns:43016815	644,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,87,145,7	script	Veins Villager#vns:bd7a7ee6	919,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,99,155,1	script	Veins Villager#vns:78099bef	941,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,118,146,3	script	Veins Villager#vns:91505622	744,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,121,159,5	script	Veins Villager#vns:596a17da	95,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,74,220,7	script	Veins Villager#vns:9fbb0bda	779,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,100,226,3	script	Veins Villager#vns:a90e173a	742,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in02,28,21,7	script	Veins Villager#vns:a9d1edf6	851,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in02,45,26,3	script	Veins Villager#vns:5e7cd89b	854,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in02,31,42,6	script	Veins Villager#vns:2cce5947	850,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in02,36,58,7	script	Veins Villager#vns:09292f9c	853,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in02,68,60,3	script	Veins Villager#vns:db9b8bc5	855,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in02,82,42,1	script	Veins Villager#vns:ba7bf970	851,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in02,52,47,3	script	Veins Villager#vns:a2f58e82	854,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in02,64,38,5	script	Veins Villager#vns:631b0dd4	850,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,363,329,1	script	Veins Priest#hugel:8d80f445	110,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,362,345,3	script	Veins Priest#hugel:6f15fd2c	8,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,352,337,5	script	Veins Priest#hugel:1846212f	110,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,340,329,7	script	Veins Acolyte#hugel:93f37c80	4,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,351,353,4	script	Veins Priest#hugel:789238f8	616,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,354,326,1	script	Veins Villager#vns:41b31222	667,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,357,338,2	script	Veins Villager#vns:56e2f9db	942,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,337,338,0	script	Veins Villager#vns:bc04f7a4	636,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,365,355,4	script	Veins Villager#vns:c6883583	745,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+ve_in,336,353,1	script	Golden Mace Recruit#vns:9e6be48a	8,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_in,342,251,1	script	Golden Mace Recruit#vns:3bc708d5	993,{
+	npctalk "npcdialog";
+	end;
+}
+ve_in,338,349,0	script	Golden Mace Recruit#vns:5c73c16f	602,{
+	npctalk "npcdialog";
+	end;
+}
+
+
+ve_fild04,112,57,7	script	Veins Adventurer#vns:e2d0ef36	693,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_fild04,119,61,4	script	Veins Adventurer#vns:57ae5ce3	628,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_fild04,125,56,3	script	Veins Adventurer#vns:b7f5fd0b	688,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_fild07,154,370,2	script	Veins Adventurer#vns:15df1e0f	690,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_fild07,149,360,0	script	Veins Adventurer#vns:8b66088b	5,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_fild07,155,362,1	script	Veins Adventurer#vns:fea9d88b	747,{
+	npctalk "npcdialog";
+	end;
+}
+
+ve_fild07,158,367,5	script	Veins Adventurer#vns:4c017504	875,{
 	npctalk "npcdialog";
 	end;
 }
 
 
 
-ve_in,223,109,7	script	Veins Villager#vns:d2a72c61	929,{
+ve_in,223,109,7	script	Veins Villager#vns:c8b2f627	69,{
 	npctalk "npcdialog";
 	end;
 }
 
-ve_in,230,116,6	script	Veins Villager#vns:bcf6171d	941,{
+ve_in,230,116,6	script	Veins Villager#vns:2c95fc5a	70,{
 	npctalk "npcdialog";
 	end;
 }
 
-ve_in,238,115,0	script	Veins Villager#vns:20f8610d	733,{
+ve_in,238,115,0	script	Veins Villager#vns:eb757070	69,{
 	npctalk "npcdialog";
 	end;
 }
 
-ve_in,242,120,4	script	Veins Villager#vns:735db6fb	86,{
+ve_in,242,120,4	script	Veins Villager#vns:6abca704	62,{
 	npctalk "npcdialog";
 	end;
 }
 
-ve_in,247,111,1	script	Veins Villager#vns:f037b3f4	803,{
+ve_in,247,111,1	script	Veins Villager#vns:11fa45f6	944,{
 	npctalk "npcdialog";
 	end;
 }
 
-ve_in,233,126,5	script	Veins Villager#vns:45759f4f	99,{
+ve_in,233,126,5	script	Veins Villager#vns:d720de30	62,{
 	npctalk "npcdialog";
 	end;
 }
 
-ve_in,234,104,3	script	Veins Villager#vns:86eb0ae7	85,{
+ve_in,234,104,3	script	Veins Villager#vns:b2176b5a	79,{
 	npctalk "npcdialog";
 	end;
 }
 
-ra_fild12,293,209,4	script	Airport Staff#vns:17f6a07d	100,{
+ra_fild12,293,209,4	script	Airport Staff#vns:471eb982	100,{
 	npctalk "Welcome to Arunafeltz.";
 	end;
 }
 
-ra_fild12,294,199,1	script	Arunafeltz Villager#vns:59259831	49,{
+ra_fild12,294,199,1	script	Arunafeltz Villager#vns:ecdeb559	828,{
 	npctalk "npcdialog.";
 	end;
 }
 
-ra_fild12,303,195,2	script	Arunafeltz Villager#vns:8eaac5c6	741,{
+ra_fild12,303,195,2	script	Arunafeltz Villager#vns:423d1331	798,{
 	npctalk "npcdialog.";
 	end;
 }
 
-ra_fild12,298,190,4	script	Arunafeltz Villager#vns:e668821a	58,{
+ra_fild12,298,190,4	script	Arunafeltz Villager#vns:adc5be3c	997,{
 	npctalk "npcdialog.";
 	end;
 }
 
-ra_fild12,287,190,7	script	Arunafeltz Villager#vns:b9ef27a6	634,{
+ra_fild12,287,190,7	script	Arunafeltz Villager#vns:27cabe3a	95,{
 	npctalk "npcdialog.";
 	end;
 }
 
-ra_fild12,278,184,3	script	Arunafeltz Villager#vns:778e7d14	648,{
+ra_fild12,278,184,3	script	Arunafeltz Villager#vns:c2007ac4	635,{
 	npctalk "npcdialog.";
 	end;
 }
 
-ra_fild12,273,176,7	script	Arunafeltz Villager#vns:e5c8d6a3	744,{
+ra_fild12,273,176,7	script	Arunafeltz Villager#vns:341dc475	92,{
 	npctalk "npcdialog.";
 	end;
 }
 
-ra_fild12,266,180,2	script	Arunafeltz Villager#vns:0a42fe8a	95,{
+ra_fild12,266,180,2	script	Arunafeltz Villager#vns:a0827ab1	494,{
 	npctalk "npcdialog.";
 	end;
 }
 
-ra_fild12,264,187,7	script	Arunafeltz Villager#vns:c517354c	49,{
+ra_fild12,264,187,7	script	Arunafeltz Villager#vns:6764ac3b	526,{
 	npctalk "npcdialog.";
 	end;
 }
 
-ra_fild12,274,193,0	script	Arunafeltz Villager#vns:ef4dc12b	908,{
+ra_fild12,274,193,0	script	Arunafeltz Villager#vns:73ca91da	997,{
 	npctalk "npcdialog.";
 	end;
 }
 
-ra_fild12,278,201,3	script	Arunafeltz Villager#vns:fe4a9537	93,{
+ra_fild12,278,201,3	script	Arunafeltz Villager#vns:bd87bc00	58,{
 	npctalk "npcdialog.";
 	end;
 }
 
-ra_fild12,281,215,2	script	Arunafeltz Villager#vns:0cd36f44	58,{
-	npctalk "npcdialog.";
-	end;
-}
-
-
-ve_fild03,165,233,3	script	Arunafeltz Adventurer#vns:b37c2be1	741,{
-	npctalk "npcdialog.";
-	end;
-}
-
-ve_fild03,170,230,0	script	Arunafeltz Adventurer#vns:e26c4860	735,{
-	npctalk "npcdialog.";
-	end;
-}
-
-ve_fild03,176,232,1	script	Arunafeltz Adventurer#vns:7bd79d16	603,{
-	npctalk "npcdialog.";
-	end;
-}
-
-ve_fild03,162,232,5	script	Arunafeltz Adventurer#vns:d6aba22b	500,{
+ra_fild12,281,215,2	script	Arunafeltz Villager#vns:a305d1e7	644,{
 	npctalk "npcdialog.";
 	end;
 }
 
 
-
-ve_fild02,119,73,5	script	Arunafeltz Camper#vns:62a56f53	583,{
+ve_fild03,165,233,3	script	Arunafeltz Adventurer#vns:c03252de	741,{
 	npctalk "npcdialog.";
 	end;
 }
 
-ve_fild02,125,81,7	script	Arunafeltz Camper#vns:1ae611ce	99,{
+ve_fild03,170,230,0	script	Arunafeltz Adventurer#vns:741ee757	735,{
 	npctalk "npcdialog.";
 	end;
 }
 
-ve_fild02,130,93,3	script	Arunafeltz Camper#vns:6899ecba	779,{
+ve_fild03,176,232,1	script	Arunafeltz Adventurer#vns:e0e17edb	603,{
 	npctalk "npcdialog.";
 	end;
 }
 
-ve_fild02,142,100,1	script	Arunafeltz Camper#vns:8bc6a2ce	583,{
+ve_fild03,162,232,5	script	Arunafeltz Adventurer#vns:054d92b6	500,{
 	npctalk "npcdialog.";
 	end;
 }
 
-ve_fild02,147,100,6	script	Arunafeltz Camper#vns:b63a3f61	998,{
+
+
+ve_fild02,119,73,5	script	Arunafeltz Camper#vns:bd046611	641,{
 	npctalk "npcdialog.";
 	end;
 }
 
-ve_fild02,162,105,4	script	Arunafeltz Camper#vns:0a2a8513	745,{
+ve_fild02,125,81,7	script	Arunafeltz Camper#vns:1f981d7e	494,{
 	npctalk "npcdialog.";
 	end;
 }
 
-ve_fild02,170,101,3	script	Arunafeltz Camper#vns:5a9f34d0	93,{
+ve_fild02,130,93,3	script	Arunafeltz Camper#vns:59df0105	635,{
 	npctalk "npcdialog.";
 	end;
 }
 
-ve_fild02,140,80,0	script	Arunafeltz Camper#vns:22296f41	125,{
+ve_fild02,142,100,1	script	Arunafeltz Camper#vns:aa1e382e	945,{
 	npctalk "npcdialog.";
 	end;
 }
 
-ve_fild02,150,84,5	script	Arunafeltz Camper#vns:4854a62e	930,{
+ve_fild02,147,100,6	script	Arunafeltz Camper#vns:f0fcc491	70,{
 	npctalk "npcdialog.";
 	end;
 }
 
-ve_fild02,60,25,5	script	Arunafeltz Camper#vns:e4ada70d	908,{
+ve_fild02,162,105,4	script	Arunafeltz Camper#vns:79bedbde	456,{
 	npctalk "npcdialog.";
 	end;
 }
 
-ve_fild02,63,33,6	script	Arunafeltz Camper#vns:1dcff5f7	828,{
+ve_fild02,170,101,3	script	Arunafeltz Camper#vns:118691e5	754,{
 	npctalk "npcdialog.";
 	end;
 }
 
-ve_fild02,68,190,1	script	Arunafeltz Camper#vns:9b94ba83	482,{
+ve_fild02,140,80,0	script	Arunafeltz Camper#vns:3434c444	124,{
 	npctalk "npcdialog.";
 	end;
 }
 
-ve_fild02,59,194,3	script	Arunafeltz Camper#vns:9d8af282	745,{
+ve_fild02,150,84,5	script	Arunafeltz Camper#vns:85f72dbd	637,{
 	npctalk "npcdialog.";
 	end;
 }
 
-ve_fild02,74,199,6	script	Arunafeltz Camper#vns:ee6c1fd4	49,{
+ve_fild02,60,25,5	script	Arunafeltz Camper#vns:79dfa5de	798,{
 	npctalk "npcdialog.";
 	end;
 }
 
-ve_fild04,261,304,3	script	Arunafeltz Camper#vns:87ba5224	58,{
+ve_fild02,63,33,6	script	Arunafeltz Camper#vns:f9a340f3	742,{
 	npctalk "npcdialog.";
 	end;
 }
 
-ve_fild04,262,295,7	script	Arunafeltz Camper#vns:97d4c5bc	732,{
+ve_fild02,68,190,1	script	Arunafeltz Camper#vns:1c5bdf5a	430,{
 	npctalk "npcdialog.";
 	end;
 }
 
-ve_fild04,271,276,5	script	Arunafeltz Camper#vns:b51f3a88	919,{
+ve_fild02,59,194,3	script	Arunafeltz Camper#vns:4b594d5b	634,{
 	npctalk "npcdialog.";
 	end;
 }
 
-ve_fild04,281,273,2	script	Arunafeltz Camper#vns:2b49914d	803,{
+ve_fild02,74,199,6	script	Arunafeltz Camper#vns:f0426a2c	58,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ve_fild04,261,304,3	script	Arunafeltz Camper#vns:f32337af	89,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ve_fild04,262,295,7	script	Arunafeltz Camper#vns:48cb2d69	92,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ve_fild04,271,276,5	script	Arunafeltz Camper#vns:affd8a45	741,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ve_fild04,281,273,2	script	Arunafeltz Camper#vns:f97f67d0	941,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ve_fild05,82,217,6	script	Arunafeltz Camper#vns:6ffd7d68	49,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ve_fild05,94,204,5	script	Arunafeltz Camper#vns:173f455a	754,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ve_fild05,87,197,4	script	Arunafeltz Camper#vns:49d9a6c8	67,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ve_fild05,92,179,7	script	Arunafeltz Camper#vns:a90e0c76	798,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ve_fild05,109,200,1	script	Arunafeltz Camper#vns:47d2ff72	641,{
+	npctalk "npcdialog.";
+	end;
+}
+
+ve_fild05,100,205,2	script	Arunafeltz Camper#vns:7260c6f2	642,{
 	npctalk "npcdialog.";
 	end;
 }
