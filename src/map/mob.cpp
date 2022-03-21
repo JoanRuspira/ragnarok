@@ -1139,7 +1139,7 @@ int mob_spawn (struct mob_data *md)
 		md->bl.m = md->spawn->m;
 		md->bl.x = md->spawn->x;
 		md->bl.y = md->spawn->y;
-		md->bl.dir = md->spawn->dir;
+		//md->bl.dir = md->spawn->dir;
 
 		if( (md->bl.x == 0 && md->bl.y == 0) || md->spawn->xs || md->spawn->ys )
 		{	//Monster can be spawned on an area.
@@ -1168,7 +1168,8 @@ int mob_spawn (struct mob_data *md)
 	md->move_fail_count = 0;
 	md->ud.state.attack_continue = 0;
 	md->ud.target_to = 0;
-	md->ud.dir = md->spawn->dir;
+	//md->ud.dir = md->spawn->dir;
+	md->ud.dir = 0;
 	if( md->spawn_timer != INVALID_TIMER ) {
 		delete_timer(md->spawn_timer, mob_delayspawn);
 		md->spawn_timer = INVALID_TIMER;

@@ -4056,7 +4056,8 @@ static const char* npc_parse_mob(char* w1, char* w2, char* w3, char* w4, const c
 	// w1=<map name>{,<x>,<y>,<xs>{,<ys>}}
 	// w3=<mob name>{,<mob level>}    aldebaran,137,242	monster	Aldebaran Guard	20549,1,293000,100000
 	// w4=<mob id>,<amount>{,<delay1>{,<delay2>{,<event>{,<mob size>{,<mob ai>}}}}}
-	if( ( w1count = sscanf(w1, "%15[^,],%6hd,%6hd,%6hd,%6hd,%6hd", mapname, &x, &y, &xs, &ys, &dir) ) < 1
+	// if( ( w1count = sscanf(w1, "%15[^,],%6hd,%6hd,%6hd,%6hd,%6hd", mapname, &x, &y, &xs, &ys, &dir) ) < 1
+	if( ( w1count = sscanf(w1, "%15[^,],%6hd,%6hd,%6hd,%6hd", mapname, &x, &y, &xs, &ys) ) < 1
 	||	sscanf(w3, "%23[^,],%11d", mobname, &mob_lv) < 1
 	||	sscanf(w4, "%11d,%11d,%11u,%11u,%77[^,],%11d,%11d[^\t\r\n]", &mob_id, &num, &mob.delay1, &mob.delay2, mob.eventname, &size, &ai) < 2 )
 	{
@@ -4119,7 +4120,7 @@ static const char* npc_parse_mob(char* w1, char* w2, char* w3, char* w4, const c
 	mob.y = (unsigned short)y;
 	mob.xs = (signed short)xs;
 	mob.ys = (signed short)ys;
-	mob.dir = (unsigned short)dir;
+	//mob.dir = (unsigned short)dir;
 	if (mob_lv > 0 && mob_lv <= MAX_LEVEL)
 		mob.level = mob_lv;
 	if (size > SZ_SMALL && size <= SZ_BIG)
