@@ -39,6 +39,8 @@ def getCityNPCS(city):
             return generic + geffen
         case "aldebaran":
             return generic + aldebaran
+        case "yuno":
+            return generic + geffen + aldebaran + prontera
         case "hugel":
             return generic + hugel
         case "einbech":
