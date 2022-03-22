@@ -31,7 +31,7 @@ mobs_third_job = ["JOB_RUNE_KNIGHT","JOB_WARLOCK","JOB_RANGER","JOB_ARCH_BISHOP"
 
 all_cities = ["prt_monk", "umbala_natives", "umbala", "comodo", "morocc", "payon", "pay_arche","alberta", "ayothaya", "izlude",
  "geffen", "aldebaran", "hugel", "einbroch", "einbech", "mid_camp","lighthalzen", "lighthalzen_slums", "lighthalzen_rekenber",
-  "dicastes01", "cmd_fild07", "amatsu", "veins", "niflheim", "nameless_n", "louyang", "rachel","ra_temple"]
+  "dicastes01", "cmd_fild07", "amatsu", "veins", "niflheim", "nameless_n", "louyang", "rachel","ra_temple", "yuno"]
 
 cities_density = [
 60,  #prt_monk
@@ -62,6 +62,7 @@ cities_density = [
 130, # louyang
 170,   #rachel
 90, #ra_temple
+0, #yuno
 ]
 
 all_ins = ["alberta_in","payon_in01","payon_in02","payon_in03","izlude_in","morocc_in","moc_ruins","izlu2dun","alb2trea","in_rogue", "moc_prydb1",
@@ -102,7 +103,7 @@ ins_density = [20, #alberta_in
 ]
 
 top_headgears = ["Alice_Doll","Anubis_Helm","Apple_Of_Archer","Prontera_Army_Cap","Ayothaya_Hat","Banana_Hat","Bandana","Magestic_Goat",
-"Beret","Biretta","Bone_Head","Bone_Helm","Bongun_Hat","Boy's_Cap","Fedora","Cap","Hat_Of_Cook","Circlet","Classic_Hat","Corsair","Cowboy_Hat","Crown","Headgear_Of_Queen",
+"Beret","Biretta","Bone_Head","Bone_Helm","Bongun_Hat","Boy's_Cap","Fedora","Cap","Circlet","Classic_Hat","Corsair","Cowboy_Hat","Crown","Headgear_Of_Queen",
 "C_Desert_Prince","Dragon_Skull","Egg_Shell","Feather_Beret","Feather_Bonnet","Fricca_Circlet","Galapago_Cap","Gemmed_Sallet",
 "Goibne's_Helmet", "Golden_Gear", "Loard_Circlet", "Helm", "Helm_Of_Abyss", "Helm_Of_Angel","Headband_Of_Power","Hunting_Cap",
 "Indian_Headband","Gemmed_Crown","Joker_Jester","Mask_Of_Fox", "Soldier_Hat","Wizardry_Hat","Magni_Cap","Marionette_Doll","Mine_Helm",
