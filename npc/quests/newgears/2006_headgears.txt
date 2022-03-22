@@ -1,27 +1,5 @@
 //===== rAthena Script =======================================
 //= 2006 Headgear Quests
-//===== By: ==================================================
-//= DiviniaRO members, cleaned by reddozen
-//===== Current Version: =====================================
-//= 1.4
-//===== Compatible With: =====================================
-//= rAthena Project
-//===== Description: =========================================
-//= [Official Conversion]
-//= Censor Bar, Feather Beret, Valk. Helm, Hahoe Mask,
-//= Mythical Lion Mask, Bride Mask, Magistrate Hat and Ayam
-//===== Additional Comments: =================================
-//= NPC id's and dialog are custom, please replace
-//= 1.0a fixed typos, added missing names, more cleaned and
-//=     standartized stuff a bit [Lupus]
-//= 1.0b fixed Helm of Valkyries ingredients
-//= 1.0c corrected item names according to item_db [Lupus]
-//= 1.1 Full update. EuRO (?) dialogs, and positions. [L0ne_W0lf]
-//= 1.2 Fixed bugs in the Hahoe/Lion/Bride Mask NPC. [L0ne_W0lf]
-//=     Fixed some of the names to iRO.
-//= 1.3 Fixed some color code bugs in Ghenirhemin. Thanks to yyCC. [L0ne_W0lf]
-//= 1.3a Fixed wrong item names (due to copy/paste) [Lupus]
-//= 1.4 Chungwolmang now checks if the last item set should be deleted. (bugreport:4719) [L0ne_W0lf]
 //============================================================
 
 // Censor Bar

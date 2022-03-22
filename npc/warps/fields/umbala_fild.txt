@@ -1,16 +1,5 @@
-//===== rAthena Script =======================================
+//===== Script =======================================
 //= Umbala Field Warp Script
-//===== By: ==================================================
-//= Nana (1.0)
-//===== Current Version: =====================================
-//= 1.1
-//===== Compatible With: =====================================
-//= rAthena Project; RO Episode 6+
-//===== Description: =========================================
-//= [Official Conversion]
-//= Warp Points for Umbala Field
-//===== Additional Comments: =================================
-//= 1.1 Rescripted to Aegis 10.3 Standards. [L0ne_W0lf]
 //============================================================
 
 cmd_fild01,77,366,0	warp	um_fild1-1	1,1,um_fild03,114,53

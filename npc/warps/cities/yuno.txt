@@ -1,29 +1,8 @@
-//===== rAthena Script =======================================
-//= Juno Warp Script
-//===== By: ==================================================
-//= Nana (1.0)
-//= Sara-chan (1.1)
-//===== Current Version: =====================================
-//= 1.9
-//===== Compatible With: =====================================
-//= rAthena Project; RO Episode 5+
-//===== Description: =========================================
-//= Warp Points for Juno
-//===== Additional Comments: =================================
-//= 1.1 - Added Juno Airport warps
-//= 1.2 Moved all airports to Airplane Warps [Lupus]
-//= 1.3 Dr.Evil's yuno_05 warps update [Lupus]
-//= 1.4 optimized [Lupus]
-//= 1.5 Added Missing Juno warps [musashiden]
-//= 1.6 Corrected duplicate warps [Musashiden]
-//= 1.7 Yet another missing warp [Musashiden]
-//= 1.8 Added Juno Government Buildings warps
-//= 1.9 Updated Juno Government Buildings warps according
-//= to Schwarzwald Trilogy quest. [SinSloth]
-//= 2.0 Correct position of portals [JohnnyPlayy]
+//===== Script =======================================
+//= Yuno Warp Script
 //============================================================
 
-//= Juno City ================================================
+//= Yuno City ================================================
 yuno,158,15,0	warp	yun-yunfild	1,1,yuno_fild04,231,284
 yuno,117,135,0	warp	yun01	1,1,yuno_in01,116,37
 yuno_in01,116,40,0	warp	yun02	1,1,yuno,120,138

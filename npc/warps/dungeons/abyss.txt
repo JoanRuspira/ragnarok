@@ -1,16 +1,5 @@
-//===== rAthena Script =======================================
+//===== Script =======================================
 //= Abyss Lake Dungeon Warp Script
-//===== By: ==================================================
-//= Muad-Dib (1.0)
-//===== Current Version: =====================================
-//= 1.1
-//===== Compatible With: =====================================
-//= rAthena Project; RO Episode 10+
-//===== Description: =========================================
-//= Warp Points for Abyss Lake Dungeon
-//===== Additional Comments: =================================
-//= 1.0 Thanks to Muad-Dib for the temp warps [Lupus]
-//= 1.1 Corrected warp placements.
 //============================================================
 
 abyss_01,25,24,0	warp	abysslakedunwarp001	1,1,abyss_02,271,270
