@@ -17,7 +17,7 @@ def buildDynamic():
 def buildMobsfile():  
     mobs = buildMobs()
     fin = open("./templates/dynamic/mob_db_template.yml", "rt")
-    fout = open("../db/re/mob_db.yml", "wt")
+    fout = open("./generated/db/mob_db.yml", "wt")
     for line in fin:
         if "#END_NPCBUILDER_MOBS" in line:
             for mob in mobs:
@@ -51,14 +51,6 @@ def buildMob(mob_id, mob_name, ai):
     return mob
 
 
-
-
-
-
-
-
-
-
 def buildMobsCities():
     end_mob_id = calculateEndMobId()
     city_id = 0
@@ -69,7 +61,7 @@ def buildMobsCities():
         city_id += 1
 
 def buildMobsMap(city, map_density, end_mob_id):   
-    fout = open("../npc/mobs/npcorchestra/" + city + "_npcorchestra.txt", "wt")
+    fout = open("./generated/dynamic/" + city + "_npcorchestra.txt", "wt")
     city_mobs = []
     for _ in range(map_density):
         city_mobs.append(random.randint(initial_mob_id, end_mob_id))
@@ -84,7 +76,7 @@ def buildMobsMap(city, map_density, end_mob_id):
 def buildMobsAvailfile():
     mobs_avail = buildMobsAvail()
     fin = open("./templates/dynamic/mob_avail_template.yml", "rt")
-    fout = open("../db/import/mob_avail.yml", "wt")
+    fout = open("./generated/db/import/mob_avail.yml", "wt")
     for line in fin:
         if "#END_NPCBUILDER_MOBS" in line:
             for mob_avail in mobs_avail:

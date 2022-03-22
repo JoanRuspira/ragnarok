@@ -6,9 +6,9 @@ rem Writen by Jbain
 rem modified by lighta
 
 rem Run npc orchestra
-cd npcorchestra
+cd npc/npcorchestra
 py npcorchestra.py all
-cd ..
+cd ../..
 
 set SOURCE_DIR=%~dp0
 cd %SOURCE_DIR%
