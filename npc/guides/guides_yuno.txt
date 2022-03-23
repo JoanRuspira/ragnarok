@@ -2,11 +2,11 @@
 //= Yuno Guides
 //============================================================ 
 
-yuno,59,212,4	script	Juno Guide#yuno01::GuideJuno	700,{
-	mes "[Juno Guide]";
+yuno,59,212,4	script	Yuno Guide#yuno01::GuideYuno	700,{
+	mes "[Yuno Guide]";
 	mes "A place that takes the vision of the future, and gives it form in the present. Welcome to";
-	mes "the city of ^8B4513Juno^000000!";
-	F_Navi("[Juno Guide]");
+	mes "the city of ^8B4513Yuno^000000!";
+	F_Navi("[Yuno Guide]");
 	next;
 	while (1) {
 		switch(select("[ Main Facilities ]:[ Merchants & Helpers ]:Remove marks from Mini-Map:Cancel")) {
@@ -55,7 +55,7 @@ yuno,59,212,4	script	Juno Guide#yuno01::GuideJuno	700,{
 					next;
 					break;
 				case 9:
-					callsub L_Mark, F_Navi("Juno Library","yuno,338,203","^4B0082");
+					callsub L_Mark, F_Navi("Yuno Library","yuno,338,203","^4B0082");
 					viewpoint 1,338,203,8,0x4B0082;
 					next;
 					break;
@@ -75,7 +75,7 @@ yuno,59,212,4	script	Juno Guide#yuno01::GuideJuno	700,{
 					next;
 					break;
 				case 13:
-					mes "[Juno Guide]";
+					mes "[Yuno Guide]";
 					mes "I will mark the location of the";
 					mes F_Navi("Schweicherbil Magic Academy","yuno,323,280","^CD1039");
 					mes "on your mini-map.";
@@ -112,7 +112,7 @@ yuno,59,212,4	script	Juno Guide#yuno01::GuideJuno	700,{
 			}
 			break;
 		case 3:
-			mes "[Juno Guide]";
+			mes "[Yuno Guide]";
 			mes "Sure, I'll remove all marks from your mini-map.";
 			mes "Is there anything else I can do for you?";
 			viewpoint 2,194,140,0,0xFFFFFF;
@@ -135,18 +135,18 @@ yuno,59,212,4	script	Juno Guide#yuno01::GuideJuno	700,{
 			next;
 			break;
 		case 4:
-			mes "[Juno Guide]";
+			mes "[Yuno Guide]";
 			mes "Have fun on your adventures!";
 			close;
 		}
 	}
 	end;
 L_Mark:
-	mes "[Juno Guide]";
+	mes "[Yuno Guide]";
 	mes "I will mark the location";
 	mes "of the "+getarg(0);
 	mes "on your mini-map.";
 	mes "Would you like to check any other locations?";
 	return;
 }
-yuno,153,47,4	duplicate(GuideJuno)	Juno Guide#yuno02	700
+yuno,153,47,4	duplicate(GuideYuno)	Yuno Guide#yuno02	700

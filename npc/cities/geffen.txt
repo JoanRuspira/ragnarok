@@ -530,7 +530,7 @@ geffen_in,27,135,5	script	Waitress#elen	91,{
 		mes "[Elenore]";
 		mes "Gossip...?";
 		mes "Well, I've heard that they're opening a new Airship Service";
-		mes "in Juno!";
+		mes "in Yuno!";
 		next;
 		mes "[Elenore]";
 		mes "Or at least, they're planning to. The airship isn't really ready to take off just yet. In the meantime, there's some weird customer representative over there who's offering a teleport service.";
@@ -840,7 +840,7 @@ geffen_in,114,73,5	script	Hadenheim	709,{
 		mes "Schwarzwald Republic?";
 		next;
 		mes "[Hans Hadenheim]";
-		mes "You know, ally of the Rune-Midgarts Kingdom. Um... Our capital city is Juno?";
+		mes "You know, ally of the Rune-Midgarts Kingdom. Um... Our capital city is Yuno?";
 		next;
 		mes "[Hans Hadenheim]";
 		mes "You should really";
@@ -868,7 +868,7 @@ geffen_in,114,73,5	script	Hadenheim	709,{
 	mes "Have you been some of these new lands? They're really interesting and you can learn a lot of new things from these foreign cultures.";
 	next;
 	mes "[Hans Hadenheim]";
-	mes "Still, if you want to go sightseeing, I personally recommend that you visit my hometown of Juno. It's quite beautiful, you know.";
+	mes "Still, if you want to go sightseeing, I personally recommend that you visit my hometown of Yuno. It's quite beautiful, you know.";
 	close;
 }
 
@@ -1310,10 +1310,10 @@ geffen_in,109,72,2	script	Monster Scholar	90,{
 	case 2:
 		mes "[Estheres]";
 		mes "Recent news?";
-		mes "Well, the Juno Monster Museum is now open to the public. They have a fascinating exhibit and various monsters are now on display!";
+		mes "Well, the Yuno Monster Museum is now open to the public. They have a fascinating exhibit and various monsters are now on display!";
 		next;
 		mes "[Estheres]";
-		mes "I mean, I've read about all sorts of monsters in the Prontera and Juno Libraries, and encountered a few in the wild, but now I get a chance to see some strong monsters in real life!";
+		mes "I mean, I've read about all sorts of monsters in the Prontera and Yuno Libraries, and encountered a few in the wild, but now I get a chance to see some strong monsters in real life!";
 		next;
 		mes "[Estheres]";
 		mes "What's also exciting is the exploration achieved by you adventurers for the Rune-Midgarts Kingdom.";

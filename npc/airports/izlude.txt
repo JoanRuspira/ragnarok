@@ -7,9 +7,9 @@
 	mes "Welcome! Would you like";
 	mes "to board the Airship that";
 	mes "departs on the flight which stops";
-	mes "in Juno and Rachel?";
+	mes "in Yuno and Rachel?";
 	next;
-	if (select("Board the Airship to Juno/Rachel.:Cancel.") == 1) {
+	if (select("Board the Airship to Yuno/Rachel.:Cancel.") == 1) {
 		mes "[Airship Staff]";
 		mes "The boarding fee is";
 		mes "1,200 zeny. However, this";

@@ -2120,17 +2120,17 @@ airport,148,41,3	script	Freight Manager#toast	852,{
 	else {
 		mes "[Kirishu]";
 		mes "By any chance, are you";
-		mes "heading to Juno? I have";
+		mes "heading to Yuno? I have";
 		mes "a favor to ask if you're";
 		mes "going there. Or did you";
 		mes "need help finding your";
 		mes "way around this city?";
 		next;
-		switch(select("Sure, I'm heading to Juno.","I need help finding my way around!","Cancel.")) {
+		switch(select("Sure, I'm heading to Yuno.","I need help finding my way around!","Cancel.")) {
 			case 1:
 				mes "[Kirishu]";
 				mes "Well, if you're going to";
-				mes "Juno and you're not busy,";
+				mes "Yuno and you're not busy,";
 				mes "would you visit a pastry";
 				mes "chef named Kasis for me?";
 				mes "He's an old friend and I'm";
@@ -2146,7 +2146,7 @@ airport,148,41,3	script	Freight Manager#toast	852,{
 				mes "Of course, I'd be lying if";
 				mes "I said my hunger didn't factor";
 				mes "into my concern for his welfare. Anyway, if you have the time,";
-				mes "you can find Kasis in Juno's";
+				mes "you can find Kasis in Yuno's";
 				mes "Bakery. Thanks, adventurer.";
 				close;
 			case 2:

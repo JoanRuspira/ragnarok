@@ -3,7 +3,7 @@
 //============================================================
 
 
-//Einbroch Field <-> Juno Field
+//Einbroch Field <-> Yuno Field
 yuno_fild04,251,21,0	warp	ein001	1,1,ein_fild06,252,363
 ein_fild06,252,365,0	warp	ein001a	1,1,yuno_fild04,251,23
 yuno_fild07,73,219,0	warp	ein002	1,1,ein_fild06,338,170

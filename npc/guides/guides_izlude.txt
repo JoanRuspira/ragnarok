@@ -38,7 +38,7 @@
 				case 3:
 					mes "[Izlude Guide]";
 					mes "The "+F_Navi("International Airship",.@map$+",202,75","^0000FF");
-					mes "goes to ^8B4513Juno^000000 and ^8B4513Rachel^000000.";
+					mes "goes to ^8B4513Yuno^000000 and ^8B4513Rachel^000000.";
 					mes "Let me mark its location";
 					mes "on your mini-map.";
 					mes "Would you like to check any other locations?";

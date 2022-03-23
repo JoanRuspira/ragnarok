@@ -276,23 +276,4 @@ ayothaya,241,264,5	script	Young Man#5ayothaya2	843,{
 	close;
 }
 
-//============================================================
-// Old changelog
-//============================================================
-//= 0.1 Added a Sailor NPC to get back to Alberta [ZoDIaC]
-//= 0.2 fixed coords, dialogues
-//= 0.3 Fixed Warp name, ayotaya doesn't exist, even though iRO
-//=     decided to call it Ayotaya, it really is Ayothaya, like
-//=     that Yuno/Juno thing
-//= 0.4 Added the official warp npc for Ayothaya. [MasterOfMuppets]
-//= 1.0 Added most of the official npcs. The following quests were added: [MasterOfMuppets]
-//=     Tom Yum Goong quest, Holy Threads quest and Holier threads quest.
-//= 1.0a some checks, optimization [Lupus]
-//= 1.1 Missing delitem fixed by Poki#3 [Lupus]
-//= 1.1a Fixed a typo and clarified a comment at the bottom of the script [MasterOfMuppets]
-//= 1.2 Fixed exploits [Lupus]
-//= 1.3 Removed Duplicates [Silent]
-//= 1.4 Moved quests to quests/quests_ayothaya.txt [Evera]
-//= 1.5 Moved a few NPC's to quests/quests_ayothaya.txt [MasterOfMuppets]
-//============================================================
 alberta,190,156,3	duplicate(Aibakthing_ayothaya)	Aibakthing#ayo	571

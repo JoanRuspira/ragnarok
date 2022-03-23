@@ -879,7 +879,7 @@ yuno,241,52,3	script	Old Blacksmith#hgear	813,{
 	}
 	else {
 		mes "[Hatbyr Mhore]";
-		mes "I happened to come to Juno while I was traveling around the world. Being someplace up in the clouds makes me a little nervous, but still, the scenery looks great from up here.";
+		mes "I happened to come to Yuno while I was traveling around the world. Being someplace up in the clouds makes me a little nervous, but still, the scenery looks great from up here.";
 		next;
 		mes "[Hatbyr Mhore]";
 		mes "Although I really enjoy traveling more than staying in my shop, I'm still a Blacksmith at heart and I always gotta be making something. It's been a while since I've made my last creation...";
@@ -1448,7 +1448,7 @@ xmas_in,35,30,3	script	Hat Merchant#zero	797,{
 			if (select("No thanks.:Yes.") == 1) {
 				mes "[Mad Hatter]";
 				mes "Umm, okay...";
-				mes "I guess being the life of the party is a bit too much for you, eh? Hmpf. Well, I know a good library in Juno where you can hang out...";
+				mes "I guess being the life of the party is a bit too much for you, eh? Hmpf. Well, I know a good library in Yuno where you can hang out...";
 				close;
 			}
 			mes "^3355FF*Rustle Rustle Splat Splat*^000000";
@@ -2120,7 +2120,7 @@ morocc,273,79,4	script	Educated Traveller	99,{
 				mes "Having a cat for a hat makes a certain sort of sense if you'll just hear me out...";
 				next;
 				mes "[Lee Hester]";
-				mes "At the Juno Library, I read in this issue of 'Funtime Kid Science' that all cats, whether they're wild or domesticated, are hunters that have mastered the art of saving their energy.";
+				mes "At the Yuno Library, I read in this issue of 'Funtime Kid Science' that all cats, whether they're wild or domesticated, are hunters that have mastered the art of saving their energy.";
 				next;
 				mes "[Lee Hester]";
 				mes "After investing many hours napping in the sun, they've developed the perfect position to nap in any place and in any condition: the lazy feline droop.";
@@ -2195,7 +2195,7 @@ morocc,273,79,4	script	Educated Traveller	99,{
 				mes "Do you ever notice how on a hot day, you feel a lot cooler when you wear white, but you're a lot warmer when you wear black?";
 				next;
 				mes "[Lee Hester]";
-				mes "After some intense thinking, and reading some 'Funtime Kid Science' magazines in Juno, I realized that the color black absorbs sunlight and heat, and that the color white reflects it.";
+				mes "After some intense thinking, and reading some 'Funtime Kid Science' magazines in Yuno, I realized that the color black absorbs sunlight and heat, and that the color white reflects it.";
 				next;
 				mes "[Lee Hester]";
 				mes "So...";
@@ -2269,7 +2269,7 @@ morocc,273,79,4	script	Educated Traveller	99,{
 				mes "I know, I know, having a Racoon on your head sounds ridiculous, but it makes a certain sort of sense if you'll just hear me out.";
 				next;
 				mes "[Lee Hester]";
-				mes "So I learned from an issue of 'Funtime Kid Science' at Juno Library that different colors absorb or reflect sunlight.";
+				mes "So I learned from an issue of 'Funtime Kid Science' at Yuno Library that different colors absorb or reflect sunlight.";
 				next;
 				mes "[Lee Hester]";
 				mes "Wearing one color makes you feel warmer, and another makes you feel cooler on a hot day.";
@@ -2357,7 +2357,7 @@ morocc,273,79,4	script	Educated Traveller	99,{
 				mes "I know putting a Fish on top of your head doesn't sound like the best idea, but it makes a certain sort of sense if you'll just hear me out.";
 				next;
 				mes "[Lee Hester]";
-				mes "So I was reading some issues of 'Funtime Kid Science' at the Juno Library, and read about animals that take naps under the sun when they feel really hot.";
+				mes "So I was reading some issues of 'Funtime Kid Science' at the Yuno Library, and read about animals that take naps under the sun when they feel really hot.";
 				next;
 				mes "[Lee Hester]";
 				mes " So then I thought...";
@@ -2406,7 +2406,7 @@ morocc,273,79,4	script	Educated Traveller	99,{
 		mes "I live here, I should know. Still, nothing can beat the Morocc sunset.";
 		next;
 		mes "[Lee Hester]";
-		mes "It's amazing how so many different animals can live in the desert. I've been spending some time researching the ways of animals, reading books in the Juno Library...";
+		mes "It's amazing how so many different animals can live in the desert. I've been spending some time researching the ways of animals, reading books in the Yuno Library...";
 		next;
 		mes "[Lee Hester]";
 		mes "Trying to figure out the Animal Kingdom's secrets of dealing with the heat.";

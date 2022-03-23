@@ -7,7 +7,7 @@ lhz_airport,143,43,5	script	Airport Staff#lhz_air1a::lhz_airport1	100,{
 	mes "Welcome to the";
 	mes "Lighthalzen Airport,";
 	mes "where we offer nonstop";
-	mes "flights to Einbroch, Juno and Hugel.";
+	mes "flights to Einbroch, Yuno and Hugel.";
 	next;
 	if (select("Board the Airship.:Cancel.") == 1) {
 		mes "[Airport Staff]";
