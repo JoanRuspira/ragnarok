@@ -4,7 +4,7 @@ import os
 import re
 from lists import *
 
-iterations = 4 #16 of each job
+iterations = 4
 initial_mob_id = 20021
 
 # 1000-3999 or 20020-31999

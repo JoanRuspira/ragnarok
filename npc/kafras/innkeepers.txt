@@ -26,6 +26,12 @@ ra_in01,241,195,3	script	Inn Keeper#rachel2	959,{
 	warp "ra_in01",294,194; end;
 }
 
+//======================== Yuno ====================================
+yuno_in01,36,179,4	script	Inn Keeper#yuno	46,{
+	callfunc "F_InnMaid","[Inn Keeper]","'The Three Cups Tavern and Inn'","yuno_in01",36,174;
+	warp "yuno_in01",99,169; end;
+}
+
 //====================== Ayothaya ===================================
 ayo_in01,31,95,3	script	Inn Keeper#Ayothaya	61,{
 	callfunc "F_InnMaid","[Inn Keeper]","'The Ancient Snake Inn'","ayo_in01",26,96;
@@ -81,7 +87,7 @@ dic_in01,377,278,5	script	Inn Keeper#Dicastes	53,{
 	warp "dic_in01",358,282; end;
 }
 
-//======================== Alberta ====================================
+//======================== Izlude ====================================
 izlude_in,116,76,5	script	Inn Keeper#Izlude	798,{
 	callfunc "F_InnMaid","[Inn Keeper]","'The Tumbing Dantini'","izlude_in",111,73;
 	warp "izlude_in",111,73; end;

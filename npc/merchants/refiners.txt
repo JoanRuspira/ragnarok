@@ -44,7 +44,7 @@ prt_in,56,68,5	script	Material Merchant#matmch8	86,{
 	callfunc "phramain","Material Merchant";
 	end;
 }
-yuno_in01,171,27,4	script	Material Merchant#matmch9	88,{
+yuno_in01,164,23,7	script	Material Merchant#matmch9	88,{
 	callfunc "phramain","Material Merchant";
 	end;
 }
@@ -95,7 +95,7 @@ prt_in,63,69,3	script	Material Polisher#matpol00	84,{
 	callfunc "orimain","Material Polisher";
 	end;
 }
-yuno_in01,164,27,4	script	Material Polisher#matpol000	88,{
+yuno_in01,166,31,5	script	Material Polisher#matpol000	10,{
 	callfunc "orimain","Material Polisher";
 	end;
 }
@@ -188,7 +188,7 @@ prt_in,63,54,2	script	Repairman#rpmn00	86,{
 	callfunc "repairmain","Repairman";
 	end;
 }
-yuno_in01,175,28,3	script	Repairman#rpmn000	86,{
+yuno_in01,162,27,6	script	Repairman#rpmn000	731,{
 	callfunc "repairmain","Repairman";
 	end;
 }
@@ -285,7 +285,7 @@ prt_in,63,60,0	script	#rfnrRefiner00	85,{
 	callfunc "refinemain","Refiner",0;
 	end;
 }
-yuno_in01,171,21,4	script	Refiner#rfnr000	88,{
+yuno_in01,173,25,2	script	Refiner#rfnr000	726,{
 	callfunc "refinemain","Refiner",0;
 	end;
 }

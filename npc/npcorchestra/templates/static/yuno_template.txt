@@ -3153,17 +3153,17 @@ yuno,152,283,0	script	Yuno Guard#yuno:npcid	852,{
 	end;
 }
 
-yuno,163,283,0	script	Yuno Guard#yuno:npcid	852,{
+yuno,163,283,3	script	Yuno Guard#yuno:npcid	852,{
 	npctalk "Welcome to Yuno.";
 	end;
 }
 
-yuno,227,292,0	script	Yuno Guard#yuno:npcid	852,{
+yuno,227,292,4	script	Yuno Guard#yuno:npcid	852,{
 	npctalk "Welcome to Yuno.";
 	end;
 }
 
-yuno,165,228,0	script	Yuno Guard#yuno:npcid	852,{
+yuno,165,228,3	script	Yuno Guard#yuno:npcid	852,{
 	npctalk "Welcome to Yuno.";
 	end;
 }
@@ -3178,7 +3178,7 @@ yuno,334,183,0	script	Yuno Guard#yuno:npcid	852,{
 	end;
 }
 
-yuno,263,320,0	script	Yuno Guard#yuno:npcid	852,{
+yuno,263,320,3	script	Yuno Guard#yuno:npcid	852,{
 	npctalk "Welcome to Yuno.";
 	end;
 }
@@ -3190,5 +3190,325 @@ yuno,153,18,5	script	Yuno Guard#yuno:npcid	852,{
 
 yuno,162,18,3	script	Yuno Guard#yuno:npcid	852,{
 	npctalk "Welcome to Yuno.";
+	end;
+}
+
+yuno,47,165,5	script	Yuno Guard#yuno:npcid	852,{
+	npctalk "Welcome to Yuno.";
+	end;
+}
+
+yuno,60,165,3	script	Yuno Guard#yuno:npcid	852,{
+	npctalk "Welcome to Yuno.";
+	end;
+}
+
+yuno,84,197,5	script	Yuno Guard#yuno:npcid	852,{
+	npctalk "Welcome to Yuno.";
+	end;
+}
+
+yuno,81,184,7	script	Yuno Guard#yuno:npcid	852,{
+	npctalk "Welcome to Yuno.";
+	end;
+}
+
+yuno_in01,169,21,1	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,169,28,4	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,100,29,3	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,102,21,0	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,108,31,7	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,117,35,2	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,32,28,3	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,19,28,0	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,27,19,2	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,31,171,2	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,26,178,5	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,19,178,5	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,22,171,1	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,65,164,7	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,25,156,0	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,31,157,3	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,31,164,4	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,16,162,7	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,20,151,1	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,23,159,2	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,23,165,4	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,20,182,5	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,120,168,6	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,125,159,3	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,108,166,1	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,108,154,4	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,98,157,2	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,96,151,0	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,90,162,2	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,23,100,5	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,29,91,3	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,164,98,2	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,170,93,7	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,105,89,2	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in01,95,88,0	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in04,173,25,7	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in04,186,24,2	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in04,163,29,4	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in04,158,23,7	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno_in04,161,13,3	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno,47,248,5	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno,49,254,1	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno,47,262,0	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno,50,268,1	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno,43,277,6	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno,45,277,2	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno,36,266,7	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno,33,267,4	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno,33,272,6	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno,24,266,2	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno,19,271,4	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno,62,249,3	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno,58,255,4	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno,60,259,0	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno,58,267,7	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno,63,277,4	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno,68,273,2	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno,72,262,0	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno,78,272,4	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+yuno,85,270,3	script	Yuno Citizen#yuno:npcid	spriteid,{
+	npctalk "npcdialog";
 	end;
 }

@@ -60,14 +60,14 @@ cities_density = [
 100, #niff
 40, #nameless
 130, # louyang
-170,   #rachel
+180,   #rachel
 90, #ra_temple
-0, #yuno
+270, #yuno
 ]
 
 all_ins = ["alberta_in","payon_in01","payon_in02","payon_in03","izlude_in","morocc_in","moc_ruins","izlu2dun","alb2trea","in_rogue", "moc_prydb1",
 "cmd_in01","cmd_in02","um_in","geffen_in","aldeba_in","alde_alche","moc_fild19", "hu_in01","ein_in01","airport", "lhz_in01", "lhz_in02",
-"dic_in01","nif_in","mid_campin","ayo_in01","ayo_in02","ama_in01","lou_in01","lou_in02","ra_in01"]
+"dic_in01","nif_in","mid_campin","ayo_in01","ayo_in02","ama_in01","lou_in01","lou_in02","ra_in01","airplane"]
 ins_density = [20, #alberta_in
 20, #payon_in01
 12, #payon_in02
@@ -99,7 +99,8 @@ ins_density = [20, #alberta_in
 10, #ama_in01
 17, #lou_in01
 17, #lou_in02
-30 #ra_in01
+30, #ra_in01
+25 #airplane
 ]
 
 top_headgears = ["Alice_Doll","Anubis_Helm","Apple_Of_Archer","Prontera_Army_Cap","Ayothaya_Hat","Banana_Hat","Bandana","Magestic_Goat",

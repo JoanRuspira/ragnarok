@@ -2,7 +2,7 @@
 //= Yuno Guides
 //============================================================ 
 
-yuno,59,212,4	script	Yuno Guide#yuno01::GuideYuno	700,{
+yuno,217,299,4	script	Yuno Guide#yuno01::GuideYuno	705,{
 	mes "[Yuno Guide]";
 	mes "A place that takes the vision of the future, and gives it form in the present. Welcome to";
 	mes "the city of ^8B4513Yuno^000000!";
@@ -149,4 +149,5 @@ L_Mark:
 	mes "Would you like to check any other locations?";
 	return;
 }
-yuno,153,47,4	duplicate(GuideYuno)	Yuno Guide#yuno02	700
+yuno,162,89,4	duplicate(GuideYuno)	Yuno Guide#yuno02	705
+yuno,56,169,4	duplicate(GuideYuno)	Yuno Guide#yuno03	705
