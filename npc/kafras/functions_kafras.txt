@@ -561,6 +561,9 @@ function	script	F_KafSet	{
 	} else if (.@map$ == "dicastes01") {
 		setarray @wrpP[0], 1500;
 		setarray @wrpD$[0], "Lighthalzen";
+	} else if (.@map$ == "rachel") {
+		setarray @wrpP[0], 1250,1250,1500,1250;
+		setarray @wrpD$[0], "Lighthalzen", "Hel Camp", "Nifflheim", "Veins";
 	} else if (.@map$ == "comodo" ) {
 		setarray @wrpD$[0], "Morocc", "Pharos Islet", "Umbala";
 		setarray @wrpP[0], 1800, 1200, 1800;

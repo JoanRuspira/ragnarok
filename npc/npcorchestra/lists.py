@@ -67,7 +67,8 @@ cities_density = [
 
 all_ins = ["alberta_in","payon_in01","payon_in02","payon_in03","izlude_in","morocc_in","moc_ruins","izlu2dun","alb2trea","in_rogue", "moc_prydb1",
 "cmd_in01","cmd_in02","um_in","geffen_in","aldeba_in","alde_alche","moc_fild19", "hu_in01","ein_in01","airport", "lhz_in01", "lhz_in02",
-"dic_in01","nif_in","mid_campin","ayo_in01","ayo_in02","ama_in01","lou_in01","lou_in02","ra_in01","airplane"]
+"dic_in01","nif_in","mid_campin","ayo_in01","ayo_in02","ama_in01","lou_in01","lou_in02","ra_in01","airplane","yuno_in01","yuno_in02",
+"yuno_in03","yuno_in04"]
 ins_density = [20, #alberta_in
 20, #payon_in01
 12, #payon_in02
@@ -100,7 +101,11 @@ ins_density = [20, #alberta_in
 17, #lou_in01
 17, #lou_in02
 30, #ra_in01
-25 #airplane
+50, #airplane
+35, #yuno_in01
+20, #yuno_in02
+25, #yuno_in03
+25, #yuno_in04
 ]
 
 top_headgears = ["Alice_Doll","Anubis_Helm","Apple_Of_Archer","Prontera_Army_Cap","Ayothaya_Hat","Banana_Hat","Bandana","Magestic_Goat",
@@ -111,7 +116,7 @@ top_headgears = ["Alice_Doll","Anubis_Helm","Apple_Of_Archer","Prontera_Army_Cap
 "Holy_Bonnet","Morrigane's_Helm","Munak_Turban","Viking_Helm","Pirate_Bandana","Poo_Poo_Hat","Cowboy_Hat_J","Mottled_Egg_Shell",
 "Red_Wizardry_Hat","Coke_Hat","Detective_Hat","Oldman's_Romance","Sahkkat","Sea_Otter_Cap","J_Captain_Hat","Skull_Cap","Sombrero",
 "Straw_Hat","Ulle_Cap_I","Valkyrie_Helm","Minstrel_Hat","Western_Grace","Star_Sparkling",
-"Cap_Of_Blindness","Diabolus_Helmet","Necromencer's_Hood","Spinx_Helm"]
+"Cap_Of_Blindness","Diabolus_Helmet","Necromencer's_Hood","Spinx_Helm","Goggle"]
  
 mid_headgears = ["Ear_Of_Angel's_Wing","Dark_Blindfold","Blinker","Elven_Ears_","Ear_Of_Devil's_Wing",
 "Hawk_Eyes01","Machoman_Glasses","Opera_Ghost_Mask","Pecopeco_Wing_Ears","Luxury_Sunglasses","Sunglasses"]

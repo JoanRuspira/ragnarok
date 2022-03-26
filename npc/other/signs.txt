@@ -1554,3 +1554,8 @@ ve_fild04,208,197,4	script	Sign#sgn::265	835,{
 	mes "South to Veins.";
 	close;
 }
+
+yuno,151,91,4	script	Bulletin Board#sgn::266	837,{
+	mes "Enjoy your stay in Yuno! The flying city of magic, knowledge and the Schwarzwald Republic¡s capital.";
+	close;
+}
