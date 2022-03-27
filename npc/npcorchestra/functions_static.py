@@ -65,6 +65,8 @@ def getCityNPCS(city):
             return generic
         case "nameless_n":
             return nameless_n
+        case "airplane" | "airplane_01":
+            return generic + prontera + aldebaran
         case _:
             return generic
 

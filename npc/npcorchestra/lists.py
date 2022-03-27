@@ -31,7 +31,7 @@ mobs_third_job = ["JOB_RUNE_KNIGHT","JOB_WARLOCK","JOB_RANGER","JOB_ARCH_BISHOP"
 
 all_cities = ["prt_monk", "umbala_natives", "umbala", "comodo", "morocc", "payon", "pay_arche","alberta", "ayothaya", "izlude",
  "geffen", "aldebaran", "hugel", "einbroch", "einbech", "mid_camp","lighthalzen", "lighthalzen_slums", "lighthalzen_rekenber",
-  "dicastes01", "cmd_fild07", "amatsu", "veins", "niflheim", "nameless_n", "louyang", "rachel","ra_temple", "yuno"]
+  "dicastes01", "cmd_fild07", "amatsu", "veins", "niflheim", "nameless_n", "louyang", "rachel","ra_temple","yuno","airplane","airplane_01"]
 
 cities_density = [
 60,  #prt_monk
@@ -63,11 +63,13 @@ cities_density = [
 180,   #rachel
 90, #ra_temple
 270, #yuno
+50, #ariplane
+50 #ariplane_01
 ]
 
 all_ins = ["alberta_in","payon_in01","payon_in02","payon_in03","izlude_in","morocc_in","moc_ruins","izlu2dun","alb2trea","in_rogue", "moc_prydb1",
 "cmd_in01","cmd_in02","um_in","geffen_in","aldeba_in","alde_alche","moc_fild19", "hu_in01","ein_in01","airport", "lhz_in01", "lhz_in02",
-"dic_in01","nif_in","mid_campin","ayo_in01","ayo_in02","ama_in01","lou_in01","lou_in02","ra_in01","airplane","yuno_in01","yuno_in02",
+"dic_in01","nif_in","mid_campin","ayo_in01","ayo_in02","ama_in01","lou_in01","lou_in02","ra_in01","yuno_in01","yuno_in02",
 "yuno_in03","yuno_in04","y_airport","lhz_airport"]
 ins_density = [20, #alberta_in
 20, #payon_in01
@@ -101,7 +103,6 @@ ins_density = [20, #alberta_in
 17, #lou_in01
 17, #lou_in02
 30, #ra_in01
-50, #airplane
 35, #yuno_in01
 20, #yuno_in02
 25, #yuno_in03
@@ -126,9 +127,3 @@ mid_headgears = ["Ear_Of_Angel's_Wing","Dark_Blindfold","Blinker","Elven_Ears_",
 low_headgears = ["Angry_Mouth","Assassin_Mask","Antique_Pipe","Choco_Donut_In_Mouth","Cigar","Pierrot_Nose","Well_Baked_Toast",
 "Donut_In_Mouth","Gang_Scarf","Fish_In_Mouth","Smoking_Pipe","Pirate_Dagger","Rainbow_Scarf","Centimental_Flower","Centimental_Leaf",
 "Romantic_White_Flower","Toast_C","Pencil_In_Mouth"]
-
-# louyang
-# prontera
-# rachel
-# yuno
-# mid_low_headgears = ["Alarm_Mask","Phantom_Of_Opera"]

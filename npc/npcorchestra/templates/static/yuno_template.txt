@@ -3719,127 +3719,127 @@ yuno_fild04,230,247,5	script	Yuno Adventurer#yuno:npcid	spriteid,{
 	end;
 }
 
-y_airport,135,31,2	script	Yuno Adventurer#yuno:npcid	spriteid,{
+y_airport,135,31,2	script	Yuno Citizen#yuno:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
 
-y_airport,131,37,7	script	Yuno Adventurer#yuno:npcid	spriteid,{
+y_airport,131,37,7	script	Yuno Citizen#yuno:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
 
-y_airport,123,29,6	script	Yuno Adventurer#yuno:npcid	spriteid,{
+y_airport,123,29,6	script	Yuno Citizen#yuno:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
 
-y_airport,116,39,4	script	Yuno Adventurer#yuno:npcid	spriteid,{
+y_airport,116,39,4	script	Yuno Citizen#yuno:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
 
-y_airport,106,39,7	script	Yuno Adventurer#yuno:npcid	spriteid,{
+y_airport,106,39,7	script	Yuno Citizen#yuno:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
 
-y_airport,96,40,5	script	Yuno Adventurer#yuno:npcid	spriteid,{
+y_airport,96,40,5	script	Yuno Citizen#yuno:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
 
-y_airport,137,27,5	script	Yuno Adventurer#yuno:npcid	spriteid,{
+y_airport,137,27,5	script	Yuno Citizen#yuno:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
 
-y_airport,138,20,1	script	Yuno Adventurer#yuno:npcid	spriteid,{
+y_airport,138,20,1	script	Yuno Citizen#yuno:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
 
-y_airport,152,25,1	script	Yuno Adventurer#yuno:npcid	spriteid,{
+y_airport,152,25,1	script	Yuno Citizen#yuno:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
 
-y_airport,150,33,6	script	Yuno Adventurer#yuno:npcid	spriteid,{
+y_airport,150,33,6	script	Yuno Citizen#yuno:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
 
-y_airport,148,40,2	script	Yuno Adventurer#yuno:npcid	spriteid,{
+y_airport,148,40,2	script	Yuno Citizen#yuno:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
 
-y_airport,160,38,5	script	Yuno Adventurer#yuno:npcid	spriteid,{
+y_airport,160,38,5	script	Yuno Citizen#yuno:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
 
-y_airport,161,26,1	script	Yuno Adventurer#yuno:npcid	spriteid,{
+y_airport,161,26,1	script	Yuno Citizen#yuno:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
 
-y_airport,171,37,6	script	Yuno Adventurer#yuno:npcid	spriteid,{
+y_airport,171,37,6	script	Yuno Citizen#yuno:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
 
-y_airport,181,34,3	script	Yuno Adventurer#yuno:npcid	spriteid,{
+y_airport,181,34,3	script	Yuno Citizen#yuno:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
 
-y_airport,189,40,4	script	Yuno Adventurer#yuno:npcid	spriteid,{
+y_airport,189,40,4	script	Yuno Citizen#yuno:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
 
-y_airport,167,71,3	script	Yuno Adventurer#yuno:npcid	spriteid,{
+y_airport,167,71,3	script	Yuno Citizen#yuno:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
 
-y_airport,162,66,4	script	Yuno Adventurer#yuno:npcid	spriteid,{
+y_airport,162,66,4	script	Yuno Citizen#yuno:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
 
-y_airport,153,64,6	script	Yuno Adventurer#yuno:npcid	spriteid,{
+y_airport,153,64,6	script	Yuno Citizen#yuno:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
 
-y_airport,159,55,3	script	Yuno Adventurer#yuno:npcid	spriteid,{
+y_airport,159,55,3	script	Yuno Citizen#yuno:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
 
-y_airport,148,52,7	script	Yuno Adventurer#yuno:npcid	spriteid,{
+y_airport,148,52,7	script	Yuno Citizen#yuno:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
 
-y_airport,142,55,1	script	Yuno Adventurer#yuno:npcid	spriteid,{
+y_airport,142,55,1	script	Yuno Citizen#yuno:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
 
-y_airport,132,56,4	script	Yuno Adventurer#yuno:npcid	spriteid,{
+y_airport,132,56,4	script	Yuno Citizen#yuno:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
 
-y_airport,119,53,0	script	Yuno Adventurer#yuno:npcid	spriteid,{
+y_airport,119,53,0	script	Yuno Citizen#yuno:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
 
-y_airport,126,61,2	script	Yuno Adventurer#yuno:npcid	spriteid,{
+y_airport,126,61,2	script	Yuno Citizen#yuno:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }

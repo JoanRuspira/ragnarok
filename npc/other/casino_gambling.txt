@@ -487,6 +487,16 @@ function	script	ComodoBet	{
 	next;
 }
 
+-	script	Casino Representative#casashp::CasinoRepresentative	-1,{
+	mes "[Casino Representative]";
+	mes "We represent the Comodo Casino.";
+	mes "We have expanded and we our offer gambling services aboard this airship!";
+	next;
+	mes "[Casino Representative]";
+	mes "Place your bet, earn your coins and exchange them in our casino in Comodo!";
+	close;
+}
+
 cmd_in02,174,132,6	duplicate(CoinDealer)	Casino Coin Dealer#coin01	798
 cmd_in02,211,101,5	duplicate(CoinDealer)	Casino Coin Dealer#coin02	904
 cmd_in02,145,102,2	duplicate(CoinDealer)	Casino Coin Dealer#coin03	895
@@ -502,4 +512,19 @@ cmd_in02,168,89,0	duplicate(BlackjackDealer)	Blackjack Dealer#blackj05	904
 cmd_in02,178,86,1	duplicate(BlackjackDealer)	Blackjack Dealer#blackj06	898
 cmd_in02,189,90,2	duplicate(BlackjackDealer)	Blackjack Dealer#blackj07	798
 
-
+airplane_01,46,53,3	duplicate(CoinDealer)	Casino Coin Dealer#coin05	798
+airplane,46,53,3	duplicate(CoinDealer)	Casino Coin Dealer#coin06	798
+airplane_01,29,75,7	duplicate(BlackjackDealer)	Blackjack Dealer#blackj08	798
+airplane_01,29,65,7	duplicate(BlackjackDealer)	Blackjack Dealer#blackj09	904
+airplane_01,29,57,0	duplicate(BlackjackDealer)	Blackjack Dealer#blackj10	898
+airplane_01,29,49,0	duplicate(BlackjackDealer)	Blackjack Dealer#blackj11	798
+airplane,29,75,7	duplicate(BlackjackDealer)	Blackjack Dealer#blackj12	798
+airplane,29,65,7	duplicate(BlackjackDealer)	Blackjack Dealer#blackj13	904
+airplane,29,57,0	duplicate(BlackjackDealer)	Blackjack Dealer#blackj14	898
+airplane,29,49,0	duplicate(BlackjackDealer)	Blackjack Dealer#blackj15	798
+airplane_01,47,61,7	duplicate(CasinoRepresentative)	Casino Representative#repre01	864
+airplane,47,61,7	duplicate(CasinoRepresentative)	Casino Representative#repre02	864
+airplane_01,22,70,6	duplicate(RouletteDealer)	Roulette Dealer#roul04	904
+airplane_01,22,60,6	duplicate(RouletteDealer)	Roulette Dealer#roul05	898
+airplane,22,70,6	duplicate(RouletteDealer)	Roulette Dealer#roul06	904
+airplane,22,60,6	duplicate(RouletteDealer)	Roulette Dealer#roul07	898
