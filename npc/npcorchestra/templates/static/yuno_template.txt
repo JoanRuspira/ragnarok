@@ -3659,11 +3659,6 @@ yuno_in04,109,98,0	script	Yuno Citizen#yuno:npcid	spriteid,{
 	end;
 }
 
-yuno_in04,111,106,2	script	Yuno Citizen#yuno:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
 yuno_in04,97,102,0	script	Yuno Citizen#yuno:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;

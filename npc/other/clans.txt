@@ -136,7 +136,7 @@ OnInit:
 	end;
 }
 
-prt_in,35,114,5	script	Devon Aire	10059,{
+yuno_in04,111,106,3	script	Arc Wand Clan Leader	10059,{
 	cutin "debon01.bmp", 2;
 	mes "[Devon Aire]";
 	mes "I'm Devon, master of the ^3131FFArc Wand Clan^000000.";

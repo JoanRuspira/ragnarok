@@ -31,7 +31,8 @@ mobs_third_job = ["JOB_RUNE_KNIGHT","JOB_WARLOCK","JOB_RANGER","JOB_ARCH_BISHOP"
 
 all_cities = ["prt_monk", "umbala_natives", "umbala", "comodo", "morocc", "payon", "pay_arche","alberta", "ayothaya", "izlude",
  "geffen", "aldebaran", "hugel", "einbroch", "einbech", "mid_camp","lighthalzen", "lighthalzen_slums", "lighthalzen_rekenber",
-  "dicastes01", "cmd_fild07", "amatsu", "veins", "niflheim", "nameless_n", "louyang", "rachel","ra_temple","yuno","airplane","airplane_01"]
+  "dicastes01", "cmd_fild07", "amatsu", "veins", "niflheim", "nameless_n", "louyang", "rachel","ra_temple","yuno","airplane",
+  "airplane_01", "prontera"]
 
 cities_density = [
 60,  #prt_monk
@@ -64,7 +65,8 @@ cities_density = [
 90, #ra_temple
 270, #yuno
 50, #ariplane
-50 #ariplane_01
+50, #ariplane_01
+0 #prontera
 ]
 
 all_ins = ["alberta_in","payon_in01","payon_in02","payon_in03","izlude_in","morocc_in","moc_ruins","izlu2dun","alb2trea","in_rogue", "moc_prydb1",
