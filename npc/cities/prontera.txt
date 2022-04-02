@@ -4,15 +4,6 @@
 
 // Prontera
 //============================================================
--	script	Guard#pront::prtguard	105,{
-	mes "[Prontera Guard]";
-	mes "Welcome to Prontera.";
-	close;
-}
-prontera,223,99,1	duplicate(prtguard)	Guard#2pront	105
-prontera,229,104,5	duplicate(prtguard)	Guard#3pront	105
-prontera,47,339,5	duplicate(prtguard)	Guard#4pront	105
-
 prontera,101,288,3	script	Shuger#pront	98,{
 	mes "[Shuger]";
 	mes "Outside the safety of the city, there is a pink beast known as ^000077Poring^000000.";
@@ -715,5 +706,4 @@ prt_maze02,110,69,0	script	Soldier#2pront	105,{
 	close;
 }
 
-prontera,52,344,5	duplicate(prtguard)	Guard#1pront	105
 
