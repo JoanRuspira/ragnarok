@@ -223,13 +223,6 @@ prt_in,178,92,0	script	Curator of Library#pront	57,{
 }
 */
 
-prt_in,175,50,0	script	Library Girl#pront	71,{
-	mes "[Library Girl Ellen]";
-	mes "Here in the Eastern branch of the Prontera Library, we provide Monster Encyclopedias in which creatures are organized by their properties. We also have books on Merchant and Blacksmith skills.";
-	mes "Ooh~! The other branch of our library also has many interesting things to read! So if you get a chance, you just might want to visit.";
-	close;
-}
-
 prt_in,47,141,0	script	An Old Man#pront	56,{
 	mes "[Old Man]";
 	mes "The Prontera Culvert sewers have been left unattended for a long time. Now that place is infested with ^000077Thief Bugs^000000!";
