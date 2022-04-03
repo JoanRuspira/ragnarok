@@ -1589,11 +1589,6 @@ prontera,276,197,0	script	Prontera Citizen#prt:npcid	spriteid,{
 	end;
 }
 
-prontera,276,211,4	script	Prontera Citizen#prt:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
 prontera,237,216,7	script	Prontera Citizen#prt:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
@@ -2905,6 +2900,436 @@ prontera,76,128,1	script	Prontera Citizen#prt:npcid	spriteid,{
 }
 
 prontera,68,125,0	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,169,105,1	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,162,193,7	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,178,104,4	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,172,62,2	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,158,60,0	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,167,50,3	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,127,65,1	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,111,75,7	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,126,70,7	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,163,139,6	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,167,133,7	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,56,59,1	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,90,66,1	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,93,58,4	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,25,62,0	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,31,57,2	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,254,159,1	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,247,161,7	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,238,167,6	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,280,163,0	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,279,173,4	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,204,172,6	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,208,162,1	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,57,70,5	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,63,66,2	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,50,169,4	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,58,165,7	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,59,173,1	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,70,136,3	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,53,142,4	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,58,135,0	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,257,103,2	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,235,103,0	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,251,131,3	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,239,129,2	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,235,136,6	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,162,23,2	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,157,21,0	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,157,17,7	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,163,11,2	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,168,12,7	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,169,20,0	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,41,24,5	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,34,20,1	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,31,25,7	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,24,25,4	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,22,19,0	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,21,34,6	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,39,29,6	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,38,107,7	script	Knight Guildmaster#prt:npcid	469,{
+	npctalk "I will make you a Knight.";
+	end;
+}
+
+prt_in,42,113,4	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,44,109,3	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,43,98,1	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,35,97,0	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,89,106,3	script	Crusader Guildmaster#prt:npcid	404,{
+	npctalk "I will make you a Crusader.";
+	end;
+}
+
+prt_in,82,100,2	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,74,105,5	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,74,97,1	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,79,91,7	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_in,69,89,0	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_church,98,68,1	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_church,99,84,5	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_church,103,97,2	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_church,98,106,5	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_church,101,115,1	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_church,90,116,7	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_church,109,112,1	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_church,105,104,1	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_church,92,104,0	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_church,20,20,1	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_church,22,16,7	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_church,175,17,7	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_church,184,20,2	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_church,184,42,5	script	Acolyte Guildmaster#prt:npcid	79,{
+	npctalk "I will make you an Acolyte.";
+	end;
+}
+
+prt_church,16,42,5	script	Priest Guildmaster#prt:npcid	110,{
+	npctalk "I will make you a Priest.";
+	end;
+}
+
+prontera,29,198,0	script	Prontera Guard#prt:npcid	105,{
+	npctalk "Welcome to Prontera.";
+	end;
+}
+
+prontera,29,209,4	script	Prontera Guard#prt:npcid	105,{
+	npctalk "Welcome to Prontera.";
+	end;
+}
+
+prontera,162,29,2	script	Prontera Guard#prt:npcid	105,{
+	npctalk "Welcome to Prontera.";
+	end;
+}
+
+prontera,151,29,6	script	Prontera Guard#prt:npcid	105,{
+	npctalk "Welcome to Prontera.";
+	end;
+}
+
+prontera,282,210,4	script	Prontera Guard#prt:npcid	105,{
+	npctalk "Welcome to Prontera.";
+	end;
+}
+
+prontera,282,199,0	script	Prontera Guard#prt:npcid	105,{
+	npctalk "Welcome to Prontera.";
+	end;
+}
+
+prontera,162,326,4	script	Prontera Guard#prt:npcid	105,{
+	npctalk "Welcome to Prontera.";
+	end;
+}
+
+prontera,153,330,6	script	Prontera Guard#prt:npcid	105,{
+	npctalk "Welcome to Prontera.";
+	end;
+}
+
+prontera,158,330,2	script	Prontera Guard#prt:npcid	105,{
+	npctalk "Welcome to Prontera.";
+	end;
+}
+
+prontera,154,348,5	script	Prontera Citizen#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prontera,156,337,0	script	Prontera Citizen#prt:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }

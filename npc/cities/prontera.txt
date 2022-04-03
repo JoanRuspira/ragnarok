@@ -253,51 +253,6 @@ prt_in,26,31,0	script	An Old Man#2pront	54,{
 	close;
 }
 
-prt_in,180,20,2	script	Bartender#pront	61,{
-	mes "[Bartender]";
-	mes "Sigh...as more and more people coming into Prontera,";
-	mes "better and better my business has become nowadays. But...";
-	mes "Well, I am having a hard time to keep a good stock of food ingredients.";
-	next;
-	mes "[Bartender]";
-	mes "As you see, the numbers of the monsters outside of town has been greatly increased and they have caused trouble to my suppliers to deliver the goods at a right time.";
-	mes "I cannot make my ultra nice menus with common ingredients because they are super special!";
-	next;
-	mes "[Bartender]";
-	mes "So I have been contacting super heavy champion hunters for fresh and special ingredients.";
-	mes "But the demand has exceeded the supply in these days.";
-	next;
-	mes "[Bartender]";
-	mes "I can't keep my business busy without my special menu 'Crunch Crunch Sour' and 'Savory Yum Yum'...*Sigh*";
-	while(1) {
-		next;
-		switch(select("'Crunch Crunch Sour'?:'Savory Yum Yum'?:Cancel.")) {
-		case 1:
-			mes "[Bartender]";
-			mes "The basic ingredients of my Crunch Crunch Sour are the ants roaming inside the Ant Hell in the desert.";
-			mes "Rumor has it that the numbers of the ants have been greatly increased and they have become more violent, so that no one wants to get in the place.";
-			next;
-			mes "[Bartender]";
-			mes "*Sigh*...I am afraid that my business days are numbered now.";
-			continue;
-		case 2:
-			mes "[Bartender]";
-			mes "Savory Yum Yum's basic ingredients are the grasshoppers romping in a place over the west forest. Yeah, it is the best selling menu ever.";
-			mes "Rumor has it that they have become very violent and Bees have built their habitat in the place, so that no one wants to get in there.";
-			next;
-			mes "[Bartender]";
-			mes "*Sigh*...I am afraid that my business days are numbered now.";
-			continue;
-		case 3:
-			mes "[Bartender]";
-			mes "Take care of yourself~.";
-			close;
-		}
-	}
-	end;
-
-}
-
 prt_in,173,24,2	script	Shevild#pront	85,{
 	mes "[Shevild]";
 	mes "Hey, come on over and let's drink! I have lots of interesting stories to tell!";
@@ -449,52 +404,6 @@ prt_in,177,18,2	script	Marvin#pront	80,{
 	mes "[Marvin]";
 	mes "So relax and plan ahead, so you can master all the skills that you really want to master the most. Also, don't just put skill points into anything. Remember to use your skill points wisely.";
 	close;
-}
-
-prt_in,284,168,3	script	Ginedin Rephere#pront	55,{
-	mes "[Tailor Ginedin Rephere]";
-	mes "11...";
-	mes "12...";
-	mes "Mmm, good. I think I'll be able to finish before tonight's party.";
-	next;
-	mes "[Tailor Ginedin Rephere]";
-	mes "Oh! I didn't realize I had a guest. How may I help you?";
-	next;
-	switch(select("Talk:Dye Clothing:Cancel")) {
-	case 1:
-		mes "[Tailor Ginedin Rephere]";
-		mes "Life may have gotten a little better, but receiving all these orders? *Whew!* Young ladies these days must be very well off, so my services may no longer be a luxury.";
-		next;
-		mes "[Tailor Ginedin Rephere]";
-		mes "Well, people like them probably further the pursuit of beauty and fashion. But, of course, that's only my opinion.";
-		next;
-		mes "[Tailor Ginedin Rephere]";
-		mes "I believe for us humans, clothes are one of the few ways to show our personality, style, and beauty.";
-		next;
-		mes "[Tailor Ginedin Rephere]";
-		mes "Considering this, I personally think my job is very helpful and rather fancy. This in itself makes it all worthwhile. Coarse fabric and rough leather burst with energy and life when colored...";
-		next;
-		mes "[Tailor Ginedin Rephere]";
-		mes "It is a very hard and tedious process, but the happiness and delight you feel when your clothes are done makes up for all the hard work.";
-		close;
-	case 2:
-		mes "[Tailor Ginedin Rephere]";
-		mes "Ah...!";
-		mes "You came to dye";
-		mes "your clothes as well.";
-		next;
-		mes "[Tailor Ginedin Rephere]";
-		mes "But... I'm so sorry.";
-		mes "I don't have enough time to dye your clothes right now. I have so many orders that are still waiting to be done.";
-		next;
-		mes "[Tailor Ginedin Rephere]";
-		mes "I'm sorry for the inconvenience, but could you come back again next time?";
-		close;
-	case 3:
-		mes "[Tailor Ginedin Rephere]";
-		mes "Feel free to take your time and relax here. I apologize that I have nothing to serve you, though.";
-		close;
-	}
 }
 
 // Prontera Church

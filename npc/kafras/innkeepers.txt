@@ -5,14 +5,14 @@
 
 //======================== Prontera ===================================
 // West Side Inn -------------------
-prt_in,244,135,2	script	Inn Employee#Sammy	53,{
-	callfunc "F_InnMaid","[Employee Sammy]","Nenkaras","prt_in",238,130;
+prt_in,246,136,2	script	Inn Keeper#prontera1	53,{
+	callfunc "F_InnMaid","[Employee Sammy]","'The Lunatic'","prt_in",240,135;
 	warp "prt_in",247,104; end;
 }
 // East Side Inn ------------------
-prt_in,61,141,2	script	Inn Employee#Ahlma	53,{
-	callfunc "F_InnMaid","[Employee Ahlma]","Nenkaras","prt_in",64,136;
-	warp "prt_in",60,166; end;
+prt_in,62,142,2	script	Inn Keeper#prontera2	46,{
+	callfunc "F_InnMaid","[Inn Keeper]","'The Terrible Poring'","prt_in",63,137;
+	warp "prt_in",70,170; end;
 }
 
 //======================== Rachel ====================================

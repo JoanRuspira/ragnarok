@@ -2,8 +2,7 @@
 //= Prontera Guides
 //============================================================
 
-prontera,282,208,2	script	Guide#01prontera::GuideProntera	105,{
-	cutin "prt_soldier",2;
+prontera,276,211,2	script	Prontera Guide#01prontera::GuideProntera	831,{
 	mes "[Prontera Guide]";
 	mes "Welcome to ^8B4513Prontera^000000,";
 	mes "the beautiful capital of the";
@@ -283,6 +282,7 @@ L_Mark:
 	mes "on your mini-map.";
 	return;
 }
-prontera,29,200,6	duplicate(GuideProntera)	Guide#03prontera	105
-prontera,160,29,0	duplicate(GuideProntera)	Guide#04prontera	105
-prontera,159,326,4	duplicate(GuideProntera)	Guide#05prontera	105
+prontera,37,198,6	duplicate(GuideProntera)	Prontera Guide#03pronterag	831
+prontera,162,35,0	duplicate(GuideProntera)	Prontera Guide#04pronterag	831
+prontera,159,326,4	duplicate(GuideProntera)	Prontera Guide#05pronterag	831
+

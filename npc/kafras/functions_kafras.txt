@@ -242,7 +242,7 @@ function	script	F_KafTele	{
 	else if (@wrpD$[.@j] == "Morocc") warp "morocc", 158, 95;
 	else if (@wrpD$[.@j] == "Orc Dungeon") warp "gef_fild10", 52, 326;
 	else if (@wrpD$[.@j] == "Payon") warp "payon", 177, 104;
-	else if (@wrpD$[.@j] == "Prontera") warp "prontera", 157, 187;
+	else if (@wrpD$[.@j] == "Prontera") warp "prontera", 156, 279;
 	else if (@wrpD$[.@j] == "Umbala") warp "umbala", 100, 154;
 	end;
 }
@@ -528,8 +528,8 @@ function	script	F_KafSet	{
 
 	.@map$ = strnpcinfo(4);
 	if (.@map$ == "prontera") {
-		setarray @wrpD$[0], "Izlude", "Geffen", "Payon", "Morocc", "Orc Dungeon", "Alberta";
-		setarray @wrpP[0], 600, 1200, 1200, 1200, 1700, 1800;
+		setarray @wrpD$[0], "Izlude", "Geffen", "Payon", "Morocc";
+		setarray @wrpP[0], 600, 1200, 1200, 1200;
 		setarray @viewpX[0], 151, 29, 282, 152;
 		setarray @viewpY[0], 29, 207, 200, 326;
 	} else if (.@map$ == "alberta") {

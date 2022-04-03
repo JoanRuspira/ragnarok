@@ -1559,3 +1559,9 @@ yuno,151,91,4	script	Bulletin Board#sgn::266	837,{
 	mes "Enjoy your stay in Yuno! The flying city of magic, knowledge and the Schwarzwald Republic¡s capital.";
 	close;
 }
+
+
+prontera,148,194,4	script	Bulletin Board#sgn::267	838,{
+	mes "Prontera, capital of the Rune-Midgard Kingdom. Explore one of the busiest cities in Midgard. Visit the Cathedral and the Kight and Crusader guilds.";
+	close;
+}
