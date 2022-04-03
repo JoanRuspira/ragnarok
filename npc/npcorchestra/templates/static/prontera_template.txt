@@ -3333,3 +3333,28 @@ prontera,156,337,0	script	Prontera Citizen#prt:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
 }
+
+prt_fild08,162,368,4	script	Prontera Guard#prt:npcid	105,{
+	npctalk "Welcome to Prontera.";
+	end;
+}
+
+prt_fild08,173,369,3	script	Prontera Adventurer#prt:npcid	688,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_fild08,167,364,5	script	Prontera Adventurer#prt:npcid	882,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_fild08,175,362,1	script	Prontera Adventurer#prt:npcid	17,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_fild08,179,372,5	script	Prontera Adventurer#prt:npcid	51,{
+	npctalk "npcdialog";
+	end;
+}

@@ -2,7 +2,7 @@
 // Izlude Academy NPCs
 //====================================================
 
--	script	Swordman Guide#newbe10::NvSwordman	-1,{
+-	script	Swordman Tutor#newbe10::NvSwordman	-1,{
 	mes "[Swordman Guildsman]";
 	mes "Can I help you?";
 	next;
@@ -49,7 +49,7 @@
 	}
 }
 
--	script	Mage Guide#newbe10::NvMage	-1,{
+-	script	Mage Tutor#newbe10::NvMage	-1,{
 	mes "[Mage Guild Member]";
 	mes "What can I help you with?";
 	next;
@@ -92,7 +92,7 @@
 	}
 }
 
--	script	Merchant Guide#newbe10::NvMerchant	-1,{
+-	script	Merchant Tutor#newbe10::NvMerchant	-1,{
 	mes "[Merchant Guildsman]";
 	mes "What can I help you with?";
 	next;
@@ -128,7 +128,7 @@
 	}
 }
 
--	script	Thief Guide#newbe10::NvThief	-1,{
+-	script	Thief Tutor#newbe10::NvThief	-1,{
 
 	mes "[Thief Guild Member]";
 	mes "How can I help you?";
@@ -162,7 +162,7 @@
 	}
 }
 
--	script	Acolyte Guide#newbe10::NvAcolyte	-1,{
+-	script	Acolyte Tutor#newbe10::NvAcolyte	-1,{
 	mes "[Prontera Acolyte]";
 	mes "What can I do for you?";
 	next;
@@ -191,12 +191,7 @@
 	}
 }
 
--	script	Archer Guide#newbe10::NvArcher	-1,{
-	if (job_novice_q < 15) {
-		mes "[Archer Guildsman]";
-		mes "You are still in the process of training with sir Brade.";
-		close;
-	}
+-	script	Archer Tutor#newbe10::NvArcher	-1,{
 	mes "[Archer Guildsman]";
 	mes "What can I help you with?";
 	next;
@@ -324,10 +319,54 @@
 		}
 }
 
-iz_ac02,66,179,5	duplicate(NvSwordman)	Swordman Guide#nv1	728
-iz_ac02,58,177,4	duplicate(NvMage)	Mage Guide#nv1	123
-iz_ac02,43,170,6	duplicate(NvMerchant)	Merchant Guide#nv1	97
-iz_ac02,142,118,5	duplicate(NvThief)	Thief Guide#nv1	118
-iz_ac02,146,111,5	duplicate(NvAcolyte)	Acolyte Guide#nv1	95
-iz_ac02,164,109,2	duplicate(NvArcher)	Archer Guide#nv1	727
+
+-	script	Dexterity Tutor#newbe10::NvDex	-1,{
+	mes "[Dexterity Tutor]";
+	mes "DEX will improve your HIT rate. It will increase your damage with ranged weapons and it will also improve your casting time. Also will give you a small ATK bonus every 5 points.";
+	next;
+}
+
+-	script	Agility Tutor#newbe10::NvAgi	-1,{
+	mes "[Agility Tutor]";
+	mes "AGI will improve your attack speed and your flee. It will give you a small DEF boost every 5 points.";
+	next;
+}
+
+-	script	Vitality Tutor#newbe10::NvVit	-1,{
+	mes "[Vitality Tutor]";
+	mes "VIT will improve your HP and DEF. It will give you a small MDEF boost every 5 points.";
+	next;
+}
+
+-	script	Strength Tutor#newbe10::NvStr	-1,{
+	mes "[Strength Tutor]";
+	mes "STR will improve your ATK with melee weapons and the weight you can carry. It will give you a small ATK boost with ranged weapons every 5 points.";
+	next;
+}
+
+-	script	Intelligence Tutor#newbe10::NvInt	-1,{
+	mes "[Intelligence Tutor]";
+	mes "INT will improve your MATK and SP. It will give you a small SP recovery rate boost every 6 points.";
+	next;
+}
+
+-	script	Luk Tutor#newbe10::NvLuk	-1,{
+	mes "[Luk Tutor]";
+	mes "LUK will improve your CRIT rate and give you the change to dodge attacks. It will give you a small ATK, MATK and HIT bonus every 3 points.";
+	next;
+}
+
+
+iz_ac02,77,177,4	duplicate(NvAgi)	Agility Tutor#nv1	742
+iz_ac02,58,164,7	duplicate(NvDex)	Dexterity Tutor#nv1	754
+iz_ac02,45,163,0	duplicate(NvInt)	Intelligence Tutor#nv1	755
+iz_ac02,131,116,4	duplicate(NvStr)	Strength Tutor#nv1	743
+iz_ac02,151,104,1	duplicate(NvVit)	Vitality Tutor#nv1	750
+iz_ac02,162,103,1	duplicate(NvLuk)	Luk Tutor#nv1	744
+iz_ac02,66,179,5	duplicate(NvSwordman)	Swordman Tutor#nv1	728
+iz_ac02,58,177,4	duplicate(NvMage)	Mage Tutor#nv1	123
+iz_ac02,43,170,6	duplicate(NvMerchant)	Merchant Tutor#nv1	97
+iz_ac02,142,118,5	duplicate(NvThief)	Thief Tutor#nv1	118
+iz_ac02,146,111,5	duplicate(NvAcolyte)	Acolyte Tutor#nv1	95
+iz_ac02,164,109,2	duplicate(NvArcher)	Archer Tutor#nv1	727
 iz_ac01,96,45,4	duplicate(NvTeleport)	Academy Teleporter#nv1	47
