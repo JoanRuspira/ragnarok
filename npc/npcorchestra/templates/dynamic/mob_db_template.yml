@@ -135,7 +135,7 @@ Body:
     Level: 1
     Hp: 60
     BaseExp: 150
-    JobExp: 40
+    JobExp: 150
     Attack: 8
     Attack2: 1
     Defense: 2
@@ -306,8 +306,8 @@ Body:
     Name: Fabre
     Level: 6
     Hp: 72
-    BaseExp: 158
-    JobExp: 65
+    BaseExp: 150
+    JobExp: 150
     Attack: 12
     Attack2: 3
     Defense: 24
@@ -354,8 +354,8 @@ Body:
     Name: Pupa
     Level: 4
     Hp: 66
-    BaseExp: 157
-    JobExp: 55
+    BaseExp: 200
+    JobExp: 200
     Attack: 1
     Attack2: 3
     Defense: 24
@@ -2939,7 +2939,7 @@ Body:
     Level: 3
     Hp: 55
     BaseExp: 150
-    JobExp: 50
+    JobExp: 150
     Attack: 11
     Attack2: 1
     Defense: 18
@@ -4172,7 +4172,7 @@ Body:
     Name: Mastering
     Level: 42
     Hp: 1260
-    BaseExp: 157
+    BaseExp: 1157
     JobExp: 177
     Attack: 80
     Attack2: 40
@@ -4316,7 +4316,7 @@ Body:
     Name: Eclipse
     Level: 31
     Hp: 625
-    BaseExp: 103
+    BaseExp: 1157
     JobExp: 116
     Attack: 60
     Attack2: 20

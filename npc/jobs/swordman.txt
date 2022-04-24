@@ -1,0 +1,86 @@
+//===== Script =======================================
+// Card Removal NPCs
+//====================================================
+
+-	script	Swordman Guildmaster#swrdgld::SwrdGld	-1,{
+	if (BaseClass == EAJ_NOVICE) {
+		mes "[Swordman Guildmaster]";
+		mes "Good day! I am the swordman Guildmaster.";
+		mes "I train novices that meet the requirements";
+		mes "and allow men to become swordmen.";
+		next;
+		mes "[Swordman Guildmaster]";
+		mes "As a swordman you will gain new skills.";
+		mes "The requirements are:";
+		mes "- Being a Novice.";
+		mes "- Being Job level 10.";
+		mes "- Having used all your skill points.";
+		next;
+		mes "[Swordman Guildmaster]";
+		mes "Do you want to become a swordman?";
+		next;
+		switch(select("Yes:No")) {
+			case 1:
+				mes "[Swordman Guildmaster]";
+				mes "Good! Let me see if you pass our requirements...";
+				next;
+				if (JobLevel < 10) {
+					mes "[Swordman Guildmaster]";
+					mes "Hmm... Your job level does not meet our requirements.";
+					mes "You need to be more experienced before being a swordman.";
+					close;
+				}
+				if (SkillPoint) {
+					mes "[Swordman Guildmaster]";
+					mes "Looks like you have not used all your skill points.";
+					mes "Use them and I'll be able to make you a swordman.";
+					close;
+				}
+				mes "[Swordman Guildmaster]";
+				mes "Okay! Looks like you pass all of them!";
+				mes "You are allowed to join the swordman guild.";
+				mes "Congratulations!";
+				jobchange Job_Swordman;
+				specialeffect2 EF_ANGEL2;
+				specialeffect2 EF_ELECTRIC;
+				close;
+			case 2:
+				mes "[Swordman Guildmaster]";
+				mes "Ah! Let me know if you change your mind.";
+				mes "We are always looking for new adventurers";
+				mes "to join the guild.";
+				close;
+		}
+		
+	}
+
+	if (BaseJob == Job_Swordman) {
+		mes "[Swordman Guildmaster]";
+		mes "Hi fellow swordman!";
+		mes "Are you thinking about your next job?";
+		next;
+		mes "[Swordman Guildmaster]";
+		mes "You can become a knight or join";
+		mes "the crusaders to improve your skills.";
+		next;
+		mes "[Swordman Guildmaster]";
+		mes "Both guilds are in Prontera.";
+		mes "Go there when you think you have";
+		mes "enough experience.";
+		close;
+	}
+
+	if (BaseJob == Job_Knight || BaseJob == Job_Crusader || BaseJob == Job_LordKnight || BaseJob == Job_Paladin) {
+		mes "[Swordman Guildmaster]";
+		mes "Ah! An experienced member of the guild!";
+		mes "Are you here to help train the younger ones?";
+		close;
+	}
+
+	mes "[Swordman Guildmaster]";
+	mes "Welcome to the swordman guild. We accept applications from novices that meet our requirements.";
+	close;
+}
+
+izlude_in,74,172,5	duplicate(SwrdGld)	Swordman Guildmaster#swordgld	119
+
