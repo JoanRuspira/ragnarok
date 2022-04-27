@@ -134,7 +134,7 @@ Body:
     Name: Poring
     Level: 1
     Hp: 60
-    BaseExp: 150
+    BaseExp: 50
     JobExp: 150
     Attack: 8
     Attack2: 1
@@ -197,7 +197,7 @@ Body:
     Name: Hornet
     Level: 11
     Hp: 90
-    BaseExp: 158
+    BaseExp: 56
     JobExp: 90
     Attack: 13
     Attack2: 3
@@ -306,7 +306,7 @@ Body:
     Name: Fabre
     Level: 6
     Hp: 72
-    BaseExp: 150
+    BaseExp: 60
     JobExp: 150
     Attack: 12
     Attack2: 3
@@ -354,7 +354,7 @@ Body:
     Name: Pupa
     Level: 4
     Hp: 66
-    BaseExp: 200
+    BaseExp: 90
     JobExp: 200
     Attack: 1
     Attack2: 3
@@ -401,7 +401,7 @@ Body:
     Name: Condor
     Level: 12
     Hp: 114
-    BaseExp: 160
+    BaseExp: 74
     JobExp: 95
     Attack: 14
     Attack2: 6
@@ -447,7 +447,7 @@ Body:
     Name: Willow
     Level: 8
     Hp: 91
-    BaseExp: 160
+    BaseExp: 79
     JobExp: 75
     Attack: 13
     Attack2: 5
@@ -494,7 +494,7 @@ Body:
     Name: Chonchon
     Level: 5
     Hp: 57
-    BaseExp: 150
+    BaseExp: 80
     JobExp: 60
     Attack: 11
     Attack2: 3
@@ -2266,7 +2266,7 @@ Body:
     Name: Picky
     Level: 9
     Hp: 95
-    BaseExp: 154
+    BaseExp: 66
     JobExp: 80
     Attack: 18
     Attack2: 1
@@ -2938,7 +2938,7 @@ Body:
     Name: Lunatic
     Level: 3
     Hp: 55
-    BaseExp: 150
+    BaseExp: 70
     JobExp: 150
     Attack: 11
     Attack2: 1
@@ -5277,7 +5277,7 @@ Body:
     Name: Drops
     Level: 2
     Hp: 45
-    BaseExp: 150
+    BaseExp: 60
     JobExp: 45
     Attack: 12
     Attack2: 1
@@ -10739,7 +10739,7 @@ Body:
     Name: Peco Peco Egg
     Level: 3
     Hp: 420
-    BaseExp: 2
+    BaseExp: 100
     JobExp: 2
     Attack: 1
     Attack2: 1

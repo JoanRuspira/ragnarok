@@ -5,12 +5,6 @@ payon,171,162,3	script	Quest Board#TutoPayon	4_BOARD3,{
 	for( .@i = 11114; .@i < 11124; .@i++ ) {
 		.@j = checkquest(.@i,HUNTING);
 	}
-	if (BaseLevel < 11) {
-		mes " - There are no tasks - ";
-		mes " - open for you right now. - ";
-		mes " - Get to at least level 11! - ";
-		close;
-	}
 
 	mes " - Quest bulletin board -";
 	mes "Look for contracts to help the Midgard community";
@@ -20,202 +14,12 @@ payon,171,162,3	script	Quest Board#TutoPayon	4_BOARD3,{
 	mes " - Midgard Continental Alliance";
 	next;
 
-	switch(select("Levels 11 to 25:Levels 26 to 40:Levels 41 to 55:Levels 56 to 70:Levels 71 to 85:Levels 86 to 90:Levels 91 to 99")) {
-		case 1: 
-			if (BaseLevel < 11) {
-				mes "I am not ready for these quests yet...";
-				close;
-			}
-			switch(select("Hornet Hunting:Condor Hunting:Worm Tail Hunting:Spore Hunting:Muka Hunting:Familiar Hunting")) {
-				case 1: callsub L_Quest,11114,"Hornet Hunting"," - Hunt 10 ^4d4dff'Hornets'^000000.";
-				case 2: callsub L_Quest,11115,"Condor Hunting"," - Hunt 20 ^4d4dff'Condors'^000000.";
-				case 3: callsub L_Quest,11117,"Worm Tail Hunting"," - Hunt 20 ^4d4dff'Worm Tails'^000000.";
-				case 4: callsub L_Quest,11118,"Spore Hunting"," - Hunt 30 ^4d4dff'Spores'^000000. ";
-				case 5: callsub L_Quest,11120,"Muka Hunting"," - Hunt 20 ^4d4dff'Muka'^000000.";
-				case 6: callsub L_Quest,11121,"Familiar Hunting"," - Hunt 20 ^4d4dffFamiliar^000000.";
-			}
-		case 2: 
-			if (BaseLevel < 26) {
-				mes "I am not ready for these quests yet...";
-				close;
-			}
-			switch(select("Hunting Poison Spore:Hunting Smokie:Hunting Elder Willow:Hunting Coco:Hunting Thara Frog")) {
-				case 1: callsub L_Quest,8266,"Hunting Poison Spore","- Hunt 10 ^4d4dff'Poison Spores'^000000.";
-				case 2: callsub L_Quest,8267,"Hunting Smokie","- Hunt 10 ^4d4dff'Smokies'^000000.";
-				case 3: callsub L_Quest,8268,"Hunting Elder Willow","- Hunt 10 ^4d4dff'Elder Willows'^000000.";
-				case 4: callsub L_Quest,8269,"Hunting Coco","- Hunt 10 ^4d4dff'Cocos'^000000.";
-				case 5: callsub L_Quest,8270,"Hunting Thara Frog","- Hunt 10 ^4d4dff'Thara Frogs'^000000.";
-			}
-		case 3: 
-			if (BaseLevel < 41) {
-				mes "I am not ready for these quests yet...";
-				close;
-			}
-			switch(select("Cruiser Hunting:Kukre Hunting:Orc Baby Hunting:Orc Warrior Hunting:Vadon Hunting:Megalodon Hunting:Marse Hunting:Cornutus Hunting:Myst Hunting:Shellfish Hunting:Marine Sphere Hunting:Phen Hunting:Orc Skeleton Hunting:Zenorc Hunting:Mummy Hunting")) {
-				case 1: callsub L_Quest,12073,"- Hunt 15 ^4d4dff'Cruisers'^000000.";
-				case 2: callsub L_Quest,12074,"- Hunt 30 ^4d4dff'Kukre'^000000.";
-				case 3: callsub L_Quest,12075,"- Hunt 15 ^4d4dff'Orc Babies'^000000.";
-				case 4: callsub L_Quest,12076,"- Hunt 20 ^4d4dff'Orc Warriors'^000000.";
-				case 5: callsub L_Quest,12077,"- Hunt 15 ^4d4dff'Vadons'^000000.";
-				case 6: callsub L_Quest,12078,"- Hunt 30 ^4d4dff'Megalodon'^000000.";
-				case 7: callsub L_Quest,12079,"- Hunt 15 ^4d4dff'Marses'^000000.";
-				case 8: callsub L_Quest,12080,"- Hunt 20 ^4d4dff'Cornutus'^000000.";
-				case 9: callsub L_Quest,12081,"- Hunt 15 ^4d4dff'Mysts'^000000.";
-				case 10: callsub L_Quest,12082,"- Hunt 30 ^4d4dff'Shellfish'^000000.";
-				case 11: callsub L_Quest,12083,"- Hunt 15 ^4d4dff'Marine Spheres'^000000.";
-				case 12: callsub L_Quest,12084,"- Hunt 20 ^4d4dff'Phens'^000000.";
-				case 13: callsub L_Quest,12085,"- Hunt 15 ^4d4dff'Orc Skeletons'^000000.";
-				case 14: callsub L_Quest,12086,"- Hunt 30 ^4d4dff'Zenorcs'^000000.";
-				case 15: callsub L_Quest,12087,"- Hunt 15 ^4d4dff'Mummies'^000000.";
-			}
-		case 4: 
-			if (BaseLevel < 56) {
-				mes "I am not ready for these quests yet...";
-				close;
-			}
-			switch(select("Alligator Hunting:Merman Hunting:Savage Hunting:Sohee Hunting:Hunter Fly Hunting:Munak Hunting")) {
-				case 1: callsub L_Quest,3251,"- Hunt 30 ^4d4dff'Alligators'^000000.";
-				case 2: callsub L_Quest,3252,"- Hunt 30 ^4d4dff'Mermans'^000000.";
-				case 3: callsub L_Quest,3255,"- Hunt 30 ^4d4dff'Savages'^000000.";
-				case 4: callsub L_Quest,3257,"- Hunt 30 ^4d4dff'Sohees'^000000.";
-				case 5: callsub L_Quest,3260,"- Hunt 30 ^4d4dff'Hunter Flies'^000000.";
-				case 6: callsub L_Quest,3261,"- Hunt 30 ^4d4dff'Munaks'^000000.";
-			}
-		case 5: 
-			if (BaseLevel < 71) {
-				mes "I am not ready for these quests yet...";
-				close;
-			}
-			switch(select("Sphinx:Glast Heim:Yuno Fields:Clock Tower:Independent Islands")) {
-			case 1:
-				mes "- Morroc Sphinx Quest Board Section -";
-				next;
-				switch(select("Hunt Requiem:Hunt Marduk:Hunt Pasana")) {
-					case 1: callsub L_Quest,10107,"- Hunt 10 ^4d4dff'Requiems'^000000.";
-					case 2: callsub L_Quest,10108,"- Hunt 10 ^4d4dff'Marduks'^000000.";
-					case 3: callsub L_Quest,10109,"- Hunt 10 ^4d4dff'Pasanas'^000000.";
-				}
-			case 2:
-				mes "- Glast Heim Quest Board Section -";
-				next;
-				switch(select("Hunt Dark Frame:Hunt Evil Druid:Hunt Wraith:Hunt Raydric Archer")) {
-					case 1: callsub L_Quest,10110,"- Hunt 10 ^4d4dff'Dark Frames'^000000.";
-					case 2: callsub L_Quest,10111,"- Hunt 10 ^4d4dff'Evil Druids'^000000.";
-					case 3: callsub L_Quest,10112,"- Hunt 10 ^4d4dff'Wraiths'^000000.";
-					case 4: callsub L_Quest,10113,"- Hunt 10 ^4d4dff'Raydric Archers'^000000.";
-				}
-			case 3:
-				mes "- Yuno Fields Quest Board Section -";
-				next;
-				switch(select("Hunt Grand Peco:Hunt Sleeper:Hunt Goat:Hunt Harpy")) {
-					case 1: callsub L_Quest,10114,"- Hunt 20 ^4d4dff'Grand Pecos'^000000.";
-					case 2: callsub L_Quest,10115,"- Hunt 20 ^4d4dff'Sleepers'^000000.";
-					case 3: callsub L_Quest,10116,"- Hunt 20 ^4d4dff'Goats'^000000.";
-					case 4: callsub L_Quest,10117,"- Hunt 20 ^4d4dff'Harpies'^000000.";
-				}
-			case 4:
-				mes "- Clock Tower Quest Board Section -";
-				next;;
-				switch(select("Hunt Clock:Hunt Punk:Hunt Rideword")) {
-					case 1: callsub L_Quest,10118,"- Hunt 15 ^4d4dff'Clocks'^000000.";
-					case 2: callsub L_Quest,10119,"- Hunt 15 ^4d4dff'Punks'^000000.";
-					case 3: callsub L_Quest,10120,"- Hunt 15 ^4d4dff'Ridewords'^000000.";
-				}
-			case 5:
-				mes "- Independent Islands Quest Board Section -";
-				next;
-				switch(select("Hunt Miyabi Doll:Hunt Mi Gao:Hunt Tamruan")) {
-					case 1: callsub L_Quest,10122,"- Hunt 15 ^4d4dff'Miyabi Dolls'^000000 in Amatsu.";
-					case 2: callsub L_Quest,10123,"- Hunt 15 ^4d4dff'Mi Gaos'^000000 in Luoyang.";
-					case 3: callsub L_Quest,5056,"- Hunt 15 ^4d4dff'Tamruans'^000000 in Ayothaya.";
-				}
-			}
-		case 6: 
-			if (BaseLevel < 86) {
-				mes "I am not ready for these quests yet...";
-				close;
-			}
-			switch(select("Turtle Island:Clock Tower:Independent Islands:Other Regions")) {
-			case 1:
-				mes "- Turtle Island Quest Board Section -";
-				next;
-				switch(select("Dragon Tail Hunting:Spring Rabbit Hunting:Pest Hunting")) {
-					case 1: callsub L_Quest,4167,"- Hunt ^4d4dff'Dragon Tails'^000000.";
-					case 2: callsub L_Quest,4168,"- Hunt ^4d4dff'Spring Rabbits'^000000.";
-					case 3: callsub L_Quest,4169,"- Hunt ^4d4dff'4d4dff'Pests'^000000.";
-				}
-			case 2:
-				mes "- Clock Tower Quest Board Section -";
-				next;
-				switch(select("Bathory Hunting:Alarm Hunting")) {
-					case 1: callsub L_Quest,4170,"- Hunt ^4d4dff'Bathorys'^000000.";
-					case 2: callsub L_Quest,4171,"- Hunt ^4d4dff'Alarms'^000000.";
-				}
-			case 3:
-				mes "- Independent Islands Quest Board Section -";
-				next;
-				switch(select("Hyegun Hunting:Firelock Soldier Hunting:Zipper Bear Hunting")) {
-					case 1: callsub L_Quest,4173,"- Hunt ^4d4dff'Hyeguns'^000000.";
-					case 2: callsub L_Quest,4174,"- Hunt ^4d4dff'Firelock Soldiers'^000000.";
-					case 3: callsub L_Quest,4175,"- Hunt ^4d4dff'Zipper Bears'^000000.";
-				}
-			case 4:
-				mes "- Schwardtzvald Republic Board Section -";
-
-				switch(select("Rafflesia Hunting:Venomous Hunting:Pitman Hunting:Novus Hunting")) {
-					case 1: callsub L_Quest,4177,"- Hunt ^4d4dff'Rafflesias'^000000.";
-					case 2: callsub L_Quest,4178,"- Hunt ^4d4dff'Venomous'^000000.";
-					case 3: callsub L_Quest,4179,"- Hunt ^4d4dff'Pitmans'^000000.";
-					case 4: callsub L_Quest,4180,"- Hunt ^4d4dff'Novus'^000000.";
-				}
-			}
-		case 7: 
-			if (BaseLevel < 91) {
-				mes "I am not ready for these quests yet...";
-				close;
-			}
-			switch(select("Turtle Island:Glast Heim:Arunafeltz State:Independent Islands:Other regions")) {
-			case 1:
-				mes "- Turtle Island Quest Board Section -";
-				next;
-				switch(select("Solider Hunting:Freezer Hunting:Heater Hunting")) {
-					case 1: callsub L_Quest,4181,"- Hunt ^4d4dff'Soliders'^000000.";
-					case 2: callsub L_Quest,4182,"- Hunt ^4d4dff'Freezers'^000000.";
-					case 3: callsub L_Quest,4183,"- Hunt ^4d4dff'Heaters'^000000.";
-				}
-			case 2:
-				mes "- Glast Heim Quest Board Section -";
-				next;
-				switch(select("Injustice Hunting:Rybio Hunting:Dark Priest Hunting")) {
-					case 1: callsub L_Quest,4184,"- Hunt ^4d4dff'Injustices'^000000.";
-					case 2: callsub L_Quest,4185,"- Hunt ^4d4dff'Rybios'^000000.";
-					case 3: callsub L_Quest,4186,"- Hunt ^4d4dff'Dark Priests'^000000.";
-				}
-			case 3:
-				mes "- Arunafeltz State Quest Board Section -";
-				next;
-				switch(select("Stapo Hunting:Roween Hunting:Siroma Hunting")) {
-					case 1: callsub L_Quest,4187,"- Hunt ^4d4dff'Stapos'^000000.";
-					case 2: callsub L_Quest,4188,"- Hunt ^4d4dff'Roweens'^000000.";
-					case 3: callsub L_Quest,4189,"- Hunt ^4d4dff'Siromas'^000000.";
-				}
-			case 4:
-				mes "- Independent Islands Quest Board Section -";
-				next;
-				switch(select("Shinobi:Evil Nymph")) {
-					case 1: callsub L_Quest,4190,"- Hunt ^4d4dff'Shinobis'^000000.";
-					case 2: callsub L_Quest,4191,"- Hunt ^4d4dff'Evil Nymphs'^000000.";
-				}
-			case 5:
-				mes "- Other Regions Quest Board Section -";
-				next;
-				switch(select("Deviruchi:Mineral:Kaho:Neraid:Disguise")) {
-					case 1: callsub L_Quest,4192,"- Hunt ^4d4dff'Deviruchis'^000000.";
-					case 2: callsub L_Quest,4193,"- Hunt ^4d4dff'Minerals'^000000.";
-					case 3: callsub L_Quest,4194,"- Hunt ^4d4dff'Kahos'^000000.";
-					case 4: callsub L_Quest,4195,"- Hunt ^4d4dff'Neraids'^000000.";
-					case 5: callsub L_Quest,4196,"- Hunt ^4d4dff'Disguises'^000000.";
-				}
+	switch(select("Payon Forest")) {
+		case 1:
+			switch(select("^8c5532Lv.1~10^000000 - Looters!:^8c5532Lv.1~10^000000 - Prevent their evolution:^8c5532Lv.1~10^000000 - Into the woods")) {
+				case 1: callsub L_Quest,1,"Looters!"," - Ever dropped something and then couldn't find it? A ^4d4dffPoring^000000 must have gotten it first! ^4d4dffPoring^000000 will eat whatever you drop. Finish off 15 of them for a reward, before anymore items disappear...";
+				case 2: callsub L_Quest,2,"Prevent their evolution"," - ^4d4dffFabre^000000 are the larvae form of ^4d4dffCreamy^000000, and are a real threat to new adventurers. Kill 10 ^4d4dffFabres^000000 around the Prontera and Izlude fields for a reward. You will be doing novices a favour.";
+				case 3: callsub L_Quest,12,"Into the woods"," - There's too many ^4d4dffWillow^000000 in the south forest. They can evolve into ^4d4dffElder Willow^000000. If that happens novices will not be able to leave Payon safely. Help them and kill 10 ^4d4dffWillow^000000.";
 			}
 	}
 	
@@ -246,184 +50,22 @@ payon,173,162,5	script	Quest Rewards#RewardPayon	4_BOARD3,{
 	mes "- Quest Reward Board -";
 	mes "When done, post the results of your finished quests in this board for your reward.";
 	next;
-	switch(select("Levels 11 to 25:Levels 26 to 40:Levels 41 to 55:Levels 56 to 70:Levels 71 to 85:Levels 86 to 90:Levels 91 to 99:Leave")) {
+	switch(select("Payon Forest")) {
 		case 1: 
-			switch(select("Hornet Hunting:Condor Hunting:Worm Tail Hunting:Spore Hunting:Muka Hunting:Familiar Hunting")) {
-				case 1: callsub L_Quest,11114,"Hornet Hunting",900;
-				case 2: callsub L_Quest,11115,"Condor Hunting",1800;
-				case 3: callsub L_Quest,11117,"Worm Tail Hunting",2600;
-				case 4: callsub L_Quest,11118,"Spore Hunting",3900;
-				case 5: callsub L_Quest,11120,"Muka Hunting",3200;
-				case 6: callsub L_Quest,11121,"Familiar Hunting",3200;
-			}
-		case 2:
-			switch(select("Poison Spore Hunting:Smokie Hunting:Elder Willow Hunting:Coco Hunting:Thara Frog Hunting")) {
-				case 1: callsub L_Quest,8266,"Poison Spore Hunting",5000;
-				case 2: callsub L_Quest,8267,"Smokie Hunting",5000;
-				case 3: callsub L_Quest,8268,"Elder Willow Hunting",5000;
-				case 4: callsub L_Quest,8269,"Coco Hunting",5000;
-				case 5: callsub L_Quest,8270,"Thara Frog Hunting",5500;
-			}
-			
-		case 3:
-			switch(select("Cruiser Hunting:Kukre Hunting:Orc Baby Hunting:Orc Warrior Hunting:Vadon Hunting:Megalodon Hunting:Marse Hunting:Cornutus Hunting:Myst Hunting:Shellfish Hunting:Marine Sphere Hunting")) {
-				case 1: callsub L_Quest,12073,"Cruiser Hunting", 7200;
-				case 2: callsub L_Quest,12074,"Kukre Hunting", 15750;
-				case 3: callsub L_Quest,12075,"Orc Baby Hunting", 7875;
-				case 4: callsub L_Quest,12076,"Orc Warrior Hunting",11100;
-				case 5: callsub L_Quest,12077,"Vadon Hunting",8550;
-				case 6: callsub L_Quest,12078,"Megalodon Hunting",17100;
-				case 7: callsub L_Quest,12079,"Marse Hunting",9000;
-				case 8: callsub L_Quest,12080,"Cornutus Hunting",12300;
-				case 9: callsub L_Quest,12081,"Myst Hunting",9900;
-				case 10: callsub L_Quest,12082,"Shellfish Hunting",10250;
-				case 11: callsub L_Quest,12083,"Marine Sphere Hunting",10350;
-				case 12: callsub L_Quest,12084,"Phen Hunting",13800;
-				case 13: callsub L_Quest,12085,"Orc Skeleton Hunting",11025;
-				case 14: callsub L_Quest,12086,"Zenorc Hunting",12500;
-				case 15: callsub L_Quest,12087,"Mummy Hunting",11250;
-			}
-		case 4:
-			switch(select("Alligator Hunting:Merman Hunting:Savage Hunting:Sohee Hunting:Hunter Fly Hunting:Munak Hunting")) {
-				case 1: callsub L_Quest,3251,"Alligator Hunting",25000;
-				case 2: callsub L_Quest,3252,"Merman Hunting",25000;
-				case 3: callsub L_Quest,3255,"Savage Hunting",25000;
-				case 4: callsub L_Quest,3257,"Sohee Hunting",25000;
-				case 5: callsub L_Quest,3260,"Hunter Fly Hunting",25000;
-				case 6: callsub L_Quest,3261,"Munak Hunting",25000;
-			}
-		case 5:
-			switch(select("Sphinx Dungeon:Glast Heim:Yuno Fields:Clock Tower:Independent Islands")) {
-			case 1:
-				mes "- Morroc Sphinx Quest Board Section -";
-				next;
-				switch(select("Requiem Hunting:Marduk Hunting:Pasana Hunting")) {
-					case 1: callsub L_Quest,10107,"Requiem Hunting",45000;
-					case 2: callsub L_Quest,10108,"Marduk Hunting",45000;
-					case 3: callsub L_Quest,10109,"Pasana Hunting",45000;
-				}
-			case 2:
-				mes "- Glast Heim Quest Board Section -";
-				next;
-				switch(select("Dark Frame Hunting:Evil Druid Hunting:Wraith Hunting:Raydric Archer Hunting")) {
-					case 1: callsub L_Quest,10110,"Dark Frame Hunting",45000;
-					case 2: callsub L_Quest,10111,"Evil Druid Hunting",45000;
-					case 3: callsub L_Quest,10112,"Wraith Hunting",45000;
-					case 4: callsub L_Quest,10113,"Raydric Archer Hunting",45000;
-				}
-			case 3:
-				mes "- Yuno Fields Quest Board Section -";
-				next;
-				switch(select("Grand Peco Hunting:Sleeper Hunting:Goat Hunting:Harpy Hunting")) {
-					case 1: callsub L_Quest,10114,"Grand Peco Hunting",45000;
-					case 2: callsub L_Quest,10115,"Sleeper Hunting",45000;
-					case 3: callsub L_Quest,10116,"Goat Hunting",45000;
-					case 4: callsub L_Quest,10117,"Harpy Hunting",45000;
-				}
-			case 4:
-				mes "- Clock Tower Quest Board Section -";
-				next;;
-				switch(select("Clock Hunting:Punk Hunting:Rideword Hunting")) {
-					case 1: callsub L_Quest,10118,"Clock Hunting",45000;
-					case 2: callsub L_Quest,10119,"Punk Hunting",45000;
-					case 3: callsub L_Quest,10120,"Rideword Hunting",45000;
-				}
-			case 5:
-				mes "- Independent Islands Quest Board Section -";
-				next;
-				switch(select("Miyabi Doll Hunting:Mi Gao Hunting:Tamruan Hunting")) {
-					case 1: callsub L_Quest,10122,"Miyabi Doll Hunting",45000;
-					case 2: callsub L_Quest,10123,"Mi Gao Hunting",45000;
-					case 3: callsub L_Quest,5056,"Tamruan Hunting",45000;
-				}
-			}
-		case 6:
-			switch(select("Turtle Island:Clock Tower:Independent Islands:Other Regions")) {
-			case 1:
-				mes "- Turtle Island Quest Board Section -";
-				next; 
-				switch(select("Dragon Tail Hunting:Spring Rabbit Hunting:Pest Hunting")) {
-					case 1: callsub L_Quest,4167,"Dragon Tail Hunting", 90000;
-					case 2: callsub L_Quest,4168,"Spring Rabbit Hunting", 90000;
-					case 3: callsub L_Quest,4169,"Pest Hunting", 90000;
-				}
-			case 2:
-				mes "- Clock Tower Quest Board Section -";
-				next;
-				switch(select("Bathory Hunting:Alarm Hunting")) {
-					case 1: callsub L_Quest,4170,"Bathory Hunting", 90000;
-					case 2: callsub L_Quest,4171,"Alarm Hunting", 90000;
-				}
-			case 3:
-				mes "- Independent Islands Quest Board Section -";
-				next;
-				switch(select("Hyegun Hunting:Firelock Soldier Hunting:Zipper Bear Hunting")) {
-					case 1: callsub L_Quest,4173,"Hyegun Hunting", 90000;
-					case 2: callsub L_Quest,4174,"Firelock Soldier Hunting", 90000;
-					case 3: callsub L_Quest,4175,"Zipper Bear Hnting", 90000;
-				}
-			case 4:
-				mes "- Schwardtzvald Republic Board Section -";
-
-				switch(select("Rafflesia Hunting:Venomous Hunting:Pitman Hunting:Novus Hunting")) {
-					case 1: callsub L_Quest,4177,"Rafflesia Hunting", 90000;
-					case 2: callsub L_Quest,4178,"Venomous Hunting", 90000;
-					case 3: callsub L_Quest,4179,"Pitman Hunting", 90000;
-					case 4: callsub L_Quest,4180,"Novus Hunting", 90000;
-				}
-			}
-		case 7:
-			switch(select("Turtle Island:Glast Heim:Arunafeltz State:Independent Islands:Other regions")) {
-			case 1:
-				mes "- Turtle Island Quest Board Section -";
-				next;
-				switch(select("Solider Hunting:Freezer Hunting:Heater Hunting")) {
-					case 1: callsub L_Quest,4181,"Solider Hunting",145000;
-					case 2: callsub L_Quest,4182,"Freezer Hunting",145000;
-					case 3: callsub L_Quest,4183,"Heater Hunting",145000;
-				}
-			case 2:
-				mes "- Glast Heim Quest Board Section -";
-				next;
-				switch(select("Injustice Hunting:Rybio Hunting:Dark Priest Hunting")) {
-					case 1: callsub L_Quest,4184,"Injustice Hunting",145000;
-					case 2: callsub L_Quest,4185,"Rybio Hunting",145000;
-					case 3: callsub L_Quest,4186,"Dark Priest Hunting",145000;
-				}
-			case 3:
-				mes "- Arunafeltz State Quest Board Section -";
-				next;
-				switch(select("Stapo Hunting:Roween Hunting:Siroma Hunting")) {
-					case 1: callsub L_Quest,4187,"Stapo Hunting",145000;
-					case 2: callsub L_Quest,4188,"Roween Hunting",145000;
-					case 3: callsub L_Quest,4189,"Siroma Hunting",145000;
-				}
-			case 4:
-				mes "- Independent Islands Quest Board Section -";
-				next;
-				switch(select("Shinobi Hunting:Evil Nymph Hunting")) {
-					case 1: callsub L_Quest,4190,"Shinobi Hunting",145000;
-					case 2: callsub L_Quest,4191,"Evil Nymph Hunting",145000;
-				}
-			case 5:
-				mes "- Other Regions Quest Board Section -";
-				next;
-				switch(select("Deviruchi Hunting:Mineral Hunting:Kaho Hunting:Neraid Hunting:Disguise Hunting")) {
-					case 1: callsub L_Quest,4192,"Deviruchi Hunting",145000;
-					case 2: callsub L_Quest,4193,"Mineral Hunting",145000;
-					case 3: callsub L_Quest,4194,"Kaho Hunting",145000;
-					case 4: callsub L_Quest,4195,"Neraid Hunting",145000;
-					case 5: callsub L_Quest,4196,"Disguise Hunting",145000;
-				}
+			switch(select("Looters!:Prevent their evolution:Into the woods")) {
+				case 1: callsub L_Quest,1,"Looters!",1000,1000,501,10; //exp,jexp, rewarditemid, rewarditemquantity, requestitemid, requestitemquantity
+				case 2: callsub L_Quest,2,"Prevent their evolution",1200,1100,501,10;
+				case 4: callsub L_Quest,12,"Into the woods",1200,1100,501,10;
 			}
 	}
+
 
 L_Quest:
 	.@quest_id = getarg(0);
 	if (checkquest(.@quest_id) == 1) {
 		if (checkquest(.@quest_id,HUNTING) == 2) {
-			.@item_req = getarg(3,0);
-			.@req_amount = getarg(4,0);
+			.@item_req = getarg(6,0);
+			.@req_amount = getarg(7,0);
 			if (.@item_req) {
 				if (countitem(.@item_req) < .@req_amount) {
 					mes "Hmmm... I don't have enough "+ getitemname(.@item_req) +".";
@@ -431,16 +73,15 @@ L_Quest:
 					close;
 				}
 			}
+	
 			mes "Hmm... let me see...";
 			mes "Looks like I have completed the '"+ getarg(1) +"' quest!";
 			mes "Posting the result now!";
 			next;
-
-			if (.@item_req)
-				delitem .@item_req,.@req_amount;
+			Zeny += getarg(3);
+			getitem getarg(4),getarg(5); 
 			erasequest .@quest_id;
-			setquest .@quest_id+10;
-			getexp getarg(2),getarg(2);
+			getexp getarg(2),getarg(3);
 			close;
 		}
 		mes "Hmm... let me see...";
@@ -451,3 +92,5 @@ L_Quest:
 	mes "Looks like I have not picked up this quest..";
 	close;
 }
+
+

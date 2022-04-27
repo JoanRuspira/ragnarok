@@ -1,5 +1,5 @@
 
-prontera,154,194,3	script	Quest Board#QuestProntera	4_BOARD3,{
+prontera,154,194,5	script	Quest Board#QuestProntera	4_BOARD3,{
 	for ( .@i = 11124; .@i < 11134; .@i++ )
 		if (checkquest(.@i,PLAYTIME) == 2) erasequest .@i;
 	for( .@i = 11114; .@i < 11124; .@i++ ) {
@@ -16,13 +16,11 @@ prontera,154,194,3	script	Quest Board#QuestProntera	4_BOARD3,{
 
 	switch(select("Prontera Fields")) {
 		case 1:
-			switch(select("Looters!:Lunatic population control:Prevent their evolution:Bee Keeping")) {
+			switch(select("^8c5532Lv.1~10^000000 - Looters!:^8c5532Lv.1~10^000000 - Lunatic population control:^8c5532Lv.1~10^000000 - Prevent their evolution:^8c5532Lv.1~10^000000 - Bee Keeping")) {
 				case 1: callsub L_Quest,1,"Looters!"," - Ever dropped something and then couldn't find it? A ^4d4dffPoring^000000 must have gotten it first! ^4d4dffPoring^000000 will eat whatever you drop. Finish off 15 of them in the Izlude and Prontera fields for a reward, before anymore items disappear...";
 				case 2: callsub L_Quest,2,"Lunatic population control"," - The ^4d4dffLunatics^000000 in the fields around Izlude and Prontera have been eating the harvests of the Izlude vegtable vendors. Something has to be done before they go out of business, so a reward will be offered for 10 ^4d4dffLunatic^000000 kills.";
-				case 3: callsub L_Quest,3,"Prevent this evolution"," - ^4d4dffFabre^000000 are the larvae form of ^4d4dffCreamy^000000, and are a real threat to new adventurers. Kill 10 ^4d4dffFabres^000000 around the Prontera and Izlude fields for a reward. You will be doing novices a favour.";
-				case 3: callsub L_Quest,3,"Bee Keeping","- ^4d4dffHornets^000000 in the field west from Prontera are thriving this season. We need to decrease their population as soon as possible before they get out of control. A reward will be offered to those who kill 10 hornets.";
-				case 4: callsub L_Quest,4,"Get the master"," - The ^4d4dffPoring^000000 living in the fields around here have their own version of leaders. ^4d4dffMastering^000000 are the poring ringleaders. Kill 1 of them in hopes that the others leave the city's outskirts.";
-				case 5: callsub L_Quest,5,"A luntaic leader"," - The ^4d4dffLunatic^000000 living in the fields around here have their own version of leaders. ^4d4dffEclipse^000000 are the lunatic ringleaders. Kill 1 of them in hopes that the others leave the city's outskirts.";
+				case 3: callsub L_Quest,3,"Prevent their evolution"," - ^4d4dffFabre^000000 are the larvae form of ^4d4dffCreamy^000000, and are a real threat to new adventurers. Kill 10 ^4d4dffFabres^000000 around the Prontera and Izlude fields for a reward. You will be doing novices a favour.";
+				case 4: callsub L_Quest,6,"Bee Keeping","- ^4d4dffHornets^000000 in the field west from Prontera are thriving this season. We need to decrease their population as soon as possible before they get out of control. A reward will be offered to those who kill 10 hornets.";
 			}
 	}
 	
@@ -45,7 +43,7 @@ L_Quest:
 	close;	
 }
 
-prontera,157,194,5	script	Quest Rewards#RewardProntera	4_BOARD3,{
+prontera,156,194,3	script	Quest Rewards#RewardProntera	4_BOARD3,{
 	mes "- Quest Reward Board -";
 	mes "Are you looking for a job?";
 	mes "We have posted quests with EXP rewards on the board to your left!";
@@ -55,31 +53,38 @@ prontera,157,194,5	script	Quest Rewards#RewardProntera	4_BOARD3,{
 	next;
 	switch(select("Prontera Fields")) {
 		case 1: 
-			switch(select("Looters!:Lunatic population control:Prevent their evolution:Get the master:A luntaic leader")) {
-				case 1: callsub L_Quest,1,"Looters!",1500,1000,501,10;
-				case 2: callsub L_Quest,2,"Lunatic population control",1500,1000,501,10;
-				case 3: callsub L_Quest,3,"Prevent their evolution",1500,1000,501,10;
-				case 4: callsub L_Quest,4,"Get the master",3000,5000;
-				case 5: callsub L_Quest,5,"A luntaic leader",3000,5000;
+			switch(select("Looters!:Lunatic population control:Prevent their evolution:Bee Keeping")) {
+				case 1: callsub L_Quest,1,"Looters!",1000,1000,501,10; //exp/jexp, zeny, itemid, itemquantity, rewarditemquantity, requestitemid, requestitemquantity
+				case 2: callsub L_Quest,2,"Lunatic population control",1200,1100,501,10;
+				case 3: callsub L_Quest,3,"Prevent their evolution",1200,1100,501,10;
+				case 4: callsub L_Quest,6,"Bee Keeping",1000,1000,501,10;
 				
 			}
 	}
+
 
 L_Quest:
 	.@quest_id = getarg(0);
 	if (checkquest(.@quest_id) == 1) {
 		if (checkquest(.@quest_id,HUNTING) == 2) {
-			.@item_req = getarg(3,0);
-			.@req_amount = getarg(4,0);
+			.@item_req = getarg(6,0);
+			.@req_amount = getarg(7,0);
+			if (.@item_req) {
+				if (countitem(.@item_req) < .@req_amount) {
+					mes "Hmmm... I don't have enough "+ getitemname(.@item_req) +".";
+					mes "I need to bring "+ .@req_amount +" "+ getitemname(.@item_req) +".";
+					close;
+				}
+			}
 	
 			mes "Hmm... let me see...";
 			mes "Looks like I have completed the '"+ getarg(1) +"' quest!";
 			mes "Posting the result now!";
 			next;
-			Zeny += getarg(3);
+			//Zeny += getarg(3);
 			getitem getarg(4),getarg(5); 
 			erasequest .@quest_id;
-			getexp getarg(2),getarg(2);
+			getexp getarg(2),getarg(3);
 			close;
 		}
 		mes "Hmm... let me see...";

@@ -1,5 +1,5 @@
 
-alberta,52,248,3	script	Quest Board#TutoAlberta	4_BOARD3,{
+geffen,144,62,3	script	Quest Board#QuestGeffen	4_BOARD3,{
 	for ( .@i = 11124; .@i < 11134; .@i++ )
 		if (checkquest(.@i,PLAYTIME) == 2) erasequest .@i;
 	for( .@i = 11114; .@i < 11124; .@i++ ) {
@@ -14,12 +14,13 @@ alberta,52,248,3	script	Quest Board#TutoAlberta	4_BOARD3,{
 	mes " - Midgard Continental Alliance";
 	next;
 
-	switch(select("Payon Forest")) {
+	switch(select("Geffen Bay")) {
 		case 1:
-			switch(select("^8c5532Lv.1~10^000000 - Lunatic population control:^8c5532Lv.1~10^000000 - Armored wings:^8c5532Lv.1~10^000000 - Into the woods")) {
-				case 1: callsub L_Quest,2,"Lunatic population control"," - The ^4d4dffLunatics^000000 in the fields around Izlude and Prontera have been eating the harvests of the Izlude vegtable vendors. Something has to be done before they go out of business, so a reward will be offered for 10 ^4d4dffLunatic^000000 kills.";
-				case 2: callsub L_Quest,11,"Armored wings","- We are building a new light armor for adventurers.^4d4dffShells^000000 from ^4d4dffChonhons^000000 are perfect because they are durable and light. Bring 10 of them for a reward.";
-				case 3: callsub L_Quest,12,"Into the woods"," - There's too many ^4d4dffWillow^000000 in the south forest. They can evolve into ^4d4dffElder Willow^000000. If that happens novices will not be able to leave Payon safely. Help them and kill 10 ^4d4dffWillow^000000.";
+			switch(select("^8c5532Lv.1~10^000000 - Looters!:^8c5532Lv.1~10^000000 - Lunatic population control:^8c5532Lv.1~10^000000 - Prevent their evolution:^8c5532Lv.1~10^000000 - Armored wings")) {
+				case 1: callsub L_Quest,1,"Looters!"," - Ever dropped something and then couldn't find it? A ^4d4dffPoring^000000 must have gotten it first! ^4d4dffPoring^000000 will eat whatever you drop. Finish off 15 of them in the Izlude and Prontera fields for a reward, before anymore items disappear...";
+				case 2: callsub L_Quest,2,"Lunatic population control"," - The ^4d4dffLunatics^000000 in the fields around Izlude and Prontera have been eating the harvests of the Izlude vegtable vendors. Something has to be done before they go out of business, so a reward will be offered for 10 ^4d4dffLunatic^000000 kills.";
+				case 3: callsub L_Quest,3,"Prevent their evolution"," - ^4d4dffFabre^000000 are the larvae form of ^4d4dffCreamy^000000, and are a real threat to new adventurers. Kill 10 ^4d4dffFabres^000000 around the Prontera and Izlude fields for a reward. You will be doing novices a favour.";
+				case 4: callsub L_Quest,11,"Armored wings","- We are building a new light armor for adventurers.^4d4dffShells^000000 from ^4d4dffChonhons^000000 are perfect because they are durable and light. Bring 10 of them for a reward.";
 			}
 	}
 	
@@ -42,7 +43,7 @@ L_Quest:
 	close;	
 }
 
-alberta,54,248,5	script	Quest Rewards#RewardAlberta	4_BOARD3,{
+geffen,146,62,5	script	Quest Rewards#RewardGeffen	4_BOARD3,{
 	mes "- Quest Reward Board -";
 	mes "Are you looking for a job?";
 	mes "We have posted quests with EXP rewards on the board to your left!";
@@ -50,12 +51,13 @@ alberta,54,248,5	script	Quest Rewards#RewardAlberta	4_BOARD3,{
 	mes "- Quest Reward Board -";
 	mes "When done, post the results of your finished quests in this board for your reward.";
 	next;
-	switch(select("Payon Forest")) {
+	switch(select("Geffen Bay")) {
 		case 1: 
-			switch(select("Lunatic population control:Armored wings:Into the woods")) {
-				case 1: callsub L_Quest,2,"Lunatic population control",1200,1100,501,10;
-				case 2: callsub L_Quest,11,"Armored wings",1500,1300,501,10,935,10;
-				case 3: callsub L_Quest,12,"Into the woods",1200,1100,501,10;
+			switch(select("Looters!:Lunatic population control:Prevent their evolution:Armored wings")) {
+				case 1: callsub L_Quest,1,"Looters!",1000,1000,501,10; //exp/jexp, zeny, rewarditemid, rewarditemquantity, requestitemid, requestitemquantity
+				case 2: callsub L_Quest,2,"Lunatic population control",1200,1100,501,10;
+				case 3: callsub L_Quest,3,"Prevent their evolution",1200,1100,501,10;
+				case 4: callsub L_Quest,11,"Armored wings",1500,1300,501,10,935,10;
 			}
 	}
 
@@ -92,5 +94,3 @@ L_Quest:
 	mes "Looks like I have not picked up this quest..";
 	close;
 }
-
-
