@@ -17,8 +17,18 @@ prt_fild00,285,138,10,10	monster	Green Plant	1080,5,360000,180000
 prt_fild01,0,0	monster	Lunatic	1063,196,5000
 prt_fild01,0,0	monster	Poring	1002,42,5000
 prt_fild01,0,0	monster	Fabre	1007,42,5000
+prt_fild01,0,0	monster	Little Poring	2398,33,50000
 prt_fild01,199,266,3,3	monster	Green Plant	1080,3,360000,180000
 prt_fild01,199,266,3,3	monster	Blue Plant	1079,1,900000,450000
+prt_fild01,0,0	monster	Green Plant	1080,20,5000
+prt_fild01,0,0	monster	Red Mushroom	1085,20,5000
+prt_fild01,0,0	monster	Red Mushroom	1084,20,5000
+prt_fild01,0,0	monster	Green Plant	1080,20,5000
+prt_fild01,0,0	monster	Yellow Plant	1081,20,5000
+prt_fild01,0,0	monster	Red Plant	1078,20,5000
+prt_fild01,0,0	monster	Blue Plant	1079,10,5000
+prt_fild01,0,0	monster	White Plant	1082,10,5000
+prt_fild01,0,0	monster	Shining Plant	1083,5,5000
 
 //==================================================
 // prt_fild02 - Prontera Field
@@ -55,18 +65,36 @@ prt_fild04,350,114,10,10	monster	Green Plant	1080,5,900000,450000
 // prt_fild05 - Prontera Field
 //==================================================
 prt_fild05,0,0	monster	Hornet	1004,199,5000
-prt_fild05,0,0	monster	Thief Bug Egg	1048,42,5000
 prt_fild05,0,0	monster	Thief Bug	1051,42,5000
+prt_fild05,0,0	monster	Little Poring	2398,33,50000
 prt_fild05,208,37,10,10	monster	Green Plant	1080,6,900000,450000
 prt_fild05,208,37,10,10	monster	Blue Plant	1079,1,900000,450000
-
+prt_fild05,0,0	monster	Green Plant	1080,20,5000
+prt_fild05,0,0	monster	Red Mushroom	1085,20,5000
+prt_fild05,0,0	monster	Red Mushroom	1084,20,5000
+prt_fild05,0,0	monster	Green Plant	1080,20,5000
+prt_fild05,0,0	monster	Yellow Plant	1081,20,5000
+prt_fild05,0,0	monster	Red Plant	1078,20,5000
+prt_fild05,0,0	monster	Blue Plant	1079,10,5000
+prt_fild05,0,0	monster	White Plant	1082,10,5000
+prt_fild05,0,0	monster	Shining Plant	1083,5,5000
 //==================================================
 // prt_fild06 - Prontera Field
 //==================================================
 prt_fild06,0,0	monster	Fabre	1007,149,5000
 prt_fild06,0,0	monster	Poring	1002,32,5000
 prt_fild06,0,0	monster	Lunatic	1063,32,5000
+prt_fild06,0,0	monster	Little Poring	2398,33,50000
 prt_fild06,222,30,40,10	monster	Green Plant	1080,15,900000,450000
+prt_fild06,0,0	monster	Green Plant	1080,20,5000
+prt_fild06,0,0	monster	Red Mushroom	1085,20,5000
+prt_fild06,0,0	monster	Red Mushroom	1084,20,5000
+prt_fild06,0,0	monster	Green Plant	1080,20,5000
+prt_fild06,0,0	monster	Yellow Plant	1081,20,5000
+prt_fild06,0,0	monster	Red Plant	1078,20,5000
+prt_fild06,0,0	monster	Blue Plant	1079,10,5000
+prt_fild06,0,0	monster	White Plant	1082,10,5000
+prt_fild06,0,0	monster	Shining Plant	1083,5,5000
 
 //==================================================
 // prt_fild07 - Prontera Field
@@ -82,13 +110,17 @@ prt_fild07,225,110,5,5	monster	Black Mushroom	1084,3,360000,180000
 prt_fild08,0,0	monster	Poring	1002,110,5000
 prt_fild08,0,0	monster	Lunatic	1063,110,5000
 prt_fild08,0,0	monster	Fabre	1007,88,5000
-//prt_fild08,0,0	monster	Little Poring	2398,33,50000
+prt_fild08,0,0	monster	Little Poring	2398,33,50000
 prt_fild08,0,0	monster	Pupa	1008,66,5000
-
-
-
-
-
+prt_fild08,0,0	monster	Green Plant	1080,20,5000
+prt_fild08,0,0	monster	Red Mushroom	1085,20,5000
+prt_fild08,0,0	monster	Red Mushroom	1084,20,5000
+prt_fild08,0,0	monster	Green Plant	1080,20,5000
+prt_fild08,0,0	monster	Yellow Plant	1081,20,5000
+prt_fild08,0,0	monster	Red Plant	1078,20,5000
+prt_fild08,0,0	monster	Blue Plant	1079,10,5000
+prt_fild08,0,0	monster	White Plant	1082,10,5000
+prt_fild08,0,0	monster	Shining Plant	1083,5,5000
 
 //==================================================
 // prt_fild08 - Duplicates

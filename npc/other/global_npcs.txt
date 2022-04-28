@@ -41,6 +41,11 @@ OnInit:
 	next;
 	switch(select("Yes:No")) {
 		case 1:
+			if (BaseLevel < 10) {
+				mes "[Prontera Culvert Guard]";
+				mes "I can't let you go ahead. You are too weak. You need to be at least Base Level 10.";
+				close;
+			}
 			mes "[Prontera Culvert Guard]";
 			mes "Great, go through the door behind me.";
 			warp "prt_sewb1",132,248;

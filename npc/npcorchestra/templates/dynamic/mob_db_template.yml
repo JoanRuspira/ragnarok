@@ -129,6 +129,50 @@ Body:
       - Item: Scorpion_Card
         Rate: 1
         StealProtected: true
+  - Id: 2398
+    AegisName: LITTLE_PORING
+    Name: Little Poring
+    Level: 1
+    Hp: 40
+    BaseExp: 55
+    JobExp: 10
+    Attack: 8
+    Attack2: 1
+    Defense: 2
+    MagicDefense: 5
+    Str: 6
+    Dex: 6
+    Luk: 5
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Plant
+    Element: Water
+    ElementLevel: 1
+    WalkSpeed: 400
+    AttackDelay: 1872
+    AttackMotion: 672
+    DamageMotion: 480
+    Ai: 02
+    Drops:
+      - Item: Jellopy
+        Rate: 9000
+      - Item: Knife_
+        Rate: 100
+      - Item: Sticky_Mucus
+        Rate: 1000
+      - Item: Apple
+        Rate: 5000
+      - Item: Red_Herb
+        Rate: 1000
+      - Item: Apple
+        Rate: 500
+      - Item: Red_Herb
+        Rate: 1000
+      - Item: Novice_Poring_Card
+        Rate: 100
+        StealProtected: true
   - Id: 1002
     AegisName: PORING
     Name: Poring

@@ -5,10 +5,10 @@
 //==================================================
 // pay_fild01 - Payon Forest
 //==================================================
-pay_fild01,0,0	monster	Willow	1010,100,5000
-pay_fild01,0,0	monster	Poring	1002,100,5000
-pay_fild01,0,0	monster	Fabre	1007,100,5000
-pay_fild01,0,0	monster	Green Plant	1080,5,180000,90000
+pay_fild01,0,0	monster	Willow	1010,85,5000
+pay_fild01,0,0	monster	Poring	1002,85,5000
+pay_fild01,0,0	monster	Fabre	1007,85,5000
+pay_fild01,0,0	monster	Green Plant	1080,20,5000
 pay_fild01,0,0	monster	Red Mushroom	1085,20,5000
 pay_fild01,0,0	monster	Red Mushroom	1084,20,5000
 pay_fild01,0,0	monster	Green Plant	1080,20,5000
@@ -43,6 +43,8 @@ pay_fild03,0,0	monster	Red Plant	1078,20,5000
 pay_fild03,0,0	monster	Blue Plant	1079,10,5000
 pay_fild03,0,0	monster	White Plant	1082,10,5000
 pay_fild03,0,0	monster	Shining Plant	1083,5,5000
+pay_fild03,153,216,10,10	monster	Red Mushroom	1085,6,900000,450000
+pay_fild03,372,64,15,15	monster	Green Plant	1080,4,180000,90000
 
 //==================================================
 // pay_fild04 - Sograt Desert

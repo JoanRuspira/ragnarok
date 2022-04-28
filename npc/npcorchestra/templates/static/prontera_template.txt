@@ -3358,3 +3358,82 @@ prt_fild08,179,372,5	script	Prontera Adventurer#prt:npcid	51,{
 	npctalk "npcdialog";
 	end;
 }
+
+
+
+
+
+prt_fild06,29,195,5	script	Prontera Adventurer#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_fild06,30,188,1	script	Prontera Adventurer#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_fild06,34,193,6	script	Prontera Adventurer#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_fild06,37,188,7	script	Prontera Adventurer#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_fild05,351,251,5	script	Prontera Adventurer#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_fild05,356,253,2	script	Prontera Adventurer#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_fild05,262,206,1	script	Prontera Adventurer#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_fild05,367,202,7	script	Prontera Adventurer#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_fild05,369,208,4	script	Prontera Guard#prt:npcid	105,{
+	npctalk "Welcome to Prontera.";
+	end;
+}
+
+prt_fild05,363,198,0	script	Prontera Adventurer#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_fild05,361,213,3	script	Prontera Adventurer#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_fild01,200,34,0	script	Prontera Adventurer#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_fild01,198,42,4	script	Prontera Adventurer#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_fild01,201,50,1	script	Prontera Adventurer#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
+
+prt_fild01,195,54,5	script	Prontera Adventurer#prt:npcid	spriteid,{
+	npctalk "npcdialog";
+	end;
+}
