@@ -1,5 +1,5 @@
 
-payon,171,162,3	script	Quest Board#TutoPayon	4_BOARD3,{
+pay_arche,61,129,7	script	Quest Board#QuestArche	4_BOARD3,{
 	for ( .@i = 11124; .@i < 11134; .@i++ )
 		if (checkquest(.@i,PLAYTIME) == 2) erasequest .@i;
 	for( .@i = 11114; .@i < 11124; .@i++ ) {
@@ -14,7 +14,7 @@ payon,171,162,3	script	Quest Board#TutoPayon	4_BOARD3,{
 	mes " - Midgard Continental Alliance";
 	next;
 
-	switch(select("Payon Forest")) {
+	switch(select("Payon Cave")) {
 		case 1:
 			switch(select("^aeeb34Lv.1~10^000000 - Looters!:^aeeb34Lv.1~10^000000 - Prevent their evolution:^aeeb34Lv.1~10^000000 - Into the woods")) {
 				case 1: callsub L_Quest,1,"Looters!"," - Ever dropped something and then couldn't find it? A ^4d4dffPoring^000000 must have gotten it first! ^4d4dffPoring^000000 will eat whatever you drop. Finish off 15 of them for a reward, before anymore items disappear...";
@@ -42,7 +42,7 @@ L_Quest:
 	close;	
 }
 
-payon,173,162,5	script	Quest Rewards#RewardPayon	4_BOARD3,{
+pay_arche,63,129,1	script	Quest Board#RewardArche	4_BOARD3,{
 	mes "- Quest Reward Board -";
 	mes "Are you looking for a job?";
 	mes "We have posted quests with EXP rewards on the board to your left!";

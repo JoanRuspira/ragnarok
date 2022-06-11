@@ -66,7 +66,7 @@ cities_density = [
 270, #yuno
 50, #ariplane
 50, #ariplane_01
-250 #prontera
+350 #prontera
 ]
 
 all_ins = ["alberta_in","payon_in01","payon_in02","payon_in03","izlude_in","morocc_in","moc_ruins","izlu2dun","alb2trea","in_rogue", "moc_prydb1",

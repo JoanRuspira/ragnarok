@@ -14,7 +14,7 @@ morocc,163,106,3	script	Quest Board#TutoMorroc	4_BOARD3,{	for ( .@i = 11124; .@i
 
 	switch(select("Morroc Surroundings")) {
 		case 1:
-			switch(select("^8c5532Lv.1~10^000000 - Birds of prey:^8c5532Lv.1~10^000000 - Lightweight:^8c5532Lv.1~10^000000 - Each drop counts:^8c5532Lv.1~10^000000 - No more pecos")) {
+			switch(select("^aeeb34Lv.1~10^000000 - Birds of prey:^aeeb34Lv.1~10^000000 - Lightweight:^aeeb34Lv.1~10^000000 - Each drop counts:^aeeb34Lv.1~10^000000 - No more pecos")) {
 				case 1: callsub L_Quest,7,"Birds of prey"," - ^4d4dffCondors^000000 are all around Morroc's walls. They leave them filthy, as one can imagine. There's a reward for each 10 kills. We can't keep cleening them like this!";
 				case 2: callsub L_Quest,8,"Lightweight"," - What's more heavy a ton of irons or a ton of feathers? We want to know the answer so bring 10 ^4d4dffFeather of Birds^000000 from ^4d4dffPicky's^000000 around Morroc.";
 				case 3: callsub L_Quest,9,"Each drop counts"," - ^4d4dffDrops^000000 are draining Morroc's Oasis. We can't allow this, the city needs the Oasis at full capacity. The Morroc leaders offer a reward for every 10 kills.";

@@ -110,6 +110,29 @@ Body:
     Targets:
       - Mob: WILOW
         Count: 10
+  - Id: 13
+    Title: "Request : Hunt Rocker"
+    Targets:
+      - Mob: ROCKER
+        Count: 10
+  - Id: 14
+    Title: "Request : Hunt Mandragora"
+    Targets:
+      - Mob: MANDRAGORA
+        Count: 10
+  - Id: 15
+    Title: "Request : Hunt Savage Babe"
+    Targets:
+      - Mob: SAVAGE_BABE
+        Count: 10
+  - Id: 16
+    Title: "Request : Bring Stycky Webfoot"
+
+
+
+
+
+
   - Id: 11115
     Title: "Request : Hunt Condor"
     Targets:

@@ -16,7 +16,7 @@ alberta,52,248,3	script	Quest Board#TutoAlberta	4_BOARD3,{
 
 	switch(select("Payon Forest")) {
 		case 1:
-			switch(select("^8c5532Lv.1~10^000000 - Lunatic population control:^8c5532Lv.1~10^000000 - Armored wings:^8c5532Lv.1~10^000000 - Into the woods")) {
+			switch(select("^aeeb34Lv.1~10^000000 - Lunatic population control:^aeeb34Lv.1~10^000000 - Armored wings:^aeeb34Lv.1~10^000000 - Into the woods")) {
 				case 1: callsub L_Quest,2,"Lunatic population control"," - The ^4d4dffLunatics^000000 in the fields around Izlude and Prontera have been eating the harvests of the Izlude vegtable vendors. Something has to be done before they go out of business, so a reward will be offered for 10 ^4d4dffLunatic^000000 kills.";
 				case 2: callsub L_Quest,11,"Armored wings","- We are building a new light armor for adventurers.^4d4dffShells^000000 from ^4d4dffChonhons^000000 are perfect because they are durable and light. Bring 10 of them for a reward.";
 				case 3: callsub L_Quest,12,"Into the woods"," - There's too many ^4d4dffWillow^000000 in the south forest. They can evolve into ^4d4dffElder Willow^000000. If that happens novices will not be able to leave Payon safely. Help them and kill 10 ^4d4dffWillow^000000.";

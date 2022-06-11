@@ -624,7 +624,7 @@ izlude,39,97,3	script	Izlude Villager#izl::npcid	spriteid,{
 	end;
 }
 
-izlude,24,100,4	script	Izlude Villager#izl::npcid	105,{
+izlude,24,100,4	script	Izlude Guard#izl::npcid	105,{
 	npctalk "Welcome to Izlude.";
 	end;
 }
