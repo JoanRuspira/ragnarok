@@ -127,12 +127,35 @@ Body:
         Count: 10
   - Id: 16
     Title: "Request : Bring Stycky Webfoot"
-
-
-
-
-
-
+  - Id: 17
+    Title: "Request : Hunt Baby Desert Wolf"
+    Targets:
+      - Mob: DESERT_WOLF_B
+        Count: 10
+  - Id: 18
+    Title: "Request : Hunt Scorpion"
+    Targets:
+      - Mob: SCORPION
+        Count: 10
+  - Id: 19
+    Title: "Request : Hunt Zombie"
+    Targets:
+      - Mob: ZOMBIE
+        Count: 10
+  - Id: 20
+    Title: "Request : Bring Pointed Scale"
+  - Id: 21
+    Title: "Request : Hunt Snake"
+    Targets:
+      - Mob: SNAKE
+        Count: 10
+  - Id: 22
+    Title: "Request : Hunt Spore"
+    Targets:
+      - Mob: SPORE
+        Count: 10
+  - Id: 23
+    Title: "Request : Bring Pointed Scale"
   - Id: 11115
     Title: "Request : Hunt Condor"
     Targets:

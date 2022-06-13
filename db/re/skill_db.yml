@@ -139,21 +139,21 @@ Body:
   - Id: 2
     Name: SM_SWORD
     Description: Sword Mastery
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
   - Id: 3
     Name: SM_TWOHAND
     Description: Two-Handed Sword Mastery
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
   - Id: 4
     Name: SM_RECOVERY
     Description: Increase HP Recovery
-    MaxLevel: 10
+    MaxLevel: 5
   - Id: 5
     Name: SM_BASH
     Description: Bash
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     Range: -1
@@ -173,18 +173,8 @@ Body:
         - Level: 3
           Amount: 8
         - Level: 4
-          Amount: 8
+          Amount: 15
         - Level: 5
-          Amount: 8
-        - Level: 6
-          Amount: 15
-        - Level: 7
-          Amount: 15
-        - Level: 8
-          Amount: 15
-        - Level: 9
-          Amount: 15
-        - Level: 10
           Amount: 15
       Weapon:
         Fist: true
@@ -212,7 +202,7 @@ Body:
   - Id: 6
     Name: SM_PROVOKE
     Description: Provoke
-    MaxLevel: 10
+    MaxLevel: 5
     TargetType: Attack
     DamageFlags:
       NoDamage: true
@@ -224,29 +214,19 @@ Body:
     Requires:
       SpCost:
         - Level: 1
-          Amount: 4
-        - Level: 2
           Amount: 5
-        - Level: 3
-          Amount: 6
-        - Level: 4
+        - Level: 2
           Amount: 7
-        - Level: 5
-          Amount: 8
-        - Level: 6
+        - Level: 3
           Amount: 9
-        - Level: 7
-          Amount: 10
-        - Level: 8
+        - Level: 4
           Amount: 11
-        - Level: 9
-          Amount: 12
-        - Level: 10
+        - Level: 5
           Amount: 13
   - Id: 7
     Name: SM_MAGNUM
     Description: Magnum Break
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Self
     DamageFlags:
@@ -264,20 +244,8 @@ Body:
       - Level: 3
         Area: 2
       - Level: 4
-        Area: 2
+        Area: 4
       - Level: 5
-        Area: 2
-      - Level: 6
-        Area: 2
-      - Level: 7
-        Area: 2
-      - Level: 8
-        Area: 2
-      - Level: 9
-        Area: 2
-      - Level: 10
-        Area: 2
-      - Level: 11
         Area: 4
     Knockback: 2
     CopyFlags:
@@ -293,21 +261,11 @@ Body:
         - Level: 2
           Amount: 20
         - Level: 3
-          Amount: 19
+          Amount: 20
         - Level: 4
-          Amount: 19
+          Amount: 20
         - Level: 5
-          Amount: 18
-        - Level: 6
-          Amount: 18
-        - Level: 7
-          Amount: 17
-        - Level: 8
-          Amount: 17
-        - Level: 9
-          Amount: 16
-        - Level: 10
-          Amount: 16
+          Amount: 20
       SpCost: 30
   - Id: 8
     Name: SM_ENDURE
@@ -347,7 +305,7 @@ Body:
   - Id: 9
     Name: MG_SRECOVERY
     Description: Increase SP Recovery
-    MaxLevel: 10
+    MaxLevel: 5
   - Id: 10
     Name: MG_SIGHT
     Description: Sight
@@ -2051,7 +2009,7 @@ Body:
   - Id: 55
     Name: KN_SPEARMASTERY
     Description: Spear Mastery
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
   - Id: 56
     Name: KN_PIERCE
@@ -2094,7 +2052,7 @@ Body:
   - Id: 58
     Name: KN_SPEARSTAB
     Description: Spear Stab
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     DamageFlags:
@@ -6629,7 +6587,7 @@ Body:
   - Id: 248
     Name: CR_TRUST
     Description: Faith
-    MaxLevel: 10
+    MaxLevel: 5
   - Id: 249
     Name: CR_AUTOGUARD
     Description: Guard
@@ -7516,15 +7474,15 @@ Body:
     CastTime: 3000
     Duration1:
       - Level: 1
-        Time: 1200000
+        Time: 300000
       - Level: 2
-        Time: 1200000
+        Time: 600000
       - Level: 3
-        Time: 1200000
+        Time: 900000
       - Level: 4
         Time: 1200000
       - Level: 5
-        Time: 1800000
+        Time: 1500000
     Requires:
       SpCost: 40
       ItemCost:
@@ -7549,15 +7507,15 @@ Body:
     CastTime: 3000
     Duration1:
       - Level: 1
-        Time: 1200000
+        Time: 300000
       - Level: 2
-        Time: 1200000
+        Time: 600000
       - Level: 3
-        Time: 1200000
+        Time: 900000
       - Level: 4
         Time: 1200000
       - Level: 5
-        Time: 1800000
+        Time: 1500000
     Requires:
       SpCost: 40
       ItemCost:
@@ -7582,15 +7540,15 @@ Body:
     CastTime: 3000
     Duration1:
       - Level: 1
-        Time: 1200000
+        Time: 300000
       - Level: 2
-        Time: 1200000
+        Time: 600000
       - Level: 3
-        Time: 1200000
+        Time: 900000
       - Level: 4
         Time: 1200000
       - Level: 5
-        Time: 1800000
+        Time: 1500000
     Requires:
       SpCost: 40
       ItemCost:
@@ -7615,15 +7573,15 @@ Body:
     CastTime: 3000
     Duration1:
       - Level: 1
-        Time: 1200000
+        Time: 300000
       - Level: 2
-        Time: 1200000
+        Time: 600000
       - Level: 3
-        Time: 1200000
+        Time: 900000
       - Level: 4
         Time: 1200000
       - Level: 5
-        Time: 1800000
+        Time: 1500000
     Requires:
       SpCost: 40
       ItemCost:
@@ -9582,7 +9540,7 @@ Body:
   - Id: 363
     Name: HP_MEDITATIO
     Description: Meditatio
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Magic
   - Id: 364
     Name: HW_SOULDRAIN

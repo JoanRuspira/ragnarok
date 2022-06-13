@@ -16,12 +16,13 @@ geffen,144,62,3	script	Quest Board#QuestGeffen	4_BOARD3,{
 
 	switch(select("Geffen Bay")) {
 		case 1:
-			switch(select("^aeeb34Lv.1~10^000000 - Looters!:^aeeb34Lv.1~10^000000 - Lunatic population control:^aeeb34Lv.1~10^000000 - Prevent their evolution:^aeeb34Lv.1~10^000000 - Armored wings:^42c431Lv.10~20^000000 - Amphibian trails")) {
-				case 1: callsub L_Quest,1,"Looters!"," - Ever dropped something and then couldn't find it? A ^4d4dffPoring^000000 must have gotten it first! ^4d4dffPoring^000000 will eat whatever you drop. Finish off 15 of them in the Izlude and Prontera fields for a reward, before anymore items disappear...";
+			switch(select("^aeeb34Lv.1~10^000000 - Looters!:^aeeb34Lv.1~10^000000 - Lunatic population control:^aeeb34Lv.1~10^000000 - Prevent their evolution:^aeeb34Lv.1~10^000000 - Armored wings:^42c431Lv.10~20^000000 - Amphibian trails:^42c431Lv.10~20^000000 - Defence!")) {
+				case 1: callsub L_Quest,1,"Looters!"," - Ever dropped something and then couldn't find it? A ^4d4dffPoring^000000 must have gotten it first! ^4d4dffPoring^000000 will eat whatever you drop. Finish off 10 of them in the Izlude and Prontera fields for a reward, before anymore items disappear...";
 				case 2: callsub L_Quest,2,"Lunatic population control"," - The ^4d4dffLunatics^000000 in the fields around Izlude and Prontera have been eating the harvests of the Izlude vegtable vendors. Something has to be done before they go out of business, so a reward will be offered for 10 ^4d4dffLunatic^000000 kills.";
 				case 3: callsub L_Quest,3,"Prevent their evolution"," - ^4d4dffFabre^000000 are the larvae form of ^4d4dffCreamy^000000, and are a real threat to new adventurers. Kill 10 ^4d4dffFabres^000000 around the Prontera and Izlude fields for a reward. You will be doing novices a favour.";
 				case 4: callsub L_Quest,11,"Armored wings","- We are building a new light armor for adventurers.^4d4dffShells^000000 from ^4d4dffChonhons^000000 are perfect because they are durable and light. Bring 10 of them for a reward.";
 				case 5: callsub L_Quest,16,"Amphibian trails","- We require ^4d4dffSticky Webfoots^000000 from ^4d4dffRoda Frogs^000000 to build children's toys. Bring 10 of them to us please, we offer a reward. Frogs can be found on the south part of the Geffen Bay.";
+				case 6: callsub L_Quest,23,"Defence!","- The armorers in the city are in need of ^4d4dffSnail's Shells^000000. They can be obtained from ^4d4dffAmbernites^000000 living on the south part of the Geffen Bay and Delta. They will be used to craft armors for sale. Bring 10 of them to us please, for a reward of course.";
 			}
 	}
 	
@@ -54,12 +55,13 @@ geffen,146,62,5	script	Quest Rewards#RewardGeffen	4_BOARD3,{
 	next;
 	switch(select("Geffen Bay")) {
 		case 1: 
-			switch(select("Looters!:Lunatic population control:Prevent their evolution:Armored wings:Amphibian trails")) {
+			switch(select("Looters!:Lunatic population control:Prevent their evolution:Armored wings:Amphibian trails:Defence!")) {
 				case 1: callsub L_Quest,1,"Looters!",1000,1000,501,10; //exp/jexp, zeny, rewarditemid, rewarditemquantity, requestitemid, requestitemquantity
 				case 2: callsub L_Quest,2,"Lunatic population control",1200,1100,501,10;
 				case 3: callsub L_Quest,3,"Prevent their evolution",1200,1100,501,10;
 				case 4: callsub L_Quest,11,"Armored wings",1500,1300,501,10,935,10;
-				case 5: callsub L_Quest,16,"Amphibian trails",2000,2000,0,0;
+				case 5: callsub L_Quest,16,"Amphibian trails",2000,2000,0,0,918,10;
+				case 6: callsub L_Quest,23,"Defence!",2100,2200,0,0,946,10;
 			}
 	}
 

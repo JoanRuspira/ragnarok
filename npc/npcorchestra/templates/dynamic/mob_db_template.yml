@@ -124,8 +124,6 @@ Body:
         Rate: 500
       - Item: Fine_Grit
         Rate: 500
-      - Item: Lusty_Iron
-        Rate: 10
       - Item: Scorpion_Card
         Rate: 1
         StealProtected: true
@@ -217,25 +215,6 @@ Body:
       - Item: Poring_Card
         Rate: 20
         StealProtected: true
-#  - Id: 1003
-#    AegisName: TESTEGG
-#    Name: Test Egg
-#    Level: 2
-#    Hp: 100000
-#    BaseExp: 10
-#    JobExp: 10
-#    Attack: 3
-#    Attack2: 9
-#    Defense: 99
-#    Agi: 99
-#    SkillRange: 10
-#    ChaseRange: 12
-#    Size: Small
-#    Race: Insect
-#    Element: Earth
-#    ElementLevel: 1
-#    WalkSpeed: 512
-#    AttackMotion: 512
   - Id: 1004
     AegisName: HORNET
     Name: Hornet
@@ -331,20 +310,6 @@ Body:
       - Item: Farmiliar_Card
         Rate: 1
         StealProtected: true
-#  - Id: 1006
-#    AegisName: THIEF_BUG_LARVA
-#    Name: Thief Bug Larva
-#    Level: 1
-#    Size: Small
-#    Race: Formless
-#    Element: Water
-#    ElementLevel: 0
-#    Ai: 25
-#    Modes:
-#      NoCast: true
-#      CastSensorChase: true
-#      CastSensorIdle: true
-#      ChangeChase: true
   - Id: 1007
     AegisName: FABRE
     Name: Fabre
@@ -806,57 +771,6 @@ Body:
       - Item: Archer_Skeleton_Card
         Rate: 1
         StealProtected: true
-#  - Id: 1017
-#    AegisName: THIEF_BUG_FEMALE
-#    Name: Thief Bug Female
-#    Level: 10
-#    Hp: 170
-#    BaseExp: 35
-#    JobExp: 18
-#    Attack: 33
-#    Attack2: 40
-#    Defense: 5
-#    MagicDefense: 5
-#    Agi: 15
-#    Vit: 10
-#    Int: 5
-#    Dex: 23
-#    Luk: 5
-#    AttackRange: 1
-#    SkillRange: 10
-#    ChaseRange: 12
-#    Size: Medium
-#    Race: Insect
-#    Element: Dark
-#    ElementLevel: 1
-#    WalkSpeed: 200
-#    AttackDelay: 988
-#    AttackMotion: 288
-#    DamageMotion: 768
-#    Ai: 25
-#    Modes:
-#      NoCast: true
-#      CastSensorChase: true
-#      CastSensorIdle: true
-#      ChangeChase: true
-#    Drops:
-#      - Item: Worm_Peelings
-#        Rate: 3500
-#      - Item: Garlet
-#        Rate: 250
-#      - Item: Blade_
-#        Rate: 15
-#      - Item: Insect_Feeler
-#        Rate: 200
-#      - Item: Red_Herb
-#        Rate: 400
-#      - Item: Red_Gemstone
-#        Rate: 50
-#      - Item: Iron_Ore
-#        Rate: 400
-#      - Item: Thief_Bug_Female_Card
-#        Rate: 1
-#        StealProtected: true
   - Id: 1018
     AegisName: CREAMY
     Name: Creamy
@@ -993,101 +907,6 @@ Body:
       - Item: Mandragora_Card
         Rate: 1
         StealProtected: true
-#  - Id: 1021
-#    AegisName: THIEF_BUG_MALE
-#    Name: Thief Bug Male
-#    Level: 19
-#    Hp: 583
-#    BaseExp: 223
-#    JobExp: 93
-#    Attack: 76
-#    Attack2: 88
-#    Defense: 15
-#    MagicDefense: 5
-#    Agi: 29
-#    Vit: 16
-#    Int: 5
-#    Dex: 36
-#    AttackRange: 1
-#    SkillRange: 10
-#    ChaseRange: 12
-#    Size: Medium
-#    Race: Insect
-#    Element: Dark
-#    ElementLevel: 1
-#    WalkSpeed: 300
-#    AttackDelay: 988
-#    AttackMotion: 288
-#    DamageMotion: 768
-#    Ai: 25
-#    Modes:
-#      NoCast: true
-#      Looter: true
-#      CastSensorChase: true
-#      CastSensorIdle: true
-#      ChangeChase: true
-#    Drops:
-#      - Item: Emveretarcon
-#        Rate: 40
-#      - Item: Insect_Feeler
-#        Rate: 5500
-#      - Item: Worm_Peelings
-#        Rate: 1500
-#      - Item: Slayer_
-#        Rate: 10
-#      - Item: Yellow_Herb
-#        Rate: 90
-#      - Item: Bluish_Green_Jewel
-#        Rate: 5
-#      - Item: Katana
-#        Rate: 50
-#      - Item: Thief_Bug_Male_Card
-#        Rate: 1
-#        StealProtected: true
-#  - Id: 1022
-#    AegisName: WEREWOLF
-#    Name: Werewolf
-#    Level: 80
-#    Hp: 28600
-#    BaseExp: 11813
-#    JobExp: 7289
-#    Attack: 2560
-#    Attack2: 3280
-#    Defense: 65
-#    MagicDefense: 35
-#    Agi: 97
-#    Vit: 60
-#    Dex: 135
-#    Luk: 52
-#    AttackRange: 2
-#    SkillRange: 10
-#    ChaseRange: 10
-#    Size: Large
-#    Race: Formless
-#    Element: Neutral
-#    ElementLevel: 2
-#    WalkSpeed: 200
-#    AttackDelay: 1500
-#    AttackMotion: 768
-#    DamageMotion: 652
-#    Ai: 25
-#    Modes:
-#      NoCast: true
-#      Looter: true
-#      NoRandomWalk: true
-#    Drops:
-#      - Item: Steel
-#        Rate: 500
-#      - Item: Cobold_Hair
-#        Rate: 4000
-#      - Item: Oridecon
-#        Rate: 500
-#      - Item: Elunium
-#        Rate: 500
-#      - Item: Executioner's_Mitten
-#        Rate: 800
-#      - Item: Guh_Moon_Goh_
-#        Rate: 300
   - Id: 1023
     AegisName: ORK_WARRIOR
     Name: Orc Warrior
