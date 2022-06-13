@@ -2030,7 +2030,7 @@ int status_damage(struct block_list *src,struct block_list *target,int64 dhp, in
 		if (sc->data[SC_AUTOBERSERK] &&
 			(!sc->data[SC_PROVOKE] || !sc->data[SC_PROVOKE]->val2) &&
 			status->hp < status->max_hp>>2)
-			sc_start4(src,target,SC_PROVOKE,100,10,1,0,0,0);
+			sc_start4(src,target,SC_PROVOKE,100,20,1,0,0,0);
 		if (sc->data[SC_BERSERK] && status->hp <= 100)
 			status_change_end(target, SC_BERSERK, INVALID_TIMER);
 		if( sc->data[SC_RAISINGDRAGON] && status->hp <= 1000 )
@@ -3341,7 +3341,7 @@ static int status_get_hpbonus(struct block_list *bl, enum e_status_bonus type) {
 
 			bonus += sd->bonus.hp;
 			if ((skill_lv = pc_checkskill(sd,CR_TRUST)) > 0)
-				bonus += skill_lv * 200;
+				bonus += skill_lv * 400;
 			if (pc_checkskill(sd,SU_SPRITEMABLE) > 0)
 				bonus += 1000;
 			if (pc_checkskill(sd, SU_POWEROFSEA) > 0) {
@@ -4532,7 +4532,7 @@ int status_calc_pc_sub(struct map_session_data* sd, enum e_status_calc_opt opt)
 
 	// Anti-element and anti-race
 	if((skill=pc_checkskill(sd,CR_TRUST))>0)
-		sd->indexed_bonus.subele[ELE_HOLY] += skill*5;
+		sd->indexed_bonus.subele[ELE_HOLY] += skill*10;
 	if((skill=pc_checkskill(sd,BS_SKINTEMPER))>0) {
 		sd->indexed_bonus.subele[ELE_NEUTRAL] += skill;
 		sd->indexed_bonus.subele[ELE_FIRE] += skill*5;
@@ -4984,7 +4984,7 @@ void status_calc_regen(struct block_list *bl, struct status_data *status, struct
 	if( sd ) {
 		struct regen_data_sub *sregen;
 		if( (skill=(pc_checkskill(sd,HP_MEDITATIO)*2)) > 0 ) {
-			val = regen->sp*(100+3*skill)/100;
+			val = regen->sp*(100+6*skill)/100;
 			regen->sp = cap_value(val, 1, SHRT_MAX);
 		}
 		// Only players have skill/sitting skill regen for now.
@@ -4992,7 +4992,7 @@ void status_calc_regen(struct block_list *bl, struct status_data *status, struct
 
 		val = 0;
 		if( (skill=pc_checkskill(sd,SM_RECOVERY)) > 0 )
-			val += skill*5 + skill*status->max_hp/500;
+			val += skill*10 + skill*status->max_hp/500;
 
 		if (sc && sc->count) {
 			if (sc->data[SC_INCREASE_MAXHP])
@@ -5003,7 +5003,7 @@ void status_calc_regen(struct block_list *bl, struct status_data *status, struct
 
 		val = 0;
 		if( (skill=(pc_checkskill(sd,MG_SRECOVERY)*2)) > 0 )
-			val += skill*3 + skill*status->max_sp/500;
+			val += skill*6 + skill*status->max_sp/500;
 		if( (skill=pc_checkskill(sd,NJ_NINPOU)) > 0 )
 			val += skill*3 + skill*status->max_sp/500;
 		if( (skill=(pc_checkskill(sd,WM_LESSON)*2)) > 0 )
