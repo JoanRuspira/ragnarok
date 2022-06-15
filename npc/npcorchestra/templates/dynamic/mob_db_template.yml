@@ -86,7 +86,7 @@ Body:
     Level: 16
     Hp: 153
     BaseExp: 169
-    JobExp: 115
+    JobExp: 196
     Attack: 33
     Attack2: 7
     Defense: 16
@@ -221,7 +221,7 @@ Body:
     Level: 11
     Hp: 90
     BaseExp: 56
-    JobExp: 90
+    JobExp: 159
     Attack: 13
     Attack2: 3
     Defense: 7
@@ -411,7 +411,7 @@ Body:
     Level: 12
     Hp: 114
     BaseExp: 74
-    JobExp: 95
+    JobExp: 160
     Attack: 14
     Attack2: 6
     Defense: 7
@@ -457,7 +457,7 @@ Body:
     Level: 8
     Hp: 91
     BaseExp: 79
-    JobExp: 75
+    JobExp: 160
     Attack: 13
     Attack2: 5
     Defense: 38
@@ -504,7 +504,7 @@ Body:
     Level: 5
     Hp: 57
     BaseExp: 80
-    JobExp: 60
+    JobExp: 160
     Attack: 11
     Attack2: 3
     Defense: 27
@@ -550,8 +550,8 @@ Body:
     Name: Roda Frog
     Level: 13
     Hp: 160
-    BaseExp: 162
-    JobExp: 100
+    BaseExp: 145
+    JobExp: 185
     Attack: 19
     Attack2: 4
     Defense: 12
@@ -640,7 +640,7 @@ Body:
     Level: 18
     Hp: 280
     BaseExp: 175
-    JobExp: 125
+    JobExp: 195
     Attack: 25
     Attack2: 8
     Defense: 12
@@ -684,8 +684,8 @@ Body:
     Name: Zombie
     Level: 17
     Hp: 234
-    BaseExp: 189
-    JobExp: 112
+    BaseExp: 175
+    JobExp: 199
     Attack: 38
     Attack2: 12
     Defense: 20
@@ -865,8 +865,8 @@ Body:
     Name: Mandragora
     Level: 13
     Hp: 156
-    BaseExp: 170
-    JobExp: 100
+    BaseExp: 137
+    JobExp: 190
     Attack: 20
     Attack2: 3
     Defense: 13
@@ -962,8 +962,8 @@ Body:
     Name: Wormtail
     Level: 17
     Hp: 200
-    BaseExp: 180
-    JobExp: 120
+    BaseExp: 164
+    JobExp: 200
     Attack: 22
     Attack2: 5
     Defense: 16
@@ -1009,7 +1009,7 @@ Body:
     JapaneseName: Snake
     Level: 18
     Hp: 217
-    BaseExp: 183
+    BaseExp: 190
     JobExp: 125
     Attack: 23
     Attack2: 5
@@ -2130,7 +2130,7 @@ Body:
     Level: 9
     Hp: 95
     BaseExp: 66
-    JobExp: 80
+    JobExp: 160
     Attack: 18
     Attack2: 1
     Defense: 21
@@ -2270,8 +2270,8 @@ Body:
     Name: Rocker
     Level: 15
     Hp: 185
-    BaseExp: 174
-    JobExp: 110
+    BaseExp: 155
+    JobExp: 197
     Attack: 19
     Attack2: 5
     Defense: 16
@@ -4228,7 +4228,7 @@ Body:
     Level: 19
     Hp: 340
     BaseExp: 178
-    JobExp: 130
+    JobExp: 200
     Attack: 26
     Attack2: 11
     Defense: 28
@@ -4842,7 +4842,7 @@ Body:
     Level: 14
     Hp: 140
     BaseExp: 164
-    JobExp: 105
+    JobExp: 195
     Attack: 33
     Attack2: 8
     Defense: 13
@@ -5141,7 +5141,7 @@ Body:
     Level: 2
     Hp: 45
     BaseExp: 60
-    JobExp: 45
+    JobExp: 145
     Attack: 12
     Attack2: 1
     Defense: 16
@@ -7753,8 +7753,8 @@ Body:
     Name: Savage Babe
     Level: 14
     Hp: 180
-    BaseExp: 172
-    JobExp: 105
+    BaseExp: 160
+    JobExp: 195
     Attack: 19
     Attack2: 6
     Defense: 22
@@ -7789,56 +7789,9 @@ Body:
         Rate: 425
       - Item: Phracon
         Rate: 40
-      - Item: Sweet_Milk
-        Rate: 20
       - Item: Savage_Babe_Card
         Rate: 1
         StealProtected: true
-#  - Id: 1168
-#    AegisName: SCORPION_KING
-#    Name: Scorpion King
-#    Level: 50
-#    Hp: 5719
-#    BaseExp: 1968
-#    JobExp: 1211
-#    Attack: 600
-#    Attack2: 713
-#    Defense: 64
-#    MagicDefense: 10
-#    Agi: 50
-#    Vit: 47
-#    Dex: 83
-#    Luk: 30
-#    AttackRange: 1
-#    SkillRange: 10
-#    ChaseRange: 12
-#    Size: Large
-#    Race: Demihuman
-#    Element: Fire
-#    ElementLevel: 1
-#    WalkSpeed: 200
-#    AttackDelay: 1700
-#    AttackMotion: 1000
-#    DamageMotion: 500
-#    Ai: 24
-#    Modes:
-#      CastSensorIdle: true
-#    Drops:
-#      - Item: Flame_Heart
-#        Rate: 45
-#      - Item: Tweezer
-#        Rate: 4850
-#      - Item: Hammer_Of_Blacksmith
-#        Rate: 15
-#      - Item: Scorpion's_Tail
-#        Rate: 5000
-#      - Item: Solid_Shell
-#        Rate: 3000
-#      - Item: White_Herb
-#        Rate: 700
-#      - Item: Scorpion_King_Card
-#        Rate: 1
-#        StealProtected: true
   - Id: 1169
     AegisName: SKEL_WORKER
     Name: Skeleton Worker

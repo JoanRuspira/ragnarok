@@ -1,5 +1,5 @@
 
-prontera,154,194,5	script	Quest Board#QuestProntera	4_BOARD3,{
+prontera,155,194,5	script	Quest Board#Quests_Prontera	4_BOARD3,{
 	for ( .@i = 11124; .@i < 11134; .@i++ )
 		if (checkquest(.@i,PLAYTIME) == 2) erasequest .@i;
 	for( .@i = 11114; .@i < 11124; .@i++ ) {
@@ -8,75 +8,99 @@ prontera,154,194,5	script	Quest Board#QuestProntera	4_BOARD3,{
 
 	mes " - Quest bulletin board -";
 	mes "Look for contracts to help the Midgard community";
-	mes "and gain some extra EXP along the way.";
+	mes "and gain some extra EXP and rewards along the way.";
 	mes "Jobs are categorised based on difficulty level.";
 	mes " ";
 	mes " - Midgard Continental Alliance";
 	next;
 
-	switch(select("Prontera Fields:Prontera Forests")) {
+	switch(select("Look for quests:Complete quest:Abandon quest")) {
 		case 1:
-			switch(select("^aeeb34Lv.1~10^000000 - Looters!:^aeeb34Lv.1~10^000000 - Lunatic population control:^aeeb34Lv.1~10^000000 - Prevent their evolution:^aeeb34Lv.1~10^000000 - Bee Keeping:^42c431Lv.10~20^000000 - Tone it down:^42c431Lv.10~20^000000 - Something savage")) {
-				case 1: callsub L_Quest,1,"Looters!"," - Ever dropped something and then couldn't find it? A ^4d4dffPoring^000000 must have gotten it first! ^4d4dffPoring^000000 will eat whatever you drop. Finish off 10 of them in the Izlude and Prontera fields for a reward, before anymore items disappear...";
-				case 2: callsub L_Quest,2,"Lunatic population control"," - The ^4d4dffLunatics^000000 in the fields around Izlude and Prontera have been eating the harvests of the Izlude vegtable vendors. Something has to be done before they go out of business, so a reward will be offered for 10 ^4d4dffLunatic^000000 kills.";
-				case 3: callsub L_Quest,3,"Prevent their evolution"," - ^4d4dffFabre^000000 are the larvae form of ^4d4dffCreamy^000000, and are a real threat to new adventurers. Kill 10 ^4d4dffFabres^000000 around the Prontera and Izlude fields for a reward. You will be doing novices a favour.";
-				case 4: callsub L_Quest,6,"Bee Keeping","- ^4d4dffHornets^000000 in the field west from Prontera are thriving this season. We need to decrease their population as soon as possible before they get out of control. A reward will be offered to those who kill 10 hornets.";
-				case 5: callsub L_Quest,13,"Tone it down","- ^4d4dffRockers^000000 are very loud monsters and are disturbing the peace in the fields. Kill 10 of them.";
-				case 6: callsub L_Quest,15,"Something savage","- ^4d4dffSavages^000000 are coming close to the city's walls in search of food. They have injured citizens, this can't be allowed. Do something ugly and kill 10 of their babies.";
+			switch(select("Prontera Fields:Prontera Forests")) {
+				case 1:
+					switch(select("^aeeb34Lv.1~10^000000 - Looters!:^aeeb34Lv.1~10^000000 - Lunatic population control:^aeeb34Lv.1~10^000000 - Prevent their evolution:^aeeb34Lv.1~10^000000 - Bee Keeping:^42c431Lv.10~20^000000 - Tone it down:^42c431Lv.10~20^000000 - Something savage")) {
+						case 1: callsub L_Quest,1,"Looters!"," - Ever dropped something and then couldn't find it? A ^4d4dffPoring^000000 must have gotten it first! ^4d4dffPoring^000000 will eat whatever you drop. Finish off 10 of them in the Izlude and Prontera fields for a reward, before anymore items disappear...";
+						case 2: callsub L_Quest,2,"Lunatic population control"," - The ^4d4dffLunatics^000000 in the fields around Izlude and Prontera have been eating the harvests of the Izlude vegtable vendors. Something has to be done before they go out of business, so a reward will be offered for 10 ^4d4dffLunatic^000000 kills.";
+						case 3: callsub L_Quest,3,"Prevent their evolution"," - ^4d4dffFabre^000000 are the larvae form of ^4d4dffCreamy^000000, and are a real threat to new adventurers. Kill 10 ^4d4dffFabres^000000 around the Prontera and Izlude fields for a reward. You will be doing novices a favour.";
+						case 4: callsub L_Quest,6,"Bee Keeping","- ^4d4dffHornets^000000 in the field west from Prontera are thriving this season. We need to decrease their population as soon as possible before they get out of control. A reward will be offered to those who kill 10 hornets.";
+						case 5: callsub L_Quest,13,"Tone it down","- ^4d4dffRockers^000000 are very loud monsters and are disturbing the peace in the fields. Kill 10 of them.";
+						case 6: callsub L_Quest,15,"Something savage","- ^4d4dffSavages^000000 are coming close to the city's walls in search of food. They have injured citizens, this can't be allowed. Do something ugly and kill 10 of their babies.";
+					}
+				case 2: 
+					switch(select("^42c431Lv.10~20^000000 - The Mandragora Effect")) {
+						case 1: callsub L_Quest,14,"The Mandragora effect","- Do you know what's annoying? Ranged attacks. ^4d4dffMandragoras^000000 are excellent at defeating adventurers using them. Get rid of 10 of them to get a reward.";
+					}
 			}
-			switch(select("^42c431Lv.10~20^000000 - The Mandragora Effect")) {
-				case 1: callsub L_Quest,14,"The Mandragora effect","- Do you know what's annoying? Ranged attacks. ^4d4dffMandragoras^000000 are excellent at defeating adventurers using them. Get rid of 10 of them to get a reward.";
+		case 2:
+			switch(select("Prontera Fields:Prontera Forests")) {
+				case 1: 
+					switch(select("^aeeb34Lv.1~10^000000 - Looters!:^aeeb34Lv.1~10^000000 - Lunatic population control:^aeeb34Lv.1~10^000000 - Prevent their evolution:^aeeb34Lv.1~10^000000 - Bee Keeping:^aeeb34Lv.1~10^000000 - Tone it down:^aeeb34Lv.1~10^000000 - Something savage")) {
+						case 1: callsub R_Quest,1,"Looters!",1000,1000,501,5; //exp--jexp--rewardid--rewardqty--requestid--requestqty
+						case 2: callsub R_Quest,2,"Lunatic population control",1200,1100,501,5;
+						case 3: callsub R_Quest,3,"Prevent their evolution",1200,1100,501,5;
+						case 4: callsub R_Quest,6,"Bee Keeping",1000,1000,501,5;
+						case 5: callsub R_Quest,13,"Tone it down",1400,1550,0,0;
+						case 6: callsub R_Quest,15,"Something savage",1450,1600,1303,1;
+					}
+				case 2: 
+					switch(select("^42c431Lv.10~20^000000 - The Mandrgora effect")) {
+						case 1: callsub R_Quest,14,"The Mandragora effect",1400,1550,993,2;
+					}
 			}
-
+		case 3:
+			switch(select("Prontera Fields:Prontera Forests")) {
+				case 1: 
+					switch(select("^aeeb34Lv.1~10^000000 - Looters!:^aeeb34Lv.1~10^000000 - Lunatic population control:^aeeb34Lv.1~10^000000 - Prevent their evolution:^aeeb34Lv.1~10^000000 - Bee Keeping:^aeeb34Lv.1~10^000000 - Tone it down:^aeeb34Lv.1~10^000000 - Something savage")) {
+						case 1: callsub D_Quest,1,"Looters!";
+						case 2: callsub D_Quest,2,"Lunatic population control";
+						case 3: callsub D_Quest,3,"Prevent their evolution";
+						case 4: callsub D_Quest,6,"Bee Keeping";
+						case 5: callsub D_Quest,13,"Tone it down";
+						case 6: callsub D_Quest,15,"Something savage";
+					}
+				case 2: 
+					switch(select("^42c431Lv.10~20^000000 - The Mandrgora effect")) {
+						case 1: callsub D_Quest,14,"The Mandragora effect";
+					}
+			}
 	}
 	
 	end;
 
+D_Quest:
+	.@quest_id = getarg(0);
+	mes " Abandon quest '^4d4dff"+ getarg(1) +"^000000'?";
+	switch(select("Yes:No")) {
+		case 1: 
+			erasequest .@quest_id;
+			mes "I won't be doing this quest.";
+			close;
+		case 2:
+			mes "I still better keep track of this quest.";
+			close;
+	}
+	close;
+
 L_Quest:
-	.@quest_status = checkquest(getarg(0)+10,PLAYTIME);
-	mes " - Quest '"+ getarg(1) +"' - ";
+	.@quest_id = getarg(0);
+	if (checkquest(.@quest_id) == 1) {
+		mes "Ah...";
+		mes "I am already tracking this quest.";
+		close;
+	}
+	mes " -'^4d4dff"+ getarg(1) +"^000000' - ";
 	for ( .@i = 2; .@i < getargcount(); .@i++ )
 		mes getarg(.@i);
 	mes " ";
 	next;
-	if (select("I will do this quest.:Look for other quests.") == 2) {
-		mes "Let's search for other quests.";
+	if (select("I will do this quest.:Leave") == 2) {
 		close;
 	}
-	for ( .@i = 2; .@i < getargcount(); .@i++ )
-		mes getarg(.@i);
 	setquest getarg(0);
-	close;	
-}
+	specialeffect2 EF_SOULBURN;
+	close;
 
-prontera,156,194,3	script	Quest Rewards#RewardProntera	4_BOARD3,{
-	mes "- Quest Reward Board -";
-	mes "Are you looking for a job?";
-	mes "We have posted quests with EXP rewards on the board to your left!";
-	next;
-	mes "- Quest Reward Board -";
-	mes "When done, post the results of your finished quests in this board for your reward.";
-	next;
-	switch(select("Prontera Fields: Prontera Forests")) {
-		case 1: 
-			switch(select("Looters!:Lunatic population control:Prevent their evolution:Bee Keeping:Tone it down:Something savage")) {
-				case 1: callsub L_Quest,1,"Looters!",1000,1000,501,10; //exp/jexp, zeny, itemid, itemquantity, rewarditemquantity, requestitemid, requestitemquantity
-				case 2: callsub L_Quest,2,"Lunatic population control",1200,1100,501,10;
-				case 3: callsub L_Quest,3,"Prevent their evolution",1200,1100,501,10;
-				case 4: callsub L_Quest,6,"Bee Keeping",1000,1000,501,10;
-				case 5: callsub L_Quest,13,"Tone it down",2000,2000,0,0;
-				case 6: callsub L_Quest,15,"Something savage",2000,2000,0,0;
-			}
-
-			switch(select("The Mandrgora effect")) {
-				case 1: callsub L_Quest,14,"The Mandragora effect",2000,2000,0,0;
-			}
-			
-
-	}
-
-
-L_Quest:
+R_Quest:
 	.@quest_id = getarg(0);
 	if (checkquest(.@quest_id) == 1) {
 		if (checkquest(.@quest_id,HUNTING) == 2) {
@@ -89,7 +113,6 @@ L_Quest:
 					close;
 				}
 			}
-	
 			mes "Hmm... let me see...";
 			mes "Looks like I have completed the '"+ getarg(1) +"' quest!";
 			mes "Posting the result now!";
