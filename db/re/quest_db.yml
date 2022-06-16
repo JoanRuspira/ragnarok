@@ -114,48 +114,48 @@ Body:
     Title: "Request : Hunt Rocker"
     Targets:
       - Mob: ROCKER
-        Count: 10
+        Count: 15
   - Id: 14
     Title: "Request : Hunt Mandragora"
     Targets:
       - Mob: MANDRAGORA
-        Count: 10
+        Count: 15
   - Id: 15
     Title: "Request : Hunt Savage Babe"
     Targets:
       - Mob: SAVAGE_BABE
-        Count: 10
+        Count: 15
   - Id: 16
     Title: "Request : Bring Stycky Webfoot"
   - Id: 17
     Title: "Request : Hunt Baby Desert Wolf"
     Targets:
       - Mob: DESERT_WOLF_B
-        Count: 10
+        Count: 15
   - Id: 18
     Title: "Request : Hunt Scorpion"
     Targets:
       - Mob: SCORPION
-        Count: 10
+        Count: 15
   - Id: 19
     Title: "Request : Hunt Zombie"
     Targets:
       - Mob: ZOMBIE
-        Count: 10
+        Count: 15
   - Id: 20
     Title: "Request : Bring Pointed Scale"
   - Id: 21
     Title: "Request : Hunt Snake"
     Targets:
       - Mob: SNAKE
-        Count: 10
+        Count: 15
   - Id: 22
     Title: "Request : Hunt Spore"
     Targets:
       - Mob: SPORE
-        Count: 10
+        Count: 15
   - Id: 23
-    Title: "Request : Bring Pointed Scale"
+    Title: "Request : Bring Snail's Shell"
   - Id: 11115
     Title: "Request : Hunt Condor"
     Targets:

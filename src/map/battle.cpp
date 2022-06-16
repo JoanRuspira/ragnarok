@@ -2826,15 +2826,8 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 
 	switch(skill_id) {
 		case SM_BASH:
-		case MS_BASH:
-			skillratio += 30 * skill_lv;
-			break;
 		case SM_MAGNUM:
-		case MS_MAGNUM:
-			if(wd->miscflag == 1)
-				skillratio += 20 * skill_lv; //Inner 3x3 circle takes 100%+20%*level damage [Playtester]
-			else
-				skillratio += 10 * skill_lv; //Outer 5x5 circle takes 100%+10%*level damage [Playtester]
+			skillratio += SwordsmanSkillAtkRatioCalculator::calculate_skill_atk_ratio(status_get_lv(src), skill_id, skill_lv);
 			break;
 		case MC_MAMMONITE:
 			skillratio += 50 * skill_lv;

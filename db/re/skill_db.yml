@@ -160,6 +160,7 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Weapon
+    Cooldown: 4000
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -236,6 +237,7 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Fire
+    Cooldown: 3000
     SplashArea:
       - Level: 1
         Area: 2
@@ -255,18 +257,7 @@ Body:
     AfterCastActDelay: 2000
     Duration2: 10000
     Requires:
-      HpCost:
-        - Level: 1
-          Amount: 20
-        - Level: 2
-          Amount: 20
-        - Level: 3
-          Amount: 20
-        - Level: 4
-          Amount: 20
-        - Level: 5
-          Amount: 20
-      SpCost: 30
+      SpCost: 20
   - Id: 8
     Name: SM_ENDURE
     Description: Endure

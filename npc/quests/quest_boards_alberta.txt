@@ -19,12 +19,12 @@ alberta,53,248,3	script	Quest Board#Quests_Alberta	4_BOARD3,{
 			switch(select("Payon Forest")) {
 				case 1:
 					switch(select("^aeeb34Lv.1~10^000000 - Looters!:^aeeb34Lv.1~10^000000 - Prevent their evolution:^aeeb34Lv.1~10^000000 - Into the woods:^42c431Lv.10~20^000000 - Get some tails:^42c431Lv.10~20^000000 - Watch your step:^42c431Lv.10~20^000000 - Living mushrooms")) {
-						case 1: callsub L_Quest,1,"Looters!"," - Ever dropped something and then couldn't find it? A ^4d4dffPoring^000000 must have gotten it first! ^4d4dffPoring^000000 will eat whatever you drop. Finish off 10 of them for a reward, before anymore items disappear...";
-						case 2: callsub L_Quest,2,"Prevent their evolution"," - ^4d4dffFabre^000000 are the larvae form of ^4d4dffCreamy^000000, and are a real threat to new adventurers. Kill 10 ^4d4dffFabres^000000 around the Prontera and Izlude fields for a reward. You will be doing novices a favour.";
-						case 3: callsub L_Quest,12,"Into the woods"," - There's too many ^4d4dffWillow^000000 in the south forest. They can evolve into ^4d4dffElder Willow^000000. If that happens novices will not be able to leave Payon safely. Help them and kill 10 ^4d4dffWillow^000000.";
-						case 4: callsub L_Quest,20,"Get some tails"," - The weaponries here are looking for adventurers to retriave ^4d4dffPointed Scales^000000 from ^4d4dffWormtails^000000 in the forest. They will be used for creating spears. Bring 10 of them for a reward.";
-						case 5: callsub L_Quest,21,"Watch your step"," - ^4d4dffBoas^000000 have made their way to the forest. New adventurers are being poisoned after not seeing them and stepping on them. Help control the plague by killing 10 of them.";
-						case 6: callsub L_Quest,22,"Living mushrooms"," - A living mushroom species is nesting west from Payon. We call them ^4d4dffSpores^000000. They are not very dangerous, they can evolve into ^4d4dffPoison Spores^000000 and we don't want that around here. Kill 10 of them and the city will reward you.";
+						case 1: callsub L_Quest,1,1,10,"Looters!"," - Ever dropped something and then couldn't find it? A ^4d4dffPoring^000000 must have gotten it first! ^4d4dffPoring^000000 will eat whatever you drop. Finish off 10 of them for a reward, before anymore items disappear...";
+						case 2: callsub L_Quest,2,1,10,"Prevent their evolution"," - ^4d4dffFabre^000000 are the larvae form of ^4d4dffCreamy^000000, and are a real threat to new adventurers. Kill 10 ^4d4dffFabres^000000 around the Prontera and Izlude fields for a reward. You will be doing novices a favour.";
+						case 3: callsub L_Quest,12,1,10,"Into the woods"," - There's too many ^4d4dffWillow^000000 in the south forest. They can evolve into ^4d4dffElder Willow^000000. If that happens novices will not be able to leave Payon safely. Help them and kill 10 ^4d4dffWillow^000000.";
+						case 4: callsub L_Quest,20,10,20,"Get some tails"," - The weaponries here are looking for adventurers to retriave ^4d4dffPointed Scales^000000 from ^4d4dffWormtails^000000 in the forest. They will be used for creating spears. Bring 15 of them for a reward.";
+						case 5: callsub L_Quest,21,10,20,"Watch your step"," - ^4d4dffBoas^000000 have made their way to the forest. New adventurers are being poisoned after not seeing them and stepping on them. Help control the plague by killing 15 of them.";
+						case 6: callsub L_Quest,22,10,20,"Living mushrooms"," - A living mushroom species is nesting west from Payon. We call them ^4d4dffSpores^000000. They are not very dangerous, they can evolve into ^4d4dffPoison Spores^000000 and we don't want that around here. Kill 15 of them and the city will reward you.";
 					}
 					
 			}
@@ -40,20 +40,69 @@ alberta,53,248,3	script	Quest Board#Quests_Alberta	4_BOARD3,{
 						case 6: callsub R_Quest,22,"Living mushrooms",1450,1600,743,1;
 					}
 			}
+		case 3:
+			switch(select("Payon Forest")) {
+				case 1: 
+					switch(select("^aeeb34Lv.1~10^000000 - Looters!:^aeeb34Lv.1~10^000000 - Prevent their evolution:^aeeb34Lv.1~10^000000 - Into the woods:^42c431Lv.10~20^000000 - Get some tails:^42c431Lv.10~20^000000 - Watch your step:^42c431Lv.10~20^000000 - Living mushrooms")) {
+						case 1: callsub R_Quest,2,"Lunatic population control";
+						case 2: callsub R_Quest,11,"Armored wings";
+						case 3: callsub R_Quest,12,"Into the woods";
+						case 4: callsub R_Quest,20,"Get some tails";
+						case 5: callsub R_Quest,21,"Watch your step";
+						case 6: callsub R_Quest,22,"Living mushrooms";
+					}
+			}
 	}
 	
 	end;
 
+D_Quest:
+	.@quest_id = getarg(0);
+	if (checkquest(.@quest_id) != 1) {
+		mes "Looks like I'm not tracking this quest already...";
+		close;
+	}
+	mes " Abandon quest '^4d4dff"+ getarg(1) +"^000000'?";
+	switch(select("Yes:No")) {
+		case 1: 
+			erasequest .@quest_id;
+			mes "I won't be doing this quest.";
+			close;
+		case 2:
+			mes "I still better keep track of this quest.";
+			close;
+	}
+	close;
+
 L_Quest:
-	mes " -'^4d4dff"+ getarg(1) +"^000000' - ";
-	for ( .@i = 2; .@i < getargcount(); .@i++ )
-		mes getarg(.@i);
+	.@quest_id = getarg(0);
+	if (checkquest(.@quest_id) == 1) {
+		mes "Ah...";
+		mes "I am already tracking this quest.";
+		close;
+	}
+	.@min_lv = getarg(1);
+	.@max_lv = getarg(2);
+	if (BaseLevel < .@min_lv) {
+		mes "No, no...";
+		mes "This quest is too dangerous for me...";
+		close;
+	}
+	if (BaseLevel >= .@max_lv ) {
+		mes "Hmm...";
+		mes "This quest is too easy for me...";
+		close;
+	}
+	mes " -'^4d4dff"+ getarg(3) +"^000000' - ";
+	//for ( .@i = 2; .@i < getargcount(); .@i++ )
+	mes getarg(4);
 	mes " ";
 	next;
-	if (select("I will do this quest.:Leave") == 2) {
+	if (select("I will do this quest:Leave") == 2) {
 		close;
 	}
 	setquest getarg(0);
+	specialeffect2 EF_SOULBURN;
 	close;
 
 R_Quest:

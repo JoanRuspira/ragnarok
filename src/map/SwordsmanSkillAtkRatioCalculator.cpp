@@ -10,39 +10,64 @@
  * @param skill_lv : skill level
  * @param int_ : player's int
  */
-SwordsmanSkillAtkRatioCalculator::SwordsmanSkillAtkRatioCalculator(int base_lv, int skill_id, int skill_lv, int int_, int weapon_element)
+int SwordsmanSkillAtkRatioCalculator::calculate_skill_atk_ratio(int base_lv, int skill_id, int skill_lv)
 {
-	_base_lv = base_lv;
-	_skill_id = skill_id;
-	_skill_lv = skill_lv;
-	_int = int_;
-	_weapon_element = weapon_element;
-}
-
-
-int SwordsmanSkillAtkRatioCalculator::calculate_skill_atk_ratio()
-{
-	switch (_skill_id) {
-	case SM_BASH:
-		return calculate_bash_atk_ratio();
-		break;
-	case SM_MAGNUM:
-		return calculate_magnum_break_atk_ratio();
-		break;
-	default:
-		return 0;
-		break;
+	switch (skill_id) {
+		case SM_BASH:
+			return calculate_bash_atk_ratio(skill_lv);
+			break;
+		case SM_MAGNUM:
+			return calculate_magnum_break_atk_ratio(skill_lv);
+			break;
+		default:
+			return 0;
+			break;
 	}
 }
 
-int SwordsmanSkillAtkRatioCalculator::calculate_bash_atk_ratio()
+int SwordsmanSkillAtkRatioCalculator::calculate_bash_atk_ratio(int skill_lv)
 {
-	return 0;
-	//return (37 + (_base_lv / 5)) * _skill_lv;
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 30;
+			break;
+		case 2:
+			ratio = 100;
+			break;
+		case 3:
+			ratio = 180;
+			break;
+		case 4:
+			ratio = 240;
+			break;
+		case 5:
+			ratio = 300;
+			break;
+		}
+	return ratio;
 }
 
-int SwordsmanSkillAtkRatioCalculator::calculate_magnum_break_atk_ratio()
+int SwordsmanSkillAtkRatioCalculator::calculate_magnum_break_atk_ratio(int skill_lv)
 {
-	return 0;
-	//return (_base_lv / 12) * _skill_lv;
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 20;
+			break;
+		case 2:
+			ratio = 60;
+			break;
+		case 3:
+			ratio = 100;
+			break;
+		case 4:
+			ratio = 160;
+			break;
+		case 5:
+			ratio = 200;
+			break;
+		}
+	return ratio;
 }
+

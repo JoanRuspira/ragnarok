@@ -19,13 +19,13 @@ geffen,145,62,3	script	Quest Board#Quests_Geffen	4_BOARD3,{
 			switch(select("Geffen Bay")) {
 				case 1:
 					switch(select("^aeeb34Lv.1~10^000000 - Looters!:^aeeb34Lv.1~10^000000 - Lunatic population control:^aeeb34Lv.1~10^000000 - Prevent their evolution:^aeeb34Lv.1~10^000000 - Armored wings:^42c431Lv.10~20^000000 - The Mandragora Effect:^42c431Lv.10~20^000000 - Amphibian trails:^42c431Lv.10~20^000000 - Defence!")) {
-						case 1: callsub L_Quest,1,"Looters!"," - Ever dropped something and then couldn't find it? A ^4d4dffPoring^000000 must have gotten it first! ^4d4dffPoring^000000 will eat whatever you drop. Finish off 10 of them in the Izlude and Prontera fields for a reward, before anymore items disappear...";
-						case 2: callsub L_Quest,2,"Lunatic population control"," - The ^4d4dffLunatics^000000 in the fields around Izlude and Prontera have been eating the harvests of the Izlude vegtable vendors. Something has to be done before they go out of business, so a reward will be offered for 10 ^4d4dffLunatic^000000 kills.";
-						case 3: callsub L_Quest,3,"Prevent their evolution"," - ^4d4dffFabre^000000 are the larvae form of ^4d4dffCreamy^000000, and are a real threat to new adventurers. Kill 10 ^4d4dffFabres^000000 around the Prontera and Izlude fields for a reward. You will be doing novices a favour.";
-						case 4: callsub L_Quest,11,"Armored wings","- We are building a new light armor for adventurers.^4d4dffShells^000000 from ^4d4dffChonhons^000000 are perfect because they are durable and light. Bring 10 of them for a reward.";
-						case 5: callsub L_Quest,14,"The Mandragora effect","- Do you know what's annoying? Ranged attacks. ^4d4dffMandragoras^000000 are excellent at defeating adventurers using them. Get rid of 10 of them to get a reward.";
-						case 6: callsub L_Quest,16,"Amphibian trails","- We require ^4d4dffSticky Webfoots^000000 from ^4d4dffRoda Frogs^000000 to build children's toys. Bring 10 of them to us please, we offer a reward. Frogs can be found on the south part of the Geffen Bay.";
-						case 7: callsub L_Quest,23,"Defence!","- The armorers in the city are in need of ^4d4dffSnail's Shells^000000. They can be obtained from ^4d4dffAmbernites^000000 living on the south part of the Geffen Bay and Delta. They will be used to craft armors for sale. Bring 10 of them to us please, for a reward of course.";
+						case 1: callsub L_Quest,1,1,10,"Looters!"," - Ever dropped something and then couldn't find it? A ^4d4dffPoring^000000 must have gotten it first! ^4d4dffPoring^000000 will eat whatever you drop. Finish off 10 of them in the Izlude and Prontera fields for a reward, before anymore items disappear...";
+						case 2: callsub L_Quest,2,1,10,"Lunatic population control"," - The ^4d4dffLunatics^000000 in the fields around Izlude and Prontera have been eating the harvests of the Izlude vegtable vendors. Something has to be done before they go out of business, so a reward will be offered for 10 ^4d4dffLunatic^000000 kills.";
+						case 3: callsub L_Quest,3,1,10,"Prevent their evolution"," - ^4d4dffFabre^000000 are the larvae form of ^4d4dffCreamy^000000, and are a real threat to new adventurers. Kill 10 ^4d4dffFabres^000000 around the Prontera and Izlude fields for a reward. You will be doing novices a favour.";
+						case 4: callsub L_Quest,11,1,10,"Armored wings","- We are building a new light armor for adventurers.^4d4dffShells^000000 from ^4d4dffChonhons^000000 are perfect because they are durable and light. Bring 10 of them for a reward.";
+						case 5: callsub L_Quest,14,10,20,"The Mandragora effect","- Do you know what's annoying? Ranged attacks. ^4d4dffMandragoras^000000 are excellent at defeating adventurers using them. Get rid of 15 of them to get a reward.";
+						case 6: callsub L_Quest,16,10,20,"Amphibian trails","- We require ^4d4dffSticky Webfoots^000000 from ^4d4dffRoda Frogs^000000 to build children's toys. Bring 15 of them to us please, we offer a reward. Frogs can be found on the south part of the Geffen Bay.";
+						case 7: callsub L_Quest,23,10,20,"Defence!","- The armorers in the city are in need of ^4d4dffSnail's Shells^000000. They can be obtained from ^4d4dffAmbernites^000000 living on the south part of the Geffen Bay and Delta. They will be used to craft armors for sale. Bring 15 of them to us please, for a reward of course.";
 					}
 			}
 		case 2:
@@ -41,20 +41,70 @@ geffen,145,62,3	script	Quest Board#Quests_Geffen	4_BOARD3,{
 						case 7: callsub R_Quest,23,"Defence!",1600,1600,991,2,946,10;
 					}
 			}
+		case 3:
+			switch(select("Geffen Bay")) {
+				case 1: 
+					switch(select("^aeeb34Lv.1~10^000000 - Looters!:^aeeb34Lv.1~10^000000 - Lunatic population control:^aeeb34Lv.1~10^000000 - Prevent their evolution:^aeeb34Lv.1~10^000000 - Armored wings:^42c431Lv.10~20^000000 - The Mandragora Effect:^42c431Lv.10~20^000000 - Amphibian trails:^42c431Lv.10~20^000000 - Defence!")) {
+						case 1: callsub R_Quest,1,"Looters!";
+						case 2: callsub R_Quest,2,"Lunatic population control";
+						case 3: callsub R_Quest,3,"Prevent their evolution";
+						case 4: callsub R_Quest,11,"Armored wings";
+						case 5: callsub R_Quest,14,"The Mandragora effect";
+						case 6: callsub R_Quest,16,"Amphibian trails";
+						case 7: callsub R_Quest,23,"Defence!";
+					}
+			}
 	}
 	
 	end;
 
+D_Quest:
+	.@quest_id = getarg(0);
+	if (checkquest(.@quest_id) != 1) {
+		mes "Looks like I'm not tracking this quest already...";
+		close;
+	}
+	mes " Abandon quest '^4d4dff"+ getarg(1) +"^000000'?";
+	switch(select("Yes:No")) {
+		case 1: 
+			erasequest .@quest_id;
+			mes "I won't be doing this quest.";
+			close;
+		case 2:
+			mes "I still better keep track of this quest.";
+			close;
+	}
+	close;
+
 L_Quest:
-	mes " -'^4d4dff"+ getarg(1) +"^000000' - ";
-	for ( .@i = 2; .@i < getargcount(); .@i++ )
-		mes getarg(.@i);
+	.@quest_id = getarg(0);
+	if (checkquest(.@quest_id) == 1) {
+		mes "Ah...";
+		mes "I am already tracking this quest.";
+		close;
+	}
+	.@min_lv = getarg(1);
+	.@max_lv = getarg(2);
+	if (BaseLevel < .@min_lv) {
+		mes "No, no...";
+		mes "This quest is too dangerous for me...";
+		close;
+	}
+	if (BaseLevel >= .@max_lv ) {
+		mes "Hmm...";
+		mes "This quest is too easy for me...";
+		close;
+	}
+	mes " -'^4d4dff"+ getarg(3) +"^000000' - ";
+	//for ( .@i = 2; .@i < getargcount(); .@i++ )
+	mes getarg(4);
 	mes " ";
 	next;
-	if (select("I will do this quest.:Leave") == 2) {
+	if (select("I will do this quest:Leave") == 2) {
 		close;
 	}
 	setquest getarg(0);
+	specialeffect2 EF_SOULBURN;
 	close;
 
 R_Quest:
@@ -91,4 +141,3 @@ R_Quest:
 	mes "Looks like I have not picked up this quest..";
 	close;
 }
-

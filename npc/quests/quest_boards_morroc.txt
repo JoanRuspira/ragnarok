@@ -19,16 +19,15 @@ morocc,164,106,3	script	Quest Board#Quests_Morroc	4_BOARD3,{
 		switch(select("Morroc Surroundings:Sograt Desert")) {
 			case 1:
 				switch(select("^aeeb34Lv.1~10^000000 - Birds of prey:^aeeb34Lv.1~10^000000 - Lightweight:^aeeb34Lv.1~10^000000 - Each drop counts:^aeeb34Lv.1~10^000000 - No more pecos")) {
-					case 1: callsub L_Quest,7,"Birds of prey"," - ^4d4dffCondors^000000 are all around Morroc's walls. They leave them filthy, as one can imagine. There's a reward for each 10 kills. We can't keep cleening them like this!";
-					case 2: callsub L_Quest,8,"Lightweight"," - What's more heavy a ton of irons or a ton of feathers? We want to know the answer so bring 10 ^4d4dffFeather of Birds^000000 from ^4d4dffPicky's^000000 around Morroc.";
-					case 3: callsub L_Quest,9,"Each drop counts"," - ^4d4dffDrops^000000 are draining Morroc's Oasis. We can't allow this, the city needs the Oasis at full capacity. The Morroc leaders offer a reward for every 10 kills.";
-					case 4: callsub L_Quest,10,"No more pecos","- ^4d4dffPecoPecos^000000 have been laying eggs around the Morroc City walls. We don't want a new colony establishing here so get rid of 10 of their eggs for a reward.";
-					
+					case 1: callsub L_Quest,7,1,10,"Birds of prey"," - ^4d4dffCondors^000000 are all around Morroc's walls. They leave them filthy, as one can imagine. There's a reward for each 10 kills. We can't keep cleening them like this!";
+					case 2: callsub L_Quest,8,1,10,"Lightweight"," - What's more heavy a ton of irons or a ton of feathers? We want to know the answer so bring 10 ^4d4dffFeather of Birds^000000 from ^4d4dffPicky's^000000 around Morroc.";
+					case 3: callsub L_Quest,9,1,10,"Each drop counts"," - ^4d4dffDrops^000000 are draining Morroc's Oasis. We can't allow this, the city needs the Oasis at full capacity. The Morroc leaders offer a reward for every 10 kills.";
+					case 4: callsub L_Quest,10,1,10,"No more pecos","- ^4d4dffPecoPecos^000000 have been laying eggs around the Morroc City walls. We don't want a new colony establishing here so get rid of 10 of their eggs for a reward.";			
 				}
 			case 2:
 				switch(select("^42c431Lv.10~20^000000 - Tiny pack:^42c431Lv.10~20^000000 - Death stalkers")) {
-					case 1: callsub L_Quest,17,"Tiny pack","- We are seing an increase of ^4d4dffBaby Desert Wolfs^000000 in the south part of the Sograt Desert. Exterminate 10 of them or we will end up having a problem with the adult ones.";
-					case 2: callsub L_Quest,18,"Death stalkers","- Desert ^4d4dffScorpions^000000 are known by the region's natives as Death Stalkers. Why? Because their venom is fatal to novices! Get rid of 10 of them and we will reward you.";
+					case 1: callsub L_Quest,17,10,20,"Tiny pack","- We are seing an increase of ^4d4dffBaby Desert Wolfs^000000 in the south part of the Sograt Desert. Exterminate 15 of them or we will end up having a problem with the adult ones.";
+					case 2: callsub L_Quest,18,10,20,"Death stalkers","- Desert ^4d4dffScorpions^000000 are known by the region's natives as Death Stalkers. Why? Because their venom is fatal to novices! Get rid of 15 of them and we will reward you.";
 				}
 		}
 		case 2:
@@ -47,20 +46,73 @@ morocc,164,106,3	script	Quest Board#Quests_Morroc	4_BOARD3,{
 						case 2: callsub R_Quest,18,"Death stalkers",1500,1650,990,2;	
 					}
 			}
+		case 3:
+			switch(select("Morroc Surroundings:Sograt Desert")) {
+				case 1: 
+					switch(select("^aeeb34Lv.1~10^000000 - Birds of prey:^aeeb34Lv.1~10^000000 - Lightweight:^aeeb34Lv.1~10^000000 - Each drop counts:^aeeb34Lv.1~10^000000 - No more pecos")) {
+						case 1: callsub D_Quest,7,"Birds of prey";
+						case 2: callsub D_Quest,8,"Lightweight";
+						case 3: callsub D_Quest,9,"Each drop counts";
+						case 4: callsub D_Quest,10,"No more pecos";
+						
+					}
+				case 2: 
+					switch(select("^42c431Lv.10~20^000000 - Tiny pack:^42c431Lv.10~20^000000 - Death stalkers")) {
+						case 1: callsub D_Quest,17,"Tiny pack";	
+						case 2: callsub D_Quest,18,"Death stalkers";	
+					}
+			}
 	}
 	
 	end;
 
+D_Quest:
+	.@quest_id = getarg(0);
+	if (checkquest(.@quest_id) != 1) {
+		mes "Looks like I'm not tracking this quest already...";
+		close;
+	}
+	mes " Abandon quest '^4d4dff"+ getarg(1) +"^000000'?";
+	switch(select("Yes:No")) {
+		case 1: 
+			erasequest .@quest_id;
+			mes "I won't be doing this quest.";
+			close;
+		case 2:
+			mes "I still better keep track of this quest.";
+			close;
+	}
+	close;
+
 L_Quest:
-	mes " -'^4d4dff"+ getarg(1) +"^000000' - ";
-	for ( .@i = 2; .@i < getargcount(); .@i++ )
-		mes getarg(.@i);
+	.@quest_id = getarg(0);
+	if (checkquest(.@quest_id) == 1) {
+		mes "Ah...";
+		mes "I am already tracking this quest.";
+		close;
+	}
+	.@min_lv = getarg(1);
+	.@max_lv = getarg(2);
+	if (BaseLevel < .@min_lv) {
+		mes "No, no...";
+		mes "This quest is too dangerous for me...";
+		close;
+	}
+	if (BaseLevel >= .@max_lv ) {
+		mes "Hmm...";
+		mes "This quest is too easy for me...";
+		close;
+	}
+	mes " -'^4d4dff"+ getarg(3) +"^000000' - ";
+	//for ( .@i = 2; .@i < getargcount(); .@i++ )
+	mes getarg(4);
 	mes " ";
 	next;
-	if (select("I will do this quest.:Leave") == 2) {
+	if (select("I will do this quest:Leave") == 2) {
 		close;
 	}
 	setquest getarg(0);
+	specialeffect2 EF_SOULBURN;
 	close;
 
 R_Quest:
