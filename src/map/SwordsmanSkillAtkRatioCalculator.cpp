@@ -19,6 +19,9 @@ int SwordsmanSkillAtkRatioCalculator::calculate_skill_atk_ratio(int base_lv, int
 		case SM_MAGNUM:
 			return calculate_magnum_break_atk_ratio(skill_lv);
 			break;
+		case KN_SPEARSTAB:
+			return calculate_spear_stab_atk_ratio(skill_lv);
+			break;
 		default:
 			return 0;
 			break;
@@ -68,6 +71,31 @@ int SwordsmanSkillAtkRatioCalculator::calculate_magnum_break_atk_ratio(int skill
 			ratio = 200;
 			break;
 		}
+	return ratio;
+}
+
+
+
+int SwordsmanSkillAtkRatioCalculator::calculate_spear_stab_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+	case 1:
+		ratio = 30;
+		break;
+	case 2:
+		ratio = 100;
+		break;
+	case 3:
+		ratio = 180;
+		break;
+	case 4:
+		ratio = 240;
+		break;
+	case 5:
+		ratio = 300;
+		break;
+	}
 	return ratio;
 }
 

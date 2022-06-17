@@ -133,6 +133,9 @@ R_Quest:
 			mes "Looks like I have completed the '"+ getarg(1) +"' quest!";
 			mes "Posting the result now!";
 			next;
+			if (.@item_req) {
+				delitem .@item_req,.@req_amount; 
+			}
 			//Zeny += getarg(3);
 			.@reward_item = getarg(4,0);
 			if (.@item_req) {

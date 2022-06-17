@@ -9,4 +9,5 @@ public:
 private:
 	static int calculate_bash_atk_ratio(int skill_lv);
 	static int calculate_magnum_break_atk_ratio(int skill_lv);
+	static int calculate_spear_stab_atk_ratio(int skill_lv);
 };

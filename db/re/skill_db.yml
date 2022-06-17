@@ -160,7 +160,7 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Weapon
-    Cooldown: 4000
+    Cooldown: 3000
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -237,7 +237,7 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Fire
-    Cooldown: 3000
+    Cooldown: 2000
     SplashArea:
       - Level: 1
         Area: 2
@@ -2055,6 +2055,7 @@ Body:
     HitCount: 1
     Element: Weapon
     Knockback: 6
+    Cooldown: 3000
     Requires:
       SpCost: 9
       Weapon:
@@ -7451,7 +7452,7 @@ Body:
     Description: Endow Blaze
     MaxLevel: 5
     Type: Magic
-    TargetType: Support
+    TargetType: Self
     DamageFlags:
       NoDamage: true
     Flags:
@@ -7463,6 +7464,7 @@ Body:
     Element: Fire
     CastCancel: true
     CastTime: 3000
+    Cooldown: 10000
     Duration1:
       - Level: 1
         Time: 300000
@@ -7484,7 +7486,7 @@ Body:
     Description: Endow Tsunami
     MaxLevel: 5
     Type: Magic
-    TargetType: Support
+    TargetType: Self
     DamageFlags:
       NoDamage: true
     Flags:
@@ -7496,6 +7498,7 @@ Body:
     Element: Water
     CastCancel: true
     CastTime: 3000
+    Cooldown: 10000
     Duration1:
       - Level: 1
         Time: 300000
@@ -7517,7 +7520,7 @@ Body:
     Description: Endow Tornado
     MaxLevel: 5
     Type: Magic
-    TargetType: Support
+    TargetType: Self
     DamageFlags:
       NoDamage: true
     Flags:
@@ -7529,6 +7532,7 @@ Body:
     Element: Wind
     CastCancel: true
     CastTime: 3000
+    Cooldown: 10000
     Duration1:
       - Level: 1
         Time: 300000
@@ -7550,7 +7554,7 @@ Body:
     Description: Endow Quake
     MaxLevel: 5
     Type: Magic
-    TargetType: Support
+    TargetType: Self
     DamageFlags:
       NoDamage: true
     Flags:
@@ -7562,6 +7566,7 @@ Body:
     Element: Earth
     CastCancel: true
     CastTime: 3000
+    Cooldown: 10000
     Duration1:
       - Level: 1
         Time: 300000
