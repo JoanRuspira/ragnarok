@@ -342,7 +342,7 @@ void initChangeTables(void)
 	/* The main status definitions */
 	add_sc( SM_BASH			, SC_STUN		);
 	set_sc( SM_PROVOKE		, SC_PROVOKE		, EFST_PROVOKE		, SCB_DEF|SCB_DEF2|SCB_BATK|SCB_WATK );
-	add_sc( SM_MAGNUM		, SC_WATK_ELEMENT	);
+	set_sc( SM_MAGNUM		, SC_WATK_ELEMENT	, EFST_WATK_ELEMENT	, SCB_NONE	);
 	set_sc( SM_ENDURE		, SC_ENDURE		, EFST_ENDURE		, SCB_MDEF|SCB_DSPD );
 	add_sc( MG_SIGHT		, SC_SIGHT		);
 	add_sc( MG_SAFETYWALL		, SC_SAFETYWALL		);

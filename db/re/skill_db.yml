@@ -234,8 +234,8 @@ Body:
       Splash: true
     Flags:
       TargetTrap: true
-    Hit: Single
-    HitCount: 1
+    Hit: Multi_Hit
+    HitCount: 2
     Element: Fire
     Cooldown: 2000
     SplashArea:
