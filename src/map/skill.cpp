@@ -5424,6 +5424,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 
 	case AL_HOLYLIGHT:
 		status_change_end(bl, SC_P_ALTER, INVALID_TIMER);
+	case MG_SHADOWSTRIKE:
 	case MG_SOULSTRIKE:
 	case NPC_DARKSTRIKE:
 	case MG_COLDBOLT:

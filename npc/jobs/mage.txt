@@ -1,0 +1,85 @@
+//===== Script =======================================
+// Card Removal NPCs
+//====================================================
+
+-	script	Mage Guildmaster#mgegld::MgeGld	-1,{
+	if (BaseClass == EAJ_NOVICE) {
+		mes "[Mage Guildmaster]";
+		mes "Good day! I am the mage Guildmaster.";
+		mes "I train novices that meet the requirements";
+		mes "and allow men to become mages.";
+		next;
+		mes "[Mage Guildmaster]";
+		mes "As a mage you will gain new skills.";
+		mes "The requirements are:";
+		mes "- Being a Novice.";
+		mes "- Being Job level 10.";
+		mes "- Having used all your skill points.";
+		next;
+		mes "[Mage Guildmaster]";
+		mes "Do you want to become a mage?";
+		next;
+		switch(select("Yes:No")) {
+			case 1:
+				mes "[Mage Guildmaster]";
+				mes "Good! Let me see if you pass our requirements...";
+				next;
+				if (JobLevel < 10) {
+					mes "[Mage Guildmaster]";
+					mes "Hmm... Your job level does not meet our requirements.";
+					mes "You need to be more experienced before being a mage.";
+					close;
+				}
+				if (SkillPoint) {
+					mes "[Mage Guildmaster]";
+					mes "Looks like you have not used all your skill points.";
+					mes "Use them and I'll be able to make you a mage.";
+					close;
+				}
+				mes "[Mage Guildmaster]";
+				mes "Okay! Looks like you pass all of them!";
+				mes "You are allowed to join the mage guild.";
+				mes "Congratulations!";
+				jobchange Job_Mage;
+				specialeffect2 EF_ANGEL2;
+				specialeffect2 EF_ELECTRIC;
+				close;
+			case 2:
+				mes "[Mage Guildmaster]";
+				mes "Ah! Let me know if you change your mind.";
+				mes "We are always looking for new adventurers";
+				mes "to join the guild.";
+				close;
+		}
+		
+	}
+
+	if (BaseJob == Job_Mage) {
+		mes "[Mage Guildmaster]";
+		mes "Hi fellow mage!";
+		mes "Are you thinking about your next job?";
+		next;
+		mes "[Mage Guildmaster]";
+		mes "You can become a knight or join";
+		mes "the crusaders to improve your skills.";
+		next;
+		mes "[Mage Guildmaster]";
+		mes "Both guilds are in Prontera.";
+		mes "Go there when you think you have";
+		mes "enough experience.";
+		close;
+	}
+
+	if (BaseJob == Job_Knight || BaseJob == Job_Crusader || BaseJob == Job_LordKnight || BaseJob == Job_Paladin) {
+		mes "[Mage Guildmaster]";
+		mes "Ah! An experienced member of the guild!";
+		mes "Are you here to help train the younger ones?";
+		close;
+	}
+
+	mes "[Mage Guildmaster]";
+	mes "Welcome to the mage guild. We accept applications from novices that meet our requirements.";
+	close;
+}
+
+geffen_in,163,116,5	duplicate(MgeGld)	Mage Guildmaster#magegld	64

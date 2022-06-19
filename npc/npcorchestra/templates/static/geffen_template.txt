@@ -730,11 +730,6 @@ geffen,131,210,4	script	Geffen Villager#geff:npcid	spriteid,{
 	end;
 }
 
-geffen_in,163,116,5	script	Mage Guildmaster#geff:npcid	64,{
-	npctalk "I will make you a mage";
-	end;
-}
-
 geffen_in,156,122,7	script	Geffen Villager#geff:npcid	9,{
 	npctalk "npcdialog";
 	end;

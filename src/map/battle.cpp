@@ -2594,7 +2594,7 @@ static void battle_calc_element_damage(struct Damage* wd, struct block_list *src
 				// Descriptions indicate this means adding a percent of a normal attack in another element. [Skotlex]
 				int64 damage = SkillBaseDamageCalculator::battle_calc_base_damage(src, sstatus, &sstatus->rhw, sc, tstatus->size, (is_skill_using_arrow(src, skill_id) ? 2 : 0)) * sc->data[SC_WATK_ELEMENT]->val2 / 100;
 
-				wd->damage += battle_attr_fisx(src, target, damage, sc->data[SC_WATK_ELEMENT]->val1, tstatus->def_ele, tstatus->ele_lv);
+				wd->damage += battle_attr_fix(src, target, damage, sc->data[SC_WATK_ELEMENT]->val1, tstatus->def_ele, tstatus->ele_lv);
 				if (EquipmentAttackCalculator::is_attack_left_handed(src, skill_id)) {
 					damage = SkillBaseDamageCalculator::battle_calc_base_damage(src, sstatus, &sstatus->lhw, sc, tstatus->size, (is_skill_using_arrow(src, skill_id) ? 2 : 0)) * sc->data[SC_WATK_ELEMENT]->val2 / 100;
 					wd->damage2 += battle_attr_fix(src, target, damage, sc->data[SC_WATK_ELEMENT]->val1, tstatus->def_ele, tstatus->ele_lv);
@@ -2939,6 +2939,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case NPC_THUNDERBREATH:
 		case NPC_HELLJUDGEMENT:
 		case NPC_PULSESTRIKE:
+			
 			skillratio += 100 * (skill_lv - 1);
 			break;
 		case NPC_REVERBERATION_ATK:
@@ -5366,6 +5367,7 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 
 				switch(skill_id) {
 					case MG_NAPALMBEAT:
+						clif_specialeffect(target, EF_MOCHI, AREA);
 						skillratio += -30 + 10 * skill_lv;
 						break;
 					case MG_FIREBALL:
@@ -5376,6 +5378,11 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 #else
 						skillratio += -30 + 10 * skill_lv;
 #endif
+						break;
+					case MG_SHADOWSTRIKE:
+							clif_specialeffect(target, EF_DEVIL, AREA);
+							clif_specialeffect(target, EF_BLACKDEVIL, AREA);
+							skillratio += 5 * skill_lv;
 						break;
 					case MG_SOULSTRIKE:
 						if (battle_check_undead(tstatus->race,tstatus->def_ele))

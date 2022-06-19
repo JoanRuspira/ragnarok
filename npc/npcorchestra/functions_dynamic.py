@@ -35,7 +35,7 @@ def buildMobs():
         mob_id += 1
         mobs.append(mob)
     
-    mob = buildMob(mob_id, "MORROC_GUARD", "10")
+    # mob = buildMob(mob_id, "MORROC_GUARD", "10")
     mobs.append(mob)
     return mobs
 
@@ -48,6 +48,30 @@ def buildMob(mob_id, mob_name, ai):
     mob += "    Hp: 60\n"
     mob += "    WalkSpeed: 200\n"
     mob += "    Ai: " + ai + "\n"
+    mob += "    AttackRange: 1\n"
+    mob += "    SkillRange: 10\n"
+    mob += "    ChaseRange: 12\n"
+    mob += "    BaseExp: 164\n"        
+    mob += "    JobExp: 195\n"        
+    mob += "    Attack: 33\n"        
+    mob += "    Attack2: 8\n"        
+    mob += "    Defense: 13\n"        
+    mob += "    Str: 10\n"        
+    mob += "    Agi: 12\n"        
+    mob += "    Vit: 8\n"        
+    mob += "    Int: 5\n"        
+    mob += "    Dex: 17\n"        
+    mob += "    Luk: 7\n"        
+    mob += "    Size: Small\n"        
+    mob += "    Race: Brute\n"        
+    mob += "    Element: Fire\n"        
+    mob += "    ElementLevel: 1\n"        
+    mob += "    AttackDelay: 1600\n"        
+    mob += "    AttackMotion: 900\n"        
+    mob += "    DamageMotion: 240\n"        
+    
+
+    DamageMotion: 240
     return mob
 
 
