@@ -18,6 +18,7 @@
 #include "KnightSkillAtkRatioCalculator.h"
 #include "ArcherSkillAtkRatioCalculator.h"
 #include "SwordsmanSkillAtkRatioCalculator.h"
+#include "MageSkillAttackRatioCalculator.h"
 #include "CriticalHitCalculator.h"
 #include "SkillBaseDamageCalculator.h"
 #include "EquipmentAttackCalculator.h"

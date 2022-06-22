@@ -194,6 +194,7 @@
     <ClInclude Include="itemdb.hpp" />
     <ClInclude Include="KnightSkillAtkRatioCalculator.h" />
     <ClInclude Include="log.hpp" />
+    <ClInclude Include="MageSkillAttackRatioCalculator.h" />
     <ClInclude Include="mail.hpp" />
     <ClInclude Include="map.hpp" />
     <ClInclude Include="mapreg.hpp" />
@@ -248,6 +249,7 @@
     <ClCompile Include="itemdb.cpp" />
     <ClCompile Include="KnightSkillAtkRatioCalculator.cpp" />
     <ClCompile Include="log.cpp" />
+    <ClCompile Include="MageSkillAtkRatioCalculator.cpp" />
     <ClCompile Include="mail.cpp" />
     <ClCompile Include="map.cpp" />
     <ClCompile Include="mapreg.cpp" />

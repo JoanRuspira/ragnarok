@@ -5379,7 +5379,7 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 						skillratio += -30 + 10 * skill_lv;
 #endif
 						break;
-					case MG_SHADOWSTRIKE:
+					case MG_UNDEADEMBRACE:
 							clif_specialeffect(target, EF_DEVIL, AREA);
 							clif_specialeffect(target, EF_BLACKDEVIL, AREA);
 							skillratio += 5 * skill_lv;
@@ -5391,8 +5391,16 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case MG_FIREWALL:
 						skillratio -= 50;
 						break;
-					case MG_FIREBOLT:
 					case MG_COLDBOLT:
+						skillratio += MageSkillAtkRatioCalculator::calculate_skill_atk_ratio(status_get_lv(src), skill_id, skill_lv);
+						// if (sc && sc->data[SC_SPELLFIST] && mflag&BF_SHORT)  {
+						// 		skillratio += MageSkillAtkRatioCalculator::calculate_skill_atk_ratio(status_get_lv(src), skill_id, skill_lv);
+						// 		ad.div_ = 1; // ad mods, to make it work similar to regular hits [Xazax]
+						// 		ad.flag = BF_WEAPON|BF_SHORT;
+						// 		ad.type = DMG_NORMAL;
+						// 	}
+						break;
+					case MG_FIREBOLT:
 					case MG_LIGHTNINGBOLT:
 						if (sc && sc->data[SC_SPELLFIST] && mflag&BF_SHORT)  {
 							skillratio += (sc->data[SC_SPELLFIST]->val4 * 100) + (sc->data[SC_SPELLFIST]->val1 * 50) - 100;// val4 = used bolt level, val2 = used spellfist level. [Rytech]

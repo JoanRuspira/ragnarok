@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1401
 MinimumVisualStudioVersion = 12.0.40629.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3rdparty", "3rdparty", "{6ABA1767-6242-4CA0-BA22-A30972DC8918}"
 EndProject
@@ -87,6 +87,669 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "yamlupgrade", "src\tool\yam
 	ProjectSection(ProjectDependencies) = postProject
 		{61D6A599-6BED-4154-A9FC-40553BD972E0} = {61D6A599-6BED-4154-A9FC-40553BD972E0}
 		{352B45B3-FE88-4431-9D89-48CF811446DB} = {352B45B3-FE88-4431-9D89-48CF811446DB}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Npc", "Npc", "{E51CD77F-011E-4A93-8AFB-5DA407E17FA9}"
+	ProjectSection(SolutionItems) = preProject
+		npc\scripts_athena.conf = npc\scripts_athena.conf
+		npc\scripts_jobs.conf = npc\scripts_jobs.conf
+		npc\scripts_main.conf = npc\scripts_main.conf
+		npc\scripts_mapflags.conf = npc\scripts_mapflags.conf
+		npc\scripts_monsters.conf = npc\scripts_monsters.conf
+		npc\scripts_test.conf = npc\scripts_test.conf
+		npc\scripts_warps.conf = npc\scripts_warps.conf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{4DB6C3F0-3E81-44D8-9E66-2E3E7DCD9B06}"
+	ProjectSection(SolutionItems) = preProject
+		db\abra_db.yml = db\abra_db.yml
+		db\achievement_db.yml = db\achievement_db.yml
+		db\achievement_level_db.yml = db\achievement_level_db.yml
+		db\attendance.yml = db\attendance.yml
+		db\battleground_db.yml = db\battleground_db.yml
+		db\castle_db.txt = db\castle_db.txt
+		db\const.txt = db\const.txt
+		db\create_arrow_db.txt = db\create_arrow_db.txt
+		db\elemental_db.txt = db\elemental_db.txt
+		db\elemental_skill_db.txt = db\elemental_skill_db.txt
+		db\GeoIP.dat = db\GeoIP.dat
+		db\guild_skill_tree.yml = db\guild_skill_tree.yml
+		db\homun_skill_tree.txt = db\homun_skill_tree.txt
+		db\instance_db.yml = db\instance_db.yml
+		db\item_db.yml = db\item_db.yml
+		db\item_findingore.txt = db\item_findingore.txt
+		db\item_randomopt_db.yml = db\item_randomopt_db.yml
+		db\item_randomopt_group.yml = db\item_randomopt_group.yml
+		db\job_db2.txt = db\job_db2.txt
+		db\level_penalty.yml = db\level_penalty.yml
+		db\magicmushroom_db.yml = db\magicmushroom_db.yml
+		db\map_index.txt = db\map_index.txt
+		db\mercenary_db.txt = db\mercenary_db.txt
+		db\mercenary_skill_db.txt = db\mercenary_skill_db.txt
+		db\mob_chat_db.txt = db\mob_chat_db.txt
+		db\mob_classchange.txt = db\mob_classchange.txt
+		db\mob_db.yml = db\mob_db.yml
+		db\mob_item_ratio.txt = db\mob_item_ratio.txt
+		db\mob_mission.txt = db\mob_mission.txt
+		db\mob_pouch.txt = db\mob_pouch.txt
+		db\pet_db.yml = db\pet_db.yml
+		db\quest_db.yml = db\quest_db.yml
+		db\readme.md = db\readme.md
+		db\size_fix.yml = db\size_fix.yml
+		db\skill_changematerial_db.txt = db\skill_changematerial_db.txt
+		db\skill_damage_db.txt = db\skill_damage_db.txt
+		db\skill_db.yml = db\skill_db.yml
+		db\spellbook_db.yml = db\spellbook_db.yml
+		db\status_disabled.txt = db\status_disabled.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "import", "import", "{36EEB3EF-941E-4D73-9719-8727CEDB6AAD}"
+	ProjectSection(SolutionItems) = preProject
+		db\import\abra_db.yml = db\import\abra_db.yml
+		db\import\achievement_db.yml = db\import\achievement_db.yml
+		db\import\achievement_level_db.yml = db\import\achievement_level_db.yml
+		db\import\attendance.yml = db\import\attendance.yml
+		db\import\attr_fix.txt = db\import\attr_fix.txt
+		db\import\battleground_db.yml = db\import\battleground_db.yml
+		db\import\castle_db.txt = db\import\castle_db.txt
+		db\import\const.txt = db\import\const.txt
+		db\import\create_arrow_db.txt = db\import\create_arrow_db.txt
+		db\import\create_arrow_db.yml = db\import\create_arrow_db.yml
+		db\import\elemental_db.txt = db\import\elemental_db.txt
+		db\import\elemental_skill_db.txt = db\import\elemental_skill_db.txt
+		db\import\exp_guild.txt = db\import\exp_guild.txt
+		db\import\exp_homun.txt = db\import\exp_homun.txt
+		db\import\exp_homun.yml = db\import\exp_homun.yml
+		db\import\guild_skill_tree.yml = db\import\guild_skill_tree.yml
+		db\import\homun_skill_tree.txt = db\import\homun_skill_tree.txt
+		db\import\homunculus_db.txt = db\import\homunculus_db.txt
+		db\import\instance_db.yml = db\import\instance_db.yml
+		db\import\item_avail.txt = db\import\item_avail.txt
+		db\import\item_bluebox.txt = db\import\item_bluebox.txt
+		db\import\item_buyingstore.txt = db\import\item_buyingstore.txt
+		db\import\item_cardalbum.txt = db\import\item_cardalbum.txt
+		db\import\item_cash_db.txt = db\import\item_cash_db.txt
+		db\import\item_combo_db.txt = db\import\item_combo_db.txt
+		db\import\item_db.txt = db\import\item_db.txt
+		db\import\item_db.yml = db\import\item_db.yml
+		db\import\item_delay.txt = db\import\item_delay.txt
+		db\import\item_flag.txt = db\import\item_flag.txt
+		db\import\item_giftbox.txt = db\import\item_giftbox.txt
+		db\import\item_group_db.txt = db\import\item_group_db.txt
+		db\import\item_misc.txt = db\import\item_misc.txt
+		db\import\item_noequip.txt = db\import\item_noequip.txt
+		db\import\item_nouse.txt = db\import\item_nouse.txt
+		db\import\item_package.txt = db\import\item_package.txt
+		db\import\item_randomopt_db.txt = db\import\item_randomopt_db.txt
+		db\import\item_randomopt_db.yml = db\import\item_randomopt_db.yml
+		db\import\item_randomopt_group.txt = db\import\item_randomopt_group.txt
+		db\import\item_randomopt_group.yml = db\import\item_randomopt_group.yml
+		db\import\item_stack.txt = db\import\item_stack.txt
+		db\import\item_trade.txt = db\import\item_trade.txt
+		db\import\item_violetbox.txt = db\import\item_violetbox.txt
+		db\import\job_basehpsp_db.txt = db\import\job_basehpsp_db.txt
+		db\import\job_db1.txt = db\import\job_db1.txt
+		db\import\job_db2.txt = db\import\job_db2.txt
+		db\import\job_exp.txt = db\import\job_exp.txt
+		db\import\job_noenter_map.txt = db\import\job_noenter_map.txt
+		db\import\job_param_db.txt = db\import\job_param_db.txt
+		db\import\level_penalty.txt = db\import\level_penalty.txt
+		db\import\level_penalty.yml = db\import\level_penalty.yml
+		db\import\magicmushroom_db.yml = db\import\magicmushroom_db.yml
+		db\import\map_cache.dat = db\import\map_cache.dat
+		db\import\map_index.txt = db\import\map_index.txt
+		db\import\mercenary_db.txt = db\import\mercenary_db.txt
+		db\import\mercenary_skill_db.txt = db\import\mercenary_skill_db.txt
+		db\import\mob_avail.yml = db\import\mob_avail.yml
+		db\import\mob_boss.txt = db\import\mob_boss.txt
+		db\import\mob_branch.txt = db\import\mob_branch.txt
+		db\import\mob_chat_db.txt = db\import\mob_chat_db.txt
+		db\import\mob_chat_db.yml = db\import\mob_chat_db.yml
+		db\import\mob_classchange.txt = db\import\mob_classchange.txt
+		db\import\mob_db.txt = db\import\mob_db.txt
+		db\import\mob_db.yml = db\import\mob_db.yml
+		db\import\mob_drop.txt = db\import\mob_drop.txt
+		db\import\mob_item_ratio.txt = db\import\mob_item_ratio.txt
+		db\import\mob_mission.txt = db\import\mob_mission.txt
+		db\import\mob_poring.txt = db\import\mob_poring.txt
+		db\import\mob_pouch.txt = db\import\mob_pouch.txt
+		db\import\mob_race2_db.txt = db\import\mob_race2_db.txt
+		db\import\mob_random_db.txt = db\import\mob_random_db.txt
+		db\import\mob_skill_db.txt = db\import\mob_skill_db.txt
+		db\import\mob_summon.yml = db\import\mob_summon.yml
+		db\import\pet_db.yml = db\import\pet_db.yml
+		db\import\produce_db.txt = db\import\produce_db.txt
+		db\import\quest_db.yml = db\import\quest_db.yml
+		db\import\refine.yml = db\import\refine.yml
+		db\import\refine_db.yml = db\import\refine_db.yml
+		db\import\size_fix.yml = db\import\size_fix.yml
+		db\import\skill_changematerial_db.txt = db\import\skill_changematerial_db.txt
+		db\import\skill_damage_db.txt = db\import\skill_damage_db.txt
+		db\import\skill_db.yml = db\import\skill_db.yml
+		db\import\skill_nocast_db.txt = db\import\skill_nocast_db.txt
+		db\import\skill_tree.txt = db\import\skill_tree.txt
+		db\import\spellbook_db.yml = db\import\spellbook_db.yml
+		db\import\statpoint.txt = db\import\statpoint.txt
+		db\import\status_disabled.txt = db\import\status_disabled.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "re", "re", "{4B5B448D-74D7-48D7-8440-C131F98235A0}"
+	ProjectSection(SolutionItems) = preProject
+		db\re\abra_db.yml = db\re\abra_db.yml
+		db\re\achievement_db.yml = db\re\achievement_db.yml
+		db\re\achievement_level_db.yml = db\re\achievement_level_db.yml
+		db\re\attendance.yml = db\re\attendance.yml
+		db\re\attr_fix.txt = db\re\attr_fix.txt
+		db\re\exp_guild.txt = db\re\exp_guild.txt
+		db\re\exp_homun.txt = db\re\exp_homun.txt
+		db\re\guild_skill_tree.yml = db\re\guild_skill_tree.yml
+		db\re\homunculus_db.txt = db\re\homunculus_db.txt
+		db\re\instance_db.yml = db\re\instance_db.yml
+		db\re\item_bluebox.txt = db\re\item_bluebox.txt
+		db\re\item_cardalbum.txt = db\re\item_cardalbum.txt
+		db\re\item_cash_db.txt = db\re\item_cash_db.txt
+		db\re\item_combo_db.txt = db\re\item_combo_db.txt
+		db\re\item_db.yml = db\re\item_db.yml
+		db\re\item_db_equip.yml = db\re\item_db_equip.yml
+		db\re\item_db_equip_expanded.yml = db\re\item_db_equip_expanded.yml
+		db\re\item_db_etc.yml = db\re\item_db_etc.yml
+		db\re\item_db_usable.yml = db\re\item_db_usable.yml
+		db\re\item_giftbox.txt = db\re\item_giftbox.txt
+		db\re\item_group_db.txt = db\re\item_group_db.txt
+		db\re\item_misc.txt = db\re\item_misc.txt
+		db\re\item_noequip.txt = db\re\item_noequip.txt
+		db\re\item_package.txt = db\re\item_package.txt
+		db\re\item_randomopt_db.yml = db\re\item_randomopt_db.yml
+		db\re\item_randomopt_group.yml = db\re\item_randomopt_group.yml
+		db\re\item_violetbox.txt = db\re\item_violetbox.txt
+		db\re\job_basehpsp_db.txt = db\re\job_basehpsp_db.txt
+		db\re\job_db1.txt = db\re\job_db1.txt
+		db\re\job_exp.txt = db\re\job_exp.txt
+		db\re\job_noenter_map.txt = db\re\job_noenter_map.txt
+		db\re\job_param_db.txt = db\re\job_param_db.txt
+		db\re\level_penalty.yml = db\re\level_penalty.yml
+		db\re\magicmushroom_db.yml = db\re\magicmushroom_db.yml
+		db\re\map_cache.dat = db\re\map_cache.dat
+		db\re\mob_boss.txt = db\re\mob_boss.txt
+		db\re\mob_branch.txt = db\re\mob_branch.txt
+		db\re\mob_poring.txt = db\re\mob_poring.txt
+		db\re\mob_random_db.txt = db\re\mob_random_db.txt
+		db\re\mob_skill_db.txt = db\re\mob_skill_db.txt
+		db\re\pet_db.yml = db\re\pet_db.yml
+		db\re\produce_db.txt = db\re\produce_db.txt
+		db\re\quest_db.yml = db\re\quest_db.yml
+		db\re\refine_db.yml = db\re\refine_db.yml
+		db\re\size_fix.yml = db\re\size_fix.yml
+		db\re\skill_db.yml = db\re\skill_db.yml
+		db\re\skill_nocast_db.txt = db\re\skill_nocast_db.txt
+		db\re\skill_tree.txt = db\re\skill_tree.txt
+		db\re\spellbook_db.yml = db\re\spellbook_db.yml
+		db\re\statpoint.txt = db\re\statpoint.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "airports", "airports", "{FF48A342-3015-4344-9C54-AFAECCB08676}"
+	ProjectSection(SolutionItems) = preProject
+		npc\airports\airships.txt = npc\airports\airships.txt
+		npc\airports\einbroch.txt = npc\airports\einbroch.txt
+		npc\airports\hugel.txt = npc\airports\hugel.txt
+		npc\airports\izlude.txt = npc\airports\izlude.txt
+		npc\airports\lighthalzen.txt = npc\airports\lighthalzen.txt
+		npc\airports\rachel.txt = npc\airports\rachel.txt
+		npc\airports\yuno.txt = npc\airports\yuno.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cities", "cities", "{2AEE4E50-34AD-4E05-956C-EA5D95779601}"
+	ProjectSection(SolutionItems) = preProject
+		npc\cities\alberta.txt = npc\cities\alberta.txt
+		npc\cities\aldebaran.txt = npc\cities\aldebaran.txt
+		npc\cities\amatsu.txt = npc\cities\amatsu.txt
+		npc\cities\ayothaya.txt = npc\cities\ayothaya.txt
+		npc\cities\comodo.txt = npc\cities\comodo.txt
+		npc\cities\einbech.txt = npc\cities\einbech.txt
+		npc\cities\einbroch.txt = npc\cities\einbroch.txt
+		npc\cities\geffen.txt = npc\cities\geffen.txt
+		npc\cities\hugel.txt = npc\cities\hugel.txt
+		npc\cities\izlude.txt = npc\cities\izlude.txt
+		npc\cities\lighthalzen.txt = npc\cities\lighthalzen.txt
+		npc\cities\louyang.txt = npc\cities\louyang.txt
+		npc\cities\morocc.txt = npc\cities\morocc.txt
+		npc\cities\payon.txt = npc\cities\payon.txt
+		npc\cities\prontera.txt = npc\cities\prontera.txt
+		npc\cities\rachel.txt = npc\cities\rachel.txt
+		npc\cities\umbala.txt = npc\cities\umbala.txt
+		npc\cities\veins.txt = npc\cities\veins.txt
+		npc\cities\yuno.txt = npc\cities\yuno.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "guides", "guides", "{81D7FA76-AAF4-469F-BAA6-21FCFBEB78DC}"
+	ProjectSection(SolutionItems) = preProject
+		npc\guides\guides_alberta.txt = npc\guides\guides_alberta.txt
+		npc\guides\guides_aldebaran.txt = npc\guides\guides_aldebaran.txt
+		npc\guides\guides_amatsu.txt = npc\guides\guides_amatsu.txt
+		npc\guides\guides_ayothaya.txt = npc\guides\guides_ayothaya.txt
+		npc\guides\guides_comodo.txt = npc\guides\guides_comodo.txt
+		npc\guides\guides_dicastes.txt = npc\guides\guides_dicastes.txt
+		npc\guides\guides_einbroch.txt = npc\guides\guides_einbroch.txt
+		npc\guides\guides_geffen.txt = npc\guides\guides_geffen.txt
+		npc\guides\guides_hugel.txt = npc\guides\guides_hugel.txt
+		npc\guides\guides_izlude.txt = npc\guides\guides_izlude.txt
+		npc\guides\guides_lighthalzen.txt = npc\guides\guides_lighthalzen.txt
+		npc\guides\guides_louyang.txt = npc\guides\guides_louyang.txt
+		npc\guides\guides_morroc.txt = npc\guides\guides_morroc.txt
+		npc\guides\guides_niflheim.txt = npc\guides\guides_niflheim.txt
+		npc\guides\guides_payon.txt = npc\guides\guides_payon.txt
+		npc\guides\guides_prontera.txt = npc\guides\guides_prontera.txt
+		npc\guides\guides_rachel.txt = npc\guides\guides_rachel.txt
+		npc\guides\guides_umbala.txt = npc\guides\guides_umbala.txt
+		npc\guides\guides_veins.txt = npc\guides\guides_veins.txt
+		npc\guides\guides_yuno.txt = npc\guides\guides_yuno.txt
+		npc\guides\navigation.txt = npc\guides\navigation.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "jobs", "jobs", "{2D66CAEC-DE01-4748-BD98-C1B53C70FB59}"
+	ProjectSection(SolutionItems) = preProject
+		npc\jobs\mage.txt = npc\jobs\mage.txt
+		npc\jobs\swordman.txt = npc\jobs\swordman.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "kafras", "kafras", "{56067980-ED8A-41A9-94F7-8211BCD167EA}"
+	ProjectSection(SolutionItems) = preProject
+		npc\kafras\functions_kafras.txt = npc\kafras\functions_kafras.txt
+		npc\kafras\innkeepers.txt = npc\kafras\innkeepers.txt
+		npc\kafras\kafras.txt = npc\kafras\kafras.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mapflag", "mapflag", "{CAA05B31-97F2-4DFD-A66C-7EFF66F05384}"
+	ProjectSection(SolutionItems) = preProject
+		npc\mapflag\gvg.txt = npc\mapflag\gvg.txt
+		npc\mapflag\hidemobhpbar.txt = npc\mapflag\hidemobhpbar.txt
+		npc\mapflag\night.txt = npc\mapflag\night.txt
+		npc\mapflag\nobranch.txt = npc\mapflag\nobranch.txt
+		npc\mapflag\noicewall.txt = npc\mapflag\noicewall.txt
+		npc\mapflag\nolockon.txt = npc\mapflag\nolockon.txt
+		npc\mapflag\nomemo.txt = npc\mapflag\nomemo.txt
+		npc\mapflag\nopenalty.txt = npc\mapflag\nopenalty.txt
+		npc\mapflag\nopvp.txt = npc\mapflag\nopvp.txt
+		npc\mapflag\nosave.txt = npc\mapflag\nosave.txt
+		npc\mapflag\noteleport.txt = npc\mapflag\noteleport.txt
+		npc\mapflag\nowarp.txt = npc\mapflag\nowarp.txt
+		npc\mapflag\nowarpto.txt = npc\mapflag\nowarpto.txt
+		npc\mapflag\partylock.txt = npc\mapflag\partylock.txt
+		npc\mapflag\privateairship.txt = npc\mapflag\privateairship.txt
+		npc\mapflag\reset.txt = npc\mapflag\reset.txt
+		npc\mapflag\restricted.txt = npc\mapflag\restricted.txt
+		npc\mapflag\skill_duration.txt = npc\mapflag\skill_duration.txt
+		npc\mapflag\town.txt = npc\mapflag\town.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "merchants", "merchants", "{8B9DD837-4FDE-40C6-8639-E72BB4C3DEEA}"
+	ProjectSection(SolutionItems) = preProject
+		npc\merchants\card_removers.txt = npc\merchants\card_removers.txt
+		npc\merchants\dyers.txt = npc\merchants\dyers.txt
+		npc\merchants\hairstylers.txt = npc\merchants\hairstylers.txt
+		npc\merchants\item_signers.txt = npc\merchants\item_signers.txt
+		npc\merchants\jobmaster.txt = npc\merchants\jobmaster.txt
+		npc\merchants\refiners.txt = npc\merchants\refiners.txt
+		npc\merchants\reseters.txt = npc\merchants\reseters.txt
+		npc\merchants\shops.txt = npc\merchants\shops.txt
+		npc\merchants\socket_enchanters.txt = npc\merchants\socket_enchanters.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mobs", "mobs", "{450EA587-94BB-46DD-9AE4-6D2974A2CCED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "npcorchestra", "npcorchestra", "{1547FB35-84E9-4C93-B26B-36A3470930C4}"
+	ProjectSection(SolutionItems) = preProject
+		npc\npcorchestra\functions_dynamic.py = npc\npcorchestra\functions_dynamic.py
+		npc\npcorchestra\functions_static.py = npc\npcorchestra\functions_static.py
+		npc\npcorchestra\lists.py = npc\npcorchestra\lists.py
+		npc\npcorchestra\npcorchestra.py = npc\npcorchestra\npcorchestra.py
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "other", "other", "{AA3BF439-6D7C-495B-B95C-25DB2FADFCCB}"
+	ProjectSection(SolutionItems) = preProject
+		npc\other\academy.txt = npc\other\academy.txt
+		npc\other\casino_gambling.txt = npc\other\casino_gambling.txt
+		npc\other\casino_shops.txt = npc\other\casino_shops.txt
+		npc\other\clans.txt = npc\other\clans.txt
+		npc\other\Global_Functions.txt = npc\other\Global_Functions.txt
+		npc\other\global_npcs.txt = npc\other\global_npcs.txt
+		npc\other\signs.txt = npc\other\signs.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "quests", "quests", "{BFE0AE0F-E0E2-4DB8-B396-64026B9116A7}"
+	ProjectSection(SolutionItems) = preProject
+		npc\quests\quest_boards_alberta.txt = npc\quests\quest_boards_alberta.txt
+		npc\quests\quest_boards_comodo.txt = npc\quests\quest_boards_comodo.txt
+		npc\quests\quest_boards_geffen.txt = npc\quests\quest_boards_geffen.txt
+		npc\quests\quest_boards_izlude.txt = npc\quests\quest_boards_izlude.txt
+		npc\quests\quest_boards_morroc.txt = npc\quests\quest_boards_morroc.txt
+		npc\quests\quest_boards_payon.txt = npc\quests\quest_boards_payon.txt
+		npc\quests\quest_boards_prontera.txt = npc\quests\quest_boards_prontera.txt
+		npc\quests\quest_boards_umbala.txt = npc\quests\quest_boards_umbala.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "warps", "warps", "{0CCEC6B8-B5C9-4035-8A01-417403FD384E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "newgears", "newgears", "{8DA7853E-CE4D-452E-BD3B-48373A1FCC26}"
+	ProjectSection(SolutionItems) = preProject
+		npc\quests\newgears\2004_headgears.txt = npc\quests\newgears\2004_headgears.txt
+		npc\quests\newgears\2005_headgears.txt = npc\quests\newgears\2005_headgears.txt
+		npc\quests\newgears\2006_headgears.txt = npc\quests\newgears\2006_headgears.txt
+		npc\quests\newgears\2008_headgears.txt = npc\quests\newgears\2008_headgears.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "fields", "fields", "{8E5A0274-F86F-4907-9189-712624416C5B}"
+	ProjectSection(SolutionItems) = preProject
+		npc\mobs\fields\amatsu.txt = npc\mobs\fields\amatsu.txt
+		npc\mobs\fields\ayothaya.txt = npc\mobs\fields\ayothaya.txt
+		npc\mobs\fields\comodo.txt = npc\mobs\fields\comodo.txt
+		npc\mobs\fields\einbroch.txt = npc\mobs\fields\einbroch.txt
+		npc\mobs\fields\geffen.txt = npc\mobs\fields\geffen.txt
+		npc\mobs\fields\gonryun.txt = npc\mobs\fields\gonryun.txt
+		npc\mobs\fields\hugel.txt = npc\mobs\fields\hugel.txt
+		npc\mobs\fields\lighthalzen.txt = npc\mobs\fields\lighthalzen.txt
+		npc\mobs\fields\louyang.txt = npc\mobs\fields\louyang.txt
+		npc\mobs\fields\lutie.txt = npc\mobs\fields\lutie.txt
+		npc\mobs\fields\mjolnir.txt = npc\mobs\fields\mjolnir.txt
+		npc\mobs\fields\morocc.txt = npc\mobs\fields\morocc.txt
+		npc\mobs\fields\niflheim.txt = npc\mobs\fields\niflheim.txt
+		npc\mobs\fields\payon.txt = npc\mobs\fields\payon.txt
+		npc\mobs\fields\prontera.txt = npc\mobs\fields\prontera.txt
+		npc\mobs\fields\rachel.txt = npc\mobs\fields\rachel.txt
+		npc\mobs\fields\umbala.txt = npc\mobs\fields\umbala.txt
+		npc\mobs\fields\veins.txt = npc\mobs\fields\veins.txt
+		npc\mobs\fields\yuno.txt = npc\mobs\fields\yuno.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dungeons", "dungeons", "{3759CDCD-041E-45AB-BA45-DA83764F755E}"
+	ProjectSection(SolutionItems) = preProject
+		npc\mobs\dungeons\abbey.txt = npc\mobs\dungeons\abbey.txt
+		npc\mobs\dungeons\abyss.txt = npc\mobs\dungeons\abyss.txt
+		npc\mobs\dungeons\alde_dun.txt = npc\mobs\dungeons\alde_dun.txt
+		npc\mobs\dungeons\ama_dun.txt = npc\mobs\dungeons\ama_dun.txt
+		npc\mobs\dungeons\anthell.txt = npc\mobs\dungeons\anthell.txt
+		npc\mobs\dungeons\ayo_dun.txt = npc\mobs\dungeons\ayo_dun.txt
+		npc\mobs\dungeons\beach_dun.txt = npc\mobs\dungeons\beach_dun.txt
+		npc\mobs\dungeons\c_tower.txt = npc\mobs\dungeons\c_tower.txt
+		npc\mobs\dungeons\ein_dun.txt = npc\mobs\dungeons\ein_dun.txt
+		npc\mobs\dungeons\gef_dun.txt = npc\mobs\dungeons\gef_dun.txt
+		npc\mobs\dungeons\gefenia.txt = npc\mobs\dungeons\gefenia.txt
+		npc\mobs\dungeons\glastheim.txt = npc\mobs\dungeons\glastheim.txt
+		npc\mobs\dungeons\gld_dun.txt = npc\mobs\dungeons\gld_dun.txt
+		npc\mobs\dungeons\gon_dun.txt = npc\mobs\dungeons\gon_dun.txt
+		npc\mobs\dungeons\ice_dun.txt = npc\mobs\dungeons\ice_dun.txt
+		npc\mobs\dungeons\in_sphinx.txt = npc\mobs\dungeons\in_sphinx.txt
+		npc\mobs\dungeons\iz_dun.txt = npc\mobs\dungeons\iz_dun.txt
+		npc\mobs\dungeons\juperos.txt = npc\mobs\dungeons\juperos.txt
+		npc\mobs\dungeons\kh_dun.txt = npc\mobs\dungeons\kh_dun.txt
+		npc\mobs\dungeons\lhz_dun.txt = npc\mobs\dungeons\lhz_dun.txt
+		npc\mobs\dungeons\lou_dun.txt = npc\mobs\dungeons\lou_dun.txt
+		npc\mobs\dungeons\mag_dun.txt = npc\mobs\dungeons\mag_dun.txt
+		npc\mobs\dungeons\mjo_dun.txt = npc\mobs\dungeons\mjo_dun.txt
+		npc\mobs\dungeons\moc_pryd.txt = npc\mobs\dungeons\moc_pryd.txt
+		npc\mobs\dungeons\odin.txt = npc\mobs\dungeons\odin.txt
+		npc\mobs\dungeons\orcsdun.txt = npc\mobs\dungeons\orcsdun.txt
+		npc\mobs\dungeons\pay_dun.txt = npc\mobs\dungeons\pay_dun.txt
+		npc\mobs\dungeons\prt_maze.txt = npc\mobs\dungeons\prt_maze.txt
+		npc\mobs\dungeons\prt_sew.txt = npc\mobs\dungeons\prt_sew.txt
+		npc\mobs\dungeons\ra_san.txt = npc\mobs\dungeons\ra_san.txt
+		npc\mobs\dungeons\tha_t.txt = npc\mobs\dungeons\tha_t.txt
+		npc\mobs\dungeons\thor_v.txt = npc\mobs\dungeons\thor_v.txt
+		npc\mobs\dungeons\treasure.txt = npc\mobs\dungeons\treasure.txt
+		npc\mobs\dungeons\tur_dun.txt = npc\mobs\dungeons\tur_dun.txt
+		npc\mobs\dungeons\um_dun.txt = npc\mobs\dungeons\um_dun.txt
+		npc\mobs\dungeons\xmas_dun.txt = npc\mobs\dungeons\xmas_dun.txt
+		npc\mobs\dungeons\yggdrasil.txt = npc\mobs\dungeons\yggdrasil.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cities", "cities", "{413BBBBF-C640-419B-B92E-20DD2AA4585D}"
+	ProjectSection(SolutionItems) = preProject
+		npc\warps\cities\alberta.txt = npc\warps\cities\alberta.txt
+		npc\warps\cities\aldebaran.txt = npc\warps\cities\aldebaran.txt
+		npc\warps\cities\amatsu.txt = npc\warps\cities\amatsu.txt
+		npc\warps\cities\ayothaya.txt = npc\warps\cities\ayothaya.txt
+		npc\warps\cities\comodo.txt = npc\warps\cities\comodo.txt
+		npc\warps\cities\dicastes.txt = npc\warps\cities\dicastes.txt
+		npc\warps\cities\einbech.txt = npc\warps\cities\einbech.txt
+		npc\warps\cities\einbroch.txt = npc\warps\cities\einbroch.txt
+		npc\warps\cities\geffen.txt = npc\warps\cities\geffen.txt
+		npc\warps\cities\hugel.txt = npc\warps\cities\hugel.txt
+		npc\warps\cities\izlude.txt = npc\warps\cities\izlude.txt
+		npc\warps\cities\lighthalzen.txt = npc\warps\cities\lighthalzen.txt
+		npc\warps\cities\louyang.txt = npc\warps\cities\louyang.txt
+		npc\warps\cities\mid_camp.txt = npc\warps\cities\mid_camp.txt
+		npc\warps\cities\morroc.txt = npc\warps\cities\morroc.txt
+		npc\warps\cities\nameless.txt = npc\warps\cities\nameless.txt
+		npc\warps\cities\niflheim.txt = npc\warps\cities\niflheim.txt
+		npc\warps\cities\payon.txt = npc\warps\cities\payon.txt
+		npc\warps\cities\prontera.txt = npc\warps\cities\prontera.txt
+		npc\warps\cities\rachel.txt = npc\warps\cities\rachel.txt
+		npc\warps\cities\umbala.txt = npc\warps\cities\umbala.txt
+		npc\warps\cities\veins.txt = npc\warps\cities\veins.txt
+		npc\warps\cities\yggdrasil.txt = npc\warps\cities\yggdrasil.txt
+		npc\warps\cities\yuno.txt = npc\warps\cities\yuno.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dungeons", "dungeons", "{7D9F75A7-96CA-431B-802C-E9191CF93BFD}"
+	ProjectSection(SolutionItems) = preProject
+		npc\warps\dungeons\abbey.txt = npc\warps\dungeons\abbey.txt
+		npc\warps\dungeons\abyss.txt = npc\warps\dungeons\abyss.txt
+		npc\warps\dungeons\alde_dun.txt = npc\warps\dungeons\alde_dun.txt
+		npc\warps\dungeons\ama_dun.txt = npc\warps\dungeons\ama_dun.txt
+		npc\warps\dungeons\anthell.txt = npc\warps\dungeons\anthell.txt
+		npc\warps\dungeons\ayo_dun.txt = npc\warps\dungeons\ayo_dun.txt
+		npc\warps\dungeons\beach_dun.txt = npc\warps\dungeons\beach_dun.txt
+		npc\warps\dungeons\c_tower.txt = npc\warps\dungeons\c_tower.txt
+		npc\warps\dungeons\ein_dun.txt = npc\warps\dungeons\ein_dun.txt
+		npc\warps\dungeons\gef_dun.txt = npc\warps\dungeons\gef_dun.txt
+		npc\warps\dungeons\ice_dun.txt = npc\warps\dungeons\ice_dun.txt
+		npc\warps\dungeons\in_sphinx.txt = npc\warps\dungeons\in_sphinx.txt
+		npc\warps\dungeons\iz_dun.txt = npc\warps\dungeons\iz_dun.txt
+		npc\warps\dungeons\juperos.txt = npc\warps\dungeons\juperos.txt
+		npc\warps\dungeons\kh_dun.txt = npc\warps\dungeons\kh_dun.txt
+		npc\warps\dungeons\lhz_dun.txt = npc\warps\dungeons\lhz_dun.txt
+		npc\warps\dungeons\lou_dun.txt = npc\warps\dungeons\lou_dun.txt
+		npc\warps\dungeons\mag_dun.txt = npc\warps\dungeons\mag_dun.txt
+		npc\warps\dungeons\mjo_dun.txt = npc\warps\dungeons\mjo_dun.txt
+		npc\warps\dungeons\moc_pryd.txt = npc\warps\dungeons\moc_pryd.txt
+		npc\warps\dungeons\odin.txt = npc\warps\dungeons\odin.txt
+		npc\warps\dungeons\orcsdun.txt = npc\warps\dungeons\orcsdun.txt
+		npc\warps\dungeons\pay_dun.txt = npc\warps\dungeons\pay_dun.txt
+		npc\warps\dungeons\prt_maze.txt = npc\warps\dungeons\prt_maze.txt
+		npc\warps\dungeons\ra_san.txt = npc\warps\dungeons\ra_san.txt
+		npc\warps\dungeons\tha_t.txt = npc\warps\dungeons\tha_t.txt
+		npc\warps\dungeons\thor_v.txt = npc\warps\dungeons\thor_v.txt
+		npc\warps\dungeons\treasure.txt = npc\warps\dungeons\treasure.txt
+		npc\warps\dungeons\tur_dun.txt = npc\warps\dungeons\tur_dun.txt
+		npc\warps\dungeons\um_dun.txt = npc\warps\dungeons\um_dun.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "fields", "fields", "{B4B87A4F-38A6-4737-8F50-751B1E8CAD76}"
+	ProjectSection(SolutionItems) = preProject
+		npc\mobs\fields\amatsu.txt = npc\mobs\fields\amatsu.txt
+		npc\mobs\fields\ayothaya.txt = npc\mobs\fields\ayothaya.txt
+		npc\mobs\fields\comodo.txt = npc\mobs\fields\comodo.txt
+		npc\mobs\fields\einbroch.txt = npc\mobs\fields\einbroch.txt
+		npc\mobs\fields\geffen.txt = npc\mobs\fields\geffen.txt
+		npc\mobs\fields\gonryun.txt = npc\mobs\fields\gonryun.txt
+		npc\mobs\fields\hugel.txt = npc\mobs\fields\hugel.txt
+		npc\mobs\fields\lighthalzen.txt = npc\mobs\fields\lighthalzen.txt
+		npc\mobs\fields\louyang.txt = npc\mobs\fields\louyang.txt
+		npc\mobs\fields\lutie.txt = npc\mobs\fields\lutie.txt
+		npc\mobs\fields\mjolnir.txt = npc\mobs\fields\mjolnir.txt
+		npc\mobs\fields\morocc.txt = npc\mobs\fields\morocc.txt
+		npc\mobs\fields\niflheim.txt = npc\mobs\fields\niflheim.txt
+		npc\mobs\fields\payon.txt = npc\mobs\fields\payon.txt
+		npc\mobs\fields\prontera.txt = npc\mobs\fields\prontera.txt
+		npc\mobs\fields\rachel.txt = npc\mobs\fields\rachel.txt
+		npc\mobs\fields\umbala.txt = npc\mobs\fields\umbala.txt
+		npc\mobs\fields\veins.txt = npc\mobs\fields\veins.txt
+		npc\mobs\fields\yuno.txt = npc\mobs\fields\yuno.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "other", "other", "{680A91ED-2205-40AA-AAFA-7A36C4657744}"
+	ProjectSection(SolutionItems) = preProject
+		npc\warps\other\airplane.txt = npc\warps\other\airplane.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "templates", "templates", "{655616F9-221F-4553-8891-C71120B29934}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "static", "static", "{B7F7734E-4E8A-4D14-9639-618C066900C5}"
+	ProjectSection(SolutionItems) = preProject
+		npc\npcorchestra\templates\static\airplane_01_template.txt = npc\npcorchestra\templates\static\airplane_01_template.txt
+		npc\npcorchestra\templates\static\airplane_template.txt = npc\npcorchestra\templates\static\airplane_template.txt
+		npc\npcorchestra\templates\static\alberta_template.txt = npc\npcorchestra\templates\static\alberta_template.txt
+		npc\npcorchestra\templates\static\aldebaran_template.txt = npc\npcorchestra\templates\static\aldebaran_template.txt
+		npc\npcorchestra\templates\static\amatsu_template.txt = npc\npcorchestra\templates\static\amatsu_template.txt
+		npc\npcorchestra\templates\static\ayothaya_template.txt = npc\npcorchestra\templates\static\ayothaya_template.txt
+		npc\npcorchestra\templates\static\cmd_fild07_template.txt = npc\npcorchestra\templates\static\cmd_fild07_template.txt
+		npc\npcorchestra\templates\static\comodo_template.txt = npc\npcorchestra\templates\static\comodo_template.txt
+		npc\npcorchestra\templates\static\dicastes01_template.txt = npc\npcorchestra\templates\static\dicastes01_template.txt
+		npc\npcorchestra\templates\static\einbech_template.txt = npc\npcorchestra\templates\static\einbech_template.txt
+		npc\npcorchestra\templates\static\einbroch_template.txt = npc\npcorchestra\templates\static\einbroch_template.txt
+		npc\npcorchestra\templates\static\geffen_template.txt = npc\npcorchestra\templates\static\geffen_template.txt
+		npc\npcorchestra\templates\static\hugel_template.txt = npc\npcorchestra\templates\static\hugel_template.txt
+		npc\npcorchestra\templates\static\izlude_template.txt = npc\npcorchestra\templates\static\izlude_template.txt
+		npc\npcorchestra\templates\static\lighthalzen_rekenber_template.txt = npc\npcorchestra\templates\static\lighthalzen_rekenber_template.txt
+		npc\npcorchestra\templates\static\lighthalzen_slums_template.txt = npc\npcorchestra\templates\static\lighthalzen_slums_template.txt
+		npc\npcorchestra\templates\static\lighthalzen_template.txt = npc\npcorchestra\templates\static\lighthalzen_template.txt
+		npc\npcorchestra\templates\static\louyang_template.txt = npc\npcorchestra\templates\static\louyang_template.txt
+		npc\npcorchestra\templates\static\mid_camp_template.txt = npc\npcorchestra\templates\static\mid_camp_template.txt
+		npc\npcorchestra\templates\static\morocc_template.txt = npc\npcorchestra\templates\static\morocc_template.txt
+		npc\npcorchestra\templates\static\nameless_n_template.txt = npc\npcorchestra\templates\static\nameless_n_template.txt
+		npc\npcorchestra\templates\static\niflheim_template.txt = npc\npcorchestra\templates\static\niflheim_template.txt
+		npc\npcorchestra\templates\static\pay_arche_template.txt = npc\npcorchestra\templates\static\pay_arche_template.txt
+		npc\npcorchestra\templates\static\payon_template.txt = npc\npcorchestra\templates\static\payon_template.txt
+		npc\npcorchestra\templates\static\prontera_template.txt = npc\npcorchestra\templates\static\prontera_template.txt
+		npc\npcorchestra\templates\static\prt_monk_template.txt = npc\npcorchestra\templates\static\prt_monk_template.txt
+		npc\npcorchestra\templates\static\ra_temple_template.txt = npc\npcorchestra\templates\static\ra_temple_template.txt
+		npc\npcorchestra\templates\static\rachel_template.txt = npc\npcorchestra\templates\static\rachel_template.txt
+		npc\npcorchestra\templates\static\umbala_natives_template.txt = npc\npcorchestra\templates\static\umbala_natives_template.txt
+		npc\npcorchestra\templates\static\umbala_template.txt = npc\npcorchestra\templates\static\umbala_template.txt
+		npc\npcorchestra\templates\static\veins_template.txt = npc\npcorchestra\templates\static\veins_template.txt
+		npc\npcorchestra\templates\static\yuno_template.txt = npc\npcorchestra\templates\static\yuno_template.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dynamic", "dynamic", "{0F1442B7-7C12-4549-8961-B8B0D7125D33}"
+	ProjectSection(SolutionItems) = preProject
+		npc\npcorchestra\templates\dynamic\mob_avail_template.yml = npc\npcorchestra\templates\dynamic\mob_avail_template.yml
+		npc\npcorchestra\templates\dynamic\mob_db_template.yml = npc\npcorchestra\templates\dynamic\mob_db_template.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Conf", "Conf", "{0F9DC139-C335-4AAB-9EE0-6DF1422D38B7}"
+	ProjectSection(SolutionItems) = preProject
+		conf\atcommands.yml = conf\atcommands.yml
+		conf\battle_athena.conf = conf\battle_athena.conf
+		conf\channels.conf = conf\channels.conf
+		conf\char_athena.conf = conf\char_athena.conf
+		conf\charhelp.txt = conf\charhelp.txt
+		conf\grf-files.txt = conf\grf-files.txt
+		conf\groups.conf = conf\groups.conf
+		conf\inter_athena.conf = conf\inter_athena.conf
+		conf\inter_server.yml = conf\inter_server.yml
+		conf\log_athena.conf = conf\log_athena.conf
+		conf\login_athena.conf = conf\login_athena.conf
+		conf\map_athena.conf = conf\map_athena.conf
+		conf\maps_athena.conf = conf\maps_athena.conf
+		conf\motd.txt = conf\motd.txt
+		conf\packet_athena.conf = conf\packet_athena.conf
+		conf\readme.md = conf\readme.md
+		conf\script_athena.conf = conf\script_athena.conf
+		conf\subnet_athena.conf = conf\subnet_athena.conf
+		conf\valkyrie_sample.cfg = conf\valkyrie_sample.cfg
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "battle", "battle", "{2FD71F34-8E2E-49FE-A0AB-30ED1A372772}"
+	ProjectSection(SolutionItems) = preProject
+		conf\battle\battle.conf = conf\battle\battle.conf
+		conf\battle\battleground.conf = conf\battle\battleground.conf
+		conf\battle\client.conf = conf\battle\client.conf
+		conf\battle\drops.conf = conf\battle\drops.conf
+		conf\battle\exp.conf = conf\battle\exp.conf
+		conf\battle\feature.conf = conf\battle\feature.conf
+		conf\battle\gm.conf = conf\battle\gm.conf
+		conf\battle\guild.conf = conf\battle\guild.conf
+		conf\battle\homunc.conf = conf\battle\homunc.conf
+		conf\battle\items.conf = conf\battle\items.conf
+		conf\battle\misc.conf = conf\battle\misc.conf
+		conf\battle\monster.conf = conf\battle\monster.conf
+		conf\battle\party.conf = conf\battle\party.conf
+		conf\battle\pet.conf = conf\battle\pet.conf
+		conf\battle\player.conf = conf\battle\player.conf
+		conf\battle\skill.conf = conf\battle\skill.conf
+		conf\battle\status.conf = conf\battle\status.conf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "import", "import", "{4B331700-B50F-4818-A136-396D5494F236}"
+	ProjectSection(SolutionItems) = preProject
+		conf\import\atcommands.yml = conf\import\atcommands.yml
+		conf\import\battle_conf.txt = conf\import\battle_conf.txt
+		conf\import\char_conf.txt = conf\import\char_conf.txt
+		conf\import\inter_conf.txt = conf\import\inter_conf.txt
+		conf\import\inter_server.yml = conf\import\inter_server.yml
+		conf\import\log_conf.txt = conf\import\log_conf.txt
+		conf\import\login_conf.txt = conf\import\login_conf.txt
+		conf\import\map_conf.txt = conf\import\map_conf.txt
+		conf\import\packet_conf.txt = conf\import\packet_conf.txt
+		conf\import\script_conf.txt = conf\import\script_conf.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "import-tmpl", "import-tmpl", "{B682D41C-D949-4D1B-9A03-1766B1DF5A7C}"
+	ProjectSection(SolutionItems) = preProject
+		conf\import-tmpl\atcommands.yml = conf\import-tmpl\atcommands.yml
+		conf\import-tmpl\battle_conf.txt = conf\import-tmpl\battle_conf.txt
+		conf\import-tmpl\char_conf.txt = conf\import-tmpl\char_conf.txt
+		conf\import-tmpl\inter_conf.txt = conf\import-tmpl\inter_conf.txt
+		conf\import-tmpl\inter_server.yml = conf\import-tmpl\inter_server.yml
+		conf\import-tmpl\log_conf.txt = conf\import-tmpl\log_conf.txt
+		conf\import-tmpl\login_conf.txt = conf\import-tmpl\login_conf.txt
+		conf\import-tmpl\map_conf.txt = conf\import-tmpl\map_conf.txt
+		conf\import-tmpl\packet_conf.txt = conf\import-tmpl\packet_conf.txt
+		conf\import-tmpl\script_conf.txt = conf\import-tmpl\script_conf.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "msg_conf", "msg_conf", "{8F47AEE8-8D61-475B-B1D7-8389E5BC8111}"
+	ProjectSection(SolutionItems) = preProject
+		conf\msg_conf\char_msg.conf = conf\msg_conf\char_msg.conf
+		conf\msg_conf\login_msg.conf = conf\msg_conf\login_msg.conf
+		conf\msg_conf\map_msg.conf = conf\msg_conf\map_msg.conf
+		conf\msg_conf\map_msg_chn.conf = conf\msg_conf\map_msg_chn.conf
+		conf\msg_conf\map_msg_frn.conf = conf\msg_conf\map_msg_frn.conf
+		conf\msg_conf\map_msg_grm.conf = conf\msg_conf\map_msg_grm.conf
+		conf\msg_conf\map_msg_idn.conf = conf\msg_conf\map_msg_idn.conf
+		conf\msg_conf\map_msg_mal.conf = conf\msg_conf\map_msg_mal.conf
+		conf\msg_conf\map_msg_por.conf = conf\msg_conf\map_msg_por.conf
+		conf\msg_conf\map_msg_rus.conf = conf\msg_conf\map_msg_rus.conf
+		conf\msg_conf\map_msg_spn.conf = conf\msg_conf\map_msg_spn.conf
+		conf\msg_conf\map_msg_tha.conf = conf\msg_conf\map_msg_tha.conf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "import", "import", "{2AE7E695-859C-4172-ADB7-203877A658C9}"
+	ProjectSection(SolutionItems) = preProject
+		conf\msg_conf\import\map_msg_chn_conf.txt = conf\msg_conf\import\map_msg_chn_conf.txt
+		conf\msg_conf\import\map_msg_eng_conf.txt = conf\msg_conf\import\map_msg_eng_conf.txt
+		conf\msg_conf\import\map_msg_frn_conf.txt = conf\msg_conf\import\map_msg_frn_conf.txt
+		conf\msg_conf\import\map_msg_grm_conf.txt = conf\msg_conf\import\map_msg_grm_conf.txt
+		conf\msg_conf\import\map_msg_idn_conf.txt = conf\msg_conf\import\map_msg_idn_conf.txt
+		conf\msg_conf\import\map_msg_mal_conf.txt = conf\msg_conf\import\map_msg_mal_conf.txt
+		conf\msg_conf\import\map_msg_por_conf.txt = conf\msg_conf\import\map_msg_por_conf.txt
+		conf\msg_conf\import\map_msg_rus_conf.txt = conf\msg_conf\import\map_msg_rus_conf.txt
+		conf\msg_conf\import\map_msg_spn_conf.txt = conf\msg_conf\import\map_msg_spn_conf.txt
+		conf\msg_conf\import\map_msg_tha_conf.txt = conf\msg_conf\import\map_msg_tha_conf.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "import-tmpl", "import-tmpl", "{A40F9061-E366-4BB9-8E0E-BB1F90FF12C8}"
+	ProjectSection(SolutionItems) = preProject
+		conf\msg_conf\import-tmpl\map_msg_chn_conf.txt = conf\msg_conf\import-tmpl\map_msg_chn_conf.txt
+		conf\msg_conf\import-tmpl\map_msg_eng_conf.txt = conf\msg_conf\import-tmpl\map_msg_eng_conf.txt
+		conf\msg_conf\import-tmpl\map_msg_frn_conf.txt = conf\msg_conf\import-tmpl\map_msg_frn_conf.txt
+		conf\msg_conf\import-tmpl\map_msg_grm_conf.txt = conf\msg_conf\import-tmpl\map_msg_grm_conf.txt
+		conf\msg_conf\import-tmpl\map_msg_idn_conf.txt = conf\msg_conf\import-tmpl\map_msg_idn_conf.txt
+		conf\msg_conf\import-tmpl\map_msg_mal_conf.txt = conf\msg_conf\import-tmpl\map_msg_mal_conf.txt
+		conf\msg_conf\import-tmpl\map_msg_por_conf.txt = conf\msg_conf\import-tmpl\map_msg_por_conf.txt
+		conf\msg_conf\import-tmpl\map_msg_rus_conf.txt = conf\msg_conf\import-tmpl\map_msg_rus_conf.txt
+		conf\msg_conf\import-tmpl\map_msg_spn_conf.txt = conf\msg_conf\import-tmpl\map_msg_spn_conf.txt
+		conf\msg_conf\import-tmpl\map_msg_tha_conf.txt = conf\msg_conf\import-tmpl\map_msg_tha_conf.txt
 	EndProjectSection
 EndProject
 Global
@@ -202,6 +865,36 @@ Global
 		{5A9059F2-4933-49A2-BEE6-CC67F66FA070} = {9F328FE9-129D-4C0C-820B-BE4AA5996652}
 		{CDBBB260-B245-44EC-80FB-3F9421885E40} = {9F328FE9-129D-4C0C-820B-BE4AA5996652}
 		{9115C6D1-520A-4540-B4FE-95F3C923FE2C} = {9F328FE9-129D-4C0C-820B-BE4AA5996652}
+		{36EEB3EF-941E-4D73-9719-8727CEDB6AAD} = {4DB6C3F0-3E81-44D8-9E66-2E3E7DCD9B06}
+		{4B5B448D-74D7-48D7-8440-C131F98235A0} = {4DB6C3F0-3E81-44D8-9E66-2E3E7DCD9B06}
+		{FF48A342-3015-4344-9C54-AFAECCB08676} = {E51CD77F-011E-4A93-8AFB-5DA407E17FA9}
+		{2AEE4E50-34AD-4E05-956C-EA5D95779601} = {E51CD77F-011E-4A93-8AFB-5DA407E17FA9}
+		{81D7FA76-AAF4-469F-BAA6-21FCFBEB78DC} = {E51CD77F-011E-4A93-8AFB-5DA407E17FA9}
+		{2D66CAEC-DE01-4748-BD98-C1B53C70FB59} = {E51CD77F-011E-4A93-8AFB-5DA407E17FA9}
+		{56067980-ED8A-41A9-94F7-8211BCD167EA} = {E51CD77F-011E-4A93-8AFB-5DA407E17FA9}
+		{CAA05B31-97F2-4DFD-A66C-7EFF66F05384} = {E51CD77F-011E-4A93-8AFB-5DA407E17FA9}
+		{8B9DD837-4FDE-40C6-8639-E72BB4C3DEEA} = {E51CD77F-011E-4A93-8AFB-5DA407E17FA9}
+		{450EA587-94BB-46DD-9AE4-6D2974A2CCED} = {E51CD77F-011E-4A93-8AFB-5DA407E17FA9}
+		{1547FB35-84E9-4C93-B26B-36A3470930C4} = {E51CD77F-011E-4A93-8AFB-5DA407E17FA9}
+		{AA3BF439-6D7C-495B-B95C-25DB2FADFCCB} = {E51CD77F-011E-4A93-8AFB-5DA407E17FA9}
+		{BFE0AE0F-E0E2-4DB8-B396-64026B9116A7} = {E51CD77F-011E-4A93-8AFB-5DA407E17FA9}
+		{0CCEC6B8-B5C9-4035-8A01-417403FD384E} = {E51CD77F-011E-4A93-8AFB-5DA407E17FA9}
+		{8DA7853E-CE4D-452E-BD3B-48373A1FCC26} = {BFE0AE0F-E0E2-4DB8-B396-64026B9116A7}
+		{8E5A0274-F86F-4907-9189-712624416C5B} = {450EA587-94BB-46DD-9AE4-6D2974A2CCED}
+		{3759CDCD-041E-45AB-BA45-DA83764F755E} = {450EA587-94BB-46DD-9AE4-6D2974A2CCED}
+		{413BBBBF-C640-419B-B92E-20DD2AA4585D} = {0CCEC6B8-B5C9-4035-8A01-417403FD384E}
+		{7D9F75A7-96CA-431B-802C-E9191CF93BFD} = {0CCEC6B8-B5C9-4035-8A01-417403FD384E}
+		{B4B87A4F-38A6-4737-8F50-751B1E8CAD76} = {0CCEC6B8-B5C9-4035-8A01-417403FD384E}
+		{680A91ED-2205-40AA-AAFA-7A36C4657744} = {0CCEC6B8-B5C9-4035-8A01-417403FD384E}
+		{655616F9-221F-4553-8891-C71120B29934} = {1547FB35-84E9-4C93-B26B-36A3470930C4}
+		{B7F7734E-4E8A-4D14-9639-618C066900C5} = {655616F9-221F-4553-8891-C71120B29934}
+		{0F1442B7-7C12-4549-8961-B8B0D7125D33} = {655616F9-221F-4553-8891-C71120B29934}
+		{2FD71F34-8E2E-49FE-A0AB-30ED1A372772} = {0F9DC139-C335-4AAB-9EE0-6DF1422D38B7}
+		{4B331700-B50F-4818-A136-396D5494F236} = {0F9DC139-C335-4AAB-9EE0-6DF1422D38B7}
+		{B682D41C-D949-4D1B-9A03-1766B1DF5A7C} = {0F9DC139-C335-4AAB-9EE0-6DF1422D38B7}
+		{8F47AEE8-8D61-475B-B1D7-8389E5BC8111} = {0F9DC139-C335-4AAB-9EE0-6DF1422D38B7}
+		{2AE7E695-859C-4172-ADB7-203877A658C9} = {8F47AEE8-8D61-475B-B1D7-8389E5BC8111}
+		{A40F9061-E366-4BB9-8E0E-BB1F90FF12C8} = {8F47AEE8-8D61-475B-B1D7-8389E5BC8111}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {026DA20F-820C-40AA-983E-0E231EA90AD5}

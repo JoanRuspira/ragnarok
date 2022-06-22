@@ -66,6 +66,12 @@
     <Filter Include="Source Files\skillAtkRatioCalculator\archer">
       <UniqueIdentifier>{8049a975-8c4f-473c-9fde-95d94e6ca09c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\skillAtkRatioCalculator\mage">
+      <UniqueIdentifier>{9bf85b21-b48c-4a6f-9015-8edfba8a9c67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\skillAtkRatioCalculator\mage">
+      <UniqueIdentifier>{f1c9877a-8288-4cac-9806-5272279306d7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="achievement.hpp">
@@ -236,6 +242,9 @@
     <ClInclude Include="ArcherSkillAtkRatioCalculator.h">
       <Filter>Header Files\skillAtkRatioCalculator\archer</Filter>
     </ClInclude>
+    <ClInclude Include="MageSkillAttackRatioCalculator.h">
+      <Filter>Header Files\skillAtkRatioCalculator\mage</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="achievement.cpp">
@@ -384,6 +393,9 @@
     </ClCompile>
     <ClCompile Include="ArcherSkillAtkRatioCalculator.cpp">
       <Filter>Source Files\skillAtkRatioCalculator\archer</Filter>
+    </ClCompile>
+    <ClCompile Include="MageSkillAtkRatioCalculator.cpp">
+      <Filter>Source Files\skillAtkRatioCalculator\mage</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

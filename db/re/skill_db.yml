@@ -329,7 +329,7 @@ Body:
     Range: 9
     Hit: Single
     HitCount: 1
-    Element: Ghost
+    Element: Holy
     SplashArea: 1
     CopyFlags:
       Skill:
@@ -480,22 +480,12 @@ Body:
       - Level: 1
         Count: 1
       - Level: 2
-        Count: 1
+        Count: 2
       - Level: 3
-        Count: 2
+        Count: 3
       - Level: 4
-        Count: 2
+        Count: 4
       - Level: 5
-        Count: 3
-      - Level: 6
-        Count: 3
-      - Level: 7
-        Count: 4
-      - Level: 8
-        Count: 4
-      - Level: 9
-        Count: 5
-      - Level: 10
         Count: 5
     Element: Ghost
     CopyFlags:
@@ -515,48 +505,28 @@ Body:
         Time: 1200
       - Level: 5
         Time: 1600
-      - Level: 6
-        Time: 1400
-      - Level: 7
-        Time: 1800
-      - Level: 8
-        Time: 1600
-      - Level: 9
-        Time: 2000
-      - Level: 10
-        Time: 1800
     Requires:
       SpCost:
         - Level: 1
           Amount: 18
         - Level: 2
-          Amount: 14
-        - Level: 3
           Amount: 24
-        - Level: 4
-          Amount: 20
-        - Level: 5
+        - Level: 3
           Amount: 30
-        - Level: 6
-          Amount: 26
-        - Level: 7
+        - Level: 4
           Amount: 36
-        - Level: 8
-          Amount: 32
-        - Level: 9
-          Amount: 42
-        - Level: 10
+        - Level: 5
           Amount: 38
   - Id: 800
-    Name: MG_SHADOWSTRIKE
-    Description: Shadow Strike
-    MaxLevel: 10
+    Name: MG_UNDEADEMBRACE
+    Description: Undead Embrace
+    MaxLevel: 5
     Type: Magic
     TargetType: Attack
     Range: 9
     Hit: Single
     HitCount: 1
-    Element: Dark
+    Element: Undead
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -574,42 +544,22 @@ Body:
         Time: 1200
       - Level: 5
         Time: 1600
-      - Level: 6
-        Time: 1400
-      - Level: 7
-        Time: 1800
-      - Level: 8
-        Time: 1600
-      - Level: 9
-        Time: 2000
-      - Level: 10
-        Time: 1800
     Requires:
       SpCost:
         - Level: 1
           Amount: 18
         - Level: 2
-          Amount: 14
-        - Level: 3
           Amount: 24
-        - Level: 4
-          Amount: 20
-        - Level: 5
+        - Level: 3
           Amount: 30
-        - Level: 6
-          Amount: 26
-        - Level: 7
+        - Level: 4
           Amount: 36
-        - Level: 8
-          Amount: 32
-        - Level: 9
-          Amount: 42
-        - Level: 10
+        - Level: 5
           Amount: 38
   - Id: 14
     Name: MG_COLDBOLT
     Description: Cold Bolt
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Magic
     TargetType: Attack
     Flags:
@@ -618,24 +568,14 @@ Body:
     Hit: Multi_Hit
     HitCount:
       - Level: 1
-        Count: 1
-      - Level: 2
         Count: 2
-      - Level: 3
-        Count: 3
-      - Level: 4
+      - Level: 2
         Count: 4
-      - Level: 5
-        Count: 5
-      - Level: 6
+      - Level: 3
         Count: 6
-      - Level: 7
-        Count: 7
-      - Level: 8
+      - Level: 4
         Count: 8
-      - Level: 9
-        Count: 9
-      - Level: 10
+      - Level: 5
         Count: 10
     Element: Water
     CopyFlags:
@@ -5061,13 +5001,12 @@ Body:
   - Id: 148
     Name: AC_CHARGEARROW
     Description: Arrow Repel
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     DamageFlags:
       Splash: true
     Flags:
-      IsQuest: true
       AlterRangeVulture: true
     Range: -9
     Hit: Single
@@ -5211,11 +5150,9 @@ Body:
   - Id: 156
     Name: AL_HOLYLIGHT
     Description: Holy Light
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Magic
     TargetType: Attack
-    Flags:
-      IsQuest: true
     Range: 9
     Hit: Single
     HitCount: 1
@@ -9033,13 +8970,13 @@ Body:
       - Level: 1
         Count: 1
       - Level: 2
-        Count: 1
+        Count: 2
       - Level: 3
-        Count: 2
-      - Level: 4
-        Count: 2
-      - Level: 5
         Count: 3
+      - Level: 4
+        Count: 4
+      - Level: 5
+        Count: 5
       - Level: 6
         Count: 3
       - Level: 7
@@ -9052,6 +8989,29 @@ Body:
         Count: 5
     Element: Dark
     CastCancel: true
+    AfterCastActDelay:
+      - Level: 1
+        Time: 1200
+      - Level: 2
+        Time: 1000
+      - Level: 3
+        Time: 1400
+      - Level: 4
+        Time: 1200
+      - Level: 5
+        Time: 1600
+    Requires:
+      SpCost:
+        - Level: 1
+          Amount: 18
+        - Level: 2
+          Amount: 24
+        - Level: 3
+          Amount: 30
+        - Level: 4
+          Amount: 36
+        - Level: 5
+          Amount: 38
   - Id: 341
     Name: NPC_DARKTHUNDER
     Description: Darkness Jupitel
@@ -16687,11 +16647,9 @@ Body:
   - Id: 1009
     Name: HT_PHANTASMIC
     Description: Phantasmic Arrow
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    Flags:
-      IsQuest: true
     Range: -9
     Hit: Single
     HitCount: 1
