@@ -5028,11 +5028,9 @@ Body:
   - Id: 149
     Name: TF_SPRINKLESAND
     Description: Sand Attack
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    Flags:
-      IsQuest: true
     Range: 1
     Hit: Single
     HitCount: 1
@@ -5043,13 +5041,12 @@ Body:
   - Id: 150
     Name: TF_BACKSLIDING
     Description: Back Slide
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Weapon
     TargetType: Self
     DamageFlags:
       NoDamage: true
     Flags:
-      IsQuest: true
       IgnoreKagehumi: true
     Hit: Single
     HitCount: 1
@@ -5074,13 +5071,11 @@ Body:
   - Id: 152
     Name: TF_THROWSTONE
     Description: Stone Fling
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Misc
     TargetType: Attack
     DamageFlags:
       IgnoreFlee: true
-    Flags:
-      IsQuest: true
     Range: 7
     Hit: Single
     HitCount: 1
@@ -5098,13 +5093,12 @@ Body:
   - Id: 153
     Name: MC_CARTREVOLUTION
     Description: Cart Revolution
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     DamageFlags:
       Splash: true
     Flags:
-      IsQuest: true
       TargetTrap: true
       AllowOnMado: true
     Range: 1
@@ -19157,7 +19151,7 @@ Body:
   - Id: 2043
     Name: AB_CHEAL
     Description: Coluceo Heal
-    MaxLevel: 3
+    MaxLevel: 5
     Type: Magic
     TargetType: Self
     DamageFlags:
