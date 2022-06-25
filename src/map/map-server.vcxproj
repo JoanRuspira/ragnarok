@@ -215,6 +215,7 @@
     <ClInclude Include="searchstore.hpp" />
     <ClInclude Include="skill.hpp" />
     <ClInclude Include="SkillBaseDamageCalculator.h" />
+    <ClInclude Include="SkillAdditionalEffects.h" />
     <ClInclude Include="status.hpp" />
     <ClInclude Include="storage.hpp" />
     <ClInclude Include="SwordsmanSkillAtkRatioCalculator.h" />
@@ -269,6 +270,7 @@
     <ClCompile Include="searchstore.cpp" />
     <ClCompile Include="skill.cpp" />
     <ClCompile Include="SkillBaseDamageCalculator.cpp" />
+    <ClCompile Include="SkillAdditionalEffects.cpp" />
     <ClCompile Include="status.cpp" />
     <ClCompile Include="storage.cpp" />
     <ClCompile Include="SwordsmanSkillAtkRatioCalculator.cpp" />

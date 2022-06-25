@@ -9,9 +9,6 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="Source Files\criticalhitCalculator">
-      <UniqueIdentifier>{853b337b-a952-4d46-86b5-f83872b4ae85}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\skillBaseDamageCalculator">
       <UniqueIdentifier>{3ad6d71c-d297-4d3d-b61f-4b9e366fe7cf}</UniqueIdentifier>
     </Filter>
@@ -71,6 +68,15 @@
     </Filter>
     <Filter Include="Source Files\skillAtkRatioCalculator\mage">
       <UniqueIdentifier>{f1c9877a-8288-4cac-9806-5272279306d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\skills">
+      <UniqueIdentifier>{9f5af99c-e671-4f92-86b2-2b2f50c867b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\skills">
+      <UniqueIdentifier>{e00abe99-e45f-4673-89f2-ee03aeb74225}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\skillAtkRatioCalculator\criticalhitCalculator">
+      <UniqueIdentifier>{853b337b-a952-4d46-86b5-f83872b4ae85}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -245,6 +251,9 @@
     <ClInclude Include="MageSkillAttackRatioCalculator.h">
       <Filter>Header Files\skillAtkRatioCalculator\mage</Filter>
     </ClInclude>
+    <ClInclude Include="SkillAdditionalEffects.h">
+      <Filter>Header Files\skills</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="achievement.cpp">
@@ -371,7 +380,7 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CriticalHitCalculator.cpp">
-      <Filter>Source Files\criticalhitCalculator</Filter>
+      <Filter>Source Files\skillAtkRatioCalculator\criticalhitCalculator</Filter>
     </ClCompile>
     <ClCompile Include="EquipmentAttackCalculator.cpp">
       <Filter>Source Files\skillBaseDamageCalculator</Filter>
@@ -396,6 +405,9 @@
     </ClCompile>
     <ClCompile Include="MageSkillAtkRatioCalculator.cpp">
       <Filter>Source Files\skillAtkRatioCalculator\mage</Filter>
+    </ClCompile>
+    <ClCompile Include="SkillAdditionalEffects.cpp">
+      <Filter>Source Files\skills</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
