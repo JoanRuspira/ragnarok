@@ -272,7 +272,7 @@ void battle_damage(struct block_list *src, struct block_list *target, int64 dama
 	else
 		status_fix_damage(src, target, damage, delay, skill_id); // We have to separate here between reflect damage and others [icescope]
 	if (attack_type && !status_isdead(target) && additional_effects)
-		skill_additional_effect(src, target, skill_id, skill_lv, attack_type, dmg_lv, tick);
+		SkillAdditionalEffects::skill_additional_effect(src, target, skill_id, skill_lv, attack_type, dmg_lv, tick);
 	if (dmg_lv > ATK_BLOCK && attack_type)
 		skill_counter_additional_effect(src, target, skill_id, skill_lv, attack_type, tick);
 	// This is the last place where we have access to the actual damage type, so any monster events depending on type must be placed here
@@ -1337,7 +1337,7 @@ bool battle_status_block_damage(struct block_list *src, struct block_list *targe
 	}
 
 	if (((sce = sc->data[SC_UTSUSEMI]) || sc->data[SC_BUNSINJYUTSU]) && flag&BF_WEAPON && !skill_get_inf2(skill_id, INF2_IGNORECICADA)) {
-		skill_additional_effect(src, target, skill_id, skill_lv, flag, ATK_BLOCK, gettick());
+		SkillAdditionalEffects::skill_additional_effect(src, target, skill_id, skill_lv, flag, ATK_BLOCK, gettick());
 		if (!status_isdead(src))
 			skill_counter_additional_effect(src, target, skill_id, skill_lv, flag, gettick());
 		if (sce) {
@@ -4530,7 +4530,7 @@ static void battle_calc_attack_gvg_bg(struct Damage* wd, struct block_list *src,
 						battle_drain(tsd, src, rdamage, rdamage, sstatus->race, sstatus->class_);
 					//Use Reflect Shield to signal this kind of skill trigger [Skotlex]
 					battle_delay_damage(tick, wd->amotion, target, (!d_bl) ? src : d_bl, 0, CR_REFLECTSHIELD, 0, rdamage, ATK_DEF, rdelay, true, false);
-					skill_additional_effect(target, (!d_bl) ? src : d_bl, CR_REFLECTSHIELD, 1, BF_WEAPON|BF_SHORT|BF_NORMAL, ATK_DEF, tick);
+					SkillAdditionalEffects::skill_additional_effect(target, (!d_bl) ? src : d_bl, CR_REFLECTSHIELD, 1, BF_WEAPON|BF_SHORT|BF_NORMAL, ATK_DEF, tick);
 				}
 		}
 
@@ -4829,7 +4829,7 @@ void battle_do_reflect(int attack_type, struct Damage *wd, struct block_list* sr
 					battle_drain(tsd, src, rdamage, rdamage, sstatus->race, sstatus->class_);
 				// It appears that official servers give skill reflect damage a longer delay
 				battle_delay_damage(tick, wd->amotion, target, (!d_bl) ? src : d_bl, 0, CR_REFLECTSHIELD, 0, rdamage, ATK_DEF, rdelay ,true, false);
-				skill_additional_effect(target, (!d_bl) ? src : d_bl, CR_REFLECTSHIELD, 1, BF_WEAPON|BF_SHORT|BF_NORMAL, ATK_DEF, tick);
+				SkillAdditionalEffects::skill_additional_effect(target, (!d_bl) ? src : d_bl, CR_REFLECTSHIELD, 1, BF_WEAPON|BF_SHORT|BF_NORMAL, ATK_DEF, tick);
 			}
 		}
 	}
@@ -6658,7 +6658,7 @@ int battle_damage_area(struct block_list *bl, va_list ap) {
 		else
 			status_fix_damage(src,bl,damage,0,LG_REFLECTDAMAGE);
 		clif_damage(bl,bl,tick,amotion,dmotion,damage,1,DMG_ENDURE,0,false);
-		skill_additional_effect(src, bl, CR_REFLECTSHIELD, 1, BF_WEAPON|BF_SHORT|BF_NORMAL,ATK_DEF,tick);
+		SkillAdditionalEffects::skill_additional_effect(src, bl, CR_REFLECTSHIELD, 1, BF_WEAPON|BF_SHORT|BF_NORMAL,ATK_DEF,tick);
 		map_freeblock_unlock();
 	}
 
@@ -6936,7 +6936,7 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 
 	if( !(tsc && tsc->data[SC_DEVOTION]) && !vellum_damage && skill_check_shadowform(target, damage, wd.div_) ) {
 		if( !status_isdead(target) )
-			skill_additional_effect(src, target, 0, 0, wd.flag, wd.dmg_lv, tick);
+			SkillAdditionalEffects::skill_additional_effect(src, target, 0, 0, wd.flag, wd.dmg_lv, tick);
 		if( wd.dmg_lv > ATK_BLOCK )
 			skill_counter_additional_effect(src, target, 0, 0, wd.flag, tick);
 	} else

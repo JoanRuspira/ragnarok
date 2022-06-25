@@ -22,6 +22,7 @@
 #include "CriticalHitCalculator.h"
 #include "SkillBaseDamageCalculator.h"
 #include "EquipmentAttackCalculator.h"
+#include "SkillAdditionalEffects.h"
 
 //fwd declaration
 struct map_session_data;

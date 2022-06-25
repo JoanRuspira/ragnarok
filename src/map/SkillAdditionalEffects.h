@@ -1,16 +1,16 @@
 #pragma once
-
-#include <cstring>
-#include <array>
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include <bitset>
-
-#include "map.hpp" // struct block_list
-//#include "skill.hpp"
+//
+//#include <cstring>
+//#include <array>
+//#include <math.h>
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <string.h>
+//#include <time.h>
+//#include <bitset>
+//
+//#include "map.hpp" // struct block_list
+#include "skill.hpp"
 #include "status.hpp"
 #include "battle.hpp"
 #include "unit.hpp"
@@ -33,7 +33,6 @@
 #include "path.hpp"
 #include "pc.hpp"
 #include "pc_groups.hpp"
-#include "pet.hpp"
 #include "script.hpp"
 
 #include "../common/cbasetypes.hpp"
