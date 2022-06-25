@@ -4248,7 +4248,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 		break;
 
 	case KN_SPEARSTAB:
-		SwordsmanSkillAtkRatioCalculator::calculate_skill_additional_effect(src, bl, skill_id, skill_lv, flag, skill_area_temp, tick);
+		SwordsmanAdditionalEffectsCalculator::calculate_spear_stab_additional_effect(src, bl, skill_lv, flag, skill_area_temp, tick);
 		break;
 
 	case TK_TURNKICK:
@@ -16141,46 +16141,6 @@ int skill_castfix(struct block_list *bl, uint16 skill_id, uint16 skill_lv) {
 	return (int)time;
 }
 
-#ifndef RENEWAL_CAST
-/**
- * Get the skill cast time for Pre-Re cast
- * @param bl: The caster
- * @param time: Cast time before Status Change addition or reduction
- * @return time: Modified castime after status change addition or reduction
- */
-int skill_castfix_sc(struct block_list *bl, double time, uint8 flag)
-{
-	struct status_change *sc = status_get_sc(bl);
-
-	if (time < 0)
-		return 0;
-
-	if (bl->type == BL_MOB || bl->type == BL_NPC)
-		return (int)time;
-
-	if (sc && sc->count) {
-		if (!(flag&2)) {
-			if (sc->data[SC_SLOWCAST])
-				time += time * sc->data[SC_SLOWCAST]->val2 / 100;
-			if (sc->data[SC_PARALYSIS])
-				time += sc->data[SC_PARALYSIS]->val3;
-			if (sc->data[SC_IZAYOI])
-				time -= time * 50 / 100;
-		}
-		if (sc->data[SC_SUFFRAGIUM]) {
-			if(!(flag&2))
-				time -= time * sc->data[SC_SUFFRAGIUM]->val2 / 100;
-			//Suffragium ends even if the skill is not affected by it
-			status_change_end(bl, SC_SUFFRAGIUM, INVALID_TIMER);
-		}
-	}
-
-	time = max(time, 0);
-	//ShowInfo("Castime castfix_sc = %f\n",time);
-
-	return (int)time;
-}
-#else
 /**
  * Get the skill cast time for RENEWAL_CAST.
  * FixedRate reduction never be stacked, always get the HIGHEST VALUE TO REDUCE (-20% vs 10%, -20% wins!)
@@ -16323,7 +16283,7 @@ int skill_vfcastfix(struct block_list *bl, double time, uint16 skill_id, uint16 
 
 	return (int)time;
 }
-#endif
+
 
 /*==========================================
  * Does delay reductions based on dex/agi, sc data, item bonuses, ...

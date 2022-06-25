@@ -218,6 +218,7 @@
     <ClInclude Include="SkillAdditionalEffects.h" />
     <ClInclude Include="status.hpp" />
     <ClInclude Include="storage.hpp" />
+    <ClInclude Include="SwordsmanAdditionalEffectsCalculator.h" />
     <ClInclude Include="SwordsmanSkillAtkRatioCalculator.h" />
     <ClInclude Include="trade.hpp" />
     <ClInclude Include="unit.hpp" />
@@ -273,6 +274,7 @@
     <ClCompile Include="SkillAdditionalEffects.cpp" />
     <ClCompile Include="status.cpp" />
     <ClCompile Include="storage.cpp" />
+    <ClCompile Include="SwordsmanAdditionalEffectsCalculator.cpp" />
     <ClCompile Include="SwordsmanSkillAtkRatioCalculator.cpp" />
     <ClCompile Include="trade.cpp" />
     <ClCompile Include="unit.cpp" />

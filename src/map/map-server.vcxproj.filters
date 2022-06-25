@@ -78,6 +78,12 @@
     <Filter Include="Source Files\skillAtkRatioCalculator\criticalhitCalculator">
       <UniqueIdentifier>{853b337b-a952-4d46-86b5-f83872b4ae85}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\skillAdditionalEffectsCalculator">
+      <UniqueIdentifier>{d74baf42-db61-4d9f-91b2-4b1d5b7b15c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\skillAdditionalEffectsCalculator">
+      <UniqueIdentifier>{04888697-fd5a-426c-a762-6573fa9ec2b2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="achievement.hpp">
@@ -254,6 +260,9 @@
     <ClInclude Include="SkillAdditionalEffects.h">
       <Filter>Header Files\skills</Filter>
     </ClInclude>
+    <ClInclude Include="SwordsmanAdditionalEffectsCalculator.h">
+      <Filter>Header Files\skillAdditionalEffectsCalculator</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="achievement.cpp">
@@ -408,6 +417,9 @@
     </ClCompile>
     <ClCompile Include="SkillAdditionalEffects.cpp">
       <Filter>Source Files\skills</Filter>
+    </ClCompile>
+    <ClCompile Include="SwordsmanAdditionalEffectsCalculator.cpp">
+      <Filter>Source Files\skillAdditionalEffectsCalculator</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
