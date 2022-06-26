@@ -2056,7 +2056,7 @@ Body:
     Knockback: 6
     Cooldown: 3000
     Requires:
-      SpCost: 9
+      SpCost: 15
       Weapon:
         1hSpear: true
         2hSpear: true
@@ -7465,7 +7465,7 @@ Body:
       - Level: 5
         Time: 1500000
     Requires:
-      SpCost: 40
+      SpCost: 20
       ItemCost:
         - Item: Boody_Red
           Amount: 1
@@ -7499,7 +7499,7 @@ Body:
       - Level: 5
         Time: 1500000
     Requires:
-      SpCost: 40
+      SpCost: 20
       ItemCost:
         - Item: Crystal_Blue
           Amount: 1
@@ -7533,7 +7533,7 @@ Body:
       - Level: 5
         Time: 1500000
     Requires:
-      SpCost: 40
+      SpCost: 20
       ItemCost:
         - Item: Wind_Of_Verdure
           Amount: 1
@@ -7567,7 +7567,7 @@ Body:
       - Level: 5
         Time: 1500000
     Requires:
-      SpCost: 40
+      SpCost: 20
       ItemCost:
         - Item: Yellow_Live
           Amount: 1

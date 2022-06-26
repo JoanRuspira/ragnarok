@@ -4912,7 +4912,6 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src, struct bl
 
 		ATK_ADD(wd.damage, wd.damage2, bonus_damage);
 
-#ifdef RENEWAL
 		if(skill_id == HW_MAGICCRASHER) { // Add weapon attack for MATK onto Magic Crasher
 			struct status_data *sstatus = status_get_status_data(src);
 
@@ -4921,7 +4920,7 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src, struct bl
 			} else
 				ATK_ADD(wd.weaponAtk, wd.weaponAtk2, sstatus->matk_min);
 		}
-#endif
+
 		// add any miscellaneous player ATK bonuses
 		if( sd && skill_id && (i = pc_skillatk_bonus(sd, skill_id))) {
 			ATK_ADDRATE(wd.damage, wd.damage2, i);
@@ -4931,8 +4930,6 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src, struct bl
 			ATK_ADDRATE(wd.damage, wd.damage2, -i);
 			RE_ALLATK_ADDRATE(&wd, -i);
 		}
-
-#ifdef RENEWAL
 		// In Renewal we only cardfix to the weapon and equip ATK
 		//Card Fix for attacker (sd), 2 is added to the "left" flag meaning "attacker cards only"
 		if (sd) {
@@ -4972,10 +4969,6 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src, struct bl
 			if(wd.flag&BF_LONG && (skill_id != RA_WUGBITE && skill_id != RA_WUGSTRIKE)) //Long damage rate addition doesn't use weapon + equip attack
 				ATK_ADDRATE(wd.damage, wd.damage2, sd->bonus.long_attack_atk_rate);
 		}
-#else
-		// final attack bonuses that aren't affected by cards
-		battle_attack_sc_bonus(&wd, src, target, skill_id, skill_lv);
-#endif
 
 		if (wd.damage + wd.damage2) { //Check if attack ignores DEF
 			if(!attack_ignores_def(&wd, src, target, skill_id, skill_lv, EQI_HAND_L) || !attack_ignores_def(&wd, src, target, skill_id, skill_lv, EQI_HAND_R))

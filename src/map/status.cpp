@@ -6480,10 +6480,6 @@ static unsigned short status_calc_batk(struct block_list *bl, struct status_chan
 		batk += batk * sc->data[SC_INCATKRATE]->val1/100;
 	if(sc->data[SC_PROVOKE])
 		batk += batk * sc->data[SC_PROVOKE]->val3/100;
-#ifndef RENEWAL
-	if(sc->data[SC_CONCENTRATION])
-		batk += batk * sc->data[SC_CONCENTRATION]->val2/100;
-#endif
 	if(sc->data[SC_SKE])
 		batk += batk * 3;
 	if(sc->data[SC_BLOODLUST])
@@ -7319,8 +7315,8 @@ static unsigned short status_calc_speed(struct block_list *bl, struct status_cha
 		speed_rate -= val;
 
 		// GetMoveSlowValue()
-		if( sd && sc->data[SC_HIDING] && pc_checkskill(sd,RG_TUNNELDRIVE) > 0 )
-			val = 120 - 6 * pc_checkskill(sd,RG_TUNNELDRIVE);
+		if( sd && sc->data[SC_HIDING] )
+			val = 90;
 		else if( sd && sc->data[SC_CHASEWALK] && sc->data[SC_CHASEWALK]->val3 < 0 )
 			val = sc->data[SC_CHASEWALK]->val3;
 		else {
@@ -11040,8 +11036,8 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			break;
 		case SC_PROVOKE:
 			// val2 signals autoprovoke.
-			val3 = 2+3*val1; // Atk increase
-			val4 = 5+5*val1; // Def reduction.
+			val3 = 2+3*(val1*2); // Atk increase
+			val4 = 5+5*(val1*2); // Def reduction.
 			break;
 		case SC_AVOID:
 			// val2 = 10*val1; // Speed change rate.

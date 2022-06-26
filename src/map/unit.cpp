@@ -1481,7 +1481,7 @@ int unit_can_move(struct block_list *bl) {
 		if (sc->opt1 > 0 && sc->opt1 != OPT1_STONEWAIT && sc->opt1 != OPT1_BURNING)
 			return 0;
 
-		if ((sc->option & OPTION_HIDE) && (!sd || pc_checkskill(sd, RG_TUNNELDRIVE) <= 0))
+		if ((sc->option & OPTION_HIDE) && (!sd))
 			return 0;
 	}
 
