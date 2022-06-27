@@ -283,10 +283,19 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 			break;
 
 		case SM_BASH:
-			SwordsmanAdditionalEffectsCalculator::calculate_bash_additional_effect(src, bl, skill_lv);
+			SwordsmanAdditionalEffectsCalculator::apply_bash_additional_effect(src, bl, skill_lv);
 			break;
 		case TF_POISON:
-			ThiefAdditionalEffectsCalculator::calculate_envenom_additional_effect(src, bl, skill_lv);
+			ThiefAdditionalEffectsCalculator::apply_envenom_additional_effect(src, bl, skill_lv);
+			break;
+		case TF_THROWSTONE:
+			ThiefAdditionalEffectsCalculator::apply_throw_stone_additional_effect(src, bl, skill_lv);
+			break;
+		case TF_STEAL:
+			ThiefAdditionalEffectsCalculator::apply_steal_additional_effect(src, bl, skill_lv, skill);
+			break;
+		case TF_SPRINKLESAND:
+			ThiefAdditionalEffectsCalculator::apply_sand_attack_additional_effect(src, bl, skill_lv);
 			break;
 	}
 }

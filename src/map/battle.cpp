@@ -1092,7 +1092,7 @@ bool battle_status_block_damage(struct block_list *src, struct block_list *targe
 	// SC Types that must be first because they may or may not block damage
 	if ((sce = sc->data[SC_KYRIE]) && damage > 0) {
 		sce->val2 -= static_cast<int>(cap_value(damage, INT_MIN, INT_MAX));
-		if (flag & BF_WEAPON || skill_id == TF_THROWSTONE) {
+		if (flag & BF_WEAPON ) {
 			if (sce->val2 >= 0)
 				damage = 0;
 			else
@@ -2830,8 +2830,10 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case KN_SPEARSTAB:
 			skillratio += SwordsmanSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv);
 			break;
-
+		case TF_THROWSTONE:
 		case TF_POISON:
+		case TF_STEAL:
+		case TF_SPRINKLESAND:
 			skillratio += ThiefSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv);
 			break;
 			
@@ -2909,9 +2911,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 #else
 			skillratio += 300 + 40 * skill_lv;
 #endif
-			break;
-		case TF_SPRINKLESAND:
-			skillratio += 30;
 			break;
 		case MC_CARTREVOLUTION:
 			skillratio += 50;

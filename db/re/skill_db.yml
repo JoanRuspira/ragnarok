@@ -160,7 +160,8 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Weapon
-    Cooldown: 3000
+    Cooldown: 5000
+    AfterCastActDelay: 400
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -238,6 +239,7 @@ Body:
     HitCount: 2
     Element: Fire
     Cooldown: 2000
+    AfterCastActDelay: 400
     SplashArea:
       - Level: 1
         Area: 2
@@ -1892,6 +1894,8 @@ Body:
     Range: 1
     Hit: Single
     Element: Weapon
+    Cooldown: 7000
+    AfterCastActDelay: 400
     HitCount: 1
     Requires:
       SpCost: 14
@@ -1908,6 +1912,8 @@ Body:
       AllowOnMado: true
       IgnoreWugBite: true
     Range: 1
+    Cooldown: 2000
+    AfterCastActDelay: 400
     Hit: Single
     HitCount: 1
     Duration1:
@@ -1925,7 +1931,7 @@ Body:
       SpCost: 10
   - Id: 52
     Name: TF_POISON
-    Description: Envenom
+    Description: Poison Slash
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
@@ -1933,6 +1939,8 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Weapon
+    Cooldown: 2000
+    AfterCastActDelay: 400
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -2049,6 +2057,7 @@ Body:
     Element: Weapon
     Knockback: 6
     Cooldown: 3000
+    AfterCastActDelay: 400
     Requires:
       SpCost: 15
       Weapon:
@@ -5025,10 +5034,12 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    Range: 1
+    Range: -1
     Hit: Single
     HitCount: 1
     Element: Weapon
+    Cooldown: 8000
+    AfterCastActDelay: 400
     Duration2: 30000
     Requires:
       SpCost: 14
@@ -5038,6 +5049,7 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Self
+    Cooldown: 500
     DamageFlags:
       NoDamage: true
     Flags:
@@ -5066,13 +5078,15 @@ Body:
     Name: TF_THROWSTONE
     Description: Stone Fling
     MaxLevel: 5
-    Type: Misc
+    Type: Weapon
     TargetType: Attack
     DamageFlags:
       IgnoreFlee: true
     Range: 7
     Hit: Single
     HitCount: 1
+    Cooldown: 10000
+    AfterCastActDelay: 400
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -7444,6 +7458,7 @@ Body:
     CastCancel: true
     CastTime: 3000
     Cooldown: 10000
+    AfterCastActDelay: 400
     Duration1:
       - Level: 1
         Time: 300000
@@ -7478,6 +7493,7 @@ Body:
     CastCancel: true
     CastTime: 3000
     Cooldown: 10000
+    AfterCastActDelay: 400
     Duration1:
       - Level: 1
         Time: 300000
@@ -7512,6 +7528,7 @@ Body:
     CastCancel: true
     CastTime: 3000
     Cooldown: 10000
+    AfterCastActDelay: 400
     Duration1:
       - Level: 1
         Time: 300000
@@ -7546,6 +7563,7 @@ Body:
     CastCancel: true
     CastTime: 3000
     Cooldown: 10000
+    AfterCastActDelay: 400
     Duration1:
       - Level: 1
         Time: 300000

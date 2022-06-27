@@ -3615,6 +3615,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case ML_PIERCE:
 	case KN_SPEARBOOMERANG:
 	case TF_POISON:
+	case TF_STEAL:
 	case TF_SPRINKLESAND:
 	case AC_CHARGEARROW:
 	case MA_CHARGEARROW:
@@ -4248,8 +4249,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 		break;
 
 	case KN_SPEARSTAB:
-	
-		SwordsmanAdditionalEffectsCalculator::calculate_spear_stab_additional_effect(src, bl, skill_lv, flag, skill_area_temp, tick);
+		SwordsmanAdditionalEffectsCalculator::apply_spear_stab_additional_effect(src, bl, skill_lv, flag, skill_area_temp, tick);
 		break;
 
 	case TK_TURNKICK:
@@ -7390,17 +7390,9 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		break;
 
 	case TF_BACKSLIDING: //This is the correct implementation as per packet logging information. [Skotlex]
-		skill_blown(src,bl,skill_get_blewcount(skill_id,skill_lv),unit_getdir(bl),(enum e_skill_blown)(BLOWN_IGNORE_NO_KNOCKBACK
-#ifdef RENEWAL
-			|BLOWN_DONT_SEND_PACKET
-#endif
-		));
+		skill_blown(src,bl,skill_get_blewcount(skill_id,skill_lv),unit_getdir(bl),(enum e_skill_blown)(BLOWN_IGNORE_NO_KNOCKBACK|BLOWN_DONT_SEND_PACKET));
 		clif_skill_nodamage(src, bl, skill_id, skill_lv, 1);
-#ifdef RENEWAL
 		clif_blown(src); // Always blow, otherwise it shows a casting animation. [Lemongrass]
-#else
-		clif_slide(bl, bl->x, bl->y); //Show the casting animation on pre-re
-#endif
 		break;
 
 	case TK_HIGHJUMP:

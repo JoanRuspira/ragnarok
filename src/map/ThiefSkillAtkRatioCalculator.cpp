@@ -17,6 +17,15 @@ int ThiefSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* s
 		add_envenom_special_effects(src, target);
 		return calculate_envenom_atk_ratio(skill_lv);
 		break;
+	case TF_THROWSTONE:
+		return calculate_throw_stone_atk_ratio(skill_lv);
+		break;
+	case TF_STEAL:
+		return calculate_steal_atk_ratio(skill_lv);
+		break;
+	case TF_SPRINKLESAND:
+		return calculate_sand_attack_atk_ratio(skill_lv);
+		break;
 	default:
 		return 0;
 		break;
@@ -75,27 +84,71 @@ int ThiefSkillAtkRatioCalculator::calculate_envenom_atk_ratio(int skill_lv)
 	return ratio;
 }
 
-// int ThiefSkillAtkRatioCalculator::calculate_throw_stone_atk_ratio(int skill_lv)
-// {
-// 	int ratio = 0;
-// 	switch (skill_lv) {
-// 	case 1:
-// 		ratio = 30;
-// 		break;
-// 	case 2:
-// 		ratio = 100;
-// 		break;
-// 	case 3:
-// 		ratio = 180;
-// 		break;
-// 	case 4:
-// 		ratio = 240;
-// 		break;
-// 	case 5:
-// 		ratio = 300;
-// 		break;
-// 	}
-// 	return ratio;
-// }
+int ThiefSkillAtkRatioCalculator::calculate_throw_stone_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+	case 1:
+		ratio = -30;
+		break;
+	case 2:
+		ratio = 40;
+		break;
+	case 3:
+		ratio = 110;
+		break;
+	case 4:
+		ratio = 180;
+		break;
+	case 5:
+		ratio = 250;
+		break;
+	}
+	return ratio;
+}
 
+int ThiefSkillAtkRatioCalculator::calculate_steal_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+	case 1:
+		ratio = 30;
+		break;
+	case 2:
+		ratio = 100;
+		break;
+	case 3:
+		ratio = 180;
+		break;
+	case 4:
+		ratio = 240;
+		break;
+	case 5:
+		ratio = 300;
+		break;
+	}
+	return ratio;
+}
 
+int ThiefSkillAtkRatioCalculator::calculate_sand_attack_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+	case 1:
+		ratio = 30;
+		break;
+	case 2:
+		ratio = 100;
+		break;
+	case 3:
+		ratio = 180;
+		break;
+	case 4:
+		ratio = 240;
+		break;
+	case 5:
+		ratio = 300;
+		break;
+	}
+	return ratio;
+}

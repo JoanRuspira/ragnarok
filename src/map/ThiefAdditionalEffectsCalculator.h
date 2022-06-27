@@ -11,5 +11,8 @@
 class ThiefAdditionalEffectsCalculator
 {
 public:
-	static void calculate_envenom_additional_effect(struct block_list* src, struct block_list *bl, int skill_lv);
+	static void apply_envenom_additional_effect(struct block_list* src, struct block_list *bl, int skill_lv);
+	static void apply_throw_stone_additional_effect(struct block_list* src, struct block_list *bl, int skill_lv);
+	static void apply_steal_additional_effect(struct block_list* src, struct block_list *bl, int skill_lv, int &skill);
+	static void apply_sand_attack_additional_effect(struct block_list* src, struct block_list *bl, int skill_lv);
 };
