@@ -84,6 +84,18 @@
     <Filter Include="Source Files\skillAdditionalEffectsCalculator">
       <UniqueIdentifier>{04888697-fd5a-426c-a762-6573fa9ec2b2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\skillAtkRatioCalculator\thief">
+      <UniqueIdentifier>{6adf7b14-892c-4caa-a9de-d9cf2198ed6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\skillAtkRatioCalculator\thief">
+      <UniqueIdentifier>{68d92cf2-837b-4ab8-8d2b-17eacd4b7e35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\skillAdditionalEffectsCalculator\thief">
+      <UniqueIdentifier>{cbd4908b-caaf-4ff5-b53d-4bf5f621764e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\skillAdditionalEffectsCalculator\thief">
+      <UniqueIdentifier>{5d361d86-87ca-475a-880d-8cdfc4916b74}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="achievement.hpp">
@@ -263,6 +275,12 @@
     <ClInclude Include="SwordsmanAdditionalEffectsCalculator.h">
       <Filter>Header Files\skillAdditionalEffectsCalculator</Filter>
     </ClInclude>
+    <ClInclude Include="ThiefSkillAtkRatioCalculator.h">
+      <Filter>Header Files\skillAtkRatioCalculator\thief</Filter>
+    </ClInclude>
+    <ClInclude Include="ThiefAdditionalEffectsCalculator.h">
+      <Filter>Header Files\skillAdditionalEffectsCalculator\thief</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="achievement.cpp">
@@ -420,6 +438,12 @@
     </ClCompile>
     <ClCompile Include="SwordsmanAdditionalEffectsCalculator.cpp">
       <Filter>Source Files\skillAdditionalEffectsCalculator</Filter>
+    </ClCompile>
+    <ClCompile Include="ThiefSkillAtkRatioCalculator.cpp">
+      <Filter>Source Files\skillAtkRatioCalculator\thief</Filter>
+    </ClCompile>
+    <ClCompile Include="ThiefAdditionalEffectsCalculator.cpp">
+      <Filter>Source Files\skillAdditionalEffectsCalculator\thief</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

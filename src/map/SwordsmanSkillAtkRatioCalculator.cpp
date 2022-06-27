@@ -7,7 +7,7 @@
  * @param skill_lv : skill level
  * @param int_ : player's int
  */
-int SwordsmanSkillAtkRatioCalculator::calculate_skill_atk_ratio(int base_lv, int skill_id, int skill_lv)
+int SwordsmanSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv)
 {
 	switch (skill_id) {
 		case SM_BASH:
@@ -17,6 +17,7 @@ int SwordsmanSkillAtkRatioCalculator::calculate_skill_atk_ratio(int base_lv, int
 			return calculate_magnum_break_atk_ratio(skill_lv);
 			break;
 		case KN_SPEARSTAB:
+			add_spear_stab_special_effects(src, target);
 			return calculate_spear_stab_atk_ratio(skill_lv);
 			break;
 		default:
@@ -25,14 +26,10 @@ int SwordsmanSkillAtkRatioCalculator::calculate_skill_atk_ratio(int base_lv, int
 	}
 }
 
-void SwordsmanSkillAtkRatioCalculator::add_skill_special_effect(struct block_list* src, struct block_list *target, int skill_id)
+void SwordsmanSkillAtkRatioCalculator::add_spear_stab_special_effects(struct block_list* src, struct block_list *target)
 {
-	switch (skill_id) {
-		case KN_SPEARSTAB:
-			clif_specialeffect(src, EF_SPINEDBODY, AREA);
-			clif_specialeffect(target, EF_BASH3D, AREA);
-			break;
-		}
+	clif_specialeffect(src, EF_BASH3D, AREA);
+	clif_specialeffect(target, EF_SPINEDBODY, AREA);
 }
 
 int SwordsmanSkillAtkRatioCalculator::calculate_bash_atk_ratio(int skill_lv)

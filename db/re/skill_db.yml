@@ -556,6 +556,11 @@ Body:
           Amount: 36
         - Level: 5
           Amount: 38
+  - Id: 801
+    Name: TF_DAGGER
+    Description: Dagger Mastery
+    MaxLevel: 5
+    Type: Weapon
   - Id: 14
     Name: MG_COLDBOLT
     Description: Cold Bolt
@@ -1881,20 +1886,19 @@ Body:
   - Id: 50
     Name: TF_STEAL
     Description: Steal
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    DamageFlags:
-      NoDamage: true
     Range: 1
     Hit: Single
+    Element: Weapon
     HitCount: 1
     Requires:
-      SpCost: 10
+      SpCost: 14
   - Id: 51
     Name: TF_HIDING
     Description: Hiding
-    MaxLevel: 10
+    MaxLevel: 5
     TargetType: Self
     DamageFlags:
       NoDamage: true
@@ -1908,37 +1912,27 @@ Body:
     HitCount: 1
     Duration1:
       - Level: 1
-        Time: 30000
-      - Level: 2
         Time: 60000
-      - Level: 3
-        Time: 90000
-      - Level: 4
+      - Level: 2
         Time: 120000
-      - Level: 5
-        Time: 150000
-      - Level: 6
+      - Level: 3
         Time: 180000
-      - Level: 7
-        Time: 210000
-      - Level: 8
+      - Level: 4
         Time: 240000
-      - Level: 9
-        Time: 270000
-      - Level: 10
+      - Level: 5
         Time: 300000
     Requires:
       SpCost: 10
   - Id: 52
     Name: TF_POISON
     Description: Envenom
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     Range: -2
     Hit: Single
     HitCount: 1
-    Element: Poison
+    Element: Weapon
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -5034,10 +5028,10 @@ Body:
     Range: 1
     Hit: Single
     HitCount: 1
-    Element: Earth
+    Element: Weapon
     Duration2: 30000
     Requires:
-      SpCost: 9
+      SpCost: 14
   - Id: 150
     Name: TF_BACKSLIDING
     Description: Back Slide
@@ -5086,10 +5080,7 @@ Body:
     Duration1: 5000
     Duration2: 30000
     Requires:
-      SpCost: 2
-      ItemCost:
-        - Item: Stone
-          Amount: 1
+      SpCost: 17
   - Id: 153
     Name: MC_CARTREVOLUTION
     Description: Cart Revolution

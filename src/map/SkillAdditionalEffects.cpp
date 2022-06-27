@@ -285,6 +285,9 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 		case SM_BASH:
 			SwordsmanAdditionalEffectsCalculator::calculate_bash_additional_effect(src, bl, skill_lv);
 			break;
+		case TF_POISON:
+			ThiefAdditionalEffectsCalculator::calculate_envenom_additional_effect(src, bl, skill_lv);
+			break;
 	}
 }
 

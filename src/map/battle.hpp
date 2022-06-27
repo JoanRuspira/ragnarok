@@ -18,12 +18,14 @@
 #include "KnightSkillAtkRatioCalculator.h"
 #include "ArcherSkillAtkRatioCalculator.h"
 #include "SwordsmanSkillAtkRatioCalculator.h"
+#include "ThiefSkillAtkRatioCalculator.h"
 #include "MageSkillAttackRatioCalculator.h"
 #include "CriticalHitCalculator.h"
 #include "SkillBaseDamageCalculator.h"
 #include "EquipmentAttackCalculator.h"
 #include "SkillAdditionalEffects.h"
 #include "SwordsmanAdditionalEffectsCalculator.h"
+#include "ThiefAdditionalEffectsCalculator.h"
 
 //fwd declaration
 struct map_session_data;

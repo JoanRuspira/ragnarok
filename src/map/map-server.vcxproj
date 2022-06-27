@@ -220,6 +220,8 @@
     <ClInclude Include="storage.hpp" />
     <ClInclude Include="SwordsmanAdditionalEffectsCalculator.h" />
     <ClInclude Include="SwordsmanSkillAtkRatioCalculator.h" />
+    <ClInclude Include="ThiefAdditionalEffectsCalculator.h" />
+    <ClInclude Include="ThiefSkillAtkRatioCalculator.h" />
     <ClInclude Include="trade.hpp" />
     <ClInclude Include="unit.hpp" />
     <ClInclude Include="vending.hpp" />
@@ -276,6 +278,8 @@
     <ClCompile Include="storage.cpp" />
     <ClCompile Include="SwordsmanAdditionalEffectsCalculator.cpp" />
     <ClCompile Include="SwordsmanSkillAtkRatioCalculator.cpp" />
+    <ClCompile Include="ThiefAdditionalEffectsCalculator.cpp" />
+    <ClCompile Include="ThiefSkillAtkRatioCalculator.cpp" />
     <ClCompile Include="trade.cpp" />
     <ClCompile Include="unit.cpp" />
     <ClCompile Include="vending.cpp" />

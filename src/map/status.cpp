@@ -7316,7 +7316,7 @@ static unsigned short status_calc_speed(struct block_list *bl, struct status_cha
 
 		// GetMoveSlowValue()
 		if( sd && sc->data[SC_HIDING] )
-			val = 90;
+			val = 120 - 6 * pc_checkskill(sd,TF_HIDING);
 		else if( sd && sc->data[SC_CHASEWALK] && sc->data[SC_CHASEWALK]->val3 < 0 )
 			val = sc->data[SC_CHASEWALK]->val3;
 		else {
