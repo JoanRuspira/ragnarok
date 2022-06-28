@@ -291,10 +291,10 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 		case TF_THROWSTONE:
 			ThiefAdditionalEffectsCalculator::apply_throw_stone_additional_effect(src, bl, skill_lv);
 			break;
-		case TF_STEAL:
-			ThiefAdditionalEffectsCalculator::apply_steal_additional_effect(src, bl, skill_lv, skill);
+		case TF_SNATCH:
+			ThiefAdditionalEffectsCalculator::apply_snatch_additional_effect(src, bl, sd, skill_lv, skill);
 			break;
-		case TF_SPRINKLESAND:
+		case TF_SANDATTACK:
 			ThiefAdditionalEffectsCalculator::apply_sand_attack_additional_effect(src, bl, skill_lv);
 			break;
 	}

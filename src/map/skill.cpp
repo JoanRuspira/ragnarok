@@ -3615,7 +3615,8 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case ML_PIERCE:
 	case KN_SPEARBOOMERANG:
 	case TF_POISON:
-	case TF_STEAL:
+	case TF_SNATCH:
+	case TF_SANDATTACK:
 	case TF_SPRINKLESAND:
 	case AC_CHARGEARROW:
 	case MA_CHARGEARROW:

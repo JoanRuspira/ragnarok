@@ -13,10 +13,11 @@ void ThiefAdditionalEffectsCalculator::apply_throw_stone_additional_effect(struc
 }
 
 
-void ThiefAdditionalEffectsCalculator::apply_steal_additional_effect(struct block_list* src, struct block_list *bl, int skill_lv, int &skill)
+void ThiefAdditionalEffectsCalculator::apply_snatch_additional_effect(struct block_list* src, struct block_list *bl, struct map_session_data *sd, int skill_lv, int &skill)
 {
 	status_change_start(src, bl, SC_STUN, 10000, skill_lv, 0, 0, 0, skill_lv * 500, SCSTART_NONE);
-	clif_skill_nodamage(src, bl, TF_STEAL, skill, 1);
+	int zeny = 25 + ( std::rand() % ( 100 - 25 + 1 ) );
+	pc_getzeny(sd,zeny,LOG_TYPE_COMMAND,NULL);
 }
 
 void ThiefAdditionalEffectsCalculator::apply_sand_attack_additional_effect(struct block_list* src, struct block_list *bl, int skill_lv)

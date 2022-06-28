@@ -2101,6 +2101,8 @@ enum e_skill {
 	EL_STONE_RAIN,
 	MG_UNDEADEMBRACE = 800,
 	TF_DAGGER = 801,
+	TF_SNATCH = 802,
+	TF_SANDATTACK = 803,
 };
 
 /// The client view ids for land skills.

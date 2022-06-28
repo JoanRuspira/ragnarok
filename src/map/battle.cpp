@@ -2667,21 +2667,10 @@ static void battle_calc_multi_attack(struct Damage* wd, struct block_list *src,s
 
 	if( sd && !skill_id ) {	// if no skill_id passed, check for double attack [helvetica]
 		short i;
-		if( ( ( skill_lv = (pc_checkskill(sd,TF_DOUBLE) * 2) ) > 0 )
-			|| ( sd->bonus.double_rate > 0 && sd->weapontype1 != W_FIST ) // Will fail bare-handed
-			|| ( sc && sc->data[SC_KAGEMUSYA] && sd->weapontype1 != W_FIST )) // Will fail bare-handed
+		if( ( ( skill_lv = (pc_checkskill(sd,TF_DOUBLE)) ) > 0 )) // Will fail bare-handed
 		{	//Success chance is not added, the higher one is used [Skotlex]
 			int max_rate = 0;
-
-			if (sc && sc->data[SC_KAGEMUSYA])
-				max_rate = sc->data[SC_KAGEMUSYA]->val1 * 10; // Same rate as even levels of TF_DOUBLE
-			else
-#ifdef RENEWAL
-				max_rate = max(7 * skill_lv, sd->bonus.double_rate);
-#else
-				max_rate = max(5 * skill_lv, sd->bonus.double_rate);
-#endif
-
+			max_rate = max(10 * skill_lv, sd->bonus.double_rate);
 			if( rnd()%100 < max_rate ) {
 				wd->div_ = skill_get_num(TF_DOUBLE,skill_lv?skill_lv:1);
 				wd->type = DMG_MULTI_HIT;
@@ -2832,8 +2821,8 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			break;
 		case TF_THROWSTONE:
 		case TF_POISON:
-		case TF_STEAL:
-		case TF_SPRINKLESAND:
+		case TF_SNATCH:
+		case TF_SANDATTACK:
 			skillratio += ThiefSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv);
 			break;
 			
