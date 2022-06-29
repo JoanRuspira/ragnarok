@@ -1,7 +1,11 @@
 /autom4te.cache/output.0
 /autom4te.cache/requests
 /autom4te.cache/traces.0
-/npc/npcorchestra/generated
+/npc/npcorchestra/generated/*.txt
+/npc/npcorchestra/generated/static/*.txt
+/npc/npcorchestra/generated/dynamic/*.txt
+/npc/npcorchestra/generated/db/*.yml
+/npc/npcorchestra/generated/db/import/*.yml
 
 #Global
 .vscode
