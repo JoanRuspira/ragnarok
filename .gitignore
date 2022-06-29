@@ -58,10 +58,6 @@ Thumbs.db
 # /db/
 /db/import
 
-# /conf/
-/conf/import
-/conf/msg_conf/import
-
 # /lib
 /lib
 
@@ -79,8 +75,6 @@ Thumbs.db
 /src/common/obj_sql
 /src/common/version.hpp
 
-# /src/custom/
-/src/custom
 
 # /src/login/
 /src/login/Makefile
