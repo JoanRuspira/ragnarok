@@ -1918,6 +1918,40 @@ Body:
         Reproduce: true
     Requires:
       SpCost: 14
+  - Id: 804
+    Name: MC_FIREWORKS
+    Description: Cart Fireworks
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      Splash: true
+    Flags:
+      TargetTrap: true
+    Hit: Multi_Hit
+    HitCount: 3
+    Element: Fire
+    Cooldown: 2000
+    AfterCastActDelay: 400
+    SplashArea:
+      - Level: 1
+        Area: 2
+      - Level: 2
+        Area: 2
+      - Level: 3
+        Area: 2
+      - Level: 4
+        Area: 4
+      - Level: 5
+        Area: 4
+    Knockback: 2
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Duration2: 10000
+    Requires:
+      SpCost: 20
   - Id: 51
     Name: TF_HIDING
     Description: Hiding
@@ -5170,19 +5204,28 @@ Body:
   - Id: 155
     Name: MC_LOUD
     Description: Crazy Uproar
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Weapon
     TargetType: Self
     DamageFlags:
       NoDamage: true
     Flags:
-      IsQuest: true
       AllowOnMado: true
     Hit: Single
     HitCount: 1
-    Duration1: 300000
+    Duration1:
+      - Level: 1
+        Time: 24000
+      - Level: 2
+        Time: 48000
+      - Level: 3
+        Time: 72000
+      - Level: 4
+        Time: 96000
+      - Level: 5
+        Time: 120000
     Requires:
-      SpCost: 8
+      SpCost: 16
   - Id: 156
     Name: AL_HOLYLIGHT
     Description: Holy Light
@@ -6250,7 +6293,7 @@ Body:
   - Id: 226
     Name: AM_AXEMASTERY
     Description: Axe Mastery
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
   - Id: 227
     Name: AM_LEARNINGPOTION

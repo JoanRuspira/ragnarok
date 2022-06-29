@@ -199,6 +199,7 @@
     <ClInclude Include="map.hpp" />
     <ClInclude Include="mapreg.hpp" />
     <ClInclude Include="mercenary.hpp" />
+    <ClInclude Include="MerchntSkillAtkRatioCalculator.h" />
     <ClInclude Include="mob.hpp" />
     <ClInclude Include="npc.hpp" />
     <ClInclude Include="packets.hpp" />
@@ -222,6 +223,7 @@
     <ClInclude Include="SwordsmanSkillAtkRatioCalculator.h" />
     <ClInclude Include="ThiefAdditionalEffectsCalculator.h" />
     <ClInclude Include="ThiefSkillAtkRatioCalculator.h" />
+    <ClInclude Include="MerchantSkillAtkRatioCalculator.h" />
     <ClInclude Include="trade.hpp" />
     <ClInclude Include="unit.hpp" />
     <ClInclude Include="vending.hpp" />
@@ -258,6 +260,7 @@
     <ClCompile Include="map.cpp" />
     <ClCompile Include="mapreg.cpp" />
     <ClCompile Include="mercenary.cpp" />
+    <ClCompile Include="MerchntSkillAtkRatioCalculator.cpp" />
     <ClCompile Include="mob.cpp">
       <Optimization Condition="'$(Configuration)'=='Release'">Disabled</Optimization>
     </ClCompile>
@@ -280,6 +283,7 @@
     <ClCompile Include="SwordsmanSkillAtkRatioCalculator.cpp" />
     <ClCompile Include="ThiefAdditionalEffectsCalculator.cpp" />
     <ClCompile Include="ThiefSkillAtkRatioCalculator.cpp" />
+    <ClInclude Include="MerchantSkillAtkRatioCalculator.cpp" />
     <ClCompile Include="trade.cpp" />
     <ClCompile Include="unit.cpp" />
     <ClCompile Include="vending.cpp" />

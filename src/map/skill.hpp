@@ -2103,6 +2103,7 @@ enum e_skill {
 	TF_DAGGER = 801,
 	TF_SNATCH = 802,
 	TF_SANDATTACK = 803,
+	MC_FIREWORKS = 804,
 };
 
 /// The client view ids for land skills.

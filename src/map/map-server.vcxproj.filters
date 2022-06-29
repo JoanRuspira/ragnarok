@@ -96,6 +96,12 @@
     <Filter Include="Header Files\skillAdditionalEffectsCalculator\thief">
       <UniqueIdentifier>{5d361d86-87ca-475a-880d-8cdfc4916b74}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\skillAtkRatioCalculator\merchant">
+      <UniqueIdentifier>{db1ed582-4865-4f0d-b410-99df7ef5d383}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\skillAtkRatioCalculator\merchant">
+      <UniqueIdentifier>{dd7adf05-6c6a-4c45-b1a6-caefb9112d1b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="achievement.hpp">
@@ -281,6 +287,15 @@
     <ClInclude Include="ThiefAdditionalEffectsCalculator.h">
       <Filter>Header Files\skillAdditionalEffectsCalculator\thief</Filter>
     </ClInclude>
+    <ClInclude Include="MerchantSkillAtkRatioCalculator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MerchantSkillAtkRatioCalculator.cpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MerchntSkillAtkRatioCalculator.h">
+      <Filter>Header Files\skillAtkRatioCalculator\merchant</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="achievement.cpp">
@@ -444,6 +459,9 @@
     </ClCompile>
     <ClCompile Include="ThiefAdditionalEffectsCalculator.cpp">
       <Filter>Source Files\skillAdditionalEffectsCalculator\thief</Filter>
+    </ClCompile>
+    <ClCompile Include="MerchntSkillAtkRatioCalculator.cpp">
+      <Filter>Source Files\skillAtkRatioCalculator\merchant</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

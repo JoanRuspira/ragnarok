@@ -343,6 +343,7 @@ void initChangeTables(void)
 	add_sc( SM_BASH			, SC_STUN		);
 	set_sc( SM_PROVOKE		, SC_PROVOKE		, EFST_PROVOKE		, SCB_DEF|SCB_DEF2|SCB_BATK|SCB_WATK );
 	set_sc( SM_MAGNUM		, SC_WATK_ELEMENT	, EFST_WATK_ELEMENT	, SCB_NONE	);
+	set_sc( MC_FIREWORKS		, SC_WATK_ELEMENT	, EFST_WATK_ELEMENT	, SCB_NONE	);
 	set_sc( SM_ENDURE		, SC_ENDURE		, EFST_ENDURE		, SCB_MDEF|SCB_DSPD );
 	add_sc( MG_SIGHT		, SC_SIGHT		);
 	add_sc( MG_SAFETYWALL		, SC_SAFETYWALL		);
@@ -5994,7 +5995,7 @@ static unsigned short status_calc_str(struct block_list *bl, struct status_chang
 	if(sc->data[SC_LEADERSHIP])
 		str += sc->data[SC_LEADERSHIP]->val1;
 	if(sc->data[SC_LOUD])
-		str += 4;
+		str += 2*sc->data[SC_LOUD]->val1;
 	if(sc->data[SC_TRUESIGHT])
 		str += 5;
 	if(sc->data[SC_SPURT])
@@ -6505,7 +6506,7 @@ static unsigned short status_calc_batk(struct block_list *bl, struct status_chan
 		batk += batk * sc->data[SC_SHRIMP]->val2 / 100;
 #ifdef RENEWAL
 	if (sc->data[SC_LOUD])
-		batk += 30;
+		batk += 8*sc->data[SC_LOUD]->val1;
 	if (sc->data[SC_NIBELUNGEN] && sc->data[SC_NIBELUNGEN]->val2 == RINGNBL_ATKRATE)
 		batk += batk * 20 / 100;
 #endif

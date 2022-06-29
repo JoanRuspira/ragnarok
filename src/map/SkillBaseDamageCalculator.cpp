@@ -449,14 +449,12 @@ int64 SkillBaseDamageCalculator::battle_addmastery(map_session_data * sd, block_
 			break;
 		case W_BOW:
 			if ((skill = pc_checkskill(sd, AC_BOW)) > 0)
-				damage += (skill * 6);
+				damage += (skill * 8);
 			break;
 		case W_1HAXE:
 		case W_2HAXE:
 			if ((skill = pc_checkskill(sd, AM_AXEMASTERY)) > 0)
-				damage += (skill * 3);
-			if ((skill = pc_checkskill(sd, NC_TRAININGAXE)) > 0)
-				damage += (skill * 5);
+				damage += (skill * 8);
 			break;
 		case W_MACE:
 		case W_2HMACE:
