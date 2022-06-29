@@ -17,7 +17,7 @@
 
 ## 1. Prerequisites
 Before installing rAthena there are certain tools and applications you will need which
-differs between the varying operating systems available.
+differs between the varying operating systems available. 
 
 ### Hardware
 Hardware Type | Minimum | Recommended

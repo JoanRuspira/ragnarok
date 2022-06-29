@@ -1,0 +1,5458 @@
+# This file is a part of rAthena.
+#   Copyright(C) 2021 rAthena Development Team
+#   https://rathena.org - https://github.com/rathena
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+###########################################################################
+# Mob Availability and Alias Database
+###########################################################################
+#
+# Mob Availability and Alias Settings
+#
+###########################################################################
+# - Mob                     Mob to adjust.
+#   Sprite                  Sprite which will be sent to the client instead of Mob.
+#   Sex                     Sex (if Sprite is a player). (Default: Female)
+#   HairStyle               Hair Style ID (if Sprite is a player). (Default: 0)
+#   HairColor               Hair Color ID (if Sprite is a player). (Default: 0)
+#   ClothColor              Cloth Color ID (if Sprite is a player). (Default: 0)
+#   Weapon                  Item name of weapon (if Sprite is a player). (Default: 0)
+#   Shield                  Item name of shield (if Sprite is a player). (Default: 0)
+#   HeadTop                 Item name of headgear (if Sprite is a player). (Default: 0)
+#   HeadMid                 Item name of headgear (if Sprite is a player). (Default: 0)
+#   HeadLow                 Item name of headgear (if Sprite is a player). (Default: 0)
+#   PetEquip                Item name of pet equipment (if Mob is a valid pet). (Default: 0)
+#   Options:                Set an option for an object. (Optional)
+#     <Option>: bool
+###########################################################################
+
+Header:
+  Type: MOB_AVAIL_DB
+  Version: 1
+
+Body:
+#NPCBUILDER_MOBS
+  - Mob: JOB_NOVICE_20021
+    Sprite: JOB_NOVICE
+    Sex: Female
+    HairStyle: 4
+    HairColor: 4
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: C_Desert_Prince
+    HeadLow: Donut_In_Mouth
+  - Mob: JOB_SWORDMAN_20022
+    Sprite: JOB_SWORDMAN
+    Sex: Male
+    HairStyle: 3
+    HairColor: 5
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Detective_Hat
+    HeadLow: Choco_Donut_In_Mouth
+  - Mob: JOB_MAGE_20023
+    Sprite: JOB_MAGE
+    Sex: Male
+    HairStyle: 2
+    HairColor: 1
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Gang_Scarf
+  - Mob: JOB_ARCHER_20024
+    Sprite: JOB_ARCHER
+    Sex: Male
+    HairStyle: 4
+    HairColor: 2
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Minstrel_Hat
+    HeadLow: Rainbow_Scarf
+  - Mob: JOB_ACOLYTE_20025
+    Sprite: JOB_ACOLYTE
+    Sex: Female
+    HairStyle: 4
+    HairColor: 8
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Minstrel_Hat
+    HeadLow: Gang_Scarf
+  - Mob: JOB_MERCHANT_20026
+    Sprite: JOB_MERCHANT
+    Sex: Female
+    HairStyle: 0
+    HairColor: 2
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Crown
+    HeadLow: Angry_Mouth
+  - Mob: JOB_THIEF_20027
+    Sprite: JOB_THIEF
+    Sex: Male
+    HairStyle: 3
+    HairColor: 8
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Magestic_Goat
+    HeadMid: Machoman_Glasses
+  - Mob: JOB_KNIGHT_20028
+    Sprite: JOB_KNIGHT
+    Sex: Female
+    HairStyle: 3
+    HairColor: 4
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Fedora
+    HeadMid: Pecopeco_Wing_Ears
+    Options:
+      Riding: true
+  - Mob: JOB_PRIEST_20029
+    Sprite: JOB_PRIEST
+    Sex: Female
+    HairStyle: 7
+    HairColor: 4
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Choco_Donut_In_Mouth
+  - Mob: JOB_WIZARD_20030
+    Sprite: JOB_WIZARD
+    Sex: Male
+    HairStyle: 6
+    HairColor: 3
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Bongun_Hat
+    HeadLow: Pencil_In_Mouth
+  - Mob: JOB_BLACKSMITH_20031
+    Sprite: JOB_BLACKSMITH
+    Sex: Male
+    HairStyle: 0
+    HairColor: 5
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cap_Of_Blindness
+    HeadLow: Angry_Mouth
+  - Mob: JOB_HUNTER_20032
+    Sprite: JOB_HUNTER
+    Sex: Male
+    HairStyle: 3
+    HairColor: 7
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Munak_Turban
+    HeadLow: Toast_C
+    Options:
+      Falcon: true
+  - Mob: JOB_ASSASSIN_20033
+    Sprite: JOB_ASSASSIN
+    Sex: Female
+    HairStyle: 4
+    HairColor: 0
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Donut_In_Mouth
+  - Mob: JOB_CRUSADER_20034
+    Sprite: JOB_CRUSADER
+    Sex: Female
+    HairStyle: 5
+    HairColor: 8
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Marionette_Doll
+    HeadLow: Antique_Pipe
+  - Mob: JOB_MONK_20035
+    Sprite: JOB_MONK
+    Sex: Male
+    HairStyle: 0
+    HairColor: 4
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Bongun_Hat
+    HeadMid: Machoman_Glasses
+  - Mob: JOB_SAGE_20036
+    Sprite: JOB_SAGE
+    Sex: Female
+    HairStyle: 0
+    HairColor: 8
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Assassin_Mask
+  - Mob: JOB_ROGUE_20037
+    Sprite: JOB_ROGUE
+    Sex: Male
+    HairStyle: 5
+    HairColor: 3
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Mottled_Egg_Shell
+    HeadLow: Romantic_White_Flower
+  - Mob: JOB_ALCHEMIST_20038
+    Sprite: JOB_ALCHEMIST
+    Sex: Male
+    HairStyle: 2
+    HairColor: 0
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cowboy_Hat
+    HeadLow: Toast_C
+  - Mob: JOB_BARD_20039
+    Sprite: JOB_BARD
+    Sex: Male
+    HairStyle: 5
+    HairColor: 7
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Banana_Hat
+    HeadMid: Blinker
+  - Mob: JOB_DANCER_20040
+    Sprite: JOB_DANCER
+    Sex: Male
+    HairStyle: 4
+    HairColor: 0
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Necromencer's_Hood
+    HeadMid: Ear_Of_Angel's_Wing
+  - Mob: JOB_LORD_KNIGHT_20041
+    Sprite: JOB_LORD_KNIGHT
+    Sex: Female
+    HairStyle: 2
+    HairColor: 1
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Boy's_Cap
+    HeadLow: Pencil_In_Mouth
+  - Mob: JOB_HIGH_PRIEST_20042
+    Sprite: JOB_HIGH_PRIEST
+    Sex: Male
+    HairStyle: 7
+    HairColor: 7
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Helm_Of_Angel
+    HeadMid: Elven_Ears_
+  - Mob: JOB_HIGH_WIZARD_20043
+    Sprite: JOB_HIGH_WIZARD
+    Sex: Female
+    HairStyle: 2
+    HairColor: 8
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Banana_Hat
+    HeadMid: Elven_Ears_
+  - Mob: JOB_WHITESMITH_20044
+    Sprite: JOB_WHITESMITH
+    Sex: Female
+    HairStyle: 4
+    HairColor: 5
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cowboy_Hat_J
+    HeadLow: Fish_In_Mouth
+  - Mob: JOB_SNIPER_20045
+    Sprite: JOB_SNIPER
+    Sex: Female
+    HairStyle: 1
+    HairColor: 3
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Fedora
+    HeadMid: Ear_Of_Devil's_Wing
+    Options:
+      Falcon: true
+  - Mob: JOB_ASSASSIN_CROSS_20046
+    Sprite: JOB_ASSASSIN_CROSS
+    Sex: Male
+    HairStyle: 0
+    HairColor: 5
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Egg_Shell
+    HeadMid: Elven_Ears_
+  - Mob: JOB_PALADIN_20047
+    Sprite: JOB_PALADIN
+    Sex: Male
+    HairStyle: 7
+    HairColor: 7
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Bongun_Hat
+    HeadMid: Dark_Blindfold
+  - Mob: JOB_CHAMPION_20048
+    Sprite: JOB_CHAMPION
+    Sex: Female
+    HairStyle: 3
+    HairColor: 1
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Romantic_White_Flower
+  - Mob: JOB_PROFESSOR_20049
+    Sprite: JOB_PROFESSOR
+    Sex: Female
+    HairStyle: 2
+    HairColor: 1
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Fedora
+    HeadLow: Centimental_Leaf
+  - Mob: JOB_STALKER_20050
+    Sprite: JOB_STALKER
+    Sex: Female
+    HairStyle: 5
+    HairColor: 4
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Beret
+    HeadMid: Sunglasses
+  - Mob: JOB_CREATOR_20051
+    Sprite: JOB_CREATOR
+    Sex: Male
+    HairStyle: 5
+    HairColor: 2
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Sahkkat
+    HeadMid: Dark_Blindfold
+  - Mob: JOB_CLOWN_20052
+    Sprite: JOB_CLOWN
+    Sex: Male
+    HairStyle: 4
+    HairColor: 4
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Mask_Of_Fox
+    HeadMid: Ear_Of_Devil's_Wing
+  - Mob: JOB_GYPSY_20053
+    Sprite: JOB_GYPSY
+    Sex: Male
+    HairStyle: 5
+    HairColor: 2
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Bandana
+    HeadLow: Pencil_In_Mouth
+  - Mob: JOB_NOVICE_20054
+    Sprite: JOB_NOVICE
+    Sex: Female
+    HairStyle: 6
+    HairColor: 5
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Holy_Bonnet
+    HeadMid: Ear_Of_Devil's_Wing
+  - Mob: JOB_SWORDMAN_20055
+    Sprite: JOB_SWORDMAN
+    Sex: Male
+    HairStyle: 8
+    HairColor: 6
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Well_Baked_Toast
+  - Mob: JOB_MAGE_20056
+    Sprite: JOB_MAGE
+    Sex: Male
+    HairStyle: 1
+    HairColor: 2
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cowboy_Hat
+    HeadLow: Smoking_Pipe
+  - Mob: JOB_ARCHER_20057
+    Sprite: JOB_ARCHER
+    Sex: Female
+    HairStyle: 2
+    HairColor: 7
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Dragon_Skull
+    HeadMid: Ear_Of_Angel's_Wing
+  - Mob: JOB_ACOLYTE_20058
+    Sprite: JOB_ACOLYTE
+    Sex: Female
+    HairStyle: 3
+    HairColor: 6
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Corsair
+    HeadLow: Pierrot_Nose
+  - Mob: JOB_MERCHANT_20059
+    Sprite: JOB_MERCHANT
+    Sex: Male
+    HairStyle: 5
+    HairColor: 3
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Headband_Of_Power
+    HeadMid: Machoman_Glasses
+  - Mob: JOB_THIEF_20060
+    Sprite: JOB_THIEF
+    Sex: Male
+    HairStyle: 1
+    HairColor: 3
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Soldier_Hat
+    HeadLow: Fish_In_Mouth
+  - Mob: JOB_KNIGHT_20061
+    Sprite: JOB_KNIGHT
+    Sex: Female
+    HairStyle: 3
+    HairColor: 6
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Antique_Pipe
+    Options:
+      Riding: true
+  - Mob: JOB_PRIEST_20062
+    Sprite: JOB_PRIEST
+    Sex: Male
+    HairStyle: 6
+    HairColor: 8
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Magni_Cap
+    HeadLow: Fish_In_Mouth
+  - Mob: JOB_WIZARD_20063
+    Sprite: JOB_WIZARD
+    Sex: Female
+    HairStyle: 5
+    HairColor: 6
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Helm
+    HeadLow: Fish_In_Mouth
+  - Mob: JOB_BLACKSMITH_20064
+    Sprite: JOB_BLACKSMITH
+    Sex: Male
+    HairStyle: 4
+    HairColor: 0
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cowboy_Hat_J
+    HeadMid: Blinker
+  - Mob: JOB_HUNTER_20065
+    Sprite: JOB_HUNTER
+    Sex: Female
+    HairStyle: 8
+    HairColor: 5
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Spinx_Helm
+    HeadMid: Ear_Of_Angel's_Wing
+    Options:
+      Falcon: true
+  - Mob: JOB_ASSASSIN_20066
+    Sprite: JOB_ASSASSIN
+    Sex: Male
+    HairStyle: 7
+    HairColor: 0
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Soldier_Hat
+    HeadLow: Pierrot_Nose
+  - Mob: JOB_CRUSADER_20067
+    Sprite: JOB_CRUSADER
+    Sex: Male
+    HairStyle: 2
+    HairColor: 1
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Joker_Jester
+    HeadMid: Ear_Of_Devil's_Wing
+    Options:
+      Riding: true
+  - Mob: JOB_MONK_20068
+    Sprite: JOB_MONK
+    Sex: Male
+    HairStyle: 2
+    HairColor: 8
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Necromencer's_Hood
+    HeadMid: Luxury_Sunglasses
+  - Mob: JOB_SAGE_20069
+    Sprite: JOB_SAGE
+    Sex: Female
+    HairStyle: 8
+    HairColor: 4
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Galapago_Cap
+    HeadLow: Antique_Pipe
+  - Mob: JOB_ROGUE_20070
+    Sprite: JOB_ROGUE
+    Sex: Male
+    HairStyle: 3
+    HairColor: 6
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Sea_Otter_Cap
+    HeadMid: Dark_Blindfold
+  - Mob: JOB_ALCHEMIST_20071
+    Sprite: JOB_ALCHEMIST
+    Sex: Male
+    HairStyle: 3
+    HairColor: 3
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Gemmed_Sallet
+    HeadLow: Donut_In_Mouth
+  - Mob: JOB_BARD_20072
+    Sprite: JOB_BARD
+    Sex: Male
+    HairStyle: 5
+    HairColor: 2
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Joker_Jester
+    HeadLow: Gang_Scarf
+  - Mob: JOB_DANCER_20073
+    Sprite: JOB_DANCER
+    Sex: Male
+    HairStyle: 3
+    HairColor: 1
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Ulle_Cap_I
+    HeadMid: Dark_Blindfold
+  - Mob: JOB_LORD_KNIGHT_20074
+    Sprite: JOB_LORD_KNIGHT
+    Sex: Female
+    HairStyle: 7
+    HairColor: 1
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Mask_Of_Fox
+    HeadLow: Donut_In_Mouth
+  - Mob: JOB_HIGH_PRIEST_20075
+    Sprite: JOB_HIGH_PRIEST
+    Sex: Female
+    HairStyle: 1
+    HairColor: 1
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Fricca_Circlet
+    HeadMid: Machoman_Glasses
+  - Mob: JOB_HIGH_WIZARD_20076
+    Sprite: JOB_HIGH_WIZARD
+    Sex: Female
+    HairStyle: 2
+    HairColor: 8
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Magestic_Goat
+    HeadLow: Pierrot_Nose
+  - Mob: JOB_WHITESMITH_20077
+    Sprite: JOB_WHITESMITH
+    Sex: Male
+    HairStyle: 6
+    HairColor: 7
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Diabolus_Helmet
+    HeadMid: Machoman_Glasses
+  - Mob: JOB_SNIPER_20078
+    Sprite: JOB_SNIPER
+    Sex: Male
+    HairStyle: 2
+    HairColor: 1
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Boy's_Cap
+    HeadLow: Gang_Scarf
+    Options:
+      Falcon: true
+  - Mob: JOB_ASSASSIN_CROSS_20079
+    Sprite: JOB_ASSASSIN_CROSS
+    Sex: Male
+    HairStyle: 3
+    HairColor: 3
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Galapago_Cap
+    HeadMid: Dark_Blindfold
+  - Mob: JOB_PALADIN_20080
+    Sprite: JOB_PALADIN
+    Sex: Male
+    HairStyle: 3
+    HairColor: 1
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Fricca_Circlet
+    HeadMid: Ear_Of_Angel's_Wing
+  - Mob: JOB_CHAMPION_20081
+    Sprite: JOB_CHAMPION
+    Sex: Female
+    HairStyle: 6
+    HairColor: 5
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Gemmed_Crown
+    HeadMid: Ear_Of_Angel's_Wing
+  - Mob: JOB_PROFESSOR_20082
+    Sprite: JOB_PROFESSOR
+    Sex: Female
+    HairStyle: 4
+    HairColor: 0
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Helm_Of_Abyss
+    HeadLow: Pencil_In_Mouth
+  - Mob: JOB_STALKER_20083
+    Sprite: JOB_STALKER
+    Sex: Male
+    HairStyle: 2
+    HairColor: 8
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Soldier_Hat
+    HeadMid: Machoman_Glasses
+  - Mob: JOB_CREATOR_20084
+    Sprite: JOB_CREATOR
+    Sex: Female
+    HairStyle: 4
+    HairColor: 4
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Morrigane's_Helm
+    HeadMid: Machoman_Glasses
+  - Mob: JOB_CLOWN_20085
+    Sprite: JOB_CLOWN
+    Sex: Female
+    HairStyle: 0
+    HairColor: 3
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Mine_Helm
+    HeadMid: Ear_Of_Devil's_Wing
+  - Mob: JOB_GYPSY_20086
+    Sprite: JOB_GYPSY
+    Sex: Male
+    HairStyle: 8
+    HairColor: 6
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Fricca_Circlet
+    HeadMid: Ear_Of_Devil's_Wing
+  - Mob: JOB_NOVICE_20087
+    Sprite: JOB_NOVICE
+    Sex: Female
+    HairStyle: 6
+    HairColor: 1
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Viking_Helm
+    HeadLow: Rainbow_Scarf
+  - Mob: JOB_SWORDMAN_20088
+    Sprite: JOB_SWORDMAN
+    Sex: Male
+    HairStyle: 1
+    HairColor: 1
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Egg_Shell
+    HeadMid: Luxury_Sunglasses
+  - Mob: JOB_MAGE_20089
+    Sprite: JOB_MAGE
+    Sex: Male
+    HairStyle: 8
+    HairColor: 4
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Antique_Pipe
+  - Mob: JOB_ARCHER_20090
+    Sprite: JOB_ARCHER
+    Sex: Male
+    HairStyle: 7
+    HairColor: 6
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Star_Sparkling
+    HeadMid: Ear_Of_Angel's_Wing
+  - Mob: JOB_ACOLYTE_20091
+    Sprite: JOB_ACOLYTE
+    Sex: Male
+    HairStyle: 8
+    HairColor: 2
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Assassin_Mask
+  - Mob: JOB_MERCHANT_20092
+    Sprite: JOB_MERCHANT
+    Sex: Male
+    HairStyle: 2
+    HairColor: 1
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Fricca_Circlet
+    HeadMid: Ear_Of_Angel's_Wing
+  - Mob: JOB_THIEF_20093
+    Sprite: JOB_THIEF
+    Sex: Male
+    HairStyle: 6
+    HairColor: 8
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Minstrel_Hat
+    HeadMid: Ear_Of_Angel's_Wing
+  - Mob: JOB_KNIGHT_20094
+    Sprite: JOB_KNIGHT
+    Sex: Female
+    HairStyle: 8
+    HairColor: 4
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Feather_Bonnet
+    HeadLow: Pencil_In_Mouth
+  - Mob: JOB_PRIEST_20095
+    Sprite: JOB_PRIEST
+    Sex: Male
+    HairStyle: 3
+    HairColor: 8
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Hat_Of_Cook
+    HeadLow: Well_Baked_Toast
+  - Mob: JOB_WIZARD_20096
+    Sprite: JOB_WIZARD
+    Sex: Female
+    HairStyle: 3
+    HairColor: 4
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Morrigane's_Helm
+    HeadLow: Cigar
+  - Mob: JOB_BLACKSMITH_20097
+    Sprite: JOB_BLACKSMITH
+    Sex: Female
+    HairStyle: 1
+    HairColor: 2
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Donut_In_Mouth
+  - Mob: JOB_HUNTER_20098
+    Sprite: JOB_HUNTER
+    Sex: Male
+    HairStyle: 3
+    HairColor: 4
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Marionette_Doll
+    HeadLow: Toast_C
+    Options:
+      Falcon: true
+  - Mob: JOB_ASSASSIN_20099
+    Sprite: JOB_ASSASSIN
+    Sex: Male
+    HairStyle: 4
+    HairColor: 6
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Marionette_Doll
+    HeadMid: Ear_Of_Angel's_Wing
+  - Mob: JOB_CRUSADER_20100
+    Sprite: JOB_CRUSADER
+    Sex: Female
+    HairStyle: 6
+    HairColor: 3
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Red_Wizardry_Hat
+    HeadMid: Luxury_Sunglasses
+    Options:
+      Riding: true
+  - Mob: JOB_MONK_20101
+    Sprite: JOB_MONK
+    Sex: Male
+    HairStyle: 6
+    HairColor: 4
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cap_Of_Blindness
+    HeadMid: Ear_Of_Angel's_Wing
+  - Mob: JOB_SAGE_20102
+    Sprite: JOB_SAGE
+    Sex: Female
+    HairStyle: 6
+    HairColor: 3
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Banana_Hat
+    HeadMid: Pecopeco_Wing_Ears
+  - Mob: JOB_ROGUE_20103
+    Sprite: JOB_ROGUE
+    Sex: Female
+    HairStyle: 2
+    HairColor: 3
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Headband_Of_Power
+    HeadLow: Centimental_Flower
+  - Mob: JOB_ALCHEMIST_20104
+    Sprite: JOB_ALCHEMIST
+    Sex: Female
+    HairStyle: 2
+    HairColor: 8
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Spinx_Helm
+    HeadLow: Pirate_Dagger
+  - Mob: JOB_BARD_20105
+    Sprite: JOB_BARD
+    Sex: Female
+    HairStyle: 0
+    HairColor: 4
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: J_Captain_Hat
+    HeadMid: Blinker
+  - Mob: JOB_DANCER_20106
+    Sprite: JOB_DANCER
+    Sex: Male
+    HairStyle: 5
+    HairColor: 1
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Wizardry_Hat
+    HeadMid: Blinker
+  - Mob: JOB_LORD_KNIGHT_20107
+    Sprite: JOB_LORD_KNIGHT
+    Sex: Female
+    HairStyle: 7
+    HairColor: 0
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Wizardry_Hat
+    HeadLow: Pirate_Dagger
+    Options:
+      Riding: true
+  - Mob: JOB_HIGH_PRIEST_20108
+    Sprite: JOB_HIGH_PRIEST
+    Sex: Female
+    HairStyle: 4
+    HairColor: 3
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Anubis_Helm
+    HeadMid: Hawk_Eyes01
+  - Mob: JOB_HIGH_WIZARD_20109
+    Sprite: JOB_HIGH_WIZARD
+    Sex: Male
+    HairStyle: 8
+    HairColor: 7
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Ayothaya_Hat
+    HeadMid: Ear_Of_Angel's_Wing
+  - Mob: JOB_WHITESMITH_20110
+    Sprite: JOB_WHITESMITH
+    Sex: Male
+    HairStyle: 5
+    HairColor: 4
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Western_Grace
+    HeadMid: Blinker
+  - Mob: JOB_SNIPER_20111
+    Sprite: JOB_SNIPER
+    Sex: Male
+    HairStyle: 3
+    HairColor: 1
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Choco_Donut_In_Mouth
+    Options:
+      Falcon: true
+  - Mob: JOB_ASSASSIN_CROSS_20112
+    Sprite: JOB_ASSASSIN_CROSS
+    Sex: Male
+    HairStyle: 1
+    HairColor: 6
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Helm
+    HeadMid: Opera_Ghost_Mask
+  - Mob: JOB_PALADIN_20113
+    Sprite: JOB_PALADIN
+    Sex: Female
+    HairStyle: 7
+    HairColor: 6
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Poo_Poo_Hat
+    HeadLow: Angry_Mouth
+  - Mob: JOB_CHAMPION_20114
+    Sprite: JOB_CHAMPION
+    Sex: Female
+    HairStyle: 8
+    HairColor: 2
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cowboy_Hat_J
+    HeadLow: Well_Baked_Toast
+  - Mob: JOB_PROFESSOR_20115
+    Sprite: JOB_PROFESSOR
+    Sex: Male
+    HairStyle: 1
+    HairColor: 8
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Egg_Shell
+    HeadMid: Elven_Ears_
+  - Mob: JOB_STALKER_20116
+    Sprite: JOB_STALKER
+    Sex: Male
+    HairStyle: 6
+    HairColor: 6
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Mottled_Egg_Shell
+    HeadMid: Luxury_Sunglasses
+  - Mob: JOB_CREATOR_20117
+    Sprite: JOB_CREATOR
+    Sex: Male
+    HairStyle: 7
+    HairColor: 5
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cap_Of_Blindness
+    HeadMid: Ear_Of_Devil's_Wing
+  - Mob: JOB_CLOWN_20118
+    Sprite: JOB_CLOWN
+    Sex: Male
+    HairStyle: 4
+    HairColor: 0
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Mottled_Egg_Shell
+    HeadMid: Sunglasses
+  - Mob: JOB_GYPSY_20119
+    Sprite: JOB_GYPSY
+    Sex: Female
+    HairStyle: 4
+    HairColor: 8
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Anubis_Helm
+    HeadMid: Pecopeco_Wing_Ears
+  - Mob: JOB_NOVICE_20120
+    Sprite: JOB_NOVICE
+    Sex: Male
+    HairStyle: 5
+    HairColor: 0
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Magni_Cap
+    HeadMid: Opera_Ghost_Mask
+  - Mob: JOB_SWORDMAN_20121
+    Sprite: JOB_SWORDMAN
+    Sex: Female
+    HairStyle: 5
+    HairColor: 0
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Sea_Otter_Cap
+    HeadMid: Ear_Of_Devil's_Wing
+  - Mob: JOB_MAGE_20122
+    Sprite: JOB_MAGE
+    Sex: Male
+    HairStyle: 2
+    HairColor: 5
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Antique_Pipe
+  - Mob: JOB_ARCHER_20123
+    Sprite: JOB_ARCHER
+    Sex: Male
+    HairStyle: 6
+    HairColor: 5
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Fricca_Circlet
+    HeadMid: Blinker
+  - Mob: JOB_ACOLYTE_20124
+    Sprite: JOB_ACOLYTE
+    Sex: Female
+    HairStyle: 0
+    HairColor: 5
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Fricca_Circlet
+    HeadMid: Ear_Of_Angel's_Wing
+  - Mob: JOB_MERCHANT_20125
+    Sprite: JOB_MERCHANT
+    Sex: Female
+    HairStyle: 1
+    HairColor: 4
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Mottled_Egg_Shell
+    HeadLow: Pirate_Dagger
+  - Mob: JOB_THIEF_20126
+    Sprite: JOB_THIEF
+    Sex: Female
+    HairStyle: 1
+    HairColor: 7
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Wizardry_Hat
+    HeadLow: Cigar
+  - Mob: JOB_KNIGHT_20127
+    Sprite: JOB_KNIGHT
+    Sex: Male
+    HairStyle: 6
+    HairColor: 0
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Banana_Hat
+    HeadMid: Sunglasses
+    Options:
+      Riding: true
+  - Mob: JOB_PRIEST_20128
+    Sprite: JOB_PRIEST
+    Sex: Female
+    HairStyle: 1
+    HairColor: 6
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Helm_Of_Angel
+    HeadLow: Centimental_Flower
+  - Mob: JOB_WIZARD_20129
+    Sprite: JOB_WIZARD
+    Sex: Male
+    HairStyle: 4
+    HairColor: 6
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Helm
+    HeadMid: Dark_Blindfold
+  - Mob: JOB_BLACKSMITH_20130
+    Sprite: JOB_BLACKSMITH
+    Sex: Female
+    HairStyle: 1
+    HairColor: 0
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Prontera_Army_Cap
+    HeadLow: Choco_Donut_In_Mouth
+  - Mob: JOB_HUNTER_20131
+    Sprite: JOB_HUNTER
+    Sex: Female
+    HairStyle: 1
+    HairColor: 3
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Headband_Of_Power
+    HeadLow: Centimental_Leaf
+    Options:
+      Falcon: true
+  - Mob: JOB_ASSASSIN_20132
+    Sprite: JOB_ASSASSIN
+    Sex: Male
+    HairStyle: 5
+    HairColor: 6
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cowboy_Hat_J
+    HeadMid: Machoman_Glasses
+  - Mob: JOB_CRUSADER_20133
+    Sprite: JOB_CRUSADER
+    Sex: Male
+    HairStyle: 4
+    HairColor: 1
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Poo_Poo_Hat
+    HeadMid: Sunglasses
+    Options:
+      Riding: true
+  - Mob: JOB_MONK_20134
+    Sprite: JOB_MONK
+    Sex: Male
+    HairStyle: 7
+    HairColor: 7
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Detective_Hat
+    HeadMid: Blinker
+  - Mob: JOB_SAGE_20135
+    Sprite: JOB_SAGE
+    Sex: Female
+    HairStyle: 7
+    HairColor: 5
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Classic_Hat
+    HeadMid: Ear_Of_Devil's_Wing
+  - Mob: JOB_ROGUE_20136
+    Sprite: JOB_ROGUE
+    Sex: Male
+    HairStyle: 2
+    HairColor: 0
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Wizardry_Hat
+    HeadMid: Opera_Ghost_Mask
+  - Mob: JOB_ALCHEMIST_20137
+    Sprite: JOB_ALCHEMIST
+    Sex: Female
+    HairStyle: 1
+    HairColor: 3
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Fricca_Circlet
+    HeadMid: Ear_Of_Devil's_Wing
+  - Mob: JOB_BARD_20138
+    Sprite: JOB_BARD
+    Sex: Male
+    HairStyle: 0
+    HairColor: 3
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Feather_Bonnet
+    HeadLow: Romantic_White_Flower
+  - Mob: JOB_DANCER_20139
+    Sprite: JOB_DANCER
+    Sex: Male
+    HairStyle: 4
+    HairColor: 8
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Pirate_Bandana
+    HeadMid: Elven_Ears_
+  - Mob: JOB_LORD_KNIGHT_20140
+    Sprite: JOB_LORD_KNIGHT
+    Sex: Male
+    HairStyle: 6
+    HairColor: 1
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cowboy_Hat
+    HeadLow: Antique_Pipe
+  - Mob: JOB_HIGH_PRIEST_20141
+    Sprite: JOB_HIGH_PRIEST
+    Sex: Male
+    HairStyle: 0
+    HairColor: 0
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Prontera_Army_Cap
+    HeadLow: Choco_Donut_In_Mouth
+  - Mob: JOB_HIGH_WIZARD_20142
+    Sprite: JOB_HIGH_WIZARD
+    Sex: Male
+    HairStyle: 4
+    HairColor: 0
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Biretta
+    HeadMid: Luxury_Sunglasses
+  - Mob: JOB_WHITESMITH_20143
+    Sprite: JOB_WHITESMITH
+    Sex: Female
+    HairStyle: 1
+    HairColor: 0
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Coke_Hat
+    HeadMid: Hawk_Eyes01
+  - Mob: JOB_SNIPER_20144
+    Sprite: JOB_SNIPER
+    Sex: Female
+    HairStyle: 6
+    HairColor: 4
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Toast_C
+    Options:
+      Falcon: true
+  - Mob: JOB_ASSASSIN_CROSS_20145
+    Sprite: JOB_ASSASSIN_CROSS
+    Sex: Female
+    HairStyle: 3
+    HairColor: 5
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Crown
+    HeadMid: Machoman_Glasses
+  - Mob: JOB_PALADIN_20146
+    Sprite: JOB_PALADIN
+    Sex: Female
+    HairStyle: 2
+    HairColor: 6
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Sahkkat
+    HeadMid: Blinker
+  - Mob: JOB_CHAMPION_20147
+    Sprite: JOB_CHAMPION
+    Sex: Female
+    HairStyle: 1
+    HairColor: 4
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Classic_Hat
+    HeadLow: Pirate_Dagger
+  - Mob: JOB_PROFESSOR_20148
+    Sprite: JOB_PROFESSOR
+    Sex: Female
+    HairStyle: 2
+    HairColor: 7
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Sahkkat
+    HeadLow: Cigar
+  - Mob: JOB_STALKER_20149
+    Sprite: JOB_STALKER
+    Sex: Male
+    HairStyle: 7
+    HairColor: 0
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Helm_Of_Abyss
+    HeadMid: Pecopeco_Wing_Ears
+  - Mob: JOB_CREATOR_20150
+    Sprite: JOB_CREATOR
+    Sex: Female
+    HairStyle: 1
+    HairColor: 1
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cowboy_Hat_J
+    HeadMid: Hawk_Eyes01
+  - Mob: JOB_CLOWN_20151
+    Sprite: JOB_CLOWN
+    Sex: Male
+    HairStyle: 0
+    HairColor: 1
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Oldman's_Romance
+    HeadMid: Pecopeco_Wing_Ears
+  - Mob: JOB_GYPSY_20152
+    Sprite: JOB_GYPSY
+    Sex: Male
+    HairStyle: 7
+    HairColor: 8
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Wizardry_Hat
+    HeadLow: Fish_In_Mouth
+  - Mob: JOB_NOVICE_20153
+    Sprite: JOB_NOVICE
+    Sex: Female
+    HairStyle: 3
+    HairColor: 0
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Mottled_Egg_Shell
+    HeadMid: Luxury_Sunglasses
+  - Mob: JOB_SWORDMAN_20154
+    Sprite: JOB_SWORDMAN
+    Sex: Female
+    HairStyle: 3
+    HairColor: 3
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Indian_Headband
+    HeadLow: Donut_In_Mouth
+  - Mob: JOB_MAGE_20155
+    Sprite: JOB_MAGE
+    Sex: Female
+    HairStyle: 4
+    HairColor: 8
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: C_Desert_Prince
+    HeadMid: Hawk_Eyes01
+  - Mob: JOB_ARCHER_20156
+    Sprite: JOB_ARCHER
+    Sex: Male
+    HairStyle: 2
+    HairColor: 8
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Bone_Helm
+    HeadLow: Cigar
+  - Mob: JOB_ACOLYTE_20157
+    Sprite: JOB_ACOLYTE
+    Sex: Female
+    HairStyle: 2
+    HairColor: 7
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Fricca_Circlet
+    HeadMid: Luxury_Sunglasses
+  - Mob: JOB_MERCHANT_20158
+    Sprite: JOB_MERCHANT
+    Sex: Female
+    HairStyle: 8
+    HairColor: 1
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Circlet
+    HeadMid: Sunglasses
+  - Mob: JOB_THIEF_20159
+    Sprite: JOB_THIEF
+    Sex: Female
+    HairStyle: 0
+    HairColor: 0
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Classic_Hat
+    HeadMid: Sunglasses
+  - Mob: JOB_KNIGHT_20160
+    Sprite: JOB_KNIGHT
+    Sex: Female
+    HairStyle: 8
+    HairColor: 1
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Headgear_Of_Queen
+    HeadLow: Centimental_Leaf
+    Options:
+      Riding: true
+  - Mob: JOB_PRIEST_20161
+    Sprite: JOB_PRIEST
+    Sex: Male
+    HairStyle: 3
+    HairColor: 3
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Fricca_Circlet
+    HeadLow: Pirate_Dagger
+  - Mob: JOB_WIZARD_20162
+    Sprite: JOB_WIZARD
+    Sex: Male
+    HairStyle: 8
+    HairColor: 1
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Helm_Of_Abyss
+    HeadLow: Angry_Mouth
+  - Mob: JOB_BLACKSMITH_20163
+    Sprite: JOB_BLACKSMITH
+    Sex: Female
+    HairStyle: 3
+    HairColor: 7
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Hunting_Cap
+    HeadMid: Dark_Blindfold
+  - Mob: JOB_HUNTER_20164
+    Sprite: JOB_HUNTER
+    Sex: Male
+    HairStyle: 3
+    HairColor: 8
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Gang_Scarf
+    Options:
+      Falcon: true
+  - Mob: JOB_ASSASSIN_20165
+    Sprite: JOB_ASSASSIN
+    Sex: Female
+    HairStyle: 0
+    HairColor: 7
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Antique_Pipe
+  - Mob: JOB_CRUSADER_20166
+    Sprite: JOB_CRUSADER
+    Sex: Female
+    HairStyle: 3
+    HairColor: 1
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cap_Of_Blindness
+    HeadLow: Donut_In_Mouth
+  - Mob: JOB_MONK_20167
+    Sprite: JOB_MONK
+    Sex: Female
+    HairStyle: 2
+    HairColor: 1
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Soldier_Hat
+    HeadMid: Ear_Of_Angel's_Wing
+  - Mob: JOB_SAGE_20168
+    Sprite: JOB_SAGE
+    Sex: Female
+    HairStyle: 0
+    HairColor: 3
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Sombrero
+    HeadMid: Opera_Ghost_Mask
+  - Mob: JOB_ROGUE_20169
+    Sprite: JOB_ROGUE
+    Sex: Female
+    HairStyle: 1
+    HairColor: 0
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Mine_Helm
+    HeadLow: Pencil_In_Mouth
+  - Mob: JOB_ALCHEMIST_20170
+    Sprite: JOB_ALCHEMIST
+    Sex: Female
+    HairStyle: 8
+    HairColor: 5
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Pencil_In_Mouth
+  - Mob: JOB_BARD_20171
+    Sprite: JOB_BARD
+    Sex: Female
+    HairStyle: 7
+    HairColor: 5
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Viking_Helm
+    HeadMid: Dark_Blindfold
+  - Mob: JOB_DANCER_20172
+    Sprite: JOB_DANCER
+    Sex: Female
+    HairStyle: 3
+    HairColor: 3
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cap_Of_Blindness
+    HeadMid: Hawk_Eyes01
+  - Mob: JOB_LORD_KNIGHT_20173
+    Sprite: JOB_LORD_KNIGHT
+    Sex: Male
+    HairStyle: 2
+    HairColor: 0
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Hat_Of_Cook
+    HeadLow: Donut_In_Mouth
+    Options:
+      Riding: true
+  - Mob: JOB_HIGH_PRIEST_20174
+    Sprite: JOB_HIGH_PRIEST
+    Sex: Male
+    HairStyle: 8
+    HairColor: 6
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Straw_Hat
+    HeadMid: Elven_Ears_
+  - Mob: JOB_HIGH_WIZARD_20175
+    Sprite: JOB_HIGH_WIZARD
+    Sex: Male
+    HairStyle: 1
+    HairColor: 8
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Star_Sparkling
+    HeadMid: Machoman_Glasses
+  - Mob: JOB_WHITESMITH_20176
+    Sprite: JOB_WHITESMITH
+    Sex: Female
+    HairStyle: 5
+    HairColor: 3
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Diabolus_Helmet
+    HeadLow: Gang_Scarf
+  - Mob: JOB_SNIPER_20177
+    Sprite: JOB_SNIPER
+    Sex: Female
+    HairStyle: 8
+    HairColor: 3
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Biretta
+    HeadLow: Angry_Mouth
+    Options:
+      Falcon: true
+  - Mob: JOB_ASSASSIN_CROSS_20178
+    Sprite: JOB_ASSASSIN_CROSS
+    Sex: Female
+    HairStyle: 7
+    HairColor: 5
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Boy's_Cap
+    HeadLow: Pirate_Dagger
+  - Mob: JOB_PALADIN_20179
+    Sprite: JOB_PALADIN
+    Sex: Male
+    HairStyle: 5
+    HairColor: 6
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Munak_Turban
+    HeadLow: Choco_Donut_In_Mouth
+  - Mob: JOB_CHAMPION_20180
+    Sprite: JOB_CHAMPION
+    Sex: Male
+    HairStyle: 0
+    HairColor: 7
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Crown
+    HeadMid: Blinker
+  - Mob: JOB_PROFESSOR_20181
+    Sprite: JOB_PROFESSOR
+    Sex: Female
+    HairStyle: 0
+    HairColor: 8
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Joker_Jester
+    HeadMid: Luxury_Sunglasses
+  - Mob: JOB_STALKER_20182
+    Sprite: JOB_STALKER
+    Sex: Male
+    HairStyle: 5
+    HairColor: 5
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Biretta
+    HeadMid: Elven_Ears_
+  - Mob: JOB_CREATOR_20183
+    Sprite: JOB_CREATOR
+    Sex: Female
+    HairStyle: 6
+    HairColor: 7
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Gemmed_Sallet
+    HeadLow: Gang_Scarf
+  - Mob: JOB_CLOWN_20184
+    Sprite: JOB_CLOWN
+    Sex: Male
+    HairStyle: 2
+    HairColor: 4
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Ayothaya_Hat
+    HeadLow: Well_Baked_Toast
+  - Mob: JOB_GYPSY_20185
+    Sprite: JOB_GYPSY
+    Sex: Female
+    HairStyle: 0
+    HairColor: 0
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cowboy_Hat
+    HeadMid: Machoman_Glasses
+  - Mob: JOB_NOVICE_20186
+    Sprite: JOB_NOVICE
+    Sex: Male
+    HairStyle: 8
+    HairColor: 1
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Red_Wizardry_Hat
+    HeadMid: Ear_Of_Devil's_Wing
+  - Mob: JOB_SWORDMAN_20187
+    Sprite: JOB_SWORDMAN
+    Sex: Female
+    HairStyle: 5
+    HairColor: 1
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Alice_Doll
+    HeadMid: Elven_Ears_
+  - Mob: JOB_MAGE_20188
+    Sprite: JOB_MAGE
+    Sex: Female
+    HairStyle: 7
+    HairColor: 5
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Loard_Circlet
+    HeadMid: Hawk_Eyes01
+  - Mob: JOB_ARCHER_20189
+    Sprite: JOB_ARCHER
+    Sex: Female
+    HairStyle: 2
+    HairColor: 1
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Fricca_Circlet
+    HeadLow: Donut_In_Mouth
+  - Mob: JOB_ACOLYTE_20190
+    Sprite: JOB_ACOLYTE
+    Sex: Female
+    HairStyle: 2
+    HairColor: 3
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Straw_Hat
+    HeadMid: Dark_Blindfold
+  - Mob: JOB_MERCHANT_20191
+    Sprite: JOB_MERCHANT
+    Sex: Male
+    HairStyle: 6
+    HairColor: 4
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: C_Desert_Prince
+    HeadMid: Pecopeco_Wing_Ears
+  - Mob: JOB_THIEF_20192
+    Sprite: JOB_THIEF
+    Sex: Male
+    HairStyle: 4
+    HairColor: 8
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Wizardry_Hat
+    HeadLow: Romantic_White_Flower
+  - Mob: JOB_KNIGHT_20193
+    Sprite: JOB_KNIGHT
+    Sex: Male
+    HairStyle: 7
+    HairColor: 5
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Marionette_Doll
+    HeadMid: Dark_Blindfold
+  - Mob: JOB_PRIEST_20194
+    Sprite: JOB_PRIEST
+    Sex: Male
+    HairStyle: 3
+    HairColor: 7
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Loard_Circlet
+    HeadLow: Assassin_Mask
+  - Mob: JOB_WIZARD_20195
+    Sprite: JOB_WIZARD
+    Sex: Female
+    HairStyle: 5
+    HairColor: 3
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Oldman's_Romance
+    HeadMid: Ear_Of_Devil's_Wing
+  - Mob: JOB_BLACKSMITH_20196
+    Sprite: JOB_BLACKSMITH
+    Sex: Male
+    HairStyle: 6
+    HairColor: 8
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Sea_Otter_Cap
+    HeadMid: Hawk_Eyes01
+  - Mob: JOB_HUNTER_20197
+    Sprite: JOB_HUNTER
+    Sex: Female
+    HairStyle: 7
+    HairColor: 6
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Holy_Bonnet
+    HeadMid: Elven_Ears_
+    Options:
+      Falcon: true
+  - Mob: JOB_ASSASSIN_20198
+    Sprite: JOB_ASSASSIN
+    Sex: Female
+    HairStyle: 8
+    HairColor: 5
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Dragon_Skull
+    HeadMid: Dark_Blindfold
+  - Mob: JOB_CRUSADER_20199
+    Sprite: JOB_CRUSADER
+    Sex: Male
+    HairStyle: 4
+    HairColor: 2
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Helm_Of_Angel
+    HeadLow: Centimental_Flower
+    Options:
+      Riding: true
+  - Mob: JOB_MONK_20200
+    Sprite: JOB_MONK
+    Sex: Male
+    HairStyle: 7
+    HairColor: 1
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Romantic_White_Flower
+  - Mob: JOB_SAGE_20201
+    Sprite: JOB_SAGE
+    Sex: Male
+    HairStyle: 5
+    HairColor: 2
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Biretta
+    HeadLow: Donut_In_Mouth
+  - Mob: JOB_ROGUE_20202
+    Sprite: JOB_ROGUE
+    Sex: Female
+    HairStyle: 2
+    HairColor: 1
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Romantic_White_Flower
+  - Mob: JOB_ALCHEMIST_20203
+    Sprite: JOB_ALCHEMIST
+    Sex: Male
+    HairStyle: 2
+    HairColor: 6
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Sombrero
+    HeadLow: Centimental_Leaf
+  - Mob: JOB_BARD_20204
+    Sprite: JOB_BARD
+    Sex: Male
+    HairStyle: 5
+    HairColor: 4
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Magestic_Goat
+    HeadLow: Pierrot_Nose
+  - Mob: JOB_DANCER_20205
+    Sprite: JOB_DANCER
+    Sex: Male
+    HairStyle: 7
+    HairColor: 0
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Loard_Circlet
+    HeadLow: Pierrot_Nose
+  - Mob: JOB_LORD_KNIGHT_20206
+    Sprite: JOB_LORD_KNIGHT
+    Sex: Female
+    HairStyle: 7
+    HairColor: 2
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Helm_Of_Abyss
+    HeadLow: Well_Baked_Toast
+  - Mob: JOB_HIGH_PRIEST_20207
+    Sprite: JOB_HIGH_PRIEST
+    Sex: Male
+    HairStyle: 6
+    HairColor: 8
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Joker_Jester
+    HeadMid: Machoman_Glasses
+  - Mob: JOB_HIGH_WIZARD_20208
+    Sprite: JOB_HIGH_WIZARD
+    Sex: Female
+    HairStyle: 0
+    HairColor: 8
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Angry_Mouth
+  - Mob: JOB_WHITESMITH_20209
+    Sprite: JOB_WHITESMITH
+    Sex: Male
+    HairStyle: 8
+    HairColor: 1
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Bongun_Hat
+    HeadMid: Machoman_Glasses
+  - Mob: JOB_SNIPER_20210
+    Sprite: JOB_SNIPER
+    Sex: Male
+    HairStyle: 7
+    HairColor: 5
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Bongun_Hat
+    HeadMid: Ear_Of_Devil's_Wing
+    Options:
+      Falcon: true
+  - Mob: JOB_ASSASSIN_CROSS_20211
+    Sprite: JOB_ASSASSIN_CROSS
+    Sex: Male
+    HairStyle: 2
+    HairColor: 3
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Mine_Helm
+    HeadMid: Elven_Ears_
+  - Mob: JOB_PALADIN_20212
+    Sprite: JOB_PALADIN
+    Sex: Female
+    HairStyle: 4
+    HairColor: 0
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Spinx_Helm
+    HeadLow: Pierrot_Nose
+  - Mob: JOB_CHAMPION_20213
+    Sprite: JOB_CHAMPION
+    Sex: Female
+    HairStyle: 6
+    HairColor: 3
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Bandana
+    HeadMid: Blinker
+  - Mob: JOB_PROFESSOR_20214
+    Sprite: JOB_PROFESSOR
+    Sex: Female
+    HairStyle: 2
+    HairColor: 1
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Bone_Helm
+    HeadMid: Luxury_Sunglasses
+  - Mob: JOB_STALKER_20215
+    Sprite: JOB_STALKER
+    Sex: Female
+    HairStyle: 2
+    HairColor: 6
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Sahkkat
+    HeadMid: Elven_Ears_
+  - Mob: JOB_CREATOR_20216
+    Sprite: JOB_CREATOR
+    Sex: Male
+    HairStyle: 2
+    HairColor: 5
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Magni_Cap
+    HeadMid: Blinker
+  - Mob: JOB_CLOWN_20217
+    Sprite: JOB_CLOWN
+    Sex: Female
+    HairStyle: 7
+    HairColor: 7
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Galapago_Cap
+    HeadMid: Hawk_Eyes01
+  - Mob: JOB_GYPSY_20218
+    Sprite: JOB_GYPSY
+    Sex: Male
+    HairStyle: 3
+    HairColor: 4
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Bandana
+    HeadMid: Machoman_Glasses
+  - Mob: JOB_NOVICE_20219
+    Sprite: JOB_NOVICE
+    Sex: Female
+    HairStyle: 6
+    HairColor: 7
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cap
+    HeadMid: Ear_Of_Angel's_Wing
+  - Mob: JOB_SWORDMAN_20220
+    Sprite: JOB_SWORDMAN
+    Sex: Female
+    HairStyle: 0
+    HairColor: 6
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Indian_Headband
+    HeadMid: Opera_Ghost_Mask
+  - Mob: JOB_MAGE_20221
+    Sprite: JOB_MAGE
+    Sex: Female
+    HairStyle: 3
+    HairColor: 5
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Straw_Hat
+    HeadMid: Machoman_Glasses
+  - Mob: JOB_ARCHER_20222
+    Sprite: JOB_ARCHER
+    Sex: Female
+    HairStyle: 4
+    HairColor: 2
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Bandana
+    HeadLow: Assassin_Mask
+  - Mob: JOB_ACOLYTE_20223
+    Sprite: JOB_ACOLYTE
+    Sex: Female
+    HairStyle: 5
+    HairColor: 3
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Smoking_Pipe
+  - Mob: JOB_MERCHANT_20224
+    Sprite: JOB_MERCHANT
+    Sex: Male
+    HairStyle: 0
+    HairColor: 8
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Oldman's_Romance
+    HeadMid: Pecopeco_Wing_Ears
+  - Mob: JOB_THIEF_20225
+    Sprite: JOB_THIEF
+    Sex: Male
+    HairStyle: 2
+    HairColor: 7
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Fish_In_Mouth
+  - Mob: JOB_KNIGHT_20226
+    Sprite: JOB_KNIGHT
+    Sex: Female
+    HairStyle: 1
+    HairColor: 0
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Galapago_Cap
+    HeadLow: Cigar
+    Options:
+      Riding: true
+  - Mob: JOB_PRIEST_20227
+    Sprite: JOB_PRIEST
+    Sex: Male
+    HairStyle: 2
+    HairColor: 8
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Straw_Hat
+    HeadMid: Machoman_Glasses
+  - Mob: JOB_WIZARD_20228
+    Sprite: JOB_WIZARD
+    Sex: Male
+    HairStyle: 1
+    HairColor: 0
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Biretta
+    HeadMid: Hawk_Eyes01
+  - Mob: JOB_BLACKSMITH_20229
+    Sprite: JOB_BLACKSMITH
+    Sex: Female
+    HairStyle: 4
+    HairColor: 2
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Pencil_In_Mouth
+  - Mob: JOB_HUNTER_20230
+    Sprite: JOB_HUNTER
+    Sex: Female
+    HairStyle: 5
+    HairColor: 8
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Choco_Donut_In_Mouth
+    Options:
+      Falcon: true
+  - Mob: JOB_ASSASSIN_20231
+    Sprite: JOB_ASSASSIN
+    Sex: Female
+    HairStyle: 7
+    HairColor: 6
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Antique_Pipe
+  - Mob: JOB_CRUSADER_20232
+    Sprite: JOB_CRUSADER
+    Sex: Male
+    HairStyle: 0
+    HairColor: 4
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Sahkkat
+    HeadMid: Machoman_Glasses
+    Options:
+      Riding: true
+  - Mob: JOB_MONK_20233
+    Sprite: JOB_MONK
+    Sex: Female
+    HairStyle: 4
+    HairColor: 0
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Coke_Hat
+    HeadMid: Dark_Blindfold
+  - Mob: JOB_SAGE_20234
+    Sprite: JOB_SAGE
+    Sex: Female
+    HairStyle: 2
+    HairColor: 0
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Angry_Mouth
+  - Mob: JOB_ROGUE_20235
+    Sprite: JOB_ROGUE
+    Sex: Male
+    HairStyle: 2
+    HairColor: 8
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cowboy_Hat
+    HeadMid: Ear_Of_Devil's_Wing
+  - Mob: JOB_ALCHEMIST_20236
+    Sprite: JOB_ALCHEMIST
+    Sex: Female
+    HairStyle: 8
+    HairColor: 6
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Helm
+    HeadMid: Machoman_Glasses
+  - Mob: JOB_BARD_20237
+    Sprite: JOB_BARD
+    Sex: Female
+    HairStyle: 8
+    HairColor: 8
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Feather_Beret
+    HeadMid: Luxury_Sunglasses
+  - Mob: JOB_DANCER_20238
+    Sprite: JOB_DANCER
+    Sex: Male
+    HairStyle: 7
+    HairColor: 2
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cowboy_Hat
+    HeadLow: Romantic_White_Flower
+  - Mob: JOB_LORD_KNIGHT_20239
+    Sprite: JOB_LORD_KNIGHT
+    Sex: Male
+    HairStyle: 3
+    HairColor: 5
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Beret
+    HeadLow: Assassin_Mask
+  - Mob: JOB_HIGH_PRIEST_20240
+    Sprite: JOB_HIGH_PRIEST
+    Sex: Male
+    HairStyle: 3
+    HairColor: 2
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Holy_Bonnet
+    HeadMid: Dark_Blindfold
+  - Mob: JOB_HIGH_WIZARD_20241
+    Sprite: JOB_HIGH_WIZARD
+    Sex: Female
+    HairStyle: 1
+    HairColor: 5
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Bone_Helm
+    HeadLow: Choco_Donut_In_Mouth
+  - Mob: JOB_WHITESMITH_20242
+    Sprite: JOB_WHITESMITH
+    Sex: Male
+    HairStyle: 0
+    HairColor: 6
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Galapago_Cap
+    HeadMid: Blinker
+  - Mob: JOB_SNIPER_20243
+    Sprite: JOB_SNIPER
+    Sex: Male
+    HairStyle: 3
+    HairColor: 8
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Angry_Mouth
+    Options:
+      Falcon: true
+  - Mob: JOB_ASSASSIN_CROSS_20244
+    Sprite: JOB_ASSASSIN_CROSS
+    Sex: Female
+    HairStyle: 8
+    HairColor: 4
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Centimental_Flower
+  - Mob: JOB_PALADIN_20245
+    Sprite: JOB_PALADIN
+    Sex: Male
+    HairStyle: 3
+    HairColor: 8
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Skull_Cap
+    HeadMid: Pecopeco_Wing_Ears
+  - Mob: JOB_CHAMPION_20246
+    Sprite: JOB_CHAMPION
+    Sex: Female
+    HairStyle: 7
+    HairColor: 1
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Gang_Scarf
+  - Mob: JOB_PROFESSOR_20247
+    Sprite: JOB_PROFESSOR
+    Sex: Female
+    HairStyle: 5
+    HairColor: 4
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Magestic_Goat
+    HeadLow: Choco_Donut_In_Mouth
+  - Mob: JOB_STALKER_20248
+    Sprite: JOB_STALKER
+    Sex: Female
+    HairStyle: 0
+    HairColor: 7
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Ayothaya_Hat
+    HeadMid: Blinker
+  - Mob: JOB_CREATOR_20249
+    Sprite: JOB_CREATOR
+    Sex: Female
+    HairStyle: 7
+    HairColor: 8
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Biretta
+    HeadLow: Romantic_White_Flower
+  - Mob: JOB_CLOWN_20250
+    Sprite: JOB_CLOWN
+    Sex: Male
+    HairStyle: 6
+    HairColor: 0
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Choco_Donut_In_Mouth
+  - Mob: JOB_GYPSY_20251
+    Sprite: JOB_GYPSY
+    Sex: Male
+    HairStyle: 3
+    HairColor: 6
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Poo_Poo_Hat
+    HeadMid: Ear_Of_Devil's_Wing
+  - Mob: JOB_NOVICE_20252
+    Sprite: JOB_NOVICE
+    Sex: Male
+    HairStyle: 0
+    HairColor: 2
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Bandana
+    HeadLow: Well_Baked_Toast
+  - Mob: JOB_SWORDMAN_20253
+    Sprite: JOB_SWORDMAN
+    Sex: Female
+    HairStyle: 1
+    HairColor: 3
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Golden_Gear
+    HeadLow: Cigar
+  - Mob: JOB_MAGE_20254
+    Sprite: JOB_MAGE
+    Sex: Male
+    HairStyle: 5
+    HairColor: 4
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Oldman's_Romance
+    HeadLow: Pencil_In_Mouth
+  - Mob: JOB_ARCHER_20255
+    Sprite: JOB_ARCHER
+    Sex: Female
+    HairStyle: 3
+    HairColor: 6
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Boy's_Cap
+    HeadMid: Pecopeco_Wing_Ears
+  - Mob: JOB_ACOLYTE_20256
+    Sprite: JOB_ACOLYTE
+    Sex: Male
+    HairStyle: 2
+    HairColor: 3
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Holy_Bonnet
+    HeadMid: Hawk_Eyes01
+  - Mob: JOB_MERCHANT_20257
+    Sprite: JOB_MERCHANT
+    Sex: Male
+    HairStyle: 6
+    HairColor: 5
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Red_Wizardry_Hat
+    HeadLow: Angry_Mouth
+  - Mob: JOB_THIEF_20258
+    Sprite: JOB_THIEF
+    Sex: Female
+    HairStyle: 8
+    HairColor: 2
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Marionette_Doll
+    HeadLow: Smoking_Pipe
+  - Mob: JOB_KNIGHT_20259
+    Sprite: JOB_KNIGHT
+    Sex: Female
+    HairStyle: 1
+    HairColor: 2
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Red_Wizardry_Hat
+    HeadMid: Hawk_Eyes01
+    Options:
+      Riding: true
+  - Mob: JOB_PRIEST_20260
+    Sprite: JOB_PRIEST
+    Sex: Male
+    HairStyle: 5
+    HairColor: 1
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Bone_Head
+    HeadLow: Cigar
+  - Mob: JOB_WIZARD_20261
+    Sprite: JOB_WIZARD
+    Sex: Male
+    HairStyle: 7
+    HairColor: 1
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Ayothaya_Hat
+    HeadMid: Ear_Of_Angel's_Wing
+  - Mob: JOB_BLACKSMITH_20262
+    Sprite: JOB_BLACKSMITH
+    Sex: Male
+    HairStyle: 6
+    HairColor: 6
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Helm_Of_Angel
+    HeadLow: Pirate_Dagger
+  - Mob: JOB_HUNTER_20263
+    Sprite: JOB_HUNTER
+    Sex: Male
+    HairStyle: 2
+    HairColor: 5
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Headband_Of_Power
+    HeadLow: Well_Baked_Toast
+    Options:
+      Falcon: true
+  - Mob: JOB_ASSASSIN_20264
+    Sprite: JOB_ASSASSIN
+    Sex: Male
+    HairStyle: 7
+    HairColor: 2
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Munak_Turban
+    HeadLow: Romantic_White_Flower
+  - Mob: JOB_CRUSADER_20265
+    Sprite: JOB_CRUSADER
+    Sex: Male
+    HairStyle: 3
+    HairColor: 3
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Minstrel_Hat
+    HeadLow: Rainbow_Scarf
+    Options:
+      Riding: true
+  - Mob: JOB_MONK_20266
+    Sprite: JOB_MONK
+    Sex: Male
+    HairStyle: 3
+    HairColor: 6
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Red_Wizardry_Hat
+    HeadLow: Pirate_Dagger
+  - Mob: JOB_SAGE_20267
+    Sprite: JOB_SAGE
+    Sex: Male
+    HairStyle: 5
+    HairColor: 1
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: C_Desert_Prince
+    HeadMid: Ear_Of_Angel's_Wing
+  - Mob: JOB_ROGUE_20268
+    Sprite: JOB_ROGUE
+    Sex: Female
+    HairStyle: 7
+    HairColor: 0
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Magni_Cap
+    HeadMid: Opera_Ghost_Mask
+  - Mob: JOB_ALCHEMIST_20269
+    Sprite: JOB_ALCHEMIST
+    Sex: Female
+    HairStyle: 2
+    HairColor: 2
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Pirate_Dagger
+  - Mob: JOB_BARD_20270
+    Sprite: JOB_BARD
+    Sex: Female
+    HairStyle: 6
+    HairColor: 5
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Headband_Of_Power
+    HeadMid: Dark_Blindfold
+  - Mob: JOB_DANCER_20271
+    Sprite: JOB_DANCER
+    Sex: Male
+    HairStyle: 0
+    HairColor: 0
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: C_Desert_Prince
+    HeadMid: Luxury_Sunglasses
+  - Mob: JOB_LORD_KNIGHT_20272
+    Sprite: JOB_LORD_KNIGHT
+    Sex: Female
+    HairStyle: 6
+    HairColor: 5
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Pirate_Bandana
+    HeadMid: Pecopeco_Wing_Ears
+  - Mob: JOB_HIGH_PRIEST_20273
+    Sprite: JOB_HIGH_PRIEST
+    Sex: Female
+    HairStyle: 5
+    HairColor: 6
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Gemmed_Crown
+    HeadMid: Ear_Of_Angel's_Wing
+  - Mob: JOB_HIGH_WIZARD_20274
+    Sprite: JOB_HIGH_WIZARD
+    Sex: Male
+    HairStyle: 0
+    HairColor: 5
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Indian_Headband
+    HeadMid: Luxury_Sunglasses
+  - Mob: JOB_WHITESMITH_20275
+    Sprite: JOB_WHITESMITH
+    Sex: Female
+    HairStyle: 3
+    HairColor: 0
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Apple_Of_Archer
+    HeadMid: Dark_Blindfold
+  - Mob: JOB_SNIPER_20276
+    Sprite: JOB_SNIPER
+    Sex: Male
+    HairStyle: 0
+    HairColor: 0
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Helm_Of_Angel
+    HeadLow: Romantic_White_Flower
+    Options:
+      Falcon: true
+  - Mob: JOB_ASSASSIN_CROSS_20277
+    Sprite: JOB_ASSASSIN_CROSS
+    Sex: Male
+    HairStyle: 8
+    HairColor: 7
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Oldman's_Romance
+    HeadLow: Fish_In_Mouth
+  - Mob: JOB_PALADIN_20278
+    Sprite: JOB_PALADIN
+    Sex: Male
+    HairStyle: 5
+    HairColor: 2
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Detective_Hat
+    HeadLow: Pirate_Dagger
+  - Mob: JOB_CHAMPION_20279
+    Sprite: JOB_CHAMPION
+    Sex: Male
+    HairStyle: 2
+    HairColor: 5
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Crown
+    HeadMid: Hawk_Eyes01
+  - Mob: JOB_PROFESSOR_20280
+    Sprite: JOB_PROFESSOR
+    Sex: Male
+    HairStyle: 5
+    HairColor: 4
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Headband_Of_Power
+    HeadLow: Rainbow_Scarf
+  - Mob: JOB_STALKER_20281
+    Sprite: JOB_STALKER
+    Sex: Female
+    HairStyle: 8
+    HairColor: 7
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Helm_Of_Angel
+    HeadMid: Ear_Of_Angel's_Wing
+  - Mob: JOB_CREATOR_20282
+    Sprite: JOB_CREATOR
+    Sex: Female
+    HairStyle: 7
+    HairColor: 1
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Bandana
+    HeadMid: Sunglasses
+  - Mob: JOB_CLOWN_20283
+    Sprite: JOB_CLOWN
+    Sex: Female
+    HairStyle: 4
+    HairColor: 2
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Goibne's_Helmet
+    HeadMid: Ear_Of_Angel's_Wing
+  - Mob: JOB_GYPSY_20284
+    Sprite: JOB_GYPSY
+    Sex: Male
+    HairStyle: 5
+    HairColor: 8
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Anubis_Helm
+    HeadMid: Ear_Of_Devil's_Wing
+  - Mob: JOB_NOVICE_20285
+    Sprite: JOB_NOVICE
+    Sex: Male
+    HairStyle: 1
+    HairColor: 5
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Mottled_Egg_Shell
+    HeadLow: Toast_C
+  - Mob: JOB_SWORDMAN_20286
+    Sprite: JOB_SWORDMAN
+    Sex: Male
+    HairStyle: 4
+    HairColor: 5
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Galapago_Cap
+    HeadMid: Sunglasses
+  - Mob: JOB_MAGE_20287
+    Sprite: JOB_MAGE
+    Sex: Female
+    HairStyle: 5
+    HairColor: 0
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Biretta
+    HeadMid: Opera_Ghost_Mask
+  - Mob: JOB_ARCHER_20288
+    Sprite: JOB_ARCHER
+    Sex: Male
+    HairStyle: 5
+    HairColor: 8
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Anubis_Helm
+    HeadLow: Well_Baked_Toast
+  - Mob: JOB_ACOLYTE_20289
+    Sprite: JOB_ACOLYTE
+    Sex: Male
+    HairStyle: 7
+    HairColor: 0
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Well_Baked_Toast
+  - Mob: JOB_MERCHANT_20290
+    Sprite: JOB_MERCHANT
+    Sex: Male
+    HairStyle: 1
+    HairColor: 7
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Centimental_Leaf
+  - Mob: JOB_THIEF_20291
+    Sprite: JOB_THIEF
+    Sex: Female
+    HairStyle: 3
+    HairColor: 6
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Munak_Turban
+    HeadLow: Romantic_White_Flower
+  - Mob: JOB_KNIGHT_20292
+    Sprite: JOB_KNIGHT
+    Sex: Male
+    HairStyle: 5
+    HairColor: 7
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Bone_Helm
+    HeadLow: Donut_In_Mouth
+    Options:
+      Riding: true
+  - Mob: JOB_PRIEST_20293
+    Sprite: JOB_PRIEST
+    Sex: Female
+    HairStyle: 5
+    HairColor: 3
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Munak_Turban
+    HeadMid: Sunglasses
+  - Mob: JOB_WIZARD_20294
+    Sprite: JOB_WIZARD
+    Sex: Male
+    HairStyle: 3
+    HairColor: 4
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Skull_Cap
+    HeadMid: Blinker
+  - Mob: JOB_BLACKSMITH_20295
+    Sprite: JOB_BLACKSMITH
+    Sex: Female
+    HairStyle: 4
+    HairColor: 8
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Circlet
+    HeadMid: Opera_Ghost_Mask
+  - Mob: JOB_HUNTER_20296
+    Sprite: JOB_HUNTER
+    Sex: Female
+    HairStyle: 8
+    HairColor: 4
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Skull_Cap
+    HeadMid: Ear_Of_Devil's_Wing
+    Options:
+      Falcon: true
+  - Mob: JOB_ASSASSIN_20297
+    Sprite: JOB_ASSASSIN
+    Sex: Male
+    HairStyle: 0
+    HairColor: 7
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Mottled_Egg_Shell
+    HeadLow: Pierrot_Nose
+  - Mob: JOB_CRUSADER_20298
+    Sprite: JOB_CRUSADER
+    Sex: Male
+    HairStyle: 7
+    HairColor: 4
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Biretta
+    HeadLow: Smoking_Pipe
+    Options:
+      Riding: true
+  - Mob: JOB_MONK_20299
+    Sprite: JOB_MONK
+    Sex: Female
+    HairStyle: 8
+    HairColor: 1
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Sombrero
+    HeadLow: Centimental_Flower
+  - Mob: JOB_SAGE_20300
+    Sprite: JOB_SAGE
+    Sex: Female
+    HairStyle: 4
+    HairColor: 0
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Holy_Bonnet
+    HeadMid: Ear_Of_Angel's_Wing
+  - Mob: JOB_ROGUE_20301
+    Sprite: JOB_ROGUE
+    Sex: Female
+    HairStyle: 6
+    HairColor: 2
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Mine_Helm
+    HeadLow: Donut_In_Mouth
+  - Mob: JOB_ALCHEMIST_20302
+    Sprite: JOB_ALCHEMIST
+    Sex: Female
+    HairStyle: 2
+    HairColor: 4
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Valkyrie_Helm
+    HeadLow: Pencil_In_Mouth
+  - Mob: JOB_BARD_20303
+    Sprite: JOB_BARD
+    Sex: Male
+    HairStyle: 3
+    HairColor: 8
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Minstrel_Hat
+    HeadMid: Machoman_Glasses
+  - Mob: JOB_DANCER_20304
+    Sprite: JOB_DANCER
+    Sex: Male
+    HairStyle: 0
+    HairColor: 7
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Ayothaya_Hat
+    HeadMid: Machoman_Glasses
+  - Mob: JOB_LORD_KNIGHT_20305
+    Sprite: JOB_LORD_KNIGHT
+    Sex: Male
+    HairStyle: 0
+    HairColor: 4
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Loard_Circlet
+    HeadLow: Antique_Pipe
+  - Mob: JOB_HIGH_PRIEST_20306
+    Sprite: JOB_HIGH_PRIEST
+    Sex: Female
+    HairStyle: 7
+    HairColor: 8
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Poo_Poo_Hat
+    HeadMid: Pecopeco_Wing_Ears
+  - Mob: JOB_HIGH_WIZARD_20307
+    Sprite: JOB_HIGH_WIZARD
+    Sex: Female
+    HairStyle: 4
+    HairColor: 5
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cowboy_Hat
+    HeadLow: Choco_Donut_In_Mouth
+  - Mob: JOB_WHITESMITH_20308
+    Sprite: JOB_WHITESMITH
+    Sex: Male
+    HairStyle: 6
+    HairColor: 0
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Hat_Of_Cook
+    HeadLow: Donut_In_Mouth
+  - Mob: JOB_SNIPER_20309
+    Sprite: JOB_SNIPER
+    Sex: Male
+    HairStyle: 7
+    HairColor: 8
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Valkyrie_Helm
+    HeadMid: Ear_Of_Devil's_Wing
+    Options:
+      Falcon: true
+  - Mob: JOB_ASSASSIN_CROSS_20310
+    Sprite: JOB_ASSASSIN_CROSS
+    Sex: Female
+    HairStyle: 2
+    HairColor: 1
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Detective_Hat
+    HeadMid: Elven_Ears_
+  - Mob: JOB_PALADIN_20311
+    Sprite: JOB_PALADIN
+    Sex: Female
+    HairStyle: 4
+    HairColor: 1
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Helm_Of_Angel
+    HeadLow: Assassin_Mask
+  - Mob: JOB_CHAMPION_20312
+    Sprite: JOB_CHAMPION
+    Sex: Male
+    HairStyle: 5
+    HairColor: 8
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Corsair
+    HeadMid: Hawk_Eyes01
+  - Mob: JOB_PROFESSOR_20313
+    Sprite: JOB_PROFESSOR
+    Sex: Female
+    HairStyle: 7
+    HairColor: 7
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Gang_Scarf
+  - Mob: JOB_STALKER_20314
+    Sprite: JOB_STALKER
+    Sex: Male
+    HairStyle: 7
+    HairColor: 7
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Holy_Bonnet
+    HeadMid: Opera_Ghost_Mask
+  - Mob: JOB_CREATOR_20315
+    Sprite: JOB_CREATOR
+    Sex: Male
+    HairStyle: 4
+    HairColor: 6
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Bone_Head
+    HeadLow: Donut_In_Mouth
+  - Mob: JOB_CLOWN_20316
+    Sprite: JOB_CLOWN
+    Sex: Female
+    HairStyle: 7
+    HairColor: 6
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Galapago_Cap
+    HeadLow: Well_Baked_Toast
+  - Mob: JOB_GYPSY_20317
+    Sprite: JOB_GYPSY
+    Sex: Male
+    HairStyle: 8
+    HairColor: 8
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Soldier_Hat
+    HeadMid: Pecopeco_Wing_Ears
+  - Mob: JOB_NOVICE_20318
+    Sprite: JOB_NOVICE
+    Sex: Female
+    HairStyle: 3
+    HairColor: 5
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Headgear_Of_Queen
+    HeadMid: Blinker
+  - Mob: JOB_SWORDMAN_20319
+    Sprite: JOB_SWORDMAN
+    Sex: Female
+    HairStyle: 8
+    HairColor: 3
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Sombrero
+    HeadLow: Centimental_Flower
+  - Mob: JOB_MAGE_20320
+    Sprite: JOB_MAGE
+    Sex: Female
+    HairStyle: 0
+    HairColor: 7
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Golden_Gear
+    HeadLow: Centimental_Leaf
+  - Mob: JOB_ARCHER_20321
+    Sprite: JOB_ARCHER
+    Sex: Female
+    HairStyle: 7
+    HairColor: 5
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Star_Sparkling
+    HeadMid: Elven_Ears_
+  - Mob: JOB_ACOLYTE_20322
+    Sprite: JOB_ACOLYTE
+    Sex: Male
+    HairStyle: 4
+    HairColor: 1
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Indian_Headband
+    HeadMid: Machoman_Glasses
+  - Mob: JOB_MERCHANT_20323
+    Sprite: JOB_MERCHANT
+    Sex: Female
+    HairStyle: 6
+    HairColor: 8
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Ulle_Cap_I
+    HeadMid: Dark_Blindfold
+  - Mob: JOB_THIEF_20324
+    Sprite: JOB_THIEF
+    Sex: Female
+    HairStyle: 6
+    HairColor: 6
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Soldier_Hat
+    HeadMid: Opera_Ghost_Mask
+  - Mob: JOB_KNIGHT_20325
+    Sprite: JOB_KNIGHT
+    Sex: Male
+    HairStyle: 5
+    HairColor: 3
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Morrigane's_Helm
+    HeadMid: Ear_Of_Angel's_Wing
+  - Mob: JOB_PRIEST_20326
+    Sprite: JOB_PRIEST
+    Sex: Female
+    HairStyle: 7
+    HairColor: 3
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cowboy_Hat
+    HeadLow: Pierrot_Nose
+  - Mob: JOB_WIZARD_20327
+    Sprite: JOB_WIZARD
+    Sex: Male
+    HairStyle: 0
+    HairColor: 6
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Headgear_Of_Queen
+    HeadMid: Blinker
+  - Mob: JOB_BLACKSMITH_20328
+    Sprite: JOB_BLACKSMITH
+    Sex: Female
+    HairStyle: 4
+    HairColor: 1
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Valkyrie_Helm
+    HeadLow: Centimental_Leaf
+  - Mob: JOB_HUNTER_20329
+    Sprite: JOB_HUNTER
+    Sex: Female
+    HairStyle: 7
+    HairColor: 4
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Boy's_Cap
+    HeadLow: Angry_Mouth
+    Options:
+      Falcon: true
+  - Mob: JOB_ASSASSIN_20330
+    Sprite: JOB_ASSASSIN
+    Sex: Male
+    HairStyle: 5
+    HairColor: 3
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Mine_Helm
+    HeadLow: Rainbow_Scarf
+  - Mob: JOB_CRUSADER_20331
+    Sprite: JOB_CRUSADER
+    Sex: Female
+    HairStyle: 8
+    HairColor: 0
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Angry_Mouth
+    Options:
+      Riding: true
+  - Mob: JOB_MONK_20332
+    Sprite: JOB_MONK
+    Sex: Female
+    HairStyle: 3
+    HairColor: 3
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: C_Desert_Prince
+    HeadLow: Centimental_Flower
+  - Mob: JOB_SAGE_20333
+    Sprite: JOB_SAGE
+    Sex: Female
+    HairStyle: 5
+    HairColor: 0
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Poo_Poo_Hat
+    HeadLow: Centimental_Leaf
+  - Mob: JOB_ROGUE_20334
+    Sprite: JOB_ROGUE
+    Sex: Male
+    HairStyle: 2
+    HairColor: 7
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Sahkkat
+    HeadLow: Toast_C
+  - Mob: JOB_ALCHEMIST_20335
+    Sprite: JOB_ALCHEMIST
+    Sex: Female
+    HairStyle: 5
+    HairColor: 8
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Mottled_Egg_Shell
+    HeadMid: Ear_Of_Devil's_Wing
+  - Mob: JOB_BARD_20336
+    Sprite: JOB_BARD
+    Sex: Male
+    HairStyle: 7
+    HairColor: 6
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Bone_Helm
+    HeadLow: Toast_C
+  - Mob: JOB_DANCER_20337
+    Sprite: JOB_DANCER
+    Sex: Female
+    HairStyle: 5
+    HairColor: 0
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Loard_Circlet
+    HeadLow: Pirate_Dagger
+  - Mob: JOB_LORD_KNIGHT_20338
+    Sprite: JOB_LORD_KNIGHT
+    Sex: Male
+    HairStyle: 5
+    HairColor: 8
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Mottled_Egg_Shell
+    HeadMid: Ear_Of_Devil's_Wing
+    Options:
+      Riding: true
+  - Mob: JOB_HIGH_PRIEST_20339
+    Sprite: JOB_HIGH_PRIEST
+    Sex: Female
+    HairStyle: 4
+    HairColor: 8
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Pirate_Bandana
+    HeadMid: Opera_Ghost_Mask
+  - Mob: JOB_HIGH_WIZARD_20340
+    Sprite: JOB_HIGH_WIZARD
+    Sex: Female
+    HairStyle: 3
+    HairColor: 2
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Biretta
+    HeadMid: Opera_Ghost_Mask
+  - Mob: JOB_WHITESMITH_20341
+    Sprite: JOB_WHITESMITH
+    Sex: Male
+    HairStyle: 6
+    HairColor: 4
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Circlet
+    HeadMid: Dark_Blindfold
+  - Mob: JOB_SNIPER_20342
+    Sprite: JOB_SNIPER
+    Sex: Female
+    HairStyle: 5
+    HairColor: 2
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Assassin_Mask
+    Options:
+      Falcon: true
+  - Mob: JOB_ASSASSIN_CROSS_20343
+    Sprite: JOB_ASSASSIN_CROSS
+    Sex: Male
+    HairStyle: 8
+    HairColor: 7
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Well_Baked_Toast
+  - Mob: JOB_PALADIN_20344
+    Sprite: JOB_PALADIN
+    Sex: Male
+    HairStyle: 5
+    HairColor: 1
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Fedora
+    HeadMid: Dark_Blindfold
+  - Mob: JOB_CHAMPION_20345
+    Sprite: JOB_CHAMPION
+    Sex: Male
+    HairStyle: 4
+    HairColor: 4
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Coke_Hat
+    HeadMid: Hawk_Eyes01
+  - Mob: JOB_PROFESSOR_20346
+    Sprite: JOB_PROFESSOR
+    Sex: Male
+    HairStyle: 1
+    HairColor: 8
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Bone_Helm
+    HeadMid: Hawk_Eyes01
+  - Mob: JOB_STALKER_20347
+    Sprite: JOB_STALKER
+    Sex: Female
+    HairStyle: 2
+    HairColor: 3
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Helm_Of_Angel
+    HeadMid: Opera_Ghost_Mask
+  - Mob: JOB_CREATOR_20348
+    Sprite: JOB_CREATOR
+    Sex: Female
+    HairStyle: 7
+    HairColor: 0
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Straw_Hat
+    HeadMid: Luxury_Sunglasses
+  - Mob: JOB_CLOWN_20349
+    Sprite: JOB_CLOWN
+    Sex: Male
+    HairStyle: 1
+    HairColor: 6
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Toast_C
+  - Mob: JOB_GYPSY_20350
+    Sprite: JOB_GYPSY
+    Sex: Male
+    HairStyle: 2
+    HairColor: 8
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Mask_Of_Fox
+    HeadLow: Cigar
+  - Mob: JOB_NOVICE_20351
+    Sprite: JOB_NOVICE
+    Sex: Female
+    HairStyle: 8
+    HairColor: 8
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Western_Grace
+    HeadLow: Pierrot_Nose
+  - Mob: JOB_SWORDMAN_20352
+    Sprite: JOB_SWORDMAN
+    Sex: Male
+    HairStyle: 4
+    HairColor: 8
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Pirate_Dagger
+  - Mob: JOB_MAGE_20353
+    Sprite: JOB_MAGE
+    Sex: Male
+    HairStyle: 5
+    HairColor: 4
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Mask_Of_Fox
+    HeadLow: Romantic_White_Flower
+  - Mob: JOB_ARCHER_20354
+    Sprite: JOB_ARCHER
+    Sex: Male
+    HairStyle: 5
+    HairColor: 1
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Pirate_Bandana
+    HeadMid: Hawk_Eyes01
+  - Mob: JOB_ACOLYTE_20355
+    Sprite: JOB_ACOLYTE
+    Sex: Female
+    HairStyle: 3
+    HairColor: 1
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Bone_Head
+    HeadMid: Elven_Ears_
+  - Mob: JOB_MERCHANT_20356
+    Sprite: JOB_MERCHANT
+    Sex: Female
+    HairStyle: 2
+    HairColor: 4
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Munak_Turban
+    HeadMid: Sunglasses
+  - Mob: JOB_THIEF_20357
+    Sprite: JOB_THIEF
+    Sex: Female
+    HairStyle: 4
+    HairColor: 8
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Classic_Hat
+    HeadLow: Pirate_Dagger
+  - Mob: JOB_KNIGHT_20358
+    Sprite: JOB_KNIGHT
+    Sex: Male
+    HairStyle: 6
+    HairColor: 3
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Toast_C
+    Options:
+      Riding: true
+  - Mob: JOB_PRIEST_20359
+    Sprite: JOB_PRIEST
+    Sex: Male
+    HairStyle: 6
+    HairColor: 1
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Boy's_Cap
+    HeadLow: Pencil_In_Mouth
+  - Mob: JOB_WIZARD_20360
+    Sprite: JOB_WIZARD
+    Sex: Male
+    HairStyle: 4
+    HairColor: 6
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Skull_Cap
+    HeadLow: Centimental_Leaf
+  - Mob: JOB_BLACKSMITH_20361
+    Sprite: JOB_BLACKSMITH
+    Sex: Female
+    HairStyle: 0
+    HairColor: 3
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Headgear_Of_Queen
+    HeadMid: Ear_Of_Angel's_Wing
+  - Mob: JOB_HUNTER_20362
+    Sprite: JOB_HUNTER
+    Sex: Female
+    HairStyle: 5
+    HairColor: 7
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Fricca_Circlet
+    HeadMid: Dark_Blindfold
+    Options:
+      Falcon: true
+  - Mob: JOB_ASSASSIN_20363
+    Sprite: JOB_ASSASSIN
+    Sex: Female
+    HairStyle: 7
+    HairColor: 6
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Corsair
+    HeadMid: Ear_Of_Devil's_Wing
+  - Mob: JOB_CRUSADER_20364
+    Sprite: JOB_CRUSADER
+    Sex: Female
+    HairStyle: 4
+    HairColor: 6
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: J_Captain_Hat
+    HeadLow: Romantic_White_Flower
+  - Mob: JOB_MONK_20365
+    Sprite: JOB_MONK
+    Sex: Female
+    HairStyle: 7
+    HairColor: 3
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Anubis_Helm
+    HeadMid: Dark_Blindfold
+  - Mob: JOB_SAGE_20366
+    Sprite: JOB_SAGE
+    Sex: Female
+    HairStyle: 0
+    HairColor: 5
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Egg_Shell
+    HeadMid: Opera_Ghost_Mask
+  - Mob: JOB_ROGUE_20367
+    Sprite: JOB_ROGUE
+    Sex: Female
+    HairStyle: 5
+    HairColor: 5
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Straw_Hat
+    HeadLow: Antique_Pipe
+  - Mob: JOB_ALCHEMIST_20368
+    Sprite: JOB_ALCHEMIST
+    Sex: Male
+    HairStyle: 1
+    HairColor: 3
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Biretta
+    HeadMid: Blinker
+  - Mob: JOB_BARD_20369
+    Sprite: JOB_BARD
+    Sex: Male
+    HairStyle: 8
+    HairColor: 8
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Headgear_Of_Queen
+    HeadLow: Toast_C
+  - Mob: JOB_DANCER_20370
+    Sprite: JOB_DANCER
+    Sex: Female
+    HairStyle: 2
+    HairColor: 8
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Headband_Of_Power
+    HeadLow: Romantic_White_Flower
+  - Mob: JOB_LORD_KNIGHT_20371
+    Sprite: JOB_LORD_KNIGHT
+    Sex: Female
+    HairStyle: 4
+    HairColor: 2
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Marionette_Doll
+    HeadLow: Donut_In_Mouth
+    Options:
+      Riding: true
+  - Mob: JOB_HIGH_PRIEST_20372
+    Sprite: JOB_HIGH_PRIEST
+    Sex: Male
+    HairStyle: 3
+    HairColor: 1
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Holy_Bonnet
+    HeadMid: Ear_Of_Angel's_Wing
+  - Mob: JOB_HIGH_WIZARD_20373
+    Sprite: JOB_HIGH_WIZARD
+    Sex: Male
+    HairStyle: 7
+    HairColor: 2
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Golden_Gear
+    HeadMid: Blinker
+  - Mob: JOB_WHITESMITH_20374
+    Sprite: JOB_WHITESMITH
+    Sex: Male
+    HairStyle: 7
+    HairColor: 1
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Western_Grace
+    HeadMid: Elven_Ears_
+  - Mob: JOB_SNIPER_20375
+    Sprite: JOB_SNIPER
+    Sex: Male
+    HairStyle: 6
+    HairColor: 1
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Egg_Shell
+    HeadMid: Machoman_Glasses
+    Options:
+      Falcon: true
+  - Mob: JOB_ASSASSIN_CROSS_20376
+    Sprite: JOB_ASSASSIN_CROSS
+    Sex: Male
+    HairStyle: 4
+    HairColor: 3
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Straw_Hat
+    HeadMid: Dark_Blindfold
+  - Mob: JOB_PALADIN_20377
+    Sprite: JOB_PALADIN
+    Sex: Female
+    HairStyle: 7
+    HairColor: 6
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Wizardry_Hat
+    HeadMid: Pecopeco_Wing_Ears
+  - Mob: JOB_CHAMPION_20378
+    Sprite: JOB_CHAMPION
+    Sex: Female
+    HairStyle: 4
+    HairColor: 3
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Egg_Shell
+    HeadLow: Cigar
+  - Mob: JOB_PROFESSOR_20379
+    Sprite: JOB_PROFESSOR
+    Sex: Female
+    HairStyle: 8
+    HairColor: 3
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cap
+    HeadMid: Opera_Ghost_Mask
+  - Mob: JOB_STALKER_20380
+    Sprite: JOB_STALKER
+    Sex: Female
+    HairStyle: 0
+    HairColor: 1
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Valkyrie_Helm
+    HeadLow: Fish_In_Mouth
+  - Mob: JOB_CREATOR_20381
+    Sprite: JOB_CREATOR
+    Sex: Female
+    HairStyle: 5
+    HairColor: 1
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Ulle_Cap_I
+    HeadMid: Elven_Ears_
+  - Mob: JOB_CLOWN_20382
+    Sprite: JOB_CLOWN
+    Sex: Male
+    HairStyle: 4
+    HairColor: 8
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Skull_Cap
+    HeadLow: Smoking_Pipe
+  - Mob: JOB_GYPSY_20383
+    Sprite: JOB_GYPSY
+    Sex: Female
+    HairStyle: 6
+    HairColor: 8
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Helm
+    HeadMid: Luxury_Sunglasses
+  - Mob: JOB_NOVICE_20384
+    Sprite: JOB_NOVICE
+    Sex: Male
+    HairStyle: 5
+    HairColor: 7
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Straw_Hat
+    HeadMid: Blinker
+  - Mob: JOB_SWORDMAN_20385
+    Sprite: JOB_SWORDMAN
+    Sex: Male
+    HairStyle: 2
+    HairColor: 5
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Feather_Bonnet
+    HeadMid: Opera_Ghost_Mask
+  - Mob: JOB_MAGE_20386
+    Sprite: JOB_MAGE
+    Sex: Male
+    HairStyle: 6
+    HairColor: 5
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Valkyrie_Helm
+    HeadMid: Ear_Of_Devil's_Wing
+  - Mob: JOB_ARCHER_20387
+    Sprite: JOB_ARCHER
+    Sex: Female
+    HairStyle: 0
+    HairColor: 5
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Pencil_In_Mouth
+  - Mob: JOB_ACOLYTE_20388
+    Sprite: JOB_ACOLYTE
+    Sex: Male
+    HairStyle: 6
+    HairColor: 8
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Centimental_Flower
+  - Mob: JOB_MERCHANT_20389
+    Sprite: JOB_MERCHANT
+    Sex: Male
+    HairStyle: 6
+    HairColor: 3
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Gang_Scarf
+  - Mob: JOB_THIEF_20390
+    Sprite: JOB_THIEF
+    Sex: Female
+    HairStyle: 7
+    HairColor: 0
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cowboy_Hat
+    HeadMid: Dark_Blindfold
+  - Mob: JOB_KNIGHT_20391
+    Sprite: JOB_KNIGHT
+    Sex: Male
+    HairStyle: 7
+    HairColor: 3
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Straw_Hat
+    HeadMid: Opera_Ghost_Mask
+  - Mob: JOB_PRIEST_20392
+    Sprite: JOB_PRIEST
+    Sex: Female
+    HairStyle: 8
+    HairColor: 1
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Gemmed_Crown
+    HeadMid: Ear_Of_Angel's_Wing
+  - Mob: JOB_WIZARD_20393
+    Sprite: JOB_WIZARD
+    Sex: Female
+    HairStyle: 1
+    HairColor: 4
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Marionette_Doll
+    HeadLow: Pierrot_Nose
+  - Mob: JOB_BLACKSMITH_20394
+    Sprite: JOB_BLACKSMITH
+    Sex: Male
+    HairStyle: 7
+    HairColor: 6
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Anubis_Helm
+    HeadLow: Centimental_Flower
+  - Mob: JOB_HUNTER_20395
+    Sprite: JOB_HUNTER
+    Sex: Female
+    HairStyle: 4
+    HairColor: 5
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Anubis_Helm
+    HeadMid: Pecopeco_Wing_Ears
+    Options:
+      Falcon: true
+  - Mob: JOB_ASSASSIN_20396
+    Sprite: JOB_ASSASSIN
+    Sex: Female
+    HairStyle: 5
+    HairColor: 3
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Bone_Head
+    HeadLow: Assassin_Mask
+  - Mob: JOB_CRUSADER_20397
+    Sprite: JOB_CRUSADER
+    Sex: Male
+    HairStyle: 3
+    HairColor: 6
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Holy_Bonnet
+    HeadMid: Blinker
+  - Mob: JOB_MONK_20398
+    Sprite: JOB_MONK
+    Sex: Female
+    HairStyle: 8
+    HairColor: 2
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Necromencer's_Hood
+    HeadLow: Antique_Pipe
+  - Mob: JOB_SAGE_20399
+    Sprite: JOB_SAGE
+    Sex: Male
+    HairStyle: 6
+    HairColor: 8
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Galapago_Cap
+    HeadMid: Ear_Of_Devil's_Wing
+  - Mob: JOB_ROGUE_20400
+    Sprite: JOB_ROGUE
+    Sex: Female
+    HairStyle: 3
+    HairColor: 0
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Circlet
+    HeadLow: Pierrot_Nose
+  - Mob: JOB_ALCHEMIST_20401
+    Sprite: JOB_ALCHEMIST
+    Sex: Female
+    HairStyle: 3
+    HairColor: 3
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cap_Of_Blindness
+    HeadMid: Pecopeco_Wing_Ears
+  - Mob: JOB_BARD_20402
+    Sprite: JOB_BARD
+    Sex: Male
+    HairStyle: 6
+    HairColor: 0
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Star_Sparkling
+    HeadMid: Ear_Of_Devil's_Wing
+  - Mob: JOB_DANCER_20403
+    Sprite: JOB_DANCER
+    Sex: Female
+    HairStyle: 4
+    HairColor: 8
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Spinx_Helm
+    HeadMid: Ear_Of_Angel's_Wing
+  - Mob: JOB_LORD_KNIGHT_20404
+    Sprite: JOB_LORD_KNIGHT
+    Sex: Male
+    HairStyle: 6
+    HairColor: 4
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Holy_Bonnet
+    HeadLow: Centimental_Flower
+    Options:
+      Riding: true
+  - Mob: JOB_HIGH_PRIEST_20405
+    Sprite: JOB_HIGH_PRIEST
+    Sex: Male
+    HairStyle: 1
+    HairColor: 0
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Galapago_Cap
+    HeadMid: Ear_Of_Angel's_Wing
+  - Mob: JOB_HIGH_WIZARD_20406
+    Sprite: JOB_HIGH_WIZARD
+    Sex: Female
+    HairStyle: 6
+    HairColor: 7
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Headgear_Of_Queen
+    HeadLow: Choco_Donut_In_Mouth
+  - Mob: JOB_WHITESMITH_20407
+    Sprite: JOB_WHITESMITH
+    Sex: Female
+    HairStyle: 2
+    HairColor: 1
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Golden_Gear
+    HeadMid: Dark_Blindfold
+  - Mob: JOB_SNIPER_20408
+    Sprite: JOB_SNIPER
+    Sex: Female
+    HairStyle: 8
+    HairColor: 8
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Headband_Of_Power
+    HeadMid: Luxury_Sunglasses
+    Options:
+      Falcon: true
+  - Mob: JOB_ASSASSIN_CROSS_20409
+    Sprite: JOB_ASSASSIN_CROSS
+    Sex: Male
+    HairStyle: 3
+    HairColor: 0
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cowboy_Hat_J
+    HeadLow: Centimental_Leaf
+  - Mob: JOB_PALADIN_20410
+    Sprite: JOB_PALADIN
+    Sex: Female
+    HairStyle: 6
+    HairColor: 3
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Banana_Hat
+    HeadLow: Pirate_Dagger
+  - Mob: JOB_CHAMPION_20411
+    Sprite: JOB_CHAMPION
+    Sex: Male
+    HairStyle: 0
+    HairColor: 8
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Bandana
+    HeadMid: Machoman_Glasses
+  - Mob: JOB_PROFESSOR_20412
+    Sprite: JOB_PROFESSOR
+    Sex: Male
+    HairStyle: 3
+    HairColor: 0
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: C_Desert_Prince
+    HeadMid: Elven_Ears_
+  - Mob: JOB_STALKER_20413
+    Sprite: JOB_STALKER
+    Sex: Male
+    HairStyle: 7
+    HairColor: 7
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Sombrero
+    HeadMid: Elven_Ears_
+  - Mob: JOB_CREATOR_20414
+    Sprite: JOB_CREATOR
+    Sex: Male
+    HairStyle: 6
+    HairColor: 4
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Sombrero
+    HeadLow: Toast_C
+  - Mob: JOB_CLOWN_20415
+    Sprite: JOB_CLOWN
+    Sex: Male
+    HairStyle: 8
+    HairColor: 4
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Feather_Beret
+    HeadLow: Angry_Mouth
+  - Mob: JOB_GYPSY_20416
+    Sprite: JOB_GYPSY
+    Sex: Female
+    HairStyle: 8
+    HairColor: 4
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Golden_Gear
+    HeadLow: Donut_In_Mouth
+  - Mob: JOB_NOVICE_20417
+    Sprite: JOB_NOVICE
+    Sex: Male
+    HairStyle: 4
+    HairColor: 3
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Golden_Gear
+    HeadMid: Elven_Ears_
+  - Mob: JOB_SWORDMAN_20418
+    Sprite: JOB_SWORDMAN
+    Sex: Female
+    HairStyle: 8
+    HairColor: 6
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Joker_Jester
+    HeadMid: Sunglasses
+  - Mob: JOB_MAGE_20419
+    Sprite: JOB_MAGE
+    Sex: Male
+    HairStyle: 7
+    HairColor: 3
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Beret
+    HeadMid: Ear_Of_Devil's_Wing
+  - Mob: JOB_ARCHER_20420
+    Sprite: JOB_ARCHER
+    Sex: Female
+    HairStyle: 8
+    HairColor: 8
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Diabolus_Helmet
+    HeadMid: Hawk_Eyes01
+  - Mob: JOB_ACOLYTE_20421
+    Sprite: JOB_ACOLYTE
+    Sex: Male
+    HairStyle: 7
+    HairColor: 1
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Gemmed_Sallet
+    HeadLow: Romantic_White_Flower
+  - Mob: JOB_MERCHANT_20422
+    Sprite: JOB_MERCHANT
+    Sex: Male
+    HairStyle: 5
+    HairColor: 2
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Morrigane's_Helm
+    HeadLow: Rainbow_Scarf
+  - Mob: JOB_THIEF_20423
+    Sprite: JOB_THIEF
+    Sex: Female
+    HairStyle: 7
+    HairColor: 4
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cowboy_Hat
+    HeadMid: Machoman_Glasses
+  - Mob: JOB_KNIGHT_20424
+    Sprite: JOB_KNIGHT
+    Sex: Female
+    HairStyle: 7
+    HairColor: 0
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: J_Captain_Hat
+    HeadMid: Blinker
+  - Mob: JOB_PRIEST_20425
+    Sprite: JOB_PRIEST
+    Sex: Female
+    HairStyle: 6
+    HairColor: 4
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Galapago_Cap
+    HeadLow: Assassin_Mask
+  - Mob: JOB_WIZARD_20426
+    Sprite: JOB_WIZARD
+    Sex: Male
+    HairStyle: 2
+    HairColor: 2
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Beret
+    HeadLow: Antique_Pipe
+  - Mob: JOB_BLACKSMITH_20427
+    Sprite: JOB_BLACKSMITH
+    Sex: Male
+    HairStyle: 8
+    HairColor: 2
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Oldman's_Romance
+    HeadLow: Centimental_Flower
+  - Mob: JOB_HUNTER_20428
+    Sprite: JOB_HUNTER
+    Sex: Female
+    HairStyle: 7
+    HairColor: 2
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Mask_Of_Fox
+    HeadMid: Luxury_Sunglasses
+    Options:
+      Falcon: true
+  - Mob: JOB_ASSASSIN_20429
+    Sprite: JOB_ASSASSIN
+    Sex: Female
+    HairStyle: 6
+    HairColor: 5
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cap_Of_Blindness
+    HeadMid: Elven_Ears_
+  - Mob: JOB_CRUSADER_20430
+    Sprite: JOB_CRUSADER
+    Sex: Female
+    HairStyle: 7
+    HairColor: 1
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Marionette_Doll
+    HeadMid: Dark_Blindfold
+  - Mob: JOB_MONK_20431
+    Sprite: JOB_MONK
+    Sex: Female
+    HairStyle: 0
+    HairColor: 3
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Bone_Head
+    HeadMid: Luxury_Sunglasses
+  - Mob: JOB_SAGE_20432
+    Sprite: JOB_SAGE
+    Sex: Male
+    HairStyle: 3
+    HairColor: 6
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Minstrel_Hat
+    HeadLow: Pierrot_Nose
+  - Mob: JOB_ROGUE_20433
+    Sprite: JOB_ROGUE
+    Sex: Male
+    HairStyle: 7
+    HairColor: 3
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Goibne's_Helmet
+    HeadMid: Opera_Ghost_Mask
+  - Mob: JOB_ALCHEMIST_20434
+    Sprite: JOB_ALCHEMIST
+    Sex: Male
+    HairStyle: 4
+    HairColor: 7
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Pirate_Dagger
+  - Mob: JOB_BARD_20435
+    Sprite: JOB_BARD
+    Sex: Male
+    HairStyle: 6
+    HairColor: 5
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Necromencer's_Hood
+    HeadLow: Centimental_Leaf
+  - Mob: JOB_DANCER_20436
+    Sprite: JOB_DANCER
+    Sex: Male
+    HairStyle: 3
+    HairColor: 1
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Rainbow_Scarf
+  - Mob: JOB_LORD_KNIGHT_20437
+    Sprite: JOB_LORD_KNIGHT
+    Sex: Male
+    HairStyle: 5
+    HairColor: 7
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Munak_Turban
+    HeadMid: Hawk_Eyes01
+  - Mob: JOB_HIGH_PRIEST_20438
+    Sprite: JOB_HIGH_PRIEST
+    Sex: Female
+    HairStyle: 6
+    HairColor: 3
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Skull_Cap
+    HeadLow: Pencil_In_Mouth
+  - Mob: JOB_HIGH_WIZARD_20439
+    Sprite: JOB_HIGH_WIZARD
+    Sex: Male
+    HairStyle: 1
+    HairColor: 3
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Wizardry_Hat
+    HeadLow: Smoking_Pipe
+  - Mob: JOB_WHITESMITH_20440
+    Sprite: JOB_WHITESMITH
+    Sex: Female
+    HairStyle: 7
+    HairColor: 3
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Bone_Helm
+    HeadLow: Smoking_Pipe
+  - Mob: JOB_SNIPER_20441
+    Sprite: JOB_SNIPER
+    Sex: Male
+    HairStyle: 4
+    HairColor: 0
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Gemmed_Crown
+    HeadLow: Donut_In_Mouth
+    Options:
+      Falcon: true
+  - Mob: JOB_ASSASSIN_CROSS_20442
+    Sprite: JOB_ASSASSIN_CROSS
+    Sex: Female
+    HairStyle: 2
+    HairColor: 8
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Banana_Hat
+    HeadLow: Angry_Mouth
+  - Mob: JOB_PALADIN_20443
+    Sprite: JOB_PALADIN
+    Sex: Male
+    HairStyle: 6
+    HairColor: 2
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Dragon_Skull
+    HeadMid: Luxury_Sunglasses
+  - Mob: JOB_CHAMPION_20444
+    Sprite: JOB_CHAMPION
+    Sex: Male
+    HairStyle: 3
+    HairColor: 1
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Wizardry_Hat
+    HeadLow: Romantic_White_Flower
+  - Mob: JOB_PROFESSOR_20445
+    Sprite: JOB_PROFESSOR
+    Sex: Male
+    HairStyle: 5
+    HairColor: 4
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Helm_Of_Angel
+    HeadMid: Pecopeco_Wing_Ears
+  - Mob: JOB_STALKER_20446
+    Sprite: JOB_STALKER
+    Sex: Male
+    HairStyle: 7
+    HairColor: 2
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Straw_Hat
+    HeadMid: Elven_Ears_
+  - Mob: JOB_CREATOR_20447
+    Sprite: JOB_CREATOR
+    Sex: Male
+    HairStyle: 6
+    HairColor: 4
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Ayothaya_Hat
+    HeadMid: Opera_Ghost_Mask
+  - Mob: JOB_CLOWN_20448
+    Sprite: JOB_CLOWN
+    Sex: Female
+    HairStyle: 0
+    HairColor: 7
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Prontera_Army_Cap
+    HeadMid: Machoman_Glasses
+  - Mob: JOB_GYPSY_20449
+    Sprite: JOB_GYPSY
+    Sex: Female
+    HairStyle: 2
+    HairColor: 1
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Straw_Hat
+    HeadMid: Opera_Ghost_Mask
+  - Mob: JOB_NOVICE_20450
+    Sprite: JOB_NOVICE
+    Sex: Male
+    HairStyle: 6
+    HairColor: 3
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Goibne's_Helmet
+    HeadLow: Angry_Mouth
+  - Mob: JOB_SWORDMAN_20451
+    Sprite: JOB_SWORDMAN
+    Sex: Male
+    HairStyle: 8
+    HairColor: 1
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Morrigane's_Helm
+    HeadLow: Antique_Pipe
+  - Mob: JOB_MAGE_20452
+    Sprite: JOB_MAGE
+    Sex: Male
+    HairStyle: 2
+    HairColor: 1
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Goibne's_Helmet
+    HeadLow: Gang_Scarf
+  - Mob: JOB_ARCHER_20453
+    Sprite: JOB_ARCHER
+    Sex: Female
+    HairStyle: 5
+    HairColor: 6
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Toast_C
+  - Mob: JOB_ACOLYTE_20454
+    Sprite: JOB_ACOLYTE
+    Sex: Female
+    HairStyle: 3
+    HairColor: 1
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Wizardry_Hat
+    HeadLow: Angry_Mouth
+  - Mob: JOB_MERCHANT_20455
+    Sprite: JOB_MERCHANT
+    Sex: Male
+    HairStyle: 1
+    HairColor: 8
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Coke_Hat
+    HeadLow: Pencil_In_Mouth
+  - Mob: JOB_THIEF_20456
+    Sprite: JOB_THIEF
+    Sex: Male
+    HairStyle: 3
+    HairColor: 0
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Romantic_White_Flower
+  - Mob: JOB_KNIGHT_20457
+    Sprite: JOB_KNIGHT
+    Sex: Female
+    HairStyle: 2
+    HairColor: 2
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Mine_Helm
+    HeadLow: Assassin_Mask
+    Options:
+      Riding: true
+  - Mob: JOB_PRIEST_20458
+    Sprite: JOB_PRIEST
+    Sex: Female
+    HairStyle: 0
+    HairColor: 0
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Classic_Hat
+    HeadMid: Sunglasses
+  - Mob: JOB_WIZARD_20459
+    Sprite: JOB_WIZARD
+    Sex: Female
+    HairStyle: 3
+    HairColor: 2
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Bone_Helm
+    HeadLow: Cigar
+  - Mob: JOB_BLACKSMITH_20460
+    Sprite: JOB_BLACKSMITH
+    Sex: Male
+    HairStyle: 8
+    HairColor: 1
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Helm_Of_Abyss
+    HeadMid: Elven_Ears_
+  - Mob: JOB_HUNTER_20461
+    Sprite: JOB_HUNTER
+    Sex: Female
+    HairStyle: 7
+    HairColor: 1
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Ulle_Cap_I
+    HeadMid: Opera_Ghost_Mask
+    Options:
+      Falcon: true
+  - Mob: JOB_ASSASSIN_20462
+    Sprite: JOB_ASSASSIN
+    Sex: Male
+    HairStyle: 1
+    HairColor: 3
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Choco_Donut_In_Mouth
+  - Mob: JOB_CRUSADER_20463
+    Sprite: JOB_CRUSADER
+    Sex: Male
+    HairStyle: 8
+    HairColor: 2
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Centimental_Leaf
+  - Mob: JOB_MONK_20464
+    Sprite: JOB_MONK
+    Sex: Female
+    HairStyle: 4
+    HairColor: 5
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Alice_Doll
+    HeadLow: Well_Baked_Toast
+  - Mob: JOB_SAGE_20465
+    Sprite: JOB_SAGE
+    Sex: Male
+    HairStyle: 4
+    HairColor: 8
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Loard_Circlet
+    HeadLow: Donut_In_Mouth
+  - Mob: JOB_ROGUE_20466
+    Sprite: JOB_ROGUE
+    Sex: Female
+    HairStyle: 0
+    HairColor: 8
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Hat_Of_Cook
+    HeadMid: Elven_Ears_
+  - Mob: JOB_ALCHEMIST_20467
+    Sprite: JOB_ALCHEMIST
+    Sex: Male
+    HairStyle: 0
+    HairColor: 1
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Fricca_Circlet
+    HeadLow: Cigar
+  - Mob: JOB_BARD_20468
+    Sprite: JOB_BARD
+    Sex: Female
+    HairStyle: 4
+    HairColor: 5
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Straw_Hat
+    HeadLow: Pirate_Dagger
+  - Mob: JOB_DANCER_20469
+    Sprite: JOB_DANCER
+    Sex: Male
+    HairStyle: 6
+    HairColor: 4
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Gemmed_Crown
+    HeadMid: Dark_Blindfold
+  - Mob: JOB_LORD_KNIGHT_20470
+    Sprite: JOB_LORD_KNIGHT
+    Sex: Female
+    HairStyle: 7
+    HairColor: 0
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Straw_Hat
+    HeadLow: Pierrot_Nose
+  - Mob: JOB_HIGH_PRIEST_20471
+    Sprite: JOB_HIGH_PRIEST
+    Sex: Male
+    HairStyle: 6
+    HairColor: 6
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Anubis_Helm
+    HeadMid: Dark_Blindfold
+  - Mob: JOB_HIGH_WIZARD_20472
+    Sprite: JOB_HIGH_WIZARD
+    Sex: Female
+    HairStyle: 4
+    HairColor: 0
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Sea_Otter_Cap
+    HeadMid: Hawk_Eyes01
+  - Mob: JOB_WHITESMITH_20473
+    Sprite: JOB_WHITESMITH
+    Sex: Male
+    HairStyle: 7
+    HairColor: 0
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Minstrel_Hat
+    HeadMid: Machoman_Glasses
+  - Mob: JOB_SNIPER_20474
+    Sprite: JOB_SNIPER
+    Sex: Female
+    HairStyle: 4
+    HairColor: 1
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cap
+    HeadLow: Choco_Donut_In_Mouth
+    Options:
+      Falcon: true
+  - Mob: JOB_ASSASSIN_CROSS_20475
+    Sprite: JOB_ASSASSIN_CROSS
+    Sex: Female
+    HairStyle: 4
+    HairColor: 7
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Munak_Turban
+    HeadLow: Rainbow_Scarf
+  - Mob: JOB_PALADIN_20476
+    Sprite: JOB_PALADIN
+    Sex: Female
+    HairStyle: 1
+    HairColor: 1
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Feather_Bonnet
+    HeadMid: Luxury_Sunglasses
+  - Mob: JOB_CHAMPION_20477
+    Sprite: JOB_CHAMPION
+    Sex: Male
+    HairStyle: 3
+    HairColor: 1
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Centimental_Flower
+  - Mob: JOB_PROFESSOR_20478
+    Sprite: JOB_PROFESSOR
+    Sex: Male
+    HairStyle: 1
+    HairColor: 8
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Bongun_Hat
+    HeadMid: Sunglasses
+  - Mob: JOB_STALKER_20479
+    Sprite: JOB_STALKER
+    Sex: Female
+    HairStyle: 3
+    HairColor: 4
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Banana_Hat
+    HeadLow: Centimental_Leaf
+  - Mob: JOB_CREATOR_20480
+    Sprite: JOB_CREATOR
+    Sex: Female
+    HairStyle: 6
+    HairColor: 8
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Skull_Cap
+    HeadLow: Choco_Donut_In_Mouth
+  - Mob: JOB_CLOWN_20481
+    Sprite: JOB_CLOWN
+    Sex: Female
+    HairStyle: 2
+    HairColor: 2
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Classic_Hat
+    HeadLow: Gang_Scarf
+  - Mob: JOB_GYPSY_20482
+    Sprite: JOB_GYPSY
+    Sex: Male
+    HairStyle: 3
+    HairColor: 7
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Biretta
+    HeadLow: Romantic_White_Flower
+  - Mob: JOB_NOVICE_20483
+    Sprite: JOB_NOVICE
+    Sex: Female
+    HairStyle: 0
+    HairColor: 5
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Magestic_Goat
+    HeadMid: Ear_Of_Devil's_Wing
+  - Mob: JOB_SWORDMAN_20484
+    Sprite: JOB_SWORDMAN
+    Sex: Female
+    HairStyle: 0
+    HairColor: 0
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Sea_Otter_Cap
+    HeadMid: Blinker
+  - Mob: JOB_MAGE_20485
+    Sprite: JOB_MAGE
+    Sex: Female
+    HairStyle: 0
+    HairColor: 6
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Morrigane's_Helm
+    HeadMid: Elven_Ears_
+  - Mob: JOB_ARCHER_20486
+    Sprite: JOB_ARCHER
+    Sex: Male
+    HairStyle: 1
+    HairColor: 8
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Circlet
+    HeadLow: Pencil_In_Mouth
+  - Mob: JOB_ACOLYTE_20487
+    Sprite: JOB_ACOLYTE
+    Sex: Female
+    HairStyle: 1
+    HairColor: 5
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Detective_Hat
+    HeadLow: Pencil_In_Mouth
+  - Mob: JOB_MERCHANT_20488
+    Sprite: JOB_MERCHANT
+    Sex: Male
+    HairStyle: 1
+    HairColor: 0
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Biretta
+    HeadMid: Machoman_Glasses
+  - Mob: JOB_THIEF_20489
+    Sprite: JOB_THIEF
+    Sex: Male
+    HairStyle: 7
+    HairColor: 8
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cowboy_Hat
+    HeadMid: Hawk_Eyes01
+  - Mob: JOB_KNIGHT_20490
+    Sprite: JOB_KNIGHT
+    Sex: Female
+    HairStyle: 2
+    HairColor: 6
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Spinx_Helm
+    HeadMid: Blinker
+  - Mob: JOB_PRIEST_20491
+    Sprite: JOB_PRIEST
+    Sex: Male
+    HairStyle: 0
+    HairColor: 7
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Magni_Cap
+    HeadMid: Luxury_Sunglasses
+  - Mob: JOB_WIZARD_20492
+    Sprite: JOB_WIZARD
+    Sex: Male
+    HairStyle: 1
+    HairColor: 4
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Circlet
+    HeadLow: Pierrot_Nose
+  - Mob: JOB_BLACKSMITH_20493
+    Sprite: JOB_BLACKSMITH
+    Sex: Male
+    HairStyle: 0
+    HairColor: 0
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Alice_Doll
+    HeadMid: Ear_Of_Angel's_Wing
+  - Mob: JOB_HUNTER_20494
+    Sprite: JOB_HUNTER
+    Sex: Male
+    HairStyle: 1
+    HairColor: 7
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Detective_Hat
+    HeadLow: Cigar
+    Options:
+      Falcon: true
+  - Mob: JOB_ASSASSIN_20495
+    Sprite: JOB_ASSASSIN
+    Sex: Male
+    HairStyle: 6
+    HairColor: 7
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Magestic_Goat
+    HeadMid: Machoman_Glasses
+  - Mob: JOB_CRUSADER_20496
+    Sprite: JOB_CRUSADER
+    Sex: Female
+    HairStyle: 1
+    HairColor: 1
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Gemmed_Sallet
+    HeadMid: Dark_Blindfold
+  - Mob: JOB_MONK_20497
+    Sprite: JOB_MONK
+    Sex: Female
+    HairStyle: 6
+    HairColor: 3
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cap
+    HeadLow: Centimental_Flower
+  - Mob: JOB_SAGE_20498
+    Sprite: JOB_SAGE
+    Sex: Female
+    HairStyle: 6
+    HairColor: 4
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Egg_Shell
+    HeadMid: Pecopeco_Wing_Ears
+  - Mob: JOB_ROGUE_20499
+    Sprite: JOB_ROGUE
+    Sex: Female
+    HairStyle: 6
+    HairColor: 3
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Indian_Headband
+    HeadLow: Pierrot_Nose
+  - Mob: JOB_ALCHEMIST_20500
+    Sprite: JOB_ALCHEMIST
+    Sex: Male
+    HairStyle: 8
+    HairColor: 2
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Bongun_Hat
+    HeadLow: Pencil_In_Mouth
+  - Mob: JOB_BARD_20501
+    Sprite: JOB_BARD
+    Sex: Female
+    HairStyle: 1
+    HairColor: 7
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Anubis_Helm
+    HeadMid: Pecopeco_Wing_Ears
+  - Mob: JOB_DANCER_20502
+    Sprite: JOB_DANCER
+    Sex: Female
+    HairStyle: 5
+    HairColor: 4
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Pierrot_Nose
+  - Mob: JOB_LORD_KNIGHT_20503
+    Sprite: JOB_LORD_KNIGHT
+    Sex: Male
+    HairStyle: 1
+    HairColor: 0
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Sahkkat
+    HeadLow: Rainbow_Scarf
+  - Mob: JOB_HIGH_PRIEST_20504
+    Sprite: JOB_HIGH_PRIEST
+    Sex: Male
+    HairStyle: 0
+    HairColor: 4
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Soldier_Hat
+    HeadMid: Pecopeco_Wing_Ears
+  - Mob: JOB_HIGH_WIZARD_20505
+    Sprite: JOB_HIGH_WIZARD
+    Sex: Male
+    HairStyle: 4
+    HairColor: 1
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Biretta
+    HeadMid: Sunglasses
+  - Mob: JOB_WHITESMITH_20506
+    Sprite: JOB_WHITESMITH
+    Sex: Female
+    HairStyle: 0
+    HairColor: 7
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Mottled_Egg_Shell
+    HeadMid: Sunglasses
+  - Mob: JOB_SNIPER_20507
+    Sprite: JOB_SNIPER
+    Sex: Male
+    HairStyle: 5
+    HairColor: 2
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Egg_Shell
+    HeadMid: Pecopeco_Wing_Ears
+    Options:
+      Falcon: true
+  - Mob: JOB_ASSASSIN_CROSS_20508
+    Sprite: JOB_ASSASSIN_CROSS
+    Sex: Male
+    HairStyle: 8
+    HairColor: 4
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Valkyrie_Helm
+    HeadMid: Luxury_Sunglasses
+  - Mob: JOB_PALADIN_20509
+    Sprite: JOB_PALADIN
+    Sex: Female
+    HairStyle: 3
+    HairColor: 3
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Biretta
+    HeadLow: Rainbow_Scarf
+  - Mob: JOB_CHAMPION_20510
+    Sprite: JOB_CHAMPION
+    Sex: Male
+    HairStyle: 1
+    HairColor: 6
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Dragon_Skull
+    HeadMid: Pecopeco_Wing_Ears
+  - Mob: JOB_PROFESSOR_20511
+    Sprite: JOB_PROFESSOR
+    Sex: Female
+    HairStyle: 2
+    HairColor: 6
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Mottled_Egg_Shell
+    HeadLow: Centimental_Leaf
+  - Mob: JOB_STALKER_20512
+    Sprite: JOB_STALKER
+    Sex: Male
+    HairStyle: 4
+    HairColor: 5
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Sea_Otter_Cap
+    HeadMid: Luxury_Sunglasses
+  - Mob: JOB_CREATOR_20513
+    Sprite: JOB_CREATOR
+    Sex: Male
+    HairStyle: 8
+    HairColor: 4
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Hunting_Cap
+    HeadMid: Opera_Ghost_Mask
+  - Mob: JOB_CLOWN_20514
+    Sprite: JOB_CLOWN
+    Sex: Female
+    HairStyle: 0
+    HairColor: 0
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Bongun_Hat
+    HeadLow: Antique_Pipe
+  - Mob: JOB_GYPSY_20515
+    Sprite: JOB_GYPSY
+    Sex: Female
+    HairStyle: 7
+    HairColor: 5
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Star_Sparkling
+    HeadLow: Romantic_White_Flower
+  - Mob: JOB_NOVICE_20516
+    Sprite: JOB_NOVICE
+    Sex: Female
+    HairStyle: 4
+    HairColor: 6
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Ayothaya_Hat
+    HeadLow: Centimental_Flower
+  - Mob: JOB_SWORDMAN_20517
+    Sprite: JOB_SWORDMAN
+    Sex: Female
+    HairStyle: 1
+    HairColor: 5
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cowboy_Hat
+    HeadMid: Opera_Ghost_Mask
+  - Mob: JOB_MAGE_20518
+    Sprite: JOB_MAGE
+    Sex: Male
+    HairStyle: 6
+    HairColor: 4
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Viking_Helm
+    HeadLow: Antique_Pipe
+  - Mob: JOB_ARCHER_20519
+    Sprite: JOB_ARCHER
+    Sex: Male
+    HairStyle: 6
+    HairColor: 5
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Gang_Scarf
+  - Mob: JOB_ACOLYTE_20520
+    Sprite: JOB_ACOLYTE
+    Sex: Male
+    HairStyle: 1
+    HairColor: 7
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Star_Sparkling
+    HeadMid: Hawk_Eyes01
+  - Mob: JOB_MERCHANT_20521
+    Sprite: JOB_MERCHANT
+    Sex: Female
+    HairStyle: 8
+    HairColor: 3
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cowboy_Hat
+    HeadMid: Opera_Ghost_Mask
+  - Mob: JOB_THIEF_20522
+    Sprite: JOB_THIEF
+    Sex: Female
+    HairStyle: 3
+    HairColor: 7
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Sombrero
+    HeadLow: Fish_In_Mouth
+  - Mob: JOB_KNIGHT_20523
+    Sprite: JOB_KNIGHT
+    Sex: Female
+    HairStyle: 2
+    HairColor: 6
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cap
+    HeadMid: Ear_Of_Angel's_Wing
+    Options:
+      Riding: true
+  - Mob: JOB_PRIEST_20524
+    Sprite: JOB_PRIEST
+    Sex: Female
+    HairStyle: 8
+    HairColor: 3
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Skull_Cap
+    HeadMid: Hawk_Eyes01
+  - Mob: JOB_WIZARD_20525
+    Sprite: JOB_WIZARD
+    Sex: Female
+    HairStyle: 3
+    HairColor: 4
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Star_Sparkling
+    HeadMid: Opera_Ghost_Mask
+  - Mob: JOB_BLACKSMITH_20526
+    Sprite: JOB_BLACKSMITH
+    Sex: Male
+    HairStyle: 1
+    HairColor: 3
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Egg_Shell
+    HeadMid: Pecopeco_Wing_Ears
+  - Mob: JOB_HUNTER_20527
+    Sprite: JOB_HUNTER
+    Sex: Female
+    HairStyle: 3
+    HairColor: 3
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Helm_Of_Angel
+    HeadLow: Pierrot_Nose
+    Options:
+      Falcon: true
+  - Mob: JOB_ASSASSIN_20528
+    Sprite: JOB_ASSASSIN
+    Sex: Female
+    HairStyle: 0
+    HairColor: 4
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Beret
+    HeadMid: Machoman_Glasses
+  - Mob: JOB_CRUSADER_20529
+    Sprite: JOB_CRUSADER
+    Sex: Male
+    HairStyle: 6
+    HairColor: 7
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Centimental_Leaf
+    Options:
+      Riding: true
+  - Mob: JOB_MONK_20530
+    Sprite: JOB_MONK
+    Sex: Male
+    HairStyle: 6
+    HairColor: 5
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Detective_Hat
+    HeadMid: Ear_Of_Angel's_Wing
+  - Mob: JOB_SAGE_20531
+    Sprite: JOB_SAGE
+    Sex: Female
+    HairStyle: 2
+    HairColor: 7
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cowboy_Hat
+    HeadMid: Luxury_Sunglasses
+  - Mob: JOB_ROGUE_20532
+    Sprite: JOB_ROGUE
+    Sex: Male
+    HairStyle: 2
+    HairColor: 3
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadLow: Smoking_Pipe
+  - Mob: JOB_ALCHEMIST_20533
+    Sprite: JOB_ALCHEMIST
+    Sex: Female
+    HairStyle: 2
+    HairColor: 8
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Red_Wizardry_Hat
+    HeadMid: Blinker
+  - Mob: JOB_BARD_20534
+    Sprite: JOB_BARD
+    Sex: Female
+    HairStyle: 7
+    HairColor: 6
+    ClothColor: 2
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Gemmed_Crown
+    HeadLow: Pierrot_Nose
+  - Mob: JOB_DANCER_20535
+    Sprite: JOB_DANCER
+    Sex: Female
+    HairStyle: 8
+    HairColor: 2
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Anubis_Helm
+    HeadMid: Pecopeco_Wing_Ears
+  - Mob: JOB_LORD_KNIGHT_20536
+    Sprite: JOB_LORD_KNIGHT
+    Sex: Male
+    HairStyle: 8
+    HairColor: 1
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Hunting_Cap
+    HeadLow: Toast_C
+  - Mob: JOB_HIGH_PRIEST_20537
+    Sprite: JOB_HIGH_PRIEST
+    Sex: Female
+    HairStyle: 0
+    HairColor: 3
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Cowboy_Hat
+    HeadMid: Machoman_Glasses
+  - Mob: JOB_HIGH_WIZARD_20538
+    Sprite: JOB_HIGH_WIZARD
+    Sex: Female
+    HairStyle: 2
+    HairColor: 6
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Gemmed_Sallet
+    HeadMid: Elven_Ears_
+  - Mob: JOB_WHITESMITH_20539
+    Sprite: JOB_WHITESMITH
+    Sex: Male
+    HairStyle: 0
+    HairColor: 8
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Valkyrie_Helm
+    HeadMid: Ear_Of_Devil's_Wing
+  - Mob: JOB_SNIPER_20540
+    Sprite: JOB_SNIPER
+    Sex: Female
+    HairStyle: 4
+    HairColor: 5
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Hat_Of_Cook
+    HeadLow: Antique_Pipe
+    Options:
+      Falcon: true
+  - Mob: JOB_ASSASSIN_CROSS_20541
+    Sprite: JOB_ASSASSIN_CROSS
+    Sex: Female
+    HairStyle: 7
+    HairColor: 6
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Feather_Beret
+    HeadMid: Elven_Ears_
+  - Mob: JOB_PALADIN_20542
+    Sprite: JOB_PALADIN
+    Sex: Female
+    HairStyle: 2
+    HairColor: 5
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Fricca_Circlet
+    HeadMid: Pecopeco_Wing_Ears
+  - Mob: JOB_CHAMPION_20543
+    Sprite: JOB_CHAMPION
+    Sex: Female
+    HairStyle: 7
+    HairColor: 4
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Goibne's_Helmet
+    HeadLow: Pencil_In_Mouth
+  - Mob: JOB_PROFESSOR_20544
+    Sprite: JOB_PROFESSOR
+    Sex: Male
+    HairStyle: 3
+    HairColor: 7
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Galapago_Cap
+    HeadMid: Ear_Of_Devil's_Wing
+  - Mob: JOB_STALKER_20545
+    Sprite: JOB_STALKER
+    Sex: Female
+    HairStyle: 0
+    HairColor: 8
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Star_Sparkling
+    HeadLow: Smoking_Pipe
+  - Mob: JOB_CREATOR_20546
+    Sprite: JOB_CREATOR
+    Sex: Male
+    HairStyle: 3
+    HairColor: 2
+    ClothColor: 1
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Gemmed_Sallet
+    HeadMid: Blinker
+  - Mob: JOB_CLOWN_20547
+    Sprite: JOB_CLOWN
+    Sex: Male
+    HairStyle: 3
+    HairColor: 0
+    ClothColor: 0
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Oldman's_Romance
+    HeadMid: Pecopeco_Wing_Ears
+  - Mob: JOB_GYPSY_20548
+    Sprite: JOB_GYPSY
+    Sex: Male
+    HairStyle: 1
+    HairColor: 4
+    ClothColor: 3
+    Weapon: Gladius
+    Shield: Guard
+    HeadTop: Western_Grace
+    HeadLow: Antique_Pipe
+#END_NPCBUILDER_MOBS
+
+# Easter Event Monsters
+#  - Mob: MOROCC_3
+#    Sprite: DOPPELGANGER
+#  - Mob: MOROCC_4
+#    Sprite: ECLIPSE
+
+  # rAthena Dev Team
+  # Valaris
+#  - Mob: BOW_GUARDIAN_
+#    Sprite: JOB_ASSASSIN_CROSS
+#    Sex: Male
+#    HairStyle: 1
+#    HairColor: 1
+#    ClothColor: 1
+#    Weapon: Jamadhar
+#    HeadTop: Sahkkat
+#    HeadMid: Sunglasses
+#    HeadLow: Cigar
+#    Options:
+#      Falcon: true
+  # Valaris Worshiper
+#  - Mob: E_CONDOR
+#    Sprite: JOB_THIEF
+#    Sex: Male
+#    HairStyle: 1
+#    HairColor: 1
+#    ClothColor: 1
+#    Weapon: Gladius
+#    Shield: Guard
+#    HeadTop: Sahkkat
+#    HeadMid: Sunglasses
+#    HeadLow: Cigar
+  # MC Cameri
+#  - Mob: E_TREASURE1
+#    Sprite: JOB_CRUSADER
+#    Sex: Male
+#    HairStyle: 6
+#    HairColor: 6
+#    ClothColor: 3
+#    Weapon: Sword
+#    Shield: Shield
+#    Options:
+#      Riding: true
+  # Poki#3
+#  - Mob: E_TREASURE2
+#    Sprite: JOB_SNIPER
+#    Sex: Male
+#    HairStyle: 21
+#    Weapon: Bow_Of_Rudra
+#    HeadTop: Boy's_Cap
+#    HeadMid: Takius_Blindfold
+#    HeadLow: Centimental_Leaf
+#    Options:
+#      Falcon: true
+  # Sentry
+#  - Mob: BOMBPORING
+#    Sprite: KNIGHT_GUARDIAN
+
+  # iRO Halloween Event 2009
+#  - Mob: EP14_MORS_BOSSB
+#    Sprite: ZOMBIE
+#  - Mob: EP14_MORS_MOB1
+#    Sprite: GHOUL
+#  - Mob: EP14_MORS_MOB2
+#    Sprite: ZOMBIE_MASTER
+
+  # iRO Halloween Event 2009
+#  - Mob: EP14_3_DEATH_B_MOB2
+#    Sprite: WHISPER
+#  - Mob: EP14_3_DEATH_B_MOB3
+#    Sprite: DARK_LORD
