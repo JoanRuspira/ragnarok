@@ -285,9 +285,12 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 		case SM_BASH:
 			SwordsmanAdditionalEffectsCalculator::apply_bash_additional_effect(src, bl, skill_lv);
 			break;
-		case KN_SPEARSTAB:
-			SwordsmanAdditionalEffectsCalculator::apply_spear_stab_additional_effect2(src, bl, skill_lv);
+		case LK_HEADCRUSH:
+			SwordsmanAdditionalEffectsCalculator::apply_traumatic_blow_additional_effect(src, bl, skill_lv);
 			break;
+		// case KN_SPEARSTAB:
+		// 	SwordsmanAdditionalEffectsCalculator::apply_spear_stab_additional_effect(src, bl, skill_lv);
+		// 	break;
 		case TF_POISON:
 			ThiefAdditionalEffectsCalculator::apply_envenom_additional_effect(src, bl, skill_lv);
 			break;

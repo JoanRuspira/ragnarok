@@ -43,7 +43,7 @@ int ArcherSkillAtkRatioCalculator::calculate_double_strafe_atk_ratio(int base_lv
 		ratio = 52;
 		break;
 	case 5:
-		ratio = 90;
+		ratio = 100;
 		break;
 	}
 	return ratio;

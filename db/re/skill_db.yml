@@ -1952,6 +1952,7 @@ Body:
     Duration2: 10000
     Requires:
       SpCost: 20
+      State: Cart
   - Id: 51
     Name: TF_HIDING
     Description: Hiding
@@ -10717,7 +10718,7 @@ Body:
     AfterCastActDelay: 500
     Duration2: 120000
     Requires:
-      SpCost: 23
+      SpCost: 14
   - Id: 399
     Name: LK_JOINTBEAT
     Description: Vital Strike

@@ -2816,6 +2816,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 	switch(skill_id) {
 		case SM_BASH:
 		case SM_MAGNUM:
+		case LK_HEADCRUSH:
 		case KN_SPEARSTAB:
 			skillratio += SwordsmanSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv);
 			break;
@@ -3067,9 +3068,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 #else
 			skillratio += 100 + 100 * skill_lv;
 #endif
-			break;
-		case LK_HEADCRUSH:
-			skillratio += 40 * skill_lv;
 			break;
 		case LK_JOINTBEAT:
 			skillratio += 10 * skill_lv - 50;

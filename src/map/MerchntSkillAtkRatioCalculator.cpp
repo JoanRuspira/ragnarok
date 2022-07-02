@@ -17,7 +17,7 @@ int MerchntSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 		return calculate_cart_revolution_atk_ratio(skill_lv);
 		break;
 	case MC_FIREWORKS:
-		return calculate_cart_fireworks_atk_ratio(skill_lv);
+		return calculate_cart_fireworks_atk_ratio(skill_lv, src);
 		break;
 	default:
 		return 0;
@@ -34,21 +34,21 @@ int MerchntSkillAtkRatioCalculator::calculate_mammonite_atk_ratio(int skill_lv)
 {
 	int ratio = 0;
 	switch (skill_lv) {
-	case 1:
-		ratio = -30;
-		break;
-	case 2:
-		ratio = 40;
-		break;
-	case 3:
-		ratio = 110;
-		break;
-	case 4:
-		ratio = 180;
-		break;
-	case 5:
-		ratio = 250;
-		break;
+		case 1:
+			ratio = 80;
+			break;
+		case 2:
+			ratio = 150;
+			break;
+		case 3:
+			ratio = 230;
+			break;
+		case 4:
+			ratio = 290;
+			break;
+		case 5:
+			ratio = 350;
+			break;
 	}
 	return ratio;
 }
@@ -57,44 +57,47 @@ int MerchntSkillAtkRatioCalculator::calculate_cart_revolution_atk_ratio(int skil
 {
 	int ratio = 0;
 	switch (skill_lv) {
-	case 1:
-		ratio = 30;
-		break;
-	case 2:
-		ratio = 100;
-		break;
-	case 3:
-		ratio = 180;
-		break;
-	case 4:
-		ratio = 240;
-		break;
-	case 5:
-		ratio = 300;
-		break;
+		case 1:
+			ratio = 30;
+			break;
+		case 2:
+			ratio = 100;
+			break;
+		case 3:
+			ratio = 180;
+			break;
+		case 4:
+			ratio = 240;
+			break;
+		case 5:
+			ratio = 300;
+			break;
 	}
 	return ratio;
 }
 
-int MerchntSkillAtkRatioCalculator::calculate_cart_fireworks_atk_ratio(int skill_lv)
+int MerchntSkillAtkRatioCalculator::calculate_cart_fireworks_atk_ratio(int skill_lv, struct block_list* src)
 {
 	int ratio = 0;
+	struct status_data *status;
+	status = status_get_status_data(src);
+	
 	switch (skill_lv) {
-	case 1:
-		ratio = 30;
-		break;
-	case 2:
-		ratio = 100;
-		break;
-	case 3:
-		ratio = 180;
-		break;
-	case 4:
-		ratio = 240;
-		break;
-	case 5:
-		ratio = 300;
-		break;
-	}
+		case 1:
+			ratio = -71 + (status->int_/3);
+			break;
+		case 2:
+			ratio = -42 + (status->int_/3);
+			break;
+		case 3:
+			ratio = -13 + (status->int_/3);
+			break;
+		case 4:
+			ratio = 16 + (status->int_/3);
+			break;
+		case 5:
+			ratio = 45 + (status->int_/3);
+			break;
+		}
 	return ratio;
 }

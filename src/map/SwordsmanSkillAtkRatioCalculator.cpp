@@ -18,7 +18,11 @@ int SwordsmanSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 			break;
 		case KN_SPEARSTAB:
 			add_spear_stab_special_effects(src, target);
-			return calculate_spear_stab_atk_ratio(skill_lv);
+			return calculate_spear_stab_atk_ratio(skill_lv, target);
+			break;
+		case LK_HEADCRUSH:
+			add_traumatic_blow_special_effects(src, target);
+			calculate_traumatic_blow_atk_ratio(skill_lv);
 			break;
 		default:
 			return 0;
@@ -29,8 +33,13 @@ int SwordsmanSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 void SwordsmanSkillAtkRatioCalculator::add_spear_stab_special_effects(struct block_list* src, struct block_list *target)
 {
 	clif_specialeffect(src, EF_BASH3D, AREA);
-	// clif_specialeffect(target, EF_SPINEDBODY, AREA);
-	clif_specialeffect(target, EF_RED_HIT, AREA);
+	clif_specialeffect(target, EF_MADNESS_RED, AREA);
+}
+
+
+void SwordsmanSkillAtkRatioCalculator::add_traumatic_blow_special_effects(struct block_list* src, struct block_list *target)
+{
+	clif_specialeffect(target, EF_MADNESS_RED, AREA);
 }
 
 int SwordsmanSkillAtkRatioCalculator::calculate_bash_atk_ratio(int skill_lv)
@@ -79,7 +88,42 @@ int SwordsmanSkillAtkRatioCalculator::calculate_magnum_break_atk_ratio(int skill
 	return ratio;
 }
 
-int SwordsmanSkillAtkRatioCalculator::calculate_spear_stab_atk_ratio(int skill_lv)
+int SwordsmanSkillAtkRatioCalculator::calculate_spear_stab_atk_ratio(int skill_lv, struct block_list *target)
+{
+	int ratio = 0;
+	struct status_change *target_status;
+
+	target_status = status_get_sc(target);
+	switch (skill_lv) {
+		case 1:
+			ratio = 30;
+			break;
+		case 2:
+			ratio = 100;
+			break;
+		case 3:
+			ratio = 180;
+			if (target_status->data[SC_BLEEDING]){
+				ratio = 200;
+			}
+			break;
+		case 4:
+			ratio = 240;
+			if (target_status->data[SC_BLEEDING]){
+				ratio = 300;
+			}
+			break;
+		case 5:
+			ratio = 300;
+			if (target_status->data[SC_BLEEDING]){
+				ratio = 400;
+			}
+			break;
+	}
+	return ratio;
+}
+
+int SwordsmanSkillAtkRatioCalculator::calculate_traumatic_blow_atk_ratio(int skill_lv)
 {
 	int ratio = 0;
 	switch (skill_lv) {

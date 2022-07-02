@@ -18,6 +18,6 @@ public:
 private:
 	static int calculate_mammonite_atk_ratio(int skill_lv);
 	static int calculate_cart_revolution_atk_ratio(int skill_lv);
-	static int calculate_cart_fireworks_atk_ratio(int skill_lv);
+	static int calculate_cart_fireworks_atk_ratio(int skill_lv, struct block_list* src);
 	
 };

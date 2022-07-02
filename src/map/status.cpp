@@ -4378,16 +4378,10 @@ int status_calc_pc_sub(struct map_session_data* sd, enum e_status_calc_opt opt)
 // ----- HIT CALCULATION -----
 
 	// Absolute modifiers from passive skills
-#ifndef RENEWAL
-	if((skill=pc_checkskill(sd,BS_WEAPONRESEARCH))>0)
-		base_status->hit += skill*2;
-#endif
+
 	if((skill=pc_checkskill(sd,AC_VULTURE))>0) {
-#ifndef RENEWAL
-		base_status->hit += skill;
-#endif
 		if(sd->status.weapon == W_BOW)
-			base_status->rhw.range += skill;
+			base_status->rhw.range += skill*2;
 	}
 	if(sd->status.weapon >= W_REVOLVER && sd->status.weapon <= W_GRENADE) {
 		if((skill=pc_checkskill(sd,GS_SINGLEACTION))>0)
@@ -8578,6 +8572,7 @@ static int status_get_sc_interval(enum sc_type type)
 	switch (type) {
 		case SC_POISON:
 		case SC_LEECHESEND:
+		case SC_BLEEDING:
 		case SC_DPOISON:
 		case SC_DEATHHURT:
 			return 1000;
@@ -8588,7 +8583,6 @@ static int status_get_sc_interval(enum sc_type type)
 			return 4000;
 		case SC_STONE:
 			return 5000;
-		case SC_BLEEDING:
 		case SC_TOXIN:
 			return 10000;
 		default:
@@ -13970,7 +13964,6 @@ TIMER_FUNC(status_change_timer){
 
 	case SC_POISON:
 	case SC_DPOISON:
-		ShowStatus("Poison.\n");
 		if (sce->val4 >= 0 && !sc->data[SC_SLOWPOISON]) {
 			unsigned int damage = 0;
 			if (sd)
@@ -13983,7 +13976,6 @@ TIMER_FUNC(status_change_timer){
 		break;
 
 	case SC_BLEEDING:
-		ShowStatus("Bleeding.\n");
 		if (sce->val4 >= 0) {
 			unsigned int damage = 0;
 			if (sd)
@@ -13994,15 +13986,6 @@ TIMER_FUNC(status_change_timer){
 				status_zap(bl, damage, 0);		
 		}
 		break;
-		// if (sce->val4 >= 0) {
-		// 	int64 damage = rnd() % 600 + 200;
-		// 	if (!sd && damage >= status->hp)
-		// 		damage = status->hp - 1; // No deadly damage for monsters
-		// 	map_freeblock_lock();
-		// 	dounlock = true;
-		// 	status_zap(bl, damage, 0);
-		// }
-		// break;
 
 	case SC_BURNING:
 		if (sce->val4 >= 0) {

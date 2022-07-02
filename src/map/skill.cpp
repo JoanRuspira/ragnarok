@@ -3606,6 +3606,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case MER_CRASH:
 	case SM_BASH:
 	case MS_BASH:
+	case KN_SPEARSTAB:
 	case MC_MAMMONITE:
 	case TF_DOUBLE:
 	case AC_DOUBLE:
@@ -4250,9 +4251,9 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 		}
 		break;
 
-	case KN_SPEARSTAB:
-		SwordsmanAdditionalEffectsCalculator::apply_spear_stab_additional_effect(src, bl, skill_lv, flag, skill_area_temp, tick);
-		break;
+	// case KN_SPEARSTAB:
+	// 	SwordsmanAdditionalEffectsCalculator::apply_spear_stab_additional_effect(src, bl, skill_lv, flag, skill_area_temp, tick);
+	// 	break;
 
 	case TK_TURNKICK:
 	case MO_BALKYOUNG: //Active part of the attack. Skill-attack [Skotlex]
