@@ -1,0 +1,315 @@
+//===== Script =======================================
+// Card Removal NPCs
+//====================================================
+
+-	script	Merchant Guildmaster#mrchgld::Mrchgld	-1,{
+	if (BaseClass == EAJ_NOVICE) {
+		mes "[Merchant Guildmaster]";
+		mes "Good day! I am the merchant Guildmaster.";
+		mes "I train novices that meet the requirements";
+		mes "and allow men to become swordmen.";
+		next;
+		mes "[Merchant Guildmaster]";
+		mes "As a merchant you will gain new skills.";
+		mes "The requirements are:";
+		mes "- Being a Novice.";
+		mes "- Being Job level 10.";
+		mes "- Having used all your skill points.";
+		next;
+		mes "[Merchant Guildmaster]";
+		mes "Do you want to become a merchant?";
+		next;
+		switch(select("Yes:No")) {
+			case 1:
+				mes "[Merchant Guildmaster]";
+				mes "Good! Let me see if you pass our requirements...";
+				next;
+				if (JobLevel < 10) {
+					mes "[Merchant Guildmaster]";
+					mes "Hmm... Your job level does not meet our requirements.";
+					mes "You need to be more experienced before being a merchant.";
+					close;
+				}
+				if (SkillPoint) {
+					mes "[Merchant Guildmaster]";
+					mes "Looks like you have not used all your skill points.";
+					mes "Use them and I'll be able to make you a merchant.";
+					close;
+				}
+				mes "[Merchant Guildmaster]";
+				mes "Okay! Looks like you pass all of them!";
+				mes "You are allowed to join the merchant guild.";
+				mes "Congratulations!";
+				jobchange Job_Merchant;
+				specialeffect2 EF_ANGEL2;
+				specialeffect2 EF_ELECTRIC;
+				close;
+			case 2:
+				mes "[Merchant Guildmaster]";
+				mes "Ah! Let me know if you change your mind.";
+				mes "We are always looking for new adventurers";
+				mes "to join the guild.";
+				close;
+		}
+		
+	}
+
+	if (BaseJob == Job_Merchant) {
+		mes "[Merchant Guildmaster]";
+		mes "Hi fellow merchant!";
+		mes "Are you thinking about your next job?";
+		next;
+		mes "[Merchant Guildmaster]";
+		mes "You can become a Blacksmith or join the Alchemist guild to improve your skills.";
+		next;
+		mes "[Merchant Guildmaster]";
+		mes "The Blacksmith Guild is in Einbroch, and the Alchemist Guild is in Aldebaran.";
+		mes "Go there when you think you have enough experience.";
+		close;
+	}
+
+	if (BaseJob == Job_Blacksmith || BaseJob == Job_Alchemist || BaseJob == Job_Whitesmith || BaseJob == Job_Creator) {
+		mes "[Merchant Guildmaster]";
+		mes "Ah! An experienced member of the guild!";
+		mes "Are you here to help train the new members?";
+		close;
+	}
+
+	mes "[Merchant Guildmaster]";
+	mes "Welcome to the merchant guild. We accept applications from novices that meet our requirements.";
+	close;
+}
+
+
+-	script	Merchant Cart Renter#mrchgldcart::MrchgldCart	-1,{
+	mes "[Cart Service Merchant]";
+	mes "Hi, we are aware that you probably have a need to collect everything you find as a merchant.";
+	next;
+	mes "[Cart Service Merchant]";
+	mes "That is why the Merchant Guild rents free carts to all merchants that want one.";
+	next;
+
+	if( (BaseClass == Job_Merchant ) ) {
+		if( checkcart() != 0 ) {
+			mes "[Cart Service Merchant]";
+			mes "Ah, you have a cart already!";
+			mes "Do you want to change it?";
+			next;
+			switch(select("Yes:No")) {
+				case 1:
+					mes "[Cart Service Merchant]";
+					mes "Which cart do you want?";
+					next;
+					switch(select("^767f82Lv.10^000000 - Stone Cart:^767f82Lv.10^000000 - Wooden Cart:^767f82Lv.20^000000 - Sturdy Wooden Cart:^767f82Lv.30^000000 - Full Wooden Cart:^767f82Lv.40^000000 - Flower Cart:^767f82Lv.50^000000 - Roofed Cart:^767f82Lv.60^000000 - Tent-Cart:^767f82Lv.70^000000 - Banner Cart:^767f82Lv.80^000000 - Hodremlin Cart:^767f82Lv.90^000000 - Sun God Cart")) {
+						case 1:
+							mes "[Cart Service Merchant]";
+							mes "Ok then, there you go!";
+							setcart 1;
+							close;
+						case 2:
+							mes "[Merchant Gumaster]";
+							mes "Ok then, there you go!";
+							setcart 2;
+							close;
+						case 3:
+							if (BaseLevel < 20) {
+								mes "[Cart Service Merchant]";
+								mes "You don't meet the requirements to rent this cart...";
+								close;
+							}
+							mes "[Cart Service Merchant]";
+							mes "Ok then, there you go!";
+							setcart 4;
+							close;
+						case 4:
+							if (BaseLevel < 30) {
+								mes "[Cart Service Merchant]";
+								mes "You don't meet the requirements to rent this cart...";
+								close;
+							}
+							mes "[Cart Service Merchant]";
+							mes "Ok then, there you go!";
+							setcart 11;
+							close;
+						case 5:
+							if (BaseLevel < 40) {
+								mes "[Cart Service Merchant]";
+								mes "You don't meet the requirements to rent this cart...";
+								close;
+							}
+							mes "[Cart Service Merchant]";
+							mes "Ok then, there you go!";
+							setcart 3;
+							close;
+						case 6:
+							if (BaseLevel < 50) {
+								mes "[Cart Service Merchant]";
+								mes "You don't meet the requirements to rent this cart...";
+								close;
+							}
+							mes "[Cart Service Merchant]";
+							mes "Ok then, there you go!";
+							setcart 5;
+							close;
+						case 7:
+							if (BaseLevel < 60) {
+								mes "[Cart Service Merchant]";
+								mes "You don't meet the requirements to rent this cart...";
+								close;
+							}
+							mes "[Cart Service Merchant]";
+							mes "Ok then, there you go!";
+							setcart 6;
+							close;
+						case 8:
+							if (BaseLevel < 70) {
+								mes "[Cart Service Merchant]";
+								mes "You don't meet the requirements to rent this cart...";
+								close;
+							}
+							mes "[Cart Service Merchant]";
+							mes "Ok then, there you go!";
+							setcart 7;
+							close;
+						case 9:
+							if (BaseLevel < 80) {
+								mes "[Cart Service Merchant]";
+								mes "You don't meet the requirements to rent this cart...";
+								close;
+							}
+							mes "[Cart Service Merchant]";
+							mes "Ok then, there you go!";
+							setcart 8;
+							close;
+						case 10:
+							if (BaseLevel < 90) {
+								mes "[Cart Service Merchant]";
+								mes "You don't meet the requirements to rent this cart...";
+								close;
+							}
+							mes "[Cart Service Merchant]";
+							mes "Ok then, there you go!";
+							setcart 9;
+							close;
+					}	
+				case 2:
+					mes "[Cart Service Merchant]";
+					mes "Very well, come back if you change your mind.";
+					close;
+			}	
+		}
+
+		mes "[Cart Service Merchant]";
+		mes "Do you want to rent a cart?";
+		next;
+		switch(select("Yes:No")) {
+			case 1:
+				mes "[Cart Service Merchant]";
+				mes "Which cart do you want?";
+				next;
+				switch(select("^767f82Lv.10^000000 - Stone Cart:^767f82Lv.10^000000 - Wooden Cart:^767f82Lv.20^000000 - Sturdy Wooden Cart:^767f82Lv.30^000000 - Full Wooden Cart:^767f82Lv.40^000000 - Flower Cart:^767f82Lv.50^000000 - Roofed Cart:^767f82Lv.60^000000 - Tent-Cart:^767f82Lv.70^000000 - Banner Cart:^767f82Lv.80^000000 - Hodremlin Cart:^767f82Lv.90^000000 - Sun God Cart")) {
+					case 1:
+						mes "[Cart Service Merchant]";
+						mes "Ok then, there you go!";
+						setcart 1;
+						close;
+					case 2:
+						mes "[Merchant Gumaster]";
+						mes "Ok then, there you go!";
+						setcart 2;
+						close;
+					case 3:
+						if (BaseLevel < 20) {
+							mes "[Cart Service Merchant]";
+							mes "You don't meet the requirements to rent this cart...";
+							close;
+						}
+						mes "[Cart Service Merchant]";
+						mes "Ok then, there you go!";
+						setcart 4;
+						close;
+					case 4:
+						if (BaseLevel < 30) {
+							mes "[Cart Service Merchant]";
+							mes "You don't meet the requirements to rent this cart...";
+							close;
+						}
+						mes "[Cart Service Merchant]";
+						mes "Ok then, there you go!";
+						setcart 11;
+						close;
+					case 5:
+						if (BaseLevel < 40) {
+							mes "[Cart Service Merchant]";
+							mes "You don't meet the requirements to rent this cart...";
+							close;
+						}
+						mes "[Cart Service Merchant]";
+						mes "Ok then, there you go!";
+						setcart 3;
+						close;
+					case 6:
+						if (BaseLevel < 50) {
+							mes "[Cart Service Merchant]";
+							mes "You don't meet the requirements to rent this cart...";
+							close;
+						}
+						mes "[Cart Service Merchant]";
+						mes "Ok then, there you go!";
+						setcart 5;
+						close;
+					case 7:
+						if (BaseLevel < 60) {
+							mes "[Cart Service Merchant]";
+							mes "You don't meet the requirements to rent this cart...";
+							close;
+						}
+						mes "[Cart Service Merchant]";
+						mes "Ok then, there you go!";
+						setcart 6;
+						close;
+					case 8:
+						if (BaseLevel < 70) {
+							mes "[Cart Service Merchant]";
+							mes "You don't meet the requirements to rent this cart...";
+							close;
+						}
+						mes "[Cart Service Merchant]";
+						mes "Ok then, there you go!";
+						setcart 7;
+						close;
+					case 9:
+						if (BaseLevel < 80) {
+							mes "[Cart Service Merchant]";
+							mes "You don't meet the requirements to rent this cart...";
+							close;
+						}
+						mes "[Cart Service Merchant]";
+						mes "Ok then, there you go!";
+						setcart 8;
+						close;
+					case 10:
+						if (BaseLevel < 90) {
+							mes "[Cart Service Merchant]";
+							mes "You don't meet the requirements to rent this cart...";
+							close;
+						}
+						mes "[Cart Service Merchant]";
+						mes "Ok then, there you go!";
+						setcart 9;
+						close;
+				}	
+			case 2:
+				mes "[Cart Service Merchant]";
+				mes "Very well, come back if you change your mind.";
+				close;
+		}
+		
+	}
+	mes "[Cart Service Merchant]";
+	mes "Sorry, only merchants can benefit from renting a free cart here...";
+	close;
+}
+
+alberta_in,53,44,7	duplicate(Mrchgld)	Merchant Guildmaster#merchgld	10380
+alberta_in,68,51,5	duplicate(MrchgldCart)	Cart Service Merchant#mrchgldcart	900

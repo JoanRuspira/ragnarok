@@ -343,7 +343,6 @@ void initChangeTables(void)
 	add_sc( SM_BASH			, SC_STUN		);
 	set_sc( SM_PROVOKE		, SC_PROVOKE		, EFST_PROVOKE		, SCB_DEF|SCB_DEF2|SCB_BATK|SCB_WATK );
 	set_sc( SM_MAGNUM		, SC_WATK_ELEMENT	, EFST_WATK_ELEMENT	, SCB_NONE	);
-	set_sc( MC_FIREWORKS		, SC_WATK_ELEMENT	, EFST_WATK_ELEMENT	, SCB_NONE	);
 	set_sc( SM_ENDURE		, SC_ENDURE		, EFST_ENDURE		, SCB_MDEF|SCB_DSPD );
 	add_sc( MG_SIGHT		, SC_SIGHT		);
 	add_sc( MG_SAFETYWALL		, SC_SAFETYWALL		);
@@ -603,6 +602,7 @@ void initChangeTables(void)
 	set_sc( CG_MARIONETTE		, SC_MARIONETTE2	, EFST_MARIONETTE, SCB_STR|SCB_AGI|SCB_VIT|SCB_INT|SCB_DEX|SCB_LUK );
 	add_sc( LK_SPIRALPIERCE		, SC_STOP		);
 	add_sc( LK_HEADCRUSH		, SC_BLEEDING		);
+	add_sc( KN_SPEARSTAB		, SC_BLEEDING	);
 	set_sc( LK_JOINTBEAT		, SC_JOINTBEAT		, EFST_JOINTBEAT		, SCB_BATK|SCB_DEF2|SCB_SPEED|SCB_ASPD );
 	add_sc( HW_NAPALMVULCAN		, SC_CURSE		);
 	set_sc( PF_MINDBREAKER		, SC_MINDBREAKER	, EFST_MINDBREAKER	, SCB_MATK|SCB_MDEF2 );
@@ -4533,8 +4533,8 @@ int status_calc_pc_sub(struct map_session_data* sd, enum e_status_calc_opt opt)
 	if((skill=pc_checkskill(sd,CR_TRUST))>0)
 		sd->indexed_bonus.subele[ELE_HOLY] += skill*10;
 	if((skill=pc_checkskill(sd,BS_SKINTEMPER))>0) {
-		sd->indexed_bonus.subele[ELE_NEUTRAL] += skill;
-		sd->indexed_bonus.subele[ELE_FIRE] += skill*5;
+		sd->indexed_bonus.subele[ELE_NEUTRAL] += skill*4;
+		sd->indexed_bonus.subele[ELE_FIRE] += skill*8;
 	}
 	if((skill=pc_checkskill(sd,SA_DRAGONOLOGY))>0) {
 #ifdef RENEWAL
@@ -7455,8 +7455,8 @@ static unsigned short status_calc_speed(struct block_list *bl, struct status_cha
 	}
 
 	// GetSpeed()
-	if( sd && pc_iscarton(sd) )
-		speed += speed * (50 - 5 * pc_checkskill(sd,MC_PUSHCART)) / 100;
+	// if( sd && pc_iscarton(sd) )
+	// 	speed += speed * (50 - 5 * pc_checkskill(sd,MC_PUSHCART)) / 100;
 	if( sc->data[SC_PARALYSE] && sc->data[SC_PARALYSE]->val3 == 1 )
 		speed += speed * 50 / 100;
 	if( speed_rate != 100 )
@@ -13008,7 +13008,6 @@ int status_change_end_(struct block_list* bl, enum sc_type type, int tid, const 
 
 	sc = status_get_sc(bl);
 	status = status_get_status_data(bl);
-
 	if(type < 0 || type >= SC_MAX || !sc || !(sce = sc->data[type]))
 		return 0;
 
@@ -13971,6 +13970,7 @@ TIMER_FUNC(status_change_timer){
 
 	case SC_POISON:
 	case SC_DPOISON:
+		ShowStatus("Poison.\n");
 		if (sce->val4 >= 0 && !sc->data[SC_SLOWPOISON]) {
 			unsigned int damage = 0;
 			if (sd)
@@ -13978,20 +13978,31 @@ TIMER_FUNC(status_change_timer){
 			else
 				damage = (type == SC_DPOISON) ? 2 + status->max_hp / 100 : 2 + status->max_hp / 200;
 			if (status->hp > umax(status->max_hp / 4, damage)) // Stop damaging after 25% HP left.
-				status_zap(bl, damage, 0);
+				status_zap(bl, damage, 0);		
 		}
 		break;
 
 	case SC_BLEEDING:
+		ShowStatus("Bleeding.\n");
 		if (sce->val4 >= 0) {
-			int64 damage = rnd() % 600 + 200;
-			if (!sd && damage >= status->hp)
-				damage = status->hp - 1; // No deadly damage for monsters
-			map_freeblock_lock();
-			dounlock = true;
-			status_zap(bl, damage, 0);
+			unsigned int damage = 0;
+			if (sd)
+				damage = 2 + status->max_hp * 3 / 200;
+			else
+				damage = 2 + status->max_hp / 200;
+			if (status->hp > umax(status->max_hp / 4, damage)) // Stop damaging after 25% HP left.
+				status_zap(bl, damage, 0);		
 		}
 		break;
+		// if (sce->val4 >= 0) {
+		// 	int64 damage = rnd() % 600 + 200;
+		// 	if (!sd && damage >= status->hp)
+		// 		damage = status->hp - 1; // No deadly damage for monsters
+		// 	map_freeblock_lock();
+		// 	dounlock = true;
+		// 	status_zap(bl, damage, 0);
+		// }
+		// break;
 
 	case SC_BURNING:
 		if (sce->val4 >= 0) {

@@ -6,8 +6,7 @@
 	if (BaseClass == EAJ_NOVICE) {
 		mes "[Swordman Guildmaster]";
 		mes "Good day! I am the swordman Guildmaster.";
-		mes "I train novices that meet the requirements";
-		mes "and allow men to become swordmen.";
+		mes "I train novices that meet the requirements and allow men to become swordmen.";
 		next;
 		mes "[Swordman Guildmaster]";
 		mes "As a swordman you will gain new skills.";
@@ -60,8 +59,7 @@
 		mes "Are you thinking about your next job?";
 		next;
 		mes "[Swordman Guildmaster]";
-		mes "You can become a knight or join";
-		mes "the crusaders to improve your skills.";
+		mes "You can become a knight or join the crusaders to improve your skills.";
 		next;
 		mes "[Swordman Guildmaster]";
 		mes "Both guilds are in Prontera.";
@@ -73,7 +71,7 @@
 	if (BaseJob == Job_Knight || BaseJob == Job_Crusader || BaseJob == Job_LordKnight || BaseJob == Job_Paladin) {
 		mes "[Swordman Guildmaster]";
 		mes "Ah! An experienced member of the guild!";
-		mes "Are you here to help train the younger ones?";
+		mes "Are you here to help train the new members?";
 		close;
 	}
 

@@ -10721,7 +10721,7 @@ Body:
   - Id: 399
     Name: LK_JOINTBEAT
     Description: Vital Strike
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     Range: 4
@@ -17441,8 +17441,6 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    Flags:
-      PartyOnly: true
     Range:
       - Level: 1
         Size: 5
@@ -17457,21 +17455,15 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Weapon
+    Cooldown: 5000
+    AfterCastActDelay: 400
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 15
-        - Level: 2
-          Amount: 18
-        - Level: 3
-          Amount: 21
-        - Level: 4
-          Amount: 24
-        - Level: 5
-          Amount: 27
+      SpCost: 15
       Weapon:
         1hSpear: true
         2hSpear: true
+        1hSword: true
+        2hSword: true
   - Id: 2201
     Name: WL_WHITEIMPRISON
     Description: White Imprison

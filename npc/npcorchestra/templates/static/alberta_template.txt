@@ -692,11 +692,6 @@ alberta_in,70,42,1	script	Alberta Villager#alb:npcid	5,{
 	end;
 }
 
-alberta_in,68,51,5	script	Alberta Villager#alb:npcid	900,{
-	npctalk "npcdialog";
-	end;
-}
-
 alberta_in,69,36,7	script	Alberta Villager#alb:npcid	58,{
 	npctalk "Are you here to become a merchant?";
 	end;
@@ -704,11 +699,6 @@ alberta_in,69,36,7	script	Alberta Villager#alb:npcid	58,{
 
 alberta_in,74,45,2	script	Alberta Villager#alb:npcid	73,{
 	npctalk "Blacksmith or Alchemist? Tough choice...";
-	end;
-}
-
-alberta_in,53,44,7	script	Merchant Guildmaster#alb:npcid	10380,{
-	npctalk "I will make you a merchant";
 	end;
 }
 

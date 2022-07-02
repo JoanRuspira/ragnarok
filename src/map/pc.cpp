@@ -4828,7 +4828,7 @@ int pc_modifybuyvalue(struct map_session_data *sd,int orig_value)
 {
 	int skill,val = orig_value,rate1 = 0,rate2 = 0;
 	if((skill=pc_checkskill(sd,MC_DISCOUNT))>0)	// merchant discount
-		rate1 = 5+skill*2-((skill==10)? 1:0);
+		rate1 = 5*skill;
 	if((skill=pc_checkskill(sd,RG_COMPULSION))>0)	 // rogue discount
 		rate2 = 5+skill*4;
 	if(rate1 < rate2) rate1 = rate2;
@@ -4847,7 +4847,7 @@ int pc_modifysellvalue(struct map_session_data *sd,int orig_value)
 {
 	int skill,val = orig_value,rate = 0;
 	if((skill=pc_checkskill(sd,MC_OVERCHARGE))>0)	//OverCharge
-		rate = 5+skill*2-((skill==10)? 1:0);
+		rate = 5*skill;
 	if(rate)
 		val = (int)((double)orig_value*(double)(100+rate)/100.);
 	if (val < battle_config.min_shop_sell)
@@ -8068,13 +8068,10 @@ int pc_resetskill(struct map_session_data* sd, int flag)
 			i &= ~OPTION_WUGRIDER;
 		if( i&OPTION_MADOGEAR && ( sd->class_&MAPID_THIRDMASK ) == MAPID_MECHANIC )
 			i &= ~OPTION_MADOGEAR;
-#ifndef NEW_CARTS
-		if( i&OPTION_CART && pc_checkskill(sd, MC_PUSHCART) )
-			i &= ~OPTION_CART;
-#else
-		if( sd->sc.data[SC_PUSH_CART] )
-			pc_setcart(sd, 0);
-#endif
+
+		// if( sd->sc.data[SC_PUSH_CART] )
+		// 	pc_setcart(sd, 0);
+
 		if( i != sd->sc.option )
 			pc_setoption(sd, i);
 
@@ -9510,13 +9507,10 @@ bool pc_jobchange(struct map_session_data *sd,int job, char upper)
 		i&=~OPTION_WUG;
 	if( i&OPTION_MADOGEAR ) //You do not need a skill for this.
 		i&=~OPTION_MADOGEAR;
-#ifndef NEW_CARTS
-	if( i&OPTION_CART && !pc_checkskill(sd, MC_PUSHCART) )
-		i&=~OPTION_CART;
-#else
-	if( sd->sc.data[SC_PUSH_CART] && !pc_checkskill(sd, MC_PUSHCART) )
-		pc_setcart(sd, 0);
-#endif
+
+	// if( sd->sc.data[SC_PUSH_CART] && !pc_checkskill(sd, MC_PUSHCART) )
+	// 	pc_setcart(sd, 0);
+
 	if(i != sd->sc.option)
 		pc_setoption(sd, i);
 
@@ -9669,19 +9663,6 @@ void pc_setoption(struct map_session_data *sd,int type, int subtype)
 		status_calc_pc(sd,SCO_NONE);
 	}
 
-#ifndef NEW_CARTS
-	if( type&OPTION_CART && !( p_type&OPTION_CART ) ) { //Cart On
-		clif_cartlist(sd);
-		clif_updatestatus(sd, SP_CARTINFO);
-		if(pc_checkskill(sd, MC_PUSHCART) < 10)
-			status_calc_pc(sd,SCO_NONE); //Apply speed penalty.
-	} else if( !( type&OPTION_CART ) && p_type&OPTION_CART ){ //Cart Off
-		clif_clearcart(sd->fd);
-		if(pc_checkskill(sd, MC_PUSHCART) < 10)
-			status_calc_pc(sd,SCO_NONE); //Remove speed penalty.
-	}
-#endif
-
 	if (type&OPTION_FALCON && !(p_type&OPTION_FALCON)) //Falcon ON
 		clif_status_load(&sd->bl,EFST_FALCON,1);
 	else if (!(type&OPTION_FALCON) && p_type&OPTION_FALCON) //Falcon OFF
@@ -9738,8 +9719,8 @@ bool pc_setcart(struct map_session_data *sd,int type) {
 	if( type < 0 || type > MAX_CARTS )
 		return false;// Never trust the values sent by the client! [Skotlex]
 
-	if( pc_checkskill(sd,MC_PUSHCART) <= 0 && type != 0 )
-		return false;// Push cart is required
+	// if( pc_checkskill(sd,MC_PUSHCART) <= 0 && type != 0 )
+	// 	return false;// Push cart is required
 
 #ifdef NEW_CARTS
 
@@ -9760,8 +9741,8 @@ bool pc_setcart(struct map_session_data *sd,int type) {
 			break;
 	}
 
-	if(pc_checkskill(sd, MC_PUSHCART) < 10)
-		status_calc_pc(sd,SCO_NONE); //Recalc speed penalty.
+	// if(pc_checkskill(sd, MC_PUSHCART) < 10)
+	// 	status_calc_pc(sd,SCO_NONE); //Recalc speed penalty.
 #else
 	// Update option
 	option = sd->sc.option;

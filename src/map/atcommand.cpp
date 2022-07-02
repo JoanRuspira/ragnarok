@@ -9611,8 +9611,8 @@ ACMD_FUNC(cart) {
 		return -1;
 	}
 
-	if (!(sk_idx = skill_get_index(MC_PUSHCART)))
-		return -1;
+	// if (!(sk_idx = skill_get_index(MC_PUSHCART)))
+	// 	return -1;
 
 	if( need_skill ) {
 		MC_CART_MDFY(sk_idx,1);

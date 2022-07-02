@@ -29,7 +29,8 @@ int SwordsmanSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 void SwordsmanSkillAtkRatioCalculator::add_spear_stab_special_effects(struct block_list* src, struct block_list *target)
 {
 	clif_specialeffect(src, EF_BASH3D, AREA);
-	clif_specialeffect(target, EF_SPINEDBODY, AREA);
+	// clif_specialeffect(target, EF_SPINEDBODY, AREA);
+	clif_specialeffect(target, EF_RED_HIT, AREA);
 }
 
 int SwordsmanSkillAtkRatioCalculator::calculate_bash_atk_ratio(int skill_lv)

@@ -17,7 +17,6 @@ int MerchntSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 		return calculate_cart_revolution_atk_ratio(skill_lv);
 		break;
 	case MC_FIREWORKS:
-		add_cart_fireworks_special_effects(target);
 		return calculate_cart_fireworks_atk_ratio(skill_lv);
 		break;
 	default:
@@ -29,7 +28,6 @@ int MerchntSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 void MerchntSkillAtkRatioCalculator::add_cart_fireworks_special_effects(struct block_list* src)
 {
 	clif_specialeffect(src, EF_CARTTER, AREA);
-	// clif_specialeffect(target, EF_POISONATTACK, AREA);
 }
 
 int MerchntSkillAtkRatioCalculator::calculate_mammonite_atk_ratio(int skill_lv)

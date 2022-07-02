@@ -7,9 +7,15 @@ void SwordsmanAdditionalEffectsCalculator::apply_bash_additional_effect(struct b
 	status_change_start(src, bl, SC_STUN, 10000, skill_lv, 0, 0, 0, skill_lv * 400, SCSTART_NONE);
 }
 
+void SwordsmanAdditionalEffectsCalculator::apply_spear_stab_additional_effect2(struct block_list* src, struct block_list *bl, int skill_lv)
+{
+	status_change_start(src, bl, SC_BLEEDING, 10000, skill_lv, 0, 0, 0, skill_lv * 5000, SCSTART_NONE);
+}
+
 void SwordsmanAdditionalEffectsCalculator::apply_spear_stab_additional_effect(struct block_list* src, struct block_list *bl, int skill_lv, int flag, int skill_area_temp[8], t_tick tick)
 {
-	status_change_start(src, bl, SC_BLEEDING, 10000, skill_lv, 0, 0, 0, skill_lv * 3000, SCSTART_NONE);
+	// sc_start(src, bl, SC_BLEEDING, 100, 1, skill_lv * 3000);
+	// status_change_start(src, bl, SC_BLEEDING, 10000, skill_lv, 0, 0, 0, skill_lv * 5000, SCSTART_NONE);
 	if (flag & 1) {
 		if (bl->id == skill_area_temp[1]) {
 			return;

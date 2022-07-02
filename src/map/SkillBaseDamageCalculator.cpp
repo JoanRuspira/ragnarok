@@ -422,6 +422,7 @@ int64 SkillBaseDamageCalculator::battle_addmastery(map_session_data * sd, block_
 		weapon = sd->weapontype2;
 
 	switch (weapon) {
+		case W_2HSWORD:
 		case W_1HSWORD:
 			if ((skill = pc_checkskill(sd, SM_SWORD)) > 0)
 				damage += (skill * 8);
@@ -430,10 +431,6 @@ int64 SkillBaseDamageCalculator::battle_addmastery(map_session_data * sd, block_
 				damage += (skill * 8);
 			// if ((skill = pc_checkskill(sd, GN_TRAINING_SWORD)) > 0)
 			// 	damage += skill * 10;
-			break;
-		case W_2HSWORD:
-			if ((skill = pc_checkskill(sd, SM_TWOHAND)) > 0)
-				damage += (skill * 8);
 			break;
 		case W_1HSPEAR:
 		case W_2HSPEAR:
