@@ -11,7 +11,50 @@
 // NOTE:
 // - Up to MAX_ARROW_RESULT (typically 5) ID/Amount pairs can be specified.
 // - To remove entry by importing, put 0 on 'MakeID'
-
+// Red Blood --> 600 Fire Arrows
+990,1752,600
+// Crystal Blue --> 150 Crystal Arrows
+991,1754,150
+// Wind of Verdure --> 150 Arrows of Wind
+992,1755,150
+// Green Live --> 150 Stone Arrows
+993,1756,150
+// Flame Heart --> 1800 Fire Arrows, 5 Mute Arrows
+994,1752,1800,1769,5
+// Mystic Frozen --> 450 Crystal Arrows, 5 Frozen Arrows
+995,1754,450,1759,5
+// Rough Wind --> 450 Arrows of Wind, 5 Sleep Arrows
+996,1755,450,1768,5
+// Great Nature --> 450 Stone Arrows, 5 Flash Arrows
+997,1756,450,1760,5
+// Iron Ore --> 50 Iron Arrows
+1002,1770,50
+// Phracon --> 50 Iron Arrows
+1010,1770,50
+// Emveretarcon --> 200 Iron Arrows
+1011,1770,200
+// Iron --> 100 Iron Arrows
+998,1770,100
+// Steel --> 100 Steel Arrows
+999,1753,100
+// Rough Oridecon --> 50 Oridecon Arrows
+756,1765,50
+// Rough Elunium --> 200 Steel Arrows
+757,1753,200
+// Oridecon --> 250 Oridecon Arrows
+984,1765,250
+// Elunium --> 1000 Steel Arrows
+985,1753,1000
+// Zargon --> 50 Silver Arrows
+912,1751,50
+// Coal --> 30 Shadow Arrows
+1003,1767,30
+// Cracked Diamond --> 50 Sharp Arrows
+733,1764,50
+// Star Crumb --> 30 Immaterial Arrows
+1000,1757,100
+// Star Dust --> 10 Immaterial Arrows
+1001,1757,30
 // Old Blue Box --> 50 Sharp Arrows, 50 Sleep Arrows
 //603,1764,50,1768,50
 // Dead Branch --> 40 Mute Arrows
@@ -30,12 +73,6 @@
 717,1754,30,1759,1
 // Cursed Ruby --> 50 Cursed Arrows, 10 Sleep Arrows
 724,1761,50,1768,10
-// Cracked Diamond --> 50 Sharp Arrows
-733,1764,50
-// Rough Oridecon --> 50 Oridecon Arrows
-756,1765,50
-// Rough Elunium --> 200 Steel Arrows, 5 Stun Arrows
-757,1753,200,1758,5
 // Tree Root --> 7 Arrows
 902,1750,7
 // Scorpion Tail --> 3 Rusty Arrows
@@ -46,8 +83,6 @@
 910,1770,12
 // Scell --> 8 Steel Arrows
 911,1753,8
-// Zargon --> 50 Silver Arrows
-912,1751,50
 // Tooth of Bat --> 1 Shadow Arrow
 913,1767,1
 // Wolf Claw --> 15 Iron Arrows
@@ -76,42 +111,6 @@
 968,1765,1,1758,5
 // Gold --> 50 Flash Arrows, 50 Oridecon Arrows
 969,1760,50,1765,50
-// Oridecon --> 250 Oridecon Arrows
-984,1765,250
-// Elunium --> 1000 Steel Arrows, 50 Stun Arrows
-985,1753,1000,1758,50
-// Red Blood --> 600 Fire Arrows
-990,1752,600
-// Crystal Blue --> 150 Crystal Arrows
-991,1754,150
-// Wind of Verdure --> 150 Arrows of Wind
-992,1755,150
-// Green Live --> 150 Stone Arrows
-993,1756,150
-// Flame Heart --> 1800 Fire Arrows, 5 Mute Arrows
-994,1752,1800,1769,5
-// Mystic Frozen --> 450 Crystal Arrows, 5 Frozen Arrows
-995,1754,450,1759,5
-// Rough Wind --> 450 Arrows of Wind, 5 Sleep Arrows
-996,1755,450,1768,5
-// Great Nature --> 450 Stone Arrows, 5 Flash Arrows
-997,1756,450,1760,5
-// Iron --> 100 Iron Arrows
-998,1770,100
-// Steel --> 100 Steel Arrows
-999,1753,100
-// Star Crumb --> 30 Flash Arrows
-1000,1760,30
-// Star Dust --> 10 Flash Arrows
-1001,1760,10
-// Iron Ore --> 50 Iron Arrows
-1002,1770,50
-// Coal --> 8 Shadow Arrows
-1003,1767,8
-// Phracon --> 50 Iron Arrows
-1010,1770,50
-// Emveretarcon --> 200 Iron Arrows, 40 Silver Arrows
-1011,1770,200,1751,40
 // Mole Claw --> 50 Iron Arrows, 60 Stone Arrows
 1018,1770,50,1756,60
 // Trunk --> 40 Arrows

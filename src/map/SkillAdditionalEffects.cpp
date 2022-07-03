@@ -288,6 +288,12 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 		case LK_HEADCRUSH:
 			SwordsmanAdditionalEffectsCalculator::apply_traumatic_blow_additional_effect(src, bl, skill_lv);
 			break;
+		case AC_TRANQUILING:
+			ArcherAdditionalEffectsCalculator::apply_tranquilizer_shot_additional_effect(src, bl, skill_lv);
+			break;
+		case AC_PARALIZING:
+			ArcherAdditionalEffectsCalculator::apply_paralyzing_shot_additional_effect(src, bl, skill_lv);
+			break;
 		// case KN_SPEARSTAB:
 		// 	SwordsmanAdditionalEffectsCalculator::apply_spear_stab_additional_effect(src, bl, skill_lv);
 		// 	break;

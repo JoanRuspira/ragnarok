@@ -102,6 +102,9 @@
     <Filter Include="Source Files\skillAtkRatioCalculator\merchant">
       <UniqueIdentifier>{dd7adf05-6c6a-4c45-b1a6-caefb9112d1b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\skillAdditionalEffectsCalculator\archer">
+      <UniqueIdentifier>{c7b5e327-48a6-4e5d-81c1-20cd7a41b895}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="achievement.hpp">
@@ -296,6 +299,9 @@
     <ClInclude Include="MerchntSkillAtkRatioCalculator.h">
       <Filter>Header Files\skillAtkRatioCalculator\merchant</Filter>
     </ClInclude>
+    <ClInclude Include="ArcherAdditionalEffectsCalculator.h">
+      <Filter>Header Files\skillAdditionalEffectsCalculator</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="achievement.cpp">
@@ -462,6 +468,9 @@
     </ClCompile>
     <ClCompile Include="MerchntSkillAtkRatioCalculator.cpp">
       <Filter>Source Files\skillAtkRatioCalculator\merchant</Filter>
+    </ClCompile>
+    <ClCompile Include="ArcherAdditionalEffectsCalculator.cpp">
+      <Filter>Source Files\skillAdditionalEffectsCalculator\archer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -3610,6 +3610,9 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case MC_MAMMONITE:
 	case TF_DOUBLE:
 	case AC_DOUBLE:
+	case AC_SPIRITSTRAFE:
+	case AC_TRANQUILING:
+	case AC_PARALIZING:
 	case MA_DOUBLE:
 	case AS_SONICBLOW:
 	case KN_PIERCE:

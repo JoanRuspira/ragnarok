@@ -1,12 +1,25 @@
 #pragma once
+#include <cstring>
+#include "skill.hpp"
+#include "status.hpp"
+#include "battle.hpp"
+#include "unit.hpp"
+#include "clif.hpp"
+
 class ArcherSkillAtkRatioCalculator
 {
-private:
+	private:
 
-public:
-	static int calculate_skill_atk_ratio(int base_lv, int skill_id, int skill_lv);
+	public:
+		static int calculate_skill_atk_ratio(struct block_list* src, struct block_list* target, int base_lv, int skill_id, int skill_lv);
 
-private:
-	static int calculate_double_strafe_atk_ratio(int base_lv, int skill_lv);
-	static int calculate_arrow_shower_atk_ratio(int base_lv, int skill_lv);
+	private:
+		static int calculate_double_strafe_atk_ratio(int base_lv, int skill_lv);
+		static int calculate_arrow_shower_atk_ratio(int base_lv, int skill_lv);
+		static int calculate_spiritual_strafe_atk_ratio(int skill_lv, struct block_list* src);
+		static void add_tranquilizer_shot_special_effects(struct block_list *target);
+		static void add_paralyzing_shot_special_effects(struct block_list *target);
+		static void add_arrow_shower_special_effects(struct block_list *target);
+		static void add_spiritual_strafe_special_effects(struct block_list *target);
+
 };

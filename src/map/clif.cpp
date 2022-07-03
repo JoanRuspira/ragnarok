@@ -13078,7 +13078,7 @@ void clif_parse_SelectArrow(int fd,struct map_session_data *sd) {
 		clif_menuskill_clear(sd);
 		return;
 	}
-
+	
 	struct PACKET_CZ_REQ_MAKINGARROW* p = (struct PACKET_CZ_REQ_MAKINGARROW*)RFIFOP( fd, 0 );
 
 	switch (sd->menuskill_id) {

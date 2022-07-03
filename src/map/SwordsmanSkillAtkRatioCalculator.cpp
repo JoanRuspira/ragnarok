@@ -11,6 +11,7 @@ int SwordsmanSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 {
 	switch (skill_id) {
 		case SM_BASH:
+			add_bash_special_effects(target);
 			return calculate_bash_atk_ratio(skill_lv);
 			break;
 		case SM_MAGNUM:
@@ -33,14 +34,20 @@ int SwordsmanSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 void SwordsmanSkillAtkRatioCalculator::add_spear_stab_special_effects(struct block_list* src, struct block_list *target)
 {
 	clif_specialeffect(src, EF_BASH3D, AREA);
-	clif_specialeffect(target, EF_MADNESS_RED, AREA);
 }
 
 
 void SwordsmanSkillAtkRatioCalculator::add_traumatic_blow_special_effects(struct block_list* src, struct block_list *target)
 {
 	clif_specialeffect(target, EF_MADNESS_RED, AREA);
+	clif_specialeffect(target, EF_CRITICALWOUND, AREA);
 }
+
+void SwordsmanSkillAtkRatioCalculator::add_bash_special_effects(struct block_list *target)
+{
+	clif_specialeffect(target, EF_STUNATTACK, AREA);
+}
+
 
 int SwordsmanSkillAtkRatioCalculator::calculate_bash_atk_ratio(int skill_lv)
 {

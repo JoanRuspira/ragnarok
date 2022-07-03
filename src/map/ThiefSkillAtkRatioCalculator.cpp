@@ -15,6 +15,7 @@ int ThiefSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* s
 		return calculate_envenom_atk_ratio(skill_lv);
 		break;
 	case TF_THROWSTONE:
+		add_throw_stone_special_effects(target);
 		return calculate_throw_stone_atk_ratio(skill_lv);
 		break;
 	case TF_SNATCH:
@@ -41,12 +42,19 @@ void ThiefSkillAtkRatioCalculator::add_snatch_special_effects(struct block_list 
 {
 	clif_specialeffect(target, EF_STEAL, AREA);
 	clif_specialeffect(target, EF_STEALCOIN, AREA);
+	clif_specialeffect(target, EF_STUNATTACK, AREA);
 }
 
 void ThiefSkillAtkRatioCalculator::add_sand_attack_special_effects(struct block_list *target)
 {
 	clif_specialeffect(target, EF_SPRINKLESAND, AREA);
 	clif_specialeffect(target, EF_DRAGONSMOKE, AREA);
+	clif_specialeffect(target, EF_STUNATTACK, AREA);
+}
+
+void ThiefSkillAtkRatioCalculator::add_throw_stone_special_effects(struct block_list *target)
+{
+	clif_specialeffect(target, EF_STUNATTACK, AREA);
 }
 int ThiefSkillAtkRatioCalculator::calculate_envenom_atk_ratio(int skill_lv)
 {

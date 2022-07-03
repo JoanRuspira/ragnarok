@@ -22,4 +22,5 @@ private:
 	static void add_envenom_special_effects(struct block_list* src, struct block_list *target);
 	static void add_snatch_special_effects(struct block_list *target);
 	static void add_sand_attack_special_effects(struct block_list *target);
+	static void add_throw_stone_special_effects(struct block_list *target);
 };
