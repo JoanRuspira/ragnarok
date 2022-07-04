@@ -1818,7 +1818,6 @@ int skill_is_combo(uint16 skill_id) {
 		case TK_DOWNKICK:
 		case TK_COUNTER:
 		case TK_JUMPKICK:
-		case HT_POWER:
 		case SR_DRAGONCOMBO:
 			return 1;
 		case SR_FALLENEMPIRE:
@@ -1935,13 +1934,6 @@ void skill_combo(struct block_list* src,struct block_list *dsrc, struct block_li
 			if (!duration && pc_checkskill(sd, MO_EXTREMITYFIST) > 0 && sd->spiritball > 0 && sd->sc.data[SC_EXPLOSIONSPIRITS]) {
 				duration = 1;
 				target_id = 0; // Will target current auto-target instead
-			}
-			break;
-		case AC_DOUBLE:
-			if (pc_checkskill(sd, HT_POWER)) {
-				duration = 2000;
-				nodelay = 1; //Neither gives walk nor attack delay
-				target_id = 0; //Does not need to be used on previous target
 			}
 			break;
 		case SR_DRAGONCOMBO:
@@ -2099,9 +2091,6 @@ void skill_attack_blow(struct block_list *src, struct block_list *dsrc, struct b
 				dir = map_calc_dir(target, src->x, src->y);
 			else
 				dir = map_calc_dir(target, skill_area_temp[4], skill_area_temp[5]);
-			break;
-		case HT_PHANTASMIC: // issue #1378
-			if (status_get_hp(target) - damage <= 0) return;
 			break;
 	}
 
@@ -3610,8 +3599,8 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case MC_MAMMONITE:
 	case TF_DOUBLE:
 	case AC_DOUBLE:
-	case AC_SPIRITSTRAFE:
-	case AC_TRANQUILING:
+	case HT_POWER:
+	case HT_PHANTASMIC:
 	case AC_PARALIZING:
 	case MA_DOUBLE:
 	case AS_SONICBLOW:
@@ -3675,7 +3664,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case PA_SACRIFICE:
 	case WS_CARTTERMINATION:	// Cart Termination
 	case AS_VENOMKNIFE:
-	case HT_PHANTASMIC:
 	case TK_DOWNKICK:
 	case TK_COUNTER:
 	case GS_CHAINACTION:
@@ -3945,11 +3933,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 				clif_spiritball(src);
 			}
 		}
-		break;
-
-	case HT_POWER:
-		if( tstatus->race == RC_BRUTE || tstatus->race == RC_PLAYER_DORAM || tstatus->race == RC_INSECT )
-			skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag);
 		break;
 
 	case SU_PICKYPECK:
@@ -14324,7 +14307,6 @@ int skill_isammotype(struct map_session_data *sd, unsigned short skill_id)
 	return (
 		battle_config.arrow_decrement == 2 &&
 		(sd->status.weapon == W_BOW || (sd->status.weapon >= W_REVOLVER && sd->status.weapon <= W_GRENADE)) &&
-		skill_id != HT_PHANTASMIC &&
 		skill->skill_type == BF_WEAPON &&
 		!skill->nk[NK_NODAMAGE] &&
 		!skill_get_spiritball(skill_id,1) //Assume spirit spheres are used as ammo instead.
@@ -14700,10 +14682,6 @@ bool skill_check_condition_castbegin(struct map_session_data* sd, uint16 skill_i
 			break;
 		case SL_SMA:
 			if(sc && !(sc->data[SC_SMA] || sc->data[SC_USE_SKILL_SP_SHA]))
-				return false;
-			break;
-		case HT_POWER:
-			if(!(sc && sc->data[SC_COMBO] && sc->data[SC_COMBO]->val1 == AC_DOUBLE))
 				return false;
 			break;
 #ifndef RENEWAL

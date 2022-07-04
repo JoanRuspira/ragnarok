@@ -5104,58 +5104,6 @@ Body:
       Ammo:
         Arrow: true
       AmmoAmount: 1
-  - Id: 806
-    Name: AC_TRANQUILING
-    Description: Spiritual Strafe
-    MaxLevel: 10
-    Type: Weapon
-    TargetType: Attack
-    Flags:
-      AlterRangeVulture: true
-    Range: -9
-    Hit: Multi_Hit
-    HitCount: 1
-    Element: Weapon
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
-    Duration1: 100
-    Cooldown: 7000
-    AfterCastActDelay: 400
-    Requires:
-      SpCost: 12
-      Weapon:
-        Bow: true
-      Ammo:
-        Arrow: true
-      AmmoAmount: 1
-  - Id: 805
-    Name: AC_SPIRITSTRAFE
-    Description: Spiritual Strafe
-    MaxLevel: 10
-    Type: Weapon
-    TargetType: Attack
-    Flags:
-      AlterRangeVulture: true
-    Range: -9
-    Hit: Single
-    HitCount: 1
-    Element: Weapon
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
-    Duration1: 100
-    Cooldown: 7000
-    AfterCastActDelay: 400
-    Requires:
-      SpCost: 12
-      Weapon:
-        Bow: true
-      Ammo:
-        Arrow: true
-      AmmoAmount: 1
   - Id: 803
     Name: TF_SANDATTACK
     Description: Sand Attack
@@ -13472,11 +13420,10 @@ Body:
   - Id: 499
     Name: HT_POWER
     Description: Beast Strafing
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     Flags:
-      IsSpirit: true
       AlterRangeVulture: true
     Range: -9
     Hit: Multi_Hit

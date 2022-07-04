@@ -17,7 +17,7 @@ int ArcherSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* 
 			add_arrow_shower_special_effects(target);
 			return calculate_arrow_shower_atk_ratio(base_lv, skill_lv);
 			break;
-		case AC_SPIRITSTRAFE:
+		case HT_POWER:
 		    add_spiritual_strafe_special_effects(target);
 			return calculate_spiritual_strafe_atk_ratio(skill_lv, src);
 			break;
@@ -25,7 +25,7 @@ int ArcherSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* 
 			add_paralyzing_shot_special_effects(target);
 			return -99;
 			break;
-		case AC_TRANQUILING:
+		case HT_PHANTASMIC:
 			add_tranquilizer_shot_special_effects(target);
 			return -99;
 			break;

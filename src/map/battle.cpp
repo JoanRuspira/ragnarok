@@ -2216,7 +2216,7 @@ static bool is_skill_using_arrow(struct block_list *src, int skill_id)
 		struct status_data *sstatus = status_get_status_data(src);
 		struct map_session_data *sd = BL_CAST(BL_PC, src);
 
-		return ((sd && sd->state.arrow_atk) || (!sd && ((skill_id && skill_get_ammotype(skill_id)) || sstatus->rhw.range>3)) || (skill_id == HT_PHANTASMIC) || (skill_id == GS_GROUNDDRIFT));
+		return ((sd && sd->state.arrow_atk) || (!sd && ((skill_id && skill_get_ammotype(skill_id)) || sstatus->rhw.range>3)) || (skill_id == GS_GROUNDDRIFT));
 	} else
 		return false;
 }
@@ -2830,13 +2830,10 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case MC_MAMMONITE:
 			skillratio += MerchntSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv);
 			break;
-		case HT_POWER:
-			skillratio += -50 + 8 * sstatus->str;
-			break;
 		case AC_SHOWER:
 		case AC_DOUBLE:
-		case AC_SPIRITSTRAFE:
-		case AC_TRANQUILING:
+		case HT_POWER:
+		case HT_PHANTASMIC:
 		case AC_PARALIZING:
 			skillratio += ArcherSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv);
 			break;
@@ -3266,9 +3263,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 					k = 4;
 				skillratio += 100 * k;
 			}
-			break;
-		case HT_PHANTASMIC:
-			skillratio += 50;
 			break;
 		case MO_BALKYOUNG:
 			skillratio += 200;
