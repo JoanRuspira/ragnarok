@@ -229,7 +229,7 @@ Body:
     Name: SM_MAGNUM
     Description: Magnum Break
     MaxLevel: 5
-    Type: Fire
+    Type: Weapon
     TargetType: Self
     DamageFlags:
       Splash: true
@@ -1395,50 +1395,31 @@ Body:
     HitCount: 1
     CastCancel: true
     CastTime: 1000
+    Cooldown: 2000
     AfterCastActDelay: 1000
     Duration1:
       - Level: 1
-        Time: 60000
-      - Level: 2
         Time: 80000
-      - Level: 3
-        Time: 100000
-      - Level: 4
+      - Level: 2
         Time: 120000
-      - Level: 5
-        Time: 140000
-      - Level: 6
+      - Level: 3
         Time: 160000
-      - Level: 7
-        Time: 180000
-      - Level: 8
+      - Level: 4
         Time: 200000
-      - Level: 9
-        Time: 220000
-      - Level: 10
+      - Level: 5
         Time: 240000
     Requires:
       HpCost: 15
       SpCost:
         - Level: 1
-          Amount: 18
-        - Level: 2
           Amount: 21
-        - Level: 3
-          Amount: 24
-        - Level: 4
+        - Level: 2
           Amount: 27
-        - Level: 5
-          Amount: 30
-        - Level: 6
+        - Level: 3
           Amount: 33
-        - Level: 7
-          Amount: 36
-        - Level: 8
+        - Level: 4
           Amount: 39
-        - Level: 9
-          Amount: 42
-        - Level: 10
+        - Level: 5
           Amount: 45
   - Id: 30
     Name: AL_DECAGI
@@ -1773,26 +1754,18 @@ Body:
     Hit: Single
     HitCount: 1
     SplashArea: 3
+    Cooldown: 30000
+    AfterCastActDelay: 400
     Duration1:
       - Level: 1
-        Time: 60000
-      - Level: 2
         Time: 80000
-      - Level: 3
-        Time: 100000
-      - Level: 4
+      - Level: 2
         Time: 120000
-      - Level: 5
-        Time: 140000
-      - Level: 6
+      - Level: 3
         Time: 160000
-      - Level: 7
-        Time: 180000
-      - Level: 8
+      - Level: 4
         Time: 200000
-      - Level: 9
-        Time: 220000
-      - Level: 10
+      - Level: 5
         Time: 240000
     Requires:
       SpCost:
@@ -1868,7 +1841,7 @@ Body:
         Reproduce: true
     Duration1: 100
     Requires:
-      SpCost: 15
+      SpCost: 20
       Weapon:
         Bow: true
       Ammo:
@@ -5076,7 +5049,7 @@ Body:
         Reproduce: true
     CastTime: 0
     Requires:
-      SpCost: 15
+      SpCost: 14
       Weapon:
         Bow: true
       Ammo:
