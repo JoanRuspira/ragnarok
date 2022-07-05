@@ -1,0 +1,84 @@
+//===== Script =======================================
+// Card Removal NPCs
+//====================================================
+
+-	script	Archer Guildmaster#archgld::ArchGld	-1,{
+	if (BaseClass == EAJ_NOVICE) {
+		mes "[Archer Guildmaster]";
+		mes "Good day! I am the archer Guildmaster.";
+		mes "I train novices that meet the requirements and allow men to become swordmen.";
+		next;
+		mes "[Archer Guildmaster]";
+		mes "As an archer you will gain new skills.";
+		mes "The requirements are:";
+		mes "- Being a Novice.";
+		mes "- Being Job level 10.";
+		mes "- Having used all your skill points.";
+		next;
+		mes "[Archer Guildmaster]";
+		mes "Do you want to become a archer?";
+		next;
+		switch(select("Yes:No")) {
+			case 1:
+				mes "[Archer Guildmaster]";
+				mes "Good! Let me see if you pass our requirements...";
+				next;
+				if (JobLevel < 10) {
+					mes "[Archer Guildmaster]";
+					mes "Hmm... Your job level does not meet our requirements.";
+					mes "You need to be more experienced before being a archer.";
+					close;
+				}
+				if (SkillPoint) {
+					mes "[Archer Guildmaster]";
+					mes "Looks like you have not used all your skill points.";
+					mes "Use them and I'll be able to make you a archer.";
+					close;
+				}
+				mes "[Archer Guildmaster]";
+				mes "Okay! Looks like you pass all of them!";
+				mes "You are allowed to join the archer guild.";
+				mes "Congratulations!";
+				jobchange Job_Archer;
+				specialeffect2 EF_ANGEL2;
+				specialeffect2 EF_ELECTRIC;
+				close;
+			case 2:
+				mes "[Archer Guildmaster]";
+				mes "Ah! Let me know if you change your mind.";
+				mes "We are always looking for new adventurers";
+				mes "to join the guild.";
+				close;
+		}
+		
+	}
+
+	if (BaseJob == Job_Archer) {
+		mes "[Archer Guildmaster]";
+		mes "Hi fellow archer!";
+		mes "Are you thinking about your next job?";
+		next;
+		mes "[Archer Guildmaster]";
+		mes "You can become a knight or join the crusaders to improve your skills.";
+		next;
+		mes "[Archer Guildmaster]";
+		mes "Both guilds are in Prontera.";
+		mes "Go there when you think you have";
+		mes "enough experience.";
+		close;
+	}
+
+	if (BaseJob == Job_Hunter || BaseJob == Job_Bard || BaseJob == Job_Dancer || BaseJob == Job_Sniper || BaseJob == Job_Clown || BaseJob == Job_Gypsy) {
+		mes "[Archer Guildmaster]";
+		mes "Ah! An experienced member of the guild!";
+		mes "Are you here to help train the new members?";
+		close;
+	}
+
+	mes "[Archer Guildmaster]";
+	mes "Welcome to the archer guild. We accept applications from novices that meet our requirements.";
+	close;
+}
+
+payon_in02,65,72,5	duplicate(ArchGld)	Archer Guildmaster#archgld	727
+

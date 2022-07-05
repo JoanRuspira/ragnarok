@@ -1956,11 +1956,6 @@ morocc,82,170,1	script	Morroc Villager#moc::npcid	spriteid,{
 	end;
 }
 
-moc_prydb1,39,131,5	script	Thief Guildmaster#moc::npcid	638,{
-	npctalk "I will make you a thief.";
-	end;
-}
-
 moc_prydb1,50,126,3	script	Morroc Thief#moc::npcid	6,{
 	npctalk "npcdialog";
 	end;

@@ -1,0 +1,84 @@
+//===== Script =======================================
+// Card Removal NPCs
+//====================================================
+
+-	script	Thief Guildmaster#thfgld::ThfGld	-1,{
+	if (BaseClass == EAJ_NOVICE) {
+		mes "[Thief Guildmaster]";
+		mes "Good day! I am the thief Guildmaster.";
+		mes "I train novices that meet the requirements and allow men to become swordmen.";
+		next;
+		mes "[Thief Guildmaster]";
+		mes "As a thief you will gain new skills.";
+		mes "The requirements are:";
+		mes "- Being a Novice.";
+		mes "- Being Job level 10.";
+		mes "- Having used all your skill points.";
+		next;
+		mes "[Thief Guildmaster]";
+		mes "Do you want to become a thief?";
+		next;
+		switch(select("Yes:No")) {
+			case 1:
+				mes "[Thief Guildmaster]";
+				mes "Good! Let me see if you pass our requirements...";
+				next;
+				if (JobLevel < 10) {
+					mes "[Thief Guildmaster]";
+					mes "Hmm... Your job level does not meet our requirements.";
+					mes "You need to be more experienced before being a thief.";
+					close;
+				}
+				if (SkillPoint) {
+					mes "[Thief Guildmaster]";
+					mes "Looks like you have not used all your skill points.";
+					mes "Use them and I'll be able to make you a thief.";
+					close;
+				}
+				mes "[Thief Guildmaster]";
+				mes "Okay! Looks like you pass all of them!";
+				mes "You are allowed to join the thief guild.";
+				mes "Congratulations!";
+				jobchange Job_Thief;
+				specialeffect2 EF_ANGEL2;
+				specialeffect2 EF_ELECTRIC;
+				close;
+			case 2:
+				mes "[Thief Guildmaster]";
+				mes "Ah! Let me know if you change your mind.";
+				mes "We are always looking for new adventurers";
+				mes "to join the guild.";
+				close;
+		}
+		
+	}
+
+	if (BaseJob == Job_Thief) {
+		mes "[Thief Guildmaster]";
+		mes "Hi fellow thief!";
+		mes "Are you thinking about your next job?";
+		next;
+		mes "[Thief Guildmaster]";
+		mes "You can become a knight or join the crusaders to improve your skills.";
+		next;
+		mes "[Thief Guildmaster]";
+		mes "Both guilds are in Prontera.";
+		mes "Go there when you think you have";
+		mes "enough experience.";
+		close;
+	}
+
+	if (BaseJob == Job_Assassin || BaseJob == Job_Rogue || BaseJob == Job_AssassinCross || BaseJob == Job_Stalker) {
+		mes "[Thief Guildmaster]";
+		mes "Ah! An experienced member of the guild!";
+		mes "Are you here to help train the new members?";
+		close;
+	}
+
+	mes "[Thief Guildmaster]";
+	mes "Welcome to the thief guild. We accept applications from novices that meet our requirements.";
+	close;
+}
+
+moc_prydb1,39,131,5	duplicate(ThfGld)	Thief Guildmaster#thfgld	638
+
