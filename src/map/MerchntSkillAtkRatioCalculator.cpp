@@ -98,6 +98,6 @@ int MerchntSkillAtkRatioCalculator::calculate_cart_fireworks_atk_ratio(int skill
 		case 5:
 			ratio = 45 + (status->int_/3);
 			break;
-		}
+	}
 	return ratio;
 }

@@ -15,6 +15,7 @@ int SwordsmanSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 			return calculate_bash_atk_ratio(skill_lv);
 			break;
 		case SM_MAGNUM:
+			add_magnum_break_special_effects(src);
 			return calculate_magnum_break_atk_ratio(skill_lv);
 			break;
 		case KN_SPEARSTAB:
@@ -34,6 +35,11 @@ int SwordsmanSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 void SwordsmanSkillAtkRatioCalculator::add_spear_stab_special_effects(struct block_list* src, struct block_list *target)
 {
 	clif_specialeffect(src, EF_BASH3D, AREA);
+}
+
+void SwordsmanSkillAtkRatioCalculator::add_magnum_break_special_effects(struct block_list* src)
+{
+	clif_specialeffect(src, EF_BAKU, AREA);
 }
 
 

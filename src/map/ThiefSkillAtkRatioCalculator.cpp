@@ -34,8 +34,8 @@ int ThiefSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* s
 
 void ThiefSkillAtkRatioCalculator::add_envenom_special_effects(struct block_list* src, struct block_list *target)
 {
-	clif_specialeffect(target, EF_VENOMFOG, AREA);
 	clif_specialeffect(target, EF_POISONATTACK, AREA);
+	clif_specialeffect(target, EF_PATTACK, AREA);
 }
 
 void ThiefSkillAtkRatioCalculator::add_snatch_special_effects(struct block_list *target)

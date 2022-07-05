@@ -4405,7 +4405,7 @@ int status_calc_pc_sub(struct map_session_data* sd, enum e_status_calc_opt opt)
 
 	// Absolute modifiers from passive skills
 	if((skill=pc_checkskill(sd,TF_MISS))>0)
-		base_status->flee += skill*(sd->class_&JOBL_2 && (sd->class_&MAPID_BASEMASK) == MAPID_THIEF? 4 : 3);
+		base_status->flee += 2*skill*(sd->class_&JOBL_2 && (sd->class_&MAPID_BASEMASK) == MAPID_ARCHER? 4 : 3);
 	if((skill=(pc_checkskill(sd,MO_DODGE) *2))>0)
 		base_status->flee += (skill*3)>>1;
 	if (pc_checkskill(sd, SU_POWEROFLIFE) > 0)

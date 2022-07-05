@@ -2833,13 +2833,10 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case AC_SHOWER:
 		case AC_DOUBLE:
 		case HT_POWER:
+		case AC_CHARGEARROW:
 		case HT_PHANTASMIC:
 		case AC_PARALIZING:
 			skillratio += ArcherSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv);
-			break;
-		case AC_CHARGEARROW:
-		case MA_CHARGEARROW:
-			skillratio += 50;
 			break;
 #ifndef RENEWAL
 		case HT_FREEZINGTRAP:

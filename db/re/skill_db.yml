@@ -1884,7 +1884,7 @@ Body:
   - Id: 49
     Name: TF_MISS
     Description: Improve Dodge
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
   - Id: 50
     Name: TF_STEAL
@@ -5043,7 +5043,7 @@ Body:
   - Id: 147
     Name: AC_MAKINGARROW
     Description: Arrow Crafting
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Weapon
     TargetType: Self
     DamageFlags:
@@ -5065,12 +5065,12 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Weapon
-    Knockback: 6
+    Knockback: 8
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
-    CastTime: 1500
+    CastTime: 0
     Requires:
       SpCost: 15
       Weapon:

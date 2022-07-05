@@ -8180,6 +8180,7 @@ void clif_pet_food( struct map_session_data *sd, int foodid,int fail ){
 }
 
 
+
 /// Presents a list of skills that can be auto-spelled (ZC_AUTOSPELLLIST).
 /// 01cd { <skill id>.L }*7
 void clif_autospell(struct map_session_data *sd,uint16 skill_lv)

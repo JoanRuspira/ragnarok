@@ -3600,6 +3600,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case TF_DOUBLE:
 	case AC_DOUBLE:
 	case HT_POWER:
+	case AC_CHARGEARROW:
 	case HT_PHANTASMIC:
 	case AC_PARALIZING:
 	case MA_DOUBLE:
@@ -3611,7 +3612,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case TF_SNATCH:
 	case TF_SANDATTACK:
 	case TF_SPRINKLESAND:
-	case AC_CHARGEARROW:
 	case MA_CHARGEARROW:
 	case RG_INTIMIDATE:
 	case AM_ACIDTERROR:
@@ -6322,6 +6322,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 
 	case AC_MAKINGARROW:
 		if(sd) {
+			sd->menuskill_val2 = skill_lv;
 			clif_arrow_create_list(sd);
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 		}
@@ -10417,10 +10418,11 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 
 	case ALL_EQSWITCH:
 		if( sd ){
+			clif_specialeffect(src, EF_BEGINSPELL7, AREA);
 			clif_equipswitch_reply( sd, false );
-
 			for( int i = 0, position = 0; i < EQI_MAX; i++ ){
-				if( sd->equip_switch_index[i] >= 0 && !( position & equip_bitmask[i] ) ){
+				if( sd->equip_switch_index[i] >= 0 && !( position & equip_bitmask[i] ) && (i != EQI_AMMO) ){
+					
 					position |= pc_equipswitch( sd, sd->equip_switch_index[i] );
 				}
 			}
@@ -19310,6 +19312,9 @@ bool skill_arrow_create(struct map_session_data *sd, t_itemid nameid)
 	struct item tmp_item;
 
 	nullpo_ret(sd);
+	
+	ShowStatus("Arrow crafting lvl %d.\n", sd->menuskill_val2);
+
 
 	if (!nameid || !itemdb_exists(nameid) || !skill_arrow_count)
 		return false;
@@ -19340,7 +19345,7 @@ bool skill_arrow_create(struct map_session_data *sd, t_itemid nameid)
 			tmp_item.card[2] = GetWord(sd->status.char_id,0); // CharId
 			tmp_item.card[3] = GetWord(sd->status.char_id,1);
 		}
-		if ((flag = pc_additem(sd,&tmp_item,tmp_item.amount,LOG_TYPE_PRODUCE))) {
+		if ((flag = pc_additem(sd,&tmp_item,tmp_item.amount * sd->menuskill_val2,LOG_TYPE_PRODUCE))) {
 			clif_additem(sd,0,0,flag);
 			map_addflooritem(&tmp_item,tmp_item.amount,sd->bl.m,sd->bl.x,sd->bl.y,0,0,0,0,0);
 		}

@@ -22,4 +22,6 @@ class SwordsmanSkillAtkRatioCalculator
 		static void add_spear_stab_special_effects(struct block_list* src, struct block_list *target);
 		static void add_traumatic_blow_special_effects(struct block_list* src, struct block_list *target);
 		static void add_bash_special_effects(struct block_list *target);
+		static void add_magnum_break_special_effects(struct block_list* src);
+	
 };
