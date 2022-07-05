@@ -91,7 +91,23 @@ int ArcherSkillAtkRatioCalculator::calculate_arrow_shower_atk_ratio(int base_lv,
 int ArcherSkillAtkRatioCalculator::calculate_charge_arrow_atk_ratio(int base_lv, int skill_lv)
 {
 	int ratio = 0;
-	ratio = 60 * skill_lv;
+	switch (skill_lv) {
+		case 1:
+			ratio = 30;
+			break;
+		case 2:
+			ratio = 100;
+			break;
+		case 3:
+			ratio = 180;
+			break;
+		case 4:
+			ratio = 240;
+			break;
+		case 5:
+			ratio = 300;
+			break;
+	}
 	return ratio;
 }
 
@@ -100,7 +116,23 @@ int ArcherSkillAtkRatioCalculator::calculate_spiritual_strafe_atk_ratio(int skil
 	int ratio = 0;
 	struct status_data *status;
 	status = status_get_status_data(src);
-	ratio = 60 * skill_lv + (status->int_/2);
+	switch (skill_lv) {
+		case 1:
+			ratio = 30 + (status->int_/2);
+			break;
+		case 2:
+			ratio = 100 + (status->int_/2);
+			break;
+		case 3:
+			ratio = 180 + (status->int_/2);
+			break;
+		case 4:
+			ratio = 240 + (status->int_/2);
+			break;
+		case 5:
+			ratio = 300 + (status->int_/2);
+			break;
+	}
 	return ratio;
 }
 

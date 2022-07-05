@@ -84,19 +84,19 @@ int MerchntSkillAtkRatioCalculator::calculate_cart_fireworks_atk_ratio(int skill
 	
 	switch (skill_lv) {
 		case 1:
-			ratio = -71 + (status->int_/3);
+			ratio = -71 + (status->int_/6);
 			break;
 		case 2:
-			ratio = -42 + (status->int_/3);
+			ratio = -42 + (status->int_/6);
 			break;
 		case 3:
-			ratio = -13 + (status->int_/3);
+			ratio = -13 + (status->int_/6);
 			break;
 		case 4:
-			ratio = 16 + (status->int_/3);
+			ratio = 16 + (status->int_/6);
 			break;
 		case 5:
-			ratio = 45 + (status->int_/3);
+			ratio = 45 + (status->int_/6);
 			break;
 	}
 	return ratio;
