@@ -19473,7 +19473,7 @@ Body:
   - Id: 2050
     Name: AB_RENOVATIO
     Description: Renovatio
-    MaxLevel: 4
+    MaxLevel: 5
     Type: Magic
     TargetType: Self
     DamageFlags:
@@ -19497,6 +19497,8 @@ Body:
         Time: 150000
       - Level: 4
         Time: 180000
+      - Level: 5
+        Time: 210000
     Requires:
       SpCost:
         - Level: 1

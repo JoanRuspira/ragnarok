@@ -3592,9 +3592,19 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	map_freeblock_lock();
 
 	switch(skill_id) {
+	
+
+	case MC_FIREWORKS:
+	case SM_MAGNUM:
+		if( flag&1 ) {
+			// For players, damage depends on distance, so add it to flag if it is > 1
+			// Cannot hit hidden targets
+			skill_attack(skill_get_type(skill_id), src, src, bl, skill_id, skill_lv, tick, flag|SD_ANIMATION|(sd?distance_bl(src, bl):0));
+		}
+		break;
 	case MER_CRASH:
 	case SM_BASH:
-	case MS_BASH:
+	case LK_HEADCRUSH:
 	case KN_SPEARSTAB:
 	case MC_MAMMONITE:
 	case TF_DOUBLE:
@@ -3608,11 +3618,9 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case KN_PIERCE:
 	case ML_PIERCE:
 	case KN_SPEARBOOMERANG:
-	case TF_POISON:
 	case TF_SNATCH:
 	case TF_SANDATTACK:
 	case TF_SPRINKLESAND:
-	case MA_CHARGEARROW:
 	case RG_INTIMIDATE:
 	case AM_ACIDTERROR:
 	case BA_MUSICALSTRIKE:
@@ -3717,19 +3725,22 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case RL_AM_BLAST:
 		skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag);
 		break;
-
+	case TF_POISON:
+		skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag);
+		skill_attack(BF_WEAPON,src,src,bl,SM_BASH,skill_lv,tick,flag);
+		break;
 	case MO_TRIPLEATTACK:
 		skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag|SD_ANIMATION);
 		break;
 
-	case LK_HEADCRUSH:
-		if (status_get_class_(bl) == CLASS_BOSS) {
-			if (sd)
-				clif_skill_fail(sd, skill_id, USESKILL_FAIL_LEVEL, 0);
-			break;
-		}
-		skill_attack(BF_WEAPON, src, src, bl, skill_id, skill_lv, tick, flag);
-		break;
+	// case LK_HEADCRUSH:
+	// 	if (status_get_class_(bl) == CLASS_BOSS) {
+	// 		if (sd)
+	// 			clif_skill_fail(sd, skill_id, USESKILL_FAIL_LEVEL, 0);
+	// 		break;
+	// 	}
+	// 	skill_attack(BF_WEAPON, src, src, bl, skill_id, skill_lv, tick, flag);
+	// 	break;
 
 	case LK_JOINTBEAT:
 		flag = 1 << rnd() % 6;
@@ -4123,15 +4134,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 			skill_attack(skill_get_type(skill_id), src, src, bl, skill_id, skill_lv, tick, flag);
 		break;
 
-	case MC_FIREWORKS:
-	case SM_MAGNUM:
-	case MS_MAGNUM:
-		if( flag&1 ) {
-			// For players, damage depends on distance, so add it to flag if it is > 1
-			// Cannot hit hidden targets
-			skill_attack(skill_get_type(skill_id), src, src, bl, skill_id, skill_lv, tick, flag|SD_ANIMATION|(sd?distance_bl(src, bl):0));
-		}
-		break;
+
 
 #ifdef RENEWAL
 	case KN_BRANDISHSPEAR:

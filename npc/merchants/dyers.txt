@@ -33,6 +33,9 @@
 			mes .n$;
 			mes "Oh... you need my work? Well... okay, sounds good.";
 			next;
+			mes .n$;
+			mes "I can dye your clothes for 10000 zeny and the right dyestuff.";
+			next;
 			if (Zeny < 10000) {
 				mes .n$;
 				mes "Hmm... you can't afford my services...";
@@ -42,46 +45,53 @@
 			mes "Please choose a color";
 			mes "that suits you.";
 			next;
-			switch(select("Default:Red:Blue:Yellow:Orange:Green:Violet:Black:White")) {
+			switch(select("Default - No Dyestuffs:Blue - ^285eb5CobaltBlue Dyestuffs^000000:Red - ^bd1919Scarlet Dyestuffs^000000:Purple - ^bd1999Violet Dyestuffs^000000:Yellow - ^bda419Lemon Dyestuffs^000000:Green - ^19bd2cDarkGreen Dyestuffs^000000:Orange - ^ed7e0eOrange Dyestuffs^000000:White - ^777777White Dyestuffs^000000:Black - Black Dyestuffs^000000")) {
 				case 1:
 					setlook 7,1;
+					specialeffect2 EF_BEGINSPELL6;
 					set Zeny, Zeny-10000;
 					mes .n$;
 					mes "Here you go.";
 					mes "Enjoy your new look!";
 					close;
 				case 2:
-					if (countitem(975) > 0) {
+					if (countitem(978) > 0) {
 						setlook 7,2;
 						set Zeny, Zeny-10000;
-						delitem 975,1;
+						delitem 978,1;
+						specialeffect2 EF_BEGINSPELL6;
 						mes .n$;
 						mes "Here you go.";
 						mes "Enjoy your new look!";
 						close;
 					}
 				case 3:
-					if (countitem(978) > 0) {
+					if (countitem(975) > 0) {
 						setlook 7,3;
 						set Zeny, Zeny-10000;
-						delitem 978,1;
+						delitem 975,1;
+						specialeffect2 EF_BEGINSPELL6;
+						mes .n$;
+						mes "Here you go.";
+						mes "Enjoy your new look!";
 						close;
 					}
 				case 4:
-					if (countitem(976) > 0) {
+					if (countitem(981) > 0) {
 						setlook 7,4;
 						set Zeny, Zeny-10000;
-						delitem 976,1;
+						delitem 981,1;
 						mes .n$;
 						mes "Here you go.";
 						mes "Enjoy your new look!";
 						close;
 					}
 				case 5:
-					if (countitem(980) > 0) {
+					if (countitem(976) > 0) {
 						setlook 7,5;
 						set Zeny, Zeny-10000;
-						delitem 980,1;
+						delitem 976,1;
+						specialeffect2 EF_BEGINSPELL6;
 						mes .n$;
 						mes "Here you go.";
 						mes "Enjoy your new look!";
@@ -92,36 +102,40 @@
 						setlook 7,6;
 						set Zeny, Zeny-10000;
 						delitem 979,1;
+						specialeffect2 EF_BEGINSPELL6;
 						mes .n$;
 						mes "Here you go.";
 						mes "Enjoy your new look!";
 						close;
 					}
 				case 7:
-					if (countitem(981) > 0) {
+					if (countitem(980) > 0) {
 						setlook 7,7;
 						set Zeny, Zeny-10000;
-						delitem 981,1;
+						delitem 980,1;
+						specialeffect2 EF_BEGINSPELL6;
 						mes .n$;
 						mes "Here you go.";
 						mes "Enjoy your new look!";
 						close;
 					}
 				case 8:
-					if (countitem(983) > 0) {
+					if (countitem(982) > 0) {
 						setlook 7,8;
 						set Zeny, Zeny-10000;
-						delitem 983,1;
+						delitem 982,1;
+						specialeffect2 EF_BEGINSPELL6;
 						mes .n$;
 						mes "Here you go.";
 						mes "Enjoy your new look!";
 						close;
 					}
 				case 9:
-					if (countitem(982) > 0) {
+					if (countitem(983) > 0) {
 						setlook 7,9;
 						set Zeny, Zeny-10000;
-						delitem 982,1;
+						delitem 983,1;
+						specialeffect2 EF_BEGINSPELL6;
 						mes .n$;
 						mes "Here you go.";
 						mes "Enjoy your new look!";
@@ -129,7 +143,8 @@
 					}
 			}
 			mes .n$;
-			mes "You have to provide the correct Dyestuffs.";
+			mes "Hey!";
+			mes "You need to bring me the Dyestuff first!";
 			close;
 		case 3:
 			mes .n$;
