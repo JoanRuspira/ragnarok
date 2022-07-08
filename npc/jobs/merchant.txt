@@ -7,7 +7,7 @@
 		mes "[Merchant Guildmaster]";
 		mes "Good day! I am the merchant Guildmaster.";
 		mes "I train novices that meet the requirements";
-		mes "and allow men to become swordmen.";
+		mes "and allow men to become merchants.";
 		next;
 		mes "[Merchant Guildmaster]";
 		mes "As a merchant you will gain new skills.";
@@ -60,10 +60,9 @@
 		mes "Are you thinking about your next job?";
 		next;
 		mes "[Merchant Guildmaster]";
-		mes "You can become a Blacksmith or join the Alchemist guild to improve your skills.";
+		mes "You can become a Blacksmith in Einbroch or join the Alchemist Guild in Aldebaran to improve your skills.";
 		next;
 		mes "[Merchant Guildmaster]";
-		mes "The Blacksmith Guild is in Einbroch, and the Alchemist Guild is in Aldebaran.";
 		mes "Go there when you think you have enough experience.";
 		close;
 	}

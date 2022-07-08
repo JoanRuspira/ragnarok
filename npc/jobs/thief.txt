@@ -6,7 +6,7 @@
 	if (BaseClass == EAJ_NOVICE) {
 		mes "[Thief Guildmaster]";
 		mes "Good day! I am the thief Guildmaster.";
-		mes "I train novices that meet the requirements and allow men to become swordmen.";
+		mes "I train novices that meet the requirements and allow men to become thieves.";
 		next;
 		mes "[Thief Guildmaster]";
 		mes "As a thief you will gain new skills.";
@@ -59,11 +59,10 @@
 		mes "Are you thinking about your next job?";
 		next;
 		mes "[Thief Guildmaster]";
-		mes "You can become a knight or join the crusaders to improve your skills.";
+		mes "You can become an Assassin or join the Rogue Guild, both of them are somewhere around Sograt Desrt, to improve your skills.";
 		next;
 		mes "[Thief Guildmaster]";
-		mes "Both guilds are in Prontera.";
-		mes "Go there when you think you have";
+		mes "Go find them when you think you have";
 		mes "enough experience.";
 		close;
 	}

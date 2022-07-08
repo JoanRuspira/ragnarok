@@ -6,7 +6,7 @@
 	if (BaseClass == EAJ_NOVICE) {
 		mes "[Archer Guildmaster]";
 		mes "Good day! I am the archer Guildmaster.";
-		mes "I train novices that meet the requirements and allow men to become swordmen.";
+		mes "I train novices that meet the requirements and allow men to become archers.";
 		next;
 		mes "[Archer Guildmaster]";
 		mes "As an archer you will gain new skills.";
@@ -59,10 +59,9 @@
 		mes "Are you thinking about your next job?";
 		next;
 		mes "[Archer Guildmaster]";
-		mes "You can become a knight or join the crusaders to improve your skills.";
+		mes "You can become a Hunter in Hugel or a Performer in Comodo to improve your skills.";
 		next;
 		mes "[Archer Guildmaster]";
-		mes "Both guilds are in Prontera.";
 		mes "Go there when you think you have";
 		mes "enough experience.";
 		close;

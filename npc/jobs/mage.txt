@@ -60,11 +60,9 @@
 		mes "Are you thinking about your next job?";
 		next;
 		mes "[Mage Guildmaster]";
-		mes "You can become a knight or join";
-		mes "the crusaders to improve your skills.";
+		mes "You can become a Wizard in the Geffen Tower or join the Sages in Yuno to improve your skills.";
 		next;
 		mes "[Mage Guildmaster]";
-		mes "Both guilds are in Prontera.";
 		mes "Go there when you think you have";
 		mes "enough experience.";
 		close;

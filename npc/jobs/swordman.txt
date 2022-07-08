@@ -2,49 +2,49 @@
 // Card Removal NPCs
 //====================================================
 
--	script	Swordman Guildmaster#swrdgld::SwrdGld	-1,{
+-	script	Swordsman Guildmaster#swrdgld::SwrdGld	-1,{
 	if (BaseClass == EAJ_NOVICE) {
-		mes "[Swordman Guildmaster]";
-		mes "Good day! I am the swordman Guildmaster.";
+		mes "[Swordsman Guildmaster]";
+		mes "Good day! I am the swordsman Guildmaster.";
 		mes "I train novices that meet the requirements and allow men to become swordmen.";
 		next;
-		mes "[Swordman Guildmaster]";
-		mes "As a swordman you will gain new skills.";
+		mes "[Swordsman Guildmaster]";
+		mes "As a swordsman you will gain new skills.";
 		mes "The requirements are:";
 		mes "- Being a Novice.";
 		mes "- Being Job level 10.";
 		mes "- Having used all your skill points.";
 		next;
-		mes "[Swordman Guildmaster]";
-		mes "Do you want to become a swordman?";
+		mes "[Swordsman Guildmaster]";
+		mes "Do you want to become a swordsman?";
 		next;
 		switch(select("Yes:No")) {
 			case 1:
-				mes "[Swordman Guildmaster]";
+				mes "[Swordsman Guildmaster]";
 				mes "Good! Let me see if you pass our requirements...";
 				next;
 				if (JobLevel < 10) {
-					mes "[Swordman Guildmaster]";
+					mes "[Swordsman Guildmaster]";
 					mes "Hmm... Your job level does not meet our requirements.";
-					mes "You need to be more experienced before being a swordman.";
+					mes "You need to be more experienced before being a swordsman.";
 					close;
 				}
 				if (SkillPoint) {
-					mes "[Swordman Guildmaster]";
+					mes "[Swordsman Guildmaster]";
 					mes "Looks like you have not used all your skill points.";
-					mes "Use them and I'll be able to make you a swordman.";
+					mes "Use them and I'll be able to make you a swordsman.";
 					close;
 				}
-				mes "[Swordman Guildmaster]";
+				mes "[Swordsman Guildmaster]";
 				mes "Okay! Looks like you pass all of them!";
-				mes "You are allowed to join the swordman guild.";
+				mes "You are allowed to join the swordsman guild.";
 				mes "Congratulations!";
-				jobchange Job_Swordman;
+				jobchange Job_Swordsman;
 				specialeffect2 EF_ANGEL2;
 				specialeffect2 EF_ELECTRIC;
 				close;
 			case 2:
-				mes "[Swordman Guildmaster]";
+				mes "[Swordsman Guildmaster]";
 				mes "Ah! Let me know if you change your mind.";
 				mes "We are always looking for new adventurers";
 				mes "to join the guild.";
@@ -53,15 +53,15 @@
 		
 	}
 
-	if (BaseJob == Job_Swordman) {
-		mes "[Swordman Guildmaster]";
-		mes "Hi fellow swordman!";
+	if (BaseJob == Job_Swordsman) {
+		mes "[Swordsman Guildmaster]";
+		mes "Hi fellow swordsman!";
 		mes "Are you thinking about your next job?";
 		next;
-		mes "[Swordman Guildmaster]";
-		mes "You can become a knight or join the crusaders to improve your skills.";
+		mes "[Swordsman Guildmaster]";
+		mes "You can become a Knight or join the Crusaders improve your skills.";
 		next;
-		mes "[Swordman Guildmaster]";
+		mes "[Swordsman Guildmaster]";
 		mes "Both guilds are in Prontera.";
 		mes "Go there when you think you have";
 		mes "enough experience.";
@@ -69,16 +69,16 @@
 	}
 
 	if (BaseJob == Job_Knight || BaseJob == Job_Crusader || BaseJob == Job_LordKnight || BaseJob == Job_Paladin) {
-		mes "[Swordman Guildmaster]";
+		mes "[Swordsman Guildmaster]";
 		mes "Ah! An experienced member of the guild!";
 		mes "Are you here to help train the new members?";
 		close;
 	}
 
-	mes "[Swordman Guildmaster]";
-	mes "Welcome to the swordman guild. We accept applications from novices that meet our requirements.";
+	mes "[Swordsman Guildmaster]";
+	mes "Welcome to the swordsman guild. We accept applications from novices that meet our requirements.";
 	close;
 }
 
-izlude_in,74,172,5	duplicate(SwrdGld)	Swordman Guildmaster#swordgld	119
+izlude_in,74,172,5	duplicate(SwrdGld)	Swordsman Guildmaster#swordgld	119
 

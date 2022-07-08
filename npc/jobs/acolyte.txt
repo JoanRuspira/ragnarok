@@ -1,0 +1,82 @@
+//===== Script =======================================
+// Card Removal NPCs
+//====================================================
+
+-	script	Acolyte Guildmaster#acogld::acogld	-1,{
+	if (BaseClass == EAJ_NOVICE) {
+		mes "[Acolyte Guildmaster]";
+		mes "Good day! I am the Acolyte Guildmaster.";
+		mes "I train novices that meet the requirements and allow men to become acolytes.";
+		next;
+		mes "[Acolyte Guildmaster]";
+		mes "As a Acolyte you will gain new skills.";
+		mes "The requirements are:";
+		mes "- Being a Novice.";
+		mes "- Being Job level 10.";
+		mes "- Having used all your skill points.";
+		next;
+		mes "[Acolyte Guildmaster]";
+		mes "Do you want to become a Acolyte?";
+		next;
+		switch(select("Yes:No")) {
+			case 1:
+				mes "[Acolyte Guildmaster]";
+				mes "Good! Let me see if you pass our requirements...";
+				next;
+				if (JobLevel < 10) {
+					mes "[Acolyte Guildmaster]";
+					mes "Hmm... Your job level does not meet our requirements.";
+					mes "You need to be more experienced before being a Acolyte.";
+					close;
+				}
+				if (SkillPoint) {
+					mes "[Acolyte Guildmaster]";
+					mes "Looks like you have not used all your skill points.";
+					mes "Use them and I'll be able to make you a Acolyte.";
+					close;
+				}
+				mes "[Acolyte Guildmaster]";
+				mes "Okay! Looks like you pass all of them!";
+				mes "You are allowed to join the Acolyte guild.";
+				mes "Congratulations!";
+				jobchange Job_Swordman;
+				specialeffect2 EF_ANGEL2;
+				specialeffect2 EF_ELECTRIC;
+				close;
+			case 2:
+				mes "[Acolyte Guildmaster]";
+				mes "Ah! Let me know if you change your mind.";
+				mes "We are always looking for new adventurers";
+				mes "to join the guild.";
+				close;
+		}
+		
+	}
+
+	if (BaseJob == Job_Acolyte) {
+		mes "[Acolyte Guildmaster]";
+		mes "Hi fellow Acolyte!";
+		mes "Are you thinking about your next job?";
+		next;
+		mes "[Acolyte Guildmaster]";
+		mes "You can become a Priest here at the Church or join the Monks in St. Capitolina Abbey to improve your skills.";
+		next;
+		mes "[Acolyte Guildmaster]";
+		mes "Go there when you think you have";
+		mes "enough experience.";
+		close;
+	}
+
+	if (BaseJob == Job_Priest || BaseJob == Job_Monk || BaseJob == Job_HighPriest || BaseJob == Job_Champion) {
+		mes "[Acolyte Guildmaster]";
+		mes "Ah! An experienced member of the guild!";
+		mes "Are you here to help train the new members?";
+		close;
+	}
+
+	mes "[Acolyte Guildmaster]";
+	mes "Welcome to the Acolyte guild. We accept applications from novices that meet our requirements.";
+	close;
+}
+
+prt_church,184,42,3	duplicate(acogld)	Acolyte Guildmaster#acolgld	60
