@@ -5529,7 +5529,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case AL_DECAGI:
 	case MER_DECAGI:
 		clif_skill_nodamage (src, bl, skill_id, skill_lv,
-			sc_start(src,bl, type, (50 + skill_lv * 3 + (status_get_lv(src) + sstatus->int_)/5), skill_lv, skill_get_time(skill_id,skill_lv)));
+			sc_start(src,bl, type, (50 + skill_lv * 3 + (status_get_lv(src) + sstatus->int_)/5), skill_lv*2, skill_get_time(skill_id,skill_lv*2)));
 		break;
 
 	case AL_CRUCIS:
@@ -5540,6 +5540,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				src, skill_id, skill_lv, tick, flag|BCT_ENEMY|1, skill_castend_nodamage_id);
 			clif_skill_nodamage(src, bl, skill_id, skill_lv, 1);
 		}
+		sc_start4(src, src, SC_CRUCIS_PLAYER, 100, 3, 20, 0, 0, 30000);
 		break;
 
 	case SP_SOULCURSE:
