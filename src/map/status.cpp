@@ -5678,16 +5678,10 @@ void status_calc_bl_main(struct block_list *bl, /*enum scb_flag*/int flag)
 		int amotion;
 
 		if ( bl->type&BL_HOM ) {
-#ifdef RENEWAL_ASPD
+
 			amotion = ((TBL_HOM*)bl)->homunculusDB->baseASPD;
 			amotion = amotion - amotion * status_get_homdex(bl) / 1000 - status_get_homagi(bl) * amotion / 250;
 			amotion = (amotion * status_calc_aspd(bl, sc, true) + status_calc_aspd(bl, sc, false)) / - 100 + amotion;
-#else
-			amotion = (1000 - 4 * status->agi - status->dex) * ((TBL_HOM*)bl)->homunculusDB->baseASPD / 1000;
-
-			amotion = status_calc_aspd_rate(bl, sc, amotion);
-			amotion = amotion * status->aspd_rate / 1000;
-#endif
 
 			amotion = status_calc_fix_aspd(bl, sc, amotion);
 			status->amotion = cap_value(amotion, battle_config.max_aspd, 2000);
@@ -5697,25 +5691,19 @@ void status_calc_bl_main(struct block_list *bl, /*enum scb_flag*/int flag)
 			uint16 skill_lv;
 
 			amotion = status_base_amotion_pc(sd,status);
-#ifndef RENEWAL_ASPD
-			status->aspd_rate = status_calc_aspd_rate(bl, sc, b_status->aspd_rate);
-#endif
+
 			// Absolute ASPD % modifiers
 			amotion = amotion * status->aspd_rate / 1000;
-			if (sd->ud.skilltimer != INVALID_TIMER && (skill_lv = pc_checkskill(sd, SA_FREECAST)) > 0)
-#ifdef RENEWAL_ASPD
-				amotion = amotion * 5 * (skill_lv + 10) / 100;
-#else
-				amotion += (2000 - amotion) * ( 55 - 5 * ( skill_lv + 1 ) ) / 100; //Increases amotion to reduce ASPD to the corresponding absolute percentage for each level (overriding other adjustments)
-#endif
+			if (sd->ud.skilltimer != INVALID_TIMER )
 
-#ifdef RENEWAL_ASPD
+				amotion = amotion * 5 * (5 + 10) / 100; //SA_FREECAST casting motion
+
 			// RE ASPD % modifier
 			amotion += (max(0xc3 - amotion, 2) * (status->aspd_rate2 + status_calc_aspd(bl, sc, false))) / 100;
 			amotion = 10 * (200 - amotion);
 
 			amotion += sd->bonus.aspd_add;
-#endif
+
 			amotion = status_calc_fix_aspd(bl, sc, amotion);
 			status->amotion = cap_value(amotion,pc_maxaspd(sd),2000);
 
@@ -7286,11 +7274,11 @@ static unsigned short status_calc_speed(struct block_list *bl, struct status_cha
 		return (unsigned short)cap_value(speed, MIN_WALK_SPEED, MAX_WALK_SPEED);
 	}
 
-	if( sd && sd->ud.skilltimer != INVALID_TIMER && (pc_checkskill(sd,SA_FREECAST) > 0 || sd->ud.skill_id == LG_EXEEDBREAK) ) {
+	if( sd && sd->ud.skilltimer != INVALID_TIMER ) {
 		if( sd->ud.skill_id == LG_EXEEDBREAK )
 			speed_rate = 160 - 10 * sd->ud.skill_lv;
 		else
-			speed_rate = 175 - 5 * pc_checkskill(sd,SA_FREECAST);
+			speed_rate = 175 - 5 * 5; //SA_FREECAST casting speed rate
 	} else {
 		int val = 0;
 

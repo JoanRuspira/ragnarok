@@ -10691,7 +10691,7 @@ TIMER_FUNC(skill_castend_id){
 			return 0;
 		}
 
-		if( sd && ud->skilltimer != INVALID_TIMER && (pc_checkskill(sd,SA_FREECAST) > 0 || ud->skill_id == LG_EXEEDBREAK) )
+		if( sd && ud->skilltimer != INVALID_TIMER )
 		{// restore original walk speed
 			ud->skilltimer = INVALID_TIMER;
 			status_calc_bl(&sd->bl, SCB_SPEED|SCB_ASPD);
@@ -10991,7 +10991,7 @@ TIMER_FUNC(skill_castend_pos){
 		return 0;
 	}
 
-	if( sd && ud->skilltimer != INVALID_TIMER && ( pc_checkskill(sd,SA_FREECAST) > 0 || ud->skill_id == LG_EXEEDBREAK ) )
+	if( sd && ud->skilltimer != INVALID_TIMER )
 	{// restore original walk speed
 		ud->skilltimer = INVALID_TIMER;
 		status_calc_bl(&sd->bl, SCB_SPEED|SCB_ASPD);
