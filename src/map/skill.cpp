@@ -7520,10 +7520,10 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				spellid = spellarray[i_rnd];
 				maxlv = skill_lv - 1;
 			}
-			else if(skill_lv > 0) {
+			/*else if(skill_lv > 0) {
 				spellid = MG_NAPALMBEAT;
 				maxlv = 3;
-			}
+			}*/
 
 			if(spellid > 0)
 				sc_start4(src,src,SC_AUTOSPELL,100,skill_lv,spellid,maxlv,0,
@@ -16561,7 +16561,6 @@ int skill_autospell(struct map_session_data *sd, uint16 skill_id)
 	else
 		maxlv = skill_lv / 2; // Half of Autospell's level unless player learned a lower level (capped below)
 #else
-	if(skill_id==MG_NAPALMBEAT)	maxlv=3;
 	else if(skill_id==MG_COLDBOLT || skill_id==MG_FIREBOLT || skill_id==MG_LIGHTNINGBOLT){
 		if (sd->sc.data[SC_SPIRIT] && sd->sc.data[SC_SPIRIT]->val2 == SL_SAGE)
 			maxlv = 10; //Soul Linker bonus. [Skotlex]

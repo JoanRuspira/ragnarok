@@ -105,6 +105,12 @@
     <Filter Include="Source Files\skillAdditionalEffectsCalculator\archer">
       <UniqueIdentifier>{c7b5e327-48a6-4e5d-81c1-20cd7a41b895}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\skillAtkRatioCalculator\acolyte">
+      <UniqueIdentifier>{f26e9967-6bd2-4647-bfba-7c3493e70228}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\skillAtkRatioCalculator\acolyte">
+      <UniqueIdentifier>{83a08fc6-f316-4fb9-8d3a-5a2a55425b90}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="achievement.hpp">
@@ -302,6 +308,9 @@
     <ClInclude Include="ArcherAdditionalEffectsCalculator.h">
       <Filter>Header Files\skillAdditionalEffectsCalculator</Filter>
     </ClInclude>
+    <ClInclude Include="AcolyteSkillAtkRatioCalculator.h">
+      <Filter>Header Files\skillAtkRatioCalculator\acolyte</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="achievement.cpp">
@@ -471,6 +480,9 @@
     </ClCompile>
     <ClCompile Include="ArcherAdditionalEffectsCalculator.cpp">
       <Filter>Source Files\skillAdditionalEffectsCalculator\archer</Filter>
+    </ClCompile>
+    <ClCompile Include="AcolyteSkillAtkRatioCalculator.cpp">
+      <Filter>Source Files\skillAtkRatioCalculator\acolyte</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

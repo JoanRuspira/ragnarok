@@ -5306,17 +5306,12 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 
 				switch(skill_id) {
 					case MG_NAPALMBEAT:
-						clif_specialeffect(target, EF_MOCHI, AREA);
-						skillratio += -30 + 10 * skill_lv;
+						skillratio += AcolyteSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv);
 						break;
 					case MG_FIREBALL:
-#ifdef RENEWAL
 						skillratio += 40 + 20 * skill_lv;
 						if(ad.miscflag == 2) //Enemies at the edge of the area will take 75% of the damage
 							skillratio = skillratio * 3 / 4;
-#else
-						skillratio += -30 + 10 * skill_lv;
-#endif
 						break;
 					case MG_UNDEADEMBRACE:
 							clif_specialeffect(target, EF_DEVIL, AREA);

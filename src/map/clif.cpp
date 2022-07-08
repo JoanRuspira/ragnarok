@@ -8189,7 +8189,7 @@ void clif_autospell(struct map_session_data *sd,uint16 skill_lv)
 
 	int fd = sd->fd;
 
-#ifdef RENEWAL
+
 	uint16 autospell_skill[][2] = { 
 		{ MG_FIREBOLT, 0 }, { MG_COLDBOLT, 0 }, { MG_LIGHTNINGBOLT, 0 },
 		{ MG_SOULSTRIKE, 3 }, { MG_FIREBALL, 3 },
@@ -8212,41 +8212,6 @@ void clif_autospell(struct map_session_data *sd,uint16 skill_lv)
 	WFIFOL(fd, 4) = count;
 
 	WFIFOSET(fd, WFIFOW(fd, 2));
-#else
-	WFIFOHEAD(fd,packet_len(0x1cd));
-	WFIFOW(fd, 0)=0x1cd;
-
-	if(skill_lv>0 && pc_checkskill(sd,MG_NAPALMBEAT)>0)
-		WFIFOL(fd,2)= MG_NAPALMBEAT;
-	else
-		WFIFOL(fd,2)= 0x00000000;
-	if(skill_lv>1 && pc_checkskill(sd,MG_COLDBOLT)>0)
-		WFIFOL(fd,6)= MG_COLDBOLT;
-	else
-		WFIFOL(fd,6)= 0x00000000;
-	if(skill_lv>1 && pc_checkskill(sd,MG_FIREBOLT)>0)
-		WFIFOL(fd,10)= MG_FIREBOLT;
-	else
-		WFIFOL(fd,10)= 0x00000000;
-	if(skill_lv>1 && pc_checkskill(sd,MG_LIGHTNINGBOLT)>0)
-		WFIFOL(fd,14)= MG_LIGHTNINGBOLT;
-	else
-		WFIFOL(fd,14)= 0x00000000;
-	if(skill_lv>4 && pc_checkskill(sd,MG_SOULSTRIKE)>0)
-		WFIFOL(fd,18)= MG_SOULSTRIKE;
-	else
-		WFIFOL(fd,18)= 0x00000000;
-	if(skill_lv>7 && pc_checkskill(sd,MG_FIREBALL)>0)
-		WFIFOL(fd,22)= MG_FIREBALL;
-	else
-		WFIFOL(fd,22)= 0x00000000;
-	if(skill_lv>9 && pc_checkskill(sd,MG_FROSTDIVER)>0)
-		WFIFOL(fd,26)= MG_FROSTDIVER;
-	else
-		WFIFOL(fd,26)= 0x00000000;
-
-	WFIFOSET(fd,packet_len(0x1cd));
-#endif
 
 	sd->menuskill_id = SA_AUTOSPELL;
 	sd->menuskill_val = skill_lv;
