@@ -1,0 +1,5487 @@
+
+Header:
+  Type: ITEM_DB
+  Version: 1
+
+Body:
+  - Id: 1101
+    AegisName: Sword
+    Name: Sword
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 100
+    Weight: 500
+    Attack: 25
+    Range: 1
+    Slots: 3
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Novice: true
+      Rogue: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 2
+    Refineable: true
+  - Id: 1102
+    AegisName: Sword_
+    Name: Sword
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 100
+    Weight: 500
+    Attack: 25
+    Range: 1
+    Slots: 4
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Novice: true
+      Rogue: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 2
+    Refineable: true
+  - Id: 1103
+    AegisName: Sword__
+    Name: Sword
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 100
+    Weight: 500
+    Attack: 25
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Novice: true
+      Rogue: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 2
+    Refineable: true
+  - Id: 1104
+    AegisName: Falchion
+    Name: Falchion
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 1500
+    Weight: 600
+    Attack: 39
+    Range: 1
+    Slots: 3
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Novice: true
+      Rogue: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 2
+    Refineable: true
+  - Id: 1105
+    AegisName: Falchion_
+    Name: Falchion
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 1500
+    Weight: 600
+    Attack: 39
+    Range: 1
+    Slots: 4
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Novice: true
+      Rogue: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 2
+    Refineable: true
+  - Id: 1106
+    AegisName: Falchion__
+    Name: Falchion
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 1500
+    Weight: 600
+    Attack: 39
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Novice: true
+      Rogue: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 2
+    Refineable: true
+  - Id: 1107
+    AegisName: Blade
+    Name: Blade
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 2900
+    Weight: 700
+    Attack: 53
+    Range: 1
+    Slots: 3
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Novice: true
+      Rogue: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 2
+    Refineable: true
+  - Id: 1108
+    AegisName: Blade_
+    Name: Blade
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 2900
+    Weight: 700
+    Attack: 53
+    Range: 1
+    Slots: 4
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Novice: true
+      Rogue: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 2
+    Refineable: true
+  - Id: 1109
+    AegisName: Blade__
+    Name: Blade
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 2900
+    Weight: 700
+    Attack: 53
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Novice: true
+      Rogue: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 2
+    Refineable: true
+  - Id: 1110
+    AegisName: Lapier
+    Name: Rapier
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 10000
+    Weight: 500
+    Attack: 70
+    Range: 1
+    Slots: 2
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Novice: true
+      Rogue: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 14
+    Refineable: true
+  - Id: 1111
+    AegisName: Lapier_
+    Name: Rapier
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 10000
+    Weight: 500
+    Attack: 70
+    Range: 1
+    Slots: 3
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Novice: true
+      Rogue: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 14
+    Refineable: true
+  - Id: 1112
+    AegisName: Lapier__
+    Name: Rapier
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 10000
+    Weight: 500
+    Attack: 70
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Novice: true
+      Rogue: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 14
+    Refineable: true
+  - Id: 1113
+    AegisName: Scimiter
+    Name: Scimitar
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 17000
+    Weight: 700
+    Attack: 85
+    Range: 1
+    Slots: 2
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Novice: true
+      Rogue: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 14
+    Refineable: true
+  - Id: 1114
+    AegisName: Scimiter_
+    Name: Scimitar
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 17000
+    Weight: 700
+    Attack: 85
+    Range: 1
+    Slots: 3
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Novice: true
+      Rogue: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 14
+    Refineable: true
+  - Id: 1115
+    AegisName: Scimiter__
+    Name: Scimitar
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 17000
+    Weight: 700
+    Attack: 85
+    Range: 1
+    Slots: 3
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Novice: true
+      Rogue: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 14
+    Refineable: true
+  - Id: 1116
+    AegisName: Katana
+    Name: Katana
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 2000
+    Weight: 1000
+    Attack: 60
+    Range: 1
+    Slots: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 4
+    Refineable: true
+  - Id: 1117
+    AegisName: Katana_
+    Name: Katana
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 2000
+    Weight: 1000
+    Attack: 60
+    Range: 1
+    Slots: 4
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 4
+    Refineable: true
+  - Id: 1118
+    AegisName: Katana__
+    Name: Katana
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 2000
+    Weight: 1000
+    Attack: 60
+    Range: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 4
+    Refineable: true
+  - Id: 1119
+    AegisName: Tsurugi
+    Name: Tsurugi
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 51000
+    Weight: 1200
+    Attack: 130
+    Range: 1
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+  - Id: 1120
+    AegisName: Tsurugi_
+    Name: Tsurugi
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 51000
+    Weight: 1200
+    Attack: 130
+    Range: 1
+    Slots: 2
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+  - Id: 1121
+    AegisName: Tsurugi__
+    Name: Tsurugi
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 51000
+    Weight: 1200
+    Attack: 130
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+  - Id: 1122
+    AegisName: Ring_Pommel_Saber
+    Name: Ring Pommel Saber
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 24000
+    Weight: 900
+    Attack: 100
+    Range: 1
+    Slots: 2
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 14
+    Refineable: true
+  - Id: 1123
+    AegisName: Haedonggum
+    Name: Haedonggum
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 50000
+    Weight: 900
+    Attack: 120
+    Range: 1
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+    Script: |
+      bonus bInt,3;
+  - Id: 1124
+    AegisName: Orcish_Sword
+    Name: Orcish Sword
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 20
+    Weight: 800
+    Attack: 90
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Novice: true
+      Rogue: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 5
+    Refineable: true
+    Script: |
+      bonus bUnbreakableWeapon;
+  - Id: 1125
+    AegisName: Ring_Pommel_Saber_
+    Name: Ring Pommel Saber
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 24000
+    Weight: 900
+    Attack: 100
+    Range: 1
+    Slots: 3
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 14
+    Refineable: true
+  - Id: 1126
+    AegisName: Saber
+    Name: Saber
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 49000
+    Weight: 1000
+    Attack: 115
+    Range: 1
+    Slots: 2
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+  - Id: 1127
+    AegisName: Saber_
+    Name: Saber
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 49000
+    Weight: 1000
+    Attack: 115
+    Range: 1
+    Slots: 3
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+  - Id: 1128
+    AegisName: Hae_Dong_Gum_
+    Name: Haedonggum
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 50000
+    Weight: 900
+    Attack: 120
+    Range: 1
+    Slots: 2
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+    Script: |
+      bonus bInt,3;
+  - Id: 1129
+    AegisName: Flamberge
+    Name: Flamberge
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 60000
+    Weight: 1500
+    Attack: 150
+    Range: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+  - Id: 1149
+    AegisName: Flamberge_
+    Name: Flamberge
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 60000
+    Weight: 1500
+    Attack: 150
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+  - Id: 1151
+    AegisName: Slayer
+    Name: Slayer
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 15000
+    Weight: 1300
+    Attack: 90
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1152
+    AegisName: Slayer_
+    Name: Slayer
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 15000
+    Weight: 1300
+    Attack: 90
+    Range: 1
+    Slots: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1153
+    AegisName: Slayer__
+    Name: Slayer
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 15000
+    Weight: 1300
+    Attack: 90
+    Range: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1154
+    AegisName: Bastard_Sword
+    Name: Bastard Sword
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 22500
+    Weight: 1600
+    Attack: 115
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1155
+    AegisName: Bastard_Sword_
+    Name: Bastard Sword
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 22500
+    Weight: 1600
+    Attack: 115
+    Range: 1
+    Slots: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1156
+    AegisName: Bastard_Sword__
+    Name: Bastard Sword
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 22500
+    Weight: 1600
+    Attack: 115
+    Range: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1157
+    AegisName: Two_Hand_Sword
+    Name: Two-Handed Sword
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 60000
+    Weight: 2200
+    Attack: 160
+    Range: 1
+    Slots: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1158
+    AegisName: Two_Hand_Sword_
+    Name: Two-Handed Sword
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 60000
+    Weight: 2200
+    Attack: 160
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1159
+    AegisName: Two_Hand_Sword__
+    Name: Two-Handed Sword
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 60000
+    Weight: 2200
+    Attack: 160
+    Range: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1160
+    AegisName: Broad_Sword
+    Name: Broad Sword
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 65000
+    Weight: 2000
+    Attack: 140
+    Range: 1
+    Slots: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+    Script: |
+      bonus bDef,5;
+      bonus bUnbreakableWeapon;
+  - Id: 1161
+    AegisName: Balmung
+    Name: Balmung
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 20
+    Weight: 1000
+    Attack: 250
+    Range: 1
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 48
+    Refineable: true
+    Script: |
+      bonus bUnbreakableWeapon;
+      bonus bAtkEle,Ele_Holy;
+  - Id: 1162
+    AegisName: Broad_Sword_
+    Name: Broad Sword
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 65000
+    Weight: 2000
+    Attack: 140
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+    Script: |
+      bonus bDef,5;
+      bonus bUnbreakableWeapon;
+  - Id: 1163
+    AegisName: Claymore
+    Name: Claymore
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 74000
+    Weight: 2500
+    Attack: 180
+    Range: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1172
+    AegisName: Claymore_
+    Name: Claymore
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 74000
+    Weight: 2500
+    Attack: 180
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1190
+    AegisName: Claymore_C
+    Name: Claymore
+    Type: Weapon
+    SubType: 2hSword
+    Attack: 220
+    Range: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 1
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus2 bAddSize,Size_All,40;
+  - Id: 1201
+    AegisName: Knife
+    Name: Knife
+    Type: Weapon
+    SubType: Dagger
+    Buy: 50
+    Weight: 400
+    Attack: 17
+    Range: 1
+    Slots: 3
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Novice: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+  - Id: 1202
+    AegisName: Knife_
+    Name: Knife
+    Type: Weapon
+    SubType: Dagger
+    Buy: 50
+    Weight: 400
+    Attack: 17
+    Range: 1
+    Slots: 4
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Novice: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+  - Id: 1203
+    AegisName: Knife__
+    Name: Knife
+    Type: Weapon
+    SubType: Dagger
+    Buy: 50
+    Weight: 400
+    Attack: 17
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Novice: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+  - Id: 1204
+    AegisName: Cutter
+    Name: Cutter
+    Type: Weapon
+    SubType: Dagger
+    Buy: 1250
+    Weight: 500
+    Attack: 30
+    Range: 1
+    Slots: 3
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Novice: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+  - Id: 1205
+    AegisName: Cutter_
+    Name: Cutter
+    Type: Weapon
+    SubType: Dagger
+    Buy: 1250
+    Weight: 500
+    Attack: 30
+    Range: 1
+    Slots: 4
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Novice: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+  - Id: 1206
+    AegisName: Cutter__
+    Name: Cutter
+    Type: Weapon
+    SubType: Dagger
+    Buy: 1250
+    Weight: 500
+    Attack: 30
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Novice: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+  - Id: 1207
+    AegisName: Main_Gauche
+    Name: Main Gauche
+    Type: Weapon
+    SubType: Dagger
+    Buy: 2400
+    Weight: 600
+    Attack: 43
+    Range: 1
+    Slots: 3
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Novice: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+  - Id: 1208
+    AegisName: Main_Gauche_
+    Name: Main Gauche
+    Type: Weapon
+    SubType: Dagger
+    Buy: 2400
+    Weight: 600
+    Attack: 43
+    Range: 1
+    Slots: 4
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Novice: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+  - Id: 1209
+    AegisName: Main_Gauche__
+    Name: Main Gauche
+    Type: Weapon
+    SubType: Dagger
+    Buy: 2400
+    Weight: 600
+    Attack: 43
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Novice: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+  - Id: 1210
+    AegisName: Dirk
+    Name: Dirk
+    Type: Weapon
+    SubType: Dagger
+    Buy: 8500
+    Weight: 500
+    Attack: 59
+    Range: 1
+    Slots: 2
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Novice: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 12
+    Refineable: true
+  - Id: 1211
+    AegisName: Dirk_
+    Name: Dirk
+    Type: Weapon
+    SubType: Dagger
+    Buy: 8500
+    Weight: 500
+    Attack: 59
+    Range: 1
+    Slots: 3
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Novice: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 12
+    Refineable: true
+  - Id: 1212
+    AegisName: Dirk__
+    Name: Dirk
+    Type: Weapon
+    SubType: Dagger
+    Buy: 8500
+    Weight: 500
+    Attack: 59
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Novice: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 12
+    Refineable: true
+  - Id: 1213
+    AegisName: Dagger
+    Name: Dagger
+    Type: Weapon
+    SubType: Dagger
+    Buy: 14000
+    Weight: 600
+    Attack: 73
+    Range: 1
+    Slots: 2
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Novice: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 12
+    Refineable: true
+  - Id: 1214
+    AegisName: Dagger_
+    Name: Dagger
+    Type: Weapon
+    SubType: Dagger
+    Buy: 14000
+    Weight: 600
+    Attack: 73
+    Range: 1
+    Slots: 3
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Novice: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 12
+    Refineable: true
+  - Id: 1215
+    AegisName: Dagger__
+    Name: Dagger
+    Type: Weapon
+    SubType: Dagger
+    Buy: 14000
+    Weight: 600
+    Attack: 73
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Novice: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 12
+    Refineable: true
+  - Id: 1216
+    AegisName: Stiletto
+    Name: Stiletto
+    Type: Weapon
+    SubType: Dagger
+    Buy: 19500
+    Weight: 700
+    Attack: 87
+    Range: 1
+    Slots: 2
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Novice: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 12
+    Refineable: true
+  - Id: 1217
+    AegisName: Stiletto_
+    Name: Stiletto
+    Type: Weapon
+    SubType: Dagger
+    Buy: 19500
+    Weight: 700
+    Attack: 87
+    Range: 1
+    Slots: 3
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Novice: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 12
+    Refineable: true
+  - Id: 1218
+    AegisName: Stiletto__
+    Name: Stiletto
+    Type: Weapon
+    SubType: Dagger
+    Buy: 19500
+    Weight: 700
+    Attack: 87
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Novice: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 12
+    Refineable: true
+  - Id: 1219
+    AegisName: Gladius
+    Name: Gladius
+    Type: Weapon
+    SubType: Dagger
+    Buy: 43000
+    Weight: 700
+    Attack: 105
+    Range: 1
+    Slots: 2
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 24
+    Refineable: true
+  - Id: 1220
+    AegisName: Gladius_
+    Name: Gladius
+    Type: Weapon
+    SubType: Dagger
+    Buy: 43000
+    Weight: 700
+    Attack: 105
+    Range: 1
+    Slots: 3
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 24
+    Refineable: true
+  - Id: 1221
+    AegisName: Gladius__
+    Name: Gladius
+    Type: Weapon
+    SubType: Dagger
+    Buy: 43000
+    Weight: 700
+    Attack: 105
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 24
+    Refineable: true
+  - Id: 1222
+    AegisName: Damascus
+    Name: Damascus
+    Type: Weapon
+    SubType: Dagger
+    Buy: 49000
+    Weight: 800
+    Attack: 118
+    Range: 1
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 24
+    Refineable: true
+    Script: |
+      bonus bUnbreakableWeapon;
+  - Id: 1226
+    AegisName: Damascus_
+    Name: Damascus
+    Type: Weapon
+    SubType: Dagger
+    Buy: 49000
+    Weight: 800
+    Attack: 118
+    Range: 1
+    Slots: 2
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 24
+    Refineable: true
+    Script: |
+      bonus bUnbreakableWeapon;
+  - Id: 1247
+    AegisName: Kindling_Dagger
+    Name: Kindle Dagger
+    Type: Weapon
+    SubType: Dagger
+    Buy: 10000
+    Weight: 600
+    Attack: 39
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Novice: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Fire;
+  - Id: 1248
+    AegisName: Obsidian_Dagger
+    Name: Obsidian Dagger
+    Type: Weapon
+    SubType: Dagger
+    Buy: 10000
+    Weight: 600
+    Attack: 39
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Novice: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Earth;
+  - Id: 1249
+    AegisName: Fisherman's_Dagger
+    Name: Fisherman's Dagger
+    Type: Weapon
+    SubType: Dagger
+    Buy: 10000
+    Weight: 600
+    Attack: 39
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Novice: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Water;
+  - Id: 1250
+    AegisName: Jur
+    Name: Jur
+    Type: Weapon
+    SubType: Katar
+    Buy: 19500
+    Weight: 800
+    Attack: 125
+    Range: 1
+    Slots: 2
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1251
+    AegisName: Jur_
+    Name: Jur
+    Type: Weapon
+    SubType: Katar
+    Buy: 19500
+    Weight: 800
+    Attack: 125
+    Range: 1
+    Slots: 3
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1252
+    AegisName: Katar
+    Name: Katar
+    Type: Weapon
+    SubType: Katar
+    Buy: 41000
+    Weight: 1200
+    Attack: 148
+    Range: 1
+    Slots: 1
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+    Script: |
+      bonus bDex,1;
+  - Id: 1253
+    AegisName: Katar_
+    Name: Katar
+    Type: Weapon
+    SubType: Katar
+    Buy: 41000
+    Weight: 1200
+    Attack: 148
+    Range: 1
+    Slots: 2
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+    Script: |
+      bonus bDex,1;
+  - Id: 1254
+    AegisName: Jamadhar
+    Name: Jamadhar
+    Type: Weapon
+    SubType: Katar
+    Buy: 37200
+    Weight: 1500
+    Attack: 165
+    Range: 1
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1255
+    AegisName: Jamadhar_
+    Name: Jamadhar
+    Type: Weapon
+    SubType: Katar
+    Buy: 37200
+    Weight: 1500
+    Attack: 165
+    Range: 1
+    Slots: 1
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1301
+    AegisName: Axe
+    Name: Axe
+    Type: Weapon
+    SubType: 1hAxe
+    Buy: 500
+    Weight: 800
+    Attack: 38
+    Range: 1
+    Slots: 3
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Novice: true
+      Rogue: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 3
+    Refineable: true
+  - Id: 1302
+    AegisName: Axe_
+    Name: Axe
+    Type: Weapon
+    SubType: 1hAxe
+    Buy: 500
+    Weight: 800
+    Attack: 38
+    Range: 1
+    Slots: 4
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Novice: true
+      Rogue: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 3
+    Refineable: true
+  - Id: 1303
+    AegisName: Axe__
+    Name: Axe
+    Type: Weapon
+    SubType: 1hAxe
+    Buy: 500
+    Weight: 800
+    Attack: 38
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Novice: true
+      Rogue: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 3
+    Refineable: true
+  - Id: 1304
+    AegisName: Orcish_Axe
+    Name: Orcish Axe
+    Type: Weapon
+    SubType: 1hAxe
+    Buy: 20
+    Weight: 1500
+    Attack: 75
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Novice: true
+      Rogue: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 3
+    Refineable: true
+  - Id: 1309
+    AegisName: Orcish_Axe_
+    Name: Orcish Axe
+    Type: Weapon
+    SubType: 1hAxe
+    Buy: 20
+    Weight: 1500
+    Attack: 75
+    Range: 1
+    Slots: 4
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Novice: true
+      Rogue: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 3
+    Refineable: true
+  - Id: 1312
+    AegisName: Orcish_Axe_C
+    Name: Orcish Axe
+    Type: Weapon
+    SubType: 1hAxe
+    Attack: 110
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Novice: true
+      Rogue: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 1
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus2 bAddSize,Size_All,70;
+  - Id: 1351
+    AegisName: Battle_Axe
+    Name: Battle Axe
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 5400
+    Weight: 1500
+    Attack: 80
+    Range: 1
+    Slots: 3
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 3
+    Refineable: true
+  - Id: 1352
+    AegisName: Battle_Axe_
+    Name: Battle Axe
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 5400
+    Weight: 1500
+    Attack: 80
+    Range: 1
+    Slots: 4
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 3
+    Refineable: true
+  - Id: 1353
+    AegisName: Battle_Axe__
+    Name: Battle Axe
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 5400
+    Weight: 1500
+    Attack: 80
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 3
+    Refineable: true
+  - Id: 1354
+    AegisName: Hammer
+    Name: Hammer
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 15500
+    Weight: 2000
+    Attack: 120
+    Range: 1
+    Slots: 2
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 16
+    Refineable: true
+  - Id: 1355
+    AegisName: Hammer_
+    Name: Hammer
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 15500
+    Weight: 2000
+    Attack: 120
+    Range: 1
+    Slots: 3
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 16
+    Refineable: true
+  - Id: 1356
+    AegisName: Hammer__
+    Name: Hammer
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 15500
+    Weight: 2000
+    Attack: 120
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 16
+    Refineable: true
+  - Id: 1357
+    AegisName: Buster
+    Name: Buster
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 34000
+    Weight: 2200
+    Attack: 155
+    Range: 1
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
+  - Id: 1358
+    AegisName: Buster_
+    Name: Buster
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 34000
+    Weight: 2200
+    Attack: 155
+    Range: 1
+    Slots: 2
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
+  - Id: 1359
+    AegisName: Buster__
+    Name: Buster
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 34000
+    Weight: 2200
+    Attack: 155
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
+  - Id: 1360
+    AegisName: Two_Handed_Axe
+    Name: Two-Handed Axe
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 55000
+    Weight: 2500
+    Attack: 185
+    Range: 1
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
+  - Id: 1361
+    AegisName: Two_Handed_Axe_
+    Name: Two-Handed Axe
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 55000
+    Weight: 2500
+    Attack: 185
+    Range: 1
+    Slots: 2
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
+  - Id: 1362
+    AegisName: Two_Handed_Axe__
+    Name: Two-Handed Axe
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 55000
+    Weight: 2500
+    Attack: 185
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
+  - Id: 1388
+    AegisName: Two_Handed_Axe_C
+    Name: Two-Handed Axe
+    Type: Weapon
+    SubType: 2hAxe
+    Attack: 220
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 1
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus2 bAddSize,Size_All,40;
+  - Id: 1401
+    AegisName: Javelin
+    Name: Javelin
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 150
+    Weight: 700
+    Attack: 28
+    Range: 3
+    Slots: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 4
+    Refineable: true
+  - Id: 1402
+    AegisName: Javelin_
+    Name: Javelin
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 150
+    Weight: 700
+    Attack: 28
+    Range: 3
+    Slots: 4
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 4
+    Refineable: true
+  - Id: 1403
+    AegisName: Javelin__
+    Name: Javelin
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 150
+    Weight: 700
+    Attack: 28
+    Range: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 4
+    Refineable: true
+  - Id: 1404
+    AegisName: Spear
+    Name: Spear
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 1700
+    Weight: 850
+    Attack: 44
+    Range: 3
+    Slots: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 4
+    Refineable: true
+  - Id: 1405
+    AegisName: Spear_
+    Name: Spear
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 1700
+    Weight: 850
+    Attack: 44
+    Range: 3
+    Slots: 4
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 4
+    Refineable: true
+  - Id: 1406
+    AegisName: Spear__
+    Name: Spear
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 1700
+    Weight: 850
+    Attack: 44
+    Range: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 4
+    Refineable: true
+  - Id: 1407
+    AegisName: Pike
+    Name: Pike
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 3450
+    Weight: 1000
+    Attack: 60
+    Range: 3
+    Slots: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 4
+    Refineable: true
+  - Id: 1408
+    AegisName: Pike_
+    Name: Pike
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 3450
+    Weight: 1000
+    Attack: 60
+    Range: 3
+    Slots: 4
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 4
+    Refineable: true
+  - Id: 1409
+    AegisName: Pike__
+    Name: Pike
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 3450
+    Weight: 1000
+    Attack: 60
+    Range: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 4
+    Refineable: true
+  - Id: 1410
+    AegisName: Lance
+    Name: Lance
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 60000
+    Weight: 2500
+    Attack: 185
+    Range: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1411
+    AegisName: Lance_
+    Name: Lance
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 60000
+    Weight: 2500
+    Attack: 185
+    Range: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1412
+    AegisName: Lance__
+    Name: Lance
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 60000
+    Weight: 2500
+    Attack: 185
+    Range: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1451
+    AegisName: Guisarme
+    Name: Guisarme
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 13000
+    Weight: 1000
+    Attack: 84
+    Range: 3
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1452
+    AegisName: Guisarme_
+    Name: Guisarme
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 13000
+    Weight: 1000
+    Attack: 84
+    Range: 3
+    Slots: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1453
+    AegisName: Guisarme__
+    Name: Guisarme
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 13000
+    Weight: 1000
+    Attack: 84
+    Range: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1454
+    AegisName: Glaive
+    Name: Glaive
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 20000
+    Weight: 1200
+    Attack: 104
+    Range: 3
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1455
+    AegisName: Glaive_
+    Name: Glaive
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 20000
+    Weight: 1200
+    Attack: 104
+    Range: 3
+    Slots: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1456
+    AegisName: Glaive__
+    Name: Glaive
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 20000
+    Weight: 1200
+    Attack: 104
+    Range: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1457
+    AegisName: Partizan
+    Name: Partizan
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 27000
+    Weight: 2000
+    Attack: 124
+    Range: 3
+    Slots: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1458
+    AegisName: Partizan_
+    Name: Partizan
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 27000
+    Weight: 2000
+    Attack: 124
+    Range: 3
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1459
+    AegisName: Partizan__
+    Name: Partizan
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 27000
+    Weight: 2000
+    Attack: 124
+    Range: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1460
+    AegisName: Trident
+    Name: Trident
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 51000
+    Weight: 1200
+    Attack: 150
+    Range: 3
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1461
+    AegisName: Trident_
+    Name: Trident
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 51000
+    Weight: 1200
+    Attack: 150
+    Range: 3
+    Slots: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1462
+    AegisName: Trident__
+    Name: Trident
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 51000
+    Weight: 1200
+    Attack: 150
+    Range: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1463
+    AegisName: Halberd
+    Name: Halberd
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 54000
+    Weight: 2500
+    Attack: 165
+    Range: 3
+    Slots: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1464
+    AegisName: Halberd_
+    Name: Halberd
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 54000
+    Weight: 2500
+    Attack: 165
+    Range: 3
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1465
+    AegisName: Halberd__
+    Name: Halberd
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 54000
+    Weight: 2500
+    Attack: 165
+    Range: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1501
+    AegisName: Club
+    Name: Club
+    Type: Weapon
+    SubType: Mace
+    Buy: 120
+    Weight: 700
+    Attack: 23
+    Range: 1
+    Slots: 3
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Monk: true
+      Novice: true
+      Priest: true
+      SuperNovice: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 2
+    Refineable: true
+  - Id: 1502
+    AegisName: Club_
+    Name: Club
+    Type: Weapon
+    SubType: Mace
+    Buy: 120
+    Weight: 700
+    Attack: 23
+    Range: 1
+    Slots: 4
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Monk: true
+      Novice: true
+      Priest: true
+      SuperNovice: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 2
+    Refineable: true
+  - Id: 1503
+    AegisName: Club__
+    Name: Club
+    Type: Weapon
+    SubType: Mace
+    Buy: 120
+    Weight: 700
+    Attack: 23
+    Range: 1
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Monk: true
+      Novice: true
+      Priest: true
+      SuperNovice: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 2
+    Refineable: true
+  - Id: 1504
+    AegisName: Mace
+    Name: Mace
+    Type: Weapon
+    SubType: Mace
+    Buy: 1600
+    Weight: 800
+    Attack: 37
+    Range: 1
+    Slots: 3
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Monk: true
+      Novice: true
+      Priest: true
+      SuperNovice: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 2
+    Refineable: true
+  - Id: 1505
+    AegisName: Mace_
+    Name: Mace
+    Type: Weapon
+    SubType: Mace
+    Buy: 1600
+    Weight: 800
+    Attack: 37
+    Range: 1
+    Slots: 4
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Monk: true
+      Novice: true
+      Priest: true
+      SuperNovice: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 2
+    Refineable: true
+  - Id: 1506
+    AegisName: Mace__
+    Name: Mace
+    Type: Weapon
+    SubType: Mace
+    Buy: 1600
+    Weight: 800
+    Attack: 37
+    Range: 1
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Monk: true
+      Novice: true
+      Priest: true
+      SuperNovice: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 2
+    Refineable: true
+  - Id: 1507
+    AegisName: Smasher
+    Name: Smasher
+    Type: Weapon
+    SubType: Mace
+    Buy: 9000
+    Weight: 1000
+    Attack: 54
+    Range: 1
+    Slots: 2
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Monk: true
+      Novice: true
+      Priest: true
+      SuperNovice: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 14
+    Refineable: true
+  - Id: 1508
+    AegisName: Smasher_
+    Name: Smasher
+    Type: Weapon
+    SubType: Mace
+    Buy: 9000
+    Weight: 1000
+    Attack: 54
+    Range: 1
+    Slots: 3
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Monk: true
+      Novice: true
+      Priest: true
+      SuperNovice: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 14
+    Refineable: true
+  - Id: 1509
+    AegisName: Smasher__
+    Name: Smasher
+    Type: Weapon
+    SubType: Mace
+    Buy: 9000
+    Weight: 1000
+    Attack: 54
+    Range: 1
+    Slots: 3
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Monk: true
+      Novice: true
+      Priest: true
+      SuperNovice: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 14
+    Refineable: true
+  - Id: 1510
+    AegisName: Flail
+    Name: Flail
+    Type: Weapon
+    SubType: Mace
+    Buy: 16000
+    Weight: 900
+    Attack: 69
+    Range: 1
+    Slots: 2
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Monk: true
+      Priest: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 14
+    Refineable: true
+  - Id: 1511
+    AegisName: Flail_
+    Name: Flail
+    Type: Weapon
+    SubType: Mace
+    Buy: 16000
+    Weight: 900
+    Attack: 69
+    Range: 1
+    Slots: 3
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Monk: true
+      Priest: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 14
+    Refineable: true
+  - Id: 1512
+    AegisName: Flail__
+    Name: Flail
+    Type: Weapon
+    SubType: Mace
+    Buy: 16000
+    Weight: 900
+    Attack: 69
+    Range: 1
+    Slots: 3
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Monk: true
+      Priest: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 14
+    Refineable: true
+  - Id: 1513
+    AegisName: Morning_Star
+    Name: Morning Star
+    Type: Weapon
+    SubType: Mace
+    Buy: 41000
+    Weight: 1500
+    Attack: 110
+    Range: 1
+    Slots: 1
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Monk: true
+      Priest: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+  - Id: 1514
+    AegisName: Morning_Star_
+    Name: Morning Star
+    Type: Weapon
+    SubType: Mace
+    Buy: 41000
+    Weight: 1500
+    Attack: 110
+    Range: 1
+    Slots: 2
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Monk: true
+      Priest: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+  - Id: 1515
+    AegisName: Morning_Star__
+    Name: Morning Star
+    Type: Weapon
+    SubType: Mace
+    Buy: 41000
+    Weight: 1500
+    Attack: 110
+    Range: 1
+    Slots: 2
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Monk: true
+      Priest: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+  - Id: 1516
+    AegisName: Sword_Mace
+    Name: Sword Mace
+    Type: Weapon
+    SubType: Mace
+    Buy: 50000
+    Weight: 1200
+    Attack: 130
+    Range: 1
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Monk: true
+      Priest: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+  - Id: 1517
+    AegisName: Sword_Mace_
+    Name: Sword Mace
+    Type: Weapon
+    SubType: Mace
+    Buy: 50000
+    Weight: 1200
+    Attack: 130
+    Range: 1
+    Slots: 1
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Monk: true
+      Priest: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+  - Id: 1518
+    AegisName: Sword_Mace__
+    Name: Sword Mace
+    Type: Weapon
+    SubType: Mace
+    Buy: 50000
+    Weight: 1200
+    Attack: 130
+    Range: 1
+    Slots: 1
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Monk: true
+      Priest: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+  - Id: 1519
+    AegisName: Chain
+    Name: Chain
+    Type: Weapon
+    SubType: Mace
+    Buy: 23000
+    Weight: 800
+    Attack: 84
+    Range: 1
+    Slots: 2
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Monk: true
+      Priest: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 14
+    Refineable: true
+  - Id: 1520
+    AegisName: Chain_
+    Name: Chain
+    Type: Weapon
+    SubType: Mace
+    Buy: 23000
+    Weight: 800
+    Attack: 84
+    Range: 1
+    Slots: 3
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Monk: true
+      Priest: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 14
+    Refineable: true
+  - Id: 1521
+    AegisName: Chain__
+    Name: Chain
+    Type: Weapon
+    SubType: Mace
+    Buy: 23000
+    Weight: 800
+    Attack: 84
+    Range: 1
+    Slots: 3
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Monk: true
+      Priest: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 14
+    Refineable: true
+  - Id: 1522
+    AegisName: Stunner
+    Name: Stunner
+    Type: Weapon
+    SubType: Mace
+    Buy: 60000
+    Weight: 2000
+    Attack: 140
+    Range: 1
+    Jobs:
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+    Script: |
+      bonus2 bAddEff,Eff_Stun,1000;
+  - Id: 1532
+    AegisName: Stunner_
+    Name: Stunner
+    Type: Weapon
+    SubType: Mace
+    Buy: 60000
+    Weight: 2000
+    Attack: 140
+    Range: 1
+    Slots: 2
+    Jobs:
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+    Script: |
+      bonus2 bAddEff,Eff_Stun,1000;
+  - Id: 1549
+    AegisName: Pilebuncker
+    Name: Pile Bunker
+    Type: Weapon
+    SubType: Mace
+    Buy: 10000
+    Weight: 3500
+    Attack: 450
+    Range: 1
+    Jobs:
+      Blacksmith: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 99
+    Refineable: true
+  - Id: 1550
+    AegisName: Book
+    Name: Book
+    Type: Weapon
+    SubType: Book
+    Buy: 30000
+    Weight: 600
+    Attack: 85
+    Range: 1
+    Slots: 3
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 14
+    Refineable: true
+  - Id: 1551
+    AegisName: Bible
+    Name: Bible
+    Type: Weapon
+    SubType: Book
+    Buy: 60000
+    Weight: 1000
+    Attack: 115
+    Range: 1
+    Slots: 2
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+    Script: |
+      bonus bInt,2;
+  - Id: 1552
+    AegisName: Tablet
+    Name: Tablet
+    Type: Weapon
+    SubType: Book
+    Buy: 51000
+    Weight: 800
+    Attack: 125
+    Range: 1
+    Slots: 1
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+  - Id: 1553
+    AegisName: Book_Of_Billows
+    Name: Book of Billows
+    Type: Weapon
+    SubType: Book
+    Buy: 35000
+    Weight: 750
+    Attack: 90
+    Range: 1
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Water;
+  - Id: 1554
+    AegisName: Book_Of_Mother_Earth
+    Name: Book of Mother Earth
+    Type: Weapon
+    SubType: Book
+    Buy: 35000
+    Weight: 750
+    Attack: 90
+    Range: 1
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Earth;
+  - Id: 1555
+    AegisName: Book_Of_Blazing_Sun
+    Name: Book of the Blazing Sun
+    Type: Weapon
+    SubType: Book
+    Buy: 35000
+    Weight: 750
+    Attack: 90
+    Range: 1
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Fire;
+  - Id: 1556
+    AegisName: Book_Of_Gust_Of_Wind
+    Name: Book of Gust of Wind
+    Type: Weapon
+    SubType: Book
+    Buy: 35000
+    Weight: 750
+    Attack: 90
+    Range: 1
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Wind;
+  - Id: 1557
+    AegisName: Book_Of_The_Apocalypse
+    Name: Book of the Apocalypse
+    Type: Weapon
+    SubType: Book
+    Buy: 60000
+    Weight: 800
+    Attack: 120
+    Range: 1
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 40
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Dark;
+      bonus2 bAddEle,Ele_Holy,5;
+      bonus2 bAddEle,Ele_Water,7;
+      bonus2 bAddEle,Ele_Earth,7;
+      bonus2 bAddEle,Ele_Fire,7;
+      bonus2 bAddEle,Ele_Wind,7;
+  - Id: 1558
+    AegisName: Girl's_Diary
+    Name: Girl's Diary
+    Type: Weapon
+    SubType: Book
+    Buy: 1500
+    Weight: 300
+    Attack: 60
+    Range: 1
+    Slots: 1
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 40
+    Refineable: true
+    Script: |
+      bonus2 bAddDamageClass,1188,150;
+  - Id: 1569
+    AegisName: Book_Of_Mother_Earth_
+    Name: Book of Mother Earth
+    Type: Weapon
+    SubType: Book
+    Buy: 35000
+    Weight: 750
+    Attack: 90
+    Range: 1
+    Slots: 3
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Earth;
+  - Id: 1570
+    AegisName: Book_Of_Blazing_Sun_
+    Name: Book of Blazing Sun
+    Type: Weapon
+    SubType: Book
+    Buy: 35000
+    Weight: 750
+    Attack: 90
+    Range: 1
+    Slots: 3
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Fire;
+  - Id: 1571
+    AegisName: Book_Of_Gust_Of_Wind_
+    Name: Book of Gust of Wind
+    Type: Weapon
+    SubType: Book
+    Buy: 35000
+    Weight: 750
+    Attack: 90
+    Range: 1
+    Slots: 3
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Wind;
+  - Id: 1601
+    AegisName: Rod
+    Name: Rod
+    Type: Weapon
+    SubType: Staff
+    Buy: 50
+    Weight: 400
+    Attack: 15
+    Range: 1
+    Slots: 3
+    Jobs:
+      Acolyte: true
+      Mage: true
+      Monk: true
+      Novice: true
+      Priest: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bMatkRate,15;
+  - Id: 1602
+    AegisName: Rod_
+    Name: Rod
+    Type: Weapon
+    SubType: Staff
+    Buy: 50
+    Weight: 400
+    Attack: 15
+    Range: 1
+    Slots: 4
+    Jobs:
+      Acolyte: true
+      Mage: true
+      Monk: true
+      Novice: true
+      Priest: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bMatkRate,15;
+  - Id: 1603
+    AegisName: Rod__
+    Name: Rod
+    Type: Weapon
+    SubType: Staff
+    Buy: 50
+    Weight: 400
+    Attack: 15
+    Range: 1
+    Jobs:
+      Acolyte: true
+      Mage: true
+      Monk: true
+      Novice: true
+      Priest: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bMatkRate,15;
+  - Id: 1604
+    AegisName: Wand
+    Name: Wand
+    Type: Weapon
+    SubType: Staff
+    Buy: 2500
+    Weight: 400
+    Attack: 25
+    Range: 1
+    Slots: 2
+    Jobs:
+      Acolyte: true
+      Mage: true
+      Monk: true
+      Novice: true
+      Priest: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 12
+    Refineable: true
+    Script: |
+      bonus bInt,1;
+      bonus bMatkRate,15;
+  - Id: 1605
+    AegisName: Wand_
+    Name: Wand
+    Type: Weapon
+    SubType: Staff
+    Buy: 2500
+    Weight: 400
+    Attack: 25
+    Range: 1
+    Slots: 3
+    Jobs:
+      Acolyte: true
+      Mage: true
+      Monk: true
+      Novice: true
+      Priest: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 12
+    Refineable: true
+    Script: |
+      bonus bInt,1;
+      bonus bMatkRate,15;
+  - Id: 1606
+    AegisName: Wand__
+    Name: Wand
+    Type: Weapon
+    SubType: Staff
+    Buy: 2500
+    Weight: 400
+    Attack: 25
+    Range: 1
+    Jobs:
+      Acolyte: true
+      Mage: true
+      Monk: true
+      Novice: true
+      Priest: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 12
+    Refineable: true
+    Script: |
+      bonus bInt,1;
+      bonus bMatkRate,15;
+  - Id: 1607
+    AegisName: Staff
+    Name: Staff
+    Type: Weapon
+    SubType: Staff
+    Buy: 9500
+    Weight: 400
+    Attack: 40
+    Range: 1
+    Slots: 2
+    Jobs:
+      Acolyte: true
+      Mage: true
+      Monk: true
+      Priest: true
+      Sage: true
+      SoulLinker: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 12
+    Refineable: true
+    Script: |
+      bonus bInt,2;
+      bonus bMatkRate,15;
+  - Id: 1608
+    AegisName: Staff_
+    Name: Staff
+    Type: Weapon
+    SubType: Staff
+    Buy: 9500
+    Weight: 400
+    Attack: 40
+    Range: 1
+    Slots: 3
+    Jobs:
+      Acolyte: true
+      Mage: true
+      Monk: true
+      Priest: true
+      Sage: true
+      SoulLinker: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 12
+    Refineable: true
+    Script: |
+      bonus bInt,2;
+      bonus bMatkRate,15;
+  - Id: 1609
+    AegisName: Staff__
+    Name: Staff
+    Type: Weapon
+    SubType: Staff
+    Buy: 9500
+    Weight: 400
+    Attack: 40
+    Range: 1
+    Jobs:
+      Acolyte: true
+      Mage: true
+      Monk: true
+      Priest: true
+      Sage: true
+      SoulLinker: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 12
+    Refineable: true
+    Script: |
+      bonus bInt,2;
+      bonus bMatkRate,15;
+  - Id: 1610
+    AegisName: Arc_Wand
+    Name: Arc Wand
+    Type: Weapon
+    SubType: Staff
+    Buy: 45000
+    Weight: 400
+    Attack: 60
+    MagicAttack: 95
+    Range: 1
+    Slots: 1
+    Jobs:
+      Acolyte: true
+      Mage: true
+      Monk: true
+      Priest: true
+      Sage: true
+      SoulLinker: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 24
+    Refineable: true
+    Script: |
+      bonus bInt,3;
+      bonus bMatkRate,15;
+  - Id: 1611
+    AegisName: Arc_Wand_
+    Name: Arc Wand
+    Type: Weapon
+    SubType: Staff
+    Buy: 45000
+    Weight: 400
+    Attack: 60
+    Range: 1
+    Slots: 2
+    Jobs:
+      Acolyte: true
+      Mage: true
+      Monk: true
+      Priest: true
+      Sage: true
+      SoulLinker: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 24
+    Refineable: true
+    Script: |
+      bonus bInt,3;
+      bonus bMatkRate,15;
+  - Id: 1612
+    AegisName: Arc_Wand__
+    Name: Arc Wand
+    Type: Weapon
+    SubType: Staff
+    Buy: 45000
+    Weight: 400
+    Attack: 60
+    Range: 1
+    Jobs:
+      Acolyte: true
+      Mage: true
+      Monk: true
+      Priest: true
+      Sage: true
+      SoulLinker: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 24
+    Refineable: true
+    Script: |
+      bonus bInt,3;
+      bonus bMatkRate,15;
+  - Id: 1617
+    AegisName: Survival_Rod
+    Name: Survivor's Rod
+    Type: Weapon
+    SubType: Staff
+    Buy: 85000
+    Weight: 1000
+    Attack: 50
+    Range: 1
+    Jobs:
+      Acolyte: true
+      Mage: true
+      Monk: true
+      Priest: true
+      Sage: true
+      SoulLinker: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 24
+    Refineable: true
+    Script: |
+      bonus bDex,2;
+      bonus bMatkRate,15;
+      bonus bMaxHP,300;
+  - Id: 1618
+    AegisName: Survival_Rod_
+    Name: Survivor's Rod
+    Type: Weapon
+    SubType: Staff
+    Buy: 85000
+    Weight: 1000
+    Attack: 50
+    Range: 1
+    Slots: 1
+    Jobs:
+      Acolyte: true
+      Mage: true
+      Monk: true
+      Priest: true
+      Sage: true
+      SoulLinker: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 24
+    Refineable: true
+    Script: |
+      bonus bDex,3;
+      bonus bMatkRate,15;
+      bonus bMaxHP,400;
+  - Id: 1619
+    AegisName: Survival_Rod2
+    Name: Survivor's Rod
+    Type: Weapon
+    SubType: Staff
+    Buy: 85000
+    Weight: 1000
+    Attack: 50
+    Range: 1
+    Jobs:
+      Acolyte: true
+      Mage: true
+      Monk: true
+      Priest: true
+      Sage: true
+      SoulLinker: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 24
+    Refineable: true
+    Script: |
+      bonus bInt,2;
+      bonus bMatkRate,15;
+      bonus bMaxHP,300;
+  - Id: 1620
+    AegisName: Survival_Rod2_
+    Name: Survivor's Rod
+    Type: Weapon
+    SubType: Staff
+    Buy: 85000
+    Weight: 1000
+    Attack: 50
+    Range: 1
+    Slots: 1
+    Jobs:
+      Acolyte: true
+      Mage: true
+      Monk: true
+      Priest: true
+      Sage: true
+      SoulLinker: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 24
+    Refineable: true
+    Script: |
+      bonus bInt,3;
+      bonus bMatkRate,15;
+      bonus bMaxHP,400;
+  - Id: 1621
+    AegisName: Hypnotist's_Staff
+    Name: Hypnotist's Staff
+    Type: Weapon
+    SubType: Staff
+    Buy: 43000
+    Weight: 500
+    Attack: 70
+    Range: 1
+    Slots: 1
+    Jobs:
+      Novice: true
+      SuperNovice: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
+    Script: |
+      bonus bInt,1;
+      bonus bMatkRate,25;
+  - Id: 1622
+    AegisName: Hypnotist's_Staff_
+    Name: Hypnotist's Staff
+    Type: Weapon
+    SubType: Staff
+    Buy: 20
+    Weight: 500
+    Attack: 70
+    Range: 1
+    Slots: 2
+    Jobs:
+      Novice: true
+      SuperNovice: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
+    Script: |
+      bonus bInt,1;
+      bonus bMatkRate,25;
+  - Id: 1472
+    AegisName: Staff_Of_Soul
+    Name: Soul Staff
+    Type: Weapon
+    SubType: 2hStaff
+    Buy: 20
+    Weight: 1400
+    Attack: 25
+    Range: 1
+    Jobs:
+      Mage: true
+      Sage: true
+      SoulLinker: true
+      Wizard: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 73
+    Refineable: true
+    Script: |
+      bonus bInt,5;
+      bonus bAgi,2;
+      bonus bMatkRate,15;
+  - Id: 1473
+    AegisName: Wizardy_Staff
+    Name: Wizardry Staff
+    Type: Weapon
+    SubType: 2hStaff
+    Buy: 20
+    Weight: 2400
+    Attack: 120
+    Range: 1
+    Jobs:
+      Mage: true
+      Sage: true
+      SoulLinker: true
+      Wizard: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 90
+    Refineable: true
+    Script: |
+      bonus bInt,6;
+      bonus bDex,2;
+      bonus bMatkRate,15;
+  - Id: 1701
+    AegisName: Bow
+    Name: Bow
+    Type: Weapon
+    SubType: Bow
+    Buy: 1000
+    Weight: 500
+    Attack: 15
+    Range: 5
+    Slots: 3
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 4
+    Refineable: true
+  - Id: 1702
+    AegisName: Bow_
+    Name: Bow
+    Type: Weapon
+    SubType: Bow
+    Buy: 1000
+    Weight: 500
+    Attack: 15
+    Range: 5
+    Slots: 4
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 4
+    Refineable: true
+  - Id: 1703
+    AegisName: Bow__
+    Name: Bow
+    Type: Weapon
+    SubType: Bow
+    Buy: 1000
+    Attack: 15
+    Range: 5
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 4
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus2 bAddDamageClass,1002,500;
+      bonus2 bAddDamageClass,1113,500;
+      bonus2 bAddDamageClass,1031,500;
+      bonus2 bAddDamageClass,1242,500;
+  - Id: 1704
+    AegisName: Composite_Bow
+    Name: Composite Bow
+    Type: Weapon
+    SubType: Bow
+    Buy: 2500
+    Weight: 600
+    Attack: 29
+    Range: 5
+    Slots: 3
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 4
+    Refineable: true
+  - Id: 1705
+    AegisName: Composite_Bow_
+    Name: Composite Bow
+    Type: Weapon
+    SubType: Bow
+    Buy: 2500
+    Weight: 600
+    Attack: 29
+    Range: 5
+    Slots: 4
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 4
+    Refineable: true
+  - Id: 1706
+    AegisName: Composite_Bow__
+    Name: Composite Bow
+    Type: Weapon
+    SubType: Bow
+    Buy: 2500
+    Weight: 600
+    Attack: 29
+    Range: 5
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 4
+    Refineable: true
+  - Id: 1707
+    AegisName: Great_Bow
+    Name: Great Bow
+    Type: Weapon
+    SubType: Bow
+    Buy: 10000
+    Weight: 1000
+    Attack: 50
+    Range: 5
+    Slots: 2
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1708
+    AegisName: Great_Bow_
+    Name: Great Bow
+    Type: Weapon
+    SubType: Bow
+    Buy: 10000
+    Weight: 1000
+    Attack: 50
+    Range: 5
+    Slots: 3
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1709
+    AegisName: Great_Bow__
+    Name: Great Bow
+    Type: Weapon
+    SubType: Bow
+    Buy: 10000
+    Weight: 1000
+    Attack: 50
+    Range: 5
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1710
+    AegisName: CrossBow
+    Name: Crossbow
+    Type: Weapon
+    SubType: Bow
+    Buy: 17000
+    Weight: 900
+    Attack: 65
+    Range: 5
+    Slots: 2
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1711
+    AegisName: CrossBow_
+    Name: Crossbow
+    Type: Weapon
+    SubType: Bow
+    Buy: 17000
+    Weight: 900
+    Attack: 65
+    Range: 5
+    Slots: 3
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1712
+    AegisName: CrossBow__
+    Name: Crossbow
+    Type: Weapon
+    SubType: Bow
+    Buy: 17000
+    Weight: 900
+    Attack: 65
+    Range: 5
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1713
+    AegisName: Arbalest
+    Name: Arbalest
+    Type: Weapon
+    SubType: Bow
+    Buy: 48000
+    Weight: 1000
+    Attack: 90
+    Range: 5
+    Slots: 1
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+    Script: |
+      bonus bDex,2;
+  - Id: 1714
+    AegisName: Kakkung
+    Name: Gakkung Bow
+    Type: Weapon
+    SubType: Bow
+    Buy: 42000
+    Weight: 1100
+    Attack: 100
+    Range: 5
+    Slots: 1
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1715
+    AegisName: Arbalest_
+    Name: Arbalest
+    Type: Weapon
+    SubType: Bow
+    Buy: 48000
+    Weight: 1000
+    Attack: 90
+    Range: 5
+    Slots: 2
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+    Script: |
+      bonus bDex,2;
+  - Id: 1716
+    AegisName: Kakkung_
+    Name: Gakkung Bow
+    Type: Weapon
+    SubType: Bow
+    Buy: 42000
+    Weight: 1100
+    Attack: 100
+    Range: 5
+    Slots: 2
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1718
+    AegisName: Hunter_Bow
+    Name: Hunter Bow
+    Type: Weapon
+    SubType: Bow
+    Buy: 64000
+    Weight: 1500
+    Attack: 125
+    Range: 5
+    Jobs:
+      Hunter: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1721
+    AegisName: Repeting_CrossBow
+    Name: Repeating Crossbow
+    Type: Weapon
+    SubType: Bow
+    Buy: 89000
+    Weight: 2000
+    Attack: 95
+    Range: 9
+    Slots: 1
+    Jobs:
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+  - Id: 1722
+    AegisName: Balistar
+    Name: Ballista
+    Type: Weapon
+    SubType: Bow
+    Buy: 124000
+    Weight: 3500
+    Attack: 145
+    Range: 5
+    Jobs:
+      BardDancer: true
+      Hunter: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 77
+    Refineable: true
+  - Id: 1726
+    AegisName: Hunter_Bow_
+    Name: Hunter Bow
+    Type: Weapon
+    SubType: Bow
+    Buy: 64000
+    Weight: 1500
+    Attack: 125
+    Range: 5
+    Slots: 1
+    Jobs:
+      Hunter: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1727
+    AegisName: Balistar_
+    Name: Ballista
+    Type: Weapon
+    SubType: Bow
+    Buy: 124000
+    Weight: 3500
+    Attack: 145
+    Range: 5
+    Slots: 1
+    Jobs:
+      BardDancer: true
+      Hunter: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 77
+    Refineable: true
+  - Id: 1728
+    AegisName: Balistar_C
+    Name: Ballista
+    Type: Weapon
+    SubType: Bow
+    Buy: 1
+    Attack: 194
+    Range: 5
+    Jobs:
+      BardDancer: true
+      Hunter: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 1
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bLongAtkRate,20;
+  - Id: 1801
+    AegisName: Waghnakh
+    Name: Waghnak
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 8000
+    Weight: 400
+    Attack: 30
+    Range: 1
+    Slots: 3
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+  - Id: 1802
+    AegisName: Waghnakh_
+    Name: Waghnak
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 8000
+    Weight: 400
+    Attack: 30
+    Range: 1
+    Slots: 4
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+  - Id: 1803
+    AegisName: Knuckle_Duster
+    Name: Knuckle Dusters
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 25000
+    Weight: 450
+    Attack: 50
+    Range: 1
+    Slots: 2
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 12
+    Refineable: true
+  - Id: 1804
+    AegisName: Knuckle_Duster_
+    Name: Knuckle Dusters
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 25000
+    Weight: 450
+    Attack: 50
+    Range: 1
+    Slots: 3
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 12
+    Refineable: true
+  - Id: 1805
+    AegisName: Hora
+    Name: Studded Knuckles
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 32000
+    Weight: 450
+    Attack: 65
+    Range: 1
+    Slots: 2
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 12
+    Refineable: true
+  - Id: 1806
+    AegisName: Hora_
+    Name: Studded Knuckles
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 32000
+    Weight: 450
+    Attack: 65
+    Range: 1
+    Slots: 3
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 12
+    Refineable: true
+  - Id: 1807
+    AegisName: Fist
+    Name: Fist
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 53000
+    Weight: 650
+    Attack: 115
+    Range: 1
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 24
+    Refineable: true
+  - Id: 1808
+    AegisName: Fist_
+    Name: Fist
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 53000
+    Weight: 650
+    Attack: 115
+    Range: 1
+    Slots: 1
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 24
+    Refineable: true
+  - Id: 1809
+    AegisName: Claw
+    Name: Claw
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 67000
+    Weight: 500
+    Attack: 86
+    Range: 1
+    Slots: 1
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 24
+    Refineable: true
+    Script: |
+      bonus bStr,2;
+  - Id: 1810
+    AegisName: Claw_
+    Name: Claw
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 67000
+    Weight: 500
+    Attack: 86
+    Range: 1
+    Slots: 2
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 24
+    Refineable: true
+    Script: |
+      bonus bStr,2;
+  - Id: 1811
+    AegisName: Finger
+    Name: Finger
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 58000
+    Weight: 500
+    Attack: 97
+    Range: 1
+    Slots: 1
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 24
+    Refineable: true
+  - Id: 1812
+    AegisName: Finger_
+    Name: Finger
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 58000
+    Weight: 500
+    Attack: 97
+    Range: 1
+    Slots: 2
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 24
+    Refineable: true
+  - Id: 1901
+    AegisName: Violin
+    Name: Violin
+    Type: Weapon
+    SubType: Musical
+    Buy: 4000
+    Weight: 700
+    Attack: 50
+    Range: 1
+    Slots: 3
+    Jobs:
+      BardDancer: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 2
+    Refineable: true
+  - Id: 1902
+    AegisName: Violin_
+    Name: Violin
+    Type: Weapon
+    SubType: Musical
+    Buy: 4000
+    Weight: 700
+    Attack: 50
+    Range: 1
+    Slots: 4
+    Jobs:
+      BardDancer: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 2
+    Refineable: true
+  - Id: 1903
+    AegisName: Mandolin
+    Name: Mandolin
+    Type: Weapon
+    SubType: Musical
+    Buy: 18000
+    Weight: 400
+    Attack: 90
+    Range: 1
+    Slots: 2
+    Jobs:
+      BardDancer: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 14
+    Refineable: true
+  - Id: 1904
+    AegisName: Mandolin_
+    Name: Mandolin
+    Type: Weapon
+    SubType: Musical
+    Buy: 18000
+    Weight: 400
+    Attack: 90
+    Range: 1
+    Slots: 3
+    Jobs:
+      BardDancer: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 14
+    Refineable: true
+  - Id: 1905
+    AegisName: Lute
+    Name: Lute
+    Type: Weapon
+    SubType: Musical
+    Buy: 24500
+    Weight: 500
+    Attack: 105
+    Range: 1
+    Slots: 2
+    Jobs:
+      BardDancer: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 14
+    Refineable: true
+  - Id: 1906
+    AegisName: Lute_
+    Name: Lute
+    Type: Weapon
+    SubType: Musical
+    Buy: 24500
+    Weight: 500
+    Attack: 105
+    Range: 1
+    Slots: 3
+    Jobs:
+      BardDancer: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 14
+    Refineable: true
+  - Id: 1907
+    AegisName: Guitar
+    Name: Guitar
+    Type: Weapon
+    SubType: Musical
+    Buy: 47000
+    Weight: 900
+    Attack: 142
+    Range: 1
+    Jobs:
+      BardDancer: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+  - Id: 1908
+    AegisName: Guitar_
+    Name: Guitar
+    Type: Weapon
+    SubType: Musical
+    Buy: 47000
+    Weight: 900
+    Attack: 142
+    Range: 1
+    Slots: 1
+    Jobs:
+      BardDancer: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+  - Id: 1909
+    AegisName: Harp
+    Name: Harp
+    Type: Weapon
+    SubType: Musical
+    Buy: 62000
+    Weight: 900
+    Attack: 114
+    Range: 1
+    Slots: 1
+    Jobs:
+      BardDancer: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+    Script: |
+      bonus bInt,2;
+  - Id: 1910
+    AegisName: Harp_
+    Name: Harp
+    Type: Weapon
+    SubType: Musical
+    Buy: 62000
+    Weight: 900
+    Attack: 114
+    Range: 1
+    Slots: 2
+    Jobs:
+      BardDancer: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+    Script: |
+      bonus bInt,2;
+  - Id: 1911
+    AegisName: Guh_Moon_Goh
+    Name: Gumoongoh
+    Type: Weapon
+    SubType: Musical
+    Buy: 54000
+    Weight: 1300
+    Attack: 126
+    Range: 1
+    Slots: 1
+    Jobs:
+      BardDancer: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+  - Id: 1912
+    AegisName: Guh_Moon_Goh_
+    Name: Gumoongoh
+    Type: Weapon
+    SubType: Musical
+    Buy: 54000
+    Weight: 1300
+    Attack: 126
+    Range: 1
+    Slots: 2
+    Jobs:
+      BardDancer: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+  - Id: 1950
+    AegisName: Rope
+    Name: Rope
+    Type: Weapon
+    SubType: Whip
+    Buy: 2500
+    Weight: 400
+    Attack: 45
+    Range: 2
+    Slots: 3
+    Jobs:
+      BardDancer: true
+    Gender: Female
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 3
+    Refineable: true
+  - Id: 1951
+    AegisName: Rope_
+    Name: Rope
+    Type: Weapon
+    SubType: Whip
+    Buy: 2500
+    Weight: 400
+    Attack: 45
+    Range: 2
+    Slots: 4
+    Jobs:
+      BardDancer: true
+    Gender: Female
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 3
+    Refineable: true
+  - Id: 1952
+    AegisName: Line
+    Name: Whip
+    Type: Weapon
+    SubType: Whip
+    Buy: 12000
+    Weight: 300
+    Attack: 80
+    Range: 2
+    Slots: 2
+    Jobs:
+      BardDancer: true
+    Gender: Female
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 16
+    Refineable: true
+  - Id: 1953
+    AegisName: Line_
+    Name: Whip
+    Type: Weapon
+    SubType: Whip
+    Buy: 12000
+    Weight: 300
+    Attack: 80
+    Range: 2
+    Slots: 3
+    Jobs:
+      BardDancer: true
+    Gender: Female
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 16
+    Refineable: true
+  - Id: 1954
+    AegisName: Wire
+    Name: Wire Whip
+    Type: Weapon
+    SubType: Whip
+    Buy: 17500
+    Weight: 1000
+    Attack: 95
+    Range: 2
+    Slots: 2
+    Jobs:
+      BardDancer: true
+    Gender: Female
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 16
+    Refineable: true
+  - Id: 1955
+    AegisName: Wire_
+    Name: Wire Whip
+    Type: Weapon
+    SubType: Whip
+    Buy: 17500
+    Weight: 1000
+    Attack: 95
+    Range: 2
+    Slots: 3
+    Jobs:
+      BardDancer: true
+    Gender: Female
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 16
+    Refineable: true
+  - Id: 1956
+    AegisName: Rante
+    Name: Rante Whip
+    Type: Weapon
+    SubType: Whip
+    Buy: 32000
+    Weight: 900
+    Attack: 135
+    Range: 2
+    Jobs:
+      BardDancer: true
+    Gender: Female
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
+  - Id: 1957
+    AegisName: Rante_
+    Name: Rante Whip
+    Type: Weapon
+    SubType: Whip
+    Buy: 32000
+    Weight: 900
+    Attack: 135
+    Range: 2
+    Slots: 1
+    Jobs:
+      BardDancer: true
+    Gender: Female
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
+  - Id: 1958
+    AegisName: Tail
+    Name: Tail Whip
+    Type: Weapon
+    SubType: Whip
+    Buy: 41000
+    Weight: 700
+    Attack: 105
+    Range: 2
+    Slots: 1
+    Jobs:
+      BardDancer: true
+    Gender: Female
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
+    Script: |
+      bonus bLuk,3;
+  - Id: 1959
+    AegisName: Tail_
+    Name: Tail Whip
+    Type: Weapon
+    SubType: Whip
+    Buy: 41000
+    Weight: 700
+    Attack: 105
+    Range: 2
+    Slots: 2
+    Jobs:
+      BardDancer: true
+    Gender: Female
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
+    Script: |
+      bonus bLuk,3;
+  - Id: 1960
+    AegisName: Whip
+    Name: Whip
+    Type: Weapon
+    SubType: Whip
+    Buy: 38000
+    Weight: 700
+    Attack: 120
+    Range: 2
+    Slots: 1
+    Jobs:
+      BardDancer: true
+    Gender: Female
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
+  - Id: 1961
+    AegisName: Whip_
+    Name: Whip
+    Type: Weapon
+    SubType: Whip
+    Buy: 38000
+    Weight: 700
+    Attack: 120
+    Range: 2
+    Slots: 2
+    Jobs:
+      BardDancer: true
+    Gender: Female
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
