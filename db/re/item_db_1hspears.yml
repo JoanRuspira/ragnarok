@@ -1,0 +1,173 @@
+Header:
+  Type: ITEM_DB
+  Version: 1
+
+Body:
+  - Id: 1401
+    AegisName: Javelin
+    Name: Javelin
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 150
+    Weight: 700
+    Attack: 28
+    Range: 3
+    Slots: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 4
+    Refineable: true
+  - Id: 1402
+    AegisName: Javelin_
+    Name: Javelin
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 150
+    Weight: 700
+    Attack: 28
+    Range: 3
+    Slots: 4
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 4
+    Refineable: true
+  - Id: 1403
+    AegisName: Javelin__
+    Name: Javelin
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 150
+    Weight: 700
+    Attack: 28
+    Range: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 4
+    Refineable: true
+  - Id: 1404
+    AegisName: Spear
+    Name: Spear
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 1700
+    Weight: 850
+    Attack: 44
+    Range: 3
+    Slots: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 4
+    Refineable: true
+  - Id: 1405
+    AegisName: Spear_
+    Name: Spear
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 1700
+    Weight: 850
+    Attack: 44
+    Range: 3
+    Slots: 4
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 4
+    Refineable: true
+  - Id: 1406
+    AegisName: Spear__
+    Name: Spear
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 1700
+    Weight: 850
+    Attack: 44
+    Range: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 4
+    Refineable: true
+  - Id: 1407
+    AegisName: Pike
+    Name: Pike
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 3450
+    Weight: 1000
+    Attack: 60
+    Range: 3
+    Slots: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 4
+    Refineable: true
+  - Id: 1408
+    AegisName: Pike_
+    Name: Pike
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 3450
+    Weight: 1000
+    Attack: 60
+    Range: 3
+    Slots: 4
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 4
+    Refineable: true
+  - Id: 1409
+    AegisName: Pike__
+    Name: Pike
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 3450
+    Weight: 1000
+    Attack: 60
+    Range: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 4
+    Refineable: true

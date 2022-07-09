@@ -1,0 +1,339 @@
+Header:
+  Type: ITEM_DB
+  Version: 1
+
+Body:
+  - Id: 1410
+    AegisName: Lance
+    Name: Lance
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 60000
+    Weight: 2500
+    Attack: 185
+    Range: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1411
+    AegisName: Lance_
+    Name: Lance
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 60000
+    Weight: 2500
+    Attack: 185
+    Range: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1412
+    AegisName: Lance__
+    Name: Lance
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 60000
+    Weight: 2500
+    Attack: 185
+    Range: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1451
+    AegisName: Guisarme
+    Name: Guisarme
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 13000
+    Weight: 1000
+    Attack: 84
+    Range: 3
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1452
+    AegisName: Guisarme_
+    Name: Guisarme
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 13000
+    Weight: 1000
+    Attack: 84
+    Range: 3
+    Slots: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1453
+    AegisName: Guisarme__
+    Name: Guisarme
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 13000
+    Weight: 1000
+    Attack: 84
+    Range: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1454
+    AegisName: Glaive
+    Name: Glaive
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 20000
+    Weight: 1200
+    Attack: 104
+    Range: 3
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1455
+    AegisName: Glaive_
+    Name: Glaive
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 20000
+    Weight: 1200
+    Attack: 104
+    Range: 3
+    Slots: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1456
+    AegisName: Glaive__
+    Name: Glaive
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 20000
+    Weight: 1200
+    Attack: 104
+    Range: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1457
+    AegisName: Partizan
+    Name: Partizan
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 27000
+    Weight: 2000
+    Attack: 124
+    Range: 3
+    Slots: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1458
+    AegisName: Partizan_
+    Name: Partizan
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 27000
+    Weight: 2000
+    Attack: 124
+    Range: 3
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1459
+    AegisName: Partizan__
+    Name: Partizan
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 27000
+    Weight: 2000
+    Attack: 124
+    Range: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1460
+    AegisName: Trident
+    Name: Trident
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 51000
+    Weight: 1200
+    Attack: 150
+    Range: 3
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1461
+    AegisName: Trident_
+    Name: Trident
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 51000
+    Weight: 1200
+    Attack: 150
+    Range: 3
+    Slots: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1462
+    AegisName: Trident__
+    Name: Trident
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 51000
+    Weight: 1200
+    Attack: 150
+    Range: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1463
+    AegisName: Halberd
+    Name: Halberd
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 54000
+    Weight: 2500
+    Attack: 165
+    Range: 3
+    Slots: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1464
+    AegisName: Halberd_
+    Name: Halberd
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 54000
+    Weight: 2500
+    Attack: 165
+    Range: 3
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1465
+    AegisName: Halberd__
+    Name: Halberd
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 54000
+    Weight: 2500
+    Attack: 165
+    Range: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true

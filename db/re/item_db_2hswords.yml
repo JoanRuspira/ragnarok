@@ -1,0 +1,351 @@
+Header:
+  Type: ITEM_DB
+  Version: 1
+
+Body:
+  - Id: 1116
+    AegisName: Katana
+    Name: Katana
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 2000
+    Weight: 1000
+    Attack: 60
+    Range: 1
+    Slots: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 4
+    Refineable: true
+  - Id: 1117
+    AegisName: Katana_
+    Name: Katana
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 2000
+    Weight: 1000
+    Attack: 60
+    Range: 1
+    Slots: 4
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 4
+    Refineable: true
+  - Id: 1118
+    AegisName: Katana__
+    Name: Katana
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 2000
+    Weight: 1000
+    Attack: 60
+    Range: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 4
+    Refineable: true
+  - Id: 1151
+    AegisName: Slayer
+    Name: Slayer
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 15000
+    Weight: 1300
+    Attack: 90
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1152
+    AegisName: Slayer_
+    Name: Slayer
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 15000
+    Weight: 1300
+    Attack: 90
+    Range: 1
+    Slots: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1153
+    AegisName: Slayer__
+    Name: Slayer
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 15000
+    Weight: 1300
+    Attack: 90
+    Range: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1154
+    AegisName: Bastard_Sword
+    Name: Bastard Sword
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 22500
+    Weight: 1600
+    Attack: 115
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1155
+    AegisName: Bastard_Sword_
+    Name: Bastard Sword
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 22500
+    Weight: 1600
+    Attack: 115
+    Range: 1
+    Slots: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1156
+    AegisName: Bastard_Sword__
+    Name: Bastard Sword
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 22500
+    Weight: 1600
+    Attack: 115
+    Range: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1157
+    AegisName: Two_Hand_Sword
+    Name: Two-Handed Sword
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 60000
+    Weight: 2200
+    Attack: 160
+    Range: 1
+    Slots: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1158
+    AegisName: Two_Hand_Sword_
+    Name: Two-Handed Sword
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 60000
+    Weight: 2200
+    Attack: 160
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1159
+    AegisName: Two_Hand_Sword__
+    Name: Two-Handed Sword
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 60000
+    Weight: 2200
+    Attack: 160
+    Range: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1160
+    AegisName: Broad_Sword
+    Name: Broad Sword
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 65000
+    Weight: 2000
+    Attack: 140
+    Range: 1
+    Slots: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+    Script: |
+      bonus bDef,5;
+      bonus bUnbreakableWeapon;
+  - Id: 1161
+    AegisName: Balmung
+    Name: Balmung
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 20
+    Weight: 1000
+    Attack: 250
+    Range: 1
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 48
+    Refineable: true
+    Script: |
+      bonus bUnbreakableWeapon;
+      bonus bAtkEle,Ele_Holy;
+  - Id: 1162
+    AegisName: Broad_Sword_
+    Name: Broad Sword
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 65000
+    Weight: 2000
+    Attack: 140
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+    Script: |
+      bonus bDef,5;
+      bonus bUnbreakableWeapon;
+  - Id: 1163
+    AegisName: Claymore
+    Name: Claymore
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 74000
+    Weight: 2500
+    Attack: 180
+    Range: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1172
+    AegisName: Claymore_
+    Name: Claymore
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 74000
+    Weight: 2500
+    Attack: 180
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1190
+    AegisName: Claymore_C
+    Name: Claymore
+    Type: Weapon
+    SubType: 2hSword
+    Attack: 220
+    Range: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 1
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus2 bAddSize,Size_All,40;

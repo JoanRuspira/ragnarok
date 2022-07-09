@@ -1,0 +1,224 @@
+Header:
+  Type: ITEM_DB
+  Version: 1
+
+Body:
+  - Id: 1801
+    AegisName: Waghnakh
+    Name: Waghnak
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 8000
+    Weight: 400
+    Attack: 30
+    Range: 1
+    Slots: 3
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+  - Id: 1802
+    AegisName: Waghnakh_
+    Name: Waghnak
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 8000
+    Weight: 400
+    Attack: 30
+    Range: 1
+    Slots: 4
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+  - Id: 1803
+    AegisName: Knuckle_Duster
+    Name: Knuckle Dusters
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 25000
+    Weight: 450
+    Attack: 50
+    Range: 1
+    Slots: 2
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 12
+    Refineable: true
+  - Id: 1804
+    AegisName: Knuckle_Duster_
+    Name: Knuckle Dusters
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 25000
+    Weight: 450
+    Attack: 50
+    Range: 1
+    Slots: 3
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 12
+    Refineable: true
+  - Id: 1805
+    AegisName: Hora
+    Name: Studded Knuckles
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 32000
+    Weight: 450
+    Attack: 65
+    Range: 1
+    Slots: 2
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 12
+    Refineable: true
+  - Id: 1806
+    AegisName: Hora_
+    Name: Studded Knuckles
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 32000
+    Weight: 450
+    Attack: 65
+    Range: 1
+    Slots: 3
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 12
+    Refineable: true
+  - Id: 1807
+    AegisName: Fist
+    Name: Fist
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 53000
+    Weight: 650
+    Attack: 115
+    Range: 1
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 24
+    Refineable: true
+  - Id: 1808
+    AegisName: Fist_
+    Name: Fist
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 53000
+    Weight: 650
+    Attack: 115
+    Range: 1
+    Slots: 1
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 24
+    Refineable: true
+  - Id: 1809
+    AegisName: Claw
+    Name: Claw
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 67000
+    Weight: 500
+    Attack: 86
+    Range: 1
+    Slots: 1
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 24
+    Refineable: true
+    Script: |
+      bonus bStr,2;
+  - Id: 1810
+    AegisName: Claw_
+    Name: Claw
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 67000
+    Weight: 500
+    Attack: 86
+    Range: 1
+    Slots: 2
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 24
+    Refineable: true
+    Script: |
+      bonus bStr,2;
+  - Id: 1811
+    AegisName: Finger
+    Name: Finger
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 58000
+    Weight: 500
+    Attack: 97
+    Range: 1
+    Slots: 1
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 24
+    Refineable: true
+  - Id: 1812
+    AegisName: Finger_
+    Name: Finger
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 58000
+    Weight: 500
+    Attack: 97
+    Range: 1
+    Slots: 2
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 24
+    Refineable: true

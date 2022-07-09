@@ -1,0 +1,295 @@
+Header:
+  Type: ITEM_DB
+  Version: 1
+
+Body:
+  - Id: 1351
+    AegisName: Battle_Axe
+    Name: Battle Axe
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 5400
+    Weight: 1500
+    Attack: 80
+    Range: 1
+    Slots: 3
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 3
+    Refineable: true
+  - Id: 1352
+    AegisName: Battle_Axe_
+    Name: Battle Axe
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 5400
+    Weight: 1500
+    Attack: 80
+    Range: 1
+    Slots: 4
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 3
+    Refineable: true
+  - Id: 1353
+    AegisName: Battle_Axe__
+    Name: Battle Axe
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 5400
+    Weight: 1500
+    Attack: 80
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 3
+    Refineable: true
+  - Id: 1354
+    AegisName: Hammer
+    Name: Hammer
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 15500
+    Weight: 2000
+    Attack: 120
+    Range: 1
+    Slots: 2
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 16
+    Refineable: true
+  - Id: 1355
+    AegisName: Hammer_
+    Name: Hammer
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 15500
+    Weight: 2000
+    Attack: 120
+    Range: 1
+    Slots: 3
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 16
+    Refineable: true
+  - Id: 1356
+    AegisName: Hammer__
+    Name: Hammer
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 15500
+    Weight: 2000
+    Attack: 120
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 16
+    Refineable: true
+  - Id: 1357
+    AegisName: Buster
+    Name: Buster
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 34000
+    Weight: 2200
+    Attack: 155
+    Range: 1
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
+  - Id: 1358
+    AegisName: Buster_
+    Name: Buster
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 34000
+    Weight: 2200
+    Attack: 155
+    Range: 1
+    Slots: 2
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
+  - Id: 1359
+    AegisName: Buster__
+    Name: Buster
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 34000
+    Weight: 2200
+    Attack: 155
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
+  - Id: 1360
+    AegisName: Two_Handed_Axe
+    Name: Two-Handed Axe
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 55000
+    Weight: 2500
+    Attack: 185
+    Range: 1
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
+  - Id: 1361
+    AegisName: Two_Handed_Axe_
+    Name: Two-Handed Axe
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 55000
+    Weight: 2500
+    Attack: 185
+    Range: 1
+    Slots: 2
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
+  - Id: 1362
+    AegisName: Two_Handed_Axe__
+    Name: Two-Handed Axe
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 55000
+    Weight: 2500
+    Attack: 185
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
+  - Id: 1388
+    AegisName: Two_Handed_Axe_C
+    Name: Two-Handed Axe
+    Type: Weapon
+    SubType: 2hAxe
+    Attack: 220
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 1
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus2 bAddSize,Size_All,40;

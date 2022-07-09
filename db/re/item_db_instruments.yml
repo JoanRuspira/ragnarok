@@ -1,0 +1,224 @@
+Header:
+  Type: ITEM_DB
+  Version: 1
+
+Body:
+  - Id: 1901
+    AegisName: Violin
+    Name: Violin
+    Type: Weapon
+    SubType: Musical
+    Buy: 4000
+    Weight: 700
+    Attack: 50
+    Range: 1
+    Slots: 3
+    Jobs:
+      BardDancer: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 2
+    Refineable: true
+  - Id: 1902
+    AegisName: Violin_
+    Name: Violin
+    Type: Weapon
+    SubType: Musical
+    Buy: 4000
+    Weight: 700
+    Attack: 50
+    Range: 1
+    Slots: 4
+    Jobs:
+      BardDancer: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 2
+    Refineable: true
+  - Id: 1903
+    AegisName: Mandolin
+    Name: Mandolin
+    Type: Weapon
+    SubType: Musical
+    Buy: 18000
+    Weight: 400
+    Attack: 90
+    Range: 1
+    Slots: 2
+    Jobs:
+      BardDancer: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 14
+    Refineable: true
+  - Id: 1904
+    AegisName: Mandolin_
+    Name: Mandolin
+    Type: Weapon
+    SubType: Musical
+    Buy: 18000
+    Weight: 400
+    Attack: 90
+    Range: 1
+    Slots: 3
+    Jobs:
+      BardDancer: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 14
+    Refineable: true
+  - Id: 1905
+    AegisName: Lute
+    Name: Lute
+    Type: Weapon
+    SubType: Musical
+    Buy: 24500
+    Weight: 500
+    Attack: 105
+    Range: 1
+    Slots: 2
+    Jobs:
+      BardDancer: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 14
+    Refineable: true
+  - Id: 1906
+    AegisName: Lute_
+    Name: Lute
+    Type: Weapon
+    SubType: Musical
+    Buy: 24500
+    Weight: 500
+    Attack: 105
+    Range: 1
+    Slots: 3
+    Jobs:
+      BardDancer: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 14
+    Refineable: true
+  - Id: 1907
+    AegisName: Guitar
+    Name: Guitar
+    Type: Weapon
+    SubType: Musical
+    Buy: 47000
+    Weight: 900
+    Attack: 142
+    Range: 1
+    Jobs:
+      BardDancer: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+  - Id: 1908
+    AegisName: Guitar_
+    Name: Guitar
+    Type: Weapon
+    SubType: Musical
+    Buy: 47000
+    Weight: 900
+    Attack: 142
+    Range: 1
+    Slots: 1
+    Jobs:
+      BardDancer: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+  - Id: 1909
+    AegisName: Harp
+    Name: Harp
+    Type: Weapon
+    SubType: Musical
+    Buy: 62000
+    Weight: 900
+    Attack: 114
+    Range: 1
+    Slots: 1
+    Jobs:
+      BardDancer: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+    Script: |
+      bonus bInt,2;
+  - Id: 1910
+    AegisName: Harp_
+    Name: Harp
+    Type: Weapon
+    SubType: Musical
+    Buy: 62000
+    Weight: 900
+    Attack: 114
+    Range: 1
+    Slots: 2
+    Jobs:
+      BardDancer: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+    Script: |
+      bonus bInt,2;
+  - Id: 1911
+    AegisName: Guh_Moon_Goh
+    Name: Gumoongoh
+    Type: Weapon
+    SubType: Musical
+    Buy: 54000
+    Weight: 1300
+    Attack: 126
+    Range: 1
+    Slots: 1
+    Jobs:
+      BardDancer: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+  - Id: 1912
+    AegisName: Guh_Moon_Goh_
+    Name: Gumoongoh
+    Type: Weapon
+    SubType: Musical
+    Buy: 54000
+    Weight: 1300
+    Attack: 126
+    Range: 1
+    Slots: 2
+    Jobs:
+      BardDancer: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true

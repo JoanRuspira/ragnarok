@@ -1,0 +1,51 @@
+Header:
+  Type: ITEM_DB
+  Version: 1
+
+Body:
+  - Id: 1472
+    AegisName: Staff_Of_Soul
+    Name: Soul Staff
+    Type: Weapon
+    SubType: 2hStaff
+    Buy: 20
+    Weight: 1400
+    Attack: 25
+    MagicAttack: 200
+    Range: 1
+    Jobs:
+      Mage: true
+      Sage: true
+      SoulLinker: true
+      Wizard: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 73
+    Refineable: true
+    Script: |
+      bonus bInt,5;
+      bonus bAgi,2;
+  - Id: 1473
+    AegisName: Wizardy_Staff
+    Name: Wizardry Staff
+    Type: Weapon
+    SubType: 2hStaff
+    Buy: 20
+    Weight: 2400
+    Attack: 120
+    MagicAttack: 200
+    Range: 1
+    Jobs:
+      Mage: true
+      Sage: true
+      SoulLinker: true
+      Wizard: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 90
+    Refineable: true
+    Script: |
+      bonus bInt,6;
+      bonus bDex,2;

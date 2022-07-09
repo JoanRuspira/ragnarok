@@ -1,0 +1,110 @@
+Header:
+  Type: ITEM_DB
+  Version: 1
+
+Body:
+  - Id: 1250
+    AegisName: Jur
+    Name: Jur
+    Type: Weapon
+    SubType: Katar
+    Buy: 19500
+    Weight: 800
+    Attack: 125
+    Range: 1
+    Slots: 2
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1251
+    AegisName: Jur_
+    Name: Jur
+    Type: Weapon
+    SubType: Katar
+    Buy: 19500
+    Weight: 800
+    Attack: 125
+    Range: 1
+    Slots: 3
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 18
+    Refineable: true
+  - Id: 1252
+    AegisName: Katar
+    Name: Katar
+    Type: Weapon
+    SubType: Katar
+    Buy: 41000
+    Weight: 1200
+    Attack: 148
+    Range: 1
+    Slots: 1
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+    Script: |
+      bonus bDex,1;
+  - Id: 1253
+    AegisName: Katar_
+    Name: Katar
+    Type: Weapon
+    SubType: Katar
+    Buy: 41000
+    Weight: 1200
+    Attack: 148
+    Range: 1
+    Slots: 2
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+    Script: |
+      bonus bDex,1;
+  - Id: 1254
+    AegisName: Jamadhar
+    Name: Jamadhar
+    Type: Weapon
+    SubType: Katar
+    Buy: 37200
+    Weight: 1500
+    Attack: 165
+    Range: 1
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true
+  - Id: 1255
+    AegisName: Jamadhar_
+    Name: Jamadhar
+    Type: Weapon
+    SubType: Katar
+    Buy: 37200
+    Weight: 1500
+    Attack: 165
+    Range: 1
+    Slots: 1
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 33
+    Refineable: true

@@ -1,0 +1,253 @@
+Header:
+  Type: ITEM_DB
+  Version: 1
+
+Body:
+  - Id: 1550
+    AegisName: Book
+    Name: Book
+    Type: Weapon
+    SubType: Book
+    Buy: 30000
+    Weight: 600
+    Attack: 85
+    Range: 1
+    Slots: 3
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 14
+    Refineable: true
+  - Id: 1551
+    AegisName: Bible
+    Name: Bible
+    Type: Weapon
+    SubType: Book
+    Buy: 60000
+    Weight: 1000
+    Attack: 115
+    Range: 1
+    Slots: 2
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+    Script: |
+      bonus bInt,2;
+  - Id: 1552
+    AegisName: Tablet
+    Name: Tablet
+    Type: Weapon
+    SubType: Book
+    Buy: 51000
+    Weight: 800
+    Attack: 125
+    Range: 1
+    Slots: 1
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+  - Id: 1553
+    AegisName: Book_Of_Billows
+    Name: Book of Billows
+    Type: Weapon
+    SubType: Book
+    Buy: 35000
+    Weight: 750
+    Attack: 90
+    Range: 1
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Water;
+  - Id: 1554
+    AegisName: Book_Of_Mother_Earth
+    Name: Book of Mother Earth
+    Type: Weapon
+    SubType: Book
+    Buy: 35000
+    Weight: 750
+    Attack: 90
+    Range: 1
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Earth;
+  - Id: 1555
+    AegisName: Book_Of_Blazing_Sun
+    Name: Book of the Blazing Sun
+    Type: Weapon
+    SubType: Book
+    Buy: 35000
+    Weight: 750
+    Attack: 90
+    Range: 1
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Fire;
+  - Id: 1556
+    AegisName: Book_Of_Gust_Of_Wind
+    Name: Book of Gust of Wind
+    Type: Weapon
+    SubType: Book
+    Buy: 35000
+    Weight: 750
+    Attack: 90
+    Range: 1
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Wind;
+  - Id: 1557
+    AegisName: Book_Of_The_Apocalypse
+    Name: Book of the Apocalypse
+    Type: Weapon
+    SubType: Book
+    Buy: 60000
+    Weight: 800
+    Attack: 120
+    Range: 1
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 40
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Dark;
+      bonus2 bAddEle,Ele_Holy,5;
+      bonus2 bAddEle,Ele_Water,7;
+      bonus2 bAddEle,Ele_Earth,7;
+      bonus2 bAddEle,Ele_Fire,7;
+      bonus2 bAddEle,Ele_Wind,7;
+  - Id: 1558
+    AegisName: Girl's_Diary
+    Name: Girl's Diary
+    Type: Weapon
+    SubType: Book
+    Buy: 1500
+    Weight: 300
+    Attack: 60
+    Range: 1
+    Slots: 1
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 40
+    Refineable: true
+    Script: |
+      bonus2 bAddDamageClass,1188,150;
+  - Id: 1569
+    AegisName: Book_Of_Mother_Earth_
+    Name: Book of Mother Earth
+    Type: Weapon
+    SubType: Book
+    Buy: 35000
+    Weight: 750
+    Attack: 90
+    Range: 1
+    Slots: 3
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Earth;
+  - Id: 1570
+    AegisName: Book_Of_Blazing_Sun_
+    Name: Book of Blazing Sun
+    Type: Weapon
+    SubType: Book
+    Buy: 35000
+    Weight: 750
+    Attack: 90
+    Range: 1
+    Slots: 3
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Fire;
+  - Id: 1571
+    AegisName: Book_Of_Gust_Of_Wind_
+    Name: Book of Gust of Wind
+    Type: Weapon
+    SubType: Book
+    Buy: 35000
+    Weight: 750
+    Attack: 90
+    Range: 1
+    Slots: 3
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Wind;
