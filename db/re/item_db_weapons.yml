@@ -1942,6 +1942,89 @@ Body:
     Refineable: true
     Script: |
       bonus bAtkEle,Ele_Water;
+  - Id: 13000
+    AegisName: Jujube_Dagger
+    Name: Jujube Dagger
+    Type: Weapon
+    SubType: Dagger
+    Buy: 10000
+    Weight: 600
+    Attack: 39
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      KagerouOboro: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Novice: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Wind;
+  - Id: 13003
+    AegisName: Coward
+    Name: Cowardice Blade
+    Type: Weapon
+    SubType: Dagger
+    Buy: 52000
+    Weight: 700
+    Attack: 80
+    Range: 1
+    Slots: 1
+    Jobs:
+      Assassin: true
+      KagerouOboro: true
+      Ninja: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus bDef,5;
+  - Id: 13004
+    AegisName: Coward_
+    Name: Cowardice Blade
+    Type: Weapon
+    SubType: Dagger
+    Buy: 52000
+    Weight: 700
+    Attack: 80
+    Range: 1
+    Slots: 2
+    Jobs:
+      Assassin: true
+      KagerouOboro: true
+      Ninja: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus bDef,5;
   - Id: 1250
     AegisName: Jur
     Name: Jur

@@ -20504,11 +20504,6 @@ Body:
     Requires:
       SpCost: 50
       State: Mado
-      Equipment:
-        Pilebuncker: true
-        Pilebuncker_S: true
-        Pilebuncker_P: true
-        Pilebuncker_T: true
   - Id: 2258
     Name: NC_VULCANARM
     Description: Vulcan Arm

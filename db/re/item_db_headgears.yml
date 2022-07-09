@@ -624,3 +624,49 @@ Body:
     Locations:
       Head_Top: true
     View: 58
+  - Id: 5114
+    AegisName: Fedora
+    Name: Bucket Hat
+    Type: Armor
+    Buy: 6000
+    Weight: 300
+    Defense: 6
+    Locations:
+      Head_Top: true
+    Refineable: true
+    View: 195
+  - Id: 5092
+    AegisName: Blue_Coif
+    Name: Coif
+    Type: Armor
+    Buy: 150000
+    Weight: 300
+    Defense: 5
+    Jobs:
+      Assassin: true
+      Priest: true
+    Locations:
+      Head_Mid: true
+      Head_Top: true
+    EquipLevelMin: 65
+    Refineable: true
+    View: 176
+  - Id: 5093
+    AegisName: Blue_Coif_
+    Name: Coif
+    Type: Armor
+    Buy: 150000
+    Weight: 300
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Assassin: true
+      Priest: true
+    Locations:
+      Head_Mid: true
+      Head_Top: true
+    EquipLevelMin: 65
+    Refineable: true
+    View: 177
+    Script: |
+      bonus bMaxSP,100;

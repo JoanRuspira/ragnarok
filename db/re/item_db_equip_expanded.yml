@@ -54018,43 +54018,6 @@ Body:
     AegisName: Ep_17_2_C_Admin2_Acc
     Name: Little Headdress Alpha
     Type: PetArmor
-  - Id: 13000
-    AegisName: Jujube_Dagger
-    Name: Jujube Dagger
-    Type: Weapon
-    SubType: Dagger
-    Buy: 10000
-    Weight: 600
-    Attack: 39
-    Range: 1
-    Jobs:
-      Alchemist: true
-      Archer: true
-      Assassin: true
-      BardDancer: true
-      Blacksmith: true
-      Crusader: true
-      Hunter: true
-      KagerouOboro: true
-      Knight: true
-      Mage: true
-      Merchant: true
-      Ninja: true
-      Novice: true
-      Rogue: true
-      Sage: true
-      SoulLinker: true
-      SuperNovice: true
-      Swordman: true
-      Thief: true
-      Wizard: true
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 1
-    EquipLevelMin: 1
-    Refineable: true
-    Script: |
-      bonus bAtkEle,Ele_Wind;
   - Id: 13001
     AegisName: Dragon_Killer
     Name: Dragon Killer
