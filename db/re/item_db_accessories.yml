@@ -1,0 +1,302 @@
+Header:
+  Type: ITEM_DB
+  Version: 1
+
+Body:
+  - Id: 2601
+    AegisName: Ring
+    Name: Ring
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 20
+    Script: |
+      bonus bStr,2;
+  - Id: 2602
+    AegisName: Earring
+    Name: Earring
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 20
+    Script: |
+      bonus bInt,2;
+  - Id: 2603
+    AegisName: Necklace
+    Name: Necklace
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 20
+    Script: |
+      bonus bVit,2;
+  - Id: 2604
+    AegisName: Glove
+    Name: Glove
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 20
+    Script: |
+      bonus bDex,2;
+  - Id: 2605
+    AegisName: Brooch
+    Name: Brooch
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 20
+    Script: |
+      bonus bAgi,2;
+  - Id: 2607
+    AegisName: Clip
+    Name: Clip
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Locations:
+      Both_Accessory: true
+    Script: |
+      bonus bMaxSP,10;
+  - Id: 2608
+    AegisName: Rosary
+    Name: Rosary
+    Type: Armor
+    Buy: 15000
+    Weight: 100
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 20
+    Script: |
+      bonus bMdef,5;
+      bonus bLuk,2;
+  - Id: 2609
+    AegisName: Skul_Ring
+    Name: Skull Ring
+    Type: Armor
+    Buy: 10000
+    Weight: 100
+    Locations:
+      Both_Accessory: true
+  - Id: 2610
+    AegisName: Gold_Ring
+    Name: Gold Ring
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Locations:
+      Both_Accessory: true
+  - Id: 2611
+    AegisName: Silver_Ring
+    Name: Silver Ring
+    Type: Armor
+    Buy: 20000
+    Weight: 100
+    Locations:
+      Both_Accessory: true
+  - Id: 2612
+    AegisName: Flower_Ring
+    Name: Flower Ring
+    Type: Armor
+    Buy: 1500
+    Weight: 100
+    Locations:
+      Both_Accessory: true
+  - Id: 2613
+    AegisName: Diamond_Ring
+    Name: Diamond Ring
+    Type: Armor
+    Buy: 45000
+    Weight: 100
+    Locations:
+      Both_Accessory: true
+  - Id: 2614
+    AegisName: An_Eye_Of_Dullahan
+    Name: Eye of Dullahan
+    Type: Armor
+    Buy: 90000
+    Weight: 100
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 50
+    Script: |
+      bonus2 bResEff,Eff_Poison,10000;
+      bonus2 bSubRace,RC_Undead,4;
+      bonus2 bSubRace,RC_Demon,4;
+  - Id: 2615
+    AegisName: Safety_Ring
+    Name: Safety Ring
+    Type: Armor
+    Buy: 75000
+    Weight: 100
+    Defense: 3
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 40
+    Script: |
+      bonus bMdef,3;
+  - Id: 2616
+    AegisName: Critical_Ring
+    Name: Critical Ring
+    Type: Armor
+    Buy: 75000
+    Weight: 100
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 40
+    Script: |
+      bonus bCritical,5;
+  - Id: 2621
+    AegisName: Ring_
+    Name: Ring
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 90
+    Script: |
+      bonus bStr,1;
+  - Id: 2622
+    AegisName: Earring_
+    Name: Earring
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 90
+    Script: |
+      bonus bInt,1;
+  - Id: 2623
+    AegisName: Necklace_
+    Name: Necklace
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 90
+    Script: |
+      bonus bVit,1;
+  - Id: 2624
+    AegisName: Glove_
+    Name: Glove
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 90
+    Script: |
+      bonus bDex,1;
+  - Id: 2625
+    AegisName: Brooch_
+    Name: Brooch
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 90
+    Script: |
+      bonus bAgi,1;
+  - Id: 2626
+    AegisName: Rosary_
+    Name: Rosary
+    Type: Armor
+    Buy: 15000
+    Weight: 200
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 90
+    Script: |
+      bonus bMdef,3;
+      bonus bLuk,1;
+  - Id: 2627
+    AegisName: Belt
+    Name: Belt
+    Type: Armor
+    Buy: 20000
+    Weight: 1200
+    Slots: 1
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 25

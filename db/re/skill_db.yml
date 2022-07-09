@@ -20730,8 +20730,6 @@ Body:
       ItemCost:
         - Item: Magic_Gear_Fuel
           Amount: 1
-      Equipment:
-        Accelerator: true
   - Id: 2263
     Name: NC_HOVERING
     Description: Hovering
@@ -20750,8 +20748,6 @@ Body:
       ItemCost:
         - Item: Magic_Gear_Fuel
           Amount: 1
-      Equipment:
-        Hovering_Booster: true
   - Id: 2264
     Name: NC_F_SIDESLIDE
     Description: Front-Side Slide
@@ -20834,8 +20830,6 @@ Body:
       ItemCost:
         - Item: Magic_Gear_Fuel
           Amount: 3
-      Equipment:
-        Suicidal_Device: true
   - Id: 2268
     Name: NC_SHAPESHIFT
     Description: Shape Shift
@@ -20868,8 +20862,6 @@ Body:
           Amount: 3
         - Item: Magic_Gear_Fuel
           Amount: 2
-      Equipment:
-        Shape_Shifter: true
   - Id: 2269
     Name: NC_EMERGENCYCOOL
     Description: Emergency Cool
@@ -20889,10 +20881,6 @@ Body:
       ItemCost:
         - Item: Magic_Gear_Fuel
           Amount: 1
-      Equipment:
-        Cooling_Device: true
-        High_Quality_Cooler: true
-        Special_Cooler: true
   - Id: 2270
     Name: NC_INFRAREDSCAN
     Description: Infrared Scan
@@ -20977,8 +20965,6 @@ Body:
       ItemCost:
         - Item: Magic_Gear_Fuel
           Amount: 2
-      Equipment:
-        Mag_Field_Generator: true
   - Id: 2273
     Name: NC_NEUTRALBARRIER
     Description: Neutral Barrier
@@ -21016,8 +21002,6 @@ Body:
       ItemCost:
         - Item: Magic_Gear_Fuel
           Amount: 1
-      Equipment:
-        Barrier_Builder: true
     Unit:
       Id: Neutralbarrier
       Layout: 2
@@ -21059,8 +21043,6 @@ Body:
       ItemCost:
         - Item: Magic_Gear_Fuel
           Amount: 2
-      Equipment:
-        Camouflage_Generator: true
     Unit:
       Id: Stealthfield
       Layout: 2
@@ -21114,19 +21096,6 @@ Body:
         - Level: 5
           Amount: 45
       State: Mado
-      ItemCost:
-        - Item: RepairA
-          Amount: 1
-        - Item: RepairA
-          Amount: 1
-        - Item: RepairB
-          Amount: 1
-        - Item: RepairB
-          Amount: 1
-        - Item: RepairC
-          Amount: 1
-        - Item: Repair_Kit
-          Amount: 0
   - Id: 2276
     Name: NC_TRAININGAXE
     Description: Axe Training
