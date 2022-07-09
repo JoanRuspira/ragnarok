@@ -1,0 +1,565 @@
+
+Header:
+  Type: ITEM_DB
+  Version: 1
+
+Body:
+  - Id: 2301
+    AegisName: Cotton_Shirt
+    Name: Cotton Shirt
+    Type: Armor
+    Buy: 10
+    Weight: 100
+    Defense: 1
+    Locations:
+      Armor: true
+    Refineable: true
+  - Id: 2302
+    AegisName: Cotton_Shirt_
+    Name: Cotton Shirt
+    Type: Armor
+    Buy: 10
+    Weight: 100
+    Defense: 1
+    Slots: 1
+    Locations:
+      Armor: true
+    Refineable: true
+  - Id: 2303
+    AegisName: Leather_Jacket
+    Name: Jacket
+    Type: Armor
+    Buy: 200
+    Weight: 200
+    Defense: 2
+    Locations:
+      Armor: true
+    Refineable: true
+  - Id: 2304
+    AegisName: Leather_Jacket_
+    Name: Jacket
+    Type: Armor
+    Buy: 200
+    Weight: 200
+    Defense: 2
+    Slots: 1
+    Locations:
+      Armor: true
+    Refineable: true
+  - Id: 2305
+    AegisName: Adventure_Suit
+    Name: Adventurer's Suit
+    Type: Armor
+    Buy: 1000
+    Weight: 300
+    Defense: 3
+    Locations:
+      Armor: true
+    Refineable: true
+  - Id: 2306
+    AegisName: Adventurere's_Suit_
+    Name: Adventurer's Suit
+    Type: Armor
+    Buy: 1000
+    Weight: 300
+    Defense: 3
+    Slots: 1
+    Locations:
+      Armor: true
+    Refineable: true
+  - Id: 2307
+    AegisName: Mantle
+    Name: Mantle
+    Type: Armor
+    Buy: 10000
+    Weight: 600
+    Defense: 4
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Armor: true
+    Refineable: true
+  - Id: 2308
+    AegisName: Mantle_
+    Name: Mantle
+    Type: Armor
+    Buy: 10000
+    Weight: 600
+    Defense: 4
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Armor: true
+    Refineable: true
+  - Id: 2309
+    AegisName: Coat
+    Name: Coat
+    Type: Armor
+    Buy: 22000
+    Weight: 1200
+    Defense: 5
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Armor: true
+    Refineable: true
+  - Id: 2310
+    AegisName: Coat_
+    Name: Coat
+    Type: Armor
+    Buy: 22000
+    Weight: 1200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Armor: true
+    Refineable: true
+  - Id: 2311
+    AegisName: Mink_Coat
+    Name: Mink Coat
+    Type: Armor
+    Buy: 20
+    Weight: 2300
+    Defense: 6
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Armor: true
+    EquipLevelMin: 30
+    Refineable: true
+  - Id: 2312
+    AegisName: Padded_Armor
+    Name: Padded Armor
+    Type: Armor
+    Buy: 48000
+    Weight: 2800
+    Defense: 7
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Armor: true
+    Refineable: true
+  - Id: 2313
+    AegisName: Padded_Armor_
+    Name: Padded Armor
+    Type: Armor
+    Buy: 48000
+    Weight: 2800
+    Defense: 7
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Armor: true
+    Refineable: true
+  - Id: 2314
+    AegisName: Chain_Mail
+    Name: Chain Mail
+    Type: Armor
+    Buy: 65000
+    Weight: 3300
+    Defense: 8
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Armor: true
+    Refineable: true
+  - Id: 2315
+    AegisName: Chain_Mail_
+    Name: Chain Mail
+    Type: Armor
+    Buy: 65000
+    Weight: 3300
+    Defense: 8
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Armor: true
+    Refineable: true
+  - Id: 2316
+    AegisName: Plate_Armor
+    Name: Full Plate
+    Type: Armor
+    Buy: 80000
+    Weight: 4500
+    Defense: 10
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Armor: true
+    EquipLevelMin: 40
+    Refineable: true
+  - Id: 2317
+    AegisName: Plate_Armor_
+    Name: Full Plate
+    Type: Armor
+    Buy: 80000
+    Weight: 4500
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Armor: true
+    EquipLevelMin: 40
+    Refineable: true
+  - Id: 2321
+    AegisName: Silk_Robe
+    Name: Silk Robe
+    Type: Armor
+    Buy: 8000
+    Weight: 400
+    Defense: 3
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Monk: true
+      Priest: true
+      Sage: true
+      SoulLinker: true
+      Swordman: true
+      Wizard: true
+    Locations:
+      Armor: true
+    Refineable: true
+    Script: |
+      bonus bMdef,10;
+  - Id: 2322
+    AegisName: Silk_Robe_
+    Name: Silk Robe
+    Type: Armor
+    Buy: 8000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Monk: true
+      Priest: true
+      Sage: true
+      SoulLinker: true
+      Swordman: true
+      Wizard: true
+    Locations:
+      Armor: true
+    Refineable: true
+    Script: |
+      bonus bMdef,10;
+  - Id: 2323
+    AegisName: Scapulare
+    Name: Scapulare
+    Type: Armor
+    Buy: 6500
+    Weight: 400
+    Defense: 4
+    Jobs:
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Locations:
+      Armor: true
+    Refineable: true
+  - Id: 2324
+    AegisName: Scapulare_
+    Name: Scapulare
+    Type: Armor
+    Buy: 6500
+    Weight: 400
+    Defense: 4
+    Slots: 1
+    Jobs:
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Locations:
+      Armor: true
+    Refineable: true
+  - Id: 2325
+    AegisName: Saint_Robe
+    Name: Saint's Robe
+    Type: Armor
+    Buy: 54000
+    Weight: 600
+    Defense: 6
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Blacksmith: true
+      Merchant: true
+      Monk: true
+      Priest: true
+    Locations:
+      Armor: true
+    Refineable: true
+    Script: |
+      bonus bMdef,5;
+  - Id: 2326
+    AegisName: Saint_Robe_
+    Name: Saint's Robe
+    Type: Armor
+    Buy: 54000
+    Weight: 600
+    Defense: 6
+    Slots: 1
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Blacksmith: true
+      Merchant: true
+      Monk: true
+      Priest: true
+    Locations:
+      Armor: true
+    Refineable: true
+    Script: |
+      bonus bMdef,5;
+  - Id: 2328
+    AegisName: Wooden_Mail
+    Name: Wooden Mail
+    Type: Armor
+    Buy: 5500
+    Weight: 1000
+    Defense: 4
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Armor: true
+    Refineable: true
+  - Id: 2329
+    AegisName: Wooden_Mail_
+    Name: Wooden Mail
+    Type: Armor
+    Buy: 5500
+    Weight: 1000
+    Defense: 4
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Armor: true
+    Refineable: true
+  - Id: 2330
+    AegisName: Tights
+    Name: Tights
+    Type: Armor
+    Buy: 71000
+    Weight: 500
+    Defense: 6
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+    Locations:
+      Armor: true
+    EquipLevelMin: 45
+    Refineable: true
+    Script: |
+      bonus bDex,1;
+  - Id: 2331
+    AegisName: Tights_
+    Name: Tights
+    Type: Armor
+    Buy: 71000
+    Weight: 500
+    Defense: 6
+    Slots: 1
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+    Locations:
+      Armor: true
+    EquipLevelMin: 45
+    Refineable: true
+    Script: |
+      bonus bDex,1;
+  - Id: 2332
+    AegisName: Silver_Robe
+    Name: Silver Robe
+    Type: Armor
+    Buy: 7000
+    Weight: 700
+    Defense: 4
+    Jobs:
+      Mage: true
+      Sage: true
+      SoulLinker: true
+      Wizard: true
+    Locations:
+      Armor: true
+    Refineable: true
+  - Id: 2333
+    AegisName: Silver_Robe_
+    Name: Silver Robe
+    Type: Armor
+    Buy: 7000
+    Weight: 700
+    Defense: 4
+    Slots: 1
+    Jobs:
+      Mage: true
+      Sage: true
+      SoulLinker: true
+      Wizard: true
+    Locations:
+      Armor: true
+    Refineable: true
+  - Id: 2335
+    AegisName: Thief_Clothes
+    Name: Thief Clothes
+    Type: Armor
+    Buy: 74000
+    Weight: 100
+    Defense: 6
+    Jobs:
+      Assassin: true
+      Ninja: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Armor: true
+    Refineable: true
+    Script: |
+      bonus bAgi,1;
+  - Id: 2336
+    AegisName: Thief_Clothes_
+    Name: Thief Clothes
+    Type: Armor
+    Buy: 74000
+    Weight: 100
+    Defense: 6
+    Slots: 1
+    Jobs:
+      Assassin: true
+      Ninja: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Armor: true
+    Refineable: true
+    Script: |
+      bonus bAgi,1;
+  - Id: 2338
+    AegisName: Wedding_Dress
+    Name: Wedding Dress
+    Type: Armor
+    Buy: 43000
+    Weight: 500
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Armor: true
+    Refineable: true
+    Script: |
+      bonus bMdef,15;
+  - Id: 2339
+    AegisName: G_Strings
+    Name: Pantie
+    Type: Armor
+    Buy: 1000
+    Weight: 100
+    Defense: 4
+    Locations:
+      Armor: true
+    Refineable: true
+  - Id: 2341
+    AegisName: Full_Plate_Armor
+    Name: Legion Plate Armor
+    Type: Armor
+    Buy: 94000
+    Weight: 5500
+    Defense: 11
+    Jobs:
+      Crusader: true
+    Locations:
+      Armor: true
+    EquipLevelMin: 70
+    Refineable: true
+  - Id: 2342
+    AegisName: Full_Plate_Armor_
+    Name: Legion Plate Armor
+    Type: Armor
+    Buy: 102500
+    Weight: 5500
+    Defense: 11
+    Slots: 1
+    Jobs:
+      Crusader: true
+    Locations:
+      Armor: true
+    EquipLevelMin: 70
+    Refineable: true

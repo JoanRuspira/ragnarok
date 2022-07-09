@@ -1,0 +1,178 @@
+
+Header:
+  Type: ITEM_DB
+  Version: 1
+
+Body:
+  - Id: 2401
+    AegisName: Sandals
+    Name: Sandals
+    Type: Armor
+    Buy: 400
+    Weight: 200
+    Defense: 1
+    Locations:
+      Shoes: true
+    Refineable: true
+  - Id: 2402
+    AegisName: Sandals_
+    Name: Sandals
+    Type: Armor
+    Buy: 400
+    Weight: 200
+    Defense: 1
+    Slots: 1
+    Locations:
+      Shoes: true
+    Refineable: true
+  - Id: 2403
+    AegisName: Shoes
+    Name: Shoes
+    Type: Armor
+    Buy: 3500
+    Weight: 400
+    Defense: 2
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Shoes: true
+    Refineable: true
+  - Id: 2404
+    AegisName: Shoes_
+    Name: Shoes
+    Type: Armor
+    Buy: 3500
+    Weight: 400
+    Defense: 2
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Shoes: true
+    Refineable: true
+  - Id: 2405
+    AegisName: Boots
+    Name: Boots
+    Type: Armor
+    Buy: 18000
+    Weight: 600
+    Defense: 4
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Gunslinger: true
+      Hunter: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      StarGladiator: true
+      Swordman: true
+      Taekwon: true
+      Thief: true
+    Locations:
+      Shoes: true
+    Refineable: true
+  - Id: 2406
+    AegisName: Boots_
+    Name: Boots
+    Type: Armor
+    Buy: 18000
+    Weight: 600
+    Defense: 4
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Gunslinger: true
+      Hunter: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      StarGladiator: true
+      Swordman: true
+      Taekwon: true
+      Thief: true
+    Locations:
+      Shoes: true
+    Refineable: true
+  - Id: 2408
+    AegisName: Cuffs
+    Name: Shackles
+    Type: Armor
+    Buy: 5000
+    Weight: 3000
+    Defense: 3
+    Locations:
+      Shoes: true
+    Refineable: true
+  - Id: 2409
+    AegisName: Spiky_Heel
+    Name: High Heels
+    Type: Armor
+    Buy: 8500
+    Weight: 600
+    Defense: 2
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Shoes: true
+    Refineable: true
+    Script: |
+      bonus bMdef,5;
+  - Id: 2411
+    AegisName: Grave
+    Name: Greaves
+    Type: Armor
+    Buy: 48000
+    Weight: 750
+    Defense: 5
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 65
+    Refineable: true
+  - Id: 2412
+    AegisName: Grave_
+    Name: Greaves
+    Type: Armor
+    Buy: 54000
+    Weight: 750
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 65
+    Refineable: true
+  - Id: 2413
+    AegisName: Safty_Boots
+    Name: Safety Boots
+    Type: Armor
+    Buy: 34000
+    Weight: 350
+    Defense: 6
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 30

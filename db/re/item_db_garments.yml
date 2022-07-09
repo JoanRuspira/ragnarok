@@ -1,0 +1,232 @@
+
+Header:
+  Type: ITEM_DB
+  Version: 1
+
+Body:
+  - Id: 2501
+    AegisName: Hood
+    Name: Hood
+    Type: Armor
+    Buy: 1000
+    Weight: 200
+    Defense: 1
+    Locations:
+      Garment: true
+    Refineable: true
+  - Id: 2502
+    AegisName: Hood_
+    Name: Hood
+    Type: Armor
+    Buy: 1000
+    Weight: 200
+    Defense: 1
+    Slots: 1
+    Locations:
+      Garment: true
+    Refineable: true
+  - Id: 2503
+    AegisName: Muffler
+    Name: Muffler
+    Type: Armor
+    Buy: 5000
+    Weight: 400
+    Defense: 2
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Garment: true
+    Refineable: true
+  - Id: 2504
+    AegisName: Muffler_
+    Name: Muffler
+    Type: Armor
+    Buy: 5000
+    Weight: 400
+    Defense: 2
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Garment: true
+    Refineable: true
+  - Id: 2505
+    AegisName: Manteau
+    Name: Manteau
+    Type: Armor
+    Buy: 32000
+    Weight: 600
+    Defense: 4
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      StarGladiator: true
+      Swordman: true
+      Taekwon: true
+      Thief: true
+    Locations:
+      Garment: true
+    Refineable: true
+  - Id: 2506
+    AegisName: Manteau_
+    Name: Manteau
+    Type: Armor
+    Buy: 32000
+    Weight: 600
+    Defense: 4
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      StarGladiator: true
+      Swordman: true
+      Taekwon: true
+      Thief: true
+    Locations:
+      Garment: true
+    Refineable: true
+  - Id: 2507
+    AegisName: Cape_Of_Ancient_Lord
+    Name: Ancient Cape
+    Type: Armor
+    Buy: 82000
+    Weight: 600
+    Defense: 2
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Garment: true
+    EquipLevelMin: 40
+    Refineable: true
+    Script: |
+      bonus bAgi,1;
+  - Id: 2508
+    AegisName: Ragamuffin_Cape
+    Name: Ragamuffin Manteau
+    Type: Armor
+    Buy: 56000
+    Weight: 500
+    Defense: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Garment: true
+    Refineable: true
+    Script: |
+      bonus bUnbreakableGarment;
+      bonus bMdef,10;
+  - Id: 2509
+    AegisName: Clack_Of_Servival
+    Name: Survivor's Manteau
+    Type: Armor
+    Buy: 20000
+    Weight: 550
+    Jobs:
+      Mage: true
+      Sage: true
+      SoulLinker: true
+      Wizard: true
+    Locations:
+      Garment: true
+    EquipLevelMin: 75
+    Refineable: true
+    Script: |
+      bonus bMdef,5;
+      bonus bVit,10;
+  - Id: 2511
+    AegisName: Skeleton's_Cape
+    Name: Skeleton Manteau
+    Type: Armor
+    Buy: 5000
+    Weight: 700
+    Defense: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Garment: true
+    EquipLevelMin: 75
+    Refineable: true
+    Script: |
+      bonus bStr,2;
+      bonus bInt,-3;
+      bonus bDex,2;
+      bonus bVit,-3;
+      bonus bLuk,2;
+      bonus bAgi,-4;
+  - Id: 2514
+    AegisName: Pauldron
+    Name: Pauldron
+    Type: Armor
+    Buy: 20
+    Weight: 800
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Garment: true
+    EquipLevelMin: 80
+    Refineable: true
+  - Id: 2515
+    AegisName: Wing_Of_Eagle
+    Name: Eagle Wing
+    Type: Armor
+    Buy: 20000
+    Weight: 300
+    Defense: 1
+    Slots: 1
+    Jobs:
+      Mage: true
+      Sage: true
+      SoulLinker: true
+      Wizard: true
+    Locations:
+      Garment: true
+    EquipLevelMin: 85
+    Refineable: true
+  - Id: 2516
+    AegisName: Falcon_Robe
+    Name: Falcon Muffler
+    Type: Armor
+    Buy: 30000
+    Weight: 400
+    Defense: 3
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Garment: true
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bFlee,15;
+      bonus bFlee2,5;
