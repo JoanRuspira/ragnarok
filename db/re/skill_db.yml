@@ -20583,8 +20583,6 @@ Body:
       SpCost: 20
       State: Mado
       ItemCost:
-        - Item: Flame_Thrower
-          Amount: 0
         - Item: Magic_Gear_Fuel
           Amount: 1
   - Id: 2260

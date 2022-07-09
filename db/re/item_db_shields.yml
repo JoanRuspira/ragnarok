@@ -1,0 +1,263 @@
+Header:
+  Type: ITEM_DB
+  Version: 1
+
+Body:
+  - Id: 2101
+    AegisName: Guard
+    Name: Guard
+    Type: Armor
+    Buy: 500
+    Weight: 300
+    Defense: 3
+    Locations:
+      Left_Hand: true
+    Refineable: true
+    View: 1
+  - Id: 2102
+    AegisName: Guard_
+    Name: Guard
+    Type: Armor
+    Buy: 500
+    Weight: 300
+    Defense: 3
+    Slots: 1
+    Locations:
+      Left_Hand: true
+    Refineable: true
+    View: 1
+  - Id: 2103
+    AegisName: Buckler
+    Name: Buckler
+    Type: Armor
+    Buy: 14000
+    Weight: 600
+    Defense: 4
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Monk: true
+      Priest: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Left_Hand: true
+    Refineable: true
+    View: 2
+  - Id: 2104
+    AegisName: Buckler_
+    Name: Buckler
+    Type: Armor
+    Buy: 14000
+    Weight: 600
+    Defense: 4
+    Slots: 1
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Monk: true
+      Priest: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Left_Hand: true
+    Refineable: true
+    View: 2
+  - Id: 2105
+    AegisName: Shield
+    Name: Shield
+    Type: Armor
+    Buy: 56000
+    Weight: 1300
+    Defense: 6
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Left_Hand: true
+    Refineable: true
+    View: 3
+  - Id: 2106
+    AegisName: Shield_
+    Name: Shield
+    Type: Armor
+    Buy: 56000
+    Weight: 1300
+    Defense: 6
+    Slots: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Left_Hand: true
+    Refineable: true
+    View: 3
+  - Id: 2107
+    AegisName: Mirror_Shield
+    Name: Mirror Shield
+    Type: Armor
+    Buy: 60000
+    Weight: 1000
+    Defense: 4
+    Jobs:
+      Crusader: true
+      Knight: true
+      StarGladiator: true
+      Swordman: true
+    Locations:
+      Left_Hand: true
+    Refineable: true
+    View: 4
+    Script: |
+      bonus bMdef,5;
+  - Id: 2108
+    AegisName: Mirror_Shield_
+    Name: Mirror Shield
+    Type: Armor
+    Buy: 60000
+    Weight: 1000
+    Defense: 4
+    Slots: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      StarGladiator: true
+      Swordman: true
+    Locations:
+      Left_Hand: true
+    Refineable: true
+    View: 4
+    Script: |
+      bonus bMdef,5;
+  - Id: 2109
+    AegisName: Memorize_Book
+    Name: Memory Book
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 3
+    Jobs:
+      Mage: true
+      Sage: true
+      SoulLinker: true
+      Wizard: true
+    Locations:
+      Left_Hand: true
+    Refineable: true
+    View: 5
+    Script: |
+      bonus bInt,1;
+      bonus bMdef,2;
+  - Id: 2110
+    AegisName: Holy_Guard
+    Name: Holy Guard
+    Type: Armor
+    Buy: 85000
+    Weight: 1400
+    Defense: 5
+    Jobs:
+      Crusader: true
+    Locations:
+      Left_Hand: true
+    EquipLevelMin: 68
+    View: 4
+    Script: |
+      bonus bVit,2;
+      bonus bMdef,2;
+  - Id: 2111
+    AegisName: Herald_Of_GOD
+    Name: Sacred Mission
+    Type: Armor
+    Buy: 128000
+    Weight: 1600
+    Defense: 5
+    Jobs:
+      Crusader: true
+    Locations:
+      Left_Hand: true
+    EquipLevelMin: 83
+    Refineable: true
+    View: 4
+    Script: |
+      bonus bVit,3;
+      bonus bInt,2;
+      bonus bMdef,3;
+      bonus bUnbreakableShield;
+  - Id: 2117
+    AegisName: Arm_Guard
+    Name: Arm Guard
+    Type: Armor
+    Buy: 10000
+    Weight: 150
+    Defense: 5
+    Jobs:
+      Ninja: true
+    Locations:
+      Left_Hand: true
+    EquipLevelMin: 20
+    Refineable: true
+    View: 1
+  - Id: 2118
+    AegisName: Arm_Guard_
+    Name: Arm Guard
+    Type: Armor
+    Buy: 10000
+    Weight: 150
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Ninja: true
+    Locations:
+      Left_Hand: true
+    EquipLevelMin: 20
+    Refineable: true
+    View: 1
+  - Id: 2119
+    AegisName: Improved_Arm_Guard
+    Name: Advanced Arm Guard
+    Type: Armor
+    Buy: 40000
+    Weight: 150
+    Defense: 4
+    Jobs:
+      Ninja: true
+    Locations:
+      Left_Hand: true
+    EquipLevelMin: 50
+    Refineable: true
+    View: 1
+    Script: |
+      bonus bMdef,5;
+  - Id: 2120
+    AegisName: Improved_Arm_Guard_
+    Name: Advanced Arm Guard
+    Type: Armor
+    Buy: 40000
+    Weight: 150
+    Defense: 4
+    Slots: 1
+    Jobs:
+      Ninja: true
+    Locations:
+      Left_Hand: true
+    EquipLevelMin: 50
+    Refineable: true
+    View: 1
+    Script: |
+      bonus bMdef,5;

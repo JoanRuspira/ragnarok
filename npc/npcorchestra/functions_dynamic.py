@@ -137,7 +137,7 @@ def buildMobAvail(mob_id, mob_name):
     mob_avail += "    Weapon: Gladius\n"
     mob_avail += "    Shield: Guard\n"
 
-    mob_avail = build_headgear_section(mob_avail)
+    # mob_avail = build_headgear_section(mob_avail)
     mob_avail = build_special_options_section(mob_avail, mob_name)
 
     return mob_avail

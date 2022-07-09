@@ -1,0 +1,626 @@
+
+Header:
+  Type: ITEM_DB
+  Version: 1
+
+Body:
+  - Id: 2201
+    AegisName: Sunglasses
+    Name: Sunglasses
+    Type: Armor
+    Buy: 5000
+    Weight: 100
+    Locations:
+      Head_Mid: true
+    View: 12
+    Script: |
+      bonus2 bResEff,Eff_Blind,500;
+  - Id: 2202
+    AegisName: Sunglasses_
+    Name: Sunglasses
+    Type: Armor
+    Buy: 5000
+    Weight: 100
+    Slots: 1
+    Locations:
+      Head_Mid: true
+    View: 12
+    Script: |
+      bonus2 bResEff,Eff_Blind,500;
+  - Id: 2203
+    AegisName: Glasses
+    Name: Glasses
+    Type: Armor
+    Buy: 4000
+    Weight: 100
+    Locations:
+      Head_Mid: true
+    View: 3
+  - Id: 2204
+    AegisName: Glasses_
+    Name: Glasses
+    Type: Armor
+    Buy: 4000
+    Weight: 100
+    Slots: 1
+    Locations:
+      Head_Mid: true
+    View: 3
+  - Id: 2205
+    AegisName: Diver's_Goggles
+    Name: Diver Goggles
+    Type: Armor
+    Buy: 3500
+    Weight: 100
+    Locations:
+      Head_Mid: true
+    View: 10
+  - Id: 2206
+    AegisName: Wedding_Veil
+    Name: Wedding Veil
+    Type: Armor
+    Buy: 23000
+    Weight: 100
+    Locations:
+      Head_Top: true
+    Refineable: true
+    View: 44
+    Script: |
+      bonus bMdef,5;
+  - Id: 2208
+    AegisName: Ribbon
+    Name: Ribbon
+    Type: Armor
+    Buy: 800
+    Weight: 100
+    Defense: 1
+    Locations:
+      Head_Top: true
+    Refineable: true
+    View: 17
+    Script: |
+      bonus bMdef,3;
+  - Id: 2209
+    AegisName: Ribbon_
+    Name: Ribbon
+    Type: Armor
+    Buy: 800
+    Weight: 100
+    Defense: 1
+    Slots: 1
+    Locations:
+      Head_Top: true
+    Refineable: true
+    View: 17
+    Script: |
+      bonus bMdef,3;
+  - Id: 2210
+    AegisName: Hair_Band
+    Name: Hair Band
+    Type: Armor
+    Buy: 500
+    Weight: 100
+    Defense: 1
+    Locations:
+      Head_Top: true
+    View: 9
+  - Id: 2211
+    AegisName: Bandana
+    Name: Bandana
+    Type: Armor
+    Buy: 400
+    Weight: 100
+    Defense: 1
+    Locations:
+      Head_Top: true
+    Refineable: true
+    View: 6
+  - Id: 2212
+    AegisName: Eye_Bandage
+    Name: Eye Patch
+    Type: Armor
+    Buy: 1000
+    Weight: 100
+    Locations:
+      Head_Mid: true
+    View: 13
+  - Id: 2216
+    AegisName: Biretta
+    Name: Biretta
+    Type: Armor
+    Buy: 9000
+    Weight: 100
+    Defense: 4
+    Jobs:
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Locations:
+      Head_Top: true
+    Refineable: true
+    View: 11
+  - Id: 2217
+    AegisName: Biretta_
+    Name: Biretta
+    Type: Armor
+    Buy: 9000
+    Weight: 100
+    Defense: 4
+    Slots: 1
+    Jobs:
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Locations:
+      Head_Top: true
+    Refineable: true
+    View: 11
+  - Id: 2218
+    AegisName: Flu_Mask
+    Name: Flu Mask
+    Type: Armor
+    Buy: 300
+    Weight: 100
+    Locations:
+      Head_Low: true
+    View: 8
+    Script: |
+      bonus2 bResEff,Eff_Silence,1000;
+  - Id: 2219
+    AegisName: Flu_Mask_
+    Name: Flu Mask
+    Type: Armor
+    Buy: 300
+    Weight: 100
+    Locations:
+      Head_Low: true
+    View: 8
+    Script: |
+      bonus2 bResEff,Eff_Silence,1000;
+  - Id: 2220
+    AegisName: Hat
+    Name: Hat
+    Type: Armor
+    Buy: 1000
+    Weight: 200
+    Defense: 2
+    Locations:
+      Head_Top: true
+    Refineable: true
+    View: 16
+  - Id: 2221
+    AegisName: Hat_
+    Name: Hat
+    Type: Armor
+    Buy: 1000
+    Weight: 200
+    Defense: 2
+    Slots: 1
+    Locations:
+      Head_Top: true
+    Refineable: true
+    View: 16
+  - Id: 2222
+    AegisName: Turban
+    Name: Turban
+    Type: Armor
+    Buy: 4500
+    Weight: 300
+    Defense: 3
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Head_Top: true
+    Refineable: true
+    View: 7
+  - Id: 2223
+    AegisName: Turban_
+    Name: Turban
+    Type: Armor
+    Buy: 4500
+    Weight: 300
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Head_Top: true
+    Refineable: true
+    View: 7
+  - Id: 2224
+    AegisName: Goggle
+    Name: Goggles
+    Type: Armor
+    Buy: 20
+    Weight: 300
+    Defense: 5
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Head_Mid: true
+      Head_Top: true
+    Refineable: true
+    View: 1
+  - Id: 2225
+    AegisName: Goggle_
+    Name: Goggles
+    Type: Armor
+    Buy: 20
+    Weight: 300
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Head_Mid: true
+      Head_Top: true
+    Refineable: true
+    View: 1
+  - Id: 2226
+    AegisName: Cap
+    Name: Cap
+    Type: Armor
+    Buy: 12000
+    Weight: 400
+    Defense: 4
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Head_Top: true
+    Refineable: true
+    View: 14
+  - Id: 2227
+    AegisName: Cap_
+    Name: Cap
+    Type: Armor
+    Buy: 12000
+    Weight: 400
+    Defense: 4
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Head_Top: true
+    Refineable: true
+    View: 14
+  - Id: 2228
+    AegisName: Helm
+    Name: Helm
+    Type: Armor
+    Buy: 44000
+    Weight: 600
+    Defense: 6
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Head_Top: true
+    Refineable: true
+    View: 40
+  - Id: 2229
+    AegisName: Helm_
+    Name: Helm
+    Type: Armor
+    Buy: 44000
+    Weight: 600
+    Defense: 6
+    Slots: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Head_Top: true
+    Refineable: true
+    View: 40
+  - Id: 2230
+    AegisName: Gemmed_Sallet
+    Name: Gemmed Sallet
+    Type: Armor
+    Buy: 50000
+    Weight: 500
+    Defense: 4
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Head_Top: true
+    Refineable: true
+    Script: |
+      bonus bMdef,3;
+  - Id: 2231
+    AegisName: Gemmed_Sallet_
+    Name: Gemmed Sallet
+    Type: Armor
+    Buy: 50000
+    Weight: 500
+    Defense: 4
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Head_Top: true
+    Refineable: true
+    Script: |
+      bonus bMdef,3;
+  - Id: 2232
+    AegisName: Circlet
+    Name: Circlet
+    Type: Armor
+    Buy: 7500
+    Weight: 300
+    Defense: 3
+    Jobs:
+      Acolyte: true
+      Mage: true
+      Monk: true
+      Priest: true
+      Sage: true
+      SoulLinker: true
+      Wizard: true
+    Locations:
+      Head_Top: true
+    Refineable: true
+    View: 18
+    Script: |
+      bonus bMdef,3;
+  - Id: 2233
+    AegisName: Circlet_
+    Name: Circlet
+    Type: Armor
+    Buy: 7500
+    Weight: 300
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Acolyte: true
+      Mage: true
+      Monk: true
+      Priest: true
+      Sage: true
+      SoulLinker: true
+      Wizard: true
+    Locations:
+      Head_Top: true
+    Refineable: true
+    View: 18
+    Script: |
+      bonus bMdef,3;
+  - Id: 2239
+    AegisName: One_Eyed_Glass
+    Name: Monocle
+    Type: Armor
+    Buy: 10000
+    Weight: 100
+    Locations:
+      Head_Mid: true
+    View: 23
+  - Id: 2240
+    AegisName: Beard
+    Name: Beard
+    Type: Armor
+    Buy: 2
+    Weight: 100
+    Locations:
+      Head_Low: true
+    View: 24
+  - Id: 2241
+    AegisName: Granpa_Beard
+    Name: Grampa Beard
+    Type: Armor
+    Buy: 5000
+    Weight: 100
+    Locations:
+      Head_Low: true
+    View: 25
+  - Id: 2242
+    AegisName: Luxury_Sunglasses
+    Name: Purple Glasses
+    Type: Armor
+    Buy: 24000
+    Weight: 100
+    Defense: 1
+    Locations:
+      Head_Mid: true
+    View: 26
+    Script: |
+      bonus2 bResEff,Eff_Blind,1000;
+  - Id: 2243
+    AegisName: Spinning_Eyes
+    Name: Geek Glasses
+    Type: Armor
+    Buy: 20000
+    Weight: 100
+    Defense: 1
+    Locations:
+      Head_Mid: true
+    View: 27
+    Script: |
+      bonus2 bResEff,Eff_Blind,1500;
+  - Id: 2244
+    AegisName: Big_Sis'_Ribbon
+    Name: Big Ribbon
+    Type: Armor
+    Buy: 15000
+    Weight: 200
+    Defense: 2
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Head_Top: true
+    Refineable: true
+    View: 28
+    Script: |
+      bonus bMdef,3;
+  - Id: 2245
+    AegisName: Sweet_Gents
+    Name: Sweet Gent
+    Type: Armor
+    Buy: 15000
+    Weight: 400
+    Defense: 3
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Head_Top: true
+    Refineable: true
+    View: 29
+  - Id: 2247
+    AegisName: Oldman's_Romance
+    Name: Romantic Gent
+    Type: Armor
+    Buy: 15000
+    Weight: 400
+    Defense: 3
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Head_Top: true
+    Refineable: true
+    View: 31
+  - Id: 2248
+    AegisName: Western_Grace
+    Name: Western Grace
+    Type: Armor
+    Buy: 15000
+    Weight: 400
+    Defense: 3
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Head_Top: true
+    Refineable: true
+    View: 32
+  - Id: 2250
+    AegisName: Fillet
+    Name: Cute Ribbon
+    Type: Armor
+    Buy: 500
+    Weight: 100
+    Defense: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Head_Top: true
+    View: 34
+    Script: |
+      bonus bMaxSP,20;
+  - Id: 2251
+    AegisName: Holy_Bonnet
+    Name: Monk Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Defense: 5
+    Jobs:
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Locations:
+      Head_Top: true
+    Refineable: true
+    View: 35
+    Script: |
+      bonus bMdef,3;
+  - Id: 2260
+    AegisName: Mini_Glasses
+    Name: Mini Glasses
+    Type: Armor
+    Buy: 28000
+    Weight: 100
+    Defense: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Head_Mid: true
+    View: 47
+  - Id: 2271
+    AegisName: Jack_A_Dandy
+    Name: Jack be Dandy
+    Type: Armor
+    Buy: 45000
+    Weight: 100
+    Defense: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Head_Top: true
+    View: 58
