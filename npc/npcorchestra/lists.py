@@ -113,7 +113,7 @@ ins_density = [20, #alberta_in
 20, #lhz_airport
 20, #iz_ac01
 20, #iz_ac02
-13, #prt_church
+14, #prt_church
 ]
 
 top_headgears = ["Alice_Doll","Anubis_Helm","Apple_Of_Archer","Prontera_Army_Cap","Ayothaya_Hat","Banana_Hat","Bandana","Magestic_Goat",
