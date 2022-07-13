@@ -125,6 +125,17 @@ top_headgears = ["Alice_Doll","Anubis_Helm","Apple_Of_Archer","Prontera_Army_Cap
 "Red_Wizardry_Hat","Coke_Hat","Detective_Hat","Oldman's_Romance","Sahkkat","Sea_Otter_Cap","J_Captain_Hat","Skull_Cap","Sombrero",
 "Straw_Hat","Ulle_Cap_I","Valkyrie_Helm","Minstrel_Hat","Western_Grace","Star_Sparkling",
 "Cap_Of_Blindness","Diabolus_Helmet","Necromencer's_Hood","Spinx_Helm","Goggle"]
+
+
+top_headgears = ["Alice_Doll","Anubis_Helm","Apple_Of_Archer","Prontera_Army_Cap","Ayothaya_Hat","Banana_Hat","Bandana","Magestic_Goat",
+"Beret","Biretta","Bone_Head","Bone_Helm","Bongun_Hat","Boy's_Cap","Fedora","Cap","Circlet","Classic_Hat","Corsair","Cowboy_Hat","Crown","Headgear_Of_Queen",
+"C_Desert_Prince","Dragon_Skull","Egg_Shell","Feather_Beret","Feather_Bonnet","Fricca_Circlet","Galapago_Cap","Gemmed_Sallet",
+"Goibne's_Helmet", "Golden_Gear", "Loard_Circlet", "Helm", "Helm_Of_Abyss", "Helm_Of_Angel","Headband_Of_Power","Hunting_Cap",
+"Indian_Headband","Gemmed_Crown","Joker_Jester","Mask_Of_Fox", "Soldier_Hat","Wizardry_Hat","Magni_Cap","Marionette_Doll","Mine_Helm",
+"Holy_Bonnet","Morrigane's_Helm","Munak_Turban","Viking_Helm","Pirate_Bandana","Poo_Poo_Hat","Cowboy_Hat_J","Mottled_Egg_Shell",
+"Red_Wizardry_Hat","Coke_Hat","Detective_Hat","Oldman's_Romance","Sahkkat","Sea_Otter_Cap","J_Captain_Hat","Skull_Cap","Sombrero",
+"Straw_Hat","Ulle_Cap_I","Valkyrie_Helm","Minstrel_Hat","Western_Grace","Star_Sparkling",
+"Cap_Of_Blindness","Diabolus_Helmet","Necromencer's_Hood","Spinx_Helm","Goggle"]
  
 mid_headgears = ["Ear_Of_Angel's_Wing","Dark_Blindfold","Blinker","Elven_Ears_","Ear_Of_Devil's_Wing",
 "Hawk_Eyes01","Machoman_Glasses","Opera_Ghost_Mask","Pecopeco_Wing_Ears","Luxury_Sunglasses","Sunglasses"]
