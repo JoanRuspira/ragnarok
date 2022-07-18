@@ -111,6 +111,12 @@
     <Filter Include="Source Files\skillAtkRatioCalculator\acolyte">
       <UniqueIdentifier>{83a08fc6-f316-4fb9-8d3a-5a2a55425b90}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\skillAdditionalEffectsCalculator\acolyte">
+      <UniqueIdentifier>{c9d1a642-aed7-47a2-b4b6-f93607ff6193}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\skillAdditionalEffectsCalculator\acolyte">
+      <UniqueIdentifier>{825bc85d-d711-404b-aeea-c29804af66c5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="achievement.hpp">
@@ -311,6 +317,9 @@
     <ClInclude Include="AcolyteSkillAtkRatioCalculator.h">
       <Filter>Header Files\skillAtkRatioCalculator\acolyte</Filter>
     </ClInclude>
+    <ClInclude Include="AcolyteAdditionalEffectsCalculator.h">
+      <Filter>Header Files\skillAdditionalEffectsCalculator\acolyte</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="achievement.cpp">
@@ -483,6 +492,9 @@
     </ClCompile>
     <ClCompile Include="AcolyteSkillAtkRatioCalculator.cpp">
       <Filter>Source Files\skillAtkRatioCalculator\acolyte</Filter>
+    </ClCompile>
+    <ClCompile Include="AcolyteAdditionalEffectsCalculator.cpp">
+      <Filter>Source Files\skillAdditionalEffectsCalculator\acolyte</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -8069,7 +8069,7 @@ Body:
       NoAuction: true
   - Id: 12622
     AegisName: Boarding_Halter
-    Name: Peco Mount Reins
+    Name: Peco Mount
     Type: Usable
     Buy: 750000
     Flags:
@@ -8088,9 +8088,11 @@ Body:
       NoMail: true
       NoAuction: true
     Script: |
+      specialeffect2 EF_INVINCIBLEOFF2;
       setmounting();
     UnEquipScript: |
       if (ismounting())
+         specialeffect2 EF_INVINCIBLEOFF2;
          setmounting();
   - Id: 12549
     AegisName: White_Slim_Pot_Box2

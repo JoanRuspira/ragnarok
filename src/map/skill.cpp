@@ -3967,6 +3967,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case HT_BLITZBEAT:
 	case AC_SHOWER:
 	case MA_SHOWER:
+	case AL_HOLYLIGHT:
 	case MG_NAPALMBEAT:
 	case MG_FIREBALL:
 	case RG_RAID:
@@ -4267,9 +4268,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 			break;
 		skill_attack(BF_MAGIC,src,src,bl,skill_id,skill_lv,tick,flag);
 		break;
-
-	case AL_HOLYLIGHT:
-		status_change_end(bl, SC_P_ALTER, INVALID_TIMER);
 	case MG_UNDEADEMBRACE:
 	case MG_SOULSTRIKE:
 	case NPC_DARKSTRIKE:
@@ -5529,7 +5527,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case AL_DECAGI:
 	case MER_DECAGI:
 		clif_skill_nodamage (src, bl, skill_id, skill_lv,
-			sc_start(src,bl, type, (50 + skill_lv * 3 + (status_get_lv(src) + sstatus->int_)/5), skill_lv*2, skill_get_time(skill_id,skill_lv*2)));
+			sc_start(src,bl, type, 100, skill_lv*2, skill_get_time(skill_id,skill_lv)));
 		break;
 
 	case AL_CRUCIS:
@@ -5540,7 +5538,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				src, skill_id, skill_lv, tick, flag|BCT_ENEMY|1, skill_castend_nodamage_id);
 			clif_skill_nodamage(src, bl, skill_id, skill_lv, 1);
 		}
-		sc_start4(src, src, SC_CRUCIS_PLAYER, 100, 3, 20, 0, 0, 30000);
+		sc_start4(src, src, SC_CRUCIS_PLAYER, 100, skill_lv, 20, 0, 0, 20000*skill_lv);
 		break;
 
 	case SP_SOULCURSE:
@@ -12242,10 +12240,8 @@ struct skill_unit_group *skill_unitsetting(struct block_list *src, uint16 skill_
 		val3 = 300 * skill_lv + 65 * ( status->int_ +  status_get_lv(src) ) + status->max_sp; //nb hp
 		break;
 	case MG_SAFETYWALL:
-		val2 = skill_lv + 1;
-#ifdef RENEWAL
-		val3 = 300 * skill_lv + 65 * (status->int_ + status_get_lv(src)) + status->max_sp;
-#endif
+		val2 = (skill_lv*2) + 1;
+		val3 = 300 * (skill_lv*2) + 65 * (status->int_ + status_get_lv(src)) + status->max_sp;
 		break;
 	case MG_FIREWALL:
 		if(sc && sc->data[SC_VIOLENTGALE])
@@ -15930,10 +15926,6 @@ struct s_skill_condition skill_get_requirement(struct map_session_data* sd, uint
 		case MC_MAMMONITE:
 			if(pc_checkskill(sd,BS_UNFAIRLYTRICK)>0)
 				req.zeny -= req.zeny*10/100;
-			break;
-		case AL_HOLYLIGHT:
-			if(sc && sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_PRIEST)
-				req.sp *= 5;
 			break;
 		case SL_SMA:
 		case SL_STUN:

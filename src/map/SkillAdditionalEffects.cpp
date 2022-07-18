@@ -294,9 +294,9 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 		case AC_PARALIZING:
 			ArcherAdditionalEffectsCalculator::apply_paralyzing_shot_additional_effect(src, bl, skill_lv);
 			break;
-		// case KN_SPEARSTAB:
-		// 	SwordsmanAdditionalEffectsCalculator::apply_spear_stab_additional_effect(src, bl, skill_lv);
-		// 	break;
+		case AL_HOLYLIGHT:
+			AcolyteAdditionalEffectsCalculator::apply_holy_light_additional_effect(src, bl, skill_lv);
+			break;
 		case TF_POISON:
 			ThiefAdditionalEffectsCalculator::apply_envenom_additional_effect(src, bl, skill_lv);
 			break;

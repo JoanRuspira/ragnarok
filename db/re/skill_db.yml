@@ -318,12 +318,12 @@ Body:
   - Id: 11
     Name: MG_NAPALMBEAT
     Description: Napalm Beat
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Magic
     TargetType: Attack
     DamageFlags:
       Splash: true
-      SplashSplit: true
+      SplashSplit: false
     Flags:
       IsAutoShadowSpell: true
       TargetTrap: true
@@ -337,40 +337,11 @@ Body:
         Plagiarism: true
         Reproduce: true
     CastCancel: true
-    CastTime: 1000
-    AfterCastActDelay:
-      - Level: 1
-        Time: 1000
-      - Level: 2
-        Time: 1000
-      - Level: 3
-        Time: 1000
-      - Level: 4
-        Time: 1000
-      - Level: 5
-        Time: 1000
+    CastTime: 3000
+    Cooldown: 5000
+    AfterCastActDelay: 400
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 9
-        - Level: 2
-          Amount: 9
-        - Level: 3
-          Amount: 9
-        - Level: 4
-          Amount: 12
-        - Level: 5
-          Amount: 12
-        - Level: 6
-          Amount: 12
-        - Level: 7
-          Amount: 15
-        - Level: 8
-          Amount: 15
-        - Level: 9
-          Amount: 15
-        - Level: 10
-          Amount: 18
+      SpCost: 40
   - Id: 12
     Name: MG_SAFETYWALL
     Description: Safety Wall
@@ -384,70 +355,22 @@ Body:
     HitCount: 1
     Element: Ghost
     CastCancel: true
-    CastTime:
-      - Level: 1
-        Time: 4000
-      - Level: 2
-        Time: 3500
-      - Level: 3
-        Time: 3500
-      - Level: 4
-        Time: 2500
-      - Level: 5
-        Time: 2000
-      - Level: 6
-        Time: 1500
-      - Level: 7
-        Time: 1000
-      - Level: 8
-        Time: 1000
-      - Level: 9
-        Time: 1000
-      - Level: 10
-        Time: 1000
+    CastTime: 1000
+    Cooldown: 5000
+    AfterCastActDelay: 400
     Duration1:
       - Level: 1
-        Time: 5000
-      - Level: 2
         Time: 10000
-      - Level: 3
-        Time: 15000
-      - Level: 4
+      - Level: 2
         Time: 20000
-      - Level: 5
-        Time: 25000
-      - Level: 6
+      - Level: 3
         Time: 30000
-      - Level: 7
-        Time: 35000
-      - Level: 8
+      - Level: 4
         Time: 40000
-      - Level: 9
-        Time: 45000
-      - Level: 10
+      - Level: 5
         Time: 50000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 30
-        - Level: 2
-          Amount: 30
-        - Level: 3
-          Amount: 30
-        - Level: 4
-          Amount: 35
-        - Level: 5
-          Amount: 35
-        - Level: 6
-          Amount: 35
-        - Level: 7
-          Amount: 40
-        - Level: 8
-          Amount: 40
-        - Level: 9
-          Amount: 40
-        - Level: 10
-          Amount: 40
+      SpCost: 40
       ItemCost:
         - Item: Blue_Gemstone
           Amount: 1
@@ -1347,29 +1270,11 @@ Body:
         Plagiarism: true
         Reproduce: true
     CastCancel: true
+    CastTime: 4000
+    Cooldown: 5000
     AfterCastActDelay: 1000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 13
-        - Level: 2
-          Amount: 16
-        - Level: 3
-          Amount: 19
-        - Level: 4
-          Amount: 22
-        - Level: 5
-          Amount: 25
-        - Level: 6
-          Amount: 28
-        - Level: 7
-          Amount: 31
-        - Level: 8
-          Amount: 34
-        - Level: 9
-          Amount: 37
-        - Level: 10
-          Amount: 40
+      SpCost: 40
   - Id: 29
     Name: AL_INCAGI
     Description: Increase AGI
@@ -1424,52 +1329,21 @@ Body:
     HitCount: 1
     CastCancel: true
     CastTime: 1000
-    AfterCastActDelay: 1000
+    Cooldown: 5000
+    AfterCastActDelay: 500
     Duration1:
       - Level: 1
-        Time: 40000
-      - Level: 2
         Time: 50000
-      - Level: 3
-        Time: 60000
-      - Level: 4
+      - Level: 2
         Time: 70000
-      - Level: 5
-        Time: 80000
-      - Level: 6
+      - Level: 3
         Time: 90000
-      - Level: 7
-        Time: 100000
-      - Level: 8
+      - Level: 4
         Time: 110000
-      - Level: 9
-        Time: 120000
-      - Level: 10
-        Time: 130000
-      - Level: 11
+      - Level: 5
         Time: 130000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 15
-        - Level: 2
-          Amount: 17
-        - Level: 3
-          Amount: 19
-        - Level: 4
-          Amount: 21
-        - Level: 5
-          Amount: 23
-        - Level: 6
-          Amount: 25
-        - Level: 7
-          Amount: 27
-        - Level: 8
-          Amount: 29
-        - Level: 9
-          Amount: 31
-        - Level: 10
-          Amount: 33
+      SpCost: 39
   - Id: 31
     Name: AL_HOLYWATER
     Description: Aqua Benedicta
@@ -1506,7 +1380,7 @@ Body:
   - Id: 33
     Name: AL_ANGELUS
     Description: Angelus
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Magic
     TargetType: Self
     DamageFlags:
@@ -1516,55 +1390,26 @@ Body:
     HitCount: 1
     SplashArea: -1
     CastCancel: true
-    CastTime: 500
-    AfterCastActDelay: 3500
+    CastTime: 2000
+    Cooldown: 10000
+    AfterCastActDelay: 1000
     Duration1:
       - Level: 1
-        Time: 30000
-      - Level: 2
         Time: 60000
-      - Level: 3
-        Time: 90000
-      - Level: 4
+      - Level: 2
         Time: 120000
-      - Level: 5
-        Time: 150000
-      - Level: 6
+      - Level: 3
         Time: 180000
-      - Level: 7
-        Time: 210000
-      - Level: 8
+      - Level: 4
         Time: 240000
-      - Level: 9
-        Time: 270000
-      - Level: 10
-        Time: 300000
+      - Level: 5
+        Time: 320000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 23
-        - Level: 2
-          Amount: 26
-        - Level: 3
-          Amount: 29
-        - Level: 4
-          Amount: 32
-        - Level: 5
-          Amount: 35
-        - Level: 6
-          Amount: 38
-        - Level: 7
-          Amount: 41
-        - Level: 8
-          Amount: 44
-        - Level: 9
-          Amount: 47
-        - Level: 10
-          Amount: 50
+      SpCost: 45
   - Id: 34
     Name: AL_BLESSING
     Description: Blessing
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Magic
     TargetType: Support
     DamageFlags:
@@ -1575,49 +1420,21 @@ Body:
     Hit: Single
     HitCount: 1
     CastCancel: true
+    Cooldown: 2000
+    AfterCastActDelay: 500
     Duration1:
       - Level: 1
-        Time: 60000
-      - Level: 2
         Time: 80000
-      - Level: 3
-        Time: 100000
-      - Level: 4
+      - Level: 2
         Time: 120000
-      - Level: 5
-        Time: 140000
-      - Level: 6
+      - Level: 3
         Time: 160000
-      - Level: 7
-        Time: 180000
-      - Level: 8
+      - Level: 4
         Time: 200000
-      - Level: 9
-        Time: 220000
-      - Level: 10
+      - Level: 5
         Time: 240000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 28
-        - Level: 2
-          Amount: 32
-        - Level: 3
-          Amount: 36
-        - Level: 4
-          Amount: 40
-        - Level: 5
-          Amount: 44
-        - Level: 6
-          Amount: 48
-        - Level: 7
-          Amount: 52
-        - Level: 8
-          Amount: 56
-        - Level: 9
-          Amount: 60
-        - Level: 10
-          Amount: 64
+      SpCost: 64
   - Id: 35
     Name: AL_CURE
     Description: Cure
@@ -5222,18 +5039,27 @@ Body:
     MaxLevel: 5
     Type: Magic
     TargetType: Attack
+    DamageFlags:
+      Splash: false
+      SplashSplit: false
+    Flags:
+      IsAutoShadowSpell: true
+      TargetTrap: true
     Range: 9
     Hit: Single
     HitCount: 1
     Element: Holy
+    SplashArea: 1
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
     CastCancel: true
-    CastTime: 2000
+    CastTime: 2750
+    Cooldown: 5000
+    AfterCastActDelay: 400
     Requires:
-      SpCost: 15
+      SpCost: 37
   - Id: 157
     Name: MG_ENERGYCOAT
     Description: Energy Coat
@@ -19477,7 +19303,9 @@ Body:
       Skill:
         Reproduce: true
     CastCancel: true
-    CastTime: 3000
+    CastTime: 5000
+    Cooldown: 20000
+    AfterCastActDelay: 1000
     Duration1:
       - Level: 1
         Time: 90000
@@ -19490,15 +19318,7 @@ Body:
       - Level: 5
         Time: 210000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 240
-        - Level: 2
-          Amount: 280
-        - Level: 3
-          Amount: 320
-        - Level: 4
-          Amount: 360
+      SpCost: 360
   - Id: 2051
     Name: AB_HIGHNESSHEAL
     Description: Highness Heal

@@ -343,6 +343,7 @@ void initChangeTables(void)
 	add_sc( SM_BASH			, SC_STUN		);
 	set_sc( SM_PROVOKE		, SC_PROVOKE		, EFST_PROVOKE		, SCB_DEF|SCB_DEF2|SCB_BATK|SCB_WATK );
 	set_sc( AL_CRUCIS		, SC_CRUCIS_PLAYER	, EFST_CRUCIS_PLAYER	, SCB_MATK|SCB_MDEF	);
+
 	set_sc( SM_MAGNUM		, SC_WATK_ELEMENT	, EFST_WATK_ELEMENT	, SCB_NONE	);
 	set_sc( SM_ENDURE		, SC_ENDURE		, EFST_ENDURE		, SCB_MDEF|SCB_DSPD );
 	add_sc( MG_SIGHT		, SC_SIGHT		);
@@ -351,6 +352,7 @@ void initChangeTables(void)
 	add_sc( MG_STONECURSE		, SC_STONE		);
 	add_sc( AL_RUWACH		, SC_RUWACH		);
 	add_sc( AL_PNEUMA		, SC_PNEUMA		);
+	add_sc( MG_SAFETYWALL		, SC_PNEUMA		);
 	set_sc( AL_INCAGI		, SC_INCREASEAGI	, EFST_INC_AGI, SCB_AGI|SCB_SPEED
 #ifdef RENEWAL
 		|SCB_ASPD );
@@ -358,7 +360,8 @@ void initChangeTables(void)
 		);
 #endif
 	set_sc( AL_DECAGI		, SC_DECREASEAGI	, EFST_DEC_AGI, SCB_AGI|SCB_SPEED );
-	set_sc( AL_CRUCIS		, SC_SIGNUMCRUCIS	, EFST_CRUCIS, SCB_DEF );
+	// 
+	( AL_CRUCIS		, SC_SIGNUMCRUCIS	, EFST_CRUCIS, SCB_DEF );
 	set_sc( AL_ANGELUS		, SC_ANGELUS		, EFST_ANGELUS		, SCB_DEF2
 #ifdef RENEWAL
 		|SCB_MAXHP );
@@ -425,12 +428,7 @@ void initChangeTables(void)
 	set_sc( AS_SPLASHER		, SC_SPLASHER	, EFST_SPLASHER	, SCB_NONE );
 	set_sc( NV_TRICKDEAD		, SC_TRICKDEAD		, EFST_TRICKDEAD		, SCB_REGEN );
 	set_sc( SM_AUTOBERSERK		, SC_AUTOBERSERK	, EFST_AUTOBERSERK	, SCB_NONE );
-	set_sc( MC_LOUD			, SC_LOUD		, EFST_SHOUT, SCB_STR
-#ifdef RENEWAL
-		|SCB_BATK );
-#else
-		);
-#endif
+	set_sc( MC_LOUD			, SC_LOUD		, EFST_SHOUT, SCB_STR|SCB_BATK );
 	set_sc( MG_ENERGYCOAT		, SC_ENERGYCOAT		, EFST_ENERGYCOAT		, SCB_NONE );
 	set_sc( NPC_EMOTION		, SC_MODECHANGE		, EFST_BLANK		, SCB_MODE );
 	add_sc( NPC_EMOTION_ON		, SC_MODECHANGE		);
@@ -3387,10 +3385,6 @@ static int status_get_hpbonus(struct block_list *bl, enum e_status_bonus type) {
 				bonus += 30;
 			if(sc->data[SC_GLASTHEIM_HPSP])
 				bonus += sc->data[SC_GLASTHEIM_HPSP]->val1;
-#ifdef RENEWAL
-			if (sc->data[SC_ANGELUS])
-				bonus += sc->data[SC_ANGELUS]->val1 * 50;
-#endif
 		}
 	} else if (type == STATUS_BONUS_RATE) {
 		struct status_change *sc = status_get_sc(bl);
@@ -5371,59 +5365,41 @@ void status_calc_bl_main(struct block_list *bl, /*enum scb_flag*/int flag)
 	}
 
 	if(flag&SCB_WATK) {
-#ifndef RENEWAL
-		status->rhw.atk = status_calc_watk(bl, sc, b_status->rhw.atk);
-		if (!sd) // Should not affect weapon refine bonus
-			status->rhw.atk2 = status_calc_watk(bl, sc, b_status->rhw.atk2);
 
-		if (sd && sd->bonus.weapon_atk_rate)
-			status->rhw.atk += status->rhw.atk * sd->bonus.weapon_atk_rate / 100;
-		if(b_status->lhw.atk) {
-			if (sd) {
-				sd->state.lr_flag = 1;
-				status->lhw.atk = status_calc_watk(bl, sc, b_status->lhw.atk);
-				sd->state.lr_flag = 0;
-			} else {
-				status->lhw.atk = status_calc_watk(bl, sc, b_status->lhw.atk);
-				status->lhw.atk2= status_calc_watk(bl, sc, b_status->lhw.atk2);
-			}
-		}
-#else
 		if(!b_status->watk) { // We only have left-hand weapon
 			status->watk = 0;
 			status->watk2 = status_calc_watk(bl, sc, b_status->watk2);
 		}
 		else status->watk = status_calc_watk(bl, sc, b_status->watk);
-#endif
 	}
 
 	if(flag&SCB_HIT) {
 		if (status->dex == b_status->dex
-#ifdef RENEWAL
+
 			&& status->luk == b_status->luk
-#endif
+
 			)
 			status->hit = status_calc_hit(bl, sc, b_status->hit);
 		else
 			status->hit = status_calc_hit(bl, sc, b_status->hit + (status->dex - b_status->dex)
-#ifdef RENEWAL
+
 			 + (status->luk/3 - b_status->luk/3)
-#endif
+
 			 );
 	}
 
 	if(flag&SCB_FLEE) {
 		if (status->agi == b_status->agi
-#ifdef RENEWAL
+
 			&& status->luk == b_status->luk
-#endif
+
 			)
 			status->flee = status_calc_flee(bl, sc, b_status->flee);
 		else
 			status->flee = status_calc_flee(bl, sc, b_status->flee +(status->agi - b_status->agi)
-#ifdef RENEWAL
+
 			+ (status->luk/5 - b_status->luk/5)
-#endif
+
 			);
 	}
 
@@ -5435,20 +5411,7 @@ void status_calc_bl_main(struct block_list *bl, /*enum scb_flag*/int flag)
 	}
 
 	if(flag&SCB_DEF2) {
-		if (status->vit == b_status->vit
-#ifdef RENEWAL
-			&& status->agi == b_status->agi
-#endif
-			)
-			status->def2 = status_calc_def2(bl, sc, b_status->def2);
-		else
-			status->def2 = status_calc_def2(bl, sc, b_status->def2
-#ifdef RENEWAL
-			+ (int)( ((float)status->vit/2 - (float)b_status->vit/2) + ((float)status->agi/5 - (float)b_status->agi/5) )
-#else
-			+ (status->vit - b_status->vit)
-#endif
-		);
+		status->def2 = status_calc_def2(bl, sc, b_status->def2);
 	}
 
 	if(flag&SCB_MDEF) {
@@ -5460,18 +5423,15 @@ void status_calc_bl_main(struct block_list *bl, /*enum scb_flag*/int flag)
 
 	if(flag&SCB_MDEF2) {
 		if (status->int_ == b_status->int_ && status->vit == b_status->vit
-#ifdef RENEWAL
+
 			&& status->dex == b_status->dex
-#endif
+
 			)
 			status->mdef2 = status_calc_mdef2(bl, sc, b_status->mdef2);
 		else
 			status->mdef2 = status_calc_mdef2(bl, sc, b_status->mdef2 +(status->int_ - b_status->int_)
-#ifdef RENEWAL
+
 			+ (int)( ((float)status->dex/5 - (float)b_status->dex/5) + ((float)status->vit/5 - (float)b_status->vit/5) )
-#else
-			+ ((status->vit - b_status->vit)>>1)
-#endif
 			);
 	}
 
@@ -5591,10 +5551,7 @@ void status_calc_bl_main(struct block_list *bl, /*enum scb_flag*/int flag)
 	}
 
 	if(flag&SCB_MATK) {
-#ifndef RENEWAL
-		status->matk_min = status_base_matk_min(status) + (sd?sd->bonus.ematk:0);
-		status->matk_max = status_base_matk_max(status) + (sd?sd->bonus.ematk:0);
-#else
+
 		/**
 		 * RE MATK Formula (from irowiki:http:// irowiki.org/wiki/MATK)
 		 * MATK = (sMATK + wMATK + eMATK) * Multiplicative Modifiers
@@ -5653,8 +5610,6 @@ void status_calc_bl_main(struct block_list *bl, /*enum scb_flag*/int flag)
 				}
 				break;
 		}
-#endif
-
 		if (bl->type&BL_PC && sd->matk_rate != 100) {
 			status->matk_max = status->matk_max * sd->matk_rate/100;
 			status->matk_min = status->matk_min * sd->matk_rate/100;
@@ -5664,15 +5619,16 @@ void status_calc_bl_main(struct block_list *bl, /*enum scb_flag*/int flag)
 				|| (sc && sc->data[SC_RECOGNIZEDSPELL]))
 			status->matk_min = status->matk_max;
 
-#ifdef RENEWAL
 		if( sd && sd->right_weapon.overrefine > 0) {
 			status->matk_min++;
 			status->matk_max += sd->right_weapon.overrefine - 1;
 		}
-#endif
+
 
 		status->matk_max = status_calc_matk(bl, sc, status->matk_max);
 		status->matk_min = status_calc_matk(bl, sc, status->matk_min);
+		status->rhw.matk += status_calc_matk(bl, sc, 0);
+		// ShowMessage("Matk Recalculated");
 	}
 
 	if(flag&SCB_ASPD) {
@@ -6062,13 +6018,14 @@ static unsigned short status_calc_agi(struct block_list *bl, struct status_chang
 	if(sc->data[SC_TRUESIGHT])
 		agi += 5;
 	if(sc->data[SC_INCREASEAGI])
-		agi += sc->data[SC_INCREASEAGI]->val2 * 2;
+		// agi +=(sc->data[SC_INCREASEAGI]->val1/agi)*100;
+		agi += sc->data[SC_INCREASEAGI]->val1 * 2;
 	if(sc->data[SC_INCREASING])
 		agi += 4; // Added based on skill updates [Reddozen]
 	if(sc->data[SC_2011RWC_SCROLL])
 		agi += sc->data[SC_2011RWC_SCROLL]->val1;
 	if(sc->data[SC_DECREASEAGI])
-		agi -= sc->data[SC_DECREASEAGI]->val2;
+		agi -=(sc->data[SC_DECREASEAGI]->val1/agi)*100;
 	if(sc->data[SC_QUAGMIRE])
 		agi -= sc->data[SC_QUAGMIRE]->val2;
 	if(sc->data[SC_SUITON] && sc->data[SC_SUITON]->val3)
@@ -6442,12 +6399,6 @@ static unsigned short status_calc_batk(struct block_list *bl, struct status_chan
 		batk += sc->data[SC_ATKPOTION]->val1;
 	if(sc->data[SC_BATKFOOD])
 		batk += sc->data[SC_BATKFOOD]->val1;
-#ifndef RENEWAL
-	if(sc->data[SC_GATLINGFEVER])
-		batk += sc->data[SC_GATLINGFEVER]->val3;
-	if(sc->data[SC_MADNESSCANCEL])
-		batk += 100;
-#endif
 	if(sc->data[SC_FULL_SWING_K])
 		batk += sc->data[SC_FULL_SWING_K]->val1;
 	if(sc->data[SC_ASH])
@@ -6487,12 +6438,10 @@ static unsigned short status_calc_batk(struct block_list *bl, struct status_chan
 		batk += sc->data[SC_QUEST_BUFF3]->val1;
 	if (sc->data[SC_SHRIMP])
 		batk += batk * sc->data[SC_SHRIMP]->val2 / 100;
-#ifdef RENEWAL
 	if (sc->data[SC_LOUD])
 		batk += 8*sc->data[SC_LOUD]->val1;
 	if (sc->data[SC_NIBELUNGEN] && sc->data[SC_NIBELUNGEN]->val2 == RINGNBL_ATKRATE)
 		batk += batk * 20 / 100;
-#endif
 	if (sc->data[SC_SUNSTANCE])
 		batk += batk * sc->data[SC_SUNSTANCE]->val2 / 100;
 
@@ -6615,7 +6564,6 @@ static unsigned short status_calc_ematk(struct block_list *bl, struct status_cha
 {
 	if (!sc || !sc->count)
 		return cap_value(matk,0,USHRT_MAX);
-
 	if (sc->data[SC_IMPOSITIO])
 		matk += sc->data[SC_IMPOSITIO]->val2;
 	if (sc->data[SC_MATKPOTION])
@@ -6672,33 +6620,11 @@ static unsigned short status_calc_ematk(struct block_list *bl, struct status_cha
  */
 static unsigned short status_calc_matk(struct block_list *bl, struct status_change *sc, int matk)
 {
+	
 	if(!sc || !sc->count)
 		return cap_value(matk,0,USHRT_MAX);
-#ifndef RENEWAL
-	/// Take note fixed value first before % modifiers [PRE-RENEWAL]
-	if (sc->data[SC_MATKPOTION])
-		matk += sc->data[SC_MATKPOTION]->val1;
-	if (sc->data[SC_MATKFOOD])
-		matk += sc->data[SC_MATKFOOD]->val1;
-	if (sc->data[SC_MANA_PLUS])
-		matk += sc->data[SC_MANA_PLUS]->val1;
-	if (sc->data[SC_AQUAPLAY_OPTION])
-		matk += sc->data[SC_AQUAPLAY_OPTION]->val2;
-	if (sc->data[SC_CHILLY_AIR_OPTION])
-		matk += sc->data[SC_CHILLY_AIR_OPTION]->val2;
-	if (sc->data[SC_COOLER_OPTION])
-		matk += sc->data[SC_COOLER_OPTION]->val2;
-	if (sc->data[SC_FIRE_INSIGNIA] && sc->data[SC_FIRE_INSIGNIA]->val1 == 3)
-		matk += 50;
-	if (sc->data[SC_ODINS_POWER])
-		matk += 40 + 30 * sc->data[SC_ODINS_POWER]->val1; // 70 lvl1, 100lvl2
-	if (sc->data[SC_IZAYOI])
-		matk += 25 * sc->data[SC_IZAYOI]->val1;
-	if (sc->data[SC_MTF_MATK2])
-		matk += sc->data[SC_MTF_MATK2]->val1;
-	if (sc->data[SC_2011RWC_SCROLL])
-		matk += 30;
-#endif
+	if(sc->data[SC_CRUCIS_PLAYER])
+		matk += sc->data[SC_CRUCIS_PLAYER]->val3;
 	if (sc->data[SC_ZANGETSU])
 		matk += sc->data[SC_ZANGETSU]->val3;
 	if (sc->data[SC_QUEST_BUFF1])
@@ -7014,13 +6940,9 @@ static defType status_calc_def(struct block_list *bl, struct status_change *sc, 
 
 	if(sc->data[SC_DRUMBATTLE])
 		def += sc->data[SC_DRUMBATTLE]->val3;
-#ifdef RENEWAL
 	if (sc->data[SC_ASSUMPTIO])
 		def += sc->data[SC_ASSUMPTIO]->val1 * 50;
-#else
-	if(sc->data[SC_DEFENCE])
-		def += sc->data[SC_DEFENCE]->val2;
-#endif
+
 	if(sc->data[SC_INCDEFRATE])
 		def += def * sc->data[SC_INCDEFRATE]->val1/100;
 	if(sc->data[SC_EARTH_INSIGNIA] && sc->data[SC_EARTH_INSIGNIA]->val1 == 2)
@@ -7108,18 +7030,12 @@ static signed short status_calc_def2(struct block_list *bl, struct status_change
 
 	if(sc->data[SC_SUN_COMFORT])
 		def2 += sc->data[SC_SUN_COMFORT]->val2;
-#ifdef RENEWAL
 	if (sc->data[SC_SKA])
 		def2 += 80;
-#endif
-	if(sc->data[SC_ANGELUS])
-#ifdef RENEWAL /// The VIT stat bonus is boosted by angelus [RENEWAL]
-		def2 += status_get_vit(bl) / 2 * sc->data[SC_ANGELUS]->val2/100;
-#else
-		def2 += def2 * sc->data[SC_ANGELUS]->val2/100;
-	if(sc->data[SC_CONCENTRATION])
-		def2 -= def2 * sc->data[SC_CONCENTRATION]->val4/100;
-#endif
+	if(sc->data[SC_ANGELUS]) {
+		def2 += sc->data[SC_ANGELUS]->val2;
+		// def2 += status_get_vit(bl) / 2 * sc->data[SC_ANGELUS]->val2/100;
+	}
 	if(sc->data[SC_POISON])
 		def2 -= def2 * 25/100;
 	if(sc->data[SC_DPOISON])
@@ -7180,7 +7096,8 @@ static defType status_calc_mdef(struct block_list *bl, struct status_change *sc,
 	}
 	if(sc->data[SC_MDEFSET])
 		return sc->data[SC_MDEFSET]->val1;
-
+	if(sc->data[SC_CRUCIS_PLAYER])
+		mdef += sc->data[SC_CRUCIS_PLAYER]->val4;
 	if(sc->data[SC_EARTH_INSIGNIA] && sc->data[SC_EARTH_INSIGNIA]->val1 == 3)
 		mdef += 50;
 	if(sc->data[SC_ENDURE] && !sc->data[SC_ENDURE]->val3) // It has been confirmed that Eddga card grants 1 MDEF, not 0, not 10, but 1.
@@ -10924,7 +10841,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			break;
 		case SC_BLESSING:
 			if ((!undead_flag && status->race!=RC_DEMON) || bl->type == BL_PC)
-				val2 = val1;
+				val2 = val1*2;
 			else
 				val2 = 0; // 0 -> Half stat.
 			break;
@@ -10976,7 +10893,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			sc_start(src, bl, SC_ENDURE, 100, 1, tick); // Level 1 Endure effect
 			break;
 		case SC_ANGELUS:
-			val2 = 5*val1; // def increase
+			val2 = 10*val1; // def increase
 			break;
 		case SC_IMPOSITIO:
 			val2 = 5*val1; // WATK/MATK increase
@@ -11020,6 +10937,11 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			// val2 signals autoprovoke.
 			val3 = 2+3*(val1*2); // Atk increase
 			val4 = 5+5*(val1*2); // Def reduction.
+			break;
+		case SC_CRUCIS_PLAYER:
+			// val2 signals autoprovoke.
+			val3 = 10*(val1); // MAtk increase
+			val4 = 10*(val1); // MDef increase.
 			break;
 		case SC_AVOID:
 			// val2 = 10*val1; // Speed change rate.

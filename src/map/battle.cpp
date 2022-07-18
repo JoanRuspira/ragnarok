@@ -1098,7 +1098,7 @@ bool battle_status_block_damage(struct block_list *src, struct block_list *targe
 			else
 				damage = -sce->val2;
 		}
-		if ((--sce->val3) <= 0 || (sce->val2 <= 0) || skill_id == AL_HOLYLIGHT)
+		if ((--sce->val3) <= 0 || (sce->val2 <= 0))
 			status_change_end(target, SC_KYRIE, INVALID_TIMER);
 	}
 
@@ -1143,6 +1143,7 @@ bool battle_status_block_damage(struct block_list *src, struct block_list *targe
 	// ATK_BLOCK Type
 	if ((sce = sc->data[SC_SAFETYWALL]) && (flag&(BF_SHORT | BF_MAGIC)) == BF_SHORT) {
 		skill_unit_group *group = skill_id2group(sce->val3);
+		clif_specialeffect(target, EF_MAXPAIN, AREA);
 
 		if (group) {
 			d->dmg_lv = ATK_BLOCK;
@@ -1153,12 +1154,11 @@ bool battle_status_block_damage(struct block_list *src, struct block_list *targe
 					skill_delunitgroup(group);
 					break;
 				}
-#ifdef RENEWAL
+
 				if (group->val3 - damage > 0)
 					group->val3 -= static_cast<int>(cap_value(damage, INT_MIN, INT_MAX));
 				else
 					skill_delunitgroup(group);
-#endif
 				break;
 			case MH_STEINWAND:
 				if (--group->val2 <= 0) {
@@ -5305,6 +5305,7 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 				}
 
 				switch(skill_id) {
+					case AL_HOLYLIGHT:
 					case MG_NAPALMBEAT:
 						skillratio += AcolyteSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv);
 						break;
@@ -5351,11 +5352,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 						break;
 					case MG_FROSTDIVER:
 						skillratio += 10 * skill_lv;
-						break;
-					case AL_HOLYLIGHT:
-						skillratio += 25;
-						if (sd && sd->sc.data[SC_SPIRIT] && sd->sc.data[SC_SPIRIT]->val2 == SL_PRIEST)
-							skillratio *= 5; //Does 5x damage include bonuses from other skills?
 						break;
 					case AL_RUWACH:
 						skillratio += 45;

@@ -144,7 +144,7 @@ void ArcherSkillAtkRatioCalculator::add_tranquilizer_shot_special_effects(struct
 void ArcherSkillAtkRatioCalculator::add_paralyzing_shot_special_effects(struct block_list *target)
 {
 	clif_specialeffect(target, EF_NPC_SLOWCAST, AREA);
-	clif_specialeffect(target, EF_MAXPAIN, AREA);
+	// clif_specialeffect(target, EF_MAXPAIN, AREA);
 }
 
 void ArcherSkillAtkRatioCalculator::add_arrow_shower_special_effects(struct block_list *target)

@@ -16,6 +16,6 @@ class AcolyteSkillAtkRatioCalculator
 
 	private:
 		static int calculate_sacred_wave_atk_ratio(int skill_lv);
+		static int calculate_holy_light_atk_ratio(int skill_lv);
 		static void add_sacred_wave_special_effects(struct block_list *target);
-	
 };

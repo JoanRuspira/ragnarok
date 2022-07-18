@@ -14,6 +14,9 @@ int AcolyteSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 			add_sacred_wave_special_effects(target);
 			return calculate_sacred_wave_atk_ratio(skill_lv);
 			break;
+		case AL_HOLYLIGHT:
+			return calculate_holy_light_atk_ratio(skill_lv);
+			break;
 		default:
 			return 0;
 			break;
@@ -32,19 +35,43 @@ int AcolyteSkillAtkRatioCalculator::calculate_sacred_wave_atk_ratio(int skill_lv
 	int ratio = 0;
 	switch (skill_lv) {
 		case 1:
-			ratio = 30;
+			ratio = 10;
+			break;
+		case 2:
+			ratio = 120;
+			break;
+		case 3:
+			ratio = 230;
+			break;
+		case 4:
+			ratio = 340;
+			break;
+		case 5:
+			ratio = 450;
+			break;
+		}
+	return ratio;
+}
+
+
+int AcolyteSkillAtkRatioCalculator::calculate_holy_light_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 10;
 			break;
 		case 2:
 			ratio = 100;
 			break;
 		case 3:
-			ratio = 180;
+			ratio = 200;
 			break;
 		case 4:
-			ratio = 240;
+			ratio = 325;
 			break;
 		case 5:
-			ratio = 300;
+			ratio = 425;
 			break;
 		}
 	return ratio;

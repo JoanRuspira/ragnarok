@@ -21519,6 +21519,7 @@ BUILDIN_FUNC(setmounting) {
 			status_change_end(&sd->bl, SC_ALL_RIDING, INVALID_TIMER); //release mount
 		else
 			sc_start(NULL, &sd->bl, SC_ALL_RIDING, 10000, 1, INFINITE_TICK); //mount
+			clif_soundeffectall(&sd->bl, "kocot_stand.wav", 0, AREA);
 		script_pushint(st,1);//in both cases, return 1.
 	}
 	return SCRIPT_CMD_SUCCESS;
