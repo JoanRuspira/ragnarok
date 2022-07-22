@@ -2664,6 +2664,7 @@ int64 skill_attack (int attack_type, struct block_list* src, struct block_list *
 
 	if (!(flag&2)) {
 		switch (skill_id) {
+			case WZ_EARTHSPIKE:
 			case MG_COLDBOLT:
 			case MG_FIREBOLT:
 			case MG_LIGHTNINGBOLT:
@@ -16548,31 +16549,11 @@ int skill_autospell(struct map_session_data *sd, uint16 skill_id)
 	if (skill_lv == 0 || lv == 0)
 		return 0; // Player must learn the skill before doing auto-spell [Lance]
 
-#ifdef RENEWAL
 	if ((skill_id == MG_COLDBOLT || skill_id == MG_FIREBOLT || skill_id == MG_LIGHTNINGBOLT) && sd->sc.data[SC_SPIRIT] && sd->sc.data[SC_SPIRIT]->val2 == SL_SAGE)
 		maxlv = 10; //Soul Linker bonus. [Skotlex]
 	else
 		maxlv = skill_lv / 2; // Half of Autospell's level unless player learned a lower level (capped below)
-#else
-	else if(skill_id==MG_COLDBOLT || skill_id==MG_FIREBOLT || skill_id==MG_LIGHTNINGBOLT){
-		if (sd->sc.data[SC_SPIRIT] && sd->sc.data[SC_SPIRIT]->val2 == SL_SAGE)
-			maxlv = 10; //Soul Linker bonus. [Skotlex]
-		else if(skill_lv==2) maxlv=1;
-		else if(skill_lv==3) maxlv=2;
-		else if(skill_lv>=4) maxlv=3;
-	}
-	else if(skill_id==MG_SOULSTRIKE){
-		if(skill_lv==5) maxlv=1;
-		else if(skill_lv==6) maxlv=2;
-		else if(skill_lv>=7) maxlv=3;
-	}
-	else if(skill_id==MG_FIREBALL){
-		if(skill_lv==8) maxlv=1;
-		else if(skill_lv>=9) maxlv=2;
-	}
-	else if(skill_id==MG_FROSTDIVER) maxlv=1;
-	else return 0;
-#endif
+
 
 	maxlv = min(lv, maxlv);
 

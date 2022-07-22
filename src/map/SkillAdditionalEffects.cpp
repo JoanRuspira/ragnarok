@@ -309,6 +309,9 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 		case TF_SANDATTACK:
 			ThiefAdditionalEffectsCalculator::apply_sand_attack_additional_effect(src, bl, skill_lv);
 			break;
+		case MG_FROSTDIVER:
+			MageAdditionalEffectsCalculator::apply_frost_diver_additional_effect(src, bl, skill_lv);
+			break;
 	}
 }
 

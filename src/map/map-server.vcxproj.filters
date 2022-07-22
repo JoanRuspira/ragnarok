@@ -117,6 +117,12 @@
     <Filter Include="Header Files\skillAdditionalEffectsCalculator\acolyte">
       <UniqueIdentifier>{825bc85d-d711-404b-aeea-c29804af66c5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\skillAdditionalEffectsCalculator\mage">
+      <UniqueIdentifier>{30b8b443-e198-437d-a334-57b0fca775d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\skillAdditionalEffectsCalculator\mage">
+      <UniqueIdentifier>{59687da0-693a-42fa-8912-d6493e3089fd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="achievement.hpp">
@@ -320,6 +326,9 @@
     <ClInclude Include="AcolyteAdditionalEffectsCalculator.h">
       <Filter>Header Files\skillAdditionalEffectsCalculator\acolyte</Filter>
     </ClInclude>
+    <ClInclude Include="MageAdditionalEffectsCalculator.h">
+      <Filter>Header Files\skillAdditionalEffectsCalculator\mage</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="achievement.cpp">
@@ -495,6 +504,9 @@
     </ClCompile>
     <ClCompile Include="AcolyteAdditionalEffectsCalculator.cpp">
       <Filter>Source Files\skillAdditionalEffectsCalculator\acolyte</Filter>
+    </ClCompile>
+    <ClCompile Include="MageAdditionalEffectsCalculator.cpp">
+      <Filter>Source Files\skillAdditionalEffectsCalculator\mage</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

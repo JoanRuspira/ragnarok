@@ -30,6 +30,8 @@
 #include "ArcherAdditionalEffectsCalculator.h"
 #include "AcolyteSkillAtkRatioCalculator.h"
 #include "AcolyteAdditionalEffectsCalculator.h"
+#include "MageAdditionalEffectsCalculator.h"
+
 
 //fwd declaration
 struct map_session_data;

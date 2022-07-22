@@ -5326,19 +5326,14 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case MG_FIREWALL:
 						skillratio -= 50;
 						break;
-					case MG_COLDBOLT:
-						skillratio += MageSkillAtkRatioCalculator::calculate_skill_atk_ratio(status_get_lv(src), skill_id, skill_lv);
-						// if (sc && sc->data[SC_SPELLFIST] && mflag&BF_SHORT)  {
-						// 		skillratio += MageSkillAtkRatioCalculator::calculate_skill_atk_ratio(status_get_lv(src), skill_id, skill_lv);
-						// 		ad.div_ = 1; // ad mods, to make it work similar to regular hits [Xazax]
-						// 		ad.flag = BF_WEAPON|BF_SHORT;
-						// 		ad.type = DMG_NORMAL;
-						// 	}
-						break;
+					case WZ_EARTHSPIKE:
 					case MG_FIREBOLT:
 					case MG_LIGHTNINGBOLT:
+					case MG_COLDBOLT:
+						ShowMessage("message\n");
+						skillratio += MageSkillAtkRatioCalculator::calculate_skill_atk_ratio(status_get_lv(src), skill_id, skill_lv);
 						if (sc && sc->data[SC_SPELLFIST] && mflag&BF_SHORT)  {
-							skillratio += (sc->data[SC_SPELLFIST]->val4 * 100) + (sc->data[SC_SPELLFIST]->val1 * 50) - 100;// val4 = used bolt level, val2 = used spellfist level. [Rytech]
+							skillratio += MageSkillAtkRatioCalculator::calculate_skill_atk_ratio(status_get_lv(src), skill_id, skill_lv);
 							ad.div_ = 1; // ad mods, to make it work similar to regular hits [Xazax]
 							ad.flag = BF_WEAPON|BF_SHORT;
 							ad.type = DMG_NORMAL;
@@ -5351,7 +5346,7 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 #endif
 						break;
 					case MG_FROSTDIVER:
-						skillratio += 10 * skill_lv;
+						skillratio += 0;
 						break;
 					case AL_RUWACH:
 						skillratio += 45;
@@ -5371,25 +5366,13 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 						skillratio += 30 * skill_lv;
 						break;
 					case WZ_STORMGUST:
-#ifdef RENEWAL
 						skillratio -= 30; // Offset only once
 						skillratio += 50 * skill_lv;
-#else
-						skillratio += 40 * skill_lv;
-#endif
 						break;
-#ifdef RENEWAL
-					case WZ_EARTHSPIKE:
-						skillratio += 100;
-						break;
-#endif
 					case HW_NAPALMVULCAN:
-#ifdef RENEWAL
 						skillratio += -100 + 70 * skill_lv;
 						RE_LVL_DMOD(100);
-#else
-						skillratio += 25;
-#endif
+
 						break;
 					case SL_STIN: //Target size must be small (0) for full damage
 						skillratio += (tstatus->size != SZ_SMALL ? -99 : 10 * skill_lv);
@@ -5813,28 +5796,28 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 		if(ad.damage<1)
 			ad.damage=1;
 		else if(sc) { //only applies when hit
-			switch(skill_id) {
-				case MG_LIGHTNINGBOLT:
-				case MG_THUNDERSTORM:
-					if(sc->data[SC_GUST_OPTION])
-						ad.damage += (6 + sstatus->int_ / 4) + max(sstatus->dex - 10, 0) / 30;
-					break;
-				case MG_FIREBOLT:
-				case MG_FIREWALL:
-					if(sc->data[SC_PYROTECHNIC_OPTION])
-						ad.damage += (6 + sstatus->int_ / 4) + max(sstatus->dex - 10, 0) / 30;
-					break;
-				case MG_COLDBOLT:
-				case MG_FROSTDIVER:
-					if(sc->data[SC_AQUAPLAY_OPTION])
-						ad.damage += (6 + sstatus->int_ / 4) + max(sstatus->dex - 10, 0) / 30;
-					break;
-				case WZ_EARTHSPIKE:
-				case WZ_HEAVENDRIVE:
-					if(sc->data[SC_PETROLOGY_OPTION])
-						ad.damage += (6 + sstatus->int_ / 4) + max(sstatus->dex - 10, 0) / 30;
-					break;
-			}
+			// switch(skill_id) {
+			// 	case MG_LIGHTNINGBOLT:
+			// 	case MG_THUNDERSTORM:
+			// 		if(sc->data[SC_GUST_OPTION])
+			// 			ad.damage += (6 + sstatus->int_ / 4) + max(sstatus->dex - 10, 0) / 30;
+			// 		break;
+			// 	case MG_FIREBOLT:
+			// 	case MG_FIREWALL:
+			// 		if(sc->data[SC_PYROTECHNIC_OPTION])
+			// 			ad.damage += (6 + sstatus->int_ / 4) + max(sstatus->dex - 10, 0) / 30;
+			// 		break;
+			// 	case MG_COLDBOLT:
+			// 	case MG_FROSTDIVER:
+			// 		if(sc->data[SC_AQUAPLAY_OPTION])
+			// 			ad.damage += (6 + sstatus->int_ / 4) + max(sstatus->dex - 10, 0) / 30;
+			// 		break;
+			// 	case WZ_EARTHSPIKE:
+			// 	case WZ_HEAVENDRIVE:
+			// 		if(sc->data[SC_PETROLOGY_OPTION])
+			// 			ad.damage += (6 + sstatus->int_ / 4) + max(sstatus->dex - 10, 0) / 30;
+			// 		break;
+			// }
 		}
 
 		if (!nk[NK_IGNOREELEMENT])
