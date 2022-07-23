@@ -429,7 +429,7 @@ void initChangeTables(void)
 	set_sc( NV_TRICKDEAD		, SC_TRICKDEAD		, EFST_TRICKDEAD		, SCB_REGEN );
 	set_sc( SM_AUTOBERSERK		, SC_AUTOBERSERK	, EFST_AUTOBERSERK	, SCB_NONE );
 	set_sc( MC_LOUD			, SC_LOUD		, EFST_SHOUT, SCB_STR|SCB_BATK );
-	set_sc( MG_ENERGYCOAT		, SC_ENERGYCOAT		, EFST_ENERGYCOAT		, SCB_NONE );
+	set_sc( MG_ENERGYCOAT		, SC_ENERGYCOAT		, EFST_ENERGYCOAT		, SCB_MATK );
 	set_sc( NPC_EMOTION		, SC_MODECHANGE		, EFST_BLANK		, SCB_MODE );
 	add_sc( NPC_EMOTION_ON		, SC_MODECHANGE		);
 	set_sc( NPC_ATTRICHANGE		, SC_ELEMENTALCHANGE	, EFST_ARMOR_PROPERTY	, SCB_DEF_ELE );
@@ -6625,6 +6625,8 @@ static unsigned short status_calc_matk(struct block_list *bl, struct status_chan
 		return cap_value(matk,0,USHRT_MAX);
 	if(sc->data[SC_CRUCIS_PLAYER])
 		matk += sc->data[SC_CRUCIS_PLAYER]->val3;
+	if(sc->data[SC_ENERGYCOAT])
+		matk += sc->data[SC_ENERGYCOAT]->val3;
 	if (sc->data[SC_ZANGETSU])
 		matk += sc->data[SC_ZANGETSU]->val3;
 	if (sc->data[SC_QUEST_BUFF1])
@@ -10937,6 +10939,9 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			// val2 signals autoprovoke.
 			val3 = 2+3*(val1*2); // Atk increase
 			val4 = 5+5*(val1*2); // Def reduction.
+			break;
+		case SC_ENERGYCOAT:
+			val3 = 10*(val1); // MAtk increase
 			break;
 		case SC_CRUCIS_PLAYER:
 			// val2 signals autoprovoke.

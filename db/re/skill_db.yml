@@ -372,7 +372,7 @@ Body:
     Requires:
       SpCost: 40
       ItemCost:
-        - Item: Blue_Gemstone
+        - Item: Red_Gemstone
           Amount: 1
     Unit:
       Id: Safetywall
@@ -509,7 +509,7 @@ Body:
   - Id: 15
     Name: MG_FROSTDIVER
     Description: Frost Diver
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Magic
     TargetType: Attack
     Flags:
@@ -523,53 +523,13 @@ Body:
         Plagiarism: true
         Reproduce: true
     CastCancel: true
-    CastTime: 800
-    AfterCastActDelay: 1500
-    Duration2:
-      - Level: 1
-        Time: 3000
-      - Level: 2
-        Time: 6000
-      - Level: 3
-        Time: 9000
-      - Level: 4
-        Time: 12000
-      - Level: 5
-        Time: 15000
-      - Level: 6
-        Time: 18000
-      - Level: 7
-        Time: 21000
-      - Level: 8
-        Time: 24000
-      - Level: 9
-        Time: 27000
-      - Level: 10
-        Time: 30000
-      - Level: 11
-        Time: 30000
+    CastTime: 500
+    AfterCastActDelay: 400
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 25
-        - Level: 2
-          Amount: 24
-        - Level: 3
-          Amount: 23
-        - Level: 4
-          Amount: 22
-        - Level: 5
-          Amount: 21
-        - Level: 6
-          Amount: 20
-        - Level: 7
-          Amount: 19
-        - Level: 8
-          Amount: 18
-        - Level: 9
-          Amount: 17
-        - Level: 10
-          Amount: 16
+      SpCost: 37
+      ItemCost:
+        - Item: Blue_Gemstone
+          Amount: 1
   - Id: 16
     Name: MG_STONECURSE
     Description: Stone Curse
@@ -578,38 +538,17 @@ Body:
     TargetType: Attack
     DamageFlags:
       NoDamage: true
-    Range: 2
+    Range: 9
     Hit: Single
     HitCount: 1
     Element: Earth
     CastCancel: true
-    CastTime: 1000
-    Duration1: 5000
-    Duration2: 20000
+    CastTime: 500
+    AfterCastActDelay: 400
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 25
-        - Level: 2
-          Amount: 24
-        - Level: 3
-          Amount: 23
-        - Level: 4
-          Amount: 22
-        - Level: 5
-          Amount: 21
-        - Level: 6
-          Amount: 20
-        - Level: 7
-          Amount: 19
-        - Level: 8
-          Amount: 18
-        - Level: 9
-          Amount: 17
-        - Level: 10
-          Amount: 16
+      SpCost: 37
       ItemCost:
-        - Item: Red_Gemstone
+        - Item: Yellow_Gemstone
           Amount: 1
   - Id: 17
     Name: MG_FIREBALL

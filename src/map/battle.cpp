@@ -5309,35 +5309,30 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case MG_NAPALMBEAT:
 						skillratio += AcolyteSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv);
 						break;
-					case MG_FIREBALL:
-						skillratio += 40 + 20 * skill_lv;
-						if(ad.miscflag == 2) //Enemies at the edge of the area will take 75% of the damage
-							skillratio = skillratio * 3 / 4;
-						break;
 					case MG_UNDEADEMBRACE:
-							clif_specialeffect(target, EF_DEVIL, AREA);
-							clif_specialeffect(target, EF_BLACKDEVIL, AREA);
-							skillratio += 5 * skill_lv;
-						break;
+					case NPC_DARKSTRIKE:
 					case MG_SOULSTRIKE:
-						if (battle_check_undead(tstatus->race,tstatus->def_ele))
-							skillratio += 5 * skill_lv;
-						break;
-					case MG_FIREWALL:
-						skillratio -= 50;
+						skillratio += MageSkillAtkRatioCalculator::calculate_skill_atk_ratio(status_get_lv(src), skill_id, skill_lv, target);
 						break;
 					case WZ_EARTHSPIKE:
 					case MG_FIREBOLT:
 					case MG_LIGHTNINGBOLT:
 					case MG_COLDBOLT:
-						ShowMessage("message\n");
-						skillratio += MageSkillAtkRatioCalculator::calculate_skill_atk_ratio(status_get_lv(src), skill_id, skill_lv);
+						skillratio += MageSkillAtkRatioCalculator::calculate_skill_atk_ratio(status_get_lv(src), skill_id, skill_lv, target);
 						if (sc && sc->data[SC_SPELLFIST] && mflag&BF_SHORT)  {
-							skillratio += MageSkillAtkRatioCalculator::calculate_skill_atk_ratio(status_get_lv(src), skill_id, skill_lv);
+							skillratio += MageSkillAtkRatioCalculator::calculate_skill_atk_ratio(status_get_lv(src), skill_id, skill_lv, target);
 							ad.div_ = 1; // ad mods, to make it work similar to regular hits [Xazax]
 							ad.flag = BF_WEAPON|BF_SHORT;
 							ad.type = DMG_NORMAL;
 						}
+						break;
+					case MG_FIREBALL:
+						skillratio += 40 + 20 * skill_lv;
+						if(ad.miscflag == 2) //Enemies at the edge of the area will take 75% of the damage
+							skillratio = skillratio * 3 / 4;
+						break;
+					case MG_FIREWALL:
+						skillratio -= 50;
 						break;
 					case MG_THUNDERSTORM:
 						// in Renewal Thunder Storm boost is 100% (in pre-re, 80%)

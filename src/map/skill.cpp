@@ -6781,37 +6781,38 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		break;
 
 	case MG_STONECURSE:
-		{
-			int brate = 0;
-			if (status_has_mode(tstatus,MD_STATUSIMMUNE)) {
-				if (sd) clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-				break;
-			}
-			if(status_isimmune(bl) || !tsc)
-				break;
+		MageAdditionalEffectsCalculator::apply_stone_curse_additional_effect(src, bl, skill_lv);
+		// {
+		// 	int brate = 0;
+		// 	if (status_has_mode(tstatus,MD_STATUSIMMUNE)) {
+		// 		if (sd) clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+		// 		break;
+		// 	}
+		// 	if(status_isimmune(bl) || !tsc)
+		// 		break;
 
-			if (sd && sd->sc.data[SC_PETROLOGY_OPTION])
-				brate = sd->sc.data[SC_PETROLOGY_OPTION]->val3;
+		// 	if (sd && sd->sc.data[SC_PETROLOGY_OPTION])
+		// 		brate = sd->sc.data[SC_PETROLOGY_OPTION]->val3;
 
-			if (tsc && tsc->data[type]) {
-				status_change_end(bl, type, INVALID_TIMER);
-				if (sd) clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-				break;
-			}
-			if (sc_start4(src,bl,type,(skill_lv*4+20)+brate,
-				skill_lv, src->id, skill_get_time(skill_id, skill_lv), 0,
-				skill_get_time2(skill_id,skill_lv)))
-					clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
-			else if(sd) {
-				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-				// Level 6-10 doesn't consume a red gem if it fails [celest]
-				if (skill_lv > 5)
-				{ // not to consume items
-					map_freeblock_unlock();
-					return 0;
-				}
-			}
-		}
+		// 	if (tsc && tsc->data[type]) {
+		// 		status_change_end(bl, type, INVALID_TIMER);
+		// 		if (sd) clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+		// 		break;
+		// 	}
+		// 	if (sc_start4(src,bl,type,(skill_lv*4+20)+brate,
+		// 		skill_lv, src->id, skill_get_time(skill_id, skill_lv), 0,
+		// 		skill_get_time2(skill_id,skill_lv)))
+		// 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
+		// 	else if(sd) {
+		// 		clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+		// 		// Level 6-10 doesn't consume a red gem if it fails [celest]
+		// 		if (skill_lv > 5)
+		// 		{ // not to consume items
+		// 			map_freeblock_unlock();
+		// 			return 0;
+		// 		}
+		// 	}
+		// }
 		break;
 
 	case NV_FIRSTAID:

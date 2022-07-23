@@ -1,13 +1,21 @@
 #pragma once
+#include "../common/timer.hpp"
+#include <cstring>
+#include "skill.hpp"
+#include "status.hpp"
+#include "battle.hpp"
+#include "unit.hpp"
+#include "clif.hpp"
 class MageSkillAtkRatioCalculator
 {
-private:
+	private:
 
-public:
-	static int calculate_skill_atk_ratio(int base_lv, int skill_id, int skill_lv);
+	public:
+		static int calculate_skill_atk_ratio(int base_lv, int skill_id, int skill_lv, struct block_list *target);
 
-private:
-	static int calculate_bolt_attack(int skill_lv);
-	/*static int calculate_magnum_break_atk_ratio(int skill_lv);
-	static int calculate_spear_stab_atk_ratio(int skill_lv);*/
+	private:
+		static int calculate_bolt_attack(int skill_lv);
+		static int calculate_soul_strike_attack(int skill_lv);
+		static int calculate_undead_embrace_attack(int skill_lv);
+		static void add_undead_embrace_special_effects(struct block_list *target);
 };
