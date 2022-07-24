@@ -10918,7 +10918,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			val2 = (status_get_lv(bl) + status->dex + status->luk); // Aspd increase
 			break;
 		case SC_QUAGMIRE:
-			val2 = (sd?5:10)*val1; // Agi/Dex decrease.
+			val2 = (sd?10:10)*val1; // Agi/Dex decrease.
 			break;
 
 		// gs_something1 [Vicious]

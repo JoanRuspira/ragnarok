@@ -337,9 +337,9 @@ Body:
         Plagiarism: true
         Reproduce: true
     CastCancel: true
-    CastTime: 3000
+    CastTime: 3500
     Cooldown: 5000
-    AfterCastActDelay: 400
+    AfterCastActDelay: 500
     Requires:
       SpCost: 40
   - Id: 12
@@ -408,29 +408,10 @@ Body:
         Reproduce: true
     CastCancel: true
     CastTime: 500
-    AfterCastActDelay:
-      - Level: 1
-        Time: 1200
-      - Level: 2
-        Time: 1000
-      - Level: 3
-        Time: 1400
-      - Level: 4
-        Time: 1200
-      - Level: 5
-        Time: 1600
+    Cooldown: 5000
+    AfterCastActDelay: 1000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 18
-        - Level: 2
-          Amount: 24
-        - Level: 3
-          Amount: 30
-        - Level: 4
-          Amount: 36
-        - Level: 5
-          Amount: 38
+      SpCost: 38
   - Id: 800
     Name: MG_UNDEADEMBRACE
     Description: Undead Embrace
@@ -441,35 +422,16 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Undead
+    CastTime: 3500
+    Cooldown: 5000
+    AfterCastActDelay: 500
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
     CastCancel: true
-    CastTime: 500
-    AfterCastActDelay:
-      - Level: 1
-        Time: 1200
-      - Level: 2
-        Time: 1000
-      - Level: 3
-        Time: 1400
-      - Level: 4
-        Time: 1200
-      - Level: 5
-        Time: 1600
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 18
-        - Level: 2
-          Amount: 24
-        - Level: 3
-          Amount: 30
-        - Level: 4
-          Amount: 36
-        - Level: 5
-          Amount: 38
+      SpCost: 35
   - Id: 801
     Name: TF_DAGGER
     Description: Dagger Mastery
@@ -503,7 +465,8 @@ Body:
         Reproduce: true
     CastCancel: true
     CastTime: 3000
-    AfterCastActDelay: 1000
+    Cooldown: 5000
+    AfterCastActDelay: 500
     Requires:
       SpCost: 30
   - Id: 15
@@ -524,7 +487,8 @@ Body:
         Reproduce: true
     CastCancel: true
     CastTime: 500
-    AfterCastActDelay: 400
+    Cooldown: 10000
+    AfterCastActDelay: 500
     Requires:
       SpCost: 37
       ItemCost:
@@ -533,7 +497,7 @@ Body:
   - Id: 16
     Name: MG_STONECURSE
     Description: Stone Curse
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Magic
     TargetType: Attack
     DamageFlags:
@@ -544,7 +508,8 @@ Body:
     Element: Earth
     CastCancel: true
     CastTime: 500
-    AfterCastActDelay: 400
+    Cooldown: 10000
+    AfterCastActDelay: 500
     Requires:
       SpCost: 37
       ItemCost:
@@ -714,7 +679,8 @@ Body:
         Reproduce: true
     CastCancel: true
     CastTime: 3000
-    AfterCastActDelay: 1000
+    Cooldown: 5000
+    AfterCastActDelay: 500
     Requires:
       SpCost: 30
   - Id: 20
@@ -745,7 +711,8 @@ Body:
         Reproduce: true
     CastCancel: true
     CastTime: 3000
-    AfterCastActDelay: 1000
+    Cooldown: 5000
+    AfterCastActDelay: 500
     Requires:
       SpCost: 30
   - Id: 21
@@ -2955,6 +2922,8 @@ Body:
     HitCount: 1
     Element: Water
     CastCancel: true
+    Cooldown: 2000
+    AfterCastActDelay: 1000
     Requires:
       SpCost: 20
     Unit:
@@ -3210,6 +3179,7 @@ Body:
     Element: Earth
     ActiveInstance: 3
     CastCancel: true
+    Cooldown: 2000
     AfterCastActDelay: 1000
     Duration1:
       - Level: 1
@@ -3234,17 +3204,7 @@ Body:
       - Level: 5
         Time: 25000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 5
-        - Level: 2
-          Amount: 10
-        - Level: 3
-          Amount: 15
-        - Level: 4
-          Amount: 20
-        - Level: 5
-          Amount: 25
+      SpCost: 30
     Unit:
       Id: Quagmire
       Layout: 2
@@ -4791,7 +4751,19 @@ Body:
     HitCount: 1
     CastCancel: true
     CastTime: 5000
-    Duration1: 300000
+    Cooldown: 10000
+    AfterCastActDelay: 500
+    Duration1:
+      - Level: 1
+        Time: 80000
+      - Level: 2
+        Time: 120000
+      - Level: 3
+        Time: 160000
+      - Level: 4
+        Time: 200000
+      - Level: 5
+        Time: 240000
     Requires:
       SpCost: 30
   - Id: 158
@@ -6975,7 +6947,7 @@ Body:
     Hit: Single
     HitCount: 1
     Requires:
-      SpCost: 2
+      SpCost: 0
   - Id: 276
     Name: SA_MAGICROD
     Description: Magic Rod
@@ -8607,29 +8579,11 @@ Body:
         Count: 5
     Element: Dark
     CastCancel: true
-    AfterCastActDelay:
-      - Level: 1
-        Time: 1200
-      - Level: 2
-        Time: 1000
-      - Level: 3
-        Time: 1400
-      - Level: 4
-        Time: 1200
-      - Level: 5
-        Time: 1600
+    CastTime: 500
+    Cooldown: 5000
+    AfterCastActDelay: 1000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 18
-        - Level: 2
-          Amount: 24
-        - Level: 3
-          Amount: 30
-        - Level: 4
-          Amount: 36
-        - Level: 5
-          Amount: 38
+      SpCost: 38
   - Id: 341
     Name: NPC_DARKTHUNDER
     Description: Darkness Jupitel
@@ -18837,8 +18791,6 @@ Body:
     Requires:
       SpCost: 300
       ItemCost:
-        - Item: Ansila
-          Amount: 1
         - Item: Holy_Water
           Amount: 1
     Unit:
@@ -19533,9 +19485,6 @@ Body:
         Time: 28000
     Requires:
       SpCost: 35
-      ItemCost:
-        - Item: Special_Alloy_Trap
-          Amount: 1
     Unit:
       Id: Electricshocker
       Range: 1
@@ -19570,9 +19519,6 @@ Body:
     Duration1: 15000
     Requires:
       SpCost: 20
-      ItemCost:
-        - Item: Special_Alloy_Trap
-          Amount: 1
     Unit:
       Id: Clusterbomb
       Range: 1
@@ -19783,11 +19729,6 @@ Body:
     Duration1: 15000
     Requires:
       SpCost: 10
-      ItemCost:
-        - Item: Special_Alloy_Trap
-          Amount: 1
-        - Item: Scarlet_Pts
-          Amount: 1
     Unit:
       Id: Magentatrap
       Range: 1
@@ -19820,11 +19761,6 @@ Body:
     Duration1: 15000
     Requires:
       SpCost: 10
-      ItemCost:
-        - Item: Special_Alloy_Trap
-          Amount: 1
-        - Item: Indigo_Pts
-          Amount: 1
     Unit:
       Id: Cobalttrap
       Range: 1
@@ -19857,11 +19793,6 @@ Body:
     Duration1: 15000
     Requires:
       SpCost: 10
-      ItemCost:
-        - Item: Special_Alloy_Trap
-          Amount: 1
-        - Item: Lime_Green_Pts
-          Amount: 1
     Unit:
       Id: Maizetrap
       Range: 1
@@ -19894,11 +19825,6 @@ Body:
     Duration1: 15000
     Requires:
       SpCost: 10
-      ItemCost:
-        - Item: Special_Alloy_Trap
-          Amount: 1
-        - Item: Yellow_Wish_Pts
-          Amount: 1
     Unit:
       Id: Verduretrap
       Range: 1
@@ -19935,9 +19861,6 @@ Body:
     Duration2: 15000
     Requires:
       SpCost: 10
-      ItemCost:
-        - Item: Special_Alloy_Trap
-          Amount: 1
     Unit:
       Id: Firingtrap
       Range: 1
@@ -19973,9 +19896,6 @@ Body:
     Duration2: 20000
     Requires:
       SpCost: 10
-      ItemCost:
-        - Item: Special_Alloy_Trap
-          Amount: 1
     Unit:
       Id: Iceboundtrap
       Range: 1
@@ -20073,9 +19993,6 @@ Body:
         - Level: 3
           Amount: 6
       State: Mado
-      ItemCost:
-        - Item: Vulcan_Bullet
-          Amount: 1
   - Id: 2259
     Name: NC_FLAMELAUNCHER
     Description: Flame Launcher
@@ -20114,9 +20031,6 @@ Body:
     Requires:
       SpCost: 20
       State: Mado
-      ItemCost:
-        - Item: Magic_Gear_Fuel
-          Amount: 1
   - Id: 2260
     Name: NC_COLDSLOWER
     Description: Cold Slower
@@ -20158,11 +20072,6 @@ Body:
     Requires:
       SpCost: 20
       State: Mado
-      ItemCost:
-        - Item: Magic_Gear_Fuel
-          Amount: 1
-        - Item: Liquid_Condensed_Bullet
-          Amount: 1
   - Id: 2261
     Name: NC_ARMSCANNON
     Description: Arm Cannon
@@ -20229,9 +20138,6 @@ Body:
         Cannonball: true
       AmmoAmount: 1
       State: Mado
-      ItemCost:
-        - Item: Magic_Gear_Fuel
-          Amount: 1
   - Id: 2262
     Name: NC_ACCELERATION
     Description: Acceleration
@@ -20259,9 +20165,6 @@ Body:
         - Level: 3
           Amount: 60
       State: Mado
-      ItemCost:
-        - Item: Magic_Gear_Fuel
-          Amount: 1
   - Id: 2263
     Name: NC_HOVERING
     Description: Hovering
@@ -20277,9 +20180,6 @@ Body:
     Requires:
       SpCost: 25
       State: Mado
-      ItemCost:
-        - Item: Magic_Gear_Fuel
-          Amount: 1
   - Id: 2264
     Name: NC_F_SIDESLIDE
     Description: Front-Side Slide
@@ -20296,9 +20196,6 @@ Body:
     Requires:
       SpCost: 5
       State: Mado
-      ItemCost:
-        - Item: Magic_Gear_Fuel
-          Amount: 1
   - Id: 2265
     Name: NC_B_SIDESLIDE
     Description: Back-Side Slide
@@ -20315,9 +20212,6 @@ Body:
     Requires:
       SpCost: 5
       State: Mado
-      ItemCost:
-        - Item: Magic_Gear_Fuel
-          Amount: 1
   - Id: 2266
     Name: NC_MAINFRAME
     Description: Mainframe Restructure
@@ -20359,9 +20253,6 @@ Body:
     Requires:
       SpCost: 200
       State: Mado
-      ItemCost:
-        - Item: Magic_Gear_Fuel
-          Amount: 3
   - Id: 2268
     Name: NC_SHAPESHIFT
     Description: Shape Shift
@@ -20383,17 +20274,6 @@ Body:
     Requires:
       SpCost: 100
       State: Mado
-      ItemCost:
-        - Item: Scarlet_Pts
-          Amount: 3
-        - Item: Lime_Green_Pts
-          Amount: 3
-        - Item: Yellow_Wish_Pts
-          Amount: 3
-        - Item: Indigo_Pts
-          Amount: 3
-        - Item: Magic_Gear_Fuel
-          Amount: 2
   - Id: 2269
     Name: NC_EMERGENCYCOOL
     Description: Emergency Cool
@@ -20410,9 +20290,6 @@ Body:
     Requires:
       SpCost: 20
       State: Mado
-      ItemCost:
-        - Item: Magic_Gear_Fuel
-          Amount: 1
   - Id: 2270
     Name: NC_INFRAREDSCAN
     Description: Infrared Scan
@@ -20455,9 +20332,6 @@ Body:
     Requires:
       SpCost: 30
       State: Mado
-      ItemCost:
-        - Item: Magic_Gear_Fuel
-          Amount: 1
   - Id: 2272
     Name: NC_MAGNETICFIELD
     Description: Magnetic Field
@@ -20494,9 +20368,6 @@ Body:
         - Level: 3
           Amount: 80
       State: Mado
-      ItemCost:
-        - Item: Magic_Gear_Fuel
-          Amount: 2
   - Id: 2273
     Name: NC_NEUTRALBARRIER
     Description: Neutral Barrier
@@ -20531,9 +20402,6 @@ Body:
         - Level: 3
           Amount: 100
       State: Mado
-      ItemCost:
-        - Item: Magic_Gear_Fuel
-          Amount: 1
     Unit:
       Id: Neutralbarrier
       Layout: 2
@@ -20572,9 +20440,6 @@ Body:
         - Level: 3
           Amount: 120
       State: Mado
-      ItemCost:
-        - Item: Magic_Gear_Fuel
-          Amount: 2
     Unit:
       Id: Stealthfield
       Layout: 2
@@ -20929,9 +20794,6 @@ Body:
     CastTime: 2000
     Requires:
       SpCost: 15
-      ItemCost:
-        - Item: Monkey_Wrench
-          Amount: 1
   - Id: 2284
     Name: SC_FATALMENACE
     Description: Fatal Menace
@@ -24246,9 +24108,6 @@ Body:
       Weapon:
         Musical: true
         Whip: true
-      ItemCost:
-        - Item: Heartbroken_Tears
-          Amount: 1
   - Id: 2422
     Name: WM_LULLABY_DEEPSLEEP
     Description: Deep Sleep Lullaby
@@ -27201,9 +27060,6 @@ Body:
         Shotgun: true
         Grenade: true
       SpiritSphereCost: 1
-      ItemCost:
-        - Item: Special_Alloy_Trap
-          Amount: 1
     Unit:
       Id: B_Trap
       Range:
@@ -27486,8 +27342,6 @@ Body:
         Bullet: true
       AmmoAmount: 1
       SpiritSphereCost: -1
-      Equipment:
-        Silver_Bullet: true
   - Id: 2564
     Name: RL_FALLEN_ANGEL
     Description: Fallen Angel
@@ -28086,9 +27940,6 @@ Body:
           Amount: 8
         - Level: 5
           Amount: 9
-      ItemCost:
-        - Item: Explosive_Kunai
-          Amount: 1
     Unit:
       Id: Dummyskill
       Range: 1
@@ -29287,9 +29138,6 @@ Body:
       Weapon:
         Musical: true
         Whip: true
-      ItemCost:
-        - Item: Heartbroken_Tears
-          Amount: 1
   - Id: 5008
     Name: SO_ELEMENTAL_SHIELD
     Description: Elemental Shield
@@ -29391,9 +29239,6 @@ Body:
           Amount: 18
         - Level: 5
           Amount: 14
-      ItemCost:
-        - Item: Special_Alloy_Trap
-          Amount: 1
     Unit:
       Id: Anklesnare
       Range: 1
