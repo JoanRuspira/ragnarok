@@ -58,4 +58,5 @@ void MageSkillAtkRatioCalculator::add_undead_embrace_special_effects(struct bloc
 {
 	clif_specialeffect(target, EF_DEVIL, AREA);
 	clif_specialeffect(target, EF_BLACKDEVIL, AREA);
+	clif_specialeffect(target, EF_KO_ZENKAI_WIND, AREA);
 }
