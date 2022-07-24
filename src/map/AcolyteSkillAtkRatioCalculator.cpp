@@ -15,6 +15,7 @@ int AcolyteSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 			return calculate_sacred_wave_atk_ratio(skill_lv);
 			break;
 		case AL_HOLYLIGHT:
+			add_holy_light_special_effects(target);
 			return calculate_holy_light_atk_ratio(skill_lv);
 			break;
 		default:
@@ -27,6 +28,13 @@ void AcolyteSkillAtkRatioCalculator::add_sacred_wave_special_effects(struct bloc
 {
     clif_specialeffect(target, EF_MOCHI, AREA);
 	clif_specialeffect(target, EF_RK_LUXANIMA, AREA);
+	clif_specialeffect(target, EF_KO_ZENKAI_WATER, AREA);
+}
+
+void AcolyteSkillAtkRatioCalculator::add_holy_light_special_effects(struct block_list *target)
+{
+    clif_specialeffect(target, EF_MOCHI, AREA);
+	clif_specialeffect(target, EF_KO_ZENKAI_LAND, AREA);
 }
 
 
