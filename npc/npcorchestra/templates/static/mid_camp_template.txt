@@ -405,3 +405,18 @@ mid_campin,213,124,0	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
 	end;
 }
 
+
+dic_fild01,30,86,7	script	Arunafeltz Adventurer#hlcmp:npcid	698,{
+	npctalk "npcdialog";
+	end;
+}
+
+dic_fild01,36,84,2	script	Arunafeltz Adventurer#hlcmp:npcid	690,{
+	npctalk "npcdialog";
+	end;
+}
+
+dic_fild01,40,79,6	script	Arunafeltz Adventurer#hlcmp:npcid	628,{
+	npctalk "npcdialog";
+	end;
+}
