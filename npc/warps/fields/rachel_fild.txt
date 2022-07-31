@@ -37,9 +37,9 @@ ra_fild07,168,353,0	warp	ra026	1,1,ra_fild02,171,45
 ra_fild02,168,36,0	warp	ra027	1,1,ra_fild07,168,349
 ra_fild02,373,275,0	warp	ra028	1,1,ra_fild03,28,294
 ra_fild03,23,294,0	warp	ra029	1,1,ra_fild02,367,270
-ra_fild01,66,250,0	warp	ra030	1,1,mid_camp,318,142
+man_fild01,31,252,0	warp	ra030	1,1,mid_camp,318,142
 mid_camp,9,215,0	warp	ra031	1,1,niflheim,352,229
 mid_camp,12,142,0	warp	ra032	1,1,niflheim,331,182
-mid_camp,318,138,0	warp	ra033	1,1,ra_fild01,66,245
+mid_camp,318,138,0	warp	ra033	1,1,man_fild01,36,252
 niflheim,335,179,0	warp	ra034	1,1,mid_camp,16,142
 niflheim,356,229,0	warp	ra035	1,1,mid_camp,13,215

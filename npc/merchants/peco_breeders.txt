@@ -1,0 +1,53 @@
+
+
+-	script	Peco Breeder#pecobreeder::pecobreeder	-1,{
+	if( countitem(12622 ) > 0 ) {
+		mes "[Peco Breeder]";
+		mes "Oh hello!.";
+		mes "Looks like you own a Peco alreay. You two seem happy with each other. I'm happy to see that.";
+		close;
+	}
+
+	mes "[Peco Breeder]";
+	mes "Hello!";
+	mes "I breed and sell Pecos for a living. They make good mounts so they can carry you around pretty far. They are also easy to maintain too!";
+	next;
+
+	if ((MaxWeight-Weight) < 200 || checkweight(1201,1) == 0) {
+		mes "[Peco Breeder]";
+		mes "Wait a moment!";
+		mes "Currently you're carrying too many items with you.";
+		next;
+		mes "[Peco Breeder]";
+		mes "Please come back later after you put some items into kafra storage.";
+		close;
+	}
+
+	mes "[Peco Breeder]";
+	mes "Do you want to buy one from me? I sell them for 750000 Zeny.";
+	next;
+	switch(select("Yes:No")) {
+		case 1:
+			if (Zeny < 750000) {
+				mes "[Peco Breeder]";
+				mes "Well.. Looks like you can't afford it.";
+				close;
+			}
+			mes "[Peco Breeder]";
+			mes "Here you go! Treat it well.";
+			set Zeny, Zeny-750000;
+			getitem 12622,1;
+			close;
+	
+		case 2:
+			mes "[Peco Breeder]";
+			mes "Oh... Let me know if you change your mind.";
+			close;
+	}
+	
+	
+}
+
+hugel,60,70,7	duplicate(pecobreeder)	Peco Breeder#pecobreeder	807
+payon,248,292,3	duplicate(pecobreeder)	Peco Breeder#pecobreeder2	807
+mid_camp,147,302,4	duplicate(pecobreeder)	Peco Breeder#pecobreeder3	807

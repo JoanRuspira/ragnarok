@@ -227,7 +227,6 @@ function	script	F_KafTele	{
 	else if (@wrpD$[.@j] == "Hugel") warp "hugel", 98, 127;
 	else if (@wrpD$[.@j] == "Veins") warp "veins", 205, 118;
 	else if (@wrpD$[.@j] == "Tidal Island") warp "nameless_n", 222, 182;
-	else if (@wrpD$[.@j] == "Hel's Camp") warp "mid_camp", 143, 277;
 	else if (@wrpD$[.@j] == "Nifflheim") warp "niflheim", 186, 187;
 	else if (@wrpD$[.@j] == "Dicastes") warp "dicastes01", 199, 224;
 	else if (@wrpD$[.@j] == "Lighthalzen") warp "lighthalzen", 162, 95;
@@ -528,7 +527,7 @@ function	script	F_KafSet	{
 
 	.@map$ = strnpcinfo(4);
 	if (.@map$ == "prontera") {
-		setarray @wrpD$[0], "Izlude", "Geffen", "Payon", "Morocc";
+		setarray @wrpD$[0], "Izlude", "Geffen", "Payon", "Morroc";
 		setarray @wrpP[0], 600, 1200, 1200, 1200;
 		setarray @viewpX[0], 151, 29, 282, 152;
 		setarray @viewpY[0], 29, 207, 200, 326;
@@ -549,26 +548,24 @@ function	script	F_KafSet	{
 	} else if (.@map$ == "nameless_n") {
 		setarray @wrpP[0], 2000;
 		setarray @wrpD$[0], "Veins";
-	} else if (.@map$ == "mid_camp") {
-		setarray @wrpP[0], 1000, 1200;
-		setarray @wrpD$[0], "Nifflheim", "Rachel";
 	} else if (.@map$ == "niflheim") {
-		setarray @wrpP[0], 1000, 1500;
-		setarray @wrpD$[0], "Hel's Camp", "Rachel";
+		setarray @wrpP[0], 2000, 2500;
+		setarray @wrpD$[0], "Dicastes", "Rachel";
 	} else if (.@map$ == "lighthalzen") {
 		setarray @wrpP[0], 1200, 1500;
 		setarray @wrpD$[0], "Rachel", "Dicastes";
 	} else if (.@map$ == "dicastes01") {
+		setarray @wrpP[0], 2000;
 		setarray @wrpP[0], 1500;
-		setarray @wrpD$[0], "Lighthalzen";
+		setarray @wrpD$[0], "Lighthalzen", "Nifflheim";
 	} else if (.@map$ == "rachel") {
-		setarray @wrpP[0], 1250,1250,1500,1250;
-		setarray @wrpD$[0], "Lighthalzen", "Hel Camp", "Nifflheim", "Veins";
+		setarray @wrpP[0], 1250,2000,1250;
+		setarray @wrpD$[0], "Lighthalzen", "Nifflheim", "Veins";
 	} else if (.@map$ == "comodo" ) {
-		setarray @wrpD$[0], "Morocc", "Pharos Islet", "Umbala";
+		setarray @wrpD$[0], "Morroc", "Pharos Islet", "Umbala";
 		setarray @wrpP[0], 1800, 1200, 1800;
 	} else if (.@map$ == "cmd_fild07") {
-		setarray @wrpD$[0], "Comodo", "Morocc";
+		setarray @wrpD$[0], "Comodo", "Morroc";
 		setarray @wrpP[0], 1200, 1200;
 	} else if (.@map$ == "geffen") {
 		setarray @wrpD$[0], "Prontera";
@@ -598,7 +595,7 @@ function	script	F_KafSet	{
 		setarray @viewpX[0], 328, 278, 153, 0;
 		setarray @viewpY[0], 108, 221, 187, 0;
 	} else if (.@map$ == "job3_rune01") {
-		setarray @wrpD$[0], "Izlude", "Geffen", "Payon", "Morocc", "Alberta";
+		setarray @wrpD$[0], "Izlude", "Geffen", "Payon", "Morroc", "Alberta";
 		setarray @wrpP[0], 600, 1200, 1200, 1200, 1800;
 	}
 

@@ -963,8 +963,14 @@ ra_fild04,267,62,2	script	Board#sgn::158	835,{
 	close;
 }
 
-ra_fild01,63,244,4	script	Board#sgn::159	858,{
-	mes "Mountain path to Hel's Pass ahead.";
+man_fild01,42,257,5	script	Board#sgn::159	858,{
+	mes "Path to Hel's Pass ahead.";
+	close;
+}
+
+man_fild01,363,243,4	script	Board#sgn::159a	835,{
+	mes "East to Dicastes.";
+	mes "West to Hel's Pass.";
 	close;
 }
 
@@ -972,10 +978,6 @@ ra_fild01,237,328,4	script	Board#sgn::160	858,{
 	mes "Ice Cave entrance.";
 	close;
 }
-
-
-
-
 
 
 lhz_fild01,360,227,4	script	Bulletin Board#sgn::161	837,{
@@ -1303,7 +1305,7 @@ yuno_fild05,53,343,1	script	Bulletin Board#sgn::218	837,{
 }
 
 mid_camp,321,140,1	script	Board#sgn::219	858,{
-	mes "Mountain path Audumura Grasslands ahead.";
+	mes "Path to Kamidal Mountains ahead.";
 	close;
 }
 
