@@ -5,11 +5,11 @@
 //==================================================
 // gef_fild00 - Geffen Field
 //==================================================
-gef_fild00,0,0	monster	Chonchon	1011,160,5000
-gef_fild00,0,0	monster	Poring	1002,34,5000
-gef_fild00,0,0	monster	Fabre	1007,34,5000
+gef_fild00,0,0	monster	Chonchon	1011,85,5000
+gef_fild00,0,0	monster	Poring	1002,50,5000
+gef_fild00,0,0	monster	Fabre	1007,50,5000
 gef_fild00,0,0	monster	Little Poring	2398,33,50000
-gef_fild00,0,0	monster	Lunatic	1063,25,5000
+gef_fild00,0,0	monster	Lunatic	1063,50,5000
 gef_fild00,95,128	monster	Blue Plant	1079,1,900000,450000
 gef_fild00,124,321	monster	Blue Plant	1079,1,900000,450000
 gef_fild00,54,212,5,5	monster	Green Plant	1080,3,360000,180000
@@ -25,9 +25,9 @@ gef_fild00,0,0	monster	Shining Plant	1083,10,5000
 ////==================================================
 //// gef_fild01 - Geffen Field
 ////==================================================
-gef_fild01,0,0	monster	Roda Frog	1012,35,5000
-gef_fild01,0,0	monster	Ambernite	1094,35,5000
-gef_fild01,0,0	monster	Chonchon	1011,35,5000
+gef_fild01,0,0	monster	Roda Frog	1012,40,5000
+gef_fild01,0,0	monster	Ambernite	1094,40,5000
+gef_fild01,0,0	monster	Chonchon	1011,40,5000
 gef_fild01,0,0	monster	Red Mushroom	1085,15,5000
 gef_fild01,0,0	monster	Black Mushroom	1084,15,5000
 gef_fild01,0,0	monster	Green Plant	1080,5,5000
@@ -82,10 +82,10 @@ gef_fild01,0,0	monster	Shining Plant	1083,2,5000
 ////==================================================
 //// gef_fild04 - Geffen Field
 ////==================================================
-gef_fild04,0,0	monster	Poring	1002,40,5000
+gef_fild04,0,0	monster	Poring	1002,50,5000
 gef_fild04,0,0	monster	Little Poring	2398,33,50000
-gef_fild04,0,0	monster	Mandragora	1020,125,5000
-gef_fild04,0,0	monster	Lunatic	1063,25,5000
+gef_fild04,0,0	monster	Mandragora	1020,90,5000
+gef_fild04,0,0	monster	Lunatic	1063,50,5000
 gef_fild04,0,0	monster	Fabre	1007,25,5000
 gef_fild04,0,0	monster	Chonchon	1011,25,5000
 gef_fild04,0,0	monster	Red Mushroom	1085,30,5000
@@ -131,10 +131,10 @@ gef_fild04,0,0	monster	Shining Plant	1083,10,5000
 ////==================================================
 //// gef_fild07 - Geffen Field
 ////==================================================
-gef_fild07,0,0	monster	Pupa	1008,134,5000
-gef_fild07,0,0	monster	Poring	1002,20,5000
-gef_fild07,0,0	monster	Fabre	1007,20,5000
-gef_fild07,0,0	monster	Chonchon	1011,20,5000
+gef_fild07,0,0	monster	Pupa	1008,90,5000
+gef_fild07,0,0	monster	Poring	1002,60,5000
+gef_fild07,0,0	monster	Fabre	1007,60,5000
+gef_fild07,0,0	monster	Chonchon	1011,50,5000
 gef_fild07,0,0	monster	Little Poring	2398,33,50000
 gef_fild07,0,0	monster	Red Mushroom	1085,30,5000
 gef_fild07,0,0	monster	Black Mushroom	1084,20,5000

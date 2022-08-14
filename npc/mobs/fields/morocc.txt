@@ -2,20 +2,6 @@
 //= Morocc Fields Monster Spawn Script
 //============================================================
 
-//==================================================
-// moc_ruins - Pyramids
-//==================================================
-//moc_ruins,0,0	monster	Green Plant	1080,20,5000
-//moc_ruins,0,0	monster	Red Mushroom	1085,20,5000
-//moc_ruins,0,0	monster	Red Mushroom	1084,20,5000
-//moc_ruins,0,0	monster	Green Plant	1080,20,5000
-//moc_ruins,0,0	monster	Yellow Plant	1081,20,5000
-//moc_ruins,0,0	monster	Red Plant	1078,20,5000
-//moc_ruins,0,0	monster	Blue Plant	1079,10,5000
-//moc_ruins,0,0	monster	White Plant	1082,10,5000
-//moc_ruins,0,0	monster	Shining Plant	1083,5,5000
-//
-//
 ////==================================================
 //// moc_fild01 - Sograt Desert 
 ////==================================================
@@ -71,19 +57,19 @@
 //// moc_fild06 - Disabled on Episode 12.1
 ////==================================================
 moc_fild06,0,0	monster	Chonchon	1011,40,5000
-moc_fild06,0,0	monster	Baby Desert Wolf	1107,60,5000
+moc_fild06,0,0	monster	Baby Desert Wolf	1107,70,5000
 moc_fild06,0,0	monster	Condor	1009,40,5000
-moc_fild06,0,0	monster	Scorpion	1001,60,5000
+moc_fild06,0,0	monster	Scorpion	1001,80,5000
 moc_fild06,0,0	monster	Yellow Plant	1081,60,5000
 moc_fild06,0,0	monster	White Plant	1082,60,5000
 ////==================================================
 //// moc_fild07 - Sograt Desert 
 ////==================================================
-moc_fild07,0,0	monster	Drops	1113,100,5000
-moc_fild07,0,0	monster	Chonchon	1011,100,5000
+moc_fild07,0,0	monster	Drops	1113,75,5000
+moc_fild07,0,0	monster	Chonchon	1011,75,5000
 moc_fild07,0,0	monster	Picky	1050,50,5000
 moc_fild07,0,0	monster	Peco Peco Egg	1047,30,5000
-moc_fild07,0,0	monster	Picky	1049,15,5000
+moc_fild07,0,0	monster	Picky	1049,25,5000
 moc_fild07,162,333,12,12	monster	Yellow Plant	1081,5,360000,180000
 moc_fild07,0,0	monster	Yellow Plant	1081,60,5000
 moc_fild07,0,0	monster	White Plant	1082,60,5000
@@ -98,7 +84,7 @@ moc_fild07,0,0	monster	White Plant	1082,60,5000
 ////==================================================
 //// moc_fild10  - Disabled on Episode 12.1
 ////==================================================
-moc_fild10,0,0	monster	Drops	1113,214,5000
+moc_fild10,0,0	monster	Drops	1113,140,5000
 moc_fild10,0,0	monster	Chonchon	1011,46,5000
 moc_fild10,0,0	monster	Picky	1050,23,5000
 moc_fild10,0,0	monster	Peco Peco Egg	1047,15,5000
@@ -108,9 +94,9 @@ moc_fild10,0,0	monster	White Plant	1082,50,5000
 ////==================================================
 //// moc_fild11 - Sograt Desert
 ////==================================================
-moc_fild11,0,0	monster	Chonchon	1011,40,5000
+moc_fild11,0,0	monster	Chonchon	1011,50,5000
 moc_fild11,0,0	monster	Baby Desert Wolf	1107,60,5000
-moc_fild11,0,0	monster	Drops	1113,40,5000
+moc_fild11,0,0	monster	Drops	1113,50,5000
 moc_fild11,0,0	monster	Scorpion	1001,60,5000
 moc_fild11,0,0	monster	Yellow Plant	1081,60,5000
 moc_fild11,0,0	monster	White Plant	1082,60,5000

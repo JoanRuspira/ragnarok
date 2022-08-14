@@ -116,6 +116,30 @@ ins_density = [20, #alberta_in
 14, #prt_church
 ]
 
+all_fields = ["prt_fild01", "prt_fild05", "prt_fild06","prt_fild08", "gef_fild00", "gef_fild07", "pay_fild07",
+"pay_fild08","pay_fild03", "moc_fild07", "moc_fild10", "moc_fild12"
+]
+# fields_density = [20, #prt_fild01
+# 20, #prt_fild05
+# 20, #prt_fild06
+# 20, #prt_fild08
+# ]
+
+fields_adventurer_types = [
+  "Novices",#prt_fild01
+  "Novices",#prt_fild05
+  "Novices",#prt_fild06
+  "Novices",#prt_fild08
+  "Novices",#gef_fild00
+  "Novices",#gef_fild07
+  "Novices",#pay_fild03
+  "Novices",#pay_fild07
+  "Novices",#pay_fild08
+  "Novices",#moc_fild07
+  "Novices",#moc_fild10
+  "Novices",#moc_fild12
+]
+
 top_headgears = ["Alice_Doll","Anubis_Helm","Apple_Of_Archer","Prontera_Army_Cap","Ayothaya_Hat","Banana_Hat","Bandana","Magestic_Goat",
 "Beret","Biretta","Bone_Head","Bone_Helm","Bongun_Hat","Boy's_Cap","Fedora","Cap","Circlet","Classic_Hat","Corsair","Cowboy_Hat","Crown","Headgear_Of_Queen",
 "C_Desert_Prince","Dragon_Skull","Egg_Shell","Feather_Beret","Feather_Bonnet","Fricca_Circlet","Galapago_Cap","Gemmed_Sallet",
@@ -132,3 +156,8 @@ mid_headgears = ["Ear_Of_Angel's_Wing","Dark_Blindfold","Blinker","Elven_Ears","
 low_headgears = ["Angry_Mouth","Assassin_Mask","Antique_Pipe","Choco_Donut_In_Mouth","Cigar","Pierrot_Nose","Well_Baked_Toast",
 "Donut_In_Mouth","Gang_Scarf","Fish_In_Mouth","Smoking_Pipe","Pirate_Dagger","Rainbow_Scarf","Centimental_Flower","Centimental_Leaf",
 "Romantic_White_Flower","Well_Baked_Toast","Pencil_In_Mouth"]
+
+jobs_riding = ["JOB_SWORDMAN", "JOB_MAGE", "JOB_ARCHER", "JOB_ACOLYTE", "JOB_MERCHANT", "JOB_THIEF",
+"JOB_KNIGHT", "JOB_CRUSADER", "JOB_LORD_KNIGHT", "JOB_PALAIN"]
+
+jobs_falcon = ["JOB_HUNTER", "JOB_SNIPER"]

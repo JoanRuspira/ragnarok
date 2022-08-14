@@ -14,9 +14,9 @@
 ////==================================================
 //// prt_fild01 - Prontera Field
 ////==================================================
-prt_fild01,0,0	monster	Lunatic	1063,196,5000
-prt_fild01,0,0	monster	Poring	1002,42,5000
-prt_fild01,0,0	monster	Fabre	1007,42,5000
+prt_fild01,0,0	monster	Lunatic	1063,90,5000
+prt_fild01,0,0	monster	Poring	1002,70,5000
+prt_fild01,0,0	monster	Fabre	1007,65,5000
 prt_fild01,0,0	monster	Hornet	1004,50,5000
 prt_fild01,0,0	monster	Little Poring	2398,33,50000
 prt_fild01,199,266,3,3	monster	Green Plant	1080,3,360000,180000
@@ -81,9 +81,9 @@ prt_fild05,0,0	monster	Shining Plant	1083,5,5000
 ////==================================================
 //// prt_fild05 - Prontera Field
 ////==================================================
-prt_fild05,0,0	monster	Hornet	1004,199,5000
-prt_fild05,0,0	monster	Thief Bug	1051,42,5000
-prt_fild05,0,0	monster	Poring	1002,110,5000
+prt_fild05,0,0	monster	Hornet	1004,120,5000
+prt_fild05,0,0	monster	Thief Bug	1051,50,5000
+prt_fild05,0,0	monster	Poring	1002,85,5000
 prt_fild05,0,0	monster	Little Poring	2398,33,50000
 prt_fild05,0,0	monster	Red Mushroom	1085,30,5000
 prt_fild05,0,0	monster	Black Mushroom	1084,20,5000
@@ -96,9 +96,9 @@ prt_fild05,0,0	monster	Shining Plant	1083,10,5000
 ////==================================================
 //// prt_fild06 - Prontera Field
 ////==================================================
-prt_fild06,0,0	monster	Fabre	1007,149,5000
-prt_fild06,0,0	monster	Poring	1002,32,5000
-prt_fild06,0,0	monster	Lunatic	1063,32,5000
+prt_fild06,0,0	monster	Fabre	1007,100,5000
+prt_fild06,0,0	monster	Poring	1002,70,5000
+prt_fild06,0,0	monster	Lunatic	1063,70,5000
 prt_fild06,0,0	monster	Pupa	1008,40,5000
 prt_fild06,0,0	monster	Little Poring	2398,33,50000
 prt_fild06,222,30,40,10	monster	Green Plant	1080,15,900000,450000
@@ -114,10 +114,10 @@ prt_fild06,0,0	monster	Shining Plant	1083,10,5000
 ////==================================================
 //// prt_fild07 - Prontera Field
 ////==================================================
-prt_fild07,0,0	monster	Rocker	1052,120,5000
-prt_fild07,0,0	monster	Savage Babe	1167,100,5000
-prt_fild07,0,0	monster	Lunatic	1063,52,5000
-prt_fild07,0,0	monster	Fabre	1007,129,5000
+prt_fild07,0,0	monster	Rocker	1052,90,5000
+prt_fild07,0,0	monster	Savage Babe	1167,90,5000
+prt_fild07,0,0	monster	Lunatic	1063,70,5000
+prt_fild07,0,0	monster	Fabre	1007,80,5000
 //prt_fild07,0,0	monster	Vocal	1088,1,1800000,1200000
 prt_fild07,225,110,5,5	monster	Red Mushroom	1085,3,360000,180000
 prt_fild07,0,0	monster	Red Mushroom	1085,30,5000
@@ -132,9 +132,9 @@ prt_fild07,0,0	monster	Shining Plant	1083,10,5000
 //==================================================
 // prt_fild08 - Prontera Field
 //==================================================
-prt_fild08,0,0	monster	Poring	1002,110,5000
-prt_fild08,0,0	monster	Lunatic	1063,110,5000
-prt_fild08,0,0	monster	Fabre	1007,88,5000
+prt_fild08,0,0	monster	Poring	1002,85,5000
+prt_fild08,0,0	monster	Lunatic	1063,85,5000
+prt_fild08,0,0	monster	Fabre	1007,85,5000
 prt_fild08,0,0	monster	Little Poring	2398,33,50000
 prt_fild08,0,0	monster	Pupa	1008,66,5000
 prt_fild08,0,0	monster	Green Plant	1080,20,5000

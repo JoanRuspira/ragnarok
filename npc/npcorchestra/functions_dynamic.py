@@ -7,12 +7,21 @@ from lists import *
 iterations = 4
 initial_mob_id = 20021
 
+adventurers_novice = []
+adventurers_swordsman = []
+adventurers_mage = []
+adventurers_archer = []
+adventurers_acolyte = []
+adventurers_merchant = []
+adventurers_thief = []
+
 # 1000-3999 or 20020-31999
 
 def buildDynamic():
     buildMobsfile()
     buildMobsAvailfile()
     buildMobsCities()
+    buildMobsFields()
 
 def buildMobsfile():  
     mobs = buildMobs()
@@ -32,6 +41,7 @@ def buildMobs():
     mob_id = initial_mob_id
     for mob_name in mob_names:
         mob = buildMob(mob_id, mob_name, "01")
+        populate_job_lists(mob_id, mob_name)
         mob_id += 1
         mobs.append(mob)
     
@@ -70,10 +80,25 @@ def buildMob(mob_id, mob_name, ai):
     mob += "    AttackMotion: 900\n"        
     mob += "    DamageMotion: 240\n"        
     
-
     DamageMotion: 240
+
     return mob
 
+def populate_job_lists(mob_id, mob_name):
+    if mob_name == "JOB_NOVICE":
+        adventurers_novice.append(str(mob_id))
+    if mob_name == "JOB_SWORDMAN":
+        adventurers_swordsman.append(str(mob_id))
+    if mob_name == "JOB_MAGE":
+        adventurers_mage.append(str(mob_id))
+    if mob_name == "JOB_ARCHER":
+        adventurers_archer.append(str(mob_id))
+    if mob_name == "JOB_ACOLYTE":
+        adventurers_acolyte.append(str(mob_id))
+    if mob_name == "JOB_MERCHANT":
+        adventurers_merchant.append(str(mob_id))
+    if mob_name == "JOB_THIEF":
+        adventurers_thief.append(str(mob_id))
 
 def buildMobsCities():
     end_mob_id = calculateEndMobId()
@@ -81,10 +106,19 @@ def buildMobsCities():
     map_densities = cities_density + ins_density
     for city in all_cities + all_ins:
         map_density = map_densities[city_id]
-        buildMobsMap(city,map_density,end_mob_id)
+        buildMobsMapCity(city,map_density,end_mob_id)
         city_id += 1
 
-def buildMobsMap(city, map_density, end_mob_id):   
+def buildMobsFields():
+    field_id = 0
+    # map_densities = fields_density
+    for field in all_fields:
+        # map_density = map_densities[field_id]
+        # buildMobsMapField(field,map_density)
+        buildMobsMapField(field, field_id)
+        field_id += 1
+
+def buildMobsMapCity(city, map_density, end_mob_id):   
     fout = open("./generated/dynamic/" + city + "_npcorchestra.txt", "wt")
     city_mobs = []
     for _ in range(map_density):
@@ -95,6 +129,25 @@ def buildMobsMap(city, map_density, end_mob_id):
         fout.write(mob_line)
     fout.close()
 
+
+def buildMobsMapField(field, field_id):   
+    fout = open("./generated/dynamic/" + field + "_npcorchestra.txt", "wt")
+    field_mobs = []
+    # for _ in range(map_density):
+    for _ in range(20):
+        # for adventurer_type in fields_adventurer_types[field_id]:
+        adventurer_type = fields_adventurer_types[field_id]
+        if adventurer_type == "Novices":
+            field_mobs.append(random.choice(adventurers_novice))
+        if adventurer_type == "First jobs":
+            field_mobs.append(random.choice(adventurers_swordsman + 
+                adventurers_mage + adventurers_archer + adventurers_acolyte + 
+                adventurers_merchant + adventurers_thief))
+    
+    for field_mob_id in field_mobs:
+        mob_line = field + ",0,0	monster	 Adventurer	" + str(field_mob_id) + ",1,5000\n"
+        fout.write(mob_line)
+    fout.close()
 
 
 def buildMobsAvailfile():
@@ -153,7 +206,7 @@ def build_headgear_section(mob_avail):
     return mob_avail
 
 def build_special_options_section(mob_avail, mob_name):
-    jobs_falcon = ["JOB_HUNTER", "JOB_SNIPER"]
+    
     if mob_name in jobs_falcon:
         mob_avail += "    Options:\n"
         mob_avail += "      Falcon: true\n"
@@ -163,7 +216,6 @@ def build_special_options_section(mob_avail, mob_name):
     #     mob_avail += "    Options:\n"
     #     mob_avail += "      Cart2: true\n"
 
-    jobs_riding = ["JOB_KNIGHT", "JOB_CRUSADER", "JOB_LORD_KNIGHT", "JOB_PALAIN"]
     mob_riding = random.randint(1, 2)
     if mob_name in jobs_riding:
         if(mob_riding == 1):
