@@ -3,6 +3,8 @@ import uuid
 import os
 import re
 from lists import *
+from cities import all_cities
+from fields import all_fields
 
 iterations = 4
 initial_mob_id = 20021
@@ -102,25 +104,21 @@ def populate_job_lists(mob_id, mob_name):
 
 def buildMobsCities():
     end_mob_id = calculateEndMobId()
-    city_id = 0
-    map_densities = cities_density + ins_density
-    for city in all_cities + all_ins:
-        map_density = map_densities[city_id]
-        buildMobsMapCity(city,map_density,end_mob_id)
-        city_id += 1
+    for city in all_cities: #+ all ins
+        buildMobsMapCity(city, end_mob_id)
 
 def buildMobsFields():
     for field in all_fields:
         buildMobsMapField(field)
 
-def buildMobsMapCity(city, map_density, end_mob_id):   
-    fout = open("./generated/dynamic/" + city + "_npcorchestra.txt", "wt")
+def buildMobsMapCity(city, end_mob_id):   
+    fout = open("./generated/dynamic/" + city.get("Name") + "_npcorchestra.txt", "wt")
     city_mobs = []
-    for _ in range(map_density):
+    for _ in range(city.get("Density")):
         city_mobs.append(random.randint(initial_mob_id, end_mob_id))
     
     for city_mob_id in city_mobs:
-        mob_line = city + ",0,0	monster	 Adventurer	" + str(city_mob_id) + ",1,5000\n"
+        mob_line = city.get("Name") + ",0,0	monster	 Adventurer	" + str(city_mob_id) + ",1,5000\n"
         fout.write(mob_line)
     fout.close()
 

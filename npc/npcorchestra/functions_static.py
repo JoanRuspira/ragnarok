@@ -3,6 +3,7 @@ import uuid
 import os
 import re
 from lists import * 
+from cities import all_cities
 
 
 def buildStatic(inputParameter):
@@ -16,7 +17,7 @@ def getCommonSprites():
 	return [x for x in allsprites if x not in morroc + geffen + izlude + comodo + hugel]
 
 def getCityNPCS(city):
-    match city:
+    match city.get("Name"):
         case "umbala":
             return generic + umbala
         case "umbala_natives":
@@ -72,8 +73,8 @@ def getCityNPCS(city):
 
 def buildCity(city):
     #randomize sprite ids
-	fin = open("./templates/static/" + city + "_template.txt", "rt")
-	fout = open("./" + city + "_tmp.txt", "wt")
+	fin = open("./templates/static/" + city.get("Name") + "_template.txt", "rt")
+	fout = open("./" + city.get("Name") + "_tmp.txt", "wt")
 
 	citySprites = getCityNPCS(city)
 	for line in fin:
@@ -82,12 +83,12 @@ def buildCity(city):
 	fin.close()
 
     #generate npc ids
-	fin2 = open("./" + city + "_tmp.txt", "rt")
-	fout2 = open("./generated/static/" + city + ".txt", "wt")
+	fin2 = open("./" + city.get("Name") + "_tmp.txt", "rt")
+	fout2 = open("./generated/static/" + city.get("Name") + ".txt", "wt")
 
 	for line in fin2:
 		fout2.write(line.replace('npcid', str(uuid.uuid4())[:8]))
 	fout2.close()
 	fin2.close()
-	os.remove("./" + city + "_tmp.txt")
+	os.remove("./" + city.get("Name") + "_tmp.txt")
 

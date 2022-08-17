@@ -9,7 +9,7 @@ rem Run npc orchestra
 cd npc/npcorchestra
 py npcorchestra.py all
 cd ../..
-
+pause
 set SOURCE_DIR=%~dp0
 cd %SOURCE_DIR%
 
