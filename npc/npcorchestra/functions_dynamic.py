@@ -110,13 +110,8 @@ def buildMobsCities():
         city_id += 1
 
 def buildMobsFields():
-    field_id = 0
-    # map_densities = fields_density
     for field in all_fields:
-        # map_density = map_densities[field_id]
-        # buildMobsMapField(field,map_density)
-        buildMobsMapField(field, field_id)
-        field_id += 1
+        buildMobsMapField(field)
 
 def buildMobsMapCity(city, map_density, end_mob_id):   
     fout = open("./generated/dynamic/" + city + "_npcorchestra.txt", "wt")
@@ -130,22 +125,19 @@ def buildMobsMapCity(city, map_density, end_mob_id):
     fout.close()
 
 
-def buildMobsMapField(field, field_id):   
-    fout = open("./generated/dynamic/" + field + "_npcorchestra.txt", "wt")
+def buildMobsMapField(field):   
+    fout = open("./generated/dynamic/" + field.get("Name") + "_npcorchestra.txt", "wt")
     field_mobs = []
-    # for _ in range(map_density):
-    for _ in range(20):
-        # for adventurer_type in fields_adventurer_types[field_id]:
-        adventurer_type = fields_adventurer_types[field_id]
-        if adventurer_type == "Novices":
+    for _ in range(field.get("Density")):
+        if field.get("Adventurer_Types") == "Novices":
             field_mobs.append(random.choice(adventurers_novice))
-        if adventurer_type == "First jobs":
+        if field.get("Adventurer_Types") == "First Jobs":
             field_mobs.append(random.choice(adventurers_swordsman + 
                 adventurers_mage + adventurers_archer + adventurers_acolyte + 
                 adventurers_merchant + adventurers_thief))
     
     for field_mob_id in field_mobs:
-        mob_line = field + ",0,0	monster	 Adventurer	" + str(field_mob_id) + ",1,5000\n"
+        mob_line = field.get("Name") + ",0,0	monster	 Adventurer	" + str(field_mob_id) + ",1,5000\n"
         fout.write(mob_line)
     fout.close()
 

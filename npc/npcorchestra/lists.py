@@ -116,28 +116,123 @@ ins_density = [20, #alberta_in
 14, #prt_church
 ]
 
-all_fields = ["prt_fild01", "prt_fild05", "prt_fild06","prt_fild08", "gef_fild00", "gef_fild07", "pay_fild07",
-"pay_fild08","pay_fild03", "moc_fild07", "moc_fild10", "moc_fild12"
-]
-# fields_density = [20, #prt_fild01
-# 20, #prt_fild05
-# 20, #prt_fild06
-# 20, #prt_fild08
-# ]
 
-fields_adventurer_types = [
-  "Novices",#prt_fild01
-  "Novices",#prt_fild05
-  "Novices",#prt_fild06
-  "Novices",#prt_fild08
-  "Novices",#gef_fild00
-  "Novices",#gef_fild07
-  "Novices",#pay_fild03
-  "Novices",#pay_fild07
-  "Novices",#pay_fild08
-  "Novices",#moc_fild07
-  "Novices",#moc_fild10
-  "Novices",#moc_fild12
+all_fields = [
+  {
+    "Name": "prt_fild01", 
+    "Adventurer_Types": "Novices",
+    "Density": 20
+  },
+  {
+    "Name": "prt_fild02", 
+    "Adventurer_Types": "First Jobs",
+    "Density": 20
+  },
+  {
+    "Name": "prt_fild04", 
+    "Adventurer_Types": "First Jobs",
+    "Density": 20
+  },
+  {
+    "Name": "prt_fild05", 
+    "Adventurer_Types": "Novices",
+    "Density": 20
+  },
+  {
+    "Name": "prt_fild06", 
+    "Adventurer_Types": "Novices",
+    "Density": 20
+  },
+  {
+    "Name": "prt_fild07", 
+    "Adventurer_Types": "First Jobs",
+    "Density": 20
+  },
+  {
+    "Name": "prt_fild08", 
+    "Adventurer_Types": "Novices",
+    "Density": 20
+  },
+  {
+    "Name": "gef_fild00", 
+    "Adventurer_Types": "Novices",
+    "Density": 20
+  },
+  {
+    "Name": "gef_fild01", 
+    "Adventurer_Types": "First Jobs",
+    "Density": 20
+  },
+  {
+    "Name": "gef_fild04", 
+    "Adventurer_Types": "First Jobs",
+    "Density": 20
+  },
+  {
+    "Name": "gef_fild07", 
+    "Adventurer_Types": "Novices",
+    "Density": 20
+  },
+  {
+    "Name": "gef_fild09", 
+    "Adventurer_Types": "First Jobs",
+    "Density": 20
+  },
+  {
+    "Name": "pay_fild03", 
+    "Adventurer_Types": "Novices",
+    "Density": 20
+  },
+  {
+    "Name": "pay_fild07", 
+    "Adventurer_Types": "Novices",
+    "Density": 20
+  },
+  {
+    "Name": "pay_fild08", 
+    "Adventurer_Types": "Novices",
+    "Density": 20
+  },
+  {
+    "Name": "pay_fild09", 
+    "Adventurer_Types": "First Jobs",
+    "Density": 20
+  },
+  {
+    "Name": "pay_fild10", 
+    "Adventurer_Types": "First Jobs",
+    "Density": 20
+  },
+  {
+    "Name": "moc_fild06", 
+    "Adventurer_Types": "First Jobs",
+    "Density": 20
+  },
+  {
+    "Name": "moc_fild07", 
+    "Adventurer_Types": "Novices",
+    "Density": 20
+  },
+  {
+    "Name": "moc_fild10", 
+    "Adventurer_Types": "Novices",
+    "Density": 20
+  },
+  {
+    "Name": "moc_fild11", 
+    "Adventurer_Types": "First Jobs",
+    "Density": 20
+  },
+  {
+    "Name": "moc_fild12", 
+    "Adventurer_Types": "Novices",
+    "Density": 20
+  },
+  {
+    "Name": "mjolnir_09", 
+    "Adventurer_Types": "First Jobs",
+    "Density": 20
+  },
 ]
 
 top_headgears = ["Alice_Doll","Anubis_Helm","Apple_Of_Archer","Prontera_Army_Cap","Ayothaya_Hat","Banana_Hat","Bandana","Magestic_Goat",
