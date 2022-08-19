@@ -5,6 +5,7 @@ import re
 from lists import *
 from cities import all_cities
 from fields import all_fields
+from interiors import all_interiors
 
 iterations = 4
 initial_mob_id = 20021
@@ -104,7 +105,7 @@ def populate_job_lists(mob_id, mob_name):
 
 def buildMobsCities():
     end_mob_id = calculateEndMobId()
-    for city in all_cities: #+ all ins
+    for city in all_cities + all_interiors: 
         buildMobsMapCity(city, end_mob_id)
 
 def buildMobsFields():

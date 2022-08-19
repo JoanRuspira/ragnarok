@@ -28,57 +28,6 @@ mobs_second_job = ["JOB_KNIGHT","JOB_PRIEST","JOB_WIZARD","JOB_BLACKSMITH","JOB_
 mobs_advanced_job = ["JOB_LORD_KNIGHT","JOB_HIGH_PRIEST","JOB_HIGH_WIZARD","JOB_WHITESMITH","JOB_SNIPER","JOB_ASSASSIN_CROSS","JOB_PALADIN","JOB_CHAMPION","JOB_PROFESSOR","JOB_STALKER","JOB_CREATOR","JOB_CLOWN","JOB_GYPSY"]
 mobs_third_job = ["JOB_RUNE_KNIGHT","JOB_WARLOCK","JOB_RANGER","JOB_ARCH_BISHOP","JOB_MECHANIC","JOB_GUILLOTINE_CROSS","JOB_ROYAL_GUARD","JOB_SORCERER","JOB_MINSTREL","JOB_WANDERER","JOB_SURA","JOB_GENETIC","JOB_SHADOW_CHASER"]
 
-
-
-
-all_ins = ["alberta_in","payon_in01","payon_in02","payon_in03","izlude_in","morocc_in","moc_ruins","izlu2dun","alb2trea","in_rogue", "moc_prydb1",
-"cmd_in01","cmd_in02","um_in","geffen_in","aldeba_in","alde_alche","moc_fild19", "hu_in01","ein_in01","airport", "lhz_in01", "lhz_in02",
-"dic_in01","nif_in","mid_campin","ayo_in01","ayo_in02","ama_in01","lou_in01","lou_in02","ra_in01","yuno_in01","yuno_in02",
-"yuno_in03","yuno_in04","y_airport","lhz_airport","iz_ac01","iz_ac02", "prt_church"]
-ins_density = [20, #alberta_in
-20, #payon_in01
-12, #payon_in02
-15, #payon_in03
-11, #izlude_in
-25, #morroc in
-45, #moc_ruins
-15, #izlu2dun
-10, #alb2trea
-8, #in_rogue
-12, #moc_prydb1 thief guild
-15, #cmd_in01
-25, #cmd_in02
-15, #um_in
-25, #geffen_in
-25, #aldeba_in
-10, #alde_alche
-45, #moc_fild19 sphinx
-15, #hu_in01
-20, #ein_in01
-20, #airport
-20, #lhz_in01 rekenber
-15, #lhz_in02
-20, #dic_in01
-15, #nif_in
-15, #mid_campin
-15, #ayo_in01
-10, #ayo_in02 palace
-10, #ama_in01
-17, #lou_in01
-17, #lou_in02
-30, #ra_in01
-35, #yuno_in01
-20, #yuno_in02
-25, #yuno_in03
-25, #yuno_in04
-20, #y_airport
-20, #lhz_airport
-20, #iz_ac01
-20, #iz_ac02
-14, #prt_church
-]
-
-
 top_headgears = ["Alice_Doll","Anubis_Helm","Apple_Of_Archer","Prontera_Army_Cap","Ayothaya_Hat","Banana_Hat","Bandana","Magestic_Goat",
 "Beret","Biretta","Bone_Head","Bone_Helm","Bongun_Hat","Boy's_Cap","Fedora","Cap","Circlet","Classic_Hat","Corsair","Cowboy_Hat","Crown","Headgear_Of_Queen",
 "C_Desert_Prince","Dragon_Skull","Egg_Shell","Feather_Beret","Feather_Bonnet","Fricca_Circlet","Galapago_Cap","Gemmed_Sallet",
