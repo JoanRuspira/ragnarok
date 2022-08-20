@@ -99,26 +99,23 @@ gef_fild04,0,0	monster	Shining Plant	1083,10,5000
 ////==================================================
 //// gef_fild05 - Geffen Field
 ////==================================================
-//gef_fild05,0,0	monster	Creamy	1018,143,5000
-//gef_fild05,0,0	monster	Stainer	1174,20,5000
-//gef_fild05,0,0	monster	Smokie	1056,20,5000
-//gef_fild05,0,0	monster	Thief Bug Egg	1048,10,5000
-//gef_fild05,0,0	monster	Thief Bug	1051,10,5000
-//gef_fild05,235,322	monster	Red Plant	1078,1,180000,90000
-//gef_fild05,238,326	monster	Red Plant	1078,1,180000,90000
-//gef_fild05,170,337	monster	Red Plant	1078,1,180000,90000
-//gef_fild05,108,317	monster	Red Plant	1078,1,180000,90000
-//gef_fild05,56,285	monster	Red Plant	1078,1,180000,90000
-//gef_fild05,65,256	monster	Red Plant	1078,1,180000,90000
-//gef_fild05,74,228	monster	Red Plant	1078,1,180000,90000
-//gef_fild05,50,189	monster	Red Plant	1078,1,180000,90000
-//gef_fild05,51,166	monster	Red Plant	1078,1,180000,90000
-//gef_fild05,146,161	monster	Red Plant	1078,1,180000,90000
-//gef_fild05,153,180	monster	Red Plant	1078,1,180000,90000
-//gef_fild05,124,207	monster	Red Plant	1078,1,180000,90000
-//gef_fild05,187,249	monster	Red Plant	1078,1,180000,90000
-//gef_fild05,187,265	monster	Red Plant	1078,1,180000,90000
-//gef_fild05,130,293	monster	Red Plant	1078,1,180000,90000
+gef_fild05,0,0	monster	Stainer	1174,85,5000
+gef_fild05,0,0	monster	Creamy	1018,85,5000
+gef_fild05,0,0	monster	Lunatic	1063,85,5000
+gef_fild05,146,161	monster	Red Plant	1078,1,180000,90000
+gef_fild05,153,180	monster	Red Plant	1078,1,180000,90000
+gef_fild05,124,207	monster	Red Plant	1078,1,180000,90000
+gef_fild05,187,249	monster	Red Plant	1078,1,180000,90000
+gef_fild05,187,265	monster	Red Plant	1078,1,180000,90000
+gef_fild05,130,293	monster	Red Plant	1078,1,180000,90000
+gef_fild05,0,0	monster	Red Mushroom	1085,30,5000
+gef_fild05,0,0	monster	Black Mushroom	1084,20,5000
+gef_fild05,0,0	monster	Green Plant	1080,25,5000
+gef_fild05,0,0	monster	Yellow Plant	1081,25,5000
+gef_fild05,0,0	monster	Red Plant	1078,25,5000
+gef_fild05,0,0	monster	Blue Plant	1079,15,5000
+gef_fild05,0,0	monster	White Plant	1082,15,5000
+gef_fild05,0,0	monster	Shining Plant	1083,10,5000
 //
 ////==================================================
 //// gef_fild06 - Geffen Field

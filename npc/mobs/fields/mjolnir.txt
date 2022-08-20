@@ -120,19 +120,23 @@
 ////==================================================
 //// mjolnir_06 - Mt.Mjolnir
 ////==================================================
-//mjolnir_06,0,0	monster	Poison Spore	1077,100,5000
-//mjolnir_06,0,0	monster	Creamy	1018,30,5000
-//mjolnir_06,0,0	monster	Smokie	1056,70,5000
-//mjolnir_06,162,285	monster	Blue Plant	1079,1,360000,180000
-//mjolnir_06,162,255	monster	Blue Plant	1079,1,360000,180000
-//mjolnir_06,304,98	monster	Red Mushroom	1085,1,180000,90000
-//mjolnir_06,279,174	monster	Red Mushroom	1085,1,180000,90000
-//mjolnir_06,339,168	monster	Red Mushroom	1085,1,180000,90000
-//mjolnir_06,296,317	monster	Red Mushroom	1085,1,180000,90000
-//mjolnir_06,45,345	monster	Red Mushroom	1085,1,180000,90000
-//mjolnir_06,73,339	monster	Red Mushroom	1085,1,180000,90000
-//mjolnir_06,69,225	monster	Red Mushroom	1085,1,180000,90000
-//mjolnir_06,55,276	monster	Red Mushroom	1085,1,180000,90000
+mjolnir_06,0,0	monster	Poison Spore	1077,85,5000
+mjolnir_06,0,0	monster	Creamy	1018,85,5000
+mjolnir_06,0,0	monster	Smokie	1056,85,5000
+mjolnir_06,0,0	monster	Stainer	1174,85,5000
+mjolnir_06,162,285	monster	Blue Plant	1079,1,360000,180000
+mjolnir_06,162,255	monster	Blue Plant	1079,1,360000,180000
+mjolnir_06,304,98	monster	Red Mushroom	1085,1,180000,90000
+mjolnir_06,279,174	monster	Red Mushroom	1085,1,180000,90000
+mjolnir_06,339,168	monster	Red Mushroom	1085,1,180000,90000
+mjolnir_06,0,0	monster	Red Mushroom	1085,30,5000
+mjolnir_06,0,0	monster	Black Mushroom	1084,20,5000
+mjolnir_06,0,0	monster	Green Plant	1080,25,5000
+mjolnir_06,0,0	monster	Yellow Plant	1081,25,5000
+mjolnir_06,0,0	monster	Red Plant	1078,25,5000
+mjolnir_06,0,0	monster	Blue Plant	1079,15,5000
+mjolnir_06,0,0	monster	White Plant	1082,15,5000
+mjolnir_06,0,0	monster	Shining Plant	1083,10,5000
 //
 ////==================================================
 //// mjolnir_07 - Mt.Mjolnir

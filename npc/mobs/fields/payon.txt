@@ -68,12 +68,21 @@ pay_fild03,143,156,40,40	monster	Shining Plant	1083,1,3600000,1800000
 ////==================================================
 //// pay_fild06 - Payon Forest
 ////==================================================
-//pay_fild06,0,0	monster	Wormtail	1024,140,5000
-//pay_fild06,0,0	monster	Boa	1025,30,5000
-//pay_fild06,0,0	monster	Spore	1014,30,5000
-//pay_fild06,211,191,2,10	monster	Red Mushroom	1085,8,180000,90000
-//pay_fild06,268,155,20,20	monster	Green Plant	1080,10,360000,180000
-//pay_fild06,268,155,20,20	monster	Shining Plant	1083,1,1800000,900000
+pay_fild06,0,0	monster	Caramel	1103,85,5000
+pay_fild06,0,0	monster	Poison Spore	1077,85,5000
+pay_fild06,0,0	monster	Coco	1104,85,5000
+pay_fild06,0,0	monster	Yoyo	1057,85,5000
+pay_fild06,211,191,2,10	monster	Red Mushroom	1085,8,180000,90000
+pay_fild06,268,155,20,20	monster	Green Plant	1080,10,360000,180000
+pay_fild06,268,155,20,20	monster	Shining Plant	1083,1,1800000,900000
+pay_fild06,0,0	monster	Red Mushroom	1085,30,5000
+pay_fild06,0,0	monster	Black Mushroom	1084,20,5000
+pay_fild06,0,0	monster	Green Plant	1080,25,5000
+pay_fild06,0,0	monster	Yellow Plant	1081,25,5000
+pay_fild06,0,0	monster	Red Plant	1078,25,5000
+pay_fild06,0,0	monster	Blue Plant	1079,15,5000
+pay_fild06,0,0	monster	White Plant	1082,15,5000
+pay_fild06,0,0	monster	Shining Plant	1083,10,5000
 //
 ////==================================================
 //// pay_fild07 - Payon Forest
