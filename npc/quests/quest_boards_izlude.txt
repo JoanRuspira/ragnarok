@@ -1,5 +1,5 @@
 
-izlude,178,157,3	script	Quest Board#Quests_Izlude	4_BOARD3,{
+izlude,118,157,3	script	Quest Board#Quests_Izlude	4_BOARD3,{
 	for ( .@i = 11124; .@i < 11134; .@i++ )
 		if (checkquest(.@i,PLAYTIME) == 2) erasequest .@i;
 	for( .@i = 11114; .@i < 11124; .@i++ ) {

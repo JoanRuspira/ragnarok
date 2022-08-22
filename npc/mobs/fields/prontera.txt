@@ -166,9 +166,13 @@ prt_fild08,0,0	monster	Shining Plant	1083,10,5000
 //==================================================
 // prt_fild09 - Prontera Field
 //==================================================
-//prt_fild09,0,0	monster	Magnolia	1138,212,5000
-//prt_fild09,0,0	monster	Metaller	1058,91,5000
-//prt_fild09,237,115,5,5	monster	Yellow Plant	1081,3,360000,180000
+prt_fild09,0,0	monster	Drops	1113,80,5000
+prt_fild09,0,0	monster	Baby Desert Wolf	1107,80,5000
+prt_fild09,0,0	monster	Scorpion	1001,90,5000
+prt_fild09,0,0	monster	Peco Peco Egg	1047,30,5000
+prt_fild09,0,0	monster	Yellow Plant	1081,60,5000
+prt_fild09,0,0	monster	White Plant	1082,60,5000
+prt_fild09,237,115,5,5	monster	Yellow Plant	1081,3,360000,180000
 //
 ////==================================================
 //// prt_fild10 - Prontera Field

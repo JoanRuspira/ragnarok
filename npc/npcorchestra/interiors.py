@@ -25,7 +25,7 @@ all_interiors = [
   },
   {
     "Name": "moc_ruins",
-    "Density": 45
+    "Density": 20
   },
   {
     "Name": "izlu2dun",
@@ -69,7 +69,7 @@ all_interiors = [
   },
   {
     "Name": "moc_fild19",
-    "Density": 45
+    "Density": 15
   },
   {
     "Name": "hu_in01",
