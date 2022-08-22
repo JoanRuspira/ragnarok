@@ -150,3 +150,6 @@
 1056,Smokie@NPC_GROUNDATTACK,attack,185,2,500,500,5000,no,target,always,0,,,,,,6,
 1056,Smokie@NPC_PROVOCATION,chase,194,1,200,0,5000,yes,target,always,0,,,,,,19,
 1056,Smokie@TF_HIDING,attack,51,1,500,500,5000,no,self,myhpltmaxrate,50,,,,,,19,
+1031,Poporing@NPC_EMOTION,loot,197,1,2000,0,5000,yes,self,always,0,2,,,,,,
+1031,Poporing@NPC_POISON,attack,176,2,500,800,5000,no,target,always,0,,,,,,,
+1031,Poporing@NPC_POISONATTACK,attack,188,1,2000,0,5000,yes,target,always,0,,,,,,,

@@ -1824,9 +1824,55 @@ Body:
       - Item: Yoyo_Card
         Rate: 1
         StealProtected: true
+  - Id: 1031
+    AegisName: POPORING
+    Name: Poporing
+    Level: 30
+    Hp: 524
+    BaseExp: 229
+    JobExp: 181
+    Attack: 74
+    Attack2: 20
+    Defense: 36
+    MagicDefense: 17
+    Str: 17
+    Agi: 26
+    Vit: 20
+    Int: 18
+    Dex: 36
+    Luk: 5
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Plant
+    Element: Poison
+    ElementLevel: 1
+    WalkSpeed: 300
+    AttackDelay: 1672
+    AttackMotion: 672
+    DamageMotion: 480
+    Ai: 02
+    Drops:
+      - Item: Sticky_Mucus
+        Rate: 6000
+      - Item: Garlet
+        Rate: 1000
+      - Item: Green_Herb
+        Rate: 1000
+      - Item: Grape
+        Rate: 200
+      - Item: Wing_Of_Fly
+        Rate: 500
+      - Item: Main_Gauche
+        Rate: 20
+      - Item: Apple
+        Rate: 125
+      - Item: Poporing_Card
+        Rate: 10
+        StealProtected: true
 
-
-
+# JOAN
 
 
 
@@ -2177,53 +2223,6 @@ Body:
 #         Rate: 25
 #       - Item: Anacondaq_Card
 #         Rate: 1
-#         StealProtected: true
-#   - Id: 1031
-#     AegisName: POPORING
-#     Name: Poporing
-#     Level: 30
-#     Hp: 524
-#     BaseExp: 229
-#     JobExp: 181
-#     Attack: 74
-#     Attack2: 20
-#     Defense: 36
-#     MagicDefense: 17
-#     Str: 17
-#     Agi: 26
-#     Vit: 20
-#     Int: 18
-#     Dex: 36
-#     Luk: 5
-#     AttackRange: 1
-#     SkillRange: 10
-#     ChaseRange: 12
-#     Size: Medium
-#     Race: Plant
-#     Element: Poison
-#     ElementLevel: 1
-#     WalkSpeed: 300
-#     AttackDelay: 1672
-#     AttackMotion: 672
-#     DamageMotion: 480
-#     Ai: 02
-#     Drops:
-#       - Item: Sticky_Mucus
-#         Rate: 6000
-#       - Item: Garlet
-#         Rate: 1000
-#       - Item: Green_Herb
-#         Rate: 1000
-#       - Item: Grape
-#         Rate: 200
-#       - Item: Wing_Of_Fly
-#         Rate: 500
-#       - Item: Main_Gauche
-#         Rate: 20
-#       - Item: Apple
-#         Rate: 125
-#       - Item: Poporing_Card
-#         Rate: 10
 #         StealProtected: true
 #   - Id: 1032
 #     AegisName: VERIT
