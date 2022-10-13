@@ -1582,7 +1582,6 @@ Body:
       Weapon:
         1hSpear: true
         2hSpear: true
-      State: Riding
   - Id: 58
     Name: KN_SPEARSTAB
     Description: Spear Stab
@@ -1634,7 +1633,7 @@ Body:
   - Id: 60
     Name: KN_TWOHANDQUICKEN
     Description: Twohand Quicken
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Self
     DamageFlags:
@@ -1643,26 +1642,14 @@ Body:
     HitCount: 1
     Duration1:
       - Level: 1
-        Time: 30000
-      - Level: 2
         Time: 60000
-      - Level: 3
-        Time: 90000
-      - Level: 4
+      - Level: 2
         Time: 120000
-      - Level: 5
-        Time: 150000
-      - Level: 6
+      - Level: 3
         Time: 180000
-      - Level: 7
-        Time: 210000
-      - Level: 8
+      - Level: 4
         Time: 240000
-      - Level: 9
-        Time: 270000
-      - Level: 10
-        Time: 300000
-      - Level: 11
+      - Level: 5
         Time: 300000
     Requires:
       SpCost:
@@ -12812,13 +12799,11 @@ Body:
   - Id: 495
     Name: KN_ONEHAND
     Description: Onehand Quicken
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Weapon
     TargetType: Self
     DamageFlags:
       NoDamage: true
-    Flags:
-      IsSpirit: true
     Hit: Single
     HitCount: 1
     Duration1: 300000
