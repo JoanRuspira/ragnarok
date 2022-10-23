@@ -4477,13 +4477,11 @@ Body:
   - Id: 146
     Name: SM_AUTOBERSERK
     Description: Auto Berserk
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Weapon
     TargetType: Self
     DamageFlags:
       NoDamage: true
-    Flags:
-      IsQuest: true
     Hit: Single
     HitCount: 1
     Requires:
