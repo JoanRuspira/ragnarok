@@ -31,6 +31,7 @@
 #include "AcolyteSkillAtkRatioCalculator.h"
 #include "AcolyteAdditionalEffectsCalculator.h"
 #include "MageAdditionalEffectsCalculator.h"
+#include "KnightAdditionalEffectsCalculator.h"
 
 
 //fwd declaration

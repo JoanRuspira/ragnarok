@@ -195,6 +195,7 @@
     <ClInclude Include="instance.hpp" />
     <ClInclude Include="intif.hpp" />
     <ClInclude Include="itemdb.hpp" />
+    <ClInclude Include="KnightAdditionalEffectsCalculator.h" />
     <ClInclude Include="KnightSkillAtkRatioCalculator.h" />
     <ClInclude Include="log.hpp" />
     <ClInclude Include="MageAdditionalEffectsCalculator.h" />
@@ -260,6 +261,7 @@
     <ClCompile Include="instance.cpp" />
     <ClCompile Include="intif.cpp" />
     <ClCompile Include="itemdb.cpp" />
+    <ClCompile Include="KnightAdditionalEffectsCalculator.cpp" />
     <ClCompile Include="KnightSkillAtkRatioCalculator.cpp" />
     <ClCompile Include="log.cpp" />
     <ClCompile Include="MageAdditionalEffectsCalculator.cpp" />

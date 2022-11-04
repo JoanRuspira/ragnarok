@@ -46,6 +46,7 @@ void SwordsmanSkillAtkRatioCalculator::add_magnum_break_special_effects(struct b
 void SwordsmanSkillAtkRatioCalculator::add_traumatic_blow_special_effects(struct block_list* src, struct block_list *target)
 {
 	clif_specialeffect(target, EF_MADNESS_RED, AREA);
+	clif_specialeffect(target, EF_RED_CROSS, AREA);
 	clif_specialeffect(target, EF_CRITICALWOUND, AREA);
 }
 
@@ -101,12 +102,24 @@ int SwordsmanSkillAtkRatioCalculator::calculate_magnum_break_atk_ratio(int skill
 	return ratio;
 }
 
+
 int SwordsmanSkillAtkRatioCalculator::calculate_spear_stab_atk_ratio(int skill_lv, struct block_list *target)
 {
 	int ratio = 0;
 	struct status_change *target_status;
 
 	target_status = status_get_sc(target);
+
+	if (target_status->data[SC_BLEEDING]) {
+		return calculate_spear_stab_bleeding_atk_ratio(skill_lv);
+	}
+	return calculate_spear_stab_normal_atk_ratio(skill_lv);
+}
+
+int SwordsmanSkillAtkRatioCalculator::calculate_spear_stab_normal_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	
 	switch (skill_lv) {
 		case 1:
 			ratio = 30;
@@ -116,46 +129,64 @@ int SwordsmanSkillAtkRatioCalculator::calculate_spear_stab_atk_ratio(int skill_l
 			break;
 		case 3:
 			ratio = 180;
-			if (target_status->data[SC_BLEEDING]){
-				ratio = 200;
-			}
 			break;
 		case 4:
 			ratio = 240;
-			if (target_status->data[SC_BLEEDING]){
-				ratio = 300;
-			}
 			break;
 		case 5:
 			ratio = 300;
-			if (target_status->data[SC_BLEEDING]){
-				ratio = 400;
-			}
 			break;
 	}
 	return ratio;
 }
 
+
+int SwordsmanSkillAtkRatioCalculator::calculate_spear_stab_bleeding_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	
+	switch (skill_lv) {
+		case 1:
+			ratio = 80;
+			break;
+		case 2:
+			ratio = 150;
+			break;
+		case 3:
+			ratio = 250;
+			break;
+		case 4:
+			ratio = 350;
+			break;
+		case 5:
+			ratio = 450;
+			break;
+	}
+	return ratio;
+}
+
+
+
 int SwordsmanSkillAtkRatioCalculator::calculate_traumatic_blow_atk_ratio(int skill_lv)
 {
 	int ratio = 0;
 	switch (skill_lv) {
-	case 1:
-		ratio = 30;
-		break;
-	case 2:
-		ratio = 100;
-		break;
-	case 3:
-		ratio = 180;
-		break;
-	case 4:
-		ratio = 240;
-		break;
-	case 5:
-		ratio = 300;
-		break;
-	}
+		case 1:
+			ratio = 30;
+			break;
+		case 2:
+			ratio = 100;
+			break;
+		case 3:
+			ratio = 180;
+			break;
+		case 4:
+			ratio = 240;
+			break;
+		case 5:
+			ratio = 300;
+			break;
+		}
 	return ratio;
 }
 

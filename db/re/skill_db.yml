@@ -160,7 +160,7 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Weapon
-    Cooldown: 10000
+    Cooldown: 5000
     AfterCastActDelay: 400
     CopyFlags:
       Skill:
@@ -191,16 +191,8 @@ Body:
         2hMace: true
         Staff: true
         Knuckle: true
-        Musical: true
-        Whip: true
         Book: true
         Katar: true
-        Revolver: true
-        Rifle: true
-        Gatling: true
-        Shotgun: true
-        Grenade: true
-        Huuma: true
   - Id: 6
     Name: SM_PROVOKE
     Description: Provoke
@@ -259,6 +251,21 @@ Body:
     Duration2: 10000
     Requires:
       SpCost: 20
+      Weapon:
+        Fist: true
+        Dagger: true
+        1hSword: true
+        2hSword: true
+        1hSpear: true
+        2hSpear: true
+        1hAxe: true
+        2hAxe: true
+        Mace: true
+        2hMace: true
+        Staff: true
+        Knuckle: true
+        Book: true
+        Katar: true
   - Id: 8
     Name: SM_ENDURE
     Description: Endure
@@ -1624,7 +1631,8 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Weapon
-    AfterCastActDelay: 1000
+    Cooldown: 5000
+    AfterCastActDelay: 400
     Requires:
       SpCost: 10
       Weapon:
@@ -1640,6 +1648,8 @@ Body:
       NoDamage: true
     Hit: Single
     HitCount: 1
+    Cooldown: 10000
+    AfterCastActDelay: 1000
     Duration1:
       - Level: 1
         Time: 60000
@@ -1652,27 +1662,7 @@ Body:
       - Level: 5
         Time: 300000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 14
-        - Level: 2
-          Amount: 18
-        - Level: 3
-          Amount: 22
-        - Level: 4
-          Amount: 26
-        - Level: 5
-          Amount: 30
-        - Level: 6
-          Amount: 34
-        - Level: 7
-          Amount: 38
-        - Level: 8
-          Amount: 42
-        - Level: 9
-          Amount: 46
-        - Level: 10
-          Amount: 50
+      SpCost: 50
       Weapon:
         2hSword: true
   - Id: 61
@@ -1685,6 +1675,8 @@ Body:
       IgnoreDefense: true
       Critical: true
     Hit: Single
+    Cooldown: 2000
+    AfterCastActDelay: 100
     HitCount: 1
     Element: Weapon
     Duration1:
@@ -1699,7 +1691,7 @@ Body:
       - Level: 5
         Time: 2000
     Requires:
-      SpCost: 3
+      SpCost: 15
       Weapon:
         Fist: true
         Dagger: true
@@ -1711,22 +1703,12 @@ Body:
         2hAxe: true
         Mace: true
         2hMace: true
-        Staff: true
         Knuckle: true
-        Musical: true
-        Whip: true
-        Book: true
         Katar: true
-        Revolver: true
-        Rifle: true
-        Gatling: true
-        Shotgun: true
-        Grenade: true
-        Huuma: true
   - Id: 62
     Name: KN_BOWLINGBASH
     Description: Bowling Bash
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     DamageFlags:
@@ -1734,8 +1716,8 @@ Body:
     Flags:
       TargetTrap: true
     Range: -2
-    Hit: Single
-    HitCount: 1
+    Hit: Multi_Hit
+    HitCount: 3
     Element: Weapon
     SplashArea: 1
     Knockback: 1
@@ -1743,29 +1725,12 @@ Body:
       Skill:
         Plagiarism: true
         Reproduce: true
-    CastTime: 700
+    Cooldown: 7000
+    AfterCastActDelay: 400
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 13
-        - Level: 2
-          Amount: 14
-        - Level: 3
-          Amount: 15
-        - Level: 4
-          Amount: 16
-        - Level: 5
-          Amount: 17
-        - Level: 6
-          Amount: 18
-        - Level: 7
-          Amount: 19
-        - Level: 8
-          Amount: 20
-        - Level: 9
-          Amount: 21
-        - Level: 10
-          Amount: 22
+      SpCost: 22
+      Weapon:
+        2hSword: true
   - Id: 63
     Name: KN_RIDING
     Description: Peco Peco Riding
@@ -3355,6 +3320,8 @@ Body:
       AllowOnMado: true
     Hit: Single
     HitCount: 1
+    Cooldown: 20000
+    AfterCastActDelay: 3000
     SplashArea: -1
     Duration1:
       - Level: 1
@@ -3368,21 +3335,20 @@ Body:
       - Level: 5
         Time: 150000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 20
-        - Level: 2
-          Amount: 23
-        - Level: 3
-          Amount: 26
-        - Level: 4
-          Amount: 29
-        - Level: 5
-          Amount: 32
+      SpCost: 40
       Weapon:
+        Fist: true
+        Dagger: true
+        1hSword: true
+        2hSword: true
+        1hSpear: true
+        2hSpear: true
         1hAxe: true
         2hAxe: true
         Mace: true
+        2hMace: true
+        Knuckle: true
+        Katar: true
   - Id: 112
     Name: BS_WEAPONPERFECT
     Description: Weapon Perfection
@@ -6435,57 +6401,30 @@ Body:
   - Id: 258
     Name: CR_SPEARQUICKEN
     Description: Spear Quicken
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Self
     DamageFlags:
       NoDamage: true
     Hit: Single
     HitCount: 1
+    Cooldown: 10000
+    AfterCastActDelay: 1000
     Duration1:
       - Level: 1
-        Time: 30000
-      - Level: 2
         Time: 60000
-      - Level: 3
-        Time: 90000
-      - Level: 4
+      - Level: 2
         Time: 120000
-      - Level: 5
-        Time: 150000
-      - Level: 6
+      - Level: 3
         Time: 180000
-      - Level: 7
-        Time: 210000
-      - Level: 8
+      - Level: 4
         Time: 240000
-      - Level: 9
-        Time: 270000
-      - Level: 10
+      - Level: 5
         Time: 300000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 24
-        - Level: 2
-          Amount: 28
-        - Level: 3
-          Amount: 32
-        - Level: 4
-          Amount: 36
-        - Level: 5
-          Amount: 40
-        - Level: 6
-          Amount: 44
-        - Level: 7
-          Amount: 48
-        - Level: 8
-          Amount: 52
-        - Level: 9
-          Amount: 56
-        - Level: 10
-          Amount: 60
+      SpCost: 50
       Weapon:
+        1hSpear: true
         2hSpear: true
   - Id: 259
     Name: MO_IRONHAND
@@ -6738,7 +6677,6 @@ Body:
     Duration1: 180000
     Requires:
       SpCost: 15
-      SpiritSphereCost: 5
   - Id: 271
     Name: MO_EXTREMITYFIST
     Description: Asura Strike
@@ -10192,6 +10130,21 @@ Body:
     Duration2: 120000
     Requires:
       SpCost: 14
+      Weapon:
+        Fist: true
+        Dagger: true
+        1hSword: true
+        2hSword: true
+        1hSpear: true
+        2hSpear: true
+        1hAxe: true
+        2hAxe: true
+        Mace: true
+        2hMace: true
+        Staff: true
+        Knuckle: true
+        Book: true
+        Katar: true
   - Id: 399
     Name: LK_JOINTBEAT
     Description: Vital Strike
@@ -12804,9 +12757,21 @@ Body:
       NoDamage: true
     Hit: Single
     HitCount: 1
-    Duration1: 300000
+    Cooldown: 10000
+    AfterCastActDelay: 1000
+    Duration1:
+      - Level: 1
+        Time: 60000
+      - Level: 2
+        Time: 120000
+      - Level: 3
+        Time: 180000
+      - Level: 4
+        Time: 240000
+      - Level: 5
+        Time: 300000
     Requires:
-      SpCost: 100
+      SpCost: 50
       Weapon:
         1hSword: true
   - Id: 496
@@ -16599,23 +16564,9 @@ Body:
     Duration1: 15000
     Cooldown: 2000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 20
-        - Level: 2
-          Amount: 24
-        - Level: 3
-          Amount: 28
-        - Level: 4
-          Amount: 32
-        - Level: 5
-          Amount: 36
+      SpCost: 25
       Weapon:
-        Dagger: true
         1hSword: true
-        2hSword: true
-        1hSpear: true
-        2hSpear: true
   - Id: 2006
     Name: RK_IGNITIONBREAK
     Description: Ignition Break

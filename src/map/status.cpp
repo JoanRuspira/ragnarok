@@ -377,12 +377,7 @@ void initChangeTables(void)
 	set_sc( AC_CONCENTRATION	, SC_CONCENTRATE	, EFST_CONCENTRATION, SCB_AGI|SCB_DEX );
 	set_sc( TF_HIDING		, SC_HIDING		, EFST_HIDING		, SCB_SPEED );
 	add_sc( TF_POISON		, SC_POISON		);
-	set_sc( KN_TWOHANDQUICKEN	, SC_TWOHANDQUICKEN	, EFST_TWOHANDQUICKEN	, SCB_ASPD
-#ifdef RENEWAL
-		|SCB_HIT|SCB_CRI );
-#else
-		);
-#endif
+	set_sc( KN_TWOHANDQUICKEN	, SC_TWOHANDQUICKEN	, EFST_TWOHANDQUICKEN	, SCB_ASPD|SCB_WATK );
 	set_sc( KN_AUTOCOUNTER		, SC_AUTOCOUNTER	, EFST_AUTOCOUNTER	, SCB_NONE );
 	set_sc( PR_IMPOSITIO		, SC_IMPOSITIO		, EFST_IMPOSITIO	, SCB_WATK
 #ifdef RENEWAL
@@ -478,7 +473,7 @@ void initChangeTables(void)
 	set_sc( CR_DEVOTION		, SC_DEVOTION	, EFST_DEVOTION	, SCB_NONE);
 	set_sc( CR_PROVIDENCE		, SC_PROVIDENCE		, EFST_PROVIDENCE		, SCB_ALL );
 	set_sc( CR_DEFENDER		, SC_DEFENDER		, EFST_DEFENDER		, SCB_SPEED|SCB_ASPD );
-	set_sc( CR_SPEARQUICKEN		, SC_SPEARQUICKEN	, EFST_SPEARQUICKEN	, SCB_ASPD|SCB_CRI|SCB_FLEE );
+	set_sc( CR_SPEARQUICKEN		, SC_SPEARQUICKEN	, EFST_SPEARQUICKEN	, SCB_ASPD|SCB_WATK );
 	set_sc( MO_STEELBODY		, SC_STEELBODY		, EFST_STEELBODY		, SCB_DEF|SCB_MDEF|SCB_ASPD|SCB_SPEED );
 	add_sc( MO_BLADESTOP		, SC_BLADESTOP_WAIT	);
 	set_sc( MO_BLADESTOP		, SC_BLADESTOP	, EFST_BLADESTOP	, SCB_NONE );
@@ -655,7 +650,7 @@ void initChangeTables(void)
 	set_sc( CG_TAROTCARD		, SC_TAROTCARD	, EFST_TAROTCARD, SCB_NONE	);
 	set_sc( ITEM_ENCHANTARMS	, SC_ENCHANTARMS	, EFST_WEAPONPROPERTY, SCB_ATK_ELE );
 	set_sc( SL_HIGH			, SC_SPIRIT		, EFST_SOULLINK, SCB_ALL );
-	set_sc( KN_ONEHAND		, SC_ONEHAND		, EFST_ONEHANDQUICKEN, SCB_ASPD );
+	set_sc( KN_ONEHAND		, SC_ONEHAND		, EFST_ONEHANDQUICKEN, SCB_ASPD|SCB_WATK );
 	set_sc( GS_FLING		, SC_FLING		, EFST_BLANK		, SCB_DEF|SCB_DEF2 );
 	add_sc( GS_CRACKER		, SC_STUN		);
 	add_sc( GS_DISARM		, SC_STRIPWEAPON	);
@@ -6474,6 +6469,12 @@ static unsigned short status_calc_watk(struct block_list *bl, struct status_chan
 		watk += sc->data[SC_MERC_ATKUP]->val2;
 	if(sc->data[SC_WATER_BARRIER])
 		watk -= sc->data[SC_WATER_BARRIER]->val2;
+	if( sc->data[SC_SPEARQUICKEN] )
+		watk += 3 * sc->data[SC_SPEARQUICKEN]->val1;
+	if( sc->data[SC_TWOHANDQUICKEN] )
+		watk += 3 * sc->data[SC_TWOHANDQUICKEN]->val1;
+	if( sc->data[SC_ONEHAND] )
+		watk += 3 * sc->data[SC_ONEHAND]->val1;
 #ifndef RENEWAL
 	if(sc->data[SC_NIBELUNGEN]) {
 		if (bl->type != BL_PC)
@@ -6687,12 +6688,6 @@ static signed short status_calc_critical(struct block_list *bl, struct status_ch
 		critical += critical;
 	if (sc->data[SC_STRIKING])
 		critical += critical * sc->data[SC_STRIKING]->val1 / 100;
-#ifdef RENEWAL
-	if (sc->data[SC_SPEARQUICKEN])
-		critical += 3*sc->data[SC_SPEARQUICKEN]->val1*10;
-	if (sc->data[SC_TWOHANDQUICKEN])
-		critical += (2 + sc->data[SC_TWOHANDQUICKEN]->val1) * 10;
-#endif
 	if (sc->data[SC__INVISIBILITY])
 		critical += sc->data[SC__INVISIBILITY]->val3 * 10;
 	if (sc->data[SC__UNLUCKY])
@@ -6833,12 +6828,8 @@ static signed short status_calc_flee(struct block_list *bl, struct status_change
 		flee -= sc->data[SC_WATER_BARRIER]->val2;
 	if( sc->data[SC_C_MARKER] )
 		flee -= sc->data[SC_C_MARKER]->val3;
-#ifdef RENEWAL
-	if( sc->data[SC_SPEARQUICKEN] )
-		flee += 2 * sc->data[SC_SPEARQUICKEN]->val1;
 	if (sc->data[SC_NIBELUNGEN] && sc->data[SC_NIBELUNGEN]->val2 == RINGNBL_FLEE)
 		flee += 50;
-#endif
 
 	// Rate value
 	if(sc->data[SC_INCFLEERATE])
@@ -7404,26 +7395,7 @@ static short status_calc_aspd(struct block_list *bl, struct status_change *sc, b
 		}
 
 		if (sc->data[SC_ASSNCROS] && bonus < sc->data[SC_ASSNCROS]->val2) {
-#ifdef RENEWAL
 			bonus += sc->data[SC_ASSNCROS]->val2;
-#else
-			if (bl->type != BL_PC)
-				bonus += sc->data[SC_ASSNCROS]->val2;
-			else {
-				switch(((TBL_PC*)bl)->status.weapon) {
-					case W_BOW:
-					case W_REVOLVER:
-					case W_RIFLE:
-					case W_GATLING:
-					case W_SHOTGUN:
-					case W_GRENADE:
-						break;
-					default:
-						bonus += sc->data[SC_ASSNCROS]->val2;
-						break;
-				}
-			}
-#endif
 		}
 
 		if (bonus < 20 && sc->data[SC_MADNESSCANCEL])
@@ -7447,6 +7419,14 @@ static short status_calc_aspd(struct block_list *bl, struct status_change *sc, b
 #endif
 		if (sc->data[SC_STEELBODY])
 			bonus -= 25;
+		if (sc->data[SC_ADRENALINE])
+			bonus += sc->data[SC_ADRENALINE]->val1;
+		if (sc->data[SC_TWOHANDQUICKEN])
+			bonus += sc->data[SC_TWOHANDQUICKEN]->val1/2;
+		if (sc->data[SC_ONEHAND])
+			bonus += sc->data[SC_ONEHAND]->val1/2;
+		if (sc->data[SC_SPEARQUICKEN])
+			bonus += sc->data[SC_SPEARQUICKEN]->val1/2;
 		if (sc->data[SC_SKA])
 			bonus -= 25;
 		if (sc->data[SC_DEFENDER])
@@ -10359,11 +10339,6 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 		case SC_MERC_QUICKEN:
 			val2 = 300;
 			break;
-#ifndef RENEWAL_ASPD
-		case SC_SPEARQUICKEN:
-			val2 = 200+10*val1;
-			break;
-#endif
 		case SC_DANCING:
 			// val1 : Skill ID + LV
 			// val2 : Skill Group of the Dance.
@@ -10870,17 +10845,12 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 				struct map_session_data * s_sd = BL_CAST(BL_PC, src);
 				if (type == SC_OVERTHRUST) {
 					// val2 holds if it was casted on self, or is bonus received from others
-#ifdef RENEWAL
 						val3 = (val2) ? 5 * val1 : (val1 > 4) ? 15 : (val1 > 2) ? 10 : 5; // Power increase
-#else
-						val3 = (val2) ? 5 * val1 : 5; // Power increase
-#endif
+
 				}
-				else if (type == SC_ADRENALINE2 || type == SC_ADRENALINE) {
-					val3 = (val2) ? 300 : 200; // Aspd increase
-				}
-				if (s_sd && pc_checkskill(s_sd, BS_HILTBINDING) > 0)
-					tick += tick / 10; //If caster has Hilt Binding, duration increases by 10%
+				// else if (type == SC_ADRENALINE2 || type == SC_ADRENALINE) {
+				// 	val3 = 300; // Aspd increase
+				// }
 			}
 			break;
 		case SC_CONCENTRATION:

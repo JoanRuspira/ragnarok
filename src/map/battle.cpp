@@ -2773,7 +2773,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		if (sc->data[SC_CONCENTRATION] && (skill_id != RK_DRAGONBREATH && skill_id != RK_DRAGONBREATH_WATER))
 			skillratio += sc->data[SC_CONCENTRATION]->val2;
 #endif
-		if (!skill_id || skill_id == KN_AUTOCOUNTER) {
+		if (!skill_id) {
 			if (sc->data[SC_CRUSHSTRIKE]) {
 				if (sd) { //ATK [{Weapon Level * (Weapon Upgrade Level + 6) * 100} + (Weapon ATK) + (Weapon Weight)]%
 					short index = sd->equip_index[EQI_HAND_R];
@@ -2838,29 +2838,17 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case AC_PARALIZING:
 			skillratio += ArcherSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv);
 			break;
-#ifndef RENEWAL
-		case HT_FREEZINGTRAP:
-		case MA_FREEZINGTRAP:
-			skillratio += -50 + 10 * skill_lv;
-			break;
-#endif
+		case KN_SPEARBOOMERANG:
+		case KN_BOWLINGBASH:
+		case KN_AUTOCOUNTER:
+		case KN_BRANDISHSPEAR:
 		case KN_PIERCE:
-		case ML_PIERCE:
-			skillratio += 10 * skill_lv;
+		case RK_WINDCUTTER:
+			skillratio += KnightSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
 		case MER_CRASH:
 			skillratio += 10 * skill_lv;
 			break;
-		case KN_SPEARBOOMERANG:
-			skillratio += 50 * skill_lv;
-			break;
-#ifdef RENEWAL
-		case KN_BRANDISHSPEAR:
-			skillratio += -100 + 400 + 100 * skill_lv + sstatus->str * 3;
-			break;
-#else
-		case KN_BRANDISHSPEAR:
-#endif
 		case ML_BRANDISH:
 			{
 				int ratio = 100 + 20 * skill_lv;
@@ -2879,10 +2867,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 				if(skill_lv > 9 && wd->miscflag == 2)
 					skillratio += ratio / 2;
 			}
-			break;
-		case KN_BOWLINGBASH:
-		case MS_BOWLINGBASH:
-			skillratio += 40 * skill_lv;
 			break;
 		case AS_GRIMTOOTH:
 			skillratio += 20 * skill_lv;
@@ -3281,18 +3265,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			skillratio += -100 + 600 + 200 * skill_lv;
 			if (sd)
 				skillratio += 50 * pc_checkskill(sd,LK_SPIRALPIERCE);
-			RE_LVL_DMOD(100);
-			break;
-		case RK_WINDCUTTER:
-			if (sd) {
-				if (sd->weapontype1 == W_2HSWORD)
-					skillratio += -100 + 250 * skill_lv;
-				else if (sd->weapontype1 == W_1HSPEAR || sd->weapontype1 == W_2HSPEAR)
-					skillratio += -100 + 400 * skill_lv;
-				else
-					skillratio += -100 + 300 * skill_lv;
-			} else
-				skillratio += -100 + 300 * skill_lv;
 			RE_LVL_DMOD(100);
 			break;
 		case RK_IGNITIONBREAK:
@@ -4720,15 +4692,11 @@ static struct Damage initialize_weapon_data(struct block_list *src, struct block
 				wd.amotion = sstatus->amotion;
 				//Fall through
 			case KN_SPEARSTAB:
-#ifndef RENEWAL
-			case KN_BOWLINGBASH:
-#endif
 			case MS_BOWLINGBASH:
 			case MO_BALKYOUNG:
 			case TK_TURNKICK:
 				wd.blewcount = 0;
 				break;
-#ifdef RENEWAL
 			case KN_BOWLINGBASH:
 				if (sd && sd->status.weapon == W_2HSWORD) {
 					if (wd.miscflag >= 2 && wd.miscflag <= 3)
@@ -4737,7 +4705,6 @@ static struct Damage initialize_weapon_data(struct block_list *src, struct block
 						wd.div_ = 4;
 				}
 				break;
-#endif
 			case KN_AUTOCOUNTER:
 				wd.flag = (wd.flag&~BF_SKILLMASK)|BF_NORMAL;
 				break;

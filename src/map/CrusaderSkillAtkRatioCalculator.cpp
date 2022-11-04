@@ -34,24 +34,24 @@ int CrusaderSkillAtkRatioCalculator::calculate_skill_atk_ratio()
 	case CR_SHIELDBOOMERANG:
 		return calculate_shield_boomerang_atk_ratio();
 		break;
-	case KN_SPEARBOOMERANG:
-		return calculate_spear_boomerang_atk_ratio();
-		break;
-	case KN_BRANDISHSPEAR:
-		return calculate_brandish_spear_atk_ratio();
-		break;
-	case KN_PIERCE:
-		return calculate_pierce_atk_ratio();
-		break;
-	case PA_SHIELDCHAIN:
-		return calculate_shield_chain_atk_ratio();
-		break;
-	case PA_SACRIFICE:
-		return calculate_sacrifice_atk_ratio();
-		break;
-	case RK_HUNDREDSPEAR:
-		return calculate_hundred_spear_atk_ratio();
-		break;
+	// case KN_SPEARBOOMERANG:
+	// 	return calculate_spear_boomerang_atk_ratio();
+	// 	break;
+	// case KN_BRANDISHSPEAR:
+	// 	return calculate_brandish_spear_atk_ratio();
+	// 	break;
+	// case KN_PIERCE:
+	// 	return calculate_pierce_atk_ratio();
+	// 	break;
+	// case PA_SHIELDCHAIN:
+	// 	return calculate_shield_chain_atk_ratio();
+	// 	break;
+	// case PA_SACRIFICE:
+	// 	return calculate_sacrifice_atk_ratio();
+	// 	break;
+	// case RK_HUNDREDSPEAR:
+	// 	return calculate_hundred_spear_atk_ratio();
+	// 	break;
 	default:
 		return 0;
 		break;

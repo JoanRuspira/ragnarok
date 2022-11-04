@@ -19,6 +19,8 @@ class SwordsmanSkillAtkRatioCalculator
 		static int calculate_magnum_break_atk_ratio(int skill_lv);
 		static int calculate_spear_stab_atk_ratio(int skill_lv, struct block_list *target);
 		static int calculate_traumatic_blow_atk_ratio(int skill_lv);
+		static int calculate_spear_stab_normal_atk_ratio(int skill_lv);
+		static int calculate_spear_stab_bleeding_atk_ratio(int skill_lv);
 		static void add_spear_stab_special_effects(struct block_list* src, struct block_list *target);
 		static void add_traumatic_blow_special_effects(struct block_list* src, struct block_list *target);
 		static void add_bash_special_effects(struct block_list *target);

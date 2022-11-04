@@ -123,6 +123,12 @@
     <Filter Include="Source Files\skillAdditionalEffectsCalculator\mage">
       <UniqueIdentifier>{59687da0-693a-42fa-8912-d6493e3089fd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\skillAdditionalEffectsCalculator\knight">
+      <UniqueIdentifier>{716bfc99-5cf7-4ce7-882a-e67d3ab6e4fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\skillAdditionalEffectsCalculator\knight">
+      <UniqueIdentifier>{29260dfe-515d-40b5-89dc-978bf1b711dd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="achievement.hpp">
@@ -329,6 +335,9 @@
     <ClInclude Include="MageAdditionalEffectsCalculator.h">
       <Filter>Header Files\skillAdditionalEffectsCalculator\mage</Filter>
     </ClInclude>
+    <ClInclude Include="KnightAdditionalEffectsCalculator.h">
+      <Filter>Header Files\skillAdditionalEffectsCalculator\knight</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="achievement.cpp">
@@ -507,6 +516,9 @@
     </ClCompile>
     <ClCompile Include="MageAdditionalEffectsCalculator.cpp">
       <Filter>Source Files\skillAdditionalEffectsCalculator\mage</Filter>
+    </ClCompile>
+    <ClCompile Include="KnightAdditionalEffectsCalculator.cpp">
+      <Filter>Source Files\skillAdditionalEffectsCalculator\knight</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
