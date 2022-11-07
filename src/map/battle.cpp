@@ -2570,7 +2570,6 @@ static void battle_calc_element_damage(struct Damage* wd, struct block_list *src
 		switch (skill_id) {
 #ifdef RENEWAL
 			case MO_INVESTIGATE:
-			case CR_SHIELDBOOMERANG:
 			case PA_SHIELDCHAIN:
 #endif
 			case MC_CARTREVOLUTION:
@@ -2704,10 +2703,6 @@ static void battle_calc_multi_attack(struct Damage* wd, struct block_list *src,s
 	}
 
 	switch (skill_id) {
-		case RK_WINDCUTTER:
-			if (sd && sd->weapontype1 == W_2HSWORD)
-				wd->div_ = 2;
-			break;
 		case RA_AIMEDBOLT:
 			wd->div_ = 2 + tstatus->size + rnd()%2;
 			break;
@@ -2844,6 +2839,9 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case KN_BRANDISHSPEAR:
 		case KN_PIERCE:
 		case RK_WINDCUTTER:
+		case RK_SONICWAVE:
+		case CR_SHIELDCHARGE:
+		case CR_SHIELDBOOMERANG:
 			skillratio += KnightSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
 		case MER_CRASH:
@@ -2935,16 +2933,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			break;
 		case RG_INTIMIDATE:
 			skillratio += 30 * skill_lv;
-			break;
-		case CR_SHIELDCHARGE:
-			skillratio += 20 * skill_lv;
-			break;
-		case CR_SHIELDBOOMERANG:
-#ifdef RENEWAL
-			skillratio += -100 + skill_lv * 80;
-#else
-			skillratio += 30 * skill_lv;
-#endif
 			break;
 		case NPC_DARKCROSS:
 		case CR_HOLYCROSS:
@@ -3256,10 +3244,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			break;
 		case NPC_VAMPIRE_GIFT:
 			skillratio += ((skill_lv - 1) % 5 + 1) * 100;
-			break;
-		case RK_SONICWAVE:
-			skillratio += -100 + 500 + 100 * skill_lv;
-			RE_LVL_DMOD(100);
 			break;
 		case RK_HUNDREDSPEAR:
 			skillratio += -100 + 600 + 200 * skill_lv;
@@ -4581,7 +4565,7 @@ static void battle_calc_weapon_final_atk_modifiers(struct Damage* wd, struct blo
 			status_zap(src, hp, 0);
 		}
 		// Only affecting non-skills
-		if (!skill_id && wd->dmg_lv > ATK_BLOCK) {
+		// if (!skill_id && wd->dmg_lv > ATK_BLOCK) {
 			if (sc->data[SC_ENCHANTBLADE]) {
 				//[((Skill Lv x 20) + 100) x (casterBaseLevel / 150)] + casterInt + MATK - MDEF - MDEF2
 				int64 enchant_dmg = sc->data[SC_ENCHANTBLADE]->val2;
@@ -4593,7 +4577,7 @@ static void battle_calc_weapon_final_atk_modifiers(struct Damage* wd, struct blo
 				if (enchant_dmg > 0)
 					ATK_ADD(wd->damage, wd->damage2, enchant_dmg);
 			}
-		}
+		// }
 		if (skill_id != SN_SHARPSHOOTING && skill_id != RA_ARROWSTORM)
 			status_change_end(src, SC_CAMOUFLAGE, INVALID_TIMER);
 	}
@@ -4711,9 +4695,6 @@ static struct Damage initialize_weapon_data(struct block_list *src, struct block
 			case LK_SPIRALPIERCE:
 				if (!sd) wd.flag = (wd.flag&~(BF_RANGEMASK|BF_WEAPONMASK))|BF_LONG|BF_MISC;
 				break;
-			case RK_WINDCUTTER:
-				if (sd && (sd->status.weapon == W_1HSPEAR || sd->status.weapon == W_2HSPEAR))
-					wd.flag |= BF_LONG;
 
 			// The number of hits is set to 3 by default for use in Inspiration status.
 			// When in Banding, the number of hits is equal to the number of Royal Guards in Banding.
@@ -4983,7 +4964,7 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src, struct bl
 
 	if(sd) {
 
-		if( skill_id == CR_SHIELDBOOMERANG || skill_id == PA_SHIELDCHAIN ) { //Refine bonus applies after cards and elements.
+		if( skill_id == CR_SHIELDCHARGE || skill_id == CR_SHIELDBOOMERANG || skill_id == PA_SHIELDCHAIN ) { //Refine bonus applies after cards and elements.
 			short index = sd->equip_index[EQI_HAND_L];
 
 			if( index >= 0 && sd->inventory_data[index] && sd->inventory_data[index]->type == IT_ARMOR )

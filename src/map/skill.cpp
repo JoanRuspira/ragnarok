@@ -3594,7 +3594,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 
 	switch(skill_id) {
 	
-
+	case RK_WINDCUTTER:
 	case MC_FIREWORKS:
 	case SM_MAGNUM:
 		if( flag&1 ) {
@@ -4484,7 +4484,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 		if( battle_check_target(src,bl,BCT_ENEMY) > 0 )
 			skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag);
 		break;
-	case RK_WINDCUTTER:
 	case RK_STORMBLAST:
 		if( flag&1 )
 			skill_attack(skill_get_type(skill_id),src,src,bl,skill_id,skill_lv,tick,flag);
@@ -5822,9 +5821,14 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		clif_skill_nodamage(bl,bl,skill_id,skill_lv,
 			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
 		break;
-	//Passive Magnum, should had been casted on yourself.
 	case MC_FIREWORKS:
 		MerchntSkillAtkRatioCalculator::add_cart_fireworks_special_effects(src);
+		skill_area_temp[1] = 0;
+		map_foreachinshootrange(skill_area_sub, src, skill_get_splash(skill_id, skill_lv), BL_SKILL|BL_CHAR,
+			src,skill_id,skill_lv,tick, flag|BCT_ENEMY|1, skill_castend_damage_id);
+		clif_skill_nodamage (src,src,skill_id,skill_lv,1);
+		break;
+	case RK_WINDCUTTER:
 		skill_area_temp[1] = 0;
 		map_foreachinshootrange(skill_area_sub, src, skill_get_splash(skill_id, skill_lv), BL_SKILL|BL_CHAR,
 			src,skill_id,skill_lv,tick, flag|BCT_ENEMY|1, skill_castend_damage_id);
@@ -6358,7 +6362,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	//List of self skills that give damage around caster
 	case ASC_METEORASSAULT:
 	case GS_SPREADATTACK:
-	case RK_WINDCUTTER:
 	case RK_STORMBLAST:
 	case NC_AXETORNADO:
 	case GC_COUNTERSLASH:

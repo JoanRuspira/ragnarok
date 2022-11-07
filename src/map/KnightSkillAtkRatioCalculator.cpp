@@ -14,6 +14,7 @@ int KnightSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* 
 		case KN_BOWLINGBASH:
 			return calculate_bowling_bash_atk_ratio(skill_lv, target);
 			break;
+		case CR_SHIELDBOOMERANG:
 		case KN_SPEARBOOMERANG:
 			return calculate_spear_boomerang_atk_ratio(skill_lv);
 			break;
@@ -24,8 +25,12 @@ int KnightSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* 
 			return calculate_brandish_spear_atk_ratio(skill_lv, sstatus->str);
 			break;
 		case RK_WINDCUTTER:
-			return calculate_brandish_spear_atk_ratio(skill_lv, sstatus->int_);
+			return calculate_wind_cutter_atk_ratio(skill_lv, sstatus->int_);
 			break;
+		case RK_SONICWAVE:
+			return calculate_sonic_wave_atk_ratio(skill_lv,  sstatus->int_);
+		case CR_SHIELDCHARGE:
+			return calculate_smite_atk_ratio(skill_lv);
 		default:
 			return 0;
 			break;
@@ -38,6 +43,52 @@ void KnightSkillAtkRatioCalculator::add_auto_counter_special_effects(struct bloc
 	clif_specialeffect(target, EF_RED_CROSS, AREA);
 }
 
+
+int KnightSkillAtkRatioCalculator::calculate_smite_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 55;
+			break;
+		case 2:
+			ratio = 125;
+			break;
+		case 3:
+			ratio = 205;
+			break;
+		case 4:
+			ratio = 265;
+			break;
+		case 5:
+			ratio = 325;
+			break;
+		}
+	return ratio;
+}
+
+int KnightSkillAtkRatioCalculator::calculate_sonic_wave_atk_ratio(int skill_lv, int intelligence)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 20;
+			break;
+		case 2:
+			ratio = 30;
+			break;
+		case 3:
+			ratio = 40;
+			break;
+		case 4:
+			ratio = 50;
+			break;
+		case 5:
+			ratio = 60;
+			break;
+		}
+	return ratio + (intelligence/3);
+}
 
 int KnightSkillAtkRatioCalculator::calculate_wind_cutter_atk_ratio(int skill_lv, int intelligence)
 {
@@ -59,7 +110,7 @@ int KnightSkillAtkRatioCalculator::calculate_wind_cutter_atk_ratio(int skill_lv,
 			ratio = 300;
 			break;
 		}
-	return ratio;
+	return ratio + (intelligence/3);
 }
 
 

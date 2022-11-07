@@ -477,7 +477,7 @@ void initChangeTables(void)
 	set_sc( MO_STEELBODY		, SC_STEELBODY		, EFST_STEELBODY		, SCB_DEF|SCB_MDEF|SCB_ASPD|SCB_SPEED );
 	add_sc( MO_BLADESTOP		, SC_BLADESTOP_WAIT	);
 	set_sc( MO_BLADESTOP		, SC_BLADESTOP	, EFST_BLADESTOP	, SCB_NONE );
-	set_sc( MO_EXPLOSIONSPIRITS	, SC_EXPLOSIONSPIRITS	, EFST_EXPLOSIONSPIRITS	, SCB_CRI|SCB_REGEN );
+	set_sc( MO_EXPLOSIONSPIRITS	, SC_EXPLOSIONSPIRITS	, EFST_EXPLOSIONSPIRITS	, SCB_CRI|SCB_WATK );
 	set_sc( MO_EXTREMITYFIST	, SC_EXTREMITYFIST	, EFST_BLANK			, SCB_REGEN );
 #ifdef RENEWAL
 	set_sc( MO_EXTREMITYFIST	, SC_EXTREMITYFIST2	, EFST_EXTREMITYFIST	, SCB_NONE );
@@ -5099,13 +5099,10 @@ void status_calc_regen_rate(struct block_list *bl, struct regen_data *regen, str
 #ifdef RENEWAL
 		sc->data[SC_MAXIMIZEPOWER] ||
 #endif
-#ifndef RENEWAL
-		(bl->type == BL_PC && (((TBL_PC*)bl)->class_&MAPID_UPPERMASK) == MAPID_MONK &&
-		(sc->data[SC_EXTREMITYFIST] || sc->data[SC_EXPLOSIONSPIRITS]) && (!sc->data[SC_SPIRIT] || sc->data[SC_SPIRIT]->val2 != SL_MONK)) ||
-#else
+
 		(bl->type == BL_PC && (((TBL_PC*)bl)->class_&MAPID_UPPERMASK) == MAPID_MONK &&
 		sc->data[SC_EXTREMITYFIST] && (!sc->data[SC_SPIRIT] || sc->data[SC_SPIRIT]->val2 != SL_MONK)) ||
-#endif
+
 		(sc->data[SC_OBLIVIONCURSE] && sc->data[SC_OBLIVIONCURSE]->val3 == 1))
 		regen->flag &= ~RGN_SP;
 
@@ -6475,21 +6472,8 @@ static unsigned short status_calc_watk(struct block_list *bl, struct status_chan
 		watk += 3 * sc->data[SC_TWOHANDQUICKEN]->val1;
 	if( sc->data[SC_ONEHAND] )
 		watk += 3 * sc->data[SC_ONEHAND]->val1;
-#ifndef RENEWAL
-	if(sc->data[SC_NIBELUNGEN]) {
-		if (bl->type != BL_PC)
-			watk += sc->data[SC_NIBELUNGEN]->val2;
-		else {
-			TBL_PC *sd = (TBL_PC*)bl;
-			short index = sd->equip_index[sd->state.lr_flag?EQI_HAND_L:EQI_HAND_R];
-
-			if(index >= 0 && sd->inventory_data[index] && sd->inventory_data[index]->wlv == 4)
-				watk += sc->data[SC_NIBELUNGEN]->val2;
-		}
-	}
-	if(sc->data[SC_CONCENTRATION])
-		watk += watk * sc->data[SC_CONCENTRATION]->val2 / 100;
-#endif
+	if( sc->data[SC_EXPLOSIONSPIRITS] )
+		watk += 15;
 	if(sc->data[SC_INCATKRATE])
 		watk += watk * sc->data[SC_INCATKRATE]->val1/100;
 	if(sc->data[SC_PROVOKE])
@@ -15295,11 +15279,6 @@ static int status_natural_heal(struct block_list* bl, va_list args)
 		// Homun SP regen fix (they should regen as if they were sitting (twice as fast)
 		if(bl->type==BL_HOM)
 			rate *= 2;
-#ifdef RENEWAL
-		if (bl->type == BL_PC && (((TBL_PC*)bl)->class_&MAPID_UPPERMASK) == MAPID_MONK &&
-			sc && sc->data[SC_EXPLOSIONSPIRITS] && (!sc->data[SC_SPIRIT] || sc->data[SC_SPIRIT]->val2 != SL_MONK))
-			rate /= 2; // Tick is doubled in Fury state
-#endif
 		regen->tick.sp += rate;
 
 		if(regen->tick.sp >= (unsigned int)battle_config.natural_healsp_interval) {

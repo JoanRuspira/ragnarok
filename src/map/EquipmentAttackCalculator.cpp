@@ -166,8 +166,8 @@ int EquipmentAttackCalculator::battle_get_weapon_element(Damage * wd, block_list
 	if (calc_for_damage_only)
 		return element;
 
-	if (skill_id == CR_SHIELDBOOMERANG)
-		element = ELE_NEUTRAL;
+	// if (skill_id == CR_SHIELDBOOMERANG)
+	// 	element = ELE_NEUTRAL;
 
 	return element;
 }

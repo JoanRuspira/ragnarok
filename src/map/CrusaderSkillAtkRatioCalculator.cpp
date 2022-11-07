@@ -28,12 +28,12 @@ int CrusaderSkillAtkRatioCalculator::calculate_skill_atk_ratio()
 	case CR_HOLYCROSS:
 		return calculate_holy_cross_atk_ratio();
 		break;
-	case CR_SHIELDCHARGE:
-		return calculate_shield_charge_atk_ratio();
-		break;
-	case CR_SHIELDBOOMERANG:
-		return calculate_shield_boomerang_atk_ratio();
-		break;
+	// case CR_SHIELDCHARGE:
+	// 	return calculate_shield_charge_atk_ratio();
+	// 	break;
+	// case CR_SHIELDBOOMERANG:
+	// 	return calculate_shield_boomerang_atk_ratio();
+	// 	break;
 	// case KN_SPEARBOOMERANG:
 	// 	return calculate_spear_boomerang_atk_ratio();
 	// 	break;

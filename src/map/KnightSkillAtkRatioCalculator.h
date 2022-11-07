@@ -15,5 +15,7 @@ class KnightSkillAtkRatioCalculator
 		static int calculate_pierce_atk_ratio(int skill_lv);
 		static int calculate_brandish_spear_atk_ratio(int skill_lv, int strength);
 		static int calculate_wind_cutter_atk_ratio(int skill_lv, int intelligence);
+		static int calculate_sonic_wave_atk_ratio(int skill_lv, int intelligence);
+		static int calculate_smite_atk_ratio(int skill_lv);
 		static void add_auto_counter_special_effects(struct block_list* src, struct block_list *target);
 };

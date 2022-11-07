@@ -315,6 +315,9 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 		case KN_AUTOCOUNTER:
 			KnightAdditionalEffectsCalculator::apply_auto_counter_additional_effect(src, bl, skill_lv);
 			break;
+		case CR_SHIELDCHARGE:
+			KnightAdditionalEffectsCalculator::apply_smite_additional_effect(src, bl, skill_lv);
+			break;
 	}
 }
 
