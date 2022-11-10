@@ -31,6 +31,8 @@ int KnightSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* 
 			return calculate_sonic_wave_atk_ratio(skill_lv,  sstatus->int_);
 		case CR_SHIELDCHARGE:
 			return calculate_smite_atk_ratio(skill_lv);
+		case PA_SACRIFICE:
+			return calculate_reckoning_atk_ratio(skill_lv);
 		default:
 			return 0;
 			break;
@@ -41,6 +43,29 @@ void KnightSkillAtkRatioCalculator::add_auto_counter_special_effects(struct bloc
 {
 	clif_specialeffect(target, EF_MADNESS_RED, AREA);
 	clif_specialeffect(target, EF_RED_CROSS, AREA);
+}
+
+int KnightSkillAtkRatioCalculator::calculate_reckoning_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 0;
+			break;
+		case 2:
+			ratio = 25;
+			break;
+		case 3:
+			ratio = 50;
+			break;
+		case 4:
+			ratio = 75;
+			break;
+		case 5:
+			ratio = 100;
+			break;
+		}
+	return ratio;
 }
 
 
@@ -72,19 +97,19 @@ int KnightSkillAtkRatioCalculator::calculate_sonic_wave_atk_ratio(int skill_lv, 
 	int ratio = 0;
 	switch (skill_lv) {
 		case 1:
-			ratio = 20;
+			ratio = 0;
 			break;
 		case 2:
-			ratio = 30;
+			ratio = 10;
 			break;
 		case 3:
-			ratio = 40;
+			ratio = 20;
 			break;
 		case 4:
-			ratio = 50;
+			ratio = 30;
 			break;
 		case 5:
-			ratio = 60;
+			ratio = 40;
 			break;
 		}
 	return ratio + (intelligence/3);

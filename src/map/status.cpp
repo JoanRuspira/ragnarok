@@ -469,7 +469,6 @@ void initChangeTables(void)
 	add_sc( CR_SHIELDCHARGE		, SC_STUN		);
 	set_sc( CR_REFLECTSHIELD	, SC_REFLECTSHIELD	, EFST_REFLECTSHIELD	, SCB_NONE );
 	add_sc( CR_HOLYCROSS		, SC_BLIND		);
-	add_sc( CR_GRANDCROSS		, SC_BLIND		);
 	set_sc( CR_DEVOTION		, SC_DEVOTION	, EFST_DEVOTION	, SCB_NONE);
 	set_sc( CR_PROVIDENCE		, SC_PROVIDENCE		, EFST_PROVIDENCE		, SCB_ALL );
 	set_sc( CR_DEFENDER		, SC_DEFENDER		, EFST_DEFENDER		, SCB_SPEED|SCB_ASPD );
@@ -580,7 +579,7 @@ void initChangeTables(void)
 	add_sc( HP_BASILICA		, SC_BASILICA		);
 #endif
 	set_sc( HW_MAGICPOWER		, SC_MAGICPOWER		, EFST_MAGICPOWER		, SCB_MATK );
-	add_sc( PA_SACRIFICE		, SC_SACRIFICE		);
+	add_sc( PA_SACRIFICE		, SC_SACRIFICE		, EFST_SACRIFICE		);
 	set_sc( PA_GOSPEL		, SC_GOSPEL		, EFST_GOSPEL		, SCB_SPEED|SCB_ASPD );
 	add_sc( PA_GOSPEL		, SC_SCRESIST		);
 	add_sc( CH_TIGERFIST		, SC_STOP		);
@@ -11392,8 +11391,8 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 				val2 += 750;
 			break;
 		case SC_PRESTIGE:
-			val2 = (status->int_ + status->luk) * val1 / 20 * status_get_lv(bl) / 200 + val1;	// Chance to evade magic damage.
-			val3 = ((val1 * 15) + (10 * (sd?pc_checkskill(sd,CR_DEFENDER):skill_get_max(CR_DEFENDER)))) * status_get_lv(bl) / 100; // Defence added
+			val2 = val1 * 5;	// Chance to evade magic damage.
+			val3 = val1 * 10; // Defence added
 			break;
 		case SC_BANDING:
 			val2 = (sd ? skill_banding_count(sd) : 1);

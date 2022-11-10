@@ -966,7 +966,7 @@ Body:
   - Id: 28
     Name: AL_HEAL
     Description: Heal
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Magic
     TargetType: Support
     DamageFlags:
@@ -983,8 +983,8 @@ Body:
         Plagiarism: true
         Reproduce: true
     CastCancel: true
-    CastTime: 4000
-    Cooldown: 5000
+    CastTime: 3000
+    Cooldown: 7000
     AfterCastActDelay: 1000
     Requires:
       SpCost: 40
@@ -1084,6 +1084,7 @@ Body:
       Splash: true
     Hit: Single
     HitCount: 1
+    Cooldown: 30000
     SplashArea: 15
     CastCancel: true
     CastTime: 500
@@ -1584,7 +1585,7 @@ Body:
     Knockback: 2
     CastTime: 700
     Duration1: 1000
-    Cooldown: 5000
+    Cooldown: 7000
     AfterCastActDelay: 400
     Requires:
       SpCost: 12
@@ -1804,6 +1805,7 @@ Body:
     MaxLevel: 5
     Type: Magic
     TargetType: Support
+    Cooldown: 10000
     DamageFlags:
       NoDamage: true
       IgnoreElement: true
@@ -1817,7 +1819,7 @@ Body:
         Plagiarism: true
         Reproduce: true
     CastCancel: true
-    AfterCastActDelay: 2000
+    AfterCastActDelay: 3000
     Duration1:
       - Level: 1
         Time: 60000
@@ -6116,36 +6118,18 @@ Body:
   - Id: 249
     Name: CR_AUTOGUARD
     Description: Guard
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Self
     DamageFlags:
       NoDamage: true
     Hit: Single
     HitCount: 1
+    Cooldown: 20000
+    AfterCastActDelay: 5000
     Duration1: 300000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 12
-        - Level: 2
-          Amount: 14
-        - Level: 3
-          Amount: 16
-        - Level: 4
-          Amount: 18
-        - Level: 5
-          Amount: 20
-        - Level: 6
-          Amount: 22
-        - Level: 7
-          Amount: 24
-        - Level: 8
-          Amount: 26
-        - Level: 9
-          Amount: 28
-        - Level: 10
-          Amount: 30
+      SpCost: 30
       State: Shield
   - Id: 250
     Name: CR_SHIELDCHARGE
@@ -6199,41 +6183,23 @@ Body:
   - Id: 252
     Name: CR_REFLECTSHIELD
     Description: Shield Reflect
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Self
     DamageFlags:
       NoDamage: true
     Hit: Single
     HitCount: 1
+    Cooldown: 30000
+    AfterCastActDelay: 5000
     Duration1: 300000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 35
-        - Level: 2
-          Amount: 40
-        - Level: 3
-          Amount: 45
-        - Level: 4
-          Amount: 50
-        - Level: 5
-          Amount: 55
-        - Level: 6
-          Amount: 60
-        - Level: 7
-          Amount: 65
-        - Level: 8
-          Amount: 70
-        - Level: 9
-          Amount: 75
-        - Level: 10
-          Amount: 80
+      SpCost: 60
       State: Shield
   - Id: 253
     Name: CR_HOLYCROSS
     Description: Holy Cross
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     Flags:
@@ -6247,32 +6213,14 @@ Body:
         Plagiarism: true
         Reproduce: true
     Duration2: 30000
+    Cooldown: 5000
+    AfterCastActDelay: 400
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 11
-        - Level: 2
-          Amount: 12
-        - Level: 3
-          Amount: 13
-        - Level: 4
-          Amount: 14
-        - Level: 5
-          Amount: 15
-        - Level: 6
-          Amount: 16
-        - Level: 7
-          Amount: 17
-        - Level: 8
-          Amount: 18
-        - Level: 9
-          Amount: 19
-        - Level: 10
-          Amount: 20
+      SpCost: 20
   - Id: 254
     Name: CR_GRANDCROSS
     Description: Grand Cross
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Magic
     TargetType: Self
     DamageFlags:
@@ -6290,33 +6238,13 @@ Body:
         Reproduce: true
     CastDefenseReduction: 33
     CastTime: 3000
-    AfterCastActDelay: 1500
+    AfterCastActDelay: 400
     AfterCastWalkDelay: 1000
+    Cooldown: 7000
     Duration1: 950
     Duration2: 30000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 37
-        - Level: 2
-          Amount: 44
-        - Level: 3
-          Amount: 51
-        - Level: 4
-          Amount: 58
-        - Level: 5
-          Amount: 65
-        - Level: 6
-          Amount: 72
-        - Level: 7
-          Amount: 79
-        - Level: 8
-          Amount: 86
-        - Level: 9
-          Amount: 93
-        - Level: 10
-          Amount: 100
-      HpRateCost: 20
+      SpCost: 100
     Unit:
       Id: Dummyskill
       Layout: -1
@@ -9174,16 +9102,20 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Self
+    Element: Weapon
     DamageFlags:
       NoDamage: true
       IgnoreDefense: true
       IgnoreFlee: true
+      Critical: true
     Hit: Single
     HitCount: 1
     CastCancel: true
+    Cooldown: 20000
     AfterCastActDelay: 2000
+    Duration1: 50000
     Requires:
-      SpCost: 100
+      SpCost: 20
   - Id: 369
     Name: PA_GOSPEL
     Description: Battle Chant
@@ -18900,21 +18832,11 @@ Body:
       Skill:
         Reproduce: true
     CastCancel: true
-    CastTime: 1000
-    AfterCastActDelay: 1000
-    Cooldown: 3000
+    CastTime: 6000
+    AfterCastActDelay: 2000
+    Cooldown: 15000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 70
-        - Level: 2
-          Amount: 100
-        - Level: 3
-          Amount: 130
-        - Level: 4
-          Amount: 160
-        - Level: 5
-          Amount: 190
+      SpCost: 100
   - Id: 2052
     Name: AB_CLEARANCE
     Description: Clearance
@@ -21922,30 +21844,12 @@ Body:
     HitCount: 1
     CastCancel: true
     CastTime: 1000
-    Duration1:
-      - Level: 1
-        Time: 30000
-      - Level: 2
-        Time: 45000
-      - Level: 3
-        Time: 60000
-      - Level: 4
-        Time: 75000
-      - Level: 5
-        Time: 90000
-    Cooldown: 60000
+    Duration1: 300000
+    Cooldown: 30000
+    AfterCastActDelay: 5000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 75
-        - Level: 2
-          Amount: 80
-        - Level: 3
-          Amount: 85
-        - Level: 4
-          Amount: 90
-        - Level: 5
-          Amount: 95
+      SpCost: 60
+      State: Shield
   - Id: 2319
     Name: LG_BANDING
     Description: Banding

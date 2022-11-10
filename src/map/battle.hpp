@@ -32,6 +32,7 @@
 #include "AcolyteAdditionalEffectsCalculator.h"
 #include "MageAdditionalEffectsCalculator.h"
 #include "KnightAdditionalEffectsCalculator.h"
+#include "CrusaderAdditionalEffectsCalculator.h"
 
 
 //fwd declaration

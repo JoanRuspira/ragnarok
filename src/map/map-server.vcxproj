@@ -183,6 +183,7 @@
     <ClInclude Include="clif_packetdb.hpp" />
     <ClInclude Include="clif_shuffle.hpp" />
     <ClInclude Include="CriticalHitCalculator.h" />
+    <ClInclude Include="CrusaderAdditionalEffectsCalculator.h" />
     <ClInclude Include="CrusaderSkillAtkRatioCalculator.h" />
     <ClInclude Include="CrusaderSkillMatkRatioCalculator.h" />
     <ClInclude Include="date.hpp" />
@@ -250,6 +251,7 @@
     <ClCompile Include="clan.cpp" />
     <ClCompile Include="clif.cpp" />
     <ClCompile Include="CriticalHitCalculator.cpp" />
+    <ClCompile Include="CrusaderAdditionalEffectsCalculator.cpp" />
     <ClCompile Include="CrusaderSkillAtkRatioCalculator.cpp" />
     <ClCompile Include="CrusaderSkillMatkRatioCalculator.cpp" />
     <ClCompile Include="date.cpp" />

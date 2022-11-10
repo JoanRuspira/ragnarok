@@ -318,6 +318,8 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 		case CR_SHIELDCHARGE:
 			KnightAdditionalEffectsCalculator::apply_smite_additional_effect(src, bl, skill_lv);
 			break;
+		case CR_HOLYCROSS:
+			CrusaderAdditionalEffectsCalculator::apply_holy_cross_additional_effect(src, bl, skill_lv);
 	}
 }
 

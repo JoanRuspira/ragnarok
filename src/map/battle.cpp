@@ -361,9 +361,6 @@ int battle_delay_damage(t_tick tick, int amotion, struct block_list *src, struct
 
 	if( ((d_tbl && check_distance_bl(target, d_tbl, sc->data[SC_DEVOTION]->val3)) || e_tbl) &&
 		damage > 0 && skill_id != CR_REFLECTSHIELD
-#ifndef RENEWAL
-		&& skill_id != PA_PRESSURE
-#endif
 		) {
 		struct map_session_data* tsd = BL_CAST( BL_PC, target );
 
@@ -1232,18 +1229,18 @@ bool battle_status_block_damage(struct block_list *src, struct block_list *targe
 	}
 
 	// ATK_MISS Type
-	if ((sce = sc->data[SC_AUTOGUARD]) && flag&BF_WEAPON && rnd() % 100 < sce->val2 && !skill_get_inf2(skill_id, INF2_IGNOREAUTOGUARD)) {
+	if ((sce = sc->data[SC_AUTOGUARD]) && flag&BF_WEAPON && rnd() % 100 < (sce->val2 * 2) && !skill_get_inf2(skill_id, INF2_IGNOREAUTOGUARD)) {
 		status_change_entry *sce_d = sc->data[SC_DEVOTION];
 		block_list *d_bl;
 		int delay;
 
 		// different delay depending on skill level [celest]
-		if (sce->val1 <= 5)
-			delay = 300;
-		else if (sce->val1 > 5 && sce->val1 <= 9)
-			delay = 200;
-		else
-			delay = 100;
+		// if (sce->val1 <= 5)
+		// 	delay = 300;
+		// else if (sce->val1 > 5 && sce->val1 <= 9)
+		// 	delay = 200;
+		// else
+		delay = 100;
 
 		map_session_data *sd = map_id2sd(target->id);
 
@@ -2759,15 +2756,11 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		if(sc->data[SC_MAXOVERTHRUST])
 			skillratio += sc->data[SC_MAXOVERTHRUST]->val2;
 		if(sc->data[SC_BERSERK])
-#ifndef RENEWAL
-			skillratio += 100;
-#else
 			skillratio += 200;
 		if (sc && sc->data[SC_TRUESIGHT])
 			skillratio += 2 * sc->data[SC_TRUESIGHT]->val1;
 		if (sc->data[SC_CONCENTRATION] && (skill_id != RK_DRAGONBREATH && skill_id != RK_DRAGONBREATH_WATER))
 			skillratio += sc->data[SC_CONCENTRATION]->val2;
-#endif
 		if (!skill_id) {
 			if (sc->data[SC_CRUSHSTRIKE]) {
 				if (sd) { //ATK [{Weapon Level * (Weapon Upgrade Level + 6) * 100} + (Weapon ATK) + (Weapon Weight)]%
@@ -2792,18 +2785,18 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 
 
 
-	if (sd) {
-		if (sd->class_ == MAPID_CRUSADER || sd->class_ == MAPID_PALADIN) {
-			CrusaderSkillAtkRatioCalculator *crusader_atk_ratio_calculator = new CrusaderSkillAtkRatioCalculator(status_get_lv(src), skill_id, skill_lv, sstatus->int_);
-			skillratio += crusader_atk_ratio_calculator->calculate_skill_atk_ratio();
-			delete crusader_atk_ratio_calculator;
-		}
-		if (sd->class_ == MAPID_KNIGHT || sd->class_ == MAPID_LORD_KNIGHT) {
-			CrusaderSkillAtkRatioCalculator *crusader_atk_ratio_calculator = new CrusaderSkillAtkRatioCalculator(status_get_lv(src), skill_id, skill_lv, sstatus->int_);
-			skillratio += crusader_atk_ratio_calculator->calculate_skill_atk_ratio();
-			delete crusader_atk_ratio_calculator;
-		}
-	}
+	// if (sd) {
+	// 	if (sd->class_ == MAPID_CRUSADER || sd->class_ == MAPID_PALADIN) {
+	// 		CrusaderSkillAtkRatioCalculator *crusader_atk_ratio_calculator = new CrusaderSkillAtkRatioCalculator(status_get_lv(src), skill_id, skill_lv, sstatus->int_);
+	// 		skillratio += crusader_atk_ratio_calculator->calculate_skill_atk_ratio();
+	// 		delete crusader_atk_ratio_calculator;
+	// 	}
+		// if (sd->class_ == MAPID_KNIGHT || sd->class_ == MAPID_LORD_KNIGHT) {
+		// 	CrusaderSkillAtkRatioCalculator *crusader_atk_ratio_calculator = new CrusaderSkillAtkRatioCalculator(status_get_lv(src), skill_id, skill_lv, sstatus->int_);
+		// 	skillratio += crusader_atk_ratio_calculator->calculate_skill_atk_ratio();
+		// 	delete crusader_atk_ratio_calculator;
+		// }
+	// }
 
 
 
@@ -2842,8 +2835,11 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case RK_SONICWAVE:
 		case CR_SHIELDCHARGE:
 		case CR_SHIELDBOOMERANG:
+		case PA_SACRIFICE:
 			skillratio += KnightSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
+		case CR_HOLYCROSS:
+			skillratio += CrusaderSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 		case MER_CRASH:
 			skillratio += 10 * skill_lv;
 			break;
@@ -2935,7 +2931,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			skillratio += 30 * skill_lv;
 			break;
 		case NPC_DARKCROSS:
-		case CR_HOLYCROSS:
 #ifdef RENEWAL
 			if(sd && sd->status.weapon == W_2HSPEAR)
 				skillratio += 70 * skill_lv;
@@ -3101,9 +3096,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			// Pre-Renewal: skill ratio for weapon part of damage [helvetica]
 			skillratio += -100 + 100 * skill_lv;
 #endif
-			break;
-		case PA_SACRIFICE:
-			skillratio += -10 + 10 * skill_lv;
 			break;
 		case PA_SHIELDCHAIN:
 #ifdef RENEWAL
@@ -5771,19 +5763,9 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 			case CR_GRANDCROSS:
 			case NPC_GRANDDARKNESS: {
 					struct Damage wd = battle_calc_weapon_attack(src,target,skill_id,skill_lv,mflag);
-
-					ad.damage = battle_attr_fix(src, target, wd.damage + ad.damage, s_ele, tstatus->def_ele, tstatus->ele_lv) * (100 + 40 * skill_lv) / 100;
-#ifdef RENEWAL
+					ad.damage = battle_attr_fix(src, target, wd.damage + ad.damage, s_ele, tstatus->def_ele, tstatus->ele_lv) * (20 * skill_lv) / 100;
 					if (src == target)
 						ad.damage = 0;
-#else
-					if(src == target) {
-						if(src->type == BL_PC)
-							ad.damage = ad.damage / 2;
-						else
-							ad.damage = 0;
-					}
-#endif
 				}
 				break;
 		}
@@ -6314,7 +6296,7 @@ int64 battle_calc_return_damage(struct block_list* bl, struct block_list *src, i
 					if (!skill_id && battle_config.devotion_rdamage_skill_only && sc->data[SC_REFLECTSHIELD]->val4)
 						rdamage = 0;
 					else {
-						rdamage += damage * sc->data[SC_REFLECTSHIELD]->val2 / 100;
+						rdamage += damage * ((sc->data[SC_REFLECTSHIELD]->val2 *2) + 20) / 100;
 						rdamage = i64max(rdamage, 1);
 					}
 				}
@@ -6678,7 +6660,7 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 			 */
 			ret_val = (damage_lv)skill_attack(BF_WEAPON,src,src,target,PA_SACRIFICE,skill_lv,tick,0);
 
-			status_zap(src, sstatus->max_hp*9/100, 0);//Damage to self is always 9%
+			// status_zap(src, sstatus->max_hp*9/100, 0);//Damage to self is always 9%
 			if( ret_val == ATK_NONE )
 				return ATK_MISS;
 			return ret_val;
