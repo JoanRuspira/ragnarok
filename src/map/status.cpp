@@ -451,9 +451,9 @@ void initChangeTables(void)
 	add_sc( NPC_LICK		, SC_STUN		);
 	set_sc( NPC_HALLUCINATION	, SC_HALLUCINATION	, EFST_ILLUSION, SCB_NONE );
 	add_sc( NPC_REBIRTH		, SC_REBIRTH		);
-	add_sc( RG_RAID			, SC_STUN		);
+	// add_sc( RG_RAID			, SC_STUN		);
 #ifdef RENEWAL
-	add_sc( RG_RAID			, SC_RAID		);
+	// add_sc( RG_RAID			, SC_RAID		);
 	add_sc( RG_BACKSTAP		, SC_STUN		);
 #endif
 	set_sc( RG_STRIPWEAPON		, SC_STRIPWEAPON	, EFST_NOEQUIPWEAPON, SCB_WATK );

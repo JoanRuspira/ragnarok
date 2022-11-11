@@ -1327,7 +1327,7 @@ Body:
         Plagiarism: true
         Reproduce: true
     Duration1: 100
-    Cooldown: 7000
+    Cooldown: 5000
     AfterCastActDelay: 400
     Requires:
       SpCost: 12
@@ -1489,7 +1489,7 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Weapon
-    Cooldown: 2000
+    Cooldown: 4000
     AfterCastActDelay: 400
     CopyFlags:
       Skill:
@@ -4079,7 +4079,7 @@ Body:
   - Id: 135
     Name: AS_CLOAKING
     Description: Cloaking
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Self
     DamageFlags:
@@ -4091,24 +4091,14 @@ Body:
     HitCount: 1
     Duration1:
       - Level: 1
-        Time: 500
-      - Level: 2
         Time: 1000
-      - Level: 3
-        Time: 2000
-      - Level: 4
+      - Level: 2
         Time: 3000
-      - Level: 5
-        Time: 4000
-      - Level: 6
+      - Level: 3
         Time: 5000
-      - Level: 7
-        Time: 6000
-      - Level: 8
+      - Level: 4
         Time: 7000
-      - Level: 9
-        Time: 8000
-      - Level: 10
+      - Level: 5
         Time: 9000
     Requires:
       SpCost: 15
@@ -4179,10 +4169,6 @@ Body:
     SplashArea: 1
     Requires:
       SpCost: 3
-      Weapon:
-        Katar: true
-      Status:
-        Hiding: true
   - Id: 138
     Name: AS_ENCHANTPOISON
     Description: Enchant Poison
@@ -5524,8 +5510,6 @@ Body:
     Duration2: 30000
     Requires:
       SpCost: 20
-      Status:
-        Hiding: true
   - Id: 215
     Name: RG_STRIPWEAPON
     Description: Divest Weapon
@@ -6245,6 +6229,7 @@ Body:
     Duration2: 30000
     Requires:
       SpCost: 100
+      HpRateCost: 0
     Unit:
       Id: Dummyskill
       Layout: -1
@@ -15977,13 +15962,12 @@ Body:
   - Id: 1004
     Name: AS_VENOMKNIFE
     Description: Throw Venom Knife
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     DamageFlags:
       IgnoreAtkCard: true
     Flags:
-      IsQuest: true
       IgnoreAutoGuard: true
       IgnoreCicada: true
     Range: 9
@@ -16016,9 +16000,6 @@ Body:
         Time: 60000
     Requires:
       SpCost: 15
-      Ammo:
-        Dagger: true
-      AmmoAmount: 1
   - Id: 1005
     Name: RG_CLOSECONFINE
     Description: Close Confine
@@ -18099,8 +18080,6 @@ Body:
           Amount: 25
         - Level: 10
           Amount: 27
-      Status:
-        Weaponblock_On: true
   - Id: 2030
     Name: GC_WEAPONCRUSH
     Description: Weapon Crush

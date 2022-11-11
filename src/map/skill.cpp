@@ -3877,6 +3877,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 		break;
 
 	//Splash attack skills.
+	case RG_RAID:
 	case AS_GRIMTOOTH:
 	case MC_CARTREVOLUTION:
 	case NPC_SPLASHATTACK:
@@ -3888,7 +3889,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case AL_HOLYLIGHT:
 	case MG_NAPALMBEAT:
 	case MG_FIREBALL:
-	case RG_RAID:
+	// case RG_RAID:
 	case HW_NAPALMVULCAN:
 	case NJ_HUUMA:
 	case ASC_METEORASSAULT:
@@ -10495,6 +10496,7 @@ static int8 skill_castend_id_check(struct block_list *src, struct block_list *ta
 		case MG_FIREBALL:
 		case HT_BLITZBEAT:
 		case AS_GRIMTOOTH:
+		case RG_RAID:
 		case MO_COMBOFINISH:
 		case NC_VULCANARM:
 		case SR_TIGERCANNON:
