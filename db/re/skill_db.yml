@@ -205,6 +205,10 @@ Body:
     HitCount: 1
     Duration1: 30000
     Cooldown: 1000
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost:
         - Level: 1
@@ -994,6 +998,10 @@ Body:
     MaxLevel: 10
     Type: Magic
     TargetType: Support
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     DamageFlags:
       NoDamage: true
     Flags:
@@ -1107,6 +1115,10 @@ Body:
     CastTime: 2000
     Cooldown: 10000
     AfterCastActDelay: 1000
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Duration1:
       - Level: 1
         Time: 60000
@@ -1136,6 +1148,10 @@ Body:
     CastCancel: true
     Cooldown: 2000
     AfterCastActDelay: 500
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Duration1:
       - Level: 1
         Time: 80000
@@ -1406,7 +1422,7 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Weapon
-    Cooldown: 7000
+    Cooldown: 5000
     AfterCastActDelay: 400
     CopyFlags:
       Skill:
@@ -1462,7 +1478,7 @@ Body:
       AllowOnMado: true
       IgnoreWugBite: true
     Range: 1
-    Cooldown: 2000
+    Cooldown: 1000
     AfterCastActDelay: 400
     Hit: Single
     HitCount: 1
@@ -1563,6 +1579,10 @@ Body:
     Hit: Multi_Hit
     HitCount: 3
     Element: Weapon
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 7
       Weapon:
@@ -1587,6 +1607,10 @@ Body:
     Duration1: 1000
     Cooldown: 7000
     AfterCastActDelay: 400
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 12
       Weapon:
@@ -1609,6 +1633,10 @@ Body:
     Knockback: 6
     Cooldown: 3000
     AfterCastActDelay: 400
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 15
       Weapon:
@@ -1636,6 +1664,10 @@ Body:
     Element: Weapon
     Cooldown: 5000
     AfterCastActDelay: 400
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 10
       Weapon:
@@ -1682,6 +1714,10 @@ Body:
     AfterCastActDelay: 100
     HitCount: 1
     Element: Weapon
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Duration1:
       - Level: 1
         Time: 400
@@ -1734,6 +1770,7 @@ Body:
       SpCost: 22
       Weapon:
         2hSword: true
+        1hSword: true
   - Id: 63
     Name: KN_RIDING
     Description: Peco Peco Riding
@@ -3326,6 +3363,10 @@ Body:
     HitCount: 1
     Cooldown: 20000
     AfterCastActDelay: 3000
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     SplashArea: -1
     Duration1:
       - Level: 1
@@ -4082,6 +4123,8 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Self
+    Cooldown: 1000
+    AfterCastActDelay: 400
     DamageFlags:
       NoDamage: true
     Flags:
@@ -4147,6 +4190,12 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
+    Cooldown: 7000
+    AfterCastActDelay: 400
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     DamageFlags:
       Splash: true
     Flags:
@@ -4163,12 +4212,12 @@ Body:
         Size: 6
       - Level: 5
         Size: 7
-    Hit: Single
-    HitCount: 1
+    Hit: Multi_Hit
+    HitCount: 2
     Element: Weapon
     SplashArea: 1
     Requires:
-      SpCost: 3
+      SpCost: 15
   - Id: 138
     Name: AS_ENCHANTPOISON
     Description: Enchant Poison
@@ -4518,7 +4567,7 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Weapon
-    Cooldown: 8000
+    Cooldown: 5000
     AfterCastActDelay: 400
     CopyFlags:
       Skill:
@@ -4583,7 +4632,7 @@ Body:
     Range: 7
     Hit: Single
     HitCount: 1
-    Cooldown: 10000
+    Cooldown: 7000
     AfterCastActDelay: 400
     CopyFlags:
       Skill:
@@ -4597,8 +4646,14 @@ Body:
     Name: MC_CARTREVOLUTION
     Description: Cart Revolution
     MaxLevel: 5
+    Cooldown: 5000
+    AfterCastActDelay: 400
     Type: Weapon
     TargetType: Attack
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     DamageFlags:
       Splash: true
     Flags:
@@ -4609,7 +4664,6 @@ Body:
     HitCount: 1
     Element: Weapon
     SplashArea: 1
-    Knockback: 2
     Requires:
       SpCost: 12
       State: Cart
@@ -4640,6 +4694,10 @@ Body:
       AllowOnMado: true
     Hit: Single
     HitCount: 1
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Duration1:
       - Level: 1
         Time: 24000
@@ -5469,17 +5527,16 @@ Body:
   - Id: 212
     Name: RG_BACKSTAP
     Description: Back Stab
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     DamageFlags:
       IgnoreFlee: true
-    Flags:
-      AllowWhenHidden: true
     Range: -1
     Hit: Single
     HitCount: 1
     Element: Weapon
+    Cooldown: 6000
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -5487,6 +5544,10 @@ Body:
     AfterCastActDelay: 500
     Requires:
       SpCost: 16
+      Weapon:
+        Dagger: true
+        1hSword: true
+        2hsword: true
   - Id: 213
     Name: RG_TUNNELDRIVE
     Description: Stalk
@@ -5497,6 +5558,10 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Self
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     DamageFlags:
       Splash: true
     Flags:
@@ -5505,11 +5570,13 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Weapon
-    SplashArea: 1
+    Cooldown: 10000
+    AfterCastActDelay: 400
+    SplashArea: 3
     Duration1: 5000
     Duration2: 30000
     Requires:
-      SpCost: 20
+      SpCost: 15
   - Id: 215
     Name: RG_STRIPWEAPON
     Description: Divest Weapon
@@ -5735,7 +5802,7 @@ Body:
   - Id: 225
     Name: RG_PLAGIARISM
     Description: Intimidate
-    MaxLevel: 10
+    MaxLevel: 5
   - Id: 226
     Name: AM_AXEMASTERY
     Description: Axe Mastery
@@ -6177,6 +6244,10 @@ Body:
     Cooldown: 30000
     AfterCastActDelay: 5000
     Duration1: 300000
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 60
       State: Shield
@@ -8415,6 +8486,10 @@ Body:
     CastCancel: true
     CastTime: 500
     Cooldown: 5000
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     AfterCastActDelay: 1000
     Requires:
       SpCost: 38
@@ -9099,6 +9174,10 @@ Body:
     Cooldown: 20000
     AfterCastActDelay: 2000
     Duration1: 50000
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 20
   - Id: 369
@@ -9785,9 +9864,11 @@ Body:
       IgnoreKagehumi: true
     Hit: Single
     HitCount: 1
-    CastTime: 1200
+    CastTime: 1000
+    Cooldown¨: 0
+    AfterCastActDelay: 400
     Duration1: 10000
-    Duration2: 30000
+    Duration2: 120000
     Requires:
       SpCost: 10
   - Id: 390
@@ -10043,6 +10124,10 @@ Body:
     Element: Weapon
     AfterCastActDelay: 500
     Duration2: 120000
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 14
       Weapon:
@@ -12047,14 +12132,26 @@ Body:
   - Id: 475
     Name: ST_PRESERVE
     Description: Preserve
-    MaxLevel: 1
+    MaxLevel: 5
     TargetType: Self
     DamageFlags:
       NoDamage: true
     HitCount: 1
     CastCancel: true
     CastTime: 1000
-    Duration1: 600000
+    Cooldown: 20000
+    AfterCastActDelay: 3000
+    Duration1:
+      - Level: 1
+        Time: 120000
+      - Level: 2
+        Time: 240000
+      - Level: 3
+        Time: 360000
+      - Level: 3
+        Time: 480000
+      - Level: 3
+        Time: 600000
     Requires:
       SpCost: 30
   - Id: 476
@@ -12758,6 +12855,10 @@ Body:
     Hit: Multi_Hit
     HitCount: 2
     Element: Weapon
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Duration1: 100
     Requires:
       SpCost: 12
@@ -13723,8 +13824,6 @@ Body:
     TargetType: Ground
     DamageFlags:
       NoDamage: true
-    Flags:
-      AllowWhenHidden: true
     Range:
       - Level: 1
         Size: 7
@@ -13749,14 +13848,13 @@ Body:
         Hiding: true
   - Id: 530
     Name: NJ_KIRIKAGE
-    Description: Shadow Slash
+    Description: Shady Slash
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     DamageFlags:
       Critical: true
     Flags:
-      AllowWhenHidden: true
       AlterRangeShadowJump: true
     Range:
       - Level: 1
@@ -13777,19 +13875,11 @@ Body:
         Plagiarism: true
         Reproduce: true
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 14
-        - Level: 2
-          Amount: 16
-        - Level: 3
-          Amount: 18
-        - Level: 4
-          Amount: 20
-        - Level: 5
-          Amount: 22
-      Status:
-        Hiding: true
+      SpCost: 15
+      Weapon:
+        Dagger: true
+        1hSword: true
+        2hsword: true
   - Id: 531
     Name: NJ_UTSUSEMI
     Description: Cicada Skin Sheeding
@@ -16328,6 +16418,7 @@ Body:
     Element: Weapon
     CopyFlags:
       Skill:
+        Plagiarism: true
         Reproduce: true
     AfterCastActDelay: 500
     Cooldown: 3000
@@ -18025,61 +18116,39 @@ Body:
           Amount: 24
   - Id: 2029
     Name: GC_COUNTERSLASH
-    Description: Counter Slash
-    MaxLevel: 10
+    Description: Hack and Slash
+    MaxLevel: 5
     Type: Weapon
     TargetType: Self
     DamageFlags:
       Splash: true
       IgnoreDefense: true
     Hit: Single
-    HitCount: 1
+    HitCount: 3
     Element: Weapon
+    Cooldown: 8000
     SplashArea:
       - Level: 1
-        Area: 1
+        Area: 3
       - Level: 2
-        Area: 1
+        Area: 3
       - Level: 3
-        Area: 1
+        Area: 3
       - Level: 4
-        Area: 1
+        Area: 3
       - Level: 5
-        Area: 1
-      - Level: 6
-        Area: 2
-      - Level: 7
-        Area: 2
-      - Level: 8
-        Area: 2
-      - Level: 9
-        Area: 2
-      - Level: 10
-        Area: 2
-    Knockback: 3
-    AfterCastActDelay: 2000
+        Area: 3
+    AfterCastActDelay: 500
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 5
-        - Level: 2
-          Amount: 8
-        - Level: 3
-          Amount: 11
-        - Level: 4
-          Amount: 14
-        - Level: 5
-          Amount: 17
-        - Level: 6
-          Amount: 19
-        - Level: 7
-          Amount: 21
-        - Level: 8
-          Amount: 23
-        - Level: 9
-          Amount: 25
-        - Level: 10
-          Amount: 27
+      SpCost: 23
+      Weapon:
+        Dagger: true
+        1hSword: true
+        2hsword: true
   - Id: 2030
     Name: GC_WEAPONCRUSH
     Description: Weapon Crush
@@ -18776,6 +18845,7 @@ Body:
     SplashArea: 15
     CopyFlags:
       Skill:
+        Plagiarism: true
         Reproduce: true
     CastCancel: true
     CastTime: 5000
@@ -19059,7 +19129,7 @@ Body:
   - Id: 2233
     Name: RA_ARROWSTORM
     Description: Arrow Storm
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     DamageFlags:
@@ -19072,93 +19142,24 @@ Body:
     Element: Weapon
     SplashArea:
       - Level: 1
-        Area: 3
+        Area: 5
       - Level: 2
-        Area: 3
+        Area: 5
       - Level: 3
-        Area: 3
+        Area: 5
       - Level: 4
-        Area: 3
+        Area: 5
       - Level: 5
-        Area: 3
-      - Level: 6
-        Area: 4
-      - Level: 7
-        Area: 4
-      - Level: 8
-        Area: 4
-      - Level: 9
-        Area: 4
-      - Level: 10
         Area: 5
     CopyFlags:
       Skill:
+        Plagiarism: true
         Reproduce: true
     CastCancel: true
-    CastTime:
-      - Level: 1
-        Time: 2000
-      - Level: 2
-        Time: 2200
-      - Level: 3
-        Time: 2400
-      - Level: 4
-        Time: 2600
-      - Level: 5
-        Time: 2800
-      - Level: 6
-        Time: 3000
-      - Level: 7
-        Time: 3200
-      - Level: 8
-        Time: 3400
-      - Level: 9
-        Time: 3600
-      - Level: 10
-        Time: 3800
-    Cooldown:
-      - Level: 1
-        Time: 5000
-      - Level: 2
-        Time: 4800
-      - Level: 3
-        Time: 4600
-      - Level: 4
-        Time: 4400
-      - Level: 5
-        Time: 4200
-      - Level: 6
-        Time: 4000
-      - Level: 7
-        Time: 3800
-      - Level: 8
-        Time: 3600
-      - Level: 9
-        Time: 3400
-      - Level: 10
-        Time: 3200
+    AfterCastActDelay: 400
+    Cooldown: 10000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 30
-        - Level: 2
-          Amount: 32
-        - Level: 3
-          Amount: 34
-        - Level: 4
-          Amount: 36
-        - Level: 5
-          Amount: 38
-        - Level: 6
-          Amount: 40
-        - Level: 7
-          Amount: 42
-        - Level: 8
-          Amount: 44
-        - Level: 9
-          Amount: 46
-        - Level: 10
-          Amount: 48
+      SpCost: 22
       Weapon:
         Bow: true
       Ammo:
@@ -19209,24 +19210,25 @@ Body:
   - Id: 2236
     Name: RA_AIMEDBOLT
     Description: Aimed Bolt
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     Flags:
       AlterRangeVulture: true
     Range: 9
-    Hit: Multi_Hit
+    Hit: Single
     HitCount: 1
     Element: Weapon
     CopyFlags:
       Skill:
+        Plagiarism: true
         Reproduce: true
     CastCancel: true
-    CastTime: 4000
-    AfterCastActDelay: 500
-    Cooldown: 1000
+    CastTime: 5000
+    AfterCastActDelay: 400
+    Cooldown: 3000
     Requires:
-      SpCost: 40
+      SpCost: 18
       Weapon:
         Bow: true
       Ammo:
@@ -20796,62 +20798,22 @@ Body:
   - Id: 2288
     Name: SC_TRIANGLESHOT
     Description: Triangle Shot
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    Range:
-      - Level: 1
-        Size: 7
-      - Level: 2
-        Size: 7
-      - Level: 3
-        Size: 7
-      - Level: 4
-        Size: 9
-      - Level: 5
-        Size: 9
-      - Level: 6
-        Size: 9
-      - Level: 7
-        Size: 9
-      - Level: 8
-        Size: 11
-      - Level: 9
-        Size: 11
-      - Level: 10
-        Size: 11
+    Range: 11
     Hit: Multi_Hit
     HitCount: -3
     Element: Weapon
-    Knockback: 3
     CopyFlags:
       Skill:
+        Plagiarism: true
         Reproduce: true
     CastCancel: true
-    CastTime: 1000
-    AfterCastActDelay: 500
+    Cooldown: 6000
+    AfterCastActDelay: 400
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 22
-        - Level: 2
-          Amount: 24
-        - Level: 3
-          Amount: 26
-        - Level: 4
-          Amount: 28
-        - Level: 5
-          Amount: 30
-        - Level: 6
-          Amount: 32
-        - Level: 7
-          Amount: 34
-        - Level: 8
-          Amount: 36
-        - Level: 9
-          Amount: 38
-        - Level: 10
-          Amount: 40
+      SpCost: 18
       Weapon:
         Bow: true
       Ammo:
@@ -20989,12 +20951,12 @@ Body:
           Amount: 50
       ItemCost:
         - Item: Face_Paint
-          Amount: 1
+          Amount: 0
         - Item: Makeover_Brush
           Amount: 0
   - Id: 2293
     Name: SC_GROOMY
-    Description: Masquerade - Gloomy
+    Description: Laziness
     MaxLevel: 5
     TargetType: Attack
     DamageFlags:
@@ -21003,7 +20965,6 @@ Body:
     Hit: Single
     HitCount: 1
     CastCancel: true
-    CastTime: 2000
     AfterCastActDelay: 1000
     Duration1:
       - Level: 1
@@ -21012,24 +20973,20 @@ Body:
         Time: 15000
       - Level: 3
         Time: 20000
-    Cooldown: 2000
+      - Level: 4
+        Time: 25000
+      - Level: 5
+        Time: 30000
+    Cooldown: 10000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 30
-        - Level: 2
-          Amount: 40
-        - Level: 3
-          Amount: 50
+      SpCost: 15
       ItemCost:
         - Item: Face_Paint
           Amount: 1
-        - Item: Makeover_Brush
-          Amount: 0
   - Id: 2294
     Name: SC_IGNORANCE
-    Description: Masquerade - Ignorance
-    MaxLevel: 3
+    Description: Sadness
+    MaxLevel: 5
     TargetType: Attack
     DamageFlags:
       NoDamage: true
@@ -21037,7 +20994,6 @@ Body:
     Hit: Single
     HitCount: 1
     CastCancel: true
-    CastTime: 2000
     AfterCastActDelay: 1000
     Duration1:
       - Level: 1
@@ -21046,20 +21002,16 @@ Body:
         Time: 15000
       - Level: 3
         Time: 20000
-    Cooldown: 2000
+      - Level: 4
+        Time: 25000
+      - Level: 5
+        Time: 30000
+    Cooldown: 10000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 30
-        - Level: 2
-          Amount: 40
-        - Level: 3
-          Amount: 50
+      SpCost: 15
       ItemCost:
         - Item: Face_Paint
           Amount: 1
-        - Item: Makeover_Brush
-          Amount: 0
   - Id: 2295
     Name: SC_LAZINESS
     Description: Masquerade - Laziness
@@ -27593,8 +27545,6 @@ Body:
     Description: Shadow Hiding
     MaxLevel: 1
     TargetType: Self
-    Flags:
-      AllowWhenHidden: true
     Hit: Single
     HitCount: 1
     Duration1: 200000
@@ -30944,7 +30894,7 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Weapon
-    SplashArea: 1
+    SplashArea: 2
     Knockback: 1
     CastTime: 700
     Requires:

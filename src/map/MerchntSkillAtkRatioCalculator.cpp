@@ -27,6 +27,7 @@ int MerchntSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 
 void MerchntSkillAtkRatioCalculator::add_cart_fireworks_special_effects(struct block_list* src)
 {
+	clif_specialeffect(src, EF_POK_JAP, AREA);
 	clif_specialeffect(src, EF_CARTTER, AREA);
 }
 

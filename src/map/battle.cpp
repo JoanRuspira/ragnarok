@@ -1627,13 +1627,6 @@ int64 battle_calc_damage(struct block_list *src,struct block_list *bl,struct Dam
 			damage = damage > 10 ? damage / 10 : 1;
 #endif
 
-		//Finally added to remove the status of immobile when Aimed Bolt is used. [Jobbie]
-		if( skill_id == RA_AIMEDBOLT && (sc->data[SC_BITE] || sc->data[SC_ANKLE] || sc->data[SC_ELECTRICSHOCKER]) ) {
-			status_change_end(bl, SC_BITE, INVALID_TIMER);
-			status_change_end(bl, SC_ANKLE, INVALID_TIMER);
-			status_change_end(bl, SC_ELECTRICSHOCKER, INVALID_TIMER);
-		}
-
 		if (!damage)
 			return 0;
 
@@ -2700,9 +2693,6 @@ static void battle_calc_multi_attack(struct Damage* wd, struct block_list *src,s
 	}
 
 	switch (skill_id) {
-		case RA_AIMEDBOLT:
-			wd->div_ = 2 + tstatus->size + rnd()%2;
-			break;
 		case SC_FATALMENACE:
 			if (sd && sd->weapontype1 == W_DAGGER)
 				wd->div_++;
@@ -2765,7 +2755,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			if (sc->data[SC_CRUSHSTRIKE]) {
 				if (sd) { //ATK [{Weapon Level * (Weapon Upgrade Level + 6) * 100} + (Weapon ATK) + (Weapon Weight)]%
 					short index = sd->equip_index[EQI_HAND_R];
-
 					if (index >= 0 && sd->inventory_data[index] && sd->inventory_data[index]->type == IT_WEAPON)
 						skillratio += -100 + sd->inventory_data[index]->weight / 10 + sd->inventory_data[index]->atk +
 							100 * sd->inventory_data[index]->wlv * (sd->inventory.u.items_inventory[index].refine + 6);
@@ -2783,24 +2772,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		}
 	}
 
-
-
-	// if (sd) {
-	// 	if (sd->class_ == MAPID_CRUSADER || sd->class_ == MAPID_PALADIN) {
-	// 		CrusaderSkillAtkRatioCalculator *crusader_atk_ratio_calculator = new CrusaderSkillAtkRatioCalculator(status_get_lv(src), skill_id, skill_lv, sstatus->int_);
-	// 		skillratio += crusader_atk_ratio_calculator->calculate_skill_atk_ratio();
-	// 		delete crusader_atk_ratio_calculator;
-	// 	}
-		// if (sd->class_ == MAPID_KNIGHT || sd->class_ == MAPID_LORD_KNIGHT) {
-		// 	CrusaderSkillAtkRatioCalculator *crusader_atk_ratio_calculator = new CrusaderSkillAtkRatioCalculator(status_get_lv(src), skill_id, skill_lv, sstatus->int_);
-		// 	skillratio += crusader_atk_ratio_calculator->calculate_skill_atk_ratio();
-		// 	delete crusader_atk_ratio_calculator;
-		// }
-	// }
-
-
-
-
 	switch(skill_id) {
 		case SM_BASH:
 		case SM_MAGNUM:
@@ -2816,6 +2787,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			break;
 		case MC_FIREWORKS:
 		case MC_MAMMONITE:
+		case MC_CARTREVOLUTION:
 			skillratio += MerchntSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv);
 			break;
 		case AC_SHOWER:
@@ -2840,6 +2812,16 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			break;
 		case CR_HOLYCROSS:
 			skillratio += CrusaderSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
+		case RG_RAID:
+		case RG_BACKSTAP:
+		case AS_GRIMTOOTH:
+		case GC_COUNTERSLASH:
+		case NJ_KIRIKAGE:
+		case RA_AIMEDBOLT:
+		case SC_TRIANGLESHOT:
+		case RA_ARROWSTORM:
+			skillratio += RogueSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, sd->sc.data[SC_HIDING]);
+			break;
 		case MER_CRASH:
 			skillratio += 10 * skill_lv;
 			break;
@@ -2862,9 +2844,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 					skillratio += ratio / 2;
 			}
 			break;
-		case AS_GRIMTOOTH:
-			skillratio += 20 * skill_lv;
-			break;
 		case AS_POISONREACT:
 			skillratio += 30 * skill_lv;
 			break;
@@ -2876,13 +2855,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 #else
 			skillratio += 300 + 40 * skill_lv;
 #endif
-			break;
-		case MC_CARTREVOLUTION:
-			skillratio += 50;
-			if(sd && sd->cart_weight)
-				skillratio += 100 * sd->cart_weight / sd->cart_weight_max; // +1% every 1% weight
-			else if (!sd)
-				skillratio += 100; //Max damage for non players.
 			break;
 		case NPC_PIERCINGATT:
 			skillratio += -25; //75% base damage
@@ -2913,19 +2885,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			break;
 		case NPC_REVERBERATION_ATK:
 			skillratio += 400 + 200 * skill_lv;
-			break;
-		case RG_BACKSTAP:
-			if(sd && sd->status.weapon == W_BOW && battle_config.backstab_bow_penalty)
-				skillratio += (200 + 40 * skill_lv) / 2;
-			else
-				skillratio += 200 + 40 * skill_lv;
-			break;
-		case RG_RAID:
-#ifdef RENEWAL
-			skillratio += -100 + 50 + skill_lv * 150;
-#else
-			skillratio += 40 * skill_lv;
-#endif
 			break;
 		case RG_INTIMIDATE:
 			skillratio += 30 * skill_lv;
@@ -3201,13 +3160,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			skillratio += 10 * skill_lv;
 #endif
 			break;
-		case NJ_KIRIKAGE:
-#ifdef RENEWAL
-			skillratio += -50 + 150 * skill_lv;
-#else
-			skillratio += 100 * (skill_lv - 1);
-#endif
-			break;
 #ifdef RENEWAL
 		case NJ_SYURIKEN:
 			skillratio += 5 * skill_lv;
@@ -3268,11 +3220,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			skillratio += -100 + 1000 + 150 * skill_lv;
 			RE_LVL_DMOD(100);
 			break;
-		case GC_COUNTERSLASH:
-			//ATK [{(Skill Level x 150) + 300} x Caster's Base Level / 120]% + ATK [(AGI x 2) + (Caster's Job Level x 4)]%
-			skillratio += -100 + 300 + 150 * skill_lv;
-			RE_LVL_DMOD(120);
-			break;
 		case GC_VENOMPRESSURE:
 			skillratio += 900;
 			break;
@@ -3295,13 +3242,8 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case AB_DUPLELIGHT_MELEE:
 			skillratio += 50 + 15 * skill_lv;
 			break;
-		case RA_ARROWSTORM:
 		case NPC_ARROWSTORM:
 			skillratio += 900 + 80 * skill_lv;
-			RE_LVL_DMOD(100);
-			break;
-		case RA_AIMEDBOLT:
-			skillratio += 100 + 20 * skill_lv + 500;
 			RE_LVL_DMOD(100);
 			break;
 		case RA_CLUSTERBOMB:
@@ -3373,10 +3315,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case SC_FATALMENACE:
 			skillratio += 100 * skill_lv;
 			RE_LVL_DMOD(100);
-			break;
-		case SC_TRIANGLESHOT:
-			skillratio += 200 + (skill_lv - 1) * status_get_agi(src) / 2;
-			RE_LVL_DMOD(120);
 			break;
 		case SC_FEINTBOMB:
 			skillratio += -100 + (skill_lv + 1) * status_get_dex(src) / 2 * ((sd) ? sd->status.job_level / 10 : 1);
@@ -3866,9 +3804,6 @@ static int64 battle_calc_skill_constant_addition(struct Damage* wd, struct block
 				atk = 40 * pc_checkskill(sd, RA_RESEARCHTRAP);
 			break;
 #endif
-		case GC_COUNTERSLASH:
-			atk = sstatus->agi * 2 + (sd ? sd->status.job_level * 4 : 0);
-			break;
 		case LG_SHIELDPRESS:
 			if (sd) {
 				int damagevalue = 0;
@@ -4613,8 +4548,8 @@ static struct Damage initialize_weapon_data(struct block_list *src, struct block
 		{
 #ifdef RENEWAL
 			case RG_BACKSTAP:
-				if (sd && sd->status.weapon == W_DAGGER)
-					wd.div_ = 2;
+				// if (sd && sd->status.weapon == W_DAGGER)
+				wd.div_ = 2;
 				break;
 			case MO_CHAINCOMBO:
 				if (sd && sd->status.weapon == W_KNUCKLE)

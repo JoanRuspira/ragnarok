@@ -895,8 +895,8 @@ void initChangeTables(void)
 	set_sc( SC_INVISIBILITY		, SC__INVISIBILITY	, EFST_INVISIBILITY	, SCB_ASPD|SCB_CRI|SCB_ATK_ELE );
 	set_sc( SC_DEADLYINFECT		, SC__DEADLYINFECT	, EFST_DEADLYINFECT	, SCB_NONE );
 	set_sc( SC_ENERVATION		, SC__ENERVATION	, EFST_ENERVATION		, SCB_BATK|SCB_WATK );
-	set_sc( SC_GROOMY		, SC__GROOMY		, EFST_GROOMY		, SCB_ASPD|SCB_HIT );
-	set_sc( SC_IGNORANCE		, SC__IGNORANCE		, EFST_IGNORANCE		, SCB_NONE );
+	set_sc( SC_GROOMY		, SC__GROOMY		, EFST_GROOMY		, SCB_ASPD );
+	set_sc( SC_IGNORANCE		, SC__IGNORANCE		, EFST_IGNORANCE		, SCB_DEF|SCB_MDEF );
 	set_sc( SC_LAZINESS		, SC__LAZINESS		, EFST_LAZINESS		, SCB_FLEE|SCB_SPEED );
 	set_sc( SC_UNLUCKY		, SC__UNLUCKY		, EFST_UNLUCKY		, SCB_CRI|SCB_FLEE2 );
 	set_sc( SC_WEAKNESS		, SC__WEAKNESS		, EFST_WEAKNESS		, SCB_MAXHP );
@@ -1454,7 +1454,7 @@ void initChangeTables(void)
 	StatusChangeFlagTable[SC_WALKSPEED] |= SCB_SPEED;
 	StatusChangeFlagTable[SC_ITEMSCRIPT] |= SCB_ALL;
 	StatusChangeFlagTable[SC_SLOWDOWN] |= SCB_SPEED;
-	StatusChangeFlagTable[SC_CHASEWALK2] |= SCB_STR;
+	StatusChangeFlagTable[SC_CHASEWALK2] |= SCB_STR|SCB_DEX;
 	StatusChangeFlagTable[SC_GEFFEN_MAGIC1] |= SCB_ALL;
 	StatusChangeFlagTable[SC_GEFFEN_MAGIC2] |= SCB_ALL;
 	StatusChangeFlagTable[SC_GEFFEN_MAGIC3] |= SCB_ALL;
@@ -2691,7 +2691,7 @@ int status_base_amotion_pc(struct map_session_data* sd, struct status_data* stat
 	if ((skill_lv = pc_checkskill(sd,GS_SINGLEACTION)) > 0 && (sd->status.weapon >= W_REVOLVER && sd->status.weapon <= W_GRENADE))
 		val += ((skill_lv + 1) / 2);
 	if ((skill_lv = pc_checkskill(sd, RG_PLAGIARISM)) > 0)
-		val += skill_lv;
+		val += (skill_lv*2);
 	if (pc_isriding(sd))
 		val -= 50 - 10 * pc_checkskill(sd, KN_CAVALIERMASTERY);
 	else if (pc_isridingdragon(sd))
@@ -6244,6 +6244,8 @@ static unsigned short status_calc_dex(struct block_list *bl, struct status_chang
 		dex += sc->data[SC_INCDEX]->val1;
 	if(sc->data[SC_DEXFOOD])
 		dex += sc->data[SC_DEXFOOD]->val1;
+	if(sc->data[SC_CHASEWALK2])
+		dex += sc->data[SC_CHASEWALK2]->val1;
 	if(sc->data[SC_FOOD_DEX_CASH])
 		dex += sc->data[SC_FOOD_DEX_CASH]->val1;
 	if(sc->data[SC_BATTLEORDERS])
@@ -6721,8 +6723,6 @@ static signed short status_calc_hit(struct block_list *bl, struct status_change 
 		hit -= hit * 25/100;
 	if(sc->data[SC_HEAT_BARREL])
 		hit -= sc->data[SC_HEAT_BARREL]->val4;
-	if(sc->data[SC__GROOMY])
-		hit -= hit * sc->data[SC__GROOMY]->val3 / 100;
 	if(sc->data[SC_FEAR])
 		hit -= hit * 20 / 100;
 	if (sc->data[SC_ASH])
@@ -6959,6 +6959,8 @@ static defType status_calc_def(struct block_list *bl, struct status_change *sc, 
 		def += (5 + sc->data[SC_BANDING]->val1) * sc->data[SC_BANDING]->val2 / 10;
 	if( sc->data[SC_ECHOSONG] )
 		def += sc->data[SC_ECHOSONG]->val3;
+	if( sc->data[SC__IGNORANCE] )
+		def -= (sc->data[SC__IGNORANCE]->val1)*5;
 	if( sc->data[SC_EARTHDRIVE] )
 		def -= def * 25 / 100;
 	if( sc->data[SC_CAMOUFLAGE] )
@@ -7098,6 +7100,8 @@ static defType status_calc_mdef(struct block_list *bl, struct status_change *sc,
 		mdef += sc->data[SC_GLASTHEIM_ITEMDEF]->val2;
 	if (sc->data[SC_SOULGOLEM])
 		mdef += sc->data[SC_SOULGOLEM]->val3;
+	if( sc->data[SC__IGNORANCE] )
+		mdef -= (sc->data[SC__IGNORANCE]->val1)*5;
 
 	return (defType)cap_value(mdef,DEFTYPE_MIN,DEFTYPE_MAX);
 }
@@ -7223,7 +7227,7 @@ static unsigned short status_calc_speed(struct block_list *bl, struct status_cha
 			if( sc->data[SC_JOINTBEAT] && sc->data[SC_JOINTBEAT]->val2&(BREAK_ANKLE|BREAK_KNEE) )
 				val = max( val, (sc->data[SC_JOINTBEAT]->val2&BREAK_ANKLE ? 50 : 0) + (sc->data[SC_JOINTBEAT]->val2&BREAK_KNEE ? 30 : 0) );
 			if( sc->data[SC_CLOAKING] && (sc->data[SC_CLOAKING]->val4&1) == 0 )
-				val = max( val, sc->data[SC_CLOAKING]->val1 < 3 ? 300 : 30 - 3 * sc->data[SC_CLOAKING]->val1 );
+				val = max( val, sc->data[SC_CLOAKING]->val1 < 3 ? 300 : 30 - 3 * (sc->data[SC_CLOAKING]->val1*5) );
 			if( sc->data[SC_GOSPEL] && sc->data[SC_GOSPEL]->val4 == BCT_ENEMY )
 				val = max( val, 75 );
 			if( sc->data[SC_SLOWDOWN] ) // Slow Potion
@@ -11227,7 +11231,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			}
 			break;
 		case SC__GROOMY:
-			val2 = 20 + 10 * val1; // ASPD
+			val2 = 10 * val1; // ASPD
 			val3 = 20 * val1; // HIT
 			if( sd ) { // Removes Animals
 				if( pc_isriding(sd) ) pc_setriding(sd, 0);

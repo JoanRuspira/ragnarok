@@ -135,6 +135,18 @@
     <Filter Include="Source Files\skillAdditionalEffectsCalculator\crusader">
       <UniqueIdentifier>{9c025c38-de3f-45fd-8c66-82cc61f99165}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\skillAtkRatioCalculator\rogue">
+      <UniqueIdentifier>{c4e2f8a6-d66d-4d43-a4fb-53bbd80f34f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\skillAtkRatioCalculator\rogue">
+      <UniqueIdentifier>{1d106f18-1f01-4148-9c5d-57edd109b4f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\skillAdditionalEffectsCalculator\rogue">
+      <UniqueIdentifier>{d4ab5805-19ea-40c5-bb28-0b28f92f6c96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\skillAdditionalEffectsCalculator\rogue">
+      <UniqueIdentifier>{843b61fa-df0d-4d17-9761-848d725aa9c0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="achievement.hpp">
@@ -347,6 +359,12 @@
     <ClInclude Include="CrusaderAdditionalEffectsCalculator.h">
       <Filter>Header Files\skillAdditionalEffectsCalculator\crusader</Filter>
     </ClInclude>
+    <ClInclude Include="RogueSkillAtkRatioCalculator.h">
+      <Filter>Header Files\skillAtkRatioCalculator\rogue</Filter>
+    </ClInclude>
+    <ClInclude Include="RogueAdditionalEffectsCalculator.h">
+      <Filter>Header Files\skillAdditionalEffectsCalculator\rogue</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="achievement.cpp">
@@ -531,6 +549,12 @@
     </ClCompile>
     <ClCompile Include="CrusaderAdditionalEffectsCalculator.cpp">
       <Filter>Source Files\skillAdditionalEffectsCalculator\crusader</Filter>
+    </ClCompile>
+    <ClCompile Include="RogueSkillAtkRatioCalculator.cpp">
+      <Filter>Source Files\skillAtkRatioCalculator\rogue</Filter>
+    </ClCompile>
+    <ClCompile Include="RogueAdditionalEffectsCalculator.cpp">
+      <Filter>Source Files\skillAdditionalEffectsCalculator\rogue</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

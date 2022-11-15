@@ -217,6 +217,8 @@
     <ClInclude Include="pet.hpp" />
     <ClInclude Include="quest.hpp" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="RogueAdditionalEffectsCalculator.h" />
+    <ClInclude Include="RogueSkillAtkRatioCalculator.h" />
     <ClInclude Include="script.hpp" />
     <ClInclude Include="script_constants.hpp" />
     <ClInclude Include="searchstore.hpp" />
@@ -284,6 +286,8 @@
     <ClCompile Include="pc_groups.cpp" />
     <ClCompile Include="pet.cpp" />
     <ClCompile Include="quest.cpp" />
+    <ClCompile Include="RogueAdditionalEffectsCalculator.cpp" />
+    <ClCompile Include="RogueSkillAtkRatioCalculator.cpp" />
     <ClCompile Include="script.cpp" />
     <ClCompile Include="searchstore.cpp" />
     <ClCompile Include="skill.cpp" />

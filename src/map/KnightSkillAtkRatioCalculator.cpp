@@ -30,6 +30,7 @@ int KnightSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* 
 		case RK_SONICWAVE:
 			return calculate_sonic_wave_atk_ratio(skill_lv,  sstatus->int_);
 		case CR_SHIELDCHARGE:
+			add_smite_special_effects(target);
 			return calculate_smite_atk_ratio(skill_lv);
 		case PA_SACRIFICE:
 			return calculate_reckoning_atk_ratio(skill_lv);
@@ -278,6 +279,11 @@ int KnightSkillAtkRatioCalculator::calculate_bowling_bash_bleeding_atk_ratio(int
 	return ratio;
 }
 
+
+void KnightSkillAtkRatioCalculator::add_smite_special_effects(struct block_list *target)
+{
+	clif_specialeffect(target, EF_STUNATTACK, AREA);
+}
 
 // int KnightSkillAtkRatioCalculator::calculate_spear_boomerang_atk_ratio()
 // {

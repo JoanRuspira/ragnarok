@@ -33,6 +33,9 @@
 #include "MageAdditionalEffectsCalculator.h"
 #include "KnightAdditionalEffectsCalculator.h"
 #include "CrusaderAdditionalEffectsCalculator.h"
+#include "RogueSkillAtkRatioCalculator.h"
+#include "RogueAdditionalEffectsCalculator.h"
+
 
 
 //fwd declaration
