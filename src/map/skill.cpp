@@ -2109,12 +2109,6 @@ int64 skill_attack (int attack_type, struct block_list* src, struct block_list *
 	if (tsc && tsc->data[SC_TRICKDEAD])
 		return 0;
 
-#ifndef RENEWAL
-	//When Gravitational Field is active, damage can only be dealt by Gravitational Field and Autospells
-	if(sd && sc && sc->data[SC_GRAVITATION] && sc->data[SC_GRAVITATION]->val3 == BCT_SELF && skill_id != HW_GRAVITATION && !sd->state.autocast)
-		return 0;
-#endif
-
 	dmg = battle_calc_attack(attack_type,src,bl,skill_id,skill_lv,flag&0xFFF);
 
 	//If the damage source is a unit, the damage is not delayed
@@ -3532,7 +3526,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case HT_PHANTASMIC:
 	case AC_PARALIZING:
 	case MA_DOUBLE:
-	case AS_SONICBLOW:
 	case KN_PIERCE:
 	case ML_PIERCE:
 	case KN_SPEARBOOMERANG:
@@ -3640,6 +3633,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case RL_MASS_SPIRAL:
 	case RL_BANISHING_BUSTER:
 	case RL_SLUGSHOT:
+	case AS_SONICBLOW:
 	case RL_AM_BLAST:
 		skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag);
 		break;

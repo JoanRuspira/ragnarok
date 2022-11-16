@@ -4994,7 +4994,8 @@ void clif_takeitem(struct block_list* src, struct block_list* dst)
 	WBUFL(buf, 2) = src->id;
 	WBUFL(buf, 6) = dst->id;
 	WBUFB(buf,26) = 1;
-	clif_send(buf, packet_len(0x8a), src, AREA);
+	
+	
 
 }
 

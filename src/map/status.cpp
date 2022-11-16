@@ -10194,7 +10194,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			tick = INFINITE_TICK;
 			break;
 		case SC_ENCPOISON:
-			val2= 250+50*val1; // Poisoning Chance (2.5+0.5%) in 1/10000 rate
+			val2= 500*val1; // Poisoning Chance
 		case SC_ASPERSIO:
 		case SC_FIREWEAPON:
 		case SC_WATERWEAPON:
@@ -12583,7 +12583,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			break;
 		case SC_COMBO:
 			switch(sce->val1) {
-			case TK_STORMKICK:
+				case TK_STORMKICK:
 				skill_combo_toggle_inf(bl, TK_JUMPKICK, 0);
 				clif_skill_nodamage(bl,bl,TK_READYSTORM,1,1);
 				break;

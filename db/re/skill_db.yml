@@ -4221,7 +4221,7 @@ Body:
   - Id: 138
     Name: AS_ENCHANTPOISON
     Description: Enchant Poison
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Support
     DamageFlags:
@@ -4232,48 +4232,34 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Poison
+    Cooldown: 10000
+    AfterCastActDelay: 1000
     Duration1:
       - Level: 1
-        Time: 30000
-      - Level: 2
         Time: 45000
-      - Level: 3
-        Time: 60000
-      - Level: 4
+      - Level: 2
         Time: 75000
-      - Level: 5
-        Time: 90000
-      - Level: 6
+      - Level: 3
         Time: 105000
-      - Level: 7
-        Time: 120000
-      - Level: 8
+      - Level: 4
         Time: 135000
-      - Level: 9
-        Time: 150000
-      - Level: 10
+      - Level: 5
         Time: 165000
     Duration2:
       - Level: 1
-        Time: 10000
+        Time: 20000
       - Level: 2
         Time: 20000
       - Level: 3
-        Time: 30000
+        Time: 20000
       - Level: 4
-        Time: 40000
+        Time: 20000
       - Level: 5
-        Time: 50000
-      - Level: 6
-        Time: 60000
-      - Level: 7
-        Time: 70000
-      - Level: 8
-        Time: 80000
-      - Level: 9
-        Time: 90000
-      - Level: 10
-        Time: 100000
+        Time: 20000
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 20
   - Id: 139
@@ -4377,7 +4363,7 @@ Body:
   - Id: 141
     Name: AS_SPLASHER
     Description: Venom Splasher
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     DamageFlags:
@@ -4394,7 +4380,6 @@ Body:
         Plagiarism: true
         Reproduce: true
     CastCancel: true
-    CastTime: 1000
     Duration1:
       - Level: 1
         Time: 5000
@@ -4415,7 +4400,7 @@ Body:
       - Level: 9
         Time: 9000
       - Level: 10
-        Time: 9500
+        Time: 100
     Duration2: 60000
     Requires:
       SpCost:
@@ -9883,17 +9868,7 @@ Body:
     CastCancel: true
     Duration1: 300000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 10
-        - Level: 2
-          Amount: 15
-        - Level: 3
-          Amount: 20
-        - Level: 4
-          Amount: 25
-        - Level: 5
-          Amount: 30
+      SpCost: 20
   - Id: 392
     Name: CR_ALCHEMY
     Description: Alchemy
@@ -10247,7 +10222,7 @@ Body:
   - Id: 401
     Name: CH_SOULCOLLECT
     Description: Zen
-    MaxLevel: 1
+    MaxLevel: 5
     TargetType: Self
     DamageFlags:
       NoDamage: true
@@ -10772,7 +10747,7 @@ Body:
   - Id: 425
     Name: TK_SEVENWIND
     Description: Mild Wind
-    MaxLevel: 7
+    MaxLevel: 5
     Type: Weapon
     TargetType: Self
     DamageFlags:
@@ -16382,7 +16357,7 @@ Body:
   - Id: 2001
     Name: RK_ENCHANTBLADE
     Description: Enchant Blade
-    MaxLevel: 10
+    MaxLevel: 5
     TargetType: Self
     DamageFlags:
       NoDamage: true
@@ -18190,8 +18165,6 @@ Body:
           Amount: 60
         - Level: 5
           Amount: 70
-      Status:
-        Poisoningweapon: true
   - Id: 2032
     Name: GC_POISONSMOKE
     Description: Poison Smoke
@@ -18222,8 +18195,6 @@ Body:
       IgnoreItemBonus: true
     Requires:
       SpCost: 40
-      Status:
-        Poisoningweapon: true
     Unit:
       Id: Poisonsmoke
       Layout: 2
@@ -22841,10 +22812,10 @@ Body:
   - Id: 2343
     Name: SR_GATEOFHELL
     Description: Gate of Hell
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    Range: 7
+    Range: 1
     Hit: Multi_Hit
     HitCount: -7
     Element: Weapon
@@ -24763,11 +24734,11 @@ Body:
     Name: SO_POISON_BUSTER
     Description: Poison Buster
     MaxLevel: 5
-    Type: Magic
+    Type: Weapon
     TargetType: Attack
     DamageFlags:
       Splash: true
-    Range: 9
+    Range: 1
     Hit: Single
     HitCount: 1
     Element: Poison
@@ -24786,31 +24757,10 @@ Body:
       Skill:
         Reproduce: true
     CastCancel: true
-    CastTime:
-      - Level: 1
-        Time: 2200
-      - Level: 2
-        Time: 3400
-      - Level: 3
-        Time: 4600
-      - Level: 4
-        Time: 5800
-      - Level: 5
-        Time: 6000
     AfterCastActDelay: 1000
     Cooldown: 2000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 70
-        - Level: 2
-          Amount: 90
-        - Level: 3
-          Amount: 110
-        - Level: 4
-          Amount: 130
-        - Level: 5
-          Amount: 150
+      SpCost: 22
   - Id: 2449
     Name: SO_PSYCHIC_WAVE
     Description: Psychic Wave
@@ -24882,8 +24832,8 @@ Body:
     Name: SO_CLOUD_KILL
     Description: Cloud Kill
     MaxLevel: 5
-    Type: Magic
-    TargetType: Ground
+    Type: Weapon
+    TargetType: Self
     Range: 9
     Hit: Single
     HitCount: 1
@@ -24892,18 +24842,8 @@ Body:
       Skill:
         Reproduce: true
     CastCancel: true
-    CastTime:
-      - Level: 1
-        Time: 2300
-      - Level: 2
-        Time: 2500
-      - Level: 3
-        Time: 2700
-      - Level: 4
-        Time: 2900
-      - Level: 5
-        Time: 3100
-    AfterCastActDelay: 1000
+    CastTime: 0
+    AfterCastActDelay: 500
     Duration1:
       - Level: 1
         Time: 8000
@@ -24928,20 +24868,10 @@ Body:
         Time: 20000
     Cooldown: 5000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 48
-        - Level: 2
-          Amount: 56
-        - Level: 3
-          Amount: 64
-        - Level: 4
-          Amount: 70
-        - Level: 5
-          Amount: 78
-      ItemCost:
-        - Item: Red_Gemstone
-          Amount: 2
+      SpCost: 20
+      # ItemCost:
+      #   - Item: Poison_Spore
+      #     Amount: 1
     Unit:
       Id: Cloud_Kill
       Range: 3

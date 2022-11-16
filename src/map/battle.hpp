@@ -35,6 +35,9 @@
 #include "CrusaderAdditionalEffectsCalculator.h"
 #include "RogueSkillAtkRatioCalculator.h"
 #include "RogueAdditionalEffectsCalculator.h"
+#include "AssassinSkillAtkRatioCalculator.h"
+
+
 
 
 

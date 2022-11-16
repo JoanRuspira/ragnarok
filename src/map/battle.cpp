@@ -2822,6 +2822,10 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case RA_ARROWSTORM:
 			skillratio += RogueSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, sd->sc.data[SC_HIDING]);
 			break;
+		case AS_SONICBLOW:
+		case SO_CLOUD_KILL:
+			skillratio += AssassinSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, sd->sc.data[SC_HIDING]);
+			break;
 		case MER_CRASH:
 			skillratio += 10 * skill_lv;
 			break;
@@ -2846,15 +2850,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			break;
 		case AS_POISONREACT:
 			skillratio += 30 * skill_lv;
-			break;
-		case AS_SONICBLOW:
-#ifdef RENEWAL
-			skillratio += 100 + 100 * skill_lv;
-			if (tstatus->hp < tstatus->max_hp >> 1)
-				skillratio += skillratio / 2;
-#else
-			skillratio += 300 + 40 * skill_lv;
-#endif
 			break;
 		case NPC_PIERCINGATT:
 			skillratio += -25; //75% base damage
@@ -5467,12 +5462,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 						if (sc && (sc->data[SC_HEATER_OPTION] || sc->data[SC_COOLER_OPTION] ||
 							sc->data[SC_BLAST_OPTION] || sc->data[SC_CURSED_SOIL_OPTION]))
 							skillratio += 20;
-						break;
-					case SO_CLOUD_KILL:
-						skillratio += -100 + 40 * skill_lv;
-						RE_LVL_DMOD(100);
-						if (sc && sc->data[SC_CURSED_SOIL_OPTION])
-							skillratio += (sd ? sd->status.job_level : 0);
 						break;
 					case NPC_CLOUD_KILL:
 						skillratio += -100 + 50 * skill_lv;

@@ -147,6 +147,12 @@
     <Filter Include="Header Files\skillAdditionalEffectsCalculator\rogue">
       <UniqueIdentifier>{843b61fa-df0d-4d17-9761-848d725aa9c0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\skillAtkRatioCalculator\assassin">
+      <UniqueIdentifier>{c9a4a3da-90a5-4009-944d-5a83226efdd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\skillAtkRatioCalculator\assassin">
+      <UniqueIdentifier>{61e740ea-2a3e-448e-bd3c-e20b58d97481}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="achievement.hpp">
@@ -365,6 +371,9 @@
     <ClInclude Include="RogueAdditionalEffectsCalculator.h">
       <Filter>Header Files\skillAdditionalEffectsCalculator\rogue</Filter>
     </ClInclude>
+    <ClInclude Include="AssassinSkillAtkRatioCalculator.h">
+      <Filter>Header Files\skillAtkRatioCalculator\assassin</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="achievement.cpp">
@@ -555,6 +564,9 @@
     </ClCompile>
     <ClCompile Include="RogueAdditionalEffectsCalculator.cpp">
       <Filter>Source Files\skillAdditionalEffectsCalculator\rogue</Filter>
+    </ClCompile>
+    <ClCompile Include="AssassinSkillAtkRatioCalculator.cpp">
+      <Filter>Source Files\skillAtkRatioCalculator\assassin</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

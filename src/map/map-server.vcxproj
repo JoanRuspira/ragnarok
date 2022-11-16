@@ -169,6 +169,7 @@
     <ClInclude Include="AcolyteSkillAtkRatioCalculator.h" />
     <ClInclude Include="ArcherAdditionalEffectsCalculator.h" />
     <ClInclude Include="ArcherSkillAtkRatioCalculator.h" />
+    <ClInclude Include="AssassinSkillAtkRatioCalculator.h" />
     <ClInclude Include="atcommand.hpp" />
     <ClInclude Include="battle.hpp" />
     <ClInclude Include="battleground.hpp" />
@@ -242,6 +243,7 @@
     <ClCompile Include="AcolyteSkillAtkRatioCalculator.cpp" />
     <ClCompile Include="ArcherAdditionalEffectsCalculator.cpp" />
     <ClCompile Include="ArcherSkillAtkRatioCalculator.cpp" />
+    <ClCompile Include="AssassinSkillAtkRatioCalculator.cpp" />
     <ClCompile Include="atcommand.cpp" />
     <ClCompile Include="battle.cpp" />
     <ClCompile Include="battleground.cpp" />
