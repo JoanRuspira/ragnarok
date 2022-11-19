@@ -4984,7 +4984,7 @@ int clif_damage(struct block_list* src, struct block_list* dst, t_tick tick, int
  *------------------------------------------*/
 void clif_takeitem(struct block_list* src, struct block_list* dst)
 {
-	//clif_damage(src,dst,0,0,0,0,0,DMG_PICKUP_ITEM,0,false);
+	clif_damage(src,dst,0,0,0,0,0,DMG_PICKUP_ITEM,0,false);
 	unsigned char buf[32];
 
 	nullpo_retv(src);

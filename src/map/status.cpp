@@ -7406,13 +7406,13 @@ static short status_calc_aspd(struct block_list *bl, struct status_change *sc, b
 		if (sc->data[SC_STEELBODY])
 			bonus -= 25;
 		if (sc->data[SC_ADRENALINE])
-			bonus += sc->data[SC_ADRENALINE]->val1;
+			bonus += sc->data[SC_ADRENALINE]->val1*2;
 		if (sc->data[SC_TWOHANDQUICKEN])
-			bonus += sc->data[SC_TWOHANDQUICKEN]->val1/2;
+			bonus += sc->data[SC_TWOHANDQUICKEN]->val1*2;
 		if (sc->data[SC_ONEHAND])
-			bonus += sc->data[SC_ONEHAND]->val1/2;
+			bonus += sc->data[SC_ONEHAND]->val1*2;
 		if (sc->data[SC_SPEARQUICKEN])
-			bonus += sc->data[SC_SPEARQUICKEN]->val1/2;
+			bonus += sc->data[SC_SPEARQUICKEN]->val1*2;
 		if (sc->data[SC_SKA])
 			bonus -= 25;
 		if (sc->data[SC_DEFENDER])
@@ -7542,13 +7542,12 @@ static short status_calc_aspd_rate(struct block_list *bl, struct status_change *
 		if(sc->data[SC_STAR_COMFORT])
 			max = sc->data[SC_STAR_COMFORT]->val2;
 
-		if(sc->data[SC_TWOHANDQUICKEN] &&
-			max < sc->data[SC_TWOHANDQUICKEN]->val2)
-			max = sc->data[SC_TWOHANDQUICKEN]->val2;
+		// if(sc->data[SC_TWOHANDQUICKEN] &&
+		// 	max < sc->data[SC_TWOHANDQUICKEN]->val2)
+		// 	max = sc->data[SC_TWOHANDQUICKEN]->val2;
 
-		if(sc->data[SC_ONEHAND] &&
-			max < sc->data[SC_ONEHAND]->val2)
-			max = sc->data[SC_ONEHAND]->val2;
+		// if(sc->data[SC_ONEHAND] && max < sc->data[SC_ONEHAND]->val2)
+		// 	max = sc->data[SC_ONEHAND]->val2;
 
 		if(sc->data[SC_MERC_QUICKEN] &&
 			max < sc->data[SC_MERC_QUICKEN]->val2)
@@ -7562,9 +7561,9 @@ static short status_calc_aspd_rate(struct block_list *bl, struct status_change *
 			max < sc->data[SC_ADRENALINE]->val3)
 			max = sc->data[SC_ADRENALINE]->val3;
 
-		if(sc->data[SC_SPEARQUICKEN] &&
-			max < sc->data[SC_SPEARQUICKEN]->val2)
-			max = sc->data[SC_SPEARQUICKEN]->val2;
+		// if(sc->data[SC_SPEARQUICKEN] &&
+		// 	max < sc->data[SC_SPEARQUICKEN]->val2)
+		// 	max = sc->data[SC_SPEARQUICKEN]->val2;
 
 		if(sc->data[SC_GATLINGFEVER] &&
 			max < sc->data[SC_GATLINGFEVER]->val2)

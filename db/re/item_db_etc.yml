@@ -9464,7 +9464,7 @@ Body:
     Name: Regrettable Tears
     Type: Etc
     Buy: 1000
-    Weight: 2
+    Weight: 20
   - Id: 13255
     AegisName: Kunai_Of_Icicle
     Name: Icicle Kunai
@@ -9547,8 +9547,8 @@ Body:
     Type: Ammo
     SubType: Kunai
     Buy: 100
-    Weight: 30
-    Attack: 50
+    Weight: 20
+    Attack: 30
     Jobs:
       Assassin: true
     Classes:
@@ -9563,3 +9563,15 @@ Body:
     EquipLevelMin: 100
     Script: |
       bonus bAtkEle,Ele_Neutral;
+  - Id: 12731
+    AegisName: Runstone_Turisus
+    Name: Thurisaz Rune
+    Type: Etc
+    Buy: 100
+    Weight: 10
+  - Id: 12732
+    AegisName: Runstone_Pertz
+    Name: Wyrd Rune
+    Type: Etc
+    Buy: 100
+    Weight: 10

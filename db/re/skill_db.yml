@@ -10050,6 +10050,7 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Weapon
+    Cooldown: 3000
     AfterCastActDelay: 500
     Duration2: 120000
     CopyFlags:
