@@ -19,14 +19,14 @@ int RogueSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* s
 			break;
 		case GC_COUNTERSLASH:
 			add_back_stab_special_effects(target);
-			add_hack_and_slash_special_effects(target);
+			add_hack_and_slash_special_effects(src, target);
 			return calculate_hack_and_slash_atk_ratio(skill_lv, sstatus->luk);
 			break;
 		case NJ_KIRIKAGE:
 			add_shady_slash_special_effects(target);
 			return calculate_shady_slash_atk_ratio(skill_lv);
 		case RA_AIMEDBOLT:
-			return calculate_aimed_bolt_atk_ratio(skill_lv);
+			return calculate_quick_shot_atk_ratio(skill_lv);
 		case SC_TRIANGLESHOT:
 			return calculate_triangle_shot_atk_ratio(skill_lv);
 		case RA_ARROWSTORM:
@@ -47,10 +47,11 @@ void RogueSkillAtkRatioCalculator::add_back_stab_special_effects(struct block_li
 	clif_specialeffect(target, EF_STUNATTACK, AREA);
 }
 
-void RogueSkillAtkRatioCalculator::add_hack_and_slash_special_effects(struct block_list *target)
+void RogueSkillAtkRatioCalculator::add_hack_and_slash_special_effects(struct block_list *src, struct block_list *target)
 {
 	clif_specialeffect(target, EF_HIT2, AREA);
 	clif_specialeffect(target, EF_HIT6, AREA);
+	clif_specialeffect(src, EF_GUMGANG7, AREA);
 }
 
 
@@ -101,24 +102,24 @@ int RogueSkillAtkRatioCalculator::calculate_triangle_shot_atk_ratio(int skill_lv
 }
 
 
-int RogueSkillAtkRatioCalculator::calculate_aimed_bolt_atk_ratio(int skill_lv)
+int RogueSkillAtkRatioCalculator::calculate_quick_shot_atk_ratio(int skill_lv)
 {
 	int ratio = 0;
 	switch (skill_lv) {
 		case 1:
-			ratio = 100;
+			ratio = 25;
 			break;
 		case 2:
-			ratio = 200;
+			ratio = 50;
 			break;
 		case 3:
-			ratio = 300;
+			ratio = 75;
 			break;
 		case 4:
-			ratio = 400;
+			ratio = 100;
 			break;
 		case 5:
-			ratio = 500;
+			ratio = 125;
 			break;
 		}
 	return ratio;

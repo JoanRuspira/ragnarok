@@ -297,6 +297,7 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 		case AL_HOLYLIGHT:
 			AcolyteAdditionalEffectsCalculator::apply_holy_light_additional_effect(src, bl, skill_lv);
 			break;
+		case AS_VENOMKNIFE:
 		case TF_POISON:
 			ThiefAdditionalEffectsCalculator::apply_envenom_additional_effect(src, bl, skill_lv);
 			break;

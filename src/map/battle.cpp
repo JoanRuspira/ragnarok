@@ -2399,10 +2399,6 @@ static bool is_attack_hitting(struct Damage* wd, struct block_list *src, struct 
 			case ML_PIERCE:
 				hitrate += hitrate * 5 * skill_lv / 100;
 				break;
-			case AS_SONICBLOW:
-				if(sd && pc_checkskill(sd,AS_SONICACCEL) > 0)
-					hitrate += hitrate * 50 / 100;
-				break;
 #ifdef RENEWAL
 			case RG_BACKSTAP:
 				hitrate += skill_lv; // !TODO: What's the rate increase?
@@ -2656,14 +2652,19 @@ static void battle_calc_multi_attack(struct Damage* wd, struct block_list *src,s
 
 	if( sd && !skill_id ) {	// if no skill_id passed, check for double attack [helvetica]
 		short i;
-		if( ( ( skill_lv = (pc_checkskill(sd,TF_DOUBLE)) ) > 0 )) // Will fail bare-handed
-		{	//Success chance is not added, the higher one is used [Skotlex]
-			int max_rate = 0;
-			max_rate = max(10 * skill_lv, sd->bonus.double_rate);
-			if( rnd()%100 < max_rate ) {
-				wd->div_ = skill_get_num(TF_DOUBLE,skill_lv?skill_lv:1);
-				wd->type = DMG_MULTI_HIT;
+		if (is_attack_right_handed(src, skill_id) 
+			&& EquipmentAttackCalculator::is_attack_left_handed(src, skill_id)
+			&& sd->weapontype1 != W_KATAR) {
+			if( ( ( skill_lv = (pc_checkskill(sd,TF_DOUBLE)) ) > 0 )) // Will fail bare-handed
+			{	//Success chance is not added, the higher one is used [Skotlex]
+				int max_rate = 0;
+				max_rate = max(10 * skill_lv, sd->bonus.double_rate);
+				if( rnd()%100 < max_rate ) {
+					wd->div_ = skill_get_num(TF_DOUBLE,skill_lv?skill_lv:1);
+					wd->type = DMG_MULTI_HIT;
+				}
 			}
+		
 		}
 		else if( ((sd->weapontype1 == W_REVOLVER && (skill_lv = pc_checkskill(sd,GS_CHAINACTION)) > 0) //Normal Chain Action effect
 			|| (sc && sc->count && sc->data[SC_E_CHAIN] && (skill_lv = sc->data[SC_E_CHAIN]->val1) > 0)) //Chain Action of ETERNAL_CHAIN
@@ -2783,6 +2784,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case TF_POISON:
 		case TF_SNATCH:
 		case TF_SANDATTACK:
+		case AS_VENOMKNIFE:
 			skillratio += ThiefSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv);
 			break;
 		case MC_FIREWORKS:
@@ -2823,8 +2825,15 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			skillratio += RogueSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, sd->sc.data[SC_HIDING]);
 			break;
 		case AS_SONICBLOW:
+		case GC_ROLLINGCUTTER:
 		case SO_CLOUD_KILL:
-			skillratio += AssassinSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, sd->sc.data[SC_HIDING]);
+		case GC_CROSSRIPPERSLASHER:
+		case AS_SPLASHER:
+		case ASC_METEORASSAULT:
+		case NJ_KUNAI:
+			if (sc && sc->data[SC_ROLLINGCUTTER])
+				skillratio += AssassinSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, sc->data[SC_ROLLINGCUTTER]->val1);
+			skillratio += AssassinSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, 0);
 			break;
 		case MER_CRASH:
 			skillratio += 10 * skill_lv;
@@ -3000,14 +3009,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			RE_LVL_DMOD(100);
 		break;
 #endif
-		case ASC_METEORASSAULT:
-#ifdef RENEWAL
-			skillratio += 100 + 120 * skill_lv;
-			RE_LVL_DMOD(100);
-#else
-			skillratio += -60 + 40 * skill_lv;
-#endif
-			break;
 		case SN_SHARPSHOOTING:
 		case MA_SHARPSHOOTING:
 #ifdef RENEWAL
@@ -3032,15 +3033,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 #else
 			skillratio += 100 + 100 * skill_lv;
 #endif
-			break;
-		case AS_SPLASHER:
-#ifdef RENEWAL
-			skillratio += -100 + 400 + 100 * skill_lv;
-#else
-			skillratio += 400 + 50 * skill_lv;
-#endif
-			if(sd)
-				skillratio += 20 * pc_checkskill(sd,AS_POISONREACT);
 			break;
 		case ASC_BREAKER:
 #ifdef RENEWAL
@@ -3159,9 +3151,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case NJ_SYURIKEN:
 			skillratio += 5 * skill_lv;
 			break;
-		case NJ_KUNAI:
-			skillratio += -100 + 100 * skill_lv;
-			break;
 #endif
 		case KN_CHARGEATK: { // +100% every 3 cells of distance but hard-limited to 500%
 				int k = (wd->miscflag-1)/3;
@@ -3220,16 +3209,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			break;
 		case GC_PHANTOMMENACE:
 			skillratio += 200;
-			break;
-		case GC_ROLLINGCUTTER:
-			skillratio += -100 + 50 + 80 * skill_lv;
-			RE_LVL_DMOD(100);
-			break;
-		case GC_CROSSRIPPERSLASHER:
-			skillratio += -100 + 80 * skill_lv + (sstatus->agi * 3);
-			RE_LVL_DMOD(100);
-			if (sc && sc->data[SC_ROLLINGCUTTER])
-				skillratio += sc->data[SC_ROLLINGCUTTER]->val1 * 200;
 			break;
 		case GC_DARKCROW:
 			skillratio += 100 * (skill_lv - 1);
@@ -4293,7 +4272,7 @@ static void battle_calc_attack_left_right_hands(struct Damage* wd, struct block_
 		} else if (is_attack_right_handed(src, skill_id) && EquipmentAttackCalculator::is_attack_left_handed(src, skill_id)) {	//Dual-wield
 			if (wd->damage) {
 				if( (sd->class_&MAPID_BASEMASK) == MAPID_THIEF ) {
-					skill = pc_checkskill(sd,AS_RIGHT);
+					skill = pc_checkskill(sd,AS_LEFT);
 					ATK_RATER(wd->damage, 50 + (skill * 10))
 				}
 				else if(sd->class_ == MAPID_KAGEROUOBORO) {
@@ -4306,7 +4285,7 @@ static void battle_calc_attack_left_right_hands(struct Damage* wd, struct block_
 			if (wd->damage2) {
 				if( (sd->class_&MAPID_BASEMASK) == MAPID_THIEF) {
 					skill = pc_checkskill(sd,AS_LEFT);
-					ATK_RATEL(wd->damage2, 30 + (skill * 10))
+					ATK_RATEL(wd->damage2, 50 + (skill * 10))
 				}
 				else if(sd->class_ == MAPID_KAGEROUOBORO) {
 					skill = pc_checkskill(sd,KO_LEFT);
@@ -4471,7 +4450,8 @@ static void battle_calc_weapon_final_atk_modifiers(struct Damage* wd, struct blo
 		// if (!skill_id && wd->dmg_lv > ATK_BLOCK) {
 			if (sc->data[SC_ENCHANTBLADE]) {
 				//[((Skill Lv x 20) + 100) x (casterBaseLevel / 150)] + casterInt + MATK - MDEF - MDEF2
-				int64 enchant_dmg = sc->data[SC_ENCHANTBLADE]->val2;
+				// int64 enchant_dmg = sc->data[SC_ENCHANTBLADE]->val2;
+				int64 enchant_dmg = 50;
 				if (sstatus->matk_max > sstatus->matk_min)
 					enchant_dmg = enchant_dmg + sstatus->matk_min + rnd() % (sstatus->matk_max - sstatus->matk_min);
 				else
@@ -4825,11 +4805,6 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src, struct bl
 	}
 
 	switch (skill_id) {
-#ifndef RENEWAL
-		case NJ_KUNAI:
-			ATK_ADD(wd.damage, wd.damage2, 90);
-			break;
-#endif
 		case TK_DOWNKICK:
 		case TK_STORMKICK:
 		case TK_TURNKICK:

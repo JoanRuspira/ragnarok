@@ -416,7 +416,6 @@ void initChangeTables(void)
 	add_sc( HT_FLASHER		, SC_BLIND		);
 	add_sc( HT_FREEZINGTRAP		, SC_FREEZE		);
 	set_sc( AS_CLOAKING		, SC_CLOAKING		, EFST_CLOAKING		, SCB_CRI|SCB_SPEED );
-	add_sc( AS_SONICBLOW		, SC_STUN		);
 	set_sc( AS_ENCHANTPOISON	, SC_ENCPOISON		, EFST_ENCHANTPOISON, SCB_ATK_ELE );
 	set_sc( AS_POISONREACT		, SC_POISONREACT	, EFST_POISONREACT	, SCB_NONE );
 	add_sc( AS_VENOMDUST		, SC_POISON		);
@@ -5925,7 +5924,7 @@ static unsigned short status_calc_str(struct block_list *bl, struct status_chang
 	if(sc->data[SC_LEADERSHIP])
 		str += sc->data[SC_LEADERSHIP]->val1;
 	if(sc->data[SC_LOUD])
-		str += 2*sc->data[SC_LOUD]->val1;
+		str += sc->data[SC_LOUD]->val1;
 	if(sc->data[SC_TRUESIGHT])
 		str += 5;
 	if(sc->data[SC_SPURT])
@@ -6432,7 +6431,7 @@ static unsigned short status_calc_batk(struct block_list *bl, struct status_chan
 	if (sc->data[SC_SHRIMP])
 		batk += batk * sc->data[SC_SHRIMP]->val2 / 100;
 	if (sc->data[SC_LOUD])
-		batk += 8*sc->data[SC_LOUD]->val1;
+		batk += 4*sc->data[SC_LOUD]->val1;
 	if (sc->data[SC_NIBELUNGEN] && sc->data[SC_NIBELUNGEN]->val2 == RINGNBL_ATKRATE)
 		batk += batk * 20 / 100;
 	if (sc->data[SC_SUNSTANCE])

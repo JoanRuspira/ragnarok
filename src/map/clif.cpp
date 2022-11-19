@@ -5698,38 +5698,7 @@ int clif_skill_damage(struct block_list *src,struct block_list *dst,t_tick tick,
 			damage = clif_hallucination_damage();
 	}
 
-#if PACKETVER < 3
-	WBUFW(buf,0)=0x114;
-	WBUFW(buf,2)=skill_id;
-	WBUFL(buf,4)=src->id;
-	WBUFL(buf,8)=dst->id;
-	WBUFL(buf,12)=client_tick(tick);
-	WBUFL(buf,16)=sdelay;
-	WBUFL(buf,20)=ddelay;
-	if (battle_config.hide_woe_damage && map_flag_gvg(src->m)) {
-		WBUFW(buf,24)=damage?div:0;
-	} else {
-		WBUFW(buf,24)=damage;
-	}
-	WBUFW(buf,26)=skill_lv;
-	WBUFW(buf,28)=div;
-	WBUFB(buf,30)=type;
-	if (disguised(dst)) {
-		clif_send(buf,packet_len(0x114),dst,AREA_WOS);
-		WBUFL(buf,8)=disguised_bl_id(dst->id);
-		clif_send(buf,packet_len(0x114),dst,SELF);
-	} else
-		clif_send(buf,packet_len(0x114),dst,AREA);
 
-	if(disguised(src)) {
-		WBUFL(buf,4)=disguised_bl_id(src->id);
-		if (disguised(dst))
-			WBUFL(buf,8)=dst->id;
-		if(damage > 0)
-			WBUFW(buf,24)=-1;
-		clif_send(buf,packet_len(0x114),src,SELF);
-	}
-#else
 	WBUFW(buf,0)=0x1de;
 	WBUFW(buf,2)=skill_id;
 	WBUFL(buf,4)=src->id;
@@ -5748,11 +5717,7 @@ int clif_skill_damage(struct block_list *src,struct block_list *dst,t_tick tick,
 	// a issue that causes players and monsters to endure
 	// type 6 (ACTION_SKILL) skills. So we have to do a small
 	// hack to set all type 6 to be sent as type 8 ACTION_ATTACK_MULTIPLE
-#if PACKETVER < 20131223
-	WBUFB(buf,32)=type;
-#else
 	WBUFB(buf,32)=( type == DMG_SINGLE ) ? DMG_MULTI_HIT : type;
-#endif
 	if (disguised(dst)) {
 		clif_send(buf,packet_len(0x1de),dst,AREA_WOS);
 		WBUFL(buf,8)=disguised_bl_id(dst->id);
@@ -5768,7 +5733,6 @@ int clif_skill_damage(struct block_list *src,struct block_list *dst,t_tick tick,
 			WBUFL(buf,24)=-1;
 		clif_send(buf,packet_len(0x1de),src,SELF);
 	}
-#endif
 
 	//Because the damage delay must be synced with the client, here is where the can-walk tick must be updated. [Skotlex]
 	return clif_calc_walkdelay(dst,ddelay,type,damage,div);

@@ -482,7 +482,7 @@ int64 SkillBaseDamageCalculator::battle_addmastery(map_session_data * sd, block_
 			break;
 		case W_KATAR:
 			if ((skill = pc_checkskill(sd, AS_KATAR)) > 0)
-				damage += (skill * 3);
+				damage += (skill * 8);
 			break;
 	}
 

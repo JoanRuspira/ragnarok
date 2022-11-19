@@ -4148,40 +4148,21 @@ Body:
   - Id: 136
     Name: AS_SONICBLOW
     Description: Sonic Blow
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     Range: 1
     Hit: Multi_Hit
     HitCount: -8
     Element: Weapon
+    Cooldown: 7000
     AfterCastActDelay: 2000
     AfterCastWalkDelay: 2000
     Duration2: 5000
     CastDelayFlags:
       IgnoreStatus: true
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 16
-        - Level: 2
-          Amount: 18
-        - Level: 3
-          Amount: 20
-        - Level: 4
-          Amount: 22
-        - Level: 5
-          Amount: 24
-        - Level: 6
-          Amount: 26
-        - Level: 7
-          Amount: 28
-        - Level: 8
-          Amount: 30
-        - Level: 9
-          Amount: 32
-        - Level: 10
-          Amount: 34
+      SpCost: 25
       Weapon:
         Katar: true
   - Id: 137
@@ -4190,7 +4171,7 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    Cooldown: 7000
+    Cooldown: 5000
     AfterCastActDelay: 400
     CopyFlags:
       Skill:
@@ -4373,8 +4354,10 @@ Body:
     Range: 1
     Hit: Single
     HitCount: 1
-    Element: Weapon
+    Element: Poison
     SplashArea: 2
+    Cooldown: 8000
+    AfterCastActDelay: 400
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -4382,48 +4365,18 @@ Body:
     CastCancel: true
     Duration1:
       - Level: 1
-        Time: 5000
+        Time: 0
       - Level: 2
-        Time: 5500
+        Time: 0
       - Level: 3
-        Time: 6000
+        Time: 0
       - Level: 4
-        Time: 6500
+        Time: 0
       - Level: 5
-        Time: 7000
-      - Level: 6
-        Time: 7500
-      - Level: 7
-        Time: 8000
-      - Level: 8
-        Time: 8500
-      - Level: 9
-        Time: 9000
-      - Level: 10
-        Time: 100
+        Time: 0
     Duration2: 60000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 12
-        - Level: 2
-          Amount: 14
-        - Level: 3
-          Amount: 16
-        - Level: 4
-          Amount: 18
-        - Level: 5
-          Amount: 20
-        - Level: 6
-          Amount: 22
-        - Level: 7
-          Amount: 24
-        - Level: 8
-          Amount: 26
-        - Level: 9
-          Amount: 28
-        - Level: 10
-          Amount: 30
+      SpCost: 30
       ItemCost:
         - Item: Red_Gemstone
           Amount: 1
@@ -4626,7 +4579,7 @@ Body:
     Duration1: 5000
     Duration2: 30000
     Requires:
-      SpCost: 17
+      SpCost: 12
   - Id: 153
     Name: MC_CARTREVOLUTION
     Description: Cart Revolution
@@ -5555,7 +5508,7 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Weapon
-    Cooldown: 10000
+    Cooldown: 7000
     AfterCastActDelay: 400
     SplashArea: 3
     Duration1: 5000
@@ -10338,12 +10291,11 @@ Body:
   - Id: 406
     Name: ASC_METEORASSAULT
     Description: Meteor Assault
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Self
     DamageFlags:
       Splash: true
-      IgnoreAtkCard: true
     Flags:
       TargetTrap: true
       IgnoreAutoGuard: true
@@ -10352,8 +10304,8 @@ Body:
     HitCount: 1
     Element: Weapon
     SplashArea: 2
-    CastTime: 500
-    AfterCastActDelay: 500
+    CastTime: 1000
+    AfterCastActDelay: 400
     Duration2:
       - Level: 1
         Time: 30000
@@ -10362,27 +10314,7 @@ Body:
       - Level: 3
         Time: 120000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 10
-        - Level: 2
-          Amount: 12
-        - Level: 3
-          Amount: 14
-        - Level: 4
-          Amount: 16
-        - Level: 5
-          Amount: 18
-        - Level: 6
-          Amount: 20
-        - Level: 7
-          Amount: 22
-        - Level: 8
-          Amount: 24
-        - Level: 9
-          Amount: 26
-        - Level: 10
-          Amount: 28
+      SpCost: 23
   - Id: 407
     Name: ASC_CDP
     Description: Create Deadly Poison
@@ -13598,29 +13530,28 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    DamageFlags:
-      IgnoreAtkCard: true
-      IgnoreFlee: true
     Range: 9
     Hit: Multi_Hit
-    HitCount: 3
+    HitCount:
+      - Level: 1
+        Count: 1
+      - Level: 2
+        Count: 2
+      - Level: 3
+        Count: 3
+      - Level: 4
+        Count: 4
+      - Level: 5
+        Count: 5
     Element: Weapon
-    AfterCastActDelay: 1000
+    Cooldown: 5000
+    CastTime: 2000
+    AfterCastActDelay: 400
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 30
-        - Level: 2
-          Amount: 25
-        - Level: 3
-          Amount: 20
-        - Level: 4
-          Amount: 15
-        - Level: 5
-          Amount: 10
+      SpCost: 16
       Ammo:
         Kunai: true
-      AmmoAmount: 1
+      AmmoAmount: 3
   - Id: 525
     Name: NJ_HUUMA
     Description: Throw Huuma Shuriken
@@ -16029,42 +15960,25 @@ Body:
     Description: Throw Venom Knife
     MaxLevel: 5
     Type: Weapon
+    Element: Poison
     TargetType: Attack
-    DamageFlags:
-      IgnoreAtkCard: true
     Flags:
       IgnoreAutoGuard: true
       IgnoreCicada: true
     Range: 9
-    Hit: Multi_Hit
+    Hit: Single
     HitCount: 1
+    Cooldown: 5000
+    AfterCastActDelay: 300
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
-    Duration2:
-      - Level: 1
-        Time: 15000
-      - Level: 2
-        Time: 20000
-      - Level: 3
-        Time: 25000
-      - Level: 4
-        Time: 30000
-      - Level: 5
-        Time: 35000
-      - Level: 6
-        Time: 40000
-      - Level: 7
-        Time: 45000
-      - Level: 8
-        Time: 50000
-      - Level: 9
-        Time: 55000
-      - Level: 10
-        Time: 60000
     Requires:
-      SpCost: 15
+      SpCost: 13
+      ItemCost:
+        - Item: Venom_Knife
+          Amount: 1
   - Id: 1005
     Name: RG_CLOSECONFINE
     Description: Close Confine
@@ -16368,7 +16282,17 @@ Body:
     AfterCastActDelay: 5000
     CastCancel: true
     CastTime: 1000
-    Duration1: 300000
+    Duration1:
+      - Level: 1
+        Time: 60000
+      - Level: 2
+        Time: 120000
+      - Level: 3
+        Time: 180000
+      - Level: 4
+        Time: 240000
+      - Level: 5
+        Time: 300000
     Requires:
       SpCost: 70
   - Id: 2002
@@ -17905,20 +17829,11 @@ Body:
     TargetType: Attack
     DamageFlags:
       NoDamage: true
-    Range: 10
+    Range: 1
     Hit: Single
     HitCount: 1
-    AfterCastActDelay:
-      - Level: 1
-        Time: 3000
-      - Level: 2
-        Time: 2500
-      - Level: 3
-        Time: 2000
-      - Level: 4
-        Time: 1500
-      - Level: 5
-        Time: 1000
+    Cooldown: 10000
+    AfterCastActDelay: 1000
     Duration1:
       - Level: 1
         Time: 10000
@@ -17931,17 +17846,7 @@ Body:
       - Level: 5
         Time: 50000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 12
-        - Level: 2
-          Amount: 16
-        - Level: 3
-          Amount: 20
-        - Level: 4
-          Amount: 24
-        - Level: 5
-          Amount: 28
+      SpCost: 15
   - Id: 2022
     Name: GC_CROSSIMPACT
     Description: Cross Impact
@@ -18276,19 +18181,19 @@ Body:
     Element: Weapon
     SplashArea:
       - Level: 1
-        Area: 1
+        Area: 2
       - Level: 2
-        Area: 1
+        Area: 2
       - Level: 3
-        Area: 1
+        Area: 2
       - Level: 4
-        Area: 1
+        Area: 2
       - Level: 5
         Area: 2
     AfterCastActDelay: 200
     Duration1: 3000
     Requires:
-      SpCost: 5
+      SpCost: 2
       Weapon:
         Katar: true
   - Id: 2037
@@ -18311,23 +18216,12 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Weapon
-    AfterCastActDelay: 1000
+    Cooldown: 5000
+    AfterCastActDelay: 400
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 20
-        - Level: 2
-          Amount: 24
-        - Level: 3
-          Amount: 28
-        - Level: 4
-          Amount: 32
-        - Level: 5
-          Amount: 36
+      SpCost: 20
       Weapon:
         Katar: true
-      Status:
-        Rollingcutter: true
   - Id: 2038
     Name: AB_JUDEX
     Description: Judex
@@ -19195,11 +19089,9 @@ Body:
         Plagiarism: true
         Reproduce: true
     CastCancel: true
-    CastTime: 5000
-    AfterCastActDelay: 400
-    Cooldown: 3000
+    AfterCastActDelay: 200
     Requires:
-      SpCost: 18
+      SpCost: 14
       Weapon:
         Bow: true
       Ammo:
@@ -24846,36 +24738,36 @@ Body:
     AfterCastActDelay: 500
     Duration1:
       - Level: 1
-        Time: 8000
+        Time: 15000
       - Level: 2
-        Time: 10000
+        Time: 15000
       - Level: 3
-        Time: 12000
+        Time: 15000
       - Level: 4
-        Time: 14000
+        Time: 15000
       - Level: 5
-        Time: 16000
+        Time: 15000
     Duration2:
       - Level: 1
-        Time: 4000
+        Time: 20000
       - Level: 2
-        Time: 8000
+        Time: 20000
       - Level: 3
-        Time: 12000
+        Time: 20000
       - Level: 4
-        Time: 16000
+        Time: 20000
       - Level: 5
         Time: 20000
-    Cooldown: 5000
+    Cooldown: 20000
     Requires:
-      SpCost: 20
-      # ItemCost:
-      #   - Item: Poison_Spore
-      #     Amount: 1
+      SpCost: 35
+      ItemCost:
+        - Item: Poison_Spore
+          Amount: 1
     Unit:
       Id: Cloud_Kill
       Range: 3
-      Interval: 500
+      Interval: 3000
       Target: Enemy
       Flag:
         PathCheck: true

@@ -3639,7 +3639,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 		break;
 	case TF_POISON:
 		skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag);
-		skill_attack(BF_WEAPON,src,src,bl,SM_BASH,skill_lv,tick,flag);
+		// skill_attack(BF_WEAPON,src,src,bl,SM_BASH,skill_lv,tick,flag);
 		break;
 	case MO_TRIPLEATTACK:
 		skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag|SD_ANIMATION);
@@ -4427,12 +4427,12 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 		break;
 
 	case GC_CROSSRIPPERSLASHER:
-		if( sd && !(sc && sc->data[SC_ROLLINGCUTTER]) )
-			clif_skill_fail(sd,skill_id,USESKILL_FAIL_CONDITION,0);
-		else
-		{
-			skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag);
-		}
+		// if( sd && !(sc && sc->data[SC_ROLLINGCUTTER]) )
+		// 	clif_skill_fail(sd,skill_id,USESKILL_FAIL_CONDITION,0);
+		// else
+		// {
+		skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag);
+		// }
 		break;
 	case GC_CROSSIMPACT:
 		if (skill_check_unit_movepos(0, src, bl->x, bl->y, 1, 1)) {

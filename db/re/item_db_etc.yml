@@ -2463,16 +2463,11 @@ Body:
   - Id: 1771
     AegisName: Venom_Knife
     Name: Venom Knife
-    Type: Ammo
-    SubType: Dagger
-    Buy: 50
-    Weight: 5
-    Attack: 30
-    Jobs:
-      Assassin: true
-    Locations:
-      Ammo: true
-    EquipLevelMin: 1
+    Type: Etc
+    Buy: 1780
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 1772
     AegisName: Holy_Arrow
     Name: Holy Arrow
@@ -9470,3 +9465,101 @@ Body:
     Type: Etc
     Buy: 1000
     Weight: 2
+  - Id: 13255
+    AegisName: Kunai_Of_Icicle
+    Name: Icicle Kunai
+    Type: Ammo
+    SubType: Kunai
+    Buy: 10
+    Weight: 20
+    Attack: 30
+    Jobs:
+      Assassin: true
+    Locations:
+      Ammo: true
+    EquipLevelMin: 1
+    Script: |
+      bonus bAtkEle,Ele_Water;
+  - Id: 13256
+    AegisName: Kunai_Of_Black_Soil
+    Name: Black Earth Kunai
+    Type: Ammo
+    SubType: Kunai
+    Buy: 10
+    Weight: 20
+    Attack: 30
+    Jobs:
+      Assassin: true
+    Locations:
+      Ammo: true
+    EquipLevelMin: 1
+    Script: |
+      bonus bAtkEle,Ele_Earth;
+  - Id: 13257
+    AegisName: Kunai_Of_Furious_Wind
+    Name: High Wind Kunai
+    Type: Ammo
+    SubType: Kunai
+    Buy: 10
+    Weight: 20
+    Attack: 30
+    Jobs:
+      Assassin: true
+    Locations:
+      Ammo: true
+    EquipLevelMin: 1
+    Script: |
+      bonus bAtkEle,Ele_Wind;
+  - Id: 13258
+    AegisName: Kunai_Of_Fierce_Flame
+    Name: Heat Wave Kunai
+    Type: Ammo
+    SubType: Kunai
+    Buy: 10
+    Weight: 20
+    Attack: 30
+    Jobs:
+      Assassin: true
+    Locations:
+      Ammo: true
+    EquipLevelMin: 1
+    Script: |
+      bonus bAtkEle,Ele_Fire;
+  - Id: 13259
+    AegisName: Kunai_Of_Deadly_Poison
+    Name: Fell Poison Kunai
+    Type: Ammo
+    SubType: Kunai
+    Buy: 10
+    Weight: 20
+    Attack: 30
+    Jobs:
+      Assassin: true
+    Locations:
+      Ammo: true
+    EquipLevelMin: 1
+    Script: |
+      bonus bAtkEle,Ele_Poison;
+      bonus2 bAddEff,Eff_Poison,500;
+  - Id: 13294
+    AegisName: Explosive_Kunai
+    Name: Explosive Kunai
+    Type: Ammo
+    SubType: Kunai
+    Buy: 100
+    Weight: 30
+    Attack: 50
+    Jobs:
+      Assassin: true
+    Classes:
+      Normal: true
+      Upper: true
+      Baby: true
+      Third: true
+      Third_Upper: true
+      Third_Baby: true
+    Locations:
+      Ammo: true
+    EquipLevelMin: 100
+    Script: |
+      bonus bAtkEle,Ele_Neutral;

@@ -153,6 +153,12 @@
     <Filter Include="Source Files\skillAtkRatioCalculator\assassin">
       <UniqueIdentifier>{61e740ea-2a3e-448e-bd3c-e20b58d97481}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\skillAdditionalEffectsCalculator\assassin">
+      <UniqueIdentifier>{c0a85d51-a7cf-4b4a-a737-547ec87e2639}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\skillAdditionalEffectsCalculator\assassin">
+      <UniqueIdentifier>{886dce94-f1ad-42e3-99a2-773272bc5ed9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="achievement.hpp">
@@ -374,6 +380,9 @@
     <ClInclude Include="AssassinSkillAtkRatioCalculator.h">
       <Filter>Header Files\skillAtkRatioCalculator\assassin</Filter>
     </ClInclude>
+    <ClInclude Include="AssassinAdditionalEffectsCalculator.h">
+      <Filter>Header Files\skillAdditionalEffectsCalculator\assassin</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="achievement.cpp">
@@ -567,6 +576,9 @@
     </ClCompile>
     <ClCompile Include="AssassinSkillAtkRatioCalculator.cpp">
       <Filter>Source Files\skillAtkRatioCalculator\assassin</Filter>
+    </ClCompile>
+    <ClCompile Include="AssassinAdditionalEffectsCalculator.cpp">
+      <Filter>Source Files\skillAdditionalEffectsCalculator\assassin</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
