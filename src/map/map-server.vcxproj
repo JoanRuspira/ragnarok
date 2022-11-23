@@ -217,6 +217,7 @@
     <ClInclude Include="pc.hpp" />
     <ClInclude Include="pc_groups.hpp" />
     <ClInclude Include="pet.hpp" />
+    <ClInclude Include="PriestSkillAttackRatioCalculator.h" />
     <ClInclude Include="quest.hpp" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="RogueAdditionalEffectsCalculator.h" />
@@ -289,6 +290,7 @@
     <ClCompile Include="pc.cpp" />
     <ClCompile Include="pc_groups.cpp" />
     <ClCompile Include="pet.cpp" />
+    <ClCompile Include="PriestSkillAttackRatioCalculator.cpp" />
     <ClCompile Include="quest.cpp" />
     <ClCompile Include="RogueAdditionalEffectsCalculator.cpp" />
     <ClCompile Include="RogueSkillAtkRatioCalculator.cpp" />

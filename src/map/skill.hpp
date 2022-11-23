@@ -2105,6 +2105,9 @@ enum e_skill {
 	TF_SANDATTACK = 803,
 	MC_FIREWORKS = 804,
 	AC_PARALIZING = 807,
+	PR_UNHOLYCROSS = 805,
+	PR_SPIRITUSANCTI = 806,
+	PR_FLASHHEAL = 808,
 };
 
 /// The client view ids for land skills.

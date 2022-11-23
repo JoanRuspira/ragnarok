@@ -16,5 +16,6 @@ class AssassinSkillAtkRatioCalculator
 		static void add_rolling_cutter_especial_effects(struct block_list *target);
 		static void add_venom_splasher_especial_effects(struct block_list *target);
 		static void add_throw_kunai_especial_effects(struct block_list *target);
+		static void add_meteor_assault_special_effects(struct block_list *src);
 };
 

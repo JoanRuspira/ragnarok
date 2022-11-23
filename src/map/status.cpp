@@ -5641,9 +5641,9 @@ void status_calc_bl_main(struct block_list *bl, /*enum scb_flag*/int flag)
 
 			// Absolute ASPD % modifiers
 			amotion = amotion * status->aspd_rate / 1000;
-			if (sd->ud.skilltimer != INVALID_TIMER )
+			// if (sd->ud.skilltimer != INVALID_TIMER )
 
-				amotion = amotion * 5 * (5 + 10) / 100; //SA_FREECAST casting motion
+			// 	amotion = amotion * 5 * (5 + 10) / 100; //SA_FREECAST casting motion
 
 			// RE ASPD % modifier
 			amotion += (max(0xc3 - amotion, 2) * (status->aspd_rate2 + status_calc_aspd(bl, sc, false))) / 100;
@@ -7175,7 +7175,7 @@ static unsigned short status_calc_speed(struct block_list *bl, struct status_cha
 		if( sd->ud.skill_id == LG_EXEEDBREAK )
 			speed_rate = 160 - 10 * sd->ud.skill_lv;
 		else
-			speed_rate = 175 - 5 * 5; //SA_FREECAST casting speed rate
+			speed_rate = 175 - 5 * 15; //SA_FREECAST casting speed rate
 	} else {
 		int val = 0;
 

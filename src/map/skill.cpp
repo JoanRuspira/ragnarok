@@ -3899,6 +3899,8 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case RK_IGNITIONBREAK:
 	case RK_HUNDREDSPEAR:
 	case AB_JUDEX:
+	case PR_SPIRITUSANCTI:
+	case PR_UNHOLYCROSS:
 	case AB_ADORAMUS:
 	case WL_SOULEXPANSION:
 	case WL_CRIMSONROCK:
@@ -4196,6 +4198,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case NJ_KOUENKA:
 	case NJ_HYOUSENSOU:
 	case NJ_HUUJIN:
+	case PR_FLASHHEAL:
 	case AB_HIGHNESSHEAL:
 	case AB_DUPLELIGHT_MAGIC:
 	case LG_RAYOFGENESIS:
@@ -5271,6 +5274,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
  		case AL_HEAL:
 		case ALL_RESURRECTION:
 		case PR_ASPERSIO:
+		case PR_FLASHHEAL:
 		case AB_HIGHNESSHEAL:
 			//Apparently only player casted skills can be offensive like this.
 			if (sd && battle_check_undead(tstatus->race,tstatus->def_ele)) {
@@ -5317,6 +5321,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	{
 	case HLIF_HEAL:	//[orn]
 	case AL_HEAL:
+	case PR_FLASHHEAL:
 	case AB_HIGHNESSHEAL:
 		{
 			int heal = skill_calc_heal(src, bl, skill_id, skill_lv, true);
@@ -10442,6 +10447,7 @@ static int8 skill_castend_id_check(struct block_list *src, struct block_list *ta
 		case AL_DECAGI:
 		case SA_DISPELL: // Mado Gear is immune to Dispell according to bugreport:49 [Ind]
 		case AB_RENOVATIO:
+		case PR_FLASHHEAL:
 		case AB_HIGHNESSHEAL:
 			if (tsc && tsc->option&OPTION_MADOGEAR)
 				return USESKILL_FAIL_TOTARGET;
@@ -14587,12 +14593,6 @@ bool skill_check_condition_castbegin(struct map_session_data* sd, uint16 skill_i
 			}
 			break;
 #endif
-		case PR_BENEDICTIO:
-			if (skill_check_pc_partner(sd, skill_id, &skill_lv, 1, 0) < 2) {
-				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-				return false;
-			}
-			break;
 		case SL_SMA:
 			if(sc && !(sc->data[SC_SMA] || sc->data[SC_USE_SKILL_SP_SHA]))
 				return false;
@@ -15367,9 +15367,6 @@ bool skill_check_condition_castend(struct map_session_data* sd, uint16 skill_id,
 
 	// perform skill-specific checks (and actions)
 	switch( skill_id ) {
-		case PR_BENEDICTIO:
-			skill_check_pc_partner(sd, skill_id, &skill_lv, 1, 1);
-			break;
 		case AM_CANNIBALIZE:
 		case AM_SPHEREMINE: {
 			int c=0;

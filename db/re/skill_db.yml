@@ -1465,6 +1465,67 @@ Body:
     Requires:
       SpCost: 20
       State: Cart
+  - Id: 805
+    Name: PR_UNHOLYCROSS
+    Description: UnhHoly Cross
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    DamageFlags:
+      Splash: true
+    Range: 1
+    Hit: Multi_Hit
+    HitCount: -3
+    Element: Dark
+    SplashArea: 1
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    AfterCastActDelay: 500
+    Requires:
+      SpCost: 30
+  - Id: 806
+    Name: PR_SPIRITUSANCTI
+    Description: Spiritu Sancti
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    DamageFlags:
+      Splash: true
+    Range: 11
+    Hit: Multi_Hit
+    HitCount: -3
+    Element: Neutral
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    AfterCastActDelay: 400
+    Requires:
+      SpCost: 30
+  - Id: 808
+    Name: PR_FLASHHEAL
+    Description: Flash Heal
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Support
+    DamageFlags:
+      NoDamage: true
+      IgnoreDefense: true
+    Range: 11
+    Hit: Single
+    HitCount: 1
+    Element: Holy
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    CastTime: 500
+    AfterCastActDelay: 400
+    Cooldown: 10000
+    Requires:
+      SpCost: 100
   - Id: 51
     Name: TF_HIDING
     Description: Hiding
@@ -1710,7 +1771,6 @@ Body:
       IgnoreDefense: true
       Critical: true
     Hit: Single
-    Cooldown: 2000
     AfterCastActDelay: 100
     HitCount: 1
     Element: Weapon
@@ -1893,8 +1953,6 @@ Body:
       NoDamage: true
       Splash: true
       IgnoreDefense: true
-    Flags:
-      IsEnsemble: true
     Range: 9
     Hit: Single
     HitCount: 1
@@ -2212,7 +2270,7 @@ Body:
   - Id: 78
     Name: PR_LEXAETERNA
     Description: Lex Aeterna
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Magic
     TargetType: Attack
     DamageFlags:
@@ -10304,7 +10362,8 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Weapon
-    SplashArea: 2
+    SplashArea: 3
+    Cooldown: 7000
     CastTime: 1000
     AfterCastActDelay: 400
     Duration2:
@@ -29123,7 +29182,19 @@ Body:
   - Id: 5072
     Name: AB_VITUPERATUM
     Description: Vituperatum
-    MaxLevel: 1
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    DamageFlags:
+      NoDamage: true
+    Range: 9
+    Hit: Single
+    SplashArea: 5
+    CastCancel: true
+    AfterCastActDelay: 3000
+    Duration1: 600000
+    Requires:
+      SpCost: 10
   - Id: 5073
     Name: AB_CONVENIO
     Description: Convenio

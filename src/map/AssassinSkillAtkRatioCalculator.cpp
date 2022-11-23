@@ -29,6 +29,7 @@ int AssassinSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list
 			return calculate_throw_kunai_atk_ratio(skill_lv);
 			break;
 		case ASC_METEORASSAULT:
+			add_meteor_assault_special_effects(src);
 			return calculate_meteor_assault_atk_ratio(skill_lv, sstatus->dex);
 			break;
 		default:
@@ -37,12 +38,15 @@ int AssassinSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list
 	}
 }
 
+void AssassinSkillAtkRatioCalculator::add_meteor_assault_special_effects(struct block_list *target)
+{
+	clif_specialeffect(target, EF_ZANGETSU, AREA);
+}
 
 void AssassinSkillAtkRatioCalculator::add_throw_kunai_especial_effects(struct block_list *target)
 {
 	clif_specialeffect(target, EF_STRETCH, AREA);
 }
-
 
 void AssassinSkillAtkRatioCalculator::add_sonic_blow_especial_effects(struct block_list *target)
 {
@@ -78,7 +82,6 @@ int AssassinSkillAtkRatioCalculator::calculate_cross_ripper_slasher_atk_ratio(in
 	return ratio + (5 * rolling_cutter_counters);
 }
 
-
 int AssassinSkillAtkRatioCalculator::calculate_rolling_cutter_atk_ratio(int skill_lv, int luck)
 {
 	int ratio = 0;
@@ -101,7 +104,6 @@ int AssassinSkillAtkRatioCalculator::calculate_rolling_cutter_atk_ratio(int skil
 	}
 	return ratio + (luck/3);
 }
-
 
 int AssassinSkillAtkRatioCalculator::calculate_sonic_blow_atk_ratio(int skill_lv)
 {
@@ -149,7 +151,6 @@ int AssassinSkillAtkRatioCalculator::calculate_venom_dust_atk_ratio(int skill_lv
 	return ratio + (intelligence/3);
 }
 
-
 int AssassinSkillAtkRatioCalculator::calculate_meteor_assault_atk_ratio(int skill_lv, int dex)
 {
 	int ratio = 0;
@@ -172,7 +173,6 @@ int AssassinSkillAtkRatioCalculator::calculate_meteor_assault_atk_ratio(int skil
 		}
 	return ratio + (dex/3);
 }
-
 
 int AssassinSkillAtkRatioCalculator::calculate_venom_splasher_atk_ratio(int skill_lv, int intelligence)
 {

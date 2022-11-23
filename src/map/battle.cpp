@@ -5050,6 +5050,7 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 			case AL_HEAL:
 			case PR_BENEDICTIO:
 			case PR_SANCTUARY:
+			case PR_FLASHHEAL:
 			case AB_HIGHNESSHEAL:
 				ad.damage = skill_calc_heal(src, target, skill_id, skill_lv, false);
 				break;
@@ -5151,6 +5152,11 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 							ad.flag = BF_WEAPON|BF_SHORT;
 							ad.type = DMG_NORMAL;
 						}
+						break;
+					case AB_JUDEX:
+					case PR_UNHOLYCROSS:
+					case PR_SPIRITUSANCTI:
+						skillratio += PriestSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv);
 						break;
 					case MG_FIREBALL:
 						skillratio += 40 + 20 * skill_lv;
@@ -5292,10 +5298,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 						skillratio += 20 * skill_lv - 20;
 						break;
 #endif
-					case AB_JUDEX:
-						skillratio += -100 + 300 + 40 * skill_lv;
-						RE_LVL_DMOD(100);
-						break;
 					case AB_ADORAMUS:
 						skillratio += 230 + 70 * skill_lv;
 						RE_LVL_DMOD(100);
@@ -6472,7 +6474,7 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 		int t_dir = unit_getdir(target);
 		int dist = distance_bl(src, target);
 
-		if (dist <= 0 || (!map_check_dir(dir,t_dir) && dist <= tstatus->rhw.range+1)) {
+		if (dist <= 0 || ( dist <= tstatus->rhw.range+1)) {
 			uint16 skill_lv = tsc->data[SC_AUTOCOUNTER]->val1;
 
 			clif_skillcastcancel(target); //Remove the casting bar. [Skotlex]

@@ -34,51 +34,73 @@ Header:
 
 Body:
   - Weapon: Fist
+    Small: 100
+    Medium: 100
+    Large: 100
   - Weapon: Dagger
-    Medium: 75
-    Large: 50
+    Small: 100
+    Medium: 100
+    Large: 100
   - Weapon: 1hSword
-    Small: 75
-    Large: 75
+    Small: 100
+    Medium: 100
+    Large: 100
   - Weapon: 2hSword
-    Small: 75
-    Medium: 75
+    Small: 100
+    Medium: 100
+    Large: 100
   - Weapon: 1hSpear
-    Small: 75
-    Medium: 75
+    Small: 100
+    Medium: 100
+    Large: 100
   - Weapon: 2hSpear
-    Small: 75
-    Medium: 75
+    Small: 100
+    Medium: 100
+    Large: 100
   - Weapon: 1hAxe
-    Small: 50
-    Medium: 75
+    Small: 100
+    Medium: 100
+    Large: 100
   - Weapon: 2hAxe
-    Small: 50
-    Medium: 75
+    Small: 100
+    Medium: 100
+    Large: 100
   - Weapon: Mace
-    Small: 75
+    Small: 100
+    Medium: 100
+    Large: 100
   - Weapon: 2hMace
+    Small: 100
+    Medium: 100
+    Large: 100
   - Weapon: Staff
+    Small: 100
+    Medium: 100
+    Large: 100
   - Weapon: Bow
-    Large: 75
+    Small: 100
+    Medium: 100
+    Large: 100
   - Weapon: Musical
-    Small: 75
-    Large: 75
+    Small: 100
+    Medium: 100
+    Large: 100
   - Weapon: Whip
-    Small: 75
-    Large: 50
+    Small: 100
+    Medium: 100
+    Large: 100
   - Weapon: Book
-    Large: 50
+    Small: 100
+    Medium: 100
+    Large: 100
   - Weapon: Katar
-    Small: 75
-    Large: 75
-  - Weapon: Revolver
-  - Weapon: Rifle
-  - Weapon: Gatling
-  - Weapon: Shotgun
-  - Weapon: Grenade
-  - Weapon: Huuma
+    Small: 100
+    Medium: 100
+    Large: 100
   - Weapon: 2hStaff
+    Small: 100
+    Medium: 100
+    Large: 100
 
 Footer:
   Imports:
