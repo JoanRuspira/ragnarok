@@ -538,7 +538,7 @@ int skill_calc_heal(struct block_list *src, struct block_list *target, uint16 sk
 			break;
 		case AB_HIGHNESSHEAL:
 			// hp = ((status_get_int(src) + status_get_lv(src)) / 5) * 30;
-			hp_bonus = (skill_lv * 400) + status_get_int(src) + status_get_lv(src);
+			hp_bonus = (skill_lv * 200) + status_get_int(src) + status_get_lv(src);
 		case SU_FRESHSHRIMP:
 			hp = (status_get_lv(src) + status_get_int(src)) / 5 * 6;
 			break;
@@ -5412,6 +5412,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			case 2: per=30; break;
 			case 3: per=50; break;
 			case 4: per=80; break;
+			case 5: per=100; break;
 			}
 			if(dstsd && dstsd->special_state.restart_full_recover)
 				per = sper = 100;

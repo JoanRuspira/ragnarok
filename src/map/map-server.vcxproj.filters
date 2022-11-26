@@ -165,6 +165,12 @@
     <Filter Include="Source Files\skillAtkRatioCalculator\priest">
       <UniqueIdentifier>{2bf051a2-c2f5-48fb-938d-4cc8fd61611f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\skillAdditionalEffectsCalculator\priest">
+      <UniqueIdentifier>{d12a2f40-759a-433a-8b3f-4d071f8c628c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\skillAdditionalEffectsCalculator\priest">
+      <UniqueIdentifier>{7bf1f274-3ccb-46d0-ac8e-0029b92f3a59}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="achievement.hpp">
@@ -392,6 +398,9 @@
     <ClInclude Include="PriestSkillAttackRatioCalculator.h">
       <Filter>Header Files\skillAtkRatioCalculator\priest</Filter>
     </ClInclude>
+    <ClInclude Include="PriestAdditionalEffectsCalculator.h">
+      <Filter>Header Files\skillAdditionalEffectsCalculator\priest</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="achievement.cpp">
@@ -591,6 +600,9 @@
     </ClCompile>
     <ClCompile Include="PriestSkillAttackRatioCalculator.cpp">
       <Filter>Source Files\skillAtkRatioCalculator\priest</Filter>
+    </ClCompile>
+    <ClCompile Include="PriestAdditionalEffectsCalculator.cpp">
+      <Filter>Source Files\skillAdditionalEffectsCalculator\priest</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

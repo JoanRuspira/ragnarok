@@ -321,6 +321,8 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 			break;
 		case CR_HOLYCROSS:
 			CrusaderAdditionalEffectsCalculator::apply_holy_cross_additional_effect(src, bl, skill_lv);
+		case PR_UNHOLYCROSS:
+			PriestAdditionalEffectsCalculator::apply_unholy_cross_additional_effect(src, bl, skill_lv);
 		case RG_BACKSTAP:
 		case GC_COUNTERSLASH:
 			RogueAdditionalEffectsCalculator::apply_back_stab_additional_effect(src, bl, skill_lv);

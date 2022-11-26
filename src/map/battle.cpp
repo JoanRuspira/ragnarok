@@ -2835,6 +2835,10 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 				skillratio += AssassinSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, sc->data[SC_ROLLINGCUTTER]->val1);
 			skillratio += AssassinSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, 0);
 			break;
+		case AB_DUPLELIGHT_MELEE:
+		case PR_UNHOLYCROSS:
+			skillratio += PriestSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
+			break;
 		case MER_CRASH:
 			skillratio += 10 * skill_lv;
 			break;
@@ -3212,9 +3216,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			break;
 		case GC_DARKCROW:
 			skillratio += 100 * (skill_lv - 1);
-			break;
-		case AB_DUPLELIGHT_MELEE:
-			skillratio += 50 + 15 * skill_lv;
 			break;
 		case NPC_ARROWSTORM:
 			skillratio += 900 + 80 * skill_lv;
@@ -5060,13 +5061,8 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 			case ALL_RESURRECTION:
 			case PR_TURNUNDEAD:
 				//Undead check is on skill_castend_damageid code.
-#ifdef RENEWAL
 				i = 10 * skill_lv + sstatus->luk + sstatus->int_ + status_get_lv(src)
 				  	+ 300 - 300 * tstatus->hp / tstatus->max_hp;
-#else
-				i = 20 * skill_lv + sstatus->luk + sstatus->int_ + status_get_lv(src)
-				  	+ 200 - 200 * tstatus->hp / tstatus->max_hp;
-#endif
 				if(i > 700)
 					i = 700;
 				if(rnd()%1000 < i && !status_has_mode(tstatus,MD_STATUSIMMUNE))
@@ -5154,9 +5150,10 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 						}
 						break;
 					case AB_JUDEX:
-					case PR_UNHOLYCROSS:
 					case PR_SPIRITUSANCTI:
-						skillratio += PriestSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv);
+					case PR_MAGNUS:
+					case AB_DUPLELIGHT_MAGIC:
+						skillratio += PriestSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
 					case MG_FIREBALL:
 						skillratio += 40 + 20 * skill_lv;
@@ -5276,10 +5273,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 						else
 							skillratio += 20 * skill_lv - 20; //Monsters use old formula
 						break;
-					case PR_MAGNUS:
-						if (battle_check_undead(tstatus->race, tstatus->def_ele) || tstatus->race == RC_DEMON)
-							skillratio += 30;
-						break;
 					case BA_DISSONANCE:
 						skillratio += skill_lv * 10;
 						if (sd)
@@ -5301,9 +5294,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case AB_ADORAMUS:
 						skillratio += 230 + 70 * skill_lv;
 						RE_LVL_DMOD(100);
-						break;
-					case AB_DUPLELIGHT_MAGIC:
-						skillratio += 300 + 40 * skill_lv;
 						break;
 					case WL_SOULEXPANSION:
 						skillratio += -100 + 750 + skill_lv * 150 + sstatus->int_;
@@ -6623,7 +6613,7 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 	damage = wd.damage + wd.damage2;
 	if( damage > 0 && src != target )
 	{
-		if( sc && sc->data[SC_DUPLELIGHT] && (wd.flag&BF_SHORT) && rnd()%100 <= 10+2*sc->data[SC_DUPLELIGHT]->val1 )
+		if( sc && sc->data[SC_DUPLELIGHT] && (wd.flag&BF_SHORT) && rnd()%100 <= 30+4*sc->data[SC_DUPLELIGHT]->val1 )
 		{	// Activates it only from melee damage
 			uint16 skill_id;
 			if( rnd()%2 == 1 )

@@ -394,7 +394,7 @@ Body:
   - Id: 13
     Name: MG_SOULSTRIKE
     Description: Soul Strike
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Magic
     TargetType: Attack
     Flags:
@@ -988,8 +988,8 @@ Body:
         Reproduce: true
     CastCancel: true
     CastTime: 3000
-    Cooldown: 7000
-    AfterCastActDelay: 1000
+    Cooldown: 5000
+    AfterCastActDelay: 500
     Requires:
       SpCost: 40
   - Id: 29
@@ -1467,24 +1467,25 @@ Body:
       State: Cart
   - Id: 805
     Name: PR_UNHOLYCROSS
-    Description: UnhHoly Cross
+    Description: Unholy Cross
     MaxLevel: 5
-    Type: Magic
+    Type: Weapon
     TargetType: Attack
-    DamageFlags:
-      Splash: true
-    Range: 1
+    Flags:
+      TargetTrap: true
+    Range: -2
     Hit: Multi_Hit
-    HitCount: -3
+    HitCount: -2
     Element: Dark
-    SplashArea: 1
     CopyFlags:
       Skill:
+        Plagiarism: true
         Reproduce: true
-    CastCancel: true
-    AfterCastActDelay: 500
+    Duration2: 30000
+    Cooldown: 5000
+    AfterCastActDelay: 400
     Requires:
-      SpCost: 30
+      SpCost: 40
   - Id: 806
     Name: PR_SPIRITUSANCTI
     Description: Spiritu Sancti
@@ -1494,16 +1495,17 @@ Body:
     DamageFlags:
       Splash: true
     Range: 11
-    Hit: Multi_Hit
-    HitCount: -3
-    Element: Neutral
+    Hit: Single
+    HitCount: 1
+    Element: Ghost
     CopyFlags:
       Skill:
         Reproduce: true
     CastCancel: true
+    Cooldown: 2000
     AfterCastActDelay: 400
     Requires:
-      SpCost: 30
+      SpCost: 35
   - Id: 808
     Name: PR_FLASHHEAL
     Description: Flash Heal
@@ -1521,9 +1523,9 @@ Body:
       Skill:
         Reproduce: true
     CastCancel: true
-    CastTime: 500
-    AfterCastActDelay: 400
-    Cooldown: 10000
+    CastTime: 6000
+    AfterCastActDelay: 2000
+    Cooldown: 15000
     Requires:
       SpCost: 100
   - Id: 51
@@ -1592,7 +1594,7 @@ Body:
   - Id: 54
     Name: ALL_RESURRECTION
     Description: Resurrection
-    MaxLevel: 4
+    MaxLevel: 5
     Type: Magic
     TargetType: Support
     DamageFlags:
@@ -1608,22 +1610,21 @@ Body:
     CastCancel: true
     CastTime:
       - Level: 1
+        Time: 8000
+      - Level: 2
+        Time: 7000
+      - Level: 3
         Time: 6000
-      - Level: 2
-        Time: 4000
-      - Level: 3
-        Time: 2000
-    AfterCastActDelay:
-      - Level: 2
-        Time: 1000
-      - Level: 3
-        Time: 2000
       - Level: 4
-        Time: 3000
+        Time: 5000
+      - Level: 5
+        Time: 4000
+    Cooldown: 20000
+    AfterCastActDelay: 3000
     Requires:
-      SpCost: 60
+      SpCost: 100
       ItemCost:
-        - Item: Blue_Gemstone
+        - Item: Yellow_Gemstone
           Amount: 1
   - Id: 55
     Name: KN_SPEARMASTERY
@@ -1858,30 +1859,28 @@ Body:
     Hit: Single
     HitCount: 1
     CastCancel: true
-    AfterCastActDelay: 3000
-    Duration1: 60000
+    AfterCastActDelay: 2000
+    Duration1:
+      - Level: 1
+        Time: 30000
+      - Level: 2
+        Time: 45000
+      - Level: 3
+        Time: 60000
+      - Level: 4
+        Time: 75000
+      - Level: 5
+        Time: 90000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 13
-        - Level: 2
-          Amount: 16
-        - Level: 3
-          Amount: 19
-        - Level: 4
-          Amount: 22
-        - Level: 5
-          Amount: 25
+      SpCost: 40
   - Id: 67
     Name: PR_SUFFRAGIUM
     Description: Suffragium
-    MaxLevel: 3
+    MaxLevel: 5
     Type: Magic
     TargetType: Support
     DamageFlags:
       NoDamage: true
-    Flags:
-      NoTargetSelf: true
     Range: 9
     Hit: Single
     HitCount: 1
@@ -1891,9 +1890,13 @@ Body:
       - Level: 1
         Time: 30000
       - Level: 2
-        Time: 20000
+        Time: 45000
       - Level: 3
-        Time: 10000
+        Time: 60000
+      - Level: 4
+        Time: 75000
+      - Level: 5
+        Time: 90000
     Requires:
       SpCost: 8
   - Id: 68
@@ -1978,7 +1981,7 @@ Body:
   - Id: 70
     Name: PR_SANCTUARY
     Description: Sanctuary
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Magic
     TargetType: Ground
     DamageFlags:
@@ -1994,58 +1997,29 @@ Body:
         Plagiarism: true
         Reproduce: true
     CastCancel: true
-    CastTime: 5000
+    CastTime: 8000
+    Cooldown: 30000
     Duration1:
       - Level: 1
-        Time: 3900
+        Time: 10000
       - Level: 2
-        Time: 6900
+        Time: 15000
       - Level: 3
-        Time: 9900
+        Time: 20000
       - Level: 4
-        Time: 12900
+        Time: 25000
       - Level: 5
-        Time: 15900
-      - Level: 6
-        Time: 18900
-      - Level: 7
-        Time: 21900
-      - Level: 8
-        Time: 24900
-      - Level: 9
-        Time: 27900
-      - Level: 10
-        Time: 30900
+        Time: 30000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 15
-        - Level: 2
-          Amount: 18
-        - Level: 3
-          Amount: 21
-        - Level: 4
-          Amount: 24
-        - Level: 5
-          Amount: 27
-        - Level: 6
-          Amount: 30
-        - Level: 7
-          Amount: 33
-        - Level: 8
-          Amount: 36
-        - Level: 9
-          Amount: 39
-        - Level: 10
-          Amount: 42
+      SpCost: 90
       ItemCost:
-        - Item: Blue_Gemstone
+        - Item: Yellow_Gemstone
           Amount: 1
     Unit:
       Id: Sanctuary
       Layout: -1
       Range: 1
-      Interval: 1000
+      Interval: 3000
       Flag:
         NoOverlap: true
         PathCheck: true
@@ -2101,7 +2075,7 @@ Body:
   - Id: 73
     Name: PR_KYRIE
     Description: Kyrie Eleison
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Magic
     TargetType: Support
     DamageFlags:
@@ -2114,27 +2088,7 @@ Body:
     AfterCastActDelay: 2000
     Duration1: 120000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 20
-        - Level: 2
-          Amount: 20
-        - Level: 3
-          Amount: 20
-        - Level: 4
-          Amount: 25
-        - Level: 5
-          Amount: 25
-        - Level: 6
-          Amount: 25
-        - Level: 7
-          Amount: 30
-        - Level: 8
-          Amount: 30
-        - Level: 9
-          Amount: 30
-        - Level: 10
-          Amount: 35
+      SpCost: 45
   - Id: 74
     Name: PR_MAGNIFICAT
     Description: Magnificat
@@ -2148,6 +2102,7 @@ Body:
     HitCount: 1
     SplashArea: -1
     CastCancel: true
+    Coooldown: 10000
     CastTime: 4000
     AfterCastActDelay: 2000
     Duration1:
@@ -2285,31 +2240,21 @@ Body:
   - Id: 79
     Name: PR_MAGNUS
     Description: Magnus Exorcismus
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Magic
     TargetType: Ground
     Range: 9
     Hit: Multi_Hit
     HitCount:
       - Level: 1
-        Count: 1
-      - Level: 2
         Count: 2
-      - Level: 3
-        Count: 3
-      - Level: 4
+      - Level: 2
         Count: 4
-      - Level: 5
-        Count: 5
-      - Level: 6
+      - Level: 3
         Count: 6
-      - Level: 7
-        Count: 7
-      - Level: 8
+      - Level: 4
         Count: 8
-      - Level: 9
-        Count: 9
-      - Level: 10
+      - Level: 5
         Count: 10
     Element: Holy
     CopyFlags:
@@ -2317,51 +2262,22 @@ Body:
         Plagiarism: true
         Reproduce: true
     CastCancel: true
+    Cooldown: 20000
     CastTime: 15000
-    AfterCastActDelay: 4000
+    AfterCastActDelay: 500
     Duration1:
       - Level: 1
-        Time: 5000
+        Time: 3000
       - Level: 2
         Time: 6000
       - Level: 3
-        Time: 7000
-      - Level: 4
-        Time: 8000
-      - Level: 5
         Time: 9000
-      - Level: 6
-        Time: 10000
-      - Level: 7
-        Time: 11000
-      - Level: 8
+      - Level: 4
         Time: 12000
-      - Level: 9
-        Time: 13000
-      - Level: 10
-        Time: 14000
+      - Level: 5
+        Time: 15000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 40
-        - Level: 2
-          Amount: 42
-        - Level: 3
-          Amount: 44
-        - Level: 4
-          Amount: 46
-        - Level: 5
-          Amount: 48
-        - Level: 6
-          Amount: 50
-        - Level: 7
-          Amount: 52
-        - Level: 8
-          Amount: 54
-        - Level: 9
-          Amount: 56
-        - Level: 10
-          Amount: 58
+      SpCost: 60
       ItemCost:
         - Item: Blue_Gemstone
           Amount: 1
@@ -10364,7 +10280,7 @@ Body:
     Element: Weapon
     SplashArea: 3
     Cooldown: 7000
-    CastTime: 1000
+    CastTime: 2000
     AfterCastActDelay: 400
     Duration2:
       - Level: 1
@@ -18285,7 +18201,7 @@ Body:
   - Id: 2038
     Name: AB_JUDEX
     Description: Judex
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Magic
     TargetType: Attack
     DamageFlags:
@@ -18294,35 +18210,26 @@ Body:
     Hit: Multi_Hit
     HitCount: -3
     Element: Holy
-    SplashArea: 1
+    SplashArea:
+      - Level: 1
+        Area: 1
+      - Level: 2
+        Area: 2
+      - Level: 3
+        Area: 3
+      - Level: 4
+        Area: 4
+      - Level: 5
+        Area: 5
     CopyFlags:
       Skill:
         Reproduce: true
     CastCancel: true
+    Cooldown: 5000
     CastTime: 2000
     AfterCastActDelay: 500
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 20
-        - Level: 2
-          Amount: 23
-        - Level: 3
-          Amount: 26
-        - Level: 4
-          Amount: 29
-        - Level: 5
-          Amount: 32
-        - Level: 6
-          Amount: 34
-        - Level: 7
-          Amount: 36
-        - Level: 8
-          Amount: 38
-        - Level: 9
-          Amount: 40
-        - Level: 10
-          Amount: 42
+      SpCost: 40
   - Id: 2039
     Name: AB_ANCILLA
     Description: Ancilla
@@ -18533,22 +18440,20 @@ Body:
     Element: Holy
     SplashArea:
       - Level: 1
-        Area: 3
+        Area: 1
       - Level: 2
-        Area: 7
+        Area: 2
       - Level: 3
-        Area: 15
+        Area: 3
+      - Level: 4
+        Area: 4
+      - Level: 5
+        Area: 5
     CastCancel: true
-    CastTime: 3000
-    Cooldown: 2000
+    Cooldown: 7000
+    AfterCastActDelay: 500
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 200
-        - Level: 2
-          Amount: 220
-        - Level: 3
-          Amount: 240
+      SpCost: 70
   - Id: 2044
     Name: AB_EPICLESIS
     Description: Epiclesis
@@ -18807,8 +18712,8 @@ Body:
         Reproduce: true
     CastCancel: true
     CastTime: 6000
-    AfterCastActDelay: 2000
-    Cooldown: 15000
+    AfterCastActDelay: 500
+    Cooldown: 10000
     Requires:
       SpCost: 100
   - Id: 2052
@@ -18879,8 +18784,8 @@ Body:
           Amount: 55
   - Id: 2054
     Name: AB_DUPLELIGHT
-    Description: Duple Light
-    MaxLevel: 10
+    Description: Duple Lux
+    MaxLevel: 5
     TargetType: Self
     DamageFlags:
       NoDamage: true
@@ -18892,54 +18797,19 @@ Body:
         Reproduce: true
     CastCancel: true
     CastTime: 2000
-    AfterCastActDelay: 1000
-    Duration1:
-      - Level: 1
-        Time: 90000
-      - Level: 2
-        Time: 120000
-      - Level: 3
-        Time: 150000
-      - Level: 4
-        Time: 180000
-      - Level: 5
-        Time: 210000
-      - Level: 6
-        Time: 240000
-      - Level: 7
-        Time: 270000
-      - Level: 8
-        Time: 300000
-      - Level: 9
-        Time: 330000
-      - Level: 10
-        Time: 360000
+    AfterCastActDelay: 3000
+    Duration1: 300000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 55
-        - Level: 2
-          Amount: 60
-        - Level: 3
-          Amount: 65
-        - Level: 4
-          Amount: 70
-        - Level: 5
-          Amount: 75
-        - Level: 6
-          Amount: 80
-        - Level: 7
-          Amount: 85
-        - Level: 8
-          Amount: 90
-        - Level: 9
-          Amount: 95
-        - Level: 10
-          Amount: 100
+      SpCost: 125
+      ItemCost:
+        - Item: Red_Gemstone
+          Amount: 1
+        - Item: Blue_Gemstone
+          Amount: 1
   - Id: 2055
     Name: AB_DUPLELIGHT_MELEE
     Description: Duple Light Melee
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     Range: -1
@@ -18954,12 +18824,13 @@ Body:
   - Id: 2056
     Name: AB_DUPLELIGHT_MAGIC
     Description: Duple Light Magic
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Magic
     TargetType: Attack
     Range: -1
     Hit: Single
     HitCount: 1
+    Element: Weapon
     CopyFlags:
       Skill:
         Reproduce: true
@@ -29191,10 +29062,14 @@ Body:
     Hit: Single
     SplashArea: 5
     CastCancel: true
-    AfterCastActDelay: 3000
+    Cooldown: 4000
+    AfterCastActDelay: 1000
     Duration1: 600000
     Requires:
-      SpCost: 10
+      SpCost: 40
+      ItemCost:
+        - Item: Red_Gemstone
+          Amount: 1
   - Id: 5073
     Name: AB_CONVENIO
     Description: Convenio
@@ -31391,6 +31266,7 @@ Body:
     SplashArea: -1
     CastCancel: true
     CastTime: 4000
+    Cooldown: 30000
     AfterCastActDelay: 2000
     Duration1:
       - Level: 1

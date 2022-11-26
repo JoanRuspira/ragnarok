@@ -2885,7 +2885,8 @@ unsigned short status_base_matk_max(struct block_list *bl, const struct status_d
 			return status_get_homint(bl) + level + (status_get_homluk(bl) + status_get_homint(bl) + status_get_homdex(bl)) / 3;
 		case BL_PC:
 		default:
-			return status->int_ + (status->int_ / 2) + (status->dex / 5) + (status->luk / 3) + (level / 4);
+			return status->rhw.matk;
+			// return status->int_ + (status->int_ / 2) + (status->dex / 5) + (status->luk / 3) + (level / 4);
 	}
 }
 #endif
@@ -9657,12 +9658,6 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 		status_change_end(bl, SC_TOXIN, INVALID_TIMER);
 		status_change_end(bl, SC_MAGICMUSHROOM, INVALID_TIMER);
 		break;
-#ifndef RENEWAL
-	case SC_KYRIE:
-		// Cancels Assumptio
-		status_change_end(bl, SC_ASSUMPTIO, INVALID_TIMER);
-		break;
-#endif
 	case SC_DELUGE:
 		if (sc->data[SC_FOGWALL] && sc->data[SC_BLIND])
 			status_change_end(bl, SC_BLIND, INVALID_TIMER);
@@ -9696,9 +9691,6 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 #endif
 		break;
 	case SC_ASSUMPTIO:
-#ifndef RENEWAL
-		status_change_end(bl, SC_KYRIE, INVALID_TIMER);
-#endif
 		status_change_end(bl, SC_KAITE, INVALID_TIMER);
 		break;
 	case SC_KAITE:
@@ -10169,13 +10161,8 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			val2 = val1*20; // SP gained
 			break;
 		case SC_KYRIE:
-			if( val4 ) { // Formulas for Praefatio
-				val2 = (status->max_hp * (val1 * 2 + 10) / 100) + val4 * 2; //%Max HP to absorb
-				val3 = 6 + val1; //Hits
-			} else { // Formulas for Kyrie Eleison
-				val2 = status->max_hp * (val1 * 2 + 10) / 100;
-				val3 = (val1 / 2 + 5);
-			}
+			val2 = status->max_hp * (val1 * 4 + 10) / 100;
+			val3 = (val1 * 4);
 			break;
 		case SC_MAGICPOWER:
 			// val1: Skill lv
@@ -10853,7 +10840,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			val2 = 10*val1; // def increase
 			break;
 		case SC_IMPOSITIO:
-			val2 = 5*val1; // WATK/MATK increase
+			val2 = (5*val1) + 5; // WATK increase
 			break;
 		case SC_MELTDOWN:
 			val2 = 100*val1; // Chance to break weapon
@@ -11012,11 +10999,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			val2 = val1*10; // Actual boost (since 100% = 1000)
 			break;
 		case SC_SUFFRAGIUM:
-#ifdef RENEWAL
-			val2 = 5 + val1 * 5; // Speed cast decrease
-#else
-			val2 = 15 * val1; // Speed cast decrease
-#endif
+			val2 = val1 * 5; // Speed cast decrease
 			break;
 		case SC_INCHEALRATE:
 			if (val1 < 1)
