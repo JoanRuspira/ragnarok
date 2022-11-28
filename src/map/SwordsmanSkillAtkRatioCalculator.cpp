@@ -7,7 +7,7 @@
  * @param skill_lv : skill level
  * @param int_ : player's int
  */
-int SwordsmanSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv)
+int SwordsmanSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv, struct status_data* sstatus)
 {
 	switch (skill_id) {
 		case SM_BASH:
@@ -26,6 +26,10 @@ int SwordsmanSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 			add_traumatic_blow_special_effects(src, target);
 			calculate_traumatic_blow_atk_ratio(skill_lv);
 			break;
+		case LK_JOINTBEAT:
+			add_lightning_strike_special_effects(target);
+			calculate_lightning_strike_atk_ratio(skill_lv, sstatus->int_);
+			break;
 		default:
 			return 0;
 			break;
@@ -42,6 +46,12 @@ void SwordsmanSkillAtkRatioCalculator::add_magnum_break_special_effects(struct b
 	clif_specialeffect(src, EF_BAKU, AREA);
 }
 
+void SwordsmanSkillAtkRatioCalculator::add_lightning_strike_special_effects(struct block_list *target)
+{
+	clif_specialeffect(target, EF_MADNESS_RED, AREA);
+	clif_specialeffect(target, EF_RED_CROSS, AREA);
+	clif_specialeffect(target, EF_MAGICALATTHIT, AREA);
+}
 
 void SwordsmanSkillAtkRatioCalculator::add_traumatic_blow_special_effects(struct block_list* src, struct block_list *target)
 {
@@ -190,3 +200,28 @@ int SwordsmanSkillAtkRatioCalculator::calculate_traumatic_blow_atk_ratio(int ski
 	return ratio;
 }
 
+
+
+
+int SwordsmanSkillAtkRatioCalculator::calculate_lightning_strike_atk_ratio(int skill_lv, int intelligence)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 30;
+			break;
+		case 2:
+			ratio = 100;
+			break;
+		case 3:
+			ratio = 180;
+			break;
+		case 4:
+			ratio = 240;
+			break;
+		case 5:
+			ratio = 300;
+			break;
+		}
+	return ratio + (intelligence/3);
+}

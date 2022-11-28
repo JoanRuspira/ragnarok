@@ -2777,8 +2777,9 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case SM_BASH:
 		case SM_MAGNUM:
 		case LK_HEADCRUSH:
+		case LK_JOINTBEAT:
 		case KN_SPEARSTAB:
-			skillratio += SwordsmanSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv);
+			skillratio += SwordsmanSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
 		case TF_THROWSTONE:
 		case TF_POISON:
@@ -2999,11 +3000,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 #else
 			skillratio += 100 + 100 * skill_lv;
 #endif
-			break;
-		case LK_JOINTBEAT:
-			skillratio += 10 * skill_lv - 50;
-			if (wd->miscflag & BREAK_NECK || (tsc && tsc->data[SC_JOINTBEAT] && tsc->data[SC_JOINTBEAT]->val2 & BREAK_NECK)) // The 2x damage is only for the BREAK_NECK ailment.
-				skillratio <<= 1;
 			break;
 #ifdef RENEWAL
 		// Renewal: skill ratio applies to entire damage [helvetica]
@@ -4626,8 +4622,6 @@ void battle_do_reflect(int attack_type, struct Damage *wd, struct block_list* sr
 			struct block_list *d_bl = battle_check_devotion(src);
 			status_change *sc = status_get_sc(src);
 
-			if (sc && sc->data[SC_VITALITYACTIVATION])
-				rdamage /= 2;
 			if (tsc->data[SC_MAXPAIN]) {
 				tsc->data[SC_MAXPAIN]->val2 = (int)rdamage;
 				skill_castend_damage_id(target, src, NPC_MAXPAIN_ATK, tsc->data[SC_MAXPAIN]->val1, tick, wd->flag);

@@ -595,7 +595,6 @@ void initChangeTables(void)
 	add_sc( LK_SPIRALPIERCE		, SC_STOP		);
 	add_sc( LK_HEADCRUSH		, SC_BLEEDING		);
 	add_sc( KN_SPEARSTAB		, SC_BLEEDING	);
-	set_sc( LK_JOINTBEAT		, SC_JOINTBEAT		, EFST_JOINTBEAT		, SCB_BATK|SCB_DEF2|SCB_SPEED|SCB_ASPD );
 	add_sc( HW_NAPALMVULCAN		, SC_CURSE		);
 	set_sc( PF_MINDBREAKER		, SC_MINDBREAKER	, EFST_MINDBREAKER	, SCB_MATK|SCB_MDEF2 );
 	set_sc( PF_MEMORIZE		, SC_MEMORIZE	, EFST_MEMORIZE	, SCB_NONE );
@@ -811,7 +810,7 @@ void initChangeTables(void)
 	set_sc( RK_REFRESH		, SC_REFRESH		, EFST_REFRESH			, SCB_NONE );
 	set_sc( RK_GIANTGROWTH		, SC_GIANTGROWTH	, EFST_GIANTGROWTH		, SCB_STR );
 	set_sc( RK_STONEHARDSKIN	, SC_STONEHARDSKIN	, EFST_STONEHARDSKIN		, SCB_DEF|SCB_MDEF );
-	set_sc( RK_VITALITYACTIVATION	, SC_VITALITYACTIVATION	, EFST_VITALITYACTIVATION		, SCB_NONE );
+	set_sc( RK_VITALITYACTIVATION	, SC_VITALITYACTIVATION	, EFST_VITALITYACTIVATION		, SCB_VIT );
 	set_sc( RK_FIGHTINGSPIRIT	, SC_FIGHTINGSPIRIT	, EFST_FIGHTINGSPIRIT		, SCB_WATK|SCB_ASPD );
 	set_sc( RK_ABUNDANCE		, SC_ABUNDANCE		, EFST_ABUNDANCE			, SCB_NONE );
 	set_sc( RK_CRUSHSTRIKE		, SC_CRUSHSTRIKE	, EFST_CRUSHSTRIKE		, SCB_NONE );
@@ -5913,7 +5912,7 @@ static unsigned short status_calc_str(struct block_list *bl, struct status_chang
 	if(sc->data[SC_INCALLSTATUS])
 		str += sc->data[SC_INCALLSTATUS]->val1;
 	if(sc->data[SC_CHASEWALK2])
-		str += sc->data[SC_CHASEWALK2]->val1;
+		str += sc->data[SC_CHASEWALK]->val1*2;
 	if(sc->data[SC_INCSTR])
 		str += sc->data[SC_INCSTR]->val1;
 	if(sc->data[SC_STRFOOD])
@@ -6077,6 +6076,8 @@ static unsigned short status_calc_vit(struct block_list *bl, struct status_chang
 		vit -= sc->data[SC_HARMONIZE]->val2;
 		return (unsigned short)cap_value(vit,0,USHRT_MAX);
 	}
+	if(sc->data[SC_VITALITYACTIVATION])
+		vit += sc->data[SC_VITALITYACTIVATION]->val1*2;
 	if(sc->data[SC_INCALLSTATUS])
 		vit += sc->data[SC_INCALLSTATUS]->val1;
 	if(sc->data[SC_INCVIT])
@@ -6245,7 +6246,7 @@ static unsigned short status_calc_dex(struct block_list *bl, struct status_chang
 	if(sc->data[SC_DEXFOOD])
 		dex += sc->data[SC_DEXFOOD]->val1;
 	if(sc->data[SC_CHASEWALK2])
-		dex += sc->data[SC_CHASEWALK2]->val1;
+		dex += sc->data[SC_CHASEWALK]->val1*2;
 	if(sc->data[SC_FOOD_DEX_CASH])
 		dex += sc->data[SC_FOOD_DEX_CASH]->val1;
 	if(sc->data[SC_BATTLEORDERS])
@@ -11058,10 +11059,8 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			val2 = 500 + 100 * val1;
 			break;
 		case SC_STONEHARDSKIN:
-			if (!status_charge(bl, status->hp / 5, 0)) // 20% of HP
-				return 0;
 			if (sd)
-				val1 = sd->status.job_level * pc_checkskill(sd, RK_RUNEMASTERY) / 4; // DEF/MDEF Increase
+				val1 = pc_checkskill(sd, RK_STONEHARDSKIN) * 2; // DEF/MDEF Increase
 			break;
 		case SC_REFRESH:
 			status_heal(bl, status_get_max_hp(bl) * 25 / 100, 0, 1);
@@ -11377,7 +11376,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			break;
 		case SC_PRESTIGE:
 			val2 = val1 * 5;	// Chance to evade magic damage.
-			val3 = val1 * 10; // Defence added
+			val3 = val1 * 4; // Defence added
 			break;
 		case SC_BANDING:
 			val2 = (sd ? skill_banding_count(sd) : 1);
@@ -14144,7 +14143,7 @@ TIMER_FUNC(status_change_timer){
 
 	case SC_RENOVATIO:
 		if( --(sce->val4) >= 0 ) {
-			int heal = status->max_hp * (sce->val1 + 4) / 100;
+			int heal = status->max_hp * (sce->val1) / 100;
 			if( sc && sc->data[SC_AKAITSUKI] && heal )
 				heal = ~heal + 1;
 			status_heal(bl, heal, 0, 3);

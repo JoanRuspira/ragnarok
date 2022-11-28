@@ -3517,6 +3517,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case MER_CRASH:
 	case SM_BASH:
 	case LK_HEADCRUSH:
+	case LK_JOINTBEAT:
 	case KN_SPEARSTAB:
 	case MC_MAMMONITE:
 	case TF_DOUBLE:
@@ -3644,24 +3645,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case MO_TRIPLEATTACK:
 		skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag|SD_ANIMATION);
 		break;
-
-	// case LK_HEADCRUSH:
-	// 	if (status_get_class_(bl) == CLASS_BOSS) {
-	// 		if (sd)
-	// 			clif_skill_fail(sd, skill_id, USESKILL_FAIL_LEVEL, 0);
-	// 		break;
-	// 	}
-	// 	skill_attack(BF_WEAPON, src, src, bl, skill_id, skill_lv, tick, flag);
-	// 	break;
-
-	case LK_JOINTBEAT:
-		flag = 1 << rnd() % 6;
-		if (flag != BREAK_NECK && tsc && tsc->data[SC_JOINTBEAT] && tsc->data[SC_JOINTBEAT]->val2 & BREAK_NECK)
-			flag = BREAK_NECK; // Target should always receive double damage if neck is already broken
-		if (skill_attack(BF_WEAPON, src, src, bl, skill_id, skill_lv, tick, flag))
-			sc_start4(src, bl, SC_JOINTBEAT, 50 + (skill_lv + 1), skill_lv, flag&BREAK_FLAGS, src->id, 0, skill_get_time2(skill_id, skill_lv));
-		break;
-
 	case MO_COMBOFINISH:
 		if (!(flag&1) && sc && sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_MONK)
 		{	//Becomes a splash attack when Soul Linked.
@@ -8472,12 +8455,8 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case RK_LUXANIMA:
 		status_change_clear_buffs(bl, SCCB_LUXANIMA); // For bonus_script
 	case RK_GIANTGROWTH:
-	case RK_STONEHARDSKIN:
-	case RK_VITALITYACTIVATION:
 	case RK_ABUNDANCE:
-	case RK_CRUSHSTRIKE:
 	case RK_REFRESH:
-	case RK_MILLENNIUMSHIELD:
 		if (sd) {
 			uint8 rune_level = 1; // RK_GIANTGROWTH
 
@@ -8502,7 +8481,13 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				clif_skill_fail(sd, skill_id, USESKILL_FAIL_LEVEL, 0);
  		}
  		break;
-
+	case RK_CRUSHSTRIKE:
+	case RK_MILLENNIUMSHIELD:
+	case RK_STONEHARDSKIN:
+	case RK_VITALITYACTIVATION:
+		if (sc_start(src, bl, type, 100, skill_lv, skill_get_time(skill_id, skill_lv)))
+			clif_skill_nodamage(src, bl, skill_id, skill_lv, 1);
+		break;
 	case RK_FIGHTINGSPIRIT: {
 			uint8 runemastery_skill_lv = (sd ? pc_checkskill(sd, RK_RUNEMASTERY) : skill_get_max(RK_RUNEMASTERY));
 
