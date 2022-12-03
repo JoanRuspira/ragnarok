@@ -38,7 +38,7 @@
 #include "AssassinSkillAtkRatioCalculator.h"
 #include "PriestSkillAttackRatioCalculator.h"
 #include "PriestAdditionalEffectsCalculator.h"
-
+#include "BlacksmithSkillAtkRatioCalculator.h"
 
 
 

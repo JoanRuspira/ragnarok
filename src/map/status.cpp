@@ -407,7 +407,7 @@ void initChangeTables(void)
 #else
 		);
 #endif
-	set_sc( BS_WEAPONPERFECT	, SC_WEAPONPERFECTION	, EFST_WEAPONPERFECT, SCB_NONE );
+	set_sc( BS_WEAPONPERFECT	, SC_WEAPONPERFECTION	, EFST_WEAPONPERFECT, SCB_CRI|SCB_WATK );
 	set_sc( BS_OVERTHRUST		, SC_OVERTHRUST		, EFST_OVERTHRUST		, SCB_NONE );
 	set_sc( BS_MAXIMIZE		, SC_MAXIMIZEPOWER	, EFST_MAXIMIZE, SCB_REGEN );
 	add_sc( HT_LANDMINE		, SC_STUN		);
@@ -423,6 +423,7 @@ void initChangeTables(void)
 	set_sc( NV_TRICKDEAD		, SC_TRICKDEAD		, EFST_TRICKDEAD		, SCB_REGEN );
 	set_sc( SM_AUTOBERSERK		, SC_AUTOBERSERK	, EFST_AUTOBERSERK	, SCB_NONE );
 	set_sc( MC_LOUD			, SC_LOUD		, EFST_SHOUT, SCB_STR|SCB_BATK );
+	set_sc( BS_AXEQUICKEN			, SC_AXEQUICKEN		, EFST_AXEQUICKEN, SCB_ASPD|SCB_BATK );
 	set_sc( MG_ENERGYCOAT		, SC_ENERGYCOAT		, EFST_ENERGYCOAT		, SCB_MATK );
 	set_sc( NPC_EMOTION		, SC_MODECHANGE		, EFST_BLANK		, SCB_MODE );
 	add_sc( NPC_EMOTION_ON		, SC_MODECHANGE		);
@@ -6474,6 +6475,10 @@ static unsigned short status_calc_watk(struct block_list *bl, struct status_chan
 		watk += 3 * sc->data[SC_TWOHANDQUICKEN]->val1;
 	if( sc->data[SC_ONEHAND] )
 		watk += 3 * sc->data[SC_ONEHAND]->val1;
+	if( sc->data[SC_WEAPONPERFECTION] )
+		watk += 3 * sc->data[SC_WEAPONPERFECTION]->val1;
+	if (sc->data[SC_AXEQUICKEN])
+		watk += 3*sc->data[SC_AXEQUICKEN]->val1;
 	if( sc->data[SC_EXPLOSIONSPIRITS] )
 		watk += 15;
 	if(sc->data[SC_INCATKRATE])
@@ -6672,6 +6677,8 @@ static signed short status_calc_critical(struct block_list *bl, struct status_ch
 		critical += sc->data[SC_TRUESIGHT]->val2;
 	if (sc->data[SC_CLOAKING])
 		critical += critical;
+	if( sc->data[SC_WEAPONPERFECTION] )
+		critical += 15;
 	if (sc->data[SC_STRIKING])
 		critical += critical * sc->data[SC_STRIKING]->val1 / 100;
 	if (sc->data[SC__INVISIBILITY])
@@ -7415,6 +7422,8 @@ static short status_calc_aspd(struct block_list *bl, struct status_change *sc, b
 			bonus += sc->data[SC_ONEHAND]->val1*2;
 		if (sc->data[SC_SPEARQUICKEN])
 			bonus += sc->data[SC_SPEARQUICKEN]->val1*2;
+		if (sc->data[SC_AXEQUICKEN])
+			bonus += sc->data[SC_AXEQUICKEN]->val1*2;
 		if (sc->data[SC_SKA])
 			bonus -= 25;
 		if (sc->data[SC_DEFENDER])
@@ -10818,7 +10827,8 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 				struct map_session_data * s_sd = BL_CAST(BL_PC, src);
 				if (type == SC_OVERTHRUST) {
 					// val2 holds if it was casted on self, or is bonus received from others
-						val3 = (val2) ? 5 * val1 : (val1 > 4) ? 15 : (val1 > 2) ? 10 : 5; // Power increase
+						// val3 = (val2) ? 5 * val1 : (val1 > 4) ? 15 : (val1 > 2) ? 10 : 5; // Power increase
+						val3 = 5 * val1; // Power increase
 
 				}
 				// else if (type == SC_ADRENALINE2 || type == SC_ADRENALINE) {

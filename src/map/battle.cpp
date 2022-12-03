@@ -2409,7 +2409,6 @@ static bool is_attack_hitting(struct Damage* wd, struct block_list *src, struct 
 				break;
 			case MC_CARTREVOLUTION:
 			case GN_CART_TORNADO:
-			case GN_CARTCANNON:
 				if (sd && pc_checkskill(sd, GN_REMODELING_CART))
 					hitrate += pc_checkskill(sd, GN_REMODELING_CART) * 4;
 				break;
@@ -2788,10 +2787,11 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case AS_VENOMKNIFE:
 			skillratio += ThiefSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv);
 			break;
-		case MC_FIREWORKS:
+		case MC_CARTQUAKE:
 		case MC_MAMMONITE:
 		case MC_CARTREVOLUTION:
-			skillratio += MerchntSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv);
+		case MC_CARTCYCLONE:
+			skillratio += MerchntSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
 		case AC_SHOWER:
 		case AC_DOUBLE:
@@ -2839,6 +2839,12 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case AB_DUPLELIGHT_MELEE:
 		case PR_UNHOLYCROSS:
 			skillratio += PriestSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
+			break;
+		case MC_CARTBRUME:
+		case MC_FIREWORKS:
+		case MC_SHRAPNEL:
+		case GN_CARTCANNON:
+			skillratio += BlacksmithSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
 		case MER_CRASH:
 			skillratio += 10 * skill_lv;
@@ -3485,11 +3491,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 				if(sd && sd->cart_weight)
 					skillratio += sd->cart_weight / 10 / (150 - min(sd->status.str,120)) + pc_checkskill(sd,GN_REMODELING_CART) * 50;
 			}
-			break;
-		case GN_CARTCANNON:
-			// ATK [{( INT / (6 - ( Cart Remodeling Skill Level ) )} + ( Cart Cannon Skill Level x 350 )] %
-			skillratio += -100 + 350 * skill_lv + sstatus->int_ / (6 - (sd ? pc_checkskill(sd, GN_REMODELING_CART) : 1));
-			RE_LVL_DMOD(100);
 			break;
 		case GN_SPORE_EXPLOSION:
 			skillratio += -100 + 180 * skill_lv;
@@ -5045,7 +5046,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 			case AL_HEAL:
 			case PR_BENEDICTIO:
 			case PR_SANCTUARY:
-			case PR_FLASHHEAL:
 			case AB_HIGHNESSHEAL:
 				ad.damage = skill_calc_heal(src, target, skill_id, skill_lv, false);
 				break;

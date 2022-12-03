@@ -1,0 +1,106 @@
+#include "BlacksmithSkillAtkRatioCalculator.h"
+#include <cstring>
+#include "skill.hpp"
+#include "status.hpp"
+#include "clif.hpp"
+
+/**
+ * ATK ratio calculater for Blacksmith skills.
+ * @param base_lv : player base level
+ * @param skill_id : skill id
+ * @param skill_lv : skill level
+ * @param int_ : player's int
+ */
+int BlacksmithSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv, struct status_data* sstatus)
+{
+	switch (skill_id) {
+		case MC_SHRAPNEL:
+			return calculate_cart_shrapnel_atk_ratio(skill_lv,  sstatus->dex);
+			break;
+		case MC_CARTBRUME:
+			return calculate_cart_brume_atk_ratio(skill_lv,  sstatus->int_);
+			break;
+		case MC_FIREWORKS:
+			return calculate_cart_brume_atk_ratio(skill_lv,  sstatus->int_);
+			break;
+		case GN_CARTCANNON:
+			return calculate_cart_cannon_atk_ratio(skill_lv,  sstatus->dex);
+			break;
+		default:
+			return 0;
+			break;
+	}
+}
+
+int BlacksmithSkillAtkRatioCalculator::calculate_cart_cannon_atk_ratio(int skill_lv, int dex)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 30;
+			break;
+		case 2:
+			ratio = 100;
+			break;
+		case 3:
+			ratio = 180;
+			break;
+		case 4:
+			ratio = 240;
+			break;
+		case 5:
+			ratio = 300;
+			break;
+		}
+	return ratio + (dex/3);
+}
+
+
+int BlacksmithSkillAtkRatioCalculator::calculate_cart_shrapnel_atk_ratio(int skill_lv, int dex)
+{
+	int ratio = 0;
+	
+	switch (skill_lv) {
+		case 1:
+			ratio = -71 + (dex/6);
+			break;
+		case 2:
+			ratio = -42 + (dex/6);
+			break;
+		case 3:
+			ratio = -13 + (dex/6);
+			break;
+		case 4:
+			ratio = 16 + (dex/6);
+			break;
+		case 5:
+			ratio = 45 + (dex/6);
+			break;
+	}
+	return ratio;
+}
+
+
+int BlacksmithSkillAtkRatioCalculator::calculate_cart_brume_atk_ratio(int skill_lv, int intelligence)
+{
+	int ratio = 0;
+	
+	switch (skill_lv) {
+		case 1:
+			ratio = -71 + (intelligence/6);
+			break;
+		case 2:
+			ratio = -42 + (intelligence/6);
+			break;
+		case 3:
+			ratio = -13 + (intelligence/6);
+			break;
+		case 4:
+			ratio = 16 + (intelligence/6);
+			break;
+		case 5:
+			ratio = 45 + (intelligence/6);
+			break;
+	}
+	return ratio;
+}

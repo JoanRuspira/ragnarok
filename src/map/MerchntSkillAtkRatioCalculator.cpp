@@ -7,7 +7,7 @@
  * @param skill_lv : skill level
  * @param int_ : player's int
  */
-int MerchntSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv)
+int MerchntSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv, struct status_data* sstatus)
 {
 	switch (skill_id) {
 	case MC_MAMMONITE:
@@ -16,8 +16,11 @@ int MerchntSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 	case MC_CARTREVOLUTION:
 		return calculate_cart_revolution_atk_ratio(skill_lv);
 		break;
-	case MC_FIREWORKS:
-		return calculate_cart_fireworks_atk_ratio(skill_lv, src);
+	case MC_CARTCYCLONE:
+		return calculate_cart_quake_atk_ratio(skill_lv,  sstatus->int_);
+		break;
+	case MC_CARTQUAKE:
+		return calculate_cart_quake_atk_ratio(skill_lv,  sstatus->int_);
 		break;
 	default:
 		return 0;
@@ -29,6 +32,50 @@ void MerchntSkillAtkRatioCalculator::add_cart_fireworks_special_effects(struct b
 {
 	clif_specialeffect(src, EF_POK_JAP, AREA);
 	clif_specialeffect(src, EF_CARTTER, AREA);
+}
+
+void MerchntSkillAtkRatioCalculator::add_cart_quake_effects(struct block_list* src)
+{
+	clif_specialeffect(src, EF_NPC_EARTHQUAKE, AREA);
+}
+
+void MerchntSkillAtkRatioCalculator::add_cart_cyclone_special_effects(struct block_list* src)
+{
+	clif_specialeffect(src, EF_KOUENKA, AREA);
+}
+
+void MerchntSkillAtkRatioCalculator::add_cart_brume_special_effects(struct block_list* src)
+{
+	clif_specialeffect(src, EF_FROSTMYSTY, AREA);
+}
+
+void MerchntSkillAtkRatioCalculator::add_cart_sharpnel_special_effects(struct block_list* src)
+{
+	clif_specialeffect(src, EF_DESPERADO, AREA);
+}
+
+int MerchntSkillAtkRatioCalculator::calculate_cart_quake_atk_ratio(int skill_lv, int intelligence)
+{
+	int ratio = 0;
+	
+	switch (skill_lv) {
+		case 1:
+			ratio = -71 + (intelligence/6);
+			break;
+		case 2:
+			ratio = -42 + (intelligence/6);
+			break;
+		case 3:
+			ratio = -13 + (intelligence/6);
+			break;
+		case 4:
+			ratio = 16 + (intelligence/6);
+			break;
+		case 5:
+			ratio = 45 + (intelligence/6);
+			break;
+	}
+	return ratio;
 }
 
 int MerchntSkillAtkRatioCalculator::calculate_mammonite_atk_ratio(int skill_lv)

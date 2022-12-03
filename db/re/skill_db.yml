@@ -273,7 +273,7 @@ Body:
   - Id: 8
     Name: SM_ENDURE
     Description: Endure
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Self
     DamageFlags:
@@ -1438,12 +1438,10 @@ Body:
     TargetType: Self
     DamageFlags:
       Splash: true
-    Flags:
-      TargetTrap: true
     Hit: Multi_Hit
     HitCount: 3
     Element: Fire
-    Cooldown: 10000
+    Cooldown: 5000
     AfterCastActDelay: 400
     SplashArea:
       - Level: 1
@@ -1507,27 +1505,169 @@ Body:
     Requires:
       SpCost: 35
   - Id: 808
-    Name: PR_FLASHHEAL
-    Description: Flash Heal
+    Name: BS_AXEQUICKEN
+    Description: Axe Quicken
     MaxLevel: 5
-    Type: Magic
-    TargetType: Support
+    Type: Weapon
+    TargetType: Self
     DamageFlags:
       NoDamage: true
-      IgnoreDefense: true
-    Range: 11
+    Flags:
+      AllowOnMado: true
     Hit: Single
     HitCount: 1
-    Element: Holy
     CopyFlags:
       Skill:
+        Plagiarism: true
         Reproduce: true
-    CastCancel: true
-    CastTime: 6000
-    AfterCastActDelay: 2000
-    Cooldown: 15000
+    Duration1:
+      - Level: 1
+        Time: 24000
+      - Level: 2
+        Time: 48000
+      - Level: 3
+        Time: 72000
+      - Level: 4
+        Time: 96000
+      - Level: 5
+        Time: 120000
     Requires:
-      SpCost: 100
+      SpCost: 16
+  - Id: 809
+    Name: MC_CARTQUAKE
+    Description: Cart Quake
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      Splash: true
+    Hit: Multi_Hit
+    HitCount: 3
+    Element: Earth
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    SplashArea:
+      - Level: 1
+        Area: 2
+      - Level: 2
+        Area: 2
+      - Level: 3
+        Area: 2
+      - Level: 4
+        Area: 4
+      - Level: 5
+        Area: 4
+    Knockback: 2
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Duration2: 10000
+    Requires:
+      SpCost: 20
+      State: Cart
+  - Id: 810
+    Name: MC_CARTCYCLONE
+    Description: Cart Cyclone
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      Splash: true
+    Hit: Multi_Hit
+    HitCount: 3
+    Element: Wind
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    SplashArea:
+      - Level: 1
+        Area: 2
+      - Level: 2
+        Area: 2
+      - Level: 3
+        Area: 2
+      - Level: 4
+        Area: 4
+      - Level: 5
+        Area: 4
+    Knockback: 2
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Duration2: 10000
+    Requires:
+      SpCost: 20
+      State: Cart
+  - Id: 811
+    Name: MC_CARTBRUME
+    Description: Cart Brume
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      Splash: true
+    Hit: Multi_Hit
+    HitCount: 3
+    Element: Water
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    SplashArea:
+      - Level: 1
+        Area: 2
+      - Level: 2
+        Area: 2
+      - Level: 3
+        Area: 2
+      - Level: 4
+        Area: 4
+      - Level: 5
+        Area: 4
+    Knockback: 2
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Duration2: 10000
+    Requires:
+      SpCost: 20
+      State: Cart
+  - Id: 812
+    Name: MC_SHRAPNEL
+    Description: Cart Shrapnel
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      Splash: true
+    Hit: Multi_Hit
+    HitCount: 3
+    Element: Weapon
+    Cooldown: 7000
+    AfterCastActDelay: 400
+    SplashArea:
+      - Level: 1
+        Area: 2
+      - Level: 2
+        Area: 2
+      - Level: 3
+        Area: 2
+      - Level: 4
+        Area: 4
+      - Level: 5
+        Area: 4
+    Knockback: 2
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Duration2: 10000
+    Requires:
+      SpCost: 20
+      State: Cart     
+      Ammo:
+        Cannonball: true
+      AmmoAmount: 3                 
   - Id: 51
     Name: TF_HIDING
     Description: Hiding
@@ -3234,7 +3374,7 @@ Body:
   - Id: 101
     Name: BS_AXE
     Description: Smith Axe
-    MaxLevel: 3
+    MaxLevel: 5
     Type: Weapon
   - Id: 102
     Name: BS_MACE
@@ -3269,7 +3409,7 @@ Body:
   - Id: 108
     Name: BS_REPAIRWEAPON
     Description: Weapon Repair
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Weapon
     TargetType: Support
     DamageFlags:
@@ -3358,7 +3498,6 @@ Body:
     Requires:
       SpCost: 40
       Weapon:
-        Fist: true
         Dagger: true
         1hSword: true
         2hSword: true
@@ -3368,8 +3507,14 @@ Body:
         2hAxe: true
         Mace: true
         2hMace: true
+        Staff: true
+        Bow: true
         Knuckle: true
+        Musical: true
+        Whip: true
+        Book: true
         Katar: true
+        2hStaff: true
   - Id: 112
     Name: BS_WEAPONPERFECT
     Description: Weapon Perfection
@@ -3383,6 +3528,8 @@ Body:
       AllowOnMado: true
     Hit: Single
     HitCount: 1
+    Cooldown: 20000
+    AfterCastActDelay: 3000
     SplashArea: -1
     Duration1:
       - Level: 1
@@ -3396,54 +3543,7 @@ Body:
       - Level: 5
         Time: 50000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 18
-        - Level: 2
-          Amount: 16
-        - Level: 3
-          Amount: 14
-        - Level: 4
-          Amount: 12
-        - Level: 5
-          Amount: 10
-  - Id: 113
-    Name: BS_OVERTHRUST
-    Description: Power-Thrust
-    MaxLevel: 5
-    Type: Weapon
-    TargetType: Self
-    DamageFlags:
-      NoDamage: true
-      Splash: true
-    Flags:
-      AllowOnMado: true
-    Hit: Single
-    HitCount: 1
-    SplashArea: -1
-    Duration1:
-      - Level: 1
-        Time: 20000
-      - Level: 2
-        Time: 40000
-      - Level: 3
-        Time: 60000
-      - Level: 4
-        Time: 80000
-      - Level: 5
-        Time: 100000
-    Requires:
-      SpCost:
-        - Level: 1
-          Amount: 18
-        - Level: 2
-          Amount: 16
-        - Level: 3
-          Amount: 14
-        - Level: 4
-          Amount: 12
-        - Level: 5
-          Amount: 10
+      SpCost: 15
       Weapon:
         Dagger: true
         1hSword: true
@@ -3461,12 +3561,43 @@ Body:
         Whip: true
         Book: true
         Katar: true
-        Revolver: true
-        Rifle: true
-        Gatling: true
-        Shotgun: true
-        Grenade: true
-        Huuma: true
+        2hStaff: true
+  - Id: 113
+    Name: BS_OVERTHRUST
+    Description: Power-Thrust
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    Cooldown: 25000
+    AfterCastActDelay: 3000
+    DamageFlags:
+      NoDamage: true
+      Splash: true
+    Flags:
+      AllowOnMado: true
+    Hit: Single
+    HitCount: 1
+    SplashArea: -1
+    Duration1: 120000
+    Requires:
+      SpCost: 20
+      Weapon:
+        Dagger: true
+        1hSword: true
+        2hSword: true
+        1hSpear: true
+        2hSpear: true
+        1hAxe: true
+        2hAxe: true
+        Mace: true
+        2hMace: true
+        Staff: true
+        Bow: true
+        Knuckle: true
+        Musical: true
+        Whip: true
+        Book: true
+        Katar: true
         2hStaff: true
   - Id: 114
     Name: BS_MAXIMIZE
@@ -3480,6 +3611,7 @@ Body:
       AllowOnMado: true
     Hit: Single
     HitCount: 1
+    AfterCastActDelay: 3000
     Duration1:
       - Level: 1
         Time: 1000
@@ -3493,6 +3625,24 @@ Body:
         Time: 5000
     Requires:
       SpCost: 10
+      Weapon:
+        Dagger: true
+        1hSword: true
+        2hSword: true
+        1hSpear: true
+        2hSpear: true
+        1hAxe: true
+        2hAxe: true
+        Mace: true
+        2hMace: true
+        Staff: true
+        Bow: true
+        Knuckle: true
+        Musical: true
+        Whip: true
+        Book: true
+        Katar: true
+        2hStaff: true
   - Id: 115
     Name: HT_SKIDTRAP
     Description: Skid Trap
@@ -4332,7 +4482,7 @@ Body:
     HitCount: 1
     Element: Poison
     SplashArea: 2
-    Cooldown: 8000
+    Cooldown: 7000
     AfterCastActDelay: 400
     CopyFlags:
       Skill:
@@ -9745,7 +9895,7 @@ Body:
   - Id: 387
     Name: WS_CARTBOOST
     Description: Cart Boost
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Weapon
     TargetType: Self
     DamageFlags:
@@ -9753,8 +9903,20 @@ Body:
     Flags:
       AllowOnMado: true
     Hit: Single
+    Cooldown: 20000
+    AfterCastActDelay: 1000
     HitCount: 1
-    Duration1: 60000
+    Duration1:
+      - Level: 1
+        Time: 24000
+      - Level: 2
+        Time: 48000
+      - Level: 3
+        Time: 72000
+      - Level: 4
+        Time: 96000
+      - Level: 5
+        Time: 120000
     Requires:
       SpCost: 20
       State: Cart
@@ -9785,7 +9947,7 @@ Body:
     Hit: Single
     HitCount: 1
     CastTime: 1000
-    Cooldown¨: 0
+    Cooldown: 0
     AfterCastActDelay: 400
     Duration1: 10000
     Duration2: 120000
@@ -16071,14 +16233,13 @@ Body:
   - Id: 1013
     Name: BS_GREED
     Description: Greed
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Weapon
     TargetType: Self
     DamageFlags:
       NoDamage: true
       Splash: true
     Flags:
-      IsQuest: true
       AllowOnWarg: true
       AllowOnMado: true
     Hit: Single
@@ -20302,15 +20463,6 @@ Body:
           Amount: 40
         - Level: 5
           Amount: 45
-      ItemCost:
-        - Item: Portable_Furnace
-          Amount: 0
-        - Item: Oridecon_Hammer
-          Amount: 0
-        - Item: Iron
-          Amount: 1
-        - Item: Steel
-          Amount: 2
   - Id: 2282
     Name: NC_MAGICDECOY
     Description: FAW - Magic Decoy
@@ -20352,15 +20504,6 @@ Body:
           Amount: 55
         - Level: 5
           Amount: 60
-      ItemCost:
-        - Item: Portable_Furnace
-          Amount: 0
-        - Item: Oridecon_Hammer
-          Amount: 0
-        - Item: Iron
-          Amount: 2
-        - Item: Brigan
-          Amount: 1
   - Id: 2283
     Name: NC_DISJOINT
     Description: FAW Removal
@@ -25469,13 +25612,13 @@ Body:
       IgnoreFlee: true
     Range:
       - Level: 1
-        Size: 7
+        Size: 11
       - Level: 2
-        Size: 8
+        Size: 11
       - Level: 3
-        Size: 9
+        Size: 11
       - Level: 4
-        Size: 10
+        Size: 11
       - Level: 5
         Size: 11
     Hit: Single
@@ -25483,40 +25626,21 @@ Body:
     Element: Weapon
     SplashArea:
       - Level: 1
-        Area: 1
+        Area: 3
       - Level: 2
-        Area: 1
+        Area: 3
       - Level: 3
-        Area: 2
+        Area: 3
       - Level: 4
-        Area: 2
+        Area: 3
       - Level: 5
         Area: 3
     CastCancel: true
-    CastTime:
-      - Level: 1
-        Time: 1000
-      - Level: 2
-        Time: 1500
-      - Level: 3
-        Time: 2000
-      - Level: 4
-        Time: 2500
-      - Level: 5
-        Time: 3000
+    Cooldown: 7000
+    CastTime: 3000
     AfterCastActDelay: 500
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 40
-        - Level: 2
-          Amount: 42
-        - Level: 3
-          Amount: 46
-        - Level: 4
-          Amount: 48
-        - Level: 5
-          Amount: 50
+      SpCost: 25
       Ammo:
         Cannonball: true
       AmmoAmount: 1

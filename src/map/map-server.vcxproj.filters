@@ -171,6 +171,12 @@
     <Filter Include="Header Files\skillAdditionalEffectsCalculator\priest">
       <UniqueIdentifier>{7bf1f274-3ccb-46d0-ac8e-0029b92f3a59}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\skillAtkRatioCalculator\blacksmith">
+      <UniqueIdentifier>{bf5f3b5c-9166-4ce1-beb2-a671c25b25cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\skillAtkRatioCalculator\blacksmith">
+      <UniqueIdentifier>{027e10d0-1e53-4cab-8dcd-83f69595760b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="achievement.hpp">
@@ -401,6 +407,9 @@
     <ClInclude Include="PriestAdditionalEffectsCalculator.h">
       <Filter>Header Files\skillAdditionalEffectsCalculator\priest</Filter>
     </ClInclude>
+    <ClInclude Include="BlacksmithSkillAtkRatioCalculator.h">
+      <Filter>Header Files\skillAtkRatioCalculator\blacksmith</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="achievement.cpp">
@@ -603,6 +612,9 @@
     </ClCompile>
     <ClCompile Include="PriestAdditionalEffectsCalculator.cpp">
       <Filter>Source Files\skillAdditionalEffectsCalculator\priest</Filter>
+    </ClCompile>
+    <ClCompile Include="BlacksmithSkillAtkRatioCalculator.cpp">
+      <Filter>Source Files\skillAtkRatioCalculator\blacksmith</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

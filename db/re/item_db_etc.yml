@@ -9374,15 +9374,13 @@ Body:
     SubType: Cannonball
     Buy: 100
     Weight: 10
-    Attack: 100
+    Attack: 0
     Jobs:
       Alchemist: true
       Blacksmith: true
-    Classes:
-      Third: true
     Locations:
       Ammo: true
-    EquipLevelMin: 99
+    EquipLevelMin: 1
   - Id: 18001
     AegisName: Holy_Cannon_Ball
     Name: Holy Cannon Ball
@@ -9394,11 +9392,9 @@ Body:
     Jobs:
       Alchemist: true
       Blacksmith: true
-    Classes:
-      Third: true
     Locations:
       Ammo: true
-    EquipLevelMin: 99
+    EquipLevelMin: 1
     Script: |
       bonus bAtkEle,Ele_Holy;
   - Id: 18002
@@ -9412,11 +9408,9 @@ Body:
     Jobs:
       Alchemist: true
       Blacksmith: true
-    Classes:
-      Third: true
     Locations:
       Ammo: true
-    EquipLevelMin: 99
+    EquipLevelMin: 1
     Script: |
       bonus bAtkEle,Ele_Dark;
   - Id: 18003
@@ -9430,11 +9424,9 @@ Body:
     Jobs:
       Alchemist: true
       Blacksmith: true
-    Classes:
-      Third: true
     Locations:
       Ammo: true
-    EquipLevelMin: 99
+    EquipLevelMin: 1
     Script: |
       bonus bAtkEle,Ele_Ghost;
   - Id: 18004
@@ -9448,11 +9440,9 @@ Body:
     Jobs:
       Alchemist: true
       Blacksmith: true
-    Classes:
-      Third: true
     Locations:
       Ammo: true
-    EquipLevelMin: 99
+    EquipLevelMin: 1
   - Id: 6128
     AegisName: Guillotine_Antidote
     Name: Antidote
