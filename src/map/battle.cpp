@@ -2844,6 +2844,8 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case MC_FIREWORKS:
 		case MC_SHRAPNEL:
 		case GN_CARTCANNON:
+		case NC_AXEBOOMERANG:
+		case NC_AXETORNADO:
 			skillratio += BlacksmithSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
 		case MER_CRASH:
@@ -3265,16 +3267,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			}
 			RE_LVL_DMOD(120);
 			break;
-		case NC_AXEBOOMERANG:
-			skillratio += 150 + 50 * skill_lv;
-			if (sd) {
-				short index = sd->equip_index[EQI_HAND_R];
-
-				if (index >= 0 && sd->inventory_data[index] && sd->inventory_data[index]->type == IT_WEAPON)
-					skillratio += sd->inventory_data[index]->weight / 10;// Weight is divided by 10 since 10 weight in coding make 1 whole actual weight. [Rytech]
-			}
-			RE_LVL_DMOD(100);
-			break;
 		case NC_POWERSWING: // According to current sources, only the str + dex gets modified by level [Akinari]
 			skillratio += -100 + status_get_str(src) + status_get_dex(src);
 			RE_LVL_DMOD(100);
@@ -3282,12 +3274,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			break;
 		case NC_MAGMA_ERUPTION: // 'Slam' damage
 			skillratio += 350 + 50 * skill_lv;
-			break;
-		case NC_AXETORNADO:
-			skillratio += 100 + 100 * skill_lv + status_get_vit(src);
-			RE_LVL_DMOD(100);
-			if (distance_bl(src, target) > 2) // Will deal 75% damage outside of 5x5 area.
-				skillratio = skillratio * 75 / 100;
 			break;
 		case SC_FATALMENACE:
 			skillratio += 100 * skill_lv;
@@ -4172,10 +4158,10 @@ static void battle_calc_attack_post_defense(struct Damage* wd, struct block_list
 				ATK_ADDRATE(wd->damage, wd->damage2, 10);
 			break;
 
-		case NC_AXETORNADO:
-			if( (sstatus->rhw.ele) == ELE_WIND || (sstatus->lhw.ele) == ELE_WIND )
-				ATK_ADDRATE(wd->damage, wd->damage2, 25);
-			break;
+		// case NC_AXETORNADO:
+		// 	if( (sstatus->rhw.ele) == ELE_WIND || (sstatus->lhw.ele) == ELE_WIND )
+		// 		ATK_ADDRATE(wd->damage, wd->damage2, 25);
+		// 	break;
 	}
 }
 

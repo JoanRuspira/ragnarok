@@ -26,11 +26,65 @@ int BlacksmithSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_li
 		case GN_CARTCANNON:
 			return calculate_cart_cannon_atk_ratio(skill_lv,  sstatus->dex);
 			break;
+		case NC_AXEBOOMERANG:
+			calculate_axe_boomerang_atk_ratio(skill_lv);
+			break;
+		case NC_AXETORNADO:
+			calculate_axe_tornado_atk_ratio(skill_lv, sstatus->luk);
+			break;
 		default:
 			return 0;
 			break;
 	}
 }
+
+
+int BlacksmithSkillAtkRatioCalculator::calculate_axe_tornado_atk_ratio(int skill_lv, int luk)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 30;
+			break;
+		case 2:
+			ratio = 100;
+			break;
+		case 3:
+			ratio = 180;
+			break;
+		case 4:
+			ratio = 240;
+			break;
+		case 5:
+			ratio = 300;
+			break;
+		}
+	return ratio + (luk/3);
+}
+
+int BlacksmithSkillAtkRatioCalculator::calculate_axe_boomerang_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 30;
+			break;
+		case 2:
+			ratio = 100;
+			break;
+		case 3:
+			ratio = 180;
+			break;
+		case 4:
+			ratio = 240;
+			break;
+		case 5:
+			ratio = 300;
+			break;
+		}
+	return ratio;
+}
+
 
 int BlacksmithSkillAtkRatioCalculator::calculate_cart_cannon_atk_ratio(int skill_lv, int dex)
 {

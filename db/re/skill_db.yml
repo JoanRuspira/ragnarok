@@ -282,29 +282,20 @@ Body:
     HitCount: 1
     Duration1:
       - Level: 1
-        Time: 10000
+        Time: 20000
       - Level: 2
-        Time: 13000
+        Time: 30000
       - Level: 3
-        Time: 16000
+        Time: 40000
       - Level: 4
-        Time: 19000
+        Time: 50000
       - Level: 5
-        Time: 22000
-      - Level: 6
-        Time: 25000
-      - Level: 7
-        Time: 28000
-      - Level: 8
-        Time: 31000
-      - Level: 9
-        Time: 34000
-      - Level: 10
-        Time: 37000
+        Time: 60000
     Duration2: 10000
-    Cooldown: 10000
+    Cooldown: 20000
+    AfterCastActDelay: 3000
     Requires:
-      SpCost: 10
+      SpCost: 17
   - Id: 9
     Name: MG_SRECOVERY
     Description: Increase SP Recovery
@@ -1512,27 +1503,26 @@ Body:
     TargetType: Self
     DamageFlags:
       NoDamage: true
-    Flags:
-      AllowOnMado: true
     Hit: Single
     HitCount: 1
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
+    Cooldown: 10000
+    AfterCastActDelay: 1000
     Duration1:
       - Level: 1
-        Time: 24000
+        Time: 60000
       - Level: 2
-        Time: 48000
-      - Level: 3
-        Time: 72000
-      - Level: 4
-        Time: 96000
-      - Level: 5
         Time: 120000
+      - Level: 3
+        Time: 180000
+      - Level: 4
+        Time: 240000
+      - Level: 5
+        Time: 300000
     Requires:
-      SpCost: 16
+      SpCost: 50
+      Weapon:
+        1hAxe: true
+        2hAxe: true
   - Id: 809
     Name: MC_CARTQUAKE
     Description: Cart Quake
@@ -1774,7 +1764,7 @@ Body:
   - Id: 56
     Name: KN_PIERCE
     Description: Pierce
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     Range: -2
@@ -1786,7 +1776,7 @@ Body:
         Plagiarism: true
         Reproduce: true
     Requires:
-      SpCost: 7
+      SpCost: 13
       Weapon:
         1hSpear: true
         2hSpear: true
@@ -20250,56 +20240,28 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    Flags:
-      AllowOnMado: true
     Range:
       - Level: 1
-        Size: 5
+        Size: 3
       - Level: 2
-        Size: 6
+        Size: 5
       - Level: 3
         Size: 7
       - Level: 4
-        Size: 8
-      - Level: 5
         Size: 9
+      - Level: 5
+        Size: 11
     Hit: Single
     HitCount: 1
     Element: Weapon
-    Knockback:
-      - Level: 1
-        Amount: 2
-      - Level: 2
-        Amount: 3
-      - Level: 3
-        Amount: 4
-      - Level: 4
-        Amount: 5
-      - Level: 5
-        Amount: 6
-    Cooldown:
-      - Level: 1
-        Time: 5000
-      - Level: 2
-        Time: 4500
-      - Level: 3
-        Time: 4000
-      - Level: 4
-        Time: 3500
-      - Level: 5
-        Time: 3000
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 20
-        - Level: 2
-          Amount: 22
-        - Level: 3
-          Amount: 24
-        - Level: 4
-          Amount: 26
-        - Level: 5
-          Amount: 28
+      SpCost: 10
       Weapon:
         1hAxe: true
         2hAxe: true
@@ -20371,54 +20333,23 @@ Body:
       TargetTrap: true
       AllowOnMado: true
     Hit: Multi_Hit
-    HitCount: -6
+    HitCount: -5
     Element: Weapon
+    Cooldown: 5000
+    AfterCastActDelay: 200
     SplashArea:
       - Level: 1
-        Area: 2
+        Area: 3
       - Level: 2
-        Area: 2
+        Area: 3
       - Level: 3
         Area: 3
       - Level: 4
         Area: 3
       - Level: 5
         Area: 3
-    AfterCastActDelay: 500
-    Cooldown:
-      - Level: 1
-        Time: 4000
-      - Level: 2
-        Time: 3500
-      - Level: 3
-        Time: 3000
-      - Level: 4
-        Time: 2500
-      - Level: 5
-        Time: 2000
     Requires:
-      HpCost:
-        - Level: 1
-          Amount: 20
-        - Level: 2
-          Amount: 40
-        - Level: 3
-          Amount: 60
-        - Level: 4
-          Amount: 80
-        - Level: 5
-          Amount: 100
-      SpCost:
-        - Level: 1
-          Amount: 18
-        - Level: 2
-          Amount: 20
-        - Level: 3
-          Amount: 22
-        - Level: 4
-          Amount: 24
-        - Level: 5
-          Amount: 26
+      SpCost: 12
       Weapon:
         1hAxe: true
         2hAxe: true

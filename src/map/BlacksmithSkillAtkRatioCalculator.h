@@ -8,6 +8,8 @@ class BlacksmithSkillAtkRatioCalculator
 		static int calculate_cart_brume_atk_ratio(int skill_lv, int intelligence);
 		static int calculate_cart_shrapnel_atk_ratio(int skill_lv, int dex);
 		static int calculate_cart_cannon_atk_ratio(int skill_lv, int dex);
+		static int calculate_axe_boomerang_atk_ratio(int skill_lv);
+		static int calculate_axe_tornado_atk_ratio(int skill_lv, int luk);
 
 };
 

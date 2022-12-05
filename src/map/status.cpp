@@ -345,7 +345,7 @@ void initChangeTables(void)
 	set_sc( AL_CRUCIS		, SC_CRUCIS_PLAYER	, EFST_CRUCIS_PLAYER	, SCB_MATK|SCB_MDEF	);
 
 	set_sc( SM_MAGNUM		, SC_WATK_ELEMENT	, EFST_WATK_ELEMENT	, SCB_NONE	);
-	set_sc( SM_ENDURE		, SC_ENDURE		, EFST_ENDURE		, SCB_MDEF|SCB_DSPD );
+	set_sc( SM_ENDURE		, SC_ENDURE		, EFST_ENDURE		, SCB_MDEF|SCB_DSPD|SCB_DEF );
 	add_sc( MG_SIGHT		, SC_SIGHT		);
 	add_sc( MG_SAFETYWALL		, SC_SAFETYWALL		);
 	add_sc( MG_FROSTDIVER		, SC_FREEZE		);
@@ -423,7 +423,7 @@ void initChangeTables(void)
 	set_sc( NV_TRICKDEAD		, SC_TRICKDEAD		, EFST_TRICKDEAD		, SCB_REGEN );
 	set_sc( SM_AUTOBERSERK		, SC_AUTOBERSERK	, EFST_AUTOBERSERK	, SCB_NONE );
 	set_sc( MC_LOUD			, SC_LOUD		, EFST_SHOUT, SCB_STR|SCB_BATK );
-	set_sc( BS_AXEQUICKEN			, SC_AXEQUICKEN		, EFST_AXEQUICKEN, SCB_ASPD|SCB_BATK );
+	set_sc( BS_AXEQUICKEN			, SC_AXEQUICKEN		, EFST_AXEQUICKEN, SCB_ASPD|SCB_WATK );
 	set_sc( MG_ENERGYCOAT		, SC_ENERGYCOAT		, EFST_ENERGYCOAT		, SCB_MATK );
 	set_sc( NPC_EMOTION		, SC_MODECHANGE		, EFST_BLANK		, SCB_MODE );
 	add_sc( NPC_EMOTION_ON		, SC_MODECHANGE		);
@@ -6678,7 +6678,7 @@ static signed short status_calc_critical(struct block_list *bl, struct status_ch
 	if (sc->data[SC_CLOAKING])
 		critical += critical;
 	if( sc->data[SC_WEAPONPERFECTION] )
-		critical += 15;
+		critical += 150;
 	if (sc->data[SC_STRIKING])
 		critical += critical * sc->data[SC_STRIKING]->val1 / 100;
 	if (sc->data[SC__INVISIBILITY])
@@ -6963,6 +6963,8 @@ static defType status_calc_def(struct block_list *bl, struct status_change *sc, 
 		def += sc->data[SC_SHIELDSPELL_REF]->val2;
 	if( sc->data[SC_PRESTIGE] )
 		def += sc->data[SC_PRESTIGE]->val3;
+	if(sc->data[SC_ENDURE])
+		def += sc->data[SC_ENDURE]->val1*2;
 	if( sc->data[SC_BANDING] && sc->data[SC_BANDING]->val2 > 1 )
 		def += (5 + sc->data[SC_BANDING]->val1) * sc->data[SC_BANDING]->val2 / 10;
 	if( sc->data[SC_ECHOSONG] )
@@ -7086,8 +7088,8 @@ static defType status_calc_mdef(struct block_list *bl, struct status_change *sc,
 		mdef += sc->data[SC_CRUCIS_PLAYER]->val4;
 	if(sc->data[SC_EARTH_INSIGNIA] && sc->data[SC_EARTH_INSIGNIA]->val1 == 3)
 		mdef += 50;
-	if(sc->data[SC_ENDURE] && !sc->data[SC_ENDURE]->val3) // It has been confirmed that Eddga card grants 1 MDEF, not 0, not 10, but 1.
-		mdef += (sc->data[SC_ENDURE]->val4 == 0) ? sc->data[SC_ENDURE]->val1 : 1;
+	if(sc->data[SC_ENDURE])
+		mdef += sc->data[SC_ENDURE]->val1*2;
 	if(sc->data[SC_STONEHARDSKIN])
 		mdef += sc->data[SC_STONEHARDSKIN]->val1;
 	if(sc->data[SC_STONE] && sc->opt1 == OPT1_STONE)
@@ -10114,7 +10116,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			val2 = 2 + val1; // Agi change
 			break;
 		case SC_ENDURE:
-			val2 = 7; // Hit-count [Celest]
+			val2 = 2147483647; // Hit-count [Celest]
 			if( !(flag&SCSTART_NOAVOID) && (bl->type&(BL_PC|BL_MER)) && !map_flag_gvg2(bl->m) && !map_getmapflag(bl->m, MF_BATTLEGROUND) && !val4 ) {
 				struct map_session_data *tsd;
 				if( sd ) {
@@ -10837,13 +10839,8 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			}
 			break;
 		case SC_CONCENTRATION:
-#ifdef RENEWAL
 			val2 = 5 + val1 * 2; // Batk/Watk Increase
 			val4 = 5 + val1 * 2; // Def reduction
-#else
-			val2 = 5*val1; // Batk/Watk Increase
-			val4 = 5*val1; // Def reduction
-#endif
 			val3 = 10*val1; // Hit Increase
 			sc_start(src, bl, SC_ENDURE, 100, 1, tick); // Level 1 Endure effect
 			break;
@@ -11386,7 +11383,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			break;
 		case SC_PRESTIGE:
 			val2 = val1 * 5;	// Chance to evade magic damage.
-			val3 = val1 * 4; // Defence added
+			val3 = val1 * 3; // Defence added
 			break;
 		case SC_BANDING:
 			val2 = (sd ? skill_banding_count(sd) : 1);
