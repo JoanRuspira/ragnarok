@@ -27,15 +27,49 @@ int BlacksmithSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_li
 			return calculate_cart_cannon_atk_ratio(skill_lv,  sstatus->dex);
 			break;
 		case NC_AXEBOOMERANG:
-			calculate_axe_boomerang_atk_ratio(skill_lv);
+			return calculate_axe_boomerang_atk_ratio(skill_lv);
 			break;
 		case NC_AXETORNADO:
-			calculate_axe_tornado_atk_ratio(skill_lv, sstatus->luk);
+			return calculate_axe_tornado_atk_ratio(skill_lv, sstatus->luk);
+			break;
+		case BS_HAMMERFALL:
+			add_hammerfall_special_effects(target);
+			return calculate_hammerfall_atk_ratio(skill_lv, sstatus->str);
 			break;
 		default:
 			return 0;
 			break;
 	}
+}
+
+
+void BlacksmithSkillAtkRatioCalculator::add_hammerfall_special_effects(struct block_list *target)
+{
+	clif_specialeffect(target, EF_CRASHEARTH, AREA);
+}
+
+
+int BlacksmithSkillAtkRatioCalculator::calculate_hammerfall_atk_ratio(int skill_lv, int str)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 30;
+			break;
+		case 2:
+			ratio = 100;
+			break;
+		case 3:
+			ratio = 180;
+			break;
+		case 4:
+			ratio = 240;
+			break;
+		case 5:
+			ratio = 300;
+			break;
+		}
+	return ratio + (str/3);
 }
 
 

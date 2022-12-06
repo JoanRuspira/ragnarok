@@ -3026,7 +3026,7 @@ static TIMER_FUNC(skill_timerskill){
 					}
 					// Fall through
 				case PR_STRECOVERY:
-				case BS_HAMMERFALL:
+				// case BS_HAMMERFALL:
 				case MER_LEXDIVINA:
 					sc_start(src, target, status_skill2sc(skl->skill_id), skl->type, skl->skill_lv, skill_get_time2(skl->skill_id, skl->skill_lv));
 					break;
@@ -3639,6 +3639,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case RL_BANISHING_BUSTER:
 	case RL_SLUGSHOT:
 	case AS_SONICBLOW:
+	case BS_HAMMERFALL:
 	case RL_AM_BLAST:
 		skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag);
 		break;
@@ -5723,7 +5724,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		clif_skill_nodamage(bl,bl,skill_id,skill_lv,
 			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
 		break;
-
 	case MC_CARTQUAKE:
 		MerchntSkillAtkRatioCalculator::add_cart_quake_effects(src);
 		skill_area_temp[1] = 0;
@@ -6274,9 +6274,9 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		}
 		break;
 
-	case BS_HAMMERFALL:
-		skill_addtimerskill(src, tick+1000, bl->id, 0, 0, skill_id, skill_lv, min(20+10*skill_lv, 50+5*skill_lv), flag);
-		break;
+	// case BS_HAMMERFALL:
+	// 	skill_addtimerskill(src, tick+1000, bl->id, 0, 0, skill_id, skill_lv, min(20+10*skill_lv, 50+5*skill_lv), flag);
+	// 	break;
 
 	case RG_RAID:
 		skill_area_temp[1] = 0;
@@ -11090,13 +11090,13 @@ int skill_castend_pos2(struct block_list* src, int x, int y, uint16 skill_id, ui
 			skill_castend_damage_id);
 		break;
 
-	case BS_HAMMERFALL:
-		i = skill_get_splash(skill_id, skill_lv);
-		map_foreachinallarea(skill_area_sub,
-			src->m, x-i, y-i, x+i, y+i, BL_CHAR,
-			src, skill_id, skill_lv, tick, flag|BCT_ENEMY|2,
-			skill_castend_nodamage_id);
-		break;
+	// case BS_HAMMERFALL:
+	// 	i = skill_get_splash(skill_id, skill_lv);
+	// 	map_foreachinallarea(skill_area_sub,
+	// 		src->m, x-i, y-i, x+i, y+i, BL_CHAR,
+	// 		src, skill_id, skill_lv, tick, flag|BCT_ENEMY|2,
+	// 		skill_castend_nodamage_id);
+	// 	break;
 
 	case HT_DETECTING:
 		i = skill_get_splash(skill_id, skill_lv);

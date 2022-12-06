@@ -6832,6 +6832,14 @@ void clif_item_identified(struct map_session_data *sd,int idx,int flag)
 }
 
 
+bool clif_item_equipment_repair_level_check(t_itemid name_id, int lv){
+
+	if (itemdb_wlv(name_id) <= lv-1){
+		return true;
+	}
+
+	return false;
+}
 /// Presents a list of items that can be repaired.
 /// 01fc <packet len>.W { <index>.W <name id>.W <refine>.B <card1>.W <card2>.W <card3>.W <card4>.W }* (ZC_REPAIRITEMLIST)
 void clif_item_repair_list( struct map_session_data *sd,struct map_session_data *dstsd, int lv ){
@@ -6854,12 +6862,16 @@ void clif_item_repair_list( struct map_session_data *sd,struct map_session_data 
 	int c = 0;
 
 	for( int i = 0; i < MAX_INVENTORY; i++ ){
-		if( dstsd->inventory.u.items_inventory[i].nameid > 0 && dstsd->inventory.u.items_inventory[i].attribute != 0 && !itemdb_ishatched_egg( &dstsd->inventory.u.items_inventory[i] ) ){ // && skill_can_repair(sd,nameid)){
-			p->items[c].index = i;
-			p->items[c].itemId = client_nameid( dstsd->inventory.u.items_inventory[i].nameid );
-			p->items[c].refine = dstsd->inventory.u.items_inventory[i].refine;
-			clif_addcards( &p->items[c].slot, &dstsd->inventory.u.items_inventory[i] );
-			c++;
+		if( dstsd->inventory.u.items_inventory[i].nameid > 0 && 
+			dstsd->inventory.u.items_inventory[i].attribute != 0 && 
+			!itemdb_ishatched_egg( &dstsd->inventory.u.items_inventory[i] ) ){ // && skill_can_repair(sd,nameid)){
+			if (clif_item_equipment_repair_level_check(sd->inventory.u.items_inventory[i].nameid, lv)) {
+				p->items[c].index = i;
+				p->items[c].itemId = client_nameid( dstsd->inventory.u.items_inventory[i].nameid );
+				p->items[c].refine = dstsd->inventory.u.items_inventory[i].refine;
+				clif_addcards( &p->items[c].slot, &dstsd->inventory.u.items_inventory[i] );
+				c++;
+			}
 		}
 	}
 

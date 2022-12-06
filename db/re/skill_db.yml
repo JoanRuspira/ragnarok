@@ -1221,9 +1221,11 @@ Body:
   - Id: 42
     Name: MC_MAMMONITE
     Description: Mammonite
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
+    Cooldown: 5000
+    AfterCastActDelay: 400
     Flags:
       AllowOnMado: true
     Range: -1
@@ -1235,28 +1237,7 @@ Body:
         Plagiarism: true
         Reproduce: true
     Requires:
-      SpCost: 5
-      ZenyCost:
-        - Level: 1
-          Amount: 100
-        - Level: 2
-          Amount: 200
-        - Level: 3
-          Amount: 300
-        - Level: 4
-          Amount: 400
-        - Level: 5
-          Amount: 500
-        - Level: 6
-          Amount: 600
-        - Level: 7
-          Amount: 700
-        - Level: 8
-          Amount: 800
-        - Level: 9
-          Amount: 900
-        - Level: 10
-          Amount: 1000
+      SpCost: 15
   - Id: 2430
     Name: AC_BOW
     Description: Bow Mastery
@@ -3410,9 +3391,11 @@ Body:
     Hit: Single
     HitCount: 1
     CastCancel: true
+    Cooldown: 5000
+    AfterCastActDelay: 300
     CastTime: 7500
     Requires:
-      SpCost: 30
+      SpCost: 40
   - Id: 109
     Name: BS_SKINTEMPER
     Description: Skin Tempering
@@ -3423,37 +3406,19 @@ Body:
     Description: Hammer Fall
     MaxLevel: 5
     Type: Weapon
-    TargetType: Ground
-    DamageFlags:
-      NoDamage: true
-      Splash: true
-    Flags:
-      AllowOnMado: true
+    TargetType: Attack
     Range: 1
     Hit: Single
+    Element: Weapon
     HitCount: 1
-    SplashArea:
-      - Level: 1
-        Area: 2
-      - Level: 2
-        Area: 2
-      - Level: 3
-        Area: 2
-      - Level: 4
-        Area: 2
-      - Level: 5
-        Area: 2
-      - Level: 6
-        Area: 12
+    Cooldown: 8000
+    AfterCastActDelay: 400
     Duration2: 5000
     Requires:
-      SpCost: 10
+      SpCost: 16
       Weapon:
-        Dagger: true
-        1hSword: true
         1hAxe: true
         2hAxe: true
-        Mace: true
   - Id: 111
     Name: BS_ADRENALINE
     Description: Adrenaline Rush

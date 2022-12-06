@@ -22,7 +22,7 @@ int KnightSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* 
 			return calculate_pierce_atk_ratio(skill_lv);
 			break;
 		case KN_BRANDISHSPEAR:
-			return calculate_brandish_spear_atk_ratio(skill_lv, sstatus->str);
+			return calculate_brandish_spear_atk_ratio(skill_lv, sstatus->vit);
 			break;
 		case RK_WINDCUTTER:
 			return calculate_wind_cutter_atk_ratio(skill_lv, sstatus->int_);
@@ -140,7 +140,7 @@ int KnightSkillAtkRatioCalculator::calculate_wind_cutter_atk_ratio(int skill_lv,
 }
 
 
-int KnightSkillAtkRatioCalculator::calculate_brandish_spear_atk_ratio(int skill_lv, int strength)
+int KnightSkillAtkRatioCalculator::calculate_brandish_spear_atk_ratio(int skill_lv, int vit)
 {
 	int ratio = 0;
 	switch (skill_lv) {
@@ -160,7 +160,7 @@ int KnightSkillAtkRatioCalculator::calculate_brandish_spear_atk_ratio(int skill_
 			ratio = 300;
 			break;
 		}
-	return ratio + strength/3;
+	return ratio + vit/3;
 }
 
 int KnightSkillAtkRatioCalculator::calculate_pierce_atk_ratio(int skill_lv)

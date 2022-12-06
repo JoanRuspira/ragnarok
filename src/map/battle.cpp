@@ -2846,6 +2846,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case GN_CARTCANNON:
 		case NC_AXEBOOMERANG:
 		case NC_AXETORNADO:
+		case BS_HAMMERFALL:
 			skillratio += BlacksmithSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
 		case MER_CRASH:
@@ -4548,14 +4549,14 @@ static struct Damage initialize_weapon_data(struct block_list *src, struct block
 			case TK_TURNKICK:
 				wd.blewcount = 0;
 				break;
-			case KN_BOWLINGBASH:
-				if (sd && sd->status.weapon == W_2HSWORD) {
-					if (wd.miscflag >= 2 && wd.miscflag <= 3)
-						wd.div_ = 3;
-					else if (wd.miscflag >= 4)
-						wd.div_ = 4;
-				}
-				break;
+			// case KN_BOWLINGBASH:
+			// 	if (sd && sd->status.weapon == W_2HSWORD) {
+			// 		if (wd.miscflag >= 2 && wd.miscflag <= 3)
+			// 			wd.div_ = 3;
+			// 		else if (wd.miscflag >= 4)
+			// 			wd.div_ = 4;
+			// 	}
+			// 	break;
 			case KN_AUTOCOUNTER:
 				wd.flag = (wd.flag&~BF_SKILLMASK)|BF_NORMAL;
 				break;

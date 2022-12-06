@@ -754,6 +754,7 @@ void clif_clearcart(int fd);
 
 void clif_item_identify_list(struct map_session_data *sd);
 void clif_item_identified(struct map_session_data *sd,int idx,int flag);
+bool clif_item_equipment_repair_level_check(t_itemid name_id, int lv);
 void clif_item_repair_list(struct map_session_data *sd, struct map_session_data *dstsd, int lv);
 void clif_item_repaireffect(struct map_session_data *sd, int idx, int flag);
 void clif_item_damaged(struct map_session_data* sd, unsigned short position);
