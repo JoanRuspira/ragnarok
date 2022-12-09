@@ -6000,9 +6000,10 @@ void clif_skill_produce_mix_list( struct map_session_data *sd, int skill_id, int
 	p->packetType = 0x18d;
 
 	int count = 0;
+	
 	for( int i = 0; i < MAX_SKILL_PRODUCE_DB; i++ ){
 		if (skill_can_produce_mix(sd,skill_produce_db[i].nameid, trigger, 1) &&
-			(skill_id <= 0 || (skill_id > 0 && skill_produce_db[i].req_skill == skill_id))
+			(BS_AXE <= 0 || (BS_AXE > 0 && skill_produce_db[i].req_skill == BS_AXE))
 			)
 		{
 			p->items[count].itemId = client_nameid( skill_produce_db[i].nameid );

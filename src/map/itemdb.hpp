@@ -123,6 +123,10 @@ enum item_itemid : t_itemid
 	ITEMID_WOB_LOCAL					= 14585,
 	ITEMID_SIEGE_TELEPORT_SCROLL		= 14591,
 	ITEMID_WL_MB_SG						= 100065,
+	ITEMID_IRON_HAMMER                  = 613,
+	ITEMID_GOLDEN_HAMMER                = 614,
+	ITEMID_ORIDECON_HAMMER              = 615,
+	ITEMID_MINI_FURNACE                 = 612,
 };
 
 ///Rune Knight

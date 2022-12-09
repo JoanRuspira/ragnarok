@@ -6853,6 +6853,10 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		if(sd && dstsd)
 			clif_item_repair_list(sd,dstsd,skill_lv);
 		break;
+	case BS_AXE:
+		if(sd && dstsd)
+			clif_skill_produce_mix_list(sd,-1, 1);
+		break;
 
 	case MC_IDENTIFY:
 		if(sd) {
@@ -14335,6 +14339,7 @@ bool skill_check_condition_castbegin(struct map_session_data* sd, uint16 skill_i
 			switch( skill_id ) {
 				case AM_PHARMACY:
 				case AC_MAKINGARROW:
+				case BS_AXE:
 				case BS_REPAIRWEAPON:
 				case AM_TWILIGHT1:
 				case AM_TWILIGHT2:
@@ -15359,6 +15364,7 @@ bool skill_check_condition_castend(struct map_session_data* sd, uint16 skill_id,
 			switch( skill_id ) {
 				case AM_PHARMACY:
 				case AC_MAKINGARROW:
+				case BS_AXE:
 				case BS_REPAIRWEAPON:
 				case AM_TWILIGHT1:
 				case AM_TWILIGHT2:
@@ -18531,6 +18537,23 @@ short skill_can_produce_mix(struct map_session_data *sd, t_itemid nameid, int tr
 	if (i >= MAX_SKILL_PRODUCE_DB)
 		return 0;
 
+
+	if (pc_search_inventory(sd, ITEMID_ANVIL) < 0 &&
+		pc_search_inventory(sd, ITEMID_ORIDECON_ANVIL) < 0 &&
+		pc_search_inventory(sd, ITEMID_GOLDEN_ANVIL) < 0 &&
+		pc_search_inventory(sd, ITEMID_EMPERIUM_ANVIL) < 0)
+		return 0;
+	
+	if (pc_search_inventory(sd, ITEMID_IRON_HAMMER) < 0 &&
+		pc_search_inventory(sd, ITEMID_GOLDEN_HAMMER) < 0 &&
+		pc_search_inventory(sd, ITEMID_ORIDECON_HAMMER) < 0)
+		return 0;
+
+	if (pc_search_inventory(sd, ITEMID_MINI_FURNACE) < 0)
+		return 0;
+	
+
+
 	// Cannot carry the produced stuff
 	if (pc_checkadditem(sd, nameid, qty) == CHKADDITEM_OVERAMOUNT)
 		return 0;
@@ -18548,26 +18571,26 @@ short skill_can_produce_mix(struct map_session_data *sd, t_itemid nameid, int tr
 				return 0;
 		}
 	}
-
+	
 	// Check on player's inventory
-	for (j = 0; j < MAX_PRODUCE_RESOURCE; j++) {
-		t_itemid nameid_produce;
+	// for (j = 0; j < MAX_PRODUCE_RESOURCE; j++) {
+	// 	t_itemid nameid_produce;
 
-		if (!(nameid_produce = skill_produce_db[i].mat_id[j]))
-			continue;
-		if (skill_produce_db[i].mat_amount[j] == 0) {
-			if (pc_search_inventory(sd,nameid_produce) < 0)
-				return 0;
-		} else {
-			unsigned short idx, amt;
+	// 	if (!(nameid_produce = skill_produce_db[i].mat_id[j]))
+	// 		continue;
+	// 	if (skill_produce_db[i].mat_amount[j] == 0) {
+	// 		if (pc_search_inventory(sd,nameid_produce) < 0)
+	// 			return 0;
+	// 	} else {
+	// 		unsigned short idx, amt;
 
-			for (idx = 0, amt = 0; idx < MAX_INVENTORY; idx++)
-				if (sd->inventory.u.items_inventory[idx].nameid == nameid_produce)
-					amt += sd->inventory.u.items_inventory[idx].amount;
-			if (amt < qty * skill_produce_db[i].mat_amount[j])
-				return 0;
-		}
-	}
+	// 		for (idx = 0, amt = 0; idx < MAX_INVENTORY; idx++)
+	// 			if (sd->inventory.u.items_inventory[idx].nameid == nameid_produce)
+	// 				amt += sd->inventory.u.items_inventory[idx].amount;
+	// 		if (amt < qty * skill_produce_db[i].mat_amount[j])
+	// 			return 0;
+	// 	}
+	// }
 	return i + 1;
 }
 
@@ -18586,11 +18609,34 @@ short skill_can_produce_mix(struct map_session_data *sd, t_itemid nameid, int tr
 bool skill_produce_mix(struct map_session_data *sd, uint16 skill_id, t_itemid nameid, int slot1, int slot2, int slot3, int qty, short produce_idx)
 {
 	int slot[3];
-	int i, sc, ele, idx, equip, wlv, make_per = 0, flag = 0, skill_lv = 0;
+	int i, j, sc, ele, idx, equip, wlv, make_per = 0, flag = 0, skill_lv = 0;
 	int num = -1; // exclude the recipe
 	struct status_data *status;
 
 	nullpo_ret(sd);
+
+	// Check on player's inventory
+	for (j = 0; j < MAX_PRODUCE_RESOURCE; j++) {
+		t_itemid nameid_produce;
+
+		if (!(nameid_produce = skill_produce_db[produce_idx].mat_id[j]))
+			continue;
+		if (skill_produce_db[produce_idx
+		].mat_amount[j] == 0) {
+			if (pc_search_inventory(sd,nameid_produce) < 0)
+				return false;
+		} else {
+			unsigned short idx, amt;
+
+			for (idx = 0, amt = 0; idx < MAX_INVENTORY; idx++)
+				if (sd->inventory.u.items_inventory[idx].nameid == nameid_produce)
+					amt += sd->inventory.u.items_inventory[idx].amount;
+			if (amt < qty * skill_produce_db[produce_idx].mat_amount[j])
+				return false;
+		}
+	}
+
+
 
 	status = status_get_status_data(&sd->bl);
 
@@ -18671,23 +18717,9 @@ bool skill_produce_mix(struct map_session_data *sd, uint16 skill_id, t_itemid na
 			case BS_IRON:
 			case BS_STEEL:
 			case BS_ENCHANTEDSTONE:
-				// Ores & Metals Refining - skill bonuses are straight from kRO website [DracoRPG]
-				i = pc_checkskill(sd,skill_id);
-				make_per = sd->status.job_level*20 + status->dex*10 + status->luk*10; //Base chance
-				switch (nameid) {
-					case ITEMID_IRON:
-						make_per += 4000+i*500; // Temper Iron bonus: +26/+32/+38/+44/+50
-						break;
-					case ITEMID_STEEL:
-						make_per += 3000+i*500; // Temper Steel bonus: +35/+40/+45/+50/+55
-						break;
-					case ITEMID_STAR_CRUMB:
-						make_per = 100000; // Star Crumbs are 100% success crafting rate? (made 1000% so it succeeds even after penalties) [Skotlex]
-						break;
-					default: // Enchanted Stones
-						make_per += 1000+i*500; // Enchanted stone Craft bonus: +15/+20/+25/+30/+35
-						break;
-				}
+			case BS_AXE:
+				// Ores & Metals Refining - 100% success rate
+				make_per = 100000;
 				break;
 			case ASC_CDP:
 				make_per = (2000 + 40*status->dex + 20*status->luk);
@@ -18923,20 +18955,22 @@ bool skill_produce_mix(struct map_session_data *sd, uint16 skill_id, t_itemid na
 				break;
 		}
 	} else { // Weapon Forging - skill bonuses are straight from kRO website, other things from a jRO calculator [DracoRPG]
-		make_per = 5000 + ((sd->class_&JOBL_THIRD)?1400:sd->status.job_level*20) + status->dex*10 + status->luk*10; // Base
-		make_per += pc_checkskill(sd,skill_id)*500; // Smithing skills bonus: +5/+10/+15
-		make_per += pc_checkskill(sd,BS_WEAPONRESEARCH)*100 +((wlv >= 3)? pc_checkskill(sd,BS_ORIDEOCON)*100:0); // Weaponry Research bonus: +1/+2/+3/+4/+5/+6/+7/+8/+9/+10, Oridecon Research bonus (custom): +1/+2/+3/+4/+5
-		make_per -= (ele?2000:0) + sc*1500 + (wlv>1?wlv*1000:0); // Element Stone: -20%, Star Crumb: -15% each, Weapon level malus: -0/-20/-30
+		make_per = 1500; // Base success
+		make_per += pc_checkskill(sd,BS_AXE)*1000; // Forging skill bonus: +10/+20/+30/+40/+50
+		make_per += status->dex*10 + status->luk*10; // Status 10 for each 100 points
+		make_per -= (ele?2000:0) + sc*1500; // Element Stone: -20%, Star Crumb: -15% each
 		if      (pc_search_inventory(sd,ITEMID_EMPERIUM_ANVIL) > -1) make_per+= 1000; // Emperium Anvil: +10
 		else if (pc_search_inventory(sd,ITEMID_GOLDEN_ANVIL) > -1)   make_per+= 500; // Golden Anvil: +5
-		else if (pc_search_inventory(sd,ITEMID_ORIDECON_ANVIL) > -1) make_per+= 300; // Oridecon Anvil: +3
+		else if (pc_search_inventory(sd,ITEMID_ORIDECON_ANVIL) > -1) make_per+= 250; // Oridecon Anvil: +3
 		else if (pc_search_inventory(sd,ITEMID_ANVIL) > -1)          make_per+= 0; // Anvil: +0?
+
+		if      (pc_search_inventory(sd,ITEMID_GOLDEN_HAMMER) > -1)   make_per+= 500; // Golden Hammer: +5
+		else if (pc_search_inventory(sd,ITEMID_ORIDECON_HAMMER) > -1) make_per+= 250; // Oridecon Hammer: +2.5
+		else if (pc_search_inventory(sd,ITEMID_IRON_HAMMER) > -1)     make_per+= 0; // Iron Hammer: +0
+
 		if (battle_config.wp_rate != 100)
 			make_per = make_per * battle_config.wp_rate / 100;
 	}
-
-	if (sd->class_&JOBL_BABY) //if it's a Baby Class
-		make_per = (make_per * 50) / 100; //Baby penalty is 50% (bugreport:4847)
 
 	if (make_per < 1) make_per = 1;
 
@@ -19141,6 +19175,7 @@ bool skill_produce_mix(struct map_session_data *sd, uint16 skill_id, t_itemid na
 				break;
 			case BS_IRON:
 			case BS_STEEL:
+			case BS_AXE:
 			case BS_ENCHANTEDSTONE:
 				clif_produceeffect(sd,1,nameid);
 				clif_misceffect(&sd->bl,2);

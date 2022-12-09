@@ -3344,9 +3344,23 @@ Body:
     Type: Weapon
   - Id: 101
     Name: BS_AXE
-    Description: Smith Axe
+    Description: Forge Equipment
     MaxLevel: 5
     Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      AllowOnMado: true
+    Range: 2
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    Cooldown: 5000
+    AfterCastActDelay: 3000
+    CastTime: 100
+    Requires:
+      SpCost: 75
   - Id: 102
     Name: BS_MACE
     Description: Smith Mace
