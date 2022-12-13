@@ -422,6 +422,7 @@ void initChangeTables(void)
 	set_sc( AS_SPLASHER		, SC_SPLASHER	, EFST_SPLASHER	, SCB_NONE );
 	set_sc( NV_TRICKDEAD		, SC_TRICKDEAD		, EFST_TRICKDEAD		, SCB_REGEN );
 	set_sc( SM_AUTOBERSERK		, SC_AUTOBERSERK	, EFST_AUTOBERSERK	, SCB_NONE );
+	set_sc( SM_SPEARSTANCE			, SC_SPEARSTANCE		, EFST_SPEARSTANCE, SCB_STR|SCB_VIT );
 	set_sc( MC_LOUD			, SC_LOUD		, EFST_SHOUT, SCB_STR|SCB_BATK );
 	set_sc( BS_AXEQUICKEN			, SC_AXEQUICKEN		, EFST_AXEQUICKEN, SCB_ASPD|SCB_WATK );
 	set_sc( MG_ENERGYCOAT		, SC_ENERGYCOAT		, EFST_ENERGYCOAT		, SCB_MATK );
@@ -5926,6 +5927,8 @@ static unsigned short status_calc_str(struct block_list *bl, struct status_chang
 		str += sc->data[SC_LEADERSHIP]->val1;
 	if(sc->data[SC_LOUD])
 		str += sc->data[SC_LOUD]->val1;
+	if(sc->data[SC_SPEARSTANCE])
+		str += sc->data[SC_SPEARSTANCE]->val1;
 	if(sc->data[SC_TRUESIGHT])
 		str += 5;
 	if(sc->data[SC_SPURT])
@@ -6091,6 +6094,8 @@ static unsigned short status_calc_vit(struct block_list *bl, struct status_chang
 		vit += sc->data[SC_CHANGE]->val2;
 	if(sc->data[SC_GLORYWOUNDS])
 		vit += sc->data[SC_GLORYWOUNDS]->val1;
+	if(sc->data[SC_SPEARSTANCE])
+		vit += sc->data[SC_SPEARSTANCE]->val1;
 	if(sc->data[SC_TRUESIGHT])
 		vit += 5;
 	if(sc->data[SC_MARIONETTE])
@@ -10135,7 +10140,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 		case SC_AUTOBERSERK:
 			if (status->hp < status->max_hp/2 &&
 				(!sc->data[SC_PROVOKE] || sc->data[SC_PROVOKE]->val2==0))
-					sc_start4(src,bl,SC_PROVOKE,100,10,1,0,0,60000);
+					sc_start4(src,bl,SC_PROVOKE,100,sc->data[SC_AUTOBERSERK]->val1,1,0,0,60000);
 			tick = INFINITE_TICK;
 			break;
 		case SC_SIGNUMCRUCIS:

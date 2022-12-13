@@ -1265,7 +1265,7 @@ Body:
   - Id: 45
     Name: AC_CONCENTRATION
     Description: Improve Concentration
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Self
     DamageFlags:
@@ -1290,25 +1290,15 @@ Body:
     Requires:
       SpCost:
         - Level: 1
-          Amount: 25
-        - Level: 2
-          Amount: 30
-        - Level: 3
-          Amount: 35
-        - Level: 4
-          Amount: 40
-        - Level: 5
-          Amount: 45
-        - Level: 6
-          Amount: 50
-        - Level: 7
-          Amount: 55
-        - Level: 8
           Amount: 60
-        - Level: 9
-          Amount: 65
-        - Level: 10
-          Amount: 70
+        - Level: 2
+          Amount: 60
+        - Level: 3
+          Amount: 60
+        - Level: 4
+          Amount: 60
+        - Level: 5
+          Amount: 60
   - Id: 46
     Name: AC_DOUBLE
     Description: Double Strafe
@@ -1649,7 +1639,41 @@ Body:
       State: Cart     
       Ammo:
         Cannonball: true
-      AmmoAmount: 3                 
+      AmmoAmount: 3
+  - Id: 813
+    Name: SM_SPEARSTANCE
+    Description: Spear Stance
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      AllowOnMado: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 20000
+    AfterCastActDelay: 2000
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Duration1:
+      - Level: 1
+        Time: 24000
+      - Level: 2
+        Time: 48000
+      - Level: 3
+        Time: 72000
+      - Level: 4
+        Time: 96000
+      - Level: 5
+        Time: 120000
+    Requires:
+      SpCost: 20
+      Weapon:
+        1hSpear: true
+        2hSpear: true
   - Id: 51
     Name: TF_HIDING
     Description: Hiding
@@ -4533,8 +4557,9 @@ Body:
       NoDamage: true
     Hit: Single
     HitCount: 1
+    AfterCastActDelay: 3000
     Requires:
-      SpCost: 12
+      SpCost: 40
   - Id: 147
     Name: AC_MAKINGARROW
     Description: Arrow Crafting

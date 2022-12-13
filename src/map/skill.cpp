@@ -6456,6 +6456,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			party_foreachsamemap(skill_area_sub, sd, skill_get_splash(skill_id, skill_lv), src, skill_id, skill_lv, tick, flag|BCT_PARTY|1, skill_castend_nodamage_id);
 		break;
 	case MC_LOUD:
+	case SM_SPEARSTANCE:
 	case SN_WINDWALK:
 	case CASH_BLESSING:
 	case CASH_INCAGI:
