@@ -2210,7 +2210,7 @@ int status_heal(struct block_list *bl,int64 hhp,int64 hsp, int flag)
 		sc->data[SC_AUTOBERSERK] &&
 		sc->data[SC_PROVOKE] &&
 		sc->data[SC_PROVOKE]->val2==1 &&
-		status->hp>=status->max_hp>>2
+		status->hp>=status->max_hp/2
 	)	// End auto berserk.
 		status_change_end(bl, SC_PROVOKE, INVALID_TIMER);
 
@@ -10133,7 +10133,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 				tick = INFINITE_TICK;
 			break;
 		case SC_AUTOBERSERK:
-			if (status->hp < status->max_hp>>2 &&
+			if (status->hp < status->max_hp/2 &&
 				(!sc->data[SC_PROVOKE] || sc->data[SC_PROVOKE]->val2==0))
 					sc_start4(src,bl,SC_PROVOKE,100,10,1,0,0,60000);
 			tick = INFINITE_TICK;

@@ -1238,6 +1238,17 @@ Body:
         Reproduce: true
     Requires:
       SpCost: 15
+      ZenyCost:
+        - Level: 1
+          Amount: 100
+        - Level: 2
+          Amount: 100
+        - Level: 3
+          Amount: 100
+        - Level: 4
+          Amount: 100
+        - Level: 5
+          Amount: 100
   - Id: 2430
     Name: AC_BOW
     Description: Bow Mastery
@@ -3358,7 +3369,7 @@ Body:
     CastCancel: true
     Cooldown: 5000
     AfterCastActDelay: 3000
-    CastTime: 100
+    CastTime: 7500
     Requires:
       SpCost: 75
   - Id: 102
@@ -4523,7 +4534,7 @@ Body:
     Hit: Single
     HitCount: 1
     Requires:
-      SpCost: 1
+      SpCost: 12
   - Id: 147
     Name: AC_MAKINGARROW
     Description: Arrow Crafting
@@ -16213,9 +16224,21 @@ Body:
       AllowOnMado: true
     Hit: Single
     SplashArea: 2
-    AfterCastActDelay: 1000
+    Cooldown: 5000
+    AfterCastActDelay: 400
     Requires:
       SpCost: 10
+      SplashArea:
+        - Level: 1
+          Area: 1
+        - Level: 2
+          Area: 2
+        - Level: 3
+          Area: 3
+        - Level: 4
+          Area: 4
+        - Level: 5
+          Area: 5
   - Id: 1014
     Name: PR_REDEMPTIO
     Description: Redemptio
@@ -19659,20 +19682,19 @@ Body:
   - Id: 2257
     Name: NC_PILEBUNKER
     Description: Pile Bunker
-    MaxLevel: 3
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     Flags:
       AllowOnMado: true
-    Range: 3
+    Range: 1
     Hit: Single
     HitCount: 1
     Element: Weapon
     AfterCastActDelay: 2000
     Cooldown: 5000
     Requires:
-      SpCost: 50
-      State: Mado
+      SpCost: 14
   - Id: 2258
     Name: NC_VULCANARM
     Description: Vulcan Arm
