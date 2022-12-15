@@ -1380,6 +1380,8 @@ Body:
     Range: 1
     Hit: Single
     Element: Weapon
+    Cooldown: 1000
+    AfterCastActDelay: 200
     DamageFlags:
       NoDamage: true
     HitCount: 1
@@ -1674,6 +1676,33 @@ Body:
       Weapon:
         1hSpear: true
         2hSpear: true
+  - Id: 814
+    Name: RG_DAGGERQUICKEN
+    Description: Axe Quicken
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 10000
+    AfterCastActDelay: 1000
+    Duration1:
+      - Level: 1
+        Time: 60000
+      - Level: 2
+        Time: 120000
+      - Level: 3
+        Time: 180000
+      - Level: 4
+        Time: 240000
+      - Level: 5
+        Time: 300000
+    Requires:
+      SpCost: 50
+      Weapon:
+        dagger: true
   - Id: 51
     Name: TF_HIDING
     Description: Hiding
@@ -4376,54 +4405,26 @@ Body:
   - Id: 139
     Name: AS_POISONREACT
     Description: Poison React
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Self
     Hit: Single
     HitCount: 1
+    Cooldown: 20000
+    AfterCastActDelay: 3000
     Duration1:
       - Level: 1
-        Time: 20000
-      - Level: 2
         Time: 25000
-      - Level: 3
-        Time: 30000
-      - Level: 4
+      - Level: 2
         Time: 35000
-      - Level: 5
-        Time: 40000
-      - Level: 6
+      - Level: 3
         Time: 45000
-      - Level: 7
-        Time: 50000
-      - Level: 8
+      - Level: 4
         Time: 55000
-      - Level: 9
-        Time: 60000
-      - Level: 10
+      - Level: 5
         Time: 65000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 25
-        - Level: 2
-          Amount: 30
-        - Level: 3
-          Amount: 35
-        - Level: 4
-          Amount: 40
-        - Level: 5
-          Amount: 45
-        - Level: 6
-          Amount: 50
-        - Level: 7
-          Amount: 55
-        - Level: 8
-          Amount: 60
-        - Level: 9
-          Amount: 45
-        - Level: 10
-          Amount: 45
+      SpCost: 45
   - Id: 140
     Name: AS_VENOMDUST
     Description: Venom Dust

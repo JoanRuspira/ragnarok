@@ -2785,6 +2785,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case TF_SNATCH:
 		case TF_SANDATTACK:
 		case AS_VENOMKNIFE:
+		case AS_POISONREACT:
 			skillratio += ThiefSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv);
 			break;
 		case MC_CARTQUAKE:
@@ -2870,9 +2871,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 				if(skill_lv > 9 && wd->miscflag == 2)
 					skillratio += ratio / 2;
 			}
-			break;
-		case AS_POISONREACT:
-			skillratio += 30 * skill_lv;
 			break;
 		case NPC_PIERCINGATT:
 			skillratio += -25; //75% base damage
@@ -6594,7 +6592,7 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 	damage = wd.damage + wd.damage2;
 	if( damage > 0 && src != target )
 	{
-		if( sc && sc->data[SC_DUPLELIGHT] && (wd.flag&BF_SHORT) && rnd()%100 <= 30+4*sc->data[SC_DUPLELIGHT]->val1 )
+		if( sc && sc->data[SC_DUPLELIGHT] && (wd.flag&BF_SHORT) && rnd()%100 <= sc->data[SC_DUPLELIGHT]->val1*8 )
 		{	// Activates it only from melee damage
 			uint16 skill_id;
 			if( rnd()%2 == 1 )

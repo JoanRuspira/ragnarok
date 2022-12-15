@@ -30,6 +30,9 @@ int ThiefSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* s
 		add_venom_knife_special_effects(src, target);
 		return calculate_venom_knife_atk_ratio(skill_lv);
 		break;
+	case AS_POISONREACT:
+		return calculate_poison_react_atk_ratio(skill_lv);
+		break;
 	default:
 		return 0;
 		break;
@@ -87,6 +90,30 @@ int ThiefSkillAtkRatioCalculator::calculate_venom_knife_atk_ratio(int skill_lv)
 	case 5:
 		ratio = 300;
 		break;
+	}
+	return ratio;
+}
+
+
+int ThiefSkillAtkRatioCalculator::calculate_poison_react_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 30;
+			break;
+		case 2:
+			ratio = 100;
+			break;
+		case 3:
+			ratio = 180;
+			break;
+		case 4:
+			ratio = 240;
+			break;
+		case 5:
+			ratio = 300;
+			break;
 	}
 	return ratio;
 }

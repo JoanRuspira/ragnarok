@@ -425,6 +425,7 @@ void initChangeTables(void)
 	set_sc( SM_SPEARSTANCE			, SC_SPEARSTANCE		, EFST_SPEARSTANCE, SCB_STR|SCB_VIT );
 	set_sc( MC_LOUD			, SC_LOUD		, EFST_SHOUT, SCB_STR|SCB_BATK );
 	set_sc( BS_AXEQUICKEN			, SC_AXEQUICKEN		, EFST_AXEQUICKEN, SCB_ASPD|SCB_WATK );
+	set_sc( RG_DAGGERQUICKEN			, SC_DAGGERQUICKEN		, EFST_DAGGERQUICKEN, SCB_ASPD|SCB_WATK );
 	set_sc( MG_ENERGYCOAT		, SC_ENERGYCOAT		, EFST_ENERGYCOAT		, SCB_MATK );
 	set_sc( NPC_EMOTION		, SC_MODECHANGE		, EFST_BLANK		, SCB_MODE );
 	add_sc( NPC_EMOTION_ON		, SC_MODECHANGE		);
@@ -6484,6 +6485,8 @@ static unsigned short status_calc_watk(struct block_list *bl, struct status_chan
 		watk += 3 * sc->data[SC_WEAPONPERFECTION]->val1;
 	if (sc->data[SC_AXEQUICKEN])
 		watk += 3*sc->data[SC_AXEQUICKEN]->val1;
+	if (sc->data[SC_DAGGERQUICKEN])
+		watk += 3*sc->data[SC_DAGGERQUICKEN]->val1;
 	if( sc->data[SC_EXPLOSIONSPIRITS] )
 		watk += 15;
 	if(sc->data[SC_INCATKRATE])
@@ -7431,6 +7434,8 @@ static short status_calc_aspd(struct block_list *bl, struct status_change *sc, b
 			bonus += sc->data[SC_SPEARQUICKEN]->val1*2;
 		if (sc->data[SC_AXEQUICKEN])
 			bonus += sc->data[SC_AXEQUICKEN]->val1*2;
+		if (sc->data[SC_DAGGERQUICKEN])
+			bonus += sc->data[SC_DAGGERQUICKEN]->val1*2;
 		if (sc->data[SC_SKA])
 			bonus -= 25;
 		if (sc->data[SC_DEFENDER])
@@ -10167,12 +10172,8 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			}
 			break;
 		case SC_POISONREACT:
-#ifdef RENEWAL
-			val2=(val1 - ((val1-1) % 1 - 1)) / 2;
-#else
-			val2=(val1+1)/2 + val1/10; // Number of counters [Skotlex]
-#endif
-			val3=50; // + 5*val1; // Chance to counter. [Skotlex]
+			val2=2*val1; // number of counters
+			val3=10*val1; // Chance to counter. [Skotlex]
 			break;
 		case SC_MAGICROD:
 			val2 = val1*20; // SP gained

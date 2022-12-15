@@ -1613,6 +1613,7 @@
 	export_constant(SC_MADOGEAR);
 	export_constant(SC_NPC_HALLUCINATIONWALK);
 	export_constant(SC_AXEQUICKEN);
+	export_constant(SC_DAGGERQUICKEN);
 #ifdef RENEWAL
 	export_constant(SC_EXTREMITYFIST2);
 #endif

@@ -6448,6 +6448,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		else if (sd)
 			party_foreachsamemap(skill_area_sub, sd, skill_get_splash(skill_id, skill_lv), src, skill_id, skill_lv, tick, flag | BCT_PARTY | 1, skill_castend_nodamage_id);
 		break;
+	case RG_DAGGERQUICKEN:
 	case BS_AXEQUICKEN:
 		clif_specialeffect(src, EF_TWOHANDQUICKEN, AREA);
 		if( sd == NULL || sd->status.party_id == 0 || (flag & 1) )
@@ -6693,7 +6694,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case TF_STEAL:
 		if(sd) {
 			if(pc_steal_item(sd,bl,skill_lv))
-				clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
+				clif_skill_nodamage(src,bl,skill_id,skill_lv *2,1);
 			else
 				clif_skill_fail(sd,skill_id,USESKILL_FAIL,0);
 		}
@@ -6708,8 +6709,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 
 			}
-			else
-				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+			
 		}
 		break;
 

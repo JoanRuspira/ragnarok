@@ -2113,6 +2113,7 @@ enum e_skill {
 	MC_CARTBRUME = 811,
 	MC_SHRAPNEL = 812,
 	SM_SPEARSTANCE = 813,
+	RG_DAGGERQUICKEN = 814,
 };
 
 /// The client view ids for land skills.

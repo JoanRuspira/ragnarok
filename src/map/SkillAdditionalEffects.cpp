@@ -252,15 +252,13 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 					// Automatic trigger of Warg Strike [Jobbie]
 					if (pc_iswug(sd) && (skill = pc_checkskill(sd, RA_WUGSTRIKE)) > 0 && rnd() % 1000 <= sstatus->luk * 10 / 3 + 1)
 						skill_castend_damage_id(src, bl, RA_WUGSTRIKE, skill, tick, 0);
-					// Gank
-					if (dstmd && sd->status.weapon != W_BOW &&
-						(skill = pc_checkskill(sd, RG_SNATCHER)) > 0 &&
-						(skill * 15 + 55) + pc_checkskill(sd, TF_STEAL) * 10 > rnd() % 1000) {
-						if (pc_steal_item(sd, bl, pc_checkskill(sd, TF_STEAL)))
-							clif_skill_nodamage(src, bl, TF_STEAL, skill, 1);
-						else
-							clif_skill_fail(sd, RG_SNATCHER, USESKILL_FAIL_LEVEL, 0);
-					}
+
+					//Mug
+					if (dstmd && sd->status.weapon != W_BOW && 
+						(skill = pc_checkskill(sd, RG_SNATCHER)) > 0 
+						&& rnd() % 100 <= skill * 7)
+						skill_castend_damage_id(src, bl, TF_SNATCH, skill, tick, 0);
+					
 					if (sc && sc->data[SC_PYROCLASTIC] && ((rnd() % 100) <= sc->data[SC_PYROCLASTIC]->val3))
 						skill_castend_pos2(src, bl->x, bl->y, BS_HAMMERFALL, sc->data[SC_PYROCLASTIC]->val1, tick, 0);
 				}

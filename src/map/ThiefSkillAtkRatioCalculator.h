@@ -20,6 +20,7 @@ private:
 	static int calculate_snatch_atk_ratio(int skill_lv);
 	static int calculate_sand_attack_atk_ratio(int skill_lv);
 	static int calculate_venom_knife_atk_ratio(int skill_lv);
+	static int calculate_poison_react_atk_ratio(int skill_lv);
 	static void add_envenom_special_effects(struct block_list* src, struct block_list *target);
 	static void add_snatch_special_effects(struct block_list *target);
 	static void add_venom_knife_special_effects(struct block_list* src, struct block_list *target);
