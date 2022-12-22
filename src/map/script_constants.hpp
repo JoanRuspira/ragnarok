@@ -1614,6 +1614,9 @@
 	export_constant(SC_NPC_HALLUCINATIONWALK);
 	export_constant(SC_AXEQUICKEN);
 	export_constant(SC_DAGGERQUICKEN);
+	export_constant(SC_OHQUICKEN);
+	export_constant(SC_SQUICKEN);
+	export_constant(SC_THQUICKEN);
 #ifdef RENEWAL
 	export_constant(SC_EXTREMITYFIST2);
 #endif

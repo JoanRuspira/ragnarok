@@ -426,6 +426,9 @@ void initChangeTables(void)
 	set_sc( MC_LOUD			, SC_LOUD		, EFST_SHOUT, SCB_STR|SCB_BATK );
 	set_sc( BS_AXEQUICKEN			, SC_AXEQUICKEN		, EFST_AXEQUICKEN, SCB_ASPD|SCB_WATK );
 	set_sc( RG_DAGGERQUICKEN			, SC_DAGGERQUICKEN		, EFST_DAGGERQUICKEN, SCB_ASPD|SCB_WATK );
+	set_sc( KN_OHQUICKEN			, SC_OHQUICKEN		, EFST_OHQUICKEN, SCB_ASPD|SCB_WATK );
+	set_sc( KN_SQUICKEN			, SC_SQUICKEN		, EFST_SQUICKEN, SCB_ASPD|SCB_WATK );
+	set_sc( KN_THQUICKEN			, SC_THQUICKEN		, EFST_THQUICKEN, SCB_ASPD|SCB_WATK );
 	set_sc( MG_ENERGYCOAT		, SC_ENERGYCOAT		, EFST_ENERGYCOAT		, SCB_MATK );
 	set_sc( NPC_EMOTION		, SC_MODECHANGE		, EFST_BLANK		, SCB_MODE );
 	add_sc( NPC_EMOTION_ON		, SC_MODECHANGE		);
@@ -6487,6 +6490,12 @@ static unsigned short status_calc_watk(struct block_list *bl, struct status_chan
 		watk += 3*sc->data[SC_AXEQUICKEN]->val1;
 	if (sc->data[SC_DAGGERQUICKEN])
 		watk += 3*sc->data[SC_DAGGERQUICKEN]->val1;
+	if (sc->data[SC_OHQUICKEN])
+		watk += 3*sc->data[SC_OHQUICKEN]->val1;
+	if (sc->data[SC_SQUICKEN])
+		watk += 3*sc->data[SC_SQUICKEN]->val1;
+	if (sc->data[SC_THQUICKEN])
+		watk += 3*sc->data[SC_THQUICKEN]->val1;
 	if( sc->data[SC_EXPLOSIONSPIRITS] )
 		watk += 15;
 	if(sc->data[SC_INCATKRATE])
@@ -7436,6 +7445,12 @@ static short status_calc_aspd(struct block_list *bl, struct status_change *sc, b
 			bonus += sc->data[SC_AXEQUICKEN]->val1*2;
 		if (sc->data[SC_DAGGERQUICKEN])
 			bonus += sc->data[SC_DAGGERQUICKEN]->val1*2;
+		if (sc->data[SC_OHQUICKEN])
+			bonus += sc->data[SC_OHQUICKEN]->val1*2;
+		if (sc->data[SC_SQUICKEN])
+			bonus += sc->data[SC_SQUICKEN]->val1*2;
+		if (sc->data[SC_THQUICKEN])
+			bonus += sc->data[SC_THQUICKEN]->val1*2;
 		if (sc->data[SC_SKA])
 			bonus -= 25;
 		if (sc->data[SC_DEFENDER])

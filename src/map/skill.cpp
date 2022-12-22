@@ -6448,6 +6448,9 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		else if (sd)
 			party_foreachsamemap(skill_area_sub, sd, skill_get_splash(skill_id, skill_lv), src, skill_id, skill_lv, tick, flag | BCT_PARTY | 1, skill_castend_nodamage_id);
 		break;
+	case KN_OHQUICKEN:
+	case KN_SQUICKEN:
+	case KN_THQUICKEN:
 	case RG_DAGGERQUICKEN:
 	case BS_AXEQUICKEN:
 		clif_specialeffect(src, EF_TWOHANDQUICKEN, AREA);
