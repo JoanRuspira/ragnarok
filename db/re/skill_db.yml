@@ -1785,6 +1785,68 @@ Body:
       SpCost: 50
       Weapon:
         2hSword: true
+  - Id: 818
+    Name: MC_UPROAR
+    Description: Crazy Uproar
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      AllowOnMado: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 30000
+    AfterCastActDelay: 2000
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Duration1:
+      - Level: 1
+        Time: 24000
+      - Level: 2
+        Time: 48000
+      - Level: 3
+        Time: 72000
+      - Level: 4
+        Time: 96000
+      - Level: 5
+        Time: 120000
+    Requires:
+      SpCost: 20
+  - Id: 819
+    Name: SM_SPIRITGROWTH
+    Description: Spirit Growth
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      AllowOnMado: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 30000
+    AfterCastActDelay: 2000
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Duration1:
+      - Level: 1
+        Time: 24000
+      - Level: 2
+        Time: 48000
+      - Level: 3
+        Time: 72000
+      - Level: 4
+        Time: 96000
+      - Level: 5
+        Time: 120000
+    Requires:
+      SpCost: 18
   - Id: 51
     Name: TF_HIDING
     Description: Hiding
@@ -4836,10 +4898,12 @@ Body:
       State: Cart
   - Id: 155
     Name: MC_LOUD
-    Description: Crazy Uproar
+    Description: Loud Exclamation
     MaxLevel: 5
     Type: Weapon
     TargetType: Self
+    Cooldown: 30000
+    AfterCastActDelay: 2000
     DamageFlags:
       NoDamage: true
     Flags:
@@ -16897,7 +16961,6 @@ Body:
     AfterCastActDelay: 5000
     Requires:
       SpCost: 40
-      State: Shield
       ItemCost:
         - Item: Runstone_Rhydo
           Amount: 1

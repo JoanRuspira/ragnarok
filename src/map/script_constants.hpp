@@ -911,6 +911,8 @@
 	export_constant(SC_MAXIMIZEPOWER);
 	export_constant(SC_TRICKDEAD);
 	export_constant(SC_LOUD);
+	export_constant(SC_UPROAR);
+	export_constant(SC_SPIRITGROWTH);
 	export_constant(SC_ENERGYCOAT);
 	export_constant(SC_BROKENARMOR);
 	export_constant(SC_BROKENWEAPON);

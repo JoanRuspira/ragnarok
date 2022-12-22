@@ -423,7 +423,9 @@ void initChangeTables(void)
 	set_sc( NV_TRICKDEAD		, SC_TRICKDEAD		, EFST_TRICKDEAD		, SCB_REGEN );
 	set_sc( SM_AUTOBERSERK		, SC_AUTOBERSERK	, EFST_AUTOBERSERK	, SCB_NONE );
 	set_sc( SM_SPEARSTANCE			, SC_SPEARSTANCE		, EFST_SPEARSTANCE, SCB_STR|SCB_VIT );
-	set_sc( MC_LOUD			, SC_LOUD		, EFST_SHOUT, SCB_STR|SCB_BATK );
+	set_sc( MC_LOUD			, SC_LOUD		, EFST_SHOUT, SCB_STR );
+	set_sc( MC_UPROAR			, SC_UPROAR		, EFST_UPROAR, SCB_WATK );
+	set_sc( SM_SPIRITGROWTH			, SC_SPIRITGROWTH		, EFST_SPIRITGROWTH, SCB_INT );
 	set_sc( BS_AXEQUICKEN			, SC_AXEQUICKEN		, EFST_AXEQUICKEN, SCB_ASPD|SCB_WATK );
 	set_sc( RG_DAGGERQUICKEN			, SC_DAGGERQUICKEN		, EFST_DAGGERQUICKEN, SCB_ASPD|SCB_WATK );
 	set_sc( KN_OHQUICKEN			, SC_OHQUICKEN		, EFST_OHQUICKEN, SCB_ASPD|SCB_WATK );
@@ -2025,7 +2027,7 @@ int status_damage(struct block_list *src,struct block_list *target,int64 dhp, in
 	if (sc && hp && status->hp) {
 		if (sc->data[SC_AUTOBERSERK] &&
 			(!sc->data[SC_PROVOKE] || !sc->data[SC_PROVOKE]->val2) &&
-			status->hp < status->max_hp>>2)
+			status->hp < status->max_hp/3)
 			sc_start4(src,target,SC_PROVOKE,100,20,1,0,0,0);
 		if (sc->data[SC_BERSERK] && status->hp <= 100)
 			status_change_end(target, SC_BERSERK, INVALID_TIMER);
@@ -2215,7 +2217,7 @@ int status_heal(struct block_list *bl,int64 hhp,int64 hsp, int flag)
 		sc->data[SC_AUTOBERSERK] &&
 		sc->data[SC_PROVOKE] &&
 		sc->data[SC_PROVOKE]->val2==1 &&
-		status->hp>=status->max_hp/2
+		status->hp>=status->max_hp/3
 	)	// End auto berserk.
 		status_change_end(bl, SC_PROVOKE, INVALID_TIMER);
 
@@ -5930,7 +5932,7 @@ static unsigned short status_calc_str(struct block_list *bl, struct status_chang
 	if(sc->data[SC_LEADERSHIP])
 		str += sc->data[SC_LEADERSHIP]->val1;
 	if(sc->data[SC_LOUD])
-		str += sc->data[SC_LOUD]->val1;
+		str += 2+sc->data[SC_LOUD]->val1;
 	if(sc->data[SC_SPEARSTANCE])
 		str += sc->data[SC_SPEARSTANCE]->val1;
 	if(sc->data[SC_TRUESIGHT])
@@ -6160,6 +6162,8 @@ static unsigned short status_calc_int(struct block_list *bl, struct status_chang
 		int_ -= sc->data[SC_HARMONIZE]->val2;
 		return (unsigned short)cap_value(int_,0,USHRT_MAX);
 	}
+	if(sc->data[SC_SPIRITGROWTH])
+		int_ += 2 + sc->data[SC_SPIRITGROWTH]->val1;
 	if(sc->data[SC_INCALLSTATUS])
 		int_ += sc->data[SC_INCALLSTATUS]->val1;
 	if(sc->data[SC_INCINT])
@@ -6442,8 +6446,6 @@ static unsigned short status_calc_batk(struct block_list *bl, struct status_chan
 		batk += sc->data[SC_QUEST_BUFF3]->val1;
 	if (sc->data[SC_SHRIMP])
 		batk += batk * sc->data[SC_SHRIMP]->val2 / 100;
-	if (sc->data[SC_LOUD])
-		batk += 4*sc->data[SC_LOUD]->val1;
 	if (sc->data[SC_NIBELUNGEN] && sc->data[SC_NIBELUNGEN]->val2 == RINGNBL_ATKRATE)
 		batk += batk * 20 / 100;
 	if (sc->data[SC_SUNSTANCE])
@@ -6496,6 +6498,8 @@ static unsigned short status_calc_watk(struct block_list *bl, struct status_chan
 		watk += 3*sc->data[SC_SQUICKEN]->val1;
 	if (sc->data[SC_THQUICKEN])
 		watk += 3*sc->data[SC_THQUICKEN]->val1;
+	if (sc->data[SC_UPROAR])
+		watk += 5*sc->data[SC_UPROAR]->val1;
 	if( sc->data[SC_EXPLOSIONSPIRITS] )
 		watk += 15;
 	if(sc->data[SC_INCATKRATE])
@@ -10912,12 +10916,12 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			val4 = 5+5*(val1*2); // Def reduction.
 			break;
 		case SC_ENERGYCOAT:
-			val3 = 10*(val1); // MAtk increase
+			val3 = 5*(val1); // MAtk increase
 			break;
 		case SC_CRUCIS_PLAYER:
 			// val2 signals autoprovoke.
-			val3 = 10*(val1); // MAtk increase
-			val4 = 10*(val1); // MDef increase.
+			val3 = 5*(val1); // MAtk increase
+			val4 = 5*(val1); // MDef increase.
 			break;
 		case SC_AVOID:
 			// val2 = 10*val1; // Speed change rate.

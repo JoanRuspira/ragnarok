@@ -16,7 +16,7 @@ int SwordsmanSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 			break;
 		case SM_MAGNUM:
 			add_magnum_break_special_effects(src);
-			return calculate_magnum_break_atk_ratio(skill_lv);
+			return calculate_magnum_break_atk_ratio(skill_lv, sstatus->int_);
 			break;
 		case KN_SPEARSTAB:
 			add_spear_stab_special_effects(src, target);
@@ -89,24 +89,24 @@ int SwordsmanSkillAtkRatioCalculator::calculate_bash_atk_ratio(int skill_lv)
 	return ratio;
 }
 
-int SwordsmanSkillAtkRatioCalculator::calculate_magnum_break_atk_ratio(int skill_lv)
+int SwordsmanSkillAtkRatioCalculator::calculate_magnum_break_atk_ratio(int skill_lv, int intelligence)
 {
 	int ratio = 0;
 	switch (skill_lv) {
 		case 1:
-			ratio = 0;
+			ratio = 0 + (intelligence/6);
 			break;
 		case 2:
-			ratio = 15;
+			ratio = 15 + (intelligence/6);
 			break;
 		case 3:
-			ratio = 35;
+			ratio = 35 + (intelligence/6);
 			break;
 		case 4:
-			ratio = 55;
+			ratio = 55 + (intelligence/6);
 			break;
 		case 5:
-			ratio = 75;
+			ratio = 75 + (intelligence/6);
 			break;
 		}
 	return ratio;

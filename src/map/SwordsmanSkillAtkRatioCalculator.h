@@ -16,7 +16,7 @@ class SwordsmanSkillAtkRatioCalculator
 
 	private:
 		static int calculate_bash_atk_ratio(int skill_lv);
-		static int calculate_magnum_break_atk_ratio(int skill_lv);
+		static int calculate_magnum_break_atk_ratio(int skill_lv, int intelligence);
 		static int calculate_spear_stab_atk_ratio(int skill_lv, struct block_list *target);
 		static int calculate_traumatic_blow_atk_ratio(int skill_lv);
 		static int calculate_spear_stab_normal_atk_ratio(int skill_lv);
