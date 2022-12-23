@@ -1917,11 +1917,12 @@ static void skill_do_copy(struct block_list* src,struct block_list *bl, uint16 s
 		//Use skill index, avoiding out-of-bound array [Cydh]
 		if (!(idx = skill_get_index(skill_id)))
 			return;
-
+		// ShowStatus("Index %d.\n", idx);
 		switch (skill_isCopyable(tsd,skill_id)) {
 			case 1: //Copied by Plagiarism
 				{
 					if (tsd->cloneskill_idx > 0 && tsd->status.skill[tsd->cloneskill_idx].flag == SKILL_FLAG_PLAGIARIZED) {
+						// ShowStatus("Deleting skill %d.\n", tsd->status.skill[tsd->cloneskill_idx].id);
 						clif_deleteskill(tsd,tsd->status.skill[tsd->cloneskill_idx].id);
 						tsd->status.skill[tsd->cloneskill_idx].id = 0;
 						tsd->status.skill[tsd->cloneskill_idx].lv = 0;
@@ -9184,39 +9185,40 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case SC_GROOMY:
 	case SC_LAZINESS:
 	case SC_UNLUCKY:
+	case SC_IGNORANCE:
 	case SC_WEAKNESS:
 		if( !(tsc && tsc->data[type]) ) {
 			int rate;
 
-			if (status_get_class_(bl) == CLASS_BOSS)
-				break;
+			// if (status_get_class_(bl) == CLASS_BOSS)
+			// 	break;
 			rate = 100;
 			clif_skill_nodamage(src,bl,skill_id,0,sc_start(src,bl,type,rate,skill_lv,skill_get_time(skill_id,skill_lv)));
 		} else if( sd )
 			 clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
 		break;
 
-	case SC_IGNORANCE:
-		if( !(tsc && tsc->data[type]) ) {
-			int rate;
+	// case SC_IGNORANCE:
+	// 	if( !(tsc && tsc->data[type]) ) {
+	// 		int rate;
 
-			if (status_get_class_(bl) == CLASS_BOSS)
-				break;
-			rate = 100;
-			if (clif_skill_nodamage(src,bl,skill_id,0,sc_start(src,bl,type,rate,skill_lv,skill_get_time(skill_id,skill_lv)))) {
-				int sp = 100 * skill_lv;
+	// 		if (status_get_class_(bl) == CLASS_BOSS)
+	// 			break;
+	// 		rate = 100;
+	// 		if (clif_skill_nodamage(src,bl,skill_id,0,sc_start(src,bl,type,rate,skill_lv,skill_get_time(skill_id,skill_lv)))) {
+	// 			int sp = 100 * skill_lv;
 
-				if( dstmd )
-					sp = dstmd->level;
-				if( !dstmd )
-					status_zap(bl, 0, sp);
+	// 			if( dstmd )
+	// 				sp = dstmd->level;
+	// 			if( !dstmd )
+	// 				status_zap(bl, 0, sp);
 
-				status_heal(src, 0, sp / 2, 3);
-			} else if( sd )
-				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-		} else if( sd )
-			clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-		break;
+	// 			status_heal(src, 0, sp / 2, 3);
+	// 		} else if( sd )
+	// 			clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+	// 	} else if( sd )
+	// 		clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+	// 	break;
 
 	case LG_TRAMPLE:
 		clif_skill_damage(src,bl,tick, status_get_amotion(src), 0, -30000, 1, skill_id, skill_lv, DMG_SINGLE);

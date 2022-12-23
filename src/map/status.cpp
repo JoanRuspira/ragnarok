@@ -6996,7 +6996,7 @@ static defType status_calc_def(struct block_list *bl, struct status_change *sc, 
 	if( sc->data[SC_ECHOSONG] )
 		def += sc->data[SC_ECHOSONG]->val3;
 	if( sc->data[SC__IGNORANCE] )
-		def -= (sc->data[SC__IGNORANCE]->val1)*5;
+		def -= (sc->data[SC__IGNORANCE]->val1)*4;
 	if( sc->data[SC_EARTHDRIVE] )
 		def -= def * 25 / 100;
 	if( sc->data[SC_CAMOUFLAGE] )
@@ -7137,7 +7137,7 @@ static defType status_calc_mdef(struct block_list *bl, struct status_change *sc,
 	if (sc->data[SC_SOULGOLEM])
 		mdef += sc->data[SC_SOULGOLEM]->val3;
 	if( sc->data[SC__IGNORANCE] )
-		mdef -= (sc->data[SC__IGNORANCE]->val1)*5;
+		mdef -= (sc->data[SC__IGNORANCE]->val1)*4;
 
 	return (defType)cap_value(mdef,DEFTYPE_MIN,DEFTYPE_MAX);
 }

@@ -21019,7 +21019,7 @@ Body:
     TargetType: Attack
     DamageFlags:
       NoDamage: true
-    Range: 3
+    Range: 1
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -21048,7 +21048,7 @@ Body:
     TargetType: Attack
     DamageFlags:
       NoDamage: true
-    Range: 3
+    Range: 1
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -21077,7 +21077,7 @@ Body:
     TargetType: Attack
     DamageFlags:
       NoDamage: true
-    Range: 3
+    Range: 1
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -21111,7 +21111,7 @@ Body:
     TargetType: Attack
     DamageFlags:
       NoDamage: true
-    Range: 3
+    Range: 1
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -21145,7 +21145,7 @@ Body:
     TargetType: Attack
     DamageFlags:
       NoDamage: true
-    Range: 3
+    Range: 1
     Hit: Single
     HitCount: 1
     CastCancel: true

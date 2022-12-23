@@ -6428,6 +6428,13 @@ static void pc_checkallowskill(struct map_session_data *sd)
 {
 	const enum sc_type scw_list[] = {
 		SC_TWOHANDQUICKEN,
+		SC_OHQUICKEN,
+		SC_THQUICKEN,
+		SC_SQUICKEN,
+		SC_AXEQUICKEN,
+		SC_DAGGERQUICKEN,
+		SC_MACEQUICKEN,
+		SC_SPEARSTANCE,
 		SC_ONEHAND,
 		SC_AURABLADE,
 		SC_PARRYING,
