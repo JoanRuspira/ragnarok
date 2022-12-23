@@ -425,12 +425,13 @@ void initChangeTables(void)
 	set_sc( SM_SPEARSTANCE			, SC_SPEARSTANCE		, EFST_SPEARSTANCE, SCB_STR|SCB_VIT );
 	set_sc( MC_LOUD			, SC_LOUD		, EFST_SHOUT, SCB_STR );
 	set_sc( MC_UPROAR			, SC_UPROAR		, EFST_UPROAR, SCB_WATK );
-	set_sc( SM_SPIRITGROWTH			, SC_SPIRITGROWTH		, EFST_SPIRITGROWTH, SCB_INT );
+	set_sc( SM_SPIRITGROWTH			, SC_SPIRITGROWTH		, EFST_SPIRITGROWTH, SCB_STR|SCB_INT );
 	set_sc( BS_AXEQUICKEN			, SC_AXEQUICKEN		, EFST_AXEQUICKEN, SCB_ASPD|SCB_WATK );
 	set_sc( RG_DAGGERQUICKEN			, SC_DAGGERQUICKEN		, EFST_DAGGERQUICKEN, SCB_ASPD|SCB_WATK );
 	set_sc( KN_OHQUICKEN			, SC_OHQUICKEN		, EFST_OHQUICKEN, SCB_ASPD|SCB_WATK );
 	set_sc( KN_SQUICKEN			, SC_SQUICKEN		, EFST_SQUICKEN, SCB_ASPD|SCB_WATK );
 	set_sc( KN_THQUICKEN			, SC_THQUICKEN		, EFST_THQUICKEN, SCB_ASPD|SCB_WATK );
+	set_sc( AL_MACEQUICKEN			, SC_MACEQUICKEN		, EFST_MACEQUICKEN, SCB_ASPD|SCB_WATK );
 	set_sc( MG_ENERGYCOAT		, SC_ENERGYCOAT		, EFST_ENERGYCOAT		, SCB_MATK );
 	set_sc( NPC_EMOTION		, SC_MODECHANGE		, EFST_BLANK		, SCB_MODE );
 	add_sc( NPC_EMOTION_ON		, SC_MODECHANGE		);
@@ -5931,8 +5932,10 @@ static unsigned short status_calc_str(struct block_list *bl, struct status_chang
 		str += 5;
 	if(sc->data[SC_LEADERSHIP])
 		str += sc->data[SC_LEADERSHIP]->val1;
+	if(sc->data[SC_SPIRITGROWTH])
+		str += sc->data[SC_SPIRITGROWTH]->val1;
 	if(sc->data[SC_LOUD])
-		str += 2+sc->data[SC_LOUD]->val1;
+		str += sc->data[SC_LOUD]->val1*2;
 	if(sc->data[SC_SPEARSTANCE])
 		str += sc->data[SC_SPEARSTANCE]->val1;
 	if(sc->data[SC_TRUESIGHT])
@@ -6163,7 +6166,7 @@ static unsigned short status_calc_int(struct block_list *bl, struct status_chang
 		return (unsigned short)cap_value(int_,0,USHRT_MAX);
 	}
 	if(sc->data[SC_SPIRITGROWTH])
-		int_ += 2 + sc->data[SC_SPIRITGROWTH]->val1;
+		int_ += sc->data[SC_SPIRITGROWTH]->val1;
 	if(sc->data[SC_INCALLSTATUS])
 		int_ += sc->data[SC_INCALLSTATUS]->val1;
 	if(sc->data[SC_INCINT])
@@ -6498,6 +6501,8 @@ static unsigned short status_calc_watk(struct block_list *bl, struct status_chan
 		watk += 3*sc->data[SC_SQUICKEN]->val1;
 	if (sc->data[SC_THQUICKEN])
 		watk += 3*sc->data[SC_THQUICKEN]->val1;
+	if (sc->data[SC_MACEQUICKEN])
+		watk += 3*sc->data[SC_MACEQUICKEN]->val1;
 	if (sc->data[SC_UPROAR])
 		watk += 5*sc->data[SC_UPROAR]->val1;
 	if( sc->data[SC_EXPLOSIONSPIRITS] )
@@ -7455,6 +7460,8 @@ static short status_calc_aspd(struct block_list *bl, struct status_change *sc, b
 			bonus += sc->data[SC_SQUICKEN]->val1*2;
 		if (sc->data[SC_THQUICKEN])
 			bonus += sc->data[SC_THQUICKEN]->val1*2;
+		if (sc->data[SC_MACEQUICKEN])
+			bonus += sc->data[SC_MACEQUICKEN]->val1*2;
 		if (sc->data[SC_SKA])
 			bonus -= 25;
 		if (sc->data[SC_DEFENDER])
@@ -9584,9 +9591,6 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 		status_change_end(bl, SC_CARTBOOST, INVALID_TIMER);
 		status_change_end(bl, SC_GN_CARTBOOST, INVALID_TIMER);
 		// Also blocks the ones below...
-#ifndef RENEWAL
-	case SC_DONTFORGETME:
-#endif
 		status_change_end(bl, SC_INCREASEAGI, INVALID_TIMER);
 		status_change_end(bl, SC_ADRENALINE, INVALID_TIMER);
 		status_change_end(bl, SC_ADRENALINE2, INVALID_TIMER);
@@ -9725,11 +9729,9 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			status_change_end(bl, SC_AURABLADE, INVALID_TIMER);
 			status_change_end(bl, SC_MERC_QUICKEN, INVALID_TIMER);
 		}
-#ifdef RENEWAL
 		else {
 			status_change_end(bl, SC_TWOHANDQUICKEN, INVALID_TIMER);
 		}
-#endif
 		break;
 	case SC_ASSUMPTIO:
 		status_change_end(bl, SC_KAITE, INVALID_TIMER);

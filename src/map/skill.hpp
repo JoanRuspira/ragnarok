@@ -2119,6 +2119,7 @@ enum e_skill {
 	KN_THQUICKEN = 817,
 	MC_UPROAR = 818,
 	SM_SPIRITGROWTH = 819,
+	AL_MACEQUICKEN = 820,
 };
 
 /// The client view ids for land skills.

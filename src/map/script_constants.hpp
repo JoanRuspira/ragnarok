@@ -1619,6 +1619,7 @@
 	export_constant(SC_OHQUICKEN);
 	export_constant(SC_SQUICKEN);
 	export_constant(SC_THQUICKEN);
+	export_constant(SC_MACEQUICKEN);
 #ifdef RENEWAL
 	export_constant(SC_EXTREMITYFIST2);
 #endif
