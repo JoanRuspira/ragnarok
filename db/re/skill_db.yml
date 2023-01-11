@@ -7776,7 +7776,7 @@ Body:
   - Id: 304
     Name: BD_ADAPTATION
     Description: Amp
-    MaxLevel: 1
+    MaxLevel: 5
     TargetType: Self
     DamageFlags:
       NoDamage: true
