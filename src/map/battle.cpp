@@ -2850,6 +2850,10 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case BS_HAMMERFALL:
 			skillratio += BlacksmithSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
+		case BA_MUSICALSTRIKE:
+		case WM_GREAT_ECHO:
+			skillratio += BardSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
+			break;
 		case MER_CRASH:
 			skillratio += 10 * skill_lv;
 			break;
@@ -2971,14 +2975,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 #endif
 			if (sc->data[SC_GT_ENERGYGAIN])
 				skillratio += skillratio * 50 / 100;
-			break;
-		case BA_MUSICALSTRIKE:
-		case DC_THROWARROW:
-#ifdef RENEWAL
-			skillratio += 10 + 40 * skill_lv;
-#else
-			skillratio += 25 + 25 * skill_lv;
-#endif
 			break;
 		case CH_TIGERFIST:
 #ifdef RENEWAL
@@ -3460,15 +3456,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			skillratio = (status_get_dex(src) + status_get_agi(src)) * skill_lv / 5;
 			if (wd->miscflag&4) // Whip/Instrument equipped
 				skillratio += 100; // !TODO: What's the weapon bonus?
-			RE_LVL_DMOD(100);
-			break;
-		case WM_GREAT_ECHO:
-			skillratio += -100 + 250 + 500 * skill_lv;
-			if (sd) {
-				skillratio += pc_checkskill(sd, WM_LESSON) * 50; // !TODO: Confirm bonus
-				if (skill_check_pc_partner(sd, skill_id, &skill_lv, AREA_SIZE, 0) > 0)
-					skillratio <<= 1;
-			}
 			RE_LVL_DMOD(100);
 			break;
 		case GN_CART_TORNADO: { // ATK [( Skill Level x 100 ) + ( Cart Weight / ( 150 - Caster Base STR ))] + ( Cart Remodeling Skill Level x 50 )] %

@@ -177,6 +177,12 @@
     <Filter Include="Header Files\skillAtkRatioCalculator\blacksmith">
       <UniqueIdentifier>{027e10d0-1e53-4cab-8dcd-83f69595760b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\skillAtkRatioCalculator\bard">
+      <UniqueIdentifier>{cdc41b2d-f49a-440e-8706-7c532847793a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\skillAtkRatioCalculator\bard">
+      <UniqueIdentifier>{d28146b9-327b-4c38-abe0-c68704b579a7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="achievement.hpp">
@@ -410,6 +416,9 @@
     <ClInclude Include="BlacksmithSkillAtkRatioCalculator.h">
       <Filter>Header Files\skillAtkRatioCalculator\blacksmith</Filter>
     </ClInclude>
+    <ClInclude Include="BardSkillAttackRatioCalculator.h">
+      <Filter>Header Files\skillAtkRatioCalculator\bard</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="achievement.cpp">
@@ -615,6 +624,9 @@
     </ClCompile>
     <ClCompile Include="BlacksmithSkillAtkRatioCalculator.cpp">
       <Filter>Source Files\skillAtkRatioCalculator\blacksmith</Filter>
+    </ClCompile>
+    <ClCompile Include="BardSkillAttackRatioCalculator.cpp">
+      <Filter>Source Files\skillAtkRatioCalculator\bard</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

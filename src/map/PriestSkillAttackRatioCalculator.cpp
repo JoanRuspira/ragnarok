@@ -42,7 +42,7 @@ void PriestSkillAttackRatioCalculator::add_spiritu_sancti_special_effects(struct
 {
     clif_specialeffect(target, EF_PEONG, AREA);
 	clif_specialeffect(target, EF_BANISHING_BUSTER, AREA);
-	//clif_specialeffect(target, JGEF_REFINEFAIL, AREA);
+    clif_specialeffect(target, 1242, AREA);
 }
 
 void PriestSkillAttackRatioCalculator::add_judex_special_effects(struct block_list *target)
