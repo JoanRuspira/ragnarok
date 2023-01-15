@@ -5121,6 +5121,9 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case AB_DUPLELIGHT_MAGIC:
 						skillratio += PriestSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
+					case WM_METALICSOUND:
+						skillratio += BardSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
+						break;
 					case MG_FIREBALL:
 						skillratio += 40 + 20 * skill_lv;
 						if(ad.miscflag == 2) //Enemies at the edge of the area will take 75% of the damage
@@ -5340,12 +5343,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 							skillratio += -100 + status_get_lv(src) * 4 + sd->bonus.shieldmdef * 100 + status_get_int(src) * 2;
 						else
 							skillratio = 0;
-						break;
-					case WM_METALICSOUND:
-						skillratio += -100 + 120 * skill_lv + 60 * ((sd) ? pc_checkskill(sd, WM_LESSON) : 1);
-						if (tsc && tsc->data[SC_SLEEP])
-							skillratio += 100; // !TODO: Confirm target sleeping bonus
-						RE_LVL_DMOD(100);
 						break;
 					case WM_REVERBERATION:
 						// MATK [{(Skill Level x 300) + 400} x Casters Base Level / 100] %

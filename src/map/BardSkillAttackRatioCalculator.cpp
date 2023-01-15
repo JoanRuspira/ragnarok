@@ -18,6 +18,9 @@ int BardSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 			add_great_echo_special_effects(target);
 			return calculate_great_echo_atk_ratio(skill_lv);
 			break;
+		case WM_METALICSOUND:
+			return calculate_metallic_sound_atk_ratio(skill_lv);
+			break;
 		default:
 			return 0;
 			break;
@@ -75,6 +78,29 @@ int BardSkillAttackRatioCalculator::calculate_great_echo_atk_ratio(int skill_lv)
 			break;
 		case 5:
 			ratio = 500;
+			break;
+		}
+	return ratio;
+}
+
+int BardSkillAttackRatioCalculator::calculate_metallic_sound_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 30;
+			break;
+		case 2:
+			ratio = 100;
+			break;
+		case 3:
+			ratio = 180;
+			break;
+		case 4:
+			ratio = 240;
+			break;
+		case 5:
+			ratio = 300;
 			break;
 		}
 	return ratio;

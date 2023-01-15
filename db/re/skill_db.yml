@@ -341,7 +341,7 @@ Body:
     CastCancel: true
     CastTime: 3500
     Cooldown: 5000
-    AfterCastActDelay: 500
+    AfterCastActDelay: 1000
     Requires:
       SpCost: 40
   - Id: 12
@@ -980,7 +980,7 @@ Body:
     CastCancel: true
     CastTime: 3000
     Cooldown: 5000
-    AfterCastActDelay: 500
+    AfterCastActDelay: 1000
     Requires:
       SpCost: 40
   - Id: 29
@@ -1476,7 +1476,7 @@ Body:
         Reproduce: true
     CastCancel: true
     Cooldown: 2000
-    AfterCastActDelay: 400
+    AfterCastActDelay: 1000
     Requires:
       SpCost: 35
   - Id: 808
@@ -2348,6 +2348,7 @@ Body:
     CastCancel: true
     CastTime: 8000
     Cooldown: 30000
+    AfterCastActDelay: 1000
     Duration1:
       - Level: 1
         Time: 10000
@@ -2613,7 +2614,7 @@ Body:
     CastCancel: true
     Cooldown: 20000
     CastTime: 15000
-    AfterCastActDelay: 500
+    AfterCastActDelay: 1000
     Duration1:
       - Level: 1
         Time: 3000
@@ -4979,7 +4980,7 @@ Body:
     CastCancel: true
     CastTime: 2750
     Cooldown: 5000
-    AfterCastActDelay: 400
+    AfterCastActDelay: 1000
     Requires:
       SpCost: 37
   - Id: 157
@@ -7839,20 +7840,9 @@ Body:
     Duration1: 180000
     Duration2: 60000
     Cooldown: 10000
-    AfterCastActDelay: 1000
-    AfterCastWalkDelay: 1000
+    AfterCastActDelay: 10000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 62
-        - Level: 2
-          Amount: 68
-        - Level: 3
-          Amount: 74
-        - Level: 4
-          Amount: 80
-        - Level: 5
-          Amount: 86
+      SpCost: 85
       Weapon:
         Musical: true
         Whip: true
@@ -8162,30 +8152,9 @@ Body:
     Duration1: 180000
     Duration2: 20000
     Cooldown: 10000
-    AfterCastActDelay: 1000
-    AfterCastWalkDelay: 1000
+    AfterCastActDelay: 10000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 40
-        - Level: 2
-          Amount: 45
-        - Level: 3
-          Amount: 50
-        - Level: 4
-          Amount: 55
-        - Level: 5
-          Amount: 60
-        - Level: 6
-          Amount: 65
-        - Level: 7
-          Amount: 70
-        - Level: 8
-          Amount: 75
-        - Level: 9
-          Amount: 80
-        - Level: 10
-          Amount: 85
+      SpCost: 85
       Weapon:
         Musical: true
         Whip: true
@@ -8208,30 +8177,9 @@ Body:
     Duration1: 180000
     Duration2: 20000
     Cooldown: 10000
-    AfterCastActDelay: 1000
-    AfterCastWalkDelay: 1000
+    AfterCastActDelay: 10000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 65
-        - Level: 2
-          Amount: 70
-        - Level: 3
-          Amount: 75
-        - Level: 4
-          Amount: 80
-        - Level: 5
-          Amount: 85
-        - Level: 6
-          Amount: 90
-        - Level: 7
-          Amount: 95
-        - Level: 8
-          Amount: 100
-        - Level: 9
-          Amount: 105
-        - Level: 10
-          Amount: 110
+      SpCost: 85
       Weapon:
         Musical: true
         Whip: true
@@ -18577,8 +18525,8 @@ Body:
         Reproduce: true
     CastCancel: true
     Cooldown: 5000
-    CastTime: 2000
-    AfterCastActDelay: 500
+    CastTime: 5000
+    AfterCastActDelay: 1000
     Requires:
       SpCost: 40
   - Id: 2039
@@ -18802,7 +18750,7 @@ Body:
         Area: 5
     CastCancel: true
     Cooldown: 7000
-    AfterCastActDelay: 500
+    AfterCastActDelay: 1000
     Requires:
       SpCost: 70
   - Id: 2044
@@ -19063,7 +19011,7 @@ Body:
         Reproduce: true
     CastCancel: true
     CastTime: 6000
-    AfterCastActDelay: 500
+    AfterCastActDelay: 1000
     Cooldown: 10000
     Requires:
       SpCost: 100
@@ -23481,82 +23429,22 @@ Body:
   - Id: 2413
     Name: WM_METALICSOUND
     Description: Metallic Sound
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Magic
     TargetType: Attack
     Range: 9
     Hit: Multi_Hit
-    HitCount: 2
+    HitCount: 4
     Element: Weapon
     CopyFlags:
       Skill:
         Reproduce: true
     CastCancel: true
-    CastTime:
-      - Level: 1
-        Time: 1000
-      - Level: 2
-        Time: 1500
-      - Level: 3
-        Time: 2000
-      - Level: 4
-        Time: 2500
-      - Level: 5
-        Time: 3000
-      - Level: 6
-        Time: 3500
-      - Level: 7
-        Time: 4000
-      - Level: 8
-        Time: 4500
-      - Level: 9
-        Time: 5000
-      - Level: 10
-        Time: 5500
+    CastTime: 3000
     AfterCastActDelay: 1000
-    Cooldown:
-      - Level: 1
-        Time: 1000
-      - Level: 2
-        Time: 1500
-      - Level: 3
-        Time: 2000
-      - Level: 4
-        Time: 2500
-      - Level: 5
-        Time: 3000
-      - Level: 6
-        Time: 3500
-      - Level: 7
-        Time: 4000
-      - Level: 8
-        Time: 4500
-      - Level: 9
-        Time: 5000
-      - Level: 10
-        Time: 5500
+    Cooldown: 5000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 62
-        - Level: 2
-          Amount: 64
-        - Level: 3
-          Amount: 66
-        - Level: 4
-          Amount: 68
-        - Level: 5
-          Amount: 70
-        - Level: 6
-          Amount: 72
-        - Level: 7
-          Amount: 74
-        - Level: 8
-          Amount: 76
-        - Level: 9
-          Amount: 78
-        - Level: 10
-          Amount: 80
+      SpCost: 50
   - Id: 2414
     Name: WM_REVERBERATION
     Description: Reverberation
