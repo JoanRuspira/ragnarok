@@ -431,19 +431,11 @@ int64 SkillBaseDamageCalculator::battle_addmastery(map_session_data * sd, block_
 		case W_DAGGER:
 			if ((skill = pc_checkskill(sd, TF_DAGGER)) > 0)
 				damage += (skill * 8);
-			// if ((skill = pc_checkskill(sd, GN_TRAINING_SWORD)) > 0)
-			// 	damage += skill * 10;
 			break;
 		case W_1HSPEAR:
 		case W_2HSPEAR:
 			if ((skill = pc_checkskill(sd, KN_SPEARMASTERY)) > 0) {
-				// if (!pc_isriding(sd) && !pc_isridingdragon(sd))
-				// 	damage += (skill * 4);
-				// else
 				damage += (skill * 8);
-				// // Increase damage by level of KN_SPEARMASTERY * 10
-				// if (pc_checkskill(sd, RK_DRAGONTRAINING) > 0)
-				// 	damage += (skill * 10);
 			}
 			break;
 		case W_BOW:
@@ -471,8 +463,8 @@ int64 SkillBaseDamageCalculator::battle_addmastery(map_session_data * sd, block_
 				damage += (skill * 3);
 			break;
 		case W_MUSICAL:
-			if ((skill = (pc_checkskill(sd, BA_MUSICALLESSON)*2)) > 0)
-				damage += (skill * 3);
+			if ((skill = pc_checkskill(sd, BA_MUSICALLESSON)) > 0)
+				damage += (skill * 8);
 			break;
 		case W_WHIP:
 			if ((skill = pc_checkskill(sd, DC_DANCINGLESSON)) > 0)

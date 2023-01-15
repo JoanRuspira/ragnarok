@@ -5159,10 +5159,10 @@ static int skill_castend_song(struct block_list* src, uint16 skill_id, uint16 sk
 		return 0;
 	}
 
-	if (!(skill_get_inf2_(skill_id, { INF2_ISSONG, INF2_ISENSEMBLE }))) {
-		ShowWarning("skill_castend_song: Unknown song skill ID: %u\n", skill_id);
-		return 0;
-	}
+	// if (!(skill_get_inf2_(skill_id, { INF2_ISSONG, INF2_ISENSEMBLE }))) {
+	// 	ShowWarning("skill_castend_song: Unknown song skill ID: %u\n", skill_id);
+	// 	return 0;
+	// }
 
 	struct map_session_data* sd = BL_CAST(BL_PC, src);
 	int flag = BCT_PARTY;
@@ -7248,7 +7248,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 					case SC_JEXPBOOST:		case SC_INVINCIBLE:		case SC_INVINCIBLEOFF:
 					case SC_HELLPOWER:		case SC_MANU_ATK:		case SC_MANU_DEF:
 					case SC_SPL_ATK:		case SC_SPL_DEF:		case SC_MANU_MATK:
-					case SC_SPL_MATK:		case SC_RICHMANKIM:		case SC_ETERNALCHAOS:
+					case SC_SPL_MATK:		case SC_ETERNALCHAOS:
 					case SC_DRUMBATTLE:		case SC_NIBELUNGEN:		case SC_ROKISWEIL:
 					case SC_INTOABYSS:		case SC_SIEGFRIED:		case SC_FOOD_STR_CASH:
 					case SC_FOOD_AGI_CASH:	case SC_FOOD_VIT_CASH:	case SC_FOOD_DEX_CASH:
@@ -7325,6 +7325,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 					case SC_DONTFORGETME:
 					case SC_FORTUNE:
 					case SC_SERVICE4U:
+					case SC_RICHMANKIM:
 						if (!battle_config.dispel_song || tsc->data[i]->val4 == 0)
 							continue; //If in song area don't end it, even if config enabled
 						break;
@@ -9485,10 +9486,12 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		if( !sd || !sd->status.party_id || (flag & 1) ) {
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 			sc_start2(src,bl,type,100,skill_lv,((sd) ? (pc_checkskill(sd,WM_LESSON)*2) : skill_get_max(WM_LESSON)),skill_get_time(skill_id,skill_lv));
+    		clif_specialeffect(src, 1223, AREA);
 		} else if( sd ) {
 			party_foreachsamemap(skill_area_sub, sd, skill_get_splash(skill_id, skill_lv), src, skill_id, skill_lv, tick, flag|BCT_PARTY|1, skill_castend_nodamage_id);
 			sc_start2(src,bl,type,100,skill_lv,((sd) ? (pc_checkskill(sd,WM_LESSON)*2) : skill_get_max(WM_LESSON)),skill_get_time(skill_id,skill_lv));
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
+    		clif_specialeffect(src, 1223, AREA);
 		}
 		break;
 
@@ -13866,7 +13869,6 @@ int skill_unit_onleft(uint16 skill_id, struct block_list *bl, t_tick tick)
 			break;
 
 		case BD_LULLABY:
-		case BD_RICHMANKIM:
 		case BD_ETERNALCHAOS:
 		case BD_DRUMBATTLEFIELD:
 		case BD_RINGNIBELUNGEN:
@@ -13930,6 +13932,7 @@ int skill_unit_onleft(uint16 skill_id, struct block_list *bl, t_tick tick)
 				}
 			}
 			break;
+		case BD_RICHMANKIM:
 		case BA_POEMBRAGI:
 		case BA_WHISTLE:
 		case BA_ASSASSINCROSS:
@@ -14182,7 +14185,6 @@ int skill_check_pc_partner(struct map_session_data *sd, uint16 skill_id, uint16 
 		struct map_session_data* tsd;
 		switch (skill_id) {
 			case PR_BENEDICTIO:
-			case WM_GREAT_ECHO:
 				for (i = 0; i < c; i++) {
 					if ((tsd = map_id2sd(p_sd[i])) != NULL)
 						status_charge(&tsd->bl, 0, (skill_id == PR_BENEDICTIO) ? 10 : skill_get_sp(skill_id, *skill_lv) / 2);
@@ -14204,10 +14206,8 @@ int skill_check_pc_partner(struct map_session_data *sd, uint16 skill_id, uint16 
 						clif_skill_nodamage(&tsd->bl, &sd->bl, skill_id, *skill_lv, 1);
 						tsd->skill_id_dance = skill_id;
 						tsd->skill_lv_dance = *skill_lv;
-#ifdef RENEWAL
 						sc_start(&sd->bl, &sd->bl, SC_ENSEMBLEFATIGUE, 100, 1, skill_get_time(CG_SPECIALSINGER, *skill_lv));
 						sc_start(&sd->bl, &tsd->bl, SC_ENSEMBLEFATIGUE, 100, 1, skill_get_time(CG_SPECIALSINGER, *skill_lv));
-#endif
 					}
 				}
 				return c;
@@ -14219,7 +14219,7 @@ int skill_check_pc_partner(struct map_session_data *sd, uint16 skill_id, uint16 
 	memset (p_sd, 0, sizeof(p_sd));
 	i = map_foreachinallrange(skill_check_condition_char_sub, &sd->bl, range, BL_PC, &sd->bl, &c, &p_sd, skill_id);
 
-	if ( skill_id != PR_BENEDICTIO && skill_id != AB_ADORAMUS && skill_id != WM_GREAT_ECHO ) //Apply the average lv to encore skills.
+	if ( skill_id != PR_BENEDICTIO && skill_id != AB_ADORAMUS) //Apply the average lv to encore skills.
 		*skill_lv = (i+(*skill_lv))/(c+1); //I know c should be one, but this shows how it could be used for the average of n partners.
 	return c;
 }
@@ -14445,7 +14445,7 @@ bool skill_check_condition_castbegin(struct map_session_data* sd, uint16 skill_i
 	sd->state.arrow_atk = require.ammo?1:0;
 
 	// perform skill-group checks
-	if(skill_id != WM_GREAT_ECHO && inf2[INF2_ISCHORUS]) {
+	if(inf2[INF2_ISCHORUS]) {
 		if (skill_check_pc_partner(sd, skill_id, &skill_lv, AREA_SIZE, 0) < 1) {
 		    clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
 		    return false;
@@ -15010,13 +15010,6 @@ bool skill_check_condition_castbegin(struct map_session_data* sd, uint16 skill_i
 			if( map_getcell(sd->bl.m,sd->bl.x,sd->bl.y,CELL_CHKLANDPROTECTOR) || map_getcell(sd->bl.m,sd->bl.x,sd->bl.y,CELL_CHKMAELSTROM) ) {
 				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
 				return false;
-			}
-			break;
-		case WM_GREAT_ECHO: {
-				int count = skill_check_pc_partner(sd, skill_id, &skill_lv, AREA_SIZE, 1);
-
-				if (count > 0)
-					require.sp -= require.sp * 20 * count / 100; // -20% each W/M in the party.
 			}
 			break;
 		case SO_FIREWALK:
@@ -16006,65 +15999,6 @@ int skill_castfix(struct block_list *bl, uint16 skill_id, uint16 skill_lv) {
 
 	nullpo_ret(bl);
 
-#ifndef RENEWAL_CAST
-	{
-		struct map_session_data *sd = BL_CAST(BL_PC, bl);
-		struct status_change *sc = status_get_sc(bl);
-		int reduce_cast_rate = 0;
-		uint8 flag = skill_get_castnodex(skill_id);
-
-		// Calculate base cast time (reduced by dex)
-		if (!(flag&1)) {
-			int scale = battle_config.castrate_dex_scale - status_get_dex(bl);
-
-			if (scale > 0)	// not instant cast
-				time = time * (float)scale / battle_config.castrate_dex_scale;
-			else
-				return 0; // instant cast
-		}
-
-		// Calculate cast time reduced by item/card bonuses
-		if (sd) {
-			if (!(flag&4)) {
-				if (sd->castrate != 100)
-					reduce_cast_rate += 100 - sd->castrate;
-				if (sd->bonus.add_varcast != 0)
-					time += sd->bonus.add_varcast; // bonus bVariableCast
-			}
-			// Skill-specific reductions work regardless of flag
-			for (const auto &it : sd->skillcastrate) {
-				if (it.id == skill_id) {
-					time += time * it.val / 100;
-					break;
-				}
-			}
-			for (const auto &it : sd->skillvarcast) {
-				if (it.id == skill_id) { // bonus2 bSkillVariableCast
-					time += it.val;
-					break;
-				}
-			}
-		}
-
-		// These cast time reductions are processed even if the skill fails
-		if (sc && sc->count) {
-			// Magic Strings stacks additively with item bonuses
-			if (!(flag&2) && sc->data[SC_POEMBRAGI])
-				reduce_cast_rate += sc->data[SC_POEMBRAGI]->val2;
-			// Foresight halves the cast time, it does not stack additively
-			if (sc->data[SC_MEMORIZE]) {
-				if(!(flag&2))
-					time -= time * 50 / 100;
-				// Foresight counter gets reduced even if the skill is not affected by it
-				if ((--sc->data[SC_MEMORIZE]->val2) <= 0)
-					status_change_end(bl, SC_MEMORIZE, INVALID_TIMER);
-			}
-		}
-
-		time = time * (1 - (float)reduce_cast_rate / 100);
-	}
-#endif
-
 	// config cast time multiplier
 	if (battle_config.cast_rate != 100)
 		time = time * battle_config.cast_rate / 100;
@@ -16168,7 +16102,7 @@ int skill_vfcastfix(struct block_list *bl, double time, uint16 skill_id, uint16 
 				status_change_end(bl, SC_MEMORIZE, INVALID_TIMER);
 		}
 		if (sc->data[SC_POEMBRAGI])
-			reduce_cast_rate += sc->data[SC_POEMBRAGI]->val2;
+			reduce_cast_rate += sc->data[SC_POEMBRAGI]->val3;
 		if (sc->data[SC_IZAYOI])
 			VARCAST_REDUCTION(50);
 		if (sc->data[SC_WATER_INSIGNIA] && sc->data[SC_WATER_INSIGNIA]->val1 == 3 && skill_get_type(skill_id) == BF_MAGIC && skill_get_ele(skill_id, skill_lv) == ELE_WATER)
@@ -17744,6 +17678,7 @@ int skill_delunitgroup_(struct skill_unit_group *group, const char* file, int li
 		switch( group->skill_id ) {
 			case BA_DISSONANCE:
 			case BA_POEMBRAGI:
+			case BD_RICHMANKIM:
 			case BA_WHISTLE:
 			case BA_ASSASSINCROSS:
 			case BA_APPLEIDUN:

@@ -16,7 +16,7 @@ int BardSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 			break;
         case WM_GREAT_ECHO:
 			add_great_echo_special_effects(target);
-			return calculate_melody_strike_atk_ratio(skill_lv);
+			return calculate_great_echo_atk_ratio(skill_lv);
 			break;
 		default:
 			return 0;
@@ -52,6 +52,29 @@ int BardSkillAttackRatioCalculator::calculate_melody_strike_atk_ratio(int skill_
 			break;
 		case 5:
 			ratio = 300;
+			break;
+		}
+	return ratio;
+}
+
+int BardSkillAttackRatioCalculator::calculate_great_echo_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 130;
+			break;
+		case 2:
+			ratio = 200;
+			break;
+		case 3:
+			ratio = 280;
+			break;
+		case 4:
+			ratio = 400;
+			break;
+		case 5:
+			ratio = 500;
 			break;
 		}
 	return ratio;

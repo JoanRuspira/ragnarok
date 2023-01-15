@@ -7825,21 +7825,22 @@ Body:
         Whip: true
   - Id: 307
     Name: BD_RICHMANKIM
-    Description: Mental Sensing
+    Description: Acoustic Rythm
     MaxLevel: 5
     Type: Misc
     TargetType: Self
     DamageFlags:
       NoDamage: true
     Flags:
-      IsEnsemble: true
+      IsSong: true
     Hit: Single
     HitCount: 1
-    SplashArea: 15
-    CastTime: 1000
+    SplashArea: 5
     Duration1: 180000
     Duration2: 60000
-    Cooldown: 20000
+    Cooldown: 10000
+    AfterCastActDelay: 1000
+    AfterCastWalkDelay: 1000
     Requires:
       SpCost:
         - Level: 1
@@ -7855,6 +7856,9 @@ Body:
       Weapon:
         Musical: true
         Whip: true
+      ItemCost:
+        - Item: Protect_Neck_Candy
+          Amount: 1
   - Id: 308
     Name: BD_ETERNALCHAOS
     Description: Down Tempo
@@ -7885,8 +7889,6 @@ Body:
     TargetType: Self
     DamageFlags:
       NoDamage: true
-    Flags:
-      IsEnsemble: true
     Hit: Single
     HitCount: 1
     SplashArea: 15
@@ -8032,13 +8034,12 @@ Body:
       AllowWhenPerforming: true
     Range: 9
     Hit: Single
-    HitCount: 2
+    HitCount: 1
     Element: Weapon
-    CastTime: 500
-    AfterCastActDelay: 300
-    FixedCastTime: 300
+    Cooldown: 5000
+    AfterCastActDelay: 400
     Requires:
-      SpCost: 12
+      SpCost: 15
       Weapon:
         Musical: true
       Ammo:
@@ -8148,7 +8149,7 @@ Body:
   - Id: 320
     Name: BA_ASSASSINCROSS
     Description: Impressive Riff
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Misc
     TargetType: Self
     DamageFlags:
@@ -8157,11 +8158,12 @@ Body:
       IsSong: true
     Hit: Single
     HitCount: 1
-    SplashArea: 15
-    CastTime: 1000
+    SplashArea: 5
     Duration1: 180000
     Duration2: 20000
-    Cooldown: 20000
+    Cooldown: 10000
+    AfterCastActDelay: 1000
+    AfterCastWalkDelay: 1000
     Requires:
       SpCost:
         - Level: 1
@@ -8187,10 +8189,13 @@ Body:
       Weapon:
         Musical: true
         Whip: true
+      ItemCost:
+        - Item: Protect_Neck_Candy
+          Amount: 1
   - Id: 321
     Name: BA_POEMBRAGI
-    Description: Magic Strings
-    MaxLevel: 10
+    Description: Enchanted Symphony
+    MaxLevel: 5
     Type: Misc
     TargetType: Self
     DamageFlags:
@@ -8199,11 +8204,12 @@ Body:
       IsSong: true
     Hit: Single
     HitCount: 1
-    SplashArea: 15
-    CastTime: 1000
+    SplashArea: 5
     Duration1: 180000
     Duration2: 20000
-    Cooldown: 20000
+    Cooldown: 10000
+    AfterCastActDelay: 1000
+    AfterCastWalkDelay: 1000
     Requires:
       SpCost:
         - Level: 1
@@ -8229,6 +8235,9 @@ Body:
       Weapon:
         Musical: true
         Whip: true
+      ItemCost:
+        - Item: Protect_Neck_Candy
+          Amount: 1
   - Id: 322
     Name: BA_APPLEIDUN
     Description: Song of Lutie
@@ -23387,7 +23396,7 @@ Body:
         Whip: true
   - Id: 2381
     Name: MI_RUSH_WINDMILL
-    Description: Windmill Rush Attack
+    Description: Windmill Poem
     MaxLevel: 5
     TargetType: Self
     DamageFlags:
@@ -23395,36 +23404,15 @@ Body:
       Splash: true
     Hit: Single
     HitCount: 1
-    SplashArea:
-      - Level: 1
-        Area: 7
-      - Level: 2
-        Area: 8
-      - Level: 3
-        Area: 9
-      - Level: 4
-        Area: 10
-      - Level: 5
-        Area: 11
+    SplashArea: 5
     CastCancel: true
-    CastTime: 1000
-    AfterCastActDelay: 2000
+    AfterCastActDelay: 5500
     Duration1: 60000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 82
-        - Level: 2
-          Amount: 88
-        - Level: 3
-          Amount: 94
-        - Level: 4
-          Amount: 100
-        - Level: 5
-          Amount: 106
-      Weapon:
-        Musical: true
-        Whip: true
+      SpCost: 85
+      ItemCost:
+        - Item: Protect_Neck_Candy
+          Amount: 1
   - Id: 2382
     Name: MI_ECHOSONG
     Description: Echo Song
@@ -23451,20 +23439,9 @@ Body:
     AfterCastActDelay: 2000
     Duration1: 60000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 86
-        - Level: 2
-          Amount: 92
-        - Level: 3
-          Amount: 98
-        - Level: 4
-          Amount: 104
-        - Level: 5
-          Amount: 110
+      SpCost: 40
       Weapon:
         Musical: true
-        Whip: true
   - Id: 2383
     Name: MI_HARMONIZE
     Description: Harmonize
@@ -24063,10 +24040,9 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Ground
+    Element: Neutral
     DamageFlags:
       Splash: true
-    Flags:
-      IsChorus: true
     Range: 9
     Hit: Single
     HitCount: 1
@@ -24082,31 +24058,10 @@ Body:
       - Level: 5
         Area: 4
     CastCancel: true
-    CastTime:
-      - Level: 1
-        Time: 2000
-      - Level: 2
-        Time: 2200
-      - Level: 3
-        Time: 2400
-      - Level: 4
-        Time: 2600
-      - Level: 5
-        Time: 2800
-    AfterCastActDelay: 1000
-    Cooldown: 10000
+    AfterCastActDelay: 400
+    Cooldown: 5000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 80
-        - Level: 2
-          Amount: 90
-        - Level: 3
-          Amount: 100
-        - Level: 4
-          Amount: 110
-        - Level: 5
-          Amount: 120
+      SpCost: 30
       ItemCost:
         - Item: Protect_Neck_Candy
           Amount: 1

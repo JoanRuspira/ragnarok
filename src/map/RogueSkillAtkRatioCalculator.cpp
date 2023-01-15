@@ -11,7 +11,8 @@ int RogueSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* s
 			return calculate_grimtooth_atk_ratio(skill_lv);
 			break;
 		case RG_RAID:
-			return calculate_phantom_menace_atk_ratio(skill_lv, is_hiding);
+			return 
+			(skill_lv, is_hiding);
 			break;
 		case RG_BACKSTAP:
 			add_back_stab_special_effects(target);

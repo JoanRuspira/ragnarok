@@ -529,7 +529,7 @@ void initChangeTables(void)
 	set_sc( BD_ADAPTATION	, SC_ADAPTATION	, EFST_ADAPTATION, SCB_NONE );
 #endif
 	set_sc( BD_ENCORE		, SC_DANCING		, EFST_BDPLAYING		, SCB_SPEED|SCB_REGEN );
-	set_sc( BD_RICHMANKIM		, SC_RICHMANKIM		, EFST_RICHMANKIM	, SCB_NONE	);
+	set_sc( BD_RICHMANKIM		, SC_RICHMANKIM		, EFST_RICHMANKIM	, SCB_STR|SCB_VIT|SCB_MAXHP|SCB_MAXSP );
 	set_sc( BD_ETERNALCHAOS		, SC_ETERNALCHAOS	, EFST_ETERNALCHAOS	, SCB_DEF2 );
 	set_sc( BD_DRUMBATTLEFIELD	, SC_DRUMBATTLE		, EFST_DRUMBATTLEFIELD	,
 #ifndef RENEWAL
@@ -548,8 +548,8 @@ void initChangeTables(void)
 	set_sc( BD_SIEGFRIED		, SC_SIEGFRIED		, EFST_SIEGFRIED	, SCB_ALL );
 	add_sc( BA_FROSTJOKER		, SC_FREEZE		);
 	set_sc( BA_WHISTLE		, SC_WHISTLE		, EFST_WHISTLE		, SCB_FLEE|SCB_FLEE2 );
-	set_sc( BA_ASSASSINCROSS	, SC_ASSNCROS		, EFST_ASSASSINCROSS		, SCB_ASPD );
-	set_sc( BA_POEMBRAGI		, SC_POEMBRAGI	, EFST_POEMBRAGI	, SCB_NONE	);
+	set_sc( BA_ASSASSINCROSS	, SC_ASSNCROS		, EFST_ASSASSINCROSS		, SCB_AGI|SCB_LUK|SCB_ASPD|SCB_CRI );
+	set_sc( BA_POEMBRAGI		, SC_POEMBRAGI	, EFST_POEMBRAGI	, SCB_INT|SCB_DEX	);
 	set_sc( BA_APPLEIDUN		, SC_APPLEIDUN		, EFST_APPLEIDUN		, SCB_MAXHP );
 	add_sc( DC_SCREAM		, SC_STUN );
 	set_sc( DC_HUMMING		, SC_HUMMING		, EFST_HUMMING		, SCB_HIT );
@@ -930,7 +930,7 @@ void initChangeTables(void)
 	set_sc( WA_SWING_DANCE			, SC_SWINGDANCE			, EFST_SWING, SCB_SPEED|SCB_ASPD );
 	set_sc( WA_SYMPHONY_OF_LOVER		, SC_SYMPHONYOFLOVER		, EFST_SYMPHONY_LOVE, SCB_MDEF );
 	set_sc( WA_MOONLIT_SERENADE		, SC_MOONLITSERENADE		, EFST_MOONLIT_SERENADE, SCB_MATK );
-	set_sc( MI_RUSH_WINDMILL		, SC_RUSHWINDMILL		, EFST_RUSH_WINDMILL, SCB_WATK|SCB_SPEED );
+	set_sc( MI_RUSH_WINDMILL		, SC_RUSHWINDMILL		, EFST_RUSH_WINDMILL, SCB_WATK|SCB_DEF );
 	set_sc( MI_ECHOSONG			, SC_ECHOSONG			, EFST_ECHOSONG			, SCB_DEF  );
 	set_sc( MI_HARMONIZE			, SC_HARMONIZE			, EFST_HARMONIZE			, SCB_STR|SCB_AGI|SCB_VIT|SCB_INT|SCB_DEX|SCB_LUK );
 	set_sc_with_vfx( WM_POEMOFNETHERWORLD	, SC_NETHERWORLD		, EFST_NETHERWORLD		, SCB_NONE );
@@ -3363,6 +3363,8 @@ static int status_get_hpbonus(struct block_list *bl, enum e_status_bonus type) {
 
 		//Bonus by SC
 		if (sc) {
+			if( sc->data[SC_RICHMANKIM] )
+				bonus += sc->data[SC_RICHMANKIM]->val3;
 			if(sc->data[SC_INCMHP])
 				bonus += sc->data[SC_INCMHP]->val1;
 			if(sc->data[SC_EARTH_INSIGNIA] && sc->data[SC_EARTH_INSIGNIA]->val1 == 2)
@@ -3530,6 +3532,8 @@ static int status_get_spbonus(struct block_list *bl, enum e_status_bonus type) {
 
 		//Bonus by SC
 		if (sc) {
+			if( sc->data[SC_RICHMANKIM] )
+				bonus += sc->data[SC_RICHMANKIM]->val3;
 			if(sc->data[SC_INCMSP])
 				bonus += sc->data[SC_INCMSP]->val1;
 			if(sc->data[SC_EARTH_INSIGNIA] && sc->data[SC_EARTH_INSIGNIA]->val1 == 3)
@@ -5918,6 +5922,8 @@ static unsigned short status_calc_str(struct block_list *bl, struct status_chang
 		str -= sc->data[SC_HARMONIZE]->val2;
 		return (unsigned short)cap_value(str,0,USHRT_MAX);
 	}
+	if( sc->data[SC_RICHMANKIM] )
+		str += sc->data[SC_RICHMANKIM]->val2;
 	if(sc->data[SC_INCALLSTATUS])
 		str += sc->data[SC_INCALLSTATUS]->val1;
 	if(sc->data[SC_CHASEWALK2])
@@ -6006,6 +6012,9 @@ static unsigned short status_calc_agi(struct block_list *bl, struct status_chang
 		agi -= sc->data[SC_HARMONIZE]->val2;
 		return (unsigned short)cap_value(agi,0,USHRT_MAX);
 	}
+
+	if(sc->data[SC_ASSNCROS])
+		agi += sc->data[SC_ASSNCROS]->val2;
 	if(sc->data[SC_CONCENTRATE] && !sc->data[SC_QUAGMIRE])
 		agi += (agi-sc->data[SC_CONCENTRATE]->val3 * 2)*(sc->data[SC_CONCENTRATE]->val2 * 2)/100;
 	if(sc->data[SC_INCALLSTATUS])
@@ -6089,6 +6098,8 @@ static unsigned short status_calc_vit(struct block_list *bl, struct status_chang
 		vit -= sc->data[SC_HARMONIZE]->val2;
 		return (unsigned short)cap_value(vit,0,USHRT_MAX);
 	}
+	if( sc->data[SC_RICHMANKIM] )
+		vit += sc->data[SC_RICHMANKIM]->val2;
 	if(sc->data[SC_VITALITYACTIVATION])
 		vit += sc->data[SC_VITALITYACTIVATION]->val1*2;
 	if(sc->data[SC_INCALLSTATUS])
@@ -6165,6 +6176,9 @@ static unsigned short status_calc_int(struct block_list *bl, struct status_chang
 		int_ -= sc->data[SC_HARMONIZE]->val2;
 		return (unsigned short)cap_value(int_,0,USHRT_MAX);
 	}
+
+	if(sc->data[SC_POEMBRAGI])
+		int_ += sc->data[SC_POEMBRAGI]->val2;
 	if(sc->data[SC_SPIRITGROWTH])
 		int_ += sc->data[SC_SPIRITGROWTH]->val1;
 	if(sc->data[SC_INCALLSTATUS])
@@ -6254,6 +6268,8 @@ static unsigned short status_calc_dex(struct block_list *bl, struct status_chang
 		dex -= sc->data[SC_HARMONIZE]->val2;
 		return (unsigned short)cap_value(dex,0,USHRT_MAX);
 	}
+	if(sc->data[SC_POEMBRAGI])
+		dex += sc->data[SC_POEMBRAGI]->val2;
 	if(sc->data[SC_CONCENTRATE] && !sc->data[SC_QUAGMIRE])
 		dex += (dex-sc->data[SC_CONCENTRATE]->val4 * 2)*(sc->data[SC_CONCENTRATE]->val2 *2)/100;
 	if(sc->data[SC_INCALLSTATUS])
@@ -6342,6 +6358,9 @@ static unsigned short status_calc_luk(struct block_list *bl, struct status_chang
 	}
 	if(sc->data[SC_CURSE])
 		return 0;
+
+	if(sc->data[SC_ASSNCROS])
+		luk += sc->data[SC_ASSNCROS]->val2;
 	if(sc->data[SC_INCALLSTATUS])
 		luk += sc->data[SC_INCALLSTATUS]->val1;
 	if(sc->data[SC_INCLUK])
@@ -6689,6 +6708,8 @@ static signed short status_calc_critical(struct block_list *bl, struct status_ch
 	if(!sc || !sc->count)
 		return cap_value(critical,10,SHRT_MAX);
 
+	if(sc->data[SC_ASSNCROS])
+		critical += sc->data[SC_ASSNCROS]->val3*10;
 	if (sc->data[SC_INCCRI])
 		critical += sc->data[SC_INCCRI]->val2;
 	if (sc->data[SC_EP16_2_BUFF_SC])
@@ -6989,6 +7010,8 @@ static defType status_calc_def(struct block_list *bl, struct status_change *sc, 
 		def += sc->data[SC_SHIELDSPELL_REF]->val2;
 	if( sc->data[SC_PRESTIGE] )
 		def += sc->data[SC_PRESTIGE]->val3;
+	if(sc->data[SC_RUSHWINDMILL])
+		def += sc->data[SC_RUSHWINDMILL]->val3;
 	if(sc->data[SC_ENDURE])
 		def += sc->data[SC_ENDURE]->val1*2;
 	if( sc->data[SC_BANDING] && sc->data[SC_BANDING]->val2 > 1 )
@@ -7353,8 +7376,6 @@ static unsigned short status_calc_speed(struct block_list *bl, struct status_cha
 			val = max(val, sc->data[SC_ARCLOUSEDASH]->val3);
 		if( sc->data[SC_DORAM_WALKSPEED] )
 			val = max(val, sc->data[SC_DORAM_WALKSPEED]->val1);
-		if (sc->data[SC_RUSHWINDMILL])
-			val = max(val, 25); // !TODO: Confirm bonus movement speed
 		if (sc->data[SC_EMERGENCY_MOVE])
 			val = max(val, sc->data[SC_EMERGENCY_MOVE]->val2);
 
@@ -7622,9 +7643,9 @@ static short status_calc_aspd_rate(struct block_list *bl, struct status_change *
 			max < sc->data[SC_FLEET]->val2)
 			max = sc->data[SC_FLEET]->val2;
 
-		if(sc->data[SC_ASSNCROS] && max < sc->data[SC_ASSNCROS]->val2) {
+		if(sc->data[SC_ASSNCROS] && max < sc->data[SC_ASSNCROS]->val3) {
 			if (bl->type!=BL_PC)
-				max = sc->data[SC_ASSNCROS]->val2;
+				max = sc->data[SC_ASSNCROS]->val3;
 			else
 				switch(((TBL_PC*)bl)->status.weapon) {
 					case W_BOW:
@@ -7635,7 +7656,7 @@ static short status_calc_aspd_rate(struct block_list *bl, struct status_change *
 					case W_GRENADE:
 						break;
 					default:
-						max = sc->data[SC_ASSNCROS]->val2;
+						max = sc->data[SC_ASSNCROS]->val3;
 			}
 		}
 		aspd_rate -= max;
@@ -7763,7 +7784,8 @@ static unsigned int status_calc_maxhp(struct block_list *bl, uint64 maxhp)
 
 	if ((rate += status_get_hpbonus(bl,STATUS_BONUS_RATE)) != 100)
 		maxhp = maxhp * rate / 100;
-
+	
+	
 	return (unsigned int)cap_value(maxhp,1,UINT_MAX);
 }
 
@@ -9601,14 +9623,12 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 		status_change_end(bl, SC_ACCELERATION, INVALID_TIMER);
 		break;
 #ifdef RENEWAL
-	case SC_RICHMANKIM:
 	case SC_ETERNALCHAOS:
 	case SC_DRUMBATTLE:
 	case SC_NIBELUNGEN:
 	case SC_ROKISWEIL:
 	case SC_INTOABYSS:
 	case SC_SIEGFRIED:
-		status_change_end(bl, SC_RICHMANKIM, INVALID_TIMER);
 		status_change_end(bl, SC_ETERNALCHAOS, INVALID_TIMER);
 		status_change_end(bl, SC_DRUMBATTLE, INVALID_TIMER);
 		status_change_end(bl, SC_NIBELUNGEN, INVALID_TIMER);
@@ -9620,10 +9640,12 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 	case SC_ASSNCROS:
 	case SC_POEMBRAGI:
 	case SC_APPLEIDUN:
+	case SC_RICHMANKIM:
 		status_change_end(bl, SC_WHISTLE, INVALID_TIMER);
 		status_change_end(bl, SC_ASSNCROS, INVALID_TIMER);
 		status_change_end(bl, SC_POEMBRAGI, INVALID_TIMER);
 		status_change_end(bl, SC_APPLEIDUN, INVALID_TIMER);
+		status_change_end(bl, SC_RICHMANKIM, INVALID_TIMER);
 		break;
 	case SC_DONTFORGETME:
 		status_change_end(bl, SC_INCREASEAGI, INVALID_TIMER);
@@ -10369,8 +10391,11 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 		case SC_ENSEMBLEFATIGUE:
 			val2 = 30; // Speed and ASPD penalty
 			break;
+		case SC_ASSNCROS:
 		case SC_RICHMANKIM:
-			val2 = 10 + 10 * val1; // Exp increase bonus
+		case SC_POEMBRAGI:
+			val2 = 2 * val1; // Status increases
+			val3 = 4 * val1; // Attrs increase /reductions
 			break;
 		case SC_DRUMBATTLE:
 			val2 = 15 + val1 * 5; // Atk increase
@@ -10386,13 +10411,6 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 		case SC_WHISTLE:
 			val2 = 18 + 2 * val1; // Flee increase
 			val3 = (val1 + 1) / 2; // Perfect dodge increase
-			break;
-		case SC_ASSNCROS:
-			val2 = val1 < 10 ? val1 * 2 - 1 : 20; // ASPD increase
-			break;
-		case SC_POEMBRAGI:
-			val2 = 2 * val1; // Cast time reduction
-			val3 = 3 * val1; // After-cast delay reduction
 			break;
 		case SC_APPLEIDUN:
 			val2 = val1 < 10 ? 9 + val1 : 20; // HP rate increase
@@ -11316,9 +11334,9 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 		case SC_SYMPHONYOFLOVER:
 			val3 = 2 * val1 + val2 + (sd?sd->status.job_level:50) / 4; // MDEF Increase
 			break;
-		case SC_MOONLITSERENADE: // MATK Increase
-		case SC_RUSHWINDMILL: // ATK Increase
-			val3 = 4 + val1 * 3 + val2 + (sd?sd->status.job_level:50) / 5;
+		case SC_MOONLITSERENADE: // MATK/MDEF Increase
+		case SC_RUSHWINDMILL: // ATK/DEC Increase
+			val3 = 3 * val1;
 			break;
 		case SC_ECHOSONG:
 			val3 = 6 * val1 + val2 + (sd?sd->status.job_level:50) / 4; // DEF Increase
