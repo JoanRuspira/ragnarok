@@ -3888,6 +3888,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case RK_IGNITIONBREAK:
 	case RK_HUNDREDSPEAR:
 	case AB_JUDEX:
+	case JG_TAROTCARD:
 	case PR_SPIRITUSANCTI:
 	case PR_UNHOLYCROSS:
 	case AB_ADORAMUS:

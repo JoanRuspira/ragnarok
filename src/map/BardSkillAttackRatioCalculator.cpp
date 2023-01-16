@@ -21,6 +21,8 @@ int BardSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 		case WM_METALICSOUND:
 			return calculate_metallic_sound_atk_ratio(skill_lv);
 			break;
+		case JG_TAROTCARD:
+			return calculate_tarot_cards_atk_ratio(skill_lv);
 		default:
 			return 0;
 			break;
@@ -101,6 +103,29 @@ int BardSkillAttackRatioCalculator::calculate_metallic_sound_atk_ratio(int skill
 			break;
 		case 5:
 			ratio = 300;
+			break;
+		}
+	return ratio;
+}
+
+int BardSkillAttackRatioCalculator::calculate_tarot_cards_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 130;
+			break;
+		case 2:
+			ratio = 200;
+			break;
+		case 3:
+			ratio = 280;
+			break;
+		case 4:
+			ratio = 400;
+			break;
+		case 5:
+			ratio = 500;
 			break;
 		}
 	return ratio;

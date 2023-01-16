@@ -2120,6 +2120,7 @@ enum e_skill {
 	MC_UPROAR = 818,
 	SM_SPIRITGROWTH = 819,
 	AL_MACEQUICKEN = 820,
+	JG_TAROTCARD = 821,
 };
 
 /// The client view ids for land skills.

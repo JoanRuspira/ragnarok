@@ -40,6 +40,7 @@
 #include "PriestAdditionalEffectsCalculator.h"
 #include "BlacksmithSkillAtkRatioCalculator.h"
 #include "BardSkillAttackRatioCalculator.h"
+#include "BardAdditionalEffectsCalculator.h"
 
 
 

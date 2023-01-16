@@ -1875,6 +1875,38 @@ Body:
       Weapon:
         Mace: true
         2hMace: true
+  - Id: 821
+    Name: JG_TAROTCARD
+    Description: Tarot Cards of Fate
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    DamageFlags:
+      Splash: true
+    Range: 11
+    Hit: Single
+    HitCount: 1
+    Element: Neutral
+    SplashArea:
+      - Level: 1
+        Area: 1
+      - Level: 2
+        Area: 2
+      - Level: 3
+        Area: 3
+      - Level: 4
+        Area: 4
+      - Level: 5
+        Area: 5
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    Cooldown: 5000
+    CastTime: 5000
+    AfterCastActDelay: 1000
+    Requires:
+      SpCost: 50
   - Id: 51
     Name: TF_HIDING
     Description: Hiding
