@@ -2244,7 +2244,7 @@ void pc_calc_skilltree(struct map_session_data *sd)
 		std::vector<std::vector<uint16>> linked_skills = { { BA_WHISTLE, DC_HUMMING },
 														   { BA_ASSASSINCROSS, DC_DONTFORGETME },
 														   { BA_POEMBRAGI, DC_FORTUNEKISS },
-														   { BA_APPLEIDUN, DC_SERVICEFORYOU } };
+														   { DC_SERVICEFORYOU } };
 
 		for (const auto &skill : linked_skills) {
 			if (pc_checkskill(sd, skill[!sd->status.sex]) < 10)
@@ -8235,7 +8235,6 @@ int pc_skillheal_bonus(struct map_session_data *sd, uint16 skill_id) {
 			case PR_SANCTUARY:      if( !(battle_config.skill_add_heal_rate&2) ) bonus = 0; break;
 			case AM_POTIONPITCHER:  if( !(battle_config.skill_add_heal_rate&4) ) bonus = 0; break;
 			case CR_SLIMPITCHER:    if( !(battle_config.skill_add_heal_rate&8) ) bonus = 0; break;
-			case BA_APPLEIDUN:      if( !(battle_config.skill_add_heal_rate&16)) bonus = 0; break;
 		}
 	}
 
@@ -9182,11 +9181,16 @@ bool pc_setparam(struct map_session_data *sd,int64 type,int64 val_tmp)
  *------------------------------------------*/
 void pc_heal(struct map_session_data *sd,unsigned int hp,unsigned int sp, int type)
 {
+	ShowStatus("Heal funct inside.\n");
+
 	if (type&2) {
 		if (hp || type&4)
+			ShowStatus("Heal 1!.\n");
 			clif_heal(sd->fd,SP_HP,hp);
-		if (sp)
+		if (sp) {
+			ShowStatus("Heal 2!.\n");
 			clif_heal(sd->fd,SP_SP,sp);
+		}
 	} else {
 		if(hp)
 			clif_updatestatus(sd,SP_HP);

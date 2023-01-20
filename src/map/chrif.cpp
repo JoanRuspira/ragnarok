@@ -996,25 +996,6 @@ int chrif_changedsex(int fd) {
 
 		// reset skill of some job
 		if ((sd->class_&MAPID_UPPERMASK) == MAPID_BARDDANCER) {
-			int i;
-			// remove specifical skills of Bard classes
-			for(i = BA_MUSICALLESSON; i <= BA_APPLEIDUN; i++) {
-				uint16 sk_idx = skill_get_index(i);
-				if (sd->status.skill[sk_idx].id > 0 && sd->status.skill[sk_idx].flag == SKILL_FLAG_PERMANENT) {
-					sd->status.skill_point += sd->status.skill[sk_idx].lv;
-					sd->status.skill[sk_idx].id = 0;
-					sd->status.skill[sk_idx].lv = 0;
-				}
-			}
-			// remove specifical skills of Dancer classes
-			for(i = DC_DANCINGLESSON; i <= DC_SERVICEFORYOU; i++) {
-				uint16 sk_idx = skill_get_index(i);
-				if (sd->status.skill[sk_idx].id > 0 && sd->status.skill[sk_idx].flag == SKILL_FLAG_PERMANENT) {
-					sd->status.skill_point += sd->status.skill[sk_idx].lv;
-					sd->status.skill[sk_idx].id = 0;
-					sd->status.skill[sk_idx].lv = 0;
-				}
-			}
 			clif_updatestatus(sd, SP_SKILLPOINT);
 			// change job if necessary
 			if (sd->status.sex) //Changed from Dancer

@@ -550,7 +550,6 @@ void initChangeTables(void)
 	set_sc( BA_WHISTLE		, SC_WHISTLE		, EFST_WHISTLE		, SCB_FLEE|SCB_FLEE2 );
 	set_sc( BA_ASSASSINCROSS	, SC_ASSNCROS		, EFST_ASSASSINCROSS		, SCB_AGI|SCB_LUK|SCB_ASPD|SCB_CRI );
 	set_sc( BA_POEMBRAGI		, SC_POEMBRAGI	, EFST_POEMBRAGI	, SCB_INT|SCB_DEX	);
-	set_sc( BA_APPLEIDUN		, SC_APPLEIDUN		, EFST_APPLEIDUN		, SCB_MAXHP );
 	add_sc( DC_SCREAM		, SC_STUN );
 	set_sc( DC_HUMMING		, SC_HUMMING		, EFST_HUMMING		, SCB_HIT );
 	set_sc( DC_DONTFORGETME		, SC_DONTFORGETME	, EFST_DONTFORGETME	, SCB_SPEED|SCB_ASPD );
@@ -931,12 +930,11 @@ void initChangeTables(void)
 	set_sc( WA_SYMPHONY_OF_LOVER		, SC_SYMPHONYOFLOVER		, EFST_SYMPHONY_LOVE, SCB_MDEF );
 	set_sc( WA_MOONLIT_SERENADE		, SC_MOONLITSERENADE		, EFST_MOONLIT_SERENADE, SCB_MATK );
 	set_sc( MI_RUSH_WINDMILL		, SC_RUSHWINDMILL		, EFST_RUSH_WINDMILL, SCB_WATK|SCB_DEF );
-	set_sc( MI_ECHOSONG			, SC_ECHOSONG			, EFST_ECHOSONG			, SCB_DEF  );
+	set_sc( MI_ECHOSONG			, SC_ECHOSONG			, EFST_ECHOSONG			, SCB_MATK|SCB_DEF  );
 	set_sc( MI_HARMONIZE			, SC_HARMONIZE			, EFST_HARMONIZE			, SCB_STR|SCB_AGI|SCB_VIT|SCB_INT|SCB_DEX|SCB_LUK );
 	set_sc_with_vfx( WM_POEMOFNETHERWORLD	, SC_NETHERWORLD		, EFST_NETHERWORLD		, SCB_NONE );
 	set_sc_with_vfx( WM_VOICEOFSIREN	, SC_VOICEOFSIREN		, EFST_SIREN, SCB_NONE );
 	set_sc_with_vfx( WM_LULLABY_DEEPSLEEP	, SC_DEEPSLEEP			, EFST_HANDICAPSTATE_DEEP_SLEEP, SCB_NONE );
-	set_sc( WM_SIRCLEOFNATURE		, SC_SIRCLEOFNATURE		, EFST_SIRCLEOFNATURE		, SCB_REGEN );
 	set_sc( WM_GLOOMYDAY			, SC_GLOOMYDAY			, EFST_GLOOMYDAY			, SCB_FLEE|SCB_SPEED|SCB_ASPD );
 	set_sc( WM_SONG_OF_MANA			, SC_SONGOFMANA			, EFST_SONG_OF_MANA, SCB_REGEN );
 	set_sc( WM_DANCE_WITH_WUG		, SC_DANCEWITHWUG		, EFST_DANCE_WITH_WUG, SCB_ASPD );
@@ -2223,6 +2221,8 @@ int status_heal(struct block_list *bl,int64 hhp,int64 hsp, int flag)
 		status_change_end(bl, SC_PROVOKE, INVALID_TIMER);
 
 	// Send HP update to client
+	ShowStatus("Heal funct.\n");
+
 	switch(bl->type) {
 		case BL_PC:  pc_heal((TBL_PC*)bl,hp,sp,flag); break;
 		case BL_MOB: mob_heal((TBL_MOB*)bl,hp); break;
@@ -6662,6 +6662,8 @@ static unsigned short status_calc_matk(struct block_list *bl, struct status_chan
 		return cap_value(matk,0,USHRT_MAX);
 	if(sc->data[SC_CRUCIS_PLAYER])
 		matk += sc->data[SC_CRUCIS_PLAYER]->val3;
+	if(sc->data[SC_ECHOSONG])
+		matk += sc->data[SC_ECHOSONG]->val3;
 	if(sc->data[SC_ENERGYCOAT])
 		matk += sc->data[SC_ENERGYCOAT]->val3;
 	if (sc->data[SC_ZANGETSU])
@@ -7133,6 +7135,8 @@ static defType status_calc_mdef(struct block_list *bl, struct status_change *sc,
 	}
 	if(sc->data[SC_MDEFSET])
 		return sc->data[SC_MDEFSET]->val1;
+	if(sc->data[SC_ECHOSONG])
+		mdef += sc->data[SC_ECHOSONG]->val3;
 	if(sc->data[SC_CRUCIS_PLAYER])
 		mdef += sc->data[SC_CRUCIS_PLAYER]->val4;
 	if(sc->data[SC_EARTH_INSIGNIA] && sc->data[SC_EARTH_INSIGNIA]->val1 == 3)
@@ -10395,7 +10399,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 		case SC_RICHMANKIM:
 		case SC_POEMBRAGI:
 			val2 = 2 * val1; // Status increases
-			val3 = 4 * val1; // Attrs increase /reductions
+			val3 = 6 * val1; // Attrs increase /reductions
 			break;
 		case SC_DRUMBATTLE:
 			val2 = 15 + val1 * 5; // Atk increase
@@ -10940,8 +10944,8 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			break;
 		case SC_CRUCIS_PLAYER:
 			// val2 signals autoprovoke.
-			val3 = 5*(val1); // MAtk increase
-			val4 = 5*(val1); // MDef increase.
+			val3 = 4*(val1); // MAtk increase
+			val4 = 4*(val1); // MDef increase.
 			break;
 		case SC_AVOID:
 			// val2 = 10*val1; // Speed change rate.
@@ -11334,12 +11338,10 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 		case SC_SYMPHONYOFLOVER:
 			val3 = 2 * val1 + val2 + (sd?sd->status.job_level:50) / 4; // MDEF Increase
 			break;
-		case SC_MOONLITSERENADE: // MATK/MDEF Increase
+		case SC_MOONLITSERENADE:
+		case SC_ECHOSONG: // MATK/MDEF Increase
 		case SC_RUSHWINDMILL: // ATK/DEC Increase
 			val3 = 3 * val1;
-			break;
-		case SC_ECHOSONG:
-			val3 = 6 * val1 + val2 + (sd?sd->status.job_level:50) / 4; // DEF Increase
 			break;
 		case SC_HARMONIZE:
 			val2 = 5 + 5 * val1;
@@ -14044,34 +14046,6 @@ TIMER_FUNC(status_change_timer){
 			if (--sce->val3 <= 0)
 				break;
 			switch(sce->val1&0xFFFF) {
-#ifndef RENEWAL
-				case BD_RICHMANKIM:
-				case BD_DRUMBATTLEFIELD:
-				case BD_RINGNIBELUNGEN:
-				case BD_SIEGFRIED:
-				case BA_DISSONANCE:
-				case BA_ASSASSINCROSS:
-				case DC_UGLYDANCE:
-					s=3;
-					break;
-				case BD_LULLABY:
-				case BD_ETERNALCHAOS:
-				case BD_ROKISWEIL:
-				case DC_FORTUNEKISS:
-					s=4;
-					break;
-				case CG_HERMODE:
-				case BD_INTOABYSS:
-				case BA_WHISTLE:
-				case DC_HUMMING:
-				case BA_POEMBRAGI:
-				case DC_SERVICEFORYOU:
-					s=5;
-					break;
-				case BA_APPLEIDUN:
-					s=6;
-					break;
-#endif
 				case CG_MOONLIT:
 					// Moonlit's cost is 4sp*skill_lv [Skotlex]
 					sp= 4*(sce->val1>>16);

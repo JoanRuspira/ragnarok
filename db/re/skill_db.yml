@@ -8220,46 +8220,32 @@ Body:
           Amount: 1
   - Id: 322
     Name: BA_APPLEIDUN
-    Description: Song of Lutie
-    MaxLevel: 10
-    Type: Misc
+    Description: Coluceo Heal
+    MaxLevel: 5
+    Type: Magic
     TargetType: Self
     DamageFlags:
       NoDamage: true
-    Flags:
-      IsSong: true
+      Splash: true
     Hit: Single
     HitCount: 1
-    SplashArea: 15
-    CastTime: 1000
-    Duration1: 180000
-    Duration2: 20000
-    Cooldown: 20000
+    Element: Holy
+    SplashArea:
+      - Level: 1
+        Area: 1
+      - Level: 2
+        Area: 2
+      - Level: 3
+        Area: 3
+      - Level: 4
+        Area: 4
+      - Level: 5
+        Area: 5
+    CastCancel: true
+    Cooldown: 7000
+    AfterCastActDelay: 1000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 40
-        - Level: 2
-          Amount: 45
-        - Level: 3
-          Amount: 50
-        - Level: 4
-          Amount: 55
-        - Level: 5
-          Amount: 60
-        - Level: 6
-          Amount: 65
-        - Level: 7
-          Amount: 70
-        - Level: 8
-          Amount: 75
-        - Level: 9
-          Amount: 80
-        - Level: 10
-          Amount: 85
-      Weapon:
-        Musical: true
-        Whip: true
+      SpCost: 5
   - Id: 323
     Name: DC_DANCINGLESSON
     Description: Dance Lessons
@@ -23395,7 +23381,7 @@ Body:
           Amount: 1
   - Id: 2382
     Name: MI_ECHOSONG
-    Description: Echo Song
+    Description: Echo Nocturnae
     MaxLevel: 5
     TargetType: Self
     DamageFlags:
@@ -23403,23 +23389,15 @@ Body:
       Splash: true
     Hit: Single
     HitCount: 1
-    SplashArea:
-      - Level: 1
-        Area: 7
-      - Level: 2
-        Area: 8
-      - Level: 3
-        Area: 9
-      - Level: 4
-        Area: 10
-      - Level: 5
-        Area: 11
+    SplashArea: 5
     CastCancel: true
-    CastTime: 1000
-    AfterCastActDelay: 2000
+    AfterCastActDelay: 5500
     Duration1: 60000
     Requires:
-      SpCost: 40
+      SpCost: 85
+      ItemCost:
+        - Item: Protect_Neck_Candy
+          Amount: 1
       Weapon:
         Musical: true
   - Id: 2383
@@ -23848,43 +23826,27 @@ Body:
     Name: WM_SIRCLEOFNATURE
     Description: Circle of Nature's Sound
     MaxLevel: 5
-    TargetType: Self
+    Type: Magic
+    TargetType: Support
     DamageFlags:
       NoDamage: true
-      Splash: true
+      IgnoreDefense: true
+    Flags:
+      IsAutoShadowSpell: true
+    Range: 9
     Hit: Single
     HitCount: 1
-    SplashArea:
-      - Level: 1
-        Area: 3
-      - Level: 2
-        Area: 4
-      - Level: 3
-        Area: 5
-      - Level: 4
-        Area: 6
-      - Level: 5
-        Area: 7
+    Element: Holy
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     CastCancel: true
-    CastTime: 2000
+    CastTime: 3000
+    Cooldown: 5000
     AfterCastActDelay: 1000
-    Duration1: 60000
-    Cooldown: 15000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 42
-        - Level: 2
-          Amount: 46
-        - Level: 3
-          Amount: 50
-        - Level: 4
-          Amount: 54
-        - Level: 5
-          Amount: 58
-      Weapon:
-        Musical: true
-        Whip: true
+      SpCost: 5
   - Id: 2424
     Name: WM_RANDOMIZESPELL
     Description: Improvised Song

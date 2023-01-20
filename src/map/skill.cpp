@@ -592,7 +592,7 @@ int skill_calc_heal(struct block_list *src, struct block_list *target, uint16 sk
 	if (sc && sc->count) {
 		if (sc->data[SC_OFFERTORIUM] && (skill_id == AB_HIGHNESSHEAL || skill_id == AB_CHEAL || skill_id == PR_SANCTUARY || skill_id == AL_HEAL))
 			hp_bonus += sc->data[SC_OFFERTORIUM]->val2;
-		if (sc->data[SC_GLASTHEIM_HEAL] && skill_id != NPC_EVILLAND && skill_id != BA_APPLEIDUN)
+		if (sc->data[SC_GLASTHEIM_HEAL] && skill_id != NPC_EVILLAND)
 			hp_bonus += sc->data[SC_GLASTHEIM_HEAL]->val1;
 		if (sc->data[SC_ASSUMPTIO])
 			hp_bonus += sc->data[SC_ASSUMPTIO]->val1 * 2;
@@ -600,7 +600,7 @@ int skill_calc_heal(struct block_list *src, struct block_list *target, uint16 sk
 	}
 
 	if (tsc && tsc->count) {
-		if (skill_id != NPC_EVILLAND && skill_id != BA_APPLEIDUN) {
+		if (skill_id != NPC_EVILLAND ) {
 			if (tsc->data[SC_INCHEALRATE])
 				hp_bonus += tsc->data[SC_INCHEALRATE]->val1; //Only affects Heal, Sanctuary and PotionPitcher.(like bHealPower) [Inkfish]
 			if (tsc->data[SC_GLASTHEIM_HEAL])
@@ -616,7 +616,6 @@ int skill_calc_heal(struct block_list *src, struct block_list *target, uint16 sk
 	// MATK part of the RE heal formula [malufett]
 	// Note: in this part matk bonuses from items or skills are not applied
 	switch( skill_id ) {
-		case BA_APPLEIDUN:
 		case PR_SANCTUARY:
 		case NPC_EVILLAND:
 			break;
@@ -652,7 +651,7 @@ int skill_calc_heal(struct block_list *src, struct block_list *target, uint16 sk
 
 	// Global multipliers are applied after the MATK is applied
 	if (tsc && tsc->count) {
-		if (skill_id != NPC_EVILLAND && skill_id != BA_APPLEIDUN) {
+		if (skill_id != NPC_EVILLAND) {
 			if (tsc->data[SC_WATER_INSIGNIA] && tsc->data[SC_WATER_INSIGNIA]->val1 == 2)
 				global_bonus *= 1.1f;
 		}
@@ -845,7 +844,6 @@ bool skill_isNotOk(uint16 skill_id, struct map_session_data *sd)
 				return true;
 			}
 			break;
-		case WM_SIRCLEOFNATURE:
 		case WM_SOUND_OF_DESTRUCTION:
 		case WM_LULLABY_DEEPSLEEP:
 		case WM_GLOOMYDAY:
@@ -4177,6 +4175,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case MG_LIGHTNINGBOLT:
 	case WZ_EARTHSPIKE:
 	case AL_HEAL:
+	case WM_SIRCLEOFNATURE:
 	case NPC_DARKTHUNDER:
 	case PR_ASPERSIO:
 	case MG_FROSTDIVER:
@@ -5260,7 +5259,18 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				if (sd) clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0) ;
 				break ;
 			}
- 		case AL_HEAL:
+		case WM_SIRCLEOFNATURE:
+			clif_specialeffect(bl, EF_HEALSP, AREA);
+			if (sd && battle_check_undead(tstatus->race,tstatus->def_ele)) {
+				if (battle_check_target(src, bl, BCT_ENEMY) < 1) {
+					//Offensive heal does not works on non-enemies. [Skotlex]
+					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+					return 0;
+				}
+				return skill_castend_damage_id (src, bl, skill_id, skill_lv, tick, flag);
+			}
+			break;
+		case AL_HEAL:
 		case ALL_RESURRECTION:
 		case PR_ASPERSIO:
 		case AB_HIGHNESSHEAL:
@@ -5309,6 +5319,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	{
 	case HLIF_HEAL:	//[orn]
 	case AL_HEAL:
+	case WM_SIRCLEOFNATURE:
 	case AB_HIGHNESSHEAL:
 		{
 			int heal = skill_calc_heal(src, bl, skill_id, skill_lv, true);
@@ -5331,7 +5342,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				else if (tsc->data[SC_BERSERK] || tsc->data[SC_SATURDAYNIGHTFEVER])
 					heal = 0; //Needed so that it actually displays 0 when healing.
 			}
-			if (skill_id == AL_HEAL)
+			if (skill_id == AL_HEAL || skill_id == WM_SIRCLEOFNATURE)
 				status_change_end(bl, SC_BITESCAR, INVALID_TIMER);
 			clif_skill_nodamage (src, bl, skill_id, heal, 1);
 			if( tsc && tsc->data[SC_AKAITSUKI] && heal && skill_id != HLIF_HEAL )
@@ -6700,7 +6711,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case BA_POEMBRAGI:
 	case BA_WHISTLE:
 	case BA_ASSASSINCROSS:
-	case BA_APPLEIDUN:
 	case DC_UGLYDANCE:
 	case DC_HUMMING:
 	case DC_DONTFORGETME:
@@ -8666,12 +8676,14 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		} else if( sd )
 			party_foreachsamemap(skill_area_sub, sd, skill_get_splash(skill_id, skill_lv), src, skill_id, skill_lv, tick, flag|BCT_PARTY|1, skill_castend_nodamage_id);
 		break;
-
+	case BA_APPLEIDUN:
 	case AB_CHEAL:
+		ShowStatus("Healing 1.\n");
 		if( !sd || sd->status.party_id == 0 || flag&1 ) {
+			ShowStatus("Healing 2.\n");
 			if( sd && tstatus && !battle_check_undead(tstatus->race, tstatus->def_ele) && !tsc->data[SC_BERSERK] ) {
 				int partycount = (sd->status.party_id ? party_foreachsamemap(party_sub_count, sd, 0) : 0);
-
+				ShowStatus("Healing 3.\n");
 				i = skill_calc_heal(src, bl, AL_HEAL, pc_checkskill(sd, AL_HEAL), true);
 
 				if( partycount > 1 )
@@ -8684,8 +8696,10 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 					i = ~i + 1;
 				status_heal(bl, i, 0, 0);
 			}
-		} else if( sd )
+		} else if( sd ){
+			ShowStatus("Healing 4.\n");
 			party_foreachsamemap(skill_area_sub, sd, skill_get_splash(skill_id, skill_lv), src, skill_id, skill_lv, tick, flag|BCT_PARTY|1, skill_castend_nodamage_id);
+		}
 		break;
 
 	case AB_ORATIO:
@@ -9483,16 +9497,27 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case WA_MOONLIT_SERENADE:
 	case WA_SYMPHONY_OF_LOVER:
 	case MI_RUSH_WINDMILL:
-	case MI_ECHOSONG:
 		if( !sd || !sd->status.party_id || (flag & 1) ) {
+			clif_specialeffect(src, 1223, AREA);
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
-			sc_start2(src,bl,type,100,skill_lv,((sd) ? (pc_checkskill(sd,WM_LESSON)*2) : skill_get_max(WM_LESSON)),skill_get_time(skill_id,skill_lv));
-    		clif_specialeffect(src, 1223, AREA);
+			sc_start2(src,bl,type,100,skill_lv,((sd) ? (pc_checkskill(sd,WM_LESSON)*2) : skill_get_max(WM_LESSON)),skill_get_time(skill_id,skill_lv));	
 		} else if( sd ) {
+			clif_specialeffect(bl, 1223, AREA);
 			party_foreachsamemap(skill_area_sub, sd, skill_get_splash(skill_id, skill_lv), src, skill_id, skill_lv, tick, flag|BCT_PARTY|1, skill_castend_nodamage_id);
 			sc_start2(src,bl,type,100,skill_lv,((sd) ? (pc_checkskill(sd,WM_LESSON)*2) : skill_get_max(WM_LESSON)),skill_get_time(skill_id,skill_lv));
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
-    		clif_specialeffect(src, 1223, AREA);
+		}
+		break;
+	case MI_ECHOSONG:
+		if( !sd || !sd->status.party_id || (flag & 1) ) {
+			clif_specialeffect(src, 1219, AREA);
+			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
+			sc_start2(src,bl,type,100,skill_lv,((sd) ? (pc_checkskill(sd,WM_LESSON)*2) : skill_get_max(WM_LESSON)),skill_get_time(skill_id,skill_lv));
+		} else if( sd ) {
+			clif_specialeffect(bl, 1219, AREA);
+			party_foreachsamemap(skill_area_sub, sd, skill_get_splash(skill_id, skill_lv), src, skill_id, skill_lv, tick, flag|BCT_PARTY|1, skill_castend_nodamage_id);
+			sc_start2(src,bl,type,100,skill_lv,((sd) ? (pc_checkskill(sd,WM_LESSON)*2) : skill_get_max(WM_LESSON)),skill_get_time(skill_id,skill_lv));
+			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 		}
 		break;
 
@@ -9542,7 +9567,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			}
 		sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv));
 		break;
-	case WM_SIRCLEOFNATURE:
 	case WM_SONG_OF_MANA:
 	case WM_DANCE_WITH_WUG:
 	case WM_LERADS_DEW:
@@ -10490,6 +10514,7 @@ static int8 skill_castend_id_check(struct block_list *src, struct block_list *ta
 
 	switch (skill_id) {
 		case AL_HEAL:
+		case WM_SIRCLEOFNATURE:
 		case AL_INCAGI:
 		case AL_DECAGI:
 		case SA_DISPELL: // Mado Gear is immune to Dispell according to bugreport:49 [Ind]
@@ -11221,7 +11246,6 @@ int skill_castend_pos2(struct block_list* src, int x, int y, uint16 skill_id, ui
 	case BA_POEMBRAGI:
 	case BA_WHISTLE:
 	case BA_ASSASSINCROSS:
-	case BA_APPLEIDUN:
 	case DC_UGLYDANCE:
 	case DC_HUMMING:
 	case DC_DONTFORGETME:
@@ -13937,7 +13961,6 @@ int skill_unit_onleft(uint16 skill_id, struct block_list *bl, t_tick tick)
 		case BA_POEMBRAGI:
 		case BA_WHISTLE:
 		case BA_ASSASSINCROSS:
-		case BA_APPLEIDUN:
 		case DC_HUMMING:
 		case DC_DONTFORGETME:
 		case DC_FORTUNEKISS:
@@ -17682,7 +17705,6 @@ int skill_delunitgroup_(struct skill_unit_group *group, const char* file, int li
 			case BD_RICHMANKIM:
 			case BA_WHISTLE:
 			case BA_ASSASSINCROSS:
-			case BA_APPLEIDUN:
 			case DC_UGLYDANCE:
 			case DC_HUMMING:
 			case DC_DONTFORGETME:
