@@ -23369,7 +23369,8 @@ Body:
     HitCount: 1
     SplashArea: 5
     CastCancel: true
-    AfterCastActDelay: 5500
+    Cooldown: 5000
+    AfterCastActDelay: 5000
     Duration1: 60000
     Requires:
       SpCost: 85
@@ -23388,7 +23389,8 @@ Body:
     HitCount: 1
     SplashArea: 5
     CastCancel: true
-    AfterCastActDelay: 5500
+    Cooldown: 5000
+    AfterCastActDelay: 5000
     Duration1: 60000
     Requires:
       SpCost: 85
