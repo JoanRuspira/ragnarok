@@ -11144,6 +11144,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			break;
 
 		/* Arch Bishop */
+		case SC_INTOABYSS:
 		case SC_RENOVATIO:
 			val4 = tick / 5000;
 			tick_time = 5000;
@@ -14167,6 +14168,16 @@ TIMER_FUNC(status_change_timer){
 		sc_timer_next(1000 + tick);
 		return 0;
 
+	case SC_INTOABYSS:
+		if( --(sce->val4) >= 0 ) {
+			int heal = status->max_hp * (sce->val1) / 100;
+			if( sc && sc->data[SC_AKAITSUKI] && heal )
+				heal = ~heal + 1;
+			status_heal(bl, heal, heal, 3);
+			sc_timer_next(5000 + tick);
+			return 0;
+		}
+		break;
 	case SC_RENOVATIO:
 		if( --(sce->val4) >= 0 ) {
 			int heal = status->max_hp * (sce->val1) / 100;

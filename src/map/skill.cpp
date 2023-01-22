@@ -6705,7 +6705,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case BD_DRUMBATTLEFIELD:
 	case BD_RINGNIBELUNGEN:
 	case BD_ROKISWEIL:
-	case BD_INTOABYSS:
 	case BD_SIEGFRIED:
 	case BA_DISSONANCE:
 	case BA_POEMBRAGI:
@@ -6716,6 +6715,10 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case DC_DONTFORGETME:
 	case DC_FORTUNEKISS:
 	case DC_SERVICEFORYOU:
+		skill_castend_song(src, skill_id, skill_lv, tick);
+		break;
+	case BD_INTOABYSS:
+		clif_specialeffect(src, 1229, AREA);
 		skill_castend_song(src, skill_id, skill_lv, tick);
 		break;
 #endif
@@ -11233,25 +11236,6 @@ int skill_castend_pos2(struct block_list* src, int x, int y, uint16 skill_id, ui
 	case WE_CALLPARENT:
 	case WE_CALLBABY:
 	case SA_LANDPROTECTOR:
-#ifndef RENEWAL
-	case BD_LULLABY:
-	case BD_RICHMANKIM:
-	case BD_ETERNALCHAOS:
-	case BD_DRUMBATTLEFIELD:
-	case BD_RINGNIBELUNGEN:
-	case BD_ROKISWEIL:
-	case BD_INTOABYSS:
-	case BD_SIEGFRIED:
-	case BA_DISSONANCE:
-	case BA_POEMBRAGI:
-	case BA_WHISTLE:
-	case BA_ASSASSINCROSS:
-	case DC_UGLYDANCE:
-	case DC_HUMMING:
-	case DC_DONTFORGETME:
-	case DC_FORTUNEKISS:
-	case DC_SERVICEFORYOU:
-#endif
 	case CG_MOONLIT:
 	case GS_DESPERADO:
 	case NJ_KAENSIN:
@@ -15870,7 +15854,7 @@ struct s_skill_condition skill_get_requirement(struct map_session_data* sd, uint
 					if( sd->special_state.no_gemstone == 2 ) // Remove all Magic Stone required for all skills for VIP.
 						req.itemid[i] = req.amount[i] = 0;
 					else {
-						if( sd->special_state.no_gemstone || (sc && sc->data[SC_INTOABYSS]) )
+						if( sd->special_state.no_gemstone )
 						{	// All gem skills except Hocus Pocus and Ganbantein can cast for free with Mistress card -helvetica
 							if( skill_id != SA_ABRACADABRA )
 		 						req.itemid[i] = req.amount[i] = 0;

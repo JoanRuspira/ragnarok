@@ -7877,7 +7877,6 @@ Body:
       SpCost: 85
       Weapon:
         Musical: true
-        Whip: true
       ItemCost:
         - Item: Protect_Neck_Candy
           Amount: 1
@@ -7990,25 +7989,25 @@ Body:
   - Id: 312
     Name: BD_INTOABYSS
     Description: Power Chord
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Misc
     TargetType: Self
     DamageFlags:
       NoDamage: true
-    Flags:
-      IsEnsemble: true
     Hit: Single
     HitCount: 1
-    SplashArea: 15
-    CastTime: 1000
+    SplashArea: 10
     Duration1: 180000
     Duration2: 60000
-    Cooldown: 20000
+    Cooldown: 10000
+    AfterCatActDelay: 10000
     Requires:
-      SpCost: 70
+      SpCost: 100
       Weapon:
         Musical: true
-        Whip: true
+      ItemCost:
+        - Item: Protect_Neck_Candy
+          Amount: 1
   - Id: 313
     Name: BD_SIEGFRIED
     Description: Acoustic Rhythm
@@ -8189,7 +8188,6 @@ Body:
       SpCost: 85
       Weapon:
         Musical: true
-        Whip: true
       ItemCost:
         - Item: Protect_Neck_Candy
           Amount: 1
@@ -8214,7 +8212,6 @@ Body:
       SpCost: 85
       Weapon:
         Musical: true
-        Whip: true
       ItemCost:
         - Item: Protect_Neck_Candy
           Amount: 1
@@ -23846,7 +23843,9 @@ Body:
     Cooldown: 5000
     AfterCastActDelay: 1000
     Requires:
-      SpCost: 5
+      SpCost: 40
+      Weapon:
+        Musical: true
   - Id: 2424
     Name: WM_RANDOMIZESPELL
     Description: Improvised Song
