@@ -52,6 +52,7 @@ void RogueSkillAtkRatioCalculator::add_hack_and_slash_special_effects(struct blo
 {
 	clif_specialeffect(target, EF_HIT2, AREA);
 	clif_specialeffect(target, EF_HIT6, AREA);
+	clif_specialeffect(target, EF_HFLIMOON3, AREA);
 	clif_specialeffect(src, EF_GUMGANG7, AREA);
 }
 

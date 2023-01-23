@@ -5260,7 +5260,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				break ;
 			}
 		case WM_SIRCLEOFNATURE:
-			clif_specialeffect(bl, EF_HEALSP, AREA);
+			clif_specialeffect(bl, EF_FOOD03, AREA);
 			if (sd && battle_check_undead(tstatus->race,tstatus->def_ele)) {
 				if (battle_check_target(src, bl, BCT_ENEMY) < 1) {
 					//Offensive heal does not works on non-enemies. [Skotlex]
@@ -5317,9 +5317,14 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	map_freeblock_lock();
 	switch(skill_id)
 	{
+	case WM_SIRCLEOFNATURE:
+		{
+			int heal = skill_calc_heal(src, bl, skill_id, skill_lv, true);
+			status_heal(bl,heal,0,0);
+		}
+		break;
 	case HLIF_HEAL:	//[orn]
 	case AL_HEAL:
-	case WM_SIRCLEOFNATURE:
 	case AB_HIGHNESSHEAL:
 		{
 			int heal = skill_calc_heal(src, bl, skill_id, skill_lv, true);
@@ -9532,18 +9537,25 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 
 	case WM_DEADHILLHERE:
 		if( bl->type == BL_PC ) {
-			if( !status_isdead(bl) )
-				break;
-
-			int heal = tstatus->sp;
-
-			if( heal <= 0 )
-				heal = 1;
-			tstatus->hp = heal;
-			tstatus->sp -= tstatus->sp * ( 60 - 10 * skill_lv ) / 100;
-			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
-			pc_revive((TBL_PC*)bl,heal,0);
-			clif_resurrection(bl,1);
+			if( !status_isdead(bl) ) {
+				int heal = skill_calc_heal(src, bl, AB_HIGHNESSHEAL, skill_lv, true);
+				if (status_isimmune(bl) || (dstmd && (status_get_class(bl) == MOBID_EMPERIUM || status_get_class_(bl) == CLASS_BATTLEFIELD)))
+					heal = 0;
+				clif_specialeffect(bl, EF_FOOD03, AREA);
+				if( tsc && tsc->data[SC_AKAITSUKI] && heal && AB_HIGHNESSHEAL != HLIF_HEAL )
+					heal = ~heal + 1;
+				status_heal(bl,heal,0,0);
+			} else {
+				int heal = tstatus->sp;
+				if( heal <= 0 )
+					heal = 1;
+				tstatus->hp = heal;
+				tstatus->sp -= tstatus->sp * ( 60 - 10 * skill_lv ) / 100;
+				clif_specialeffect(bl, EF_FOOD04, AREA);
+				clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
+				pc_revive((TBL_PC*)bl,heal,0);
+				clif_resurrection(bl,1);
+			}
 		}
 		break;
 

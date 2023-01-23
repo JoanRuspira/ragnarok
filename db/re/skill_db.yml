@@ -23736,40 +23736,29 @@ Body:
     Name: WM_DEADHILLHERE
     Description: Valley of Death
     MaxLevel: 5
+    Type: Magic
     TargetType: Support
     DamageFlags:
       NoDamage: true
-    Range: 7
+      IgnoreDefense: true
+    Range: 11
     Hit: Single
     HitCount: 1
+    Element: Holy
+    CopyFlags:
+      Skill:
+        Reproduce: true
     CastCancel: true
-    CastTime:
-      - Level: 1
-        Time: 3000
-      - Level: 2
-        Time: 2500
-      - Level: 3
-        Time: 2000
-      - Level: 4
-        Time: 1500
-      - Level: 5
-        Time: 1000
+    CastTime: 6000
     AfterCastActDelay: 1000
+    Cooldown: 10000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 50
-        - Level: 2
-          Amount: 53
-        - Level: 3
-          Amount: 56
-        - Level: 4
-          Amount: 59
-        - Level: 5
-          Amount: 62
+      SpCost: 100
       Weapon:
         Musical: true
-        Whip: true
+      ItemCost:
+        - Item: Heartbroken_Tears
+          Amount: 1
   - Id: 2422
     Name: WM_LULLABY_DEEPSLEEP
     Description: Deep Sleep Lullaby
@@ -23830,22 +23819,19 @@ Body:
     DamageFlags:
       NoDamage: true
       IgnoreDefense: true
-    Flags:
-      IsAutoShadowSpell: true
-    Range: 9
+    Range: 11
     Hit: Single
     HitCount: 1
     Element: Holy
     CopyFlags:
       Skill:
-        Plagiarism: true
         Reproduce: true
     CastCancel: true
     CastTime: 3000
-    Cooldown: 5000
     AfterCastActDelay: 1000
+    Cooldown: 5000
     Requires:
-      SpCost: 40
+      SpCost: 100
       Weapon:
         Musical: true
   - Id: 2424

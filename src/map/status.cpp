@@ -2665,7 +2665,7 @@ int status_base_amotion_pc(struct map_session_data* sd, struct status_data* stat
 {
 	int amotion;
 	int classidx = pc_class2idx(sd->status.class_);
-#ifdef RENEWAL_ASPD
+
 	int16 skill_lv, val = 0;
 	float temp_aspd = 0;
 
@@ -2704,22 +2704,6 @@ int status_base_amotion_pc(struct map_session_data* sd, struct status_data* stat
 	else if (pc_isridingdragon(sd))
 		val -= 25 - 5 * pc_checkskill(sd, RK_DRAGONTRAINING);
 	amotion = ((int)(temp_aspd + ((float)(status_calc_aspd(&sd->bl, &sd->sc, true) + val) * status->agi / 200)) - min(amotion, 200));
-#else
-	// Angra Manyu disregards aspd_base and similar
-	if (pc_checkequip2(sd, ITEMID_ANGRA_MANYU, EQI_ACC_L, EQI_MAX))
-		return 0;
-
-	// Base weapon delay
-	amotion = (sd->status.weapon < MAX_WEAPON_TYPE)
-	 ? (job_info[classidx].aspd_base[sd->status.weapon]) // Single weapon
-	 : (job_info[classidx].aspd_base[sd->weapontype1] + job_info[classidx].aspd_base[sd->weapontype2]) * 7 / 10; // Dual-wield
-
-	// Percentual delay reduction from stats
-	amotion -= amotion * (4 * status->agi + status->dex) / 1000;
-
-	// Raw delay adjustment from bAspd bonus
-	amotion += sd->bonus.aspd_add;
-#endif
 
  	return amotion;
 }
@@ -4996,8 +4980,8 @@ void status_calc_regen(struct block_list *bl, struct status_data *status, struct
 		sregen->hp = cap_value(val, 0, SHRT_MAX);
 
 		val = 0;
-		if( (skill=(pc_checkskill(sd,MG_SRECOVERY)*2)) > 0 )
-			val += skill*6 + skill*status->max_sp/500;
+		if( (skill=(pc_checkskill(sd,MG_SRECOVERY))) > 0 )
+			val += skill*6;
 		if( (skill=pc_checkskill(sd,NJ_NINPOU)) > 0 )
 			val += skill*3 + skill*status->max_sp/500;
 		if( (skill=(pc_checkskill(sd,WM_LESSON)*2)) > 0 )
@@ -14171,9 +14155,10 @@ TIMER_FUNC(status_change_timer){
 	case SC_INTOABYSS:
 		if( --(sce->val4) >= 0 ) {
 			int heal = status->max_hp * (sce->val1) / 100;
+			int heal_sp = status->max_sp * (sce->val1) / 100;
 			if( sc && sc->data[SC_AKAITSUKI] && heal )
 				heal = ~heal + 1;
-			status_heal(bl, heal, heal, 3);
+			status_heal(bl, heal, heal_sp, 3);
 			sc_timer_next(5000 + tick);
 			return 0;
 		}
