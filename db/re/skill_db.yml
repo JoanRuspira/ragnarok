@@ -4374,8 +4374,16 @@ Body:
   - Id: 128
     Name: HT_STEELCROW
     Description: Steel Crow
-    MaxLevel: 10
-    Type: Misc
+    MaxLevel: 5
+    TargetType: Self
+    Hit: Single
+    HitCount: 1
+    AfterCastActDelay: 1000
+    Requires:
+      SpCost: 5
+      ItemCost:
+        - Item: Wolf's_Flute
+          Amount: 0
   - Id: 129
     Name: HT_BLITZBEAT
     Description: Blitz Beat
@@ -19437,7 +19445,7 @@ Body:
   - Id: 2240
     Name: RA_WUGMASTERY
     Description: Warg Mastery
-    MaxLevel: 1
+    MaxLevel: 5
     TargetType: Self
     Hit: Single
     HitCount: 1
@@ -19450,7 +19458,7 @@ Body:
   - Id: 2241
     Name: RA_WUGRIDER
     Description: Warg Rider
-    MaxLevel: 3
+    MaxLevel: 5
     TargetType: Self
     Flags:
       AllowOnWarg: true
@@ -19462,7 +19470,7 @@ Body:
   - Id: 2242
     Name: RA_WUGDASH
     Description: Warg Dash
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Weapon
     TargetType: Self
     DamageFlags:
@@ -20557,15 +20565,15 @@ Body:
     Requires:
       SpCost:
         - Level: 1
-          Amount: 25
+          Amount: 5
         - Level: 2
-          Amount: 30
+          Amount: 5
         - Level: 3
-          Amount: 35
+          Amount: 5
         - Level: 4
-          Amount: 40
+          Amount: 5
         - Level: 5
-          Amount: 45
+          Amount: 5
   - Id: 2282
     Name: NC_MAGICDECOY
     Description: FAW - Magic Decoy
@@ -20598,15 +20606,15 @@ Body:
     Requires:
       SpCost:
         - Level: 1
-          Amount: 40
+          Amount: 5
         - Level: 2
-          Amount: 45
+          Amount: 5
         - Level: 3
-          Amount: 50
+          Amount: 5
         - Level: 4
-          Amount: 55
+          Amount: 5
         - Level: 5
-          Amount: 60
+          Amount: 5
   - Id: 2283
     Name: NC_DISJOINT
     Description: FAW Removal

@@ -2221,7 +2221,6 @@ int status_heal(struct block_list *bl,int64 hhp,int64 hsp, int flag)
 		status_change_end(bl, SC_PROVOKE, INVALID_TIMER);
 
 	// Send HP update to client
-	ShowStatus("Heal funct.\n");
 
 	switch(bl->type) {
 		case BL_PC:  pc_heal((TBL_PC*)bl,hp,sp,flag); break;
@@ -7426,8 +7425,8 @@ static short status_calc_aspd(struct block_list *bl, struct status_change *sc, b
 				bonus = 5;
 		}
 
-		if (sc->data[SC_ASSNCROS] && bonus < sc->data[SC_ASSNCROS]->val2) {
-			bonus += sc->data[SC_ASSNCROS]->val2;
+		if (sc->data[SC_ASSNCROS] && bonus < sc->data[SC_ASSNCROS]->val3) {
+			bonus += sc->data[SC_ASSNCROS]->val3;
 		}
 
 		if (bonus < 20 && sc->data[SC_MADNESSCANCEL])

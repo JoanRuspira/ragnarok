@@ -5321,6 +5321,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		{
 			int heal = skill_calc_heal(src, bl, skill_id, skill_lv, true);
 			status_heal(bl,heal,0,0);
+			clif_skill_nodamage(src, bl, skill_id, heal, 1);
 		}
 		break;
 	case HLIF_HEAL:	//[orn]
@@ -9047,6 +9048,15 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 		}
 		break;
+	case HT_STEELCROW:
+		if( sd ) {
+			if( !pc_isfalcon(sd) )
+				pc_setoption(sd,sd->sc.option|OPTION_FALCON);
+			else
+				pc_setoption(sd,sd->sc.option&~OPTION_FALCON);
+			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
+		}
+		break;
 
 	case RA_WUGRIDER:
 		if( sd ) {
@@ -9545,6 +9555,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				if( tsc && tsc->data[SC_AKAITSUKI] && heal && AB_HIGHNESSHEAL != HLIF_HEAL )
 					heal = ~heal + 1;
 				status_heal(bl,heal,0,0);
+				clif_skill_nodamage(src, bl, skill_id, heal, 1);
 			} else {
 				int heal = tstatus->sp;
 				if( heal <= 0 )
@@ -14898,12 +14909,6 @@ bool skill_check_condition_castbegin(struct map_session_data* sd, uint16 skill_i
 				return false;
 			}
 			break;
-		case RA_WUGMASTERY:
-			if( (pc_isfalcon(sd) && !battle_config.warg_can_falcon) || pc_isridingwug(sd) || sd->sc.data[SC__GROOMY]) {
-				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-				return false;
-			}
-			break;
 		case RA_WUGSTRIKE:
 			if( !pc_iswug(sd) && !pc_isridingwug(sd) ) {
 				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
@@ -15444,17 +15449,24 @@ bool skill_check_condition_castend(struct map_session_data* sd, uint16 skill_id,
 		case NC_SILVERSNIPER:
 		case NC_MAGICDECOY: {
 				int c = 0;
+				ShowMessage("md1\n");
 				int maxcount = skill_get_maxcount(skill_id,skill_lv);
 				int mob_class = (skill_id == NC_MAGICDECOY)? MOBID_MAGICDECOY_FIRE : MOBID_SILVERSNIPER;
 
 				if( battle_config.land_skill_limit && maxcount > 0 && ( battle_config.land_skill_limit&BL_PC ) ) {
+					ShowMessage("md2\n");
 					if( skill_id == NC_MAGICDECOY ) {
+						ShowMessage("md3\n");
 						int j;
 						for( j = mob_class; j <= MOBID_MAGICDECOY_WIND; j++ )
 							map_foreachinmap(skill_check_condition_mob_master_sub, sd->bl.m, BL_MOB, sd->bl.id, j, skill_id, &c);
-					} else
+					} else{
+						ShowMessage("md4\n");
 						map_foreachinmap(skill_check_condition_mob_master_sub, sd->bl.m, BL_MOB, sd->bl.id, mob_class, skill_id, &c);
+					}
+					ShowMessage("md5\n");
 					if( c >= maxcount ) {
+						ShowMessage("md6\n");
 						clif_skill_fail(sd , skill_id, USESKILL_FAIL_LEVEL, 0);
 						return false;
 					}
@@ -19342,19 +19354,22 @@ int skill_magicdecoy(struct map_session_data *sd, t_itemid nameid) {
 	struct mob_data *md;
 	nullpo_ret(sd);
 	skill = sd->menuskill_val;
+	ShowMessage("skill1\n");
 
-	if( !nameid || !itemdb_group_item_exists(IG_ELEMENT, nameid) || (i = pc_search_inventory(sd,nameid)) < 0 || !skill || pc_delitem(sd,i,1,0,0,LOG_TYPE_CONSUME) ) {
-		clif_skill_fail(sd,NC_MAGICDECOY,USESKILL_FAIL_LEVEL,0);
-		return 0;
-	}
+	// if( !nameid || !itemdb_group_item_exists(IG_ELEMENT, nameid) || (i = pc_search_inventory(sd,nameid)) < 0 || !skill || pc_delitem(sd,i,1,0,0,LOG_TYPE_CONSUME) ) {
+	// 	clif_skill_fail(sd,NC_MAGICDECOY,USESKILL_FAIL_LEVEL,0);
+	// 	ShowMessage("skill2\n");
+	// 	return 0;
+	// }
 
 	// Spawn Position
-	pc_delitem(sd,i,1,0,0,LOG_TYPE_CONSUME);
+	// pc_delitem(sd,i,1,0,0,LOG_TYPE_CONSUME);
 	x = sd->sc.comet_x;
 	y = sd->sc.comet_y;
 	sd->sc.comet_x = 0;
 	sd->sc.comet_y = 0;
 	sd->menuskill_val = 0;
+	ShowMessage("skill3\n");
 
 	// Item picked decides the mob class
 	switch(nameid) {
@@ -19363,12 +19378,15 @@ int skill_magicdecoy(struct map_session_data *sd, t_itemid nameid) {
 		case ITEMID_YELLOW_WISH_PTS:	class_ = MOBID_MAGICDECOY_WIND;		break;
 		case ITEMID_LIME_GREEN_PTS:		class_ = MOBID_MAGICDECOY_EARTH;	break;
 		default:
+			ShowMessage("skill4\n");
 			clif_skill_fail(sd,NC_MAGICDECOY,USESKILL_FAIL_LEVEL,0);
 			return 0;
 	}
 
 	md = mob_once_spawn_sub(&sd->bl, sd->bl.m, x, y, sd->status.name, class_, "", SZ_SMALL, AI_NONE);
+	ShowMessage("skill5\n");
 	if( md ) {
+		ShowMessage("skill6\n");
 		struct unit_data *ud = unit_bl2ud(&md->bl);
 		md->master_id = sd->bl.id;
 		md->special_state.ai = AI_FAW;
@@ -19379,6 +19397,7 @@ int skill_magicdecoy(struct map_session_data *sd, t_itemid nameid) {
 		if( md->deletetimer != INVALID_TIMER )
 			delete_timer(md->deletetimer, mob_timer_delete);
 		md->deletetimer = add_timer (gettick() + skill_get_time(NC_MAGICDECOY,skill), mob_timer_delete, md->bl.id, 0);
+		ShowMessage("skill7\n");
 		mob_spawn(md);
 	}
 

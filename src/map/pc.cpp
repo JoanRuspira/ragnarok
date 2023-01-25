@@ -9181,8 +9181,6 @@ bool pc_setparam(struct map_session_data *sd,int64 type,int64 val_tmp)
  *------------------------------------------*/
 void pc_heal(struct map_session_data *sd,unsigned int hp,unsigned int sp, int type)
 {
-	ShowStatus("Heal funct inside.\n");
-
 	if (type&2) {
 		if (hp || type&4)
 			ShowStatus("Heal 1!.\n");

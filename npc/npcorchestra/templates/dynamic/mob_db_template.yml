@@ -1871,23 +1871,152 @@ Body:
       - Item: Poporing_Card
         Rate: 10
         StealProtected: true
-
+  - Id: 2042
+    AegisName: SILVERSNIPER
+    Name: Silver Sniper
+    Level: 100
+    Hp: 4500
+    Attack: 390
+    Defense: 80
+    MagicDefense: 10
+    Str: 10
+    Agi: 60
+    Vit: 10
+    Int: 10
+    Dex: 120
+    Luk: 10
+    AttackRange: 9
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 1
+    WalkSpeed: 1000
+    AttackDelay: 504
+    AttackMotion: 1020
+    DamageMotion: 360
+    Ai: 10
+    Drops:
+      - Item: Steel
+        Rate: 500
+  - Id: 2043
+    AegisName: MAGICDECOY_FIRE
+    Name: MagicDecoyFire
+    Level: 100
+    Hp: 2500
+    Attack: 195
+    Defense: 16
+    MagicDefense: 60
+    Str: 10
+    Agi: 10
+    Vit: 10
+    Int: 100
+    Dex: 60
+    Luk: 10
+    AttackRange: 7
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Fire
+    ElementLevel: 1
+    WalkSpeed: 1000
+    AttackDelay: 504
+    AttackMotion: 1020
+    DamageMotion: 360
+    Ai: 10
+    Drops:
+      - Item: Steel
+        Rate: 500
+  - Id: 2044
+    AegisName: MAGICDECOY_WATER
+    Name: MagicDecoyWater
+    Level: 100
+    Hp: 2500
+    Attack: 195
+    Defense: 16
+    MagicDefense: 60
+    Str: 10
+    Agi: 10
+    Vit: 10
+    Int: 100
+    Dex: 60
+    Luk: 10
+    AttackRange: 7
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Water
+    ElementLevel: 1
+    WalkSpeed: 1000
+    AttackDelay: 504
+    AttackMotion: 1020
+    DamageMotion: 360
+    Ai: 10
+    Drops:
+      - Item: Steel
+        Rate: 500
+  - Id: 2045
+    AegisName: MAGICDECOY_EARTH
+    Name: MagicDecoyEarth
+    Level: 100
+    Hp: 2500
+    Attack: 195
+    Defense: 16
+    MagicDefense: 60
+    Str: 10
+    Agi: 10
+    Vit: 10
+    Int: 100
+    Dex: 60
+    Luk: 10
+    AttackRange: 7
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 1000
+    AttackDelay: 504
+    AttackMotion: 1020
+    DamageMotion: 360
+    Ai: 10
+    Drops:
+      - Item: Steel
+        Rate: 500
+  - Id: 2046
+    AegisName: MAGICDECOY_WIND
+    Name: MagicDecoyWind
+    Level: 100
+    Hp: 2500
+    Attack: 195
+    Defense: 16
+    MagicDefense: 60
+    Str: 10
+    Agi: 10
+    Vit: 10
+    Int: 100
+    Dex: 60
+    Luk: 10
+    AttackRange: 7
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Wind
+    ElementLevel: 1
+    WalkSpeed: 1000
+    AttackDelay: 504
+    AttackMotion: 1020
+    DamageMotion: 360
+    Ai: 10
+    Drops:
+      - Item: Steel
+        Rate: 500
 # JOAN
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   # - Id: 1026
   #   AegisName: MUNAK
   #   Name: Munak
