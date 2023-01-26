@@ -6076,6 +6076,11 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				splash, BL_CHAR, src, NULL, type, tick);
 		}
 		break;
+	case HT_SPIRITANIMAL:
+		clif_specialeffect(src, EF_LINELINK3, AREA);
+		clif_specialeffect(src, EF_VIOLENTGALE, AREA);
+		clif_specialeffect(src, 1237, AREA);
+		break;
 
 	case SM_PROVOKE:
 	case SM_SELFPROVOKE:
@@ -6472,6 +6477,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case KN_THQUICKEN:
 	case RG_DAGGERQUICKEN:
 	case BS_AXEQUICKEN:
+	case HT_BOWQUICKEN:
 	case AL_MACEQUICKEN:
 		clif_specialeffect(src, EF_TWOHANDQUICKEN, AREA);
 		clif_skill_nodamage(bl, bl, skill_id, skill_lv, sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));

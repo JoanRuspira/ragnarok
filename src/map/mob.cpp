@@ -4020,6 +4020,14 @@ int mob_clone_spawn(struct map_session_data *sd, int16 m, int16 x, int16 y, cons
 		ms->skill_lv = sd->status.skill[sk_idx].lv;
 		ms->state = MSS_ANY;
 		ms->permillage = 500*battle_config.mob_skill_rate/100; //Default chance of all skills: 5%
+		if (mob_id == MOBID_SILVERSNIPER || 
+			mob_id == MOBID_MAGICDECOY_FIRE || 
+			mob_id == MOBID_MAGICDECOY_WATER || 
+			mob_id == MOBID_MAGICDECOY_EARTH || 
+			mob_id == MOBID_MAGICDECOY_WIND
+		){
+			ms->permillage = 10000; //Always use skills
+		}
 		ms->emotion = -1;
 		ms->cancel = 0;
 		ms->casttime = skill_castfix(&sd->bl,skill_id, ms->skill_lv);
@@ -5721,6 +5729,15 @@ static bool mob_parse_row_mobskilldb(char** str, int columns, int current)
 		ms->permillage = 1;
 	else
 		ms->permillage = tmp;
+
+	if (mob_id == MOBID_SILVERSNIPER || 
+			mob_id == MOBID_MAGICDECOY_FIRE || 
+			mob_id == MOBID_MAGICDECOY_WATER || 
+			mob_id == MOBID_MAGICDECOY_EARTH || 
+			mob_id == MOBID_MAGICDECOY_WIND
+		){
+			ms->permillage = 10000; //Always use skills
+		}
 	ms->casttime = atoi(str[6]);
 	ms->delay = atoi(str[7]);
 	if (battle_config.mob_skill_delay != 100)
