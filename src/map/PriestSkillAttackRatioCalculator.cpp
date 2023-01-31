@@ -142,19 +142,19 @@ int PriestSkillAttackRatioCalculator::calculate_magnus_exorcismus_atk_ratio(int 
 	int ratio = 0;
 	switch (skill_lv) {
 		case 1:
-			ratio = -80;
-			break;
-		case 2:
 			ratio = -70;
 			break;
-		case 3:
+		case 2:
 			ratio = -60;
 			break;
-		case 4:
+		case 3:
 			ratio = -50;
 			break;
-		case 5:
+		case 4:
 			ratio = -40;
+			break;
+		case 5:
+			ratio = -30;
 			break;
 		}
 	return ratio;
@@ -165,19 +165,19 @@ int PriestSkillAttackRatioCalculator::calculate_judex_atk_ratio(int skill_lv)
 	int ratio = 0;
 	switch (skill_lv) {
 		case 1:
-			ratio = 25;
-			break;
-		case 2:
 			ratio = 125;
 			break;
-		case 3:
+		case 2:
 			ratio = 225;
 			break;
-		case 4:
+		case 3:
 			ratio = 325;
 			break;
-		case 5:
+		case 4:
 			ratio = 425;
+			break;
+		case 5:
+			ratio = 525;
 			break;
 		}
 	return ratio;
@@ -188,19 +188,19 @@ int PriestSkillAttackRatioCalculator::calculate_spiritu_sancti_atk_ratio(int ski
 	int ratio = 0;
 	switch (skill_lv) {
 		case 1:
-			ratio = 25;
-			break;
-		case 2:
 			ratio = 125;
 			break;
-		case 3:
+		case 2:
 			ratio = 225;
 			break;
-		case 4:
+		case 3:
 			ratio = 325;
 			break;
-		case 5:
+		case 4:
 			ratio = 425;
+			break;
+		case 5:
+			ratio = 525;
 			break;
 		}
 	return ratio;

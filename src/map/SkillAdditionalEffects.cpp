@@ -244,15 +244,15 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 					break; // If a normal attack is a skill, it's splash damage. [Inkfish]
 				if (sd) {
 					// Automatic trigger of Blitz Beat
-					if (pc_isfalcon(sd) && sd->status.weapon == W_BOW && (skill = pc_checkskill(sd, HT_BLITZBEAT)) > 0 &&
-						rnd() % 1000 <= sstatus->luk * 10 / 3 + 1) {
-						rate = (sd->status.job_level + 9) / 10;
-						skill_castend_damage_id(src, bl, HT_BLITZBEAT, (skill < rate) ? skill : rate, tick, SD_LEVEL);
+					if (pc_isfalcon(sd) && (skill = pc_checkskill(sd, HT_STEELCROW)) > 0 &&
+						rnd() % 1000 <= sstatus->luk * (2*skill) / 6 + 1) {
+						skill_castend_damage_id(src, bl, HT_BLITZBEAT, skill, tick, 0);
 					}
 					// Automatic trigger of Warg Strike [Jobbie]
-					if (pc_iswug(sd) && (skill = pc_checkskill(sd, RA_WUGSTRIKE)) > 0 && rnd() % 1000 <= sstatus->luk * 10 / 3 + 1)
+					if (pc_iswug(sd) && (skill = pc_checkskill(sd, RA_WUGMASTERY)) > 0 &&
+						rnd() % 1000 <= sstatus->luk * (2*skill) / 6 + 1) {
 						skill_castend_damage_id(src, bl, RA_WUGSTRIKE, skill, tick, 0);
-
+					}
 					//Mug
 					if (dstmd && sd->status.weapon != W_BOW && 
 						(skill = pc_checkskill(sd, RG_SNATCHER)) > 0 

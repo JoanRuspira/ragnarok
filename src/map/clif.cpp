@@ -10632,12 +10632,15 @@ void clif_parse_LoadEndAck(int fd,struct map_session_data *sd)
 
 		if (sd->sc.option&OPTION_FALCON)
 			clif_status_load(&sd->bl, EFST_FALCON, 1);
+		else if (sd->sc.option&OPTION_WUG)
+			clif_status_load(&sd->bl, EFST_WARG, 1);
 		else if (sd->sc.option&(OPTION_RIDING|OPTION_DRAGON))
 			clif_status_load(&sd->bl, EFST_RIDING, 1);
 		else if (sd->sc.option&OPTION_WUGRIDER)
 			clif_status_load(&sd->bl, EFST_WUGRIDER, 1);
 		else if (sd->sc.data[SC_ALL_RIDING])
 			clif_status_load(&sd->bl, EFST_ALL_RIDING, 1);
+		
 
 		if(sd->status.manner < 0)
 			sc_start(&sd->bl,&sd->bl,SC_NOCHAT,100,0,0);

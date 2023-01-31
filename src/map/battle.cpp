@@ -2854,6 +2854,10 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case WM_GREAT_ECHO:
 			skillratio += BardSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
+		// case HT_BLITZBEAT:
+		// case RA_WUGSTRIKE:
+		// 	skillratio += HunterSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
+		// 	break;
 		case MER_CRASH:
 			skillratio += 10 * skill_lv;
 			break;
@@ -3225,9 +3229,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			break;
 		case RA_WUGDASH:// ATK 300%
 			skillratio += 200;
-			break;
-		case RA_WUGSTRIKE:
-			skillratio += -100 + 200 * skill_lv;
 			break;
 		case RA_WUGBITE:
 			skillratio += 300 + 200 * skill_lv;
@@ -5694,7 +5695,7 @@ struct Damage battle_calc_misc_attack(struct block_list *src,struct block_list *
 			md.damage = 50;
 			md.flag |= BF_WEAPON;
 			break;
-#ifdef RENEWAL
+
 		case HT_LANDMINE:
 		case MA_LANDMINE:
 		case HT_BLASTMINE:
@@ -5703,27 +5704,11 @@ struct Damage battle_calc_misc_attack(struct block_list *src,struct block_list *
 			md.damage += md.damage * (rnd()%20 - 10) / 100;
 			md.damage += (sd ? pc_checkskill(sd,RA_RESEARCHTRAP) * 40 : 0);
 			break;
-#else
-		case HT_LANDMINE:
-		case MA_LANDMINE:
-			md.damage = skill_lv * (sstatus->dex + 75) * (100 + sstatus->int_) / 100;
-			break;
-		case HT_BLASTMINE:
-			md.damage = skill_lv * (sstatus->dex / 2 + 50) * (100 + sstatus->int_) / 100;
-			break;
-		case HT_CLAYMORETRAP:
-			md.damage = skill_lv * (sstatus->dex / 2 + 75) * (100 + sstatus->int_) / 100;
-			break;
-#endif
 		case HT_BLITZBEAT:
 		case SN_FALCONASSAULT:
 			{
 				uint16 skill;
-
-				//Blitz-beat Damage
-				if(!sd || !(skill = pc_checkskill(sd,HT_STEELCROW)))
-					skill = 0;
-				md.damage = (sstatus->dex / 10 + sstatus->agi / 2 + skill * 12 + 40) * 2;
+				md.damage = (sstatus->dex / 5 + sstatus->agi / 2 + skill_lv * 30) * 2;
 				RE_LVL_MDMOD(100);
 
 				if (skill_id == SN_FALCONASSAULT) {

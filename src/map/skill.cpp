@@ -6080,6 +6080,8 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		clif_specialeffect(src, EF_LINELINK3, AREA);
 		clif_specialeffect(src, EF_VIOLENTGALE, AREA);
 		clif_specialeffect(src, 1237, AREA);
+		clif_skill_nodamage(src,bl,skill_id,skill_lv,
+				sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
 		break;
 
 	case SM_PROVOKE:

@@ -189,6 +189,12 @@
     <Filter Include="Source Files\skillAdditionalEffectsCalculator\bard">
       <UniqueIdentifier>{941f5ce7-d967-4784-bc45-6ab3bbaa36e2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\skillAtkRatioCalculator\hunter">
+      <UniqueIdentifier>{073f68e4-f0fe-4a1a-825a-e8d1b2ce1490}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\skillAtkRatioCalculator\hunter">
+      <UniqueIdentifier>{af608491-9e34-4924-8902-64abfceecc08}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="achievement.hpp">
@@ -428,6 +434,9 @@
     <ClInclude Include="BardAdditionalEffectsCalculator.h">
       <Filter>Header Files\skillAdditionalEffectsCalculator\bard</Filter>
     </ClInclude>
+    <ClInclude Include="HunterSkillAttackRatioCalculator.h">
+      <Filter>Header Files\skillAtkRatioCalculator\hunter</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="achievement.cpp">
@@ -639,6 +648,9 @@
     </ClCompile>
     <ClCompile Include="BardAdditionalEffectsCalculator.cpp">
       <Filter>Source Files\skillAdditionalEffectsCalculator\bard</Filter>
+    </ClCompile>
+    <ClCompile Include="HunterSkillAttackRatioCalculator.cpp">
+      <Filter>Source Files\skillAtkRatioCalculator\hunter</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

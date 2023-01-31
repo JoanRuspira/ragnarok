@@ -41,6 +41,7 @@
 #include "BlacksmithSkillAtkRatioCalculator.h"
 #include "BardSkillAttackRatioCalculator.h"
 #include "BardAdditionalEffectsCalculator.h"
+#include "HunterSkillAttackRatioCalculator.h"
 
 
 

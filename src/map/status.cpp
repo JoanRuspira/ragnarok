@@ -375,7 +375,7 @@ void initChangeTables(void)
 		);
 #endif
 	set_sc( AC_CONCENTRATION	, SC_CONCENTRATE	, EFST_CONCENTRATION, SCB_AGI|SCB_DEX );
-	set_sc( HT_SPIRITANIMAL	, SC_CONCENTRATE	, EFST_CONCENTRATION, SCB_AGI|SCB_DEX );
+	set_sc( HT_SPIRITANIMAL	, SC_SPIRITANIMAL	, EFST_SPIRITANIMAL, SCB_INT|SCB_MATK );
 	set_sc( TF_HIDING		, SC_HIDING		, EFST_HIDING		, SCB_SPEED );
 	add_sc( TF_POISON		, SC_POISON		);
 	set_sc( KN_TWOHANDQUICKEN	, SC_TWOHANDQUICKEN	, EFST_TWOHANDQUICKEN	, SCB_ASPD|SCB_WATK );
@@ -6162,6 +6162,8 @@ static unsigned short status_calc_int(struct block_list *bl, struct status_chang
 		return (unsigned short)cap_value(int_,0,USHRT_MAX);
 	}
 
+	if(sc->data[SC_SPIRITANIMAL])
+		int_ += sc->data[SC_SPIRITANIMAL]->val1*3;
 	if(sc->data[SC_POEMBRAGI])
 		int_ += sc->data[SC_POEMBRAGI]->val2;
 	if(sc->data[SC_SPIRITGROWTH])
@@ -6647,6 +6649,8 @@ static unsigned short status_calc_matk(struct block_list *bl, struct status_chan
 	
 	if(!sc || !sc->count)
 		return cap_value(matk,0,USHRT_MAX);
+	if(sc->data[SC_SPIRITANIMAL])
+		matk += sc->data[SC_SPIRITANIMAL]->val1*6;
 	if(sc->data[SC_CRUCIS_PLAYER])
 		matk += sc->data[SC_CRUCIS_PLAYER]->val3;
 	if(sc->data[SC_ECHOSONG])

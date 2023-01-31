@@ -9679,7 +9679,12 @@ void pc_setoption(struct map_session_data *sd,int type, int subtype)
 	if (type&OPTION_FALCON && !(p_type&OPTION_FALCON)) //Falcon ON
 		clif_status_load(&sd->bl,EFST_FALCON,1);
 	else if (!(type&OPTION_FALCON) && p_type&OPTION_FALCON) //Falcon OFF
-		clif_status_load(&sd->bl,EFST_FALCON,0);
+		clif_status_load(&sd->bl,EFST_FALCON,0);	
+
+	if (type&OPTION_WUG && !(p_type&OPTION_WUG)) //Warg ON
+		clif_status_load(&sd->bl,EFST_WARG,1);
+	else if (!(type&OPTION_WUG) && p_type&OPTION_WUG) //Warg OFF
+		clif_status_load(&sd->bl,EFST_WARG,0);
 
 	if( type&OPTION_WUGRIDER && !(p_type&OPTION_WUGRIDER) ) { // Mounting
 		clif_status_load(&sd->bl,EFST_WUGRIDER,1);

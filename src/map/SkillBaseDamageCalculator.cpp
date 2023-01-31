@@ -342,19 +342,22 @@ void SkillBaseDamageCalculator::battle_calc_attack_masteries(Damage * wd, block_
 			ATK_ADD(wd->masteryAtk, wd->masteryAtk2, 3 * skill);
 		}
 
-		switch (skill_id) {
-		case RA_WUGDASH:
+		// switch (skill_id) {
+		// case RA_WUGDASH:
+		// case RA_WUGSTRIKE:
+		// case RA_WUGBITE:
+		// 	if (sd) {
+		// 		skill = pc_checkskill(sd, RA_TOOTHOFWUG);
+		// 		ATK_ADD(wd->damage, wd->damage2, 30 * skill * 2);
+		// 		ATK_ADD(wd->masteryAtk, wd->masteryAtk2, 30 * skill * 2);
+		// 	}
+		// 	break;
+		// }
 		case RA_WUGSTRIKE:
-		case RA_WUGBITE:
-			if (sd) {
-				skill = pc_checkskill(sd, RA_TOOTHOFWUG);
-
-				ATK_ADD(wd->damage, wd->damage2, 30 * skill * 2);
-				ATK_ADD(wd->masteryAtk, wd->masteryAtk2, 30 * skill * 2);
-			}
+			uint16 skill;
+			md.damage = (sstatus->dex / 5 + sstatus->int_ / 2 + skill_lv * 30) * 2;
+			RE_LVL_MDMOD(100);
 			break;
-		}
-
 		if (sc) { // Status change considered as masteries
 			if (sc->data[SC_NIBELUNGEN]) // With renewal, the level 4 weapon limitation has been removed
 				ATK_ADD(wd->masteryAtk, wd->masteryAtk2, sc->data[SC_NIBELUNGEN]->val2);

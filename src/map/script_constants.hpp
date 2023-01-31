@@ -1621,6 +1621,7 @@
 	export_constant(SC_THQUICKEN);
 	export_constant(SC_MACEQUICKEN);
 	export_constant(SC_BOWQUICKEN);
+	export_constant(SC_SPIRITANIMAL);
 #ifdef RENEWAL
 	export_constant(SC_EXTREMITYFIST2);
 #endif
@@ -2505,6 +2506,7 @@
 	export_constant(EFST_MAXIMIZE);
 	export_constant(EFST_RIDING);
 	export_constant(EFST_FALCON);
+	export_constant(EFST_WARG);
 	export_constant(EFST_TRICKDEAD);
 	export_constant(EFST_SHOUT);
 	export_constant(EFST_ENERGYCOAT);
