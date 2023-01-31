@@ -2854,10 +2854,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case WM_GREAT_ECHO:
 			skillratio += BardSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
-		// case HT_BLITZBEAT:
-		// case RA_WUGSTRIKE:
-		// 	skillratio += HunterSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
-		// 	break;
 		case MER_CRASH:
 			skillratio += 10 * skill_lv;
 			break;
@@ -3874,7 +3870,6 @@ static void battle_attack_sc_bonus(struct Damage* wd, struct block_list *src, st
 		if(sc->data[SC_UNLIMIT] && (wd->flag&(BF_LONG|BF_MAGIC)) == BF_LONG) {
 			switch(skill_id) {
 				case RA_WUGDASH:
-				case RA_WUGSTRIKE:
 				case RA_WUGBITE:
 					break;
 				default:
@@ -5703,6 +5698,11 @@ struct Damage battle_calc_misc_attack(struct block_list *src,struct block_list *
 			md.damage = (int64)(skill_lv * sstatus->dex * (3.0 + (float)status_get_lv(src) / 100.0) * (1.0 + (float)sstatus->int_ / 35.0));
 			md.damage += md.damage * (rnd()%20 - 10) / 100;
 			md.damage += (sd ? pc_checkskill(sd,RA_RESEARCHTRAP) * 40 : 0);
+			break;
+		case RA_WUGSTRIKE:
+			md.damage = (sstatus->dex / 5 + sstatus->int_ / 2 + skill_lv * 30) * 10;
+			RE_LVL_MDMOD(100);
+			HunterSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
 		case HT_BLITZBEAT:
 		case SN_FALCONASSAULT:

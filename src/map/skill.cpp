@@ -3864,6 +3864,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case NPC_SPLASHATTACK:
 		flag |= SD_PREAMBLE; // a fake packet will be sent for the first target to be hit
 	case AS_SPLASHER:
+	case RA_WUGSTRIKE:
 	case HT_BLITZBEAT:
 	case AC_SHOWER:
 	case MA_SHOWER:
@@ -4628,18 +4629,18 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 			map_foreachinrange(skill_area_sub, bl, skill_get_splash(skill_id, skill_lv), BL_CHAR, src, skill_id, skill_lv, tick, flag | BCT_ENEMY | SD_SPLASH | 1, skill_castend_damage_id);
 		}
 		break;
-	case RA_WUGSTRIKE:
-		if( sd && pc_isridingwug(sd) ){
-			short x[8]={0,-1,-1,-1,0,1,1,1};
-			short y[8]={1,1,0,-1,-1,-1,0,1};
-			uint8 dir = map_calc_dir(bl, src->x, src->y);
+	// case RA_WUGSTRIKE:
+	// 	if( sd && pc_isridingwug(sd) ){
+	// 		short x[8]={0,-1,-1,-1,0,1,1,1};
+	// 		short y[8]={1,1,0,-1,-1,-1,0,1};
+	// 		uint8 dir = map_calc_dir(bl, src->x, src->y);
 
-			if( unit_movepos(src, bl->x+x[dir], bl->y+y[dir], 1, 1) ) {
-				clif_blown(src);
-				skill_attack(BF_WEAPON, src, src, bl, skill_id, skill_lv, tick, flag);
-			}
-			break;
-		}
+	// 		if( unit_movepos(src, bl->x+x[dir], bl->y+y[dir], 1, 1) ) {
+	// 			clif_blown(src);
+	// 			// skill_attack(BF_WEAPON, src, src, bl, skill_id, skill_lv, tick, flag);
+	// 		}
+	// 		break;
+	// 	}
 	case RA_WUGBITE:
 		if( path_search(NULL,src->m,src->x,src->y,bl->x,bl->y,1,CELL_CHKNOREACH) ) {
 			skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag);
@@ -14918,7 +14919,7 @@ bool skill_check_condition_castbegin(struct map_session_data* sd, uint16 skill_i
 			}
 			break;
 		case RA_WUGSTRIKE:
-			if( !pc_iswug(sd) && !pc_isridingwug(sd) ) {
+			if( !pc_iswug(sd) ) {
 				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
 				return false;
 			}

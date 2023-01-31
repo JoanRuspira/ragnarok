@@ -4450,7 +4450,6 @@ Body:
         Count: 4
       - Level: 5
         Count: 5
-    SplashArea: 1
     CastCancel: true
     Cooldown: 5000
     AfterCastActDelay: 400
@@ -19521,24 +19520,21 @@ Body:
     Name: RA_WUGSTRIKE
     Description: Warg Strike
     MaxLevel: 5
-    Type: Weapon
+    Type: Misc
     TargetType: Attack
-    Cooldown: 5000
-    AfterCastActDelay: 400
     DamageFlags:
-      IgnoreAtkCard: true
-      IgnoreElement: true
-      IgnoreDefCard: true
+      IgnoreFlee: true
     Flags:
-      AllowOnWarg: true
-      IgnoreAutoGuard: true
-      IgnoreCicada: true
-      IncreaseDanceWithWugDamage: true
-    Range: 9
+      TargetTrap: true
+      AlterRangeVulture: true
+    Range: 5
     Hit: Single
     HitCount: 1
+    CastCancel: true
+    Cooldown: 5000
+    AfterCastActDelay: 400
     Requires:
-      SpCost: 30
+      SpCost: 25
   - Id: 2244
     Name: RA_WUGBITE
     Description: Warg Bite

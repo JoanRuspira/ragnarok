@@ -12,6 +12,7 @@ int HunterSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 	switch (skill_id) {
 		case RA_WUGSTRIKE:
 			add_slash_special_effects(target);
+			return 0;
 			break;
 		default:
 			return 0;
@@ -21,8 +22,6 @@ int HunterSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 
 void HunterSkillAttackRatioCalculator::add_slash_special_effects(struct block_list *target)
 {
-    // clif_specialeffect(target, EF_PEONG, AREA);
-	// clif_specialeffect(target, EF_BANISHING_BUSTER, AREA);
-    // clif_specialeffect(target, 1242, AREA);
+    clif_specialeffect(target, EF_SONIC_CLAW, AREA);
 }
 
