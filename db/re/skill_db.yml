@@ -1909,8 +1909,8 @@ Body:
     Hit: Single
     HitCount: 1
     SplashArea: 3
-    Cooldown: 2000
-    AfterCastActDelay: 400
+    Cooldown: 20000
+    AfterCastActDelay: 2000
     Duration1:
       - Level: 1
         Time: 80000
@@ -19479,12 +19479,10 @@ Body:
     TargetType: Self
     Hit: Single
     HitCount: 1
-    AfterCastActDelay: 1000
+    AfterCastActDelay: 3000
+    Cooldown: 20000
     Requires:
-      SpCost: 5
-      ItemCost:
-        - Item: Wolf's_Flute
-          Amount: 0
+      SpCost: 90
   - Id: 2241
     Name: RA_WUGRIDER
     Description: Warg Rider
@@ -19637,6 +19635,9 @@ Body:
     AfterCastActDelay: 2000
     Requires:
       SpCost: 25
+      ItemCost:
+        - Item: Face_Paint
+          Amount: 1
   - Id: 2248
     Name: RA_RESEARCHTRAP
     Description: Research Trap

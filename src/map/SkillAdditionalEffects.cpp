@@ -245,12 +245,12 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 				if (sd) {
 					// Automatic trigger of Blitz Beat
 					if (pc_isfalcon(sd) && (skill = pc_checkskill(sd, HT_STEELCROW)) > 0 &&
-						rnd() % 1000 <= sstatus->luk * (2*skill) / 6 + 1) {
+						rnd() % 1000 <= sstatus->luk * (2*skill) / 5 + 1) {
 						skill_castend_damage_id(src, bl, HT_BLITZBEAT, skill, tick, 0);
 					}
-					// Automatic trigger of Warg Strike [Jobbie]
+					// Automatic trigger of Warg Strike
 					if (pc_iswug(sd) && (skill = pc_checkskill(sd, RA_WUGMASTERY)) > 0 &&
-						rnd() % 1000 <= sstatus->luk * (2*skill) / 6 + 1) {
+						rnd() % 1000 <= sstatus->luk * (2*skill) / 5 + 1) {
 						skill_castend_damage_id(src, bl, RA_WUGSTRIKE, skill, tick, 0);
 					}
 					//Mug
