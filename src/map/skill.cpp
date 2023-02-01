@@ -15458,24 +15458,18 @@ bool skill_check_condition_castend(struct map_session_data* sd, uint16 skill_id,
 		case NC_SILVERSNIPER:
 		case NC_MAGICDECOY: {
 				int c = 0;
-				ShowMessage("md1\n");
 				int maxcount = skill_get_maxcount(skill_id,skill_lv);
 				int mob_class = (skill_id == NC_MAGICDECOY)? MOBID_MAGICDECOY_FIRE : MOBID_SILVERSNIPER;
 
 				if( battle_config.land_skill_limit && maxcount > 0 && ( battle_config.land_skill_limit&BL_PC ) ) {
-					ShowMessage("md2\n");
 					if( skill_id == NC_MAGICDECOY ) {
-						ShowMessage("md3\n");
 						int j;
 						for( j = mob_class; j <= MOBID_MAGICDECOY_WIND; j++ )
 							map_foreachinmap(skill_check_condition_mob_master_sub, sd->bl.m, BL_MOB, sd->bl.id, j, skill_id, &c);
 					} else{
-						ShowMessage("md4\n");
 						map_foreachinmap(skill_check_condition_mob_master_sub, sd->bl.m, BL_MOB, sd->bl.id, mob_class, skill_id, &c);
 					}
-					ShowMessage("md5\n");
 					if( c >= maxcount ) {
-						ShowMessage("md6\n");
 						clif_skill_fail(sd , skill_id, USESKILL_FAIL_LEVEL, 0);
 						return false;
 					}

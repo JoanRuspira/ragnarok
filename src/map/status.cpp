@@ -3211,8 +3211,23 @@ int status_calc_mob_(struct mob_data* md, enum e_status_calc_opt opt)
 					struct status_data *mstatus = status_get_status_data(mbl);
 					if(!mstatus)
 						break;
-					status->max_hp = (1000 * ud->skill_lv) + (mstatus->hp / 3) + (status_get_lv(mbl) * 12);
-					status->batk = 200 * ud->skill_lv;
+
+					struct map_session_data *msd;
+					if ((msd = map_id2sd(md->master_id)) != NULL) {
+						status->max_hp = msd->status.max_hp;
+						status->str = msd->status.str;
+						status->agi = msd->status.agi;
+						status->vit = msd->status.vit;
+						status->int_ = msd->status.int_;
+						status->dex = msd->status.dex;
+						status->luk = msd->status.luk;
+					}
+					status->matk_max = mstatus->matk_max;
+					status->matk_min = mstatus->matk_min;
+					status->batk = mstatus->watk;
+					// status->max_hp = (1000 * ((TBL_PC*)mbl)->menuskill_val) + (mstatus->sp * 4) + (status_get_lv(mbl) * 12);
+					// status->matk_min = status->matk_max = 250 + 50*((TBL_PC*)mbl)->menuskill_val;
+					// status->batk = 200 * ud->skill_lv;				
 					break;
 				}
 				case NC_MAGICDECOY:
@@ -3220,8 +3235,22 @@ int status_calc_mob_(struct mob_data* md, enum e_status_calc_opt opt)
 					struct status_data *mstatus = status_get_status_data(mbl);
 					if(!mstatus)
 						break;
-					status->max_hp = (1000 * ((TBL_PC*)mbl)->menuskill_val) + (mstatus->sp * 4) + (status_get_lv(mbl) * 12);
-					status->matk_min = status->matk_max = 250 + 50*((TBL_PC*)mbl)->menuskill_val;
+					
+					struct map_session_data *msd;
+					if ((msd = map_id2sd(md->master_id)) != NULL) {
+						status->max_hp = msd->status.max_hp;
+						status->str = msd->status.str;
+						status->agi = msd->status.agi;
+						status->vit = msd->status.vit;
+						status->int_ = msd->status.int_;
+						status->dex = msd->status.dex;
+						status->luk = msd->status.luk;
+					}
+					// status->max_hp = (1000 * ((TBL_PC*)mbl)->menuskill_val) + (mstatus->sp * 4) + (status_get_lv(mbl) * 12);
+					// status->matk_min = status->matk_max = 250 + 50*((TBL_PC*)mbl)->menuskill_val;
+					status->matk_max = mstatus->matk_max;
+					status->matk_min = mstatus->matk_min;
+					status->batk = mstatus->watk;
 					break;
 				}
 			}

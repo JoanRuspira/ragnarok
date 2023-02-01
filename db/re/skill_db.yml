@@ -720,7 +720,7 @@ Body:
   - Id: 21
     Name: MG_THUNDERSTORM
     Description: Thunderstorm
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Magic
     TargetType: Ground
     Flags:
@@ -748,7 +748,7 @@ Body:
         Count: 9
       - Level: 10
         Count: 10
-    Element: Wind
+    Element: Neutral
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -20569,6 +20569,9 @@ Body:
     HitCount: 1
     ActiveInstance: 2
     CastCancel: true
+    CastTime: 3000
+    AfterCastActDelay: 400
+    Cooldown: 3000
     Duration1:
       - Level: 1
         Time: 20000
@@ -20580,22 +20583,13 @@ Body:
         Time: 50000
       - Level: 5
         Time: 60000
-    CastTimeFlags:
-      IgnoreDex: true
-      IgnoreStatus: true
-      IgnoreItemBonus: true
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 5
-        - Level: 2
-          Amount: 5
-        - Level: 3
-          Amount: 5
-        - Level: 4
-          Amount: 5
-        - Level: 5
-          Amount: 5
+      SpCost: 35
+      ItemCost:
+        - Item: Tree_Of_Archer_2
+          Amount: 1
+        - Item: Red_Feather
+          Amount: 1
   - Id: 2282
     Name: NC_MAGICDECOY
     Description: FAW - Magic Decoy
