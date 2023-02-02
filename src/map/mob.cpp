@@ -4024,7 +4024,11 @@ int mob_clone_spawn(struct map_session_data *sd, int16 m, int16 x, int16 y, cons
 			mob_id == MOBID_MAGICDECOY_FIRE || 
 			mob_id == MOBID_MAGICDECOY_WATER || 
 			mob_id == MOBID_MAGICDECOY_EARTH || 
-			mob_id == MOBID_MAGICDECOY_WIND
+			mob_id == MOBID_MAGICDECOY_WIND || 
+			mob_id == MOBID_LICHTERN_B || 
+			mob_id == MOBID_LICHTERN_Y || 
+			mob_id == MOBID_LICHTERN_R || 
+			mob_id == MOBID_LICHTERN_G
 		){
 			ms->permillage = 10000; //Always use skills
 		}
@@ -5734,7 +5738,11 @@ static bool mob_parse_row_mobskilldb(char** str, int columns, int current)
 			mob_id == MOBID_MAGICDECOY_FIRE || 
 			mob_id == MOBID_MAGICDECOY_WATER || 
 			mob_id == MOBID_MAGICDECOY_EARTH || 
-			mob_id == MOBID_MAGICDECOY_WIND
+			mob_id == MOBID_MAGICDECOY_WIND || 
+			mob_id == MOBID_LICHTERN_B || 
+			mob_id == MOBID_LICHTERN_Y || 
+			mob_id == MOBID_LICHTERN_R || 
+			mob_id == MOBID_LICHTERN_G
 		){
 			ms->permillage = 10000; //Always use skills
 		}

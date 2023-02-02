@@ -1951,6 +1951,36 @@ Body:
       SpCost: 50
       Weapon:
         Bow: true
+  - Id: 824
+    Name: HT_MAGICDECOY
+    Description: FAW - Magic Decoy
+    MaxLevel: 5
+    TargetType: Ground
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      AllowOnMado: true
+    Range: 2
+    Hit: Single
+    HitCount: 1
+    ActiveInstance: 2
+    CastCancel: true
+    Duration1:
+      - Level: 1
+        Time: 20000
+      - Level: 2
+        Time: 30000
+      - Level: 3
+        Time: 40000
+      - Level: 4
+        Time: 50000
+      - Level: 5
+        Time: 60000
+    Requires:
+      SpCost: 35
+      ItemCost:
+        - Item: Tree_Of_Archer_2
+          Amount: 1
   - Id: 51
     Name: TF_HIDING
     Description: Hiding

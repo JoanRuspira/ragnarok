@@ -13019,9 +13019,7 @@ void clif_parse_ItemIdentify(int fd,struct map_session_data *sd) {
 /// Answer to arrow crafting item selection dialog (CZ_REQ_MAKINGARROW).
 /// 01ae <name id>.W
 void clif_parse_SelectArrow(int fd,struct map_session_data *sd) {
-	ShowMessage("arrow1\n");
 	if (pc_istrading(sd)) {
-		ShowMessage("arrow2\n");
 		//Make it fail to avoid shop exploits where you sell something different than you see.
 		clif_skill_fail(sd,sd->ud.skill_id,USESKILL_FAIL_LEVEL,0);
 		clif_menuskill_clear(sd);
@@ -13029,7 +13027,6 @@ void clif_parse_SelectArrow(int fd,struct map_session_data *sd) {
 	}
 	
 	struct PACKET_CZ_REQ_MAKINGARROW* p = (struct PACKET_CZ_REQ_MAKINGARROW*)RFIFOP( fd, 0 );
-	ShowMessage("arrow3\n");
 	switch (sd->menuskill_id) {
 		case AC_MAKINGARROW:
 			skill_arrow_create(sd,p->itemId);
@@ -13040,12 +13037,13 @@ void clif_parse_SelectArrow(int fd,struct map_session_data *sd) {
 		case GC_POISONINGWEAPON:
 			skill_poisoningweapon(sd,p->itemId);
 			break;
+		case HT_MAGICDECOY:
+			skill_magicdecoy(sd,p->itemId,HT_MAGICDECOY);
+			break;
 		case NC_MAGICDECOY:
-			ShowMessage("arrow4\n");
-			skill_magicdecoy(sd,p->itemId);
+			skill_magicdecoy(sd,p->itemId,NC_MAGICDECOY);
 			break;
 	}
-	ShowMessage("arrow5\n");
 	clif_menuskill_clear(sd);
 }
 
@@ -19012,20 +19010,17 @@ void clif_millenniumshield(struct block_list *bl, short shields) {
 /*==========================================
  * Magic Decoy Material List
  *------------------------------------------*/
-void clif_magicdecoy_list( struct map_session_data *sd, uint16 skill_lv, short x, short y ){
+void clif_magicdecoy_list( struct map_session_data *sd, uint16 skill_lv, short x, short y, int skill_id){
 	nullpo_retv( sd );
-	ShowMessage("mdlist1\n");
 	int fd = sd->fd;
 
 	if( !session_isActive( fd ) ){
-		ShowMessage("mdlist2\n");
 		return;
 	}
 
 	WFIFOHEAD( fd, sizeof( struct PACKET_ZC_MAKINGARROW_LIST ) + MAX_INVENTORY * sizeof( struct PACKET_ZC_MAKINGARROW_LIST_sub ) );
 	struct PACKET_ZC_MAKINGARROW_LIST *p = (struct PACKET_ZC_MAKINGARROW_LIST *)WFIFOP(fd, 0);
 	p->packetType = HEADER_ZC_MAKINGARROW_LIST;
-	ShowMessage("mdlist3\n");
 	int count = 4;
 	// for( int i = 0; i < MAX_INVENTORY; i++ ){
 	// 	if( itemdb_group_item_exists( IG_ELEMENT, sd->inventory.u.items_inventory[i].nameid ) ) {
@@ -19033,24 +19028,27 @@ void clif_magicdecoy_list( struct map_session_data *sd, uint16 skill_lv, short x
 	// 		count++;
 	// 	}
 	// }
-
-	p->items[0].itemId = client_nameid(6360);
-	p->items[1].itemId = client_nameid(6361);
-	p->items[2].itemId = client_nameid(6362);
-	p->items[3].itemId = client_nameid(6363);
-	
-	ShowMessage("mdlist4\n");
+	if (skill_id == NC_MAGICDECOY) {
+		p->items[0].itemId = client_nameid(6360);
+		p->items[1].itemId = client_nameid(6361);
+		p->items[2].itemId = client_nameid(6362);
+		p->items[3].itemId = client_nameid(6363);
+	}
+	if (skill_id == HT_MAGICDECOY) {
+		p->items[0].itemId = client_nameid(715);
+		p->items[1].itemId = client_nameid(716);
+		p->items[2].itemId = client_nameid(717);
+		p->items[3].itemId = client_nameid(910);
+	}
 	if( count > 0 ) {
-		ShowMessage("mdlist5\n");
 		p->packetLength = sizeof( struct PACKET_ZC_MAKINGARROW_LIST ) + count * sizeof( struct PACKET_ZC_MAKINGARROW_LIST_sub );
 		WFIFOSET( fd, p->packetLength );
-		sd->menuskill_id = NC_MAGICDECOY;
+		sd->menuskill_id = skill_id;
 		sd->menuskill_val = skill_lv;
 		sd->sc.comet_x = x;
 		sd->sc.comet_y = y;
 	}else{
-		ShowMessage("mdlist6\n");
-		clif_skill_fail( sd, NC_MAGICDECOY, USESKILL_FAIL_LEVEL, 0 );
+		clif_skill_fail( sd, skill_id, USESKILL_FAIL_LEVEL, 0 );
 	}
 }
 /*==========================================

@@ -1914,21 +1914,18 @@ Body:
     Int: 100
     Dex: 60
     Luk: 10
-    AttackRange: 7
-    SkillRange: 10
+    AttackRange: 11
+    SkillRange: 11
     ChaseRange: 12
     Size: Medium
     Race: Formless
     Element: Fire
     ElementLevel: 1
     WalkSpeed: 1000
-    AttackDelay: 6000
-    AttackMotion: 6000
-    DamageMotion: 6000
+    AttackDelay: 5000
+    AttackMotion: 5000
+    DamageMotion: 5000
     Ai: 10
-    Drops:
-      - Item: Steel
-        Rate: 500
   - Id: 2044
     AegisName: MAGICDECOY_WATER
     Name: MagicDecoyWater
@@ -1943,21 +1940,18 @@ Body:
     Int: 100
     Dex: 60
     Luk: 10
-    AttackRange: 7
-    SkillRange: 10
+    AttackRange: 11
+    SkillRange: 11
     ChaseRange: 12
     Size: Medium
     Race: Formless
     Element: Water
     ElementLevel: 1
     WalkSpeed: 1000
-    AttackDelay: 6000
-    AttackMotion: 6000
-    DamageMotion: 6000
+    AttackDelay: 5000
+    AttackMotion: 5000
+    DamageMotion: 5000
     Ai: 10
-    Drops:
-      - Item: Steel
-        Rate: 500
   - Id: 2045
     AegisName: MAGICDECOY_EARTH
     Name: MagicDecoyEarth
@@ -1972,21 +1966,18 @@ Body:
     Int: 100
     Dex: 60
     Luk: 10
-    AttackRange: 7
-    SkillRange: 10
+    AttackRange: 11
+    SkillRange: 11
     ChaseRange: 12
     Size: Medium
     Race: Formless
     Element: Earth
     ElementLevel: 1
     WalkSpeed: 1000
-    AttackDelay: 6000
-    AttackMotion: 6000
-    DamageMotion: 6000
+    AttackDelay: 5000
+    AttackMotion: 5000
+    DamageMotion: 5000
     Ai: 10
-    Drops:
-      - Item: Steel
-        Rate: 500
   - Id: 2046
     AegisName: MAGICDECOY_WIND
     Name: MagicDecoyWind
@@ -2001,21 +1992,122 @@ Body:
     Int: 100
     Dex: 60
     Luk: 10
-    AttackRange: 7
-    SkillRange: 10
+    AttackRange: 11
+    SkillRange: 11
     ChaseRange: 12
     Size: Medium
     Race: Formless
     Element: Wind
     ElementLevel: 1
     WalkSpeed: 1000
-    AttackDelay: 6000
-    AttackMotion: 6000
-    DamageMotion: 6000
+    AttackDelay: 5000
+    AttackMotion: 5000
+    DamageMotion: 5000
     Ai: 10
-    Drops:
-      - Item: Steel
-        Rate: 500
+  - Id: 2367
+    AegisName: LICHTERN_B
+    Name: MagicDecoyFire
+    Level: 100
+    Hp: 2500
+    Attack: 195
+    Defense: 16
+    MagicDefense: 60
+    Str: 10
+    Agi: 10
+    Vit: 10
+    Int: 100
+    Dex: 60
+    Luk: 10
+    AttackRange: 11
+    SkillRange: 11
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Fire
+    ElementLevel: 1
+    WalkSpeed: 1000
+    AttackDelay: 5000
+    AttackMotion: 5000
+    DamageMotion: 5000
+    Ai: 10
+  - Id: 2368
+    AegisName: LICHTERN_Y
+    Name: MagicDecoyFire
+    Level: 100
+    Hp: 2500
+    Attack: 195
+    Defense: 16
+    MagicDefense: 60
+    Str: 10
+    Agi: 10
+    Vit: 10
+    Int: 100
+    Dex: 60
+    Luk: 10
+    AttackRange: 11
+    SkillRange: 11
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Fire
+    ElementLevel: 1
+    WalkSpeed: 1000
+    AttackDelay: 5000
+    AttackMotion: 5000
+    DamageMotion: 5000
+    Ai: 10
+  - Id: 2369
+    AegisName: LICHTERN_R
+    Name: MagicDecoyFire
+    Level: 100
+    Hp: 2500
+    Attack: 195
+    Defense: 16
+    MagicDefense: 60
+    Str: 10
+    Agi: 10
+    Vit: 10
+    Int: 100
+    Dex: 60
+    Luk: 10
+    AttackRange: 11
+    SkillRange: 11
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Fire
+    ElementLevel: 1
+    WalkSpeed: 1000
+    AttackDelay: 5000
+    AttackMotion: 5000
+    DamageMotion: 5000
+    Ai: 10
+  - Id: 2370
+    AegisName: LICHTERN_G
+    Name: MagicDecoyFire
+    Level: 100
+    Hp: 2500
+    Attack: 195
+    Defense: 16
+    MagicDefense: 60
+    Str: 10
+    Agi: 10
+    Vit: 10
+    Int: 100
+    Dex: 60
+    Luk: 10
+    AttackRange: 11
+    SkillRange: 11
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Fire
+    ElementLevel: 1
+    WalkSpeed: 1000
+    AttackDelay: 5000
+    AttackMotion: 5000
+    DamageMotion: 5000
+    Ai: 10
 # JOAN
   # - Id: 1026
   #   AegisName: MUNAK

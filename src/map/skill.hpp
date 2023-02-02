@@ -2123,6 +2123,7 @@ enum e_skill {
 	JG_TAROTCARD = 821,
 	HT_SPIRITANIMAL = 822,
 	HT_BOWQUICKEN = 823,
+	HT_MAGICDECOY = 824,
 };
 
 /// The client view ids for land skills.
@@ -2347,7 +2348,7 @@ bool skill_check_camouflage(struct block_list *bl, struct status_change_entry *s
 /**
  * Mechanic
  **/
-int skill_magicdecoy(struct map_session_data *sd, t_itemid nameid);
+int skill_magicdecoy(struct map_session_data *sd, t_itemid nameid, int skill_id);
 
 /**
  * Guiltoine Cross

@@ -1051,7 +1051,7 @@ void clif_elementalconverter_list(struct map_session_data *sd);
 
 void clif_millenniumshield(struct block_list *bl, short shields);
 
-void clif_magicdecoy_list(struct map_session_data *sd, uint16 skill_lv, short x, short y);
+void clif_magicdecoy_list(struct map_session_data *sd, uint16 skill_lv, short x, short y, int skill_id);
 
 void clif_poison_list(struct map_session_data *sd, uint16 skill_lv);
 

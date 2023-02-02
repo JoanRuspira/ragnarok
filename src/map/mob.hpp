@@ -74,6 +74,10 @@ enum MOBID {
 	MOBID_S_GIANT_HORNET,
 	MOBID_S_LUCIOLA_VESPA,
 	MOBID_GUILD_SKILL_FLAG	= 20269,
+	MOBID_LICHTERN_B	            = 2367,
+	MOBID_LICHTERN_Y	            = 2368,
+	MOBID_LICHTERN_R	            = 2369,
+	MOBID_LICHTERN_G	            = 2370,
 };
 
 ///Mob skill states.

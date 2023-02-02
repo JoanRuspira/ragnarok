@@ -3230,6 +3230,7 @@ int status_calc_mob_(struct mob_data* md, enum e_status_calc_opt opt)
 					// status->batk = 200 * ud->skill_lv;				
 					break;
 				}
+				case HT_MAGICDECOY:
 				case NC_MAGICDECOY:
 				{
 					struct status_data *mstatus = status_get_status_data(mbl);
@@ -3239,6 +3240,7 @@ int status_calc_mob_(struct mob_data* md, enum e_status_calc_opt opt)
 					struct map_session_data *msd;
 					if ((msd = map_id2sd(md->master_id)) != NULL) {
 						status->max_hp = msd->status.max_hp;
+						status->max_sp = 9999;
 						status->str = msd->status.str;
 						status->agi = msd->status.agi;
 						status->vit = msd->status.vit;
