@@ -3585,6 +3585,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case CH_TIGERFIST:
 	case PA_SHIELDCHAIN:	// Shield Chain
 	case PA_SACRIFICE:
+	case HT_HURRICANEFURY:
 	case WS_CARTTERMINATION:	// Cart Termination
 	case AS_VENOMKNIFE:
 	case TK_DOWNKICK:
@@ -3594,7 +3595,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 #ifndef RENEWAL
 	case GS_MAGICALBULLET:
 #endif
-	case GS_TRACKING:
 	case GS_PIERCINGSHOT:
 	case GS_RAPIDSHOWER:
 	case GS_DUST:
@@ -5853,6 +5853,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case HW_MAGICPOWER:
 	case PF_MEMORIZE:
 	case PA_SACRIFICE:
+	case HT_HURRICANEFURY:
 	case ASC_EDP:
 	case PF_DOUBLECASTING:
 	case SG_SUN_COMFORT:
@@ -9054,6 +9055,14 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				pc_setoption(sd,sd->sc.option|OPTION_WUG);
 			else
 				pc_setoption(sd,sd->sc.option&~OPTION_WUG);
+			
+			clif_specialeffect(src, EF_POTION_BERSERK2, AREA);
+			clif_specialeffect(src, EF_POISONWAV, AREA);
+			int area = 3;
+			map_foreachinallarea( status_change_timer_sub,
+				src->m, src->x-area, src->y-area, src->x+area,src->y+area,BL_CHAR,
+				src,NULL,SC_SIGHT,tick);
+			skill_reveal_trap_inarea(src, area, src->x, src->y);
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 		}
 		break;
@@ -9063,6 +9072,13 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				pc_setoption(sd,sd->sc.option|OPTION_FALCON);
 			else
 				pc_setoption(sd,sd->sc.option&~OPTION_FALCON);
+			
+			clif_specialeffect(src, EF_DETECTING, AREA);
+			int area = 3;
+			map_foreachinallarea( status_change_timer_sub,
+				src->m, src->x-area, src->y-area, src->x+area,src->y+area,BL_CHAR,
+				src,NULL,SC_SIGHT,tick);
+			skill_reveal_trap_inarea(src, area, src->x, src->y);
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 		}
 		break;
@@ -11185,7 +11201,6 @@ int skill_castend_pos2(struct block_list* src, int x, int y, uint16 skill_id, ui
 	// 		src, skill_id, skill_lv, tick, flag|BCT_ENEMY|2,
 	// 		skill_castend_nodamage_id);
 	// 	break;
-
 	case HT_DETECTING:
 		i = skill_get_splash(skill_id, skill_lv);
 		map_foreachinallarea( status_change_timer_sub,

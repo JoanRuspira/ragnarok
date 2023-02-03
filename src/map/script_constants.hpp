@@ -1000,6 +1000,7 @@
 	export_constant(SC_SPIDERWEB);
 	export_constant(SC_DEVOTION);
 	export_constant(SC_SACRIFICE);
+	export_constant(SC_HURRICANEFURY);
 	export_constant(SC_STEELBODY);
 	export_constant(SC_ORCISH);
 	export_constant(SC_READYSTORM);
@@ -2587,6 +2588,7 @@
 	export_constant(EFST_TENSIONRELAX);
 	export_constant(EFST_BERSERK);
 	export_constant(EFST_SACRIFICE);
+	export_constant(EFST_HURRICANEFURY);
 	export_constant(EFST_GOSPEL);
 	export_constant(EFST_ASSUMPTIO);
 	export_constant(EFST_BASILICA);

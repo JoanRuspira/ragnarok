@@ -58226,7 +58226,7 @@ Body:
       bonus bHit,10;
       bonus bCritical,20;
       bonus bAspdRate,-3;
-      bonus3 bAutoSpell,"GS_TRACKING",5,20;
+      bonus3 bAutoSpell,"HT_HURRICANEFURY",5,20;
   - Id: 13164
     AegisName: Long_Barrel_
     Name: Long Barrel
@@ -58249,7 +58249,7 @@ Body:
       bonus bHit,10;
       bonus bCritical,20;
       bonus bAspdRate,-3;
-      bonus3 bAutoSpell,"GS_TRACKING",5,20;
+      bonus3 bAutoSpell,"HT_HURRICANEFURY",5,20;
   - Id: 13165
     AegisName: Jungle_Carbine
     Name: Jungle Carbine
@@ -58413,7 +58413,7 @@ Body:
       bonus bCritical,10;
       bonus2 bAddRace,RC_DemiHuman,75;
       bonus2 bAddRace,RC_Player_Human,75;
-      bonus2 bVariableCastrate,"GS_TRACKING",-25;
+      bonus2 bVariableCastrate,"HT_HURRICANEFURY",-25;
       bonus2 bIgnoreDefRaceRate,RC_DemiHuman,20;
       bonus2 bIgnoreDefRaceRate,RC_Player_Human,20;
       bonus bUnbreakableWeapon;
@@ -58583,8 +58583,8 @@ Body:
          bonus2 bIgnoreDefRaceRate,RC_Player_Human,5;
       }
       if (.@r>8) {
-         bonus2 bVariableCastrate,"GS_TRACKING",25;
-         bonus2 bSkillAtk,"GS_TRACKING",.@r * 3;
+         bonus2 bVariableCastrate,"HT_HURRICANEFURY",25;
+         bonus2 bSkillAtk,"HT_HURRICANEFURY",.@r * 3;
       }
   - Id: 13177
     AegisName: Krieger_Gatling1
@@ -112279,7 +112279,7 @@ Body:
       bonus bCritical,8;
       bonus2 bAddRace,RC_DemiHuman,30;
       bonus2 bAddRace,RC_Player_Human,30;
-      bonus2 bVariableCastrate,"GS_TRACKING",-20;
+      bonus2 bVariableCastrate,"HT_HURRICANEFURY",-20;
       bonus2 bIgnoreDefRaceRate,RC_DemiHuman,10;
       bonus2 bIgnoreDefRaceRate,RC_Player_Human,10;
       bonus bUnbreakableWeapon;
@@ -112340,7 +112340,7 @@ Body:
       bonus2 bSkillAtk,"RL_HAMMER_OF_GOD",20;
       bonus bBaseAtk,((min(BaseLevel,160)/10)*6);
       if (getrefine()>6) {
-         bonus bLongAtkRate,getskilllv("GS_TRACKING");
+         bonus bLongAtkRate,getskilllv("HT_HURRICANEFURY");
       }
   - Id: 28216
     AegisName: Probation_Gatling_Gun

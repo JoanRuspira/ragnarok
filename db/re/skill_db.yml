@@ -4453,9 +4453,9 @@ Body:
     Hit: Single
     HitCount: 1
     AfterCastActDelay: 3000
-    Cooldown: 20000
+    Cooldown: 3000
     Requires:
-      SpCost: 90
+      SpCost: 55
   - Id: 129
     Name: HT_BLITZBEAT
     Description: Blitz Beat
@@ -9938,7 +9938,7 @@ Body:
   - Id: 383
     Name: SN_WINDWALK
     Description: Wind Walker
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Self
     DamageFlags:
@@ -9948,71 +9948,22 @@ Body:
     HitCount: 1
     SplashArea: -1
     CastCancel: true
-    CastTime:
-      - Level: 1
-        Time: 2000
-      - Level: 2
-        Time: 2400
-      - Level: 3
-        Time: 2800
-      - Level: 4
-        Time: 3200
-      - Level: 5
-        Time: 3600
-      - Level: 6
-        Time: 4000
-      - Level: 7
-        Time: 4400
-      - Level: 8
-        Time: 4800
-      - Level: 9
-        Time: 5200
-      - Level: 10
-        Time: 5600
+    CastTime: 3000
+    Cooldown: 10000
     AfterCastActDelay: 2000
     Duration1:
       - Level: 1
-        Time: 130000
-      - Level: 2
         Time: 160000
-      - Level: 3
-        Time: 190000
-      - Level: 4
+      - Level: 2
         Time: 220000
-      - Level: 5
-        Time: 250000
-      - Level: 6
+      - Level: 3
         Time: 280000
-      - Level: 7
-        Time: 310000
-      - Level: 8
+      - Level: 4
         Time: 340000
-      - Level: 9
-        Time: 370000
-      - Level: 10
+      - Level: 5
         Time: 400000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 46
-        - Level: 2
-          Amount: 52
-        - Level: 3
-          Amount: 58
-        - Level: 4
-          Amount: 64
-        - Level: 5
-          Amount: 70
-        - Level: 6
-          Amount: 76
-        - Level: 7
-          Amount: 82
-        - Level: 8
-          Amount: 88
-        - Level: 9
-          Amount: 94
-        - Level: 10
-          Amount: 100
+      SpCost: 80
   - Id: 384
     Name: WS_MELTDOWN
     Description: Shattering Strike
@@ -13302,68 +13253,29 @@ Body:
     HitCount: 2
     Element: Weapon
   - Id: 512
-    Name: GS_TRACKING
-    Description: Tracking
-    MaxLevel: 10
+    Name: HT_HURRICANEFURY
+    Description: Cyclone Charge
+    MaxLevel: 5
     Type: Weapon
-    TargetType: Attack
-    Range: -9
+    TargetType: Self
+    Element: Weapon
+    DamageFlags:
+      NoDamage: true
+      IgnoreDefense: true
+      IgnoreFlee: true
+      Critical: true
     Hit: Single
     HitCount: 1
-    Element: Weapon
     CastCancel: true
-    CastTime:
-      - Level: 1
-        Time: 1200
-      - Level: 2
-        Time: 1400
-      - Level: 3
-        Time: 1600
-      - Level: 4
-        Time: 1800
-      - Level: 5
-        Time: 2000
-      - Level: 6
-        Time: 2200
-      - Level: 7
-        Time: 2400
-      - Level: 8
-        Time: 2600
-      - Level: 9
-        Time: 2800
-      - Level: 10
-        Time: 3000
-    CastTimeFlags:
-      IgnoreDex: true
-      IgnoreStatus: true
+    Cooldown: 20000
+    AfterCastActDelay: 2000
+    Duration1: 50000
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 15
-        - Level: 2
-          Amount: 20
-        - Level: 3
-          Amount: 25
-        - Level: 4
-          Amount: 30
-        - Level: 5
-          Amount: 35
-        - Level: 6
-          Amount: 40
-        - Level: 7
-          Amount: 45
-        - Level: 8
-          Amount: 50
-        - Level: 9
-          Amount: 55
-        - Level: 10
-          Amount: 60
-      Weapon:
-        Revolver: true
-        Rifle: true
-      Ammo:
-        Bullet: true
-      AmmoAmount: 1
+      SpCost: 20
   - Id: 513
     Name: GS_DISARM
     Description: Disarm
@@ -13667,31 +13579,6 @@ Body:
           Amount: 60
         - Level: 10
           Amount: 65
-      Weapon:
-        Shotgun: true
-      Ammo:
-        Bullet: true
-      AmmoAmount:
-        - Level: 1
-          Amount: 2
-        - Level: 2
-          Amount: 2
-        - Level: 3
-          Amount: 4
-        - Level: 4
-          Amount: 4
-        - Level: 5
-          Amount: 6
-        - Level: 6
-          Amount: 6
-        - Level: 7
-          Amount: 8
-        - Level: 8
-          Amount: 8
-        - Level: 9
-          Amount: 10
-        - Level: 10
-          Amount: 10
   - Id: 520
     Name: GS_SPREADATTACK
     Description: Spread Attack
@@ -19510,9 +19397,9 @@ Body:
     Hit: Single
     HitCount: 1
     AfterCastActDelay: 3000
-    Cooldown: 20000
+    Cooldown: 3000
     Requires:
-      SpCost: 90
+      SpCost: 55
   - Id: 2241
     Name: RA_WUGRIDER
     Description: Warg Rider

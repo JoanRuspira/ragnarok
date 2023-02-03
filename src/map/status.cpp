@@ -589,12 +589,13 @@ void initChangeTables(void)
 #endif
 	set_sc( HW_MAGICPOWER		, SC_MAGICPOWER		, EFST_MAGICPOWER		, SCB_MATK );
 	add_sc( PA_SACRIFICE		, SC_SACRIFICE		, EFST_SACRIFICE		);
+	add_sc( HT_HURRICANEFURY		, SC_HURRICANEFURY		, EFST_HURRICANEFURY		);
 	set_sc( PA_GOSPEL		, SC_GOSPEL		, EFST_GOSPEL		, SCB_SPEED|SCB_ASPD );
 	add_sc( PA_GOSPEL		, SC_SCRESIST		);
 	add_sc( CH_TIGERFIST		, SC_STOP		);
 	set_sc( ASC_EDP			, SC_EDP		, EFST_EDP		, SCB_NONE );
 	set_sc( SN_SIGHT		, SC_TRUESIGHT		, EFST_TRUESIGHT		, SCB_STR|SCB_AGI|SCB_VIT|SCB_INT|SCB_DEX|SCB_LUK|SCB_CRI|SCB_HIT );
-	set_sc( SN_WINDWALK		, SC_WINDWALK		, EFST_WINDWALK		, SCB_FLEE|SCB_SPEED );
+	set_sc( SN_WINDWALK		, SC_WINDWALK		, EFST_WINDWALK		, SCB_AGI|SCB_SPEED );
 	set_sc( WS_MELTDOWN		, SC_MELTDOWN		, EFST_MELTDOWN		, SCB_NONE );
 	set_sc( WS_CARTBOOST		, SC_CARTBOOST		, EFST_CARTBOOST		, SCB_SPEED );
 	set_sc( ST_CHASEWALK		, SC_CHASEWALK		, EFST_CHASEWALK		, SCB_SPEED );
@@ -6028,7 +6029,8 @@ static unsigned short status_calc_agi(struct block_list *bl, struct status_chang
 		agi -= sc->data[SC_HARMONIZE]->val2;
 		return (unsigned short)cap_value(agi,0,USHRT_MAX);
 	}
-
+	if(sc->data[SC_WINDWALK])
+		agi += sc->data[SC_WINDWALK]->val1*3;
 	if(sc->data[SC_ASSNCROS])
 		agi += sc->data[SC_ASSNCROS]->val2;
 	if(sc->data[SC_CONCENTRATE] && !sc->data[SC_QUAGMIRE])
@@ -6761,6 +6763,11 @@ static signed short status_calc_critical(struct block_list *bl, struct status_ch
 	if(sc->data[SC_BEYONDOFWARCRY])
 		critical += sc->data[SC_BEYONDOFWARCRY]->val3;
 
+	int skill_lv = 0;
+	struct map_session_data *sd = map_id2sd(bl->id);
+	if ((skill_lv = pc_checkskill(sd, RA_RANGERMAIN)) > 0)
+		critical += (skill_lv*30);
+
 	return (short)cap_value(critical,10,SHRT_MAX);
 }
 
@@ -6827,6 +6834,10 @@ static signed short status_calc_hit(struct block_list *bl, struct status_change 
 	if (sc->data[SC_SATURDAYNIGHTFEVER])
 		hit -= 50 + 50 * sc->data[SC_SATURDAYNIGHTFEVER]->val1;
 
+	int skill_lv = 0;
+	struct map_session_data *sd = map_id2sd(bl->id);
+	if ((skill_lv = pc_checkskill(sd, RA_RANGERMAIN)) > 0)
+		hit += (skill_lv*4);
 	return (short)cap_value(hit,1,SHRT_MAX);
 }
 
@@ -6860,8 +6871,6 @@ static signed short status_calc_flee(struct block_list *bl, struct status_change
 		flee += sc->data[SC_FLEEFOOD]->val1;
 	if(sc->data[SC_WHISTLE])
 		flee += sc->data[SC_WHISTLE]->val2;
-	if(sc->data[SC_WINDWALK])
-		flee += sc->data[SC_WINDWALK]->val2;
 	if(sc->data[SC_VIOLENTGALE])
 		flee += sc->data[SC_VIOLENTGALE]->val2;
 	if(sc->data[SC_MOON_COMFORT]) // SG skill [Komurka]
@@ -10263,6 +10272,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 #endif
 			val4 = 0; // 0 = ready to be used, 1 = activated and running
 			break;
+		case SC_HURRICANEFURY:
 		case SC_SACRIFICE:
 			val2 = 5; // Lasts 5 hits
 			tick = INFINITE_TICK;
@@ -10664,10 +10674,6 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			break;
 		case SC_PARRYING:
 		    val2 = 20 + val1*3; // Block Chance
-			break;
-
-		case SC_WINDWALK:
-			val2 = (val1+1)/2; // Flee bonus is 1/1/2/2/3/3/4/4/5/5
 			break;
 
 		case SC_JOINTBEAT:

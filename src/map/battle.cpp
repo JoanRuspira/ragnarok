@@ -2248,7 +2248,7 @@ static int is_attack_piercing(struct Damage* wd, struct block_list *src, struct 
 		struct map_session_data *sd = BL_CAST(BL_PC, src);
 		struct status_data *tstatus = status_get_status_data(target);
 
-		if( skill_id != PA_SACRIFICE && skill_id != CR_GRANDCROSS && skill_id != NPC_GRANDDARKNESS && skill_id != PA_SHIELDCHAIN && skill_id != KO_HAPPOKUNAI)
+		if( skill_id != PA_SACRIFICE && skill_id != HT_HURRICANEFURY && skill_id != CR_GRANDCROSS && skill_id != NPC_GRANDDARKNESS && skill_id != PA_SHIELDCHAIN && skill_id != KO_HAPPOKUNAI)
 		{ //Elemental/Racial adjustments
 			if( sd && (sd->right_weapon.def_ratio_atk_ele & (1<<tstatus->def_ele) || sd->right_weapon.def_ratio_atk_ele & (1<<ELE_ALL) ||
 				sd->right_weapon.def_ratio_atk_race & (1<<tstatus->race) || sd->right_weapon.def_ratio_atk_race & (1<<RC_ALL) ||
@@ -2526,6 +2526,7 @@ static void battle_calc_element_damage(struct Damage* wd, struct block_list *src
 		int right_element = EquipmentAttackCalculator::battle_get_weapon_element(wd, src, target, skill_id, skill_lv, EQI_HAND_R, true);
 
 		switch (skill_id) {
+			case HT_HURRICANEFURY:
 			case PA_SACRIFICE:
 			case RK_DRAGONBREATH:
 			case RK_DRAGONBREATH_WATER:
@@ -2740,7 +2741,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 	int i;
 
 	//Skill damage modifiers that stack linearly
-	if(sc && skill_id != PA_SACRIFICE) {
+	if(sc && skill_id != PA_SACRIFICE && skill_id != HT_HURRICANEFURY) {
 		if(sc->data[SC_OVERTHRUST])
 			skillratio += sc->data[SC_OVERTHRUST]->val3;
 		if(sc->data[SC_MAXOVERTHRUST])
@@ -2856,6 +2857,9 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			break;
 		case MER_CRASH:
 			skillratio += 10 * skill_lv;
+			break;
+		case HT_HURRICANEFURY:
+				skillratio += HunterSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
 		case ML_BRANDISH:
 			{
@@ -3090,9 +3094,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			//Only works well against brute/demihumans non bosses.
 			if((tstatus->race == RC_BRUTE || tstatus->race == RC_DEMIHUMAN || tstatus->race == RC_PLAYER_HUMAN || tstatus->race == RC_PLAYER_DORAM) && !status_has_mode(tstatus,MD_STATUSIMMUNE))
 				skillratio += 400;
-			break;
-		case GS_TRACKING:
-			skillratio += 100 * (skill_lv + 1);
 			break;
 		case GS_PIERCINGSHOT:
 #ifdef RENEWAL
@@ -4047,9 +4048,9 @@ static void battle_calc_defense_reduction(struct Damage* wd, struct block_list *
 		if( src->type == BL_MOB && (battle_check_undead(sstatus->race,sstatus->def_ele) || sstatus->race==RC_DEMON) && //This bonus already doesn't work vs players
 			(skill=pc_checkskill(tsd,AL_DP)) > 0 )
 			vit_def += skill*(int)(3 +(tsd->status.base_level+1)*0.04);   // submitted by orn
-		if( src->type == BL_MOB && (skill=pc_checkskill(tsd,RA_RANGERMAIN))>0 &&
-			(sstatus->race == RC_BRUTE || sstatus->race == RC_PLAYER_DORAM || sstatus->race == RC_FISH || sstatus->race == RC_PLANT) )
-			vit_def += skill*5;
+		// if( src->type == BL_MOB && (skill=pc_checkskill(tsd,RA_RANGERMAIN))>0 &&
+		// 	(sstatus->race == RC_BRUTE || sstatus->race == RC_PLAYER_DORAM || sstatus->race == RC_FISH || sstatus->race == RC_PLANT) )
+		// 	vit_def += skill*5;
 		if( src->type == BL_MOB && (skill = pc_checkskill(tsd, NC_RESEARCHFE)) > 0 &&
 			(sstatus->def_ele == ELE_FIRE || sstatus->def_ele == ELE_EARTH) )
 			vit_def += skill * 10;
@@ -6481,6 +6482,25 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 			 * For further information: bugreport:4950
 			 */
 			ret_val = (damage_lv)skill_attack(BF_WEAPON,src,src,target,PA_SACRIFICE,skill_lv,tick,0);
+
+			// status_zap(src, sstatus->max_hp*9/100, 0);//Damage to self is always 9%
+			if( ret_val == ATK_NONE )
+				return ATK_MISS;
+			return ret_val;
+		}
+
+		if (sc->data[SC_HURRICANEFURY]) {
+			uint16 skill_lv = sc->data[SC_HURRICANEFURY]->val1;
+			damage_lv ret_val;
+
+			if( --sc->data[SC_HURRICANEFURY]->val2 <= 0 )
+				status_change_end(src, SC_HURRICANEFURY, INVALID_TIMER);
+
+			/**
+			 * We need to calculate the DMG before the hp reduction, because it can kill the source.
+			 * For further information: bugreport:4950
+			 */
+			ret_val = (damage_lv)skill_attack(BF_WEAPON,src,src,target,HT_HURRICANEFURY,skill_lv,tick,0);
 
 			// status_zap(src, sstatus->max_hp*9/100, 0);//Damage to self is always 9%
 			if( ret_val == ATK_NONE )
