@@ -19371,6 +19371,10 @@ int skill_magicdecoy(struct map_session_data *sd, t_itemid nameid, int skill_id)
 	nullpo_ret(sd);
 	skill = sd->menuskill_val;
 
+	if( !nameid || (i = pc_search_inventory(sd,nameid)) < 0 || !skill || pc_delitem(sd,i,1,0,0,LOG_TYPE_CONSUME) ) {
+		clif_skill_fail(sd,NC_MAGICDECOY,USESKILL_FAIL_LEVEL,0);
+		return 0;
+	}
 
 	// Spawn Position
 	// pc_delitem(sd,i,1,0,0,LOG_TYPE_CONSUME);
