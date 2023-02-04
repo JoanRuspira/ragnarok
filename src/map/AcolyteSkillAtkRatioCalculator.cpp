@@ -29,6 +29,7 @@ void AcolyteSkillAtkRatioCalculator::add_sacred_wave_special_effects(struct bloc
     clif_specialeffect(target, EF_MOCHI, AREA);
 	clif_specialeffect(target, EF_RK_LUXANIMA, AREA);
 	clif_specialeffect(target, EF_KO_ZENKAI_WATER, AREA);
+	clif_specialeffect(target, EF_ANGEL, AREA);
 }
 
 void AcolyteSkillAtkRatioCalculator::add_holy_light_special_effects(struct block_list *target)

@@ -434,6 +434,7 @@ void initChangeTables(void)
 	set_sc( KN_THQUICKEN			, SC_THQUICKEN		, EFST_THQUICKEN, SCB_ASPD|SCB_WATK );
 	set_sc( AL_MACEQUICKEN			, SC_MACEQUICKEN		, EFST_MACEQUICKEN, SCB_ASPD|SCB_WATK );
 	set_sc( HT_BOWQUICKEN			, SC_BOWQUICKEN		, EFST_BOWQUICKEN, SCB_ASPD|SCB_WATK );
+	set_sc( HT_CYCLONICCHARGE			, SC_CYCLONICCHARGE		, EFST_CYCLONICCHARGE, SCB_FLEE|SCB_WATK );
 	set_sc( MG_ENERGYCOAT		, SC_ENERGYCOAT		, EFST_ENERGYCOAT		, SCB_MATK );
 	set_sc( NPC_EMOTION		, SC_MODECHANGE		, EFST_BLANK		, SCB_MODE );
 	add_sc( NPC_EMOTION_ON		, SC_MODECHANGE		);
@@ -6544,6 +6545,8 @@ static unsigned short status_calc_watk(struct block_list *bl, struct status_chan
 		watk += 3*sc->data[SC_MACEQUICKEN]->val1;
 	if (sc->data[SC_BOWQUICKEN])
 		watk += 3*sc->data[SC_BOWQUICKEN]->val1;
+	if (sc->data[SC_CYCLONICCHARGE])
+		watk += 4*sc->data[SC_CYCLONICCHARGE]->val1;
 	if (sc->data[SC_UPROAR])
 		watk += 5*sc->data[SC_UPROAR]->val1;
 	if( sc->data[SC_EXPLOSIONSPIRITS] )
@@ -6865,6 +6868,8 @@ static signed short status_calc_flee(struct block_list *bl, struct status_change
 		return sc->data[SC_OVERED_BOOST]->val2;
 
 	// Fixed value
+	if (sc->data[SC_CYCLONICCHARGE])
+		flee += 4*sc->data[SC_CYCLONICCHARGE]->val1;
 	if(sc->data[SC_INCFLEE])
 		flee += sc->data[SC_INCFLEE]->val1;
 	if(sc->data[SC_FLEEFOOD])
@@ -7518,8 +7523,6 @@ static short status_calc_aspd(struct block_list *bl, struct status_change *sc, b
 			bonus += sc->data[SC_THQUICKEN]->val1*2;
 		if (sc->data[SC_MACEQUICKEN])
 			bonus += sc->data[SC_MACEQUICKEN]->val1*2;
-		if (sc->data[SC_BOWQUICKEN])
-			bonus += sc->data[SC_BOWQUICKEN]->val1*2;
 		if (sc->data[SC_SKA])
 			bonus -= 25;
 		if (sc->data[SC_DEFENDER])

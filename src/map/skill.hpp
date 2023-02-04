@@ -2124,6 +2124,7 @@ enum e_skill {
 	HT_SPIRITANIMAL = 822,
 	HT_BOWQUICKEN = 823,
 	HT_MAGICDECOY = 824,
+	HT_CYCLONICCHARGE = 825
 };
 
 /// The client view ids for land skills.

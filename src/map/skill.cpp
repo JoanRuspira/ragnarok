@@ -5853,7 +5853,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case HW_MAGICPOWER:
 	case PF_MEMORIZE:
 	case PA_SACRIFICE:
-	case HT_HURRICANEFURY:
 	case ASC_EDP:
 	case PF_DOUBLECASTING:
 	case SG_SUN_COMFORT:
@@ -5915,7 +5914,14 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		clif_skill_nodamage(src,bl,skill_id,skill_lv,
 			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
 		break;
-
+	case HT_HURRICANEFURY:
+		clif_specialeffect(src, 1138, AREA);
+		clif_specialeffect(src, EF_TEIHIT1, AREA);
+		clif_specialeffect(src, EF_BASH, AREA);
+		clif_specialeffect(src, EF_ENTRY, AREA);
+		clif_skill_nodamage(src, bl, skill_id, skill_lv,
+			sc_start(src, bl, type, 100, skill_lv, skill_get_time(skill_id, skill_lv)));
+		break;
 	case SJ_GRAVITYCONTROL: {
 			int fall_damage = sstatus->batk + sstatus->rhw.atk - tstatus->def2;
 
@@ -6484,6 +6490,11 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case HT_BOWQUICKEN:
 	case AL_MACEQUICKEN:
 		clif_specialeffect(src, EF_TWOHANDQUICKEN, AREA);
+		clif_skill_nodamage(bl, bl, skill_id, skill_lv, sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
+		break;
+	case HT_CYCLONICCHARGE:
+		clif_specialeffect(bl, EF_TURNUNDEAD, AREA);
+		clif_specialeffect(bl, EF_ENERGYDRAIN3, AREA);
 		clif_skill_nodamage(bl, bl, skill_id, skill_lv, sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
 		break;
 	case MC_UPROAR:
@@ -8570,10 +8581,15 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
  		break;
 	case RK_CRUSHSTRIKE:
 	case RK_MILLENNIUMSHIELD:
-	case RK_STONEHARDSKIN:
 	case RK_VITALITYACTIVATION:
 		if (sc_start(src, bl, type, 100, skill_lv, skill_get_time(skill_id, skill_lv)))
 			clif_skill_nodamage(src, bl, skill_id, skill_lv, 1);
+		break;
+	case RK_STONEHARDSKIN:
+		if (sc_start(src, bl, type, 100, skill_lv, skill_get_time(skill_id, skill_lv))){
+			clif_skill_nodamage(src, bl, skill_id, skill_lv, 1);
+			clif_specialeffect(bl, EF_STRIPARMOR, AREA);
+		}
 		break;
 	case RK_FIGHTINGSPIRIT: {
 			uint8 runemastery_skill_lv = (sd ? pc_checkskill(sd, RK_RUNEMASTERY) : skill_get_max(RK_RUNEMASTERY));
@@ -9058,11 +9074,8 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			
 			clif_specialeffect(src, EF_POTION_BERSERK2, AREA);
 			clif_specialeffect(src, EF_POISONWAV, AREA);
-			int area = 3;
-			map_foreachinallarea( status_change_timer_sub,
-				src->m, src->x-area, src->y-area, src->x+area,src->y+area,BL_CHAR,
-				src,NULL,SC_SIGHT,tick);
-			skill_reveal_trap_inarea(src, area, src->x, src->y);
+			// Initiate 20% of your damage becomes fire element.
+			sc_start4(src,src,SC_WATK_ELEMENT,100,3,20,0,0,30000);
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 		}
 		break;

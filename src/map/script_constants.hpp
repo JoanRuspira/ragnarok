@@ -1623,6 +1623,7 @@
 	export_constant(SC_MACEQUICKEN);
 	export_constant(SC_BOWQUICKEN);
 	export_constant(SC_SPIRITANIMAL);
+	export_constant(SC_CYCLONICCHARGE);
 #ifdef RENEWAL
 	export_constant(SC_EXTREMITYFIST2);
 #endif

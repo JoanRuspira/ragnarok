@@ -1981,6 +1981,31 @@ Body:
       ItemCost:
         - Item: Tree_Of_Archer_2
           Amount: 1
+  - Id: 825
+    Name: HT_CYCLONICCHARGE
+    Description: Cyclonic Charge
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 10000
+    AfterCastActDelay: 2000
+    Duration1:
+      - Level: 1
+        Time: 60000
+      - Level: 2
+        Time: 120000
+      - Level: 3
+        Time: 180000
+      - Level: 4
+        Time: 240000
+      - Level: 5
+        Time: 300000
+    Requires:
+      SpCost: 20
   - Id: 51
     Name: TF_HIDING
     Description: Hiding
@@ -9458,8 +9483,8 @@ Body:
     Hit: Single
     HitCount: 1
     CastCancel: true
-    Cooldown: 20000
-    AfterCastActDelay: 2000
+    Cooldown: 10000
+    AfterCastActDelay: 40
     Duration1: 50000
     CopyFlags:
       Skill:
@@ -9963,7 +9988,7 @@ Body:
       - Level: 5
         Time: 400000
     Requires:
-      SpCost: 80
+      SpCost: 40
   - Id: 384
     Name: WS_MELTDOWN
     Description: Shattering Strike
@@ -13254,7 +13279,7 @@ Body:
     Element: Weapon
   - Id: 512
     Name: HT_HURRICANEFURY
-    Description: Cyclone Charge
+    Description: Hurricane Fury
     MaxLevel: 5
     Type: Weapon
     TargetType: Self
@@ -13267,8 +13292,8 @@ Body:
     Hit: Single
     HitCount: 1
     CastCancel: true
-    Cooldown: 20000
-    AfterCastActDelay: 2000
+    Cooldown: 10000
+    AfterCastActDelay: 400
     Duration1: 50000
     CopyFlags:
       Skill:
@@ -13276,6 +13301,9 @@ Body:
         Reproduce: true
     Requires:
       SpCost: 20
+      ItemCost:
+        - Item: Wind_Of_Verdure
+          Amount: 1
   - Id: 513
     Name: GS_DISARM
     Description: Disarm
@@ -19552,9 +19580,6 @@ Body:
     AfterCastActDelay: 2000
     Requires:
       SpCost: 25
-      ItemCost:
-        - Item: Face_Paint
-          Amount: 1
   - Id: 2248
     Name: RA_RESEARCHTRAP
     Description: Research Trap
