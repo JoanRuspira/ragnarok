@@ -4262,7 +4262,11 @@ int status_calc_pc_sub(struct map_session_data* sd, enum e_status_calc_opt opt)
 	if((skill=pc_checkskill(sd,SA_DRAGONOLOGY))>0)
 		base_status->int_ += (skill+1)/2; // +1 INT / 2 lv
 	if((skill=pc_checkskill(sd,AC_OWL))>0)
+		base_status->int_ += skill * 2;
+	if((skill=pc_checkskill(sd,AC_HAWK))>0)
 		base_status->dex += skill * 2;
+	if((skill=pc_checkskill(sd,AC_AGI))>0)
+		base_status->agi += skill * 2;
 	if((skill = pc_checkskill(sd,RA_RESEARCHTRAP))>0)
 		base_status->int_ += skill;
 	if (pc_checkskill(sd, SU_POWEROFLAND) > 0)
@@ -6611,6 +6615,14 @@ static unsigned short status_calc_watk(struct block_list *bl, struct status_chan
 	if (sc->data[SC_SOULFALCON])
 		watk += sc->data[SC_SOULFALCON]->val2;
 
+	int skill_lv = 0;
+	struct map_session_data *sd = map_id2sd(bl->id);
+	if ((skill_lv = pc_checkskill(sd, BS_REPAIRWEAPON)) > 0)
+		watk += (skill_lv*2);
+
+	if ((skill_lv = pc_checkskill(sd, BS_AXE)) > 0)
+		watk += (skill_lv*4);
+
 	return (unsigned short)cap_value(watk,0,USHRT_MAX);
 }
 
@@ -7076,6 +7088,14 @@ static defType status_calc_def(struct block_list *bl, struct status_change *sc, 
 		def += sc->data[SC_GLASTHEIM_ITEMDEF]->val1;
 	if (sc->data[SC_SOULGOLEM])
 		def += sc->data[SC_SOULGOLEM]->val2;
+
+	int skill_lv = 0;
+	struct map_session_data *sd = map_id2sd(bl->id);
+	if ((skill_lv = pc_checkskill(sd, BS_REPAIRWEAPON)) > 0)
+		def += (skill_lv*2);
+
+	if ((skill_lv = pc_checkskill(sd, BS_AXE)) > 0)
+		def += (skill_lv*2);
 
 	return (defType)cap_value(def,DEFTYPE_MIN,DEFTYPE_MAX);
 }

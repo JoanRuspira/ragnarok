@@ -34756,7 +34756,6 @@ Body:
       NoAuction: true
     Script: |
       bonus bMaxSP,100;
-      skill "MC_DISCOUNT",1;
       skill "MC_OVERCHARGE",10;
       skill "MC_IDENTIFY",1;
       skill "MC_MAMMONITE",1;

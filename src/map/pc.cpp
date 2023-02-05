@@ -4827,7 +4827,7 @@ int pc_identifyall(struct map_session_data *sd, bool identify_item)
 int pc_modifybuyvalue(struct map_session_data *sd,int orig_value)
 {
 	int skill,val = orig_value,rate1 = 0,rate2 = 0;
-	if((skill=pc_checkskill(sd,MC_DISCOUNT))>0)	// merchant discount
+	if((skill=pc_checkskill(sd,MC_OVERCHARGE))>0)	// merchant discount
 		rate1 = 5*skill;
 	if((skill=pc_checkskill(sd,RG_COMPULSION))>0)	 // rogue discount
 		rate2 = 5+skill*4;

@@ -427,6 +427,8 @@ int64 SkillBaseDamageCalculator::battle_addmastery(map_session_data * sd, block_
 		case W_1HSWORD:
 			if ((skill = pc_checkskill(sd, SM_SWORD)) > 0)
 				damage += (skill * 8);
+			if ((skill = pc_checkskill(sd, MC_SWORD)) > 0)
+				damage += (skill * 8);
 		case W_DAGGER:
 			if ((skill = pc_checkskill(sd, TF_DAGGER)) > 0)
 				damage += (skill * 8);

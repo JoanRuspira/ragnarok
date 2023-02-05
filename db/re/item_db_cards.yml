@@ -926,7 +926,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      skill "MC_DISCOUNT",5;
+      skill "MC_OVERCHARGE",5;
   - Id: 4074
     AegisName: BigFoot_Card
     Name: Bigfoot Card

@@ -416,14 +416,14 @@ Body:
       SpCost: 38
   - Id: 800
     Name: MG_UNDEADEMBRACE
-    Description: Undead Embrace
+    Description: Devil's Embrace
     MaxLevel: 5
     Type: Magic
     TargetType: Attack
     Range: 9
     Hit: Single
     HitCount: 1
-    Element: Undead
+    Element: Dark
     CastTime: 3500
     Cooldown: 5000
     AfterCastActDelay: 500
@@ -1206,7 +1206,9 @@ Body:
   - Id: 41
     Name: MC_VENDING
     Description: Vending
-    MaxLevel: 10
+    MaxLevel: 5
+    Cooldown: 15000
+    AfterCastActDelay: 2000
     TargetType: Self
     DamageFlags:
       NoDamage: true
@@ -1238,17 +1240,6 @@ Body:
         Reproduce: true
     Requires:
       SpCost: 15
-      ZenyCost:
-        - Level: 1
-          Amount: 100
-        - Level: 2
-          Amount: 100
-        - Level: 3
-          Amount: 100
-        - Level: 4
-          Amount: 100
-        - Level: 5
-          Amount: 100
   - Id: 2430
     Name: AC_BOW
     Description: Bow Mastery
@@ -1257,11 +1248,11 @@ Body:
   - Id: 43
     Name: AC_OWL
     Description: Owl's Eye
-    MaxLevel: 10
+    MaxLevel: 5
   - Id: 44
     Name: AC_VULTURE
     Description: Vulture's Eye
-    MaxLevel: 10
+    MaxLevel: 5
   - Id: 45
     Name: AC_CONCENTRATION
     Description: Improve Concentration
@@ -1331,7 +1322,7 @@ Body:
     Hit: Multi_Hit
     HitCount: 3
     Element: Weapon
-    Cooldown: 12000
+    Cooldown: 10000
     AfterCastActDelay: 400
     SplashArea: 5
     Knockback: 2
@@ -2006,6 +1997,19 @@ Body:
         Time: 300000
     Requires:
       SpCost: 20
+  - Id: 826
+    Name: AC_HAWK
+    Description: Hawk's Eye
+    MaxLevel: 5
+  - Id: 827
+    Name: AC_AGI
+    Description: Agility
+    MaxLevel: 5
+  - Id: 828
+    Name: MC_SWORD
+    Description: Sword Mastery
+    MaxLevel: 5
+    Type: Weapon
   - Id: 51
     Name: TF_HIDING
     Description: Hiding
@@ -2046,7 +2050,7 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Weapon
-    Cooldown: 4000
+    Cooldown: 5000
     AfterCastActDelay: 400
     CopyFlags:
       Skill:
@@ -4922,6 +4926,7 @@ Body:
       SpCost: 14
       Weapon:
         Bow: true
+        Musical: true
       Ammo:
         Arrow: true
       AmmoAmount: 1
@@ -5083,7 +5088,7 @@ Body:
       SpCost: 16
   - Id: 156
     Name: AL_HOLYLIGHT
-    Description: Holy Light
+    Description: Holy Ghost
     MaxLevel: 5
     Type: Magic
     TargetType: Attack
@@ -5096,7 +5101,7 @@ Body:
     Range: 9
     Hit: Single
     HitCount: 1
-    Element: Holy
+    Element: Ghost
     SplashArea: 1
     CopyFlags:
       Skill:
@@ -8712,7 +8717,7 @@ Body:
   - Id: 337
     Name: ITM_TOMAHAWK
     Description: Throw Tomahawk
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     Flags:
@@ -13076,11 +13081,14 @@ Body:
       Skill:
         Plagiarism: true
         Reproduce: true
+    Cooldown: 5000
+    AfterCastActDelay: 400
     Duration1: 100
     Requires:
-      SpCost: 12
+      SpCost: 15
       Weapon:
         Bow: true
+        Musical: true
       Ammo:
         Arrow: true
       AmmoAmount: 1
@@ -16320,6 +16328,7 @@ Body:
       SpCost: 14
       Weapon:
         Bow: true
+        Musical: true
       Ammo:
         Arrow: true
       AmmoAmount: 1

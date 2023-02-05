@@ -2107,8 +2107,8 @@ uint8 npc_buylist(struct map_session_data* sd, uint16 n, struct s_npc_buy_list *
 	}
 
 	// custom merchant shop exp bonus
-	if( battle_config.shop_exp > 0 && z > 0 && (skill = pc_checkskill(sd,MC_DISCOUNT)) > 0 ) {
-		uint16 sk_idx = skill_get_index(MC_DISCOUNT);
+	if( battle_config.shop_exp > 0 && z > 0 && (skill = pc_checkskill(sd,MC_OVERCHARGE)) > 0 ) {
+		uint16 sk_idx = skill_get_index(MC_OVERCHARGE);
 		if( sd->status.skill[sk_idx].flag >= SKILL_FLAG_REPLACED_LV_0 )
 			skill = sd->status.skill[sk_idx].flag - SKILL_FLAG_REPLACED_LV_0;
 

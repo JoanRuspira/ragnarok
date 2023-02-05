@@ -6946,7 +6946,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			else {
 				sd->state.prevend = 1;
 				sd->state.workinprogress = WIP_DISABLE_ALL;
-				sd->vend_skill_lv = skill_lv;
+				sd->vend_skill_lv = skill_lv*2;
 				ARR_FIND(0, MAX_CART, i, sd->cart.u.items_cart[i].nameid && sd->cart.u.items_cart[i].id == 0);
 				if (i < MAX_CART)
 					intif_storage_save(sd, &sd->cart);
