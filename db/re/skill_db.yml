@@ -2010,6 +2010,20 @@ Body:
     Description: Sword Mastery
     MaxLevel: 5
     Type: Weapon
+  - Id: 829
+    Name: JG_EL_ACTION
+    Description: Elemental Action
+    MaxLevel: 5
+    TargetType: Attack
+    DamageFlags:
+      NoDamage: true
+    Range: 5
+    Hit: Single
+    HitCount: 1
+    Cooldown: 5000
+    Requires:
+      SpCost: 50
+      State: Elementalspirit
   - Id: 51
     Name: TF_HIDING
     Description: Hiding
@@ -25120,7 +25134,7 @@ Body:
   - Id: 2457
     Name: SO_SUMMON_AGNI
     Description: Summon Fire Spirit Agni
-    MaxLevel: 3
+    MaxLevel: 5
     TargetType: Self
     DamageFlags:
       NoDamage: true
@@ -25128,13 +25142,7 @@ Body:
     HitCount: 1
     Element: Fire
     CastCancel: true
-    CastTime:
-      - Level: 1
-        Time: 1000
-      - Level: 2
-        Time: 2000
-      - Level: 3
-        Time: 3000
+    CastTime: 1000
     Duration1:
       - Level: 1
         Time: 600000
@@ -25142,26 +25150,13 @@ Body:
         Time: 900000
       - Level: 3
         Time: 1200000
-    Cooldown: 60000
+    Cooldown: 1000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 100
-        - Level: 2
-          Amount: 150
-        - Level: 3
-          Amount: 200
-      ItemCost:
-        - Item: Boody_Red
-          Amount: 3
-        - Item: Boody_Red
-          Amount: 6
-        - Item: Flame_Heart
-          Amount: 1
+      SpCost: 1
   - Id: 2458
     Name: SO_SUMMON_AQUA
     Description: Summon Water Spirit Aqua
-    MaxLevel: 3
+    MaxLevel: 5
     TargetType: Self
     DamageFlags:
       NoDamage: true
@@ -25169,13 +25164,7 @@ Body:
     HitCount: 1
     Element: Water
     CastCancel: true
-    CastTime:
-      - Level: 1
-        Time: 1000
-      - Level: 2
-        Time: 2000
-      - Level: 3
-        Time: 3000
+    CastTime: 1000
     Duration1:
       - Level: 1
         Time: 600000
@@ -25183,26 +25172,13 @@ Body:
         Time: 900000
       - Level: 3
         Time: 1200000
-    Cooldown: 60000
+    Cooldown: 1000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 100
-        - Level: 2
-          Amount: 150
-        - Level: 3
-          Amount: 200
-      ItemCost:
-        - Item: Crystal_Blue
-          Amount: 3
-        - Item: Crystal_Blue
-          Amount: 6
-        - Item: Mistic_Frozen
-          Amount: 1
+      SpCost: 1
   - Id: 2459
     Name: SO_SUMMON_VENTUS
     Description: Summon Wind Spirit Ventus
-    MaxLevel: 3
+    MaxLevel: 5
     TargetType: Self
     DamageFlags:
       NoDamage: true
@@ -25210,13 +25186,7 @@ Body:
     HitCount: 1
     Element: Wind
     CastCancel: true
-    CastTime:
-      - Level: 1
-        Time: 1000
-      - Level: 2
-        Time: 2000
-      - Level: 3
-        Time: 3000
+    CastTime: 1000
     Duration1:
       - Level: 1
         Time: 600000
@@ -25224,26 +25194,13 @@ Body:
         Time: 900000
       - Level: 3
         Time: 1200000
-    Cooldown: 60000
+    Cooldown: 1000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 100
-        - Level: 2
-          Amount: 150
-        - Level: 3
-          Amount: 200
-      ItemCost:
-        - Item: Wind_Of_Verdure
-          Amount: 3
-        - Item: Wind_Of_Verdure
-          Amount: 6
-        - Item: Rough_Wind
-          Amount: 1
+      SpCost: 1
   - Id: 2460
     Name: SO_SUMMON_TERA
     Description: Summon Earth Spirit Tera
-    MaxLevel: 3
+    MaxLevel: 5
     TargetType: Self
     DamageFlags:
       NoDamage: true
@@ -25251,13 +25208,7 @@ Body:
     HitCount: 1
     Element: Earth
     CastCancel: true
-    CastTime:
-      - Level: 1
-        Time: 1000
-      - Level: 2
-        Time: 2000
-      - Level: 3
-        Time: 3000
+    CastTime: 1000
     Duration1:
       - Level: 1
         Time: 600000
@@ -25265,26 +25216,13 @@ Body:
         Time: 900000
       - Level: 3
         Time: 1200000
-    Cooldown: 60000
+    Cooldown: 1000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 100
-        - Level: 2
-          Amount: 150
-        - Level: 3
-          Amount: 200
-      ItemCost:
-        - Item: Yellow_Live
-          Amount: 3
-        - Item: Yellow_Live
-          Amount: 6
-        - Item: Great_Nature
-          Amount: 1
+      SpCost: 1
   - Id: 2461
     Name: SO_EL_ACTION
     Description: Elemental Action
-    MaxLevel: 1
+    MaxLevel: 5
     TargetType: Attack
     DamageFlags:
       NoDamage: true
@@ -25322,7 +25260,7 @@ Body:
   - Id: 2464
     Name: SO_EL_CURE
     Description: Spirit Recovery
-    MaxLevel: 1
+    MaxLevel: 5
     TargetType: Self
     DamageFlags:
       NoDamage: true

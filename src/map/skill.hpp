@@ -2128,6 +2128,7 @@ enum e_skill {
 	AC_HAWK = 826,
 	AC_AGI = 827,
 	MC_SWORD = 828,
+	JG_EL_ACTION = 829,
 };
 
 /// The client view ids for land skills.

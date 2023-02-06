@@ -9814,18 +9814,98 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case SO_SUMMON_VENTUS:
 	case SO_SUMMON_TERA:
 		if( sd ) {
-			int elemental_class = skill_get_elemental_type(skill_id,skill_lv);
-
-			// Remove previous elemental first.
-			if( sd->ed )
-				elemental_delete(sd->ed);
-
-			// Summoning the new one.
-			if( !elemental_create(sd,elemental_class,skill_get_time(skill_id,skill_lv)) ) {
-				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-				break;
+			enum e_mode mode = EL_MODE_PASSIVE;	// Default mode.
+			if( skill_lv != 5 ) {
+				int elemental_class = skill_get_elemental_type(skill_id,skill_lv);
+				if( sd->ed ) {
+					// Just remove elementai if its the same class
+					if( sd->ed->elemental.class_ == elemental_class) {
+						elemental_delete(sd->ed);
+						break;
+					}
+					// Remove previous elemental first.
+					if( sd->ed->elemental.class_ != elemental_class) {
+						elemental_delete(sd->ed);
+					}
+				}
+				// Summoning new one elemental
+				if( !elemental_create(sd,elemental_class,skill_get_time(skill_id,skill_lv)) ) {
+					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+					break;
+				}
+			}
+			if( skill_lv == 5 ) {
+				if( !sd->ed ) {
+					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+					break;
+				}
+				enum e_mode current_mode = status_get_mode(&sd->ed->bl);
+				enum e_mode new_mode = static_cast<e_mode>(EL_MODE_AGGRESSIVE);
+				if (current_mode == static_cast<e_mode>(EL_MODE_AGGRESSIVE)){
+					new_mode = static_cast<e_mode>(EL_MODE_PASSIVE);
+				} 
+				elemental_change_mode(sd->ed,new_mode);
 			}
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
+			// }
+
+			// if( skill_lv == 2 ) {
+			// 	if( !sd->ed ) {
+			// 		clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+			// 		break;
+			// 	}
+			// 	mode = static_cast<e_mode>(EL_MODE_AGGRESSIVE);
+			// 	if( !elemental_change_mode(sd->ed,mode) ) {
+			// 		clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+			// 		break;
+			// 	}
+			// 	clif_skill_nodamage(src, bl, skill_id, skill_lv, 1);
+			// }
+			// if( skill_lv == 3 ) {
+			// 	if( !sd->ed ) {
+			// 		clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+			// 		break;
+			// 	}
+			// 	mode = static_cast<e_mode>(EL_MODE_PASSIVE);
+			// 	if( !elemental_change_mode(sd->ed,mode) ) {
+			// 		clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+			// 		break;
+			// 	}
+			// 	clif_skill_nodamage(src, bl, skill_id, skill_lv, 1);
+			// }
+			// if( skill_lv == 4 ) {
+			// 	if( !sd->ed ) {
+			// 		clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+			// 		break;
+			// 	}
+			// 	mode = static_cast<e_mode>(EL_MODE_ASSIST);
+			// 	if( !elemental_change_mode(sd->ed,mode) ) {
+			// 		clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+			// 		break;
+			// 	}
+			// 	clif_skill_nodamage(src, bl, skill_id, skill_lv, 1);
+			// }
+			// if( skill_lv == 5 ) {
+			// 	int duration = 3000;
+			// 	if( !sd->ed ) {
+			// 		clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+			// 		break;
+			// 	}
+			// 	switch(sd->ed->db->class_) {
+			// 		case 2115:case 2124:
+			// 		case 2118:case 2121:
+			// 			duration = 6000;
+			// 			break;
+			// 		case 2116:case 2119:
+			// 		case 2122:case 2125:
+			// 			duration = 9000;
+			// 			break;
+			// 	}
+			// 	sd->skill_id_old = skill_id;
+			// 	elemental_action(sd->ed, bl, tick);
+			// 	clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
+			// 	skill_blockpc_start(sd, skill_id, duration);
+			// }
 		}
 		break;
 
@@ -9850,7 +9930,27 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 		}
 		break;
-
+	case JG_EL_ACTION:
+		if( sd ) {
+				int duration = 3000;
+			if( !sd->ed )
+				break;
+			switch(sd->ed->db->class_) {
+				case 2115:case 2124:
+				case 2118:case 2121:
+					duration = 6000;
+					break;
+				case 2116:case 2119:
+				case 2122:case 2125:
+					duration = 9000;
+					break;
+			}
+			sd->skill_id_old = skill_id;
+			elemental_action(sd->ed, bl, tick, JG_EL_ACTION);
+			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
+			skill_blockpc_start(sd, skill_id, duration);
+		}
+		break;
 	case SO_EL_ACTION:
 		if( sd ) {
 				int duration = 3000;
@@ -9867,7 +9967,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 					break;
 			}
 			sd->skill_id_old = skill_id;
-			elemental_action(sd->ed, bl, tick);
+			elemental_action(sd->ed, bl, tick, SO_EL_ACTION);
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 			skill_blockpc_start(sd, skill_id, duration);
 		}
@@ -20459,14 +20559,15 @@ int skill_disable_check(struct status_change *sc, uint16 skill_id)
 int skill_get_elemental_type( uint16 skill_id , uint16 skill_lv ) {
 	int type = 0;
 
-	switch( skill_id ) {
-		case SO_SUMMON_AGNI:	type = ELEMENTALID_AGNI_S;		break;
-		case SO_SUMMON_AQUA:	type = ELEMENTALID_AQUA_S;		break;
-		case SO_SUMMON_VENTUS:	type = ELEMENTALID_VENTUS_S;	break;
-		case SO_SUMMON_TERA:	type = ELEMENTALID_TERA_S;		break;
+	switch( skill_lv ) {
+		case 5:	type = ELEMENTALID_AGNI_M;		break;
+		case 4:	type = ELEMENTALID_AGNI_L;		break;
+		case 3:	type = ELEMENTALID_AQUA_L;		break;
+		case 2:	type = ELEMENTALID_VENTUS_L;	break;
+		case 1:	type = ELEMENTALID_TERA_L;		break;
 	}
 
-	type += skill_lv - 1;
+	// type += skill_lv - 1;
 
 	return type;
 }

@@ -80,7 +80,7 @@ int elemental_create(struct map_session_data *sd, int class_, unsigned int lifet
 	//[Elemental Summon Skill Level x (Caster's INT / 2 + Caster's DEX / 4)]
 	ele.matk = i * (sd->battle_status.int_ / 2 + sd->battle_status.dex / 4);
 	//150 + [Caster's DEX / 10] + [Elemental Summon Skill Level x 3 ]
-	ele.amotion = 150 + sd->battle_status.dex / 10 + i * 3;
+	ele.amotion = 15 + sd->battle_status.dex / 10 + i * 3;
 	//Caster's DEF + (Caster's Base Level / (5 - Elemental Summon Skill Level)
 	ele.def = sd->battle_status.def + sd->status.base_level / (5-i);
 	//Caster's MDEF + (Caster's INT / (5 - Elemental Summon Skill Level)
@@ -385,7 +385,7 @@ int elemental_clean_effect(struct elemental_data *ed) {
 	return 1;
 }
 
-int elemental_action(struct elemental_data *ed, struct block_list *bl, t_tick tick) {
+int elemental_action(struct elemental_data *ed, struct block_list *bl, t_tick tick, int caller_skill_id) {
 	struct s_skill_condition req;
 	uint16 skill_id, skill_lv;
 	int i;
@@ -393,46 +393,69 @@ int elemental_action(struct elemental_data *ed, struct block_list *bl, t_tick ti
 	nullpo_ret(ed);
 	nullpo_ret(bl);
 
-	if( !ed->master )
+	if( !ed->master ){	
+		ShowMessage("ele skill 1\n");
 		return 0;
+	}
+	
 
 	if( ed->target_id )
 		elemental_unlocktarget(ed);	// Remove previous target.
 
-	ARR_FIND(0, MAX_ELESKILLTREE, i, ed->db->skill[i].id && (ed->db->skill[i].mode&EL_SKILLMODE_AGGRESSIVE));
-	if( i == MAX_ELESKILLTREE )
+	if (caller_skill_id ==SO_EL_ACTION) {
+		ARR_FIND(0, MAX_ELESKILLTREE, i, ed->db->skill[i].id && (ed->db->skill[i].mode&EL_SKILLMODE_AGGRESSIVE));
+	}
+	if (caller_skill_id ==JG_EL_ACTION) {
+		ARR_FIND(0, MAX_ELESKILLTREE, i, ed->db->skill[i].id && (ed->db->skill[i].mode&EL_SKILLMODE_ASSIST));
+	}
+	if( i == MAX_ELESKILLTREE ){	
+		ShowMessage("ele skill 2\n");
 		return 0;
-
+	}
+	ShowMessage("ele skill 3\n");
 	skill_id = ed->db->skill[i].id;
 	skill_lv = ed->db->skill[i].lv;
 
-	if( elemental_skillnotok(skill_id, ed) )
+	if( elemental_skillnotok(skill_id, ed) ){	
+		ShowMessage("ele skill 4\n");
 		return 0;
+	}
 
-	if( ed->ud.skilltimer != INVALID_TIMER )
+	if( ed->ud.skilltimer != INVALID_TIMER ){	
+		ShowMessage("ele skill 5\n");
 		return 0;
-	else if( DIFF_TICK(tick, ed->ud.canact_tick) < 0 )
-		return 0;
-
+	} else {
+		if( DIFF_TICK(tick, ed->ud.canact_tick) < 0 ){	
+			ShowMessage("ele skill 6\n");
+			return 0;
+		}
+	}
 	ed->target_id = ed->ud.skilltarget = bl->id;	// Set new target
 	ed->last_thinktime = tick;
-
+	ShowMessage("ele skill 7\n");
 	// Not in skill range.
 	if( !battle_check_range(&ed->bl,bl,skill_get_range(skill_id,skill_lv)) ) {
+		ShowMessage("ele skill 8\n");
 		// Try to walk to the target.
-		if( !unit_walktobl(&ed->bl, bl, skill_get_range(skill_id,skill_lv), 2) )
+		if( !unit_walktobl(&ed->bl, bl, skill_get_range(skill_id,skill_lv), 2) ){
+			ShowMessage("ele skill 9\n");
 			elemental_unlocktarget(ed);
-		else {
+		} else {
+			ShowMessage("ele skill 10\n");
 			// Walking, waiting to be in range. Client don't handle it, then we must handle it here.
 			int walk_dist = distance_bl(&ed->bl,bl) - skill_get_range(skill_id,skill_lv);
 			ed->ud.skill_id = skill_id;
 			ed->ud.skill_lv = skill_lv;
 
-			if( skill_get_inf(skill_id) & INF_GROUND_SKILL )
+			if( skill_get_inf(skill_id) & INF_GROUND_SKILL ) {
+				ShowMessage("ele skill 11\n");
 				ed->ud.skilltimer = add_timer( tick+(t_tick)status_get_speed(&ed->bl)*walk_dist, skill_castend_pos, ed->bl.id, 0 );
-			else
+			}else{
+				ShowMessage("ele skill 12\n");
 				ed->ud.skilltimer = add_timer( tick+(t_tick)status_get_speed(&ed->bl)*walk_dist, skill_castend_id, ed->bl.id, 0 );
+			}
 		}
+		ShowMessage("ele skill 13\n");
 		return 1;
 
 	}
@@ -442,7 +465,7 @@ int elemental_action(struct elemental_data *ed, struct block_list *bl, t_tick ti
 	if(req.hp || req.sp){
 		struct map_session_data *sd = BL_CAST(BL_PC, battle_get_master(&ed->bl));
 		if( sd ){
-			if( sd->skill_id_old != SO_EL_ACTION && //regardless of remaining HP/SP it can be cast
+			if( sd->skill_id_old != SO_EL_ACTION && sd->skill_id_old != JG_EL_ACTION &&//regardless of remaining HP/SP it can be cast
 				(status_get_hp(&ed->bl) < req.hp || status_get_sp(&ed->bl) < req.sp) )
 				return 1;
 			else
@@ -717,10 +740,10 @@ static int elemental_ai_sub_timer(struct elemental_data *ed, struct map_session_
 			return 1;
 		}
 
-		if( battle_check_range(&ed->bl,target,view_range) && rnd()%100 < 2 ) { // 2% chance to cast attack skill.
-			if(	elemental_action(ed,target,tick) )
-				return 1;
-		}
+		// if( battle_check_range(&ed->bl,target,view_range) && rnd()%100 < 2 ) { // 2% chance to cast attack skill.
+		// 	if(	elemental_action(ed,target,tick) )
+		// 		return 1;
+		// }
 
 		//Attempt to attack.
 		//At this point we know the target is attackable, we just gotta check if the range matches.
