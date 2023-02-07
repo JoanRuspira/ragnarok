@@ -6435,6 +6435,7 @@ static void pc_checkallowskill(struct map_session_data *sd)
 		SC_DAGGERQUICKEN,
 		SC_MACEQUICKEN,
 		SC_BOWQUICKEN,
+		SC_QUICKSTUDY,
 		SC_SPEARSTANCE,
 		SC_ONEHAND,
 		SC_AURABLADE,

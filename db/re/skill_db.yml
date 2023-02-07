@@ -2024,6 +2024,35 @@ Body:
     Requires:
       SpCost: 50
       State: Elementalspirit
+  - Id: 830
+    Name: SA_QUICKSTUDY
+    Description: Quick Study
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 10000
+    AfterCastActDelay: 1000
+    Duration1:
+      - Level: 1
+        Time: 60000
+      - Level: 2
+        Time: 120000
+      - Level: 3
+        Time: 180000
+      - Level: 4
+        Time: 240000
+      - Level: 5
+        Time: 300000
+    Requires:
+      SpCost: 50
+      Weapon:
+        Book: true
+        Staff: true
+        2hstaff: true
   - Id: 51
     Name: TF_HIDING
     Description: Hiding
@@ -2969,122 +2998,38 @@ Body:
     Hit: Multi_Hit
     HitCount:
       - Level: 1
-        Count: 1
+        Count: 3
       - Level: 2
-        Count: 1
+        Count: 6
       - Level: 3
-        Count: 2
+        Count: 9
       - Level: 4
-        Count: 2
+        Count: 12
       - Level: 5
-        Count: 3
-      - Level: 6
-        Count: 3
-      - Level: 7
-        Count: 4
-      - Level: 8
-        Count: 4
-      - Level: 9
-        Count: 5
-      - Level: 10
-        Count: 5
-      - Level: 11
         Count: 15
     Element: Fire
-    SplashArea:
-      - Level: 1
-        Area: 3
-      - Level: 2
-        Area: 3
-      - Level: 3
-        Area: 3
-      - Level: 4
-        Area: 3
-      - Level: 5
-        Area: 3
-      - Level: 6
-        Area: 3
-      - Level: 7
-        Area: 3
-      - Level: 8
-        Area: 3
-      - Level: 9
-        Area: 3
-      - Level: 10
-        Area: 3
-      - Level: 11
-        Area: 14
+    SplashArea: 3
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
     CastCancel: true
     CastTime: 15000
-    AfterCastActDelay:
-      - Level: 1
-        Time: 2000
-      - Level: 2
-        Time: 3000
-      - Level: 3
-        Time: 3000
-      - Level: 4
-        Time: 4000
-      - Level: 5
-        Time: 4000
-      - Level: 6
-        Time: 5000
-      - Level: 7
-        Time: 5000
-      - Level: 8
-        Time: 6000
-      - Level: 9
-        Time: 6000
-      - Level: 10
-        Time: 7000
+    AfterCastActDelay: 5000
     Duration1:
       - Level: 1
-        Time: 2000
+        Time: 3000
       - Level: 2
-        Time: 3000
+        Time: 4000
       - Level: 3
-        Time: 3000
+        Time: 5000
       - Level: 4
-        Time: 4000
+        Time: 6000
       - Level: 5
-        Time: 4000
-      - Level: 6
-        Time: 5000
-      - Level: 7
-        Time: 5000
-      - Level: 8
-        Time: 6000
-      - Level: 9
-        Time: 6000
-      - Level: 10
         Time: 7000
     Duration2: 5000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 20
-        - Level: 2
-          Amount: 24
-        - Level: 3
-          Amount: 30
-        - Level: 4
-          Amount: 34
-        - Level: 5
-          Amount: 40
-        - Level: 6
-          Amount: 44
-        - Level: 7
-          Amount: 50
-        - Level: 8
-          Amount: 54
-        - Level: 9
-          Amount: 60
-        - Level: 10
-          Amount: 64
+      SpCost: 64
     Unit:
       Id: Dummyskill
       Range: 3
@@ -3095,7 +3040,7 @@ Body:
   - Id: 84
     Name: WZ_JUPITEL
     Description: Jupitel Thunder
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Magic
     TargetType: Attack
     Flags:
@@ -3104,99 +3049,39 @@ Body:
     Hit: Multi_Hit
     HitCount:
       - Level: 1
-        Count: 3
-      - Level: 2
         Count: 4
-      - Level: 3
-        Count: 5
-      - Level: 4
+      - Level: 2
         Count: 6
-      - Level: 5
-        Count: 7
-      - Level: 6
+      - Level: 3
         Count: 8
-      - Level: 7
-        Count: 9
-      - Level: 8
+      - Level: 4
         Count: 10
-      - Level: 9
-        Count: 11
-      - Level: 10
+      - Level: 5
         Count: 12
     Element: Wind
     Knockback:
       - Level: 1
-        Amount: 2
+        Amount: 1
       - Level: 2
-        Amount: 3
+        Amount: 2
       - Level: 3
         Amount: 3
       - Level: 4
         Amount: 4
       - Level: 5
-        Amount: 4
-      - Level: 6
         Amount: 5
-      - Level: 7
-        Amount: 5
-      - Level: 8
-        Amount: 6
-      - Level: 9
-        Amount: 6
-      - Level: 10
-        Amount: 7
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
     CastCancel: true
-    CastTime:
-      - Level: 1
-        Time: 2500
-      - Level: 2
-        Time: 3000
-      - Level: 3
-        Time: 3500
-      - Level: 4
-        Time: 4000
-      - Level: 5
-        Time: 4500
-      - Level: 6
-        Time: 5000
-      - Level: 7
-        Time: 5500
-      - Level: 8
-        Time: 6000
-      - Level: 9
-        Time: 6500
-      - Level: 10
-        Time: 7000
+    CastTime: 7000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 20
-        - Level: 2
-          Amount: 23
-        - Level: 3
-          Amount: 26
-        - Level: 4
-          Amount: 29
-        - Level: 5
-          Amount: 32
-        - Level: 6
-          Amount: 35
-        - Level: 7
-          Amount: 38
-        - Level: 8
-          Amount: 41
-        - Level: 9
-          Amount: 44
-        - Level: 10
-          Amount: 47
+      SpCost: 50
   - Id: 85
     Name: WZ_VERMILION
     Description: Lord of Vermilion
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Magic
     TargetType: Ground
     Flags:
@@ -3210,52 +3095,12 @@ Body:
         Plagiarism: true
         Reproduce: true
     CastCancel: true
-    CastTime:
-      - Level: 1
-        Time: 15000
-      - Level: 2
-        Time: 14500
-      - Level: 3
-        Time: 14000
-      - Level: 4
-        Time: 13500
-      - Level: 5
-        Time: 13000
-      - Level: 6
-        Time: 12500
-      - Level: 7
-        Time: 12000
-      - Level: 8
-        Time: 11500
-      - Level: 9
-        Time: 11000
-      - Level: 10
-        Time: 10500
+    CastTime: 15000
     AfterCastActDelay: 5000
     Duration1: 4000
     Duration2: 30000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 60
-        - Level: 2
-          Amount: 64
-        - Level: 3
-          Amount: 68
-        - Level: 4
-          Amount: 72
-        - Level: 5
-          Amount: 76
-        - Level: 6
-          Amount: 80
-        - Level: 7
-          Amount: 84
-        - Level: 8
-          Amount: 88
-        - Level: 9
-          Amount: 92
-        - Level: 10
-          Amount: 96
+      SpCost: 80
     Unit:
       Id: Dummyskill
       Layout:
@@ -3487,7 +3332,7 @@ Body:
   - Id: 89
     Name: WZ_STORMGUST
     Description: Storm Gust
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Magic
     TargetType: Ground
     Flags:
@@ -3502,27 +3347,7 @@ Body:
         Plagiarism: true
         Reproduce: true
     CastCancel: true
-    CastTime:
-      - Level: 1
-        Time: 6000
-      - Level: 2
-        Time: 7000
-      - Level: 3
-        Time: 8000
-      - Level: 4
-        Time: 9000
-      - Level: 5
-        Time: 10000
-      - Level: 6
-        Time: 11000
-      - Level: 7
-        Time: 12000
-      - Level: 8
-        Time: 13000
-      - Level: 9
-        Time: 14000
-      - Level: 10
-        Time: 15000
+    CastTime: 15000
     AfterCastActDelay: 5000
     Duration1: 4600
     Duration2: 12000
@@ -9376,7 +9201,7 @@ Body:
   - Id: 365
     Name: HW_MAGICCRASHER
     Description: Stave Crasher
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     Range: 9
@@ -9716,7 +9541,7 @@ Body:
   - Id: 374
     Name: PF_SOULCHANGE
     Description: Soul Exhale
-    MaxLevel: 1
+    MaxLevel: 5
     TargetType: Attack
     DamageFlags:
       NoDamage: true
@@ -12179,59 +12004,29 @@ Body:
   - Id: 469
     Name: SL_SMA
     Description: Esma
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Magic
     TargetType: Attack
     Range: 9
     Hit: Multi_Hit
     HitCount:
       - Level: 1
-        Count: 1
-      - Level: 2
         Count: 2
-      - Level: 3
-        Count: 3
-      - Level: 4
+      - Level: 2
         Count: 4
-      - Level: 5
-        Count: 5
-      - Level: 6
+      - Level: 3
         Count: 6
-      - Level: 7
-        Count: 7
-      - Level: 8
+      - Level: 4
         Count: 8
-      - Level: 9
-        Count: 9
-      - Level: 10
+      - Level: 5
         Count: 10
-    Element: Endowed
+    Element: Holy
     CastCancel: true
-    CastTime: 2000
+    CastTime: 7000
     AfterCastActDelay: 500
     Duration1: 3000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 8
-        - Level: 2
-          Amount: 16
-        - Level: 3
-          Amount: 24
-        - Level: 4
-          Amount: 32
-        - Level: 5
-          Amount: 40
-        - Level: 6
-          Amount: 48
-        - Level: 7
-          Amount: 56
-        - Level: 8
-          Amount: 64
-        - Level: 9
-          Amount: 72
-        - Level: 10
-          Amount: 80
+      SpCost: 80
   - Id: 470
     Name: SL_SWOO
     Description: Eswoo
@@ -17193,32 +16988,11 @@ Body:
     Hit: Multi_Hit
     HitCount: -5
     Element: Water
-    SplashArea:
-      - Level: 1
-        Area: 5
-      - Level: 2
-        Area: 6
-      - Level: 3
-        Area: 7
-      - Level: 4
-        Area: 8
-      - Level: 5
-        Area: 9
     CopyFlags:
       Skill:
         Reproduce: true
     CastCancel: true
-    CastTime:
-      - Level: 1
-        Time: 2000
-      - Level: 2
-        Time: 2500
-      - Level: 3
-        Time: 3000
-      - Level: 4
-        Time: 3500
-      - Level: 5
-        Time: 4000
+    CastTime: 7000
     AfterCastActDelay: 1000
     Duration1:
       - Level: 1
@@ -17232,17 +17006,7 @@ Body:
       - Level: 5
         Time: 30000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 50
-        - Level: 2
-          Amount: 60
-        - Level: 3
-          Amount: 70
-        - Level: 4
-          Amount: 80
-        - Level: 5
-          Amount: 90
+      SpCost: 80
   - Id: 2205
     Name: WL_MARSHOFABYSS
     Description: Marsh of Abyss
@@ -17377,7 +17141,7 @@ Body:
   - Id: 2208
     Name: WL_RADIUS
     Description: Radius
-    MaxLevel: 3
+    MaxLevel: 5
   - Id: 2209
     Name: WL_STASIS
     Description: Stasis
@@ -17480,28 +17244,16 @@ Body:
     Hit: Multi_Hit
     HitCount: -7
     Element: Fire
-    SplashArea: 3
-    Knockback: 3
     CopyFlags:
       Skill:
         Reproduce: true
     CastCancel: true
-    CastTime: 5000
+    CastTime: 7000
     AfterCastActDelay: 2000
     Duration1: 5000
     Cooldown: 5000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 60
-        - Level: 2
-          Amount: 70
-        - Level: 3
-          Amount: 80
-        - Level: 4
-          Amount: 90
-        - Level: 5
-          Amount: 100
+      SpCost: 89
   - Id: 2212
     Name: WL_HELLINFERNO
     Description: Hell Inferno
@@ -24553,7 +24305,7 @@ Body:
     Description: Diamond Dust
     MaxLevel: 5
     Type: Magic
-    TargetType: Ground
+    TargetType: Attack
     Range: 9
     Hit: Single
     HitCount: -5
@@ -24562,17 +24314,7 @@ Body:
       Skill:
         Reproduce: true
     CastCancel: true
-    CastTime:
-      - Level: 1
-        Time: 5000
-      - Level: 2
-        Time: 5500
-      - Level: 3
-        Time: 6000
-      - Level: 4
-        Time: 6500
-      - Level: 5
-        Time: 7000
+    CastTime: 7000
     AfterCastActDelay: 1000
     Duration1: 500
     Duration2:
@@ -24588,17 +24330,7 @@ Body:
         Time: 20000
     Cooldown: 5000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 50
-        - Level: 2
-          Amount: 56
-        - Level: 3
-          Amount: 62
-        - Level: 4
-          Amount: 68
-        - Level: 5
-          Amount: 74
+      SpCost: 80
     Unit:
       Id: Dummyskill
       Range:

@@ -434,6 +434,7 @@ void initChangeTables(void)
 	set_sc( KN_THQUICKEN			, SC_THQUICKEN		, EFST_THQUICKEN, SCB_ASPD|SCB_WATK );
 	set_sc( AL_MACEQUICKEN			, SC_MACEQUICKEN		, EFST_MACEQUICKEN, SCB_ASPD|SCB_WATK );
 	set_sc( HT_BOWQUICKEN			, SC_BOWQUICKEN		, EFST_BOWQUICKEN, SCB_ASPD|SCB_WATK );
+	set_sc( SA_QUICKSTUDY			, SC_QUICKSTUDY		, EFST_QUICKSTUDY, SCB_ASPD|SCB_WATK );
 	set_sc( HT_CYCLONICCHARGE			, SC_CYCLONICCHARGE		, EFST_CYCLONICCHARGE, SCB_FLEE|SCB_WATK );
 	set_sc( MG_ENERGYCOAT		, SC_ENERGYCOAT		, EFST_ENERGYCOAT		, SCB_MATK );
 	set_sc( NPC_EMOTION		, SC_MODECHANGE		, EFST_BLANK		, SCB_MODE );
@@ -6549,6 +6550,8 @@ static unsigned short status_calc_watk(struct block_list *bl, struct status_chan
 		watk += 3*sc->data[SC_MACEQUICKEN]->val1;
 	if (sc->data[SC_BOWQUICKEN])
 		watk += 3*sc->data[SC_BOWQUICKEN]->val1;
+	if (sc->data[SC_QUICKSTUDY])
+		watk += 3*sc->data[SC_QUICKSTUDY]->val1;
 	if (sc->data[SC_CYCLONICCHARGE])
 		watk += 4*sc->data[SC_CYCLONICCHARGE]->val1;
 	if (sc->data[SC_UPROAR])
@@ -7543,6 +7546,10 @@ static short status_calc_aspd(struct block_list *bl, struct status_change *sc, b
 			bonus += sc->data[SC_THQUICKEN]->val1*2;
 		if (sc->data[SC_MACEQUICKEN])
 			bonus += sc->data[SC_MACEQUICKEN]->val1*2;
+		if (sc->data[SC_BOWQUICKEN])
+			bonus += sc->data[SC_BOWQUICKEN]->val1*2;
+		if (sc->data[SC_QUICKSTUDY])
+			bonus += sc->data[SC_QUICKSTUDY]->val1*2;
 		if (sc->data[SC_SKA])
 			bonus -= 25;
 		if (sc->data[SC_DEFENDER])

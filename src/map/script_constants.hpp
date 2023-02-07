@@ -1622,6 +1622,7 @@
 	export_constant(SC_THQUICKEN);
 	export_constant(SC_MACEQUICKEN);
 	export_constant(SC_BOWQUICKEN);
+	export_constant(SC_QUICKSTUDY);
 	export_constant(SC_SPIRITANIMAL);
 	export_constant(SC_CYCLONICCHARGE);
 #ifdef RENEWAL
