@@ -286,7 +286,7 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 		case LK_HEADCRUSH:
 			SwordsmanAdditionalEffectsCalculator::apply_traumatic_blow_additional_effect(src, bl, skill_lv);
 			break;
-		case HT_PHANTASMIC:
+		case AC_TRANQUILIZING:
 			ArcherAdditionalEffectsCalculator::apply_tranquilizer_shot_additional_effect(src, bl, skill_lv);
 			break;
 		case AC_PARALIZING:

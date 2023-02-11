@@ -2002,8 +2002,9 @@ void skill_attack_blow(struct block_list *src, struct block_list *dsrc, struct b
 				dir = 6; // Official servers push target to the West
 			break;
 		case AC_SHOWER:
+		case HT_PHANTASMIC:
 		case WL_CRIMSONROCK:
-			if (!battle_config.arrow_shower_knockback && skill_id == AC_SHOWER)
+			if (!battle_config.arrow_shower_knockback && (skill_id == AC_SHOWER || skill_id == HT_PHANTASMIC))
 				dir = map_calc_dir(target, src->x, src->y);
 			else
 				dir = map_calc_dir(target, skill_area_temp[4], skill_area_temp[5]);
@@ -3527,7 +3528,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case AC_DOUBLE:
 	case HT_POWER:
 	case AC_CHARGEARROW:
-	case HT_PHANTASMIC:
+	case AC_TRANQUILIZING:
 	case AC_PARALIZING:
 	case MA_DOUBLE:
 	case KN_PIERCE:
@@ -3867,6 +3868,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case RA_WUGSTRIKE:
 	case HT_BLITZBEAT:
 	case AC_SHOWER:
+	case HT_PHANTASMIC:
 	case MA_SHOWER:
 	case AL_HOLYLIGHT:
 	case MG_NAPALMBEAT:
@@ -11750,7 +11752,7 @@ int skill_castend_pos2(struct block_list* src, int x, int y, uint16 skill_id, ui
 			}
 		}
 		break;
-
+	case HT_PHANTASMIC:
 	case AC_SHOWER:
 		status_change_end(src, SC_CAMOUFLAGE, INVALID_TIMER);
 	case MA_SHOWER:

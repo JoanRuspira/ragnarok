@@ -15,16 +15,30 @@ int HunterSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 			return 0;
 			break;
 		case HT_HURRICANEFURY:
+			add_hurricane_fury_special_effects(target);
 			return calculate_cyclonic_charge_atk_ratio(skill_lv);
+		case ITM_TOMAHAWK:
+			add_magic_tomahawk_special_effects(target);
+			return calculate_magic_tomahawk_atk_ratio(skill_lv, sstatus->matk_max);
 		default:
 			return 0;
 			break;
 	}
 }
 
+void HunterSkillAttackRatioCalculator::add_magic_tomahawk_special_effects(struct block_list *target)
+{
+    clif_specialeffect(target, 1271, AREA);
+}
+
+void HunterSkillAttackRatioCalculator::add_hurricane_fury_special_effects(struct block_list *target)
+{
+    clif_specialeffect(target, EF_TEIHIT1T, AREA);
+}
+
 void HunterSkillAttackRatioCalculator::add_slash_special_effects(struct block_list *target)
 {
-    clif_specialeffect(target, EF_SONIC_CLAW, AREA);
+    clif_specialeffect(target, 1103, AREA);
 }
 
 
@@ -49,4 +63,27 @@ int HunterSkillAttackRatioCalculator::calculate_cyclonic_charge_atk_ratio(int sk
 			break;
 		}
 	return ratio;
+}
+
+int HunterSkillAttackRatioCalculator::calculate_magic_tomahawk_atk_ratio(int skill_lv, int matk)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 125;
+			break;
+		case 2:
+			ratio = 225;
+			break;
+		case 3:
+			ratio = 325;
+			break;
+		case 4:
+			ratio = 425;
+			break;
+		case 5:
+			ratio = 525;
+			break;
+		}
+	return (ratio + matk) / 1.5;
 }

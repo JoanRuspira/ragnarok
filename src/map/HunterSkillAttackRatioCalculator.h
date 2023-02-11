@@ -15,5 +15,8 @@ class HunterSkillAttackRatioCalculator
 	private:
 		static int calculate_slash_atk_ratio(int skill_lv, int intelligence);
 		static int calculate_cyclonic_charge_atk_ratio(int skill_lv);
+		static int calculate_magic_tomahawk_atk_ratio(int skill_lv, int matk);
 		static void add_slash_special_effects(struct block_list *target);
+		static void add_hurricane_fury_special_effects(struct block_list *target);
+		static void add_magic_tomahawk_special_effects(struct block_list *target);
 };

@@ -4273,6 +4273,13 @@ int status_calc_pc_sub(struct map_session_data* sd, enum e_status_calc_opt opt)
 	if (pc_checkskill(sd, SU_POWEROFLAND) > 0)
 		base_status->int_ += 20;
 
+	if((skill=pc_checkskill(sd,AC_MAKINGARROW))>0){
+		base_status->matk_max += skill * 5;
+		base_status->matk_min += skill * 5;
+		base_status->rhw.matk += skill * 5;
+	}
+	
+
 	// Bonuses from cards and equipment as well as base stat, remember to avoid overflows.
 	i = base_status->str + sd->status.str + sd->indexed_bonus.param_bonus[0] + sd->indexed_bonus.param_equip[0];
 	base_status->str = cap_value(i,0,USHRT_MAX);
@@ -5654,7 +5661,6 @@ void status_calc_bl_main(struct block_list *bl, /*enum scb_flag*/int flag)
 		status->matk_max = status_calc_matk(bl, sc, status->matk_max);
 		status->matk_min = status_calc_matk(bl, sc, status->matk_min);
 		status->rhw.matk += status_calc_matk(bl, sc, 0);
-		// ShowMessage("Matk Recalculated");
 	}
 
 	if(flag&SCB_ASPD) {
@@ -6697,7 +6703,7 @@ static unsigned short status_calc_ematk(struct block_list *bl, struct status_cha
  */
 static unsigned short status_calc_matk(struct block_list *bl, struct status_change *sc, int matk)
 {
-	
+	ShowMessage("Matk Recalculated 1\n");
 	if(!sc || !sc->count)
 		return cap_value(matk,0,USHRT_MAX);
 	if(sc->data[SC_SPIRITANIMAL])
@@ -6736,7 +6742,6 @@ static unsigned short status_calc_matk(struct block_list *bl, struct status_chan
 	if (sc->data[SC_NIBELUNGEN] && sc->data[SC_NIBELUNGEN]->val2 == RINGNBL_MATKRATE)
 		matk += matk * 20 / 100;
 #endif
-
 	return (unsigned short)cap_value(matk,0,USHRT_MAX);
 }
 

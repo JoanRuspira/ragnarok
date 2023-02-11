@@ -467,3 +467,25 @@ Body:
       NoAuction: true
     Script: |
       bonus bLongAtkRate,20;
+  - Id: 1723
+    AegisName: Luna_Bow
+    Name: Luna Bow
+    Type: Weapon
+    SubType: Bow
+    Buy: 20
+    Weight: 2000
+    Attack: 100
+    MagicAttack: 150
+    Range: 5
+    Slots: 2
+    Jobs:
+      Hunter: true
+      BardDancer: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
+    Script: |
+      .@r = getrefine();
+      bonus bDef,2+3*(.@r>5)+5*(.@r>8);

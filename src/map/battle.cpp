@@ -1998,6 +1998,7 @@ static int battle_range_type(struct block_list *src, struct block_list *target, 
 
 	switch (skill_id) {
 		case AC_SHOWER:
+		case HT_PHANTASMIC:
 		case AM_DEMONSTRATION:
 			// When monsters use Arrow Shower or Bomb, it is always short range
 			if (src->type == BL_MOB)
@@ -2796,10 +2797,11 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			skillratio += MerchntSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
 		case AC_SHOWER:
+		case HT_PHANTASMIC:
 		case AC_DOUBLE:
 		case HT_POWER:
 		case AC_CHARGEARROW:
-		case HT_PHANTASMIC:
+		case AC_TRANQUILIZING:
 		case AC_PARALIZING:
 			skillratio += ArcherSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv);
 			break;
@@ -2858,6 +2860,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case MER_CRASH:
 			skillratio += 10 * skill_lv;
 			break;
+		case ITM_TOMAHAWK:
 		case HT_HURRICANEFURY:
 				skillratio += HunterSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
