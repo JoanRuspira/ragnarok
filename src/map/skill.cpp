@@ -5263,6 +5263,18 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				if (sd) clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0) ;
 				break ;
 			}
+		case CR_BINDINGLIGHT:
+			clif_specialeffect(bl, EF_FOOD06, AREA);
+			clif_specialeffect(src, EF_FOOD06, AREA);
+			if (sd && battle_check_undead(tstatus->race,tstatus->def_ele)) {
+				if (battle_check_target(src, bl, BCT_ENEMY) < 1) {
+					//Offensive heal does not works on non-enemies. [Skotlex]
+					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+					return 0;
+				}
+				return skill_castend_damage_id (src, bl, skill_id, skill_lv, tick, flag);
+			}
+		break;
 		case WM_SIRCLEOFNATURE:
 			clif_specialeffect(bl, EF_FOOD03, AREA);
 			if (sd && battle_check_undead(tstatus->race,tstatus->def_ele)) {
@@ -5336,6 +5348,16 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		{
 			int heal = skill_calc_heal(src, bl, skill_id, skill_lv, true);
 			status_heal(bl,heal,0,0);
+			clif_skill_nodamage(src, bl, skill_id, heal, 1);
+		}
+		break;
+	case CR_BINDINGLIGHT:
+		{
+			int heal = skill_calc_heal(src, bl, skill_id, skill_lv, true);
+			status_heal(src,heal,0,0);
+			status_heal(bl,heal,0,0);
+			// struct unit_data *ud = unit_bl2ud(src);
+			// if (ud->target)
 			clif_skill_nodamage(src, bl, skill_id, heal, 1);
 		}
 		break;

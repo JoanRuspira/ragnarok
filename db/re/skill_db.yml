@@ -2099,6 +2099,29 @@ Body:
     AfterCastActDelay: 1000
     Requires:
       SpCost: 40  
+  - Id: 833
+    Name: CR_BINDINGLIGHT
+    Description: Blessing
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Support
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      IgnoreHovering: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    CastTime: 4000
+    Cooldown: 5000
+    AfterCastActDelay: 1000
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Requires:
+      SpCost: 80 
   - Id: 51
     Name: TF_HIDING
     Description: Hiding
