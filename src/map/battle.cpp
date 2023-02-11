@@ -5015,6 +5015,7 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 
 		//Calc base damage according to skill
 		switch (skill_id) {
+			case CR_HEAL:
 			case AL_HEAL:
 			case PR_BENEDICTIO:
 			case PR_SANCTUARY:

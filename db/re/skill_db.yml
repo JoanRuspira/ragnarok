@@ -2074,6 +2074,31 @@ Body:
       Ammo:
         Arrow: true
       AmmoAmount: 1
+  - Id: 832
+    Name: CR_HEAL
+    Description: Heal
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Support
+    DamageFlags:
+      NoDamage: true
+      IgnoreDefense: true
+    Flags:
+      IsAutoShadowSpell: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    Element: Holy
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CastCancel: true
+    CastTime: 3000
+    Cooldown: 5000
+    AfterCastActDelay: 1000
+    Requires:
+      SpCost: 40  
   - Id: 51
     Name: TF_HIDING
     Description: Hiding

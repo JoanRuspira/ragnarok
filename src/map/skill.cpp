@@ -4177,6 +4177,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case MG_FIREBOLT:
 	case MG_LIGHTNINGBOLT:
 	case WZ_EARTHSPIKE:
+	case CR_HEAL:
 	case AL_HEAL:
 	case WM_SIRCLEOFNATURE:
 	case NPC_DARKTHUNDER:
@@ -5273,6 +5274,17 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				return skill_castend_damage_id (src, bl, skill_id, skill_lv, tick, flag);
 			}
 			break;
+		case CR_HEAL:
+			clif_specialeffect(bl, EF_FOOD05, AREA);
+			if (sd && battle_check_undead(tstatus->race,tstatus->def_ele)) {
+				if (battle_check_target(src, bl, BCT_ENEMY) < 1) {
+					//Offensive heal does not works on non-enemies. [Skotlex]
+					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+					return 0;
+				}
+				return skill_castend_damage_id (src, bl, skill_id, skill_lv, tick, flag);
+			}
+			break;
 		case AL_HEAL:
 		case ALL_RESURRECTION:
 		case PR_ASPERSIO:
@@ -5329,6 +5341,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		break;
 	case HLIF_HEAL:	//[orn]
 	case AL_HEAL:
+	case CR_HEAL:
 	case AB_HIGHNESSHEAL:
 		{
 			int heal = skill_calc_heal(src, bl, skill_id, skill_lv, true);
@@ -5351,7 +5364,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				else if (tsc->data[SC_BERSERK] || tsc->data[SC_SATURDAYNIGHTFEVER])
 					heal = 0; //Needed so that it actually displays 0 when healing.
 			}
-			if (skill_id == AL_HEAL || skill_id == WM_SIRCLEOFNATURE)
+			if (skill_id == AL_HEAL || skill_id == WM_SIRCLEOFNATURE || skill_id == CR_HEAL)
 				status_change_end(bl, SC_BITESCAR, INVALID_TIMER);
 			clif_skill_nodamage (src, bl, skill_id, heal, 1);
 			if( tsc && tsc->data[SC_AKAITSUKI] && heal && skill_id != HLIF_HEAL )
@@ -10680,6 +10693,7 @@ static int8 skill_castend_id_check(struct block_list *src, struct block_list *ta
 		return USESKILL_FAIL_MAX; // Don't show a skill fail message (NoDamage type doesn't consume requirements)
 
 	switch (skill_id) {
+		case CR_HEAL:
 		case AL_HEAL:
 		case WM_SIRCLEOFNATURE:
 		case AL_INCAGI:

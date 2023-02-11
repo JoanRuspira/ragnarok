@@ -2131,6 +2131,7 @@ enum e_skill {
 	JG_EL_ACTION = 829,
 	SA_QUICKSTUDY = 830,
 	AC_TRANQUILIZING = 831,
+	CR_HEAL = 832,
 };
 
 /// The client view ids for land skills.
