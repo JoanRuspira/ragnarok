@@ -9620,7 +9620,19 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			clif_skill_nodamage(src, src, skill_id, skill_lv, sc_start(src,src, type, 100, skill_lv, skill_get_time(skill_id,skill_lv)));
 		clif_skill_nodamage(src, bl, skill_id, skill_lv, sc_start(src,bl, type, 100, skill_lv, skill_get_time(skill_id,skill_lv)));
 		break;
-
+	case CR_DIVINELIGHT:
+		if( bl->type == BL_PC ) {
+			int heal = skill_calc_heal(src, bl, AB_HIGHNESSHEAL, skill_lv, true);
+			if (status_isimmune(bl) || (dstmd && (status_get_class(bl) == MOBID_EMPERIUM || status_get_class_(bl) == CLASS_BATTLEFIELD)))
+				heal = 0;
+			clif_specialeffect(bl, EF_FOOD06, AREA);
+			clif_specialeffect(bl, EF_GLORIA, AREA);
+			if( tsc && tsc->data[SC_AKAITSUKI] && heal && AB_HIGHNESSHEAL != HLIF_HEAL )
+				heal = ~heal + 1;
+			status_heal(bl,heal,0,0);
+			clif_skill_nodamage(src, bl, skill_id, heal, 1);
+		}
+		break;
 	case WM_DEADHILLHERE:
 		if( bl->type == BL_PC ) {
 			if( !status_isdead(bl) ) {

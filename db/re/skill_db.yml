@@ -2122,6 +2122,58 @@ Body:
         Reproduce: true
     Requires:
       SpCost: 80 
+  - Id: 834
+    Name: CR_DIVINELIGHT
+    Description: Divine Light
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Support
+    DamageFlags:
+      NoDamage: true
+      IgnoreDefense: true
+    Range: 11
+    Hit: Single
+    HitCount: 1
+    Element: Holy
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    CastTime: 6000
+    AfterCastActDelay: 1000
+    Cooldown: 10000
+    Requires:
+      SpCost: 100
+      ItemCost:
+        - Item: Yellow_Gemstone
+          Amount: 1
+  - Id: 2421
+    Name: WM_DEADHILLHERE
+    Description: Valley of Death
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Support
+    DamageFlags:
+      NoDamage: true
+      IgnoreDefense: true
+    Range: 11
+    Hit: Single
+    HitCount: 1
+    Element: Holy
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    CastTime: 6000
+    AfterCastActDelay: 1000
+    Cooldown: 10000
+    Requires:
+      SpCost: 100
+      Weapon:
+        Musical: true
+      ItemCost:
+        - Item: Heartbroken_Tears
+          Amount: 1
   - Id: 51
     Name: TF_HIDING
     Description: Hiding

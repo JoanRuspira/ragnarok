@@ -2133,6 +2133,7 @@ enum e_skill {
 	AC_TRANQUILIZING = 831,
 	CR_HEAL = 832,
 	CR_BINDINGLIGHT = 833,
+	CR_DIVINELIGHT = 834,
 };
 
 /// The client view ids for land skills.
