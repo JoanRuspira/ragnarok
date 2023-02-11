@@ -28,6 +28,8 @@ int HunterSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 
 void HunterSkillAttackRatioCalculator::add_magic_tomahawk_special_effects(struct block_list *target)
 {
+	
+    clif_specialeffect(target, EF_SMA_READY, AREA);
     clif_specialeffect(target, 1271, AREA);
 }
 

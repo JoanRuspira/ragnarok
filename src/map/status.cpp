@@ -402,12 +402,10 @@ void initChangeTables(void)
 	add_sc( WZ_STORMGUST		, SC_FREEZE		);
 	set_sc( WZ_QUAGMIRE		, SC_QUAGMIRE		, EFST_QUAGMIRE		, SCB_AGI|SCB_DEX|SCB_ASPD|SCB_SPEED );
 	// add_sc( BS_HAMMERFALL		, SC_STUN		);
-	set_sc( BS_ADRENALINE		, SC_ADRENALINE		, EFST_ADRENALINE		, SCB_ASPD
-#ifdef RENEWAL
-		|SCB_HIT );
-#else
-		);
-#endif
+	set_sc( BS_ADRENALINE		, SC_ADRENALINE		, EFST_ADRENALINE		, SCB_ASPD|SCB_HIT );
+	set_sc( KN_ADRENALINE		, SC_KNADRENALINE		, EFST_KNADRENALINE		, SCB_ASPD|SCB_HIT );
+		
+
 	set_sc( BS_WEAPONPERFECT	, SC_WEAPONPERFECTION	, EFST_WEAPONPERFECT, SCB_CRI|SCB_WATK );
 	set_sc( BS_OVERTHRUST		, SC_OVERTHRUST		, EFST_OVERTHRUST		, SCB_NONE );
 	set_sc( BS_MAXIMIZE		, SC_MAXIMIZEPOWER	, EFST_MAXIMIZE, SCB_REGEN );
@@ -6849,6 +6847,8 @@ static signed short status_calc_hit(struct block_list *bl, struct status_change 
 		hit += sc->data[SC_TWOHANDQUICKEN]->val1 * 2;
 	if (sc->data[SC_ADRENALINE])
 		hit += sc->data[SC_ADRENALINE]->val1 * 3 + 5;
+	if (sc->data[SC_KNADRENALINE])
+		hit += sc->data[SC_KNADRENALINE]->val1 * 3 + 5;
 	if (sc->data[SC_NIBELUNGEN] && sc->data[SC_NIBELUNGEN]->val2 == RINGNBL_HIT)
 		hit += 50;
 #endif
@@ -7533,6 +7533,8 @@ static short status_calc_aspd(struct block_list *bl, struct status_change *sc, b
 			bonus -= 25;
 		if (sc->data[SC_ADRENALINE])
 			bonus += sc->data[SC_ADRENALINE]->val1*2;
+		if (sc->data[SC_KNADRENALINE])
+			bonus += sc->data[SC_KNADRENALINE]->val1*2;
 		if (sc->data[SC_TWOHANDQUICKEN])
 			bonus += sc->data[SC_TWOHANDQUICKEN]->val1*2;
 		if (sc->data[SC_ONEHAND])
@@ -7703,6 +7705,10 @@ static short status_calc_aspd_rate(struct block_list *bl, struct status_change *
 			max < sc->data[SC_ADRENALINE]->val3)
 			max = sc->data[SC_ADRENALINE]->val3;
 
+		if(sc->data[SC_KNADRENALINE] &&
+			max < sc->data[SC_KNADRENALINE]->val3)
+			max = sc->data[SC_KNADRENALINE]->val3;
+		
 		// if(sc->data[SC_SPEARQUICKEN] &&
 		// 	max < sc->data[SC_SPEARQUICKEN]->val2)
 		// 	max = sc->data[SC_SPEARQUICKEN]->val2;
@@ -9322,6 +9328,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 	break;
 	case SC_ADRENALINE:
 	case SC_ADRENALINE2:
+	case SC_KNADRENALINE:
 		if (sc->data[SC_QUAGMIRE] || sc->data[SC_DECREASEAGI])
 			return 0;
 	break;
@@ -10062,6 +10069,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			case SC_ADRENALINE2:
 			case SC_WEAPONPERFECTION:
 			case SC_OVERTHRUST:
+			case SC_KNADRENALINE:
 				if (sce->val2 > val2)
 					return 0;
 				break;
@@ -10938,6 +10946,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 		case SC_OVERTHRUST:
 		case SC_ADRENALINE2:
 		case SC_ADRENALINE:
+		case SC_KNADRENALINE:
 		case SC_WEAPONPERFECTION:
 			{
 				struct map_session_data * s_sd = BL_CAST(BL_PC, src);

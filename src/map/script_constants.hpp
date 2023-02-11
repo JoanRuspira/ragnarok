@@ -906,6 +906,7 @@
 	export_constant(SC_GLORIA);
 	export_constant(SC_AETERNA);
 	export_constant(SC_ADRENALINE);
+	export_constant(SC_KNADRENALINE);
 	export_constant(SC_WEAPONPERFECTION);
 	export_constant(SC_OVERTHRUST);
 	export_constant(SC_MAXIMIZEPOWER);
@@ -2504,6 +2505,7 @@
 	export_constant(EFST_GLORIA);
 	export_constant(EFST_LEXAETERNA);
 	export_constant(EFST_ADRENALINE);
+	export_constant(EFST_KNADRENALINE);
 	export_constant(EFST_WEAPONPERFECT);
 	export_constant(EFST_OVERTHRUST);
 	export_constant(EFST_MAXIMIZE);
