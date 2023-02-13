@@ -2180,6 +2180,10 @@ Body:
         Time: 150000
     Requires:
       SpCost: 40
+  - Id: 836
+    Name: RG_VULTURE
+    Description: Vulture's Eye
+    MaxLevel: 5
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -10532,7 +10536,7 @@ Body:
   - Id: 403
     Name: PF_MEMORIZE
     Description: Foresight
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Magic
     TargetType: Self
     DamageFlags:

@@ -4264,6 +4264,8 @@ int status_calc_pc_sub(struct map_session_data* sd, enum e_status_calc_opt opt)
 		base_status->int_ += skill * 2;
 	if((skill=pc_checkskill(sd,AC_HAWK))>0)
 		base_status->dex += skill * 2;
+	if((skill=pc_checkskill(sd,RG_VULTURE))>0)
+		base_status->dex += skill * 2;
 	if((skill=pc_checkskill(sd,AC_AGI))>0)
 		base_status->agi += skill * 2;
 	if((skill = pc_checkskill(sd,RA_RESEARCHTRAP))>0)
@@ -4409,6 +4411,10 @@ int status_calc_pc_sub(struct map_session_data* sd, enum e_status_calc_opt opt)
 	// Absolute modifiers from passive skills
 
 	if((skill=pc_checkskill(sd,AC_VULTURE))>0) {
+		if(sd->status.weapon == W_BOW)
+			base_status->rhw.range += skill*2;
+	}
+	if((skill=pc_checkskill(sd,RG_VULTURE))>0) {
 		if(sd->status.weapon == W_BOW)
 			base_status->rhw.range += skill*2;
 	}
