@@ -4262,6 +4262,8 @@ int status_calc_pc_sub(struct map_session_data* sd, enum e_status_calc_opt opt)
 		base_status->int_ += (skill+1)/2; // +1 INT / 2 lv
 	if((skill=pc_checkskill(sd,AC_OWL))>0)
 		base_status->int_ += skill * 2;
+	if((skill=pc_checkskill(sd,SA_CASTCANCEL))>0)
+		base_status->int_ += skill * 2;
 	if((skill=pc_checkskill(sd,AC_HAWK))>0)
 		base_status->dex += skill * 2;
 	if((skill=pc_checkskill(sd,RG_VULTURE))>0)
