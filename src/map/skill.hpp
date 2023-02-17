@@ -2136,6 +2136,7 @@ enum e_skill {
 	CR_DIVINELIGHT = 834,
 	KN_ADRENALINE = 835,
 	RG_VULTURE = 836,
+	JG_SRECOVERY = 837,
 };
 
 /// The client view ids for land skills.

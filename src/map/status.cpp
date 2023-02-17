@@ -5032,6 +5032,8 @@ void status_calc_regen(struct block_list *bl, struct status_data *status, struct
 		val = 0;
 		if( (skill=(pc_checkskill(sd,MG_SRECOVERY))) > 0 )
 			val += skill*6;
+		if( (skill=(pc_checkskill(sd,JG_SRECOVERY))) > 0 )
+			val += skill*6;
 		if( (skill=pc_checkskill(sd,NJ_NINPOU)) > 0 )
 			val += skill*3 + skill*status->max_sp/500;
 		if( (skill=(pc_checkskill(sd,WM_LESSON)*2)) > 0 )

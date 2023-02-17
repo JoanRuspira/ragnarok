@@ -13790,7 +13790,7 @@ int skill_unit_onplace_timer(struct skill_unit *unit, struct block_list *bl, t_t
 					sp = tstatus->max_sp * sp / 100;
 					if (tstatus->hp < tstatus->max_hp)
 						clif_skill_nodamage(&unit->bl, bl, AL_HEAL, hp, 1);
-					if (tstatus->sp < tstatus->max_sp)
+					if (tstatus->sp < tstatus->max_sp) {}
 						clif_skill_nodamage(&unit->bl, bl, MG_SRECOVERY, sp, 1);
 					if (tsc && tsc->data[SC_AKAITSUKI] && hp)
 						hp = ~hp + 1;

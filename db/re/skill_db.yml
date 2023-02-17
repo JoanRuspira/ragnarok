@@ -489,7 +489,7 @@ Body:
         Reproduce: true
     CastCancel: true
     CastTime: 500
-    Cooldown: 10000
+    Cooldown: 15000
     AfterCastActDelay: 500
     Requires:
       SpCost: 37
@@ -510,7 +510,7 @@ Body:
     Element: Earth
     CastCancel: true
     CastTime: 500
-    Cooldown: 10000
+    Cooldown: 15000
     AfterCastActDelay: 500
     Requires:
       SpCost: 37
@@ -2183,6 +2183,10 @@ Body:
   - Id: 836
     Name: RG_VULTURE
     Description: Vulture's Eye
+    MaxLevel: 5
+  - Id: 837
+    Name: JG_SRECOVERY
+    Description: Increase SP Recovery
     MaxLevel: 5
   - Id: 2421
     Name: WM_DEADHILLHERE
@@ -18017,7 +18021,7 @@ Body:
   - Id: 2231
     Name: WL_READING_SB
     Description: Reading Spellbook
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Magic
     TargetType: Self
     DamageFlags:
