@@ -32,33 +32,43 @@ Header:
   Version: 1
 
 Body:
-  - Skill: WZ_METEOR
-    Book: WL_MB_MS
-    PreservePoints: 10
-  - Skill: WZ_VERMILION
-    Book: WL_MB_LOV
-    PreservePoints: 10
-  - Skill: WZ_STORMGUST
-    Book: WL_MB_SG
-    PreservePoints: 10
-  - Skill: WL_JACKFROST
-    Book: WL_MB_JF
-    PreservePoints: 10
-  - Skill: WL_DRAINLIFE
-    Book: WL_MB_DL
-    PreservePoints: 8
-  - Skill: WL_CRIMSONROCK
-    Book: WL_MB_CR
-    PreservePoints: 12
-  - Skill: WL_COMET
-    Book: WL_MB_CM
-    PreservePoints: 22
-  - Skill: WL_CHAINLIGHTNING
-    Book: WL_MB_CL
-    PreservePoints: 12
-  - Skill: WL_EARTHSTRAIN
-    Book: WL_MB_ES
-    PreservePoints: 12
-  - Skill: WL_TETRAVORTEX
-    Book: WL_MB_TV
-    PreservePoints: 22
+  - Skill: MG_FIREBOLT
+    Book: Magic_Book_FB
+    PreservePoints: 1
+  - Skill: MG_COLDBOLT
+    Book: Magic_Book_CB
+    PreservePoints: 1
+  - Skill: MG_LIGHTNINGBOLT
+    Book: Magic_Book_LB
+    PreservePoints: 1
+  #- Skill: WZ_METEOR
+  #  Book: WL_MB_MS
+  #  PreservePoints: 10
+  #- Skill: WZ_VERMILION
+  #  Book: WL_MB_LOV
+  #  PreservePoints: 10
+  #- Skill: WZ_STORMGUST
+  #  Book: WL_MB_SG
+  #  PreservePoints: 10
+  #- Skill: WL_JACKFROST
+  #  Book: WL_MB_JF
+  #  PreservePoints: 10
+  #- Skill: WL_DRAINLIFE
+  #  Book: WL_MB_DL
+  #  PreservePoints: 8
+  #- Skill: WL_CRIMSONROCK
+  #  Book: WL_MB_CR
+  #  PreservePoints: 12
+  #- Skill: WL_COMET
+  #  Book: WL_MB_CM
+  #  PreservePoints: 22
+  #- Skill: WL_CHAINLIGHTNING
+  #  Book: WL_MB_CL
+  #  PreservePoints: 12
+  #- Skill: WL_EARTHSTRAIN
+  #  Book: WL_MB_ES
+  #  PreservePoints: 12
+  #- Skill: WL_TETRAVORTEX
+  #  Book: WL_MB_TV
+  #  PreservePoints: 22
+#

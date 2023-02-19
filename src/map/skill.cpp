@@ -4539,9 +4539,69 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 		}
 		break;
 
-	case WL_RELEASE:
-		if (sc == nullptr)
+	case WL_READING_SB:
+		if (sc == nullptr) {
 			break;
+		}
+		if (sd) {
+			int i;
+			skill_toggle_magicpower(src, skill_id); // No hit will be amplified
+			if (sc->data[SC_FREEZE_SP] == nullptr)
+				break;
+			bool found_spell = false;
+
+			for (i = SC_MAXSPELLBOOK; i >= SC_SPELLBOOK1; i--) { // List all available spell to be released
+				if (sc->data[i] != nullptr) {
+					found_spell = true;
+					break;
+				}
+			}
+			if (!found_spell)
+				break;
+			// Now extract the data from the preserved spell
+			uint16 pres_skill_id = sc->data[i]->val1;
+			uint16 pres_skill_lv = sc->data[i]->val2;
+			uint16 point = sc->data[i]->val3;
+
+			status_change_end(src, static_cast<sc_type>(i), INVALID_TIMER);
+
+			if( sc->data[SC_FREEZE_SP]->val2 > point )
+				sc->data[SC_FREEZE_SP]->val2 -= point;
+			else // Last spell to be released
+				status_change_end(src, SC_FREEZE_SP, INVALID_TIMER);
+
+			if( !skill_check_condition_castbegin(sd, pres_skill_id, pres_skill_lv) )
+				break;
+
+			// Get the requirement for the preserved skill
+			skill_consume_requirement(sd, pres_skill_id, pres_skill_lv, 1);
+
+			switch( skill_get_casttype(pres_skill_id) )
+			{
+				case CAST_GROUND:
+					skill_castend_pos2(src, bl->x, bl->y, pres_skill_id, pres_skill_lv, tick, 0);
+					break;
+				case CAST_NODAMAGE:
+					skill_castend_nodamage_id(src, bl, pres_skill_id, pres_skill_lv, tick, 0);
+					break;
+				case CAST_DAMAGE:
+					skill_castend_damage_id(src, bl, pres_skill_id, pres_skill_lv, tick, 0);
+					break;
+			}
+
+			sd->ud.canact_tick = i64max(tick + skill_delayfix(src, pres_skill_id, pres_skill_lv), sd->ud.canact_tick);
+			clif_status_change(src, EFST_POSTDELAY, 1, skill_delayfix(src, pres_skill_id, pres_skill_lv), 0, 0, 0);
+
+			int cooldown = pc_get_skillcooldown(sd,pres_skill_id, pres_skill_lv);
+
+			if( cooldown > 0 )
+				skill_blockpc_start(sd, pres_skill_id, cooldown);
+		}
+		break;
+	case WL_RELEASE:
+		if (sc == nullptr) {
+			break;
+		}	
 		if (sd) {
 			int i;
 
@@ -4549,7 +4609,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 			if (skill_lv == 1) { // SpellBook
 				if (sc->data[SC_FREEZE_SP] == nullptr)
 					break;
-
 				bool found_spell = false;
 
 				for (i = SC_MAXSPELLBOOK; i >= SC_SPELLBOOK1; i--) { // List all available spell to be released
@@ -4558,10 +4617,8 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 						break;
 					}
 				}
-
 				if (!found_spell)
 					break;
-
 				// Now extract the data from the preserved spell
 				uint16 pres_skill_id = sc->data[i]->val1;
 				uint16 pres_skill_lv = sc->data[i]->val2;
@@ -9099,13 +9156,18 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 
 	case WL_READING_SB_READING:
 		if (sd) {
-			if (pc_checkskill(sd, WL_READING_SB) == 0 || skill_lv < 1 || skill_lv > 10) {
-				clif_skill_fail(sd, skill_id, USESKILL_FAIL_SPELLBOOK_READING, 0);
-				break;
+			switch(skill_lv){
+				case 1:
+					skill_spellbook(sd, 6189);
+					break;
+				case 2:
+					skill_spellbook(sd, 6190);
+					break;
+				case 3:
+					skill_spellbook(sd, 6191);
+					break;
 			}
-
-			clif_skill_nodamage(src, bl, skill_id, skill_lv, 1);
-			skill_spellbook(sd, ITEMID_WL_MB_SG + skill_lv - 1);
+			
 		}
 		break;
 
@@ -19614,10 +19676,8 @@ int skill_magicdecoy(struct map_session_data *sd, t_itemid nameid, int skill_id)
  */
 void skill_spellbook(struct map_session_data *sd, t_itemid nameid) {
 	nullpo_retv(sd);
-
 	if (reading_spellbook_db.empty())
 		return;
-
 	struct status_change *sc = status_get_sc(&sd->bl);
 
 	for (int i = SC_SPELLBOOK1; i <= SC_MAXSPELLBOOK; i++) {
@@ -19628,12 +19688,9 @@ void skill_spellbook(struct map_session_data *sd, t_itemid nameid) {
 			return;
 		}
 	}
-
 	std::shared_ptr<s_skill_spellbook_db> spell = reading_spellbook_db.findBook(nameid);
-
 	if (spell == nullptr)
 		return;
-
 	uint16 skill_id = spell->skill_id, skill_lv = pc_checkskill(sd, skill_id);
 
 	if (skill_lv == 0) { // Caster hasn't learned the skill
@@ -19641,11 +19698,10 @@ void skill_spellbook(struct map_session_data *sd, t_itemid nameid) {
 		clif_skill_fail(sd, WL_READING_SB, USESKILL_FAIL_SPELLBOOK_DIFFICULT_SLEEP, 0);
 		return;
 	}
-
 	int points = spell->points;
 
 	if (sc && sc->data[SC_FREEZE_SP]) {
-		if ((sc->data[SC_FREEZE_SP]->val2 + points) > 4 * pc_checkskill(sd, WL_FREEZE_SP) + status_get_int(&sd->bl) / 10 + sd->status.base_level / 10) {
+		if ((sc->data[SC_FREEZE_SP]->val2 + points) > pc_checkskill(sd, WL_READING_SB)) {
 			clif_skill_fail(sd, WL_READING_SB, USESKILL_FAIL_SPELLBOOK_PRESERVATION_POINT, 0);
 			return;
 		}
@@ -19660,7 +19716,6 @@ void skill_spellbook(struct map_session_data *sd, t_itemid nameid) {
 		sc_start2(&sd->bl, &sd->bl, SC_FREEZE_SP, 100, 0, points, INFINITE_TICK);
 		sc_start4(&sd->bl, &sd->bl, SC_MAXSPELLBOOK, 100, skill_id, skill_lv, points, 0, INFINITE_TICK);
 	}
-
 	// Reading Spell Book SP cost same as the sealed spell.
 	status_zap(&sd->bl, 0, skill_get_sp(skill_id, skill_lv));
 }
@@ -22109,7 +22164,6 @@ static void skill_readdb(void)
 	abra_db.load();
 	magic_mushroom_db.load();
 	reading_spellbook_db.load();
-
 	skill_init_unit_layout();
 	skill_init_nounit_layout();
 }
@@ -22119,6 +22173,7 @@ void skill_reload (void) {
 	abra_db.clear();
 	magic_mushroom_db.clear();
 	reading_spellbook_db.clear();
+
 	skill_readdb();
 	initChangeTables(); // Re-init Status Change tables
 

@@ -21497,6 +21497,19 @@ BUILDIN_FUNC(ismounting) {
 	return SCRIPT_CMD_SUCCESS;
 }
 
+
+// /**
+//  * spellbookreading({<char_id>}) returns 1 on success or 0 otherwise
+//  **/
+// BUILDIN_FUNC(spellbookreading) {
+// 	TBL_PC* sd;
+// 	if (!script_charid2sd(2,sd))
+// 		return SCRIPT_CMD_FAILURE;
+// 	skill_spellbook(sd, 6189);
+// 	return SCRIPT_CMD_SUCCESS;
+// }
+
+
 /**
  * setmounting({<char_id>}) returns 1 on success or 0 otherwise
  * - Toggles new mounts on a player when he can mount
@@ -25533,6 +25546,7 @@ struct script_function buildin_func[] = {
 	BUILDIN_DEF(setdragon,"??"),//[Ind]
 	BUILDIN_DEF(ismounting,"?"),//[Ind]
 	BUILDIN_DEF(setmounting,"?"),//[Ind]
+	// BUILDIN_DEF(spellbookreading,"?"),//[Ind]
 	BUILDIN_DEF(checkre,"i"),
 	/**
 	 * rAthena and beyond!

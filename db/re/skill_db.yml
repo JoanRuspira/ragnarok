@@ -2328,6 +2328,8 @@ Body:
     Hit: Multi_Hit
     HitCount: 3
     Element: Weapon
+    Cooldown: 5000
+    AfterCastActDelay: 400
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -6565,7 +6567,7 @@ Body:
     Element: Weapon
     Hit: Single
     HitCount: 1
-    Cooldown: 4000
+    Cooldown: 5000
     AfterCastActDelay: 400
     CopyFlags:
       Skill:
@@ -18003,7 +18005,7 @@ Body:
   - Id: 2230
     Name: WL_RELEASE
     Description: Release
-    MaxLevel: 2
+    MaxLevel: 5
     Type: Magic
     TargetType: Attack
     Flags:
@@ -18013,27 +18015,28 @@ Body:
     HitCount: 1
     CastCancel: true
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 3
-        - Level: 2
-          Amount: 20
+      SpCost: 1
   - Id: 2231
     Name: WL_READING_SB
     Description: Reading Spellbook
     MaxLevel: 5
     Type: Magic
-    TargetType: Self
-    DamageFlags:
-      NoDamage: true
-    Hit: Single
+    TargetType: Attack
+    Flags:
+      AlterRangeRadius: true
+    Range: 11
+    Hit: Multi_Hit
     HitCount: 1
     CastCancel: true
-    CastTime: 5000
-    AfterCastActDelay: 500
-    Duration1: 30000
     Requires:
-      SpCost: 40
+      SpCost: 1
+  - Id: 5078
+    Name: WL_READING_SB_READING
+    Description: Reading Spellbook
+    MaxLevel: 10
+    TargetType: Self
+    CastTime: 5000
+    AfterCastActDelay: 400
   - Id: 2232
     Name: WL_FREEZE_SP
     Description: Freeze Spell

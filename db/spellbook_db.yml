@@ -32,4 +32,6 @@ Header:
   Version: 1
 
 Footer:
+  Imports:
+  - Path: db/re/spellbook_db.yml
   

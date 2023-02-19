@@ -6133,6 +6133,39 @@ Body:
       if (ismounting())
          specialeffect2 EF_INVINCIBLEOFF2;
          setmounting();
+  - Id: 6189
+    AegisName: Magic_Book_FB
+    Name: Spell Book (Fire Bolt)
+    Buy: 25000
+    Type: Usable
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "WL_READING_SB_READING",1;
+  - Id: 6190
+    AegisName: Magic_Book_CB
+    Name: Spell Book (Cold Bolt)
+    Buy: 25000
+    Type: Usable
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "WL_READING_SB_READING",2;
+  - Id: 6191
+    AegisName: Magic_Book_LB
+    Name: Spell Book (Lightening Bolt)
+    Buy: 25000
+    Type: Usable
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "WL_READING_SB_READING",3;
   - Id: 12711
     AegisName: Pretzel
     Name: Pretzel

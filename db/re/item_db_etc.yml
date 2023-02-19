@@ -3540,27 +3540,6 @@ Body:
     Type: Etc
     Buy: 20
     Weight: 10
-  - Id: 6189
-    AegisName: Magic_Book_FB
-    Name: Spell Book (Fire Bolt)
-    Buy: 25000
-    Type: Etc
-    Flags:
-      BuyingStore: true
-  - Id: 6190
-    AegisName: Magic_Book_CB
-    Name: Spell Book (Cold Bolt)
-    Buy: 25000
-    Type: Etc
-    Flags:
-      BuyingStore: true
-  - Id: 6191
-    AegisName: Magic_Book_LB
-    Name: Spell Book (Lightening Bolt)
-    Buy: 25000
-    Type: Etc
-    Flags:
-      BuyingStore: true
   - Id: 6192
     AegisName: Magic_Book_SG
     Name: Spell Book (Storm Gust)
