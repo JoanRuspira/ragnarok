@@ -36,7 +36,23 @@ int MageSkillAtkRatioCalculator::calculate_skill_atk_ratio(int base_lv, int skil
 int MageSkillAtkRatioCalculator::calculate_undead_embrace_attack(int skill_lv)
 {
 	int ratio = 0;
-	ratio = skill_lv * 100;
+	switch (skill_lv) {
+		case 1:
+			ratio = 10;
+			break;
+		case 2:
+			ratio = 120;
+			break;
+		case 3:
+			ratio = 230;
+			break;
+		case 4:
+			ratio = 340;
+			break;
+		case 5:
+			ratio = 450;
+			break;
+		}
 	return ratio;
 }
 

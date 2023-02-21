@@ -24416,17 +24416,7 @@ Body:
       Skill:
         Reproduce: true
     CastCancel: true
-    CastTime:
-      - Level: 1
-        Time: 2200
-      - Level: 2
-        Time: 2400
-      - Level: 3
-        Time: 2600
-      - Level: 4
-        Time: 2800
-      - Level: 5
-        Time: 3000
+    CastTime: 15000
     AfterCastActDelay: 1000
     Duration1: 500
     Duration2:
