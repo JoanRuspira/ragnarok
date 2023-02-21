@@ -339,7 +339,7 @@ Body:
         Plagiarism: true
         Reproduce: true
     CastCancel: true
-    CastTime: 3500
+    CastTime: 3000
     Cooldown: 5000
     AfterCastActDelay: 1000
     Requires:
@@ -409,7 +409,7 @@ Body:
         Plagiarism: true
         Reproduce: true
     CastCancel: true
-    CastTime: 500
+    CastTime: 3000
     Cooldown: 5000
     AfterCastActDelay: 1000
     Requires:
@@ -424,9 +424,9 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Dark
-    CastTime: 3500
+    CastTime: 3000
     Cooldown: 5000
-    AfterCastActDelay: 500
+    AfterCastActDelay: 1000
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -5108,7 +5108,7 @@ Body:
         Plagiarism: true
         Reproduce: true
     CastCancel: true
-    CastTime: 2750
+    CastTime: 3000
     Cooldown: 5000
     AfterCastActDelay: 1000
     Requires:
@@ -8801,7 +8801,7 @@ Body:
         Count: 5
     Element: Dark
     CastCancel: true
-    CastTime: 500
+    CastTime: 3000
     Cooldown: 5000
     CopyFlags:
       Skill:

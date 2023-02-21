@@ -5687,7 +5687,6 @@ int clif_skill_damage(struct block_list *src,struct block_list *dst,t_tick tick,
 	unsigned char buf[64];
 	struct status_change *sc;
 	int damage = (int)cap_value(sdamage,INT_MIN,INT_MAX);
-	ShowMessage("skill used: %d\n", skill_id);
 
 	nullpo_ret(src);
 	nullpo_ret(dst);
