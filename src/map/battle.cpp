@@ -5127,6 +5127,10 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case WM_METALICSOUND:
 						skillratio += BardSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
+					case WZ_VERMILION:
+					case SO_EARTHGRAVE:
+						skillratio += SageSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
+						break;
 					case MG_FIREBALL:
 						skillratio += 40 + 20 * skill_lv;
 						if(ad.miscflag == 2) //Enemies at the edge of the area will take 75% of the damage
@@ -5239,12 +5243,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case WZ_METEOR:
 						skillratio += 25;
 						break;
-					case WZ_VERMILION:
-						if(sd)
-							skillratio += 300 + skill_lv * 100;
-						else
-							skillratio += 20 * skill_lv - 20; //Monsters use old formula
-						break;
 					case BA_DISSONANCE:
 						skillratio += skill_lv * 10;
 						if (sd)
@@ -5259,9 +5257,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 						RE_LVL_DMOD(100);
 						break;
 #else
-					case WZ_VERMILION:
-						skillratio += 20 * skill_lv - 20;
-						break;
 #endif
 					case AB_ADORAMUS:
 						skillratio += 230 + 70 * skill_lv;
@@ -5367,12 +5362,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case NPC_FIREWALK:
 					case NPC_ELECTRICWALK:
 						skillratio += -100 + 100 * skill_lv;
-						break;
-					case SO_EARTHGRAVE:
-						skillratio += -100 + sstatus->int_ * skill_lv + ((sd) ? pc_checkskill(sd, SA_SEISMICWEAPON) * 200 : 0);
-						RE_LVL_DMOD(100);
-						if( sc && sc->data[SC_CURSED_SOIL_OPTION] )
-							skillratio += (sd ? sd->status.job_level * 5 : 0);
 						break;
 					case SO_DIAMONDDUST:
 						skillratio = ( 200 * ((sd) ? pc_checkskill(sd, SA_FROSTWEAPON) : 0) + sstatus->int_ * skill_lv );

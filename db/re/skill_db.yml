@@ -2955,7 +2955,7 @@ Body:
         Reproduce: true
     CastCancel: true
     Cooldown: 20000
-    CastTime: 15000
+    CastTime: 7000
     AfterCastActDelay: 1000
     Duration1:
       - Level: 1
@@ -3252,14 +3252,14 @@ Body:
       IsAutoShadowSpell: true
     Range: 9
     Hit: Multi_Hit
-    HitCount: -10
+    HitCount: -5
     Element: Wind
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
     CastCancel: true
-    CastTime: 15000
+    CastTime: 7000
     AfterCastActDelay: 5000
     Duration1: 4000
     Duration2: 30000
@@ -3291,7 +3291,7 @@ Body:
         - Level: 11
           Size: 7
       Range: 1
-      Interval: 1250
+      Interval: 2000
       Target: Enemy
       Flag:
         NoOverlap: true
@@ -24410,14 +24410,14 @@ Body:
       TargetHidden: true
     Range: 9
     Hit: Single
-    HitCount: -3
+    HitCount: -5
     Element: Earth
     CopyFlags:
       Skill:
         Reproduce: true
     CastCancel: true
-    CastTime: 15000
-    AfterCastActDelay: 1000
+    CastTime: 7000
+    AfterCastActDelay: 2000
     Duration1: 500
     Duration2:
       - Level: 1
@@ -24432,17 +24432,7 @@ Body:
         Time: 20000
     Cooldown: 5000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 62
-        - Level: 2
-          Amount: 70
-        - Level: 3
-          Amount: 78
-        - Level: 4
-          Amount: 86
-        - Level: 5
-          Amount: 94
+      SpCost: 95
     Unit:
       Id: Dummyskill
       Range:
