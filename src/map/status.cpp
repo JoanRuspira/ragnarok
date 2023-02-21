@@ -5013,10 +5013,6 @@ void status_calc_regen(struct block_list *bl, struct status_data *status, struct
 
 	if( sd ) {
 		struct regen_data_sub *sregen;
-		if( (skill=(pc_checkskill(sd,HP_MEDITATIO)*2)) > 0 ) {
-			val = regen->sp*(100+6*skill)/100;
-			regen->sp = cap_value(val, 1, SHRT_MAX);
-		}
 		// Only players have skill/sitting skill regen for now.
 		sregen = regen->sregen;
 
@@ -6711,7 +6707,6 @@ static unsigned short status_calc_ematk(struct block_list *bl, struct status_cha
  */
 static unsigned short status_calc_matk(struct block_list *bl, struct status_change *sc, int matk)
 {
-	ShowMessage("Matk Recalculated 1\n");
 	if(!sc || !sc->count)
 		return cap_value(matk,0,USHRT_MAX);
 	if(sc->data[SC_SPIRITANIMAL])

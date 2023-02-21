@@ -556,7 +556,7 @@ int skill_calc_heal(struct block_list *src, struct block_list *target, uint16 sk
 
 
 			if (sd && ((skill = (pc_checkskill(sd, HP_MEDITATIO)*2)) > 0))
-				hp_bonus += skill * 2;
+				hp_bonus += skill * 4;
 			else if (src->type == BL_HOM && (skill = hom_checkskill(((TBL_HOM*)src), HLIF_BRAIN)) > 0)
 				hp_bonus += skill * 2;
 			if (sd && tsd && sd->status.partner_id == tsd->status.char_id && (sd->class_&MAPID_UPPERMASK) == MAPID_SUPER_NOVICE && sd->status.sex == 0)
