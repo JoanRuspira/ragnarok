@@ -201,6 +201,12 @@
     <Filter Include="Source Files\skillAtkRatioCalculator\sage">
       <UniqueIdentifier>{3691de72-23b8-4d75-a232-07d3a7d87a9f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\skillAtkRatioCalculator\wizard">
+      <UniqueIdentifier>{d4e19083-9297-4981-bab9-7785564d5dbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\skillAtkRatioCalculator\wizard">
+      <UniqueIdentifier>{9d4115c8-8e40-4ac9-8cf5-2392124ae40c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="achievement.hpp">
@@ -446,6 +452,9 @@
     <ClInclude Include="SageSkillAttackRatioCalculator.h">
       <Filter>Header Files\skillAtkRatioCalculator\sage</Filter>
     </ClInclude>
+    <ClInclude Include="WizardSkillAttackRatioCalculator.h">
+      <Filter>Header Files\skillAtkRatioCalculator\wizard</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="achievement.cpp">
@@ -663,6 +672,9 @@
     </ClCompile>
     <ClCompile Include="SageSkillAttackRatioCalculator.cpp">
       <Filter>Source Files\skillAtkRatioCalculator\sage</Filter>
+    </ClCompile>
+    <ClCompile Include="WizardSkillAttackRatioCalculator.cpp">
+      <Filter>Source Files\skillAtkRatioCalculator\wizard</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

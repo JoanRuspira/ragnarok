@@ -43,7 +43,7 @@ void SwordsmanSkillAtkRatioCalculator::add_spear_stab_special_effects(struct blo
 
 void SwordsmanSkillAtkRatioCalculator::add_magnum_break_special_effects(struct block_list* src)
 {
-	clif_specialeffect(src, EF_BAKU, AREA);
+	clif_specialeffect(src, 1239, AREA);
 }
 
 void SwordsmanSkillAtkRatioCalculator::add_lightning_strike_special_effects(struct block_list *target)

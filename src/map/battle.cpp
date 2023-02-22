@@ -5133,6 +5133,9 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case SO_EARTHGRAVE:
 						skillratio += SageSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
+					case WZ_ICEBERG:
+						skillratio += WizardSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
+						break;
 					case MG_FIREBALL:
 						skillratio += 40 + 20 * skill_lv;
 						if(ad.miscflag == 2) //Enemies at the edge of the area will take 75% of the damage

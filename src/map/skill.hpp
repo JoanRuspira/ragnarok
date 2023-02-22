@@ -2137,6 +2137,7 @@ enum e_skill {
 	KN_ADRENALINE = 835,
 	RG_VULTURE = 836,
 	JG_SRECOVERY = 837,
+	WZ_ICEBERG = 838,
 };
 
 /// The client view ids for land skills.

@@ -2188,6 +2188,30 @@ Body:
     Name: JG_SRECOVERY
     Description: Increase SP Recovery
     MaxLevel: 5
+  - Id: 838
+    Name: WZ_ICEBERG
+    Description: Crimson Rock
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    DamageFlags:
+      Splash: true
+    Flags:
+      AlterRangeRadius: true
+    Range: 11
+    Hit: Multi_Hit
+    HitCount: -7
+    Element: Fire
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    CastTime: 7000
+    AfterCastActDelay: 2000
+    Duration1: 5000
+    Cooldown: 5000
+    Requires:
+      SpCost: 90
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death

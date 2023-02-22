@@ -43,6 +43,8 @@
 #include "BardAdditionalEffectsCalculator.h"
 #include "HunterSkillAttackRatioCalculator.h"
 #include "SageSkillAttackRatioCalculator.h"
+#include "WizardSkillAttackRatioCalculator.h"
+
 
 
 
