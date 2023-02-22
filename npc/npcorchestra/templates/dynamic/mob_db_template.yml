@@ -655,7 +655,7 @@ Body:
     ChaseRange: 12
     Size: Medium
     Race: Undead
-    Element: Undead
+    Element: Dark
     ElementLevel: 1
     WalkSpeed: 400
     AttackDelay: 2612
@@ -1707,7 +1707,7 @@ Body:
     ChaseRange: 12
     Size: Medium
     Race: Undead
-    Element: Undead
+    Element: Dark
     ElementLevel: 1
     WalkSpeed: 200
     AttackDelay: 2228
@@ -2131,7 +2131,7 @@ Body:
   #   ChaseRange: 12
   #   Size: Medium
   #   Race: Undead
-  #   Element: Undead
+  #   Element: Dark
   #   ElementLevel: 1
   #   WalkSpeed: 200
   #   AttackDelay: 2468
@@ -2277,7 +2277,7 @@ Body:
   #   Race: Undead
   #   RaceGroups:
   #     Clocktower: true
-  #   Element: Undead
+  #   Element: Dark
   #   ElementLevel: 1
   #   WalkSpeed: 300
   #   AttackDelay: 2864
@@ -2324,7 +2324,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 1
 #     WalkSpeed: 200
 #     AttackDelay: 2276
@@ -2467,7 +2467,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 1
 #     WalkSpeed: 250
 #     AttackDelay: 2468
@@ -2654,7 +2654,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 2
 #     WalkSpeed: 250
 #     AttackDelay: 2456
@@ -2749,7 +2749,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 4
 #     WalkSpeed: 100
 #     AttackDelay: 1072
@@ -2913,7 +2913,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 2
 #     WalkSpeed: 300
 #     AttackDelay: 1772
@@ -3528,7 +3528,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 1
 #     WalkSpeed: 200
 #     AttackDelay: 2492
@@ -3856,7 +3856,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 1
 #     WalkSpeed: 200
 #     AttackDelay: 1754
@@ -4607,7 +4607,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Large
 #     Race: Demihuman
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 2
 #     WalkSpeed: 150
 #     AttackDelay: 1250
@@ -5142,7 +5142,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 1
 #     WalkSpeed: 400
 #     AttackDelay: 620
@@ -5351,7 +5351,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Large
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 4
 #     WalkSpeed: 300
 #     AttackDelay: 2276
@@ -6074,7 +6074,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Large
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 1
 #     WalkSpeed: 350
 #     AttackDelay: 528
@@ -7044,7 +7044,7 @@ Body:
 #     Race: Undead
 #     RaceGroups:
 #       Orc: true
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 1
 #     WalkSpeed: 200
 #     AttackDelay: 2420
@@ -7091,7 +7091,7 @@ Body:
 #     Race: Undead
 #     RaceGroups:
 #       Orc: true
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 1
 #     WalkSpeed: 400
 #     AttackDelay: 2852
@@ -7768,7 +7768,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 1
 #     WalkSpeed: 400
 #     AttackDelay: 2420
@@ -8226,7 +8226,7 @@ Body:
 # #    ChaseRange: 12
 # #    Size: Large
 # #    Race: Dragon
-# #    Element: Undead
+# #    Element: Dark
 # #    ElementLevel: 4
 # #    WalkSpeed: 400
 # #    AttackDelay: 2700
@@ -8447,7 +8447,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 1
 #     WalkSpeed: 200
 #     AttackDelay: 1720
@@ -8649,7 +8649,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Large
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 4
 #     WalkSpeed: 300
 #     AttackDelay: 1816
@@ -8840,7 +8840,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 3
 #     WalkSpeed: 350
 #     AttackDelay: 1848
@@ -8887,7 +8887,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 3
 #     WalkSpeed: 350
 #     AttackDelay: 1768
@@ -8934,7 +8934,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Demon
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 4
 #     WalkSpeed: 200
 #     AttackDelay: 864
@@ -12307,7 +12307,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Large
 #     Race: Demon
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 4
 #     WalkSpeed: 100
 #     AttackDelay: 868
@@ -13113,7 +13113,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 1
 #     WalkSpeed: 150
 #     AttackDelay: 2276
@@ -13161,7 +13161,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Large
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 4
 #     WalkSpeed: 175
 #     AttackDelay: 1816
@@ -13453,7 +13453,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 2
 #     WalkSpeed: 175
 #     AttackDelay: 1772
@@ -13500,7 +13500,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 1
 #     WalkSpeed: 175
 #     AttackDelay: 2612
@@ -13695,7 +13695,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Large
 #     Race: Demon
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 4
 #     WalkSpeed: 145
 #     AttackDelay: 1024
@@ -17293,7 +17293,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 2
 #     WalkSpeed: 300
 #     AttackDelay: 1772
@@ -17318,7 +17318,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 1
 #     WalkSpeed: 400
 #     AttackDelay: 2612
@@ -17701,7 +17701,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 2
 #     WalkSpeed: 170
 #     AttackDelay: 1084
@@ -18384,7 +18384,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 1
 #     WalkSpeed: 300
 #     AttackDelay: 2864
@@ -18469,7 +18469,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 2
 #     WalkSpeed: 250
 #     AttackDelay: 2456
@@ -18805,7 +18805,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Large
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 4
 #     WalkSpeed: 300
 #     AttackDelay: 2276
@@ -18886,7 +18886,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Large
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 1
 #     WalkSpeed: 350
 #     AttackDelay: 528
@@ -19549,7 +19549,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 1
 #     WalkSpeed: 200
 #     AttackDelay: 2420
@@ -19576,7 +19576,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 1
 #     WalkSpeed: 400
 #     AttackDelay: 2852
@@ -19738,7 +19738,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 1
 #     WalkSpeed: 400
 #     AttackDelay: 2420
@@ -19819,7 +19819,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 1
 #     WalkSpeed: 200
 #     AttackDelay: 1720
@@ -19899,7 +19899,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Large
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 4
 #     WalkSpeed: 300
 #     AttackDelay: 1816
@@ -20010,7 +20010,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 3
 #     WalkSpeed: 350
 #     AttackDelay: 1848
@@ -20037,7 +20037,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 3
 #     WalkSpeed: 350
 #     AttackDelay: 1768
@@ -20882,7 +20882,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 2
 #     WalkSpeed: 155
 #     AttackDelay: 847
@@ -21072,7 +21072,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Small
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 1
 #     WalkSpeed: 150
 #     AttackDelay: 912
@@ -21115,7 +21115,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Small
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 1
 #     WalkSpeed: 150
 #     AttackDelay: 890
@@ -21272,7 +21272,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 2
 #     WalkSpeed: 180
 #     AttackDelay: 890
@@ -21704,7 +21704,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 2
 #     WalkSpeed: 175
 #     AttackDelay: 1772
@@ -21732,7 +21732,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 2
 #     WalkSpeed: 170
 #     AttackDelay: 1084
@@ -22803,7 +22803,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 1
 #     WalkSpeed: 200
 #     AttackDelay: 2276
@@ -22917,7 +22917,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Large
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 4
 #     WalkSpeed: 175
 #     AttackDelay: 1816
@@ -23789,7 +23789,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 3
 #     WalkSpeed: 175
 #     AttackDelay: 1772
@@ -24125,7 +24125,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Large
 #     Race: Demon
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 4
 #     WalkSpeed: 145
 #     AttackDelay: 1024
@@ -24274,7 +24274,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 4
 #     WalkSpeed: 100
 #     AttackDelay: 2468
@@ -24310,7 +24310,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 4
 #     WalkSpeed: 200
 #     AttackDelay: 1720
@@ -24347,7 +24347,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 4
 #     WalkSpeed: 180
 #     AttackDelay: 890
@@ -24978,7 +24978,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Demon
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 3
 #     WalkSpeed: 150
 #     AttackDelay: 432
@@ -27504,7 +27504,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 2
 #     WalkSpeed: 250
 #     AttackDelay: 1536
@@ -32578,7 +32578,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Small
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 1
 #     WalkSpeed: 150
 #     AttackDelay: 890
@@ -33952,7 +33952,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 4
 #     WalkSpeed: 100
 #     AttackDelay: 1072
@@ -34535,7 +34535,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 3
 #     WalkSpeed: 200
 #     AttackDelay: 676
@@ -34582,7 +34582,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 3
 #     WalkSpeed: 150
 #     AttackDelay: 1960
@@ -34796,7 +34796,7 @@ Body:
 #     ChaseRange: 12
 #     Size: Medium
 #     Race: Undead
-#     Element: Undead
+#     Element: Dark
 #     ElementLevel: 4
 #     WalkSpeed: 150
 #     AttackDelay: 1816

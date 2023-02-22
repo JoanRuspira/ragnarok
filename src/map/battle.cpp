@@ -5128,6 +5128,8 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 						skillratio += BardSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
 					case WZ_VERMILION:
+					case WZ_STORMGUST:
+					case WZ_METEOR:
 					case SO_EARTHGRAVE:
 						skillratio += SageSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
@@ -5164,10 +5166,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 						break;
 					case WZ_WATERBALL:
 						skillratio += 30 * skill_lv;
-						break;
-					case WZ_STORMGUST:
-						skillratio -= 30; // Offset only once
-						skillratio += 50 * skill_lv;
 						break;
 					case HW_NAPALMVULCAN:
 						skillratio += -100 + 70 * skill_lv;
@@ -5238,9 +5236,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 						break;
 #ifdef RENEWAL
 					case WZ_HEAVENDRIVE:
-						skillratio += 25;
-						break;
-					case WZ_METEOR:
 						skillratio += 25;
 						break;
 					case BA_DISSONANCE:

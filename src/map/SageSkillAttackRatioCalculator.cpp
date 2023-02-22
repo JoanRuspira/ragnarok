@@ -16,6 +16,12 @@ int SageSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
         case WZ_VERMILION:
 			return calculate_vermillion_atk_ratio(skill_lv);
 			break;
+		case WZ_STORMGUST:
+			return calculate_storm_gust_atk_ratio(skill_lv);
+			break;
+		case WZ_METEOR:
+			return calculate_meteor_storm_atk_ratio(skill_lv);
+			break;
 		default:
 			return 0;
 			break;
@@ -29,5 +35,15 @@ int SageSkillAttackRatioCalculator::calculate_earth_spikes_atk_ratio(int skill_l
 
 int SageSkillAttackRatioCalculator::calculate_vermillion_atk_ratio(int skill_lv)
 {
-	return skill_lv*100;
+	return skill_lv*50;
+}
+
+int SageSkillAttackRatioCalculator::calculate_storm_gust_atk_ratio(int skill_lv)
+{
+	return skill_lv*20;
+}
+
+int SageSkillAttackRatioCalculator::calculate_meteor_storm_atk_ratio(int skill_lv)
+{
+	return skill_lv*5;
 }

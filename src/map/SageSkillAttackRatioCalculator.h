@@ -15,4 +15,6 @@ class SageSkillAttackRatioCalculator
 	private:
 		static int calculate_earth_spikes_atk_ratio(int skill_lv);
         static int calculate_vermillion_atk_ratio(int skill_lv);
+        static int calculate_storm_gust_atk_ratio(int skill_lv);
+        static int calculate_meteor_storm_atk_ratio(int skill_lv);
 };

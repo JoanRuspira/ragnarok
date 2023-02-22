@@ -3153,7 +3153,7 @@ Body:
   - Id: 83
     Name: WZ_METEOR
     Description: Meteor Storm
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Magic
     TargetType: Ground
     Flags:
@@ -3162,15 +3162,15 @@ Body:
     Hit: Multi_Hit
     HitCount:
       - Level: 1
-        Count: 3
+        Count: 2
       - Level: 2
-        Count: 6
+        Count: 2
       - Level: 3
-        Count: 9
+        Count: 2
       - Level: 4
-        Count: 12
+        Count: 2
       - Level: 5
-        Count: 15
+        Count: 2
     Element: Fire
     SplashArea: 3
     CopyFlags:
@@ -3178,8 +3178,9 @@ Body:
         Plagiarism: true
         Reproduce: true
     CastCancel: true
-    CastTime: 15000
-    AfterCastActDelay: 5000
+    CastTime: 7000
+    Cooldown: 17000
+    AfterCastActDelay: 2000
     Duration1:
       - Level: 1
         Time: 3000
@@ -3193,7 +3194,7 @@ Body:
         Time: 7000
     Duration2: 5000
     Requires:
-      SpCost: 64
+      SpCost: 85
     Unit:
       Id: Dummyskill
       Range: 3
@@ -3260,11 +3261,12 @@ Body:
         Reproduce: true
     CastCancel: true
     CastTime: 7000
+    Coldown: 14000
     AfterCastActDelay: 5000
     Duration1: 4000
     Duration2: 30000
     Requires:
-      SpCost: 80
+      SpCost: 85
     Unit:
       Id: Dummyskill
       Layout:
@@ -3511,17 +3513,18 @@ Body:
         Plagiarism: true
         Reproduce: true
     CastCancel: true
-    CastTime: 15000
-    AfterCastActDelay: 5000
+    CastTime: 7000
+    Cooldown: 14600
+    AfterCastActDelay: 2000
     Duration1: 4600
     Duration2: 12000
     Requires:
-      SpCost: 78
+      SpCost: 85
     Unit:
       Id: Dummyskill
       Layout: 4
       Range: 1
-      Interval: 450
+      Interval: 920
       Target: Enemy
       Flag:
         NoOverlap: true
@@ -24417,6 +24420,7 @@ Body:
         Reproduce: true
     CastCancel: true
     CastTime: 7000
+    Cooldown: 10000
     AfterCastActDelay: 2000
     Duration1: 500
     Duration2:
@@ -24432,7 +24436,7 @@ Body:
         Time: 20000
     Cooldown: 5000
     Requires:
-      SpCost: 95
+      SpCost: 85
     Unit:
       Id: Dummyskill
       Range:
