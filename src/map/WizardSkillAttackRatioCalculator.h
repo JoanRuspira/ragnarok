@@ -14,6 +14,8 @@ class WizardSkillAttackRatioCalculator
 
 	private:
 		static int calculate_iceberg_atk_ratio(int skill_lv);
+		static int calculate_stalagmite_atk_ratio(int skill_lv);
 		static void add_iceberg_special_effects(struct block_list *target);
+		static void add_stalagmite_special_effects(struct block_list *target);
 
 };
