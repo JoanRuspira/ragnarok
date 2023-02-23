@@ -2138,7 +2138,7 @@ enum e_skill {
 	RG_VULTURE = 836,
 	JG_SRECOVERY = 837,
 	WZ_ICEBERG = 838,
-	WZ_STALAGMITE = 839,
+	MG_EARTHBOLT = 839,
 };
 
 /// The client view ids for land skills.

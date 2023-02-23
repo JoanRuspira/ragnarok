@@ -13,8 +13,7 @@ class WizardSkillAttackRatioCalculator
 		static int calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv, struct status_data* sstatus);
 
 	private:
-		static int calculate_iceberg_atk_ratio(int skill_lv);
-		static int calculate_stalagmite_atk_ratio(int skill_lv);
+		static int calculate_bolt2_attack(int skill_lv);
 		static void add_iceberg_special_effects(struct block_list *target);
 		static void add_stalagmite_special_effects(struct block_list *target);
 

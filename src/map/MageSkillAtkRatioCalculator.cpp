@@ -13,7 +13,10 @@
 int MageSkillAtkRatioCalculator::calculate_skill_atk_ratio(int base_lv, int skill_id, int skill_lv, struct block_list *target)
 {
 	switch (skill_id) {
-		case WZ_EARTHSPIKE:
+		case MG_EARTHBOLT:
+			add_earth_bolt_special_effects(target);
+			return calculate_bolt_attack(skill_lv);
+			break;
 		case MG_LIGHTNINGBOLT:
 		case MG_COLDBOLT:
 		case MG_FIREBOLT:
@@ -31,6 +34,14 @@ int MageSkillAtkRatioCalculator::calculate_skill_atk_ratio(int base_lv, int skil
 			return 0;
 			break;
 	}
+}
+
+void MageSkillAtkRatioCalculator::add_earth_bolt_special_effects(struct block_list *target)
+{
+	clif_specialeffect(target, EF_EARTHHIT, AREA);
+	clif_specialeffect(target, EF_EL_UPHEAVAL, AREA);
+	clif_specialeffect(target, EF_EL_CURSED_SOIL, AREA);
+	clif_specialeffect(target, EF_EL_PETROLOGY, AREA);
 }
 
 int MageSkillAtkRatioCalculator::calculate_undead_embrace_attack(int skill_lv)
@@ -58,7 +69,7 @@ int MageSkillAtkRatioCalculator::calculate_undead_embrace_attack(int skill_lv)
 
 int MageSkillAtkRatioCalculator::calculate_bolt_attack(int skill_lv)
 {
-	int ratio = 40;
+	int ratio = 10;
 	return ratio;
 }
 

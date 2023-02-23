@@ -2004,7 +2004,7 @@ void skill_attack_blow(struct block_list *src, struct block_list *dsrc, struct b
 		case AC_SHOWER:
 		case HT_PHANTASMIC:
 		case WZ_ICEBERG:
-		case WZ_STALAGMITE:
+		case MG_EARTHBOLT:
 		case WL_CRIMSONROCK:
 			if (!battle_config.arrow_shower_knockback && (skill_id == AC_SHOWER || skill_id == HT_PHANTASMIC))
 				dir = map_calc_dir(target, src->x, src->y);
@@ -3896,7 +3896,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case PR_UNHOLYCROSS:
 	case AB_ADORAMUS:
 	case WL_SOULEXPANSION:
-	case WZ_STALAGMITE:
+	case MG_EARTHBOLT:
 	case WZ_ICEBERG:
 	case WL_CRIMSONROCK:
 	case WL_JACKFROST:
@@ -4005,7 +4005,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 					skill_area_temp[1] = 0;
 					starget = splash_target(src);
 					break;
-				case WZ_STALAGMITE:
+				case MG_EARTHBOLT:
 				case WZ_ICEBERG:
 				case WL_CRIMSONROCK:
 					skill_area_temp[4] = bl->x;

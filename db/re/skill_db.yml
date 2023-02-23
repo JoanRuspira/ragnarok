@@ -2200,7 +2200,17 @@ Body:
       AlterRangeRadius: true
     Range: 11
     Hit: Multi_Hit
-    HitCount: -7
+    HitCount:
+      - Level: 1
+        Count: 1
+      - Level: 2
+        Count: 2
+      - Level: 3
+        Count: 3
+      - Level: 4
+        Count: 4
+      - Level: 5
+        Count: 5
     Element: Water
     CopyFlags:
       Skill:
@@ -2213,29 +2223,36 @@ Body:
     Requires:
       SpCost: 90
   - Id: 839
-    Name: WZ_STALAGMITE
-    Description: Stalagmite
+    Name: MG_EARTHBOLT
+    Description: Earth Bolt
     MaxLevel: 5
     Type: Magic
     TargetType: Attack
-    DamageFlags:
-      Splash: true
     Flags:
-      AlterRangeRadius: true
-    Range: 11
+      IsAutoShadowSpell: true
+    Range: 9
     Hit: Multi_Hit
-    HitCount: -7
+    HitCount:
+      - Level: 1
+        Count: 1
+      - Level: 2
+        Count: 2
+      - Level: 3
+        Count: 3
+      - Level: 4
+        Count: 4
+      - Level: 5
+        Count: 5
     Element: Earth
     CopyFlags:
       Skill:
+        Plagiarism: true
         Reproduce: true
     CastCancel: true
-    CastTime: 7000
-    AfterCastActDelay: 2000
-    Duration1: 5000
-    Cooldown: 5000
+    CastTime: 3000
+    AfterCastActDelay: 1000
     Requires:
-      SpCost: 90
+      SpCost: 30
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -3262,15 +3279,15 @@ Body:
     Hit: Multi_Hit
     HitCount:
       - Level: 1
-        Count: 4
+        Count: 1
       - Level: 2
-        Count: 6
+        Count: 2
       - Level: 3
-        Count: 8
+        Count: 3
       - Level: 4
-        Count: 10
+        Count: 4
       - Level: 5
-        Count: 12
+        Count: 5
     Element: Wind
     Knockback:
       - Level: 1
@@ -3579,13 +3596,15 @@ Body:
         PathCheck: true
   - Id: 90
     Name: WZ_EARTHSPIKE
-    Description: Earth Spike
+    Description: Stalagmite
     MaxLevel: 5
     Type: Magic
     TargetType: Attack
+    DamageFlags:
+      Splash: true
     Flags:
-      IsAutoShadowSpell: true
-    Range: 9
+      AlterRangeRadius: true
+    Range: 11
     Hit: Multi_Hit
     HitCount:
       - Level: 1
@@ -3601,13 +3620,14 @@ Body:
     Element: Earth
     CopyFlags:
       Skill:
-        Plagiarism: true
         Reproduce: true
     CastCancel: true
-    CastTime: 3000
-    AfterCastActDelay: 1000
+    CastTime: 7000
+    AfterCastActDelay: 2000
+    Duration1: 5000
+    Cooldown: 5000
     Requires:
-      SpCost: 30
+      SpCost: 90
   - Id: 91
     Name: WZ_HEAVENDRIVE
     Description: Heaven's Drive
@@ -17463,7 +17483,17 @@ Body:
       AlterRangeRadius: true
     Range: 11
     Hit: Multi_Hit
-    HitCount: -7
+    HitCount:
+      - Level: 1
+        Count: 1
+      - Level: 2
+        Count: 2
+      - Level: 3
+        Count: 3
+      - Level: 4
+        Count: 4
+      - Level: 5
+        Count: 5
     Element: Fire
     CopyFlags:
       Skill:

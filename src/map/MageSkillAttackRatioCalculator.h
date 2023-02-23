@@ -18,4 +18,5 @@ class MageSkillAtkRatioCalculator
 		static int calculate_soul_strike_attack(int skill_lv);
 		static int calculate_undead_embrace_attack(int skill_lv);
 		static void add_undead_embrace_special_effects(struct block_list *target);
+		static void add_earth_bolt_special_effects(struct block_list *target);
 };

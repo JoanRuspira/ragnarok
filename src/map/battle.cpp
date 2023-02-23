@@ -5105,7 +5105,7 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case MG_SOULSTRIKE:
 						skillratio += MageSkillAtkRatioCalculator::calculate_skill_atk_ratio(status_get_lv(src), skill_id, skill_lv, target);
 						break;
-					case WZ_EARTHSPIKE:
+					case MG_EARTHBOLT:
 					case MG_FIREBOLT:
 					case MG_LIGHTNINGBOLT:
 					case MG_COLDBOLT:
@@ -5133,7 +5133,9 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case SO_EARTHGRAVE:
 						skillratio += SageSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
-					case WZ_STALAGMITE:
+					case WZ_JUPITEL:
+					case WL_CRIMSONROCK:
+					case WZ_EARTHSPIKE:
 					case WZ_ICEBERG:
 						skillratio += WizardSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
@@ -5287,10 +5289,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 						break;
 					case WL_DRAINLIFE:
 						skillratio += -100 + 200 * skill_lv + sstatus->int_;
-						RE_LVL_DMOD(100);
-						break;
-					case WL_CRIMSONROCK:
-						skillratio += -100 + 700 + 600 * skill_lv;
 						RE_LVL_DMOD(100);
 						break;
 					case WL_HELLINFERNO:
