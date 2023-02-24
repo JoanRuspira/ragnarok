@@ -9795,37 +9795,15 @@ Body:
     MaxLevel: 5
     Type: Magic
     TargetType: Attack
-    DamageFlags:
-      IgnoreAtkCard: true
-      IgnoreElement: true
-      IgnoreDefCard: true
+    Element: Neutral
     Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
-    Cooldown:
-      - Level: 1
-        Time: 10000
-      - Level: 2
-        Time: 10000
-      - Level: 3
-        Time: 10000
-      - Level: 4
-        Time: 10000
-      - Level: 5
-        Time: 15000
+    Cooldown: 5000
+    AfterCastActDelay: 1000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 80
-        - Level: 2
-          Amount: 90
-        - Level: 3
-          Amount: 100
-        - Level: 4
-          Amount: 110
-        - Level: 5
-          Amount: 120
+      SpCost: 120
   - Id: 376
     Name: ASC_KATAR
     Description: Advanced Katar Mastery
@@ -17457,20 +17435,10 @@ Body:
       Skill:
         Reproduce: true
     CastCancel: true
-    CastTime: 4000
-    Cooldown: 2000
+    Cooldown: 5000
+    AfterCastActDelay: 1000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 20
-        - Level: 2
-          Amount: 24
-        - Level: 3
-          Amount: 28
-        - Level: 4
-          Amount: 32
-        - Level: 5
-          Amount: 36
+      SpCost: 80
   - Id: 2211
     Name: WL_CRIMSONROCK
     Description: Crimson Rock

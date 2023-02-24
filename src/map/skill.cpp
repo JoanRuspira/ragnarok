@@ -4343,17 +4343,9 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 
 	// Celest
 	case PF_SOULBURN:
-		if (rnd()%100 < (skill_lv < 5 ? 30 + skill_lv * 10 : 70)) {
-			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
-			if (skill_lv == 5)
-				skill_attack(BF_MAGIC,src,src,bl,skill_id,skill_lv,tick,flag);
-			status_percent_damage(src, bl, 0, 100, false);
-		} else {
-			clif_skill_nodamage(src,src,skill_id,skill_lv,1);
-			if (skill_lv == 5)
-				skill_attack(BF_MAGIC,src,src,src,skill_id,skill_lv,tick,flag);
-			status_percent_damage(src, src, 0, 100, false);
-		}
+		clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
+		skill_attack(BF_MAGIC,src,src,bl,skill_id,skill_lv,tick,flag);
+		status_percent_damage(src, bl, 0, skill_lv*6.6, false);
 		break;
 
 	case NPC_BLOODDRAIN:
@@ -4464,14 +4456,12 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case WL_DRAINLIFE:
 		{
 			int heal = (int)skill_attack(skill_get_type(skill_id), src, src, bl, skill_id, skill_lv, tick, flag);
-			int rate = 70 + 5 * skill_lv;
-
 			heal = heal * (5 + 5 * skill_lv) / 100;
 
 			if( bl->type == BL_SKILL )
 				heal = 0; // Don't absorb heal from Ice Walls or other skill units.
 
-			if( heal && rnd()%100 < rate )
+			if( heal )
 			{
 				status_heal(src, heal, 0, 0);
 				clif_skill_nodamage(NULL, src, AL_HEAL, heal, 1);

@@ -12,7 +12,7 @@ server_name: jRO
 // The character server connects to the login server using this IP address.
 // NOTE: This is useful when you are running behind a firewall or are on
 // a machine with multiple interfaces.
-login_ip: 0.0.0.0
+login_ip: 127.0.0.1
 
 // The character server listens on the interface with this IP address.
 // NOTE: This allows you to run multiple servers on multiple interfaces

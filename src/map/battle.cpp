@@ -5051,9 +5051,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 			case NPC_DARKBREATH:
 				ad.damage = tstatus->hp * (skill_lv <= 5 ? 100 / (2 * 6 - skill_lv) : 50) / 100;
 				break;
-			case PF_SOULBURN:
-				ad.damage = tstatus->sp * 2;
-				break;
 			case AB_RENOVATIO:
 				ad.damage = status_get_lv(src) * 10 + sstatus->int_;
 				break;
@@ -5131,6 +5128,8 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case WZ_STORMGUST:
 					case WZ_METEOR:
 					case SO_EARTHGRAVE:
+					case PF_SOULBURN:
+					case WL_DRAINLIFE:
 						skillratio += SageSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
 					case WZ_JUPITEL:
@@ -5285,10 +5284,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 							skillratio += -100 + 1200 + 600 * skill_lv;
 						else
 							skillratio += -100 + 1000 + 300 * skill_lv;
-						RE_LVL_DMOD(100);
-						break;
-					case WL_DRAINLIFE:
-						skillratio += -100 + 200 * skill_lv + sstatus->int_;
 						RE_LVL_DMOD(100);
 						break;
 					case WL_HELLINFERNO:

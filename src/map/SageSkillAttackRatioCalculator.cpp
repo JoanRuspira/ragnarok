@@ -22,6 +22,10 @@ int SageSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 		case WZ_METEOR:
 			return calculate_meteor_storm_atk_ratio(skill_lv);
 			break;
+		case WL_DRAINLIFE:
+		case PF_SOULBURN:
+			return calculate_soul_burn_atk_ratio(skill_lv);
+			break;
 		default:
 			return 0;
 			break;
@@ -46,4 +50,9 @@ int SageSkillAttackRatioCalculator::calculate_storm_gust_atk_ratio(int skill_lv)
 int SageSkillAttackRatioCalculator::calculate_meteor_storm_atk_ratio(int skill_lv)
 {
 	return skill_lv*5;
+}
+
+int SageSkillAttackRatioCalculator::calculate_soul_burn_atk_ratio(int skill_lv)
+{
+	return skill_lv*120;
 }
