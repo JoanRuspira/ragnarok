@@ -330,6 +330,15 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 		case JG_TAROTCARD:
 			BardAdditionalEffectsCalculator::apply_tarot_cards_additional_effect(src, bl, skill_lv);
 			break;
+		case WZ_EARTHSPIKE:
+			WizardAdditionalEffectsCalculator::apply_stalagmite_additional_effect(src, bl, skill_lv);
+			break;
+		case WZ_ICEBERG:
+			WizardAdditionalEffectsCalculator::apply_iceberg_additional_effect(src, bl, skill_lv);
+			break;
+		case WL_CRIMSONROCK:
+			WizardAdditionalEffectsCalculator::apply_crimson_rock_additional_effect(src, bl, skill_lv);
+			break;
 	}
 }
 

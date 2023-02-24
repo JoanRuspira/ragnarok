@@ -244,6 +244,7 @@
     <ClInclude Include="trade.hpp" />
     <ClInclude Include="unit.hpp" />
     <ClInclude Include="vending.hpp" />
+    <ClInclude Include="WizardAdditionalEffectsCalculator.h" />
     <ClInclude Include="WizardSkillAttackRatioCalculator.h" />
   </ItemGroup>
   <ItemGroup>
@@ -318,6 +319,7 @@
     <ClCompile Include="SwordsmanSkillAtkRatioCalculator.cpp" />
     <ClCompile Include="ThiefAdditionalEffectsCalculator.cpp" />
     <ClCompile Include="ThiefSkillAtkRatioCalculator.cpp" />
+    <ClCompile Include="WizardAdditionalEffectsCalculator.cpp" />
     <ClCompile Include="WizardSkillAttackRatioCalculator.cpp" />
     <ClInclude Include="MerchantSkillAtkRatioCalculator.cpp" />
     <ClCompile Include="trade.cpp" />

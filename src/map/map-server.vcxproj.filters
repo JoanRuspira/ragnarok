@@ -207,6 +207,12 @@
     <Filter Include="Source Files\skillAtkRatioCalculator\wizard">
       <UniqueIdentifier>{9d4115c8-8e40-4ac9-8cf5-2392124ae40c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\skillAdditionalEffectsCalculator\wizard">
+      <UniqueIdentifier>{7d23b541-f7f2-4d21-aed6-8706babdf122}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\skillAdditionalEffectsCalculator\wizard">
+      <UniqueIdentifier>{dba82c8d-a2c6-4308-8c87-4d4a2df84fca}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="achievement.hpp">
@@ -455,6 +461,9 @@
     <ClInclude Include="WizardSkillAttackRatioCalculator.h">
       <Filter>Header Files\skillAtkRatioCalculator\wizard</Filter>
     </ClInclude>
+    <ClInclude Include="WizardAdditionalEffectsCalculator.h">
+      <Filter>Header Files\skillAdditionalEffectsCalculator\wizard</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="achievement.cpp">
@@ -675,6 +684,9 @@
     </ClCompile>
     <ClCompile Include="WizardSkillAttackRatioCalculator.cpp">
       <Filter>Source Files\skillAtkRatioCalculator\wizard</Filter>
+    </ClCompile>
+    <ClCompile Include="WizardAdditionalEffectsCalculator.cpp">
+      <Filter>Source Files\skillAdditionalEffectsCalculator\wizard</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
