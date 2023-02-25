@@ -8169,10 +8169,12 @@ void clif_autospell(struct map_session_data *sd,uint16 skill_lv)
 
 
 	uint16 autospell_skill[][2] = { 
-		{ MG_FIREBOLT, 0 }, { MG_COLDBOLT, 0 }, { MG_LIGHTNINGBOLT, 0 },
-		{ MG_SOULSTRIKE, 3 }, { MG_FIREBALL, 3 },
-		{ WZ_EARTHSPIKE, 6 }, { MG_FROSTDIVER, 6 },
-		{ MG_THUNDERSTORM, 9 }, { WZ_HEAVENDRIVE, 9 }
+		{ MG_EARTHBOLT, 0 }, 
+		{ MG_LIGHTNINGBOLT, 1 }, 
+		{ MG_COLDBOLT, 2 },  
+		{ MG_FIREBOLT, 3 },  
+		{ NPC_DARKSTRIKE, 4 },
+		{ MG_SOULSTRIKE, 4 }, 
 	};
 	int count = 0;
 

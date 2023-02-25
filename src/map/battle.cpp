@@ -6652,20 +6652,11 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 	if (sc && sc->data[SC_AUTOSPELL] && rnd()%100 < sc->data[SC_AUTOSPELL]->val4) {
 		int sp = 0;
 		uint16 skill_id = sc->data[SC_AUTOSPELL]->val2;
-		uint16 skill_lv = sc->data[SC_AUTOSPELL]->val3;
-		int i = rnd()%100;
-		if (sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_SAGE)
-			i = 0; //Max chance, no skill_lv reduction. [Skotlex]
-		//reduction only for skill_lv > 1
-		if (skill_lv > 1) {
-			if (i >= 50) skill_lv /= 2;
-			else if (i >= 15) skill_lv--;
-		}
+		uint16 skill_lv = pc_checkskill(sd, skill_id);
+		
 		sp = skill_get_sp(skill_id,skill_lv) * 2 / 3;
-
 		if (status_charge(src, 0, sp)) {
 			struct unit_data *ud = unit_bl2ud(src);
-
 			switch (skill_get_casttype(skill_id)) {
 				case CAST_GROUND:
 					skill_castend_pos2(src, target->x, target->y, skill_id, skill_lv, tick, flag);
