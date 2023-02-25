@@ -7345,12 +7345,8 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		break;
 	case SA_DISPELL:
 		if (flag&1 || (i = skill_get_splash(skill_id, skill_lv)) < 1) {
-			if (sd && dstsd && !map_flag_vs(sd->bl.m) && (!sd->duel_group || sd->duel_group != dstsd->duel_group) && (!sd->status.party_id || sd->status.party_id != dstsd->status.party_id))
-				break; // Outside PvP it should only affect party members and no skill fail message
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
-			if((dstsd && (dstsd->class_&MAPID_UPPERMASK) == MAPID_SOUL_LINKER)
-				|| (tsc && tsc->data[SC_SPIRIT] && tsc->data[SC_SPIRIT]->val2 == SL_ROGUE) //Rogue's spirit defends againt dispel.
-				|| rnd()%100 >= 50+10*skill_lv)
+			if(dstsd && rnd()%100 >= 50+10*skill_lv)
 			{
 				if (sd)
 					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
@@ -7358,10 +7354,39 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			}
 			if(status_isimmune(bl))
 				break;
-
+			
+			clif_specialeffect(bl, EF_CONE, AREA);
+			clif_specialeffect(bl, EF_DETOXICATION, AREA);
 			//Remove bonus_script by Dispell
 			if (dstsd)
 				pc_bonus_script_clear(dstsd,BSF_REM_ON_DISPELL);
+
+			{
+				int sp;
+				struct unit_data *ud = unit_bl2ud(bl);
+				int bl_skill_id=0,bl_skill_lv=0,hp = 0;
+				if (!ud || ud->skilltimer == INVALID_TIMER)
+					break; //Nothing to cancel.
+				bl_skill_id = ud->skill_id;
+				bl_skill_lv = ud->skill_lv;
+				hp = (tstatus->max_hp/50) * 2 * skill_lv; 
+				clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
+				unit_skillcastcancel(bl,0);
+				sp = skill_get_sp(bl_skill_id, bl_skill_lv);
+				status_zap(bl, hp, sp);
+
+				if (hp && skill_lv >= 5)
+					hp>>=1;	//Recover half damaged HP at level 5 [Skotlex]
+				else
+					hp = 0;
+
+				if (sp) //Recover some of the SP used
+					sp = sp*(25*(skill_lv-1))/100;
+
+				if(hp || sp)
+					status_heal(src, hp, sp, 2);
+				
+			}
 
 			if(!tsc || !tsc->count)
 				break;
@@ -7542,49 +7567,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			status_zap(src, 0, sp);
 		}
 		break;
-	case SA_SPELLBREAKER:
-		{
-			int sp;
-			if(tsc && tsc->data[SC_MAGICROD]) {
-				sp = skill_get_sp(skill_id,skill_lv);
-				sp = sp * tsc->data[SC_MAGICROD]->val2 / 100;
-				if(sp < 1) sp = 1;
-				status_heal(bl,0,sp,2);
-				status_percent_damage(bl, src, 0, -20, false); //20% max SP damage.
-			} else {
-				struct unit_data *ud = unit_bl2ud(bl);
-				int bl_skill_id=0,bl_skill_lv=0,hp = 0;
-				if (!ud || ud->skilltimer == INVALID_TIMER)
-					break; //Nothing to cancel.
-				bl_skill_id = ud->skill_id;
-				bl_skill_lv = ud->skill_lv;
-				if (status_has_mode(tstatus,MD_STATUSIMMUNE)) { //Only 10% success chance against status immune. [Skotlex]
-					if (rnd()%100 < 90)
-					{
-						if (sd) clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-						break;
-					}
-				} else if (!dstsd || map_flag_vs(bl->m)) //HP damage only on pvp-maps when against players.
-					hp = tstatus->max_hp/50; //Recover 2% HP [Skotlex]
 
-				clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
-				unit_skillcastcancel(bl,0);
-				sp = skill_get_sp(bl_skill_id,bl_skill_lv);
-				status_zap(bl, hp, sp);
-
-				if (hp && skill_lv >= 5)
-					hp>>=1;	//Recover half damaged HP at level 5 [Skotlex]
-				else
-					hp = 0;
-
-				if (sp) //Recover some of the SP used
-					sp = sp*(25*(skill_lv-1))/100;
-
-				if(hp || sp)
-					status_heal(src, hp, sp, 2);
-			}
-		}
-		break;
 	case SA_MAGICROD:
 #ifdef RENEWAL
 		clif_skill_nodamage(src,src,SA_MAGICROD,skill_lv,1);
@@ -9035,17 +9018,12 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case WL_WHITEIMPRISON:
 		if( (src == bl || battle_check_target(src, bl, BCT_ENEMY)>0) && status_get_class_(bl) != CLASS_BOSS && !status_isimmune(bl) ) // Should not work with Bosses.
 		{
-			int rate = ( sd? sd->status.job_level : 50 ) / 4;
-
-			if( src == bl ) rate = 100; // Success Chance: On self, 100%
-			else if(bl->type == BL_PC) rate += 20 + 10 * skill_lv; // On Players, (20 + 10 * Skill Level) %
-			else rate += 40 + 10 * skill_lv; // On Monsters, (40 + 10 * Skill Level) %
 
 			if( sd )
 				skill_blockpc_start(sd,skill_id,4000);
 
 			if( !(tsc && tsc->data[type]) ){
-				i = sc_start2(src,bl,type,rate,skill_lv,src->id,(src == bl)?5000:(bl->type == BL_PC)?skill_get_time(skill_id,skill_lv):skill_get_time2(skill_id, skill_lv));
+				i = sc_start2(src,bl,type,100,skill_lv,src->id,skill_get_time(skill_id,skill_lv));
 				clif_skill_nodamage(src,bl,skill_id,skill_lv,i);
 				if( !i )
 					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);

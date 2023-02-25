@@ -13376,14 +13376,6 @@ int status_change_end_(struct block_list* bl, enum sc_type type, int tid, const 
 		case SC_HALLUCINATIONWALK:
 			sc_start(bl,bl,SC_HALLUCINATIONWALK_POSTDELAY,100,sce->val1,skill_get_time2(GC_HALLUCINATIONWALK,sce->val1));
 			break;
-		case SC_WHITEIMPRISON:
-			{
-				struct block_list* src = map_id2bl(sce->val2);
-				if( tid == -1 || !src)
-					break; // Terminated by Damage
-				status_fix_damage(src,bl,400*sce->val1,clif_damage(bl,bl,gettick(),0,0,400*sce->val1,0,DMG_NORMAL,0,false),WL_WHITEIMPRISON);
-			}
-			break;
 		case SC_WUGDASH:
 			{
 				struct unit_data *ud = unit_bl2ud(bl);
