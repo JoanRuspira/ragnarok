@@ -7234,6 +7234,8 @@ static defType status_calc_mdef(struct block_list *bl, struct status_change *sc,
 		mdef += sc->data[SC_SOULGOLEM]->val3;
 	if( sc->data[SC__IGNORANCE] )
 		mdef -= (sc->data[SC__IGNORANCE]->val1)*4;
+	if(sc->data[SC_MINDBREAKER])
+		mdef -= mdef * sc->data[SC_MINDBREAKER]->val3/100;
 
 	return (defType)cap_value(mdef,DEFTYPE_MIN,DEFTYPE_MAX);
 }
@@ -7261,8 +7263,6 @@ static signed short status_calc_mdef2(struct block_list *bl, struct status_chang
 	if(sc->data[SC_MDEFSET])
 		return sc->data[SC_MDEFSET]->val1;
 
-	if(sc->data[SC_MINDBREAKER])
-		mdef2 -= mdef2 * sc->data[SC_MINDBREAKER]->val3/100;
 	if(sc->data[SC_BURNING])
 		mdef2 -= mdef2 * 25 / 100;
 	if(sc->data[SC_ANALYZE])
@@ -11046,8 +11046,8 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			val3 = 5+5*val1; // bAtk/wAtk rate change
 			break;
 		case SC_MINDBREAKER:
-			val2 = 20*val1; // matk increase.
-			val3 = 12*val1; // mdef2 reduction.
+			val2 = 5*val1; // matk increase.
+			val3 = 5*val1; // mdef reduction.
 			break;
 		case SC_JAILED:
 			// Val1 is duration in minutes. Use INT_MAX to specify 'unlimited' time.

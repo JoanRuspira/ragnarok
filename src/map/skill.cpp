@@ -6631,7 +6631,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		// if (sd == NULL || sd->status.party_id == 0 || (flag & 1)) {
 		// 	int weapontype = skill_get_weapontype(skill_id);
 			// if (!weapontype || !dstsd || pc_check_weapontype(dstsd, weapontype)) {
-		clif_specialeffect(src, EF_MAPAE, AREA);
 		clif_specialeffect(src, EF_CONCENTRATION2, AREA);
 		clif_skill_nodamage(bl, bl, skill_id, skill_lv,
 			sc_start2(src, bl, type, 100, skill_lv, (src == bl) ? 1 : 0, skill_get_time(skill_id, skill_lv)));
@@ -8030,38 +8029,14 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 
 	case PF_MINDBREAKER:
 		{
-			if(status_has_mode(tstatus,MD_STATUSIMMUNE) || battle_check_undead(tstatus->race,tstatus->def_ele)) {
-				map_freeblock_unlock();
-				return 1;
-			}
-
-			if (tsce)
-			{	//HelloKitty2 (?) explained that this silently fails when target is
-				//already inflicted. [Skotlex]
-				map_freeblock_unlock();
-				return 1;
-			}
-
-			//Has a 55% + skill_lv*5% success chance.
+			clif_specialeffect(bl, EF_MAPAE, AREA);
 			if (!clif_skill_nodamage(src,bl,skill_id,skill_lv,
-				sc_start(src,bl,type,55+5*skill_lv,skill_lv,skill_get_time(skill_id,skill_lv))))
-			{
+				sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv))))
+			{	
 				if (sd) clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
 				map_freeblock_unlock();
 				return 0;
 			}
-
-			unit_skillcastcancel(bl,0);
-
-			if(tsc && tsc->count){
-				status_change_end(bl, SC_FREEZE, INVALID_TIMER);
-				if(tsc->data[SC_STONE] && tsc->opt1 == OPT1_STONE)
-					status_change_end(bl, SC_STONE, INVALID_TIMER);
-				status_change_end(bl, SC_SLEEP, INVALID_TIMER);
-			}
-
-			if (dstmd)
-				mob_target(dstmd, src, skill_get_range2(src, skill_id, skill_lv, true));
 		}
 		break;
 
