@@ -1,0 +1,18 @@
+-	script	Dye Makerjg#dyemkerjg::dyemkerjg	-1,{
+OnPCLoadMapEvent:
+if( strcharinfo(3) == "prontera"){
+cutin "kafra_02",2;
+sleep2 3000;
+cutin "",255;
+}
+if( strcharinfo(3) == "izlude"){
+cutin "kafra_01",2;
+sleep2 3000;
+cutin "",255;
+}
+end;
+
+}
+
+prontera	mapflag	loadevent
+izlude	mapflag	loadevent

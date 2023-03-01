@@ -473,7 +473,7 @@ struct s_elemental {
 	uint32 char_id;
 	short class_;
 	enum e_mode mode;
-	int hp, sp, max_hp, max_sp, matk, atk, atk2;
+	int hp, sp, max_hp, max_sp, matk, matk_min, atk, atk2;
 	short hit, flee, amotion, def, mdef;
 	t_tick life_time;
 };

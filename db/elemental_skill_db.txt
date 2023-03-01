@@ -7,15 +7,20 @@
 //	1 = Passive, 2 = Defensive, 4 = Aggressive
 
 
-2116,8425,1,4	//EL_FIRE_ARROW,Fire Arrow
-2119,8430,1,4	//EL_ICE_NEEDLE,Ice Needle
-2122,8434,1,4	//EL_WIND_SLASH,Wind Slasher
-2125,8439,1,4	//EL_STONE_HAMMER,Stone Hammer
+2116,8425,5,4	//EL_FIRE_ARROW,Fire Arrow
+2119,8430,5,4	//EL_ICE_NEEDLE,Ice Needle
+2122,8434,5,4	//EL_WIND_SLASH,Wind Slasher
+2125,8439,5,4	//EL_STONE_HAMMER,Stone Hammer
 
-2116,8426,1,2	//EL_FIRE_ARROW,Fire Arrow
+2116,8426,1,2	//EL_FIRE_BOMB,Fire Arrow
 2119,8431,1,2	//EL_ICE_NEEDLE,Ice Needle
 2122,8435,1,2	//EL_WIND_SLASH,Wind Slasher
 2125,8440,1,2	//EL_STONE_HAMMER,Stone Hammer
+
+
+
+
+
 
 // EL_AGNI_S
 //2114,8413,1,2	//EL_PYROTECHNIC,Pyrotechnic

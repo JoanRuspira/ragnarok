@@ -9887,10 +9887,27 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case SO_SUMMON_TERA:
 		if( sd ) {
 			enum e_mode mode = EL_MODE_PASSIVE;	// Default mode.
+
 			if( skill_lv != 5 ) {
+				int required_item_id = 0;
+				switch(skill_lv) {
+					case 1:
+						required_item_id = ITEMID_YELLOW_LIVE;
+						break;
+					case 2:
+						required_item_id = ITEMID_WIND_OF_VERDURE;
+						break;
+					case 3:
+						required_item_id = ITEMID_CRYSTAL_BLUE;
+						break;
+					case 4:
+						required_item_id = ITEMID_BLOODY_RED;
+						break;
+				}
 				int elemental_class = skill_get_elemental_type(skill_id,skill_lv);
+
 				if( sd->ed ) {
-					// Just remove elementai if its the same class
+					// Just remove elemental if its the same class
 					if( sd->ed->elemental.class_ == elemental_class) {
 						elemental_delete(sd->ed);
 						break;
@@ -9900,7 +9917,15 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 						elemental_delete(sd->ed);
 					}
 				}
+
 				// Summoning new one elemental
+				int index_inventory_cost = pc_search_inventory(sd,required_item_id);
+				if(index_inventory_cost == -1) {
+					clif_skill_fail(sd,skill_id,USESKILL_FAIL_NEED_ITEM,1,required_item_id);
+					break;
+				}
+				pc_delitem(sd, index_inventory_cost, 1, 0, 0, LOG_TYPE_OTHER);
+
 				if( !elemental_create(sd,elemental_class,skill_get_time(skill_id,skill_lv)) ) {
 					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
 					break;
@@ -9919,65 +9944,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				elemental_change_mode(sd->ed,new_mode);
 			}
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
-			// }
-
-			// if( skill_lv == 2 ) {
-			// 	if( !sd->ed ) {
-			// 		clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-			// 		break;
-			// 	}
-			// 	mode = static_cast<e_mode>(EL_MODE_AGGRESSIVE);
-			// 	if( !elemental_change_mode(sd->ed,mode) ) {
-			// 		clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-			// 		break;
-			// 	}
-			// 	clif_skill_nodamage(src, bl, skill_id, skill_lv, 1);
-			// }
-			// if( skill_lv == 3 ) {
-			// 	if( !sd->ed ) {
-			// 		clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-			// 		break;
-			// 	}
-			// 	mode = static_cast<e_mode>(EL_MODE_PASSIVE);
-			// 	if( !elemental_change_mode(sd->ed,mode) ) {
-			// 		clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-			// 		break;
-			// 	}
-			// 	clif_skill_nodamage(src, bl, skill_id, skill_lv, 1);
-			// }
-			// if( skill_lv == 4 ) {
-			// 	if( !sd->ed ) {
-			// 		clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-			// 		break;
-			// 	}
-			// 	mode = static_cast<e_mode>(EL_MODE_ASSIST);
-			// 	if( !elemental_change_mode(sd->ed,mode) ) {
-			// 		clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-			// 		break;
-			// 	}
-			// 	clif_skill_nodamage(src, bl, skill_id, skill_lv, 1);
-			// }
-			// if( skill_lv == 5 ) {
-			// 	int duration = 3000;
-			// 	if( !sd->ed ) {
-			// 		clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-			// 		break;
-			// 	}
-			// 	switch(sd->ed->db->class_) {
-			// 		case 2115:case 2124:
-			// 		case 2118:case 2121:
-			// 			duration = 6000;
-			// 			break;
-			// 		case 2116:case 2119:
-			// 		case 2122:case 2125:
-			// 			duration = 9000;
-			// 			break;
-			// 	}
-			// 	sd->skill_id_old = skill_id;
-			// 	elemental_action(sd->ed, bl, tick);
-			// 	clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
-			// 	skill_blockpc_start(sd, skill_id, duration);
-			// }
 		}
 		break;
 
@@ -10025,19 +9991,9 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		break;
 	case SO_EL_ACTION:
 		if( sd ) {
-				int duration = 3000;
+				int duration = 5000;
 			if( !sd->ed )
 				break;
-			switch(sd->ed->db->class_) {
-				case 2115:case 2124:
-				case 2118:case 2121:
-					duration = 6000;
-					break;
-				case 2116:case 2119:
-				case 2122:case 2125:
-					duration = 9000;
-					break;
-			}
 			sd->skill_id_old = skill_id;
 			elemental_action(sd->ed, bl, tick, SO_EL_ACTION);
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
@@ -20618,7 +20574,6 @@ int skill_get_elemental_type( uint16 skill_id , uint16 skill_lv ) {
 	int type = 0;
 
 	switch( skill_lv ) {
-		case 5:	type = ELEMENTALID_AGNI_M;		break;
 		case 4:	type = ELEMENTALID_AGNI_L;		break;
 		case 3:	type = ELEMENTALID_AQUA_L;		break;
 		case 2:	type = ELEMENTALID_VENTUS_L;	break;

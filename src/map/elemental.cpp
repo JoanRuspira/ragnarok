@@ -52,10 +52,11 @@ struct view_data * elemental_get_viewdata(int class_) {
 int elemental_create(struct map_session_data *sd, int class_, unsigned int lifetime) {
 	struct s_elemental ele;
 	struct s_elemental_db *db;
+	struct status_data *status;
 	int i;
 
 	nullpo_retr(1,sd);
-
+	
 	if( (i = elemental_search_index(class_)) < 0 )
 		return 0;
 
@@ -67,60 +68,20 @@ int elemental_create(struct map_session_data *sd, int class_, unsigned int lifet
 	ele.mode = EL_MODE_PASSIVE; // Initial mode
 	i = db->status.size+1; // summon level
 
-	//[(Caster's Max HP/ 3 ) + (Caster's INT x 10 )+ (Caster's Job Level x 20 )] x [(Elemental Summon Level + 2) / 3]
-	ele.hp = ele.max_hp = (sd->battle_status.max_hp/3 + sd->battle_status.int_*10 + sd->status.job_level*20) * ((i + 2) / 3);
-	//Caster's Max SP /4
-	ele.sp = ele.max_sp = sd->battle_status.max_sp/4;
-	//Caster's [ Max SP / (18 / Elemental Summon Skill Level) 1- 100 ]
-	ele.atk = (sd->battle_status.max_sp / (18 / i)  * 1 - 100);
-	//Caster's [ Max SP / (18 / Elemental Summon Skill Level) ]
-	ele.atk2 = sd->battle_status.max_sp / (18 / i);
-	//Caster's HIT + (Caster's Base Level)
-	ele.hit = sd->battle_status.hit + sd->status.base_level;
-	//[Elemental Summon Skill Level x (Caster's INT / 2 + Caster's DEX / 4)]
-	ele.matk = i * (sd->battle_status.int_ / 2 + sd->battle_status.dex / 4);
-	//150 + [Caster's DEX / 10] + [Elemental Summon Skill Level x 3 ]
-	ele.amotion = 15 + sd->battle_status.dex / 10 + i * 3;
-	//Caster's DEF + (Caster's Base Level / (5 - Elemental Summon Skill Level)
-	ele.def = sd->battle_status.def + sd->status.base_level / (5-i);
-	//Caster's MDEF + (Caster's INT / (5 - Elemental Summon Skill Level)
-	ele.mdef = sd->battle_status.mdef + sd->battle_status.int_ / (5-i);
-	//Caster's FLEE + (Caster's Base Level / (5 - Elemental Summon Skill Level)
-	ele.flee = sd->battle_status.flee + sd->status.base_level / (5-i);
+	status = status_get_status_data(&sd->bl);
+	ele.hp = ele.max_hp = sd->battle_status.max_hp;
+	ele.sp = ele.max_sp = sd->battle_status.max_sp;
+	ele.atk = (status->watk + sd->battle_status.str) *2;
+	ele.atk2 = (status->watk + sd->battle_status.str) *2;
+	ele.hit = sd->battle_status.hit;
+	ele.matk = status->matk_max;
+	ele.matk_min = status->matk_min;
+	ele.amotion =sd->battle_status.amotion;
+	ele.def = sd->battle_status.def;
+	ele.mdef = sd->battle_status.mdef;
+	ele.flee = sd->battle_status.flee;
+	
 
-	//per individual bonuses
-	switch(db->class_){
-	case ELEMENTALID_AGNI_S:	case ELEMENTALID_AGNI_M:
-	case ELEMENTALID_AGNI_L: //ATK + (Summon Agni Skill Level x 20) / HIT + (Summon Agni Skill Level x 10)
-		ele.atk += i * 20;
-		ele.atk2 += i * 20;
-		ele.hit += i * 10;
-		break;
-	case ELEMENTALID_AQUA_S:	case ELEMENTALID_AQUA_M:
-	case ELEMENTALID_AQUA_L: //MDEF + (Summon Aqua Skill Level x 10) / MATK + (Summon Aqua Skill Level x 20)
-		ele.mdef += i * 10;
-		ele.matk += i * 20;
-		break;
-	case ELEMENTALID_VENTUS_S:	case ELEMENTALID_VENTUS_M:
-	case ELEMENTALID_VENTUS_L: //FLEE + (Summon Ventus Skill Level x 20) / MATK + (Summon Ventus Skill Level x 10)
-		ele.flee += i * 20;
-		ele.matk += i * 10;
-		break;
-	case ELEMENTALID_TERA_S:	case ELEMENTALID_TERA_M:
-	case ELEMENTALID_TERA_L: //DEF + (Summon Tera Skill Level x 25) / ATK + (Summon Tera Skill Level x 5)
-		ele.def += i * 25;
-		ele.atk += i * 5;
-		ele.atk2 += i * 5;
-		break;
-	}
-
-	if( (i=pc_checkskill(sd,SO_EL_SYMPATHY)) > 0 ){
-		ele.hp = ele.max_hp += ele.max_hp * 5 * i / 100;
-		ele.sp = ele.max_sp += ele.max_sp * 5 * i / 100;
-		ele.atk += 25 * i;
-		ele.atk2 += 25 * i;
-		ele.matk += 25 * i;
-	}
 
 	ele.life_time = lifetime;
 
@@ -873,10 +834,10 @@ static bool read_elemental_skilldb_sub(char* str[], int columns, int current) {
 	}
 
 	skill_id = atoi(str[1]);
-	if( !SKILL_CHK_ELEM(skill_id) ) {
-		ShowError("read_elemental_skilldb_sub: Invalid Elemental skill '%d'.\n", skill_id);
-		return false;
-	}
+	// if( !SKILL_CHK_ELEM(skill_id) ) {
+	// 	ShowError("read_elemental_skilldb_sub: Invalid Elemental skill '%d'.\n", skill_id);
+	// 	return false;
+	// }
 
 	db = &elemental_db[i];
 	skill_lv = atoi(str[2]);

@@ -3523,18 +3523,12 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case EL_TIDAL_WEAPON:
 			skillratio += 1400;
 			break;
-		case EL_WIND_SLASH:
-			skillratio += 100;
-			break;
 		case EL_HURRICANE:
 			skillratio += 600;
 			break;
 		case EL_TYPOON_MIS:
 		case EL_WATER_SCREW_ATK:
 			skillratio += 900;
-			break;
-		case EL_STONE_HAMMER:
-			skillratio += 400;
 			break;
 		case EL_ROCK_CRUSHER:
 			skillratio += 700;
@@ -5036,16 +5030,12 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 				if(rnd()%1000 < i && !status_has_mode(tstatus,MD_STATUSIMMUNE))
 					ad.damage = tstatus->hp;
 				else {
-#ifdef RENEWAL
 					if (sstatus->matk_max > sstatus->matk_min) {
 						MATK_ADD(sstatus->matk_min+rnd()%(sstatus->matk_max-sstatus->matk_min));
 					} else {
 						MATK_ADD(sstatus->matk_min);
 					}
 					MATK_RATE(skill_lv);
-#else
-					ad.damage = status_get_lv(src) + sstatus->int_ + skill_lv * 10;
-#endif
 				}
 				break;
 			case NPC_DARKBREATH:
@@ -5075,10 +5065,23 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 				ad.damage = sstatus->rhw.atk * 20 * skill_lv;
 				break;
 			default: {
-				if (sstatus->matk_max > sstatus->matk_min) {
-					MATK_ADD(sstatus->matk_min+rnd()%(sstatus->matk_max-sstatus->matk_min));
+				int matk_max = sstatus->matk_max;
+				int matk_min = sstatus->matk_min;
+				if(skill_id == EL_FIRE_ARROW ||
+				skill_id == EL_WIND_SLASH ||
+				skill_id == EL_ICE_NEEDLE ||
+				skill_id == EL_STONE_HAMMER
+				){
+					if (src->type == BL_ELEM) {
+						struct map_session_data* sd2 = BL_CAST(BL_PC, battle_get_master(src));
+						matk_max = sd2->ed->elemental.matk;
+						matk_min = sd2->ed->elemental.matk_min;
+					}
+				}
+				if (matk_max > matk_min) {
+					MATK_ADD(matk_max+rnd()%(matk_max-matk_min));
 				} else {
-					MATK_ADD(sstatus->matk_min);
+					MATK_ADD(matk_min);
 				}
 
 				if (sd) { // Soul energy spheres adds MATK.
@@ -5091,7 +5094,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					else
 						ShowError("0 enemies targeted by %d:%s, divide per 0 avoided!\n", skill_id, skill_get_name(skill_id));
 				}
-
 				switch(skill_id) {
 					case AL_HOLYLIGHT:
 					case MG_NAPALMBEAT:
@@ -5130,6 +5132,11 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case SO_EARTHGRAVE:
 					case PF_SOULBURN:
 					case WL_DRAINLIFE:
+					case EL_ICE_NEEDLE:
+					case EL_WIND_SLASH:
+					case EL_STONE_HAMMER:
+					case EL_FIRE_ARROW:
+					case SO_EL_ACTION:
 						skillratio += SageSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
 					case WZ_JUPITEL:
@@ -5407,12 +5414,10 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case EL_WATER_SCREW:
 						skillratio += 900;
 						break;
-					case EL_FIRE_ARROW:
 					case EL_ROCK_CRUSHER_ATK:
 						skillratio += 200;
 						break;
 					case EL_FIRE_BOMB:
-					case EL_ICE_NEEDLE:
 					case EL_HURRICANE_ATK:
 						skillratio += 400;
 						break;

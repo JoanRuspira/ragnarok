@@ -26,10 +26,40 @@ int SageSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 		case PF_SOULBURN:
 			return calculate_soul_burn_atk_ratio(skill_lv);
 			break;
+		case EL_ICE_NEEDLE:
+		case EL_WIND_SLASH:
+		case EL_STONE_HAMMER:
+		case EL_FIRE_ARROW:
+		case SO_EL_ACTION:
+			return calculate_el_action_atk_ratio(skill_lv);
 		default:
 			return 0;
 			break;
 	}
+}
+
+
+int SageSkillAttackRatioCalculator::calculate_el_action_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 125;
+			break;
+		case 2:
+			ratio = 225;
+			break;
+		case 3:
+			ratio = 325;
+			break;
+		case 4:
+			ratio = 425;
+			break;
+		case 5:
+			ratio = 525;
+			break;
+		}
+	return ratio;
 }
 
 int SageSkillAttackRatioCalculator::calculate_earth_spikes_atk_ratio(int skill_lv)

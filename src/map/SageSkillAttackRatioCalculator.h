@@ -18,4 +18,5 @@ class SageSkillAttackRatioCalculator
         static int calculate_storm_gust_atk_ratio(int skill_lv);
         static int calculate_meteor_storm_atk_ratio(int skill_lv);
 		static int calculate_soul_burn_atk_ratio(int skill_lv);
+		static int calculate_el_action_atk_ratio(int skill_lv);
 };

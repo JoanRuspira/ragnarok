@@ -25100,7 +25100,7 @@ Body:
     Duration1: 1200000
     Cooldown: 1000
     Requires:
-      SpCost: 1
+      SpCost: 100
   - Id: 2461
     Name: SO_EL_ACTION
     Description: Elemental Action
@@ -25113,7 +25113,7 @@ Body:
     HitCount: 1
     Cooldown: 5000
     Requires:
-      SpCost: 50
+      SpCost: 0
       State: Elementalspirit
   - Id: 2462
     Name: SO_EL_ANALYSIS
@@ -25296,13 +25296,6 @@ Body:
           Amount: 30
         - Level: 3
           Amount: 38
-      ItemCost:
-        - Item: Lime_Green_Pts
-          Amount: 1
-        - Item: Lime_Green_Pts
-          Amount: 2
-        - Item: Lime_Green_Pts
-          Amount: 3
     Unit:
       Id: Earth_Insignia
       Layout: 1
@@ -32011,15 +32004,17 @@ Body:
   - Id: 8425
     Name: EL_FIRE_ARROW
     Description: Fire Arrow
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Magic
     TargetType: Attack
     Range: 6
     Hit: Single
     HitCount: 1
     Element: Fire
+    Cooldown: 5000
+    AfterCastActDelay: 40
     Requires:
-      SpCost: 40
+      SpCost: 70
   - Id: 8426
     Name: EL_FIRE_BOMB
     Description: Fire Bomb
@@ -32128,7 +32123,7 @@ Body:
     Name: EL_WIND_SLASH
     Description: Wind Slasher
     MaxLevel: 1
-    Type: Weapon
+    Type: Magic
     TargetType: Attack
     Range: 11
     Hit: Single
@@ -32195,7 +32190,7 @@ Body:
     Name: EL_STONE_HAMMER
     Description: Stone Hammer
     MaxLevel: 1
-    Type: Weapon
+    Type: Magic
     TargetType: Attack
     Range: 5
     Hit: Single
