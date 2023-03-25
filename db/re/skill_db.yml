@@ -25100,7 +25100,17 @@ Body:
     Duration1: 1200000
     Cooldown: 1000
     Requires:
-      SpCost: 100
+      SpCost:
+        - Level: 1
+          Amount: 100
+        - Level: 2
+          Amount: 100
+        - Level: 3
+          Amount: 100
+        - Level: 4
+          Amount: 100
+        - Level: 5
+          Amount: 10
   - Id: 2461
     Name: SO_EL_ACTION
     Description: Elemental Action
@@ -25113,7 +25123,7 @@ Body:
     HitCount: 1
     Cooldown: 5000
     Requires:
-      SpCost: 0
+      SpCost: 80
       State: Elementalspirit
   - Id: 2462
     Name: SO_EL_ANALYSIS
@@ -31724,14 +31734,16 @@ Body:
     Name: EL_WATER_SCREEN
     Description: Water Screen
     MaxLevel: 1
-    TargetType: Self
-    DamageFlags:
-      NoDamage: true
+    Type: Magic
+    TargetType: Attack
+    Range: 5
     Hit: Single
     HitCount: 1
-    Duration1: -1
+    Element: Earth
+    Cooldown: 5000
+    AfterCastActDelay: 2000
     Requires:
-      SpCost: 40
+      SpCost: 80
   - Id: 8405
     Name: EL_WATER_DROP
     Description: Water Drop
@@ -32012,22 +32024,23 @@ Body:
     HitCount: 1
     Element: Fire
     Cooldown: 5000
-    AfterCastActDelay: 40
+    AfterCastActDelay: 2000
     Requires:
-      SpCost: 70
+      SpCost: 80
   - Id: 8426
     Name: EL_FIRE_BOMB
     Description: Fire Bomb
     MaxLevel: 1
     Type: Magic
     TargetType: Attack
-    Range: 6
+    Range: 5
     Hit: Single
     HitCount: 1
-    Element: Fire
-    SplashArea: 1
+    Element: Earth
+    Cooldown: 5000
+    AfterCastActDelay: 2000
     Requires:
-      SpCost: 60
+      SpCost: 80
   - Id: 8427
     Name: EL_FIRE_BOMB_ATK
     Description: Fire Bomb Attack
@@ -32077,8 +32090,10 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Water
+    Cooldown: 5000
+    AfterCastActDelay: 2000
     Requires:
-      SpCost: 40
+      SpCost: 80
   - Id: 8431
     Name: EL_WATER_SCREW
     Description: Water Screw
@@ -32129,23 +32144,24 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Wind
-    CastTime: 1000
+    Cooldown: 5000
+    AfterCastActDelay: 2000
     Requires:
-      SpCost: 40
+      SpCost: 80
   - Id: 8435
     Name: EL_HURRICANE
     Description: Hurricane Rage
     MaxLevel: 1
-    Type: Weapon
+    Type: Magic
     TargetType: Attack
-    Range: 11
+    Range: 5
     Hit: Single
     HitCount: 1
-    Element: Wind
-    SplashArea: 1
-    CastTime: 1000
+    Element: Earth
+    Cooldown: 5000
+    AfterCastActDelay: 2000
     Requires:
-      SpCost: 60
+      SpCost: 80
   - Id: 8436
     Name: EL_HURRICANE_ATK
     Description: Hurricane Rage Attack
@@ -32196,23 +32212,24 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Earth
-    Duration1: 5000
+    Cooldown: 5000
+    AfterCastActDelay: 2000
     Requires:
-      SpCost: 40
+      SpCost: 80
   - Id: 8440
     Name: EL_ROCK_CRUSHER
-    Description: Rock Launcher
+    Description: Rock Crusher
     MaxLevel: 1
-    Type: Weapon
+    Type: Magic
     TargetType: Attack
-    Range: 3
+    Range: 5
     Hit: Single
     HitCount: 1
     Element: Earth
-    SplashArea: 1
-    Duration1: 15000
+    Cooldown: 5000
+    AfterCastActDelay: 2000
     Requires:
-      SpCost: 60
+      SpCost: 80
   - Id: 8441
     Name: EL_ROCK_CRUSHER_ATK
     Description: Rock Launcher Attack

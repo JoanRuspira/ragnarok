@@ -3513,7 +3513,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			break;
 		// Physical Elemantal Spirits Attack Skills
 		case EL_CIRCLE_OF_FIRE:
-		case EL_FIRE_BOMB_ATK:
 		case EL_STONE_RAIN:
 			skillratio += 200;
 			break;
@@ -3523,15 +3522,8 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case EL_TIDAL_WEAPON:
 			skillratio += 1400;
 			break;
-		case EL_HURRICANE:
-			skillratio += 600;
-			break;
 		case EL_TYPOON_MIS:
-		case EL_WATER_SCREW_ATK:
 			skillratio += 900;
-			break;
-		case EL_ROCK_CRUSHER:
-			skillratio += 700;
 			break;
 		case KO_JYUMONJIKIRI:
 			skillratio += -100 + 200 * skill_lv;
@@ -5137,6 +5129,11 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case EL_STONE_HAMMER:
 					case EL_FIRE_ARROW:
 					case SO_EL_ACTION:
+					case EL_WATER_SCREW:
+					case EL_HURRICANE:
+					case EL_ROCK_CRUSHER:
+					case EL_FIRE_BOMB:
+					case JG_EL_ACTION:
 						skillratio += SageSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
 					case WZ_JUPITEL:
@@ -5410,21 +5407,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 						}
 						break;
 					// Magical Elemental Spirits Attack Skills
-					case EL_FIRE_MANTLE:
-					case EL_WATER_SCREW:
-						skillratio += 900;
-						break;
-					case EL_ROCK_CRUSHER_ATK:
-						skillratio += 200;
-						break;
-					case EL_FIRE_BOMB:
-					case EL_HURRICANE_ATK:
-						skillratio += 400;
-						break;
-					case EL_FIRE_WAVE:
-					case EL_TYPOON_MIS_ATK:
-						skillratio += 1100;
-						break;
 					case MH_ERASER_CUTTER:
 					case MH_XENO_SLASHER:
 						skillratio += -100 + 350 * skill_lv * status_get_lv(src) / 100 + sstatus->int_; // !TODO: Confirm Base Level and INT bonus

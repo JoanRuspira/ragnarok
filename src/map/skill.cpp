@@ -2349,7 +2349,6 @@ int64 skill_attack (int attack_type, struct block_list* src, struct block_list *
 			break;
 		case NPC_DARKPIERCING:
 		case EL_FIRE_BOMB:
-		case EL_FIRE_BOMB_ATK:
 		case EL_FIRE_WAVE:
 		case EL_FIRE_WAVE_ATK:
 		case EL_FIRE_MANTLE:
@@ -2357,13 +2356,10 @@ int64 skill_attack (int attack_type, struct block_list* src, struct block_list *
 		case EL_FIRE_ARROW:
 		case EL_ICE_NEEDLE:
 		case EL_WATER_SCREW:
-		case EL_WATER_SCREW_ATK:
 		case EL_WIND_SLASH:
 		case EL_TIDAL_WEAPON:
 		case EL_ROCK_CRUSHER:
-		case EL_ROCK_CRUSHER_ATK:
 		case EL_HURRICANE:
-		case EL_HURRICANE_ATK:
 		case KO_BAKURETSU:
 		case GN_HELLS_PLANT_ATK:
 		case SU_SV_ROOTTWIST_ATK:
@@ -4883,21 +4879,14 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 			int i = skill_get_splash(skill_id,skill_lv);
 			clif_skill_nodamage(src,battle_get_master(src),skill_id,skill_lv,1);
 			clif_skill_damage(src, bl, tick, status_get_amotion(src), 0, -30000, 1, skill_id, skill_lv, DMG_SINGLE);
-			if( rnd()%100 < 30 )
-				map_foreachinrange(skill_area_sub,bl,i,BL_CHAR,src,skill_id,skill_lv,tick,flag|BCT_ENEMY|1,skill_castend_damage_id);
-			else
-				skill_attack(skill_get_type(skill_id),src,src,bl,skill_id,skill_lv,tick,flag);
+			map_foreachinrange(skill_area_sub,bl,i,BL_CHAR,src,skill_id,skill_lv,tick,flag|BCT_ENEMY|1,skill_castend_damage_id);
 		}
 		break;
 
-	case EL_ROCK_CRUSHER:
-		clif_skill_nodamage(src,battle_get_master(src),skill_id,skill_lv,1);
-		clif_skill_damage(src, src, tick, status_get_amotion(src), 0, -30000, 1, skill_id, skill_lv, DMG_SINGLE);
-		if( rnd()%100 < 50 )
-			skill_attack(BF_MAGIC,src,src,bl,skill_id,skill_lv,tick,flag);
-		else
-			skill_attack(BF_WEAPON,src,src,bl,EL_ROCK_CRUSHER_ATK,skill_lv,tick,flag);
-		break;
+	// case EL_ROCK_CRUSHER:
+	// 	clif_skill_nodamage(src,battle_get_master(src),skill_id,skill_lv,1);
+	// 	clif_skill_damage(src, src, tick, status_get_amotion(src), 0, -30000, 1, skill_id, skill_lv, DMG_SINGLE);
+	// 	skill_attack(BF_MAGIC,src,src,bl,skill_id,skill_lv,tick,flag);
 
 	case EL_STONE_RAIN:
 		if( flag&1 )
@@ -4912,7 +4901,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 				skill_attack(skill_get_type(skill_id),src,src,bl,skill_id,skill_lv,tick,flag);
 		}
 		break;
-
+	case EL_ROCK_CRUSHER:
 	case EL_FIRE_ARROW:
 	case EL_ICE_NEEDLE:
 	case EL_WIND_SLASH:
@@ -9968,34 +9957,15 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 		}
 		break;
+
 	case JG_EL_ACTION:
-		if( sd ) {
-				int duration = 3000;
-			if( !sd->ed )
-				break;
-			switch(sd->ed->db->class_) {
-				case 2115:case 2124:
-				case 2118:case 2121:
-					duration = 6000;
-					break;
-				case 2116:case 2119:
-				case 2122:case 2125:
-					duration = 9000;
-					break;
-			}
-			sd->skill_id_old = skill_id;
-			elemental_action(sd->ed, bl, tick, JG_EL_ACTION);
-			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
-			skill_blockpc_start(sd, skill_id, duration);
-		}
-		break;
 	case SO_EL_ACTION:
 		if( sd ) {
 				int duration = 5000;
 			if( !sd->ed )
 				break;
 			sd->skill_id_old = skill_id;
-			elemental_action(sd->ed, bl, tick, SO_EL_ACTION);
+			elemental_action(sd->ed, bl, tick, skill_id);
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 			skill_blockpc_start(sd, skill_id, duration);
 		}
@@ -16130,13 +16100,13 @@ struct s_skill_condition skill_get_requirement(struct map_session_data* sd, uint
 		case SO_SUMMON_AGNI:
 		case SO_SUMMON_AQUA:
 		case SO_SUMMON_VENTUS:
-		case SO_SUMMON_TERA: {
-				int spirit_sympathy = pc_checkskill(sd,SO_EL_SYMPATHY);
+		// case SO_SUMMON_TERA: {
+		// 		int spirit_sympathy = pc_checkskill(sd,SO_EL_SYMPATHY);
 
-				if( spirit_sympathy )
-					req.sp -= req.sp * (5 + 5 * spirit_sympathy) / 100;
-			}
-			break;
+		// 		if( spirit_sympathy )
+		// 			req.sp -= req.sp * (5 + 5 * spirit_sympathy) / 100;
+		// 	}
+		// 	break;
 		case SO_PSYCHIC_WAVE:
 			if( sc && (sc->data[SC_HEATER_OPTION] || sc->data[SC_COOLER_OPTION] || sc->data[SC_CURSED_SOIL_OPTION] || sc->data[SC_BLAST_OPTION]) )
 				req.sp += req.sp / 2; // 1.5x SP cost

@@ -32,6 +32,12 @@ int SageSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 		case EL_FIRE_ARROW:
 		case SO_EL_ACTION:
 			return calculate_el_action_atk_ratio(skill_lv);
+		case EL_WATER_SCREW:
+		case EL_HURRICANE:
+		case EL_ROCK_CRUSHER:
+		case EL_FIRE_BOMB:
+		case JG_EL_ACTION:
+			return calculate_el_action_atk_ratio(skill_lv);
 		default:
 			return 0;
 			break;

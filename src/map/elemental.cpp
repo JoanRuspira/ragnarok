@@ -355,7 +355,6 @@ int elemental_action(struct elemental_data *ed, struct block_list *bl, t_tick ti
 	nullpo_ret(bl);
 
 	if( !ed->master ){	
-		ShowMessage("ele skill 1\n");
 		return 0;
 	}
 	
@@ -370,53 +369,41 @@ int elemental_action(struct elemental_data *ed, struct block_list *bl, t_tick ti
 		ARR_FIND(0, MAX_ELESKILLTREE, i, ed->db->skill[i].id && (ed->db->skill[i].mode&EL_SKILLMODE_ASSIST));
 	}
 	if( i == MAX_ELESKILLTREE ){	
-		ShowMessage("ele skill 2\n");
 		return 0;
 	}
-	ShowMessage("ele skill 3\n");
 	skill_id = ed->db->skill[i].id;
 	skill_lv = ed->db->skill[i].lv;
 
 	if( elemental_skillnotok(skill_id, ed) ){	
-		ShowMessage("ele skill 4\n");
 		return 0;
 	}
 
 	if( ed->ud.skilltimer != INVALID_TIMER ){	
-		ShowMessage("ele skill 5\n");
 		return 0;
 	} else {
 		if( DIFF_TICK(tick, ed->ud.canact_tick) < 0 ){	
-			ShowMessage("ele skill 6\n");
 			return 0;
 		}
 	}
 	ed->target_id = ed->ud.skilltarget = bl->id;	// Set new target
 	ed->last_thinktime = tick;
-	ShowMessage("ele skill 7\n");
 	// Not in skill range.
 	if( !battle_check_range(&ed->bl,bl,skill_get_range(skill_id,skill_lv)) ) {
-		ShowMessage("ele skill 8\n");
 		// Try to walk to the target.
 		if( !unit_walktobl(&ed->bl, bl, skill_get_range(skill_id,skill_lv), 2) ){
-			ShowMessage("ele skill 9\n");
 			elemental_unlocktarget(ed);
 		} else {
-			ShowMessage("ele skill 10\n");
 			// Walking, waiting to be in range. Client don't handle it, then we must handle it here.
 			int walk_dist = distance_bl(&ed->bl,bl) - skill_get_range(skill_id,skill_lv);
 			ed->ud.skill_id = skill_id;
 			ed->ud.skill_lv = skill_lv;
 
 			if( skill_get_inf(skill_id) & INF_GROUND_SKILL ) {
-				ShowMessage("ele skill 11\n");
 				ed->ud.skilltimer = add_timer( tick+(t_tick)status_get_speed(&ed->bl)*walk_dist, skill_castend_pos, ed->bl.id, 0 );
 			}else{
-				ShowMessage("ele skill 12\n");
 				ed->ud.skilltimer = add_timer( tick+(t_tick)status_get_speed(&ed->bl)*walk_dist, skill_castend_id, ed->bl.id, 0 );
 			}
 		}
-		ShowMessage("ele skill 13\n");
 		return 1;
 
 	}
