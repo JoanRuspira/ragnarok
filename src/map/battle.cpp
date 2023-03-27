@@ -5086,6 +5086,7 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					else
 						ShowError("0 enemies targeted by %d:%s, divide per 0 avoided!\n", skill_id, skill_get_name(skill_id));
 				}
+				ShowMessage("SKILL ID %d\n", skill_id);
 				switch(skill_id) {
 					case AL_HOLYLIGHT:
 					case MG_NAPALMBEAT:
@@ -5129,12 +5130,17 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case EL_STONE_HAMMER:
 					case EL_FIRE_ARROW:
 					case SO_EL_ACTION:
+					case EL_WATER_SCREW_ATK:
+					case EL_HURRICANE_ATK:
+					case EL_ROCK_CRUSHER_ATK:
+					case EL_FIRE_BOMB_ATK:
 					case EL_WATER_SCREW:
 					case EL_HURRICANE:
 					case EL_ROCK_CRUSHER:
 					case EL_FIRE_BOMB:
 					case JG_EL_ACTION:
 						skillratio += SageSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
+						ShowMessage("SKILL RATIO %d\n", skillratio);
 						break;
 					case WZ_JUPITEL:
 					case WL_CRIMSONROCK:

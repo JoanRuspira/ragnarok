@@ -32030,13 +32030,13 @@ Body:
   - Id: 8426
     Name: EL_FIRE_BOMB
     Description: Fire Bomb
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Magic
     TargetType: Attack
     Range: 5
     Hit: Single
     HitCount: 1
-    Element: Earth
+    Element: Fire
     Cooldown: 5000
     AfterCastActDelay: 2000
     Requires:
@@ -32044,16 +32044,17 @@ Body:
   - Id: 8427
     Name: EL_FIRE_BOMB_ATK
     Description: Fire Bomb Attack
-    MaxLevel: 1
-    Type: Weapon
+    MaxLevel: 5
+    Type: Magic
     TargetType: Attack
-    Range: 6
+    Range: 5
     Hit: Single
     HitCount: 1
     Element: Fire
-    SplashArea: 1
+    Cooldown: 5000
+    AfterCastActDelay: 2000
     Requires:
-      SpCost: 1
+      SpCost: 80
   - Id: 8428
     Name: EL_FIRE_WAVE
     Description: Fire Wave
@@ -32083,7 +32084,7 @@ Body:
   - Id: 8430
     Name: EL_ICE_NEEDLE
     Description: Ice Needle
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Magic
     TargetType: Attack
     Range: 9
@@ -32097,29 +32098,31 @@ Body:
   - Id: 8431
     Name: EL_WATER_SCREW
     Description: Water Screw
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Magic
     TargetType: Attack
-    Range: 9
+    Range: 5
     Hit: Single
     HitCount: 1
     Element: Water
-    SplashArea: 1
+    Cooldown: 5000
+    AfterCastActDelay: 2000
     Requires:
-      SpCost: 60
+      SpCost: 80
   - Id: 8432
     Name: EL_WATER_SCREW_ATK
     Description: Water Screw Attack
-    MaxLevel: 1
-    Type: Weapon
+    MaxLevel: 5
+    Type: Magic
     TargetType: Attack
-    Range: 9
+    Range: 5
     Hit: Single
     HitCount: 1
     Element: Water
-    SplashArea: 1
+    Cooldown: 5000
+    AfterCastActDelay: 2000
     Requires:
-      SpCost: 1
+      SpCost: 80
   - Id: 8433
     Name: EL_TIDAL_WEAPON
     Description: Tidal Weapon
@@ -32137,7 +32140,7 @@ Body:
   - Id: 8434
     Name: EL_WIND_SLASH
     Description: Wind Slasher
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Magic
     TargetType: Attack
     Range: 11
@@ -32151,29 +32154,31 @@ Body:
   - Id: 8435
     Name: EL_HURRICANE
     Description: Hurricane Rage
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Magic
     TargetType: Attack
     Range: 5
     Hit: Single
     HitCount: 1
-    Element: Earth
+    Element: Wind
     Cooldown: 5000
     AfterCastActDelay: 2000
     Requires:
       SpCost: 80
   - Id: 8436
     Name: EL_HURRICANE_ATK
-    Description: Hurricane Rage Attack
-    MaxLevel: 1
+    Description: Hurricane Rage
+    MaxLevel: 5
     Type: Magic
     TargetType: Attack
-    Range: 7
+    Range: 5
     Hit: Single
     HitCount: 1
     Element: Wind
+    Cooldown: 5000
+    AfterCastActDelay: 2000
     Requires:
-      SpCost: 1
+      SpCost: 80
   - Id: 8437
     Name: EL_TYPOON_MIS
     Description: Typhoon Missile
@@ -32205,7 +32210,7 @@ Body:
   - Id: 8439
     Name: EL_STONE_HAMMER
     Description: Stone Hammer
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Magic
     TargetType: Attack
     Range: 5
@@ -32219,7 +32224,7 @@ Body:
   - Id: 8440
     Name: EL_ROCK_CRUSHER
     Description: Rock Crusher
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Magic
     TargetType: Attack
     Range: 5
@@ -32233,17 +32238,17 @@ Body:
   - Id: 8441
     Name: EL_ROCK_CRUSHER_ATK
     Description: Rock Launcher Attack
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Magic
     TargetType: Attack
     Range: 5
     Hit: Single
     HitCount: 1
     Element: Earth
-    SplashArea: 1
-    Duration1: 15000
+    Cooldown: 5000
+    AfterCastActDelay: 2000
     Requires:
-      SpCost: 1
+      SpCost: 80
   - Id: 8442
     Name: EL_STONE_RAIN
     Description: Stone Rain
