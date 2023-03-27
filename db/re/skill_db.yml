@@ -2018,9 +2018,10 @@ Body:
     Range: 5
     Hit: Single
     HitCount: 1
-    Cooldown: 5000
+    Cooldown: 7000
+    AfterCastActDelay: 2000
     Requires:
-      SpCost: 50
+      SpCost: 75
       State: Elementalspirit
   - Id: 830
     Name: SA_QUICKSTUDY
@@ -2249,6 +2250,66 @@ Body:
     AfterCastActDelay: 1000
     Requires:
       SpCost: 30
+  - Id: 840
+    Name: EL_TORNADO_JG
+    Description: Tornado
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 11
+    Hit: Single
+    HitCount: -2
+    SplashArea: 5
+    Element: Wind
+    Cooldown: 5000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 75
+  - Id: 841
+    Name: EL_ROCK_CRUSHER_JG
+    Description: Rock Crusher
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 11
+    Hit: Single
+    HitCount: -2
+    SplashArea: 5
+    Element: Earth
+    Cooldown: 5000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 75
+  - Id: 842
+    Name: EL_WATER_SCREW_JG
+    Description: Water Screw
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 11
+    Hit: Single
+    HitCount: -2
+    SplashArea: 5
+    Element: Water
+    Cooldown: 5000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 75
+  - Id: 843
+    Name: EL_FIRE_BOMB_JG
+    Description: Fire Bomb
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 11
+    Hit: Single
+    HitCount: -2
+    SplashArea: 5
+    Element: Fire
+    Cooldown: 5000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 75
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -25122,8 +25183,9 @@ Body:
     Hit: Single
     HitCount: 1
     Cooldown: 5000
+    AfterCastActDelay: 2000
     Requires:
-      SpCost: 80
+      SpCost: 70
       State: Elementalspirit
   - Id: 2462
     Name: SO_EL_ANALYSIS
@@ -25159,10 +25221,8 @@ Body:
     Hit: Single
     HitCount: 1
     CastCancel: true
-    CastTime: 2000
-    AfterCastActDelay: 1000
     Requires:
-      SpCost: 10
+      SpCost: 0
       State: Elementalspirit
   - Id: 2465
     Name: SO_FIRE_INSIGNIA
@@ -32026,7 +32086,7 @@ Body:
     Cooldown: 5000
     AfterCastActDelay: 2000
     Requires:
-      SpCost: 80
+      SpCost: 70
   - Id: 8426
     Name: EL_FIRE_BOMB
     Description: Fire Bomb
@@ -32094,7 +32154,7 @@ Body:
     Cooldown: 5000
     AfterCastActDelay: 2000
     Requires:
-      SpCost: 80
+      SpCost: 70
   - Id: 8431
     Name: EL_WATER_SCREW
     Description: Water Screw
@@ -32150,7 +32210,7 @@ Body:
     Cooldown: 5000
     AfterCastActDelay: 2000
     Requires:
-      SpCost: 80
+      SpCost: 70
   - Id: 8435
     Name: EL_HURRICANE
     Description: Hurricane Rage
@@ -32220,7 +32280,7 @@ Body:
     Cooldown: 5000
     AfterCastActDelay: 2000
     Requires:
-      SpCost: 80
+      SpCost: 70
   - Id: 8440
     Name: EL_ROCK_CRUSHER
     Description: Rock Crusher

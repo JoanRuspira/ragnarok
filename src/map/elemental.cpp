@@ -350,7 +350,6 @@ int elemental_action(struct elemental_data *ed, struct block_list *bl, t_tick ti
 	struct s_skill_condition req;
 	uint16 skill_id, skill_lv;
 	int i;
-
 	nullpo_ret(ed);
 	nullpo_ret(bl);
 
@@ -368,16 +367,15 @@ int elemental_action(struct elemental_data *ed, struct block_list *bl, t_tick ti
 	if (caller_skill_id ==JG_EL_ACTION) {
 		ARR_FIND(0, MAX_ELESKILLTREE, i, ed->db->skill[i].id && (ed->db->skill[i].mode&EL_SKILLMODE_ASSIST));
 	}
-	if( i == MAX_ELESKILLTREE ){	
+
+	if( i == MAX_ELESKILLTREE ){
 		return 0;
 	}
 	skill_id = ed->db->skill[i].id;
 	skill_lv = ed->db->skill[i].lv;
-
 	if( elemental_skillnotok(skill_id, ed) ){	
 		return 0;
 	}
-
 	if( ed->ud.skilltimer != INVALID_TIMER ){	
 		return 0;
 	} else {

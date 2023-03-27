@@ -2139,6 +2139,10 @@ enum e_skill {
 	JG_SRECOVERY = 837,
 	WZ_ICEBERG = 838,
 	MG_EARTHBOLT = 839,
+	EL_TORNADO_JG = 840,
+	EL_ROCK_CRUSHER_JG = 841,
+	EL_WATER_SCREW_JG = 842,
+	EF_FIRE_BOMB_JG = 843,
 };
 
 /// The client view ids for land skills.

@@ -1926,14 +1926,13 @@ int unit_skilluse_id2(struct block_list *src, int target_id, uint16 skill_id, ui
 				casttime = -1;
 			break;
 		case EL_WIND_SLASH:
-		case EL_HURRICANE:
-		case EL_TYPOON_MIS:
 		case EL_STONE_HAMMER:
-		case EL_ROCK_CRUSHER:
-		case EL_STONE_RAIN:
 		case EL_ICE_NEEDLE:
-		case EL_WATER_SCREW:
-		case EL_TIDAL_WEAPON:
+		case EL_FIRE_ARROW:
+		case EL_TORNADO_JG:
+		case EL_ROCK_CRUSHER_JG:
+		case EL_WATER_SCREW_JG:
+		case EF_FIRE_BOMB_JG:
 			if( src->type == BL_ELEM ) {
 				sd = BL_CAST(BL_PC, battle_get_master(src));
 				if( sd && (sd->skill_id_old == SO_EL_ACTION || sd->skill_id_old == JG_EL_ACTION)) {

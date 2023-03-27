@@ -4901,11 +4901,14 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 				skill_attack(skill_get_type(skill_id),src,src,bl,skill_id,skill_lv,tick,flag);
 		}
 		break;
-	case EL_ROCK_CRUSHER:
 	case EL_FIRE_ARROW:
 	case EL_ICE_NEEDLE:
 	case EL_WIND_SLASH:
 	case EL_STONE_HAMMER:
+	case EL_TORNADO_JG:
+	case EL_ROCK_CRUSHER_JG:
+	case EL_WATER_SCREW_JG:
+	case EF_FIRE_BOMB_JG:
 		clif_skill_nodamage(src,battle_get_master(src),skill_id,skill_lv,1);
 		clif_skill_damage(src, bl, tick, status_get_amotion(src), 0, -30000, 1, skill_id, skill_lv, DMG_SINGLE);
 		skill_attack(skill_get_type(skill_id),src,src,bl,skill_id,skill_lv,tick,flag);
@@ -9959,6 +9962,16 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		break;
 
 	case JG_EL_ACTION:
+		if( sd ) {
+			int duration = 7000;
+			if( !sd->ed )
+				break;
+			sd->skill_id_old = skill_id;
+			elemental_action(sd->ed, bl, tick, skill_id);
+			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
+			skill_blockpc_start(sd, skill_id, duration);
+		}
+		break;
 	case SO_EL_ACTION:
 		if( sd ) {
 				int duration = 5000;
@@ -9970,7 +9983,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			skill_blockpc_start(sd, skill_id, duration);
 		}
 		break;
-
 	case SO_EL_CURE:
 		if( sd ) {
 			struct elemental_data *ed = sd->ed;
@@ -9979,8 +9991,8 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			if( !ed )
 				break;
 
-			s_hp = sd->battle_status.hp * 10 / 100;
-			s_sp = sd->battle_status.sp * 10 / 100;
+			s_hp = tstatus->max_hp * (skill_lv*2) / 100;
+			s_sp = tstatus->max_sp * (skill_lv*2) / 100;
 
 			if( !status_charge(&sd->bl,s_hp,s_sp) ) {
 				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
