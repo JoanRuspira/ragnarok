@@ -1454,7 +1454,7 @@ Body:
       Skill:
         Reproduce: true
     CastCancel: true
-    Cooldown: 2000
+    Cooldown: 3000
     AfterCastActDelay: 1000
     Requires:
       SpCost: 35
@@ -2195,7 +2195,7 @@ Body:
       Splash: true
     Flags:
       AlterRangeRadius: true
-    Range: 11
+    Range: 7
     Hit: Multi_Hit
     HitCount:
       - Level: 1
@@ -2310,6 +2310,58 @@ Body:
     AfterCastActDelay: 2000
     Requires:
       SpCost: 75
+  - Id: 844
+    Name: WZ_CORRUPT
+    Description: Corrupt
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    DamageFlags:
+      Splash: true
+    Range: 11
+    Hit: Single
+    HitCount: 1
+    Element: Dark
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    Cooldown: 2000
+    AfterCastActDelay: 1000
+    Requires:
+      SpCost: 35
+  - Id: 845
+    Name: WZ_EXTREMEVACUUM
+    Description: Extreme Vacuum
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    DamageFlags:
+      Splash: true
+    Range: 11
+    Hit: Multi_Hit
+    HitCount: -3
+    Element: Ghost
+    SplashArea:
+      - Level: 1
+        Area: 1
+      - Level: 2
+        Area: 2
+      - Level: 3
+        Area: 3
+      - Level: 4
+        Area: 4
+      - Level: 5
+        Area: 5
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    Cooldown: 5000
+    CastTime: 5000
+    AfterCastActDelay: 1000
+    Requires:
+      SpCost: 70
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -3091,7 +3143,7 @@ Body:
       - Level: 5
         Time: 15000
     Requires:
-      SpCost: 60
+      SpCost: 80
       ItemCost:
         - Item: Blue_Gemstone
           Amount: 1
@@ -3280,7 +3332,7 @@ Body:
     TargetType: Ground
     Flags:
       IsAutoShadowSpell: true
-    Range: 9
+    Range: 7
     Hit: Multi_Hit
     HitCount:
       - Level: 1
@@ -3373,7 +3425,7 @@ Body:
     TargetType: Ground
     Flags:
       IsAutoShadowSpell: true
-    Range: 9
+    Range: 7
     Hit: Multi_Hit
     HitCount: -5
     Element: Wind
@@ -3625,7 +3677,7 @@ Body:
     TargetType: Ground
     Flags:
       IsAutoShadowSpell: true
-    Range: 9
+    Range: 7
     Hit: Single
     HitCount: 1
     Element: Water
@@ -3661,7 +3713,7 @@ Body:
       Splash: true
     Flags:
       AlterRangeRadius: true
-    Range: 11
+    Range: 7
     Hit: Multi_Hit
     HitCount:
       - Level: 1
@@ -8934,7 +8986,7 @@ Body:
     TargetType: Attack
     Flags:
       IsNpc: true
-    Range: 9
+    Range: 7
     Hit: Multi_Hit
     HitCount:
       - Level: 1
@@ -12241,30 +12293,30 @@ Body:
           Amount: 30
   - Id: 469
     Name: SL_SMA
-    Description: Esma
+    Description: Illusionary Blades
     MaxLevel: 5
     Type: Magic
     TargetType: Attack
-    Range: 9
+    Range: 7
     Hit: Multi_Hit
     HitCount:
       - Level: 1
-        Count: 2
+        Count: 1
       - Level: 2
-        Count: 4
+        Count: 2
       - Level: 3
-        Count: 6
+        Count: 3
       - Level: 4
-        Count: 8
+        Count: 4
       - Level: 5
-        Count: 10
+        Count: 5
     Element: Ghost
     CastCancel: true
     CastTime: 7000
-    AfterCastActDelay: 500
+    AfterCastActDelay: 2000
     Duration1: 3000
     Requires:
-      SpCost: 80
+      SpCost: 60
   - Id: 470
     Name: SL_SWOO
     Description: Eswoo
@@ -17467,7 +17519,7 @@ Body:
       Splash: true
     Flags:
       AlterRangeRadius: true
-    Range: 11
+    Range: 7
     Hit: Multi_Hit
     HitCount:
       - Level: 1
@@ -18539,7 +18591,7 @@ Body:
     CastTime: 5000
     AfterCastActDelay: 1000
     Requires:
-      SpCost: 40
+      SpCost: 60
   - Id: 2039
     Name: AB_ANCILLA
     Description: Ancilla
@@ -24475,7 +24527,7 @@ Body:
     TargetType: Ground
     Flags:
       TargetHidden: true
-    Range: 9
+    Range: 7
     Hit: Single
     HitCount: -5
     Element: Earth

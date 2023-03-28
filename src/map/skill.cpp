@@ -3887,12 +3887,15 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case RK_IGNITIONBREAK:
 	case RK_HUNDREDSPEAR:
 	case AB_JUDEX:
+	case WZ_EXTREMEVACUUM:
 	case JG_TAROTCARD:
 	case PR_SPIRITUSANCTI:
+	case WZ_CORRUPT:
 	case PR_UNHOLYCROSS:
 	case AB_ADORAMUS:
 	case WL_SOULEXPANSION:
 	case MG_EARTHBOLT:
+	case SL_SMA:
 	case WZ_ICEBERG:
 	case WL_CRIMSONROCK:
 	case WL_JACKFROST:
@@ -4259,9 +4262,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 
 		skill_attack(BF_MISC, src, src, bl, skill_id, skill_lv, tick, flag);
 		break;
-
-	case SL_SMA:
-		status_change_end(src, SC_SMA, INVALID_TIMER);
 	case SL_STIN:
 	case SL_STUN:
 	case SP_SPA:
@@ -8202,20 +8202,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		}
 		clif_skill_nodamage(src,bl,skill_id,skill_lv,
 			sc_start4(src,bl,SC_SPIRIT,100,skill_lv,skill_id,0,0,skill_get_time(skill_id,skill_lv)));
-		sc_start(src,src,SC_SMA,100,skill_lv,skill_get_time(SL_SMA,skill_lv));
-		break;
-	case SL_HIGH:
-		if (sd && tsc && (tsc->data[SC_SOULGOLEM] || tsc->data[SC_SOULSHADOW] || tsc->data[SC_SOULFALCON] || tsc->data[SC_SOULFAIRY])) { // Soul links from Soul Linker and Soul Reaper skills don't stack.
-			clif_skill_fail(sd, skill_id, USESKILL_FAIL,0);
-			break;
-		}
-		if (sd && !(dstsd && (dstsd->class_&JOBL_UPPER) && !(dstsd->class_&JOBL_2) && dstsd->status.base_level < 70)) {
-			clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-			break;
-		}
-		clif_skill_nodamage(src,bl,skill_id,skill_lv,
-			sc_start4(src,bl,type,100,skill_lv,skill_id,0,0,skill_get_time(skill_id,skill_lv)));
-		sc_start(src,src,SC_SMA,100,skill_lv,skill_get_time(SL_SMA,skill_lv));
 		break;
 	case SP_SOULGOLEM:
 	case SP_SOULSHADOW:
@@ -8259,17 +8245,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			status_change_end(bl, SC_SWOO, INVALID_TIMER);
 			break;
 		}
-	case SL_SKA: // [marquis007]
-	case SL_SKE:
-		if (sd && !battle_config.allow_es_magic_pc && bl->type != BL_MOB) {
-			clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-			status_change_start(src,src,SC_STUN,10000,skill_lv,0,0,0,500,SCSTART_NOTICKDEF|SCSTART_NORATEDEF);
-			break;
-		}
-		clif_skill_nodamage(src,bl,skill_id,skill_lv,sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
-		if (skill_id == SL_SKE)
-			sc_start(src,src,SC_SMA,100,skill_lv,skill_get_time(SL_SMA,skill_lv));
-		break;
+
 
 	// New guild skills [Celest]
 	case GD_BATTLEORDER:
@@ -14811,10 +14787,7 @@ bool skill_check_condition_castbegin(struct map_session_data* sd, uint16 skill_i
 			}
 			break;
 #endif
-		case SL_SMA:
-			if(sc && !(sc->data[SC_SMA] || sc->data[SC_USE_SKILL_SP_SHA]))
-				return false;
-			break;
+
 #ifndef RENEWAL
 		case CG_HERMODE:
 			if(!npc_check_areanpc(1,sd->bl.m,sd->bl.x,sd->bl.y,skill_get_splash(skill_id, skill_lv))) {
@@ -16055,7 +16028,6 @@ struct s_skill_condition skill_get_requirement(struct map_session_data* sd, uint
 			if(pc_checkskill(sd,BS_UNFAIRLYTRICK)>0)
 				req.zeny -= req.zeny*10/100;
 			break;
-		case SL_SMA:
 		case SL_STUN:
 		case SL_STIN:
 		{

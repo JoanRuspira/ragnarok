@@ -2143,6 +2143,8 @@ enum e_skill {
 	EL_ROCK_CRUSHER_JG = 841,
 	EL_WATER_SCREW_JG = 842,
 	EF_FIRE_BOMB_JG = 843,
+	WZ_CORRUPT = 844,
+	WZ_EXTREMEVACUUM = 845,
 };
 
 /// The client view ids for land skills.
