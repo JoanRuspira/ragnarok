@@ -35,16 +35,26 @@ int WizardSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 			add_extreme_vacuum_special_effects(target);
 			return calculate_extreme_vacuum_atk_ratio(skill_lv);
 			break;
+		case WZ_LANDOFEVIL:
+			add_land_of_evil_special_effects(target);
+			return calculate_land_of_evil_atk_ratio(skill_lv);
+			break;
 		default:
 			return 0;
 			break;
 	}
 }
 
+// 247
 int WizardSkillAttackRatioCalculator::calculate_bolt2_attack(int skill_lv)
 {
 	int ratio = 50;
 	return ratio;
+}
+
+void WizardSkillAttackRatioCalculator::add_land_of_evil_special_effects(struct block_list *target)
+{
+    clif_specialeffect(target, 1234, AREA);
 }
 
 void WizardSkillAttackRatioCalculator::add_corrupt_special_effects(struct block_list *target)
@@ -57,6 +67,11 @@ void WizardSkillAttackRatioCalculator::add_corrupt_special_effects(struct block_
 void WizardSkillAttackRatioCalculator::add_extreme_vacuum_special_effects(struct block_list *target)
 {
     clif_specialeffect(target, 1323, AREA);
+}
+
+int WizardSkillAttackRatioCalculator::calculate_land_of_evil_atk_ratio(int skill_lv)
+{
+	return skill_lv*20;
 }
 
 int WizardSkillAttackRatioCalculator::calculate_extreme_vacuum_atk_ratio(int skill_lv)

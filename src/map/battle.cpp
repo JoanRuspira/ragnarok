@@ -5147,6 +5147,7 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case SL_SMA:
 					case WZ_CORRUPT:
 					case WZ_EXTREMEVACUUM:
+					case WZ_LANDOFEVIL:
 						skillratio += WizardSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
 					case MG_FIREBALL:

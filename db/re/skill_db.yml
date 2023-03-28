@@ -2362,6 +2362,40 @@ Body:
     AfterCastActDelay: 1000
     Requires:
       SpCost: 70
+  - Id: 846
+    Name: WZ_LANDOFEVIL
+    Description: Land of Evil
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Ground
+    Flags:
+      IsAutoShadowSpell: true
+    Range: 7
+    Hit: Single
+    HitCount: 1
+    Element: Dark
+    Knockback: 2
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CastCancel: true
+    CastTime: 7000
+    Cooldown: 14600
+    AfterCastActDelay: 2000
+    Duration1: 4600
+    Duration2: 12000
+    Requires:
+      SpCost: 80
+    Unit:
+      Id: Dummyskill
+      Layout: 4
+      Range: 1
+      Interval: 920
+      Target: Enemy
+      Flag:
+        NoOverlap: true
+        PathCheck: true 
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death

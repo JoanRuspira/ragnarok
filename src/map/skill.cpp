@@ -11360,6 +11360,7 @@ int skill_castend_pos2(struct block_list* src, int x, int y, uint16 skill_id, ui
 	case WZ_QUAGMIRE:
 	case WZ_VERMILION:
 	case WZ_STORMGUST:
+	case WZ_LANDOFEVIL:
 	case WZ_HEAVENDRIVE:
 	case PR_SANCTUARY:
 	case PR_MAGNUS:

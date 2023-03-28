@@ -2145,6 +2145,7 @@ enum e_skill {
 	EF_FIRE_BOMB_JG = 843,
 	WZ_CORRUPT = 844,
 	WZ_EXTREMEVACUUM = 845,
+	WZ_LANDOFEVIL = 846,
 };
 
 /// The client view ids for land skills.
