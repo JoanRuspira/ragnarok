@@ -10808,7 +10808,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			break;
 
 		case SC_MEMORIZE:
-			val2 = 5; // Memorized casts.
+			val2 = val1*2; // Memorized casts.
 			tick = INFINITE_TICK;
 			break;
 

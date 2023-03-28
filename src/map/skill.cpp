@@ -5933,7 +5933,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case WS_OVERTHRUSTMAX:
 	case ST_REJECTSWORD:
 	case HW_MAGICPOWER:
-	case PF_MEMORIZE:
 	case PA_SACRIFICE:
 	case ASC_EDP:
 	case PF_DOUBLECASTING:
@@ -5993,6 +5992,11 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case SJ_LIGHTOFSUN:
 	case SJ_BOOKOFDIMENSION:
 	case NPC_HALLUCINATIONWALK:
+		clif_skill_nodamage(src,bl,skill_id,skill_lv,
+			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
+		break;
+	case PF_MEMORIZE:
+		clif_specialeffect(src, EF_SECRA, AREA);
 		clif_skill_nodamage(src,bl,skill_id,skill_lv,
 			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
 		break;
@@ -16282,6 +16286,8 @@ int skill_vfcastfix(struct block_list *bl, double time, uint16 skill_id, uint16 
 		}
 		if (sc->data[SC_POEMBRAGI])
 			reduce_cast_rate += sc->data[SC_POEMBRAGI]->val3;
+		if (sd && (skill_lv = pc_checkskill(sd, WL_RADIUS)))
+			VARCAST_REDUCTION(skill_lv*5);
 		if (sc->data[SC_IZAYOI])
 			VARCAST_REDUCTION(50);
 		if (sc->data[SC_WATER_INSIGNIA] && sc->data[SC_WATER_INSIGNIA]->val1 == 3 && skill_get_type(skill_id) == BF_MAGIC && skill_get_ele(skill_id, skill_lv) == ELE_WATER)
@@ -16295,8 +16301,6 @@ int skill_vfcastfix(struct block_list *bl, double time, uint16 skill_id, uint16 
 		// Multiplicative Fixed CastTime values
 		if (sc->data[SC_SECRAMENT])
 			fixcast_r = max(fixcast_r, sc->data[SC_SECRAMENT]->val2);
-		if (sd && (skill_lv = pc_checkskill(sd, WL_RADIUS) ) && skill_id >= WL_WHITEIMPRISON && skill_id <= WL_FREEZE_SP)
-			fixcast_r = max(fixcast_r, ((status_get_int(bl) + status_get_lv(bl)) / 15 + skill_lv * 5));
 		if (sc->data[SC_DANCEWITHWUG])
 			fixcast_r = max(fixcast_r, sc->data[SC_DANCEWITHWUG]->val4);
 		if (sc->data[SC_HEAT_BARREL])

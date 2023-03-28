@@ -47,7 +47,7 @@ void PriestSkillAttackRatioCalculator::add_spiritu_sancti_special_effects(struct
 
 void PriestSkillAttackRatioCalculator::add_judex_special_effects(struct block_list *target)
 {
-    clif_specialeffect(target, EF_SECRA, AREA);
+    clif_specialeffect(target, 1267, AREA);
 }
 
 void PriestSkillAttackRatioCalculator::add_unholy_cross_special_effects(struct block_list *target)

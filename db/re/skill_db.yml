@@ -2218,7 +2218,7 @@ Body:
     Duration1: 5000
     Cooldown: 5000
     Requires:
-      SpCost: 90
+      SpCost: 65
   - Id: 839
     Name: MG_EARTHBOLT
     Description: Earth Bolt
@@ -3364,7 +3364,7 @@ Body:
     CastCancel: true
     CastTime: 7000
     Requires:
-      SpCost: 50
+      SpCost: 65
   - Id: 85
     Name: WZ_VERMILION
     Description: Lord of Vermilion
@@ -3684,7 +3684,7 @@ Body:
     Duration1: 5000
     Cooldown: 5000
     Requires:
-      SpCost: 90
+      SpCost: 65
   - Id: 91
     Name: WZ_HEAVENDRIVE
     Description: Heaven's Drive
@@ -10625,11 +10625,13 @@ Body:
     HitCount: 1
     CastCancel: true
     CastTime: 5000
+    Cooldown: 35000
+    AfterCastActDelay: 3000
     CastTimeFlags:
       IgnoreDex: true
       IgnoreStatus: true
     Requires:
-      SpCost: 1
+      SpCost: 110
   - Id: 404
     Name: PF_FOGWALL
     Description: Blinding Mist
@@ -12256,7 +12258,7 @@ Body:
         Count: 8
       - Level: 5
         Count: 10
-    Element: Holy
+    Element: Ghost
     CastCancel: true
     CastTime: 7000
     AfterCastActDelay: 500
@@ -17488,7 +17490,7 @@ Body:
     Duration1: 5000
     Cooldown: 5000
     Requires:
-      SpCost: 89
+      SpCost: 65
   - Id: 2212
     Name: WL_HELLINFERNO
     Description: Hell Inferno
@@ -25163,13 +25165,13 @@ Body:
     Requires:
       SpCost:
         - Level: 1
-          Amount: 100
+          Amount: 50
         - Level: 2
-          Amount: 100
+          Amount: 50
         - Level: 3
-          Amount: 100
+          Amount: 50
         - Level: 4
-          Amount: 100
+          Amount: 50
         - Level: 5
           Amount: 10
   - Id: 2461
@@ -25185,7 +25187,7 @@ Body:
     Cooldown: 5000
     AfterCastActDelay: 2000
     Requires:
-      SpCost: 70
+      SpCost: 60
       State: Elementalspirit
   - Id: 2462
     Name: SO_EL_ANALYSIS
@@ -32086,7 +32088,7 @@ Body:
     Cooldown: 5000
     AfterCastActDelay: 2000
     Requires:
-      SpCost: 70
+      SpCost: 60
   - Id: 8426
     Name: EL_FIRE_BOMB
     Description: Fire Bomb
@@ -32154,7 +32156,7 @@ Body:
     Cooldown: 5000
     AfterCastActDelay: 2000
     Requires:
-      SpCost: 70
+      SpCost: 60
   - Id: 8431
     Name: EL_WATER_SCREW
     Description: Water Screw
@@ -32210,7 +32212,7 @@ Body:
     Cooldown: 5000
     AfterCastActDelay: 2000
     Requires:
-      SpCost: 70
+      SpCost: 60
   - Id: 8435
     Name: EL_HURRICANE
     Description: Hurricane Rage
@@ -32280,7 +32282,7 @@ Body:
     Cooldown: 5000
     AfterCastActDelay: 2000
     Requires:
-      SpCost: 70
+      SpCost: 60
   - Id: 8440
     Name: EL_ROCK_CRUSHER
     Description: Rock Crusher
