@@ -39,13 +39,38 @@ int WizardSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 			add_land_of_evil_special_effects(target);
 			return calculate_land_of_evil_atk_ratio(skill_lv);
 			break;
+		case WL_SOULEXPANSION:
+			return calculate_void_expansion_atk_ratio(skill_lv);
+			break;
 		default:
 			return 0;
 			break;
 	}
 }
 
-// 247
+int WizardSkillAttackRatioCalculator::calculate_void_expansion_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 10;
+			break;
+		case 2:
+			ratio = 100;
+			break;
+		case 3:
+			ratio = 200;
+			break;
+		case 4:
+			ratio = 300;
+			break;
+		case 5:
+			ratio = 400;
+			break;
+		}
+	return ratio;
+}
+
 int WizardSkillAttackRatioCalculator::calculate_bolt2_attack(int skill_lv)
 {
 	int ratio = 50;
@@ -55,13 +80,14 @@ int WizardSkillAttackRatioCalculator::calculate_bolt2_attack(int skill_lv)
 void WizardSkillAttackRatioCalculator::add_land_of_evil_special_effects(struct block_list *target)
 {
     clif_specialeffect(target, 1234, AREA);
+    clif_specialeffect(target, 124, AREA);
+    clif_specialeffect(target, 1277, AREA);
 }
 
 void WizardSkillAttackRatioCalculator::add_corrupt_special_effects(struct block_list *target)
 {
-    clif_specialeffect(target, 1277, AREA);
     clif_specialeffect(target, 1238, AREA);
-    clif_specialeffect(target, 129, AREA);
+    clif_specialeffect(target, 125, AREA);
 }
 
 void WizardSkillAttackRatioCalculator::add_extreme_vacuum_special_effects(struct block_list *target)

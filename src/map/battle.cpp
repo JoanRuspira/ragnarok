@@ -1197,8 +1197,6 @@ bool battle_status_block_damage(struct block_list *src, struct block_list *targe
 			(skill_id && skill_get_ele(skill_id, skill_lv) == ELE_GHOST) ||
 			(skill_id == 0 && (status_get_status_data(src))->rhw.ele == ELE_GHOST))
 		{
-			if (skill_id == WL_SOULEXPANSION)
-				damage <<= 1; // If used against a player in White Imprison, the skill deals double damage.
 			status_change_end(target, SC_WHITEIMPRISON, INVALID_TIMER); // Those skills do damage and removes effect
 		} else {
 			d->dmg_lv = ATK_BLOCK;
@@ -5148,6 +5146,7 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case WZ_CORRUPT:
 					case WZ_EXTREMEVACUUM:
 					case WZ_LANDOFEVIL:
+					case WL_SOULEXPANSION:
 						skillratio += WizardSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
 					case MG_FIREBALL:
@@ -5269,10 +5268,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 #endif
 					case AB_ADORAMUS:
 						skillratio += 230 + 70 * skill_lv;
-						RE_LVL_DMOD(100);
-						break;
-					case WL_SOULEXPANSION:
-						skillratio += -100 + 750 + skill_lv * 150 + sstatus->int_;
 						RE_LVL_DMOD(100);
 						break;
 					case WL_FROSTMISTY:

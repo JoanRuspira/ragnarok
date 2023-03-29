@@ -390,7 +390,7 @@ Body:
     TargetType: Attack
     Flags:
       IsAutoShadowSpell: true
-    Range: 9
+    Range: 7
     Hit: Multi_Hit
     HitCount:
       - Level: 1
@@ -420,7 +420,7 @@ Body:
     MaxLevel: 5
     Type: Magic
     TargetType: Attack
-    Range: 9
+    Range: 7
     Hit: Single
     HitCount: 1
     Element: Dark
@@ -447,7 +447,7 @@ Body:
     TargetType: Attack
     Flags:
       IsAutoShadowSpell: true
-    Range: 9
+    Range: 7
     Hit: Multi_Hit
     HitCount:
       - Level: 1
@@ -479,7 +479,7 @@ Body:
     TargetType: Attack
     Flags:
       IsAutoShadowSpell: true
-    Range: 9
+    Range: 7
     Hit: Single
     HitCount: 1
     Element: Water
@@ -504,7 +504,7 @@ Body:
     TargetType: Attack
     DamageFlags:
       NoDamage: true
-    Range: 9
+    Range: 7
     Hit: Single
     HitCount: 1
     Element: Earth
@@ -528,7 +528,7 @@ Body:
     Flags:
       IsAutoShadowSpell: true
       TargetTrap: true
-    Range: 9
+    Range: 7
     Hit: Single
     HitCount: 1
     Element: Fire
@@ -661,7 +661,7 @@ Body:
     TargetType: Attack
     Flags:
       IsAutoShadowSpell: true
-    Range: 9
+    Range: 7
     Hit: Multi_Hit
     HitCount:
       - Level: 1
@@ -693,7 +693,7 @@ Body:
     TargetType: Attack
     Flags:
       IsAutoShadowSpell: true
-    Range: 9
+    Range: 7
     Hit: Multi_Hit
     HitCount:
       - Level: 1
@@ -1446,7 +1446,7 @@ Body:
     TargetType: Attack
     DamageFlags:
       Splash: true
-    Range: 11
+    Range: 7
     Hit: Single
     HitCount: 1
     Element: Ghost
@@ -2227,7 +2227,7 @@ Body:
     TargetType: Attack
     Flags:
       IsAutoShadowSpell: true
-    Range: 9
+    Range: 7
     Hit: Multi_Hit
     HitCount:
       - Level: 1
@@ -2318,7 +2318,7 @@ Body:
     TargetType: Attack
     DamageFlags:
       Splash: true
-    Range: 11
+    Range: 7
     Hit: Single
     HitCount: 1
     Element: Dark
@@ -2338,7 +2338,7 @@ Body:
     TargetType: Attack
     DamageFlags:
       Splash: true
-    Range: 11
+    Range: 7
     Hit: Multi_Hit
     HitCount: -3
     Element: Ghost
@@ -2364,38 +2364,36 @@ Body:
       SpCost: 70
   - Id: 846
     Name: WZ_LANDOFEVIL
-    Description: Land of Evil
+    Description: Icon of Sin
     MaxLevel: 5
     Type: Magic
-    TargetType: Ground
-    Flags:
-      IsAutoShadowSpell: true
+    TargetType: Attack
+    DamageFlags:
+      Splash: true
     Range: 7
-    Hit: Single
-    HitCount: 1
+    Hit: Multi_Hit
+    HitCount: -3
     Element: Dark
-    Knockback: 2
+    SplashArea:
+      - Level: 1
+        Area: 1
+      - Level: 2
+        Area: 2
+      - Level: 3
+        Area: 3
+      - Level: 4
+        Area: 4
+      - Level: 5
+        Area: 5
     CopyFlags:
       Skill:
-        Plagiarism: true
         Reproduce: true
     CastCancel: true
-    CastTime: 7000
-    Cooldown: 14600
-    AfterCastActDelay: 2000
-    Duration1: 4600
-    Duration2: 12000
+    Cooldown: 5000
+    CastTime: 5000
+    AfterCastActDelay: 1000
     Requires:
-      SpCost: 80
-    Unit:
-      Id: Dummyskill
-      Layout: 4
-      Range: 1
-      Interval: 920
-      Target: Enemy
-      Flag:
-        NoOverlap: true
-        PathCheck: true 
+      SpCost: 70
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -3143,7 +3141,7 @@ Body:
     MaxLevel: 5
     Type: Magic
     TargetType: Ground
-    Range: 9
+    Range: 7
     Hit: Multi_Hit
     HitCount:
       - Level: 1
@@ -3602,7 +3600,7 @@ Body:
     TargetType: Ground
     DamageFlags:
       NoDamage: true
-    Range: 9
+    Range: 7
     Hit: Single
     HitCount: 1
     Element: Water
@@ -3842,7 +3840,7 @@ Body:
     Flags:
       IgnoreHovering: true
       TargetHidden: true
-    Range: 9
+    Range: 7
     Hit: Single
     HitCount: 1
     Element: Earth
@@ -5802,7 +5800,7 @@ Body:
     TargetType: Attack
     Flags:
       IsNpc: true
-    Range: -9
+    Range: -7
     Hit: Single
     HitCount: 1
     Element: Dark
@@ -7821,7 +7819,7 @@ Body:
     TargetType: Ground
     DamageFlags:
       NoDamage: true
-    Range: 2
+    Range: 7
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -7875,7 +7873,7 @@ Body:
       GuildOnly: true
       IgnoreStasis: true
       TargetHidden: true
-    Range: 9
+    Range: 7
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -9927,7 +9925,7 @@ Body:
     Type: Magic
     TargetType: Attack
     Element: Neutral
-    Range: 9
+    Range: 7
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -10692,7 +10690,7 @@ Body:
     TargetType: Support
     DamageFlags:
       NoDamage: true
-    Range: 9
+    Range: 7
     Hit: Single
     HitCount: 1
     AfterCastActDelay: 1000
@@ -10717,7 +10715,7 @@ Body:
       IgnoreDex: true
       IgnoreStatus: true
     Requires:
-      SpCost: 110
+      SpCost: 100
   - Id: 404
     Name: PF_FOGWALL
     Description: Blinding Mist
@@ -12346,7 +12344,7 @@ Body:
         Count: 5
     Element: Ghost
     CastCancel: true
-    CastTime: 7000
+    CastTime: 5000
     AfterCastActDelay: 2000
     Duration1: 3000
     Requires:
@@ -17184,7 +17182,7 @@ Body:
     TargetType: Support
     Flags:
       AlterRangeRadius: true
-    Range: 11
+    Range: 7
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -17205,7 +17203,7 @@ Body:
       SpCost: 75
   - Id: 2202
     Name: WL_SOULEXPANSION
-    Description: Soul Expansion
+    Description: Void Expansion
     MaxLevel: 5
     Type: Magic
     TargetType: Attack
@@ -17213,39 +17211,19 @@ Body:
       Splash: true
     Flags:
       AlterRangeRadius: true
-    Range: 11
+    Range: 7
     Hit: Multi_Hit
     HitCount: -2
     Element: Ghost
-    SplashArea:
-      - Level: 1
-        Area: 1
-      - Level: 2
-        Area: 1
-      - Level: 3
-        Area: 1
-      - Level: 4
-        Area: 2
-      - Level: 5
-        Area: 2
     CopyFlags:
       Skill:
         Reproduce: true
     CastCancel: true
     CastTime: 2000
-    AfterCastActDelay: 500
+    CoolDown: 5000
+    AfterCastActDelay: 1000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 30
-        - Level: 2
-          Amount: 35
-        - Level: 3
-          Amount: 40
-        - Level: 4
-          Amount: 45
-        - Level: 5
-          Amount: 50
+      SpCost: 37
   - Id: 2203
     Name: WL_FROSTMISTY
     Description: Frosty Misty
@@ -17532,7 +17510,7 @@ Body:
     TargetType: Attack
     Flags:
       AlterRangeRadius: true
-    Range: 11
+    Range: 7
     Hit: Single
     HitCount: 1
     CopyFlags:
@@ -18602,7 +18580,7 @@ Body:
     TargetType: Attack
     DamageFlags:
       Splash: true
-    Range: 11
+    Range: 7
     Hit: Multi_Hit
     HitCount: -3
     Element: Holy
@@ -24908,7 +24886,7 @@ Body:
       NoDamage: true
     Flags:
       IgnoreHovering: true
-    Range: 9
+    Range: 7
     Hit: Single
     HitCount: 1
     CastCancel: true

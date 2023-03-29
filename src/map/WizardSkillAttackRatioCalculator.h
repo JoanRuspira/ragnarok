@@ -17,6 +17,7 @@ class WizardSkillAttackRatioCalculator
 		static int calculate_corrupt_atk_ratio(int skill_lv);
 		static int calculate_extreme_vacuum_atk_ratio(int skill_lv);
 		static int calculate_land_of_evil_atk_ratio(int skill_lv);
+		static int calculate_void_expansion_atk_ratio(int skill_lv);
 		static void add_iceberg_special_effects(struct block_list *target);
 		static void add_stalagmite_special_effects(struct block_list *target);
 		static void add_corrupt_special_effects(struct block_list *target);
