@@ -9563,17 +9563,17 @@ Body:
     Name: HW_MAGICCRASHER
     Description: Stave Crasher
     MaxLevel: 5
-    Type: Weapon
+    Type: Magic
     TargetType: Attack
-    Range: 9
-    Hit: Multi_Hit
+    Range: 7
+    Hit: Single
     HitCount: 1
-    Element: Weapon
+    Element: Neutral
     CastCancel: true
-    CastTime: 300
-    AfterCastActDelay: 300
+    AfterCastActDelay: 1000
+    Cooldown: 5000
     Requires:
-      SpCost: 8
+      SpCost: 40
   - Id: 366
     Name: HW_MAGICPOWER
     Description: Mystical Amplification
@@ -24668,50 +24668,21 @@ Body:
     Description: Psychic Wave
     MaxLevel: 5
     Type: Magic
+    Element: Neutral
     TargetType: Ground
-    Range: 9
+    Range: 7
     Hit: Single
     HitCount: 1
     CopyFlags:
       Skill:
         Reproduce: true
     CastCancel: true
-    CastTime:
-      - Level: 1
-        Time: 8000
-      - Level: 2
-        Time: 9000
-      - Level: 3
-        Time: 10000
-      - Level: 4
-        Time: 11000
-      - Level: 5
-        Time: 12000
-    AfterCastActDelay: 1000
-    Duration1:
-      - Level: 1
-        Time: 1200
-      - Level: 2
-        Time: 1700
-      - Level: 3
-        Time: 2200
-      - Level: 4
-        Time: 2700
-      - Level: 5
-        Time: 3200
-    Cooldown: 5000
+    CastTime: 7000
+    AfterCastActDelay: 2000
+    Duration1: 3200
+    Cooldown: 10000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 48
-        - Level: 2
-          Amount: 56
-        - Level: 3
-          Amount: 64
-        - Level: 4
-          Amount: 70
-        - Level: 5
-          Amount: 78
+      SpCost: 85
     Unit:
       Id: Psychic_Wave
       Range:
@@ -24725,7 +24696,7 @@ Body:
           Size: 4
         - Level: 5
           Size: 5
-      Interval: 500
+      Interval: 400
       Target: Enemy
       Flag:
         NoOverlap: true

@@ -146,5 +146,23 @@ int SageSkillAttackRatioCalculator::calculate_meteor_storm_atk_ratio(int skill_l
 
 int SageSkillAttackRatioCalculator::calculate_soul_burn_atk_ratio(int skill_lv)
 {
-	return skill_lv*120;
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 100;
+			break;
+		case 2:
+			ratio = 200;
+			break;
+		case 3:
+			ratio = 300;
+			break;
+		case 4:
+			ratio = 400;
+			break;
+		case 5:
+			ratio = 500;
+			break;
+		}
+	return ratio;
 }

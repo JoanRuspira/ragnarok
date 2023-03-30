@@ -3578,7 +3578,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case LK_SPIRALPIERCE:
 	case ML_SPIRALPIERCE:
 	case CG_ARROWVULCAN:
-	case HW_MAGICCRASHER:
 	case ITM_TOMAHAWK:
 	case CH_CHAINCRUSH:
 	case CH_TIGERFIST:
@@ -3889,6 +3888,8 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case AB_JUDEX:
 	case WZ_EXTREMEVACUUM:
 	case WZ_LANDOFEVIL:
+	case HW_MAGICCRASHER:
+	case SO_PSYCHIC_WAVE:
 	case JG_TAROTCARD:
 	case PR_SPIRITUSANCTI:
 	case WZ_CORRUPT:
@@ -11361,6 +11362,8 @@ int skill_castend_pos2(struct block_list* src, int x, int y, uint16 skill_id, ui
 	case WZ_QUAGMIRE:
 	case WZ_VERMILION:
 	case WZ_STORMGUST:
+	case HW_MAGICCRASHER:
+	case SO_PSYCHIC_WAVE:
 	case WZ_LANDOFEVIL:
 	case WZ_HEAVENDRIVE:
 	case PR_SANCTUARY:
@@ -11420,7 +11423,6 @@ int skill_castend_pos2(struct block_list* src, int x, int y, uint16 skill_id, ui
 	case SC_MAELSTROM:
 	case SC_BLOODYLUST:
 	case WM_POEMOFNETHERWORLD:
-	case SO_PSYCHIC_WAVE:
 	case SO_VACUUM_EXTREME:
 	case GN_THORNS_TRAP:
 	case SO_EARTHGRAVE:
@@ -16087,9 +16089,9 @@ struct s_skill_condition skill_get_requirement(struct map_session_data* sd, uint
 			if( sc && sc->data[SC_COMBO] && sc->data[SC_COMBO]->val1 == SR_FALLENEMPIRE )
 				req.sp -= req.sp * 10 / 100;
 			break;
-		case SO_SUMMON_AGNI:
-		case SO_SUMMON_AQUA:
-		case SO_SUMMON_VENTUS:
+		// case SO_SUMMON_AGNI:
+		// case SO_SUMMON_AQUA:
+		// case SO_SUMMON_VENTUS:
 		// case SO_SUMMON_TERA: {
 		// 		int spirit_sympathy = pc_checkskill(sd,SO_EL_SYMPATHY);
 
@@ -16097,10 +16099,6 @@ struct s_skill_condition skill_get_requirement(struct map_session_data* sd, uint
 		// 			req.sp -= req.sp * (5 + 5 * spirit_sympathy) / 100;
 		// 	}
 		// 	break;
-		case SO_PSYCHIC_WAVE:
-			if( sc && (sc->data[SC_HEATER_OPTION] || sc->data[SC_COOLER_OPTION] || sc->data[SC_CURSED_SOIL_OPTION] || sc->data[SC_BLAST_OPTION]) )
-				req.sp += req.sp / 2; // 1.5x SP cost
-			break;
 	}
 
 	//Check if player is using the copied skill [Cydh]

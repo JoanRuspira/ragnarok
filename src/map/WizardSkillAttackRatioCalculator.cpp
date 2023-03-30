@@ -42,6 +42,13 @@ int WizardSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 		case WL_SOULEXPANSION:
 			return calculate_void_expansion_atk_ratio(skill_lv);
 			break;
+		case HW_MAGICCRASHER:
+			add_magic_crasher_special_effects(target);
+			return calculate_magic_crasher_atk_ratio(skill_lv);
+			break;
+		case SO_PSYCHIC_WAVE:
+			return calculate_psychic_wave_atk_ratio(skill_lv);
+			break;
 		default:
 			return 0;
 			break;
@@ -95,12 +102,80 @@ void WizardSkillAttackRatioCalculator::add_extreme_vacuum_special_effects(struct
     clif_specialeffect(target, 1323, AREA);
 }
 
-int WizardSkillAttackRatioCalculator::calculate_land_of_evil_atk_ratio(int skill_lv)
+void WizardSkillAttackRatioCalculator::add_magic_crasher_special_effects(struct block_list *target)
 {
-	return skill_lv*20;
+    clif_specialeffect(target, EF_SANDMAN, AREA);
 }
 
+int WizardSkillAttackRatioCalculator::calculate_land_of_evil_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 25;
+			break;
+		case 2:
+			ratio = 125;
+			break;
+		case 3:
+			ratio = 225;
+			break;
+		case 4:
+			ratio = 325;
+			break;
+		case 5:
+			ratio = 425;
+			break;
+		}
+	return ratio;
+}
+
+int WizardSkillAttackRatioCalculator::calculate_psychic_wave_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = -75;
+			break;
+		case 2:
+			ratio = -50;
+			break;
+		case 3:
+			ratio = -25;
+			break;
+		case 4:
+			ratio = 0;
+			break;
+		case 5:
+			ratio = 25;
+			break;
+		}
+	return ratio;
+}
 int WizardSkillAttackRatioCalculator::calculate_extreme_vacuum_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 25;
+			break;
+		case 2:
+			ratio = 125;
+			break;
+		case 3:
+			ratio = 225;
+			break;
+		case 4:
+			ratio = 325;
+			break;
+		case 5:
+			ratio = 425;
+			break;
+		}
+	return ratio;
+}
+
+int WizardSkillAttackRatioCalculator::calculate_magic_crasher_atk_ratio(int skill_lv)
 {
 	int ratio = 0;
 	switch (skill_lv) {
@@ -128,19 +203,19 @@ int WizardSkillAttackRatioCalculator::calculate_corrupt_atk_ratio(int skill_lv)
 	int ratio = 0;
 	switch (skill_lv) {
 		case 1:
-			ratio = 125;
+			ratio = 50;
 			break;
 		case 2:
-			ratio = 225;
+			ratio = 150;
 			break;
 		case 3:
-			ratio = 325;
+			ratio = 250;
 			break;
 		case 4:
-			ratio = 425;
+			ratio = 350;
 			break;
 		case 5:
-			ratio = 525;
+			ratio = 450;
 			break;
 		}
 	return ratio;

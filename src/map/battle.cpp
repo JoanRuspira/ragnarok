@@ -1197,6 +1197,8 @@ bool battle_status_block_damage(struct block_list *src, struct block_list *targe
 			(skill_id && skill_get_ele(skill_id, skill_lv) == ELE_GHOST) ||
 			(skill_id == 0 && (status_get_status_data(src))->rhw.ele == ELE_GHOST))
 		{
+			if (skill_id == WL_SOULEXPANSION)
+				damage <<= 1; // If used against a player in White Imprison, the skill deals double damage.
 			status_change_end(target, SC_WHITEIMPRISON, INVALID_TIMER); // Those skills do damage and removes effect
 		} else {
 			d->dmg_lv = ATK_BLOCK;
@@ -2558,7 +2560,6 @@ static void battle_calc_element_damage(struct Damage* wd, struct block_list *src
 			case PA_SHIELDCHAIN:
 #endif
 			case MC_CARTREVOLUTION:
-			case HW_MAGICCRASHER:
 			case SR_FALLENEMPIRE:
 			case SR_TIGERCANNON:
 			case SR_CRESCENTELBOW_AUTOSPELL:
@@ -4932,18 +4933,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 			if (sd)
 				s_ele = sd->bonus.arrow_ele;
 			break;
-		case SO_PSYCHIC_WAVE:
-			if( sc && sc->count ) {
-				if( sc->data[SC_HEATER_OPTION] )
-					s_ele = sc->data[SC_HEATER_OPTION]->val3;
-				else if( sc->data[SC_COOLER_OPTION] )
-					s_ele = sc->data[SC_COOLER_OPTION]->val3;
-				else if( sc->data[SC_BLAST_OPTION] )
-					s_ele = sc->data[SC_BLAST_OPTION]->val3;
-				else if( sc->data[SC_CURSED_SOIL_OPTION] )
-					s_ele = sc->data[SC_CURSED_SOIL_OPTION]->val3;
-			}
-			break;
 		case KO_KAIHOU:
 			if(sd && sd->spiritcharm_type != CHARM_TYPE_NONE && sd->spiritcharm > 0)
 				s_ele = sd->spiritcharm_type;
@@ -5146,6 +5135,8 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case WZ_CORRUPT:
 					case WZ_EXTREMEVACUUM:
 					case WZ_LANDOFEVIL:
+					case HW_MAGICCRASHER:
+					case SO_PSYCHIC_WAVE:
 					case WL_SOULEXPANSION:
 						skillratio += WizardSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
@@ -5373,13 +5364,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 						break;
 					case NPC_POISON_BUSTER:
 						skillratio += -100 + 1500 * skill_lv;
-						break;
-					case SO_PSYCHIC_WAVE:
-						skillratio += -100 + 70 * skill_lv + 3 * sstatus->int_;
-						RE_LVL_DMOD(100);
-						if (sc && (sc->data[SC_HEATER_OPTION] || sc->data[SC_COOLER_OPTION] ||
-							sc->data[SC_BLAST_OPTION] || sc->data[SC_CURSED_SOIL_OPTION]))
-							skillratio += 20;
 						break;
 					case NPC_CLOUD_KILL:
 						skillratio += -100 + 50 * skill_lv;
