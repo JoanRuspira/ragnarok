@@ -2394,6 +2394,21 @@ Body:
     AfterCastActDelay: 1000
     Requires:
       SpCost: 70
+  - Id: 847
+    Name: AM_EL_ACTION
+    Description: Elemental Action
+    MaxLevel: 5
+    TargetType: Attack
+    DamageFlags:
+      NoDamage: true
+    Range: 5
+    Hit: Single
+    HitCount: 1
+    Cooldown: 5000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 60
+      State: Elementalspirit
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -25119,26 +25134,30 @@ Body:
       State: Elementalspirit
   - Id: 2457
     Name: SO_SUMMON_AGNI
-    Description: Summon Fire Spirit Agni
+    Description: Summon Earth Spirit Agni
     MaxLevel: 5
     TargetType: Self
     DamageFlags:
       NoDamage: true
     Hit: Single
     HitCount: 1
-    Element: Fire
+    Element: Earth
     CastCancel: true
-    CastTime: 1000
-    Duration1:
-      - Level: 1
-        Time: 600000
-      - Level: 2
-        Time: 900000
-      - Level: 3
-        Time: 1200000
+    CastTime: 3000
+    Duration1: 1200000
     Cooldown: 1000
     Requires:
-      SpCost: 1
+      SpCost:
+        - Level: 1
+          Amount: 50
+        - Level: 2
+          Amount: 50
+        - Level: 3
+          Amount: 50
+        - Level: 4
+          Amount: 50
+        - Level: 5
+          Amount: 10
   - Id: 2458
     Name: SO_SUMMON_AQUA
     Description: Summon Water Spirit Aqua
