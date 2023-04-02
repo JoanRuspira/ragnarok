@@ -2361,6 +2361,7 @@ int64 skill_attack (int attack_type, struct block_list* src, struct block_list *
 		case EL_ROCK_CRUSHER:
 		case EL_HURRICANE:
 		case HM_BASILISK_1:
+		case HM_BEHOLDER_1:
 		case KO_BAKURETSU:
 		case GN_HELLS_PLANT_ATK:
 		case SU_SV_ROOTTWIST_ATK:
@@ -4913,6 +4914,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case EL_WATER_SCREW_JG:
 	case EF_FIRE_BOMB_JG:
 	case HM_BASILISK_1:
+	case HM_BEHOLDER_1:
 		clif_skill_nodamage(src,battle_get_master(src),skill_id,skill_lv,1);
 		clif_skill_damage(src, bl, tick, status_get_amotion(src), 0, -30000, 1, skill_id, skill_lv, DMG_SINGLE);
 		skill_attack(skill_get_type(skill_id),src,src,bl,skill_id,skill_lv,tick,flag);

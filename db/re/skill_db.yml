@@ -2015,7 +2015,7 @@ Body:
     TargetType: Attack
     DamageFlags:
       NoDamage: true
-    Range: 5
+    Range: 7
     Hit: Single
     HitCount: 1
     Cooldown: 7000
@@ -2401,13 +2401,13 @@ Body:
     TargetType: Attack
     DamageFlags:
       NoDamage: true
-    Range: 5
+    Range: 7
     Hit: Single
     HitCount: 1
     Cooldown: 5000
     AfterCastActDelay: 2000
     Requires:
-      SpCost: 60
+      SpCost: 15
       State: Elementalspirit
   - Id: 848
     Name: HM_BASILISK_1
@@ -2415,14 +2415,28 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    Range: 6
+    Range: 1
+    Hit: Single
+    HitCount: 2
+    Element: Neutral
+    Cooldown: 5000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 15
+  - Id: 849
+    Name: HM_BEHOLDER_1
+    Description: Beholder 1
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 7
     Hit: Single
     HitCount: 1
     Element: Neutral
     Cooldown: 5000
     AfterCastActDelay: 2000
     Requires:
-      SpCost: 60
+      SpCost: 15
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -25249,7 +25263,7 @@ Body:
     TargetType: Attack
     DamageFlags:
       NoDamage: true
-    Range: 5
+    Range: 7
     Hit: Single
     HitCount: 1
     Cooldown: 5000

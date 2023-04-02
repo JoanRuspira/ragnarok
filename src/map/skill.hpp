@@ -2148,6 +2148,7 @@ enum e_skill {
 	WZ_LANDOFEVIL = 846,
 	AM_EL_ACTION = 847,
 	HM_BASILISK_1 = 848,
+	HM_BEHOLDER_1 = 849,
 };
 
 /// The client view ids for land skills.

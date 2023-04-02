@@ -12,7 +12,12 @@ int AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_
 	switch (skill_id) {
 		case HM_BASILISK_1:
 		case AM_EL_ACTION:
-			return calculate_action_1_attack(skill_lv);
+			calculate_basilisk_1_special_effects(target);
+			return calculate_basilisk_1_attack_ratio(skill_lv);
+			break;
+		case HM_BEHOLDER_1:
+			calculate_beholder_1_special_effects(target);
+			return calculate_basilisk_1_attack_ratio(skill_lv);
 			break;
 		default:
 			return 0;
@@ -20,7 +25,7 @@ int AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_
 	}
 }
 
-int AlchemistSkillAttackRatioCalculator::calculate_action_1_attack(int skill_lv)
+int AlchemistSkillAttackRatioCalculator::calculate_basilisk_1_attack_ratio(int skill_lv)
 {
 	int ratio = 0;
 	switch (skill_lv) {
@@ -43,3 +48,12 @@ int AlchemistSkillAttackRatioCalculator::calculate_action_1_attack(int skill_lv)
 	return ratio;
 }
 
+void AlchemistSkillAttackRatioCalculator::calculate_basilisk_1_special_effects(struct block_list *target)
+{
+    clif_specialeffect(target, EF_HFLIMOON3, AREA);
+}
+
+void AlchemistSkillAttackRatioCalculator::calculate_beholder_1_special_effects(struct block_list *target)
+{
+    clif_specialeffect(target, EF_REDLINE, AREA);
+}
