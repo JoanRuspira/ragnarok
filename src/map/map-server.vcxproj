@@ -167,6 +167,7 @@
     <ClInclude Include="achievement.hpp" />
     <ClInclude Include="AcolyteAdditionalEffectsCalculator.h" />
     <ClInclude Include="AcolyteSkillAtkRatioCalculator.h" />
+    <ClInclude Include="AlchemistSkillAttackRatioCalculator.h" />
     <ClInclude Include="ArcherAdditionalEffectsCalculator.h" />
     <ClInclude Include="ArcherSkillAtkRatioCalculator.h" />
     <ClInclude Include="AssassinAdditionalEffectsCalculator.h" />
@@ -251,6 +252,7 @@
     <ClCompile Include="achievement.cpp" />
     <ClCompile Include="AcolyteAdditionalEffectsCalculator.cpp" />
     <ClCompile Include="AcolyteSkillAtkRatioCalculator.cpp" />
+    <ClCompile Include="AlchemistSkillAttackRatioCalculator.cpp" />
     <ClCompile Include="ArcherAdditionalEffectsCalculator.cpp" />
     <ClCompile Include="ArcherSkillAtkRatioCalculator.cpp" />
     <ClCompile Include="AssassinAdditionalEffectsCalculator.cpp" />

@@ -23,6 +23,7 @@ enum elemental_skillmode : uint8 {
 	EL_SKILLMODE_PASSIVE    = 0x1,
 	EL_SKILLMODE_ASSIST     = 0x2,
 	EL_SKILLMODE_AGGRESSIVE = 0x4,
+	EL_SKILLMODE_ALCHEMIST_1 = 0x5,
 };
 
 ///Enum of Elemental ID

@@ -45,8 +45,7 @@
 #include "SageSkillAttackRatioCalculator.h"
 #include "WizardSkillAttackRatioCalculator.h"
 #include "WizardAdditionalEffectsCalculator.h"
-
-
+#include "AlchemistSkillAttackRatioCalculator.h"
 
 
 

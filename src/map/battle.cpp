@@ -3170,9 +3170,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case MO_BALKYOUNG:
 			skillratio += 200;
 			break;
-		case HFLI_MOON: //[orn]
-			skillratio += 10 + 110 * skill_lv;
-			break;
 		case HFLI_SBR44: //[orn]
 			skillratio += 100 * (skill_lv - 1);
 			break;
@@ -5139,6 +5136,10 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case SO_PSYCHIC_WAVE:
 					case WL_SOULEXPANSION:
 						skillratio += WizardSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
+						break;
+					case AM_EL_ACTION:
+					case HM_BASILISK_1:
+						skillratio += AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
 					case MG_FIREBALL:
 						skillratio += 40 + 20 * skill_lv;

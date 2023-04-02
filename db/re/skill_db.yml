@@ -2409,6 +2409,20 @@ Body:
     Requires:
       SpCost: 60
       State: Elementalspirit
+  - Id: 848
+    Name: HM_BASILISK_1
+    Description: Basilisk 1
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: 6
+    Hit: Single
+    HitCount: 1
+    Element: Neutral
+    Cooldown: 5000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 60
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death

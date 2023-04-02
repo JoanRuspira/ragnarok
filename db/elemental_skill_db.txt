@@ -7,24 +7,26 @@
 //	1 = Passive, 2 = Defensive, 4 = Aggressive
 
 
-2116,8425,5,4	//EL_FIRE_ARROW,Fire Arrow
-2119,8430,5,4	//EL_ICE_NEEDLE,Ice Needle
-2122,8434,5,4	//EL_WIND_SLASH,Wind Slasher
+
 2125,8439,5,4	//EL_STONE_HAMMER,Stone Hammer
+2122,8434,5,4	//EL_WIND_SLASH,Wind Slasher
+2119,8430,5,4	//EL_ICE_NEEDLE,Ice Needle
+2116,8425,5,4	//EL_FIRE_ARROW,Fire Arrow
 
 
-2122,840,5,2	//EL_HURRICANE_JG,Hurricane
 2125,841,5,2	//EL_ROCK_CRUSHER_JG,Rock Crusher
+2122,840,5,2	//EL_HURRICANE_JG,Hurricane
 2119,842,5,2	//EL_WATER_SCREW_JG,Water Screw
 2116,843,5,2	//EL_FIRE_BOMB_JG,Fire Bomb
 
 
 
+2121,848,5,5	//HM_BASILISK_1,Moonlight
+2124,365,5,5	//HW_MAGICCRASHER,Magic Crasher
+2115,6,5,5	//SM_PROVOKE,Provoke
+2118,8001,5,5	//HLIF_HEAL,Healing Touch
 
-2115,8425,5,4	//EL_FIRE_ARROW,Fire Arrow
-2118,8430,5,4	//EL_ICE_NEEDLE,Ice Needle
-2121,8434,5,4	//EL_WIND_SLASH,Wind Slasher
-2124,8009,5,4	//HFLI_MOON,Moonlight
+
 
 
 
