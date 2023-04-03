@@ -64,7 +64,7 @@ all_interiors = [
     "Density": 25
   },
   {
-    "Name": "alde_ache",
+    "Name": "alde_alche",
     "Density": 10
   },
   {
