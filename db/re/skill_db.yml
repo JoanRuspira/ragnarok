@@ -2398,7 +2398,7 @@ Body:
     Name: AM_EL_ACTION
     Description: Elemental Action
     MaxLevel: 5
-    TargetType: Attack
+    TargetType: Support
     DamageFlags:
       NoDamage: true
     Range: 7

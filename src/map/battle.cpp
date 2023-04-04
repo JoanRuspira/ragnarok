@@ -5055,7 +5055,8 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 				skill_id == EL_ROCK_CRUSHER_JG ||
 				skill_id == EL_WATER_SCREW_JG ||
 				skill_id == EF_FIRE_BOMB_JG ||
-				skill_id == HM_BEHOLDER_1
+				skill_id == HM_BEHOLDER_1 ||
+				skill_id == SM_PROVOKE
 				){
 					if (src->type == BL_ELEM) {
 						struct map_session_data* sd2 = BL_CAST(BL_PC, battle_get_master(src));

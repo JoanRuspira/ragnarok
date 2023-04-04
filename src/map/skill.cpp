@@ -552,13 +552,16 @@ int skill_calc_heal(struct block_list *src, struct block_list *target, uint16 sk
 			 * Renewal Heal Formula
 			 * Formula: ( [(Base Level + INT) / 5] x 30 ) x (Heal Level / 10) x (Modifiers) + MATK
 			 */
-			hp = (status_get_lv(src) + status_get_int(src)) / 5 * 30 * skill_lv / 10;
+			if (src->type == BL_ELEM) {
+				struct map_session_data* sd2 = BL_CAST(BL_PC, battle_get_master(src));
+				hp = (sd2->status.base_level + sd2->battle_status.int_) / 5 * 30 * skill_lv / 10;
+			} else {
+				hp = (status_get_lv(src) + status_get_int(src)) / 5 * 30 * skill_lv / 10;
+			}			
 
 
 			if (sd && ((skill = (pc_checkskill(sd, HP_MEDITATIO)*2)) > 0))
 				hp_bonus += skill * 4;
-			else if (src->type == BL_HOM && (skill = hom_checkskill(((TBL_HOM*)src), HLIF_BRAIN)) > 0)
-				hp_bonus += skill * 2;
 			if (sd && tsd && sd->status.partner_id == tsd->status.char_id && (sd->class_&MAPID_UPPERMASK) == MAPID_SUPER_NOVICE && sd->status.sex == 0)
 				hp *= 2;
 			break;
@@ -619,6 +622,13 @@ int skill_calc_heal(struct block_list *src, struct block_list *target, uint16 sk
 		case PR_SANCTUARY:
 		case NPC_EVILLAND:
 			break;
+		case HLIF_HEAL:
+			{
+				struct map_session_data* sd2 = BL_CAST(BL_PC, battle_get_master(src));
+				struct status_data* status = status_get_status_data(&sd2->bl);
+				hp += status->matk_max / 2;
+				break;
+			}
 		default:
 			{
 				struct status_data *status = status_get_status_data(src);
@@ -4915,6 +4925,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case EF_FIRE_BOMB_JG:
 	case HM_BASILISK_1:
 	case HM_BEHOLDER_1:
+	case SM_PROVOKE:
 		clif_skill_nodamage(src,battle_get_master(src),skill_id,skill_lv,1);
 		clif_skill_damage(src, bl, tick, status_get_amotion(src), 0, -30000, 1, skill_id, skill_lv, DMG_SINGLE);
 		skill_attack(skill_get_type(skill_id),src,src,bl,skill_id,skill_lv,tick,flag);
@@ -5422,7 +5433,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 
 			if (status_isimmune(bl) || (dstmd && (status_get_class(bl) == MOBID_EMPERIUM || status_get_class_(bl) == CLASS_BATTLEFIELD)))
 				heal = 0;
-
 			if( tsc && tsc->count ) {
 				if( tsc->data[SC_KAITE] && !status_has_mode(sstatus,MD_STATUSIMMUNE) ) { //Bounce back heal
 					if (--tsc->data[SC_KAITE]->val2 <= 0)
@@ -5440,8 +5450,9 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			if (skill_id == AL_HEAL || skill_id == WM_SIRCLEOFNATURE || skill_id == CR_HEAL)
 				status_change_end(bl, SC_BITESCAR, INVALID_TIMER);
 			clif_skill_nodamage (src, bl, skill_id, heal, 1);
-			if( tsc && tsc->data[SC_AKAITSUKI] && heal && skill_id != HLIF_HEAL )
+			if( tsc && tsc->data[SC_AKAITSUKI] && heal ) {
 				heal = ~heal + 1;
+			}
 			heal_get_jobexp = status_heal(bl,heal,0,0);
 
 			if(sd && dstsd && heal > 0 && sd != dstsd && battle_config.heal_exp > 0){
@@ -8751,12 +8762,9 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		break;
 	case BA_APPLEIDUN:
 	case AB_CHEAL:
-		ShowStatus("Healing 1.\n");
 		if( !sd || sd->status.party_id == 0 || flag&1 ) {
-			ShowStatus("Healing 2.\n");
 			if( sd && tstatus && !battle_check_undead(tstatus->race, tstatus->def_ele) && !tsc->data[SC_BERSERK] ) {
 				int partycount = (sd->status.party_id ? party_foreachsamemap(party_sub_count, sd, 0) : 0);
-				ShowStatus("Healing 3.\n");
 				i = skill_calc_heal(src, bl, AL_HEAL, pc_checkskill(sd, AL_HEAL), true);
 
 				if( partycount > 1 )
@@ -8770,7 +8778,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				status_heal(bl, i, 0, 0);
 			}
 		} else if( sd ){
-			ShowStatus("Healing 4.\n");
 			party_foreachsamemap(skill_area_sub, sd, skill_get_splash(skill_id, skill_lv), src, skill_id, skill_lv, tick, flag|BCT_PARTY|1, skill_castend_nodamage_id);
 		}
 		break;
