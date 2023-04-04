@@ -2437,6 +2437,22 @@ Body:
     AfterCastActDelay: 2000
     Requires:
       SpCost: 15
+  - Id: 850
+    Name: AM_HOM_CURE
+    Description: Homunculus Recovery
+    MaxLevel: 5
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    CastTime: 5000
+    Cooldown: 5000
+    AfterCastActDelay: 1000
+    Requires:
+      SpCost: 30
+      State: Elementalspirit
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -25173,7 +25189,18 @@ Body:
     CastCancel: true
     CastTime: 3000
     Duration1: 1200000
-    Cooldown: 1000
+    AfterCastActDelay: 400
+    Cooldown:
+      - Level: 1
+        Time: 60000
+      - Level: 2
+        Time: 60000
+      - Level: 3
+        Time: 60000
+      - Level: 4
+        Time: 60000
+      - Level: 5
+        Time: 0
     Requires:
       SpCost:
         - Level: 1
@@ -25243,7 +25270,18 @@ Body:
     CastCancel: true
     CastTime: 3000
     Duration1: 1200000
-    Cooldown: 1000
+    AfterCastActDelay: 400
+    Cooldown:
+      - Level: 1
+        Time: 60000
+      - Level: 2
+        Time: 60000
+      - Level: 3
+        Time: 60000
+      - Level: 4
+        Time: 60000
+      - Level: 5
+        Time: 0
     Requires:
       SpCost:
         - Level: 1

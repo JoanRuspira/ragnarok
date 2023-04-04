@@ -30,19 +30,19 @@ int AlchemistSkillAttackRatioCalculator::calculate_basilisk_1_attack_ratio(int s
 	int ratio = 0;
 	switch (skill_lv) {
 		case 1:
-			ratio = 20;
+			ratio = 110;
 			break;
 		case 2:
-			ratio = 230;
+			ratio = 220;
 			break;
 		case 3:
-			ratio = 340;
+			ratio = 330;
 			break;
 		case 4:
-			ratio = 450;
+			ratio = 440;
 			break;
 		case 5:
-			ratio = 560;
+			ratio = 550;
 			break;
 		}
 	return ratio;

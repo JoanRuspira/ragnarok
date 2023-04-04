@@ -2589,7 +2589,7 @@ bool status_check_skilluse(struct block_list *src, struct block_list *target, ui
 				return false; // Can't use support skills on Homunculus (only Master/Self)
 			if( target->type == BL_MER && (skill_id == PR_ASPERSIO || (skill_id >= SA_FLAMELAUNCHER && skill_id <= SA_SEISMICWEAPON)) && battle_get_master(target) != src )
 				return false; // Can't use Weapon endow skills on Mercenary (only Master)
-			if( skill_id == AM_POTIONPITCHER && ( target->type == BL_MER || target->type == BL_ELEM) )
+			if( skill_id == AM_POTIONPITCHER && ( target->type == BL_MER) )
 				return false; // Can't use Potion Pitcher on Mercenaries
 		default:
 			// Check for chase-walk/hiding/cloaking opponents.
