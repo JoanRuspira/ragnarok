@@ -25242,13 +25242,13 @@ Body:
     AfterCastActDelay: 400
     Cooldown:
       - Level: 1
-        Time: 1
+        Time: 60000
       - Level: 2
-        Time: 1
+        Time: 60000
       - Level: 3
-        Time: 1
+        Time: 60000
       - Level: 4
-        Time: 1
+        Time: 60000
       - Level: 5
         Time: 0
     Requires:
@@ -25318,7 +25318,17 @@ Body:
     HitCount: 1
     Element: Earth
     CastCancel: true
-    CastTime: 3000
+    CastTime: 
+      - Level: 1
+        Time: 3000
+      - Level: 2
+        Time: 3000
+      - Level: 3
+        Time: 3000
+      - Level: 4
+        Time: 3000
+      - Level: 5
+        Time: 0
     Duration1: 1200000
     AfterCastActDelay: 400
     Cooldown:

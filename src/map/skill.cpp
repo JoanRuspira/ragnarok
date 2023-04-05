@@ -10006,7 +10006,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			if( !sd->ed )
 				break;
 			sd->skill_id_old = skill_id;
-			elemental_action(sd->ed, bl, tick, skill_id);
+			elemental_action(sd->ed, bl, tick, skill_id, skill_lv);
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 			skill_blockpc_start(sd, skill_id, duration);
 		}
@@ -10018,7 +10018,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			if( !sd->ed )
 				break;
 			sd->skill_id_old = skill_id;
-			elemental_action(sd->ed, bl, tick, skill_id);
+			elemental_action(sd->ed, bl, tick, skill_id, skill_lv);
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 			skill_blockpc_start(sd, skill_id, duration);
 		}

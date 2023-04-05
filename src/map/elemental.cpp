@@ -346,7 +346,7 @@ int elemental_clean_effect(struct elemental_data *ed) {
 	return 1;
 }
 
-int elemental_action(struct elemental_data *ed, struct block_list *bl, t_tick tick, int caller_skill_id) {
+int elemental_action(struct elemental_data *ed, struct block_list *bl, t_tick tick, int caller_skill_id, int caller_skill_lv) {
 	struct s_skill_condition req;
 	uint16 skill_id, skill_lv;
 	int i;
@@ -393,9 +393,7 @@ int elemental_action(struct elemental_data *ed, struct block_list *bl, t_tick ti
 		return 0;
 	}
 	// skill_id = ed->db->skill[i].id;
-	skill_lv = ed->db->skill[i].lv;
-	ShowMessage("Skill id %d\n", skill_id);
-	ShowMessage("caller skill id %d\n", caller_skill_id);
+	skill_lv = caller_skill_lv;
 	if( elemental_skillnotok(skill_id, ed) ){	
 		return 0;
 	}
@@ -535,7 +533,6 @@ void elemental_heal(struct elemental_data *ed, int hp, int sp) {
 }
 
 int elemental_dead(struct elemental_data *ed) {
-	
 	elemental_delete(ed);
 	return 0;
 }
