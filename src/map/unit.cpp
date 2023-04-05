@@ -1934,12 +1934,13 @@ int unit_skilluse_id2(struct block_list *src, int target_id, uint16 skill_id, ui
 		case EL_WATER_SCREW_JG:
 		case EF_FIRE_BOMB_JG:
 		case HM_BASILISK_1:
+		case HFLI_SBR44:
 		case HM_BEHOLDER_1:
 		case SM_PROVOKE:
 			if( src->type == BL_ELEM ) {
 				sd = BL_CAST(BL_PC, battle_get_master(src));
 				if( sd && (sd->skill_id_old == SO_EL_ACTION || sd->skill_id_old == JG_EL_ACTION
-				|| sd->skill_id_old == AM_EL_ACTION)) {
+				|| sd->skill_id_old == AM_EL_ACTION || sd->skill_id_old == AM2_HOM_ACTION)) {
 					casttime = -1;
 					sd->skill_id_old = 0;
 				}

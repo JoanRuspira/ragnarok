@@ -897,12 +897,6 @@ bool skill_isNotOk_hom(struct homun_data *hd, uint16 skill_id, uint16 skill_lv)
 		return true;
 
 	switch(skill_id) {
-		case HFLI_SBR44:
-			if (hom_get_intimacy_grade(hd) <= HOMGRADE_HATE_WITH_PASSION) {
-				clif_skill_fail(sd, skill_id, USESKILL_FAIL_RELATIONGRADE, 0);
-				return true;
-			}
-			break;
 		case HVAN_EXPLOSION:
 			if (hd->homunculus.intimacy < (unsigned int)battle_config.hvan_explosion_intimate) {
 				clif_skill_fail(sd, skill_id, USESKILL_FAIL_RELATIONGRADE, 0);
@@ -1218,15 +1212,6 @@ int skill_counter_additional_effect (struct block_list* src, struct block_list *
 		break;
 	case GS_FULLBUSTER:
 		sc_start(src,src,SC_BLIND,2*skill_lv,skill_lv,skill_get_time2(skill_id,skill_lv));
-		break;
-	case HFLI_SBR44:	//[orn]
-	case HVAN_EXPLOSION:
-		if(src->type == BL_HOM){
-			TBL_HOM *hd = (TBL_HOM*)src;
-			hd->homunculus.intimacy = (skill_id == HFLI_SBR44) ? 200 : 100; // hom_intimacy_grade2intimacy(HOMGRADE_HATE_WITH_PASSION)
-			if (hd->master)
-				clif_send_homdata(hd->master,SP_INTIMATE,hd->homunculus.intimacy/100);
-		}
 		break;
 	case CR_GRANDCROSS:
 	case NPC_GRANDDARKNESS:
@@ -2372,6 +2357,7 @@ int64 skill_attack (int attack_type, struct block_list* src, struct block_list *
 		case EL_HURRICANE:
 		case HM_BASILISK_1:
 		case HM_BEHOLDER_1:
+		case HFLI_SBR44:
 		case KO_BAKURETSU:
 		case GN_HELLS_PLANT_ATK:
 		case SU_SV_ROOTTWIST_ATK:
@@ -3614,7 +3600,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case NJ_KUNAI:
 	case ASC_BREAKER:
 	case HFLI_MOON:	//[orn]
-	case HFLI_SBR44:	//[orn]
 	case NPC_BLEEDING:
 	case NPC_CRITICALWOUND:
 	case NPC_HELLPOWER:
@@ -4924,6 +4909,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case EL_WATER_SCREW_JG:
 	case EF_FIRE_BOMB_JG:
 	case HM_BASILISK_1:
+	case HFLI_SBR44:
 	case HM_BEHOLDER_1:
 	case SM_PROVOKE:
 		clif_skill_nodamage(src,battle_get_master(src),skill_id,skill_lv,1);
@@ -10011,7 +9997,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 		}
 		break;
-
+	case AM2_HOM_ACTION:
 	case JG_EL_ACTION:
 		if( sd ) {
 			int duration = 7000;

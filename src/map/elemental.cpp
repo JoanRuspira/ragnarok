@@ -361,22 +361,38 @@ int elemental_action(struct elemental_data *ed, struct block_list *bl, t_tick ti
 	if( ed->target_id )
 		elemental_unlocktarget(ed);	// Remove previous target.
 
-	if (caller_skill_id ==SO_EL_ACTION) {
+	if (caller_skill_id == SO_EL_ACTION) {
 		ARR_FIND(0, MAX_ELESKILLTREE, i, ed->db->skill[i].id && (ed->db->skill[i].mode&EL_SKILLMODE_AGGRESSIVE));
+		skill_id = ed->db->skill[i].id;	
 	}
-	if (caller_skill_id ==JG_EL_ACTION) {
+	if (caller_skill_id == JG_EL_ACTION) {
 		ARR_FIND(0, MAX_ELESKILLTREE, i, ed->db->skill[i].id && (ed->db->skill[i].mode&EL_SKILLMODE_ASSIST));
+		skill_id = ed->db->skill[i].id;	
 	}
-	if (caller_skill_id ==AM_EL_ACTION) {
+	if (caller_skill_id == AM_EL_ACTION) {
 		ARR_FIND(0, MAX_ELESKILLTREE, i, ed->db->skill[i].id && (ed->db->skill[i].mode&EL_SKILLMODE_ALCHEMIST_1));
+		skill_id = ed->db->skill[i].id;
 	}
+	if (caller_skill_id == AM2_HOM_ACTION) {
+		ARR_FIND(0, MAX_ELESKILLTREE, i, ed->db->skill[i].id && (ed->db->skill[i].mode & EL_SKILLMODE_ALCHEMIST_2));
+		skill_id = ed->db->skill[i].id;
+		
+		switch(ed->vd->class_){
+			case ELEMENTALID_VENTUS_M:
+				skill_id = HFLI_SBR44;
+				break;
+		}
+	}
+	
 
 
 	if( i == MAX_ELESKILLTREE ){
 		return 0;
 	}
-	skill_id = ed->db->skill[i].id;
+	// skill_id = ed->db->skill[i].id;
 	skill_lv = ed->db->skill[i].lv;
+	ShowMessage("Skill id %d\n", skill_id);
+	ShowMessage("caller skill id %d\n", caller_skill_id);
 	if( elemental_skillnotok(skill_id, ed) ){	
 		return 0;
 	}
@@ -415,7 +431,7 @@ int elemental_action(struct elemental_data *ed, struct block_list *bl, t_tick ti
 	if(req.hp || req.sp){
 		struct map_session_data *sd = BL_CAST(BL_PC, battle_get_master(&ed->bl));
 		if( sd ){
-			if( sd->skill_id_old != SO_EL_ACTION && sd->skill_id_old != JG_EL_ACTION && sd->skill_id_old != AM_EL_ACTION &&//regardless of remaining HP/SP it can be cast
+			if( sd->skill_id_old != SO_EL_ACTION && sd->skill_id_old != JG_EL_ACTION && sd->skill_id_old != AM_EL_ACTION && sd->skill_id_old != AM2_HOM_ACTION &&//regardless of remaining HP/SP it can be cast
 				(status_get_hp(&ed->bl) < req.hp || status_get_sp(&ed->bl) < req.sp) )
 				return 1;
 			else
@@ -516,6 +532,7 @@ void elemental_heal(struct elemental_data *ed, int hp, int sp) {
 }
 
 int elemental_dead(struct elemental_data *ed) {
+	
 	elemental_delete(ed);
 	return 0;
 }
@@ -629,12 +646,12 @@ static int elemental_ai_sub_timer(struct elemental_data *ed, struct map_session_
 				break;
 		}
 
-		if( status_get_sp(&sd->bl) < sp ){ // Can't sustain delete it.
-			elemental_delete(sd->ed);
-			return 0;
-		}
+		// if( status_get_sp(&sd->bl) < sp ){ // Can't sustain delete it.
+		// 	elemental_delete(sd->ed);
+		// 	return 0;
+		// }
 
-		status_zap(&sd->bl,0,sp);
+		// status_zap(&sd->bl,0,sp);
 		ed->last_spdrain_time = tick;
 	}
 

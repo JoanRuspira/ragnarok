@@ -2532,7 +2532,6 @@ static void battle_calc_element_damage(struct Damage* wd, struct block_list *src
 			case RK_DRAGONBREATH:
 			case RK_DRAGONBREATH_WATER:
 			case NC_SELFDESTRUCTION:
-			case HFLI_SBR44:
 				wd->damage = battle_attr_fix(src, target, wd->damage, right_element, tstatus->def_ele, tstatus->ele_lv);
 				if (EquipmentAttackCalculator::is_attack_left_handed(src, skill_id))
 					wd->damage2 = battle_attr_fix(src, target, wd->damage2, left_element, tstatus->def_ele, tstatus->ele_lv);
@@ -2865,6 +2864,8 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			break;
 		case AM_EL_ACTION:
 		case HM_BASILISK_1:
+		case HFLI_SBR44:
+		case AM2_HOM_ACTION:
 			skillratio += AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
 		case ML_BRANDISH:
@@ -3173,9 +3174,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			break;
 		case MO_BALKYOUNG:
 			skillratio += 200;
-			break;
-		case HFLI_SBR44: //[orn]
-			skillratio += 100 * (skill_lv - 1);
 			break;
 		case NPC_VAMPIRE_GIFT:
 			skillratio += ((skill_lv - 1) % 5 + 1) * 100;
@@ -5056,7 +5054,8 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 				skill_id == EL_WATER_SCREW_JG ||
 				skill_id == EF_FIRE_BOMB_JG ||
 				skill_id == HM_BEHOLDER_1 ||
-				skill_id == SM_PROVOKE
+				skill_id == SM_PROVOKE ||
+				skill_id == HFLI_SBR44
 				){
 					if (src->type == BL_ELEM) {
 						struct map_session_data* sd2 = BL_CAST(BL_PC, battle_get_master(src));
@@ -5145,6 +5144,8 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 						break;
 					case AM_EL_ACTION:
 					case HM_BEHOLDER_1:
+					case AM2_HOM_ACTION:
+					case HFLI_SBR44:
 						skillratio += AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
 					case MG_FIREBALL:

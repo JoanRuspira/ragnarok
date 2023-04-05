@@ -2453,6 +2453,21 @@ Body:
     Requires:
       SpCost: 30
       State: Elementalspirit
+  - Id: 851
+    Name: AM2_HOM_ACTION
+    Description: Elemental Action
+    MaxLevel: 5
+    TargetType: Support
+    DamageFlags:
+      NoDamage: true
+    Range: 7
+    Hit: Single
+    HitCount: 1
+    Cooldown: 5000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 25
+      State: Elementalspirit
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -13072,7 +13087,7 @@ Body:
   - Id: 491
     Name: CR_CULTIVATION
     Description: Plant Cultivation
-    MaxLevel: 2
+    MaxLevel: 5
     TargetType: Ground
     DamageFlags:
       NoDamage: true
@@ -25187,18 +25202,28 @@ Body:
     HitCount: 1
     Element: Earth
     CastCancel: true
-    CastTime: 3000
+    CastTime: 
+      - Level: 1
+        Time: 3000
+      - Level: 2
+        Time: 3000
+      - Level: 3
+        Time: 3000
+      - Level: 4
+        Time: 3000
+      - Level: 5
+        Time: 0
     Duration1: 1200000
     AfterCastActDelay: 400
     Cooldown:
       - Level: 1
-        Time: 60000
+        Time: 1
       - Level: 2
-        Time: 60000
+        Time: 1
       - Level: 3
-        Time: 60000
+        Time: 1
       - Level: 4
-        Time: 60000
+        Time: 1
       - Level: 5
         Time: 0
     Requires:
@@ -29407,15 +29432,16 @@ Body:
   - Id: 8012
     Name: HFLI_SBR44
     Description: S.B.R.44
-    MaxLevel: 3
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     Range: 1
-    Hit: Single
-    HitCount: 1
-    AfterCastActDelay: 1000
+    Hit: Multi_Hit
+    HitCount: 3
+    AfterCastActDelay: 400
+    Cooldown: 7000
     Requires:
-      SpCost: 1
+      SpCost: 25
   - Id: 8013
     Name: HVAN_CAPRICE
     Description: Caprice

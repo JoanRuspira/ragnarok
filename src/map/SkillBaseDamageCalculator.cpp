@@ -70,12 +70,7 @@ void SkillBaseDamageCalculator::battle_calc_skill_base_damage(Damage * wd, block
 		wd->weaponAtk2 = wd->damage2;
 	}
 
-	
 
-	if (skill_id == HFLI_SBR44) {
-		if (src->type == BL_HOM)
-			wd->damage = ((TBL_HOM*)src)->homunculus.intimacy;
-	}
 
 	if (sd) {
 		battle_calc_damage_parts(wd, src, target, skill_id, skill_lv);

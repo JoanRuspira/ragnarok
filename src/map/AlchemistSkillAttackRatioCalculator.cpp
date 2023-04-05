@@ -19,6 +19,11 @@ int AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_
 			calculate_beholder_1_special_effects(target);
 			return calculate_basilisk_1_attack_ratio(skill_lv);
 			break;
+		case AM2_HOM_ACTION:
+		case HFLI_SBR44:
+			calculate_basilisk_2_special_effects(target);
+			return calculate_basilisk_2_attack_ratio(skill_lv);
+			break;
 		default:
 			return 0;
 			break;
@@ -48,9 +53,38 @@ int AlchemistSkillAttackRatioCalculator::calculate_basilisk_1_attack_ratio(int s
 	return ratio;
 }
 
+
+int AlchemistSkillAttackRatioCalculator::calculate_basilisk_2_attack_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 100;
+			break;
+		case 2:
+			ratio = 200;
+			break;
+		case 3:
+			ratio = 300;
+			break;
+		case 4:
+			ratio = 400;
+			break;
+		case 5:
+			ratio = 500;
+			break;
+		}
+	return ratio;
+}
+
 void AlchemistSkillAttackRatioCalculator::calculate_basilisk_1_special_effects(struct block_list *target)
 {
     clif_specialeffect(target, EF_HFLIMOON3, AREA);
+}
+
+void AlchemistSkillAttackRatioCalculator::calculate_basilisk_2_special_effects(struct block_list *target)
+{
+    clif_specialeffect(target, EF_TRIPLEATTACK, AREA);
 }
 
 void AlchemistSkillAttackRatioCalculator::calculate_beholder_1_special_effects(struct block_list *target)
