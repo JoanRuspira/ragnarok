@@ -18,5 +18,6 @@ class AlchemistSkillAttackRatioCalculator
 		static void calculate_basilisk_1_special_effects(struct block_list *target);
 		static void calculate_basilisk_2_special_effects(struct block_list *target);
 		static void calculate_beholder_1_special_effects(struct block_list *target);
+		static void calculate_beholder_2_special_effects(struct block_list *target);
 
 };

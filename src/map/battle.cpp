@@ -2865,6 +2865,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case AM_EL_ACTION:
 		case HM_BASILISK_1:
 		case HFLI_SBR44:
+		case HM_BEHOLDER_2:
 		case AM2_HOM_ACTION:
 			skillratio += AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
@@ -5055,7 +5056,8 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 				skill_id == EF_FIRE_BOMB_JG ||
 				skill_id == HM_BEHOLDER_1 ||
 				skill_id == SM_PROVOKE ||
-				skill_id == HFLI_SBR44
+				skill_id == HFLI_SBR44 ||
+				skill_id == HM_BEHOLDER_2
 				){
 					if (src->type == BL_ELEM) {
 						struct map_session_data* sd2 = BL_CAST(BL_PC, battle_get_master(src));
@@ -5146,6 +5148,7 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case HM_BEHOLDER_1:
 					case AM2_HOM_ACTION:
 					case HFLI_SBR44:
+					case HM_BEHOLDER_2:
 						skillratio += AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
 					case MG_FIREBALL:

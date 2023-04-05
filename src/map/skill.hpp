@@ -2151,6 +2151,7 @@ enum e_skill {
 	HM_BEHOLDER_1 = 849,
 	AM_HOM_CURE = 850,
 	AM2_HOM_ACTION = 851,
+	HM_BEHOLDER_2 = 852,
 };
 
 /// The client view ids for land skills.

@@ -2405,7 +2405,7 @@ Body:
     Hit: Single
     HitCount: 1
     Cooldown: 5000
-    AfterCastActDelay: 2000
+    AfterCastActDelay: 400
     Requires:
       SpCost: 15
       State: Elementalspirit
@@ -2420,7 +2420,7 @@ Body:
     HitCount: 2
     Element: Neutral
     Cooldown: 5000
-    AfterCastActDelay: 2000
+    AfterCastActDelay: 400
     Requires:
       SpCost: 15
   - Id: 849
@@ -2434,7 +2434,7 @@ Body:
     HitCount: 1
     Element: Neutral
     Cooldown: 5000
-    AfterCastActDelay: 2000
+    AfterCastActDelay: 400
     Requires:
       SpCost: 15
   - Id: 850
@@ -2463,11 +2463,36 @@ Body:
     Range: 7
     Hit: Single
     HitCount: 1
-    Cooldown: 5000
-    AfterCastActDelay: 2000
+    Cooldown: 7000
+    AfterCastActDelay: 400
     Requires:
       SpCost: 25
       State: Elementalspirit
+  - Id: 852
+    Name: HM_BEHOLDER_2
+    Description: Beholder 2
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 7
+    Hit: Single
+    HitCount: 1
+    Element: Neutral
+    SplashArea:
+      - Level: 1
+        Area: 1
+      - Level: 2
+        Area: 2
+      - Level: 3
+        Area: 3
+      - Level: 4
+        Area: 4
+      - Level: 5
+        Area: 5
+    Cooldown: 7000
+    AfterCastActDelay: 400
+    Requires:
+      SpCost: 25
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -29158,22 +29183,11 @@ Body:
     Range: 9
     Hit: Single
     HitCount: 1
-    AfterCastActDelay: 2000
+    Cooldown: 5000
+    CastTime: 3000
+    AfterCastActDelay: 400
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 13
-        - Level: 2
-          Amount: 16
-        - Level: 3
-          Amount: 19
-        - Level: 4
-          Amount: 22
-        - Level: 5
-          Amount: 25
-      ItemCost:
-        - Item: Red_Slim_Potion
-          Amount: 1
+      SpCost: 15
   - Id: 8002
     Name: HLIF_AVOID
     Description: Avoid
@@ -29318,31 +29332,12 @@ Body:
     Type: Weapon
     TargetType: Attack
     Range: 1
-    Hit: Multi_Hit
-    HitCount:
-      - Level: 1
-        Count: -1
-      - Level: 2
-        Count: -2
-      - Level: 3
-        Count: -2
-      - Level: 4
-        Count: -2
-      - Level: 5
-        Count: -3
-    AfterCastWalkDelay: 2000
+    Hit: Single
+    Cooldown: 5000
+    HitCount: 1
+    AfterCastWalkDelay: 400
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 4
-        - Level: 2
-          Amount: 8
-        - Level: 3
-          Amount: 12
-        - Level: 4
-          Amount: 16
-        - Level: 5
-          Amount: 20
+      SpCost: 15
   - Id: 8010
     Name: HFLI_FLEET
     Description: Fleeting Move
@@ -29436,10 +29431,21 @@ Body:
     Type: Weapon
     TargetType: Attack
     Range: 1
-    Hit: Multi_Hit
-    HitCount: 3
+    Hit: Single
+    HitCount: 1
     AfterCastActDelay: 400
     Cooldown: 7000
+    SplashArea:
+      - Level: 1
+        Area: 1
+      - Level: 2
+        Area: 2
+      - Level: 3
+        Area: 3
+      - Level: 4
+        Area: 4
+      - Level: 5
+        Area: 5
     Requires:
       SpCost: 25
   - Id: 8013

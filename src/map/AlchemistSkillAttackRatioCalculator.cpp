@@ -24,6 +24,10 @@ int AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_
 			calculate_basilisk_2_special_effects(target);
 			return calculate_basilisk_2_attack_ratio(skill_lv);
 			break;
+		case HM_BEHOLDER_2:
+			calculate_beholder_2_special_effects(target);
+			return calculate_basilisk_2_attack_ratio(skill_lv);
+			break;
 		default:
 			return 0;
 			break;
@@ -90,4 +94,9 @@ void AlchemistSkillAttackRatioCalculator::calculate_basilisk_2_special_effects(s
 void AlchemistSkillAttackRatioCalculator::calculate_beholder_1_special_effects(struct block_list *target)
 {
     clif_specialeffect(target, EF_REDLINE, AREA);
+}
+
+void AlchemistSkillAttackRatioCalculator::calculate_beholder_2_special_effects(struct block_list *target)
+{
+    clif_specialeffect(target, EF_M05, AREA);
 }
