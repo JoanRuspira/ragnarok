@@ -7064,7 +7064,7 @@ static defType status_calc_def(struct block_list *bl, struct status_change *sc, 
 	if( sc->data[SC_PRESTIGE] )
 		def += sc->data[SC_PRESTIGE]->val3;
 	if( sc->data[SC_DEFENCE] )
-		def += sc->data[SC_DEFENCE]->val1*3;
+		def += sc->data[SC_DEFENCE]->val1*4;
 	if(sc->data[SC_RUSHWINDMILL])
 		def += sc->data[SC_RUSHWINDMILL]->val3;
 	if(sc->data[SC_ENDURE])
@@ -7205,7 +7205,7 @@ static defType status_calc_mdef(struct block_list *bl, struct status_change *sc,
 	if(sc->data[SC_ENDURE])
 		mdef += sc->data[SC_ENDURE]->val1*2;
 	if( sc->data[SC_DEFENCE] )
-		mdef += sc->data[SC_DEFENCE]->val1*3;
+		mdef += sc->data[SC_DEFENCE]->val1*4;
 	if(sc->data[SC_STONEHARDSKIN])
 		mdef += sc->data[SC_STONEHARDSKIN]->val1;
 	if(sc->data[SC_STONE] && sc->opt1 == OPT1_STONE)
@@ -11493,7 +11493,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			break;
 		case SC_PRESTIGE:
 			val2 = val1 * 5;	// Chance to evade magic damage.
-			val3 = val1 * 3; // Defence added
+			val3 = val1 * 4; // Defence added
 			break;
 		case SC_BANDING:
 			val2 = (sd ? skill_banding_count(sd) : 1);

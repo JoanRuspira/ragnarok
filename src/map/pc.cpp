@@ -9187,10 +9187,8 @@ void pc_heal(struct map_session_data *sd,unsigned int hp,unsigned int sp, int ty
 {
 	if (type&2) {
 		if (hp || type&4)
-			ShowStatus("Heal 1!.\n");
 			clif_heal(sd->fd,SP_HP,hp);
 		if (sp) {
-			ShowStatus("Heal 2!.\n");
 			clif_heal(sd->fd,SP_SP,sp);
 		}
 	} else {
