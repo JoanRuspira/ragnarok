@@ -622,6 +622,7 @@ int skill_calc_heal(struct block_list *src, struct block_list *target, uint16 sk
 		case PR_SANCTUARY:
 		case NPC_EVILLAND:
 			break;
+		case HAMI_HEAL:
 		case HLIF_HEAL:
 			{
 				struct map_session_data* sd2 = BL_CAST(BL_PC, battle_get_master(src));
@@ -5308,6 +5309,13 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 
 	//Check for undead skills that convert a no-damage skill into a damage one. [Skotlex]
 	switch (skill_id) {
+		case HAMI_HEAL:
+			clif_specialeffect(bl, EF_HEAL3, AREA);
+			clif_specialeffect(src, EF_HEAL3, AREA);
+			if (bl->type != BL_HOM) {
+				if (sd) clif_skill_fail(sd, skill_id, USESKILL_FAIL_LEVEL, 0);
+				break;
+			}
 		case HLIF_HEAL:	//[orn]
 			if (bl->type != BL_HOM) {
 				if (sd) clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0) ;
@@ -5412,6 +5420,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		}
 		break;
 	case HLIF_HEAL:	//[orn]
+	case HAMI_HEAL:
 	case AL_HEAL:
 	case CR_HEAL:
 	case AB_HIGHNESSHEAL:
@@ -5442,6 +5451,9 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				heal = ~heal + 1;
 			}
 			heal_get_jobexp = status_heal(bl,heal,0,0);
+			if(skill_id == HAMI_HEAL) {
+				heal_get_jobexp += status_heal(src,heal,0,0);
+			}
 
 			if(sd && dstsd && heal > 0 && sd != dstsd && battle_config.heal_exp > 0){
 				heal_get_jobexp = heal_get_jobexp * battle_config.heal_exp / 100;

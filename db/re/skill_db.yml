@@ -2493,6 +2493,20 @@ Body:
     AfterCastActDelay: 400
     Requires:
       SpCost: 25
+  - Id: 853
+    Name: HAMI_Heal
+    Description: Defense
+    MaxLevel: 5
+    Type: Magic
+    Range: 9
+    TargetType: Support
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    Cooldown: 7000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 25
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -29278,6 +29292,7 @@ Body:
     Description: Defense
     MaxLevel: 5
     TargetType: Support
+    Range: 9
     DamageFlags:
       NoDamage: true
     Hit: Single
