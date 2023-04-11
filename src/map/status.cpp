@@ -8087,7 +8087,7 @@ int status_get_lv(struct block_list *bl)
 		case BL_PET:	return ((TBL_PET*)bl)->pet.level;
 		case BL_HOM:	return ((TBL_HOM*)bl)->homunculus.level;
 		case BL_MER:	return ((TBL_MER*)bl)->db->lv;
-		case BL_ELEM:	return ((TBL_ELEM*)bl)->db->lv;
+		case BL_ELEM:	return ((TBL_PC*)battle_get_master(bl))->status.base_level;
 		case BL_NPC:	return ((TBL_NPC*)bl)->level;
 	}
 	return 1;

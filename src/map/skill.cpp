@@ -6197,11 +6197,12 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			map_freeblock_unlock();
 			return 1;
 		}
-		// Official chance is 70% + 3%*skill_lv + srcBaseLevel% - tarBaseLevel%
-		if(!(i = sc_start(src, bl, type, skill_id == SM_SELFPROVOKE ? 100 : (100 + 3 * skill_lv + status_get_lv(src) - status_get_lv(bl)), skill_lv, skill_get_time(skill_id, skill_lv))))
+		// always 100% chance to provoke
+		if(!(i = sc_start(src, bl, type, 100, skill_lv, skill_get_time(skill_id, skill_lv))))
 		{
-			if( sd )
+			if( sd ){
 				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+			}		
 			map_freeblock_unlock();
 			return 0;
 		}
@@ -6216,7 +6217,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			status_change_end(bl, SC_SLEEP, INVALID_TIMER);
 			status_change_end(bl, SC_TRICKDEAD, INVALID_TIMER);
 		}
-
 		if( dstmd )
 		{
 			dstmd->state.provoke_flag = src->id;
