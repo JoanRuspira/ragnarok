@@ -15,9 +15,12 @@ class AlchemistSkillAttackRatioCalculator
 	private:
 		static int calculate_basilisk_1_attack_ratio(int skill_lv);
 		static int calculate_basilisk_2_attack_ratio(int skill_lv);
+		static int calculate_demonstration_attack_ratio(int skill_lv, int intelligence);
+		static int calculate_acid_terror_attack_ratio(int skill_lv);
 		static void calculate_basilisk_1_special_effects(struct block_list *target);
 		static void calculate_basilisk_2_special_effects(struct block_list *target);
 		static void calculate_beholder_1_special_effects(struct block_list *target);
 		static void calculate_beholder_2_special_effects(struct block_list *target);
+		static void calculate_acid_terror_special_effects(struct block_list *target);
 
 };

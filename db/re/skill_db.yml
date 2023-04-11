@@ -2504,7 +2504,7 @@ Body:
       NoDamage: true
     Hit: Single
     Cooldown: 7000
-    AfterCastActDelay: 2000
+    AfterCastActDelay: 400
     Requires:
       SpCost: 25
   - Id: 2421
@@ -6547,26 +6547,18 @@ Body:
         Reproduce: true
     CastCancel: true
     CastTime: 1000
-    Duration1:
-      - Level: 1
-        Time: 40000
-      - Level: 2
-        Time: 45000
-      - Level: 3
-        Time: 50000
-      - Level: 4
-        Time: 55000
-      - Level: 5
-        Time: 60000
+    Cooldown: 5000
+    AfterCastActDelay: 1000
+    Duration1: 20000
     Requires:
-      SpCost: 10
+      SpCost: 15
       ItemCost:
         - Item: Fire_Bottle
           Amount: 1
     Unit:
       Id: Demonstration
       Range: 1
-      Interval: 1000
+      Interval: 5000
       Target: Enemy
       Flag:
         NoReiteration: true
@@ -6585,24 +6577,17 @@ Body:
       IgnoreCicada: true
     Range: 9
     Hit: Single
+    Element: Neutral
     HitCount: 1
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
     CastCancel: true
-    CastTime: 1000
-    Duration1:
-      - Level: 1
-        Time: 3
-      - Level: 2
-        Time: 7
-      - Level: 3
-        Time: 10
-      - Level: 4
-        Time: 12
-      - Level: 5
-        Time: 13
+    CastTime: 0
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    Duration1: 1
     Duration2: 120000
     Requires:
       SpCost: 15

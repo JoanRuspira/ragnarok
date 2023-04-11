@@ -2867,6 +2867,8 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case HFLI_SBR44:
 		case HM_BEHOLDER_2:
 		case AM2_HOM_ACTION:
+		case AM_DEMONSTRATION:
+		case AM_ACIDTERROR:
 			skillratio += AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
 		case ML_BRANDISH:
@@ -2928,18 +2930,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			else
 #endif
 				skillratio += 35 * skill_lv;
-			break;
-		case AM_DEMONSTRATION:
-			skillratio += 20 * skill_lv;
-			break;
-		case AM_ACIDTERROR:
-#ifdef RENEWAL
-			skillratio += -100 + 200 * skill_lv;
-			if (sd && pc_checkskill(sd, AM_LEARNINGPOTION))
-				skillratio += 100; // !TODO: What's this bonus increase?
-#else
-			skillratio += 40 * skill_lv;
-#endif
 			break;
 		case MO_FINGEROFFENSIVE:
 #ifdef RENEWAL
@@ -4014,11 +4004,9 @@ static void battle_calc_defense_reduction(struct Damage* wd, struct block_list *
 			}
 		}
 		if (skill_id == AM_ACIDTERROR)
-#ifdef RENEWAL
 			def2 = 0; //Ignore only status defense. [FatalEror]
-#else
 			def1 = 0; //Ignores only armor defense. [Skotlex]
-#endif
+
 		if(def2 < 1)
 			def2 = 1;
 	}
@@ -5149,6 +5137,8 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case AM2_HOM_ACTION:
 					case HFLI_SBR44:
 					case HM_BEHOLDER_2:
+					case AM_DEMONSTRATION:
+					case AM_ACIDTERROR:
 						skillratio += AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
 					case MG_FIREBALL:

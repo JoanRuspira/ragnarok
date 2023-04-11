@@ -461,7 +461,7 @@ void SkillAdditionalEffects::skill_trigger_status_even_by_blocked_damage(struct 
 			}
 			//"While the damage can be blocked by Pneuma, the chance to break armor remains", irowiki. [Cydh]
 			if (dmg_lv == ATK_BLOCK && skill_id == AM_ACIDTERROR) {
-				sc_start2(src, bl, SC_BLEEDING, (skill_lv * 3), skill_lv, src->id, skill_get_time2(skill_id, skill_lv));
+				// sc_start2(src, bl, SC_BLEEDING, (skill_lv * 3), skill_lv, src->id, skill_get_time2(skill_id, skill_lv));
 				if (skill_break_equip(src, bl, EQP_ARMOR, (1000 * skill_lv + 500) - 1000, BCT_ENEMY))
 					clif_emotion(bl, ET_HUK);
 			}
@@ -469,7 +469,6 @@ void SkillAdditionalEffects::skill_trigger_status_even_by_blocked_damage(struct 
 	}
 
 }
-
 
 bool skill_strip_equip2(struct block_list *src, struct block_list *target, uint16 skill_id, uint16 skill_lv)
 {

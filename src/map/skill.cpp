@@ -2742,8 +2742,8 @@ static int skill_check_unit_range2_sub (struct block_list *bl, va_list ap)
 		return 0;
 #endif
 
-	if( skill_id == AM_DEMONSTRATION && bl->type == BL_MOB && ((TBL_MOB*)bl)->mob_id == MOBID_EMPERIUM )
-		return 0; //Allow casting Bomb/Demonstration Right under emperium [Skotlex]
+	if( skill_id == AM_DEMONSTRATION  )
+		return 0; //Allow casting Bomb/Demonstration Right under things
 	return 1;
 }
 
