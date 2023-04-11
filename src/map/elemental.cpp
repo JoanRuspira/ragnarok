@@ -384,6 +384,9 @@ int elemental_action(struct elemental_data *ed, struct block_list *bl, t_tick ti
 			case ELEMENTALID_TERA_M:
 				skill_id = HM_BEHOLDER_2;
 				break;
+			case ELEMENTALID_AGNI_M:
+				skill_id = HAMI_DEFENCE;
+				break;
 		}
 	}
 	

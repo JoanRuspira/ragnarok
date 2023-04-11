@@ -2506,6 +2506,7 @@
 	export_constant(EFST_LEXAETERNA);
 	export_constant(EFST_ADRENALINE);
 	export_constant(EFST_KNADRENALINE);
+	export_constant(EFST_DEFENCE);
 	export_constant(EFST_WEAPONPERFECT);
 	export_constant(EFST_OVERTHRUST);
 	export_constant(EFST_MAXIMIZE);
@@ -2663,7 +2664,6 @@
 	export_constant(EFST_RESISTHANDICAP);
 	export_constant(EFST_MAXHPPERCENT);
 	export_constant(EFST_MAXSPPERCENT);
-	export_constant(EFST_DEFENCE);
 	export_constant(EFST_SLOWDOWN);
 	export_constant(EFST_PRESERVE);
 	export_constant(EFST_CHASEWALK2);

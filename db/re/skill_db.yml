@@ -29194,7 +29194,7 @@ Body:
     Hit: Single
     HitCount: 1
     Cooldown: 5000
-    CastTime: 3000
+    CastTime: 0
     AfterCastActDelay: 400
     Requires:
       SpCost: 15
@@ -29277,34 +29277,15 @@ Body:
     Name: HAMI_DEFENCE
     Description: Defense
     MaxLevel: 5
-    TargetType: Self
+    TargetType: Support
     DamageFlags:
       NoDamage: true
     Hit: Single
-    AfterCastActDelay: 30000
-    Duration1:
-      - Level: 1
-        Time: 40000
-      - Level: 2
-        Time: 35000
-      - Level: 3
-        Time: 30000
-      - Level: 4
-        Time: 25000
-      - Level: 5
-        Time: 20000
+    Cooldown: 7000
+    AfterCastActDelay: 400
+    Duration1: 120000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 20
-        - Level: 2
-          Amount: 25
-        - Level: 3
-          Amount: 30
-        - Level: 4
-          Amount: 35
-        - Level: 5
-          Amount: 40
+      SpCost: 25
   - Id: 8007
     Name: HAMI_SKIN
     Description: Adamantium Skin

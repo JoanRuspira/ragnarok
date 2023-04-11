@@ -745,12 +745,7 @@ void initChangeTables(void)
 	set_sc( HLIF_CHANGE		, SC_CHANGE		, EFST_BLANK		, SCB_VIT|SCB_INT );
 	set_sc( HFLI_FLEET		, SC_FLEET		, EFST_BLANK		, SCB_ASPD|SCB_BATK|SCB_WATK );
 	set_sc( HFLI_SPEED		, SC_SPEED		, EFST_BLANK		, SCB_FLEE );
-	set_sc( HAMI_DEFENCE		, SC_DEFENCE		, EFST_BLANK		,
-#ifndef RENEWAL
-		SCB_DEF );
-#else
-		SCB_VIT );
-#endif
+	set_sc( HAMI_DEFENCE		, SC_DEFENCE		, EFST_DEFENCE		, SCB_DEF|SCB_MDEF );
 	set_sc( HAMI_BLOODLUST		, SC_BLOODLUST		, EFST_BLANK		, SCB_BATK|SCB_WATK );
 
 	/* Homunculus S */
@@ -6175,10 +6170,6 @@ static unsigned short status_calc_vit(struct block_list *bl, struct status_chang
 		vit -= vit * sc->data[SC_STRIPARMOR]->val2/100;
 	if(sc->data[SC_FULL_THROTTLE])
 		vit += vit * sc->data[SC_FULL_THROTTLE]->val3 / 100;
-#ifdef RENEWAL
-	if(sc->data[SC_DEFENCE])
-		vit += sc->data[SC_DEFENCE]->val2;
-#endif
 	if(sc->data[SC_CHEERUP])
 		vit += 3;
 	if(sc->data[SC_GLASTHEIM_STATE])
@@ -7072,6 +7063,8 @@ static defType status_calc_def(struct block_list *bl, struct status_change *sc, 
 		def += sc->data[SC_SHIELDSPELL_REF]->val2;
 	if( sc->data[SC_PRESTIGE] )
 		def += sc->data[SC_PRESTIGE]->val3;
+	if( sc->data[SC_DEFENCE] )
+		def += sc->data[SC_DEFENCE]->val1*3;
 	if(sc->data[SC_RUSHWINDMILL])
 		def += sc->data[SC_RUSHWINDMILL]->val3;
 	if(sc->data[SC_ENDURE])
@@ -7211,6 +7204,8 @@ static defType status_calc_mdef(struct block_list *bl, struct status_change *sc,
 		mdef += 50;
 	if(sc->data[SC_ENDURE])
 		mdef += sc->data[SC_ENDURE]->val1*2;
+	if( sc->data[SC_DEFENCE] )
+		mdef += sc->data[SC_DEFENCE]->val1*3;
 	if(sc->data[SC_STONEHARDSKIN])
 		mdef += sc->data[SC_STONEHARDSKIN]->val1;
 	if(sc->data[SC_STONE] && sc->opt1 == OPT1_STONE)
@@ -11023,13 +11018,6 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			break;
 		case SC_AVOID:
 			// val2 = 10*val1; // Speed change rate.
-			break;
-		case SC_DEFENCE:
-#ifdef RENEWAL
-			val2 = 5 + (val1 * 5); // Vit bonus
-#else
-			val2 = 2*val1; // Def bonus
-#endif
 			break;
 		case SC_BLOODLUST:
 			val2 = 20+10*val1; // Atk rate change.

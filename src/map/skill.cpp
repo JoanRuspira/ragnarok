@@ -6079,6 +6079,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		break;
 	case HLIF_AVOID:
 	case HAMI_DEFENCE:
+		clif_specialeffect(bl, EF_HAMIDEFENCE, AREA);
 		sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)); // Master
 		clif_skill_nodamage(src,src,skill_id,skill_lv,sc_start(src,src,type,100,skill_lv,skill_get_time(skill_id,skill_lv))); // Homunc
 		break;
@@ -10001,6 +10002,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		break;
 	case AM2_HOM_ACTION:
 	case JG_EL_ACTION:
+		ShowMessage("ACTION2\n");
 		if( sd ) {
 			int duration = 7000;
 			if( !sd->ed )
