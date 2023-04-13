@@ -339,6 +339,12 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 		case WL_CRIMSONROCK:
 			WizardAdditionalEffectsCalculator::apply_crimson_rock_additional_effect(src, bl, skill_lv);
 			break;
+		case AM_ACIDTERROR:
+			AlchemistAdditionalEffectsCalculator::apply_acid_terror_additional_effect(src, bl, skill_lv);
+			break;
+		case GN_SPORE_EXPLOSION:
+			AlchemistAdditionalEffectsCalculator::apply_bomb_additional_effect(src, bl, skill_lv);
+			break;
 	}
 }
 
@@ -458,12 +464,6 @@ void SkillAdditionalEffects::skill_trigger_status_even_by_blocked_damage(struct 
 					status_change_start(src, bl, type, it.rate, 7, 0, 0, 0, time, SCSTART_NONE);
 				if (it.target&ATF_SELF)
 					status_change_start(src, src, type, it.rate, 7, 0, 0, 0, time, SCSTART_NONE);
-			}
-			//"While the damage can be blocked by Pneuma, the chance to break armor remains", irowiki. [Cydh]
-			if (dmg_lv == ATK_BLOCK && skill_id == AM_ACIDTERROR) {
-				// sc_start2(src, bl, SC_BLEEDING, (skill_lv * 3), skill_lv, src->id, skill_get_time2(skill_id, skill_lv));
-				if (skill_break_equip(src, bl, EQP_ARMOR, (1000 * skill_lv + 500) - 1000, BCT_ENEMY))
-					clif_emotion(bl, ET_HUK);
 			}
 		}
 	}

@@ -2869,6 +2869,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case AM2_HOM_ACTION:
 		case AM_DEMONSTRATION:
 		case AM_ACIDTERROR:
+		case GN_SPORE_EXPLOSION:
 			skillratio += AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
 		case ML_BRANDISH:
@@ -3453,12 +3454,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 				if(sd && sd->cart_weight)
 					skillratio += sd->cart_weight / 10 / (150 - min(sd->status.str,120)) + pc_checkskill(sd,GN_REMODELING_CART) * 50;
 			}
-			break;
-		case GN_SPORE_EXPLOSION:
-			skillratio += -100 + 180 * skill_lv;
-			if (wd->miscflag & 8)
-				skillratio += 200 + sstatus->int_; // Target receives extra damage
-			RE_LVL_DMOD(100);
 			break;
 		case GN_WALLOFTHORN:
 			skillratio += 10 * skill_lv;

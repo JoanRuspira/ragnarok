@@ -219,6 +219,12 @@
     <Filter Include="Source Files\skillAtkRatioCalculator\alchemist">
       <UniqueIdentifier>{7c0ef734-e286-4b25-b3af-b06b3d868251}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\skillAdditionalEffectsCalculator\alchemist">
+      <UniqueIdentifier>{ddf10d52-fbc0-40d7-ad79-880b02f2434f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\skillAdditionalEffectsCalculator\alchemist">
+      <UniqueIdentifier>{a1273efe-214b-464d-ba85-369c73a0403f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="achievement.hpp">
@@ -473,6 +479,9 @@
     <ClInclude Include="AlchemistSkillAttackRatioCalculator.h">
       <Filter>Header Files\skillAtkRatioCalculator\alchemist</Filter>
     </ClInclude>
+    <ClInclude Include="AlchemistAdditionalEffectsCalculator.h">
+      <Filter>Header Files\skillAdditionalEffectsCalculator\alchemist</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="achievement.cpp">
@@ -699,6 +708,9 @@
     </ClCompile>
     <ClCompile Include="AlchemistSkillAttackRatioCalculator.cpp">
       <Filter>Source Files\skillAtkRatioCalculator\alchemist</Filter>
+    </ClCompile>
+    <ClCompile Include="AlchemistAdditionalEffectsCalculator.cpp">
+      <Filter>Source Files\skillAdditionalEffectsCalculator\alchemist</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

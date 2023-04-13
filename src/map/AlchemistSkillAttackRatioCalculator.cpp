@@ -35,13 +35,16 @@ int AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_
 			calculate_acid_terror_special_effects(target);
 			return calculate_acid_terror_attack_ratio(skill_lv);
 			break;
+		case GN_SPORE_EXPLOSION:
+			return calculate_bomb_attack_ratio(skill_lv);
+			break;
 		default:
 			return 0;
 			break;
 	}
 }
 
-int AlchemistSkillAttackRatioCalculator::calculate_acid_terror_attack_ratio(int skill_lv)
+int AlchemistSkillAttackRatioCalculator::calculate_bomb_attack_ratio(int skill_lv)
 {
 	int ratio = 0;
 	switch (skill_lv) {
@@ -59,6 +62,29 @@ int AlchemistSkillAttackRatioCalculator::calculate_acid_terror_attack_ratio(int 
 			break;
 		case 5:
 			ratio = 550;
+			break;
+		}
+	return ratio;
+}
+
+int AlchemistSkillAttackRatioCalculator::calculate_acid_terror_attack_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 250;
+			break;
+		case 2:
+			ratio = 350;
+			break;
+		case 3:
+			ratio = 450;
+			break;
+		case 4:
+			ratio = 550;
+			break;
+		case 5:
+			ratio = 650;
 			break;
 		}
 	return ratio;

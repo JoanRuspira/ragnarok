@@ -10109,7 +10109,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case GN_SPORE_EXPLOSION:
 		clif_skill_nodamage(src, bl, skill_id, skill_lv, 1);
 		skill_attack(skill_get_type(skill_id), src, src, bl, skill_id, skill_lv, tick, flag|8);
-		sc_start4(src, bl, type, 100, skill_lv, skill_id, src->id, 0, skill_get_time(skill_id, skill_lv));
 		break;
 	case GN_MANDRAGORA:
 		if( flag&1 ) {
