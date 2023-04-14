@@ -18734,8 +18734,6 @@ short skill_can_produce_mix(struct map_session_data *sd, t_itemid nameid, int tr
 					}
 				}
 				if (req_skill == AM_PHARMACY) {
-					ShowMessage("Name %d\n", skill_produce_db[i].nameid);
-					ShowMessage("Object required %d\n", skill_produce_db[i].req_skill_lv);
 					if(pc_search_inventory(sd, skill_produce_db[i].req_skill_lv) < 0 ){
 						continue; // must iterate again to check other skills that produce it. [malufett]
 					}
@@ -18800,24 +18798,24 @@ short skill_can_produce_mix(struct map_session_data *sd, t_itemid nameid, int tr
 	}
 	
 	// Check on player's inventory
-	// for (j = 0; j < MAX_PRODUCE_RESOURCE; j++) {
-	// 	t_itemid nameid_produce;
+	for (j = 0; j < MAX_PRODUCE_RESOURCE; j++) {
+		t_itemid nameid_produce;
 
-	// 	if (!(nameid_produce = skill_produce_db[i].mat_id[j]))
-	// 		continue;
-	// 	if (skill_produce_db[i].mat_amount[j] == 0) {
-	// 		if (pc_search_inventory(sd,nameid_produce) < 0)
-	// 			return 0;
-	// 	} else {
-	// 		unsigned short idx, amt;
+		if (!(nameid_produce = skill_produce_db[i].mat_id[j]))
+			continue;
+		if (skill_produce_db[i].mat_amount[j] == 0) {
+			if (pc_search_inventory(sd,nameid_produce) < 0)
+				return 0;
+		} else {
+			unsigned short idx, amt;
 
-	// 		for (idx = 0, amt = 0; idx < MAX_INVENTORY; idx++)
-	// 			if (sd->inventory.u.items_inventory[idx].nameid == nameid_produce)
-	// 				amt += sd->inventory.u.items_inventory[idx].amount;
-	// 		if (amt < qty * skill_produce_db[i].mat_amount[j])
-	// 			return 0;
-	// 	}
-	// }
+			for (idx = 0, amt = 0; idx < MAX_INVENTORY; idx++)
+				if (sd->inventory.u.items_inventory[idx].nameid == nameid_produce)
+					amt += sd->inventory.u.items_inventory[idx].amount;
+			if (amt < qty * skill_produce_db[i].mat_amount[j])
+				return 0;
+		}
+	}
 	return i + 1;
 }
 
@@ -18942,244 +18940,41 @@ bool skill_produce_mix(struct map_session_data *sd, uint16 skill_id, t_itemid na
 
 	if (!equip) {
 		switch (skill_id) {
-			case BS_IRON:
-			case BS_STEEL:
-			case BS_ENCHANTEDSTONE:
 			case BS_AXE:
 				// Ores & Metals Refining - 100% success rate
 				make_per = 100000;
 				break;
-			case ASC_CDP:
-				make_per = (2000 + 40*status->dex + 20*status->luk);
-				break;
-			case AL_HOLYWATER:
-			case AB_ANCILLA:
-				make_per = 100000; //100% success
-				break;
 			case AM_PHARMACY: // Potion Preparation - reviewed with the help of various Ragnainfo sources [DracoRPG]
-			case AM_TWILIGHT1:
-			case AM_TWILIGHT2:
-			case AM_TWILIGHT3:
-				make_per = pc_checkskill(sd,AM_LEARNINGPOTION)*50
-					+ pc_checkskill(sd,AM_PHARMACY)*300 + sd->status.job_level*20
-					+ (status->int_/2)*10 + status->dex*10+status->luk*10;
-				if (hom_is_active(sd->hd)) {//Player got a homun
-					int skill;
-					if ((skill = hom_checkskill(sd->hd,HVAN_INSTRUCT)) > 0) //His homun is a vanil with instruction change
-						make_per += skill*100; //+1% bonus per level
-				}
 				switch(nameid){
 					case ITEMID_RED_POTION:
 					case ITEMID_YELLOW_POTION:
 					case ITEMID_WHITE_POTION:
-						make_per += (1+rnd()%100)*10 + 2000;
+					case ITEMID_BLUE_POTION:
+						make_per = 1500; //15% success
 						break;
-					case ITEMID_ALCOHOL:
-						make_per += (1+rnd()%100)*10 + 1000;
+					case ITEMID_RED_SLIM_POTION:
+					case ITEMID_YELLOW_SLIM_POTION:
+					case ITEMID_WHITE_SLIM_POTION:
+						make_per = 500; //5% success
 						break;
 					case ITEMID_FIRE_BOTTLE:
 					case ITEMID_ACID_BOTTLE:
 					case ITEMID_MAN_EATER_BOTTLE:
-					case ITEMID_MINI_BOTTLE:
-						make_per += (1+rnd()%100)*10;
+						make_per = 1000; //10% success
 						break;
-					case ITEMID_YELLOW_SLIM_POTION:
-						make_per -= (1+rnd()%50)*10;
+					case ITEMID_THUNDER_RESIST_POTION:
+					case ITEMID_EARTH_RESIST_POTION:
+					case ITEMID_COLD_RESIST_POTION:
+					case ITEMID_FIRE_RESIST_POTION:
+						make_per = 500; //5% success
 						break;
-					case ITEMID_WHITE_SLIM_POTION:
-					case ITEMID_COATING_BOTTLE:
-						make_per -= (1+rnd()%100)*10;
-						break;
-					//Common items, receive no bonus or penalty, listed just because they are commonly produced
-					case ITEMID_BLUE_POTION:
-					case ITEMID_RED_SLIM_POTION:
-					case ITEMID_ANODYNE:
-					case ITEMID_ALOEBERA:
+					//Common items
 					default:
+						make_per = 1000; //10% success
 						break;
 				}
-				if (battle_config.pp_rate != 100)
-					make_per = make_per * battle_config.pp_rate / 100;
-				break;
-			case SA_CREATECON: // Elemental Converter Creation
-				make_per = 100000; // should be 100% success rate
-				break;
-
-			case RK_RUNEMASTERY: {
-					int A = 100 * (30 + 2 * pc_checkskill(sd, skill_id));
-					int B = 100 * status->dex / 30 + 10 * (status->luk + sd->status.job_level);
-					int C = 100 * cap_value(sd->itemid,0,100); //itemid depend on makerune()
-					int D = 0;
-
-					switch (nameid) { //rune rank it_diff 9 craftable rune
-						case ITEMID_BERKANA:
-							D = -2000;
-							break; //Rank S
-						case ITEMID_NAUTHIZ:
-						case ITEMID_URUZ:
-							D = -1500;
-							break; //Rank A
-						case ITEMID_ISA:
-						case ITEMID_WYRD:
-							D = -1000;
-						break; //Rank B
-						case ITEMID_RAIDO:
-						case ITEMID_THURISAZ:
-						case ITEMID_HAGALAZ:
-						case ITEMID_OTHILA:
-							D = -500;
-							break; //Rank C
-						default:
-							D = -1500;
-							break; //not specified =-15%
-					}
-					make_per = A + B + C + D;
-
-					uint8 runemastery_skill_lv = pc_checkskill(sd,skill_id);
-
-					if (runemastery_skill_lv > 9)
-						qty = 2 + rnd() % 5; // 2~6
-					else if (runemastery_skill_lv > 4)
-						qty = 2 + rnd() % 3; // 2~4
-					else
-						qty = 2;
-				}
-				break;
-
-			case GC_CREATENEWPOISON:
-				make_per = 3000 + 500 * pc_checkskill(sd,GC_RESEARCHNEWPOISON);
-				qty = 1+rnd()%pc_checkskill(sd,GC_RESEARCHNEWPOISON);
-				break;
-			case GN_CHANGEMATERIAL:
-				for (i = 0; i < MAX_SKILL_CHANGEMATERIAL_DB; i++) {
-					if (skill_changematerial_db[i].nameid == nameid) {
-						make_per = skill_changematerial_db[i].rate * 10;
-						break;
-					}
-				}
-				break;
-			case GN_S_PHARMACY:
-				{
-					int difficulty = (620 - 20 * skill_lv); // (620 - 20 * Skill Level)
-					const int production_count[] = { 7, 8, 8, 9, 9, 10, 10, 11, 11, 12 };
-
-					switch (nameid) { // Item difficulty factor
-						case ITEMID_HP_INCREASE_POTION_SMALL:
-						case ITEMID_SP_INCREASE_POTION_SMALL:
-						case ITEMID_CONCENTRATED_WHITE_POTION_Z:
-							difficulty += 10;
-							break;
-						case ITEMID_BOMB_MUSHROOM_SPORE:
-						case ITEMID_SP_INCREASE_POTION_MEDIUM:
-							difficulty += 15;
-							break;
-						case ITEMID_HP_INCREASE_POTION_MEDIUM:
-						case ITEMID_SP_INCREASE_POTION_LARGE:
-						case ITEMID_VITATA500:
-							difficulty += 20;
-							break;
-						case ITEMID_SEED_OF_HORNY_PLANT:
-						case ITEMID_BLOODSUCK_PLANT_SEED:
-						case ITEMID_CONCENTRATED_CEROMAIN_SOUP:
-							difficulty += 30;
-							break;
-						case ITEMID_HP_INCREASE_POTION_LARGE:
-						case ITEMID_CURE_FREE:
-							difficulty += 40;
-							break;
-					}
-
-					make_per = status->int_ + status->dex / 2 + status->luk + sd->status.job_level + (30 + rnd() % 120 + 1) + // Caster's INT + (Caster's DEX / 2) + Caster's LUK + Caster's Job Level + Random number between (30 ~ 150) +
-						sd->status.base_level + 5 * (pc_checkskill(sd, AM_LEARNINGPOTION) - 20) + pc_checkskill(sd, CR_FULLPROTECTION) * (6 + rnd() % 4 + 1); // Caster's Base Level + (5 x (Potion Research Skill Level - 20)) + (Full Chemical Protection Skill Level x Random number between (6 ~ 10))
-					make_per -= difficulty;
-					qty = production_count[skill_lv - 1];
-
-					// Determine quantity from difficulty
-					if (make_per < 1)
-						qty -= 6;
-					else if (make_per < 100)
-						qty -= 5;
-					else if (make_per < 300)
-						qty -= 4;
-					else if (make_per < 400)
-						qty -= 3;
-
-					make_per = 100000; // Adjust success back to 100% for crafting
-				}
-				break;
-			case GN_MAKEBOMB:
-			case GN_MIX_COOKING:
-				{
-					int difficulty = 30 + rnd() % 120 + 1; // Random number between (30 ~ 150)
-
-					switch (nameid) { // Item difficulty factor
-						// GN_MAKEBOMB
-						case ITEMID_APPLE_BOMB:
-							difficulty += 5;
-							break;
-						case ITEMID_COCONUT_BOMB:
-						case ITEMID_MELON_BOMB:
-							difficulty += 10;
-							break;
-						case ITEMID_PINEAPPLE_BOMB:
-							difficulty += 15;
-							break;
-						case ITEMID_BANANA_BOMB:
-							difficulty += 20;
-							break;
-						// GN_MIX_COOKING
-						case ITEMID_SAVAGE_FULL_ROAST:
-						case ITEMID_COCKTAIL_WARG_BLOOD:
-						case ITEMID_MINOR_STEW:
-						case ITEMID_SIROMA_ICED_TEA:
-						case ITEMID_DROSERA_HERB_SALAD:
-						case ITEMID_PETITE_TAIL_NOODLES:
-							difficulty += 15;
-							break;
-					}
-
-					make_per = sd->status.job_level / 4 + status->luk / 2 + status->dex / 3; // (Caster's Job Level / 4) + (Caster's LUK / 2) + (Caster's DEX / 3)
-
-					if (skill_lv > 1) {
-						make_per -= difficulty;
-
-						// Determine quantity from difficulty
-						if (make_per >= 30)
-							qty = 10 + rnd() % 2;
-						else if (make_per >= 10)
-							qty = 10;
-						else if (make_per >= -10)
-							qty = 8;
-						else if (make_per >= -30)
-							qty = 5;
-						else
-							qty = 0;
-					} else {
-						if (make_per < difficulty)
-							qty = 0;
-					}
-
-					make_per = 100000; // Adjust success back to 100% for crafting
-				}
-				break;
-			default:
-				if (sd->menuskill_id == AM_PHARMACY &&
-					sd->menuskill_val > 10 && sd->menuskill_val <= 20)
-				{	//Assume Cooking Dish
-					if (sd->menuskill_val >= 15) //Legendary Cooking Set.
-						make_per = 10000; //100% Success
-					else
-						make_per = 1200 * (sd->menuskill_val - 10)
-							+ 20  * (sd->status.base_level + 1)
-							+ 20  * (status->dex + 1)
-							+ 100 * (rnd()%(30+5*(sd->cook_mastery/400) - (6+sd->cook_mastery/80)) + (6+sd->cook_mastery/80))
-							- 400 * (skill_produce_db[idx].itemlv - 11 + 1)
-							- 10  * (100 - status->luk + 1)
-							- 500 * (num - 1)
-							- 100 * (rnd()%4 + 1);
-					break;
-				}
-				make_per = 5000;
+				make_per += status->dex*10 + status->int_*10; // Status 10% for each 100 points
+				make_per += pc_checkskill(sd,AM_PHARMACY)*1000; // Pharmacy skill bonus: +10/+20/+30/+40/+50
 				break;
 		}
 	} else { // Weapon Forging - skill bonuses are straight from kRO website, other things from a jRO calculator [DracoRPG]
@@ -19201,6 +18996,7 @@ bool skill_produce_mix(struct map_session_data *sd, uint16 skill_id, t_itemid na
 	}
 
 	if (make_per < 1) make_per = 1;
+
 
 	if (qty > 1 || rnd()%10000 < make_per){ //Success, or crafting multiple items.
 		struct item tmp_item;
@@ -19379,7 +19175,6 @@ bool skill_produce_mix(struct map_session_data *sd, uint16 skill_id, t_itemid na
 			return true;
 		}
 	}
-
 	//Failure
 //	if(log_config.produce)
 //		log_produce(sd,nameid,slot1,slot2,slot3,0);

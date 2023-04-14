@@ -6515,16 +6515,13 @@ Body:
   - Id: 228
     Name: AM_PHARMACY
     Description: Prepare Potion
-    MaxLevel: 10
+    MaxLevel: 5
     TargetType: Self
     DamageFlags:
       NoDamage: true
     Hit: Single
     Requires:
-      SpCost: 5
-      ItemCost:
-        - Item: Medicine_Bowl
-          Amount: 1
+      SpCost: 7
   - Id: 229
     Name: AM_DEMONSTRATION
     Description: Bomb
