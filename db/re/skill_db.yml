@@ -2507,6 +2507,35 @@ Body:
     AfterCastActDelay: 400
     Requires:
       SpCost: 25
+  - Id: 854
+    Name: AM_SLIMPITCHER
+    Description: Aid Potion
+    MaxLevel: 5
+    TargetType: Support
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      PartyOnly: true
+      GuildOnly: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    Cooldown: 5000
+    AfterCastActDelay: 100
+    Requires:
+      SpCost: 35
+      ItemCost:
+        - Item: Red_Slim_Potion
+          Amount: 1
+        - Item: Orange_Potion
+          Amount: 1
+        - Item: Yellow_Slim_Potion
+          Amount: 1
+        - Item: White_Slim_Potion
+          Amount: 1
+        - Item: Blue_Potion
+          Amount: 1
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -6605,9 +6634,10 @@ Body:
     Hit: Single
     HitCount: 1
     CastCancel: true
-    AfterCastActDelay: 500
+    Cooldown: 3000
+    AfterCastActDelay: 100
     Requires:
-      SpCost: 1
+      SpCost: 30
       ItemCost:
         - Item: Red_Potion
           Amount: 1
@@ -6618,16 +6648,6 @@ Body:
         - Item: White_Potion
           Amount: 1
         - Item: Blue_Potion
-          Amount: 1
-        - Item: Fruit_Of_Mastela
-          Amount: 1
-        - Item: Royal_Jelly
-          Amount: 1
-        - Item: Seed_Of_Yggdrasil
-          Amount: 1
-        - Item: Yggdrasilberry
-          Amount: 1
-        - Item: Berserk_Potion
           Amount: 1
   - Id: 232
     Name: AM_CANNIBALIZE
@@ -25784,11 +25804,10 @@ Body:
     Flags:
       IgnoreAutoGuard: true
       IgnoreCicada: true
-    Range: 11
+    Range: 9
     Hit: Single
     HitCount: 1
     ActiveInstance: 1
-    Knockback: 1
     CopyFlags:
       Skill:
         Reproduce: true

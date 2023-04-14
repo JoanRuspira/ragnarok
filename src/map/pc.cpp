@@ -8238,6 +8238,7 @@ int pc_skillheal_bonus(struct map_session_data *sd, uint16 skill_id) {
 			case AL_HEAL:           if( !(battle_config.skill_add_heal_rate&1) ) bonus = 0; break;
 			case PR_SANCTUARY:      if( !(battle_config.skill_add_heal_rate&2) ) bonus = 0; break;
 			case AM_POTIONPITCHER:  if( !(battle_config.skill_add_heal_rate&4) ) bonus = 0; break;
+			case AM_SLIMPITCHER:  if( !(battle_config.skill_add_heal_rate&4) ) bonus = 0; break;
 			case CR_SLIMPITCHER:    if( !(battle_config.skill_add_heal_rate&8) ) bonus = 0; break;
 		}
 	}

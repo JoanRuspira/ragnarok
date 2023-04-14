@@ -7189,6 +7189,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	}
 
 	case AM_BERSERKPITCHER:
+	case AM_SLIMPITCHER:
 	case AM_POTIONPITCHER: 
 		{
 			int j,hp = 0,sp = 0;
@@ -7292,10 +7293,20 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				}
 			}
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
-			if( hp > 0 || (skill_id == AM_POTIONPITCHER && sp <= 0) )
-				clif_skill_nodamage(NULL,bl,AL_HEAL,hp,1);
-			if( sp > 0 )
+			if( hp > 0 || ((skill_id == AM_POTIONPITCHER || skill_id == AM_SLIMPITCHER) && sp <= 0) ) {
+				if (skill_id == AM_SLIMPITCHER){
+					hp += 500;
+				}	
+				clif_skill_nodamage(NULL,bl,AL_HEAL,hp,1);		
+			}
+				
+			if( sp > 0 ) {
+				if (skill_id == AM_SLIMPITCHER){
+					sp += 250;
+				}
 				clif_skill_nodamage(NULL,bl,MG_SRECOVERY,sp,1);
+			}
+				
 			if (tsc) {
 #ifdef RENEWAL
 				if (tsc->data[SC_EXTREMITYFIST2])
@@ -7306,6 +7317,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 					sp = 0;
 				}
 			}
+			ShowMessage("hp: %d\n", hp);
 			status_heal(bl,hp,sp,0);
 		}
 		break;
@@ -16061,6 +16073,7 @@ struct s_skill_condition skill_get_requirement(struct map_session_data* sd, uint
 				// Skip this for level_dependent requirement, just looking forward for gemstone removal. Assumed if there is gemstone there.
 				if (!level_dependent) {
 					switch( skill_id ) {
+						case AM_SLIMPITCHER:
 						case AM_POTIONPITCHER:
 						case CR_SLIMPITCHER:
 						case CR_CULTIVATION:
