@@ -1145,43 +1145,35 @@ Body:
   - Id: 612
     AegisName: Portable_Furnace
     Name: Mini Furnace
-    Type: Usable
+    Type: Etc
     Buy: 150
     Weight: 200
     Flags:
       BuyingStore: true
-    Script: |
-      produce 21;
   - Id: 613
     AegisName: Iron_Hammer
     Name: Iron Hammer
-    Type: Usable
+    Type: Etc
     Buy: 1000
     Weight: 200
     Flags:
       BuyingStore: true
-    Script: |
-      produce 1;
   - Id: 614
     AegisName: Golden_Hammer
     Name: Golden Hammer
-    Type: Usable
+    Type: Etc
     Buy: 3000
     Weight: 300
     Flags:
       BuyingStore: true
-    Script: |
-      produce 2;
   - Id: 615
     AegisName: Oridecon_Hammer
     Name: Oridecon Hammer
-    Type: Usable
+    Type: Etc
     Buy: 5000
     Weight: 400
     Flags:
       BuyingStore: true
-    Script: |
-      produce 3;
   - Id: 616
     AegisName: Old_Card_Album
     Name: Old Card Album

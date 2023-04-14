@@ -27,7 +27,7 @@ struct skill_unit;
 struct skill_unit_group;
 struct status_change_entry;
 
-#define MAX_SKILL_PRODUCE_DB	64 /// Max Produce DB
+#define MAX_SKILL_PRODUCE_DB	78 /// Max Produce DB
 #define MAX_PRODUCE_RESOURCE	12 /// Max Produce requirements
 #define MAX_SKILL_ARROW_DB		150 /// Max Arrow Creation DB
 #define MAX_ARROW_RESULT		5 /// Max Arrow results/created
@@ -423,7 +423,7 @@ enum e_skill_blown	{
 struct s_skill_produce_db {
 	t_itemid nameid; /// Product ID
 	unsigned short req_skill; /// Required Skill
-	unsigned char req_skill_lv, /// Required Skill Level
+	unsigned int req_skill_lv, /// Required Skill Level
 		itemlv; /// Item Level
 	t_itemid mat_id[MAX_PRODUCE_RESOURCE]; /// Materials needed
 	unsigned short mat_amount[MAX_PRODUCE_RESOURCE]; /// Amount of each materials
@@ -606,7 +606,7 @@ bool skill_isNotOk_mercenary(uint16 skill_id, struct mercenary_data *md);
 bool skill_isNotOk_npcRange(struct block_list *src, uint16 skill_id, uint16 skill_lv, int pos_x, int pos_y);
 
 // Item creation
-short skill_can_produce_mix( struct map_session_data *sd, t_itemid nameid, int trigger, int qty);
+short skill_can_produce_mix( struct map_session_data *sd, t_itemid nameid, int trigger, int qty, short req_skill = 0);
 bool skill_produce_mix( struct map_session_data *sd, uint16 skill_id, t_itemid nameid, int slot1, int slot2, int slot3, int qty, short produce_idx );
 
 bool skill_arrow_create( struct map_session_data *sd, t_itemid nameid);

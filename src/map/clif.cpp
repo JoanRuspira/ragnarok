@@ -5985,7 +5985,6 @@ void clif_skill_produce_mix_list( struct map_session_data *sd, int skill_id, int
 	nullpo_retv(sd);
 
 	int fd = sd->fd;
-
 	if( !session_isActive( fd ) ){
 		return;
 	}
@@ -6002,8 +6001,9 @@ void clif_skill_produce_mix_list( struct map_session_data *sd, int skill_id, int
 	int count = 0;
 	
 	for( int i = 0; i < MAX_SKILL_PRODUCE_DB; i++ ){
-		if (skill_can_produce_mix(sd,skill_produce_db[i].nameid, trigger, 1) &&
-			(BS_AXE <= 0 || (BS_AXE > 0 && skill_produce_db[i].req_skill == BS_AXE))
+		if (skill_can_produce_mix(sd,skill_produce_db[i].nameid, trigger, 1, skill_produce_db[i].req_skill) 
+			&& ((BS_AXE <= 0 || (BS_AXE > 0 && skill_produce_db[i].req_skill == BS_AXE))
+				|| (AM_PHARMACY <= 0 || (AM_PHARMACY > 0 && skill_produce_db[i].req_skill == AM_PHARMACY)))
 			)
 		{
 			p->items[count].itemId = client_nameid( skill_produce_db[i].nameid );
@@ -12798,7 +12798,6 @@ void clif_parse_RequestMemo(int fd,struct map_session_data *sd)
 /// 018e <name id>.W { <material id>.W }*3
 void clif_parse_ProduceMix(int fd,struct map_session_data *sd){
 	const struct PACKET_CZ_REQMAKINGITEM *p = (struct PACKET_CZ_REQMAKINGITEM*)RFIFOP( fd, 0 );
-
 	switch( sd->menuskill_id ) {
 		case -1:
 		case AM_PHARMACY:
@@ -12817,8 +12816,9 @@ void clif_parse_ProduceMix(int fd,struct map_session_data *sd){
 
 	int produce_idx;
 
-	if( (produce_idx = skill_can_produce_mix(sd,p->itemId,sd->menuskill_val, 1)) )
+	if( (produce_idx = skill_can_produce_mix(sd,p->itemId,sd->menuskill_val, 1, AM_PHARMACY)) ) {
 		skill_produce_mix(sd,0,p->itemId,p->material[0],p->material[1],p->material[2],1,produce_idx-1);
+	}
 	clif_menuskill_clear(sd);
 }
 

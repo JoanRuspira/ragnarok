@@ -18716,45 +18716,70 @@ void skill_unit_move_unit_group(struct skill_unit_group *group, int16 m, int16 d
  * @param qty Amount of item will be created
  * @return 0 If failed or Index+1 of item found on skill_produce_db[]
  */
-short skill_can_produce_mix(struct map_session_data *sd, t_itemid nameid, int trigger, int qty)
+short skill_can_produce_mix(struct map_session_data *sd, t_itemid nameid, int trigger, int qty, short req_skill)
 {
 	short i, j;
 
 	nullpo_ret(sd);
-
 	if (!nameid || !itemdb_exists(nameid))
 		return 0;
 
+
 	for (i = 0; i < MAX_SKILL_PRODUCE_DB; i++) {
 		if (skill_produce_db[i].nameid == nameid) {
-			if ((j = skill_produce_db[i].req_skill) > 0 &&
-				pc_checkskill(sd,j) < skill_produce_db[i].req_skill_lv)
-				continue; // must iterate again to check other skills that produce it. [malufett]
+			if ((j = skill_produce_db[i].req_skill) > 0){
+				if (req_skill == BS_AXE) {
+					if(pc_checkskill(sd,j) < skill_produce_db[i].req_skill_lv){
+						continue; // must iterate again to check other skills that produce it. [malufett]
+					}
+				}
+				if (req_skill == AM_PHARMACY) {
+					ShowMessage("Name %d\n", skill_produce_db[i].nameid);
+					ShowMessage("Object required %d\n", skill_produce_db[i].req_skill_lv);
+					if(pc_search_inventory(sd, skill_produce_db[i].req_skill_lv) < 0 ){
+						continue; // must iterate again to check other skills that produce it. [malufett]
+					}
+				}
+			}				
 			if (j > 0 && sd->menuskill_id > 0 && sd->menuskill_id != j)
 				continue; // special case
 			break;
 		}
 	}
 
+
 	if (i >= MAX_SKILL_PRODUCE_DB)
 		return 0;
 
+	if (req_skill == BS_AXE) {
+		if (pc_search_inventory(sd, ITEMID_ANVIL) < 0 &&
+			pc_search_inventory(sd, ITEMID_ORIDECON_ANVIL) < 0 &&
+			pc_search_inventory(sd, ITEMID_GOLDEN_ANVIL) < 0 &&
+			pc_search_inventory(sd, ITEMID_EMPERIUM_ANVIL) < 0)
+			return 0;
+		
+		if (pc_search_inventory(sd, ITEMID_IRON_HAMMER) < 0 &&
+			pc_search_inventory(sd, ITEMID_GOLDEN_HAMMER) < 0 &&
+			pc_search_inventory(sd, ITEMID_ORIDECON_HAMMER) < 0)
+			return 0;
 
-	if (pc_search_inventory(sd, ITEMID_ANVIL) < 0 &&
-		pc_search_inventory(sd, ITEMID_ORIDECON_ANVIL) < 0 &&
-		pc_search_inventory(sd, ITEMID_GOLDEN_ANVIL) < 0 &&
-		pc_search_inventory(sd, ITEMID_EMPERIUM_ANVIL) < 0)
-		return 0;
-	
-	if (pc_search_inventory(sd, ITEMID_IRON_HAMMER) < 0 &&
-		pc_search_inventory(sd, ITEMID_GOLDEN_HAMMER) < 0 &&
-		pc_search_inventory(sd, ITEMID_ORIDECON_HAMMER) < 0)
-		return 0;
+		if (pc_search_inventory(sd, ITEMID_MINI_FURNACE) < 0)
+			return 0;
+	}
 
-	if (pc_search_inventory(sd, ITEMID_MINI_FURNACE) < 0)
-		return 0;
-	
-
+	if (req_skill == AM_PHARMACY) {
+		if (pc_search_inventory(sd, ITEMID_MEDICINE_BOWL) < 0)
+			return 0;
+		
+		if (pc_search_inventory(sd, ITEMID_POTION_GUIDE) < 0 &&
+			pc_search_inventory(sd, ITEMID_SLIM_POTION_GUIDE) < 0 &&
+			pc_search_inventory(sd, ITEMID_PLANT_BOTTLE_GUIDE) < 0 &&
+			pc_search_inventory(sd, ITEMID_ACID_BOTTLE_GUIDE) < 0 &&
+			pc_search_inventory(sd, ITEMID_FIRE_BOTTLE_GUIDE) < 0 &&
+			pc_search_inventory(sd, ITEMID_ALCOHOL_GUIDE) < 0 &&
+			pc_search_inventory(sd, ITEMID_ELEMENTAL_POTION_GUIDE) < 0)
+			return 0;
+	}
 
 	// Cannot carry the produced stuff
 	if (pc_checkadditem(sd, nameid, qty) == CHKADDITEM_OVERAMOUNT)
@@ -18853,6 +18878,7 @@ bool skill_produce_mix(struct map_session_data *sd, uint16 skill_id, t_itemid na
 	}
 	else
 		idx = produce_idx;
+
 
 	if (qty < 1)
 		qty = 1;
@@ -19450,9 +19476,6 @@ bool skill_arrow_create(struct map_session_data *sd, t_itemid nameid)
 	struct item tmp_item;
 
 	nullpo_ret(sd);
-	
-	ShowStatus("Arrow crafting lvl %d.\n", sd->menuskill_val2);
-
 
 	if (!nameid || !itemdb_exists(nameid) || !skill_arrow_count)
 		return false;

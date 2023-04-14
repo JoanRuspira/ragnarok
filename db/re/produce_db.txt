@@ -1,7 +1,7 @@
 // Item Produce Database
 //
 // Structure of Database:
-// ID,ProduceItemID,ItemLV,RequireSkill,RequireSkillLv,MaterialID1,MaterialAmount1,......
+// ID,ProduceItemID,ItemLV,RequireSkill,RequireSkillLv(or manual),MaterialID1,MaterialAmount1,......
 //
 // Notes:
 // - ID is used to identify item order that will be used for overwriting on db/import.
@@ -175,3 +175,59 @@
 //
 //
 
+
+
+
+
+//===== Potions === ItemLV=22 ==================
+
+//---- Health Potions --------------------------
+//-- Red Potion <-- AM_PHARMACY & Potion Creation Guide & 1 Red Herb, 1 Empty Potion Bottle
+64,501,22,228,7144,7144,0,507,1,1093,1
+//-- Yellow Potion <-- AM_PHARMACY & Potion Creation Guide & 1 Yellow Herb, 1 Empty Potion Bottle
+65,503,22,228,7144,7144,0,508,1,1093,1
+//-- White Potion <-- AM_PHARMACY & Potion Creation Guide & 1 White Herb, 1 Empty Potion Bottle
+66,504,22,228,7144,7144,0,509,1,1093,1
+//-- Blue Potion <-- AM_PHARMACY & Potion Creation Guide & 1 Blue Herb, 1 Scell, 1 Empty Potion Bottle
+67,505,22,228,7144,7144,0,510,1,911,1,1093,1
+//-- Condensed Red Potion <-- AM_PHARMACY & Condensed Potion Creation Guide & 1 Red Potion, 1 Empty Testtube, 1 Cactus Needle
+68,545,22,228,7133,7133,0,501,1,1092,1,952,1
+//-- Condensed Yellow Potion <-- AM_PHARMACY & Condensed Potion Creation Guide & 1 Yellow Potion, 1 Empty Testtube, 1 Mole Whiskers
+69,546,22,228,7133,7133,0,503,1,1092,1,1017,1
+//-- Condensed White Potion <-- AM_PHARMACY & Condensed Potion Creation Guide & 1 White Potion, 1 Empty Testtube, 1 Witched Starsand
+70,547,22,228,7133,7133,0,504,1,1092,1,1061,1
+//----------------------------------------------
+
+
+// ID,ProduceItemID,ItemLV,RequireSkill,RequireSkillLv,MaterialID1,MaterialAmount1,......
+
+
+//---- Skill-related Mixtures ------------------
+//-- Bottle Grenade <-- AM_PHARMACY & Bottle Grenade Creation Guide & 1 Alcohol, 1 Fabric, 1 Empty Bottle
+71,7135,22,228,7128,7128,0,970,1,1059,1,713,1
+//-- Acid Bottle <-- AM_PHARMACY & Acid Bottle Creation Guide & 1 Empty Bottle, 1 Immortal Heart
+72,7136,22,228,7129,7129,0,713,1,929,1
+//-- Plant Bottle <-- AM_PHARMACY & Plant Bottle Creation Guide & 1 Empty Bottle, 2 Maneater Blossom
+73,7137,22,228,7130,7130,0,713,1,1032,2
+//----------------------------------------------
+
+//---- Elemental-resist Potions ----------------
+//-- Resist Fire Potion <-- AM_PHARMACY & Elemental Potion Creation Guide & 2 Frill, 1 Red Gemstone, 1 Empty Potion Bottle
+74,12118,22,228,7434,7434,0,1012,2,716,1,1093,1
+//-- Resist Water Potion <-- AM_PHARMACY & Elemental Potion Creation Guide & 3 Heart of Mermaid, 1 Blue Gemstone, 1 Empty Potion Bottle
+75,12119,22,228,7434,7434,0,950,3,717,1,1093,1
+//-- Resist Earth Potion <-- AM_PHARMACY & Elemental Potion Creation Guide & 2 Large Jellopy, 1 Yellow Gemstone, 1 Empty Potion Bottle
+76,12120,22,228,7434,7434,0,7126,2,715,1,1093,1
+//-- Resist Wind Potion <-- AM_PHARMACY & Elemental Potion Creation Guide & 1 3 Moth Dust, 1 Blue Gemstone, 1 Empty Potion Bottle
+77,12121,22,228,7434,7434,0,1057,3,717,1,1093,1
+//----------------------------------------------
+
+
+//---- Misc ------------------------------------
+//-- Anodyne <-- AM_PHARMACY & Potion Creation Guide & 1 Ment, 1 Alcohol, 1 Empty Bottle
+//78,605,22,228,7144,7144,0,708,1,970,1,713,1
+//-- Aloevera <-- AM_PHARMACY & Potion Creation Guide & 1 Aloe, 1 Honey, 1 Empty Bottle
+//79,606,22,228,7144,7144,0,704,1,518,1,713,1
+//-- Alcohol <-- AM_PHARMACY & Alcohol Creation Guide & 1 Empty Bottle, 5 Poison Spore, 5 Stem, 1 Empty Testtube
+//80,970,22,228,7127,7127,0,713,1,7033,5,905,5,1092,1
+//----------------------------------------------
