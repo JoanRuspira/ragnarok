@@ -11377,7 +11377,7 @@ int skill_castend_pos2(struct block_list* src, int x, int y, uint16 skill_id, ui
 		case WZ_METEOR:
 		case WZ_ICEWALL:
 		case MO_BODYRELOCATION:
-		case CR_CULTIVATION:
+		// case CR_CULTIVATION:
 		case HW_GANBANTEIN:
 		case LG_EARTHDRIVE:
 		case SC_ESCAPE:
@@ -11762,52 +11762,52 @@ int skill_castend_pos2(struct block_list* src, int x, int y, uint16 skill_id, ui
 #endif
 
 	// Plant Cultivation [Celest]
-	case CR_CULTIVATION:
-		if (sd) {
-			if( map_count_oncell(src->m,x,y,BL_CHAR,0) > 0 )
-			{
-				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-				return 1;
-			}
-			clif_skill_poseffect(src,skill_id,skill_lv,x,y,tick);
-			if (rnd()%100 < 50) {
-				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-			} else {
-				TBL_MOB* md = NULL;
-				int t, mob_id;
+	// case CR_CULTIVATION:
+	// 	if (sd) {
+	// 		if( map_count_oncell(src->m,x,y,BL_CHAR,0) > 0 )
+	// 		{
+	// 			clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+	// 			return 1;
+	// 		}
+	// 		clif_skill_poseffect(src,skill_id,skill_lv,x,y,tick);
+	// 		if (rnd()%100 < 50) {
+	// 			clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+	// 		} else {
+	// 			TBL_MOB* md = NULL;
+	// 			int t, mob_id;
 
-				if (skill_lv == 1)
-					mob_id = MOBID_BLACK_MUSHROOM + rnd() % 2;
-				else {
-					int rand_val = rnd() % 100;
+	// 			if (skill_lv == 1)
+	// 				mob_id = MOBID_BLACK_MUSHROOM + rnd() % 2;
+	// 			else {
+	// 				int rand_val = rnd() % 100;
 
-					if (rand_val < 30)
-						mob_id = MOBID_GREEN_PLANT;
-					else if (rand_val < 55)
-						mob_id = MOBID_RED_PLANT;
-					else if (rand_val < 80)
-						mob_id = MOBID_YELLOW_PLANT;
-					else if (rand_val < 90)
-						mob_id = MOBID_WHITE_PLANT;
-					else if (rand_val < 98)
-						mob_id = MOBID_BLUE_PLANT;
-					else
-						mob_id = MOBID_SHINING_PLANT;
-				}
+	// 				if (rand_val < 30)
+	// 					mob_id = MOBID_GREEN_PLANT;
+	// 				else if (rand_val < 55)
+	// 					mob_id = MOBID_RED_PLANT;
+	// 				else if (rand_val < 80)
+	// 					mob_id = MOBID_YELLOW_PLANT;
+	// 				else if (rand_val < 90)
+	// 					mob_id = MOBID_WHITE_PLANT;
+	// 				else if (rand_val < 98)
+	// 					mob_id = MOBID_BLUE_PLANT;
+	// 				else
+	// 					mob_id = MOBID_SHINING_PLANT;
+	// 			}
 
-				md = mob_once_spawn_sub(src, src->m, x, y, "--ja--", mob_id, "", SZ_SMALL, AI_NONE);
-				if (!md)
-					break;
-				if ((t = skill_get_time(skill_id, skill_lv)) > 0)
-				{
-					if( md->deletetimer != INVALID_TIMER )
-						delete_timer(md->deletetimer, mob_timer_delete);
-					md->deletetimer = add_timer (tick + t, mob_timer_delete, md->bl.id, 0);
-				}
-				mob_spawn(md);
-			}
-		}
-		break;
+	// 			md = mob_once_spawn_sub(src, src->m, x, y, "--ja--", mob_id, "", SZ_SMALL, AI_NONE);
+	// 			if (!md)
+	// 				break;
+	// 			if ((t = skill_get_time(skill_id, skill_lv)) > 0)
+	// 			{
+	// 				if( md->deletetimer != INVALID_TIMER )
+	// 					delete_timer(md->deletetimer, mob_timer_delete);
+	// 				md->deletetimer = add_timer (tick + t, mob_timer_delete, md->bl.id, 0);
+	// 			}
+	// 			mob_spawn(md);
+	// 		}
+	// 	}
+	// 	break;
 
 	case SG_SUN_WARM:
 	case SG_MOON_WARM:
@@ -11948,6 +11948,9 @@ int skill_castend_pos2(struct block_list* src, int x, int y, uint16 skill_id, ui
 				mob_spawn(md);
 			}
 		}
+		break;
+	case CR_CULTIVATION:
+		if( sd ) clif_plant_cultivation_list(sd,skill_lv,x,y,skill_id);
 		break;
 	case HT_MAGICDECOY:
 	case NC_MAGICDECOY:
@@ -16071,10 +16074,10 @@ struct s_skill_condition skill_get_requirement(struct map_session_data* sd, uint
 						case AM_SLIMPITCHER:
 						case AM_POTIONPITCHER:
 						case CR_SLIMPITCHER:
-						case CR_CULTIVATION:
-							if (i != skill_lv%11 - 1)
-								continue;
-							break;
+						// case CR_CULTIVATION:
+						// 	if (i != skill_lv%11 - 1)
+						// 		continue;
+						// 	break;
 						case AM_CALLHOMUN:
 							if (sd->status.hom_id) //Don't delete items when hom is already out.
 								continue;
@@ -19390,6 +19393,57 @@ void skill_toggle_magicpower(struct block_list *bl, uint16 skill_id)
 	}
 }
 
+int skill_plant_cultivation(struct map_session_data *sd, t_itemid nameid, int skill_id) {
+	int x, y, i, class_, skill;
+	struct mob_data *md;
+	nullpo_ret(sd);
+	skill = sd->menuskill_val;
+
+	if( !nameid || (i = pc_search_inventory(sd,nameid)) < 0 || !skill || pc_delitem(sd,i,1,0,0,LOG_TYPE_CONSUME) ) {
+		clif_skill_fail(sd,NC_MAGICDECOY,USESKILL_FAIL_LEVEL,0);
+		return 0;
+	}
+
+	// Spawn Position
+	// pc_delitem(sd,i,1,0,0,LOG_TYPE_CONSUME);
+	x = sd->sc.comet_x;
+	y = sd->sc.comet_y;
+	sd->sc.comet_x = 0;
+	sd->sc.comet_y = 0;
+	sd->menuskill_val = 0;
+
+	// Item picked decides the mob class
+	switch(nameid) {
+		case ITEMID_GREEN_HERB:		    class_ = MOBID_GREEN_PLANT;		break;
+		case ITEMID_RED_HERB:			class_ = MOBID_RED_PLANT;	break;
+		case ITEMID_YELLOW_HERB:	    class_ = MOBID_YELLOW_PLANT;		break;
+		case ITEMID_WHITE_HERB:		    class_ = MOBID_WHITE_PLANT;	break;
+		case ITEMID_BLUE_HERB:		    class_ = MOBID_BLUE_PLANT;	break;
+		case ITEMID_YGGDRASIL_SEED:	    class_ = MOBID_SHINING_PLANT;		    break;
+		case ITEMID_BLOODY_RED:		    class_ = MOBID_RED_MUSHROOM;		    break;
+		case ITEMID_CRYSTAL_BLUE:	    class_ = MOBID_BLACK_MUSHROOM;		    break;
+		default:
+			clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+			return 0;
+	}
+
+	md = mob_once_spawn_sub(&sd->bl, sd->bl.m, x, y, sd->status.name, class_, "", SZ_SMALL, AI_NONE);
+	if( md ) {
+		struct unit_data *ud = unit_bl2ud(&md->bl);
+		md->master_id = sd->bl.id;
+		md->special_state.ai = AI_FAW;
+		if(ud) {
+			ud->skill_id = skill_id;
+			ud->skill_lv = skill;
+		}
+		if( md->deletetimer != INVALID_TIMER )
+			delete_timer(md->deletetimer, mob_timer_delete);
+		md->deletetimer = add_timer (gettick() + skill_get_time(skill_id,skill), mob_timer_delete, md->bl.id, 0);
+		mob_spawn(md);
+	}
+
+	return 0;
+}
 
 int skill_magicdecoy(struct map_session_data *sd, t_itemid nameid, int skill_id) {
 	int x, y, i, class_, skill;

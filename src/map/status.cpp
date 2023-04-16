@@ -4261,6 +4261,11 @@ int status_calc_pc_sub(struct map_session_data* sd, enum e_status_calc_opt opt)
 	if (pc_checkskill(sd, SU_POWEROFLAND) > 0)
 		base_status->int_ += 20;
 
+	
+	if((skill=pc_checkskill(sd,CR_CULTIVATION))>0){
+		base_status->int_ += skill * 2;
+	}
+
 	if((skill=pc_checkskill(sd,AC_MAKINGARROW))>0){
 		base_status->matk_max += skill * 5;
 		base_status->matk_min += skill * 5;

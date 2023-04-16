@@ -13045,6 +13045,9 @@ void clif_parse_SelectArrow(int fd,struct map_session_data *sd) {
 		case NC_MAGICDECOY:
 			skill_magicdecoy(sd,p->itemId,NC_MAGICDECOY);
 			break;
+		case CR_CULTIVATION:
+			skill_plant_cultivation(sd,p->itemId,CR_CULTIVATION);
+			break;
 	}
 	clif_menuskill_clear(sd);
 }
@@ -19004,6 +19007,73 @@ void clif_millenniumshield(struct block_list *bl, short shields) {
 	WBUFW(buf,8) = 0;
 	clif_send(buf,packet_len(0x440),bl,AREA);
 #endif
+}
+
+
+
+void clif_plant_cultivation_list( struct map_session_data *sd, uint16 skill_lv, short x, short y, int skill_id){
+	nullpo_retv( sd );
+	int fd = sd->fd;
+
+	if( !session_isActive( fd ) ){
+		return;
+	}
+
+	WFIFOHEAD( fd, sizeof( struct PACKET_ZC_MAKINGARROW_LIST ) + MAX_INVENTORY * sizeof( struct PACKET_ZC_MAKINGARROW_LIST_sub ) );
+	struct PACKET_ZC_MAKINGARROW_LIST *p = (struct PACKET_ZC_MAKINGARROW_LIST *)WFIFOP(fd, 0);
+	p->packetType = HEADER_ZC_MAKINGARROW_LIST;
+	int count = 0;
+	if(skill_lv == 1){
+		count = 2;
+		p->items[0].itemId = client_nameid(511);
+		p->items[1].itemId = client_nameid(507);
+	}
+	if(skill_lv == 2){
+		count = 4;
+		p->items[0].itemId = client_nameid(511);
+		p->items[1].itemId = client_nameid(507);
+		p->items[2].itemId = client_nameid(508);
+		p->items[3].itemId = client_nameid(509);
+	}
+	if(skill_lv == 3){
+		count = 5;
+		p->items[0].itemId = client_nameid(511);
+		p->items[1].itemId = client_nameid(507);
+		p->items[2].itemId = client_nameid(508);
+		p->items[3].itemId = client_nameid(509);
+		p->items[4].itemId = client_nameid(510);
+	}
+	if(skill_lv == 4){
+		count = 6;
+		p->items[0].itemId = client_nameid(511);
+		p->items[1].itemId = client_nameid(507);
+		p->items[2].itemId = client_nameid(508);
+		p->items[3].itemId = client_nameid(509);
+		p->items[4].itemId = client_nameid(510);
+		p->items[5].itemId = client_nameid(608);
+	}
+	if(skill_lv == 5){
+		count = 8;
+		p->items[0].itemId = client_nameid(511);
+		p->items[1].itemId = client_nameid(507);
+		p->items[2].itemId = client_nameid(508);
+		p->items[3].itemId = client_nameid(509);
+		p->items[4].itemId = client_nameid(510);
+		p->items[5].itemId = client_nameid(608);
+		p->items[6].itemId = client_nameid(990);
+		p->items[7].itemId = client_nameid(991);
+	}
+
+	if( count > 0 ) {
+		p->packetLength = sizeof( struct PACKET_ZC_MAKINGARROW_LIST ) + count * sizeof( struct PACKET_ZC_MAKINGARROW_LIST_sub );
+		WFIFOSET( fd, p->packetLength );
+		sd->menuskill_id = skill_id;
+		sd->menuskill_val = skill_lv;
+		sd->sc.comet_x = x;
+		sd->sc.comet_y = y;
+	}else{
+		clif_skill_fail( sd, skill_id, USESKILL_FAIL_LEVEL, 0 );
+	}
 }
 
 /**

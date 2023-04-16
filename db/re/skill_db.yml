@@ -13133,17 +13133,15 @@ Body:
     TargetType: Ground
     DamageFlags:
       NoDamage: true
-    Range: 1
+    Range: 2
     Hit: Single
     HitCount: 1
-    Duration1: 300000
+    ActiveInstance: 10
+    CastCancel: true
+    Duration1: 60000
+    Cooldown:
     Requires:
-      SpCost: 10
-      ItemCost:
-        - Item: Mushroom_Spore
-          Amount: 1
-        - Item: Stem
-          Amount: 1
+      SpCost: 20
   - Id: 492
     Name: ITEM_ENCHANTARMS
     Description: Weapon Enchantment
