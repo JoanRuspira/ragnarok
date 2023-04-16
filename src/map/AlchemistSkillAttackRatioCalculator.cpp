@@ -38,10 +38,36 @@ int AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_
 		case GN_SPORE_EXPLOSION:
 			return calculate_bomb_attack_ratio(skill_lv);
 			break;
+		case GN_WALLOFTHORN:
+			return calculate_wild_thorns_attack_ratio(skill_lv, sstatus->int_);
+			break;
 		default:
 			return 0;
 			break;
 	}
+}
+
+int AlchemistSkillAttackRatioCalculator::calculate_wild_thorns_attack_ratio(int skill_lv, int intelligence)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = -80;
+			break;
+		case 2:
+			ratio = -60;
+			break;
+		case 3:
+			ratio = -40;
+			break;
+		case 4:
+			ratio = -20;
+			break;
+		case 5:
+			ratio = 0;
+			break;
+	}
+	return ratio + (intelligence);
 }
 
 int AlchemistSkillAttackRatioCalculator::calculate_bomb_attack_ratio(int skill_lv)
@@ -96,19 +122,19 @@ int AlchemistSkillAttackRatioCalculator::calculate_demonstration_attack_ratio(in
 	int ratio = 0;
 	switch (skill_lv) {
 		case 1:
-			ratio = 125;
+			ratio = 225;
 			break;
 		case 2:
-			ratio = 150;
+			ratio = 250;
 			break;
 		case 3:
-			ratio = 175;
+			ratio = 275;
 			break;
 		case 4:
-			ratio = 200;
+			ratio = 300;
 			break;
 		case 5:
-			ratio = 225;
+			ratio = 325;
 			break;
 		}
 	return ratio + (intelligence);

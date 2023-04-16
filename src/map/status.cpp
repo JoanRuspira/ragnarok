@@ -2384,10 +2384,6 @@ bool status_check_skilluse(struct block_list *src, struct block_list *target, ui
 			}
 			break;
 #endif
-		case GN_WALLOFTHORN:
-			if( target && status_isdead(target) )
-				return false;
-			break;
 		case AL_TELEPORT:
 		case ALL_ODINS_POWER:
 			// Should fail when used on top of Land Protector [Skotlex]

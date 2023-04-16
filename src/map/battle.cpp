@@ -2862,11 +2862,8 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case HT_HURRICANEFURY:
 			skillratio += HunterSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
-		case AM_EL_ACTION:
 		case HM_BASILISK_1:
 		case HFLI_SBR44:
-		case HM_BEHOLDER_2:
-		case AM2_HOM_ACTION:
 		case AM_DEMONSTRATION:
 		case AM_ACIDTERROR:
 		case GN_SPORE_EXPLOSION:
@@ -3454,9 +3451,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 				if(sd && sd->cart_weight)
 					skillratio += sd->cart_weight / 10 / (150 - min(sd->status.str,120)) + pc_checkskill(sd,GN_REMODELING_CART) * 50;
 			}
-			break;
-		case GN_WALLOFTHORN:
-			skillratio += 10 * skill_lv;
 			break;
 		case GN_CRAZYWEED_ATK:
 			skillratio += -100 + 700 + 100 * skill_lv;
@@ -4648,7 +4642,6 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src, struct bl
 	else if(!(infdef = is_infinite_defense(target, wd.flag))) { //no need for math against plants
 		int64 ratio = 0;
 		int i = 0;
-
 		SkillBaseDamageCalculator::battle_calc_skill_base_damage(&wd, src, target, skill_id, skill_lv); // base skill damage
 		ratio = battle_calc_attack_skill_ratio(&wd, src, target, skill_id, skill_lv); // skill level ratios
 
@@ -5127,13 +5120,9 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case WL_SOULEXPANSION:
 						skillratio += WizardSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
-					case AM_EL_ACTION:
 					case HM_BEHOLDER_1:
-					case AM2_HOM_ACTION:
-					case HFLI_SBR44:
 					case HM_BEHOLDER_2:
-					case AM_DEMONSTRATION:
-					case AM_ACIDTERROR:
+					case GN_WALLOFTHORN:
 						skillratio += AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
 					case MG_FIREBALL:
@@ -5983,7 +5972,7 @@ void battle_vanish_damage(struct map_session_data *sd, struct block_list *target
 struct Damage battle_calc_attack(int attack_type,struct block_list *bl,struct block_list *target,uint16 skill_id,uint16 skill_lv,int flag)
 {
 	struct Damage d;
-
+	
 	switch(attack_type) {
 		case BF_WEAPON: d = battle_calc_weapon_attack(bl,target,skill_id,skill_lv,flag); break;
 		case BF_MAGIC:  d = battle_calc_magic_attack(bl,target,skill_id,skill_lv,flag);  break;

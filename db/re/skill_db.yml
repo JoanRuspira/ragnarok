@@ -6557,6 +6557,7 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Ground
+    SplashArea: 3
     DamageFlags:
       NoDamage: true
       IgnoreAtkCard: true
@@ -6584,7 +6585,7 @@ Body:
     Unit:
       Id: Demonstration
       Range: 1
-      Interval: 5000
+      Interval: 2000
       Target: Enemy
       Flag:
         NoReiteration: true
@@ -25778,7 +25779,6 @@ Body:
     Range: 9
     Hit: Multi_Hit
     HitCount: -2
-    Element: Weapon
     SplashArea: 3
     Element: Neutral
     CopyFlags:
@@ -25797,59 +25797,43 @@ Body:
     Name: GN_WALLOFTHORN
     Description: Wall of Thorns
     MaxLevel: 5
-    Type: Weapon
+    Type: Magic
     TargetType: Ground
-    DamageFlags:
-      IgnoreAtkCard: true
-    Flags:
-      IgnoreAutoGuard: true
-      IgnoreCicada: true
     Range: 9
     Hit: Single
+    Element: Neutral
     HitCount: 1
     ActiveInstance: 1
     CopyFlags:
       Skill:
         Reproduce: true
     CastCancel: true
-    CastTime: 1500
-    AfterCastActDelay: 500
+    CastTime: 7000
+    AfterCastActDelay: 2000
     Duration1:
       - Level: 1
-        Time: 10000
+        Time: 30000
       - Level: 2
-        Time: 11000
+        Time: 6000
       - Level: 3
-        Time: 12000
+        Time: 9000
       - Level: 4
-        Time: 13000
+        Time: 12000
       - Level: 5
-        Time: 14000
-    Cooldown: 5000
+        Time: 15000
+    Cooldown: 20000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 40
-        - Level: 2
-          Amount: 50
-        - Level: 3
-          Amount: 60
-        - Level: 4
-          Amount: 70
-        - Level: 5
-          Amount: 80
+      SpCost: 50
       ItemCost:
-        - Item: Seed_Of_Horny_Plant
+        - Item: MenEater_Plant_Bottle
           Amount: 1
     Unit:
       Id: Wallofthorn
       AlternateId: Firewall
       Layout: -1
       Range: 1
-      Interval: 300
+      Interval: 2000
       Target: Enemy
-      Flag:
-        RemovedByFireRain: true
   - Id: 2483
     Name: GN_CRAZYWEED
     Description: Crazy Weed

@@ -12753,7 +12753,7 @@ struct skill_unit_group *skill_unitsetting(struct block_list *src, uint16 skill_
 	case GN_WALLOFTHORN:
 		// Turns to Firewall
 		if( flag&1 )
-			limit = 3000;
+			limit = skill_lv * 3000;
 		val3 = (x<<16)|y;
 		break;
 	case GN_DEMONIC_FIRE:
@@ -12906,8 +12906,7 @@ struct skill_unit_group *skill_unitsetting(struct block_list *src, uint16 skill_
 			case GN_WALLOFTHORN:
 				if (flag&1) // Turned become Firewall
 					break;
-				unit_val1 = 2000 + 2000 * skill_lv; // HP
-				unit_val2 = 20; // Max hits
+				unit_val1 = sd->status.max_hp; // HP
 				break;
 			case RL_B_TRAP:
 				unit_val1 = 3500;
@@ -13896,10 +13895,6 @@ int skill_unit_onplace_timer(struct skill_unit *unit, struct block_list *bl, t_t
 			break;
 
 		case UNT_WALLOFTHORN:
-			if (unit->val2-- <= 0) // Max hit reached
-				break;
-			if (status_bl_has_mode(bl,MD_STATUSIMMUNE))
-				break; // This skill doesn't affect to Boss monsters. [iRO Wiki]
 			skill_blown(&unit->bl, bl, skill_get_blewcount(sg->skill_id, sg->skill_lv), unit_getdir(bl), BLOWN_IGNORE_NO_KNOCKBACK);
 			skill_addtimerskill(ss, tick + 100, bl->id, unit->bl.x, unit->bl.y, sg->skill_id, sg->skill_lv, skill_get_type(sg->skill_id), 4|SD_LEVEL);
 			break;
@@ -18158,7 +18153,7 @@ int skill_unit_timer_sub_onplace(struct block_list* bl, va_list ap)
 	nullpo_ret(unit);
 
 	if( !unit->alive || bl->prev == NULL )
-		return 0;
+		return 0;		
 
 	nullpo_ret(group = unit->group);
 
@@ -18384,7 +18379,7 @@ static int skill_unit_timer_sub(DBKey key, DBData *data, va_list ap)
 					skill_delunitgroup(group);
 					break;
 				}
-				if (unit->val1 <= 0 || unit->val2 <= 0) // Remove the unit only if no HP or hit limit is reached
+				if (unit->val1 <= 0 ) // Remove the unit only if no HP 
 					skill_delunit(unit);
 				break;
 			case UNT_SANCTUARY:
@@ -20058,9 +20053,15 @@ void skill_init_unit_layout (void) {
 					}
 					break;
 				case GN_WALLOFTHORN: {
-						static const int dx[] = {-1,-2,-2,-2,-2,-2,-1, 0, 1, 2, 2, 2, 2, 2, 1, 0};
-						static const int dy[] = { 2, 2, 1, 0,-1,-2,-2,-2,-2,-2,-1, 0, 1, 2, 2, 2};
-						skill_unit_layout[pos].count = 16;
+						static const int dx[] = {
+							-1, 0, 1,-1, 0, 1,-3,-2,-1, 0,
+							 1, 2, 3,-3,-2,-1, 0, 1, 2, 3,
+							-3,-2,-1, 0, 1, 2, 3,-1, 0, 1,-1, 0, 1};
+						static const int dy[] = {
+							-3,-3,-3,-2,-2,-2,-1,-1,-1,-1,
+							-1,-1,-1, 0, 0, 0, 0, 0, 0, 0,
+							 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3};
+						skill_unit_layout[pos].count = 33;
 						memcpy(skill_unit_layout[pos].dx,dx,sizeof(dx));
 						memcpy(skill_unit_layout[pos].dy,dy,sizeof(dy));
 					}
