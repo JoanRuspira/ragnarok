@@ -67,19 +67,19 @@ int BardSkillAttackRatioCalculator::calculate_great_echo_atk_ratio(int skill_lv)
 	int ratio = 0;
 	switch (skill_lv) {
 		case 1:
-			ratio = 130;
+			ratio = 150;
 			break;
 		case 2:
-			ratio = 200;
+			ratio = 250;
 			break;
 		case 3:
-			ratio = 280;
+			ratio = 350;
 			break;
 		case 4:
-			ratio = 400;
+			ratio = 450;
 			break;
 		case 5:
-			ratio = 500;
+			ratio = 550;
 			break;
 		}
 	return ratio;
