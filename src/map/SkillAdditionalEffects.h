@@ -67,6 +67,6 @@ private:
 	static void player_skill_additional_effect(struct block_list* src, struct block_list *bl, struct map_session_data *sd,
 		struct status_data *sstatus, struct status_change *sc, struct mob_data *dstmd, int &skill, uint16 skill_id, uint16 skill_lv, int &rate, int &attack_type, t_tick tick);
 
-	static void SkillAdditionalEffects::monster_skill_additional_effect(struct block_list* src, struct block_list *bl,
+	static void monster_skill_additional_effect(struct block_list* src, struct block_list *bl,
 		struct status_data *sstatus, uint16 skill_id, uint16 skill_lv, int &rate);
 };
