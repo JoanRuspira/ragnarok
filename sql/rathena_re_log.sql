@@ -1,31 +1,9 @@
--- phpMyAdmin SQL Dump
--- version 5.0.4
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1:3306
--- Generation Time: Apr 18, 2023 at 12:04 AM
--- Server version: 10.3.22-MariaDB-log
--- PHP Version: 7.1.33
+
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `rathena_re_log`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `atcommandlog`
---
 
 CREATE TABLE `atcommandlog` (
   `atcommand_id` mediumint(9) UNSIGNED NOT NULL,
@@ -37,11 +15,6 @@ CREATE TABLE `atcommandlog` (
   `command` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `branchlog`
---
 
 CREATE TABLE `branchlog` (
   `branch_id` mediumint(9) UNSIGNED NOT NULL,
@@ -52,11 +25,7 @@ CREATE TABLE `branchlog` (
   `map` varchar(11) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `cashlog`
---
 
 CREATE TABLE `cashlog` (
   `id` int(11) NOT NULL,
@@ -68,11 +37,7 @@ CREATE TABLE `cashlog` (
   `map` varchar(11) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `chatlog`
---
 
 CREATE TABLE `chatlog` (
   `id` bigint(20) NOT NULL,
@@ -88,11 +53,7 @@ CREATE TABLE `chatlog` (
   `message` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `feedinglog`
---
 
 CREATE TABLE `feedinglog` (
   `id` int(11) NOT NULL,
@@ -108,11 +69,7 @@ CREATE TABLE `feedinglog` (
   `y` smallint(5) UNSIGNED NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `loginlog`
---
 
 CREATE TABLE `loginlog` (
   `time` datetime NOT NULL,
@@ -122,11 +79,7 @@ CREATE TABLE `loginlog` (
   `log` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `mvplog`
---
 
 CREATE TABLE `mvplog` (
   `mvp_id` mediumint(9) UNSIGNED NOT NULL,
@@ -138,11 +91,7 @@ CREATE TABLE `mvplog` (
   `map` varchar(11) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `npclog`
---
 
 CREATE TABLE `npclog` (
   `npc_id` mediumint(9) UNSIGNED NOT NULL,
@@ -154,11 +103,7 @@ CREATE TABLE `npclog` (
   `mes` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `picklog`
---
 
 CREATE TABLE `picklog` (
   `id` int(11) NOT NULL,
@@ -193,11 +138,7 @@ CREATE TABLE `picklog` (
   `enchantgrade` tinyint(3) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `zenylog`
---
 
 CREATE TABLE `zenylog` (
   `id` int(11) NOT NULL,
@@ -209,50 +150,34 @@ CREATE TABLE `zenylog` (
   `map` varchar(11) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Indexes for dumped tables
---
 
---
--- Indexes for table `atcommandlog`
---
 ALTER TABLE `atcommandlog`
   ADD PRIMARY KEY (`atcommand_id`),
   ADD KEY `account_id` (`account_id`),
   ADD KEY `char_id` (`char_id`);
 
---
--- Indexes for table `branchlog`
---
+
 ALTER TABLE `branchlog`
   ADD PRIMARY KEY (`branch_id`),
   ADD KEY `account_id` (`account_id`),
   ADD KEY `char_id` (`char_id`);
 
---
--- Indexes for table `cashlog`
---
+
 ALTER TABLE `cashlog`
   ADD PRIMARY KEY (`id`),
   ADD KEY `type` (`type`);
 
---
--- Indexes for table `chatlog`
---
+
 ALTER TABLE `chatlog`
   ADD PRIMARY KEY (`id`),
   ADD KEY `src_accountid` (`src_accountid`),
   ADD KEY `src_charid` (`src_charid`);
 
---
--- Indexes for table `feedinglog`
---
+
 ALTER TABLE `feedinglog`
   ADD PRIMARY KEY (`id`);
 
---
--- Indexes for table `loginlog`
---
+
 ALTER TABLE `loginlog`
   ADD KEY `ip` (`ip`);
 
@@ -262,87 +187,55 @@ ALTER TABLE `loginlog`
 ALTER TABLE `mvplog`
   ADD PRIMARY KEY (`mvp_id`);
 
---
--- Indexes for table `npclog`
---
+
 ALTER TABLE `npclog`
   ADD PRIMARY KEY (`npc_id`),
   ADD KEY `account_id` (`account_id`),
   ADD KEY `char_id` (`char_id`);
 
---
--- Indexes for table `picklog`
---
+
 ALTER TABLE `picklog`
   ADD PRIMARY KEY (`id`),
   ADD KEY `type` (`type`);
 
---
--- Indexes for table `zenylog`
---
+
 ALTER TABLE `zenylog`
   ADD PRIMARY KEY (`id`),
   ADD KEY `type` (`type`);
 
---
--- AUTO_INCREMENT for dumped tables
---
 
---
--- AUTO_INCREMENT for table `atcommandlog`
---
 ALTER TABLE `atcommandlog`
   MODIFY `atcommand_id` mediumint(9) UNSIGNED NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `branchlog`
---
+
 ALTER TABLE `branchlog`
   MODIFY `branch_id` mediumint(9) UNSIGNED NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `cashlog`
---
+
 ALTER TABLE `cashlog`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `chatlog`
---
+
 ALTER TABLE `chatlog`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `feedinglog`
---
+
 ALTER TABLE `feedinglog`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `mvplog`
---
+
 ALTER TABLE `mvplog`
   MODIFY `mvp_id` mediumint(9) UNSIGNED NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `npclog`
---
+
 ALTER TABLE `npclog`
   MODIFY `npc_id` mediumint(9) UNSIGNED NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `picklog`
---
+
 ALTER TABLE `picklog`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `zenylog`
---
+
 ALTER TABLE `zenylog`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

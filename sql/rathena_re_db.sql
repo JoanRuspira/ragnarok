@@ -1,31 +1,8 @@
--- phpMyAdmin SQL Dump
--- version 5.0.4
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1:3306
--- Generation Time: Apr 18, 2023 at 12:05 AM
--- Server version: 10.3.22-MariaDB-log
--- PHP Version: 7.1.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `rathena_re_db`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `acc_reg_num`
---
 
 CREATE TABLE `acc_reg_num` (
   `account_id` int(11) UNSIGNED NOT NULL DEFAULT 0,
@@ -34,11 +11,6 @@ CREATE TABLE `acc_reg_num` (
   `value` bigint(11) NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `acc_reg_str`
---
 
 CREATE TABLE `acc_reg_str` (
   `account_id` int(11) UNSIGNED NOT NULL DEFAULT 0,
@@ -47,11 +19,6 @@ CREATE TABLE `acc_reg_str` (
   `value` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `achievement`
---
 
 CREATE TABLE `achievement` (
   `char_id` int(11) UNSIGNED NOT NULL DEFAULT 0,
@@ -70,11 +37,6 @@ CREATE TABLE `achievement` (
   `rewarded` datetime DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `auction`
---
 
 CREATE TABLE `auction` (
   `auction_id` bigint(20) UNSIGNED NOT NULL,
@@ -114,11 +76,6 @@ CREATE TABLE `auction` (
   `enchantgrade` tinyint(3) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bonus_script`
---
 
 CREATE TABLE `bonus_script` (
   `char_id` int(11) UNSIGNED NOT NULL,
@@ -129,11 +86,7 @@ CREATE TABLE `bonus_script` (
   `icon` smallint(3) NOT NULL DEFAULT -1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `buyingstores`
---
 
 CREATE TABLE `buyingstores` (
   `id` int(10) UNSIGNED NOT NULL,
@@ -151,11 +104,7 @@ CREATE TABLE `buyingstores` (
   `autotrade` tinyint(4) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `buyingstore_items`
---
 
 CREATE TABLE `buyingstore_items` (
   `buyingstore_id` int(10) UNSIGNED NOT NULL,
@@ -165,11 +114,6 @@ CREATE TABLE `buyingstore_items` (
   `price` int(10) UNSIGNED NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `cart_inventory`
---
 
 CREATE TABLE `cart_inventory` (
   `id` int(11) NOT NULL,
@@ -205,11 +149,7 @@ CREATE TABLE `cart_inventory` (
   `enchantgrade` tinyint(3) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `char`
---
 
 CREATE TABLE `char` (
   `char_id` int(11) UNSIGNED NOT NULL,
@@ -279,11 +219,7 @@ CREATE TABLE `char` (
   `show_equip` tinyint(3) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `charlog`
---
 
 CREATE TABLE `charlog` (
   `id` bigint(20) UNSIGNED NOT NULL,
@@ -302,11 +238,6 @@ CREATE TABLE `charlog` (
   `hair_color` int(11) NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `char_reg_num`
---
 
 CREATE TABLE `char_reg_num` (
   `char_id` int(11) UNSIGNED NOT NULL DEFAULT 0,
@@ -315,11 +246,7 @@ CREATE TABLE `char_reg_num` (
   `value` bigint(11) NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `char_reg_str`
---
 
 CREATE TABLE `char_reg_str` (
   `char_id` int(11) UNSIGNED NOT NULL DEFAULT 0,
@@ -328,11 +255,6 @@ CREATE TABLE `char_reg_str` (
   `value` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `clan`
---
 
 CREATE TABLE `clan` (
   `clan_id` int(11) UNSIGNED NOT NULL,
@@ -342,11 +264,7 @@ CREATE TABLE `clan` (
   `max_member` smallint(6) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `clan_alliance`
---
 
 CREATE TABLE `clan_alliance` (
   `clan_id` int(11) UNSIGNED NOT NULL DEFAULT 0,
@@ -355,11 +273,7 @@ CREATE TABLE `clan_alliance` (
   `name` varchar(24) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `db_roulette`
---
 
 CREATE TABLE `db_roulette` (
   `index` int(11) NOT NULL DEFAULT 0,
@@ -369,11 +283,7 @@ CREATE TABLE `db_roulette` (
   `flag` smallint(5) UNSIGNED NOT NULL DEFAULT 1
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `elemental`
---
 
 CREATE TABLE `elemental` (
   `ele_id` int(11) UNSIGNED NOT NULL,
@@ -395,22 +305,14 @@ CREATE TABLE `elemental` (
   `life_time` bigint(20) NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `friends`
---
 
 CREATE TABLE `friends` (
   `char_id` int(11) NOT NULL DEFAULT 0,
   `friend_id` int(11) NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `global_acc_reg_num`
---
 
 CREATE TABLE `global_acc_reg_num` (
   `account_id` int(11) UNSIGNED NOT NULL DEFAULT 0,
@@ -419,11 +321,7 @@ CREATE TABLE `global_acc_reg_num` (
   `value` bigint(11) NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `global_acc_reg_str`
---
 
 CREATE TABLE `global_acc_reg_str` (
   `account_id` int(11) UNSIGNED NOT NULL DEFAULT 0,
@@ -432,11 +330,6 @@ CREATE TABLE `global_acc_reg_str` (
   `value` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `guild`
---
 
 CREATE TABLE `guild` (
   `guild_id` int(11) UNSIGNED NOT NULL,
@@ -458,11 +351,6 @@ CREATE TABLE `guild` (
   `last_master_change` datetime DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `guild_alliance`
---
 
 CREATE TABLE `guild_alliance` (
   `guild_id` int(11) UNSIGNED NOT NULL DEFAULT 0,
@@ -471,11 +359,7 @@ CREATE TABLE `guild_alliance` (
   `name` varchar(24) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `guild_castle`
---
 
 CREATE TABLE `guild_castle` (
   `castle_id` int(11) UNSIGNED NOT NULL DEFAULT 0,
@@ -498,11 +382,6 @@ CREATE TABLE `guild_castle` (
   `visibleG7` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `guild_expulsion`
---
 
 CREATE TABLE `guild_expulsion` (
   `guild_id` int(11) UNSIGNED NOT NULL DEFAULT 0,
@@ -511,11 +390,6 @@ CREATE TABLE `guild_expulsion` (
   `mes` varchar(40) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `guild_member`
---
 
 CREATE TABLE `guild_member` (
   `guild_id` int(11) UNSIGNED NOT NULL DEFAULT 0,
@@ -524,11 +398,6 @@ CREATE TABLE `guild_member` (
   `position` tinyint(6) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `guild_position`
---
 
 CREATE TABLE `guild_position` (
   `guild_id` int(9) UNSIGNED NOT NULL DEFAULT 0,
@@ -538,11 +407,6 @@ CREATE TABLE `guild_position` (
   `exp_mode` tinyint(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `guild_skill`
---
 
 CREATE TABLE `guild_skill` (
   `guild_id` int(11) UNSIGNED NOT NULL DEFAULT 0,
@@ -550,11 +414,6 @@ CREATE TABLE `guild_skill` (
   `lv` tinyint(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `guild_storage`
---
 
 CREATE TABLE `guild_storage` (
   `id` int(10) UNSIGNED NOT NULL,
@@ -590,11 +449,6 @@ CREATE TABLE `guild_storage` (
   `enchantgrade` tinyint(3) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `guild_storage_log`
---
 
 CREATE TABLE `guild_storage_log` (
   `id` int(11) NOT NULL,
@@ -632,11 +486,7 @@ CREATE TABLE `guild_storage_log` (
   `enchantgrade` tinyint(3) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `homunculus`
---
 
 CREATE TABLE `homunculus` (
   `homun_id` int(11) NOT NULL,
@@ -665,11 +515,7 @@ CREATE TABLE `homunculus` (
   `autofeed` tinyint(2) NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `hotkey`
---
 
 CREATE TABLE `hotkey` (
   `char_id` int(11) NOT NULL,
@@ -679,11 +525,7 @@ CREATE TABLE `hotkey` (
   `skill_lvl` tinyint(4) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `interlog`
---
 
 CREATE TABLE `interlog` (
   `id` int(11) NOT NULL,
@@ -691,11 +533,7 @@ CREATE TABLE `interlog` (
   `log` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `inventory`
---
 
 CREATE TABLE `inventory` (
   `id` int(11) UNSIGNED NOT NULL,
@@ -733,11 +571,6 @@ CREATE TABLE `inventory` (
   `enchantgrade` tinyint(3) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `ipbanlist`
---
 
 CREATE TABLE `ipbanlist` (
   `list` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -746,11 +579,7 @@ CREATE TABLE `ipbanlist` (
   `reason` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `item_db2_re`
---
 
 CREATE TABLE `item_db2_re` (
   `id` int(10) UNSIGNED NOT NULL DEFAULT 0,
@@ -862,11 +691,7 @@ CREATE TABLE `item_db2_re` (
   `unequip_script` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `item_db_re`
---
 
 CREATE TABLE `item_db_re` (
   `id` int(10) UNSIGNED NOT NULL DEFAULT 0,
@@ -978,11 +803,6 @@ CREATE TABLE `item_db_re` (
   `unequip_script` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `login`
---
 
 CREATE TABLE `login` (
   `account_id` int(11) UNSIGNED NOT NULL,
@@ -1007,20 +827,14 @@ CREATE TABLE `login` (
   `web_auth_token_enabled` tinyint(2) NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `login`
---
+
 
 INSERT INTO `login` (`account_id`, `userid`, `user_pass`, `sex`, `email`, `group_id`, `state`, `unban_time`, `expiration_time`, `logincount`, `lastlogin`, `last_ip`, `birthdate`, `character_slots`, `pincode`, `pincode_change`, `vip_time`, `old_group`, `web_auth_token`, `web_auth_token_enabled`) VALUES
 (1, 'inter_user', 'fba1bf81cf214153dcdd484b02520be4', 'S', 'athena@athena.com', 0, 0, 0, 0, 4166, '2023-04-17 13:51:50', '127.0.0.1', NULL, 0, '', 0, 0, 0, NULL, 0),
 (2000000, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'M', 'a@a.com', 99, 0, 0, 0, 198, '2023-04-16 12:11:39', '127.0.0.1', NULL, 15, '', 0, 0, 0, NULL, 0),
 (2000001, 'joangr', 'e10adc3949ba59abbe56e057f20f883e', 'M', 'a@a.com', 99, 0, 0, 0, 7119, '2023-04-17 14:41:56', '127.0.0.1', NULL, 15, '', 0, 0, 0, '4ac975eb6587fbed', 0);
 
--- --------------------------------------------------------
 
---
--- Table structure for table `mail`
---
 
 CREATE TABLE `mail` (
   `id` bigint(20) UNSIGNED NOT NULL,
@@ -1036,11 +850,7 @@ CREATE TABLE `mail` (
   `type` smallint(5) NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `mail_attachments`
---
 
 CREATE TABLE `mail_attachments` (
   `id` bigint(20) UNSIGNED NOT NULL,
@@ -1074,11 +884,7 @@ CREATE TABLE `mail_attachments` (
   `enchantgrade` tinyint(3) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `mapreg`
---
 
 CREATE TABLE `mapreg` (
   `varname` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
@@ -1086,11 +892,7 @@ CREATE TABLE `mapreg` (
   `value` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `market`
---
 
 CREATE TABLE `market` (
   `name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -1100,11 +902,7 @@ CREATE TABLE `market` (
   `flag` tinyint(2) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `memo`
---
 
 CREATE TABLE `memo` (
   `memo_id` int(11) UNSIGNED NOT NULL,
@@ -1114,11 +912,6 @@ CREATE TABLE `memo` (
   `y` smallint(4) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `mercenary`
---
 
 CREATE TABLE `mercenary` (
   `mer_id` int(11) UNSIGNED NOT NULL,
@@ -1130,11 +923,7 @@ CREATE TABLE `mercenary` (
   `life_time` bigint(20) NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `mercenary_owner`
---
 
 CREATE TABLE `mercenary_owner` (
   `char_id` int(11) NOT NULL,
@@ -1147,11 +936,6 @@ CREATE TABLE `mercenary_owner` (
   `sword_faith` int(11) NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `mob_db2_re`
---
 
 CREATE TABLE `mob_db2_re` (
   `id` int(11) UNSIGNED NOT NULL,
@@ -1305,11 +1089,7 @@ CREATE TABLE `mob_db2_re` (
   `drop10_index` tinyint(2) UNSIGNED DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `mob_db_re`
---
 
 CREATE TABLE `mob_db_re` (
   `id` int(11) UNSIGNED NOT NULL,
@@ -1463,11 +1243,7 @@ CREATE TABLE `mob_db_re` (
   `drop10_index` tinyint(2) UNSIGNED DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `party`
---
 
 CREATE TABLE `party` (
   `party_id` int(11) UNSIGNED NOT NULL,
@@ -1478,11 +1254,6 @@ CREATE TABLE `party` (
   `leader_char` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `pet`
---
 
 CREATE TABLE `pet` (
   `pet_id` int(11) UNSIGNED NOT NULL,
@@ -1500,11 +1271,6 @@ CREATE TABLE `pet` (
   `autofeed` tinyint(2) NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `quest`
---
 
 CREATE TABLE `quest` (
   `char_id` int(11) UNSIGNED NOT NULL DEFAULT 0,
@@ -1516,11 +1282,7 @@ CREATE TABLE `quest` (
   `count3` mediumint(8) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `sales`
---
 
 CREATE TABLE `sales` (
   `nameid` int(10) UNSIGNED NOT NULL,
@@ -1529,11 +1291,7 @@ CREATE TABLE `sales` (
   `amount` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `sc_data`
---
 
 CREATE TABLE `sc_data` (
   `account_id` int(11) UNSIGNED NOT NULL,
@@ -1546,11 +1304,6 @@ CREATE TABLE `sc_data` (
   `val4` int(11) NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `skill`
---
 
 CREATE TABLE `skill` (
   `char_id` int(11) UNSIGNED NOT NULL DEFAULT 0,
@@ -1559,11 +1312,7 @@ CREATE TABLE `skill` (
   `flag` tinyint(1) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `skillcooldown`
---
 
 CREATE TABLE `skillcooldown` (
   `account_id` int(11) UNSIGNED NOT NULL,
@@ -1572,11 +1321,6 @@ CREATE TABLE `skillcooldown` (
   `tick` bigint(20) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `skill_homunculus`
---
 
 CREATE TABLE `skill_homunculus` (
   `homun_id` int(11) NOT NULL,
@@ -1584,11 +1328,7 @@ CREATE TABLE `skill_homunculus` (
   `lv` smallint(6) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `storage`
---
 
 CREATE TABLE `storage` (
   `id` int(11) UNSIGNED NOT NULL,
@@ -1624,11 +1364,6 @@ CREATE TABLE `storage` (
   `enchantgrade` tinyint(3) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `vendings`
---
 
 CREATE TABLE `vendings` (
   `id` int(10) UNSIGNED NOT NULL,
@@ -1645,11 +1380,6 @@ CREATE TABLE `vendings` (
   `autotrade` tinyint(4) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `vending_items`
---
 
 CREATE TABLE `vending_items` (
   `vending_id` int(10) UNSIGNED NOT NULL,
@@ -1659,65 +1389,42 @@ CREATE TABLE `vending_items` (
   `price` int(10) UNSIGNED NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Indexes for dumped tables
---
 
---
--- Indexes for table `acc_reg_num`
---
 ALTER TABLE `acc_reg_num`
   ADD PRIMARY KEY (`account_id`,`key`,`index`),
   ADD KEY `account_id` (`account_id`);
 
---
--- Indexes for table `acc_reg_str`
---
+
 ALTER TABLE `acc_reg_str`
   ADD PRIMARY KEY (`account_id`,`key`,`index`),
   ADD KEY `account_id` (`account_id`);
 
---
--- Indexes for table `achievement`
---
+
 ALTER TABLE `achievement`
   ADD PRIMARY KEY (`char_id`,`id`),
   ADD KEY `char_id` (`char_id`);
 
---
--- Indexes for table `auction`
---
+
 ALTER TABLE `auction`
   ADD PRIMARY KEY (`auction_id`);
 
---
--- Indexes for table `bonus_script`
---
 ALTER TABLE `bonus_script`
   ADD PRIMARY KEY (`char_id`,`type`);
 
---
--- Indexes for table `buyingstores`
---
+
 ALTER TABLE `buyingstores`
   ADD PRIMARY KEY (`id`);
 
---
--- Indexes for table `buyingstore_items`
---
+
 ALTER TABLE `buyingstore_items`
   ADD PRIMARY KEY (`buyingstore_id`,`index`);
 
---
--- Indexes for table `cart_inventory`
---
+
 ALTER TABLE `cart_inventory`
   ADD PRIMARY KEY (`id`),
   ADD KEY `char_id` (`char_id`);
 
---
--- Indexes for table `char`
---
+
 ALTER TABLE `char`
   ADD PRIMARY KEY (`char_id`),
   ADD UNIQUE KEY `name_key` (`name`),
@@ -1726,436 +1433,295 @@ ALTER TABLE `char`
   ADD KEY `guild_id` (`guild_id`),
   ADD KEY `online` (`online`);
 
---
--- Indexes for table `charlog`
---
+
 ALTER TABLE `charlog`
   ADD PRIMARY KEY (`id`),
   ADD KEY `account_id` (`account_id`);
 
---
--- Indexes for table `char_reg_num`
---
+
 ALTER TABLE `char_reg_num`
   ADD PRIMARY KEY (`char_id`,`key`,`index`),
   ADD KEY `char_id` (`char_id`);
 
---
--- Indexes for table `char_reg_str`
---
+
 ALTER TABLE `char_reg_str`
   ADD PRIMARY KEY (`char_id`,`key`,`index`),
   ADD KEY `char_id` (`char_id`);
 
---
--- Indexes for table `clan`
---
+
 ALTER TABLE `clan`
   ADD PRIMARY KEY (`clan_id`);
 
---
--- Indexes for table `clan_alliance`
---
+
 ALTER TABLE `clan_alliance`
   ADD PRIMARY KEY (`clan_id`,`alliance_id`),
   ADD KEY `alliance_id` (`alliance_id`);
 
---
--- Indexes for table `db_roulette`
---
+
 ALTER TABLE `db_roulette`
   ADD PRIMARY KEY (`index`);
 
---
--- Indexes for table `elemental`
---
+
 ALTER TABLE `elemental`
   ADD PRIMARY KEY (`ele_id`);
 
---
--- Indexes for table `friends`
---
+
 ALTER TABLE `friends`
   ADD PRIMARY KEY (`char_id`,`friend_id`);
 
---
--- Indexes for table `global_acc_reg_num`
---
+
 ALTER TABLE `global_acc_reg_num`
   ADD PRIMARY KEY (`account_id`,`key`,`index`),
   ADD KEY `account_id` (`account_id`);
 
---
--- Indexes for table `global_acc_reg_str`
---
+
 ALTER TABLE `global_acc_reg_str`
   ADD PRIMARY KEY (`account_id`,`key`,`index`),
   ADD KEY `account_id` (`account_id`);
 
---
--- Indexes for table `guild`
---
+
 ALTER TABLE `guild`
   ADD PRIMARY KEY (`guild_id`,`char_id`),
   ADD UNIQUE KEY `guild_id` (`guild_id`),
   ADD KEY `char_id` (`char_id`);
 
---
--- Indexes for table `guild_alliance`
---
+
 ALTER TABLE `guild_alliance`
   ADD PRIMARY KEY (`guild_id`,`alliance_id`),
   ADD KEY `alliance_id` (`alliance_id`);
 
---
--- Indexes for table `guild_castle`
---
+
 ALTER TABLE `guild_castle`
   ADD PRIMARY KEY (`castle_id`),
   ADD KEY `guild_id` (`guild_id`);
 
---
--- Indexes for table `guild_expulsion`
---
+
 ALTER TABLE `guild_expulsion`
   ADD PRIMARY KEY (`guild_id`,`name`);
 
---
--- Indexes for table `guild_member`
---
+
 ALTER TABLE `guild_member`
   ADD PRIMARY KEY (`guild_id`,`char_id`),
   ADD KEY `char_id` (`char_id`);
 
---
--- Indexes for table `guild_position`
---
+
 ALTER TABLE `guild_position`
   ADD PRIMARY KEY (`guild_id`,`position`);
 
---
--- Indexes for table `guild_skill`
---
+
 ALTER TABLE `guild_skill`
   ADD PRIMARY KEY (`guild_id`,`id`);
 
---
--- Indexes for table `guild_storage`
---
+
 ALTER TABLE `guild_storage`
   ADD PRIMARY KEY (`id`),
   ADD KEY `guild_id` (`guild_id`);
 
---
--- Indexes for table `guild_storage_log`
---
+
 ALTER TABLE `guild_storage_log`
   ADD PRIMARY KEY (`id`),
   ADD KEY `guild_id` (`guild_id`);
 
---
--- Indexes for table `homunculus`
---
+
 ALTER TABLE `homunculus`
   ADD PRIMARY KEY (`homun_id`);
 
---
--- Indexes for table `hotkey`
---
+
 ALTER TABLE `hotkey`
   ADD PRIMARY KEY (`char_id`,`hotkey`);
 
---
--- Indexes for table `interlog`
---
+
 ALTER TABLE `interlog`
   ADD PRIMARY KEY (`id`),
   ADD KEY `time` (`time`);
 
---
--- Indexes for table `inventory`
---
+
 ALTER TABLE `inventory`
   ADD PRIMARY KEY (`id`),
   ADD KEY `char_id` (`char_id`);
 
---
--- Indexes for table `ipbanlist`
---
+
 ALTER TABLE `ipbanlist`
   ADD PRIMARY KEY (`list`,`btime`);
 
---
--- Indexes for table `item_db2_re`
---
+
 ALTER TABLE `item_db2_re`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `UniqueAegisName` (`name_aegis`);
 
---
--- Indexes for table `item_db_re`
---
+
 ALTER TABLE `item_db_re`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `UniqueAegisName` (`name_aegis`);
 
---
--- Indexes for table `login`
---
+
 ALTER TABLE `login`
   ADD PRIMARY KEY (`account_id`),
   ADD UNIQUE KEY `web_auth_token_key` (`web_auth_token`),
   ADD KEY `name` (`userid`);
 
---
--- Indexes for table `mail`
---
+
 ALTER TABLE `mail`
   ADD PRIMARY KEY (`id`);
 
---
--- Indexes for table `mail_attachments`
---
+
 ALTER TABLE `mail_attachments`
   ADD PRIMARY KEY (`id`,`index`);
 
---
--- Indexes for table `mapreg`
---
+
 ALTER TABLE `mapreg`
   ADD PRIMARY KEY (`varname`,`index`);
 
---
--- Indexes for table `market`
---
+
 ALTER TABLE `market`
   ADD PRIMARY KEY (`name`,`nameid`);
 
---
--- Indexes for table `memo`
---
+
 ALTER TABLE `memo`
   ADD PRIMARY KEY (`memo_id`),
   ADD KEY `char_id` (`char_id`);
 
---
--- Indexes for table `mercenary`
---
+
 ALTER TABLE `mercenary`
   ADD PRIMARY KEY (`mer_id`);
 
---
--- Indexes for table `mercenary_owner`
---
+
 ALTER TABLE `mercenary_owner`
   ADD PRIMARY KEY (`char_id`);
 
---
--- Indexes for table `mob_db2_re`
---
+
 ALTER TABLE `mob_db2_re`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `name_aegis` (`name_aegis`);
 
---
--- Indexes for table `mob_db_re`
---
+
 ALTER TABLE `mob_db_re`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `name_aegis` (`name_aegis`);
 
---
--- Indexes for table `party`
---
+
 ALTER TABLE `party`
   ADD PRIMARY KEY (`party_id`);
 
---
--- Indexes for table `pet`
---
+
 ALTER TABLE `pet`
   ADD PRIMARY KEY (`pet_id`);
 
---
--- Indexes for table `quest`
---
+
 ALTER TABLE `quest`
   ADD PRIMARY KEY (`char_id`,`quest_id`);
 
---
--- Indexes for table `sales`
---
+
 ALTER TABLE `sales`
   ADD PRIMARY KEY (`nameid`);
 
---
--- Indexes for table `sc_data`
---
+
 ALTER TABLE `sc_data`
   ADD PRIMARY KEY (`char_id`,`type`);
 
---
--- Indexes for table `skill`
---
+
 ALTER TABLE `skill`
   ADD PRIMARY KEY (`char_id`,`id`);
 
---
--- Indexes for table `skillcooldown`
---
+
 ALTER TABLE `skillcooldown`
   ADD PRIMARY KEY (`char_id`,`skill`);
 
---
--- Indexes for table `skill_homunculus`
---
+
 ALTER TABLE `skill_homunculus`
   ADD PRIMARY KEY (`homun_id`,`id`);
 
---
--- Indexes for table `storage`
---
+
 ALTER TABLE `storage`
   ADD PRIMARY KEY (`id`),
   ADD KEY `account_id` (`account_id`);
 
---
--- Indexes for table `vendings`
---
+
 ALTER TABLE `vendings`
   ADD PRIMARY KEY (`id`);
 
---
--- Indexes for table `vending_items`
---
+
 ALTER TABLE `vending_items`
   ADD PRIMARY KEY (`vending_id`,`index`);
 
---
--- AUTO_INCREMENT for dumped tables
---
 
---
--- AUTO_INCREMENT for table `auction`
---
 ALTER TABLE `auction`
   MODIFY `auction_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `cart_inventory`
---
+
 ALTER TABLE `cart_inventory`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `char`
---
+
 ALTER TABLE `char`
   MODIFY `char_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `charlog`
---
+
 ALTER TABLE `charlog`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `clan`
---
+
 ALTER TABLE `clan`
   MODIFY `clan_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `elemental`
---
+
 ALTER TABLE `elemental`
   MODIFY `ele_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `guild`
---
+
 ALTER TABLE `guild`
   MODIFY `guild_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `guild_storage`
---
+
 ALTER TABLE `guild_storage`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `guild_storage_log`
---
+
 ALTER TABLE `guild_storage_log`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `homunculus`
---
+
 ALTER TABLE `homunculus`
   MODIFY `homun_id` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `interlog`
---
+
 ALTER TABLE `interlog`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `inventory`
---
+
 ALTER TABLE `inventory`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `login`
---
+
 ALTER TABLE `login`
   MODIFY `account_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2000002;
 
---
--- AUTO_INCREMENT for table `mail`
---
+
 ALTER TABLE `mail`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `mail_attachments`
---
+
 ALTER TABLE `mail_attachments`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `memo`
---
+
 ALTER TABLE `memo`
   MODIFY `memo_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `mercenary`
---
+
 ALTER TABLE `mercenary`
   MODIFY `mer_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `party`
---
+
 ALTER TABLE `party`
   MODIFY `party_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `pet`
---
+
 ALTER TABLE `pet`
   MODIFY `pet_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `storage`
---
+
 ALTER TABLE `storage`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 COMMIT;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
