@@ -17,59 +17,57 @@ def getCommonSprites():
 	return [x for x in allsprites if x not in morroc + geffen + izlude + comodo + hugel]
 
 def getCityNPCS(city):
-    match city.get("Name"):
-        case "umbala":
-            return generic + umbala
-        case "umbala_natives":
-            return umbala_natives
-        case "amatsu" | "louyang":
-            return generic + amatsu
-        case "comodo", "cmd_fild07":
-            return generic + comodo
-        case "morocc" | "veins":
-            return generic + morroc
-        case "alberta":
-            return generic + alberta
-        case "ayothaya":
-            return generic + ayothaya
-        case "payon" | "pay_arche":
-            return generic + payon
-        case "izlude" | "prontera":
-            return generic + prontera
-        case "geffen" | "yuno":
-            return generic + geffen
-        case "aldebaran":
-            return generic + aldebaran
-        case "yuno":
-            return generic + geffen + aldebaran + prontera
-        case "hugel":
-            return generic + hugel
-        case "einbech":
-            return generic + einbech
-        case "einbroch":
-            return generic + einbroch
-        case "lighthalzen":
-            return generic + lighthalzen
-        case "lighthalzen_slums":
-            return lighthalzen_slums
-        case "lighthalzen_rekenber":
-            return lighthalzen_rekenber
-        case "dicastes01":
-            return generic + dicastes
-        case "rachel" | "ra_temple":
-            return generic + morroc + rachel
-        case "niflheim":
-            return generic + nifflheim
-        case "monk":
-            return monk
-        case "mid_camp":
-            return generic
-        case "nameless_n":
-            return nameless_n
-        case "airplane" | "airplane_01":
-            return generic + prontera + aldebaran
-        case _:
-            return generic
+    if city.get("Name") == "umbala":
+        return generic + umbala
+    if city.get("Name") == "umbala_natives":
+        return umbala_natives
+    if city.get("Name") == "amatsu" or city.get("Name") == "louyang":
+        return generic + amatsu
+    if city.get("Name") == "comodo" or city.get("Name") == "cmd_fild07":
+        return generic + comodo
+    if city.get("Name") == "morocc" or city.get("Name") == "veins":
+        return generic + morroc
+    if city.get("Name") == "alberta":
+        return generic + alberta
+    if city.get("Name") == "ayothaya":
+        return generic + ayothaya
+    if city.get("Name") == "payon" or city.get("Name") == "pay_arche":
+        return generic + payon
+    if city.get("Name") == "izlude" or city.get("Name") == "prontera":
+        return generic + prontera
+    if city.get("Name") == "geffen" or city.get("Name") == "yuno":
+        return generic + geffen
+    if city.get("Name") == "aldebaran":
+        return generic + aldebaran
+    if city.get("Name") == "yuno":
+        return generic + geffen + aldebaran + prontera
+    if city.get("Name") == "hugel":
+        return generic + hugel
+    if city.get("Name") == "einbech":
+        return generic + einbech
+    if city.get("Name") == "einbroch":
+        return generic + einbroch
+    if city.get("Name") == "lighthalzen":
+        return generic + lighthalzen
+    if city.get("Name") == "lighthalzen_slums":
+        return lighthalzen_slums
+    if city.get("Name") == "lighthalzen_rekenber":
+        return lighthalzen_rekenber
+    if city.get("Name") == "dicastes01":
+        return generic + dicastes
+    if city.get("Name") == "rachel" or city.get("Name") == "ra_temple":
+        return generic + morroc + rachel
+    if city.get("Name") ==  "niflheim":
+        return generic + nifflheim
+    if city.get("Name") == "monk":
+        return monk
+    if city.get("Name") == "mid_camp":
+        return generic
+    if city.get("Name") == "nameless_n":
+        return nameless_n
+    if city.get("Name") == "airplane" or city.get("Name") == "airplane_01":
+        return generic + prontera + aldebaran
+    return generic
 
 def buildCity(city):
     #randomize sprite ids
