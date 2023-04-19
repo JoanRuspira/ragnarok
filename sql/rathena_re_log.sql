@@ -181,9 +181,7 @@ ALTER TABLE `feedinglog`
 ALTER TABLE `loginlog`
   ADD KEY `ip` (`ip`);
 
---
--- Indexes for table `mvplog`
---
+
 ALTER TABLE `mvplog`
   ADD PRIMARY KEY (`mvp_id`);
 

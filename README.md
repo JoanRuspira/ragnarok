@@ -5,35 +5,51 @@ CPU           | 1 Core  | 2 Cores
 RAM           | 1 GB    | 2 GB
 Disk Space    | 300 MB  | 500 MB
 
-### Required Applications
-Compiler | [MS Visual Studio 2017](https://www.visualstudio.com/downloads/)
-Database | [MySQL 5 or newer](https://www.mysql.com/downloads/) 
+### Required Applications (Windows)
+Compiler | [MS Visual Studio](https://www.visualstudio.com/downloads/)
+Database | [MySQL5](install exe in Mega account, set root user & password as 'root', set mysql port to 3306) 
 Git      | [Windows](https://gitforwindows.org/) 
+Visual studio C++ 2012 Redistributable (install exes in this repo).
+Visual studio C++ 2015 Redistributable (install exes in this repo).
 
-## Setup
-1 - Clone the solution in this repo and build it with Visual Studio 2017 (or download a built server from Mega account).
-2 - Download OpenServer from Mega account
-      Unzip and run OpenServer
-      Start server by Clicking "Run Server" in the bottom right toolbar (Red flag)
-      Click on the now green flag -> "Advanced" -> "PHPMyAdmin"
-      Login (default: root/root)
-      Make sure a row in like this exists in the "login" table of the "rathena/re/rathena_re_db" database:
-        userid: inter_user
-        user_pass: inter_pass
-        sex: S
-        email: athena@athena.com
-        group_id: 0
-3 - Download Client side from Mega account
-      Extract and copy data.rar of this repo into client side's /data folder
-      Extract and copy System.rar of this repo into client side's /System folder
-4 - Make sure Visual studio C++ 2012 Redistributable is installed on server (install exes in this repo).
-	Make sure Visual studio C++ 2015 Redistributable is installed on server (install exes in this repo).
-5 - If running client and server in separate machines in different networks:
-		Access server and open TCP ports 5121, 6121 and 6900 in Windows firewall. (Create inbound rule to open them)
-		Set address field in /data/clientinfo.xml (client side) to the static ip of the server.
-	If running client and server in the same machine:
-		Set address field in /data/clientinfo.xml (client side) to 127.0.0.1.
-	If running client and server in the separate machines in the same network:
-		Set address field in /data/clientinfo.xml (client side) to local ip of the server.	
-6 - Run Server's jRO and wait for it to finish
-7 - Run Client's jRO
+## Windows Setup
+1 - Clone the solution in this repo and build it with Visual Studio.
+
+2 - Start the MySql service (from running services.msc)
+
+3 - Create user 'ro_offline_user' with password 'ro_offline_pass' with dbAdmin privileges 
+
+4 - Create 'rathena_re_db' and 'rathena_log_db' with 'utf8' charset
+
+5 - run scripts in /sql against their respective database to create db structure
+
+6 - Download Client from Mega account
+      Extract and copy data.rar of this repo into client's /data folder
+      Extract and copy System.rar of this repo into client's /System folder
+
+7 - Set address field in /data/clientinfo.xml (client) to 127.0.0.1 and the port to 6900.
+    The server needs TCP ports 5121, 6121 and 6900 open.
+
+8 - Run Server's jRO.bat and wait for it to finish
+
+9 - Run Client's jRO.exe
+
+
+## Docker Setup (assumes Docker is installed)
+1 - Clone the solution in this repo
+
+2 - Download Client from Mega account
+      Extract and copy data.rar of this repo into client's /data folder
+      Extract and copy System.rar of this repo into client's /System folder
+
+3 - Set address field in /data/clientinfo.xml (client) to 127.0.0.1 and the port to 6900.
+    The server needs TCP ports 5121, 6121 and 6900 open.
+
+4 - Cd to /docker and build the Docker image with the following command
+      docker build -t jro -f Dockerfile .
+
+5 - Spin up a container from the docker image (check container logs and wait for entrypoint to finish)
+      docker run -t -d --name=ragnarok -p 6900:6900 -p 6121:6121 -p 5121:5121 jro
+
+6 - Run Client's jRO.exe
+
