@@ -70,7 +70,7 @@ import:
 	@for f in $$(ls conf/msg_conf/import-tmpl) ; do if test ! -e conf/msg_conf/import/$$f ; then cp conf/msg_conf/import-tmpl/$$f conf/msg_conf/import ; fi ; done
 	@rm -rf conf/msg_conf/import/.svn
 	@if test ! -d db/import ; then mkdir db/import ; fi
-	@for f in $$(ls db/import-tmpl) ; do if test ! -e db/import/$$f ; then cp db/import-tmpl/$$f db/import ; fi ; done
+	@for f in $$(ls db/import) ; do if test ! -e db/import/$$f ; then cp db/import/$$f db/import ; fi ; done
 	@rm -rf db/import/.svn
 
 clean:
