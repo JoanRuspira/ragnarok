@@ -1,18 +1,12 @@
-
-### Hardware
-Hardware Type | Minimum | Recommended
-CPU           | 1 Core  | 2 Cores
-RAM           | 1 GB    | 2 GB
-Disk Space    | 300 MB  | 500 MB
-
-### Required Applications (Windows)
-Compiler | [MS Visual Studio](https://www.visualstudio.com/downloads/)
-Database | [MySQL5](install exe in Mega account, set root user & password as 'root', set mysql port to 3306) 
-Git      | [Windows](https://gitforwindows.org/) 
-Visual studio C++ 2012 Redistributable (install exes in this repo).
-Visual studio C++ 2015 Redistributable (install exes in this repo).
-
 ## Windows Setup
+### Prerequisites
+[MS Visual Studio](https://www.visualstudio.com/downloads/)
+[MySQL5](install exe in Mega account, set root user & password as 'root', set mysql port to 3306)
+[Windows](https://gitforwindows.org/)
+Visual studio C++ 2012 Redistributable (install exes in this repo)
+Visual studio C++ 2015 Redistributable (install exes in this repo)
+
+### Process
 1 - Clone the solution in this repo and build it with Visual Studio.
 
 2 - Start the MySql service (from running services.msc)
@@ -36,6 +30,10 @@ Visual studio C++ 2015 Redistributable (install exes in this repo).
 
 
 ## Docker Setup (assumes Docker is installed)
+### Prerequisites
+[Docker](https://www.docker.com/products/docker-desktop/)
+
+### Process
 1 - Clone the solution in this repo
 
 2 - Download Client from Mega account
