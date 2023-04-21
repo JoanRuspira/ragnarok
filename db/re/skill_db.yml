@@ -167,17 +167,7 @@ Body:
         Plagiarism: true
         Reproduce: true
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 8
-        - Level: 2
-          Amount: 8
-        - Level: 3
-          Amount: 8
-        - Level: 4
-          Amount: 15
-        - Level: 5
-          Amount: 15
+      SpCost: 15
       Weapon:
         Fist: true
         Dagger: true
@@ -2536,6 +2526,33 @@ Body:
           Amount: 1
         - Item: Blue_Potion
           Amount: 1
+  - Id: 855
+    Name: MO_KNUCKLEQUICKEN
+    Description: Knucle Quicken
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 10000
+    AfterCastActDelay: 1000
+    Duration1:
+      - Level: 1
+        Time: 60000
+      - Level: 2
+        Time: 120000
+      - Level: 3
+        Time: 180000
+      - Level: 4
+        Time: 240000
+      - Level: 5
+        Time: 300000
+    Requires:
+      SpCost: 25
+      Weapon:
+        Knuckle: true
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -9885,8 +9902,6 @@ Body:
           Amount: 8
         - Level: 5
           Amount: 10
-      Status:
-        Explosionspirits: true
   - Id: 371
     Name: CH_TIGERFIST
     Description: Glacier Fist
@@ -16709,8 +16724,6 @@ Body:
     TargetType: Attack
     DamageFlags:
       Splash: true
-    Flags:
-      IsQuest: true
     Range: -1
     Hit: Single
     HitCount: 1

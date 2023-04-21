@@ -1626,6 +1626,7 @@
 	export_constant(SC_QUICKSTUDY);
 	export_constant(SC_SPIRITANIMAL);
 	export_constant(SC_CYCLONICCHARGE);
+	export_constant(SC_KNUCKLEQUICKEN);
 #ifdef RENEWAL
 	export_constant(SC_EXTREMITYFIST2);
 #endif
