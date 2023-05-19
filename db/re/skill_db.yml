@@ -2553,6 +2553,11 @@ Body:
       SpCost: 25
       Weapon:
         Knuckle: true
+  - Id: 856
+    Name: TF_SWORD
+    Description: Sword Mastery
+    MaxLevel: 5
+    Type: Weapon
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
