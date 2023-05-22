@@ -54,7 +54,7 @@ int elemental_create(struct map_session_data *sd, int class_, unsigned int lifet
 	struct s_elemental_db *db;
 	struct status_data *status;
 	int i;
-
+	ShowMessage("ELEM\n");
 	nullpo_retr(1,sd);
 	
 	if( (i = elemental_search_index(class_)) < 0 )
@@ -193,6 +193,53 @@ int elemental_data_received(struct s_elemental *ele, bool flag) {
 	}
 
 	db = &elemental_db[i];
+	if (ele->class_ == ELEMENTALID_AQUA_S) {
+		if (!sd->pet_warg) {	// Initialize it after first summon.
+			sd->pet_warg = ed = (struct elemental_data*)aCalloc(1, sizeof(struct elemental_data));
+			ed->bl.type = BL_ELEM;
+			ed->bl.id = npc_get_new_npc_id();
+			ed->master = sd;
+			ed->db = db;
+			memcpy(&ed->elemental, ele, sizeof(struct s_elemental));
+			status_set_viewdata(&ed->bl, ed->elemental.class_);
+			ed->vd->head_mid = 10; // Why?
+			status_change_init(&ed->bl);
+			unit_dataset(&ed->bl);
+			ed->ud.dir = sd->ud.dir;
+
+			ed->bl.m = sd->bl.m;
+			ed->bl.x = sd->bl.x;
+			ed->bl.y = sd->bl.y;
+			unit_calc_pos(&ed->bl, sd->bl.x, sd->bl.y, sd->ud.dir);
+			ed->bl.x = ed->ud.to_x;
+			ed->bl.y = ed->ud.to_y;
+
+			map_addiddb(&ed->bl);
+			status_calc_elemental(ed, SCO_FIRST);
+			ed->last_spdrain_time = ed->last_thinktime = gettick();
+			ed->summon_timer = INVALID_TIMER;
+			ed->masterteleport_timer = INVALID_TIMER;
+			elemental_summon_init(ed);
+		}
+		else {
+			memcpy(&sd->pet_warg->elemental, ele, sizeof(struct s_elemental));
+			ed = sd->pet_warg;
+		}
+
+		sd->status.ele_id = ele->elemental_id;
+
+		if (ed->bl.prev == NULL && sd->bl.prev != NULL) {
+			if (map_addblock(&ed->bl))
+				return 0;
+			clif_spawn(&ed->bl);
+			clif_elemental_info(sd);
+			clif_elemental_updatestatus(sd, SP_HP);
+			clif_hpmeter_single(sd->fd, ed->bl.id, ed->battle_status.hp, ed->battle_status.max_hp);
+			clif_elemental_updatestatus(sd, SP_SP);
+		}
+		return 1;
+	}
+
 	if( !sd->ed ) {	// Initialize it after first summon.
 		sd->ed = ed = (struct elemental_data*)aCalloc(1,sizeof(struct elemental_data));
 		ed->bl.type = BL_ELEM;
@@ -652,12 +699,7 @@ static int elemental_ai_sub_timer(struct elemental_data *ed, struct map_session_
 				break;
 		}
 
-		// if( status_get_sp(&sd->bl) < sp ){ // Can't sustain delete it.
-		// 	elemental_delete(sd->ed);
-		// 	return 0;
-		// }
-
-		// status_zap(&sd->bl,0,sp);
+		
 		ed->last_spdrain_time = tick;
 	}
 

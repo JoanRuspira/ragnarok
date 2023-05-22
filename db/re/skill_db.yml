@@ -25305,19 +25305,44 @@ Body:
       NoDamage: true
     Hit: Single
     HitCount: 1
-    Element: Water
+    Element: Earth
     CastCancel: true
-    CastTime: 1000
-    Duration1:
+    CastTime: 
       - Level: 1
-        Time: 600000
+        Time: 3000
       - Level: 2
-        Time: 900000
+        Time: 3000
       - Level: 3
-        Time: 1200000
-    Cooldown: 1000
+        Time: 3000
+      - Level: 4
+        Time: 3000
+      - Level: 5
+        Time: 0
+    Duration1: 1200000
+    AfterCastActDelay: 400
+    Cooldown:
+      - Level: 1
+        Time: 1
+      - Level: 2
+        Time: 60000
+      - Level: 3
+        Time: 60000
+      - Level: 4
+        Time: 60000
+      - Level: 5
+        Time: 0
     Requires:
-      SpCost: 1
+      SpCost:
+        - Level: 1
+          Amount: 50
+        - Level: 2
+          Amount: 50
+        - Level: 3
+          Amount: 50
+        - Level: 4
+          Amount: 50
+        - Level: 5
+          Amount: 10
   - Id: 2459
     Name: SO_SUMMON_VENTUS
     Description: Summon Wind Spirit Ventus
@@ -25327,19 +25352,44 @@ Body:
       NoDamage: true
     Hit: Single
     HitCount: 1
-    Element: Wind
+    Element: Earth
     CastCancel: true
-    CastTime: 1000
-    Duration1:
+    CastTime: 
       - Level: 1
-        Time: 600000
+        Time: 3000
       - Level: 2
-        Time: 900000
+        Time: 3000
       - Level: 3
-        Time: 1200000
-    Cooldown: 1000
+        Time: 3000
+      - Level: 4
+        Time: 3000
+      - Level: 5
+        Time: 0
+    Duration1: 1200000
+    AfterCastActDelay: 400
+    Cooldown:
+      - Level: 1
+        Time: 1
+      - Level: 2
+        Time: 60000
+      - Level: 3
+        Time: 60000
+      - Level: 4
+        Time: 60000
+      - Level: 5
+        Time: 0
     Requires:
-      SpCost: 1
+      SpCost:
+        - Level: 1
+          Amount: 50
+        - Level: 2
+          Amount: 50
+        - Level: 3
+          Amount: 50
+        - Level: 4
+          Amount: 50
+        - Level: 5
+          Amount: 10
   - Id: 2460
     Name: SO_SUMMON_TERA
     Description: Summon Earth Spirit Tera
