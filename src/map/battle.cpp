@@ -2860,6 +2860,10 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			break;
 		case ITM_TOMAHAWK:
 		case HT_HURRICANEFURY:
+		case HT_WARG_1:
+		case HT_FALCON_1:
+		// case HT_BLITZBEAT:
+		// case RA_WUGSTRIKE:
 			skillratio += HunterSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
 		case HM_BASILISK_1:

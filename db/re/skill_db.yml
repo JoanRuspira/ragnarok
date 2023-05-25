@@ -2558,6 +2558,36 @@ Body:
     Description: Sword Mastery
     MaxLevel: 5
     Type: Weapon
+  - Id: 857
+    Name: HT_WARG_1
+    Description: Elemental Action
+    MaxLevel: 5
+    TargetType: Attack
+    DamageFlags:
+      NoDamage: true
+    Range: 7
+    Hit: Single
+    HitCount: 1
+    Cooldown: 5000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 25
+      State: Elementalspirit
+  - Id: 858
+    Name: HT_FALCON_1
+    Description: Elemental Action
+    MaxLevel: 5
+    TargetType: Attack
+    DamageFlags:
+      NoDamage: true
+    Range: 7
+    Hit: Single
+    HitCount: 1
+    Cooldown: 5000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 22
+      State: Elementalspirit
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -4874,8 +4904,7 @@ Body:
       IgnoreFlee: true
     Flags:
       TargetTrap: true
-      AlterRangeVulture: true
-    Range: 5
+    Range: 1
     Hit: Multi_Hit
     HitCount:
       - Level: 1
@@ -4893,7 +4922,6 @@ Body:
     AfterCastActDelay: 400
     Requires:
       SpCost: 22
-      State: Falcon
   - Id: 130
     Name: HT_DETECTING
     Description: Detect
@@ -19679,7 +19707,7 @@ Body:
     Flags:
       TargetTrap: true
       AlterRangeVulture: true
-    Range: 5
+    Range: 1
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -25275,13 +25303,13 @@ Body:
     AfterCastActDelay: 400
     Cooldown:
       - Level: 1
-        Time: 60000
+        Time: 1
       - Level: 2
-        Time: 60000
+        Time: 1
       - Level: 3
-        Time: 60000
+        Time: 1
       - Level: 4
-        Time: 60000
+        Time: 1
       - Level: 5
         Time: 0
     Requires:
@@ -25324,11 +25352,11 @@ Body:
       - Level: 1
         Time: 1
       - Level: 2
-        Time: 60000
+        Time: 1
       - Level: 3
-        Time: 60000
+        Time: 1
       - Level: 4
-        Time: 60000
+        Time: 1
       - Level: 5
         Time: 0
     Requires:
@@ -25416,13 +25444,13 @@ Body:
     AfterCastActDelay: 400
     Cooldown:
       - Level: 1
-        Time: 60000
+        Time: 1
       - Level: 2
-        Time: 60000
+        Time: 1
       - Level: 3
-        Time: 60000
+        Time: 1
       - Level: 4
-        Time: 60000
+        Time: 1
       - Level: 5
         Time: 0
     Requires:

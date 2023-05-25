@@ -25,6 +25,8 @@ enum elemental_skillmode : uint8 {
 	EL_SKILLMODE_AGGRESSIVE = 0x4,
 	EL_SKILLMODE_ALCHEMIST_1 = 0x5,
 	EL_SKILLMODE_ALCHEMIST_2 = 0x6,
+	EL_SKILLMODE_WARG_1 = 0x7,
+	EL_SKILLMODE_FALCON_1 = 0x8,
 };
 
 ///Enum of Elemental ID

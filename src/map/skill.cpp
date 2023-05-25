@@ -9914,9 +9914,9 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 						break;
 					}
 					// // Remove previous elemental first.
-					// if( sd->ed->elemental.class_ != elemental_class) {
-					// 	elemental_delete(sd->ed);
-					// }
+					if( sd->ed->elemental.class_ != elemental_class) {
+						elemental_delete(sd->ed);
+					}
 				}
 
 				// Summoning new one elemental
@@ -9933,6 +9933,10 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			}
 			if( skill_lv == 5 ) {
 				if( !sd->ed ) {
+					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+					break;
+				}
+				if( sd->ed->elemental.class_ != ELEMENTALID_VENTUS_S) {
 					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
 					break;
 				}
@@ -9975,9 +9979,9 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 						break;
 					}
 					// // Remove previous elemental first.
-					// if( sd->ed->elemental.class_ != elemental_class) {
-					// 	elemental_delete(sd->ed);
-					// }
+					if( sd->ed->elemental.class_ != elemental_class) {
+						elemental_delete(sd->ed);
+					}
 				}
 
 				// Summoning new one elemental
@@ -9997,6 +10001,10 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
 					break;
 				}
+				if( sd->ed->elemental.class_ != ELEMENTALID_AQUA_S) {
+					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+					break;
+				}
 				enum e_mode current_mode = status_get_mode(&sd->ed->bl);
 				enum e_mode new_mode = static_cast<e_mode>(EL_MODE_AGGRESSIVE);
 				if (current_mode == static_cast<e_mode>(EL_MODE_AGGRESSIVE)){
@@ -10008,6 +10016,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		}
 		break;
 	case SO_SUMMON_AGNI: //HOMUN
+		ShowMessage("wtf\n");
 		if( sd ) {
 			enum e_mode mode = EL_MODE_PASSIVE;	// Default mode.
 
@@ -10154,9 +10163,46 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		break;
 	case AM2_HOM_ACTION:
 	case JG_EL_ACTION:
-		ShowMessage("ACTION2\n");
 		if( sd ) {
 			int duration = 7000;
+			if( !sd->ed )
+				break;
+			sd->skill_id_old = skill_id;
+			elemental_action(sd->ed, bl, tick, skill_id, skill_lv);
+			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
+			skill_blockpc_start(sd, skill_id, duration);
+		}
+		break;
+	case HT_FALCON_1:
+		if( sd->ed ) {
+			if( sd->ed->elemental.class_ != ELEMENTALID_VENTUS_S) {
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				break;
+			}
+		}
+		if( sd ) {
+				int duration = 5000;
+			if( !sd->ed )
+				break;
+			sd->skill_id_old = skill_id;
+			elemental_action(sd->ed, bl, tick, skill_id, skill_lv);
+			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
+			skill_blockpc_start(sd, skill_id, duration);
+		}
+		break;
+	case HT_WARG_1:
+		ShowMessage("Slash 1\n");
+		if( sd->ed ) {
+			ShowMessage("Slash 2\n");
+			if( sd->ed->elemental.class_ != ELEMENTALID_AQUA_S) {
+				ShowMessage("Slash 3\n");
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				break;
+			}
+		}
+		ShowMessage("Slash 4\n");
+		if( sd ) {
+				int duration = 5000;
 			if( !sd->ed )
 				break;
 			sd->skill_id_old = skill_id;
@@ -15252,12 +15298,6 @@ bool skill_check_condition_castbegin(struct map_session_data* sd, uint16 skill_i
 			break;
 		case NPC_HALLUCINATIONWALK:
 			if( sc && sc->data[SC_NPC_HALLUCINATIONWALK] ) {
-				return false;
-			}
-			break;
-		case RA_WUGSTRIKE:
-			if( !pc_iswug(sd) ) {
-				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
 				return false;
 			}
 			break;

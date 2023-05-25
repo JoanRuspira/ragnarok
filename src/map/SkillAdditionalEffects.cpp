@@ -244,14 +244,22 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 					break; // If a normal attack is a skill, it's splash damage. [Inkfish]
 				if (sd) {
 					// Automatic trigger of Blitz Beat
-					if (pc_isfalcon(sd) && (skill = pc_checkskill(sd, HT_STEELCROW)) > 0 &&
-						rnd() % 1000 <= sstatus->luk * (2*skill) / 5 + 1) {
-						skill_castend_damage_id(src, bl, HT_BLITZBEAT, skill, tick, 0);
+					if( sd->ed ) {
+						if( sd->ed->elemental.class_ == ELEMENTALID_VENTUS_S) {
+							if ((skill = pc_checkskill(sd, SO_SUMMON_VENTUS)) > 0 &&
+								rnd() % 1000 <= sstatus->luk * (2*skill) / 5 + 1) {
+								skill_castend_nodamage_id(src, bl, HT_FALCON_1, skill, tick, 0);
+							}
+						}
 					}
 					// Automatic trigger of Warg Strike
-					if (pc_iswug(sd) && (skill = pc_checkskill(sd, RA_WUGMASTERY)) > 0 &&
-						rnd() % 1000 <= sstatus->luk * (2*skill) / 5 + 1) {
-						skill_castend_damage_id(src, bl, RA_WUGSTRIKE, skill, tick, 0);
+					if( sd->ed ) {
+						if( sd->ed->elemental.class_ == ELEMENTALID_AQUA_S) {
+							if ((skill = pc_checkskill(sd, SO_SUMMON_AQUA)) > 0 &&
+								rnd() % 1000 <= sstatus->luk * (2*skill) / 5 + 1) {
+								skill_castend_nodamage_id(src, bl, HT_WARG_1, skill, tick, 0);
+							}
+						}
 					}
 					//Mug
 					if (dstmd && sd->status.weapon != W_BOW && 

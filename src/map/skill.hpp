@@ -2156,6 +2156,8 @@ enum e_skill {
 	AM_SLIMPITCHER = 854,
 	MO_KNUCKLEQUICKEN = 855,
 	TF_SWORD = 856,
+	HT_WARG_1 = 857,
+	HT_FALCON_1 = 858,
 };
 
 /// The client view ids for land skills.

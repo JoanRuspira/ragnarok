@@ -193,52 +193,6 @@ int elemental_data_received(struct s_elemental *ele, bool flag) {
 	}
 
 	db = &elemental_db[i];
-	if (ele->class_ == ELEMENTALID_AQUA_S) {
-		if (!sd->pet_warg) {	// Initialize it after first summon.
-			sd->pet_warg = ed = (struct elemental_data*)aCalloc(1, sizeof(struct elemental_data));
-			ed->bl.type = BL_ELEM;
-			ed->bl.id = npc_get_new_npc_id();
-			ed->master = sd;
-			ed->db = db;
-			memcpy(&ed->elemental, ele, sizeof(struct s_elemental));
-			status_set_viewdata(&ed->bl, ed->elemental.class_);
-			ed->vd->head_mid = 10; // Why?
-			status_change_init(&ed->bl);
-			unit_dataset(&ed->bl);
-			ed->ud.dir = sd->ud.dir;
-
-			ed->bl.m = sd->bl.m;
-			ed->bl.x = sd->bl.x;
-			ed->bl.y = sd->bl.y;
-			unit_calc_pos(&ed->bl, sd->bl.x, sd->bl.y, sd->ud.dir);
-			ed->bl.x = ed->ud.to_x;
-			ed->bl.y = ed->ud.to_y;
-
-			map_addiddb(&ed->bl);
-			status_calc_elemental(ed, SCO_FIRST);
-			ed->last_spdrain_time = ed->last_thinktime = gettick();
-			ed->summon_timer = INVALID_TIMER;
-			ed->masterteleport_timer = INVALID_TIMER;
-			elemental_summon_init(ed);
-		}
-		else {
-			memcpy(&sd->pet_warg->elemental, ele, sizeof(struct s_elemental));
-			ed = sd->pet_warg;
-		}
-
-		sd->status.ele_id = ele->elemental_id;
-
-		if (ed->bl.prev == NULL && sd->bl.prev != NULL) {
-			if (map_addblock(&ed->bl))
-				return 0;
-			clif_spawn(&ed->bl);
-			clif_elemental_info(sd);
-			clif_elemental_updatestatus(sd, SP_HP);
-			clif_hpmeter_single(sd->fd, ed->bl.id, ed->battle_status.hp, ed->battle_status.max_hp);
-			clif_elemental_updatestatus(sd, SP_SP);
-		}
-		return 1;
-	}
 
 	if( !sd->ed ) {	// Initialize it after first summon.
 		sd->ed = ed = (struct elemental_data*)aCalloc(1,sizeof(struct elemental_data));
@@ -420,6 +374,14 @@ int elemental_action(struct elemental_data *ed, struct block_list *bl, t_tick ti
 		ARR_FIND(0, MAX_ELESKILLTREE, i, ed->db->skill[i].id && (ed->db->skill[i].mode&EL_SKILLMODE_ALCHEMIST_1));
 		skill_id = ed->db->skill[i].id;
 	}
+	if (caller_skill_id == HT_WARG_1) {
+		ARR_FIND(0, MAX_ELESKILLTREE, i, ed->db->skill[i].id && (ed->db->skill[i].mode&EL_SKILLMODE_WARG_1));
+		skill_id = RA_WUGSTRIKE;
+	}
+	if (caller_skill_id == HT_FALCON_1) {
+		ARR_FIND(0, MAX_ELESKILLTREE, i, ed->db->skill[i].id && (ed->db->skill[i].mode&EL_SKILLMODE_FALCON_1));
+		skill_id = HT_BLITZBEAT;
+	}
 	if (caller_skill_id == AM2_HOM_ACTION) {
 		ARR_FIND(0, MAX_ELESKILLTREE, i, ed->db->skill[i].id && (ed->db->skill[i].mode & EL_SKILLMODE_ALCHEMIST_2));
 		skill_id = ed->db->skill[i].id;
@@ -485,7 +447,11 @@ int elemental_action(struct elemental_data *ed, struct block_list *bl, t_tick ti
 	if(req.hp || req.sp){
 		struct map_session_data *sd = BL_CAST(BL_PC, battle_get_master(&ed->bl));
 		if( sd ){
-			if( sd->skill_id_old != SO_EL_ACTION && sd->skill_id_old != JG_EL_ACTION && sd->skill_id_old != AM_EL_ACTION && sd->skill_id_old != AM2_HOM_ACTION &&//regardless of remaining HP/SP it can be cast
+			if( sd->skill_id_old != SO_EL_ACTION && sd->skill_id_old != JG_EL_ACTION 
+			&& sd->skill_id_old != AM_EL_ACTION && sd->skill_id_old != AM2_HOM_ACTION
+			&& sd->skill_id_old != HT_WARG_1
+			&& sd->skill_id_old != HT_FALCON_1
+			&&//regardless of remaining HP/SP it can be cast
 				(status_get_hp(&ed->bl) < req.hp || status_get_sp(&ed->bl) < req.sp) )
 				return 1;
 			else

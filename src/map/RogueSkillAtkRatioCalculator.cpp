@@ -31,7 +31,7 @@ int RogueSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* s
 		case SC_TRIANGLESHOT:
 			return calculate_triangle_shot_atk_ratio(skill_lv);
 		case RA_ARROWSTORM:
-			return calculate_arrow_storm_atk_ratio(skill_lv, sstatus->luk);
+			return calculate_arrow_storm_atk_ratio(skill_lv, sstatus->dex);
 		default:
 			return 0;
 			break;
