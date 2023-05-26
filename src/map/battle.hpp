@@ -47,7 +47,7 @@
 #include "WizardAdditionalEffectsCalculator.h"
 #include "AlchemistSkillAttackRatioCalculator.h"
 #include "AlchemistAdditionalEffectsCalculator.h"
-
+#include "MonkSkillAttackRatioCalculator.h"
 
 
 //fwd declaration

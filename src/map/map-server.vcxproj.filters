@@ -225,6 +225,12 @@
     <Filter Include="Source Files\skillAdditionalEffectsCalculator\alchemist">
       <UniqueIdentifier>{a1273efe-214b-464d-ba85-369c73a0403f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\skillAdditionalEffectsCalculator\monk">
+      <UniqueIdentifier>{29288017-de68-41c9-b120-2b57ddc22a1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\skillAtkRatioCalculator\monk">
+      <UniqueIdentifier>{28d61a43-bbba-44d9-805e-4c3845e7c829}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="achievement.hpp">
@@ -482,6 +488,9 @@
     <ClInclude Include="AlchemistAdditionalEffectsCalculator.h">
       <Filter>Header Files\skillAdditionalEffectsCalculator\alchemist</Filter>
     </ClInclude>
+    <ClInclude Include="MonkSkillAttackRatioCalculator.h">
+      <Filter>Header Files\skillAtkRatioCalculator\monk</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="achievement.cpp">
@@ -711,6 +720,9 @@
     </ClCompile>
     <ClCompile Include="AlchemistAdditionalEffectsCalculator.cpp">
       <Filter>Source Files\skillAdditionalEffectsCalculator\alchemist</Filter>
+    </ClCompile>
+    <ClCompile Include="MonkSkillAttackRatioCalculator.cpp">
+      <Filter>Source Files\skillAdditionalEffectsCalculator\monk</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

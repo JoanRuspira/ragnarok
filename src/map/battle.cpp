@@ -2873,6 +2873,9 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case GN_SPORE_EXPLOSION:
 			skillratio += AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
+		case MO_FINGEROFFENSIVE:
+			skillratio += MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
+			break;
 		case ML_BRANDISH:
 			{
 				int ratio = 100 + 20 * skill_lv;
@@ -2932,15 +2935,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			else
 #endif
 				skillratio += 35 * skill_lv;
-			break;
-		case MO_FINGEROFFENSIVE:
-#ifdef RENEWAL
-			skillratio += 500 + skill_lv * 200;
-			if (tsc && tsc->data[SC_BLADESTOP])
-				skillratio += skillratio / 2;
-#else
-			skillratio += 50 * skill_lv;
-#endif
 			break;
 		case MO_INVESTIGATE:
 #ifdef RENEWAL

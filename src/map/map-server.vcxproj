@@ -215,6 +215,7 @@
     <ClInclude Include="mercenary.hpp" />
     <ClInclude Include="MerchntSkillAtkRatioCalculator.h" />
     <ClInclude Include="mob.hpp" />
+    <ClInclude Include="MonkSkillAttackRatioCalculator.h" />
     <ClInclude Include="npc.hpp" />
     <ClInclude Include="packets.hpp" />
     <ClInclude Include="packets_struct.hpp" />
@@ -299,6 +300,7 @@
     <ClCompile Include="mob.cpp">
       <Optimization Condition="'$(Configuration)'=='Release'">Disabled</Optimization>
     </ClCompile>
+    <ClCompile Include="MonkSkillAttackRatioCalculator.cpp" />
     <ClCompile Include="npc.cpp" />
     <ClCompile Include="npc_chat.cpp" />
     <ClCompile Include="party.cpp" />

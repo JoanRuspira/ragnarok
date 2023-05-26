@@ -6343,8 +6343,11 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			if( sd->sc.data[SC_RAISINGDRAGON] )
 				limit += sd->sc.data[SC_RAISINGDRAGON]->val1;
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
-			for (i = 0; i < limit; i++)
-				pc_addspiritball(sd,skill_get_time(skill_id,skill_lv),limit);
+			for (i = 0; i < skill_lv; i++) {
+				if (sd->spiritball < limit) {
+					pc_addspiritball(sd,skill_get_time(skill_id,skill_lv),limit);
+				}
+			}
 		}
 		break;
 
