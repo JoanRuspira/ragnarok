@@ -2555,7 +2555,6 @@ static void battle_calc_element_damage(struct Damage* wd, struct block_list *src
 		// Skills forced to neutral gain benefits from weapon element but final damage is considered "neutral" and resistances are applied again
 		switch (skill_id) {
 #ifdef RENEWAL
-			case MO_INVESTIGATE:
 			case PA_SHIELDCHAIN:
 #endif
 			case MC_CARTREVOLUTION:
@@ -2873,8 +2872,16 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case GN_SPORE_EXPLOSION:
 			skillratio += AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
+		case MO_INVESTIGATE:
 		case MO_FINGEROFFENSIVE:
-			skillratio += MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
+		case SR_EARTHSHAKER:
+			{
+				bool revealed_hidden_enemy = false;
+				if (tsc && ((tsc->option&(OPTION_HIDE|OPTION_CLOAK|OPTION_CHASEWALK)) || tsc->data[SC_CAMOUFLAGE])) {
+					revealed_hidden_enemy = true;
+				}
+				skillratio += MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, revealed_hidden_enemy);
+			}
 			break;
 		case ML_BRANDISH:
 			{
@@ -2935,15 +2942,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			else
 #endif
 				skillratio += 35 * skill_lv;
-			break;
-		case MO_INVESTIGATE:
-#ifdef RENEWAL
-			skillratio += -100 + 100 * skill_lv;
-			if (tsc && tsc->data[SC_BLADESTOP])
-				skillratio += skillratio / 2;
-#else
-			skillratio += 75 * skill_lv;
-#endif
 			break;
 		case MO_EXTREMITYFIST:
 			skillratio += 100 * (7 + sstatus->sp / 10);			
@@ -3337,18 +3335,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 						skillratio = skillratio * 150 / 100;
 				}
 				RE_LVL_DMOD(100);
-			}
-			break;
-		case SR_EARTHSHAKER:
-			if (tsc && ((tsc->option&(OPTION_HIDE|OPTION_CLOAK|OPTION_CHASEWALK)) || tsc->data[SC_CAMOUFLAGE] || tsc->data[SC_STEALTHFIELD] || tsc->data[SC__SHADOWFORM])) {
-				//[(Skill Level x 300) x (Caster Base Level / 100) + (Caster STR x 3)] %
-				skillratio += -100 + 300 * skill_lv;
-				RE_LVL_DMOD(100);
-				skillratio += status_get_str(src) * 3;
-			} else { //[(Skill Level x 400) x (Caster Base Level / 100) + (Caster STR x 2)] %
-				skillratio += -100 + 400 * skill_lv;
-				RE_LVL_DMOD(100);
-				skillratio += status_get_str(src) * 2;
 			}
 			break;
 

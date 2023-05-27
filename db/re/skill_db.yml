@@ -7250,20 +7250,11 @@ Body:
       Skill:
         Plagiarism: true
         Reproduce: true
+    Cooldown: 5000
     CastTime: 1000
-    AfterCastActDelay: 500
+    AfterCastActDelay: 400
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 10
-        - Level: 2
-          Amount: 14
-        - Level: 3
-          Amount: 17
-        - Level: 4
-          Amount: 19
-        - Level: 5
-          Amount: 20
+      SpCost: 20
       SpiritSphereCost: 1
   - Id: 267
     Name: MO_FINGEROFFENSIVE
@@ -22481,47 +22472,18 @@ Body:
     Flags:
       TargetTrap: true
     Range: 1
-    Hit: Single
-    HitCount: 1
+    Hit: Multi_Hit
+    HitCount: -2
     Element: Weapon
-    SplashArea:
-      - Level: 1
-        Area: 1
-      - Level: 2
-        Area: 2
-      - Level: 3
-        Area: 3
-      - Level: 4
-        Area: 4
-      - Level: 5
-        Area: 5
+    SplashArea: 5
     CopyFlags:
       Skill:
         Reproduce: true
-    Duration1:
-      - Level: 1
-        Time: 1000
-      - Level: 2
-        Time: 2000
-      - Level: 3
-        Time: 2000
-      - Level: 4
-        Time: 3000
-      - Level: 5
-        Time: 3000
-    Cooldown: 3000
+    Cooldown: 7000
+    AfterCastActDelay: 400
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 36
-        - Level: 2
-          Amount: 40
-        - Level: 3
-          Amount: 44
-        - Level: 4
-          Amount: 48
-        - Level: 5
-          Amount: 52
+      SpCost: 32
+      SpiritSphereCost: 1
   - Id: 2329
     Name: SR_FALLENEMPIRE
     Description: Fallen Empire

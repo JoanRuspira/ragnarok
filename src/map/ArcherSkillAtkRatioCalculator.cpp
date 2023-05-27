@@ -206,5 +206,5 @@ void ArcherSkillAtkRatioCalculator::add_charge_arrow_special_effects(struct bloc
 
 void ArcherSkillAtkRatioCalculator::add_spiritual_strafe_special_effects(struct block_list *target)
 {
-	clif_specialeffect(target, EF_ELECTRIC3, AREA);
+	clif_specialeffect(target, EF_DELUGE, AREA);
 }
