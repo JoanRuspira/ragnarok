@@ -7,7 +7,7 @@
  * @param skill_lv : skill level
  * @param int_ : player's int
  */
-int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv, struct status_data* sstatus, bool revealed_hidden_enemy)
+int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv, struct status_data* sstatus, bool revealed_hidden_enemy, bool is_using_knuckle)
 {
 	switch (skill_id) {
 		case MO_FINGEROFFENSIVE:
@@ -16,6 +16,10 @@ int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
             return calculate_occult_impact(skill_lv, status_get_def(target));
 		case SR_EARTHSHAKER:
 			return calculate_ground_shaker_atk_ratio(skill_lv, sstatus->str, revealed_hidden_enemy);
+		case MO_TRIPLEATTACK:
+			return calculate_raging_triple_blow_atk_ratio(skill_lv);
+		case MO_CHAINCOMBO:
+			return calculate_chain_combo_atk_ratio(skill_lv, is_using_knuckle);
 		default:
 			return 0;
 			break;
@@ -77,3 +81,55 @@ int MonkSkillAttackRatioCalculator::calculate_ground_shaker_atk_ratio(int skill_
 	}
 	return ratio + str/4;
 }
+
+
+int MonkSkillAttackRatioCalculator::calculate_raging_triple_blow_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 0;
+			break;
+		case 2:
+			ratio = 75;
+			break;
+		case 3:
+			ratio = 175;
+			break;
+		case 4:
+			ratio = 275;
+			break;
+		case 5:
+			ratio = 375;
+			break;
+	}
+	return ratio;
+}
+
+
+int MonkSkillAttackRatioCalculator::calculate_chain_combo_atk_ratio(int skill_lv, bool is_using_knuckle)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 50;
+			break;
+		case 2:
+			ratio = 200;
+			break;
+		case 3:
+			ratio = 250;
+			break;
+		case 4:
+			ratio = 350;
+			break;
+		case 5:
+			ratio = 450;
+			break;
+		}
+	if ( is_using_knuckle ){
+		ratio += 150;
+	}
+	return ratio;
+}
+

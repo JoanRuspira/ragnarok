@@ -4260,6 +4260,15 @@ int status_calc_pc_sub(struct map_session_data* sd, enum e_status_calc_opt opt)
 		base_status->int_ += skill;
 	if (pc_checkskill(sd, SU_POWEROFLAND) > 0)
 		base_status->int_ += 20;
+	if((skill=pc_checkskill(sd,MC_VENDING))>0){
+		base_status->agi += skill;
+		base_status->int_ += skill;
+		base_status->dex += skill;
+		base_status->vit += skill;
+		base_status->str += skill;
+		base_status->luk += skill;
+	}
+		
 
 	
 	if((skill=pc_checkskill(sd,CR_CULTIVATION))>0){

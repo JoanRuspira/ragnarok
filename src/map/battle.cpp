@@ -2875,12 +2875,18 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case MO_INVESTIGATE:
 		case MO_FINGEROFFENSIVE:
 		case SR_EARTHSHAKER:
+		case MO_CHAINCOMBO:
+		case MO_TRIPLEATTACK:
 			{
 				bool revealed_hidden_enemy = false;
 				if (tsc && ((tsc->option&(OPTION_HIDE|OPTION_CLOAK|OPTION_CHASEWALK)) || tsc->data[SC_CAMOUFLAGE])) {
 					revealed_hidden_enemy = true;
 				}
-				skillratio += MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, revealed_hidden_enemy);
+				bool is_using_knuckle = false;
+				if (sd && sd->status.weapon == W_KNUCKLE) {
+					is_using_knuckle = true;
+				}
+				skillratio += MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, revealed_hidden_enemy, is_using_knuckle);
 			}
 			break;
 		case ML_BRANDISH:
@@ -2950,18 +2956,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 				skillratio *= 2; // More than 5 spirit balls active
 #endif
 			skillratio = min(500000,skillratio); //We stop at roughly 50k SP for overflow protection
-			break;
-		case MO_TRIPLEATTACK:
-			skillratio += 20 * skill_lv;
-			break;
-		case MO_CHAINCOMBO:
-#ifdef RENEWAL
-			skillratio += 150 + 50 * skill_lv;
-			if (sd && sd->status.weapon == W_KNUCKLE)
-				skillratio *= 2;
-#else
-			skillratio += 50 + 50 * skill_lv;
-#endif
 			break;
 		case MO_COMBOFINISH:
 #ifdef RENEWAL
@@ -6375,16 +6369,7 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 	}
 
 	if(sd && (skillv = pc_checkskill(sd,MO_TRIPLEATTACK)) > 0) {
-#ifdef RENEWAL
-		int triple_rate = 30; //Base Rate
-#else
-		int triple_rate = 30 - skillv; //Base Rate
-#endif
-
-		if (sc && sc->data[SC_SKILLRATE_UP] && sc->data[SC_SKILLRATE_UP]->val1 == MO_TRIPLEATTACK) {
-			triple_rate+= triple_rate*(sc->data[SC_SKILLRATE_UP]->val2)/100;
-			status_change_end(src, SC_SKILLRATE_UP, INVALID_TIMER);
-		}
+		int triple_rate = 6 * skillv; 
 		if (rnd()%100 < triple_rate) {
 			//Need to apply canact_tick here because it doesn't go through skill_castend_id
 			sd->ud.canact_tick = i64max(tick + skill_delayfix(src, MO_TRIPLEATTACK, skillv), sd->ud.canact_tick);

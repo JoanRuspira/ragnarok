@@ -7495,18 +7495,11 @@ Body:
         Reproduce: true
     CastDelayFlags:
       IgnoreStatus: true
+    Cooldown: 3000
+    AfterCastActDelay: 400
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 11
-        - Level: 2
-          Amount: 12
-        - Level: 3
-          Amount: 13
-        - Level: 4
-          Amount: 14
-        - Level: 5
-          Amount: 15
+      SpCost: 15
+      SpiritSphereCost: 1
       Weapon:
         Fist: true
         Dagger: true
