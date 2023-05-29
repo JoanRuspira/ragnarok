@@ -7,7 +7,7 @@
  * @param skill_lv : skill level
  * @param int_ : player's int
  */
-int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv, struct status_data* sstatus, bool revealed_hidden_enemy, bool is_using_knuckle)
+int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv, struct status_data* sstatus, bool revealed_hidden_enemy, map_session_data *sd)
 {
 	switch (skill_id) {
 		case MO_FINGEROFFENSIVE:
@@ -15,17 +15,51 @@ int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
         case MO_INVESTIGATE:
             return calculate_occult_impact(skill_lv, status_get_def(target));
 		case SR_EARTHSHAKER:
-			return calculate_ground_shaker_atk_ratio(skill_lv, sstatus->str, revealed_hidden_enemy);
+			return calculate_ground_shaker_atk_ratio(skill_lv, sstatus->str);
 		case MO_TRIPLEATTACK:
 			return calculate_raging_triple_blow_atk_ratio(skill_lv);
 		case MO_CHAINCOMBO:
-			return calculate_chain_combo_atk_ratio(skill_lv, is_using_knuckle);
+			{
+				bool is_using_mace = false;
+				if (sd && sd->status.weapon == W_MACE || sd->status.weapon == W_2HMACE) {
+					is_using_mace = true;
+				}
+				return calculate_chain_combo_atk_ratio(skill_lv, is_using_mace);
+			}
+		case SR_WINDMILL:
+			return calculate_circular_fists_atk_ratio(skill_lv, revealed_hidden_enemy);
 		default:
 			return 0;
 			break;
 	}
 }
 
+
+int MonkSkillAttackRatioCalculator::calculate_circular_fists_atk_ratio(int skill_lv, bool revealed_hidden_enemy)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 100;
+			break;
+		case 2:
+			ratio = 150;
+			break;
+		case 3:
+			ratio = 200;
+			break;
+		case 4:
+			ratio = 250;
+			break;
+		case 5:
+			ratio = 300;
+			break;
+	}
+	if (revealed_hidden_enemy) {
+		ratio += 200;
+	}
+	return ratio;
+}
 
 int MonkSkillAttackRatioCalculator::calculate_throw_spirit_sphere_atk_ratio(int skill_lv)
 {
@@ -56,7 +90,7 @@ int MonkSkillAttackRatioCalculator::calculate_occult_impact(int skill_lv, defTyp
 }
 
 
-int MonkSkillAttackRatioCalculator::calculate_ground_shaker_atk_ratio(int skill_lv, int str, bool revealed_hidden_enemy)
+int MonkSkillAttackRatioCalculator::calculate_ground_shaker_atk_ratio(int skill_lv, int str)
 {
 	int ratio = 0;
 	switch (skill_lv) {
@@ -64,22 +98,19 @@ int MonkSkillAttackRatioCalculator::calculate_ground_shaker_atk_ratio(int skill_
 			ratio = 100;
 			break;
 		case 2:
-			ratio = 150;
-			break;
-		case 3:
-			ratio = 200;
-			break;
-		case 4:
 			ratio = 250;
 			break;
-		case 5:
+		case 3:
 			ratio = 300;
 			break;
+		case 4:
+			ratio = 450;
+			break;
+		case 5:
+			ratio = 500;
+			break;
 	}
-	if (revealed_hidden_enemy) {
-		ratio += 200;
-	}
-	return ratio + str/4;
+	return ratio + str/3;
 }
 
 
@@ -107,7 +138,7 @@ int MonkSkillAttackRatioCalculator::calculate_raging_triple_blow_atk_ratio(int s
 }
 
 
-int MonkSkillAttackRatioCalculator::calculate_chain_combo_atk_ratio(int skill_lv, bool is_using_knuckle)
+int MonkSkillAttackRatioCalculator::calculate_chain_combo_atk_ratio(int skill_lv, bool is_using_mace)
 {
 	int ratio = 0;
 	switch (skill_lv) {
@@ -127,7 +158,7 @@ int MonkSkillAttackRatioCalculator::calculate_chain_combo_atk_ratio(int skill_lv
 			ratio = 450;
 			break;
 		}
-	if ( is_using_knuckle ){
+	if (is_using_mace){
 		ratio += 150;
 	}
 	return ratio;

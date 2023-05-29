@@ -22905,7 +22905,7 @@ Body:
   - Id: 2337
     Name: SR_WINDMILL
     Description: Windmill
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Weapon
     TargetType: Self
     DamageFlags:
@@ -22913,19 +22913,20 @@ Body:
     Flags:
       IgnoreHovering: true
     Range: 1
-    Hit: Single
-    HitCount: 1
+    Hit: Multi_Hit
+    HitCount: -2
     Element: Weapon
-    SplashArea: 2
+    SplashArea: 4
     CopyFlags:
       Skill:
         Reproduce: true
     CastCancel: true
-    CastTime: 1000
-    AfterCastActDelay: 500
-    Cooldown: 3000
+    AfterCastActDelay: 400
+    Cooldown: 5000
     Requires:
-      SpCost: 45
+      SpCost: 23
+      Weapon:
+        Knuckle: true
   - Id: 2338
     Name: SR_RAISINGDRAGON
     Description: Raising Dragon

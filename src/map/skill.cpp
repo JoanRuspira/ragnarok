@@ -3109,16 +3109,16 @@ static TIMER_FUNC(skill_timerskill){
 					skill_castend_damage_id(src,target,skl->skill_id,skl->skill_lv,tick,skl->flag|SD_LEVEL|SD_ANIMATION);
 					break;
 				case LG_MOONSLASHER:
-				case SR_WINDMILL:
-					if( target->type == BL_PC ) {
-						struct map_session_data *tsd = NULL;
-						if( (tsd = ((TBL_PC*)target)) && !pc_issit(tsd) ) {
-							pc_setsit(tsd);
-							skill_sit(tsd, true);
-							clif_sitting(&tsd->bl);
-						}
-					}
-					break;
+				// case SR_WINDMILL:
+				// 	if( target->type == BL_PC ) {
+				// 		struct map_session_data *tsd = NULL;
+				// 		if( (tsd = ((TBL_PC*)target)) && !pc_issit(tsd) ) {
+				// 			pc_setsit(tsd);
+				// 			skill_sit(tsd, true);
+				// 			clif_sitting(&tsd->bl);
+				// 		}
+				// 	}
+				// 	break;
 				case SR_KNUCKLEARROW:
 					skill_attack(BF_WEAPON, src, src, target, skl->skill_id, skl->skill_lv, tick, skl->flag|SD_LEVEL);
 					break;
@@ -3912,7 +3912,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case LG_EARTHDRIVE:
 	case SR_RAMPAGEBLASTER:
 	case SR_SKYNETBLOW:
-	case SR_WINDMILL:
+	case SR_EARTHSHAKER:
 	case SR_RIDEINLIGHTNING:
 	case SO_VARETYR_SPEAR:
 	case GN_CART_TORNADO:
@@ -4800,7 +4800,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 			skill_attack(BF_WEAPON, src, src, bl, skill_id, skill_lv, tick, flag|SD_ANIMATION);
 		break;
 
-	case SR_EARTHSHAKER:
+	case SR_WINDMILL:
 		if( flag&1 ) { //by default cloaking skills are remove by aoe skills so no more checking/removing except hiding.
 			skill_attack(BF_WEAPON, src, src, bl, skill_id, skill_lv, tick, flag);
 			status_change_end(bl, SC_HIDING, INVALID_TIMER);

@@ -447,26 +447,15 @@ int64 SkillBaseDamageCalculator::battle_addmastery(map_session_data * sd, block_
 			break;
 		case W_MACE:
 		case W_2HMACE:
+		case W_KNUCKLE:
 			if ((skill = pc_checkskill(sd, PR_MACEMASTERY)) > 0)
 				damage += (skill * 8);
 			if ((skill = pc_checkskill(sd, NC_TRAININGAXE)) > 0)
 				damage += (skill * 4);
 			break;
-		case W_FIST:
-			if ((skill = pc_checkskill(sd, TK_RUN)) > 0)
-				damage += (skill * 10);
-			// No break, fallthrough to Knuckles
-		case W_KNUCKLE:
-			if ((skill = pc_checkskill(sd, MO_IRONHAND)) > 0)
-				damage += (skill * 3);
-			break;
 		case W_MUSICAL:
 			if ((skill = pc_checkskill(sd, BA_MUSICALLESSON)) > 0)
 				damage += (skill * 8);
-			break;
-		case W_WHIP:
-			if ((skill = pc_checkskill(sd, DC_DANCINGLESSON)) > 0)
-				damage += (skill * 3);
 			break;
 		case W_BOOK:
 			if ((skill = pc_checkskill(sd, SA_ADVANCEDBOOK)) > 0)

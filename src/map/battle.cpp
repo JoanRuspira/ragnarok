@@ -2877,16 +2877,13 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case SR_EARTHSHAKER:
 		case MO_CHAINCOMBO:
 		case MO_TRIPLEATTACK:
+		case SR_WINDMILL:
 			{
 				bool revealed_hidden_enemy = false;
 				if (tsc && ((tsc->option&(OPTION_HIDE|OPTION_CLOAK|OPTION_CHASEWALK)) || tsc->data[SC_CAMOUFLAGE])) {
 					revealed_hidden_enemy = true;
 				}
-				bool is_using_knuckle = false;
-				if (sd && sd->status.weapon == W_KNUCKLE) {
-					is_using_knuckle = true;
-				}
-				skillratio += MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, revealed_hidden_enemy, is_using_knuckle);
+				skillratio += MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, revealed_hidden_enemy, sd);
 			}
 			break;
 		case ML_BRANDISH:
@@ -3389,10 +3386,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			}
 			if (sc->data[SC_GT_CHANGE])
 				skillratio += skillratio * 30 / 100;
-			break;
-		case SR_WINDMILL: // ATK [(Caster Base Level + Caster DEX) x Caster Base Level / 100] %
-			skillratio += -100 + status_get_lv(src) + status_get_dex(src);
-			RE_LVL_DMOD(100);
 			break;
 		case SR_GATEOFHELL:
 			if (sc && sc->data[SC_COMBO] && sc->data[SC_COMBO]->val1 == SR_FALLENEMPIRE)
@@ -6369,7 +6362,10 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 	}
 
 	if(sd && (skillv = pc_checkskill(sd,MO_TRIPLEATTACK)) > 0) {
-		int triple_rate = 6 * skillv; 
+		int triple_rate = 6 * skillv;
+		if (sd && sd->status.weapon == W_KNUCKLE) {
+			triple_rate += 5;
+		}
 		if (rnd()%100 < triple_rate) {
 			//Need to apply canact_tick here because it doesn't go through skill_castend_id
 			sd->ud.canact_tick = i64max(tick + skill_delayfix(src, MO_TRIPLEATTACK, skillv), sd->ud.canact_tick);
