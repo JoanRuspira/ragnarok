@@ -3109,27 +3109,38 @@ static TIMER_FUNC(skill_timerskill){
 					skill_castend_damage_id(src,target,skl->skill_id,skl->skill_lv,tick,skl->flag|SD_LEVEL|SD_ANIMATION);
 					break;
 				case LG_MOONSLASHER:
-				// case SR_WINDMILL:
-				// 	if( target->type == BL_PC ) {
-				// 		struct map_session_data *tsd = NULL;
-				// 		if( (tsd = ((TBL_PC*)target)) && !pc_issit(tsd) ) {
-				// 			pc_setsit(tsd);
-				// 			skill_sit(tsd, true);
-				// 			clif_sitting(&tsd->bl);
-				// 		}
-				// 	}
-				// 	break;
 				case SR_KNUCKLEARROW:
 					skill_attack(BF_WEAPON, src, src, target, skl->skill_id, skl->skill_lv, tick, skl->flag|SD_LEVEL);
 					break;
 				case CH_PALMSTRIKE:
 					{
-						struct status_change* tsc = status_get_sc(target);
-						struct status_change* sc = status_get_sc(src);
-						if( ( tsc && tsc->option&OPTION_HIDE ) ||
-							( sc && sc->option&OPTION_HIDE ) ){
-							skill_blown(src,target,skill_get_blewcount(skl->skill_id, skl->skill_lv), -1, BLOWN_NONE);
-							break;
+						// struct status_change* tsc = status_get_sc(target);
+						// struct status_change* sc = status_get_sc(src);
+						// if( ( tsc && tsc->option&OPTION_HIDE ) ||
+						// 	( sc && sc->option&OPTION_HIDE ) ){
+						// 	skill_blown(src,target,skill_get_blewcount(skl->skill_id, skl->skill_lv), -1, BLOWN_NONE);
+						// 	break;
+						// }
+						// ShowMessage("SIT\n");
+						// if( target->type == BL_PC ) {
+						// 	ShowMessage("SIT2\n");
+						// 	struct map_session_data *tsd = NULL;
+						// 	if( (tsd = ((TBL_PC*)target)) && !pc_issit(tsd) ) {
+						// 		ShowMessage("SIT3\n");
+						// 		pc_setsit(tsd);
+						// 		skill_sit(tsd, true);
+						// 		clif_sitting(&tsd->bl);
+						// 	}
+						// }
+
+						if( target->type == BL_PC ) {
+							map_session_data *tsd = NULL;
+							if( (tsd = ((TBL_PC*)target)) && !pc_issit(tsd) ) {
+								ShowMessage("SIT3\n");
+								pc_setsit(tsd);
+								skill_sit(tsd, true);
+								clif_sitting(&tsd->bl);
+							}
 						}
 						skill_attack(skl->type,src,src,target,skl->skill_id,skl->skill_lv,tick,skl->flag);
 						break;
@@ -3518,6 +3529,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 		break;
 	case MER_CRASH:
 	case SM_BASH:
+	case MO_BALKYOUNG:
 	case LK_HEADCRUSH:
 	case LK_JOINTBEAT:
 	case KN_SPEARSTAB:
@@ -4153,8 +4165,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	// 	SwordsmanAdditionalEffectsCalculator::apply_spear_stab_additional_effect(src, bl, skill_lv, flag, skill_area_temp, tick);
 	// 	break;
 
-	case TK_TURNKICK:
-	case MO_BALKYOUNG: //Active part of the attack. Skill-attack [Skotlex]
+	case TK_TURNKICK: //Active part of the attack. Skill-attack [Skotlex]
 	{
 		skill_area_temp[1] = bl->id; //NOTE: This is used in skill_castend_nodamage_id to avoid affecting the target.
 		if (skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag))
@@ -4165,9 +4176,8 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	}
 		break;
 	case CH_PALMSTRIKE: //	Palm Strike takes effect 1sec after casting. [Skotlex]
-	//	clif_skill_nodamage(src,bl,skill_id,skill_lv,0); //Can't make this one display the correct attack animation delay :/
 		clif_damage(src,bl,tick,status_get_amotion(src),0,-1,1,DMG_ENDURE,0,false); //Display an absorbed damage attack.
-		skill_addtimerskill(src, tick + (1000+status_get_amotion(src)), bl->id, 0, 0, skill_id, skill_lv, BF_WEAPON, flag);
+		skill_addtimerskill(src, tick + (100+status_get_amotion(src)), bl->id, 0, 0, skill_id, skill_lv, BF_WEAPON, flag);
 		break;
 
 	case PR_TURNUNDEAD:
@@ -6365,8 +6375,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		}
 		break;
 
-	case TK_TURNKICK:
-	case MO_BALKYOUNG: //Passive part of the attack. Splash knock-back+stun. [Skotlex]
+	case TK_TURNKICK://Passive part of the attack. Splash knock-back+stun. [Skotlex]
 		if (skill_area_temp[1] != bl->id) {
 			skill_blown(src,bl,skill_get_blewcount(skill_id,skill_lv),-1,BLOWN_NONE);
 			SkillAdditionalEffects::skill_additional_effect(src,bl,skill_id,skill_lv,BF_MISC,ATK_DEF,tick); //Use Misc rather than weapon to signal passive pushback

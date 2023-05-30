@@ -7185,7 +7185,7 @@ Body:
   - Id: 262
     Name: MO_ABSORBSPIRITS
     Description: Absorb Spirit Sphere
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Weapon
     TargetType: Support
     DamageFlags:
@@ -9899,27 +9899,17 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    Range: -2
+    Range: -1
     Hit: Single
     HitCount: 1
     Element: Weapon
     Knockback: 3
-    CastCancel: true
-    AfterCastActDelay: 300
-    CastTimeFlags:
-      IgnoreDex: true
+    CoolDown: 5000
+    AfterCastActDelay: 400
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 2
-        - Level: 2
-          Amount: 4
-        - Level: 3
-          Amount: 6
-        - Level: 4
-          Amount: 8
-        - Level: 5
-          Amount: 10
+      SpCost: 25
+      Weapon:
+        Knuckle: true
   - Id: 371
     Name: CH_TIGERFIST
     Description: Glacier Fist
@@ -16739,22 +16729,22 @@ Body:
   - Id: 1016
     Name: MO_BALKYOUNG
     Description: Ki Explosion
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     DamageFlags:
       Splash: true
     Range: -1
-    Hit: Single
-    HitCount: 1
+    Hit: Multi_Hit
+    HitCount: -2
     Element: Weapon
     SplashArea: 1
-    Knockback: 5
-    AfterCastActDelay: 2000
-    Duration2: 5000
+    AfterCastActDelay: 400
+    Cooldown: 5000
     Requires:
-      HpCost: 10
       SpCost: 20
+      Weapon:
+        Knuckle: true
   - Id: 1017
     Name: SA_ELEMENTGROUND
     Description: Elemental Change Earth
@@ -22467,7 +22457,7 @@ Body:
     Range: 1
     Hit: Multi_Hit
     HitCount: -2
-    Element: Weapon
+    Element: Neutral
     SplashArea: 5
     CopyFlags:
       Skill:

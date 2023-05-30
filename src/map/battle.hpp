@@ -48,7 +48,7 @@
 #include "AlchemistSkillAttackRatioCalculator.h"
 #include "AlchemistAdditionalEffectsCalculator.h"
 #include "MonkSkillAttackRatioCalculator.h"
-
+#include "MonkAdditionalEffectsCalculator.h"
 
 //fwd declaration
 struct map_session_data;

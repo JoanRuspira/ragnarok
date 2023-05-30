@@ -19,4 +19,7 @@ class MonkSkillAttackRatioCalculator
 		static int calculate_raging_triple_blow_atk_ratio(int skill_lv);
 		static int calculate_chain_combo_atk_ratio(int skill_lv, bool is_using_mace);
 		static int calculate_circular_fists_atk_ratio(int skill_lv, bool revealed_hidden_enemy);
+		static int calculate_palm_strike_atk_ratio(int skill_lv);
+		static int calculate_excruciating_fist_atk_ratio(int skill_lv);
+		static void add_excruciating_fist_special_effects(struct block_list *target);
 };

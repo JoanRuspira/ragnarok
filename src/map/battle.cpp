@@ -2878,6 +2878,8 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case MO_CHAINCOMBO:
 		case MO_TRIPLEATTACK:
 		case SR_WINDMILL:
+		case CH_PALMSTRIKE:
+		case MO_BALKYOUNG:
 			{
 				bool revealed_hidden_enemy = false;
 				if (tsc && ((tsc->option&(OPTION_HIDE|OPTION_CLOAK|OPTION_CHASEWALK)) || tsc->data[SC_CAMOUFLAGE])) {
@@ -2982,14 +2984,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 #endif
 			if (sc->data[SC_GT_ENERGYGAIN])
 				skillratio += skillratio * 50 / 100;
-			break;
-		case CH_PALMSTRIKE:
-#ifdef RENEWAL
-			skillratio += 100 + 100 * skill_lv + sstatus->str; // !TODO: How does STR play a role?
-			RE_LVL_DMOD(100);
-#else
-			skillratio += 100 + 100 * skill_lv;
-#endif
 			break;
 #ifdef RENEWAL
 		// Renewal: skill ratio applies to entire damage [helvetica]
@@ -3147,9 +3141,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 					k = 4;
 				skillratio += 100 * k;
 			}
-			break;
-		case MO_BALKYOUNG:
-			skillratio += 200;
 			break;
 		case NPC_VAMPIRE_GIFT:
 			skillratio += ((skill_lv - 1) % 5 + 1) * 100;
@@ -4463,7 +4454,6 @@ static struct Damage initialize_weapon_data(struct block_list *src, struct block
 				//Fall through
 			case KN_SPEARSTAB:
 			case MS_BOWLINGBASH:
-			case MO_BALKYOUNG:
 			case TK_TURNKICK:
 				wd.blewcount = 0;
 				break;

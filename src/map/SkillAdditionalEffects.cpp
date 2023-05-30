@@ -353,6 +353,9 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 		case GN_SPORE_EXPLOSION:
 			AlchemistAdditionalEffectsCalculator::apply_bomb_additional_effect(src, bl, skill_lv);
 			break;
+		case MO_BALKYOUNG:
+			MonkAdditionalEffectsCalculator::apply_excruciating_fist_additional_effect(src, bl, skill_lv);
+			break;
 	}
 }
 
