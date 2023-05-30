@@ -969,6 +969,7 @@
 	export_constant(SC_DELUGE);
 	export_constant(SC_VIOLENTGALE);
 	export_constant(SC_WATK_ELEMENT);
+	export_constant(SC_DEFENSIVESTANCE);
 	export_constant(SC_ARMOR);
 	export_constant(SC_ARMOR_ELEMENT_WATER);
 	export_constant(SC_NOCHAT);

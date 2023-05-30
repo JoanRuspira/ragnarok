@@ -3111,6 +3111,7 @@ static TIMER_FUNC(skill_timerskill){
 				case LG_MOONSLASHER:
 				case SR_KNUCKLEARROW:
 					skill_attack(BF_WEAPON, src, src, target, skl->skill_id, skl->skill_lv, tick, skl->flag|SD_LEVEL);
+					sc_start4(src,src,SC_DEFENSIVESTANCE,100,3,20,0,0,30000);
 					break;
 				case CH_PALMSTRIKE:
 					{
@@ -5902,7 +5903,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		// Initiate 20% of your damage becomes fire element.
 		sc_start4(src,src,SC_WATK_ELEMENT,100,3,20,0,0,30000);
 		break;
-
 	case TK_JUMPKICK:
 		/* Check if the target is an enemy; if not, skill should fail so the character doesn't unit_movepos (exploitable) */
 		if( battle_check_target(src, bl, BCT_ENEMY) > 0 ) {
@@ -6383,29 +6383,26 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		break;
 
 	case MO_ABSORBSPIRITS:
-		i = 0;
-		if (dstsd && (battle_check_target(src, bl, BCT_SELF) > 0 || (battle_check_target(src, bl, BCT_ENEMY) > 0 && (map_flag_vs(src->m) || (sd && sd->duel_group && sd->duel_group == dstsd->duel_group)))) && // Only works on self and enemies
-			((dstsd->class_&MAPID_BASEMASK) != MAPID_GUNSLINGER || (dstsd->class_&MAPID_UPPERMASK) != MAPID_REBELLION)) { // split the if for readability, and included gunslingers in the check so that their coins cannot be removed [Reddozen]
-			if (dstsd->spiritball > 0) {
-				i = dstsd->spiritball * 7;
-				pc_delspiritball(dstsd,dstsd->spiritball,0);
+		{
+			int sp_healed = 0;
+			int hp_healed = 0;
+			if (dstsd && (battle_check_target(src, bl, BCT_SELF) > 0 || 
+				(battle_check_target(src, bl, BCT_ENEMY) > 0 && (map_flag_vs(src->m) || (sd && sd->duel_group && sd->duel_group == dstsd->duel_group))))){
+				if (dstsd->spiritball > 0) {
+					hp_healed = skill_lv * 300;
+					sp_healed = skill_lv * 20;
+					pc_delspiritball(dstsd,1,0);
+				} else {
+					clif_skill_fail(sd, skill_id, USESKILL_FAIL_LEVEL, 0);
+					break;
+				}
 			}
-			if (dstsd->spiritcharm_type != CHARM_TYPE_NONE && dstsd->spiritcharm > 0) {
-				i += dstsd->spiritcharm * 7;
-				pc_delspiritcharm(dstsd,dstsd->spiritcharm,dstsd->spiritcharm_type);
+			if (sp_healed){
+				status_heal(src, hp_healed, sp_healed, 2);
 			}
-		} else if (dstmd && !status_has_mode(tstatus,MD_STATUSIMMUNE) && rnd() % 100 < 20) { // check if target is a monster and not status immune, for the 20% chance to absorb 2 SP per monster's level [Reddozen]
-			i = 2 * dstmd->level;
-			mob_target(dstmd,src,0);
-		} else {
-			if (sd)
-				clif_skill_fail(sd, skill_id, USESKILL_FAIL_LEVEL, 0);
+			clif_skill_nodamage(src,bl,skill_id,skill_lv,i?1:0);
 			break;
 		}
-		if (i) status_heal(src, 0, i, 3);
-		clif_skill_nodamage(src,bl,skill_id,skill_lv,i?1:0);
-		break;
-
 	case AC_MAKINGARROW:
 		if(sd) {
 			sd->menuskill_val2 = skill_lv;
@@ -7328,7 +7325,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 					sp = 0;
 				}
 			}
-			ShowMessage("hp: %d\n", hp);
 			status_heal(bl,hp,sp,0);
 		}
 		break;

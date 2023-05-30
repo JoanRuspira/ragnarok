@@ -31,15 +31,17 @@ int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 		case CH_PALMSTRIKE:
 			return calculate_palm_strike_atk_ratio(skill_lv);
 		case MO_BALKYOUNG:
-			add_excruciating_fist_special_effects(target);
-			return calculate_excruciating_fist_atk_ratio(skill_lv);
+			add_ki_blast_special_effects(target);
+			return calculate_ki_blast_atk_ratio(skill_lv);
+		case SR_KNUCKLEARROW:
+			return calculate_dash_punch_atk_ratio(skill_lv);
 		default:
 			return 0;
 			break;
 	}
 }
 
-void MonkSkillAttackRatioCalculator::add_excruciating_fist_special_effects(struct block_list *target)
+void MonkSkillAttackRatioCalculator::add_ki_blast_special_effects(struct block_list *target)
 {
 	clif_specialeffect(target, EF_COMBOATTACK5, AREA);
 	clif_specialeffect(target, EF_DRAGONSMOKE, AREA);
@@ -47,7 +49,32 @@ void MonkSkillAttackRatioCalculator::add_excruciating_fist_special_effects(struc
 	clif_specialeffect(target, EF_KICKEDBODY, AREA);
 }
 
-int MonkSkillAttackRatioCalculator::calculate_excruciating_fist_atk_ratio(int skill_lv)
+
+int MonkSkillAttackRatioCalculator::calculate_dash_punch_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 30;
+			break;
+		case 2:
+			ratio = 100;
+			break;
+		case 3:
+			ratio = 180;
+			break;
+		case 4:
+			ratio = 240;
+			break;
+		case 5:
+			ratio = 300;
+			break;
+		}
+	return ratio;
+}
+
+
+int MonkSkillAttackRatioCalculator::calculate_ki_blast_atk_ratio(int skill_lv)
 {
 	int ratio = 0;
 	switch (skill_lv) {

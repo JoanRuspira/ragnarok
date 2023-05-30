@@ -816,6 +816,7 @@ void initChangeTables(void)
 	set_sc( RK_REFRESH		, SC_REFRESH		, EFST_REFRESH			, SCB_NONE );
 	set_sc( RK_GIANTGROWTH		, SC_GIANTGROWTH	, EFST_GIANTGROWTH		, SCB_STR );
 	set_sc( RK_STONEHARDSKIN	, SC_STONEHARDSKIN	, EFST_STONEHARDSKIN		, SCB_DEF|SCB_MDEF );
+	set_sc( SR_KNUCKLEARROW	, SC_DEFENSIVESTANCE	, EFST_DEFENSIVESTANCE		, SCB_DEF|SCB_MDEF );
 	set_sc( RK_VITALITYACTIVATION	, SC_VITALITYACTIVATION	, EFST_VITALITYACTIVATION		, SCB_VIT );
 	set_sc( RK_FIGHTINGSPIRIT	, SC_FIGHTINGSPIRIT	, EFST_FIGHTINGSPIRIT		, SCB_WATK|SCB_ASPD );
 	set_sc( RK_ABUNDANCE		, SC_ABUNDANCE		, EFST_ABUNDANCE			, SCB_NONE );
@@ -7045,6 +7046,8 @@ static defType status_calc_def(struct block_list *bl, struct status_change *sc, 
 		def -= 20 + 10 * sc->data[SC_ANGRIFFS_MODUS]->val1;
 	if(sc->data[SC_STONEHARDSKIN])
 		def += sc->data[SC_STONEHARDSKIN]->val1;
+	if(sc->data[SC_DEFENSIVESTANCE])
+		def += sc->data[SC_DEFENSIVESTANCE]->val1;
 	if(sc->data[SC_STONE] && sc->opt1 == OPT1_STONE)
 		def >>=1;
 	if(sc->data[SC_FREEZE])
@@ -7216,6 +7219,8 @@ static defType status_calc_mdef(struct block_list *bl, struct status_change *sc,
 		mdef += sc->data[SC_DEFENCE]->val1*4;
 	if(sc->data[SC_STONEHARDSKIN])
 		mdef += sc->data[SC_STONEHARDSKIN]->val1;
+	if(sc->data[SC_DEFENSIVESTANCE])
+		mdef += sc->data[SC_DEFENSIVESTANCE]->val1;
 	if(sc->data[SC_STONE] && sc->opt1 == OPT1_STONE)
 		mdef += 25 * mdef / 100;
 	if(sc->data[SC_FREEZE])
@@ -11185,6 +11190,10 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 		/* Rune Knight */
 		case SC_DEATHBOUND:
 			val2 = 500 + 100 * val1;
+			break;
+		case SC_DEFENSIVESTANCE:
+			if (sd)
+				val1 = pc_checkskill(sd, SR_KNUCKLEARROW) * 2; // DEF/MDEF Increase
 			break;
 		case SC_STONEHARDSKIN:
 			if (sd)

@@ -2880,6 +2880,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case SR_WINDMILL:
 		case CH_PALMSTRIKE:
 		case MO_BALKYOUNG:
+		case SR_KNUCKLEARROW:
 			{
 				bool revealed_hidden_enemy = false;
 				if (tsc && ((tsc->option&(OPTION_HIDE|OPTION_CLOAK|OPTION_CHASEWALK)) || tsc->data[SC_CAMOUFLAGE])) {
@@ -3358,22 +3359,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			} else {
 				skillratio += 900 + 350 * skill_lv;
 				RE_LVL_DMOD(150);
-			}
-			if (sc->data[SC_GT_CHANGE])
-				skillratio += skillratio * 30 / 100;
-			break;
-		case SR_KNUCKLEARROW:
-			if (wd->miscflag&4) { // ATK [(Skill Level x 150) + (1000 x Target current weight / Maximum weight) + (Target Base Level x 5) x (Caster Base Level / 150)] %
-				skillratio += -100 + 150 * skill_lv + status_get_lv(target) * 5;
-				if (tsd && tsd->weight)
-					skillratio += 100 * tsd->weight / tsd->max_weight;
-				RE_LVL_DMOD(150);
-			} else {
-				if (status_get_class_(target) == CLASS_BOSS)
-					skillratio += 400 + 200 * skill_lv;
-				else // ATK [(Skill Level x 100 + 500) x Caster Base Level / 100] %
-					skillratio += 400 + 100 * skill_lv;
-				RE_LVL_DMOD(100);
 			}
 			if (sc->data[SC_GT_CHANGE])
 				skillratio += skillratio * 30 / 100;
