@@ -8067,7 +8067,7 @@ int pc_resetskill(struct map_session_data* sd, int flag)
 		if( pc_checkskill(sd, SG_DEVIL) && ((sd->class_&MAPID_THIRDMASK) == MAPID_STAR_EMPEROR || pc_is_maxjoblv(sd)) )
 			clif_status_load(&sd->bl, EFST_DEVIL1, 0); //Remove perma blindness due to skill-reset. [Skotlex]
 		i = sd->sc.option;
-		if( i&OPTION_RIDING && pc_checkskill(sd, KN_RIDING) )
+		if( i&OPTION_RIDING && 1 ) //pc_checkskill(sd, KN_RIDING)
 			i &= ~OPTION_RIDING;
 		if( i&OPTION_FALCON && pc_checkskill(sd, HT_FALCON) )
 			i &= ~OPTION_FALCON;
@@ -9511,7 +9511,7 @@ bool pc_jobchange(struct map_session_data *sd,int job, char upper)
 
 	//Remove peco/cart/falcon
 	i = sd->sc.option;
-	if( i&OPTION_RIDING && !pc_checkskill(sd, KN_RIDING) )
+	if( i&OPTION_RIDING && !1 ) //pc_checkskill(sd, KN_RIDING)
 		i&=~OPTION_RIDING;
 	if( i&OPTION_FALCON && !pc_checkskill(sd, HT_FALCON) )
 		i&=~OPTION_FALCON;
@@ -9797,7 +9797,7 @@ void pc_setriding(struct map_session_data* sd, int flag)
 		return;
 
 	if( flag ){
-		if( pc_checkskill(sd,KN_RIDING) > 0 ) // add peco
+		if( 1 ) //pc_checkskill(sd,KN_RIDING) > 0     add peco
 			pc_setoption(sd, sd->sc.option|OPTION_RIDING);
 	} else if( pc_isriding(sd) ){
 			pc_setoption(sd, sd->sc.option&~OPTION_RIDING);

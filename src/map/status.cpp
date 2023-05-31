@@ -2689,7 +2689,7 @@ int status_base_amotion_pc(struct map_session_data* sd, struct status_data* stat
 	if ((skill_lv = pc_checkskill(sd, RG_PLAGIARISM)) > 0)
 		val += (skill_lv*2);
 	if (pc_isriding(sd))
-		val -= 50 - 10 * pc_checkskill(sd, KN_CAVALIERMASTERY);
+		val -= 50 - 10 * 5; //pc_checkskill(sd, KN_CAVALIERMASTERY)
 	else if (pc_isridingdragon(sd))
 		val -= 25 - 5 * pc_checkskill(sd, RK_DRAGONTRAINING);
 	amotion = ((int)(temp_aspd + ((float)(status_calc_aspd(&sd->bl, &sd->sc, true) + val) * status->agi / 200)) - min(amotion, 200));
@@ -3713,10 +3713,10 @@ bool status_calc_weight(struct map_session_data *sd, enum e_status_calc_weight_o
 		sd->max_weight += sd->add_max_weight; // From bAddMaxWeight
 		if ((skill = pc_checkskill(sd, MC_INCCARRY)) > 0)
 			sd->max_weight += 2000 * skill;
-		if (pc_isriding(sd) && pc_checkskill(sd, KN_RIDING) > 0)
-			sd->max_weight += 10000;
-		else if (pc_isridingdragon(sd))
-			sd->max_weight += 5000 + 2000 * pc_checkskill(sd, RK_DRAGONTRAINING);
+		// if (pc_isriding(sd) && pc_checkskill(sd, KN_RIDING) > 0)
+		// 	sd->max_weight += 10000;
+		// else if (pc_isridingdragon(sd))
+		// 	sd->max_weight += 5000 + 2000 * pc_checkskill(sd, RK_DRAGONTRAINING);
 		if (sc->data[SC_KNOWLEDGE])
 			sd->max_weight += sd->max_weight * sc->data[SC_KNOWLEDGE]->val1 / 10;
 		if ((skill = pc_checkskill(sd, ALL_INCCARRY)) > 0)
@@ -4514,7 +4514,7 @@ int status_calc_pc_sub(struct map_session_data* sd, enum e_status_calc_opt opt)
 		(sd->status.weapon >= W_REVOLVER && sd->status.weapon <= W_GRENADE))
 		base_status->aspd_rate -= ((skill+1)/2) * 10;
 	if(pc_isriding(sd))
-		base_status->aspd_rate += 500-100*pc_checkskill(sd,KN_CAVALIERMASTERY);
+		base_status->aspd_rate += 500-100*5; //*pc_checkskill(sd,KN_CAVALIERMASTERY)
 	else if(pc_isridingdragon(sd))
 		base_status->aspd_rate += 250-50*pc_checkskill(sd,RK_DRAGONTRAINING);
 #endif

@@ -21521,18 +21521,31 @@ BUILDIN_FUNC(setmounting) {
 	
 	if (!script_charid2sd(2,sd))
 		return SCRIPT_CMD_FAILURE;
-	if( sd->sc.option&(OPTION_WUGRIDER|OPTION_RIDING|OPTION_DRAGON|OPTION_MADOGEAR) ) {
-		clif_msg(sd, NEED_REINS_OF_MOUNT);
-		script_pushint(st,0); //can't mount with one of these
-	} else if (sd->sc.data[SC_CLOAKING] || sd->sc.data[SC_CHASEWALK] || sd->sc.data[SC_CLOAKINGEXCEED] || sd->sc.data[SC_CAMOUFLAGE] || sd->sc.data[SC_STEALTHFIELD] || sd->sc.data[SC__FEINTBOMB]) {
+	if (sd->sc.data[SC_CLOAKING] || sd->sc.data[SC_CHASEWALK] || sd->sc.data[SC_CLOAKINGEXCEED] || sd->sc.data[SC_CAMOUFLAGE] || sd->sc.data[SC_STEALTHFIELD] || sd->sc.data[SC__FEINTBOMB]) {
 		// SC_HIDING, SC__INVISIBILITY, SC__SHADOWFORM, SC_SUHIDE already disable item usage
 		script_pushint(st, 0); // Silent failure
 	} else {
-		if( sd->sc.data[SC_ALL_RIDING] )
+		if (
+			(sd->class_) == MAPID_KNIGHT ||
+			(sd->class_) == MAPID_CRUSADER ||
+			(sd->class_) == MAPID_LORD_KNIGHT ||
+			(sd->class_) == MAPID_PALADIN
+		) {
+			if (pc_isriding(sd)) {
+				pc_setriding(sd, 0); //dismount peco
+			} else {
+				pc_setriding(sd, 1); //mount peco
+				clif_soundeffectall(&sd->bl, "kocot_stand.wav", 0, AREA);
+			}
+			script_pushint(st,1);//in both cases, return 1.
+			return SCRIPT_CMD_SUCCESS;
+		}
+		if( sd->sc.data[SC_ALL_RIDING] ){
 			status_change_end(&sd->bl, SC_ALL_RIDING, INVALID_TIMER); //release mount
-		else
+		} else {
 			sc_start(NULL, &sd->bl, SC_ALL_RIDING, 10000, 1, INFINITE_TICK); //mount
 			clif_soundeffectall(&sd->bl, "kocot_stand.wav", 0, AREA);
+		}	
 		script_pushint(st,1);//in both cases, return 1.
 	}
 	return SCRIPT_CMD_SUCCESS;

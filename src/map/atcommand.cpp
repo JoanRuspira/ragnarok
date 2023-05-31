@@ -4487,7 +4487,7 @@ ACMD_FUNC(mount_peco)
 	}
 	if (!pc_isriding(sd)) { // if actually no peco
 
-		if (!pc_checkskill(sd, KN_RIDING)) {
+		if (!1) { //pc_checkskill(sd, KN_RIDING)
 			clif_displaymessage(fd, msg_txt(sd,213)); // You can not mount a Peco Peco with your current job.
 			return -1;
 		}
