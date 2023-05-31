@@ -2161,7 +2161,6 @@ int status_heal(struct block_list *bl,int64 hhp,int64 hsp, int flag)
 	struct status_change *sc;
 	int hp = (int)cap_value(hhp,INT_MIN,INT_MAX);
 	int sp = (int)cap_value(hsp,INT_MIN,INT_MAX);
-
 	status = status_get_status_data(bl);
 
 	if (status == &dummy_status || !status->hp)

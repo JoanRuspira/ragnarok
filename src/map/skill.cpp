@@ -16243,9 +16243,9 @@ struct s_skill_condition skill_get_requirement(struct map_session_data* sd, uint
 						case AM_POTIONPITCHER:
 						case CR_SLIMPITCHER:
 						// case CR_CULTIVATION:
-						// 	if (i != skill_lv%11 - 1)
-						// 		continue;
-						// 	break;
+							if (i != skill_lv%11 - 1)
+								continue;
+							break;
 						case AM_CALLHOMUN:
 							if (sd->status.hom_id) //Don't delete items when hom is already out.
 								continue;
