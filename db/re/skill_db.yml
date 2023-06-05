@@ -2573,6 +2573,21 @@ Body:
     Requires:
       SpCost: 22
       State: Elementalspirit
+  - Id: 859
+    Name: AL_HEAL2
+    Description: Heal
+    MaxLevel: 5
+    TargetType: Support
+    DamageFlags:
+      NoDamage: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    CastTime: 3000
+    Cooldown: 5000
+    AfterCastActDelay: 1000
+    Requires:
+      SpCost: 40
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -7017,8 +7032,6 @@ Body:
     DamageFlags:
       IgnoreAtkCard: true
       IgnoreFlee: true
-    Flags:
-      TargetSelf: true
     Range: 5
     Hit: Single
     HitCount: 1
@@ -8430,8 +8443,17 @@ Body:
     Hit: Single
     HitCount: 1
     SplashArea: 10
-    Duration1: 180000
-    Duration2: 60000
+    Duration1:
+      - Level: 1
+        Time: 24000
+      - Level: 2
+        Time: 48000
+      - Level: 3
+        Time: 72000
+      - Level: 4
+        Time: 96000
+      - Level: 5
+        Time: 120000
     Cooldown: 10000
     AfterCatActDelay: 10000
     Requires:
@@ -19178,15 +19200,15 @@ Body:
     AfterCastActDelay: 1000
     Duration1:
       - Level: 1
-        Time: 90000
+        Time: 24000
       - Level: 2
-        Time: 120000
+        Time: 48000
       - Level: 3
-        Time: 150000
+        Time: 72000
       - Level: 4
-        Time: 180000
+        Time: 96000
       - Level: 5
-        Time: 210000
+        Time: 120000
     Requires:
       SpCost: 360
   - Id: 2051
@@ -19197,7 +19219,6 @@ Body:
     TargetType: Support
     DamageFlags:
       NoDamage: true
-      IgnoreDefense: true
     Range: 11
     Hit: Single
     HitCount: 1

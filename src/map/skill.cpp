@@ -536,9 +536,6 @@ int skill_calc_heal(struct block_list *src, struct block_list *target, uint16 sk
 		case NPC_EVILLAND:
 			hp = (skill_lv > 6) ? 666 : skill_lv * 100;
 			break;
-		case AB_HIGHNESSHEAL:
-			// hp = ((status_get_int(src) + status_get_lv(src)) / 5) * 30;
-			hp_bonus = (skill_lv * 200) + status_get_int(src) + status_get_lv(src);
 		case SU_FRESHSHRIMP:
 			hp = (status_get_lv(src) + status_get_int(src)) / 5 * 6;
 			break;
@@ -593,7 +590,7 @@ int skill_calc_heal(struct block_list *src, struct block_list *target, uint16 sk
 		hp_bonus += skill;
 
 	if (sc && sc->count) {
-		if (sc->data[SC_OFFERTORIUM] && (skill_id == AB_HIGHNESSHEAL || skill_id == AB_CHEAL || skill_id == PR_SANCTUARY || skill_id == AL_HEAL))
+		if (sc->data[SC_OFFERTORIUM] && (skill_id == AB_CHEAL || skill_id == PR_SANCTUARY || skill_id == AL_HEAL))
 			hp_bonus += sc->data[SC_OFFERTORIUM]->val2;
 		if (sc->data[SC_GLASTHEIM_HEAL] && skill_id != NPC_EVILLAND)
 			hp_bonus += sc->data[SC_GLASTHEIM_HEAL]->val1;
@@ -668,8 +665,6 @@ int skill_calc_heal(struct block_list *src, struct block_list *target, uint16 sk
 		}
 	}
 
-	// if (skill_id == AB_HIGHNESSHEAL)
-	// 	global_bonus *= 2 + 0.3f * (skill_lv - 1);
 
 	if (heal && tsc && tsc->count) {
 		uint8 penalty = 0;
@@ -4207,7 +4202,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case NJ_KOUENKA:
 	case NJ_HYOUSENSOU:
 	case NJ_HUUJIN:
-	case AB_HIGHNESSHEAL:
 	case AB_DUPLELIGHT_MAGIC:
 	case LG_RAYOFGENESIS:
 	case WM_METALICSOUND:
@@ -5355,7 +5349,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		case AL_HEAL:
 		case ALL_RESURRECTION:
 		case PR_ASPERSIO:
-		case AB_HIGHNESSHEAL:
 			//Apparently only player casted skills can be offensive like this.
 			if (sd && battle_check_undead(tstatus->race,tstatus->def_ele)) {
 				if (battle_check_target(src, bl, BCT_ENEMY) < 1) {
@@ -5403,7 +5396,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case HAMI_HEAL:
 	case AL_HEAL:
 	// case CR_HEAL:
-	case AB_HIGHNESSHEAL:
 		{
 			int heal = skill_calc_heal(src, bl, skill_id, skill_lv, true);
 			int heal_get_jobexp;
@@ -7166,6 +7158,18 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
 		break;
 	}
+	case AL_HEAL2:
+		{
+			int healing, matk = 0;
+			struct status_data *status;
+			status = status_get_status_data(&sd->bl);
+			matk = rand()%(status->matk_max-status->matk_min + 1) + status->matk_min;
+			healing = (200 * skill_lv) + (status_get_lv(src) * 3) + (status_get_int(src) * 3) + (matk * 3);
+			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
+			clif_skill_nodamage(NULL,bl,AL_HEAL,healing,1);
+			status_heal(bl,healing,0,0);
+		}
+		break;
 	case CR_HEAL:
 		{
 			int healing, matk = 0;
@@ -7187,13 +7191,33 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			matk = rand()%(status->matk_max-status->matk_min + 1) + status->matk_min;
 			healing_self = (100 * skill_lv) + (status_get_lv(src) * 3) + (status_get_int(src) * 3) + (matk * 3);
 			healing_target = (100 * skill_lv) + (status_get_lv(src) * 3) + (status_get_int(src) * 3) + (matk * 3);
-			clif_specialeffect(bl, EF_FOOD06, AREA);
-			clif_specialeffect(src, EF_FOOD06, AREA);
-			clif_skill_nodamage(src, bl, skill_id, healing_self, 1);
-			clif_skill_nodamage(NULL,bl,AL_HEAL,healing_target,1);
-			clif_skill_nodamage(NULL,src,AL_HEAL,healing_self,1);
-			status_heal(src,healing_self,0,0);
-			status_heal(bl,healing_target,0,0);
+			if(bl == src) {
+				clif_specialeffect(bl, EF_FOOD06, AREA);
+				clif_skill_nodamage(src, bl, skill_id, healing_self, 1);
+				clif_skill_nodamage(NULL,bl,AL_HEAL,healing_target,1);
+				status_heal(bl,healing_target,0,0);
+			} else {
+				clif_specialeffect(bl, EF_FOOD06, AREA);
+				clif_specialeffect(src, EF_FOOD06, AREA);
+				clif_skill_nodamage(src, bl, skill_id, healing_self, 1);
+				clif_skill_nodamage(NULL,bl,AL_HEAL,healing_target,1);
+				clif_skill_nodamage(NULL,src,AL_HEAL,healing_self,1);
+				status_heal(src,healing_self,0,0);
+				status_heal(bl,healing_target,0,0);
+			}
+		}
+		break;
+	case AB_HIGHNESSHEAL:
+		{
+			int healing, matk = 0;
+			struct status_data *status;
+			status = status_get_status_data(&sd->bl);
+			matk = rand()%(status->matk_max-status->matk_min + 1) + status->matk_min;
+			healing = (400 * skill_lv) + (status_get_lv(src) * 4) + (status_get_int(src) * 4) + (matk * 4);
+			clif_specialeffect(bl, EF_MOCHI, AREA);
+			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
+			clif_skill_nodamage(NULL,bl,AL_HEAL,healing,1);
+			status_heal(bl,healing,0,0);
 		}
 		break;
 	case CR_DIVINELIGHT:
@@ -10968,7 +10992,6 @@ static int8 skill_castend_id_check(struct block_list *src, struct block_list *ta
 		case AL_DECAGI:
 		case SA_DISPELL: // Mado Gear is immune to Dispell according to bugreport:49 [Ind]
 		case AB_RENOVATIO:
-		case AB_HIGHNESSHEAL:
 			if (tsc && tsc->option&OPTION_MADOGEAR)
 				return USESKILL_FAIL_TOTARGET;
 			break;

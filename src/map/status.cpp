@@ -11225,9 +11225,12 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 
 		/* Arch Bishop */
 		case SC_INTOABYSS:
+			val4 = tick / 15000;
+			tick_time = 15000;
+			break;
 		case SC_RENOVATIO:
-			val4 = tick / 5000;
-			tick_time = 5000;
+			val4 = tick / 10000;
+			tick_time = 10000;
 			break;
 		case SC_SECRAMENT:
 			val2 = 10 * val1;

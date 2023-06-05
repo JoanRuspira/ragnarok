@@ -2158,6 +2158,7 @@ enum e_skill {
 	TF_SWORD = 856,
 	HT_WARG_1 = 857,
 	HT_FALCON_1 = 858,
+	AL_HEAL2 = 859,
 };
 
 /// The client view ids for land skills.
