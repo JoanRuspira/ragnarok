@@ -2577,17 +2577,15 @@ Body:
     Name: WM_DEADHILLHERE
     Description: Valley of Death
     MaxLevel: 5
-    Type: Magic
     TargetType: Support
     DamageFlags:
       NoDamage: true
-      IgnoreDefense: true
-    Range: 11
+    Range: 9
     Hit: Single
     HitCount: 1
-    Element: Holy
     CopyFlags:
       Skill:
+        Plagiarism: true
         Reproduce: true
     CastCancel: true
     CastTime: 6000
@@ -23890,17 +23888,15 @@ Body:
     Name: WM_SIRCLEOFNATURE
     Description: Circle of Nature's Sound
     MaxLevel: 5
-    Type: Magic
     TargetType: Support
     DamageFlags:
       NoDamage: true
-      IgnoreDefense: true
-    Range: 11
+    Range: 9
     Hit: Single
     HitCount: 1
-    Element: Holy
     CopyFlags:
       Skill:
+        Plagiarism: true
         Reproduce: true
     CastCancel: true
     CastTime: 3000
