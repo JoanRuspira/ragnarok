@@ -4194,7 +4194,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case MG_FIREBOLT:
 	case MG_LIGHTNINGBOLT:
 	case WZ_EARTHSPIKE:
-	case CR_HEAL:
+	// case CR_HEAL:
 	case AL_HEAL:
 	case WM_SIRCLEOFNATURE:
 	case NPC_DARKTHUNDER:
@@ -5330,18 +5330,18 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				if (sd) clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0) ;
 				break ;
 			}
-		case CR_BINDINGLIGHT:
-			clif_specialeffect(bl, EF_FOOD06, AREA);
-			clif_specialeffect(src, EF_FOOD06, AREA);
-			if (sd && battle_check_undead(tstatus->race,tstatus->def_ele)) {
-				if (battle_check_target(src, bl, BCT_ENEMY) < 1) {
-					//Offensive heal does not works on non-enemies. [Skotlex]
-					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-					return 0;
-				}
-				return skill_castend_damage_id (src, bl, skill_id, skill_lv, tick, flag);
-			}
-		break;
+		// case CR_BINDINGLIGHT:
+		// 	clif_specialeffect(bl, EF_FOOD06, AREA);
+		// 	clif_specialeffect(src, EF_FOOD06, AREA);
+		// 	if (sd && battle_check_undead(tstatus->race,tstatus->def_ele)) {
+		// 		if (battle_check_target(src, bl, BCT_ENEMY) < 1) {
+		// 			//Offensive heal does not works on non-enemies. [Skotlex]
+		// 			clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+		// 			return 0;
+		// 		}
+		// 		return skill_castend_damage_id (src, bl, skill_id, skill_lv, tick, flag);
+		// 	}
+		// break;
 		case WM_SIRCLEOFNATURE:
 			clif_specialeffect(bl, EF_FOOD03, AREA);
 			if (sd && battle_check_undead(tstatus->race,tstatus->def_ele)) {
@@ -5353,17 +5353,17 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				return skill_castend_damage_id (src, bl, skill_id, skill_lv, tick, flag);
 			}
 			break;
-		case CR_HEAL:
-			clif_specialeffect(bl, EF_FOOD05, AREA);
-			if (sd && battle_check_undead(tstatus->race,tstatus->def_ele)) {
-				if (battle_check_target(src, bl, BCT_ENEMY) < 1) {
-					//Offensive heal does not works on non-enemies. [Skotlex]
-					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-					return 0;
-				}
-				return skill_castend_damage_id (src, bl, skill_id, skill_lv, tick, flag);
-			}
-			break;
+		// case CR_HEAL:
+		// 	clif_specialeffect(bl, EF_FOOD05, AREA);
+		// 	if (sd && battle_check_undead(tstatus->race,tstatus->def_ele)) {
+		// 		if (battle_check_target(src, bl, BCT_ENEMY) < 1) {
+		// 			//Offensive heal does not works on non-enemies. [Skotlex]
+		// 			clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+		// 			return 0;
+		// 		}
+		// 		return skill_castend_damage_id (src, bl, skill_id, skill_lv, tick, flag);
+		// 	}
+		// 	break;
 		case AL_HEAL:
 		case ALL_RESURRECTION:
 		case PR_ASPERSIO:
@@ -5418,20 +5418,10 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			clif_skill_nodamage(src, bl, skill_id, heal, 1);
 		}
 		break;
-	case CR_BINDINGLIGHT:
-		{
-			int heal = skill_calc_heal(src, bl, skill_id, skill_lv, true);
-			status_heal(src,heal,0,0);
-			status_heal(bl,heal,0,0);
-			// struct unit_data *ud = unit_bl2ud(src);
-			// if (ud->target)
-			clif_skill_nodamage(src, bl, skill_id, heal, 1);
-		}
-		break;
 	case HLIF_HEAL:	//[orn]
 	case HAMI_HEAL:
 	case AL_HEAL:
-	case CR_HEAL:
+	// case CR_HEAL:
 	case AB_HIGHNESSHEAL:
 		{
 			int heal = skill_calc_heal(src, bl, skill_id, skill_lv, true);
@@ -5453,7 +5443,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				else if (tsc->data[SC_BERSERK] || tsc->data[SC_SATURDAYNIGHTFEVER])
 					heal = 0; //Needed so that it actually displays 0 when healing.
 			}
-			if (skill_id == AL_HEAL || skill_id == WM_SIRCLEOFNATURE || skill_id == CR_HEAL)
+			if (skill_id == AL_HEAL || skill_id == WM_SIRCLEOFNATURE ) //|| skill_id == CR_HEAL
 				status_change_end(bl, SC_BITESCAR, INVALID_TIMER);
 			clif_skill_nodamage (src, bl, skill_id, heal, 1);
 			if( tsc && tsc->data[SC_AKAITSUKI] && heal ) {
@@ -7195,7 +7185,50 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
 		break;
 	}
-
+	case CR_HEAL:
+		{
+			int healing, matk = 0;
+			struct status_data *status;
+			status = status_get_status_data(&sd->bl);
+			matk = rand()%(status->matk_max-status->matk_min + 1) + status->matk_min;
+			healing = (200 * skill_lv) + (status_get_lv(src) * 3) + (status_get_int(src) * 3) + (matk * 3);
+			clif_specialeffect(bl, EF_FOOD05, AREA);
+			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
+			clif_skill_nodamage(NULL,bl,AL_HEAL,healing,1);
+			status_heal(bl,healing,0,0);
+		}
+		break;
+	case CR_BINDINGLIGHT:
+		{
+			int healing_self, healing_target, matk = 0;
+			struct status_data *status;
+			status = status_get_status_data(&sd->bl);
+			matk = rand()%(status->matk_max-status->matk_min + 1) + status->matk_min;
+			healing_self = (100 * skill_lv) + (status_get_lv(src) * 3) + (status_get_int(src) * 3) + (matk * 3);
+			healing_target = (100 * skill_lv) + (status_get_lv(src) * 3) + (status_get_int(src) * 3) + (matk * 3);
+			clif_specialeffect(bl, EF_FOOD06, AREA);
+			clif_specialeffect(src, EF_FOOD06, AREA);
+			clif_skill_nodamage(src, bl, skill_id, healing_self, 1);
+			clif_skill_nodamage(NULL,bl,AL_HEAL,healing_target,1);
+			clif_skill_nodamage(NULL,src,AL_HEAL,healing_self,1);
+			status_heal(src,healing_self,0,0);
+			status_heal(bl,healing_target,0,0);
+		}
+		break;
+	case CR_DIVINELIGHT:
+		{
+			int healing, matk = 0;
+			struct status_data *status;
+			status = status_get_status_data(&sd->bl);
+			matk = rand()%(status->matk_max-status->matk_min + 1) + status->matk_min;
+			healing = (400 * skill_lv) + (status_get_lv(src) * 4) + (status_get_int(src) * 4) + (matk * 4);
+			clif_specialeffect(bl, EF_FOOD06, AREA);
+			clif_specialeffect(bl, EF_GLORIA, AREA);
+			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
+			clif_skill_nodamage(NULL,bl,AL_HEAL,healing,1);
+			status_heal(bl,healing,0,0);
+		}
+		break;
 	case AM_BERSERKPITCHER:
 	case AM_SLIMPITCHER:
 	case AM_POTIONPITCHER: 
@@ -9653,19 +9686,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			clif_skill_nodamage(src, src, skill_id, skill_lv, sc_start(src,src, type, 100, skill_lv, skill_get_time(skill_id,skill_lv)));
 		clif_skill_nodamage(src, bl, skill_id, skill_lv, sc_start(src,bl, type, 100, skill_lv, skill_get_time(skill_id,skill_lv)));
 		break;
-	case CR_DIVINELIGHT:
-		if( bl->type == BL_PC ) {
-			int heal = skill_calc_heal(src, bl, AB_HIGHNESSHEAL, skill_lv, true);
-			if (status_isimmune(bl) || (dstmd && (status_get_class(bl) == MOBID_EMPERIUM || status_get_class_(bl) == CLASS_BATTLEFIELD)))
-				heal = 0;
-			clif_specialeffect(bl, EF_FOOD06, AREA);
-			clif_specialeffect(bl, EF_GLORIA, AREA);
-			if( tsc && tsc->data[SC_AKAITSUKI] && heal && AB_HIGHNESSHEAL != HLIF_HEAL )
-				heal = ~heal + 1;
-			status_heal(bl,heal,0,0);
-			clif_skill_nodamage(src, bl, skill_id, heal, 1);
-		}
-		break;
 	case WM_DEADHILLHERE:
 		if( bl->type == BL_PC ) {
 			if( !status_isdead(bl) ) {
@@ -10948,7 +10968,7 @@ static int8 skill_castend_id_check(struct block_list *src, struct block_list *ta
 		return USESKILL_FAIL_MAX; // Don't show a skill fail message (NoDamage type doesn't consume requirements)
 
 	switch (skill_id) {
-		case CR_HEAL:
+		// case CR_HEAL:
 		case AL_HEAL:
 		case WM_SIRCLEOFNATURE:
 		case AL_INCAGI:
@@ -16242,6 +16262,7 @@ struct s_skill_condition skill_get_requirement(struct map_session_data* sd, uint
 						case AM_SLIMPITCHER:
 						case AM_POTIONPITCHER:
 						case CR_SLIMPITCHER:
+						// case CR_HEAL:
 						// case CR_CULTIVATION:
 							if (i != skill_lv%11 - 1)
 								continue;

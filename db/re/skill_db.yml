@@ -2065,41 +2065,27 @@ Body:
     Name: CR_HEAL
     Description: Heal
     MaxLevel: 5
-    Type: Magic
     TargetType: Support
     DamageFlags:
       NoDamage: true
-      IgnoreDefense: true
-    Flags:
-      IsAutoShadowSpell: true
     Range: 9
     Hit: Single
     HitCount: 1
-    Element: Holy
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
-    CastCancel: true
     CastTime: 3000
     Cooldown: 5000
     AfterCastActDelay: 1000
     Requires:
-      SpCost: 40  
+      SpCost: 35
   - Id: 833
     Name: CR_BINDINGLIGHT
     Description: Blessing
     MaxLevel: 5
-    Type: Magic
     TargetType: Support
     DamageFlags:
       NoDamage: true
-    Flags:
-      IgnoreHovering: true
     Range: 9
     Hit: Single
     HitCount: 1
-    CastCancel: true
     CastTime: 4000
     Cooldown: 5000
     AfterCastActDelay: 1000
@@ -2117,7 +2103,6 @@ Body:
     TargetType: Support
     DamageFlags:
       NoDamage: true
-      IgnoreDefense: true
     Range: 11
     Hit: Single
     HitCount: 1
