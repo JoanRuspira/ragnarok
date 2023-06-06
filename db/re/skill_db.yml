@@ -7279,7 +7279,7 @@ Body:
       Skill:
         Plagiarism: true
         Reproduce: true
-    CastTime: 1000
+    CastTime: 4000
     Cooldown: 5000
     AfterCastActDelay: 400
     AfterCastWalkDelay:
@@ -18957,13 +18957,13 @@ Body:
     Element: Holy
     SplashArea:
       - Level: 1
-        Area: 1
+        Area: 5
       - Level: 2
-        Area: 2
+        Area: 5
       - Level: 3
-        Area: 3
+        Area: 5
       - Level: 4
-        Area: 4
+        Area: 5
       - Level: 5
         Area: 5
     CastCancel: true

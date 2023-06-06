@@ -590,7 +590,7 @@ int skill_calc_heal(struct block_list *src, struct block_list *target, uint16 sk
 		hp_bonus += skill;
 
 	if (sc && sc->count) {
-		if (sc->data[SC_OFFERTORIUM] && (skill_id == AB_CHEAL || skill_id == PR_SANCTUARY || skill_id == AL_HEAL))
+		if (sc->data[SC_OFFERTORIUM] && ( skill_id == AL_HEAL))
 			hp_bonus += sc->data[SC_OFFERTORIUM]->val2;
 		if (sc->data[SC_GLASTHEIM_HEAL] && skill_id != NPC_EVILLAND)
 			hp_bonus += sc->data[SC_GLASTHEIM_HEAL]->val1;
@@ -7219,6 +7219,21 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			status_heal(bl,healing,0,0);
 		}
 		break;
+	case AB_CHEAL:
+		if( !sd || sd->status.party_id == 0 || flag&1 ) {
+			if( sd && tstatus ) {
+				int healing, matk = 0;
+				struct status_data *status;
+				status = status_get_status_data(&sd->bl);
+				matk = rand()%(status->matk_max-status->matk_min + 1) + status->matk_min;
+				healing = (75 * skill_lv) + (status_get_lv(src) * 3) + (status_get_int(src) * 3) + (matk * 3);
+				clif_skill_nodamage(src, bl, skill_id, healing, 1);
+				status_heal(bl, healing, 0, 0);
+			}
+		} else if( sd ){
+			party_foreachsamemap(skill_area_sub, sd, skill_get_splash(skill_id, skill_lv), src, skill_id, skill_lv, tick, flag|BCT_PARTY|1, skill_castend_nodamage_id);
+		}
+		break;
 	case CR_DIVINELIGHT:
 		{
 			int healing, matk = 0;
@@ -8862,7 +8877,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			party_foreachsamemap(skill_area_sub, sd, skill_get_splash(skill_id, skill_lv), src, skill_id, skill_lv, tick, flag|BCT_PARTY|1, skill_castend_nodamage_id);
 		break;
 	case BA_APPLEIDUN:
-	case AB_CHEAL:
 		if( !sd || sd->status.party_id == 0 || flag&1 ) {
 			if( sd && tstatus && !battle_check_undead(tstatus->race, tstatus->def_ele) && !tsc->data[SC_BERSERK] ) {
 				int partycount = (sd->status.party_id ? party_foreachsamemap(party_sub_count, sd, 0) : 0);
