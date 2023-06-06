@@ -133,7 +133,7 @@ int PriestSkillAttackRatioCalculator::calculate_unholy_cross_atk_ratio(int skill
 			ratio = 225;
 			break;
 		}
-	return ratio + (intelligence);
+	return ratio + (intelligence*2);
 }
 
 

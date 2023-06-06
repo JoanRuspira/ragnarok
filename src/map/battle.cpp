@@ -2249,7 +2249,7 @@ static int is_attack_piercing(struct Damage* wd, struct block_list *src, struct 
 		struct map_session_data *sd = BL_CAST(BL_PC, src);
 		struct status_data *tstatus = status_get_status_data(target);
 
-		if( skill_id != PA_SACRIFICE && skill_id != HT_HURRICANEFURY && skill_id != CR_GRANDCROSS && skill_id != NPC_GRANDDARKNESS && skill_id != PA_SHIELDCHAIN && skill_id != KO_HAPPOKUNAI)
+		if( skill_id != PA_SACRIFICE && skill_id != HT_HURRICANEFURY && skill_id != NPC_GRANDDARKNESS && skill_id != PA_SHIELDCHAIN && skill_id != KO_HAPPOKUNAI)
 		{ //Elemental/Racial adjustments
 			if( sd && (sd->right_weapon.def_ratio_atk_ele & (1<<tstatus->def_ele) || sd->right_weapon.def_ratio_atk_ele & (1<<ELE_ALL) ||
 				sd->right_weapon.def_ratio_atk_race & (1<<tstatus->race) || sd->right_weapon.def_ratio_atk_race & (1<<RC_ALL) ||
@@ -2480,7 +2480,7 @@ static bool attack_ignores_def(struct Damage* wd, struct block_list *src, struct
 
 	if (sc && sc->data[SC_FUSION])
 		return true;
-	else if (skill_id != CR_GRANDCROSS && skill_id != NPC_GRANDDARKNESS)
+	else if (skill_id != NPC_GRANDDARKNESS)
 	{	//Ignore Defense?
 		if (sd && (sd->right_weapon.ignore_def_ele & (1<<tstatus->def_ele) || sd->right_weapon.ignore_def_ele & (1<<ELE_ALL) ||
 			sd->right_weapon.ignore_def_race & (1<<tstatus->race) || sd->right_weapon.ignore_def_race & (1<<RC_ALL) ||
@@ -2815,7 +2815,9 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			skillratio += KnightSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
 		case CR_HOLYCROSS:
+		case CR_GRANDCROSS:
 			skillratio += CrusaderSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
+			break;
 		case RG_RAID:
 		case RG_BACKSTAP:
 		case AS_GRIMTOOTH:
@@ -4666,7 +4668,7 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src, struct bl
 
 	battle_calc_element_damage(&wd, src, target, skill_id, skill_lv);
 
-	if(skill_id == CR_GRANDCROSS || skill_id == NPC_GRANDDARKNESS)
+	if(skill_id == NPC_GRANDDARKNESS)
 		return wd; //Enough, rest is not needed.
 
 	if (CriticalHitCalculator::is_attack_critical(&wd, src, target, skill_id, skill_lv, false)) {
@@ -4896,17 +4898,17 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 //Adds an absolute value to damage. 100 = +100 damage
 #define MATK_ADD(a) { ad.damage += a; }
 
-		if (sd) {
-			switch (sd->class_) {
-			case MAPID_CRUSADER:
-			case MAPID_PALADIN:
-				CrusaderSkillMatkRatioCalculator *matk_ratio_calculator =
-					new CrusaderSkillMatkRatioCalculator(status_get_lv(src), skill_id, skill_lv, sstatus->int_);
-				skillratio += matk_ratio_calculator->calculate_skill_matk_ratio();
-				delete matk_ratio_calculator;
-				break;
-			}
-		}
+		// if (sd) {
+		// 	switch (sd->class_) {
+		// 	case MAPID_CRUSADER:
+		// 	case MAPID_PALADIN:
+		// 		CrusaderSkillMatkRatioCalculator *matk_ratio_calculator =
+		// 			new CrusaderSkillMatkRatioCalculator(status_get_lv(src), skill_id, skill_lv, sstatus->int_);
+		// 		skillratio += matk_ratio_calculator->calculate_skill_matk_ratio();
+		// 		delete matk_ratio_calculator;
+		// 		break;
+		// 	}
+		// }
 
 		//Calc base damage according to skill
 		switch (skill_id) {
@@ -5032,6 +5034,9 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case JG_TAROTCARD:
 					case WM_METALICSOUND:
 						skillratio += BardSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
+						break;
+					case CR_GRANDCROSS:
+						skillratio += CrusaderSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
 					case WZ_VERMILION:
 					case WZ_STORMGUST:

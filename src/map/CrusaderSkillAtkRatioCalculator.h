@@ -6,5 +6,6 @@ class CrusaderSkillAtkRatioCalculator
 
 	private:
 		static int calculate_holy_cross_atk_ratio(int skill_lv, int intelligence);
+		static int calculate_grand_cross_atk_ratio(int skill_lv);
 };
 

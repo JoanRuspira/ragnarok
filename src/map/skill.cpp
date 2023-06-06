@@ -1209,7 +1209,7 @@ int skill_counter_additional_effect (struct block_list* src, struct block_list *
 	case GS_FULLBUSTER:
 		sc_start(src,src,SC_BLIND,2*skill_lv,skill_lv,skill_get_time2(skill_id,skill_lv));
 		break;
-	case CR_GRANDCROSS:
+	// case CR_GRANDCROSS:
 	case NPC_GRANDDARKNESS:
 		attack_type |= BF_WEAPON;
 		break;
@@ -2538,7 +2538,7 @@ int64 skill_attack (int attack_type, struct block_list* src, struct block_list *
 		}
 	}
 
-	if(skill_id == CR_GRANDCROSS || skill_id == NPC_GRANDDARKNESS)
+	if(skill_id == NPC_GRANDDARKNESS)
 		dmg.flag |= BF_WEAPON;
 
 	if( sd && src != bl && damage > 0 && ( dmg.flag&BF_WEAPON ||
@@ -11298,8 +11298,7 @@ TIMER_FUNC(skill_castend_id){
 			case RL_FIREDANCE:
 				sd->canequip_tick = tick + skill_get_time(ud->skill_id, ud->skill_lv);
 				break;
-			case KN_BRANDISHSPEAR:
-			case CR_GRANDCROSS: {
+			case KN_BRANDISHSPEAR: {
 				sc_type type;
 
 				if (ud->skill_id == KN_BRANDISHSPEAR)
@@ -13587,7 +13586,7 @@ int skill_unit_onplace_timer(struct skill_unit *unit, struct block_list *bl, t_t
 			return 0;
 		ts->tick = tick+sg->interval;
 
-		if ((skill_id==CR_GRANDCROSS || skill_id==NPC_GRANDDARKNESS) && !battle_config.gx_allhit)
+		if ((skill_id==NPC_GRANDDARKNESS) && !battle_config.gx_allhit)
 			ts->tick += (t_tick)sg->interval*(map_count_oncell(bl->m,bl->x,bl->y,BL_CHAR,0)-1);
 	}
 

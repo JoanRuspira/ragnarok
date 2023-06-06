@@ -301,11 +301,7 @@ void SkillBaseDamageCalculator::battle_calc_attack_masteries(Damage * wd, block_
 	struct status_data *sstatus = status_get_status_data(src);
 	int t_class = status_get_class(target);
 
-	if (sd && EquipmentAttackCalculator::battle_skill_stacks_masteries_vvs(skill_id) &&
-		skill_id != MO_INVESTIGATE &&
-		skill_id != MO_EXTREMITYFIST &&
-		skill_id != CR_GRANDCROSS
-		)
+	if (sd && EquipmentAttackCalculator::battle_skill_stacks_masteries_vvs(skill_id))
 	{	//Add mastery damage
 		uint16 skill;
 
