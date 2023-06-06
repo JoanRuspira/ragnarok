@@ -530,9 +530,9 @@ int skill_calc_heal(struct block_list *src, struct block_list *target, uint16 sk
 	tsc = status_get_sc(target);
 
 	switch( skill_id ) {
-		case PR_SANCTUARY:
-			hp = (skill_lv > 6) ? 777 : skill_lv * 100;
-			break;
+		// case PR_SANCTUARY:
+		// 	hp = (skill_lv > 6) ? 777 : skill_lv * 100;
+		// 	break;
 		case NPC_EVILLAND:
 			hp = (skill_lv > 6) ? 666 : skill_lv * 100;
 			break;
@@ -617,6 +617,15 @@ int skill_calc_heal(struct block_list *src, struct block_list *target, uint16 sk
 	// Note: in this part matk bonuses from items or skills are not applied
 	switch( skill_id ) {
 		case PR_SANCTUARY:
+			{
+				int healing, matk = 0;
+				struct status_data *status;
+				status = status_get_status_data(&sd->bl);
+				matk = rand()%(status->matk_max-status->matk_min + 1) + status->matk_min;
+				healing = (5* skill_lv) + (status_get_lv(src) * 3) + (status_get_int(src) * 3) + (matk * 3);
+				return healing;
+			}
+			break;
 		case NPC_EVILLAND:
 			break;
 		case HAMI_HEAL:
@@ -12724,7 +12733,6 @@ struct skill_unit_group *skill_unitsetting(struct block_list *src, uint16 skill_
 		val1 = src->id; // Store caster id.
 		break;
 #endif
-
 	case PR_SANCTUARY:
 	case NPC_EVILLAND:
 		val1=skill_lv+3;

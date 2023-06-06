@@ -2695,15 +2695,15 @@ Body:
     CastCancel: true
     CastTime:
       - Level: 1
-        Time: 8000
+        Time: 9000
       - Level: 2
         Time: 7000
       - Level: 3
-        Time: 6000
-      - Level: 4
         Time: 5000
+      - Level: 4
+        Time: 3000
       - Level: 5
-        Time: 4000
+        Time: 1000
     Cooldown: 20000
     AfterCastActDelay: 3000
     Requires:
@@ -3109,7 +3109,7 @@ Body:
       Id: Sanctuary
       Layout: -1
       Range: 1
-      Interval: 3000
+      Interval: 5000
       Flag:
         NoOverlap: true
         PathCheck: true

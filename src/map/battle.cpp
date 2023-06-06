@@ -4881,7 +4881,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 				ad.blewcount = 0; //No knockback
 			//Fall through
 		case NJ_KAENSIN:
-		case PR_SANCTUARY:
 			ad.dmotion = 1; //No flinch animation.
 			break;
 	}
@@ -4915,7 +4914,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 			// case CR_HEAL:
 			case AL_HEAL:
 			case PR_BENEDICTIO:
-			case PR_SANCTUARY:
 				ad.damage = skill_calc_heal(src, target, skill_id, skill_lv, false);
 				break;
 			case PR_ASPERSIO:
