@@ -7299,132 +7299,59 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case AM_SLIMPITCHER:
 	case AM_POTIONPITCHER: 
 		{
-			int j,hp = 0,sp = 0;
-			if( dstmd && dstmd->mob_id == MOBID_EMPERIUM ) {
+			int healing_hp = 0, healing_sp = 0, matk = 0;
+			struct status_data *status;
+			int x, j;
+			struct s_skill_condition require = skill_get_requirement(sd, skill_id, skill_lv);
+
+
+			x = skill_lv%11 - 1;
+			status = status_get_status_data(&sd->bl);
+			matk = rand()%(status->matk_max-status->matk_min + 1) + status->matk_min;
+			j = pc_search_inventory(sd, require.itemid[x]);
+			if (j < 0 || require.itemid[x] <= 0) {
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
 				map_freeblock_unlock();
 				return 1;
 			}
-			if( sd ) {
-				int x,bonus=100;
-				struct s_skill_condition require = skill_get_requirement(sd, skill_id, skill_lv);
-				x = skill_lv%11 - 1;
-				j = pc_search_inventory(sd, require.itemid[x]);
-				if (j < 0 || require.itemid[x] <= 0) {
-					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-					map_freeblock_unlock();
-					return 1;
-				}
-					if (sd->inventory_data[j] == NULL || sd->inventory.u.items_inventory[j].amount < require.amount[x]) {
-					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-					map_freeblock_unlock();
-					return 1;
-				}
-				if( skill_id == AM_BERSERKPITCHER ) {
-					if( dstsd && dstsd->status.base_level < (unsigned int)sd->inventory_data[j]->elv ) {
-						clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-						map_freeblock_unlock();
-						return 1;
-					}
-				}
-				potion_flag = 1;
-				potion_hp = potion_sp = potion_per_hp = potion_per_sp = 0;
-				potion_target = bl->id;
-				run_script(sd->inventory_data[j]->script,0,sd->bl.id,0);
-				potion_flag = potion_target = 0;
-				if( sd->sc.data[SC_SPIRIT] && sd->sc.data[SC_SPIRIT]->val2 == SL_ALCHEMIST )
-					bonus += sd->status.base_level;
-				if( potion_per_hp > 0 || potion_per_sp > 0 ) {
-					hp = tstatus->max_hp * potion_per_hp / 100;
-					hp = hp * (100 + pc_checkskill(sd,AM_POTIONPITCHER)*10 + pc_checkskill(sd,AM_LEARNINGPOTION)*5)*bonus/10000;
-					if( dstsd ) {
-						sp = dstsd->status.max_sp * potion_per_sp / 100;
-						sp = sp * (100 + pc_checkskill(sd,AM_POTIONPITCHER)*10 + pc_checkskill(sd,AM_LEARNINGPOTION)*5)*bonus/10000;
-					}
-				} else {
-					if( potion_hp > 0 ) {
-						hp = potion_hp * (100 + pc_checkskill(sd,AM_POTIONPITCHER)*10 + pc_checkskill(sd,AM_LEARNINGPOTION)*5)*bonus/10000;
-						hp = hp * (100 + (tstatus->vit<<1)) / 100;
-						if( dstsd )
-							hp = hp * (100 + pc_checkskill(dstsd,SM_RECOVERY)*10) / 100;
-					}
-					if( potion_sp > 0 ) {
-						sp = potion_sp * (100 + pc_checkskill(sd,AM_POTIONPITCHER)*10 + pc_checkskill(sd,AM_LEARNINGPOTION)*5)*bonus/10000;
-						sp = sp * (100 + (tstatus->int_<<1)) / 100;
-						if( dstsd )
-							sp = sp * (100 + (pc_checkskill(dstsd,MG_SRECOVERY)*2)*10) / 100;
-					}
-				}
+				if (sd->inventory_data[j] == NULL || sd->inventory.u.items_inventory[j].amount < require.amount[x]) {
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				map_freeblock_unlock();
+				return 1;
+			}
 
-				if ((bonus = pc_get_itemgroup_bonus_group(sd, IG_POTION))) {
-					hp += hp * bonus / 100;
-					sp += sp * bonus / 100;
-				}
-
-				if( (j = pc_skillheal_bonus(sd, skill_id)) ) {
-					hp += hp * j / 100;
-					sp += sp * j / 100;
-				}
+			run_script(sd->inventory_data[j]->script,0,sd->bl.id,0);
+			if (skill_lv == 1) {
+				healing_hp = 500;
+			}
+			if (skill_lv == 2) {
+				healing_hp = 1000;
+			}
+			if (skill_lv == 3) {
+				healing_hp = 1500;
+			}
+			if (skill_lv == 4) {
+				healing_hp = 2000;
+			}
+			if (skill_lv == 5) {
+				healing_sp = 200;
+				healing_sp += (status_get_lv(src) / 2) + (status_get_int(src) / 2) + (matk / 2);
+			}
+			if (skill_lv != 5) {
+				healing_hp += (status_get_lv(src) * 2) + (status_get_int(src) * 2) + (matk * 2);
+			}
+			if (skill_id == AM_SLIMPITCHER) {
+				healing_hp += 2000;
+				healing_sp += 200;
+			}
+			if (skill_lv != 5) {
+				clif_skill_nodamage(NULL,bl,AL_HEAL,healing_hp,1);	
 			} else {
-				//Maybe replace with potion_hp, but I'm unsure how that works [Playtester]
-				switch (skill_lv) {
-					case 1: hp = 45; break;
-					case 2: hp = 105; break;
-					case 3: hp = 175; break;
-					default: hp = 325; break;
-				}
-				hp = (hp + rnd()%(skill_lv*20+1)) * (150 + skill_lv*10) / 100;
-				hp = hp * (100 + (tstatus->vit<<1)) / 100;
-				if( dstsd )
-					hp = hp * (100 + pc_checkskill(dstsd,SM_RECOVERY)*10) / 100;
-			}
-			if( dstsd && (j = pc_skillheal2_bonus(dstsd, skill_id)) ) {
-				hp += hp * j / 100;
-				sp += sp * j / 100;
-			}
-			if (tsc && tsc->count) {
-				uint8 penalty = 0;
-
-				if (tsc->data[SC_WATER_INSIGNIA] && tsc->data[SC_WATER_INSIGNIA]->val1 == 2) {
-					hp += hp / 10;
-					sp += sp / 10;
-				}
-				if (tsc->data[SC_CRITICALWOUND])
-					penalty += tsc->data[SC_CRITICALWOUND]->val2;
-				if (tsc->data[SC_DEATHHURT] && tsc->data[SC_DEATHHURT]->val3)
-					penalty += 20;
-				if (tsc->data[SC_NORECOVER_STATE])
-					penalty = 100;
-				if (penalty > 0) {
-					hp -= hp * penalty / 100;
-					sp -= sp * penalty / 100;
-				}
+				clif_skill_nodamage(NULL,bl,MG_SRECOVERY,healing_sp,1);
+				clif_specialeffect(bl, EF_HEALSP, AREA);
 			}
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
-			if( hp > 0 || ((skill_id == AM_POTIONPITCHER || skill_id == AM_SLIMPITCHER) && sp <= 0) ) {
-				if (skill_id == AM_SLIMPITCHER){
-					hp += 500;
-				}	
-				clif_skill_nodamage(NULL,bl,AL_HEAL,hp,1);		
-			}
-				
-			if( sp > 0 ) {
-				if (skill_id == AM_SLIMPITCHER){
-					sp += 250;
-				}
-				clif_skill_nodamage(NULL,bl,MG_SRECOVERY,sp,1);
-			}
-				
-			if (tsc) {
-#ifdef RENEWAL
-				if (tsc->data[SC_EXTREMITYFIST2])
-					sp = 0;
-#endif
-				if (tsc->data[SC_NORECOVER_STATE]) {
-					hp = 0;
-					sp = 0;
-				}
-			}
-			status_heal(bl,hp,sp,0);
+			status_heal(bl,healing_hp,healing_sp,0);
 		}
 		break;
 	case AM_CP_WEAPON:
