@@ -2103,7 +2103,7 @@ Body:
     TargetType: Support
     DamageFlags:
       NoDamage: true
-    Range: 11
+    Range: 9
     Hit: Single
     HitCount: 1
     Element: Holy
@@ -19219,7 +19219,7 @@ Body:
     TargetType: Support
     DamageFlags:
       NoDamage: true
-    Range: 11
+    Range: 9
     Hit: Single
     HitCount: 1
     Element: Holy
@@ -23836,7 +23836,7 @@ Body:
     DamageFlags:
       NoDamage: true
       IgnoreDefense: true
-    Range: 11
+    Range: 9
     Hit: Single
     HitCount: 1
     Element: Holy

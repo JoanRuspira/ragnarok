@@ -7215,7 +7215,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			matk = rand()%(status->matk_max-status->matk_min + 1) + status->matk_min;
 			healing = (400 * skill_lv) + (status_get_lv(src) * 4) + (status_get_int(src) * 4) + (matk * 4);
 			clif_specialeffect(bl, EF_MOCHI, AREA);
-			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 			clif_skill_nodamage(NULL,bl,AL_HEAL,healing,1);
 			status_heal(bl,healing,0,0);
 		}
