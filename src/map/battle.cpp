@@ -2249,7 +2249,7 @@ static int is_attack_piercing(struct Damage* wd, struct block_list *src, struct 
 		struct map_session_data *sd = BL_CAST(BL_PC, src);
 		struct status_data *tstatus = status_get_status_data(target);
 
-		if( skill_id != PA_SACRIFICE && skill_id != HT_HURRICANEFURY && skill_id != NPC_GRANDDARKNESS && skill_id != PA_SHIELDCHAIN && skill_id != KO_HAPPOKUNAI)
+		if( skill_id != PA_SACRIFICE && skill_id != HT_HURRICANEFURY && skill_id != NPC_GRANDDARKNESS && skill_id != KO_HAPPOKUNAI)
 		{ //Elemental/Racial adjustments
 			if( sd && (sd->right_weapon.def_ratio_atk_ele & (1<<tstatus->def_ele) || sd->right_weapon.def_ratio_atk_ele & (1<<ELE_ALL) ||
 				sd->right_weapon.def_ratio_atk_race & (1<<tstatus->race) || sd->right_weapon.def_ratio_atk_race & (1<<RC_ALL) ||
@@ -2375,7 +2375,6 @@ static bool is_attack_hitting(struct Damage* wd, struct block_list *src, struct 
 				hitrate += hitrate * 10 * skill_lv / 100;
 				break;
 			case KN_AUTOCOUNTER:
-			case PA_SHIELDCHAIN:
 			case NPC_WATERATTACK:
 			case NPC_GROUNDATTACK:
 			case NPC_FIREATTACK:
@@ -2554,9 +2553,6 @@ static void battle_calc_element_damage(struct Damage* wd, struct block_list *src
 		// Forced to neutral skills [helvetica]
 		// Skills forced to neutral gain benefits from weapon element but final damage is considered "neutral" and resistances are applied again
 		switch (skill_id) {
-#ifdef RENEWAL
-			case PA_SHIELDCHAIN:
-#endif
 			case MC_CARTREVOLUTION:
 			case SR_FALLENEMPIRE:
 			case SR_TIGERCANNON:
@@ -2817,6 +2813,8 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			break;
 		case CR_HOLYCROSS:
 		case CR_GRANDCROSS:
+		case PA_SHIELDCHAIN:
+		case PA_SHIELDSLAM:
 			skillratio += CrusaderSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
 		case RG_RAID:
@@ -3029,14 +3027,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 #else
 			// Pre-Renewal: skill ratio for weapon part of damage [helvetica]
 			skillratio += -100 + 100 * skill_lv;
-#endif
-			break;
-		case PA_SHIELDCHAIN:
-#ifdef RENEWAL
-			skillratio = 60 + 40 * skill_lv;
-			RE_LVL_DMOD(100);
-#else
-			skillratio += 30 * skill_lv;
 #endif
 			break;
 		case WS_CARTTERMINATION:
@@ -4714,7 +4704,7 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src, struct bl
 
 	if(sd) {
 
-		if( skill_id == CR_SHIELDCHARGE || skill_id == CR_SHIELDBOOMERANG || skill_id == PA_SHIELDCHAIN ) { //Refine bonus applies after cards and elements.
+		if( skill_id == CR_SHIELDCHARGE || skill_id == CR_SHIELDBOOMERANG || skill_id == PA_SHIELDCHAIN || skill_id == PA_SHIELDSLAM ) { //Refine bonus applies after cards and elements.
 			short index = sd->equip_index[EQI_HAND_L];
 
 			if( index >= 0 && sd->inventory_data[index] && sd->inventory_data[index]->type == IT_ARMOR )

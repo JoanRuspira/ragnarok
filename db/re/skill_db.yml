@@ -2588,6 +2588,20 @@ Body:
     AfterCastActDelay: 1000
     Requires:
       SpCost: 40
+  - Id: 860
+    Name: PA_SHIELDSLAM
+    Description: Shield Slam
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: 1
+    Hit: Single
+    HitCount: 1
+    Cooldown: 8000
+    AfterCastActDelay: 400
+    Requires:
+      SpCost: 32
+      State: Shield
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -6943,6 +6957,7 @@ Body:
     Element: Weapon
     Hit: Single
     HitCount: 1
+    Knockback: 3
     Cooldown: 5000
     AfterCastActDelay: 400
     CopyFlags:
@@ -12761,23 +12776,24 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    Range: 4
+    Range:
+      - Level: 1
+        Size: 2
+      - Level: 2
+        Size: 3
+      - Level: 3
+        Size: 4
+      - Level: 4
+        Size: 5
+      - Level: 5
+        Size: 6
     Hit: Multi_Hit
-    HitCount: 5
+    HitCount: -5
     CastTime: 1000
-    AfterCastActDelay: 1000
+    Cooldown: 10000
+    AfterCastActDelay: 400
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 28
-        - Level: 2
-          Amount: 31
-        - Level: 3
-          Amount: 34
-        - Level: 4
-          Amount: 37
-        - Level: 5
-          Amount: 40
+      SpCost: 35
       State: Shield
   - Id: 481
     Name: HP_MANARECHARGE

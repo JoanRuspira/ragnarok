@@ -13,12 +13,70 @@ int CrusaderSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list
 		case CR_GRANDCROSS:
 			return calculate_grand_cross_atk_ratio(skill_lv);
 			break;
+		case PA_SHIELDCHAIN:
+			return calculate_rapid_smiting_atk_ratio(skill_lv);
+			break;
+		case PA_SHIELDSLAM:
+			add_shield_slam_special_effects(target);
+			return calculate_shield_slam_atk_ratio(skill_lv);
+			break;
 		default:
 			return 0;
 			break;
 	}
 }
 
+void CrusaderSkillAtkRatioCalculator::add_shield_slam_special_effects(struct block_list *target)
+{
+	clif_specialeffect(target, EF_PRESSURE2, AREA);
+	clif_specialeffect(target, EF_STUNATTACK, AREA);
+}
+
+int CrusaderSkillAtkRatioCalculator::calculate_shield_slam_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 100;
+			break;
+		case 2:
+			ratio = 200;
+			break;
+		case 3:
+			ratio = 300;
+			break;
+		case 4:
+			ratio = 400;
+			break;
+		case 5:
+			ratio = 500;
+			break;
+		}
+	return ratio;
+}
+
+int CrusaderSkillAtkRatioCalculator::calculate_rapid_smiting_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 150;
+			break;
+		case 2:
+			ratio = 250;
+			break;
+		case 3:
+			ratio = 350;
+			break;
+		case 4:
+			ratio = 450;
+			break;
+		case 5:
+			ratio = 550;
+			break;
+		}
+	return ratio;
+}
 
 int CrusaderSkillAtkRatioCalculator::calculate_grand_cross_atk_ratio(int skill_lv)
 {
