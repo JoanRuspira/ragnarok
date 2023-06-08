@@ -34,6 +34,8 @@ int KnightSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* 
 			return calculate_smite_atk_ratio(skill_lv);
 		case PA_SACRIFICE:
 			return calculate_reckoning_atk_ratio(skill_lv);
+		case RK_HUNDREDSPEAR:
+			return calculate_a_hundred_spears_atk_ratio(skill_lv);
 		default:
 			return 0;
 			break;
@@ -139,6 +141,28 @@ int KnightSkillAtkRatioCalculator::calculate_wind_cutter_atk_ratio(int skill_lv,
 	return ratio + (intelligence/3);
 }
 
+int KnightSkillAtkRatioCalculator::calculate_a_hundred_spears_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 150;
+			break;
+		case 2:
+			ratio = 250;
+			break;
+		case 3:
+			ratio = 350;
+			break;
+		case 4:
+			ratio = 450;
+			break;
+		case 5:
+			ratio = 550;
+			break;
+		}
+	return ratio;
+}
 
 int KnightSkillAtkRatioCalculator::calculate_brandish_spear_atk_ratio(int skill_lv, int vit)
 {

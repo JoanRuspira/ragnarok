@@ -356,6 +356,9 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 		case MO_BALKYOUNG:
 			MonkAdditionalEffectsCalculator::apply_excruciating_fist_additional_effect(src, bl, skill_lv);
 			break;
+		case RK_HUNDREDSPEAR:
+			KnightAdditionalEffectsCalculator::apply_a_hundred_spears_additional_effect(src, bl, skill_lv, tick);
+			break;
 	}
 }
 

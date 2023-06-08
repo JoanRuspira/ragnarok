@@ -12,4 +12,5 @@ class KnightAdditionalEffectsCalculator
     public:
         static void apply_smite_additional_effect(struct block_list* src, struct block_list *bl, int skill_lv);
         static void apply_auto_counter_additional_effect(struct block_list* src, struct block_list *bl, int skill_lv);
+        static void apply_a_hundred_spears_additional_effect(struct block_list* src, struct block_list *bl, int skill_lv, t_tick tick);
 };

@@ -568,12 +568,8 @@ void initChangeTables(void)
 	add_sc( NPC_INVISIBLE		, SC_CLOAKING		);
 	set_sc( LK_AURABLADE		, SC_AURABLADE		, EFST_AURABLADE		, SCB_NONE );
 	set_sc( LK_PARRYING		, SC_PARRYING		, EFST_PARRYING		, SCB_NONE );
-	set_sc( LK_CONCENTRATION	, SC_CONCENTRATION	, EFST_LKCONCENTRATION	,
-#ifndef RENEWAL
-		SCB_BATK|SCB_WATK|SCB_HIT|SCB_DEF|SCB_DEF2 );
-#else
-		SCB_HIT|SCB_DEF );
-#endif
+	set_sc( LK_CONCENTRATION	, SC_CONCENTRATION	, EFST_LKCONCENTRATION	, SCB_HIT );
+
 	set_sc( LK_TENSIONRELAX		, SC_TENSIONRELAX	, EFST_TENSIONRELAX	, SCB_REGEN );
 	set_sc( LK_BERSERK		, SC_BERSERK		, EFST_BERSERK		, SCB_DEF|SCB_DEF2|SCB_MDEF|SCB_MDEF2|SCB_FLEE|SCB_SPEED|SCB_ASPD|SCB_MAXHP|SCB_REGEN );
 	set_sc( HP_ASSUMPTIO		, SC_ASSUMPTIO		,
@@ -7053,8 +7049,6 @@ static defType status_calc_def(struct block_list *bl, struct status_change *sc, 
 		def >>=1;
 	if(sc->data[SC_SIGNUMCRUCIS])
 		def -= def * sc->data[SC_SIGNUMCRUCIS]->val2/100;
-	if(sc->data[SC_CONCENTRATION])
-		def -= def * sc->data[SC_CONCENTRATION]->val4/100;
 	if(sc->data[SC_SKE])
 		def >>=1;
 	if(sc->data[SC_PROVOKE] && bl->type != BL_PC) // Provoke doesn't alter player defense->
@@ -10971,10 +10965,8 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			}
 			break;
 		case SC_CONCENTRATION:
-			val2 = 5 + val1 * 2; // Batk/Watk Increase
-			val4 = 5 + val1 * 2; // Def reduction
-			val3 = 10*val1; // Hit Increase
-			sc_start(src, bl, SC_ENDURE, 100, 1, tick); // Level 1 Endure effect
+			val2 = 5*val1; // Damage Increase
+			val3 = 6*val1; // Hit Increase
 			break;
 		case SC_ANGELUS:
 			val2 = 10*val1; // def increase
@@ -13278,11 +13270,6 @@ int status_change_end_(struct block_list* bl, enum sc_type type, int tid, const 
 					status_change_end(pbl, type2, INVALID_TIMER);
 				}
 			}
-			break;
-
-		case SC_CONCENTRATION:
-			if (sc->data[SC_ENDURE] && !sc->data[SC_ENDURE]->val4)
-				status_change_end(bl, SC_ENDURE, INVALID_TIMER);
 			break;
 		case SC_BERSERK:
 			if(status->hp > 200 && sc && sc->data[SC__BLOODYLUST]) {
