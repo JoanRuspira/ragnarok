@@ -6449,6 +6449,10 @@ static void pc_checkallowskill(struct map_session_data *sd)
 		SC_GATLINGFEVER,
 		SC_CONCENTRATION,
 		SC_FORTIFY,
+		SC_PRESTIGE,
+		SC_DEFENDER,
+		SC_REFLECTSHIELD,
+		SC_AUTOGUARD
 	};
 	uint8 i;
 	nullpo_retv(sd);

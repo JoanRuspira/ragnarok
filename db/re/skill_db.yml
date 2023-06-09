@@ -7153,7 +7153,7 @@ Body:
     AfterCastActDelay: 800
     Duration1: 180000
     Requires:
-      SpCost: 30
+      SpCost: 40
       State: Shield
   - Id: 258
     Name: CR_SPEARQUICKEN
