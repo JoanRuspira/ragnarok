@@ -2370,16 +2370,6 @@ bool status_check_skilluse(struct block_list *src, struct block_list *target, ui
 	}
 
 	switch( skill_id ) {
-#ifndef RENEWAL
-		case PA_PRESSURE:
-			if( flag && target ) {
-				// Gloria Avoids pretty much everything....
-				tsc = status_get_sc(target);
-				if(tsc && tsc->option&OPTION_HIDE)
-					return false;
-			}
-			break;
-#endif
 		case AL_TELEPORT:
 		case ALL_ODINS_POWER:
 			// Should fail when used on top of Land Protector [Skotlex]

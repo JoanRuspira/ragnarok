@@ -20,6 +20,12 @@ int CrusaderSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list
 			add_shield_slam_special_effects(target);
 			return calculate_shield_slam_atk_ratio(skill_lv);
 			break;
+		case LG_RAYOFGENESIS:
+			return calculate_genesis_ray_atk_ratio(skill_lv);
+			break;
+		case PA_PRESSURE:
+			return calculate_gloria_domini_atk_ratio(skill_lv);
+			break;
 		default:
 			return 0;
 			break;
@@ -30,6 +36,29 @@ void CrusaderSkillAtkRatioCalculator::add_shield_slam_special_effects(struct blo
 {
 	clif_specialeffect(target, EF_PRESSURE2, AREA);
 	clif_specialeffect(target, EF_STUNATTACK, AREA);
+}
+
+int CrusaderSkillAtkRatioCalculator::calculate_genesis_ray_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 250;
+			break;
+		case 2:
+			ratio = 350;
+			break;
+		case 3:
+			ratio = 450;
+			break;
+		case 4:
+			ratio = 550;
+			break;
+		case 5:
+			ratio = 650;
+			break;
+		}
+	return ratio;
 }
 
 int CrusaderSkillAtkRatioCalculator::calculate_shield_slam_atk_ratio(int skill_lv)
@@ -50,6 +79,29 @@ int CrusaderSkillAtkRatioCalculator::calculate_shield_slam_atk_ratio(int skill_l
 			break;
 		case 5:
 			ratio = 500;
+			break;
+		}
+	return ratio;
+}
+
+int CrusaderSkillAtkRatioCalculator::calculate_gloria_domini_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 400;
+			break;
+		case 2:
+			ratio = 500;
+			break;
+		case 3:
+			ratio = 600;
+			break;
+		case 4:
+			ratio = 700;
+			break;
+		case 5:
+			ratio = 800;
 			break;
 		}
 	return ratio;
@@ -83,19 +135,19 @@ int CrusaderSkillAtkRatioCalculator::calculate_grand_cross_atk_ratio(int skill_l
 	int ratio = 0;
 	switch (skill_lv) {
 		case 1:
-			ratio = -25;
+			ratio = -50;
 			break;
 		case 2:
-			ratio = 0;
+			ratio = -25;
 			break;
 		case 3:
-			ratio = 25;
+			ratio = 0;
 			break;
 		case 4:
-			ratio = 50;
+			ratio = 25;
 			break;
 		case 5:
-			ratio = 75;
+			ratio = 50;
 			break;
 		}
 	return ratio;

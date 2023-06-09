@@ -21,14 +21,8 @@
     <Filter Include="Header Files\skillBaseDamageCalculator">
       <UniqueIdentifier>{615ca4da-09f8-4771-8474-cdb50d40ecdd}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\skillMatkRatioCalculator">
-      <UniqueIdentifier>{d0d36d65-86c5-44ab-8b96-a847d2cd9c56}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\structures">
       <UniqueIdentifier>{fc32a67e-0d23-4756-8966-e017039fcf78}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\skillMatkRatioCalculator\crusader">
-      <UniqueIdentifier>{fd894390-e9d3-4352-8e27-cf793a8d6011}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\skillAtkRatioCalculator\crusader">
       <UniqueIdentifier>{a398dae7-900f-4f3f-acbe-5ae2fd857fc6}</UniqueIdentifier>
@@ -41,12 +35,6 @@
     </Filter>
     <Filter Include="Header Files\skillAtkRatioCalculator\archer">
       <UniqueIdentifier>{44935ede-9b2e-416b-956c-a1bbf30a0775}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\skillMAtkRatioCalculator">
-      <UniqueIdentifier>{27441732-9ef4-4e2b-be6b-48e8a345f04e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\skillMAtkRatioCalculator\crusader">
-      <UniqueIdentifier>{49b86a60-338a-4322-a35f-3b0e6bc52ec3}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\skillAtkRatioCalculator">
       <UniqueIdentifier>{e482c4ab-044e-499a-9d08-c5974ce62579}</UniqueIdentifier>
@@ -380,9 +368,6 @@
     <ClInclude Include="CrusaderSkillAtkRatioCalculator.h">
       <Filter>Header Files\skillAtkRatioCalculator\crusader</Filter>
     </ClInclude>
-    <ClInclude Include="CrusaderSkillMatkRatioCalculator.h">
-      <Filter>Header Files\skillMatkRatioCalculator\crusader</Filter>
-    </ClInclude>
     <ClInclude Include="EquipmentAttackCalculator.h">
       <Filter>Header Files\skillBaseDamageCalculator</Filter>
     </ClInclude>
@@ -633,9 +618,6 @@
     </ClCompile>
     <ClCompile Include="SkillBaseDamageCalculator.cpp">
       <Filter>Source Files\skillBaseDamageCalculator</Filter>
-    </ClCompile>
-    <ClCompile Include="CrusaderSkillMatkRatioCalculator.cpp">
-      <Filter>Source Files\skillMAtkRatioCalculator\crusader</Filter>
     </ClCompile>
     <ClCompile Include="SwordsmanSkillAtkRatioCalculator.cpp">
       <Filter>Source Files\skillAtkRatioCalculator\swordsman</Filter>

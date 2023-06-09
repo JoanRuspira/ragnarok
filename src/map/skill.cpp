@@ -2490,7 +2490,7 @@ int64 skill_attack (int attack_type, struct block_list* src, struct block_list *
 
 	if (tsc  && skill_id != NPC_EVILLAND && skill_id != SP_SOULEXPLOSION && skill_id != SJ_NOVAEXPLOSING
 #ifndef RENEWAL
-		&& skill_id != PA_PRESSURE && skill_id != HW_GRAVITATION
+		&& skill_id != HW_GRAVITATION
 #endif
 		) {
 		if (tsc->data[SC_DEVOTION]) {
@@ -4206,9 +4206,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case MG_FROSTDIVER:
 	case WZ_SIGHTBLASTER:
 	case WZ_SIGHTRASHER:
-#ifdef RENEWAL
-	case PA_PRESSURE:
-#endif
 	case NJ_KOUENKA:
 	case NJ_HYOUSENSOU:
 	case NJ_HUUJIN:
@@ -4294,7 +4291,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 			break; // 50% chance
 	case SN_FALCONASSAULT:
 #ifndef RENEWAL
-	case PA_PRESSURE:
 	case CR_ACIDDEMONSTRATION:
 #endif
 	case TF_THROWSTONE:
@@ -4359,6 +4355,10 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 		status_percent_damage(src, bl, 0, skill_lv*6.6, false);
 		break;
 
+	case PA_PRESSURE:
+		skill_attack(BF_MAGIC,src,src,bl,skill_id,skill_lv,tick,flag);
+		status_percent_damage(src, bl, 0, skill_lv*4, false);
+		break;
 	case NPC_BLOODDRAIN:
 	case NPC_ENERGYDRAIN:
 		{
@@ -15362,10 +15362,6 @@ bool skill_check_condition_castbegin(struct map_session_data* sd, uint16 skill_i
 			}
 			if (sc->data[SC_BANDING] && sc->data[SC_BANDING]->val2 < 3)
 				return false; // Just fails, no msg here.
-			break;
-		case LG_RAYOFGENESIS:
-			if (sc && sc->data[SC_INSPIRATION])
-				return true; // Don't check for partner.
 			break;
 		case SR_FALLENEMPIRE:
 			if( !(sc && sc->data[SC_COMBO] && sc->data[SC_COMBO]->val1 == SR_DRAGONCOMBO) )

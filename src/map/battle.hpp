@@ -14,7 +14,6 @@
 #include "skill.hpp"
 #include "Damage.h"
 #include "CrusaderSkillAtkRatioCalculator.h"
-#include "CrusaderSkillMatkRatioCalculator.h"
 #include "KnightSkillAtkRatioCalculator.h"
 #include "ArcherSkillAtkRatioCalculator.h"
 #include "SwordsmanSkillAtkRatioCalculator.h"

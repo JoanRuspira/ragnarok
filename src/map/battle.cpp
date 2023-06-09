@@ -1408,7 +1408,6 @@ int64 battle_calc_damage(struct block_list *src,struct block_list *bl,struct Dam
 
 	switch (skill_id) {
 #ifndef RENEWAL
-    case PA_PRESSURE:
 		case HW_GRAVITATION:
 #endif
 		case SP_SOULEXPLOSION:
@@ -4882,18 +4881,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 //Adds an absolute value to damage. 100 = +100 damage
 #define MATK_ADD(a) { ad.damage += a; }
 
-		// if (sd) {
-		// 	switch (sd->class_) {
-		// 	case MAPID_CRUSADER:
-		// 	case MAPID_PALADIN:
-		// 		CrusaderSkillMatkRatioCalculator *matk_ratio_calculator =
-		// 			new CrusaderSkillMatkRatioCalculator(status_get_lv(src), skill_id, skill_lv, sstatus->int_);
-		// 		skillratio += matk_ratio_calculator->calculate_skill_matk_ratio();
-		// 		delete matk_ratio_calculator;
-		// 		break;
-		// 	}
-		// }
-
 		//Calc base damage according to skill
 		switch (skill_id) {
 			// case CR_HEAL:
@@ -5019,6 +5006,8 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 						skillratio += BardSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
 					case CR_GRANDCROSS:
+					case LG_RAYOFGENESIS:
+					case PA_PRESSURE:
 						skillratio += CrusaderSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
 					case WZ_VERMILION:
@@ -5168,10 +5157,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 						skillratio += -100 + 50 * skill_lv;
 						RE_LVL_DMOD(100);
 						break;
-					case PA_PRESSURE:
-						skillratio += -100 + 500 + 150 * skill_lv;
-						RE_LVL_DMOD(100);
-						break;
 #else
 #endif
 					case AB_ADORAMUS:
@@ -5233,12 +5218,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case WL_SUMMON_ATK_GROUND:
 						skillratio += -100 + (1 + skill_lv) / 2 * (status_get_lv(src) + (sd ? sd->status.job_level : 0));
 						RE_LVL_DMOD(100); // ! TODO: Confirm new formula
-						break;
-					case LG_RAYOFGENESIS:
-						skillratio += -100 + 200 * skill_lv;
-						if(sc && sc->data[SC_INSPIRATION])
-							skillratio += 1400;
-						RE_LVL_DMOD(100);
 						break;
 					case LG_SHIELDSPELL: // [(Casters Base Level x 4) + (Shield MDEF x 100) + (Casters INT x 2)] %
 						if (sd && skill_lv == 2)
@@ -5618,9 +5597,6 @@ struct Damage battle_calc_misc_attack(struct block_list *src,struct block_list *
 		case HW_GRAVITATION:
 			md.damage = 200 + 200 * skill_lv;
 			md.dmotion = 0; //No flinch animation
-			break;
-		case PA_PRESSURE:
-			md.damage = 500 + 300 * skill_lv;
 			break;
 #endif
 		case PA_GOSPEL:

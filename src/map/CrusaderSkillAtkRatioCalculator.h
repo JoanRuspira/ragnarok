@@ -11,6 +11,8 @@ class CrusaderSkillAtkRatioCalculator
 		static int calculate_grand_cross_atk_ratio(int skill_lv);
 		static int calculate_rapid_smiting_atk_ratio(int skill_lv);
 		static int calculate_shield_slam_atk_ratio(int skill_lv);
+		static int calculate_genesis_ray_atk_ratio(int skill_lv);
+		static int calculate_gloria_domini_atk_ratio(int skill_lv);
 		static void add_shield_slam_special_effects(struct block_list *target);
 };
 

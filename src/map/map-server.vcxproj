@@ -192,7 +192,6 @@
     <ClInclude Include="CriticalHitCalculator.h" />
     <ClInclude Include="CrusaderAdditionalEffectsCalculator.h" />
     <ClInclude Include="CrusaderSkillAtkRatioCalculator.h" />
-    <ClInclude Include="CrusaderSkillMatkRatioCalculator.h" />
     <ClInclude Include="date.hpp" />
     <ClInclude Include="duel.hpp" />
     <ClInclude Include="elemental.hpp" />
@@ -277,7 +276,6 @@
     <ClCompile Include="CriticalHitCalculator.cpp" />
     <ClCompile Include="CrusaderAdditionalEffectsCalculator.cpp" />
     <ClCompile Include="CrusaderSkillAtkRatioCalculator.cpp" />
-    <ClCompile Include="CrusaderSkillMatkRatioCalculator.cpp" />
     <ClCompile Include="date.cpp" />
     <ClCompile Include="duel.cpp" />
     <ClCompile Include="elemental.cpp" />

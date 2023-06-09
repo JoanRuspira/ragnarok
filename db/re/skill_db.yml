@@ -7044,9 +7044,6 @@ Body:
     MaxLevel: 5
     Type: Magic
     TargetType: Self
-    DamageFlags:
-      IgnoreAtkCard: true
-      IgnoreFlee: true
     Range: 5
     Hit: Single
     HitCount: 1
@@ -9773,40 +9770,15 @@ Body:
     Name: PA_PRESSURE
     Description: Gloria Domini
     MaxLevel: 5
-    Type: Misc
+    Type: Magic
     TargetType: Attack
-    DamageFlags:
-      IgnoreElement: true
-      IgnoreFlee: true
-      IgnoreDefCard: true
-    Flags:
-      IgnoreBgReduction: true
-      IgnoreGvgReduction: true
     Range: 9
+    Element: Holy
     Hit: Multi_Hit
     HitCount: 1
-    CastTime:
-      - Level: 1
-        Time: 2000
-      - Level: 2
-        Time: 2500
-      - Level: 3
-        Time: 3000
-      - Level: 4
-        Time: 3500
-      - Level: 5
-        Time: 4000
-    AfterCastActDelay:
-      - Level: 1
-        Time: 2000
-      - Level: 2
-        Time: 2500
-      - Level: 3
-        Time: 3000
-      - Level: 4
-        Time: 3500
-      - Level: 5
-        Time: 4000
+    CastTime: 4000
+    Cooldown: 7000
+    AfterCastActDelay: 400
     Duration2:
       - Level: 1
         Time: 2000
@@ -9819,17 +9791,7 @@ Body:
       - Level: 5
         Time: 6000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 30
-        - Level: 2
-          Amount: 35
-        - Level: 3
-          Amount: 40
-        - Level: 4
-          Amount: 45
-        - Level: 5
-          Amount: 50
+      SpCost: 50
   - Id: 368
     Name: PA_SACRIFICE
     Description: Martyr's Reckoning
@@ -22053,84 +22015,23 @@ Body:
   - Id: 2321
     Name: LG_RAYOFGENESIS
     Description: Ray of Genesis
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Magic
     TargetType: Ground
     DamageFlags:
       Splash: true
-    Range: 1
+    Range: 9
     Hit: Multi_Hit
     HitCount: -7
     Element: Holy
     SplashArea: 5
     CastCancel: true
-    CastTime:
-      - Level: 1
-        Time: 1000
-      - Level: 2
-        Time: 1500
-      - Level: 3
-        Time: 2000
-      - Level: 4
-        Time: 2500
-      - Level: 5
-        Time: 3000
-      - Level: 6
-        Time: 3500
-      - Level: 7
-        Time: 4000
-      - Level: 8
-        Time: 4500
-      - Level: 9
-        Time: 5000
-      - Level: 10
-        Time: 5500
-    AfterCastActDelay: 2000
+    CastTime: 5500
+    AfterCastActDelay: 1000
     Duration1: 10000
-    Cooldown: 3500
+    Cooldown: 10000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 45
-        - Level: 2
-          Amount: 50
-        - Level: 3
-          Amount: 55
-        - Level: 4
-          Amount: 60
-        - Level: 5
-          Amount: 65
-        - Level: 6
-          Amount: 70
-        - Level: 7
-          Amount: 75
-        - Level: 8
-          Amount: 80
-        - Level: 9
-          Amount: 85
-        - Level: 10
-          Amount: 90
-      HpRateCost:
-        - Level: 1
-          Amount: -3
-        - Level: 2
-          Amount: -3
-        - Level: 3
-          Amount: -6
-        - Level: 4
-          Amount: -6
-        - Level: 5
-          Amount: -9
-        - Level: 6
-          Amount: -9
-        - Level: 7
-          Amount: -12
-        - Level: 8
-          Amount: -12
-        - Level: 9
-          Amount: -15
-        - Level: 10
-          Amount: -15
+      SpCost: 75
   - Id: 2322
     Name: LG_PIETY
     Description: Piety
