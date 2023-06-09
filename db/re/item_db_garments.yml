@@ -10,9 +10,10 @@ Body:
     Type: Armor
     Buy: 1000
     Weight: 200
-    Defense: 1
+    Defense: 4
     Locations:
       Garment: true
+    ArmorLevel: 1
     Refineable: true
   - Id: 2502
     AegisName: Hood_
@@ -20,10 +21,11 @@ Body:
     Type: Armor
     Buy: 1000
     Weight: 200
-    Defense: 1
+    Defense: 4
     Slots: 1
     Locations:
       Garment: true
+    ArmorLevel: 1
     Refineable: true
   - Id: 2503
     AegisName: Muffler
@@ -31,13 +33,14 @@ Body:
     Type: Armor
     Buy: 5000
     Weight: 400
-    Defense: 2
+    Defense: 8
     Jobs:
       All: true
       Novice: false
       SuperNovice: false
     Locations:
       Garment: true
+    ArmorLevel: 1
     Refineable: true
   - Id: 2504
     AegisName: Muffler_
@@ -45,7 +48,7 @@ Body:
     Type: Armor
     Buy: 5000
     Weight: 400
-    Defense: 2
+    Defense: 8
     Slots: 1
     Jobs:
       All: true
@@ -53,6 +56,7 @@ Body:
       SuperNovice: false
     Locations:
       Garment: true
+    ArmorLevel: 1
     Refineable: true
   - Id: 2505
     AegisName: Manteau
@@ -60,7 +64,7 @@ Body:
     Type: Armor
     Buy: 32000
     Weight: 600
-    Defense: 4
+    Defense: 13
     Jobs:
       Alchemist: true
       Assassin: true
@@ -75,6 +79,7 @@ Body:
       Thief: true
     Locations:
       Garment: true
+    ArmorLevel: 1
     Refineable: true
   - Id: 2506
     AegisName: Manteau_
@@ -82,7 +87,7 @@ Body:
     Type: Armor
     Buy: 32000
     Weight: 600
-    Defense: 4
+    Defense: 13
     Slots: 1
     Jobs:
       Alchemist: true
@@ -98,6 +103,7 @@ Body:
       Thief: true
     Locations:
       Garment: true
+    ArmorLevel: 1
     Refineable: true
   - Id: 2507
     AegisName: Cape_Of_Ancient_Lord
@@ -105,13 +111,14 @@ Body:
     Type: Armor
     Buy: 82000
     Weight: 600
-    Defense: 2
+    Defense: 9
     Jobs:
       All: true
       Novice: false
       SuperNovice: false
     Locations:
       Garment: true
+    ArmorLevel: 1
     EquipLevelMin: 40
     Refineable: true
     Script: |
@@ -122,13 +129,14 @@ Body:
     Type: Armor
     Buy: 56000
     Weight: 500
-    Defense: 1
+    Defense: 4
     Jobs:
       All: true
       Novice: false
       SuperNovice: false
     Locations:
       Garment: true
+    ArmorLevel: 1
     Refineable: true
     Script: |
       bonus bUnbreakableGarment;
@@ -139,6 +147,7 @@ Body:
     Type: Armor
     Buy: 20000
     Weight: 550
+    Defense: 10
     Jobs:
       Mage: true
       Sage: true
@@ -146,24 +155,49 @@ Body:
       Wizard: true
     Locations:
       Garment: true
+    ArmorLevel: 1
     EquipLevelMin: 75
     Refineable: true
     Script: |
       bonus bMdef,5;
       bonus bVit,10;
+  - Id: 2510
+    AegisName: Novice_Hood
+    Name: Somber Novice Hood
+    Type: Armor
+    Buy: 1
+    Weight: 1
+    Defense: 4
+    Jobs:
+      Novice: true
+      SuperNovice: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Trade:
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus2 bSubEle,Ele_Neutral,20;
   - Id: 2511
     AegisName: Skeleton's_Cape
     Name: Skeleton Manteau
     Type: Armor
     Buy: 5000
     Weight: 700
-    Defense: 1
+    Defense: 13
     Jobs:
       All: true
       Novice: false
       SuperNovice: false
     Locations:
       Garment: true
+    ArmorLevel: 1
     EquipLevelMin: 75
     Refineable: true
     Script: |
@@ -173,13 +207,48 @@ Body:
       bonus bVit,-3;
       bonus bLuk,2;
       bonus bAgi,-4;
+  - Id: 2512
+    AegisName: Novice_Manteau
+    Name: Novice Manteau
+    Type: Armor
+    Buy: 50000
+    Weight: 500
+    Defense: 7
+    Slots: 1
+    Jobs:
+      Novice: true
+      SuperNovice: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 40
+    Refineable: true
+    Script: |
+      bonus2 bSubEle,Ele_Neutral,10;
+  - Id: 2513
+    AegisName: Celestial_Robe
+    Name: Heavenly Maiden Robe
+    Type: Armor
+    Buy: 20
+    Weight: 500
+    Defense: 18
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 80
+    Refineable: true
   - Id: 2514
     AegisName: Pauldron
     Name: Pauldron
     Type: Armor
     Buy: 20
     Weight: 800
-    Defense: 5
+    Defense: 25
     Slots: 1
     Jobs:
       Alchemist: true
@@ -193,6 +262,7 @@ Body:
       Thief: true
     Locations:
       Garment: true
+    ArmorLevel: 1
     EquipLevelMin: 80
     Refineable: true
   - Id: 2515
@@ -201,7 +271,7 @@ Body:
     Type: Armor
     Buy: 20000
     Weight: 300
-    Defense: 1
+    Defense: 12
     Slots: 1
     Jobs:
       Mage: true
@@ -210,6 +280,7 @@ Body:
       Wizard: true
     Locations:
       Garment: true
+    ArmorLevel: 1
     EquipLevelMin: 85
     Refineable: true
   - Id: 2516
@@ -218,13 +289,14 @@ Body:
     Type: Armor
     Buy: 30000
     Weight: 400
-    Defense: 3
+    Defense: 8
     Jobs:
       All: true
       Novice: false
       SuperNovice: false
     Locations:
       Garment: true
+    ArmorLevel: 1
     EquipLevelMin: 65
     Refineable: true
     Script: |

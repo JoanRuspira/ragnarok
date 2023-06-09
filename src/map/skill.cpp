@@ -5993,6 +5993,14 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		clif_skill_nodamage(src,bl,skill_id,skill_lv,
 			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
 		break;
+	
+	case PA_FORTIFY:
+		clif_specialeffect(src, EF_MILSHIELD_STR, AREA);
+		clif_specialeffect(src, EF_SHRINK, AREA);
+		clif_specialeffect(src, EF_CHEMICAL3S, AREA);
+		clif_skill_nodamage(src,bl,skill_id,skill_lv,
+			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
+		break;
 	case PF_MEMORIZE:
 		clif_specialeffect(src, EF_SECRA, AREA);
 		clif_skill_nodamage(src,bl,skill_id,skill_lv,

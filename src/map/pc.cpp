@@ -6448,6 +6448,7 @@ static void pc_checkallowskill(struct map_session_data *sd)
 		SC_DANCING,
 		SC_GATLINGFEVER,
 		SC_CONCENTRATION,
+		SC_FORTIFY,
 	};
 	uint8 i;
 	nullpo_retv(sd);

@@ -569,7 +569,7 @@ void initChangeTables(void)
 	set_sc( LK_AURABLADE		, SC_AURABLADE		, EFST_AURABLADE		, SCB_NONE );
 	set_sc( LK_PARRYING		, SC_PARRYING		, EFST_PARRYING		, SCB_NONE );
 	set_sc( LK_CONCENTRATION	, SC_CONCENTRATION	, EFST_LKCONCENTRATION	, SCB_HIT );
-
+	set_sc( PA_FORTIFY	, SC_FORTIFY	, EFST_FORTIFY	, SCB_DEF|SCB_MDEF );
 	set_sc( LK_TENSIONRELAX		, SC_TENSIONRELAX	, EFST_TENSIONRELAX	, SCB_REGEN );
 	set_sc( LK_BERSERK		, SC_BERSERK		, EFST_BERSERK		, SCB_DEF|SCB_DEF2|SCB_MDEF|SCB_MDEF2|SCB_FLEE|SCB_SPEED|SCB_ASPD|SCB_MAXHP|SCB_REGEN );
 	set_sc( HP_ASSUMPTIO		, SC_ASSUMPTIO		,
@@ -7062,7 +7062,9 @@ static defType status_calc_def(struct block_list *bl, struct status_change *sc, 
 	if(sc->data[SC_RUSHWINDMILL])
 		def += sc->data[SC_RUSHWINDMILL]->val3;
 	if(sc->data[SC_ENDURE])
-		def += sc->data[SC_ENDURE]->val1*2;
+		def += sc->data[SC_ENDURE]->val1*4;
+	if(sc->data[SC_FORTIFY])
+		def += sc->data[SC_FORTIFY]->val2;
 	if( sc->data[SC_BANDING] && sc->data[SC_BANDING]->val2 > 1 )
 		def += (5 + sc->data[SC_BANDING]->val1) * sc->data[SC_BANDING]->val2 / 10;
 	if( sc->data[SC_ECHOSONG] )
@@ -7197,7 +7199,9 @@ static defType status_calc_mdef(struct block_list *bl, struct status_change *sc,
 	if(sc->data[SC_EARTH_INSIGNIA] && sc->data[SC_EARTH_INSIGNIA]->val1 == 3)
 		mdef += 50;
 	if(sc->data[SC_ENDURE])
-		mdef += sc->data[SC_ENDURE]->val1*2;
+		mdef += sc->data[SC_ENDURE]->val1*4;
+	if(sc->data[SC_FORTIFY])
+		mdef += sc->data[SC_FORTIFY]->val2;
 	if( sc->data[SC_DEFENCE] )
 		mdef += sc->data[SC_DEFENCE]->val1*4;
 	if(sc->data[SC_STONEHARDSKIN])
@@ -10954,6 +10958,9 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 				// }
 			}
 			break;
+		case SC_FORTIFY:
+			val2 = 15*val1; // Damage Increase
+			break;
 		case SC_CONCENTRATION:
 			val2 = 5*val1; // Damage Increase
 			val3 = 6*val1; // Hit Increase
@@ -11174,11 +11181,11 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			break;
 		case SC_DEFENSIVESTANCE:
 			if (sd)
-				val1 = pc_checkskill(sd, SR_KNUCKLEARROW) * 2; // DEF/MDEF Increase
+				val1 = pc_checkskill(sd, SR_KNUCKLEARROW) * 4; // DEF/MDEF Increase
 			break;
 		case SC_STONEHARDSKIN:
 			if (sd)
-				val1 = pc_checkskill(sd, RK_STONEHARDSKIN) * 2; // DEF/MDEF Increase
+				val1 = pc_checkskill(sd, RK_STONEHARDSKIN) * 4; // DEF/MDEF Increase
 			break;
 		case SC_REFRESH:
 			status_heal(bl, status_get_max_hp(bl) * 25 / 100, 0, 1);
@@ -13645,7 +13652,6 @@ int status_change_end_(struct block_list* bl, enum sc_type type, int tid, const 
 	case SC_TWOHANDQUICKEN:
 	case SC_ONEHAND:
 	case SC_SPEARQUICKEN:
-	case SC_CONCENTRATION:
 	case SC_MERC_QUICKEN:
 		sc->opt3 &= ~OPT3_QUICKEN;
 		opt_flag = 0;

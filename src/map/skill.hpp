@@ -2160,6 +2160,7 @@ enum e_skill {
 	HT_FALCON_1 = 858,
 	AL_HEAL2 = 859,
 	PA_SHIELDSLAM = 860,
+	PA_FORTIFY = 861,
 };
 
 /// The client view ids for land skills.

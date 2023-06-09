@@ -9,9 +9,10 @@ Body:
     Type: Armor
     Buy: 500
     Weight: 300
-    Defense: 3
+    Defense: 20
     Locations:
       Left_Hand: true
+    ArmorLevel: 1
     Refineable: true
     View: 1
   - Id: 2102
@@ -20,10 +21,11 @@ Body:
     Type: Armor
     Buy: 500
     Weight: 300
-    Defense: 3
+    Defense: 20
     Slots: 1
     Locations:
       Left_Hand: true
+    ArmorLevel: 1
     Refineable: true
     View: 1
   - Id: 2103
@@ -32,7 +34,7 @@ Body:
     Type: Armor
     Buy: 14000
     Weight: 600
-    Defense: 4
+    Defense: 40
     Jobs:
       Acolyte: true
       Alchemist: true
@@ -49,6 +51,7 @@ Body:
       Thief: true
     Locations:
       Left_Hand: true
+    ArmorLevel: 1
     Refineable: true
     View: 2
   - Id: 2104
@@ -57,7 +60,7 @@ Body:
     Type: Armor
     Buy: 14000
     Weight: 600
-    Defense: 4
+    Defense: 40
     Slots: 1
     Jobs:
       Acolyte: true
@@ -75,6 +78,7 @@ Body:
       Thief: true
     Locations:
       Left_Hand: true
+    ArmorLevel: 1
     Refineable: true
     View: 2
   - Id: 2105
@@ -83,13 +87,14 @@ Body:
     Type: Armor
     Buy: 56000
     Weight: 1300
-    Defense: 6
+    Defense: 60
     Jobs:
       Crusader: true
       Knight: true
       Swordman: true
     Locations:
       Left_Hand: true
+    ArmorLevel: 1
     Refineable: true
     View: 3
   - Id: 2106
@@ -98,7 +103,7 @@ Body:
     Type: Armor
     Buy: 56000
     Weight: 1300
-    Defense: 6
+    Defense: 60
     Slots: 1
     Jobs:
       Crusader: true
@@ -106,6 +111,7 @@ Body:
       Swordman: true
     Locations:
       Left_Hand: true
+    ArmorLevel: 1
     Refineable: true
     View: 3
   - Id: 2107
@@ -114,7 +120,7 @@ Body:
     Type: Armor
     Buy: 60000
     Weight: 1000
-    Defense: 4
+    Defense: 45
     Jobs:
       Crusader: true
       Knight: true
@@ -122,6 +128,7 @@ Body:
       Swordman: true
     Locations:
       Left_Hand: true
+    ArmorLevel: 1
     Refineable: true
     View: 4
     Script: |
@@ -132,7 +139,7 @@ Body:
     Type: Armor
     Buy: 60000
     Weight: 1000
-    Defense: 4
+    Defense: 45
     Slots: 1
     Jobs:
       Crusader: true
@@ -141,6 +148,7 @@ Body:
       Swordman: true
     Locations:
       Left_Hand: true
+    ArmorLevel: 1
     Refineable: true
     View: 4
     Script: |
@@ -151,7 +159,7 @@ Body:
     Type: Armor
     Buy: 20
     Weight: 1000
-    Defense: 3
+    Defense: 25
     Jobs:
       Mage: true
       Sage: true
@@ -159,6 +167,7 @@ Body:
       Wizard: true
     Locations:
       Left_Hand: true
+    ArmorLevel: 1
     Refineable: true
     View: 5
     Script: |
@@ -170,11 +179,12 @@ Body:
     Type: Armor
     Buy: 85000
     Weight: 1400
-    Defense: 5
+    Defense: 110
     Jobs:
       Crusader: true
     Locations:
       Left_Hand: true
+    ArmorLevel: 1
     EquipLevelMin: 68
     View: 4
     Script: |
@@ -186,11 +196,12 @@ Body:
     Type: Armor
     Buy: 128000
     Weight: 1600
-    Defense: 5
+    Defense: 120
     Jobs:
       Crusader: true
     Locations:
       Left_Hand: true
+    ArmorLevel: 1
     EquipLevelMin: 83
     Refineable: true
     View: 4
@@ -199,17 +210,124 @@ Body:
       bonus bInt,2;
       bonus bMdef,3;
       bonus bUnbreakableShield;
+  - Id: 2112
+    AegisName: Novice_Guard
+    Name: Novice Guard
+    Type: Armor
+    Buy: 1
+    Weight: 1
+    Defense: 20
+    Jobs:
+      Novice: true
+      SuperNovice: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    View: 1
+    Trade:
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+  - Id: 2113
+    AegisName: Novice_Shield
+    Name: Novice Shield
+    Type: Armor
+    Buy: 5000
+    Weight: 1000
+    Defense: 20
+    Slots: 1
+    Jobs:
+      Novice: true
+      SuperNovice: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    EquipLevelMin: 40
+    Refineable: true
+    View: 3
+    Script: |
+      bonus2 bSubEle,Ele_All,20;
+      bonus2 bSubEle,Ele_Neutral,-20;
+  - Id: 2114
+    AegisName: Stone_Buckler
+    Name: Stone Buckler
+    Type: Armor
+    Buy: 30000
+    Weight: 1500
+    Defense: 45
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    EquipLevelMin: 65
+    Refineable: true
+    View: 2
+    Script: |
+      bonus2 bSubSize,Size_Large,5;
+  - Id: 2115
+    AegisName: Valkyrja's_Shield
+    Name: Valkyrja's Shield
+    Type: Armor
+    Buy: 30000
+    Weight: 500
+    Defense: 80
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    EquipLevelMin: 65
+    Refineable: true
+    View: 4
+    Script: |
+      bonus2 bSubEle,Ele_Water,20;
+      bonus2 bSubEle,Ele_Fire,20;
+      bonus2 bSubEle,Ele_Dark,20;
+      bonus2 bSubEle,Ele_Undead,20;
+      bonus bMdef,5;
+  - Id: 2116
+    AegisName: Angel's_Safeguard
+    Name: Angelic Guard
+    Type: Armor
+    Buy: 10000
+    Weight: 400
+    Defense: 30
+    Slots: 1
+    Jobs:
+      Novice: true
+      SuperNovice: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    EquipLevelMin: 20
+    Refineable: true
+    View: 1
+    Script: |
+      bonus2 bSubRace,RC_Demon,5;
   - Id: 2117
     AegisName: Arm_Guard
     Name: Arm Guard
     Type: Armor
     Buy: 10000
     Weight: 150
-    Defense: 5
+    Defense: 50
     Jobs:
+      KagerouOboro: true
       Ninja: true
     Locations:
       Left_Hand: true
+    ArmorLevel: 1
     EquipLevelMin: 20
     Refineable: true
     View: 1
@@ -219,12 +337,14 @@ Body:
     Type: Armor
     Buy: 10000
     Weight: 150
-    Defense: 5
+    Defense: 50
     Slots: 1
     Jobs:
+      KagerouOboro: true
       Ninja: true
     Locations:
       Left_Hand: true
+    ArmorLevel: 1
     EquipLevelMin: 20
     Refineable: true
     View: 1
@@ -234,11 +354,13 @@ Body:
     Type: Armor
     Buy: 40000
     Weight: 150
-    Defense: 4
+    Defense: 45
     Jobs:
+      KagerouOboro: true
       Ninja: true
     Locations:
       Left_Hand: true
+    ArmorLevel: 1
     EquipLevelMin: 50
     Refineable: true
     View: 1
@@ -250,12 +372,14 @@ Body:
     Type: Armor
     Buy: 40000
     Weight: 150
-    Defense: 4
+    Defense: 45
     Slots: 1
     Jobs:
+      KagerouOboro: true
       Ninja: true
     Locations:
       Left_Hand: true
+    ArmorLevel: 1
     EquipLevelMin: 50
     Refineable: true
     View: 1

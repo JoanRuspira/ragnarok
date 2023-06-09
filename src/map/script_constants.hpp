@@ -977,6 +977,7 @@
 	export_constant(SC_AURABLADE);
 	export_constant(SC_PARRYING);
 	export_constant(SC_CONCENTRATION);
+	export_constant(SC_FORTIFY);
 	export_constant(SC_TENSIONRELAX);
 	export_constant(SC_BERSERK);
 	export_constant(SC_FURY);
@@ -2592,6 +2593,7 @@
 	export_constant(EFST_AURABLADE);
 	export_constant(EFST_PARRYING);
 	export_constant(EFST_LKCONCENTRATION);
+	export_constant(EFST_FORTIFY);
 	export_constant(EFST_TENSIONRELAX);
 	export_constant(EFST_BERSERK);
 	export_constant(EFST_SACRIFICE);

@@ -10,9 +10,10 @@ Body:
     Type: Armor
     Buy: 10
     Weight: 100
-    Defense: 1
+    Defense: 10
     Locations:
       Armor: true
+    ArmorLevel: 1
     Refineable: true
   - Id: 2302
     AegisName: Cotton_Shirt_
@@ -20,10 +21,11 @@ Body:
     Type: Armor
     Buy: 10
     Weight: 100
-    Defense: 1
+    Defense: 10
     Slots: 1
     Locations:
       Armor: true
+    ArmorLevel: 1
     Refineable: true
   - Id: 2303
     AegisName: Leather_Jacket
@@ -31,9 +33,10 @@ Body:
     Type: Armor
     Buy: 200
     Weight: 200
-    Defense: 2
+    Defense: 15
     Locations:
       Armor: true
+    ArmorLevel: 1
     Refineable: true
   - Id: 2304
     AegisName: Leather_Jacket_
@@ -41,10 +44,11 @@ Body:
     Type: Armor
     Buy: 200
     Weight: 200
-    Defense: 2
+    Defense: 15
     Slots: 1
     Locations:
       Armor: true
+    ArmorLevel: 1
     Refineable: true
   - Id: 2305
     AegisName: Adventure_Suit
@@ -52,9 +56,10 @@ Body:
     Type: Armor
     Buy: 1000
     Weight: 300
-    Defense: 3
+    Defense: 20
     Locations:
       Armor: true
+    ArmorLevel: 1
     Refineable: true
   - Id: 2306
     AegisName: Adventurere's_Suit_
@@ -62,10 +67,11 @@ Body:
     Type: Armor
     Buy: 1000
     Weight: 300
-    Defense: 3
+    Defense: 20
     Slots: 1
     Locations:
       Armor: true
+    ArmorLevel: 1
     Refineable: true
   - Id: 2307
     AegisName: Mantle
@@ -73,13 +79,14 @@ Body:
     Type: Armor
     Buy: 10000
     Weight: 600
-    Defense: 4
+    Defense: 37
     Jobs:
       All: true
       Novice: false
       SuperNovice: false
     Locations:
       Armor: true
+    ArmorLevel: 1
     Refineable: true
   - Id: 2308
     AegisName: Mantle_
@@ -87,7 +94,7 @@ Body:
     Type: Armor
     Buy: 10000
     Weight: 600
-    Defense: 4
+    Defense: 37
     Slots: 1
     Jobs:
       All: true
@@ -95,6 +102,7 @@ Body:
       SuperNovice: false
     Locations:
       Armor: true
+    ArmorLevel: 1
     Refineable: true
   - Id: 2309
     AegisName: Coat
@@ -102,13 +110,14 @@ Body:
     Type: Armor
     Buy: 22000
     Weight: 1200
-    Defense: 5
+    Defense: 42
     Jobs:
       All: true
       Novice: false
       SuperNovice: false
     Locations:
       Armor: true
+    ArmorLevel: 1
     Refineable: true
   - Id: 2310
     AegisName: Coat_
@@ -116,7 +125,7 @@ Body:
     Type: Armor
     Buy: 22000
     Weight: 1200
-    Defense: 5
+    Defense: 42
     Slots: 1
     Jobs:
       All: true
@@ -124,6 +133,7 @@ Body:
       SuperNovice: false
     Locations:
       Armor: true
+    ArmorLevel: 1
     Refineable: true
   - Id: 2311
     AegisName: Mink_Coat
@@ -131,7 +141,7 @@ Body:
     Type: Armor
     Buy: 20
     Weight: 2300
-    Defense: 6
+    Defense: 30
     Slots: 1
     Jobs:
       All: true
@@ -139,6 +149,7 @@ Body:
       SuperNovice: false
     Locations:
       Armor: true
+    ArmorLevel: 1
     EquipLevelMin: 30
     Refineable: true
   - Id: 2312
@@ -147,7 +158,7 @@ Body:
     Type: Armor
     Buy: 48000
     Weight: 2800
-    Defense: 7
+    Defense: 35
     Jobs:
       Alchemist: true
       Assassin: true
@@ -160,6 +171,7 @@ Body:
       Thief: true
     Locations:
       Armor: true
+    ArmorLevel: 1
     Refineable: true
   - Id: 2313
     AegisName: Padded_Armor_
@@ -167,7 +179,7 @@ Body:
     Type: Armor
     Buy: 48000
     Weight: 2800
-    Defense: 7
+    Defense: 35
     Slots: 1
     Jobs:
       Alchemist: true
@@ -181,6 +193,7 @@ Body:
       Thief: true
     Locations:
       Armor: true
+    ArmorLevel: 1
     Refineable: true
   - Id: 2314
     AegisName: Chain_Mail
@@ -188,7 +201,7 @@ Body:
     Type: Armor
     Buy: 65000
     Weight: 3300
-    Defense: 8
+    Defense: 55
     Jobs:
       Alchemist: true
       Assassin: true
@@ -201,6 +214,7 @@ Body:
       Thief: true
     Locations:
       Armor: true
+    ArmorLevel: 1
     Refineable: true
   - Id: 2315
     AegisName: Chain_Mail_
@@ -208,7 +222,7 @@ Body:
     Type: Armor
     Buy: 65000
     Weight: 3300
-    Defense: 8
+    Defense: 55
     Slots: 1
     Jobs:
       Alchemist: true
@@ -222,6 +236,7 @@ Body:
       Thief: true
     Locations:
       Armor: true
+    ArmorLevel: 1
     Refineable: true
   - Id: 2316
     AegisName: Plate_Armor
@@ -229,13 +244,14 @@ Body:
     Type: Armor
     Buy: 80000
     Weight: 4500
-    Defense: 10
+    Defense: 70
     Jobs:
       Crusader: true
       Knight: true
       Swordman: true
     Locations:
       Armor: true
+    ArmorLevel: 1
     EquipLevelMin: 40
     Refineable: true
   - Id: 2317
@@ -244,7 +260,7 @@ Body:
     Type: Armor
     Buy: 80000
     Weight: 4500
-    Defense: 10
+    Defense: 70
     Slots: 1
     Jobs:
       Crusader: true
@@ -252,7 +268,64 @@ Body:
       Swordman: true
     Locations:
       Armor: true
+    ArmorLevel: 1
     EquipLevelMin: 40
+    Refineable: true
+  - Id: 2318
+    AegisName: Clothes_Of_The_Lord
+    Name: Lord's Clothes
+    Type: Armor
+    Buy: 20
+    Weight: 2500
+    Defense: 59
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Merchant: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bMdef,5;
+      bonus bInt,1;
+  - Id: 2319
+    AegisName: Glittering_Clothes
+    Name: Glittering Jacket
+    Type: Armor
+    Buy: 20
+    Weight: 2500
+    Defense: 58
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bMdef,5;
+      bonus2 bAddEff,Eff_Blind,300;
+  - Id: 2320
+    AegisName: Formal_Suit
+    Name: Formal Suit
+    Type: Armor
+    Buy: 20
+    Weight: 300
+    Defense: 40
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Armor: true
+    ArmorLevel: 1
     Refineable: true
   - Id: 2321
     AegisName: Silk_Robe
@@ -260,7 +333,7 @@ Body:
     Type: Armor
     Buy: 8000
     Weight: 400
-    Defense: 3
+    Defense: 20
     Jobs:
       Acolyte: true
       Alchemist: true
@@ -273,10 +346,10 @@ Body:
       Priest: true
       Sage: true
       SoulLinker: true
-      Swordman: true
       Wizard: true
     Locations:
       Armor: true
+    ArmorLevel: 1
     Refineable: true
     Script: |
       bonus bMdef,10;
@@ -286,7 +359,7 @@ Body:
     Type: Armor
     Buy: 8000
     Weight: 400
-    Defense: 3
+    Defense: 20
     Slots: 1
     Jobs:
       Acolyte: true
@@ -300,10 +373,10 @@ Body:
       Priest: true
       Sage: true
       SoulLinker: true
-      Swordman: true
       Wizard: true
     Locations:
       Armor: true
+    ArmorLevel: 1
     Refineable: true
     Script: |
       bonus bMdef,10;
@@ -313,13 +386,14 @@ Body:
     Type: Armor
     Buy: 6500
     Weight: 400
-    Defense: 4
+    Defense: 24
     Jobs:
       Acolyte: true
       Monk: true
       Priest: true
     Locations:
       Armor: true
+    ArmorLevel: 1
     Refineable: true
   - Id: 2324
     AegisName: Scapulare_
@@ -327,7 +401,7 @@ Body:
     Type: Armor
     Buy: 6500
     Weight: 400
-    Defense: 4
+    Defense: 24
     Slots: 1
     Jobs:
       Acolyte: true
@@ -335,6 +409,7 @@ Body:
       Priest: true
     Locations:
       Armor: true
+    ArmorLevel: 1
     Refineable: true
   - Id: 2325
     AegisName: Saint_Robe
@@ -342,7 +417,7 @@ Body:
     Type: Armor
     Buy: 54000
     Weight: 600
-    Defense: 6
+    Defense: 50
     Jobs:
       Acolyte: true
       Alchemist: true
@@ -352,6 +427,7 @@ Body:
       Priest: true
     Locations:
       Armor: true
+    ArmorLevel: 1
     Refineable: true
     Script: |
       bonus bMdef,5;
@@ -361,7 +437,7 @@ Body:
     Type: Armor
     Buy: 54000
     Weight: 600
-    Defense: 6
+    Defense: 50
     Slots: 1
     Jobs:
       Acolyte: true
@@ -372,16 +448,37 @@ Body:
       Priest: true
     Locations:
       Armor: true
+    ArmorLevel: 1
     Refineable: true
     Script: |
       bonus bMdef,5;
+  - Id: 2327
+    AegisName: Holy_Robe
+    Name: Holy Robe
+    Type: Armor
+    Buy: 20
+    Weight: 1700
+    Defense: 57
+    Jobs:
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bMdef,5;
+      bonus2 bSubRace,RC_Demon,15;
+      bonus2 bSubEle,Ele_Dark,10;
   - Id: 2328
     AegisName: Wooden_Mail
     Name: Wooden Mail
     Type: Armor
     Buy: 5500
     Weight: 1000
-    Defense: 4
+    Defense: 25
     Jobs:
       Alchemist: true
       Blacksmith: true
@@ -391,6 +488,7 @@ Body:
       Swordman: true
     Locations:
       Armor: true
+    ArmorLevel: 1
     Refineable: true
   - Id: 2329
     AegisName: Wooden_Mail_
@@ -398,7 +496,7 @@ Body:
     Type: Armor
     Buy: 5500
     Weight: 1000
-    Defense: 4
+    Defense: 25
     Slots: 1
     Jobs:
       Alchemist: true
@@ -409,6 +507,7 @@ Body:
       Swordman: true
     Locations:
       Armor: true
+    ArmorLevel: 1
     Refineable: true
   - Id: 2330
     AegisName: Tights
@@ -416,13 +515,14 @@ Body:
     Type: Armor
     Buy: 71000
     Weight: 500
-    Defense: 6
+    Defense: 27
     Jobs:
       Archer: true
       BardDancer: true
       Hunter: true
     Locations:
       Armor: true
+    ArmorLevel: 1
     EquipLevelMin: 45
     Refineable: true
     Script: |
@@ -433,7 +533,7 @@ Body:
     Type: Armor
     Buy: 71000
     Weight: 500
-    Defense: 6
+    Defense: 27
     Slots: 1
     Jobs:
       Archer: true
@@ -441,6 +541,7 @@ Body:
       Hunter: true
     Locations:
       Armor: true
+    ArmorLevel: 1
     EquipLevelMin: 45
     Refineable: true
     Script: |
@@ -451,7 +552,7 @@ Body:
     Type: Armor
     Buy: 7000
     Weight: 700
-    Defense: 4
+    Defense: 23
     Jobs:
       Mage: true
       Sage: true
@@ -459,6 +560,7 @@ Body:
       Wizard: true
     Locations:
       Armor: true
+    ArmorLevel: 1
     Refineable: true
   - Id: 2333
     AegisName: Silver_Robe_
@@ -466,7 +568,7 @@ Body:
     Type: Armor
     Buy: 7000
     Weight: 700
-    Defense: 4
+    Defense: 23
     Slots: 1
     Jobs:
       Mage: true
@@ -475,21 +577,44 @@ Body:
       Wizard: true
     Locations:
       Armor: true
+    ArmorLevel: 1
     Refineable: true
+  - Id: 2334
+    AegisName: Mage_Coat
+    Name: Mage Coat
+    Type: Armor
+    Buy: 20
+    Weight: 600
+    Defense: 40
+    Jobs:
+      Mage: true
+      Sage: true
+      SoulLinker: true
+      Wizard: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    EquipLevelMin: 50
+    Refineable: true
+    Script: |
+      bonus bMdef,5;
+      bonus bInt,1;
   - Id: 2335
     AegisName: Thief_Clothes
     Name: Thief Clothes
     Type: Armor
     Buy: 74000
     Weight: 100
-    Defense: 6
+    Defense: 40
     Jobs:
       Assassin: true
+      KagerouOboro: true
       Ninja: true
       Rogue: true
       Thief: true
     Locations:
       Armor: true
+    ArmorLevel: 1
     Refineable: true
     Script: |
       bonus bAgi,1;
@@ -499,30 +624,55 @@ Body:
     Type: Armor
     Buy: 74000
     Weight: 100
-    Defense: 6
+    Defense: 40
     Slots: 1
     Jobs:
       Assassin: true
+      KagerouOboro: true
       Ninja: true
       Rogue: true
       Thief: true
     Locations:
       Armor: true
+    ArmorLevel: 1
     Refineable: true
     Script: |
       bonus bAgi,1;
+  - Id: 2337
+    AegisName: Ninja_Suit
+    Name: Ninja Suit
+    Type: Armor
+    Buy: 20
+    Weight: 1500
+    Defense: 58
+    Jobs:
+      Assassin: true
+      KagerouOboro: true
+      Ninja: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    EquipLevelMin: 50
+    Refineable: true
+    Script: |
+      bonus bAgi,1;
+      bonus bMdef,3;
   - Id: 2338
     AegisName: Wedding_Dress
     Name: Wedding Dress
     Type: Armor
     Buy: 43000
     Weight: 500
+    Defense: 10
     Jobs:
       All: true
       Novice: false
       SuperNovice: false
     Locations:
       Armor: true
+    ArmorLevel: 1
     Refineable: true
     Script: |
       bonus bMdef,15;
@@ -532,9 +682,26 @@ Body:
     Type: Armor
     Buy: 1000
     Weight: 100
-    Defense: 4
+    Defense: 22
     Locations:
       Armor: true
+    ArmorLevel: 1
+    Refineable: true
+  - Id: 2340
+    AegisName: Novice_Breast
+    Name: Novice Breastplate
+    Type: Armor
+    Buy: 89000
+    Weight: 500
+    Defense: 32
+    Slots: 1
+    Jobs:
+      Novice: true
+      SuperNovice: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    EquipLevelMin: 10
     Refineable: true
   - Id: 2341
     AegisName: Full_Plate_Armor
@@ -542,11 +709,12 @@ Body:
     Type: Armor
     Buy: 94000
     Weight: 5500
-    Defense: 11
+    Defense: 79
     Jobs:
       Crusader: true
     Locations:
       Armor: true
+    ArmorLevel: 1
     EquipLevelMin: 70
     Refineable: true
   - Id: 2342
@@ -555,11 +723,12 @@ Body:
     Type: Armor
     Buy: 102500
     Weight: 5500
-    Defense: 11
+    Defense: 79
     Slots: 1
     Jobs:
       Crusader: true
     Locations:
       Armor: true
+    ArmorLevel: 1
     EquipLevelMin: 70
     Refineable: true

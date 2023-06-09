@@ -10,9 +10,10 @@ Body:
     Type: Armor
     Buy: 400
     Weight: 200
-    Defense: 1
+    Defense: 5
     Locations:
       Shoes: true
+    ArmorLevel: 1
     Refineable: true
   - Id: 2402
     AegisName: Sandals_
@@ -20,10 +21,11 @@ Body:
     Type: Armor
     Buy: 400
     Weight: 200
-    Defense: 1
+    Defense: 5
     Slots: 1
     Locations:
       Shoes: true
+    ArmorLevel: 1
     Refineable: true
   - Id: 2403
     AegisName: Shoes
@@ -31,13 +33,14 @@ Body:
     Type: Armor
     Buy: 3500
     Weight: 400
-    Defense: 2
+    Defense: 10
     Jobs:
       All: true
       Novice: false
       SuperNovice: false
     Locations:
       Shoes: true
+    ArmorLevel: 1
     Refineable: true
   - Id: 2404
     AegisName: Shoes_
@@ -45,7 +48,7 @@ Body:
     Type: Armor
     Buy: 3500
     Weight: 400
-    Defense: 2
+    Defense: 10
     Slots: 1
     Jobs:
       All: true
@@ -53,6 +56,7 @@ Body:
       SuperNovice: false
     Locations:
       Shoes: true
+    ArmorLevel: 1
     Refineable: true
   - Id: 2405
     AegisName: Boots
@@ -60,7 +64,7 @@ Body:
     Type: Armor
     Buy: 18000
     Weight: 600
-    Defense: 4
+    Defense: 16
     Jobs:
       Alchemist: true
       Archer: true
@@ -72,6 +76,7 @@ Body:
       Hunter: true
       Knight: true
       Merchant: true
+      Rebellion: true
       Rogue: true
       StarGladiator: true
       Swordman: true
@@ -79,6 +84,7 @@ Body:
       Thief: true
     Locations:
       Shoes: true
+    ArmorLevel: 1
     Refineable: true
   - Id: 2406
     AegisName: Boots_
@@ -86,7 +92,7 @@ Body:
     Type: Armor
     Buy: 18000
     Weight: 600
-    Defense: 4
+    Defense: 16
     Slots: 1
     Jobs:
       Alchemist: true
@@ -99,6 +105,7 @@ Body:
       Hunter: true
       Knight: true
       Merchant: true
+      Rebellion: true
       Rogue: true
       StarGladiator: true
       Swordman: true
@@ -106,16 +113,36 @@ Body:
       Thief: true
     Locations:
       Shoes: true
+    ArmorLevel: 1
     Refineable: true
+  - Id: 2407
+    AegisName: Chrystal_Pumps
+    Name: Crystal Pumps
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 5
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Shoes: true
+    ArmorLevel: 1
+    Refineable: true
+    Script: |
+      bonus bMdef,10;
+      bonus bLuk,5;
   - Id: 2408
     AegisName: Cuffs
     Name: Shackles
     Type: Armor
     Buy: 5000
     Weight: 3000
-    Defense: 3
+    Defense: 18
     Locations:
       Shoes: true
+    ArmorLevel: 1
     Refineable: true
   - Id: 2409
     AegisName: Spiky_Heel
@@ -123,28 +150,48 @@ Body:
     Type: Armor
     Buy: 8500
     Weight: 600
-    Defense: 2
+    Defense: 10
     Jobs:
       All: true
       Novice: false
       SuperNovice: false
     Locations:
       Shoes: true
+    ArmorLevel: 1
     Refineable: true
     Script: |
       bonus bMdef,5;
+  - Id: 2410
+    AegisName: Sleipnir
+    Name: Sleipnir
+    Type: Armor
+    Buy: 20
+    Weight: 3500
+    Defense: 40
+    Locations:
+      Shoes: true
+    ArmorLevel: 1
+    EquipLevelMin: 94
+    Script: |
+      bonus bMdef,10;
+      bonus bMaxHPrate,20;
+      bonus bMaxSPrate,20;
+      bonus bSPrecovRate,25;
+      bonus bSpeedRate,25;
+      bonus bInt,25;
   - Id: 2411
     AegisName: Grave
     Name: Greaves
     Type: Armor
     Buy: 48000
     Weight: 750
-    Defense: 5
+    Defense: 27
     Jobs:
       Crusader: true
       Knight: true
     Locations:
       Shoes: true
+    ArmorLevel: 1
     EquipLevelMin: 65
     Refineable: true
   - Id: 2412
@@ -153,13 +200,14 @@ Body:
     Type: Armor
     Buy: 54000
     Weight: 750
-    Defense: 5
+    Defense: 27
     Slots: 1
     Jobs:
       Crusader: true
       Knight: true
     Locations:
       Shoes: true
+    ArmorLevel: 1
     EquipLevelMin: 65
     Refineable: true
   - Id: 2413
@@ -168,11 +216,12 @@ Body:
     Type: Armor
     Buy: 34000
     Weight: 350
-    Defense: 6
+    Defense: 22
     Jobs:
       Crusader: true
       Knight: true
       Swordman: true
     Locations:
       Shoes: true
+    ArmorLevel: 1
     EquipLevelMin: 30

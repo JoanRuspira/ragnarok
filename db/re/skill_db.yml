@@ -2602,6 +2602,22 @@ Body:
     Requires:
       SpCost: 32
       State: Shield
+  - Id: 861
+    Name: PA_FORTIFY
+    Description: Fortify
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 60000
+    AfterCastActDelay: 1000
+    Duration1: 20000
+    Requires:
+      SpCost: 50
+      State: Shield
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
