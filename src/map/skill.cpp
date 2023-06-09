@@ -6240,10 +6240,11 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				lv = -lv;
 			if( lv > battle_config.devotion_level_difference || // Level difference requeriments
 				(dstsd->sc.data[type] && dstsd->sc.data[type]->val1 != src->id) || // Cannot Devote a player devoted from another source
-				(skill_id == ML_DEVOTION && (!mer || mer != dstsd->md)) || // Mercenary only can devote owner
-				(dstsd->class_&MAPID_UPPERMASK) == MAPID_CRUSADER || // Crusader Cannot be devoted
-				(dstsd->sc.data[SC_HELLPOWER])) // Players affected by SC_HELLPOWER cannot be devoted.
-			{
+				(dstsd->class_&MAPID_UPPERMASK) == MAPID_CRUSADER // Crusaders Cannot be devoted
+				// (dstsd->class_&MAPID_UPPERMASK) == MAPID_KNIGHT || // KNights Cannot be devoted
+				// (dstsd->class_&MAPID_UPPERMASK) == MAPID_MONK || // Monks Cannot be devoted
+				// (dstsd->class_&MAPID_UPPERMASK) == MAPID_BLACKSMITH || // Blacksmiths Cannot be devoted
+			){
 				if( sd )
 					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
 				map_freeblock_unlock();
