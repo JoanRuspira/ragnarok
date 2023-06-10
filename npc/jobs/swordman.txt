@@ -5,18 +5,18 @@
 -	script	Swordsman Guildmaster#swrdgld::SwrdGld	-1,{
 	if (BaseClass == EAJ_NOVICE) {
 		mes "[Swordsman Guildmaster]";
-		mes "Good day! I am the swordsman Guildmaster.";
-		mes "I train novices that meet the requirements and allow men to become swordmen.";
+		mes "Good day! I am the Swordsman Guildmaster.";
+		mes "I train Novices that meet the requirements and allow men to become Swordsmen.";
 		next;
 		mes "[Swordsman Guildmaster]";
-		mes "As a swordsman you will gain new skills.";
+		mes "As a Swordsman you will gain new skills.";
 		mes "The requirements are:";
 		mes "- Being a Novice.";
 		mes "- Being Job level 10.";
 		mes "- Having used all your skill points.";
 		next;
 		mes "[Swordsman Guildmaster]";
-		mes "Do you want to become a swordsman?";
+		mes "Do you want to become a Swordsman?";
 		next;
 		switch(select("Yes:No")) {
 			case 1:
@@ -26,22 +26,21 @@
 				if (JobLevel < 10) {
 					mes "[Swordsman Guildmaster]";
 					mes "Hmm... Your job level does not meet our requirements.";
-					mes "You need to be more experienced before being a swordsman.";
+					mes "You need to be more experienced before being a Swordsman.";
 					close;
 				}
 				if (SkillPoint) {
 					mes "[Swordsman Guildmaster]";
 					mes "Looks like you have not used all your skill points.";
-					mes "Use them and I'll be able to make you a swordsman.";
+					mes "Use them and I'll be able to make you a Swordsman.";
 					close;
 				}
 				mes "[Swordsman Guildmaster]";
 				mes "Okay! Looks like you pass all of them!";
-				mes "You are allowed to join the swordsman guild.";
+				mes "You are allowed to join the Swordsman guild.";
 				mes "Congratulations!";
 				jobchange Job_Swordsman;
-				specialeffect2 EF_ANGEL2;
-				specialeffect2 EF_ELECTRIC;
+				specialeffect2 EF_JOBLVUP50;
 				close;
 			case 2:
 				mes "[Swordsman Guildmaster]";
@@ -53,9 +52,9 @@
 		
 	}
 
-	if (BaseJob == Job_Swordsman) {
+	if (Class == Job_Swordsman) {
 		mes "[Swordsman Guildmaster]";
-		mes "Hi fellow swordsman!";
+		mes "Hi fellow Swordsman!";
 		mes "Are you thinking about your next job?";
 		next;
 		mes "[Swordsman Guildmaster]";
@@ -68,7 +67,7 @@
 		close;
 	}
 
-	if (BaseJob == Job_Knight || BaseJob == Job_Crusader || BaseJob == Job_LordKnight || BaseJob == Job_Paladin) {
+	if (Class == Job_Knight || Class == Job_Crusader || Class == Job_LordKnight || Class == Job_Paladin) {
 		mes "[Swordsman Guildmaster]";
 		mes "Ah! An experienced member of the guild!";
 		mes "Are you here to help train the new members?";
@@ -76,7 +75,7 @@
 	}
 
 	mes "[Swordsman Guildmaster]";
-	mes "Welcome to the swordsman guild. We accept applications from novices that meet our requirements.";
+	mes "Welcome to the Swordsman guild. We accept applications from Novices that meet our requirements.";
 	close;
 }
 

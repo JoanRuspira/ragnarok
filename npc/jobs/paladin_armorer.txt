@@ -1,0 +1,59 @@
+//===== Script =======================================
+// Paladin Armorer NPC
+//====================================================
+
+-	script	Paladin Armorer#palar1::Paladin_Armorer	-1,{
+	set .n$,"[Paladin Armorer]";
+	mes .n$;
+	mes "Hello! I am an expert in customising armors.";
+	mes "I am part of the Crusader Guild, so I can make changes to a member's outfit for free";
+	next;
+	if (Class != Job_Paladin) {
+		mes "[Paladin Armorer]";
+		mes "Oh! I can only provide my services to Paladins...";
+		mes "Sorry!";
+		close;
+	}
+	mes "Aha!";
+	mes "A seasoned Paladin, what outfit would you like to wear?";
+	next;
+	switch(select("Crusader:Paladin:Shield Master:Royal Guard:Imperial Guard")) {
+		case 1:
+			setlook LOOK_CLOTHES_COLOR,0;
+        	setlook LOOK_BODY2,4;
+			specialeffect2 EF_ENTRY2;
+			mes "There you go!";
+			mes "Come back if you want to change your outfit again!";
+			close;
+		case 2:
+			setlook LOOK_CLOTHES_COLOR,0;
+        	setlook LOOK_BODY2,0;
+			specialeffect2 EF_ENTRY2;
+			mes "There you go!";
+			mes "Come back if you want to change your outfit again!";
+			close;
+		case 3:
+			setlook LOOK_CLOTHES_COLOR,0;
+        	setlook LOOK_BODY2,3;
+			specialeffect2 EF_ENTRY2;
+			mes "There you go!";
+			mes "Come back if you want to change your outfit again!";
+			close;
+		case 4:
+			setlook LOOK_CLOTHES_COLOR,0;
+        	setlook LOOK_BODY2,1;
+			specialeffect2 EF_ENTRY2;
+			mes "There you go!";
+			mes "Come back if you want to change your outfit again!";
+			close;
+		case 5:
+			setlook LOOK_CLOTHES_COLOR,0;
+        	setlook LOOK_BODY2,2;
+			specialeffect2 EF_ENTRY2;
+			mes "There you go!";
+			mes "Come back if you want to change your outfit again!";
+			close;
+	}	
+}
+
+prt_in,76,87,1	duplicate(Paladin_Armorer)	Paladin Armorer#palar1	602

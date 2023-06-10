@@ -1,0 +1,82 @@
+//===== Script =======================================
+// Card Removal NPCs
+//====================================================
+
+-	script	Crusader Guildmaster#csdgld::CsdGld	-1,{
+	if (BaseClass == EAJ_NOVICE) {
+		mes "[Crusader Guildmaster]";
+		mes "Good day! I am the Crusader Guildmaster.";
+		mes "I train Swordsmen that meet the requirements and allow men to become Crusaders.";
+		next;
+		mes "[Crusader Guildmaster]";
+		mes "As a Crusader you will gain new skills.";
+		mes "The requirements are:";
+		mes "- Being a first class job.";
+		mes "- Being Job level 50.";
+		mes "- Having used all your skill points.";
+		next;
+		mes "[Crusader Guildmaster]";
+		mes "Do you want to become a Crusader?";
+		next;
+		switch(select("Yes:No")) {
+			case 1:
+				mes "[Crusader Guildmaster]";
+				mes "Good! Let me see if you pass our requirements...";
+				next;
+				if (JobLevel < 50) {
+					mes "[Crusader Guildmaster]";
+					mes "Hmm... Your job level does not meet our requirements.";
+					mes "You need to be more experienced before being a Crusader.";
+					close;
+				}
+				if (SkillPoint) {
+					mes "[Crusader Guildmaster]";
+					mes "Looks like you have not used all your skill points.";
+					mes "Use them and I'll be able to make you a Crusader.";
+					close;
+				}
+				mes "[Crusader Guildmaster]";
+				mes "Okay! Looks like you pass all of them!";
+				mes "You are allowed to join the Crusader guild.";
+				mes "Congratulations!";
+				jobchange Job_Crusader;
+				specialeffect2 EF_JOBLVUP50;
+				close;
+			case 2:
+				mes "[Crusader Guildmaster]";
+				mes "Ah! Let me know if you change your mind.";
+				mes "We are always looking for new adventurers";
+				mes "to join the guild.";
+				close;
+		}
+		
+	}
+
+	if (Class == Job_Crusader) {
+		mes "[Crusader Guildmaster]";
+		mes "Hi fellow Crusader!";
+		mes "Are you thinking about your next job?";
+		next;
+		mes "[Crusader Guildmaster]";
+		mes "You can become a Paladin if you reach job level 50.";
+		next;
+		mes "[Crusader Guildmaster]";
+		mes "Go find the legendary Paladin in Louyang.";
+		mes "I'm sure he will be able to train you.";
+		close;
+	}
+
+	if (Class == Job_Paladin) {
+		mes "[Crusader Guildmaster]";
+		mes "Ah! An experienced member of the guild!";
+		mes "Are you here to help train the new members?";
+		close;
+	}
+
+	mes "[Crusader Crusader]";
+	mes "Welcome to the Crusader guild. We accept applications from Swordsmen that meet our requirements.";
+	close;
+}
+
+prt_in,89,106,3	duplicate(CsdGld)	Crusader Guildmaster#csdgld	404
+
