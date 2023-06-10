@@ -9830,6 +9830,8 @@ Body:
     CastCancel: true
     Duration1: 50000
     Duration2: 50000
+    Cooldown: 10000
+    AfterCastActDelay: 5000
     Requires:
       SpCost: 200
     Unit:
@@ -22055,9 +22057,6 @@ Body:
           Amount: 55
         - Level: 5
           Amount: 60
-      ItemCost:
-        - Item: Holy_Water
-          Amount: 2
   - Id: 2323
     Name: LG_EARTHDRIVE
     Description: Earth Drive
