@@ -288,7 +288,7 @@ const char *get_git_hash (void) {
 
 
 static void display_title_map_server() {
-	ShowMessage("" CL_LT_CYAN "     " CL_BOLD "rAthena Ragnarok Offline                               " CL_LT_CYAN "" CL_CLL "" CL_NORMAL "\n");
+	// ShowMessage("" CL_LT_CYAN "     " CL_BOLD "rAthena Ragnarok Offline                               " CL_LT_CYAN "" CL_CLL "" CL_NORMAL "\n");
 	ShowMessage("" CL_BLUE "     " CL_BOLD "           ______________________                 _____      _____ __________     " CL_BLUE "" CL_CLL "" CL_NORMAL "\n");
 	ShowMessage("" CL_BLUE "     " CL_BOLD "           |__\\______   \\_____   \\               /     \\    /  _  \\______    \\   " CL_BLUE "" CL_CLL "" CL_NORMAL "\n");
 	ShowMessage("" CL_BLUE "     " CL_BOLD "           |  ||       _/ /   |   \\    ______   /  \\ /  \\  /  /_\\  \\|     ___/   " CL_BLUE "" CL_CLL "" CL_NORMAL "\n");
@@ -298,7 +298,7 @@ static void display_title_map_server() {
 }
 
 static void display_title_char_server() {
-	ShowMessage("" CL_BT_RED "     " CL_BOLD "rAthena Ragnarok Offline                               " CL_BT_RED "" CL_CLL "" CL_NORMAL "\n");
+	// ShowMessage("" CL_BT_RED "     " CL_BOLD "rAthena Ragnarok Offline                               " CL_BT_RED "" CL_CLL "" CL_NORMAL "\n");
 	ShowMessage("" CL_LT_MAGENTA "     " CL_BOLD "            ____________ ________              _________   ___ ___    _____ __________  " CL_LT_MAGENTA "" CL_CLL "" CL_NORMAL "\n");
 	ShowMessage("" CL_LT_MAGENTA "     " CL_BOLD "           |__\\______   \\_____   \\             \\_   ___ \\ /   |   \\  /  _  \\______    \\ " CL_LT_MAGENTA "" CL_CLL "" CL_NORMAL "\n");
 	ShowMessage("" CL_LT_MAGENTA "     " CL_BOLD "           |  ||       _/ /   |   \\    ______  /    \\  \\//    ~    \\/  /_\\  \\|       _/ " CL_LT_MAGENTA "" CL_CLL "" CL_NORMAL "\n");
@@ -308,7 +308,7 @@ static void display_title_char_server() {
 }
 
 static void display_title_login_server() {
-	ShowMessage("" CL_LT_GREEN "     " CL_BOLD "rAthena Ragnarok Offline                               " CL_LT_GREEN "" CL_CLL "" CL_NORMAL "\n");
+	// ShowMessage("" CL_LT_GREEN "     " CL_BOLD "rAthena Ragnarok Offline                               " CL_LT_GREEN "" CL_CLL "" CL_NORMAL "\n");
 	ShowMessage("" CL_LT_YELLOW "     " CL_BOLD "            ____________ ________              .____    ________    ________.___ _______    " CL_LT_YELLOW "" CL_CLL "" CL_NORMAL "\n");
 	ShowMessage("" CL_LT_YELLOW "     " CL_BOLD "           |__\\______   \\_____   \\             |    |   \\_____  \\  /  _____/|   |\\      \\   " CL_LT_YELLOW "" CL_CLL "" CL_NORMAL "\n");
 	ShowMessage("" CL_LT_YELLOW "     " CL_BOLD "           |  ||       _/ /   |   \\    ______  |    |    /   |   \\/   \\  ___|   |/   |   \\  " CL_LT_YELLOW "" CL_CLL "" CL_NORMAL "\n");

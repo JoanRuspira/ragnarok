@@ -9829,7 +9829,7 @@ Body:
   - Id: 369
     Name: PA_GOSPEL
     Description: Battle Chant
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Misc
     TargetType: Self
     DamageFlags:
@@ -9838,30 +9838,10 @@ Body:
     Hit: Single
     HitCount: 1
     CastCancel: true
-    Duration1: 60000
-    Duration2: 60000
+    Duration1: 50000
+    Duration2: 50000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 80
-        - Level: 2
-          Amount: 80
-        - Level: 3
-          Amount: 80
-        - Level: 4
-          Amount: 80
-        - Level: 5
-          Amount: 80
-        - Level: 6
-          Amount: 100
-        - Level: 7
-          Amount: 100
-        - Level: 8
-          Amount: 100
-        - Level: 9
-          Amount: 100
-        - Level: 10
-          Amount: 100
+      SpCost: 200
     Unit:
       Id: Gospel
       Layout: -1

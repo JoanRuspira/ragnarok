@@ -2294,9 +2294,6 @@ int64 skill_attack (int attack_type, struct block_list* src, struct block_list *
 
 	//Display damage.
 	switch( skill_id ) {
-		case PA_GOSPEL: //Should look like Holy Cross [Skotlex]
-			dmg.dmotion = clif_skill_damage(src,bl,tick,dmg.amotion,dmg.dmotion, damage, dmg.div_, CR_HOLYCROSS, -1, DMG_SPLASH);
-			break;
 		//Skills that need be passed as a normal attack for the client to display correctly.
 		case HVAN_EXPLOSION:
 		case NPC_SELFDESTRUCTION:
@@ -7196,7 +7193,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			status = status_get_status_data(&sd->bl);
 			matk = rand()%(status->matk_max-status->matk_min + 1) + status->matk_min;
 			healing = (200 * skill_lv) + (status_get_lv(src) * 3) + (status_get_int(src) * 3) + (matk * 3);
-			clif_specialeffect(bl, EF_FOOD05, AREA);
+			clif_specialeffect(bl, EF_LAMADAN, AREA);
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 			clif_skill_nodamage(NULL,bl,AL_HEAL,healing,1);
 			status_heal(bl,healing,0,0);
@@ -13841,104 +13838,59 @@ int skill_unit_onplace_timer(struct skill_unit *unit, struct block_list *bl, t_t
 			break;
 
 		case UNT_GOSPEL:
-			if (rnd() % 100 >= 50 + sg->skill_lv * 5 || ss == bl)
-				break;
-			if (battle_check_target(ss, bl, BCT_PARTY) > 0)
+			// if (rnd() % 100 >= 50 + sg->skill_lv * 5 || ss == bl)
+			// 	break;
+			if (battle_check_target(ss, bl, BCT_PARTY) > 0 && ss != bl)
 			{ // Support Effect only on party, not guild
-				int heal;
-				int i = rnd() % 13; // Positive buff count
-				int time = skill_get_time2(sg->skill_id, sg->skill_lv); //Duration
-				switch (i)
-				{
-					case 0: // Heal 1000~9999 HP
-						heal = rnd() % 9000 + 1000;
-						clif_skill_nodamage(ss, bl, AL_HEAL, heal, 1);
-						status_heal(bl, heal, 0, 0);
-						break;
-					case 1: // End all negative status
-						status_change_clear_buffs(bl, SCCB_DEBUFFS | SCCB_REFRESH);
-						if (tsd) clif_gospel_info(tsd, 0x15);
-						break;
-					case 2: // Immunity to all status
-						sc_start(ss, bl, SC_SCRESIST, 100, 100, time);
-						if (tsd) clif_gospel_info(tsd, 0x16);
-						break;
-					case 3: // MaxHP +100%
-						sc_start(ss, bl, SC_INCMHPRATE, 100, 100, time);
-						if (tsd) clif_gospel_info(tsd, 0x17);
-						break;
-					case 4: // MaxSP +100%
-						sc_start(ss, bl, SC_INCMSPRATE, 100, 100, time);
-						if (tsd) clif_gospel_info(tsd, 0x18);
-						break;
-					case 5: // All stats +20
-						sc_start(ss, bl, SC_INCALLSTATUS, 100, 20, time);
-						if (tsd) clif_gospel_info(tsd, 0x19);
-						break;
-					case 6: // Level 10 Blessing
-						sc_start(ss, bl, SC_BLESSING, 100, 10, skill_get_time(AL_BLESSING, 10));
-						break;
-					case 7: // Level 10 Increase AGI
-						sc_start(ss, bl, SC_INCREASEAGI, 100, 10, skill_get_time(AL_INCAGI, 10));
-						break;
-					case 8: // Enchant weapon with Holy element
-						sc_start(ss, bl, SC_ASPERSIO, 100, 1, time);
-						if (tsd) clif_gospel_info(tsd, 0x1c);
-						break;
-					case 9: // Enchant armor with Holy element
-						sc_start(ss, bl, SC_BENEDICTIO, 100, 1, time);
-						if (tsd) clif_gospel_info(tsd, 0x1d);
-						break;
-					case 10: // DEF +25%
-						sc_start(ss, bl, SC_INCDEFRATE, 100, 25, 10000); //10 seconds
-						if (tsd) clif_gospel_info(tsd, 0x1e);
-						break;
-					case 11: // ATK +100%
-						sc_start(ss, bl, SC_INCATKRATE, 100, 100, time);
-						if (tsd) clif_gospel_info(tsd, 0x1f);
-						break;
-					case 12: // HIT/Flee +50
-						sc_start(ss, bl, SC_INCHIT, 100, 50, time);
-						sc_start(ss, bl, SC_INCFLEE, 100, 50, time);
-						if (tsd) clif_gospel_info(tsd, 0x20);
-						break;
-				}
+				int skill_lv, healing, matk = 0;
+				struct status_data *status;
+				struct map_session_data *sd = BL_CAST(BL_PC, ss);
+				status = status_get_status_data(&sd->bl);
+				skill_lv = pc_checkskill(sd,PA_GOSPEL);
+				matk = rand()%(status->matk_max-status->matk_min + 1) + status->matk_min;
+				healing = (200 * skill_lv) + (status_get_lv(ss) * 3) + (status_get_int(ss) * 3) + (matk * 3);
+				clif_skill_nodamage(ss, bl, AL_HEAL, healing, 1);
+				status_heal(bl,healing,0,0);
+
+				// clif_skill_nodamage(ss, bl, AL_HEAL, heal, 1);
+				// status_heal(bl, heal, 0, 0);
 			}
-			else if (battle_check_target(&unit->bl, bl, BCT_ENEMY) > 0)
-			{ // Offensive Effect
-				int i = rnd() % 10; // Negative buff count
-				switch (i)
-				{
-					case 0: // Deal 3000~7999 damage reduced by DEF
-					case 1: // Deal 1500~5499 damage unreducable
-						skill_attack(BF_MISC, ss, &unit->bl, bl, sg->skill_id, sg->skill_lv, tick, i);
-						break;
-					case 2: // Curse
-						sc_start(ss, bl, SC_CURSE, 100, 1, 1800000); //30 minutes
-						break;
-					case 3: // Blind
-						sc_start(ss, bl, SC_BLIND, 100, 1, 1800000); //30 minutes
-						break;
-					case 4: // Poison
-						sc_start2(ss, bl, SC_POISON, 100, 1, ss->id, 1800000); //30 minutes
-						break;
-					case 5: // Level 10 Provoke
-						clif_skill_nodamage(NULL, bl, SM_PROVOKE, 10, sc_start(ss, bl, SC_PROVOKE, 100, 10, INFINITE_TICK)); //Infinite
-						break;
-					case 6: // DEF -100%
-						sc_start(ss, bl, SC_INCDEFRATE, 100, -100, 20000); //20 seconds
-						break;
-					case 7: // ATK -100%
-						sc_start(ss, bl, SC_INCATKRATE, 100, -100, 20000); //20 seconds
-						break;
-					case 8: // Flee -100%
-						sc_start(ss, bl, SC_INCFLEERATE, 100, -100, 20000); //20 seconds
-						break;
-					case 9: // Speed/ASPD -25%
-						sc_start4(ss, bl, SC_GOSPEL, 100, 1, 0, 0, BCT_ENEMY, 20000); //20 seconds
-						break;
-				}
-			}
+			// else if (battle_check_target(&unit->bl, bl, BCT_ENEMY) > 0)
+			// { // Offensive Effect
+			// 	// int i = rnd() % 10; // Negative buff count
+			// 	skill_attack(BF_MISC, ss, &unit->bl, bl, sg->skill_id, sg->skill_lv, tick, 0);
+			// 	// switch (i)
+			// 	// {
+			// 	// 	case 0: // Deal 3000~7999 damage reduced by DEF
+			// 	// 	case 1: // Deal 1500~5499 damage unreducable
+			// 	// 		skill_attack(BF_MISC, ss, &unit->bl, bl, sg->skill_id, sg->skill_lv, tick, i);
+			// 	// 		break;
+			// 	// 	case 2: // Curse
+			// 	// 		sc_start(ss, bl, SC_CURSE, 100, 1, 1800000); //30 minutes
+			// 	// 		break;
+			// 	// 	case 3: // Blind
+			// 	// 		sc_start(ss, bl, SC_BLIND, 100, 1, 1800000); //30 minutes
+			// 	// 		break;
+			// 	// 	case 4: // Poison
+			// 	// 		sc_start2(ss, bl, SC_POISON, 100, 1, ss->id, 1800000); //30 minutes
+			// 	// 		break;
+			// 	// 	case 5: // Level 10 Provoke
+			// 	// 		clif_skill_nodamage(NULL, bl, SM_PROVOKE, 10, sc_start(ss, bl, SC_PROVOKE, 100, 10, INFINITE_TICK)); //Infinite
+			// 	// 		break;
+			// 	// 	case 6: // DEF -100%
+			// 	// 		sc_start(ss, bl, SC_INCDEFRATE, 100, -100, 20000); //20 seconds
+			// 	// 		break;
+			// 	// 	case 7: // ATK -100%
+			// 	// 		sc_start(ss, bl, SC_INCATKRATE, 100, -100, 20000); //20 seconds
+			// 	// 		break;
+			// 	// 	case 8: // Flee -100%
+			// 	// 		sc_start(ss, bl, SC_INCFLEERATE, 100, -100, 20000); //20 seconds
+			// 	// 		break;
+			// 	// 	case 9: // Speed/ASPD -25%
+			// 	// 		sc_start4(ss, bl, SC_GOSPEL, 100, 1, 0, 0, BCT_ENEMY, 20000); //20 seconds
+			// 	// 		break;
+			// 	// }
+			// }
 			break;
 
 #ifndef RENEWAL

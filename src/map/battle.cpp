@@ -5599,21 +5599,6 @@ struct Damage battle_calc_misc_attack(struct block_list *src,struct block_list *
 			md.dmotion = 0; //No flinch animation
 			break;
 #endif
-		case PA_GOSPEL:
-			if (mflag > 0)
-				md.damage = (rnd() % 4000) + 1500;
-			else {
-				md.damage = (rnd() % 5000) + 3000;
-#ifdef RENEWAL
-				md.damage -= (int64)status_get_def(target);
-#else
-				md.damage -= (md.damage * (int64)status_get_def(target)) / 100;
-#endif
-				md.damage -= tstatus->def2;
-				if (md.damage < 0)
-					md.damage = 0;
-			}
-			break;
 #ifndef RENEWAL
 		case CR_ACIDDEMONSTRATION:
 			if(tstatus->vit+sstatus->int_) //crash fix

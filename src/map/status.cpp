@@ -2412,7 +2412,7 @@ bool status_check_skilluse(struct block_list *src, struct block_list *target, ui
 		if (
 			(sc->data[SC_TRICKDEAD] && skill_id != NV_TRICKDEAD)
 			|| (sc->data[SC_AUTOCOUNTER] && !flag && skill_id)
-			|| (sc->data[SC_GOSPEL] && sc->data[SC_GOSPEL]->val4 == BCT_SELF && skill_id != PA_GOSPEL)
+			// || (sc->data[SC_GOSPEL] && sc->data[SC_GOSPEL]->val4 == BCT_SELF && skill_id != PA_GOSPEL)
 			|| (sc->data[SC_SUHIDE] && skill_id != SU_HIDE)
 		)
 			return false;
@@ -7354,8 +7354,6 @@ static unsigned short status_calc_speed(struct block_list *bl, struct status_cha
 				val = max( val, (sc->data[SC_JOINTBEAT]->val2&BREAK_ANKLE ? 50 : 0) + (sc->data[SC_JOINTBEAT]->val2&BREAK_KNEE ? 30 : 0) );
 			if( sc->data[SC_CLOAKING] && (sc->data[SC_CLOAKING]->val4&1) == 0 )
 				val = max( val, sc->data[SC_CLOAKING]->val1 < 3 ? 300 : 30 - 3 * (sc->data[SC_CLOAKING]->val1*5) );
-			if( sc->data[SC_GOSPEL] && sc->data[SC_GOSPEL]->val4 == BCT_ENEMY )
-				val = max( val, 75 );
 			if( sc->data[SC_SLOWDOWN] ) // Slow Potion
 				val = max( val, sc->data[SC_SLOWDOWN]->val1 );
 			if( sc->data[SC_GATLINGFEVER] )
@@ -7562,8 +7560,6 @@ static short status_calc_aspd(struct block_list *bl, struct status_change *sc, b
 			bonus -= 25;
 		if (sc->data[SC_DEFENDER])
 			bonus -= sc->data[SC_DEFENDER]->val4 / 10;
-		if (sc->data[SC_GOSPEL] && sc->data[SC_GOSPEL]->val4 == BCT_ENEMY)
-			bonus -= 75;
 #ifndef RENEWAL
 		if (sc->data[SC_GRAVITATION])
 			bonus -= sc->data[SC_GRAVITATION]->val2 / 10; // Needs more info
@@ -7770,8 +7766,6 @@ static short status_calc_aspd_rate(struct block_list *bl, struct status_change *
 		aspd_rate += 250;
 	if(sc->data[SC_DEFENDER])
 		aspd_rate += sc->data[SC_DEFENDER]->val4;
-	if(sc->data[SC_GOSPEL] && sc->data[SC_GOSPEL]->val4 == BCT_ENEMY)
-		aspd_rate += 250;
 #ifndef RENEWAL
 	if(sc->data[SC_GRAVITATION])
 		aspd_rate += sc->data[SC_GRAVITATION]->val2;
@@ -10165,13 +10159,6 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			case SC_FLASHKICK:
 			case SC_SOULUNITY:
 				break;
-			case SC_GOSPEL:
-				 // Must not override a casting gospel char.
-				if(sce->val4 == BCT_SELF)
-					return 0;
-				if(sce->val1 > val1)
-					return 1;
-				break;
 			case SC_ENDURE:
 				if(sce->val4 && !val4)
 					return 1; // Don't let you override infinite endure.
@@ -10734,14 +10721,6 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			if (!val4) val4 = 10000; // Val4 holds damage interval
 			val3 = tick/val4; // val3 holds skill duration
 			tick_time = val4; // [GodLesZ] tick time
-			break;
-
-		case SC_GOSPEL:
-			if(val4 == BCT_SELF) {	// Self effect
-				val2 = tick/10000;
-				tick_time = 10000; // [GodLesZ] tick time
-				status_change_clear_buffs(bl, SCCB_BUFFS|SCCB_DEBUFFS|SCCB_CHEM_PROTECT); // Remove buffs/debuffs
-			}
 			break;
 
 		case SC_MARIONETTE:
@@ -13282,14 +13261,7 @@ int status_change_end_(struct block_list* bl, enum sc_type type, int tid, const 
 			}
 			sc_start4(bl, bl, SC_REGENERATION, 100, 10,0,0,(RGN_HP|RGN_SP), skill_get_time(LK_BERSERK, sce->val1));
 			break;
-		case SC_GOSPEL:
-			if (sce->val3) { // Clear the group.
-				struct skill_unit_group* group = skill_id2group(sce->val3);
-				sce->val3 = 0;
-				if (group)
-					skill_delunitgroup(group);
-			}
-			break;
+
 #ifndef RENEWAL
 		case SC_HERMODE:
 			if(sce->val3 == BCT_SELF)
@@ -14170,18 +14142,6 @@ TIMER_FUNC(status_change_timer){
 				sc_timer_next(1000 + tick);
 				return 0;
 			}
-		}
-		break;
-
-	case SC_GOSPEL:
-		if(sce->val4 == BCT_SELF && --(sce->val2) > 0) {
-			int hp, sp;
-			hp = (sce->val1 > 5) ? 45 : 30;
-			sp = (sce->val1 > 5) ? 35 : 20;
-			if(!status_charge(bl, hp, sp))
-				break;
-			sc_timer_next(10000+tick);
-			return 0;
 		}
 		break;
 
