@@ -22013,50 +22013,36 @@ Body:
       SpCost: 75
   - Id: 2322
     Name: LG_PIETY
-    Description: Piety
+    Description: Holy Grace
     MaxLevel: 5
-    TargetType: Support
+    Type: Magic
+    TargetType: Self
     DamageFlags:
       NoDamage: true
       Splash: true
     Hit: Single
     HitCount: 1
-    SplashArea: 1
+    Element: Holy
+    SplashArea:
+      - Level: 1
+        Area: 5
+      - Level: 2
+        Area: 5
+      - Level: 3
+        Area: 5
+      - Level: 4
+        Area: 5
+      - Level: 5
+        Area: 5
     CastCancel: true
-    CastTime:
-      - Level: 1
-        Time: 3000
-      - Level: 2
-        Time: 2500
-      - Level: 3
-        Time: 2000
-      - Level: 4
-        Time: 1500
-      - Level: 5
-        Time: 1000
-    Duration1:
-      - Level: 1
-        Time: 60000
-      - Level: 2
-        Time: 80000
-      - Level: 3
-        Time: 100000
-      - Level: 4
-        Time: 120000
-      - Level: 5
-        Time: 140000
+    CastTime: 8000
+    Cooldown: 15000
+    AfterCastActDelay: 1000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 40
-        - Level: 2
-          Amount: 45
-        - Level: 3
-          Amount: 50
-        - Level: 4
-          Amount: 55
-        - Level: 5
-          Amount: 60
+      SpCost: 150
+      ItemCost:
+        - Item: Holy_Water
+          Amount: 2
   - Id: 2323
     Name: LG_EARTHDRIVE
     Description: Earth Drive

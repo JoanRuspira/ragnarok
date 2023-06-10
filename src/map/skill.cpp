@@ -6943,13 +6943,14 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,0);
 			break;
 		}
-		if (tsc && tsc->opt1) {
-			status_change_end(bl, SC_FREEZE, INVALID_TIMER);
-			status_change_end(bl, SC_STONE, INVALID_TIMER);
-			status_change_end(bl, SC_SLEEP, INVALID_TIMER);
-			status_change_end(bl, SC_STUN, INVALID_TIMER);
-			status_change_end(bl, SC_WHITEIMPRISON, INVALID_TIMER);
-		}
+		status_change_end(bl, SC_FREEZE, INVALID_TIMER);
+		status_change_end(bl, SC_STONE, INVALID_TIMER);
+		status_change_end(bl, SC_SLEEP, INVALID_TIMER);
+		status_change_end(bl, SC_STUN, INVALID_TIMER);
+		status_change_end(bl, SC_WHITEIMPRISON, INVALID_TIMER);
+		status_change_end(bl, SC_BLEEDING, INVALID_TIMER);
+		status_change_end(bl, SC_BLIND, INVALID_TIMER);
+	
 		status_change_end(bl, SC_STASIS, INVALID_TIMER);
 		status_change_end(bl, SC_NETHERWORLD, INVALID_TIMER);
 		if(battle_check_undead(tstatus->race,tstatus->def_ele))
@@ -7233,6 +7234,34 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			clif_specialeffect(bl, EF_MOCHI, AREA);
 			clif_skill_nodamage(NULL,bl,AL_HEAL,healing,1);
 			status_heal(bl,healing,0,0);
+		}
+		break;
+	case LG_PIETY:
+		if( !sd || sd->status.party_id == 0 || flag&1 ) {
+			if( sd && tstatus ) {
+				int healing, matk = 0;
+				struct status_data *status;
+				status = status_get_status_data(&sd->bl);
+				matk = rand()%(status->matk_max-status->matk_min + 1) + status->matk_min;
+				healing = (400 * skill_lv) + (status_get_lv(src) * 4) + (status_get_int(src) * 4) + (matk * 4);
+				clif_specialeffect(bl, EF_RECOVERY, AREA);
+				clif_skill_nodamage(src, bl, skill_id, skill_lv,1);
+				clif_skill_nodamage(NULL,bl,AL_HEAL,healing,1);
+				status_heal(bl, healing, 0, 0);
+				status_change_end(bl, SC_FREEZE, INVALID_TIMER);
+				status_change_end(bl, SC_STONE, INVALID_TIMER);
+				status_change_end(bl, SC_SLEEP, INVALID_TIMER);
+				status_change_end(bl, SC_PARALYSIS, INVALID_TIMER);
+				status_change_end(bl, SC_STUN, INVALID_TIMER);
+				status_change_end(bl, SC_WHITEIMPRISON, INVALID_TIMER);
+				status_change_end(bl, SC_BLEEDING, INVALID_TIMER);
+				status_change_end(bl, SC_BLIND, INVALID_TIMER);
+				status_change_end(bl, SC_CURSE, INVALID_TIMER);
+				status_change_end(bl, SC__IGNORANCE, INVALID_TIMER);
+				status_change_end(bl, SC__GROOMY, INVALID_TIMER);
+			}
+		} else if( sd ){
+			party_foreachsamemap(skill_area_sub, sd, skill_get_splash(skill_id, skill_lv), src, skill_id, skill_lv, tick, flag|BCT_PARTY|1, skill_castend_nodamage_id);
 		}
 		break;
 	case AB_CHEAL:
@@ -9527,17 +9556,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 		}
 		break;
-
-	case LG_PIETY:
-		if( flag&1 )
-			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv));
-		else {
-			skill_area_temp[2] = 0;
-			map_foreachinallrange(skill_area_sub,bl,skill_get_splash(skill_id,skill_lv),BL_PC,src,skill_id,skill_lv,tick,flag|SD_PREAMBLE|BCT_PARTY|BCT_SELF|1,skill_castend_nodamage_id);
-			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
-		}
-		break;
-
 	case LG_INSPIRATION:
 		if( sd && !map_getmapflag(sd->bl.m, MF_NOEXPPENALTY) && battle_config.exp_cost_inspiration )
 			pc_lostexp(sd, u64min(sd->status.base_exp, pc_nextbaseexp(sd) * battle_config.exp_cost_inspiration / 100), 0); // 1% penalty.
