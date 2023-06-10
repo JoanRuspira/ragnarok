@@ -200,17 +200,7 @@ Body:
         Plagiarism: true
         Reproduce: true
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 5
-        - Level: 2
-          Amount: 7
-        - Level: 3
-          Amount: 9
-        - Level: 4
-          Amount: 11
-        - Level: 5
-          Amount: 13
+      SpCost: 15
   - Id: 7
     Name: SM_MAGNUM
     Description: Magnum Break
@@ -244,7 +234,7 @@ Body:
         Reproduce: true
     Duration2: 10000
     Requires:
-      SpCost: 20
+      SpCost: 22
       Weapon:
         Fist: true
         Dagger: true
@@ -1723,7 +1713,7 @@ Body:
       - Level: 5
         Time: 300000
     Requires:
-      SpCost: 50
+      SpCost: 40
       Weapon:
         1hSpear: true
         2hSpear: true
@@ -1815,7 +1805,7 @@ Body:
       - Level: 5
         Time: 120000
     Requires:
-      SpCost: 18
+      SpCost: 20
   - Id: 820
     Name: AL_MACEQUICKEN
     Description: Mace Quicken
@@ -2791,7 +2781,7 @@ Body:
         Plagiarism: true
         Reproduce: true
     Requires:
-      SpCost: 12
+      SpCost: 22
       Weapon:
         1hSpear: true
         2hSpear: true
@@ -2817,7 +2807,7 @@ Body:
         Plagiarism: true
         Reproduce: true
     Requires:
-      SpCost: 15
+      SpCost: 17
       Weapon:
         1hSpear: true
         2hSpear: true
@@ -2848,7 +2838,7 @@ Body:
         Plagiarism: true
         Reproduce: true
     Requires:
-      SpCost: 10
+      SpCost: 15
       Weapon:
         1hSpear: true
         2hSpear: true
@@ -7011,7 +7001,7 @@ Body:
         Plagiarism: true
         Reproduce: true
     Requires:
-      SpCost: 12
+      SpCost: 15
       State: Shield
   - Id: 252
     Name: CR_REFLECTSHIELD
@@ -7031,7 +7021,7 @@ Body:
         Plagiarism: true
         Reproduce: true
     Requires:
-      SpCost: 60
+      SpCost: 50
       State: Shield
   - Id: 253
     Name: CR_HOLYCROSS
@@ -7144,7 +7134,7 @@ Body:
     AfterCastActDelay: 800
     Duration1: 180000
     Requires:
-      SpCost: 40
+      SpCost: 50
       State: Shield
   - Id: 258
     Name: CR_SPEARQUICKEN
@@ -10705,7 +10695,7 @@ Body:
     AfterCastActDelay: 400
     Duration2: 30000
     Requires:
-      SpCost: 15
+      SpCost: 17
       Weapon:
         Fist: true
         Dagger: true

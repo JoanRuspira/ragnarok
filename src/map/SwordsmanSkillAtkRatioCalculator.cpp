@@ -54,7 +54,6 @@ void SwordsmanSkillAtkRatioCalculator::add_lightning_strike_special_effects(stru
 void SwordsmanSkillAtkRatioCalculator::add_traumatic_blow_special_effects(struct block_list* src, struct block_list *target)
 {
 	clif_specialeffect(target, EF_MADNESS_RED, AREA);
-	clif_specialeffect(target, EF_RED_CROSS, AREA);
 	clif_specialeffect(target, EF_CRITICALWOUND, AREA);
 }
 

@@ -9,5 +9,5 @@ void SwordsmanAdditionalEffectsCalculator::apply_bash_additional_effect(struct b
 
 void SwordsmanAdditionalEffectsCalculator::apply_traumatic_blow_additional_effect(struct block_list* src, struct block_list *bl, int skill_lv)
 {
-	status_change_start(src, bl, SC_BLEEDING, 10000, skill_lv, 0, 0, 0, 360000, SCSTART_NONE);
+	status_change_start(src, bl, SC_BLEEDING, 10000, skill_lv, 0, 0, 0, 10000, SCSTART_NONE);
 }

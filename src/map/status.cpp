@@ -335,7 +335,7 @@ void initChangeTables(void)
 	add_sc( NPC_SILENCEATTACK	, SC_SILENCE		);
 	add_sc( NPC_WIDECONFUSE		, SC_CONFUSION		);
 	set_sc( NPC_BLINDATTACK		, SC_BLIND		, EFST_BLANK		, SCB_HIT|SCB_FLEE );
-	set_sc( NPC_BLEEDING		, SC_BLEEDING		, EFST_BLOODING, SCB_REGEN );
+	set_sc( NPC_BLEEDING		, SC_BLEEDING		, EFST_BLOODING, SCB_NONE );
 	set_sc( NPC_POISON		, SC_DPOISON		, EFST_BLANK		, SCB_DEF2|SCB_REGEN );
 	add_sc( ALL_REVERSEORCISH,	SC_ORCISH );
 
@@ -601,7 +601,6 @@ void initChangeTables(void)
 	set_sc( CG_MARIONETTE		, SC_MARIONETTE2	, EFST_MARIONETTE, SCB_STR|SCB_AGI|SCB_VIT|SCB_INT|SCB_DEX|SCB_LUK );
 	add_sc( LK_SPIRALPIERCE		, SC_STOP		);
 	add_sc( LK_HEADCRUSH		, SC_BLEEDING		);
-	add_sc( KN_SPEARSTAB		, SC_BLEEDING	);
 	add_sc( HW_NAPALMVULCAN		, SC_CURSE		);
 	set_sc( PF_MINDBREAKER		, SC_MINDBREAKER	, EFST_MINDBREAKER	, SCB_MATK|SCB_MDEF2 );
 	set_sc( PF_MEMORIZE		, SC_MEMORIZE	, EFST_MEMORIZE	, SCB_NONE );
@@ -6469,9 +6468,6 @@ static unsigned short status_calc_batk(struct block_list *bl, struct status_chan
 		batk -= batk * 25/100;
 	if(sc->data[SC_CURSE])
 		batk -= batk * 25/100;
-	/* Curse shouldn't effect on this? <- Curse OR Bleeding??
-	if(sc->data[SC_BLEEDING])
-		batk -= batk * 25 / 100; */
 	if(sc->data[SC_FLEET])
 		batk += batk * sc->data[SC_FLEET]->val3/100;
 	if(sc->data[SC__ENERVATION])
@@ -8686,16 +8682,6 @@ t_tick status_get_sc_def(struct block_list *src, struct block_list *bl, enum sc_
 #endif
 			tick_def2 = status->luk*10;
 			break;
-		case SC_BLEEDING:
-#ifndef RENEWAL
-			sc_def = status->vit*100;
-			sc_def2 = status->luk*10 + status_get_lv(bl)*10 - status_get_lv(src)*10;
-#else
-			sc_def = status->agi*100;
-			sc_def2 = status->luk*10 + status_get_lv(bl)*10 - status_get_lv(src)*10;
-#endif
-			tick_def2 = status->luk*10;
-			break;
 		case SC_SLEEP:
 #ifndef RENEWAL
 			sc_def = status->int_*100;
@@ -10703,11 +10689,6 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			break;
 		case SC_PARRYING:
 		    val2 = 20 + val1*3; // Block Chance
-			break;
-
-		case SC_JOINTBEAT:
-			if( val2&BREAK_NECK )
-				sc_start2(src,bl,SC_BLEEDING,100,val1,val3,skill_get_time2(status_sc2skill(type),val1));
 			break;
 
 		case SC_BERSERK:
@@ -13914,19 +13895,6 @@ TIMER_FUNC(status_change_timer){
 				status_zap(bl, damage, 0);		
 		}
 		break;
-
-	case SC_BLEEDING:
-		if (sce->val4 >= 0) {
-			unsigned int damage = 0;
-			if (sd)
-				damage = 2 + status->max_hp * 3 / 200;
-			else
-				damage = 2 + status->max_hp / 200;
-			if (status->hp > umax(status->max_hp / 4, damage)) // Stop damaging after 25% HP left.
-				status_zap(bl, damage, 0);		
-		}
-		break;
-
 	case SC_BURNING:
 		if (sce->val4 >= 0) {
 			int64 damage = 1000 + (3 * status->max_hp) / 100; // Deals fixed (1000 + 3%*MaxHP)
