@@ -9804,12 +9804,12 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 		if( val3 == SC__BLOODYLUST )
 			break;
 		if(battle_config.berserk_cancels_buffs) {
-			status_change_end(bl, SC_ONEHAND, INVALID_TIMER);
-			status_change_end(bl, SC_TWOHANDQUICKEN, INVALID_TIMER);
-			status_change_end(bl, SC_CONCENTRATION, INVALID_TIMER);
-			status_change_end(bl, SC_PARRYING, INVALID_TIMER);
-			status_change_end(bl, SC_AURABLADE, INVALID_TIMER);
-			status_change_end(bl, SC_MERC_QUICKEN, INVALID_TIMER);
+			// status_change_end(bl, SC_ONEHAND, INVALID_TIMER);
+			// status_change_end(bl, SC_TWOHANDQUICKEN, INVALID_TIMER);
+			// status_change_end(bl, SC_CONCENTRATION, INVALID_TIMER);
+			// status_change_end(bl, SC_PARRYING, INVALID_TIMER);
+			// status_change_end(bl, SC_AURABLADE, INVALID_TIMER);
+			// status_change_end(bl, SC_MERC_QUICKEN, INVALID_TIMER);
 		}
 		else {
 			status_change_end(bl, SC_TWOHANDQUICKEN, INVALID_TIMER);
@@ -10688,7 +10688,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			tick = INFINITE_TICK; // Duration sent to the client should be infinite
 			break;
 		case SC_PARRYING:
-		    val2 = 20 + val1*3; // Block Chance
+		    val2 = val1*8; // Block Chance
 			break;
 
 		case SC_BERSERK:
