@@ -36,16 +36,47 @@ int KnightSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* 
 			return calculate_reckoning_atk_ratio(skill_lv);
 		case RK_HUNDREDSPEAR:
 			return calculate_a_hundred_spears_atk_ratio(skill_lv);
+		case LK_SPIRALPIERCE:
+			return calculate_bowling_bash_atk_ratio(skill_lv, target);
 		default:
 			return 0;
 			break;
 	}
 }
 
+int KnightSkillAtkRatioCalculator::calculate_clashing_spiral_atk_ratio(int skill_lv, struct block_list *target)
+{
+	int ratio = 0;
+	struct status_change *target_status;
+	target_status = status_get_sc(target);
+	switch (skill_lv) {
+		case 1:
+			ratio = 150;
+			break;
+		case 2:
+			ratio = 250;
+			break;
+		case 3:
+			ratio = 350;
+			break;
+		case 4:
+			ratio = 450;
+			break;
+		case 5:
+			ratio = 550;
+			break;
+		}
+
+	if (target_status->data[SC_BLEEDING]) {
+		ratio += 50;
+	}
+	return ratio;
+}
+
+
 void KnightSkillAtkRatioCalculator::add_auto_counter_special_effects(struct block_list* src, struct block_list *target)
 {
 	clif_specialeffect(target, EF_MADNESS_RED, AREA);
-	clif_specialeffect(target, EF_RED_CROSS, AREA);
 }
 
 int KnightSkillAtkRatioCalculator::calculate_reckoning_atk_ratio(int skill_lv)

@@ -10631,52 +10631,21 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    DamageFlags:
-      IgnoreDefense: true
-    Flags:
-      TargetTrap: true
-    Range: 5
+    Range: 1
     Hit: Multi_Hit
     HitCount: 5
     Element: Weapon
-    CastTime:
-      - Level: 1
-        Time: 300
-      - Level: 2
-        Time: 500
-      - Level: 3
-        Time: 700
-      - Level: 4
-        Time: 900
-      - Level: 5
-        Time: 1000
-    AfterCastActDelay:
-      - Level: 1
-        Time: 1200
-      - Level: 2
-        Time: 1400
-      - Level: 3
-        Time: 1600
-      - Level: 4
-        Time: 1800
-      - Level: 5
-        Time: 2000
+    CastTime: 1000
+    AfterCastActDelay: 400
+    Cooldown: 10000
     Duration2: 1000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 18
-        - Level: 2
-          Amount: 21
-        - Level: 3
-          Amount: 24
-        - Level: 4
-          Amount: 27
-        - Level: 5
-          Amount: 30
+      SpCost: 30
       Weapon:
         1hSpear: true
         2hSpear: true
+        1hSword: true
+        2hSword: true
   - Id: 398
     Name: LK_HEADCRUSH
     Description: Traumatic Blow

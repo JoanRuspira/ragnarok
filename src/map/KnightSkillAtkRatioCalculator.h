@@ -19,6 +19,7 @@ class KnightSkillAtkRatioCalculator
 		static int calculate_smite_atk_ratio(int skill_lv);
 		static int calculate_reckoning_atk_ratio(int skill_lv);
 		static int calculate_a_hundred_spears_atk_ratio(int skill_lv);
+		static int calculate_clashing_spiral_atk_ratio(int skill_lv, struct block_list *target);
 		static void add_auto_counter_special_effects(struct block_list* src, struct block_list *target);
 		static void add_smite_special_effects(struct block_list *target);
 };

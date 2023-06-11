@@ -319,6 +319,7 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 		case MG_FROSTDIVER:
 			MageAdditionalEffectsCalculator::apply_frost_diver_additional_effect(src, bl, skill_lv);
 			break;
+		case LK_SPIRALPIERCE:
 		case KN_AUTOCOUNTER:
 			KnightAdditionalEffectsCalculator::apply_auto_counter_additional_effect(src, bl, skill_lv);
 			break;

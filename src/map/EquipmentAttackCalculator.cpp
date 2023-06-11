@@ -142,10 +142,6 @@ int EquipmentAttackCalculator::battle_get_weapon_element(Damage * wd, block_list
 	case GS_GROUNDDRIFT:
 		element = wd->miscflag; //element comes in flag.
 		break;
-	case LK_SPIRALPIERCE:
-		if (!sd)
-			element = ELE_NEUTRAL; //forced neutral for monsters
-		break;
 	case LG_HESPERUSLIT:
 		if (sc && sc->data[SC_BANDING] && sc->data[SC_BANDING]->val2 > 4)
 			element = ELE_HOLY;

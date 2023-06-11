@@ -9715,18 +9715,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 		}
 		break;
-
-	case WM_GLOOMYDAY:
-		clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
-		if( dstsd && ( pc_checkskill(dstsd,KN_BRANDISHSPEAR) || pc_checkskill(dstsd,LK_SPIRALPIERCE) ||
-				pc_checkskill(dstsd,CR_SHIELDCHARGE) || pc_checkskill(dstsd,CR_SHIELDBOOMERANG) ||
-				pc_checkskill(dstsd,PA_SHIELDCHAIN) || pc_checkskill(dstsd,PA_SHIELDSLAM) ) )
-			{ // !TODO: Which skills aren't boosted anymore?
-				sc_start(src,bl,SC_GLOOMYDAY_SK,100,skill_lv,skill_get_time(skill_id,skill_lv));
-				break;
-			}
-		sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv));
-		break;
 	case WM_SONG_OF_MANA:
 	case WM_DANCE_WITH_WUG:
 	case WM_LERADS_DEW:

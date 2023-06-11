@@ -2808,6 +2808,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case CR_SHIELDBOOMERANG:
 		case PA_SACRIFICE:
 		case RK_HUNDREDSPEAR:
+		case LK_SPIRALPIERCE:
 			skillratio += KnightSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
 		case CR_HOLYCROSS:
@@ -2986,14 +2987,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			if (sc->data[SC_GT_ENERGYGAIN])
 				skillratio += skillratio * 50 / 100;
 			break;
-#ifdef RENEWAL
-		// Renewal: skill ratio applies to entire damage [helvetica]
-		case LK_SPIRALPIERCE:
-		case ML_SPIRALPIERCE:
-			skillratio += 50 + 50 * skill_lv;
-			RE_LVL_DMOD(100);
-		break;
-#endif
+
 		case SN_SHARPSHOOTING:
 		case MA_SHARPSHOOTING:
 #ifdef RENEWAL
@@ -4016,16 +4010,8 @@ static void battle_calc_attack_post_defense(struct Damage* wd, struct block_list
 
 	// Post skill/vit reduction damage increases
 	if( sc ) { // SC skill damages
-		if(sc->data[SC_AURABLADE]
-#ifndef RENEWAL
-				&& skill_id != LK_SPIRALPIERCE && skill_id != ML_SPIRALPIERCE
-#endif
-		) {
-#ifdef RENEWAL
+		if(sc->data[SC_AURABLADE]) {
 			ATK_ADD(wd->damage, wd->damage2, (3 + sc->data[SC_AURABLADE]->val1) * status_get_lv(src)); // !TODO: Confirm formula
-#else
-			ATK_ADD(wd->damage, wd->damage2, 20 * sc->data[SC_AURABLADE]->val1);
-#endif
 		}
 	}
 
@@ -4439,10 +4425,6 @@ static struct Damage initialize_weapon_data(struct block_list *src, struct block
 			case KN_AUTOCOUNTER:
 				wd.flag = (wd.flag&~BF_SKILLMASK)|BF_NORMAL;
 				break;
-			case LK_SPIRALPIERCE:
-				if (!sd) wd.flag = (wd.flag&~(BF_RANGEMASK|BF_WEAPONMASK))|BF_LONG|BF_MISC;
-				break;
-
 			// The number of hits is set to 3 by default for use in Inspiration status.
 			// When in Banding, the number of hits is equal to the number of Royal Guards in Banding.
 			case LG_HESPERUSLIT:
