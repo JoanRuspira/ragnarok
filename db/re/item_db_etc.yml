@@ -209,7 +209,7 @@ Body:
     AegisName: Yellow_Gemstone
     Name: Yellow Gemstone
     Type: Etc
-    Buy: 600
+    Buy: 50
     Weight: 30
     Flags:
       BuyingStore: true
@@ -217,7 +217,7 @@ Body:
     AegisName: Red_Gemstone
     Name: Red Gemstone
     Type: Etc
-    Buy: 600
+    Buy: 50
     Weight: 30
     Flags:
       BuyingStore: true
@@ -225,7 +225,7 @@ Body:
     AegisName: Blue_Gemstone
     Name: Blue Gemstone
     Type: Etc
-    Buy: 600
+    Buy: 50
     Weight: 30
     Flags:
       BuyingStore: true
@@ -8408,67 +8408,42 @@ Body:
     AegisName: Magic_Gem_Red
     Name: Red Charm Stone
     Type: Etc
-    Trade:
-      Override: 100
-      NoDrop: true
-      NoTrade: true
-      NoCart: true
-      NoStorage: true
-      NoGuildStorage: true
-      NoMail: true
-      NoAuction: true
+    Buy: 50
+    Weight: 30
+    Flags:
+      BuyingStore: true
   - Id: 7427
     AegisName: Magic_Gem_Yellow
     Name: Yellow Charm Stone
     Type: Etc
-    Trade:
-      Override: 100
-      NoDrop: true
-      NoTrade: true
-      NoCart: true
-      NoStorage: true
-      NoGuildStorage: true
-      NoMail: true
-      NoAuction: true
+    Buy: 50
+    Weight: 30
+    Flags:
+      BuyingStore: true
   - Id: 7428
     AegisName: Magic_Gem_Blue
     Name: Blue Charm Stone
     Type: Etc
-    Trade:
-      Override: 100
-      NoDrop: true
-      NoTrade: true
-      NoCart: true
-      NoStorage: true
-      NoGuildStorage: true
-      NoMail: true
-      NoAuction: true
+    Buy: 50
+    Weight: 30
+    Flags:
+      BuyingStore: true
   - Id: 7429
     AegisName: Magic_Gem_Green
     Name: Green Charm Stone
     Type: Etc
-    Trade:
-      Override: 100
-      NoDrop: true
-      NoTrade: true
-      NoCart: true
-      NoStorage: true
-      NoGuildStorage: true
-      NoMail: true
-      NoAuction: true
+    Buy: 50
+    Weight: 30
+    Flags:
+      BuyingStore: true
   - Id: 7430
     AegisName: Magic_Gem_Black
     Name: Black Charm Stone
     Type: Etc
-    Trade:
-      Override: 100
-      NoDrop: true
-      NoTrade: true
-      NoCart: true
-      NoStorage: true
-      NoGuildStorage: true
-      NoMail: true
-      NoAuction: true
+    Buy: 50
+    Weight: 30
+    Flags:
+      BuyingStore: true
   - Id: 7431
     AegisName: Several_Books
     Name: Pile of Books

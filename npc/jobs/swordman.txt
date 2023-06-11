@@ -67,7 +67,7 @@
 		close;
 	}
 
-	if (Class == Job_Knight || Class == Job_Crusader || Class == Job_LordKnight || Class == Job_Paladin) {
+	if (Class == Job_Knight || Class == Job_Crusader || Class == Job_Lord_Knight || Class == Job_Paladin) {
 		mes "[Swordsman Guildmaster]";
 		mes "Ah! An experienced member of the guild!";
 		mes "Are you here to help train the new members?";
