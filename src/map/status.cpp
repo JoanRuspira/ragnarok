@@ -9982,13 +9982,13 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 	case SC_FEAR:
 		status_change_end(bl, SC_BLIND, INVALID_TIMER);
 		break;
-	case SC_KINGS_GRACE:
-		status_change_end(bl,SC_BLIND,INVALID_TIMER);
-		status_change_end(bl,SC_CURSE,INVALID_TIMER);
-		status_change_end(bl,SC_CONFUSION,INVALID_TIMER);
-		status_change_end(bl,SC_HALLUCINATION,INVALID_TIMER);
-		status_change_end(bl,SC_BURNING,INVALID_TIMER);
-		status_change_end(bl,SC_DEEPSLEEP,INVALID_TIMER);
+	// case SC_KINGS_GRACE:
+	// 	status_change_end(bl,SC_BLIND,INVALID_TIMER);
+	// 	status_change_end(bl,SC_CURSE,INVALID_TIMER);
+	// 	status_change_end(bl,SC_CONFUSION,INVALID_TIMER);
+	// 	status_change_end(bl,SC_HALLUCINATION,INVALID_TIMER);
+	// 	status_change_end(bl,SC_BURNING,INVALID_TIMER);
+	// 	status_change_end(bl,SC_DEEPSLEEP,INVALID_TIMER);
 		// Fall through
 	case SC_GROOMING:
 		status_change_end(bl,SC_STUN,INVALID_TIMER);
@@ -11762,7 +11762,6 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			clif_emotion(bl, ET_SWEAT);
 			break;
 		case SC_KINGS_GRACE:
-			val2 = 3 + val1; //HP Recover rate
 			tick_time = 1000;
 			val4 = tick / tick_time;
 			break;
@@ -14542,7 +14541,6 @@ TIMER_FUNC(status_change_timer){
 		break;
 	case SC_KINGS_GRACE:
 		if( --(sce->val4) >= 0 ) {
-			status_percent_heal(bl, sce->val2, 0);
 			sc_timer_next(1000 + tick);
 			return 0;
 		}
