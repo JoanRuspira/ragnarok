@@ -9455,6 +9455,8 @@ Body:
       NoDamage: true
     Hit: Single
     HitCount: 1
+    Cooldown: 20000
+    AfterCastActDelay: 3000
     Duration1:
       - Level: 1
         Time: 40000
@@ -9467,40 +9469,15 @@ Body:
       - Level: 5
         Time: 120000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 18
-        - Level: 2
-          Amount: 26
-        - Level: 3
-          Amount: 34
-        - Level: 4
-          Amount: 42
-        - Level: 5
-          Amount: 50
+      SpCost: 50
       Weapon:
-        Dagger: true
         1hSword: true
         2hSword: true
         1hSpear: true
         2hSpear: true
-        1hAxe: true
-        2hAxe: true
-        Mace: true
-        2hMace: true
-        Staff: true
-        Bow: true
-        Knuckle: true
-        Musical: true
-        Whip: true
-        Book: true
-        Katar: true
-        Revolver: true
-        Rifle: true
-        Gatling: true
-        Shotgun: true
-        Grenade: true
-        Huuma: true
+      ItemCost:
+        - Item: Runstone_Asir
+          Amount: 1
   - Id: 356
     Name: LK_PARRYING
     Description: Parrying
@@ -9541,6 +9518,11 @@ Body:
       Weapon:
         1hSpear: true
         2hSpear: true
+        1hSword: true
+        2hSword: true
+      ItemCost:
+        - Item: Runstone_Hagalas
+          Amount: 1
   - Id: 358
     Name: LK_TENSIONRELAX
     Description: Relax
@@ -10633,7 +10615,7 @@ Body:
     TargetType: Attack
     Range: 1
     Hit: Multi_Hit
-    HitCount: 5
+    HitCount: -5
     Element: Weapon
     CastTime: 1000
     AfterCastActDelay: 400
@@ -17157,9 +17139,6 @@ Body:
     AfterCastActDelay: 5000
     Requires:
       SpCost: 40
-      ItemCost:
-        - Item: Runstone_Rhydo
-          Amount: 1
   - Id: 2017
     Name: RK_STORMBLAST
     Description: Storm Blast

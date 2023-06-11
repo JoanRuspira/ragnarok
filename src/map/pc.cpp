@@ -6452,7 +6452,9 @@ static void pc_checkallowskill(struct map_session_data *sd)
 		SC_PRESTIGE,
 		SC_DEFENDER,
 		SC_REFLECTSHIELD,
-		SC_AUTOGUARD
+		SC_AUTOGUARD,
+		SC_PARRYING,
+		SC_KINGS_GRACE,
 	};
 	uint8 i;
 	nullpo_retv(sd);

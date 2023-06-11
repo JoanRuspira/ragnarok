@@ -10923,7 +10923,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			val2 = 15*val1; // Damage Increase
 			break;
 		case SC_CONCENTRATION:
-			val2 = 5*val1; // Damage Increase
+			val2 = 10*val1; // Damage Increase
 			val3 = 6*val1; // Hit Increase
 			break;
 		case SC_ANGELUS:

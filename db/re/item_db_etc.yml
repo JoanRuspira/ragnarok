@@ -9511,17 +9511,41 @@ Body:
     AegisName: Runstone_Turisus
     Name: Thurisaz Rune
     Type: Etc
-    Buy: 100
-    Weight: 10
+    Buy: 50
+    Weight: 30
+    Flags:
+      BuyingStore: true
   - Id: 12732
     AegisName: Runstone_Pertz
     Name: Wyrd Rune
     Type: Etc
-    Buy: 100
-    Weight: 10
+    Buy: 50
+    Weight: 30
+    Flags:
+      BuyingStore: true
   - Id: 12726
     AegisName: Runstone_Rhydo
     Name: Raido Rune
     Type: Etc
-    Buy: 100
-    Weight: 10
+    Buy: 50
+    Weight: 30
+    Flags:
+      BuyingStore: true
+  - Id: 12729
+    AegisName: Runstone_Asir
+    Name: Asir Rune
+    Type: Etc
+    Buy: 50
+    Weight: 30
+    Flags:
+      BuyingStore: true
+  - Id: 12733
+    AegisName: Runstone_Hagalas
+    Name: Hagalas Rune
+    Type: Etc
+    Buy: 50
+    Weight: 30
+    Flags:
+      BuyingStore: true
+
+       

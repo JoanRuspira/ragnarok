@@ -2,7 +2,7 @@
 #include <cstring>
 #include "skill.hpp"
 #include "status.hpp"
-
+#include "../common/showmsg.hpp"
 
 int KnightSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv, struct status_data* sstatus)
 {
@@ -37,18 +37,30 @@ int KnightSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* 
 		case RK_HUNDREDSPEAR:
 			return calculate_a_hundred_spears_atk_ratio(skill_lv);
 		case LK_SPIRALPIERCE:
-			return calculate_bowling_bash_atk_ratio(skill_lv, target);
+			return calculate_clashing_spiral_atk_ratio(skill_lv, target);
 		default:
 			return 0;
 			break;
 	}
 }
 
+
 int KnightSkillAtkRatioCalculator::calculate_clashing_spiral_atk_ratio(int skill_lv, struct block_list *target)
 {
 	int ratio = 0;
 	struct status_change *target_status;
+
 	target_status = status_get_sc(target);
+
+	if (target_status->data[SC_BLEEDING]) {
+		return calculate_clashing_spiral_bleeding_atk_ratio(skill_lv);
+	}
+	return calculate_clashing_spiral_normal_atk_ratio(skill_lv);
+}
+
+int KnightSkillAtkRatioCalculator::calculate_clashing_spiral_normal_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
 	switch (skill_lv) {
 		case 1:
 			ratio = 150;
@@ -66,13 +78,32 @@ int KnightSkillAtkRatioCalculator::calculate_clashing_spiral_atk_ratio(int skill
 			ratio = 550;
 			break;
 		}
-
-	if (target_status->data[SC_BLEEDING]) {
-		ratio += 50;
-	}
 	return ratio;
 }
 
+int KnightSkillAtkRatioCalculator::calculate_clashing_spiral_bleeding_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 150;
+			break;
+		case 2:
+			ratio = 250;
+			break;
+		case 3:
+			ratio = 350;
+			break;
+		case 4:
+			ratio = 450;
+			break;
+		case 5:
+			ratio = 550;
+			break;
+		}
+	ratio += 75;
+	return ratio;
+}
 
 void KnightSkillAtkRatioCalculator::add_auto_counter_special_effects(struct block_list* src, struct block_list *target)
 {
