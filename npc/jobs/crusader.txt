@@ -6,7 +6,7 @@
 	if (BaseClass == EAJ_NOVICE) {
 		mes "[Crusader Guildmaster]";
 		mes "Good day! I am the Crusader Guildmaster.";
-		mes "I train Swordsmen that meet the requirements and allow men to become Crusaders.";
+		mes "I train Swordsmen that meet the requirements and allow them to become Crusaders.";
 		next;
 		mes "[Crusader Guildmaster]";
 		mes "As a Crusader you will gain new skills.";
@@ -73,7 +73,7 @@
 		close;
 	}
 
-	mes "[Crusader Crusader]";
+	mes "[Crusader Guildmaster]";
 	mes "Welcome to the Crusader guild. We accept applications from Swordsmen that meet our requirements.";
 	close;
 }

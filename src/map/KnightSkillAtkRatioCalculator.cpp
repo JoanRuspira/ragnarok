@@ -40,11 +40,41 @@ int KnightSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* 
 			return calculate_clashing_spiral_atk_ratio(skill_lv, target);
 		case RK_DRAGONBREATH_WATER:
 			return calculate_dragon_breath_atk_ratio(skill_lv, sstatus->str);
+		case RK_IGNITIONBREAK:
+			return calculate_ignition_break_atk_ratio(skill_lv, sstatus->int_);
 		default:
 			return 0;
 			break;
 	}
 }
+
+
+int KnightSkillAtkRatioCalculator::calculate_ignition_break_atk_ratio(int skill_lv, int intelligence)
+{
+	int ratio = 0;
+	
+	switch (skill_lv) {
+		case 1:
+			ratio = 100;
+			break;
+		case 2:
+			ratio = 200;
+			break;
+		case 3:
+			ratio = 300;
+			break;
+		case 4:
+			ratio = 400;
+			break;
+		case 5:
+			ratio = 500;
+			break;
+		}
+	return ratio + intelligence;
+}
+
+
+
 int KnightSkillAtkRatioCalculator::calculate_dragon_breath_atk_ratio(int skill_lv, int strength)
 {
 	int ratio = 0;
@@ -395,6 +425,17 @@ void KnightSkillAtkRatioCalculator::add_smite_special_effects(struct block_list 
 	clif_specialeffect(target, EF_STUNATTACK, AREA);
 }
 
+//int KnightSkillAtkRatioCalculator::calculate_ignition_break_atk_ratio()
+//{
+//	int skillratio = ((_base_lv + _int) + 60) * _skill_lv;
+//	skillratio = skillratio * _base_lv / 100;
+//	// Elemental check, 1.5x damage if your weapon element is fire.
+//	if (_weapon_element == ELE_FIRE) {
+//		skillratio += 100 * _skill_lv;
+//	}
+//	return skillratio;
+//}
+
 // int KnightSkillAtkRatioCalculator::calculate_spear_boomerang_atk_ratio()
 // {
 // 	return (100 + (_base_lv / 5)) * _skill_lv;
@@ -447,16 +488,7 @@ void KnightSkillAtkRatioCalculator::add_smite_special_effects(struct block_list 
 // 	return 200 + ((_base_lv + _int) / 20 * _skill_lv);
 // }
 
-// int KnightSkillAtkRatioCalculator::calculate_ignition_break_atk_ratio()
-// {
-// 	int skillratio = ((_base_lv + _int) + 60)* _skill_lv;
-// 	skillratio = skillratio * _base_lv / 100;
-// 	// Elemental check, 1.5x damage if your weapon element is fire.
-// 	if (_weapon_element == ELE_FIRE) {
-// 		skillratio += 100 * _skill_lv;
-// 	}
-// 	return skillratio;
-// }
+
 
 // //sstatus->rhw.ele
 // 		//case RK_DRAGONBREATH:

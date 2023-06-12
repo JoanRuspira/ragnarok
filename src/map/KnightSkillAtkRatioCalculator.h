@@ -23,6 +23,7 @@ class KnightSkillAtkRatioCalculator
 		static int calculate_clashing_spiral_normal_atk_ratio(int skill_lv);
 		static int calculate_clashing_spiral_bleeding_atk_ratio(int skill_lv);
 		static int calculate_dragon_breath_atk_ratio(int skill_lv, int strength);
+		static int calculate_ignition_break_atk_ratio(int skill_lv, int intelligence);
 		static void add_auto_counter_special_effects(struct block_list* src, struct block_list *target);
 		static void add_smite_special_effects(struct block_list *target);
 };

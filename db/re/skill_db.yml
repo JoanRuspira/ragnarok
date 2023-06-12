@@ -1686,7 +1686,7 @@ Body:
       - Level: 5
         Time: 300000
     Requires:
-      SpCost: 50
+      SpCost: 40
       Weapon:
         1hSword: true
   - Id: 816
@@ -1741,7 +1741,7 @@ Body:
       - Level: 5
         Time: 300000
     Requires:
-      SpCost: 50
+      SpCost: 40
       Weapon:
         2hSword: true
   - Id: 818
@@ -2635,7 +2635,7 @@ Body:
       - Level: 5
         Time: 300000
     Requires:
-      SpCost: 50
+      SpCost: 40
       Weapon:
         1hSword: true
   - Id: 2421
@@ -16239,21 +16239,6 @@ Body:
       Flag:
         PathCheck: true
         RemovedByFireRain: true
-  - Id: 740
-    Name: NPC_IGNITIONBREAK
-    Description: Ignition Break
-    MaxLevel: 5
-    Type: Weapon
-    TargetType: Self
-    DamageFlags:
-      Splash: true
-    Flags:
-      IsNpc: true
-      ShowScale: true
-    Hit: Single
-    HitCount: 1
-    Element: Fire
-    SplashArea: 5
   - Id: 741
     Name: NPC_PHANTOMTHRUST
     Description: Phantom Thrust
@@ -16890,30 +16875,20 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Weapon
-    SplashArea: 5
+    SplashArea: 3
     CopyFlags:
       Skill:
         Reproduce: true
-    CastTime: 1000
-    Cooldown: 2000
+    CastTime: 2000
+    Cooldown: 10000
+    AfterCastActDelay: 400
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 35
-        - Level: 2
-          Amount: 40
-        - Level: 3
-          Amount: 45
-        - Level: 4
-          Amount: 50
-        - Level: 5
-          Amount: 55
+      SpCost: 40
       Weapon:
-        Dagger: true
         1hSword: true
-        2hSword: true
-        1hSpear: true
-        2hSpear: true
+      ItemCost:
+        - Item: Runstone_Pertz
+          Amount: 1
   - Id: 2007
     Name: RK_DRAGONTRAINING
     Description: Dragon Training
@@ -28319,12 +28294,15 @@ Body:
     HitCount: 1
     Element: Neutral
     SplashArea: 5
-    CastTime: 3000
+    CastTime: 2000
     Cooldown: 10000
-    AfterCastActDelay: 2000
+    AfterCastActDelay: 400
     Duration1: 40000
     Requires:
-      SpCost: 75
+      SpCost: 40
+      ItemCost:
+        - Item: Runstone_Pertz
+          Amount: 1
   - Id: 5005
     Name: RK_LUXANIMA
     Description: Lux Anima

@@ -2810,6 +2810,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case PA_SACRIFICE:
 		case RK_HUNDREDSPEAR:
 		case LK_SPIRALPIERCE:
+		case RK_IGNITIONBREAK:
 			skillratio += KnightSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
 		case CR_HOLYCROSS:
@@ -3132,10 +3133,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			break;
 		case NPC_VAMPIRE_GIFT:
 			skillratio += ((skill_lv - 1) % 5 + 1) * 100;
-			break;
-		case RK_IGNITIONBREAK:
-			skillratio += -100 + 400 * skill_lv;
-			RE_LVL_DMOD(100);
 			break;
 		case NPC_IGNITIONBREAK:
 			// 3x3 cell Damage   = 1000  1500  2000  2500  3000 %

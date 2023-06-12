@@ -1,0 +1,81 @@
+//===== Script =======================================
+// Card Removal NPCs
+//====================================================
+
+-	script	Knight Guildmaster#kntgld::KntGld	-1,{
+	if (BaseClass == EAJ_NOVICE) {
+		mes "[Knight Guildmaster]";
+		mes "Good day! I am the Knight Guildmaster.";
+		mes "I train Swordsmen that meet the requirements and allow them to become Knights.";
+		next;
+		mes "[Knight Guildmaster]";
+		mes "As a Knight you will gain new skills.";
+		mes "The requirements are:";
+		mes "- Being a first class job.";
+		mes "- Being Job level 50.";
+		mes "- Having used all your skill points.";
+		next;
+		mes "[Knight Guildmaster]";
+		mes "Do you want to become a Knight?";
+		next;
+		switch(select("Yes:No")) {
+			case 1:
+				mes "[Knight Guildmaster]";
+				mes "Good! Let me see if you pass our requirements...";
+				next;
+				if (JobLevel < 50) {
+					mes "[Knight Guildmaster]";
+					mes "Hmm... Your job level does not meet our requirements.";
+					mes "You need to be more experienced before being a Knight.";
+					close;
+				}
+				if (SkillPoint) {
+					mes "[Knight Guildmaster]";
+					mes "Looks like you have not used all your skill points.";
+					mes "Use them and I'll be able to make you a Knight.";
+					close;
+				}
+				mes "[Knight Guildmaster]";
+				mes "Okay! Looks like you pass all of them!";
+				mes "You are allowed to join the Knight guild.";
+				mes "Congratulations!";
+				jobchange Job_Knight;
+				specialeffect2 EF_JOBLVUP50;
+				close;
+			case 2:
+				mes "[Knight Guildmaster]";
+				mes "Ah! Let me know if you change your mind.";
+				mes "We are always looking for new adventurers";
+				mes "to join the guild.";
+				close;
+		}
+		
+	}
+
+	if (Class == Job_Knight) {
+		mes "[Knight Guildmaster]";
+		mes "Hi fellow Knight!";
+		mes "Are you thinking about your next job?";
+		next;
+		mes "[Knight Guildmaster]";
+		mes "You can become a Lord Knight if you reach job level 50.";
+		next;
+		mes "[Knight Guildmaster]";
+		mes "Go find the legendary Lord Knight in Amatsu.";
+		mes "I'm sure he will be able to train you.";
+		close;
+	}
+
+	if (Class == Job_Lord_Knight) {
+		mes "[Knight Guildmaster]";
+		mes "Ah! An experienced member of the guild!";
+		mes "Are you here to help train the new members?";
+		close;
+	}
+
+	mes "[Knight Guildmaster]";
+	mes "Welcome to the Knight guild. We accept applications from Swordsmen that meet our requirements.";
+	close;
+}
+
+prt_in,38,107,7	duplicate(KntGld)	Knight Guildmaster#kntgld	469

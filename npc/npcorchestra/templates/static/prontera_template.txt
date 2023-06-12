@@ -3149,11 +3149,6 @@ prt_in,39,29,6	script	Prontera Citizen#prt:npcid	spriteid,{
 	end;
 }
 
-prt_in,38,107,7	script	Knight Guildmaster#prt:npcid	469,{
-	npctalk "I will make you a Knight.";
-	end;
-}
-
 prt_in,42,113,4	script	Prontera Citizen#prt:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
