@@ -4015,6 +4015,18 @@ static void battle_calc_attack_post_defense(struct Damage* wd, struct block_list
 		if(sc->data[SC_AURABLADE]) {
 			ATK_ADD(wd->damage, wd->damage2, sc->data[SC_AURABLADE]->val1  * (status_get_lv(src)/2) );
 		}
+		if(sc->data[SC_AURABLADE]) {
+			ATK_ADD(wd->damage, wd->damage2, sc->data[SC_AURABLADE]->val1  * (status_get_lv(src)/2) );
+		}
+
+		if (sc->data[SC_ENCHANTBLADE]) {
+			int64 enchant_dmg = sstatus->matk_min;
+			if (sstatus->matk_max > sstatus->matk_min) {
+				enchant_dmg = rand()%(sstatus->matk_max-sstatus->matk_min + 1) + sstatus->matk_min;
+			}
+			if (enchant_dmg > 0)
+				ATK_ADD(wd->damage, wd->damage2, enchant_dmg);
+		}
 	}
 
 	//Set to min of 1
@@ -4301,18 +4313,7 @@ static void battle_calc_weapon_final_atk_modifiers(struct Damage* wd, struct blo
 		}
 		// Only affecting non-skills
 		// if (!skill_id && wd->dmg_lv > ATK_BLOCK) {
-			if (sc->data[SC_ENCHANTBLADE]) {
-				//[((Skill Lv x 20) + 100) x (casterBaseLevel / 150)] + casterInt + MATK - MDEF - MDEF2
-				// int64 enchant_dmg = sc->data[SC_ENCHANTBLADE]->val2;
-				int64 enchant_dmg = 50;
-				if (sstatus->matk_max > sstatus->matk_min)
-					enchant_dmg = enchant_dmg + sstatus->matk_min + rnd() % (sstatus->matk_max - sstatus->matk_min);
-				else
-					enchant_dmg = enchant_dmg + sstatus->matk_min;
-				enchant_dmg = enchant_dmg - (tstatus->mdef + tstatus->mdef2);
-				if (enchant_dmg > 0)
-					ATK_ADD(wd->damage, wd->damage2, enchant_dmg);
-			}
+			
 		// }
 		if (skill_id != SN_SHARPSHOOTING && skill_id != RA_ARROWSTORM)
 			status_change_end(src, SC_CAMOUFLAGE, INVALID_TIMER);
