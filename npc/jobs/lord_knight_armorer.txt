@@ -15,7 +15,7 @@
 		close;
 	}
 	mes "Aha!";
-	mes "A seasoned Paladin, what outfit would you like to wear?";
+	mes "A seasoned Lord Knight, what outfit would you like to wear?";
 	next;
 	switch(select("Knight:Lord Knight:Commander:Dragon Knight:Rune Knight")) {
 		case 1:
