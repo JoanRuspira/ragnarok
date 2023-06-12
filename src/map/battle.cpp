@@ -1504,7 +1504,7 @@ int64 battle_calc_damage(struct block_list *src,struct block_list *bl,struct Dam
 		if(sc->data[SC_ADJUSTMENT] && (flag&(BF_LONG|BF_WEAPON)) == (BF_LONG|BF_WEAPON))
 			damage -= damage * 20 / 100;
 
-		if(sc->data[SC_FOGWALL] && skill_id != RK_DRAGONBREATH && skill_id != RK_DRAGONBREATH_WATER) {
+		if(sc->data[SC_FOGWALL] && skill_id != RK_DRAGONBREATH) {
 			if(flag&BF_SKILL) //25% reduction
 				damage -= damage * 25 / 100;
 			else if ((flag&(BF_LONG|BF_WEAPON)) == (BF_LONG|BF_WEAPON))
@@ -2528,7 +2528,6 @@ static void battle_calc_element_damage(struct Damage* wd, struct block_list *src
 			case HT_HURRICANEFURY:
 			case PA_SACRIFICE:
 			case RK_DRAGONBREATH:
-			case RK_DRAGONBREATH_WATER:
 			case NC_SELFDESTRUCTION:
 				wd->damage = battle_attr_fix(src, target, wd->damage, right_element, tstatus->def_ele, tstatus->ele_lv);
 				if (EquipmentAttackCalculator::is_attack_left_handed(src, skill_id))
@@ -5025,6 +5024,9 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case SO_PSYCHIC_WAVE:
 					case WL_SOULEXPANSION:
 						skillratio += WizardSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
+						break;
+					case RK_DRAGONBREATH_WATER:
+						skillratio +=  KnightSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
 					case HM_BEHOLDER_1:
 					case HM_BEHOLDER_2:

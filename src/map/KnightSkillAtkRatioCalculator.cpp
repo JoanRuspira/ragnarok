@@ -38,12 +38,36 @@ int KnightSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* 
 			return calculate_a_hundred_spears_atk_ratio(skill_lv);
 		case LK_SPIRALPIERCE:
 			return calculate_clashing_spiral_atk_ratio(skill_lv, target);
+		case RK_DRAGONBREATH_WATER:
+			return calculate_dragon_breath_atk_ratio(skill_lv, sstatus->str);
 		default:
 			return 0;
 			break;
 	}
 }
-
+int KnightSkillAtkRatioCalculator::calculate_dragon_breath_atk_ratio(int skill_lv, int strength)
+{
+	int ratio = 0;
+	
+	switch (skill_lv) {
+		case 1:
+			ratio = 300;
+			break;
+		case 2:
+			ratio = 400;
+			break;
+		case 3:
+			ratio = 500;
+			break;
+		case 4:
+			ratio = 600;
+			break;
+		case 5:
+			ratio = 700;
+			break;
+		}
+	return ratio + strength;
+}
 
 int KnightSkillAtkRatioCalculator::calculate_clashing_spiral_atk_ratio(int skill_lv, struct block_list *target)
 {

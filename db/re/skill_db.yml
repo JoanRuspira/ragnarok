@@ -16770,7 +16770,7 @@ Body:
       - Level: 5
         Time: 300000
     Requires:
-      SpCost: 70
+      SpCost: 50
       ItemCost:
         - Item: Runstone_Pertz
           Amount: 1
@@ -16870,17 +16870,7 @@ Body:
     Element: Wind
     Cooldown: 7000
     AfterCastActDelay: 400
-    SplashArea:
-      - Level: 1
-        Area: 2
-      - Level: 2
-        Area: 2
-      - Level: 3
-        Area: 2
-      - Level: 4
-        Area: 4
-      - Level: 5
-        Area: 4
+    SplashArea: 4
     Knockback: 2
     CopyFlags:
       Skill:
@@ -28319,78 +28309,22 @@ Body:
   - Id: 5004
     Name: RK_DRAGONBREATH_WATER
     Description: Dragon Breath - Water
-    MaxLevel: 10
-    Type: Weapon
+    MaxLevel: 5
+    Type: Magic
     TargetType: Ground
     DamageFlags:
       Splash: true
-      IgnoreFlee: true
-    Flags:
-      TargetTrap: true
     Range: 9
     Hit: Single
     HitCount: 1
-    Element: Water
-    SplashArea:
-      - Level: 1
-        Area: 1
-      - Level: 2
-        Area: 1
-      - Level: 3
-        Area: 1
-      - Level: 4
-        Area: 2
-      - Level: 5
-        Area: 2
-      - Level: 6
-        Area: 2
-      - Level: 7
-        Area: 3
-      - Level: 8
-        Area: 3
-      - Level: 9
-        Area: 4
-      - Level: 10
-        Area: 4
-    CastTime:
-      - Level: 4
-        Time: 1000
-      - Level: 5
-        Time: 1000
-      - Level: 6
-        Time: 1000
-      - Level: 7
-        Time: 1500
-      - Level: 8
-        Time: 1500
-      - Level: 9
-        Time: 2000
-      - Level: 10
-        Time: 2000
+    Element: Neutral
+    SplashArea: 5
+    CastTime: 3000
+    Cooldown: 10000
     AfterCastActDelay: 2000
     Duration1: 40000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 30
-        - Level: 2
-          Amount: 35
-        - Level: 3
-          Amount: 40
-        - Level: 4
-          Amount: 45
-        - Level: 5
-          Amount: 50
-        - Level: 6
-          Amount: 55
-        - Level: 7
-          Amount: 60
-        - Level: 8
-          Amount: 65
-        - Level: 9
-          Amount: 70
-        - Level: 10
-          Amount: 75
+      SpCost: 75
   - Id: 5005
     Name: RK_LUXANIMA
     Description: Lux Anima
