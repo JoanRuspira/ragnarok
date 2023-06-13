@@ -2745,7 +2745,9 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		if (sc->data[SC_CONCENTRATION]){
 			skillratio += sc->data[SC_CONCENTRATION]->val2;
 		}
-			
+		if (pc_checkskill(sd,LK_TWOHAND) && sd->status.weapon == W_2HSWORD){
+			skillratio += pc_checkskill(sd,LK_TWOHAND)*10;
+		}
 		if (!skill_id) {
 			if (sc->data[SC_CRUSHSTRIKE]) {
 				if (sd) { //ATK [{Weapon Level * (Weapon Upgrade Level + 6) * 100} + (Weapon ATK) + (Weapon Weight)]%

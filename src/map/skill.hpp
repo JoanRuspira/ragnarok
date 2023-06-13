@@ -2161,7 +2161,8 @@ enum e_skill {
 	AL_HEAL2 = 859,
 	PA_SHIELDSLAM = 860,
 	PA_FORTIFY = 861,
-	CR_OHQUICKEN= 862,
+	CR_OHQUICKEN = 862,
+	LK_TWOHAND = 863,
 };
 
 /// The client view ids for land skills.

@@ -2638,6 +2638,11 @@ Body:
       SpCost: 40
       Weapon:
         1hSword: true
+  - Id: 863
+    Name: LK_TWOHAND
+    Description: Advanced Two-Handed Sword Mastery
+    MaxLevel: 5
+    Type: Weapon
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -9518,8 +9523,6 @@ Body:
       Weapon:
         1hSpear: true
         2hSpear: true
-        1hSword: true
-        2hSword: true
       ItemCost:
         - Item: Runstone_Hagalas
           Amount: 1
