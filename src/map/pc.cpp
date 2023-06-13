@@ -6455,6 +6455,7 @@ static void pc_checkallowskill(struct map_session_data *sd)
 		SC_AUTOGUARD,
 		SC_PARRYING,
 		SC_KINGS_GRACE,
+		SC_BERSERK,
 	};
 	uint8 i;
 	nullpo_retv(sd);
@@ -10584,7 +10585,7 @@ bool pc_equipitem(struct map_session_data *sd,short n,int req_pos,bool equipswit
 		}
 		return false;
 	}
-	if( sd->sc.count && (sd->sc.data[SC_BERSERK] || sd->sc.data[SC_SATURDAYNIGHTFEVER] ||
+	if( sd->sc.count && ( sd->sc.data[SC_SATURDAYNIGHTFEVER] ||
 		sd->sc.data[SC_KYOUGAKU] || (sd->sc.data[SC_PYROCLASTIC] && sd->inventory_data[n]->type == IT_WEAPON)) ) {
 		if( equipswitch ){
 			clif_equipswitch_add( sd, n, req_pos, ITEM_EQUIP_ACK_FAIL );
@@ -10892,7 +10893,7 @@ bool pc_unequipitem(struct map_session_data *sd, int n, int flag) {
 	}
 	// status change that makes player cannot unequip equipment
 	if (!(flag&2) && sd->sc.count &&
-		(sd->sc.data[SC_BERSERK] ||
+		(
 		sd->sc.data[SC_SATURDAYNIGHTFEVER] ||
 		sd->sc.data[SC__BLOODYLUST] ||
 		sd->sc.data[SC_KYOUGAKU] ||

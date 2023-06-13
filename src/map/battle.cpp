@@ -2739,7 +2739,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		if(sc->data[SC_MAXOVERTHRUST])
 			skillratio += sc->data[SC_MAXOVERTHRUST]->val2;
 		if(sc->data[SC_BERSERK])
-			skillratio += 200;
+			skillratio += sc->data[SC_BERSERK]->val1*40;
 		if (sc && sc->data[SC_TRUESIGHT])
 			skillratio += 2 * sc->data[SC_TRUESIGHT]->val1;
 		if (sc->data[SC_CONCENTRATION]){

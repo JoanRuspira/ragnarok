@@ -7450,7 +7450,7 @@ Body:
     AfterCastActDelay: 5000
     Duration1: 120000
     Requires:
-      SpCost: 25
+      SpCost: 40
       ItemCost:
         - Item: Runstone_Turisus
           Amount: 1
@@ -9542,17 +9542,24 @@ Body:
   - Id: 359
     Name: LK_BERSERK
     Description: Frenzy
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Weapon
     TargetType: Self
     DamageFlags:
       NoDamage: true
     Hit: Single
+    Cooldown: 60000
+    AfterCastActDelay: 400
     HitCount: 1
-    Duration1: 300000
+    Duration1: 15000
     Duration2: 15000
     Requires:
-      SpCost: 200
+      SpCost: 50
+      ItemCost:
+        - Item: Runstone_Turisus
+          Amount: 1
+      Weapon:
+        2hSword: true
   - Id: 360
     Name: LK_FURY
     Description: Fury
@@ -9820,10 +9827,12 @@ Body:
         Plagiarism: true
         Reproduce: true
     Requires:
-      SpCost: 20
+      SpCost: 30
       ItemCost:
         - Item: Runstone_Turisus
           Amount: 1
+      Weapon:
+        2hSword: true
   - Id: 369
     Name: PA_GOSPEL
     Description: Battle Chant
