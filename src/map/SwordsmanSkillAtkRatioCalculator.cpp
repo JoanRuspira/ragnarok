@@ -91,19 +91,19 @@ int SwordsmanSkillAtkRatioCalculator::calculate_magnum_break_atk_ratio(int skill
 	int ratio = 0;
 	switch (skill_lv) {
 		case 1:
-			ratio = 0 + (intelligence/6);
+			ratio = 50 + (intelligence/3);
 			break;
 		case 2:
-			ratio = 15 + (intelligence/6);
+			ratio = 100 + (intelligence/3);
 			break;
 		case 3:
-			ratio = 35 + (intelligence/6);
+			ratio = 150 + (intelligence/3);
 			break;
 		case 4:
-			ratio = 55 + (intelligence/6);
+			ratio = 200 + (intelligence/3);
 			break;
 		case 5:
-			ratio = 75 + (intelligence/6);
+			ratio = 250 + (intelligence/3);
 			break;
 		}
 	return ratio;

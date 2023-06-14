@@ -212,7 +212,7 @@ Body:
     Flags:
       TargetTrap: true
     Hit: Multi_Hit
-    HitCount: 2
+    HitCount: -2
     Element: Fire
     Cooldown: 2000
     AfterCastActDelay: 400
@@ -2777,9 +2777,9 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    Range: -2
+    Range: -1
     Hit: Multi_Hit
-    HitCount: 3
+    HitCount: -3
     Element: Weapon
     Cooldown: 5000
     AfterCastActDelay: 400
@@ -2800,7 +2800,7 @@ Body:
     TargetType: Attack
     DamageFlags:
       NoDamage: true
-    Range: -2
+    Range: -1
     Hit: Single
     HitCount: 1
     Element: Weapon
@@ -2830,7 +2830,7 @@ Body:
       Splash: true
     Flags:
       TargetTrap: true
-    Range: -4
+    Range: -1
     Hit: Single
     HitCount: 1
     Element: Weapon
@@ -2957,9 +2957,9 @@ Body:
       Splash: true
     Flags:
       TargetTrap: true
-    Range: -2
+    Range: -1
     Hit: Multi_Hit
-    HitCount: 3
+    HitCount: -3
     Element: Weapon
     SplashArea: 1
     Knockback: 1
@@ -16789,7 +16789,7 @@ Body:
       - Level: 5
         Size: 11
     Hit: Single
-    HitCount: 3
+    HitCount: -3
     Element: Weapon
     CopyFlags:
       Skill:

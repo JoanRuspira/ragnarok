@@ -216,21 +216,21 @@ int KnightSkillAtkRatioCalculator::calculate_sonic_wave_atk_ratio(int skill_lv, 
 	int ratio = 0;
 	switch (skill_lv) {
 		case 1:
-			ratio = 0;
-			break;
-		case 2:
-			ratio = 10;
-			break;
-		case 3:
-			ratio = 20;
-			break;
-		case 4:
 			ratio = 30;
 			break;
-		case 5:
-			ratio = 40;
+		case 2:
+			ratio = 100;
 			break;
-		}
+		case 3:
+			ratio = 180;
+			break;
+		case 4:
+			ratio = 240;
+			break;
+		case 5:
+			ratio = 300;
+			break;
+	}
 	return ratio + (intelligence/3);
 }
 
@@ -308,19 +308,19 @@ int KnightSkillAtkRatioCalculator::calculate_pierce_atk_ratio(int skill_lv)
 	int ratio = 0;
 	switch (skill_lv) {
 		case 1:
-			ratio = 40;
+			ratio = 140;
 			break;
 		case 2:
-			ratio = 60;
+			ratio = 180;
 			break;
 		case 3:
-			ratio = 80;
+			ratio = 220;
 			break;
 		case 4:
-			ratio = 100;
+			ratio = 260;
 			break;
 		case 5:
-			ratio = 120;
+			ratio = 300;
 			break;
 		}
 	return ratio;
@@ -376,19 +376,19 @@ int KnightSkillAtkRatioCalculator::calculate_bowling_bash_normal_atk_ratio(int s
 
 	switch (skill_lv) {
 		case 1:
-			ratio = 10;
-			break;
-		case 2:
-			ratio = 20;
-			break;
-		case 3:
 			ratio = 30;
 			break;
+		case 2:
+			ratio = 100;
+			break;
+		case 3:
+			ratio = 180;
+			break;
 		case 4:
-			ratio = 40;
+			ratio = 240;
 			break;
 		case 5:
-			ratio = 50;
+			ratio = 300;
 			break;
 	}
 	return ratio;
@@ -401,21 +401,22 @@ int KnightSkillAtkRatioCalculator::calculate_bowling_bash_bleeding_atk_ratio(int
 	
 	switch (skill_lv) {
 		case 1:
-			ratio = 40;
+			ratio = 30;
 			break;
 		case 2:
-			ratio = 50;
+			ratio = 100;
 			break;
 		case 3:
-			ratio = 60;
+			ratio = 180;
 			break;
 		case 4:
-			ratio = 70;
+			ratio = 240;
 			break;
 		case 5:
-			ratio = 80;
+			ratio = 300;
 			break;
 	}
+	ratio += 50;
 	return ratio;
 }
 
