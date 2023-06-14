@@ -6043,11 +6043,6 @@ Body:
       NoAuction: true
     Script: |
       /* itemskill "ALL_ANGEL_PROTECT",1; */
-  - Id: 12314
-    AegisName: Noive_Box
-    Name: Noive Box
-    Type: Usable
-    Weight: 10
   - Id: 12315
     AegisName: Goddess_Bless
     Name: Goddess Of Blessing
@@ -6098,6 +6093,29 @@ Body:
     Weight: 50
     Script: |
       percentheal 5,5;
+  - Id: 12314
+    AegisName: Noive_Box
+    Name: Dragon Mount
+    Type: Usable
+    Buy: 750000
+    Flags:
+      NoConsume: true
+    Delay:
+      Duration: 3000
+      Status: All_Riding_Reuse_Limit
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      specialeffect2 EF_INVINCIBLEOFF2;
+      toggledragon();
   - Id: 12622
     AegisName: Boarding_Halter
     Name: Peco Mount
@@ -6120,11 +6138,7 @@ Body:
       NoAuction: true
     Script: |
       specialeffect2 EF_INVINCIBLEOFF2;
-      setmounting();
-    UnEquipScript: |
-      if (ismounting())
-         specialeffect2 EF_INVINCIBLEOFF2;
-         setmounting();
+      togglepeco();
   - Id: 6189
     AegisName: Magic_Book_FB
     Name: Spell Book (Fire Bolt)

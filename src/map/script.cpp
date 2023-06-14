@@ -21482,18 +21482,58 @@ BUILDIN_FUNC(setdragon) {
 	return SCRIPT_CMD_SUCCESS;
 }
 
+
+BUILDIN_FUNC(togglepeco) {
+	TBL_PC* sd;
+	int mount = script_hasdata(st,2) ? script_getnum(st,2) : 0;
+	if (!script_charid2sd(3,sd)){
+		return SCRIPT_CMD_FAILURE;
+	}
+	if (pc_isriding(sd)) {
+		pc_setriding(sd, 0); //dismount peco
+		// clif_changelook(&sd->bl,LOOK_BASE,19);
+		clif_soundeffectall(&sd->bl, "kocot_die.wav", 0, AREA);
+	} else {
+		pc_setriding(sd, 1); //mount peco
+		// clif_changelook(&sd->bl,LOOK_BASE,4068);
+		clif_soundeffectall(&sd->bl, "kocot_stand.wav", 0, AREA);
+	}
+	script_pushint(st,1);//in both cases, return 1.
+	return SCRIPT_CMD_SUCCESS;
+}
+
+
+BUILDIN_FUNC(toggledragon) {
+	TBL_PC* sd;
+	int mount = script_hasdata(st,2) ? script_getnum(st,2) : 0;
+	if (!script_charid2sd(3,sd)){
+		return SCRIPT_CMD_FAILURE;
+	}
+	if( sd->sc.data[SC_ALL_RIDING] ){
+		status_change_end(&sd->bl, SC_ALL_RIDING, INVALID_TIMER); //release mount
+		clif_soundeffectall(&sd->bl, "acidus_damage.wav", 0, AREA);
+	} else {
+		sc_start(NULL, &sd->bl, SC_ALL_RIDING, 10000, 1, INFINITE_TICK); //mount
+		clif_soundeffectall(&sd->bl, "ferus_stand.wav", 0, AREA);
+	}
+	script_pushint(st,1);//in both cases, return 1.
+	return SCRIPT_CMD_SUCCESS;
+}
+
+
 /**
  * ismounting({<char_id>}) returns 1 if mounting a new mount or 0 otherwise
  **/
 BUILDIN_FUNC(ismounting) {
 	TBL_PC* sd;
-	
-	if (!script_charid2sd(2,sd))
+	if (!script_charid2sd(2,sd)){
 		return SCRIPT_CMD_FAILURE;
-	if( sd->sc.data[SC_ALL_RIDING] )
+	}	
+	if( sd->sc.data[SC_ALL_RIDING] ){
 		script_pushint(st,1);
-	else
+	}else{
 		script_pushint(st,0);
+	}
 	return SCRIPT_CMD_SUCCESS;
 }
 
@@ -21550,6 +21590,8 @@ BUILDIN_FUNC(setmounting) {
 	}
 	return SCRIPT_CMD_SUCCESS;
 }
+
+
 /**
  * Retrieves quantity of arguments provided to callfunc/callsub.
  * getargcount() -> amount of arguments received in a function
@@ -25559,6 +25601,8 @@ struct script_function buildin_func[] = {
 	BUILDIN_DEF(setdragon,"??"),//[Ind]
 	BUILDIN_DEF(ismounting,"?"),//[Ind]
 	BUILDIN_DEF(setmounting,"?"),//[Ind]
+	BUILDIN_DEF(togglepeco,"?"),//[Ind]
+	BUILDIN_DEF(toggledragon,"?"),//[Ind]
 	// BUILDIN_DEF(spellbookreading,"?"),//[Ind]
 	BUILDIN_DEF(checkre,"i"),
 	/**
