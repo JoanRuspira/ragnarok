@@ -2643,6 +2643,43 @@ Body:
     Description: Advanced Two-Handed Sword Mastery
     MaxLevel: 5
     Type: Weapon
+  - Id: 864
+    Name: CG_METALLICFURY
+    Description: Metallic Fury
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    DamageFlags:
+      Splash: true
+    Flags:
+      IsTrap: true
+    Range: 9
+    Hit: Multi_Hit
+    HitCount: -10
+    SplashArea: 2
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    CastTime: 1000
+    AfterCastActDelay: 500
+    Cooldown: 150
+    FixedCastTime: 500
+    Requires:
+      SpCost:
+        - Level: 1
+          Amount: 56
+        - Level: 2
+          Amount: 62
+        - Level: 3
+          Amount: 68
+        - Level: 4
+          Amount: 74
+        - Level: 5
+          Amount: 80
+      Ammo:
+        Arrow: true
+      AmmoAmount: 5
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -10604,7 +10641,7 @@ Body:
   - Id: 396
     Name: CG_MARIONETTE
     Description: Marionette Control
-    MaxLevel: 1
+    MaxLevel: 5
     TargetType: Support
     DamageFlags:
       NoDamage: true

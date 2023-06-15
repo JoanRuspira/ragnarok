@@ -2163,6 +2163,7 @@ enum e_skill {
 	PA_FORTIFY = 861,
 	CR_OHQUICKEN = 862,
 	LK_TWOHAND = 863,
+    CG_METALLICFURY = 864,
 };
 
 /// The client view ids for land skills.
