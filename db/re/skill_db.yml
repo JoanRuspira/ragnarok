@@ -28282,21 +28282,13 @@ Body:
       NoDamage: true
     Hit: Single
     HitCount: 1
-    AfterCastActDelay: 500
-    Duration1: 60000
-    Cooldown: 300000
+    AfterCastActDelay: 1000
+    Duration1: 30000
+    Cooldown: 120000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 100
-        - Level: 2
-          Amount: 120
-        - Level: 3
-          Amount: 140
-        - Level: 4
-          Amount: 160
-        - Level: 5
-          Amount: 180
+      SpCost: 150
+      Weapon:
+        Bow: true
   - Id: 5003
     Name: GN_ILLUSIONDOPING
     Description: Illusion Doping

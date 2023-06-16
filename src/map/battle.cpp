@@ -2740,6 +2740,8 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			skillratio += sc->data[SC_MAXOVERTHRUST]->val2;
 		if(sc->data[SC_BERSERK])
 			skillratio += sc->data[SC_BERSERK]->val1*40;
+		if(sc->data[SC_UNLIMIT])
+			skillratio += sc->data[SC_UNLIMIT]->val1*50;
 		if (sc && sc->data[SC_TRUESIGHT])
 			skillratio += 2 * sc->data[SC_TRUESIGHT]->val1;
 		if (sc->data[SC_CONCENTRATION]){
@@ -3762,17 +3764,17 @@ static void battle_attack_sc_bonus(struct Damage* wd, struct block_list *src, st
 				RE_ALLATK_ADD(wd, hd->homunculus.spiritball * 3);
 			}
 		}
-		if(sc->data[SC_UNLIMIT] && (wd->flag&(BF_LONG|BF_MAGIC)) == BF_LONG) {
-			switch(skill_id) {
-				case RA_WUGDASH:
-				case RA_WUGBITE:
-					break;
-				default:
-					ATK_ADDRATE(wd->damage, wd->damage2, sc->data[SC_UNLIMIT]->val2);
-					RE_ALLATK_ADDRATE(wd, sc->data[SC_UNLIMIT]->val2);
-					break;
-			}
-		}
+		// if(sc->data[SC_UNLIMIT] && (wd->flag&(BF_LONG|BF_MAGIC)) == BF_LONG) {
+		// 	switch(skill_id) {
+		// 		case RA_WUGDASH:
+		// 		case RA_WUGBITE:
+		// 			break;
+		// 		default:
+		// 			ATK_ADDRATE(wd->damage, wd->damage2, sc->data[SC_UNLIMIT]->val2);
+		// 			RE_ALLATK_ADDRATE(wd, sc->data[SC_UNLIMIT]->val2);
+		// 			break;
+		// 	}
+		// }
 		if (sc->data[SC_HEAT_BARREL]) {
 			ATK_ADDRATE(wd->damage, wd->damage2, sc->data[SC_HEAT_BARREL]->val3);
 			RE_ALLATK_ADDRATE(wd, sc->data[SC_HEAT_BARREL]->val3);

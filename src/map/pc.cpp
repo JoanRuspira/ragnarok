@@ -6456,6 +6456,7 @@ static void pc_checkallowskill(struct map_session_data *sd)
 		SC_PARRYING,
 		SC_KINGS_GRACE,
 		SC_BERSERK,
+		SC_UNLIMIT,
 	};
 	uint8 i;
 	nullpo_retv(sd);
