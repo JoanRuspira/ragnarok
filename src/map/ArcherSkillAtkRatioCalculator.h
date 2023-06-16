@@ -15,7 +15,7 @@ class ArcherSkillAtkRatioCalculator
 
 	private:
 		static int calculate_double_strafe_atk_ratio(int base_lv, int skill_lv);
-		static int calculate_arrow_shower_atk_ratio(int base_lv, int skill_lv);
+		static int calculate_arrow_shower_atk_ratio(int base_lv, int skill_lv, struct block_list* src);
 		static int calculate_spiritual_strafe_atk_ratio(int skill_lv, struct block_list* src);
 		static int calculate_charge_arrow_atk_ratio(int base_lv, int skill_lv);
 		static int calculate_arrow_rain_atk_ratio(int base_lv, int skill_lv, struct block_list* src);

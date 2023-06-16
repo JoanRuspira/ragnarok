@@ -99,10 +99,6 @@ bool CriticalHitCalculator::is_attack_critical(Damage * wd, block_list * src, bl
 			else
 				cri <<= 1;
 			break;
-		case SN_SHARPSHOOTING:
-		case MA_SHARPSHOOTING:
-			cri += 300; // !TODO: Confirm new bonus
-			break;
 		case NJ_KIRIKAGE:
 			cri += 250 + 50 * skill_lv;
 			break;

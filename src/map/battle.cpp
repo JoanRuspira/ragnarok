@@ -2868,8 +2868,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case HT_HURRICANEFURY:
 		case HT_WARG_1:
 		case HT_FALCON_1:
-		// case HT_BLITZBEAT:
-		// case RA_WUGSTRIKE:
+		case SN_SHARPSHOOTING:
 			skillratio += HunterSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
 		case HM_BASILISK_1:
@@ -2992,16 +2991,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 #endif
 			if (sc->data[SC_GT_ENERGYGAIN])
 				skillratio += skillratio * 50 / 100;
-			break;
-
-		case SN_SHARPSHOOTING:
-		case MA_SHARPSHOOTING:
-#ifdef RENEWAL
-			skillratio += 50 + 200 * skill_lv;
-			RE_LVL_DMOD(100);
-#else
-			skillratio += 100 + 50 * skill_lv;
-#endif
 			break;
 		case GN_FIRE_EXPANSION_ACID:
 #ifdef RENEWAL

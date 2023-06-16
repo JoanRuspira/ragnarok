@@ -1261,14 +1261,14 @@ Body:
   - Id: 46
     Name: AC_DOUBLE
     Description: Double Strafe
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     Flags:
       AlterRangeVulture: true
     Range: -9
     Hit: Multi_Hit
-    HitCount: 2
+    HitCount: -2
     Element: Weapon
     CopyFlags:
       Skill:
@@ -1287,7 +1287,7 @@ Body:
   - Id: 47
     Name: AC_SHOWER
     Description: Arrow Shower
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Ground
     DamageFlags:
@@ -1298,7 +1298,7 @@ Body:
       AlterRangeVulture: true
     Range: -9
     Hit: Multi_Hit
-    HitCount: 3
+    HitCount: -3
     Element: Weapon
     Cooldown: 10000
     AfterCastActDelay: 400
@@ -10279,31 +10279,17 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    DamageFlags:
-      Critical: true
-    Flags:
-      TargetTrap: true
     Range: 9
     Hit: Multi_Hit
     HitCount: 1
     Element: Weapon
-    SplashArea: 1
+    SplashArea: 2
     ActiveInstance: 14
     CastCancel: true
-    CastTime: 2000
-    AfterCastActDelay: 1500
+    Cooldown: 8000
+    AfterCastActDelay: 400
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 18
-        - Level: 2
-          Amount: 21
-        - Level: 3
-          Amount: 24
-        - Level: 4
-          Amount: 27
-        - Level: 5
-          Amount: 30
+      SpCost: 30
       Weapon:
         Bow: true
       Ammo:
@@ -16577,7 +16563,7 @@ Body:
       AlterRangeVulture: true
     Range: -9
     Hit: Multi_Hit
-    HitCount: 3
+    HitCount: -3
     Element: Weapon
     Cooldown: 10000
     AfterCastActDelay: 400

@@ -23,10 +23,36 @@ int HunterSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 		case ITM_TOMAHAWK:
 			add_magic_tomahawk_special_effects(target);
 			return calculate_magic_tomahawk_atk_ratio(skill_lv, sstatus->matk_max);
+		case SN_SHARPSHOOTING:
+			add_sharp_shooting_special_effects(target);
+			return calculate_sharp_shooting_atk_ratio(skill_lv,sstatus->dex);
 		default:
 			return 0;
 			break;
 	}
+}
+
+int HunterSkillAttackRatioCalculator::calculate_sharp_shooting_atk_ratio(int skill_lv, int dex)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 200;
+			break;
+		case 2:
+			ratio = 300;
+			break;
+		case 3:
+			ratio = 400;
+			break;
+		case 4:
+			ratio = 500;
+			break;
+		case 5:
+			ratio = 600;
+			break;
+		}
+	return ratio + dex;
 }
 
 
@@ -74,6 +100,12 @@ int HunterSkillAttackRatioCalculator::calculate_blitz_beat_atk_ratio(int skill_l
 			break;
 		}
 	return ratio + agi;
+}
+
+void HunterSkillAttackRatioCalculator::add_sharp_shooting_special_effects(struct block_list *target)
+{
+	
+    clif_specialeffect(target, EF_ERASER_CUTTER, AREA);
 }
 
 void HunterSkillAttackRatioCalculator::add_magic_tomahawk_special_effects(struct block_list *target)
