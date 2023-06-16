@@ -534,12 +534,8 @@ void initChangeTables(void)
 	set_sc( BD_ENCORE		, SC_DANCING		, EFST_BDPLAYING		, SCB_SPEED|SCB_REGEN );
 	set_sc( BD_RICHMANKIM		, SC_RICHMANKIM		, EFST_RICHMANKIM	, SCB_STR|SCB_VIT|SCB_MAXHP|SCB_MAXSP );
 	set_sc( BD_ETERNALCHAOS		, SC_ETERNALCHAOS	, EFST_ETERNALCHAOS	, SCB_DEF2 );
-	set_sc( BD_DRUMBATTLEFIELD	, SC_DRUMBATTLE		, EFST_DRUMBATTLEFIELD	,
-#ifndef RENEWAL
-		SCB_WATK|SCB_DEF );
-#else
-		SCB_DEF );
-#endif
+	set_sc( BD_DRUMBATTLEFIELD	, SC_DRUMBATTLE		, EFST_DRUMBATTLEFIELD	, SCB_WATK|SCB_DEF|SCB_MATK|SCB_MDEF );
+
 	set_sc( BD_RINGNIBELUNGEN	, SC_NIBELUNGEN		, EFST_RINGNIBELUNGEN		,
 #ifndef RENEWAL
 		SCB_WATK );
@@ -6493,10 +6489,8 @@ static unsigned short status_calc_watk(struct block_list *bl, struct status_chan
 	if(!sc || !sc->count)
 		return cap_value(watk,0,USHRT_MAX);
 
-#ifndef RENEWAL
 	if(sc->data[SC_DRUMBATTLE])
 		watk += sc->data[SC_DRUMBATTLE]->val2;
-#endif
 	if (sc->data[SC_IMPOSITIO])
 		watk += sc->data[SC_IMPOSITIO]->val2;
 	if(sc->data[SC_WATKFOOD])
@@ -6684,6 +6678,8 @@ static unsigned short status_calc_matk(struct block_list *bl, struct status_chan
 		matk += sc->data[SC_SPIRITANIMAL]->val1*6;
 	if(sc->data[SC_CRUCIS_PLAYER])
 		matk += sc->data[SC_CRUCIS_PLAYER]->val3;
+	if(sc->data[SC_DRUMBATTLE])
+		matk += sc->data[SC_DRUMBATTLE]->val2;
 	if(sc->data[SC_ECHOSONG])
 		matk += sc->data[SC_ECHOSONG]->val3;
 	if(sc->data[SC_ENERGYCOAT])
@@ -7000,7 +6996,7 @@ static defType status_calc_def(struct block_list *bl, struct status_change *sc, 
 		return sc->data[SC_DEFSET]->val1;
 
 	if(sc->data[SC_DRUMBATTLE])
-		def += sc->data[SC_DRUMBATTLE]->val3;
+		def += sc->data[SC_DRUMBATTLE]->val2;
 	if (sc->data[SC_ASSUMPTIO])
 		def += sc->data[SC_ASSUMPTIO]->val1 * 50;
 
@@ -7175,6 +7171,8 @@ static defType status_calc_mdef(struct block_list *bl, struct status_change *sc,
 		mdef += sc->data[SC_ECHOSONG]->val3;
 	if(sc->data[SC_CRUCIS_PLAYER])
 		mdef += sc->data[SC_CRUCIS_PLAYER]->val4;
+	if(sc->data[SC_DRUMBATTLE])
+		mdef += sc->data[SC_DRUMBATTLE]->val2;
 	if(sc->data[SC_EARTH_INSIGNIA] && sc->data[SC_EARTH_INSIGNIA]->val1 == 3)
 		mdef += 50;
 	if(sc->data[SC_ENDURE])
@@ -10400,8 +10398,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			val3 = 6 * val1; // Attrs increase /reductions
 			break;
 		case SC_DRUMBATTLE:
-			val2 = 15 + val1 * 5; // Atk increase
-			val3 = val1 * 15; // Def increase
+			val2 = val1 * 10; 
 			break;
 		case SC_NIBELUNGEN:
 			val2 = rnd() % RINGNBL_MAX; // See e_nibelungen_status

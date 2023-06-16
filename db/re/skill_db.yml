@@ -8425,7 +8425,7 @@ Body:
     SplashArea: 5
     Duration1: 180000
     Duration2: 60000
-    Cooldown: 10000
+    Cooldown: 30000
     AfterCastActDelay: 10000
     Requires:
       SpCost: 85
@@ -8467,22 +8467,12 @@ Body:
     Hit: Single
     HitCount: 1
     SplashArea: 15
-    CastTime: 1000
     Duration1: 180000
     Duration2: 60000
-    Cooldown: 20000
+    Cooldown: 30000
+    AfterCastActDelay: 15000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 50
-        - Level: 2
-          Amount: 54
-        - Level: 3
-          Amount: 58
-        - Level: 4
-          Amount: 62
-        - Level: 5
-          Amount: 66
+      SpCost: 100
       Weapon:
         Musical: true
         Whip: true
@@ -8563,7 +8553,7 @@ Body:
       - Level: 5
         Time: 120000
     Cooldown: 10000
-    AfterCatActDelay: 10000
+    AfterCastActDelay: 10000
     Requires:
       SpCost: 100
       Weapon:
@@ -8745,7 +8735,7 @@ Body:
     SplashArea: 5
     Duration1: 180000
     Duration2: 20000
-    Cooldown: 10000
+    Cooldown: 30000
     AfterCastActDelay: 10000
     Requires:
       SpCost: 85
@@ -8769,7 +8759,7 @@ Body:
     SplashArea: 5
     Duration1: 180000
     Duration2: 20000
-    Cooldown: 10000
+    Cooldown: 30000
     AfterCastActDelay: 10000
     Requires:
       SpCost: 85
@@ -23693,7 +23683,7 @@ Body:
         Reproduce: true
     CastCancel: true
     CastTime: 6000
-    AfterCastActDelay: 1000
+    AfterCastActDelay: 2000
     Cooldown: 10000
     Requires:
       SpCost: 100
