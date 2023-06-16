@@ -2164,6 +2164,7 @@ enum e_skill {
 	CR_OHQUICKEN = 862,
 	LK_TWOHAND = 863,
     CG_METALLICFURY = 864,
+	CG_ALL_STAR = 865,
 };
 
 /// The client view ids for land skills.

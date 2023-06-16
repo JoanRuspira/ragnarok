@@ -2680,6 +2680,27 @@ Body:
       Ammo:
         Arrow: true
       AmmoAmount: 5
+  - Id: 865
+    Name: CG_ALL_STAR
+    Description: All Star
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Support
+    DamageFlags:
+      NoDamage: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    Element: Holy
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    CastTime: 6000
+    AfterCastActDelay: 1000
+    Cooldown: 10000
+    Requires:
+      SpCost: 100
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
