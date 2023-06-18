@@ -2455,7 +2455,7 @@ bool status_check_skilluse(struct block_list *src, struct block_list *target, ui
 #ifndef RENEWAL
 				(sc->data[SC_BASILICA] && (sc->data[SC_BASILICA]->val4 != src->id || skill_id != HP_BASILICA)) || // Only Basilica caster that can cast, and only Basilica to cancel it
 #endif
-				(sc->data[SC_MARIONETTE] && skill_id != CG_MARIONETTE) || // Only skill you can use is marionette again to cancel it
+				// (sc->data[SC_MARIONETTE] && skill_id != CG_MARIONETTE) || // Only skill you can use is marionette again to cancel it
 				(sc->data[SC_MARIONETTE2] && skill_id == CG_MARIONETTE) || // Cannot use marionette if you are being buffed by another
 				(sc->data[SC_ANKLE] && skill_block_check(src, SC_ANKLE, skill_id)) ||
 				(sc->data[SC_STASIS] && skill_block_check(src, SC_STASIS, skill_id)) ||
@@ -3355,8 +3355,6 @@ static int status_get_hpbonus(struct block_list *bl, enum e_status_bonus type) {
 				bonus += 2000;
 			if(sc->data[SC_MTF_MHP])
 				bonus += sc->data[SC_MTF_MHP]->val1;
-			if(sc->data[SC_MARIONETTE])
-				bonus -= 1000;
 			if(sc->data[SC_SWORDCLAN])
 				bonus += 30;
 			if(sc->data[SC_ARCWANDCLAN])
@@ -5961,8 +5959,6 @@ static unsigned short status_calc_str(struct block_list *bl, struct status_chang
 		else
 			str >>= 1;
 	}
-	if(sc->data[SC_MARIONETTE])
-		str -= ((sc->data[SC_MARIONETTE]->val3)>>16)&0xFF;
 	if(sc->data[SC_MARIONETTE2])
 		str += ((sc->data[SC_MARIONETTE2]->val3)>>16)&0xFF;
 	if(sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_HIGH)
@@ -6048,8 +6044,6 @@ static unsigned short status_calc_agi(struct block_list *bl, struct status_chang
 		agi -= sc->data[SC_QUAGMIRE]->val2;
 	if(sc->data[SC_SUITON] && sc->data[SC_SUITON]->val3)
 		agi -= sc->data[SC_SUITON]->val2;
-	if(sc->data[SC_MARIONETTE])
-		agi -= ((sc->data[SC_MARIONETTE]->val3)>>8)&0xFF;
 	if(sc->data[SC_MARIONETTE2])
 		agi += ((sc->data[SC_MARIONETTE2]->val3)>>8)&0xFF;
 	if(sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_HIGH)
@@ -6124,8 +6118,6 @@ static unsigned short status_calc_vit(struct block_list *bl, struct status_chang
 		vit += sc->data[SC_SPEARSTANCE]->val1;
 	if(sc->data[SC_TRUESIGHT])
 		vit += 5;
-	if(sc->data[SC_MARIONETTE])
-		vit -= sc->data[SC_MARIONETTE]->val3&0xFF;
 	if(sc->data[SC_MARIONETTE2])
 		vit += sc->data[SC_MARIONETTE2]->val3&0xFF;
 	if(sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_HIGH)
@@ -6207,8 +6199,6 @@ static unsigned short status_calc_int(struct block_list *bl, struct status_chang
 	}
 	if(sc->data[SC_NEN])
 		int_ += sc->data[SC_NEN]->val1;
-	if(sc->data[SC_MARIONETTE])
-		int_ -= ((sc->data[SC_MARIONETTE]->val4)>>16)&0xFF;
 	if(sc->data[SC_2011RWC_SCROLL])
 		int_ += sc->data[SC_2011RWC_SCROLL]->val1;
 	if(sc->data[SC_MARIONETTE2])
@@ -6302,8 +6292,6 @@ static unsigned short status_calc_dex(struct block_list *bl, struct status_chang
 	}
 	if(sc->data[SC_INCREASING])
 		dex += 4; // Added based on skill updates [Reddozen]
-	if(sc->data[SC_MARIONETTE])
-		dex -= ((sc->data[SC_MARIONETTE]->val4)>>8)&0xFF;
 	if(sc->data[SC_2011RWC_SCROLL])
 		dex += sc->data[SC_2011RWC_SCROLL]->val1;
 	if(sc->data[SC_MARIONETTE2])
@@ -6377,8 +6365,6 @@ static unsigned short status_calc_luk(struct block_list *bl, struct status_chang
 		luk += 5;
 	if(sc->data[SC_GLORIA])
 		luk += 30;
-	if(sc->data[SC_MARIONETTE])
-		luk -= sc->data[SC_MARIONETTE]->val4&0xFF;
 	if(sc->data[SC_MARIONETTE2])
 		luk += sc->data[SC_MARIONETTE2]->val4&0xFF;
 	if(sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_HIGH)
@@ -10652,15 +10638,15 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 		case SC_MARIONETTE:
 		{
 			int stat;
-
+			float stats_to_pass = pc_checkskill(sd, CG_MARIONETTE) * 0.1;
 			val3 = 0;
 			val4 = 0;
-			stat = ( sd ? sd->status.str : status_get_base_status(bl)->str ) / 2; val3 |= cap_value(stat,0,0xFF)<<16;
-			stat = ( sd ? sd->status.agi : status_get_base_status(bl)->agi ) / 2; val3 |= cap_value(stat,0,0xFF)<<8;
-			stat = ( sd ? sd->status.vit : status_get_base_status(bl)->vit ) / 2; val3 |= cap_value(stat,0,0xFF);
-			stat = ( sd ? sd->status.int_: status_get_base_status(bl)->int_) / 2; val4 |= cap_value(stat,0,0xFF)<<16;
-			stat = ( sd ? sd->status.dex : status_get_base_status(bl)->dex ) / 2; val4 |= cap_value(stat,0,0xFF)<<8;
-			stat = ( sd ? sd->status.luk : status_get_base_status(bl)->luk ) / 2; val4 |= cap_value(stat,0,0xFF);
+			stat = ( sd ? sd->status.str : status_get_base_status(bl)->str ) * stats_to_pass; val3 |= cap_value(stat,0,0xFF)<<16;
+			stat = ( sd ? sd->status.agi : status_get_base_status(bl)->agi ) * stats_to_pass; val3 |= cap_value(stat,0,0xFF)<<8;
+			stat = ( sd ? sd->status.vit : status_get_base_status(bl)->vit ) * stats_to_pass; val3 |= cap_value(stat,0,0xFF);
+			stat = ( sd ? sd->status.int_: status_get_base_status(bl)->int_) * stats_to_pass; val4 |= cap_value(stat,0,0xFF)<<16;
+			stat = ( sd ? sd->status.dex : status_get_base_status(bl)->dex ) * stats_to_pass; val4 |= cap_value(stat,0,0xFF)<<8;
+			stat = ( sd ? sd->status.luk : status_get_base_status(bl)->luk ) * stats_to_pass; val4 |= cap_value(stat,0,0xFF);
 			break;
 		}
 		case SC_MARIONETTE2:
@@ -10678,7 +10664,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 
 			val3 = 0;
 			val4 = 0;
-			max_stat = battle_config.max_parameter; // Cap to 99 (default)
+			max_stat = 1000; // Cap to 1000 (default)
 			stat = (psce->val3 >>16)&0xFF; stat = min(stat, max_stat - status2->str ); val3 |= cap_value(stat,0,0xFF)<<16;
 			stat = (psce->val3 >> 8)&0xFF; stat = min(stat, max_stat - status2->agi ); val3 |= cap_value(stat,0,0xFF)<<8;
 			stat = (psce->val3 >> 0)&0xFF; stat = min(stat, max_stat - status2->vit ); val3 |= cap_value(stat,0,0xFF);
@@ -14026,7 +14012,7 @@ TIMER_FUNC(status_change_timer){
 	case SC_MARIONETTE2:
 		{
 			struct block_list *pbl = map_id2bl(sce->val1);
-			if( pbl && check_distance_bl(bl, pbl, 7) ) {
+			if( pbl && check_distance_bl(bl, pbl, 11) ) {
 				sc_timer_next(1000 + tick);
 				return 0;
 			}

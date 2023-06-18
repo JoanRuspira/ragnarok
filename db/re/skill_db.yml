@@ -8475,7 +8475,9 @@ Body:
       SpCost: 100
       Weapon:
         Musical: true
-        Whip: true
+      ItemCost:
+        - Item: Protect_Neck_Candy
+          Amount: 2
   - Id: 310
     Name: BD_RINGNIBELUNGEN
     Description: Harmonic Lick
@@ -10645,14 +10647,13 @@ Body:
     Flags:
       NoTargetSelf: true
       PartyOnly: true
-      IgnoreKagehumi: true
-    Range: 7
+    Range: 11
     Hit: Single
     HitCount: 1
     CastCancel: true
     Duration1: 1000
     Requires:
-      SpCost: 100
+      SpCost: 200
   - Id: 397
     Name: LK_SPIRALPIERCE
     Description: Spiral Pierce

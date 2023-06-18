@@ -5713,12 +5713,11 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		clif_skill_nodamage(src,bl,skill_id,skill_lv,
 			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
 		break;
-
 	case CG_MARIONETTE:
 		{
 			struct status_change* sc = status_get_sc(src);
 
-			if( sd && dstsd && (dstsd->class_&MAPID_UPPERMASK) == MAPID_BARDDANCER && dstsd->status.sex == sd->status.sex )
+			if( sd && dstsd && (dstsd->class_ == JOB_CLOWN || dstsd->class_ == JOB_GYPSY))
 			{// Cannot cast on another bard/dancer-type class of the same gender as caster
 				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
 				map_freeblock_unlock();
