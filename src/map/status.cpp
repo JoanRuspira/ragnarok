@@ -10852,7 +10852,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			}
 			break;
 		case SC_FORTIFY:
-			val2 = 15*val1; // Damage Increase
+			val2 = 25*val1; // Damage Increase
 			break;
 		case SC_CONCENTRATION:
 			val2 = 10*val1; // Damage Increase
@@ -11396,7 +11396,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			break;
 		case SC_PRESTIGE:
 			val2 = val1 * 5;	// Chance to evade magic damage.
-			val3 = val1 * 4; // Defence added
+			val3 = val1 * 5; // Defence added
 			break;
 		case SC_BANDING:
 			val2 = (sd ? skill_banding_count(sd) : 1);

@@ -9895,10 +9895,10 @@ Body:
     Hit: Single
     HitCount: 1
     CastCancel: true
-    Duration1: 50000
-    Duration2: 50000
-    Cooldown: 10000
-    AfterCastActDelay: 5000
+    Duration1: 20000
+    Duration2: 20000
+    Cooldown: 50000
+    AfterCastActDelay: 2000
     Requires:
       SpCost: 200
       ItemCost:
@@ -9909,7 +9909,7 @@ Body:
     Unit:
       Id: Gospel
       Layout: -1
-      Interval: 10000
+      Interval: 4000
       Flag:
         NoOverlap: true
   - Id: 370
