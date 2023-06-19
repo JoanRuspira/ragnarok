@@ -12,6 +12,7 @@ class KnightSkillAtkRatioCalculator
 		static int calculate_bowling_bash_normal_atk_ratio(int skill_lv);
 		static int calculate_bowling_bash_bleeding_atk_ratio(int skill_lv);
 		static int calculate_spear_boomerang_atk_ratio(int skill_lv);
+		static int calculate_shield_boomerang_atk_ratio(int skill_lv);
 		static int calculate_pierce_atk_ratio(int skill_lv);
 		static int calculate_brandish_spear_atk_ratio(int skill_lv, int vit);
 		static int calculate_wind_cutter_atk_ratio(int skill_lv, int intelligence);

@@ -10,7 +10,8 @@ Body:
     SubType: Musical
     Buy: 4000
     Weight: 700
-    Attack: 50
+    Attack: 100
+    MagicAttack: 100
     Range: 1
     Slots: 3
     Jobs:

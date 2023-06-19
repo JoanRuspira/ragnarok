@@ -19,14 +19,56 @@ int BardSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 			return calculate_great_echo_atk_ratio(skill_lv);
 			break;
 		case WM_METALICSOUND:
-			return calculate_metallic_sound_atk_ratio(skill_lv);
+			return calculate_metallic_sound_atk_ratio(skill_lv, target);
 			break;
 		case JG_TAROTCARD:
+			add_tarot_cards_special_effects(target);
 			return calculate_tarot_cards_atk_ratio(skill_lv);
+		case WM_REVERBERATION:
+			add_reverberation_special_effects(target);
+			return calculate_reverberation_atk_ratio(skill_lv, target);
 		default:
 			return 0;
 			break;
 	}
+}
+
+int BardSkillAttackRatioCalculator::calculate_reverberation_atk_ratio(int skill_lv, struct block_list *target)
+{
+	int ratio = 0;
+	struct status_change *target_status;
+
+	target_status = status_get_sc(target);
+
+	if (target_status->data[SC_SLEEP]) {
+		return calculate_reverberation_sleep_atk_ratio(skill_lv);
+	}
+	return calculate_reverberation_normal_atk_ratio(skill_lv);
+}
+
+
+int BardSkillAttackRatioCalculator::calculate_metallic_sound_atk_ratio(int skill_lv, struct block_list *target)
+{
+	int ratio = 0;
+	struct status_change *target_status;
+
+	target_status = status_get_sc(target);
+
+	if (target_status->data[SC_SLEEP]) {
+		return calculate_metallic_sound_sleep_atk_ratio(skill_lv);
+	}
+	return calculate_metallic_sound_normal_atk_ratio(skill_lv);
+}
+
+
+void BardSkillAttackRatioCalculator::add_reverberation_special_effects(struct block_list *target)
+{
+	clif_soundeffectall(target, "reverberation_jg.wav", 0, AREA);
+    clif_specialeffect(target, 1366, AREA);
+}
+void BardSkillAttackRatioCalculator::add_tarot_cards_special_effects(struct block_list *target)
+{
+    clif_specialeffect(target, EF_FLOWERCAST, AREA);
 }
 
 void BardSkillAttackRatioCalculator::add_melody_strike_special_effects(struct block_list *target)
@@ -85,24 +127,48 @@ int BardSkillAttackRatioCalculator::calculate_great_echo_atk_ratio(int skill_lv)
 	return ratio;
 }
 
-int BardSkillAttackRatioCalculator::calculate_metallic_sound_atk_ratio(int skill_lv)
+
+int BardSkillAttackRatioCalculator::calculate_metallic_sound_sleep_atk_ratio(int skill_lv)
 {
 	int ratio = 0;
 	switch (skill_lv) {
 		case 1:
-			ratio = 30;
+			ratio = 250;
 			break;
 		case 2:
-			ratio = 100;
+			ratio = 350;
 			break;
 		case 3:
-			ratio = 180;
+			ratio = 450;
 			break;
 		case 4:
-			ratio = 240;
+			ratio = 550;
 			break;
 		case 5:
-			ratio = 300;
+			ratio = 650;
+			break;
+		}
+	return ratio + 100;
+}
+
+int BardSkillAttackRatioCalculator::calculate_metallic_sound_normal_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 250;
+			break;
+		case 2:
+			ratio = 350;
+			break;
+		case 3:
+			ratio = 450;
+			break;
+		case 4:
+			ratio = 550;
+			break;
+		case 5:
+			ratio = 650;
 			break;
 		}
 	return ratio;
@@ -129,4 +195,50 @@ int BardSkillAttackRatioCalculator::calculate_tarot_cards_atk_ratio(int skill_lv
 			break;
 		}
 	return ratio;
+}
+
+int BardSkillAttackRatioCalculator::calculate_reverberation_normal_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 150;
+			break;
+		case 2:
+			ratio = 250;
+			break;
+		case 3:
+			ratio = 350;
+			break;
+		case 4:
+			ratio = 450;
+			break;
+		case 5:
+			ratio = 550;
+			break;
+		}
+	return ratio;
+}
+
+int BardSkillAttackRatioCalculator::calculate_reverberation_sleep_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 150;
+			break;
+		case 2:
+			ratio = 250;
+			break;
+		case 3:
+			ratio = 350;
+			break;
+		case 4:
+			ratio = 450;
+			break;
+		case 5:
+			ratio = 550;
+			break;
+		}
+	return ratio + 100;
 }

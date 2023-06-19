@@ -14,9 +14,11 @@ int KnightSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* 
 		case KN_BOWLINGBASH:
 			return calculate_bowling_bash_atk_ratio(skill_lv, target);
 			break;
-		case CR_SHIELDBOOMERANG:
 		case KN_SPEARBOOMERANG:
 			return calculate_spear_boomerang_atk_ratio(skill_lv);
+			break;
+		case CR_SHIELDBOOMERANG:
+			return calculate_shield_boomerang_atk_ratio(skill_lv);
 			break;
 		case KN_PIERCE:
 			return calculate_pierce_atk_ratio(skill_lv);
@@ -193,19 +195,19 @@ int KnightSkillAtkRatioCalculator::calculate_smite_atk_ratio(int skill_lv)
 	int ratio = 0;
 	switch (skill_lv) {
 		case 1:
-			ratio = 55;
+			ratio = 150;
 			break;
 		case 2:
-			ratio = 125;
+			ratio = 250;
 			break;
 		case 3:
-			ratio = 205;
+			ratio = 350;
 			break;
 		case 4:
-			ratio = 265;
+			ratio = 450;
 			break;
 		case 5:
-			ratio = 325;
+			ratio = 550;
 			break;
 		}
 	return ratio;
@@ -326,7 +328,28 @@ int KnightSkillAtkRatioCalculator::calculate_pierce_atk_ratio(int skill_lv)
 	return ratio;
 }
 
-
+int KnightSkillAtkRatioCalculator::calculate_shield_boomerang_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 100;
+			break;
+		case 2:
+			ratio = 200;
+			break;
+		case 3:
+			ratio = 300;
+			break;
+		case 4:
+			ratio = 400;
+			break;
+		case 5:
+			ratio = 500;
+			break;
+		}
+	return ratio;
+}
 int KnightSkillAtkRatioCalculator::calculate_spear_boomerang_atk_ratio(int skill_lv)
 {
 	int ratio = 0;

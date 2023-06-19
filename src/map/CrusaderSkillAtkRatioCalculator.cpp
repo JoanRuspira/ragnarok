@@ -66,19 +66,19 @@ int CrusaderSkillAtkRatioCalculator::calculate_shield_slam_atk_ratio(int skill_l
 	int ratio = 0;
 	switch (skill_lv) {
 		case 1:
-			ratio = 100;
-			break;
-		case 2:
-			ratio = 200;
-			break;
-		case 3:
 			ratio = 300;
 			break;
-		case 4:
+		case 2:
 			ratio = 400;
 			break;
-		case 5:
+		case 3:
 			ratio = 500;
+			break;
+		case 4:
+			ratio = 600;
+			break;
+		case 5:
+			ratio = 700;
 			break;
 		}
 	return ratio;
