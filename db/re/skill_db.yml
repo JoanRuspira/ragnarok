@@ -7210,7 +7210,7 @@ Body:
       NoDamage: true
     Hit: Single
     HitCount: 1
-    AfterCastActDelay: 800
+    AfterCastActDelay: 2000
     Duration1: 180000
     Requires:
       SpCost: 50

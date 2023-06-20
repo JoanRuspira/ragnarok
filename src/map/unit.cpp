@@ -1781,7 +1781,7 @@ int unit_skilluse_id2(struct block_list *src, int target_id, uint16 skill_id, ui
 				break;
 			case CR_DEVOTION:
 				if (target->type == BL_PC) {
-					uint8 i = 0, count = min(skill_lv, skill_lv); //MAX_DEVOTION
+					uint8 i = 0, count = 1; //MAX_DEVOTION
 
 					ARR_FIND(0, count, i, sd->devotion[i] == target_id);
 					if (i == count) {

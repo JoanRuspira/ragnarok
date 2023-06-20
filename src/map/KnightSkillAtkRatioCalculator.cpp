@@ -24,6 +24,7 @@ int KnightSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* 
 			return calculate_pierce_atk_ratio(skill_lv);
 			break;
 		case KN_BRANDISHSPEAR:
+			clif_specialeffect(src, 272, AREA);
 			return calculate_brandish_spear_atk_ratio(skill_lv, sstatus->vit);
 			break;
 		case RK_WINDCUTTER:
@@ -39,6 +40,7 @@ int KnightSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* 
 		case RK_HUNDREDSPEAR:
 			return calculate_a_hundred_spears_atk_ratio(skill_lv);
 		case LK_SPIRALPIERCE:
+			clif_specialeffect(target, 108, AREA);
 			return calculate_clashing_spiral_atk_ratio(skill_lv, target);
 		case RK_DRAGONBREATH_WATER:
 			return calculate_dragon_breath_atk_ratio(skill_lv, sstatus->str);

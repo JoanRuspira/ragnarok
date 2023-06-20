@@ -5713,6 +5713,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			{
 				if( !sc->data[SC_MARIONETTE] && !tsc->data[SC_MARIONETTE2] )
 				{
+					clif_specialeffect(bl, 269, AREA);
 					sc_start(src,src,SC_MARIONETTE,100,bl->id,skill_get_time(skill_id,skill_lv));
 					sc_start(src,bl,SC_MARIONETTE2,100,src->id,skill_get_time(skill_id,skill_lv));
 					clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
@@ -5870,6 +5871,11 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		if (!battle_check_undead(tstatus->race, tstatus->def_ele) && tstatus->race != RC_DEMON)
 			clif_skill_nodamage(src, bl, skill_id, skill_lv, sc_start(src, bl, type, 100, skill_lv, skill_get_time(skill_id, skill_lv)));
 		break;
+	case LK_AURABLADE:
+		clif_specialeffect(src, 110, AREA);
+		clif_skill_nodamage(src,bl,skill_id,skill_lv,
+			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
+		break;
 	case AL_INCAGI:
 	case AL_BLESSING:
 	case MER_INCAGI:
@@ -5897,7 +5903,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case MO_EXPLOSIONSPIRITS:
 	case MO_STEELBODY:
 	case MO_BLADESTOP:
-	case LK_AURABLADE:
 	case LK_PARRYING:
 	case MS_PARRYING:
 	case LK_CONCENTRATION:
@@ -5954,7 +5959,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case KO_MEIKYOUSISUI:
 	case ALL_ODINS_POWER:
 	case ALL_FULL_THROTTLE:
-	case RA_UNLIMIT:
 	case WL_TELEKINESIS_INTENSE:
 	case RL_HEAT_BARREL:
 	case RL_P_ALTER:
@@ -5972,7 +5976,11 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		clif_skill_nodamage(src,bl,skill_id,skill_lv,
 			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
 		break;
-	
+	case RA_UNLIMIT:
+    	clif_specialeffect(bl, 813, AREA);
+		clif_skill_nodamage(src,bl,skill_id,skill_lv,
+			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
+		break;
 	case PA_FORTIFY:
 		clif_specialeffect(src, EF_MILSHIELD_STR, AREA);
 		clif_specialeffect(src, EF_SHRINK, AREA);
@@ -6647,9 +6655,23 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		}
 		break;
 
+	case CR_DEFENDER:
+		clif_specialeffect(src, 271, AREA);
+		if( tsce )
+		{
+			clif_skill_nodamage(src,bl,skill_id,skill_lv,status_change_end(bl, type, INVALID_TIMER));
+			map_freeblock_unlock();
+			return 0;
+		}
+
+		if( skill_id == SP_SOULCOLLECT ){
+			clif_skill_nodamage(src, bl, skill_id, skill_lv, sc_start2(src, bl, type, 100, skill_lv, pc_checkskill(sd, SP_SOULENERGY), max(1000, skill_get_time(skill_id, skill_lv))));
+		}else{
+			clif_skill_nodamage(src, bl, skill_id, skill_lv, sc_start(src, bl, type, 100, skill_lv, skill_get_time(skill_id, skill_lv)));
+		}
+		break;
 	case BS_MAXIMIZE:
 	case NV_TRICKDEAD:
-	case CR_DEFENDER:
 	case ML_DEFENDER:
 	case CR_AUTOGUARD:
 	case ML_AUTOGUARD:
@@ -6818,17 +6840,24 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		break;
 
 #ifdef RENEWAL
-	case BD_LULLABY:
-	case BD_RICHMANKIM:
-	case BD_ETERNALCHAOS:
+	case BA_POEMBRAGI:
 	case BD_DRUMBATTLEFIELD:
+	case BD_RICHMANKIM:
+	case BA_ASSASSINCROSS:
+		clif_specialeffect(bl, 816, AREA);
+		skill_castend_song(src, skill_id, skill_lv, tick);
+		break;
+	case BD_INTOABYSS:
+		clif_specialeffect(src, 1229, AREA);
+		skill_castend_song(src, skill_id, skill_lv, tick);
+		break;
+	case BD_LULLABY:
+	case BD_ETERNALCHAOS:
 	case BD_RINGNIBELUNGEN:
 	case BD_ROKISWEIL:
 	case BD_SIEGFRIED:
 	case BA_DISSONANCE:
-	case BA_POEMBRAGI:
 	case BA_WHISTLE:
-	case BA_ASSASSINCROSS:
 	case DC_UGLYDANCE:
 	case DC_HUMMING:
 	case DC_DONTFORGETME:
@@ -6836,10 +6865,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case DC_SERVICEFORYOU:
 		skill_castend_song(src, skill_id, skill_lv, tick);
 		break;
-	case BD_INTOABYSS:
-		clif_specialeffect(src, 1229, AREA);
-		skill_castend_song(src, skill_id, skill_lv, tick);
-		break;
+
 #endif
 
 	case TF_STEAL:
@@ -8709,7 +8735,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case RK_STONEHARDSKIN:
 		if (sc_start(src, bl, type, 100, skill_lv, skill_get_time(skill_id, skill_lv))){
 			clif_skill_nodamage(src, bl, skill_id, skill_lv, 1);
-			clif_specialeffect(bl, EF_STRIPARMOR, AREA);
 		}
 		break;
 	case RK_FIGHTINGSPIRIT: {
