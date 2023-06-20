@@ -2734,6 +2734,15 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 
 	//Skill damage modifiers that stack linearly
 	if(sc && skill_id != PA_SACRIFICE && skill_id != HT_HURRICANEFURY) {
+
+		if( skill_id == CR_SHIELDCHARGE || skill_id == CR_SHIELDBOOMERANG || skill_id == PA_SHIELDCHAIN || skill_id == PA_SHIELDSLAM ) { //Refine bonus applies after cards and elements.
+			short index = sd->equip_index[EQI_HAND_L];
+
+			if( index >= 0 && sd->inventory_data[index] && sd->inventory_data[index]->type == IT_ARMOR )
+				skillratio += sd->inventory.u.items_inventory[index].refine * 50;
+		}
+
+
 		if(sc->data[SC_OVERTHRUST])
 			skillratio += sc->data[SC_OVERTHRUST]->val3;
 		if(sc->data[SC_MAXOVERTHRUST])
@@ -2859,6 +2868,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			break;
 		case BA_MUSICALSTRIKE:
 		case WM_GREAT_ECHO:
+		case CG_ARROWVULCAN:
 			skillratio += BardSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
 		case MER_CRASH:
@@ -3000,14 +3010,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 				skillratio /= 2;
 			break;
 #endif
-		case CG_ARROWVULCAN:
-#ifdef RENEWAL
-			skillratio += 400 + 100 * skill_lv;
-			RE_LVL_DMOD(100);
-#else
-			skillratio += 100 + 100 * skill_lv;
-#endif
-			break;
 		case ASC_BREAKER:
 #ifdef RENEWAL
 			skillratio += -100 + 140 * skill_lv + sstatus->str + sstatus->int_; // !TODO: Confirm stat modifier
@@ -4675,12 +4677,12 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src, struct bl
 
 	if(sd) {
 
-		if( skill_id == CR_SHIELDCHARGE || skill_id == CR_SHIELDBOOMERANG || skill_id == PA_SHIELDCHAIN || skill_id == PA_SHIELDSLAM ) { //Refine bonus applies after cards and elements.
-			short index = sd->equip_index[EQI_HAND_L];
+		// if( skill_id == CR_SHIELDCHARGE || skill_id == CR_SHIELDBOOMERANG || skill_id == PA_SHIELDCHAIN || skill_id == PA_SHIELDSLAM ) { //Refine bonus applies after cards and elements.
+		// 	short index = sd->equip_index[EQI_HAND_L];
 
-			if( index >= 0 && sd->inventory_data[index] && sd->inventory_data[index]->type == IT_ARMOR )
-				ATK_ADD(wd.damage, wd.damage2, 50*sd->inventory.u.items_inventory[index].refine);
-		}
+		// 	if( index >= 0 && sd->inventory_data[index] && sd->inventory_data[index]->type == IT_ARMOR )
+		// 		ATK_ADD(wd.damage, wd.damage2, 50*sd->inventory.u.items_inventory[index].refine);
+		// }
 	}
 
 	if(tsd) { // Card Fix for target (tsd), 2 is not added to the "left" flag meaning "target cards only"

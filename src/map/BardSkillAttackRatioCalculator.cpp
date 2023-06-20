@@ -31,11 +31,100 @@ int BardSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 		case WM_REVERBERATION:
 			add_reverberation_special_effects(target);
 			return calculate_reverberation_atk_ratio(skill_lv, target);
+		case CG_ARROWVULCAN:
+    		clif_specialeffect(target, 904, AREA);
+			return calculate_arrow_vulcan_atk_ratio(skill_lv, target);
+		case WM_SEVERE_RAINSTORM:
+			return calculate_severe_rainstorm_atk_ratio(skill_lv);
 		default:
 			return 0;
 			break;
 	}
 }
+
+int BardSkillAttackRatioCalculator::calculate_severe_rainstorm_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 130;
+			break;
+		case 2:
+			ratio = 200;
+			break;
+		case 3:
+			ratio = 280;
+			break;
+		case 4:
+			ratio = 400;
+			break;
+		case 5:
+			ratio = 500;
+			break;
+		}
+	return ratio;
+}
+
+int BardSkillAttackRatioCalculator::calculate_arrow_vulcan_normal_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 200;
+			break;
+		case 2:
+			ratio = 300;
+			break;
+		case 3:
+			ratio = 400;
+			break;
+		case 4:
+			ratio = 500;
+			break;
+		case 5:
+			ratio = 600;
+			break;
+		}
+	return ratio;
+}
+
+int BardSkillAttackRatioCalculator::calculate_arrow_vulcan_confused_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 200;
+			break;
+		case 2:
+			ratio = 300;
+			break;
+		case 3:
+			ratio = 400;
+			break;
+		case 4:
+			ratio = 500;
+			break;
+		case 5:
+			ratio = 600;
+			break;
+		}
+	return ratio + 100;
+}
+
+
+int BardSkillAttackRatioCalculator::calculate_arrow_vulcan_atk_ratio(int skill_lv, struct block_list *target)
+{
+	int ratio = 0;
+	struct status_change *target_status;
+
+	target_status = status_get_sc(target);
+
+	if (target_status->data[SC_CONFUSION]) {
+		return calculate_arrow_vulcan_confused_atk_ratio(skill_lv);
+	}
+	return calculate_arrow_vulcan_normal_atk_ratio(skill_lv);
+}
+
 
 int BardSkillAttackRatioCalculator::calculate_metallic_fury_atk_ratio(int skill_lv, struct block_list *target)
 {
@@ -132,19 +221,19 @@ int BardSkillAttackRatioCalculator::calculate_great_echo_atk_ratio(int skill_lv)
 	int ratio = 0;
 	switch (skill_lv) {
 		case 1:
-			ratio = 150;
+			ratio = 200;
 			break;
 		case 2:
-			ratio = 250;
+			ratio = 300;
 			break;
 		case 3:
-			ratio = 350;
+			ratio = 400;
 			break;
 		case 4:
-			ratio = 450;
+			ratio = 500;
 			break;
 		case 5:
-			ratio = 550;
+			ratio = 600;
 			break;
 		}
 	return ratio;

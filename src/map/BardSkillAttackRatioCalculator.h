@@ -22,6 +22,10 @@ class BardSkillAttackRatioCalculator
 		static int calculate_metallic_fury_normal_atk_ratio(int skill_lv);
 		static int calculate_metallic_fury_sleep_atk_ratio(int skill_lv);
 		static int calculate_tarot_cards_atk_ratio(int skill_lv);
+		static int calculate_arrow_vulcan_atk_ratio(int skill_lv, struct block_list *target);
+		static int calculate_arrow_vulcan_normal_atk_ratio(int skill_lv);
+		static int calculate_arrow_vulcan_confused_atk_ratio(int skill_lv);
+		static int calculate_severe_rainstorm_atk_ratio(int skill_lv);
 		static int calculate_reverberation_atk_ratio(int skill_lv, struct block_list *target);
 		static int calculate_reverberation_sleep_atk_ratio(int skill_lv);
 		static int calculate_reverberation_normal_atk_ratio(int skill_lv);

@@ -11,4 +11,6 @@ class BardAdditionalEffectsCalculator
 {
     public:
         static void apply_tarot_cards_additional_effect(struct block_list* src, struct block_list *bl, int skill_lv);
+        static void apply_great_echo_additional_effect(struct block_list* src, struct block_list *bl, int skill_lv);
+        static void apply_severe_rainstorm_additional_effect(struct block_list* src, struct block_list *bl, int skill_lv);
 };

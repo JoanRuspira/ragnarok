@@ -336,6 +336,12 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 		case GC_COUNTERSLASH:
 			RogueAdditionalEffectsCalculator::apply_back_stab_additional_effect(src, bl, skill_lv);
 			break;
+		case WM_GREAT_ECHO:
+			BardAdditionalEffectsCalculator::apply_great_echo_additional_effect(src, bl, skill_lv);
+			break;
+		case WM_SEVERE_RAINSTORM:
+			BardAdditionalEffectsCalculator::apply_severe_rainstorm_additional_effect(src, bl, skill_lv);
+			break;
 		case JG_TAROTCARD:
 			BardAdditionalEffectsCalculator::apply_tarot_cards_additional_effect(src, bl, skill_lv);
 			break;
