@@ -2650,37 +2650,19 @@ Body:
     MaxLevel: 5
     Type: Magic
     TargetType: Attack
-    DamageFlags:
-      Splash: true
-    Flags:
-      IsTrap: true
     Range: 9
     Hit: Multi_Hit
-    HitCount: -10
-    SplashArea: 2
+    Element: Neutral
+    HitCount: -2
     CopyFlags:
       Skill:
         Reproduce: true
     CastCancel: true
     CastTime: 1000
-    AfterCastActDelay: 500
-    Cooldown: 150
-    FixedCastTime: 500
+    AfterCastActDelay: 400
+    Cooldown: 7000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 56
-        - Level: 2
-          Amount: 62
-        - Level: 3
-          Amount: 68
-        - Level: 4
-          Amount: 74
-        - Level: 5
-          Amount: 80
-      Ammo:
-        Arrow: true
-      AmmoAmount: 5
+      SpCost: 75
   - Id: 865
     Name: CG_ALL_STAR
     Description: All Star

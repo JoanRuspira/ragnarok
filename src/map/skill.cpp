@@ -4204,6 +4204,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case LG_RAYOFGENESIS:
 	case WM_METALICSOUND:
 	case WM_REVERBERATION:
+	case CG_METALLICFURY:
 	case KO_KAIHOU:
 	case MH_ERASER_CUTTER:
 		skill_attack(BF_MAGIC,src,src,bl,skill_id,skill_lv,tick,flag);
@@ -12154,7 +12155,6 @@ int skill_castend_pos2(struct block_list* src, int x, int y, uint16 skill_id, ui
 		map_foreachinarea(skill_area_sub,src->m,x-i,y-i,x+i,y+i,BL_CHAR|BL_SKILL,src,skill_id,skill_lv,tick,flag|BCT_ENEMY|1,skill_castend_damage_id);
 		break;
 	case WM_REVERBERATION:
-		ShowMessage("Reverb slpash \n");
 		i = skill_get_splash(skill_id,skill_lv);
 		map_foreachinarea(skill_area_sub,src->m,x-i,y-i,x+i,y+i,BL_CHAR,src,skill_id,skill_lv,tick,flag|BCT_ENEMY|1,skill_castend_damage_id);
 		break;

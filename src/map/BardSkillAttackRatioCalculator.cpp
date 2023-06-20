@@ -18,6 +18,10 @@ int BardSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 			add_great_echo_special_effects(target);
 			return calculate_great_echo_atk_ratio(skill_lv);
 			break;
+		case CG_METALLICFURY:
+			add_metallic_fury_special_effects(target);
+			return calculate_metallic_fury_atk_ratio(skill_lv, target);
+			break;
 		case WM_METALICSOUND:
 			return calculate_metallic_sound_atk_ratio(skill_lv, target);
 			break;
@@ -32,6 +36,20 @@ int BardSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 			break;
 	}
 }
+
+int BardSkillAttackRatioCalculator::calculate_metallic_fury_atk_ratio(int skill_lv, struct block_list *target)
+{
+	int ratio = 0;
+	struct status_change *target_status;
+
+	target_status = status_get_sc(target);
+
+	if (target_status->data[SC_SLEEP]) {
+		return calculate_metallic_fury_sleep_atk_ratio(skill_lv);
+	}
+	return calculate_metallic_fury_normal_atk_ratio(skill_lv);
+}
+
 
 int BardSkillAttackRatioCalculator::calculate_reverberation_atk_ratio(int skill_lv, struct block_list *target)
 {
@@ -60,6 +78,11 @@ int BardSkillAttackRatioCalculator::calculate_metallic_sound_atk_ratio(int skill
 	return calculate_metallic_sound_normal_atk_ratio(skill_lv);
 }
 
+void BardSkillAttackRatioCalculator::add_metallic_fury_special_effects(struct block_list *target)
+{
+	clif_soundeffectall(target, "metalic.wav", 0, AREA);
+    clif_specialeffect(target, 25, AREA);
+}
 
 void BardSkillAttackRatioCalculator::add_reverberation_special_effects(struct block_list *target)
 {
@@ -241,4 +264,54 @@ int BardSkillAttackRatioCalculator::calculate_reverberation_sleep_atk_ratio(int 
 			break;
 		}
 	return ratio + 100;
+}
+
+
+
+
+
+int BardSkillAttackRatioCalculator::calculate_metallic_fury_sleep_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 450;
+			break;
+		case 2:
+			ratio = 550;
+			break;
+		case 3:
+			ratio = 650;
+			break;
+		case 4:
+			ratio = 750;
+			break;
+		case 5:
+			ratio = 850;
+			break;
+		}
+	return ratio + 100;
+}
+
+int BardSkillAttackRatioCalculator::calculate_metallic_fury_normal_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 450;
+			break;
+		case 2:
+			ratio = 550;
+			break;
+		case 3:
+			ratio = 650;
+			break;
+		case 4:
+			ratio = 750;
+			break;
+		case 5:
+			ratio = 850;
+			break;
+		}
+	return ratio;
 }
