@@ -340,6 +340,7 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 			BardAdditionalEffectsCalculator::apply_great_echo_additional_effect(src, bl, skill_lv);
 			break;
 		case WM_SEVERE_RAINSTORM:
+		case WM_SEVERE_RAINSTORM_MELEE:
 			BardAdditionalEffectsCalculator::apply_severe_rainstorm_additional_effect(src, bl, skill_lv);
 			break;
 		case JG_TAROTCARD:

@@ -23397,53 +23397,21 @@ Body:
       Skill:
         Reproduce: true
     CastCancel: true
-    CastTime:
-      - Level: 1
-        Time: 1500
-      - Level: 2
-        Time: 2000
-      - Level: 3
-        Time: 2500
-      - Level: 4
-        Time: 3000
-      - Level: 5
-        Time: 3500
-    AfterCastActDelay: 1000
+    CastTime: 3500
+    AfterCastActDelay: 400
     Duration1: 3400
-    Cooldown:
-      - Level: 1
-        Time: 5000
-      - Level: 2
-        Time: 5500
-      - Level: 3
-        Time: 6000
-      - Level: 4
-        Time: 6500
-      - Level: 5
-        Time: 7000
+    Cooldown: 10000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 80
-        - Level: 2
-          Amount: 90
-        - Level: 3
-          Amount: 100
-        - Level: 4
-          Amount: 110
-        - Level: 5
-          Amount: 120
+      SpCost: 120
       Weapon:
-        Bow: true
         Musical: true
-        Whip: true
       Ammo:
         Arrow: true
-      AmmoAmount: 20
+      AmmoAmount: 10
     Unit:
       Id: Severe_Rainstorm
       Range: 5
-      Interval: 300
+      Interval: 340
       Target: Enemy
       Flag:
         DualMode: true

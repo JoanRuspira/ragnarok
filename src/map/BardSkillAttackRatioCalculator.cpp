@@ -47,19 +47,19 @@ int BardSkillAttackRatioCalculator::calculate_severe_rainstorm_atk_ratio(int ski
 	int ratio = 0;
 	switch (skill_lv) {
 		case 1:
-			ratio = 130;
+			ratio = -80;
 			break;
 		case 2:
-			ratio = 200;
+			ratio = -60;
 			break;
 		case 3:
-			ratio = 280;
+			ratio = -40;
 			break;
 		case 4:
-			ratio = 400;
+			ratio = -20;
 			break;
 		case 5:
-			ratio = 500;
+			ratio = 0;
 			break;
 		}
 	return ratio;
