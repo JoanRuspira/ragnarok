@@ -2869,6 +2869,8 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case BA_MUSICALSTRIKE:
 		case WM_GREAT_ECHO:
 		case CG_ARROWVULCAN:
+		case WM_SEVERE_RAINSTORM:
+		case WM_SEVERE_RAINSTORM_MELEE:
 			skillratio += BardSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
 		case MER_CRASH:
@@ -3357,13 +3359,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			skillratio += -100 + 40 * skill_lv;
 			if (sd && sd->status.weapon == W_KNUCKLE)
 				skillratio += skillratio * 25 / 100;
-			RE_LVL_DMOD(100);
-			break;
-		case WM_SEVERE_RAINSTORM_MELEE:
-			//ATK [{(Caster DEX + AGI) x (Skill Level / 5)} x Caster Base Level / 100] %
-			skillratio = (status_get_dex(src) + status_get_agi(src)) * skill_lv / 5;
-			if (wd->miscflag&4) // Whip/Instrument equipped
-				skillratio += 100; // !TODO: What's the weapon bonus?
 			RE_LVL_DMOD(100);
 			break;
 		case GN_CART_TORNADO: { // ATK [( Skill Level x 100 ) + ( Cart Weight / ( 150 - Caster Base STR ))] + ( Cart Remodeling Skill Level x 50 )] %

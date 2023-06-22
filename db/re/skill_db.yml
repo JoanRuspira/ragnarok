@@ -10503,8 +10503,8 @@ Body:
     CastCancel: true
     CastTime: 2500
     Cooldown: 7000
-    AfterCastActDelay: 3000
-    AfterCastWalkDelay: 3000
+    AfterCastActDelay: 2500
+    AfterCastWalkDelay: 2500
     CastDelayFlags:
       IgnoreStatus: true
     Requires:

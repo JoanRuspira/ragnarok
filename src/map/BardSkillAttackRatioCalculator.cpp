@@ -35,6 +35,7 @@ int BardSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
     		clif_specialeffect(target, 904, AREA);
 			return calculate_arrow_vulcan_atk_ratio(skill_lv, target);
 		case WM_SEVERE_RAINSTORM:
+		case WM_SEVERE_RAINSTORM_MELEE:
 			return calculate_severe_rainstorm_atk_ratio(skill_lv);
 		default:
 			return 0;
