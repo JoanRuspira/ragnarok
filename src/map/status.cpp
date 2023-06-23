@@ -544,7 +544,7 @@ void initChangeTables(void)
 #endif
 	set_sc( BD_ROKISWEIL		, SC_ROKISWEIL	, EFST_ROKISWEIL	, SCB_NONE );
 	set_sc( BD_INTOABYSS		, SC_INTOABYSS	, EFST_INTOABYSS	, SCB_NONE );
-	set_sc( BD_SIEGFRIED		, SC_SIEGFRIED		, EFST_SIEGFRIED	, SCB_ALL );
+	set_sc( BD_SIEGFRIED		, SC_SIEGFRIED		, EFST_SIEGFRIED	, SCB_NONE );
 	add_sc( BA_FROSTJOKER		, SC_FREEZE		);
 	set_sc( BA_WHISTLE		, SC_WHISTLE		, EFST_WHISTLE		, SCB_FLEE|SCB_FLEE2 );
 	set_sc( BA_ASSASSINCROSS	, SC_ASSNCROS		, EFST_ASSASSINCROSS		, SCB_AGI|SCB_LUK|SCB_ASPD|SCB_CRI );
@@ -4563,20 +4563,6 @@ int status_calc_pc_sub(struct map_session_data* sd, enum e_status_calc_opt opt)
 		if(sc->data[SC_CONCENTRATE]) { // Update the card-bonus data
 			sc->data[SC_CONCENTRATE]->val3 = sd->indexed_bonus.param_bonus[1]; // Agi
 			sc->data[SC_CONCENTRATE]->val4 = sd->indexed_bonus.param_bonus[4]; // Dex
-		}
-		if(sc->data[SC_SIEGFRIED]) {
-			i = sc->data[SC_SIEGFRIED]->val2;
-			sd->indexed_bonus.subele[ELE_WATER] += i;
-			sd->indexed_bonus.subele[ELE_EARTH] += i;
-			sd->indexed_bonus.subele[ELE_FIRE] += i;
-			sd->indexed_bonus.subele[ELE_WIND] += i;
-#ifndef RENEWAL
-			sd->indexed_bonus.subele[ELE_POISON] += i;
-			sd->indexed_bonus.subele[ELE_HOLY] += i;
-			sd->indexed_bonus.subele[ELE_DARK] += i;
-			sd->indexed_bonus.subele[ELE_GHOST] += i;
-			sd->indexed_bonus.subele[ELE_UNDEAD] += i;
-#endif
 		}
 #ifdef RENEWAL
 		if (sc->data[SC_BASILICA]) {
@@ -8806,13 +8792,6 @@ t_tick status_get_sc_def(struct block_list *src, struct block_list *bl, enum sc_
 	if (sc) {
 		if (sc->data[SC_SCRESIST])
 			sc_def += sc->data[SC_SCRESIST]->val1*100; // Status resist
-#ifdef RENEWAL
-		else if (sc->data[SC_SIEGFRIED] && (type == SC_BLIND || type == SC_STONE || type == SC_FREEZE || type == SC_STUN || type == SC_CURSE || type == SC_SLEEP || type == SC_SILENCE))
-			sc_def += sc->data[SC_SIEGFRIED]->val3 * 100; // Status resistance.
-#else
-		else if (sc->data[SC_SIEGFRIED])
-			sc_def += sc->data[SC_SIEGFRIED]->val3*100; // Status resistance.
-#endif
 		else if (sc->data[SC_SHIELDSPELL_REF] && sc->data[SC_SHIELDSPELL_REF]->val1 == 2)
 			sc_def += sc->data[SC_SHIELDSPELL_REF]->val3*100;
 		else if (sc->data[SC_LEECHESEND] && sc->data[SC_LEECHESEND]->val3 == 0) {
@@ -9639,13 +9618,11 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 	case SC_DRUMBATTLE:
 	case SC_NIBELUNGEN:
 	case SC_ROKISWEIL:
-	case SC_INTOABYSS:
 	case SC_SIEGFRIED:
 		status_change_end(bl, SC_ETERNALCHAOS, INVALID_TIMER);
 		status_change_end(bl, SC_DRUMBATTLE, INVALID_TIMER);
 		status_change_end(bl, SC_NIBELUNGEN, INVALID_TIMER);
 		status_change_end(bl, SC_ROKISWEIL, INVALID_TIMER);
-		status_change_end(bl, SC_INTOABYSS, INVALID_TIMER);
 		status_change_end(bl, SC_SIEGFRIED, INVALID_TIMER);
 		break;
 	case SC_WHISTLE:
@@ -10388,10 +10365,6 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 		case SC_NIBELUNGEN:
 			val2 = rnd() % RINGNBL_MAX; // See e_nibelungen_status
 			break;
-		case SC_SIEGFRIED:
-			val2 = val1 * 3; // Elemental Resistance
-			val3 = val1 * 5; // Status ailment resistance
-			break;
 		case SC_WHISTLE:
 			val2 = 18 + 2 * val1; // Flee increase
 			val3 = (val1 + 1) / 2; // Perfect dodge increase
@@ -11105,6 +11078,12 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			break;
 
 		/* Arch Bishop */
+		case SC_SIEGFRIED:
+			val2 = status_get_lv(src);
+			val3 = status_get_int(src);
+			val4 = tick / 8000;
+			tick_time = 8000;
+			break;
 		case SC_INTOABYSS:
 			val4 = tick / 15000;
 			tick_time = 15000;
@@ -14060,13 +14039,26 @@ TIMER_FUNC(status_change_timer){
 			break;
 		sc_timer_next(1000 + tick);
 		return 0;
-
+	case SC_SIEGFRIED:
+		if( --(sce->val4) >= 0 ) {
+			int healing, matk = 0;
+			struct status_data *status;
+			struct block_list *src = map_id2bl(sce->val1);
+			status = status_get_status_data(&sd->bl);
+			matk = rand()%(status->matk_max-status->matk_min + 1) + status->matk_min;
+			healing = (200 * sce->val1) + (sce->val2 * 3) + (sce->val3 * 3) + (matk * 3);
+			clif_specialeffect(bl, EF_FOOD04, AREA);
+			clif_specialeffect(bl, 139, AREA);
+			clif_skill_nodamage(NULL,bl,AL_HEAL,healing,1);
+			status_heal(bl,healing,0,0);
+			sc_timer_next(5000 + tick);
+			return 0;
+		}
+		break;
 	case SC_INTOABYSS:
 		if( --(sce->val4) >= 0 ) {
 			int heal = status->max_hp * (sce->val1) / 100;
 			int heal_sp = status->max_sp * (sce->val1) / 100;
-			if( sc && sc->data[SC_AKAITSUKI] && heal )
-				heal = ~heal + 1;
 			status_heal(bl, heal, heal_sp, 3);
 			sc_timer_next(5000 + tick);
 			return 0;

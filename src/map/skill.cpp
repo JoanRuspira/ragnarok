@@ -3713,6 +3713,23 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 		break;
 
 	case SN_SHARPSHOOTING:
+		clif_specialeffect(bl, 816, AREA);
+		skill_area_temp[1] = bl->id;
+		if (battle_config.skill_eightpath_algorithm) {
+			//Use official AoE algorithm
+			if (!(map_foreachindir(skill_attack_area, src->m, src->x, src->y, bl->x, bl->y,
+			   skill_get_splash(skill_id, skill_lv), skill_get_maxcount(skill_id, skill_lv), 0, splash_target(src),
+			   skill_get_type(skill_id), src, src, skill_id, skill_lv, tick, flag, BCT_ENEMY))) {
+				//These skills hit at least the target if the AoE doesn't hit
+				skill_attack(skill_get_type(skill_id), src, src, bl, skill_id, skill_lv, tick, flag);
+			}
+		} else {
+			map_foreachinpath(skill_attack_area, src->m, src->x, src->y, bl->x, bl->y,
+				skill_get_splash(skill_id, skill_lv), skill_get_maxcount(skill_id, skill_lv), splash_target(src),
+				skill_get_type(skill_id), src, src, skill_id, skill_lv, tick, flag, BCT_ENEMY);
+		}
+		status_change_end(src, SC_CAMOUFLAGE, INVALID_TIMER);
+		break;
 	case MA_SHARPSHOOTING:
 	case NJ_KAMAITACHI:
 	case NPC_DARKPIERCING:
@@ -3735,8 +3752,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 				skill_get_splash(skill_id, skill_lv), skill_get_maxcount(skill_id, skill_lv), splash_target(src),
 				skill_get_type(skill_id), src, src, skill_id, skill_lv, tick, flag, BCT_ENEMY);
 		}
-		if (skill_id == SN_SHARPSHOOTING)
-			status_change_end(src, SC_CAMOUFLAGE, INVALID_TIMER);
 		break;
 
 	case MO_INVESTIGATE:
@@ -6844,18 +6859,21 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case BD_DRUMBATTLEFIELD:
 	case BD_RICHMANKIM:
 	case BA_ASSASSINCROSS:
-		clif_specialeffect(bl, 816, AREA);
+		clif_specialeffect(bl, 139, AREA);
 		skill_castend_song(src, skill_id, skill_lv, tick);
 		break;
 	case BD_INTOABYSS:
 		clif_specialeffect(src, 1229, AREA);
 		skill_castend_song(src, skill_id, skill_lv, tick);
 		break;
+	case BD_SIEGFRIED:
+		clif_specialeffect(src, 139, AREA);
+		skill_castend_song(src, skill_id, skill_lv, tick);
+		break;
 	case BD_LULLABY:
 	case BD_ETERNALCHAOS:
 	case BD_RINGNIBELUNGEN:
 	case BD_ROKISWEIL:
-	case BD_SIEGFRIED:
 	case BA_DISSONANCE:
 	case BA_WHISTLE:
 	case DC_UGLYDANCE:
@@ -7310,7 +7328,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			status = status_get_status_data(&sd->bl);
 			matk = rand()%(status->matk_max-status->matk_min + 1) + status->matk_min;
 			healing = (200 * skill_lv) + (status_get_lv(src) * 3) + (status_get_int(src) * 3) + (matk * 3);
-			clif_specialeffect(bl, EF_FOOD03, AREA);
+			clif_specialeffect(bl, EF_FOOD04, AREA);
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 			clif_skill_nodamage(NULL,bl,AL_HEAL,healing,1);
 			status_heal(bl,healing,0,0);
@@ -7324,7 +7342,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			status = status_get_status_data(&sd->bl);
 			matk = rand()%(status->matk_max-status->matk_min + 1) + status->matk_min;
 			healing = (400 * skill_lv) + (status_get_lv(src) * 3) + (status_get_int(src) * 3) + (matk * 3);
-			clif_specialeffect(bl, EF_FOOD03, AREA);
+			clif_specialeffect(bl, EF_FOOD04, AREA);
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 			clif_skill_nodamage(NULL,bl,AL_HEAL,healing,1);
 			status_heal(bl,healing,0,0);
