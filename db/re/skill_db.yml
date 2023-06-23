@@ -2669,21 +2669,33 @@ Body:
     MaxLevel: 5
     Type: Magic
     TargetType: Support
+    Range: 9
     DamageFlags:
       NoDamage: true
-    Range: 9
+      Splash: true
     Hit: Single
     HitCount: 1
     Element: Holy
-    CopyFlags:
-      Skill:
-        Reproduce: true
+    SplashArea:
+      - Level: 1
+        Area: 5
+      - Level: 2
+        Area: 5
+      - Level: 3
+        Area: 5
+      - Level: 4
+        Area: 5
+      - Level: 5
+        Area: 5
     CastCancel: true
-    CastTime: 6000
-    AfterCastActDelay: 1000
-    Cooldown: 10000
+    CastTime: 8000
+    Cooldown: 15000
+    AfterCastActDelay: 2000
     Requires:
-      SpCost: 100
+      SpCost: 150
+      ItemCost:
+        - Item: Heartbroken_Tears
+          Amount: 1
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death

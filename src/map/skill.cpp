@@ -7321,6 +7321,25 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			status_heal(bl,healing,0,0);
 		}
 		break;
+	case CG_ALL_STAR:
+		if( !sd || sd->status.party_id == 0 || flag&1 ) {
+			if( sd && tstatus ) {
+				int healing, matk = 0;
+				struct status_data *status;
+				status = status_get_status_data(&sd->bl);
+				matk = rand()%(status->matk_max-status->matk_min + 1) + status->matk_min;
+				healing = (400 * skill_lv) + (status_get_lv(src) * 3) + (status_get_int(src) * 3) + (matk * 3);
+				clif_specialeffect(bl, EF_FOOD04, AREA);
+				clif_specialeffect(bl, 699, AREA);
+				clif_soundeffectall(&sd->bl, "all_star.wav", 0, AREA);
+				clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
+				clif_skill_nodamage(NULL,bl,AL_HEAL,healing,1);
+				status_heal(bl,healing,0,0);
+			}
+		} else if( sd ){
+			party_foreachsamemap(skill_area_sub, sd, skill_get_splash(skill_id, skill_lv), src, skill_id, skill_lv, tick, flag|BCT_PARTY|1, skill_castend_nodamage_id);
+		}
+		break;
 	case WM_SIRCLEOFNATURE:
 		{
 			int healing, matk = 0;
