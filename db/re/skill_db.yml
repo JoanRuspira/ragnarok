@@ -8465,7 +8465,7 @@ Body:
     Duration1: 180000
     Duration2: 60000
     Cooldown: 30000
-    AfterCastActDelay: 15000
+    AfterCastActDelay: 10000
     Requires:
       SpCost: 100
       Weapon:
