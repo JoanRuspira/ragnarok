@@ -2806,7 +2806,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case HT_PHANTASMIC:
 		case AC_DOUBLE:
 		case HT_POWER:
-		case AC_CHARGEARROW:
+		case RK_STORMBLAST:
 		case AC_TRANQUILIZING:
 		case AC_PARALIZING:
 			skillratio += ArcherSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv);
@@ -3142,10 +3142,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 				skillratio += -100 + 250 + 500 * skill_lv;
 			else
 				skillratio += -100 + 500 * skill_lv;
-			break;
-		case RK_STORMBLAST:
-			skillratio += -100 + (((sd) ? pc_checkskill(sd,RK_RUNEMASTERY) : 0) + status_get_str(src) / 8) * 100; // ATK = [{Rune Mastery Skill Level + (Caster's STR / 8)} x 100] %
-			RE_LVL_DMOD(100);
 			break;
 		// case NPC_PHANTOMTHRUST:	// ATK = 100% for all level
 		case GC_CROSSIMPACT:

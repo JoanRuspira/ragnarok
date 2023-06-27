@@ -29,7 +29,7 @@ int ArcherSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* 
 			add_tranquilizer_shot_special_effects(target);
 			return -99;
 			break;
-		case AC_CHARGEARROW:
+		case RK_STORMBLAST:
 			add_charge_arrow_special_effects(target);
 			return calculate_charge_arrow_atk_ratio(base_lv, skill_lv);
 			break;
@@ -200,11 +200,13 @@ void ArcherSkillAtkRatioCalculator::add_arrow_rain_special_effects(struct block_
 
 void ArcherSkillAtkRatioCalculator::add_charge_arrow_special_effects(struct block_list *target)
 {
+	clif_specialeffect(target, EF_ARROWSTORM_STR, AREA);
 	clif_specialeffect(target, EF_KASUMIKIRI, AREA);
 }
 
 
 void ArcherSkillAtkRatioCalculator::add_spiritual_strafe_special_effects(struct block_list *target)
 {
-	clif_specialeffect(target, EF_DELUGE, AREA);
+	clif_specialeffect(target, 1356, AREA);
 }
+	

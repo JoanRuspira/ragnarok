@@ -5401,7 +5401,7 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Weapon
-    Knockback: 8
+    Knockback: 4
     Cooldown: 5000
     AfterCastActDelay: 400
     CopyFlags:
@@ -17079,23 +17079,33 @@ Body:
       SpCost: 40
   - Id: 2017
     Name: RK_STORMBLAST
-    Description: Storm Blast
-    MaxLevel: 1
+    Description: Arrow Repel
+    MaxLevel: 5
     Type: Weapon
-    TargetType: Self
+    TargetType: Attack
     DamageFlags:
       Splash: true
     Flags:
-      TargetTrap: true
+      AlterRangeVulture: true
+    Range: -9
     Hit: Single
     HitCount: 1
     Element: Weapon
-    SplashArea: 3
-    Knockback: 7
-    CastTime: 2000
-    AfterCastActDelay: 1000
+    Knockback: 4
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CastTime: 0
     Requires:
-      SpCost: 1
+      SpCost: 14
+      Weapon:
+        Bow: true
+      Ammo:
+        Arrow: true
+      AmmoAmount: 1
   - Id: 2018
     Name: RK_FIGHTINGSPIRIT
     Description: Fighting Spirit

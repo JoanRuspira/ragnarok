@@ -3533,7 +3533,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case TF_DOUBLE:
 	case AC_DOUBLE:
 	case HT_POWER:
-	case AC_CHARGEARROW:
+	case RK_STORMBLAST:
 	case AC_TRANQUILIZING:
 	case AC_PARALIZING:
 	case MA_DOUBLE:
@@ -4407,14 +4407,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 		skill_blown(src,bl,distance_bl(src,bl)-1,unit_getdir(src),BLOWN_NONE);
 		if( battle_check_target(src,bl,BCT_ENEMY) > 0 )
 			skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag);
-		break;
-	case RK_STORMBLAST:
-		if( flag&1 )
-			skill_attack(skill_get_type(skill_id),src,src,bl,skill_id,skill_lv,tick,flag);
-		else {
-			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
-			map_foreachinallrange(skill_area_sub, bl,skill_get_splash(skill_id, skill_lv),BL_CHAR,src,skill_id,skill_lv,tick, flag|BCT_ENEMY|1,skill_castend_nodamage_id);
-		}
 		break;
 	case GC_DARKILLUSION:
 		{
@@ -6426,7 +6418,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	//List of self skills that give damage around caster
 	case ASC_METEORASSAULT:
 	case GS_SPREADATTACK:
-	case RK_STORMBLAST:
 	case NC_AXETORNADO:
 	case GC_COUNTERSLASH:
 	case SR_SKYNETBLOW:
