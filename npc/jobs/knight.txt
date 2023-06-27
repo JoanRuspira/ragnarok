@@ -3,7 +3,7 @@
 //====================================================
 
 -	script	Knight Guildmaster#kntgld::KntGld	-1,{
-	if (BaseClass == EAJ_NOVICE) {
+	if (Class == Job_Swordman) {
 		mes "[Knight Guildmaster]";
 		mes "Good day! I am the Knight Guildmaster.";
 		mes "I train Swordsmen that meet the requirements and allow them to become Knights.";

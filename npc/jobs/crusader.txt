@@ -3,7 +3,7 @@
 //====================================================
 
 -	script	Crusader Guildmaster#csdgld::CsdGld	-1,{
-	if (BaseClass == EAJ_NOVICE) {
+	if (Class == Job_Swordman) {
 		mes "[Crusader Guildmaster]";
 		mes "Good day! I am the Crusader Guildmaster.";
 		mes "I train Swordsmen that meet the requirements and allow them to become Crusaders.";

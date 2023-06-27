@@ -23623,7 +23623,7 @@ Body:
     AfterCastActDelay: 1000
     Cooldown: 5000
     Requires:
-      SpCost: 100
+      SpCost: 40
       Weapon:
         Musical: true
   - Id: 2424

@@ -1,0 +1,99 @@
+//===== Script =======================================
+// Performer Job Change
+//====================================================
+
+-	script	Performer Guildmaster#prfgld::PrfGld	-1,{
+	if (Class == Job_Archer) {
+		mes "[Performer Guildmaster]";
+		mes "Good day! I am the Performer Guildmaster.";
+		mes "I train Archers that meet the requirements and allow them to become Performers.";
+		next;
+		mes "[Performer Guildmaster]";
+		mes "As a Performer you will gain new skills.";
+		mes "The requirements are:";
+		mes "- Being a first class job.";
+		mes "- Being Job level 50.";
+		mes "- Having used all your skill points.";
+		next;
+		mes "[Performer Guildmaster]";
+		mes "Do you want to become a Performer?";
+		next;
+		switch(select("Yes:No")) {
+			case 1:
+				mes "[Performer Guildmaster]";
+				mes "Good! Let me see if you pass our requirements...";
+				next;
+				if (JobLevel < 50) {
+					mes "[Performer Guildmaster]";
+					mes "Hmm... Your job level does not meet our requirements.";
+					mes "You need to be more experienced before being a Performer.";
+					close;
+				}
+				if (SkillPoint) {
+					mes "[Performer Guildmaster]";
+					mes "Looks like you have not used all your skill points.";
+					mes "Use them and I'll be able to make you a Performer.";
+					close;
+				}
+				mes "[Performer Guildmaster]";
+				mes "Okay! Looks like you pass all of them!";
+				mes "You are allowed to join the Performer guild.";
+				mes "Congratulations!";
+				if(sex) {
+					jobchange Job_Bard;
+				} else {
+					jobchange Job_Dancer;
+				}
+				specialeffect2 EF_JOBLVUP50;
+				close;
+			case 2:
+				mes "[Performer Guildmaster]";
+				mes "Ah! Let me know if you change your mind.";
+				mes "We are always looking for new adventurers";
+				mes "to join the guild.";
+				close;
+		}
+		
+	}
+
+	if (Class == Job_Bard) {
+		mes "[Performer Guildmaster]";
+		mes "Hi fellow Performer!";
+		mes "Are you thinking about your next job?";
+		next;
+		mes "[Performer Guildmaster]";
+		mes "You can become a Clown if you reach job level 50.";
+		next;
+		mes "[Performer Guildmaster]";
+		mes "Go find the legendary Clown in Ayothaya.";
+		mes "I'm sure he will be able to train you.";
+		close;
+	}
+
+	if (Class == Job_Dancer) {
+		mes "[Performer Guildmaster]";
+		mes "Hi fellow Performer!";
+		mes "Are you thinking about your next job?";
+		next;
+		mes "[Performer Guildmaster]";
+		mes "You can become a Gypsy if you reach job level 50.";
+		next;
+		mes "[Performer Guildmaster]";
+		mes "Go find the legendary Gypsy at the Ifir Camp near Geffen.";
+		mes "I'm sure she will be able to train you.";
+		close;
+	}
+
+	if (Class == Job_Clown || Class == Job_Gyspy) {
+		mes "[Performer Guildmaster]";
+		mes "Ah! An experienced member of the guild!";
+		mes "Are you here to help train the new members?";
+		close;
+	}
+
+	mes "[Performer Guildmaster]";
+	mes "Welcome to the Performer guild. We accept applications from Archers that meet our requirements.";
+	close;
+}
+
+comodo,184,172,5	duplicate(PrfGld)	Performer Guildmaster#prfgld	741

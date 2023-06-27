@@ -34,16 +34,6 @@ npctalk "npcdialog";
 	end;
 }
 
-comodo,193,172,3	script	Dancer Guildmaster#com::npcid	724,{
-npctalk "I will make you a dancer.";
-	end;
-}
-
-comodo,184,172,5	script	Bard Guildmaster#com::npcid	741,{
-npctalk "I will make you a bard.";
-	end;
-}
-
 comodo,188,154,0	script	Comodo Villager#com::npcid	spriteid,{
 npctalk "npcdialog";
 	end;

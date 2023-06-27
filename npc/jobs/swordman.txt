@@ -39,7 +39,7 @@
 				mes "Okay! Looks like you pass all of them!";
 				mes "You are allowed to join the Swordsman guild.";
 				mes "Congratulations!";
-				jobchange Job_Swordsman;
+				jobchange Job_Swordman;
 				specialeffect2 EF_JOBLVUP50;
 				close;
 			case 2:
@@ -52,7 +52,7 @@
 		
 	}
 
-	if (Class == Job_Swordsman) {
+	if (Class == Job_Swordman) {
 		mes "[Swordsman Guildmaster]";
 		mes "Hi fellow Swordsman!";
 		mes "Are you thinking about your next job?";
