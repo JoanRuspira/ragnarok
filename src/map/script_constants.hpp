@@ -2594,6 +2594,7 @@
 	export_constant(EFST_PARRYING);
 	export_constant(EFST_LKCONCENTRATION);
 	export_constant(EFST_FORTIFY);
+	export_constant(EFST_CONFUSION);
 	export_constant(EFST_TENSIONRELAX);
 	export_constant(EFST_BERSERK);
 	export_constant(EFST_SACRIFICE);
@@ -2924,6 +2925,7 @@
 	export_constant(EFST_NETHERWORLD);
 	export_constant(EFST_SIREN);
 	export_constant(EFST_HANDICAPSTATE_DEEP_SLEEP);
+	export_constant(EFST_SLEEP);
 	export_constant(EFST_SIRCLEOFNATURE);
 	export_constant(EFST_COLD);
 	export_constant(EFST_GLOOMYDAY);
