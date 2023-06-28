@@ -5698,6 +5698,9 @@ int clif_skill_damage(struct block_list *src,struct block_list *dst,t_tick tick,
 			damage = clif_hallucination_damage();
 	}
 
+	if (skill_id == CG_ARROWVULCAN || skill_id == AS_SONICBLOW || skill_id == RK_HUNDREDSPEAR){
+		skill_id = GC_CROSSIMPACT;
+	}
 
 	WBUFW(buf,0)=0x1de;
 	WBUFW(buf,2)=skill_id;

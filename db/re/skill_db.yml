@@ -2663,6 +2663,8 @@ Body:
     Cooldown: 5000
     Requires:
       SpCost: 75
+      Weapon:
+        Musical: true
   - Id: 865
     Name: CG_ALL_STAR
     Description: All Star
@@ -2693,6 +2695,8 @@ Body:
     AfterCastActDelay: 2000
     Requires:
       SpCost: 150
+      Weapon:
+        Musical: true
       ItemCost:
         - Item: Heartbroken_Tears
           Amount: 1
@@ -5129,9 +5133,8 @@ Body:
     Hit: Multi_Hit
     HitCount: -8
     Element: Weapon
-    Cooldown: 7000
+    Cooldown: 5000
     AfterCastActDelay: 2000
-    AfterCastWalkDelay: 2000
     Duration2: 5000
     CastDelayFlags:
       IgnoreStatus: true
@@ -23325,6 +23328,8 @@ Body:
     Cooldown: 5000
     Requires:
       SpCost: 40
+      Weapon:
+        Musical: true
   - Id: 2414
     Name: WM_REVERBERATION
     Description: Reverberation
@@ -23345,6 +23350,8 @@ Body:
     Cooldown: 7000
     Requires:
       SpCost: 50
+      Weapon:
+        Musical: true
   - Id: 2415
     Name: WM_REVERBERATION_MELEE
     Description: Reverberation Melee
@@ -28088,17 +28095,7 @@ Body:
     Duration1: 5000
     Cooldown: 60000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 22
-        - Level: 2
-          Amount: 34
-        - Level: 3
-          Amount: 46
-        - Level: 4
-          Amount: 58
-        - Level: 5
-          Amount: 70
+      SpCost: 70
   - Id: 5002
     Name: RA_UNLIMIT
     Description: Unlimited
