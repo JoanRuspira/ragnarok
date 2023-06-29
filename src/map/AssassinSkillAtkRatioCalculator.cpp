@@ -51,6 +51,8 @@ void AssassinSkillAtkRatioCalculator::add_throw_kunai_especial_effects(struct bl
 void AssassinSkillAtkRatioCalculator::add_sonic_blow_especial_effects(struct block_list *target)
 {
 	clif_specialeffect(target, EF_SONICBLOW, AREA);
+	clif_specialeffect(target, 1354, AREA);
+
 	// clif_specialeffect(target, EF_CHEMICAL3S, AREA);
 }
 

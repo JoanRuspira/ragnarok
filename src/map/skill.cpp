@@ -3586,6 +3586,10 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case LK_SPIRALPIERCE:
 	case ML_SPIRALPIERCE:
 	case CG_ARROWVULCAN:
+	case DUMMY_ARROWVULCAN:
+	case DUMMY_HUNDREDSPEAR:
+	case DUMMY_SONICBLOW:
+	case DUMMY_CROSSIMPACT:
 	case ITM_TOMAHAWK:
 	case CH_CHAINCRUSH:
 	case CH_TIGERFIST:

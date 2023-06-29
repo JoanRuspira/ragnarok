@@ -2678,17 +2678,7 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Holy
-    SplashArea:
-      - Level: 1
-        Area: 5
-      - Level: 2
-        Area: 5
-      - Level: 3
-        Area: 5
-      - Level: 4
-        Area: 5
-      - Level: 5
-        Area: 5
+    SplashArea: 5
     CastCancel: true
     CastTime: 8000
     Cooldown: 15000
@@ -2700,6 +2690,74 @@ Body:
       ItemCost:
         - Item: Heartbroken_Tears
           Amount: 1
+  - Id: 866
+    Name: DUMMY_ARROWVULCAN
+    Description: Vulcan Arrow
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: 9
+    Hit: Multi_Hit
+    HitCount: -9
+    Element: Weapon
+    CastCancel: true
+    CastTime: 0
+    Cooldown: 0
+    AfterCastActDelay: 0
+    AfterCastWalkDelay: 0
+    Requires:
+      SpCost: 0
+  - Id: 867
+    Name: DUMMY_HUNDREDSPEAR
+    Description: Vulcan Arrow
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: 9
+    Hit: Multi_Hit
+    HitCount: -9
+    Element: Weapon
+    CastCancel: true
+    CastTime: 0
+    Cooldown: 0
+    AfterCastActDelay: 0
+    AfterCastWalkDelay: 0
+    Requires:
+      SpCost: 0
+  - Id: 868
+    Name: DUMMY_SONICBLOW
+    Description: Vulcan Arrow
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: 9
+    Hit: Multi_Hit
+    HitCount: -9
+    Element: Weapon
+    CastCancel: true
+    CastTime: 0
+    Cooldown: 0
+    AfterCastActDelay: 0
+    AfterCastWalkDelay: 0
+    Requires:
+      SpCost: 0
+  - Id: 867
+    Name: DUMMY_CROSSIMPACT
+    Description: Vulcan Arrow
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: 9
+    Hit: Multi_Hit
+    HitCount: -9
+    Element: Weapon
+    CastCancel: true
+    CastTime: 0
+    Cooldown: 0
+    AfterCastActDelay: 0
+    AfterCastWalkDelay: 0
+    Requires:
+      SpCost: 0
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -10511,8 +10569,7 @@ Body:
     CastTime: 2000
     Cooldown: 7000
     AfterCastActDelay: 2000
-    CastDelayFlags:
-      IgnoreStatus: true
+    AfterCastWalkDelay: 2000
     Requires:
       SpCost: 30
       Weapon:

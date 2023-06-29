@@ -19,5 +19,8 @@ void KnightAdditionalEffectsCalculator::apply_a_hundred_spears_additional_effect
 
 	if(spear_boomerang_chance <= skill_lv*8){
 		clif_skill_damage(src,bl,tick, status_get_amotion(src), 0, -30000, 1, KN_SPEARBOOMERANG, skill_lv, DMG_SINGLE);
-	}
+	} 
+	// else {
+	// 	clif_skill_damage(src,bl,tick, status_get_amotion(src), 0, -30000, 1, DUMMY_HUNDREDSPEAR, skill_lv, DMG_SINGLE);
+	// }
 }
