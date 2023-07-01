@@ -366,15 +366,15 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 		case RK_HUNDREDSPEAR:
 			KnightAdditionalEffectsCalculator::apply_a_hundred_spears_additional_effect(src, bl, skill_lv, tick);
 			break;
-		// case CG_ARROWVULCAN:
-		// 	clif_skill_damage(src,bl,tick, status_get_amotion(src), 0, -30000, 1, DUMMY_ARROWVULCAN, skill_lv, DMG_SINGLE);
-		// 	break;
-		// case AS_SONICBLOW:
-		// 	clif_skill_damage(src,bl,tick, status_get_amotion(src), 0, -30000, 1, DUMMY_SONICBLOW, skill_lv, DMG_SINGLE);
-		// 	break;
-		// case GC_CROSSIMPACT:
-		// 	clif_skill_damage(src,bl,tick, status_get_amotion(src), 0, -30000, 1, DUMMY_CROSSIMPACT, skill_lv, DMG_SINGLE);
-		// 	break;
+		case CG_ARROWVULCAN:
+			clif_skill_damage(src,bl,tick, status_get_amotion(src), 0, -30000, 1, DUMMY_ARROWVULCAN, skill_lv, DMG_SINGLE);
+			break;
+		case AS_SONICBLOW:
+			clif_skill_damage(src,bl,tick, status_get_amotion(src), 0, -30000, 1, DUMMY_SONICBLOW, skill_lv, DMG_SINGLE);
+			break;
+		case GC_CROSSIMPACT:
+			clif_skill_damage(src,bl,tick, status_get_amotion(src), 0, -30000, 1, DUMMY_CROSSIMPACT, skill_lv, DMG_SINGLE);
+			break;
 	}
 }
 

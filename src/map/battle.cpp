@@ -2849,6 +2849,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case AS_SPLASHER:
 		case ASC_METEORASSAULT:
 		case NJ_KUNAI:
+		case GC_DARKCROW:
 			if (sc && sc->data[SC_ROLLINGCUTTER])
 				skillratio += AssassinSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, sc->data[SC_ROLLINGCUTTER]->val1);
 			skillratio += AssassinSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, 0);
@@ -3153,9 +3154,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			break;
 		case GC_PHANTOMMENACE:
 			skillratio += 200;
-			break;
-		case GC_DARKCROW:
-			skillratio += 100 * (skill_lv - 1);
 			break;
 		case NPC_ARROWSTORM:
 			skillratio += 900 + 80 * skill_lv;

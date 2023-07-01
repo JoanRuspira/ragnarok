@@ -32,6 +32,14 @@ int AssassinSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list
 			add_meteor_assault_special_effects(src);
 			return calculate_meteor_assault_atk_ratio(skill_lv, sstatus->dex);
 			break;
+		case GC_DARKCROW:
+			add_dark_claw_special_effects(target);
+			return calculate_dark_claw_atk_ratio(skill_lv);
+			break;
+		case GC_CROSSIMPACT:
+			add_cross_impact_special_effects(target);
+			return calculate_cross_impact_atk_ratio(skill_lv, sstatus->luk);
+			break;
 		default:
 			return 0;
 			break;
@@ -51,9 +59,7 @@ void AssassinSkillAtkRatioCalculator::add_throw_kunai_especial_effects(struct bl
 void AssassinSkillAtkRatioCalculator::add_sonic_blow_especial_effects(struct block_list *target)
 {
 	clif_specialeffect(target, EF_SONICBLOW, AREA);
-	clif_specialeffect(target, 1354, AREA);
-
-	// clif_specialeffect(target, EF_CHEMICAL3S, AREA);
+	clif_specialeffect(target, 1354, AREA); //new_armscannon_11_clock_down
 }
 
 void AssassinSkillAtkRatioCalculator::add_venom_splasher_especial_effects(struct block_list *target)
@@ -61,6 +67,62 @@ void AssassinSkillAtkRatioCalculator::add_venom_splasher_especial_effects(struct
 	clif_specialeffect(target, EF_INVENOM, AREA);
 	clif_specialeffect(target, EF_VENOMDUST, AREA);
 }
+
+
+void AssassinSkillAtkRatioCalculator::add_dark_claw_special_effects(struct block_list *target)
+{
+}
+
+void AssassinSkillAtkRatioCalculator::add_cross_impact_special_effects(struct block_list *target)
+{
+}
+
+int AssassinSkillAtkRatioCalculator::calculate_cross_impact_atk_ratio(int skill_lv, int luck)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = -80;
+			break;
+		case 2:
+			ratio = -60;
+			break;
+		case 3:
+			ratio = -40;
+			break;
+		case 4:
+			ratio = -20;
+			break;
+		case 5:
+			ratio = 0;
+			break;
+	}
+	return ratio + (luck/3);
+}
+
+int AssassinSkillAtkRatioCalculator::calculate_dark_claw_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = -80;
+			break;
+		case 2:
+			ratio = -60;
+			break;
+		case 3:
+			ratio = -40;
+			break;
+		case 4:
+			ratio = -20;
+			break;
+		case 5:
+			ratio = 0;
+			break;
+	}
+	return ratio;
+}
+
 
 int AssassinSkillAtkRatioCalculator::calculate_cross_ripper_slasher_atk_ratio(int skill_lv, int rolling_cutter_counters)
 {

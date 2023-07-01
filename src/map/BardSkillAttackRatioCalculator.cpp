@@ -31,8 +31,8 @@ int BardSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 		case WM_REVERBERATION:
 			add_reverberation_special_effects(target);
 			return calculate_reverberation_atk_ratio(skill_lv, target);
-		case CG_ARROWVULCAN:
-    		clif_specialeffect(target, 1355, AREA);
+		case CG_ARROWVULCAN:	
+    		clif_specialeffect(target, 1355, AREA); //new_armscannon_explosion
 			return calculate_arrow_vulcan_atk_ratio(skill_lv, target);
 		case WM_SEVERE_RAINSTORM:
 		case WM_SEVERE_RAINSTORM_MELEE:

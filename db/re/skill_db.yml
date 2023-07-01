@@ -28150,7 +28150,7 @@ Body:
         Reproduce: true
     AfterCastActDelay: 1500
     Duration1: 5000
-    Cooldown: 60000
+    Cooldown: 5000
     Requires:
       SpCost: 70
   - Id: 5002
