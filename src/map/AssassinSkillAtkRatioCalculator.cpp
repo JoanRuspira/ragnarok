@@ -71,6 +71,8 @@ void AssassinSkillAtkRatioCalculator::add_venom_splasher_especial_effects(struct
 
 void AssassinSkillAtkRatioCalculator::add_dark_claw_special_effects(struct block_list *target)
 {
+	clif_specialeffect(target, 1349, AREA); //new_armscannon_01_up
+
 }
 
 void AssassinSkillAtkRatioCalculator::add_cross_impact_special_effects(struct block_list *target)
