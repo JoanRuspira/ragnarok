@@ -2169,6 +2169,7 @@ enum e_skill {
 	DUMMY_HUNDREDSPEAR = 867,
 	DUMMY_SONICBLOW = 868,
 	DUMMY_CROSSIMPACT = 869,
+	ASC_DANCINGBLADES = 870,
 };
 
 /// The client view ids for land skills.

@@ -9547,5 +9547,69 @@ Body:
     Weight: 30
     Flags:
       BuyingStore: true
-
+  - Id: 13250
+    AegisName: Shuriken
+    Name: Shuriken
+    Type: Ammo
+    SubType: Shuriken
+    Buy: 4
+    Weight: 5
+    Attack: 10
+    Jobs:
+      Assassin: true
+    Locations:
+      Ammo: true
+    EquipLevelMin: 1
+  - Id: 13251
+    AegisName: Nimbus_Shuriken
+    Name: Nimbus Shuriken
+    Type: Ammo
+    SubType: Shuriken
+    Buy: 10
+    Weight: 5
+    Attack: 30
+    Jobs:
+      Assassin: true
+    Locations:
+      Ammo: true
+    EquipLevelMin: 20
+  - Id: 13252
+    AegisName: Flash_Shuriken
+    Name: Flash Shuriken
+    Type: Ammo
+    SubType: Shuriken
+    Buy: 20
+    Weight: 5
+    Attack: 45
+    Jobs:
+      Assassin: true
+    Locations:
+      Ammo: true
+    EquipLevelMin: 40
+  - Id: 13253
+    AegisName: Sharp_Leaf_Shuriken
+    Name: Sharp Leaf Shuriken
+    Type: Ammo
+    SubType: Shuriken
+    Buy: 40
+    Weight: 5
+    Attack: 70
+    Jobs:
+      Assassin: true
+    Locations:
+      Ammo: true
+    EquipLevelMin: 60
+  - Id: 13254
+    AegisName: Thorn_Needle_Shuriken
+    Name: Thorn Needle Shuriken
+    Type: Ammo
+    SubType: Shuriken
+    Buy: 100
+    Weight: 5
+    Attack: 100
+    Jobs:
+      Assassin: true
+    Locations:
+      Ammo: true
+    EquipLevelMin: 80
        
