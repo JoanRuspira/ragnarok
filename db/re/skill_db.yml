@@ -1297,8 +1297,8 @@ Body:
       IgnoreLandProtector: true
       AlterRangeVulture: true
     Range: -9
-    Hit: Multi_Hit
-    HitCount: -3
+    Hit: Single
+    HitCount: -1
     Element: Weapon
     Cooldown: 10000
     AfterCastActDelay: 400
@@ -2653,7 +2653,7 @@ Body:
     Range: 9
     Hit: Multi_Hit
     Element: Neutral
-    HitCount: -2
+    HitCount: -4
     CopyFlags:
       Skill:
         Reproduce: true
@@ -16564,8 +16564,8 @@ Body:
       IgnoreLandProtector: true
       AlterRangeVulture: true
     Range: -9
-    Hit: Multi_Hit
-    HitCount: -3
+    Hit: Single
+    HitCount: -1
     Element: Weapon
     Cooldown: 10000
     AfterCastActDelay: 400

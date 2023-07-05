@@ -171,7 +171,7 @@ int BardSkillAttackRatioCalculator::calculate_metallic_sound_atk_ratio(int skill
 void BardSkillAttackRatioCalculator::add_metallic_fury_special_effects(struct block_list *target)
 {
 	clif_soundeffectall(target, "metalic.wav", 0, AREA);
-    clif_specialeffect(target, 25, AREA);
+    clif_specialeffect(target, 565, AREA); //moonlight_1
 }
 
 void BardSkillAttackRatioCalculator::add_reverberation_special_effects(struct block_list *target)
