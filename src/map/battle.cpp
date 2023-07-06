@@ -2008,7 +2008,7 @@ static int battle_range_type(struct block_list *src, struct block_list *target, 
 			// Renewal changes to ranged physical damage
 			return BF_LONG;
 #endif
-		case GC_CROSSIMPACT:
+		case DUMMY_CROSSIMPACT:
 			// Cast range is 7 cells and player jumps to target but skill is considered melee
 			return BF_SHORT;
 	}
@@ -2850,6 +2850,8 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case ASC_METEORASSAULT:
 		case NJ_KUNAI:
 		case GC_DARKCROW:
+		case DUMMY_CROSSIMPACT:
+		case GC_CROSSIMPACT:
 			if (sc && sc->data[SC_ROLLINGCUTTER])
 				skillratio += AssassinSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, sc->data[SC_ROLLINGCUTTER]->val1);
 			skillratio += AssassinSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, 0);
@@ -3145,10 +3147,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 				skillratio += -100 + 500 * skill_lv;
 			break;
 		// case NPC_PHANTOMTHRUST:	// ATK = 100% for all level
-		case GC_CROSSIMPACT:
-			skillratio += -100 + 1000 + 150 * skill_lv;
-			RE_LVL_DMOD(100);
-			break;
 		case GC_VENOMPRESSURE:
 			skillratio += 900;
 			break;

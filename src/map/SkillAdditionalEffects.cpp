@@ -264,7 +264,7 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 					//Mug
 					if (dstmd && sd->status.weapon != W_BOW && 
 						(skill = pc_checkskill(sd, RG_SNATCHER)) > 0 
-						&& rnd() % 100 <= skill * 7)
+						&& rnd() % 100 <= skill * 4)
 						skill_castend_damage_id(src, bl, TF_SNATCH, skill, tick, 0);
 					
 					if (sc && sc->data[SC_PYROCLASTIC] && ((rnd() % 100) <= sc->data[SC_PYROCLASTIC]->val3))
@@ -371,9 +371,6 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 			break;
 		case AS_SONICBLOW:
 			clif_skill_damage(src,bl,tick, status_get_amotion(src), 0, -30000, 1, DUMMY_SONICBLOW, skill_lv, DMG_SINGLE);
-			break;
-		case GC_CROSSIMPACT:
-			clif_skill_damage(src,bl,tick, status_get_amotion(src), 0, -30000, 1, DUMMY_CROSSIMPACT, skill_lv, DMG_SINGLE);
 			break;
 	}
 }

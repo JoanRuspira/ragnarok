@@ -3589,7 +3589,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case DUMMY_ARROWVULCAN:
 	case DUMMY_HUNDREDSPEAR:
 	case DUMMY_SONICBLOW:
-	case DUMMY_CROSSIMPACT:
 	case ITM_TOMAHAWK:
 	case CH_CHAINCRUSH:
 	case CH_TIGERFIST:
@@ -4442,13 +4441,13 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 		skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag);
 		// }
 		break;
-	case GC_CROSSIMPACT:
+	case DUMMY_CROSSIMPACT:
 		if (skill_check_unit_movepos(0, src, bl->x, bl->y, 1, 1)) {
 			skill_blown(src, src, 1, (map_calc_dir(bl, src->x, src->y) + 4) % 8, BLOWN_IGNORE_NO_KNOCKBACK); // Target position is actually one cell next to the target
-			skill_attack(BF_WEAPON, src, src, bl, skill_id, skill_lv, tick, flag);
+			skill_attack(BF_WEAPON, src, src, bl, GC_CROSSIMPACT, skill_lv, tick, flag);
 		} else {
 			if (sd)
-				clif_skill_fail(sd, skill_id, USESKILL_FAIL, 0);
+				clif_skill_fail(sd, GC_CROSSIMPACT, USESKILL_FAIL, 0);
 		}
 		break;
 

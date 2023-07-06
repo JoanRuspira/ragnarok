@@ -2747,17 +2747,19 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    Range: 9
+    Range: 1
     Hit: Multi_Hit
-    HitCount: -9
+    HitCount: -8
     Element: Weapon
-    CastCancel: true
-    CastTime: 0
-    Cooldown: 0
-    AfterCastActDelay: 0
-    AfterCastWalkDelay: 0
+    Cooldown: 7000
+    AfterCastActDelay: 2000
+    Duration2: 5000
+    CastDelayFlags:
+      IgnoreStatus: true
     Requires:
-      SpCost: 0
+      SpCost: 35
+      Weapon:
+        Katar: true
   - Id: 870
     Name: ASC_DANCINGBLADES
     Description: Dancing Blade
@@ -18278,29 +18280,19 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    Range: 3
+    Range: 5
     Hit: Multi_Hit
-    HitCount: -7
+    HitCount: -8
     Element: Weapon
-    CopyFlags:
-      Skill:
-        Reproduce: true
-    AfterCastActDelay:
-      - Level: 1
-        Time: 2500
-      - Level: 2
-        Time: 2000
-      - Level: 3
-        Time: 1500
-      - Level: 4
-        Time: 1000
-      - Level: 5
-        Time: 500
+    Cooldown: 5000
+    AfterCastActDelay: 2000
+    Duration2: 5000
     CastDelayFlags:
       IgnoreStatus: true
     Requires:
-      SpCost: 25
-      State: Move_Enable
+      SpCost: 45
+      Weapon:
+        Katar: true
   - Id: 2023
     Name: GC_DARKILLUSION
     Description: Dark Illusion
@@ -18615,7 +18607,7 @@ Body:
         Area: 2
       - Level: 5
         Area: 2
-    AfterCastActDelay: 200
+    AfterCastActDelay: 0
     Duration1: 3000
     Requires:
       SpCost: 2
@@ -18629,13 +18621,13 @@ Body:
     TargetType: Attack
     Range:
       - Level: 1
-        Size: 9
+        Size: 13
       - Level: 2
-        Size: 10
+        Size: 13
       - Level: 3
-        Size: 11
+        Size: 13
       - Level: 4
-        Size: 12
+        Size: 13
       - Level: 5
         Size: 13
     Hit: Single
@@ -28166,17 +28158,19 @@ Body:
     Type: Weapon
     TargetType: Attack
     Range: 1
-    Hit: Multi_Hit
-    HitCount: 3
+    Hit: Single
+    HitCount: 1
     Element: Weapon
     CopyFlags:
       Skill:
         Reproduce: true
-    AfterCastActDelay: 1500
-    Duration1: 5000
-    Cooldown: 5000
+    AfterCastActDelay: 400
+    Duration1: 10000
+    Cooldown: 30000
     Requires:
-      SpCost: 70
+      SpCost: 50
+      Weapon:
+        Katar: true
   - Id: 5002
     Name: RA_UNLIMIT
     Description: Unlimited
