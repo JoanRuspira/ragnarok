@@ -1187,7 +1187,6 @@ void initChangeTables(void)
 	StatusIconChangeTable[SC_OVERHEAT] = EFST_OVERHEAT;
 	StatusIconChangeTable[SC_OVERHEAT_LIMITPOINT] = EFST_OVERHEAT_LIMITPOINT;
 
-	StatusIconChangeTable[SC_HALLUCINATIONWALK_POSTDELAY] = EFST_HALLUCINATIONWALK_POSTDELAY;
 	StatusIconChangeTable[SC_TOXIN] = EFST_TOXIN;
 	StatusIconChangeTable[SC_PARALYSE] = EFST_PARALYSE;
 	StatusIconChangeTable[SC_CONFUSION] = EFST_CONFUSION;
@@ -1465,7 +1464,6 @@ void initChangeTables(void)
 	StatusChangeFlagTable[SC_MERC_SPUP] |= SCB_MAXSP;
 	StatusChangeFlagTable[SC_MERC_HITUP] |= SCB_HIT;
 
-	StatusChangeFlagTable[SC_HALLUCINATIONWALK_POSTDELAY] |= SCB_SPEED|SCB_ASPD;
 	StatusChangeFlagTable[SC_PARALYSE] |= SCB_FLEE|SCB_SPEED|SCB_ASPD;
 	StatusChangeFlagTable[SC_DEATHHURT] |= SCB_REGEN;
 	StatusChangeFlagTable[SC_VENOMBLEED] |= SCB_MAXHP;
@@ -7286,7 +7284,7 @@ static unsigned short status_calc_speed(struct block_list *bl, struct status_cha
 
 			if( sc->data[SC_DECREASEAGI] )
 				val = max( val, 25 );
-			if( sc->data[SC_QUAGMIRE] || sc->data[SC_HALLUCINATIONWALK_POSTDELAY] || (sc->data[SC_GLOOMYDAY] && sc->data[SC_GLOOMYDAY]->val4) )
+			if( sc->data[SC_QUAGMIRE] || (sc->data[SC_GLOOMYDAY] && sc->data[SC_GLOOMYDAY]->val4) )
 				val = max( val, 50 );
 			if( sc->data[SC_DONTFORGETME] )
 				val = max( val, sc->data[SC_DONTFORGETME]->val3 );
@@ -7518,8 +7516,6 @@ static short status_calc_aspd(struct block_list *bl, struct status_change *sc, b
 		}
 		if (sc->data[SC_FREEZING])
 			bonus -= 30;
-		if (sc->data[SC_HALLUCINATIONWALK_POSTDELAY])
-			bonus -= 50;
 		if (sc->data[SC_PARALYSE] && sc->data[SC_PARALYSE]->val3 == 1)
 			bonus -= 10;
 		if (sc->data[SC__BODYPAINT])
@@ -7722,8 +7718,6 @@ static short status_calc_aspd_rate(struct block_list *bl, struct status_change *
 	}
 	if( sc->data[SC_FREEZING] )
 		aspd_rate += 300;
-	if( sc->data[SC_HALLUCINATIONWALK_POSTDELAY] )
-		aspd_rate += 500;
 	if( sc->data[SC_PARALYSE] && sc->data[SC_PARALYSE]->val3 == 1 )
 		aspd_rate += 100;
 	if( sc->data[SC__BODYPAINT] )
@@ -9157,11 +9151,6 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 		|| (type==SC_ANGRIFFS_MODUS && sc->data[SC_GOLDENE_FERSE])
 		)
 			return 0;
-	case SC_VACUUM_EXTREME:
-		if (sc && (sc->data[SC_HALLUCINATIONWALK] || sc->data[SC_NPC_HALLUCINATIONWALK] || sc->data[SC_HOVERING] || sc->data[SC_VACUUM_EXTREME] ||
-			(sc->data[SC_VACUUM_EXTREME_POSTDELAY] && sc->data[SC_VACUUM_EXTREME_POSTDELAY]->val2 == val2))) // Ignore post delay from other vacuum (this will make stack effect enabled)
-			return 0;
-		break;
 	case SC_STONE:
 		// Undead are immune to Stone
 		if (undead_flag && !(flag&SCSTART_NOAVOID))
@@ -13200,9 +13189,6 @@ int status_change_end_(struct block_list* bl, enum sc_type type, int tid, const 
 		/* 3rd Stuff */
 		case SC_MILLENNIUMSHIELD:
 			clif_millenniumshield(bl, 0);
-			break;
-		case SC_HALLUCINATIONWALK:
-			sc_start(bl,bl,SC_HALLUCINATIONWALK_POSTDELAY,100,sce->val1,skill_get_time2(GC_HALLUCINATIONWALK,sce->val1));
 			break;
 		case SC_WUGDASH:
 			{

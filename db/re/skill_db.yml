@@ -6549,7 +6549,7 @@ Body:
     Duration1: 5000
     Duration2: 30000
     Requires:
-      SpCost: 15
+      SpCost: 18
   - Id: 215
     Name: RG_STRIPWEAPON
     Description: Divest Weapon
@@ -10550,7 +10550,7 @@ Body:
     Duration1: 10000
     Duration2: 120000
     Requires:
-      SpCost: 10
+      SpCost: 20
   - Id: 390
     Name: ST_REJECTSWORD
     Description: Counter Instinct
@@ -18569,22 +18569,10 @@ Body:
       NoDamage: true
     Hit: Single
     HitCount: 1
-    Duration1:
-      - Level: 1
-        Time: 30000
-      - Level: 2
-        Time: 35000
-      - Level: 3
-        Time: 40000
-      - Level: 4
-        Time: 45000
-      - Level: 5
-        Time: 50000
-    Duration2: 25000
-    Cooldown: 300000
+    Duration1: 30000
+    Cooldown: 60000
     Requires:
-      SpCost: 100
-      HpRateCost: 10
+      SpCost: 40
   - Id: 2036
     Name: GC_ROLLINGCUTTER
     Description: Rolling Cutter
