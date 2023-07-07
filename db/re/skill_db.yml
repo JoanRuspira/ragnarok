@@ -2747,7 +2747,7 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    Range: 1
+    Range: 7
     Hit: Multi_Hit
     HitCount: -8
     Element: Weapon
@@ -5190,9 +5190,6 @@ Body:
     AfterCastActDelay: 400
     DamageFlags:
       NoDamage: true
-    Flags:
-      IgnoreKagehumi: true
-      IgnoreWugBite: true
     Hit: Single
     HitCount: 1
     Duration1:
@@ -20979,27 +20976,17 @@ Body:
     Name: SC_INVISIBILITY
     Description: Invisibility
     MaxLevel: 5
+    Type: Weapon
     TargetType: Self
+    Cooldown: 1000
+    AfterCastActDelay: 400
     DamageFlags:
       NoDamage: true
     Hit: Single
     HitCount: 1
-    CastCancel: true
-    CastTime: 1000
-    AfterCastActDelay: 1000
-    Cooldown:
-      - Level: 1
-        Time: 20000
-      - Level: 2
-        Time: 30000
-      - Level: 3
-        Time: 40000
-      - Level: 4
-        Time: 50000
-      - Level: 5
-        Time: 60000
+    Duration1: 10000
     Requires:
-      SpCost: 100
+      SpCost: 15
   - Id: 2291
     Name: SC_DEADLYINFECT
     Description: Deadly Infect

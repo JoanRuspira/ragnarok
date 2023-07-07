@@ -6196,8 +6196,6 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 	if (sc && sc->count) {
 		if (sc->data[SC_CLOAKING] && !(sc->data[SC_CLOAKING]->val4 & 2))
 			status_change_end(src, SC_CLOAKING, INVALID_TIMER);
-		else if (sc->data[SC_CLOAKINGEXCEED] && !(sc->data[SC_CLOAKINGEXCEED]->val4 & 2))
-			status_change_end(src, SC_CLOAKINGEXCEED, INVALID_TIMER);
 		else if (sc->data[SC_NEWMOON] && --(sc->data[SC_NEWMOON]->val2) <= 0)
 			status_change_end(src, SC_NEWMOON, INVALID_TIMER);
 	}

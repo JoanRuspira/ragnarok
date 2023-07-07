@@ -1232,7 +1232,6 @@
 	export_constant(SC_VENOMIMPRESS);
 	export_constant(SC_POISONINGWEAPON);
 	export_constant(SC_WEAPONBLOCKING);
-	export_constant(SC_CLOAKINGEXCEED);
 	export_constant(SC_HALLUCINATIONWALK);
 	export_constant(SC_HALLUCINATIONWALK_POSTDELAY);
 	export_constant(SC_ROLLINGCUTTER);

@@ -2024,11 +2024,6 @@ int unit_skilluse_id2(struct block_list *src, int target_id, uint16 skill_id, ui
 
 			if (!src->prev)
 				return 0; // Warped away!
-		} else if( sc->data[SC_CLOAKINGEXCEED] && !(sc->data[SC_CLOAKINGEXCEED]->val4&4) && skill_id != GC_CLOAKINGEXCEED ) {
-			status_change_end(src,SC_CLOAKINGEXCEED, INVALID_TIMER);
-
-			if (!src->prev)
-				return 0;
 		} else if (sc->data[SC_NEWMOON] && skill_id != SJ_NEWMOONKICK) {
 			status_change_end(src, SC_NEWMOON, INVALID_TIMER);
 			if (!src->prev)
@@ -2206,11 +2201,6 @@ int unit_skilluse_pos2( struct block_list *src, short skill_x, short skill_y, ui
 
 			if (!src->prev)
 				return 0; // Warped away!
-		} else if (sc->data[SC_CLOAKINGEXCEED] && !(sc->data[SC_CLOAKINGEXCEED]->val4&4)) {
-			status_change_end(src, SC_CLOAKINGEXCEED, INVALID_TIMER);
-
-			if (!src->prev)
-				return 0;
 		} else if (sc->data[SC_NEWMOON]) {
 			status_change_end(src, SC_NEWMOON, INVALID_TIMER);
 
@@ -3026,7 +3016,6 @@ int unit_remove_map_(struct block_list *bl, clr_type clrtype, const char* file, 
 		// Ensure the bl is a PC; if so, we'll handle the removal of cloaking and cloaking exceed later
 		if ( bl->type != BL_PC ) {
 			status_change_end(bl, SC_CLOAKING, INVALID_TIMER);
-			status_change_end(bl, SC_CLOAKINGEXCEED, INVALID_TIMER);
 		}
 		status_change_end(bl, SC_CHASEWALK, INVALID_TIMER);
 		if (sc->data[SC_GOSPEL] && sc->data[SC_GOSPEL]->val4 == BCT_SELF)
@@ -3096,7 +3085,6 @@ int unit_remove_map_(struct block_list *bl, clr_type clrtype, const char* file, 
 			// Check if warping and not changing the map.
 			if ( sd->state.warping && !sd->state.changemap ) {
 				status_change_end(bl, SC_CLOAKING, INVALID_TIMER);
-				status_change_end(bl, SC_CLOAKINGEXCEED, INVALID_TIMER);
 			}
 
 			sd->npc_shopid = 0;

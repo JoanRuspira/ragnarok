@@ -1089,7 +1089,6 @@ static int skill_area_temp[8];
 
 int skill_onskillusage(struct map_session_data *sd, struct block_list *bl, uint16 skill_id, t_tick tick) {
 	struct block_list *tbl;
-
 	if( sd == NULL || !skill_id )
 		return 0;
 
@@ -3466,7 +3465,7 @@ static int skill_tarotcard(struct block_list* src, struct block_list *target, ui
  *
  *
  *------------------------------------------*/
-int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint16 skill_id, uint16 skill_lv, t_tick tick, int flag)
+int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint16 skill_id, uint16 skill_lv, t_tick tick, int flag, bool is_automatic)
 {
 	struct map_session_data *sd = NULL;
 	struct status_data *tstatus;
@@ -3507,9 +3506,13 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	tstatus = status_get_status_data(bl);
 
 	map_freeblock_lock();
-
+	ShowMessage("Is automatic %d\n", is_automatic);
+	ShowMessage("skill_id %d\n", skill_id);
+	if (!is_automatic){
+		ShowMessage("stop\n");
+		status_change_end(src, SC__INVISIBILITY, INVALID_TIMER);
+	}
 	switch(skill_id) {
-	
 	case MC_CARTQUAKE:
 	case MC_CARTCYCLONE:
 	case MC_CARTBRUME:
@@ -4454,7 +4457,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case GC_PHANTOMMENACE:
 		if (flag&1) { // Only Hits Invisible Targets
 			if(tsc && (tsc->option&(OPTION_HIDE|OPTION_CLOAK|OPTION_CHASEWALK) || tsc->data[SC_CAMOUFLAGE] || tsc->data[SC_STEALTHFIELD])) {
-				status_change_end(bl, SC_CLOAKINGEXCEED, INVALID_TIMER);
 				skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag);
 			}
 			if (tsc && tsc->data[SC__SHADOWFORM] && rnd() % 100 < 100 - tsc->data[SC__SHADOWFORM]->val1 * 10) // [100 - (Skill Level x 10)] %
@@ -4722,7 +4724,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case RA_SENSITIVEKEEN:
 		if( bl->type != BL_SKILL ) { // Only Hits Invisible Targets
 			if (tsc && ((tsc->option&(OPTION_HIDE|OPTION_CLOAK|OPTION_CHASEWALK)) || tsc->data[SC_CAMOUFLAGE] || tsc->data[SC_STEALTHFIELD])) {
-				status_change_end(bl, SC_CLOAKINGEXCEED, INVALID_TIMER);
 				skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag);
 			}
 			if (tsc && tsc->data[SC__SHADOWFORM] && rnd() % 100 < 100 - tsc->data[SC__SHADOWFORM]->val1 * 10) // [100 - (Skill Level x 10)] %
@@ -4749,7 +4750,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 		if( flag&1 ) {
 			status_change_end(bl, SC_HIDING, INVALID_TIMER);
 			status_change_end(bl, SC_CLOAKING, INVALID_TIMER);
-			status_change_end(bl, SC_CLOAKINGEXCEED, INVALID_TIMER);
 			status_change_end(bl, SC_CAMOUFLAGE, INVALID_TIMER);
 			status_change_end(bl, SC_NEWMOON, INVALID_TIMER);
 			if (tsc && tsc->data[SC__SHADOWFORM] && rnd() % 100 < 100 - tsc->data[SC__SHADOWFORM]->val1 * 10) // [100 - (Skill Level x 10)] %
@@ -5311,6 +5311,8 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	tstatus = status_get_status_data(bl);
 	sstatus = status_get_status_data(src);
 
+
+	
 	//Check for undead skills that convert a no-damage skill into a damage one. [Skotlex]
 	switch (skill_id) {
 		case HAMI_HEAL:
@@ -5384,6 +5386,10 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	type = status_skill2sc(skill_id);
 	tsc = status_get_sc(bl);
 	tsce = (tsc && type != -1)?tsc->data[type]:NULL;
+
+	if (skill_id != SC_INVISIBILITY && tsc && tsc->data[SC__INVISIBILITY] ) {
+		status_change_end(bl, SC__INVISIBILITY, INVALID_TIMER);
+	}
 
 	if (src!=bl && type > -1 &&
 		CHK_ELEMENT((i = skill_get_ele(skill_id, skill_lv))) && i > ELE_NEUTRAL &&
@@ -6799,7 +6805,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			status_change_end(bl, SC_ENSEMBLEFATIGUE, INVALID_TIMER);
 		}
 		break;
-
+	
 	case BD_ADAPTATION:
 #ifdef RENEWAL
 		clif_skill_nodamage(src, bl, skill_id, skill_lv, 1);
@@ -7596,7 +7602,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 					case SC_EXTREMITYFIST2:
 #endif
 					case SC_HIDING:			case SC_CLOAKING:		case SC_CHASEWALK:
-					case SC_CLOAKINGEXCEED:		case SC__INVISIBILITY:	case SC_UTSUSEMI:
+					case SC__INVISIBILITY:	case SC_UTSUSEMI:
 					case SC_MTF_ASPD2:		case SC_MTF_RANGEATK2:	case SC_MTF_MATK2:
 					case SC_2011RWC_SCROLL:		case SC_JP_EVENT04:	case SC_MTF_MHP:
 					case SC_MTF_MSP:		case SC_MTF_PUMPKIN:	case SC_MTF_HITFLEE:
@@ -9043,7 +9049,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 					case SC_EXTREMITYFIST2:
 #endif
 					case SC_HIDING:			case SC_CLOAKING:		case SC_CHASEWALK:
-					case SC_CLOAKINGEXCEED:		case SC__INVISIBILITY:	case SC_UTSUSEMI:
+					case SC__INVISIBILITY:	case SC_UTSUSEMI:
 					case SC_MTF_ASPD2:		case SC_MTF_RANGEATK2:	case SC_MTF_MATK2:
 					case SC_2011RWC_SCROLL:		case SC_JP_EVENT04:	case SC_MTF_MHP:
 					case SC_MTF_MSP:		case SC_MTF_PUMPKIN:	case SC_MTF_HITFLEE:
@@ -9408,7 +9414,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			if (tsc && ((tsc->option&(OPTION_HIDE|OPTION_CLOAK)) || tsc->data[SC_CAMOUFLAGE] || tsc->data[SC_STEALTHFIELD])) {
 				status_change_end(bl,SC_HIDING,INVALID_TIMER);
 				status_change_end(bl,SC_CLOAKING,INVALID_TIMER);
-				status_change_end(bl,SC_CLOAKINGEXCEED,INVALID_TIMER);
 				status_change_end(bl,SC_CAMOUFLAGE,INVALID_TIMER);
 				status_change_end(bl,SC_NEWMOON,INVALID_TIMER);
 				if (tsc && tsc->data[SC__SHADOWFORM] && rnd() % 100 < 100 - tsc->data[SC__SHADOWFORM]->val1 * 10) // [100 - (Skill Level x 10)] %
@@ -10586,7 +10591,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 					sc_start(src,bl, type, 100, skill_lv, skill_get_time(skill_id, skill_lv));
 					status_change_end(bl, SC_HIDING, INVALID_TIMER);
 					status_change_end(bl, SC_CLOAKING, INVALID_TIMER);
-					status_change_end(bl, SC_CLOAKINGEXCEED, INVALID_TIMER);
 					status_change_end(bl, SC_CAMOUFLAGE, INVALID_TIMER);
 					status_change_end(bl, SC_NEWMOON, INVALID_TIMER);
 					if (tsc && tsc->data[SC__SHADOWFORM] && rnd() % 100 < 100 - tsc->data[SC__SHADOWFORM]->val1 * 10) // [100 - (Skill Level x 10)] %
@@ -13998,7 +14002,6 @@ int skill_unit_onplace_timer(struct skill_unit *unit, struct block_list *bl, t_t
 					// Doesn't remove Invisibility or Chase Walk.
 					status_change_end(bl,SC_HIDING,INVALID_TIMER);
 					status_change_end(bl,SC_CLOAKING,INVALID_TIMER);
-					status_change_end(bl,SC_CLOAKINGEXCEED,INVALID_TIMER);
 					status_change_end(bl,SC_CAMOUFLAGE,INVALID_TIMER);
 					status_change_end(bl,SC_NEWMOON,INVALID_TIMER);
 					if (tsc && tsc->data[SC__SHADOWFORM] && rnd() % 100 < 100 - tsc->data[SC__SHADOWFORM]->val1 * 10) // [100 - (Skill Level x 10)] %
@@ -20614,6 +20617,7 @@ int skill_disable_check(struct status_change *sc, uint16 skill_id)
 		case NV_TRICKDEAD:
 		case TF_HIDING:
 		case AS_CLOAKING:
+		case SC_INVISIBILITY:
 		case GC_CLOAKINGEXCEED:
 		case ST_CHASEWALK:
 		case CR_DEFENDER:

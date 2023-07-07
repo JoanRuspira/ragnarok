@@ -265,7 +265,7 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 					if (dstmd && sd->status.weapon != W_BOW && 
 						(skill = pc_checkskill(sd, RG_SNATCHER)) > 0 
 						&& rnd() % 100 <= skill * 4)
-						skill_castend_damage_id(src, bl, TF_SNATCH, skill, tick, 0);
+						skill_castend_damage_id(src, bl, TF_SNATCH, skill, tick, 0, true);
 					
 					if (sc && sc->data[SC_PYROCLASTIC] && ((rnd() % 100) <= sc->data[SC_PYROCLASTIC]->val3))
 						skill_castend_pos2(src, bl->x, bl->y, BS_HAMMERFALL, sc->data[SC_PYROCLASTIC]->val1, tick, 0);

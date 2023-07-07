@@ -414,7 +414,7 @@ void initChangeTables(void)
 	add_sc( HT_SANDMAN		, SC_SLEEP		);
 	add_sc( HT_FLASHER		, SC_BLIND		);
 	add_sc( HT_FREEZINGTRAP		, SC_FREEZE		);
-	set_sc( AS_CLOAKING		, SC_CLOAKING		, EFST_CLOAKING		, SCB_CRI|SCB_SPEED );
+	set_sc( AS_CLOAKING		, SC_CLOAKING		, EFST_CLOAKING		, SCB_SPEED );
 	set_sc( AS_ENCHANTPOISON	, SC_ENCPOISON		, EFST_ENCHANTPOISON, SCB_ATK_ELE );
 	set_sc( AS_POISONREACT		, SC_POISONREACT	, EFST_POISONREACT	, SCB_NONE );
 	add_sc( AS_VENOMDUST		, SC_POISON		);
@@ -816,7 +816,6 @@ void initChangeTables(void)
 	set_sc_with_vfx( GC_VENOMIMPRESS, SC_VENOMIMPRESS	, EFST_VENOMIMPRESS	, SCB_NONE );
 	set_sc( GC_POISONINGWEAPON	, SC_POISONINGWEAPON	, EFST_POISONINGWEAPON	, SCB_NONE );
 	set_sc( GC_WEAPONBLOCKING	, SC_WEAPONBLOCKING	, EFST_WEAPONBLOCKING	, SCB_NONE );
-	set_sc( GC_CLOAKINGEXCEED	, SC_CLOAKINGEXCEED	, EFST_CLOAKINGEXCEED	, SCB_SPEED );
 	set_sc( GC_HALLUCINATIONWALK	, SC_HALLUCINATIONWALK	, EFST_HALLUCINATIONWALK	, SCB_FLEE );
 	set_sc( GC_ROLLINGCUTTER	, SC_ROLLINGCUTTER	, EFST_ROLLINGCUTTER	, SCB_NONE );
 	set_sc_with_vfx( GC_DARKCROW	, SC_DARKCROW		, EFST_DARKCROW		, SCB_NONE );
@@ -884,7 +883,7 @@ void initChangeTables(void)
 	set_sc( SC_AUTOSHADOWSPELL	, SC__AUTOSHADOWSPELL	, EFST_AUTOSHADOWSPELL	, SCB_NONE );
 	set_sc( SC_SHADOWFORM		, SC__SHADOWFORM	, EFST_SHADOWFORM		, SCB_NONE );
 	set_sc( SC_BODYPAINT		, SC__BODYPAINT		, EFST_BODYPAINT		, SCB_ASPD );
-	set_sc( SC_INVISIBILITY		, SC__INVISIBILITY	, EFST_INVISIBILITY	, SCB_ASPD|SCB_CRI|SCB_ATK_ELE );
+	set_sc( SC_INVISIBILITY		, SC__INVISIBILITY	, EFST_INVISIBILITY	, SCB_NONE );
 	set_sc( SC_DEADLYINFECT		, SC__DEADLYINFECT	, EFST_DEADLYINFECT	, SCB_NONE );
 	set_sc( SC_ENERVATION		, SC__ENERVATION	, EFST_ENERVATION		, SCB_BATK|SCB_WATK );
 	set_sc( SC_GROOMY		, SC__GROOMY		, EFST_GROOMY		, SCB_ASPD );
@@ -1683,7 +1682,6 @@ void initChangeTables(void)
 	StatusChangeStateTable[SC_CLOAKING]				|= SCS_NOPICKITEM;
 	StatusChangeStateTable[SC_TRICKDEAD]			|= SCS_NOPICKITEM;
 	StatusChangeStateTable[SC_BLADESTOP]			|= SCS_NOPICKITEM;
-	StatusChangeStateTable[SC_CLOAKINGEXCEED]		|= SCS_NOPICKITEM;
 	StatusChangeStateTable[SC__FEINTBOMB]			|= SCS_NOPICKITEM;
 	StatusChangeStateTable[SC_NOCHAT]				|= SCS_NOPICKITEM|SCS_NOPICKITEMCOND;
 	StatusChangeStateTable[SC_SUHIDE]				|= SCS_NOPICKITEM;
@@ -1708,7 +1706,6 @@ void initChangeTables(void)
 	StatusChangeStateTable[SC_OBLIVIONCURSE]		|= SCS_NOCAST|SCS_NOCASTCOND;
 	StatusChangeStateTable[SC_WHITEIMPRISON]		|= SCS_NOCAST;
 	StatusChangeStateTable[SC__SHADOWFORM]			|= SCS_NOCAST;
-	StatusChangeStateTable[SC__INVISIBILITY]		|= SCS_NOCAST;
 	StatusChangeStateTable[SC_CRYSTALIZE]			|= SCS_NOCAST;
 	StatusChangeStateTable[SC__IGNORANCE]			|= SCS_NOCAST;
 	StatusChangeStateTable[SC__MANHOLE]				|= SCS_NOCAST;
@@ -1965,6 +1962,7 @@ int status_damage(struct block_list *src,struct block_list *target,int64 dhp, in
 			status_change_end(target, SC_TRICKDEAD, INVALID_TIMER);
 			status_change_end(target, SC_HIDING, INVALID_TIMER);
 			status_change_end(target, SC_CLOAKING, INVALID_TIMER);
+			status_change_end(target, SC__INVISIBILITY, INVALID_TIMER);
 			status_change_end(target, SC_CHASEWALK, INVALID_TIMER);
 			status_change_end(target, SC_CAMOUFLAGE, INVALID_TIMER);
 			status_change_end(target, SC_DEEPSLEEP, INVALID_TIMER);
@@ -1990,8 +1988,6 @@ int status_damage(struct block_list *src,struct block_list *target,int64 dhp, in
 #endif
 			if(sc->data[SC_DANCING] && (unsigned int)hp > status->max_hp>>2)
 				status_change_end(target, SC_DANCING, INVALID_TIMER);
-			if(sc->data[SC_CLOAKINGEXCEED] && --(sc->data[SC_CLOAKINGEXCEED]->val2) <= 0)
-				status_change_end(target, SC_CLOAKINGEXCEED, INVALID_TIMER);
 			if(sc->data[SC_KAGEMUSYA] && --(sc->data[SC_KAGEMUSYA]->val3) <= 0)
 				status_change_end(target, SC_KAGEMUSYA, INVALID_TIMER);
 		}
@@ -2530,8 +2526,6 @@ bool status_check_skilluse(struct block_list *src, struct block_list *target, ui
 				if (tsc) {
 					if ((tsc->option&hide_flag) && !is_boss && (tsd->special_state.perfect_hiding || !is_detect))
 						return false;
-					if ((tsc->data[SC_CLOAKINGEXCEED] || tsc->data[SC_NEWMOON]) && !is_boss && (tsd->special_state.perfect_hiding || is_detect))
-						return false; // Works against insect and demon but not against bosses
 					if (tsc->data[SC__FEINTBOMB] && (is_boss || is_detect))
 						return false; // Works against all
 					if ((tsc->data[SC_CAMOUFLAGE] || tsc->data[SC_STEALTHFIELD] || tsc->data[SC_SUHIDE]) && !(is_boss || is_detect) && (!skill_id || (!flag && src)))
@@ -2599,8 +2593,6 @@ int status_check_visibility(struct block_list *src, struct block_list *target)
 					struct map_session_data *tsd = (TBL_PC*)target;
 
 					if (((tsc->option&(OPTION_HIDE|OPTION_CLOAK|OPTION_CHASEWALK)) || tsc->data[SC_CAMOUFLAGE] || tsc->data[SC_STEALTHFIELD] || tsc->data[SC_SUHIDE]) && !is_boss && (tsd->special_state.perfect_hiding || !is_detector))
-						return 0;
-					if ((tsc->data[SC_CLOAKINGEXCEED] || tsc->data[SC_NEWMOON]) && !is_boss && ((tsd && tsd->special_state.perfect_hiding) || is_detector))
 						return 0;
 					if (tsc->data[SC__FEINTBOMB] && !is_boss && !is_detector)
 						return 0;
@@ -6711,14 +6703,10 @@ static signed short status_calc_critical(struct block_list *bl, struct status_ch
 		critical += sc->data[SC_FORTUNE]->val2;
 	if (sc->data[SC_TRUESIGHT])
 		critical += sc->data[SC_TRUESIGHT]->val2;
-	if (sc->data[SC_CLOAKING])
-		critical += critical;
 	if( sc->data[SC_WEAPONPERFECTION] )
 		critical += 150;
 	if (sc->data[SC_STRIKING])
 		critical += critical * sc->data[SC_STRIKING]->val1 / 100;
-	if (sc->data[SC__INVISIBILITY])
-		critical += sc->data[SC__INVISIBILITY]->val3 * 10;
 	if (sc->data[SC__UNLUCKY])
 		critical -= sc->data[SC__UNLUCKY]->val2;
 	if (sc->data[SC_SOULSHADOW])
@@ -7367,8 +7355,6 @@ static unsigned short status_calc_speed(struct block_list *bl, struct status_cha
 			val = max( val, 10 * sc->data[SC_AVOID]->val1 );
 		if( sc->data[SC_INVINCIBLE] && !sc->data[SC_INVINCIBLEOFF] )
 			val = max( val, 75 );
-		if( sc->data[SC_CLOAKINGEXCEED] )
-			val = max( val, sc->data[SC_CLOAKINGEXCEED]->val3);
 		if (sc->data[SC_PARALYSE] && sc->data[SC_PARALYSE]->val3 == 0)
 			val = max(val, 50);
 		if( sc->data[SC_HOVERING] )
@@ -7520,8 +7506,6 @@ static short status_calc_aspd(struct block_list *bl, struct status_change *sc, b
 			bonus -= 10;
 		if (sc->data[SC__BODYPAINT])
 			bonus -= 5 * sc->data[SC__BODYPAINT]->val1;
-		if (sc->data[SC__INVISIBILITY])
-			bonus -= sc->data[SC__INVISIBILITY]->val2;
 		if (sc->data[SC__GROOMY])
 			bonus -= sc->data[SC__GROOMY]->val2;
 		if (sc->data[SC_SWINGDANCE])
@@ -7722,8 +7706,6 @@ static short status_calc_aspd_rate(struct block_list *bl, struct status_change *
 		aspd_rate += 100;
 	if( sc->data[SC__BODYPAINT] )
 		aspd_rate +=  50 * sc->data[SC__BODYPAINT]->val1;
-	if( sc->data[SC__INVISIBILITY] )
-		aspd_rate += sc->data[SC__INVISIBILITY]->val2 * 10;
 	if( sc->data[SC__GROOMY] )
 		aspd_rate += sc->data[SC__GROOMY]->val2 * 10;
 	if( sc->data[SC_SWINGDANCE] )
@@ -7871,8 +7853,6 @@ static unsigned char status_calc_element_lv(struct block_list *bl, struct status
 		return sc->data[SC_ELEMENTALCHANGE]->val1;
 	if(sc->data[SC_SHAPESHIFT])
 		return 1;
-	if(sc->data[SC__INVISIBILITY])
-		return 1;
 
 	return (unsigned char)cap_value(lv,1,4);
 }
@@ -7908,8 +7888,6 @@ unsigned char status_calc_attack_element(struct block_list *bl, struct status_ch
 		return ELE_HOLY;
 	if(sc->data[SC_SHADOWWEAPON])
 		return ELE_DARK;
-	if(sc->data[SC_GHOSTWEAPON] || sc->data[SC__INVISIBILITY])
-		return ELE_GHOST;
 	if(sc->data[SC_TIDAL_WEAPON_OPTION] || sc->data[SC_TIDAL_WEAPON] )
 		return ELE_WATER;
 	if(sc->data[SC_PYROCLASTIC])
@@ -11099,15 +11077,6 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			val4 = tick / 3000;
 			tick_time = 3000; // [GodLesZ] tick time
 			break;
-		case SC_CLOAKINGEXCEED:
-			val2 = (val1 + 1) / 2; // Hits
-			val3 = (val1 - 1) * 10; // Walk speed
-			if (bl->type == BL_PC)
-				val4 |= battle_config.pc_cloak_check_type&7;
-			else
-				val4 |= battle_config.monster_cloak_check_type&7;
-			tick_time = 1000; // [GodLesZ] tick time
-			break;
 		case SC_HALLUCINATIONWALK:
 		case SC_NPC_HALLUCINATIONWALK:
 			val2 = 50 * val1; // Evasion rate of physical attacks. Flee
@@ -11187,8 +11156,6 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 				val2 = 20;
 			break;
 		case SC__INVISIBILITY:
-			val2 = 50 - 10 * val1; // ASPD
-			val3 = 20 * val1; // CRITICAL
 			val4 = tick / 1000;
 			tick = INFINITE_TICK; // Duration sent to the client should be infinite
 			tick_time = 1000; // [GodLesZ] tick time
@@ -12109,7 +12076,6 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			break;
 		// Start |1|2|4 val_flag setting
 		case SC_POISONINGWEAPON:
-		case SC_CLOAKINGEXCEED:
 		case SC_NPC_HALLUCINATIONWALK:
 		case SC_HALLUCINATIONWALK:
 		case SC__SHADOWFORM:
@@ -12220,7 +12186,6 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			break;
 		case SC_HIDING:
 		case SC_CLOAKING:
-		case SC_CLOAKINGEXCEED:
 		case SC__FEINTBOMB:
 		case SC_CHASEWALK:
 		case SC_WEIGHT90:
@@ -12366,7 +12331,6 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			opt_flag = 2;
 			break;
 		case SC_CLOAKING:
-		case SC_CLOAKINGEXCEED:
 		case SC__INVISIBILITY:
 		case SC_NEWMOON:
 			sc->option |= OPTION_CLOAK;
@@ -13421,7 +13385,6 @@ int status_change_end_(struct block_list* bl, enum sc_type type, int tid, const 
 		opt_flag |= 2|4; // Check for warp trigger + AoE trigger
 		break;
 	case SC_CLOAKING:
-	case SC_CLOAKINGEXCEED:
 	case SC__INVISIBILITY:
 	case SC_NEWMOON:
 		sc->option &= ~OPTION_CLOAK;
@@ -14021,11 +13984,6 @@ TIMER_FUNC(status_change_timer){
 		}
 		break;
 
-	case SC_CLOAKINGEXCEED:
-		if(!status_charge(bl,0,10-sce->val1))
-			break;
-		sc_timer_next(1000 + tick);
-		return 0;
 	case SC_SIEGFRIED:
 		if( --(sce->val4) > 0 ) {
 			int healing, matk = 0;
@@ -14632,7 +14590,6 @@ int status_change_timer_sub(struct block_list* bl, va_list ap)
 	case SC_CONCENTRATE:
 		status_change_end(bl, SC_HIDING, INVALID_TIMER);
 		status_change_end(bl, SC_CLOAKING, INVALID_TIMER);
-		status_change_end(bl, SC_CLOAKINGEXCEED, INVALID_TIMER);
 		status_change_end(bl, SC_CAMOUFLAGE, INVALID_TIMER);
 		status_change_end(bl, SC_NEWMOON, INVALID_TIMER);
 		if (tsc && tsc->data[SC__SHADOWFORM] && (sce && sce->val4 > 0 && sce->val4%2000 == 0) && // For every 2 seconds do the checking
@@ -14641,11 +14598,10 @@ int status_change_timer_sub(struct block_list* bl, va_list ap)
 		break;
 	case SC_RUWACH: // Reveal hidden target and deal little dammages if enemy
 		if (tsc && (tsc->data[SC_HIDING] || tsc->data[SC_CLOAKING] ||
-				tsc->data[SC_CAMOUFLAGE] || tsc->data[SC_NEWMOON] || tsc->data[SC_CLOAKINGEXCEED])) {
+				tsc->data[SC_CAMOUFLAGE] || tsc->data[SC_NEWMOON] )) {
 			status_change_end(bl, SC_HIDING, INVALID_TIMER);
 			status_change_end(bl, SC_CLOAKING, INVALID_TIMER);
 			status_change_end(bl, SC_CAMOUFLAGE, INVALID_TIMER);
-			status_change_end(bl, SC_CLOAKINGEXCEED, INVALID_TIMER);
 			status_change_end(bl, SC_NEWMOON, INVALID_TIMER);
 			if(battle_check_target( src, bl, BCT_ENEMY ) > 0)
 				skill_attack(BF_MAGIC,src,src,bl,AL_RUWACH,1,tick,0);
