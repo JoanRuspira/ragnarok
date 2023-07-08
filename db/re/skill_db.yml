@@ -10542,7 +10542,7 @@ Body:
     Hit: Single
     HitCount: 1
     CastTime: 1000
-    Cooldown: 0
+    Cooldown: 1000
     AfterCastActDelay: 400
     Duration1: 10000
     Duration2: 120000

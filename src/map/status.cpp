@@ -14073,7 +14073,7 @@ TIMER_FUNC(status_change_timer){
 		break;
 
 	case SC__INVISIBILITY:
-		if( !status_charge(bl, 0, (12 - 2 * sce->val1) * status->max_sp / 100) ) // 6% - skill_lv.
+		if( !status_charge(bl, 0, (11 - 2 * sce->val1) * status->max_sp / 100) ) // 6% - skill_lv.
 			break;
 		sc_timer_next(1000 + tick);
 		return 0;
