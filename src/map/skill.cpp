@@ -3506,10 +3506,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	tstatus = status_get_status_data(bl);
 
 	map_freeblock_lock();
-	ShowMessage("Is automatic %d\n", is_automatic);
-	ShowMessage("skill_id %d\n", skill_id);
 	if (!is_automatic){
-		ShowMessage("stop\n");
 		status_change_end(src, SC__INVISIBILITY, INVALID_TIMER);
 	}
 	switch(skill_id) {

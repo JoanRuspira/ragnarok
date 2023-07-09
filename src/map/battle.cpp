@@ -4008,18 +4008,6 @@ static void battle_calc_attack_post_defense(struct Damage* wd, struct block_list
 	//Set to min of 1
 	if (is_attack_right_handed(src, skill_id) && wd->damage < 1) wd->damage = 1;
 	if (EquipmentAttackCalculator::is_attack_left_handed(src, skill_id) && wd->damage2 < 1) wd->damage2 = 1;
-
-	switch (skill_id) {
-		case AS_SONICBLOW:
-			if(sd && pc_checkskill(sd,AS_SONICACCEL)>0)
-				ATK_ADDRATE(wd->damage, wd->damage2, 10);
-			break;
-
-		// case NC_AXETORNADO:
-		// 	if( (sstatus->rhw.ele) == ELE_WIND || (sstatus->lhw.ele) == ELE_WIND )
-		// 		ATK_ADDRATE(wd->damage, wd->damage2, 25);
-		// 	break;
-	}
 }
 
 /*=================================================================================

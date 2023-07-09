@@ -4464,7 +4464,21 @@ int status_calc_pc_sub(struct map_session_data* sd, enum e_status_calc_opt opt)
 	base_status->amotion = cap_value(i,pc_maxaspd(sd),2000);
 
 	// Relative modifiers from passive skills
-	// Renewal modifiers are handled in status_base_amotion_pc
+	
+	if((skill=pc_checkskill(sd,AS_SONICACCEL))>0){
+		int right_hand_index = sd->equip_index[EQI_HAND_R];
+		int left_hand_index = sd->equip_index[EQI_HAND_L];
+		if(sd 
+			&& right_hand_index >= 0 
+			&& left_hand_index >= 0
+			&& sd->status.weapon != W_KATAR
+			&& sd->inventory_data[right_hand_index]->type == IT_WEAPON
+			&& sd->inventory_data[left_hand_index]->type == IT_WEAPON
+			){
+			base_status->aspd_rate += 20*skill;
+		}		
+	}
+
 #ifndef RENEWAL_ASPD
 	if((skill=pc_checkskill(sd,SA_ADVANCEDBOOK))>0 && sd->status.weapon == W_BOOK)
 		base_status->aspd_rate -= 5*skill;
@@ -7455,37 +7469,7 @@ static short status_calc_aspd(struct block_list *bl, struct status_change *sc, b
 #endif
 		if (sc->data[SC_STEELBODY])
 			bonus -= 25;
-		if (sc->data[SC_ADRENALINE])
-			bonus += sc->data[SC_ADRENALINE]->val1*2;
-		if (sc->data[SC_KNADRENALINE])
-			bonus += sc->data[SC_KNADRENALINE]->val1*2;
-		if (sc->data[SC_TWOHANDQUICKEN])
-			bonus += sc->data[SC_TWOHANDQUICKEN]->val1*2;
-		if (sc->data[SC_ONEHAND])
-			bonus += sc->data[SC_ONEHAND]->val1*2;
-		if (sc->data[SC_SPEARQUICKEN])
-			bonus += sc->data[SC_SPEARQUICKEN]->val1*2;
-		if (sc->data[SC_AXEQUICKEN])
-			bonus += sc->data[SC_AXEQUICKEN]->val1*2;
-		if (sc->data[SC_DAGGERQUICKEN])
-			bonus += sc->data[SC_DAGGERQUICKEN]->val1*2;
-		if (sc->data[SC_OHQUICKEN])
-			bonus += sc->data[SC_OHQUICKEN]->val1*2;
-		if (sc->data[SC_SQUICKEN])
-			bonus += sc->data[SC_SQUICKEN]->val1*2;
-		if (sc->data[SC_THQUICKEN])
-			bonus += sc->data[SC_THQUICKEN]->val1*2;
-		if (sc->data[SC_MACEQUICKEN])
-			bonus += sc->data[SC_MACEQUICKEN]->val1*2;
-		if (sc->data[SC_KNUCKLEQUICKEN])
-			bonus += sc->data[SC_KNUCKLEQUICKEN]->val1*2;
-		if (sc->data[SC_BOWQUICKEN])
-			bonus += sc->data[SC_BOWQUICKEN]->val1*2;
-		if (sc->data[SC_QUICKSTUDY])
-			bonus += sc->data[SC_QUICKSTUDY]->val1*2;
-		if (sc->data[SC_BERSERK]){
-			bonus += sc->data[SC_BERSERK]->val1*4;
-		}
+
 		if (sc->data[SC_SKA])
 			bonus -= 25;
 		if (sc->data[SC_DEFENDER])
@@ -7546,8 +7530,10 @@ static short status_calc_aspd(struct block_list *bl, struct status_change *sc, b
 		struct map_session_data* sd = BL_CAST(BL_PC, bl);
 		uint8 skill_lv;
 
-		if (sd && (skill_lv = (pc_checkskill(sd, BA_MUSICALLESSON)*2)) > 0)
-			bonus += skill_lv;
+		// if (sd && (skill_lv = (pc_checkskill(sd, BA_MUSICALLESSON)*2)) > 0)
+		// 	bonus += skill_lv;
+		
+		
 	}
 
 	return bonus;
@@ -7584,6 +7570,40 @@ static short status_calc_fix_aspd(struct block_list *bl, struct status_change *s
 		aspd -= sc->data[SC_HEAT_BARREL]->val1 * 10;
 	if (sc->data[SC_EP16_2_BUFF_SS])
 		aspd -= 100; // +10 ASPD
+
+
+	if (sc->data[SC_ADRENALINE])
+		aspd -= sc->data[SC_ADRENALINE]->val1*10;
+	if (sc->data[SC_KNADRENALINE])
+		aspd -= sc->data[SC_KNADRENALINE]->val1*10;
+	if (sc->data[SC_TWOHANDQUICKEN])
+		aspd -= sc->data[SC_TWOHANDQUICKEN]->val1*10;
+	if (sc->data[SC_ONEHAND])
+		aspd -= sc->data[SC_ONEHAND]->val1*10;
+	if (sc->data[SC_SPEARQUICKEN])
+		aspd -= sc->data[SC_SPEARQUICKEN]->val1*10;
+	if (sc->data[SC_AXEQUICKEN])
+		aspd -= sc->data[SC_AXEQUICKEN]->val1*10;
+	if (sc->data[SC_DAGGERQUICKEN])
+		aspd -= sc->data[SC_DAGGERQUICKEN]->val1*10;
+	if (sc->data[SC_OHQUICKEN])
+		aspd -= sc->data[SC_OHQUICKEN]->val1*10;
+	if (sc->data[SC_SQUICKEN])
+		aspd -= sc->data[SC_SQUICKEN]->val1*10;
+	if (sc->data[SC_THQUICKEN])
+		aspd -= sc->data[SC_THQUICKEN]->val1*10;
+	if (sc->data[SC_MACEQUICKEN])
+		aspd -= sc->data[SC_MACEQUICKEN]->val1*10;
+	if (sc->data[SC_KNUCKLEQUICKEN])
+		aspd -= sc->data[SC_KNUCKLEQUICKEN]->val1*10;
+	if (sc->data[SC_BOWQUICKEN])
+		aspd -= sc->data[SC_BOWQUICKEN]->val1*10;
+	if (sc->data[SC_QUICKSTUDY])
+		aspd -= sc->data[SC_QUICKSTUDY]->val1*10;
+	if (sc->data[SC_BERSERK]){
+		aspd -= sc->data[SC_BERSERK]->val1*20;
+	}
+
 
 	return cap_value(aspd, 0, 2000); // Will be recap for proper bl anyway
 }
@@ -7700,6 +7720,7 @@ static short status_calc_aspd_rate(struct block_list *bl, struct status_change *
 		if( sc->data[SC_JOINTBEAT]->val2&BREAK_KNEE )
 			aspd_rate += 100;
 	}
+
 	if( sc->data[SC_FREEZING] )
 		aspd_rate += 300;
 	if( sc->data[SC_PARALYSE] && sc->data[SC_PARALYSE]->val3 == 1 )
