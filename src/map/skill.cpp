@@ -6581,6 +6581,25 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		else if (sd)
 			party_foreachsamemap(skill_area_sub, sd, skill_get_splash(skill_id, skill_lv), src, skill_id, skill_lv, tick, flag | BCT_PARTY | 1, skill_castend_nodamage_id);
 		break;
+	case ASC_DANCINGBLADES:
+		{
+			int right_hand_index = sd->equip_index[EQI_HAND_R];
+			int left_hand_index = sd->equip_index[EQI_HAND_L];
+			if(sd 
+				&& right_hand_index >= 0 
+				&& left_hand_index >= 0
+				&& sd->status.weapon != W_KATAR
+				&& sd->inventory_data[right_hand_index]->type == IT_WEAPON
+				&& sd->inventory_data[left_hand_index]->type == IT_WEAPON
+				){
+				clif_specialeffect(src, 25, AREA);
+				clif_specialeffect(src, 59, AREA);
+				clif_skill_nodamage(bl, bl, skill_id, skill_lv, sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
+			}else{
+				clif_skill_fail(sd,skill_id, USESKILL_FAIL,0);
+			}
+		}
+		break;
 	case CR_OHQUICKEN:
 	case KN_OHQUICKEN:
 	case KN_SQUICKEN:

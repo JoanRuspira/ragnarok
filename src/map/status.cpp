@@ -428,6 +428,7 @@ void initChangeTables(void)
 	set_sc( BS_AXEQUICKEN			, SC_AXEQUICKEN		, EFST_AXEQUICKEN, SCB_ASPD|SCB_WATK );
 	set_sc( RG_DAGGERQUICKEN			, SC_DAGGERQUICKEN		, EFST_DAGGERQUICKEN, SCB_ASPD|SCB_WATK );
 	set_sc( KN_OHQUICKEN			, SC_OHQUICKEN		, EFST_OHQUICKEN, SCB_ASPD|SCB_WATK );
+	set_sc( ASC_DANCINGBLADES			, SC_DANCINGBLADE		, EFST_DANCINGBLADES, SCB_WATK );
 	set_sc( CR_OHQUICKEN			, SC_OHQUICKEN		, EFST_OHQUICKEN, SCB_ASPD|SCB_WATK );
 	set_sc( KN_SQUICKEN			, SC_SQUICKEN		, EFST_SQUICKEN, SCB_ASPD|SCB_WATK );
 	set_sc( KN_THQUICKEN			, SC_THQUICKEN		, EFST_THQUICKEN, SCB_ASPD|SCB_WATK );
@@ -6491,6 +6492,8 @@ static unsigned short status_calc_watk(struct block_list *bl, struct status_chan
 		watk += 3*sc->data[SC_DAGGERQUICKEN]->val1;
 	if (sc->data[SC_OHQUICKEN])
 		watk += 3*sc->data[SC_OHQUICKEN]->val1;
+	if (sc->data[SC_DANCINGBLADE])
+		watk += 10*sc->data[SC_DANCINGBLADE]->val1;
 	if (sc->data[SC_SQUICKEN])
 		watk += 3*sc->data[SC_SQUICKEN]->val1;
 	if (sc->data[SC_THQUICKEN])

@@ -2770,7 +2770,7 @@ Body:
       NoDamage: true
     Hit: Single
     HitCount: 1
-    Cooldown: 10000
+    Cooldown: 30000
     AfterCastActDelay: 1000
     Duration1:
       - Level: 1
@@ -2784,7 +2784,16 @@ Body:
       - Level: 5
         Time: 300000
     Requires:
-      SpCost: 40
+      SpCost: 50
+      Weapon:
+        Dagger: true
+        1hSword: true
+        1hSpear: true
+        1hAxe: true
+        Mace: true
+        Staff: true
+        Knuckle: true
+        Book: true
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
