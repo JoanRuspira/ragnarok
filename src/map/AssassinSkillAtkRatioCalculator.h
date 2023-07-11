@@ -16,6 +16,7 @@ class AssassinSkillAtkRatioCalculator
 		static int calculate_cross_impact_atk_ratio(int skill_lv, int luck);
 		static int calculate_cross_ripper_slasher_atk_ratio(int skill_lv, int rolling_cutter_counters);
 		static int calculate_meteor_assault_atk_ratio(int skill_lv, int dex);
+		static int calculate_poison_buster_atk_ratio(int skill_lv, int intelligence);
 		static void add_sonic_blow_especial_effects(struct block_list *target);
 		static void add_rolling_cutter_especial_effects(struct block_list *target);
 		static void add_venom_splasher_especial_effects(struct block_list *target);

@@ -5311,6 +5311,9 @@ Body:
         Reproduce: true
     Requires:
       SpCost: 20
+      ItemCost:
+        - Item: Poison_Bottle
+          Amount: 1
   - Id: 139
     Name: AS_POISONREACT
     Description: Poison React
@@ -5396,7 +5399,7 @@ Body:
     HitCount: 1
     Element: Poison
     SplashArea: 2
-    Cooldown: 7000
+    Cooldown: 5000
     AfterCastActDelay: 400
     CopyFlags:
       Skill:
@@ -5416,9 +5419,9 @@ Body:
         Time: 0
     Duration2: 60000
     Requires:
-      SpCost: 30
+      SpCost: 25
       ItemCost:
-        - Item: Red_Gemstone
+        - Item: Poison_Powder
           Amount: 1
   - Id: 142
     Name: NV_FIRSTAID
@@ -10228,6 +10231,8 @@ Body:
       ItemCost:
         - Item: Poison_Bottle
           Amount: 1
+        - Item: Poison_Powder
+          Amount: 1
   - Id: 379
     Name: ASC_BREAKER
     Description: Soul Destroyer
@@ -10879,7 +10884,7 @@ Body:
     HitCount: 1
     Element: Weapon
     SplashArea: 3
-    Cooldown: 10000
+    Cooldown: 7000
     CastTime: 2000
     AfterCastActDelay: 400
     Duration2:
@@ -18218,8 +18223,8 @@ Body:
     Range: 1
     Hit: Single
     HitCount: 1
-    Cooldown: 10000
-    AfterCastActDelay: 1000
+    Cooldown: 2000
+    AfterCastActDelay: 400
     Duration1:
       - Level: 1
         Time: 10000
@@ -24412,25 +24417,18 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Poison
-    SplashArea:
-      - Level: 1
-        Area: 1
-      - Level: 2
-        Area: 1
-      - Level: 3
-        Area: 1
-      - Level: 4
-        Area: 1
-      - Level: 5
-        Area: 2
+    SplashArea: 2
     CopyFlags:
       Skill:
         Reproduce: true
     CastCancel: true
-    AfterCastActDelay: 1000
-    Cooldown: 2000
+    AfterCastActDelay: 400
+    Cooldown: 7000
     Requires:
-      SpCost: 22
+      SpCost: 25
+      ItemCost:
+        - Item: Poison_Powder
+          Amount: 1
   - Id: 2449
     Name: SO_PSYCHIC_WAVE
     Description: Psychic Wave
@@ -24507,11 +24505,11 @@ Body:
         Time: 20000
       - Level: 5
         Time: 20000
-    Cooldown: 20000
+    Cooldown: 15000
     Requires:
       SpCost: 35
       ItemCost:
-        - Item: Poison_Spore
+        - Item: Poisonous_Gas
           Amount: 1
     Unit:
       Id: Cloud_Kill

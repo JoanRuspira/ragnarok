@@ -48,6 +48,9 @@ int AssassinSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list
 			add_throw_shuriken_especial_effects(target);
 			return calculate_throw_shuriken_atk_ratio(skill_lv, sstatus->dex);
 			break;
+		case SO_POISON_BUSTER:
+			return calculate_poison_buster_atk_ratio(skill_lv, sstatus->int_);
+			break;
 		default:
 			return 0;
 			break;
@@ -352,4 +355,28 @@ int AssassinSkillAtkRatioCalculator::calculate_soul_destroyer_atk_ratio(int skil
 			break;
 		}
 	return ratio + (dex/3);
+}
+
+
+int AssassinSkillAtkRatioCalculator::calculate_poison_buster_atk_ratio(int skill_lv, int intelligence)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 250;
+			break;
+		case 2:
+			ratio = 350;
+			break;
+		case 3:
+			ratio = 450;
+			break;
+		case 4:
+			ratio = 550;
+			break;
+		case 5:
+			ratio = 650;
+			break;
+		}
+	return ratio + (intelligence/3);
 }

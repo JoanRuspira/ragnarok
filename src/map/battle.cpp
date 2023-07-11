@@ -2843,6 +2843,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case GC_CROSSIMPACT:
 		case NJ_SYURIKEN:
 		case ASC_BREAKER:
+		case SO_POISON_BUSTER:
 			if (sc && sc->data[SC_ROLLINGCUTTER])
 				skillratio += AssassinSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, sc->data[SC_ROLLINGCUTTER]->val1);
 			skillratio += AssassinSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, 0);
@@ -5161,12 +5162,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 						skillratio = ( 200 * ((sd) ? pc_checkskill(sd, SA_FROSTWEAPON) : 0) + sstatus->int_ * skill_lv );
 						RE_LVL_DMOD(100);
 						if( sc && sc->data[SC_COOLER_OPTION] )
-							skillratio += (sd ? sd->status.job_level * 5 : 0);
-						break;
-					case SO_POISON_BUSTER:
-						skillratio += 900 + 300 * skill_lv;
-						RE_LVL_DMOD(120);
-						if( sc && sc->data[SC_CURSED_SOIL_OPTION] )
 							skillratio += (sd ? sd->status.job_level * 5 : 0);
 						break;
 					case NPC_POISON_BUSTER:
