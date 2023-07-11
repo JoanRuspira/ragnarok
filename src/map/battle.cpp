@@ -1317,17 +1317,6 @@ bool battle_status_block_damage(struct block_list *src, struct block_list *targe
 		return false;
 	}
 
-	if ((sce = sc->data[SC_KAUPE]) && (skill_id != NPC_EARTHQUAKE || (skill_id == NPC_EARTHQUAKE && flag & NPC_EARTHQUAKE_FLAG)) && rnd() % 100 < sce->val2) { //Kaupe blocks damage (skill or otherwise) from players, mobs, homuns, mercenaries.
-		clif_specialeffect(target, EF_STORMKICK4, AREA);
-		//Shouldn't end until Breaker's non-weapon part connects.
-#ifndef RENEWAL
-		if (skill_id != ASC_BREAKER || !(flag&BF_WEAPON))
-#endif
-			if (--sce->val3 <= 0) //We make it work like Safety Wall, even though it only blocks 1 time.
-				status_change_end(target, SC_KAUPE, INVALID_TIMER);
-		return false;
-	}
-
 	if (flag&BF_MAGIC && (sce = sc->data[SC_PRESTIGE]) && rnd() % 100 < sce->val2) {
 		clif_specialeffect(target, EF_STORMKICK4, AREA); // Still need confirm it.
 		return false;
@@ -2852,6 +2841,8 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case GC_DARKCROW:
 		case DUMMY_CROSSIMPACT:
 		case GC_CROSSIMPACT:
+		case NJ_SYURIKEN:
+		case ASC_BREAKER:
 			if (sc && sc->data[SC_ROLLINGCUTTER])
 				skillratio += AssassinSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, sc->data[SC_ROLLINGCUTTER]->val1);
 			skillratio += AssassinSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, 0);
@@ -3015,15 +3006,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 				skillratio /= 2;
 			break;
 #endif
-		case ASC_BREAKER:
-#ifdef RENEWAL
-			skillratio += -100 + 140 * skill_lv + sstatus->str + sstatus->int_; // !TODO: Confirm stat modifier
-			RE_LVL_DMOD(100);
-#else
-			// Pre-Renewal: skill ratio for weapon part of damage [helvetica]
-			skillratio += -100 + 100 * skill_lv;
-#endif
-			break;
 		case WS_CARTTERMINATION:
 			i = 10 * (16 - skill_lv);
 			if (i < 1) i = 1;
@@ -3117,11 +3099,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			skillratio += 10 * skill_lv;
 #endif
 			break;
-#ifdef RENEWAL
-		case NJ_SYURIKEN:
-			skillratio += 5 * skill_lv;
-			break;
-#endif
 		case KN_CHARGEATK: { // +100% every 3 cells of distance but hard-limited to 500%
 				int k = (wd->miscflag-1)/3;
 				if (k < 0)
@@ -3609,9 +3586,6 @@ static int64 battle_calc_skill_constant_addition(struct Damage* wd, struct block
 				atk = sstatus->matk_min + rnd()%(sstatus->matk_max - sstatus->matk_min);
 			else
 				atk = sstatus->matk_min;
-			break;
-		case NJ_SYURIKEN:
-			atk = 4 * skill_lv;
 			break;
 #endif
 #ifdef RENEWAL
@@ -4282,14 +4256,6 @@ static void battle_calc_weapon_final_atk_modifiers(struct Damage* wd, struct blo
 		if (skill_id != SN_SHARPSHOOTING && skill_id != RA_ARROWSTORM)
 			status_change_end(src, SC_CAMOUFLAGE, INVALID_TIMER);
 	}
-
-#ifndef RENEWAL
-	if (skill_id == ASC_BREAKER) { //Breaker's int-based damage (a misc attack?)
-		struct Damage md = battle_calc_misc_attack(src, target, skill_id, skill_lv, wd->miscflag);
-
-		wd->damage += md.damage;
-	}
-#endif
 
 	// Skill damage adjustment
 	if ((skill_damage = battle_skill_damage(src, target, skill_id)) != 0)
@@ -5534,11 +5500,7 @@ struct Damage battle_calc_misc_attack(struct block_list *src,struct block_list *
 			md.damage = skill_calc_heal(src,target,skill_id,skill_lv,false);
 			break;
 #ifndef RENEWAL
-		case ASC_BREAKER:
-			md.damage = 500 + rnd()%500 + 5 * skill_lv * sstatus->int_;
-			nk.set(NK_IGNOREFLEE);
-			nk.set(NK_IGNOREELEMENT); //These two are not properties of the weapon based part.
-			break;
+
 		case HW_GRAVITATION:
 			md.damage = 200 + 200 * skill_lv;
 			md.dmotion = 0; //No flinch animation

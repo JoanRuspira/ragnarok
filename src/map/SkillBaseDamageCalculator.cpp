@@ -329,12 +329,6 @@ void SkillBaseDamageCalculator::battle_calc_attack_masteries(Damage * wd, block_
 		else
 			ATK_ADD(wd->masteryAtk, wd->masteryAtk2, ((wd->div_ < 1) ? 1 : wd->div_) * sd->spiritball * 3);
 
-
-		if (skill_id == NJ_SYURIKEN && (skill = pc_checkskill(sd, NJ_TOBIDOUGU)) > 0) { // !TODO: Confirm new mastery formula
-			ATK_ADD(wd->damage, wd->damage2, 3 * skill);
-			ATK_ADD(wd->masteryAtk, wd->masteryAtk2, 3 * skill);
-		}
-
 		// switch (skill_id) {
 		// case RA_WUGDASH:
 		// case RA_WUGBITE:

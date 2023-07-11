@@ -10231,60 +10231,22 @@ Body:
   - Id: 379
     Name: ASC_BREAKER
     Description: Soul Destroyer
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    DamageFlags:
-      IgnoreAtkCard: true
     Range: 9
     Hit: Single
     HitCount: 1
     Element: Weapon
     CastCancel: true
-    CastTime: 700
-    AfterCastActDelay:
-      - Level: 1
-        Time: 1000
-      - Level: 2
-        Time: 1200
-      - Level: 3
-        Time: 1400
-      - Level: 4
-        Time: 1600
-      - Level: 5
-        Time: 1800
-      - Level: 6
-        Time: 2000
-      - Level: 7
-        Time: 2200
-      - Level: 8
-        Time: 2400
-      - Level: 9
-        Time: 2600
-      - Level: 10
-        Time: 2800
+    CastTime: 2000
+    AfterCastActDelay: 400
+    Cooldown: 7000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 20
-        - Level: 2
-          Amount: 20
-        - Level: 3
-          Amount: 20
-        - Level: 4
-          Amount: 20
-        - Level: 5
-          Amount: 20
-        - Level: 6
-          Amount: 30
-        - Level: 7
-          Amount: 30
-        - Level: 8
-          Amount: 30
-        - Level: 9
-          Amount: 30
-        - Level: 10
-          Amount: 30
+      SpCost: 17
+      Ammo:
+        Shuriken: true
+      AmmoAmount: 1
   - Id: 380
     Name: SN_SIGHT
     Description: Falcon Eyes
@@ -10917,7 +10879,7 @@ Body:
     HitCount: 1
     Element: Weapon
     SplashArea: 3
-    Cooldown: 7000
+    Cooldown: 10000
     CastTime: 2000
     AfterCastActDelay: 400
     Duration2:
@@ -10929,6 +10891,9 @@ Body:
         Time: 120000
     Requires:
       SpCost: 23
+      Ammo:
+        Kunai: true
+      AmmoAmount: 4
   - Id: 407
     Name: ASC_CDP
     Description: Create Deadly Poison
@@ -14034,17 +13999,15 @@ Body:
   - Id: 523
     Name: NJ_SYURIKEN
     Description: Throw Shuriken
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    DamageFlags:
-      IgnoreFlee: true
     Range: 9
     Hit: Single
     HitCount: 1
     Element: Weapon
     Requires:
-      SpCost: 2
+      SpCost: 14
       Ammo:
         Shuriken: true
       AmmoAmount: 1
@@ -14056,23 +14019,13 @@ Body:
     TargetType: Attack
     Range: 9
     Hit: Multi_Hit
-    HitCount:
-      - Level: 1
-        Count: 1
-      - Level: 2
-        Count: 2
-      - Level: 3
-        Count: 3
-      - Level: 4
-        Count: 4
-      - Level: 5
-        Count: 5
+    HitCount: -3
     Element: Weapon
     Cooldown: 5000
-    CastTime: 2000
+    CastTime: 0
     AfterCastActDelay: 400
     Requires:
-      SpCost: 16
+      SpCost: 15
       Ammo:
         Kunai: true
       AmmoAmount: 3
@@ -27415,8 +27368,6 @@ Body:
           Amount: 36
         - Level: 5
           Amount: 40
-      Weapon:
-        Huuma: true
     Unit:
       Id: Dummyskill
       Range: 3

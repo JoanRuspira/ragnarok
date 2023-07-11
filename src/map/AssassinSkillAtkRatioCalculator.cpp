@@ -26,11 +26,14 @@ int AssassinSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list
 			break;
 		case NJ_KUNAI:
 			add_throw_kunai_especial_effects(target);
-			return calculate_throw_kunai_atk_ratio(skill_lv);
+			return calculate_throw_kunai_atk_ratio(skill_lv, sstatus->dex);
 			break;
 		case ASC_METEORASSAULT:
-			add_meteor_assault_special_effects(src);
+			// add_meteor_assault_special_effects(src);
 			return calculate_meteor_assault_atk_ratio(skill_lv, sstatus->dex);
+			break;
+		case ASC_BREAKER:
+			return calculate_soul_destroyer_atk_ratio(skill_lv, sstatus->dex);
 			break;
 		case GC_DARKCROW:
 			add_dark_claw_special_effects(target);
@@ -41,20 +44,29 @@ int AssassinSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list
 			add_cross_impact_special_effects(target);
 			return calculate_cross_impact_atk_ratio(skill_lv, sstatus->luk);
 			break;
+		case NJ_SYURIKEN:
+			add_throw_shuriken_especial_effects(target);
+			return calculate_throw_shuriken_atk_ratio(skill_lv, sstatus->dex);
+			break;
 		default:
 			return 0;
 			break;
 	}
 }
 
-void AssassinSkillAtkRatioCalculator::add_meteor_assault_special_effects(struct block_list *target)
-{
-	clif_specialeffect(target, EF_ZANGETSU, AREA);
-}
+// void AssassinSkillAtkRatioCalculator::add_meteor_assault_special_effects(struct block_list *target)
+// {
+// 	// clif_specialeffect(target, EF_ZANGETSU, AREA);
+// }
 
 void AssassinSkillAtkRatioCalculator::add_throw_kunai_especial_effects(struct block_list *target)
 {
-	clif_specialeffect(target, EF_STRETCH, AREA);
+	clif_specialeffect(target, EF_TRIPLEATTACK4, AREA);
+}
+
+void AssassinSkillAtkRatioCalculator::add_throw_shuriken_especial_effects(struct block_list *target)
+{
+	clif_specialeffect(target, EF_SONIC_CLAW, AREA);
 }
 
 void AssassinSkillAtkRatioCalculator::add_sonic_blow_especial_effects(struct block_list *target)
@@ -232,19 +244,19 @@ int AssassinSkillAtkRatioCalculator::calculate_meteor_assault_atk_ratio(int skil
 	int ratio = 0;
 	switch (skill_lv) {
 		case 1:
-			ratio = 30;
-			break;
-		case 2:
 			ratio = 100;
 			break;
+		case 2:
+			ratio = 200;
+			break;
 		case 3:
-			ratio = 180;
+			ratio = 300;
 			break;
 		case 4:
-			ratio = 240;
+			ratio = 400;
 			break;
 		case 5:
-			ratio = 300;
+			ratio = 500;
 			break;
 		}
 	return ratio + (dex/3);
@@ -273,9 +285,71 @@ int AssassinSkillAtkRatioCalculator::calculate_venom_splasher_atk_ratio(int skil
 	return ratio + (intelligence/3);
 }
 
-int AssassinSkillAtkRatioCalculator::calculate_throw_kunai_atk_ratio(int skill_lv)
+int AssassinSkillAtkRatioCalculator::calculate_throw_kunai_atk_ratio(int skill_lv, int dex)
 {
-	int ratio = -20;
-	return ratio;
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 30;
+			break;
+		case 2:
+			ratio = 100;
+			break;
+		case 3:
+			ratio = 180;
+			break;
+		case 4:
+			ratio = 240;
+			break;
+		case 5:
+			ratio = 300;
+			break;
+		}
+	return ratio + (dex/3);
 }
 
+int AssassinSkillAtkRatioCalculator::calculate_throw_shuriken_atk_ratio(int skill_lv, int dex)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 25;
+			break;
+		case 2:
+			ratio = 50;
+			break;
+		case 3:
+			ratio = 75;
+			break;
+		case 4:
+			ratio = 100;
+			break;
+		case 5:
+			ratio = 125;
+			break;
+		}
+	return ratio + (dex/3);
+}
+
+int AssassinSkillAtkRatioCalculator::calculate_soul_destroyer_atk_ratio(int skill_lv, int dex)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 200;
+			break;
+		case 2:
+			ratio = 300;
+			break;
+		case 3:
+			ratio = 400;
+			break;
+		case 4:
+			ratio = 500;
+			break;
+		case 5:
+			ratio = 600;
+			break;
+		}
+	return ratio + (dex/3);
+}

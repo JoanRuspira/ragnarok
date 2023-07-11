@@ -8,7 +8,9 @@ class AssassinSkillAtkRatioCalculator
 		static int calculate_venom_dust_atk_ratio(int skill_lv, int intelligence);
 		static int calculate_venom_splasher_atk_ratio(int skill_lv, int intelligence);
 		static int calculate_sonic_blow_atk_ratio(int skill_lv);
-		static int calculate_throw_kunai_atk_ratio(int skill_lv);
+		static int calculate_throw_kunai_atk_ratio(int skill_lv, int dex);
+		static int calculate_throw_shuriken_atk_ratio(int skill_lv, int dex);
+		static int calculate_soul_destroyer_atk_ratio(int skill_lv, int dex);
 		static int calculate_rolling_cutter_atk_ratio(int skill_lv, int luck);
 		static int calculate_dark_claw_atk_ratio(int skill_lv);
 		static int calculate_cross_impact_atk_ratio(int skill_lv, int luck);
@@ -18,6 +20,7 @@ class AssassinSkillAtkRatioCalculator
 		static void add_rolling_cutter_especial_effects(struct block_list *target);
 		static void add_venom_splasher_especial_effects(struct block_list *target);
 		static void add_throw_kunai_especial_effects(struct block_list *target);
+		static void add_throw_shuriken_especial_effects(struct block_list *target);
 		static void add_meteor_assault_special_effects(struct block_list *src);
 		static void add_dark_claw_special_effects(struct block_list *target);
 		static void add_cross_impact_special_effects(struct block_list *target);
