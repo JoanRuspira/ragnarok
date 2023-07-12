@@ -3677,11 +3677,8 @@ static void battle_attack_sc_bonus(struct Damage* wd, struct block_list *src, st
 		if (sc->data[SC_EDP]) {
 			switch(skill_id) {
 				default: // fall through to apply EDP bonuses
-					// Renewal EDP formula [helvetica]
-					// weapon atk * (1 + (edp level * .8))
-					// equip atk * (1 + (edp level * .6))
-					ATK_RATE(wd->weaponAtk, wd->weaponAtk2, 100 + (sc->data[SC_EDP]->val1 * 80));
-					ATK_RATE(wd->equipAtk, wd->equipAtk2, 100 + (sc->data[SC_EDP]->val1 * 60));
+					ATK_RATE(wd->weaponAtk, wd->weaponAtk2, sc->data[SC_EDP]->val1 * 100);
+					// ATK_RATE(wd->equipAtk, wd->equipAtk2, 100 + (sc->data[SC_EDP]->val1 * 60));
 					break;
 			}
 		}

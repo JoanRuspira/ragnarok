@@ -10158,18 +10158,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			tick = INFINITE_TICK; // Duration sent to the client should be infinite
 			break;
 		case SC_EDP:
-			val2 = val1 + 2; // Chance to Poison enemies.
-#ifndef RENEWAL
-			val3 = 50*(val1+1); // Damage increase (+50 +50*lv%)
-#endif
-			if (sd) {
-				uint16 poison_level = pc_checkskill(sd, GC_RESEARCHNEWPOISON);
-
-				if (poison_level > 0) {
-					tick += 30000; // Base of 30 seconds
-					tick += poison_level * 15 * 1000; // Additional 15 seconds per level
-				}
-			}
+			val2 = val1 * 3; // Chance to Poison enemies.
 			break;
 		case SC_POISONREACT:
 			val2=2*val1; // number of counters
