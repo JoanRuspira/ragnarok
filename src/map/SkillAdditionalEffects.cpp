@@ -372,6 +372,9 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 		case AS_SONICBLOW:
 			clif_skill_damage(src,bl,tick, status_get_amotion(src), 0, -30000, 1, DUMMY_SONICBLOW, skill_lv, DMG_SINGLE);
 			break;
+		case GC_CROSSIMPACT:
+			clif_skill_damage(src,bl,tick, status_get_amotion(src), 0, -30000, 1, DUMMY_CROSSIMPACT, skill_lv, DMG_SINGLE);
+			break;
 	}
 }
 

@@ -5336,7 +5336,7 @@ Body:
       - Level: 5
         Time: 65000
     Requires:
-      SpCost: 45
+      SpCost: 30
   - Id: 140
     Name: AS_VENOMDUST
     Description: Venom Dust
@@ -5576,7 +5576,7 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Self
-    Cooldown: 500
+    Cooldown: 100
     DamageFlags:
       NoDamage: true
     Flags:
@@ -5585,7 +5585,7 @@ Body:
     HitCount: 1
     Knockback: 5
     Requires:
-      SpCost: 7
+      SpCost: 5
   - Id: 151
     Name: TF_PICKSTONE
     Description: Find Stone
@@ -5612,7 +5612,7 @@ Body:
     Range: 7
     Hit: Single
     HitCount: 1
-    Cooldown: 7000
+    Cooldown: 5000
     AfterCastActDelay: 400
     CopyFlags:
       Skill:
