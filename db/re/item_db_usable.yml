@@ -1673,21 +1673,6 @@ Body:
       BuyingStore: true
     Script: |
       percentheal -100,-100;
-  - Id: 678
-    AegisName: Poison_Bottle
-    Name: Poison Bottle
-    Type: Usable
-    Buy: 5000
-    Weight: 100
-    Flags:
-      BuyingStore: true
-    Script: |
-      if (Class == Job_Assassin_Cross) {
-         sc_start SC_DPoison,60000,0;
-         sc_start SC_ASPDPOTION3,60000,0;
-      }
-      else
-         percentheal -100,-100;
   - Id: 679
     AegisName: Gold_Pill
     Name: Pilule

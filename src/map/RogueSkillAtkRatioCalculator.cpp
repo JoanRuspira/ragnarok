@@ -39,7 +39,7 @@ int RogueSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* s
 
 void RogueSkillAtkRatioCalculator::add_shady_slash_special_effects(struct block_list *target)
 {
-	clif_specialeffect(target, EF_MADNESS_BLUE, AREA);
+	clif_specialeffect(target, 1103, AREA);
 }
 
 void RogueSkillAtkRatioCalculator::add_back_stab_special_effects(struct block_list *target)
@@ -52,6 +52,7 @@ void RogueSkillAtkRatioCalculator::add_hack_and_slash_special_effects(struct blo
 	clif_specialeffect(target, EF_HIT2, AREA);
 	clif_specialeffect(target, EF_HIT6, AREA);
 	clif_specialeffect(target, EF_HFLIMOON3, AREA);
+	clif_specialeffect(target, EF_ZANGETSU, AREA); //ÃÊ½Â´Þ2.str
 	clif_specialeffect(src, EF_GUMGANG7, AREA);
 }
 

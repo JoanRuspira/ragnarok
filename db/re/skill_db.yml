@@ -6512,13 +6512,11 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    DamageFlags:
-      IgnoreFlee: true
     Range: -1
     Hit: Single
     HitCount: 1
     Element: Weapon
-    Cooldown: 6000
+    Cooldown: 5000
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -14212,21 +14210,11 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
+    Cooldown: 4000
+    AfterCastActDelay: 400
     DamageFlags:
       Critical: true
-    Flags:
-      AlterRangeShadowJump: true
-    Range:
-      - Level: 1
-        Size: 7
-      - Level: 2
-        Size: 9
-      - Level: 3
-        Size: 11
-      - Level: 4
-        Size: 13
-      - Level: 5
-        Size: 15
+    Range: 1
     Hit: Single
     HitCount: 1
     Element: Weapon
@@ -21088,7 +21076,7 @@ Body:
   - Id: 2296
     Name: SC_UNLUCKY
     Description: Masquerade - Unlucky
-    MaxLevel: 3
+    MaxLevel: 5
     TargetType: Attack
     DamageFlags:
       NoDamage: true
@@ -21105,24 +21093,17 @@ Body:
         Time: 15000
       - Level: 3
         Time: 20000
+      - Level: 4
+        Time: 20000
+      - Level: 5
+        Time: 20000
     Cooldown: 2000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 30
-        - Level: 2
-          Amount: 40
-        - Level: 3
-          Amount: 50
-      ItemCost:
-        - Item: Face_Paint
-          Amount: 1
-        - Item: Makeover_Brush
-          Amount: 0
+      SpCost: 50
   - Id: 2297
     Name: SC_WEAKNESS
     Description: Masquerade - Weakness
-    MaxLevel: 3
+    MaxLevel: 5
     TargetType: Attack
     DamageFlags:
       NoDamage: true
@@ -21139,20 +21120,13 @@ Body:
         Time: 15000
       - Level: 3
         Time: 20000
+      - Level: 4
+        Time: 20000
+      - Level: 5
+        Time: 20000
     Cooldown: 2000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 30
-        - Level: 2
-          Amount: 40
-        - Level: 3
-          Amount: 50
-      ItemCost:
-        - Item: Face_Paint
-          Amount: 1
-        - Item: Makeover_Brush
-          Amount: 0
+      SpCost: 50
   - Id: 2298
     Name: SC_STRIPACCESSARY
     Description: Strip Accessory

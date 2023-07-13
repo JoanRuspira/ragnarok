@@ -2464,7 +2464,7 @@ Body:
     AegisName: Venom_Knife
     Name: Venom Knife
     Type: Etc
-    Buy: 1780
+    Buy: 10
     Weight: 10
     Flags:
       BuyingStore: true
@@ -5750,7 +5750,7 @@ Body:
     AegisName: Rust_Suriken
     Name: Old Shuriken
     Type: Etc
-    Buy: 1780
+    Buy: 20
     Weight: 10
     Flags:
       BuyingStore: true
@@ -6388,8 +6388,8 @@ Body:
     AegisName: Poison_Powder
     Name: Poisonous Powder
     Type: Etc
-    Buy: 160
-    Weight: 10
+    Buy: 25
+    Weight: 50
     Flags:
       BuyingStore: true
   - Id: 7155
@@ -7629,8 +7629,8 @@ Body:
     AegisName: Poisonous_Gas
     Name: Toxic Gas
     Type: Etc
-    Buy: 666
-    Weight: 10
+    Buy: 25
+    Weight: 50
     Flags:
       BuyingStore: true
   - Id: 7323
@@ -9415,7 +9415,9 @@ Body:
     Type: Ammo
     SubType: Kunai
     Buy: 10
-    Weight: 20
+    Weight: 10
+    Flags:
+      BuyingStore: true
     Attack: 30
     Jobs:
       Assassin: true
@@ -9430,7 +9432,9 @@ Body:
     Type: Ammo
     SubType: Kunai
     Buy: 10
-    Weight: 20
+    Weight: 10
+    Flags:
+      BuyingStore: true
     Attack: 30
     Jobs:
       Assassin: true
@@ -9445,7 +9449,9 @@ Body:
     Type: Ammo
     SubType: Kunai
     Buy: 10
-    Weight: 20
+    Weight: 10
+    Flags:
+      BuyingStore: true
     Attack: 30
     Jobs:
       Assassin: true
@@ -9460,7 +9466,9 @@ Body:
     Type: Ammo
     SubType: Kunai
     Buy: 10
-    Weight: 20
+    Weight: 10
+    Flags:
+      BuyingStore: true
     Attack: 30
     Jobs:
       Assassin: true
@@ -9475,7 +9483,9 @@ Body:
     Type: Ammo
     SubType: Kunai
     Buy: 10
-    Weight: 20
+    Weight: 10
+    Flags:
+      BuyingStore: true
     Attack: 30
     Jobs:
       Assassin: true
@@ -9552,8 +9562,10 @@ Body:
     Name: Shuriken
     Type: Ammo
     SubType: Shuriken
-    Buy: 4
-    Weight: 5
+    Buy: 10
+    Weight: 10
+    Flags:
+      BuyingStore: true
     Attack: 10
     Jobs:
       Assassin: true
@@ -9566,50 +9578,65 @@ Body:
     Type: Ammo
     SubType: Shuriken
     Buy: 10
-    Weight: 5
+    Weight: 10
+    Flags:
+      BuyingStore: true
     Attack: 30
     Jobs:
       Assassin: true
     Locations:
       Ammo: true
-    EquipLevelMin: 20
+    EquipLevelMin: 1
   - Id: 13252
     AegisName: Flash_Shuriken
     Name: Flash Shuriken
     Type: Ammo
     SubType: Shuriken
-    Buy: 20
-    Weight: 5
-    Attack: 45
+    Buy: 10
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    Attack: 30
     Jobs:
       Assassin: true
     Locations:
       Ammo: true
-    EquipLevelMin: 40
+    EquipLevelMin: 1
   - Id: 13253
     AegisName: Sharp_Leaf_Shuriken
     Name: Sharp Leaf Shuriken
     Type: Ammo
     SubType: Shuriken
-    Buy: 40
-    Weight: 5
-    Attack: 70
+    Buy: 10
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    Attack: 30
     Jobs:
       Assassin: true
     Locations:
       Ammo: true
-    EquipLevelMin: 60
+    EquipLevelMin: 1
   - Id: 13254
     AegisName: Thorn_Needle_Shuriken
     Name: Thorn Needle Shuriken
     Type: Ammo
     SubType: Shuriken
-    Buy: 100
-    Weight: 5
-    Attack: 100
+    Buy: 10
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    Attack: 30
     Jobs:
       Assassin: true
     Locations:
       Ammo: true
-    EquipLevelMin: 80
-       
+    EquipLevelMin: 1
+  - Id: 678
+    AegisName: Poison_Bottle
+    Name: Poison Bottle
+    Type: Etc
+    Buy: 100
+    Weight: 100
+    Flags:
+      BuyingStore: true

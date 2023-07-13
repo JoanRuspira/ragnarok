@@ -17,17 +17,17 @@
 	mes "Aha!";
 	mes "A seasoned Paladin, what outfit would you like to wear?";
 	next;
-	switch(select("Crusader:Paladin:Shield Master:Royal Guard:Imperial Guard")) {
+	switch(select("Paladin::Royal Guard:Shield Master:Imperial Guard")) {
 		case 1:
 			setlook LOOK_CLOTHES_COLOR,0;
-        	setlook LOOK_BODY2,4;
+        	setlook LOOK_BODY2,0;
 			specialeffect2 EF_ENTRY2;
 			mes "There you go!";
 			mes "Come back if you want to change your outfit again!";
 			close;
 		case 2:
 			setlook LOOK_CLOTHES_COLOR,0;
-        	setlook LOOK_BODY2,0;
+        	setlook LOOK_BODY2,1;
 			specialeffect2 EF_ENTRY2;
 			mes "There you go!";
 			mes "Come back if you want to change your outfit again!";
@@ -40,13 +40,6 @@
 			mes "Come back if you want to change your outfit again!";
 			close;
 		case 4:
-			setlook LOOK_CLOTHES_COLOR,0;
-        	setlook LOOK_BODY2,1;
-			specialeffect2 EF_ENTRY2;
-			mes "There you go!";
-			mes "Come back if you want to change your outfit again!";
-			close;
-		case 5:
 			setlook LOOK_CLOTHES_COLOR,0;
         	setlook LOOK_BODY2,2;
 			specialeffect2 EF_ENTRY2;

@@ -1982,16 +1982,6 @@ moc_prydb1,160,119,1	script	Morroc Novice#moc::npcid	642,{
 }
 
 
-in_moc_16,18,35,4	script	Assassin Guildmaster#moc::npcid	730,{
-	npctalk "I will make you an assassin.";
-	end;
-}
-
-
-in_moc_16,20,19,1	script	Assassin#moc::npcid	12,{
-	npctalk "npcdialog";
-	end;
-}
 
 moc_fild12,165,268,3	script	Morroc Adventurer#moc::npcid	698,{
 	npctalk "npcdialog";

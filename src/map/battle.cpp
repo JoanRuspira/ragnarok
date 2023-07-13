@@ -2387,11 +2387,6 @@ static bool is_attack_hitting(struct Damage* wd, struct block_list *src, struct 
 			case ML_PIERCE:
 				hitrate += hitrate * 5 * skill_lv / 100;
 				break;
-#ifdef RENEWAL
-			case RG_BACKSTAP:
-				hitrate += skill_lv; // !TODO: What's the rate increase?
-				break;
-#endif
 			case RK_SONICWAVE:
 				hitrate += hitrate * 3 * skill_lv / 100; // !TODO: Confirm the hitrate bonus
 				break;
@@ -4304,10 +4299,6 @@ static struct Damage initialize_weapon_data(struct block_list *src, struct block
 		switch(skill_id)
 		{
 #ifdef RENEWAL
-			case RG_BACKSTAP:
-				// if (sd && sd->status.weapon == W_DAGGER)
-				wd.div_ = 2;
-				break;
 			case MO_CHAINCOMBO:
 				if (sd && sd->status.weapon == W_KNUCKLE)
 					wd.div_ = -6;

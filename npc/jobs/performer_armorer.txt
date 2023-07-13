@@ -18,36 +18,29 @@
 	mes "A seasoned Performer, what outfit would you like to wear?";
 	next;
 	if (sex) {
-		switch(select("Bard:Clown:Poet:Minstrel:Trobadour")) {
+		switch(select("Clown:Poet:Minstrel:Trobadour")) {
 			case 1:
-				setlook LOOK_CLOTHES_COLOR,0;
-				setlook LOOK_BODY2,4;
-				specialeffect2 EF_ENTRY2;
-				mes "There you go!";
-				mes "Come back if you want to change your outfit again!";
-				close;
-			case 2:
 				setlook LOOK_CLOTHES_COLOR,0;
 				setlook LOOK_BODY2,0;
 				specialeffect2 EF_ENTRY2;
 				mes "There you go!";
 				mes "Come back if you want to change your outfit again!";
 				close;
-			case 3:
+			case 2:
 				setlook LOOK_CLOTHES_COLOR,0;
 				setlook LOOK_BODY2,1;
 				specialeffect2 EF_ENTRY2;
 				mes "There you go!";
 				mes "Come back if you want to change your outfit again!";
 				close;
-			case 4:
+			case 3:
 				setlook LOOK_CLOTHES_COLOR,0;
 				setlook LOOK_BODY2,2;
 				specialeffect2 EF_ENTRY2;
 				mes "There you go!";
 				mes "Come back if you want to change your outfit again!";
 				close;
-			case 5:
+			case 4:
 				setlook LOOK_CLOTHES_COLOR,0;
 				setlook LOOK_BODY2,3;
 				specialeffect2 EF_ENTRY2;
@@ -56,29 +49,22 @@
 				close;
 		}	
 	} else {
-		switch(select("Dancer:Gypsy:Wanderer:Trouvere")) {
+		switch(select("Gypsy:Wanderer:Trouvere")) {
 			case 1:
-				setlook LOOK_CLOTHES_COLOR,0;
-				setlook LOOK_BODY2,4;
-				specialeffect2 EF_ENTRY2;
-				mes "There you go!";
-				mes "Come back if you want to change your outfit again!";
-				close;
-			case 2:
 				setlook LOOK_CLOTHES_COLOR,0;
 				setlook LOOK_BODY2,0;
 				specialeffect2 EF_ENTRY2;
 				mes "There you go!";
 				mes "Come back if you want to change your outfit again!";
 				close;
-			case 3:
+			case 2:
 				setlook LOOK_CLOTHES_COLOR,0;
-				setlook LOOK_BODY2,3;
+				setlook LOOK_BODY2,2;
 				specialeffect2 EF_ENTRY2;
 				mes "There you go!";
 				mes "Come back if you want to change your outfit again!";
 				close;
-			case 4:
+			case 3:
 				setlook LOOK_CLOTHES_COLOR,0;
 				setlook LOOK_BODY2,1;
 				specialeffect2 EF_ENTRY2;

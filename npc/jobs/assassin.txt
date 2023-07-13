@@ -1,0 +1,82 @@
+//===== Script =======================================
+// Card Removal NPCs
+//====================================================
+
+-	script	Assassin Guildmaster#asgld::AsGld	-1,{
+	if (Class == Job_Thief) {
+		mes "[Assassin Guildmaster]";
+		mes "Good day! I am the Assassin Guildmaster.";
+		mes "I train Thieves that meet the requirements and allow them to become Assassins.";
+		next;
+		mes "[Assassin Guildmaster]";
+		mes "As an Assassin you will gain new skills.";
+		mes "The requirements are:";
+		mes "- Being a first class job.";
+		mes "- Being Job level 50.";
+		mes "- Having used all your skill points.";
+		next;
+		mes "[Assassin Guildmaster]";
+		mes "Do you want to become an Assassin?";
+		next;
+		switch(select("Yes:No")) {
+			case 1:
+				mes "[Assassin Guildmaster]";
+				mes "Good! Let me see if you pass our requirements...";
+				next;
+				if (JobLevel < 50) {
+					mes "[Assassin Guildmaster]";
+					mes "Hmm... Your job level does not meet our requirements.";
+					mes "You need to be more experienced before being an Assassin.";
+					close;
+				}
+				if (SkillPoint) {
+					mes "[Assassin Guildmaster]";
+					mes "Looks like you have not used all your skill points.";
+					mes "Use them and I'll be able to make you an Assassin.";
+					close;
+				}
+				mes "[Assassin Guildmaster]";
+				mes "Okay! Looks like you pass all of them!";
+				mes "You are allowed to join the Assassin guild.";
+				mes "Congratulations!";
+				jobchange Job_Assassin;
+				specialeffect2 EF_JOBLVUP50;
+				close;
+			case 2:
+				mes "[Assassin Guildmaster]";
+				mes "Ah! Let me know if you change your mind.";
+				mes "We are always looking for new adventurers";
+				mes "to join the guild.";
+				close;
+		}
+		
+	}
+
+	if (Class == Job_Assassin) {
+		mes "[Assassin Guildmaster]";
+		mes "Hi fellow Assassin!";
+		mes "Are you thinking about your next job?";
+		next;
+		mes "[Assassin Guildmaster]";
+		mes "You can become an Assassin Cross if you reach job level 50.";
+		next;
+		mes "[Assassin Guildmaster]";
+		mes "Go find the legendary Assassin Cross in The Morroc Palace.";
+		mes "I'm sure he will be able to train you.";
+		close;
+	}
+
+	if (Class == Job_Assassin_Cross) {
+		mes "[Assassin Guildmaster]";
+		mes "Ah! An experienced member of the guild!";
+		mes "Are you here to help train the new members?";
+		close;
+	}
+
+	mes "[Assassin Guildmaster]";
+	mes "Welcome to the Assassin guild. We accept applications from Thieves that meet our requirements.";
+	close;
+}
+
+in_moc_16,18,35,4	duplicate(AsGld)	Assassin Guildmaster#asgld	730
+
