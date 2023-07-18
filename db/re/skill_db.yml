@@ -1659,7 +1659,7 @@ Body:
       - Level: 5
         Time: 300000
     Requires:
-      SpCost: 50
+      SpCost: 40
       Weapon:
         dagger: true
   - Id: 815
@@ -10495,7 +10495,7 @@ Body:
       SpCost: 20
   - Id: 390
     Name: ST_REJECTSWORD
-    Description: Counter Instinct
+    Description: Killer Instinct
     MaxLevel: 5
     Type: Weapon
     TargetType: Self
@@ -10503,9 +10503,15 @@ Body:
       NoDamage: true
     HitCount: 1
     CastCancel: true
-    Duration1: 300000
+    Cooldown: 20000
+    Duration1: 60000
+    AfterCastActDelay: 1000
     Requires:
-      SpCost: 20
+      SpCost: 30
+      Weapon:
+        Dagger: true
+        1hSword: true
+        2hsword: true
   - Id: 392
     Name: CR_ALCHEMY
     Description: Alchemy
@@ -21842,48 +21848,25 @@ Body:
     Description: Moon Slasher
     MaxLevel: 5
     Type: Weapon
-    TargetType: Self
-    DamageFlags:
-      Splash: true
-    Flags:
-      IgnoreHovering: true
-    Hit: Single
-    HitCount: 1
+    TargetType: Attack
+    Range: -1
+    Hit: Multi_hit
+    HitCount: -2
     Element: Weapon
-    SplashArea: 3
+    DamageFlags:
+      Critical: true
     CopyFlags:
       Skill:
         Reproduce: true
-    CastCancel: true
-    CastTime: 1000
-    AfterCastActDelay: 1000
+    AfterCastActDelay: 400
     Duration1: 1000
-    Cooldown:
-      - Level: 1
-        Time: 6000
-      - Level: 2
-        Time: 5000
-      - Level: 3
-        Time: 4000
-      - Level: 4
-        Time: 3000
-      - Level: 5
-        Time: 2000
-    Requires:
-      SpCost:
-        - Level: 1
-          Amount: 20
-        - Level: 2
-          Amount: 24
-        - Level: 3
-          Amount: 28
-        - Level: 4
-          Amount: 32
-        - Level: 5
-          Amount: 36
+    Cooldown: 5000
+    Requires: 
+      SpCost: 20
       Weapon:
-        1hSpear: true
-        2hSpear: true
+        Dagger: true
+        1hSword: true
+        2hsword: true
   - Id: 2321
     Name: LG_RAYOFGENESIS
     Description: Ray of Genesis

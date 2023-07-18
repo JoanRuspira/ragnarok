@@ -31,6 +31,8 @@ int RogueSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* s
 			return calculate_triangle_shot_atk_ratio(skill_lv);
 		case RA_ARROWSTORM:
 			return calculate_arrow_storm_atk_ratio(skill_lv, sstatus->dex);
+		case LG_MOONSLASHER:
+			return calculate_fatal_menace_atk_ratio(skill_lv, sstatus->luk);
 		default:
 			return 0;
 			break;
@@ -230,20 +232,44 @@ int RogueSkillAtkRatioCalculator::calculate_back_stab_atk_ratio(int skill_lv)
 	int ratio = 0;
 	switch (skill_lv) {
 		case 1:
-			ratio = 25;
+			ratio = 150;
 			break;
 		case 2:
-			ratio = 50;
+			ratio = 200;
 			break;
 		case 3:
-			ratio = 75;
+			ratio = 250;
 			break;
 		case 4:
-			ratio = 100;
+			ratio = 300;
 			break;
 		case 5:
-			ratio = 125;
+			ratio = 350;
 			break;
 	}
 	return ratio;
+}
+
+
+int RogueSkillAtkRatioCalculator::calculate_fatal_menace_atk_ratio(int skill_lv, int luck)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 150;
+			break;
+		case 2:
+			ratio = 250;
+			break;
+		case 3:
+			ratio = 350;
+			break;
+		case 4:
+			ratio = 450;
+			break;
+		case 5:
+			ratio = 550;
+			break;
+		}
+	return ratio + (luck/3);
 }

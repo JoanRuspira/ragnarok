@@ -593,8 +593,7 @@ void initChangeTables(void)
 	set_sc( WS_MELTDOWN		, SC_MELTDOWN		, EFST_MELTDOWN		, SCB_NONE );
 	set_sc( WS_CARTBOOST		, SC_CARTBOOST		, EFST_CARTBOOST		, SCB_SPEED );
 	set_sc( ST_CHASEWALK		, SC_CHASEWALK		, EFST_CHASEWALK		, SCB_SPEED );
-	set_sc( ST_REJECTSWORD		, SC_REJECTSWORD	, EFST_SWORDREJECT, SCB_NONE );
-	add_sc( ST_REJECTSWORD		, SC_AUTOCOUNTER	);
+	set_sc( ST_REJECTSWORD		, SC_REJECTSWORD	, EFST_SWORDREJECT, SCB_WATK|SCB_CRI );
 	set_sc( CG_MARIONETTE		, SC_MARIONETTE		, EFST_MARIONETTE_MASTER, SCB_STR|SCB_AGI|SCB_VIT|SCB_INT|SCB_DEX|SCB_LUK );
 	set_sc( CG_MARIONETTE		, SC_MARIONETTE2	, EFST_MARIONETTE, SCB_STR|SCB_AGI|SCB_VIT|SCB_INT|SCB_DEX|SCB_LUK );
 	add_sc( LK_HEADCRUSH		, SC_BLEEDING		);
@@ -6512,6 +6511,8 @@ static unsigned short status_calc_watk(struct block_list *bl, struct status_chan
 		watk += 5*sc->data[SC_UPROAR]->val1;
 	if( sc->data[SC_EXPLOSIONSPIRITS] )
 		watk += 15;
+	if (sc->data[SC_REJECTSWORD])
+		watk += sc->data[SC_REJECTSWORD]->val3;
 	if(sc->data[SC_INCATKRATE])
 		watk += watk * sc->data[SC_INCATKRATE]->val1/100;
 	if(sc->data[SC_PROVOKE])
@@ -6716,6 +6717,8 @@ static signed short status_calc_critical(struct block_list *bl, struct status_ch
 		critical += sc->data[SC_CRIFOOD]->val1;
 	if (sc->data[SC_EXPLOSIONSPIRITS])
 		critical += sc->data[SC_EXPLOSIONSPIRITS]->val2;
+	if (sc->data[SC_REJECTSWORD])
+		critical += sc->data[SC_REJECTSWORD]->val2;
 	if (sc->data[SC_FORTUNE])
 		critical += sc->data[SC_FORTUNE]->val2;
 	if (sc->data[SC_TRUESIGHT])
@@ -10645,9 +10648,9 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			break;
 
 		case SC_REJECTSWORD:
-			val2 = 15*val1; // Reflect chance
-			val3 = 3; // Reflections
-			tick = INFINITE_TICK;
+			val2 = 75 + 25*val1; //crit
+			val3 = 8*val1; // Atk
+			// tick = INFINITE_TICK;
 			break;
 
 		case SC_MEMORIZE:

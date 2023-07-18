@@ -39,7 +39,7 @@ int KnightSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* 
 			return calculate_reckoning_atk_ratio(skill_lv);
 		case RK_HUNDREDSPEAR:
 			clif_specialeffect(target, 1348, AREA); //new_armscannon_01_clock_down
-			return calculate_a_hundred_spears_atk_ratio(skill_lv);
+			return calculate_a_hundred_spears_atk_ratio(skill_lv, sstatus->vit);
 		case LK_SPIRALPIERCE:
 			clif_specialeffect(target, 108, AREA);
 			return calculate_clashing_spiral_atk_ratio(skill_lv, target);
@@ -262,7 +262,7 @@ int KnightSkillAtkRatioCalculator::calculate_wind_cutter_atk_ratio(int skill_lv,
 	return ratio + (intelligence/3);
 }
 
-int KnightSkillAtkRatioCalculator::calculate_a_hundred_spears_atk_ratio(int skill_lv)
+int KnightSkillAtkRatioCalculator::calculate_a_hundred_spears_atk_ratio(int skill_lv, int vit)
 {
 	int ratio = 0;
 	switch (skill_lv) {
@@ -282,7 +282,7 @@ int KnightSkillAtkRatioCalculator::calculate_a_hundred_spears_atk_ratio(int skil
 			ratio = 550;
 			break;
 		}
-	return ratio;
+	return ratio + vit/3;
 }
 
 int KnightSkillAtkRatioCalculator::calculate_brandish_spear_atk_ratio(int skill_lv, int vit)

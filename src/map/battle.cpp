@@ -2824,6 +2824,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case RA_AIMEDBOLT:
 		case SC_TRIANGLESHOT:
 		case RA_ARROWSTORM:
+		case LG_MOONSLASHER:
 			skillratio += RogueSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, sd->sc.data[SC_HIDING]);
 			break;
 		case AS_SONICBLOW:
@@ -3223,10 +3224,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 					skillratio += sd->inventory_data[index]->def * 10;
 			} else
 				skillratio = 0; // Prevent damage since level 2 is MATK. [Aleos]
-			break;
-		case LG_MOONSLASHER:
-			skillratio += -100 + 120 * skill_lv + ((sd) ? pc_checkskill(sd,LG_OVERBRAND) * 80 : 0);
-			RE_LVL_DMOD(100);
 			break;
 		case LG_OVERBRAND:
 			skillratio += -100 + 400 * skill_lv + ((sd) ? pc_checkskill(sd,CR_SPEARQUICKEN) * 50 : 0);
@@ -4197,21 +4194,21 @@ static void battle_calc_weapon_final_atk_modifiers(struct Damage* wd, struct blo
 	int skill_damage = 0;
 
 	//Reject Sword bugreport:4493 by Daegaladh
-	if(wd->damage && tsc && tsc->data[SC_REJECTSWORD] &&
-		(src->type!=BL_PC || (
-			((TBL_PC *)src)->weapontype1 == W_DAGGER ||
-			((TBL_PC *)src)->weapontype1 == W_1HSWORD ||
-			((TBL_PC *)src)->status.weapon == W_2HSWORD
-		)) &&
-		rnd()%100 < tsc->data[SC_REJECTSWORD]->val2
-		)
-	{
-		ATK_RATER(wd->damage, 50)
-		status_fix_damage(target,src,wd->damage,clif_damage(target,src,gettick(),0,0,wd->damage,0,DMG_NORMAL,0,false),ST_REJECTSWORD);
-		clif_skill_nodamage(target,target,ST_REJECTSWORD,tsc->data[SC_REJECTSWORD]->val1,1);
-		if( --(tsc->data[SC_REJECTSWORD]->val3) <= 0 )
-			status_change_end(target, SC_REJECTSWORD, INVALID_TIMER);
-	}
+	// if(wd->damage && tsc && tsc->data[SC_REJECTSWORD] &&
+	// 	(src->type!=BL_PC || (
+	// 		((TBL_PC *)src)->weapontype1 == W_DAGGER ||
+	// 		((TBL_PC *)src)->weapontype1 == W_1HSWORD ||
+	// 		((TBL_PC *)src)->status.weapon == W_2HSWORD
+	// 	)) &&
+	// 	rnd()%100 < tsc->data[SC_REJECTSWORD]->val2
+	// 	)
+	// {
+	// 	ATK_RATER(wd->damage, 50)
+		// status_fix_damage(target,src,wd->damage,clif_damage(target,src,gettick(),0,0,wd->damage,0,DMG_NORMAL,0,false),ST_REJECTSWORD);
+		// clif_skill_nodamage(target,target,ST_REJECTSWORD,tsc->data[SC_REJECTSWORD]->val1,1);
+		// if( --(tsc->data[SC_REJECTSWORD]->val3) <= 0 )
+		// 	status_change_end(target, SC_REJECTSWORD, INVALID_TIMER);
+	// }
 
 	if( tsc && tsc->data[SC_CRESCENTELBOW] && wd->flag&BF_SHORT && rnd()%100 < tsc->data[SC_CRESCENTELBOW]->val2 ) {
 		//ATK [{(Target HP / 100) x Skill Level} x Caster Base Level / 125] % + [Received damage x {1 + (Skill Level x 0.2)}]

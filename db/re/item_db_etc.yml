@@ -661,6 +661,7 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
+      DropEffect: GREEN_PILLAR
   - Id: 916
     AegisName: Feather_Of_Birds
     Name: Feather of Birds

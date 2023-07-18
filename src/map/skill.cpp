@@ -3103,6 +3103,8 @@ static TIMER_FUNC(skill_timerskill){
 					skill_castend_damage_id(src,target,skl->skill_id,skl->skill_lv,tick,skl->flag|SD_LEVEL|SD_ANIMATION);
 					break;
 				case LG_MOONSLASHER:
+					skill_attack(BF_WEAPON, src, src, target, skl->skill_id, skl->skill_lv, tick, skl->flag|SD_LEVEL);
+					break;
 				case SR_KNUCKLEARROW:
 					skill_attack(BF_WEAPON, src, src, target, skl->skill_id, skl->skill_lv, tick, skl->flag|SD_LEVEL);
 					sc_start4(src,src,SC_DEFENSIVESTANCE,100,3,20,0,0,30000);
@@ -15448,12 +15450,7 @@ bool skill_check_condition_castbegin(struct map_session_data* sd, uint16 skill_i
 			}
 			break;
 		case KO_JYUMONJIKIRI:
-			if (sd->weapontype1 != W_FIST && (sd->weapontype2 != W_FIST || sd->status.shield != W_FIST))
-				return true;
-			else {
-				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-				return false;
-			}
+			return true;
 			break;
 		case KO_KAHU_ENTEN:
 		case KO_HYOUHU_HUBUKI:

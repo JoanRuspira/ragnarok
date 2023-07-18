@@ -10,6 +10,7 @@ class RogueSkillAtkRatioCalculator
 		static int calculate_phantom_menace_atk_ratio(int skill_lv, bool is_hiding);
 		static int calculate_shady_slash_atk_ratio(int skill_lv);
 		static int calculate_hack_and_slash_atk_ratio(int skill_lv, int luck);
+		static int calculate_fatal_menace_atk_ratio(int skill_lv, int luck);
 		static int calculate_quick_shot_atk_ratio(int skill_lv);
 		static int calculate_triangle_shot_atk_ratio(int skill_lv);
 		static int calculate_arrow_storm_atk_ratio(int skill_lv, int dex);

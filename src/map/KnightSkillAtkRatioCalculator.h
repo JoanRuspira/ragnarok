@@ -19,7 +19,7 @@ class KnightSkillAtkRatioCalculator
 		static int calculate_sonic_wave_atk_ratio(int skill_lv, int intelligence);
 		static int calculate_smite_atk_ratio(int skill_lv);
 		static int calculate_reckoning_atk_ratio(int skill_lv);
-		static int calculate_a_hundred_spears_atk_ratio(int skill_lv);
+		static int calculate_a_hundred_spears_atk_ratio(int skill_lv, int vit);
 		static int calculate_clashing_spiral_atk_ratio(int skill_lv, struct block_list *target);
 		static int calculate_clashing_spiral_normal_atk_ratio(int skill_lv);
 		static int calculate_clashing_spiral_bleeding_atk_ratio(int skill_lv);
