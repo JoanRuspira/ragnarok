@@ -16413,17 +16413,15 @@ Body:
   - Id: 1005
     Name: RG_CLOSECONFINE
     Description: Close Confine
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     DamageFlags:
       NoDamage: true
-    Flags:
-      IsQuest: true
     Range: 1
     Hit: Single
     HitCount: 1
-    Duration1: 10000
+    Duration1: 20000
     Requires:
       SpCost: 25
   - Id: 1006

@@ -37,3 +37,5 @@ cmd_fild09,369,164,0	warp	cmd_fild09-2	2,2,moc_fild18,55,170
 cmd_fild09,309,381,0	warp	cmd_fild09-3	2,1,cmd_fild08,309,60
 cmd_fild09,75,382,0	warp	cmd_fild09-4	2,1,cmd_fild08,75,42
 moc_fild18,51,170,0	warp	moc_fild18-1	1,3,cmd_fild09,363,164
+cmd_fild07,193,117,0	warp	cmd_rogue-1	1,3,in_rogue,379,46
+in_rogue,377,47,0	warp	cmd_rogue-2	1,3,cmd_fild07,196,117
