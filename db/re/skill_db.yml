@@ -16421,9 +16421,24 @@ Body:
     Range: 1
     Hit: Single
     HitCount: 1
-    Duration1: 20000
+    Cooldown: 25000
+    AfterCastActDelay: 100
+    Duration1:
+      - Level: 1
+        Time: 3000
+      - Level: 2
+        Time: 6000
+      - Level: 3
+        Time: 9000
+      - Level: 4
+        Time: 12000
+      - Level: 5
+        Time: 15000
     Requires:
-      SpCost: 25
+      SpCost: 20
+      ItemCost:
+        - Item: Manacles
+          Amount: 1
   - Id: 1006
     Name: WZ_SIGHTBLASTER
     Description: Sight Blaster
