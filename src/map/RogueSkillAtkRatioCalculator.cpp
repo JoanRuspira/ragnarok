@@ -271,5 +271,5 @@ int RogueSkillAtkRatioCalculator::calculate_fatal_menace_atk_ratio(int skill_lv,
 			ratio = 550;
 			break;
 		}
-	return ratio + (luck/3);
+	return ratio + (luck);
 }

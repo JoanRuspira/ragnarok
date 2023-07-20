@@ -545,8 +545,10 @@ bool skill_strip_equip2(struct block_list *src, struct block_list *target, uint1
 		rate = 6 * skill_lv + job_lv / 4 + sstatus->dex / 10;
 		break;
 	}
+	case SC_STRIPACCESSORY:
 	case SC_STRIPACCESSARY:
-		rate = 12 + 2 * skill_lv;
+		// rate = 12 + 2 * skill_lv;
+		rate = 100;
 		break;
 	default:
 		return false;
@@ -556,6 +558,7 @@ bool skill_strip_equip2(struct block_list *src, struct block_list *target, uint1
 		return false;
 
 	switch (skill_id) { // Duration
+	case SC_STRIPACCESSORY:
 	case SC_STRIPACCESSARY:
 	case GS_DISARM:
 		time = skill_get_time(skill_id, skill_lv);
@@ -599,6 +602,7 @@ bool skill_strip_equip2(struct block_list *src, struct block_list *target, uint1
 	case ST_FULLSTRIP:
 		location = EQP_WEAPON | EQP_SHIELD | EQP_ARMOR | EQP_HELM;
 		break;
+	case SC_STRIPACCESSORY:
 	case SC_STRIPACCESSARY:
 		location = EQP_ACC;
 		break;

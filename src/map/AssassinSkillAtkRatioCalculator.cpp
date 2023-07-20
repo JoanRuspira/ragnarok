@@ -123,7 +123,7 @@ int AssassinSkillAtkRatioCalculator::calculate_cross_impact_atk_ratio(int skill_
 			ratio = 500;
 			break;
 	}
-	return ratio + (luck/3);
+	return ratio + (luck);
 }
 
 int AssassinSkillAtkRatioCalculator::calculate_dark_claw_atk_ratio(int skill_lv)

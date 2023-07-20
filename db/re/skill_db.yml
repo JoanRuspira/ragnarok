@@ -2794,6 +2794,35 @@ Body:
         Staff: true
         Knuckle: true
         Book: true
+  - Id: 871
+    Name: SC_STRIPACCESSORY
+    Description: Strip Accessory
+    MaxLevel: 5
+    TargetType: Attack
+    DamageFlags:
+      NoDamage: true
+    Range: 1
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    Cooldown: 15000
+    AfterCastActDelay: 100
+    Duration1:
+      - Level: 1
+        Time: 3000
+      - Level: 2
+        Time: 6000
+      - Level: 3
+        Time: 9000
+      - Level: 4
+        Time: 12000
+      - Level: 5
+        Time: 15000
+    Requires:
+      SpCost: 20
+      ItemCost:
+        - Item: Leather_Pouch
+          Amount: 1
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -21157,7 +21186,6 @@ Body:
     Hit: Single
     HitCount: 1
     CastCancel: true
-    CastTime: 1000
     AfterCastActDelay: 1000
     Duration1:
       - Level: 1
@@ -21873,7 +21901,7 @@ Body:
         Reproduce: true
     AfterCastActDelay: 400
     Duration1: 1000
-    Cooldown: 5000
+    Cooldown: 6000
     Requires: 
       SpCost: 20
       Weapon:

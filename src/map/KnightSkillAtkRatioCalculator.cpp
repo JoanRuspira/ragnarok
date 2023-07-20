@@ -282,7 +282,7 @@ int KnightSkillAtkRatioCalculator::calculate_a_hundred_spears_atk_ratio(int skil
 			ratio = 550;
 			break;
 		}
-	return ratio + vit/3;
+	return ratio + vit;
 }
 
 int KnightSkillAtkRatioCalculator::calculate_brandish_spear_atk_ratio(int skill_lv, int vit)

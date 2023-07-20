@@ -1525,8 +1525,10 @@ bool skill_strip_equip(struct block_list *src, struct block_list *target, uint16
 			rate = 6 * skill_lv + job_lv / 4 + sstatus->dex / 10;
 			break;
 		}
+		case SC_STRIPACCESSORY:
 		case SC_STRIPACCESSARY:
-			rate = 12 + 2 * skill_lv;
+			// rate = 12 + 2 * skill_lv;
+			rate = 100;
 			break;
 		default:
 			return false;
@@ -1536,6 +1538,7 @@ bool skill_strip_equip(struct block_list *src, struct block_list *target, uint16
 		return false;
 
 	switch (skill_id) { // Duration
+		case SC_STRIPACCESSORY:
 		case SC_STRIPACCESSARY:
 		case GS_DISARM:
 			time = skill_get_time(skill_id, skill_lv);
@@ -1579,6 +1582,7 @@ bool skill_strip_equip(struct block_list *src, struct block_list *target, uint16
 		case ST_FULLSTRIP:
 			location = EQP_WEAPON|EQP_SHIELD|EQP_ARMOR|EQP_HELM;
 			break;
+		case SC_STRIPACCESSORY:
 		case SC_STRIPACCESSARY:
 			location = EQP_ACC;
 			break;
@@ -7226,6 +7230,27 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		if( (i = skill_strip_equip(src, bl, skill_id, skill_lv)) || (skill_id != ST_FULLSTRIP && skill_id != GC_WEAPONCRUSH ) )
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,i);
 
+		//Nothing stripped.
+		if( sd && !i )
+			clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+		break;
+	}
+	case SC_STRIPACCESSORY:
+	{
+		bool i;
+
+		//Special message when trying to use strip on FCP [Jobbie]
+		if( sd && skill_id == ST_FULLSTRIP && tsc && tsc->data[SC_CP_WEAPON] && tsc->data[SC_CP_HELM] && tsc->data[SC_CP_ARMOR] && tsc->data[SC_CP_SHIELD])
+		{
+			clif_gospel_info(sd, 0x28);
+			break;
+		}
+
+		if( (i = skill_strip_equip(src, bl, skill_id, skill_lv)) || (skill_id != ST_FULLSTRIP && skill_id != GC_WEAPONCRUSH ) ){
+			clif_specialeffect(bl, EF_RG_COIN2, AREA);
+			clif_specialeffect(bl, 1063, AREA);
+			clif_skill_nodamage(src,bl,skill_id,skill_lv,i);
+		}
 		//Nothing stripped.
 		if( sd && !i )
 			clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);

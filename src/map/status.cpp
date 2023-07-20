@@ -892,6 +892,7 @@ void initChangeTables(void)
 	set_sc( SC_UNLUCKY		, SC__UNLUCKY		, EFST_UNLUCKY		, SCB_CRI|SCB_FLEE2 );
 	set_sc( SC_WEAKNESS		, SC__WEAKNESS		, EFST_WEAKNESS		, SCB_MAXHP );
 	set_sc( SC_STRIPACCESSARY	, SC__STRIPACCESSORY	, EFST_STRIPACCESSARY	, SCB_DEX|SCB_INT|SCB_LUK );
+	set_sc( SC_STRIPACCESSORY	, SC__STRIPACCESSORY	, EFST_STRIPACCESSARY	, SCB_DEX|SCB_INT|SCB_LUK|SCB_STR|SCB_AGI|SCB_VIT );
 	set_sc_with_vfx( SC_MANHOLE	, SC__MANHOLE		, EFST_MANHOLE		, SCB_NONE );
 	add_sc( SC_CHAOSPANIC		, SC_CONFUSION		);
 	add_sc( SC_FEINTBOMB		, SC__FEINTBOMB		);
@@ -5977,6 +5978,8 @@ static unsigned short status_calc_str(struct block_list *bl, struct status_chang
 		str += 3;
 	if(sc->data[SC_GLASTHEIM_STATE])
 		str += sc->data[SC_GLASTHEIM_STATE]->val1;
+	if(sc->data[SC__STRIPACCESSORY] && bl->type != BL_PC)
+		str -= str * sc->data[SC__STRIPACCESSORY]->val2 / 100;
 #ifdef RENEWAL
 	if (sc->data[SC_NIBELUNGEN] && sc->data[SC_NIBELUNGEN]->val2 == RINGNBL_ALLSTAT)
 		str += 15;
@@ -6062,6 +6065,8 @@ static unsigned short status_calc_agi(struct block_list *bl, struct status_chang
 		agi += 3;
 	if(sc->data[SC_GLASTHEIM_STATE])
 		agi += sc->data[SC_GLASTHEIM_STATE]->val1;
+	if(sc->data[SC__STRIPACCESSORY] && bl->type != BL_PC)
+		agi -= agi * sc->data[SC__STRIPACCESSORY]->val2 / 100;
 #ifdef RENEWAL
 	if (sc->data[SC_NIBELUNGEN] && sc->data[SC_NIBELUNGEN]->val2 == RINGNBL_ALLSTAT)
 		agi += 15;
@@ -6134,6 +6139,8 @@ static unsigned short status_calc_vit(struct block_list *bl, struct status_chang
 		vit += 3;
 	if(sc->data[SC_GLASTHEIM_STATE])
 		vit += sc->data[SC_GLASTHEIM_STATE]->val1;
+	if(sc->data[SC__STRIPACCESSORY] && bl->type != BL_PC)
+		vit -= vit * sc->data[SC__STRIPACCESSORY]->val2 / 100;
 #ifdef RENEWAL
 	if (sc->data[SC_NIBELUNGEN] && sc->data[SC_NIBELUNGEN]->val2 == RINGNBL_ALLSTAT)
 		vit += 15;

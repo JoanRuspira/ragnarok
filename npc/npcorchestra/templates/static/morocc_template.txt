@@ -492,16 +492,6 @@ morocc,234,277,5	script	Morroc Villager#moc::npcid	spriteid,{
 	end;
 }
 
-morocc,234,277,5	script	Morroc Villager#moc::npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-morocc,236,274,1	script	Morroc Villager#moc::npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
 morocc,236,274,1	script	Morroc Villager#moc::npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
