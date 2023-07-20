@@ -516,96 +516,66 @@ bool skill_strip_equip2(struct block_list *src, struct block_list *target, uint1
 	struct status_data *sstatus = status_get_status_data(src), *tstatus = status_get_status_data(target);
 	int rate, time, location, mod = 100;
 
-	switch (skill_id) { // Rate
-	case RG_STRIPWEAPON:
-	case RG_STRIPARMOR:
-	case RG_STRIPSHIELD:
-	case RG_STRIPHELM:
-	case GC_WEAPONCRUSH:
-		rate = 50 * (skill_lv + 1) + 2 * (sstatus->dex - tstatus->dex);
-		mod = 1000;
-		break;
-	case ST_FULLSTRIP: {
-		int min_rate = 50 + 20 * skill_lv;
+	// switch (skill_id) { // Rate
+	// case RG_STRIPWEAPON:
+	// case RG_STRIPARMOR:
+	// case RG_STRIPSHIELD:
+	// case RG_STRIPHELM:
+	// case GC_WEAPONCRUSH:
+	// 	rate = 50 * (skill_lv + 1) + 2 * (sstatus->dex - tstatus->dex);
+	// 	mod = 1000;
+	// 	break;
+	// case ST_FULLSTRIP: {
+		
+	// 	rate = 100;
+	
+	// 	break;
+	// }
+	// case GS_DISARM:
+	// 	rate = sstatus->dex / (4 * (7 - skill_lv)) + sstatus->luk / (4 * (6 - skill_lv));
+	// 	rate = rate + status_get_lv(src) - (tstatus->agi * rate / 100) - tstatus->luk - status_get_lv(target);
+	// 	break;
+	// case WL_EARTHSTRAIN: {
+	// 	int job_lv = 0;
 
-		rate = min_rate + 2 * (sstatus->dex - tstatus->dex);
-		rate = max(min_rate, rate);
-		mod = 1000;
-		break;
-	}
-	case GS_DISARM:
-		rate = sstatus->dex / (4 * (7 - skill_lv)) + sstatus->luk / (4 * (6 - skill_lv));
-		rate = rate + status_get_lv(src) - (tstatus->agi * rate / 100) - tstatus->luk - status_get_lv(target);
-		break;
-	case WL_EARTHSTRAIN: {
-		int job_lv = 0;
+	// 	if (src->type == BL_PC)
+	// 		job_lv = ((TBL_PC*)src)->status.job_level;
+	// 	rate = 6 * skill_lv + job_lv / 4 + sstatus->dex / 10;
+	// 	break;
+	// }
+	// case SC_STRIPACCESSORY:
+	// case SC_STRIPACCESSARY:
+	// 	// rate = 12 + 2 * skill_lv;
+	// 	rate = 100;
+	// 	break;
+	// default:
+	// 	return false;
+	// }
 
-		if (src->type == BL_PC)
-			job_lv = ((TBL_PC*)src)->status.job_level;
-		rate = 6 * skill_lv + job_lv / 4 + sstatus->dex / 10;
-		break;
-	}
-	case SC_STRIPACCESSORY:
-	case SC_STRIPACCESSARY:
-		// rate = 12 + 2 * skill_lv;
-		rate = 100;
-		break;
-	default:
-		return false;
-	}
-
-	if (rnd() % mod >= rate)
-		return false;
+	// if (rnd() % mod >= rate)
+	// 	return false;
 
 	switch (skill_id) { // Duration
-	case SC_STRIPACCESSORY:
-	case SC_STRIPACCESSARY:
-	case GS_DISARM:
-		time = skill_get_time(skill_id, skill_lv);
-		break;
-	case WL_EARTHSTRAIN:
-	case RG_STRIPWEAPON:
-	case RG_STRIPARMOR:
-	case RG_STRIPSHIELD:
-	case RG_STRIPHELM:
-	case GC_WEAPONCRUSH:
-	case ST_FULLSTRIP:
-		if (skill_id == WL_EARTHSTRAIN)
-			time = skill_get_time2(skill_id, skill_lv);
-		else
+		case SC_STRIPACCESSORY:
+		case SC_STRIPACCESSARY:
 			time = skill_get_time(skill_id, skill_lv);
-
-		if (target->type == BL_PC)
-			time += max(1, skill_lv + 500 * (sstatus->dex - tstatus->dex));
-		else {
-			time += 15000;
-			time += max(1, skill_lv + 500 * (sstatus->dex - tstatus->dex));
-		}
-		break;
+			break;
+		case ST_FULLSTRIP:
+			if (skill_id == WL_EARTHSTRAIN)
+				time = skill_get_time2(skill_id, skill_lv);
+			else
+				time = skill_get_time(skill_id, skill_lv);
+			break;
 	}
 
 	switch (skill_id) { // Location
-	case GC_WEAPONCRUSH:
-	case RG_STRIPWEAPON:
-	case GS_DISARM:
-		location = EQP_WEAPON;
-		break;
-	case RG_STRIPARMOR:
-		location = EQP_ARMOR;
-		break;
-	case RG_STRIPSHIELD:
-		location = EQP_SHIELD;
-		break;
-	case RG_STRIPHELM:
-		location = EQP_HELM;
-		break;
-	case ST_FULLSTRIP:
-		location = EQP_WEAPON | EQP_SHIELD | EQP_ARMOR | EQP_HELM;
-		break;
-	case SC_STRIPACCESSORY:
-	case SC_STRIPACCESSARY:
-		location = EQP_ACC;
-		break;
+		case ST_FULLSTRIP:
+			location = EQP_WEAPON | EQP_SHIELD | EQP_ARMOR | EQP_HELM;
+			break;
+		case SC_STRIPACCESSORY:
+		case SC_STRIPACCESSARY:
+			location = EQP_ACC;
+			break;
 	}
 
 	for (uint8 i = 0; i < ARRAYLENGTH(pos); i++) {

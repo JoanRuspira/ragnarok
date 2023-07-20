@@ -471,8 +471,8 @@ void initChangeTables(void)
 #endif
 	set_sc( RG_STRIPWEAPON		, SC_STRIPWEAPON	, EFST_NOEQUIPWEAPON, SCB_WATK );
 	set_sc( RG_STRIPSHIELD		, SC_STRIPSHIELD	, EFST_NOEQUIPSHIELD, SCB_DEF );
-	set_sc( RG_STRIPARMOR		, SC_STRIPARMOR		, EFST_NOEQUIPARMOR, SCB_VIT );
-	set_sc( RG_STRIPHELM		, SC_STRIPHELM		, EFST_NOEQUIPHELM, SCB_INT );
+	set_sc( RG_STRIPARMOR		, SC_STRIPARMOR		, EFST_NOEQUIPARMOR, SCB_NONE );
+	set_sc( RG_STRIPHELM		, SC_STRIPHELM		, EFST_NOEQUIPHELM, SCB_NONE );
 	set_sc( AM_CP_WEAPON		, SC_CP_WEAPON		, EFST_PROTECTWEAPON, SCB_NONE );
 	set_sc( AM_CP_SHIELD		, SC_CP_SHIELD		, EFST_PROTECTSHIELD, SCB_NONE );
 	set_sc( AM_CP_ARMOR		, SC_CP_ARMOR		, EFST_PROTECTARMOR, SCB_NONE );
@@ -6131,8 +6131,6 @@ static unsigned short status_calc_vit(struct block_list *bl, struct status_chang
 		vit += 1;
 	if(sc->data[SC_JUMPINGCLAN])
 		vit += 1;
-	if(sc->data[SC_STRIPARMOR] && bl->type != BL_PC)
-		vit -= vit * sc->data[SC_STRIPARMOR]->val2/100;
 	if(sc->data[SC_FULL_THROTTLE])
 		vit += vit * sc->data[SC_FULL_THROTTLE]->val3 / 100;
 	if(sc->data[SC_CHEERUP])
@@ -6230,8 +6228,6 @@ static unsigned short status_calc_int(struct block_list *bl, struct status_chang
 		int_ += sc->data[SC_UNIVERSESTANCE]->val2;
 
 	if(bl->type != BL_PC) {
-		if(sc->data[SC_STRIPHELM])
-			int_ -= int_ * sc->data[SC_STRIPHELM]->val2/100;
 		if(sc->data[SC__STRIPACCESSORY])
 			int_ -= int_ * sc->data[SC__STRIPACCESSORY]->val2 / 100;
 	}
@@ -10240,18 +10236,10 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			break;
 		case SC_STRIPWEAPON:
 			if (!sd) // Watk reduction
-				val2 = 25;
+				val2 = 40;
 			break;
 		case SC_STRIPSHIELD:
 			if (!sd) // Def reduction
-				val2 = 15;
-			break;
-		case SC_STRIPARMOR:
-			if (!sd) // Vit reduction
-				val2 = 40;
-			break;
-		case SC_STRIPHELM:
-			if (!sd) // Int reduction
 				val2 = 40;
 			break;
 		case SC_AUTOSPELL:
