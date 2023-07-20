@@ -1679,8 +1679,8 @@ void initChangeTables(void)
 	StatusChangeStateTable[SC_GRAVITYCONTROL]		|= SCS_NOMOVE;
 
 	/* StatusChangeState (SCS_) NOPICKUPITEMS */
-	StatusChangeStateTable[SC_HIDING]				|= SCS_NOPICKITEM;
-	StatusChangeStateTable[SC_CLOAKING]				|= SCS_NOPICKITEM;
+	// StatusChangeStateTable[SC_HIDING]				|= SCS_NOPICKITEM;
+	// StatusChangeStateTable[SC_CLOAKING]				|= SCS_NOPICKITEM;
 	StatusChangeStateTable[SC_TRICKDEAD]			|= SCS_NOPICKITEM;
 	StatusChangeStateTable[SC_BLADESTOP]			|= SCS_NOPICKITEM;
 	StatusChangeStateTable[SC__FEINTBOMB]			|= SCS_NOPICKITEM;
@@ -1706,7 +1706,7 @@ void initChangeTables(void)
 	StatusChangeStateTable[SC_DEATHBOUND]			|= SCS_NOCAST;
 	StatusChangeStateTable[SC_OBLIVIONCURSE]		|= SCS_NOCAST|SCS_NOCASTCOND;
 	StatusChangeStateTable[SC_WHITEIMPRISON]		|= SCS_NOCAST;
-	StatusChangeStateTable[SC__SHADOWFORM]			|= SCS_NOCAST;
+	// StatusChangeStateTable[SC__SHADOWFORM]			|= SCS_NOCAST;
 	StatusChangeStateTable[SC_CRYSTALIZE]			|= SCS_NOCAST;
 	StatusChangeStateTable[SC__IGNORANCE]			|= SCS_NOCAST;
 	StatusChangeStateTable[SC__MANHOLE]				|= SCS_NOCAST;
@@ -14088,7 +14088,7 @@ TIMER_FUNC(status_change_timer){
 
 	case SC__SHADOWFORM:
 		if( --(sce->val4) >= 0 ) {
-			if( !status_charge(bl, 0, 11 - sce->val1) )
+			if( !status_charge(bl, 0, 10 - sce->val1) )
 				break;
 			sc_timer_next(1000 + tick);
 			return 0;

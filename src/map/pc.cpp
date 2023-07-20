@@ -5523,16 +5523,13 @@ bool pc_isUseitem(struct map_session_data *sd,int n)
 		return false;
 	
 	if (sd->sc.count && (
-		sd->sc.data[SC_BERSERK] || sd->sc.data[SC_SATURDAYNIGHTFEVER] ||
-		(sd->sc.data[SC_GRAVITATION] && sd->sc.data[SC_GRAVITATION]->val3 == BCT_SELF) ||
-		sd->sc.data[SC_TRICKDEAD] ||
-		sd->sc.data[SC_HIDING] ||
-		sd->sc.data[SC__SHADOWFORM] ||
-		sd->sc.data[SC__INVISIBILITY] ||
-		sd->sc.data[SC__MANHOLE] ||
+		sd->sc.data[SC_BERSERK] ||
+		sd->sc.data[SC_PARALYSE] ||
+		sd->sc.data[SC_PARALYSIS] ||
 		sd->sc.data[SC_DEEPSLEEP] ||
-		sd->sc.data[SC_CRYSTALIZE] ||
-		sd->sc.data[SC_KAGEHUMI] ||
+		sd->sc.data[SC_SLEEP] ||
+		sd->sc.data[SC_STONE] ||
+		sd->sc.data[SC_FREEZE] ||
 		(sd->sc.data[SC_NOCHAT] && sd->sc.data[SC_NOCHAT]->val1&MANNER_NOITEM) ||
 		sd->sc.data[SC_KINGS_GRACE] ||
 		sd->sc.data[SC_SUHIDE]))
@@ -9868,7 +9865,6 @@ bool pc_can_attack( struct map_session_data *sd, int target_id ) {
 #else
 		sd->sc.data[SC_BASILICA] ||
 #endif
-		sd->sc.data[SC__SHADOWFORM] ||
 		sd->sc.data[SC_CURSEDCIRCLE_ATKER] ||
 		sd->sc.data[SC_CURSEDCIRCLE_TARGET] ||
 		sd->sc.data[SC_CRYSTALIZE] ||

@@ -3144,7 +3144,12 @@ int unit_remove_map_(struct block_list *bl, clr_type clrtype, const char* file, 
 		}
 		case BL_MOB: {
 			struct mob_data *md = (struct mob_data*)bl;
+			if(md->shadowform_id) { // If shadow target has leave the map
+			    struct block_list *d_bl = map_id2bl(md->shadowform_id);
 
+			    if( d_bl )
+				    status_change_end(d_bl,SC__SHADOWFORM,INVALID_TIMER);
+			}
 			// Drop previous target mob_slave_keep_target: no.
 			if (!battle_config.mob_slave_keep_target)
 				md->target_id=0;

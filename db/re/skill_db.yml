@@ -20850,36 +20850,14 @@ Body:
     TargetType: Attack
     DamageFlags:
       NoDamage: true
-    Flags:
-      IgnoreKagehumi: true
-      TargetManHole: true
     Range: 5
     Hit: Single
     HitCount: 1
+    Cooldown: 20000
     AfterCastActDelay: 1000
-    Duration1:
-      - Level: 1
-        Time: 30000
-      - Level: 2
-        Time: 40000
-      - Level: 3
-        Time: 50000
-      - Level: 4
-        Time: 60000
-      - Level: 5
-        Time: 70000
+    Duration1: 60000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 40
-        - Level: 2
-          Amount: 50
-        - Level: 3
-          Amount: 60
-        - Level: 4
-          Amount: 70
-        - Level: 5
-          Amount: 80
+      SpCost: 25
   - Id: 2288
     Name: SC_TRIANGLESHOT
     Description: Triangle Shot

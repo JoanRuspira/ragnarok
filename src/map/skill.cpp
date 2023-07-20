@@ -4451,16 +4451,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 		}
 		break;
 
-	case GC_PHANTOMMENACE:
-		if (flag&1) { // Only Hits Invisible Targets
-			if(tsc && (tsc->option&(OPTION_HIDE|OPTION_CLOAK|OPTION_CHASEWALK) || tsc->data[SC_CAMOUFLAGE] || tsc->data[SC_STEALTHFIELD])) {
-				skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag);
-			}
-			if (tsc && tsc->data[SC__SHADOWFORM] && rnd() % 100 < 100 - tsc->data[SC__SHADOWFORM]->val1 * 10) // [100 - (Skill Level x 10)] %
-				status_change_end(bl, SC__SHADOWFORM, INVALID_TIMER); // Should only end, no damage dealt.
-		}
-		break;
-
 	case GC_DARKCROW:
 		skill_attack(BF_WEAPON, src, src, bl, skill_id, skill_lv, tick, flag);
 		sc_start(src, bl, status_skill2sc(skill_id), 100, skill_lv, skill_get_time(skill_id, skill_lv)); // Should be applied even on miss
@@ -4716,46 +4706,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 		}else if( sd && skill_id == RA_WUGBITE ) // Only RA_WUGBITE has the skill fail message.
 			clif_skill_fail(sd, skill_id, USESKILL_FAIL_LEVEL, 0);
 
-		break;
-
-	case RA_SENSITIVEKEEN:
-		if( bl->type != BL_SKILL ) { // Only Hits Invisible Targets
-			if (tsc && ((tsc->option&(OPTION_HIDE|OPTION_CLOAK|OPTION_CHASEWALK)) || tsc->data[SC_CAMOUFLAGE] || tsc->data[SC_STEALTHFIELD])) {
-				skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag);
-			}
-			if (tsc && tsc->data[SC__SHADOWFORM] && rnd() % 100 < 100 - tsc->data[SC__SHADOWFORM]->val1 * 10) // [100 - (Skill Level x 10)] %
-				status_change_end(bl, SC__SHADOWFORM, INVALID_TIMER); // Should only end, no damage dealt.
-		} else {
-			struct skill_unit *su = NULL;
-			struct skill_unit_group* sg;
-
-			if (su && (sg = su->group) && skill_get_inf2(sg->skill_id, INF2_ISTRAP)) {
-				if( !(sg->unit_id == UNT_USED_TRAPS || (sg->unit_id == UNT_ANKLESNARE && sg->val2 != 0 )) )
-				{
-					struct item item_tmp;
-					memset(&item_tmp,0,sizeof(item_tmp));
-					item_tmp.nameid = sg->item_id?sg->item_id:ITEMID_TRAP;
-					item_tmp.identify = 1;
-					if( item_tmp.nameid )
-						map_addflooritem(&item_tmp,1,bl->m,bl->x,bl->y,0,0,0,4,0);
-				}
-				skill_delunit(su);
-			}
-		}
-		break;
-	case NC_INFRAREDSCAN:
-		if( flag&1 ) {
-			status_change_end(bl, SC_HIDING, INVALID_TIMER);
-			status_change_end(bl, SC_CLOAKING, INVALID_TIMER);
-			status_change_end(bl, SC_CAMOUFLAGE, INVALID_TIMER);
-			status_change_end(bl, SC_NEWMOON, INVALID_TIMER);
-			if (tsc && tsc->data[SC__SHADOWFORM] && rnd() % 100 < 100 - tsc->data[SC__SHADOWFORM]->val1 * 10) // [100 - (Skill Level x 10)] %
-				status_change_end(bl, SC__SHADOWFORM, INVALID_TIMER);
-			sc_start(src,bl, SC_INFRAREDSCAN, 10000, skill_lv, skill_get_time(skill_id, skill_lv));
-		} else {
-			clif_skill_damage(src,bl,tick, status_get_amotion(src), 0, -30000, 1, skill_id, skill_lv, DMG_SINGLE);
-			map_foreachinallrange(skill_area_sub, bl, skill_get_splash(skill_id, skill_lv), splash_target(src), src, skill_id, skill_lv, tick, flag|BCT_ENEMY|SD_SPLASH|1, skill_castend_damage_id);
-		}
 		break;
 	case SC_FATALMENACE:
 		if( flag&1 )
@@ -9455,31 +9405,20 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 
 	case SC_SHADOWFORM:
 		if( sd && dstsd && src != bl && !dstsd->shadowform_id ) {
-			if( clif_skill_nodamage(src,bl,skill_id,skill_lv,sc_start4(src,src,type,100,skill_lv,bl->id,4+skill_lv,0,skill_get_time(skill_id, skill_lv))) )
+			int hits = skill_lv;
+			if( clif_skill_nodamage(src,bl,skill_id,skill_lv,sc_start4(src,src,type,100,skill_lv,bl->id,hits,0,skill_get_time(skill_id, skill_lv))) )
 				dstsd->shadowform_id = src->id;
+			break;
 		}
-		else if( sd )
-			clif_skill_fail(sd, skill_id, USESKILL_FAIL_LEVEL, 0);
-		break;
-
-	case SC_BODYPAINT:
-		if( flag&1 ) {
-			if (tsc && ((tsc->option&(OPTION_HIDE|OPTION_CLOAK)) || tsc->data[SC_CAMOUFLAGE] || tsc->data[SC_STEALTHFIELD])) {
-				status_change_end(bl,SC_HIDING,INVALID_TIMER);
-				status_change_end(bl,SC_CLOAKING,INVALID_TIMER);
-				status_change_end(bl,SC_CAMOUFLAGE,INVALID_TIMER);
-				status_change_end(bl,SC_NEWMOON,INVALID_TIMER);
-				if (tsc && tsc->data[SC__SHADOWFORM] && rnd() % 100 < 100 - tsc->data[SC__SHADOWFORM]->val1 * 10) // [100 - (Skill Level x 10)] %
-					status_change_end(bl, SC__SHADOWFORM, INVALID_TIMER);
+		else {
+			if( dstmd && src != bl && !dstmd->shadowform_id ) {
+				int hits = skill_lv;
+				if( clif_skill_nodamage(src,bl,skill_id,skill_lv,sc_start4(src,src,type,100,skill_lv,bl->id,hits,0,skill_get_time(skill_id, skill_lv))) )
+					dstmd->shadowform_id = src->id;
 			}
-			// Attack Speed decrease and Blind happen to everyone around caster, not just hidden targets.
-			sc_start(src, bl, type, 100, skill_lv, skill_get_time(skill_id, skill_lv));
-			sc_start(src, bl, SC_BLIND, 53 + 2 * skill_lv, skill_lv, skill_get_time2(skill_id, skill_lv));
-		} else {
-			clif_skill_nodamage(src, bl, skill_id, 0, 1);
-			map_foreachinallrange(skill_area_sub, bl, skill_get_splash(skill_id, skill_lv), BL_CHAR,
-				src, skill_id, skill_lv, tick, flag|BCT_ENEMY|1, skill_castend_nodamage_id);
+			break;
 		}
+		clif_skill_fail(sd, skill_id, USESKILL_FAIL_LEVEL, 0);
 		break;
 
 	case SC_ENERVATION:
@@ -10635,32 +10574,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
 		clif_skill_damage(src,bl,tick, status_get_amotion(src), 0, -30000, 1, skill_id, skill_lv, DMG_SINGLE);
 		break;
-	case KG_KAGEHUMI:
-		if( flag&1 ){
-			if(tsc && ( tsc->option&(OPTION_CLOAK|OPTION_HIDE) ||
-				tsc->data[SC_CAMOUFLAGE] || tsc->data[SC__SHADOWFORM] ||
-				tsc->data[SC_MARIONETTE] || tsc->data[SC_HARMONIZE])){
-					sc_start(src,src, type, 100, skill_lv, skill_get_time(skill_id, skill_lv));
-					sc_start(src,bl, type, 100, skill_lv, skill_get_time(skill_id, skill_lv));
-					status_change_end(bl, SC_HIDING, INVALID_TIMER);
-					status_change_end(bl, SC_CLOAKING, INVALID_TIMER);
-					status_change_end(bl, SC_CAMOUFLAGE, INVALID_TIMER);
-					status_change_end(bl, SC_NEWMOON, INVALID_TIMER);
-					if (tsc && tsc->data[SC__SHADOWFORM] && rnd() % 100 < 100 - tsc->data[SC__SHADOWFORM]->val1 * 10) // [100 - (Skill Level x 10)] %
-						status_change_end(bl, SC__SHADOWFORM, INVALID_TIMER);
-					status_change_end(bl, SC_MARIONETTE, INVALID_TIMER);
-					status_change_end(bl, SC_HARMONIZE, INVALID_TIMER);
-			}
-			if( skill_area_temp[2] == 1 ){
-				clif_skill_damage(src,src,tick, status_get_amotion(src), 0, -30000, 1, skill_id, skill_lv, DMG_SINGLE);
-				sc_start(src,src, SC_STOP, 100, skill_lv, skill_get_time(skill_id, skill_lv));
-			}
-		}else{
-			skill_area_temp[2] = 0;
-			map_foreachinrange(skill_area_sub, bl, skill_get_splash(skill_id, skill_lv), BL_CHAR|BL_SKILL, src, skill_id, skill_lv, tick, flag|BCT_ENEMY|SD_SPLASH|1, skill_castend_nodamage_id);
-		}
-		break;
-
 	case MH_SILENT_BREEZE:
 		{
 			int heal = 5 * status_get_lv(&hd->bl) +
@@ -14878,8 +14791,6 @@ bool skill_check_condition_castbegin(struct map_session_data* sd, uint16 skill_i
 		return false;
 	}
 
-	if( sc && ( sc->data[SC__SHADOWFORM] || sc->data[SC__IGNORANCE] ) )
-		return false;
 
 	//Checks if disabling skill - in which case no SP requirements are necessary
 	if( sc && skill_disable_check(sc,skill_id))
@@ -17730,8 +17641,7 @@ bool skill_check_shadowform(struct block_list *bl, int64 damage, int hit)
 		}
 
 		if( src && (status_isdead(src) || !battle_check_target(bl,src,BCT_ENEMY)) ) {
-			if( src->type == BL_PC )
-				((TBL_PC*)src)->shadowform_id = 0;
+			((TBL_PC*)src)->shadowform_id = 0;
 			status_change_end(bl, SC__SHADOWFORM, INVALID_TIMER);
 			return false;
 		}
@@ -17739,8 +17649,7 @@ bool skill_check_shadowform(struct block_list *bl, int64 damage, int hit)
 		status_damage(bl, src, damage, 0, clif_damage(src, src, gettick(), 500, 500, damage, hit, (hit > 1 ? DMG_MULTI_HIT : DMG_NORMAL), 0, false), 0, SC__SHADOWFORM);
 		if( sc && sc->data[SC__SHADOWFORM] && (--sc->data[SC__SHADOWFORM]->val3) <= 0 ) {
 			status_change_end(bl, SC__SHADOWFORM, INVALID_TIMER);
-			if( src->type == BL_PC )
-				((TBL_PC*)src)->shadowform_id = 0;
+			((TBL_PC*)src)->shadowform_id = 0;
 		}
 		return true;
 	}

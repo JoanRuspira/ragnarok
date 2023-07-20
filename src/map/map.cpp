@@ -470,12 +470,20 @@ int map_moveblock(struct block_list *bl, int x1, int y1, t_tick tick)
 
 		skill_unit_move(bl,tick,3);
 
-		if( bl->type == BL_PC && ((TBL_PC*)bl)->shadowform_id ) {//Shadow Form Target Moving
+		if( ((TBL_PC*)bl)->shadowform_id ) {//Shadow Form Target Moving
 			struct block_list *d_bl;
 			if( (d_bl = map_id2bl(((TBL_PC*)bl)->shadowform_id)) == NULL || !check_distance_bl(bl,d_bl,10) ) {
 				if( d_bl )
 					status_change_end(d_bl,SC__SHADOWFORM,INVALID_TIMER);
 				((TBL_PC*)bl)->shadowform_id = 0;
+			}
+		}
+		if( ((TBL_MOB*)bl)->shadowform_id ) {//Shadow Form Target Moving
+			struct block_list *d_bl;
+			if( (d_bl = map_id2bl(((TBL_MOB*)bl)->shadowform_id)) == NULL || !check_distance_bl(bl,d_bl,10) ) {
+				if( d_bl )
+					status_change_end(d_bl,SC__SHADOWFORM,INVALID_TIMER);
+				((TBL_MOB*)bl)->shadowform_id = 0;
 			}
 		}
 
