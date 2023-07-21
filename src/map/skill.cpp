@@ -701,7 +701,6 @@ int skill_calc_heal(struct block_list *src, struct block_list *target, uint16 sk
  */
 static int8 skill_isCopyable(struct map_session_data *sd, uint16 skill_id) {
 	uint16 skill_idx = skill_get_index(skill_id);
-	ShowMessage("skill id %d", skill_id);
 	if (!skill_idx)
 		return 0;
 
@@ -6678,11 +6677,54 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			clif_walkok(sd); // So aegis has to resend the walk ok.
 		break;
 
+	case JG_PLAGIARISM:
+		if (tsce) {
+			i = status_change_end(bl, type, INVALID_TIMER);
+
+			if( i ){
+				clif_skill_nodamage(src,bl,skill_id,( skill_id == LG_FORCEOFVANGUARD || skill_id == RA_CAMOUFLAGE ) ? skill_lv : -1,i);
+				status_change_end(bl, SC__REPRODUCE, INVALID_TIMER);
+			}
+			else if( sd )
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+			map_freeblock_unlock();
+			return 0;
+		}
+		i = sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv));
+		clif_specialeffect(bl, EF_BLUEBODY, AREA);
+		clif_specialeffect(bl, EF_GUARD2, AREA);
+		if( i ){
+			clif_skill_nodamage(src,bl,skill_id,( skill_id == LG_FORCEOFVANGUARD || skill_id == RA_CAMOUFLAGE ) ? skill_lv : -1,i);
+			status_change_end(bl, SC__REPRODUCE, INVALID_TIMER);
+		}
+		else if( sd )
+			clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+		break;
+	case SC_REPRODUCE:
+		if (tsce) {
+			i = status_change_end(bl, type, INVALID_TIMER);
+
+			if( i ){
+				clif_skill_nodamage(src,bl,skill_id,( skill_id == LG_FORCEOFVANGUARD || skill_id == RA_CAMOUFLAGE ) ? skill_lv : -1,i);
+				status_change_end(bl, SC_PLAGIARISM, INVALID_TIMER);
+			}
+			else if( sd )
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+			map_freeblock_unlock();
+			return 0;
+		}
+		i = sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv));
+		clif_specialeffect(bl, EF_DETOXICATION, AREA);
+		if( i ){
+			clif_skill_nodamage(src,bl,skill_id,( skill_id == LG_FORCEOFVANGUARD || skill_id == RA_CAMOUFLAGE ) ? skill_lv : -1,i);
+			status_change_end(bl, SC_PLAGIARISM, INVALID_TIMER);
+		}
+		else if( sd )
+			clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+		break;
 	case AS_CLOAKING:
 	case GC_CLOAKINGEXCEED:
 	case LG_FORCEOFVANGUARD:
-	case JG_PLAGIARISM:
-	case SC_REPRODUCE:
 	case RA_CAMOUFLAGE:
 		if (tsce) {
 			i = status_change_end(bl, type, INVALID_TIMER);
@@ -16030,9 +16072,6 @@ struct s_skill_condition skill_get_requirement(struct map_session_data* sd, uint
 			break;
 		}
 	}
-
-	if (skill_id == sd->status.skill[sd->reproduceskill_idx].id)
-		req.sp += req.sp * 30 / 100;
 
 	req.sp = cap_value(req.sp * sp_skill_rate_bonus / 100, 0, SHRT_MAX);
 
