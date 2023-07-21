@@ -2064,6 +2064,10 @@ Body:
     CastTime: 3000
     Cooldown: 5000
     AfterCastActDelay: 1000
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 35
   - Id: 833
@@ -2099,6 +2103,7 @@ Body:
     Element: Holy
     CopyFlags:
       Skill:
+        Plagiarism: true
         Reproduce: true
     CastCancel: true
     CastTime: 6000
@@ -2823,6 +2828,20 @@ Body:
       ItemCost:
         - Item: Leather_Pouch
           Amount: 1
+  - Id: 872
+    Name: JG_PLAGIARISM
+    Description: Plagiarism
+    MaxLevel: 5
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 1000
+    AfterCastActDelay: 3000
+    Duration1: 300000
+    Requires:
+      SpCost: 70
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death

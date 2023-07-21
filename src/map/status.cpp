@@ -880,6 +880,7 @@ void initChangeTables(void)
 
 	/* Shadow Chaser */
 	set_sc( SC_REPRODUCE		, SC__REPRODUCE		, EFST_REPRODUCE		, SCB_NONE );
+	set_sc( JG_PLAGIARISM		, SC_PLAGIARISM		, EFST_PLAGIARISM		, SCB_NONE );
 	set_sc( SC_AUTOSHADOWSPELL	, SC__AUTOSHADOWSPELL	, EFST_AUTOSHADOWSPELL	, SCB_NONE );
 	set_sc( SC_SHADOWFORM		, SC__SHADOWFORM	, EFST_SHADOWFORM		, SCB_NONE );
 	set_sc( SC_BODYPAINT		, SC__BODYPAINT		, EFST_BODYPAINT		, SCB_ASPD );
@@ -2651,8 +2652,6 @@ int status_base_amotion_pc(struct map_session_data* sd, struct status_data* stat
 		val += 1 + skill_lv;
 	if ((skill_lv = pc_checkskill(sd,GS_SINGLEACTION)) > 0 && (sd->status.weapon >= W_REVOLVER && sd->status.weapon <= W_GRENADE))
 		val += ((skill_lv + 1) / 2);
-	if ((skill_lv = pc_checkskill(sd, RG_PLAGIARISM)) > 0)
-		val += (skill_lv*2);
 	if (pc_isriding(sd))
 		val -= 50 - 10 * 5; //pc_checkskill(sd, KN_CAVALIERMASTERY)
 	else if (pc_isridingdragon(sd))

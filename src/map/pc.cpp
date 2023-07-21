@@ -1874,7 +1874,7 @@ void pc_reg_received(struct map_session_data *sd)
 		sd->hate_mob[i] = static_cast<short>(pc_readglobalreg(sd, add_str(sg_info[i].hate_var)))-1;
 	}
 
-	if ((i = pc_checkskill(sd,RG_PLAGIARISM)) > 0) {
+	if ((i = pc_checkskill(sd,JG_PLAGIARISM)) > 0) {
 		unsigned short skid = static_cast<unsigned short>(pc_readglobalreg(sd, add_str(SKILL_VAR_PLAGIARISM)));
 		sd->cloneskill_idx = skill_get_index(skid);
 		if (sd->cloneskill_idx > 0) {

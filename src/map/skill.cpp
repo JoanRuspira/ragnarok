@@ -701,7 +701,7 @@ int skill_calc_heal(struct block_list *src, struct block_list *target, uint16 sk
  */
 static int8 skill_isCopyable(struct map_session_data *sd, uint16 skill_id) {
 	uint16 skill_idx = skill_get_index(skill_id);
-
+	ShowMessage("skill id %d", skill_id);
 	if (!skill_idx)
 		return 0;
 
@@ -712,7 +712,7 @@ static int8 skill_isCopyable(struct map_session_data *sd, uint16 skill_id) {
 	s_skill_copyable copyable = skill_db.find(skill_id)->copyable;
 
 	//Plagiarism only able to copy skill while SC_PRESERVE is not active and skill is copyable by Plagiarism
-	if (copyable.option & SKILL_COPY_PLAGIARISM && pc_checkskill(sd,RG_PLAGIARISM) && !sd->sc.data[SC_PRESERVE])
+	if (copyable.option & SKILL_COPY_PLAGIARISM && pc_checkskill(sd,JG_PLAGIARISM) && sd->sc.data[SC_PLAGIARISM] && sd->sc.data[SC_PLAGIARISM]->val1)
 		return 1;
 
 	//Reproduce can copy skill if SC__REPRODUCE is active and the skill is copyable by Reproduce
@@ -1828,7 +1828,7 @@ static void skill_do_copy(struct block_list* src,struct block_list *bl, uint16 s
 {
 	TBL_PC *tsd = BL_CAST(BL_PC, bl);
 
-	if (!tsd || (!pc_checkskill(tsd,RG_PLAGIARISM) && !pc_checkskill(tsd,SC_REPRODUCE)))
+	if (!tsd || (!pc_checkskill(tsd,SC_REPRODUCE) && !pc_checkskill(tsd,JG_PLAGIARISM)))
 		return;
 	//If SC_PRESERVE is active and SC__REPRODUCE is not active, nothing to do
 	else if (tsd->sc.data[SC_PRESERVE] && !tsd->sc.data[SC__REPRODUCE])
@@ -1846,15 +1846,22 @@ static void skill_do_copy(struct block_list* src,struct block_list *bl, uint16 s
 		switch (skill_isCopyable(tsd,skill_id)) {
 			case 1: //Copied by Plagiarism
 				{
-					if (tsd->cloneskill_idx > 0 && tsd->status.skill[tsd->cloneskill_idx].flag == SKILL_FLAG_PLAGIARIZED) {
-						// ShowStatus("Deleting skill %d.\n", tsd->status.skill[tsd->cloneskill_idx].id);
+					struct status_change *tsc = status_get_sc(bl);
+					//Already did SC check
+					//Skill level copied depends on Reproduce skill that used
+					lv = (tsc) ? tsc->data[SC_PLAGIARISM]->val1 : 1;
+					if( tsd->cloneskill_idx > 0 && tsd->status.skill[tsd->cloneskill_idx].flag == SKILL_FLAG_PLAGIARIZED ) {
 						clif_deleteskill(tsd,tsd->status.skill[tsd->cloneskill_idx].id);
 						tsd->status.skill[tsd->cloneskill_idx].id = 0;
 						tsd->status.skill[tsd->cloneskill_idx].lv = 0;
 						tsd->status.skill[tsd->cloneskill_idx].flag = SKILL_FLAG_PERMANENT;
 					}
 
-					lv = min(skill_lv,pc_checkskill(tsd,RG_PLAGIARISM)); //Copied level never be > player's RG_PLAGIARISM level
+					//Level dependent and limitation.
+					if (src->type == BL_PC) //If player, max skill level is skill_get_max(skill_id)
+						lv = min(lv,skill_get_max(skill_id));
+					else //Monster might used skill level > allowed player max skill lv. Ex. Drake with Waterball lv. 10
+						lv = min(lv,skill_lv);
 
 					tsd->cloneskill_idx = idx;
 					pc_setglobalreg(tsd, add_str(SKILL_VAR_PLAGIARISM), skill_id);
@@ -5185,7 +5192,8 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	tstatus = status_get_status_data(bl);
 	sstatus = status_get_status_data(src);
 
-
+	if (bl->type == BL_PC && skill_id && skill_db.find(skill_id)->copyable.option) 
+		skill_do_copy(src,bl,skill_id,skill_lv);
 	
 	//Check for undead skills that convert a no-damage skill into a damage one. [Skotlex]
 	switch (skill_id) {
@@ -6673,6 +6681,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case AS_CLOAKING:
 	case GC_CLOAKINGEXCEED:
 	case LG_FORCEOFVANGUARD:
+	case JG_PLAGIARISM:
 	case SC_REPRODUCE:
 	case RA_CAMOUFLAGE:
 		if (tsce) {

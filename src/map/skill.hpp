@@ -2171,6 +2171,7 @@ enum e_skill {
 	DUMMY_CROSSIMPACT = 869,
 	ASC_DANCINGBLADES = 870,
 	SC_STRIPACCESSORY = 871,
+	JG_PLAGIARISM = 872,
 };
 
 /// The client view ids for land skills.
