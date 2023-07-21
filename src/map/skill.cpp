@@ -16107,7 +16107,21 @@ struct s_skill_condition skill_get_requirement(struct map_session_data* sd, uint
 	req.state = skill->require.state;
 
 	req.mhp = skill->require.mhp[skill_lv-1];
-	req.weapon = skill->require.weapon;
+
+	
+
+	if ((pc_checkskill(sd, RG_AMBIDEXTERITY)) == 5) {
+		if (skill_id == sd->status.skill[sd->reproduceskill_idx].id
+			|| skill_id == sd->status.skill[sd->cloneskill_idx].id
+		){
+			if (skill->require.weapon == W_MUSICAL || skill->require.weapon == W_BOW){
+				req.weapon = W_BOW;
+			}
+		}
+	} else {
+		req.weapon = skill->require.weapon;
+	}
+
 	req.ammo_qty = skill->require.ammo_qty[skill_lv-1];
 	if (req.ammo_qty)
 		req.ammo = skill->require.ammo;

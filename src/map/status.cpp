@@ -4479,6 +4479,10 @@ int status_calc_pc_sub(struct map_session_data* sd, enum e_status_calc_opt opt)
 		}		
 	}
 
+	if((skill=pc_checkskill(sd,RG_AMBIDEXTERITY))>0){
+		base_status->aspd_rate += 5*skill;
+	}
+
 #ifndef RENEWAL_ASPD
 	if((skill=pc_checkskill(sd,SA_ADVANCEDBOOK))>0 && sd->status.weapon == W_BOOK)
 		base_status->aspd_rate -= 5*skill;

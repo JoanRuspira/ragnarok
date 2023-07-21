@@ -2842,6 +2842,14 @@ Body:
     Duration1: 300000
     Requires:
       SpCost: 70
+      ItemCost:
+        - Item: Scroll
+          Amount: 1
+  - Id: 873
+    Name: RG_AMBIDEXTERITY
+    Description: Ambidexterity
+    MaxLevel: 5
+    Type: Weapon
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -8743,6 +8751,10 @@ Body:
     Element: Weapon
     Cooldown: 5000
     AfterCastActDelay: 400
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 15
       Weapon:
@@ -10593,6 +10605,9 @@ Body:
     Cooldown: 7000
     AfterCastActDelay: 2000
     AfterCastWalkDelay: 2000
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Requires:
       SpCost: 30
       Weapon:
@@ -20763,6 +20778,9 @@ Body:
     Duration1: 300000
     Requires:
       SpCost: 100
+      ItemCost:
+        - Item: Scroll
+          Amount: 1
   - Id: 2286
     Name: SC_AUTOSHADOWSPELL
     Description: Auto Shadow Spell
@@ -23377,6 +23395,9 @@ Body:
     AfterCastActDelay: 400
     Duration1: 3400
     Cooldown: 10000
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Requires:
       SpCost: 120
       Weapon:
