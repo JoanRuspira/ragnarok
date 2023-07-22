@@ -6414,12 +6414,43 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 			sd->status.skill[sk_idx].id != 0 && sd->status.skill[sk_idx].flag == SKILL_FLAG_PLAGIARIZED )
 		{
 			int r_lv = sc->data[SC__AUTOSHADOWSPELL]->val2;
-
-			if (r_skill != AL_HOLYLIGHT && r_skill != PR_MAGNUS) {
-				int type;
+			std::shared_ptr<s_skill_db> skill = skill_db.find(r_skill);
+			bool abort_autoshadowspell = false;
+			if (skill->require.state == ST_SHIELD){
+				if(!sd->status.shield){
+					abort_autoshadowspell = true;
+				}
+			}
+			if (!status_charge(&sd->bl, 0, 20)){
+				abort_autoshadowspell = true;
+			}
+			if (skill->require.weapon == 8192 || skill->require.weapon == 2048){
+				if(sd->status.weapon != W_BOW){
+					abort_autoshadowspell = true;
+				}
+			}
+	
+			
+			struct s_skill_condition require;
+			require = skill_get_requirement(sd,r_skill,r_lv);
+			int i;
+			for( i = 0; i < MAX_SKILL_ITEM_REQUIRE; ++i )
+			{
+				if( !require.itemid[i] )
+					continue;
+				if( (pc_search_inventory(sd,require.itemid[i])) < 0 ){
+					abort_autoshadowspell = true;
+				}
+			}
+			
+			if (!skill_check_condition_castend(sd, r_skill, r_lv)){
+				abort_autoshadowspell = true;
+			}
+			battle_consume_ammo(sd, r_skill, r_lv);
+			int type;
+			if (!abort_autoshadowspell){
 				if( (type = skill_get_casttype(r_skill)) == CAST_GROUND ) {
 					int maxcount = 0;
-					std::shared_ptr<s_skill_db> skill = skill_db.find(r_skill);
 
 					if( !(BL_PC&battle_config.skill_reiteration) && skill->unit_flag[UF_NOREITERATION] )
 							type = -1;
@@ -6429,7 +6460,7 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 
 					if( BL_PC&battle_config.land_skill_limit &&
 						(maxcount = skill_get_maxcount(r_skill, r_lv)) > 0
-					  ) {
+					) {
 						int v;
 						for(v=0;v<MAX_SKILLUNITGROUP && sd->ud.skillunit[v] && maxcount;v++) {
 							if(sd->ud.skillunit[v]->skill_id == r_skill)
@@ -6448,7 +6479,6 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 
 				if (sd->state.autocast == 0) {
 					sd->state.autocast = 1;
-					skill_consume_requirement(sd, r_skill, r_lv, 3);
 					switch (type) {
 						case CAST_GROUND:
 							skill_castend_pos2(src, target->x, target->y, r_skill, r_lv, tick, flag);
@@ -6466,14 +6496,7 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 				sd->ud.canact_tick = i64max(tick + skill_delayfix(src, r_skill, r_lv), sd->ud.canact_tick);
 				clif_status_change(src, EFST_POSTDELAY, 1, skill_delayfix(src, r_skill, r_lv), 0, 0, 1);
 			}
-		}
-		if (wd.flag&BF_WEAPON && sc && sc->data[SC_FALLINGSTAR] && rand()%100 < sc->data[SC_FALLINGSTAR]->val2) {
-			if (sd)
-				sd->state.autocast = 1;
-			if (status_charge(src, 0, skill_get_sp(SJ_FALLINGSTAR_ATK, sc->data[SC_FALLINGSTAR]->val1)))
-				skill_castend_nodamage_id(src, src, SJ_FALLINGSTAR_ATK, sc->data[SC_FALLINGSTAR]->val1, tick, flag);
-			if (sd)
-				sd->state.autocast = 0;
+
 		}
 		if (wd.flag & BF_WEAPON && src != target && damage > 0) {
 			if (battle_config.left_cardfix_to_right)

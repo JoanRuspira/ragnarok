@@ -16114,8 +16114,8 @@ struct s_skill_condition skill_get_requirement(struct map_session_data* sd, uint
 		if (skill_id == sd->status.skill[sd->reproduceskill_idx].id
 			|| skill_id == sd->status.skill[sd->cloneskill_idx].id
 		){
-			if (skill->require.weapon == W_MUSICAL || skill->require.weapon == W_BOW){
-				req.weapon = W_BOW;
+			if (skill->require.weapon == 8192 || skill->require.weapon == 2048){
+				req.weapon = 2048;
 			}
 		}
 	} else {
@@ -19656,9 +19656,8 @@ int skill_select_menu(struct map_session_data *sd,uint16 skill_id) {
 		return 0;
 	}
 
-	lv = (aslvl + 5) / 2; // The level the skill will be autocasted
-	lv = min(lv,sd->status.skill[sk_idx].lv);
-	prob = (aslvl >= 10) ? 15 : (30 - 2 * aslvl); // Probability at level 10 was increased to 15.
+	lv = (aslvl); // The level the skill will be autocasted
+	prob = aslvl *4; // Probability to auto cast
 	sc_start4(&sd->bl,&sd->bl,SC__AUTOSHADOWSPELL,100,id,lv,prob,0,skill_get_time(SC_AUTOSHADOWSPELL,aslvl));
 	return 0;
 }

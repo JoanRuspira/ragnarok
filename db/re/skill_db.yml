@@ -162,6 +162,8 @@ Body:
     Element: Weapon
     Cooldown: 5000
     AfterCastActDelay: 400
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -2294,6 +2296,10 @@ Body:
     Element: Dark
     CopyFlags:
       Skill:
+        Plagiarism: true
+        Reproduce: true
+    CopyFlags:
+      Skill:
         Reproduce: true
     CastCancel: true
     Cooldown: 2000
@@ -2325,6 +2331,7 @@ Body:
         Area: 5
     CopyFlags:
       Skill:
+        Plagiarism: true
         Reproduce: true
     CastCancel: true
     Cooldown: 5000
@@ -2344,6 +2351,10 @@ Body:
     Hit: Multi_Hit
     HitCount: -3
     Element: Dark
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     SplashArea:
       - Level: 1
         Area: 1
@@ -3609,6 +3620,8 @@ Body:
       - Level: 5
         Count: 10
     Element: Holy
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -5755,12 +5768,8 @@ Body:
     MaxLevel: 5
     Type: Magic
     TargetType: Attack
-    DamageFlags:
-      Splash: false
-      SplashSplit: false
     Flags:
       IsAutoShadowSpell: true
-      TargetTrap: true
     Range: 9
     Hit: Single
     HitCount: 1
@@ -7235,6 +7244,8 @@ Body:
     HitCount: 1
     Cooldown: 5000
     AfterCastActDelay: 400
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -10605,6 +10616,8 @@ Body:
     Cooldown: 7000
     AfterCastActDelay: 2000
     AfterCastWalkDelay: 2000
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Reproduce: true
@@ -10692,6 +10705,11 @@ Body:
     AfterCastActDelay: 400
     Cooldown: 7000
     Duration2: 1000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Requires:
       SpCost: 30
       Weapon:
@@ -12485,6 +12503,12 @@ Body:
         Count: 5
     Element: Ghost
     CastCancel: true
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     CastTime: 5000
     AfterCastActDelay: 2000
     Duration1: 3000
@@ -20784,77 +20808,19 @@ Body:
   - Id: 2286
     Name: SC_AUTOSHADOWSPELL
     Description: Auto Shadow Spell
-    MaxLevel: 10
+    MaxLevel: 5
     TargetType: Self
     DamageFlags:
       NoDamage: true
     Hit: Single
     HitCount: 1
     CastCancel: true
-    CastTime:
-      - Level: 1
-        Time: 4000
-      - Level: 2
-        Time: 3600
-      - Level: 3
-        Time: 3200
-      - Level: 4
-        Time: 2800
-      - Level: 5
-        Time: 2400
-      - Level: 6
-        Time: 2000
-      - Level: 7
-        Time: 1600
-      - Level: 8
-        Time: 1200
-      - Level: 9
-        Time: 800
-      - Level: 10
-        Time: 400
-    Duration1:
-      - Level: 1
-        Time: 60000
-      - Level: 2
-        Time: 80000
-      - Level: 3
-        Time: 100000
-      - Level: 4
-        Time: 120000
-      - Level: 5
-        Time: 140000
-      - Level: 6
-        Time: 160000
-      - Level: 7
-        Time: 180000
-      - Level: 8
-        Time: 200000
-      - Level: 9
-        Time: 220000
-      - Level: 10
-        Time: 300000
+    CastTime: 2500
+    Duration1: 30000
+    Cooldown: 1000
+    AfterCastActDelay: 1000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 40
-        - Level: 2
-          Amount: 45
-        - Level: 3
-          Amount: 50
-        - Level: 4
-          Amount: 55
-        - Level: 5
-          Amount: 60
-        - Level: 6
-          Amount: 65
-        - Level: 7
-          Amount: 70
-        - Level: 8
-          Amount: 75
-        - Level: 9
-          Amount: 80
-        - Level: 10
-          Amount: 85
+      SpCost: 100
   - Id: 2287
     Name: SC_SHADOWFORM
     Description: Shadow Form
