@@ -6368,7 +6368,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case SR_WINDMILL:
 	case GN_CART_TORNADO:
 		clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
-	case SR_EARTHSHAKER:
 	case NC_INFRAREDSCAN:
 	case NPC_VAMPIRE_GIFT:
 	case NPC_HELLJUDGEMENT:
@@ -6376,7 +6375,9 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case LG_MOONSLASHER:
 		skill_castend_damage_id(src, src, skill_id, skill_lv, tick, flag);
 		break;
-
+	case SR_EARTHSHAKER:
+		skill_castend_damage_id(src, src, skill_id, skill_lv, tick, flag);
+		break;
 #ifdef RENEWAL
 	case KN_BRANDISHSPEAR:
 		map_foreachindir(skill_area_sub, src->m, src->x, src->y, bl->x, bl->y,

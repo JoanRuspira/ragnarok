@@ -15,6 +15,7 @@ int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
         case MO_INVESTIGATE:
             return calculate_occult_impact(skill_lv, status_get_def(target));
 		case SR_EARTHSHAKER:
+			clif_specialeffect(src, EF_ENERVATION6, AREA); //weakness
 			return calculate_ground_shaker_atk_ratio(skill_lv, sstatus->str);
 		case MO_TRIPLEATTACK:
 			return calculate_raging_triple_blow_atk_ratio(skill_lv);
@@ -24,6 +25,7 @@ int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 				if (sd && sd->status.weapon == W_MACE || sd->status.weapon == W_2HMACE) {
 					is_using_mace = true;
 				}
+				clif_specialeffect(src, EF_ENERVATION3, AREA); //ignorance
 				return calculate_chain_combo_atk_ratio(skill_lv, is_using_mace);
 			}
 		case SR_WINDMILL:
@@ -47,6 +49,7 @@ void MonkSkillAttackRatioCalculator::add_ki_blast_special_effects(struct block_l
 	clif_specialeffect(target, EF_DRAGONSMOKE, AREA);
 	clif_specialeffect(target, EF_SPINEDBODY, AREA);
 	clif_specialeffect(target, EF_KICKEDBODY, AREA);
+	clif_specialeffect(target, EF_ENERVATION5, AREA); //unlucky
 }
 
 

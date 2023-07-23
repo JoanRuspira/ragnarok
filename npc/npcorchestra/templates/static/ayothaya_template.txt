@@ -878,7 +878,7 @@ ayo_in01,146,163,7	script	Ayothaya Chef#ayo:npcid	820,{
 	end;
 }
 
-ayo_fild01,65,235,5	script	Ayothaya Adventurer#ayo:npcid	603,{
+ayo_fild01,53,239,3	script	Ayothaya Adventurer#ayo:npcid	603,{
 	npctalk "npcdialog";
 	end;
 }
