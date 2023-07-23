@@ -1,0 +1,81 @@
+//===== Script =======================================
+// Rogue Job Change
+//====================================================
+
+-	script	Rogue Guildmaster#rgegld::RgeGld	-1,{
+	if (Class == Job_Thief) {
+		mes "[Rogue Guildmaster]";
+		mes "Good day! I am the Rogue Guildmaster.";
+		mes "I train Thieves that meet the requirements and allow them to become Rogues.";
+		next;
+		mes "[Rogue Guildmaster]";
+		mes "As a Rogue you will gain new skills.";
+		mes "The requirements are:";
+		mes "- Being a first class job.";
+		mes "- Being Job level 50.";
+		mes "- Having used all your skill points.";
+		next;
+		mes "[Rogue Guildmaster]";
+		mes "Do you want to become a Rogue?";
+		next;
+		switch(select("Yes:No")) {
+			case 1:
+				mes "[Rogue Guildmaster]";
+				mes "Good! Let me see if you pass our requirements...";
+				next;
+				if (JobLevel < 50) {
+					mes "[Rogue Guildmaster]";
+					mes "Hmm... Your job level does not meet our requirements.";
+					mes "You need to be more experienced before being a Rogue.";
+					close;
+				}
+				if (SkillPoint) {
+					mes "[Rogue Guildmaster]";
+					mes "Looks like you have not used all your skill points.";
+					mes "Use them and I'll be able to make you a Rogue.";
+					close;
+				}
+				mes "[Rogue Guildmaster]";
+				mes "Okay! Looks like you pass all of them!";
+				mes "You are allowed to join the Rogue guild.";
+				mes "Congratulations!";
+				jobchange Job_Rogue;
+				specialeffect2 EF_JOBLVUP50;
+				close;
+			case 2:
+				mes "[Rogue Guildmaster]";
+				mes "Ah! Let me know if you change your mind.";
+				mes "We are always looking for new adventurers";
+				mes "to join the guild.";
+				close;
+		}
+		
+	}
+
+	if (Class == Job_Rogue) {
+		mes "[Rogue Guildmaster]";
+		mes "Hi fellow Rogue!";
+		mes "Are you thinking about your next job?";
+		next;
+		mes "[Rogue Guildmaster]";
+		mes "You can become a Stalker if you reach job level 50.";
+		next;
+		mes "[Rogue Guildmaster]";
+		mes "Go find the legendary Stalker in Veins.";
+		mes "I'm sure he will be able to train you.";
+		close;
+	}
+
+	if (Class == Job_Stalker) {
+		mes "[Rogue Guildmaster]";
+		mes "Ah! An experienced member of the guild!";
+		mes "Are you here to help train the new members?";
+		close;
+	}
+
+	mes "[Rogue Guildmaster]";
+	mes "Welcome to the Rogue guild. We accept applications from Thieves that meet our requirements.";
+	close;
+}
+
+in_rogue,383,24,4	duplicate(RgeGld)	Rogue Guildmaster#rgegld	810

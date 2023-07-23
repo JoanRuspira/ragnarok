@@ -1946,11 +1946,6 @@ morocc,82,170,1	script	Morroc Villager#moc::npcid	spriteid,{
 	end;
 }
 
-moc_prydb1,50,126,3	script	Morroc Thief#moc::npcid	6,{
-	npctalk "npcdialog";
-	end;
-}
-
 moc_prydb1,44,119,0	script	Morroc Rogue#moc::npcid	828,{
 	npctalk "npcdialog";
 	end;
@@ -1965,13 +1960,6 @@ moc_prydb1,162,129,3	script	Morroc Assassin#moc::npcid	12,{
 	npctalk "npcdialog";
 	end;
 }
-
-moc_prydb1,160,119,1	script	Morroc Novice#moc::npcid	642,{
-	npctalk "npcdialog";
-	end;
-}
-
-
 
 moc_fild12,165,268,3	script	Morroc Adventurer#moc::npcid	698,{
 	npctalk "npcdialog";

@@ -262,7 +262,7 @@ int AssassinSkillAtkRatioCalculator::calculate_meteor_assault_atk_ratio(int skil
 			ratio = 500;
 			break;
 		}
-	return ratio + (dex/3);
+	return ratio + (dex);
 }
 
 int AssassinSkillAtkRatioCalculator::calculate_venom_splasher_atk_ratio(int skill_lv, int intelligence)
@@ -354,7 +354,7 @@ int AssassinSkillAtkRatioCalculator::calculate_soul_destroyer_atk_ratio(int skil
 			ratio = 600;
 			break;
 		}
-	return ratio + (dex/3);
+	return ratio + (dex);
 }
 
 

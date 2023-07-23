@@ -1,0 +1,56 @@
+//===== Script =======================================
+// Stalker Armorer NPC
+//====================================================
+
+-	script	Stalker Armorer#starmor1::Stalker_Armorer	-1,{
+	set .n$,"[Stalker Armorer]";
+	mes .n$;
+	mes "Hello! I am an expert in customising armors.";
+	mes "I am part of the Knight Guild, so I can make changes to a member's outfit for free";
+	next;
+	if (Class != Job_Stalker) {
+		mes "[Stalker Armorer]";
+		mes "Oh! I can only provide my services to Stalkers...";
+		mes "Sorry!";
+		close;
+	}
+	mes "Aha!";
+	mes "A seasoned Stalker, what outfit would you like to wear?";
+	next;
+	switch(select("Stalker:Gangster:Outlaw:Bandit")) {
+		case 1:
+			setlook LOOK_CLOTHES_COLOR,0;
+        	setlook LOOK_BODY2,0;
+			specialeffect2 EF_ENTRY2;
+			mes "[Stalker Armorer]";
+			mes "There you go!";
+			mes "Come back if you want to change your outfit again!";
+			close;
+		case 2:
+			setlook LOOK_CLOTHES_COLOR,0;
+        	setlook LOOK_BODY2,1;
+			specialeffect2 EF_ENTRY2;
+			mes "[Stalker Armorer]";
+			mes "There you go!";
+			mes "Come back if you want to change your outfit again!";
+			close;
+		case 3:
+			setlook LOOK_CLOTHES_COLOR,0;
+        	setlook LOOK_BODY2,2;
+			specialeffect2 EF_ENTRY2;
+			mes "[Stalker Armorer]";
+			mes "There you go!";
+			mes "Come back if you want to change your outfit again!";
+			close;
+		case 4:
+			setlook LOOK_CLOTHES_COLOR,0;
+        	setlook LOOK_BODY2,3;
+			specialeffect2 EF_ENTRY2;
+			mes "[Stalker Armorer]";
+			mes "There you go!";
+			mes "Come back if you want to change your outfit again!";
+			close;;
+	}	
+}
+
+in_rogue,357,17,7	duplicate(Stalker_Armorer)	Stalker Armorer#starmor1	747

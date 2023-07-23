@@ -20816,7 +20816,7 @@ Body:
     HitCount: 1
     CastCancel: true
     CastTime: 2500
-    Duration1: 30000
+    Duration1: 300000
     Cooldown: 1000
     AfterCastActDelay: 1000
     Requires:

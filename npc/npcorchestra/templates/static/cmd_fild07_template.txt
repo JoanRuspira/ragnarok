@@ -328,10 +328,6 @@ in_rogue,356,27,6	script	Rogue Guild Member#pharos:npcid	17,{
 	end;
 }
 
-in_rogue,357,17,4	script	Rogue Guild Member#pharos:npcid	747,{
-	npctalk "npcdialog";
-	end;
-}
 
 in_rogue,378,17,6	script	Rogue Guild Member#pharos:npcid	779,{
 	npctalk "npcdialog";
@@ -348,20 +344,7 @@ in_rogue,370,35,1	script	Rogue Guild Member#pharos:npcid	118,{
 	end;
 }
 
-in_rogue,356,41,4	script	Rogue Guild Member#pharos:npcid	638,{
+in_rogue,261,126,7	script	Rogue Guild Member#pharos:npcid	603,{
 	npctalk "npcdialog";
 	end;
 }
-
-in_rogue,383,24,4	script	Rogue Guildmaster#pharos:npcid	810,{
-	npctalk "I will make you a rogue.";
-	end;
-}
-
-
-
-
-
-
-
-
