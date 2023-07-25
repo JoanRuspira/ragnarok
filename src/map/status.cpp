@@ -489,6 +489,7 @@ void initChangeTables(void)
 	add_sc( MO_BLADESTOP		, SC_BLADESTOP_WAIT	);
 	set_sc( MO_BLADESTOP		, SC_BLADESTOP	, EFST_BLADESTOP	, SCB_NONE );
 	set_sc( MO_EXPLOSIONSPIRITS	, SC_EXPLOSIONSPIRITS	, EFST_EXPLOSIONSPIRITS	, SCB_CRI|SCB_WATK );
+	set_sc( KN_FURY	, SC_FURY	, EFST_FURY	, SCB_CRI|SCB_WATK );
 	set_sc( MO_EXTREMITYFIST	, SC_EXTREMITYFIST	, EFST_BLANK			, SCB_REGEN );
 #ifdef RENEWAL
 	set_sc( MO_EXTREMITYFIST	, SC_EXTREMITYFIST2	, EFST_EXTREMITYFIST	, SCB_NONE );
@@ -6515,6 +6516,8 @@ static unsigned short status_calc_watk(struct block_list *bl, struct status_chan
 		watk += 4*sc->data[SC_CYCLONICCHARGE]->val1;
 	if (sc->data[SC_UPROAR])
 		watk += 5*sc->data[SC_UPROAR]->val1;
+	if( sc->data[SC_FURY] )
+		watk += 15;
 	if( sc->data[SC_EXPLOSIONSPIRITS] )
 		watk += 15;
 	if (sc->data[SC_REJECTSWORD])
@@ -6721,6 +6724,8 @@ static signed short status_calc_critical(struct block_list *bl, struct status_ch
 		critical += 300;// crit +30
 	if (sc->data[SC_CRIFOOD])
 		critical += sc->data[SC_CRIFOOD]->val1;
+	if (sc->data[SC_FURY])
+		critical += sc->data[SC_FURY]->val2;
 	if (sc->data[SC_EXPLOSIONSPIRITS])
 		critical += sc->data[SC_EXPLOSIONSPIRITS]->val2;
 	if (sc->data[SC_REJECTSWORD])
@@ -10370,6 +10375,9 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			val3 = 5 + val1; // SP cost reduction
 			break;
 #endif
+		case SC_FURY:
+			val2 = 75 + 25*val1; // Cri bonus
+			break;
 		case SC_EXPLOSIONSPIRITS:
 			val2 = 75 + 25*val1; // Cri bonus
 			break;
@@ -12276,6 +12284,10 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 				opt_flag = 0;
 				break;
 			}
+		case SC_FURY:
+			sc->opt3 |= OPT3_EXPLOSIONSPIRITS;
+			opt_flag = 0;
+			break;
 		case SC_EXPLOSIONSPIRITS:
 			sc->opt3 |= OPT3_EXPLOSIONSPIRITS;
 			opt_flag = 0;
@@ -13478,6 +13490,10 @@ int status_change_end_(struct block_list* bl, enum sc_type type, int tid, const 
 			opt_flag = 0;
 			break;
 		}
+	case SC_FURY:
+		sc->opt3 &= ~OPT3_EXPLOSIONSPIRITS;
+		opt_flag = 0;
+		break;
 	case SC_EXPLOSIONSPIRITS:
 		sc->opt3 &= ~OPT3_EXPLOSIONSPIRITS;
 		opt_flag = 0;

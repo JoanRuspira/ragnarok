@@ -2175,6 +2175,7 @@ enum e_skill {
     RG_AMBIDEXTERITY = 873,
     MO_KI_BLAST = 874,
     CH_ZEN = 875,
+	KN_FURY = 876,
 };
 
 /// The client view ids for land skills.

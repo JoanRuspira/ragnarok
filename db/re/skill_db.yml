@@ -2899,6 +2899,23 @@ Body:
     Description: Zen
     MaxLevel: 5
     Type: Weapon
+  - Id: 876
+    Name: KN_FURY
+    Description: Fury
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    Coolldown: 60000
+    AfterCastActDelay: 5000
+    Duration1: 120000
+    Requires:
+      SpCost: 40
+      ItemCost:
+        - Item: Runstone_Turisus
+          Amount: 1
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -7692,7 +7709,7 @@ Body:
       SpiritSphereCost: 1
   - Id: 270
     Name: MO_EXPLOSIONSPIRITS
-    Description: Fury
+    Description: Ultra Instinct
     MaxLevel: 5
     Type: Weapon
     TargetType: Self
@@ -7704,9 +7721,6 @@ Body:
     Duration1: 120000
     Requires:
       SpCost: 40
-      ItemCost:
-        - Item: Runstone_Turisus
-          Amount: 1
   - Id: 271
     Name: MO_EXTREMITYFIST
     Description: Asura Strike

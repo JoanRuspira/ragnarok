@@ -5883,6 +5883,13 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		clif_skill_nodamage(src,bl,skill_id,skill_lv,
 			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
 		break;
+	case KN_FURY:
+		clif_specialeffect(bl, 847, AREA);
+		clif_specialeffect(bl, 626, AREA);
+		clif_soundeffectall(&sd->bl, "kn_fury.wav", 0, AREA);
+		clif_skill_nodamage(src,bl,skill_id,skill_lv,
+			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
+		break;
 	case RA_UNLIMIT:
     	clif_specialeffect(bl, 813, AREA);
 		clif_skill_nodamage(src,bl,skill_id,skill_lv,
