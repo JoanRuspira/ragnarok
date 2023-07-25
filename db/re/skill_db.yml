@@ -2861,6 +2861,44 @@ Body:
     Description: Ambidexterity
     MaxLevel: 5
     Type: Weapon
+  - Id: 874
+    Name: MO_KI_BLAST
+    Description: Ki Blast
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      Splash: true
+    Flags:
+      TargetTrap: true
+    Hit: Multi_Hit
+    HitCount: -2
+    Element: Neutral
+    Cooldown: 2000
+    AfterCastActDelay: 400
+    SplashArea:
+      - Level: 1
+        Area: 2
+      - Level: 2
+        Area: 2
+      - Level: 3
+        Area: 2
+      - Level: 4
+        Area: 4
+      - Level: 5
+        Area: 4
+    Knockback: 2
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Requires:
+      SpCost: 22
+  - Id: 875
+    Name: CH_ZEN
+    Description: Zen
+    MaxLevel: 5
+    Type: Weapon
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -7747,7 +7785,10 @@ Body:
       NoTargetSelf: true
     Range: -2
     Hit: Multi_Hit
-    HitCount: -4
+    HitCount: -2
+    DamageFlags:
+      Splash: true
+    SplashArea: 2
     Element: Weapon
     CopyFlags:
       Skill:
@@ -16724,7 +16765,7 @@ Body:
       SpiritSphereCost: 1
   - Id: 1016
     Name: MO_BALKYOUNG
-    Description: Ki Explosion
+    Description: Falling Fist
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
@@ -16732,7 +16773,7 @@ Body:
       Splash: true
     Range: -1
     Hit: Multi_Hit
-    HitCount: -2
+    HitCount: -1
     Element: Weapon
     SplashArea: 1
     AfterCastActDelay: 400

@@ -3455,6 +3455,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case MC_SHRAPNEL:
 	case RK_WINDCUTTER:
 	case MC_FIREWORKS:
+	case MO_KI_BLAST:
 	case SM_MAGNUM:
 		if( flag&1 ) {
 			// For players, damage depends on distance, so add it to flag if it is > 1
@@ -5742,6 +5743,15 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		skill_area_temp[1] = 0;
 		map_foreachinshootrange(skill_area_sub, src, skill_get_splash(skill_id, skill_lv), BL_SKILL|BL_CHAR,
 			src,skill_id,skill_lv,tick, flag|BCT_ENEMY|1, skill_castend_damage_id);
+		clif_skill_nodamage (src,src,skill_id,skill_lv,1);
+		break;
+	case MO_KI_BLAST:
+		clif_specialeffect(src, EF_ENERVATION6, AREA); //weakness
+		clif_soundeffectall(&sd->bl, "mo_ki_blast.wav", 0, AREA);
+
+		skill_area_temp[1] = 0;
+		map_foreachinshootrange(skill_area_sub, src, skill_get_splash(skill_id, skill_lv), BL_SKILL|BL_CHAR,
+		src,skill_id,skill_lv,tick, flag|BCT_ENEMY|1, skill_castend_damage_id);
 		clif_skill_nodamage (src,src,skill_id,skill_lv,1);
 		break;
 	case SM_MAGNUM:

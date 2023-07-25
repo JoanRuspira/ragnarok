@@ -15,12 +15,12 @@ class MonkSkillAttackRatioCalculator
 	private:
 		static int calculate_throw_spirit_sphere_atk_ratio(int skill_lv);
 		static int calculate_occult_impact(int skill_lv, defType defence);
-		static int calculate_ground_shaker_atk_ratio(int skill_lv, int str);
+		static int calculate_ki_blast_atk_ratio(int skill_lv, int str);
 		static int calculate_raging_triple_blow_atk_ratio(int skill_lv);
 		static int calculate_chain_combo_atk_ratio(int skill_lv, bool is_using_mace);
 		static int calculate_circular_fists_atk_ratio(int skill_lv, bool revealed_hidden_enemy);
 		static int calculate_palm_strike_atk_ratio(int skill_lv);
-		static int calculate_ki_blast_atk_ratio(int skill_lv);
+		static int calculate_falling_fist_atk_ratio(int skill_lv);
 		static int calculate_dash_punch_atk_ratio(int skill_lv);
-		static void add_ki_blast_special_effects(struct block_list *target);
+		static void add_falling_fist_special_effects(struct block_list *target);
 };

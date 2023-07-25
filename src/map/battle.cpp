@@ -2884,6 +2884,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case MO_INVESTIGATE:
 		case MO_FINGEROFFENSIVE:
 		case SR_EARTHSHAKER:
+		case MO_KI_BLAST:
 		case MO_CHAINCOMBO:
 		case MO_TRIPLEATTACK:
 		case SR_WINDMILL:

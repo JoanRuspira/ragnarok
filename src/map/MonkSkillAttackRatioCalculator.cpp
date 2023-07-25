@@ -14,9 +14,8 @@ int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 			return calculate_throw_spirit_sphere_atk_ratio(skill_lv);
         case MO_INVESTIGATE:
             return calculate_occult_impact(skill_lv, status_get_def(target));
-		case SR_EARTHSHAKER:
-			clif_specialeffect(src, EF_ENERVATION6, AREA); //weakness
-			return calculate_ground_shaker_atk_ratio(skill_lv, sstatus->str);
+		case MO_KI_BLAST:
+			return calculate_ki_blast_atk_ratio(skill_lv, sstatus->str);
 		case MO_TRIPLEATTACK:
 			return calculate_raging_triple_blow_atk_ratio(skill_lv);
 		case MO_CHAINCOMBO:
@@ -25,7 +24,8 @@ int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 				if (sd && sd->status.weapon == W_MACE || sd->status.weapon == W_2HMACE) {
 					is_using_mace = true;
 				}
-				clif_specialeffect(src, EF_ENERVATION3, AREA); //ignorance
+				// clif_specialeffect(src, EF_ENERVATION3, AREA); //ignorance
+				clif_specialeffect(src, EF_ENERVATION2, AREA); //groomy	
 				return calculate_chain_combo_atk_ratio(skill_lv, is_using_mace);
 			}
 		case SR_WINDMILL:
@@ -33,8 +33,8 @@ int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 		case CH_PALMSTRIKE:
 			return calculate_palm_strike_atk_ratio(skill_lv);
 		case MO_BALKYOUNG:
-			add_ki_blast_special_effects(target);
-			return calculate_ki_blast_atk_ratio(skill_lv);
+			add_falling_fist_special_effects(target);
+			return calculate_falling_fist_atk_ratio(skill_lv);
 		case SR_KNUCKLEARROW:
 			return calculate_dash_punch_atk_ratio(skill_lv);
 		default:
@@ -43,7 +43,7 @@ int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 	}
 }
 
-void MonkSkillAttackRatioCalculator::add_ki_blast_special_effects(struct block_list *target)
+void MonkSkillAttackRatioCalculator::add_falling_fist_special_effects(struct block_list *target)
 {
 	clif_specialeffect(target, EF_COMBOATTACK5, AREA);
 	clif_specialeffect(target, EF_DRAGONSMOKE, AREA);
@@ -77,7 +77,7 @@ int MonkSkillAttackRatioCalculator::calculate_dash_punch_atk_ratio(int skill_lv)
 }
 
 
-int MonkSkillAttackRatioCalculator::calculate_ki_blast_atk_ratio(int skill_lv)
+int MonkSkillAttackRatioCalculator::calculate_falling_fist_atk_ratio(int skill_lv)
 {
 	int ratio = 0;
 	switch (skill_lv) {
@@ -179,7 +179,7 @@ int MonkSkillAttackRatioCalculator::calculate_occult_impact(int skill_lv, defTyp
 }
 
 
-int MonkSkillAttackRatioCalculator::calculate_ground_shaker_atk_ratio(int skill_lv, int str)
+int MonkSkillAttackRatioCalculator::calculate_ki_blast_atk_ratio(int skill_lv, int str)
 {
 	int ratio = 0;
 	switch (skill_lv) {

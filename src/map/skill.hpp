@@ -2173,6 +2173,8 @@ enum e_skill {
 	SC_STRIPACCESSORY = 871,
 	JG_PLAGIARISM = 872,
     RG_AMBIDEXTERITY = 873,
+    MO_KI_BLAST = 874,
+    CH_ZEN = 875,
 };
 
 /// The client view ids for land skills.
