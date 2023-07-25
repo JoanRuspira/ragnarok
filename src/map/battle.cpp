@@ -2891,6 +2891,8 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case CH_PALMSTRIKE:
 		case MO_BALKYOUNG:
 		case SR_KNUCKLEARROW:
+		case CH_TIGERFIST:
+		case MO_COMBOFINISH:
 			{
 				bool revealed_hidden_enemy = false;
 				if (tsc && ((tsc->option&(OPTION_HIDE|OPTION_CLOAK|OPTION_CHASEWALK)) || tsc->data[SC_CAMOUFLAGE])) {
@@ -2966,25 +2968,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 				skillratio *= 2; // More than 5 spirit balls active
 #endif
 			skillratio = min(500000,skillratio); //We stop at roughly 50k SP for overflow protection
-			break;
-		case MO_COMBOFINISH:
-#ifdef RENEWAL
-			skillratio += 450 + 50 * skill_lv + sstatus->str; // !TODO: How does STR play a role?
-#else
-			skillratio += 140 + 60 * skill_lv;
-#endif
-			if (sc->data[SC_GT_ENERGYGAIN])
-				skillratio += skillratio * 50 / 100;
-			break;
-		case CH_TIGERFIST:
-#ifdef RENEWAL
-			skillratio += 400 + 150 * skill_lv;
-			RE_LVL_DMOD(100);
-#else
-			skillratio += -60 + 100 * skill_lv;
-#endif
-			if (sc->data[SC_GT_ENERGYGAIN])
-				skillratio += skillratio * 50 / 100;
 			break;
 		case CH_CHAINCRUSH:
 #ifdef RENEWAL

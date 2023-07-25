@@ -18,13 +18,18 @@ int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 			return calculate_ki_blast_atk_ratio(skill_lv, sstatus->str);
 		case MO_TRIPLEATTACK:
 			return calculate_raging_triple_blow_atk_ratio(skill_lv);
+		case CH_TIGERFIST:
+			clif_specialeffect(src, EF_ENERVATION3, AREA); //ignorance
+			return 100;
+		case MO_COMBOFINISH:
+			clif_specialeffect(src, EF_TINDER_BREAKER, AREA); //tinder
+			return 100;
 		case MO_CHAINCOMBO:
 			{
 				bool is_using_mace = false;
 				if (sd && sd->status.weapon == W_MACE || sd->status.weapon == W_2HMACE) {
 					is_using_mace = true;
 				}
-				// clif_specialeffect(src, EF_ENERVATION3, AREA); //ignorance
 				clif_specialeffect(src, EF_ENERVATION2, AREA); //groomy	
 				return calculate_chain_combo_atk_ratio(skill_lv, is_using_mace);
 			}
