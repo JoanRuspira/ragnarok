@@ -2541,7 +2541,7 @@ Body:
       - Level: 5
         Time: 300000
     Requires:
-      SpCost: 25
+      SpCost: 40
       Weapon:
         Knuckle: true
   - Id: 856
@@ -3174,7 +3174,7 @@ Body:
       - Level: 5
         Time: 300000
     Requires:
-      SpCost: 50
+      SpCost: 40
       Weapon:
         2hSword: true
   - Id: 61
@@ -7718,7 +7718,7 @@ Body:
     Hit: Single
     Coolldown: 60000
     AfterCastActDelay: 5000
-    Duration1: 120000
+    Duration1: 60000
     Requires:
       SpCost: 40
   - Id: 271
@@ -10130,8 +10130,19 @@ Body:
     Knockback: 3
     CoolDown: 5000
     AfterCastActDelay: 400
+    Duration2:
+      - Level: 1
+        Time: 4000
+      - Level: 2
+        Time: 8000
+      - Level: 3
+        Time: 12000
+      - Level: 4
+        Time: 16000
+      - Level: 5
+        Time: 20000
     Requires:
-      SpCost: 25
+      SpCost: 20
       Weapon:
         Knuckle: true
   - Id: 371

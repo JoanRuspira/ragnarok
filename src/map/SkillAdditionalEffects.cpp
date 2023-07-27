@@ -375,6 +375,10 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 		case GC_CROSSIMPACT:
 			clif_skill_damage(src,bl,tick, status_get_amotion(src), 0, -30000, 1, DUMMY_CROSSIMPACT, skill_lv, DMG_SINGLE);
 			break;
+		case CH_PALMSTRIKE:
+			clif_specialeffect(bl, EF_DECAGILITY, AREA);
+			sc_start(src, bl, SC_DECREASEAGI, 100, -50, skill_get_time(skill_id, skill_lv));
+			break;
 	}
 }
 

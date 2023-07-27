@@ -1771,12 +1771,6 @@ void skill_combo(struct block_list* src,struct block_list *dsrc, struct block_li
 				duration = 1;
 				target_id = 0; // Will target current auto-target instead
 			}
-		case CH_CHAINCRUSH:
-			if (!duration && pc_checkskill(sd, MO_EXTREMITYFIST) > 0 && sd->spiritball > 0 && sd->sc.data[SC_EXPLOSIONSPIRITS]) {
-				duration = 1;
-				target_id = 0; // Will target current auto-target instead
-			}
-			break;
 		case SR_DRAGONCOMBO:
 			if (pc_checkskill(sd, SR_FALLENEMPIRE) > 0)
 				duration = 1;
@@ -3067,15 +3061,15 @@ static TIMER_FUNC(skill_timerskill){
 						// 	}
 						// }
 
-						if( target->type == BL_PC ) {
-							map_session_data *tsd = NULL;
-							if( (tsd = ((TBL_PC*)target)) && !pc_issit(tsd) ) {
-								ShowMessage("SIT3\n");
-								pc_setsit(tsd);
-								skill_sit(tsd, true);
-								clif_sitting(&tsd->bl);
-							}
-						}
+						// if( target->type == BL_PC ) {
+						// 	map_session_data *tsd = NULL;
+						// 	if( (tsd = ((TBL_PC*)target)) && !pc_issit(tsd) ) {
+						// 		ShowMessage("SIT3\n");
+						// 		pc_setsit(tsd);
+						// 		skill_sit(tsd, true);
+						// 		clif_sitting(&tsd->bl);
+						// 	}
+						// }
 						skill_attack(skl->type,src,src,target,skl->skill_id,skl->skill_lv,tick,skl->flag);
 						break;
 					}
@@ -5886,6 +5880,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case KN_FURY:
 		clif_specialeffect(bl, 847, AREA);
 		clif_specialeffect(bl, 626, AREA);
+		clif_specialeffect(bl, EF_MADNESS_RED, AREA);
 		clif_soundeffectall(&sd->bl, "kn_fury.wav", 0, AREA);
 		clif_skill_nodamage(src,bl,skill_id,skill_lv,
 			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
@@ -9612,16 +9607,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			if( sd ) pc_delspiritball(sd, count, 0);
 			clif_skill_nodamage(src, src, skill_id, skill_lv,
 				sc_start2(src,src, SC_CURSEDCIRCLE_ATKER, 100, skill_lv, count, skill_get_time(skill_id,skill_lv)));
-		}
-		break;
-
-	case SR_RAISINGDRAGON:
-		if( sd ) {
-			short max = 5 + skill_lv;
-			sc_start(src,bl, SC_EXPLOSIONSPIRITS, 100, skill_lv, skill_get_time(skill_id, skill_lv));
-			for( i = 0; i < max; i++ ) // Don't call more than max available spheres.
-				pc_addspiritball(sd, skill_get_time(skill_id, skill_lv), max);
-			clif_skill_nodamage(src, bl, skill_id, skill_lv, sc_start(src,bl, type, 100, skill_lv,skill_get_time(skill_id, skill_lv)));
 		}
 		break;
 

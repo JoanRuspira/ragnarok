@@ -488,7 +488,7 @@ void initChangeTables(void)
 	set_sc( MO_STEELBODY		, SC_STEELBODY		, EFST_STEELBODY		, SCB_DEF|SCB_MDEF|SCB_ASPD|SCB_SPEED );
 	add_sc( MO_BLADESTOP		, SC_BLADESTOP_WAIT	);
 	set_sc( MO_BLADESTOP		, SC_BLADESTOP	, EFST_BLADESTOP	, SCB_NONE );
-	set_sc( MO_EXPLOSIONSPIRITS	, SC_EXPLOSIONSPIRITS	, EFST_EXPLOSIONSPIRITS	, SCB_CRI|SCB_WATK );
+	set_sc( MO_EXPLOSIONSPIRITS	, SC_EXPLOSIONSPIRITS	, EFST_EXPLOSIONSPIRITS	, SCB_STR|SCB_AGI|SCB_VIT|SCB_WATK );
 	set_sc( KN_FURY	, SC_FURY	, EFST_FURY	, SCB_CRI|SCB_WATK );
 	set_sc( MO_EXTREMITYFIST	, SC_EXTREMITYFIST	, EFST_BLANK			, SCB_REGEN );
 #ifdef RENEWAL
@@ -901,7 +901,7 @@ void initChangeTables(void)
 	add_sc( SC_ESCAPE			, SC_ANKLE			);
 
 	/* Sura */
-	add_sc( SR_DRAGONCOMBO			, SC_STUN		);
+	add_sc( SR_DRAGONCOMBO			, SC_COMA		);
 	set_sc( SR_CRESCENTELBOW		, SC_CRESCENTELBOW	, EFST_CRESCENTELBOW		, SCB_NONE );
 	set_sc_with_vfx( SR_CURSEDCIRCLE	, SC_CURSEDCIRCLE_TARGET, EFST_CURSEDCIRCLE_TARGET	, SCB_NONE );
 	set_sc( SR_LIGHTNINGWALK		, SC_LIGHTNINGWALK	, EFST_LIGHTNINGWALK		, SCB_NONE );
@@ -5984,6 +5984,8 @@ static unsigned short status_calc_str(struct block_list *bl, struct status_chang
 		str += sc->data[SC_GLASTHEIM_STATE]->val1;
 	if(sc->data[SC__STRIPACCESSORY] && bl->type != BL_PC)
 		str -= str * sc->data[SC__STRIPACCESSORY]->val2 / 100;
+	if( sc->data[SC_EXPLOSIONSPIRITS] )
+		str += sc->data[SC_EXPLOSIONSPIRITS]->val2;
 #ifdef RENEWAL
 	if (sc->data[SC_NIBELUNGEN] && sc->data[SC_NIBELUNGEN]->val2 == RINGNBL_ALLSTAT)
 		str += 15;
@@ -6071,6 +6073,8 @@ static unsigned short status_calc_agi(struct block_list *bl, struct status_chang
 		agi += sc->data[SC_GLASTHEIM_STATE]->val1;
 	if(sc->data[SC__STRIPACCESSORY] && bl->type != BL_PC)
 		agi -= agi * sc->data[SC__STRIPACCESSORY]->val2 / 100;
+	if( sc->data[SC_EXPLOSIONSPIRITS] )
+		agi += sc->data[SC_EXPLOSIONSPIRITS]->val2;
 #ifdef RENEWAL
 	if (sc->data[SC_NIBELUNGEN] && sc->data[SC_NIBELUNGEN]->val2 == RINGNBL_ALLSTAT)
 		agi += 15;
@@ -6143,6 +6147,8 @@ static unsigned short status_calc_vit(struct block_list *bl, struct status_chang
 		vit += sc->data[SC_GLASTHEIM_STATE]->val1;
 	if(sc->data[SC__STRIPACCESSORY] && bl->type != BL_PC)
 		vit -= vit * sc->data[SC__STRIPACCESSORY]->val2 / 100;
+	if( sc->data[SC_EXPLOSIONSPIRITS] )
+		vit += sc->data[SC_EXPLOSIONSPIRITS]->val2;
 #ifdef RENEWAL
 	if (sc->data[SC_NIBELUNGEN] && sc->data[SC_NIBELUNGEN]->val2 == RINGNBL_ALLSTAT)
 		vit += 15;
@@ -6519,7 +6525,7 @@ static unsigned short status_calc_watk(struct block_list *bl, struct status_chan
 	if( sc->data[SC_FURY] )
 		watk += 15;
 	if( sc->data[SC_EXPLOSIONSPIRITS] )
-		watk += 15;
+		watk += sc->data[SC_EXPLOSIONSPIRITS]->val3;
 	if (sc->data[SC_REJECTSWORD])
 		watk += sc->data[SC_REJECTSWORD]->val3;
 	if(sc->data[SC_INCATKRATE])
@@ -6726,8 +6732,6 @@ static signed short status_calc_critical(struct block_list *bl, struct status_ch
 		critical += sc->data[SC_CRIFOOD]->val1;
 	if (sc->data[SC_FURY])
 		critical += sc->data[SC_FURY]->val2;
-	if (sc->data[SC_EXPLOSIONSPIRITS])
-		critical += sc->data[SC_EXPLOSIONSPIRITS]->val2;
 	if (sc->data[SC_REJECTSWORD])
 		critical += sc->data[SC_REJECTSWORD]->val2;
 	if (sc->data[SC_FORTUNE])
@@ -10379,7 +10383,8 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			val2 = 75 + 25*val1; // Cri bonus
 			break;
 		case SC_EXPLOSIONSPIRITS:
-			val2 = 75 + 25*val1; // Cri bonus
+			val2 = 2*val1; // stat bonus
+			val3 = 8*val1; // atk bonus
 			break;
 
 		case SC_ASPDPOTION0:
