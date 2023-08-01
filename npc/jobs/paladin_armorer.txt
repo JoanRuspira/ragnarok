@@ -17,7 +17,7 @@
 	mes "Aha!";
 	mes "A seasoned Paladin, what outfit would you like to wear?";
 	next;
-	switch(select("Paladin::Royal Guard:Shield Master:Imperial Guard")) {
+	switch(select("Paladin::Royal Guard:Shield Master:Templar")) {
 		case 1:
 			setlook LOOK_CLOTHES_COLOR,0;
         	setlook LOOK_BODY2,0;
