@@ -2893,6 +2893,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case SR_KNUCKLEARROW:
 		case CH_TIGERFIST:
 		case MO_COMBOFINISH:
+		case SR_DRAGONCOMBO:
 			{
 				bool revealed_hidden_enemy = false;
 				if (tsc && ((tsc->option&(OPTION_HIDE|OPTION_CLOAK|OPTION_CHASEWALK)) || tsc->data[SC_CAMOUFLAGE])) {
@@ -3240,11 +3241,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 				}
 				RE_LVL_DMOD(100);
 			}
-			break;
-
-		case SR_DRAGONCOMBO:
-			skillratio += 40 * skill_lv;
-			RE_LVL_DMOD(100);
 			break;
 		case SR_FALLENEMPIRE:
 			// ATK [(Skill Level x 250 + 100) x Caster Base Level / 150] %

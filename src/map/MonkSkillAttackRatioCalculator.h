@@ -22,5 +22,6 @@ class MonkSkillAttackRatioCalculator
 		static int calculate_palm_strike_atk_ratio(int skill_lv);
 		static int calculate_falling_fist_atk_ratio(int skill_lv);
 		static int calculate_dash_punch_atk_ratio(int skill_lv);
+		static int calculate_guillotine_fists_atk_ratio(int skill_lv);
 		static void add_falling_fist_special_effects(struct block_list *target);
 };

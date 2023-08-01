@@ -22168,7 +22168,7 @@ Body:
   - Id: 2326
     Name: SR_DRAGONCOMBO
     Description: Dragon Combo
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     Range: 1
@@ -22179,28 +22179,12 @@ Body:
       Skill:
         Reproduce: true
     Duration1: 5000
+    Cooldown: 5000
+    AfterCastActDelay: 400
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 3
-        - Level: 2
-          Amount: 4
-        - Level: 3
-          Amount: 5
-        - Level: 4
-          Amount: 6
-        - Level: 5
-          Amount: 7
-        - Level: 6
-          Amount: 8
-        - Level: 7
-          Amount: 9
-        - Level: 8
-          Amount: 10
-        - Level: 9
-          Amount: 11
-        - Level: 10
-          Amount: 12
+      SpCost: 30
+      Weapon:
+        Knuckle: true
   - Id: 2327
     Name: SR_SKYNETBLOW
     Description: Sky Net Blow

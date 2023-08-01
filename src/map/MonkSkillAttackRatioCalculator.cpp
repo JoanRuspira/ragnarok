@@ -42,6 +42,8 @@ int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 			return calculate_falling_fist_atk_ratio(skill_lv);
 		case SR_KNUCKLEARROW:
 			return calculate_dash_punch_atk_ratio(skill_lv);
+		case SR_DRAGONCOMBO:
+			return calculate_guillotine_fists_atk_ratio(skill_lv);
 		default:
 			return 0;
 			break;
@@ -258,3 +260,25 @@ int MonkSkillAttackRatioCalculator::calculate_chain_combo_atk_ratio(int skill_lv
 	return ratio;
 }
 
+int MonkSkillAttackRatioCalculator::calculate_guillotine_fists_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 100;
+			break;
+		case 2:
+			ratio = 200;
+			break;
+		case 3:
+			ratio = 300;
+			break;
+		case 4:
+			ratio = 400;
+			break;
+		case 5:
+			ratio = 500;
+			break;
+	}
+	return ratio;
+}

@@ -379,6 +379,14 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 			clif_specialeffect(bl, EF_DECAGILITY, AREA);
 			sc_start(src, bl, SC_DECREASEAGI, 100, -50, skill_get_time(skill_id, skill_lv));
 			break;
+		case SR_DRAGONCOMBO:
+			int percentage = rand()%(100) + 1;
+			int margin = skill_lv*2;
+			if (percentage <= margin) {
+				status_change_start(src, bl, SC_COMA, 10000, skill_lv, 0, 0, 0, skill_lv * 2000, SCSTART_NONE);
+				clif_specialeffect(bl, EF_BLEEDING, AREA);
+			}
+			break;
 	}
 }
 
