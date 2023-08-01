@@ -2874,7 +2874,7 @@ Body:
     Hit: Multi_Hit
     HitCount: -2
     Element: Neutral
-    Cooldown: 2000
+    Cooldown: 7000
     AfterCastActDelay: 400
     SplashArea:
       - Level: 1
@@ -2893,7 +2893,8 @@ Body:
         Plagiarism: true
         Reproduce: true
     Requires:
-      SpCost: 22
+      SpCost: 23
+      SpiritSphereCost: 1
   - Id: 875
     Name: CH_ZEN
     Description: Zen
@@ -7556,6 +7557,7 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
+    Element: Weapon
     DamageFlags:
       IgnoreFlee: true
     Flags:
@@ -7599,7 +7601,7 @@ Body:
       Skill:
         Plagiarism: true
         Reproduce: true
-    CastTime: 4000
+    CastTime: 750
     Cooldown: 5000
     AfterCastActDelay: 400
     AfterCastWalkDelay:
@@ -7716,7 +7718,7 @@ Body:
     DamageFlags:
       NoDamage: true
     Hit: Single
-    Coolldown: 60000
+    Cooldown: 60000
     AfterCastActDelay: 5000
     Duration1: 60000
     Requires:

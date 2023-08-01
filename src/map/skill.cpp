@@ -6223,8 +6223,8 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case CH_SOULCOLLECT:
 		if(sd) {
 			int limit = 5;
-			if( sd->sc.data[SC_RAISINGDRAGON] )
-				limit += sd->sc.data[SC_RAISINGDRAGON]->val1;
+			if( pc_checkskill(sd, CH_ZEN) )
+				limit += pc_checkskill(sd, CH_ZEN);
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 			for (i = 0; i < skill_lv; i++) {
 				if (sd->spiritball < limit) {
