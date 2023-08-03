@@ -19,10 +19,10 @@ int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 		case MO_TRIPLEATTACK:
 			return calculate_raging_triple_blow_atk_ratio(skill_lv);
 		case CH_TIGERFIST:
-			clif_specialeffect(src, EF_ENERVATION3, AREA); //ignorance
+			clif_specialeffect(src, EF_TINDER_BREAKER, AREA); //tinder
 			return 100;
 		case MO_COMBOFINISH:
-			clif_specialeffect(src, EF_TINDER_BREAKER, AREA); //tinder
+			clif_specialeffect(src, EF_ENERVATION3, AREA); //ignorance
 			return 100;
 		case MO_CHAINCOMBO:
 			{

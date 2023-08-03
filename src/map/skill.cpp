@@ -16226,13 +16226,6 @@ struct s_skill_condition skill_get_requirement(struct map_session_data* sd, uint
 				req.sp -= req.sp*3*kaina_lv/100;
 		}
 			break;
-		case MO_CHAINCOMBO:
-		case MO_COMBOFINISH:
-		case CH_TIGERFIST:
-		case CH_CHAINCRUSH:
-			if(sc && sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_MONK)
-				req.sp = 2; //Monk Spirit makes monk/champion combo skills cost 2 SP regardless of original cost
-			break;
 		case MO_BODYRELOCATION:
 			if( sc && sc->data[SC_EXPLOSIONSPIRITS] )
 				req.spiritball = 0;
