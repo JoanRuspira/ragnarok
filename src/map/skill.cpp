@@ -2244,11 +2244,6 @@ int64 skill_attack (int attack_type, struct block_list* src, struct block_list *
 		case WL_COMET:
 		case NPC_COMET:
 		case KO_MUCHANAGE:
-#ifndef RENEWAL
-		case NJ_HUUMA:
-#endif
-			dmg.dmotion = clif_skill_damage(src,bl,tick,dmg.amotion,dmg.dmotion,damage,dmg.div_,skill_id,skill_lv,DMG_MULTI_HIT);
-			break;
 		case WL_CHAINLIGHTNING_ATK:
 			dmg.dmotion = clif_skill_damage(src,bl,tick,dmg.amotion,dmg.dmotion,damage,1,WL_CHAINLIGHTNING_ATK,-2,DMG_SINGLE);
 			break;
@@ -3455,6 +3450,8 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 		break;
 	case MER_CRASH:
 	case SM_BASH:
+	case NC_BOOSTKNUCKLE:
+	case NJ_ZENYNAGE:
 	case MO_BALKYOUNG:
 	case LK_HEADCRUSH:
 	case LK_JOINTBEAT:
@@ -3549,7 +3546,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case RK_SONICWAVE:
 	case AB_DUPLELIGHT_MELEE:
 	case RA_AIMEDBOLT:
-	case NC_BOOSTKNUCKLE:
 	case NC_PILEBUNKER:
 	case NC_AXEBOOMERANG:
 	case NC_POWERSWING:
@@ -3944,9 +3940,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 				case SU_SCRATCH:
 					clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 					break;
-#ifdef RENEWAL
 				case NJ_HUUMA:
-#endif
 				case LG_MOONSLASHER:
 				case MH_XENO_SLASHER:
 					clif_skill_damage(src,bl,tick, status_get_amotion(src), 0, -30000, 1, skill_id, skill_lv, DMG_SINGLE);
@@ -4231,7 +4225,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case TF_THROWSTONE:
 	case NPC_SMOKING:
 	case GS_FLING:
-	case NJ_ZENYNAGE:
 	case GN_THORNS_TRAP:
 	case RL_B_TRAP:
 		skill_attack(skill_get_type(skill_id),src,src,bl,skill_id,skill_lv,tick,flag);
@@ -15121,7 +15114,6 @@ bool skill_check_condition_castbegin(struct map_session_data* sd, uint16 skill_i
 				return false;
 			}
 			break;
-		case NJ_ZENYNAGE:
 		case KO_MUCHANAGE:
 			if(sd->status.zeny < require.zeny) {
 				clif_skill_fail(sd,skill_id,USESKILL_FAIL_MONEY,0);
@@ -15936,8 +15928,6 @@ void skill_consume_requirement(struct map_session_data *sd, uint16 skill_id, uin
 
 		if(require.zeny > 0)
 		{
-			if( skill_id == NJ_ZENYNAGE )
-				require.zeny = 0; //Zeny is reduced on skill_attack.
 			if( sd->status.zeny < require.zeny )
 				require.zeny = sd->status.zeny;
 			pc_payzeny(sd,require.zeny,LOG_TYPE_CONSUME,NULL);

@@ -10,6 +10,15 @@
 int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv, struct status_data* sstatus, bool revealed_hidden_enemy, map_session_data *sd)
 {
 	switch (skill_id) {
+		case NC_BOOSTKNUCKLE:
+			clif_specialeffect(target, EF_TINDER_BREAKER, AREA); //tinder
+			return 100;
+		case NJ_ZENYNAGE:
+			clif_specialeffect(target, EF_ENERVATION3, AREA); //ignorance
+			return 100;
+		case NJ_HUUMA:
+			clif_specialeffect(target, EF_ENERVATION2, AREA); //groomy	
+			return 100;
 		case MO_FINGEROFFENSIVE:
 			return calculate_throw_spirit_sphere_atk_ratio(skill_lv);
         case MO_INVESTIGATE:

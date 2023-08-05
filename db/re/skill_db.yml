@@ -7520,9 +7520,7 @@ Body:
     Description: Raging Trifecta Blow
     MaxLevel: 5
     Type: Weapon
-    Flags:
-      TargetTrap: true
-      TargetEmperium: true
+    TargetType: Attack
     Range: -1
     Hit: Multi_Hit
     HitCount: -3
@@ -7531,8 +7529,6 @@ Body:
       Skill:
         Plagiarism: true
         Reproduce: true
-    CastDelayFlags:
-      IgnoreStatus: true
     Requires:
       Weapon:
         Mace: true
@@ -14148,29 +14144,15 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    DamageFlags:
-      Splash: true
-      SplashSplit: true
     Flags:
       TargetTrap: true
-    Range: 9
-    Hit: Multi_Hit
-    HitCount:
-      - Level: 1
-        Count: -3
-      - Level: 2
-        Count: -3
-      - Level: 3
-        Count: -4
-      - Level: 4
-        Count: -4
-      - Level: 5
-        Count: -5
+    Range: 1
+    Hit: Single
+    HitCount: 1
     Element: Weapon
-    SplashArea: 1
     CastCancel: true
-    CastTime: 3000
-    AfterCastActDelay: 2000
+    CastTime: 0
+    AfterCastActDelay: 100
     Requires:
       SpCost:
         - Level: 1
@@ -14183,52 +14165,22 @@ Body:
           Amount: 35
         - Level: 5
           Amount: 40
-      Ammo:
-        Shuriken: true
-      AmmoAmount: 1
   - Id: 526
     Name: NJ_ZENYNAGE
     Description: Throw Zeny
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Misc
     TargetType: Attack
-    DamageFlags:
-      IgnoreElement: true
-      IgnoreFlee: true
-    Flags:
-      IgnoreBgReduction: true
-      IgnoreGvgReduction: true
-    Range: 9
-    Hit: Single
-    HitCount: 1
+    Range: 1
+    Hit: Multi_Hit
+    HitCount: 5
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
-    AfterCastActDelay: 5000
+    AfterCastActDelay: 100
     Requires:
-      SpCost: 50
-      ZenyCost:
-        - Level: 1
-          Amount: 500
-        - Level: 2
-          Amount: 1000
-        - Level: 3
-          Amount: 1500
-        - Level: 4
-          Amount: 2000
-        - Level: 5
-          Amount: 2500
-        - Level: 6
-          Amount: 3000
-        - Level: 7
-          Amount: 3500
-        - Level: 8
-          Amount: 4000
-        - Level: 9
-          Amount: 4500
-        - Level: 10
-          Amount: 5000
+      SpCost: 10
   - Id: 527
     Name: NJ_TATAMIGAESHI
     Description: Improvised Defense
@@ -20000,21 +19952,10 @@ Body:
     TargetType: Attack
     Flags:
       AllowOnMado: true
-    Range: 11
-    Hit: Single
-    HitCount: 1
+    Range: 1
+    Hit: Multi_Hit
+    HitCount: -4
     Element: Weapon
-    CastTime:
-      - Level: 1
-        Time: 200
-      - Level: 2
-        Time: 400
-      - Level: 3
-        Time: 600
-      - Level: 4
-        Time: 800
-      - Level: 5
-        Time: 1000
     Requires:
       SpCost:
         - Level: 1
@@ -20027,7 +19968,6 @@ Body:
           Amount: 12
         - Level: 5
           Amount: 15
-      State: Mado
   - Id: 2257
     Name: NC_PILEBUNKER
     Description: Pile Bunker
@@ -23004,28 +22944,7 @@ Body:
         Time: 20000
     Cooldown: 10000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 80
-        - Level: 2
-          Amount: 90
-        - Level: 3
-          Amount: 100
-        - Level: 4
-          Amount: 110
-        - Level: 5
-          Amount: 120
-      SpiritSphereCost:
-        - Level: 1
-          Amount: 1
-        - Level: 2
-          Amount: 2
-        - Level: 3
-          Amount: 3
-        - Level: 4
-          Amount: 4
-        - Level: 5
-          Amount: 5
+      SpCost: 10
   - Id: 2518
     Name: SR_RIDEINLIGHTNING
     Description: Ride In Lightening
@@ -23065,28 +22984,7 @@ Body:
         Time: 5000
     Cooldown: 1000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 40
-        - Level: 2
-          Amount: 50
-        - Level: 3
-          Amount: 60
-        - Level: 4
-          Amount: 70
-        - Level: 5
-          Amount: 80
-      SpiritSphereCost:
-        - Level: 1
-          Amount: 1
-        - Level: 2
-          Amount: 2
-        - Level: 3
-          Amount: 3
-        - Level: 4
-          Amount: 4
-        - Level: 5
-          Amount: 5
+      SpCost: 10
   - Id: 2350
     Name: WA_SWING_DANCE
     Description: Swing Dance

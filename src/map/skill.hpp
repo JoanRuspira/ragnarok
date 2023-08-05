@@ -2176,6 +2176,7 @@ enum e_skill {
     MO_KI_BLAST = 874,
     CH_ZEN = 875,
 	KN_FURY = 876,
+	DK_STORMSLASH = 5213,
 };
 
 /// The client view ids for land skills.

@@ -1487,7 +1487,7 @@ int64 battle_calc_damage(struct block_list *src,struct block_list *bl,struct Dam
 		}
 #endif
 
-		if (sc->data[SC_DEFENDER] && skill_id != NJ_ZENYNAGE && skill_id != KO_MUCHANAGE && (flag&(BF_LONG|BF_WEAPON)) == (BF_LONG|BF_WEAPON))
+		if (sc->data[SC_DEFENDER] && skill_id != KO_MUCHANAGE && (flag&(BF_LONG|BF_WEAPON)) == (BF_LONG|BF_WEAPON))
 			damage -= damage * sc->data[SC_DEFENDER]->val2 / 100;
 
 		if(sc->data[SC_ADJUSTMENT] && (flag&(BF_LONG|BF_WEAPON)) == (BF_LONG|BF_WEAPON))
@@ -2894,6 +2894,9 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case CH_TIGERFIST:
 		case MO_COMBOFINISH:
 		case SR_DRAGONCOMBO:
+		case NJ_HUUMA:
+		case NJ_ZENYNAGE:
+		case NC_BOOSTKNUCKLE:
 			{
 				bool revealed_hidden_enemy = false;
 				if (tsc && ((tsc->option&(OPTION_HIDE|OPTION_CLOAK|OPTION_CHASEWALK)) || tsc->data[SC_CAMOUFLAGE])) {
@@ -3061,13 +3064,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			skillratio += 100 + 20 * skill_lv;
 			break;
 #endif
-		case NJ_HUUMA:
-#ifdef RENEWAL
-			skillratio += -150 + 250 * skill_lv;
-#else
-			skillratio += 50 + 150 * skill_lv;
-#endif
-			break;
 		case NJ_TATAMIGAESHI:
 			skillratio += 10 * skill_lv;
 #ifdef RENEWAL
@@ -3129,10 +3125,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			break;
 		case RA_SENSITIVEKEEN:
 			skillratio += 50 * skill_lv;
-			break;
-		case NC_BOOSTKNUCKLE:
-			skillratio += 100 + 100 * skill_lv + status_get_dex(src);
-			RE_LVL_DMOD(120);
 			break;
 		case NC_PILEBUNKER:
 			skillratio += 200 + 100 * skill_lv + status_get_str(src);
@@ -3365,12 +3357,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			RE_LVL_DMOD(120);
 			if(tsc && tsc->data[SC_JYUMONJIKIRI])
 				skillratio += skill_lv * status_get_lv(src);
-			if (sc && sc->data[SC_KAGEMUSYA])
-				skillratio += skillratio * sc->data[SC_KAGEMUSYA]->val2 / 100;
-			break;
-		case KO_HUUMARANKA:
-			skillratio += -100 + 150 * skill_lv + sstatus->str + (sd ? pc_checkskill(sd,NJ_HUUMA) * 100 : 0);
-			RE_LVL_DMOD(100);
 			if (sc && sc->data[SC_KAGEMUSYA])
 				skillratio += skillratio * sc->data[SC_KAGEMUSYA]->val2 / 100;
 			break;
@@ -5475,19 +5461,7 @@ struct Damage battle_calc_misc_attack(struct block_list *src,struct block_list *
 			if (tsd) md.damage>>=1;
 			break;
 #endif
-		case NJ_ZENYNAGE:
-		case KO_MUCHANAGE:
-				md.damage = skill_get_zeny(skill_id, skill_lv);
-				if (!md.damage)
-					md.damage = (skill_id == NJ_ZENYNAGE ? 2 : 10);
-				md.damage = (skill_id == NJ_ZENYNAGE ? rnd()%md.damage + md.damage : md.damage * rnd_value(50,100)) / (skill_id == NJ_ZENYNAGE ? 1 : 100);
-				if (sd && skill_id == KO_MUCHANAGE && !pc_checkskill(sd, NJ_TOBIDOUGU))
-					md.damage = md.damage / 2;
-				if (status_get_class_(target) == CLASS_BOSS) // Specific to Boss Class
-					md.damage = md.damage / (skill_id == NJ_ZENYNAGE ? 3 : 2);
-				else if (tsd && skill_id == NJ_ZENYNAGE)
-					md.damage = md.damage / 2;
-			break;
+
 #ifdef RENEWAL
 		case NJ_ISSEN:
 			// Official Renewal formula [helvetica]
@@ -5650,13 +5624,6 @@ struct Damage battle_calc_misc_attack(struct block_list *src,struct block_list *
 				struct Damage wd = battle_calc_weapon_attack(src,target,skill_id,skill_lv,mflag);
 
 				md.damage += wd.damage;
-			}
-			break;
-		case NJ_ZENYNAGE:
-			if (sd) {
-				if (md.damage > sd->status.zeny)
-					md.damage = sd->status.zeny;
-				pc_payzeny(sd,(int)cap_value(md.damage, INT_MIN, INT_MAX),LOG_TYPE_STEAL,NULL);
 			}
 			break;
 	}
