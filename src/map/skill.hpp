@@ -2176,7 +2176,6 @@ enum e_skill {
     MO_KI_BLAST = 874,
     CH_ZEN = 875,
 	KN_FURY = 876,
-	DK_STORMSLASH = 5213,
 };
 
 /// The client view ids for land skills.
@@ -2423,7 +2422,6 @@ int skill_banding_count(struct map_session_data *sd);
 
 int skill_is_combo(uint16 skill_id);
 void skill_combo_toggle_inf(struct block_list* bl, uint16 skill_id, int inf);
-void skill_combo(struct block_list* src,struct block_list *dsrc, struct block_list *bl, uint16 skill_id, uint16 skill_lv, t_tick tick);
 
 void skill_reveal_trap_inarea(struct block_list *src, int range, int x, int y);
 int skill_get_time3(struct map_data *mapdata, uint16 skill_id, uint16 skill_lv);

@@ -140,7 +140,6 @@ bool unit_can_reach_bl(struct block_list *bl,struct block_list *tbl, int range, 
 int unit_stopattack(struct block_list *bl, va_list ap);
 void unit_stop_attack(struct block_list *bl);
 int unit_attack(struct block_list *src,int target_id,int continuous);
-int unit_cancel_combo(struct block_list *bl);
 
 // Cast on a unit
 int unit_skilluse_id(struct block_list *src, int target_id, uint16 skill_id, uint16 skill_lv);

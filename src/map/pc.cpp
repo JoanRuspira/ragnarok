@@ -2018,7 +2018,7 @@ static bool pc_grant_allskills(struct map_session_data *sd, bool addlv) {
 	* Dummy skills must NOT be added here otherwise they'll be displayed in the,
 	* skill tree and since they have no icons they'll give resource errors
 	* Get ALL skills except npc/guild ones. [Skotlex]
-	* Don't add SG_DEVIL [Komurka] and MO_TRIPLEATTACK and RG_SNATCHER [ultramage]
+	* Don't add SG_DEVIL [Komurka] and RG_SNATCHER [ultramage]
 	**/
 	for (const auto &skill : skill_db) {
 		uint16 skill_id = skill.second->nameid;
@@ -2043,7 +2043,6 @@ static bool pc_grant_allskills(struct map_session_data *sd, bool addlv) {
 			case WM_SEVERE_RAINSTORM_MELEE:
 			case RL_R_TRIP_PLUSATK:
 			case SG_DEVIL:
-			case MO_TRIPLEATTACK:
 			case RG_SNATCHER:
 				continue;
 			default:

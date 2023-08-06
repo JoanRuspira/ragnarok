@@ -10,7 +10,7 @@
 class MonkSkillAttackRatioCalculator
 {
 	public:
-		static int calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv, struct status_data* sstatus, bool revealed_hidden_enemy, map_session_data *sd);
+		static int calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv, struct status_data* sstatus, bool revealed_hidden_enemy, map_session_data *sd, status_change *sc);
 
 	private:
 		static int calculate_throw_spirit_sphere_atk_ratio(int skill_lv);

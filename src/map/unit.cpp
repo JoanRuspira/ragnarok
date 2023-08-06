@@ -1630,22 +1630,7 @@ int unit_skilluse_id2(struct block_list *src, int target_id, uint16 skill_id, ui
 		return 0;
 
 	// temp: used to signal combo-skills right now.
-	if (sc && sc->data[SC_COMBO] &&
-		skill_is_combo(skill_id) &&
-		(sc->data[SC_COMBO]->val1 == skill_id ||
-		(sd?skill_check_condition_castbegin(sd,skill_id,skill_lv):0) )) {
-		if (skill_is_combo(skill_id) == 2 && target_id == src->id && ud->target > 0)
-			target_id = ud->target;
-		else if (sc->data[SC_COMBO]->val2)
-			target_id = sc->data[SC_COMBO]->val2;
-		else if (target_id == src->id || ud->target > 0)
-			target_id = ud->target;
-
-		if (inf&INF_SELF_SKILL && skill->nk[NK_NODAMAGE])// exploit fix
-			target_id = src->id;
-
-		combo = 1;
-	} else if (target_id == src->id && inf&INF_SELF_SKILL && skill->inf2[INF2_NOTARGETSELF]) {
+	if (target_id == src->id && inf&INF_SELF_SKILL && skill->inf2[INF2_NOTARGETSELF]) {
 		target_id = ud->target; // Auto-select target. [Skotlex]
 		combo = 1;
 	}
@@ -1709,12 +1694,6 @@ int unit_skilluse_id2(struct block_list *src, int target_id, uint16 skill_id, ui
 			case MH_SONIC_CRAW:
 			case MH_TINDER_BREAKER: {
 				int skill_id2 = ((skill_id==MH_SONIC_CRAW)?MH_MIDNIGHT_FRENZY:MH_EQC);
-
-				if(sc->data[SC_COMBO] && sc->data[SC_COMBO]->val1 == skill_id2) { // It's a combo
-					target_id = sc->data[SC_COMBO]->val2;
-					combo = 1;
-					casttime = -1;
-				}
 				break;
 			}
 		}
@@ -1873,21 +1852,6 @@ int unit_skilluse_id2(struct block_list *src, int target_id, uint16 skill_id, ui
 		case MO_FINGEROFFENSIVE:
 			if(sd)
 				casttime += casttime * min(skill_lv, sd->spiritball);
-		break;
-		case MO_EXTREMITYFIST:
-			if (sc && sc->data[SC_COMBO] &&
-			   (sc->data[SC_COMBO]->val1 == MO_COMBOFINISH ||
-				sc->data[SC_COMBO]->val1 == CH_TIGERFIST ||
-				sc->data[SC_COMBO]->val1 == CH_CHAINCRUSH))
-				casttime = -1;
-			combo = 1;
-		break;
-		case SR_GATEOFHELL:
-		case SR_TIGERCANNON:
-			if (sc && sc->data[SC_COMBO] &&
-			   sc->data[SC_COMBO]->val1 == SR_FALLENEMPIRE)
-				casttime = -1;
-			combo = 1;
 		break;
 		case SA_SPELLBREAKER:
 			combo = 1;
@@ -2440,33 +2404,7 @@ int unit_attack(struct block_list *src,int target_id,int continuous)
 	return 0;
 }
 
-/** 
- * Cancels an ongoing combo, resets attackable time, and restarts the
- * attack timer to resume attack after amotion time
- * @author [Skotlex]
- * @param bl: Object to cancel combo
- * @return Success(1); Fail(0);
- */
-int unit_cancel_combo(struct block_list *bl)
-{
-	struct unit_data  *ud;
 
-	if (!status_change_end(bl, SC_COMBO, INVALID_TIMER))
-		return 0; // Combo wasn't active.
-
-	ud = unit_bl2ud(bl);
-	nullpo_ret(ud);
-
-	ud->attackabletime = gettick() + status_get_amotion(bl);
-
-	if (ud->attacktimer == INVALID_TIMER)
-		return 1; // Nothing more to do.
-
-	delete_timer(ud->attacktimer, unit_attack_timer);
-	ud->attacktimer=add_timer(ud->attackabletime,unit_attack_timer,bl->id,0);
-
-	return 1;
-}
 
 /**
  * Does a path_search to check if a position can be reached

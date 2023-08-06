@@ -935,18 +935,10 @@ bool skill_isNotOk_hom(struct homun_data *hd, uint16 skill_id, uint16 skill_lv)
 				clif_skill_fail(sd, skill_id, USESKILL_FAIL_STYLE_CHANGE_FIGHTER, 0);
 				return true;
 			}
-			if (!(sc && sc->data[SC_COMBO] && sc->data[SC_COMBO]->val1 == MH_SONIC_CRAW)) {
-				clif_skill_fail(sd, skill_id, USESKILL_FAIL_COMBOSKILL, MH_SONIC_CRAW);
-				return true;
-			}
 			break;
 		case MH_MIDNIGHT_FRENZY:
 			if (!(sc && sc->data[SC_STYLE_CHANGE] && sc->data[SC_STYLE_CHANGE]->val1 == MH_MD_FIGHTING)) {
 				clif_skill_fail(sd, skill_id, USESKILL_FAIL_STYLE_CHANGE_FIGHTER, 0);
-				return true;
-			}
-			if (!(sc && sc->data[SC_COMBO] && sc->data[SC_COMBO]->val1 == MH_SILVERVEIN_RUSH)) {
-				clif_skill_fail(sd, skill_id, USESKILL_FAIL_COMBOSKILL, MH_SILVERVEIN_RUSH);
 				return true;
 			}
 			break;
@@ -955,18 +947,10 @@ bool skill_isNotOk_hom(struct homun_data *hd, uint16 skill_id, uint16 skill_lv)
 				clif_skill_fail(sd, skill_id, USESKILL_FAIL_STYLE_CHANGE_GRAPPLER, 0);
 				return true;
 			}
-			if (!(sc && sc->data[SC_COMBO] && sc->data[SC_COMBO]->val1 == MH_TINDER_BREAKER)) {
-				clif_skill_fail(sd, skill_id, USESKILL_FAIL_COMBOSKILL, MH_TINDER_BREAKER);
-				return true;
-			}
 			break;
 		case MH_EQC:
 			if (!(sc && sc->data[SC_STYLE_CHANGE] && sc->data[SC_STYLE_CHANGE]->val1 == MH_MD_GRAPPLING)) {
 				clif_skill_fail(sd, skill_id, USESKILL_FAIL_STYLE_CHANGE_GRAPPLER, 0);
-				return true;
-			}
-			if (!(sc && sc->data[SC_COMBO] && sc->data[SC_COMBO]->val1 == MH_CBC)) {
-				clif_skill_fail(sd, skill_id, USESKILL_FAIL_COMBOSKILL, MH_CBC);
 				return true;
 			}
 			break;
@@ -1209,9 +1193,6 @@ int skill_counter_additional_effect (struct block_list* src, struct block_list *
 	switch(skill_id) {
 	case MO_EXTREMITYFIST:
 		sc_start(src,src,SC_EXTREMITYFIST,100,skill_lv,skill_get_time2(skill_id,skill_lv));
-		break;
-	case GS_FULLBUSTER:
-		sc_start(src,src,SC_BLIND,2*skill_lv,skill_lv,skill_get_time2(skill_id,skill_lv));
 		break;
 	// case CR_GRANDCROSS:
 	case NPC_GRANDDARKNESS:
@@ -1706,106 +1687,6 @@ void skill_combo_toggle_inf(struct block_list* bl, uint16 skill_id, int inf){
 	}
 }
 
-void skill_combo(struct block_list* src,struct block_list *dsrc, struct block_list *bl, uint16 skill_id, uint16 skill_lv, t_tick tick){
-	t_tick duration = 0; //Set to duration the user can use a combo skill or 1 for aftercast delay of pre-skill
-	int nodelay = 0; //Set to 1 for no walk/attack delay, set to 2 for no walk delay
-	int target_id = bl->id; //Set to 0 if combo skill should not autotarget
-	struct status_change_entry *sce;
-	TBL_PC *sd = BL_CAST(BL_PC,src);
-	TBL_HOM *hd = BL_CAST(BL_HOM,src);
-	struct status_change *sc = status_get_sc(src);
-
-	if(sc == NULL) return;
-
-	//End previous combo state after skill is invoked
-	if ((sce = sc->data[SC_COMBO]) != NULL) {
-		switch (skill_id) {
-		case TK_TURNKICK:
-		case TK_STORMKICK:
-		case TK_DOWNKICK:
-		case TK_COUNTER:
-			if (sd && pc_famerank(sd->status.char_id,MAPID_TAEKWON)) {//Extend combo time.
-				sce->val1 = skill_id; //Update combo-skill
-				sce->val3 = skill_id;
-				if( sce->timer != INVALID_TIMER )
-					delete_timer(sce->timer, status_change_timer);
-				sce->timer = add_timer(tick+sce->val4, status_change_timer, src->id, SC_COMBO);
-				break;
-			}
-			unit_cancel_combo(src); // Cancel combo wait
-			break;
-		default:
-			if( src == dsrc ) // Ground skills are exceptions. [Inkfish]
-				status_change_end(src, SC_COMBO, INVALID_TIMER);
-		}
-	}
-
-	//start new combo
-	if (sd) { //player only
-		switch (skill_id) {
-		case MO_TRIPLEATTACK:
-			if (pc_checkskill(sd, MO_CHAINCOMBO) > 0) {
-				duration = 1;
-				target_id = 0; // Will target current auto-target instead
-			}
-			break;
-		case MO_CHAINCOMBO:
-			if (pc_checkskill(sd, MO_COMBOFINISH) > 0 && sd->spiritball > 0) {
-				duration = 1;
-				target_id = 0; // Will target current auto-target instead
-			}
-			break;
-		case MO_COMBOFINISH:
-			if (sd->status.party_id > 0) //bonus from SG_FRIEND [Komurka]
-				party_skill_check(sd, sd->status.party_id, MO_COMBOFINISH, skill_lv);
-			if (pc_checkskill(sd, CH_TIGERFIST) > 0 && sd->spiritball > 0) {
-				duration = 1;
-				target_id = 0; // Will target current auto-target instead
-			}
-		case CH_TIGERFIST:
-			if (!duration && pc_checkskill(sd, CH_CHAINCRUSH) > 0 && sd->spiritball > 1) {
-				duration = 1;
-				target_id = 0; // Will target current auto-target instead
-			}
-		case SR_DRAGONCOMBO:
-			if (pc_checkskill(sd, SR_FALLENEMPIRE) > 0)
-				duration = 1;
-			break;
-		case SR_FALLENEMPIRE:
-			if (pc_checkskill(sd, SR_TIGERCANNON) > 0 || pc_checkskill(sd, SR_GATEOFHELL) > 0)
-				duration = 1;
-			break;
-		case SJ_PROMINENCEKICK:
-			if (pc_checkskill(sd, SJ_SOLARBURST) > 0)
-				duration = 1;
-			break;
-		}
-	}
-	else { //other
-		switch(skill_id) {
-		case MH_TINDER_BREAKER:
-		case MH_CBC:
-		case MH_SONIC_CRAW:
-		case MH_SILVERVEIN_RUSH:
-			if(hd->homunculus.spiritball > 0) duration = 2000;
-				nodelay = 1;
-			break;
-		case MH_EQC:
-		case MH_MIDNIGHT_FRENZY:
-			if(hd->homunculus.spiritball >= 2) duration = 2000;
-				nodelay = 1;
-			break;
-		}
-	}
-
-	if (duration) { //Possible to chain
-		if(sd && duration==1) duration = DIFF_TICK(sd->ud.canact_tick, tick); //Auto calc duration
-		duration = i64max(status_get_amotion(src),duration); //Never less than aMotion
-		sc_start4(src,src,SC_COMBO,100,skill_id,target_id,nodelay,0,duration);
-		clif_combo_delay(src, duration);
-	}
-}
-
 /**
  * Copy skill by Plagiarism or Reproduce
  * @param src: The caster
@@ -2212,8 +2093,6 @@ int64 skill_attack (int attack_type, struct block_list* src, struct block_list *
 			break;
 	}
 
-	//combo handling
-	skill_combo(src,dsrc,bl,skill_id,skill_lv,tick);
 
 	//Display damage.
 	switch( skill_id ) {
@@ -3450,6 +3329,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 		break;
 	case MER_CRASH:
 	case SM_BASH:
+	case MO_TRIPLEATTACK:
 	case NC_BOOSTKNUCKLE:
 	case NJ_ZENYNAGE:
 	case MO_BALKYOUNG:
@@ -3531,7 +3411,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 #ifndef RENEWAL
 	case GS_MAGICALBULLET:
 #endif
-	case GS_PIERCINGSHOT:
 	case GS_RAPIDSHOWER:
 	case GS_DUST:
 	case GS_DISARM:				// Added disarm. [Reddozen]
@@ -3579,9 +3458,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case TF_POISON:
 		skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag);
 		// skill_attack(BF_WEAPON,src,src,bl,SM_BASH,skill_lv,tick,flag);
-		break;
-	case MO_TRIPLEATTACK:
-		skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag|SD_ANIMATION);
 		break;
 	case MO_COMBOFINISH:
 		if (!(flag&1) && sc && sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_MONK)
@@ -3817,7 +3693,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case MG_FIREBALL:
 	// case RG_RAID:
 	case HW_NAPALMVULCAN:
-	case NJ_HUUMA:
+	case GS_PIERCINGSHOT:
 	case ASC_METEORASSAULT:
 	case GS_SPREADATTACK:
 	case NPC_PULSESTRIKE:
@@ -3940,7 +3816,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 				case SU_SCRATCH:
 					clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 					break;
-				case NJ_HUUMA:
+				case GS_PIERCINGSHOT:
 				case LG_MOONSLASHER:
 				case MH_XENO_SLASHER:
 					clif_skill_damage(src,bl,tick, status_get_amotion(src), 0, -30000, 1, skill_id, skill_lv, DMG_SINGLE);
@@ -4691,19 +4567,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 		}
 		break;
 
-	case SR_TIGERCANNON:
-		if (flag&1) {
-			if (skill_area_temp[1] != bl->id && skill_area_temp[3] == skill_id)
-				skill_attack(BF_WEAPON, src, src, bl, skill_id, skill_lv, tick, flag);
-		} else if (sd) {
-			skill_area_temp[1] = bl->id;
-			skill_area_temp[3] = skill_id;
-			if (sc && sc->data[SC_COMBO] && sc->data[SC_COMBO]->val1 == SR_FALLENEMPIRE && !sc->data[SC_FLASHCOMBO])
-				flag |= 8; // Only apply Combo bonus when Tiger Cannon is not used through Flash Combo
-			skill_attack(BF_WEAPON, src, src, bl, skill_id, skill_lv, tick, flag);
-			map_foreachinrange(skill_area_sub, bl, skill_get_splash(skill_id, skill_lv), BL_CHAR|BL_SKILL, src, skill_id, skill_lv, tick, flag|BCT_ENEMY|SD_SPLASH|1, skill_castend_damage_id);
-		}
-		break;
 	case NPC_POISON_BUSTER:
 	case SO_POISON_BUSTER:
 		if( tsc && tsc->data[SC_POISON] ) {
@@ -14853,48 +14716,12 @@ bool skill_check_condition_castbegin(struct map_session_data* sd, uint16 skill_i
 			else
 				sd->spiritball_old = require.spiritball;
 			break;
-		case MO_CHAINCOMBO:
-			if(!sc)
-				return false;
-			if(sc->data[SC_BLADESTOP])
-				break;
-			if(sc->data[SC_COMBO] && sc->data[SC_COMBO]->val1 == MO_TRIPLEATTACK)
-				break;
-			return false;
-		case MO_COMBOFINISH:
-			if(!(sc && sc->data[SC_COMBO] && sc->data[SC_COMBO]->val1 == MO_CHAINCOMBO))
-				return false;
-			break;
-		case CH_TIGERFIST:
-			if(!(sc && sc->data[SC_COMBO] && sc->data[SC_COMBO]->val1 == MO_COMBOFINISH))
-				return false;
-			break;
-		case CH_CHAINCRUSH:
-			if(!(sc && sc->data[SC_COMBO]))
-				return false;
-			if(sc->data[SC_COMBO]->val1 != MO_COMBOFINISH && sc->data[SC_COMBO]->val1 != CH_TIGERFIST)
-				return false;
-			break;
-		case SJ_SOLARBURST:
-			if (!(sc && sc->data[SC_COMBO] && sc->data[SC_COMBO]->val1 == SJ_PROMINENCEKICK))
-				return 0;
-			break;
 		case MO_EXTREMITYFIST:
 	//		if(sc && sc->data[SC_EXTREMITYFIST]) //To disable Asura during the 5 min skill block uncomment this...
 	//			return false;
 			if( sc && (sc->data[SC_BLADESTOP] || sc->data[SC_CURSEDCIRCLE_ATKER]) )
 				break;
-			if( sc && sc->data[SC_COMBO] ) {
-				switch(sc->data[SC_COMBO]->val1) {
-					case MO_COMBOFINISH:
-					case CH_TIGERFIST:
-					case CH_CHAINCRUSH:
-						break;
-					default:
-						return false;
-				}
-			}
-			else if( !unit_can_move(&sd->bl) ) { //Placed here as ST_MOVE_ENABLE should not apply if rooted or on a combo. [Skotlex]
+			if( !unit_can_move(&sd->bl) ) { //Placed here as ST_MOVE_ENABLE should not apply if rooted or on a combo. [Skotlex]
 				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
 				return false;
 			}
@@ -14928,27 +14755,6 @@ bool skill_check_condition_castbegin(struct map_session_data* sd, uint16 skill_i
 				return false;
 			}
 			break;
-		case TK_TURNKICK:
-		case TK_STORMKICK:
-		case TK_DOWNKICK:
-		case TK_COUNTER:
-			if ((sd->class_&MAPID_UPPERMASK) == MAPID_SOUL_LINKER)
-				return false; //Anti-Soul Linker check in case you job-changed with Stances active.
-			if(!(sc && sc->data[SC_COMBO]) || sc->data[SC_COMBO]->val1 == TK_JUMPKICK)
-				return false; //Combo needs to be ready
-
-			if (sc->data[SC_COMBO]->val3) {	//Kick chain
-				//Do not repeat a kick.
-				if (sc->data[SC_COMBO]->val3 != skill_id)
-					break;
-				status_change_end(&sd->bl, SC_COMBO, INVALID_TIMER);
-				return false;
-			}
-			if(sc->data[SC_COMBO]->val1 != skill_id && !pc_is_taekwon_ranker(sd)) {	//Cancel combo wait.
-				unit_cancel_combo(&sd->bl);
-				return false;
-			}
-			break; //Combo ready.
 #ifndef RENEWAL
 		case BD_ADAPTATION:
 			{
@@ -15424,9 +15230,6 @@ bool skill_check_condition_castbegin(struct map_session_data* sd, uint16 skill_i
 			}
 			break;
 		case ST_MOVE_ENABLE:
-			if (sc && sc->data[SC_COMBO] && sc->data[SC_COMBO]->val1 == skill_id)
-				sd->ud.canmove_tick = gettick(); //When using a combo, cancel the can't move delay to enable the skill. [Skotlex]
-
 			if (!unit_can_move(&sd->bl)) {
 				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
 				return false;
@@ -16224,32 +16027,12 @@ struct s_skill_condition skill_get_requirement(struct map_session_data* sd, uint
 			if( sc ) {
 				if( sc->data[SC_BLADESTOP] )
 					req.spiritball--;
-				else if( sc->data[SC_COMBO] ) {
-#ifndef RENEWAL
-					switch( sc->data[SC_COMBO]->val1 ) {
-						case MO_COMBOFINISH:
-							req.spiritball = 4;
-							break;
-						case CH_TIGERFIST:
-							req.spiritball = 3;
-							break;
-						case CH_CHAINCRUSH: //It should consume whatever is left as long as it's at least 1.
-							req.spiritball = sd->spiritball?sd->spiritball:1;
-							break;
-					}
-#else
-					req.spiritball = sd->spiritball ? sd->spiritball : 1;
-#endif
-				} else if( sc->data[SC_RAISINGDRAGON] && sd->spiritball > 5)
+				else if( sc->data[SC_RAISINGDRAGON] && sd->spiritball > 5)
 					req.spiritball = sd->spiritball; // must consume all regardless of the amount required
 			}
 			break;
 		case LG_RAGEBURST:
 			req.spiritball = sd->spiritball?sd->spiritball:1;
-			break;
-		case SR_GATEOFHELL:
-			if( sc && sc->data[SC_COMBO] && sc->data[SC_COMBO]->val1 == SR_FALLENEMPIRE )
-				req.sp -= req.sp * 10 / 100;
 			break;
 		// case SO_SUMMON_AGNI:
 		// case SO_SUMMON_AQUA:
@@ -16494,7 +16277,6 @@ int skill_delayfix(struct block_list *bl, uint16 skill_id, uint16 skill_lv)
 
 	// Delay reductions
 	switch (skill_id) {	//Monk combo skills have their delay reduced by agi/dex.
-		case MO_TRIPLEATTACK:
 		case MO_CHAINCOMBO:
 		case MO_COMBOFINISH:
 		case CH_TIGERFIST:

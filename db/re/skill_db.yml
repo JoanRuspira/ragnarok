@@ -13688,34 +13688,19 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    DamageFlags:
-      IgnoreDefense: true
-    Flags:
-      AlterRangeSnakeEye: true
-    Range: -9
+    Range: -1
     Hit: Single
     HitCount: 1
     Element: Weapon
-    CastTime: 1500
-    Duration2: 120000
+    Cooldown: 5000
+    AfterCastActDelay: 100
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 11
-        - Level: 2
-          Amount: 12
-        - Level: 3
-          Amount: 13
-        - Level: 4
-          Amount: 14
-        - Level: 5
-          Amount: 15
+      SpCost: 15
       Weapon:
-        Revolver: true
-        Rifle: true
-      Ammo:
-        Bullet: true
-      AmmoAmount: 1
+        Knuckle: true
+        Mace: true
+        2hMace: true
+      SpiritSphereCost: 1
   - Id: 515
     Name: GS_RAPIDSHOWER
     Description: Rapid Shower
@@ -13902,60 +13887,22 @@ Body:
   - Id: 519
     Name: GS_FULLBUSTER
     Description: Full Buster
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    Flags:
-      AlterRangeSnakeEye: true
-    Range: -9
-    Hit: Single
-    HitCount: 1
+    Range: 1
+    Hit: Multi_Hit
+    HitCount: -3
     Element: Weapon
     CastCancel: true
-    AfterCastActDelay:
-      - Level: 1
-        Time: 1200
-      - Level: 2
-        Time: 1400
-      - Level: 3
-        Time: 1600
-      - Level: 4
-        Time: 1800
-      - Level: 5
-        Time: 2000
-      - Level: 6
-        Time: 2200
-      - Level: 7
-        Time: 2400
-      - Level: 8
-        Time: 2600
-      - Level: 9
-        Time: 2800
-      - Level: 10
-        Time: 3000
-    Duration2: 10000
+    Cooldown: 5000
+    AfterCastActDelay: 100
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 20
-        - Level: 2
-          Amount: 25
-        - Level: 3
-          Amount: 30
-        - Level: 4
-          Amount: 35
-        - Level: 5
-          Amount: 40
-        - Level: 6
-          Amount: 45
-        - Level: 7
-          Amount: 50
-        - Level: 8
-          Amount: 55
-        - Level: 9
-          Amount: 60
-        - Level: 10
-          Amount: 65
+      SpCost: 15
+      Weapon:
+        Knuckle: true
+        Mace: true
+        2hMace: true
   - Id: 520
     Name: GS_SPREADATTACK
     Description: Spread Attack
@@ -22103,6 +22050,8 @@ Body:
     Hit: Multi_Hit
     HitCount: -2
     Element: Weapon
+    DamageFlags:
+      IgnoreDefense: true
     CopyFlags:
       Skill:
         Reproduce: true

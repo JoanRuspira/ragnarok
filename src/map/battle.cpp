@@ -1313,7 +1313,6 @@ bool battle_status_block_damage(struct block_list *src, struct block_list *targe
 		if (sd && pc_issit(sd))
 			pc_setstand(sd, true); //Stand it to dodge.
 		clif_skill_nodamage(target, target, TK_DODGE, 1, 1);
-		sc_start4(src, target, SC_COMBO, 100, TK_JUMPKICK, src->id, 1, 0, 2000);
 		return false;
 	}
 
@@ -2894,15 +2893,16 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case CH_TIGERFIST:
 		case MO_COMBOFINISH:
 		case SR_DRAGONCOMBO:
-		case NJ_HUUMA:
+		case GS_PIERCINGSHOT:
 		case NJ_ZENYNAGE:
 		case NC_BOOSTKNUCKLE:
+		case GS_FULLBUSTER:
 			{
 				bool revealed_hidden_enemy = false;
-				if (tsc && ((tsc->option&(OPTION_HIDE|OPTION_CLOAK|OPTION_CHASEWALK)) || tsc->data[SC_CAMOUFLAGE])) {
+				if (tsc && ((tsc->option&(OPTION_HIDE|OPTION_CLOAK|OPTION_CHASEWALK|OPTION_INVISIBLE)) || tsc->data[SC_CAMOUFLAGE])) {
 					revealed_hidden_enemy = true;
 				}
-				skillratio += MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, revealed_hidden_enemy, sd);
+				skillratio += MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, revealed_hidden_enemy, sd, sc);
 			}
 			break;
 		case ML_BRANDISH:
@@ -3010,9 +3010,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			break;
 		case TK_JUMPKICK:
 			//Different damage formulas depending on damage trigger
-			if (sc && sc->data[SC_COMBO] && sc->data[SC_COMBO]->val1 == skill_id)
-				skillratio += -100 + 4 * status_get_lv(src); //Tumble formula [4%*baselevel]
-			else if (wd->miscflag) {
+			if (wd->miscflag) {
 				skillratio += -100 + 4 * status_get_lv(src); //Running formula [4%*baselevel]
 				if (sc && sc->data[SC_SPURT]) //Spurt formula [8%*baselevel]
 					skillratio *= 2;
@@ -3028,16 +3026,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			if((tstatus->race == RC_BRUTE || tstatus->race == RC_DEMIHUMAN || tstatus->race == RC_PLAYER_HUMAN || tstatus->race == RC_PLAYER_DORAM) && !status_has_mode(tstatus,MD_STATUSIMMUNE))
 				skillratio += 400;
 			break;
-		case GS_PIERCINGSHOT:
-#ifdef RENEWAL
-			if (sd && sd->weapontype1 == W_RIFLE)
-				skillratio += 150 + 30 * skill_lv;
-			else
-				skillratio += 100 + 20 * skill_lv;
-#else
-			skillratio += 20 * skill_lv;
-#endif
-			break;
 		case GS_RAPIDSHOWER:
 			skillratio += 400 + 50 * skill_lv;
 			break;
@@ -3048,9 +3036,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			break;
 		case GS_DUST:
 			skillratio += 50 * skill_lv;
-			break;
-		case GS_FULLBUSTER:
-			skillratio += 100 * (skill_lv + 2);
 			break;
 		case GS_SPREADATTACK:
 #ifdef RENEWAL
@@ -3270,15 +3255,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 				RE_LVL_DMOD(150);
 			}
 			if (sc->data[SC_GT_CHANGE])
-				skillratio += skillratio * 30 / 100;
-			break;
-		case SR_GATEOFHELL:
-			if (sc && sc->data[SC_COMBO] && sc->data[SC_COMBO]->val1 == SR_FALLENEMPIRE)
-				skillratio += -100 + 800 * skill_lv;
-			else
-				skillratio += -100 + 500 * skill_lv;
-			RE_LVL_DMOD(100);
-			if (sc->data[SC_GT_REVITALIZE])
 				skillratio += skillratio * 30 / 100;
 			break;
 		case SR_GENTLETOUCH_QUIET:
@@ -4546,16 +4522,6 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src, struct bl
 				ATK_ADD(wd.damage, wd.damage2, skill_lv * 500 + status_get_lv(target) * 40);
 			} else
 				ATK_ADD(wd.damage, wd.damage2, skill_lv * 240 + status_get_lv(target) * 40);
-			break;
-		case SR_GATEOFHELL: {
-			struct status_data *sstatus = status_get_status_data(src);
-
-			ATK_ADD(wd.damage, wd.damage2, sstatus->max_hp - sstatus->hp);
-			if(sc && sc->data[SC_COMBO] && sc->data[SC_COMBO]->val1 == SR_FALLENEMPIRE) {
-				ATK_ADD(wd.damage, wd.damage2, (sstatus->max_sp * (100 + skill_lv * 20 / 100)) + 40 * status_get_lv(src));
-			} else
-				ATK_ADD(wd.damage, wd.damage2, (sstatus->sp * (100 + skill_lv * 20 / 100)) + 10 * status_get_lv(src));
-		}
 			break;
 		case MH_TINDER_BREAKER:
 			ATK_ADD(wd.damage, wd.damage2, 2500 * skill_lv + status_get_lv(src)); // !TODO: Confirm base level bonus
@@ -6115,15 +6081,15 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 		}
 	}
 
-	if(sd && (skillv = pc_checkskill(sd,MO_TRIPLEATTACK)) > 0) {
+	if(sd && (skillv = pc_checkskill(sd,GS_FULLBUSTER)) > 0) {
 		int triple_rate = 6 * skillv;
 		if (sd && sd->status.weapon == W_KNUCKLE) {
-			triple_rate += 5;
+			triple_rate += 15;
 		}
 		if (rnd()%100 < triple_rate) {
 			//Need to apply canact_tick here because it doesn't go through skill_castend_id
-			sd->ud.canact_tick = i64max(tick + skill_delayfix(src, MO_TRIPLEATTACK, skillv), sd->ud.canact_tick);
-			if( skill_attack(BF_WEAPON,src,src,target,MO_TRIPLEATTACK,skillv,tick,0) )
+			sd->ud.canact_tick = i64max(tick + skill_delayfix(src, GS_FULLBUSTER, skillv), sd->ud.canact_tick);
+			if( skill_attack(BF_WEAPON,src,src,target,GS_FULLBUSTER,skillv,tick,0) )
 				return ATK_DEF;
 			return ATK_MISS;
 		}

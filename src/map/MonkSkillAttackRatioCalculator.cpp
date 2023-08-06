@@ -7,41 +7,46 @@
  * @param skill_lv : skill level
  * @param int_ : player's int
  */
-int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv, struct status_data* sstatus, bool revealed_hidden_enemy, map_session_data *sd)
+int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv, struct status_data* sstatus, bool revealed_hidden_enemy, map_session_data *sd, status_change *sc)
 {
 	switch (skill_id) {
+		case GS_FULLBUSTER:
+			ShowMessage("TRIPLE ARM CANNON\n");
+			if(!sc->data[SC_COMBO1] && !sc->data[SC_COMBO2] && !sc->data[SC_COMBO3] &&
+				!sc->data[SC_COMBO4] && !sc->data[SC_COMBO5] && !sc->data[SC_COMBO6] &&
+				!sc->data[SC_COMBO7] && !sc->data[SC_COMBO8] && !sc->data[SC_COMBO9] && !sc->data[SC_COMBO10]) {
+					ShowMessage("SC START\n");
+					sc_start(&sd->bl,&sd->bl, SC_COMBO1, 100, 17, 4000);
+			}
+			return calculate_raging_triple_blow_atk_ratio(skill_lv);
+		case GS_PIERCINGSHOT:
+		{
+			bool is_using_mace = false;
+			if (sd && sd->status.weapon == W_MACE || sd->status.weapon == W_2HMACE) {
+				is_using_mace = true;
+			}
+			clif_specialeffect(target, EF_ENERVATION2, AREA); //groomy	
+			return calculate_chain_combo_atk_ratio(skill_lv, is_using_mace);
+		}
 		case NC_BOOSTKNUCKLE:
 			clif_specialeffect(target, EF_TINDER_BREAKER, AREA); //tinder
 			return 100;
 		case NJ_ZENYNAGE:
 			clif_specialeffect(target, EF_ENERVATION3, AREA); //ignorance
 			return 100;
-		case NJ_HUUMA:
-			clif_specialeffect(target, EF_ENERVATION2, AREA); //groomy	
-			return 100;
+		
 		case MO_FINGEROFFENSIVE:
 			return calculate_throw_spirit_sphere_atk_ratio(skill_lv);
         case MO_INVESTIGATE:
             return calculate_occult_impact(skill_lv, status_get_def(target));
 		case MO_KI_BLAST:
 			return calculate_ki_blast_atk_ratio(skill_lv, sstatus->str);
-		case MO_TRIPLEATTACK:
-			return calculate_raging_triple_blow_atk_ratio(skill_lv);
 		case CH_TIGERFIST:
 			clif_specialeffect(src, EF_TINDER_BREAKER, AREA); //tinder
 			return 100;
 		case MO_COMBOFINISH:
 			clif_specialeffect(src, EF_ENERVATION3, AREA); //ignorance
 			return 100;
-		case MO_CHAINCOMBO:
-			{
-				bool is_using_mace = false;
-				if (sd && sd->status.weapon == W_MACE || sd->status.weapon == W_2HMACE) {
-					is_using_mace = true;
-				}
-				clif_specialeffect(src, EF_ENERVATION2, AREA); //groomy	
-				return calculate_chain_combo_atk_ratio(skill_lv, is_using_mace);
-			}
 		case SR_WINDMILL:
 			return calculate_circular_fists_atk_ratio(skill_lv, revealed_hidden_enemy);
 		case CH_PALMSTRIKE:

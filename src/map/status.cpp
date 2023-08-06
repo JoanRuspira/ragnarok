@@ -487,7 +487,17 @@ void initChangeTables(void)
 	set_sc( CR_SPEARQUICKEN		, SC_SPEARQUICKEN	, EFST_SPEARQUICKEN	, SCB_ASPD|SCB_WATK );
 	set_sc( MO_STEELBODY		, SC_STEELBODY		, EFST_STEELBODY		, SCB_DEF|SCB_MDEF|SCB_ASPD|SCB_SPEED );
 	add_sc( MO_BLADESTOP		, SC_BLADESTOP_WAIT	);
-	set_sc( MO_BLADESTOP		, SC_BLADESTOP	, EFST_BLADESTOP	, SCB_NONE );
+	set_sc( GS_FULLBUSTER		, SC_COMBO1	, EFST_COMBO1	, SCB_NONE );
+	set_sc( GS_FULLBUSTER		, SC_COMBO2	, EFST_COMBO2	, SCB_NONE );
+	set_sc( GS_FULLBUSTER		, SC_COMBO3	, EFST_COMBO3	, SCB_NONE );
+	set_sc( GS_FULLBUSTER		, SC_COMBO4	, EFST_COMBO4	, SCB_NONE );
+	set_sc( GS_FULLBUSTER		, SC_COMBO5	, EFST_COMBO5	, SCB_NONE );
+	set_sc( GS_FULLBUSTER		, SC_COMBO6	, EFST_COMBO6	, SCB_NONE );
+	set_sc( GS_FULLBUSTER		, SC_COMBO7	, EFST_COMBO7	, SCB_NONE );
+	set_sc( GS_FULLBUSTER		, SC_COMBO8	, EFST_COMBO8	, SCB_NONE );
+	set_sc( GS_FULLBUSTER		, SC_COMBO9	, EFST_COMBO9	, SCB_NONE );
+	set_sc( GS_FULLBUSTER		, SC_COMBO10	, EFST_COMBO10	, SCB_NONE );
+	
 	set_sc( MO_EXPLOSIONSPIRITS	, SC_EXPLOSIONSPIRITS	, EFST_EXPLOSIONSPIRITS	, SCB_STR|SCB_AGI|SCB_VIT|SCB_WATK );
 	set_sc( KN_FURY	, SC_FURY	, EFST_FURY	, SCB_CRI|SCB_WATK );
 	set_sc( MO_EXTREMITYFIST	, SC_EXTREMITYFIST	, EFST_BLANK			, SCB_REGEN );
@@ -654,7 +664,6 @@ void initChangeTables(void)
 	set_sc( GS_FLING		, SC_FLING		, EFST_BLANK		, SCB_DEF|SCB_DEF2 );
 	add_sc( GS_CRACKER		, SC_STUN		);
 	add_sc( GS_DISARM		, SC_STRIPWEAPON	);
-	add_sc( GS_PIERCINGSHOT		, SC_BLEEDING		);
 	set_sc( GS_MADNESSCANCEL	, SC_MADNESSCANCEL	, EFST_GS_MADNESSCANCEL,
 #ifndef RENEWAL
 		SCB_BATK|SCB_ASPD );
@@ -10045,7 +10054,6 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			case SC_REUSE_LIMIT_LUXANIMA:
 				return 0;
 			case SC_PUSH_CART:
-			case SC_COMBO:
 			case SC_DANCING:
 			case SC_DEVOTION:
 			case SC_ASPDPOTION0:
@@ -10741,26 +10749,6 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 					break;
 			}
 			break;
-
-		case SC_COMBO:
-		{
-			// val1: Skill ID
-			// val2: When given, target (for autotargetting skills)
-			// val3: When set, this combo time should NOT delay attack/movement
-			// val3: If set to 2 this combo will delay ONLY attack
-			// val3: TK: Last used kick
-			// val4: TK: Combo time
-			struct unit_data *ud = unit_bl2ud(bl);
-			if ( ud && (!val3 || val3 == 2) ) {
-				tick += 300 * battle_config.combo_delay_rate/100;
-				ud->attackabletime = gettick()+tick;
-				if( !val3 )
-					unit_set_walkdelay(bl, gettick(), tick, 1);
-			}
-			val3 = 0;
-			val4 = tick;
-			break;
-		}
 		case SC_EARTHSCROLL:
 			val2 = 11-val1; // Chance to consume: 11-skill_lv%
 			break;
@@ -12530,29 +12518,6 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 					ud->state.running = unit_run(bl, sd, SC_WUGDASH);
 			}
 			break;
-		case SC_COMBO:
-			switch(sce->val1) {
-				case TK_STORMKICK:
-				skill_combo_toggle_inf(bl, TK_JUMPKICK, 0);
-				clif_skill_nodamage(bl,bl,TK_READYSTORM,1,1);
-				break;
-			case TK_DOWNKICK:
-				skill_combo_toggle_inf(bl, TK_JUMPKICK, 0);
-				clif_skill_nodamage(bl,bl,TK_READYDOWN,1,1);
-				break;
-			case TK_TURNKICK:
-				skill_combo_toggle_inf(bl, TK_JUMPKICK, 0);
-				clif_skill_nodamage(bl,bl,TK_READYTURN,1,1);
-				break;
-			case TK_COUNTER:
-				skill_combo_toggle_inf(bl, TK_JUMPKICK, 0);
-				clif_skill_nodamage(bl,bl,TK_READYCOUNTER,1,1);
-				break;
-			default: // Rest just toggle inf to enable autotarget
-				skill_combo_toggle_inf(bl,sce->val1,INF_SELF_SKILL);
-				break;
-			}
-			break;
 		case SC_RAISINGDRAGON:
 			sce->val2 = status->max_hp / 100; // Officially tested its 1%hp drain. [Jobbie]
 			break;
@@ -13093,9 +13058,6 @@ int status_change_end_(struct block_list* bl, enum sc_type type, int tid, const 
 				map_foreachinallarea(status_change_timer_sub,
 					bl->m, bl->x-range, bl->y-range, bl->x+range,bl->y+range,BL_CHAR,bl,sce,type,gettick());
 			}
-			break;
-		case SC_COMBO:
-			skill_combo_toggle_inf(bl,sce->val1,0);
 			break;
 		case SC_MARIONETTE:
 		case SC_MARIONETTE2: // Marionette target
@@ -14713,7 +14675,6 @@ void status_change_clear_buffs(struct block_list* bl, uint8 type)
 			// Stuff that cannot be removed
 			case SC_WEIGHT50:
 			case SC_WEIGHT90:
-			case SC_COMBO:
 			case SC_SMA:
 			case SC_DANCING:
 			case SC_LEADERSHIP:
