@@ -11,12 +11,10 @@ int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 {
 	switch (skill_id) {
 		case GS_FULLBUSTER:
-			ShowMessage("TRIPLE ARM CANNON\n");
-			if(!sc->data[SC_COMBO1] && !sc->data[SC_COMBO2] && !sc->data[SC_COMBO3] &&
-				!sc->data[SC_COMBO4] && !sc->data[SC_COMBO5] && !sc->data[SC_COMBO6] &&
-				!sc->data[SC_COMBO7] && !sc->data[SC_COMBO8] && !sc->data[SC_COMBO9] && !sc->data[SC_COMBO10]) {
-					ShowMessage("SC START\n");
-					sc_start(&sd->bl,&sd->bl, SC_COMBO1, 100, 17, 4000);
+			if(!is_in_combo(sc)) {
+				sc_start(&sd->bl,&sd->bl, SC_COMBO1, 100, 17, 4000);
+			}else{
+				increment_combo(sc, sd);
 			}
 			return calculate_raging_triple_blow_atk_ratio(skill_lv);
 		case GS_PIERCINGSHOT:
@@ -25,16 +23,19 @@ int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 			if (sd && sd->status.weapon == W_MACE || sd->status.weapon == W_2HMACE) {
 				is_using_mace = true;
 			}
+			int combo_counter = get_combo_counter(sc);
+			if(is_in_combo(sc)) {
+				increment_combo(sc, sd);
+			}
 			clif_specialeffect(target, EF_ENERVATION2, AREA); //groomy	
-			return calculate_chain_combo_atk_ratio(skill_lv, is_using_mace);
+			return calculate_chain_combo_atk_ratio(skill_lv, is_using_mace, combo_counter);
 		}
-		case NC_BOOSTKNUCKLE:
-			clif_specialeffect(target, EF_TINDER_BREAKER, AREA); //tinder
-			return 100;
 		case NJ_ZENYNAGE:
 			clif_specialeffect(target, EF_ENERVATION3, AREA); //ignorance
 			return 100;
-		
+		case NC_BOOSTKNUCKLE:
+			clif_specialeffect(target, EF_TINDER_BREAKER, AREA); //tinder
+			return 100;
 		case MO_FINGEROFFENSIVE:
 			return calculate_throw_spirit_sphere_atk_ratio(skill_lv);
         case MO_INVESTIGATE:
@@ -44,14 +45,17 @@ int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 		case CH_TIGERFIST:
 			clif_specialeffect(src, EF_TINDER_BREAKER, AREA); //tinder
 			return 100;
-		case MO_COMBOFINISH:
-			clif_specialeffect(src, EF_ENERVATION3, AREA); //ignorance
-			return 100;
 		case SR_WINDMILL:
 			return calculate_circular_fists_atk_ratio(skill_lv, revealed_hidden_enemy);
 		case CH_PALMSTRIKE:
+			if(is_in_combo(sc)) {
+				increment_combo(sc, sd);
+			}
 			return calculate_palm_strike_atk_ratio(skill_lv);
 		case MO_BALKYOUNG:
+			if(is_in_combo(sc)) {
+				increment_combo(sc, sd);
+			}
 			add_falling_fist_special_effects(target);
 			return calculate_falling_fist_atk_ratio(skill_lv);
 		case SR_KNUCKLEARROW:
@@ -62,6 +66,106 @@ int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 			return 0;
 			break;
 	}
+}
+
+int MonkSkillAttackRatioCalculator::get_combo_counter(status_change *sc)
+{
+	if(sc->data[SC_COMBO1]) {
+		return 1;
+	}
+	if(sc->data[SC_COMBO2]) {
+		return 2;
+	}
+	if(sc->data[SC_COMBO3]) {
+		return 3;
+	}
+	if(sc->data[SC_COMBO4]) {
+		return 4;
+	}
+	if(sc->data[SC_COMBO5]) {
+		return 5;
+	}
+	if(sc->data[SC_COMBO6]) {
+		return 6;
+	}
+	if(sc->data[SC_COMBO7]) {
+		return 7;
+	}
+	if(sc->data[SC_COMBO8]) {
+		return 8;
+	}
+	if(sc->data[SC_COMBO9]) {
+		return 9;
+	}
+	if(sc->data[SC_COMBO10]) {
+		return 10;
+	}
+	return 0;
+}
+
+void MonkSkillAttackRatioCalculator::increment_combo(status_change *sc,  map_session_data *sd)
+{
+	if(sc->data[SC_COMBO1]) {
+		sc_start(&sd->bl,&sd->bl, SC_COMBO2, 100, 17, 4000);
+		status_change_end(&sd->bl, SC_COMBO1, INVALID_TIMER);
+		return;
+	}
+	if(sc->data[SC_COMBO2]) {
+		sc_start(&sd->bl,&sd->bl, SC_COMBO3, 100, 17, 4000);
+		status_change_end(&sd->bl, SC_COMBO2, INVALID_TIMER);
+		return;
+	}
+	if(sc->data[SC_COMBO3]) {
+		sc_start(&sd->bl,&sd->bl, SC_COMBO4, 100, 17, 4000);
+		status_change_end(&sd->bl, SC_COMBO3, INVALID_TIMER);
+		return;
+	}
+	if(sc->data[SC_COMBO4]) {
+		sc_start(&sd->bl,&sd->bl, SC_COMBO5, 100, 17, 4000);
+		status_change_end(&sd->bl, SC_COMBO4, INVALID_TIMER);
+		return;
+	}
+	if(sc->data[SC_COMBO5]) {
+		sc_start(&sd->bl,&sd->bl, SC_COMBO6, 100, 17, 4000);
+		status_change_end(&sd->bl, SC_COMBO5, INVALID_TIMER);
+		return;
+	}
+	if(sc->data[SC_COMBO6]) {
+		sc_start(&sd->bl,&sd->bl, SC_COMBO7, 100, 17, 4000);
+		status_change_end(&sd->bl, SC_COMBO6, INVALID_TIMER);
+		return;
+	}
+	if(sc->data[SC_COMBO7]) {
+		sc_start(&sd->bl,&sd->bl, SC_COMBO8, 100, 17, 4000);
+		status_change_end(&sd->bl, SC_COMBO7, INVALID_TIMER);
+		return;
+	}
+	if(sc->data[SC_COMBO8]) {
+		sc_start(&sd->bl,&sd->bl, SC_COMBO9, 100, 17, 4000);
+		status_change_end(&sd->bl, SC_COMBO8, INVALID_TIMER);
+		return;
+	}
+	if(sc->data[SC_COMBO9]) {
+		sc_start(&sd->bl,&sd->bl, SC_COMBO10, 100, 17, 4000);
+		status_change_end(&sd->bl, SC_COMBO9, INVALID_TIMER);
+		return;
+	}
+	if(sc->data[SC_COMBO10]) {
+		status_change_end(&sd->bl, SC_COMBO10, INVALID_TIMER);
+		sc_start(&sd->bl,&sd->bl, SC_COMBO10, 100, 17, 4000);
+		return;
+	}
+}
+
+
+bool MonkSkillAttackRatioCalculator::is_in_combo(status_change *sc)
+{
+	if(!sc->data[SC_COMBO1] && !sc->data[SC_COMBO2] && !sc->data[SC_COMBO3] &&
+		!sc->data[SC_COMBO4] && !sc->data[SC_COMBO5] && !sc->data[SC_COMBO6] &&
+		!sc->data[SC_COMBO7] && !sc->data[SC_COMBO8] && !sc->data[SC_COMBO9] && !sc->data[SC_COMBO10]) {
+			return false;
+	}
+	return true;
 }
 
 void MonkSkillAttackRatioCalculator::add_falling_fist_special_effects(struct block_list *target)
@@ -248,7 +352,7 @@ int MonkSkillAttackRatioCalculator::calculate_raging_triple_blow_atk_ratio(int s
 }
 
 
-int MonkSkillAttackRatioCalculator::calculate_chain_combo_atk_ratio(int skill_lv, bool is_using_mace)
+int MonkSkillAttackRatioCalculator::calculate_chain_combo_atk_ratio(int skill_lv, bool is_using_mace, int combo_counter)
 {
 	int ratio = 0;
 	switch (skill_lv) {
@@ -271,7 +375,7 @@ int MonkSkillAttackRatioCalculator::calculate_chain_combo_atk_ratio(int skill_lv
 	if (is_using_mace){
 		ratio += 150;
 	}
-	return ratio;
+	return ratio + (25 * combo_counter);
 }
 
 int MonkSkillAttackRatioCalculator::calculate_guillotine_fists_atk_ratio(int skill_lv)
