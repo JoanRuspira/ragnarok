@@ -31,8 +31,11 @@ int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 			return calculate_chain_combo_atk_ratio(skill_lv, is_using_mace, combo_counter);
 		}
 		case NJ_ZENYNAGE:
+			if(is_in_combo(sc)) {
+				increment_combo(sc, sd);
+			}
 			clif_specialeffect(target, EF_ENERVATION3, AREA); //ignorance
-			return 100;
+			return calculate_gate_of_hell_atk_ratio(skill_lv);
 		case NC_BOOSTKNUCKLE:
 			clif_specialeffect(target, EF_TINDER_BREAKER, AREA); //tinder
 			return 100;
@@ -376,6 +379,29 @@ int MonkSkillAttackRatioCalculator::calculate_chain_combo_atk_ratio(int skill_lv
 		ratio += 150;
 	}
 	return ratio + (25 * combo_counter);
+}
+
+int MonkSkillAttackRatioCalculator::calculate_gate_of_hell_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 250;
+			break;
+		case 2:
+			ratio = 300;
+			break;
+		case 3:
+			ratio = 450;
+			break;
+		case 4:
+			ratio = 550;
+			break;
+		case 5:
+			ratio = 650;
+			break;
+		}
+	return ratio;
 }
 
 int MonkSkillAttackRatioCalculator::calculate_guillotine_fists_atk_ratio(int skill_lv)
