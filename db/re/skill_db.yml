@@ -7537,7 +7537,7 @@ Body:
   - Id: 264
     Name: MO_BODYRELOCATION
     Description: Snap
-    MaxLevel: 1
+    MaxLevel: 5
     TargetType: Ground
     DamageFlags:
       NoDamage: true

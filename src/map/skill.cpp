@@ -1824,14 +1824,6 @@ void skill_attack_blow(struct block_list *src, struct block_list *dsrc, struct b
 			if (skill_blown(dsrc,target,blewcount,dir,(enum e_skill_blown)(BLOWN_NO_KNOCKBACK_MAP|BLOWN_MD_KNOCKBACK_IMMUNE|BLOWN_TARGET_NO_KNOCKBACK|BLOWN_TARGET_BASILICA)) < blewcount)
 				skill_addtimerskill(src, tick + status_get_amotion(src), target->id, 0, 0, LG_OVERBRAND_PLUSATK, skill_lv, BF_WEAPON, flag|SD_ANIMATION);
 			break;
-		case SR_KNUCKLEARROW:
-			// Ignore knockback damage bonus if in WOE (player cannot be knocked in WOE)
-			// Boss & Immune Knockback stay in place and don't get bonus damage
-			// Give knockback damage bonus only hits the wall. (bugreport:9096)
-			if (skill_blown(dsrc, target, blewcount, dir_ka, (enum e_skill_blown)(BLOWN_IGNORE_NO_KNOCKBACK|BLOWN_NO_KNOCKBACK_MAP|BLOWN_MD_KNOCKBACK_IMMUNE|BLOWN_TARGET_NO_KNOCKBACK|BLOWN_TARGET_BASILICA)) < blewcount)
-				skill_addtimerskill(src, tick + 300 * ((flag&2) ? 1 : 2), target->id, 0, 0, skill_id, skill_lv, BF_WEAPON, flag|4);
-			dir_ka = -1;
-			break;
 		case RL_R_TRIP:
 			if (skill_blown(dsrc,target,blewcount,dir,BLOWN_NONE) < blewcount)
 				skill_addtimerskill(src, tick + status_get_amotion(src), target->id, 0, 0, RL_R_TRIP_PLUSATK, skill_lv, BF_WEAPON, flag|SD_ANIMATION);
@@ -2905,10 +2897,6 @@ static TIMER_FUNC(skill_timerskill){
 					break;
 				case LG_MOONSLASHER:
 					skill_attack(BF_WEAPON, src, src, target, skl->skill_id, skl->skill_lv, tick, skl->flag|SD_LEVEL);
-					break;
-				case SR_KNUCKLEARROW:
-					skill_attack(BF_WEAPON, src, src, target, skl->skill_id, skl->skill_lv, tick, skl->flag|SD_LEVEL);
-					sc_start4(src,src,SC_DEFENSIVESTANCE,100,3,20,0,0,30000);
 					break;
 				case CH_PALMSTRIKE:
 					{
@@ -4549,15 +4537,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 
 	case SR_DRAGONCOMBO:
 		skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag);
-		break;
-
-	case SR_KNUCKLEARROW:
-		// Holds current direction of bl/target to src/attacker before the src is moved to bl location
-		dir_ka = map_calc_dir(bl, src->x, src->y);
-		// Has slide effect
-		if (skill_check_unit_movepos(5, src, bl->x, bl->y, 1, 1))
-			skill_blown(src, src, 1, (dir_ka + 4) % 8, BLOWN_NONE); // Target position is actually one cell next to the target
-		skill_addtimerskill(src, tick + 300, bl->id, 0, 0, skill_id, skill_lv, BF_WEAPON, flag|SD_LEVEL|2);
 		break;
 
 	case SR_HOWLINGOFLION:
@@ -11675,6 +11654,7 @@ int skill_castend_pos2(struct block_list* src, int x, int y, uint16 skill_id, ui
 #else
 			clif_skill_poseffect(src,skill_id,skill_lv,src->x,src->y,tick);
 #endif
+			sc_start4(src,src,SC_DEFENSIVESTANCE,100,3,20,0,0,30000);
 			if (sd)
 				skill_blockpc_start (sd, MO_EXTREMITYFIST, 2000);
 		}
@@ -16044,10 +16024,6 @@ struct s_skill_condition skill_get_requirement(struct map_session_data* sd, uint
 			else if(sd->status.base_level>=70)
 				req.sp -= req.sp*3*kaina_lv/100;
 		}
-			break;
-		case MO_BODYRELOCATION:
-			if( sc && sc->data[SC_EXPLOSIONSPIRITS] )
-				req.spiritball = 0;
 			break;
 		case MO_EXTREMITYFIST:
 			if( sc ) {

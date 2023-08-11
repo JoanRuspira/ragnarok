@@ -71,8 +71,6 @@ int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 			}
 			add_falling_fist_special_effects(target);
 			return calculate_falling_fist_atk_ratio(skill_lv);
-		case SR_KNUCKLEARROW:
-			return calculate_dash_punch_atk_ratio(skill_lv);
 		case SR_DRAGONCOMBO:
 			return calculate_guillotine_fists_atk_ratio(skill_lv);
 		default:
