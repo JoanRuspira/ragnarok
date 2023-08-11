@@ -73,11 +73,13 @@ int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 			return calculate_falling_fist_atk_ratio(skill_lv);
 		case SR_DRAGONCOMBO:
 			return calculate_guillotine_fists_atk_ratio(skill_lv);
+		case MO_EXTREMITYFIST:
+			return (1000 + sstatus->sp) * skill_lv;
 		default:
 			return 0;
 			break;
 	}
-}
+}			
 
 int MonkSkillAttackRatioCalculator::get_combo_counter(status_change *sc)
 {

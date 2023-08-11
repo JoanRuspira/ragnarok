@@ -18,6 +18,8 @@ int AcolyteSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 			add_holy_light_special_effects(target);
 			return calculate_holy_light_atk_ratio(skill_lv);
 			break;
+		case AL_RUWACH:
+			return 100 * skill_lv;
 		default:
 			return 0;
 			break;

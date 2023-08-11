@@ -5949,10 +5949,6 @@ BUILDIN_FUNC(percentheal)
 	if (!script_charid2sd(4,sd))
 		return SCRIPT_CMD_SUCCESS;
 
-#ifdef RENEWAL
-	if( sd->sc.data[SC_EXTREMITYFIST2] )
-		sp = 0;
-#endif
 
 	if (sd->sc.data[SC_NORECOVER_STATE]) {
 		hp = 0;

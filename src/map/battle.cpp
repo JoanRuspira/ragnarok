@@ -2898,6 +2898,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case NJ_ZENYNAGE:
 		case NC_BOOSTKNUCKLE:
 		case GS_FULLBUSTER:
+		case MO_EXTREMITYFIST:
 			{
 				bool revealed_hidden_enemy = false;
 				if (tsc && ((tsc->option&(OPTION_HIDE|OPTION_CLOAK|OPTION_CHASEWALK|OPTION_INVISIBLE)) || tsc->data[SC_CAMOUFLAGE])) {
@@ -2965,14 +2966,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			else
 #endif
 				skillratio += 35 * skill_lv;
-			break;
-		case MO_EXTREMITYFIST:
-			skillratio += 100 * (7 + sstatus->sp / 10);			
-#ifdef RENEWAL
-			if (wd->miscflag&1)
-				skillratio *= 2; // More than 5 spirit balls active
-#endif
-			skillratio = min(500000,skillratio); //We stop at roughly 50k SP for overflow protection
 			break;
 		case CH_CHAINCRUSH:
 #ifdef RENEWAL
@@ -3513,9 +3506,9 @@ static int64 battle_calc_skill_constant_addition(struct Damage* wd, struct block
 
 	//Constant/misc additions from skills
 	switch (skill_id) {
-		case MO_EXTREMITYFIST:
-			atk = 250 + 150 * skill_lv;
-			break;
+		// case MO_EXTREMITYFIST:
+		// 	atk = 250 + 150 * skill_lv;
+		// 	break;
 #ifndef RENEWAL
 		case GS_MAGICALBULLET:
 			if (sstatus->matk_max > sstatus->matk_min)
@@ -4806,6 +4799,7 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 				switch(skill_id) {
 					case AL_HOLYLIGHT:
 					case MG_NAPALMBEAT:
+					case AL_RUWACH:
 						skillratio += AcolyteSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv);
 						break;
 					case MG_UNDEADEMBRACE:
@@ -4897,9 +4891,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 						break;
 					case MG_FROSTDIVER:
 						skillratio += 0;
-						break;
-					case AL_RUWACH:
-						skillratio += 45;
 						break;
 					case WZ_FROSTNOVA:
 						skillratio += -100 + (100 + skill_lv * 10) * 2 / 3;

@@ -2124,7 +2124,6 @@ int map_quit(struct map_session_data *sd) {
 			status_change_end(&sd->bl, SC_STRIPARMOR, INVALID_TIMER);
 			status_change_end(&sd->bl, SC_STRIPSHIELD, INVALID_TIMER);
 			status_change_end(&sd->bl, SC_STRIPHELM, INVALID_TIMER);
-			status_change_end(&sd->bl, SC_EXTREMITYFIST, INVALID_TIMER);
 			status_change_end(&sd->bl, SC_EXPLOSIONSPIRITS, INVALID_TIMER);
 			if(sd->sc.data[SC_REGENERATION] && sd->sc.data[SC_REGENERATION]->val4)
 				status_change_end(&sd->bl, SC_REGENERATION, INVALID_TIMER);

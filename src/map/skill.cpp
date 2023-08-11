@@ -1191,9 +1191,6 @@ int skill_counter_additional_effect (struct block_list* src, struct block_list *
 	}
 
 	switch(skill_id) {
-	case MO_EXTREMITYFIST:
-		sc_start(src,src,SC_EXTREMITYFIST,100,skill_lv,skill_get_time2(skill_id,skill_lv));
-		break;
 	// case CR_GRANDCROSS:
 	case NPC_GRANDDARKNESS:
 		attack_type |= BF_WEAPON;
@@ -1634,7 +1631,6 @@ int skill_is_combo(uint16 skill_id) {
 		case MO_COMBOFINISH:
 		case CH_TIGERFIST:
 		case CH_CHAINCRUSH:
-		case MO_EXTREMITYFIST:
 		case TK_TURNKICK:
 		case TK_STORMKICK:
 		case TK_DOWNKICK:
@@ -1669,11 +1665,6 @@ void skill_combo_toggle_inf(struct block_list* bl, uint16 skill_id, int inf){
 				hd->homunculus.hskill[idx].flag= flag;
 				if(sd) clif_homskillinfoblock(sd); //refresh info //@FIXME we only want to refresh one skill
 			}
-			break;
-		case MO_COMBOFINISH:
-		case CH_TIGERFIST:
-		case CH_CHAINCRUSH:
-			if (sd) clif_skillinfo(sd,MO_EXTREMITYFIST, inf);
 			break;
 		case TK_JUMPKICK:
 			if (sd) clif_skillinfo(sd,TK_JUMPKICK, inf);
@@ -3643,11 +3634,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 			skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag);
 			if (skill_id == MO_EXTREMITYFIST) {
 				status_set_sp(src, 0, 0);
-				status_change_end(src, SC_EXPLOSIONSPIRITS, INVALID_TIMER);
 				status_change_end(src, SC_BLADESTOP, INVALID_TIMER);
-#ifdef RENEWAL
-				sc_start(src,src,SC_EXTREMITYFIST2,100,skill_lv,skill_get_time(skill_id,skill_lv));
-#endif
 			} else {
 				status_set_hp(src, 1, 0);
 				status_change_end(src, SC_NEN, INVALID_TIMER);
@@ -7450,9 +7437,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 					case SC_SOULUNITY:		case SC_SOULSHADOW:		case SC_SOULFAIRY:
 					case SC_SOULFALCON:		case SC_SOULGOLEM:		case SC_USE_SKILL_SP_SPA:
 					case SC_USE_SKILL_SP_SHA:	case SC_SP_SHA:
-#ifdef RENEWAL
-					case SC_EXTREMITYFIST2:
-#endif
 					case SC_HIDING:			case SC_CLOAKING:		case SC_CHASEWALK:
 					case SC__INVISIBILITY:	case SC_UTSUSEMI:
 					case SC_MTF_ASPD2:		case SC_MTF_RANGEATK2:	case SC_MTF_MATK2:
@@ -8059,8 +8043,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 #ifdef	RENEWAL
 			sp1 = sp1 / 2;
 			sp2 = sp2 / 2;
-			if (tsc && tsc->data[SC_EXTREMITYFIST2])
-				sp1 = tstatus->sp;
 #endif
 			if (tsc && tsc->data[SC_NORECOVER_STATE])
 				sp1 = tstatus->sp;
@@ -8897,9 +8879,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 					case SC_STRANGELIGHTS:		case SC_DECORATION_OF_MUSIC:	case SC_GN_CARTBOOST:
 					case SC_RECOGNIZEDSPELL:	case SC_CHASEWALK2: case SC_ACTIVE_MONSTER_TRANSFORM:
 					case SC_SPORE_EXPLOSION:
-#ifdef RENEWAL
-					case SC_EXTREMITYFIST2:
-#endif
 					case SC_HIDING:			case SC_CLOAKING:		case SC_CHASEWALK:
 					case SC__INVISIBILITY:	case SC_UTSUSEMI:
 					case SC_MTF_ASPD2:		case SC_MTF_RANGEATK2:	case SC_MTF_MATK2:
@@ -11164,9 +11143,7 @@ TIMER_FUNC(skill_castend_id){
 		{	//End states
 			status_change_end(src, SC_EXPLOSIONSPIRITS, INVALID_TIMER);
 			status_change_end(src, SC_BLADESTOP, INVALID_TIMER);
-#ifdef RENEWAL
-			sc_start(src,src, SC_EXTREMITYFIST2, 100, ud->skill_lv, skill_get_time(ud->skill_id, ud->skill_lv));
-#endif
+
 		}
 		if( target && target->m == src->m ) { //Move character to target anyway.
 			short x, y;
@@ -14725,8 +14702,6 @@ bool skill_check_condition_castbegin(struct map_session_data* sd, uint16 skill_i
 				sd->spiritball_old = require.spiritball;
 			break;
 		case MO_EXTREMITYFIST:
-	//		if(sc && sc->data[SC_EXTREMITYFIST]) //To disable Asura during the 5 min skill block uncomment this...
-	//			return false;
 			if( sc && (sc->data[SC_BLADESTOP] || sc->data[SC_CURSEDCIRCLE_ATKER]) )
 				break;
 			if( !unit_can_move(&sd->bl) ) { //Placed here as ST_MOVE_ENABLE should not apply if rooted or on a combo. [Skotlex]
@@ -16026,12 +16001,6 @@ struct s_skill_condition skill_get_requirement(struct map_session_data* sd, uint
 			else if(sd->status.base_level>=70)
 				req.sp -= req.sp*3*kaina_lv/100;
 		}
-			break;
-		case MO_EXTREMITYFIST:
-			if( sc ) {
-				if( sc->data[SC_RAISINGDRAGON] && sd->spiritball > 5)
-					req.spiritball = sd->spiritball; // must consume all regardless of the amount required
-			}
 			break;
 		case LG_RAGEBURST:
 			req.spiritball = sd->spiritball?sd->spiritball:1;

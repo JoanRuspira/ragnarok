@@ -325,7 +325,7 @@ Body:
     Cooldown: 5000
     AfterCastActDelay: 1000
     Requires:
-      SpCost: 40
+      SpCost: 30
   - Id: 12
     Name: MG_SAFETYWALL
     Description: Safety Wall
@@ -415,7 +415,7 @@ Body:
         Reproduce: true
     CastCancel: true
     Requires:
-      SpCost: 35
+      SpCost: 30
   - Id: 801
     Name: TF_DAGGER
     Description: Dagger Mastery
@@ -823,7 +823,7 @@ Body:
   - Id: 24
     Name: AL_RUWACH
     Description: Ruwach
-    MaxLevel: 1
+    MaxLevel: 5
     Type: Magic
     TargetType: Self
     DamageFlags:
@@ -968,7 +968,7 @@ Body:
   - Id: 29
     Name: AL_INCAGI
     Description: Increase AGI
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Magic
     TargetType: Support
     CopyFlags:
@@ -998,18 +998,7 @@ Body:
       - Level: 5
         Time: 240000
     Requires:
-      HpCost: 15
-      SpCost:
-        - Level: 1
-          Amount: 21
-        - Level: 2
-          Amount: 27
-        - Level: 3
-          Amount: 33
-        - Level: 4
-          Amount: 39
-        - Level: 5
-          Amount: 45
+      SpCost: 45
   - Id: 30
     Name: AL_DECAGI
     Description: Decrease AGI
@@ -1069,7 +1058,7 @@ Body:
     CastTime: 500
     AfterCastActDelay: 2000
     Requires:
-      SpCost: 35
+      SpCost: 50
   - Id: 33
     Name: AL_ANGELUS
     Description: Angelus
@@ -1135,7 +1124,7 @@ Body:
       - Level: 5
         Time: 240000
     Requires:
-      SpCost: 64
+      SpCost: 65
   - Id: 35
     Name: AL_CURE
     Description: Cure
@@ -1832,7 +1821,7 @@ Body:
       - Level: 5
         Time: 300000
     Requires:
-      SpCost: 50
+      SpCost: 40
       Weapon:
         Mace: true
         2hMace: true
@@ -5840,7 +5829,7 @@ Body:
     Cooldown: 5000
     AfterCastActDelay: 1000
     Requires:
-      SpCost: 37
+      SpCost: 30
   - Id: 157
     Name: MG_ENERGYCOAT
     Description: Energy Coat
@@ -7689,67 +7678,21 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    DamageFlags:
-      IgnoreDefense: true
-      IgnoreFlee: true
-    Flags:
-      TargetTrap: true
     Range: -2
     Hit: Single
+    Element: Weapon
     HitCount: 1
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
     CastCancel: true
-    CastTime:
-      - Level: 1
-        Time: 4000
-      - Level: 2
-        Time: 3500
-      - Level: 3
-        Time: 3000
-      - Level: 4
-        Time: 2500
-      - Level: 5
-        Time: 2000
-    AfterCastActDelay:
-      - Level: 1
-        Time: 3000
-      - Level: 2
-        Time: 2500
-      - Level: 3
-        Time: 2000
-      - Level: 4
-        Time: 1500
-      - Level: 5
-        Time: 1000
+    Cooldown: 30000
+    CastTime: 2000
+    AfterCastActDelay: 3000
     Duration2: 300000
     Requires:
       SpCost: 1
-      Weapon:
-        Fist: true
-        Dagger: true
-        1hSword: true
-        2hSword: true
-        1hSpear: true
-        2hSpear: true
-        1hAxe: true
-        2hAxe: true
-        Mace: true
-        2hMace: true
-        Staff: true
-        Knuckle: true
-        Musical: true
-        Whip: true
-        Book: true
-        Katar: true
-        Revolver: true
-        Rifle: true
-        Gatling: true
-        Shotgun: true
-        Grenade: true
-        Huuma: true
       SpiritSphereCost: 5
   - Id: 272
     Name: MO_CHAINCOMBO
@@ -14077,6 +14020,7 @@ Body:
     MaxLevel: 5
     Type: Misc
     TargetType: Attack
+    Element: Weapon
     Range: 1
     Hit: Multi_Hit
     HitCount: -5
@@ -19061,7 +19005,7 @@ Body:
       - Level: 5
         Time: 120000
     Requires:
-      SpCost: 360
+      SpCost: 75
   - Id: 2051
     Name: AB_HIGHNESSHEAL
     Description: Highness Heal
