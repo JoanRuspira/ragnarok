@@ -1,0 +1,82 @@
+//===== Script =======================================
+// Monk Job Change
+//====================================================
+
+-	script	Monk Guildmaster#mkgld::MkGld	-1,{
+	if (Class == Job_Acolyte) {
+		mes "[Monk Guildmaster]";
+		mes "Good day! I am the Monk Guildmaster.";
+		mes "I train Acolytes that meet the requirements and allow them to become Monks.";
+		next;
+		mes "[Monk Guildmaster]";
+		mes "As a Monk you will gain new skills.";
+		mes "The requirements are:";
+		mes "- Being a first class job.";
+		mes "- Being Job level 50.";
+		mes "- Having used all your skill points.";
+		next;
+		mes "[Monk Guildmaster]";
+		mes "Do you want to become a Monk?";
+		next;
+		switch(select("Yes:No")) {
+			case 1:
+				mes "[Monk Guildmaster]";
+				mes "Good! Let me see if you pass our requirements...";
+				next;
+				if (JobLevel < 50) {
+					mes "[Monk Guildmaster]";
+					mes "Hmm... Your job level does not meet our requirements.";
+					mes "You need to be more experienced before being a Monk.";
+					close;
+				}
+				if (SkillPoint) {
+					mes "[Monk Guildmaster]";
+					mes "Looks like you have not used all your skill points.";
+					mes "Use them and I'll be able to make you a Monk.";
+					close;
+				}
+				mes "[Monk Guildmaster]";
+				mes "Okay! Looks like you pass all of them!";
+				mes "You are allowed to join the Monk guild.";
+				mes "Congratulations!";
+				jobchange Job_Monk;
+				specialeffect2 EF_JOBLVUP50;
+				close;
+			case 2:
+				mes "[Monk Guildmaster]";
+				mes "Ah! Let me know if you change your mind.";
+				mes "We are always looking for new adventurers";
+				mes "to join the guild.";
+				close;
+		}
+		
+	}
+
+	if (Class == Job_Monk) {
+		mes "[Monk Guildmaster]";
+		mes "Hi fellow Monk!";
+		mes "Are you thinking about your next job?";
+		next;
+		mes "[Monk Guildmaster]";
+		mes "You can become a Champion if you reach job level 50.";
+		next;
+		mes "[Monk Guildmaster]";
+		mes "Go find the legendary Champion in Fortu Luna.";
+		mes "I'm sure he will be able to train you.";
+		close;
+	}
+
+	if (Class == Job_Champion) {
+		mes "[Monk Guildmaster]";
+		mes "Ah! An experienced member of the guild!";
+		mes "Are you here to help train the new members?";
+		close;
+	}
+
+	mes "[Monk Guildmaster]";
+	mes "Welcome to the Monk guild. We accept applications from Acolytes that meet our requirements.";
+	close;
+}
+
+monk_in,104,165,3	duplicate(MkGld)	Monk Guildmaster#mkgld	808
+

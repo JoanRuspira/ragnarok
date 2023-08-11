@@ -2883,6 +2883,9 @@ Body:
         Reproduce: true
     Requires:
       SpCost: 23
+      ItemCost:
+        - Item: Dragonball_Blue
+          Amount: 1
       SpiritSphereCost: 1
   - Id: 875
     Name: CH_ZEN
@@ -7504,6 +7507,9 @@ Body:
     AfterCastActDelay: 1000
     Requires:
       SpCost: 17
+      ItemCost:
+        - Item: Dragonball_Yellow
+          Amount: 1
   - Id: 263
     Name: MO_TRIPLEATTACK
     Description: Raging Trifecta Blow
@@ -7632,6 +7638,9 @@ Body:
     Duration1: 60000
     Requires:
       SpCost: 200
+      ItemCost:
+        - Item: Dragonball_Yellow
+          Amount: 1
       SpiritSphereCost: 5
   - Id: 269
     Name: MO_BLADESTOP
@@ -7672,6 +7681,9 @@ Body:
     Duration1: 60000
     Requires:
       SpCost: 40
+      ItemCost:
+        - Item: Dragonball_Green
+          Amount: 1
   - Id: 271
     Name: MO_EXTREMITYFIST
     Description: Asura Strike
@@ -7693,6 +7705,9 @@ Body:
     Duration2: 300000
     Requires:
       SpCost: 1
+      ItemCost:
+        - Item: Dragonball_Blue
+          Amount: 1
       SpiritSphereCost: 5
   - Id: 272
     Name: MO_CHAINCOMBO
@@ -13801,6 +13816,9 @@ Body:
     AfterCastActDelay: 100
     Requires:
       SpCost: 15
+      ItemCost:
+        - Item: Dragonball_Red
+          Amount: 1
       Weapon:
         Knuckle: true
         Mace: true
@@ -19806,8 +19824,6 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    Flags:
-      AllowOnMado: true
     Range: 7
     Cooldown: 5000
     AfterCastActDelay: 400
@@ -19816,6 +19832,9 @@ Body:
     Element: Weapon
     Requires:
       SpCost: 40
+      ItemCost:
+        - Item: Dragonball_Red
+          Amount: 1
       SpiritSphereCost: 1
   - Id: 2257
     Name: NC_PILEBUNKER
@@ -22417,6 +22436,9 @@ Body:
     Cooldown: 5000
     Requires:
       SpCost: 23
+      ItemCost:
+        - Item: Dragonball_Green
+          Amount: 1
       Weapon:
         Knuckle: true
   - Id: 2338

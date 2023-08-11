@@ -258,11 +258,6 @@ monk_in,103,174,6	script	St. Capitolina Devout#monk:npcid	spriteid,{
 	end;
 }
 
-monk_in,104,165,3	script	Monk Guildmaster#monk:npcid	808,{
-	npctalk "I will make you a monk.";
-	end;
-}
-
 monk_in,113,156,4	script	St. Capitolina Devout#monk:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;

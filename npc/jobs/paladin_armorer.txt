@@ -17,11 +17,12 @@
 	mes "Aha!";
 	mes "A seasoned Paladin, what outfit would you like to wear?";
 	next;
-	switch(select("Paladin::Royal Guard:Shield Master:Templar")) {
+	switch(select("Paladin:Royal Guard:Templar:Shield Master")) {
 		case 1:
 			setlook LOOK_CLOTHES_COLOR,0;
         	setlook LOOK_BODY2,0;
 			specialeffect2 EF_ENTRY2;
+			mes "[Lord Knight Armorer]";
 			mes "There you go!";
 			mes "Come back if you want to change your outfit again!";
 			close;
@@ -29,23 +30,26 @@
 			setlook LOOK_CLOTHES_COLOR,0;
         	setlook LOOK_BODY2,1;
 			specialeffect2 EF_ENTRY2;
+			mes "[Lord Knight Armorer]";
 			mes "There you go!";
 			mes "Come back if you want to change your outfit again!";
 			close;
 		case 3:
 			setlook LOOK_CLOTHES_COLOR,0;
-        	setlook LOOK_BODY2,3;
+        	setlook LOOK_BODY2,2;
 			specialeffect2 EF_ENTRY2;
+			mes "[Lord Knight Armorer]";
 			mes "There you go!";
 			mes "Come back if you want to change your outfit again!";
 			close;
 		case 4:
 			setlook LOOK_CLOTHES_COLOR,0;
-        	setlook LOOK_BODY2,2;
+        	setlook LOOK_BODY2,3;
 			specialeffect2 EF_ENTRY2;
+			mes "[Lord Knight Armorer]";
 			mes "There you go!";
 			mes "Come back if you want to change your outfit again!";
-			close;
+			close;;
 	}	
 }
 

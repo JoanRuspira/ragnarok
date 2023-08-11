@@ -8047,38 +8047,6 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
-  - Id: 7445
-    AegisName: Dragonball_Green
-    Name: Green Bijou
-    Type: Etc
-    Buy: 887
-    Weight: 10
-    Flags:
-      BuyingStore: true
-  - Id: 7446
-    AegisName: Dragonball_Blue
-    Name: Blue Bijou
-    Type: Etc
-    Buy: 887
-    Weight: 10
-    Flags:
-      BuyingStore: true
-  - Id: 7447
-    AegisName: Dragonball_Red
-    Name: Red Bijou
-    Type: Etc
-    Buy: 887
-    Weight: 10
-    Flags:
-      BuyingStore: true
-  - Id: 7448
-    AegisName: Dragonball_Yellow
-    Name: Yellow Bijou
-    Type: Etc
-    Buy: 887
-    Weight: 10
-    Flags:
-      BuyingStore: true
   - Id: 7449
     AegisName: Bloody_Page
     Name: Bloody Page
@@ -9619,6 +9587,38 @@ Body:
   - Id: 7429
     AegisName: Magic_Gem_Green
     Name: Green Charm Stone
+    Type: Etc
+    Buy: 50
+    Weight: 30
+    Flags:
+      BuyingStore: true
+  - Id: 7445
+    AegisName: Dragonball_Green
+    Name: Green Bijou
+    Type: Etc
+    Buy: 50
+    Weight: 30
+    Flags:
+      BuyingStore: true
+  - Id: 7446
+    AegisName: Dragonball_Blue
+    Name: Blue Bijou
+    Type: Etc
+    Buy: 50
+    Weight: 30
+    Flags:
+      BuyingStore: true
+  - Id: 7447
+    AegisName: Dragonball_Red
+    Name: Red Bijou
+    Type: Etc
+    Buy: 50
+    Weight: 30
+    Flags:
+      BuyingStore: true
+  - Id: 7448
+    AegisName: Dragonball_Yellow
+    Name: Yellow Bijou
     Type: Etc
     Buy: 50
     Weight: 30
