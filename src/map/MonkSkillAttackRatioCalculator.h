@@ -25,6 +25,7 @@ class MonkSkillAttackRatioCalculator
 		static int calculate_dash_punch_atk_ratio(int skill_lv);
 		static int calculate_guillotine_fists_atk_ratio(int skill_lv);
 		static int calculate_gate_of_hell_atk_ratio(int skill_lv);
+		static int calculate_dragon_flame_atk_ratio(int skill_lv, int combo_counter);
 		static void add_falling_fist_special_effects(struct block_list *target);
 		static void increment_combo(status_change *sc, map_session_data *sd);	
 		

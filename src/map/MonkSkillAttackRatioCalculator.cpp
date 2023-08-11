@@ -37,17 +37,27 @@ int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 			clif_specialeffect(target, EF_ENERVATION3, AREA); //ignorance
 			return calculate_gate_of_hell_atk_ratio(skill_lv);
 		case NC_BOOSTKNUCKLE:
-			clif_specialeffect(target, EF_TINDER_BREAKER, AREA); //tinder
-			return 100;
+			{
+				int combo_counter = get_combo_counter(sc);
+				clif_specialeffect(target, EF_TINDER_BREAKER, AREA); //tinder
+				status_change_end(&sd->bl, SC_COMBO1, INVALID_TIMER);
+				status_change_end(&sd->bl, SC_COMBO2, INVALID_TIMER);
+				status_change_end(&sd->bl, SC_COMBO3, INVALID_TIMER);
+				status_change_end(&sd->bl, SC_COMBO4, INVALID_TIMER);
+				status_change_end(&sd->bl, SC_COMBO5, INVALID_TIMER);
+				status_change_end(&sd->bl, SC_COMBO6, INVALID_TIMER);
+				status_change_end(&sd->bl, SC_COMBO7, INVALID_TIMER);
+				status_change_end(&sd->bl, SC_COMBO8, INVALID_TIMER);
+				status_change_end(&sd->bl, SC_COMBO9, INVALID_TIMER);
+				status_change_end(&sd->bl, SC_COMBO10, INVALID_TIMER);
+				return calculate_dragon_flame_atk_ratio(skill_lv, combo_counter);
+			}
 		case MO_FINGEROFFENSIVE:
 			return calculate_throw_spirit_sphere_atk_ratio(skill_lv);
         case MO_INVESTIGATE:
             return calculate_occult_impact(skill_lv, status_get_def(target));
 		case MO_KI_BLAST:
 			return calculate_ki_blast_atk_ratio(skill_lv, sstatus->str);
-		case CH_TIGERFIST:
-			clif_specialeffect(src, EF_TINDER_BREAKER, AREA); //tinder
-			return 100;
 		case SR_WINDMILL:
 			return calculate_circular_fists_atk_ratio(skill_lv, revealed_hidden_enemy);
 		case CH_PALMSTRIKE:
@@ -403,6 +413,31 @@ int MonkSkillAttackRatioCalculator::calculate_gate_of_hell_atk_ratio(int skill_l
 		}
 	return ratio;
 }
+
+
+int MonkSkillAttackRatioCalculator::calculate_dragon_flame_atk_ratio(int skill_lv, int combo_counter)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 300;
+			break;
+		case 2:
+			ratio = 400;
+			break;
+		case 3:
+			ratio = 500;
+			break;
+		case 4:
+			ratio = 600;
+			break;
+		case 5:
+			ratio = 700;
+			break;
+		}
+	return ratio + (50 * combo_counter);
+}
+
 
 int MonkSkillAttackRatioCalculator::calculate_guillotine_fists_atk_ratio(int skill_lv)
 {

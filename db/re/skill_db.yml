@@ -19905,22 +19905,15 @@ Body:
     TargetType: Attack
     Flags:
       AllowOnMado: true
-    Range: 1
+    Range: 7
+    Cooldown: 5000
+    AfterCastActDelay: 400
     Hit: Multi_Hit
-    HitCount: -4
+    HitCount: -5
     Element: Weapon
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 3
-        - Level: 2
-          Amount: 6
-        - Level: 3
-          Amount: 9
-        - Level: 4
-          Amount: 12
-        - Level: 5
-          Amount: 15
+      SpCost: 40
+      SpiritSphereCost: 1
   - Id: 2257
     Name: NC_PILEBUNKER
     Description: Pile Bunker

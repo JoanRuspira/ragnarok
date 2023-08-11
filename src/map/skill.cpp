@@ -3330,7 +3330,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case MER_CRASH:
 	case SM_BASH:
 	case MO_TRIPLEATTACK:
-	case NC_BOOSTKNUCKLE:
 	case MO_BALKYOUNG:
 	case LK_HEADCRUSH:
 	case LK_JOINTBEAT:
@@ -3462,6 +3461,20 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 				break;
 			}
 			if(sc && (MonkSkillAttackRatioCalculator::get_combo_counter(sc) < 3)){
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				break;
+			}
+			skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag);
+		}
+		break;
+	case NC_BOOSTKNUCKLE:
+		{
+			struct status_change *sc = status_get_sc(src);
+			if(sc && !MonkSkillAttackRatioCalculator::is_in_combo(sc)){
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				break;
+			}
+			if(sc && (MonkSkillAttackRatioCalculator::get_combo_counter(sc) < 5)){
 				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
 				break;
 			}
