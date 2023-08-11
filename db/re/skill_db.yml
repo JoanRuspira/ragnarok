@@ -7545,7 +7545,7 @@ Body:
     Hit: Single
     HitCount: 1
     Requires:
-      SpCost: 14
+      SpCost: 20
       SpiritSphereCost: 1
   - Id: 265
     Name: MO_DODGE
@@ -7637,18 +7637,10 @@ Body:
       NoDamage: true
     Hit: Single
     HitCount: 1
+    Cooldown: 75000
+    AfterCastActDelay: 3000
     CastTime: 5000
-    Duration1:
-      - Level: 1
-        Time: 30000
-      - Level: 2
-        Time: 60000
-      - Level: 3
-        Time: 90000
-      - Level: 4
-        Time: 120000
-      - Level: 5
-        Time: 150000
+    Duration1: 60000
     Requires:
       SpCost: 200
       SpiritSphereCost: 5
@@ -7662,53 +7654,20 @@ Body:
       NoDamage: true
     Hit: Single
     HitCount: 1
-    Duration1:
-      - Level: 1
-        Time: 500
-      - Level: 2
-        Time: 700
-      - Level: 3
-        Time: 900
-      - Level: 4
-        Time: 1100
-      - Level: 5
-        Time: 1300
+    Duration1: 1300
     Duration2:
       - Level: 1
-        Time: 20000
+        Time: 2000
       - Level: 2
-        Time: 30000
+        Time: 4000
       - Level: 3
-        Time: 40000
+        Time: 6000
       - Level: 4
-        Time: 50000
+        Time: 8000
       - Level: 5
-        Time: 60000
+        Time: 10000
     Requires:
       SpCost: 10
-      Weapon:
-        Fist: true
-        Dagger: true
-        1hSword: true
-        2hSword: true
-        1hSpear: true
-        2hSpear: true
-        1hAxe: true
-        2hAxe: true
-        Mace: true
-        2hMace: true
-        Staff: true
-        Knuckle: true
-        Musical: true
-        Whip: true
-        Book: true
-        Katar: true
-        Revolver: true
-        Rifle: true
-        Gatling: true
-        Shotgun: true
-        Grenade: true
-        Huuma: true
       SpiritSphereCost: 1
   - Id: 270
     Name: MO_EXPLOSIONSPIRITS

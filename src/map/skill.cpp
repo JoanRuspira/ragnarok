@@ -3400,7 +3400,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case GS_RAPIDSHOWER:
 	case GS_DUST:
 	case GS_DISARM:				// Added disarm. [Reddozen]
-	case GS_FULLBUSTER:
 	case NJ_SYURIKEN:
 	case NJ_KUNAI:
 	case ASC_BREAKER:
@@ -3440,6 +3439,10 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case BS_HAMMERFALL:
 	case RL_AM_BLAST:
 		skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag);
+		break;
+	case GS_FULLBUSTER:
+		skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag);
+		status_change_end(src, SC_BLADESTOP, INVALID_TIMER);
 		break;
 	case NJ_ZENYNAGE:
 		{
@@ -3622,10 +3625,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 		status_change_end(src, SC_BLADESTOP, INVALID_TIMER);
 		break;
 
-	case MO_CHAINCOMBO:
-		skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag);
-		status_change_end(src, SC_BLADESTOP, INVALID_TIMER);
-		break;
+
 
 #ifndef RENEWAL
 	case NJ_ISSEN:
@@ -4001,6 +4001,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case CH_PALMSTRIKE: //	Palm Strike takes effect 1sec after casting. [Skotlex]
 		clif_damage(src,bl,tick,status_get_amotion(src),0,-1,1,DMG_ENDURE,0,false); //Display an absorbed damage attack.
 		skill_addtimerskill(src, tick + (100+status_get_amotion(src)), bl->id, 0, 0, skill_id, skill_lv, BF_WEAPON, flag);
+		status_change_end(src, SC_BLADESTOP, INVALID_TIMER);
 		break;
 
 	case PR_TURNUNDEAD:
@@ -11655,6 +11656,7 @@ int skill_castend_pos2(struct block_list* src, int x, int y, uint16 skill_id, ui
 			clif_skill_poseffect(src,skill_id,skill_lv,src->x,src->y,tick);
 #endif
 			sc_start4(src,src,SC_DEFENSIVESTANCE,100,3,20,0,0,30000);
+			status_change_end(src, SC_BLADESTOP, INVALID_TIMER);
 			if (sd)
 				skill_blockpc_start (sd, MO_EXTREMITYFIST, 2000);
 		}
@@ -16027,9 +16029,7 @@ struct s_skill_condition skill_get_requirement(struct map_session_data* sd, uint
 			break;
 		case MO_EXTREMITYFIST:
 			if( sc ) {
-				if( sc->data[SC_BLADESTOP] )
-					req.spiritball--;
-				else if( sc->data[SC_RAISINGDRAGON] && sd->spiritball > 5)
+				if( sc->data[SC_RAISINGDRAGON] && sd->spiritball > 5)
 					req.spiritball = sd->spiritball; // must consume all regardless of the amount required
 			}
 			break;

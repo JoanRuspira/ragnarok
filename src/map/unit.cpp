@@ -1641,12 +1641,6 @@ int unit_skilluse_id2(struct block_list *src, int target_id, uint16 skill_id, ui
 			return 0;
 
 		switch(skill_id) { // Check for skills that auto-select target
-			case MO_CHAINCOMBO:
-				if (sc && sc->data[SC_BLADESTOP]) {
-					if ((target=map_id2bl(sc->data[SC_BLADESTOP]->val4)) == NULL)
-						return 0;
-				}
-				break;
 			case GC_WEAPONCRUSH:
 				if (sc && sc->data[SC_WEAPONBLOCK_ON]) {
 					if ((target = map_id2bl(sc->data[SC_WEAPONBLOCK_ON]->val1)) == nullptr)

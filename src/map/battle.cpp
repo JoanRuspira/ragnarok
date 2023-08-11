@@ -1610,8 +1610,10 @@ int64 battle_calc_damage(struct block_list *src,struct block_list *bl,struct Dam
 
 #ifdef RENEWAL
 		// Renewal: steel body reduces all incoming damage to 1/10 [helvetica]
-		if( sc->data[SC_STEELBODY] )
-			damage = damage > 10 ? damage / 10 : 1;
+		if( sc->data[SC_STEELBODY] ){
+			int reduction_percentage_to = 50 - (pc_checkskill(sd, MO_STEELBODY)*6);
+			damage = damage > reduction_percentage_to ? damage / reduction_percentage_to : 1;
+		}
 #endif
 
 		if (!damage)
@@ -6058,18 +6060,13 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 	}
 
 	if( tsc && tsc->data[SC_BLADESTOP_WAIT] &&
-#ifndef RENEWAL
-		status_get_class_(src) != CLASS_BOSS &&
-#endif
 		(src->type == BL_PC || tsd == NULL || distance_bl(src, target) <= (tsd->status.weapon == W_FIST ? 1 : 2)) )
 	{
 		uint16 skill_lv = tsc->data[SC_BLADESTOP_WAIT]->val1;
 		int duration = skill_get_time2(MO_BLADESTOP,skill_lv);
+		// if (status_get_class_(src) == CLASS_BOSS)
+		// 	duration = 2000; // Only lasts 2 seconds for Boss monsters
 
-#ifdef RENEWAL
-			if (status_get_class_(src) == CLASS_BOSS)
-				duration = 2000; // Only lasts 2 seconds for Boss monsters
-#endif
 		status_change_end(target, SC_BLADESTOP_WAIT, INVALID_TIMER);
 		if(sc_start4(src,src, SC_BLADESTOP, 100, sd?pc_checkskill(sd, MO_BLADESTOP):5, 0, 0, target->id, duration))
 		{	//Target locked.

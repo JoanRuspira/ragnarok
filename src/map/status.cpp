@@ -1705,7 +1705,6 @@ void initChangeTables(void)
 
 	/* StatusChangeState (SCS_) NOCAST (skills) */
 	StatusChangeStateTable[SC_SILENCE]				|= SCS_NOCAST;
-	StatusChangeStateTable[SC_STEELBODY]			|= SCS_NOCAST;
 	StatusChangeStateTable[SC_BERSERK]				|= SCS_NOCAST;
 #ifdef RENEWAL
 	StatusChangeStateTable[SC_BASILICA_CELL]		|= SCS_NOCAST;
@@ -2421,9 +2420,10 @@ bool status_check_skilluse(struct block_list *src, struct block_list *target, ui
 		if (sc->data[SC_BLADESTOP]) {
 			switch (sc->data[SC_BLADESTOP]->val1) {
 				case 5: if (skill_id == MO_EXTREMITYFIST) break;
-				case 4: if (skill_id == MO_CHAINCOMBO) break;
+				case 4: if (skill_id == CH_PALMSTRIKE) break;
 				case 3: if (skill_id == MO_INVESTIGATE) break;
-				case 2: if (skill_id == MO_FINGEROFFENSIVE) break;
+				case 2: if (skill_id == GS_FULLBUSTER) break;
+				case 1: if (skill_id == MO_BODYRELOCATION) break;
 				default: return false;
 			}
 		}
@@ -6983,10 +6983,6 @@ static defType status_calc_def(struct block_list *bl, struct status_change *sc, 
 		return 100;
 	if(sc->data[SC_KEEPING])
 		return 90;
-#ifndef RENEWAL /// Steel Body does not provide 90 DEF in [RENEWAL]
-	if(sc->data[SC_STEELBODY])
-		return 90;
-#endif
 	if (sc->data[SC_NYANGGRASS]) {
 		if (bl->type == BL_PC)
 			return 0;
@@ -7156,10 +7152,6 @@ static defType status_calc_mdef(struct block_list *bl, struct status_change *sc,
 	if(sc->data[SC_BARRIER])
 		return 100;
 
-#ifndef RENEWAL /// Steel Body does not provide 90 MDEF in [RENEWAL]
-	if(sc->data[SC_STEELBODY])
-		return 90;
-#endif
 	if (sc->data[SC_NYANGGRASS]) {
 		if (bl->type == BL_PC)
 			return 0;
