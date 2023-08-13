@@ -9624,3 +9624,11 @@ Body:
     Weight: 30
     Flags:
       BuyingStore: true
+  - Id: 12333
+    AegisName: Ansila
+    Name: Ancilla
+    Type: Etc
+    Buy: 50
+    Weight: 10
+    Flags:
+      BuyingStore: true

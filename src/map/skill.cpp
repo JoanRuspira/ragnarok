@@ -587,13 +587,10 @@ int skill_calc_heal(struct block_list *src, struct block_list *target, uint16 sk
 		hp_bonus += skill;
 
 	if (sc && sc->count) {
-		if (sc->data[SC_OFFERTORIUM] && ( skill_id == AL_HEAL))
-			hp_bonus += sc->data[SC_OFFERTORIUM]->val2;
 		if (sc->data[SC_GLASTHEIM_HEAL] && skill_id != NPC_EVILLAND)
 			hp_bonus += sc->data[SC_GLASTHEIM_HEAL]->val1;
 		if (sc->data[SC_ASSUMPTIO])
 			hp_bonus += sc->data[SC_ASSUMPTIO]->val1 * 2;
-
 	}
 
 	if (tsc && tsc->count) {
@@ -7046,9 +7043,13 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		{
 			int healing, matk = 0;
 			struct status_data *status;
+			struct status_change *sc;
 			status = status_get_status_data(&sd->bl);
 			matk = rand()%(status->matk_max-status->matk_min + 1) + status->matk_min;
 			healing = (200 * skill_lv) + (status_get_lv(src) * 3) + (status_get_int(src) * 3) + (matk * 3);
+			sc = status_get_sc(src);
+			if (sc && sc->data[SC_OFFERTORIUM])
+				healing = healing*sc->data[SC_OFFERTORIUM]->val2;
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 			clif_skill_nodamage(NULL,bl,AL_HEAL,healing,1);
 			status_heal(bl,healing,0,0);
@@ -7095,9 +7096,13 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		{
 			int healing, matk = 0;
 			struct status_data *status;
+			struct status_change *sc;
 			status = status_get_status_data(&sd->bl);
 			matk = rand()%(status->matk_max-status->matk_min + 1) + status->matk_min;
 			healing = (400 * skill_lv) + (status_get_lv(src) * 4) + (status_get_int(src) * 4) + (matk * 4);
+			sc = status_get_sc(src);
+			if (sc && sc->data[SC_OFFERTORIUM])
+				healing = healing*sc->data[SC_OFFERTORIUM]->val2;
 			clif_specialeffect(bl, EF_MOCHI, AREA);
 			clif_skill_nodamage(NULL,bl,AL_HEAL,healing,1);
 			status_heal(bl,healing,0,0);
@@ -7136,9 +7141,13 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			if( sd && tstatus ) {
 				int healing, matk = 0;
 				struct status_data *status;
+				struct status_change *sc;
 				status = status_get_status_data(&sd->bl);
 				matk = rand()%(status->matk_max-status->matk_min + 1) + status->matk_min;
 				healing = (75 * skill_lv) + (status_get_lv(src) * 3) + (status_get_int(src) * 3) + (matk * 3);
+				sc = status_get_sc(src);
+				if (sc && sc->data[SC_OFFERTORIUM])
+					healing = healing*sc->data[SC_OFFERTORIUM]->val2;
 				clif_skill_nodamage(src, bl, skill_id, healing, 1);
 				status_heal(bl, healing, 0, 0);
 			}
@@ -15839,7 +15848,7 @@ struct s_skill_condition skill_get_requirement(struct map_session_data* sd, uint
 			req.sp += req.sp + sc->data[SC__LAZINESS]->val1 * 10;
 		if( sc->data[SC_RECOGNIZEDSPELL] )
 			req.sp += req.sp / 4;
-		if( sc->data[SC_OFFERTORIUM])
+		if( sc->data[SC_OFFERTORIUM]  && ( skill_id == AL_HEAL2 || skill_id == AB_CHEAL || skill_id == AB_HIGHNESSHEAL))
 			req.sp += req.sp * sc->data[SC_OFFERTORIUM]->val3 / 100;
 		if( sc->data[SC_TELEKINESIS_INTENSE] && skill_get_ele(skill_id, skill_lv) == ELE_GHOST)
 			req.sp -= req.sp * sc->data[SC_TELEKINESIS_INTENSE]->val2 / 100;

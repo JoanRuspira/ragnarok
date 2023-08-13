@@ -9697,9 +9697,6 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 		status_change_end(bl, SC_SOULFALCON, INVALID_TIMER);
 		status_change_end(bl, SC_SOULFAIRY, INVALID_TIMER);
 		break;
-	case SC_MAGNIFICAT:
-		status_change_end(bl,SC_OFFERTORIUM,INVALID_TIMER);
-		break;
 	case SC_OFFERTORIUM:
 		status_change_end(bl, SC_MAGNIFICAT, INVALID_TIMER);
 		status_change_end(bl, SC_BLIND, INVALID_TIMER);
@@ -11637,7 +11634,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			val3 = 40 * val1; // magic dmg bonus
 			break;
 		case SC_OFFERTORIUM:
-			val2 = 30 * val1; // heal power bonus
+			val2 = 1 + val1*0.3; // heal power bonus
 			val3 = 100 + 20 * val1; // sp cost inc
 			break;
 		case SC_FRIGG_SONG:

@@ -83,7 +83,8 @@ int MageSkillAtkRatioCalculator::calculate_soul_strike_attack(int skill_lv)
 
 void MageSkillAtkRatioCalculator::add_undead_embrace_special_effects(struct block_list *target)
 {
-	clif_specialeffect(target, EF_DEVIL, AREA);
-	clif_specialeffect(target, EF_BLACKDEVIL, AREA);
+	// clif_specialeffect(target, EF_DEVIL, AREA);
+	// clif_specialeffect(target, EF_BLACKDEVIL, AREA);
+	clif_specialeffect(target, 1238, AREA);
 	clif_specialeffect(target, EF_KO_ZENKAI_WIND, AREA);
 }
