@@ -620,6 +620,16 @@ int skill_calc_heal(struct block_list *src, struct block_list *target, uint16 sk
 				return healing;
 			}
 			break;
+		case AB_EPICLESIS:
+			{
+				int healing, matk = 0;
+				struct status_data *status;
+				status = status_get_status_data(&sd->bl);
+				matk = rand()%(status->matk_max-status->matk_min + 1) + status->matk_min;
+				healing = (400 * skill_lv) + (status_get_lv(src) * 4) + (status_get_int(src) * 4) + (matk * 4);
+				return healing;
+			}
+			break;	
 		case NPC_EVILLAND:
 			break;
 		case HAMI_HEAL:
@@ -11874,7 +11884,7 @@ int skill_castend_pos2(struct block_list* src, int x, int y, uint16 skill_id, ui
 			map_foreachinallarea(skill_area_sub, src->m, x - i, y - i, x + i, y + i, BL_CHAR, src, ALL_RESURRECTION, 1, tick, flag|BCT_NOENEMY|1,skill_castend_nodamage_id);
 		}
 		break;
-
+		
 	case WL_COMET:
 	case NPC_COMET:
 		if( sc ) {
@@ -13456,12 +13466,7 @@ int skill_unit_onplace_timer(struct skill_unit *unit, struct block_list *bl, t_t
 			} else {
 				int heal = skill_calc_heal(ss,bl,sg->skill_id,sg->skill_lv,true);
 				struct mob_data *md = BL_CAST(BL_MOB, bl);
-
-#ifdef RENEWAL
 				if (md && md->mob_id == MOBID_EMPERIUM)
-					break;
-#endif
-				if (md && status_get_class_(bl) == CLASS_BATTLEFIELD)
 					break;
 				if( tstatus->hp >= tstatus->max_hp )
 					break;
@@ -13753,39 +13758,19 @@ int skill_unit_onplace_timer(struct skill_unit *unit, struct block_list *bl, t_t
 
 		case UNT_EPICLESIS:
 			++sg->val1; // Increment outside of the check to get the exact interval of the skill unit
-			if( bl->type == BL_PC && !battle_check_undead(tstatus->race, tstatus->def_ele) && tstatus->race != RC_DEMON ) {
+			if( bl->type == BL_PC ) {
 				if (sg->val1 % 3 == 0) { // Recover players every 3 seconds
-					int hp, sp;
-
-					switch( sg->skill_lv ) {
-						case 1: case 2: hp = 3; sp = 2; break;
-						case 3: case 4: hp = 4; sp = 3; break;
-						case 5: default: hp = 5; sp = 4; break;
-					}
-					hp = tstatus->max_hp * hp / 100;
-					sp = tstatus->max_sp * sp / 100;
-					if (tstatus->hp < tstatus->max_hp)
-						clif_skill_nodamage(&unit->bl, bl, AL_HEAL, hp, 1);
-					if (tstatus->sp < tstatus->max_sp) {}
-						clif_skill_nodamage(&unit->bl, bl, MG_SRECOVERY, sp, 1);
-					if (tsc && tsc->data[SC_AKAITSUKI] && hp)
-						hp = ~hp + 1;
-					status_heal(bl, hp, sp, 3);
-				}
-				if (sg->val1 % 5 == 0) { // Reveal hidden players every 5 seconds
-					// Doesn't remove Invisibility or Chase Walk.
+					int heal = skill_calc_heal(ss,bl,sg->skill_id,sg->skill_lv,true);
+					clif_skill_nodamage(&unit->bl, bl, AL_HEAL, heal, 1);
+					status_heal(bl, heal, 0, 0);
 					status_change_end(bl,SC_HIDING,INVALID_TIMER);
 					status_change_end(bl,SC_CLOAKING,INVALID_TIMER);
 					status_change_end(bl,SC_CAMOUFLAGE,INVALID_TIMER);
-					status_change_end(bl,SC_NEWMOON,INVALID_TIMER);
-					if (tsc && tsc->data[SC__SHADOWFORM] && rnd() % 100 < 100 - tsc->data[SC__SHADOWFORM]->val1 * 10) // [100 - (Skill Level x 10)] %
-						status_change_end(bl, SC__SHADOWFORM, INVALID_TIMER);
+					status_change_end(bl,SC__INVISIBILITY,INVALID_TIMER);
+					status_change_end(bl,SC__SHADOWFORM,INVALID_TIMER);
 				}
 				sc_start(ss, bl, type, 100, sg->skill_lv, sg->interval + 100);
 			}
-			/* Enable this if kRO fix the current skill. Currently no damage on undead and demon monster. [Jobbie]
-			else if( battle_check_target(ss, bl, BCT_ENEMY) > 0 && battle_check_undead(tstatus->race, tstatus->def_ele) )
-				skill_castend_damage_id(&src->bl, bl, sg->skill_id, sg->skill_lv, 0, 0);*/
 			break;
 
 		case UNT_DIMENSIONDOOR:

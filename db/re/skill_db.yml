@@ -18789,17 +18789,7 @@ Body:
     SplashArea: 2
     ActiveInstance: 1
     CastCancel: true
-    CastTime:
-      - Level: 1
-        Time: 2000
-      - Level: 2
-        Time: 2500
-      - Level: 3
-        Time: 3000
-      - Level: 4
-        Time: 3500
-      - Level: 5
-        Time: 4000
+    CastTime: 7000
     AfterCastActDelay: 2000
     Duration1:
       - Level: 1
@@ -18814,9 +18804,11 @@ Body:
         Time: 30000
     Cooldown: 60000
     Requires:
-      SpCost: 300
+      SpCost: 250
       ItemCost:
         - Item: Holy_Water
+          Amount: 1
+        - Item: Ansila
           Amount: 1
     Unit:
       Id: Epiclesis

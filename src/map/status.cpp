@@ -830,7 +830,7 @@ void initChangeTables(void)
 	set_sc( AB_ADORAMUS		, SC_ADORAMUS		, EFST_ADORAMUS		, SCB_AGI|SCB_SPEED );
 	add_sc( AB_CLEMENTIA		, SC_BLESSING		);
 	add_sc( AB_CANTO		, SC_INCREASEAGI	);
-	set_sc( AB_EPICLESIS		, SC_EPICLESIS		, EFST_EPICLESIS		, SCB_MAXHP );
+	set_sc( AB_EPICLESIS		, SC_EPICLESIS		, EFST_EPICLESIS, SCB_NONE);
 	add_sc( AB_PRAEFATIO		, SC_KYRIE		);
 	set_sc_with_vfx( AB_ORATIO	, SC_ORATIO		, EFST_ORATIO		, SCB_NONE );
 	set_sc( AB_LAUDAAGNUS		, SC_LAUDAAGNUS		, EFST_LAUDAAGNUS		, SCB_MAXHP );
@@ -3375,8 +3375,6 @@ static int status_get_hpbonus(struct block_list *bl, enum e_status_bonus type) {
 				bonus += sc->data[SC_DELUGE]->val2;
 			if(sc->data[SC_MERC_HPUP])
 				bonus += sc->data[SC_MERC_HPUP]->val2;
-			if(sc->data[SC_EPICLESIS])
-				bonus += sc->data[SC_EPICLESIS]->val2;
 			if(sc->data[SC_FRIGG_SONG])
 				bonus += sc->data[SC_FRIGG_SONG]->val2;
 			if(sc->data[SC_LERADSDEW])
@@ -11665,9 +11663,6 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			break;
 		}
 #endif
-		case SC_EPICLESIS:
-			val2 = 5 * val1; //HP rate bonus
-			break;
 		case SC_ILLUSIONDOPING:
 			val2 = 50; // -Hit
 			break;
