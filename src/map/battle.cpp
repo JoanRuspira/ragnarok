@@ -4817,6 +4817,7 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case PR_SPIRITUSANCTI:
 					case PR_MAGNUS:
 					case AB_DUPLELIGHT_MAGIC:
+					case AB_ADORAMUS:
 						skillratio += PriestSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
 					case JG_TAROTCARD:
@@ -4979,10 +4980,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 						break;
 #else
 #endif
-					case AB_ADORAMUS:
-						skillratio += 230 + 70 * skill_lv;
-						RE_LVL_DMOD(100);
-						break;
 					case WL_FROSTMISTY:
 						skillratio += -100 + 200 + 100 * skill_lv;
 						RE_LVL_DMOD(100);

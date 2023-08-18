@@ -828,7 +828,6 @@ void initChangeTables(void)
 	set_sc_with_vfx( GC_DARKCROW	, SC_DARKCROW		, EFST_DARKCROW		, SCB_NONE );
 
 	/* Arch Bishop */
-	set_sc( AB_ADORAMUS		, SC_ADORAMUS		, EFST_ADORAMUS		, SCB_AGI|SCB_SPEED );
 	add_sc( AB_CLEMENTIA		, SC_BLESSING		);
 	add_sc( AB_CANTO		, SC_INCREASEAGI	);
 	set_sc( AB_EPICLESIS		, SC_EPICLESIS		, EFST_EPICLESIS, SCB_NONE);

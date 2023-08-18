@@ -32,6 +32,8 @@ int PriestSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 			add_duple_liight_magic_special_effects(target);
 			return calculate_duple_light_magic_atk_ratio(skill_lv);
 			break;
+		case AB_ADORAMUS:
+			return calculate_sententia_atk_ratio(skill_lv);;
 		default:
 			return 0;
 			break;
@@ -64,6 +66,29 @@ void PriestSkillAttackRatioCalculator::add_duple_liight_melee_special_effects(st
 void PriestSkillAttackRatioCalculator::add_duple_liight_magic_special_effects(struct block_list *target)
 {
     clif_specialeffect(target, EF_MAGICROD, AREA);
+}
+
+int PriestSkillAttackRatioCalculator::calculate_sententia_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 250;
+			break;
+		case 2:
+			ratio = 350;
+			break;
+		case 3:
+			ratio = 450;
+			break;
+		case 4:
+			ratio = 550;
+			break;
+		case 5:
+			ratio = 650;
+			break;
+		}
+	return ratio;
 }
 
 int PriestSkillAttackRatioCalculator::calculate_duple_light_melee_atk_ratio(int skill_lv)

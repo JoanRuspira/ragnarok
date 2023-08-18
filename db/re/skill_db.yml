@@ -2923,6 +2923,9 @@ Body:
     Cooldown: 120000
     Requires:
       SpCost: 250
+      ItemCost:
+        - Item: Blue_Gemstone
+          Amount: 2
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -3322,7 +3325,7 @@ Body:
       - Level: 5
         Time: 90000
     Requires:
-      SpCost: 8
+      SpCost: 60
   - Id: 68
     Name: PR_ASPERSIO
     Description: Aspersio
@@ -3532,7 +3535,10 @@ Body:
       - Level: 5
         Time: 90000
     Requires:
-      SpCost: 40
+      SpCost: 60
+      ItemCost:
+        - Item: Yellow_Gemstone
+          Amount: 1
   - Id: 75
     Name: PR_GLORIA
     Description: Gloria
@@ -18584,7 +18590,7 @@ Body:
       Splash: true
     Range: 11
     Hit: Multi_Hit
-    HitCount: -10
+    HitCount: -3
     Element: Holy
     SplashArea:
       - Level: 1
@@ -18592,92 +18598,22 @@ Body:
       - Level: 2
         Area: 1
       - Level: 3
-        Area: 1
+        Area: 2
       - Level: 4
-        Area: 1
+        Area: 3
       - Level: 5
-        Area: 1
-      - Level: 6
-        Area: 1
-      - Level: 7
-        Area: 2
-      - Level: 8
-        Area: 2
-      - Level: 9
-        Area: 2
-      - Level: 10
-        Area: 2
+        Area: 3
     CopyFlags:
       Skill:
         Reproduce: true
     CastCancel: true
-    CastTime: 2000
-    AfterCastActDelay: 500
-    Duration1:
-      - Level: 1
-        Time: 8000
-      - Level: 2
-        Time: 9000
-      - Level: 3
-        Time: 10000
-      - Level: 4
-        Time: 11000
-      - Level: 5
-        Time: 12000
-      - Level: 6
-        Time: 13000
-      - Level: 7
-        Time: 14000
-      - Level: 8
-        Time: 15000
-      - Level: 9
-        Time: 16000
-      - Level: 10
-        Time: 17000
-    Duration2:
-      - Level: 1
-        Time: 15000
-      - Level: 2
-        Time: 20000
-      - Level: 3
-        Time: 25000
-      - Level: 4
-        Time: 30000
-      - Level: 5
-        Time: 35000
-      - Level: 6
-        Time: 40000
-      - Level: 7
-        Time: 45000
-      - Level: 8
-        Time: 50000
-      - Level: 9
-        Time: 55000
-      - Level: 10
-        Time: 60000
-    Cooldown: 2000
+    CastTime: 3500
+    AfterCastActDelay: 1000
+    Duration1: 12000
+    Duration2: 35000
+    Cooldown: 7000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 22
-        - Level: 2
-          Amount: 28
-        - Level: 3
-          Amount: 34
-        - Level: 4
-          Amount: 40
-        - Level: 5
-          Amount: 46
-        - Level: 6
-          Amount: 52
-        - Level: 7
-          Amount: 58
-        - Level: 8
-          Amount: 64
-        - Level: 9
-          Amount: 70
-        - Level: 10
-          Amount: 76
+      SpCost: 80
   - Id: 2041
     Name: AB_CLEMENTIA
     Description: Crementia

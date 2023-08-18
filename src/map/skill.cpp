@@ -14315,11 +14315,6 @@ int skill_check_condition_char_sub (struct block_list *bl, va_list ap)
 					p_sd[(*c)++]=tsd->bl.id;
 				return 1;
 			}
-			case AB_ADORAMUS:
-			// Adoramus does not consume Blue Gemstone when there is at least 1 Priest class next to the caster
-				if( (tsd->class_&MAPID_UPPERMASK) == MAPID_PRIEST )
-					p_sd[(*c)++] = tsd->bl.id;
-				return 1;
 			default: //Warning: Assuming Ensemble Dance/Songs for code speed. [Skotlex]
 				{
 					uint16 skill_lv;
@@ -14375,12 +14370,6 @@ int skill_check_pc_partner(struct map_session_data *sd, uint16 skill_id, uint16 
 						status_charge(&tsd->bl, 0, (skill_id == PR_BENEDICTIO) ? 10 : skill_get_sp(skill_id, *skill_lv) / 2);
 				}
 				return c;
-			case AB_ADORAMUS:
-				if( c > 0 && (tsd = map_id2sd(p_sd[0])) != NULL ) {
-					i = 2 * (*skill_lv);
-					status_charge(&tsd->bl, 0, i);
-				}
-				break;
 			default:
 				if( is_chorus )
 					break;//Chorus skills are not to be parsed as ensembles
@@ -14404,8 +14393,8 @@ int skill_check_pc_partner(struct map_session_data *sd, uint16 skill_id, uint16 
 	memset (p_sd, 0, sizeof(p_sd));
 	i = map_foreachinallrange(skill_check_condition_char_sub, &sd->bl, range, BL_PC, &sd->bl, &c, &p_sd, skill_id);
 
-	if ( skill_id != PR_BENEDICTIO && skill_id != AB_ADORAMUS) //Apply the average lv to encore skills.
-		*skill_lv = (i+(*skill_lv))/(c+1); //I know c should be one, but this shows how it could be used for the average of n partners.
+	
+	*skill_lv = (i+(*skill_lv))/(c+1); //I know c should be one, but this shows how it could be used for the average of n partners.
 	return c;
 }
 
@@ -14945,14 +14934,7 @@ bool skill_check_condition_castbegin(struct map_session_data* sd, uint16 skill_i
 				}
 			}
 			break;
-		case AB_ADORAMUS: // bugreport:7647 mistress card DOES remove requirements for gemstones from Adoramus -helvetica
-			if( skill_check_pc_partner(sd,skill_id,&skill_lv,1,0) <= 0 && require.itemid[0]
-				&& sd->special_state.no_gemstone == 0
-				&& ((i = pc_search_inventory(sd,require.itemid[0])) < 0 || sd->inventory.u.items_inventory[i].amount < require.amount[0]) ) {
-				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-				return false;
-			}
-			break;
+
 		case WL_SUMMONFB:
 		case WL_SUMMONBL:
 		case WL_SUMMONWB:
@@ -15933,10 +15915,6 @@ struct s_skill_condition skill_get_requirement(struct map_session_data* sd, uint
 							break;
 						case AM_CALLHOMUN:
 							if (sd->status.hom_id) //Don't delete items when hom is already out.
-								continue;
-							break;
-						case AB_ADORAMUS:
-							if( itemdb_group_item_exists(IG_GEMSTONE, skill->require.itemid[i]) && (sd->special_state.no_gemstone == 2 || skill_check_pc_partner(sd,skill_id,&skill_lv, 1, 2)) )
 								continue;
 							break;
 					}
