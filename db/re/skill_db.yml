@@ -2901,7 +2901,7 @@ Body:
     DamageFlags:
       NoDamage: true
     Hit: Single
-    Coolldown: 60000
+    Cooldown: 60000
     AfterCastActDelay: 5000
     Duration1: 120000
     Requires:
@@ -2909,6 +2909,20 @@ Body:
       ItemCost:
         - Item: Runstone_Turisus
           Amount: 1
+  - Id: 877
+    Name: AB_LAUDATEDOMINIUM
+    Description: Laudate Dominium
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    Cooldown: 5000
+    AfterCastActDelay: 5000
+    Duration1: 120000
+    Requires:
+      SpCost: 40
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -9845,15 +9859,6 @@ Body:
           Amount: 110
         - Level: 5
           Amount: 120
-      ItemCost:
-        - Item: Yellow_Gemstone
-          Amount: 1
-        - Item: Red_Gemstone
-          Amount: 1
-        - Item: Blue_Gemstone
-          Amount: 1
-        - Item: Holy_Water
-          Amount: 1
     Unit:
       Id: Basilica
       Layout: 2
@@ -18569,10 +18574,10 @@ Body:
       ItemCost:
         - Item: Blue_Gemstone
           Amount: 1
-  - Id: 2040
+  - Id: 2040  
     Name: AB_ADORAMUS
     Description: Adoramus
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Magic
     TargetType: Attack
     DamageFlags:
@@ -18673,9 +18678,6 @@ Body:
           Amount: 70
         - Level: 10
           Amount: 76
-      ItemCost:
-        - Item: Blue_Gemstone
-          Amount: 1
   - Id: 2041
     Name: AB_CLEMENTIA
     Description: Crementia

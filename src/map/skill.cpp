@@ -5729,6 +5729,14 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		clif_skill_nodamage(src,bl,skill_id,skill_lv,
 			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
 		break;
+	case AB_LAUDATEDOMINIUM:
+		clif_specialeffect(bl, EF_ANGEL2, AREA);
+		clif_specialeffect(bl, EF_ITEM_LIGHT, AREA);
+		clif_specialeffect(bl, EF_FLOWERCAST, AREA);
+		clif_specialeffect(bl, EF_LAUAGNUS_STR, AREA);
+		clif_skill_nodamage(src,bl,skill_id,skill_lv,
+			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
+		break;
 	case KN_FURY:
 		clif_specialeffect(bl, 847, AREA);
 		clif_specialeffect(bl, 626, AREA);
