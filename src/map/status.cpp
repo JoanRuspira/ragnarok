@@ -500,7 +500,7 @@ void initChangeTables(void)
 	
 	set_sc( MO_EXPLOSIONSPIRITS	, SC_EXPLOSIONSPIRITS	, EFST_EXPLOSIONSPIRITS	, SCB_STR|SCB_AGI|SCB_VIT|SCB_WATK );
 	set_sc( KN_FURY	, SC_FURY	, EFST_FURY	, SCB_CRI|SCB_WATK );
-	set_sc( AB_LAUDATEDOMINIUM	, SC_LAUDATEDOMINIUM	, EFST_AB_LAUDATEDOMINIUM	, SCB_CRI|SCB_WATK );
+	set_sc( AB_LAUDATEDOMINIUM	, SC_LAUDATEDOMINIUM	, EFST_AB_LAUDATEDOMINIUM	,  SCB_MATK );
 	set_sc( SA_MAGICROD		, SC_MAGICROD	, EFST_MAGICROD	, SCB_NONE );
 	set_sc( SA_AUTOSPELL		, SC_AUTOSPELL		, EFST_AUTOSPELL		, SCB_NONE );
 	set_sc( SA_FLAMELAUNCHER	, SC_FIREWEAPON		, EFST_PROPERTYFIRE,
@@ -11631,6 +11631,9 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 		case SC_TELEKINESIS_INTENSE:
 			val2 = 10 * val1; // sp consum / casttime reduc %
 			val3 = 40 * val1; // magic dmg bonus
+			break;
+		case SC_LAUDATEDOMINIUM:
+			val3 = 20 * val1; // magic dmg bonus
 			break;
 		case SC_OFFERTORIUM:
 			val2 = 1 + val1*0.3; // heal power bonus

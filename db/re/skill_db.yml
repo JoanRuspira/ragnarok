@@ -2918,11 +2918,11 @@ Body:
     DamageFlags:
       NoDamage: true
     Hit: Single
-    Cooldown: 5000
-    AfterCastActDelay: 5000
-    Duration1: 120000
+    AfterCastActDelay: 1000
+    Duration1: 30000
+    Cooldown: 120000
     Requires:
-      SpCost: 40
+      SpCost: 250
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -3365,7 +3365,7 @@ Body:
     Description: B.S. Sacramenti
     MaxLevel: 5
     Type: Magic
-    TargetType: Ground
+    TargetType: Support
     DamageFlags:
       NoDamage: true
       Splash: true

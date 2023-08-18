@@ -449,31 +449,25 @@ int64 battle_attr_fix(struct block_list *src, struct block_list *target, int64 d
 		switch(atk_elem){
 			case ELE_FIRE:
 				if (sc->data[SC_VOLCANO])
-#ifdef RENEWAL
 					ratio += sc->data[SC_VOLCANO]->val3;
-#else
-					damage += (int64)((damage*sc->data[SC_VOLCANO]->val3) / 100);
-#endif
 				break;
 			case ELE_WIND:
 				if (sc->data[SC_VIOLENTGALE])
-#ifdef RENEWAL
 					ratio += sc->data[SC_VIOLENTGALE]->val3;
-#else
-					damage += (int64)((damage*sc->data[SC_VIOLENTGALE]->val3) / 100);
-#endif
 				break;
 			case ELE_WATER:
 				if (sc->data[SC_DELUGE])
-#ifdef RENEWAL
 					ratio += sc->data[SC_DELUGE]->val3;
-#else
-					damage += (int64)((damage*sc->data[SC_DELUGE]->val3) / 100);
-#endif
 				break;
 			case ELE_GHOST:
 				if (sc->data[SC_TELEKINESIS_INTENSE])
 					ratio += sc->data[SC_TELEKINESIS_INTENSE]->val3;
+				if (sc->data[SC_LAUDATEDOMINIUM])
+					ratio += sc->data[SC_LAUDATEDOMINIUM]->val3;
+				break;
+			case ELE_HOLY:
+				if (sc->data[SC_LAUDATEDOMINIUM])
+					ratio += sc->data[SC_LAUDATEDOMINIUM]->val3;
 				break;
 		}
 	}
