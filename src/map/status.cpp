@@ -388,7 +388,7 @@ void initChangeTables(void)
 #endif
 	set_sc( PR_SUFFRAGIUM		, SC_SUFFRAGIUM		, EFST_SUFFRAGIUM		, SCB_NONE );
 	set_sc( PR_ASPERSIO		, SC_ASPERSIO		, EFST_ASPERSIO		, SCB_ATK_ELE );
-	set_sc( PR_BENEDICTIO		, SC_BENEDICTIO		, EFST_BENEDICTIO		, SCB_DEF_ELE );
+	set_sc( PR_BENEDICTIO		, SC_BENEDICTIO		, EFST_BENEDICTIO		, SCB_DEF_ELE|SCB_WATK|SCB_MATK|SCB_AGI|SCB_VIT|SCB_LUK);
 	set_sc( PR_SLOWPOISON		, SC_SLOWPOISON		, EFST_SLOWPOISON		, SCB_REGEN );
 	set_sc( PR_KYRIE		, SC_KYRIE		, EFST_KYRIE		, SCB_NONE );
 	set_sc( PR_MAGNIFICAT		, SC_MAGNIFICAT		, EFST_MAGNIFICAT		, SCB_REGEN );
@@ -6013,6 +6013,8 @@ static unsigned short status_calc_agi(struct block_list *bl, struct status_chang
 		agi -= sc->data[SC_HARMONIZE]->val2;
 		return (unsigned short)cap_value(agi,0,USHRT_MAX);
 	}
+	if(sc->data[SC_BENEDICTIO])
+		agi += sc->data[SC_BENEDICTIO]->val1*2;
 	if(sc->data[SC_WINDWALK])
 		agi += sc->data[SC_WINDWALK]->val1*3;
 	if(sc->data[SC_ASSNCROS])
@@ -6102,6 +6104,8 @@ static unsigned short status_calc_vit(struct block_list *bl, struct status_chang
 		vit -= sc->data[SC_HARMONIZE]->val2;
 		return (unsigned short)cap_value(vit,0,USHRT_MAX);
 	}
+	if(sc->data[SC_BENEDICTIO])
+		vit += sc->data[SC_BENEDICTIO]->val1*2;
 	if( sc->data[SC_RICHMANKIM] )
 		vit += sc->data[SC_RICHMANKIM]->val2;
 	if(sc->data[SC_VITALITYACTIVATION])
@@ -6354,7 +6358,8 @@ static unsigned short status_calc_luk(struct block_list *bl, struct status_chang
 	}
 	if(sc->data[SC_CURSE])
 		return 0;
-
+	if(sc->data[SC_BENEDICTIO])
+		luk += sc->data[SC_BENEDICTIO]->val1*2;
 	if(sc->data[SC_ASSNCROS])
 		luk += sc->data[SC_ASSNCROS]->val2;
 	if(sc->data[SC_INCALLSTATUS])
@@ -6478,7 +6483,8 @@ static unsigned short status_calc_watk(struct block_list *bl, struct status_chan
 {
 	if(!sc || !sc->count)
 		return cap_value(watk,0,USHRT_MAX);
-
+	if(sc->data[SC_BENEDICTIO])
+		watk += sc->data[SC_BENEDICTIO]->val1*5;
 	if(sc->data[SC_DRUMBATTLE])
 		watk += sc->data[SC_DRUMBATTLE]->val2;
 	if (sc->data[SC_IMPOSITIO])
@@ -6670,6 +6676,8 @@ static unsigned short status_calc_matk(struct block_list *bl, struct status_chan
 {
 	if(!sc || !sc->count)
 		return cap_value(matk,0,USHRT_MAX);
+	if(sc->data[SC_BENEDICTIO])
+		matk += sc->data[SC_BENEDICTIO]->val1*5;
 	if(sc->data[SC_SPIRITANIMAL])
 		matk += sc->data[SC_SPIRITANIMAL]->val1*6;
 	if(sc->data[SC_CRUCIS_PLAYER])

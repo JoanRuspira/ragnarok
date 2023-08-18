@@ -4063,8 +4063,10 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 
 	case PR_BENEDICTIO:
 		//Should attack undead and demons. [Skotlex]
-		if (battle_check_undead(tstatus->race, tstatus->def_ele) || tstatus->race == RC_DEMON)
+		if (battle_check_undead(tstatus->race, tstatus->def_ele) || tstatus->race == RC_DEMON){
+			clif_specialeffect(bl, EF_HOLYHIT, AREA);
 			skill_attack(BF_MAGIC, src, src, bl, skill_id, skill_lv, tick, flag);
+		}
 		break;
 
 	case SJ_NOVAEXPLOSING:
@@ -5621,8 +5623,12 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		break;
 
 	case PR_BENEDICTIO:
-		if (!battle_check_undead(tstatus->race, tstatus->def_ele) && tstatus->race != RC_DEMON)
+		if (!battle_check_undead(tstatus->race, tstatus->def_ele) && tstatus->race != RC_DEMON){
+			clif_specialeffect(bl, EF_HOLYHIT, AREA);
 			clif_skill_nodamage(src, bl, skill_id, skill_lv, sc_start(src, bl, type, 100, skill_lv, skill_get_time(skill_id, skill_lv)));
+		}else{
+			skill_castend_damage_id(src, src, skill_id, skill_lv, tick, flag);
+		}
 		break;
 	case LK_AURABLADE:
 		clif_specialeffect(src, 110, AREA);
@@ -14278,11 +14284,8 @@ int skill_check_condition_char_sub (struct block_list *bl, va_list ap)
 
 	bool is_chorus = skill_get_inf2(skill_id, INF2_ISCHORUS);
 
-	if (skill_id == PR_BENEDICTIO) {
-		if (*c >= 2) // Check for two companions for Benedictio. [Skotlex]
-			return 0;
-	}
-	else if (is_chorus) {
+
+	if (is_chorus) {
 		if (*c == MAX_PARTY) // Check for partners for Chorus; Cap if the entire party is accounted for.
 			return 0;
 	}
@@ -14307,14 +14310,6 @@ int skill_check_condition_char_sub (struct block_list *bl, va_list ap)
 	} else {
 
 		switch(skill_id) {
-			case PR_BENEDICTIO: {
-				uint8 dir = map_calc_dir(&sd->bl,tsd->bl.x,tsd->bl.y);
-				dir = (unit_getdir(&sd->bl) + dir)%8; //This adjusts dir to account for the direction the sd is facing.
-				if ((tsd->class_&MAPID_BASEMASK) == MAPID_ACOLYTE && (dir == 2 || dir == 6) //Must be standing to the left/right of Priest.
-					&& sd->status.sp >= 10)
-					p_sd[(*c)++]=tsd->bl.id;
-				return 1;
-			}
 			default: //Warning: Assuming Ensemble Dance/Songs for code speed. [Skotlex]
 				{
 					uint16 skill_lv;
@@ -14364,12 +14359,6 @@ int skill_check_pc_partner(struct map_session_data *sd, uint16 skill_id, uint16 
 	if (cast_flag) {	//Execute the skill on the partners.
 		struct map_session_data* tsd;
 		switch (skill_id) {
-			case PR_BENEDICTIO:
-				for (i = 0; i < c; i++) {
-					if ((tsd = map_id2sd(p_sd[i])) != NULL)
-						status_charge(&tsd->bl, 0, (skill_id == PR_BENEDICTIO) ? 10 : skill_get_sp(skill_id, *skill_lv) / 2);
-				}
-				return c;
 			default:
 				if( is_chorus )
 					break;//Chorus skills are not to be parsed as ensembles

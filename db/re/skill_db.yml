@@ -3368,33 +3368,28 @@ Body:
     Description: B.S. Sacramenti
     MaxLevel: 5
     Type: Magic
-    TargetType: Support
+    TargetType: Ground
     DamageFlags:
       NoDamage: true
       Splash: true
-      IgnoreDefense: true
     Range: 9
     Hit: Single
     HitCount: 1
-    SplashArea: 1
+    SplashArea: 5
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
     CastCancel: true
-    Duration1:
-      - Level: 1
-        Time: 40000
-      - Level: 2
-        Time: 80000
-      - Level: 3
-        Time: 120000
-      - Level: 4
-        Time: 160000
-      - Level: 5
-        Time: 200000
+    CastTime: 5000
+    Cooldown: 10000
+    AfterCastActDelay: 2000
+    Duration1: 120000
     Requires:
-      SpCost: 20
+      SpCost: 90
+      ItemCost:
+        - Item: Yellow_Gemstone
+          Amount: 1
   - Id: 70
     Name: PR_SANCTUARY
     Description: Sanctuary

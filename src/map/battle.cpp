@@ -4702,7 +4702,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 		switch (skill_id) {
 			// case CR_HEAL:
 			case AL_HEAL:
-			case PR_BENEDICTIO:
 				ad.damage = skill_calc_heal(src, target, skill_id, skill_lv, false);
 				break;
 			case PR_ASPERSIO:
@@ -4818,6 +4817,7 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case PR_MAGNUS:
 					case AB_DUPLELIGHT_MAGIC:
 					case AB_ADORAMUS:
+					case PR_BENEDICTIO:
 						skillratio += PriestSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
 					case JG_TAROTCARD:
@@ -6429,18 +6429,11 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
  */
 int battle_check_undead(int race,int element)
 {
-	if(battle_config.undead_detect_type == 0) {
-		if(element == ELE_UNDEAD)
-			return 1;
-	}
-	else if(battle_config.undead_detect_type == 1) {
-		if(race == RC_UNDEAD)
-			return 1;
-	}
-	else {
-		if(element == ELE_UNDEAD || race == RC_UNDEAD)
-			return 1;
-	}
+	if(element == ELE_UNDEAD)
+		return 1;
+	if(race == RC_UNDEAD)
+		return 1;
+
 	return 0;
 }
 
