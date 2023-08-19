@@ -1471,14 +1471,13 @@ int64 battle_calc_damage(struct block_list *src,struct block_list *bl,struct Dam
 
 		// Damage reductions
 		// Assumptio increases DEF on RE mode, otherwise gives a reduction on the final damage. [Igniz]
-#ifndef RENEWAL
+
 		if( sc->data[SC_ASSUMPTIO] ) {
-			if( map_flag_vs(bl->m) )
-				damage = (int64)damage*2/3; //Receive 66% damage
-			else
-				damage >>= 1; //Receive 50% damage
+			// if( map_flag_vs(bl->m) )
+			float ratio = 0.95 - 0.05*sc->data[SC_ASSUMPTIO]->val1;
+			damage = (int64)damage*ratio; //Receive ratio% of damage
 		}
-#endif
+
 
 		if (sc->data[SC_DEFENDER] && skill_id != KO_MUCHANAGE && (flag&(BF_LONG|BF_WEAPON)) == (BF_LONG|BF_WEAPON))
 			damage -= damage * sc->data[SC_DEFENDER]->val2 / 100;
@@ -1605,7 +1604,7 @@ int64 battle_calc_damage(struct block_list *src,struct block_list *bl,struct Dam
 #ifdef RENEWAL
 		// Renewal: steel body reduces all incoming damage to 1/10 [helvetica]
 		if( sc->data[SC_STEELBODY] ){
-			int reduction_percentage_to = 50 - (pc_checkskill(sd, MO_STEELBODY)*6);
+			int reduction_percentage_to = 60 - (pc_checkskill(sd, MO_STEELBODY)*6);
 			damage = damage > reduction_percentage_to ? damage / reduction_percentage_to : 1;
 		}
 #endif

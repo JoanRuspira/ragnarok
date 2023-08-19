@@ -589,8 +589,6 @@ int skill_calc_heal(struct block_list *src, struct block_list *target, uint16 sk
 	if (sc && sc->count) {
 		if (sc->data[SC_GLASTHEIM_HEAL] && skill_id != NPC_EVILLAND)
 			hp_bonus += sc->data[SC_GLASTHEIM_HEAL]->val1;
-		if (sc->data[SC_ASSUMPTIO])
-			hp_bonus += sc->data[SC_ASSUMPTIO]->val1 * 2;
 	}
 
 	if (tsc && tsc->count) {
@@ -3633,11 +3631,14 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 			struct block_list *mbl = bl; // For NJ_ISSEN
 			short x, y, i = 2; // Move 2 cells (From target)
 			short dir = map_calc_dir(src,bl->x,bl->y);
-
-#ifdef RENEWAL
+			struct status_data *status = status_get_status_data(src);
+			if(status->sp<100){
+				clif_skill_fail(sd, skill_id, USESKILL_FAIL, 0);
+				break;
+			}
 			if (skill_id == MO_EXTREMITYFIST && sd && sd->spiritball_old > 5)
 				flag |= 1; // Give +100% damage increase
-#endif
+			status = status_get_status_data(bl);
 			skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag);
 			if (skill_id == MO_EXTREMITYFIST) {
 				status_set_sp(src, 0, 0);
