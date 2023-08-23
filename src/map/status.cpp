@@ -837,6 +837,7 @@ void initChangeTables(void)
 	set_sc( AB_LAUDARAMUS		, SC_LAUDARAMUS		, EFST_LAUDARAMUS		, SCB_ALL );
 	set_sc( AB_RENOVATIO		, SC_RENOVATIO		, EFST_RENOVATIO		, SCB_REGEN );
 	set_sc( AB_EXPIATIO		, SC_EXPIATIO		, EFST_EXPIATIO		, SCB_NONE );
+	set_sc( AB_ULTOR		, SC_ULTOR		, EFST_ULTOR		, SCB_WATK|SCB_MATK|SCB_ASPD );
 	set_sc( AB_DUPLELIGHT		, SC_DUPLELIGHT		, EFST_DUPLELIGHT		, SCB_NONE );
 	set_sc( AB_SECRAMENT		, SC_SECRAMENT		, EFST_AB_SECRAMENT, SCB_NONE );
 	set_sc( AB_OFFERTORIUM		, SC_OFFERTORIUM	, EFST_OFFERTORIUM	, SCB_NONE );
@@ -6487,6 +6488,8 @@ static unsigned short status_calc_watk(struct block_list *bl, struct status_chan
 		watk += sc->data[SC_BENEDICTIO]->val1*5;
 	if(sc->data[SC_DRUMBATTLE])
 		watk += sc->data[SC_DRUMBATTLE]->val2;
+	if(sc->data[SC_ULTOR])
+		watk += sc->data[SC_ULTOR]->val1*8;
 	if (sc->data[SC_IMPOSITIO])
 		watk += sc->data[SC_IMPOSITIO]->val2;
 	if(sc->data[SC_WATKFOOD])
@@ -6684,6 +6687,8 @@ static unsigned short status_calc_matk(struct block_list *bl, struct status_chan
 		matk += sc->data[SC_CRUCIS_PLAYER]->val3;
 	if(sc->data[SC_DRUMBATTLE])
 		matk += sc->data[SC_DRUMBATTLE]->val2;
+	if(sc->data[SC_ULTOR])
+		matk += sc->data[SC_ULTOR]->val1*8;
 	if(sc->data[SC_ECHOSONG])
 		matk += sc->data[SC_ECHOSONG]->val3;
 	if(sc->data[SC_ENERGYCOAT])
@@ -7615,6 +7620,8 @@ static short status_calc_fix_aspd(struct block_list *bl, struct status_change *s
 		aspd -= sc->data[SC_MACEQUICKEN]->val1*10;
 	if (sc->data[SC_KNUCKLEQUICKEN])
 		aspd -= sc->data[SC_KNUCKLEQUICKEN]->val1*10;
+	if (sc->data[SC_ULTOR])
+		aspd -= sc->data[SC_ULTOR]->val1*20;
 	if (sc->data[SC_BOWQUICKEN])
 		aspd -= sc->data[SC_BOWQUICKEN]->val1*10;
 	if (sc->data[SC_QUICKSTUDY])
@@ -12770,7 +12777,6 @@ int status_change_end_(struct block_list* bl, enum sc_type type, int tid, const 
 	struct view_data *vd;
 	int opt_flag = 0;
 	enum scb_flag calc_flag = SCB_NONE;
-
 	nullpo_ret(bl);
 
 	sc = status_get_sc(bl);

@@ -1825,6 +1825,8 @@ Body:
       Weapon:
         Mace: true
         2hMace: true
+        Staff: true
+        2hStaff: true
   - Id: 821
     Name: JG_TAROTCARD
     Description: Tarot Cards of Fate
@@ -2976,6 +2978,24 @@ Body:
     Duration2: 12000
     Requires:
       SpCost: 85
+  - Id: 880
+    Name: AB_ULTOR
+    Description: Expiatio
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Range: 11
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    CastTime: 1000
+    AfterCastActDelay: 2000
+    Cooldown: 10000
+    Duration1: 30000
+    Requires:
+      SpCost: 100
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -3322,7 +3342,7 @@ Body:
   - Id: 65
     Name: PR_MACEMASTERY
     Description: Mace Mastery
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
   - Id: 66
     Name: PR_IMPOSITIO
@@ -19020,7 +19040,7 @@ Body:
     CastCancel: true
     CastTime: 1000
     AfterCastActDelay: 2000
-    Cooldown: 10000
+    Cooldown: 5000
     Duration1:
       - Level: 1
         Time: 150000
@@ -19033,7 +19053,7 @@ Body:
       - Level: 5
         Time: 270000
     Requires:
-      SpCost: 100
+      SpCost: 75
   - Id: 2054
     Name: AB_DUPLELIGHT
     Description: Duple Lux

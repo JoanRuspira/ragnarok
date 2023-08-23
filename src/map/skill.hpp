@@ -2177,6 +2177,9 @@ enum e_skill {
     CH_ZEN = 875,
 	KN_FURY = 876,
 	AB_LAUDATEDOMINIUM = 877,
+	HP_PENITENTIA = 878,
+	HP_VITUPERATUM = 879,
+	AB_ULTOR = 880,
 };
 
 /// The client view ids for land skills.

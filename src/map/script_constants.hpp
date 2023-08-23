@@ -1209,6 +1209,7 @@
 	export_constant(SC_LAUDARAMUS);
 	export_constant(SC_RENOVATIO);
 	export_constant(SC_EXPIATIO);
+	export_constant(SC_ULTOR);	
 	export_constant(SC_DUPLELIGHT);
 	export_constant(SC_SECRAMENT);
 	export_constant(SC_WHITEIMPRISON);
