@@ -10035,7 +10035,7 @@ Body:
     HitCount: 1
     Element: Weapon
     Knockback: 3
-    CoolDown: 5000
+    Cooldown: 5000
     AfterCastActDelay: 400
     Duration2:
       - Level: 1
@@ -17204,7 +17204,7 @@ Body:
         Reproduce: true
     CastCancel: true
     CastTime: 2000
-    CoolDown: 5000
+    Cooldown: 5000
     AfterCastActDelay: 1000
     Requires:
       SpCost: 37
@@ -19019,6 +19019,8 @@ Body:
     HitCount: 1
     CastCancel: true
     CastTime: 1000
+    AfterCastActDelay: 2000
+    Cooldown: 10000
     Duration1:
       - Level: 1
         Time: 150000
@@ -19031,17 +19033,7 @@ Body:
       - Level: 5
         Time: 270000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 35
-        - Level: 2
-          Amount: 40
-        - Level: 3
-          Amount: 45
-        - Level: 4
-          Amount: 50
-        - Level: 5
-          Amount: 55
+      SpCost: 100
   - Id: 2054
     Name: AB_DUPLELIGHT
     Description: Duple Lux

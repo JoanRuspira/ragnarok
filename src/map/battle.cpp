@@ -3745,7 +3745,7 @@ static void battle_calc_defense_reduction(struct Damage* wd, struct block_list *
 	}
 
 	if (sc && sc->data[SC_EXPIATIO]) {
-		short i = 5 * sc->data[SC_EXPIATIO]->val1; // 5% per level
+		short i = 6 * sc->data[SC_EXPIATIO]->val1; // 6% per level
 
 		i = min(i,100); //cap it to 100 for 0 def min
 		def1 = (def1*(100-i))/100;
@@ -5181,7 +5181,7 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 			int mdef2= tstatus->mdef2;
 
 			if (sc && sc->data[SC_EXPIATIO]) {
-				i = 5 * sc->data[SC_EXPIATIO]->val1; // 5% per level
+				i = 6 * sc->data[SC_EXPIATIO]->val1; // 6% per level
 
 				i = min(i, 100); //cap it to 100 for 5 mdef min
 				mdef -= mdef * i / 100;

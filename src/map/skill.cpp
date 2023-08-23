@@ -5699,7 +5699,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case NPC_INVINCIBLEOFF:
 	case MER_INVINCIBLEOFF2:
 	case RK_DEATHBOUND:
-	case AB_EXPIATIO:
 	case AB_DUPLELIGHT:
 	case AB_SECRAMENT:
 	case AB_OFFERTORIUM:
@@ -5733,6 +5732,12 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case SJ_LIGHTOFSUN:
 	case SJ_BOOKOFDIMENSION:
 	case NPC_HALLUCINATIONWALK:
+		clif_skill_nodamage(src,bl,skill_id,skill_lv,
+			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
+		break;
+	case AB_EXPIATIO:
+		clif_specialeffect(bl, 1260, AREA);
+		clif_specialeffect(bl, EF_LIGHTSPHERE, AREA);
 		clif_skill_nodamage(src,bl,skill_id,skill_lv,
 			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
 		break;
