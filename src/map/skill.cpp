@@ -5736,7 +5736,9 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
 		break;
 	case AB_ULTOR:
+		clif_soundeffectall(bl, "ultor.wav", 0, AREA);
 		clif_specialeffect(bl, 1260, AREA);
+		clif_specialeffect(bl, EF_RECOVERY, AREA);
 		clif_specialeffect(bl, EF_LIGHTSPHERE, AREA);
 		clif_skill_nodamage(src, bl, skill_id, skill_lv,
 			sc_start(src, bl, type, 100, skill_lv, skill_get_time(skill_id, skill_lv)));

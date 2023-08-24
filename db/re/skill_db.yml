@@ -2980,7 +2980,7 @@ Body:
       SpCost: 85
   - Id: 880
     Name: AB_ULTOR
-    Description: Expiatio
+    Description: In Lucem Batalia
     MaxLevel: 5
     Type: Magic
     TargetType: Self
@@ -2990,12 +2990,12 @@ Body:
     Hit: Single
     HitCount: 1
     CastCancel: true
-    CastTime: 1000
-    AfterCastActDelay: 2000
-    Cooldown: 10000
-    Duration1: 30000
+    CastTime: 2000
+    AfterCastActDelay: 3000
+    Cooldown: 30000
+    Duration1: 60000
     Requires:
-      SpCost: 100
+      SpCost: 150
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
