@@ -34,6 +34,10 @@ int PriestSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 			break;
 		case AB_ADORAMUS:
 			return calculate_sententia_atk_ratio(skill_lv);
+		case HP_VITUPERATUM:
+			clif_specialeffect(src, EF_DARKCASTING2, AREA);
+			clif_specialeffect(target, 1121, AREA); //wide_criticalwound
+			return calculate_diabolis_cruciatus_atk_ratio(skill_lv);
 		case PR_BENEDICTIO:
 			return calculate_benedictio_atk_ratio(skill_lv);
 		default:
@@ -69,6 +73,30 @@ void PriestSkillAttackRatioCalculator::add_duple_liight_magic_special_effects(st
 {
     clif_specialeffect(target, EF_MAGICROD, AREA);
 }
+
+int PriestSkillAttackRatioCalculator::calculate_diabolis_cruciatus_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 50;
+			break;
+		case 2:
+			ratio = 250;
+			break;
+		case 3:
+			ratio = 450;
+			break;
+		case 4:
+			ratio = 650;
+			break;
+		case 5:
+			ratio = 850;
+			break;
+		}
+	return ratio;
+}
+
 
 
 int PriestSkillAttackRatioCalculator::calculate_benedictio_atk_ratio(int skill_lv)

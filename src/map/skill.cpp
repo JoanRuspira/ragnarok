@@ -3726,6 +3726,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case WZ_CORRUPT:
 	case PR_UNHOLYCROSS:
 	case AB_ADORAMUS:
+	case HP_VITUPERATUM:
 	case WL_SOULEXPANSION:
 	case MG_EARTHBOLT:
 	case SL_SMA:
@@ -3775,6 +3776,8 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case SP_CURSEEXPLOSION:
 	case SP_SHA:
 	case SP_SWHOO:
+		if(skill_id == HP_VITUPERATUM)
+			clif_soundeffectall(&sd->bl, "diabolicruciatus.wav", 0, AREA);
 		if( flag&1 ) {//Recursive invocation
 			int sflag = skill_area_temp[0] & 0xFFF;
 			int heal = 0;

@@ -2955,29 +2955,25 @@ Body:
       SpCost: 85
   - Id: 879
     Name: HP_VITUPERATUM
-    Description: Penitentia
+    Description: Diaboli Cruciatus
     MaxLevel: 5
     Type: Magic
-    TargetType: Ground
-    Flags:
-      IsAutoShadowSpell: true
-    Range: 7
-    Hit: Single
-    HitCount: 1
-    Element: Water
-    Knockback: 2
+    TargetType: Attack
+    Range: 11
+    Hit: Multi_Hit
+    HitCount: -3
+    Element: Dark
     CopyFlags:
       Skill:
-        Plagiarism: true
         Reproduce: true
     CastCancel: true
-    CastTime: 7000
-    Cooldown: 14600
-    AfterCastActDelay: 2000
-    Duration1: 4600
-    Duration2: 12000
+    CastTime: 3500
+    AfterCastActDelay: 1000
+    Duration1: 12000
+    Duration2: 35000
+    Cooldown: 6666
     Requires:
-      SpCost: 85
+      SpCost: 80
   - Id: 880
     Name: AB_ULTOR
     Description: In Lucem Batalia
@@ -2996,6 +2992,9 @@ Body:
     Duration1: 60000
     Requires:
       SpCost: 150
+      ItemCost:
+        - Item: Red_Gemstone
+          Amount: 1
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -19075,9 +19074,7 @@ Body:
       SpCost: 125
       ItemCost:
         - Item: Red_Gemstone
-          Amount: 1
-        - Item: Blue_Gemstone
-          Amount: 1
+          Amount: 2
   - Id: 2055
     Name: AB_DUPLELIGHT_MELEE
     Description: Duple Light Melee
