@@ -2933,26 +2933,30 @@ Body:
     Description: Penitentia
     MaxLevel: 5
     Type: Magic
-    TargetType: Ground
-    Flags:
-      IsAutoShadowSpell: true
-    Range: 7
-    Hit: Single
-    HitCount: 1
-    Element: Water
-    Knockback: 2
+    TargetType: Attack
+    DamageFlags:
+      Splash: true
+    Range: 11
+    Hit: Multi_Hit
+    HitCount: -2
+    Element: Dark
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
+    SplashArea: 5
+    CopyFlags:
+      Skill:
+        Reproduce: true
     CastCancel: true
-    CastTime: 7000
-    Cooldown: 14600
+    Cooldown: 10000
+    CastTime: 5000
     AfterCastActDelay: 2000
-    Duration1: 4600
-    Duration2: 12000
     Requires:
       SpCost: 85
+      ItemCost:
+        - Item: Red_Gemstone
+          Amount: 1
   - Id: 879
     Name: HP_VITUPERATUM
     Description: Diaboli Cruciatus

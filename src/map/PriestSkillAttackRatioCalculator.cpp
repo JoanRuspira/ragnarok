@@ -40,11 +40,39 @@ int PriestSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 			return calculate_diabolis_cruciatus_atk_ratio(skill_lv);
 		case PR_BENEDICTIO:
 			return calculate_benedictio_atk_ratio(skill_lv);
+		case HP_PENITENTIA:
+			clif_specialeffect(target, EF_BLACKBODY, AREA);
+			return calculate_penitentia_atk_ratio(skill_lv);
 		default:
 			return 0;
 			break;
 	}
 }
+
+
+int PriestSkillAttackRatioCalculator::calculate_penitentia_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 250;
+			break;
+		case 2:
+			ratio = 350;
+			break;
+		case 3:
+			ratio = 450;
+			break;
+		case 4:
+			ratio = 550;
+			break;
+		case 5:
+			ratio = 650;
+			break;
+		}
+	return ratio;
+}
+
 
 void PriestSkillAttackRatioCalculator::add_spiritu_sancti_special_effects(struct block_list *target)
 {

@@ -22,6 +22,7 @@ class PriestSkillAttackRatioCalculator
 		static int calculate_sententia_atk_ratio(int skill_lv);
 		static int calculate_benedictio_atk_ratio(int skill_lv);
 		static int calculate_diabolis_cruciatus_atk_ratio(int skill_lv);
+		static int calculate_penitentia_atk_ratio(int skill_lv);
 		static void add_spiritu_sancti_special_effects(struct block_list *target);
 		static void add_judex_special_effects(struct block_list *target);
 		static void add_unholy_cross_special_effects(struct block_list *target);

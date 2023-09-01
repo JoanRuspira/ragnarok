@@ -4818,6 +4818,7 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case AB_ADORAMUS:
 					case PR_BENEDICTIO:
 					case HP_VITUPERATUM:
+					case HP_PENITENTIA:
 						skillratio += PriestSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
 					case JG_TAROTCARD:

@@ -3719,6 +3719,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case AB_JUDEX:
 	case WZ_EXTREMEVACUUM:
 	case WZ_LANDOFEVIL:
+	case HP_PENITENTIA:
 	case HW_MAGICCRASHER:
 	case SO_PSYCHIC_WAVE:
 	case JG_TAROTCARD:
@@ -3778,6 +3779,12 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case SP_SWHOO:
 		if(skill_id == HP_VITUPERATUM)
 			clif_soundeffectall(&sd->bl, "diabolicruciatus.wav", 0, AREA);
+		if(skill_id == HP_PENITENTIA){
+			clif_specialeffect(src, EF_DARKCASTING2, AREA);
+			clif_specialeffect(bl, EF_ADO_STR, AREA); //ado.str
+			clif_soundeffectall(&sd->bl, "penitentia.wav", 0, AREA);
+		}
+
 		if( flag&1 ) {//Recursive invocation
 			int sflag = skill_area_temp[0] & 0xFFF;
 			int heal = 0;
@@ -11494,6 +11501,7 @@ int skill_castend_pos2(struct block_list* src, int x, int y, uint16 skill_id, ui
 	case WZ_STORMGUST:
 	case HW_MAGICCRASHER:
 	case SO_PSYCHIC_WAVE:
+	case HP_PENITENTIA:
 	case WZ_LANDOFEVIL:
 	case WZ_HEAVENDRIVE:
 	case PR_SANCTUARY:

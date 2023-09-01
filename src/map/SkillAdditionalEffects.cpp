@@ -326,9 +326,11 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 			KnightAdditionalEffectsCalculator::apply_smite_additional_effect(src, bl, skill_lv);
 			break;
 		case CR_HOLYCROSS:
+		case LG_RAYOFGENESIS:
 			CrusaderAdditionalEffectsCalculator::apply_holy_cross_additional_effect(src, bl, skill_lv);
 			break;
 		case PR_UNHOLYCROSS:
+		case HP_PENITENTIA:
 			PriestAdditionalEffectsCalculator::apply_unholy_cross_additional_effect(src, bl, skill_lv);
 			break;
 		case RG_BACKSTAP:
