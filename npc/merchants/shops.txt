@@ -490,8 +490,6 @@ prt_in,175,50,2	shop	Staff Dealer#prt47	47,1601:-1,1604:-1,1607:-1,1610:-1,1472:
 prontera,93,210,4	shop	Ice Cream Guy#prt48	85,536:-1
 prt_in,181,20,2	shop	Bartender#prt49	61,12711:-1,12712:-1,12713:-1,539:-1,544:-1,549:-1
 prt_in,43,37,2	shop	Bartender#prt50	50,12711:-1,12712:-1,12713:-1,539:-1,544:-1,549:-1
-prt_church,26,24,4	shop	Blessed Items Vendor#prt51	478,523:-1,525:-1,526:-1,523:-1,717:-1
-prt_church,173,24,5	shop	Blessed Items Vendor#prt52	476,12215:-1,12216:-1,12217:-1,523:-1,717:-1
 prt_church,91,124,5	shop	Maces and Staffs Vendor#prt53	942,1501:-1,1504:-1,1507:-1,1601:-1,1604:-1
 
 
@@ -668,5 +666,7 @@ moc_prydb1,160,119,1	shop	Arrow Vendor#jobmerch9	642,1750:-1,1751:-1,1752:-1,175
 moc_prydb1,50,132,3	shop	Thief Vendor#jobmerch10	6,1771:-1
 prt_monk,249,179,3	shop	Dragon Ball Vendor#jobmerch11	644,7445:-1,7446:-1,7447:-1,7448:-1
 monk_in,103,174,3	shop	Healing Items Merchant#jobmerch12	641,523:-1,12333:-1
-
+prt_church,26,24,4	shop	Healing Items Vendor#jobmerch13	478,523:-1,12333:-1
+prt_church,173,24,5	shop	Healing Items Vendor#jobmerch14	476,523:-1,12333:-1
+prt_church,96,90,6	shop	Gemstone Merchant#jobmerch15	630,717:-1,716:-1,715:-1
 

@@ -3259,11 +3259,6 @@ prt_church,184,20,2	script	Prontera Citizen#prt:npcid	spriteid,{
 	end;
 }
 
-prt_church,16,42,5	script	Priest Guildmaster#prt:npcid	110,{
-	npctalk "I will make you a Priest.";
-	end;
-}
-
 prontera,29,198,0	script	Prontera Guard#prt:npcid	105,{
 	npctalk "Welcome to Prontera.";
 	end;

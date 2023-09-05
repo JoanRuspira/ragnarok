@@ -205,30 +205,6 @@ Body:
     Weight: 1000
     Flags:
       BuyingStore: true
-  - Id: 715
-    AegisName: Yellow_Gemstone
-    Name: Yellow Gemstone
-    Type: Etc
-    Buy: 50
-    Weight: 30
-    Flags:
-      BuyingStore: true
-  - Id: 716
-    AegisName: Red_Gemstone
-    Name: Red Gemstone
-    Type: Etc
-    Buy: 50
-    Weight: 30
-    Flags:
-      BuyingStore: true
-  - Id: 717
-    AegisName: Blue_Gemstone
-    Name: Blue Gemstone
-    Type: Etc
-    Buy: 50
-    Weight: 30
-    Flags:
-      BuyingStore: true
   - Id: 718
     AegisName: Dark_Red_Jewel
     Name: Garnet
@@ -9630,5 +9606,29 @@ Body:
     Type: Etc
     Buy: 50
     Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 715
+    AegisName: Yellow_Gemstone
+    Name: Yellow Gemstone
+    Type: Etc
+    Buy: 50
+    Weight: 30
+    Flags:
+      BuyingStore: true
+  - Id: 716
+    AegisName: Red_Gemstone
+    Name: Red Gemstone
+    Type: Etc
+    Buy: 50
+    Weight: 30
+    Flags:
+      BuyingStore: true
+  - Id: 717
+    AegisName: Blue_Gemstone
+    Name: Blue Gemstone
+    Type: Etc
+    Buy: 50
+    Weight: 30
     Flags:
       BuyingStore: true
