@@ -2180,6 +2180,7 @@ enum e_skill {
 	HP_PENITENTIA = 878,
 	HP_VITUPERATUM = 879,
 	AB_ULTOR = 880,
+	HP_JUDEX = 881,
 };
 
 /// The client view ids for land skills.

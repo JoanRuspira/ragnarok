@@ -2999,6 +2999,38 @@ Body:
       ItemCost:
         - Item: Red_Gemstone
           Amount: 1
+  - Id: 881
+    Name: HP_JUDEX
+    Description: Judex
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    DamageFlags:
+      Splash: true
+    Range: 7
+    Hit: Multi_Hit
+    HitCount: -3
+    Element: Holy
+    SplashArea:
+      - Level: 1
+        Area: 1
+      - Level: 2
+        Area: 2
+      - Level: 3
+        Area: 3
+      - Level: 4
+        Area: 4
+      - Level: 5
+        Area: 5
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    Cooldown: 5000
+    CastTime: 5000
+    AfterCastActDelay: 1000
+    Requires:
+      SpCost: 60
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death

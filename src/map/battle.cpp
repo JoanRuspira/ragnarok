@@ -4811,7 +4811,7 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 							ad.type = DMG_NORMAL;
 						}
 						break;
-					case AB_JUDEX:
+					case HP_JUDEX:
 					case PR_SPIRITUSANCTI:
 					case PR_MAGNUS:
 					case AB_DUPLELIGHT_MAGIC:

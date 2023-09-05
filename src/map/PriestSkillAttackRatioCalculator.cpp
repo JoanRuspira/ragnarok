@@ -14,7 +14,7 @@ int PriestSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 			add_spiritu_sancti_special_effects(target);
 			return calculate_spiritu_sancti_atk_ratio(skill_lv);
 			break;
-        case AB_JUDEX:
+        case HP_JUDEX:
 			add_judex_special_effects(target);
 			return calculate_judex_atk_ratio(skill_lv);
 			break;
@@ -84,6 +84,8 @@ void PriestSkillAttackRatioCalculator::add_spiritu_sancti_special_effects(struct
 void PriestSkillAttackRatioCalculator::add_judex_special_effects(struct block_list *target)
 {
     clif_specialeffect(target, 1267, AREA);
+	clif_soundeffectall(target, "ab_judex.wav", 0, AREA);
+
 }
 
 void PriestSkillAttackRatioCalculator::add_unholy_cross_special_effects(struct block_list *target)
