@@ -3204,11 +3204,6 @@ prt_church,99,84,5	script	Prontera Citizen#prt:npcid	spriteid,{
 	end;
 }
 
-prt_church,103,97,2	script	Prontera Citizen#prt:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
 prt_church,98,106,5	script	Prontera Citizen#prt:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
