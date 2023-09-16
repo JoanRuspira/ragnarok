@@ -17966,31 +17966,19 @@ Body:
     CopyFlags:
       Skill:
         Reproduce: true
-    CastCancel: true
-    CastTime: 2000
     Duration1:
       - Level: 1
-        Time: 120000
+        Time: 10000
       - Level: 2
-        Time: 160000
+        Time: 10000
       - Level: 3
-        Time: 200000
+        Time: 10000
       - Level: 4
-        Time: 240000
+        Time: 10000
       - Level: 5
-        Time: 280000
+        Time: 10000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 10
-        - Level: 2
-          Amount: 12
-        - Level: 3
-          Amount: 14
-        - Level: 4
-          Amount: 16
-        - Level: 5
-          Amount: 18
+      SpCost: 30
   - Id: 2223
     Name: WL_SUMMONBL
     Description: Summon Lightning Ball

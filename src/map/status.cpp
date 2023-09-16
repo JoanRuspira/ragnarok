@@ -14012,8 +14012,6 @@ TIMER_FUNC(status_change_timer){
 	case SC_SPHERE_4:
 	case SC_SPHERE_5:
 		if( --(sce->val4) >= 0 ) {
-			if( !status_charge(bl, 0, 1) )
-				break;
 			sc_timer_next(1000 + tick);
 			return 0;
 		}
