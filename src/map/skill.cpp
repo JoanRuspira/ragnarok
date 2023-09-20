@@ -2114,9 +2114,6 @@ int64 skill_attack (int attack_type, struct block_list* src, struct block_list *
 		case WL_CHAINLIGHTNING_ATK:
 			dmg.dmotion = clif_skill_damage(src,bl,tick,dmg.amotion,dmg.dmotion,damage,1,WL_CHAINLIGHTNING_ATK,-2,DMG_SINGLE);
 			break;
-		case WL_TETRAVORTEX_FIRE:
-			dmg.dmotion = clif_skill_damage(dsrc, bl, tick, dmg.amotion, dmg.dmotion, damage, dmg.div_, WL_TETRAVORTEX_WIND, -1, DMG_SPLASH);
-			break;
 		case LG_SHIELDPRESS:
 			dmg.dmotion = clif_skill_damage(dsrc, bl, tick, status_get_amotion(src), dmg.dmotion, damage, dmg.div_, skill_id, -1, DMG_SINGLE);
 			break;
@@ -2869,24 +2866,6 @@ static TIMER_FUNC(skill_timerskill){
 				case WL_TETRAVORTEX_GROUND:
 					clif_skill_nodamage(src,target,skl->skill_id,skl->skill_lv,1);
 					skill_attack(BF_MAGIC,src,src,target,skl->skill_id,skl->skill_lv,tick,skl->flag|SD_LEVEL|SD_ANIMATION);
-					if (skl->type >= 3) { // Final Hit
-						if (!status_isdead(target)) { // Final Status Effect
-							int effects[4] = { SC_BURNING, SC_FREEZING, SC_BLEEDING, SC_STUN },
-								applyeffects[4] = { 0, 0, 0, 0 },
-								i, j = 0, k = 0;
-							for(i = 1; i <= 8; i = i + i) {
-								if (skl->x&i) {
-									applyeffects[j] = effects[k];
-									j++;
-								}
-								k++;
-							}
-							if (j) {
-								i = applyeffects[rnd()%j];
-								sc_start(src, target, static_cast<sc_type>(i), 100, skl->skill_lv, (i == SC_BURNING ? 18000 : (i == SC_FREEZING ? 27000 : (i == SC_BLEEDING ? 108000 : 4500))));
-							}
-						}
-					}
 					break;
 				case NPC_REVERBERATION_ATK:
 					skill_castend_damage_id(src,target,skl->skill_id,skl->skill_lv,tick,skl->flag|SD_LEVEL|SD_ANIMATION);

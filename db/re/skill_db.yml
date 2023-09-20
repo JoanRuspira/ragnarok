@@ -17814,7 +17814,7 @@ Body:
   - Id: 2217
     Name: WL_TETRAVORTEX
     Description: Tetra Vortex
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Magic
     TargetType: Attack
     Flags:
@@ -17822,76 +17822,16 @@ Body:
     Range: 11
     Hit: Single
     HitCount: 1
-    SplashArea:
-      - Level: 1
-        Area: 0
-      - Level: 2
-        Area: 0
-      - Level: 3
-        Area: 0
-      - Level: 4
-        Area: 0
-      - Level: 5
-        Area: 0
-      - Level: 6
-        Area: 1
-      - Level: 7
-        Area: 1
-      - Level: 8
-        Area: 2
-      - Level: 9
-        Area: 2
-      - Level: 10
-        Area: 3
+    SplashArea: 5
     CopyFlags:
       Skill:
         Reproduce: true
     CastCancel: true
-    CastTime: # !TODO: Confirm cast time
-      - Level: 1
-        Time: 5000
-      - Level: 2
-        Time: 6000
-      - Level: 3
-        Time: 7000
-      - Level: 4
-        Time: 8000
-      - Level: 5
-        Time: 9000
-      - Level: 6
-        Time: 9000
-      - Level: 7
-        Time: 9000
-      - Level: 8
-        Time: 9000
-      - Level: 9
-        Time: 9000
-      - Level: 10
-        Time: 9000
+    CastTime: 7000
     AfterCastActDelay: 2000
-    Cooldown: 15000
+    Cooldown: 7000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 120
-        - Level: 2
-          Amount: 150
-        - Level: 3
-          Amount: 180
-        - Level: 4
-          Amount: 210
-        - Level: 5
-          Amount: 240
-        - Level: 6
-          Amount: 200
-        - Level: 7
-          Amount: 240
-        - Level: 8
-          Amount: 280
-        - Level: 9
-          Amount: 320
-        - Level: 10
-          Amount: 360
+      SpCost: 120
   - Id: 2218
     Name: WL_TETRAVORTEX_FIRE
     Description: Tetra Vortex Fire
@@ -17968,15 +17908,15 @@ Body:
         Reproduce: true
     Duration1:
       - Level: 1
-        Time: 10000
+        Time: 60000
       - Level: 2
-        Time: 10000
+        Time: 60000
       - Level: 3
-        Time: 10000
+        Time: 60000
       - Level: 4
-        Time: 10000
+        Time: 60000
       - Level: 5
-        Time: 10000
+        Time: 60000
     Requires:
       SpCost: 30
   - Id: 2223

@@ -49,11 +49,41 @@ int WizardSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 		case SO_PSYCHIC_WAVE:
 			return calculate_psychic_wave_atk_ratio(skill_lv);
 			break;
+		case WL_TETRAVORTEX_FIRE:
+		case WL_TETRAVORTEX_WATER:
+		case WL_TETRAVORTEX_WIND:
+		case WL_TETRAVORTEX_GROUND:
+			return calculate_tetra_vortex_atk_ratio(skill_lv);
+			break;
 		default:
 			return 0;
 			break;
 	}
 }
+
+int WizardSkillAttackRatioCalculator::calculate_tetra_vortex_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 25;
+			break;
+		case 2:
+			ratio = 50;
+			break;
+		case 3:
+			ratio = 75;
+			break;
+		case 4:
+			ratio = 100;
+			break;
+		case 5:
+			ratio = 125;
+			break;
+		}
+	return ratio;
+}
+
 
 int WizardSkillAttackRatioCalculator::calculate_void_expansion_atk_ratio(int skill_lv)
 {

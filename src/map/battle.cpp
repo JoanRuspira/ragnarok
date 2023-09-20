@@ -4901,6 +4901,10 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case HW_MAGICCRASHER:
 					case SO_PSYCHIC_WAVE:
 					case WL_SOULEXPANSION:
+					case WL_TETRAVORTEX_FIRE:
+					case WL_TETRAVORTEX_WATER:
+					case WL_TETRAVORTEX_WIND:
+					case WL_TETRAVORTEX_GROUND:
 						skillratio += WizardSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
 					case RK_DRAGONBREATH_WATER:
@@ -5060,15 +5064,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case WL_EARTHSTRAIN:
 						skillratio += -100 + 1000 + 600 * skill_lv;
 						RE_LVL_DMOD(100);
-						break;
-					case WL_TETRAVORTEX_FIRE:
-					case WL_TETRAVORTEX_WATER:
-					case WL_TETRAVORTEX_WIND:
-					case WL_TETRAVORTEX_GROUND:
-						if (skill_lv < 6)
-							skillratio += -100 + 500 + 500 * skill_lv;
-						else
-							skillratio += -100 + 3000 + 200 * (skill_lv - 5);
 						break;
 					case WL_SUMMON_ATK_FIRE:
 					case WL_SUMMON_ATK_WATER:
