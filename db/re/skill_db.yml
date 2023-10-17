@@ -9960,7 +9960,7 @@ Body:
   - Id: 366
     Name: HW_MAGICPOWER
     Description: Mystical Amplification
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Magic
     TargetType: Self
     DamageFlags:
@@ -17388,7 +17388,7 @@ Body:
     HitCount: 1
     CastCancel: true
     CastTime: 1000
-    AfterCastActDelay: 1000
+    AfterCastActDelay: 3000
     Duration1:
       - Level: 1
         Time: 60000
@@ -17400,29 +17400,19 @@ Body:
         Time: 150000
       - Level: 5
         Time: 180000
-    Cooldown:
-      - Level: 1
-        Time: 50000
-      - Level: 2
-        Time: 80000
-      - Level: 3
-        Time: 110000
-      - Level: 4
-        Time: 140000
-      - Level: 5
-        Time: 170000
+    Cooldown: 25000
     Requires:
       SpCost:
         - Level: 1
-          Amount: 100
+          Amount: 125
         - Level: 2
-          Amount: 120
+          Amount: 125
         - Level: 3
-          Amount: 140
+          Amount: 125
         - Level: 4
-          Amount: 160
+          Amount: 125
         - Level: 5
-          Amount: 180
+          Amount: 125
   - Id: 2207
     Name: WL_SIENNAEXECRATE
     Description: Sienna Execrate
