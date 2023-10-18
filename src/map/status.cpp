@@ -10192,11 +10192,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 		case SC_MAGICPOWER:
 			// val1: Skill lv
 			val2 = 1; // Lasts 1 invocation
-#ifdef RENEWAL
 			val3 = 10 * val1; // Matk% increase
-#else
-			val3 = 5 * val1; // Matk% increase
-#endif
 			val4 = 0; // 0 = ready to be used, 1 = activated and running
 			break;
 		case SC_HURRICANEFURY:

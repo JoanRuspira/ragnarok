@@ -9967,34 +9967,12 @@ Body:
       NoDamage: true
     Hit: Single
     HitCount: 1
-    CastTime: 700
+    CastTime: 0
+    Cooldown: 1000
+    AfterCastActDelay: 400
     Duration1: 30000
-    CastTimeFlags:
-      IgnoreDex: true
-      IgnoreStatus: true
-      IgnoreItemBonus: true
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 14
-        - Level: 2
-          Amount: 18
-        - Level: 3
-          Amount: 22
-        - Level: 4
-          Amount: 26
-        - Level: 5
-          Amount: 30
-        - Level: 6
-          Amount: 34
-        - Level: 7
-          Amount: 38
-        - Level: 8
-          Amount: 42
-        - Level: 9
-          Amount: 46
-        - Level: 10
-          Amount: 50
+      SpCost: 70
   - Id: 367
     Name: PA_PRESSURE
     Description: Gloria Domini
