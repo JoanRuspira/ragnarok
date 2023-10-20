@@ -4892,6 +4892,9 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 						break;
 					case WZ_JUPITEL:
 					case WL_CRIMSONROCK:
+					case HW_SHADOWBOMB:
+					case WZ_LIGHTNINGROD:
+					case HW_PHANTOMSPEAR:
 					case WZ_EARTHSPIKE:
 					case WZ_ICEBERG:
 					case SL_SMA:

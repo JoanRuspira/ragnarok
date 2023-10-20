@@ -14,6 +14,7 @@ class WizardSkillAttackRatioCalculator
 
 	private:
 		static int calculate_bolt2_attack(int skill_lv);
+		static int calculate_bolt3_attack(int skill_lv);
 		static int calculate_corrupt_atk_ratio(int skill_lv);
 		static int calculate_extreme_vacuum_atk_ratio(int skill_lv);
 		static int calculate_land_of_evil_atk_ratio(int skill_lv);

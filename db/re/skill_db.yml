@@ -2275,7 +2275,7 @@ Body:
       SpCost: 75
   - Id: 844
     Name: WZ_CORRUPT
-    Description: Corrupt
+    Description: Icon of Sin
     MaxLevel: 5
     Type: Magic
     TargetType: Attack
@@ -2332,7 +2332,7 @@ Body:
       SpCost: 70
   - Id: 846
     Name: WZ_LANDOFEVIL
-    Description: Icon of Sin
+    Description: Shadow Bomb
     MaxLevel: 5
     Type: Magic
     TargetType: Attack
@@ -3031,6 +3031,108 @@ Body:
     AfterCastActDelay: 1000
     Requires:
       SpCost: 60
+  - Id: 882
+    Name: HW_SHADOWBOMB
+    Description: Shadow Bomb
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    DamageFlags:
+      Splash: false
+    Flags:
+      AlterRangeRadius: true
+    Range: 7
+    Hit: Multi_Hit
+    HitCount:
+      - Level: 1
+        Count: 1
+      - Level: 2
+        Count: 2
+      - Level: 3
+        Count: 3
+      - Level: 4
+        Count: 4
+      - Level: 5
+        Count: 5
+    Element: Dark
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    CastTime: 7000
+    AfterCastActDelay: 2000
+    Duration1: 5000
+    Cooldown: 5000
+    Requires:
+      SpCost: 95
+  - Id: 883
+    Name: HW_PHANTOMSPEAR
+    Description: Phantom Spear
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    DamageFlags:
+      Splash: false
+    Flags:
+      AlterRangeRadius: true
+    Range: 7
+    Hit: Multi_Hit
+    HitCount:
+      - Level: 1
+        Count: 1
+      - Level: 2
+        Count: 2
+      - Level: 3
+        Count: 3
+      - Level: 4
+        Count: 4
+      - Level: 5
+        Count: 5
+    Element: Ghost
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    CastTime: 7000
+    AfterCastActDelay: 2000
+    Duration1: 5000
+    Cooldown: 5000
+    Requires:
+      SpCost: 95
+  - Id: 884
+    Name: WZ_LIGHTNINGROD
+    Description: Lightning Rod
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    DamageFlags:
+      Splash: false
+    Flags:
+      AlterRangeRadius: true
+    Range: 7
+    Hit: Multi_Hit
+    HitCount:
+      - Level: 1
+        Count: 1
+      - Level: 2
+        Count: 2
+      - Level: 3
+        Count: 3
+      - Level: 4
+        Count: 4
+      - Level: 5
+        Count: 5
+    Element: Wind
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    CastTime: 7000
+    AfterCastActDelay: 2000
+    Duration1: 5000
+    Cooldown: 5000
+    Requires:
+      SpCost: 65
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -4043,6 +4145,7 @@ Body:
       IsAutoShadowSpell: true
     Range: 9
     Hit: Multi_Hit
+    AfterCastActDelay: 2000
     HitCount:
       - Level: 1
         Count: 1
@@ -17809,6 +17912,7 @@ Body:
     Range: 11
     Hit: Single
     HitCount: 1
+    SplashArea: 5
     Element: Fire
     CopyFlags:
       Skill:
@@ -17824,6 +17928,7 @@ Body:
     Range: 11
     Hit: Single
     HitCount: 1
+    SplashArea: 5
     Element: Water
     CopyFlags:
       Skill:
@@ -17839,6 +17944,7 @@ Body:
     Range: 11
     Hit: Single
     HitCount: 1
+    SplashArea: 5
     Element: Wind
     CopyFlags:
       Skill:
@@ -17854,6 +17960,7 @@ Body:
     Range: 11
     Hit: Single
     HitCount: 1
+    SplashArea: 5
     Element: Earth
     CopyFlags:
       Skill:

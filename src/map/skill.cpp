@@ -1806,6 +1806,9 @@ void skill_attack_blow(struct block_list *src, struct block_list *dsrc, struct b
 		case WZ_ICEBERG:
 		case MG_EARTHBOLT:
 		case WL_CRIMSONROCK:
+		case HW_SHADOWBOMB:
+		case WZ_LIGHTNINGROD:
+		case HW_PHANTOMSPEAR:
 			if (!battle_config.arrow_shower_knockback && (skill_id == AC_SHOWER || skill_id == HT_PHANTASMIC))
 				dir = map_calc_dir(target, src->x, src->y);
 			else
@@ -3712,6 +3715,9 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case SL_SMA:
 	case WZ_ICEBERG:
 	case WL_CRIMSONROCK:
+	case HW_SHADOWBOMB:
+	case WZ_LIGHTNINGROD:
+	case HW_PHANTOMSPEAR:
 	case WL_JACKFROST:
 	case RA_ARROWSTORM:
 	case RA_WUGDASH:
@@ -3763,7 +3769,9 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 			clif_specialeffect(bl, EF_ADO_STR, AREA); //ado.str
 			clif_soundeffectall(&sd->bl, "penitentia.wav", 0, AREA);
 		}
-
+		if(skill_id == HW_SHADOWBOMB)
+			clif_soundeffectall(&sd->bl, "hw_shadowbomb.wav", 0, AREA);
+		
 		if( flag&1 ) {//Recursive invocation
 			int sflag = skill_area_temp[0] & 0xFFF;
 			int heal = 0;
@@ -3827,6 +3835,9 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 				case MG_EARTHBOLT:
 				case WZ_ICEBERG:
 				case WL_CRIMSONROCK:
+				case HW_SHADOWBOMB:
+				case WZ_LIGHTNINGROD:
+				case HW_PHANTOMSPEAR:
 					skill_area_temp[4] = bl->x;
 					skill_area_temp[5] = bl->y;
 					break;

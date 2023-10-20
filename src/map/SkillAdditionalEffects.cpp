@@ -381,6 +381,15 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 			clif_specialeffect(bl, EF_DECAGILITY, AREA);
 			sc_start(src, bl, SC_DECREASEAGI, 100, -50, skill_get_time(skill_id, skill_lv));
 			break;
+		case HW_SHADOWBOMB:
+			WizardAdditionalEffectsCalculator::apply_shadow_bomb_additional_effect(src, bl, skill_lv);
+			break;
+		case HW_PHANTOMSPEAR:
+			WizardAdditionalEffectsCalculator::apply_phantom_spear_additional_effect(src, bl, skill_lv);
+			break;
+		case WZ_LIGHTNINGROD:
+			WizardAdditionalEffectsCalculator::apply_lightning_rod_additional_effect(src, bl, skill_lv);
+			break;
 		case SR_DRAGONCOMBO:
 		{
 			int percentage = rand()%(100) + 1;

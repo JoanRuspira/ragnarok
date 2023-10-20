@@ -2181,6 +2181,9 @@ enum e_skill {
 	HP_VITUPERATUM = 879,
 	AB_ULTOR = 880,
 	HP_JUDEX = 881,
+	HW_SHADOWBOMB = 882,
+	HW_PHANTOMSPEAR = 883,
+	WZ_LIGHTNINGROD = 884,
 };
 
 /// The client view ids for land skills.

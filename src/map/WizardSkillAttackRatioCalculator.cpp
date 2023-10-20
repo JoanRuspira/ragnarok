@@ -21,6 +21,20 @@ int WizardSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 		case WL_CRIMSONROCK:
 			return calculate_bolt2_attack(skill_lv);
 			break;
+		case HW_SHADOWBOMB:
+			clif_specialeffect(target, 1347, AREA);
+			clif_specialeffect(target, 894, AREA);
+			return calculate_bolt3_attack(skill_lv);
+			break;
+		case WZ_LIGHTNINGROD:
+			clif_specialeffect(target, 30, AREA);
+			return calculate_bolt2_attack(skill_lv);
+			break;
+		case HW_PHANTOMSPEAR:
+			clif_specialeffect(target, 1353, AREA);
+			clif_specialeffect(target, 930, AREA);
+			return calculate_bolt3_attack(skill_lv);
+			break;
 		case WZ_JUPITEL:
 			return calculate_bolt2_attack(skill_lv);
 			break;
@@ -114,17 +128,22 @@ int WizardSkillAttackRatioCalculator::calculate_bolt2_attack(int skill_lv)
 	return ratio;
 }
 
+int WizardSkillAttackRatioCalculator::calculate_bolt3_attack(int skill_lv)
+{
+	int ratio = 70;
+	return ratio;
+}
+
 void WizardSkillAttackRatioCalculator::add_land_of_evil_special_effects(struct block_list *target)
 {
-    clif_specialeffect(target, 1234, AREA);
-    clif_specialeffect(target, 124, AREA);
-    clif_specialeffect(target, 1277, AREA);
+    clif_specialeffect(target, 1347, AREA);
 }
 
 void WizardSkillAttackRatioCalculator::add_corrupt_special_effects(struct block_list *target)
 {
-    clif_specialeffect(target, 1238, AREA);
-    clif_specialeffect(target, 125, AREA);
+    clif_specialeffect(target, 1234, AREA);
+    clif_specialeffect(target, 124, AREA);
+    clif_specialeffect(target, 1277, AREA);
 }
 
 void WizardSkillAttackRatioCalculator::add_extreme_vacuum_special_effects(struct block_list *target)
