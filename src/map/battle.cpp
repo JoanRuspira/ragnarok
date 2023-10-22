@@ -505,6 +505,10 @@ int64 battle_attr_fix(struct block_list *src, struct block_list *target, int64 d
 				if (sc->data[SC_LAUDATEDOMINIUM])
 					ratio += sc->data[SC_LAUDATEDOMINIUM]->val3;
 				break;
+			case ELE_DARK:
+				if (sc->data[SC_TELEKINESIS_INTENSE])
+					ratio += sc->data[SC_TELEKINESIS_INTENSE]->val3;
+				break;
 			case ELE_HOLY:
 				if (sc->data[SC_LAUDATEDOMINIUM])
 					ratio += sc->data[SC_LAUDATEDOMINIUM]->val3;

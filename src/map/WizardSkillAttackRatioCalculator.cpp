@@ -136,7 +136,7 @@ int WizardSkillAttackRatioCalculator::calculate_bolt3_attack(int skill_lv)
 
 void WizardSkillAttackRatioCalculator::add_land_of_evil_special_effects(struct block_list *target)
 {
-    clif_specialeffect(target, 1347, AREA);
+    clif_specialeffect(target, 1350, AREA);
 }
 
 void WizardSkillAttackRatioCalculator::add_corrupt_special_effects(struct block_list *target)

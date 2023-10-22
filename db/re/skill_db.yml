@@ -2293,10 +2293,10 @@ Body:
       Skill:
         Reproduce: true
     CastCancel: true
-    Cooldown: 2000
+    Cooldown: 4000
     AfterCastActDelay: 1000
     Requires:
-      SpCost: 35
+      SpCost: 65
   - Id: 845
     Name: WZ_EXTREMEVACUUM
     Description: Extreme Vacuum
@@ -2329,7 +2329,7 @@ Body:
     CastTime: 5000
     AfterCastActDelay: 1000
     Requires:
-      SpCost: 70
+      SpCost: 75
   - Id: 846
     Name: WZ_LANDOFEVIL
     Description: Shadow Bomb
@@ -2365,7 +2365,7 @@ Body:
     CastTime: 5000
     AfterCastActDelay: 1000
     Requires:
-      SpCost: 70
+      SpCost: 75
   - Id: 847
     Name: AM_EL_ACTION
     Description: Elemental Action
@@ -12616,11 +12616,12 @@ Body:
       Skill:
         Plagiarism: true
         Reproduce: true
-    CastTime: 5000
+    CastTime: 2000
     AfterCastActDelay: 2000
     Duration1: 3000
+    Cooldown: 5000
     Requires:
-      SpCost: 60
+      SpCost: 65
   - Id: 470
     Name: SL_SWOO
     Description: Eswoo
@@ -28147,21 +28148,11 @@ Body:
       NoDamage: true
     Hit: Single
     HitCount: 1
-    AfterCastActDelay: 500
-    Duration1: 60000
-    Cooldown: 300000
+    AfterCastActDelay: 1000
+    Duration1: 30000
+    Cooldown: 120000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 100
-        - Level: 2
-          Amount: 150
-        - Level: 3
-          Amount: 200
-        - Level: 4
-          Amount: 250
-        - Level: 5
-          Amount: 300
+      SpCost: 250
   - Id: 5013
     Name: LG_KINGS_GRACE
     Description: King's Grace

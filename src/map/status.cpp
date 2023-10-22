@@ -11635,9 +11635,6 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			val4 = tick / tick_time;
 			break;
 		case SC_TELEKINESIS_INTENSE:
-			val2 = 10 * val1; // sp consum / casttime reduc %
-			val3 = 40 * val1; // magic dmg bonus
-			break;
 		case SC_LAUDATEDOMINIUM:
 			val3 = 20 * val1; // magic dmg bonus
 			break;

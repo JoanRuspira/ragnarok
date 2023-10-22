@@ -3771,6 +3771,8 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 		}
 		if(skill_id == HW_SHADOWBOMB)
 			clif_soundeffectall(&sd->bl, "hw_shadowbomb.wav", 0, AREA);
+		if(skill_id == WZ_LANDOFEVIL)
+			clif_soundeffectall(&sd->bl, "from_the_abyss.wav", 0, AREA);
 		
 		if( flag&1 ) {//Recursive invocation
 			int sflag = skill_area_temp[0] & 0xFFF;
@@ -15834,8 +15836,6 @@ struct s_skill_condition skill_get_requirement(struct map_session_data* sd, uint
 			req.sp += req.sp / 4;
 		if( sc->data[SC_OFFERTORIUM]  && ( skill_id == AL_HEAL2 || skill_id == AB_CHEAL || skill_id == AB_HIGHNESSHEAL))
 			req.sp += req.sp * sc->data[SC_OFFERTORIUM]->val3 / 100;
-		if( sc->data[SC_TELEKINESIS_INTENSE] && skill_get_ele(skill_id, skill_lv) == ELE_GHOST)
-			req.sp -= req.sp * sc->data[SC_TELEKINESIS_INTENSE]->val2 / 100;
 #ifdef RENEWAL
 		if (sc->data[SC_ADAPTATION] && (skill_get_inf2(skill_id, INF2_ISSONG)))
 			req.sp -= req.sp * 20 / 100;
@@ -16169,8 +16169,6 @@ int skill_vfcastfix(struct block_list *bl, double time, uint16 skill_id, uint16 
 			VARCAST_REDUCTION(50);
 		if (sc->data[SC_WATER_INSIGNIA] && sc->data[SC_WATER_INSIGNIA]->val1 == 3 && skill_get_type(skill_id) == BF_MAGIC && skill_get_ele(skill_id, skill_lv) == ELE_WATER)
 			VARCAST_REDUCTION(30); //Reduces 30% Variable Cast Time of magic Water spells.
-		if (sc->data[SC_TELEKINESIS_INTENSE])
-			VARCAST_REDUCTION(sc->data[SC_TELEKINESIS_INTENSE]->val2);
 		if (sc->data[SC_SOULFAIRY])
 			VARCAST_REDUCTION(sc->data[SC_SOULFAIRY]->val3);
 		if (sc->data[SC_EP16_2_BUFF_AC])
