@@ -3701,6 +3701,9 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case HP_JUDEX:
 	case WZ_EXTREMEVACUUM:
 	case WZ_LANDOFEVIL:
+	case HW_DOOM:
+	case HW_DOOM_GHOST:
+	case SO_DIAMONDDUST:
 	case HP_PENITENTIA:
 	case HW_MAGICCRASHER:
 	case SO_PSYCHIC_WAVE:
@@ -3773,7 +3776,8 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 			clif_soundeffectall(&sd->bl, "hw_shadowbomb.wav", 0, AREA);
 		if(skill_id == WZ_LANDOFEVIL)
 			clif_soundeffectall(&sd->bl, "from_the_abyss.wav", 0, AREA);
-		
+		if(skill_id == HW_DOOM)
+			skill_addtimerskill(src, tick + 500, bl->id, 0, 0, HW_DOOM_GHOST, skill_lv, BF_MAGIC, flag);
 		if( flag&1 ) {//Recursive invocation
 			int sflag = skill_area_temp[0] & 0xFFF;
 			int heal = 0;
@@ -4285,6 +4289,8 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case WL_TETRAVORTEX_GROUND:
 		skill_addtimerskill(src, tick + skill_area_temp[0] * 200, bl->id, skill_area_temp[1], 0, skill_id, skill_lv, 0, flag);
 		break;
+
+
 
 	case WL_TETRAVORTEX:
 		if (sd == nullptr) { // Monster usage
@@ -11504,6 +11510,8 @@ int skill_castend_pos2(struct block_list* src, int x, int y, uint16 skill_id, ui
 	case SO_PSYCHIC_WAVE:
 	case HP_PENITENTIA:
 	case WZ_LANDOFEVIL:
+	case HW_DOOM:
+	case HW_DOOM_GHOST:
 	case WZ_HEAVENDRIVE:
 	case PR_SANCTUARY:
 	case PR_MAGNUS:

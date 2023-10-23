@@ -53,6 +53,14 @@ int WizardSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 			add_land_of_evil_special_effects(target);
 			return calculate_land_of_evil_atk_ratio(skill_lv);
 			break;
+		case HW_DOOM:
+			clif_specialeffect(target, 1351, AREA); //new_armscannon_07_clock_up
+			return calculate_land_of_evil_atk_ratio(skill_lv);
+			break;
+		case HW_DOOM_GHOST:
+			clif_specialeffect(target, 1352, AREA); //new_armscannon_07_clock_down
+			return calculate_land_of_evil_atk_ratio(skill_lv);
+			break;
 		case WL_SOULEXPANSION:
 			return calculate_void_expansion_atk_ratio(skill_lv);
 			break;

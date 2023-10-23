@@ -4905,6 +4905,8 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case WZ_CORRUPT:
 					case WZ_EXTREMEVACUUM:
 					case WZ_LANDOFEVIL:
+					case HW_DOOM:
+					case HW_DOOM_GHOST:
 					case HW_MAGICCRASHER:
 					case SO_PSYCHIC_WAVE:
 					case WL_SOULEXPANSION:

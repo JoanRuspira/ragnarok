@@ -3133,6 +3133,52 @@ Body:
     Cooldown: 5000
     Requires:
       SpCost: 65
+  - Id: 885
+    Name: HW_DOOM
+    Description: Doom
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 7
+    Hit: Multi_Hit
+    HitCount: -2
+    Element: Dark
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    Cooldown: 5000
+    CastTime: 3000
+    AfterCastActDelay: 1000
+    Requires:
+      SpCost: 150
+  - Id: 886
+    Name: HW_DOOM_GHOST
+    Description: Doom
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 7
+    Hit: Multi_Hit
+    HitCount: -2
+    Element: Ghost
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    Cooldown: 0
+    CastTime: 0
+    AfterCastActDelay: 0
+    Requires:
+      SpCost: 0
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death

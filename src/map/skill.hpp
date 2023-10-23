@@ -2184,6 +2184,8 @@ enum e_skill {
 	HW_SHADOWBOMB = 882,
 	HW_PHANTOMSPEAR = 883,
 	WZ_LIGHTNINGROD = 884,
+	HW_DOOM = 885,
+	HW_DOOM_GHOST = 886
 };
 
 /// The client view ids for land skills.
