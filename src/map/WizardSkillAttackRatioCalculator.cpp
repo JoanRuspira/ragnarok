@@ -53,6 +53,11 @@ int WizardSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 			add_land_of_evil_special_effects(target);
 			return calculate_land_of_evil_atk_ratio(skill_lv);
 			break;
+		case HW_ASTRALSTRIKE:
+			clif_specialeffect(target, 1373, AREA); //new_banishingpoint_01
+			clif_specialeffect(target, 1374, AREA); //new_banishingpoint_05
+			return calculate_astral_strike_atk_ratio(skill_lv);
+			break;
 		case HW_DOOM:
 			clif_specialeffect(target, 1351, AREA); //new_armscannon_07_clock_up
 			return calculate_land_of_evil_atk_ratio(skill_lv);
@@ -168,6 +173,29 @@ void WizardSkillAttackRatioCalculator::add_extreme_vacuum_special_effects(struct
 void WizardSkillAttackRatioCalculator::add_magic_crasher_special_effects(struct block_list *target)
 {
     clif_specialeffect(target, EF_SANDMAN, AREA);
+}
+
+int WizardSkillAttackRatioCalculator::calculate_astral_strike_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 25;
+			break;
+		case 2:
+			ratio = 125;
+			break;
+		case 3:
+			ratio = 225;
+			break;
+		case 4:
+			ratio = 325;
+			break;
+		case 5:
+			ratio = 425;
+			break;
+		}
+	return ratio;
 }
 
 int WizardSkillAttackRatioCalculator::calculate_land_of_evil_atk_ratio(int skill_lv)

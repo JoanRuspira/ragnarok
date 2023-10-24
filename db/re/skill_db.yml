@@ -3202,6 +3202,42 @@ Body:
     AfterCastActDelay: 2000
     Requires:
       SpCost: 90
+  - Id: 888
+    Name: HW_ASTRALSTRIKE
+    Description: Astral Strike
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 7
+    Hit: Multi_Hit
+    HitCount: -2
+    DamageFlags:
+      Splash: true
+    SplashArea:
+      - Level: 1
+        Area: 1
+      - Level: 2
+        Area: 2
+      - Level: 3
+        Area: 3
+      - Level: 4
+        Area: 4
+      - Level: 5
+        Area: 5
+    Element: Neutral
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    Cooldown: 5000
+    CastTime: 5000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 90
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
