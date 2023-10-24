@@ -3179,6 +3179,29 @@ Body:
     AfterCastActDelay: 0
     Requires:
       SpCost: 0
+  - Id: 887
+    Name: HW_DIAMONDDUST
+    Description: Diamond Dust
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 7
+    Hit: Multi_Hit
+    HitCount: -4
+    Element: Neutral
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    Cooldown: 5000
+    CastTime: 5000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 90
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death

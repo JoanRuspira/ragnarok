@@ -22,6 +22,7 @@ class WizardSkillAttackRatioCalculator
 		static int calculate_magic_crasher_atk_ratio(int skill_lv);
 		static int calculate_psychic_wave_atk_ratio(int skill_lv);
 		static int calculate_tetra_vortex_atk_ratio(int skill_lv);
+		static int calculate_diamond_dust_atk_ratio(int skill_lv);
 		static void add_iceberg_special_effects(struct block_list *target);
 		static void add_stalagmite_special_effects(struct block_list *target);
 		static void add_corrupt_special_effects(struct block_list *target);

@@ -61,6 +61,12 @@ int WizardSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 			clif_specialeffect(target, 1352, AREA); //new_armscannon_07_clock_down
 			return calculate_land_of_evil_atk_ratio(skill_lv);
 			break;
+		case HW_DIAMONDDUST:
+			clif_specialeffect(target, 1282, AREA); 
+			clif_specialeffect(target, 1283, AREA); 
+			clif_specialeffect(target, 1284, AREA); 
+			return calculate_diamond_dust_atk_ratio(skill_lv);
+			break;
 		case WL_SOULEXPANSION:
 			return calculate_void_expansion_atk_ratio(skill_lv);
 			break;
@@ -182,6 +188,29 @@ int WizardSkillAttackRatioCalculator::calculate_land_of_evil_atk_ratio(int skill
 			break;
 		case 5:
 			ratio = 425;
+			break;
+		}
+	return ratio;
+}
+
+int WizardSkillAttackRatioCalculator::calculate_diamond_dust_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 100;
+			break;
+		case 2:
+			ratio = 300;
+			break;
+		case 3:
+			ratio = 500;
+			break;
+		case 4:
+			ratio = 700;
+			break;
+		case 5:
+			ratio = 900;
 			break;
 		}
 	return ratio;

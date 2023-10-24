@@ -3703,6 +3703,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case WZ_LANDOFEVIL:
 	case HW_DOOM:
 	case HW_DOOM_GHOST:
+	case HW_DIAMONDDUST:
 	case SO_DIAMONDDUST:
 	case HP_PENITENTIA:
 	case HW_MAGICCRASHER:
@@ -3776,6 +3777,8 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 			clif_soundeffectall(&sd->bl, "hw_shadowbomb.wav", 0, AREA);
 		if(skill_id == WZ_LANDOFEVIL)
 			clif_soundeffectall(&sd->bl, "from_the_abyss.wav", 0, AREA);
+		if(skill_id == HW_DIAMONDDUST)
+			clif_soundeffectall(&sd->bl, "diamonddust.wav", 0, AREA);
 		if(skill_id == HW_DOOM)
 			skill_addtimerskill(src, tick + 500, bl->id, 0, 0, HW_DOOM_GHOST, skill_lv, BF_MAGIC, flag);
 		if( flag&1 ) {//Recursive invocation
@@ -11512,6 +11515,7 @@ int skill_castend_pos2(struct block_list* src, int x, int y, uint16 skill_id, ui
 	case WZ_LANDOFEVIL:
 	case HW_DOOM:
 	case HW_DOOM_GHOST:
+	case HW_DIAMONDDUST:
 	case WZ_HEAVENDRIVE:
 	case PR_SANCTUARY:
 	case PR_MAGNUS:
