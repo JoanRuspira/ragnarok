@@ -3233,11 +3233,11 @@ Body:
       Skill:
         Reproduce: true
     CastCancel: true
-    Cooldown: 5000
-    CastTime: 5000
+    Cooldown: 20000
+    CastTime: 7000
     AfterCastActDelay: 2000
     Requires:
-      SpCost: 90
+      SpCost: 120
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -17997,6 +17997,8 @@ Body:
     Flags:
       AlterRangeRadius: true
     Range: 11
+    DamageFlags:
+      Splash: true
     Hit: Single
     HitCount: 1
     SplashArea: 5
@@ -18018,6 +18020,8 @@ Body:
     Range: 11
     Hit: Single
     HitCount: 1
+    DamageFlags:
+      Splash: true
     SplashArea: 5
     Element: Fire
     CopyFlags:
@@ -18034,6 +18038,8 @@ Body:
     Range: 11
     Hit: Single
     HitCount: 1
+    DamageFlags:
+      Splash: true
     SplashArea: 5
     Element: Water
     CopyFlags:
@@ -18050,6 +18056,8 @@ Body:
     Range: 11
     Hit: Single
     HitCount: 1
+    DamageFlags:
+      Splash: true
     SplashArea: 5
     Element: Wind
     CopyFlags:
@@ -18066,6 +18074,8 @@ Body:
     Range: 11
     Hit: Single
     HitCount: 1
+    DamageFlags:
+      Splash: true
     SplashArea: 5
     Element: Earth
     CopyFlags:

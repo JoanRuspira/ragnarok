@@ -180,19 +180,19 @@ int WizardSkillAttackRatioCalculator::calculate_astral_strike_atk_ratio(int skil
 	int ratio = 0;
 	switch (skill_lv) {
 		case 1:
-			ratio = 25;
+			ratio = -50;
 			break;
 		case 2:
-			ratio = 125;
+			ratio = 150;
 			break;
 		case 3:
-			ratio = 225;
+			ratio = 350;
 			break;
 		case 4:
-			ratio = 325;
+			ratio = 550;
 			break;
 		case 5:
-			ratio = 425;
+			ratio = 750;
 			break;
 		}
 	return ratio;
