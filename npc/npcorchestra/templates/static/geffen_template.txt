@@ -966,11 +966,6 @@ geffen,118,153,0	script	Geffen Villager#geff:npcid	spriteid,{
 	end;
 }
 
-gef_tower,111,37,5	script	Wizard Guildmaster#geff:npcid	735,{
-	npctalk "I will make you a wizard.";
-	end;
-}
-
 gef_tower,107,28,1	script	Geffen Villager#geff:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;

@@ -67,7 +67,7 @@
 		close;
 	}
 
-	if (BaseJob == Job_Priest || BaseJob == Job_Monk || BaseJob == Job_HighPriest || BaseJob == Job_Champion) {
+	if (BaseJob == Job_Priest || BaseJob == Job_Monk || BaseJob == Job_High_Priest || BaseJob == Job_Champion) {
 		mes "[Acolyte Guildmaster]";
 		mes "Ah! An experienced member of the guild!";
 		mes "Are you here to help train the new members?";

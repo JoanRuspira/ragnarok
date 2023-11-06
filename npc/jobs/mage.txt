@@ -68,7 +68,7 @@
 		close;
 	}
 
-	if (BaseJob == Job_Knight || BaseJob == Job_Crusader || BaseJob == Job_LordKnight || BaseJob == Job_Paladin) {
+	if (BaseJob == Job_Wizard || BaseJob == Job_Sage || BaseJob == Job_High_Wizard || BaseJob == Job_Professor) {
 		mes "[Mage Guildmaster]";
 		mes "Ah! An experienced member of the guild!";
 		mes "Are you here to help train the younger ones?";

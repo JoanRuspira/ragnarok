@@ -1,0 +1,81 @@
+//===== Script =======================================
+// Wizard Job Change
+//====================================================
+
+-	script	Wizard Guildmaster#wzdgld::WzdGld	-1,{
+	if (Class == Job_Swordman) {
+		mes "[Wizard Guildmaster]";
+		mes "Good day! I am the Wizard Guildmaster.";
+		mes "I train Swordsmen that meet the requirements and allow them to become Wizards.";
+		next;
+		mes "[Wizard Guildmaster]";
+		mes "As a Wizard you will gain new skills.";
+		mes "The requirements are:";
+		mes "- Being a first class job.";
+		mes "- Being Job level 50.";
+		mes "- Having used all your skill points.";
+		next;
+		mes "[Wizard Guildmaster]";
+		mes "Do you want to become a Wizard?";
+		next;
+		switch(select("Yes:No")) {
+			case 1:
+				mes "[Wizard Guildmaster]";
+				mes "Good! Let me see if you pass our requirements...";
+				next;
+				if (JobLevel < 50) {
+					mes "[Wizard Guildmaster]";
+					mes "Hmm... Your job level does not meet our requirements.";
+					mes "You need to be more experienced before being a Wizard.";
+					close;
+				}
+				if (SkillPoint) {
+					mes "[Wizard Guildmaster]";
+					mes "Looks like you have not used all your skill points.";
+					mes "Use them and I'll be able to make you a Wizard.";
+					close;
+				}
+				mes "[Wizard Guildmaster]";
+				mes "Okay! Looks like you pass all of them!";
+				mes "You are allowed to join the Wizard guild.";
+				mes "Congratulations!";
+				jobchange Job_Wizard;
+				specialeffect2 EF_JOBLVUP50;
+				close;
+			case 2:
+				mes "[Wizard Guildmaster]";
+				mes "Ah! Let me know if you change your mind.";
+				mes "We are always looking for new adventurers";
+				mes "to join the guild.";
+				close;
+		}
+		
+	}
+
+	if (Class == Job_Wizard) {
+		mes "[Wizard Guildmaster]";
+		mes "Hi fellow Wizard!";
+		mes "Are you thinking about your next job?";
+		next;
+		mes "[Wizard Guildmaster]";
+		mes "You can become a High Wizard if you reach job level 50.";
+		next;
+		mes "[Wizard Guildmaster]";
+		mes "Go find the legendary High Wizard in Nifflheim.";
+		mes "I'm sure he will be able to train you.";
+		close;
+	}
+
+	if (Class == Job_High_Wizard) {
+		mes "[Wizard Guildmaster]";
+		mes "Ah! An experienced member of the guild!";
+		mes "Are you here to help train the new members?";
+		close;
+	}
+
+	mes "[Wizard Guildmaster]";
+	mes "Welcome to the Wizard guild. We accept applications from Swordsmen that meet our requirements.";
+	close;
+}
+
+gef_tower,111,37,5	duplicate(WzdGld)	Wizard Guildmaster#wzdgld	735
