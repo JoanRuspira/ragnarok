@@ -470,13 +470,12 @@ Body:
         Plagiarism: true
         Reproduce: true
     CastCancel: true
-    CastTime: 500
     Cooldown: 15000
     AfterCastActDelay: 500
     Requires:
       SpCost: 37
       ItemCost:
-        - Item: Blue_Gemstone
+        - Item: Old_Magic_Circle
           Amount: 1
   - Id: 16
     Name: MG_STONECURSE
@@ -491,13 +490,12 @@ Body:
     HitCount: 1
     Element: Earth
     CastCancel: true
-    CastTime: 500
     Cooldown: 15000
     AfterCastActDelay: 500
     Requires:
       SpCost: 37
       ItemCost:
-        - Item: Yellow_Gemstone
+        - Item: Old_Magic_Circle
           Amount: 1
   - Id: 17
     Name: MG_FIREBALL
@@ -3238,6 +3236,21 @@ Body:
     AfterCastActDelay: 2000
     Requires:
       SpCost: 120
+  - Id: 889
+    Name: WL_TETRAVORTEX_NEUTRAL
+    Description: Tetra Vortex Neutral
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 11
+    Hit: Single
+    HitCount: 1
+    Element: Neutral
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    Requires:
+      SpCost: 1
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -4441,7 +4454,7 @@ Body:
     Cooldown: 2000
     AfterCastActDelay: 1000
     Requires:
-      SpCost: 20
+      SpCost: 35
     Unit:
       Id: Icewall
       Layout: -1
@@ -4704,7 +4717,7 @@ Body:
       - Level: 5
         Time: 25000
     Requires:
-      SpCost: 30
+      SpCost: 35
     Unit:
       Id: Quagmire
       Layout: 2
@@ -10181,6 +10194,9 @@ Body:
     Duration1: 30000
     Requires:
       SpCost: 70
+      ItemCost:
+        - Item: Old_Magic_Circle
+          Amount: 1
   - Id: 367
     Name: PA_PRESSURE
     Description: Gloria Domini
@@ -11084,6 +11100,9 @@ Body:
       IgnoreStatus: true
     Requires:
       SpCost: 100
+      ItemCost:
+        - Item: Old_Magic_Circle
+          Amount: 1
   - Id: 404
     Name: PF_FOGWALL
     Description: Blinding Mist
@@ -17449,7 +17468,7 @@ Body:
     Cooldown: 5000
     AfterCastActDelay: 1000
     Requires:
-      SpCost: 37
+      SpCost: 30
   - Id: 2203
     Name: WL_FROSTMISTY
     Description: Frosty Misty
@@ -17589,17 +17608,10 @@ Body:
         Time: 180000
     Cooldown: 25000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 125
-        - Level: 2
-          Amount: 125
-        - Level: 3
-          Amount: 125
-        - Level: 4
-          Amount: 125
-        - Level: 5
-          Amount: 125
+      SpCost: 125
+      ItemCost:
+        - Item: Old_Magic_Circle
+          Amount: 1
   - Id: 2207
     Name: WL_SIENNAEXECRATE
     Description: Sienna Execrate
@@ -18020,9 +18032,6 @@ Body:
     Range: 11
     Hit: Single
     HitCount: 1
-    DamageFlags:
-      Splash: true
-    SplashArea: 5
     Element: Fire
     CopyFlags:
       Skill:
@@ -18038,9 +18047,6 @@ Body:
     Range: 11
     Hit: Single
     HitCount: 1
-    DamageFlags:
-      Splash: true
-    SplashArea: 5
     Element: Water
     CopyFlags:
       Skill:
@@ -18056,9 +18062,6 @@ Body:
     Range: 11
     Hit: Single
     HitCount: 1
-    DamageFlags:
-      Splash: true
-    SplashArea: 5
     Element: Wind
     CopyFlags:
       Skill:
@@ -18074,9 +18077,6 @@ Body:
     Range: 11
     Hit: Single
     HitCount: 1
-    DamageFlags:
-      Splash: true
-    SplashArea: 5
     Element: Earth
     CopyFlags:
       Skill:
@@ -28268,6 +28268,9 @@ Body:
     Cooldown: 120000
     Requires:
       SpCost: 250
+      ItemCost:
+        - Item: Old_Magic_Circle
+          Amount: 1
   - Id: 5013
     Name: LG_KINGS_GRACE
     Description: King's Grace

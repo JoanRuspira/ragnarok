@@ -6124,39 +6124,6 @@ Body:
     Script: |
       specialeffect2 EF_INVINCIBLEOFF2;
       togglepeco();
-  - Id: 6189
-    AegisName: Magic_Book_FB
-    Name: Spell Book (Fire Bolt)
-    Buy: 25000
-    Type: Usable
-    Flags:
-      BuyingStore: true
-      NoConsume: true
-    Script: |
-      specialeffect2 1232;
-      itemskill "WL_READING_SB_READING",1;
-  - Id: 6190
-    AegisName: Magic_Book_CB
-    Name: Spell Book (Cold Bolt)
-    Buy: 25000
-    Type: Usable
-    Flags:
-      BuyingStore: true
-      NoConsume: true
-    Script: |
-      specialeffect2 1232;
-      itemskill "WL_READING_SB_READING",2;
-  - Id: 6191
-    AegisName: Magic_Book_LB
-    Name: Spell Book (Lightening Bolt)
-    Buy: 25000
-    Type: Usable
-    Flags:
-      BuyingStore: true
-      NoConsume: true
-    Script: |
-      specialeffect2 1232;
-      itemskill "WL_READING_SB_READING",3;
   - Id: 12711
     AegisName: Pretzel
     Name: Pretzel
@@ -6179,3 +6146,315 @@ Body:
     Type: Usable
     Buy: 20
     Weight: 10
+  - Id: 6189
+    AegisName: Magic_Book_FireBolt
+    Name: Spell Book (Fire Bolt)
+    Buy: 25000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "WL_READING_SB_READING",1;
+  - Id: 6190
+    AegisName: Magic_Book_ColdBolt
+    Name: Spell Book (Cold Bolt)
+    Buy: 25000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "WL_READING_SB_READING",2;
+  - Id: 6191
+    AegisName: Magic_Book_LightningBolt
+    Name: Spell Book (Lightening Bolt)
+    Buy: 25000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "WL_READING_SB_READING",3;
+  - Id: 6201
+    AegisName: Magic_Book_EarthBolt
+    Name: Spell Book (Earth Bolt)
+    Buy: 25000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "WL_READING_SB_READING",4;
+  - Id: 6205
+    AegisName: Magic_Book_VoidExpansion
+    Name: Spell Book (Void Expansion)
+    Buy: 25000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "WL_READING_SB_READING",5;
+  - Id: 62051
+    AegisName: Magic_Book_Corrupt
+    Name: Spell Book (Corrupt)
+    Buy: 25000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "WL_READING_SB_READING",6;
+  - Id: 62052
+    AegisName: Magic_Book_DarkStrike
+    Name: Spell Book (Dark Strike)
+    Buy: 25000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "WL_READING_SB_READING",7;
+  - Id: 62053
+    AegisName: Magic_Book_SoulStrike
+    Name: Spell Book (Soul Strike)
+    Buy: 25000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "WL_READING_SB_READING",8;
+  - Id: 62054
+    AegisName: Magic_Book_EarthSpikes
+    Name: Spell Book (Earth Spikes)
+    Buy: 50000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "WL_READING_SB_READING",9;
+  - Id: 62055
+    AegisName: Magic_Book_LordOfVermillion
+    Name: Spell Book (Lord of Vermillion)
+    Buy: 50000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "WL_READING_SB_READING",10;
+  - Id: 62056
+    AegisName: Magic_Book_StormGust
+    Name: Spell Book (Storm Gust)
+    Buy: 50000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "WL_READING_SB_READING",11;
+  - Id: 62057
+    AegisName: Magic_Book_MeteorStorm
+    Name: Spell Book (Meteor Storm)
+    Buy: 50000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "WL_READING_SB_READING",12;
+  - Id: 62058
+    AegisName: Magic_Book_Stalagmite
+    Name: Spell Book (Stalagmite)
+    Buy: 50000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "WL_READING_SB_READING",13;
+  - Id: 62059
+    AegisName: Magic_Book_Thunderstorm
+    Name: Spell Book (Thunderstorm)
+    Buy: 50000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "WL_READING_SB_READING",14;
+  - Id: 62060
+    AegisName: Magic_Book_Iceberg
+    Name: Spell Book (Iceberg)
+    Buy: 50000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "WL_READING_SB_READING",15;
+  - Id: 62061
+    AegisName: Magic_Book_CrimsonRock
+    Name: Spell Book (Crimson Rock)
+    Buy: 50000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "WL_READING_SB_READING",16;
+  - Id: 62062
+    AegisName: Magic_Book_PsychicWave
+    Name: Spell Book (Psychic Wave)
+    Buy: 50000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "WL_READING_SB_READING",17;
+  - Id: 62063
+    AegisName: Magic_Book_IllusionaryBlades
+    Name: Spell Book (Illusionary Blades)
+    Buy: 50000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "WL_READING_SB_READING",18;
+  - Id: 62064
+    AegisName: Magic_Book_ExtremeVacuum
+    Name: Spell Book (ExtremeVacuum)
+    Buy: 50000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "WL_READING_SB_READING",19;
+  - Id: 62065
+    AegisName: Magic_Book_RealityBreaker
+    Name: Spell Book (Reality Breaker)
+    Buy: 50000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "WL_READING_SB_READING",20;
+  - Id: 62066
+    AegisName: Magic_Book_TetraVortex
+    Name: Spell Book (Tetra Vortex)
+    Buy: 75000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "WL_READING_SB_READING",21;
+  - Id: 62067
+    AegisName: Magic_Book_PhantomSpear
+    Name: Spell Book (Phantom Spear)
+    Buy: 75000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "WL_READING_SB_READING",22;
+  - Id: 62068
+    AegisName: Magic_Book_ShadowBomb
+    Name: Spell Book (Shadow Bomb)
+    Buy: 75000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "WL_READING_SB_READING",23;
+  - Id: 62069
+    AegisName: Magic_Book_Doom
+    Name: Spell Book (Doom)
+    Buy: 75000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "WL_READING_SB_READING",24;
+  - Id: 62070
+    AegisName: Magic_Book_DiamondDust
+    Name: Spell Book (Diamond Dust)
+    Buy: 75000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "WL_READING_SB_READING",25;
+  - Id: 62071
+    AegisName: Magic_Book_AstralStrike
+    Name: Spell Book (Astral Strike)
+    Buy: 75000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "WL_READING_SB_READING",26;

@@ -88,6 +88,11 @@ int WizardSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 		case WL_TETRAVORTEX_GROUND:
 			return calculate_tetra_vortex_atk_ratio(skill_lv);
 			break;
+		case WL_TETRAVORTEX_NEUTRAL:
+    		clif_specialeffect(target, EF_STORMKICK2, AREA);
+    		clif_specialeffect(target, EF_THUNDERSTORM2, AREA);
+			return calculate_tetra_vortex_atk_ratio(skill_lv)*2;
+			break;
 		default:
 			return 0;
 			break;

@@ -2034,6 +2034,7 @@ static bool pc_grant_allskills(struct map_session_data *sd, bool addlv) {
 			case WL_TETRAVORTEX_WATER:
 			case WL_TETRAVORTEX_WIND:
 			case WL_TETRAVORTEX_GROUND:
+			case WL_TETRAVORTEX_NEUTRAL:
 			case WL_SUMMON_ATK_FIRE:
 			case WL_SUMMON_ATK_WIND:
 			case WL_SUMMON_ATK_WATER:

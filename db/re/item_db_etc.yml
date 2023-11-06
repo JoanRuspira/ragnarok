@@ -3066,102 +3066,6 @@ Body:
     Type: Etc
     Buy: 20
     Weight: 10
-  - Id: 6192
-    AegisName: Magic_Book_SG
-    Name: Spell Book (Storm Gust)
-    Buy: 50000
-    Type: Etc
-    Flags:
-      BuyingStore: true
-  - Id: 6193
-    AegisName: Magic_Book_LOV
-    Name: Spell Book (Lord Of Vermilion)
-    Buy: 50000
-    Type: Etc
-    Flags:
-      BuyingStore: true
-  - Id: 6194
-    AegisName: Magic_Book_MS
-    Name: Spell Book (Meteor Storm)
-    Buy: 50000
-    Type: Etc
-    Flags:
-      BuyingStore: true
-  - Id: 6195
-    AegisName: Magic_Book_CM
-    Name: Spell Book (Comet)
-    Type: Etc
-    Flags:
-      BuyingStore: true
-  - Id: 6196
-    AegisName: Magic_Book_TV
-    Name: Spell Book (Tetra Vortex)
-    Type: Etc
-    Flags:
-      BuyingStore: true
-  - Id: 6197
-    AegisName: Magic_Book_TS
-    Name: Spell Book (Thunder Storm)
-    Buy: 50000
-    Type: Etc
-    Flags:
-      BuyingStore: true
-  - Id: 6198
-    AegisName: Magic_Book_JT
-    Name: Spell Book (Jupitel Thunder)
-    Buy: 50000
-    Type: Etc
-    Flags:
-      BuyingStore: true
-  - Id: 6199
-    AegisName: Magic_Book_WB
-    Name: Spell Book (Water Ball)
-    Buy: 50000
-    Type: Etc
-    Flags:
-      BuyingStore: true
-  - Id: 6200
-    AegisName: Magic_Book_HD
-    Name: Spell Book (Heaven's Drive)
-    Buy: 50000
-    Type: Etc
-    Flags:
-      BuyingStore: true
-  - Id: 6201
-    AegisName: Magic_Book_ES
-    Name: Spell Book (Earth Spike)
-    Buy: 50000
-    Type: Etc
-    Flags:
-      BuyingStore: true
-  - Id: 6202
-    AegisName: Magic_Book_ES_
-    Name: Spell Book (Earth Strain)
-    Buy: 200000
-    Type: Etc
-    Flags:
-      BuyingStore: true
-  - Id: 6203
-    AegisName: Magic_Book_CL
-    Name: Spell Book (Chain Lightning)
-    Buy: 200000
-    Type: Etc
-    Flags:
-      BuyingStore: true
-  - Id: 6204
-    AegisName: Magic_Book_CR
-    Name: Spell Book (Crimson Rock)
-    Buy: 200000
-    Type: Etc
-    Flags:
-      BuyingStore: true
-  - Id: 6205
-    AegisName: Magic_Book_DL
-    Name: Spell Book (Drain Life)
-    Buy: 200000
-    Type: Etc
-    Flags:
-      BuyingStore: true
   - Id: 6210
     AegisName: Seed_Of_Horny_Plant
     Name: Seed Of Thorny Plant
@@ -5485,14 +5389,6 @@ Body:
     Name: Live Coal
     Type: Etc
     Buy: 638
-    Weight: 10
-    Flags:
-      BuyingStore: true
-  - Id: 7099
-    AegisName: Old_Magic_Circle
-    Name: Worn-out Magic Scroll
-    Type: Etc
-    Buy: 773
     Weight: 10
     Flags:
       BuyingStore: true
@@ -9630,5 +9526,13 @@ Body:
     Type: Etc
     Buy: 50
     Weight: 30
+    Flags:
+      BuyingStore: true
+  - Id: 7099
+    AegisName: Old_Magic_Circle
+    Name: Worn-out Magic Scroll
+    Type: Etc
+    Buy: 50
+    Weight: 10
     Flags:
       BuyingStore: true

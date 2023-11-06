@@ -423,6 +423,7 @@ unsigned short skill_dummy2skill_id(unsigned short skill_id) {
 		case WL_TETRAVORTEX_WATER:
 		case WL_TETRAVORTEX_WIND:
 		case WL_TETRAVORTEX_GROUND:
+		case WL_TETRAVORTEX_NEUTRAL:
 			return WL_TETRAVORTEX;
 		case WL_SUMMON_ATK_FIRE:
 			return WL_SUMMONFB;
@@ -2766,6 +2767,7 @@ static TIMER_FUNC(skill_timerskill){
 					case WL_TETRAVORTEX_WATER:
 					case WL_TETRAVORTEX_WIND:
 					case WL_TETRAVORTEX_GROUND:
+					case WL_TETRAVORTEX_NEUTRAL:
 					// For SR_FLASHCOMBO
 					case SR_DRAGONCOMBO:
 					case SR_FALLENEMPIRE:
@@ -2867,6 +2869,7 @@ static TIMER_FUNC(skill_timerskill){
 				case WL_TETRAVORTEX_WATER:
 				case WL_TETRAVORTEX_WIND:
 				case WL_TETRAVORTEX_GROUND:
+				case WL_TETRAVORTEX_NEUTRAL:
 					clif_skill_nodamage(src,target,skl->skill_id,skl->skill_lv,1);
 					skill_attack(BF_MAGIC,src,src,target,skl->skill_id,skl->skill_lv,tick,skl->flag|SD_LEVEL|SD_ANIMATION);
 					break;
@@ -3025,6 +3028,7 @@ int skill_cleartimerskill (struct block_list *src)
 				case WL_TETRAVORTEX_WATER:
 				case WL_TETRAVORTEX_WIND:
 				case WL_TETRAVORTEX_GROUND:
+				case WL_TETRAVORTEX_NEUTRAL:
 				// For SR_FLASHCOMBO
 				case SR_DRAGONCOMBO:
 				case SR_FALLENEMPIRE:
@@ -4297,6 +4301,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case WL_TETRAVORTEX_WATER:
 	case WL_TETRAVORTEX_WIND:
 	case WL_TETRAVORTEX_GROUND:
+	case WL_TETRAVORTEX_NEUTRAL:
 		skill_addtimerskill(src, tick + skill_area_temp[0] * 200, bl->id, skill_area_temp[1], 0, skill_id, skill_lv, 0, flag);
 		break;
 
@@ -4321,10 +4326,15 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 			}
 		} else if (sc) { // No SC? No spheres
 			int i, k = 0;
+			bool fire, wind, water, stone;
+			fire = false;
+			wind = false;
+			water = false;
+			stone = false;
 
 			if (sc->data[SC_SPHERE_5]) // If 5 spheres, remove last one (based on reverse order) and only do 4 actions (Official behavior)
 				status_change_end(src, SC_SPHERE_1, INVALID_TIMER);
-
+			
 			for (i = SC_SPHERE_5; i >= SC_SPHERE_1; i--) { // Loop should always be 4 for regular players, but unconditional_skill could be less
 				if (sc->data[static_cast<sc_type>(i)] == nullptr)
 					continue;
@@ -4334,30 +4344,35 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 				switch (sc->data[static_cast<sc_type>(i)]->val1) {
 					case WLS_FIRE:
 						subskill = WL_TETRAVORTEX_FIRE;
+						fire = true;
 						k |= 1;
 						break;
 					case WLS_WIND:
 						subskill = WL_TETRAVORTEX_WIND;
+						wind = true;
 						k |= 4;
 						break;
 					case WLS_WATER:
 						subskill = WL_TETRAVORTEX_WATER;
+						water = true;
 						k |= 2;
 						break;
 					case WLS_STONE:
 						subskill = WL_TETRAVORTEX_GROUND;
+						stone = true;
 						k |= 8;
 						break;
 				}
 
-				if (skill_lv > 5) {
-					skill_area_temp[0] = abs(i - SC_SPHERE_5);
-					skill_area_temp[1] = k;
-					map_foreachinallrange(skill_area_sub, bl, skill_get_splash(skill_id, skill_lv), BL_CHAR, src, subskill, skill_lv, tick, flag | BCT_ENEMY, skill_castend_damage_id);
-				} else
-					skill_addtimerskill(src, tick + abs(i - SC_SPHERE_5) * 200, bl->id, k, 0, subskill, skill_lv, abs(i - SC_SPHERE_5), flag);
+				skill_area_temp[0] = abs(i - SC_SPHERE_5);
+				skill_area_temp[1] = k;
+				map_foreachinallrange(skill_area_sub, bl, skill_get_splash(skill_id, skill_lv), BL_CHAR, src, subskill, skill_lv, tick, flag | BCT_ENEMY, skill_castend_damage_id);
 				status_change_end(src, static_cast<sc_type>(i), INVALID_TIMER);
 			}
+			if (fire && wind && water && stone){
+				map_foreachinallrange(skill_area_sub, bl, skill_get_splash(skill_id, skill_lv), BL_CHAR, src, WL_TETRAVORTEX_NEUTRAL, skill_lv, tick, flag | BCT_ENEMY, skill_castend_damage_id);
+			}
+
 		}
 		break;
 
@@ -9135,6 +9150,75 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 					break;
 				case 3:
 					skill_spellbook(sd, 6191);
+					break;
+				case 4:
+					skill_spellbook(sd, 6201);
+					break;
+				case 5:
+					skill_spellbook(sd, 6205);
+					break;
+				case 6:
+					skill_spellbook(sd, 62051);
+					break;
+				case 7:
+					skill_spellbook(sd, 62052);
+					break;
+				case 8:
+					skill_spellbook(sd, 62053);
+					break;
+				case 9:
+					skill_spellbook(sd, 62054);
+					break;
+				case 10:
+					skill_spellbook(sd, 62055);
+					break;
+				case 11:
+					skill_spellbook(sd, 62056);
+					break;
+				case 12:
+					skill_spellbook(sd, 62057);
+					break;
+				case 13:
+					skill_spellbook(sd, 62058);
+					break;
+				case 14:
+					skill_spellbook(sd, 62059);
+					break;
+				case 15:
+					skill_spellbook(sd, 62060);
+					break;
+				case 16:
+					skill_spellbook(sd, 62061);
+					break;
+				case 17:
+					skill_spellbook(sd, 62062);
+					break;
+				case 18:
+					skill_spellbook(sd, 62063);
+					break;
+				case 19:
+					skill_spellbook(sd, 62064);
+					break;
+				case 20:
+					skill_spellbook(sd, 62065);
+					break;
+				case 21:
+					skill_spellbook(sd, 62066);
+					break;
+				case 22:
+					skill_spellbook(sd, 62067);
+					break;
+				case 23:
+					skill_spellbook(sd, 62068);
+					break;
+				case 24:
+					skill_spellbook(sd, 62069);
+					break;
+				case 25:
+					skill_spellbook(sd, 62070);
+					break;
+				case 26:
+					skill_spellbook(sd, 62071);
 					break;
 			}
 			
@@ -19323,7 +19407,6 @@ void skill_spellbook(struct map_session_data *sd, t_itemid nameid) {
 	if (reading_spellbook_db.empty())
 		return;
 	struct status_change *sc = status_get_sc(&sd->bl);
-
 	for (int i = SC_SPELLBOOK1; i <= SC_MAXSPELLBOOK; i++) {
 		if (sc == nullptr || sc->data[i] == nullptr)
 			break;
@@ -19349,6 +19432,7 @@ void skill_spellbook(struct map_session_data *sd, t_itemid nameid) {
 			clif_skill_fail(sd, WL_READING_SB, USESKILL_FAIL_SPELLBOOK_PRESERVATION_POINT, 0);
 			return;
 		}
+
 		for (int i = SC_MAXSPELLBOOK; i >= SC_SPELLBOOK1; i--) { // This is how official saves spellbook. [malufett]
 			if (!sc->data[i]) {
 				sc->data[SC_FREEZE_SP]->val2 += points; // increase points

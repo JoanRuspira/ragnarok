@@ -2187,7 +2187,8 @@ enum e_skill {
 	HW_DOOM = 885,
 	HW_DOOM_GHOST = 886,
 	HW_DIAMONDDUST = 887,
-	HW_ASTRALSTRIKE = 888
+	HW_ASTRALSTRIKE = 888,
+	WL_TETRAVORTEX_NEUTRAL = 889
 };
 
 /// The client view ids for land skills.

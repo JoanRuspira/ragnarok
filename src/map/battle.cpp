@@ -448,52 +448,52 @@ int64 battle_attr_fix(struct block_list *src, struct block_list *target, int64 d
 	if (sc && sc->count) { //increase dmg by src status
 		switch(atk_elem){
 			case ELE_FIRE:
-				if (sc->data[SC_SPHERE_1]->val1 == WLS_FIRE)
+				if (sc->data[SC_SPHERE_1] && sc->data[SC_SPHERE_1]->val1 == WLS_FIRE)
 					ratio += 5;
-				if (sc->data[SC_SPHERE_2]->val1 == WLS_FIRE)
+				if (sc->data[SC_SPHERE_2] && sc->data[SC_SPHERE_2]->val1 == WLS_FIRE)
 					ratio += 5;
-				if (sc->data[SC_SPHERE_3]->val1 == WLS_FIRE)
+				if (sc->data[SC_SPHERE_3] && sc->data[SC_SPHERE_3]->val1 == WLS_FIRE)
 					ratio += 5;
-				if (sc->data[SC_SPHERE_4]->val1 == WLS_FIRE)
+				if (sc->data[SC_SPHERE_4] && sc->data[SC_SPHERE_4]->val1 == WLS_FIRE)
 					ratio += 5;
 
 				if (sc->data[SC_VOLCANO])
 					ratio += sc->data[SC_VOLCANO]->val3;
 				break;
 			case ELE_WIND:
-				if (sc->data[SC_SPHERE_1]->val1 == WLS_WIND)
+				if (sc->data[SC_SPHERE_1] && sc->data[SC_SPHERE_1]->val1 == WLS_WIND)
 					ratio += 5;
-				if (sc->data[SC_SPHERE_2]->val1 == WLS_WIND)
+				if (sc->data[SC_SPHERE_2] && sc->data[SC_SPHERE_2]->val1 == WLS_WIND)
 					ratio += 5;
-				if (sc->data[SC_SPHERE_3]->val1 == WLS_WIND)
+				if (sc->data[SC_SPHERE_3] && sc->data[SC_SPHERE_3]->val1 == WLS_WIND)
 					ratio += 5;
-				if (sc->data[SC_SPHERE_4]->val1 == WLS_WIND)
+				if (sc->data[SC_SPHERE_4] && sc->data[SC_SPHERE_4]->val1 == WLS_WIND)
 					ratio += 5;
 
 				if (sc->data[SC_VIOLENTGALE])
 					ratio += sc->data[SC_VIOLENTGALE]->val3;
 				break;
 			case ELE_WATER:
-				if (sc->data[SC_SPHERE_1]->val1 == WLS_WATER)
+				if (sc->data[SC_SPHERE_1] && sc->data[SC_SPHERE_1]->val1 == WLS_WATER)
 					ratio += 5;
-				if (sc->data[SC_SPHERE_2]->val1 == WLS_WATER)
+				if (sc->data[SC_SPHERE_2] && sc->data[SC_SPHERE_2]->val1 == WLS_WATER)
 					ratio += 5;
-				if (sc->data[SC_SPHERE_3]->val1 == WLS_WATER)
+				if (sc->data[SC_SPHERE_3] && sc->data[SC_SPHERE_3]->val1 == WLS_WATER)
 					ratio += 5;
-				if (sc->data[SC_SPHERE_4]->val1 == WLS_WATER)
+				if (sc->data[SC_SPHERE_4] && sc->data[SC_SPHERE_4]->val1 == WLS_WATER)
 					ratio += 5;
 
 				if (sc->data[SC_DELUGE])
 					ratio += sc->data[SC_DELUGE]->val3;
 				break;
 			case ELE_EARTH:
-				if (sc->data[SC_SPHERE_1]->val1 == WLS_STONE)
+				if (sc->data[SC_SPHERE_1] && sc->data[SC_SPHERE_1]->val1 == WLS_STONE)
 					ratio += 5;
-				if (sc->data[SC_SPHERE_2]->val1 == WLS_STONE)
+				if (sc->data[SC_SPHERE_2] && sc->data[SC_SPHERE_2]->val1 == WLS_STONE)
 					ratio += 5;
-				if (sc->data[SC_SPHERE_3]->val1 == WLS_STONE)
+				if (sc->data[SC_SPHERE_3] && sc->data[SC_SPHERE_3]->val1 == WLS_STONE)
 					ratio += 5;
-				if (sc->data[SC_SPHERE_4]->val1 == WLS_STONE)
+				if (sc->data[SC_SPHERE_4] && sc->data[SC_SPHERE_4]->val1 == WLS_STONE)
 					ratio += 5;
 
 				if (sc->data[SC_DELUGE])
@@ -4919,6 +4919,7 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case WL_TETRAVORTEX_WATER:
 					case WL_TETRAVORTEX_WIND:
 					case WL_TETRAVORTEX_GROUND:
+					case WL_TETRAVORTEX_NEUTRAL:
 						skillratio += WizardSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
 					case RK_DRAGONBREATH_WATER:
