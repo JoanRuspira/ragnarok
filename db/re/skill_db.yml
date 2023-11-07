@@ -10181,6 +10181,7 @@ Body:
   - Id: 366
     Name: HW_MAGICPOWER
     Description: Mystical Amplification
+    CastCancel: true
     MaxLevel: 5
     Type: Magic
     TargetType: Self
@@ -10635,7 +10636,7 @@ Body:
   - Id: 384
     Name: WS_MELTDOWN
     Description: Shattering Strike
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Self
     DamageFlags:
@@ -10644,71 +10645,12 @@ Body:
       AllowOnMado: true
     HitCount: 1
     CastCancel: true
-    CastTime:
-      - Level: 1
-        Time: 500
-      - Level: 2
-        Time: 500
-      - Level: 3
-        Time: 600
-      - Level: 4
-        Time: 600
-      - Level: 5
-        Time: 700
-      - Level: 6
-        Time: 700
-      - Level: 7
-        Time: 800
-      - Level: 8
-        Time: 800
-      - Level: 9
-        Time: 900
-      - Level: 10
-        Time: 1000
-    Duration1:
-      - Level: 1
-        Time: 15000
-      - Level: 2
-        Time: 20000
-      - Level: 3
-        Time: 25000
-      - Level: 4
-        Time: 30000
-      - Level: 5
-        Time: 35000
-      - Level: 6
-        Time: 40000
-      - Level: 7
-        Time: 45000
-      - Level: 8
-        Time: 50000
-      - Level: 9
-        Time: 55000
-      - Level: 10
-        Time: 60000
+    Duration1: 60000
+    Cooldown: 20000
     Duration2: 5000
+    AfterCastActDelay: 3000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 50
-        - Level: 2
-          Amount: 50
-        - Level: 3
-          Amount: 60
-        - Level: 4
-          Amount: 60
-        - Level: 5
-          Amount: 70
-        - Level: 6
-          Amount: 70
-        - Level: 7
-          Amount: 80
-        - Level: 8
-          Amount: 80
-        - Level: 9
-          Amount: 90
-        - Level: 10
-          Amount: 90
+      SpCost: 70
   - Id: 385
     Name: WS_CREATECOIN
     Description: Create Coins
@@ -13240,20 +13182,11 @@ Body:
       AllowOnMado: true
     Hit: Single
     HitCount: 1
-    Duration1: 180000
+    Duration1: 30000
+    Cooldown: 120000
+    AfterCastActDelay: 3000
     Requires:
-      SpCost: 15
-      ZenyCost:
-        - Level: 1
-          Amount: 3000
-        - Level: 2
-          Amount: 3500
-        - Level: 3
-          Amount: 4000
-        - Level: 4
-          Amount: 4500
-        - Level: 5
-          Amount: 5000
+      SpCost: 70
       Weapon:
         Fist: true
         Dagger: true
@@ -13268,15 +13201,9 @@ Body:
         Staff: true
         Knuckle: true
         Musical: true
-        Whip: true
         Book: true
         Katar: true
-        Revolver: true
-        Rifle: true
-        Gatling: true
-        Shotgun: true
-        Grenade: true
-        Huuma: true
+        2hStaff: true
   - Id: 487
     Name: CG_LONGINGFREEDOM
     Description: Longing for Freedom
@@ -18086,6 +18013,7 @@ Body:
   - Id: 2222
     Name: WL_SUMMONFB
     Description: Summon Fire Ball
+    CastCancel: true
     MaxLevel: 5
     Type: Magic
     TargetType: Self
@@ -28257,6 +28185,7 @@ Body:
   - Id: 5012
     Name: WL_TELEKINESIS_INTENSE
     Description: Intense Telekinesis
+    CastCancel: true
     MaxLevel: 5
     TargetType: Self
     DamageFlags:

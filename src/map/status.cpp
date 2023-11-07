@@ -599,7 +599,7 @@ void initChangeTables(void)
 	set_sc( ASC_EDP			, SC_EDP		, EFST_EDP		, SCB_NONE );
 	set_sc( SN_SIGHT		, SC_TRUESIGHT		, EFST_TRUESIGHT		, SCB_STR|SCB_AGI|SCB_VIT|SCB_INT|SCB_DEX|SCB_LUK|SCB_CRI|SCB_HIT );
 	set_sc( SN_WINDWALK		, SC_WINDWALK		, EFST_WINDWALK		, SCB_AGI|SCB_SPEED );
-	set_sc( WS_MELTDOWN		, SC_MELTDOWN		, EFST_MELTDOWN		, SCB_NONE );
+	set_sc( WS_MELTDOWN		, SC_MELTDOWN		, EFST_MELTDOWN		, SCB_WATK );
 	set_sc( WS_CARTBOOST		, SC_CARTBOOST		, EFST_CARTBOOST		, SCB_SPEED );
 	set_sc( ST_CHASEWALK		, SC_CHASEWALK		, EFST_CHASEWALK		, SCB_SPEED );
 	set_sc( ST_REJECTSWORD		, SC_REJECTSWORD	, EFST_SWORDREJECT, SCB_WATK|SCB_CRI );
@@ -6489,6 +6489,8 @@ static unsigned short status_calc_watk(struct block_list *bl, struct status_chan
 		watk += sc->data[SC_BENEDICTIO]->val1*5;
 	if(sc->data[SC_DRUMBATTLE])
 		watk += sc->data[SC_DRUMBATTLE]->val2;
+	if(sc->data[SC_MELTDOWN])
+		watk += sc->data[SC_MELTDOWN]->val1*8;
 	if(sc->data[SC_ULTOR])
 		watk += sc->data[SC_ULTOR]->val1*8;
 	if (sc->data[SC_IMPOSITIO])
@@ -9254,10 +9256,6 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 		if (bl->type == BL_MOB)
 			return 0;
 	break;
-	case SC_OVERTHRUST:
-		if (sc->data[SC_MAXOVERTHRUST])
-			return 0; // Overthrust can't take effect if under Max Overthrust. [Skotlex]
-	break;
 	case SC_ADRENALINE:
 	case SC_ADRENALINE2:
 	case SC_KNADRENALINE:
@@ -9679,10 +9677,6 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 		status_change_end(bl, SC_ASPDPOTION1, INVALID_TIMER);
 		status_change_end(bl, SC_ASPDPOTION2, INVALID_TIMER);
 		status_change_end(bl, SC_ASPDPOTION3, INVALID_TIMER);
-		break;
-	case SC_MAXOVERTHRUST:
-	  	// Cancels Normal Overthrust. [Skotlex]
-		status_change_end(bl, SC_OVERTHRUST, INVALID_TIMER);
 		break;
 	case SC_SUNSTANCE:
 	case SC_LUNARSTANCE:
@@ -10809,8 +10803,8 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			val2 = (5*val1) + 5; // WATK increase
 			break;
 		case SC_MELTDOWN:
-			val2 = 100*val1; // Chance to break weapon
-			val3 = 70*val1; // Change to break armor
+			val2 = 100*val1*2; // Chance to break weapon
+			val3 = 100*val1*2; // Change to break armor
 			break;
 		case SC_TRUESIGHT:
 			val2 = 10*val1; // Critical increase

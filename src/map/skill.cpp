@@ -5704,8 +5704,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 #endif
 	case WS_CARTBOOST:
 	case SN_SIGHT:
-	case WS_MELTDOWN:
-	case WS_OVERTHRUSTMAX:
 	case ST_REJECTSWORD:
 	case HW_MAGICPOWER:
 	case PA_SACRIFICE:
@@ -6481,6 +6479,8 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case BS_ADRENALINE2:
 	case BS_WEAPONPERFECT:
 	case BS_OVERTHRUST:
+	case WS_OVERTHRUSTMAX:
+	case WS_MELTDOWN:
 		if (sd == NULL || sd->status.party_id == 0 || (flag & 1)) {
 			int weapontype = skill_get_weapontype(skill_id);
 			if (!weapontype || !dstsd || pc_check_weapontype(dstsd, weapontype)) {
