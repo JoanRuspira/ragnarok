@@ -1326,14 +1326,6 @@ Body:
     Weight: 100
     Flags:
       BuyingStore: true
-  - Id: 1005
-    AegisName: Hammer_Of_Blacksmith
-    Name: Hammer of Blacksmith
-    Type: Etc
-    Buy: 2
-    Weight: 800
-    Flags:
-      BuyingStore: true
   - Id: 1006
     AegisName: Old_Magic_Book
     Name: Old Magicbook
@@ -9534,5 +9526,21 @@ Body:
     Type: Etc
     Buy: 50
     Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 1005
+    AegisName: Hammer_Of_Blacksmith
+    Name: Hammer of Blacksmith
+    Type: Etc
+    Buy: 100
+    Weight: 50
+    Flags:
+      BuyingStore: true
+  - Id: 612
+    AegisName: Portable_Furnace
+    Name: Mini Furnace
+    Type: Etc
+    Buy: 100
+    Weight: 150
     Flags:
       BuyingStore: true

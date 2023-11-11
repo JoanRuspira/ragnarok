@@ -36,6 +36,13 @@ int BlacksmithSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_li
 			add_hammerfall_special_effects(target);
 			return calculate_hammerfall_atk_ratio(skill_lv, sstatus->str);
 			break;
+		case WS_HAMMERDOWN_PROTOCOL:
+			clif_specialeffect(target, EF_SPRINGTRAP, AREA);
+			return calculate_hammerdown_protocol_atk_ratio(skill_lv, sstatus->str, sstatus->dex);
+			break;
+		case NC_POWERSWING:
+			return calculate_power_swing_atk_ratio(skill_lv, sstatus->str, sstatus->luk);
+			break;
 		default:
 			return 0;
 			break;
@@ -48,6 +55,51 @@ void BlacksmithSkillAtkRatioCalculator::add_hammerfall_special_effects(struct bl
 	clif_specialeffect(target, EF_CRASHEARTH, AREA);
 }
 
+int BlacksmithSkillAtkRatioCalculator::calculate_hammerdown_protocol_atk_ratio(int skill_lv, int str, int dex)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 300;
+			break;
+		case 2:
+			ratio = 400;
+			break;
+		case 3:
+			ratio = 500;
+			break;
+		case 4:
+			ratio = 600;
+			break;
+		case 5:
+			ratio = 700;
+			break;
+		}
+	return ratio + (str) + (dex/3);
+}
+
+int BlacksmithSkillAtkRatioCalculator::calculate_power_swing_atk_ratio(int skill_lv, int str, int luk)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 150;
+			break;
+		case 2:
+			ratio = 250;
+			break;
+		case 3:
+			ratio = 350;
+			break;
+		case 4:
+			ratio = 450;
+			break;
+		case 5:
+			ratio = 550;
+			break;
+		}
+	return ratio + (str/3) + (luk/3);
+}
 
 int BlacksmithSkillAtkRatioCalculator::calculate_hammerfall_atk_ratio(int skill_lv, int str)
 {

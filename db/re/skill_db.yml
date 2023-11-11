@@ -3251,6 +3251,27 @@ Body:
         Reproduce: true
     Requires:
       SpCost: 1
+  - Id: 890
+    Name: WS_HAMMERDOWN_PROTOCOL
+    Description: Hammerdown Protocol
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: 9
+    Hit: Single
+    DamageFlags:
+      Splash: true
+    SplashArea: 5
+    HitCount: 1
+    Element: Neutral
+    AfterCastActDelay: 400
+    Cooldown: 8000
+    Duration1: 2000
+    Requires:
+      SpCost: 20
+      ItemCost:
+        - Item: Hammer_Of_Blacksmith
+          Amount: 3
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -4858,7 +4879,7 @@ Body:
     Hit: Single
     Element: Weapon
     HitCount: 1
-    Cooldown: 8000
+    Cooldown: 5000
     AfterCastActDelay: 400
     Duration2: 5000
     Requires:
@@ -4946,6 +4967,11 @@ Body:
         Time: 50000
     Requires:
       SpCost: 15
+      ItemCost:
+        - Item: Hammer_Of_Blacksmith
+          Amount: 1
+        - Item: Portable_Furnace
+          Amount: 1
       Weapon:
         Dagger: true
         1hSword: true
@@ -4983,6 +5009,11 @@ Body:
     Duration1: 120000
     Requires:
       SpCost: 20
+      ItemCost:
+        - Item: Hammer_Of_Blacksmith
+          Amount: 1
+        - Item: Portable_Furnace
+          Amount: 1
       Weapon:
         Dagger: true
         1hSword: true
@@ -10651,6 +10682,9 @@ Body:
     AfterCastActDelay: 3000
     Requires:
       SpCost: 70
+      ItemCost:
+        - Item: Portable_Furnace
+          Amount: 1
   - Id: 385
     Name: WS_CREATECOIN
     Description: Create Coins
@@ -13187,6 +13221,11 @@ Body:
     AfterCastActDelay: 3000
     Requires:
       SpCost: 70
+      ItemCost:
+        - Item: Hammer_Of_Blacksmith
+          Amount: 1
+        - Item: Portable_Furnace
+          Amount: 1
       Weapon:
         Fist: true
         Dagger: true
@@ -20449,59 +20488,21 @@ Body:
   - Id: 2279
     Name: NC_POWERSWING
     Description: Power Swing
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    Flags:
-      AllowOnMado: true
     Range: 1
     Hit: Single
-    HitCount: 1
+    HitCount: -2
     Element: Weapon
-    AfterCastActDelay:
-      - Level: 1
-        Time: 1000
-      - Level: 2
-        Time: 1000
-      - Level: 3
-        Time: 1000
-      - Level: 4
-        Time: 1000
-      - Level: 5
-        Time: 1000
-      - Level: 6
-        Time: 500
-      - Level: 7
-        Time: 500
-      - Level: 8
-        Time: 500
-      - Level: 9
-        Time: 500
-      - Level: 10
-        Time: 500
+    Cooldown: 4000
+    AfterCastActDelay: 400
     Duration1: 2000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 20
-        - Level: 2
-          Amount: 22
-        - Level: 3
-          Amount: 24
-        - Level: 4
-          Amount: 26
-        - Level: 5
-          Amount: 28
-        - Level: 6
-          Amount: 30
-        - Level: 7
-          Amount: 32
-        - Level: 8
-          Amount: 34
-        - Level: 9
-          Amount: 36
-        - Level: 10
-          Amount: 38
+      SpCost: 16
+      Weapon:
+        1hAxe: true
+        2hAxe: true
   - Id: 2280
     Name: NC_AXETORNADO
     Description: Axe Tornado
@@ -20518,17 +20519,7 @@ Body:
     Element: Weapon
     Cooldown: 5000
     AfterCastActDelay: 200
-    SplashArea:
-      - Level: 1
-        Area: 3
-      - Level: 2
-        Area: 3
-      - Level: 3
-        Area: 3
-      - Level: 4
-        Area: 3
-      - Level: 5
-        Area: 3
+    SplashArea: 3
     Requires:
       SpCost: 12
       Weapon:

@@ -12,7 +12,7 @@ class BlacksmithSkillAtkRatioCalculator
 		static int calculate_axe_boomerang_atk_ratio(int skill_lv);
 		static int calculate_axe_tornado_atk_ratio(int skill_lv, int luk);
 		static int calculate_hammerfall_atk_ratio(int skill_lv, int str);
-		
-
+		static int calculate_hammerdown_protocol_atk_ratio(int skill_lv, int str, int dex);
+		static int calculate_power_swing_atk_ratio(int skill_lv, int str, int luk);
 };
 

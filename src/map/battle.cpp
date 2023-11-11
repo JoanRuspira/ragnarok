@@ -2896,6 +2896,8 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case NC_AXEBOOMERANG:
 		case NC_AXETORNADO:
 		case BS_HAMMERFALL:
+		case WS_HAMMERDOWN_PROTOCOL:
+		case NC_POWERSWING:
 			skillratio += BlacksmithSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
 		case BA_MUSICALSTRIKE:
@@ -3165,11 +3167,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 				case SZ_BIG: skillratio += 200 + 300 * skill_lv; break;// Large
 			}
 			RE_LVL_DMOD(120);
-			break;
-		case NC_POWERSWING: // According to current sources, only the str + dex gets modified by level [Akinari]
-			skillratio += -100 + status_get_str(src) + status_get_dex(src);
-			RE_LVL_DMOD(100);
-			skillratio += 300 + 100 * skill_lv;
 			break;
 		case NC_MAGMA_ERUPTION: // 'Slam' damage
 			skillratio += 350 + 50 * skill_lv;

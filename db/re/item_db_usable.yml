@@ -1142,14 +1142,6 @@ Body:
       BuyingStore: true
     Script: |
       itemskill "MC_IDENTIFY",1;
-  - Id: 612
-    AegisName: Portable_Furnace
-    Name: Mini Furnace
-    Type: Etc
-    Buy: 150
-    Weight: 200
-    Flags:
-      BuyingStore: true
   - Id: 613
     AegisName: Iron_Hammer
     Name: Iron Hammer
