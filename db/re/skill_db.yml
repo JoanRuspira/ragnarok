@@ -1384,7 +1384,7 @@ Body:
         Reproduce: true
     Duration2: 10000
     Requires:
-      SpCost: 20
+      SpCost: 15
       State: Cart
   - Id: 805
     Name: PR_UNHOLYCROSS
@@ -1486,7 +1486,7 @@ Body:
         Reproduce: true
     Duration2: 10000
     Requires:
-      SpCost: 20
+      SpCost: 15
       State: Cart
   - Id: 810
     Name: MC_CARTCYCLONE
@@ -1519,7 +1519,7 @@ Body:
         Reproduce: true
     Duration2: 10000
     Requires:
-      SpCost: 20
+      SpCost: 15
       State: Cart
   - Id: 811
     Name: MC_CARTBRUME
@@ -1552,7 +1552,7 @@ Body:
         Reproduce: true
     Duration2: 10000
     Requires:
-      SpCost: 20
+      SpCost: 15
       State: Cart
   - Id: 812
     Name: MC_SHRAPNEL
@@ -1585,7 +1585,7 @@ Body:
         Reproduce: true
     Duration2: 10000
     Requires:
-      SpCost: 20
+      SpCost: 25
       State: Cart     
       Ammo:
         Cannonball: true
@@ -10733,7 +10733,7 @@ Body:
       - Level: 5
         Time: 120000
     Requires:
-      SpCost: 20
+      SpCost: 35
       State: Cart
   - Id: 388
     Name: WS_SYSTEMCREATE
@@ -13142,7 +13142,7 @@ Body:
   - Id: 485
     Name: WS_CARTTERMINATION
     Description: Cart Termination
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     DamageFlags:
@@ -13826,12 +13826,6 @@ Body:
           Amount: 30
         - Level: 5
           Amount: 35
-      Weapon:
-        Revolver: true
-        Rifle: true
-      Ammo:
-        Bullet: true
-      AmmoAmount: 1
   - Id: 514
     Name: GS_PIERCINGSHOT
     Description: Piercing Shot
@@ -13854,7 +13848,7 @@ Body:
   - Id: 515
     Name: GS_RAPIDSHOWER
     Description: Rapid Shower
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     Flags:
@@ -13886,11 +13880,6 @@ Body:
           Amount: 38
         - Level: 10
           Amount: 40
-      Weapon:
-        Revolver: true
-      Ammo:
-        Bullet: true
-      AmmoAmount: 5
   - Id: 516
     Name: GS_DESPERADO
     Description: Desperado
@@ -13997,7 +13986,7 @@ Body:
   - Id: 518
     Name: GS_DUST
     Description: Dust
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     Range: 2
@@ -14029,11 +14018,6 @@ Body:
           Amount: 27
         - Level: 10
           Amount: 30
-      Weapon:
-        Shotgun: true
-      Ammo:
-        Bullet: true
-      AmmoAmount: 1
   - Id: 519
     Name: GS_FULLBUSTER
     Description: Full Buster
@@ -14114,11 +14098,6 @@ Body:
           Amount: 55
         - Level: 10
           Amount: 60
-      Weapon:
-        Shotgun: true
-      Ammo:
-        Bullet: true
-      AmmoAmount: 5
   - Id: 521
     Name: GS_GROUNDDRIFT
     Description: Ground Drift
@@ -25088,7 +25067,7 @@ Body:
     CastTime: 3000
     AfterCastActDelay: 500
     Requires:
-      SpCost: 25
+      SpCost: 20
       Ammo:
         Cannonball: true
       AmmoAmount: 1
@@ -25924,11 +25903,6 @@ Body:
           Amount: 52
         - Level: 5
           Amount: 56
-      Weapon:
-        Rifle: true
-      Ammo:
-        Bullet: true
-      AmmoAmount: 1
   - Id: 2554
     Name: RL_BANISHING_BUSTER
     Description: Banishing Buster
@@ -26127,11 +26101,6 @@ Body:
           Amount: 65
         - Level: 5
           Amount: 70
-      Weapon:
-        Shotgun: true
-      Ammo:
-        Bullet: true
-      AmmoAmount: 1
   - Id: 2558
     Name: RL_E_CHAIN
     Description: Eternal Chain
@@ -26537,8 +26506,6 @@ Body:
           Amount: 92
         - Level: 5
           Amount: 96
-      Weapon:
-        Rifle: true
   - Id: 2570
     Name: RL_SLUGSHOT
     Description: Slug Shot
