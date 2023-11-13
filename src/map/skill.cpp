@@ -3289,6 +3289,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case MC_SHRAPNEL:
 	case RK_WINDCUTTER:
 	case MC_FIREWORKS:
+	case WS_CARTTERMINATION:
 	case MO_KI_BLAST:
 	case SM_MAGNUM:
 		if( flag&1 ) {
@@ -3370,7 +3371,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case PA_SHIELDCHAIN:	// Shield Chain
 	case PA_SACRIFICE:
 	case HT_HURRICANEFURY:
-	case WS_CARTTERMINATION:	// Cart Termination
 	case AS_VENOMKNIFE:
 	case TK_DOWNKICK:
 	case TK_COUNTER:
@@ -5628,7 +5628,16 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			break;
 
 	case MC_FIREWORKS:
+		clif_soundeffectall(&sd->bl, "fireworks.wav", 0, AREA);
 		MerchntSkillAtkRatioCalculator::add_cart_fireworks_special_effects(src);
+		skill_area_temp[1] = 0;
+			map_foreachinshootrange(skill_area_sub, src, skill_get_splash(skill_id, skill_lv), BL_SKILL|BL_CHAR,
+				src,skill_id,skill_lv,tick, flag|BCT_ENEMY|1, skill_castend_damage_id);
+			clif_skill_nodamage (src,src,skill_id,skill_lv,1);
+			break;
+	case WS_CARTTERMINATION:
+		clif_specialeffect(src, EF_CARTTER, AREA); 
+		clif_specialeffect(src, 1375, AREA); //new_banishingpoint_07
 		skill_area_temp[1] = 0;
 			map_foreachinshootrange(skill_area_sub, src, skill_get_splash(skill_id, skill_lv), BL_SKILL|BL_CHAR,
 				src,skill_id,skill_lv,tick, flag|BCT_ENEMY|1, skill_castend_damage_id);
@@ -6494,6 +6503,9 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case BS_OVERTHRUST:
 	case WS_OVERTHRUSTMAX:
 	case WS_MELTDOWN:
+		if (skill_id == WS_OVERTHRUSTMAX){
+			clif_specialeffect(src, 1138, AREA);
+		}
 		if (sd == NULL || sd->status.party_id == 0 || (flag & 1)) {
 			int weapontype = skill_get_weapontype(skill_id);
 			if (!weapontype || !dstsd || pc_check_weapontype(dstsd, weapontype)) {

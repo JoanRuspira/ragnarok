@@ -1336,7 +1336,7 @@ bool battle_status_block_damage(struct block_list *src, struct block_list *targe
 		(sc->data[SC_MEIKYOUSISUI] && rnd() % 100 < 40)) // custom value
 		return false;
 
-	if ((sce = sc->data[SC_PARRYING]) && flag&BF_WEAPON && skill_id != WS_CARTTERMINATION && rnd() % 100 < sce->val2) {
+	if ((sce = sc->data[SC_PARRYING]) && flag&BF_WEAPON && rnd() % 100 < sce->val2) {
 		clif_skill_nodamage(target, target, LK_PARRYING, sce->val1, 1);
 
 		if (skill_id == LK_PARRYING) {
@@ -1608,9 +1608,9 @@ int64 battle_calc_damage(struct block_list *src,struct block_list *bl,struct Dam
 
 		if( sc->data[SC_ENERGYCOAT] && (skill_id == GN_HELLS_PLANT_ATK ||
 #ifdef RENEWAL
-			((flag&BF_WEAPON || flag&BF_MAGIC) && skill_id != WS_CARTTERMINATION)
+			((flag&BF_WEAPON || flag&BF_MAGIC))
 #else
-			(flag&BF_WEAPON && skill_id != WS_CARTTERMINATION)
+			(flag&BF_WEAPON)
 #endif
 			) )
 		{
@@ -2891,6 +2891,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			break;
 		case MC_CARTBRUME:
 		case MC_FIREWORKS:
+		case WS_CARTTERMINATION:
 		case MC_SHRAPNEL:
 		case GN_CARTCANNON:
 		case NC_AXEBOOMERANG:
@@ -2898,6 +2899,8 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case BS_HAMMERFALL:
 		case WS_HAMMERDOWN_PROTOCOL:
 		case NC_POWERSWING:
+		case GS_SPREADATTACK:
+		case GS_RAPIDSHOWER:
 			skillratio += BlacksmithSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
 		case BA_MUSICALSTRIKE:
@@ -3027,15 +3030,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 				skillratio /= 2;
 			break;
 #endif
-		case WS_CARTTERMINATION:
-			i = 10 * (16 - skill_lv);
-			if (i < 1) i = 1;
-			//Preserve damage ratio when max cart weight is changed.
-			if (sd && sd->cart_weight)
-				skillratio += sd->cart_weight / i * 80000 / battle_config.max_cart_weight - 100;
-			else if (!sd)
-				skillratio += 80000 / i - 100;
-			break;
 		case TK_DOWNKICK:
 		case TK_STORMKICK:
 			skillratio += 60 + 20 * skill_lv;
@@ -3062,9 +3056,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			if((tstatus->race == RC_BRUTE || tstatus->race == RC_DEMIHUMAN || tstatus->race == RC_PLAYER_HUMAN || tstatus->race == RC_PLAYER_DORAM) && !status_has_mode(tstatus,MD_STATUSIMMUNE))
 				skillratio += 400;
 			break;
-		case GS_RAPIDSHOWER:
-			skillratio += 400 + 50 * skill_lv;
-			break;
 		case GS_DESPERADO:
 			skillratio += 50 * (skill_lv - 1);
 			if (sc && sc->data[SC_FALLEN_ANGEL])
@@ -3072,13 +3063,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			break;
 		case GS_DUST:
 			skillratio += 50 * skill_lv;
-			break;
-		case GS_SPREADATTACK:
-#ifdef RENEWAL
-			skillratio += 30 * skill_lv;
-#else
-			skillratio += 20 * (skill_lv - 1);
-#endif
 			break;
 #ifdef RENEWAL
 		case GS_GROUNDDRIFT:
@@ -5779,7 +5763,7 @@ int64 battle_calc_return_damage(struct block_list* bl, struct block_list *src, i
 						status_change_end(bl,SC_REFLECTDAMAGE,INVALID_TIMER);
 				}
 			} else {
-				if ( sc->data[SC_REFLECTSHIELD] && skill_id != WS_CARTTERMINATION ) {
+				if ( sc->data[SC_REFLECTSHIELD] ) {
 					// Don't reflect non-skill attack if has SC_REFLECTSHIELD from Devotion bonus inheritance
 					if (!skill_id && battle_config.devotion_rdamage_skill_only && sc->data[SC_REFLECTSHIELD]->val4)
 						rdamage = 0;
@@ -5789,7 +5773,7 @@ int64 battle_calc_return_damage(struct block_list* bl, struct block_list *src, i
 					}
 				}
 
-				if (sc->data[SC_DEATHBOUND] && skill_id != WS_CARTTERMINATION && skill_id != GN_HELLS_PLANT_ATK && !status_bl_has_mode(src,MD_STATUSIMMUNE)) {
+				if (sc->data[SC_DEATHBOUND] && skill_id != GN_HELLS_PLANT_ATK && !status_bl_has_mode(src,MD_STATUSIMMUNE)) {
 					if (distance_bl(src,bl) <= 0 || !map_check_dir(map_calc_dir(bl,src->x,src->y), unit_getdir(bl))) {
 						int64 rd1 = 0;
 

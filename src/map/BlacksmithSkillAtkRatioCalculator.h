@@ -14,5 +14,8 @@ class BlacksmithSkillAtkRatioCalculator
 		static int calculate_hammerfall_atk_ratio(int skill_lv, int str);
 		static int calculate_hammerdown_protocol_atk_ratio(int skill_lv, int str, int dex);
 		static int calculate_power_swing_atk_ratio(int skill_lv, int str, int luk);
+		static int calculate_crowd_control_shot_atk_ratio(int skill_lv, int dex);
+		static int calculate_trigger_happy_cart_atk_ratio(int skill_lv, int dex);
+		static int calculate_cart_termination_atk_ratio(int skill_lv, int dex);
 };
 

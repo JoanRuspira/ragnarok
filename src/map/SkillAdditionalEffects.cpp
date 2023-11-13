@@ -73,7 +73,7 @@ int SkillAdditionalEffects::skill_additional_effect(struct block_list* src, stru
 			if (rate)
 				skill_break_equip(src, src, EQP_WEAPON, rate, BCT_SELF);
 		}
-		if (battle_config.equip_skill_break_rate && skill_id != WS_CARTTERMINATION && skill_id != ITM_TOMAHAWK)
+		if (battle_config.equip_skill_break_rate && skill_id != ITM_TOMAHAWK)
 		{	// Cart Termination/Tomahawk won't trigger breaking data. Why? No idea, go ask Gravity.
 			// Target weapon breaking
 			rate = 0;
@@ -463,7 +463,7 @@ void SkillAdditionalEffects::skill_trigger_status_even_by_blocked_damage(struct 
 
 	if (sd)
 	{ // These statuses would be applied anyway even if the damage was blocked by some skills. [Inkfish]
-		if (skill_id != WS_CARTTERMINATION && skill_id != AM_DEMONSTRATION && skill_id != CR_REFLECTSHIELD && skill_id != MS_REFLECTSHIELD && skill_id != GN_HELLS_PLANT_ATK
+		if (skill_id != AM_DEMONSTRATION && skill_id != CR_REFLECTSHIELD && skill_id != MS_REFLECTSHIELD && skill_id != GN_HELLS_PLANT_ATK
 			) {
 			// Trigger status effects
 			enum sc_type type;

@@ -10734,6 +10734,9 @@ Body:
         Time: 120000
     Requires:
       SpCost: 35
+      ItemCost:
+        - Item: Gun_Powder
+          Amount: 1
       State: Cart
   - Id: 388
     Name: WS_SYSTEMCREATE
@@ -13144,66 +13147,31 @@ Body:
     Description: Cart Termination
     MaxLevel: 5
     Type: Weapon
-    TargetType: Attack
+    TargetType: Self
     DamageFlags:
-      IgnoreAtkCard: true
-    Flags:
-      AllowOnMado: true
-      IgnoreAutoGuard: true
-      IgnoreCicada: true
-    Range: -2
+      Splash: true
     Hit: Single
-    HitCount: 1
+    HitCount: -1
     Element: Weapon
-    Duration2: 5000
+    AfterCastActDelay: 400
+    SplashArea: 5
+    Knockback: 2
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Duration2: 10000
+    CastTime: 2000
+    Cooldown: 8000
     Requires:
-      SpCost: 15
-      ZenyCost:
-        - Level: 1
-          Amount: 600
-        - Level: 2
-          Amount: 700
-        - Level: 3
-          Amount: 800
-        - Level: 4
-          Amount: 900
-        - Level: 5
-          Amount: 1000
-        - Level: 6
-          Amount: 1100
-        - Level: 7
-          Amount: 1200
-        - Level: 8
-          Amount: 1300
-        - Level: 9
-          Amount: 1400
-        - Level: 10
-          Amount: 1500
-      Weapon:
-        Fist: true
-        Dagger: true
-        1hSword: true
-        2hSword: true
-        1hSpear: true
-        2hSpear: true
-        1hAxe: true
-        2hAxe: true
-        Mace: true
-        2hMace: true
-        Staff: true
-        Knuckle: true
-        Musical: true
-        Whip: true
-        Book: true
-        Katar: true
-        Revolver: true
-        Rifle: true
-        Gatling: true
-        Shotgun: true
-        Grenade: true
-        Huuma: true
-      Status:
-        Cartboost: true
+      SpCost: 30
+      ItemCost:
+        - Item: Gun_Powder
+          Amount: 1
+      State: Cart
+      Ammo:
+        Cannonball: true
+      AmmoAmount: 3
   - Id: 486
     Name: WS_OVERTHRUSTMAX
     Description: Maximum Power Thrust
@@ -13857,29 +13825,15 @@ Body:
     Hit: Multi_Hit
     HitCount: -5
     Element: Weapon
-    AfterCastActDelay: 1000
+    AfterCastActDelay: 400
+    Cooldown: 7000
+    CastTime: 2000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 22
-        - Level: 2
-          Amount: 24
-        - Level: 3
-          Amount: 26
-        - Level: 4
-          Amount: 28
-        - Level: 5
-          Amount: 30
-        - Level: 6
-          Amount: 32
-        - Level: 7
-          Amount: 34
-        - Level: 8
-          Amount: 36
-        - Level: 9
-          Amount: 38
-        - Level: 10
-          Amount: 40
+      SpCost: 30
+      State: Cart     
+      Ammo:
+        Cannonball: true
+      AmmoAmount: 5
   - Id: 516
     Name: GS_DESPERADO
     Description: Desperado
@@ -14043,7 +13997,7 @@ Body:
   - Id: 520
     Name: GS_SPREADATTACK
     Description: Spread Attack
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     DamageFlags:
@@ -14052,52 +14006,18 @@ Body:
       TargetTrap: true
       AlterRangeSnakeEye: true
     Range: -9
-    Hit: Single
-    HitCount: 1
+    Hit: Multi_Hit
+    HitCount: -2
     Element: Weapon
-    SplashArea:
-      - Level: 1
-        Area: 1
-      - Level: 2
-        Area: 1
-      - Level: 3
-        Area: 1
-      - Level: 4
-        Area: 2
-      - Level: 5
-        Area: 2
-      - Level: 6
-        Area: 2
-      - Level: 7
-        Area: 3
-      - Level: 8
-        Area: 3
-      - Level: 9
-        Area: 3
-      - Level: 10
-        Area: 4
+    SplashArea: 5
+    Cooldown: 7000
+    AfterCastActDelay: 400
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 15
-        - Level: 2
-          Amount: 20
-        - Level: 3
-          Amount: 25
-        - Level: 4
-          Amount: 30
-        - Level: 5
-          Amount: 35
-        - Level: 6
-          Amount: 40
-        - Level: 7
-          Amount: 45
-        - Level: 8
-          Amount: 50
-        - Level: 9
-          Amount: 55
-        - Level: 10
-          Amount: 60
+      SpCost: 25
+      State: Cart     
+      Ammo:
+        Cannonball: true
+      AmmoAmount: 4
   - Id: 521
     Name: GS_GROUNDDRIFT
     Description: Ground Drift
