@@ -1306,14 +1306,14 @@ bool battle_status_block_damage(struct block_list *src, struct block_list *targe
 		}
 	}
 
-	if (sc->data[SC_NEUTRALBARRIER] && ((flag&(BF_LONG|BF_MAGIC)) == BF_LONG
-#ifndef RENEWAL
-		|| skill_id == CR_ACIDDEMONSTRATION
-#endif
-		)) {
-		d->dmg_lv = ATK_MISS;
-		return false;
-	}
+// 	if (sc->data[SC_NEUTRALBARRIER] && ((flag&(BF_LONG|BF_MAGIC)) == BF_LONG
+// #ifndef RENEWAL
+// 		|| skill_id == CR_ACIDDEMONSTRATION
+// #endif
+// 		)) {
+// 		d->dmg_lv = ATK_MISS;
+// 		return false;
+// 	}
 
 	// ATK_DEF Type
 	if ((sce = sc->data[SC_LIGHTNINGWALK]) && flag&BF_LONG && rnd() % 100 < sce->val1) {
@@ -2355,8 +2355,8 @@ static bool is_attack_hitting(struct Damage* wd, struct block_list *src, struct 
 	else if (nk[NK_IGNOREFLEE])
 		return true;
 
-	if( tsc && tsc->data[SC_NEUTRALBARRIER] && (wd->flag&(BF_LONG|BF_MAGIC)) == BF_LONG )
-		return false;
+	// if( tsc && tsc->data[SC_NEUTRALBARRIER] && (wd->flag&(BF_LONG|BF_MAGIC)) == BF_LONG )
+	// 	return false;
 
 	flee = tstatus->flee;
 #ifdef RENEWAL

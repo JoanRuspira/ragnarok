@@ -13445,8 +13445,19 @@ static int skill_unit_onplace(struct skill_unit *unit, struct block_list *bl, t_
 			break;
 
 		case UNT_NEUTRALBARRIER:
-			if (!sce)
-				status_change_start(ss, bl, type, 10000, sg->skill_lv, 0, 0, 0, sg->limit, SCSTART_NOICON);
+			if (!sce){
+				TBL_PC* sd;
+				TBL_PC* tsd;
+				sd = BL_CAST(BL_PC, ss);
+				tsd = BL_CAST(BL_PC, bl);
+				if (sd && tsd){
+					if(sd->status.party_id == tsd->status.party_id){
+						 status_change_start(ss, bl, type, 10000, sg->skill_lv, 0, 0, 0, sg->limit, SCSTART_NOICON);		
+						//sc_start2(ss,bl,SC_NEUTRALBARRIER,100,sg->skill_lv,sg->group_id,skill_get_time(sg->skill_id,sg->skill_lv));
+					
+					}
+				}
+			}
 			break;
 
 		case UNT_WARMER:

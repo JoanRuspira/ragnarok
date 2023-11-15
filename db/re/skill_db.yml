@@ -1586,10 +1586,13 @@ Body:
     Duration2: 10000
     Requires:
       SpCost: 25
-      State: Cart     
+      State: Cart 
+      ItemCost:
+        - Item: Gun_Powder
+          Amount: 1    
       Ammo:
         Cannonball: true
-      AmmoAmount: 3
+      AmmoAmount: 1
   - Id: 813
     Name: SM_SPEARSTANCE
     Description: Spear Stance
@@ -14017,7 +14020,7 @@ Body:
       State: Cart     
       Ammo:
         Cannonball: true
-      AmmoAmount: 4
+      AmmoAmount: 3
   - Id: 521
     Name: GS_GROUNDDRIFT
     Description: Ground Drift
@@ -20223,37 +20226,22 @@ Body:
   - Id: 2273
     Name: NC_NEUTRALBARRIER
     Description: Neutral Barrier
-    MaxLevel: 3
+    MaxLevel: 5
     TargetType: Self
     DamageFlags:
       NoDamage: true
-    Flags:
-      AllowOnMado: true
     Hit: Single
     HitCount: 1
-    Duration1:
-      - Level: 1
-        Time: 30000
-      - Level: 2
-        Time: 45000
-      - Level: 3
-        Time: 60000
-    Cooldown:
-      - Level: 1
-        Time: 20000
-      - Level: 2
-        Time: 15000
-      - Level: 3
-        Time: 10000
+    Duration1: 30000
+    Cooldown: 60000
+    AfterCastActDely: 3000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 80
-        - Level: 2
-          Amount: 90
-        - Level: 3
-          Amount: 100
-      State: Mado
+      SpCost: 60
+      ItemCost:
+        - Item: Steel
+          Amount: 1  
+        - Item: Portable_Furnace
+          Amount: 1 
     Unit:
       Id: Neutralbarrier
       Layout: 2

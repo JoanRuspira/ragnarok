@@ -600,7 +600,7 @@ void initChangeTables(void)
 	set_sc( SN_SIGHT		, SC_TRUESIGHT		, EFST_TRUESIGHT		, SCB_STR|SCB_AGI|SCB_VIT|SCB_INT|SCB_DEX|SCB_LUK|SCB_CRI|SCB_HIT );
 	set_sc( SN_WINDWALK		, SC_WINDWALK		, EFST_WINDWALK		, SCB_AGI|SCB_SPEED );
 	set_sc( WS_MELTDOWN		, SC_MELTDOWN		, EFST_MELTDOWN		, SCB_WATK );
-	set_sc( WS_CARTBOOST		, SC_CARTBOOST		, EFST_CARTBOOST		, SCB_SPEED );
+	set_sc( WS_CARTBOOST		, SC_CARTBOOST		, EFST_CARTBOOST		, SCB_SPEED|SCB_WATK );
 	set_sc( ST_CHASEWALK		, SC_CHASEWALK		, EFST_CHASEWALK		, SCB_SPEED );
 	set_sc( ST_REJECTSWORD		, SC_REJECTSWORD	, EFST_SWORDREJECT, SCB_WATK|SCB_CRI );
 	set_sc( CG_MARIONETTE		, SC_MARIONETTE		, EFST_MARIONETTE_MASTER, SCB_STR|SCB_AGI|SCB_VIT|SCB_INT|SCB_DEX|SCB_LUK );
@@ -6568,6 +6568,8 @@ static unsigned short status_calc_watk(struct block_list *bl, struct status_chan
 		watk += sc->data[SC_STRIKING]->val2;
 	if(sc->data[SC_RUSHWINDMILL])
 		watk += sc->data[SC_RUSHWINDMILL]->val3;
+	if(sc->data[SC_CARTBOOST])
+		watk += sc->data[SC_CARTBOOST]->val1*3;
 	if(sc->data[SC_FIRE_INSIGNIA] && sc->data[SC_FIRE_INSIGNIA]->val1 == 2)
 		watk += 50;
 	if((sc->data[SC_FIRE_INSIGNIA] && sc->data[SC_FIRE_INSIGNIA]->val1 == 2)
@@ -11695,7 +11697,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			val4 = tick / tick_time;
 			break;
 		case SC_NEUTRALBARRIER:
-			val2 = 10 + val1 * 5; // Def/Mdef
+			val2 = 15 + val1 * 5; // Def/Mdef
 			tick = INFINITE_TICK;
 			break;
 		case SC_MAGIC_POISON:
@@ -13312,18 +13314,6 @@ int status_change_end_(struct block_list* bl, enum sc_type type, int tid, const 
 		case SC_SOULENERGY:
 			if (sd)
 				pc_delsoulball(sd, sd->soulball, false);
-			break;
-		case SC_MADOGEAR:
-			status_change_end(bl, SC_SHAPESHIFT, INVALID_TIMER);
-			status_change_end(bl, SC_HOVERING, INVALID_TIMER);
-			status_change_end(bl, SC_ACCELERATION, INVALID_TIMER);
-			status_change_end(bl, SC_OVERHEAT_LIMITPOINT, INVALID_TIMER);
-			status_change_end(bl, SC_OVERHEAT, INVALID_TIMER);
-			status_change_end(bl, SC_MAGNETICFIELD, INVALID_TIMER);
-			status_change_end(bl, SC_NEUTRALBARRIER_MASTER, INVALID_TIMER);
-			status_change_end(bl, SC_STEALTHFIELD_MASTER, INVALID_TIMER);
-			if (sd)
-				pc_bonus_script_clear(sd, BSF_REM_ON_MADOGEAR);
 			break;
 	}
 
