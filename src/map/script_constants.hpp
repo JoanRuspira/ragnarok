@@ -993,6 +993,7 @@
 	export_constant(SC_FURY);
 	export_constant(SC_GOSPEL);
 	export_constant(SC_ASSUMPTIO);
+	export_constant(SC_REINFORCEMENT);
 	export_constant(SC_BASILICA);
 	export_constant(SC_GUILDAURA);
 	export_constant(SC_MAGICPOWER);
@@ -2510,6 +2511,7 @@
 	export_constant(EFST_DEC_AGI);
 	export_constant(EFST_SLOWPOISON);
 	export_constant(EFST_IMPOSITIO);
+	export_constant(EFST_REINFORCEMENT);
 	export_constant(EFST_SUFFRAGIUM);
 	export_constant(EFST_ASPERSIO);
 	export_constant(EFST_BENEDICTIO);

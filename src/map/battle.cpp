@@ -1524,7 +1524,10 @@ int64 battle_calc_damage(struct block_list *src,struct block_list *bl,struct Dam
 			float ratio = 0.95 - 0.05*sc->data[SC_ASSUMPTIO]->val1;
 			damage = (int64)damage*ratio; //Receive ratio% of damage
 		}
-
+		if( sc->data[SC_REINFORCEMENT] ) {
+			float ratio = 0.95 - 0.03*sc->data[SC_REINFORCEMENT]->val1;
+			damage = (int64)damage*ratio; //Receive ratio% of damage
+		}
 
 		if (sc->data[SC_DEFENDER] && skill_id != KO_MUCHANAGE && (flag&(BF_LONG|BF_WEAPON)) == (BF_LONG|BF_WEAPON))
 			damage -= damage * sc->data[SC_DEFENDER]->val2 / 100;

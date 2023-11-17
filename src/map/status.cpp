@@ -381,12 +381,9 @@ void initChangeTables(void)
 	add_sc( TF_POISON		, SC_POISON		);
 	set_sc( KN_TWOHANDQUICKEN	, SC_TWOHANDQUICKEN	, EFST_TWOHANDQUICKEN	, SCB_ASPD|SCB_WATK );
 	set_sc( KN_AUTOCOUNTER		, SC_AUTOCOUNTER	, EFST_AUTOCOUNTER	, SCB_NONE );
-	set_sc( PR_IMPOSITIO		, SC_IMPOSITIO		, EFST_IMPOSITIO	, SCB_WATK
-#ifdef RENEWAL
-		|SCB_MATK );
-#else
-		);
-#endif
+	set_sc( PR_IMPOSITIO		, SC_IMPOSITIO		, EFST_IMPOSITIO	, SCB_WATK);
+	set_sc(WS_ARMOR_REINFORCEMENT, SC_REINFORCEMENT, EFST_REINFORCEMENT, SCB_DEF);
+
 	set_sc( PR_SUFFRAGIUM		, SC_SUFFRAGIUM		, EFST_SUFFRAGIUM		, SCB_NONE );
 	set_sc( PR_ASPERSIO		, SC_ASPERSIO		, EFST_ASPERSIO		, SCB_ATK_ELE );
 	set_sc( PR_BENEDICTIO		, SC_BENEDICTIO		, EFST_BENEDICTIO		, SCB_DEF_ELE|SCB_WATK|SCB_MATK|SCB_AGI|SCB_VIT|SCB_LUK);
@@ -6625,8 +6622,6 @@ static unsigned short status_calc_ematk(struct block_list *bl, struct status_cha
 {
 	if (!sc || !sc->count)
 		return cap_value(matk,0,USHRT_MAX);
-	if (sc->data[SC_IMPOSITIO])
-		matk += sc->data[SC_IMPOSITIO]->val2;
 	if (sc->data[SC_MATKPOTION])
 		matk += sc->data[SC_MATKPOTION]->val1;
 	if (sc->data[SC_MATKFOOD])
@@ -7040,6 +7035,8 @@ static defType status_calc_def(struct block_list *bl, struct status_change *sc, 
 		def += sc->data[SC_SHIELDSPELL_REF]->val2;
 	if( sc->data[SC_PRESTIGE] )
 		def += sc->data[SC_PRESTIGE]->val3;
+	if( sc->data[SC_REINFORCEMENT] )
+		def += sc->data[SC_REINFORCEMENT]->val1*5;
 	if( sc->data[SC_DEFENCE] )
 		def += sc->data[SC_DEFENCE]->val1*4;
 	if(sc->data[SC_RUSHWINDMILL])
@@ -12297,6 +12294,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			sc->opt3 |= OPT3_MARIONETTE;
 			opt_flag = 0;
 			break;
+		case SC_REINFORCEMENT:
 		case SC_ASSUMPTIO:
 			sc->opt3 |= OPT3_ASSUMPTIO;
 			opt_flag = 0;
@@ -13467,6 +13465,7 @@ int status_change_end_(struct block_list* bl, enum sc_type type, int tid, const 
 		sc->opt3 &= ~OPT3_MARIONETTE;
 		opt_flag = 0;
 		break;
+	case SC_REINFORCEMENT:
 	case SC_ASSUMPTIO:
 		sc->opt3 &= ~OPT3_ASSUMPTIO;
 		opt_flag = 0;

@@ -3275,6 +3275,28 @@ Body:
       ItemCost:
         - Item: Hammer_Of_Blacksmith
           Amount: 3
+  - Id: 891
+    Name: WS_ARMOR_REINFORCEMENT
+    Description: Armor Reinforcement
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Support
+    DamageFlags:
+      NoDamage: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    AfterCastActDelay: 2000
+    CastTime: 3000
+    Duration1: 90000
+    Requires:
+      SpCost: 30
+      ItemCost:
+        - Item: Hammer_Of_Blacksmith
+          Amount: 1
+        - Item: Iron
+          Amount: 1
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death

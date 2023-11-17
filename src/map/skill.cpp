@@ -5889,6 +5889,23 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			sc_start2(src,bl,type,100,skill_lv,src->id,skill_get_time(skill_id,skill_lv)) ) )
 			sc_start2(src,src,type,100,skill_lv,bl->id,skill_get_time(skill_id,skill_lv));
 		break;
+	case WS_ARMOR_REINFORCEMENT:
+		if( sd && dstmd ) {
+			clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+		}else {
+			short i;
+			i = sd->equip_index[EQI_ARMOR];
+			if ( i < 0 || !sd->inventory_data[i] ) {
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				break;
+			}
+			clif_specialeffect(bl, EF_HAMIDEFENCE, AREA);
+			clif_specialeffect(bl, EF_REFINEOK, AREA);
+			clif_skill_nodamage(src,bl,skill_id,skill_lv,
+				sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
+		}
+		break;
+			
 	case HP_ASSUMPTIO:
 		if( sd && dstmd )
 			clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
@@ -7585,6 +7602,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 						if (!battle_config.dispel_song || tsc->data[i]->val4 == 0)
 							continue; //If in song area don't end it, even if config enabled
 						break;
+					case SC_REINFORCEMENT:
 					case SC_ASSUMPTIO:
 						if( bl->type == BL_MOB )
 							continue;
@@ -9007,6 +9025,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 					case SC_EP16_2_BUFF_SS:		case SC_EP16_2_BUFF_SC:	case SC_EP16_2_BUFF_AC:
 					case SC_EMERGENCY_MOVE:		case SC_MADOGEAR:
 					continue;
+				case SC_REINFORCEMENT:
 				case SC_ASSUMPTIO:
 					if( bl->type == BL_MOB )
 						continue;
