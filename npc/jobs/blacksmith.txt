@@ -1,0 +1,82 @@
+//===== Script =======================================
+// Blacksmith Job Change
+//====================================================
+
+-	script	Blacksmith Guildmaster#bsgld::Bsgld	-1,{
+	if (Class == Job_Acolyte) {
+		mes "[Blacksmith Guildmaster]";
+		mes "Good day! I am the Blacksmith Guildmaster.";
+		mes "I train Acolytes that meet the requirements and allow them to become Blacksmiths.";
+		next;
+		mes "[Blacksmith Guildmaster]";
+		mes "As a Blacksmith you will gain new skills.";
+		mes "The requirements are:";
+		mes "- Being a first class job.";
+		mes "- Being Job level 50.";
+		mes "- Having used all your skill points.";
+		next;
+		mes "[Blacksmith Guildmaster]";
+		mes "Do you want to become a Blacksmith?";
+		next;
+		switch(select("Yes:No")) {
+			case 1:
+				mes "[Blacksmith Guildmaster]";
+				mes "Good! Let me see if you pass our requirements...";
+				next;
+				if (JobLevel < 50) {
+					mes "[Blacksmith Guildmaster]";
+					mes "Hmm... Your job level does not meet our requirements.";
+					mes "You need to be more experienced before being a Blacksmith.";
+					close;
+				}
+				if (SkillPoint) {
+					mes "[Blacksmith Guildmaster]";
+					mes "Looks like you have not used all your skill points.";
+					mes "Use them and I'll be able to make you a Blacksmith.";
+					close;
+				}
+				mes "[Blacksmith Guildmaster]";
+				mes "Okay! Looks like you pass all of them!";
+				mes "You are allowed to join the Blacksmith guild.";
+				mes "Congratulations!";
+				jobchange Job_Blacksmith;
+				specialeffect2 EF_JOBLVUP50;
+				close;
+			case 2:
+				mes "[Blacksmith Guildmaster]";
+				mes "Ah! Let me know if you change your mind.";
+				mes "We are always looking for new adventurers";
+				mes "to join the guild.";
+				close;
+		}
+		
+	}
+
+	if (Class == Job_Blacksmith) {
+		mes "[Blacksmith Guildmaster]";
+		mes "Hi fellow Blacksmith!";
+		mes "Are you thinking about your next job?";
+		next;
+		mes "[Blacksmith Guildmaster]";
+		mes "You can become a Champion if you reach job level 50.";
+		next;
+		mes "[Blacksmith Guildmaster]";
+		mes "Go find the legendary Whitesmith in El Dicastes.";
+		mes "I'm sure he will be able to train you.";
+		close;
+	}
+
+	if (Class == Job_Whitesmith) {
+		mes "[Blacksmith Guildmaster]";
+		mes "Ah! An experienced member of the guild!";
+		mes "Are you here to help train the new members?";
+		close;
+	}
+
+	mes "[Blacksmith Guildmaster]";
+	mes "Welcome to the Blacksmith guild. We accept applications from Acolytes that meet our requirements.";
+	close;
+}
+
+ein_in01,18,28,4	duplicate(Bsgld)	Blacksmith Guildmaster#bsgld	869
+

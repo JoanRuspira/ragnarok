@@ -2828,7 +2828,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case MC_MAMMONITE:
 		case MC_CARTREVOLUTION:
 		case MC_CARTCYCLONE:
-			skillratio += MerchntSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
+			skillratio += MerchntSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, sd->status.zeny);
 			break;
 		case AC_SHOWER:
 		case HT_PHANTASMIC:

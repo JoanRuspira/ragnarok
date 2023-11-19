@@ -7,11 +7,12 @@
  * @param skill_lv : skill level
  * @param int_ : player's int
  */
-int MerchntSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv, struct status_data* sstatus)
+int MerchntSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv, struct status_data* sstatus, int zeny)
 {
+	
 	switch (skill_id) {
 	case MC_MAMMONITE:
-		return calculate_mammonite_atk_ratio(skill_lv);
+		return calculate_mammonite_atk_ratio(skill_lv, zeny);
 		break;
 	case MC_CARTREVOLUTION:
 		return calculate_cart_revolution_atk_ratio(skill_lv);
@@ -77,9 +78,12 @@ int MerchntSkillAtkRatioCalculator::calculate_cart_quake_atk_ratio(int skill_lv,
 	return ratio;
 }
 
-int MerchntSkillAtkRatioCalculator::calculate_mammonite_atk_ratio(int skill_lv)
+int MerchntSkillAtkRatioCalculator::calculate_mammonite_atk_ratio(int skill_lv, int zeny)
 {
 	int ratio = 0;
+	if (zeny > 10000) {
+		zeny = 100000;
+	}
 	switch (skill_lv) {
 		case 1:
 			ratio = 80;
@@ -97,7 +101,8 @@ int MerchntSkillAtkRatioCalculator::calculate_mammonite_atk_ratio(int skill_lv)
 			ratio = 350;
 			break;
 	}
-	return ratio;
+
+	return ratio + (zeny/1000);
 }
 
 int MerchntSkillAtkRatioCalculator::calculate_cart_revolution_atk_ratio(int skill_lv)

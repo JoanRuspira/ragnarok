@@ -1207,6 +1207,9 @@ Body:
         Reproduce: true
     Requires:
       SpCost: 15
+      Weapon:
+        1hAxe: true
+        2hAxe: true
   - Id: 2430
     Name: AC_BOW
     Description: Bow Mastery

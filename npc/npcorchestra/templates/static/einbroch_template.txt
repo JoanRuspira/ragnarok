@@ -2125,17 +2125,6 @@ ein_in01,27,83,7	script	Einbroch Villager#ein:npcid	spriteid,{
 	end;
 }
 
-ein_in01,18,28,4	script	Blacksmith GuildMaster#ein:npcid	731,{
-	npctalk "I will make you a Blacksmith";
-	end;
-}
-
-
-
-
-
-
-
 airport,158,32,4	script	Einbroch Villager#ein:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;
