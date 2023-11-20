@@ -5893,15 +5893,13 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		if( sd && dstmd ) {
 			clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
 		}else {
-			// short i;
-			// struct map_session_data* tsd = BL_CAST( BL_PC, bl );
-			// i = tsd->equip_index[EQI_ARMOR];
-			// if ( i < 0 || !tsd->inventory_data[i] ) {
-			// 	clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-			// 	break;
-			// }
-			// tsd->inventory.u.items_inventory[EQI_ARMOR].card[2];
-			
+			short i;
+			struct map_session_data* tsd = BL_CAST( BL_PC, bl );
+			i = tsd->equip_index[EQI_ARMOR];
+			if ( i < 0 || !tsd->inventory_data[i] ) {
+			 	clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+			 	break;
+			}
 			clif_specialeffect(bl, EF_HAMIDEFENCE, AREA);
 			clif_specialeffect(bl, EF_REFINEOK, AREA);
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,

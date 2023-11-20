@@ -7036,7 +7036,7 @@ static defType status_calc_def(struct block_list *bl, struct status_change *sc, 
 	if( sc->data[SC_PRESTIGE] )
 		def += sc->data[SC_PRESTIGE]->val3;
 	if( sc->data[SC_REINFORCEMENT] )
-		def += sc->data[SC_REINFORCEMENT]->val1*5;
+		def += sc->data[SC_REINFORCEMENT]->val1*sc->data[SC_REINFORCEMENT]->val3;
 	if( sc->data[SC_DEFENCE] )
 		def += sc->data[SC_DEFENCE]->val1*4;
 	if(sc->data[SC_RUSHWINDMILL])
@@ -10847,6 +10847,22 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			// val2 signals autoprovoke.
 			val3 = 4*(val1); // MAtk increase
 			val4 = 4*(val1); // MDef increase.
+			break;
+		case SC_REINFORCEMENT:
+			{
+				val2 = 0.03; // Damage reduction
+				val3 = 5; // Def increase
+				int skill;
+				short armor_index;
+				struct map_session_data* sd = BL_CAST( BL_PC, src );
+				struct map_session_data* tsd = BL_CAST( BL_PC, bl );
+				armor_index = tsd->equip_index[EQI_ARMOR];
+				if (sd->status.char_id == tsd->inventory.u.items_inventory[armor_index].card[2]
+					&& (skill = pc_checkskill(sd, BS_AXE)) == 5){
+					val2 = 0.06;
+					val3 = 10;
+				}
+			}
 			break;
 		case SC_AVOID:
 			// val2 = 10*val1; // Speed change rate.

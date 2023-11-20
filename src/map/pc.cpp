@@ -6455,6 +6455,9 @@ static void pc_checkallowskill(struct map_session_data *sd)
 		SC_UNLIMIT,
 		SC_DANCINGBLADE,
 		SC_REJECTSWORD,
+		SC_REINFORCEMENT,
+		SC_MELTDOWN,
+		SC_MAXOVERTHRUST,
 	};
 	uint8 i;
 	nullpo_retv(sd);
