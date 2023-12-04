@@ -18691,7 +18691,6 @@ short skill_can_produce_mix(struct map_session_data *sd, t_itemid nameid, int tr
 	if (!nameid || !itemdb_exists(nameid))
 		return 0;
 
-
 	for (i = 0; i < MAX_SKILL_PRODUCE_DB; i++) {
 		if (skill_produce_db[i].nameid == nameid) {
 			if ((j = skill_produce_db[i].req_skill) > 0){
@@ -18712,9 +18711,9 @@ short skill_can_produce_mix(struct map_session_data *sd, t_itemid nameid, int tr
 		}
 	}
 
-
-	if (i >= MAX_SKILL_PRODUCE_DB)
-		return 0;
+	//ShowMessage("I: %d\n", i);
+	//if (i >= MAX_SKILL_PRODUCE_DB)
+	//	return 0;
 
 	if (req_skill == BS_AXE) {
 		if (pc_search_inventory(sd, ITEMID_ANVIL) < 0 &&
@@ -18722,13 +18721,9 @@ short skill_can_produce_mix(struct map_session_data *sd, t_itemid nameid, int tr
 			pc_search_inventory(sd, ITEMID_GOLDEN_ANVIL) < 0 &&
 			pc_search_inventory(sd, ITEMID_EMPERIUM_ANVIL) < 0)
 			return 0;
-		
 		if (pc_search_inventory(sd, ITEMID_IRON_HAMMER) < 0 &&
 			pc_search_inventory(sd, ITEMID_GOLDEN_HAMMER) < 0 &&
 			pc_search_inventory(sd, ITEMID_ORIDECON_HAMMER) < 0)
-			return 0;
-
-		if (pc_search_inventory(sd, ITEMID_MINI_FURNACE) < 0)
 			return 0;
 	}
 
@@ -18763,7 +18758,7 @@ short skill_can_produce_mix(struct map_session_data *sd, t_itemid nameid, int tr
 				return 0;
 		}
 	}
-	
+
 	// Check on player's inventory
 	for (j = 0; j < MAX_PRODUCE_RESOURCE; j++) {
 		t_itemid nameid_produce;
@@ -18783,6 +18778,7 @@ short skill_can_produce_mix(struct map_session_data *sd, t_itemid nameid, int tr
 				return 0;
 		}
 	}
+
 	return i + 1;
 }
 

@@ -4843,6 +4843,9 @@ Body:
     CastTime: 7500
     Requires:
       SpCost: 75
+      ItemCost:
+        - Item: Portable_Furnace
+          Amount: 1
   - Id: 102
     Name: BS_MACE
     Description: Smith Mace

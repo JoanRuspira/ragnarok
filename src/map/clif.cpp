@@ -12818,8 +12818,7 @@ void clif_parse_ProduceMix(int fd,struct map_session_data *sd){
 	}
 
 	int produce_idx;
-
-	if( (produce_idx = skill_can_produce_mix(sd,p->itemId,sd->menuskill_val, 1, AM_PHARMACY)) ) {
+	if( (produce_idx = skill_can_produce_mix(sd,p->itemId,sd->menuskill_val, 1, BS_AXE)) ) {
 		skill_produce_mix(sd,0,p->itemId,p->material[0],p->material[1],p->material[2],1,produce_idx-1);
 	}
 	clif_menuskill_clear(sd);

@@ -3954,8 +3954,8 @@ int status_calc_pc_sub(struct map_session_data* sd, enum e_status_calc_opt opt)
 				wa->matk += wa->matk * sd->bonus.weapon_matk_rate / 100;
 #endif
 			if(sd->inventory.u.items_inventory[index].card[0] == CARD0_FORGE) { // Forged weapon
-				wd->star += (sd->inventory.u.items_inventory[index].card[1]>>8);
-				if(wd->star >= 15) wd->star = 40; // 3 Star Crumbs now give +40 dmg
+				wd->star += ((sd->inventory.u.items_inventory[index].card[1]>>8)*20); //each star cru, gives +100 damage
+				if(wd->star >= 300) wd->star = 500; // 3 Star Crumbs now give +500 dmg
 				if(pc_famerank(MakeDWord(sd->inventory.u.items_inventory[index].card[2],sd->inventory.u.items_inventory[index].card[3]) ,MAPID_BLACKSMITH))
 					wd->star += 10;
 				if (!wa->ele) // Do not overwrite element from previous bonuses.
@@ -6604,9 +6604,6 @@ static unsigned short status_calc_watk(struct block_list *bl, struct status_chan
 	if ((skill_lv = pc_checkskill(sd, BS_REPAIRWEAPON)) > 0)
 		watk += (skill_lv*2);
 
-	if ((skill_lv = pc_checkskill(sd, BS_AXE)) > 0)
-		watk += (skill_lv*4);
-
 	return (unsigned short)cap_value(watk,0,USHRT_MAX);
 }
 
@@ -7073,9 +7070,6 @@ static defType status_calc_def(struct block_list *bl, struct status_change *sc, 
 	int skill_lv = 0;
 	struct map_session_data *sd = map_id2sd(bl->id);
 	if ((skill_lv = pc_checkskill(sd, BS_REPAIRWEAPON)) > 0)
-		def += (skill_lv*2);
-
-	if ((skill_lv = pc_checkskill(sd, BS_AXE)) > 0)
 		def += (skill_lv*2);
 
 	return (defType)cap_value(def,DEFTYPE_MIN,DEFTYPE_MAX);
@@ -10857,10 +10851,11 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 				struct map_session_data* sd = BL_CAST( BL_PC, src );
 				struct map_session_data* tsd = BL_CAST( BL_PC, bl );
 				armor_index = tsd->equip_index[EQI_ARMOR];
+
 				if (sd->status.char_id == tsd->inventory.u.items_inventory[armor_index].card[2]
 					&& (skill = pc_checkskill(sd, BS_AXE)) == 5){
-					val2 = 0.06;
-					val3 = 10;
+					val2 = 0.045;
+					val3 = 7.5;
 				}
 			}
 			break;
