@@ -18725,6 +18725,8 @@ short skill_can_produce_mix(struct map_session_data *sd, t_itemid nameid, int tr
 			pc_search_inventory(sd, ITEMID_GOLDEN_HAMMER) < 0 &&
 			pc_search_inventory(sd, ITEMID_ORIDECON_HAMMER) < 0)
 			return 0;
+		if (pc_search_inventory(sd, ITEMID_BASIC_FORGING_MANUAL) < 0)
+			return 0;
 	}
 
 	if (req_skill == AM_PHARMACY) {

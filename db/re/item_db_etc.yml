@@ -9532,7 +9532,7 @@ Body:
     AegisName: Hammer_Of_Blacksmith
     Name: Hammer of Blacksmith
     Type: Etc
-    Buy: 100
+    Buy: 50
     Weight: 50
     Flags:
       BuyingStore: true
@@ -9540,7 +9540,15 @@ Body:
     AegisName: Portable_Furnace
     Name: Mini Furnace
     Type: Etc
+    Buy: 50
+    Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 6969
+    AegisName: Basic_Forging_Manual
+    Name: Basic Forging Manual
+    Type: Etc
     Buy: 100
-    Weight: 150
+    Weight: 30
     Flags:
       BuyingStore: true

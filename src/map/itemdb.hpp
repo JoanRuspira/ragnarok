@@ -147,6 +147,7 @@ enum item_itemid : t_itemid
 	ITEMID_WHITE_HERB = 509,
 	ITEMID_BLUE_HERB = 510,
 	ITEMID_YGGDRASIL_SEED = 608,
+	ITEMID_BASIC_FORGING_MANUAL = 6969,
 };
 
 ///Rune Knight
