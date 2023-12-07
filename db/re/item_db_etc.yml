@@ -6172,14 +6172,6 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
-  - Id: 7204
-    AegisName: Gunpowder
-    Name: Gunpowder
-    Type: Etc
-    Buy: 320
-    Weight: 10
-    Flags:
-      BuyingStore: true
   - Id: 7205
     AegisName: Piece_Of_Black_Cloth
     Name: Piece of Black Cloth
@@ -8633,82 +8625,6 @@ Body:
     Weight: 20
     Flags:
       BuyingStore: true
-  - Id: 18000
-    AegisName: Cannon_Ball
-    Name: Cannon Ball
-    Type: Ammo
-    SubType: Cannonball
-    Buy: 100
-    Weight: 10
-    Attack: 0
-    Jobs:
-      Alchemist: true
-      Blacksmith: true
-    Locations:
-      Ammo: true
-    EquipLevelMin: 1
-  - Id: 18001
-    AegisName: Holy_Cannon_Ball
-    Name: Holy Cannon Ball
-    Type: Ammo
-    SubType: Cannonball
-    Buy: 200
-    Weight: 10
-    Attack: 120
-    Jobs:
-      Alchemist: true
-      Blacksmith: true
-    Locations:
-      Ammo: true
-    EquipLevelMin: 1
-    Script: |
-      bonus bAtkEle,Ele_Holy;
-  - Id: 18002
-    AegisName: Dark_Cannon_Ball
-    Name: Dark Cannon Ball
-    Type: Ammo
-    SubType: Cannonball
-    Buy: 200
-    Weight: 10
-    Attack: 120
-    Jobs:
-      Alchemist: true
-      Blacksmith: true
-    Locations:
-      Ammo: true
-    EquipLevelMin: 1
-    Script: |
-      bonus bAtkEle,Ele_Dark;
-  - Id: 18003
-    AegisName: Soul_Cannon_Ball
-    Name: Soul Cannon Ball
-    Type: Ammo
-    SubType: Cannonball
-    Buy: 200
-    Weight: 10
-    Attack: 120
-    Jobs:
-      Alchemist: true
-      Blacksmith: true
-    Locations:
-      Ammo: true
-    EquipLevelMin: 1
-    Script: |
-      bonus bAtkEle,Ele_Ghost;
-  - Id: 18004
-    AegisName: Iron_Cannon_Ball
-    Name: Iron Cannon Ball
-    Type: Ammo
-    SubType: Cannonball
-    Buy: 500
-    Weight: 10
-    Attack: 250
-    Jobs:
-      Alchemist: true
-      Blacksmith: true
-    Locations:
-      Ammo: true
-    EquipLevelMin: 1
   - Id: 6128
     AegisName: Guillotine_Antidote
     Name: Antidote
@@ -9548,7 +9464,133 @@ Body:
     AegisName: Basic_Forging_Manual
     Name: Basic Forging Manual
     Type: Etc
-    Buy: 100
+    Buy: 50000
     Weight: 30
     Flags:
       BuyingStore: true
+  - Id: 7204
+    AegisName: Gunpowder
+    Name: Gunpowder
+    Type: Etc
+    Buy: 50
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 18000
+    AegisName: Cannon_Ball
+    Name: Cannon Ball
+    Type: Ammo
+    SubType: Cannonball
+    Buy: 10
+    Weight: 10
+    Attack: 0
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+    Locations:
+      Ammo: true
+    EquipLevelMin: 1
+  - Id: 18001
+    AegisName: Silver_Cannon_Ball
+    Name: Silver Cannon Ball
+    Type: Ammo
+    SubType: Cannonball
+    Buy: 10
+    Weight: 30
+    Attack: 0
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+    Locations:
+      Ammo: true
+    EquipLevelMin: 1
+    Script: |
+      bonus bAtkEle,Ele_Holy;
+  - Id: 18002
+    AegisName: Dark_Cannon_Ball
+    Name: Dark Cannon Ball
+    Type: Ammo
+    SubType: Cannonball
+    Buy: 10
+    Weight: 10
+    Attack: 0
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+    Locations:
+      Ammo: true
+    EquipLevelMin: 1
+    Script: |
+      bonus bAtkEle,Ele_Dark;
+  - Id: 18003
+    AegisName: Soul_Cannon_Ball
+    Name: Soul Cannon Ball
+    Type: Ammo
+    SubType: Cannonball
+    Buy: 10
+    Weight: 30
+    Attack: 0
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+    Locations:
+      Ammo: true
+    EquipLevelMin: 1
+    Script: |
+      bonus bAtkEle,Ele_Ghost;
+  - Id: 18004
+    AegisName: Fire_Cannon_Ball
+    Name: Fire Cannon Ball
+    Type: Ammo
+    SubType: Cannonball
+    Buy: 10
+    Weight: 30
+    Attack: 0
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+    Locations:
+      Ammo: true
+    EquipLevelMin: 1
+  - Id: 98004
+    AegisName: Ice_Cannon_Ball
+    Name: Ice Cannon Ball
+    Type: Ammo
+    SubType: Cannonball
+    Buy: 10
+    Weight: 30
+    Attack: 0
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+    Locations:
+      Ammo: true
+    EquipLevelMin: 1
+  - Id: 98005
+    AegisName: Wind_Cannon_Ball
+    Name: Wind Cannon Ball
+    Type: Ammo
+    SubType: Cannonball
+    Buy: 10
+    Weight: 30
+    Attack: 0
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+    Locations:
+      Ammo: true
+    EquipLevelMin: 1
+  - Id: 98006
+    AegisName: Rock_Cannon_Ball
+    Name: Rock Cannon Ball
+    Type: Ammo
+    SubType: Cannonball
+    Buy: 10
+    Weight: 30
+    Attack: 0
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+    Locations:
+      Ammo: true
+    EquipLevelMin: 1

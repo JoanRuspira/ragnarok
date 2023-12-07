@@ -16483,7 +16483,7 @@ int skill_delayfix(struct block_list *bl, uint16 skill_id, uint16 skill_lv)
  * Weapon Repair [Celest/DracoRPG]
  *------------------------------------------*/
 void skill_repairweapon(struct map_session_data *sd, int idx) {
-	t_itemid material, materials[4] = { ITEMID_IRON_ORE, ITEMID_IRON, ITEMID_STEEL, ITEMID_ORIDECON_STONE };
+	t_itemid material, materials[4] = { ITEMID_PHRACON, ITEMID_EMVERETARCON, ITEMID_STEEL, ITEMID_ORIDECON_STONE };
 	struct item *item;
 	struct map_session_data *target_sd;
 
@@ -16510,7 +16510,7 @@ void skill_repairweapon(struct map_session_data *sd, int idx) {
 	}
 
 	if ( target_sd->inventory_data[idx]->type == IT_WEAPON )
-		material = materials [ target_sd->inventory_data[idx]->wlv - 1 ]; // Lv1/2/3/4 weapons consume 1 Iron Ore/Iron/Steel/Rough Oridecon
+		material = materials [ target_sd->inventory_data[idx]->wlv - 1 ]; // Lv1/2/3/4 weapons consume 1 Iron phracon/envertracon/Steel/Rough Oridecon
 	else
 		material = materials [2]; // Armors consume 1 Steel
 	if ( pc_search_inventory(sd,material) < 0 ) {
@@ -16562,12 +16562,13 @@ void skill_weaponrefine(struct map_session_data *sd, int idx)
 	if (idx >= 0 && idx < MAX_INVENTORY)
 	{
 		struct item *item;
+		struct status_data* status;
 		struct item_data *ditem = sd->inventory_data[idx];
 		item = &sd->inventory.u.items_inventory[idx];
 
-		if(item->nameid > 0 && ditem->type == IT_WEAPON) {
-			int i = 0, per;
-			t_itemid material[5] = { 0, ITEMID_PHRACON, ITEMID_EMVERETARCON, ITEMID_ORIDECON, ITEMID_ORIDECON };
+		if(item->nameid > 0 && (ditem->type == IT_WEAPON || ditem->type == IT_ARMOR)) {
+			int i = 0, per, extra_per;
+			t_itemid material[6] = { ITEMID_ELUNIUM, ITEMID_PHRACON, ITEMID_EMVERETARCON, ITEMID_ORIDECON, ITEMID_ORIDECON };
 			if( ditem->flag.no_refine ) { 	// if the item isn't refinable
 				clif_skill_fail(sd,sd->menuskill_id,USESKILL_FAIL_LEVEL,0);
 				return;
@@ -16581,11 +16582,12 @@ void skill_weaponrefine(struct map_session_data *sd, int idx)
 				return;
 			}
 			per = status_get_refine_chance(static_cast<refine_type>(ditem->wlv), (int)item->refine, false);
-			if( sd->class_&JOBL_THIRD )
-				per += 10;
-			else
-				per += (((signed int)sd->status.job_level)-50)/2; //Updated per the new kro descriptions. [Skotlex]
-
+			status = status_get_status_data(&sd->bl);
+			extra_per = (status->dex + status->luk) * 0.1;
+			if (extra_per > 25) {
+				extra_per = 25;
+			}
+			per += extra_per;
 			pc_delitem(sd, i, 1, 0, 0, LOG_TYPE_OTHER);
 			if (per > rnd() % 100) {
 				int ep=0;

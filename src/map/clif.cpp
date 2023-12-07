@@ -6952,20 +6952,27 @@ void clif_item_refine_list( struct map_session_data *sd ){
 
 	uint16 skill_lv = pc_checkskill( sd, WS_WEAPONREFINE );
 
-	int refine_item[5];
+	int refine_item[6];
 
 	refine_item[0] = -1;
 	refine_item[1] = pc_search_inventory( sd, ITEMID_PHRACON );
 	refine_item[2] = pc_search_inventory( sd, ITEMID_EMVERETARCON );
 	refine_item[3] = refine_item[4] = pc_search_inventory( sd, ITEMID_ORIDECON );
+	refine_item[5] = pc_search_inventory(sd, ITEMID_ELUNIUM);
 
 	int count = 0;
 	for( int i = 0; i < MAX_INVENTORY; i++ ){
 		uint16 wlv;
-
-		if( sd->inventory.u.items_inventory[i].nameid > 0 && sd->inventory.u.items_inventory[i].refine < skill_lv &&
-			sd->inventory.u.items_inventory[i].identify && ( wlv = itemdb_wlv(sd->inventory.u.items_inventory[i].nameid ) ) >= 1 &&
-			refine_item[wlv] != -1 && !( sd->inventory.u.items_inventory[i].equip & EQP_ARMS ) ){
+		struct item_data* item;
+		item = itemdb_exists(sd->inventory.u.items_inventory[i].nameid);
+		if( sd->inventory.u.items_inventory[i].nameid > 0 &&
+			sd->inventory.u.items_inventory[i].identify &&
+			clif_item_equipment_repair_level_check(sd->inventory.u.items_inventory[i].nameid, skill_lv) &&
+			(item->type == IT_ARMOR || item->type == IT_WEAPON)
+			){
+			/*( wlv = itemdb_wlv(sd->inventory.u.items_inventory[i].nameid ) ) >= 1 &&
+			refine_item[wlv] != -1 &&
+			!( sd->inventory.u.items_inventory[i].equip & EQP_ARMS ) ){*/
 
 			p->items[count].index = client_index( i );
 			p->items[count].itemId = client_nameid( sd->inventory.u.items_inventory[i].nameid );
@@ -6980,7 +6987,7 @@ void clif_item_refine_list( struct map_session_data *sd ){
 
 	if( count > 0 ){
 		sd->menuskill_id = WS_WEAPONREFINE;
-		sd->menuskill_val = skill_lv;
+		sd->menuskill_val = 10;
 	}
 }
 

@@ -12947,7 +12947,7 @@ Body:
   - Id: 477
     Name: WS_WEAPONREFINE
     Description: Upgrade Weapon
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Weapon
     TargetType: Self
     DamageFlags:
