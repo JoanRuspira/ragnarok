@@ -4891,7 +4891,7 @@ Body:
     HitCount: 1
     CastCancel: true
     Cooldown: 5000
-    AfterCastActDelay: 300
+    AfterCastActDelay: 3000
     CastTime: 7500
     Requires:
       SpCost: 40
@@ -12956,8 +12956,11 @@ Body:
       AllowOnMado: true
     Hit: Single
     HitCount: 1
+    Casttime: 5000
+    CoolDown:  5000
+    AfterCastActDelay: 3000
     Requires:
-      SpCost: 5
+      SpCost: 50
   - Id: 478
     Name: CR_SLIMPITCHER
     Description: Aid Condensed Potion

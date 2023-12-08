@@ -6505,8 +6505,8 @@ static unsigned short status_calc_watk(struct block_list *bl, struct status_chan
 		watk += 3 * sc->data[SC_TWOHANDQUICKEN]->val1;
 	if( sc->data[SC_ONEHAND] )
 		watk += 3 * sc->data[SC_ONEHAND]->val1;
-	if( sc->data[SC_WEAPONPERFECTION] )
-		watk += 3 * sc->data[SC_WEAPONPERFECTION]->val1;
+	if (sc->data[SC_WEAPONPERFECTION])
+		watk += sc->data[SC_WEAPONPERFECTION]->val2 * sc->data[SC_WEAPONPERFECTION]->val1;
 	if (sc->data[SC_AXEQUICKEN])
 		watk += 3*sc->data[SC_AXEQUICKEN]->val1;
 	if (sc->data[SC_DAGGERQUICKEN])
@@ -6603,6 +6603,8 @@ static unsigned short status_calc_watk(struct block_list *bl, struct status_chan
 	struct map_session_data *sd = map_id2sd(bl->id);
 	if ((skill_lv = pc_checkskill(sd, BS_REPAIRWEAPON)) > 0)
 		watk += (skill_lv*2);
+	if ((skill_lv = pc_checkskill(sd, WS_WEAPONREFINE)) > 0)
+		watk += (skill_lv * 5);
 
 	return (unsigned short)cap_value(watk,0,USHRT_MAX);
 }
@@ -6749,7 +6751,7 @@ static signed short status_calc_critical(struct block_list *bl, struct status_ch
 	if (sc->data[SC_TRUESIGHT])
 		critical += sc->data[SC_TRUESIGHT]->val2;
 	if( sc->data[SC_WEAPONPERFECTION] )
-		critical += 150;
+		critical += sc->data[SC_WEAPONPERFECTION]->val3;
 	if (sc->data[SC_STRIKING])
 		critical += critical * sc->data[SC_STRIKING]->val1 / 100;
 	if (sc->data[SC__UNLUCKY])
@@ -6821,7 +6823,7 @@ static signed short status_calc_hit(struct block_list *bl, struct status_change 
 	if (sc->data[SC_TWOHANDQUICKEN])
 		hit += sc->data[SC_TWOHANDQUICKEN]->val1 * 2;
 	if (sc->data[SC_ADRENALINE])
-		hit += sc->data[SC_ADRENALINE]->val1 * 3 + 5;
+		hit += sc->data[SC_ADRENALINE]->val1 * sc->data[SC_ADRENALINE]->val3;
 	if (sc->data[SC_KNADRENALINE])
 		hit += sc->data[SC_KNADRENALINE]->val1 * 3 + 5;
 	if (sc->data[SC_NIBELUNGEN] && sc->data[SC_NIBELUNGEN]->val2 == RINGNBL_HIT)
@@ -7071,6 +7073,8 @@ static defType status_calc_def(struct block_list *bl, struct status_change *sc, 
 	struct map_session_data *sd = map_id2sd(bl->id);
 	if ((skill_lv = pc_checkskill(sd, BS_REPAIRWEAPON)) > 0)
 		def += (skill_lv*2);
+	if ((skill_lv = pc_checkskill(sd, WS_WEAPONREFINE)) > 0)
+		def += (skill_lv * 5);
 
 	return (defType)cap_value(def,DEFTYPE_MIN,DEFTYPE_MAX);
 }
@@ -7199,6 +7203,12 @@ static defType status_calc_mdef(struct block_list *bl, struct status_change *sc,
 	if(sc->data[SC_MINDBREAKER])
 		mdef -= mdef * sc->data[SC_MINDBREAKER]->val3/100;
 
+	int skill_lv = 0;
+	struct map_session_data* sd = map_id2sd(bl->id);
+	if ((skill_lv = pc_checkskill(sd, BS_REPAIRWEAPON)) > 0)
+		mdef += (skill_lv * 2);
+	if ((skill_lv = pc_checkskill(sd, WS_WEAPONREFINE)) > 0)
+		mdef += (skill_lv * 5);
 	return (defType)cap_value(mdef,DEFTYPE_MIN,DEFTYPE_MAX);
 }
 
@@ -7589,10 +7599,8 @@ static short status_calc_fix_aspd(struct block_list *bl, struct status_change *s
 		aspd -= sc->data[SC_HEAT_BARREL]->val1 * 10;
 	if (sc->data[SC_EP16_2_BUFF_SS])
 		aspd -= 100; // +10 ASPD
-
-
 	if (sc->data[SC_ADRENALINE])
-		aspd -= sc->data[SC_ADRENALINE]->val1*10;
+		aspd -= sc->data[SC_ADRENALINE]->val1*sc->data[SC_ADRENALINE]->val2;
 	if (sc->data[SC_KNADRENALINE])
 		aspd -= sc->data[SC_KNADRENALINE]->val1*10;
 	if (sc->data[SC_TWOHANDQUICKEN])
@@ -10764,22 +10772,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			val2 = 20*val1; // Power increase
 			break;
 		case SC_OVERTHRUST:
-		case SC_ADRENALINE2:
-		case SC_ADRENALINE:
-		case SC_KNADRENALINE:
-		case SC_WEAPONPERFECTION:
-			{
-				struct map_session_data * s_sd = BL_CAST(BL_PC, src);
-				if (type == SC_OVERTHRUST) {
-					// val2 holds if it was casted on self, or is bonus received from others
-						// val3 = (val2) ? 5 * val1 : (val1 > 4) ? 15 : (val1 > 2) ? 10 : 5; // Power increase
-						val3 = 5 * val1; // Power increase
-
-				}
-				// else if (type == SC_ADRENALINE2 || type == SC_ADRENALINE) {
-				// 	val3 = 300; // Aspd increase
-				// }
-			}
+			val3 = 5 * val1; // Power increase
 			break;
 		case SC_FORTIFY:
 			val2 = 25*val1; // Damage Increase
@@ -10841,6 +10834,44 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			// val2 signals autoprovoke.
 			val3 = 4*(val1); // MAtk increase
 			val4 = 4*(val1); // MDef increase.
+			break;
+		case SC_ADRENALINE:
+		{
+			val2 = 10; // ASPD Increase
+			val3 = 4; // HIT increase
+			int skill;
+			short weapon_l_index, weapon_r_index;
+			struct map_session_data* sd = BL_CAST(BL_PC, src);
+			struct map_session_data* tsd = BL_CAST(BL_PC, bl);
+			weapon_r_index = tsd->equip_index[EQI_HAND_R];
+			weapon_l_index = tsd->equip_index[EQI_HAND_L];
+			if (
+				(sd->status.char_id == tsd->inventory.u.items_inventory[weapon_l_index].card[2] ||
+					sd->status.char_id == tsd->inventory.u.items_inventory[weapon_r_index].card[2]) &&
+				(skill = pc_checkskill(sd, BS_AXE)) == 5) {
+				val2 = 15;
+				val3 = 6;
+			}
+		}
+		break;
+		case SC_WEAPONPERFECTION:
+			{
+				val2 = 3; // ATK Increase
+				val3 = 150; // CRIT increase
+				int skill;
+				short weapon_l_index, weapon_r_index;
+				struct map_session_data* sd = BL_CAST(BL_PC, src);
+				struct map_session_data* tsd = BL_CAST(BL_PC, bl);
+				weapon_r_index = tsd->equip_index[EQI_HAND_R];
+				weapon_l_index = tsd->equip_index[EQI_HAND_L];
+				if (
+					(sd->status.char_id == tsd->inventory.u.items_inventory[weapon_l_index].card[2] ||
+					sd->status.char_id == tsd->inventory.u.items_inventory[weapon_r_index].card[2]) &&
+					(skill = pc_checkskill(sd, BS_AXE)) == 5) {
+					val2 = 5;
+					val3 = 225;
+				}
+			}
 			break;
 		case SC_REINFORCEMENT:
 			{
