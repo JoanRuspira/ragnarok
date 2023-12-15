@@ -3300,6 +3300,25 @@ Body:
           Amount: 1
         - Item: Iron
           Amount: 1
+  - Id: 892
+    Name: WS_MASTERCRAFT
+    Description: Mastercrafting
+    MaxLevel: 5
+    Type: Weapon
+  - Id: 893
+    Name: MC_COINFLIP
+    Description: Coin Flip
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    Cooldown: 1000
+    AfterCastActDelay: 500
+    Duration1: 90000
+    Requires:
+      SpCost: 20
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death

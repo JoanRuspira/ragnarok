@@ -1372,7 +1372,7 @@ int skill_break_equip(struct block_list *src, struct block_list *bl, unsigned sh
 	sd = BL_CAST(BL_PC, bl);
 	if (sc && !sc->count)
 		sc = NULL;
-
+	
 	if (sd) {
 		if (sd->bonus.unbreakable_equip)
 			where &= ~sd->bonus.unbreakable_equip;
@@ -5816,6 +5816,19 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		clif_soundeffectall(&sd->bl, "kn_fury.wav", 0, AREA);
 		clif_skill_nodamage(src,bl,skill_id,skill_lv,
 			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
+		break;
+	case MC_COINFLIP:
+		clif_specialeffect(bl, 18, AREA);
+		int result;
+		result = rand() % 2;
+		if(result == 0){
+			clif_skill_nodamage(src,bl,skill_id,skill_lv,sc_start4(src,src,SC_COIN_DEX,100,3,20,0,0,90000));
+			status_change_end(src, SC_COIN_LUK, INVALID_TIMER);
+
+		} else {
+			clif_skill_nodamage(src,bl,skill_id,skill_lv, sc_start4(src,src,SC_COIN_LUK,100,3,20,0,0,90000));
+			status_change_end(src, SC_COIN_DEX	, INVALID_TIMER);
+		}
 		break;
 	case RA_UNLIMIT:
     	clif_specialeffect(bl, 813, AREA);

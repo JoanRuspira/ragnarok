@@ -345,6 +345,8 @@ void initChangeTables(void)
 	set_sc( AL_CRUCIS		, SC_CRUCIS_PLAYER	, EFST_CRUCIS_PLAYER	, SCB_MATK|SCB_MDEF	);
 
 	set_sc( SM_MAGNUM		, SC_WATK_ELEMENT	, EFST_WATK_ELEMENT	, SCB_NONE	);
+	set_sc( MC_COINFLIP		, SC_COIN_DEX	, EFST_COIN_DEX	, SCB_DEX	);
+	set_sc( MC_COINFLIP		, SC_COIN_LUK	, EFST_COIN_LUK	, SCB_LUK	);
 	set_sc( HW_ASTRALSTRIKE		, SC_ASTRALSTRIKE_DEBUFF	, EFST_ASTRALSTRIKE_DEBUFF	, SCB_NONE	);
 	set_sc( SM_ENDURE		, SC_ENDURE		, EFST_ENDURE		, SCB_MDEF|SCB_DSPD|SCB_DEF );
 	add_sc( MG_SIGHT		, SC_SIGHT		);
@@ -768,6 +770,8 @@ void initChangeTables(void)
 	add_sc( MER_CRASH		, SC_STUN		);
 	set_sc( MER_PROVOKE		, SC_PROVOKE		, EFST_PROVOKE		, SCB_DEF|SCB_DEF2|SCB_BATK|SCB_WATK );
 	add_sc( MS_MAGNUM		, SC_WATK_ELEMENT	);
+	add_sc( MC_COINFLIP		, SC_COIN_DEX	);
+	add_sc( MC_COINFLIP		, SC_COIN_LUK	);
 	add_sc( MER_SIGHT		, SC_SIGHT		);
 	set_sc( MER_DECAGI		, SC_DECREASEAGI	, EFST_DEC_AGI, SCB_AGI|SCB_SPEED );
 	set_sc( MER_MAGNIFICAT		, SC_MAGNIFICAT		, EFST_MAGNIFICAT		, SCB_REGEN );
@@ -6288,6 +6292,14 @@ static unsigned short status_calc_dex(struct block_list *bl, struct status_chang
 		dex += sc->data[SC_HAWKEYES]->val1;
 	if(sc->data[SC_TRUESIGHT])
 		dex += 5;
+	if(sc->data[SC_COIN_DEX]){
+		int skill_lv = 0;
+		struct map_session_data *sd = map_id2sd(bl->id);
+		if ((skill_lv = pc_checkskill(sd, MC_COINFLIP)) > 0)
+			dex += 3 * skill_lv;
+
+	}
+		
 	if(sc->data[SC_QUAGMIRE])
 		dex -= sc->data[SC_QUAGMIRE]->val2;
 	if(sc->data[SC_BLESSING]) {
@@ -6370,6 +6382,12 @@ static unsigned short status_calc_luk(struct block_list *bl, struct status_chang
 		luk += sc->data[SC_FOOD_LUK_CASH]->val1;
 	if(sc->data[SC_TRUESIGHT])
 		luk += 5;
+	if(sc->data[SC_COIN_LUK]) {
+		int skill_lv = 0;
+		struct map_session_data *sd = map_id2sd(bl->id);
+		if ((skill_lv = pc_checkskill(sd, MC_COINFLIP)) > 0)
+			luk += 3 * skill_lv;
+	}
 	if(sc->data[SC_GLORIA])
 		luk += 30;
 	if(sc->data[SC_MARIONETTE2])
@@ -6605,7 +6623,7 @@ static unsigned short status_calc_watk(struct block_list *bl, struct status_chan
 		watk += (skill_lv*2);
 	if ((skill_lv = pc_checkskill(sd, WS_WEAPONREFINE)) > 0)
 		watk += (skill_lv * 5);
-
+	
 	return (unsigned short)cap_value(watk,0,USHRT_MAX);
 }
 
@@ -10769,11 +10787,47 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 				val3 = val4 = 0;
 			break;
 		case SC_MAXOVERTHRUST:
-			val2 = 20*val1; // Power increase
+			{
+				val2 = 20 * val1; // Power increase
+				int skill, mastercraft_lvl;
+				short weapon_l_index, weapon_r_index;
+				struct map_session_data* sd = BL_CAST(BL_PC, src);
+				struct map_session_data* tsd = BL_CAST(BL_PC, bl);
+				weapon_r_index = tsd->equip_index[EQI_HAND_R];
+				weapon_l_index = tsd->equip_index[EQI_HAND_L];
+				mastercraft_lvl = pc_checkskill(sd, WS_MASTERCRAFT);
+
+				if (
+					(tsd->inventory.u.items_inventory[weapon_l_index].card[0] == CARD0_FORGE ||
+					tsd->inventory.u.items_inventory[weapon_r_index].card[0] == CARD0_FORGE) &&
+					(sd->status.char_id == tsd->inventory.u.items_inventory[weapon_l_index].card[2] ||
+						sd->status.char_id == tsd->inventory.u.items_inventory[weapon_r_index].card[2]) &&
+					(skill = pc_checkskill(sd, BS_AXE)) == 5) {
+					val2 = (30 * val1) * (1 + (mastercraft_lvl * 0.2));
+				}
+			}
 			break;
 		case SC_OVERTHRUST:
-			val3 = 5 * val1; // Power increase
-			break;
+		{
+			val3 = 5 * val1; // Dmg increase
+			int skill, mastercraft_lvl;
+			short weapon_l_index, weapon_r_index;
+			struct map_session_data* sd = BL_CAST(BL_PC, src);
+			struct map_session_data* tsd = BL_CAST(BL_PC, bl);
+			weapon_r_index = tsd->equip_index[EQI_HAND_R];
+			weapon_l_index = tsd->equip_index[EQI_HAND_L];
+			mastercraft_lvl = pc_checkskill(sd, WS_MASTERCRAFT);
+
+			if (
+				(tsd->inventory.u.items_inventory[weapon_l_index].card[0] == CARD0_FORGE ||
+				tsd->inventory.u.items_inventory[weapon_r_index].card[0] == CARD0_FORGE) &&
+				(sd->status.char_id == tsd->inventory.u.items_inventory[weapon_l_index].card[2] ||
+					sd->status.char_id == tsd->inventory.u.items_inventory[weapon_r_index].card[2]) &&
+				(skill = pc_checkskill(sd, BS_AXE)) == 5) {
+				val3 = (8 * val1) * (1 + (mastercraft_lvl * 0.2));
+			}
+		}
+		break;
 		case SC_FORTIFY:
 			val2 = 25*val1; // Damage Increase
 			break;
@@ -10839,18 +10893,22 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 		{
 			val2 = 10; // ASPD Increase
 			val3 = 4; // HIT increase
-			int skill;
+			int skill, mastercraft_lvl;
 			short weapon_l_index, weapon_r_index;
 			struct map_session_data* sd = BL_CAST(BL_PC, src);
 			struct map_session_data* tsd = BL_CAST(BL_PC, bl);
 			weapon_r_index = tsd->equip_index[EQI_HAND_R];
 			weapon_l_index = tsd->equip_index[EQI_HAND_L];
+			mastercraft_lvl = pc_checkskill(sd, WS_MASTERCRAFT);
+
 			if (
+				(tsd->inventory.u.items_inventory[weapon_l_index].card[0] == CARD0_FORGE ||
+				tsd->inventory.u.items_inventory[weapon_r_index].card[0] == CARD0_FORGE) &&
 				(sd->status.char_id == tsd->inventory.u.items_inventory[weapon_l_index].card[2] ||
 					sd->status.char_id == tsd->inventory.u.items_inventory[weapon_r_index].card[2]) &&
 				(skill = pc_checkskill(sd, BS_AXE)) == 5) {
-				val2 = 15;
-				val3 = 6;
+				val2 = 15 * (1 + (mastercraft_lvl * 0.2));
+				val3 = 6 * (1 + (mastercraft_lvl * 0.2));
 			}
 		}
 		break;
@@ -10858,18 +10916,22 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			{
 				val2 = 3; // ATK Increase
 				val3 = 150; // CRIT increase
-				int skill;
+				int skill, mastercraft_lvl;
 				short weapon_l_index, weapon_r_index;
 				struct map_session_data* sd = BL_CAST(BL_PC, src);
 				struct map_session_data* tsd = BL_CAST(BL_PC, bl);
 				weapon_r_index = tsd->equip_index[EQI_HAND_R];
 				weapon_l_index = tsd->equip_index[EQI_HAND_L];
+				mastercraft_lvl = pc_checkskill(sd, WS_MASTERCRAFT);
+
 				if (
+					(tsd->inventory.u.items_inventory[weapon_l_index].card[0] == CARD0_FORGE ||
+					tsd->inventory.u.items_inventory[weapon_r_index].card[0] == CARD0_FORGE) &&
 					(sd->status.char_id == tsd->inventory.u.items_inventory[weapon_l_index].card[2] ||
 					sd->status.char_id == tsd->inventory.u.items_inventory[weapon_r_index].card[2]) &&
 					(skill = pc_checkskill(sd, BS_AXE)) == 5) {
-					val2 = 5;
-					val3 = 225;
+					val2 = 5 * (1 + (mastercraft_lvl * 0.2));
+					val3 = 225 * (1 + (mastercraft_lvl * 0.2));
 				}
 			}
 			break;
@@ -10877,16 +10939,19 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			{
 				val2 = 0.03; // Damage reduction
 				val3 = 5; // Def increase
-				int skill;
+				int skill, mastercraft_lvl;
 				short armor_index;
 				struct map_session_data* sd = BL_CAST( BL_PC, src );
 				struct map_session_data* tsd = BL_CAST( BL_PC, bl );
 				armor_index = tsd->equip_index[EQI_ARMOR];
+				mastercraft_lvl = pc_checkskill(sd, WS_MASTERCRAFT);
 
-				if (sd->status.char_id == tsd->inventory.u.items_inventory[armor_index].card[2]
+				if (
+					(tsd->inventory.u.items_inventory[armor_index].card[0] = CARD0_FORGE) &&
+					sd->status.char_id == tsd->inventory.u.items_inventory[armor_index].card[2]
 					&& (skill = pc_checkskill(sd, BS_AXE)) == 5){
-					val2 = 0.045;
-					val3 = 7.5;
+					val2 = 0.045 * (1 + (mastercraft_lvl * 0.2));
+					val3 = 7.5 * (1 + (mastercraft_lvl * 0.2));
 				}
 			}
 			break;
