@@ -1142,30 +1142,6 @@ Body:
       BuyingStore: true
     Script: |
       itemskill "MC_IDENTIFY",1;
-  - Id: 613
-    AegisName: Iron_Hammer
-    Name: Iron Hammer
-    Type: Etc
-    Buy: 1000
-    Weight: 200
-    Flags:
-      BuyingStore: true
-  - Id: 614
-    AegisName: Golden_Hammer
-    Name: Golden Hammer
-    Type: Etc
-    Buy: 3000
-    Weight: 300
-    Flags:
-      BuyingStore: true
-  - Id: 615
-    AegisName: Oridecon_Hammer
-    Name: Oridecon Hammer
-    Type: Etc
-    Buy: 5000
-    Weight: 400
-    Flags:
-      BuyingStore: true
   - Id: 616
     AegisName: Old_Card_Album
     Name: Old Card Album

@@ -1158,54 +1158,6 @@ Body:
     Weight: 150
     Flags:
       BuyingStore: true
-  - Id: 984
-    AegisName: Oridecon
-    Name: Oridecon
-    Type: Etc
-    Buy: 1100
-    Weight: 200
-    Flags:
-      BuyingStore: true
-  - Id: 985
-    AegisName: Elunium
-    Name: Elunium
-    Type: Etc
-    Buy: 1100
-    Weight: 200
-    Flags:
-      BuyingStore: true
-  - Id: 986
-    AegisName: Anvil
-    Name: Anvil
-    Type: Etc
-    Buy: 30000
-    Weight: 500
-    Flags:
-      BuyingStore: true
-  - Id: 987
-    AegisName: Oridecon_Anvil
-    Name: Oridecon Anvil
-    Type: Etc
-    Buy: 120000
-    Weight: 700
-    Flags:
-      BuyingStore: true
-  - Id: 988
-    AegisName: Golden_Anvil
-    Name: Golden Anvil
-    Type: Etc
-    Buy: 300000
-    Weight: 900
-    Flags:
-      BuyingStore: true
-  - Id: 989
-    AegisName: Emperium_Anvil
-    Name: Emperium Anvil
-    Type: Etc
-    Buy: 600000
-    Weight: 1000
-    Flags:
-      BuyingStore: true
   - Id: 990
     AegisName: Boody_Red
     Name: Red Blood
@@ -1268,30 +1220,6 @@ Body:
     Type: Etc
     Buy: 3000
     Weight: 300
-    Flags:
-      BuyingStore: true
-  - Id: 998
-    AegisName: Iron
-    Name: Iron
-    Type: Etc
-    Buy: 100
-    Weight: 50
-    Flags:
-      BuyingStore: true
-  - Id: 999
-    AegisName: Steel
-    Name: Steel
-    Type: Etc
-    Buy: 1000
-    Weight: 100
-    Flags:
-      BuyingStore: true
-  - Id: 1000
-    AegisName: Star_Crumb
-    Name: Star Crumb
-    Type: Etc
-    Buy: 4500
-    Weight: 100
     Flags:
       BuyingStore: true
   - Id: 1001
@@ -9594,3 +9522,99 @@ Body:
     Locations:
       Ammo: true
     EquipLevelMin: 1
+  - Id: 986
+    AegisName: Anvil
+    Name: Anvil
+    Type: Etc
+    Buy: 30000
+    Weight: 500
+    Flags:
+      BuyingStore: true
+  - Id: 987
+    AegisName: Oridecon_Anvil
+    Name: Oridecon Anvil
+    Type: Etc
+    Buy: 120000
+    Weight: 700
+    Flags:
+      BuyingStore: true
+  - Id: 988
+    AegisName: Golden_Anvil
+    Name: Golden Anvil
+    Type: Etc
+    Buy: 300000
+    Weight: 900
+    Flags:
+      BuyingStore: true
+  - Id: 989
+    AegisName: Emperium_Anvil
+    Name: Emperium Anvil
+    Type: Etc
+    Buy: 600000
+    Weight: 1000
+    Flags:
+      BuyingStore: true
+  - Id: 613
+    AegisName: Iron_Hammer
+    Name: Iron Hammer
+    Type: Etc
+    Buy: 10000
+    Weight: 200
+    Flags:
+      BuyingStore: true
+  - Id: 614
+    AegisName: Golden_Hammer
+    Name: Golden Hammer
+    Type: Etc
+    Buy: 50000
+    Weight: 300
+    Flags:
+      BuyingStore: true
+  - Id: 615
+    AegisName: Oridecon_Hammer
+    Name: Oridecon Hammer
+    Type: Etc
+    Buy: 100000
+    Weight: 400
+    Flags:
+      BuyingStore: true
+  - Id: 998
+    AegisName: Iron
+    Name: Iron
+    Type: Etc
+    Buy: 100
+    Weight: 50
+    Flags:
+      BuyingStore: true
+  - Id: 999
+    AegisName: Steel
+    Name: Steel
+    Type: Etc
+    Buy: 1000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 1000
+    AegisName: Star_Crumb
+    Name: Star Crumb
+    Type: Etc
+    Buy: 4500
+    Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 984
+    AegisName: Oridecon
+    Name: Oridecon
+    Type: Etc
+    Buy: 1100
+    Weight: 200
+    Flags:
+      BuyingStore: true
+  - Id: 985
+    AegisName: Elunium
+    Name: Elunium
+    Type: Etc
+    Buy: 1100
+    Weight: 200
+    Flags:
+      BuyingStore: true

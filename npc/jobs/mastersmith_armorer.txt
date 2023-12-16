@@ -17,7 +17,7 @@
 	mes "Aha!";
 	mes "A seasoned Mastersmith, what outfit would you like to wear?";
 	next;
-	switch(select("Mastersmith:Metalworker:Forger:Meister")) {
+	switch(select("Mastersmith:Metalworker:Forger:Welder")) {
 		case 1:
 			setlook LOOK_CLOTHES_COLOR,0;
         	setlook LOOK_BODY2,0;
