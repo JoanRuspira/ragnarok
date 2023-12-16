@@ -4971,6 +4971,7 @@ Body:
     Requires:
       SpCost: 40
       Weapon:
+        Fist: true
         Dagger: true
         1hSword: true
         2hSword: true
@@ -5023,6 +5024,7 @@ Body:
         - Item: Portable_Furnace
           Amount: 1
       Weapon:
+        Fist: true
         Dagger: true
         1hSword: true
         2hSword: true
@@ -5065,6 +5067,7 @@ Body:
         - Item: Portable_Furnace
           Amount: 1
       Weapon:
+        Fist: true
         Dagger: true
         1hSword: true
         2hSword: true
@@ -5109,6 +5112,7 @@ Body:
     Requires:
       SpCost: 10
       Weapon:
+        Fist: true
         Dagger: true
         1hSword: true
         2hSword: true
@@ -10735,6 +10739,25 @@ Body:
       ItemCost:
         - Item: Portable_Furnace
           Amount: 1
+      Weapon:
+        Fist: true
+        Dagger: true
+        1hSword: true
+        2hSword: true
+        1hSpear: true
+        2hSpear: true
+        1hAxe: true
+        2hAxe: true
+        Mace: true
+        2hMace: true
+        Staff: true
+        Bow: true
+        Knuckle: true
+        Musical: true
+        Whip: true
+        Book: true
+        Katar: true
+        2hStaff: true
   - Id: 385
     Name: WS_CREATECOIN
     Description: Create Coins
@@ -12962,7 +12985,7 @@ Body:
       SpCost: 30
       ItemCost:
         - Item: Leather_Pouch
-          Amount: 1
+          Amount: 2
   - Id: 477
     Name: WS_WEAPONREFINE
     Description: Upgrade Weapon
@@ -13259,8 +13282,10 @@ Body:
         Mace: true
         2hMace: true
         Staff: true
+        Bow: true
         Knuckle: true
         Musical: true
+        Whip: true
         Book: true
         Katar: true
         2hStaff: true

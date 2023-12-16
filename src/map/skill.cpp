@@ -1410,8 +1410,17 @@ int skill_break_equip(struct block_list *src, struct block_list *bl, unsigned sh
 				where&=~where_list[i];
 			else if (rnd()%10000 >= rate)
 				where&=~where_list[i];
-			else if (!sd) //Cause Strip effect.
-				sc_start(src,bl,scatk[i],100,0,skill_get_time(status_sc2skill(scatk[i]),1));
+			else if (!sd){
+				//Cause Strip effect.
+				int result;
+				clif_specialeffect(bl, EF_SONIC_CLAW, AREA);
+				result = rand() % 2;
+				if(result == 0){
+					sc_start4(src,bl,SC_STRIPSHIELD,100,3,20,0,0,7000);
+				} else {
+					sc_start4(src,bl,SC_STRIPSHIELD,100,3,20,0,0,7000);
+				}
+			} 
 		}
 	}
 	if (!where) //Nothing to break.
