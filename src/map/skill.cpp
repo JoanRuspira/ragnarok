@@ -1416,9 +1416,9 @@ int skill_break_equip(struct block_list *src, struct block_list *bl, unsigned sh
 				clif_specialeffect(bl, EF_SONIC_CLAW, AREA);
 				result = rand() % 2;
 				if(result == 0){
-					sc_start(src, bl, SC_INCATKRATE, 100, -30, 7000);
+					sc_start(src, bl, SC_INCATKRATE, 100, -30, 5000);
 				} else {
-					sc_start(src, bl, SC_INCDEFRATE, 100, -30, 7000);
+					sc_start(src, bl, SC_INCDEFRATE, 100, -30, 5000);
 				}
 			} 
 		}

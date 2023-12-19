@@ -1,27 +1,28 @@
 //===== Script =======================================
-// Assassin Cross Armorer NPC
+// Executioner Armorer NPC
 //====================================================
 
--	script	Assassin Cross Armorer#ascar1::Assassin_Cross_Armorer	-1,{
-	set .n$,"[Assassin Cross Armorer]";
+-	script	Executioner Armorer#ascar1::Assassin_Cross_Armorer	-1,{
+	set .n$,"[Executioner Armorer]";
 	mes .n$;
 	mes "Hello! I am an expert in customising armors.";
 	mes "I am part of the Crusader Guild, so I can make changes to a member's outfit for free";
 	next;
 	if (Class != Job_Assassin_Cross) {
-		mes "[Assassin Cross Armorer]";
-		mes "Oh! I can only provide my services to Assassin Crosses...";
+		mes "[Executioner Armorer]";
+		mes "Oh! I can only provide my services to Executioners...";
 		mes "Sorry!";
 		close;
 	}
 	mes "Aha!";
-	mes "A seasoned Assassin Cross, what outfit would you like to wear?";
+	mes "A seasoned Executioner, what outfit would you like to wear?";
 	next;
-	switch(select("Assassin Cross:Guillotine Cross:Bone Cross:Shadow Cross")) {
+	switch(select("Executioner:Slayer:Butcher:Voidwalker")) {
 		case 1:
 			setlook LOOK_CLOTHES_COLOR,0;
         	setlook LOOK_BODY2,0;
 			specialeffect2 EF_ENTRY2;
+			mes "[Executioner Armorer]";
 			mes "There you go!";
 			mes "Come back if you want to change your outfit again!";
 			close;
@@ -29,6 +30,7 @@
 			setlook LOOK_CLOTHES_COLOR,0;
         	setlook LOOK_BODY2,1;
 			specialeffect2 EF_ENTRY2;
+			mes "[Executioner Armorer]";
 			mes "There you go!";
 			mes "Come back if you want to change your outfit again!";
 			close;
@@ -36,6 +38,7 @@
 			setlook LOOK_CLOTHES_COLOR,0;
         	setlook LOOK_BODY2,2;
 			specialeffect2 EF_ENTRY2;
+			mes "[Executioner Armorer]";
 			mes "There you go!";
 			mes "Come back if you want to change your outfit again!";
 			close;
@@ -43,10 +46,11 @@
 			setlook LOOK_CLOTHES_COLOR,0;
         	setlook LOOK_BODY2,3;
 			specialeffect2 EF_ENTRY2;
+			mes "[Executioner Armorer]";
 			mes "There you go!";
 			mes "Come back if you want to change your outfit again!";
 			close;
 	}	
 }
 
-in_moc_16,20,19,1	duplicate(Assassin_Cross_Armorer)	Assassin Cross Armorer#ascar1	12
+in_moc_16,20,19,1	duplicate(Assassin_Cross_Armorer)	Executioner Armorer#ascar1	12

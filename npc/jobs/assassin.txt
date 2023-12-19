@@ -58,10 +58,10 @@
 		mes "Are you thinking about your next job?";
 		next;
 		mes "[Assassin Guildmaster]";
-		mes "You can become an Assassin Cross if you reach job level 50.";
+		mes "You can become an Executioner if you reach job level 50.";
 		next;
 		mes "[Assassin Guildmaster]";
-		mes "Go find the legendary Assassin Cross in The Morroc Palace.";
+		mes "Go find the legendary Executioner in The Morroc Palace.";
 		mes "I'm sure he will be able to train you.";
 		close;
 	}

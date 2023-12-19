@@ -1,28 +1,28 @@
 //===== Script =======================================
-// Lord Knight Armorer NPC
+// Commander Armorer NPC
 //====================================================
 
--	script	Lord Knight Armorer#lkarmor1::Lord_Knight_Armorer	-1,{
-	set .n$,"[Lord Knight Armorer]";
+-	script	Commander Armorer#lkarmor1::Lord_Knight_Armorer	-1,{
+	set .n$,"[Commander Armorer]";
 	mes .n$;
 	mes "Hello! I am an expert in customising armors.";
 	mes "I am part of the Knight Guild, so I can make changes to a member's outfit for free";
 	next;
 	if (Class != Job_Lord_Knight) {
-		mes "[Lord Knight Armorer]";
-		mes "Oh! I can only provide my services to Lord Knights...";
+		mes "[Commander Armorer]";
+		mes "Oh! I can only provide my services to Commanders...";
 		mes "Sorry!";
 		close;
 	}
 	mes "Aha!";
-	mes "A seasoned Lord Knight, what outfit would you like to wear?";
+	mes "A seasoned Commander, what outfit would you like to wear?";
 	next;
-	switch(select("Lord Knight:Commander:Dragon Knight:Rune Knight")) {
+	switch(select("Commander:Noble:Dragon Knight:Rune Knight")) {
 		case 1:
 			setlook LOOK_CLOTHES_COLOR,0;
         	setlook LOOK_BODY2,0;
 			specialeffect2 EF_ENTRY2;
-			mes "[Lord Knight Armorer]";
+			mes "[Commander Armorer]";
 			mes "There you go!";
 			mes "Come back if you want to change your outfit again!";
 			close;
@@ -30,7 +30,7 @@
 			setlook LOOK_CLOTHES_COLOR,0;
         	setlook LOOK_BODY2,1;
 			specialeffect2 EF_ENTRY2;
-			mes "[Lord Knight Armorer]";
+			mes "[Commander Armorer]";
 			mes "There you go!";
 			mes "Come back if you want to change your outfit again!";
 			close;
@@ -38,7 +38,7 @@
 			setlook LOOK_CLOTHES_COLOR,0;
         	setlook LOOK_BODY2,2;
 			specialeffect2 EF_ENTRY2;
-			mes "[Lord Knight Armorer]";
+			mes "[Commander Armorer]";
 			mes "There you go!";
 			mes "Come back if you want to change your outfit again!";
 			close;
@@ -46,11 +46,11 @@
 			setlook LOOK_CLOTHES_COLOR,0;
         	setlook LOOK_BODY2,3;
 			specialeffect2 EF_ENTRY2;
-			mes "[Lord Knight Armorer]";
+			mes "[Commander Armorer]";
 			mes "There you go!";
 			mes "Come back if you want to change your outfit again!";
 			close;;
 	}	
 }
 
-prt_in,34,115,6	duplicate(Lord_Knight_Armorer)	Lord Knight Armorer#lkarmor1	628
+prt_in,34,115,6	duplicate(Lord_Knight_Armorer)	Commander Armorer#lkarmor1	628

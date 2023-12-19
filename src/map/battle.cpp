@@ -1529,17 +1529,21 @@ int64 battle_calc_damage(struct block_list *src,struct block_list *bl,struct Dam
 			damage = (int64)damage*ratio; //Receive ratio% of damage
 		}
 
-		short armor_index;
-		armor_index = sd->equip_index[EQI_ARMOR];
-		if (sd->inventory.u.items_inventory[armor_index].card[0] == CARD0_FORGE) { // Forged weapon
-			float ratio = 1;
-			float reduction = 0;
-			reduction = ((sd->inventory.u.items_inventory[armor_index].card[1] >> 8) * 0.005); //each star cru, gives 2.5% d,g reduction
-			if (reduction >= 0.075) reduction = 0.1; // 3 Star Crumbs now give 10% dmg reduction
-			ratio -= reduction;
-			damage = (int64)damage * ratio; //Receive ratio% of damage
-		}
+		if(sd) {
+			short armor_index;
+			armor_index = sd->equip_index[EQI_ARMOR];
+			if (sd->inventory.u.items_inventory[armor_index].card[0] == CARD0_FORGE) { // Forged armor
+				float ratio = 1;
+				float reduction = 0;
+				reduction = ((sd->inventory.u.items_inventory[armor_index].card[1] >> 8) * 0.005); //each star cru, gives 2.5% d,g reduction
 
+				if (reduction >= 0.075) reduction = 0.1; // 3 Star Crumbs now give 10% dmg reduction
+				ratio -= reduction;
+
+				damage = (int64)damage * ratio; //Receive ratio% of damage
+			}
+		}
+		
 		if (sc->data[SC_DEFENDER] && skill_id != KO_MUCHANAGE && (flag&(BF_LONG|BF_WEAPON)) == (BF_LONG|BF_WEAPON))
 			damage -= damage * sc->data[SC_DEFENDER]->val2 / 100;
 

@@ -58,10 +58,10 @@
 		mes "Are you thinking about your next job?";
 		next;
 		mes "[Blacksmith Guildmaster]";
-		mes "You can become a Champion if you reach job level 50.";
+		mes "You can become a Mastersmith if you reach job level 50.";
 		next;
 		mes "[Blacksmith Guildmaster]";
-		mes "Go find the legendary Whitesmith in El Dicastes.";
+		mes "Go find the legendary Mastersmith in El Dicastes.";
 		mes "I'm sure he will be able to train you.";
 		close;
 	}

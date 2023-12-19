@@ -1,28 +1,28 @@
 //===== Script =======================================
-// High Wizard Armorer NPC
+// Sorcerer Armorer NPC
 //====================================================
 
--	script	High Wizard Armorer#hwar1::High_Wizard_Armorer	-1,{
-	set .n$,"[High Wizard Armorer]";
+-	script	Sorcerer Armorer#hwar1::High_Wizard_Armorer	-1,{
+	set .n$,"[Sorcerer Armorer]";
 	mes .n$;
 	mes "Hello! I am an expert in customising armors.";
 	mes "I am part of the Wizard Guild, so I can make changes to a member's outfit for free";
 	next;
 	if (Class != Job_High_Wizard) {
-		mes "[High Wizard Armorer]";
-		mes "Oh! I can only provide my services to High Wizards...";
+		mes "[Sorcerer Armorer]";
+		mes "Oh! I can only provide my services to Sorcerers...";
 		mes "Sorry!";
 		close;
 	}
 	mes "Aha!";
-	mes "A seasoned High Wizard, what outfit would you like to wear?";
+	mes "A seasoned Sorcerer, what outfit would you like to wear?";
 	next;
-	switch(select("High Wizard:Warlock:Sorcerer:Arch Mage")) {
+	switch(select("Sorcerer:Warlock:Channeler:Arch Mage")) {
 		case 1:
 			setlook LOOK_CLOTHES_COLOR,0;
         	setlook LOOK_BODY2,0;
 			specialeffect2 EF_ENTRY2;
-			mes "[High Wizard Armorer]";
+			mes "[Sorcerer Armorer]";
 			mes "There you go!";
 			mes "Come back if you want to change your outfit again!";
 			close;
@@ -30,7 +30,7 @@
 			setlook LOOK_CLOTHES_COLOR,0;
         	setlook LOOK_BODY2,1;
 			specialeffect2 EF_ENTRY2;
-			mes "[High Wizard Armorer]";
+			mes "[Sorcerer Armorer]";
 			mes "There you go!";
 			mes "Come back if you want to change your outfit again!";
 			close;
@@ -38,7 +38,7 @@
 			setlook LOOK_CLOTHES_COLOR,0;
         	setlook LOOK_BODY2,2;
 			specialeffect2 EF_ENTRY2;
-			mes "[High Wizard Armorer]";
+			mes "[Sorcerer Armorer]";
 			mes "There you go!";
 			mes "Come back if you want to change your outfit again!";
 			close;
@@ -46,11 +46,11 @@
 			setlook LOOK_CLOTHES_COLOR,0;
         	setlook LOOK_BODY2,3;
 			specialeffect2 EF_ENTRY2;
-			mes "[High Wizard Armorer]";
+			mes "[Sorcerer Armorer]";
 			mes "There you go!";
 			mes "Come back if you want to change your outfit again!";
 			close;;
 	}	
 }
 
-gef_tower,113,64,1	duplicate(High_Wizard_Armorer)	High Wizard Armorer#hwar1	952
+gef_tower,113,64,1	duplicate(High_Wizard_Armorer)	Sorcerer Armorer#hwar1	952

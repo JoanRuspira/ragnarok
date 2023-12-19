@@ -58,10 +58,10 @@
 		mes "Are you thinking about your next job?";
 		next;
 		mes "[Knight Guildmaster]";
-		mes "You can become a Lord Knight if you reach job level 50.";
+		mes "You can become a Commander if you reach job level 50.";
 		next;
 		mes "[Knight Guildmaster]";
-		mes "Go find the legendary Lord Knight in Amatsu.";
+		mes "Go find the legendary Commander in Amatsu.";
 		mes "I'm sure he will be able to train you.";
 		close;
 	}

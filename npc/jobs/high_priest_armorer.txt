@@ -1,23 +1,23 @@
 //===== Script =======================================
-// High Priest Armorer NPC
+// Bishop Armorer NPC
 //====================================================
 
--	script	High Priest Armorer#hpar1::High_Priest_Armorer	-1,{
-	set .n$,"[High Priest Armorer]";
+-	script	Bishop Armorer#hpar1::High_Priest_Armorer	-1,{
+	set .n$,"[Bishop Armorer]";
 	mes .n$;
 	mes "Hello! I am an expert in customising armors.";
 	mes "I am part of the Priest Guild, so I can make changes to a member's outfit for free";
 	next;
 	if (Class != Job_High_Priest) {
-		mes "[High Priest Armorer]";
-		mes "Oh! I can only provide my services to High Priests...";
+		mes "[Bishop Armorer]";
+		mes "Oh! I can only provide my services to Bishops...";
 		mes "Sorry!";
 		close;
 	}
 	mes "Aha!";
-	mes "A seasoned High Priest, what outfit would you like to wear?";
+	mes "A seasoned Bishop, what outfit would you like to wear?";
 	next;
-	switch(select("High Priest:Arch Bishop:Pontiff:Cardinal")) {
+	switch(select("Bishop:Cleric:Pontiff:Cardinal")) {
 		case 1:
 			setlook LOOK_CLOTHES_COLOR,0;
         	setlook LOOK_BODY2,0;
@@ -53,4 +53,4 @@
 	}	
 }
 
-prt_church,103,97,2	duplicate(High_Priest_Armorer)	High Priest Armorer#hpar1	60
+prt_church,103,97,2	duplicate(High_Priest_Armorer)	Bishop Armorer#hpar1	60
