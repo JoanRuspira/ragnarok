@@ -9389,8 +9389,56 @@ Body:
     Flags:
       BuyingStore: true
   - Id: 6969
-    AegisName: Basic_Forging_Manual
-    Name: Basic Forging Manual
+    AegisName: Smelting_Manual
+    Name: Smelting Manual
+    Type: Etc
+    Buy: 25000
+    Weight: 30
+    Flags:
+      BuyingStore: true
+  - Id: 6970
+    AegisName: Basic_Sword_Forging_Manual
+    Name: Basic Sword Forging Manual
+    Type: Etc
+    Buy: 50000
+    Weight: 30
+    Flags:
+      BuyingStore: true
+  - Id: 6971
+    AegisName: Basic_Dagger_Forging_Manual
+    Name: Basic Dagger Forging Manual
+    Type: Etc
+    Buy: 50000
+    Weight: 30
+    Flags:
+      BuyingStore: true
+  - Id: 6972
+    AegisName: Basic_Axe_Forging_Manual
+    Name: Basic Axe Forging Manual
+    Type: Etc
+    Buy: 50000
+    Weight: 30
+    Flags:
+      BuyingStore: true
+  - Id: 6973
+    AegisName: Basic_Mace_Forging_Manual
+    Name: Basic Mace Forging Manual
+    Type: Etc
+    Buy: 50000
+    Weight: 30
+    Flags:
+      BuyingStore: true
+  - Id: 6974
+    AegisName: Basic_Knuckle_Forging_Manual
+    Name: Basic Knuckle Forging Manual
+    Type: Etc
+    Buy: 50000
+    Weight: 30
+    Flags:
+      BuyingStore: true
+  - Id: 6975
+    AegisName: Basic_Spear_Forging_Manual
+    Name: Basic Spear Forging Manual
     Type: Etc
     Buy: 50000
     Weight: 30

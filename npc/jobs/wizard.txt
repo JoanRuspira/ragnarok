@@ -58,10 +58,10 @@
 		mes "Are you thinking about your next job?";
 		next;
 		mes "[Wizard Guildmaster]";
-		mes "You can become a High Wizard if you reach job level 50.";
+		mes "You can become a Sorcerer if you reach job level 50.";
 		next;
 		mes "[Wizard Guildmaster]";
-		mes "Go find the legendary High Wizard in Nifflheim.";
+		mes "Go find the legendary Sorcerer in Nifflheim.";
 		mes "I'm sure he will be able to train you.";
 		close;
 	}

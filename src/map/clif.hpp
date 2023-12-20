@@ -710,6 +710,7 @@ void clif_skill_estimation(struct map_session_data *sd,struct block_list *dst);
 void clif_skill_warppoint(struct map_session_data* sd, uint16 skill_id, uint16 skill_lv, unsigned short map1, unsigned short map2, unsigned short map3, unsigned short map4);
 void clif_skill_memomessage(struct map_session_data* sd, int type);
 void clif_skill_teleportmessage(struct map_session_data *sd, int type);
+void clif_add_item_to_produce_list( struct PACKET_ZC_MAKABLEITEMLIST *p, int item_id, int &count );
 void clif_skill_produce_mix_list(struct map_session_data *sd, int skill_id, int trigger);
 void clif_cooking_list(struct map_session_data *sd, int trigger, uint16 skill_id, int qty, int list_type);
 

@@ -5980,6 +5980,15 @@ void clif_skill_estimation(struct map_session_data *sd,struct block_list *dst)
 }
 
 
+void clif_add_item_to_produce_list( struct PACKET_ZC_MAKABLEITEMLIST *p, int item_id, int &count ){
+	p->items[count].itemId = item_id;
+	p->items[count].material[0] = 0;
+	p->items[count].material[1] = 0;
+	p->items[count].material[2] = 0;
+	count++;
+}
+
+
 /// Presents a textual list of producable items (ZC_MAKABLEITEMLIST).
 /// 018d <packet len>.W { <name id>.W { <material id>.W }*3 }*
 /// material id:
@@ -6002,20 +6011,95 @@ void clif_skill_produce_mix_list( struct map_session_data *sd, int skill_id, int
 	p->packetType = 0x18d;
 
 	int count = 0;
+	// int skill_lv = 0;
 	
-	for( int i = 0; i < MAX_SKILL_PRODUCE_DB; i++ ){
-		if (skill_can_produce_mix(sd,skill_produce_db[i].nameid, trigger, 1, skill_produce_db[i].req_skill) 
-			&& ((BS_AXE <= 0 || (BS_AXE > 0 && skill_produce_db[i].req_skill == BS_AXE))
-				|| (AM_PHARMACY <= 0 || (AM_PHARMACY > 0 && skill_produce_db[i].req_skill == AM_PHARMACY)))
-			)
-		{
-			p->items[count].itemId = client_nameid( skill_produce_db[i].nameid );
-			p->items[count].material[0] = 0;
-			p->items[count].material[1] = 0;
-			p->items[count].material[2] = 0;
-			count++;
+	if ((BS_AXE > 0 )) {
+		if(pc_search_inventory(sd, ITEMID_SMELTING_MANUAL) >= 0) {
+			clif_add_item_to_produce_list(p, 998, count);
+			clif_add_item_to_produce_list(p, 998, count);
+			clif_add_item_to_produce_list(p, 1000, count);
+			clif_add_item_to_produce_list(p, 994, count);
+			clif_add_item_to_produce_list(p, 995, count);
+			clif_add_item_to_produce_list(p, 997, count);	
+			clif_add_item_to_produce_list(p, 996, count);	
+		}
+		if(pc_search_inventory(sd, ITEMID_BASIC_SWORD_FORGING_MANUAL) >= 0) {
+			clif_add_item_to_produce_list(p, 1101, count);
+			clif_add_item_to_produce_list(p, 1104, count);
+			clif_add_item_to_produce_list(p, 1107, count);
+			clif_add_item_to_produce_list(p, 1110, count);
+			clif_add_item_to_produce_list(p, 1113, count);
+			clif_add_item_to_produce_list(p, 1122, count);	
+			clif_add_item_to_produce_list(p, 1126, count);	
+			clif_add_item_to_produce_list(p, 1123, count);	
+			clif_add_item_to_produce_list(p, 1119, count);	
+			clif_add_item_to_produce_list(p, 1129, count);
+			clif_add_item_to_produce_list(p, 1116, count);	
+			clif_add_item_to_produce_list(p, 1151, count);	
+			clif_add_item_to_produce_list(p, 1154, count);	
+			clif_add_item_to_produce_list(p, 1157, count);	
+			clif_add_item_to_produce_list(p, 1160, count);	
+			clif_add_item_to_produce_list(p, 1163, count);	
+		}
+		if(pc_search_inventory(sd, ITEMID_BASIC_DAGGER_FORGING_MANUAL) >= 0) {	
+			clif_add_item_to_produce_list(p, 1201, count);	
+			clif_add_item_to_produce_list(p, 1204, count);	
+			clif_add_item_to_produce_list(p, 1207, count);	
+			clif_add_item_to_produce_list(p, 1210, count);	
+			clif_add_item_to_produce_list(p, 1213, count);	
+			clif_add_item_to_produce_list(p, 1216, count);	
+			clif_add_item_to_produce_list(p, 1219, count);	
+			clif_add_item_to_produce_list(p, 1222, count);	
+		}
+		if(pc_search_inventory(sd, ITEMID_BASIC_AXE_FORGING_MANUAL) >= 0) {
+			clif_add_item_to_produce_list(p, 1301, count);	
+			clif_add_item_to_produce_list(p, 1351, count);	
+			clif_add_item_to_produce_list(p, 1354, count);	
+			clif_add_item_to_produce_list(p, 1357, count);	
+			clif_add_item_to_produce_list(p, 1360, count);	
+		}
+		if(pc_search_inventory(sd, ITEMID_BASIC_MACE_FORGING_MANUAL) >= 0) {
+			clif_add_item_to_produce_list(p, 1501, count);	
+			clif_add_item_to_produce_list(p, 1504, count);	
+			clif_add_item_to_produce_list(p, 1507, count);	
+			clif_add_item_to_produce_list(p, 1510, count);	
+			clif_add_item_to_produce_list(p, 1519, count);	
+			clif_add_item_to_produce_list(p, 1513, count);	
+			clif_add_item_to_produce_list(p, 1516, count);	
+			clif_add_item_to_produce_list(p, 1522, count);	
+		}
+		if(pc_search_inventory(sd, ITEMID_BASIC_KNUCKLE_FORGING_MANUAL) >= 0) {
+			clif_add_item_to_produce_list(p, 1801, count);	
+			clif_add_item_to_produce_list(p, 1803, count);	
+			clif_add_item_to_produce_list(p, 1805, count);	
+			clif_add_item_to_produce_list(p, 1807, count);	
+			clif_add_item_to_produce_list(p, 1809, count);	
+			clif_add_item_to_produce_list(p, 1811, count);	
+		}
+		if(pc_search_inventory(sd, ITEMID_BASIC_SPEAR_FORGING_MANUAL) >= 0) {
+			clif_add_item_to_produce_list(p, 1401, count);	
+			clif_add_item_to_produce_list(p, 1404, count);	
+			clif_add_item_to_produce_list(p, 1407, count);	
+			clif_add_item_to_produce_list(p, 1451, count);	
+			clif_add_item_to_produce_list(p, 1454, count);	
+			clif_add_item_to_produce_list(p, 1460, count);	
+			clif_add_item_to_produce_list(p, 1463, count);	
+			clif_add_item_to_produce_list(p, 1410, count);	
 		}
 	}
+	// for( int i = 0; i < MAX_SKILL_PRODUCE_DB; i++ ){
+	// 	if (skill_can_produce_mix(sd,skill_produce_db[i].nameid, trigger, 1, skill_produce_db[i].req_skill) 
+	// 		&& ((BS_AXE <= 0 || (BS_AXE > 0 && skill_produce_db[i].req_skill == BS_AXE))
+	// 			|| (AM_PHARMACY <= 0 || (AM_PHARMACY > 0 && skill_produce_db[i].req_skill == AM_PHARMACY)))
+	// 		)
+	// 	{
+	// 		p->items[count].itemId = client_nameid( skill_produce_db[i].nameid );
+	// 		p->items[count].material[0] = 0;
+	// 		p->items[count].material[1] = 0;
+	// 		p->items[count].material[2] = 0;
+	// 		count++;
+	// 	}
+	// }
 
 	p->packetLength = sizeof( struct PACKET_ZC_MAKABLEITEMLIST ) + count * sizeof( struct PACKET_ZC_MAKABLEITEMLIST_sub );
 	WFIFOSET( fd, p->packetLength );
