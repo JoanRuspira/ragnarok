@@ -1080,7 +1080,10 @@ int skill_onskillusage(struct map_session_data *sd, struct block_list *bl, uint1
 	struct block_list *tbl;
 	if( sd == NULL || !skill_id )
 		return 0;
-
+	if (skill_id == PF_STASIS) {
+		clif_soundeffectall(&sd->bl, "cd_presens_acies.wav", 0, AREA);
+		clif_specialeffect(&sd->bl, 922, AREA);
+	}
 	for (auto &it : sd->autospell3) {
 		int skill, skill_lv, type;
 
@@ -2371,6 +2374,8 @@ int64 skill_attack (int attack_type, struct block_list* src, struct block_list *
 			case MG_COLDBOLT:
 			case MG_FIREBOLT:
 			case MG_LIGHTNINGBOLT:
+			case MG_SOULSTRIKE:
+			case NPC_DARKSTRIKE:
 				if (sc && sc->data[SC_DOUBLECAST] && rnd() % 100 < sc->data[SC_DOUBLECAST]->val2)
 					//skill_addtimerskill(src, tick + dmg.div_*dmg.amotion, bl->id, 0, 0, skill_id, skill_lv, BF_MAGIC, flag|2);
 					skill_addtimerskill(src, tick + dmg.amotion, bl->id, 0, 0, skill_id, skill_lv, BF_MAGIC, flag|2);
@@ -9946,7 +9951,17 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			sc_start(src, bl, type, rate, skill_lv, skill_get_time(skill_id, skill_lv));
 		}
 		break;
-
+	case PF_STASIS:
+		if (flag&1) {
+			int duration = 2000 * skill_lv;
+			clif_specialeffect(bl, 1230, AREA);
+			sc_start(src, bl, type, 100, skill_lv, duration);
+			// status_change_start(src, bl, SC_WHITEIMPRISON, 10000, skill_lv, 0, 0, 0, duration, SCSTART_NONE);
+		} else {
+			clif_skill_nodamage(src, bl, skill_id, skill_lv, 1);
+			map_foreachinallrange(skill_area_sub, bl, skill_get_splash(skill_id, skill_lv), BL_CHAR, src, skill_id, skill_lv, tick, flag|BCT_ENEMY|1, skill_castend_nodamage_id);
+		}
+		break;
 	case WM_LULLABY_DEEPSLEEP:
 		if (flag&1) {
 			int duration = 2000 * skill_lv;
@@ -14835,7 +14850,8 @@ bool skill_check_condition_castbegin(struct map_session_data* sd, uint16 skill_i
 			}
 			break;
 		case SO_SPELLFIST:
-			if(sd->skill_id_old != MG_FIREBOLT && sd->skill_id_old != MG_COLDBOLT && sd->skill_id_old != MG_LIGHTNINGBOLT) {
+			if(sd->skill_id_old != MG_FIREBOLT && sd->skill_id_old != MG_COLDBOLT && sd->skill_id_old != MG_LIGHTNINGBOLT
+			 && sd->skill_id_old != MG_EARTHBOLT && sd->skill_id_old != MG_SOULSTRIKE && sd->skill_id_old != NPC_DARKSTRIKE) {
 				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
 				return false;
 			}

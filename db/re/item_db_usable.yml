@@ -133,6 +133,9 @@ Body:
     Type: Healing
     Buy: 40
     Weight: 70
+    Delay:
+      Duration: 3000
+      Status: All_Riding_Reuse_Limit
     Flags:
       BuyingStore: true
     Script: |

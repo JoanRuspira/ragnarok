@@ -2214,7 +2214,8 @@ Body:
         Reproduce: true
     CastCancel: true
     CastTime: 3000
-    AfterCastActDelay: 1000
+    Cooldown: 5000
+    AfterCastActDelay: 500
     Requires:
       SpCost: 30
   - Id: 840
@@ -3319,6 +3320,23 @@ Body:
     Duration1: 90000
     Requires:
       SpCost: 20
+  - Id: 894
+    Name: PF_STASIS
+    Description: Stasis
+    MaxLevel: 5
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+      Splash: true
+    Hit: Single
+    HitCount: 1
+    SplashArea: 6
+    CastCancel: true
+    CastTime: 2000
+    AfterCastActDelay: 400
+    Cooldown: 20000
+    Requires:
+      SpCost: 120
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -3956,8 +3974,8 @@ Body:
       SpCost: 20
   - Id: 76
     Name: PR_LEXDIVINA
-    Description: Lex Divina
-    MaxLevel: 10
+    Description: Silence
+    MaxLevel: 5
     Type: Magic
     TargetType: Attack
     DamageFlags:
@@ -3965,50 +3983,21 @@ Body:
     Range: 5
     Hit: Single
     CastCancel: true
-    AfterCastActDelay: 3000
+    AfterCastActDelay: 400
+    Cooldown: 5000
     Duration2:
       - Level: 1
-        Time: 30000
+        Time: 5000
       - Level: 2
-        Time: 35000
+        Time: 6000
       - Level: 3
-        Time: 40000
+        Time: 7000
       - Level: 4
-        Time: 45000
+        Time: 8000
       - Level: 5
-        Time: 50000
-      - Level: 6
-        Time: 60000
-      - Level: 7
-        Time: 60000
-      - Level: 8
-        Time: 60000
-      - Level: 9
-        Time: 60000
-      - Level: 10
-        Time: 60000
+        Time: 9000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 20
-        - Level: 2
-          Amount: 20
-        - Level: 3
-          Amount: 20
-        - Level: 4
-          Amount: 20
-        - Level: 5
-          Amount: 20
-        - Level: 6
-          Amount: 18
-        - Level: 7
-          Amount: 16
-        - Level: 8
-          Amount: 14
-        - Level: 9
-          Amount: 12
-        - Level: 10
-          Amount: 10
+      SpCost: 30
   - Id: 77
     Name: PR_TURNUNDEAD
     Description: Turn Undead
@@ -8606,18 +8595,18 @@ Body:
     Hit: Single
     HitCount: 1
     CastCancel: true
-    CastTime: 7000
+    CastTime: 5000
     Duration1:
       - Level: 1
-        Time: 165000
+        Time: 20000
       - Level: 2
-        Time: 210000
+        Time: 30000
       - Level: 3
-        Time: 255000
+        Time: 40000
       - Level: 4
-        Time: 300000
+        Time: 50000
       - Level: 5
-        Time: 345000
+        Time: 60000
     Requires:
       SpCost: 70
       ItemCost:
@@ -13114,20 +13103,12 @@ Body:
     HitCount: 1
     CastTime: 2000
     Duration1: 90000
-    CastTimeFlags:
-      IgnoreDex: true
+    Cooldown: 15000
+    AfterCastActDelay: 3000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 40
-        - Level: 2
-          Amount: 45
-        - Level: 3
-          Amount: 50
-        - Level: 4
-          Amount: 55
-        - Level: 5
-          Amount: 60
+      SpCost: 80
+      Weapon:
+        Book: true
   - Id: 483
     Name: HW_GANBANTEIN
     Description: Ganbantein
@@ -23324,7 +23305,7 @@ Body:
       Splash: true
     Hit: Single
     HitCount: 1
-    SplashArea: 5
+    SplashArea: 7
     CastCancel: true
     CastTime: 2000
     AfterCastActDelay: 1000
@@ -23964,57 +23945,28 @@ Body:
   - Id: 2445
     Name: SO_SPELLFIST
     Description: Spell Fist
-    MaxLevel: 10
+    MaxLevel: 5
     TargetType: Self
     DamageFlags:
       NoDamage: true
     Range: 1
     Hit: Single
     HitCount: 1
+    CoolDown: 500
     AfterCastActDelay: 1000
     Duration1:
       - Level: 1
-        Time: 15000
-      - Level: 2
         Time: 20000
-      - Level: 3
-        Time: 25000
-      - Level: 4
+      - Level: 2
         Time: 30000
-      - Level: 5
-        Time: 35000
-      - Level: 6
+      - Level: 3
         Time: 40000
-      - Level: 7
-        Time: 45000
-      - Level: 8
+      - Level: 4
         Time: 50000
-      - Level: 9
-        Time: 55000
-      - Level: 10
+      - Level: 5
         Time: 60000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 40
-        - Level: 2
-          Amount: 44
-        - Level: 3
-          Amount: 48
-        - Level: 4
-          Amount: 52
-        - Level: 5
-          Amount: 56
-        - Level: 6
-          Amount: 60
-        - Level: 7
-          Amount: 64
-        - Level: 8
-          Amount: 68
-        - Level: 9
-          Amount: 72
-        - Level: 10
-          Amount: 76
+      SpCost: 75
   - Id: 2446
     Name: SO_EARTHGRAVE
     Description: Earth Grave

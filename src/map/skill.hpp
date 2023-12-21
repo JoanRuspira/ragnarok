@@ -2192,7 +2192,8 @@ enum e_skill {
 	WS_HAMMERDOWN_PROTOCOL = 890,
 	WS_ARMOR_REINFORCEMENT = 891,
 	WS_MASTERCRAFT = 892,
-	MC_COINFLIP = 893
+	MC_COINFLIP = 893,
+	PF_STASIS = 894
 };
 
 /// The client view ids for land skills.

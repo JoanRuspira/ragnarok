@@ -927,6 +927,7 @@ void initChangeTables(void)
 	set_sc_with_vfx( WM_POEMOFNETHERWORLD	, SC_NETHERWORLD		, EFST_NETHERWORLD		, SCB_NONE );
 	set_sc_with_vfx( WM_VOICEOFSIREN	, SC_VOICEOFSIREN		, EFST_SIREN, SCB_NONE );
 	set_sc_with_vfx( WM_LULLABY_DEEPSLEEP	, SC_SLEEP			, EFST_SLEEP, SCB_NONE );
+	set_sc( PF_STASIS	, SC_STASIS			, EFST_STASIS, SCB_NONE );
 	set_sc( WM_GLOOMYDAY			, SC_GLOOMYDAY			, EFST_GLOOMYDAY			, SCB_FLEE|SCB_SPEED|SCB_ASPD );
 	set_sc( WM_SONG_OF_MANA			, SC_SONGOFMANA			, EFST_SONG_OF_MANA, SCB_REGEN );
 	set_sc( WM_DANCE_WITH_WUG		, SC_DANCEWITHWUG		, EFST_DANCE_WITH_WUG, SCB_ASPD );
@@ -1667,6 +1668,7 @@ void initChangeTables(void)
 #endif
 	StatusChangeStateTable[SC_WHITEIMPRISON]		|= SCS_NOMOVE;
 	StatusChangeStateTable[SC_DEEPSLEEP]			|= SCS_NOMOVE;
+	StatusChangeStateTable[SC_STASIS]			    |= SCS_NOMOVE;
 	StatusChangeStateTable[SC_ELECTRICSHOCKER]		|= SCS_NOMOVE;
 	StatusChangeStateTable[SC_BITE]					|= SCS_NOMOVE;
 	StatusChangeStateTable[SC_THORNSTRAP]			|= SCS_NOMOVE;
@@ -1718,6 +1720,7 @@ void initChangeTables(void)
 	StatusChangeStateTable[SC__IGNORANCE]			|= SCS_NOCAST;
 	StatusChangeStateTable[SC__MANHOLE]				|= SCS_NOCAST;
 	StatusChangeStateTable[SC_DEEPSLEEP]			|= SCS_NOCAST;
+	StatusChangeStateTable[SC_STASIS]    			|= SCS_NOCAST;
 	StatusChangeStateTable[SC_SATURDAYNIGHTFEVER]	|= SCS_NOCAST;
 	StatusChangeStateTable[SC_CURSEDCIRCLE_TARGET]	|= SCS_NOCAST;
 	StatusChangeStateTable[SC_KINGS_GRACE]			|= SCS_NOCAST;

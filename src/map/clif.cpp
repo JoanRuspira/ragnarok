@@ -5577,6 +5577,10 @@ void clif_skillcasting(struct block_list* bl, int src_id, int dst_id, int dst_x,
 	WBUFB(buf,24) = 0;  // isDisposable
 #endif
 
+	if (skill_id == PF_STASIS) {
+		clif_specialeffect(bl, EF_DELUGE, AREA);
+	}
+
 	if (disguised(bl)) {
 		clif_send(buf,packet_len(cmd), bl, AREA_WOS);
 		WBUFL(buf,2) = disguised_bl_id( src_id );
