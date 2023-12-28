@@ -11,7 +11,7 @@ class MageSkillAtkRatioCalculator
 	private:
 
 	public:
-		static int calculate_skill_atk_ratio(int base_lv, int skill_id, int skill_lv, struct block_list *target);
+		static int calculate_skill_atk_ratio(int base_lv, int skill_id, int skill_lv, struct block_list *target, bool is_spellfist);
 
 	private:
 		static int calculate_bolt_attack(int skill_lv);

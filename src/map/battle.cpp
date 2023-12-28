@@ -4829,7 +4829,7 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 				}
 
 				if (nk[NK_SPLASHSPLIT]) { // Divide MATK in case of multiple targets skill
-					if (mflag>0)
+					if (mflag>0)                                 
 						ad.damage /= mflag;
 					else
 						ShowError("0 enemies targeted by %d:%s, divide per 0 avoided!\n", skill_id, skill_get_name(skill_id));
@@ -4840,18 +4840,15 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case AL_RUWACH:
 						skillratio += AcolyteSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv);
 						break;
-					case MG_UNDEADEMBRACE:
-					case NPC_DARKSTRIKE:
-					case MG_SOULSTRIKE:
-						skillratio += MageSkillAtkRatioCalculator::calculate_skill_atk_ratio(status_get_lv(src), skill_id, skill_lv, target);
-						break;
 					case MG_EARTHBOLT:
 					case MG_FIREBOLT:
 					case MG_LIGHTNINGBOLT:
 					case MG_COLDBOLT:
-						skillratio += MageSkillAtkRatioCalculator::calculate_skill_atk_ratio(status_get_lv(src), skill_id, skill_lv, target);
+					case NPC_DARKSTRIKE:
+					case MG_SOULSTRIKE:
+						skillratio += MageSkillAtkRatioCalculator::calculate_skill_atk_ratio(status_get_lv(src), skill_id, skill_lv, target, sc && sc->data[SC_SPELLFIST] && mflag & BF_SHORT);
 						if (sc && sc->data[SC_SPELLFIST] && mflag&BF_SHORT)  {
-							skillratio += MageSkillAtkRatioCalculator::calculate_skill_atk_ratio(status_get_lv(src), skill_id, skill_lv, target);
+							skillratio += MageSkillAtkRatioCalculator::calculate_skill_atk_ratio(status_get_lv(src), skill_id, skill_lv, target, true);
 							ad.div_ = 1; // ad mods, to make it work similar to regular hits [Xazax]
 							ad.flag = BF_WEAPON|BF_SHORT;
 							ad.type = DMG_NORMAL;

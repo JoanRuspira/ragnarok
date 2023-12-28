@@ -1749,6 +1749,9 @@ int unit_skilluse_id2(struct block_list *src, int target_id, uint16 skill_id, ui
 			case MG_FIREBOLT:
 			case MG_LIGHTNINGBOLT:
 			case MG_COLDBOLT:
+			case MG_EARTHBOLT:
+			case MG_SOULSTRIKE:
+			case NPC_DARKSTRIKE:
 				sd->skill_id_old = skill_id;
 				sd->skill_lv_old = skill_lv;
 				break;

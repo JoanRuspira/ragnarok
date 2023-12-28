@@ -48,6 +48,9 @@ Visual studio C++ 2015 Redistributable (install exes in this repo)
 
 5 - Spin up a container from the docker image (check container logs and wait for entrypoint to finish)
       docker run -t -d --name=ragnarok -p 6900:6900 -p 6121:6121 -p 5121:5121 jro
+      ("docker container stop container_id" to stop the container)
+      ("docker start container_id" to restart the container)
+      ("docker logs container_id" to check the container logs)
 
 6 - Run Client's jRO.exe
 

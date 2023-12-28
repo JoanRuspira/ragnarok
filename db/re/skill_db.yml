@@ -395,7 +395,7 @@ Body:
     Cooldown: 5000
     AfterCastActDelay: 1000
     Requires:
-      SpCost: 38
+      SpCost: 30
   - Id: 800
     Name: MG_UNDEADEMBRACE
     Description: Devil's Embrace
@@ -9739,7 +9739,7 @@ Body:
   - Id: 340
     Name: NPC_DARKSTRIKE
     Description: Soul Strike of Darkness
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Magic
     TargetType: Attack
     Flags:
@@ -9757,16 +9757,6 @@ Body:
         Count: 4
       - Level: 5
         Count: 5
-      - Level: 6
-        Count: 3
-      - Level: 7
-        Count: 4
-      - Level: 8
-        Count: 4
-      - Level: 9
-        Count: 5
-      - Level: 10
-        Count: 5
     Element: Dark
     CastCancel: true
     CastTime: 3000
@@ -9777,7 +9767,7 @@ Body:
         Reproduce: true
     AfterCastActDelay: 1000
     Requires:
-      SpCost: 38
+      SpCost: 30
   - Id: 341
     Name: NPC_DARKTHUNDER
     Description: Darkness Jupitel
@@ -13106,7 +13096,7 @@ Body:
     Cooldown: 15000
     AfterCastActDelay: 3000
     Requires:
-      SpCost: 80
+      SpCost: 90
       Weapon:
         Book: true
   - Id: 483
@@ -23953,7 +23943,7 @@ Body:
     Hit: Single
     HitCount: 1
     CoolDown: 500
-    AfterCastActDelay: 1000
+    AfterCastActDelay: 3000
     Duration1:
       - Level: 1
         Time: 20000
@@ -23966,7 +23956,9 @@ Body:
       - Level: 5
         Time: 60000
     Requires:
-      SpCost: 75
+      SpCost: 120
+      Weapon:
+        Book: true
   - Id: 2446
     Name: SO_EARTHGRAVE
     Description: Earth Grave
