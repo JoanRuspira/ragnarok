@@ -4287,7 +4287,7 @@ Body:
         Reproduce: true
     CastCancel: true
     CastTime: 7000
-    Cooldown: 17000
+    Cooldown: 10000
     AfterCastActDelay: 2000
     Duration1:
       - Level: 1
@@ -4370,8 +4370,8 @@ Body:
         Reproduce: true
     CastCancel: true
     CastTime: 7000
-    Coldown: 14000
-    AfterCastActDelay: 5000
+    Coldown: 10000
+    AfterCastActDelay: 2000
     Duration1: 4000
     Duration2: 30000
     Requires:
@@ -4623,7 +4623,7 @@ Body:
         Reproduce: true
     CastCancel: true
     CastTime: 7000
-    Cooldown: 14600
+    Cooldown: 10000
     AfterCastActDelay: 2000
     Duration1: 4600
     Duration2: 12000
@@ -10479,29 +10479,10 @@ Body:
       NoDamage: true
     Hit: Single
     HitCount: 1
-    AfterCastActDelay:
-      - Level: 1
-        Time: 1000
-      - Level: 2
-        Time: 1200
-      - Level: 3
-        Time: 1400
-      - Level: 4
-        Time: 1600
-      - Level: 5
-        Time: 1800
+    Cooldown: 1800
+    AfterCastActDelay: 1800
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 1
-        - Level: 2
-          Amount: 2
-        - Level: 3
-          Amount: 3
-        - Level: 4
-          Amount: 4
-        - Level: 5
-          Amount: 5
+      SpCost: 5
   - Id: 374
     Name: PF_SOULCHANGE
     Description: Soul Exhale
@@ -23976,7 +23957,7 @@ Body:
         Reproduce: true
     CastCancel: true
     CastTime: 7000
-    Cooldown: 10000
+    Cooldown: 8000
     AfterCastActDelay: 2000
     Duration1: 500
     Duration2:
