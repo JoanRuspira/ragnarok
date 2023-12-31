@@ -13,14 +13,14 @@ yuno,217,299,4	script	Yuno Guide#yuno01::GuideYuno	705,{
 		case 1:
 			set .@loop,1;
 			while (.@loop) {
-				switch(select("Airport:Sage Guild::Library of the Republic:Juphero Plaza:Previous Menu")) {
+				switch(select("Airport:Scholar Guild Guild::Library of the Republic:Juphero Plaza:Previous Menu")) {
 				case 1:
 					callsub L_Mark, F_Navi("Airport","yuno,16,261","^DAA520");
 					viewpoint 1,16,261,2,0xDAA520;
 					next;
 					break;
 				case 2:
-					callsub L_Mark, F_Navi("Sage Guild","yuno,90,318","^800080");
+					callsub L_Mark, F_Navi("Scholar Guild","yuno,90,318","^800080");
 					viewpoint 1,90,318,6,0x800080;
 					next;
 					break;

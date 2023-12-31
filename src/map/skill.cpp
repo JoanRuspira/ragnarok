@@ -8161,7 +8161,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 #ifndef RENEWAL
 		if (sd) skill_blockpc_start (sd, skill_id, skill_get_time(skill_id, skill_lv)+3000);
 #endif
-		break;
+	break;
 
 	case PF_MINDBREAKER:
 		{
@@ -8180,22 +8180,12 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		{
 			unsigned int sp1 = 0, sp2 = 0;
 			if (dstmd) {
-				if (dstmd->state.soul_change_flag) {
-					if(sd) clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-					break;
-				}
-				dstmd->state.soul_change_flag = 1;
-				sp2 = sstatus->max_sp * 3 /100;
-				status_heal(src, 0, sp2, 2);
+				status_heal(src, 0, 25*skill_lv, 2);
 				clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 				break;
 			}
 			sp1 = sstatus->sp;
 			sp2 = tstatus->sp;
-#ifdef	RENEWAL
-			sp1 = sp1 / 2;
-			sp2 = sp2 / 2;
-#endif
 			if (tsc && tsc->data[SC_NORECOVER_STATE])
 				sp1 = tstatus->sp;
 			status_set_sp(src, sp2, 3);
@@ -9293,6 +9283,12 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 					break;
 				case 26:
 					skill_spellbook(sd, 62071);
+					break;
+				case 27:
+					skill_spellbook(sd, 62072);
+					break;
+				case 28:
+					skill_spellbook(sd, 62073);
 					break;
 			}
 			

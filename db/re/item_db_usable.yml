@@ -6429,3 +6429,27 @@ Body:
     Script: |
       specialeffect2 1232;
       itemskill "WL_READING_SB_READING",26;
+  - Id: 62072
+    AegisName: Magic_Book_LandProtector
+    Name: Spell Book (Land Protector)
+    Buy: 75000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "WL_READING_SB_READING",27;
+  - Id: 62073
+    AegisName: Magic_Book_Stasis
+    Name: Spell Book (Stasis)
+    Buy: 75000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "WL_READING_SB_READING",28;

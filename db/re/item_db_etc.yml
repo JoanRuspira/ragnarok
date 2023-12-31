@@ -1254,14 +1254,6 @@ Body:
     Weight: 100
     Flags:
       BuyingStore: true
-  - Id: 1006
-    AegisName: Old_Magic_Book
-    Name: Old Magicbook
-    Type: Etc
-    Buy: 2
-    Weight: 30
-    Flags:
-      BuyingStore: true
   - Id: 1007
     AegisName: Penetration
     Name: Necklace of Wisdom
@@ -5445,14 +5437,6 @@ Body:
     Name: Harpy Talon
     Type: Etc
     Buy: 1210
-    Weight: 10
-    Flags:
-      BuyingStore: true
-  - Id: 7117
-    AegisName: Rent_Spell_Book
-    Name: Torn Magic Book
-    Type: Etc
-    Buy: 1142
     Weight: 10
     Flags:
       BuyingStore: true
@@ -9664,5 +9648,21 @@ Body:
     Type: Etc
     Buy: 1100
     Weight: 200
+    Flags:
+      BuyingStore: true
+  - Id: 1006
+    AegisName: Old_Magic_Book
+    Name: Old Magicbook
+    Type: Etc
+    Buy: 50
+    Weight: 20
+    Flags:
+      BuyingStore: true
+  - Id: 7117
+    AegisName: Rent_Spell_Book
+    Name: Torn Magic Book
+    Type: Etc
+    Buy: 50
+    Weight: 20
     Flags:
       BuyingStore: true

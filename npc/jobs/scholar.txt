@@ -1,0 +1,81 @@
+//===== Script =======================================
+// Scholar Job Change
+//====================================================
+
+-	script	Scholar Guildmaster#scogld::ScoGld	-1,{
+	if (Class == Job_Swordman) {
+		mes "[Scholar Guildmaster]";
+		mes "Good day! I am the Scholar Guildmaster.";
+		mes "I train Swordsmen that meet the requirements and allow them to become Scholars.";
+		next;
+		mes "[Scholar Guildmaster]";
+		mes "As a Scholar you will gain new skills.";
+		mes "The requirements are:";
+		mes "- Being a first class job.";
+		mes "- Being Job level 50.";
+		mes "- Having used all your skill points.";
+		next;
+		mes "[Scholar Guildmaster]";
+		mes "Do you want to become a Scholar?";
+		next;
+		switch(select("Yes:No")) {
+			case 1:
+				mes "[Scholar Guildmaster]";
+				mes "Good! Let me see if you pass our requirements...";
+				next;
+				if (JobLevel < 50) {
+					mes "[Scholar Guildmaster]";
+					mes "Hmm... Your job level does not meet our requirements.";
+					mes "You need to be more experienced before being a Scholar.";
+					close;
+				}
+				if (SkillPoint) {
+					mes "[Scholar Guildmaster]";
+					mes "Looks like you have not used all your skill points.";
+					mes "Use them and I'll be able to make you a Scholar.";
+					close;
+				}
+				mes "[Scholar Guildmaster]";
+				mes "Okay! Looks like you pass all of them!";
+				mes "You are allowed to join the Scholar guild.";
+				mes "Congratulations!";
+				jobchange Job_Sage;
+				specialeffect2 EF_JOBLVUP50;
+				close;
+			case 2:
+				mes "[Scholar Guildmaster]";
+				mes "Ah! Let me know if you change your mind.";
+				mes "We are always looking for new adventurers";
+				mes "to join the guild.";
+				close;
+		}
+		
+	}
+
+	if (Class == Job_Sage) {
+		mes "[Scholar Guildmaster]";
+		mes "Hi fellow Scholar!";
+		mes "Are you thinking about your next job?";
+		next;
+		mes "[Scholar Guildmaster]";
+		mes "You can become a Professor if you reach job level 50.";
+		next;
+		mes "[Scholar Guildmaster]";
+		mes "Go find the legendary Professor in the Library of the Republic.";
+		mes "I'm sure he will be able to train you.";
+		close;
+	}
+
+	if (Class == Job_Professor) {
+		mes "[Scholar Guildmaster]";
+		mes "Ah! An experienced member of the guild!";
+		mes "Are you here to help train the new members?";
+		close;
+	}
+
+	mes "[Scholar Guildmaster]";
+	mes "Welcome to the Scholar guild. We accept applications from Swordsmen that meet our requirements.";
+	close;
+}
+
+yuno_in03,237,103,4	duplicate(ScoGld)	Scholar Guildmaster#scogld	755

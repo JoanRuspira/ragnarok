@@ -1,0 +1,56 @@
+//===== Script =======================================
+// Professor Armorer NPC
+//====================================================
+
+-	script	Professor Armorer#pfarmor1::Professor_Armorer	-1,{
+	set .n$,"[Professor Armorer]";
+	mes .n$;
+	mes "Hello! I am an expert in customising armors.";
+	mes "I am part of the Scholar Guild, so I can make changes to a member's outfit for free";
+	next;
+	if (Class != Job_Professor) {
+		mes "[Professor Armorer]";
+		mes "Oh! I can only provide my services to Professors...";
+		mes "Sorry!";
+		close;
+	}
+	mes "Aha!";
+	mes "A seasoned Professor, what outfit would you like to wear?";
+	next;
+	switch(select("Professor:Academician:Intellectual:Elemental Master")) {
+		case 1:
+			setlook LOOK_CLOTHES_COLOR,0;
+        	setlook LOOK_BODY2,0;
+			specialeffect2 EF_ENTRY2;
+			mes "[Professor Armorer]";
+			mes "There you go!";
+			mes "Come back if you want to change your outfit again!";
+			close;
+		case 2:
+			setlook LOOK_CLOTHES_COLOR,0;
+        	setlook LOOK_BODY2,1;
+			specialeffect2 EF_ENTRY2;
+			mes "[Professor Armorer]";
+			mes "There you go!";
+			mes "Come back if you want to change your outfit again!";
+			close;
+		case 3:
+			setlook LOOK_CLOTHES_COLOR,0;
+        	setlook LOOK_BODY2,2;
+			specialeffect2 EF_ENTRY2;
+			mes "[Professor Armorer]";
+			mes "There you go!";
+			mes "Come back if you want to change your outfit again!";
+			close;
+		case 4:
+			setlook LOOK_CLOTHES_COLOR,0;
+        	setlook LOOK_BODY2,3;
+			specialeffect2 EF_ENTRY2;
+			mes "[Professor Armorer]";
+			mes "There you go!";
+			mes "Come back if you want to change your outfit again!";
+			close;;
+	}	
+}
+
+yuno_in03,244,26,3	duplicate(Professor_Armorer)	Professor Armorer#pfarmor1	4067

@@ -3623,12 +3623,6 @@ yuno_in03,232,99,1	script	Yuno Citizen#yuno:npcid	spriteid,{
 	end;
 }
 
-yuno_in03,237,103,4	script	Sage Guildmaster#yuno:npcid	755,{
-	npctalk "I will make you a Sage.";
-	end;
-}
-
-
 yuno_in04,35,67,5	script	Receptionist#yuno:npcid	864,{
 	npctalk "Welcome to the Yuno Library.";
 	end;

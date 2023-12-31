@@ -3337,6 +3337,9 @@ Body:
     Cooldown: 20000
     Requires:
       SpCost: 120
+      ItemCost:
+        - Item: Old_Magic_Book
+          Amount: 2
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -3998,6 +4001,9 @@ Body:
         Time: 9000
     Requires:
       SpCost: 30
+      ItemCost:
+        - Item: Old_Magic_Book
+          Amount: 1
   - Id: 77
     Name: PR_TURNUNDEAD
     Description: Turn Undead
@@ -4370,7 +4376,7 @@ Body:
         Reproduce: true
     CastCancel: true
     CastTime: 7000
-    Coldown: 10000
+    Cooldown: 10000
     AfterCastActDelay: 2000
     Duration1: 4000
     Duration2: 30000
@@ -8289,7 +8295,7 @@ Body:
       Weapon:
         Book: true
       ItemCost:
-        - Item: Red_Gemstone
+        - Item: Old_Magic_Book
           Amount: 1
   - Id: 280
     Name: SA_FLAMELAUNCHER
@@ -8610,9 +8616,7 @@ Body:
     Requires:
       SpCost: 70
       ItemCost:
-        - Item: Blue_Gemstone
-          Amount: 1
-        - Item: Yellow_Gemstone
+        - Item: Old_Magic_Book
           Amount: 1
     Unit:
       Id: Landprotector
@@ -8654,7 +8658,7 @@ Body:
     Requires:
       SpCost: 75
       ItemCost:
-        - Item: Yellow_Gemstone
+        - Item: Old_Magic_Book
           Amount: 1
   - Id: 290
     Name: SA_ABRACADABRA
@@ -10499,9 +10503,23 @@ Body:
     HitCount: 1
     CastCancel: true
     CastTime: 3000
-    AfterCastActDelay: 5000
+    Cooldown:
+      - Level: 1
+        Time: 13000
+      - Level: 2
+        Time: 11000
+      - Level: 3
+        Time: 9000
+      - Level: 4
+        Time: 7000
+      - Level: 5
+        Time: 5000
+    AfterCastActDelay: 3000
     Requires:
       SpCost: 5
+      ItemCost:
+        - Item: Rent_Spell_Book
+          Amount: 1
   - Id: 375
     Name: PF_SOULBURN
     Description: Soul Siphon
@@ -10516,7 +10534,10 @@ Body:
     Cooldown: 5000
     AfterCastActDelay: 1000
     Requires:
-      SpCost: 120
+      SpCost: 60
+    ItemCost:
+        - Item: Rent_Spell_Book
+          Amount: 1
   - Id: 376
     Name: ASC_KATAR
     Description: Advanced Katar Mastery
@@ -13080,6 +13101,9 @@ Body:
       SpCost: 90
       Weapon:
         Book: true
+      ItemCost:
+        - Item: Old_Magic_Book
+          Amount: 1
   - Id: 483
     Name: HW_GANBANTEIN
     Description: Ganbantein
@@ -17341,6 +17365,9 @@ Body:
     AfterCastActDelay: 1000
     Requires:
       SpCost: 75
+    ItemCost:
+      - Item: Old_Magic_Book
+        Amount: 1
   - Id: 2202
     Name: WL_SOULEXPANSION
     Description: Void Expansion
@@ -17644,6 +17671,9 @@ Body:
     AfterCastActDelay: 1000
     Requires:
       SpCost: 80
+      ItemCost:
+        - Item: Rent_Spell_Book
+          Amount: 1
   - Id: 2211
     Name: WL_CRIMSONROCK
     Description: Crimson Rock
@@ -18213,6 +18243,7 @@ Body:
     Hit: Multi_Hit
     HitCount: 1
     CastCancel: true
+    Cooldown: 7500
     Requires:
       SpCost: 1
   - Id: 5078
