@@ -2335,9 +2335,12 @@ Body:
     AfterCastActDelay: 1000
     Requires:
       SpCost: 75
+      ItemCost:
+        - Item: Magic_Gem_Black
+          Amount: 1
   - Id: 846
     Name: WZ_LANDOFEVIL
-    Description: Shadow Bomb
+    Description: Reality Breaker
     MaxLevel: 5
     Type: Magic
     TargetType: Attack
@@ -2371,6 +2374,9 @@ Body:
     AfterCastActDelay: 1000
     Requires:
       SpCost: 75
+      ItemCost:
+        - Item: Suspicious_Magic_Stone
+          Amount: 1
   - Id: 847
     Name: AM_EL_ACTION
     Description: Elemental Action
@@ -3161,6 +3167,11 @@ Body:
     AfterCastActDelay: 1000
     Requires:
       SpCost: 150
+      ItemCost:
+        - Item: Magic_Gem_Black
+          Amount: 1
+        - Item: Suspicious_Magic_Stone
+          Amount: 1
   - Id: 886
     Name: HW_DOOM_GHOST
     Description: Doom
@@ -3340,6 +3351,21 @@ Body:
       ItemCost:
         - Item: Old_Magic_Book
           Amount: 2
+  - Id: 895
+    Name: HW_TETRAVORTEX_FIRE
+    Description: Tetra Vortex Fire
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 11
+    Hit: Single
+    HitCount: 1
+    Element: Fire
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    Requires:
+      SpCost: 1
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -4293,7 +4319,7 @@ Body:
         Reproduce: true
     CastCancel: true
     CastTime: 7000
-    Cooldown: 10000
+    Cooldown: 7500
     AfterCastActDelay: 2000
     Duration1:
       - Level: 1
@@ -4309,6 +4335,9 @@ Body:
     Duration2: 5000
     Requires:
       SpCost: 85
+      ItemCost:
+        - Item: Scarlet_Pts
+          Amount: 1
     Unit:
       Id: Dummyskill
       Range: 3
@@ -4376,12 +4405,15 @@ Body:
         Reproduce: true
     CastCancel: true
     CastTime: 7000
-    Cooldown: 10000
+    Cooldown: 7500
     AfterCastActDelay: 2000
     Duration1: 4000
     Duration2: 30000
     Requires:
       SpCost: 85
+      ItemCost:
+        - Item: Yellow_Wish_Pts
+          Amount: 1
     Unit:
       Id: Dummyskill
       Layout:
@@ -4629,12 +4661,15 @@ Body:
         Reproduce: true
     CastCancel: true
     CastTime: 7000
-    Cooldown: 10000
+    Cooldown: 7500
     AfterCastActDelay: 2000
     Duration1: 4600
     Duration2: 12000
     Requires:
       SpCost: 85
+      ItemCost:
+        - Item: Indigo_Pts
+          Amount: 1
     Unit:
       Id: Dummyskill
       Layout: 4
@@ -8295,7 +8330,7 @@ Body:
       Weapon:
         Book: true
       ItemCost:
-        - Item: Old_Magic_Book
+        - Item: Stone_Of_Intelligence
           Amount: 1
   - Id: 280
     Name: SA_FLAMELAUNCHER
@@ -13102,7 +13137,7 @@ Body:
       Weapon:
         Book: true
       ItemCost:
-        - Item: Old_Magic_Book
+        - Item: Stone_Of_Intelligence
           Amount: 1
   - Id: 483
     Name: HW_GANBANTEIN
@@ -17945,7 +17980,7 @@ Body:
     CastCancel: true
     CastTime: 7000
     AfterCastActDelay: 2000
-    Cooldown: 7000
+    Cooldown: 7500
     Requires:
       SpCost: 120
   - Id: 2218
@@ -23969,6 +24004,9 @@ Body:
       SpCost: 120
       Weapon:
         Book: true
+      ItemCost:
+        - Item: Stone_Of_Intelligence
+          Amount: 1
   - Id: 2446
     Name: SO_EARTHGRAVE
     Description: Earth Grave
@@ -23986,7 +24024,7 @@ Body:
         Reproduce: true
     CastCancel: true
     CastTime: 7000
-    Cooldown: 8000
+    Cooldown: 7500
     AfterCastActDelay: 2000
     Duration1: 500
     Duration2:
@@ -24003,6 +24041,9 @@ Body:
     Cooldown: 5000
     Requires:
       SpCost: 85
+      ItemCost:
+        - Item: Lime_Green_Pts
+          Amount: 1
     Unit:
       Id: Dummyskill
       Range:

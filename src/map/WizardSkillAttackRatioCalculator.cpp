@@ -82,7 +82,10 @@ int WizardSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 		case SO_PSYCHIC_WAVE:
 			return calculate_psychic_wave_atk_ratio(skill_lv);
 			break;
-		case WL_TETRAVORTEX_FIRE:
+		case HW_TETRAVORTEX_FIRE:
+			clif_specialeffect(target, 1266, AREA); 
+			return calculate_tetra_vortex_atk_ratio(skill_lv);
+			break;
 		case WL_TETRAVORTEX_WATER:
 		case WL_TETRAVORTEX_WIND:
 		case WL_TETRAVORTEX_GROUND:

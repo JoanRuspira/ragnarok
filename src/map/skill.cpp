@@ -419,7 +419,7 @@ unsigned short skill_dummy2skill_id(unsigned short skill_id) {
 			return AB_DUPLELIGHT;
 		case WL_CHAINLIGHTNING_ATK:
 			return WL_CHAINLIGHTNING;
-		case WL_TETRAVORTEX_FIRE:
+		case HW_TETRAVORTEX_FIRE:
 		case WL_TETRAVORTEX_WATER:
 		case WL_TETRAVORTEX_WIND:
 		case WL_TETRAVORTEX_GROUND:
@@ -2778,7 +2778,7 @@ static TIMER_FUNC(skill_timerskill){
 			if(status_isdead(src)) {
 				switch(skl->skill_id) {
 					case WL_CHAINLIGHTNING_ATK:
-					case WL_TETRAVORTEX_FIRE:
+					case HW_TETRAVORTEX_FIRE:
 					case WL_TETRAVORTEX_WATER:
 					case WL_TETRAVORTEX_WIND:
 					case WL_TETRAVORTEX_GROUND:
@@ -2880,7 +2880,7 @@ static TIMER_FUNC(skill_timerskill){
 						}
 					}
 					break;
-				case WL_TETRAVORTEX_FIRE:
+				case HW_TETRAVORTEX_FIRE:
 				case WL_TETRAVORTEX_WATER:
 				case WL_TETRAVORTEX_WIND:
 				case WL_TETRAVORTEX_GROUND:
@@ -3039,7 +3039,7 @@ int skill_cleartimerskill (struct block_list *src)
 	for(i=0;i<MAX_SKILLTIMERSKILL;i++) {
 		if(ud->skilltimerskill[i]) {
 			switch(ud->skilltimerskill[i]->skill_id) {
-				case WL_TETRAVORTEX_FIRE:
+				case HW_TETRAVORTEX_FIRE:
 				case WL_TETRAVORTEX_WATER:
 				case WL_TETRAVORTEX_WIND:
 				case WL_TETRAVORTEX_GROUND:
@@ -4325,7 +4325,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 		}
 		break;
 
-	case WL_TETRAVORTEX_FIRE:
+	case HW_TETRAVORTEX_FIRE:
 	case WL_TETRAVORTEX_WATER:
 	case WL_TETRAVORTEX_WIND:
 	case WL_TETRAVORTEX_GROUND:
@@ -4338,7 +4338,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case WL_TETRAVORTEX:
 		if (sd == nullptr) { // Monster usage
 			uint8 i = 0;
-			const static std::vector<std::vector<uint16>> tetra_skills = { { WL_TETRAVORTEX_FIRE, 1 },
+			const static std::vector<std::vector<uint16>> tetra_skills = { { HW_TETRAVORTEX_FIRE, 1 },
 																		   { WL_TETRAVORTEX_WIND, 4 },
 																		   { WL_TETRAVORTEX_WATER, 2 },
 																		   { WL_TETRAVORTEX_GROUND, 8 } };
@@ -4371,7 +4371,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 
 				switch (sc->data[static_cast<sc_type>(i)]->val1) {
 					case WLS_FIRE:
-						subskill = WL_TETRAVORTEX_FIRE;
+						subskill = HW_TETRAVORTEX_FIRE;
 						fire = true;
 						k |= 1;
 						break;
@@ -9141,132 +9141,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case WL_SUMMONFB:
 		if (sd) clif_magicdecoy_list(sd, skill_lv, 0, 0, skill_id);
 		break;
-	//case WL_SUMMONFB:
-	//	{
-	//		status_change *sc = status_get_sc(src);
-
-	//		if (sc == nullptr)
-	//			break;
-
-	//		e_wl_spheres element;
-
-	//		switch (skill_lv) { 
-	//			case 1:
-	//				element = WLS_STONE;
-	//				break;
-	//			case 2:
-	//				element = WLS_WIND;
-	//				break;
-	//			case 3:
-	//				element = WLS_WATER;
-	//				break;
-	//			case 4:
-	//				element = WLS_FIRE;
-	//				break;
-	//		}
-
-	//		if (skill_lv != 5) {
-	//			sc_type sphere = SC_NONE;
-
-	//			for (i = SC_SPHERE_1; i <= SC_SPHERE_4; i++) {
-	//				if (sc->data[i] == nullptr) {
-	//					sphere = static_cast<sc_type>(i); // Take the free SC
-	//					break;
-	//				}
-	//			}
-
-	//			if (sphere == SC_NONE) {
-	//				if (sd) // No free slots to put SC
-	//					clif_skill_fail(sd, skill_id, USESKILL_FAIL_SUMMON, 0);
-	//				break;
-	//			}
-
-	//			sc_start2(src, src, sphere, 100, element, skill_lv, skill_get_time(skill_id, skill_lv));
-	//		} else {
-	//				if (sc->data[SC_SPHERE_1] == nullptr &&
-	//					sc->data[SC_SPHERE_2] == nullptr &&
-	//					sc->data[SC_SPHERE_3] == nullptr &&
-	//					sc->data[SC_SPHERE_4] == nullptr
-	//				) {
-	//					sc_start2(src, src, SC_SPHERE_1, 100, WLS_STONE, skill_lv, skill_get_time(skill_id, skill_lv));
-	//					sc_start2(src, src, SC_SPHERE_2, 100, WLS_WIND, skill_lv, skill_get_time(skill_id, skill_lv));
-	//					sc_start2(src, src, SC_SPHERE_3, 100, WLS_WATER, skill_lv, skill_get_time(skill_id, skill_lv));
-	//					sc_start2(src, src, SC_SPHERE_4, 100, WLS_FIRE, skill_lv, skill_get_time(skill_id, skill_lv));
-	//				}else{
-	//					if (sd) // No free slots to put SC
-	//						clif_skill_fail(sd, skill_id, USESKILL_FAIL_SUMMON, 0);
-	//					break;
-	//				}
-	//				
-	//			
-	//		}
-
-	//		clif_skill_nodamage(src, bl, skill_id, 0, 0);
-	//	}
-	//	break;case WL_SUMMONFB:
-	//	{
-	//		status_change *sc = status_get_sc(src);
-
-	//		if (sc == nullptr)
-	//			break;
-
-	//		e_wl_spheres element;
-
-	//		switch (skill_lv) { 
-	//			case 1:
-	//				element = WLS_STONE;
-	//				break;
-	//			case 2:
-	//				element = WLS_WIND;
-	//				break;
-	//			case 3:
-	//				element = WLS_WATER;
-	//				break;
-	//			case 4:
-	//				element = WLS_FIRE;
-	//				break;
-	//		}
-
-	//		if (skill_lv != 5) {
-	//			sc_type sphere = SC_NONE;
-
-	//			for (i = SC_SPHERE_1; i <= SC_SPHERE_4; i++) {
-	//				if (sc->data[i] == nullptr) {
-	//					sphere = static_cast<sc_type>(i); // Take the free SC
-	//					break;
-	//				}
-	//			}
-
-	//			if (sphere == SC_NONE) {
-	//				if (sd) // No free slots to put SC
-	//					clif_skill_fail(sd, skill_id, USESKILL_FAIL_SUMMON, 0);
-	//				break;
-	//			}
-
-	//			sc_start2(src, src, sphere, 100, element, skill_lv, skill_get_time(skill_id, skill_lv));
-	//		} else {
-	//				if (sc->data[SC_SPHERE_1] == nullptr &&
-	//					sc->data[SC_SPHERE_2] == nullptr &&
-	//					sc->data[SC_SPHERE_3] == nullptr &&
-	//					sc->data[SC_SPHERE_4] == nullptr
-	//				) {
-	//					sc_start2(src, src, SC_SPHERE_1, 100, WLS_STONE, skill_lv, skill_get_time(skill_id, skill_lv));
-	//					sc_start2(src, src, SC_SPHERE_2, 100, WLS_WIND, skill_lv, skill_get_time(skill_id, skill_lv));
-	//					sc_start2(src, src, SC_SPHERE_3, 100, WLS_WATER, skill_lv, skill_get_time(skill_id, skill_lv));
-	//					sc_start2(src, src, SC_SPHERE_4, 100, WLS_FIRE, skill_lv, skill_get_time(skill_id, skill_lv));
-	//				}else{
-	//					if (sd) // No free slots to put SC
-	//						clif_skill_fail(sd, skill_id, USESKILL_FAIL_SUMMON, 0);
-	//					break;
-	//				}
-	//				
-	//			
-	//		}
-
-	//		clif_skill_nodamage(src, bl, skill_id, 0, 0);
-	//	}
-	//	break;
-
 	case WL_READING_SB_READING:
 		if (sd) {
 			switch(skill_lv){

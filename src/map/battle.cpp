@@ -4911,7 +4911,7 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case HW_MAGICCRASHER:
 					case SO_PSYCHIC_WAVE:
 					case WL_SOULEXPANSION:
-					case WL_TETRAVORTEX_FIRE:
+					case HW_TETRAVORTEX_FIRE:
 					case WL_TETRAVORTEX_WATER:
 					case WL_TETRAVORTEX_WIND:
 					case WL_TETRAVORTEX_GROUND:

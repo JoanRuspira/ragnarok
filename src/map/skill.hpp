@@ -2193,7 +2193,8 @@ enum e_skill {
 	WS_ARMOR_REINFORCEMENT = 891,
 	WS_MASTERCRAFT = 892,
 	MC_COINFLIP = 893,
-	PF_STASIS = 894
+	PF_STASIS = 894,
+	HW_TETRAVORTEX_FIRE = 895
 };
 
 /// The client view ids for land skills.

@@ -2030,7 +2030,7 @@ static bool pc_grant_allskills(struct map_session_data *sd, bool addlv) {
 			case AB_DUPLELIGHT_MELEE:
 			case AB_DUPLELIGHT_MAGIC:
 			case WL_CHAINLIGHTNING_ATK:
-			case WL_TETRAVORTEX_FIRE:
+			case HW_TETRAVORTEX_FIRE:
 			case WL_TETRAVORTEX_WATER:
 			case WL_TETRAVORTEX_WIND:
 			case WL_TETRAVORTEX_GROUND:

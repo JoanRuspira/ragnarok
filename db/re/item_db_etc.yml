@@ -3879,10 +3879,6 @@ Body:
     AegisName: Solid_Bloodstain
     Name: Hard Bloodstain
     Type: Etc
-  - Id: 6307
-    AegisName: Suspicious_Magic_Stone
-    Name: Cursed Magical Stone
-    Type: Etc
   - Id: 6308
     AegisName: Unidentified_Relic
     Name: Unidentified Relic
@@ -4291,38 +4287,6 @@ Body:
       NoGuildStorage: true
       NoMail: true
       NoAuction: true
-  - Id: 6360
-    AegisName: Scarlet_Pts
-    Name: Scarlet Point
-    Type: Etc
-    Buy: 100
-    Weight: 5
-    Flags:
-      BuyingStore: true
-  - Id: 6361
-    AegisName: Indigo_Pts
-    Name: Indigo Point
-    Type: Etc
-    Buy: 100
-    Weight: 5
-    Flags:
-      BuyingStore: true
-  - Id: 6362
-    AegisName: Yellow_Wish_Pts
-    Name: Yellow Wish Point
-    Type: Etc
-    Buy: 100
-    Weight: 5
-    Flags:
-      BuyingStore: true
-  - Id: 6363
-    AegisName: Lime_Green_Pts
-    Name: Lime Green Point
-    Type: Etc
-    Buy: 100
-    Weight: 5
-    Flags:
-      BuyingStore: true
   - Id: 6369
     AegisName: Amatsu_Bead_A
     Name: Amatsu Bead A
@@ -6236,11 +6200,6 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
-  - Id: 7224
-    AegisName: Stone_Of_Intelligence
-    Name: Stone of Sage
-    Type: Etc
-    Weight: 10
   - Id: 7225
     AegisName: Pumpkin_Bucket
     Name: Pumpkin Lantern
@@ -7706,14 +7665,6 @@ Body:
       NoGuildStorage: true
       NoMail: true
       NoAuction: true
-  - Id: 7430
-    AegisName: Magic_Gem_Black
-    Name: Black Charm Stone
-    Type: Etc
-    Buy: 50
-    Weight: 30
-    Flags:
-      BuyingStore: true
   - Id: 7431
     AegisName: Several_Books
     Name: Pile of Books
@@ -9329,7 +9280,7 @@ Body:
     Name: Yellow Gemstone
     Type: Etc
     Buy: 50
-    Weight: 30
+    Weight: 10
     Flags:
       BuyingStore: true
   - Id: 716
@@ -9337,7 +9288,7 @@ Body:
     Name: Red Gemstone
     Type: Etc
     Buy: 50
-    Weight: 30
+    Weight: 10
     Flags:
       BuyingStore: true
   - Id: 717
@@ -9345,7 +9296,7 @@ Body:
     Name: Blue Gemstone
     Type: Etc
     Buy: 50
-    Weight: 30
+    Weight: 10
     Flags:
       BuyingStore: true
   - Id: 7099
@@ -9691,3 +9642,59 @@ Body:
     Name: All Elemental Spheres
     Type: Etc
     Weight: 1
+  - Id: 6360
+    AegisName: Scarlet_Pts
+    Name: Scarlet Point
+    Type: Etc
+    Buy: 50
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 6361
+    AegisName: Indigo_Pts
+    Name: Indigo Point
+    Type: Etc
+    Buy: 50
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 6362
+    AegisName: Yellow_Wish_Pts
+    Name: Yellow Wish Point
+    Type: Etc
+    Buy: 50
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 6363
+    AegisName: Lime_Green_Pts
+    Name: Lime Green Point
+    Type: Etc
+    Buy: 50
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 6307
+    AegisName: Suspicious_Magic_Stone
+    Name: Cursed Magical Stone
+    Type: Etc
+    Buy: 50
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7430
+    AegisName: Magic_Gem_Black
+    Name: Dark Soul Stone
+    Type: Etc
+    Buy: 50
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7224
+    AegisName: Stone_Of_Intelligence
+    Name: Stone of Sage
+    Type: Etc
+    Buy: 50
+    Weight: 10
+    Flags:
+      BuyingStore: true
