@@ -20510,8 +20510,6 @@ Body:
     TargetType: Ground
     DamageFlags:
       NoDamage: true
-    Flags:
-      AllowOnMado: true
     Range: 2
     Hit: Single
     HitCount: 1

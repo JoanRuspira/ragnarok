@@ -13118,6 +13118,7 @@ void clif_parse_ItemIdentify(int fd,struct map_session_data *sd) {
 /// Answer to arrow crafting item selection dialog (CZ_REQ_MAKINGARROW).
 /// 01ae <name id>.W
 void clif_parse_SelectArrow(int fd,struct map_session_data *sd) {
+
 	if (pc_istrading(sd)) {
 		//Make it fail to avoid shop exploits where you sell something different than you see.
 		clif_skill_fail(sd,sd->ud.skill_id,USESKILL_FAIL_LEVEL,0);
@@ -13144,6 +13145,9 @@ void clif_parse_SelectArrow(int fd,struct map_session_data *sd) {
 			break;
 		case CR_CULTIVATION:
 			skill_plant_cultivation(sd,p->itemId,CR_CULTIVATION);
+			break;
+		case WL_SUMMONFB:
+			skill_summon_elemental_sphere(sd,p->itemId,WL_SUMMONFB);
 			break;
 	}
 	clif_menuskill_clear(sd);
@@ -19208,6 +19212,14 @@ void clif_magicdecoy_list( struct map_session_data *sd, uint16 skill_lv, short x
 		p->items[1].itemId = client_nameid(716);
 		p->items[2].itemId = client_nameid(717);
 		p->items[3].itemId = client_nameid(910);
+	}
+	if (skill_id == WL_SUMMONFB) {
+		count = 5;
+		p->items[0].itemId = client_nameid(1);
+		p->items[1].itemId = client_nameid(2);
+		p->items[2].itemId = client_nameid(3);
+		p->items[3].itemId = client_nameid(4);
+		p->items[4].itemId = client_nameid(5);
 	}
 	if( count > 0 ) {
 		p->packetLength = sizeof( struct PACKET_ZC_MAKINGARROW_LIST ) + count * sizeof( struct PACKET_ZC_MAKINGARROW_LIST_sub );

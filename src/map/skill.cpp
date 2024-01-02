@@ -9138,70 +9138,134 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
 		}
 		break;
-
 	case WL_SUMMONFB:
-		{
-			status_change *sc = status_get_sc(src);
-
-			if (sc == nullptr)
-				break;
-
-			e_wl_spheres element;
-
-			switch (skill_lv) { 
-				case 1:
-					element = WLS_STONE;
-					break;
-				case 2:
-					element = WLS_WIND;
-					break;
-				case 3:
-					element = WLS_WATER;
-					break;
-				case 4:
-					element = WLS_FIRE;
-					break;
-			}
-
-			if (skill_lv != 5) {
-				sc_type sphere = SC_NONE;
-
-				for (i = SC_SPHERE_1; i <= SC_SPHERE_4; i++) {
-					if (sc->data[i] == nullptr) {
-						sphere = static_cast<sc_type>(i); // Take the free SC
-						break;
-					}
-				}
-
-				if (sphere == SC_NONE) {
-					if (sd) // No free slots to put SC
-						clif_skill_fail(sd, skill_id, USESKILL_FAIL_SUMMON, 0);
-					break;
-				}
-
-				sc_start2(src, src, sphere, 100, element, skill_lv, skill_get_time(skill_id, skill_lv));
-			} else {
-					if (sc->data[SC_SPHERE_1] == nullptr &&
-						sc->data[SC_SPHERE_2] == nullptr &&
-						sc->data[SC_SPHERE_3] == nullptr &&
-						sc->data[SC_SPHERE_4] == nullptr
-					) {
-						sc_start2(src, src, SC_SPHERE_1, 100, WLS_STONE, skill_lv, skill_get_time(skill_id, skill_lv));
-						sc_start2(src, src, SC_SPHERE_2, 100, WLS_WIND, skill_lv, skill_get_time(skill_id, skill_lv));
-						sc_start2(src, src, SC_SPHERE_3, 100, WLS_WATER, skill_lv, skill_get_time(skill_id, skill_lv));
-						sc_start2(src, src, SC_SPHERE_4, 100, WLS_FIRE, skill_lv, skill_get_time(skill_id, skill_lv));
-					}else{
-						if (sd) // No free slots to put SC
-							clif_skill_fail(sd, skill_id, USESKILL_FAIL_SUMMON, 0);
-						break;
-					}
-					
-				
-			}
-
-			clif_skill_nodamage(src, bl, skill_id, 0, 0);
-		}
+		if (sd) clif_magicdecoy_list(sd, skill_lv, 0, 0, skill_id);
 		break;
+	//case WL_SUMMONFB:
+	//	{
+	//		status_change *sc = status_get_sc(src);
+
+	//		if (sc == nullptr)
+	//			break;
+
+	//		e_wl_spheres element;
+
+	//		switch (skill_lv) { 
+	//			case 1:
+	//				element = WLS_STONE;
+	//				break;
+	//			case 2:
+	//				element = WLS_WIND;
+	//				break;
+	//			case 3:
+	//				element = WLS_WATER;
+	//				break;
+	//			case 4:
+	//				element = WLS_FIRE;
+	//				break;
+	//		}
+
+	//		if (skill_lv != 5) {
+	//			sc_type sphere = SC_NONE;
+
+	//			for (i = SC_SPHERE_1; i <= SC_SPHERE_4; i++) {
+	//				if (sc->data[i] == nullptr) {
+	//					sphere = static_cast<sc_type>(i); // Take the free SC
+	//					break;
+	//				}
+	//			}
+
+	//			if (sphere == SC_NONE) {
+	//				if (sd) // No free slots to put SC
+	//					clif_skill_fail(sd, skill_id, USESKILL_FAIL_SUMMON, 0);
+	//				break;
+	//			}
+
+	//			sc_start2(src, src, sphere, 100, element, skill_lv, skill_get_time(skill_id, skill_lv));
+	//		} else {
+	//				if (sc->data[SC_SPHERE_1] == nullptr &&
+	//					sc->data[SC_SPHERE_2] == nullptr &&
+	//					sc->data[SC_SPHERE_3] == nullptr &&
+	//					sc->data[SC_SPHERE_4] == nullptr
+	//				) {
+	//					sc_start2(src, src, SC_SPHERE_1, 100, WLS_STONE, skill_lv, skill_get_time(skill_id, skill_lv));
+	//					sc_start2(src, src, SC_SPHERE_2, 100, WLS_WIND, skill_lv, skill_get_time(skill_id, skill_lv));
+	//					sc_start2(src, src, SC_SPHERE_3, 100, WLS_WATER, skill_lv, skill_get_time(skill_id, skill_lv));
+	//					sc_start2(src, src, SC_SPHERE_4, 100, WLS_FIRE, skill_lv, skill_get_time(skill_id, skill_lv));
+	//				}else{
+	//					if (sd) // No free slots to put SC
+	//						clif_skill_fail(sd, skill_id, USESKILL_FAIL_SUMMON, 0);
+	//					break;
+	//				}
+	//				
+	//			
+	//		}
+
+	//		clif_skill_nodamage(src, bl, skill_id, 0, 0);
+	//	}
+	//	break;case WL_SUMMONFB:
+	//	{
+	//		status_change *sc = status_get_sc(src);
+
+	//		if (sc == nullptr)
+	//			break;
+
+	//		e_wl_spheres element;
+
+	//		switch (skill_lv) { 
+	//			case 1:
+	//				element = WLS_STONE;
+	//				break;
+	//			case 2:
+	//				element = WLS_WIND;
+	//				break;
+	//			case 3:
+	//				element = WLS_WATER;
+	//				break;
+	//			case 4:
+	//				element = WLS_FIRE;
+	//				break;
+	//		}
+
+	//		if (skill_lv != 5) {
+	//			sc_type sphere = SC_NONE;
+
+	//			for (i = SC_SPHERE_1; i <= SC_SPHERE_4; i++) {
+	//				if (sc->data[i] == nullptr) {
+	//					sphere = static_cast<sc_type>(i); // Take the free SC
+	//					break;
+	//				}
+	//			}
+
+	//			if (sphere == SC_NONE) {
+	//				if (sd) // No free slots to put SC
+	//					clif_skill_fail(sd, skill_id, USESKILL_FAIL_SUMMON, 0);
+	//				break;
+	//			}
+
+	//			sc_start2(src, src, sphere, 100, element, skill_lv, skill_get_time(skill_id, skill_lv));
+	//		} else {
+	//				if (sc->data[SC_SPHERE_1] == nullptr &&
+	//					sc->data[SC_SPHERE_2] == nullptr &&
+	//					sc->data[SC_SPHERE_3] == nullptr &&
+	//					sc->data[SC_SPHERE_4] == nullptr
+	//				) {
+	//					sc_start2(src, src, SC_SPHERE_1, 100, WLS_STONE, skill_lv, skill_get_time(skill_id, skill_lv));
+	//					sc_start2(src, src, SC_SPHERE_2, 100, WLS_WIND, skill_lv, skill_get_time(skill_id, skill_lv));
+	//					sc_start2(src, src, SC_SPHERE_3, 100, WLS_WATER, skill_lv, skill_get_time(skill_id, skill_lv));
+	//					sc_start2(src, src, SC_SPHERE_4, 100, WLS_FIRE, skill_lv, skill_get_time(skill_id, skill_lv));
+	//				}else{
+	//					if (sd) // No free slots to put SC
+	//						clif_skill_fail(sd, skill_id, USESKILL_FAIL_SUMMON, 0);
+	//					break;
+	//				}
+	//				
+	//			
+	//		}
+
+	//		clif_skill_nodamage(src, bl, skill_id, 0, 0);
+	//	}
+	//	break;
 
 	case WL_READING_SB_READING:
 		if (sd) {
@@ -12176,7 +12240,6 @@ int skill_castend_pos2(struct block_list* src, int x, int y, uint16 skill_id, ui
 	case NC_MAGICDECOY:
 		if( sd ) clif_magicdecoy_list(sd,skill_lv,x,y,skill_id);
 		break;
-
 	case SC_FEINTBOMB: {
 			struct skill_unit_group *group = skill_unitsetting(src,skill_id,skill_lv,x,y,0); // Set bomb on current Position
 
@@ -15145,16 +15208,16 @@ bool skill_check_condition_castbegin(struct map_session_data* sd, uint16 skill_i
 			}
 			break;
 
-		case WL_SUMMONFB:
-			if (skill_lv == 1 && sc) { // Failure only happens on level 1
-				ARR_FIND(SC_SPHERE_1, SC_SPHERE_4 + 1, i, !sc->data[i]);
+		//case WL_SUMMONFB:
+		//	if (skill_lv == 1 && sc) { // Failure only happens on level 1
+		//		ARR_FIND(SC_SPHERE_1, SC_SPHERE_4 + 1, i, !sc->data[i]);
 
-				if (i == SC_SPHERE_4 + 1) { // No more free slots
-					clif_skill_fail(sd, skill_id, USESKILL_FAIL_SUMMON, 0);
-					return false;
-				}
-			}
-			break;
+		//		if (i == SC_SPHERE_4 + 1) { // No more free slots
+		//			clif_skill_fail(sd, skill_id, USESKILL_FAIL_SUMMON, 0);
+		//			return false;
+		//		}
+		//	}
+		//	break;
 		case WL_TETRAVORTEX: // bugreport:7598 moved sphere check to precast to avoid triggering cooldown per official behavior -helvetica
 		case WL_RELEASE: {
 				int active_spheres = 0, req_spheres = 0;
@@ -19436,6 +19499,66 @@ int skill_plant_cultivation(struct map_session_data *sd, t_itemid nameid, int sk
 
 	return 0;
 }
+
+int skill_summon_elemental_sphere(struct map_session_data *sd, t_itemid nameid, int skill_id) {
+	status_change *sc = status_get_sc(&sd->bl);
+	int skill_lv = pc_checkskill(sd, skill_id);
+	e_wl_spheres element;
+	int i = 0;
+
+	switch (nameid) {
+		case 1:
+			element = WLS_STONE;
+			break;
+		case 2:
+			element = WLS_WIND;
+			break;
+		case 3:
+			element = WLS_WATER;
+			break;
+		case 4:
+			element = WLS_FIRE;
+			break;
+	}
+
+	if (nameid != 5) {
+		sc_type sphere = SC_NONE;
+		for (i = SC_SPHERE_1; i <= SC_SPHERE_4; i++) {
+			if (sc->data[i] == nullptr) {
+				sphere = static_cast<sc_type>(i); // Take the free SC
+				break;
+			}
+		}
+
+		if (sphere == SC_NONE) {
+			if (sd) // No free slots to put SC
+				clif_skill_fail(sd, skill_id, USESKILL_FAIL_SUMMON, 0);
+			return 0;
+		}
+
+		sc_start2(&sd->bl, &sd->bl, sphere, 100, element, skill_lv, skill_get_time(skill_id, skill_lv));
+	} else {
+			if (sc->data[SC_SPHERE_1] == nullptr &&
+				sc->data[SC_SPHERE_2] == nullptr &&
+				sc->data[SC_SPHERE_3] == nullptr &&
+				sc->data[SC_SPHERE_4] == nullptr
+			) {
+				sc_start2(&sd->bl, &sd->bl, SC_SPHERE_1, 100, WLS_STONE, skill_lv, skill_get_time(skill_id, skill_lv));
+				sc_start2(&sd->bl, &sd->bl, SC_SPHERE_2, 100, WLS_WIND, skill_lv, skill_get_time(skill_id, skill_lv));
+				sc_start2(&sd->bl, &sd->bl, SC_SPHERE_3, 100, WLS_WATER, skill_lv, skill_get_time(skill_id, skill_lv));
+				sc_start2(&sd->bl, &sd->bl, SC_SPHERE_4, 100, WLS_FIRE, skill_lv, skill_get_time(skill_id, skill_lv));
+			}else{
+				if (sd) // No free slots to put SC
+					clif_skill_fail(sd, skill_id, USESKILL_FAIL_SUMMON, 0);
+				return 0;
+			}
+
+
+	}
+	clif_skill_nodamage(&sd->bl, &sd->bl, skill_id, 0, 0);
+	return 0;
+}
+
 
 int skill_magicdecoy(struct map_session_data *sd, t_itemid nameid, int skill_id) {
 	int x, y, i, class_, skill;

@@ -9666,3 +9666,28 @@ Body:
     Weight: 20
     Flags:
       BuyingStore: true
+  - Id: 1
+    AegisName: Earth_Elemental_Sphere
+    Name: Earth Elemental Sphere
+    Type: Etc
+    Weight: 1
+  - Id: 2
+    AegisName: Wind_Elemental_Sphere
+    Name: Wind Elemental Sphere
+    Type: Etc
+    Weight: 1
+  - Id: 3
+    AegisName: Water_Elemental_Sphere
+    Name: Water Elemental Sphere
+    Type: Etc
+    Weight: 1
+  - Id: 4
+    AegisName: Fire_Elemental_Sphere
+    Name: Fire Elemental Sphere
+    Type: Etc
+    Weight: 1
+  - Id: 5
+    AegisName: All_Elemental_Sphere
+    Name: All Elemental Spheres
+    Type: Etc
+    Weight: 1

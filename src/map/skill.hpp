@@ -2420,6 +2420,7 @@ bool skill_check_camouflage(struct block_list *bl, struct status_change_entry *s
  **/
 int skill_magicdecoy(struct map_session_data *sd, t_itemid nameid, int skill_id);
 
+int skill_summon_elemental_sphere(struct map_session_data *sd, t_itemid nameid, int skill_id);
 
 int skill_plant_cultivation(struct map_session_data *sd, t_itemid nameid, int skill_id);
 /**
