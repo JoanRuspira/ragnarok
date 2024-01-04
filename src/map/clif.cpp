@@ -6091,19 +6091,37 @@ void clif_skill_produce_mix_list( struct map_session_data *sd, int skill_id, int
 			clif_add_item_to_produce_list(p, 1410, count);	
 		}
 	}
-	// for( int i = 0; i < MAX_SKILL_PRODUCE_DB; i++ ){
-	// 	if (skill_can_produce_mix(sd,skill_produce_db[i].nameid, trigger, 1, skill_produce_db[i].req_skill) 
-	// 		&& ((BS_AXE <= 0 || (BS_AXE > 0 && skill_produce_db[i].req_skill == BS_AXE))
-	// 			|| (AM_PHARMACY <= 0 || (AM_PHARMACY > 0 && skill_produce_db[i].req_skill == AM_PHARMACY)))
-	// 		)
-	// 	{
-	// 		p->items[count].itemId = client_nameid( skill_produce_db[i].nameid );
-	// 		p->items[count].material[0] = 0;
-	// 		p->items[count].material[1] = 0;
-	// 		p->items[count].material[2] = 0;
-	// 		count++;
-	// 	}
-	// }
+
+	if ((AM_PHARMACY > 0 )) {
+		if(pc_search_inventory(sd, ITEMID_POTION_GUIDE) >= 0) {
+			clif_add_item_to_produce_list(p, 501, count);
+			clif_add_item_to_produce_list(p, 502, count);
+			clif_add_item_to_produce_list(p, 503, count);
+			clif_add_item_to_produce_list(p, 504, count);
+			clif_add_item_to_produce_list(p, 505, count);
+			clif_add_item_to_produce_list(p, 506, count);	
+		}
+		if(pc_search_inventory(sd, ITEMID_SLIM_POTION_GUIDE) >= 0) {
+			clif_add_item_to_produce_list(p, 545, count);
+			clif_add_item_to_produce_list(p, 6, count);
+			clif_add_item_to_produce_list(p, 546, count);
+			clif_add_item_to_produce_list(p, 547, count);
+			clif_add_item_to_produce_list(p, 7, count);
+		}
+		if(pc_search_inventory(sd, ITEMID_FIRE_BOTTLE_GUIDE) >= 0) {
+			clif_add_item_to_produce_list(p, 7135, count);
+		}
+		if(pc_search_inventory(sd, ITEMID_ACID_BOTTLE_GUIDE) >= 0) {
+			clif_add_item_to_produce_list(p, 7136, count);
+		}
+		if(pc_search_inventory(sd, ITEMID_PLANT_BOTTLE_GUIDE) >= 0) {
+			clif_add_item_to_produce_list(p, 7137, count);
+		}
+		if(pc_search_inventory(sd, ITEMID_ALCOHOL_GUIDE) >= 0) {
+			clif_add_item_to_produce_list(p, 970, count);
+		}
+	}
+
 
 	p->packetLength = sizeof( struct PACKET_ZC_MAKABLEITEMLIST ) + count * sizeof( struct PACKET_ZC_MAKABLEITEMLIST_sub );
 	WFIFOSET( fd, p->packetLength );
@@ -12913,7 +12931,7 @@ void clif_parse_ProduceMix(int fd,struct map_session_data *sd){
 	}
 
 	int produce_idx;
-	if( (produce_idx = skill_can_produce_mix(sd,p->itemId,sd->menuskill_val, 1, BS_AXE)) ) {
+	if( (produce_idx = skill_can_produce_mix(sd,p->itemId,sd->menuskill_val, 1, sd->menuskill_id)) ) {
 		skill_produce_mix(sd,0,p->itemId,p->material[0],p->material[1],p->material[2],1,produce_idx-1);
 	}
 	clif_menuskill_clear(sd);

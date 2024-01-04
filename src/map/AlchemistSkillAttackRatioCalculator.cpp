@@ -33,18 +33,44 @@ int AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_
 			break;
 		case AM_ACIDTERROR:
 			calculate_acid_terror_special_effects(target);
-			return calculate_acid_terror_attack_ratio(skill_lv);
+			return calculate_acid_terror_attack_ratio(skill_lv, sstatus->dex);
 			break;
 		case GN_SPORE_EXPLOSION:
-			return calculate_bomb_attack_ratio(skill_lv);
+			return calculate_bomb_attack_ratio(skill_lv, sstatus->dex);
 			break;
 		case GN_WALLOFTHORN:
 			return calculate_wild_thorns_attack_ratio(skill_lv, sstatus->int_);
+			break;
+		case GN_DEMONIC_FIRE:
+			return calculate_incendiary_bomb_atk_ratio(skill_lv, sstatus->int_);
 			break;
 		default:
 			return 0;
 			break;
 	}
+}
+
+int AlchemistSkillAttackRatioCalculator::calculate_incendiary_bomb_atk_ratio(int skill_lv, int intelligence)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 0;
+			break;
+		case 2:
+			ratio = 25;
+			break;
+		case 3:
+			ratio = 50;
+			break;
+		case 4:
+			ratio = 75;
+			break;
+		case 5:
+			ratio = 100;
+			break;
+	}
+	return ratio + intelligence;
 }
 
 int AlchemistSkillAttackRatioCalculator::calculate_wild_thorns_attack_ratio(int skill_lv, int intelligence)
@@ -70,30 +96,7 @@ int AlchemistSkillAttackRatioCalculator::calculate_wild_thorns_attack_ratio(int 
 	return ratio + (intelligence);
 }
 
-int AlchemistSkillAttackRatioCalculator::calculate_bomb_attack_ratio(int skill_lv)
-{
-	int ratio = 0;
-	switch (skill_lv) {
-		case 1:
-			ratio = 150;
-			break;
-		case 2:
-			ratio = 250;
-			break;
-		case 3:
-			ratio = 350;
-			break;
-		case 4:
-			ratio = 450;
-			break;
-		case 5:
-			ratio = 550;
-			break;
-		}
-	return ratio;
-}
-
-int AlchemistSkillAttackRatioCalculator::calculate_acid_terror_attack_ratio(int skill_lv)
+int AlchemistSkillAttackRatioCalculator::calculate_bomb_attack_ratio(int skill_lv, int dex)
 {
 	int ratio = 0;
 	switch (skill_lv) {
@@ -113,7 +116,30 @@ int AlchemistSkillAttackRatioCalculator::calculate_acid_terror_attack_ratio(int 
 			ratio = 650;
 			break;
 		}
-	return ratio;
+	return ratio + dex;
+}
+
+int AlchemistSkillAttackRatioCalculator::calculate_acid_terror_attack_ratio(int skill_lv, int dex)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 250;
+			break;
+		case 2:
+			ratio = 350;
+			break;
+		case 3:
+			ratio = 450;
+			break;
+		case 4:
+			ratio = 550;
+			break;
+		case 5:
+			ratio = 650;
+			break;
+		}
+	return ratio + dex;
 }
 
 
@@ -211,5 +237,5 @@ void AlchemistSkillAttackRatioCalculator::calculate_beholder_2_special_effects(s
 void AlchemistSkillAttackRatioCalculator::calculate_acid_terror_special_effects(struct block_list *target)
 {
     clif_specialeffect(target, EF_GREENBODY, AREA);
-    clif_specialeffect(target, EF_BEGINSPELL_N4, AREA);
+    clif_specialeffect(target, EF_M07, AREA);
 }

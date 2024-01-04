@@ -7365,15 +7365,11 @@ Body:
     Name: AM_DEMONSTRATION
     Description: Bomb
     MaxLevel: 5
-    Type: Weapon
+    Type: Magic
     TargetType: Ground
     SplashArea: 3
-    DamageFlags:
-      NoDamage: true
-      IgnoreAtkCard: true
     Flags:
       IgnoreAutoGuard: true
-      IgnoreCicada: true
     Range: 9
     Hit: Single
     HitCount: 1
@@ -7420,8 +7416,8 @@ Body:
       Skill:
         Plagiarism: true
         Reproduce: true
+    CastTime: 500
     CastCancel: true
-    CastTime: 0
     Cooldown: 5000
     AfterCastActDelay: 400
     Duration1: 1
@@ -13391,37 +13387,18 @@ Body:
   - Id: 490
     Name: CR_ACIDDEMONSTRATION
     Description: Acid Demonstration
-    MaxLevel: 10
+    MaxLevel: 5
     Type: Misc
     TargetType: Attack
     DamageFlags:
       IgnoreFlee: true
     Range: 9
     Hit: Multi_Hit
-    HitCount:
-      - Level: 1
-        Count: 1
-      - Level: 2
-        Count: 2
-      - Level: 3
-        Count: 3
-      - Level: 4
-        Count: 4
-      - Level: 5
-        Count: 5
-      - Level: 6
-        Count: 6
-      - Level: 7
-        Count: 7
-      - Level: 8
-        Count: 8
-      - Level: 9
-        Count: 9
-      - Level: 10
-        Count: 10
+    HitCount: 5
     CastCancel: true
-    CastTime: 1000
-    AfterCastActDelay: 1000
+    CastTime: 500
+    Cooldown: 7000
+    AfterCastActDelay: 400
     Requires:
       SpCost: 30
       ItemCost:
@@ -25181,17 +25158,16 @@ Body:
     Type: Weapon
     TargetType: Attack
     DamageFlags:
-      Splash: true
+      Splash: false
     Range: 9
     Hit: Multi_Hit
     HitCount: -2
-    SplashArea: 3
     Element: Neutral
     CopyFlags:
       Skill:
         Reproduce: true
+    CastTime: 500
     CastCancel: true
-    CastTime: 1000
     AfterCastActDelay: 400
     Cooldown: 7000
     Requires:
@@ -25347,56 +25323,25 @@ Body:
     Element: Fire
     ActiveInstance: 1
     CastCancel: true
-    CastTime:
-      - Level: 1
-        Time: 3000
-      - Level: 2
-        Time: 3500
-      - Level: 3
-        Time: 4000
-      - Level: 4
-        Time: 4500
-      - Level: 5
-        Time: 5000
-    AfterCastActDelay: 500
+    CastTime: 500
+    AfterCastActDelay: 1000
     Duration1:
       - Level: 1
-        Time: 10000
+        Time: 2000
       - Level: 2
-        Time: 12000
+        Time: 4000
       - Level: 3
-        Time: 14000
+        Time: 6000
       - Level: 4
-        Time: 16000
-      - Level: 5
-        Time: 18000
-    Duration2:
-      - Level: 1
         Time: 8000
-      - Level: 2
-        Time: 16000
-      - Level: 3
-        Time: 24000
-      - Level: 4
-        Time: 32000
       - Level: 5
-        Time: 40000
-    Cooldown: 5000
+        Time: 10000
+    Cooldown: 7000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 24
-        - Level: 2
-          Amount: 28
-        - Level: 3
-          Amount: 32
-        - Level: 4
-          Amount: 36
-        - Level: 5
-          Amount: 40
+      SpCost: 40
       ItemCost:
         - Item: Fire_Bottle
-          Amount: 1
+          Amount: 2
     Unit:
       Id: Demonic_Fire
       Range: 2

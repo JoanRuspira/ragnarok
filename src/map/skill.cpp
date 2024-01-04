@@ -1919,7 +1919,9 @@ int64 skill_attack (int attack_type, struct block_list* src, struct block_list *
 	 //Trick Dead protects you from damage, but not from buffs and the like, hence it's placed here.
 	if (tsc && tsc->data[SC_TRICKDEAD])
 		return 0;
-
+	
+	if (skill_id == AM_DEMONSTRATION || skill_id == GN_DEMONIC_FIRE)
+		attack_type = BF_MAGIC;
 	dmg = battle_calc_attack(attack_type,src,bl,skill_id,skill_lv,flag&0xFFF);
 
 	//If the damage source is a unit, the damage is not delayed
@@ -14005,7 +14007,6 @@ int skill_unit_onplace_timer(struct skill_unit *unit, struct block_list *bl, t_t
 			switch( sg->val2 ) {
 				case 1:
 				default:
-					sc_start4(ss, bl, SC_BURNING, 4 + 4 * sg->skill_lv, sg->skill_lv, 1000, ss->id, 0, skill_get_time2(sg->skill_id, sg->skill_lv));
 					skill_attack(skill_get_type(skill_id), ss, &unit->bl, bl, sg->skill_id, sg->skill_lv + 10 * sg->val2, tick, 0);
 					break;
 			}
@@ -18661,7 +18662,6 @@ void skill_unit_move_unit_group(struct skill_unit_group *group, int16 m, int16 d
 short skill_can_produce_mix(struct map_session_data *sd, t_itemid nameid, int trigger, int qty, short req_skill)
 {
 	short i, j;
-
 	nullpo_ret(sd);
 	if (!nameid || !itemdb_exists(nameid))
 		return 0;
@@ -18703,18 +18703,8 @@ short skill_can_produce_mix(struct map_session_data *sd, t_itemid nameid, int tr
 		//if (pc_search_inventory(sd, ITEMID_BASIC_FORGING_MANUAL) < 0)
 		//	return 0;
 	}
-
 	if (req_skill == AM_PHARMACY) {
 		if (pc_search_inventory(sd, ITEMID_MEDICINE_BOWL) < 0)
-			return 0;
-		
-		if (pc_search_inventory(sd, ITEMID_POTION_GUIDE) < 0 &&
-			pc_search_inventory(sd, ITEMID_SLIM_POTION_GUIDE) < 0 &&
-			pc_search_inventory(sd, ITEMID_PLANT_BOTTLE_GUIDE) < 0 &&
-			pc_search_inventory(sd, ITEMID_ACID_BOTTLE_GUIDE) < 0 &&
-			pc_search_inventory(sd, ITEMID_FIRE_BOTTLE_GUIDE) < 0 &&
-			pc_search_inventory(sd, ITEMID_ALCOHOL_GUIDE) < 0 &&
-			pc_search_inventory(sd, ITEMID_ELEMENTAL_POTION_GUIDE) < 0)
 			return 0;
 	}
 
@@ -18773,6 +18763,7 @@ short skill_can_produce_mix(struct map_session_data *sd, t_itemid nameid, int tr
  */
 bool skill_produce_mix(struct map_session_data *sd, uint16 skill_id, t_itemid nameid, int slot1, int slot2, int slot3, int qty, short produce_idx)
 {
+	ShowMessage("Prod 1/n");
 	int slot[3];
 	int i, j, sc, ele, idx, equip, wlv, make_per = 0, flag = 0, skill_lv = 0;
 	int num = -1; // exclude the recipe
