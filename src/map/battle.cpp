@@ -1305,16 +1305,6 @@ bool battle_status_block_damage(struct block_list *src, struct block_list *targe
 			return false;
 		}
 	}
-
-// 	if (sc->data[SC_NEUTRALBARRIER] && ((flag&(BF_LONG|BF_MAGIC)) == BF_LONG
-// #ifndef RENEWAL
-// 		|| skill_id == CR_ACIDDEMONSTRATION
-// #endif
-// 		)) {
-// 		d->dmg_lv = ATK_MISS;
-// 		return false;
-// 	}
-
 	// ATK_DEF Type
 	if ((sce = sc->data[SC_LIGHTNINGWALK]) && flag&BF_LONG && rnd() % 100 < sce->val1) {
 		const int dx[8] = { 0,-1,-1,-1,0,1,1,1 };
@@ -2942,7 +2932,8 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case HFLI_SBR44:
 		case AM_ACIDTERROR:
 		case GN_SPORE_EXPLOSION:
-			skillratio += AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
+		case CR_ACIDDEMONSTRATION:
+			skillratio += AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, tstatus);
 			break;
 		case MO_INVESTIGATE:
 		case MO_FINGEROFFENSIVE:
@@ -3040,13 +3031,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 				skillratio += skillratio * 50 / 100;
 			break;
 		case GN_FIRE_EXPANSION_ACID:
-#ifdef RENEWAL
-		case CR_ACIDDEMONSTRATION:
-			skillratio += -100 + 200 * skill_lv + sstatus->int_ + tstatus->vit; // !TODO: Confirm status bonus
-			if (target->type == BL_PC)
-				skillratio /= 2;
-			break;
-#endif
 		case TK_DOWNKICK:
 		case TK_STORMKICK:
 			skillratio += 60 + 20 * skill_lv;
@@ -3835,9 +3819,9 @@ static void battle_calc_defense_reduction(struct Damage* wd, struct block_list *
 				def2 -= (target_count - (battle_config.vit_penalty_count - 1))*battle_config.vit_penalty_num;
 			}
 		}
-		if (skill_id == AM_ACIDTERROR)
-			def2 = 0; //Ignore only status defense. [FatalEror]
-			def1 = 0; //Ignores only armor defense. [Skotlex]
+		// if (skill_id == AM_ACIDTERROR)
+		// 	def2 = 0; //Ignore only status defense. [FatalEror]
+		// 	def1 = 0; //Ignores only armor defense. [Skotlex]
 
 		if(def2 < 1)
 			def2 = 1;
@@ -4925,7 +4909,7 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case GN_WALLOFTHORN:
 					case AM_DEMONSTRATION:
 					case GN_DEMONIC_FIRE:
-						skillratio += AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
+						skillratio += AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, tstatus);
 						break;
 					case MG_FIREBALL:
 						skillratio += 40 + 20 * skill_lv;
@@ -5438,15 +5422,6 @@ struct Damage battle_calc_misc_attack(struct block_list *src,struct block_list *
 		case HW_GRAVITATION:
 			md.damage = 200 + 200 * skill_lv;
 			md.dmotion = 0; //No flinch animation
-			break;
-#endif
-#ifndef RENEWAL
-		case CR_ACIDDEMONSTRATION:
-			if(tstatus->vit+sstatus->int_) //crash fix
-				md.damage = (int)((int64)7*tstatus->vit*sstatus->int_*sstatus->int_ / (10*(tstatus->vit+sstatus->int_)));
-			else
-				md.damage = 0;
-			if (tsd) md.damage>>=1;
 			break;
 #endif
 

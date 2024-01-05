@@ -2167,9 +2167,6 @@ int64 skill_attack (int attack_type, struct block_list* src, struct block_list *
 		case SU_SV_ROOTTWIST_ATK:
 			dmg.dmotion = clif_skill_damage(src,bl,tick,dmg.amotion,dmg.dmotion,damage,dmg.div_,skill_id,-1,DMG_SPLASH);
 			break;
-		case GN_FIRE_EXPANSION_ACID:
-			dmg.dmotion = clif_skill_damage(dsrc, bl, tick, dmg.amotion, dmg.dmotion, damage, dmg.div_, CR_ACIDDEMONSTRATION, skill_lv, DMG_MULTI_HIT);
-			break;
 		case GN_SLINGITEM_RANGEMELEEATK:
 			dmg.dmotion = clif_skill_damage(src,bl,tick,dmg.amotion,dmg.dmotion,damage,dmg.div_,GN_SLINGITEM,-2,DMG_SINGLE);
 			break;
@@ -2543,7 +2540,7 @@ static int skill_check_unit_range2_sub (struct block_list *bl, va_list ap)
 		return 0;
 #endif
 
-	if( skill_id == AM_DEMONSTRATION  )
+	if( skill_id == AM_DEMONSTRATION || skill_id == GN_DEMONIC_FIRE )
 		return 0; //Allow casting Bomb/Demonstration Right under things
 	return 1;
 }
@@ -3338,6 +3335,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case TF_SPRINKLESAND:
 	case RG_INTIMIDATE:
 	case AM_ACIDTERROR:
+	case CR_ACIDDEMONSTRATION:
 	case BA_MUSICALSTRIKE:
 	case DC_THROWARROW:
 	case BA_DISSONANCE:
@@ -3372,9 +3370,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case NPC_PETRIFYATTACK:
 	case NPC_CURSEATTACK:
 	case NPC_SLEEPATTACK:
-#ifdef RENEWAL
-	case CR_ACIDDEMONSTRATION:
-#endif
 	case LK_AURABLADE:
 	case LK_SPIRALPIERCE:
 	case ML_SPIRALPIERCE:
@@ -4157,9 +4152,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 		if (rnd() % 2 == 0)
 			break; // 50% chance
 	case SN_FALCONASSAULT:
-#ifndef RENEWAL
-	case CR_ACIDDEMONSTRATION:
-#endif
 	case TF_THROWSTONE:
 	case NPC_SMOKING:
 	case GS_FLING:
@@ -12190,58 +12182,6 @@ int skill_castend_pos2(struct block_list* src, int x, int y, uint16 skill_id, ui
 			}
 		}
 		break;
-	case GN_FIRE_EXPANSION: {
-		int i_su;
-		struct unit_data *ud = unit_bl2ud(src);
-
-		if( !ud ) break;
-
-		for(i_su = 0; i_su < MAX_SKILLUNITGROUP && ud->skillunit[i_su]; i_su++) {
-			struct skill_unit *su = ud->skillunit[i_su]->unit;
-			struct skill_unit_group *sg = ud->skillunit[i_su]->unit->group;
-
-			if (ud->skillunit[i_su]->skill_id == GN_DEMONIC_FIRE && distance_xy(x, y, su->bl.x, su->bl.y) < 4) {
-				switch (skill_lv) {
-					case 1: {
-							// TODO:
-							int duration = (int)(sg->limit - DIFF_TICK(tick, sg->tick));
-
-							skill_delunit(su);
-							skill_unitsetting(src, GN_DEMONIC_FIRE, 1, x, y, duration);
-							flag |= 1;
-						}
-						break;
-					case 2:
-						map_foreachinallarea(skill_area_sub, src->m, su->bl.x - 2, su->bl.y - 2, su->bl.x + 2, su->bl.y + 2, BL_CHAR, src, GN_DEMONIC_FIRE, skill_lv + 20, tick, flag|BCT_ENEMY|SD_LEVEL|1, skill_castend_damage_id);
-						if (su != NULL)
-							skill_delunit(su);
-						break;
-					case 3:
-						skill_delunit(su);
-						skill_unitsetting(src, GN_FIRE_EXPANSION_SMOKE_POWDER, 1, x, y, 0);
-						flag |= 1;
-						break;
-					case 4:
-						skill_delunit(su);
-						skill_unitsetting(src, GN_FIRE_EXPANSION_TEAR_GAS, 1, x, y, 0);
-						flag |= 1;
-						break;
-					case 5: {
-							uint16 acid_lv = 5; // Cast at Acid Demonstration at level 5 unless the user has a higher level learned.
-
-							if (sd && pc_checkskill(sd, CR_ACIDDEMONSTRATION) > 5)
-								acid_lv = pc_checkskill(sd, CR_ACIDDEMONSTRATION);
-							map_foreachinallarea(skill_area_sub, src->m, su->bl.x - 2, su->bl.y - 2, su->bl.x + 2, su->bl.y + 2, BL_CHAR, src, GN_FIRE_EXPANSION_ACID, acid_lv, tick, flag|BCT_ENEMY|SD_LEVEL|1, skill_castend_damage_id);
-							if (su != NULL)
-								skill_delunit(su);
-						}
-						break;
-					}
-				}
-			}
-		}
-		break;
-
 	case SO_FIREWALK:
 	case SO_ELECTRICWALK:
 	case NPC_FIREWALK:

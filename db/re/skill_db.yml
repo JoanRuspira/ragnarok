@@ -13388,13 +13388,12 @@ Body:
     Name: CR_ACIDDEMONSTRATION
     Description: Acid Demonstration
     MaxLevel: 5
-    Type: Misc
+    Type: Weapon
+    Element: Neutral
     TargetType: Attack
-    DamageFlags:
-      IgnoreFlee: true
     Range: 9
     Hit: Multi_Hit
-    HitCount: 5
+    HitCount: -5
     CastCancel: true
     CastTime: 500
     Cooldown: 7000
@@ -25169,7 +25168,7 @@ Body:
     CastTime: 500
     CastCancel: true
     AfterCastActDelay: 400
-    Cooldown: 7000
+    Cooldown: 5000
     Requires:
       SpCost: 25
       ItemCost:

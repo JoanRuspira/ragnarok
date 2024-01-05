@@ -7,7 +7,7 @@
  * @param skill_lv : skill level
  * @param int_ : player's int
  */
-int AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv, struct status_data* sstatus)
+int AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv, struct status_data* sstatus, struct status_data* tstatus)
 {
 	switch (skill_id) {
 		case HM_BASILISK_1:
@@ -44,11 +44,38 @@ int AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_
 		case GN_DEMONIC_FIRE:
 			return calculate_incendiary_bomb_atk_ratio(skill_lv, sstatus->int_);
 			break;
+		case CR_ACIDDEMONSTRATION:
+		 	clif_specialeffect(target, EF_M03, AREA);
+			return calculate_acid_bomb_atk_ratio(skill_lv, sstatus->int_, sstatus->dex, tstatus->vit);
+			break;
 		default:
 			return 0;
 			break;
 	}
 }
+int AlchemistSkillAttackRatioCalculator::calculate_acid_bomb_atk_ratio(int skill_lv, int intelligence, int dex, int vit)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 350;
+			break;
+		case 2:
+			ratio = 450;
+			break;
+		case 3:
+			ratio = 550;
+			break;
+		case 4:
+			ratio = 650;
+			break;
+		case 5:
+			ratio = 750;
+			break;
+	}
+	return ratio + intelligence + dex;
+}
+
 
 int AlchemistSkillAttackRatioCalculator::calculate_incendiary_bomb_atk_ratio(int skill_lv, int intelligence)
 {
