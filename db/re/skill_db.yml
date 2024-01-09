@@ -7444,22 +7444,21 @@ Body:
     MaxLevel: 5
     Type: Magic
     TargetType: Ground
-    SplashArea: 3
-    Flags:
-      IgnoreAutoGuard: true
     Range: 9
     Hit: Single
     HitCount: 1
     Element: Fire
+    CastCancel: true
+    CastTime: 1000
+    Cooldown: 10000
+    AfterCastActDelay: 1000
+    Duration1: 20000
+    Hit: Single
+    HitCount: 1
     CopyFlags:
       Skill:
         Plagiarism: true
-        Reproduce: true
-    CastCancel: true
-    CastTime: 1000
-    Cooldown: 5000
-    AfterCastActDelay: 1000
-    Duration1: 20000
+        Reproduce: true 
     Requires:
       SpCost: 15
       ItemCost:

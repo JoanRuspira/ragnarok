@@ -2037,7 +2037,6 @@ static int battle_range_type(struct block_list *src, struct block_list *target, 
 	switch (skill_id) {
 		case AC_SHOWER:
 		case HT_PHANTASMIC:
-		case AM_DEMONSTRATION:
 			// When monsters use Arrow Shower or Bomb, it is always short range
 			if (src->type == BL_MOB)
 				return BF_SHORT;

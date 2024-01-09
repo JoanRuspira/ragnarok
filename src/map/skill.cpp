@@ -3775,6 +3775,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case GN_CART_TORNADO:
 	case GN_CARTCANNON:
 	case GN_SPORE_EXPLOSION:
+	case AM_DEMONSTRATION:
 	case GN_DEMONIC_FIRE:
 	case GN_FIRE_EXPANSION_ACID:
 	case GN_HELLS_PLANT_ATK:
@@ -11662,7 +11663,6 @@ int skill_castend_pos2(struct block_list* src, int x, int y, uint16 skill_id, ui
 	case HT_BLASTMINE:
 	case HT_CLAYMORETRAP:
 	case AS_VENOMDUST:
-	case AM_DEMONSTRATION:
 	case PF_FOGWALL:
 	case PF_SPIDERWEB:
 	case HT_TALKIEBOX:
@@ -11721,6 +11721,7 @@ int skill_castend_pos2(struct block_list* src, int x, int y, uint16 skill_id, ui
 		flag|=1;//Set flag to 1 to prevent deleting ammo (it will be deleted on group-delete).
 	case GS_GROUNDDRIFT: //Ammo should be deleted right away.
 	case GN_WALLOFTHORN:
+	case AM_DEMONSTRATION:
 	case GN_DEMONIC_FIRE:
 		skill_unitsetting(src,skill_id,skill_lv,x,y,0);
 		break;
@@ -12647,7 +12648,6 @@ struct skill_unit_group *skill_unitsetting(struct block_list *src, uint16 skill_
 		val1=skill_lv+2;
 		break;
 	case WZ_QUAGMIRE:	//The target changes to "all" if used in a gvg map. [Skotlex]
-	case AM_DEMONSTRATION:
 		if (battle_config.vs_traps_bctall && (src->type&battle_config.vs_traps_bctall) && map_flag_vs(src->m))
 			target = BCT_ALL;
 		break;
@@ -12885,6 +12885,7 @@ struct skill_unit_group *skill_unitsetting(struct block_list *src, uint16 skill_
 			limit = skill_lv * 3000;
 		val3 = (x<<16)|y;
 		break;
+	case AM_DEMONSTRATION:
 	case GN_DEMONIC_FIRE:
 		if (flag) { // Fire Expansion level 1
 			limit = flag + 10000;
@@ -13804,9 +13805,8 @@ int skill_unit_onplace_timer(struct skill_unit *unit, struct block_list *bl, t_t
 			break;
 
 		case UNT_TATAMIGAESHI:
-		// case UNT_DEMONSTRATION:
-		// 	skill_attack(BF_WEAPON,ss,&unit->bl,bl,sg->skill_id,sg->skill_lv,tick,0);
-		// 	break;
+			skill_attack(BF_WEAPON,ss,&unit->bl,bl,sg->skill_id,sg->skill_lv,tick,0);
+			break;
 
 		case UNT_GOSPEL:
 			// if (rnd() % 100 >= 50 + sg->skill_lv * 5 || ss == bl)
@@ -18053,11 +18053,9 @@ int skill_unit_timer_sub_onplace(struct block_list* bl, va_list ap)
 	struct skill_unit* unit = va_arg(ap,struct skill_unit *);
 	struct skill_unit_group* group = NULL;
 	t_tick tick = va_arg(ap,t_tick);
-	ShowMessage("check2\n");
 	nullpo_ret(unit);
 
 	if( !unit->alive || bl->prev == NULL ){
-		ShowMessage("check21\n");
 		return 0;		
 
 	}
@@ -18067,12 +18065,10 @@ int skill_unit_timer_sub_onplace(struct block_list* bl, va_list ap)
 	std::shared_ptr<s_skill_db> skill = skill_db.find(group->skill_id);
 
 	if( !(skill->inf2[INF2_ISSONG] || skill->inf2[INF2_ISTRAP]) && !skill->inf2[INF2_IGNORELANDPROTECTOR] && group->skill_id != NC_NEUTRALBARRIER && (battle_config.land_protector_behavior ? map_getcell(bl->m, bl->x, bl->y, CELL_CHKLANDPROTECTOR) : map_getcell(unit->bl.m, unit->bl.x, unit->bl.y, CELL_CHKLANDPROTECTOR)) ){
-		ShowMessage("check22\n");
 		return 0; //AoE skills are ineffective. [Skotlex]
 	}
 
 	if( (battle_check_target(&unit->bl,bl,group->target_flag) <= 0) ){
-		ShowMessage("check23\n");
 		return 0;
 
 	}
@@ -18325,7 +18321,6 @@ static int skill_unit_timer_sub(DBKey key, DBData *data, va_list ap)
 
 	if( (unit->range >= 0 && group->interval != -1) )
 	{
-		ShowMessage("check31\n");
 		map_foreachinrange(skill_unit_timer_sub_onplace, bl, unit->range, group->bl_flag, bl,tick);
 
 		if(unit->range == -1) //Unit disabled, but it should not be deleted yet.
