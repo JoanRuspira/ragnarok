@@ -1445,6 +1445,7 @@
 	export_constant(SC_UNLIMIT);
 	export_constant(SC_KINGS_GRACE);
 	export_constant(SC_TELEKINESIS_INTENSE);
+	export_constant(SC_GEOGRAFIELD);
 	export_constant(SC_OFFERTORIUM);
 	export_constant(SC_FRIGG_SONG);
 	export_constant(SC_MONSTER_TRANSFORM);
@@ -3222,6 +3223,7 @@
 	export_constant(EFST_FRIGG_SONG);
 	export_constant(EFST_OFFERTORIUM);
 	export_constant(EFST_TELEKINESIS_INTENSE);
+	export_constant(EFST_GEOGRAFIELD);
 	export_constant(EFST_MOONSTAR);
 	export_constant(EFST_STRANGELIGHTS);
 	export_constant(EFST_FULL_THROTTLE);

@@ -45,14 +45,69 @@ int AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_
 			return calculate_incendiary_bomb_atk_ratio(skill_lv, sstatus->int_);
 			break;
 		case CR_ACIDDEMONSTRATION:
+			clif_specialeffect(target, EF_GREENBODY, AREA);
 		 	clif_specialeffect(target, EF_M03, AREA);
 			return calculate_acid_bomb_atk_ratio(skill_lv, sstatus->int_, sstatus->dex, tstatus->vit);
+			break;
+		case CR_GEOGRAPHER_FIELD_ATK:
+			return calculate_geografield_atk_ratio(skill_lv);
+			break;
+		case GN_CRAZYWEED_ATK:
+			return calculate_mandrake_raid_atk_ratio(skill_lv);
 			break;
 		default:
 			return 0;
 			break;
 	}
 }
+int AlchemistSkillAttackRatioCalculator::calculate_mandrake_raid_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 0;
+			break;
+		case 2:
+			ratio = 200;
+			break;
+		case 3:
+			ratio = 400;
+			break;
+		case 4:
+			ratio = 600;
+			break;
+		case 5:
+			ratio = 800;
+			break;
+	}
+	return ratio;
+}
+
+int AlchemistSkillAttackRatioCalculator::calculate_geografield_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = -50;
+			break;
+		case 2:
+			ratio = -25;
+			break;
+		case 3:
+			ratio = 0;
+			break;
+		case 4:
+			ratio = 25;
+			break;
+		case 5:
+			ratio = 50;
+			break;
+	}
+	return ratio;
+}
+
+
+
 int AlchemistSkillAttackRatioCalculator::calculate_acid_bomb_atk_ratio(int skill_lv, int intelligence, int dex, int vit)
 {
 	int ratio = 0;

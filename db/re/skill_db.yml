@@ -3366,6 +3366,83 @@ Body:
         Reproduce: true
     Requires:
       SpCost: 1
+  - Id: 896
+    Name: CR_GEOGRAPHER_FIELD
+    Description: Geographer Field
+    MaxLevel: 5
+    Type: Misc
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+      Splash: true
+    Flags:
+      IsTrap: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    SplashArea: 6
+    ActiveInstance:
+      - Level: 1
+        Max: 2
+      - Level: 2
+        Max: 3
+      - Level: 3
+        Max: 4
+      - Level: 4
+        Max: 5
+      - Level: 5
+        Max: 6
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    CastTime: 7000
+    Cooldown: 7000
+    AfterCastActDelay: 2000
+    Duration1:
+      - Level: 1
+        Time: 14000
+      - Level: 2
+        Time: 21000
+      - Level: 3
+        Time: 28000
+      - Level: 4
+        Time: 35000
+      - Level: 5
+        Time: 42000
+    Requires:
+      SpCost: 60
+      ItemCost:
+        - Item: MenEater_Plant_Bottle
+          Amount: 2
+  - Id: 897
+    Name: CR_GEOGRAPHER_FIELD_ATK
+    Description: Crazy Weed Attack
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Ground
+    DamageFlags:
+      Splash: true
+    Flags:
+      TargetTrap: true
+      IgnoreLandProtector: true
+    Hit: Single
+    HitCount: 1  
+    Element: Earth
+    SplashArea: 6
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    Duration1: 6000
+    Requires:
+      SpCost: 1
+    Unit:
+      Id: Dummyskill
+      Range: 9
+      Interval: 1000
+      Target: Enemy
+      Flag:
+        Skill: true
   - Id: 2421
     Name: WM_DEADHILLHERE
     Description: Valley of Death
@@ -7390,12 +7467,14 @@ Body:
           Amount: 1
     Unit:
       Id: Demonstration
-      Range: 1
+      Range: 2
       Interval: 2000
       Target: Enemy
       Flag:
-        NoReiteration: true
-        NoFootSet: true
+        NoOverlap: true
+        PathCheck: true
+        Skill: true
+        RemovedByFireRain: true
   - Id: 230
     Name: AM_ACIDTERROR
     Description: Acid Terror
@@ -25182,7 +25261,7 @@ Body:
     TargetType: Ground
     Range: 9
     Hit: Single
-    Element: Neutral
+    Element: Earth
     HitCount: 1
     ActiveInstance: 1
     CopyFlags:
@@ -25218,9 +25297,10 @@ Body:
   - Id: 2483
     Name: GN_CRAZYWEED
     Description: Crazy Weed
-    MaxLevel: 10
-    Type: Weapon
+    MaxLevel: 5
+    Type: Magic
     TargetType: Ground
+    Element: Earth
     DamageFlags:
       NoDamage: true
       Splash: true
@@ -25229,84 +25309,44 @@ Body:
     Range: 11
     Hit: Single
     HitCount: 1
-    SplashArea: 4
+    SplashArea: 5
     CopyFlags:
       Skill:
         Reproduce: true
     CastCancel: true
-    CastTime:
-      - Level: 1
-        Time: 3000
-      - Level: 2
-        Time: 3500
-      - Level: 3
-        Time: 4000
-      - Level: 4
-        Time: 4500
-      - Level: 5
-        Time: 5000
-      - Level: 6
-        Time: 5500
-      - Level: 7
-        Time: 6000
-      - Level: 8
-        Time: 6500
-      - Level: 9
-        Time: 7000
-      - Level: 10
-        Time: 7500
+    CastTime: 7000
     AfterCastActDelay: 500
-    Cooldown: 5000
+    Cooldown: 7000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 24
-        - Level: 2
-          Amount: 28
-        - Level: 3
-          Amount: 32
-        - Level: 4
-          Amount: 36
-        - Level: 5
-          Amount: 40
-        - Level: 6
-          Amount: 44
-        - Level: 7
-          Amount: 48
-        - Level: 8
-          Amount: 52
-        - Level: 9
-          Amount: 56
-        - Level: 10
-          Amount: 60
+      SpCost: 60
       ItemCost:
-        - Item: Seed_Of_Horny_Plant
-          Amount: 1
+        - Item: MenEater_Plant_Bottle
+          Amount: 2
   - Id: 2484
     Name: GN_CRAZYWEED_ATK
     Description: Crazy Weed Attack
-    MaxLevel: 10
-    Type: Weapon
+    MaxLevel: 5
+    Type: Magic
     TargetType: Ground
     DamageFlags:
       Splash: true
     Flags:
       TargetTrap: true
       IgnoreLandProtector: true
-    Hit: Single
-    HitCount: 1
+    Hit: Multi_Hit
+    HitCount: -5
     Element: Earth
-    SplashArea: 2
+    SplashArea: 5
     CopyFlags:
       Skill:
         Reproduce: true
-    Duration1: 100
+    Duration1: 1000
     Requires:
       SpCost: 1
     Unit:
       Id: Dummyskill
       Range: 1
-      Interval: 100
+      Interval: 1000
       Target: Enemy
       Flag:
         Skill: true

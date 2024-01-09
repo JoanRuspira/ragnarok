@@ -440,6 +440,8 @@ unsigned short skill_dummy2skill_id(unsigned short skill_id) {
 			return WM_SEVERE_RAINSTORM;
 		case GN_CRAZYWEED_ATK:
 			return GN_CRAZYWEED;
+		case CR_GEOGRAPHER_FIELD_ATK:
+			return CR_GEOGRAPHER_FIELD;
 		case GN_HELLS_PLANT_ATK:
 			return GN_HELLS_PLANT;
 		case GN_SLINGITEM_RANGEMELEEATK:
@@ -1920,7 +1922,7 @@ int64 skill_attack (int attack_type, struct block_list* src, struct block_list *
 	if (tsc && tsc->data[SC_TRICKDEAD])
 		return 0;
 	
-	if (skill_id == AM_DEMONSTRATION || skill_id == GN_DEMONIC_FIRE)
+	if (skill_id == AM_DEMONSTRATION || skill_id == GN_DEMONIC_FIRE || skill_id == GN_CRAZYWEED || skill_id == GN_CRAZYWEED_ATK)
 		attack_type = BF_MAGIC;
 	dmg = battle_calc_attack(attack_type,src,bl,skill_id,skill_lv,flag&0xFFF);
 
@@ -2958,6 +2960,7 @@ static TIMER_FUNC(skill_timerskill){
 				break;
 			switch( skl->skill_id )
 			{
+				case CR_GEOGRAPHER_FIELD_ATK:
 				case GN_CRAZYWEED_ATK:
 					{
 						int dummy = 1, i = skill_get_unit_range(skl->skill_id,skl->skill_lv);
@@ -3431,6 +3434,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case RL_SLUGSHOT:
 	case AS_SONICBLOW:
 	case BS_HAMMERFALL:
+	case GN_CRAZYWEED_ATK:
 	case RL_AM_BLAST:
 		skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag);
 		break;
@@ -5186,6 +5190,25 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	map_freeblock_lock();
 	switch(skill_id)
 	{
+	case CR_GEOGRAPHER_FIELD: {
+		clif_specialeffect(&sd->bl, EF_SPR_PLANT, AREA);
+		int area = skill_get_splash(CR_GEOGRAPHER_FIELD, skill_lv);
+		// for( i = 0; i < 3 + (skill_lv/2); i++ ) {
+			int x1 = sd->bl.x - area + rnd()%(area * 2 + 1);
+			int y1 = sd->bl.y - area + rnd()%(area * 2 + 1);
+			skill_addtimerskill(src,tick+i*150,0,x1,y1,CR_GEOGRAPHER_FIELD_ATK,skill_lv,-1,0);
+		// }
+
+		if (sd == NULL || sd->status.party_id == 0 || (flag & 1)) {
+			sc_start2(src, bl, SC_GEOGRAFIELD, 100, skill_lv, (src == bl) ? 1 : 0, 20000);
+		} else if (sd) {
+			party_foreachsamemap(skill_area_sub,
+				sd,skill_get_splash(skill_id, skill_lv),
+				src,skill_id,skill_lv,tick, flag|BCT_PARTY|1,
+				skill_castend_nodamage_id);
+		}
+	}
+	break;
 	case HLIF_HEAL:	//[orn]
 	case HAMI_HEAL:
 	case AL_HEAL:
@@ -7568,7 +7591,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 					case SC_LAUDAAGNUS:		case SC_LAUDARAMUS:		case SC_GATLINGFEVER:
 					case SC_INCREASING:		case SC_ADJUSTMENT:		case SC_MADNESSCANCEL:
 					case SC_ANGEL_PROTECT:	case SC_MONSTER_TRANSFORM:	case SC_FULL_THROTTLE:
-					case SC_REBOUND:		case SC_TELEKINESIS_INTENSE:	case SC_MOONSTAR:
+					case SC_REBOUND:		case SC_TELEKINESIS_INTENSE:	case SC_MOONSTAR: case SC_GEOGRAFIELD:
 					case SC_SUPER_STAR:		case SC_ALL_RIDING:		case SC_MTF_ASPD:
 					case SC_MTF_RANGEATK:	case SC_MTF_MATK:		case SC_MTF_MLEATKED:
 					case SC_MTF_CRIDAMAGE:	case SC_HEAT_BARREL:
@@ -9001,7 +9024,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 					case SC_INCHEALRATE:		case SC_PUSH_CART:		case SC_PARTYFLEE:
 					case SC_RAISINGDRAGON:		case SC_GT_REVITALIZE:		case SC_GT_ENERGYGAIN:
 					case SC_GT_CHANGE:		case SC_ANGEL_PROTECT:		case SC_MONSTER_TRANSFORM:
-					case SC_FULL_THROTTLE:		case SC_REBOUND:		case SC_TELEKINESIS_INTENSE:
+					case SC_FULL_THROTTLE:		case SC_REBOUND:		case SC_TELEKINESIS_INTENSE: case SC_GEOGRAFIELD:
 					case SC_MOONSTAR:		case SC_SUPER_STAR:		case SC_ALL_RIDING:
 					case SC_MTF_ASPD:		case SC_MTF_RANGEATK:		case SC_MTF_MATK:
 					case SC_MTF_MLEATKED:		case SC_MTF_CRIDAMAGE:		case SC_HEAT_BARREL:
@@ -11549,7 +11572,7 @@ int skill_castend_pos2(struct block_list* src, int x, int y, uint16 skill_id, ui
 			src, skill_id, skill_lv, tick, flag|BCT_ENEMY|1,
 			skill_castend_damage_id);
 		break;
-
+		
 	// case BS_HAMMERFALL:
 	// 	i = skill_get_splash(skill_id, skill_lv);
 	// 	map_foreachinallarea(skill_area_sub,
@@ -12174,12 +12197,14 @@ int skill_castend_pos2(struct block_list* src, int x, int y, uint16 skill_id, ui
 		break;
 
 	case GN_CRAZYWEED: {
-			int area = skill_get_splash(GN_CRAZYWEED_ATK, skill_lv);
-			for( i = 0; i < 3 + (skill_lv/2); i++ ) {
-				int x1 = x - area + rnd()%(area * 2 + 1);
-				int y1 = y - area + rnd()%(area * 2 + 1);
-				skill_addtimerskill(src,tick+i*150,0,x1,y1,GN_CRAZYWEED_ATK,skill_lv,-1,0);
-			}
+			i = skill_get_splash(GN_CRAZYWEED_ATK, skill_lv);
+			map_foreachinarea(skill_area_sub,src->m,x-i,y-i,x+i,y+i,BL_CHAR,src,GN_CRAZYWEED_ATK,skill_lv,tick,flag|BCT_ENEMY|1,skill_castend_damage_id);
+
+			// for( i = 0; i < 3 + (skill_lv/2); i++ ) {
+			// 	int x1 = x - area + rnd()%(area * 2 + 1);
+			// 	int y1 = y - area + rnd()%(area * 2 + 1);
+			// 	skill_addtimerskill(src,tick+i*150,0,x1,y1,GN_CRAZYWEED_ATK,skill_lv,-1,0);
+			// }
 		}
 		break;
 	case SO_FIREWALK:
@@ -13435,6 +13460,7 @@ static int skill_unit_onplace(struct skill_unit *unit, struct block_list *bl, t_
  */
 int skill_unit_onplace_timer(struct skill_unit *unit, struct block_list *bl, t_tick tick)
 {
+	ShowMessage("Check1\n");
 	struct skill_unit_group *sg;
 	struct block_list *ss;
 	TBL_PC* tsd;
@@ -13495,6 +13521,8 @@ int skill_unit_onplace_timer(struct skill_unit *unit, struct block_list *bl, t_t
 
 	// Wall of Thorn damaged by Fire element unit [Cydh]
 	//! TODO: This check doesn't matter the location, as long as one of units touched, this check will be executed.
+	
+
 	if (bl->type == BL_SKILL && skill_get_ele(sg->skill_id, sg->skill_lv) == ELE_FIRE) {
 		struct skill_unit *su = (struct skill_unit *)bl;
 		if (su && su->group && su->group->unit_id == UNT_WALLOFTHORN) {
@@ -13776,9 +13804,9 @@ int skill_unit_onplace_timer(struct skill_unit *unit, struct block_list *bl, t_t
 			break;
 
 		case UNT_TATAMIGAESHI:
-		case UNT_DEMONSTRATION:
-			skill_attack(BF_WEAPON,ss,&unit->bl,bl,sg->skill_id,sg->skill_lv,tick,0);
-			break;
+		// case UNT_DEMONSTRATION:
+		// 	skill_attack(BF_WEAPON,ss,&unit->bl,bl,sg->skill_id,sg->skill_lv,tick,0);
+		// 	break;
 
 		case UNT_GOSPEL:
 			// if (rnd() % 100 >= 50 + sg->skill_lv * 5 || ss == bl)
@@ -13942,7 +13970,7 @@ int skill_unit_onplace_timer(struct skill_unit *unit, struct block_list *bl, t_t
 			skill_blown(&unit->bl, bl, skill_get_blewcount(sg->skill_id, sg->skill_lv), unit_getdir(bl), BLOWN_IGNORE_NO_KNOCKBACK);
 			skill_addtimerskill(ss, tick + 100, bl->id, unit->bl.x, unit->bl.y, sg->skill_id, sg->skill_lv, skill_get_type(sg->skill_id), 4|SD_LEVEL);
 			break;
-
+		case UNT_DEMONSTRATION:
 		case UNT_DEMONIC_FIRE:
 			switch( sg->val2 ) {
 				case 1:
@@ -17069,6 +17097,7 @@ static int skill_cell_overlap(struct block_list *bl, va_list ap)
 				}
 			}
 			break;
+		case CR_GEOGRAPHER_FIELD_ATK:
 		case GN_CRAZYWEED_ATK:
 			if (skill_get_unit_flag(unit->group->skill_id, UF_CRAZYWEEDIMMUNE))
 				break;
@@ -18024,21 +18053,29 @@ int skill_unit_timer_sub_onplace(struct block_list* bl, va_list ap)
 	struct skill_unit* unit = va_arg(ap,struct skill_unit *);
 	struct skill_unit_group* group = NULL;
 	t_tick tick = va_arg(ap,t_tick);
-
+	ShowMessage("check2\n");
 	nullpo_ret(unit);
 
-	if( !unit->alive || bl->prev == NULL )
+	if( !unit->alive || bl->prev == NULL ){
+		ShowMessage("check21\n");
 		return 0;		
+
+	}
 
 	nullpo_ret(group = unit->group);
 
 	std::shared_ptr<s_skill_db> skill = skill_db.find(group->skill_id);
 
-	if( !(skill->inf2[INF2_ISSONG] || skill->inf2[INF2_ISTRAP]) && !skill->inf2[INF2_IGNORELANDPROTECTOR] && group->skill_id != NC_NEUTRALBARRIER && (battle_config.land_protector_behavior ? map_getcell(bl->m, bl->x, bl->y, CELL_CHKLANDPROTECTOR) : map_getcell(unit->bl.m, unit->bl.x, unit->bl.y, CELL_CHKLANDPROTECTOR)) )
+	if( !(skill->inf2[INF2_ISSONG] || skill->inf2[INF2_ISTRAP]) && !skill->inf2[INF2_IGNORELANDPROTECTOR] && group->skill_id != NC_NEUTRALBARRIER && (battle_config.land_protector_behavior ? map_getcell(bl->m, bl->x, bl->y, CELL_CHKLANDPROTECTOR) : map_getcell(unit->bl.m, unit->bl.x, unit->bl.y, CELL_CHKLANDPROTECTOR)) ){
+		ShowMessage("check22\n");
 		return 0; //AoE skills are ineffective. [Skotlex]
+	}
 
-	if( battle_check_target(&unit->bl,bl,group->target_flag) <= 0 )
+	if( (battle_check_target(&unit->bl,bl,group->target_flag) <= 0) ){
+		ShowMessage("check23\n");
 		return 0;
+
+	}
 
 	skill_unit_onplace_timer(unit,bl,tick);
 	return 1;
@@ -18050,6 +18087,7 @@ int skill_unit_timer_sub_onplace(struct block_list* bl, va_list ap)
  */
 static int skill_unit_timer_sub(DBKey key, DBData *data, va_list ap)
 {
+
 	struct skill_unit* unit = (struct skill_unit*)db_data2ptr(data);
 	struct skill_unit_group* group = NULL;
 	t_tick tick = va_arg(ap,t_tick);
@@ -18285,8 +18323,9 @@ static int skill_unit_timer_sub(DBKey key, DBData *data, va_list ap)
 
 	dissonance = skill_dance_switch(unit, 0);
 
-	if( unit->range >= 0 && group->interval != -1 )
+	if( (unit->range >= 0 && group->interval != -1) )
 	{
+		ShowMessage("check31\n");
 		map_foreachinrange(skill_unit_timer_sub_onplace, bl, unit->range, group->bl_flag, bl,tick);
 
 		if(unit->range == -1) //Unit disabled, but it should not be deleted yet.

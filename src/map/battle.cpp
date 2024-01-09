@@ -495,7 +495,8 @@ int64 battle_attr_fix(struct block_list *src, struct block_list *target, int64 d
 					ratio += 5;
 				if (sc->data[SC_SPHERE_4] && sc->data[SC_SPHERE_4]->val1 == WLS_STONE)
 					ratio += 5;
-
+				if (sc->data[SC_GEOGRAFIELD])
+					ratio += sc->data[SC_GEOGRAFIELD]->val1 * 10;
 				if (sc->data[SC_DELUGE])
 					ratio += sc->data[SC_DELUGE]->val3;
 				break;
@@ -518,7 +519,7 @@ int64 battle_attr_fix(struct block_list *src, struct block_list *target, int64 d
 
 	if (tsc->data[SC_ASTRALSTRIKE_DEBUFF])
 		ratio += 50;
-
+	
 	if( target && target->type == BL_SKILL ) {
 		if( atk_elem == ELE_FIRE && battle_getcurrentskill(target) == GN_WALLOFTHORN ) {
 			struct skill_unit *su = (struct skill_unit*)target;
@@ -3293,10 +3294,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 					skillratio += sd->cart_weight / 10 / (150 - min(sd->status.str,120)) + pc_checkskill(sd,GN_REMODELING_CART) * 50;
 			}
 			break;
-		case GN_CRAZYWEED_ATK:
-			skillratio += -100 + 700 + 100 * skill_lv;
-			RE_LVL_DMOD(100);
-			break;
 		case GN_SLINGITEM_RANGEMELEEATK:
 			if( sd ) {
 				switch( sd->itemid ) {
@@ -4909,6 +4906,8 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case GN_WALLOFTHORN:
 					case AM_DEMONSTRATION:
 					case GN_DEMONIC_FIRE:
+					case CR_GEOGRAPHER_FIELD_ATK:
+					case GN_CRAZYWEED_ATK:
 						skillratio += AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, tstatus);
 						break;
 					case MG_FIREBALL:

@@ -853,6 +853,7 @@ void initChangeTables(void)
 	set_sc( WL_STASIS			, SC_STASIS		, EFST_STASIS		, SCB_NONE );
 	set_sc_with_vfx( WL_COMET   , SC_MAGIC_POISON	, EFST_MAGIC_POISON	, SCB_NONE );
 	set_sc( WL_TELEKINESIS_INTENSE	, SC_TELEKINESIS_INTENSE, EFST_TELEKINESIS_INTENSE, SCB_MATK );
+	set_sc( CR_GEOGRAPHER_FIELD_ATK	, SC_GEOGRAFIELD, EFST_GEOGRAFIELD, SCB_NONE );
 
 	/* Ranger */
 	set_sc( RA_FEARBREEZE		, SC_FEARBREEZE		, EFST_FEARBREEZE		, SCB_NONE );
@@ -1619,6 +1620,7 @@ void initChangeTables(void)
 	StatusDisplayType[SC_DARKCROW]		  = BL_PC;
 	StatusDisplayType[SC_OFFERTORIUM]	  = BL_PC;
 	StatusDisplayType[SC_TELEKINESIS_INTENSE] = BL_PC;
+	StatusDisplayType[SC_GEOGRAFIELD] = BL_PC;
 	StatusDisplayType[SC_UNLIMIT]		  = BL_PC;
 	StatusDisplayType[SC_ILLUSIONDOPING]	  = BL_PC;
 	StatusDisplayType[SC_C_MARKER]		  = BL_PC;
