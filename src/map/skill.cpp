@@ -6485,7 +6485,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				&& sd->inventory_data[right_hand_index]->type == IT_WEAPON
 				&& sd->inventory_data[left_hand_index]->type == IT_WEAPON
 				){
-				clif_specialeffect(src, 25, AREA);
+				clif_specialeffect(src, 1134, AREA);
 				clif_specialeffect(src, 59, AREA);
 				clif_skill_nodamage(bl, bl, skill_id, skill_lv, sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
 			}else{
@@ -13461,7 +13461,6 @@ static int skill_unit_onplace(struct skill_unit *unit, struct block_list *bl, t_
  */
 int skill_unit_onplace_timer(struct skill_unit *unit, struct block_list *bl, t_tick tick)
 {
-	ShowMessage("Check1\n");
 	struct skill_unit_group *sg;
 	struct block_list *ss;
 	TBL_PC* tsd;
