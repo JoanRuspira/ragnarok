@@ -2507,7 +2507,7 @@ Body:
     Cooldown: 5000
     AfterCastActDelay: 100
     Requires:
-      SpCost: 35
+      SpCost: 50
       ItemCost:
         - Item: Red_Slim_Potion
           Amount: 1
@@ -13142,7 +13142,8 @@ Body:
     Hit: Single
     HitCount: 1
     CastCancel: true
-    CastTime: 2000
+    Cooldown: 2000
+    AfterCastActDelay: 1000
     Duration1:
       - Level: 1
         Time: 120000
@@ -13155,7 +13156,7 @@ Body:
       - Level: 5
         Time: 600000
     Requires:
-      SpCost: 40
+      SpCost: 60
       ItemCost:
         - Item: Coating_Bottle
           Amount: 1

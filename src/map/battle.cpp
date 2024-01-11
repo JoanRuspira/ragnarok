@@ -517,7 +517,7 @@ int64 battle_attr_fix(struct block_list *src, struct block_list *target, int64 d
 		}
 	}
 
-	if (tsc->data[SC_ASTRALSTRIKE_DEBUFF])
+	if (tsc && tsc->data[SC_ASTRALSTRIKE_DEBUFF])
 		ratio += 50;
 	
 	if( target && target->type == BL_SKILL ) {

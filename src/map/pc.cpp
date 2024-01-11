@@ -6461,7 +6461,7 @@ static void pc_checkallowskill(struct map_session_data *sd)
 		SC_OVERTHRUST,
 		SC_WEAPONPERFECTION,
 		SC_SPELLFIST,
-		SC_DOUBLECAST
+		SC_DOUBLECAST,
 	};
 	uint8 i;
 	nullpo_retv(sd);
