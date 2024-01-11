@@ -7387,6 +7387,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		break;
 	case AM_BERSERKPITCHER:
 	case AM_SLIMPITCHER:
+	case CR_SLIMPITCHER:
 	case AM_POTIONPITCHER: 
 		{
 			int healing_hp = 0, healing_sp = 0, matk = 0;
@@ -8209,47 +8210,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			status_set_sp(src, sp2, 3);
 			status_set_sp(bl, sp1, 3);
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
-		}
-		break;
-
-	// Slim Pitcher
-	case CR_SLIMPITCHER:
-		// Updated to block Slim Pitcher from working on barricades and guardian stones.
-		if (dstmd && (dstmd->mob_id == MOBID_EMPERIUM || status_get_class_(bl) == CLASS_BATTLEFIELD))
-			break;
-		if (potion_hp || potion_sp) {
-			int hp = potion_hp, sp = potion_sp;
-			hp = hp * (100 + (tstatus->vit<<1))/100;
-			sp = sp * (100 + (tstatus->int_<<1))/100;
-			if (dstsd) {
-				if (hp)
-					hp = hp * (100 + pc_checkskill(dstsd,SM_RECOVERY)*10 + pc_skillheal2_bonus(dstsd, skill_id))/100;
-				if (sp)
-					sp = sp * (100 + (pc_checkskill(dstsd,MG_SRECOVERY)*2)*10 + pc_skillheal2_bonus(dstsd, skill_id))/100;
-			}
-			if (tsc && tsc->count) {
-				uint8 penalty = 0;
-
-				if (tsc->data[SC_WATER_INSIGNIA] && tsc->data[SC_WATER_INSIGNIA]->val1 == 2) {
-					hp += hp / 10;
-					sp += sp / 10;
-				}
-				if (tsc->data[SC_CRITICALWOUND])
-					penalty += tsc->data[SC_CRITICALWOUND]->val2;
-				if (tsc->data[SC_DEATHHURT] && tsc->data[SC_DEATHHURT]->val3 == 1)
-					penalty += 20;
-				if (tsc->data[SC_NORECOVER_STATE])
-					penalty = 100;
-				if (penalty > 0) {
-					hp -= hp * penalty / 100;
-					sp -= sp * penalty / 100;
-				}
-			}
-			if(hp > 0)
-				clif_skill_nodamage(NULL,bl,AL_HEAL,hp,1);
-			if(sp > 0)
-				clif_skill_nodamage(NULL,bl,MG_SRECOVERY,sp,1);
-			status_heal(bl,hp,sp,0);
 		}
 		break;
 	// Full Chemical Protection

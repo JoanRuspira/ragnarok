@@ -13096,7 +13096,7 @@ Body:
   - Id: 478
     Name: CR_SLIMPITCHER
     Description: Aid Condensed Potion
-    MaxLevel: 10
+    MaxLevel: 5
     TargetType: Ground
     DamageFlags:
       NoDamage: true
@@ -13108,28 +13108,18 @@ Body:
     CastTime: 1000
     AfterCastActDelay: 1000
     Requires:
-      SpCost: 30
+      SpCost: 100
       ItemCost:
-        - Item: Red_Slim_Potion
-          Amount: 1
-        - Item: Red_Slim_Potion
-          Amount: 1
-        - Item: Red_Slim_Potion
-          Amount: 1
-        - Item: Red_Slim_Potion
-          Amount: 1
-        - Item: Red_Slim_Potion
-          Amount: 1
-        - Item: Yellow_Slim_Potion
-          Amount: 1
-        - Item: Yellow_Slim_Potion
-          Amount: 1
-        - Item: Yellow_Slim_Potion
-          Amount: 1
-        - Item: Yellow_Slim_Potion
-          Amount: 1
-        - Item: White_Slim_Potion
-          Amount: 1
+        - Item: Red_Potion
+          Amount: 2
+        - Item: Orange_Potion
+          Amount: 2
+        - Item: Yellow_Potion
+          Amount: 2
+        - Item: White_Potion
+          Amount: 2
+        - Item: Blue_Potion
+          Amount: 2
   - Id: 479
     Name: CR_FULLPROTECTION
     Description: Full Protection

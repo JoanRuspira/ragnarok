@@ -1142,11 +1142,6 @@ yuno_fild01,207,38,4	script	Aldebaran Adventurer#alde:npcid	429,{
 	end;
 }
 
-alde_alche,27,187,4	script	Alchemists Guildmaster#alde:npcid	750,{
-	npctalk "I will make you an alchemist.";
-	end;
-}
-
 alde_alche,33,177,3	script	Aldebaran Villager#alde:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;

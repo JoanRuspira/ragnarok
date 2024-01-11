@@ -1,0 +1,82 @@
+//===== Script =======================================
+// Alchemist Job Change
+//====================================================
+
+-	script	Alchemist Guildmaster#acmgld::AcmGld	-1,{
+	if (Class == Job_Swordman) {
+		mes "[Alchemist Guildmaster]";
+		mes "Good day! I am the Alchemist Guildmaster.";
+		mes "I train Swordsmen that meet the requirements and allow them to become Alchemists.";
+		next;
+		mes "[Alchemist Guildmaster]";
+		mes "As a Alchemist you will gain new skills.";
+		mes "The requirements are:";
+		mes "- Being a first class job.";
+		mes "- Being Job level 50.";
+		mes "- Having used all your skill points.";
+		next;
+		mes "[Alchemist Guildmaster]";
+		mes "Do you want to become a Alchemist?";
+		next;
+		switch(select("Yes:No")) {
+			case 1:
+				mes "[Alchemist Guildmaster]";
+				mes "Good! Let me see if you pass our requirements...";
+				next;
+				if (JobLevel < 50) {
+					mes "[Alchemist Guildmaster]";
+					mes "Hmm... Your job level does not meet our requirements.";
+					mes "You need to be more experienced before being a Alchemist.";
+					close;
+				}
+				if (SkillPoint) {
+					mes "[Alchemist Guildmaster]";
+					mes "Looks like you have not used all your skill points.";
+					mes "Use them and I'll be able to make you a Alchemist.";
+					close;
+				}
+				mes "[Alchemist Guildmaster]";
+				mes "Okay! Looks like you pass all of them!";
+				mes "You are allowed to join the Alchemist guild.";
+				mes "Congratulations!";
+				jobchange Job_Alchemist;
+				specialeffect2 EF_JOBLVUP50;
+				close;
+			case 2:
+				mes "[Alchemist Guildmaster]";
+				mes "Ah! Let me know if you change your mind.";
+				mes "We are always looking for new adventurers";
+				mes "to join the guild.";
+				close;
+		}
+		
+	}
+
+	if (Class == Job_Alchemist) {
+		mes "[Alchemist Guildmaster]";
+		mes "Hi fellow Alchemist!";
+		mes "Are you thinking about your next job?";
+		next;
+		mes "[Alchemist Guildmaster]";
+		mes "You can become a Creator if you reach job level 50.";
+		next;
+		mes "[Alchemist Guildmaster]";
+		mes "Go find the legendary Creator in Lightalzen.";
+		mes "I'm sure he will be able to train you.";
+		close;
+	}
+
+	if (Class == Job_Creator) {
+		mes "[Alchemist Guildmaster]";
+		mes "Ah! An experienced member of the guild!";
+		mes "Are you here to help train the new members?";
+		close;
+	}
+
+	mes "[Alchemist Guildmaster]";
+	mes "Welcome to the Alchemist guild. We accept applications from Swordsmen that meet our requirements.";
+	close;
+}
+
+alde_alche,27,187,4	duplicate(AcmGld)	Alchemist Guildmaster#acmgld	750
+

@@ -47,6 +47,7 @@ int AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_
 		case CR_ACIDDEMONSTRATION:
 			clif_specialeffect(target, EF_GREENBODY, AREA);
 		 	clif_specialeffect(target, EF_M03, AREA);
+		 	clif_specialeffect(target, EF_M01, AREA);
 			return calculate_acid_bomb_atk_ratio(skill_lv, sstatus->int_, sstatus->dex, tstatus->vit);
 			break;
 		case CR_GEOGRAPHER_FIELD_ATK:
