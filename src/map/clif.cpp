@@ -6120,6 +6120,9 @@ void clif_skill_produce_mix_list( struct map_session_data *sd, int skill_id, int
 		if(pc_search_inventory(sd, ITEMID_ALCOHOL_GUIDE) >= 0) {
 			clif_add_item_to_produce_list(p, 970, count);
 		}
+		if(pc_search_inventory(sd, ITEMID_GLISTENING_COAT_GUIDE) >= 0) {
+			clif_add_item_to_produce_list(p, 7139, count);
+		}
 	}
 
 

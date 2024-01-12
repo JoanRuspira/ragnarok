@@ -7579,9 +7579,6 @@ Body:
     Duration1: 30000
     Requires:
       SpCost: 10
-      ItemCost:
-        - Item: Mini_Bottle
-          Amount: 1
   - Id: 234
     Name: AM_CP_WEAPON
     Description: Alchemical Weapon

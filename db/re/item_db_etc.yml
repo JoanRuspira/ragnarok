@@ -1054,14 +1054,6 @@ Body:
     Weight: 200
     Flags:
       BuyingStore: true
-  - Id: 970
-    AegisName: Alchol
-    Name: Alcohol
-    Type: Etc
-    Buy: 400
-    Weight: 30
-    Flags:
-      BuyingStore: true
   - Id: 971
     AegisName: Detrimindexta
     Name: Detrimindexta
@@ -1871,14 +1863,6 @@ Body:
     Name: Delivery Box
     Type: Etc
     Weight: 10
-  - Id: 1092
-    AegisName: Empty_Cylinder
-    Name: Empty Test Tube
-    Type: Etc
-    Buy: 3
-    Weight: 10
-    Flags:
-      BuyingStore: true
   - Id: 1094
     AegisName: Short_Daenggie
     Name: Short Daenggie
@@ -5487,14 +5471,6 @@ Body:
     Name: Glass Tube
     Type: Etc
     Buy: 5000
-    Weight: 10
-    Flags:
-      BuyingStore: true
-  - Id: 7144
-    AegisName: Normal_Potion_Book
-    Name: Potion Creation Guide
-    Type: Etc
-    Buy: 100000
     Weight: 10
     Flags:
       BuyingStore: true
@@ -9588,68 +9564,12 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
-  - Id: 1093
-    AegisName: Empty_Potion
-    Name: Empty Potion Bottle
-    Type: Etc
-    Buy: 10
-    Weight: 10
-    Flags:
-      BuyingStore: true
-  - Id: 7134
-    AegisName: Medicine_Bowl
-    Name: Medicine Bowl
-    Type: Etc
-    Buy: 100
-    Weight: 10
-    Flags:
-      BuyingStore: true
-  - Id: 7127
-    AegisName: Alcol_Create_Book
-    Name: Alcohol Creation Guide
+  - Id: 7144
+    AegisName: Normal_Potion_Book
+    Name: Potion Creation Guide
     Type: Etc
     Buy: 50000
-    Weight: 10
-    Flags:
-      BuyingStore: true
-  - Id: 7128
-    AegisName: FireBottle_Create_Book
-    Name: Bottle Grenade Creation Guide
-    Type: Etc
-    Buy: 50000
-    Weight: 10
-    Flags:
-      BuyingStore: true
-  - Id: 7129
-    AegisName: Acid_Create_Book
-    Name: Acid Bottle Creation Guide
-    Type: Etc
-    Buy: 50000
-    Weight: 10
-    Flags:
-      BuyingStore: true
-  - Id: 7130
-    AegisName: Plant_Create_Book
-    Name: Plant Bottle Creation Guide
-    Type: Etc
-    Buy: 50000
-    Weight: 10
-    Flags:
-      BuyingStore: true
-  - Id: 7131
-    AegisName: Mine_Create_Book
-    Name: Marine Sphere Creation Guide
-    Type: Etc
-    Buy: 50000
-    Weight: 10
-    Flags:
-      BuyingStore: true
-  - Id: 7132
-    AegisName: Coating_Create_Book
-    Name: Glistening Coat Creation Guide
-    Type: Etc
-    Buy: 50000
-    Weight: 10
+    Weight: 30
     Flags:
       BuyingStore: true
   - Id: 7133
@@ -9657,6 +9577,70 @@ Body:
     Name: Condensed Potion Creation Guide
     Type: Etc
     Buy: 100000
+    Weight: 30
+    Flags:
+      BuyingStore: true
+  - Id: 7128
+    AegisName: FireBottle_Create_Book
+    Name: Bottle Grenade Creation Guide
+    Type: Etc
+    Buy: 25000
+    Weight: 30
+    Flags:
+      BuyingStore: true
+  - Id: 7129
+    AegisName: Acid_Create_Book
+    Name: Acid Bottle Creation Guide
+    Type: Etc
+    Buy: 25000
+    Weight: 30
+    Flags:
+      BuyingStore: true
+  - Id: 7130
+    AegisName: Plant_Create_Book
+    Name: Plant Bottle Creation Guide
+    Type: Etc
+    Buy: 25000
+    Weight: 30
+    Flags:
+      BuyingStore: true
+  - Id: 7132
+    AegisName: Coating_Create_Book
+    Name: Glistening Coat Creation Guide
+    Type: Etc
+    Buy: 50000
+    Weight: 30
+    Flags:
+      BuyingStore: true
+  - Id: 7127
+    AegisName: Alcol_Create_Book
+    Name: Alcohol Creation Guide
+    Type: Etc
+    Buy: 20000
+    Weight: 30
+    Flags:
+      BuyingStore: true
+  - Id: 1093
+    AegisName: Empty_Potion
+    Name: Empty Potion Bottle
+    Type: Etc
+    Buy: 5
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7134
+    AegisName: Medicine_Bowl
+    Name: Medicine Bowl
+    Type: Etc
+    Buy: 1000
+    Weight: 30
+    Flags:
+      BuyingStore: true
+  - Id: 1092
+    AegisName: Empty_Cylinder
+    Name: Empty Test Tube
+    Type: Etc
+    Buy: 5
     Weight: 10
     Flags:
       BuyingStore: true
@@ -9670,31 +9654,25 @@ Body:
     AegisName: Acid_Bottle
     Name: Acid Bottle
     Type: Etc
-    Buy: 200
+    Buy: 500
     Weight: 10
   - Id: 7137
     AegisName: MenEater_Plant_Bottle
     Name: Plant Bottle
     Type: Etc
-    Buy: 200
-    Weight: 10
-  - Id: 7138
-    AegisName: Mini_Bottle
-    Name: Marine Sphere Bottle
-    Type: Etc
-    Buy: 200
+    Buy: 500
     Weight: 10
   - Id: 7139
     AegisName: Coating_Bottle
     Name: Glistening Coat
     Type: Etc
-    Buy: 200
+    Buy: 500
     Weight: 10
-  - Id: 7140
-    AegisName: Seed_Of_Life
-    Name: Seed of Life
+  - Id: 970
+    AegisName: Alchol
+    Name: Alcohol
     Type: Etc
-    Buy: 60000
-    Weight: 10
+    Buy: 50
+    Weight: 30
     Flags:
       BuyingStore: true
