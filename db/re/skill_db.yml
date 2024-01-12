@@ -3443,23 +3443,25 @@ Body:
       Target: Enemy
       Flag:
         Skill: true
-  - Id: 2421
-    Name: WM_DEADHILLHERE
-    Description: Valley of Death
+  - Id: 898
+    Name: BA_ALLNIGHTLONG
+    Description: All Night Long
     MaxLevel: 5
+    Type: Magic
     TargetType: Support
     DamageFlags:
       NoDamage: true
+      IgnoreDefense: true
     Range: 9
     Hit: Single
     HitCount: 1
+    Element: Holy
     CopyFlags:
       Skill:
-        Plagiarism: true
         Reproduce: true
     CastCancel: true
     CastTime: 6000
-    AfterCastActDelay: 1000
+    AfterCastActDelay: 2000
     Cooldown: 10000
     Requires:
       SpCost: 100
@@ -13102,7 +13104,8 @@ Body:
     Hit: Single
     HitCount: 1
     SplashArea: 3
-    CastTime: 1000
+    CastTime: 6000
+    Cooldown: 7000
     AfterCastActDelay: 1000
     Requires:
       SpCost: 100

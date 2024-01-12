@@ -2196,7 +2196,8 @@ enum e_skill {
 	PF_STASIS = 894,
 	HW_TETRAVORTEX_FIRE = 895,
 	CR_GEOGRAPHER_FIELD = 896,
-	CR_GEOGRAPHER_FIELD_ATK = 897
+	CR_GEOGRAPHER_FIELD_ATK = 897,
+	BA_ALLNIGHTLONG = 898
 };
 
 /// The client view ids for land skills.

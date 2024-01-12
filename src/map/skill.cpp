@@ -5090,7 +5090,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			case NPC_WIDESOULDRAIN:
 			case PR_REDEMPTIO:
 			case ALL_RESURRECTION:
-			case WM_DEADHILLHERE:
+			case BA_ALLNIGHTLONG:
 			case WE_ONEFOREVER:
 				break;
 			default:
@@ -7360,15 +7360,16 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			status_heal(bl,healing,0,0);
 		}
 		break;
-	case WM_DEADHILLHERE:
-		// if( bl->type == BL_PC ) {
+	case BA_ALLNIGHTLONG:
 		if( !status_isdead(bl) ) {
 			int healing, matk = 0;
 			struct status_data *status;
 			status = status_get_status_data(&sd->bl);
 			matk = rand()%(status->matk_max-status->matk_min + 1) + status->matk_min;
 			healing = (400 * skill_lv) + (status_get_lv(src) * 3) + (status_get_int(src) * 3) + (matk * 3);
+			clif_specialeffect(bl, EF_ITEM315, AREA);
 			clif_specialeffect(bl, EF_FOOD04, AREA);
+			clif_soundeffectall(&sd->bl, "allnightlong.wav", 0, AREA);
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 			clif_skill_nodamage(NULL,bl,AL_HEAL,healing,1);
 			status_heal(bl,healing,0,0);
@@ -7378,7 +7379,9 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				heal = 1;
 			tstatus->hp = heal;
 			tstatus->sp -= tstatus->sp * ( 60 - 10 * skill_lv ) / 100;
+			clif_specialeffect(bl, EF_ITEM315, AREA);
 			clif_specialeffect(bl, EF_FOOD04, AREA);
+			clif_soundeffectall(&sd->bl, "allnightlong.wav", 0, AREA);
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 			pc_revive((TBL_PC*)bl,heal,0);
 			clif_resurrection(bl,1);
@@ -11825,6 +11828,7 @@ int skill_castend_pos2(struct block_list* src, int x, int y, uint16 skill_id, ui
 	// Slim Pitcher [Celest]
 	case CR_SLIMPITCHER:
 		if (sd) {
+		clif_specialeffect(&sd->bl, EF_TWILIGHT2, AREA);
 		int i_lv = 0, j = 0;
 		struct s_skill_condition require = skill_get_requirement(sd, skill_id, skill_lv);
 		i_lv = skill_lv%11 - 1;
