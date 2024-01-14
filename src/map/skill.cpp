@@ -5887,14 +5887,15 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
 		break;
 	case SN_ZEPHYR_SNIPING:
-	case HT_HURRICANEFURY:
-		clif_specialeffect(src, 1401, AREA);
-		clif_soundeffectall(&sd->bl, "tornado_fury.wav", 0, AREA);
+		clif_specialeffect(src, 1403, AREA);//new_cannon_spear_05_clock
+		clif_soundeffectall(&sd->bl, "zephyr_sniping.wav", 0, AREA);
+		clif_skill_nodamage(src, bl, skill_id, skill_lv,
+			sc_start(src, bl, type, 100, skill_lv, skill_get_time(skill_id, skill_lv)));
+		break;
 
-		// clif_specialeffect(src, 1138, AREA);
-		// clif_specialeffect(src, EF_TEIHIT1, AREA);
-		// clif_specialeffect(src, EF_BASH, AREA);
-		// clif_specialeffect(src, EF_ENTRY, AREA);
+	case HT_HURRICANEFURY:
+		clif_specialeffect(src, 1401, AREA);//new_cannon_spear_01_clock
+		clif_soundeffectall(&sd->bl, "tornado_fury.wav", 0, AREA);
 		clif_skill_nodamage(src, bl, skill_id, skill_lv,
 			sc_start(src, bl, type, 100, skill_lv, skill_get_time(skill_id, skill_lv)));
 		break;
@@ -6520,7 +6521,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		// clif_specialeffect(bl, EF_TURNUNDEAD, AREA);
 		clif_soundeffectall(&sd->bl, "cyclonic_charge.wav", 0, AREA);
 
-		clif_specialeffect(bl, 1400, AREA);
+		clif_specialeffect(bl, 1400, AREA);//new_cannon_spear_12_clock
 		clif_skill_nodamage(bl, bl, skill_id, skill_lv, sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
 		break;
 	case MC_UPROAR:
@@ -9227,6 +9228,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		break;
 
 	case RA_FEARBREEZE:
+		clif_specialeffect(src, 1404, AREA);//new_cannon_spear_06_clock
 		clif_skill_damage(src, src, tick, status_get_amotion(src), 0, -30000, 1, skill_id, skill_lv, DMG_SINGLE);
 		clif_skill_nodamage(src, bl, skill_id, skill_lv, sc_start(src,bl, type, 100, skill_lv, skill_get_time(skill_id, skill_lv)));
 		break;

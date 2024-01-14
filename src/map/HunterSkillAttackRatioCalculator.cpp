@@ -21,6 +21,7 @@ int HunterSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 			add_hurricane_fury_special_effects(target);
 			return calculate_zephyr_sniping_atk_ratio(skill_lv);
 		case HT_HURRICANEFURY:
+    		clif_specialeffect(target, 1402, AREA); //new_cannon_spear_03_clock
 			return calculate_cyclonic_charge_atk_ratio(skill_lv);
 		case ITM_TOMAHAWK:
 			add_magic_tomahawk_special_effects(target);
