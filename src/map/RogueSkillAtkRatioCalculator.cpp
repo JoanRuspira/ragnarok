@@ -32,6 +32,8 @@ int RogueSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* s
 		case RA_ARROWSTORM:
 			return calculate_arrow_storm_atk_ratio(skill_lv, sstatus->dex);
 		case LG_MOONSLASHER:
+			clif_specialeffect(target, 1405, AREA); //new_cannon_spear_07_clock
+			clif_soundeffectall(src, "fatalmenace.wav", 0, AREA);
 			return calculate_fatal_menace_atk_ratio(skill_lv, sstatus->luk);
 		default:
 			return 0;

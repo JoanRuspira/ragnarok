@@ -19963,7 +19963,7 @@ Body:
     Cooldown: 5000
     Requires:
       SpCost: 14
-  - Id: 2258
+  - Id: 2320
     Name: NC_VULCANARM
     Description: Vulcan Arm
     MaxLevel: 3
@@ -19994,7 +19994,6 @@ Body:
           Amount: 4
         - Level: 3
           Amount: 6
-      State: Mado
   - Id: 2259
     Name: NC_FLAMELAUNCHER
     Description: Flame Launcher
@@ -20136,10 +20135,6 @@ Body:
           Amount: 55
         - Level: 5
           Amount: 60
-      Ammo:
-        Cannonball: true
-      AmmoAmount: 1
-      State: Mado
   - Id: 2262
     Name: NC_ACCELERATION
     Description: Acceleration
@@ -21746,7 +21741,7 @@ Body:
       Id: Banding
       Range: 3
       Interval: 5000
-  - Id: 2320
+  - Id: 2258
     Name: LG_MOONSLASHER
     Description: Moon Slasher
     MaxLevel: 5

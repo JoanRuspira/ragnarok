@@ -3308,14 +3308,6 @@ Body:
     AegisName: Exchange_Coupon
     Name: Exchange Coupon
     Type: Etc
-  - Id: 6244
-    AegisName: Gun_Powder
-    Name: Gun Powder
-    Type: Etc
-    Buy: 10
-    Weight: 1
-    Flags:
-      BuyingStore: true
   - Id: 6245
     AegisName: Black_Powder
     Name: Black Powder
@@ -9213,11 +9205,11 @@ Body:
     Weight: 30
     Flags:
       BuyingStore: true
-  - Id: 7204
-    AegisName: Gunpowder
-    Name: Gunpowder
+  - Id: 6244
+    AegisName: Gun_Powder
+    Name: Gun Powder
     Type: Etc
-    Buy: 50
+    Buy: 10
     Weight: 10
     Flags:
       BuyingStore: true
