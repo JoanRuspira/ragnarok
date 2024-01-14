@@ -3386,6 +3386,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case PA_SHIELDCHAIN:	// Shield Chain
 	case PA_SACRIFICE:
 	case HT_HURRICANEFURY:
+	case SN_ZEPHYR_SNIPING:
 	case AS_VENOMKNIFE:
 	case TK_DOWNKICK:
 	case TK_COUNTER:
@@ -5761,7 +5762,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case SN_SIGHT:
 	case ST_REJECTSWORD:
 	case HW_MAGICPOWER:
-	case PA_SACRIFICE:
 	case ASC_EDP:
 	case PF_DOUBLECASTING:
 	case SG_SUN_COMFORT:
@@ -5818,6 +5818,12 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case SJ_LIGHTOFSUN:
 	case SJ_BOOKOFDIMENSION:
 	case NPC_HALLUCINATIONWALK:
+		clif_skill_nodamage(src,bl,skill_id,skill_lv,
+			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
+		break;
+	case PA_SACRIFICE:
+		clif_specialeffect(src, 1138, AREA);
+		clif_soundeffectall(bl, "reckoning.wav", 0, AREA);
 		clif_skill_nodamage(src,bl,skill_id,skill_lv,
 			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
 		break;
@@ -5880,11 +5886,15 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		clif_skill_nodamage(src,bl,skill_id,skill_lv,
 			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
 		break;
+	case SN_ZEPHYR_SNIPING:
 	case HT_HURRICANEFURY:
-		clif_specialeffect(src, 1138, AREA);
-		clif_specialeffect(src, EF_TEIHIT1, AREA);
-		clif_specialeffect(src, EF_BASH, AREA);
-		clif_specialeffect(src, EF_ENTRY, AREA);
+		clif_specialeffect(src, 1401, AREA);
+		clif_soundeffectall(&sd->bl, "tornado_fury.wav", 0, AREA);
+
+		// clif_specialeffect(src, 1138, AREA);
+		// clif_specialeffect(src, EF_TEIHIT1, AREA);
+		// clif_specialeffect(src, EF_BASH, AREA);
+		// clif_specialeffect(src, EF_ENTRY, AREA);
 		clif_skill_nodamage(src, bl, skill_id, skill_lv,
 			sc_start(src, bl, type, 100, skill_lv, skill_get_time(skill_id, skill_lv)));
 		break;
@@ -6507,8 +6517,10 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		clif_skill_nodamage(bl, bl, skill_id, skill_lv, sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
 		break;
 	case HT_CYCLONICCHARGE:
-		clif_specialeffect(bl, EF_TURNUNDEAD, AREA);
-		clif_specialeffect(bl, EF_ENERGYDRAIN3, AREA);
+		// clif_specialeffect(bl, EF_TURNUNDEAD, AREA);
+		clif_soundeffectall(&sd->bl, "cyclonic_charge.wav", 0, AREA);
+
+		clif_specialeffect(bl, 1400, AREA);
 		clif_skill_nodamage(bl, bl, skill_id, skill_lv, sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
 		break;
 	case MC_UPROAR:

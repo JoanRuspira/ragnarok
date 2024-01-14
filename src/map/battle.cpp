@@ -2286,7 +2286,7 @@ static int is_attack_piercing(struct Damage* wd, struct block_list *src, struct 
 		struct map_session_data *sd = BL_CAST(BL_PC, src);
 		struct status_data *tstatus = status_get_status_data(target);
 
-		if( skill_id != PA_SACRIFICE && skill_id != HT_HURRICANEFURY && skill_id != NPC_GRANDDARKNESS && skill_id != KO_HAPPOKUNAI)
+		if( skill_id != PA_SACRIFICE && skill_id != HT_HURRICANEFURY && skill_id != SN_ZEPHYR_SNIPING && skill_id != NPC_GRANDDARKNESS && skill_id != KO_HAPPOKUNAI)
 		{ //Elemental/Racial adjustments
 			if( sd && (sd->right_weapon.def_ratio_atk_ele & (1<<tstatus->def_ele) || sd->right_weapon.def_ratio_atk_ele & (1<<ELE_ALL) ||
 				sd->right_weapon.def_ratio_atk_race & (1<<tstatus->race) || sd->right_weapon.def_ratio_atk_race & (1<<RC_ALL) ||
@@ -2558,6 +2558,7 @@ static void battle_calc_element_damage(struct Damage* wd, struct block_list *src
 		int right_element = EquipmentAttackCalculator::battle_get_weapon_element(wd, src, target, skill_id, skill_lv, EQI_HAND_R, true);
 
 		switch (skill_id) {
+			case SN_ZEPHYR_SNIPING:
 			case HT_HURRICANEFURY:
 			case PA_SACRIFICE:
 			case RK_DRAGONBREATH:
@@ -2703,13 +2704,9 @@ static void battle_calc_multi_attack(struct Damage* wd, struct block_list *src,s
 		else if(sc && sc->data[SC_FEARBREEZE] && sd->weapontype1==W_BOW
 			&& (i = sd->equip_index[EQI_AMMO]) >= 0 && sd->inventory_data[i] && sd->inventory.u.items_inventory[i].amount > 1)
 		{
-			int chance = rnd()%100;
-			switch(sc->data[SC_FEARBREEZE]->val1) {
-				case 5: if( chance < 4) { wd->div_ = 5; break; } // 3 % chance to attack 5 times.
-				case 4: if( chance < 7) { wd->div_ = 4; break; } // 6 % chance to attack 4 times.
-				case 3: if( chance < 10) { wd->div_ = 3; break; } // 9 % chance to attack 3 times.
-				case 2:
-				case 1: if( chance < 13) { wd->div_ = 2; break; } // 12 % chance to attack 2 times.
+			int chance =sc->data[SC_FEARBREEZE]->val1 * 6;
+			if(rnd()%100 <= chance){
+				wd->div_ = 3;
 			}
 			wd->div_ = min(wd->div_,sd->inventory.u.items_inventory[i].amount);
 			sc->data[SC_FEARBREEZE]->val4 = wd->div_-1;
@@ -2766,7 +2763,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 	int i;
 
 	//Skill damage modifiers that stack linearly
-	if(sc && skill_id != PA_SACRIFICE && skill_id != HT_HURRICANEFURY) {
+	if(sc && skill_id != PA_SACRIFICE && skill_id != HT_HURRICANEFURY && skill_id != SN_ZEPHYR_SNIPING) {
 
 		if( skill_id == CR_SHIELDCHARGE || skill_id == CR_SHIELDBOOMERANG || skill_id == PA_SHIELDCHAIN || skill_id == PA_SHIELDSLAM ) { //Refine bonus applies after cards and elements.
 			short index = sd->equip_index[EQI_HAND_L];
@@ -2922,6 +2919,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			skillratio += 10 * skill_lv;
 			break;
 		case ITM_TOMAHAWK:
+		case SN_ZEPHYR_SNIPING:
 		case HT_HURRICANEFURY:
 		case HT_WARG_1:
 		case HT_FALCON_1:
@@ -6122,6 +6120,28 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 				return ATK_MISS;
 			return ret_val;
 		}
+
+		if (sc->data[SC_ZEPHYR_SNIPING]) {
+			uint16 skill_lv = sc->data[SC_ZEPHYR_SNIPING]->val1;
+			damage_lv ret_val;
+
+			if( --sc->data[SC_ZEPHYR_SNIPING]->val2 <= 0 )
+				status_change_end(src, SC_ZEPHYR_SNIPING, INVALID_TIMER);
+
+			/**
+			 * We need to calculate the DMG before the hp reduction, because it can kill the source.
+			 * For further information: bugreport:4950
+			 */
+			ret_val = (damage_lv)skill_attack(BF_WEAPON,src,src,target,SN_ZEPHYR_SNIPING,skill_lv,tick,0);
+
+			// status_zap(src, sstatus->max_hp*9/100, 0);//Damage to self is always 9%
+			if( ret_val == ATK_NONE )
+				return ATK_MISS;
+			return ret_val;
+		}
+
+
+		
 		if (sc->data[SC_MAGICALATTACK]) {
 			if( skill_attack(BF_MAGIC,src,src,target,NPC_MAGICALATTACK,sc->data[SC_MAGICALATTACK]->val1,tick,0) )
 				return ATK_DEF;

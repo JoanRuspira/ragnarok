@@ -17,8 +17,10 @@ int HunterSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 		// 	return calculate_slash_atk_ratio(skill_lv,sstatus->int_);
 		// case HT_BLITZBEAT:
 		// 	return calculate_blitz_beat_atk_ratio(skill_lv,sstatus->agi);
-		case HT_HURRICANEFURY:
+		case SN_ZEPHYR_SNIPING:
 			add_hurricane_fury_special_effects(target);
+			return calculate_zephyr_sniping_atk_ratio(skill_lv);
+		case HT_HURRICANEFURY:
 			return calculate_cyclonic_charge_atk_ratio(skill_lv);
 		case ITM_TOMAHAWK:
 			add_magic_tomahawk_special_effects(target);
@@ -125,6 +127,28 @@ void HunterSkillAttackRatioCalculator::add_slash_special_effects(struct block_li
     clif_specialeffect(target, 1103, AREA);
 }
 
+int HunterSkillAttackRatioCalculator::calculate_zephyr_sniping_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 100;
+			break;
+		case 2:
+			ratio = 125;
+			break;
+		case 3:
+			ratio = 150;
+			break;
+		case 4:
+			ratio = 175;
+			break;
+		case 5:
+			ratio = 200;
+			break;
+		}
+	return ratio;
+}
 
 int HunterSkillAttackRatioCalculator::calculate_cyclonic_charge_atk_ratio(int skill_lv)
 {

@@ -63,7 +63,7 @@ void SkillBaseDamageCalculator::battle_calc_skill_base_damage(Damage * wd, block
 
 
 	//joan
-	if (skill_id == PA_SACRIFICE || skill_id == HT_HURRICANEFURY) {
+	if (skill_id == PA_SACRIFICE || skill_id == HT_HURRICANEFURY || skill_id == SN_ZEPHYR_SNIPING) {
 		wd->damage = sstatus->max_hp * 1 / 100;
 		wd->damage2 = 0;
 		wd->weaponAtk = wd->damage;

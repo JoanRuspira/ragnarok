@@ -592,6 +592,7 @@ void initChangeTables(void)
 	set_sc( HW_MAGICPOWER		, SC_MAGICPOWER		, EFST_MAGICPOWER		, SCB_MATK );
 	set_sc( PA_SACRIFICE		, SC_SACRIFICE		, EFST_SACRIFICE, SCB_NONE		);
 	set_sc( HT_HURRICANEFURY		, SC_HURRICANEFURY		, EFST_HURRICANEFURY, SCB_NONE		);
+	set_sc( SN_ZEPHYR_SNIPING		, SC_ZEPHYR_SNIPING		, EFST_ZEPHYR_SNIPING, SCB_NONE		);
 	set_sc( PA_GOSPEL		, SC_GOSPEL		, EFST_GOSPEL		, SCB_SPEED|SCB_ASPD );
 	add_sc( PA_GOSPEL		, SC_SCRESIST		);
 	add_sc( CH_TIGERFIST		, SC_STOP		);
@@ -10213,6 +10214,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			val3 = 10 * val1; // Matk% increase
 			val4 = 0; // 0 = ready to be used, 1 = activated and running
 			break;
+		case SC_ZEPHYR_SNIPING:
 		case SC_HURRICANEFURY:
 		case SC_SACRIFICE:
 			val2 = 5; // Lasts 5 hits

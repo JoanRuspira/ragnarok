@@ -6462,6 +6462,10 @@ static void pc_checkallowskill(struct map_session_data *sd)
 		SC_WEAPONPERFECTION,
 		SC_SPELLFIST,
 		SC_DOUBLECAST,
+		SC_FEARBREEZE,
+		SC_CYCLONICCHARGE,
+		SC_HURRICANEFURY,
+		SC_ZEPHYR_SNIPING
 	};
 	uint8 i;
 	nullpo_retv(sd);

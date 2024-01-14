@@ -1972,6 +1972,8 @@ Body:
         Time: 300000
     Requires:
       SpCost: 20
+      Weapon:
+        Bow: true
   - Id: 826
     Name: AC_HAWK
     Description: Hawk's Eye
@@ -3470,6 +3472,32 @@ Body:
       ItemCost:
         - Item: Heartbroken_Tears
           Amount: 1
+  - Id: 899
+    Name: SN_ZEPHYR_SNIPING
+    Description: Zephyr Sniping
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    Element: Weapon
+    DamageFlags:
+      NoDamage: true
+      IgnoreDefense: true
+      IgnoreFlee: true
+      Critical: true
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    Cooldown: 15000
+    AfterCastActDelay: 400
+    Duration1: 50000
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Requires:
+      SpCost: 80
+      Weapon:
+        Bow: true
   - Id: 51
     Name: TF_HIDING
     Description: Hiding
@@ -10791,7 +10819,6 @@ Body:
     HitCount: 1
     SplashArea: -1
     CastCancel: true
-    CastTime: 3000
     Cooldown: 10000
     AfterCastActDelay: 2000
     Duration1:
@@ -13902,9 +13929,8 @@ Body:
         Reproduce: true
     Requires:
       SpCost: 20
-      ItemCost:
-        - Item: Wind_Of_Verdure
-          Amount: 1
+      Weapon:
+        Bow: true
   - Id: 513
     Name: GS_DISARM
     Description: Disarm
@@ -19394,7 +19420,7 @@ Body:
       AmmoAmount: 10
   - Id: 2234
     Name: RA_FEARBREEZE
-    Description: Fear Breeze
+    Description: Typhoon Flow
     MaxLevel: 5
     TargetType: Self
     Hit: Single
@@ -19417,17 +19443,7 @@ Body:
       IgnoreStatus: true
       IgnoreItemBonus: true
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 55
-        - Level: 2
-          Amount: 60
-        - Level: 3
-          Amount: 65
-        - Level: 4
-          Amount: 70
-        - Level: 5
-          Amount: 75
+      SpCost: 75
       Weapon:
         Bow: true
   - Id: 2235
