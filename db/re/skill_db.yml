@@ -1972,6 +1972,9 @@ Body:
         Time: 300000
     Requires:
       SpCost: 20
+      ItemCost:
+        - Item: Wind_Stone
+          Amount: 1
       Weapon:
         Bow: true
   - Id: 826
@@ -3496,6 +3499,9 @@ Body:
         Reproduce: true
     Requires:
       SpCost: 120
+      ItemCost:
+        - Item: Wind_Stone
+          Amount: 1
       Weapon:
         Bow: true
   - Id: 51
@@ -10834,6 +10840,9 @@ Body:
         Time: 400000
     Requires:
       SpCost: 40
+      ItemCost:
+        - Item: Wind_Stone
+          Amount: 1
   - Id: 384
     Name: WS_MELTDOWN
     Description: Shattering Strike
@@ -13905,7 +13914,7 @@ Body:
     Hit: Multi_Hit
     HitCount: 2
     Element: Weapon
-  - Id: 899
+  - Id: 513
     Name: HT_HURRICANEFURY
     Description: Hurricane Fury
     MaxLevel: 5
@@ -13929,31 +13938,11 @@ Body:
         Reproduce: true
     Requires:
       SpCost: 20
+      ItemCost:
+        - Item: Wind_Stone
+          Amount: 1
       Weapon:
         Bow: true
-  - Id: 513
-    Name: GS_DISARM
-    Description: Disarm
-    MaxLevel: 5
-    Type: Weapon
-    TargetType: Attack
-    Range: -9
-    Hit: Single
-    HitCount: 1
-    Element: Weapon
-    Duration1: 30000
-    Requires:
-      SpCost:
-        - Level: 1
-          Amount: 15
-        - Level: 2
-          Amount: 20
-        - Level: 3
-          Amount: 25
-        - Level: 4
-          Amount: 30
-        - Level: 5
-          Amount: 35
   - Id: 514
     Name: GS_PIERCINGSHOT
     Description: Piercing Shot
@@ -19445,6 +19434,9 @@ Body:
       IgnoreItemBonus: true
     Requires:
       SpCost: 75
+      ItemCost:
+        - Item: Wind_Stone
+          Amount: 1
       Weapon:
         Bow: true
   - Id: 2235

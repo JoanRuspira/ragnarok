@@ -8322,38 +8322,6 @@ Body:
     Name: Please Be Rich
     Type: Etc
     Weight: 10
-  - Id: 7521
-    AegisName: Flame_Stone
-    Name: Flame Stone
-    Type: Etc
-    Buy: 150
-    Weight: 10
-    Flags:
-      BuyingStore: true
-  - Id: 7522
-    AegisName: Ice_Stone
-    Name: Ice Stone
-    Type: Etc
-    Buy: 150
-    Weight: 10
-    Flags:
-      BuyingStore: true
-  - Id: 7523
-    AegisName: Wind_Stone
-    Name: Wind Stone
-    Type: Etc
-    Buy: 150
-    Weight: 10
-    Flags:
-      BuyingStore: true
-  - Id: 7524
-    AegisName: Shadow_Orb
-    Name: Shadow Orb
-    Type: Etc
-    Buy: 300
-    Weight: 20
-    Flags:
-      BuyingStore: true
   - Id: 6128
     AegisName: Guillotine_Antidote
     Name: Antidote
@@ -9674,5 +9642,37 @@ Body:
     Type: Etc
     Buy: 50
     Weight: 30
+    Flags:
+      BuyingStore: true
+  - Id: 7523
+    AegisName: Wind_Stone
+    Name: Wind Stone
+    Type: Etc
+    Buy: 50
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7521
+    AegisName: Flame_Stone
+    Name: Flame Stone
+    Type: Etc
+    Buy: 50
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7522
+    AegisName: Ice_Stone
+    Name: Ice Stone
+    Type: Etc
+    Buy: 50
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7524
+    AegisName: Shadow_Orb
+    Name: Shadow Orb
+    Type: Etc
+    Buy: 50
+    Weight: 10
     Flags:
       BuyingStore: true

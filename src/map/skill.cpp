@@ -3397,7 +3397,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 #endif
 	case GS_RAPIDSHOWER:
 	case GS_DUST:
-	case GS_DISARM:				// Added disarm. [Reddozen]
 	case NJ_SYURIKEN:
 	case NJ_KUNAI:
 	case ASC_BREAKER:
