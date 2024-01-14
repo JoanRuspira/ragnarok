@@ -3472,7 +3472,7 @@ Body:
       ItemCost:
         - Item: Heartbroken_Tears
           Amount: 1
-  - Id: 899
+  - Id: 512
     Name: SN_ZEPHYR_SNIPING
     Description: Zephyr Sniping
     MaxLevel: 5
@@ -3487,7 +3487,7 @@ Body:
     Hit: Single
     HitCount: 1
     CastCancel: true
-    Cooldown: 15000
+    Cooldown: 20000
     AfterCastActDelay: 400
     Duration1: 50000
     CopyFlags:
@@ -3495,7 +3495,7 @@ Body:
         Plagiarism: true
         Reproduce: true
     Requires:
-      SpCost: 80
+      SpCost: 120
       Weapon:
         Bow: true
   - Id: 51
@@ -13905,7 +13905,7 @@ Body:
     Hit: Multi_Hit
     HitCount: 2
     Element: Weapon
-  - Id: 512
+  - Id: 899
     Name: HT_HURRICANEFURY
     Description: Hurricane Fury
     MaxLevel: 5

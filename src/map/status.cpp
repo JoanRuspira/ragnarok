@@ -10215,6 +10215,9 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			val4 = 0; // 0 = ready to be used, 1 = activated and running
 			break;
 		case SC_ZEPHYR_SNIPING:
+			val2 = 999999; // Lasts 99999 hits
+			tick = INFINITE_TICK;
+			break;
 		case SC_HURRICANEFURY:
 		case SC_SACRIFICE:
 			val2 = 5; // Lasts 5 hits

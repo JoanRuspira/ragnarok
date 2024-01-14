@@ -1416,6 +1416,11 @@ int64 battle_calc_damage(struct block_list *src,struct block_list *bl,struct Dam
 
 		if(!damage)
 			return 0;
+		
+		sc = status_get_sc(bl);
+		if( sc && sc->data[SC_ZEPHYR_SNIPING]){
+			status_change_end(&sd->bl,SC_ZEPHYR_SNIPING,INVALID_TIMER);
+		}
 	}
 
 	sc = status_get_sc(bl); //check target status

@@ -700,7 +700,7 @@ TIMER_FUNC(unit_delay_walktobl_timer){
 int unit_walktoxy( struct block_list *bl, short x, short y, unsigned char flag)
 {
 	nullpo_ret(bl);
-
+	
 	unit_data* ud = unit_bl2ud(bl);
 
 	if (ud == nullptr)
@@ -759,6 +759,9 @@ int unit_walktoxy( struct block_list *bl, short x, short y, unsigned char flag)
 
 	TBL_PC *sd = BL_CAST(BL_PC, bl);
 
+	if( sd && sc && sc->data[SC_ZEPHYR_SNIPING]){
+		status_change_end(&sd->bl,SC_ZEPHYR_SNIPING,INVALID_TIMER);
+	}
 	// Start timer to recall summon
 	if( sd != nullptr ){
 		if (sd->md != nullptr)
