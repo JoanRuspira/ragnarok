@@ -19223,10 +19223,10 @@ void clif_magicdecoy_list( struct map_session_data *sd, uint16 skill_lv, short x
 	// 	}
 	// }
 	if (skill_id == NC_MAGICDECOY) {
-		p->items[0].itemId = client_nameid(6360);
-		p->items[1].itemId = client_nameid(6361);
-		p->items[2].itemId = client_nameid(6362);
-		p->items[3].itemId = client_nameid(6363);
+		p->items[0].itemId = client_nameid(6);
+		p->items[1].itemId = client_nameid(7);
+		p->items[2].itemId = client_nameid(8);
+		p->items[3].itemId = client_nameid(9);
 	}
 	if (skill_id == HT_MAGICDECOY) {
 		p->items[0].itemId = client_nameid(715);

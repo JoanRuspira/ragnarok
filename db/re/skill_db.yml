@@ -474,9 +474,6 @@ Body:
     AfterCastActDelay: 500
     Requires:
       SpCost: 37
-      ItemCost:
-        - Item: Old_Magic_Circle
-          Amount: 1
   - Id: 16
     Name: MG_STONECURSE
     Description: Stone Curse
@@ -494,9 +491,6 @@ Body:
     AfterCastActDelay: 500
     Requires:
       SpCost: 37
-      ItemCost:
-        - Item: Old_Magic_Circle
-          Amount: 1
   - Id: 17
     Name: MG_FIREBALL
     Description: Fire Ball

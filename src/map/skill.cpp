@@ -19381,12 +19381,21 @@ int skill_summon_elemental_sphere(struct map_session_data *sd, t_itemid nameid, 
 
 
 int skill_magicdecoy(struct map_session_data *sd, t_itemid nameid, int skill_id) {
-	int x, y, i, class_, skill;
+	int x, y, i, class_, skill, item_to_delete;
 	struct mob_data *md;
 	nullpo_ret(sd);
 	skill = sd->menuskill_val;
 
-	if( !nameid || (i = pc_search_inventory(sd,nameid)) < 0 || !skill || pc_delitem(sd,i,1,0,0,LOG_TYPE_CONSUME) ) {
+	switch(nameid) {
+		case ITEMID_FIRE_BOLT_TOTEM:		item_to_delete = ITEMID_FIRE_ESSENCE;	break;
+		case ITEMID_COLD_BOLT_TOTEM:		item_to_delete = ITEMID_WATER_ESSENCE;	break;
+		case ITEMID_LIGHTNING_BOLT_TOTEM:	item_to_delete = ITEMID_WIND_ESSENCE;	break;
+		case ITEMID_EARTH_BOLT_TOTEM:		item_to_delete = ITEMID_EARTH_ESSENCE;	break;
+
+	}
+
+
+	if( !nameid || (i = pc_search_inventory(sd,item_to_delete)) < 0 || !skill || pc_delitem(sd,i,1,0,0,LOG_TYPE_CONSUME) ) {
 		clif_skill_fail(sd,NC_MAGICDECOY,USESKILL_FAIL_LEVEL,0);
 		return 0;
 	}
@@ -19401,10 +19410,10 @@ int skill_magicdecoy(struct map_session_data *sd, t_itemid nameid, int skill_id)
 
 	// Item picked decides the mob class
 	switch(nameid) {
-		case ITEMID_SCARLET_PTS:		class_ = MOBID_MAGICDECOY_FIRE;		break;
-		case ITEMID_INDIGO_PTS:			class_ = MOBID_MAGICDECOY_WATER;	break;
-		case ITEMID_YELLOW_WISH_PTS:	class_ = MOBID_MAGICDECOY_WIND;		break;
-		case ITEMID_LIME_GREEN_PTS:		class_ = MOBID_MAGICDECOY_EARTH;	break;
+		case ITEMID_FIRE_BOLT_TOTEM:		class_ = MOBID_MAGICDECOY_FIRE;		break;
+		case ITEMID_COLD_BOLT_TOTEM:		class_ = MOBID_MAGICDECOY_WATER;	break;
+		case ITEMID_LIGHTNING_BOLT_TOTEM:	class_ = MOBID_MAGICDECOY_WIND;		break;
+		case ITEMID_EARTH_BOLT_TOTEM:		class_ = MOBID_MAGICDECOY_EARTH;	break;
 		case ITEMID_YELLOW_GEMSTONE:	class_ = MOBID_LICHTERN_Y;		    break;
 		case ITEMID_RED_GEMSTONE:		class_ = MOBID_LICHTERN_R;		    break;
 		case ITEMID_BLUE_GEMSTONE:		class_ = MOBID_LICHTERN_B;		    break;

@@ -42,6 +42,14 @@ const t_itemid CARD0_PET = 0x0100;
 enum item_itemid : t_itemid
 {
 	ITEMID_DUMMY						= 499,
+	ITEMID_EARTH_BOLT_TOTEM             = 6,
+	ITEMID_LIGHTNING_BOLT_TOTEM         = 7,
+	ITEMID_COLD_BOLT_TOTEM              = 8,
+	ITEMID_FIRE_BOLT_TOTEM              = 9,
+	ITEMID_EARTH_ESSENCE                = 10,
+	ITEMID_WIND_ESSENCE                 = 7523,
+	ITEMID_WATER_ESSENCE                = 7522,
+	ITEMID_FIRE_ESSENCE                 = 7521,
 	ITEMID_RED_POTION					= 501,
 	ITEMID_YELLOW_POTION				= 503,
 	ITEMID_WHITE_POTION					= 504,
