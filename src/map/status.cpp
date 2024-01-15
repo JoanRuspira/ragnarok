@@ -6703,7 +6703,7 @@ static unsigned short status_calc_matk(struct block_list *bl, struct status_chan
 	if(sc->data[SC_BENEDICTIO])
 		matk += sc->data[SC_BENEDICTIO]->val1*5;
 	if(sc->data[SC_SPIRITANIMAL])
-		matk += sc->data[SC_SPIRITANIMAL]->val1*6;
+		matk += sc->data[SC_SPIRITANIMAL]->val1*8;
 	if(sc->data[SC_CRUCIS_PLAYER])
 		matk += sc->data[SC_CRUCIS_PLAYER]->val3;
 	if(sc->data[SC_DRUMBATTLE])
