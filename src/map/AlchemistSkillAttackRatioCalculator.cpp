@@ -320,5 +320,5 @@ void AlchemistSkillAttackRatioCalculator::calculate_beholder_2_special_effects(s
 void AlchemistSkillAttackRatioCalculator::calculate_acid_terror_special_effects(struct block_list *target)
 {
     clif_specialeffect(target, EF_GREENBODY, AREA);
-    clif_specialeffect(target, EF_M07, AREA);
+    clif_specialeffect(target, 1406, AREA); //new_cannon_spear_09_clock
 }

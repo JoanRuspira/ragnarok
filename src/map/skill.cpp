@@ -9232,6 +9232,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		break;
 
 	case RA_FEARBREEZE:
+		clif_soundeffectall(&sd->bl, "typhoon_flow.wav", 0, AREA);
 		clif_specialeffect(src, 1404, AREA);//new_cannon_spear_06_clock
 		clif_skill_damage(src, src, tick, status_get_amotion(src), 0, -30000, 1, skill_id, skill_lv, DMG_SINGLE);
 		clif_skill_nodamage(src, bl, skill_id, skill_lv, sc_start(src,bl, type, 100, skill_lv, skill_get_time(skill_id, skill_lv)));
