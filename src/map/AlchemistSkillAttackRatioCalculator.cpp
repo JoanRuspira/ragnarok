@@ -36,6 +36,7 @@ int AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_
 			return calculate_acid_terror_attack_ratio(skill_lv, sstatus->dex);
 			break;
 		case GN_SPORE_EXPLOSION:
+		 	clif_specialeffect(target, EF_M03, AREA);
 			return calculate_bomb_attack_ratio(skill_lv, sstatus->dex);
 			break;
 		case GN_WALLOFTHORN:
@@ -45,9 +46,8 @@ int AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_
 			return calculate_incendiary_bomb_atk_ratio(skill_lv, sstatus->int_);
 			break;
 		case CR_ACIDDEMONSTRATION:
-			clif_specialeffect(target, EF_GREENBODY, AREA);
-		 	clif_specialeffect(target, EF_M03, AREA);
-		 	clif_specialeffect(target, EF_M01, AREA);
+    		clif_specialeffect(target, EF_GREENBODY, AREA);
+    		clif_specialeffect(target, 1406, AREA); //new_cannon_spear_09_clock
 			return calculate_acid_bomb_atk_ratio(skill_lv, sstatus->int_, sstatus->dex, tstatus->vit);
 			break;
 		case CR_GEOGRAPHER_FIELD_ATK:

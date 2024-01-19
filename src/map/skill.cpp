@@ -19382,7 +19382,8 @@ int skill_summon_elemental_sphere(struct map_session_data *sd, t_itemid nameid, 
 
 
 int skill_magicdecoy(struct map_session_data *sd, t_itemid nameid, int skill_id) {
-	int x, y, i, j, class_, skill, item_to_delete;
+	int x, y, i, j, class_, skill;
+	int item_to_delete = 0;
 	struct mob_data *md;
 	nullpo_ret(sd);
 	skill = sd->menuskill_val;
@@ -19400,7 +19401,10 @@ int skill_magicdecoy(struct map_session_data *sd, t_itemid nameid, int skill_id)
 
 	}
 
-
+	if (item_to_delete == 0){
+		clif_skill_fail(sd,NC_MAGICDECOY,USESKILL_FAIL_LEVEL,0);
+		return 0;
+	}
 	if( !nameid || (i = pc_search_inventory(sd,item_to_delete)) < 0 || (j = pc_search_inventory(sd, ITEMID_SOLID_TRUNK)) < 0 || !skill) {
 		clif_skill_fail(sd,NC_MAGICDECOY,USESKILL_FAIL_LEVEL,0);
 		return 0;

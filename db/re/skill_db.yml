@@ -13480,7 +13480,7 @@ Body:
     Duration2: 30000
     Requires:
       SpCost: 40
-  - Id: 490
+  - Id: 2481
     Name: CR_ACIDDEMONSTRATION
     Description: Acid Demonstration
     MaxLevel: 5
@@ -25208,7 +25208,7 @@ Body:
       ItemCost:
         - Item: Bloodsuck_Plant_Seed
           Amount: 1
-  - Id: 2481
+  - Id: 490
     Name: GN_SPORE_EXPLOSION
     Description: Spore Explosion
     MaxLevel: 5
