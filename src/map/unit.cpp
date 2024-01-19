@@ -157,6 +157,9 @@ TBL_PC* unit_get_master(struct block_list *bl)
 			case BL_ELEM: return (((TBL_ELEM *)bl)->master);
 			case BL_PET: return (((TBL_PET *)bl)->master);
 			case BL_MER: return (((TBL_MER *)bl)->master);
+			case BL_MOB:
+			 	return (((TBL_MOB *)bl)->master);
+			 break;
 		}
 	return NULL;
 }
@@ -168,13 +171,15 @@ TBL_PC* unit_get_master(struct block_list *bl)
  */
 int* unit_get_masterteleport_timer(struct block_list *bl)
 {
-	if(bl)
+	if(bl){
 		switch(bl->type) {
 			case BL_HOM: return &(((TBL_HOM *)bl)->masterteleport_timer);
 			case BL_ELEM: return &(((TBL_ELEM *)bl)->masterteleport_timer);
 			case BL_PET: return &(((TBL_PET *)bl)->masterteleport_timer);
 			case BL_MER: return &(((TBL_MER *)bl)->masterteleport_timer);
+			case BL_MOB: return &(((TBL_MOB *)bl)->masterteleport_timer);
 		}
+	}
 	return NULL;
 }
 
@@ -216,11 +221,11 @@ int unit_check_start_teleport_timer(struct block_list *sbl)
 {
 	TBL_PC *msd = NULL;
 	int max_dist = 0;
-
 	switch(sbl->type) {
 		case BL_HOM:	
 		case BL_ELEM:	
 		case BL_PET:	
+		case BL_MOB:
 		case BL_MER:	
 			msd = unit_get_master(sbl);
 			break;
@@ -233,6 +238,7 @@ int unit_check_start_teleport_timer(struct block_list *sbl)
 		case BL_ELEM:	max_dist = MAX_ELEDISTANCE;		break;
 		case BL_PET:	max_dist = AREA_SIZE;			break;
 		case BL_MER:	max_dist = MAX_MER_DISTANCE;	break;
+		case BL_MOB:	max_dist = MAX_ELEDISTANCE;	break;
 	}
 	// If there is a master and it's a valid type
 	if(msd && max_dist) {
@@ -772,6 +778,12 @@ int unit_walktoxy( struct block_list *bl, short x, short y, unsigned char flag)
 			unit_check_start_teleport_timer(&sd->hd->bl);
 		if (sd->pd != nullptr)
 			unit_check_start_teleport_timer(&sd->pd->bl);
+		if (sd->td != nullptr){
+			unit_check_start_teleport_timer(&sd->td->bl);
+		}
+		if (sd->td2 != nullptr){
+			unit_check_start_teleport_timer(&sd->td2->bl);
+		}
 	}
 
 	return unit_walktoxy_sub(bl);

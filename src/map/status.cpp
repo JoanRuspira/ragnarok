@@ -3211,6 +3211,13 @@ int status_calc_mob_(struct mob_data* md, enum e_status_calc_opt opt)
 						status->int_ = msd->status.int_;
 						status->dex = msd->status.dex;
 						status->luk = msd->status.luk;
+						md->masterteleport_timer = INVALID_TIMER;
+						md->master = msd;
+						if (!msd->td){
+							msd->td = md;
+						} else {
+							msd->td2 = md;
+						}
 					}
 					// status->max_hp = (1000 * ((TBL_PC*)mbl)->menuskill_val) + (mstatus->sp * 4) + (status_get_lv(mbl) * 12);
 					// status->matk_min = status->matk_max = 250 + 50*((TBL_PC*)mbl)->menuskill_val;

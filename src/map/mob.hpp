@@ -257,6 +257,8 @@ struct mob_data {
 	struct block_list bl;
 	struct unit_data  ud;
 	struct view_data *vd;
+	struct map_session_data *master;
+	int masterteleport_timer;
 	bool vd_changed;
 	struct status_data status, *base_status; //Second one is in case of leveling up mobs, or tiny/large mobs.
 	struct status_change sc;
