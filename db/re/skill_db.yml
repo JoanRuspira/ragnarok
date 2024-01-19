@@ -1938,9 +1938,6 @@ Body:
         Time: 60000
     Requires:
       SpCost: 35
-      ItemCost:
-        - Item: Tree_Of_Archer_2
-          Amount: 1
   - Id: 825
     Name: HT_CYCLONICCHARGE
     Description: Cyclonic Charge
@@ -20578,9 +20575,6 @@ Body:
         Time: 60000
     Requires:
       SpCost: 35
-      ItemCost:
-        - Item: Tree_Of_Archer_2
-          Amount: 1
   - Id: 2282
     Name: NC_MAGICDECOY
     Description: FAW - Magic Decoy
@@ -20606,9 +20600,6 @@ Body:
         Time: 60000
     Requires:
       SpCost: 35
-      ItemCost:
-        - Item: Tree_Of_Archer_2
-          Amount: 1
   - Id: 2283
     Name: NC_DISJOINT
     Description: FAW Removal

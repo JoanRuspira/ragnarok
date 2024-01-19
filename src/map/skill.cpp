@@ -19381,7 +19381,7 @@ int skill_summon_elemental_sphere(struct map_session_data *sd, t_itemid nameid, 
 
 
 int skill_magicdecoy(struct map_session_data *sd, t_itemid nameid, int skill_id) {
-	int x, y, i, class_, skill, item_to_delete;
+	int x, y, i, j, class_, skill, item_to_delete;
 	struct mob_data *md;
 	nullpo_ret(sd);
 	skill = sd->menuskill_val;
@@ -19392,14 +19392,20 @@ int skill_magicdecoy(struct map_session_data *sd, t_itemid nameid, int skill_id)
 		case ITEMID_LIGHTNING_BOLT_TOTEM:	item_to_delete = ITEMID_WIND_ESSENCE;	break;
 		case ITEMID_EARTH_BOLT_TOTEM:		item_to_delete = ITEMID_EARTH_ESSENCE;	break;
 
+		case ITEMID_HOLY_GHOST_TOTEM:	item_to_delete = ITEMID_GHOST_ESSENCE;	break;
+		case ITEMID_CORRUPT_TOTEM:		item_to_delete = ITEMID_SHADOW_ESSENCE;	break;
+		case ITEMID_SACRED_WAVE_TOTEM:	item_to_delete = ITEMID_HOLY_ESSENCE;	break;
+		case ITEMID_EVIL_EYE_TOTEM:		item_to_delete = ITEMID_NEUTRAL_ESSENCE;break;
+
 	}
 
 
-	if( !nameid || (i = pc_search_inventory(sd,item_to_delete)) < 0 || !skill || pc_delitem(sd,i,1,0,0,LOG_TYPE_CONSUME) ) {
+	if( !nameid || (i = pc_search_inventory(sd,item_to_delete)) < 0 || (j = pc_search_inventory(sd, ITEMID_SOLID_TRUNK)) < 0 || !skill) {
 		clif_skill_fail(sd,NC_MAGICDECOY,USESKILL_FAIL_LEVEL,0);
 		return 0;
 	}
-
+	pc_delitem(sd,i,1,0,0,LOG_TYPE_OTHER);
+	pc_delitem(sd,j,1,0,0,LOG_TYPE_OTHER);
 	// Spawn Position
 	// pc_delitem(sd,i,1,0,0,LOG_TYPE_CONSUME);
 	x = sd->sc.comet_x;
@@ -19414,10 +19420,10 @@ int skill_magicdecoy(struct map_session_data *sd, t_itemid nameid, int skill_id)
 		case ITEMID_COLD_BOLT_TOTEM:		class_ = MOBID_MAGICDECOY_WATER;	break;
 		case ITEMID_LIGHTNING_BOLT_TOTEM:	class_ = MOBID_MAGICDECOY_WIND;		break;
 		case ITEMID_EARTH_BOLT_TOTEM:		class_ = MOBID_MAGICDECOY_EARTH;	break;
-		case ITEMID_YELLOW_GEMSTONE:	class_ = MOBID_LICHTERN_Y;		    break;
-		case ITEMID_RED_GEMSTONE:		class_ = MOBID_LICHTERN_R;		    break;
-		case ITEMID_BLUE_GEMSTONE:		class_ = MOBID_LICHTERN_B;		    break;
-		case ITEMID_GARLET:				class_ = MOBID_LICHTERN_G;		    break;
+		case ITEMID_HOLY_GHOST_TOTEM:	    class_ = MOBID_LICHTERN_Y;		    break;
+		case ITEMID_CORRUPT_TOTEM:			class_ = MOBID_LICHTERN_R;		    break;
+		case ITEMID_SACRED_WAVE_TOTEM:		class_ = MOBID_LICHTERN_B;		    break;
+		case ITEMID_EVIL_EYE_TOTEM:			class_ = MOBID_LICHTERN_G;		    break;
 		default:
 			clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
 			return 0;

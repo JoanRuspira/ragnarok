@@ -4827,6 +4827,7 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case MG_LIGHTNINGBOLT:
 					case MG_COLDBOLT:
 					case NPC_DARKSTRIKE:
+					case MG_UNDEADEMBRACE:
 					case MG_SOULSTRIKE:
 						skillratio += MageSkillAtkRatioCalculator::calculate_skill_atk_ratio(status_get_lv(src), skill_id, skill_lv, target, sc && sc->data[SC_SPELLFIST] && mflag & BF_SHORT);
 						if (sc && sc->data[SC_SPELLFIST] && mflag&BF_SHORT)  {

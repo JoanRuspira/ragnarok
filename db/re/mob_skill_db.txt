@@ -57,9 +57,9 @@
 // MobID,Dummy value (info only),State,SkillID,SkillLv,Rate,CastTime,Delay,Cancelable,Target,Condition type,Condition value,val1,val2,val3,val4,val5,Emotion,Chat
 
 2367,MagicDecoyFire@MG_FIREBOLT,attack,11,5,2000,1000,5000,yes,target,always,0,,,,,,,
-2368,MagicDecoyWater@MG_COLDBOLT,attack,13,5,2000,1000,5000,yes,target,always,0,,,,,,,
-2369,MagicDecoyWind@MG_LIGHTNINGBOLT,attack,340,5,2000,1000,5000,yes,target,always,0,,,,,,,
-2370,MagicDecoyEarth@WZ_EARTHSPIKE,attack,800,5,2000,1000,5000,yes,target,always,0,,,,,,,
+2368,MagicDecoyWater@MG_COLDBOLT,attack,156,5,2000,1000,5000,yes,target,always,0,,,,,,,
+2369,MagicDecoyWind@MG_LIGHTNINGBOLT,attack,800,5,2000,1000,5000,yes,target,always,0,,,,,,,
+2370,MagicDecoyEarth@WZ_EARTHSPIKE,attack,849,5,2000,1000,5000,yes,target,always,0,,,,,,,
 2043,MagicDecoyFire@MG_FIREBOLT,attack,19,5,2000,1000,5000,yes,target,always,0,,,,,,,
 2044,MagicDecoyWater@MG_COLDBOLT,attack,14,5,2000,1000,5000,yes,target,always,0,,,,,,,
 2046,MagicDecoyWind@MG_LIGHTNINGBOLT,attack,20,5,2000,1000,5000,yes,target,always,0,,,,,,,

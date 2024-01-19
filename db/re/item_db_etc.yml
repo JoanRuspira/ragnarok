@@ -9496,6 +9496,26 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
+  - Id: 11
+    AegisName: Holy_Ghost_Totem
+    Name: Holy Ghost Totem
+    Type: Etc
+    Weight: 1
+  - Id: 12
+    AegisName: Corrupt_Totem
+    Name: Corrupt_Totem Totem
+    Type: Etc
+    Weight: 1
+  - Id: 13
+    AegisName: Sacred_Wave_Totem
+    Name: Sacred Wave Totem
+    Type: Etc
+    Weight: 1
+  - Id: 14
+    AegisName: Evil_Eye_Totem
+    Name: Evil Eye Totem
+    Type: Etc
+    Weight: 1
   - Id: 6360
     AegisName: Scarlet_Pts
     Name: Scarlet Point
@@ -9690,7 +9710,31 @@ Body:
       BuyingStore: true
   - Id: 7524
     AegisName: Shadow_Orb
-    Name: Shadow Orb
+    Name: Shadow Essence
+    Type: Etc
+    Buy: 50
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7525
+    AegisName: Holy_Essence
+    Name: Holy Essence
+    Type: Etc
+    Buy: 50
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7526
+    AegisName: Ghost_Essence
+    Name: Ghost Essence
+    Type: Etc
+    Buy: 50
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7527
+    AegisName: Neutral_Essence
+    Name: Neutral Essence
     Type: Etc
     Buy: 50
     Weight: 10
