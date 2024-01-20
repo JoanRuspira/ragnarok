@@ -2062,16 +2062,6 @@ Body:
     Weight: 100
     Script: |
       itemheal rand(50,70),rand(10,12);
-  - Id: 11513
-    AegisName: Protect_Neck_Candy
-    Name: Protect Neck Candy
-    Type: Healing
-    Buy: 50
-    Weight: 10
-    Flags:
-      BuyingStore: true
-    Script: |
-      itemheal rand(5,25),0;
   - Id: 11514
     AegisName: Enriched_Slim_Pot
     Name: Enriched Slim Pot

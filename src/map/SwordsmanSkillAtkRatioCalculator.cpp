@@ -15,7 +15,7 @@ int SwordsmanSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 			return calculate_bash_atk_ratio(skill_lv);
 			break;
 		case SM_MAGNUM:
-			add_magnum_break_special_effects(src);
+			// add_magnum_break_special_effects(src);
 			return calculate_magnum_break_atk_ratio(skill_lv, sstatus->int_);
 			break;
 		case KN_SPEARSTAB:

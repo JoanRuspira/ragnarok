@@ -1726,14 +1726,6 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
-  - Id: 1067
-    AegisName: Tree_Of_Archer_2
-    Name: Solid Trunk
-    Type: Etc
-    Buy: 2
-    Weight: 10
-    Flags:
-      BuyingStore: true
   - Id: 1068
     AegisName: Tree_Of_Archer_3
     Name: Barren Trunk
@@ -8331,11 +8323,10 @@ Body:
     Name: Icicle Kunai
     Type: Ammo
     SubType: Kunai
-    Buy: 10
-    Weight: 10
+    Buy: 5
+    Weight: 3
     Flags:
       BuyingStore: true
-    Attack: 30
     Jobs:
       Assassin: true
       Rogue: true
@@ -8349,11 +8340,10 @@ Body:
     Name: Black Earth Kunai
     Type: Ammo
     SubType: Kunai
-    Buy: 10
-    Weight: 10
+    Buy: 5
+    Weight: 3
     Flags:
       BuyingStore: true
-    Attack: 30
     Jobs:
       Assassin: true
       Rogue: true
@@ -8367,12 +8357,11 @@ Body:
     Name: High Wind Kunai
     Type: Ammo
     SubType: Kunai
-    Buy: 10
-    Weight: 10
+    Buy: 5
+    Weight: 3
     Flags:
       BuyingStore: true
       Rogue: true
-    Attack: 30
     Jobs:
       Assassin: true
     Locations:
@@ -8385,11 +8374,10 @@ Body:
     Name: Heat Wave Kunai
     Type: Ammo
     SubType: Kunai
-    Buy: 10
-    Weight: 10
+    Buy: 5
+    Weight: 3
     Flags:
       BuyingStore: true
-    Attack: 30
     Jobs:
       Assassin: true
       Rogue: true
@@ -8403,11 +8391,10 @@ Body:
     Name: Fell Poison Kunai
     Type: Ammo
     SubType: Kunai
-    Buy: 10
-    Weight: 10
+    Buy: 5
+    Weight: 3
     Flags:
       BuyingStore: true
-    Attack: 30
     Jobs:
       Assassin: true
       Rogue: true
@@ -8421,24 +8408,43 @@ Body:
     Name: Explosive Kunai
     Type: Ammo
     SubType: Kunai
-    Buy: 100
-    Weight: 20
-    Attack: 30
+    Buy: 3
+    Weight: 3
     Jobs:
       Assassin: true
       Rogue: true
-    Classes:
-      Normal: true
-      Upper: true
-      Baby: true
-      Third: true
-      Third_Upper: true
-      Third_Baby: true
     Locations:
       Ammo: true
-    EquipLevelMin: 100
     Script: |
       bonus bAtkEle,Ele_Neutral;
+  - Id: 18
+    AegisName: Holy_Kunai
+    Name: Holy Kunai
+    Type: Ammo
+    SubType: Kunai
+    Buy: 5
+    Weight: 3
+    Jobs:
+      Assassin: true
+      Rogue: true
+    Locations:
+      Ammo: true
+    Script: |
+      bonus bAtkEle,Ele_Holy;
+  - Id: 19
+    AegisName: Ghost_Kunai
+    Name: Ghost Kunai
+    Type: Ammo
+    SubType: Kunai
+    Buy: 5
+    Weight: 3
+    Jobs:
+      Assassin: true
+      Rogue: true
+    Locations:
+      Ammo: true
+    Script: |
+      bonus bAtkEle,Ele_Ghost;
   - Id: 12731
     AegisName: Runstone_Turisus
     Name: Thurisaz Rune
@@ -8484,87 +8490,143 @@ Body:
     Name: Shuriken
     Type: Ammo
     SubType: Shuriken
-    Buy: 10
-    Weight: 10
+    Buy: 3
+    Weight: 3
     Flags:
       BuyingStore: true
       Rogue: true
-    Attack: 10
     Jobs:
       Assassin: true
     Locations:
       Ammo: true
     EquipLevelMin: 1
+    Script: |
+      bonus bAtkEle,Ele_Neutral;
   - Id: 13251
     AegisName: Nimbus_Shuriken
     Name: Nimbus Shuriken
     Type: Ammo
     SubType: Shuriken
-    Buy: 10
-    Weight: 10
+    Buy: 5
+    Weight: 3
     Flags:
       BuyingStore: true
-    Attack: 30
     Jobs:
       Assassin: true
       Rogue: true
     Locations:
       Ammo: true
     EquipLevelMin: 1
+    Script: |
+      bonus bAtkEle,Ele_Water;
   - Id: 13252
     AegisName: Flash_Shuriken
     Name: Flash Shuriken
     Type: Ammo
     SubType: Shuriken
-    Buy: 10
-    Weight: 10
+    Buy: 5
+    Weight: 3
     Flags:
       BuyingStore: true
-    Attack: 30
     Jobs:
       Assassin: true
       Rogue: true
     Locations:
       Ammo: true
     EquipLevelMin: 1
+    Script: |
+      bonus bAtkEle,Ele_Fire;
   - Id: 13253
     AegisName: Sharp_Leaf_Shuriken
     Name: Sharp Leaf Shuriken
     Type: Ammo
     SubType: Shuriken
-    Buy: 10
-    Weight: 10
+    Buy: 5
+    Weight: 3
     Flags:
       BuyingStore: true
-    Attack: 30
     Jobs:
       Assassin: true
       Rogue: true
     Locations:
       Ammo: true
     EquipLevelMin: 1
+    Script: |
+      bonus bAtkEle,Ele_Wind;
   - Id: 13254
     AegisName: Thorn_Needle_Shuriken
     Name: Thorn Needle Shuriken
     Type: Ammo
     SubType: Shuriken
-    Buy: 10
-    Weight: 10
+    Buy: 5
+    Weight: 3
     Flags:
       BuyingStore: true
-    Attack: 30
     Jobs:
       Assassin: true
       Rogue: true
     Locations:
       Ammo: true
     EquipLevelMin: 1
+    Script: |
+      bonus bAtkEle,Ele_Earth;
+  - Id: 15
+    AegisName: Golden_Cross_Shuriken
+    Name: Golden Cross Shuriken
+    Type: Ammo
+    SubType: Shuriken
+    Buy: 5
+    Weight: 3
+    Flags:
+      BuyingStore: true
+      Rogue: true
+    Jobs:
+      Assassin: true
+    Locations:
+      Ammo: true
+    EquipLevelMin: 1
+    Script: |
+      bonus bAtkEle,Ele_Holy;
+  - Id: 16
+    AegisName: Hallucination_Shuriken
+    Name: Hhacination Shuriken
+    Type: Ammo
+    SubType: Shuriken
+    Buy: 5
+    Weight: 3
+    Flags:
+      BuyingStore: true
+      Rogue: true
+    Jobs:
+      Assassin: true
+    Locations:
+      Ammo: true
+    EquipLevelMin: 1
+    Script: |
+      bonus bAtkEle,Ele_Ghost;
+  - Id: 17
+    AegisName: Underworld_Shuriken
+    Name: Underworld Shuriken
+    Type: Ammo
+    SubType: Shuriken
+    Buy: 5
+    Weight: 3
+    Flags:
+      BuyingStore: true
+      Rogue: true
+    Jobs:
+      Assassin: true
+    Locations:
+      Ammo: true
+    EquipLevelMin: 1
+    Script: |
+      bonus bAtkEle,Ele_Dark;
   - Id: 678
     AegisName: Poison_Bottle
     Name: Poison Bottle
     Type: Etc
     Buy: 100
-    Weight: 100
+    Weight: 30
     Flags:
       BuyingStore: true
   - Id: 7432
@@ -9018,7 +9080,7 @@ Body:
     Name: Toxic Gas
     Type: Etc
     Buy: 25
-    Weight: 50
+    Weight: 10
     Flags:
       BuyingStore: true
   - Id: 7154
@@ -9026,7 +9088,7 @@ Body:
     Name: Poisonous Powder
     Type: Etc
     Buy: 25
-    Weight: 50
+    Weight: 20
     Flags:
       BuyingStore: true
   - Id: 7426
@@ -9125,6 +9187,22 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
+  - Id: 20
+    AegisName: White_Gemstone
+    Name: White Gemstone
+    Type: Etc
+    Buy: 50
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 21
+    AegisName: Black_Gemstone
+    Name: Black Gemstone
+    Type: Etc
+    Buy: 50
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 7099
     AegisName: Old_Magic_Circle
     Name: Worn-out Magic Scroll
@@ -9218,9 +9296,8 @@ Body:
     Name: Cannon Ball
     Type: Ammo
     SubType: Cannonball
-    Buy: 10
-    Weight: 10
-    Attack: 0
+    Buy: 3
+    Weight: 30
     Jobs:
       Alchemist: true
       Blacksmith: true
@@ -9232,9 +9309,8 @@ Body:
     Name: Silver Cannon Ball
     Type: Ammo
     SubType: Cannonball
-    Buy: 10
+    Buy: 5
     Weight: 30
-    Attack: 0
     Jobs:
       Alchemist: true
       Blacksmith: true
@@ -9248,9 +9324,8 @@ Body:
     Name: Dark Cannon Ball
     Type: Ammo
     SubType: Cannonball
-    Buy: 10
-    Weight: 10
-    Attack: 0
+    Buy: 5
+    Weight: 30
     Jobs:
       Alchemist: true
       Blacksmith: true
@@ -9264,9 +9339,8 @@ Body:
     Name: Soul Cannon Ball
     Type: Ammo
     SubType: Cannonball
-    Buy: 10
+    Buy: 5
     Weight: 30
-    Attack: 0
     Jobs:
       Alchemist: true
       Blacksmith: true
@@ -9280,9 +9354,8 @@ Body:
     Name: Fire Cannon Ball
     Type: Ammo
     SubType: Cannonball
-    Buy: 10
+    Buy: 5
     Weight: 30
-    Attack: 0
     Jobs:
       Alchemist: true
       Blacksmith: true
@@ -9294,9 +9367,8 @@ Body:
     Name: Ice Cannon Ball
     Type: Ammo
     SubType: Cannonball
-    Buy: 10
+    Buy: 5
     Weight: 30
-    Attack: 0
     Jobs:
       Alchemist: true
       Blacksmith: true
@@ -9308,9 +9380,8 @@ Body:
     Name: Wind Cannon Ball
     Type: Ammo
     SubType: Cannonball
-    Buy: 10
+    Buy: 5
     Weight: 30
-    Attack: 0
     Jobs:
       Alchemist: true
       Blacksmith: true
@@ -9322,9 +9393,8 @@ Body:
     Name: Rock Cannon Ball
     Type: Ammo
     SubType: Cannonball
-    Buy: 10
+    Buy: 5
     Weight: 30
-    Attack: 0
     Jobs:
       Alchemist: true
       Blacksmith: true
@@ -9735,6 +9805,22 @@ Body:
   - Id: 7527
     AegisName: Neutral_Essence
     Name: Neutral Essence
+    Type: Etc
+    Buy: 50
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 1067
+    AegisName: Tree_Of_Archer_2
+    Name: Solid Trunk
+    Type: Etc
+    Buy: 50
+    Weight: 20
+    Flags:
+      BuyingStore: true
+  - Id: 11513
+    AegisName: Protect_Neck_Candy
+    Name: Protect Neck Candy
     Type: Etc
     Buy: 50
     Weight: 10

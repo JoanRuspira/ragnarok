@@ -1883,7 +1883,7 @@ Body:
       - Level: 5
         Time: 240000
     Requires:
-      SpCost: 70
+      SpCost: 80
   - Id: 823
     Name: HT_BOWQUICKEN
     Description: Bow Quicken
@@ -2933,7 +2933,7 @@ Body:
     Requires:
       SpCost: 250
       ItemCost:
-        - Item: Blue_Gemstone
+        - Item: White_Gemstone
           Amount: 2
   - Id: 878
     Name: HP_PENITENTIA
@@ -2962,7 +2962,7 @@ Body:
     Requires:
       SpCost: 85
       ItemCost:
-        - Item: Red_Gemstone
+        - Item: Black_Gemstone
           Amount: 1
   - Id: 879
     Name: HP_VITUPERATUM
@@ -3481,7 +3481,7 @@ Body:
     Hit: Single
     HitCount: 1
     CastCancel: true
-    Cooldown: 20000
+    Cooldown: 60000
     AfterCastActDelay: 400
     Duration1: 50000
     CopyFlags:
@@ -3970,7 +3970,7 @@ Body:
     Requires:
       SpCost: 90
       ItemCost:
-        - Item: Ansila
+        - Item: Blue_Gemstone
           Amount: 1
     Unit:
       Id: Sanctuary
@@ -4215,7 +4215,7 @@ Body:
     Requires:
       SpCost: 80
       ItemCost:
-        - Item: Blue_Gemstone
+        - Item: White_Gemstone
           Amount: 1
     Unit:
       Id: Magnus
@@ -18938,7 +18938,7 @@ Body:
       ItemCost:
         - Item: Holy_Water
           Amount: 1
-        - Item: Ansila
+        - Item: Blue_Gemstone
           Amount: 1
     Unit:
       Id: Epiclesis
@@ -19137,7 +19137,7 @@ Body:
     Requires:
       SpCost: 75
       ItemCost:
-        - Item: Ansila
+        - Item: Blue_Gemstone
           Amount: 1
   - Id: 2051
     Name: AB_HIGHNESSHEAL
@@ -28377,7 +28377,7 @@ Body:
     Requires:
       SpCost: 40
       ItemCost:
-        - Item: Red_Gemstone
+        - Item: Black_Gemstone
           Amount: 1
   - Id: 5073
     Name: AB_CONVENIO

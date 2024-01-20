@@ -6679,6 +6679,8 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		break;
 	case SM_AUTOBERSERK:
 	case MER_AUTOBERSERK:
+		clif_specialeffect(src, EF_MASS_SPIRAL, AREA);
+		clif_soundeffectall(src, "anger.wav", 0, AREA);
 		if( tsce )
 			i = status_change_end(bl, type, INVALID_TIMER);
 		else
@@ -6858,7 +6860,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		skill_castend_song(src, skill_id, skill_lv, tick);
 		break;
 	case BD_SIEGFRIED:
-		clif_specialeffect(src, 139, AREA);
+		clif_specialeffect(src, 1407, AREA); //new_cannon_spear_12_clock
 		skill_castend_song(src, skill_id, skill_lv, tick);
 		break;
 	case BD_LULLABY:
@@ -8739,9 +8741,14 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
  		break;
 	case RK_CRUSHSTRIKE:
 	case RK_MILLENNIUMSHIELD:
-	case RK_VITALITYACTIVATION:
 		if (sc_start(src, bl, type, 100, skill_lv, skill_get_time(skill_id, skill_lv)))
 			clif_skill_nodamage(src, bl, skill_id, skill_lv, 1);
+		break;
+	case RK_VITALITYACTIVATION:
+		if (sc_start(src, bl, type, 100, skill_lv, skill_get_time(skill_id, skill_lv))){
+			clif_specialeffect(src, EF_MAXPAIN, AREA);
+			clif_skill_nodamage(src, bl, skill_id, skill_lv, 1);
+		}
 		break;
 	case RK_STONEHARDSKIN:
 		if (sc_start(src, bl, type, 100, skill_lv, skill_get_time(skill_id, skill_lv))){

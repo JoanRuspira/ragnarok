@@ -14080,7 +14080,7 @@ TIMER_FUNC(status_change_timer){
 			matk = rand()%(status->matk_max-status->matk_min + 1) + status->matk_min;
 			healing = (200 * sce->val1) + (sce->val2 * 3) + (sce->val3 * 3) + (matk * 3);
 			clif_specialeffect(bl, EF_FOOD04, AREA);
-			clif_specialeffect(bl, 139, AREA);
+			clif_specialeffect(bl, 1407, AREA); //new_cannon_spear_12_clock
 			clif_skill_nodamage(NULL,bl,AL_HEAL,healing,1);
 			status_heal(bl,healing,0,0);
 			sc_timer_next(8000 + tick);
