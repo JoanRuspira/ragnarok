@@ -13959,8 +13959,6 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    Flags:
-      AlterRangeSnakeEye: true
     Range: -9
     Hit: Multi_Hit
     HitCount: -5
@@ -14011,11 +14009,6 @@ Body:
           Amount: 48
         - Level: 10
           Amount: 50
-      Weapon:
-        Revolver: true
-      Ammo:
-        Bullet: true
-      AmmoAmount: 10
     Unit:
       Id: Dummyskill
       Layout: 3
@@ -14075,43 +14068,27 @@ Body:
           Amount: 46
         - Level: 10
           Amount: 48
-      Weapon:
-        Gatling: true
   - Id: 518
     Name: GS_DUST
     Description: Dust
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    Range: 2
+    Flags:
+      AlterRangeVulture: true
+    Range: -9
     Hit: Single
     HitCount: 1
     Element: Weapon
-    Knockback: 5
     CastTime: 1000
     AfterCastActDelay: 1000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 3
-        - Level: 2
-          Amount: 6
-        - Level: 3
-          Amount: 9
-        - Level: 4
-          Amount: 12
-        - Level: 5
-          Amount: 15
-        - Level: 6
-          Amount: 18
-        - Level: 7
-          Amount: 21
-        - Level: 8
-          Amount: 24
-        - Level: 9
-          Amount: 27
-        - Level: 10
-          Amount: 30
+      SpCost: 30
+      Weapon:
+        Bow: true
+      Ammo:
+        Arrow: true
+      AmmoAmount: 1
   - Id: 519
     Name: GS_FULLBUSTER
     Description: Full Buster
@@ -14228,11 +14205,6 @@ Body:
           Amount: 36
         - Level: 10
           Amount: 40
-      Weapon:
-        Grenade: true
-      Ammo:
-        Grenade: true
-      AmmoAmount: 1
     Unit:
       Id: Grounddrift_Wind
       Range: 1

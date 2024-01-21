@@ -8653,162 +8653,6 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
-  - Id: 1771
-    AegisName: Venom_Knife
-    Name: Venom Knife
-    Type: Etc
-    Buy: 10
-    Weight: 10
-    Flags:
-      BuyingStore: true
-  - Id: 1750
-    AegisName: Arrow
-    Name: Arrow
-    Type: Ammo
-    SubType: Arrow
-    Buy: 1
-    Weight: 1
-    Attack: 25
-    Jobs:
-      Archer: true
-      BardDancer: true
-      Hunter: true
-      Rogue: true
-      Thief: true
-    Locations:
-      Ammo: true
-    EquipLevelMin: 1
-  - Id: 1751
-    AegisName: Silver_Arrow
-    Name: Silver Arrow
-    Type: Ammo
-    SubType: Arrow
-    Buy: 3
-    Weight: 2
-    Attack: 30
-    Jobs:
-      Archer: true
-      BardDancer: true
-      Hunter: true
-      Rogue: true
-      Thief: true
-    Locations:
-      Ammo: true
-    EquipLevelMin: 1
-    Script: |
-      bonus bAtkEle,Ele_Holy;
-  - Id: 1752
-    AegisName: Fire_Arrow
-    Name: Fire Arrow
-    Type: Ammo
-    SubType: Arrow
-    Buy: 3
-    Weight: 2
-    Attack: 30
-    Jobs:
-      Archer: true
-      BardDancer: true
-      Hunter: true
-      Rogue: true
-      Thief: true
-    Locations:
-      Ammo: true
-    EquipLevelMin: 1
-    Script: |
-      bonus bAtkEle,Ele_Fire;
-  - Id: 1753
-    AegisName: Steel_Arrow
-    Name: Steel Arrow
-    Type: Ammo
-    SubType: Arrow
-    Buy: 4
-    Weight: 2
-    Attack: 40
-    Jobs:
-      Archer: true
-      BardDancer: true
-      Hunter: true
-      Rogue: true
-      Thief: true
-    Locations:
-      Ammo: true
-    EquipLevelMin: 1
-  - Id: 1754
-    AegisName: Crystal_Arrow
-    Name: Crystal Arrow
-    Type: Ammo
-    SubType: Arrow
-    Buy: 3
-    Weight: 2
-    Attack: 30
-    Jobs:
-      Archer: true
-      BardDancer: true
-      Hunter: true
-      Rogue: true
-      Thief: true
-    Locations:
-      Ammo: true
-    EquipLevelMin: 1
-    Script: |
-      bonus bAtkEle,Ele_Water;
-  - Id: 1755
-    AegisName: Arrow_Of_Wind
-    Name: Arrow of Wind
-    Type: Ammo
-    SubType: Arrow
-    Buy: 3
-    Weight: 2
-    Attack: 30
-    Jobs:
-      Archer: true
-      BardDancer: true
-      Hunter: true
-      Rogue: true
-      Thief: true
-    Locations:
-      Ammo: true
-    EquipLevelMin: 1
-    Script: |
-      bonus bAtkEle,Ele_Wind;
-  - Id: 1756
-    AegisName: Stone_Arrow
-    Name: Stone Arrow
-    Type: Ammo
-    SubType: Arrow
-    Buy: 3
-    Weight: 2
-    Attack: 30
-    Jobs:
-      Archer: true
-      BardDancer: true
-      Hunter: true
-      Rogue: true
-      Thief: true
-    Locations:
-      Ammo: true
-    EquipLevelMin: 1
-    Script: |
-      bonus bAtkEle,Ele_Earth;
-  - Id: 1757
-    AegisName: Immatrial_Arrow
-    Name: Immaterial Arrow
-    Type: Ammo
-    SubType: Arrow
-    Buy: 3
-    Weight: 1
-    Attack: 30
-    Jobs:
-      Archer: true
-      BardDancer: true
-      Hunter: true
-      Rogue: true
-      Thief: true
-    Locations:
-      Ammo: true
-    EquipLevelMin: 1
-    Script: |
-      bonus bAtkEle,Ele_Ghost;
   - Id: 1758
     AegisName: Stun_Arrow
     Name: Stun Arrow
@@ -8828,6 +8672,23 @@ Body:
     EquipLevelMin: 1
     Script: |
       bonus2 bAddEff,Eff_Stun,1000;
+  - Id: 1753
+    AegisName: Steel_Arrow
+    Name: Steel Arrow
+    Type: Ammo
+    SubType: Arrow
+    Buy: 4
+    Weight: 2
+    Attack: 40
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Ammo: true
+    EquipLevelMin: 1
   - Id: 1759
     AegisName: Freezing_Arrow
     Name: Frozen Arrow
@@ -8980,25 +8841,6 @@ Body:
     EquipLevelMin: 1
     Script: |
       bonus bAtkEle,Ele_Holy;
-  - Id: 1767
-    AegisName: Arrow_Of_Shadow
-    Name: Arrow of Shadow
-    Type: Ammo
-    SubType: Arrow
-    Buy: 3
-    Weight: 2
-    Attack: 30
-    Jobs:
-      Archer: true
-      BardDancer: true
-      Hunter: true
-      Rogue: true
-      Thief: true
-    Locations:
-      Ammo: true
-    EquipLevelMin: 1
-    Script: |
-      bonus bAtkEle,Ele_Dark;
   - Id: 1768
     AegisName: Sleep_Arrow
     Name: Sleep Arrow
@@ -9304,6 +9146,8 @@ Body:
     Locations:
       Ammo: true
     EquipLevelMin: 1
+    Script: |
+      bonus bAtkEle,Ele_Neutral;
   - Id: 18001
     AegisName: Silver_Cannon_Ball
     Name: Silver Cannon Ball
@@ -9826,3 +9670,153 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
+  - Id: 1771
+    AegisName: Venom_Knife
+    Name: Venom Knife
+    Type: Etc
+    Buy: 10
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 1750
+    AegisName: Arrow
+    Name: Arrow
+    Type: Ammo
+    SubType: Arrow
+    Buy: 1
+    Weight: 1
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Ammo: true
+    EquipLevelMin: 1
+  - Id: 1751
+    AegisName: Silver_Arrow
+    Name: Silver Arrow
+    Type: Ammo
+    SubType: Arrow
+    Buy: 3
+    Weight: 2
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Ammo: true
+    EquipLevelMin: 1
+    Script: |
+      bonus bAtkEle,Ele_Holy;
+  - Id: 1752
+    AegisName: Fire_Arrow
+    Name: Fire Arrow
+    Type: Ammo
+    SubType: Arrow
+    Buy: 3
+    Weight: 2
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Ammo: true
+    EquipLevelMin: 1
+    Script: |
+      bonus bAtkEle,Ele_Fire;
+  - Id: 1754
+    AegisName: Crystal_Arrow
+    Name: Crystal Arrow
+    Type: Ammo
+    SubType: Arrow
+    Buy: 3
+    Weight: 2
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Ammo: true
+    EquipLevelMin: 1
+    Script: |
+      bonus bAtkEle,Ele_Water;
+  - Id: 1755
+    AegisName: Arrow_Of_Wind
+    Name: Arrow of Wind
+    Type: Ammo
+    SubType: Arrow
+    Buy: 3
+    Weight: 2
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Ammo: true
+    EquipLevelMin: 1
+    Script: |
+      bonus bAtkEle,Ele_Wind;
+  - Id: 1756
+    AegisName: Stone_Arrow
+    Name: Stone Arrow
+    Type: Ammo
+    SubType: Arrow
+    Buy: 3
+    Weight: 2
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Ammo: true
+    EquipLevelMin: 1
+    Script: |
+      bonus bAtkEle,Ele_Earth;
+  - Id: 1757
+    AegisName: Immatrial_Arrow
+    Name: Immaterial Arrow
+    Type: Ammo
+    SubType: Arrow
+    Buy: 3
+    Weight: 1
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Ammo: true
+    EquipLevelMin: 1
+    Script: |
+      bonus bAtkEle,Ele_Ghost;
+  - Id: 1767
+    AegisName: Arrow_Of_Shadow
+    Name: Arrow of Shadow
+    Type: Ammo
+    SubType: Arrow
+    Buy: 3
+    Weight: 2
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Ammo: true
+    EquipLevelMin: 1
+    Script: |
+      bonus bAtkEle,Ele_Dark;

@@ -229,7 +229,7 @@ Body:
     JobExp: 150
     Attack: 8
     Attack2: 1
-    Defense: 99
+    Defense: 5
     MagicDefense: 0
     Str: 6
     Dex: 6
@@ -239,8 +239,8 @@ Body:
     ChaseRange: 12
     Size: Medium
     Race: Plant
-    Element: Neutral
-    ElementLevel: 1
+    Element: Earth
+    ElementLevel: 3
     WalkSpeed: 400
     AttackDelay: 1872
     AttackMotion: 672
