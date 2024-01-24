@@ -180,7 +180,7 @@ void WizardSkillAttackRatioCalculator::add_extreme_vacuum_special_effects(struct
 
 void WizardSkillAttackRatioCalculator::add_magic_crasher_special_effects(struct block_list *target)
 {
-    clif_specialeffect(target, EF_SANDMAN, AREA);
+    clif_specialeffect(target, 1380, AREA); //new_dragonbreath_01_clock
 }
 
 int WizardSkillAttackRatioCalculator::calculate_astral_strike_atk_ratio(int skill_lv)

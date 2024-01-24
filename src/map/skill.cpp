@@ -443,7 +443,7 @@ unsigned short skill_dummy2skill_id(unsigned short skill_id) {
 		case CR_GEOGRAPHER_FIELD_ATK:
 			return CR_GEOGRAPHER_FIELD;
 		case GN_HELLS_PLANT_ATK:
-			return GN_HELLS_PLANT;
+			return SN_ULLR;
 		case GN_SLINGITEM_RANGEMELEEATK:
 			return GN_SLINGITEM;
 		case RL_R_TRIP_PLUSATK:
@@ -3401,7 +3401,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case GS_MAGICALBULLET:
 #endif
 	case GS_RAPIDSHOWER:
-	case GS_DUST:
 	case NJ_SYURIKEN:
 	case NJ_KUNAI:
 	case ASC_BREAKER:
@@ -3440,6 +3439,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case AS_SONICBLOW:
 	case BS_HAMMERFALL:
 	case GN_CRAZYWEED_ATK:
+	case GN_HELLS_PLANT_ATK:
 	case RL_AM_BLAST:
 		skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag);
 		break;
@@ -3549,7 +3549,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 				skill_get_type(skill_id), src, src, skill_id, skill_lv, tick, flag, BCT_ENEMY);
 		}
 		break;
-
+		
 	case SN_SHARPSHOOTING:
 		clif_specialeffect(bl, 816, AREA);
 		skill_area_temp[1] = bl->id;
@@ -3783,7 +3783,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case AM_DEMONSTRATION:
 	case GN_DEMONIC_FIRE:
 	case GN_FIRE_EXPANSION_ACID:
-	case GN_HELLS_PLANT_ATK:
 	case KO_HAPPOKUNAI:
 	case KO_HUUMARANKA:
 	case KO_MUCHANAGE:
@@ -3931,16 +3930,9 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 		if(!map_getcell(bl->m, bl->x, bl->y, CELL_CHKLANDPROTECTOR)) // Nothing should happen if the target is on Land Protector
 			skill_attack(skill_get_type(skill_id), src, src, bl, skill_id, skill_lv, tick, flag);
 		break;
-
-
-
-#ifdef RENEWAL
 	case KN_BRANDISHSPEAR:
 		skill_attack(skill_get_type(skill_id), src, src, bl, skill_id, skill_lv, tick, flag);
 		break;
-#else
-	case KN_BRANDISHSPEAR:
-#endif
 	case ML_BRANDISH:
 		//Coded apart for it needs the flag passed to the damage calculation.
 		if (skill_area_temp[1] != bl->id)
@@ -5664,7 +5656,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				src,skill_id,skill_lv,tick, flag|BCT_ENEMY|1, skill_castend_damage_id);
 			clif_skill_nodamage (src,src,skill_id,skill_lv,1);
 			break;
-
 	case MC_FIREWORKS:
 		clif_soundeffectall(&sd->bl, "fireworks.wav", 0, AREA);
 		MerchntSkillAtkRatioCalculator::add_cart_fireworks_special_effects(src);
@@ -5822,6 +5813,12 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case SJ_LIGHTOFSUN:
 	case SJ_BOOKOFDIMENSION:
 	case NPC_HALLUCINATIONWALK:
+		clif_skill_nodamage(src,bl,skill_id,skill_lv,
+			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
+		break;
+	case SN_ULLR:
+		clif_specialeffect(bl, 1381, AREA);//new_dragonbreath_05_clock
+		clif_soundeffectall(bl, "ullr.wav", 0, AREA);
 		clif_skill_nodamage(src,bl,skill_id,skill_lv,
 			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
 		break;
@@ -6401,16 +6398,12 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case SR_EARTHSHAKER:
 		skill_castend_damage_id(src, src, skill_id, skill_lv, tick, flag);
 		break;
-#ifdef RENEWAL
 	case KN_BRANDISHSPEAR:
 		map_foreachindir(skill_area_sub, src->m, src->x, src->y, bl->x, bl->y,
 			skill_get_splash(skill_id, skill_lv), skill_get_maxcount(skill_id, skill_lv), 0, splash_target(src),
 			src, skill_id, skill_lv, tick, flag | BCT_ENEMY | 0,
 			skill_castend_damage_id);
 		break;
-#else
-	case KN_BRANDISHSPEAR:
-#endif
 	case ML_BRANDISH:
 		skill_area_temp[1] = bl->id;
 
@@ -16780,7 +16773,7 @@ int skill_attack_area(struct block_list *bl, va_list ap)
 
 	if(status_isdead(bl))
 		return 0;
-
+	
 	atk_type = va_arg(ap,int);
 	src = va_arg(ap,struct block_list*);
 	dsrc = va_arg(ap,struct block_list*);

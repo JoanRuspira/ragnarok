@@ -2198,6 +2198,7 @@ enum e_skill {
 	CR_GEOGRAPHER_FIELD = 896,
 	CR_GEOGRAPHER_FIELD_ATK = 897,
 	BA_ALLNIGHTLONG = 898,
+	SN_ULLR = 899,
 };
 
 /// The client view ids for land skills.

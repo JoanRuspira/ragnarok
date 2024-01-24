@@ -29,10 +29,36 @@ int HunterSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 		case SN_SHARPSHOOTING:
 			add_sharp_shooting_special_effects(target);
 			return calculate_sharp_shooting_atk_ratio(skill_lv,sstatus->dex);
+		case GN_HELLS_PLANT_ATK:
+			return calculate_ullrs_magic_shot_atk_ratio(skill_lv);
 		default:
 			return 0;
 			break;
 	}
+}
+
+int HunterSkillAttackRatioCalculator::calculate_ullrs_magic_shot_atk_ratio(int skill_lv)
+{
+	ShowMessage("ullr\n");
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = -95;
+			break;
+		case 2:
+			ratio = -85;
+			break;
+		case 3:
+			ratio = -75;
+			break;
+		case 4:
+			ratio = -65;
+			break;
+		case 5:
+			ratio = -55;
+			break;
+		}
+	return ratio;
 }
 
 int HunterSkillAttackRatioCalculator::calculate_sharp_shooting_atk_ratio(int skill_lv, int dex)

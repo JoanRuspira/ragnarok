@@ -463,7 +463,7 @@ void SkillAdditionalEffects::skill_trigger_status_even_by_blocked_damage(struct 
 
 	if (sd)
 	{ // These statuses would be applied anyway even if the damage was blocked by some skills. [Inkfish]
-		if ( skill_id != CR_REFLECTSHIELD && skill_id != MS_REFLECTSHIELD && skill_id != GN_HELLS_PLANT_ATK
+		if ( skill_id != CR_REFLECTSHIELD && skill_id != MS_REFLECTSHIELD
 			) {
 			// Trigger status effects
 			enum sc_type type;

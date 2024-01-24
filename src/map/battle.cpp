@@ -1620,12 +1620,10 @@ int64 battle_calc_damage(struct block_list *src,struct block_list *bl,struct Dam
 			sce->val3&flag && sce->val4&flag)
 			damage -= damage * sc->data[SC_ARMOR]->val2 / 100;
 
-		if( sc->data[SC_ENERGYCOAT] && (skill_id == GN_HELLS_PLANT_ATK ||
-#ifdef RENEWAL
+		if( sc->data[SC_ENERGYCOAT] && (
+
 			((flag&BF_WEAPON || flag&BF_MAGIC))
-#else
-			(flag&BF_WEAPON)
-#endif
+
 			) )
 		{
 			struct status_data *status = status_get_status_data(bl);
@@ -2046,11 +2044,9 @@ static int battle_range_type(struct block_list *src, struct block_list *target, 
 			if (src->type == BL_MOB)
 				return BF_SHORT;
 			break;
-#ifdef RENEWAL
 		case KN_BRANDISHSPEAR:
 			// Renewal changes to ranged physical damage
 			return BF_LONG;
-#endif
 		case DUMMY_CROSSIMPACT:
 			// Cast range is 7 cells and player jumps to target but skill is considered melee
 			return BF_SHORT;
@@ -3058,15 +3054,12 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case GS_BULLSEYE:
 			//Only works well against brute/demihumans non bosses.
 			if((tstatus->race == RC_BRUTE || tstatus->race == RC_DEMIHUMAN || tstatus->race == RC_PLAYER_HUMAN || tstatus->race == RC_PLAYER_DORAM) && !status_has_mode(tstatus,MD_STATUSIMMUNE))
-				skillratio += 400;
+			skillratio += 400;
 			break;
 		case GS_DESPERADO:
 			skillratio += 50 * (skill_lv - 1);
 			if (sc && sc->data[SC_FALLEN_ANGEL])
 				skillratio *= 2;
-			break;
-		case GS_DUST:
-			skillratio += 50 * skill_lv;
 			break;
 #ifdef RENEWAL
 		case GS_GROUNDDRIFT:
@@ -3324,10 +3317,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 				}
 				RE_LVL_DMOD(100);
 			}
-			break;
-		case GN_HELLS_PLANT_ATK:
-			skillratio += -100 + 100 * skill_lv + sstatus->int_ * (sd ? pc_checkskill(sd, AM_CANNIBALIZE) : 5); // !TODO: Confirm INT and Cannibalize bonus
-			RE_LVL_DMOD(100);
 			break;
 		// Physical Elemantal Spirits Attack Skills
 		case EL_CIRCLE_OF_FIRE:
@@ -4913,6 +4902,9 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case GN_CRAZYWEED_ATK:
 						skillratio += AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, tstatus);
 						break;
+					case GN_HELLS_PLANT_ATK:
+						skillratio += HunterSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
+						break;
 					case MG_FIREBALL:
 						skillratio += 40 + 20 * skill_lv;
 						if(ad.miscflag == 2) //Enemies at the edge of the area will take 75% of the damage
@@ -5664,6 +5656,9 @@ void battle_vanish_damage(struct map_session_data *sd, struct block_list *target
 struct Damage battle_calc_attack(int attack_type,struct block_list *bl,struct block_list *target,uint16 skill_id,uint16 skill_lv,int flag)
 {
 	struct Damage d;
+	if(skill_id == GN_HELLS_PLANT_ATK) {
+		attack_type = BF_MAGIC;
+	}
 	switch(attack_type) {
 		case BF_WEAPON: d = battle_calc_weapon_attack(bl,target,skill_id,skill_lv,flag); break;
 		case BF_MAGIC:  d = battle_calc_magic_attack(bl,target,skill_id,skill_lv,flag);  break;
@@ -5756,7 +5751,7 @@ int64 battle_calc_return_damage(struct block_list* bl, struct block_list *src, i
 					}
 				}
 
-				if (sc->data[SC_DEATHBOUND] && skill_id != GN_HELLS_PLANT_ATK && !status_bl_has_mode(src,MD_STATUSIMMUNE)) {
+				if (sc->data[SC_DEATHBOUND] && !status_bl_has_mode(src,MD_STATUSIMMUNE)) {
 					if (distance_bl(src,bl) <= 0 || !map_check_dir(map_calc_dir(bl,src->x,src->y), unit_getdir(bl))) {
 						int64 rd1 = 0;
 

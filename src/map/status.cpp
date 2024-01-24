@@ -961,6 +961,8 @@ void initChangeTables(void)
 	set_sc( GN_FIRE_EXPANSION_SMOKE_POWDER	, SC_SMOKEPOWDER	, EFST_FIRE_EXPANSION_SMOKE_POWDER, SCB_FLEE );
 	set_sc( GN_FIRE_EXPANSION_TEAR_GAS	, SC_TEARGAS		, EFST_FIRE_EXPANSION_TEAR_GAS	, SCB_HIT|SCB_FLEE );
 	set_sc_with_vfx( GN_HELLS_PLANT		, SC_HELLS_PLANT	, EFST_HELLS_PLANT_ARMOR	, SCB_NONE );
+	set_sc_with_vfx( SN_ULLR		, SC_HELLS_PLANT	, EFST_HELLS_PLANT_ARMOR	, SCB_NONE );
+	
 	set_sc( GN_MANDRAGORA			, SC_MANDRAGORA		, EFST_MANDRAGORA			, SCB_INT );
 	set_sc_with_vfx( GN_ILLUSIONDOPING	, SC_ILLUSIONDOPING	, EFST_ILLUSIONDOPING		, SCB_HIT );
 
@@ -11349,7 +11351,8 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			tick_time = 1000; // [GodLesZ] tick time
 			break;
 		case SC_HELLS_PLANT:
-			tick_time = 333;
+			val2 = src->id;
+			tick_time = 300;
 			val4 = tick / tick_time;
 			break;
 		case SC_SWINGDANCE:
@@ -14212,8 +14215,12 @@ TIMER_FUNC(status_change_timer){
 
 	case SC_HELLS_PLANT:
 		if (--(sce->val4) > 0) {
-			skill_castend_damage_id(bl, bl, GN_HELLS_PLANT_ATK, sce->val1, tick, 0);
-			sc_timer_next(333 + tick);
+			struct block_list *src = map_id2bl(sce->val2);
+			if( !src )
+				break;
+			map_foreachinrange(skill_area_sub,bl,skill_get_splash(GN_HELLS_PLANT_ATK,sce->val1),BL_CHAR,
+				src,GN_HELLS_PLANT_ATK,sce->val1,tick,BCT_ENEMY,skill_castend_damage_id);
+			sc_timer_next(300 + tick);
 			return 0;
 		}
 		break;

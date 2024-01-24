@@ -18,6 +18,7 @@ class HunterSkillAttackRatioCalculator
 		static int calculate_slash_atk_ratio(int skill_lv, int int_);
 		static int calculate_blitz_beat_atk_ratio(int skill_lv, int agi);
 		static int calculate_sharp_shooting_atk_ratio(int skill_lv, int dex);
+		static int calculate_ullrs_magic_shot_atk_ratio(int skill_lv);
 		static int calculate_zephyr_sniping_atk_ratio(int skill_lv);
 		static void add_sharp_shooting_special_effects(struct block_list *target);
 		static void add_slash_special_effects(struct block_list *target);
