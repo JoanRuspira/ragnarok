@@ -960,8 +960,7 @@ void initChangeTables(void)
 	set_sc_with_vfx( GN_BLOOD_SUCKER	, SC_BLOODSUCKER	, EFST_BLOOD_SUCKER, SCB_NONE );
 	set_sc( GN_FIRE_EXPANSION_SMOKE_POWDER	, SC_SMOKEPOWDER	, EFST_FIRE_EXPANSION_SMOKE_POWDER, SCB_FLEE );
 	set_sc( GN_FIRE_EXPANSION_TEAR_GAS	, SC_TEARGAS		, EFST_FIRE_EXPANSION_TEAR_GAS	, SCB_HIT|SCB_FLEE );
-	set_sc_with_vfx( GN_HELLS_PLANT		, SC_HELLS_PLANT	, EFST_HELLS_PLANT_ARMOR	, SCB_NONE );
-	set_sc_with_vfx( SN_ULLR		, SC_HELLS_PLANT	, EFST_HELLS_PLANT_ARMOR	, SCB_NONE );
+	set_sc_with_vfx( SN_ULLR		, SC_ULLR	, EFST_ULLR	, SCB_NONE );
 	
 	set_sc( GN_MANDRAGORA			, SC_MANDRAGORA		, EFST_MANDRAGORA			, SCB_INT );
 	set_sc_with_vfx( GN_ILLUSIONDOPING	, SC_ILLUSIONDOPING	, EFST_ILLUSIONDOPING		, SCB_HIT );
@@ -1629,7 +1628,7 @@ void initChangeTables(void)
 	StatusDisplayType[SC_ANTI_M_BLAST]	  = BL_PC;
 	StatusDisplayType[SC_SPRITEMABLE]     = BL_PC;
 	StatusDisplayType[SC_SV_ROOTTWIST]    = BL_PC;
-	StatusDisplayType[SC_HELLS_PLANT]     = BL_PC;
+	StatusDisplayType[SC_ULLR]     = BL_PC;
 	StatusDisplayType[SC_MISTY_FROST]     = BL_PC;
 	StatusDisplayType[SC_MAGIC_POISON]    = BL_PC;
 	StatusDisplayType[SC_MADOGEAR]        = BL_PC;
@@ -11350,7 +11349,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			val4 = tick / 1000;
 			tick_time = 1000; // [GodLesZ] tick time
 			break;
-		case SC_HELLS_PLANT:
+		case SC_ULLR:
 			val2 = src->id;
 			tick_time = 300;
 			val4 = tick / tick_time;
@@ -14213,13 +14212,13 @@ TIMER_FUNC(status_change_timer){
 		}
 		break;
 
-	case SC_HELLS_PLANT:
+	case SC_ULLR:
 		if (--(sce->val4) > 0) {
 			struct block_list *src = map_id2bl(sce->val2);
 			if( !src )
 				break;
-			map_foreachinrange(skill_area_sub,bl,skill_get_splash(GN_HELLS_PLANT_ATK,sce->val1),BL_CHAR,
-				src,GN_HELLS_PLANT_ATK,sce->val1,tick,BCT_ENEMY,skill_castend_damage_id);
+			map_foreachinrange(skill_area_sub,bl,skill_get_splash(SN_ULLR_ATK,sce->val1),BL_CHAR,
+				src,SN_ULLR_ATK,sce->val1,tick,BCT_ENEMY,skill_castend_damage_id);
 			sc_timer_next(300 + tick);
 			return 0;
 		}

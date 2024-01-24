@@ -13541,13 +13541,12 @@ Body:
     TargetType: Ground
     DamageFlags:
       NoDamage: true
-    Range: 2
+    Range: 1
     Hit: Single
     HitCount: 1
     ActiveInstance: 10
     CastCancel: true
     Duration1: 60000
-    Cooldown:
     Requires:
       SpCost: 20
   - Id: 492
@@ -25559,7 +25558,7 @@ Body:
         NoReiteration: true
         RemovedByFireRain: true
   - Id: 2491
-    Name: GN_HELLS_PLANT_ATK
+    Name: SN_ULLR_ATK
     Description: Hell's Plant Attack
     MaxLevel: 5
     Type: Magic

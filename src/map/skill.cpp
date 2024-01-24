@@ -442,7 +442,7 @@ unsigned short skill_dummy2skill_id(unsigned short skill_id) {
 			return GN_CRAZYWEED;
 		case CR_GEOGRAPHER_FIELD_ATK:
 			return CR_GEOGRAPHER_FIELD;
-		case GN_HELLS_PLANT_ATK:
+		case SN_ULLR_ATK:
 			return SN_ULLR;
 		case GN_SLINGITEM_RANGEMELEEATK:
 			return GN_SLINGITEM;
@@ -2165,7 +2165,7 @@ int64 skill_attack (int attack_type, struct block_list* src, struct block_list *
 		case HFLI_SBR44:
 		case HM_BEHOLDER_2:
 		case KO_BAKURETSU:
-		case GN_HELLS_PLANT_ATK:
+		case SN_ULLR_ATK:
 		case SU_SV_ROOTTWIST_ATK:
 			dmg.dmotion = clif_skill_damage(src,bl,tick,dmg.amotion,dmg.dmotion,damage,dmg.div_,skill_id,-1,DMG_SPLASH);
 			break;
@@ -3439,7 +3439,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case AS_SONICBLOW:
 	case BS_HAMMERFALL:
 	case GN_CRAZYWEED_ATK:
-	case GN_HELLS_PLANT_ATK:
+	case SN_ULLR_ATK:
 	case RL_AM_BLAST:
 		skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag);
 		break;
@@ -5794,7 +5794,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case SR_CRESCENTELBOW:
 	case SR_LIGHTNINGWALK:
 	case GN_CARTBOOST:
-	case GN_HELLS_PLANT:
 	case KO_MEIKYOUSISUI:
 	case ALL_ODINS_POWER:
 	case ALL_FULL_THROTTLE:

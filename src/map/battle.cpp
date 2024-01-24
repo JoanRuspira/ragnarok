@@ -4902,7 +4902,7 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case GN_CRAZYWEED_ATK:
 						skillratio += AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, tstatus);
 						break;
-					case GN_HELLS_PLANT_ATK:
+					case SN_ULLR_ATK:
 						skillratio += HunterSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
 					case MG_FIREBALL:
@@ -5656,7 +5656,7 @@ void battle_vanish_damage(struct map_session_data *sd, struct block_list *target
 struct Damage battle_calc_attack(int attack_type,struct block_list *bl,struct block_list *target,uint16 skill_id,uint16 skill_lv,int flag)
 {
 	struct Damage d;
-	if(skill_id == GN_HELLS_PLANT_ATK) {
+	if(skill_id == SN_ULLR_ATK) {
 		attack_type = BF_MAGIC;
 	}
 	switch(attack_type) {
@@ -5711,7 +5711,7 @@ int64 battle_calc_return_damage(struct block_list* bl, struct block_list *src, i
 	}
 
 	if (ssc) {
-		if (ssc->data[SC_HELLS_PLANT])
+		if (ssc->data[SC_ULLR])
 			return 0;
 	}
 

@@ -1616,7 +1616,7 @@
 	export_constant(SC_USE_SKILL_SP_SHA);
 	export_constant(SC_SP_SHA);
 	export_constant(SC_SOULCURSE);
-	export_constant(SC_HELLS_PLANT);
+	export_constant(SC_ULLR);
 	export_constant(SC_INCREASE_MAXHP);
 	export_constant(SC_INCREASE_MAXSP);
 	export_constant(SC_HELPANGEL);
@@ -3602,7 +3602,7 @@
 	export_constant(EFST_FIRM_FAITH);
 	export_constant(EFST_AIRSHIP_PIPE);
 	export_constant(EFST_PIECES_OF_SHADOW);
-	export_constant(EFST_HELLS_PLANT_ARMOR);
+	export_constant(EFST_ULLR);
 	export_constant(EFST_RELIEVE_DAMAGE);
 	export_constant(EFST_LOCKON_LASER);
 	export_constant(EFST_REF_T_POTION);
