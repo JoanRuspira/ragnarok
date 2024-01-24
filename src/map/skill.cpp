@@ -5758,7 +5758,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case ST_REJECTSWORD:
 	case HW_MAGICPOWER:
 	case ASC_EDP:
-	case PF_DOUBLECASTING:
 	case SG_SUN_COMFORT:
 	case SG_MOON_COMFORT:
 	case SG_STAR_COMFORT:
@@ -5813,6 +5812,11 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case SJ_LIGHTOFSUN:
 	case SJ_BOOKOFDIMENSION:
 	case NPC_HALLUCINATIONWALK:
+		clif_skill_nodamage(src,bl,skill_id,skill_lv,
+			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
+		break;
+	case PF_DOUBLECASTING:
+		clif_specialeffect(src, 1259, AREA);
 		clif_skill_nodamage(src,bl,skill_id,skill_lv,
 			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
 		break;
@@ -7722,11 +7726,30 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case SA_CASTCANCEL:
 	case SO_SPELLFIST:
 		clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
+		switch (sd->skill_id_old){
+			case MG_FIREBOLT:
+				clif_specialeffect(src, 1270, AREA);
+				break;
+			case MG_COLDBOLT:
+				clif_specialeffect(src, 1271, AREA);
+				break;
+			case MG_LIGHTNINGBOLT:
+				clif_specialeffect(src, 1272, AREA);
+				break;
+			case MG_EARTHBOLT:
+				clif_specialeffect(src, 1273, AREA);
+				break;
+			case NPC_DARKSTRIKE:
+				clif_specialeffect(src, 995, AREA);
+				break;
+			case MG_SOULSTRIKE:
+				clif_specialeffect(src, 992, AREA);
+				break;				
+		}
 		unit_skillcastcancel(src,1);
 		if(sd) {
 			int sp = skill_get_sp(sd->skill_id_old,sd->skill_lv_old);
 			if( skill_id == SO_SPELLFIST ){
-				clif_specialeffect(src, 1259, AREA);
 				sc_start4(src,src,type,100,skill_lv * 9999,skill_lv,sd->skill_id_old,sd->skill_lv_old,skill_get_time(skill_id,skill_lv));
 				sd->skill_id_old = sd->skill_lv_old = 0;
 				break;
