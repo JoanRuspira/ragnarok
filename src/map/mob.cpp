@@ -5202,7 +5202,7 @@ uint64 MobAvailDatabase::parseBodyNode(const YAML::Node &node) {
 			}
 		} else {
 			std::shared_ptr<s_mob_db> sprite_mob = mobdb_search_aegisname(sprite.c_str());
-
+			
 			if (sprite_mob == nullptr) {
 				this->invalidWarning(node["Sprite"], "Unknown mob sprite constant %s.\n", sprite.c_str());
 				return 0;

@@ -19147,43 +19147,52 @@ void clif_plant_cultivation_list( struct map_session_data *sd, uint16 skill_lv, 
 	int count = 0;
 	if(skill_lv == 1){
 		count = 2;
-		p->items[0].itemId = client_nameid(511);
-		p->items[1].itemId = client_nameid(507);
+		p->items[0].itemId = client_nameid(ITEMID_GREEN_PLANT);
+		p->items[1].itemId = client_nameid(ITEMID_RED_PLANT);
 	}
 	if(skill_lv == 2){
 		count = 4;
-		p->items[0].itemId = client_nameid(511);
-		p->items[1].itemId = client_nameid(507);
-		p->items[2].itemId = client_nameid(508);
-		p->items[3].itemId = client_nameid(509);
+		p->items[0].itemId = client_nameid(ITEMID_GREEN_PLANT);
+		p->items[1].itemId = client_nameid(ITEMID_RED_PLANT);
+		p->items[2].itemId = client_nameid(ITEMID_ORANGE_PLANT);
+		p->items[3].itemId = client_nameid(ITEMID_YELLOW_PLANT);
 	}
 	if(skill_lv == 3){
-		count = 5;
-		p->items[0].itemId = client_nameid(511);
-		p->items[1].itemId = client_nameid(507);
-		p->items[2].itemId = client_nameid(508);
-		p->items[3].itemId = client_nameid(509);
-		p->items[4].itemId = client_nameid(510);
+		count = 6;
+		p->items[0].itemId = client_nameid(ITEMID_GREEN_PLANT);
+		p->items[1].itemId = client_nameid(ITEMID_RED_PLANT);
+		p->items[2].itemId = client_nameid(ITEMID_ORANGE_PLANT);
+		p->items[3].itemId = client_nameid(ITEMID_YELLOW_PLANT);
+		p->items[4].itemId = client_nameid(ITEMID_WHITE_PLANT);
+		p->items[5].itemId = client_nameid(ITEMID_BLUE_PLANT);
 	}
 	if(skill_lv == 4){
-		count = 6;
-		p->items[0].itemId = client_nameid(511);
-		p->items[1].itemId = client_nameid(507);
-		p->items[2].itemId = client_nameid(508);
-		p->items[3].itemId = client_nameid(509);
-		p->items[4].itemId = client_nameid(510);
-		p->items[5].itemId = client_nameid(608);
+		count = 10;
+		p->items[0].itemId = client_nameid(ITEMID_GREEN_PLANT);
+		p->items[1].itemId = client_nameid(ITEMID_RED_PLANT);
+		p->items[2].itemId = client_nameid(ITEMID_ORANGE_PLANT);
+		p->items[3].itemId = client_nameid(ITEMID_YELLOW_PLANT);
+		p->items[4].itemId = client_nameid(ITEMID_WHITE_PLANT);
+		p->items[5].itemId = client_nameid(ITEMID_BLUE_PLANT);
+		p->items[6].itemId = client_nameid(ITEMID_GREEN_MUSHROOM);
+		p->items[7].itemId = client_nameid(ITEMID_YELLOW_MUSHROOM);
+		p->items[8].itemId = client_nameid(ITEMID_BLUE_MUSHROOM);
+		p->items[9].itemId = client_nameid(ITEMID_RED_MUSHROOM);
+
 	}
 	if(skill_lv == 5){
-		count = 8;
-		p->items[0].itemId = client_nameid(511);
-		p->items[1].itemId = client_nameid(507);
-		p->items[2].itemId = client_nameid(508);
-		p->items[3].itemId = client_nameid(509);
-		p->items[4].itemId = client_nameid(510);
-		p->items[5].itemId = client_nameid(608);
-		p->items[6].itemId = client_nameid(990);
-		p->items[7].itemId = client_nameid(991);
+		count = 11;
+		p->items[0].itemId = client_nameid(ITEMID_GREEN_PLANT);
+		p->items[1].itemId = client_nameid(ITEMID_RED_PLANT);
+		p->items[2].itemId = client_nameid(ITEMID_ORANGE_PLANT);
+		p->items[3].itemId = client_nameid(ITEMID_YELLOW_PLANT);
+		p->items[4].itemId = client_nameid(ITEMID_WHITE_PLANT);
+		p->items[5].itemId = client_nameid(ITEMID_BLUE_PLANT);
+		p->items[6].itemId = client_nameid(ITEMID_GREEN_MUSHROOM);
+		p->items[7].itemId = client_nameid(ITEMID_YELLOW_MUSHROOM);
+		p->items[8].itemId = client_nameid(ITEMID_BLUE_MUSHROOM);
+		p->items[9].itemId = client_nameid(ITEMID_RED_MUSHROOM);
+		p->items[10].itemId = client_nameid(ITEMID_SHINING_PLANT);
 	}
 
 	if( count > 0 ) {

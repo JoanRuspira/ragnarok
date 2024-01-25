@@ -331,7 +331,7 @@ louyang,262,135,0	shop	Food Vendor#lou9	536,551:-1,566:-1,567:-1,557:-1
 louyang,242,151,2	shop	Food Vendor#lou10	537,669:-1,584:-1,12056:-1,12084:-1
 louyang,247,146,4	shop	Food Vendor#lou11	534,12098:-1,556:-1,555:-1,550:-1
 lou_in02,235,176,5	shop	Dye Merchant#lou12	742,975:-1,976:-1,978:-1,979:-1,980:-1,981:-1,982:-1,983:-1
-lou_in02,253,162,5	shop	Herb Vendor#lou13	643,507:-1,508:-1,509:-1,510:-1,511:-1
+lou_in02,253,162,5	shop	Herb Vendor#lou13	643,507:-1,508:-1,32:-1,509:-1,510:-1,511:-1
 lou_in02,62,184,4	shop	Waiter#lou14	74,12045:-1,12055:-1,12050:-1,12065:-1,12060:-1,12070:-1
 lou_in02,74,36,5	shop	Costume Dealer#lou15	475,20988:-1,20990:-1,480071:-1,20506:-1,20510:-1,20514:-1,31311:-1,31312:-1
 louyang,312,105,5	shop	Pet Groomer#lou16	951,537:-1,643:-1,10013:-1,10014:-1,554:-1,6113:-1,6114:-1,6115:-1
@@ -360,7 +360,7 @@ morocc,172,102,4	shop	Jeweler#moc14	89,721:-1,723:-1,726:-1,728:-1,729:-1
 morocc,154,70,6	shop	Item Collector#moc15	898,911:-1,528:-1,919:-1,925:-1
 morocc,169,84,1	shop	Fruit Trader#moc16	583,512:-1,513:-1,514:-1,515:-1,516:-1
 morocc,173,51,5	shop	Pet Groomer#moc17	943,537:-1,643:-1,10013:-1,10014:-1,554:-1,6113:-1,6114:-1,6115:-1
-morocc,207,88,4	shop	Herb Merchant#moc18	742,507:-1,508:-1,509:-1,510:-1,511:-1
+morocc,207,88,4	shop	Herb Merchant#moc18	742,507:-1,508:-1,32:-1,509:-1,510:-1,511:-1
 morocc,243,136,6	shop	Dye Merchant#moc19	742,975:-1,976:-1,978:-1,979:-1,980:-1,981:-1,982:-1,983:-1
 morocc,268,193,1	shop	Rare Fruit Merchant#moc20	851,606:-1,607:-1,608:-1,610:-1
 morocc,207,251,1	shop	Juice Vendor#moc21	931,531:-1,532:-1,533:-1,534:-1
@@ -389,7 +389,7 @@ nif_in,155,22,3	shop	Costume Dealer#nif3	98,20034:-1,19574:-1,20586:-1,20588:-1,
 niflheim,240,185,3	shop	Jeweler#nif4	58,721:-1,723:-1,726:-1,728:-1,729:-1
 niflheim,233,196,1	shop	Market Butcher#nif5	87,517:-1,528:-1
 niflheim,220,185,1	shop	Baker#nif6	91,580:-1,592:-1,593:-1,594:-1,595:-1
-niflheim,201,205,4	shop	Herb Vendor#nif7	643,507:-1,508:-1,509:-1,510:-1,511:-1
+niflheim,201,205,4	shop	Herb Vendor#nif7	643,507:-1,508:-1,32:-1,509:-1,510:-1,511:-1
 niflheim,235,180,2	shop	Rare Fruit Merchant#nif8	851,606:-1,607:-1,608:-1,610:-1
 niflheim,235,167,3	shop	Fruit Trader#nif9	583,512:-1,513:-1,514:-1,515:-1,516:-1
 niflheim,223,152,1	shop	Market Butcher#nif10	87,517:-1,528:-1
@@ -420,7 +420,7 @@ payon_in01,180,5,2	shop	Waiter#payon8	74,12045:-1,12055:-1,12050:-1,12065:-1,120
 payon,200,135,4	shop	Fruit Vendor#payon9	82,512:-1,513:-1,514:-1,515:-1,516:-1,517:-1,518:-1,519:-1
 payon_in01,15,10,4	shop	Costume Headgear Dealer#payon10	82,19797:-1,20203:-1,19849:-1,19850:-1
 payon,165,115,6	shop	Potion Master#payon11	749,501:-1,502:-1,503:-1,504:-1,505:-1,506:-1
-payon,165,107,6	shop	Herb Vendor#payon12	643,507:-1,508:-1,509:-1,510:-1,511:-1
+payon,165,107,6	shop	Herb Vendor#payon12	643,507:-1,508:-1,32:-1,509:-1,510:-1,511:-1
 payon,167,180,3	shop	Performer Vendor#payon13	70,11513:-1,6144:-1
 payon,98,326,4	shop	Gemstone Dealer#payon14	58,715:-1,716:-1,717:-1,20:-1,21:-1
 payon,93,323,4	shop	Elemental Vendor#payon15	76,990:-1,991:-1,992:-1,993:-1
@@ -459,7 +459,7 @@ prontera,67,158,5	shop	Baker#prt19	91,580:-1,592:-1,593:-1,594:-1,595:-1
 prontera,67,150,7	shop	Juice Dealer#prt20	70,531:-1,532:-1,533:-1,534:-1
 prontera,72,133,5	shop	Baker#prt21	91,580:-1,592:-1,593:-1,594:-1,595:-1
 prontera,55,138,1	shop	Costume Dealer#prt22	900,19585:-1,19545:-1,19584:-1,19598:-1,19605:-1,20582:-1,20584:-1
-prontera,65,112,2	shop	Herb Vendor#prt23	643,507:-1,508:-1,509:-1,510:-1,511:-1
+prontera,65,112,2	shop	Herb Vendor#prt23	643,507:-1,508:-1,32:-1,509:-1,510:-1,511:-1
 prontera,64,106,1	shop	Pizza Vendor#prt24	830,563:-1
 prontera,46,87,7	shop	Fish Vendor#prt25	101,965:-1,964:-1,544:-1,579:-1,584:-1,12054:-1
 prontera,52,85,2	shop	Fish Vendor#prt26	83,544:-1,579:-1,584:-1
@@ -469,7 +469,7 @@ prontera,80,45,0	shop	Baker#prt29	91,580:-1,592:-1,593:-1,594:-1,595:-1
 prontera,90,62,4	shop	Fish Vendor#prt30	83,544:-1,579:-1,584:-1
 prontera,105,71,7	shop	Fish Vendor#prt31	76,544:-1,579:-1,584:-1
 prontera,106,87,7	shop	Baker#prt32	78,580:-1,592:-1,593:-1,594:-1,595:-1
-prontera,102,97,5	shop	Herb Vendor#prt33	85,507:-1,508:-1,509:-1,510:-1,511:-1
+prontera,102,97,5	shop	Herb Vendor#prt33	85,507:-1,508:-1,32:-1,509:-1,510:-1,511:-1
 prontera,111,98,5	shop	Butcher#prt34	87,517:-1,528:-1
 prontera,115,110,7	shop	Baker#prt35	91,580:-1,592:-1,593:-1,594:-1,595:-1
 prontera,122,105,2	shop	Vegetable Vendor#prt36	892,522:-1,512:-1,513:-1,515:-1,516:-1,535:-1
@@ -480,7 +480,7 @@ prontera,123,67,2	shop	Magical Item Seller#prt40	942,717:-1,1601:-1,1604:-1,1607
 prontera,246,161,1	shop	Juice Dealer#prt41	70,531:-1,532:-1,533:-1,534:-1
 prontera,255,152,6	shop	Baker#prt42	91,580:-1,592:-1,593:-1,594:-1,595:-1
 prontera,271,67,3	shop	Doll Supplier#prt43	85,740:-1,741:-1,742:-1
-prontera,40,214,4	shop	Herb Vendor#prt44	643,507:-1,508:-1,509:-1,510:-1,511:-1
+prontera,40,214,4	shop	Herb Vendor#prt44	643,507:-1,508:-1,32:-1,509:-1,510:-1,511:-1
 prontera,275,270,4	shop	Pet Vendor#prt45	90,9006:-1,9015:-1,9031:-1
 prt_in,179,92,2	shop	Book Dealer#prt46	942,1550:-1,1551:-1,1552:-1,1553:-1,1554:-1,1555:-1,1556:-1,1557:-1
 prt_in,175,50,2	shop	Staff Dealer#prt47	47,1601:-1,1604:-1,1607:-1,1610:-1,1472:-1,1473:-1
@@ -517,7 +517,7 @@ rachel,174,121,1	shop	Potion Master#rachel9	749,501:-1,502:-1,503:-1,504:-1,505:
 rachel,162,122,0	shop	Butcher#rachel10	87,517:-1,528:-1
 rachel,135,89,2	shop	Gemstone Dealer#rachel11	58,715:-1,716:-1,717:-1,20:-1,21:-1
 rachel,135,78,3	shop	Vegetable Gardener#rachel12	91,515:-1,516:-1,535:-1
-rachel,135,63,1	shop	Herb Vendor#rachel13	643,507:-1,508:-1,509:-1,510:-1,511:-1
+rachel,135,63,1	shop	Herb Vendor#rachel13	643,507:-1,508:-1,32:-1,509:-1,510:-1,511:-1
 rachel,123,54,6	shop	Arrow Vendor#rachel14	732,1750:-1,1752:-1,1754:-1,1755:-1,1756:-1,1751:-1,1767:-1,1757:-1
 rachel,136,46,2	shop	Butcher#rachel15	996,517:-1,528:-1,12102:-1
 rachel,124,29,7	shop	Fish Vendor#rachel16	83,544:-1,579:-1,584:-1
@@ -525,7 +525,7 @@ rachel,109,44,4	shop	Jeweler#rachel17	89,721:-1,723:-1,726:-1,728:-1,729:-1
 rachel,101,44,5	shop	Cannon Ball Dealer#rachel18	100,6244:-1,18000:-1,18001:-1,18002:-1,18003:-1,18004:-1,98004:-1,98005:-1,98006:-1
 rachel,75,46,4	shop	Juice Vendor#rachel19	931,531:-1,532:-1,533:-1,534:-1
 rachel,39,45,5	shop	Rare Fruit Merchant#rachel20	851,606:-1,607:-1,608:-1,610:-1
-rachel,45,45,4	shop	Herb Vendor#rachel21	643,507:-1,508:-1,509:-1,510:-1,511:-1
+rachel,45,45,4	shop	Herb Vendor#rachel21	643,507:-1,508:-1,32:-1,509:-1,510:-1,511:-1
 rachel,60,55,6	shop	Food Vendor#rachel22	80,12045:-1,12055:-1,12050:-1,12065:-1,12060:-1,12070:-1
 rachel,101,77,4	shop	Waiter#rachel23	61,12711:-1,12712:-1,12713:-1,539:-1,544:-1,549:-1
 rachel,34,69,0	shop	Fish Vendor#rachel24	83,544:-1,579:-1,584:-1
@@ -545,7 +545,7 @@ ra_in01,278,148,4	shop	Waitress#rachel34	124,12045:-1,12055:-1,12050:-1,12065:-1
 //=======================================================
 nameless_n,74,200,6	shop	Rare Fruit Merchant#tid1	851,606:-1,607:-1,608:-1,610:-1
 nameless_n,75,250,4	shop	Baker#tid2	91,580:-1,592:-1,593:-1,594:-1,595:-1
-nameless_n,162,255,5	shop	Herb Vendor#tid3	643,507:-1,508:-1,509:-1,510:-1,511:-1
+nameless_n,162,255,5	shop	Herb Vendor#tid3	643,507:-1,508:-1,32:-1,509:-1,510:-1,511:-1
 nameless_n,235,104,7	shop	Butcher#tid4	87,517:-1,528:-1
 nameless_n,206,130,4	shop	Gemstone Dealer#tid5	58,715:-1,716:-1,717:-1,20:-1,21:-1
 nameless_n,157,85,0	shop	Elemental Vendor#tid6	76,990:-1,991:-1,992:-1,993:-1
@@ -586,7 +586,7 @@ ve_in,241,313,5	shop	Potion Master#veins15	749,501:-1,502:-1,503:-1,504:-1,505:-
 ve_in,170,313,5	shop	Costume Dealer#veins16	410,20036:-1,20037:-1,20038:-1,20042:-1,20043:-1,20048:-1
 ve_in,237,135,5	shop	Waitress#veins17	124,12045:-1,12055:-1,12050:-1,12065:-1,12060:-1,12070:-1
 ve_fild03,161,238,5	shop	Tool Dealer#veins18	900,1750:-1,611:-1,501:-1,502:-1,503:-1,504:-1,506:-1,645:-1,656:-1,601:-1,602:-1
-ve_fild05,102,196,0	shop	Herb Vendor#veins19	123,507:-1,508:-1,509:-1,510:-1,511:-1
+ve_fild05,102,196,0	shop	Herb Vendor#veins19	123,507:-1,508:-1,32:-1,509:-1,510:-1,511:-1
 
 //=======================================================
 // Yuno
@@ -611,7 +611,7 @@ yuno,58,131,1	shop	Fruit Vendor#yuno16	102,512:-1,513:-1
 yuno,65,136,7	shop	Butcher#yuno17	87,517:-1,528:-1
 yuno,72,132,6	shop	Vegetable Gardener#yuno18	91,515:-1,516:-1,535:-1
 yuno,205,116,5	shop	Baker#yuno19	91,580:-1,592:-1,593:-1,594:-1,595:-1
-yuno,204,124,7	shop	Herb Vendor#yuno20	643,507:-1,508:-1,509:-1,510:-1,511:-1
+yuno,204,124,7	shop	Herb Vendor#yuno20	643,507:-1,508:-1,32:-1,509:-1,510:-1,511:-1
 yuno,195,122,3	shop	Food Vendor#yuno21	536,12098:-1,556:-1,555:-1,550:-1
 yuno,212,96,4	shop	Cannon Ball Dealer#yuno22	665,6244:-1,18000:-1,18001:-1,18002:-1,18003:-1,18004:-1,98004:-1,98005:-1,98006:-1
 yuno,218,104,5	shop	Rare Fruit Vendor#yuno23	750,606:-1,607:-1,608:-1,610:-1

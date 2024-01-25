@@ -19293,14 +19293,44 @@ void skill_toggle_magicpower(struct block_list *bl, uint16 skill_id)
 
 int skill_plant_cultivation(struct map_session_data *sd, t_itemid nameid, int skill_id) {
 	int x, y, i, class_, skill;
+	int item_to_delete;
 	struct mob_data *md;
 	nullpo_ret(sd);
 	skill = sd->menuskill_val;
 
-	if( !nameid || (i = pc_search_inventory(sd,nameid)) < 0 || !skill || pc_delitem(sd,i,1,0,0,LOG_TYPE_CONSUME) ) {
-		clif_skill_fail(sd,NC_MAGICDECOY,USESKILL_FAIL_LEVEL,0);
+
+	
+
+
+
+
+	// Item picked decides the mob class
+	switch(nameid) {
+		case ITEMID_GREEN_PLANT:		class_ = MOBID_GREEN_PLANT;     item_to_delete = ITEMID_STEM;               break;
+		case ITEMID_RED_PLANT:			class_ = MOBID_RED_PLANT;	    item_to_delete = ITEMID_STEM;               break;
+		case ITEMID_ORANGE_PLANT:		class_ = MOBID_ORANGE_PLANT;    item_to_delete = ITEMID_STEM;               break;
+		case ITEMID_YELLOW_PLANT:	    class_ = MOBID_YELLOW_PLANT;    item_to_delete = ITEMID_STEM;               break;
+		case ITEMID_WHITE_PLANT:		class_ = MOBID_WHITE_PLANT;	    item_to_delete = ITEMID_STEM;               break;
+		case ITEMID_BLUE_PLANT:		    class_ = MOBID_BLUE_PLANT;	    item_to_delete = ITEMID_STEM;               break;
+		case ITEMID_GREEN_MUSHROOM:	    class_ = MOBID_GREEN_MUSHROOM;  item_to_delete = ITEMID_MUSHROOM_SPORE;     break;
+		case ITEMID_YELLOW_MUSHROOM:	class_ = MOBID_YELLOW_MUSHROOM; item_to_delete = ITEMID_MUSHROOM_SPORE;     break;
+		case ITEMID_BLUE_MUSHROOM:	    class_ = MOBID_BLUE_MUSHROOM;   item_to_delete = ITEMID_MUSHROOM_SPORE;     break;
+		case ITEMID_RED_MUSHROOM:	    class_ = MOBID_RED_MUSHROOM;    item_to_delete = ITEMID_MUSHROOM_SPORE;     break;
+		case ITEMID_SHINING_PLANT:	    class_ = MOBID_SHINING_PLANT;   item_to_delete = ITEMID_YGGDRASIL_SEED;     break;
+		default:
+			clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+			return 0;
+	}
+
+	if (item_to_delete == 0){
+		clif_skill_fail(sd,CR_CULTIVATION,USESKILL_FAIL_LEVEL,0);
 		return 0;
 	}
+	if( !nameid || (i = pc_search_inventory(sd,item_to_delete)) < 0 || !skill) {
+		clif_skill_fail(sd,CR_CULTIVATION,USESKILL_FAIL_LEVEL,0);
+		return 0;
+	}
+	pc_delitem(sd,i,1,0,0,LOG_TYPE_OTHER);
 
 	// Spawn Position
 	// pc_delitem(sd,i,1,0,0,LOG_TYPE_CONSUME);
@@ -19309,21 +19339,6 @@ int skill_plant_cultivation(struct map_session_data *sd, t_itemid nameid, int sk
 	sd->sc.comet_x = 0;
 	sd->sc.comet_y = 0;
 	sd->menuskill_val = 0;
-
-	// Item picked decides the mob class
-	switch(nameid) {
-		case ITEMID_GREEN_HERB:		    class_ = MOBID_GREEN_PLANT;		break;
-		case ITEMID_RED_HERB:			class_ = MOBID_RED_PLANT;	break;
-		case ITEMID_YELLOW_HERB:	    class_ = MOBID_YELLOW_PLANT;		break;
-		case ITEMID_WHITE_HERB:		    class_ = MOBID_WHITE_PLANT;	break;
-		case ITEMID_BLUE_HERB:		    class_ = MOBID_BLUE_PLANT;	break;
-		case ITEMID_YGGDRASIL_SEED:	    class_ = MOBID_SHINING_PLANT;		    break;
-		case ITEMID_BLOODY_RED:		    class_ = MOBID_RED_MUSHROOM;		    break;
-		case ITEMID_CRYSTAL_BLUE:	    class_ = MOBID_BLACK_MUSHROOM;		    break;
-		default:
-			clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-			return 0;
-	}
 
 	md = mob_once_spawn_sub(&sd->bl, sd->bl.m, x, y, sd->status.name, class_, "", SZ_SMALL, AI_NONE);
 	if( md ) {

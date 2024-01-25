@@ -43,6 +43,14 @@ Header:
   Version: 1
 
 Body:
+  - Mob: ORANGE_PLANT
+    Sprite: E_MAGIC_PLANT
+  - Mob: YELLOW_MUSHROOM
+    Sprite: SOIL
+  - Mob: GREEN_MUSHROOM
+    Sprite: ILL_BLACK_MUSHROOM
+  - Mob: BLUE_MUSHROOM
+    Sprite: BLACK_MUSHROOM
 #NPCBUILDER_MOBS
 #END_NPCBUILDER_MOBS
 

@@ -7,7 +7,7 @@ Body:
     AegisName: RED_PLANT
     Name: Red Plant
     Level: 1
-    Hp: 10
+    Hp: 1
     Attack: 1
     Attack2: 1
     Defense: 100
@@ -30,13 +30,13 @@ Body:
       IgnoreRanged: true
     Drops:
       - Item: Red_Herb
-        Rate: 5000
+        Rate: 10000
       - Item: Flower
         Rate: 500
       - Item: Shoot
         Rate: 500
       - Item: Stem
-        Rate: 500
+        Rate: 10000
       - Item: Poison_Herb_Rantana
         Rate: 150
       - Item: Fluff
@@ -50,7 +50,7 @@ Body:
     AegisName: BLUE_PLANT
     Name: Blue Plant
     Level: 1
-    Hp: 10
+    Hp: 1
     Attack: 1
     Attack2: 1
     Defense: 100
@@ -73,13 +73,13 @@ Body:
       IgnoreRanged: true
     Drops:
       - Item: Blue_Herb
-        Rate: 2750
+        Rate: 10000
       - Item: Flower
         Rate: 500
       - Item: Shoot
         Rate: 500
       - Item: Stem
-        Rate: 250
+        Rate: 10000
       - Item: Poison_Herb_Nerium
         Rate: 150
       - Item: Fruit_Of_Mastela
@@ -93,7 +93,7 @@ Body:
     AegisName: GREEN_PLANT
     Name: Green Plant
     Level: 1
-    Hp: 10
+    Hp: 1
     Attack: 1
     Attack2: 1
     Defense: 100
@@ -116,13 +116,13 @@ Body:
       IgnoreRanged: true
     Drops:
       - Item: Green_Herb
-        Rate: 3500
+        Rate: 10000
       - Item: Poison_Herb_Makulata
         Rate: 150
       - Item: Bitter_Herb
         Rate: 10
       - Item: Stem
-        Rate: 1500
+        Rate: 10000
       - Item: Pointed_Scale
         Rate: 750
       - Item: Aloe
@@ -132,11 +132,54 @@ Body:
       - Item: Centimental_Leaf
         Rate: 1
         StealProtected: true
+  - Id: 21435
+    AegisName: ORANGE_PLANT
+    Name: Orange Plant
+    Level: 1
+    Hp: 1
+    Attack: 1
+    Attack2: 1
+    Defense: 100
+    MagicDefense: 99
+    AttackRange: 1
+    SkillRange: 7
+    ChaseRange: 12
+    Size: Small
+    Race: Plant
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 1000
+    AttackDelay: 1
+    AttackMotion: 1
+    DamageMotion: 1
+    Modes:
+      IgnoreMagic: true
+      IgnoreMelee: true
+      IgnoreMisc: true
+      IgnoreRanged: true
+    Drops:
+      - Item: Orange_Herb
+        Rate: 10000
+      - Item: Flower
+        Rate: 500
+      - Item: Shoot
+        Rate: 500
+      - Item: Stem
+        Rate: 10000
+      - Item: Poison_Herb_Seratum
+        Rate: 150
+      - Item: Singing_Plant
+        Rate: 3
+      - Item: Fluff
+        Rate: 250
+      - Item: Centimental_Flower
+        Rate: 1
+        StealProtected: true
   - Id: 1081
     AegisName: YELLOW_PLANT
     Name: Yellow Plant
     Level: 1
-    Hp: 10
+    Hp: 1
     Attack: 1
     Attack2: 1
     Defense: 100
@@ -159,13 +202,13 @@ Body:
       IgnoreRanged: true
     Drops:
       - Item: Yellow_Herb
-        Rate: 2750
+        Rate: 10000
       - Item: Flower
         Rate: 500
       - Item: Shoot
         Rate: 500
       - Item: Stem
-        Rate: 250
+        Rate: 10000
       - Item: Poison_Herb_Seratum
         Rate: 150
       - Item: Singing_Plant
@@ -179,7 +222,7 @@ Body:
     AegisName: WHITE_PLANT
     Name: White Plant
     Level: 1
-    Hp: 10
+    Hp: 1
     Attack: 1
     Attack2: 1
     Defense: 100
@@ -202,13 +245,13 @@ Body:
       IgnoreRanged: true
     Drops:
       - Item: White_Herb
-        Rate: 2750
+        Rate: 10000
       - Item: Flower
         Rate: 500
       - Item: Deadly_Noxious_Herb
         Rate: 10
       - Item: Stem
-        Rate: 1500
+        Rate: 10000
       - Item: Poison_Herb_Seratum
         Rate: 150
       - Item: Leaflet_Of_Aloe
@@ -222,7 +265,7 @@ Body:
     AegisName: SHINING_PLANT
     Name: Shining Plant
     Level: 1
-    Hp: 20
+    Hp: 1
     Attack: 1
     Attack2: 1
     Defense: 100
@@ -246,27 +289,27 @@ Body:
       IgnoreRanged: true
     Drops:
       - Item: Blue_Herb
-        Rate: 5000
+        Rate: 2500
       - Item: Yellow_Herb
-        Rate: 1000
+        Rate: 2500
       - Item: White_Herb
-        Rate: 1000
+        Rate: 2500
       - Item: Illusion_Flower
-        Rate: 3
-      - Item: Seed_Of_Yggdrasil
-        Rate: 5
-      - Item: Honey
         Rate: 500
+      - Item: Seed_Of_Yggdrasil
+        Rate: 5000
+      - Item: Honey
+        Rate: 5000
       - Item: Yggdrasilberry
-        Rate: 5
+        Rate: 50
       - Item: Emperium
-        Rate: 5
+        Rate: 50
         StealProtected: true
   - Id: 1084
     AegisName: BLACK_MUSHROOM
     Name: Black Mushroom
     Level: 1
-    Hp: 15
+    Hp: 1
     Attack: 1
     Attack2: 1
     Defense: 100
@@ -297,11 +340,9 @@ Body:
       - Item: Feather
         Rate: 2000
       - Item: Crystal_Blue
-        Rate: 800
+        Rate: 10000
       - Item: Mushroom_Spore
-        Rate: 5000
-      - Item: Mushroom_Spore
-        Rate: 5000
+        Rate: 10000
       - Item: Poison_Spore
         Rate: 5000
         StealProtected: true
@@ -309,7 +350,7 @@ Body:
     AegisName: RED_MUSHROOM
     Name: Red Mushroom
     Level: 1
-    Hp: 15
+    Hp: 1
     Attack: 1
     Attack2: 1
     Defense: 100
@@ -340,11 +381,132 @@ Body:
       - Item: Feather
         Rate: 1000
       - Item: Boody_Red
-        Rate: 500
+        Rate: 10000
       - Item: Mushroom_Spore
+        Rate: 10000
+      - Item: Poison_Spore
         Rate: 5000
+        StealProtected: true
+  - Id: 21431
+    AegisName: GREEN_MUSHROOM
+    Name: Green Mushroom
+    Level: 1
+    Hp: 1
+    Attack: 1
+    Attack2: 1
+    Defense: 100
+    MagicDefense: 99
+    AttackRange: 1
+    SkillRange: 7
+    ChaseRange: 12
+    Size: Small
+    Race: Plant
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 1000
+    AttackDelay: 1
+    AttackMotion: 1
+    DamageMotion: 1
+    Modes:
+      IgnoreMagic: true
+      IgnoreMelee: true
+      IgnoreMisc: true
+      IgnoreRanged: true
+    Drops:
+      - Item: Alchol
+        Rate: 50
+      - Item: Karvodailnirol
+        Rate: 50
+      - Item: Dew_Laden_Moss
+        Rate: 20
+      - Item: Feather
+        Rate: 1000
+      - Item: Yellow_Live
+        Rate: 10000
       - Item: Mushroom_Spore
+        Rate: 10000
+      - Item: Poison_Spore
         Rate: 5000
+        StealProtected: true
+  - Id: 21432
+    AegisName: YELLOW_MUSHROOM
+    Name: Yellow Mushroom
+    Level: 1
+    Hp: 1
+    Attack: 1
+    Attack2: 1
+    Defense: 100
+    MagicDefense: 99
+    AttackRange: 1
+    SkillRange: 7
+    ChaseRange: 12
+    Size: Small
+    Race: Plant
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 1000
+    AttackDelay: 1
+    AttackMotion: 1
+    DamageMotion: 1
+    Modes:
+      IgnoreMagic: true
+      IgnoreMelee: true
+      IgnoreMisc: true
+      IgnoreRanged: true
+    Drops:
+      - Item: Alchol
+        Rate: 50
+      - Item: Karvodailnirol
+        Rate: 50
+      - Item: Dew_Laden_Moss
+        Rate: 20
+      - Item: Feather
+        Rate: 1000
+      - Item: Wind_Of_Verdure
+        Rate: 10000
+      - Item: Mushroom_Spore
+        Rate: 10000
+      - Item: Poison_Spore
+        Rate: 5000
+        StealProtected: true
+  - Id: 21433
+    AegisName: BLUE_MUSHROOM
+    Name: Blue Mushroom
+    Level: 1
+    Hp: 1
+    Attack: 1
+    Attack2: 1
+    Defense: 100
+    MagicDefense: 99
+    AttackRange: 1
+    SkillRange: 7
+    ChaseRange: 12
+    Size: Small
+    Race: Plant
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 1000
+    AttackDelay: 1
+    AttackMotion: 1
+    DamageMotion: 1
+    Modes:
+      IgnoreMagic: true
+      IgnoreMelee: true
+      IgnoreMisc: true
+      IgnoreRanged: true
+    Drops:
+      - Item: Alchol
+        Rate: 50
+      - Item: Karvodailnirol
+        Rate: 50
+      - Item: Dew_Laden_Moss
+        Rate: 20
+      - Item: Feather
+        Rate: 1000
+      - Item: Crystal_Blue
+        Rate: 10000
+      - Item: Mushroom_Spore
+        Rate: 10000
       - Item: Poison_Spore
         Rate: 5000
         StealProtected: true

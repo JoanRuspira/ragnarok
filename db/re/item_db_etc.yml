@@ -9820,3 +9820,69 @@ Body:
     EquipLevelMin: 1
     Script: |
       bonus bAtkEle,Ele_Dark;
+  - Id: 22
+    AegisName: Green_Plant
+    Name: Green Plant
+    Type: Etc
+    Buy: 50
+    Weight: 10
+  - Id: 23
+    AegisName: Red_Plant
+    Name: Red Plant
+    Type: Etc
+    Buy: 50
+    Weight: 10
+  - Id: 24
+    AegisName: Orange_Plant
+    Name: Orange Plant
+    Type: Etc
+    Buy: 50
+    Weight: 10
+  - Id: 25
+    AegisName: Yellow_Plant
+    Name: Yellow Plant
+    Type: Etc
+    Buy: 50
+    Weight: 10
+  - Id: 26
+    AegisName: White_Plant
+    Name: White Plant
+    Type: Etc
+    Buy: 50
+    Weight: 10
+  - Id: 27
+    AegisName: Shining_Plant
+    Name: Shining Plant
+    Type: Etc
+    Buy: 50
+    Weight: 10
+  - Id: 28
+    AegisName: Green_Mushroom
+    Name: Green Mushroom
+    Type: Etc
+    Buy: 50
+    Weight: 10
+  - Id: 29
+    AegisName: Yellow_Mushroom
+    Name: Yellow Mushroom
+    Type: Etc
+    Buy: 50
+    Weight: 10
+  - Id: 30
+    AegisName: Blue_Mushroom
+    Name: Blue Mushroom
+    Type: Etc
+    Buy: 50
+    Weight: 10
+  - Id: 31
+    AegisName: Red_Mushroom
+    Name: Red Mushroom
+    Type: Etc
+    Buy: 50
+    Weight: 10
+  - Id: 33
+    AegisName: Blue_Plant
+    Name: Blue Plant
+    Type: Etc
+    Buy: 50
+    Weight: 10

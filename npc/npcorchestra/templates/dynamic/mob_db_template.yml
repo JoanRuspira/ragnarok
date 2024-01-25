@@ -80,7 +80,15 @@ Header:
 Body:
 #NPCBUILDER_MOBS
 #END_NPCBUILDER_MOBS
-
+  - Id: 3755
+    AegisName: ILL_BLACK_MUSHROOM
+    Name: ILL_BLACK_MUSHROOM
+  - Id: 2372
+    AegisName: SOIL
+    Name: SOIL
+  - Id: 3819
+    AegisName: E_MAGIC_PLANT
+    Name: E_MAGIC_PLANT
   - Id: 1094
     AegisName: AMBERNITE
     Name: Ambernite
