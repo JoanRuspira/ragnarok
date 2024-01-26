@@ -6103,10 +6103,10 @@ void clif_skill_produce_mix_list( struct map_session_data *sd, int skill_id, int
 		}
 		if(pc_search_inventory(sd, ITEMID_SLIM_POTION_GUIDE) >= 0) {
 			clif_add_item_to_produce_list(p, 545, count);
-			clif_add_item_to_produce_list(p, 6, count);
+			clif_add_item_to_produce_list(p, 34, count);
 			clif_add_item_to_produce_list(p, 546, count);
 			clif_add_item_to_produce_list(p, 547, count);
-			clif_add_item_to_produce_list(p, 7, count);
+			clif_add_item_to_produce_list(p, 35, count);
 		}
 		if(pc_search_inventory(sd, ITEMID_FIRE_BOTTLE_GUIDE) >= 0) {
 			clif_add_item_to_produce_list(p, 7135, count);

@@ -6453,19 +6453,33 @@ Body:
     Script: |
       specialeffect2 1232;
       itemskill "WL_READING_SB_READING",28;
-  - Id: 6
+  - Id: 34
     AegisName: Orange_Slim_Potion
     Name: Condensed Orange Potion
     Type: Healing
     Buy: 300
     Weight: 10
     Script: |
+      specialeffect2 205;
       itemheal rand(105,45),0;
-  - Id: 7
+  - Id: 35
     AegisName: Blue_Slim_Potion
     Name: Condensed Blue Potion
     Type: Healing
     Buy: 2000
     Weight: 20
     Script: |
+      specialeffect2 208;
       itemheal 0,rand(40,60);
+  - Id: 7142
+    AegisName: Germination_Breed
+    Name: Embryo
+    Type: Usable
+    Buy: 10
+    Weight: 10
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "WL_READING_SB_READING",28;
