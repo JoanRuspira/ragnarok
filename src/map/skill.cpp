@@ -10073,7 +10073,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 		}
 		break;
-	case SO_SUMMON_AGNI: //HOMUN
+	case AM_HATCH_HOMUNCULUS: //HOMUN
 		if( sd ) {
 			struct status_change *sc = status_get_sc(src);
 			
@@ -10172,27 +10172,27 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		}
 		break;
 
-	case SO_EL_CONTROL:
-		if( sd ) {
-			enum e_mode mode = EL_MODE_PASSIVE;	// Standard mode.
+	// case SO_EL_CONTROL:
+	// 	if( sd ) {
+	// 		enum e_mode mode = EL_MODE_PASSIVE;	// Standard mode.
 
-			if( !sd->ed )	break;
+	// 		if( !sd->ed )	break;
 
-			if( skill_lv == 4 ) {// At level 4 delete elementals.
-				elemental_delete(sd->ed);
-				break;
-			}
-			switch( skill_lv ) {// Select mode bassed on skill level used.
-				case 2: mode = static_cast<e_mode>(EL_MODE_ASSIST); break;
-				case 3: mode = static_cast<e_mode>(EL_MODE_AGGRESSIVE); break;
-			}
-			if( !elemental_change_mode(sd->ed,mode) ) {
-				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-				break;
-			}
-			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
-		}
-		break;
+	// 		if( skill_lv == 4 ) {// At level 4 delete elementals.
+	// 			elemental_delete(sd->ed);
+	// 			break;
+	// 		}
+	// 		switch( skill_lv ) {// Select mode bassed on skill level used.
+	// 			case 2: mode = static_cast<e_mode>(EL_MODE_ASSIST); break;
+	// 			case 3: mode = static_cast<e_mode>(EL_MODE_AGGRESSIVE); break;
+	// 		}
+	// 		if( !elemental_change_mode(sd->ed,mode) ) {
+	// 			clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+	// 			break;
+	// 		}
+	// 		clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
+	// 	}
+	// 	break;
 	case AM2_HOM_ACTION:
 	case JG_EL_ACTION:
 		if( sd ) {
@@ -15989,7 +15989,7 @@ struct s_skill_condition skill_get_requirement(struct map_session_data* sd, uint
 			req.amount[1] = skill->require.amount[skill->max];
 		case KO_MAKIBISHI:
 		case GN_FIRE_EXPANSION:
-		case SO_SUMMON_AGNI:
+		case AM_HATCH_HOMUNCULUS:
 		case SO_SUMMON_AQUA:
 		case SO_SUMMON_VENTUS:
 		case SO_SUMMON_TERA:
@@ -16088,7 +16088,7 @@ struct s_skill_condition skill_get_requirement(struct map_session_data* sd, uint
 		case LG_RAGEBURST:
 			req.spiritball = sd->spiritball?sd->spiritball:1;
 			break;
-		// case SO_SUMMON_AGNI:
+		// case AM_HATCH_HOMUNCULUS:
 		// case SO_SUMMON_AQUA:
 		// case SO_SUMMON_VENTUS:
 		// case SO_SUMMON_TERA: {
@@ -20505,7 +20505,7 @@ int skill_get_elemental_type( uint16 skill_id , uint16 skill_lv ) {
 			case 1:	type = ELEMENTALID_TERA_L;		break;
 		}
 	}
-	if (skill_id == SO_SUMMON_AGNI) { //HOMUN
+	if (skill_id == AM_HATCH_HOMUNCULUS) { //HOMUN
 		switch( skill_lv ) {
 			case 4:	type = ELEMENTALID_AQUA_M;		break;
 			case 3:	type = ELEMENTALID_AGNI_M;		break;

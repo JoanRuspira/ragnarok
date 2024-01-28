@@ -6492,7 +6492,7 @@ Body:
       NoAuction: true
     Script: |
       specialeffect2 1261;
-      itemskill "SO_SUMMON_AGNI",1;
+      itemskill "AM_HATCH_HOMUNCULUS",1;
   - Id: 36
     AegisName: Beholder_Embryo
     Name: Beholder Embryo
@@ -6514,7 +6514,7 @@ Body:
       NoAuction: true
     Script: |
       specialeffect2 1261;
-      itemskill "SO_SUMMON_AGNI",2;
+      itemskill "AM_HATCH_HOMUNCULUS",2;
   - Id: 37
     AegisName: Mandrake_Embryo
     Name: Mandrake Embryo
@@ -6536,7 +6536,7 @@ Body:
       NoAuction: true
     Script: |
       specialeffect2 1261;
-      itemskill "SO_SUMMON_AGNI",3;
+      itemskill "AM_HATCH_HOMUNCULUS",3;
   - Id: 38
     AegisName: Pheonix_Embryo
     Name: Pheonix Embryo
@@ -6558,4 +6558,4 @@ Body:
       NoAuction: true
     Script: |
       specialeffect2 1261;
-      itemskill "SO_SUMMON_AGNI",4;
+      itemskill "AM_HATCH_HOMUNCULUS",4;
