@@ -17,7 +17,7 @@
 	mes "Aha!";
 	mes "A seasoned Creator, what outfit would you like to wear?";
 	next;
-	switch(select("Creator:Biochemist:Geneticist:Pharmacist")) {
+	switch(select("Creator:Botanist:Geneticist:Pharmacist")) {
 		case 1:
 			setlook LOOK_CLOTHES_COLOR,0;
         	setlook LOOK_BODY2,0;

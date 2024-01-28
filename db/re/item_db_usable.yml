@@ -6476,10 +6476,86 @@ Body:
     Name: Embryo
     Type: Usable
     Buy: 10
-    Weight: 10
+    Weight: 0
     Flags:
       BuyingStore: true
       NoConsume: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
     Script: |
-      specialeffect2 1232;
-      itemskill "WL_READING_SB_READING",28;
+      specialeffect2 1261;
+      itemskill "SO_SUMMON_AGNI",1;
+  - Id: 36
+    AegisName: Beholder_Embryo
+    Name: Beholder Embryo
+    Type: Usable
+    Buy: 10
+    Weight: 0
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      specialeffect2 1261;
+      itemskill "SO_SUMMON_AGNI",2;
+  - Id: 37
+    AegisName: Mandrake_Embryo
+    Name: Mandrake Embryo
+    Type: Usable
+    Buy: 10
+    Weight: 0
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      specialeffect2 1261;
+      itemskill "SO_SUMMON_AGNI",3;
+  - Id: 38
+    AegisName: Pheonix_Embryo
+    Name: Pheonix Embryo
+    Type: Usable
+    Buy: 10
+    Weight: 0
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      specialeffect2 1261;
+      itemskill "SO_SUMMON_AGNI",4;

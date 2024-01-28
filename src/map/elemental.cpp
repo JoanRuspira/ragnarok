@@ -27,6 +27,7 @@
 #include "party.hpp"
 #include "pc.hpp"
 #include "trade.hpp"
+#include "status.hpp"
 
 struct s_elemental_db elemental_db[MAX_ELEMENTAL_CLASS]; // Elemental Database
 static uint16 elemental_count;
@@ -54,7 +55,6 @@ int elemental_create(struct map_session_data *sd, int class_, unsigned int lifet
 	struct s_elemental_db *db;
 	struct status_data *status;
 	int i;
-	ShowMessage("ELEM\n");
 	nullpo_retr(1,sd);
 	
 	if( (i = elemental_search_index(class_)) < 0 )
@@ -161,7 +161,7 @@ int elemental_delete(struct elemental_data *ed) {
 
 	sd->ed = NULL;
 	sd->status.ele_id = 0;
-
+	sc_start2(&sd->bl,&sd->bl, SC_BIOETHICS, 100, 5, sd->bl.id, 60000);
 	return unit_remove_map(&ed->bl, CLR_OUTSIGHT);
 }
 

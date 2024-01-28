@@ -7756,9 +7756,17 @@ Body:
   - Id: 238
     Name: AM_BIOETHICS
     Description: Bioethics
-    MaxLevel: 1
-    Flags:
-      IsQuest: true
+    MaxLevel: 5
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    CastTime: 0
+    AfterCastActDelay: 500
+    Cooldown: 500
+    Requires:
+      SpCost: 15
   - Id: 243
     Name: AM_CALLHOMUN
     Description: Call Homunculus

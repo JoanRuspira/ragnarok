@@ -47,6 +47,7 @@ int AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_
 			break;
 		case CR_ACIDDEMONSTRATION:
     		clif_specialeffect(target, EF_GREENBODY, AREA);
+    		clif_specialeffect(target, 804, AREA);
     		clif_specialeffect(target, 1406, AREA); //new_cannon_spear_09_clock
 			return calculate_acid_bomb_atk_ratio(skill_lv, sstatus->int_, sstatus->dex, tstatus->vit);
 			break;
