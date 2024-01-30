@@ -634,7 +634,6 @@ int skill_calc_heal(struct block_list *src, struct block_list *target, uint16 sk
 		case NPC_EVILLAND:
 			break;
 		case HAMI_HEAL:
-		case HLIF_HEAL:
 			{
 				struct map_session_data* sd2 = BL_CAST(BL_PC, battle_get_master(src));
 				struct status_data* status = status_get_status_data(&sd2->bl);
@@ -4705,6 +4704,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case HFLI_SBR44:
 	case HM_BEHOLDER_1:
 	case HM_BEHOLDER_2:
+	case HM_LANDBOOST:
 	case SM_PROVOKE:
 		clif_skill_nodamage(src,battle_get_master(src),skill_id,skill_lv,1);
 		clif_skill_damage(src, bl, tick, status_get_amotion(src), 0, -30000, 1, skill_id, skill_lv, DMG_SINGLE);
@@ -5110,7 +5110,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				if (sd) clif_skill_fail(sd, skill_id, USESKILL_FAIL_LEVEL, 0);
 				break;
 			}
-		case HLIF_HEAL:	//[orn]
+		case HLIF_HEAL:
 			if (bl->type != BL_HOM) {
 				if (sd) clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0) ;
 				break ;
@@ -5207,7 +5207,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		}
 	}
 	break;
-	case HLIF_HEAL:	//[orn]
 	case HAMI_HEAL:
 	case AL_HEAL:
 	// case CR_HEAL:
@@ -5327,6 +5326,16 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		}
 		break;
 
+
+	case HM_LANDBOOST:
+		clif_soundeffectall(bl, "petology.wav", 0, AREA);
+		clif_specialeffect(bl, EF_EL_CURSED_SOIL, AREA);
+		clif_specialeffect(bl, 1273, AREA);
+    	clif_specialeffect(src, EF_GUMGANG9, AREA);	
+		clif_skill_nodamage (src, bl, skill_id, skill_lv,
+			sc_start(src,bl, type, 100, skill_lv*2, skill_get_time(skill_id,skill_lv)));
+		break;
+	
 	case AL_DECAGI:
 	case MER_DECAGI:
 		clif_skill_nodamage (src, bl, skill_id, skill_lv,
@@ -6542,6 +6551,11 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		clif_specialeffect(src, EF_BEGINSPELL2, AREA);
 		clif_skill_nodamage(bl, bl, skill_id, skill_lv, sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
 		break;
+	// case HM_LANDBOOST:
+	// 	ShowMessage("LAND BOOST\n");
+	// 	clif_specialeffect(bl, EF_BEGINSPELL2, AREA);
+	// 	clif_skill_nodamage(bl, bl, skill_id, skill_lv, sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
+	// 	break;
 	case SN_WINDWALK:
 	case CASH_BLESSING:
 	case CASH_INCAGI:
@@ -7226,6 +7240,17 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				healing = healing*sc->data[SC_OFFERTORIUM]->val2;
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 			clif_skill_nodamage(NULL,bl,AL_HEAL,healing,1);
+			status_heal(bl,healing,0,0);
+		}
+		break;
+	case HLIF_HEAL:
+		{
+			int healing, matk = 0;
+			struct elemental_data *ed = (TBL_ELEM*) map_id2bl(src->id);
+			matk = rand()%(ed->elemental.matk-ed->elemental.matk_min + 1) + ed->elemental.matk_min;
+			healing = (200 * skill_lv) + (status_get_lv(src) * 3) + (status_get_int(src) * 3) + (matk * 3);
+			clif_skill_nodamage(src,bl,HLIF_HEAL,healing,1);
+			clif_specialeffect(bl, 1000, AREA);
 			status_heal(bl,healing,0,0);
 		}
 		break;

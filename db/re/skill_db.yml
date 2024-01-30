@@ -2386,9 +2386,9 @@ Body:
     Cooldown: 5000
     AfterCastActDelay: 400
     Requires:
-      SpCost: 15
+      SpCost: 20
       State: Elementalspirit
-  - Id: 848
+  - Id: 518
     Name: HM_BASILISK_1
     Description: Basilisk 1
     MaxLevel: 5
@@ -2401,7 +2401,7 @@ Body:
     Cooldown: 5000
     AfterCastActDelay: 400
     Requires:
-      SpCost: 15
+      SpCost: 20
   - Id: 849
     Name: HM_BEHOLDER_1
     Description: Beholder 1
@@ -3497,6 +3497,27 @@ Body:
       Ammo:
         Arrow: true
       AmmoAmount: 15
+  - Id: 900
+    Name: HM_LANDBOOST
+    Description: Land Boost
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Support
+    DamageFlags:
+      NoDamage: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    Cooldown: 2000
+    AfterCastActDelay: 500
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Duration1: 60000
+    Requires:
+      SpCost: 40
   - Id: 512
     Name: SN_ZEPHYR_SNIPING
     Description: Zephyr Sniping
@@ -14108,7 +14129,7 @@ Body:
           Amount: 46
         - Level: 10
           Amount: 48
-  - Id: 518
+  - Id: 848
     Name: GS_DUST
     Description: Focused Arrow Strike
     MaxLevel: 5
@@ -28423,18 +28444,17 @@ Body:
     Name: HLIF_HEAL
     Description: Healing Touch
     MaxLevel: 5
-    Type: Magic
-    TargetType: Self
+    TargetType: Support
     DamageFlags:
       NoDamage: true
     Range: 9
     Hit: Single
     HitCount: 1
+    CastTime: 3000
     Cooldown: 5000
-    CastTime: 0
-    AfterCastActDelay: 400
+    AfterCastActDelay: 1000
     Requires:
-      SpCost: 15
+      SpCost: 40
   - Id: 8002
     Name: HLIF_AVOID
     Description: Avoid

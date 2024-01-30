@@ -21864,17 +21864,27 @@ static int clif_parse(int fd)
 				//Disassociate character from the socket connection.
 				session[fd]->session_data = NULL;
 				sd->fd = 0;
+				if( sd->ed ) {
+					elemental_delete(sd->ed);
+				}
 				ShowInfo("Character '" CL_WHITE "%s" CL_RESET "' logged off (using @autotrade).\n", sd->status.name);
 			} else
 			if (sd->state.active) {
 				// Player logout display [Valaris]
+				if( sd->ed ) {
+					elemental_delete(sd->ed);
+				}
 				ShowInfo("Character '" CL_WHITE "%s" CL_RESET "' logged off.\n", sd->status.name);
 				clif_quitsave(fd, sd);
 			} else {
 				//Unusual logout (during log on/off/map-changer procedure)
+				if( sd->ed ) {
+					elemental_delete(sd->ed);
+				}
 				ShowInfo("Player AID:%d/CID:%d logged off.\n", sd->status.account_id, sd->status.char_id);
 				map_quit(sd);
 			}
+			
 		} else {
 			ShowInfo("Closed connection from '" CL_WHITE "%s" CL_RESET "'.\n", ip2str(session[fd]->client_addr, NULL));
 		}

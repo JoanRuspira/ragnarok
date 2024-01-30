@@ -499,6 +499,8 @@ int64 battle_attr_fix(struct block_list *src, struct block_list *target, int64 d
 					ratio += sc->data[SC_GEOGRAFIELD]->val1 * 10;
 				if (sc->data[SC_DELUGE])
 					ratio += sc->data[SC_DELUGE]->val3;
+				if (sc->data[SC_LANDBOOST])
+					ratio += sc->data[SC_LANDBOOST]->val1*10;
 				break;
 			case ELE_GHOST:
 				if (sc->data[SC_TELEKINESIS_INTENSE])
