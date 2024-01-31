@@ -10302,18 +10302,22 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 
 	case AM_HOM_CURE:
 		if( sd ) {
-			struct elemental_data *ed = sd->ed;
 			int s_hp, s_sp;
+			struct elemental_data *ed = sd->ed;
 
 			if( !ed )
 				break;
-
+	
 			s_hp = tstatus->max_hp * (skill_lv*5) / 100;
 			s_sp = tstatus->max_sp * (skill_lv*2) / 100;
 
-			clif_specialeffect(&ed->bl, EF_HEAL3, AREA);
-			status_heal(&ed->bl,s_hp,s_sp,3);
-			clif_skill_nodamage(src,&ed->bl,skill_id,skill_lv,1);
+			clif_skill_nodamage(src,&ed->bl,AM_HOM_CURE,s_hp,1);
+			clif_skill_nodamage(NULL,&ed->bl,AL_HEAL,s_hp,1);
+			clif_skill_nodamage(NULL,&ed->bl,MG_SRECOVERY,s_sp,1);
+			clif_specialeffect(src, 1061, AREA);
+			clif_specialeffect(&ed->bl, 1061, AREA);
+			status_heal(&ed->bl,s_hp,s_sp,0);
+	
 		}
 		break;
 

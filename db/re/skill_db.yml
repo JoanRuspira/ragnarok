@@ -2430,7 +2430,7 @@ Body:
     Cooldown: 5000
     AfterCastActDelay: 1000
     Requires:
-      SpCost: 30
+      SpCost: 40
       State: Elementalspirit
   - Id: 851
     Name: AM2_HOM_ACTION
