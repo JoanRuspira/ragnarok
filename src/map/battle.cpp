@@ -456,7 +456,8 @@ int64 battle_attr_fix(struct block_list *src, struct block_list *target, int64 d
 					ratio += 5;
 				if (sc->data[SC_SPHERE_4] && sc->data[SC_SPHERE_4]->val1 == WLS_FIRE)
 					ratio += 5;
-
+				if (sc->data[SC_FIREBOOST])
+					ratio += sc->data[SC_FIREBOOST]->val1*10;
 				if (sc->data[SC_VOLCANO])
 					ratio += sc->data[SC_VOLCANO]->val3;
 				break;

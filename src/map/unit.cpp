@@ -1691,7 +1691,6 @@ int unit_skilluse_id2(struct block_list *src, int target_id, uint16 skill_id, ui
 			case HLIF_HEAL:
 			case HAMI_HEAL:
 			case HLIF_AVOID:
-			// case HAMI_DEFENCE:
 			case HAMI_CASTLE:
 				target = battle_get_master(src);
 
@@ -1914,6 +1913,7 @@ int unit_skilluse_id2(struct block_list *src, int target_id, uint16 skill_id, ui
 		case HFLI_SBR44:
 		case HM_BEHOLDER_1:
 		case HM_LANDBOOST:
+		case HM_FIREBOOST:
 		case HM_BEHOLDER_2:
 		case SM_PROVOKE:
 			if( src->type == BL_ELEM ) {

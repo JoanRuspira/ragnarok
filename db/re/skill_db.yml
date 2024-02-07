@@ -2436,14 +2436,32 @@ Body:
     Name: AM2_HOM_ACTION
     Description: Elemental Action
     MaxLevel: 5
-    TargetType: Support
+    Type: Magic
+    TargetType: Self
     DamageFlags:
-      NoDamage: true
-    Range: 7
-    Hit: Single
-    HitCount: 1
-    Cooldown: 7000
+      Splash: true
+    Hit: Multi_Hit
+    HitCount: 3
+    Element: Neutral
+    Cooldown: 6000
     AfterCastActDelay: 400
+    SplashArea:
+      - Level: 1
+        Area: 2
+      - Level: 2
+        Area: 2
+      - Level: 3
+        Area: 2
+      - Level: 4
+        Area: 4
+      - Level: 5
+        Area: 4
+    Knockback: 2
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Duration2: 10000
     Requires:
       SpCost: 25
       State: Elementalspirit
@@ -2452,24 +2470,31 @@ Body:
     Description: Beholder 2
     MaxLevel: 5
     Type: Magic
-    TargetType: Attack
-    Range: 7
-    Hit: Single
-    HitCount: 1
+    TargetType: Self
+    DamageFlags:
+      Splash: true
+    Hit: Multi_Hit
+    HitCount: 3
     Element: Neutral
+    Cooldown: 6000
+    AfterCastActDelay: 400
     SplashArea:
       - Level: 1
-        Area: 1
+        Area: 2
       - Level: 2
         Area: 2
       - Level: 3
-        Area: 3
+        Area: 2
       - Level: 4
         Area: 4
       - Level: 5
-        Area: 5
-    Cooldown: 7000
-    AfterCastActDelay: 400
+        Area: 4
+    Knockback: 2
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Duration2: 10000
     Requires:
       SpCost: 25
   - Id: 853
@@ -3518,6 +3543,58 @@ Body:
     Duration1: 60000
     Requires:
       SpCost: 40
+  - Id: 901
+    Name: HM_FIREBOOST
+    Description: Fire Boost
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+      Splash: true
+    Flags:
+      AllowOnMado: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 2000
+    AfterCastActDelay: 3000
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    SplashArea: -1
+    Duration1: 60000
+    Requires:
+      SpCost: 50
+  - Id: 902
+    Name: HM_HEALPULSE
+    Description: Heal Pulse
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+      Splash: true
+    Hit: Single
+    HitCount: 1
+    Element: Holy
+    SplashArea:
+      - Level: 1
+        Area: 5
+      - Level: 2
+        Area: 5
+      - Level: 3
+        Area: 5
+      - Level: 4
+        Area: 5
+      - Level: 5
+        Area: 5
+    CastCancel: true
+    Cooldown: 2000
+    CastTime: 6000
+    AfterCastActDelay: 1000
+    Requires:
+      SpCost: 75
   - Id: 512
     Name: SN_ZEPHYR_SNIPING
     Description: Zephyr Sniping

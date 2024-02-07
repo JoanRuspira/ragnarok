@@ -4705,6 +4705,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case HM_BEHOLDER_1:
 	case HM_BEHOLDER_2:
 	case HM_LANDBOOST:
+	case HM_FIREBOOST:
 	case SM_PROVOKE:
 		clif_skill_nodamage(src,battle_get_master(src),skill_id,skill_lv,1);
 		clif_skill_damage(src, bl, tick, status_get_amotion(src), 0, -30000, 1, skill_id, skill_lv, DMG_SINGLE);
@@ -5325,8 +5326,33 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			}
 		}
 		break;
-
-
+	case HM_HEALPULSE:
+		if( !BL_CAST( BL_PC, bl ) || BL_CAST( BL_PC, bl )->status.party_id == 0 || flag&1 ) {
+				int healing, matk = 0;
+				struct status_data *status;
+				status = status_get_status_data(&sd->bl);
+				matk = rand()%(status->matk_max-status->matk_min + 1) + status->matk_min;
+				healing = (200 * skill_lv) + (status_get_lv(src) * 3) + (status_get_int(src) * 3) + (matk * 3);
+				clif_specialeffect(bl, 1000, AREA);
+				clif_skill_nodamage(src,bl,HM_HEALPULSE,healing,1);
+				clif_skill_nodamage(NULL,bl,AL_HEAL,healing,1);
+				status_heal(bl,healing,0,0);
+		} else if( BL_CAST( BL_PC, bl ) ){
+			party_foreachsamemap(skill_area_sub, BL_CAST( BL_PC, bl ), skill_get_splash(skill_id, skill_lv), bl, skill_id, skill_lv, tick, flag|BCT_PARTY|1, skill_castend_nodamage_id);
+		}
+		break;
+	case HM_FIREBOOST:
+		if( !BL_CAST( BL_PC, bl ) || BL_CAST( BL_PC, bl )->status.party_id == 0 || flag&1 ) {
+				clif_soundeffectall(bl, "pyrotechnia.wav", 0, AREA);
+				clif_specialeffect(bl, EF_EL_TROPIC, AREA);
+				clif_specialeffect(bl, 1270, AREA);
+				clif_specialeffect(src, EF_GUMGANG7, AREA);	
+				clif_skill_nodamage (src, bl, skill_id, skill_lv,
+					sc_start(src,bl, type, 100, skill_lv*2, skill_get_time(skill_id,skill_lv)));
+		} else if( BL_CAST( BL_PC, bl )) {
+			party_foreachsamemap(skill_area_sub, BL_CAST( BL_PC, bl ), skill_get_splash(skill_id, skill_lv),  bl, skill_id, skill_lv, tick, flag|BCT_PARTY|1, skill_castend_nodamage_id);
+		}
+		break;
 	case HM_LANDBOOST:
 		clif_soundeffectall(bl, "petology.wav", 0, AREA);
 		clif_specialeffect(bl, EF_EL_CURSED_SOIL, AREA);
@@ -5673,6 +5699,14 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				src,skill_id,skill_lv,tick, flag|BCT_ENEMY|1, skill_castend_damage_id);
 			clif_skill_nodamage (src,src,skill_id,skill_lv,1);
 			break;
+	case HM_BEHOLDER_2:
+		clif_soundeffectall(src, "arcaneblast.wav", 0, AREA);
+		clif_specialeffect(src, 1218, AREA);
+		skill_area_temp[1] = 0;
+			map_foreachinshootrange(skill_area_sub, src, skill_get_splash(skill_id, skill_lv), BL_SKILL|BL_CHAR,
+				src,skill_id,skill_lv,tick, flag|BCT_ENEMY|1, skill_castend_damage_id);
+			clif_skill_nodamage (src,src,skill_id,skill_lv,1);
+			break;
 	case WS_CARTTERMINATION:
 		clif_specialeffect(src, EF_CARTTER, AREA); 
 		clif_specialeffect(src, 1375, AREA); //new_banishingpoint_07
@@ -5995,7 +6029,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			sc_start2(src,bl,type,100,skill_lv,skill_id,skill_get_time(skill_id,skill_lv)));
 		break;
 	case HLIF_AVOID:
-	case HAMI_DEFENCE:
 		{
 			// struct block_list * master = NULL;
 			clif_specialeffect(bl, EF_HAMIDEFENCE, AREA);
@@ -6551,11 +6584,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		clif_specialeffect(src, EF_BEGINSPELL2, AREA);
 		clif_skill_nodamage(bl, bl, skill_id, skill_lv, sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
 		break;
-	// case HM_LANDBOOST:
-	// 	ShowMessage("LAND BOOST\n");
-	// 	clif_specialeffect(bl, EF_BEGINSPELL2, AREA);
-	// 	clif_skill_nodamage(bl, bl, skill_id, skill_lv, sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
-	// 	break;
 	case SN_WINDWALK:
 	case CASH_BLESSING:
 	case CASH_INCAGI:
@@ -6596,6 +6624,12 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case WS_MELTDOWN:
 		if (skill_id == WS_OVERTHRUSTMAX){
 			clif_specialeffect(src, 1138, AREA);
+		}
+		if (skill_id == HM_FIREBOOST){
+			clif_soundeffectall(bl, "pyrotechnia.wav", 0, AREA);
+			clif_specialeffect(bl, EF_EL_TROPIC, AREA);
+			clif_specialeffect(bl, 1270, AREA);
+			clif_specialeffect(src, EF_GUMGANG7, AREA);	
 		}
 		if (sd == NULL || sd->status.party_id == 0 || (flag & 1)) {
 			int weapontype = skill_get_weapontype(skill_id);
@@ -7250,7 +7284,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			matk = rand()%(ed->elemental.matk-ed->elemental.matk_min + 1) + ed->elemental.matk_min;
 			healing = (200 * skill_lv) + (status_get_lv(src) * 3) + (status_get_int(src) * 3) + (matk * 3);
 			clif_skill_nodamage(src,bl,HLIF_HEAL,healing,1);
-			clif_specialeffect(bl, 1000, AREA);
+			clif_specialeffect(bl, EF_STORMKICK6, AREA);
 			status_heal(bl,healing,0,0);
 		}
 		break;

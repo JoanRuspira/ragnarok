@@ -11,22 +11,18 @@ int AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_
 {
 	switch (skill_id) {
 		case HM_BASILISK_1:
-		case AM_EL_ACTION:
 			calculate_basilisk_1_special_effects(target);
 			return calculate_basilisk_1_attack_ratio(skill_lv);
 			break;
 		case HM_BEHOLDER_1:
-    		clif_specialeffect(src, EF_GUMGANG8, AREA);
 			calculate_beholder_1_special_effects(target);
 			return calculate_basilisk_1_attack_ratio(skill_lv);
 			break;
-		case AM2_HOM_ACTION:
 		case HFLI_SBR44:
 			calculate_basilisk_2_special_effects(target);
 			return calculate_basilisk_2_attack_ratio(skill_lv);
 			break;
 		case HM_BEHOLDER_2:
-			calculate_beholder_2_special_effects(target);
 			return calculate_basilisk_2_attack_ratio(skill_lv);
 			break;
 		case AM_DEMONSTRATION:
@@ -316,7 +312,7 @@ void AlchemistSkillAttackRatioCalculator::calculate_beholder_1_special_effects(s
 
 void AlchemistSkillAttackRatioCalculator::calculate_beholder_2_special_effects(struct block_list *target)
 {
-    clif_specialeffect(target, EF_M05, AREA);
+    clif_specialeffect(target, 1218, AREA);
 }
 
 void AlchemistSkillAttackRatioCalculator::calculate_acid_terror_special_effects(struct block_list *target)
