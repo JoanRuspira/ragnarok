@@ -18,8 +18,7 @@ int AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_
 			calculate_beholder_1_special_effects(target);
 			return calculate_basilisk_1_attack_ratio(skill_lv);
 			break;
-		case HFLI_SBR44:
-			calculate_basilisk_2_special_effects(target);
+		case HM_BASILISK_2:
 			return calculate_basilisk_2_attack_ratio(skill_lv);
 			break;
 		case HM_BEHOLDER_2:

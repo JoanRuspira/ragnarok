@@ -2162,6 +2162,7 @@ int64 skill_attack (int attack_type, struct block_list* src, struct block_list *
 		case HM_BASILISK_1:
 		case HM_BEHOLDER_1:
 		case HFLI_SBR44:
+		case HM_BASILISK_2:
 		case HM_BEHOLDER_2:
 		case KO_BAKURETSU:
 		case SN_ULLR_ATK:
@@ -4703,6 +4704,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case HM_BASILISK_1:
 	case HFLI_SBR44:
 	case HM_BEHOLDER_1:
+	case HM_BASILISK_2:
 	case HM_BEHOLDER_2:
 	case HM_LANDBOOST:
 	case HM_FIREBOOST:
@@ -5328,11 +5330,12 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		break;
 	case HM_HEALPULSE:
 		if( !BL_CAST( BL_PC, bl ) || BL_CAST( BL_PC, bl )->status.party_id == 0 || flag&1 ) {
-				int healing, matk = 0;
+				int healing,skill_lv, matk = 0;
 				struct status_data *status;
+				skill_lv = pc_checkskill(sd, CR_BUFFHOMUN);
 				status = status_get_status_data(&sd->bl);
 				matk = rand()%(status->matk_max-status->matk_min + 1) + status->matk_min;
-				healing = (200 * skill_lv) + (status_get_lv(src) * 3) + (status_get_int(src) * 3) + (matk * 3);
+				healing = (200 * skill_lv) + (status_get_lv(src) * 3) + (status_get_int(src) * 3) + (matk * 3) + (skill_lv*200);
 				clif_specialeffect(bl, 1000, AREA);
 				clif_skill_nodamage(src,bl,HM_HEALPULSE,healing,1);
 				clif_skill_nodamage(NULL,bl,AL_HEAL,healing,1);
@@ -5694,6 +5697,14 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case MC_FIREWORKS:
 		clif_soundeffectall(&sd->bl, "fireworks.wav", 0, AREA);
 		MerchntSkillAtkRatioCalculator::add_cart_fireworks_special_effects(src);
+		skill_area_temp[1] = 0;
+			map_foreachinshootrange(skill_area_sub, src, skill_get_splash(skill_id, skill_lv), BL_SKILL|BL_CHAR,
+				src,skill_id,skill_lv,tick, flag|BCT_ENEMY|1, skill_castend_damage_id);
+			clif_skill_nodamage (src,src,skill_id,skill_lv,1);
+			break;
+	case HM_BASILISK_2:
+		clif_soundeffectall(src, "daunting_blade.wav", 0, AREA);
+		clif_specialeffect(src, 156, AREA); //jobchange
 		skill_area_temp[1] = 0;
 			map_foreachinshootrange(skill_area_sub, src, skill_get_splash(skill_id, skill_lv), BL_SKILL|BL_CHAR,
 				src,skill_id,skill_lv,tick, flag|BCT_ENEMY|1, skill_castend_damage_id);
@@ -7279,10 +7290,15 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		break;
 	case HLIF_HEAL:
 		{
-			int healing, matk = 0;
+			int healing, buff_skill_lv, matk = 0;
 			struct elemental_data *ed = (TBL_ELEM*) map_id2bl(src->id);
+			struct block_list *mbl;
+			mbl = battle_get_master(&ed->bl);
+			struct map_session_data *msd = BL_CAST(BL_PC, bl);
+
+			buff_skill_lv = pc_checkskill(msd, CR_BUFFHOMUN);
 			matk = rand()%(ed->elemental.matk-ed->elemental.matk_min + 1) + ed->elemental.matk_min;
-			healing = (200 * skill_lv) + (status_get_lv(src) * 3) + (status_get_int(src) * 3) + (matk * 3);
+			healing = (200 * skill_lv) + (status_get_lv(src) * 3) + (status_get_int(src) * 3) + (matk * 3) + (buff_skill_lv*200);
 			clif_skill_nodamage(src,bl,HLIF_HEAL,healing,1);
 			clif_specialeffect(bl, EF_STORMKICK6, AREA);
 			status_heal(bl,healing,0,0);
@@ -10134,6 +10150,17 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		break;
 	case AM_HATCH_HOMUNCULUS: //HOMUN
 		if( sd ) {
+			int bioethics_lvl = 0;
+			bioethics_lvl = pc_checkskill(sd, AM_BIOETHICS);
+			if (bioethics_lvl < 2){
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				break;
+			}
+			if (bioethics_lvl < (skill_lv + 1)){
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				break;
+			}
+
 			struct status_change *sc = status_get_sc(src);
 			
 			enum e_mode mode = EL_MODE_PASSIVE;	// Default mode.
@@ -10165,7 +10192,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			}
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 			
-			sc_start2(src,src, SC_BIOETHICS, 100, skill_lv, src->id, 60000);
+			sc_start2(src,src, SC_BIOETHICS, 100, skill_lv, src->id, 1);
 		}
 		break;
 	case SO_SUMMON_TERA:

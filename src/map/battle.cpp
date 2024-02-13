@@ -2931,7 +2931,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			skillratio += HunterSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
 		case HM_BASILISK_1:
-		case HFLI_SBR44:
+		case HM_BASILISK_2:
 		case AM_ACIDTERROR:
 		case GN_SPORE_EXPLOSION:
 		case CR_ACIDDEMONSTRATION:
@@ -4784,6 +4784,7 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 				skill_id == HM_BEHOLDER_1 ||
 				skill_id == SM_PROVOKE ||
 				skill_id == HFLI_SBR44 ||
+				skill_id == HM_BASILISK_2 ||
 				skill_id == HM_BEHOLDER_2
 				){
 					if (src->type == BL_ELEM) {
@@ -4898,6 +4899,7 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 						break;
 					case HM_BEHOLDER_1:
 					case HM_BEHOLDER_2:
+					case HM_BASILISK_2:
 					case GN_WALLOFTHORN:
 					case AM_DEMONSTRATION:
 					case GN_DEMONIC_FIRE:

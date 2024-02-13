@@ -54,7 +54,7 @@ int elemental_create(struct map_session_data *sd, int class_, unsigned int lifet
 	struct s_elemental ele;
 	struct s_elemental_db *db;
 	struct status_data *status;
-	int i;
+	int i, skill_lv;
 	nullpo_retr(1,sd);
 	
 	if( (i = elemental_search_index(class_)) < 0 )
@@ -69,22 +69,36 @@ int elemental_create(struct map_session_data *sd, int class_, unsigned int lifet
 	i = db->status.size+1; // summon level
 
 	status = status_get_status_data(&sd->bl);
+	skill_lv = pc_checkskill(sd, CR_BUFFHOMUN);
+
 	ele.hp = ele.max_hp = sd->battle_status.max_hp;
 	ele.sp = ele.max_sp = sd->battle_status.max_sp;
-	ele.atk = (status->watk + sd->battle_status.str) *2;
-	ele.atk2 = (status->watk + sd->battle_status.str) *2;
+	ele.atk = status->batk*3;
+	ele.atk2 = status->watk*3;
 	ele.hit = sd->battle_status.hit;
-	ele.matk = status->matk_max;
-	ele.matk_min = status->matk_min;
+	ele.matk = status->matk_max + (skill_lv*20);
+	ele.matk_min = status->matk_min + (skill_lv*20);
 	ele.amotion =sd->battle_status.amotion;
 	ele.def = sd->battle_status.def;
 	ele.mdef = sd->battle_status.mdef;
 	ele.flee = sd->battle_status.flee;
 	
-
-
+	if (skill_lv > 0){
+		switch( class_ ) {
+			case ELEMENTALID_AGNI_M:	
+				ele.hp = ele.max_hp = sd->battle_status.max_hp + (skill_lv*200);		
+				break;
+			case ELEMENTALID_TERA_M:	
+				ele.matk = status->matk_max + (skill_lv*20); 
+				ele.matk_min = status->matk_min + (skill_lv*20);	   
+				break;
+			case ELEMENTALID_VENTUS_M:	
+				ele.atk = (status->batk + (skill_lv*20)) *3;
+				ele.atk2 = (status->watk + (skill_lv*20)*3);		
+				break;
+		}
+	}
 	ele.life_time = lifetime;
-
 	// Request Char Server to create this elemental
 	intif_elemental_create(&ele);
 
@@ -108,6 +122,8 @@ int elemental_save(struct elemental_data *ed) {
 	ed->elemental.max_sp = ed->battle_status.max_sp;
 	ed->elemental.atk = ed->battle_status.rhw.atk;
 	ed->elemental.atk2 = ed->battle_status.rhw.atk2;
+	ShowMessage("Atk: %d\n", ed->battle_status.rhw.atk);
+	ShowMessage("Atk2: %d\n", ed->battle_status.rhw.atk2);
 	ed->elemental.matk = ed->battle_status.matk_min;
 	ed->elemental.def = ed->battle_status.def;
 	ed->elemental.mdef = ed->battle_status.mdef;
@@ -161,7 +177,7 @@ int elemental_delete(struct elemental_data *ed) {
 
 	sd->ed = NULL;
 	sd->status.ele_id = 0;
-	sc_start2(&sd->bl,&sd->bl, SC_BIOETHICS, 100, 5, sd->bl.id, 60000);
+	sc_start2(&sd->bl,&sd->bl, SC_BIOETHICS, 100, 5, sd->bl.id, 1);
 	return unit_remove_map(&ed->bl, CLR_OUTSIGHT);
 }
 
@@ -388,7 +404,7 @@ int elemental_action(struct elemental_data *ed, struct block_list *bl, t_tick ti
 		
 		switch(ed->vd->class_){
 			case ELEMENTALID_VENTUS_M:
-				skill_id = HFLI_SBR44;
+				skill_id = HM_BASILISK_2;
 				break;
 			case ELEMENTALID_TERA_M:
 				skill_id = HM_BEHOLDER_2;
