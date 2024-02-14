@@ -6559,3 +6559,91 @@ Body:
     Script: |
       specialeffect2 1261;
       itemskill "AM_HATCH_HOMUNCULUS",4;
+  - Id: 39
+    AegisName: Tera_Scroll
+    Name: Tera Scroll
+    Type: Usable
+    Buy: 10
+    Weight: 0
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      specialeffect2 1261;
+      itemskill "SA_SUMMON_ELEMENTAL",1;
+  - Id: 40
+    AegisName: Ventus_Scroll
+    Name: Ventus Scroll
+    Type: Usable
+    Buy: 10
+    Weight: 0
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      specialeffect2 1261;
+      itemskill "SA_SUMMON_ELEMENTAL",2;
+  - Id: 41
+    AegisName: Aqua_Scroll
+    Name: Aqua Scroll
+    Type: Usable
+    Buy: 10
+    Weight: 0
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      specialeffect2 1261;
+      itemskill "SA_SUMMON_ELEMENTAL",3;
+  - Id: 42
+    AegisName: Agni_Scroll
+    Name: Agni Scroll
+    Type: Usable
+    Buy: 10
+    Weight: 0
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      specialeffect2 1261;
+      itemskill "SA_SUMMON_ELEMENTAL",4;

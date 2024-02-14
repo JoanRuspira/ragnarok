@@ -5727,6 +5727,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			clif_skill_nodamage (src,src,skill_id,skill_lv,1);
 			break;
 	case RK_WINDCUTTER:
+		clif_specialeffect(src, EF_WINDCUTTER, AREA); 
 		skill_area_temp[1] = 0;
 		map_foreachinshootrange(skill_area_sub, src, skill_get_splash(skill_id, skill_lv), BL_SKILL|BL_CHAR,
 			src,skill_id,skill_lv,tick, flag|BCT_ENEMY|1, skill_castend_damage_id);
@@ -10004,6 +10005,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			map_foreachinallrange(skill_area_sub, bl, skill_get_splash(skill_id, skill_lv), BL_CHAR, src, skill_id, skill_lv, tick, flag|BCT_ENEMY|1, skill_castend_nodamage_id);
 		}
 		break;
+	case SA_ELEMENTAL_CONTROL:
 	case AM_BIOETHICS:
 		{
 			if( !sd->ed ) {
@@ -10195,66 +10197,52 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			sc_start2(src,src, SC_BIOETHICS, 100, skill_lv, src->id, 1);
 		}
 		break;
-	case SO_SUMMON_TERA:
+	case SA_SUMMON_ELEMENTAL:
 		if( sd ) {
+
+			int elemental_control_lvl = 0;
+			elemental_control_lvl = pc_checkskill(sd, SA_ELEMENTAL_CONTROL);
+			if (elemental_control_lvl < 2){
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				break;
+			}
+			if (elemental_control_lvl < (skill_lv + 1)){
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				break;
+			}
+
+
+			struct status_change *sc = status_get_sc(src);
 			enum e_mode mode = EL_MODE_PASSIVE;	// Default mode.
+			int elemental_class = skill_get_elemental_type(skill_id,skill_lv);
 
-			if( skill_lv != 5 ) {
-				int required_item_id = 0;
-				switch(skill_lv) {
-					case 1:
-						required_item_id = ITEMID_YELLOW_LIVE;
-						break;
-					case 2:
-						required_item_id = ITEMID_WIND_OF_VERDURE;
-						break;
-					case 3:
-						required_item_id = ITEMID_CRYSTAL_BLUE;
-						break;
-					case 4:
-						required_item_id = ITEMID_BLOODY_RED;
-						break;
-				}
-				int elemental_class = skill_get_elemental_type(skill_id,skill_lv);
-
-				if( sd->ed ) {
-					// Just remove elemental if its the same class
-					if( sd->ed->elemental.class_ == elemental_class) {
-						elemental_delete(sd->ed);
-						break;
-					}
-					// Remove previous elemental first.
-					if( sd->ed->elemental.class_ != elemental_class) {
-						elemental_delete(sd->ed);
-					}
-				}
-
-				// Summoning new one elemental
-				int index_inventory_cost = pc_search_inventory(sd,required_item_id);
-				if(index_inventory_cost == -1) {
-					clif_skill_fail(sd,skill_id,USESKILL_FAIL_NEED_ITEM,1,required_item_id);
+			if( sd->ed ) {
+				// Just remove elemental if its the same class
+				if( sd->ed->elemental.class_ == elemental_class) {
+					elemental_delete(sd->ed);
 					break;
 				}
-				pc_delitem(sd, index_inventory_cost, 1, 0, 0, LOG_TYPE_OTHER);
-
-				if( !elemental_create(sd,elemental_class,skill_get_time(skill_id,skill_lv)) ) {
+				if (sc->data[SC_BIOETHICS]) {
 					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
 					break;
+				}
+				// Remove previous elemental first.
+				if( sd->ed->elemental.class_ != elemental_class) {
+					elemental_delete(sd->ed);
 				}
 			}
-			if( skill_lv == 5 ) {
-				if( !sd->ed ) {
-					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-					break;
-				}
-				enum e_mode current_mode = status_get_mode(&sd->ed->bl);
-				enum e_mode new_mode = static_cast<e_mode>(EL_MODE_AGGRESSIVE);
-				if (current_mode == static_cast<e_mode>(EL_MODE_AGGRESSIVE)){
-					new_mode = static_cast<e_mode>(EL_MODE_PASSIVE);
-				} 
-				elemental_change_mode(sd->ed,new_mode);
+			if (sc->data[SC_BIOETHICS]) {
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				break;
+			}
+			// Summoning new one elemental
+			if( !elemental_create(sd,elemental_class,skill_get_time(skill_id,skill_lv)) ) {
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				break;
 			}
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
+			
+			sc_start2(src,src, SC_BIOETHICS, 100, skill_lv, src->id, 1);
 		}
 		break;
 
@@ -16082,7 +16070,7 @@ struct s_skill_condition skill_get_requirement(struct map_session_data* sd, uint
 		case AM_HATCH_HOMUNCULUS:
 		case SO_SUMMON_AQUA:
 		case SO_SUMMON_VENTUS:
-		case SO_SUMMON_TERA:
+		case SA_SUMMON_ELEMENTAL:
 		case SO_WATER_INSIGNIA:
 		case SO_FIRE_INSIGNIA:
 		case SO_WIND_INSIGNIA:
@@ -16178,16 +16166,6 @@ struct s_skill_condition skill_get_requirement(struct map_session_data* sd, uint
 		case LG_RAGEBURST:
 			req.spiritball = sd->spiritball?sd->spiritball:1;
 			break;
-		// case AM_HATCH_HOMUNCULUS:
-		// case SO_SUMMON_AQUA:
-		// case SO_SUMMON_VENTUS:
-		// case SO_SUMMON_TERA: {
-		// 		int spirit_sympathy = pc_checkskill(sd,SO_EL_SYMPATHY);
-
-		// 		if( spirit_sympathy )
-		// 			req.sp -= req.sp * (5 + 5 * spirit_sympathy) / 100;
-		// 	}
-		// 	break;
 	}
 
 	//Check if player is using the copied skill [Cydh]
@@ -20587,7 +20565,7 @@ int skill_get_elemental_type( uint16 skill_id , uint16 skill_lv ) {
 		type = ELEMENTALID_VENTUS_S;
 	}
 
-	if (skill_id == SO_SUMMON_TERA) { //ELEMENTAL
+	if (skill_id == SA_SUMMON_ELEMENTAL) { //ELEMENTAL
 		switch( skill_lv ) {
 			case 4:	type = ELEMENTALID_AGNI_L;		break;
 			case 3:	type = ELEMENTALID_AQUA_L;		break;
