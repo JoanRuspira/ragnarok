@@ -4773,9 +4773,9 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 			default: {
 				int matk_max = sstatus->matk_max;
 				int matk_min = sstatus->matk_min;
-				if(skill_id == EL_FIRE_ARROW ||
+				if(skill_id == EL_FIRE_BALL ||
 				skill_id == EL_WIND_SLASH ||
-				skill_id == EL_ICE_NEEDLE ||
+				skill_id == EL_ICICLE ||
 				skill_id == EL_STONE_HAMMER ||
 				skill_id == EL_TORNADO_JG ||
 				skill_id == EL_ROCK_CRUSHER_JG ||
@@ -4857,10 +4857,10 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case SO_EARTHGRAVE:
 					case PF_SOULBURN:
 					case WL_DRAINLIFE:
-					case EL_ICE_NEEDLE:
+					case EL_ICICLE:
 					case EL_WIND_SLASH:
 					case EL_STONE_HAMMER:
-					case EL_FIRE_ARROW:
+					case EL_FIRE_BALL:
 					case SO_EL_ACTION:
 					case EL_TORNADO_JG:
 					case EL_ROCK_CRUSHER_JG:

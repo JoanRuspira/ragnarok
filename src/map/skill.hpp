@@ -2204,7 +2204,9 @@ enum e_skill {
 	HM_HEALPULSE = 902,
 	CR_BUFFHOMUN = 903,
 	HM_BASILISK_2 = 904,
-	SA_ELEMENTAL_CONTROL = 905
+	SA_ELEMENTAL_CONTROL = 905,
+	EL_ICICLE = 906,
+	EL_FIRE_BALL = 907
 };
 
 /// The client view ids for land skills.

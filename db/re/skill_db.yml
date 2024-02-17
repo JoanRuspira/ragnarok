@@ -3645,6 +3645,34 @@ Body:
     Cooldown: 500
     Requires:
       SpCost: 25
+  - Id: 906
+    Name: EL_ICICLE
+    Description: Icicle
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    Element: Water
+    Cooldown: 5000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 60
+  - Id: 907
+    Name: EL_FIRE_BALL
+    Description: Fire Ball
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 6
+    Hit: Single
+    HitCount: 1
+    Element: Fire
+    Cooldown: 5000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 60
   - Id: 512
     Name: SN_ZEPHYR_SNIPING
     Description: Zephyr Sniping

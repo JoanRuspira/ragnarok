@@ -26,12 +26,22 @@ int SageSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 		case PF_SOULBURN:
 			return calculate_soul_burn_atk_ratio(skill_lv);
 			break;
-		case EL_ICE_NEEDLE:
-		case EL_WIND_SLASH:
-		case EL_STONE_HAMMER:
-		case EL_FIRE_ARROW:
-		case SO_EL_ACTION:
+		case EL_ICICLE:
+			clif_specialeffect(target, 133, AREA);
+			clif_specialeffect(target, 135, AREA);
 			return calculate_el_action_atk_ratio(skill_lv);
+			break;
+		case EL_WIND_SLASH:
+			return calculate_el_action_atk_ratio(skill_lv);
+			break;
+		case EL_STONE_HAMMER:
+			clif_specialeffect(target, EF_EARTHSPIKE, AREA);
+			return calculate_el_action_atk_ratio(skill_lv);
+			break;
+		case EL_FIRE_BALL:
+			clif_specialeffect(target, 1254, AREA);
+			return calculate_el_action_atk_ratio(skill_lv);
+			break;
 		case EL_TORNADO_JG:
 			add_chain_lighting_special_effects(target);
 			return calculate_el_action_2_atk_ratio(skill_lv);

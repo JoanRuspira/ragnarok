@@ -2152,8 +2152,8 @@ int64 skill_attack (int attack_type, struct block_list* src, struct block_list *
 		case EL_FIRE_WAVE_ATK:
 		case EL_FIRE_MANTLE:
 		case EL_CIRCLE_OF_FIRE:
-		case EL_FIRE_ARROW:
-		case EL_ICE_NEEDLE:
+		case EL_FIRE_BALL:
+		case EL_ICICLE:
 		case EL_WATER_SCREW:
 		case EL_WIND_SLASH:
 		case EL_TIDAL_WEAPON:
@@ -4693,8 +4693,8 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 				skill_attack(skill_get_type(skill_id),src,src,bl,skill_id,skill_lv,tick,flag);
 		}
 		break;
-	case EL_FIRE_ARROW:
-	case EL_ICE_NEEDLE:
+	case EL_FIRE_BALL:
+	case EL_ICICLE:
 	case EL_WIND_SLASH:
 	case EL_STONE_HAMMER:
 	case EL_TORNADO_JG:
@@ -5337,6 +5337,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				matk = rand()%(status->matk_max-status->matk_min + 1) + status->matk_min;
 				healing = (200 * skill_lv) + (status_get_lv(src) * 3) + (status_get_int(src) * 3) + (matk * 3) + (skill_lv*200);
 				clif_specialeffect(bl, 1000, AREA);
+				clif_specialeffect(src, EF_GROUNDSHAKE, AREA);
 				clif_skill_nodamage(src,bl,HM_HEALPULSE,healing,1);
 				clif_skill_nodamage(NULL,bl,AL_HEAL,healing,1);
 				status_heal(bl,healing,0,0);
@@ -10346,9 +10347,13 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			}
 
 			status_heal(&ed->bl,s_hp,s_sp,3);
+			clif_specialeffect(src, EF_ENERVATION7, AREA);
+			clif_specialeffect(&ed->bl, EF_ENERVATION7, AREA);
+			clif_skill_nodamage(NULL,&ed->bl,AL_HEAL,s_hp,1);
+			clif_skill_nodamage(NULL,&ed->bl,MG_SRECOVERY,s_sp,1);
 			clif_skill_nodamage(src,&ed->bl,skill_id,skill_lv,1);
 		}
-
+		break;
 	case AM_HOM_CURE:
 		if( sd ) {
 			int s_hp, s_sp;
