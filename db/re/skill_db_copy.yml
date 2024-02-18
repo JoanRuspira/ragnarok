@@ -78,11 +78,7 @@ Body:
     AfterCastActDelay: 3000
     Requires:
       SpCost: 40
-  - Id: 55
-    Name: KN_SPEARMASTERY
-    Description: Spear Mastery
-    MaxLevel: 5
-    Type: Weapon
+
   - Id: 5
     Name: SM_BASH
     Description: Bash
@@ -966,27 +962,7 @@ Body:
     Element: Poison
     Requires:
       SpCost: 10
-  - Id: 56
-    Name: KN_PIERCE
-    Description: Pierce
-    MaxLevel: 5
-    Type: Weapon
-    TargetType: Attack
-    Range: -2
-    Hit: Multi_Hit
-    HitCount: -3
-    Element: Weapon
-    Cooldown: 5000
-    AfterCastActDelay: 400
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
-    Requires:
-      SpCost: 13
-      Weapon:
-        1hSpear: true
-        2hSpear: true
+
   - Id: 60
     Name: KN_TWOHANDQUICKEN
     Description: Twohand Quicken

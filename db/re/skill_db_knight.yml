@@ -385,6 +385,27 @@ Body:
         2hMace: true
         Knuckle: true
         Katar: true
+  - Id: 56
+    Name: KN_PIERCE
+    Description: Pierce
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: -2
+    Hit: Multi_Hit
+    HitCount: -3
+    Element: Weapon
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Requires:
+      SpCost: 13
+      Weapon:
+        1hSpear: true
+        2hSpear: true
   - Id: 62
     Name: KN_BOWLINGBASH
     Description: Bowling Bash
