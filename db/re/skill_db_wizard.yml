@@ -1,0 +1,557 @@
+
+Header:
+  Type: SKILL_DB
+  Version: 1
+
+Body:
+  - Id: 2446
+    Name: SO_EARTHGRAVE
+    Description: Earth Grave
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Ground
+    Flags:
+      TargetHidden: true
+    Range: 7
+    Hit: Single
+    HitCount: -5
+    Element: Earth
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    CastTime: 7000
+    Cooldown: 7500
+    AfterCastActDelay: 2000
+    Duration1: 500
+    Duration2:
+      - Level: 1
+        Time: 8000
+      - Level: 2
+        Time: 11000
+      - Level: 3
+        Time: 14000
+      - Level: 4
+        Time: 17000
+      - Level: 5
+        Time: 20000
+    Cooldown: 5000
+    Requires:
+      SpCost: 85
+      ItemCost:
+        - Item: Lime_Green_Pts
+          Amount: 1
+    Unit:
+      Id: Dummyskill
+      Range:
+        - Level: 1
+          Size: 3
+        - Level: 2
+          Size: 3
+        - Level: 3
+          Size: 3
+        - Level: 4
+          Size: 4
+        - Level: 5
+          Size: 4
+      Interval: 1000
+      Target: Enemy
+      Flag:
+        NoOverlap: true
+        PathCheck: true
+  - Id: 85
+    Name: WZ_VERMILION
+    Description: Lord of Vermilion
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Ground
+    Flags:
+      IsAutoShadowSpell: true
+    Range: 7
+    Hit: Multi_Hit
+    HitCount: -5
+    Element: Wind
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CastCancel: true
+    CastTime: 7000
+    Cooldown: 7500
+    AfterCastActDelay: 2000
+    Duration1: 4000
+    Duration2: 30000
+    Requires:
+      SpCost: 85
+      ItemCost:
+        - Item: Yellow_Wish_Pts
+          Amount: 1
+    Unit:
+      Id: Dummyskill
+      Layout:
+        - Level: 1
+          Size: 5
+        - Level: 2
+          Size: 5
+        - Level: 3
+          Size: 5
+        - Level: 4
+          Size: 5
+        - Level: 5
+          Size: 5
+        - Level: 6
+          Size: 5
+        - Level: 7
+          Size: 5
+        - Level: 8
+          Size: 5
+        - Level: 9
+          Size: 5
+        - Level: 10
+          Size: 5
+        - Level: 11
+          Size: 7
+      Range: 1
+      Interval: 2000
+      Target: Enemy
+      Flag:
+        NoOverlap: true
+        PathCheck: true
+  - Id: 89
+    Name: WZ_STORMGUST
+    Description: Storm Gust
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Ground
+    Flags:
+      IsAutoShadowSpell: true
+    Range: 7
+    Hit: Single
+    HitCount: 1
+    Element: Water
+    Knockback: 2
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CastCancel: true
+    CastTime: 7000
+    Cooldown: 7500
+    AfterCastActDelay: 2000
+    Duration1: 4600
+    Duration2: 12000
+    Requires:
+      SpCost: 85
+      ItemCost:
+        - Item: Indigo_Pts
+          Amount: 1
+    Unit:
+      Id: Dummyskill
+      Layout: 4
+      Range: 1
+      Interval: 920
+      Target: Enemy
+      Flag:
+        NoOverlap: true
+        PathCheck: true
+  - Id: 83
+    Name: WZ_METEOR
+    Description: Meteor Storm
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Ground
+    Flags:
+      IsAutoShadowSpell: true
+    Range: 7
+    Hit: Multi_Hit
+    HitCount:
+      - Level: 1
+        Count: 2
+      - Level: 2
+        Count: 2
+      - Level: 3
+        Count: 2
+      - Level: 4
+        Count: 2
+      - Level: 5
+        Count: 2
+    Element: Fire
+    SplashArea: 3
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CastCancel: true
+    CastTime: 7000
+    Cooldown: 7500
+    AfterCastActDelay: 2000
+    Duration1:
+      - Level: 1
+        Time: 3000
+      - Level: 2
+        Time: 4000
+      - Level: 3
+        Time: 5000
+      - Level: 4
+        Time: 6000
+      - Level: 5
+        Time: 7000
+    Duration2: 5000
+    Requires:
+      SpCost: 85
+      ItemCost:
+        - Item: Scarlet_Pts
+          Amount: 1
+    Unit:
+      Id: Dummyskill
+      Range: 3
+      Interval: 1000
+      Target: Enemy
+      Flag:
+        PathCheck: true
+  - Id: 90
+    Name: WZ_EARTHSPIKE
+    Description: Stalagmite
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    DamageFlags:
+      Splash: true
+    Flags:
+      AlterRangeRadius: true
+    Range: 7
+    Hit: Multi_Hit
+    HitCount:
+      - Level: 1
+        Count: 1
+      - Level: 2
+        Count: 2
+      - Level: 3
+        Count: 3
+      - Level: 4
+        Count: 4
+      - Level: 5
+        Count: 5
+    Element: Earth
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    CastTime: 7000
+    AfterCastActDelay: 2000
+    Duration1: 5000
+    Cooldown: 5000
+    Requires:
+      SpCost: 65
+  - Id: 884
+    Name: WZ_LIGHTNINGROD
+    Description: Lightning Rod
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    DamageFlags:
+      Splash: false
+    Flags:
+      AlterRangeRadius: true
+    Range: 7
+    Hit: Multi_Hit
+    HitCount:
+      - Level: 1
+        Count: 1
+      - Level: 2
+        Count: 2
+      - Level: 3
+        Count: 3
+      - Level: 4
+        Count: 4
+      - Level: 5
+        Count: 5
+    Element: Wind
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    CastTime: 7000
+    AfterCastActDelay: 2000
+    Duration1: 5000
+    Cooldown: 5000
+    Requires:
+      SpCost: 65
+  - Id: 838
+    Name: WZ_ICEBERG
+    Description: Iceberg
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    DamageFlags:
+      Splash: true
+    Flags:
+      AlterRangeRadius: true
+    Range: 7
+    Hit: Multi_Hit
+    HitCount:
+      - Level: 1
+        Count: 1
+      - Level: 2
+        Count: 2
+      - Level: 3
+        Count: 3
+      - Level: 4
+        Count: 4
+      - Level: 5
+        Count: 5
+    Element: Water
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    CastTime: 7000
+    AfterCastActDelay: 2000
+    Duration1: 5000
+    Cooldown: 5000
+    Requires:
+      SpCost: 65
+  - Id: 2211
+    Name: WL_CRIMSONROCK
+    Description: Crimson Rock
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    DamageFlags:
+      Splash: true
+    Flags:
+      AlterRangeRadius: true
+    Range: 7
+    Hit: Multi_Hit
+    HitCount:
+      - Level: 1
+        Count: 1
+      - Level: 2
+        Count: 2
+      - Level: 3
+        Count: 3
+      - Level: 4
+        Count: 4
+      - Level: 5
+        Count: 5
+    Element: Fire
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    CastTime: 7000
+    AfterCastActDelay: 2000
+    Duration1: 5000
+    Cooldown: 5000
+    Requires:
+      SpCost: 65
+  - Id: 844
+    Name: WZ_CORRUPT
+    Description: Icon of Sin
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    DamageFlags:
+      Splash: true
+    Range: 7
+    Hit: Single
+    HitCount: 1
+    Element: Dark
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    Cooldown: 4000
+    AfterCastActDelay: 1000
+    Requires:
+      SpCost: 65
+  - Id: 469
+    Name: SL_SMA
+    Description: Illusionary Blades
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 7
+    Hit: Multi_Hit
+    HitCount:
+      - Level: 1
+        Count: 1
+      - Level: 2
+        Count: 2
+      - Level: 3
+        Count: 3
+      - Level: 4
+        Count: 4
+      - Level: 5
+        Count: 5
+    Element: Ghost
+    CastCancel: true
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CastTime: 2000
+    AfterCastActDelay: 2000
+    Duration1: 3000
+    Cooldown: 5000
+    Requires:
+      SpCost: 65
+  - Id: 845
+    Name: WZ_EXTREMEVACUUM
+    Description: Extreme Vacuum
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    DamageFlags:
+      Splash: true
+    Range: 7
+    Hit: Multi_Hit
+    HitCount: -3
+    Element: Ghost
+    SplashArea:
+      - Level: 1
+        Area: 1
+      - Level: 2
+        Area: 2
+      - Level: 3
+        Area: 3
+      - Level: 4
+        Area: 4
+      - Level: 5
+        Area: 5
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CastCancel: true
+    Cooldown: 5000
+    CastTime: 5000
+    AfterCastActDelay: 1000
+    Requires:
+      SpCost: 75
+      ItemCost:
+        - Item: Magic_Gem_Black
+          Amount: 1
+  - Id: 846
+    Name: WZ_LANDOFEVIL
+    Description: Reality Breaker
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    DamageFlags:
+      Splash: true
+    Range: 7
+    Hit: Multi_Hit
+    HitCount: -3
+    Element: Dark
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    SplashArea:
+      - Level: 1
+        Area: 1
+      - Level: 2
+        Area: 2
+      - Level: 3
+        Area: 3
+      - Level: 4
+        Area: 4
+      - Level: 5
+        Area: 5
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    Cooldown: 5000
+    CastTime: 5000
+    AfterCastActDelay: 1000
+    Requires:
+      SpCost: 75
+      ItemCost:
+        - Item: Suspicious_Magic_Stone
+          Amount: 1
+  - Id: 2208
+    Name: WL_RADIUS
+    Description: Radius
+    MaxLevel: 5
+  - Id: 403
+    Name: PF_MEMORIZE
+    Description: Foresight
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    HitCount: 1
+    CastCancel: true
+    CastTime: 5000
+    Cooldown: 35000
+    AfterCastActDelay: 3000
+    CastTimeFlags:
+      IgnoreDex: true
+      IgnoreStatus: true
+    Requires:
+      SpCost: 100
+      ItemCost:
+        - Item: Old_Magic_Circle
+          Amount: 1
+  - Id: 365
+    Name: HW_MAGICCRASHER
+    Description: Stave Crasher
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 7
+    Hit: Single
+    HitCount: 1
+    Element: Neutral
+    CastCancel: true
+    AfterCastActDelay: 1000
+    Cooldown: 5000
+    Requires:
+      SpCost: 40
+  - Id: 2449
+    Name: SO_PSYCHIC_WAVE
+    Description: Psychic Wave
+    MaxLevel: 5
+    Type: Magic
+    Element: Neutral
+    TargetType: Ground
+    Range: 7
+    Hit: Single
+    HitCount: 1
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    CastTime: 7000
+    AfterCastActDelay: 2000
+    Duration1: 3200
+    Cooldown: 10000
+    Requires:
+      SpCost: 85
+    Unit:
+      Id: Psychic_Wave
+      Range:
+        - Level: 1
+          Size: 3
+        - Level: 2
+          Size: 3
+        - Level: 3
+          Size: 4
+        - Level: 4
+          Size: 4
+        - Level: 5
+          Size: 5
+      Interval: 400
+      Target: Enemy
+      Flag:
+        NoOverlap: true
+        PathCheck: true

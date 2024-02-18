@@ -1,0 +1,208 @@
+
+Header:
+  Type: SKILL_DB
+  Version: 1
+
+Body:
+  - Id: 5001
+    Name: GC_DARKCROW
+    Description: Dark Claw
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: 1
+    Hit: Single
+    HitCount: 1
+    Element: Weapon
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    AfterCastActDelay: 400
+    Duration1: 10000
+    Cooldown: 30000
+    Requires:
+      SpCost: 50
+      Weapon:
+        Katar: true
+  - Id: 869
+    Name: DUMMY_CROSSIMPACT
+    Description: Vulcan Arrow
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: 7
+    Hit: Multi_Hit
+    HitCount: -8
+    Element: Weapon
+    Cooldown: 7000
+    AfterCastActDelay: 2000
+    Duration2: 5000
+    CastDelayFlags:
+      IgnoreStatus: true
+    Requires:
+      SpCost: 35
+      Weapon:
+        Katar: true
+  - Id: 379
+    Name: ASC_BREAKER
+    Description: Soul Destroyer
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    Element: Weapon
+    CastCancel: true
+    CastTime: 0
+    AfterCastActDelay: 400
+    Cooldown: 7000
+    Requires:
+      SpCost: 17
+      Ammo:
+        Shuriken: true
+      AmmoAmount: 1
+  - Id: 406
+    Name: ASC_METEORASSAULT
+    Description: Meteor Assault
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      Splash: true
+    Flags:
+      TargetTrap: true
+      IgnoreAutoGuard: true
+      IgnoreCicada: true
+    Hit: Single
+    HitCount: 1
+    Element: Weapon
+    SplashArea: 3
+    Cooldown: 7000
+    CastTime: 0
+    AfterCastActDelay: 400
+    Duration2:
+      - Level: 1
+        Time: 30000
+      - Level: 2
+        Time: 5000
+      - Level: 3
+        Time: 120000
+    Requires:
+      SpCost: 23
+      Ammo:
+        Kunai: true
+      AmmoAmount: 4
+  - Id: 2035
+    Name: GC_HALLUCINATIONWALK
+    Description: Hallucination Walk
+    MaxLevel: 5
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Duration1: 30000
+    Cooldown: 60000
+    Requires:
+      SpCost: 40
+  - Id: 2290
+    Name: SC_INVISIBILITY
+    Description: Invisibility
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    Cooldown: 1000
+    AfterCastActDelay: 400
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Duration1: 10000
+    Requires:
+      SpCost: 15
+  - Id: 870
+    Name: ASC_DANCINGBLADES
+    Description: Dancing Blade
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 30000
+    AfterCastActDelay: 1000
+    Duration1:
+      - Level: 1
+        Time: 60000
+      - Level: 2
+        Time: 120000
+      - Level: 3
+        Time: 180000
+      - Level: 4
+        Time: 240000
+      - Level: 5
+        Time: 300000
+    Requires:
+      SpCost: 50
+      Weapon:
+        Dagger: true
+        1hSword: true
+        1hSpear: true
+        1hAxe: true
+        Mace: true
+        Staff: true
+        Knuckle: true
+        Book: true
+  - Id: 1003
+    Name: AS_SONICACCEL
+    Description: Sonic Acceleration
+    MaxLevel: 5
+    Type: Weapon
+  - Id: 2448
+    Name: SO_POISON_BUSTER
+    Description: Poison Buster
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    DamageFlags:
+      Splash: true
+    Range: 1
+    Hit: Single
+    HitCount: 1
+    Element: Poison
+    SplashArea: 2
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    AfterCastActDelay: 400
+    Cooldown: 7000
+    Requires:
+      SpCost: 25
+      ItemCost:
+        - Item: Poison_Powder
+          Amount: 1
+  - Id: 378
+    Name: ASC_EDP
+    Description: Enchant Deadly Poison
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Element: Poison
+    AfterCastActDelay: 1000
+    Duration1: 60000
+    Duration2: 20000
+    Cooldown: 180000
+    Requires:
+      SpCost: 100
+      ItemCost:
+        - Item: Poison_Bottle
+          Amount: 1
+        - Item: Poison_Powder
+          Amount: 1

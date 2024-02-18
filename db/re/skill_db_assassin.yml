@@ -1,0 +1,413 @@
+
+Header:
+  Type: SKILL_DB
+  Version: 1
+
+Body:
+  - Id: 134
+    Name: AS_KATAR
+    Description: Katar Mastery
+    MaxLevel: 10
+    Type: Weapon
+  - Id: 136
+    Name: AS_SONICBLOW
+    Description: Sonic Blow
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: 1
+    Hit: Multi_Hit
+    HitCount: -8
+    Element: Weapon
+    Cooldown: 5000
+    AfterCastActDelay: 2000
+    Duration2: 5000
+    CastDelayFlags:
+      IgnoreStatus: true
+    Requires:
+      SpCost: 25
+      Weapon:
+        Katar: true
+  - Id: 2036
+    Name: GC_ROLLINGCUTTER
+    Description: Rolling Cutter
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      Splash: true
+    Hit: Single
+    HitCount: 1
+    Element: Weapon
+    SplashArea:
+      - Level: 1
+        Area: 2
+      - Level: 2
+        Area: 2
+      - Level: 3
+        Area: 2
+      - Level: 4
+        Area: 2
+      - Level: 5
+        Area: 2
+    AfterCastActDelay: 0
+    Duration1: 3000
+    Requires:
+      SpCost: 2
+      Weapon:
+        Katar: true
+  - Id: 2037
+    Name: GC_CROSSRIPPERSLASHER
+    Description: Cross Ripper Slasher
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range:
+      - Level: 1
+        Size: 13
+      - Level: 2
+        Size: 13
+      - Level: 3
+        Size: 13
+      - Level: 4
+        Size: 13
+      - Level: 5
+        Size: 13
+    Hit: Single
+    HitCount: 1
+    Element: Weapon
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    Requires:
+      SpCost: 20
+      Weapon:
+        Katar: true
+  - Id: 135
+    Name: AS_CLOAKING
+    Description: Cloaking
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    Cooldown: 1000
+    AfterCastActDelay: 400
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Duration1:
+      - Level: 1
+        Time: 1000
+      - Level: 2
+        Time: 3000
+      - Level: 3
+        Time: 5000
+      - Level: 4
+        Time: 7000
+      - Level: 5
+        Time: 9000
+    Requires:
+      SpCost: 15
+  - Id: 137
+    Name: AS_GRIMTOOTH
+    Description: Grimtooth
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    DamageFlags:
+      Splash: true
+    Flags:
+      TargetTrap: true
+      AllowWhenHidden: true
+    Range:
+      - Level: 1
+        Size: 3
+      - Level: 2
+        Size: 4
+      - Level: 3
+        Size: 5
+      - Level: 4
+        Size: 6
+      - Level: 5
+        Size: 7
+    Hit: Multi_Hit
+    HitCount: 2
+    Element: Weapon
+    SplashArea: 1
+    Requires:
+      SpCost: 15
+  - Id: 389
+    Name: ST_CHASEWALK
+    Description: Stealth
+    MaxLevel: 5
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      IgnoreKagehumi: true
+    Hit: Single
+    HitCount: 1
+    CastTime: 1000
+    Cooldown: 1000
+    AfterCastActDelay: 400
+    Duration1: 10000
+    Duration2: 120000
+    Requires:
+      SpCost: 20
+  - Id: 214
+    Name: RG_RAID
+    Description: Sightless Mind
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    DamageFlags:
+      Splash: true
+    Flags:
+      TargetTrap: true
+      AllowWhenHidden: true
+    Hit: Single
+    HitCount: 1
+    Element: Weapon
+    Cooldown: 7000
+    AfterCastActDelay: 400
+    SplashArea: 3
+    Duration1: 5000
+    Duration2: 30000
+    Requires:
+      SpCost: 18
+  - Id: 138
+    Name: AS_ENCHANTPOISON
+    Description: Enchant Poison
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Support
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      PartyOnly: true
+    Range: 1
+    Hit: Single
+    HitCount: 1
+    Element: Poison
+    Cooldown: 10000
+    AfterCastActDelay: 1000
+    Duration1:
+      - Level: 1
+        Time: 45000
+      - Level: 2
+        Time: 75000
+      - Level: 3
+        Time: 105000
+      - Level: 4
+        Time: 135000
+      - Level: 5
+        Time: 165000
+    Duration2:
+      - Level: 1
+        Time: 20000
+      - Level: 2
+        Time: 20000
+      - Level: 3
+        Time: 20000
+      - Level: 4
+        Time: 20000
+      - Level: 5
+        Time: 20000
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Requires:
+      SpCost: 20
+      ItemCost:
+        - Item: Poison_Bottle
+          Amount: 1
+  - Id: 2450
+    Name: SO_CLOUD_KILL
+    Description: Cloud Kill
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    Element: Poison
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    CastTime: 0
+    AfterCastActDelay: 500
+    Duration1:
+      - Level: 1
+        Time: 15000
+      - Level: 2
+        Time: 15000
+      - Level: 3
+        Time: 15000
+      - Level: 4
+        Time: 15000
+      - Level: 5
+        Time: 15000
+    Duration2:
+      - Level: 1
+        Time: 20000
+      - Level: 2
+        Time: 20000
+      - Level: 3
+        Time: 20000
+      - Level: 4
+        Time: 20000
+      - Level: 5
+        Time: 20000
+    Cooldown: 15000
+    Requires:
+      SpCost: 35
+      ItemCost:
+        - Item: Poisonous_Gas
+          Amount: 1
+    Unit:
+      Id: Cloud_Kill
+      Range: 3
+      Interval: 3000
+      Target: Enemy
+      Flag:
+        PathCheck: true
+        RemovedByFireRain: true
+  - Id: 2021
+    Name: GC_VENOMIMPRESS
+    Description: Venom Impress
+    MaxLevel: 5
+    TargetType: Attack
+    DamageFlags:
+      NoDamage: true
+    Range: 1
+    Hit: Single
+    HitCount: 1
+    Cooldown: 2000
+    AfterCastActDelay: 400
+    Duration1:
+      - Level: 1
+        Time: 10000
+      - Level: 2
+        Time: 20000
+      - Level: 3
+        Time: 30000
+      - Level: 4
+        Time: 40000
+      - Level: 5
+        Time: 50000
+    Requires:
+      SpCost: 15
+  - Id: 141
+    Name: AS_SPLASHER
+    Description: Venom Splasher
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    DamageFlags:
+      NoDamage: true
+      IgnoreElement: true
+      IgnoreFlee: true
+    Range: 1
+    Hit: Single
+    HitCount: 1
+    Element: Poison
+    SplashArea: 2
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CastCancel: true
+    Duration1:
+      - Level: 1
+        Time: 0
+      - Level: 2
+        Time: 0
+      - Level: 3
+        Time: 0
+      - Level: 4
+        Time: 0
+      - Level: 5
+        Time: 0
+    Duration2: 60000
+    Requires:
+      SpCost: 25
+      ItemCost:
+        - Item: Poison_Powder
+          Amount: 1
+  - Id: 523
+    Name: NJ_SYURIKEN
+    Description: Throw Shuriken
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    Element: Weapon
+    Requires:
+      SpCost: 14
+      Ammo:
+        Shuriken: true
+      AmmoAmount: 1
+  - Id: 524
+    Name: NJ_KUNAI
+    Description: Throw Kunai
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: 9
+    Hit: Multi_Hit
+    HitCount: -3
+    Element: Weapon
+    Cooldown: 5000
+    CastTime: 0
+    AfterCastActDelay: 400
+    Requires:
+      SpCost: 15
+      Ammo:
+        Kunai: true
+      AmmoAmount: 3
+  - Id: 133
+    Name: AS_LEFT
+    Description: Lefthand Mastery
+    MaxLevel: 5
+    Type: Weapon
+  - Id: 48
+    Name: TF_DOUBLE
+    Description: Double Attack
+    MaxLevel: 10
+    Type: Weapon
+    Range: -1
+    Hit: Multi_Hit
+    HitCount: 2
+    Element: Weapon
+  - Id: 868
+    Name: DUMMY_SONICBLOW
+    Description: Vulcan Arrow
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: 9
+    Hit: Multi_Hit
+    HitCount: -9
+    Element: Weapon
+    CastCancel: true
+    CastTime: 0
+    Cooldown: 0
+    AfterCastActDelay: 0
+    AfterCastWalkDelay: 0
+    Requires:
+      SpCost: 0

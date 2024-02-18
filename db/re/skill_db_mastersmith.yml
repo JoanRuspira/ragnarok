@@ -1,0 +1,263 @@
+
+Header:
+  Type: SKILL_DB
+  Version: 1
+
+Body:
+  - Id: 485
+    Name: WS_CARTTERMINATION
+    Description: Cart Termination
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      Splash: true
+    Hit: Single
+    HitCount: -1
+    Element: Weapon
+    AfterCastActDelay: 400
+    SplashArea: 5
+    Knockback: 2
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Duration2: 10000
+    CastTime: 2000
+    Cooldown: 8000
+    Requires:
+      SpCost: 30
+      ItemCost:
+        - Item: Gun_Powder
+          Amount: 1
+      State: Cart
+      Ammo:
+        Cannonball: true
+      AmmoAmount: 3
+  - Id: 359
+    Name: LK_BERSERK
+    Description: Frenzy
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    Cooldown: 60000
+    AfterCastActDelay: 400
+    HitCount: 1
+    Duration1: 15000
+    Duration2: 15000
+    Requires:
+      SpCost: 50
+      ItemCost:
+        - Item: Runstone_Turisus
+          Amount: 1
+      Weapon:
+        2hSword: true
+  - Id: 891
+    Name: WS_ARMOR_REINFORCEMENT
+    Description: Armor Reinforcement
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Support
+    DamageFlags:
+      NoDamage: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    AfterCastActDelay: 2000
+    CastTime: 3000
+    Duration1: 90000
+    Requires:
+      SpCost: 30
+      ItemCost:
+        - Item: Hammer_Of_Blacksmith
+          Amount: 1
+        - Item: Iron
+          Amount: 1
+  - Id: 2273
+    Name: NC_NEUTRALBARRIER
+    Description: Neutral Barrier
+    MaxLevel: 5
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Duration1: 30000
+    Cooldown: 60000
+    AfterCastActDely: 3000
+    Requires:
+      SpCost: 60
+      ItemCost:
+        - Item: Steel
+          Amount: 1  
+        - Item: Portable_Furnace
+          Amount: 1 
+    Unit:
+      Id: Neutralbarrier
+      Layout: 2
+      Interval: -1
+  - Id: 384
+    Name: WS_MELTDOWN
+    Description: Shattering Strike
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      AllowOnMado: true
+    HitCount: 1
+    CastCancel: true
+    Duration1: 60000
+    Cooldown: 20000
+    Duration2: 5000
+    AfterCastActDelay: 3000
+    Requires:
+      SpCost: 70
+      ItemCost:
+        - Item: Portable_Furnace
+          Amount: 1
+      Weapon:
+        Fist: true
+        Dagger: true
+        1hSword: true
+        2hSword: true
+        1hSpear: true
+        2hSpear: true
+        1hAxe: true
+        2hAxe: true
+        Mace: true
+        2hMace: true
+        Staff: true
+        Bow: true
+        Knuckle: true
+        Musical: true
+        Whip: true
+        Book: true
+        Katar: true
+        2hStaff: true
+  - Id: 486
+    Name: WS_OVERTHRUSTMAX
+    Description: Maximum Power Thrust
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      AllowOnMado: true
+    Hit: Single
+    HitCount: 1
+    Duration1: 30000
+    Cooldown: 120000
+    AfterCastActDelay: 3000
+    Requires:
+      SpCost: 70
+      ItemCost:
+        - Item: Hammer_Of_Blacksmith
+          Amount: 1
+        - Item: Portable_Furnace
+          Amount: 1
+      Weapon:
+        Fist: true
+        Dagger: true
+        1hSword: true
+        2hSword: true
+        1hSpear: true
+        2hSpear: true
+        1hAxe: true
+        2hAxe: true
+        Mace: true
+        2hMace: true
+        Staff: true
+        Bow: true
+        Knuckle: true
+        Musical: true
+        Whip: true
+        Book: true
+        Katar: true
+        2hStaff: true
+  - Id: 477
+    Name: WS_WEAPONREFINE
+    Description: Upgrade Weapon
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      AllowOnMado: true
+    Hit: Single
+    HitCount: 1
+    Casttime: 5000
+    CoolDown:  5000
+    AfterCastActDelay: 3000
+    Requires:
+      SpCost: 50
+  - Id: 892
+    Name: WS_MASTERCRAFT
+    Description: Mastercrafting
+    MaxLevel: 5
+    Type: Weapon
+  - Id: 890
+    Name: WS_HAMMERDOWN_PROTOCOL
+    Description: Hammerdown Protocol
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: 9
+    Hit: Single
+    DamageFlags:
+      Splash: true
+    SplashArea: 5
+    HitCount: 1
+    Element: Neutral
+    AfterCastActDelay: 400
+    Cooldown: 8000
+    Duration1: 2000
+    Requires:
+      SpCost: 20
+      ItemCost:
+        - Item: Hammer_Of_Blacksmith
+          Amount: 3
+  - Id: 2279
+    Name: NC_POWERSWING
+    Description: Power Swing
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: 1
+    Hit: Single
+    HitCount: -2
+    Element: Weapon
+    Cooldown: 4000
+    AfterCastActDelay: 400
+    Duration1: 2000
+    Requires:
+      SpCost: 16
+      Weapon:
+        1hAxe: true
+        2hAxe: true
+  - Id: 515
+    Name: GS_RAPIDSHOWER
+    Description: Rapid Shower
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: -9
+    Hit: Multi_Hit
+    HitCount: -5
+    Element: Weapon
+    AfterCastActDelay: 400
+    Cooldown: 7000
+    CastTime: 2000
+    Requires:
+      SpCost: 30
+      State: Cart     
+      Ammo:
+        Cannonball: true
+      AmmoAmount: 5

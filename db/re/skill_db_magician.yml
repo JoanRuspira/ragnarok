@@ -1,0 +1,420 @@
+
+Header:
+  Type: SKILL_DB
+  Version: 1
+
+Body:
+  - Id: 839
+    Name: MG_EARTHBOLT
+    Description: Earth Bolt
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Flags:
+      IsAutoShadowSpell: true
+    Range: 7
+    Hit: Multi_Hit
+    HitCount:
+      - Level: 1
+        Count: 1
+      - Level: 2
+        Count: 2
+      - Level: 3
+        Count: 3
+      - Level: 4
+        Count: 4
+      - Level: 5
+        Count: 5
+    Element: Earth
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CastCancel: true
+    CastTime: 3000
+    Cooldown: 5000
+    AfterCastActDelay: 500
+    Requires:
+      SpCost: 30
+  - Id: 20
+    Name: MG_LIGHTNINGBOLT
+    Description: Lightning Bolt
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Flags:
+      IsAutoShadowSpell: true
+    Range: 7
+    Hit: Multi_Hit
+    HitCount:
+      - Level: 1
+        Count: 1
+      - Level: 2
+        Count: 2
+      - Level: 3
+        Count: 3
+      - Level: 4
+        Count: 4
+      - Level: 5
+        Count: 5
+    Element: Wind
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CastCancel: true
+    CastTime: 3000
+    Cooldown: 5000
+    AfterCastActDelay: 500
+    Requires:
+      SpCost: 30
+  - Id: 14
+    Name: MG_COLDBOLT
+    Description: Cold Bolt
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Flags:
+      IsAutoShadowSpell: true
+    Range: 7
+    Hit: Multi_Hit
+    HitCount:
+      - Level: 1
+        Count: 1
+      - Level: 2
+        Count: 2
+      - Level: 3
+        Count: 3
+      - Level: 4
+        Count: 4
+      - Level: 5
+        Count: 5
+    Element: Water
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CastCancel: true
+    CastTime: 3000
+    Cooldown: 5000
+    AfterCastActDelay: 500
+    Requires:
+      SpCost: 30
+  - Id: 19
+    Name: MG_FIREBOLT
+    Description: Fire Bolt
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Flags:
+      IsAutoShadowSpell: true
+    Range: 7
+    Hit: Multi_Hit
+    HitCount:
+      - Level: 1
+        Count: 1
+      - Level: 2
+        Count: 2
+      - Level: 3
+        Count: 3
+      - Level: 4
+        Count: 4
+      - Level: 5
+        Count: 5
+    Element: Fire
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CastCancel: true
+    CastTime: 3000
+    Cooldown: 5000
+    AfterCastActDelay: 500
+    Requires:
+      SpCost: 30
+  - Id: 837
+    Name: JG_SRECOVERY
+    Description: Increase SP Recovery
+    MaxLevel: 5
+  - Id: 275
+    Name: SA_CASTCANCEL
+    Description: Cast Cancel
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Requires:
+      SpCost: 0
+  - Id: 157
+    Name: MG_ENERGYCOAT
+    Description: Energy Coat
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    CastTime: 5000
+    Cooldown: 10000
+    AfterCastActDelay: 500
+    Duration1:
+      - Level: 1
+        Time: 80000
+      - Level: 2
+        Time: 120000
+      - Level: 3
+        Time: 160000
+      - Level: 4
+        Time: 200000
+      - Level: 5
+        Time: 240000
+    Requires:
+      SpCost: 30
+  - Id: 2231
+    Name: WL_READING_SB
+    Description: Reading Spellbook
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Flags:
+      AlterRangeRadius: true
+    Range: 11
+    Hit: Multi_Hit
+    HitCount: 1
+    CastCancel: true
+    Cooldown: 7500
+    Requires:
+      SpCost: 1
+  - Id: 5078
+    Name: WL_READING_SB_READING
+    Description: Reading Spellbook
+    MaxLevel: 10
+    TargetType: Self
+    CastTime: 5000
+    AfterCastActDelay: 400
+  - Id: 2202
+    Name: WL_SOULEXPANSION
+    Description: Void Expansion
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    DamageFlags:
+      Splash: true
+    Flags:
+      AlterRangeRadius: true
+    Range: 7
+    Hit: Multi_Hit
+    HitCount: -2
+    Element: Ghost
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    CastTime: 2000
+    Cooldown: 5000
+    AfterCastActDelay: 1000
+    Requires:
+      SpCost: 30
+  - Id: 340
+    Name: NPC_DARKSTRIKE
+    Description: Soul Strike of Darkness
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Flags:
+      IsNpc: true
+    Range: 9
+    Hit: Multi_Hit
+    HitCount:
+      - Level: 1
+        Count: 1
+      - Level: 2
+        Count: 2
+      - Level: 3
+        Count: 3
+      - Level: 4
+        Count: 4
+      - Level: 5
+        Count: 5
+    Element: Dark
+    CastCancel: true
+    CastTime: 3000
+    Cooldown: 5000
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    AfterCastActDelay: 1000
+    Requires:
+      SpCost: 30
+  - Id: 13
+    Name: MG_SOULSTRIKE
+    Description: Soul Strike
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Flags:
+      IsAutoShadowSpell: true
+    Range: 7
+    Hit: Multi_Hit
+    HitCount:
+      - Level: 1
+        Count: 1
+      - Level: 2
+        Count: 2
+      - Level: 3
+        Count: 3
+      - Level: 4
+        Count: 4
+      - Level: 5
+        Count: 5
+    Element: Ghost
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CastCancel: true
+    CastTime: 3000
+    Cooldown: 5000
+    AfterCastActDelay: 1000
+    Requires:
+      SpCost: 30
+  - Id: 800
+    Name: MG_UNDEADEMBRACE
+    Description: Devil's Embrace
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 7
+    Hit: Single
+    HitCount: 1
+    Element: Dark
+    CastTime: 3000
+    Cooldown: 5000
+    AfterCastActDelay: 1000
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CastCancel: true
+    Requires:
+      SpCost: 30
+  - Id: 16
+    Name: MG_STONECURSE
+    Description: Stone Curse
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    DamageFlags:
+      NoDamage: true
+    Range: 7
+    Hit: Single
+    HitCount: 1
+    Element: Earth
+    CastCancel: true
+    Cooldown: 15000
+    AfterCastActDelay: 500
+    Requires:
+      SpCost: 37
+  - Id: 92
+    Name: WZ_QUAGMIRE
+    Description: Quagmire
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Ground
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      IgnoreHovering: true
+      TargetHidden: true
+    Range: 7
+    Hit: Single
+    HitCount: 1
+    Element: Earth
+    ActiveInstance: 3
+    CastCancel: true
+    Cooldown: 2000
+    AfterCastActDelay: 1000
+    Duration1:
+      - Level: 1
+        Time: 5000
+      - Level: 2
+        Time: 10000
+      - Level: 3
+        Time: 15000
+      - Level: 4
+        Time: 20000
+      - Level: 5
+        Time: 25000
+    Duration2:
+      - Level: 1
+        Time: 5000
+      - Level: 2
+        Time: 10000
+      - Level: 3
+        Time: 15000
+      - Level: 4
+        Time: 20000
+      - Level: 5
+        Time: 25000
+    Requires:
+      SpCost: 35
+    Unit:
+      Id: Quagmire
+      Layout: 2
+      Interval: -1
+      Target: Enemy
+      Flag:
+        PathCheck: true
+        RemovedByFireRain: true
+  - Id: 15
+    Name: MG_FROSTDIVER
+    Description: Frost Diver
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Flags:
+      IsAutoShadowSpell: true
+    Range: 7
+    Hit: Single
+    HitCount: 1
+    Element: Water
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CastCancel: true
+    Cooldown: 15000
+    AfterCastActDelay: 500
+    Requires:
+      SpCost: 37
+  - Id: 87
+    Name: WZ_ICEWALL
+    Description: Ice Wall
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Ground
+    DamageFlags:
+      NoDamage: true
+    Range: 7
+    Hit: Single
+    HitCount: 1
+    Element: Water
+    CastCancel: true
+    Cooldown: 2000
+    AfterCastActDelay: 1000
+    Requires:
+      SpCost: 35
+    Unit:
+      Id: Icewall
+      Layout: -1
+      Interval: 1000
+      Flag:
+        PathCheck: true
+        NoKnockback: true
+        RemovedByFireRain: true

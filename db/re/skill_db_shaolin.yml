@@ -1,0 +1,161 @@
+
+Header:
+  Type: SKILL_DB
+  Version: 1
+
+Body:
+  - Id: 270
+    Name: MO_EXPLOSIONSPIRITS
+    Description: Ultra Instinct
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    Cooldown: 60000
+    AfterCastActDelay: 5000
+    Duration1: 60000
+    Requires:
+      SpCost: 40
+      ItemCost:
+        - Item: Dragonball_Green
+          Amount: 1
+  - Id: 2326
+    Name: SR_DRAGONCOMBO
+    Description: Dragon Combo
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: 1
+    Hit: Multi_Hit
+    HitCount: -2
+    Element: Weapon
+    DamageFlags:
+      IgnoreDefense: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    Duration1: 5000
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    Requires:
+      SpCost: 30
+      Weapon:
+        Knuckle: true
+  - Id: 526
+    Name: NJ_ZENYNAGE
+    Description: Throw Zeny
+    MaxLevel: 5
+    Type: Misc
+    TargetType: Attack
+    Element: Weapon
+    Range: 1
+    Hit: Multi_Hit
+    HitCount: -5
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    AfterCastActDelay: 400
+    Cooldown: 3000
+    Requires:
+      SpCost: 30
+      SpiritSphereCost: 1
+      Weapon:
+        Knuckle: true
+        Mace: true
+        2hMace: true
+  - Id: 2256
+    Name: NC_BOOSTKNUCKLE
+    Description: Boost Knuckle
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: 7
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    Hit: Multi_Hit
+    HitCount: -5
+    Element: Weapon
+    Requires:
+      SpCost: 40
+      ItemCost:
+        - Item: Dragonball_Red
+          Amount: 1
+      SpiritSphereCost: 1
+  - Id: 875
+    Name: CH_ZEN
+    Description: Zen
+    MaxLevel: 5
+    Type: Weapon
+  - Id: 271
+    Name: MO_EXTREMITYFIST
+    Description: Asura Strike
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: -2
+    Hit: Single
+    Element: Weapon
+    HitCount: 1
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CastCancel: true
+    Cooldown: 30000
+    CastTime: 2000
+    AfterCastActDelay: 3000
+    Duration2: 300000
+    Requires:
+      SpCost: 1
+      ItemCost:
+        - Item: Dragonball_Blue
+          Amount: 1
+      SpiritSphereCost: 5
+  - Id: 269
+    Name: MO_BLADESTOP
+    Description: Root
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Duration1: 1300
+    Duration2:
+      - Level: 1
+        Time: 2000
+      - Level: 2
+        Time: 4000
+      - Level: 3
+        Time: 6000
+      - Level: 4
+        Time: 8000
+      - Level: 5
+        Time: 10000
+    Requires:
+      SpCost: 10
+      SpiritSphereCost: 1
+  - Id: 268
+    Name: MO_STEELBODY
+    Description: Mental Strength
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 75000
+    AfterCastActDelay: 3000
+    CastTime: 5000
+    Duration1: 60000
+    Requires:
+      SpCost: 200
+      ItemCost:
+        - Item: Dragonball_Yellow
+          Amount: 1
+      SpiritSphereCost: 5

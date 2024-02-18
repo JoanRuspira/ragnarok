@@ -1,0 +1,258 @@
+
+Header:
+  Type: SKILL_DB
+  Version: 1
+
+Body:
+  - Id: 877
+    Name: AB_LAUDATEDOMINIUM
+    Description: Laudate Dominium
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    AfterCastActDelay: 1000
+    Duration1: 30000
+    Cooldown: 120000
+    Requires:
+      SpCost: 250
+      ItemCost:
+        - Item: White_Gemstone
+          Amount: 2
+  - Id: 2040  
+    Name: AB_ADORAMUS
+    Description: Adoramus
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    DamageFlags:
+      Splash: true
+    Range: 11
+    Hit: Multi_Hit
+    HitCount: -3
+    Element: Holy
+    SplashArea:
+      - Level: 1
+        Area: 1
+      - Level: 2
+        Area: 1
+      - Level: 3
+        Area: 2
+      - Level: 4
+        Area: 3
+      - Level: 5
+        Area: 3
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    CastTime: 3500
+    AfterCastActDelay: 1000
+    Duration1: 12000
+    Duration2: 35000
+    Cooldown: 7000
+    Requires:
+      SpCost: 80
+  - Id: 878
+    Name: HP_PENITENTIA
+    Description: Penitentia
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    DamageFlags:
+      Splash: true
+    Range: 11
+    Hit: Multi_Hit
+    HitCount: -2
+    Element: Dark
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    SplashArea: 5
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    Cooldown: 10000
+    CastTime: 5000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 85
+      ItemCost:
+        - Item: Black_Gemstone
+          Amount: 1
+  - Id: 879
+    Name: HP_VITUPERATUM
+    Description: Diaboli Cruciatus
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 11
+    Hit: Multi_Hit
+    HitCount: -3
+    Element: Dark
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    CastTime: 3500
+    AfterCastActDelay: 1000
+    Duration1: 12000
+    Duration2: 35000
+    Cooldown: 6666
+    Requires:
+      SpCost: 80
+  - Id: 5011
+    Name: AB_OFFERTORIUM
+    Description: Offertorium
+    MaxLevel: 5
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    CastTime: 1000
+    AfterCastActDelay: 500
+    Duration1: 30000
+    Requires:
+      SpCost: 50
+  - Id: 2044
+    Name: AB_EPICLESIS
+    Description: Epiclesis
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Ground
+    DamageFlags:
+      NoDamage: true
+    Range: 11
+    Hit: Single
+    HitCount: 1
+    Element: Holy
+    SplashArea: 2
+    ActiveInstance: 1
+    CastCancel: true
+    CastTime: 7000
+    AfterCastActDelay: 2000
+    Duration1:
+      - Level: 1
+        Time: 18000
+      - Level: 2
+        Time: 21000
+      - Level: 3
+        Time: 24000
+      - Level: 4
+        Time: 27000
+      - Level: 5
+        Time: 30000
+    Cooldown: 60000
+    Requires:
+      SpCost: 250
+      ItemCost:
+        - Item: Holy_Water
+          Amount: 1
+        - Item: Blue_Gemstone
+          Amount: 1
+    Unit:
+      Id: Epiclesis
+      Range: 2
+      Interval: 1000
+      Flag:
+        NoOverlap: true
+        PathCheck: true
+  - Id: 2053
+    Name: AB_EXPIATIO
+    Description: Expiatio
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Support
+    DamageFlags:
+      NoDamage: true
+    Range: 11
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    CastTime: 1000
+    AfterCastActDelay: 2000
+    Cooldown: 5000
+    Duration1:
+      - Level: 1
+        Time: 150000
+      - Level: 2
+        Time: 180000
+      - Level: 3
+        Time: 210000
+      - Level: 4
+        Time: 240000
+      - Level: 5
+        Time: 270000
+    Requires:
+      SpCost: 75
+  - Id: 880
+    Name: AB_ULTOR
+    Description: In Lucem Batalia
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Range: 11
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    CastTime: 2000
+    AfterCastActDelay: 3000
+    Cooldown: 30000
+    Duration1: 60000
+    Requires:
+      SpCost: 150
+      ItemCost:
+        - Item: Red_Gemstone
+          Amount: 1
+  - Id: 69
+    Name: PR_BENEDICTIO
+    Description: B.S. Sacramenti
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Ground
+    DamageFlags:
+      NoDamage: true
+      Splash: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    SplashArea: 5
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CastCancel: true
+    CastTime: 5000
+    Cooldown: 10000
+    AfterCastActDelay: 2000
+    Duration1: 120000
+    Requires:
+      SpCost: 90
+      ItemCost:
+        - Item: Yellow_Gemstone
+          Amount: 1
+  - Id: 361
+    Name: HP_ASSUMPTIO
+    Description: Assumptio
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Support
+    DamageFlags:
+      NoDamage: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    SplashArea: 1
+    CastCancel: true
+    CastTime: 3000
+    AfterCastActDelay: 2000
+    Duration1: 100000
+    Requires:
+      SpCost: 70

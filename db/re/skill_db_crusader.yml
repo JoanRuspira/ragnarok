@@ -1,0 +1,288 @@
+
+Header:
+  Type: SKILL_DB
+  Version: 1
+
+Body:
+  - Id: 255
+    Name: CR_DEVOTION
+    Description: Sacrifice
+    MaxLevel: 5
+    TargetType: Support
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      NoTargetSelf: true
+      PartyOnly: true
+    Range:
+      - Level: 1
+        Size: 7
+      - Level: 2
+        Size: 8
+      - Level: 3
+        Size: 9
+      - Level: 4
+        Size: 10
+      - Level: 5
+        Size: 11
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    Cooldown: 5000
+    CastTime: 3000
+    Duration2: 90000
+    Requires:
+      SpCost: 40
+  - Id: 832
+    Name: CR_HEAL
+    Description: Heal
+    MaxLevel: 5
+    TargetType: Support
+    DamageFlags:
+      NoDamage: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    CastTime: 3000
+    Cooldown: 5000
+    AfterCastActDelay: 1000
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Requires:
+      SpCost: 35
+  - Id: 833
+    Name: CR_BINDINGLIGHT
+    Description: Blessing
+    MaxLevel: 5
+    TargetType: Support
+    DamageFlags:
+      NoDamage: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    CastTime: 4000
+    Cooldown: 5000
+    AfterCastActDelay: 1000
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Requires:
+      SpCost: 80
+  - Id: 834
+    Name: CR_DIVINELIGHT
+    Description: Divine Light
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Support
+    DamageFlags:
+      NoDamage: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    Element: Holy
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CastCancel: true
+    CastTime: 6000
+    AfterCastActDelay: 1000
+    Cooldown: 10000
+    Requires:
+      SpCost: 100
+      ItemCost:
+        - Item: Magic_Gem_Yellow
+          Amount: 1
+  - Id: 862
+    Name: CR_OHQUICKEN
+    Description: One Hand Quicken
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 10000
+    AfterCastActDelay: 1000
+    Duration1:
+      - Level: 1
+        Time: 60000
+      - Level: 2
+        Time: 120000
+      - Level: 3
+        Time: 180000
+      - Level: 4
+        Time: 240000
+      - Level: 5
+        Time: 300000
+    Requires:
+      SpCost: 40
+      Weapon:
+        1hSword: true
+  - Id: 249
+    Name: CR_AUTOGUARD
+    Description: Guard
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 20000
+    AfterCastActDelay: 5000
+    Duration1: 300000
+    Requires:
+      SpCost: 30
+      State: Shield
+  - Id: 252
+    Name: CR_REFLECTSHIELD
+    Description: Shield Reflect
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 30000
+    AfterCastActDelay: 5000
+    Duration1: 300000
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Requires:
+      SpCost: 50
+      State: Shield
+  - Id: 2318
+    Name: LG_PRESTIGE
+    Description: Prestige
+    MaxLevel: 5
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    CastTime: 1000
+    Duration1: 300000
+    Cooldown: 30000
+    AfterCastActDelay: 5000
+    Requires:
+      SpCost: 60
+      State: Shield
+      ItemCost:
+        - Item: Magic_Gem_Green
+          Amount: 1
+  - Id: 250
+    Name: CR_SHIELDCHARGE
+    Description: Smite
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: 1
+    Element: Neutral
+    Hit: Single
+    HitCount: 1
+    Knockback: 3
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Duration2: 5000
+    Requires:
+      SpCost: 15
+      State: Shield
+  - Id: 251
+    Name: CR_SHIELDBOOMERANG
+    Description: Shield Boomerang
+    MaxLevel: 5
+    Type: Weapon
+    Element: Neutral
+    TargetType: Attack
+    Range:
+      - Level: 1
+        Size: 3
+      - Level: 2
+        Size: 5
+      - Level: 3
+        Size: 7
+      - Level: 4
+        Size: 9
+      - Level: 5
+        Size: 11
+    Hit: Single
+    HitCount: 1
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Requires:
+      SpCost: 15
+      State: Shield
+  - Id: 253
+    Name: CR_HOLYCROSS
+    Description: Holy Cross
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Flags:
+      TargetTrap: true
+    Range: -2
+    Hit: Multi_Hit
+    HitCount: -2
+    Element: Holy
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Duration2: 30000
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    Requires:
+      SpCost: 20
+  - Id: 254
+    Name: CR_GRANDCROSS
+    Description: Grand Cross
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Self
+    Range: 5
+    Hit: Single
+    HitCount: 1
+    Element: Holy
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CastDefenseReduction: 33
+    CastTime: 3000
+    AfterCastActDelay: 400
+    AfterCastWalkDelay: 1000
+    Cooldown: 7000
+    Duration1: 950
+    Duration2: 30000
+    Requires:
+      SpCost: 100
+      HpRateCost: 0
+      ItemCost:
+        - Item: Magic_Gem_Blue
+          Amount: 1
+    Unit:
+      Id: Dummyskill
+      Layout: -1
+      Interval: 300
+      Target: Enemy
+      Flag:
+        PathCheck: true

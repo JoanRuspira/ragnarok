@@ -1,0 +1,251 @@
+
+Header:
+  Type: SKILL_DB
+  Version: 1
+
+Body:
+  - Id: 863
+    Name: LK_TWOHAND
+    Description: Advanced Two-Handed Sword Mastery
+    MaxLevel: 5
+    Type: Weapon
+  - Id: 359
+    Name: LK_BERSERK
+    Description: Frenzy
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    Cooldown: 60000
+    AfterCastActDelay: 400
+    HitCount: 1
+    Duration1: 15000
+    Duration2: 15000
+    Requires:
+      SpCost: 50
+      ItemCost:
+        - Item: Runstone_Turisus
+          Amount: 1
+      Weapon:
+        2hSword: true
+  - Id: 397
+    Name: LK_SPIRALPIERCE
+    Description: Spiral Pierce
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: 1
+    Hit: Multi_Hit
+    HitCount: -5
+    Element: Weapon
+    CastTime: 1000
+    AfterCastActDelay: 400
+    Cooldown: 7000
+    Duration2: 1000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    Requires:
+      SpCost: 30
+      Weapon:
+        1hSpear: true
+        2hSpear: true
+        1hSword: true
+        2hSword: true
+  - Id: 355
+    Name: LK_AURABLADE
+    Description: Aura Blade
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 20000
+    AfterCastActDelay: 3000
+    Duration1:
+      - Level: 1
+        Time: 40000
+      - Level: 2
+        Time: 60000
+      - Level: 3
+        Time: 80000
+      - Level: 4
+        Time: 100000
+      - Level: 5
+        Time: 120000
+    Requires:
+      SpCost: 50
+      Weapon:
+        1hSword: true
+        2hSword: true
+        1hSpear: true
+        2hSpear: true
+      ItemCost:
+        - Item: Runstone_Asir
+          Amount: 1
+  - Id: 357
+    Name: LK_CONCENTRATION
+    Description: Concentration
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 20000
+    AfterCastActDelay: 3000
+    Duration1: 45000
+    Requires:
+      SpCost: 30
+      Weapon:
+        1hSpear: true
+        2hSpear: true
+      ItemCost:
+        - Item: Runstone_Hagalas
+          Amount: 1
+  - Id: 2004
+    Name: RK_HUNDREDSPEAR
+    Description: Hundred Spear
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: -2
+    Hit: Multi_Hit
+    HitCount: -10
+    Element: Weapon
+    AfterCastActDelay: 400
+    Cooldown: 7000
+    Requires:
+      SpCost: 30
+      Weapon:
+        1hSpear: true
+        2hSpear: true
+  - Id: 356
+    Name: LK_PARRYING
+    Description: Parrying
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Duration1: 60000
+    Cooldown: 20000
+    AfterCastActDelay: 1000
+    Requires:
+      SpCost: 50
+      State: Shield
+      Weapon:
+        1hSword: true
+        1hSpear: true
+      ItemCost:
+        - Item: Runstone_Rhydo
+          Amount: 1
+  - Id: 5013
+    Name: LG_KINGS_GRACE
+    Description: King's Grace
+    MaxLevel: 5
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+      Splash: true
+    Hit: Single
+    HitCount: 1
+    AfterCastActDelay: 10000
+    Duration1: 10000
+    Cooldown:
+      - Level: 1
+        Time: 100000
+      - Level: 2
+        Time: 90000
+      - Level: 3
+        Time: 80000
+      - Level: 4
+        Time: 70000
+      - Level: 5
+        Time: 60000
+    Requires:
+      SpCost: 100
+      State: Shield
+      ItemCost:
+        - Item: Runstone_Rhydo
+          Amount: 1
+    Unit:
+      Id: Kings_Grace
+      Layout: 3
+      Interval: -1
+      Flag:
+        NoReiteration: true
+        RangedSingleUnit: true
+  - Id: 5004
+    Name: RK_DRAGONBREATH_WATER
+    Description: Dragon Breath - Water
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Ground
+    DamageFlags:
+      Splash: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    Element: Neutral
+    SplashArea: 5
+    CastTime: 2000
+    Cooldown: 8000
+    AfterCastActDelay: 400
+    Duration1: 40000
+    Requires:
+      SpCost: 40
+      ItemCost:
+        - Item: Runstone_Pertz
+          Amount: 1
+  - Id: 2006
+    Name: RK_IGNITIONBREAK
+    Description: Ignition Break
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      Splash: true
+    Hit: Single
+    HitCount: 1
+    Element: Weapon
+    SplashArea: 3
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastTime: 2000
+    Cooldown: 8000
+    AfterCastActDelay: 400
+    Requires:
+      SpCost: 40
+      Weapon:
+        1hSword: true
+      ItemCost:
+        - Item: Runstone_Pertz
+          Amount: 1
+  - Id: 867
+    Name: DUMMY_HUNDREDSPEAR
+    Description: Vulcan Arrow
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: 9
+    Hit: Multi_Hit
+    HitCount: -9
+    Element: Weapon
+    CastCancel: true
+    CastTime: 0
+    Cooldown: 0
+    AfterCastActDelay: 0
+    AfterCastWalkDelay: 0
+    Requires:
+      SpCost: 0

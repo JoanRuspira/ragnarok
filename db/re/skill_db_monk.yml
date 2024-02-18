@@ -1,0 +1,309 @@
+
+Header:
+  Type: SKILL_DB
+  Version: 1
+
+Body:
+  - Id: 855
+    Name: MO_KNUCKLEQUICKEN
+    Description: Knucle Quicken
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 10000
+    AfterCastActDelay: 1000
+    Duration1:
+      - Level: 1
+        Time: 60000
+      - Level: 2
+        Time: 120000
+      - Level: 3
+        Time: 180000
+      - Level: 4
+        Time: 240000
+      - Level: 5
+        Time: 300000
+    Requires:
+      SpCost: 40
+      Weapon:
+        Knuckle: true
+  - Id: 1016
+    Name: MO_BALKYOUNG
+    Description: Falling Fist
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    DamageFlags:
+      Splash: true
+    Range: -1
+    Hit: Multi_Hit
+    HitCount: -1
+    Element: Weapon
+    SplashArea: 1
+    AfterCastActDelay: 400
+    Cooldown: 5000
+    Requires:
+      SpCost: 20
+      Weapon:
+        Knuckle: true
+  - Id: 2337
+    Name: SR_WINDMILL
+    Description: Windmill
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      Splash: true
+    Flags:
+      IgnoreHovering: true
+    Range: 1
+    Hit: Multi_Hit
+    HitCount: -2
+    Element: Weapon
+    SplashArea: 4
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    AfterCastActDelay: 400
+    Cooldown: 5000
+    Requires:
+      SpCost: 23
+      ItemCost:
+        - Item: Dragonball_Green
+          Amount: 1
+      Weapon:
+        Knuckle: true
+  - Id: 370
+    Name: CH_PALMSTRIKE
+    Description: Raging Palm Strike
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: -1
+    Hit: Single
+    HitCount: 1
+    Element: Weapon
+    Knockback: 3
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    Duration2:
+      - Level: 1
+        Time: 4000
+      - Level: 2
+        Time: 8000
+      - Level: 3
+        Time: 12000
+      - Level: 4
+        Time: 16000
+      - Level: 5
+        Time: 20000
+    Requires:
+      SpCost: 20
+      Weapon:
+        Knuckle: true
+  - Id: 401
+    Name: CH_SOULCOLLECT
+    Description: Zen
+    MaxLevel: 5
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    CastTime: 2000
+    Cooldown: 2000
+    AfterCastActDelay: 2000
+    Duration1: 600000
+    Requires:
+      SpCost: 20
+  - Id: 267
+    Name: MO_FINGEROFFENSIVE
+    Description: Throw Spirit Sphere
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Flags:
+      TargetTrap: true
+    Range: 9
+    Hit: Multi_Hit
+    HitCount:
+      - Level: 1
+        Count: 1
+      - Level: 2
+        Count: 2
+      - Level: 3
+        Count: 3
+      - Level: 4
+        Count: 4
+      - Level: 5
+        Count: 5
+    Element: Neutral
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CastTime: 750
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    AfterCastWalkDelay:
+      - Level: 2
+        Time: 200
+      - Level: 3
+        Time: 400
+      - Level: 4
+        Time: 600
+      - Level: 5
+        Time: 800
+    Requires:
+      SpCost: 25
+      SpiritSphereCost:
+        - Level: 1
+          Amount: 1
+        - Level: 2
+          Amount: 2
+        - Level: 3
+          Amount: 3
+        - Level: 4
+          Amount: 4
+        - Level: 5
+          Amount: 5
+  - Id: 266
+    Name: MO_INVESTIGATE
+    Description: Occult Impaction
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Element: Weapon
+    DamageFlags:
+      IgnoreFlee: true
+    Flags:
+      TargetTrap: true
+    Range: 1
+    Hit: Single
+    HitCount: -1
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Cooldown: 5000
+    CastTime: 1000
+    AfterCastActDelay: 400
+    Requires:
+      SpCost: 20
+      SpiritSphereCost: 1
+  - Id: 874
+    Name: MO_KI_BLAST
+    Description: Ki Blast
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      Splash: true
+    Flags:
+      TargetTrap: true
+    Hit: Multi_Hit
+    HitCount: -2
+    Element: Neutral
+    Cooldown: 7000
+    AfterCastActDelay: 400
+    SplashArea:
+      - Level: 1
+        Area: 2
+      - Level: 2
+        Area: 2
+      - Level: 3
+        Area: 2
+      - Level: 4
+        Area: 4
+      - Level: 5
+        Area: 4
+    Knockback: 2
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Requires:
+      SpCost: 23
+      ItemCost:
+        - Item: Dragonball_Blue
+          Amount: 1
+      SpiritSphereCost: 1
+  - Id: 519
+    Name: GS_FULLBUSTER
+    Description: Full Buster
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: 1
+    Hit: Multi_Hit
+    HitCount: -3
+    Element: Weapon
+    CastCancel: true
+    Cooldown: 5000
+    AfterCastActDelay: 100
+    Requires:
+      SpCost: 15
+      ItemCost:
+        - Item: Dragonball_Red
+          Amount: 1
+      Weapon:
+        Knuckle: true
+        Mace: true
+        2hMace: true
+  - Id: 514
+    Name: GS_PIERCINGSHOT
+    Description: Piercing Shot
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: -1
+    Hit: Single
+    HitCount: 1
+    Element: Weapon
+    Cooldown: 5000
+    AfterCastActDelay: 100
+    Requires:
+      SpCost: 15
+      Weapon:
+        Knuckle: true
+        Mace: true
+        2hMace: true
+      SpiritSphereCost: 1
+  - Id: 262
+    Name: MO_ABSORBSPIRITS
+    Description: Absorb Spirit Sphere
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Support
+    DamageFlags:
+      NoDamage: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    Cooldown: 7000
+    AfterCastActDelay: 1000
+    Requires:
+      SpCost: 17
+      ItemCost:
+        - Item: Dragonball_Yellow
+          Amount: 1
+  - Id: 264
+    Name: MO_BODYRELOCATION
+    Description: Snap
+    MaxLevel: 5
+    TargetType: Ground
+    DamageFlags:
+      NoDamage: true
+    Range: 18
+    Hit: Single
+    HitCount: 1
+    Requires:
+      SpCost: 20
+      SpiritSphereCost: 1

@@ -1,0 +1,508 @@
+
+Header:
+  Type: SKILL_DB
+  Version: 1
+
+Body:
+  - Id: 387
+    Name: WS_CARTBOOST
+    Description: Cart Boost
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      AllowOnMado: true
+    Hit: Single
+    Cooldown: 20000
+    AfterCastActDelay: 1000
+    HitCount: 1
+    Duration1:
+      - Level: 1
+        Time: 24000
+      - Level: 2
+        Time: 48000
+      - Level: 3
+        Time: 72000
+      - Level: 4
+        Time: 96000
+      - Level: 5
+        Time: 120000
+    Requires:
+      SpCost: 35
+      ItemCost:
+        - Item: Gun_Powder
+          Amount: 1
+      State: Cart
+  - Id: 2477
+    Name: GN_CARTCANNON
+    Description: Cart Cannon
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    DamageFlags:
+      Splash: true
+      IgnoreFlee: true
+    Range:
+      - Level: 1
+        Size: 11
+      - Level: 2
+        Size: 11
+      - Level: 3
+        Size: 11
+      - Level: 4
+        Size: 11
+      - Level: 5
+        Size: 11
+    Hit: Single
+    HitCount: 1
+    Element: Weapon
+    SplashArea:
+      - Level: 1
+        Area: 3
+      - Level: 2
+        Area: 3
+      - Level: 3
+        Area: 3
+      - Level: 4
+        Area: 3
+      - Level: 5
+        Area: 3
+    CastCancel: true
+    Cooldown: 7000
+    CastTime: 3000
+    AfterCastActDelay: 500
+    Requires:
+      SpCost: 20
+      Ammo:
+        Cannonball: true
+      AmmoAmount: 1
+      State: Cart
+  - Id: 812
+    Name: MC_SHRAPNEL
+    Description: Cart Shrapnel
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      Splash: true
+    Hit: Multi_Hit
+    HitCount: 3
+    Element: Weapon
+    Cooldown: 7000
+    AfterCastActDelay: 400
+    SplashArea:
+      - Level: 1
+        Area: 2
+      - Level: 2
+        Area: 2
+      - Level: 3
+        Area: 2
+      - Level: 4
+        Area: 4
+      - Level: 5
+        Area: 4
+    Knockback: 2
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Duration2: 10000
+    Requires:
+      SpCost: 25
+      State: Cart 
+      ItemCost:
+        - Item: Gun_Powder
+          Amount: 1    
+      Ammo:
+        Cannonball: true
+      AmmoAmount: 1
+  - Id: 520
+    Name: GS_SPREADATTACK
+    Description: Spread Attack
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    DamageFlags:
+      Splash: true
+    Flags:
+      TargetTrap: true
+      AlterRangeSnakeEye: true
+    Range: -9
+    Hit: Multi_Hit
+    HitCount: -2
+    Element: Weapon
+    SplashArea: 5
+    Cooldown: 7000
+    AfterCastActDelay: 400
+    Requires:
+      SpCost: 25
+      State: Cart     
+      Ammo:
+        Cannonball: true
+      AmmoAmount: 3
+  - Id: 111
+    Name: BS_ADRENALINE
+    Description: Adrenaline Rush
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+      Splash: true
+    Flags:
+      AllowOnMado: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 20000
+    AfterCastActDelay: 3000
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    SplashArea: -1
+    Duration1:
+      - Level: 1
+        Time: 30000
+      - Level: 2
+        Time: 60000
+      - Level: 3
+        Time: 90000
+      - Level: 4
+        Time: 120000
+      - Level: 5
+        Time: 150000
+    Requires:
+      SpCost: 40
+      Weapon:
+        Fist: true
+        Dagger: true
+        1hSword: true
+        2hSword: true
+        1hSpear: true
+        2hSpear: true
+        1hAxe: true
+        2hAxe: true
+        Mace: true
+        2hMace: true
+        Staff: true
+        Bow: true
+        Knuckle: true
+        Musical: true
+        Whip: true
+        Book: true
+        Katar: true
+        2hStaff: true
+  - Id: 112
+    Name: BS_WEAPONPERFECT
+    Description: Weapon Perfection
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+      Splash: true
+    Flags:
+      AllowOnMado: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 20000
+    AfterCastActDelay: 3000
+    SplashArea: -1
+    Duration1:
+      - Level: 1
+        Time: 10000
+      - Level: 2
+        Time: 20000
+      - Level: 3
+        Time: 30000
+      - Level: 4
+        Time: 40000
+      - Level: 5
+        Time: 50000
+    Requires:
+      SpCost: 15
+      ItemCost:
+        - Item: Hammer_Of_Blacksmith
+          Amount: 1
+        - Item: Portable_Furnace
+          Amount: 1
+      Weapon:
+        Fist: true
+        Dagger: true
+        1hSword: true
+        2hSword: true
+        1hSpear: true
+        2hSpear: true
+        1hAxe: true
+        2hAxe: true
+        Mace: true
+        2hMace: true
+        Staff: true
+        Bow: true
+        Knuckle: true
+        Musical: true
+        Whip: true
+        Book: true
+        Katar: true
+        2hStaff: true
+  - Id: 113
+    Name: BS_OVERTHRUST
+    Description: Power-Thrust
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    Cooldown: 25000
+    AfterCastActDelay: 3000
+    DamageFlags:
+      NoDamage: true
+      Splash: true
+    Flags:
+      AllowOnMado: true
+    Hit: Single
+    HitCount: 1
+    SplashArea: -1
+    Duration1: 120000
+    Requires:
+      SpCost: 20
+      ItemCost:
+        - Item: Hammer_Of_Blacksmith
+          Amount: 1
+        - Item: Portable_Furnace
+          Amount: 1
+      Weapon:
+        Fist: true
+        Dagger: true
+        1hSword: true
+        2hSword: true
+        1hSpear: true
+        2hSpear: true
+        1hAxe: true
+        2hAxe: true
+        Mace: true
+        2hMace: true
+        Staff: true
+        Bow: true
+        Knuckle: true
+        Musical: true
+        Whip: true
+        Book: true
+        Katar: true
+        2hStaff: true
+  - Id: 114
+    Name: BS_MAXIMIZE
+    Description: Maximize Power
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      AllowOnMado: true
+    Hit: Single
+    HitCount: 1
+    AfterCastActDelay: 3000
+    Duration1:
+      - Level: 1
+        Time: 1000
+      - Level: 2
+        Time: 2000
+      - Level: 3
+        Time: 3000
+      - Level: 4
+        Time: 4000
+      - Level: 5
+        Time: 5000
+    Requires:
+      SpCost: 10
+      Weapon:
+        Fist: true
+        Dagger: true
+        1hSword: true
+        2hSword: true
+        1hSpear: true
+        2hSpear: true
+        1hAxe: true
+        2hAxe: true
+        Mace: true
+        2hMace: true
+        Staff: true
+        Bow: true
+        Knuckle: true
+        Musical: true
+        Whip: true
+        Book: true
+        Katar: true
+        2hStaff: true
+  - Id: 808
+    Name: BS_AXEQUICKEN
+    Description: Axe Quicken
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 10000
+    AfterCastActDelay: 1000
+    Duration1:
+      - Level: 1
+        Time: 60000
+      - Level: 2
+        Time: 120000
+      - Level: 3
+        Time: 180000
+      - Level: 4
+        Time: 240000
+      - Level: 5
+        Time: 300000
+    Requires:
+      SpCost: 50
+      Weapon:
+        1hAxe: true
+        2hAxe: true
+  - Id: 2278
+    Name: NC_AXEBOOMERANG
+    Description: Axe Boomerang
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range:
+      - Level: 1
+        Size: 3
+      - Level: 2
+        Size: 5
+      - Level: 3
+        Size: 7
+      - Level: 4
+        Size: 9
+      - Level: 5
+        Size: 11
+    Hit: Single
+    HitCount: 1
+    Element: Weapon
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Requires:
+      SpCost: 10
+      Weapon:
+        1hAxe: true
+        2hAxe: true
+  - Id: 2280
+    Name: NC_AXETORNADO
+    Description: Axe Tornado
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      Splash: true
+    Flags:
+      TargetTrap: true
+      AllowOnMado: true
+    Hit: Multi_Hit
+    HitCount: -5
+    Element: Weapon
+    Cooldown: 5000
+    AfterCastActDelay: 200
+    SplashArea: 3
+    Requires:
+      SpCost: 12
+      Weapon:
+        1hAxe: true
+        2hAxe: true
+  - Id: 110
+    Name: BS_HAMMERFALL
+    Description: Hammer Fall
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: 1
+    Hit: Single
+    Element: Weapon
+    HitCount: 1
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    Duration2: 5000
+    Requires:
+      SpCost: 16
+      Weapon:
+        1hAxe: true
+        2hAxe: true
+  - Id: 8
+    Name: SM_ENDURE
+    Description: Endure
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Duration1:
+      - Level: 1
+        Time: 20000
+      - Level: 2
+        Time: 30000
+      - Level: 3
+        Time: 40000
+      - Level: 4
+        Time: 50000
+      - Level: 5
+        Time: 60000
+    Duration2: 10000
+    Cooldown: 20000
+    AfterCastActDelay: 3000
+    Requires:
+      SpCost: 17
+  - Id: 109
+    Name: BS_SKINTEMPER
+    Description: Skin Tempering
+    MaxLevel: 5
+    Type: Weapon
+  - Id: 108
+    Name: BS_REPAIRWEAPON
+    Description: Weapon Repair
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Support
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      AllowOnMado: true
+    Range: 2
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    Cooldown: 5000
+    AfterCastActDelay: 3000
+    CastTime: 7500
+    Requires:
+      SpCost: 40
+  - Id: 101
+    Name: BS_AXE
+    Description: Forge Equipment
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      AllowOnMado: true
+    Range: 2
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    Cooldown: 5000
+    AfterCastActDelay: 3000
+    CastTime: 7500
+    Requires:
+      SpCost: 75
+      ItemCost:
+        - Item: Portable_Furnace
+          Amount: 1

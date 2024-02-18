@@ -1,0 +1,207 @@
+
+Header:
+  Type: SKILL_DB
+  Version: 1
+
+Body:
+  - Id: 50
+    Name: TF_STEAL
+    Description: Steal
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: 1
+    Hit: Single
+    Element: Weapon
+    Cooldown: 1000
+    AfterCastActDelay: 200
+    DamageFlags:
+      NoDamage: true
+    HitCount: 1
+    Requires:
+      SpCost: 0
+  - Id: 802
+    Name: TF_SNATCH
+    Description: Snatch
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: -1
+    Hit: Single
+    HitCount: 1
+    Element: Weapon
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Requires:
+      SpCost: 14
+  - Id: 803
+    Name: TF_SANDATTACK
+    Description: Sand Attack
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: -1
+    Hit: Single
+    HitCount: 1
+    Element: Weapon
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Requires:
+      SpCost: 14
+  - Id: 210
+    Name: RG_SNATCHER
+    Description: Gank
+    MaxLevel: 10
+    Type: Weapon
+    Element: Weapon
+  - Id: 801
+    Name: TF_DAGGER
+    Description: Dagger Mastery
+    MaxLevel: 5
+    Type: Weapon
+  - Id: 52
+    Name: TF_POISON
+    Description: Poison Slash
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: -2
+    Hit: Single
+    HitCount: 1
+    Element: Weapon
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Duration2: 60000
+    Requires:
+      SpCost: 12
+  - Id: 139
+    Name: AS_POISONREACT
+    Description: Poison React
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    Hit: Single
+    HitCount: 1
+    Cooldown: 20000
+    AfterCastActDelay: 3000
+    Duration1:
+      - Level: 1
+        Time: 25000
+      - Level: 2
+        Time: 35000
+      - Level: 3
+        Time: 45000
+      - Level: 4
+        Time: 55000
+      - Level: 5
+        Time: 65000
+    Requires:
+      SpCost: 30
+  - Id: 1004
+    Name: AS_VENOMKNIFE
+    Description: Throw Venom Knife
+    MaxLevel: 5
+    Type: Weapon
+    Element: Poison
+    TargetType: Attack
+    Flags:
+      IgnoreAutoGuard: true
+      IgnoreCicada: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    Cooldown: 5000
+    AfterCastActDelay: 300
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Requires:
+      SpCost: 13
+      ItemCost:
+        - Item: Venom_Knife
+          Amount: 1
+  - Id: 51
+    Name: TF_HIDING
+    Description: Hiding
+    MaxLevel: 5
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      AllowWhenHidden: true
+      IgnoreKagehumi: true
+      AllowOnMado: true
+      IgnoreWugBite: true
+    Range: 1
+    Cooldown: 1000
+    AfterCastActDelay: 400
+    Hit: Single
+    HitCount: 1
+    Duration1:
+      - Level: 1
+        Time: 60000
+      - Level: 2
+        Time: 120000
+      - Level: 3
+        Time: 180000
+      - Level: 4
+        Time: 240000
+      - Level: 5
+        Time: 300000
+    Requires:
+      SpCost: 10
+  - Id: 150
+    Name: TF_BACKSLIDING
+    Description: Back Slide
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    Cooldown: 100
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      IgnoreKagehumi: true
+    Hit: Single
+    HitCount: 1
+    Knockback: 5
+    Requires:
+      SpCost: 5
+  - Id: 152
+    Name: TF_THROWSTONE
+    Description: Stone Fling
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    DamageFlags:
+      IgnoreFlee: true
+    Range: 7
+    Hit: Single
+    HitCount: 1
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Duration1: 5000
+    Duration2: 30000
+    Requires:
+      SpCost: 12
+  - Id: 856
+    Name: TF_SWORD
+    Description: Sword Mastery
+    MaxLevel: 5
+    Type: Weapon

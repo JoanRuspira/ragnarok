@@ -1,0 +1,293 @@
+
+Header:
+  Type: SKILL_DB
+  Version: 1
+
+Body:
+  - Id: 2381
+    Name: MI_RUSH_WINDMILL
+    Description: Windmill Poem
+    MaxLevel: 5
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+      Splash: true
+    Hit: Single
+    HitCount: 1
+    SplashArea: 5
+    CastCancel: true
+    Cooldown: 5000
+    AfterCastActDelay: 5000
+    Duration1: 60000
+    Requires:
+      SpCost: 85
+      ItemCost:
+        - Item: Protect_Neck_Candy
+          Amount: 1
+  - Id: 315
+    Name: BA_MUSICALLESSON
+    Description: Music Lessons
+    MaxLevel: 5
+    Type: Weapon
+  - Id: 307
+    Name: BD_RICHMANKIM
+    Description: Acoustic Rythm
+    MaxLevel: 5
+    Type: Misc
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      IsSong: true
+    Hit: Single
+    HitCount: 1
+    SplashArea: 5
+    Duration1: 180000
+    Duration2: 60000
+    Cooldown: 30000
+    AfterCastActDelay: 10000
+    Requires:
+      SpCost: 85
+      Weapon:
+        Musical: true
+      ItemCost:
+        - Item: Protect_Neck_Candy
+          Amount: 1
+  - Id: 320
+    Name: BA_ASSASSINCROSS
+    Description: Impressive Riff
+    MaxLevel: 5
+    Type: Misc
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      IsSong: true
+    Hit: Single
+    HitCount: 1
+    SplashArea: 5
+    Duration1: 180000
+    Duration2: 20000
+    Cooldown: 30000
+    AfterCastActDelay: 10000
+    Requires:
+      SpCost: 85
+      Weapon:
+        Musical: true
+      ItemCost:
+        - Item: Protect_Neck_Candy
+          Amount: 1
+  - Id: 321
+    Name: BA_POEMBRAGI
+    Description: Enchanted Symphony
+    MaxLevel: 5
+    Type: Misc
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      IsSong: true
+    Hit: Single
+    HitCount: 1
+    SplashArea: 5
+    Duration1: 180000
+    Duration2: 20000
+    Cooldown: 30000
+    AfterCastActDelay: 10000
+    Requires:
+      SpCost: 85
+      Weapon:
+        Musical: true
+      ItemCost:
+        - Item: Protect_Neck_Candy
+          Amount: 1
+  - Id: 316
+    Name: BA_MUSICALSTRIKE
+    Description: Melody Strike
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Flags:
+      AllowWhenPerforming: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    Element: Weapon
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Requires:
+      SpCost: 15
+      Weapon:
+        Musical: true
+      Ammo:
+        Arrow: true
+      AmmoAmount: 1
+  - Id: 2426
+    Name: WM_GREAT_ECHO
+    Description: Great Echo
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Ground
+    Element: Neutral
+    DamageFlags:
+      Splash: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    SplashArea: 4
+    CastCancel: true
+    AfterCastActDelay: 400
+    Cooldown: 7000
+    Requires:
+      SpCost: 30
+      Weapon:
+        Musical: true
+  - Id: 2413
+    Name: WM_METALICSOUND
+    Description: Metallic Sound
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 9
+    Hit: Multi_Hit
+    HitCount: -4
+    Element: Neutral
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    CastTime: 1000
+    AfterCastActDelay: 400
+    Cooldown: 5000
+    Requires:
+      SpCost: 40
+      Weapon:
+        Musical: true
+  - Id: 2414
+    Name: WM_REVERBERATION
+    Description: Reverberation
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Ground
+    DamageFlags:
+      Splash: true
+    Range: 9
+    Hit: Multi_Hit
+    HitCount: -1
+    Element: Neutral
+    SplashArea: 4
+    CastCancel: true
+    CastTime: 1000
+    AfterCastActDelay: 400
+    Duration1: 10000
+    Cooldown: 7000
+    Requires:
+      SpCost: 50
+      Weapon:
+        Musical: true
+  - Id: 2382
+    Name: MI_ECHOSONG
+    Description: Echo Nocturnae
+    MaxLevel: 5
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+      Splash: true
+    Hit: Single
+    HitCount: 1
+    SplashArea: 5
+    CastCancel: true
+    Cooldown: 5000
+    AfterCastActDelay: 5000
+    Duration1: 60000
+    Requires:
+      SpCost: 85
+      ItemCost:
+        - Item: Protect_Neck_Candy
+          Amount: 1
+      Weapon:
+        Musical: true
+  - Id: 2423
+    Name: WM_SIRCLEOFNATURE
+    Description: Circle of Nature's Sound
+    MaxLevel: 5
+    TargetType: Support
+    DamageFlags:
+      NoDamage: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CastCancel: true
+    CastTime: 3000
+    AfterCastActDelay: 1000
+    Cooldown: 5000
+    Requires:
+      SpCost: 40
+      Weapon:
+        Musical: true
+  - Id: 312
+    Name: BD_INTOABYSS
+    Description: Power Chord
+    MaxLevel: 5
+    Type: Misc
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    SplashArea: 10
+    Duration1:
+      - Level: 1
+        Time: 24000
+      - Level: 2
+        Time: 48000
+      - Level: 3
+        Time: 72000
+      - Level: 4
+        Time: 96000
+      - Level: 5
+        Time: 120000
+    Cooldown: 10000
+    AfterCastActDelay: 10000
+    Requires:
+      SpCost: 100
+      Weapon:
+        Musical: true
+      ItemCost:
+        - Item: Protect_Neck_Candy
+          Amount: 1
+  - Id: 898
+    Name: BA_ALLNIGHTLONG
+    Description: All Night Long
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Support
+    DamageFlags:
+      NoDamage: true
+      IgnoreDefense: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    Element: Holy
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    CastTime: 6000
+    AfterCastActDelay: 2000
+    Cooldown: 10000
+    Requires:
+      SpCost: 100
+      Weapon:
+        Musical: true
+      ItemCost:
+        - Item: Heartbroken_Tears
+          Amount: 1

@@ -1,0 +1,197 @@
+
+Header:
+  Type: SKILL_DB
+  Version: 1
+
+Body:
+  - Id: 369
+    Name: PA_GOSPEL
+    Description: Battle Chant
+    MaxLevel: 5
+    Type: Misc
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+      IgnoreFlee: true
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    Duration1: 20000
+    Duration2: 20000
+    Cooldown: 50000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 200
+      ItemCost:
+        - Item: Magic_Gem_Yellow
+          Amount: 1
+        - Item: Holy_Water
+          Amount: 1
+    Unit:
+      Id: Gospel
+      Layout: -1
+      Interval: 4000
+      Flag:
+        NoOverlap: true
+  - Id: 2322
+    Name: LG_PIETY
+    Description: Holy Grace
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+      Splash: true
+    Hit: Single
+    HitCount: 1
+    Element: Holy
+    SplashArea:
+      - Level: 1
+        Area: 5
+      - Level: 2
+        Area: 5
+      - Level: 3
+        Area: 5
+      - Level: 4
+        Area: 5
+      - Level: 5
+        Area: 5
+    CastCancel: true
+    CastTime: 8000
+    Cooldown: 15000
+    AfterCastActDelay: 1000
+    Requires:
+      SpCost: 150
+      ItemCost:
+        - Item: Magic_Gem_Yellow
+          Amount: 1
+  - Id: 367
+    Name: PA_PRESSURE
+    Description: Gloria Domini
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 9
+    Element: Holy
+    Hit: Multi_Hit
+    HitCount: 1
+    CastTime: 4000
+    Cooldown: 7000
+    AfterCastActDelay: 400
+    Duration2:
+      - Level: 1
+        Time: 2000
+      - Level: 2
+        Time: 3000
+      - Level: 3
+        Time: 4000
+      - Level: 4
+        Time: 5000
+      - Level: 5
+        Time: 6000
+    Requires:
+      SpCost: 50
+  - Id: 2321
+    Name: LG_RAYOFGENESIS
+    Description: Ray of Genesis
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Ground
+    DamageFlags:
+      Splash: true
+    Range: 9
+    Hit: Multi_Hit
+    HitCount: -7
+    Element: Holy
+    SplashArea: 5
+    CastCancel: true
+    CastTime: 5500
+    AfterCastActDelay: 1000
+    Duration1: 10000
+    Cooldown: 10000
+    Requires:
+      SpCost: 75
+      ItemCost:
+        - Item: Magic_Gem_Blue
+          Amount: 1
+  - Id: 861
+    Name: PA_FORTIFY
+    Description: Fortify
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 60000
+    AfterCastActDelay: 1000
+    Duration1: 20000
+    Requires:
+      SpCost: 50
+      State: Shield
+      ItemCost:
+        - Item: Magic_Gem_Green
+          Amount: 1
+  - Id: 257
+    Name: CR_DEFENDER
+    Description: Defending Aura
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    AfterCastActDelay: 2000
+    Duration1: 180000
+    Requires:
+      SpCost: 50
+      State: Shield
+      ItemCost:
+        - Item: Magic_Gem_Green
+          Amount: 1
+  - Id: 860
+    Name: PA_SHIELDSLAM
+    Description: Shield Slam
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: 1
+    Hit: Single
+    Element: Neutral
+    HitCount: 1
+    Cooldown: 7000
+    AfterCastActDelay: 400
+    Requires:
+      SpCost: 32
+      State: Shield
+  - Id: 480
+    Name: PA_SHIELDCHAIN
+    Description: Shield Chain
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Element: Neutral
+    Range:
+      - Level: 1
+        Size: 2
+      - Level: 2
+        Size: 3
+      - Level: 3
+        Size: 4
+      - Level: 4
+        Size: 5
+      - Level: 5
+        Size: 6
+    Hit: Multi_Hit
+    HitCount: -5
+    CastTime: 1000
+    Cooldown: 7000
+    AfterCastActDelay: 400
+    Requires:
+      SpCost: 35
+      State: Shield
+      ItemCost:
+        - Item: Magic_Gem_Red
+          Amount: 1

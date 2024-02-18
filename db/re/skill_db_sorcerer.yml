@@ -1,0 +1,378 @@
+
+Header:
+  Type: SKILL_DB
+  Version: 1
+
+Body:
+  - Id: 2222
+    Name: WL_SUMMONFB
+    Description: Summon Fire Ball
+    CastCancel: true
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Element: Fire
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    Duration1:
+      - Level: 1
+        Time: 60000
+      - Level: 2
+        Time: 60000
+      - Level: 3
+        Time: 60000
+      - Level: 4
+        Time: 60000
+      - Level: 5
+        Time: 60000
+    Requires:
+      SpCost: 30
+  - Id: 889
+    Name: WL_TETRAVORTEX_NEUTRAL
+    Description: Tetra Vortex Neutral
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 11
+    Hit: Single
+    HitCount: 1
+    Element: Neutral
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    Requires:
+      SpCost: 1
+  - Id: 2219
+    Name: WL_TETRAVORTEX_WATER
+    Description: Tetra Vortex Water
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 11
+    Hit: Single
+    HitCount: 1
+    Element: Water
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    Requires:
+      SpCost: 1
+  - Id: 2220
+    Name: WL_TETRAVORTEX_WIND
+    Description: Tetra Vortex Wind
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 11
+    Hit: Single
+    HitCount: 1
+    Element: Wind
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    Requires:
+      SpCost: 1
+  - Id: 2221
+    Name: WL_TETRAVORTEX_GROUND
+    Description: Tetra Vortex Earth
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 11
+    Hit: Single
+    HitCount: 1
+    Element: Earth
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    Requires:
+      SpCost: 1
+  - Id: 895
+    Name: HW_TETRAVORTEX_FIRE
+    Description: Tetra Vortex Fire
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 11
+    Hit: Single
+    HitCount: 1
+    Element: Fire
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    Requires:
+      SpCost: 1
+  - Id: 2217
+    Name: WL_TETRAVORTEX
+    Description: Tetra Vortex
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Flags:
+      AlterRangeRadius: true
+    Range: 11
+    DamageFlags:
+      Splash: true
+    Hit: Single
+    HitCount: 1
+    SplashArea: 5
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    CastTime: 7000
+    AfterCastActDelay: 2000
+    Cooldown: 7500
+    Requires:
+      SpCost: 120
+  - Id: 2206
+    Name: WL_RECOGNIZEDSPELL
+    Description: Recognized Spell
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    CastTime: 1000
+    AfterCastActDelay: 3000
+    Duration1:
+      - Level: 1
+        Time: 60000
+      - Level: 2
+        Time: 90000
+      - Level: 3
+        Time: 120000
+      - Level: 4
+        Time: 150000
+      - Level: 5
+        Time: 180000
+    Cooldown: 25000
+    Requires:
+      SpCost: 125
+      ItemCost:
+        - Item: Old_Magic_Circle
+          Amount: 1
+  - Id: 366
+    Name: HW_MAGICPOWER
+    Description: Mystical Amplification
+    CastCancel: true
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    CastTime: 0
+    Cooldown: 1000
+    AfterCastActDelay: 400
+    Duration1: 30000
+    Requires:
+      SpCost: 70
+      ItemCost:
+        - Item: Old_Magic_Circle
+          Amount: 1
+  - Id: 883
+    Name: HW_PHANTOMSPEAR
+    Description: Phantom Spear
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    DamageFlags:
+      Splash: false
+    Flags:
+      AlterRangeRadius: true
+    Range: 7
+    Hit: Multi_Hit
+    HitCount:
+      - Level: 1
+        Count: 1
+      - Level: 2
+        Count: 2
+      - Level: 3
+        Count: 3
+      - Level: 4
+        Count: 4
+      - Level: 5
+        Count: 5
+    Element: Ghost
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    CastTime: 7000
+    AfterCastActDelay: 2000
+    Duration1: 5000
+    Cooldown: 5000
+    Requires:
+      SpCost: 95
+  - Id: 882
+    Name: HW_SHADOWBOMB
+    Description: Shadow Bomb
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    DamageFlags:
+      Splash: false
+    Flags:
+      AlterRangeRadius: true
+    Range: 7
+    Hit: Multi_Hit
+    HitCount:
+      - Level: 1
+        Count: 1
+      - Level: 2
+        Count: 2
+      - Level: 3
+        Count: 3
+      - Level: 4
+        Count: 4
+      - Level: 5
+        Count: 5
+    Element: Dark
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    CastTime: 7000
+    AfterCastActDelay: 2000
+    Duration1: 5000
+    Cooldown: 5000
+    Requires:
+      SpCost: 95
+  - Id: 887
+    Name: HW_DIAMONDDUST
+    Description: Diamond Dust
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 7
+    Hit: Multi_Hit
+    HitCount: -4
+    Element: Neutral
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    Cooldown: 5000
+    CastTime: 5000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 90
+  - Id: 888
+    Name: HW_ASTRALSTRIKE
+    Description: Astral Strike
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 7
+    Hit: Multi_Hit
+    HitCount: -2
+    DamageFlags:
+      Splash: true
+    SplashArea:
+      - Level: 1
+        Area: 1
+      - Level: 2
+        Area: 2
+      - Level: 3
+        Area: 3
+      - Level: 4
+        Area: 4
+      - Level: 5
+        Area: 5
+    Element: Neutral
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    Cooldown: 20000
+    CastTime: 7000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 120
+  - Id: 5012
+    Name: WL_TELEKINESIS_INTENSE
+    Description: Intense Telekinesis
+    CastCancel: true
+    MaxLevel: 5
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    AfterCastActDelay: 1000
+    Duration1: 30000
+    Cooldown: 120000
+    Requires:
+      SpCost: 250
+      ItemCost:
+        - Item: Old_Magic_Circle
+          Amount: 1
+  - Id: 885
+    Name: HW_DOOM
+    Description: Doom
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 7
+    Hit: Multi_Hit
+    HitCount: -2
+    Element: Dark
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    Cooldown: 5000
+    CastTime: 3000
+    AfterCastActDelay: 1000
+    Requires:
+      SpCost: 150
+      ItemCost:
+        - Item: Magic_Gem_Black
+          Amount: 1
+        - Item: Suspicious_Magic_Stone
+          Amount: 1
+  - Id: 886
+    Name: HW_DOOM_GHOST
+    Description: Doom
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 7
+    Hit: Multi_Hit
+    HitCount: -2
+    Element: Ghost
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    Cooldown: 0
+    CastTime: 0
+    AfterCastActDelay: 0
+    Requires:
+      SpCost: 0

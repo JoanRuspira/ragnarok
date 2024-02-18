@@ -1,0 +1,312 @@
+
+Header:
+  Type: SKILL_DB
+  Version: 1
+
+Body:
+  - Id: 1
+    Name: NV_BASIC
+    Description: Basic Skill
+    MaxLevel: 8
+  - Id: 3
+    Name: SM_TWOHAND
+    Description: Two-Handed Sword Mastery
+    MaxLevel: 5
+    Type: Weapon
+  - Id: 398
+    Name: LK_HEADCRUSH
+    Description: Traumatic Blow
+    MaxLevel: 5
+    Type: Weapon  
+    TargetType: Attack
+    Range: -1
+    Hit: Single
+    HitCount: 1
+    Element: Weapon
+    Cooldown: 3000
+    AfterCastActDelay: 500
+    Duration2: 120000
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Requires:
+      SpCost: 14
+      Weapon:
+        Fist: true
+        Dagger: true
+        1hSword: true
+        2hSword: true
+        1hSpear: true
+        2hSpear: true
+        1hAxe: true
+        2hAxe: true
+        Mace: true
+        2hMace: true
+        Staff: true
+        Knuckle: true
+        Book: true
+        Katar: true
+  - Id: 6
+    Name: SM_PROVOKE
+    Description: Provoke
+    MaxLevel: 5
+    TargetType: Attack
+    DamageFlags:
+      NoDamage: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    Duration1: 30000
+    Cooldown: 1000
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Requires:
+      SpCost: 15
+  - Id: 146
+    Name: SM_AUTOBERSERK
+    Description: Auto Berserk
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    AfterCastActDelay: 3000
+    Requires:
+      SpCost: 40
+  - Id: 55
+    Name: KN_SPEARMASTERY
+    Description: Spear Mastery
+    MaxLevel: 5
+    Type: Weapon
+  - Id: 5
+    Name: SM_BASH
+    Description: Bash
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: -1
+    Hit: Single
+    HitCount: 1
+    Element: Weapon
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Requires:
+      SpCost: 15
+      Weapon:
+        Fist: true
+        Dagger: true
+        1hSword: true
+        2hSword: true
+        1hSpear: true
+        2hSpear: true
+        1hAxe: true
+        2hAxe: true
+        Mace: true
+        2hMace: true
+        Staff: true
+        Knuckle: true
+        Book: true
+        Katar: true
+  - Id: 813
+    Name: SM_SPEARSTANCE
+    Description: Spear Stance
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      AllowOnMado: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 20000
+    AfterCastActDelay: 2000
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Duration1:
+      - Level: 1
+        Time: 24000
+      - Level: 2
+        Time: 48000
+      - Level: 3
+        Time: 72000
+      - Level: 4
+        Time: 96000
+      - Level: 5
+        Time: 120000
+    Requires:
+      SpCost: 20
+      Weapon:
+        1hSpear: true
+        2hSpear: true
+  - Id: 58
+    Name: KN_SPEARSTAB
+    Description: Spear Stab
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    DamageFlags:
+      Splash: true
+    Flags:
+      TargetTrap: true
+    Range: -2
+    Hit: Single
+    HitCount: 1
+    Element: Weapon
+    Knockback: 6
+    Cooldown: 3000
+    AfterCastActDelay: 400
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Requires:
+      SpCost: 17
+      Weapon:
+        1hSpear: true
+        2hSpear: true
+  - Id: 2
+    Name: SM_SWORD
+    Description: Sword Mastery
+    MaxLevel: 5
+    Type: Weapon
+  - Id: 399
+    Name: LK_JOINTBEAT
+    Description: Vital Strike
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: -1
+    Hit: Single
+    HitCount: 1
+    Element: Wind
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    Duration2: 30000
+    Requires:
+      SpCost: 17
+      Weapon:
+        Fist: true
+        Dagger: true
+        1hSword: true
+        2hSword: true
+        1hSpear: true
+        2hSpear: true
+        1hAxe: true
+        2hAxe: true
+        Mace: true
+        2hMace: true
+        Staff: true
+        Knuckle: true
+        Book: true
+        Katar: true
+  - Id: 819
+    Name: SM_SPIRITGROWTH
+    Description: Spirit Growth
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      AllowOnMado: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 30000
+    AfterCastActDelay: 2000
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Duration1:
+      - Level: 1
+        Time: 24000
+      - Level: 2
+        Time: 48000
+      - Level: 3
+        Time: 72000
+      - Level: 4
+        Time: 96000
+      - Level: 5
+        Time: 120000
+    Requires:
+      SpCost: 20
+  - Id: 7
+    Name: SM_MAGNUM
+    Description: Magnum Break
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      Splash: true
+    Flags:
+      TargetTrap: true
+    Hit: Multi_Hit
+    HitCount: -2
+    Element: Fire
+    Cooldown: 2000
+    AfterCastActDelay: 400
+    SplashArea:
+      - Level: 1
+        Area: 2
+      - Level: 2
+        Area: 2
+      - Level: 3
+        Area: 2
+      - Level: 4
+        Area: 4
+      - Level: 5
+        Area: 4
+    Knockback: 2
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Duration2: 10000
+    Requires:
+      SpCost: 22
+      Weapon:
+        Fist: true
+        Dagger: true
+        1hSword: true
+        2hSword: true
+        1hSpear: true
+        2hSpear: true
+        1hAxe: true
+        2hAxe: true
+        Mace: true
+        2hMace: true
+        Staff: true
+        Knuckle: true
+        Book: true
+        Katar: true
+  - Id: 4
+    Name: SM_RECOVERY
+    Description: Increase HP Recovery
+    MaxLevel: 5
+  - Id: 248
+    Name: CR_TRUST
+    Description: Faith
+    MaxLevel: 5
+  - Id: 9
+    Name: MG_SRECOVERY
+    Description: Increase SP Recovery
+    MaxLevel: 5
+  - Id: 363
+    Name: HP_MEDITATIO
+    Description: Meditatio
+    MaxLevel: 5
+    Type: Magic

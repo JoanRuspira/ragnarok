@@ -1,0 +1,170 @@
+
+Header:
+  Type: SKILL_DB
+  Version: 1
+
+Body:
+  - Id: 2445
+    Name: SO_SPELLFIST
+    Description: Spell Fist
+    MaxLevel: 5
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Range: 1
+    Hit: Single
+    HitCount: 1
+    CoolDown: 500
+    AfterCastActDelay: 3000
+    Duration1:
+      - Level: 1
+        Time: 20000
+      - Level: 2
+        Time: 30000
+      - Level: 3
+        Time: 40000
+      - Level: 4
+        Time: 50000
+      - Level: 5
+        Time: 60000
+    Requires:
+      SpCost: 120
+      Weapon:
+        Book: true
+      ItemCost:
+        - Item: Stone_Of_Intelligence
+          Amount: 1
+  - Id: 482
+    Name: PF_DOUBLECASTING
+    Description: Double Casting
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    CastTime: 2000
+    Duration1: 90000
+    Cooldown: 15000
+    AfterCastActDelay: 3000
+    Requires:
+      SpCost: 90
+      Weapon:
+        Book: true
+      ItemCost:
+        - Item: Stone_Of_Intelligence
+          Amount: 1
+  - Id: 288
+    Name: SA_LANDPROTECTOR
+    Description: Magnetic Earth
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Ground
+    DamageFlags:
+      NoDamage: true
+    Range: 7
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    CastTime: 5000
+    Duration1:
+      - Level: 1
+        Time: 20000
+      - Level: 2
+        Time: 30000
+      - Level: 3
+        Time: 40000
+      - Level: 4
+        Time: 50000
+      - Level: 5
+        Time: 60000
+    Requires:
+      SpCost: 70
+      ItemCost:
+        - Item: Old_Magic_Book
+          Amount: 1
+    Unit:
+      Id: Landprotector
+      Layout:
+        - Level: 1
+          Size: 3
+        - Level: 2
+          Size: 3
+        - Level: 3
+          Size: 4
+        - Level: 4
+          Size: 4
+        - Level: 5
+          Size: 5
+      Interval: -1
+      Flag:
+        PathCheck: true
+        RemovedByFireRain: true
+  - Id: 894
+    Name: PF_STASIS
+    Description: Stasis
+    MaxLevel: 5
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+      Splash: true
+    Hit: Single
+    HitCount: 1
+    SplashArea: 6
+    CastCancel: true
+    CastTime: 2000
+    AfterCastActDelay: 400
+    Cooldown: 20000
+    Requires:
+      SpCost: 120
+      ItemCost:
+        - Item: Old_Magic_Book
+          Amount: 2
+  - Id: 373
+    Name: PF_HPCONVERSION
+    Description: Indulge
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 1800
+    AfterCastActDelay: 1800
+    Requires:
+      SpCost: 5
+  - Id: 374
+    Name: PF_SOULCHANGE
+    Description: Soul Exhale
+    MaxLevel: 5
+    TargetType: Attack
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      NoTargetSelf: true
+      PartyOnly: true
+      GuildOnly: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    CastTime: 3000
+    Cooldown:
+      - Level: 1
+        Time: 13000
+      - Level: 2
+        Time: 11000
+      - Level: 3
+        Time: 9000
+      - Level: 4
+        Time: 7000
+      - Level: 5
+        Time: 5000
+    AfterCastActDelay: 3000
+    Requires:
+      SpCost: 5
+      ItemCost:
+        - Item: Rent_Spell_Book
+          Amount: 1

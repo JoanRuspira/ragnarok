@@ -1,0 +1,424 @@
+
+Header:
+  Type: SKILL_DB
+  Version: 1
+
+Body:
+  - Id: 905
+    Name: SA_ELEMENTAL_CONTROL
+    Description: Elemental Control
+    MaxLevel: 5
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    CastTime: 0
+    AfterCastActDelay: 500
+    Cooldown: 500
+    Requires:
+      SpCost: 25
+  - Id: 906
+    Name: EL_ICICLE
+    Description: Icicle
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    Element: Water
+    Cooldown: 5000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 60
+  - Id: 907
+    Name: EL_FIRE_BALL
+    Description: Fire Ball
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 6
+    Hit: Single
+    HitCount: 1
+    Element: Fire
+    Cooldown: 5000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 60
+  - Id: 8439
+    Name: EL_STONE_HAMMER
+    Description: Stone Hammer
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 5
+    Hit: Single
+    HitCount: 1
+    Element: Earth
+    Cooldown: 5000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 60
+  - Id: 8434
+    Name: EL_WIND_SLASH
+    Description: Wind Slasher
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 11
+    Hit: Single
+    HitCount: 1
+    Element: Wind
+    Cooldown: 5000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 60
+  - Id: 2464
+    Name: SO_EL_CURE
+    Description: Spirit Recovery
+    MaxLevel: 5
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    Requires:
+      SpCost: 0
+      State: Elementalspirit
+  - Id: 829
+    Name: JG_EL_ACTION
+    Description: Elemental Action
+    MaxLevel: 5
+    TargetType: Attack
+    DamageFlags:
+      NoDamage: true
+    Range: 7
+    Hit: Single
+    HitCount: 1
+    Cooldown: 7000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 75
+      State: Elementalspirit
+  - Id: 841
+    Name: EL_ROCK_CRUSHER_JG
+    Description: Rock Crusher
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 11
+    Hit: Single
+    HitCount: -2
+    SplashArea: 5
+    Element: Earth
+    Cooldown: 5000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 75
+  - Id: 842
+    Name: EL_WATER_SCREW_JG
+    Description: Water Screw
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 11
+    Hit: Single
+    HitCount: -2
+    SplashArea: 5
+    Element: Water
+    Cooldown: 5000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 75
+  - Id: 843
+    Name: EL_FIRE_BOMB_JG
+    Description: Fire Bomb
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 11
+    Hit: Single
+    HitCount: -2
+    SplashArea: 5
+    Element: Fire
+    Cooldown: 5000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 75
+  - Id: 840
+    Name: EL_TORNADO_JG
+    Description: Tornado
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 11
+    Hit: Single
+    HitCount: -2
+    SplashArea: 5
+    Element: Wind
+    Cooldown: 5000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 75
+  - Id: 76
+    Name: PR_LEXDIVINA
+    Description: Silence
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    DamageFlags:
+      NoDamage: true
+    Range: 5
+    Hit: Single
+    CastCancel: true
+    AfterCastActDelay: 400
+    Cooldown: 5000
+    Duration2:
+      - Level: 1
+        Time: 5000
+      - Level: 2
+        Time: 6000
+      - Level: 3
+        Time: 7000
+      - Level: 4
+        Time: 8000
+      - Level: 5
+        Time: 9000
+    Requires:
+      SpCost: 30
+      ItemCost:
+        - Item: Old_Magic_Book
+          Amount: 1
+  - Id: 289
+    Name: SA_DISPELL
+    Description: Dispell
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      NoTargetSelf: true
+      PartyOnly: true
+      GuildOnly: true
+      IgnoreStasis: true
+      TargetHidden: true
+    Range: 7
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    Cooldown: 5000
+    AfterCastActDelay: 1000
+    Requires:
+      SpCost: 75
+      ItemCost:
+        - Item: Old_Magic_Book
+          Amount: 1
+  - Id: 402
+    Name: PF_MINDBREAKER
+    Description: Mind Breaker
+    MaxLevel: 5
+    TargetType: Support
+    DamageFlags:
+      NoDamage: true
+    Range: 7
+    Hit: Single
+    HitCount: 1
+    AfterCastActDelay: 1000
+    Duration1: 30000
+    Cooldown: 5000
+    Requires:
+      SpCost: 65
+  - Id: 2201
+    Name: WL_WHITEIMPRISON
+    Description: White Imprison
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Support
+    Flags:
+      AlterRangeRadius: true
+    Range: 7
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    Duration1:
+      - Level: 1
+        Time: 1000
+      - Level: 2
+        Time: 2000
+      - Level: 3
+        Time: 3000
+      - Level: 4
+        Time: 4000
+      - Level: 5
+        Time: 5000
+    Cooldown: 10000
+    AfterCastActDelay: 1000
+    Requires:
+      SpCost: 75
+    ItemCost:
+      - Item: Old_Magic_Book
+        Amount: 1
+  - Id: 830
+    Name: SA_QUICKSTUDY
+    Description: Quick Study
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 10000
+    AfterCastActDelay: 1000
+    Duration1:
+      - Level: 1
+        Time: 60000
+      - Level: 2
+        Time: 120000
+      - Level: 3
+        Time: 180000
+      - Level: 4
+        Time: 240000
+      - Level: 5
+        Time: 300000
+    Requires:
+      SpCost: 50
+      Weapon:
+        Book: true
+  - Id: 279
+    Name: SA_AUTOSPELL
+    Description: Hindsight
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    CastTime: 7000
+    Cooldown: 10000
+    AfterCastActDelay: 2000
+    Duration1:
+      - Level: 1
+        Time: 120000
+      - Level: 2
+        Time: 180000
+      - Level: 3
+        Time: 240000
+      - Level: 4
+        Time: 300000
+      - Level: 5
+        Time: 360000
+    Requires:
+      SpCost: 40
+      Weapon:
+        Book: true
+      ItemCost:
+        - Item: Stone_Of_Intelligence
+          Amount: 1
+  - Id: 375
+    Name: PF_SOULBURN
+    Description: Soul Siphon
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Element: Neutral
+    Range: 7
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    Cooldown: 5000
+    AfterCastActDelay: 1000
+    Requires:
+      SpCost: 60
+    ItemCost:
+        - Item: Rent_Spell_Book
+          Amount: 1
+  - Id: 2210
+    Name: WL_DRAINLIFE
+    Description: Drain Life
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Flags:
+      AlterRangeRadius: true
+    Range: 7
+    Hit: Single
+    HitCount: 1
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
+    Cooldown: 5000
+    AfterCastActDelay: 1000
+    Requires:
+      SpCost: 80
+      ItemCost:
+        - Item: Rent_Spell_Book
+          Amount: 1
+  - Id: 2460
+    Name: SA_SUMMON_ELEMENTAL
+    Description: Summon Earth Spirit Tera
+    MaxLevel: 5
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Element: Earth
+    CastCancel: true
+    CastTime: 
+      - Level: 1
+        Time: 3000
+      - Level: 2
+        Time: 3000
+      - Level: 3
+        Time: 3000
+      - Level: 4
+        Time: 3000
+      - Level: 5
+        Time: 0
+    Duration1: 1200000
+    AfterCastActDelay: 400
+    Cooldown:
+      - Level: 1
+        Time: 1
+      - Level: 2
+        Time: 1
+      - Level: 3
+        Time: 1
+      - Level: 4
+        Time: 1
+      - Level: 5
+        Time: 0
+    Requires:
+      SpCost:
+        - Level: 1
+          Amount: 50
+        - Level: 2
+          Amount: 50
+        - Level: 3
+          Amount: 50
+        - Level: 4
+          Amount: 50
+        - Level: 5
+          Amount: 10
+  - Id: 2461
+    Name: SO_EL_ACTION
+    Description: Elemental Action
+    MaxLevel: 5
+    TargetType: Attack
+    DamageFlags:
+      NoDamage: true
+    Range: 7
+    Hit: Single
+    HitCount: 1
+    Cooldown: 5000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 60
+      State: Elementalspirit

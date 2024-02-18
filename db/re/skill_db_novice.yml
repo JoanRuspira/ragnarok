@@ -1,0 +1,26 @@
+
+Header:
+  Type: SKILL_DB
+  Version: 1
+
+Body:
+  - Id: 1
+    Name: NV_BASIC
+    Description: Basic Skill
+    MaxLevel: 8
+  - Id: 5067
+    Name: ALL_EQSWITCH
+    Description: Equip Switch
+    MaxLevel: 1
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Cooldown: 10000
+    CastTimeFlags:
+      IgnoreDex: true
+      IgnoreStatus: true
+      IgnoreItemBonus: true
+    CastDelayFlags:
+      IgnoreDex: true
+      IgnoreStatus: true
+      IgnoreItemBonus: true

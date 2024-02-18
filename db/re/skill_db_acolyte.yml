@@ -1,0 +1,282 @@
+
+Header:
+  Type: SKILL_DB
+  Version: 1
+
+Body:
+  - Id: 156
+    Name: AL_HOLYLIGHT
+    Description: Holy Ghost
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Flags:
+      IsAutoShadowSpell: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    Element: Ghost
+    SplashArea: 1
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CastCancel: true
+    CastTime: 3000
+    Cooldown: 5000
+    AfterCastActDelay: 1000
+    Requires:
+      SpCost: 30
+  - Id: 11
+    Name: MG_NAPALMBEAT
+    Description: Napalm Beat
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    DamageFlags:
+      Splash: true
+      SplashSplit: false
+    Flags:
+      IsAutoShadowSpell: true
+      TargetTrap: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    Element: Holy
+    SplashArea: 1
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CastCancel: true
+    CastTime: 3000
+    Cooldown: 5000
+    AfterCastActDelay: 1000
+    Requires:
+      SpCost: 30
+  - Id: 32
+    Name: AL_CRUCIS
+    Description: Signum Crucis
+    MaxLevel: 10
+    Type: Magic
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+      Splash: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 30000
+    SplashArea: 15
+    CastCancel: true
+    CastTime: 500
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 50
+  - Id: 859
+    Name: AL_HEAL2
+    Description: Heal
+    MaxLevel: 5
+    TargetType: Support
+    DamageFlags:
+      NoDamage: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    CastTime: 3000
+    Cooldown: 5000
+    AfterCastActDelay: 1000
+    Requires:
+      SpCost: 40
+  - Id: 2050
+    Name: AB_RENOVATIO
+    Description: Renovatio
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Range: 11
+    Hit: Single
+    HitCount: 1
+    Element: Holy
+    SplashArea: 15
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CastCancel: true
+    CastTime: 5000
+    Cooldown: 20000
+    AfterCastActDelay: 1000
+    Duration1:
+      - Level: 1
+        Time: 24000
+      - Level: 2
+        Time: 48000
+      - Level: 3
+        Time: 72000
+      - Level: 4
+        Time: 96000
+      - Level: 5
+        Time: 120000
+    Requires:
+      SpCost: 75
+      ItemCost:
+        - Item: Blue_Gemstone
+          Amount: 1
+  - Id: 24
+    Name: AL_RUWACH
+    Description: Ruwach
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+      Splash: true
+    Hit: Single
+    HitCount: 1
+    Element: Holy
+    SplashArea: 2
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CastCancel: true
+    Duration1: 10000
+    Requires:
+      SpCost: 10
+  - Id: 33
+    Name: AL_ANGELUS
+    Description: Angelus
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+      Splash: true
+    Hit: Single
+    HitCount: 1
+    SplashArea: -1
+    CastCancel: true
+    CastTime: 2000
+    Cooldown: 10000
+    AfterCastActDelay: 1000
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Duration1:
+      - Level: 1
+        Time: 60000
+      - Level: 2
+        Time: 120000
+      - Level: 3
+        Time: 180000
+      - Level: 4
+        Time: 240000
+      - Level: 5
+        Time: 320000
+    Requires:
+      SpCost: 45
+  - Id: 29
+    Name: AL_INCAGI
+    Description: Increase AGI
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Support
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      IgnoreHovering: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    CastTime: 1000
+    Cooldown: 2000
+    AfterCastActDelay: 1000
+    Duration1:
+      - Level: 1
+        Time: 80000
+      - Level: 2
+        Time: 120000
+      - Level: 3
+        Time: 160000
+      - Level: 4
+        Time: 200000
+      - Level: 5
+        Time: 240000
+    Requires:
+      SpCost: 45
+  - Id: 34
+    Name: AL_BLESSING
+    Description: Blessing
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Support
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      IgnoreHovering: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    Cooldown: 2000
+    AfterCastActDelay: 500
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Duration1:
+      - Level: 1
+        Time: 80000
+      - Level: 2
+        Time: 120000
+      - Level: 3
+        Time: 160000
+      - Level: 4
+        Time: 200000
+      - Level: 5
+        Time: 240000
+    Requires:
+      SpCost: 65
+  - Id: 65
+    Name: PR_MACEMASTERY
+    Description: Mace Mastery
+    MaxLevel: 5
+    Type: Weapon
+  - Id: 820
+    Name: AL_MACEQUICKEN
+    Description: Mace Quicken
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 10000
+    AfterCastActDelay: 1000
+    Duration1:
+      - Level: 1
+        Time: 60000
+      - Level: 2
+        Time: 120000
+      - Level: 3
+        Time: 180000
+      - Level: 4
+        Time: 240000
+      - Level: 5
+        Time: 300000
+    Requires:
+      SpCost: 40
+      Weapon:
+        Mace: true
+        2hMace: true
+        Staff: true
+        2hStaff: true

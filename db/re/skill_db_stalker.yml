@@ -1,0 +1,168 @@
+
+Header:
+  Type: SKILL_DB
+  Version: 1
+
+Body:
+  - Id: 390
+    Name: ST_REJECTSWORD
+    Description: Killer Instinct
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    HitCount: 1
+    CastCancel: true
+    Cooldown: 20000
+    Duration1: 60000
+    AfterCastActDelay: 1000
+    Requires:
+      SpCost: 30
+      Weapon:
+        Dagger: true
+        1hSword: true
+        2hsword: true
+  - Id: 2258
+    Name: LG_MOONSLASHER
+    Description: Moon Slasher
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: -1
+    Hit: Multi_hit
+    HitCount: -2
+    Element: Weapon
+    DamageFlags:
+      Critical: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    AfterCastActDelay: 400
+    Duration1: 1000
+    Cooldown: 6000
+    Requires: 
+      SpCost: 20
+      Weapon:
+        Dagger: true
+        1hSword: true
+        2hsword: true
+  - Id: 2287
+    Name: SC_SHADOWFORM
+    Description: Shadow Form
+    MaxLevel: 5
+    TargetType: Attack
+    DamageFlags:
+      NoDamage: true
+    Range: 5
+    Hit: Single
+    HitCount: 1
+    Cooldown: 20000
+    AfterCastActDelay: 1000
+    Duration1: 60000
+    Requires:
+      SpCost: 25
+  - Id: 476
+    Name: ST_FULLSTRIP
+    Description: Divest All
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    DamageFlags:
+      NoDamage: true
+    Range: 1
+    Hit: Single
+    HitCount: 1
+    Cooldown: 25000
+    CastCancel: true
+    AfterCastActDelay: 100
+    Duration1:
+      - Level: 1
+        Time: 3000
+      - Level: 2
+        Time: 6000
+      - Level: 3
+        Time: 9000
+      - Level: 4
+        Time: 12000
+      - Level: 5
+        Time: 15000
+    Requires:
+      SpCost: 30
+      ItemCost:
+        - Item: Leather_Pouch
+          Amount: 2
+  - Id: 2285
+    Name: SC_REPRODUCE
+    Description: Reproduce
+    MaxLevel: 10
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 1000
+    AfterCastActDelay: 3000
+    Duration1: 300000
+    Requires:
+      SpCost: 100
+      ItemCost:
+        - Item: Scroll
+          Amount: 1
+  - Id: 2286
+    Name: SC_AUTOSHADOWSPELL
+    Description: Auto Shadow Spell
+    MaxLevel: 5
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    CastTime: 2500
+    Duration1: 300000
+    Cooldown: 1000
+    AfterCastActDelay: 1000
+    Requires:
+      SpCost: 100
+  - Id: 5002
+    Name: RA_UNLIMIT
+    Description: Unlimited
+    MaxLevel: 5
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    AfterCastActDelay: 1000
+    Duration1: 30000
+    Cooldown: 120000
+    Requires:
+      SpCost: 150
+      Weapon:
+        Bow: true
+  - Id: 382
+    Name: SN_SHARPSHOOTING
+    Description: Focused Arrow Strike
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: 9
+    Flags:
+      AlterRangeVulture: true
+    Hit: Multi_Hit
+    HitCount: 1
+    Element: Weapon
+    SplashArea: 2
+    ActiveInstance: 14
+    CastCancel: true
+    CastTime: 1000
+    Cooldown: 7000
+    AfterCastActDelay: 400
+    Requires:
+      SpCost: 30
+      Weapon:
+        Bow: true
+      Ammo:
+        Arrow: true
+      AmmoAmount: 1

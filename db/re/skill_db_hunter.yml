@@ -1,0 +1,385 @@
+
+Header:
+  Type: SKILL_DB
+  Version: 1
+
+Body:
+  - Id: 2247
+    Name: RA_CAMOUFLAGE
+    Description: Camouflage
+    MaxLevel: 5
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      IgnoreKagehumi: true
+      IgnoreWugBite: true
+    Hit: Single
+    HitCount: 1
+    Duration1: 10000
+    Cooldown: 5000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 25
+  - Id: 2282
+    Name: NC_MAGICDECOY
+    Description: FAW - Magic Decoy
+    MaxLevel: 5
+    TargetType: Ground
+    DamageFlags:
+      NoDamage: true
+    Range: 2
+    Hit: Single
+    HitCount: 1
+    ActiveInstance: 2
+    CastCancel: true
+    Duration1:
+      - Level: 1
+        Time: 20000
+      - Level: 2
+        Time: 30000
+      - Level: 3
+        Time: 40000
+      - Level: 4
+        Time: 50000
+      - Level: 5
+        Time: 60000
+    Requires:
+      SpCost: 35
+  - Id: 337
+    Name: ITM_TOMAHAWK
+    Description: Throw Tomahawk
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    Element: Neutral
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    Requires:
+      SpCost: 25
+  - Id: 824
+    Name: HT_MAGICDECOY
+    Description: FAW - Magic Decoy
+    MaxLevel: 5
+    TargetType: Ground
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      AllowOnMado: true
+    Range: 2
+    Hit: Single
+    HitCount: 1
+    ActiveInstance: 2
+    CastCancel: true
+    Duration1:
+      - Level: 1
+        Time: 20000
+      - Level: 2
+        Time: 30000
+      - Level: 3
+        Time: 40000
+      - Level: 4
+        Time: 50000
+      - Level: 5
+        Time: 60000
+    Requires:
+      SpCost: 35
+  - Id: 823
+    Name: HT_BOWQUICKEN
+    Description: Bow Quicken
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 10000
+    AfterCastActDelay: 1000
+    Duration1:
+      - Level: 1
+        Time: 60000
+      - Level: 2
+        Time: 120000
+      - Level: 3
+        Time: 180000
+      - Level: 4
+        Time: 240000
+      - Level: 5
+        Time: 300000
+    Requires:
+      SpCost: 50
+      Weapon:
+        Bow: true
+  - Id: 2458
+    Name: SO_SUMMON_AQUA
+    Description: Summon Water Spirit Aqua
+    MaxLevel: 5
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Element: Earth
+    CastCancel: true
+    CastTime: 
+      - Level: 1
+        Time: 3000
+      - Level: 2
+        Time: 3000
+      - Level: 3
+        Time: 3000
+      - Level: 4
+        Time: 3000
+      - Level: 5
+        Time: 0
+    Duration1: 1200000
+    AfterCastActDelay: 400
+    Cooldown:
+      - Level: 1
+        Time: 1
+      - Level: 2
+        Time: 1
+      - Level: 3
+        Time: 1
+      - Level: 4
+        Time: 1
+      - Level: 5
+        Time: 0
+    Requires:
+      SpCost:
+        - Level: 1
+          Amount: 50
+        - Level: 2
+          Amount: 50
+        - Level: 3
+          Amount: 50
+        - Level: 4
+          Amount: 50
+        - Level: 5
+          Amount: 10
+  - Id: 857
+    Name: HT_WARG_1
+    Description: Elemental Action
+    MaxLevel: 5
+    TargetType: Attack
+    DamageFlags:
+      NoDamage: true
+    Range: 7
+    Hit: Single
+    HitCount: 1
+    Cooldown: 5000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 25
+      State: Elementalspirit
+  - Id: 2459
+    Name: SO_SUMMON_VENTUS
+    Description: Summon Wind Spirit Ventus
+    MaxLevel: 5
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Element: Earth
+    CastCancel: true
+    CastTime: 
+      - Level: 1
+        Time: 3000
+      - Level: 2
+        Time: 3000
+      - Level: 3
+        Time: 3000
+      - Level: 4
+        Time: 3000
+      - Level: 5
+        Time: 0
+    Duration1: 1200000
+    AfterCastActDelay: 400
+    Cooldown:
+      - Level: 1
+        Time: 1
+      - Level: 2
+        Time: 60000
+      - Level: 3
+        Time: 60000
+      - Level: 4
+        Time: 60000
+      - Level: 5
+        Time: 0
+    Requires:
+      SpCost:
+        - Level: 1
+          Amount: 50
+        - Level: 2
+          Amount: 50
+        - Level: 3
+          Amount: 50
+        - Level: 4
+          Amount: 50
+        - Level: 5
+          Amount: 10
+  - Id: 858
+    Name: HT_FALCON_1
+    Description: Elemental Action
+    MaxLevel: 5
+    TargetType: Attack
+    DamageFlags:
+      NoDamage: true
+    Range: 7
+    Hit: Single
+    HitCount: 1
+    Cooldown: 5000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 22
+      State: Elementalspirit
+  - Id: 2235
+    Name: RA_RANGERMAIN
+    Description: Ranger Main
+    MaxLevel: 5
+  - Id: 825
+    Name: HT_CYCLONICCHARGE
+    Description: Cyclonic Charge
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 10000
+    AfterCastActDelay: 2000
+    Duration1:
+      - Level: 1
+        Time: 60000
+      - Level: 2
+        Time: 120000
+      - Level: 3
+        Time: 180000
+      - Level: 4
+        Time: 240000
+      - Level: 5
+        Time: 300000
+    Requires:
+      SpCost: 20
+      ItemCost:
+        - Item: Wind_Stone
+          Amount: 1
+      Weapon:
+        Bow: true
+  - Id: 383
+    Name: SN_WINDWALK
+    Description: Wind Walker
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+      Splash: true
+    Hit: Single
+    HitCount: 1
+    SplashArea: -1
+    CastCancel: true
+    Cooldown: 10000
+    AfterCastActDelay: 2000
+    Duration1:
+      - Level: 1
+        Time: 160000
+      - Level: 2
+        Time: 220000
+      - Level: 3
+        Time: 280000
+      - Level: 4
+        Time: 340000
+      - Level: 5
+        Time: 400000
+    Requires:
+      SpCost: 40
+      ItemCost:
+        - Item: Wind_Stone
+          Amount: 1
+  - Id: 513
+    Name: HT_HURRICANEFURY
+    Description: Hurricane Fury
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    Element: Weapon
+    DamageFlags:
+      NoDamage: true
+      IgnoreDefense: true
+      IgnoreFlee: true
+      Critical: true
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    Cooldown: 15000
+    AfterCastActDelay: 400
+    Duration1: 50000
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Requires:
+      SpCost: 20
+      ItemCost:
+        - Item: Wind_Stone
+          Amount: 1
+      Weapon:
+        Bow: true
+  - Id: 2243
+    Name: RA_WUGSTRIKE
+    Description: Warg Strike
+    MaxLevel: 5
+    Type: Misc
+    TargetType: Attack
+    DamageFlags:
+      IgnoreFlee: true
+    Flags:
+      TargetTrap: true
+      AlterRangeVulture: true
+    Range: 1
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    Requires:
+      SpCost: 25
+  - Id: 129
+    Name: HT_BLITZBEAT
+    Description: Blitz Beat
+    MaxLevel: 5
+    Type: Misc
+    TargetType: Attack
+    DamageFlags:
+      IgnoreFlee: true
+    Flags:
+      TargetTrap: true
+    Range: 1
+    Hit: Multi_Hit
+    HitCount:
+      - Level: 1
+        Count: 1
+      - Level: 2
+        Count: 2
+      - Level: 3
+        Count: 3
+      - Level: 4
+        Count: 4
+      - Level: 5
+        Count: 5
+    CastCancel: true
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    Requires:
+      SpCost: 22

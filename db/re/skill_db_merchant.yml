@@ -1,0 +1,292 @@
+
+Header:
+  Type: SKILL_DB
+  Version: 1
+
+Body:
+  - Id: 809
+    Name: MC_CARTQUAKE
+    Description: Cart Quake
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      Splash: true
+    Hit: Multi_Hit
+    HitCount: 3
+    Element: Earth
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    SplashArea:
+      - Level: 1
+        Area: 2
+      - Level: 2
+        Area: 2
+      - Level: 3
+        Area: 2
+      - Level: 4
+        Area: 4
+      - Level: 5
+        Area: 4
+    Knockback: 2
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Duration2: 10000
+    Requires:
+      SpCost: 15
+      State: Cart
+  - Id: 810
+    Name: MC_CARTCYCLONE
+    Description: Cart Cyclone
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      Splash: true
+    Hit: Multi_Hit
+    HitCount: 3
+    Element: Wind
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    SplashArea:
+      - Level: 1
+        Area: 2
+      - Level: 2
+        Area: 2
+      - Level: 3
+        Area: 2
+      - Level: 4
+        Area: 4
+      - Level: 5
+        Area: 4
+    Knockback: 2
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Duration2: 10000
+    Requires:
+      SpCost: 15
+      State: Cart
+  - Id: 811
+    Name: MC_CARTBRUME
+    Description: Cart Brume
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      Splash: true
+    Hit: Multi_Hit
+    HitCount: 3
+    Element: Water
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    SplashArea:
+      - Level: 1
+        Area: 2
+      - Level: 2
+        Area: 2
+      - Level: 3
+        Area: 2
+      - Level: 4
+        Area: 4
+      - Level: 5
+        Area: 4
+    Knockback: 2
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Duration2: 10000
+    Requires:
+      SpCost: 15
+      State: Cart
+  - Id: 804
+    Name: MC_FIREWORKS
+    Description: Cart Fireworks
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      Splash: true
+    Hit: Multi_Hit
+    HitCount: 3
+    Element: Fire
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    SplashArea:
+      - Level: 1
+        Area: 2
+      - Level: 2
+        Area: 2
+      - Level: 3
+        Area: 2
+      - Level: 4
+        Area: 4
+      - Level: 5
+        Area: 4
+    Knockback: 2
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Duration2: 10000
+    Requires:
+      SpCost: 15
+      State: Cart
+  - Id: 226
+    Name: AM_AXEMASTERY
+    Description: Axe Mastery
+    MaxLevel: 5
+    Type: Weapon
+  - Id: 42
+    Name: MC_MAMMONITE
+    Description: Mammonite
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    Flags:
+      AllowOnMado: true
+    Range: -1
+    Hit: Single
+    HitCount: 1
+    Element: Weapon
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Requires:
+      SpCost: 15
+      Weapon:
+        1hAxe: true
+        2hAxe: true
+  - Id: 155
+    Name: MC_LOUD
+    Description: Loud Exclamation
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    Cooldown: 30000
+    AfterCastActDelay: 2000
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      AllowOnMado: true
+    Hit: Single
+    HitCount: 1
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Duration1:
+      - Level: 1
+        Time: 24000
+      - Level: 2
+        Time: 48000
+      - Level: 3
+        Time: 72000
+      - Level: 4
+        Time: 96000
+      - Level: 5
+        Time: 120000
+    Requires:
+      SpCost: 16
+  - Id: 818
+    Name: MC_UPROAR
+    Description: Crazy Uproar
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      AllowOnMado: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 30000
+    AfterCastActDelay: 2000
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Duration1:
+      - Level: 1
+        Time: 24000
+      - Level: 2
+        Time: 48000
+      - Level: 3
+        Time: 72000
+      - Level: 4
+        Time: 96000
+      - Level: 5
+        Time: 120000
+    Requires:
+      SpCost: 20
+  - Id: 1013
+    Name: BS_GREED
+    Description: Greed
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+      Splash: true
+    Flags:
+      AllowOnWarg: true
+      AllowOnMado: true
+    Hit: Single
+    SplashArea: 2
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    Requires:
+      SpCost: 10
+      SplashArea:
+        - Level: 1
+          Area: 1
+        - Level: 2
+          Area: 2
+        - Level: 3
+          Area: 3
+        - Level: 4
+          Area: 4
+        - Level: 5
+          Area: 5
+  - Id: 38
+    Name: MC_OVERCHARGE
+    Description: Overcharge
+    MaxLevel: 5
+  - Id: 893
+    Name: MC_COINFLIP
+    Description: Coin Flip
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    Cooldown: 1000
+    AfterCastActDelay: 500
+    Duration1: 90000
+    Requires:
+      SpCost: 20
+  - Id: 41
+    Name: MC_VENDING
+    Description: Vending
+    MaxLevel: 5
+    Cooldown: 15000
+    AfterCastActDelay: 2000
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      AllowOnMado: true
+    Range: 1
+    Hit: Single
+    HitCount: 1
+    Requires:
+      SpCost: 30
+      State: Cart
