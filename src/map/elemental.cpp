@@ -69,7 +69,7 @@ int elemental_create(struct map_session_data *sd, int class_, unsigned int lifet
 	i = db->status.size+1; // summon level
 
 	status = status_get_status_data(&sd->bl);
-	skill_lv = pc_checkskill(sd, CR_BUFFHOMUN);
+	skill_lv = pc_checkskill(sd, SK_CR_HOMUNCULUSRESEARCH);
 
 	ele.hp = ele.max_hp = sd->battle_status.max_hp;
 	ele.sp = ele.max_sp = sd->battle_status.max_sp;
@@ -378,42 +378,42 @@ int elemental_action(struct elemental_data *ed, struct block_list *bl, t_tick ti
 	if( ed->target_id )
 		elemental_unlocktarget(ed);	// Remove previous target.
 
-	if (caller_skill_id == SO_EL_ACTION) {
+	if (caller_skill_id == SK_SA_ELEMENTALACTION1) {
 		ARR_FIND(0, MAX_ELESKILLTREE, i, ed->db->skill[i].id && (ed->db->skill[i].mode&EL_SKILLMODE_AGGRESSIVE));
 		skill_id = ed->db->skill[i].id;	
 	}
-	if (caller_skill_id == JG_EL_ACTION) {
+	if (caller_skill_id == SK_SA_ELEMENTALACTION2) {
 		ARR_FIND(0, MAX_ELESKILLTREE, i, ed->db->skill[i].id && (ed->db->skill[i].mode&EL_SKILLMODE_ASSIST));
 		skill_id = ed->db->skill[i].id;	
 	}
-	if (caller_skill_id == AM_EL_ACTION) {
+	if (caller_skill_id == SK_AM_HOMUNCULUSACTIONI) {
 		ARR_FIND(0, MAX_ELESKILLTREE, i, ed->db->skill[i].id && (ed->db->skill[i].mode&EL_SKILLMODE_ALCHEMIST_1));
 		skill_id = ed->db->skill[i].id;
 	}
-	if (caller_skill_id == HT_WARG_1) {
+	if (caller_skill_id == SK_HT_SLASH) {
 		ARR_FIND(0, MAX_ELESKILLTREE, i, ed->db->skill[i].id && (ed->db->skill[i].mode&EL_SKILLMODE_WARG_1));
-		skill_id = RA_WUGSTRIKE;
+		skill_id = SK_WG_SLASH;
 	}
-	if (caller_skill_id == HT_FALCON_1) {
+	if (caller_skill_id == SK_HT_BLITZBEAT) {
 		ARR_FIND(0, MAX_ELESKILLTREE, i, ed->db->skill[i].id && (ed->db->skill[i].mode&EL_SKILLMODE_FALCON_1));
-		skill_id = HT_BLITZBEAT;
+		skill_id = SK_FC_BLITZBEAT;
 	}
-	if (caller_skill_id == AM2_HOM_ACTION) {
+	if (caller_skill_id == SK_AM_HOMUNCULUSACTIONII) {
 		ARR_FIND(0, MAX_ELESKILLTREE, i, ed->db->skill[i].id && (ed->db->skill[i].mode & EL_SKILLMODE_ALCHEMIST_2));
 		skill_id = ed->db->skill[i].id;
 		
 		switch(ed->vd->class_){
 			case ELEMENTALID_VENTUS_M:
-				skill_id = HM_BASILISK_2;
+				skill_id = SK_AM_BASILISK2;
 				break;
 			case ELEMENTALID_TERA_M:
-				skill_id = HM_BEHOLDER_2;
+				skill_id = SK_AM_BEHOLDER2;
 				break;
 			case ELEMENTALID_AGNI_M:
-				skill_id = HM_FIREBOOST;
+				skill_id = SK_AM_PYROTECHNIA;
 				break;
 			case ELEMENTALID_AQUA_M:
-				skill_id = HM_HEALPULSE;
+				skill_id = SK_AM_HEALPULSE;
 				break;
 		}
 	}
@@ -463,10 +463,10 @@ int elemental_action(struct elemental_data *ed, struct block_list *bl, t_tick ti
 	if(req.hp || req.sp){
 		struct map_session_data *sd = BL_CAST(BL_PC, battle_get_master(&ed->bl));
 		if( sd ){
-			if( sd->skill_id_old != SO_EL_ACTION && sd->skill_id_old != JG_EL_ACTION 
-			&& sd->skill_id_old != AM_EL_ACTION && sd->skill_id_old != AM2_HOM_ACTION
-			&& sd->skill_id_old != HT_WARG_1
-			&& sd->skill_id_old != HT_FALCON_1
+			if( sd->skill_id_old != SK_SA_ELEMENTALACTION1 && sd->skill_id_old != SK_SA_ELEMENTALACTION2 
+			&& sd->skill_id_old != SK_AM_HOMUNCULUSACTIONI && sd->skill_id_old != SK_AM_HOMUNCULUSACTIONII
+			&& sd->skill_id_old != SK_HT_SLASH
+			&& sd->skill_id_old != SK_HT_BLITZBEAT
 			&&//regardless of remaining HP/SP it can be cast
 				(status_get_hp(&ed->bl) < req.hp || status_get_sp(&ed->bl) < req.sp) )
 				return 1;
@@ -558,7 +558,7 @@ int elemental_change_mode(struct elemental_data *ed, enum e_mode mode) {
 	return 1;
 }
 
-void elemental_heal(struct elemental_data *ed, int hp, int sp) {
+void elementSK_AL_HEAL(struct elemental_data *ed, int hp, int sp) {
 	if (ed->master == NULL)
 		return;
 	if( hp )

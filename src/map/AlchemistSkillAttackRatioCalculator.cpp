@@ -10,47 +10,47 @@
 int AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv, struct status_data* sstatus, struct status_data* tstatus)
 {
 	switch (skill_id) {
-		case HM_BASILISK_1:
+		case SK_AM_BASILISK1:
 			calculate_basilisk_1_special_effects(target);
 			return calculate_basilisk_1_attack_ratio(skill_lv);
 			break;
-		case HM_BEHOLDER_1:
+		case SK_AM_BEHOLDER1:
 			calculate_beholder_1_special_effects(target);
 			return calculate_basilisk_1_attack_ratio(skill_lv);
 			break;
-		case HM_BASILISK_2:
+		case SK_AM_BASILISK2:
 			return calculate_basilisk_2_attack_ratio(skill_lv);
 			break;
-		case HM_BEHOLDER_2:
+		case SK_AM_BEHOLDER2:
 			return calculate_basilisk_2_attack_ratio(skill_lv);
 			break;
-		case AM_DEMONSTRATION:
+		case SK_AM_FIREDEMONSTRATION:
 			return calculate_demonstration_attack_ratio(skill_lv, sstatus->int_);
 			break;
-		case AM_ACIDTERROR:
+		case SK_AM_ACIDTERROR:
 			calculate_acid_terror_special_effects(target);
 			return calculate_acid_terror_attack_ratio(skill_lv, sstatus->dex);
 			break;
-		case GN_SPORE_EXPLOSION:
+		case SK_AM_BOMB:
 		 	clif_specialeffect(target, EF_M03, AREA);
 			return calculate_bomb_attack_ratio(skill_lv, sstatus->dex);
 			break;
-		case GN_WALLOFTHORN:
+		case SK_AM_WILDTHORNS:
 			return calculate_wild_thorns_attack_ratio(skill_lv, sstatus->int_);
 			break;
-		case GN_DEMONIC_FIRE:
+		case SK_CR_INCENDIARYBOMB:
 			return calculate_incendiary_bomb_atk_ratio(skill_lv, sstatus->int_);
 			break;
-		case CR_ACIDDEMONSTRATION:
+		case SK_CR_ACIDBOMB:
     		clif_specialeffect(target, EF_GREENBODY, AREA);
     		clif_specialeffect(target, 804, AREA);
     		clif_specialeffect(target, 1406, AREA); //new_cannon_spear_09_clock
 			return calculate_acid_bomb_atk_ratio(skill_lv, sstatus->int_, sstatus->dex, tstatus->vit);
 			break;
-		case CR_GEOGRAPHER_FIELD_ATK:
+		case SK_CR_GEOGRAFIELD_ATK:
 			return calculate_geografield_atk_ratio(skill_lv);
 			break;
-		case GN_CRAZYWEED_ATK:
+		case SK_CR_MANDRAKERAID_ATK:
 			return calculate_mandrake_raid_atk_ratio(skill_lv);
 			break;
 		default:

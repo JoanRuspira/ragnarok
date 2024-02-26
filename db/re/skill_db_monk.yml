@@ -5,7 +5,7 @@ Header:
 
 Body:
   - Id: 855
-    Name: MO_KNUCKLEQUICKEN
+    Name: SK_MO_KNUCKLEQUICKEN
     Description: Knucle Quicken
     MaxLevel: 5
     Type: Weapon
@@ -32,7 +32,7 @@ Body:
       Weapon:
         Knuckle: true
   - Id: 1016
-    Name: MO_BALKYOUNG
+    Name: SK_MO_FALINGFIST
     Description: Falling Fist
     MaxLevel: 5
     Type: Weapon
@@ -51,7 +51,7 @@ Body:
       Weapon:
         Knuckle: true
   - Id: 2337
-    Name: SR_WINDMILL
+    Name: SK_MO_CIRCULARFISTS
     Description: Windmill
     MaxLevel: 5
     Type: Weapon
@@ -79,7 +79,7 @@ Body:
       Weapon:
         Knuckle: true
   - Id: 370
-    Name: CH_PALMSTRIKE
+    Name: SK_MO_PALMSTRIKE
     Description: Raging Palm Strike
     MaxLevel: 5
     Type: Weapon
@@ -107,7 +107,7 @@ Body:
       Weapon:
         Knuckle: true
   - Id: 401
-    Name: CH_SOULCOLLECT
+    Name: SK_MO_SUMMONSPIRITSPHERE
     Description: Zen
     MaxLevel: 5
     TargetType: Self
@@ -123,7 +123,7 @@ Body:
     Requires:
       SpCost: 20
   - Id: 267
-    Name: MO_FINGEROFFENSIVE
+    Name: SK_MO_TRHOWSPIRITSPHERE
     Description: Throw Spirit Sphere
     MaxLevel: 5
     Type: Weapon
@@ -174,7 +174,7 @@ Body:
         - Level: 5
           Amount: 5
   - Id: 266
-    Name: MO_INVESTIGATE
+    Name: SK_MO_OCCULTIMPACT
     Description: Occult Impaction
     MaxLevel: 5
     Type: Weapon
@@ -198,7 +198,7 @@ Body:
       SpCost: 20
       SpiritSphereCost: 1
   - Id: 874
-    Name: MO_KI_BLAST
+    Name: SK_MO_KIBLAST
     Description: Ki Blast
     MaxLevel: 5
     Type: Weapon
@@ -235,7 +235,7 @@ Body:
           Amount: 1
       SpiritSphereCost: 1
   - Id: 519
-    Name: GS_FULLBUSTER
+    Name: SK_MO_TRIPLEARMCANNON
     Description: Full Buster
     MaxLevel: 5
     Type: Weapon
@@ -257,7 +257,7 @@ Body:
         Mace: true
         2hMace: true
   - Id: 514
-    Name: GS_PIERCINGSHOT
+    Name: SK_MO_TIGERFIST
     Description: Piercing Shot
     MaxLevel: 5
     Type: Weapon
@@ -276,7 +276,7 @@ Body:
         2hMace: true
       SpiritSphereCost: 1
   - Id: 262
-    Name: MO_ABSORBSPIRITS
+    Name: SK_MO_ABSORBSPIRITSPHERE
     Description: Absorb Spirit Sphere
     MaxLevel: 5
     Type: Weapon
@@ -295,7 +295,7 @@ Body:
         - Item: Dragonball_Yellow
           Amount: 1
   - Id: 264
-    Name: MO_BODYRELOCATION
+    Name: SK_MO_BODYRELOCATION
     Description: Snap
     MaxLevel: 5
     TargetType: Ground
@@ -307,3 +307,29 @@ Body:
     Requires:
       SpCost: 20
       SpiritSphereCost: 1
+  - Id: 30
+    Name: SK_MO_DECAGI
+    Description: Decrease AGI
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    DamageFlags:
+      NoDamage: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    Cooldown: 4000
+    Duration1:
+      - Level: 1
+        Time: 10000
+      - Level: 2
+        Time: 20000
+      - Level: 3
+        Time: 30000
+      - Level: 4
+        Time: 40000
+      - Level: 5
+        Time: 50000
+    Requires:
+      SpCost: 39

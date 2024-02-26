@@ -893,7 +893,7 @@ Body:
     Weight: 40
     Script: |
       itemheal rand(15,20),0;
-      itemskill "PR_MAGNIFICAT",3;
+      itemskill "SK_PR_MAGNIFICAT",3;
   - Id: 586
     AegisName: Mother's_Cake
     Name: Mother's Cake
@@ -1087,7 +1087,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      itemskill "SM_ENDURE",1;
+      itemskill "SK_BS_ENDURE",1;
   - Id: 606
     AegisName: Aloebera
     Name: Aloevera
@@ -1144,7 +1144,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      itemskill "ALL_RESURRECTION",1;
+      itemskill "SK_PR_RESURRECTIO",1;
   - Id: 611
     AegisName: Spectacles
     Name: Magnifier
@@ -1732,7 +1732,7 @@ Body:
       Override: 100
       Sitting: true
     Script: |
-      itemskill "WZ_EARTHSPIKE",3;
+      itemskill "SK_WZ_STALAGMITE",3;
   - Id: 687
     AegisName: Earth_Scroll_1_5
     Name: Level 5 Earth Spike
@@ -1745,7 +1745,7 @@ Body:
       Override: 100
       Sitting: true
     Script: |
-      itemskill "WZ_EARTHSPIKE",5;
+      itemskill "SK_WZ_STALAGMITE",5;
   - Id: 688
     AegisName: Cold_Scroll_1_3
     Name: Level 3 Cold Bolt
@@ -1758,7 +1758,7 @@ Body:
       Override: 100
       Sitting: true
     Script: |
-      itemskill "MG_COLDBOLT",3;
+      itemskill "SK_MG_COLDBOLT",3;
   - Id: 689
     AegisName: Cold_Scroll_1_5
     Name: Level 5 Cold Bolt
@@ -1771,7 +1771,7 @@ Body:
       Override: 100
       Sitting: true
     Script: |
-      itemskill "MG_COLDBOLT",5;
+      itemskill "SK_MG_COLDBOLT",5;
   - Id: 690
     AegisName: Fire_Scroll_1_3
     Name: Level 3 Fire Bolt
@@ -1784,7 +1784,7 @@ Body:
       Override: 100
       Sitting: true
     Script: |
-      itemskill "MG_FIREBOLT",3;
+      itemskill "SK_MG_FIREBOLT",3;
   - Id: 691
     AegisName: Fire_Scroll_1_5
     Name: Level 5 Fire Bolt
@@ -1797,7 +1797,7 @@ Body:
       Override: 100
       Sitting: true
     Script: |
-      itemskill "MG_FIREBOLT",5;
+      itemskill "SK_MG_FIREBOLT",5;
   - Id: 692
     AegisName: Wind_Scroll_1_3
     Name: Level 3 Lightening Bolt
@@ -1810,7 +1810,7 @@ Body:
       Override: 100
       Sitting: true
     Script: |
-      itemskill "MG_LIGHTNINGBOLT",3;
+      itemskill "SK_MG_LIGHTNINGBOLT",3;
   - Id: 693
     AegisName: Wind_Scroll_1_5
     Name: Level 5 Lightening Bolt
@@ -1823,7 +1823,7 @@ Body:
       Override: 100
       Sitting: true
     Script: |
-      itemskill "MG_LIGHTNINGBOLT",5;
+      itemskill "SK_MG_LIGHTNINGBOLT",5;
   - Id: 694
     AegisName: Ghost_Scroll_1_3
     Name: Level 3 Soul Strike
@@ -1836,7 +1836,7 @@ Body:
       Override: 100
       Sitting: true
     Script: |
-      itemskill "MG_SOULSTRIKE",3;
+      itemskill "SK_MG_SOULSTRIKE",3;
   - Id: 695
     AegisName: Ghost_Scroll_1_5
     Name: Level 5 Soul Strike
@@ -1849,7 +1849,7 @@ Body:
       Override: 100
       Sitting: true
     Script: |
-      itemskill "MG_SOULSTRIKE",5;
+      itemskill "SK_MG_SOULSTRIKE",5;
   - Id: 696
     AegisName: Fire_Scroll_2_1
     Name: Level 1 Fire Ball
@@ -1914,7 +1914,7 @@ Body:
       Override: 100
       Sitting: true
     Script: |
-      itemskill "MG_FROSTDIVER",1;
+      itemskill "SK_MG_FROSTDIVER",1;
   - Id: 6046
     AegisName: Clothing_Dye_Coupon
     Name: Clothing Dye Coupon
@@ -2364,7 +2364,7 @@ Body:
       Override: 100
       Sitting: true
     Script: |
-      itemskill "MG_FROSTDIVER",5;
+      itemskill "SK_MG_FROSTDIVER",5;
   - Id: 12001
     AegisName: Holy_Scroll_1_3
     Name: Level 3 Heal
@@ -2377,7 +2377,7 @@ Body:
       Override: 100
       Sitting: true
     Script: |
-      itemskill "AL_HEAL",3;
+      itemskill "SK_AL_HEAL",3;
   - Id: 12002
     AegisName: Holy_Scroll_1_5
     Name: Level 5 Heal
@@ -2390,7 +2390,7 @@ Body:
       Override: 100
       Sitting: true
     Script: |
-      itemskill "AL_HEAL",5;
+      itemskill "SK_AL_HEAL",5;
   - Id: 12003
     AegisName: Holy_Scroll_2_1
     Name: Level 1 Teleport
@@ -2556,7 +2556,7 @@ Body:
     Buy: 2
     Weight: 150
     Script: |
-      itemskill "ALL_RESURRECTION",2;
+      itemskill "SK_PR_RESURRECTIO",2;
   - Id: 12020
     AegisName: Water_Of_Darkness
     Name: Cursed Water
@@ -4426,7 +4426,7 @@ Body:
     Buy: 20
     Weight: 50
     Script: |
-      itemskill "PR_MAGNIFICAT",3;
+      itemskill "SK_PR_MAGNIFICAT",3;
   - Id: 12201
     AegisName: Red_Box_C
     Name: Commonplace Red Box
@@ -4684,7 +4684,7 @@ Body:
       NoMail: true
       NoAuction: true
     Script: |
-      skilleffect "AL_BLESSING",0;
+      skilleffect "SK_AL_BLESSING",0;
       sc_start SC_BLESSING,240000,10;
   - Id: 12216
     AegisName: Inc_Agi_10_Scroll
@@ -4706,7 +4706,7 @@ Body:
       NoAuction: true
     Script: |
       if (Hp>15) {
-         skilleffect "AL_INCAGI",0;
+         skilleffect "SK_AL_INCREASEAGI",0;
          sc_start SC_INCREASEAGI,240000,10;
          heal -15,0;
       }
@@ -4730,7 +4730,7 @@ Body:
       NoAuction: true
     Script: |
       if (countitem(523)>0) {
-         skilleffect "PR_ASPERSIO",0;
+         skilleffect "SK_PR_ASPERSIO",0;
          sc_start SC_ASPERSIO,180000,5;
          delitem 523,1;
       }
@@ -4754,7 +4754,7 @@ Body:
       NoAuction: true
     Script: |
       sc_start SC_ASSUMPTIO,100000,5;
-      skilleffect "HP_ASSUMPTIO",0;
+      skilleffect "SK_BI_ASSUMPTIO",0;
   - Id: 12219
     AegisName: Wind_Walk_10_Scroll
     Name: LV10 Wind Walker Scroll
@@ -4774,7 +4774,7 @@ Body:
       NoMail: true
       NoAuction: true
     Script: |
-      skilleffect "SN_WINDWALK",0;
+      skilleffect "SK_HT_WINDRACER",0;
       sc_start SC_WINDWALK,250000,5;
   - Id: 12220
     AegisName: Adrenaline_Scroll
@@ -4797,7 +4797,7 @@ Body:
     Script: |
       set .@type,getiteminfo(getequipid(EQI_HAND_R), ITEMINFO_VIEW);
       if (.@type == W_1HAXE || .@type == W_2HAXE || .@type == W_MACE) {
-         skilleffect "BS_ADRENALINE",0;
+         skilleffect "SK_BS_WEAPONRYEXPERTISE",0;
          sc_start SC_ADRENALINE,150000,5;
       }
   - Id: 12221
@@ -4946,7 +4946,7 @@ Body:
       Sitting: true
     Script: |
       percentheal 0,5;
-      skilleffect "AL_BLESSING",0;
+      skilleffect "SK_AL_BLESSING",0;
       sc_start SC_BLESSING,240000,10;
   - Id: 12236
     AegisName: Choco_Tart
@@ -4959,7 +4959,7 @@ Body:
       Sitting: true
     Script: |
       percentheal 5,0;
-      itemskill "AL_ANGELUS",5;
+      itemskill "SK_AL_ANGELUS",5;
   - Id: 12237
     AegisName: Choco_Lump
     Name: Junky Chocolate
@@ -5630,7 +5630,7 @@ Body:
       Sitting: true
     Script: |
       percentheal 5,0;
-      skilleffect "AL_BLESSING",0;
+      skilleffect "SK_AL_BLESSING",0;
       sc_start SC_BLESSING,120000,5;
   - Id: 12291
     AegisName: Mysterious_PET_Bottle
@@ -5645,7 +5645,7 @@ Body:
       Sitting: true
     Script: |
       percentheal 5,0;
-      skilleffect "AL_INCAGI",0;
+      skilleffect "SK_AL_INCREASEAGI",0;
       sc_start SC_INCREASEAGI,120000,5;
   - Id: 12292
     AegisName: Unripe_Fruit
@@ -6128,7 +6128,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "WL_READING_SB_READING",1;
+      itemskill "SK_MG_READING_SB_READING",1;
   - Id: 6190
     AegisName: Magic_Book_ColdBolt
     Name: Spell Book (Cold Bolt)
@@ -6140,7 +6140,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "WL_READING_SB_READING",2;
+      itemskill "SK_MG_READING_SB_READING",2;
   - Id: 6191
     AegisName: Magic_Book_LightningBolt
     Name: Spell Book (Lightening Bolt)
@@ -6152,7 +6152,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "WL_READING_SB_READING",3;
+      itemskill "SK_MG_READING_SB_READING",3;
   - Id: 6201
     AegisName: Magic_Book_EarthBolt
     Name: Spell Book (Earth Bolt)
@@ -6164,7 +6164,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "WL_READING_SB_READING",4;
+      itemskill "SK_MG_READING_SB_READING",4;
   - Id: 6205
     AegisName: Magic_Book_VoidExpansion
     Name: Spell Book (Void Expansion)
@@ -6176,7 +6176,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "WL_READING_SB_READING",5;
+      itemskill "SK_MG_READING_SB_READING",5;
   - Id: 62051
     AegisName: Magic_Book_Corrupt
     Name: Spell Book (Corrupt)
@@ -6188,7 +6188,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "WL_READING_SB_READING",6;
+      itemskill "SK_MG_READING_SB_READING",6;
   - Id: 62052
     AegisName: Magic_Book_DarkStrike
     Name: Spell Book (Dark Strike)
@@ -6200,7 +6200,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "WL_READING_SB_READING",7;
+      itemskill "SK_MG_READING_SB_READING",7;
   - Id: 62053
     AegisName: Magic_Book_SoulStrike
     Name: Spell Book (Soul Strike)
@@ -6212,7 +6212,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "WL_READING_SB_READING",8;
+      itemskill "SK_MG_READING_SB_READING",8;
   - Id: 62054
     AegisName: Magic_Book_EarthSpikes
     Name: Spell Book (Earth Spikes)
@@ -6224,7 +6224,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "WL_READING_SB_READING",9;
+      itemskill "SK_MG_READING_SB_READING",9;
   - Id: 62055
     AegisName: Magic_Book_LordOfVermillion
     Name: Spell Book (Lord of Vermillion)
@@ -6236,7 +6236,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "WL_READING_SB_READING",10;
+      itemskill "SK_MG_READING_SB_READING",10;
   - Id: 62056
     AegisName: Magic_Book_StormGust
     Name: Spell Book (Storm Gust)
@@ -6248,7 +6248,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "WL_READING_SB_READING",11;
+      itemskill "SK_MG_READING_SB_READING",11;
   - Id: 62057
     AegisName: Magic_Book_MeteorStorm
     Name: Spell Book (Meteor Storm)
@@ -6260,7 +6260,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "WL_READING_SB_READING",12;
+      itemskill "SK_MG_READING_SB_READING",12;
   - Id: 62058
     AegisName: Magic_Book_Stalagmite
     Name: Spell Book (Stalagmite)
@@ -6272,7 +6272,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "WL_READING_SB_READING",13;
+      itemskill "SK_MG_READING_SB_READING",13;
   - Id: 62059
     AegisName: Magic_Book_Thunderstorm
     Name: Spell Book (Thunderstorm)
@@ -6284,7 +6284,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "WL_READING_SB_READING",14;
+      itemskill "SK_MG_READING_SB_READING",14;
   - Id: 62060
     AegisName: Magic_Book_Iceberg
     Name: Spell Book (Iceberg)
@@ -6296,7 +6296,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "WL_READING_SB_READING",15;
+      itemskill "SK_MG_READING_SB_READING",15;
   - Id: 62061
     AegisName: Magic_Book_CrimsonRock
     Name: Spell Book (Crimson Rock)
@@ -6308,7 +6308,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "WL_READING_SB_READING",16;
+      itemskill "SK_MG_READING_SB_READING",16;
   - Id: 62062
     AegisName: Magic_Book_PsychicWave
     Name: Spell Book (Psychic Wave)
@@ -6320,7 +6320,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "WL_READING_SB_READING",17;
+      itemskill "SK_MG_READING_SB_READING",17;
   - Id: 62063
     AegisName: Magic_Book_IllusionaryBlades
     Name: Spell Book (Illusionary Blades)
@@ -6332,7 +6332,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "WL_READING_SB_READING",18;
+      itemskill "SK_MG_READING_SB_READING",18;
   - Id: 62064
     AegisName: Magic_Book_ExtremeVacuum
     Name: Spell Book (ExtremeVacuum)
@@ -6344,7 +6344,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "WL_READING_SB_READING",19;
+      itemskill "SK_MG_READING_SB_READING",19;
   - Id: 62065
     AegisName: Magic_Book_RealityBreaker
     Name: Spell Book (Reality Breaker)
@@ -6356,7 +6356,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "WL_READING_SB_READING",20;
+      itemskill "SK_MG_READING_SB_READING",20;
   - Id: 62066
     AegisName: Magic_Book_TetraVortex
     Name: Spell Book (Tetra Vortex)
@@ -6368,7 +6368,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "WL_READING_SB_READING",21;
+      itemskill "SK_MG_READING_SB_READING",21;
   - Id: 62067
     AegisName: Magic_Book_PhantomSpear
     Name: Spell Book (Phantom Spear)
@@ -6380,7 +6380,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "WL_READING_SB_READING",22;
+      itemskill "SK_MG_READING_SB_READING",22;
   - Id: 62068
     AegisName: Magic_Book_ShadowBomb
     Name: Spell Book (Shadow Bomb)
@@ -6392,7 +6392,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "WL_READING_SB_READING",23;
+      itemskill "SK_MG_READING_SB_READING",23;
   - Id: 62069
     AegisName: Magic_Book_Doom
     Name: Spell Book (Doom)
@@ -6404,7 +6404,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "WL_READING_SB_READING",24;
+      itemskill "SK_MG_READING_SB_READING",24;
   - Id: 62070
     AegisName: Magic_Book_DiamondDust
     Name: Spell Book (Diamond Dust)
@@ -6416,7 +6416,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "WL_READING_SB_READING",25;
+      itemskill "SK_MG_READING_SB_READING",25;
   - Id: 62071
     AegisName: Magic_Book_AstralStrike
     Name: Spell Book (Astral Strike)
@@ -6428,7 +6428,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "WL_READING_SB_READING",26;
+      itemskill "SK_MG_READING_SB_READING",26;
   - Id: 62072
     AegisName: Magic_Book_LandProtector
     Name: Spell Book (Land Protector)
@@ -6440,7 +6440,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "WL_READING_SB_READING",27;
+      itemskill "SK_MG_READING_SB_READING",27;
   - Id: 62073
     AegisName: Magic_Book_Stasis
     Name: Spell Book (Stasis)
@@ -6452,7 +6452,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "WL_READING_SB_READING",28;
+      itemskill "SK_MG_READING_SB_READING",28;
   - Id: 34
     AegisName: Orange_Slim_Potion
     Name: Condensed Orange Potion
@@ -6492,7 +6492,7 @@ Body:
       NoAuction: true
     Script: |
       specialeffect2 1261;
-      itemskill "AM_HATCH_HOMUNCULUS",1;
+      itemskill "SK_AM_HATCHHOMUNCULUS",1;
   - Id: 36
     AegisName: Beholder_Embryo
     Name: Beholder Embryo
@@ -6514,7 +6514,7 @@ Body:
       NoAuction: true
     Script: |
       specialeffect2 1261;
-      itemskill "AM_HATCH_HOMUNCULUS",2;
+      itemskill "SK_AM_HATCHHOMUNCULUS",2;
   - Id: 37
     AegisName: Mandrake_Embryo
     Name: Mandrake Embryo
@@ -6536,7 +6536,7 @@ Body:
       NoAuction: true
     Script: |
       specialeffect2 1261;
-      itemskill "AM_HATCH_HOMUNCULUS",3;
+      itemskill "SK_AM_HATCHHOMUNCULUS",3;
   - Id: 38
     AegisName: Pheonix_Embryo
     Name: Pheonix Embryo
@@ -6558,7 +6558,7 @@ Body:
       NoAuction: true
     Script: |
       specialeffect2 1261;
-      itemskill "AM_HATCH_HOMUNCULUS",4;
+      itemskill "SK_AM_HATCHHOMUNCULUS",4;
   - Id: 39
     AegisName: Tera_Scroll
     Name: Tera Scroll
@@ -6580,7 +6580,7 @@ Body:
       NoAuction: true
     Script: |
       specialeffect2 1261;
-      itemskill "SA_SUMMON_ELEMENTAL",1;
+      itemskill "SK_SA_SUMMONELEMENTAL",1;
   - Id: 40
     AegisName: Ventus_Scroll
     Name: Ventus Scroll
@@ -6602,7 +6602,7 @@ Body:
       NoAuction: true
     Script: |
       specialeffect2 1261;
-      itemskill "SA_SUMMON_ELEMENTAL",2;
+      itemskill "SK_SA_SUMMONELEMENTAL",2;
   - Id: 41
     AegisName: Aqua_Scroll
     Name: Aqua Scroll
@@ -6624,7 +6624,7 @@ Body:
       NoAuction: true
     Script: |
       specialeffect2 1261;
-      itemskill "SA_SUMMON_ELEMENTAL",3;
+      itemskill "SK_SA_SUMMONELEMENTAL",3;
   - Id: 42
     AegisName: Agni_Scroll
     Name: Agni Scroll
@@ -6646,4 +6646,4 @@ Body:
       NoAuction: true
     Script: |
       specialeffect2 1261;
-      itemskill "SA_SUMMON_ELEMENTAL",4;
+      itemskill "SK_SA_SUMMONELEMENTAL",4;

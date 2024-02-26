@@ -4,17 +4,13 @@ Header:
   Version: 1
 
 Body:
-  - Id: 1
-    Name: NV_BASIC
-    Description: Basic Skill
-    MaxLevel: 8
   - Id: 3
-    Name: SM_TWOHAND
+    Name: SK_SM_TWOHAND
     Description: Two-Handed Sword Mastery
     MaxLevel: 5
     Type: Weapon
   - Id: 398
-    Name: LK_HEADCRUSH
+    Name: SK_SM_TRAUMATIC_STRIKE
     Description: Traumatic Blow
     MaxLevel: 5
     Type: Weapon  
@@ -48,7 +44,7 @@ Body:
         Book: true
         Katar: true
   - Id: 6
-    Name: SM_PROVOKE
+    Name: SK_SM_PROVOKE
     Description: Provoke
     MaxLevel: 5
     TargetType: Attack
@@ -66,7 +62,7 @@ Body:
     Requires:
       SpCost: 15
   - Id: 146
-    Name: SM_AUTOBERSERK
+    Name: SK_SM_AUTOBERSERK
     Description: Auto Berserk
     MaxLevel: 5
     Type: Weapon
@@ -79,12 +75,12 @@ Body:
     Requires:
       SpCost: 40
   - Id: 55
-    Name: KN_SPEARMASTERY
+    Name: SK_SM_SPEARMASTERY
     Description: Spear Mastery
     MaxLevel: 5
     Type: Weapon
   - Id: 5
-    Name: SM_BASH
+    Name: SK_SM_BASH
     Description: Bash
     MaxLevel: 5
     Type: Weapon
@@ -119,7 +115,7 @@ Body:
         Book: true
         Katar: true
   - Id: 813
-    Name: SM_SPEARSTANCE
+    Name: SK_SM_SPEARSTANCE
     Description: Spear Stance
     MaxLevel: 5
     Type: Weapon
@@ -153,7 +149,7 @@ Body:
         1hSpear: true
         2hSpear: true
   - Id: 58
-    Name: KN_SPEARSTAB
+    Name: SK_SM_SPEARSTAB
     Description: Spear Stab
     MaxLevel: 5
     Type: Weapon
@@ -179,12 +175,12 @@ Body:
         1hSpear: true
         2hSpear: true
   - Id: 2
-    Name: SM_SWORD
+    Name: SK_SM_SWORD
     Description: Sword Mastery
     MaxLevel: 5
     Type: Weapon
   - Id: 399
-    Name: LK_JOINTBEAT
+    Name: SK_SM_LIGHTNING_STRIKE
     Description: Vital Strike
     MaxLevel: 5
     Type: Weapon
@@ -214,7 +210,7 @@ Body:
         Book: true
         Katar: true
   - Id: 819
-    Name: SM_SPIRITGROWTH
+    Name: SK_SM_SPIRITGROWTH
     Description: Spirit Growth
     MaxLevel: 5
     Type: Weapon
@@ -245,7 +241,7 @@ Body:
     Requires:
       SpCost: 20
   - Id: 7
-    Name: SM_MAGNUM
+    Name: SK_SM_MAGNUM
     Description: Magnum Break
     MaxLevel: 5
     Type: Weapon
@@ -294,19 +290,19 @@ Body:
         Book: true
         Katar: true
   - Id: 4
-    Name: SM_RECOVERY
+    Name: SK_SM_RECOVERY
     Description: Increase HP Recovery
     MaxLevel: 5
   - Id: 248
-    Name: CR_TRUST
+    Name: SK_SM_INNER_STRENGTH
     Description: Faith
     MaxLevel: 5
   - Id: 9
-    Name: MG_SRECOVERY
+    Name: SK_SM_SRECOVERY
     Description: Increase SP Recovery
     MaxLevel: 5
   - Id: 363
-    Name: HP_MEDITATIO
+    Name: SK_SM_MEDITATE
     Description: Meditatio
     MaxLevel: 5
     Type: Magic

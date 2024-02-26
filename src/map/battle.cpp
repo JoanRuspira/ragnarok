@@ -322,7 +322,7 @@ TIMER_FUNC(battle_delay_damage_sub){
 			{
 				//Deal damage
 				battle_damage(src, target, dat->damage, dat->delay, dat->skill_lv, dat->skill_id, dat->dmg_lv, dat->attack_type, dat->additional_effects, tick, dat->isspdamage);
-			} else if( !src && dat->skill_id == CR_REFLECTSHIELD ) { // it was monster reflected damage, and the monster died, we pass the damage to the character as expected
+			} else if( !src && dat->skill_id == SK_CR_REFLECTSHIELD ) { // it was monster reflected damage, and the monster died, we pass the damage to the character as expected
 				map_freeblock_lock();
 				status_fix_damage(target, target, dat->damage, dat->delay, dat->skill_id);
 				map_freeblock_unlock();
@@ -360,7 +360,7 @@ int battle_delay_damage(t_tick tick, int amotion, struct block_list *src, struct
 	}
 
 	if( ((d_tbl && check_distance_bl(target, d_tbl, sc->data[SC_DEVOTION]->val3)) || e_tbl) &&
-		damage > 0 && skill_id != CR_REFLECTSHIELD
+		damage > 0 && skill_id != SK_CR_REFLECTSHIELD
 		) {
 		struct map_session_data* tsd = BL_CAST( BL_PC, target );
 
@@ -524,7 +524,7 @@ int64 battle_attr_fix(struct block_list *src, struct block_list *target, int64 d
 		ratio += 50;
 	
 	if( target && target->type == BL_SKILL ) {
-		if( atk_elem == ELE_FIRE && battle_getcurrentskill(target) == GN_WALLOFTHORN ) {
+		if( atk_elem == ELE_FIRE && battle_getcurrentskill(target) == SK_AM_WILDTHORNS ) {
 			struct skill_unit *su = (struct skill_unit*)target;
 			struct skill_unit_group *sg;
 			struct block_list *src2;
@@ -556,7 +556,7 @@ int64 battle_attr_fix(struct block_list *src, struct block_list *target, int64 d
 					//Remove a unit group or end whole status change
 					status_change_end(target, SC_SPIDERWEB, INVALID_TIMER);
 				}
-				if (tsc->data[SC_THORNSTRAP] && battle_getcurrentskill(src) != GN_CARTCANNON)
+				if (tsc->data[SC_THORNSTRAP] && battle_getcurrentskill(src) != SK_BS_CARTCANNON)
 					status_change_end(target, SC_THORNSTRAP, INVALID_TIMER);
 				if (tsc->data[SC_CRYSTALIZE])
 					status_change_end(target, SC_CRYSTALIZE, INVALID_TIMER);
@@ -917,7 +917,7 @@ int battle_calc_cardfix(int attack_type, struct block_list *src, struct block_li
 						cardfix = cardfix * (100 + sd->right_weapon.addclass[tstatus->class_] + sd->left_weapon.addclass[tstatus->class_] +
 							sd->right_weapon.addclass[CLASS_ALL] + sd->left_weapon.addclass[CLASS_ALL]) / 100;
 					}
-					if( sd->status.weapon == W_KATAR && (skill = pc_checkskill(sd,ASC_KATAR)) > 0 ) // Adv. Katar Mastery functions similar to a +%ATK card on official [helvetica]
+					if( sd->status.weapon == W_KATAR ) // Adv. Katar Mastery functions similar to a +%ATK card on official [helvetica]
 						cardfix = cardfix * (100 + (10 + 2 * skill)) / 100;
 				}
 
@@ -1189,30 +1189,6 @@ bool battle_status_block_damage(struct block_list *src, struct block_list *targe
 
 		if (group) {
 			d->dmg_lv = ATK_BLOCK;
-
-			switch (sce->val2) {
-			case MG_SAFETYWALL:
-				if (--group->val2 <= 0) {
-					skill_delunitgroup(group);
-					break;
-				}
-
-				if (group->val3 - damage > 0)
-					group->val3 -= static_cast<int>(cap_value(damage, INT_MIN, INT_MAX));
-				else
-					skill_delunitgroup(group);
-				break;
-			case MH_STEINWAND:
-				if (--group->val2 <= 0) {
-					skill_delunitgroup(group);
-					break;
-				}
-				if (group->val3 - damage > 0)
-					group->val3 -= static_cast<int>(cap_value(damage, INT_MIN, INT_MAX));
-				else
-					skill_delunitgroup(group);
-				break;
-			}
 			return false;
 		}
 		status_change_end(target, SC_SAFETYWALL, INVALID_TIMER);
@@ -1224,7 +1200,7 @@ bool battle_status_block_damage(struct block_list *src, struct block_list *targe
 #else
 		(sc->data[SC_BASILICA]
 #endif
-		&& !status_bl_has_mode(src, MD_STATUSIMMUNE) && skill_id != SP_SOULEXPLOSION) ||
+		&& !status_bl_has_mode(src, MD_STATUSIMMUNE)) ||
 		(sc->data[SC_ZEPHYR] && !(flag&BF_MAGIC && skill_id) && !(skill_get_inf(skill_id)&(INF_GROUND_SKILL | INF_SELF_SKILL))) ||
 		sc->data[SC__MANHOLE] ||
 		sc->data[SC_KINGS_GRACE] ||
@@ -1236,13 +1212,13 @@ bool battle_status_block_damage(struct block_list *src, struct block_list *targe
 	}
 
 	if (sc->data[SC_WHITEIMPRISON]) { // Gravitation and Pressure do damage without removing the effect
-		if (skill_id == MG_NAPALMBEAT ||
-			skill_id == MG_SOULSTRIKE ||
-			skill_id == WL_SOULEXPANSION ||
+		if (skill_id == SK_AL_SACREDWAVE ||
+			skill_id == SK_MG_SOULSTRIKE ||
+			skill_id == SK_MG_VOIDEXPANSION ||
 			(skill_id && skill_get_ele(skill_id, skill_lv) == ELE_GHOST) ||
 			(skill_id == 0 && (status_get_status_data(src))->rhw.ele == ELE_GHOST))
 		{
-			if (skill_id == WL_SOULEXPANSION)
+			if (skill_id == SK_MG_VOIDEXPANSION)
 				damage <<= 1; // If used against a player in White Imprison, the skill deals double damage.
 			status_change_end(target, SC_WHITEIMPRISON, INVALID_TIMER); // Those skills do damage and removes effect
 		} else {
@@ -1251,12 +1227,6 @@ bool battle_status_block_damage(struct block_list *src, struct block_list *targe
 		}
 	}
 
-	if ((sce = sc->data[SC_WEAPONBLOCKING]) && flag&(BF_SHORT | BF_WEAPON) && rnd() % 100 < sce->val2) {
-		clif_skill_nodamage(target, src, GC_WEAPONBLOCKING, sce->val1, 1);
-		sc_start(src, target, SC_WEAPONBLOCK_ON, 100, src->id, skill_get_time2(GC_WEAPONBLOCKING, sce->val1));
-		d->dmg_lv = ATK_BLOCK;
-		return false;
-	}
 
 	if ((sce = sc->data[SC_MILLENNIUMSHIELD]) && sce->val2 > 0 && damage > 0) {
 		sce->val3 -= static_cast<int>(cap_value(damage, INT_MIN, INT_MAX)); // absorb damage
@@ -1296,15 +1266,13 @@ bool battle_status_block_damage(struct block_list *src, struct block_list *targe
 			(d_bl->type == BL_PC && ((TBL_PC*)d_bl)->devotion[sce_d->val2] == target->id)) &&
 			check_distance_bl(target, d_bl, sce_d->val3))
 		{ //If player is target of devotion, show guard effect on the devotion caster rather than the target
-			clif_skill_nodamage(d_bl, d_bl, CR_AUTOGUARD, sce->val1, 1);
+			clif_skill_nodamage(d_bl, d_bl, SK_CR_AUTOGUARD, sce->val1, 1);
 			unit_set_walkdelay(d_bl, gettick(), delay, 1);
 			d->dmg_lv = ATK_MISS;
 			return false;
 		} else {
-			clif_skill_nodamage(target, target, CR_AUTOGUARD, sce->val1, 1);
+			clif_skill_nodamage(target, target, SK_CR_AUTOGUARD, sce->val1, 1);
 			unit_set_walkdelay(target, gettick(), delay, 1);
-			if (sc->data[SC_SHRINK] && rnd() % 100 < 5 * sce->val1)
-				skill_blown(target, src, skill_get_blewcount(CR_SHRINK, 1), -1, BLOWN_NONE);
 			d->dmg_lv = ATK_MISS;
 			return false;
 		}
@@ -1331,9 +1299,9 @@ bool battle_status_block_damage(struct block_list *src, struct block_list *targe
 		return false;
 
 	if ((sce = sc->data[SC_PARRYING]) && flag&BF_WEAPON && rnd() % 100 < sce->val2) {
-		clif_skill_nodamage(target, target, LK_PARRYING, sce->val1, 1);
+		clif_skill_nodamage(target, target, SK_CM_PARRY, sce->val1, 1);
 
-		if (skill_id == LK_PARRYING) {
+		if (skill_id == SK_CM_PARRY) {
 			unit_data *ud = unit_bl2ud(target);
 
 			if (ud != nullptr) // Delay the next attack
@@ -1342,14 +1310,6 @@ bool battle_status_block_damage(struct block_list *src, struct block_list *targe
 		return false;
 	}
 
-	if (sc->data[SC_DODGE] && (flag&BF_LONG || sc->data[SC_SPURT]) && (skill_id != NPC_EARTHQUAKE || (skill_id == NPC_EARTHQUAKE && flag & NPC_EARTHQUAKE_FLAG)) && rnd() % 100 < 20) {
-		map_session_data *sd = map_id2sd(target->id);
-
-		if (sd && pc_issit(sd))
-			pc_setstand(sd, true); //Stand it to dodge.
-		clif_skill_nodamage(target, target, TK_DODGE, 1, 1);
-		return false;
-	}
 
 	if (flag&BF_MAGIC && (sce = sc->data[SC_PRESTIGE]) && rnd() % 100 < sce->val2) {
 		clif_specialeffect(target, EF_STORMKICK4, AREA); // Still need confirm it.
@@ -1434,19 +1394,9 @@ int64 battle_calc_damage(struct block_list *src,struct block_list *bl,struct Dam
 	if (sc && sc->data[SC_MAXPAIN])
 		return 0;
 
-	switch (skill_id) {
-#ifndef RENEWAL
-		case HW_GRAVITATION:
-#endif
-		case SP_SOULEXPLOSION:
-			return damage; //These skills bypass everything else.
-  }
 
-	// Nothing can reduce the damage, but Safety Wall and Millennium Shield can block it completely.
-	// So can defense sphere's but what the heck is that??? [Rytech]
-	if (skill_id == SJ_NOVAEXPLOSING && !(sc && (sc->data[SC_SAFETYWALL] || sc->data[SC_MILLENNIUMSHIELD])))
-		return damage;
 
+	
 	if( sc && sc->count ) {
 		if (!battle_status_block_damage(src, bl, sc, d, damage, skill_id, skill_lv)) // Statuses that reduce damage to 0.
 			return 0;
@@ -1457,12 +1407,12 @@ int64 battle_calc_damage(struct block_list *src,struct block_list *bl,struct Dam
 			damage <<= 2;
 #endif
 
-		if (sc->data[SC_AETERNA] && skill_id != PF_SOULBURN) {
+		if (sc->data[SC_AETERNA] && skill_id != SK_SA_SOULBURN) {
 			if (src->type != BL_MER || !skill_id)
 				damage <<= 1; // Lex Aeterna only doubles damage of regular attacks from mercenaries
 
 #ifndef RENEWAL
-			if( skill_id != ASC_BREAKER || !(flag&BF_WEAPON) )
+			if( skill_id != SK_EX_SOULDESTROYER || !(flag&BF_WEAPON) )
 #endif
 				status_change_end(bl, SC_AETERNA, INVALID_TIMER); //Shouldn't end until Breaker's non-weapon part connects.
 		}
@@ -1543,13 +1493,13 @@ int64 battle_calc_damage(struct block_list *src,struct block_list *bl,struct Dam
 			}
 		}
 		
-		if (sc->data[SC_DEFENDER] && skill_id != KO_MUCHANAGE && (flag&(BF_LONG|BF_WEAPON)) == (BF_LONG|BF_WEAPON))
+		if (sc->data[SC_DEFENDER] && (flag&(BF_LONG|BF_WEAPON)) == (BF_LONG|BF_WEAPON))
 			damage -= damage * sc->data[SC_DEFENDER]->val2 / 100;
 
 		if(sc->data[SC_ADJUSTMENT] && (flag&(BF_LONG|BF_WEAPON)) == (BF_LONG|BF_WEAPON))
 			damage -= damage * 20 / 100;
 
-		if(sc->data[SC_FOGWALL] && skill_id != RK_DRAGONBREATH) {
+		if(sc->data[SC_FOGWALL]) {
 			if(flag&BF_SKILL) //25% reduction
 				damage -= damage * 25 / 100;
 			else if ((flag&(BF_LONG|BF_WEAPON)) == (BF_LONG|BF_WEAPON))
@@ -1646,12 +1596,10 @@ int64 battle_calc_damage(struct block_list *src,struct block_list *bl,struct Dam
 			damage = i64max(damage, 1);
 		}
 
-		if( (sce=sc->data[SC_MAGMA_FLOW]) && (rnd()%100 <= sce->val2) )
-			skill_castend_damage_id(bl,src,MH_MAGMA_FLOW,sce->val1,gettick(),0);
-
+	
 		if( damage > 0 && (sce = sc->data[SC_STONEHARDSKIN]) ) {
 			if( src->type == BL_MOB ) //using explicit call instead break_equip for duration
-				sc_start(src,src, SC_STRIPWEAPON, 30, 0, skill_get_time2(RK_STONEHARDSKIN, sce->val1));
+				sc_start(src,src, SC_STRIPWEAPON, 30, 0, skill_get_time2(SK_KN_STONESKIN, sce->val1));
 			else if (flag&(BF_WEAPON|BF_SHORT))
 				skill_break_equip(src,src, EQP_WEAPON, 3000, BCT_SELF);
 		}
@@ -1666,7 +1614,7 @@ int64 battle_calc_damage(struct block_list *src,struct block_list *bl,struct Dam
 #ifdef RENEWAL
 		// Renewal: steel body reduces all incoming damage to 1/10 [helvetica]
 		if( sc->data[SC_STEELBODY] ){
-			int reduction_percentage_to = 60 - (pc_checkskill(sd, MO_STEELBODY)*6);
+			int reduction_percentage_to = 60 - (pc_checkskill(sd, SK_SH_MENTALSTRENGTH)*6);
 			damage = damage > reduction_percentage_to ? damage / reduction_percentage_to : 1;
 		}
 #endif
@@ -1674,17 +1622,7 @@ int64 battle_calc_damage(struct block_list *src,struct block_list *bl,struct Dam
 		if (!damage)
 			return 0;
 
-		if( sd && (sce = sc->data[SC_FORCEOFVANGUARD]) && flag&BF_WEAPON && rnd()%100 < sce->val2 )
-			pc_addspiritball(sd,skill_get_time(LG_FORCEOFVANGUARD,sce->val1),sce->val3);
-
-		if( sd && (sce = sc->data[SC_GT_ENERGYGAIN]) && flag&BF_WEAPON && rnd()%100 < sce->val2 ) {
-			int spheres = 5;
-
-			if( sc->data[SC_RAISINGDRAGON] )
-				spheres += sc->data[SC_RAISINGDRAGON]->val1;
-
-			pc_addspiritball(sd, skill_get_time2(SR_GENTLETOUCH_ENERGYGAIN, sce->val1), spheres);
-		}
+		
 
 		if (sc->data[SC_STYLE_CHANGE] && sc->data[SC_STYLE_CHANGE]->val1 == MH_MD_GRAPPLING) {
 			TBL_HOM *hd = BL_CAST(BL_HOM,bl); // We add a sphere for when the Homunculus is being hit
@@ -1756,11 +1694,7 @@ int64 battle_calc_damage(struct block_list *src,struct block_list *bl,struct Dam
 			status_change_end(src,SC_SHIELDSPELL_REF,INVALID_TIMER);
 		}
 
-		if (sc->data[SC_POISONINGWEAPON] && flag&BF_SHORT && (skill_id == 0 || skill_id == GC_VENOMPRESSURE) && damage > 0) {
-			damage += damage * 10 / 100;
-			if (rnd() % 100 < sc->data[SC_POISONINGWEAPON]->val3)
-				sc_start4(src, bl, (sc_type)sc->data[SC_POISONINGWEAPON]->val2, 100, sc->data[SC_POISONINGWEAPON]->val1, 0, 1, 0, skill_get_time2(GC_POISONINGWEAPON, 1));
-		}
+		
 
 		if( sc->data[SC__DEADLYINFECT] && (flag&(BF_SHORT|BF_MAGIC)) == BF_SHORT && damage > 0 && rnd()%100 < 30 + 10 * sc->data[SC__DEADLYINFECT]->val1 )
 			status_change_spread(src, bl, 0);
@@ -1780,12 +1714,6 @@ int64 battle_calc_damage(struct block_list *src,struct block_list *bl,struct Dam
 		if (sc->data[SC_UNLIMITEDHUMMINGVOICE] && flag&BF_MAGIC)
 			damage += damage * sc->data[SC_UNLIMITEDHUMMINGVOICE]->val3 / 100;
 
-		if (tsd && (sce = sc->data[SC_SOULREAPER])) {
-			if (rnd()%100 < sce->val2 && tsd->soulball < MAX_SOUL_BALL) {
-				clif_specialeffect(src, 1208, AREA);
-				pc_addsoulball(tsd, 5 + 3 * pc_checkskill(tsd, SP_SOULENERGY));
-			}
-		}
 	} //End of caster SC_ check
 
 	//PK damage rates
@@ -2041,16 +1969,16 @@ static int battle_range_type(struct block_list *src, struct block_list *target, 
 		return BF_SHORT;
 
 	switch (skill_id) {
-		case AC_SHOWER:
-		case HT_PHANTASMIC:
+		case SK_AC_ARROWSHOWER:
+		case SK_AC_ARROWRAIN:
 			// When monsters use Arrow Shower or Bomb, it is always short range
 			if (src->type == BL_MOB)
 				return BF_SHORT;
 			break;
-		case KN_BRANDISHSPEAR:
+		case SK_KN_BRANDISHSPEAR:
 			// Renewal changes to ranged physical damage
 			return BF_LONG;
-		case DUMMY_CROSSIMPACT:
+		case SK_EX_DUMMY_CROSSIMPACT:
 			// Cast range is 7 cells and player jumps to target but skill is considered melee
 			return BF_SHORT;
 	}
@@ -2217,9 +2145,6 @@ bool is_infinite_defense(struct block_list *target, int flag)
 
 	if(target->type == BL_SKILL) {
 		TBL_SKILL *su = ((TBL_SKILL*)target);
-
-		if (su && su->group && (su->group->skill_id == NPC_REVERBERATION || su->group->skill_id == WM_POEMOFNETHERWORLD))
-			return true;
 	}
 
 	if(status_has_mode(tstatus,MD_IGNOREMELEE) && (flag&(BF_WEAPON|BF_SHORT)) == (BF_WEAPON|BF_SHORT) )
@@ -2248,7 +2173,7 @@ static bool is_skill_using_arrow(struct block_list *src, int skill_id)
 		struct status_data *sstatus = status_get_status_data(src);
 		struct map_session_data *sd = BL_CAST(BL_PC, src);
 
-		return ((sd && sd->state.arrow_atk) || (!sd && ((skill_id && skill_get_ammotype(skill_id)) || sstatus->rhw.range>3)) || (skill_id == GS_GROUNDDRIFT));
+		return ((sd && sd->state.arrow_atk) || (!sd && ((skill_id && skill_get_ammotype(skill_id)) || sstatus->rhw.range>3)));
 	} else
 		return false;
 }
@@ -2283,14 +2208,14 @@ static bool is_attack_right_handed(struct block_list *src, int skill_id)
  */
 static int is_attack_piercing(struct Damage* wd, struct block_list *src, struct block_list *target, int skill_id, int skill_lv, short weapon_position)
 {
-	if (skill_id == MO_INVESTIGATE || skill_id == RL_MASS_SPIRAL)
+	if (skill_id == SK_MO_OCCULTIMPACT)
 		return 2;
 
 	if(src != NULL) {
 		struct map_session_data *sd = BL_CAST(BL_PC, src);
 		struct status_data *tstatus = status_get_status_data(target);
 
-		if( skill_id != PA_SACRIFICE && skill_id != HT_HURRICANEFURY && skill_id != SN_ZEPHYR_SNIPING && skill_id != NPC_GRANDDARKNESS && skill_id != KO_HAPPOKUNAI)
+		if( skill_id != SK_KN_RECKONING && skill_id != SK_HT_LIVINGTORNADO && skill_id != SK_RA_ZEPHYRSNIPING)
 		{ //Elemental/Racial adjustments
 			if( sd && (sd->right_weapon.def_ratio_atk_ele & (1<<tstatus->def_ele) || sd->right_weapon.def_ratio_atk_ele & (1<<ELE_ALL) ||
 				sd->right_weapon.def_ratio_atk_race & (1<<tstatus->race) || sd->right_weapon.def_ratio_atk_race & (1<<RC_ALL) ||
@@ -2358,9 +2283,9 @@ static bool is_attack_hitting(struct Damage* wd, struct block_list *src, struct 
 		return true;
 	else if (sc && sc->data[SC_FUSION])
 		return true;
-	else if ((skill_id == AS_SPLASHER || skill_id == GN_SPORE_EXPLOSION) && !wd->miscflag)
+	else if ((skill_id == SK_AS_VENOMSPLASHER || skill_id == SK_AM_BOMB) && !wd->miscflag)
 		return true;
-	else if (skill_id == CR_SHIELDBOOMERANG && sc && sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_CRUSADER )
+	else if (skill_id == SK_CR_SHIELDBOOMERANG && sc && sc->data[SC_SPIRIT] )
 		return true;
 	else if (tsc && tsc->opt1 && tsc->opt1 != OPT1_STONEWAIT && tsc->opt1 != OPT1_BURNING)
 		return true;
@@ -2401,90 +2326,33 @@ static bool is_attack_hitting(struct Damage* wd, struct block_list *src, struct 
 
 #ifdef RENEWAL
 	if (sd) //in Renewal hit bonus from Vultures Eye is not anymore shown in status window
-		hitrate += pc_checkskill(sd,AC_VULTURE) * 2;
+		hitrate += pc_checkskill(sd,SK_AC_VULTURE) * 2;
 #endif
 
 	if(skill_id) {
 		switch(skill_id) { //Hit skill modifiers
 			//It is proven that bonus is applied on final hitrate, not hit.
-			case SM_BASH:
-			case MS_BASH:
+			case SK_SM_BASH:
 				hitrate += hitrate * 5 * skill_lv / 100;
 				break;
-			case MS_MAGNUM:
-			case SM_MAGNUM:
+			case SK_SM_MAGNUM:
 				hitrate += hitrate * 10 * skill_lv / 100;
 				break;
-			case KN_AUTOCOUNTER:
-			case NPC_WATERATTACK:
-			case NPC_GROUNDATTACK:
-			case NPC_FIREATTACK:
-			case NPC_WINDATTACK:
-			case NPC_POISONATTACK:
-			case NPC_HOLYATTACK:
-			case NPC_DARKNESSATTACK:
-			case NPC_UNDEADATTACK:
-			case NPC_TELEKINESISATTACK:
-			case NPC_EARTHQUAKE:
-			case NPC_BLEEDING:
+			case SK_KN_COUNTERATTACK:
 				hitrate += hitrate * 20 / 100;
 				break;
-			case NPC_FIREBREATH:
-			case NPC_ICEBREATH:
-			case NPC_THUNDERBREATH:
-			case NPC_ACIDBREATH:
-			case NPC_DARKNESSBREATH:
-				hitrate *= 2;
-				break;
-			case KN_PIERCE:
-			case ML_PIERCE:
+			case SK_KN_PIERCE:
 				hitrate += hitrate * 5 * skill_lv / 100;
 				break;
-			case RK_SONICWAVE:
+			case SK_KN_SONICWAVE:
 				hitrate += hitrate * 3 * skill_lv / 100; // !TODO: Confirm the hitrate bonus
-				break;
-			case MC_CARTREVOLUTION:
-			case GN_CART_TORNADO:
-				if (sd && pc_checkskill(sd, GN_REMODELING_CART))
-					hitrate += pc_checkskill(sd, GN_REMODELING_CART) * 4;
-				break;
-			case LG_BANISHINGPOINT:
-				hitrate += 3 * skill_lv;
-				break;
-			case GC_VENOMPRESSURE:
-				hitrate += 10 + 4 * skill_lv;
-				break;
-			case SC_FATALMENACE:
-				if (skill_lv < 6)
-					hitrate -= 35 - 5 * skill_lv;
-				else if (skill_lv > 6)
-					hitrate += 5 * skill_lv - 30;
-				break;
-			case RL_SLUGSHOT:
-				{
-					int8 dist = distance_bl(src, target);
-					if (dist > 3) {
-						// Reduce n hitrate for each cell after initial 3 cells. Different each level
-						// -10:-9:-8:-7:-6
-						dist -= 3;
-						hitrate -= ((11 - skill_lv) * dist);
-					}
-				}
 				break;
 		}
 	} else if (sd && wd->type&DMG_MULTI_HIT && wd->div_ == 2) // +1 hit per level of Double Attack on a successful double attack (making sure other multi attack skills do not trigger this) [helvetica]
-		hitrate += (pc_checkskill(sd,TF_DOUBLE) *2);
+		hitrate += (pc_checkskill(sd,SK_AS_DOUBLEATTACK) *2);
 
 	if (sd) {
 		int skill = 0;
-
-		// Weaponry Research hidden bonus
-		if ((skill = pc_checkskill(sd,BS_WEAPONRESEARCH)) > 0)
-			hitrate += hitrate * ( 2 * skill ) / 100;
-
-		if( (sd->status.weapon == W_1HSWORD || sd->status.weapon == W_DAGGER) &&
-			(skill = pc_checkskill(sd, GN_TRAINING_SWORD))>0 )
-			hitrate += 3 * skill;
 	}
 
 	if (sc) {
@@ -2515,7 +2383,7 @@ static bool attack_ignores_def(struct Damage* wd, struct block_list *src, struct
 
 	if (sc && sc->data[SC_FUSION])
 		return true;
-	else if (skill_id != NPC_GRANDDARKNESS)
+	else if (true)
 	{	//Ignore Defense?
 		if (sd && (sd->right_weapon.ignore_def_ele & (1<<tstatus->def_ele) || sd->right_weapon.ignore_def_ele & (1<<ELE_ALL) ||
 			sd->right_weapon.ignore_def_race & (1<<tstatus->race) || sd->right_weapon.ignore_def_race & (1<<RC_ALL) ||
@@ -2533,7 +2401,7 @@ static bool attack_ignores_def(struct Damage* wd, struct block_list *src, struct
 			} else if (weapon_position == EQI_HAND_L)
 				return true;
 		}
-	} else if (skill_id == RK_WINDCUTTER && sd && sd->status.weapon == W_2HSWORD)
+	} else if (skill_id == SK_KN_WINDCUTTER && sd && sd->status.weapon == W_2HSWORD)
 		return true;
 
 	return nk[NK_IGNOREDEFENSE] != 0;
@@ -2562,11 +2430,9 @@ static void battle_calc_element_damage(struct Damage* wd, struct block_list *src
 		int right_element = EquipmentAttackCalculator::battle_get_weapon_element(wd, src, target, skill_id, skill_lv, EQI_HAND_R, true);
 
 		switch (skill_id) {
-			case SN_ZEPHYR_SNIPING:
-			case HT_HURRICANEFURY:
-			case PA_SACRIFICE:
-			case RK_DRAGONBREATH:
-			case NC_SELFDESTRUCTION:
+			case SK_RA_ZEPHYRSNIPING:
+			case SK_HT_LIVINGTORNADO:
+			case SK_KN_RECKONING:
 				wd->damage = battle_attr_fix(src, target, wd->damage, right_element, tstatus->def_ele, tstatus->ele_lv);
 				if (EquipmentAttackCalculator::is_attack_left_handed(src, skill_id))
 					wd->damage2 = battle_attr_fix(src, target, wd->damage2, left_element, tstatus->def_ele, tstatus->ele_lv);
@@ -2586,19 +2452,6 @@ static void battle_calc_element_damage(struct Damage* wd, struct block_list *src
 				break;
 		}
 
-		// Forced to neutral skills [helvetica]
-		// Skills forced to neutral gain benefits from weapon element but final damage is considered "neutral" and resistances are applied again
-		switch (skill_id) {
-			case MC_CARTREVOLUTION:
-			case SR_FALLENEMPIRE:
-			case SR_TIGERCANNON:
-			case SR_CRESCENTELBOW_AUTOSPELL:
-			case SR_GATEOFHELL:
-				wd->damage = battle_attr_fix(src, target, wd->damage, ELE_NEUTRAL, tstatus->def_ele, tstatus->ele_lv);
-				if (EquipmentAttackCalculator::is_attack_left_handed(src, skill_id))
-					wd->damage2 = battle_attr_fix(src, target, wd->damage2, ELE_NEUTRAL, tstatus->def_ele, tstatus->ele_lv);
-				break;
-		}
 
 #ifdef RENEWAL
 		if (sd == nullptr) { // Only monsters have a single ATK for element, in pre-renewal we also apply element to entire ATK on players [helvetica]
@@ -2658,7 +2511,7 @@ static void battle_apply_div_fix(struct Damage* d, uint16 skill_id)
 	if(d->damage) {
 		DAMAGE_DIV_FIX(d->damage, d->div_);
 		//Min damage
-		if(d->damage < d->div_ && (skill_id == SU_LUNATICCARROTBEAT || skill_id == SU_LUNATICCARROTBEAT2 || skill_id == SU_CN_METEOR || skill_id == SU_CN_METEOR2 || (battle_config.skill_min_damage&d->flag)))
+		if(d->damage < d->div_ && ((battle_config.skill_min_damage&d->flag)))
 			d->damage = d->div_;
 	} else if (d->div_ < 0) {
 		d->div_ *= -1;
@@ -2685,25 +2538,16 @@ static void battle_calc_multi_attack(struct Damage* wd, struct block_list *src,s
 		if (is_attack_right_handed(src, skill_id) 
 			&& EquipmentAttackCalculator::is_attack_left_handed(src, skill_id)
 			&& sd->weapontype1 != W_KATAR) {
-			if( ( ( skill_lv = (pc_checkskill(sd,TF_DOUBLE)) ) > 0 )) // Will fail bare-handed
+			if( ( ( skill_lv = (pc_checkskill(sd,SK_AS_DOUBLEATTACK)) ) > 0 )) // Will fail bare-handed
 			{	//Success chance is not added, the higher one is used [Skotlex]
 				int max_rate = 0;
 				max_rate = max(10 * skill_lv, sd->bonus.double_rate);
 				if( rnd()%100 < max_rate ) {
-					wd->div_ = skill_get_num(TF_DOUBLE,skill_lv?skill_lv:1);
+					wd->div_ = skill_get_num(SK_AS_DOUBLEATTACK,skill_lv?skill_lv:1);
 					wd->type = DMG_MULTI_HIT;
 				}
 			}
 		
-		}
-		else if( ((sd->weapontype1 == W_REVOLVER && (skill_lv = pc_checkskill(sd,GS_CHAINACTION)) > 0) //Normal Chain Action effect
-			|| (sc && sc->count && sc->data[SC_E_CHAIN] && (skill_lv = sc->data[SC_E_CHAIN]->val1) > 0)) //Chain Action of ETERNAL_CHAIN
-			&& rnd()%100 < 5*skill_lv ) //Success rate
-		{
-			wd->div_ = skill_get_num(GS_CHAINACTION,skill_lv);
-			wd->type = DMG_MULTI_HIT;
-
-			sc_start(src,src,SC_QD_SHOT_READY,100,target->id,skill_get_time(RL_QD_SHOT,1));
 		}
 		else if(sc && sc->data[SC_FEARBREEZE] && sd->weapontype1==W_BOW
 			&& (i = sd->equip_index[EQI_AMMO]) >= 0 && sd->inventory_data[i] && sd->inventory.u.items_inventory[i].amount > 1)
@@ -2720,30 +2564,14 @@ static void battle_calc_multi_attack(struct Damage* wd, struct block_list *src,s
 	}
 
 	switch (skill_id) {
-		case SC_FATALMENACE:
-			if (sd && sd->weapontype1 == W_DAGGER)
-				wd->div_++;
-			break;
-		case SR_RIDEINLIGHTNING:
-			wd->div_ = (sd ? max(1, sd->spiritball_old) : 1);
-			break;
-		case RL_QD_SHOT:
-			wd->div_ = 1 + (sd ? sd->status.job_level : 1) / 20 + (tsc && tsc->data[SC_C_MARKER] ? 2 : 0);
-			break;
-		case KO_JYUMONJIKIRI:
-			if( tsc && tsc->data[SC_JYUMONJIKIRI] )
-				wd->div_ = wd->div_ * -1;// needs more info
-			break;
-#ifdef RENEWAL
-		case AS_POISONREACT:
-			skill_lv = pc_checkskill(sd, TF_DOUBLE);
+		case SK_TF_POISONREACT:
+			skill_lv = pc_checkskill(sd, SK_AS_DOUBLEATTACK);
 			if (skill_lv > 0) {
 				if(rnd()%100 < (7 * skill_lv * 2)) {
 					wd->div_++;
 				}
 			}
 		break;
-#endif
 	}
 }
 
@@ -2767,9 +2595,9 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 	int i;
 
 	//Skill damage modifiers that stack linearly
-	if(sc && skill_id != PA_SACRIFICE && skill_id != HT_HURRICANEFURY && skill_id != SN_ZEPHYR_SNIPING) {
+	if(sc && skill_id != SK_KN_RECKONING && skill_id != SK_HT_LIVINGTORNADO && skill_id != SK_RA_ZEPHYRSNIPING) {
 
-		if( skill_id == CR_SHIELDCHARGE || skill_id == CR_SHIELDBOOMERANG || skill_id == PA_SHIELDCHAIN || skill_id == PA_SHIELDSLAM ) { //Refine bonus applies after cards and elements.
+		if( skill_id == SK_CR_SMITE || skill_id == SK_CR_SHIELDBOOMERANG || skill_id == SK_PA_RAPIDSMITING || skill_id == SK_PA_SHIELDSLAM ) { //Refine bonus applies after cards and elements.
 			short index = sd->equip_index[EQI_HAND_L];
 
 			if( index >= 0 && sd->inventory_data[index] && sd->inventory_data[index]->type == IT_ARMOR )
@@ -2790,8 +2618,8 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		if (sc->data[SC_CONCENTRATION]){
 			skillratio += sc->data[SC_CONCENTRATION]->val2;
 		}
-		if (pc_checkskill(sd,LK_TWOHAND) && sd->status.weapon == W_2HSWORD){
-			skillratio += pc_checkskill(sd,LK_TWOHAND)*10;
+		if (pc_checkskill(sd,SK_CM_TWOHAND) && sd->status.weapon == W_2HSWORD){
+			skillratio += pc_checkskill(sd,SK_CM_TWOHAND)*10;
 		}
 		if (!skill_id) {
 			if (sc->data[SC_CRUSHSTRIKE]) {
@@ -2815,145 +2643,136 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 	}
 
 	switch(skill_id) {
-		case SM_BASH:
-		case SM_MAGNUM:
-		case LK_HEADCRUSH:
-		case LK_JOINTBEAT:
-		case KN_SPEARSTAB:
+		case SK_SM_BASH:
+		case SK_SM_MAGNUM:
+		case SK_SM_TRAUMATIC_STRIKE:
+		case SK_SM_LIGHTNING_STRIKE:
+		case SK_SM_SPEARSTAB:
 			skillratio += SwordsmanSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
-		case TF_THROWSTONE:
-		case TF_POISON:
-		case TF_SNATCH:
-		case TF_SANDATTACK:
-		case AS_VENOMKNIFE:
-		case AS_POISONREACT:
+		case SK_TF_THROWSTONE:
+		case SK_TF_POISONSLASH:
+		case SK_TF_SNATCH:
+		case SK_TF_SANDATTACK:
+		case SK_TF_VENOMKNIFE:
+		case SK_TF_POISONREACT:
 			skillratio += ThiefSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv);
 			break;
-		case MC_CARTQUAKE:
-		case MC_MAMMONITE:
-		case MC_CARTREVOLUTION:
-		case MC_CARTCYCLONE:
+		case SK_MC_CARTQUAKE:
+		case SK_MC_MAMMONITE:
+		case SK_MC_CARTCYCLONE:
 			skillratio += MerchntSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, sd->status.zeny);
 			break;
-		case AC_SHOWER:
-		case HT_PHANTASMIC:
-		case AC_DOUBLE:
-		case HT_POWER:
-		case RK_STORMBLAST:
-		case AC_TRANQUILIZING:
-		case AC_PARALIZING:
+		case SK_AC_ARROWSHOWER:
+		case SK_AC_ARROWRAIN:
+		case SK_AC_DOUBLESTRAFE:
+		case SK_AC_SPIRITUALSTRAFE:
+		case SK_AC_CHARGEDARROW:
+		case SK_AC_TRANQUILIZINGDART:
+		case SK_AC_PARALIZINGDART:
 			skillratio += ArcherSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv);
 			break;
-		case KN_SPEARBOOMERANG:
-		case KN_BOWLINGBASH:
-		case KN_AUTOCOUNTER:
-		case KN_BRANDISHSPEAR:
-		case KN_PIERCE:
-		case RK_WINDCUTTER:
-		case RK_SONICWAVE:
-		case CR_SHIELDCHARGE:
-		case CR_SHIELDBOOMERANG:
-		case PA_SACRIFICE:
-		case RK_HUNDREDSPEAR:
-		case LK_SPIRALPIERCE:
-		case RK_IGNITIONBREAK:
+		case SK_KN_SPEARCANNON:
+		case SK_KN_BOWLINGBASH:
+		case SK_KN_COUNTERATTACK:
+		case SK_KN_BRANDISHSPEAR:
+		case SK_KN_PIERCE:
+		case SK_KN_WINDCUTTER:
+		case SK_KN_SONICWAVE:
+		case SK_CR_SMITE:
+		case SK_CR_SHIELDBOOMERANG:
+		case SK_KN_RECKONING:
+		case SK_CM_HUNDREDSPEAR:
+		case SK_CM_CLASHINGSPIRAL:
+		case SK_CM_IGNITIONBREAK:
 			skillratio += KnightSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
-		case CR_HOLYCROSS:
-		case CR_GRANDCROSS:
-		case PA_SHIELDCHAIN:
-		case PA_SHIELDSLAM:
+		case SK_CR_HOLYCROSS:
+		case SK_CR_GRANDCROSS:
+		case SK_PA_RAPIDSMITING:
+		case SK_PA_SHIELDSLAM:
 			skillratio += CrusaderSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
-		case RG_RAID:
-		case RG_BACKSTAP:
-		case AS_GRIMTOOTH:
-		case GC_COUNTERSLASH:
-		case NJ_KIRIKAGE:
-		case RA_AIMEDBOLT:
-		case SC_TRIANGLESHOT:
-		case RA_ARROWSTORM:
-		case LG_MOONSLASHER:
+		case SK_AS_PHANTOMMENACE:
+		case SK_RG_BACKSTAB:
+		case SK_AS_GRIMTOOTH:
+		case SK_RG_HACKANDSLASH:
+		case SK_RG_SHADYSLASH:
+		case SK_RG_QUICKSHOT:
+		case SK_RG_TRIANGLESHOT:
+		case SK_RG_ARROWSTORM:
+		case SK_ST_FATALMENACE:
 			skillratio += RogueSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, sd->sc.data[SC_HIDING]);
 			break;
-		case AS_SONICBLOW:
-		case GC_ROLLINGCUTTER:
-		case SO_CLOUD_KILL:
-		case GC_CROSSRIPPERSLASHER:
-		case AS_SPLASHER:
-		case ASC_METEORASSAULT:
-		case NJ_KUNAI:
-		case GC_DARKCROW:
-		case DUMMY_CROSSIMPACT:
-		case GC_CROSSIMPACT:
-		case NJ_SYURIKEN:
-		case ASC_BREAKER:
-		case SO_POISON_BUSTER:
+		case SK_AS_SONICBLOW:
+		case SK_AS_ROLLINGCUTTER:
+		case SK_AS_POISONOUSCLOUD:
+		case SK_AS_CROSSRIPPERSLASHER:
+		case SK_AS_VENOMSPLASHER:
+		case SK_EX_METEORASSAULT:
+		case SK_AS_KUNAI:
+		case SK_EX_DARKCLAW:
+		case SK_EX_DUMMY_CROSSIMPACT:
+		case SK_EX_CROSSIMPACT:
+		case SK_AS_SHURIKEN:
+		case SK_EX_SOULDESTROYER:
+		case SK_EX_POISONBUSTER:
 			if (sc && sc->data[SC_ROLLINGCUTTER])
 				skillratio += AssassinSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, sc->data[SC_ROLLINGCUTTER]->val1);
 			skillratio += AssassinSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, 0);
 			break;
-		case AB_DUPLELIGHT_MELEE:
-		case PR_UNHOLYCROSS:
+		case SK_PR_DUPLELUX_MELEE:
+		case SK_PR_UNHOLYCROSS:
 			skillratio += PriestSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
-		case MC_CARTBRUME:
-		case MC_FIREWORKS:
-		case WS_CARTTERMINATION:
-		case MC_SHRAPNEL:
-		case GN_CARTCANNON:
-		case NC_AXEBOOMERANG:
-		case NC_AXETORNADO:
-		case BS_HAMMERFALL:
-		case WS_HAMMERDOWN_PROTOCOL:
-		case NC_POWERSWING:
-		case GS_SPREADATTACK:
-		case GS_RAPIDSHOWER:
+		case SK_MC_CARTBRUME:
+		case SK_MC_CARTFIREWORKS:
+		case SK_MS_CARTTERMINATION:
+		case SK_BS_CARTSHRAPNEL:
+		case SK_BS_CARTCANNON:
+		case SK_BS_AXEBOOMERANG:
+		case SK_BS_AXETORNADO:
+		case SK_BS_HAMMERFALL:
+		case SK_MS_HAMMERDOWNPROTOCOL:
+		case SK_MS_POWERSWING:
+		case SK_BS_CROWDCONTROLSHOT:
+		case SK_MS_TRIGGERHAPPYCART:
 			skillratio += BlacksmithSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
-		case BA_MUSICALSTRIKE:
-		case WM_GREAT_ECHO:
-		case CG_ARROWVULCAN:
-		case WM_SEVERE_RAINSTORM:
-		case WM_SEVERE_RAINSTORM_MELEE:
+		case SK_BA_MELODYSTRIKE:
+		case SK_BA_GREATECHO:
+		case SK_CL_ARROWVULCAN:
+		case SK_CL_SEVERERAINSTORM:
+		case SK_CL_SEVERERAINSTORM_MELEE:
 			skillratio += BardSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
-		case MER_CRASH:
-			skillratio += 10 * skill_lv;
-			break;
-		case ITM_TOMAHAWK:
-		case SN_ZEPHYR_SNIPING:
-		case HT_HURRICANEFURY:
-		case HT_WARG_1:
-		case HT_FALCON_1:
-		case SN_SHARPSHOOTING:
+		case SK_HT_MAGICTOMAHAWK:
+		case SK_RA_ZEPHYRSNIPING:
+		case SK_HT_LIVINGTORNADO:
+		case SK_HT_SLASH:
+		case SK_HT_BLITZBEAT:
+		case SK_ST_SHARPSHOOTING:
 			skillratio += HunterSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
-		case HM_BASILISK_1:
-		case HM_BASILISK_2:
-		case AM_ACIDTERROR:
-		case GN_SPORE_EXPLOSION:
-		case CR_ACIDDEMONSTRATION:
+		case SK_AM_BASILISK1:
+		case SK_AM_BASILISK2:
+		case SK_AM_ACIDTERROR:
+		case SK_AM_BOMB:
+		case SK_CR_ACIDBOMB:
 			skillratio += AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, tstatus);
 			break;
-		case MO_INVESTIGATE:
-		case MO_FINGEROFFENSIVE:
-		case SR_EARTHSHAKER:
-		case MO_KI_BLAST:
-		case MO_CHAINCOMBO:
-		case MO_TRIPLEATTACK:
-		case SR_WINDMILL:
-		case CH_PALMSTRIKE:
-		case MO_BALKYOUNG:
-		case CH_TIGERFIST:
-		case MO_COMBOFINISH:
-		case SR_DRAGONCOMBO:
-		case GS_PIERCINGSHOT:
-		case NJ_ZENYNAGE:
-		case NC_BOOSTKNUCKLE:
-		case GS_FULLBUSTER:
-		case MO_EXTREMITYFIST:
+		case SK_MO_OCCULTIMPACT:
+		case SK_MO_TRHOWSPIRITSPHERE:
+		case SK_MO_KIBLAST:
+		case SK_MO_CIRCULARFISTS:
+		case SK_MO_PALMSTRIKE:
+		case SK_MO_FALINGFIST:
+		case SK_SH_GUILLOTINEFISTS:
+		case SK_MO_TIGERFIST:
+		case SK_SH_GATEOFHELL:
+		case SK_SH_DRAGONDARKNESSFLAME:
+		case SK_MO_TRIPLEARMCANNON:
+		case SK_SH_ASURASTRIKE:
 			{
 				bool revealed_hidden_enemy = false;
 				if (tsc && ((tsc->option&(OPTION_HIDE|OPTION_CLOAK|OPTION_CHASEWALK|OPTION_INVISIBLE)) || tsc->data[SC_CAMOUFLAGE])) {
@@ -2961,541 +2780,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 				}
 				skillratio += MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, revealed_hidden_enemy, sd, sc);
 			}
-			break;
-		case ML_BRANDISH:
-			{
-				int ratio = 100 + 20 * skill_lv;
-
-				skillratio += -100 + ratio;
-				if(skill_lv > 3 && wd->miscflag == 0)
-					skillratio += ratio / 2;
-				if(skill_lv > 6 && wd->miscflag == 0)
-					skillratio += ratio / 4;
-				if(skill_lv > 9 && wd->miscflag == 0)
-					skillratio += ratio / 8;
-				if(skill_lv > 6 && wd->miscflag == 1)
-					skillratio += ratio / 2;
-				if(skill_lv > 9 && wd->miscflag == 1)
-					skillratio += ratio / 4;
-				if(skill_lv > 9 && wd->miscflag == 2)
-					skillratio += ratio / 2;
-			}
-			break;
-		case NPC_PIERCINGATT:
-			skillratio += -25; //75% base damage
-			break;
-		case NPC_COMBOATTACK:
-			skillratio += 25 * skill_lv;
-			break;
-		case NPC_RANDOMATTACK:
-		case NPC_WATERATTACK:
-		case NPC_GROUNDATTACK:
-		case NPC_FIREATTACK:
-		case NPC_WINDATTACK:
-		case NPC_POISONATTACK:
-		case NPC_HOLYATTACK:
-		case NPC_DARKNESSATTACK:
-		case NPC_UNDEADATTACK:
-		case NPC_TELEKINESISATTACK:
-		case NPC_BLOODDRAIN:
-		case NPC_ACIDBREATH:
-		case NPC_DARKNESSBREATH:
-		case NPC_FIREBREATH:
-		case NPC_ICEBREATH:
-		case NPC_THUNDERBREATH:
-		case NPC_HELLJUDGEMENT:
-		case NPC_PULSESTRIKE:
-			
-			skillratio += 100 * (skill_lv - 1);
-			break;
-		case NPC_REVERBERATION_ATK:
-			skillratio += 400 + 200 * skill_lv;
-			break;
-		case RG_INTIMIDATE:
-			skillratio += 30 * skill_lv;
-			break;
-		case NPC_DARKCROSS:
-#ifdef RENEWAL
-			if(sd && sd->status.weapon == W_2HSPEAR)
-				skillratio += 70 * skill_lv;
-			else
-#endif
-				skillratio += 35 * skill_lv;
-			break;
-		case CH_CHAINCRUSH:
-#ifdef RENEWAL
-			skillratio += -100 + 200 * skill_lv;
-			RE_LVL_DMOD(100);
-#else
-			skillratio += 300 + 100 * skill_lv;
-#endif
-			if (sc->data[SC_GT_ENERGYGAIN])
-				skillratio += skillratio * 50 / 100;
-			break;
-		case GN_FIRE_EXPANSION_ACID:
-		case TK_DOWNKICK:
-		case TK_STORMKICK:
-			skillratio += 60 + 20 * skill_lv;
-			break;
-		case TK_TURNKICK:
-		case TK_COUNTER:
-			skillratio += 90 + 30 * skill_lv;
-			break;
-		case TK_JUMPKICK:
-			//Different damage formulas depending on damage trigger
-			if (wd->miscflag) {
-				skillratio += -100 + 4 * status_get_lv(src); //Running formula [4%*baselevel]
-				if (sc && sc->data[SC_SPURT]) //Spurt formula [8%*baselevel]
-					skillratio *= 2;
-			}
-			else
-				skillratio += -70 + 10 * skill_lv;
-			break;
-		case GS_TRIPLEACTION:
-			skillratio += 50 * skill_lv;
-			break;
-		case GS_BULLSEYE:
-			//Only works well against brute/demihumans non bosses.
-			if((tstatus->race == RC_BRUTE || tstatus->race == RC_DEMIHUMAN || tstatus->race == RC_PLAYER_HUMAN || tstatus->race == RC_PLAYER_DORAM) && !status_has_mode(tstatus,MD_STATUSIMMUNE))
-			skillratio += 400;
-			break;
-		case GS_DESPERADO:
-			skillratio += 50 * (skill_lv - 1);
-			if (sc && sc->data[SC_FALLEN_ANGEL])
-				skillratio *= 2;
-			break;
-#ifdef RENEWAL
-		case GS_GROUNDDRIFT:
-			skillratio += 100 + 20 * skill_lv;
-			break;
-#endif
-		case NJ_TATAMIGAESHI:
-			skillratio += 10 * skill_lv;
-#ifdef RENEWAL
-			skillratio *= 2;
-#endif
-			break;
-		case NJ_KASUMIKIRI:
-#ifdef RENEWAL
-			skillratio += 20 * skill_lv;
-#else
-			skillratio += 10 * skill_lv;
-#endif
-			break;
-		case KN_CHARGEATK: { // +100% every 3 cells of distance but hard-limited to 500%
-				int k = (wd->miscflag-1)/3;
-				if (k < 0)
-					k = 0;
-				else if (k > 4)
-					k = 4;
-				skillratio += 100 * k;
-			}
-			break;
-		case NPC_VAMPIRE_GIFT:
-			skillratio += ((skill_lv - 1) % 5 + 1) * 100;
-			break;
-		case NPC_IGNITIONBREAK:
-			// 3x3 cell Damage   = 1000  1500  2000  2500  3000 %
-			// 7x7 cell Damage   = 750   1250  1750  2250  2750 %
-			// 11x11 cell Damage = 500   1000  1500  2000  2500 %
-			i = distance_bl(src,target);
-			if (i < 2)
-				skillratio += -100 + 500 * (skill_lv + 1);
-			else if (i < 4)
-				skillratio += -100 + 250 + 500 * skill_lv;
-			else
-				skillratio += -100 + 500 * skill_lv;
-			break;
-		// case NPC_PHANTOMTHRUST:	// ATK = 100% for all level
-		case GC_VENOMPRESSURE:
-			skillratio += 900;
-			break;
-		case GC_PHANTOMMENACE:
-			skillratio += 200;
-			break;
-		case NPC_ARROWSTORM:
-			skillratio += 900 + 80 * skill_lv;
-			RE_LVL_DMOD(100);
-			break;
-		case RA_CLUSTERBOMB:
-			skillratio += 100 + 100 * skill_lv;
-			break;
-		case RA_WUGDASH:// ATK 300%
-			skillratio += 200;
-			break;
-		case RA_WUGBITE:
-			skillratio += 300 + 200 * skill_lv;
-			if (skill_lv == 5)
-				skillratio += 100;
-			break;
-		case RA_SENSITIVEKEEN:
-			skillratio += 50 * skill_lv;
-			break;
-		case NC_PILEBUNKER:
-			skillratio += 200 + 100 * skill_lv + status_get_str(src);
-			RE_LVL_DMOD(100);
-			break;
-		case NC_VULCANARM:
-			skillratio += -100 + 70 * skill_lv + status_get_dex(src);
-			RE_LVL_DMOD(120);
-			break;
-		case NC_FLAMELAUNCHER:
-		case NC_COLDSLOWER:
-			skillratio += 200 + 300 * skill_lv;
-			RE_LVL_DMOD(150);
-			break;
-		case NC_ARMSCANNON:
-			switch( tstatus->size ) {
-				case SZ_SMALL: skillratio += 200 + 400 * skill_lv; break;// Small
-				case SZ_MEDIUM: skillratio += 200 + 350 * skill_lv; break;// Medium
-				case SZ_BIG: skillratio += 200 + 300 * skill_lv; break;// Large
-			}
-			RE_LVL_DMOD(120);
-			break;
-		case NC_MAGMA_ERUPTION: // 'Slam' damage
-			skillratio += 350 + 50 * skill_lv;
-			break;
-		case SC_FATALMENACE:
-			skillratio += 100 * skill_lv;
-			RE_LVL_DMOD(100);
-			break;
-		case SC_FEINTBOMB:
-			skillratio += -100 + (skill_lv + 1) * status_get_dex(src) / 2 * ((sd) ? sd->status.job_level / 10 : 1);
-			RE_LVL_DMOD(120);
-			break;
-		case LG_CANNONSPEAR:
-			skillratio += -100 + skill_lv * (50 + status_get_str(src));
-			RE_LVL_DMOD(100);
-			break;
-		case LG_BANISHINGPOINT:
-			skillratio += -100 + (50 * skill_lv) + ((sd) ? pc_checkskill(sd,SM_BASH) * 30 : 0);
-			RE_LVL_DMOD(100);
-			break;
-		case LG_SHIELDPRESS:
-			skillratio += -100 + 200 * skill_lv + sstatus->str;
-			if (sd) {
-				short index = sd->equip_index[EQI_HAND_L];
-
-				if (index >= 0 && sd->inventory_data[index] && sd->inventory_data[index]->type == IT_ARMOR)
-					skillratio += sd->inventory_data[index]->weight / 10;
-			}
-			RE_LVL_DMOD(100);
-			break;
-		case LG_PINPOINTATTACK:
-			skillratio += -100 + 100 * skill_lv + 5 * status_get_agi(src);
-			RE_LVL_DMOD(120);
-			break;
-		case LG_RAGEBURST:
-			if (sd && sd->spiritball_old)
-				skillratio += -100 + 200 * sd->spiritball_old + (status_get_max_hp(src) - status_get_hp(src)) / 100;
-			else
-				skillratio += 2900 + (status_get_max_hp(src) - status_get_hp(src));
-			RE_LVL_DMOD(100);
-			break;
-		case LG_SHIELDSPELL:
-			if (sd && skill_lv == 1) { // [(Casters Base Level x 4) + (Shield DEF x 10) + (Casters VIT x 2)] %
-				short index = sd->equip_index[EQI_HAND_L];
-
-				skillratio += -100 + status_get_lv(src) * 4 + status_get_vit(src) * 2;
-				if (index >= 0 && sd->inventory_data[index] && sd->inventory_data[index]->type == IT_ARMOR)
-					skillratio += sd->inventory_data[index]->def * 10;
-			} else
-				skillratio = 0; // Prevent damage since level 2 is MATK. [Aleos]
-			break;
-		case LG_OVERBRAND:
-			skillratio += -100 + 400 * skill_lv + ((sd) ? pc_checkskill(sd,CR_SPEARQUICKEN) * 50 : 0);
-			RE_LVL_DMOD(100);
-			break;
-		case LG_OVERBRAND_BRANDISH:
-			skillratio += -100 + 300 * skill_lv + status_get_str(src) + status_get_dex(src);
-			RE_LVL_DMOD(100);
-			break;
-		case LG_OVERBRAND_PLUSATK: // Only Piercing and Swing damage get RE_LVL_DMOD bonus damage
-			skillratio += -100 + 200 * skill_lv + rnd()%90 + 10;
-			break;
-		case LG_EARTHDRIVE:
-			if (sd) {
-				short index = sd->equip_index[EQI_HAND_L];
-
-				if (index >= 0 && sd->inventory_data[index] && sd->inventory_data[index]->type == IT_ARMOR)
-					skillratio += -100 + (skill_lv + 1) * sd->inventory_data[index]->weight / 10;
-			}
-			RE_LVL_DMOD(100);
-			break;
-		case LG_HESPERUSLIT:
-			if (sc) {
-				if (sc->data[SC_INSPIRATION])
-					skillratio += 1100;
-				if (sc->data[SC_BANDING]) {
-					skillratio += -100 + 120 * skill_lv + 200 * sc->data[SC_BANDING]->val2;
-					if (sc->data[SC_BANDING]->val2 > 5)
-						skillratio = skillratio * 150 / 100;
-				}
-				RE_LVL_DMOD(100);
-			}
-			break;
-		case SR_FALLENEMPIRE:
-			// ATK [(Skill Level x 250 + 100) x Caster Base Level / 150] %
-			skillratio += -100 + 250 * skill_lv + 100;
-			RE_LVL_DMOD(150);
- 			break;
-		case SR_TIGERCANNON:
-			{
-				unsigned int hp = sstatus->max_hp * (12 + (skill_lv * 2)) / 100,
-							 sp = sstatus->max_sp * (5 + skill_lv) / 100;
-
-				if (wd->miscflag&8)
-					// Base_Damage = [((Caster consumed HP + SP) / 2) x Caster Base Level / 100] %
-					skillratio += -100 + (hp + sp) / 2;
-				else
-					// Base_Damage = [((Caster consumed HP + SP) / 4) x Caster Base Level / 100] %
-					skillratio += -100 + (hp + sp) / 4;
-				RE_LVL_DMOD(100);
-			}
-			if (sc->data[SC_GT_REVITALIZE])
-				skillratio += skillratio * 30 / 100;
-			break;
-		case SR_SKYNETBLOW:
-			//ATK [{(Skill Level x 80) + (Caster AGI)} x Caster Base Level / 100] %
-			skillratio += -100 + 80 * skill_lv + sstatus->agi;
-			RE_LVL_DMOD(100);
-			break;
-
-		case SR_RAMPAGEBLASTER:
-			if (tsc && tsc->data[SC_EARTHSHAKER]) {
-				skillratio += 1400 + 550 * skill_lv;
-				RE_LVL_DMOD(120);
-			} else {
-				skillratio += 900 + 350 * skill_lv;
-				RE_LVL_DMOD(150);
-			}
-			if (sc->data[SC_GT_CHANGE])
-				skillratio += skillratio * 30 / 100;
-			break;
-		case SR_GENTLETOUCH_QUIET:
-			skillratio += -100 + 100 * skill_lv + status_get_dex(src);
-			RE_LVL_DMOD(100);
-			break;
-		case SR_HOWLINGOFLION:
-			skillratio += -100 + 300 * skill_lv;
-			RE_LVL_DMOD(150);
-			break;
-		case SR_RIDEINLIGHTNING: // ATK [{(Skill Level x 40) + Additional Damage} x Caster Base Level / 100] %
-			skillratio += -100 + 40 * skill_lv;
-			if (sd && sd->status.weapon == W_KNUCKLE)
-				skillratio += skillratio * 25 / 100;
-			RE_LVL_DMOD(100);
-			break;
-		case GN_CART_TORNADO: { // ATK [( Skill Level x 100 ) + ( Cart Weight / ( 150 - Caster Base STR ))] + ( Cart Remodeling Skill Level x 50 )] %
-				skillratio += -100 + 100 * skill_lv;
-				if(sd && sd->cart_weight)
-					skillratio += sd->cart_weight / 10 / (150 - min(sd->status.str,120)) + pc_checkskill(sd,GN_REMODELING_CART) * 50;
-			}
-			break;
-		case GN_SLINGITEM_RANGEMELEEATK:
-			if( sd ) {
-				switch( sd->itemid ) {
-					case ITEMID_APPLE_BOMB:
-						skillratio += 200 + status_get_str(src) + status_get_dex(src);
-						break;
-					case ITEMID_COCONUT_BOMB:
-					case ITEMID_PINEAPPLE_BOMB:
-						skillratio += 700 + status_get_str(src) + status_get_dex(src);
-						break;
-					case ITEMID_MELON_BOMB:
-						skillratio += 400 + status_get_str(src) + status_get_dex(src);
-						break;
-					case ITEMID_BANANA_BOMB:
-						skillratio += 777 + status_get_str(src) + status_get_dex(src);
-						break;
-					case ITEMID_BLACK_LUMP:
-						skillratio += -100 + (status_get_str(src) + status_get_agi(src) + status_get_dex(src)) / 3;
-						break;
-					case ITEMID_BLACK_HARD_LUMP:
-						skillratio += -100 + (status_get_str(src) + status_get_agi(src) + status_get_dex(src)) / 2;
-						break;
-					case ITEMID_VERY_HARD_LUMP:
-						skillratio += -100 + status_get_str(src) + status_get_agi(src) + status_get_dex(src);
-						break;
-				}
-				RE_LVL_DMOD(100);
-			}
-			break;
-		// Physical Elemantal Spirits Attack Skills
-		case EL_CIRCLE_OF_FIRE:
-		case EL_STONE_RAIN:
-			skillratio += 200;
-			break;
-		case EL_FIRE_WAVE_ATK:
-			skillratio += 500;
-			break;
-		case EL_TIDAL_WEAPON:
-			skillratio += 1400;
-			break;
-		case EL_TYPOON_MIS:
-			skillratio += 900;
-			break;
-		case KO_JYUMONJIKIRI:
-			skillratio += -100 + 200 * skill_lv;
-			RE_LVL_DMOD(120);
-			if(tsc && tsc->data[SC_JYUMONJIKIRI])
-				skillratio += skill_lv * status_get_lv(src);
-			if (sc && sc->data[SC_KAGEMUSYA])
-				skillratio += skillratio * sc->data[SC_KAGEMUSYA]->val2 / 100;
-			break;
-		case KO_SETSUDAN:
-			skillratio += 100 * (skill_lv - 1);
-			RE_LVL_DMOD(100);
-			if (tsc) {
-				struct status_change_entry *sce;
-
-				if ((sce = tsc->data[SC_SPIRIT]) || (sce = tsc->data[SC_SOULGOLEM]) || (sce = tsc->data[SC_SOULSHADOW]) || (sce = tsc->data[SC_SOULFALCON]) || (sce = tsc->data[SC_SOULFAIRY])) // Bonus damage added when target is soul linked.
-					skillratio += 200 * sce->val1;
-			}
-			break;
-		case KO_BAKURETSU:
-			skillratio += -100 + (sd ? pc_checkskill(sd,NJ_TOBIDOUGU) : 1) * (50 + sstatus->dex / 4) * skill_lv * 4 / 10;
-			RE_LVL_DMOD(120);
-			skillratio += 10 * (sd ? sd->status.job_level : 1);
-			if (sc && sc->data[SC_KAGEMUSYA])
-				skillratio += skillratio * sc->data[SC_KAGEMUSYA]->val2 / 100;
-			break;
-		case KO_MAKIBISHI:
-			skillratio += -100 + 20 * skill_lv;
-			break;
-		case MH_NEEDLE_OF_PARALYZE:
-			skillratio += -100 + 300 * skill_lv * status_get_lv(src) / 100 + sstatus->dex; // !TODO: Confirm Base Level and DEX bonus
-			break;
-		case MH_STAHL_HORN:
-			skillratio += 900 + 100 * skill_lv * status_get_lv(src) / 150 + sstatus->vit; // !TODO: Confirm VIT bonus
-			break;
-		case MH_LAVA_SLIDE:
-			skillratio += -100 + 70 * skill_lv;
-			break;
-		case MH_SONIC_CRAW:
-			skillratio += -100 + 60 * skill_lv * status_get_lv(src) / 150;
-			break;
-		case MH_SILVERVEIN_RUSH:
-			skillratio += -100 + 250 * skill_lv * status_get_lv(src) / 100 + sstatus->str; // !TODO: Confirm STR bonus
-			break;
-		case MH_MIDNIGHT_FRENZY:
-			skillratio += -100 + 350 * skill_lv * status_get_lv(src) / 150 + sstatus->str; // !TODO: Confirm STR bonus
-			break;
-		case MH_MAGMA_FLOW:
-			skillratio += -100 + (100 * skill_lv + 3 * status_get_lv(src)) * status_get_lv(src) / 120;
-			break;
-		case RL_MASS_SPIRAL:
-			skillratio += -100 + 200 * skill_lv;
-			break;
-		case RL_FIREDANCE:
-			skillratio += 100 + 100 * skill_lv;
-			skillratio += (sd ? pc_checkskill(sd, GS_DESPERADO) * 20 : 0);
-			RE_LVL_DMOD(100);
-			break;
-		case RL_BANISHING_BUSTER:
-			skillratio += -100 + 1000 + 200 * skill_lv;
-			RE_LVL_DMOD(100);
-			break;
-		case RL_S_STORM:
-			skillratio += -100 + 1700 + 200 * skill_lv;
-			break;
-		case RL_SLUGSHOT:
-			if (target->type == BL_MOB)
-				skillratio += -100 + 1200 * skill_lv;
-			else
-				skillratio += -100 + 2000 * skill_lv;
-			skillratio *= 2 + tstatus->size;
-			break;
-		case RL_D_TAIL:
-			skillratio += -100 + 500 + 200 * skill_lv;
-			if (sd && (wd->miscflag & 8))
-				skillratio *= 2;
-			RE_LVL_DMOD(100);
-			break;
-		case RL_R_TRIP:
-			skillratio += -100 + 350 * skill_lv;
-			RE_LVL_DMOD(100);
-			break;
-		case RL_R_TRIP_PLUSATK:
-			skillratio += -100 + 300 + 300 * skill_lv;
-			break;
-		case RL_H_MINE:
-			if (sd && sd->flicker) // Flicker explosion damage: 500 + 300 * SkillLv
-				skillratio += -100 + 500 + 300 * skill_lv;
-			else // 200 + 200 * SkillLv
-				skillratio += -100 + 200 + 200 * skill_lv;
-			break;
-		case RL_HAMMER_OF_GOD:
-			skillratio += -100 + 100 * skill_lv;
-			if (sd) {
-				if (wd->miscflag & 8)
-					skillratio += 400 * sd->spiritball_old;
-				else
-					skillratio += 150 * sd->spiritball_old;
-			}
-			RE_LVL_DMOD(100);
-			break;
-		case RL_FIRE_RAIN:
-		case RL_AM_BLAST:
-			skillratio += -100 + 3500 + 300 * skill_lv;
-			break;
-		case SU_BITE:
-			skillratio += 100;
-			break;
-		case SU_SCRATCH:
-			skillratio += -50 + 50 * skill_lv;
-			break;
-		case SU_SCAROFTAROU:
-			skillratio += -100 + 100 * skill_lv;
-			if (sd && pc_checkskill(sd, SU_SPIRITOFLIFE))
-				skillratio += skillratio * status_get_hp(src) / status_get_max_hp(src);
-			break;
-		case SU_PICKYPECK:
-		case SU_PICKYPECK_DOUBLE_ATK:
-			skillratio += 100 + 100 * skill_lv;
-			if (status_get_hp(target) < status_get_max_hp(target) >> 1)
-				skillratio *= 2;
-			if (sd && pc_checkskill(sd, SU_SPIRITOFLIFE))
-				skillratio += skillratio * status_get_hp(src) / status_get_max_hp(src);
-			break;
-		case SU_LUNATICCARROTBEAT:
-		case SU_LUNATICCARROTBEAT2:
-			skillratio += 100 + 100 * skill_lv;
-			if (sd && pc_checkskill(sd, SU_SPIRITOFLIFE))
-				skillratio += skillratio * status_get_hp(src) / status_get_max_hp(src);
-			break;
-		case SU_SVG_SPIRIT:
-			skillratio += 150 + 150 * skill_lv;
-			if (sd && pc_checkskill(sd, SU_SPIRITOFLIFE))
-				skillratio += skillratio * status_get_hp(src) / status_get_max_hp(src);
-			break;
-		case SJ_FULLMOONKICK:
-			skillratio += 1000 + 100 * skill_lv;
-			RE_LVL_DMOD(100);
-			if (sc && sc->data[SC_LIGHTOFMOON])
-				skillratio += skillratio * sc->data[SC_LIGHTOFMOON]->val2 / 100;
-			break;
-		case SJ_NEWMOONKICK:
-			skillratio += 600 + 100 * skill_lv;
-			break;
-		case SJ_STAREMPEROR:
-			skillratio += 700 + 200 * skill_lv;
-			break;
-		case SJ_SOLARBURST:
-			skillratio += 900 + 220 * skill_lv;
-			RE_LVL_DMOD(100);
-			if (sc && sc->data[SC_LIGHTOFSUN])
-				skillratio += skillratio * sc->data[SC_LIGHTOFSUN]->val2 / 100;
-			break;
-		case SJ_PROMINENCEKICK:
-				skillratio += 50 + 50 * skill_lv;
-			break;
-		case SJ_FALLINGSTAR_ATK:
-		case SJ_FALLINGSTAR_ATK2:
-			skillratio += 100 * skill_lv;
-			RE_LVL_DMOD(100);
-			if (sc && sc->data[SC_LIGHTOFSTAR])
-				skillratio += skillratio * sc->data[SC_LIGHTOFSTAR]->val2 / 100;
 			break;
 	}
 	return skillratio;
@@ -3516,45 +2800,6 @@ static int64 battle_calc_skill_constant_addition(struct Damage* wd, struct block
 	struct status_data *sstatus = status_get_status_data(src);
 	struct status_data *tstatus = status_get_status_data(target);
 	int64 atk = 0;
-
-	//Constant/misc additions from skills
-	switch (skill_id) {
-		// case MO_EXTREMITYFIST:
-		// 	atk = 250 + 150 * skill_lv;
-		// 	break;
-#ifndef RENEWAL
-		case GS_MAGICALBULLET:
-			if (sstatus->matk_max > sstatus->matk_min)
-				atk = sstatus->matk_min + rnd()%(sstatus->matk_max - sstatus->matk_min);
-			else
-				atk = sstatus->matk_min;
-			break;
-#endif
-#ifdef RENEWAL
-		case HT_FREEZINGTRAP:
-			if(sd)
-				atk = 40 * pc_checkskill(sd, RA_RESEARCHTRAP);
-			break;
-#endif
-		case LG_SHIELDPRESS:
-			if (sd) {
-				int damagevalue = 0;
-				short index = sd->equip_index[EQI_HAND_L];
-
-				if (index >= 0 && sd->inventory_data[index] && sd->inventory_data[index]->type == IT_ARMOR)
-					damagevalue = sstatus->vit * sd->inventory.u.items_inventory[index].refine;
-				atk = damagevalue;
-			}
-			break;
-		case SR_FALLENEMPIRE:
-			// [(Target Size value + Skill Level - 1) x Caster STR] + [(Target current weight x Caster DEX / 120)]
-			atk = ( ((tstatus->size+1)*2 + skill_lv - 1) * sstatus->str);
-			if( tsd && tsd->weight )
-				atk += ( (tsd->weight/10) * sstatus->dex / 120 );
-			else
-				atk += ( status_get_lv(target) * 50 ); //mobs
-			break;
-	}
 	return atk;
 }
 
@@ -3585,7 +2830,7 @@ static void battle_attack_sc_bonus(struct Damage* wd, struct block_list *src, st
 	//The following are applied on top of current damage and are stackable.
 	if (sc) {
 #ifdef RENEWAL
-		if (sc->data[SC_WATK_ELEMENT] && skill_id != ASC_METEORASSAULT)
+		if (sc->data[SC_WATK_ELEMENT] && skill_id != SK_EX_METEORASSAULT)
 			ATK_ADDRATE(wd->weaponAtk, wd->weaponAtk2, sc->data[SC_WATK_ELEMENT]->val2);
 		if (sc->data[SC_MADNESSCANCEL])
 			ATK_ADD(wd->equipAtk, wd->equipAtk2, 100);
@@ -3604,15 +2849,7 @@ static void battle_attack_sc_bonus(struct Damage* wd, struct block_list *src, st
 		if (sc->data[SC_TRUESIGHT])
 			ATK_ADDRATE(wd->damage, wd->damage2, 2 * sc->data[SC_TRUESIGHT]->val1);
 #endif
-		if (sc->data[SC_SPIRIT]) {
-			if (skill_id == AS_SONICBLOW && sc->data[SC_SPIRIT]->val2 == SL_ASSASIN) {
-				ATK_ADDRATE(wd->damage, wd->damage2, map_flag_gvg2(src->m) ? 25 : 100); //+25% dmg on woe/+100% dmg on nonwoe
-				RE_ALLATK_ADDRATE(wd, map_flag_gvg2(src->m) ? 25 : 100); //+25% dmg on woe/+100% dmg on nonwoe
-			} else if (skill_id == CR_SHIELDBOOMERANG && sc->data[SC_SPIRIT]->val2 == SL_CRUSADER) {
-				ATK_ADDRATE(wd->damage, wd->damage2, 100);
-				RE_ALLATK_ADDRATE(wd, 100);
-			}
-		}
+		
 		if (sc->data[SC_GT_CHANGE])
 			ATK_ADDRATE(wd->damage, wd->damage2, sc->data[SC_GT_CHANGE]->val1);
 		if (sc->data[SC_EDP]) {
@@ -3699,13 +2936,6 @@ static void battle_attack_sc_bonus(struct Damage* wd, struct block_list *src, st
 
 		if (sc->data[SC_MIRACLE])
 			anger_id = 2; // Always treat all monsters as star flagged monster when in miracle state
-	}
-
-	if ((wd->flag&(BF_LONG|BF_MAGIC)) == BF_LONG) {
-		if (sd && pc_checkskill(sd, SU_POWEROFLIFE) > 0 && pc_checkskill_summoner(sd, SUMMONER_POWER_LIFE) >= 20) {
-			ATK_ADDRATE(wd->damage, wd->damage2, 20);
-			RE_ALLATK_ADDRATE(wd, 20);
-		}
 	}
 
 	if (sd != nullptr && !anger_id)
@@ -3810,7 +3040,7 @@ static void battle_calc_defense_reduction(struct Damage* wd, struct block_list *
 				def2 -= (target_count - (battle_config.vit_penalty_count - 1))*battle_config.vit_penalty_num;
 			}
 		}
-		// if (skill_id == AM_ACIDTERROR)
+		// if (skill_id == SK_AM_ACIDTERROR)
 		// 	def2 = 0; //Ignore only status defense. [FatalEror]
 		// 	def1 = 0; //Ignores only armor defense. [Skotlex]
 
@@ -3828,15 +3058,9 @@ static void battle_calc_defense_reduction(struct Damage* wd, struct block_list *
 #else
 		vit_def = def2;
 #endif
-		if( src->type == BL_MOB && (battle_check_undead(sstatus->race,sstatus->def_ele) || sstatus->race==RC_DEMON) && //This bonus already doesn't work vs players
-			(skill=pc_checkskill(tsd,AL_DP)) > 0 )
-			vit_def += skill*(int)(3 +(tsd->status.base_level+1)*0.04);   // submitted by orn
-		// if( src->type == BL_MOB && (skill=pc_checkskill(tsd,RA_RANGERMAIN))>0 &&
-		// 	(sstatus->race == RC_BRUTE || sstatus->race == RC_PLAYER_DORAM || sstatus->race == RC_FISH || sstatus->race == RC_PLANT) )
-		// 	vit_def += skill*5;
-		if( src->type == BL_MOB && (skill = pc_checkskill(tsd, NC_RESEARCHFE)) > 0 &&
-			(sstatus->def_ele == ELE_FIRE || sstatus->def_ele == ELE_EARTH) )
-			vit_def += skill * 10;
+		
+
+		
 	} else { //Mob-Pet vit-eq
 #ifndef RENEWAL
 		//VIT + rnd(0,[VIT/20]^2-1)
@@ -3936,7 +3160,7 @@ static void battle_calc_attack_plant(struct Damage* wd, struct block_list *src,s
 	struct status_data *tstatus = status_get_status_data(target);
 	bool attack_hits = is_attack_hitting(wd, src, target, skill_id, skill_lv, false);
 
-	if (skill_id != SN_SHARPSHOOTING && skill_id != RA_ARROWSTORM)
+	if (skill_id != SK_ST_SHARPSHOOTING && skill_id != SK_RG_ARROWSTORM)
 		status_change_end(src, SC_CAMOUFLAGE, INVALID_TIMER);
 
 	//Plants receive 1 damage when hit
@@ -4009,28 +3233,20 @@ static void battle_calc_attack_left_right_hands(struct Damage* wd, struct block_
 			wd->damage = wd->damage2;
 			wd->damage2 = 0;
 		} else if(sd->status.weapon == W_KATAR && !skill_id) { //Katars (offhand damage only applies to normal attacks, tested on Aegis 10.2)
-			skill = pc_checkskill(sd,TF_DOUBLE);
+			skill = pc_checkskill(sd,SK_AS_DOUBLEATTACK);
 			wd->damage2 = (int64)wd->damage * (1 + (skill * 4))/100;
 		} else if (is_attack_right_handed(src, skill_id) && EquipmentAttackCalculator::is_attack_left_handed(src, skill_id)) {	//Dual-wield
 			if (wd->damage) {
 				if( (sd->class_&MAPID_BASEMASK) == MAPID_THIEF ) {
-					skill = pc_checkskill(sd,AS_LEFT);
+					skill = pc_checkskill(sd,SK_AS_DUALWIELDING);
 					ATK_RATER(wd->damage, 50 + (skill * 10))
-				}
-				else if(sd->class_ == MAPID_KAGEROUOBORO) {
-					skill = pc_checkskill(sd,KO_RIGHT);
-					ATK_RATER(wd->damage, 70 + (skill * 10))
 				}
 				if(wd->damage < 1)
 					wd->damage = 1;
 			}
 			if (wd->damage2) {
 				if( (sd->class_&MAPID_BASEMASK) == MAPID_THIEF) {
-					skill = pc_checkskill(sd,AS_LEFT);
-					ATK_RATEL(wd->damage2, 50 + (skill * 10))
-				}
-				else if(sd->class_ == MAPID_KAGEROUOBORO) {
-					skill = pc_checkskill(sd,KO_LEFT);
+					skill = pc_checkskill(sd,SK_AS_DUALWIELDING);
 					ATK_RATEL(wd->damage2, 50 + (skill * 10))
 				}
 				if(wd->damage2 < 1)
@@ -4074,8 +3290,7 @@ static void battle_calc_attack_gvg_bg(struct Damage* wd, struct block_list *src,
 {
 	if( wd->damage + wd->damage2 ) { //There is a total damage value
 		if( src != target && //Don't reflect your own damage (Grand Cross)
-			(!skill_id || skill_id ||
-			(src->type == BL_SKILL && (skill_id == SG_SUN_WARM || skill_id == SG_MOON_WARM || skill_id == SG_STAR_WARM))) ) {
+			(!skill_id || skill_id) ) {
 				int64 damage = wd->damage + wd->damage2, rdamage = 0;
 				struct map_session_data *tsd = BL_CAST(BL_PC, target);
 				struct status_data *sstatus = status_get_status_data(src);
@@ -4084,13 +3299,13 @@ static void battle_calc_attack_gvg_bg(struct Damage* wd, struct block_list *src,
 				rdamage = battle_calc_return_damage(target, src, &damage, wd->flag, skill_id, false);
 				if( rdamage > 0 ) { //Item reflect gets calculated before any mapflag reducing is applicated
 					struct block_list *d_bl = battle_check_devotion(src);
-
+					 
 					rdelay = clif_damage(src, (!d_bl) ? src : d_bl, tick, wd->amotion, sstatus->dmotion, rdamage, 1, DMG_ENDURE, 0, false);
 					if( tsd )
 						battle_drain(tsd, src, rdamage, rdamage, sstatus->race, sstatus->class_);
 					//Use Reflect Shield to signal this kind of skill trigger [Skotlex]
-					battle_delay_damage(tick, wd->amotion, target, (!d_bl) ? src : d_bl, 0, CR_REFLECTSHIELD, 0, rdamage, ATK_DEF, rdelay, true, false);
-					SkillAdditionalEffects::skill_additional_effect(target, (!d_bl) ? src : d_bl, CR_REFLECTSHIELD, 1, BF_WEAPON|BF_SHORT|BF_NORMAL, ATK_DEF, tick);
+					battle_delay_damage(tick, wd->amotion, target, (!d_bl) ? src : d_bl, 0, SK_CR_REFLECTSHIELD, 0, rdamage, ATK_DEF, rdelay, true, false);
+					SkillAdditionalEffects::skill_additional_effect(target, (!d_bl) ? src : d_bl, SK_CR_REFLECTSHIELD, 1, BF_WEAPON|BF_SHORT|BF_NORMAL, ATK_DEF, tick);
 				}
 		}
 
@@ -4153,27 +3368,13 @@ static void battle_calc_weapon_final_atk_modifiers(struct Damage* wd, struct blo
 	// 	)
 	// {
 	// 	ATK_RATER(wd->damage, 50)
-		// status_fix_damage(target,src,wd->damage,clif_damage(target,src,gettick(),0,0,wd->damage,0,DMG_NORMAL,0,false),ST_REJECTSWORD);
-		// clif_skill_nodamage(target,target,ST_REJECTSWORD,tsc->data[SC_REJECTSWORD]->val1,1);
+		// status_fix_damage(target,src,wd->damage,clif_damage(target,src,gettick(),0,0,wd->damage,0,DMG_NORMAL,0,false),SK_ST_KILLERINSTIINCT);
+		// clif_skill_nodamage(target,target,SK_ST_KILLERINSTIINCT,tsc->data[SC_REJECTSWORD]->val1,1);
 		// if( --(tsc->data[SC_REJECTSWORD]->val3) <= 0 )
 		// 	status_change_end(target, SC_REJECTSWORD, INVALID_TIMER);
 	// }
 
-	if( tsc && tsc->data[SC_CRESCENTELBOW] && wd->flag&BF_SHORT && rnd()%100 < tsc->data[SC_CRESCENTELBOW]->val2 ) {
-		//ATK [{(Target HP / 100) x Skill Level} x Caster Base Level / 125] % + [Received damage x {1 + (Skill Level x 0.2)}]
-		int64 rdamage = 0;
-		int ratio = (int64)(status_get_hp(src) / 100) * tsc->data[SC_CRESCENTELBOW]->val1 * status_get_lv(target) / 125;
-		if (ratio > 5000) ratio = 5000; // Maximum of 5000% ATK
-		rdamage = SkillBaseDamageCalculator::battle_calc_base_damage(target, tstatus, &tstatus->rhw, tsc, sstatus->size, 0);
-		rdamage = (int64)rdamage * ratio / 100 + wd->damage * (10 + tsc->data[SC_CRESCENTELBOW]->val1 * 20 / 10) / 10;
-		skill_blown(target, src, skill_get_blewcount(SR_CRESCENTELBOW_AUTOSPELL, tsc->data[SC_CRESCENTELBOW]->val1), unit_getdir(src), BLOWN_NONE);
-		clif_skill_damage(target, src, gettick(), status_get_amotion(src), 0, rdamage,
-			1, SR_CRESCENTELBOW_AUTOSPELL, tsc->data[SC_CRESCENTELBOW]->val1, DMG_SINGLE); // This is how official does
-		clif_damage(src, target, gettick(), status_get_amotion(src)+1000, 0, rdamage/10, 1, DMG_NORMAL, 0, false);
-		status_damage(target, src, rdamage, 0, 0, 0, 0);
-		status_damage(src, target, rdamage/10, 0, 0, 1, 0);
-		status_change_end(target, SC_CRESCENTELBOW, INVALID_TIMER);
-	}
+	
 
 	if( sc ) {
 		//SC_FUSION hp penalty [Komurka]
@@ -4192,7 +3393,7 @@ static void battle_calc_weapon_final_atk_modifiers(struct Damage* wd, struct blo
 		// if (!skill_id && wd->dmg_lv > ATK_BLOCK) {
 			
 		// }
-		if (skill_id != SN_SHARPSHOOTING && skill_id != RA_ARROWSTORM)
+		if (skill_id != SK_ST_SHARPSHOOTING && skill_id != SK_RG_ARROWSTORM)
 			status_change_end(src, SC_CAMOUFLAGE, INVALID_TIMER);
 	}
 
@@ -4221,7 +3422,7 @@ static struct Damage initialize_weapon_data(struct block_list *src, struct block
 	wd.div_ = skill_id?skill_get_num(skill_id,skill_lv):1;
 	wd.amotion = (skill_id && skill_get_inf(skill_id)&INF_GROUND_SKILL)?0:sstatus->amotion; //Amotion should be 0 for ground skills.
 	// counter attack DOES obey ASPD delay on official, uncomment if you want the old (bad) behavior [helvetica]
-	/*if(skill_id == KN_AUTOCOUNTER)
+	/*if(skill_id == SK_KN_COUNTERATTACK)
 		wd.amotion >>= 1; */
 	wd.dmotion = tstatus->dmotion;
 	wd.blewcount =skill_get_blewcount(skill_id,skill_lv);
@@ -4244,18 +3445,7 @@ static struct Damage initialize_weapon_data(struct block_list *src, struct block
 		wd.flag |= battle_range_type(src, target, skill_id, skill_lv);
 		switch(skill_id)
 		{
-#ifdef RENEWAL
-			case MO_CHAINCOMBO:
-				if (sd && sd->status.weapon == W_KNUCKLE)
-					wd.div_ = -6;
-				break;
-#endif
-			case MH_SONIC_CRAW:{
-				TBL_HOM *hd = BL_CAST(BL_HOM,src);
-				wd.div_ = hd->homunculus.spiritball;
-			}
-				break;
-			case MO_FINGEROFFENSIVE:
+			case SK_MO_TRHOWSPIRITSPHERE:
 				if (sd) {
 					if (battle_config.finger_offensive_type)
 						wd.div_ = 1;
@@ -4264,25 +3454,19 @@ static struct Damage initialize_weapon_data(struct block_list *src, struct block
 				}
 				break;
 
-			case KN_PIERCE:
-			case ML_PIERCE:
+			case SK_KN_PIERCE:
 				wd.div_= (wd.div_>0?tstatus->size+1:-(tstatus->size+1));
 				break;
 
-			case TF_DOUBLE: //For NPC used skill.
-			case GS_CHAINACTION:
+			case SK_AS_DOUBLEATTACK: //For NPC used skill.
 				wd.type = DMG_MULTI_HIT;
 				break;
 
-			case GS_GROUNDDRIFT:
-				wd.amotion = sstatus->amotion;
 				//Fall through
-			case KN_SPEARSTAB:
-			case MS_BOWLINGBASH:
-			case TK_TURNKICK:
+			case SK_SM_SPEARSTAB:
 				wd.blewcount = 0;
 				break;
-			// case KN_BOWLINGBASH:
+			// case SK_KN_BOWLINGBASH:
 			// 	if (sd && sd->status.weapon == W_2HSWORD) {
 			// 		if (wd.miscflag >= 2 && wd.miscflag <= 3)
 			// 			wd.div_ = 3;
@@ -4290,15 +3474,11 @@ static struct Damage initialize_weapon_data(struct block_list *src, struct block
 			// 			wd.div_ = 4;
 			// 	}
 			// 	break;
-			case KN_AUTOCOUNTER:
+			case SK_KN_COUNTERATTACK:
 				wd.flag = (wd.flag&~BF_SKILLMASK)|BF_NORMAL;
 				break;
 			// The number of hits is set to 3 by default for use in Inspiration status.
 			// When in Banding, the number of hits is equal to the number of Royal Guards in Banding.
-			case LG_HESPERUSLIT:
-				if( sc && sc->data[SC_BANDING] && sc->data[SC_BANDING]->val2 > 3 )
-					wd.div_ = sc->data[SC_BANDING]->val2;
-				break;
 		}
 	} else {
 		wd.flag |= is_skill_using_arrow(src, skill_id)?BF_LONG:BF_SHORT;
@@ -4319,8 +3499,7 @@ static struct Damage initialize_weapon_data(struct block_list *src, struct block
 void battle_do_reflect(int attack_type, struct Damage *wd, struct block_list* src, struct block_list* target, uint16 skill_id, uint16 skill_lv)
 {
 	// Don't reflect your own damage (Grand Cross)
-	if ((wd->damage + wd->damage2) && src && target && src != target && (src->type != BL_SKILL ||
-		(src->type == BL_SKILL && (skill_id == SG_SUN_WARM || skill_id == SG_MOON_WARM || skill_id == SG_STAR_WARM ))))
+	if ((wd->damage + wd->damage2) && src && target && src != target && (src->type != BL_SKILL))
 	{
 		int64 damage = wd->damage + wd->damage2, rdamage = 0;
 		struct map_session_data *tsd = BL_CAST(BL_PC, target);
@@ -4339,20 +3518,13 @@ void battle_do_reflect(int attack_type, struct Damage *wd, struct block_list* sr
 			struct block_list *d_bl = battle_check_devotion(src);
 			status_change *sc = status_get_sc(src);
 
-			if (tsc->data[SC_MAXPAIN]) {
-				tsc->data[SC_MAXPAIN]->val2 = (int)rdamage;
-				skill_castend_damage_id(target, src, NPC_MAXPAIN_ATK, tsc->data[SC_MAXPAIN]->val1, tick, wd->flag);
-				tsc->data[SC_MAXPAIN]->val2 = 0;
-			}
-			else if( attack_type == BF_WEAPON && tsc->data[SC_REFLECTDAMAGE] ) // Don't reflect your own damage (Grand Cross)
-				map_foreachinshootrange(battle_damage_area,target,skill_get_splash(LG_REFLECTDAMAGE,1),BL_CHAR,tick,target,wd->amotion,sstatus->dmotion,rdamage,wd->flag);
-			else if( attack_type == BF_WEAPON || attack_type == BF_MISC) {
+			if( attack_type == BF_WEAPON || attack_type == BF_MISC) {
 				rdelay = clif_damage(src, (!d_bl) ? src : d_bl, tick, wd->amotion, sstatus->dmotion, rdamage, 1, DMG_ENDURE, 0, false);
 				if( tsd )
 					battle_drain(tsd, src, rdamage, rdamage, sstatus->race, sstatus->class_);
 				// It appears that official servers give skill reflect damage a longer delay
-				battle_delay_damage(tick, wd->amotion, target, (!d_bl) ? src : d_bl, 0, CR_REFLECTSHIELD, 0, rdamage, ATK_DEF, rdelay ,true, false);
-				SkillAdditionalEffects::skill_additional_effect(target, (!d_bl) ? src : d_bl, CR_REFLECTSHIELD, 1, BF_WEAPON|BF_SHORT|BF_NORMAL, ATK_DEF, tick);
+				battle_delay_damage(tick, wd->amotion, target, (!d_bl) ? src : d_bl, 0, SK_CR_REFLECTSHIELD, 0, rdamage, ATK_DEF, rdelay ,true, false);
+				SkillAdditionalEffects::skill_additional_effect(target, (!d_bl) ? src : d_bl, SK_CR_REFLECTSHIELD, 1, BF_WEAPON|BF_SHORT|BF_NORMAL, ATK_DEF, tick);
 			}
 		}
 	}
@@ -4397,7 +3569,7 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src, struct bl
 	tsd = BL_CAST(BL_PC, target);
 
 	//Check for Lucky Dodge
-	if ((!skill_id || skill_id == PA_SACRIFICE) && tstatus->flee2 && rnd()%1000 < tstatus->flee2) {
+	if ((!skill_id || skill_id == SK_KN_RECKONING) && tstatus->flee2 && rnd()%1000 < tstatus->flee2) {
 		wd.type = DMG_LUCY_DODGE;
 		wd.dmg_lv = ATK_LUCKY;
 		if(wd.div_ < 0)
@@ -4434,7 +3606,7 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src, struct bl
 
 		ATK_ADD(wd.damage, wd.damage2, bonus_damage);
 
-		if(skill_id == HW_MAGICCRASHER) { // Add weapon attack for MATK onto Magic Crasher
+		if(skill_id == SK_WZ_MAGICCRASHER) { // Add weapon attack for MATK onto Magic Crasher
 			struct status_data *sstatus = status_get_status_data(src);
 
 			if (sstatus->matk_max > sstatus->matk_min) {
@@ -4488,7 +3660,7 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src, struct bl
 			wd.damage2 = wd.statusAtk2 + wd.weaponAtk2 + wd.equipAtk2 + wd.masteryAtk2 + bonus_damage;
 			if (wd.flag & BF_SHORT)
 				ATK_ADDRATE(wd.damage, wd.damage2, sd->bonus.short_attack_atk_rate);
-			if(wd.flag&BF_LONG && (skill_id != RA_WUGBITE && skill_id != RA_WUGSTRIKE)) //Long damage rate addition doesn't use weapon + equip attack
+			if(wd.flag&BF_LONG && (skill_id != SK_WG_SLASH)) //Long damage rate addition doesn't use weapon + equip attack
 				ATK_ADDRATE(wd.damage, wd.damage2, sd->bonus.long_attack_atk_rate);
 		}
 
@@ -4502,8 +3674,6 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src, struct bl
 
 	battle_calc_element_damage(&wd, src, target, skill_id, skill_lv);
 
-	if(skill_id == NPC_GRANDDARKNESS)
-		return wd; //Enough, rest is not needed.
 
 	if (CriticalHitCalculator::is_attack_critical(&wd, src, target, skill_id, skill_lv, false)) {
 		if (sd) { //Check for player so we don't crash out, monsters don't have bonus crit rates [helvetica]
@@ -4515,35 +3685,10 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src, struct bl
 		}
 	}
 
-	switch (skill_id) {
-		case TK_DOWNKICK:
-		case TK_STORMKICK:
-		case TK_TURNKICK:
-		case TK_COUNTER:
-			if(sd && sd->weapontype1 == W_FIST && sd->weapontype2 == W_FIST)
-				ATK_ADD(wd.damage, wd.damage2, 10 * pc_checkskill(sd, TK_RUN));
-			break;
-		case SR_TIGERCANNON:
-			// (Tiger Cannon skill level x 240) + (Target Base Level x 40)
-			if (wd.miscflag&8) {
-				ATK_ADD(wd.damage, wd.damage2, skill_lv * 500 + status_get_lv(target) * 40);
-			} else
-				ATK_ADD(wd.damage, wd.damage2, skill_lv * 240 + status_get_lv(target) * 40);
-			break;
-		case MH_TINDER_BREAKER:
-			ATK_ADD(wd.damage, wd.damage2, 2500 * skill_lv + status_get_lv(src)); // !TODO: Confirm base level bonus
-			break;
-		case MH_CBC:
-			ATK_ADD(wd.damage, wd.damage2, 4000 * skill_lv + status_get_lv(src)); // !TODO: Confirm base level bonus
-			break;
-		case MH_EQC:
-			ATK_ADD(wd.damage, wd.damage2, 6000 * skill_lv + status_get_lv(src)); // !TODO: Confirm base level bonus
-			break;
-	}
 
 	if(sd) {
 
-		// if( skill_id == CR_SHIELDCHARGE || skill_id == CR_SHIELDBOOMERANG || skill_id == PA_SHIELDCHAIN || skill_id == PA_SHIELDSLAM ) { //Refine bonus applies after cards and elements.
+		// if( skill_id == SK_CR_SMITE || skill_id == SK_CR_SHIELDBOOMERANG || skill_id == SK_PA_RAPIDSMITING || skill_id == SK_PA_SHIELDSLAM ) { //Refine bonus applies after cards and elements.
 		// 	short index = sd->equip_index[EQI_HAND_L];
 
 		// 	if( index >= 0 && sd->inventory_data[index] && sd->inventory_data[index]->type == IT_ARMOR )
@@ -4552,19 +3697,17 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src, struct bl
 	}
 
 	if(tsd) { // Card Fix for target (tsd), 2 is not added to the "left" flag meaning "target cards only"
-#ifdef RENEWAL
+
 		switch(skill_id) {
-			case NJ_ISSEN:
-				break; //These skills will do a card fix later
 			default:
-#endif
+
 				wd.damage += battle_calc_cardfix(BF_WEAPON, src, target, nk, right_element, left_element, wd.damage, 0, wd.flag);
 				if (EquipmentAttackCalculator::is_attack_left_handed(src, skill_id))
 					wd.damage2 += battle_calc_cardfix(BF_WEAPON, src, target, nk, right_element, left_element, wd.damage2, 1, wd.flag);
-#ifdef RENEWAL
+
 				break;
 		}
-#endif
+
 	}
 
 	// only do 1 dmg to plant, no need to calculate rest
@@ -4578,17 +3721,16 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src, struct bl
 
 	battle_calc_attack_left_right_hands(&wd, src, target, skill_id, skill_lv);
 
-#ifdef RENEWAL
+
 	switch (skill_id) {
-		case NJ_ISSEN:
-			return wd; //These skills will do a GVG fix later
+		
 		default:
-#endif
+
 			battle_calc_attack_gvg_bg(&wd, src, target, skill_id, skill_lv);
-#ifdef RENEWAL
+
 			break;
 	}
-#endif
+
 
 	battle_calc_weapon_final_atk_modifiers(&wd, src, target, skill_id, skill_lv);
 
@@ -4663,25 +3805,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 	else if (s_ele == ELE_RANDOM) //Use random element
 		s_ele = rnd()%ELE_ALL;
 
-	switch(skill_id) {
-		case NPC_EARTHQUAKE:
-			s_ele = ELE_NEUTRAL;
-			break;
-		case LG_SHIELDSPELL:
-			if (skill_lv == 2)
-				s_ele = ELE_HOLY;
-			break;
-		case WL_HELLINFERNO:
-			if (mflag & 2) { // ELE_DARK
-				s_ele = ELE_DARK;
-				ad.div_ = 3;
-			}
-			break;
-		case KO_KAIHOU:
-			if(sd && sd->spiritcharm_type != CHARM_TYPE_NONE && sd->spiritcharm > 0)
-				s_ele = sd->spiritcharm_type;
-			break;
-	}
 
 	//Set miscellaneous data that needs be filled
 	if(sd) {
@@ -4694,16 +3817,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 
 	//Infinite defense (plant mode)
 	flag.infdef = is_infinite_defense(target, ad.flag)?1:0;
-
-	switch(skill_id) {
-		case MG_FIREWALL:
-			if ( tstatus->def_ele == ELE_FIRE || battle_check_undead(tstatus->race, tstatus->def_ele) )
-				ad.blewcount = 0; //No knockback
-			//Fall through
-		case NJ_KAENSIN:
-			ad.dmotion = 1; //No flinch animation.
-			break;
-	}
 
 	if (!flag.infdef) { //No need to do the math for plants
 		unsigned int skillratio = 100; //Skill dmg modifiers.
@@ -4719,15 +3832,14 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 
 		//Calc base damage according to skill
 		switch (skill_id) {
-			// case CR_HEAL:
-			case AL_HEAL:
+			// case SK_CR_SWORDSTOPLOWSHARES:
+			case SK_AL_HEAL:
 				ad.damage = skill_calc_heal(src, target, skill_id, skill_lv, false);
 				break;
-			case PR_ASPERSIO:
+			case SK_PR_ASPERSIO:
 				ad.damage = 40;
 				break;
-			case ALL_RESURRECTION:
-			case PR_TURNUNDEAD:
+			case SK_PR_RESURRECTIO:
 				//Undead check is on skill_castend_damageid code.
 				i = 10 * skill_lv + sstatus->luk + sstatus->int_ + status_get_lv(src)
 				  	+ 300 - 300 * tstatus->hp / tstatus->max_hp;
@@ -4744,48 +3856,25 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					MATK_RATE(skill_lv);
 				}
 				break;
-			case NPC_DARKBREATH:
-				ad.damage = tstatus->hp * (skill_lv <= 5 ? 100 / (2 * 6 - skill_lv) : 50) / 100;
-				break;
-			case AB_RENOVATIO:
+
+			case SK_AL_RENEW:
 				ad.damage = status_get_lv(src) * 10 + sstatus->int_;
-				break;
-			case NPC_EARTHQUAKE:
-				if (mflag & NPC_EARTHQUAKE_FLAG) {
-					ad.flag |= NPC_EARTHQUAKE_FLAG; // Pass flag to battle_calc_damage
-					mflag &= ~NPC_EARTHQUAKE_FLAG; // Remove before NK_SPLASHSPLIT check
-				}
-
-				if (src->type == BL_PC)
-					ad.damage = sstatus->str * 2 + battle_calc_weapon_attack(src, target, skill_id, skill_lv, mflag).damage;
-				else
-					ad.damage = SkillBaseDamageCalculator::battle_calc_base_damage(src, sstatus, &sstatus->rhw, sc, tstatus->size, 0);
-
-				MATK_RATE(200 + 100 * skill_lv + 100 * (skill_lv / 2) + ((skill_lv > 4) ? 100 : 0));
-
-				if (nk[NK_SPLASHSPLIT] && mflag > 1)
-					ad.damage /= mflag;
-				break;
-			case NPC_ICEMINE:
-			case NPC_FLAMECROSS:
-				ad.damage = sstatus->rhw.atk * 20 * skill_lv;
 				break;
 			default: {
 				int matk_max = sstatus->matk_max;
 				int matk_min = sstatus->matk_min;
-				if(skill_id == EL_FIRE_BALL ||
-				skill_id == EL_WIND_SLASH ||
-				skill_id == EL_ICICLE ||
-				skill_id == EL_STONE_HAMMER ||
+				if(skill_id == SK_SA_FIREBALL ||
+				skill_id == SK_SA_WINDSLASH ||
+				skill_id == SK_SA_ICICLE ||
+				skill_id == SK_SA_EARTHSPIKE ||
 				skill_id == EL_TORNADO_JG ||
-				skill_id == EL_ROCK_CRUSHER_JG ||
-				skill_id == EL_WATER_SCREW_JG ||
-				skill_id == EF_FIRE_BOMB_JG ||
-				skill_id == HM_BEHOLDER_1 ||
-				skill_id == SM_PROVOKE ||
-				skill_id == HFLI_SBR44 ||
-				skill_id == HM_BASILISK_2 ||
-				skill_id == HM_BEHOLDER_2
+				skill_id == SK_SA_ROCKCRUSHER ||
+				skill_id == SK_SA_WATERBLAST ||
+				skill_id == SK_SA_FIREBOMB ||
+				skill_id == SK_AM_BEHOLDER1 ||
+				skill_id == SK_SM_PROVOKE ||
+				skill_id == SK_AM_BASILISK2 ||
+				skill_id == SK_AM_BEHOLDER2
 				){
 					if (src->type == BL_ELEM) {
 						struct map_session_data* sd2 = BL_CAST(BL_PC, battle_get_master(src));
@@ -4810,18 +3899,18 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 						ShowError("0 enemies targeted by %d:%s, divide per 0 avoided!\n", skill_id, skill_get_name(skill_id));
 				}
 				switch(skill_id) {
-					case AL_HOLYLIGHT:
-					case MG_NAPALMBEAT:
-					case AL_RUWACH:
+					case SK_AL_HOLYGHOST:
+					case SK_AL_SACREDWAVE:
+					case SK_AL_RUWACH:
 						skillratio += AcolyteSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv);
 						break;
-					case MG_EARTHBOLT:
-					case MG_FIREBOLT:
-					case MG_LIGHTNINGBOLT:
-					case MG_COLDBOLT:
-					case NPC_DARKSTRIKE:
-					case MG_UNDEADEMBRACE:
-					case MG_SOULSTRIKE:
+					case SK_MG_EARTHBOLT:
+					case SK_MG_FIREBOLT:
+					case SK_MG_LIGHTNINGBOLT:
+					case SK_MG_COLDBOLT:
+					case SK_MG_DARKSTRIKE:
+					case SK_MG_CORRUPT:
+					case SK_MG_SOULSTRIKE:
 						skillratio += MageSkillAtkRatioCalculator::calculate_skill_atk_ratio(status_get_lv(src), skill_id, skill_lv, target, sc && sc->data[SC_SPELLFIST] && mflag & BF_SHORT);
 						if (sc && sc->data[SC_SPELLFIST] && mflag&BF_SHORT)  {
 							skillratio += MageSkillAtkRatioCalculator::calculate_skill_atk_ratio(status_get_lv(src), skill_id, skill_lv, target, true);
@@ -4830,335 +3919,83 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 							ad.type = DMG_NORMAL;
 						}
 						break;
-					case HP_JUDEX:
-					case PR_SPIRITUSANCTI:
-					case PR_MAGNUS:
-					case AB_DUPLELIGHT_MAGIC:
-					case AB_ADORAMUS:
-					case PR_BENEDICTIO:
-					case HP_VITUPERATUM:
-					case HP_PENITENTIA:
+					case SK_PR_JUDEX:
+					case SK_PR_SPIRITUSANCTI:
+					case SK_PR_MAGNUSEXORCISMUS:
+					case SK_PR_DUPLELUX_MAGIC:
+					case SK_BI_SENTENTIA:
+					case SK_BI_BENEDICTIO:
+					case SK_BI_DIABOLICRUCIATUS:
+					case SK_BI_PENITENTIA:
 						skillratio += PriestSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
-					case JG_TAROTCARD:
-					case WM_METALICSOUND:
-					case WM_REVERBERATION:
-					case CG_METALLICFURY:
+					case SK_BA_METALLICSOUND:
+					case SK_BA_REVERBERATION:
+					case SK_CL_METALLICFURY:
 						skillratio += BardSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
-					case CR_GRANDCROSS:
-					case LG_RAYOFGENESIS:
-					case PA_PRESSURE:
+					case SK_CR_GRANDCROSS:
+					case SK_PA_GENESISRAY:
+					case SK_PA_GLORIADOMINI:
 						skillratio += CrusaderSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
-					case WZ_VERMILION:
-					case WZ_STORMGUST:
-					case WZ_METEOR:
-					case SO_EARTHGRAVE:
-					case PF_SOULBURN:
-					case WL_DRAINLIFE:
-					case EL_ICICLE:
-					case EL_WIND_SLASH:
-					case EL_STONE_HAMMER:
-					case EL_FIRE_BALL:
-					case SO_EL_ACTION:
+					case SK_WZ_LORDOFVERMILION:
+					case SK_WZ_STORMGUST:
+					case SK_WZ_METEORSTORM:
+					case SK_WZ_EARTHSTRAIN:
+					case SK_SA_SOULBURN:
+					case SK_SA_DRAINLIFE:
+					case SK_SA_ICICLE:
+					case SK_SA_WINDSLASH:
+					case SK_SA_EARTHSPIKE:
+					case SK_SA_FIREBALL:
+					case SK_SA_ELEMENTALACTION1:
 					case EL_TORNADO_JG:
-					case EL_ROCK_CRUSHER_JG:
-					case EL_WATER_SCREW_JG:
-					case EF_FIRE_BOMB_JG:
-					case JG_EL_ACTION:
+					case SK_SA_ROCKCRUSHER:
+					case SK_SA_WATERBLAST:
+					case SK_SA_FIREBOMB:
+					case SK_SA_ELEMENTALACTION2:
 						skillratio += SageSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
-					case WZ_JUPITEL:
-					case WL_CRIMSONROCK:
-					case HW_SHADOWBOMB:
-					case WZ_LIGHTNINGROD:
-					case HW_PHANTOMSPEAR:
-					case WZ_EARTHSPIKE:
-					case WZ_ICEBERG:
-					case SL_SMA:
-					case WZ_CORRUPT:
-					case WZ_EXTREMEVACUUM:
-					case WZ_LANDOFEVIL:
-					case HW_ASTRALSTRIKE:
-					case HW_DOOM:
-					case HW_DOOM_GHOST:
-					case HW_DIAMONDDUST:
-					case HW_MAGICCRASHER:
-					case SO_PSYCHIC_WAVE:
-					case WL_SOULEXPANSION:
-					case HW_TETRAVORTEX_FIRE:
-					case WL_TETRAVORTEX_WATER:
-					case WL_TETRAVORTEX_WIND:
-					case WL_TETRAVORTEX_GROUND:
-					case WL_TETRAVORTEX_NEUTRAL:
+					case SK_WZ_CRIMSONROCK:
+					case SK_SO_SHADOWBOMB:
+					case SK_WZ_THUNDERSTORM:
+					case SK_SO_PHANTOMSPEAR:
+					case SK_WZ_STALAGMITE:
+					case SK_WZ_ICEBERG:
+					case SK_WZ_ILLUSIONARYBLADES:
+					case SK_WZ_ICONOFSIN:
+					case SK_WZ_EXTREMEVACUUM:
+					case SK_WZ_REALITYBREAKER:
+					case SK_SO_ASTRALSTRIKE:
+					case SK_SO_DOOM:
+					case SK_SO_DOOM_GHOST:
+					case SK_SO_DIAMONDDUST:
+					case SK_WZ_MAGICCRASHER:
+					case SK_WZ_PSYCHICWAVE:
+					case SK_MG_VOIDEXPANSION:
+					case SK_SO_TETRAVORTEX_FIRE:
+					case SK_SO_TETRAVORTEX_WATER:
+					case SK_SO_TETRAVORTEX_WIND:
+					case SK_SO_TETRAVORTEX_GROUND:
+					case SK_SO_TETRAVORTEX_NEUTRAL:
 						skillratio += WizardSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
-					case RK_DRAGONBREATH_WATER:
+					case SK_CM_DRAGONBREATH:
 						skillratio +=  KnightSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
-					case HM_BEHOLDER_1:
-					case HM_BEHOLDER_2:
-					case HM_BASILISK_2:
-					case GN_WALLOFTHORN:
-					case AM_DEMONSTRATION:
-					case GN_DEMONIC_FIRE:
-					case CR_GEOGRAPHER_FIELD_ATK:
-					case GN_CRAZYWEED_ATK:
+					case SK_AM_BEHOLDER1:
+					case SK_AM_BEHOLDER2:
+					case SK_AM_BASILISK2:
+					case SK_AM_WILDTHORNS:
+					case SK_AM_FIREDEMONSTRATION:
+					case SK_CR_INCENDIARYBOMB:
+					case SK_CR_GEOGRAFIELD_ATK:
+					case SK_CR_MANDRAKERAID_ATK:
 						skillratio += AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, tstatus);
 						break;
-					case SN_ULLR_ATK:
+					case SK_RA_ULLREAGLETOTEM_ATK:
 						skillratio += HunterSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
-						break;
-					case MG_FIREBALL:
-						skillratio += 40 + 20 * skill_lv;
-						if(ad.miscflag == 2) //Enemies at the edge of the area will take 75% of the damage
-							skillratio = skillratio * 3 / 4;
-						break;
-					case MG_FIREWALL:
-						skillratio -= 50;
-						break;
-					case MG_THUNDERSTORM:
-						// in Renewal Thunder Storm boost is 100% (in pre-re, 80%)
-#ifndef RENEWAL
-						skillratio -= 20;
-#endif
-						break;
-					case MG_FROSTDIVER:
-						skillratio += 0;
-						break;
-					case WZ_FROSTNOVA:
-						skillratio += -100 + (100 + skill_lv * 10) * 2 / 3;
-						break;
-					case WZ_FIREPILLAR:
-						if (sd && ad.div_ > 0)
-							ad.div_ *= -1; //For players, damage is divided by number of hits
-						skillratio += -60 + 20 * skill_lv; //20% MATK each hit
-						break;
-					case WZ_SIGHTRASHER:
-						skillratio += 20 * skill_lv;
-						break;
-					case WZ_WATERBALL:
-						skillratio += 30 * skill_lv;
-						break;
-					case HW_NAPALMVULCAN:
-						skillratio += -100 + 70 * skill_lv;
-						RE_LVL_DMOD(100);
-
-						break;
-					case SL_STIN: //Target size must be small (0) for full damage
-						skillratio += (tstatus->size != SZ_SMALL ? -99 : 10 * skill_lv);
-						break;
-					case SL_STUN:
-						skillratio += 5 * skill_lv;
-						break;
-					case NJ_KOUENKA:
-						skillratio -= 10;
-						if(sd && sd->spiritcharm_type == CHARM_TYPE_FIRE && sd->spiritcharm > 0)
-							skillratio += 10 * sd->spiritcharm;
-						break;
-					case NJ_KAENSIN:
-						skillratio -= 50;
-						if(sd && sd->spiritcharm_type == CHARM_TYPE_FIRE && sd->spiritcharm > 0)
-							skillratio += 20 * sd->spiritcharm;
-						break;
-					case NJ_BAKUENRYU:
-						skillratio += 50 + 150 * skill_lv;
-						if(sd && sd->spiritcharm_type == CHARM_TYPE_FIRE && sd->spiritcharm > 0)
-							skillratio += 100 * sd->spiritcharm;
-						break;
-					case NJ_HYOUSENSOU:
-#ifdef RENEWAL
-						skillratio -= 30;
-						if (sc && sc->data[SC_SUITON])
-							skillratio += 2 * skill_lv;
-#endif
-						if(sd && sd->spiritcharm_type == CHARM_TYPE_WATER && sd->spiritcharm > 0)
-							skillratio += 20 * sd->spiritcharm;
-						break;
-					case NJ_HYOUSYOURAKU:
-						skillratio += 50 * skill_lv;
-						if(sd && sd->spiritcharm_type == CHARM_TYPE_WATER && sd->spiritcharm > 0)
-							skillratio += 100 * sd->spiritcharm;
-						break;
-					case NJ_RAIGEKISAI:
-#ifdef RENEWAL
-						skillratio += 100 * skill_lv;
-#else
-						skillratio += 60 + 40 * skill_lv;
-#endif
-						if(sd && sd->spiritcharm_type == CHARM_TYPE_WIND && sd->spiritcharm > 0)
-							skillratio += 20 * sd->spiritcharm;
-						break;
-					case NJ_KAMAITACHI:
-						skillratio += 100 * skill_lv;
-						if(sd && sd->spiritcharm_type == CHARM_TYPE_WIND && sd->spiritcharm > 0)
-							skillratio += 100 * sd->spiritcharm;
-						break;
-					case NJ_HUUJIN:
-#ifdef RENEWAL
-						skillratio += 50;
-#endif
-						if(sd && sd->spiritcharm_type == CHARM_TYPE_WIND && sd->spiritcharm > 0)
-							skillratio += 10 * sd->spiritcharm;
-						break;
-					case NPC_ENERGYDRAIN:
-						skillratio += 100 * skill_lv;
-						break;
-#ifdef RENEWAL
-					case WZ_HEAVENDRIVE:
-						skillratio += 25;
-						break;
-					case BA_DISSONANCE:
-						skillratio += skill_lv * 10;
-						if (sd)
-							skillratio += 3 * pc_checkskill(sd, BA_MUSICALLESSON);
-						break;
-					case HW_GRAVITATION:
-						skillratio += -100 + 50 * skill_lv;
-						RE_LVL_DMOD(100);
-						break;
-#else
-#endif
-					case WL_FROSTMISTY:
-						skillratio += -100 + 200 + 100 * skill_lv;
-						RE_LVL_DMOD(100);
-						break;
-					case NPC_JACKFROST:
-						if (tsc && tsc->data[SC_FREEZING]) {
-							skillratio += 900 + 300 * skill_lv;
-							RE_LVL_DMOD(100);
-						} else {
-							skillratio += 400 + 100 * skill_lv;
-							RE_LVL_DMOD(150);
-						}
-						break;
-					case WL_JACKFROST:
-						if (tsc && tsc->data[SC_MISTY_FROST])
-							skillratio += -100 + 1200 + 600 * skill_lv;
-						else
-							skillratio += -100 + 1000 + 300 * skill_lv;
-						RE_LVL_DMOD(100);
-						break;
-					case WL_HELLINFERNO:
-						skillratio += -100 + 400 * skill_lv;
-						if (mflag & 2) // ELE_DARK
-							skillratio += 200;
-						RE_LVL_DMOD(100);
-						break;
-					case WL_COMET:
-						skillratio += -100 + 2500 + 500 * skill_lv;
-						RE_LVL_DMOD(100);
-						break;
-					case WL_CHAINLIGHTNING_ATK:
-						skillratio += 400 + 100 * skill_lv;
-						RE_LVL_DMOD(100);
-						if (mflag > 0)
-							skillratio += 100 * mflag;
-						break;
-					case WL_EARTHSTRAIN:
-						skillratio += -100 + 1000 + 600 * skill_lv;
-						RE_LVL_DMOD(100);
-						break;
-					case WL_SUMMON_ATK_FIRE:
-					case WL_SUMMON_ATK_WATER:
-					case WL_SUMMON_ATK_WIND:
-					case WL_SUMMON_ATK_GROUND:
-						skillratio += -100 + (1 + skill_lv) / 2 * (status_get_lv(src) + (sd ? sd->status.job_level : 0));
-						RE_LVL_DMOD(100); // ! TODO: Confirm new formula
-						break;
-					case LG_SHIELDSPELL: // [(Casters Base Level x 4) + (Shield MDEF x 100) + (Casters INT x 2)] %
-						if (sd && skill_lv == 2)
-							skillratio += -100 + status_get_lv(src) * 4 + sd->bonus.shieldmdef * 100 + status_get_int(src) * 2;
-						else
-							skillratio = 0;
-						break;
-					case SO_FIREWALK:
-						skillratio += -100 + 60 * skill_lv;
-						RE_LVL_DMOD(100);
-						if( sc && sc->data[SC_HEATER_OPTION] )
-							skillratio += (sd ? sd->status.job_level / 2 : 0);
-						break;
-					case SO_ELECTRICWALK:
-						skillratio += -100 + 60 * skill_lv;
-						RE_LVL_DMOD(100);
-						if( sc && sc->data[SC_BLAST_OPTION] )
-							skillratio += (sd ? sd->status.job_level / 2 : 0);
-						break;
-					case NPC_FIREWALK:
-					case NPC_ELECTRICWALK:
-						skillratio += -100 + 100 * skill_lv;
-						break;
-					case SO_DIAMONDDUST:
-						skillratio = ( 200 * ((sd) ? pc_checkskill(sd, SA_FROSTWEAPON) : 0) + sstatus->int_ * skill_lv );
-						RE_LVL_DMOD(100);
-						if( sc && sc->data[SC_COOLER_OPTION] )
-							skillratio += (sd ? sd->status.job_level * 5 : 0);
-						break;
-					case NPC_POISON_BUSTER:
-						skillratio += -100 + 1500 * skill_lv;
-						break;
-					case NPC_CLOUD_KILL:
-						skillratio += -100 + 50 * skill_lv;
-						break;
-					case SO_VARETYR_SPEAR: //MATK [{( Endow Tornado skill level x 50 ) + ( Caster INT x Varetyr Spear Skill level )} x Caster Base Level / 100 ] %
-						skillratio += -100 + status_get_int(src) * skill_lv + ((sd) ? pc_checkskill(sd, SA_LIGHTNINGLOADER) * 50 : 0);
-						RE_LVL_DMOD(100);
-						if (sc && sc->data[SC_BLAST_OPTION])
-							skillratio += (sd ? sd->status.job_level * 5 : 0);
-						break;
-					case KO_KAIHOU:
-						if(sd && sd->spiritcharm_type != CHARM_TYPE_NONE && sd->spiritcharm > 0) {
-							skillratio += -100 + 200 * sd->spiritcharm;
-							RE_LVL_DMOD(100);
-							pc_delspiritcharm(sd, sd->spiritcharm, sd->spiritcharm_type);
-						}
-						break;
-					// Magical Elemental Spirits Attack Skills
-					case MH_ERASER_CUTTER:
-					case MH_XENO_SLASHER:
-						skillratio += -100 + 350 * skill_lv * status_get_lv(src) / 100 + sstatus->int_; // !TODO: Confirm Base Level and INT bonus
-						break;
-					case MH_HEILIGE_STANGE:
-						skillratio += -100 + 1000 + 250 * skill_lv * status_get_lv(src) / 150 + sstatus->vit; // !TODO: Confirm VIT bonus
-						break;
-					case MH_POISON_MIST:
-						skillratio += -100 + 40 * skill_lv * status_get_lv(src) / 100;
-						break;
-					case SU_SV_STEMSPEAR:
-						skillratio += 600;
-						break;
-					case SU_CN_METEOR:
-					case SU_CN_METEOR2:
-						skillratio += 100 + 100 * skill_lv;
-						break;
-					case NPC_VENOMFOG:
-						skillratio += 600 + 100 * skill_lv;
-						break;
-					case NPC_COMET:
-						i = (sc ? distance_xy(target->x, target->y, sc->comet_x, sc->comet_y) : 8) / 2;
-						i = cap_value(i, 1, 4);
-						skillratio = 2500 + ((skill_lv - i + 1) * 500);
-						break;
-					case NPC_HELLBURNING:
-						skillratio += 900;
-						break;
-					case SP_CURSEEXPLOSION:
-						if (tsc && tsc->data[SC_SOULCURSE])
-							skillratio += 1400 + 200 * skill_lv;
-						else
-							skillratio += 300 + 100 * skill_lv;
-						break;
-					case SP_SPA:
-						skillratio += 400 + 250 * skill_lv;
-						RE_LVL_DMOD(100);
-						break;
-					case SP_SHA:
-						skillratio += -100 + 5 * skill_lv;
-						break;
-					case SP_SWHOO:
-						skillratio += 1000 + 200 * skill_lv;
-						RE_LVL_DMOD(100);
 						break;
 				}
 
@@ -5171,16 +4008,12 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 				}
 
 				MATK_RATE(skillratio);
-
-				//Constant/misc additions from skills
-				if (skill_id == WZ_FIREPILLAR)
-					MATK_ADD(100 + 50 * skill_lv);
 				break;
 			}
 		}
-#ifdef RENEWAL
+
 		ad.damage += battle_calc_cardfix(BF_MAGIC, src, target, nk, s_ele, 0, ad.damage, 0, ad.flag);
-#endif
+
 
 		if(sd) {
 			//Damage bonuses
@@ -5246,22 +4079,22 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 			ad.damage=1;
 		else if(sc) { //only applies when hit
 			// switch(skill_id) {
-			// 	case MG_LIGHTNINGBOLT:
+			// 	case SK_MG_LIGHTNINGBOLT:
 			// 	case MG_THUNDERSTORM:
 			// 		if(sc->data[SC_GUST_OPTION])
 			// 			ad.damage += (6 + sstatus->int_ / 4) + max(sstatus->dex - 10, 0) / 30;
 			// 		break;
-			// 	case MG_FIREBOLT:
+			// 	case SK_MG_FIREBOLT:
 			// 	case MG_FIREWALL:
 			// 		if(sc->data[SC_PYROTECHNIC_OPTION])
 			// 			ad.damage += (6 + sstatus->int_ / 4) + max(sstatus->dex - 10, 0) / 30;
 			// 		break;
-			// 	case MG_COLDBOLT:
-			// 	case MG_FROSTDIVER:
+			// 	case SK_MG_COLDBOLT:
+			// 	case SK_MG_FROSTDIVER:
 			// 		if(sc->data[SC_AQUAPLAY_OPTION])
 			// 			ad.damage += (6 + sstatus->int_ / 4) + max(sstatus->dex - 10, 0) / 30;
 			// 		break;
-			// 	case WZ_EARTHSPIKE:
+			// 	case SK_WZ_STALAGMITE:
 			// 	case WZ_HEAVENDRIVE:
 			// 		if(sc->data[SC_PETROLOGY_OPTION])
 			// 			ad.damage += (6 + sstatus->int_ / 4) + max(sstatus->dex - 10, 0) / 30;
@@ -5274,8 +4107,8 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 
 		//Apply the physical part of the skill's damage. [Skotlex]
 		switch(skill_id) {
-			case CR_GRANDCROSS:
-			case NPC_GRANDDARKNESS: {
+			case SK_CR_GRANDCROSS:
+			{
 					struct Damage wd = battle_calc_weapon_attack(src,target,skill_id,skill_lv,mflag);
 					ad.damage = battle_attr_fix(src, target, wd.damage + ad.damage, s_ele, tstatus->def_ele, tstatus->ele_lv) * (20 * skill_lv) / 100;
 					if (src == target)
@@ -5367,140 +4200,29 @@ struct Damage battle_calc_misc_attack(struct block_list *src,struct block_list *
 	md.flag |= battle_range_type(src, target, skill_id, skill_lv);
 
 	switch (skill_id) {
-		case TF_THROWSTONE:
+		case SK_TF_THROWSTONE:
 			md.damage = 50;
 			md.flag |= BF_WEAPON;
 			break;
-
-		case HT_LANDMINE:
-		case MA_LANDMINE:
-		case HT_BLASTMINE:
-		case HT_CLAYMORETRAP:
-			md.damage = (int64)(skill_lv * sstatus->dex * (3.0 + (float)status_get_lv(src) / 100.0) * (1.0 + (float)sstatus->int_ / 35.0));
-			md.damage += md.damage * (rnd()%20 - 10) / 100;
-			md.damage += (sd ? pc_checkskill(sd,RA_RESEARCHTRAP) * 40 : 0);
-			break;
-		case RA_WUGSTRIKE:
+		case SK_WG_SLASH:
 			md.damage = (sstatus->dex / 5 + sstatus->int_ / 2 + skill_lv * 30) * 10;
 			RE_LVL_MDMOD(100);
 			HunterSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
-		case HT_BLITZBEAT:
-		case SN_FALCONASSAULT:
+		case SK_FC_BLITZBEAT:
+		case SK_RA_FALCONASSAULT:
 			{
 				uint16 skill;
 				md.damage = (sstatus->dex / 5 + sstatus->agi / 2 + skill_lv * 30) * 2;
 				RE_LVL_MDMOD(100);
 
-				if (skill_id == SN_FALCONASSAULT) {
+				if (skill_id == SK_RA_FALCONASSAULT) {
 					//Div fix of Blitzbeat
-					DAMAGE_DIV_FIX2(md.damage, skill_get_num(HT_BLITZBEAT, 5));
+					DAMAGE_DIV_FIX2(md.damage, skill_get_num(SK_FC_BLITZBEAT, 5));
 					//Falcon Assault Modifier
 					md.damage = md.damage * (150 + 70 * skill_lv) / 100;
 				}
 			}
-			break;
-#ifndef RENEWAL
-		case BA_DISSONANCE:
-			md.damage = 30 + skill_lv * 10;
-			if (sd)
-				md.damage += 3 * pc_checkskill(sd,BA_MUSICALLESSON);
-			break;
-#endif
-		case NPC_SELFDESTRUCTION:
-			md.damage = sstatus->hp;
-			break;
-		case NPC_SMOKING:
-			md.damage = 3;
-			break;
-		case NPC_EVILLAND:
-			md.damage = skill_calc_heal(src,target,skill_id,skill_lv,false);
-			break;
-#ifndef RENEWAL
-
-		case HW_GRAVITATION:
-			md.damage = 200 + 200 * skill_lv;
-			md.dmotion = 0; //No flinch animation
-			break;
-#endif
-
-#ifdef RENEWAL
-		case NJ_ISSEN:
-			// Official Renewal formula [helvetica]
-			// base damage = currenthp + ((atk * currenthp * skill level) / maxhp)
-			// final damage = base damage + ((mirror image count + 1) / 5 * base damage) - (edef + sdef)
-			// modified def formula
-			{
-				short totaldef;
-				struct Damage atk = battle_calc_weapon_attack(src, target, skill_id, skill_lv, 0);
-				struct status_change *sc = status_get_sc(src);
-
-				md.damage = (int64)sstatus->hp + (atk.damage * (int64)sstatus->hp * skill_lv) / (int64)sstatus->max_hp;
-
-				if (sc && sc->data[SC_BUNSINJYUTSU] && (i = sc->data[SC_BUNSINJYUTSU]->val2) > 0) { // mirror image bonus only occurs if active
-					md.div_ = -(i + 2); // mirror image count + 2
-					md.damage += (md.damage * (((i + 1) * 10) / 5)) / 10;
-				}
-				// modified def reduction, final damage = base damage - (edef + sdef)
-				totaldef = tstatus->def2 + (short)status_get_def(target);
-				md.damage -= totaldef;
-				md.flag |= BF_WEAPON;
-			}
-			break;
-#endif
-		case GS_FLING:
-			md.damage = (sd ? sd->status.job_level : status_get_lv(src));
-			break;
-		case HVAN_EXPLOSION: //[orn]
-			md.damage = (int64)sstatus->max_hp * (50 + 50 * skill_lv) / 100;
-			break;
-		case RA_CLUSTERBOMB:
-		case RA_FIRINGTRAP:
-		case RA_ICEBOUNDTRAP:
-			md.damage = skill_lv * status_get_dex(src) + status_get_int(src) * 5 ;
-			RE_LVL_TMDMOD();
-			if(sd) {
-				int researchskill_lv = pc_checkskill(sd,RA_RESEARCHTRAP);
-				if(researchskill_lv)
-					md.damage = md.damage * 20 * researchskill_lv / (skill_id == RA_CLUSTERBOMB ? 50 : 100);
-				else
-					md.damage = 0;
-			} else
-				md.damage = md.damage * 200 / (skill_id == RA_CLUSTERBOMB ? 50 : 100);
-			nk.set(NK_IGNOREELEMENT);
-			nk.set(NK_IGNOREFLEE);
-			nk.set(NK_IGNOREDEFCARD);
-			break;
-		case NC_MAGMA_ERUPTION_DOTDAMAGE: // 'Eruption' damage
-			md.damage = 800 + 200 * skill_lv;
-			break;
-		case GN_THORNS_TRAP:
-			md.damage = 100 + 200 * skill_lv + status_get_int(src);
-			break;
-		case RL_B_TRAP:
-			// kRO 2014-02-12: Damage: Caster's DEX, Target's current HP, Skill Level
-			md.damage = status_get_dex(src) * 10 + (skill_lv * 3 * status_get_hp(target)) / 100;
-			if (status_bl_has_mode(target, MD_STATUSIMMUNE))
-				md.damage /= 10;
-			break;
-		case NPC_MAXPAIN_ATK:
-			if (ssc && ssc->data[SC_MAXPAIN])
-				md.damage = ssc->data[SC_MAXPAIN]->val2;
-			else
-				md.damage = 0;
-			break;
-		case SU_SV_ROOTTWIST_ATK:
-			md.damage = 100;
-			break;
-		case SP_SOULEXPLOSION:
-			md.damage = tstatus->hp * (20 + 10 * skill_lv) / 100;
-			break;
-		case SJ_NOVAEXPLOSING:
-			// (Base ATK + Weapon ATK) * Ratio
-			md.damage = (sstatus->batk + sstatus->rhw.atk) * (200 + 100 * skill_lv) / 100;
-
-			// Additional Damage
-			md.damage += sstatus->max_hp / (6 - min(5, skill_lv)) + status_get_max_sp(src) * (2 * skill_lv);
 			break;
 	}
 
@@ -5542,7 +4264,7 @@ struct Damage battle_calc_misc_attack(struct block_list *src,struct block_list *
 			hitrate += sstatus->hit - flee;
 #ifdef RENEWAL
 			if( sd ) //in Renewal hit bonus from Vultures Eye is not shown anymore in status window
-				hitrate += pc_checkskill(sd,AC_VULTURE) * 2;
+				hitrate += pc_checkskill(sd,SK_AC_VULTURE) * 2;
 #endif
 			hitrate = cap_value(hitrate, battle_config.min_hitrate, battle_config.max_hitrate);
 
@@ -5576,19 +4298,7 @@ struct Damage battle_calc_misc_attack(struct block_list *src,struct block_list *
 	//Apply DAMAGE_DIV_FIX and check for min damage
 	battle_apply_div_fix(&md, skill_id);
 
-	switch(skill_id) {
-		case RA_FIRINGTRAP:
- 		case RA_ICEBOUNDTRAP:
-			if (md.damage == 1)
-				break;
-		case RA_CLUSTERBOMB:
-			{
-				struct Damage wd = battle_calc_weapon_attack(src,target,skill_id,skill_lv,mflag);
-
-				md.damage += wd.damage;
-			}
-			break;
-	}
+	
 
 	struct map_data *mapdata = map_getmapdata(target->m);
 
@@ -5661,7 +4371,7 @@ void battle_vanish_damage(struct map_session_data *sd, struct block_list *target
 struct Damage battle_calc_attack(int attack_type,struct block_list *bl,struct block_list *target,uint16 skill_id,uint16 skill_lv,int flag)
 {
 	struct Damage d;
-	if(skill_id == SN_ULLR_ATK) {
+	if(skill_id == SK_RA_ULLREAGLETOTEM_ATK) {
 		attack_type = BF_MAGIC;
 	}
 	switch(attack_type) {
@@ -5756,18 +4466,6 @@ int64 battle_calc_return_damage(struct block_list* bl, struct block_list *src, i
 					}
 				}
 
-				if (sc->data[SC_DEATHBOUND] && !status_bl_has_mode(src,MD_STATUSIMMUNE)) {
-					if (distance_bl(src,bl) <= 0 || !map_check_dir(map_calc_dir(bl,src->x,src->y), unit_getdir(bl))) {
-						int64 rd1 = 0;
-
-						rd1 = min(damage,status_get_max_hp(bl)) * sc->data[SC_DEATHBOUND]->val2 / 100; // Amplify damage.
-						*dmg = rd1 * 30 / 100; // Received damage = 30% of amplified damage.
-						clif_skill_damage(src, bl, gettick(), status_get_amotion(src), 0, -30000, 1, RK_DEATHBOUND, sc->data[SC_DEATHBOUND]->val1, DMG_SINGLE);
-						skill_blown(bl, src, skill_get_blewcount(RK_DEATHBOUND, 1), unit_getdir(src), BLOWN_NONE);
-						status_change_end(bl, SC_DEATHBOUND, INVALID_TIMER);
-						rdamage += rd1 * 70 / 100; // Target receives 70% of the amplified damage. [Rytech]
-					}
-				}
 
 				if( sc->data[SC_SHIELDSPELL_DEF] && sc->data[SC_SHIELDSPELL_DEF]->val1 == 2 && !status_bl_has_mode(src,MD_STATUSIMMUNE) ){
 						rdamage += damage * sc->data[SC_SHIELDSPELL_DEF]->val2 / 100;
@@ -5946,11 +4644,11 @@ int battle_damage_area(struct block_list *bl, va_list ap) {
 		if( src->type == BL_PC )
 			battle_drain((TBL_PC*)src, bl, damage, damage, status_get_race(bl), status_get_class_(bl));
 		if( amotion )
-			battle_delay_damage(tick, amotion,src,bl,0,CR_REFLECTSHIELD,0,damage,ATK_DEF,0,true,false);
-		else
-			status_fix_damage(src,bl,damage,0,LG_REFLECTDAMAGE);
+			battle_delay_damage(tick, amotion,src,bl,0,SK_CR_REFLECTSHIELD,0,damage,ATK_DEF,0,true,false);
+		/*else
+			status_fix_damage(src,bl,damage,0,LG_REFLECTDAMAGE);*/
 		clif_damage(bl,bl,tick,amotion,dmotion,damage,1,DMG_ENDURE,0,false);
-		SkillAdditionalEffects::skill_additional_effect(src, bl, CR_REFLECTSHIELD, 1, BF_WEAPON|BF_SHORT|BF_NORMAL,ATK_DEF,tick);
+		SkillAdditionalEffects::skill_additional_effect(src, bl, SK_CR_REFLECTSHIELD, 1, BF_WEAPON|BF_SHORT|BF_NORMAL,ATK_DEF,tick);
 		map_freeblock_unlock();
 	}
 
@@ -6040,7 +4738,7 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 		else if (sc->data[SC_NEWMOON] && --(sc->data[SC_NEWMOON]->val2) <= 0)
 			status_change_end(src, SC_NEWMOON, INVALID_TIMER);
 	}
-	if (tsc && tsc->data[SC_AUTOCOUNTER] && status_check_skilluse(target, src, KN_AUTOCOUNTER, 1)) {
+	if (tsc && tsc->data[SC_AUTOCOUNTER] && status_check_skilluse(target, src, SK_KN_COUNTERATTACK, 1)) {
 		uint8 dir = map_calc_dir(target,src->x,src->y);
 		int t_dir = unit_getdir(target);
 		int dist = distance_bl(src, target);
@@ -6051,7 +4749,7 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 			clif_skillcastcancel(target); //Remove the casting bar. [Skotlex]
 			clif_damage(src, target, tick, sstatus->amotion, 1, 0, 1, DMG_NORMAL, 0, false); //Display MISS.
 			status_change_end(target, SC_AUTOCOUNTER, INVALID_TIMER);
-			skill_attack(BF_WEAPON,target,target,src,KN_AUTOCOUNTER,skill_lv,tick,0);
+			skill_attack(BF_WEAPON,target,target,src,SK_KN_COUNTERATTACK,skill_lv,tick,0);
 			return ATK_BLOCK;
 		}
 	}
@@ -6060,12 +4758,12 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 		(src->type == BL_PC || tsd == NULL || distance_bl(src, target) <= (tsd->status.weapon == W_FIST ? 1 : 2)) )
 	{
 		uint16 skill_lv = tsc->data[SC_BLADESTOP_WAIT]->val1;
-		int duration = skill_get_time2(MO_BLADESTOP,skill_lv);
+		int duration = skill_get_time2(SK_SH_GRAPPLE,skill_lv);
 		// if (status_get_class_(src) == CLASS_BOSS)
 		// 	duration = 2000; // Only lasts 2 seconds for Boss monsters
 
 		status_change_end(target, SC_BLADESTOP_WAIT, INVALID_TIMER);
-		if(sc_start4(src,src, SC_BLADESTOP, 100, sd?pc_checkskill(sd, MO_BLADESTOP):5, 0, 0, target->id, duration))
+		if(sc_start4(src,src, SC_BLADESTOP, 100, sd?pc_checkskill(sd, SK_SH_GRAPPLE):5, 0, 0, target->id, duration))
 		{	//Target locked.
 			clif_damage(src, target, tick, sstatus->amotion, 1, 0, 1, DMG_NORMAL, 0, false); //Display MISS.
 			clif_bladestop(target, src->id, 1);
@@ -6074,15 +4772,15 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 		}
 	}
 
-	if(sd && (skillv = pc_checkskill(sd,GS_FULLBUSTER)) > 0) {
+	if(sd && (skillv = pc_checkskill(sd,SK_MO_TRIPLEARMCANNON)) > 0) {
 		int triple_rate = 6 * skillv;
 		if (sd && sd->status.weapon == W_KNUCKLE) {
 			triple_rate += 15;
 		}
 		if (rnd()%100 < triple_rate) {
 			//Need to apply canact_tick here because it doesn't go through skill_castend_id
-			sd->ud.canact_tick = i64max(tick + skill_delayfix(src, GS_FULLBUSTER, skillv), sd->ud.canact_tick);
-			if( skill_attack(BF_WEAPON,src,src,target,GS_FULLBUSTER,skillv,tick,0) )
+			sd->ud.canact_tick = i64max(tick + skill_delayfix(src, SK_MO_TRIPLEARMCANNON, skillv), sd->ud.canact_tick);
+			if( skill_attack(BF_WEAPON,src,src,target,SK_MO_TRIPLEARMCANNON,skillv,tick,0) )
 				return ATK_DEF;
 			return ATK_MISS;
 		}
@@ -6100,7 +4798,7 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 			 * We need to calculate the DMG before the hp reduction, because it can kill the source.
 			 * For further information: bugreport:4950
 			 */
-			ret_val = (damage_lv)skill_attack(BF_WEAPON,src,src,target,PA_SACRIFICE,skill_lv,tick,0);
+			ret_val = (damage_lv)skill_attack(BF_WEAPON,src,src,target,SK_KN_RECKONING,skill_lv,tick,0);
 
 			// status_zap(src, sstatus->max_hp*9/100, 0);//Damage to self is always 9%
 			if( ret_val == ATK_NONE )
@@ -6119,7 +4817,7 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 			 * We need to calculate the DMG before the hp reduction, because it can kill the source.
 			 * For further information: bugreport:4950
 			 */
-			ret_val = (damage_lv)skill_attack(BF_WEAPON,src,src,target,HT_HURRICANEFURY,skill_lv,tick,0);
+			ret_val = (damage_lv)skill_attack(BF_WEAPON,src,src,target,SK_HT_LIVINGTORNADO,skill_lv,tick,0);
 
 			// status_zap(src, sstatus->max_hp*9/100, 0);//Damage to self is always 9%
 			if( ret_val == ATK_NONE )
@@ -6138,7 +4836,7 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 			 * We need to calculate the DMG before the hp reduction, because it can kill the source.
 			 * For further information: bugreport:4950
 			 */
-			ret_val = (damage_lv)skill_attack(BF_WEAPON,src,src,target,SN_ZEPHYR_SNIPING,skill_lv,tick,0);
+			ret_val = (damage_lv)skill_attack(BF_WEAPON,src,src,target,SK_RA_ZEPHYRSNIPING,skill_lv,tick,0);
 
 			// status_zap(src, sstatus->max_hp*9/100, 0);//Damage to self is always 9%
 			if( ret_val == ATK_NONE )
@@ -6148,34 +4846,14 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 
 
 		
-		if (sc->data[SC_MAGICALATTACK]) {
-			if( skill_attack(BF_MAGIC,src,src,target,NPC_MAGICALATTACK,sc->data[SC_MAGICALATTACK]->val1,tick,0) )
-				return ATK_DEF;
-			return ATK_MISS;
-		}
-		if( sc->data[SC_GT_ENERGYGAIN] ) {
-			int spheres = 5;
-
-			if( sc->data[SC_RAISINGDRAGON] )
-				spheres += sc->data[SC_RAISINGDRAGON]->val1;
-
-			if( sd && rnd()%100 < sc->data[SC_GT_ENERGYGAIN]->val2 )
-				pc_addspiritball(sd, skill_get_time2(SR_GENTLETOUCH_ENERGYGAIN, sc->data[SC_GT_ENERGYGAIN]->val1), spheres);
-		}
+		
+		
 	}
 
-	if( tsc && tsc->data[SC_GT_ENERGYGAIN] ) {
-		int spheres = 5;
-
-		if( tsc->data[SC_RAISINGDRAGON] )
-			spheres += tsc->data[SC_RAISINGDRAGON]->val1;
-
-		if( tsd && rnd()%100 < tsc->data[SC_GT_ENERGYGAIN]->val2 )
-			pc_addspiritball(tsd, skill_get_time2(SR_GENTLETOUCH_ENERGYGAIN, tsc->data[SC_GT_ENERGYGAIN]->val1), spheres);
-	}
+	
 
 	if (tsc && tsc->data[SC_MTF_MLEATKED] && rnd()%100 < tsc->data[SC_MTF_MLEATKED]->val2)
-		clif_skill_nodamage(target, target, SM_ENDURE, tsc->data[SC_MTF_MLEATKED]->val1, sc_start(src, target, SC_ENDURE, 100, tsc->data[SC_MTF_MLEATKED]->val1, skill_get_time(SM_ENDURE, tsc->data[SC_MTF_MLEATKED]->val1)));
+		clif_skill_nodamage(target, target, SK_BS_ENDURE, tsc->data[SC_MTF_MLEATKED]->val1, sc_start(src, target, SC_ENDURE, 100, tsc->data[SC_MTF_MLEATKED]->val1, skill_get_time(SK_BS_ENDURE, tsc->data[SC_MTF_MLEATKED]->val1)));
 
 	if(tsc && tsc->data[SC_KAAHI] && tstatus->hp < tstatus->max_hp && status_charge(target, 0, tsc->data[SC_KAAHI]->val3)) {
 		int hp_heal = tstatus->max_hp - tstatus->hp;
@@ -6228,9 +4906,9 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 		{	// Activates it only from melee damage
 			uint16 skill_id;
 			if( rnd()%2 == 1 )
-				skill_id = AB_DUPLELIGHT_MELEE;
+				skill_id = SK_PR_DUPLELUX_MELEE;
 			else
-				skill_id = AB_DUPLELIGHT_MAGIC;
+				skill_id = SK_PR_DUPLELUX_MAGIC;
 			skill_attack(skill_get_type(skill_id), src, src, target, skill_id, sc->data[SC_DUPLELIGHT]->val1, tick, SD_LEVEL);
 		}
 	}
@@ -6243,9 +4921,7 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 		TBL_SKILL *su = (TBL_SKILL*)target;
 
 		if (su && su->group) {
-			if (su->group->skill_id == HT_BLASTMINE)
-				skill_blown(src, target, 3, -1, BLOWN_NONE);
-			if (su->group->skill_id == GN_WALLOFTHORN) {
+			if (su->group->skill_id == SK_AM_WILDTHORNS) {
 				if (--su->val2 <= 0)
 					skill_delunit(su);
 			}
@@ -6282,27 +4958,11 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 					}
 
 					clif_damage(d_bl, d_bl, gettick(), wd.amotion, wd.dmotion, damage, 1, DMG_NORMAL, 0, false);
-					status_fix_damage(NULL, d_bl, damage, 0, CR_DEVOTION);
+					status_fix_damage(NULL, d_bl, damage, 0, SK_CR_SWORNPROTECTOR);
 				}
 			}
 			else
 				status_change_end(target, SC_DEVOTION, INVALID_TIMER);
-		}
-		if (target->type == BL_PC && (wd.flag&BF_SHORT) && tsc->data[SC_CIRCLE_OF_FIRE_OPTION]) {
-			struct elemental_data *ed = ((TBL_PC*)target)->ed;
-
-			if (ed) {
-				clif_skill_damage(&ed->bl, target, tick, status_get_amotion(src), 0, -30000, 1, EL_CIRCLE_OF_FIRE, tsc->data[SC_CIRCLE_OF_FIRE_OPTION]->val1, DMG_SINGLE);
-				skill_attack(BF_WEAPON,&ed->bl,&ed->bl,src,EL_CIRCLE_OF_FIRE,tsc->data[SC_CIRCLE_OF_FIRE_OPTION]->val1,tick,wd.flag);
-			}
-		}
-		if (tsc->data[SC_WATER_SCREEN_OPTION]) {
-			struct block_list *e_bl = map_id2bl(tsc->data[SC_WATER_SCREEN_OPTION]->val1);
-
-			if (e_bl && !status_isdead(e_bl)) {
-				clif_damage(e_bl, e_bl, tick, 0, 0, damage, wd.div_, DMG_NORMAL, 0, false);
-				status_fix_damage(NULL, e_bl, damage, 0, EL_WATER_SCREEN);
-			}
 		}
 	}
 	if (sc && sc->data[SC_AUTOSPELL] && rnd()%100 < sc->data[SC_AUTOSPELL]->val4) {
@@ -6439,14 +5099,14 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 			(rnd()%100 < tsc->data[SC_POISONREACT]->val3
 			|| sstatus->def_ele == ELE_POISON) &&
 //			check_distance_bl(src, target, tstatus->rhw.range+1) && Doesn't checks range! o.O;
-			status_check_skilluse(target, src, TF_POISON, 0)
+			status_check_skilluse(target, src, SK_TF_POISONSLASH, 0)
 		) {	//Poison React
 			struct status_change_entry *sce = tsc->data[SC_POISONREACT];
 			if (sstatus->def_ele == ELE_POISON) {
 				sce->val2 = 0;
-				skill_attack(BF_WEAPON,target,target,src,AS_POISONREACT,sce->val1,tick,0);
+				skill_attack(BF_WEAPON,target,target,src,SK_TF_POISONREACT,sce->val1,tick,0);
 			} else {
-				skill_attack(BF_WEAPON,target,target,src,TF_POISON, 5, tick, 0);
+				skill_attack(BF_WEAPON,target,target,src,SK_TF_POISONSLASH, 5, tick, 0);
 				--sce->val2;
 			}
 			if (sce->val2 <= 0)
@@ -6602,16 +5262,13 @@ int battle_check_target( struct block_list *src, struct block_list *target,int f
 			if( !su || !su->group)
 				return 0;
 			if( skill_get_inf2(su->group->skill_id, INF2_ISTRAP) && su->group->unit_id != UNT_USED_TRAPS) {
-				if (!skill_id || su->group->skill_id == NPC_REVERBERATION || su->group->skill_id == WM_POEMOFNETHERWORLD) {
+				if (!skill_id) {
 					;
 				}
 				else if (skill_get_inf2(skill_id, INF2_TARGETTRAP)) { // Only a few skills can target traps
 					switch (skill_id) {
-						case RK_DRAGONBREATH:
-						case RK_DRAGONBREATH_WATER:
-						case NC_SELFDESTRUCTION:
-						case NC_AXETORNADO:
-						case SR_SKYNETBLOW:
+						case SK_CM_DRAGONBREATH:
+						case SK_BS_AXETORNADO:
 							// Can only hit traps in PVP/GVG maps
 							if (!mapdata->flag[MF_PVP] && !mapdata->flag[MF_GVG])
 								return 0;
@@ -6622,20 +5279,16 @@ int battle_check_target( struct block_list *src, struct block_list *target,int f
 					return 0;
 				state |= BCT_ENEMY;
 				strip_enemy = 0;
-			} else if (su->group->skill_id == WZ_ICEWALL || (su->group->skill_id == GN_WALLOFTHORN && skill_id != GN_CARTCANNON)) {
+			} else if (su->group->skill_id == SK_MG_ICEWALL || (su->group->skill_id == SK_AM_WILDTHORNS && skill_id != SK_BS_CARTCANNON)) {
 				switch (skill_id) {
-					case RK_DRAGONBREATH:
-					case RK_DRAGONBREATH_WATER:
-					case NC_SELFDESTRUCTION:
-					case NC_AXETORNADO:
-					case SR_SKYNETBLOW:
+		
+					case SK_CM_DRAGONBREATH:
+					case SK_BS_AXETORNADO:
 						// Can only hit icewall in PVP/GVG maps
 						if (!mapdata->flag[MF_PVP] && !mapdata->flag[MF_GVG])
 							return 0;
 						break;
-					case HT_CLAYMORETRAP:
-						// Can't hit icewall
-						return 0;
+					
 					default:
 						// Usually BCT_ALL stands for only hitting chars, but skills specifically set to hit traps also hit icewall
 						if ((flag&BCT_ALL) == BCT_ALL && !skill_get_inf2(skill_id, INF2_TARGETTRAP))
@@ -7038,9 +5691,9 @@ static const struct _battle_data {
 	{ "summer_ignorepalette",               &battle_config.summer_ignorepalette,            0,      0,      1,              },
 	{ "hanbok_ignorepalette",               &battle_config.hanbok_ignorepalette,            0,      0,      1,              },
 	{ "oktoberfest_ignorepalette",          &battle_config.oktoberfest_ignorepalette,       0,      0,      1,              },
-	{ "natural_healhp_interval",            &battle_config.natural_healhp_interval,         6000,   NATURAL_HEAL_INTERVAL, INT_MAX, },
-	{ "natural_healsp_interval",            &battle_config.natural_healsp_interval,         8000,   NATURAL_HEAL_INTERVAL, INT_MAX, },
-	{ "natural_heal_skill_interval",        &battle_config.natural_heal_skill_interval,     10000,  NATURAL_HEAL_INTERVAL, INT_MAX, },
+	{ "natural_heal_hp_interval",            &battle_config.natural_heal_hp_interval,         6000,   NATURSK_AL_HEAL_INTERVAL, INT_MAX, },
+	{ "natural_heal_sp_interval",            &battle_config.natural_heal_sp_interval,         8000,   NATURSK_AL_HEAL_INTERVAL, INT_MAX, },
+	{ "natural_heal_skill_interval",        &battle_config.natural_heal_skill_interval,     10000,  NATURSK_AL_HEAL_INTERVAL, INT_MAX, },
 	{ "natural_heal_weight_rate",           &battle_config.natural_heal_weight_rate,        50,     0,      100             },
 	{ "natural_heal_weight_rate_renewal",   &battle_config.natural_heal_weight_rate_renewal,70,     0,      100             },
 	{ "arrow_decrement",                    &battle_config.arrow_decrement,                 1,      0,      2,              },

@@ -5,7 +5,7 @@ Header:
 
 Body:
   - Id: 238
-    Name: AM_BIOETHICS
+    Name: SK_AM_BIOETHICS
     Description: Bioethics
     MaxLevel: 5
     TargetType: Self
@@ -19,7 +19,7 @@ Body:
     Requires:
       SpCost: 15
   - Id: 847
-    Name: AM_EL_ACTION
+    Name: SK_AM_HOMUNCULUSACTIONI
     Description: Elemental Action
     MaxLevel: 5
     TargetType: Support
@@ -34,7 +34,7 @@ Body:
       SpCost: 20
       State: Elementalspirit
   - Id: 2457
-    Name: AM_HATCH_HOMUNCULUS
+    Name: SK_AM_HATCHHOMUNCULUS
     Description: Summon Earth Spirit Agni
     MaxLevel: 5
     TargetType: Self
@@ -81,7 +81,7 @@ Body:
         - Level: 5
           Amount: 10
   - Id: 850
-    Name: AM_HOM_CURE
+    Name: SK_AM_REGENETATION
     Description: Homunculus Recovery
     MaxLevel: 5
     TargetType: Self
@@ -97,7 +97,7 @@ Body:
       SpCost: 40
       State: Elementalspirit
   - Id: 851
-    Name: AM2_HOM_ACTION
+    Name: SK_AM_HOMUNCULUSACTIONII
     Description: Elemental Action
     MaxLevel: 5
     Type: Magic
@@ -130,7 +130,7 @@ Body:
       SpCost: 25
       State: Elementalspirit
   - Id: 228
-    Name: AM_PHARMACY
+    Name: SK_AM_PHARMACY
     Description: Prepare Potion
     MaxLevel: 5
     TargetType: Self
@@ -140,7 +140,7 @@ Body:
     Requires:
       SpCost: 7
   - Id: 229
-    Name: AM_DEMONSTRATION
+    Name: SK_AM_FIREDEMONSTRATION
     Description: Bomb
     MaxLevel: 5
     Type: Magic
@@ -176,7 +176,7 @@ Body:
         Skill: true
         RemovedByFireRain: true
   - Id: 230
-    Name: AM_ACIDTERROR
+    Name: SK_AM_ACIDTERROR
     Description: Acid Terror
     MaxLevel: 5
     Type: Weapon
@@ -207,7 +207,7 @@ Body:
         - Item: Acid_Bottle
           Amount: 1
   - Id: 490
-    Name: GN_SPORE_EXPLOSION
+    Name: SK_AM_BOMB
     Description: Spore Explosion
     MaxLevel: 5
     Type: Weapon
@@ -231,7 +231,7 @@ Body:
         - Item: Fire_Bottle
           Amount: 1
   - Id: 491
-    Name: CR_CULTIVATION
+    Name: SK_AM_PLANTCULTIVATION
     Description: Plant Cultivation
     MaxLevel: 5
     TargetType: Ground
@@ -246,7 +246,7 @@ Body:
     Requires:
       SpCost: 20
   - Id: 2482
-    Name: GN_WALLOFTHORN
+    Name: SK_AM_WILDTHORNS
     Description: Wall of Thorns
     MaxLevel: 5
     Type: Magic
@@ -287,7 +287,7 @@ Body:
       Interval: 2000
       Target: Enemy
   - Id: 231
-    Name: AM_POTIONPITCHER
+    Name: SK_AM_AIDPOTION
     Description: Aid Potion
     MaxLevel: 5
     TargetType: Support
@@ -316,7 +316,7 @@ Body:
         - Item: Blue_Potion
           Amount: 1
   - Id: 854
-    Name: AM_SLIMPITCHER
+    Name: SK_AM_AIDCONDENSEDPOTION
     Description: Aid Potion
     MaxLevel: 5
     TargetType: Support
@@ -345,7 +345,7 @@ Body:
         - Item: Blue_Potion
           Amount: 1
   - Id: 518
-    Name: HM_BASILISK_1
+    Name: SK_AM_BASILISK1
     Description: Basilisk 1
     MaxLevel: 5
     Type: Weapon
@@ -359,7 +359,7 @@ Body:
     Requires:
       SpCost: 20
   - Id: 849
-    Name: HM_BEHOLDER_1
+    Name: SK_AM_BEHOLDER1
     Description: Beholder 1
     MaxLevel: 5
     Type: Magic
@@ -373,7 +373,7 @@ Body:
     Requires:
       SpCost: 15
   - Id: 852
-    Name: HM_BEHOLDER_2
+    Name: SK_AM_BEHOLDER2
     Description: Beholder 2
     MaxLevel: 5
     Type: Magic
@@ -405,7 +405,7 @@ Body:
     Requires:
       SpCost: 25
   - Id: 900
-    Name: HM_LANDBOOST
+    Name: SK_AM_PETROLOGY
     Description: Land Boost
     MaxLevel: 5
     Type: Magic
@@ -426,7 +426,7 @@ Body:
     Requires:
       SpCost: 40
   - Id: 901
-    Name: HM_FIREBOOST
+    Name: SK_AM_PYROTECHNIA
     Description: Fire Boost
     MaxLevel: 5
     Type: Weapon
@@ -449,7 +449,7 @@ Body:
     Requires:
       SpCost: 50
   - Id: 902
-    Name: HM_HEALPULSE
+    Name: SK_AM_HEALPULSE
     Description: Heal Pulse
     MaxLevel: 5
     Type: Weapon
@@ -477,7 +477,7 @@ Body:
     Requires:
       SpCost: 75
   - Id: 8001
-    Name: HLIF_HEAL
+    Name: SK_AM_WARMWIND
     Description: Healing Touch
     MaxLevel: 5
     TargetType: Support
@@ -492,7 +492,7 @@ Body:
     Requires:
       SpCost: 40
   - Id: 904
-    Name: HM_BASILISK_2
+    Name: SK_AM_BASILISK2
     Description: Basilisk 2
     MaxLevel: 5
     Type: Magic

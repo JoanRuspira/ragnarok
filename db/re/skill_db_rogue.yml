@@ -5,7 +5,7 @@ Header:
 
 Body:
   - Id: 814
-    Name: RG_DAGGERQUICKEN
+    Name: SK_RG_DAGGERQUICKEN
     Description: Axe Quicken
     MaxLevel: 5
     Type: Weapon
@@ -32,7 +32,7 @@ Body:
       Weapon:
         dagger: true
   - Id: 530
-    Name: NJ_KIRIKAGE
+    Name: SK_RG_SHADYSLASH
     Description: Shady Slash
     MaxLevel: 5
     Type: Weapon
@@ -56,7 +56,7 @@ Body:
         1hSword: true
         2hsword: true
   - Id: 212
-    Name: RG_BACKSTAP
+    Name: SK_RG_BACKSTAB
     Description: Back Stab
     MaxLevel: 5
     Type: Weapon
@@ -78,7 +78,7 @@ Body:
         1hSword: true
         2hsword: true
   - Id: 2029
-    Name: GC_COUNTERSLASH
+    Name: SK_RG_HACKANDSLASH
     Description: Hack and Slash
     MaxLevel: 5
     Type: Weapon
@@ -113,11 +113,11 @@ Body:
         1hSword: true
         2hsword: true
   - Id: 836
-    Name: RG_VULTURE
+    Name: SK_RG_VULTURE
     Description: Vulture's Eye
     MaxLevel: 5
   - Id: 2236
-    Name: RA_AIMEDBOLT
+    Name: SK_RG_QUICKSHOT
     Description: Aimed Bolt
     MaxLevel: 5
     Type: Weapon
@@ -142,7 +142,7 @@ Body:
         Arrow: true
       AmmoAmount: 1
   - Id: 2288
-    Name: SC_TRIANGLESHOT
+    Name: SK_RG_TRIANGLESHOT
     Description: Triangle Shot
     MaxLevel: 5
     Type: Weapon
@@ -168,7 +168,7 @@ Body:
         Arrow: true
       AmmoAmount: 3
   - Id: 2233
-    Name: RA_ARROWSTORM
+    Name: SK_RG_ARROWSTORM
     Description: Arrow Storm
     MaxLevel: 5
     Type: Weapon
@@ -207,7 +207,7 @@ Body:
         Arrow: true
       AmmoAmount: 10
   - Id: 1005
-    Name: RG_CLOSECONFINE
+    Name: SK_RG_CLOSECONFINE
     Description: Close Confine
     MaxLevel: 5
     Type: Weapon
@@ -236,7 +236,7 @@ Body:
         - Item: Manacles
           Amount: 1
   - Id: 871
-    Name: SC_STRIPACCESSORY
+    Name: SK_RG_STRIPACCESSORY
     Description: Strip Accessory
     MaxLevel: 5
     TargetType: Attack
@@ -265,7 +265,7 @@ Body:
         - Item: Leather_Pouch
           Amount: 1
   - Id: 872
-    Name: JG_PLAGIARISM
+    Name: SK_RG_PLAGIARISM
     Description: Plagiarism
     MaxLevel: 5
     TargetType: Self
@@ -282,7 +282,7 @@ Body:
         - Item: Scroll
           Amount: 1
   - Id: 873
-    Name: RG_AMBIDEXTERITY
+    Name: SK_RG_AMBIDEXTERITY
     Description: Ambidexterity
     MaxLevel: 5
     Type: Weapon

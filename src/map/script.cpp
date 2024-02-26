@@ -9793,7 +9793,7 @@ BUILDIN_FUNC(getgdskilllv)
 }
 
 /// Returns the 'basic_skill_check' setting.
-/// This config determines if the server checks the skill level of NV_BASIC
+/// This config determines if the server checks the skill level of SK_NV_BASIC
 /// before allowing the basic actions.
 ///
 /// basicskillcheck() -> <bool>
@@ -10438,7 +10438,7 @@ BUILDIN_FUNC(cooking)
 		return SCRIPT_CMD_SUCCESS;
 
 	trigger=script_getnum(st,2);
-	clif_cooking_list(sd, trigger, AM_PHARMACY, 1, 1);
+	clif_cooking_list(sd, trigger, SK_AM_PHARMACY, 1, 1);
 	return SCRIPT_CMD_SUCCESS;
 }
 
@@ -15617,38 +15617,38 @@ BUILDIN_FUNC(logmes)
 
 BUILDIN_FUNC(summon)
 {
-	int _class, timeout=0;
-	const char *str,*event="";
-	TBL_PC *sd;
-	struct mob_data *md;
-	t_tick tick = gettick();
+	//int _class, timeout=0;
+	//const char *str,*event="";
+	//TBL_PC *sd;
+	//struct mob_data *md;
+	//t_tick tick = gettick();
 
-	if (!script_rid2sd(sd))
-		return SCRIPT_CMD_SUCCESS;
+	//if (!script_rid2sd(sd))
+	//	return SCRIPT_CMD_SUCCESS;
 
-	str	=script_getstr(st,2);
-	_class=script_getnum(st,3);
-	if( script_hasdata(st,4) )
-		timeout=script_getnum(st,4);
-	if( script_hasdata(st,5) ){
-		event=script_getstr(st,5);
-		check_event(st, event);
-	}
+	//str	=script_getstr(st,2);
+	//_class=script_getnum(st,3);
+	//if( script_hasdata(st,4) )
+	//	timeout=script_getnum(st,4);
+	//if( script_hasdata(st,5) ){
+	//	event=script_getstr(st,5);
+	//	check_event(st, event);
+	//}
 
-	clif_skill_poseffect(&sd->bl,AM_CALLHOMUN,1,sd->bl.x,sd->bl.y,tick);
+	//clif_skill_poseffect(&sd->bl,AM_CALLHOMUN,1,sd->bl.x,sd->bl.y,tick);
 
-	md = mob_once_spawn_sub(&sd->bl, sd->bl.m, sd->bl.x, sd->bl.y, str, _class, event, SZ_SMALL, AI_NONE);
-	if (md) {
-		md->master_id=sd->bl.id;
-		md->special_state.ai = AI_ATTACK;
-		if( md->deletetimer != INVALID_TIMER )
-			delete_timer(md->deletetimer, mob_timer_delete);
-		md->deletetimer = add_timer(tick+(timeout>0?timeout:60000),mob_timer_delete,md->bl.id,0);
-		mob_spawn (md); //Now it is ready for spawning.
-		clif_specialeffect(&md->bl,EF_ENTRY2,AREA);
-		sc_start4(NULL,&md->bl, SC_MODECHANGE, 100, 1, 0, MD_AGGRESSIVE, 0, 60000);
-	}
-	script_pushint(st, md->bl.id);
+	//md = mob_once_spawn_sub(&sd->bl, sd->bl.m, sd->bl.x, sd->bl.y, str, _class, event, SZ_SMALL, AI_NONE);
+	//if (md) {
+	//	md->master_id=sd->bl.id;
+	//	md->special_state.ai = AI_ATTACK;
+	//	if( md->deletetimer != INVALID_TIMER )
+	//		delete_timer(md->deletetimer, mob_timer_delete);
+	//	md->deletetimer = add_timer(tick+(timeout>0?timeout:60000),mob_timer_delete,md->bl.id,0);
+	//	mob_spawn (md); //Now it is ready for spawning.
+	//	clif_specialeffect(&md->bl,EF_ENTRY2,AREA);
+	//	sc_start4(NULL,&md->bl, SC_MODECHANGE, 100, 1, 0, MD_AGGRESSIVE, 0, 60000);
+	//}
+	//script_pushint(st, md->bl.id);
 
 	return SCRIPT_CMD_SUCCESS;
 }
@@ -19363,7 +19363,7 @@ BUILDIN_FUNC(warpportal)
 		return SCRIPT_CMD_FAILURE;
 	}
 
-	group = skill_unitsetting(bl, AL_WARP, 4, spx, spy, 0);
+	// group = skill_unitsetting(bl, AL_WARP, 4, spx, spy, 0);
 	if( group == NULL )
 		return SCRIPT_CMD_FAILURE;// failed
 	group->val1 = (group->val1<<16)|(short)0;
@@ -21416,12 +21416,12 @@ BUILDIN_FUNC(showdigit)
  * makerune <% success bonus>{,<char_id>};
  **/
 BUILDIN_FUNC(makerune) {
-	TBL_PC* sd;
+	/*TBL_PC* sd;
 	
 	if (!script_charid2sd(3,sd))
 		return SCRIPT_CMD_FAILURE;
 	clif_skill_produce_mix_list(sd,RK_RUNEMASTERY,24);
-	sd->itemid = script_getnum(st,2);
+	sd->itemid = script_getnum(st,2);*/
 	return SCRIPT_CMD_SUCCESS;
 }
 /**
@@ -21454,7 +21454,7 @@ BUILDIN_FUNC(setdragon) {
 
 	if (!script_charid2sd(3,sd))
 		return SCRIPT_CMD_FAILURE;
-	if( !pc_checkskill(sd,RK_DRAGONTRAINING) || (sd->class_&MAPID_THIRDMASK) != MAPID_RUNE_KNIGHT )
+	if( (sd->class_&MAPID_THIRDMASK) != MAPID_RUNE_KNIGHT )
 		script_pushint(st,0);//Doesn't have the skill or it's not a Rune Knight
 	else if ( pc_isridingdragon(sd) ) {//Is mounted; release
 		pc_setoption(sd, sd->sc.option&~OPTION_DRAGON);

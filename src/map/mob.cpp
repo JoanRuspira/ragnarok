@@ -2848,14 +2848,6 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 			mob_item_drop(md, dlist, ditem, 0, battle_config.autoloot_adjust ? drop_rate : md->db->dropitem[i].rate, homkillonly || merckillonly);
 		}
 
-		// Ore Discovery [Celest]
-		if (sd == mvp_sd && pc_checkskill(sd,BS_FINDINGORE)>0 && battle_config.finding_ore_rate/10 >= rnd()%10000) {
-			struct s_mob_drop mobdrop;
-			memset(&mobdrop, 0, sizeof(struct s_mob_drop));
-			mobdrop.nameid = itemdb_searchrandomid(IG_FINDINGORE,1);
-			ditem = mob_setdropitem(&mobdrop, 1, md->mob_id);
-			mob_item_drop(md, dlist, ditem, 0, battle_config.finding_ore_rate/10, homkillonly || merckillonly);
-		}
 
 		if(sd) {
 			// process script-granted extra drop bonuses
@@ -3479,17 +3471,13 @@ int mob_summonslave(struct mob_data *md2,int *value,int amount,uint16 skill_id)
 		amount+=k; //Increase final value by same amount to preserve total number to summon.
 	}
 
-	if (!battle_config.monster_class_change_recover &&
-		(skill_id == NPC_TRANSFORMATION || skill_id == NPC_METAMORPHOSIS))
-		hp_rate = get_percentage(md2->status.hp, md2->status.max_hp);
-
 	for(;k<amount;k++) {
 		short x,y;
 		data.id = value[k%count]; //Summon slaves in round-robin fashion. [Skotlex]
 		if (mobdb_checkid(data.id) == 0)
 			continue;
 
-		if (skill_id != NPC_DEATHSUMMON && map_search_freecell(&md2->bl, 0, &x, &y, MOB_SLAVEDISTANCE, MOB_SLAVEDISTANCE, 0)) {
+		if ( map_search_freecell(&md2->bl, 0, &x, &y, MOB_SLAVEDISTANCE, MOB_SLAVEDISTANCE, 0)) {
 			data.x = x;
 			data.y = y;
 		} else {
@@ -3507,17 +3495,11 @@ int mob_summonslave(struct mob_data *md2,int *value,int amount,uint16 skill_id)
 			continue;
 
 		md= mob_spawn_dataset(&data);
-		if(skill_id == NPC_SUMMONSLAVE){
-			md->master_id=md2->bl.id;
-			md->special_state.ai = md2->special_state.ai;
-		}
+		
 		mob_spawn(md);
 
 		if (hp_rate) //Scale HP
 			md->status.hp = md->status.max_hp*hp_rate/100;
-
-		if (skill_id == NPC_SUMMONSLAVE) // Only appies to NPC_SUMMONSLAVE
-			status_calc_slave_mode(md, md2); // Inherit the aggressive mode of the master.
 
 		if (md2->state.copy_master_mode)
 			md->status.mode = md2->status.mode;
@@ -3928,8 +3910,7 @@ int mob_is_clone(int mob_id)
  **/
 static bool mob_clone_disabled_skills(uint16 skill_id) {
 	switch (skill_id) {
-		case PR_TURNUNDEAD:
-		case PR_MAGNUS:
+		case SK_PR_MAGNUSEXORCISMUS:
 			return true;
 	}
 	return false;
@@ -4083,9 +4064,9 @@ int mob_clone_spawn(struct map_session_data *sd, int16 m, int16 x, int16 y, cons
 			ms->target = MST_FRIEND;
 			ms->cond1 = MSC_FRIENDHPLTMAXRATE;
 			ms->cond2 = 90;
-			if (skill_id == AL_HEAL)
+			if (skill_id == SK_AL_HEAL)
 				ms->permillage = 5000; //Higher skill rate usage for heal.
-			else if (skill_id == ALL_RESURRECTION)
+			else if (skill_id == SK_PR_RESURRECTIO)
 				ms->cond2 = 1;
 			//Delay: Remove the stock 5 secs and add half of the support time.
 			ms->delay += -5000 +(skill_get_time(skill_id, ms->skill_lv) + skill_get_time2(skill_id, ms->skill_lv))/2;
@@ -4100,8 +4081,7 @@ int mob_clone_spawn(struct map_session_data *sd, int16 m, int16 x, int16 y, cons
 			}
 		} else {
 			switch (skill_id) { //Certain Special skills that are passive, and thus, never triggered.
-				case TF_DOUBLE:
-				case GS_CHAINACTION:
+				case SK_AS_DOUBLEATTACK:
 					ms->state = MSS_BERSERK;
 					ms->target = MST_TARGET;
 					ms->cond1 = MSC_ALWAYS;
@@ -5804,13 +5784,13 @@ static bool mob_parse_row_mobskilldb(char** str, int columns, int current)
 	ms->val[3] = (int)strtol(str[15],NULL,0);
 	ms->val[4] = (int)strtol(str[16],NULL,0);
 
-	if(ms->skill_id == NPC_EMOTION && mob_id > 0 &&
+	if(false && mob_id > 0 &&
 		ms->val[1] == mob->status.mode)
 	{
 		ms->val[1] = 0;
 		ms->val[4] = 1; //request to return mode to normal.
 	}
-	if(ms->skill_id == NPC_EMOTION_ON && mob_id > 0 && ms->val[1])
+	if(false && mob_id > 0 && ms->val[1])
 	{	//Adds a mode to the mob.
 		//Remove aggressive mode when the new mob type is passive.
 		if (!(ms->val[1]&MD_AGGRESSIVE))

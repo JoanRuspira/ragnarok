@@ -93,7 +93,7 @@ int elemental_save(struct elemental_data *ed);
 int elemental_change_mode_ack(struct elemental_data *ed, enum elemental_skillmode skill_mode);
 int elemental_change_mode(struct elemental_data *ed, enum e_mode mode);
 
-void elemental_heal(struct elemental_data *ed, int hp, int sp);
+void elementSK_AL_HEAL(struct elemental_data *ed, int hp, int sp);
 int elemental_dead(struct elemental_data *ed);
 
 int elemental_delete(struct elemental_data *ed);

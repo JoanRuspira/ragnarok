@@ -5,12 +5,12 @@ Header:
 
 Body:
   - Id: 134
-    Name: AS_KATAR
+    Name: SK_AS_KATAR
     Description: Katar Mastery
     MaxLevel: 10
     Type: Weapon
   - Id: 136
-    Name: AS_SONICBLOW
+    Name: SK_AS_SONICBLOW
     Description: Sonic Blow
     MaxLevel: 5
     Type: Weapon
@@ -29,7 +29,7 @@ Body:
       Weapon:
         Katar: true
   - Id: 2036
-    Name: GC_ROLLINGCUTTER
+    Name: SK_AS_ROLLINGCUTTER
     Description: Rolling Cutter
     MaxLevel: 5
     Type: Weapon
@@ -57,7 +57,7 @@ Body:
       Weapon:
         Katar: true
   - Id: 2037
-    Name: GC_CROSSRIPPERSLASHER
+    Name: SK_AS_CROSSRIPPERSLASHER
     Description: Cross Ripper Slasher
     MaxLevel: 5
     Type: Weapon
@@ -83,7 +83,7 @@ Body:
       Weapon:
         Katar: true
   - Id: 135
-    Name: AS_CLOAKING
+    Name: SK_AS_CLOAKING
     Description: Cloaking
     MaxLevel: 5
     Type: Weapon
@@ -108,7 +108,7 @@ Body:
     Requires:
       SpCost: 15
   - Id: 137
-    Name: AS_GRIMTOOTH
+    Name: SK_AS_GRIMTOOTH
     Description: Grimtooth
     MaxLevel: 5
     Type: Weapon
@@ -142,7 +142,7 @@ Body:
     Requires:
       SpCost: 15
   - Id: 389
-    Name: ST_CHASEWALK
+    Name: SK_AS_STEALTH
     Description: Stealth
     MaxLevel: 5
     TargetType: Self
@@ -160,7 +160,7 @@ Body:
     Requires:
       SpCost: 20
   - Id: 214
-    Name: RG_RAID
+    Name: SK_AS_PHANTOMMENACE
     Description: Sightless Mind
     MaxLevel: 5
     Type: Weapon
@@ -185,7 +185,7 @@ Body:
     Requires:
       SpCost: 18
   - Id: 138
-    Name: AS_ENCHANTPOISON
+    Name: SK_AS_ENCHANTPOISON
     Description: Enchant Poison
     MaxLevel: 5
     Type: Weapon
@@ -232,7 +232,7 @@ Body:
         - Item: Poison_Bottle
           Amount: 1
   - Id: 2450
-    Name: SO_CLOUD_KILL
+    Name: SK_AS_POISONOUSCLOUD
     Description: Cloud Kill
     MaxLevel: 5
     Type: Weapon
@@ -284,7 +284,7 @@ Body:
         PathCheck: true
         RemovedByFireRain: true
   - Id: 2021
-    Name: GC_VENOMIMPRESS
+    Name: SK_AS_VENOMIMPRESS
     Description: Venom Impress
     MaxLevel: 5
     TargetType: Attack
@@ -309,7 +309,7 @@ Body:
     Requires:
       SpCost: 15
   - Id: 141
-    Name: AS_SPLASHER
+    Name: SK_AS_VENOMSPLASHER
     Description: Venom Splasher
     MaxLevel: 5
     Type: Weapon
@@ -348,7 +348,7 @@ Body:
         - Item: Poison_Powder
           Amount: 1
   - Id: 523
-    Name: NJ_SYURIKEN
+    Name: SK_AS_SHURIKEN
     Description: Throw Shuriken
     MaxLevel: 5
     Type: Weapon
@@ -363,7 +363,7 @@ Body:
         Shuriken: true
       AmmoAmount: 1
   - Id: 524
-    Name: NJ_KUNAI
+    Name: SK_AS_KUNAI
     Description: Throw Kunai
     MaxLevel: 5
     Type: Weapon
@@ -381,12 +381,12 @@ Body:
         Kunai: true
       AmmoAmount: 3
   - Id: 133
-    Name: AS_LEFT
+    Name: SK_AS_DUALWIELDING
     Description: Lefthand Mastery
     MaxLevel: 5
     Type: Weapon
   - Id: 48
-    Name: TF_DOUBLE
+    Name: SK_AS_DOUBLEATTACK
     Description: Double Attack
     MaxLevel: 10
     Type: Weapon
@@ -395,7 +395,7 @@ Body:
     HitCount: 2
     Element: Weapon
   - Id: 868
-    Name: DUMMY_SONICBLOW
+    Name: SK_AS_DUMMY_SONICBLOW
     Description: Vulcan Arrow
     MaxLevel: 5
     Type: Weapon

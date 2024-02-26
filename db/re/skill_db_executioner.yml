@@ -5,7 +5,7 @@ Header:
 
 Body:
   - Id: 5001
-    Name: GC_DARKCROW
+    Name: SK_EX_DARKCLAW
     Description: Dark Claw
     MaxLevel: 5
     Type: Weapon
@@ -25,7 +25,7 @@ Body:
       Weapon:
         Katar: true
   - Id: 869
-    Name: DUMMY_CROSSIMPACT
+    Name: SK_EX_DUMMY_CROSSIMPACT
     Description: Vulcan Arrow
     MaxLevel: 5
     Type: Weapon
@@ -44,7 +44,7 @@ Body:
       Weapon:
         Katar: true
   - Id: 379
-    Name: ASC_BREAKER
+    Name: SK_EX_SOULDESTROYER
     Description: Soul Destroyer
     MaxLevel: 5
     Type: Weapon
@@ -63,7 +63,7 @@ Body:
         Shuriken: true
       AmmoAmount: 1
   - Id: 406
-    Name: ASC_METEORASSAULT
+    Name: SK_EX_METEORASSAULT
     Description: Meteor Assault
     MaxLevel: 5
     Type: Weapon
@@ -94,7 +94,7 @@ Body:
         Kunai: true
       AmmoAmount: 4
   - Id: 2035
-    Name: GC_HALLUCINATIONWALK
+    Name: SK_EX_HALLUCINATIONWALK
     Description: Hallucination Walk
     MaxLevel: 5
     TargetType: Self
@@ -107,7 +107,7 @@ Body:
     Requires:
       SpCost: 40
   - Id: 2290
-    Name: SC_INVISIBILITY
+    Name: SK_EX_INVISIBILITY
     Description: Invisibility
     MaxLevel: 5
     Type: Weapon
@@ -122,7 +122,7 @@ Body:
     Requires:
       SpCost: 15
   - Id: 870
-    Name: ASC_DANCINGBLADES
+    Name: SK_EX_DANCINGBLADES
     Description: Dancing Blade
     MaxLevel: 5
     Type: Weapon
@@ -156,12 +156,12 @@ Body:
         Knuckle: true
         Book: true
   - Id: 1003
-    Name: AS_SONICACCEL
+    Name: SK_EX_SONICACCELERATION
     Description: Sonic Acceleration
     MaxLevel: 5
     Type: Weapon
   - Id: 2448
-    Name: SO_POISON_BUSTER
+    Name: SK_EX_POISONBUSTER
     Description: Poison Buster
     MaxLevel: 5
     Type: Weapon
@@ -185,7 +185,7 @@ Body:
         - Item: Poison_Powder
           Amount: 1
   - Id: 378
-    Name: ASC_EDP
+    Name: SK_EX_ENCHANTDEADLYPOISON
     Description: Enchant Deadly Poison
     MaxLevel: 5
     Type: Weapon
@@ -206,3 +206,22 @@ Body:
           Amount: 1
         - Item: Poison_Powder
           Amount: 1
+  - Id: 2022
+    Name: SK_EX_CROSSIMPACT
+    Description: Cross Impact
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: 5
+    Hit: Multi_Hit
+    HitCount: -8
+    Element: Weapon
+    Cooldown: 5000
+    AfterCastActDelay: 2000
+    Duration2: 5000
+    CastDelayFlags:
+      IgnoreStatus: true
+    Requires:
+      SpCost: 45
+      Weapon:
+        Katar: true

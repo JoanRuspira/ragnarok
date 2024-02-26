@@ -5,7 +5,7 @@ Header:
 
 Body:
   - Id: 50
-    Name: TF_STEAL
+    Name: SK_TF_STEAL
     Description: Steal
     MaxLevel: 5
     Type: Weapon
@@ -21,7 +21,7 @@ Body:
     Requires:
       SpCost: 0
   - Id: 802
-    Name: TF_SNATCH
+    Name: SK_TF_SNATCH
     Description: Snatch
     MaxLevel: 5
     Type: Weapon
@@ -39,7 +39,7 @@ Body:
     Requires:
       SpCost: 14
   - Id: 803
-    Name: TF_SANDATTACK
+    Name: SK_TF_SANDATTACK
     Description: Sand Attack
     MaxLevel: 5
     Type: Weapon
@@ -57,18 +57,18 @@ Body:
     Requires:
       SpCost: 14
   - Id: 210
-    Name: RG_SNATCHER
+    Name: SK_TF_MUG
     Description: Gank
     MaxLevel: 10
     Type: Weapon
     Element: Weapon
   - Id: 801
-    Name: TF_DAGGER
+    Name: SK_TF_DAGGER
     Description: Dagger Mastery
     MaxLevel: 5
     Type: Weapon
   - Id: 52
-    Name: TF_POISON
+    Name: SK_TF_POISONSLASH
     Description: Poison Slash
     MaxLevel: 5
     Type: Weapon
@@ -87,7 +87,7 @@ Body:
     Requires:
       SpCost: 12
   - Id: 139
-    Name: AS_POISONREACT
+    Name: SK_TF_POISONREACT
     Description: Poison React
     MaxLevel: 5
     Type: Weapon
@@ -110,7 +110,7 @@ Body:
     Requires:
       SpCost: 30
   - Id: 1004
-    Name: AS_VENOMKNIFE
+    Name: SK_TF_VENOMKNIFE
     Description: Throw Venom Knife
     MaxLevel: 5
     Type: Weapon
@@ -134,7 +134,7 @@ Body:
         - Item: Venom_Knife
           Amount: 1
   - Id: 51
-    Name: TF_HIDING
+    Name: SK_TF_HIDING
     Description: Hiding
     MaxLevel: 5
     TargetType: Self
@@ -164,7 +164,7 @@ Body:
     Requires:
       SpCost: 10
   - Id: 150
-    Name: TF_BACKSLIDING
+    Name: SK_TF_BACKSLIDING
     Description: Back Slide
     MaxLevel: 5
     Type: Weapon
@@ -180,7 +180,7 @@ Body:
     Requires:
       SpCost: 5
   - Id: 152
-    Name: TF_THROWSTONE
+    Name: SK_TF_THROWSTONE
     Description: Stone Fling
     MaxLevel: 5
     Type: Weapon
@@ -201,7 +201,7 @@ Body:
     Requires:
       SpCost: 12
   - Id: 856
-    Name: TF_SWORD
+    Name: SK_TF_SWORD
     Description: Sword Mastery
     MaxLevel: 5
     Type: Weapon

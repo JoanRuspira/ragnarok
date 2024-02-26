@@ -7,45 +7,45 @@
 int KnightSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv, struct status_data* sstatus)
 {
 	switch (skill_id) {
-		case KN_AUTOCOUNTER:
+		case SK_KN_COUNTERATTACK:
 			add_auto_counter_special_effects(src, target);
 			return calculate_auto_counter_atk_ratio(skill_lv);
 			break;
-		case KN_BOWLINGBASH:
+		case SK_KN_BOWLINGBASH:
 			return calculate_bowling_bash_atk_ratio(skill_lv, target);
 			break;
-		case KN_SPEARBOOMERANG:
+		case SK_KN_SPEARCANNON:
 			return calculate_spear_boomerang_atk_ratio(skill_lv);
 			break;
-		case CR_SHIELDBOOMERANG:
+		case SK_CR_SHIELDBOOMERANG:
 			return calculate_shield_boomerang_atk_ratio(skill_lv);
 			break;
-		case KN_PIERCE:
+		case SK_KN_PIERCE:
 			return calculate_pierce_atk_ratio(skill_lv);
 			break;
-		case KN_BRANDISHSPEAR:
+		case SK_KN_BRANDISHSPEAR:
 			clif_specialeffect(target, 272, AREA);
 			return calculate_brandish_spear_atk_ratio(skill_lv, sstatus->vit);
 			break;
-		case RK_WINDCUTTER:
+		case SK_KN_WINDCUTTER:
 			return calculate_wind_cutter_atk_ratio(skill_lv, sstatus->int_);
 			break;
-		case RK_SONICWAVE:
+		case SK_KN_SONICWAVE:
 			return calculate_sonic_wave_atk_ratio(skill_lv,  sstatus->int_);
-		case CR_SHIELDCHARGE:
+		case SK_CR_SMITE:
 			add_smite_special_effects(target);
 			return calculate_smite_atk_ratio(skill_lv);
-		case PA_SACRIFICE:
+		case SK_KN_RECKONING:
 			return calculate_reckoning_atk_ratio(skill_lv);
-		case RK_HUNDREDSPEAR:
+		case SK_CM_HUNDREDSPEAR:
 			clif_specialeffect(target, 1348, AREA); //new_armscannon_01_clock_down
 			return calculate_a_hundred_spears_atk_ratio(skill_lv, sstatus->vit);
-		case LK_SPIRALPIERCE:
+		case SK_CM_CLASHINGSPIRAL:
 			clif_specialeffect(target, 108, AREA);
 			return calculate_clashing_spiral_atk_ratio(skill_lv, target);
-		case RK_DRAGONBREATH_WATER:
+		case SK_CM_DRAGONBREATH:
 			return calculate_dragon_breath_atk_ratio(skill_lv, sstatus->str);
-		case RK_IGNITIONBREAK:
+		case SK_CM_IGNITIONBREAK:
 			return calculate_ignition_break_atk_ratio(skill_lv, sstatus->int_);
 		default:
 			return 0;

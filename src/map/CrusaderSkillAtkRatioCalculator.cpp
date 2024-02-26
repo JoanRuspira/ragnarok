@@ -7,23 +7,23 @@
 int CrusaderSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv, struct status_data* sstatus)
 {
 	switch (skill_id) {
-		case CR_HOLYCROSS:
+		case SK_CR_HOLYCROSS:
 			return calculate_holy_cross_atk_ratio(skill_lv, sstatus->int_);
 			break;
-		case CR_GRANDCROSS:
+		case SK_CR_GRANDCROSS:
 			return calculate_grand_cross_atk_ratio(skill_lv);
 			break;
-		case PA_SHIELDCHAIN:
+		case SK_PA_RAPIDSMITING:
 			return calculate_rapid_smiting_atk_ratio(skill_lv);
 			break;
-		case PA_SHIELDSLAM:
+		case SK_PA_SHIELDSLAM:
 			add_shield_slam_special_effects(target);
 			return calculate_shield_slam_atk_ratio(skill_lv);
 			break;
-		case LG_RAYOFGENESIS:
+		case SK_PA_GENESISRAY:
 			return calculate_genesis_ray_atk_ratio(skill_lv);
 			break;
-		case PA_PRESSURE:
+		case SK_PA_GLORIADOMINI:
 			return calculate_gloria_domini_atk_ratio(skill_lv);
 			break;
 		default:

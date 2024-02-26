@@ -1373,7 +1373,7 @@ struct sg_data {
 	char hate_var[NAME_LENGTH];
 	bool (*day_func)(void);
 };
-extern const struct sg_data sg_info[MAX_PC_FEELHATE];
+const struct sg_data sg_info[MAX_PC_FEELHATE];
 
 void pc_set_bg_queue_timer(map_session_data *sd);
 void pc_delete_bg_queue_timer(map_session_data *sd);

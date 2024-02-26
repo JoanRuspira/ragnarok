@@ -5,7 +5,7 @@ Header:
 
 Body:
   - Id: 394
-    Name: CG_ARROWVULCAN
+    Name: SK_CL_ARROWVULCAN
     Description: Vulcan Arrow
     MaxLevel: 5
     Type: Weapon
@@ -32,7 +32,7 @@ Body:
         Arrow: true
       AmmoAmount: 9
   - Id: 866
-    Name: DUMMY_ARROWVULCAN
+    Name: SK_CL_DUMMY_ARROWVULCAN
     Description: Vulcan Arrow
     MaxLevel: 5
     Type: Weapon
@@ -49,7 +49,7 @@ Body:
     Requires:
       SpCost: 0
   - Id: 2418
-    Name: WM_SEVERE_RAINSTORM
+    Name: SK_CL_SEVERERAINSTORM
     Description: Severe Rainstorm
     MaxLevel: 5
     TargetType: Ground
@@ -84,7 +84,7 @@ Body:
       Flag:
         DualMode: true
   - Id: 2516
-    Name: WM_SEVERE_RAINSTORM_MELEE
+    Name: SK_CL_SEVERERAINSTORM_MELEE
     Description: Severe Rainstorm Melee
     MaxLevel: 5
     Type: Weapon
@@ -100,7 +100,7 @@ Body:
       Skill:
         Reproduce: true
   - Id: 396
-    Name: CG_MARIONETTE
+    Name: SK_CL_MARIONETTECONTROL
     Description: Marionette Control
     MaxLevel: 5
     TargetType: Support
@@ -117,7 +117,7 @@ Body:
     Requires:
       SpCost: 200
   - Id: 309
-    Name: BD_DRUMBATTLEFIELD
+    Name: SK_CL_BATTLEDRUMS
     Description: Battle Theme
     MaxLevel: 5
     Type: Misc
@@ -139,7 +139,7 @@ Body:
         - Item: Protect_Neck_Candy
           Amount: 2
   - Id: 2422
-    Name: WM_LULLABY_DEEPSLEEP
+    Name: SK_CL_DEEPSLEEPLULLABY
     Description: Deep Sleep Lullaby
     MaxLevel: 5
     TargetType: Self
@@ -162,7 +162,7 @@ Body:
         - Item: Protect_Neck_Candy
           Amount: 1
   - Id: 864
-    Name: CG_METALLICFURY
+    Name: SK_CL_METALLICFURY
     Description: Metallic Fury
     MaxLevel: 5
     Type: Magic
@@ -183,7 +183,7 @@ Body:
       Weapon:
         Musical: true
   - Id: 865
-    Name: CG_ALL_STAR
+    Name: SK_CL_ALLSTAR
     Description: All Star
     MaxLevel: 5
     Type: Magic
@@ -208,7 +208,7 @@ Body:
         - Item: Heartbroken_Tears
           Amount: 1
   - Id: 313
-    Name: BD_SIEGFRIED
+    Name: SK_CL_PAGANPARTY
     Description: Acoustic Rhythm
     MaxLevel: 5
     Type: Misc

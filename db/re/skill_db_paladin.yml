@@ -5,7 +5,7 @@ Header:
 
 Body:
   - Id: 369
-    Name: PA_GOSPEL
+    Name: SK_PA_GOSPEL
     Description: Battle Chant
     MaxLevel: 5
     Type: Misc
@@ -34,7 +34,7 @@ Body:
       Flag:
         NoOverlap: true
   - Id: 2322
-    Name: LG_PIETY
+    Name: SK_PA_KINGSGRACE
     Description: Holy Grace
     MaxLevel: 5
     Type: Magic
@@ -66,7 +66,7 @@ Body:
         - Item: Magic_Gem_Yellow
           Amount: 1
   - Id: 367
-    Name: PA_PRESSURE
+    Name: SK_PA_GLORIADOMINI
     Description: Gloria Domini
     MaxLevel: 5
     Type: Magic
@@ -92,7 +92,7 @@ Body:
     Requires:
       SpCost: 50
   - Id: 2321
-    Name: LG_RAYOFGENESIS
+    Name: SK_PA_GENESISRAY
     Description: Ray of Genesis
     MaxLevel: 5
     Type: Magic
@@ -115,7 +115,7 @@ Body:
         - Item: Magic_Gem_Blue
           Amount: 1
   - Id: 861
-    Name: PA_FORTIFY
+    Name: SK_PA_FORTIFY
     Description: Fortify
     MaxLevel: 5
     Type: Weapon
@@ -134,7 +134,7 @@ Body:
         - Item: Magic_Gem_Green
           Amount: 1
   - Id: 257
-    Name: CR_DEFENDER
+    Name: SK_PA_DEFENDINGAURA
     Description: Defending Aura
     MaxLevel: 5
     Type: Weapon
@@ -152,7 +152,7 @@ Body:
         - Item: Magic_Gem_Green
           Amount: 1
   - Id: 860
-    Name: PA_SHIELDSLAM
+    Name: SK_PA_SHIELDSLAM
     Description: Shield Slam
     MaxLevel: 5
     Type: Weapon
@@ -167,7 +167,7 @@ Body:
       SpCost: 32
       State: Shield
   - Id: 480
-    Name: PA_SHIELDCHAIN
+    Name: SK_PA_RAPIDSMITING
     Description: Shield Chain
     MaxLevel: 5
     Type: Weapon

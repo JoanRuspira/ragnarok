@@ -5,7 +5,7 @@ Header:
 
 Body:
   - Id: 822
-    Name: HT_SPIRITANIMAL
+    Name: SK_RA_SPIRITANIMAL
     Description: Spirit Animal
     MaxLevel: 5
     Type: Weapon
@@ -32,7 +32,7 @@ Body:
     Requires:
       SpCost: 80
   - Id: 899
-    Name: SN_ULLR
+    Name: SK_RA_ULLREAGLETOTEM
     Description: Ullrs Eagle Totem
     MaxLevel: 5
     Type: Misc
@@ -63,7 +63,7 @@ Body:
         Arrow: true
       AmmoAmount: 15
   - Id: 2234
-    Name: RA_FEARBREEZE
+    Name: SK_RA_TYHPOONFLOW
     Description: Typhoon Flow
     MaxLevel: 5
     TargetType: Self
@@ -95,7 +95,7 @@ Body:
       Weapon:
         Bow: true
   - Id: 512
-    Name: SN_ZEPHYR_SNIPING
+    Name: SK_RA_ZEPHYRSNIPING
     Description: Zephyr Sniping
     MaxLevel: 5
     Type: Weapon
@@ -123,3 +123,90 @@ Body:
           Amount: 1
       Weapon:
         Bow: true
+  - Id: 380
+    Name: SK_RA_FALCONEYES
+    Description: Falcon Eyes
+    MaxLevel: 10
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Duration1: 30000
+    Requires:
+      SpCost:
+        - Level: 1
+          Amount: 20
+        - Level: 2
+          Amount: 20
+        - Level: 3
+          Amount: 25
+        - Level: 4
+          Amount: 25
+        - Level: 5
+          Amount: 30
+        - Level: 6
+          Amount: 30
+        - Level: 7
+          Amount: 35
+        - Level: 8
+          Amount: 35
+        - Level: 9
+          Amount: 40
+        - Level: 10
+          Amount: 40
+  - Id: 381
+    Name: SK_RA_FALCONASSAULT
+    Description: Falcon Assault
+    MaxLevel: 5
+    Type: Misc
+    TargetType: Attack
+    DamageFlags:
+      IgnoreFlee: true
+    Range: 9
+    Hit: Multi_Hit
+    HitCount: 1
+    CastCancel: true
+    CastTime: 1000
+    AfterCastActDelay: 3000
+    Requires:
+      SpCost:
+        - Level: 1
+          Amount: 30
+        - Level: 2
+          Amount: 34
+        - Level: 3
+          Amount: 38
+        - Level: 4
+          Amount: 42
+        - Level: 5
+          Amount: 46
+      State: Falcon
+  - Id: 2491
+    Name: SK_RA_ULLREAGLETOTEM_ATK
+    Description: Hell's Plant Attack
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    DamageFlags:
+      Splash: true
+    Hit: Single
+    HitCount: 1
+    SplashArea:
+      - Level: 1
+        Area: 4
+      - Level: 2
+        Area: 4
+      - Level: 3
+        Area: 4
+      - Level: 4
+        Area: 4
+      - Level: 5
+        Area: 4
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    Requires:
+      SpCost: 1
+

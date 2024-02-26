@@ -5,7 +5,7 @@ Header:
 
 Body:
   - Id: 387
-    Name: WS_CARTBOOST
+    Name: SK_BS_CARTBOOST
     Description: Cart Boost
     MaxLevel: 5
     Type: Weapon
@@ -36,7 +36,7 @@ Body:
           Amount: 1
       State: Cart
   - Id: 2477
-    Name: GN_CARTCANNON
+    Name: SK_BS_CARTCANNON
     Description: Cart Cannon
     MaxLevel: 5
     Type: Weapon
@@ -80,7 +80,7 @@ Body:
       AmmoAmount: 1
       State: Cart
   - Id: 812
-    Name: MC_SHRAPNEL
+    Name: SK_BS_CARTSHRAPNEL
     Description: Cart Shrapnel
     MaxLevel: 5
     Type: Weapon
@@ -119,7 +119,7 @@ Body:
         Cannonball: true
       AmmoAmount: 1
   - Id: 520
-    Name: GS_SPREADATTACK
+    Name: SK_BS_CROWDCONTROLSHOT
     Description: Spread Attack
     MaxLevel: 5
     Type: Weapon
@@ -143,7 +143,7 @@ Body:
         Cannonball: true
       AmmoAmount: 3
   - Id: 111
-    Name: BS_ADRENALINE
+    Name: SK_BS_WEAPONRYEXPERTISE
     Description: Adrenaline Rush
     MaxLevel: 5
     Type: Weapon
@@ -195,7 +195,7 @@ Body:
         Katar: true
         2hStaff: true
   - Id: 112
-    Name: BS_WEAPONPERFECT
+    Name: SK_BS_WEAPONSHARPENING
     Description: Weapon Perfection
     MaxLevel: 5
     Type: Weapon
@@ -248,7 +248,7 @@ Body:
         Katar: true
         2hStaff: true
   - Id: 113
-    Name: BS_OVERTHRUST
+    Name: SK_BS_POWERTHRUST
     Description: Power-Thrust
     MaxLevel: 5
     Type: Weapon
@@ -291,7 +291,7 @@ Body:
         Katar: true
         2hStaff: true
   - Id: 114
-    Name: BS_MAXIMIZE
+    Name: SK_BS_MAXIMIZEPOWER
     Description: Maximize Power
     MaxLevel: 5
     Type: Weapon
@@ -336,7 +336,7 @@ Body:
         Katar: true
         2hStaff: true
   - Id: 808
-    Name: BS_AXEQUICKEN
+    Name: SK_BS_AXEQUICKEN
     Description: Axe Quicken
     MaxLevel: 5
     Type: Weapon
@@ -364,7 +364,7 @@ Body:
         1hAxe: true
         2hAxe: true
   - Id: 2278
-    Name: NC_AXEBOOMERANG
+    Name: SK_BS_AXEBOOMERANG
     Description: Axe Boomerang
     MaxLevel: 5
     Type: Weapon
@@ -395,7 +395,7 @@ Body:
         1hAxe: true
         2hAxe: true
   - Id: 2280
-    Name: NC_AXETORNADO
+    Name: SK_BS_AXETORNADO
     Description: Axe Tornado
     MaxLevel: 5
     Type: Weapon
@@ -417,7 +417,7 @@ Body:
         1hAxe: true
         2hAxe: true
   - Id: 110
-    Name: BS_HAMMERFALL
+    Name: SK_BS_HAMMERFALL
     Description: Hammer Fall
     MaxLevel: 5
     Type: Weapon
@@ -435,7 +435,7 @@ Body:
         1hAxe: true
         2hAxe: true
   - Id: 8
-    Name: SM_ENDURE
+    Name: SK_BS_ENDURE
     Description: Endure
     MaxLevel: 5
     Type: Weapon
@@ -461,12 +461,12 @@ Body:
     Requires:
       SpCost: 17
   - Id: 109
-    Name: BS_SKINTEMPER
+    Name: SK_BS_SKINTEMPERING
     Description: Skin Tempering
     MaxLevel: 5
     Type: Weapon
   - Id: 108
-    Name: BS_REPAIRWEAPON
+    Name: SK_BS_REPAIRWEAPON
     Description: Weapon Repair
     MaxLevel: 5
     Type: Weapon

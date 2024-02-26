@@ -114,7 +114,7 @@ Header:
 #    RetaliateRate: 400
 #    ChangeTargetRate: 400
 #    SupportScript: >
-#      petskillattack "SM_PROVOKE",1,0,5;
+#      petskillattack "SK_SM_PROVOKE",1,0,5;
 #  - Mob: ROCKER
 #    AttackRate: 350
 #    RetaliateRate: 350
@@ -168,19 +168,19 @@ Header:
 #    RetaliateRate: 300
 #    ChangeTargetRate: 800
 #    SupportScript: >
-#      petskillattack "BS_HAMMERFALL",1,0,10;
+#      petskillattack "SK_BS_HAMMERFALL",1,0,10;
 #  - Mob: SOHEE
 #    AttackRate: 100
 #    RetaliateRate: 1000
 #    ChangeTargetRate: 200
 #    SupportScript: >
-#      petskillsupport "AL_HEAL",5,60,33,100;
+#      petskillsupport "SK_AL_HEAL",5,60,33,100;
 #  - Mob: ISIS
 #    AttackRate: 650
 #    RetaliateRate: 450
 #    ChangeTargetRate: 150
 #    SupportScript: >
-#      petskillsupport "PR_MAGNIFICAT",2,60,50,50;
+#      petskillsupport "SK_PR_MAGNIFICAT",2,60,50,50;
 #  - Mob: PETIT
 #    AttackRate: 800
 #    RetaliateRate: 400
@@ -210,19 +210,19 @@ Header:
 #    RetaliateRate: 100
 #    ChangeTargetRate: 500
 #    SupportScript: >
-#      petskillattack "AS_SONICBLOW",1,0,3;
+#      petskillattack "SK_AS_SONICBLOW",1,0,3;
 #  - Mob: ALICE
 #    AttackRate: 100
 #    RetaliateRate: 1000
 #    ChangeTargetRate: 200
 #    SupportScript: >
-#      petskillsupport "AL_HEAL",5,60,25,100;
+#      petskillsupport "SK_AL_HEAL",5,60,25,100;
 #  - Mob: EVENT_RICECAKE
 #    AttackRate: 500
 #    RetaliateRate: 500
 #    ChangeTargetRate: 200
 #    SupportScript: >
-#      petskillsupport "CR_DEFENDER",3,240,50,100;
+#      petskillsupport "SK_PA_DEFENDINGAURA",3,240,50,100;
 #  - Mob: GOBLINE_XMAS
 #    AttackRate: 300
 #    RetaliateRate: 300
@@ -234,13 +234,13 @@ Header:
 #    RetaliateRate: 300
 #    ChangeTargetRate: 800
 #    SupportScript: >
-#      petskillattack "CR_SHIELDCHARGE",5,5,5;
+#      petskillattack "SK_CR_SMITE",5,5,5;
 #  - Mob: ECLIPSE_P
 #    AttackRate: 300
 #    RetaliateRate: 300
 #    ChangeTargetRate: 800
 #    SupportScript: >
-#      petskillattack "TF_THROWSTONE",1,5,5;
+#      petskillattack "SK_TF_THROWSTONE",1,5,5;
 #  - Mob: GOBLIN_1
 #    AttackRate: 300
 #    RetaliateRate: 300
@@ -264,13 +264,13 @@ Header:
 #    RetaliateRate: 300
 #    ChangeTargetRate: 800
 #    SupportScript: >
-#      petskillattack "SM_MAGNUM",5,5,5;
+#      petskillattack "SK_SM_MAGNUM",5,5,5;
 #  - Mob: DIABOLIC
 #    AttackRate: 300
 #    RetaliateRate: 300
 #    ChangeTargetRate: 800
 #    SupportScript: >
-#      petskillattack "WZ_METEOR",2,5,5;
+#      petskillattack "SK_WZ_METEORSTORM",2,5,5;
 #  - Mob: WANDER_MAN
 #    AttackRate: 300
 #    RetaliateRate: 300
@@ -282,7 +282,7 @@ Header:
 #    RetaliateRate: 300
 #    ChangeTargetRate: 800
 #    SupportScript: >
-#      petskillattack "CR_SHIELDCHARGE",5,5,5;
+#      petskillattack "SK_CR_SMITE",5,5,5;
 #  - Mob: GOLEM
 #    AttackRate: 300
 #    RetaliateRate: 300

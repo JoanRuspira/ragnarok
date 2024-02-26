@@ -5,7 +5,7 @@ Header:
 
 Body:
   - Id: 809
-    Name: MC_CARTQUAKE
+    Name: SK_MC_CARTQUAKE
     Description: Cart Quake
     MaxLevel: 5
     Type: Weapon
@@ -38,7 +38,7 @@ Body:
       SpCost: 15
       State: Cart
   - Id: 810
-    Name: MC_CARTCYCLONE
+    Name: SK_MC_CARTCYCLONE
     Description: Cart Cyclone
     MaxLevel: 5
     Type: Weapon
@@ -71,7 +71,7 @@ Body:
       SpCost: 15
       State: Cart
   - Id: 811
-    Name: MC_CARTBRUME
+    Name: SK_MC_CARTBRUME
     Description: Cart Brume
     MaxLevel: 5
     Type: Weapon
@@ -104,7 +104,7 @@ Body:
       SpCost: 15
       State: Cart
   - Id: 804
-    Name: MC_FIREWORKS
+    Name: SK_MC_CARTFIREWORKS
     Description: Cart Fireworks
     MaxLevel: 5
     Type: Weapon
@@ -137,12 +137,12 @@ Body:
       SpCost: 15
       State: Cart
   - Id: 226
-    Name: AM_AXEMASTERY
+    Name: SK_MC_AXEMASTERY
     Description: Axe Mastery
     MaxLevel: 5
     Type: Weapon
   - Id: 42
-    Name: MC_MAMMONITE
+    Name: SK_MC_MAMMONITE
     Description: Mammonite
     MaxLevel: 5
     Type: Weapon
@@ -165,7 +165,7 @@ Body:
         1hAxe: true
         2hAxe: true
   - Id: 155
-    Name: MC_LOUD
+    Name: SK_MC_LOUD
     Description: Loud Exclamation
     MaxLevel: 5
     Type: Weapon
@@ -196,7 +196,7 @@ Body:
     Requires:
       SpCost: 16
   - Id: 818
-    Name: MC_UPROAR
+    Name: SK_MC_UPROAR
     Description: Crazy Uproar
     MaxLevel: 5
     Type: Weapon
@@ -227,7 +227,7 @@ Body:
     Requires:
       SpCost: 20
   - Id: 1013
-    Name: BS_GREED
+    Name: SK_MC_GREED
     Description: Greed
     MaxLevel: 5
     Type: Weapon
@@ -256,11 +256,11 @@ Body:
         - Level: 5
           Area: 5
   - Id: 38
-    Name: MC_OVERCHARGE
+    Name: SK_MC_OVERCHARGE
     Description: Overcharge
     MaxLevel: 5
   - Id: 893
-    Name: MC_COINFLIP
+    Name: SK_MC_COINFLIP
     Description: Coin Flip
     MaxLevel: 5
     Type: Weapon
@@ -274,7 +274,7 @@ Body:
     Requires:
       SpCost: 20
   - Id: 41
-    Name: MC_VENDING
+    Name: SK_MC_VENDING
     Description: Vending
     MaxLevel: 5
     Cooldown: 15000

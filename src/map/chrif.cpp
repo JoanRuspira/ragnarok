@@ -1060,24 +1060,7 @@ int chrif_divorceack(uint32 char_id, int partner_id) {
  *------------------------------------------*/
 int chrif_deadopt(uint32 father_id, uint32 mother_id, uint32 child_id) {
 	struct map_session_data* sd;
-	uint16 idx = skill_get_index(WE_CALLBABY);
-
-	if( father_id && ( sd = map_charid2sd(father_id) ) != NULL && sd->status.child == child_id ) {
-		sd->status.child = 0;
-		sd->status.skill[idx].id = 0;
-		sd->status.skill[idx].lv = 0;
-		sd->status.skill[idx].flag = SKILL_FLAG_PERMANENT;
-		clif_deleteskill(sd,WE_CALLBABY);
-	}
-
-	if( mother_id && ( sd = map_charid2sd(mother_id) ) != NULL && sd->status.child == child_id ) {
-		sd->status.child = 0;
-		sd->status.skill[idx].id = 0;
-		sd->status.skill[idx].lv = 0;
-		sd->status.skill[idx].flag = SKILL_FLAG_PERMANENT;
-		clif_deleteskill(sd,WE_CALLBABY);
-	}
-
+	
 	return 0;
 }
 

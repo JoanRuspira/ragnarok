@@ -5,11 +5,11 @@ Header:
 
 Body:
   - Id: 43
-    Name: AC_OWL
+    Name: SK_AC_OWL
     Description: Owl's Eye
     MaxLevel: 5
   - Id: 147
-    Name: AC_MAKINGARROW
+    Name: SK_AC_MAKINGARROW
     Description: Arrow Crafting
     MaxLevel: 5
     Type: Weapon
@@ -20,7 +20,7 @@ Body:
       SpCost: 10
       State: Recover_Weight_Rate
   - Id: 1009
-    Name: HT_PHANTASMIC
+    Name: SK_AC_ARROWRAIN
     Description: Arrow Shower
     MaxLevel: 5
     Type: Weapon
@@ -53,7 +53,7 @@ Body:
         Arrow: true
       AmmoAmount: 5
   - Id: 499
-    Name: HT_POWER
+    Name: SK_AC_SPIRITUALSTRAFE
     Description: Beast Strafing
     MaxLevel: 5
     Type: Weapon
@@ -80,12 +80,12 @@ Body:
         Arrow: true
       AmmoAmount: 1
   - Id: 2430
-    Name: AC_BOW
+    Name: SK_AC_BOW
     Description: Bow Mastery
     MaxLevel: 5
     Type: Weapon
   - Id: 2017
-    Name: RK_STORMBLAST
+    Name: SK_AC_CHARGEDARROW
     Description: Arrow Repel
     MaxLevel: 5
     Type: Weapon
@@ -114,7 +114,7 @@ Body:
         Arrow: true
       AmmoAmount: 1
   - Id: 47
-    Name: AC_SHOWER
+    Name: SK_AC_ARROWSHOWER
     Description: Arrow Shower
     MaxLevel: 5
     Type: Weapon
@@ -146,7 +146,7 @@ Body:
         Arrow: true
       AmmoAmount: 5
   - Id: 46
-    Name: AC_DOUBLE
+    Name: SK_AC_DOUBLESTRAFE
     Description: Double Strafe
     MaxLevel: 5
     Type: Weapon
@@ -172,19 +172,19 @@ Body:
         Arrow: true
       AmmoAmount: 1
   - Id: 44
-    Name: AC_VULTURE
+    Name: SK_AC_VULTURE
     Description: Vulture's Eye
     MaxLevel: 5
   - Id: 826
-    Name: AC_HAWK
+    Name: SK_AC_HAWK
     Description: Hawk's Eye
     MaxLevel: 5
   - Id: 827
-    Name: AC_AGI
+    Name: SK_AC_AGI
     Description: Agility
     MaxLevel: 5
   - Id: 45
-    Name: AC_CONCENTRATION
+    Name: SK_AC_IMPROVECONCENTRATION
     Description: Improve Concentration
     MaxLevel: 5
     Type: Weapon
@@ -211,7 +211,7 @@ Body:
     Requires:
       SpCost: 70
   - Id: 807
-    Name: AC_PARALIZING
+    Name: SK_AC_PARALIZINGDART
     Description: Paralyzing Shot
     MaxLevel: 5
     Type: Weapon
@@ -235,7 +235,7 @@ Body:
         Arrow: true
       AmmoAmount: 1
   - Id: 831
-    Name: AC_TRANQUILIZING
+    Name: SK_AC_TRANQUILIZINGDART
     Description: Phantasmic Arrow
     MaxLevel: 5
     Type: Weapon

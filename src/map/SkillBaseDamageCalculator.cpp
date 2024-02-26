@@ -63,7 +63,7 @@ void SkillBaseDamageCalculator::battle_calc_skill_base_damage(Damage * wd, block
 
 
 	//joan
-	if (skill_id == PA_SACRIFICE || skill_id == HT_HURRICANEFURY || skill_id == SN_ZEPHYR_SNIPING) {
+	if (skill_id == SK_KN_RECKONING || skill_id == SK_HT_LIVINGTORNADO || skill_id == SK_RA_ZEPHYRSNIPING) {
 		wd->damage = sstatus->max_hp * 1 / 100;
 		wd->damage2 = 0;
 		wd->weaponAtk = wd->damage;
@@ -103,13 +103,6 @@ void SkillBaseDamageCalculator::battle_calc_skill_base_damage(Damage * wd, block
 		if (sd->bonus.atk_rate) {
 			ATK_ADDRATE(wd->damage, wd->damage2, sd->bonus.atk_rate);
 			RE_ALLATK_ADDRATE(wd, sd->bonus.atk_rate);
-		}
-
-		if (sd->status.party_id && (skill = pc_checkskill(sd, TK_POWER)) > 0) {
-			if ((i = party_foreachsamemap(party_sub_count, sd, 0)) > 1) { // exclude the player himself [Inkfish]
-				ATK_ADDRATE(wd->damage, wd->damage2, 2 * skill*i);
-				RE_ALLATK_ADDRATE(wd, 2 * skill*i);
-			}
 		}
 	}
 }
@@ -317,13 +310,11 @@ void SkillBaseDamageCalculator::battle_calc_attack_masteries(Damage * wd, block_
 
 
 		//General skill masteries
-		if (skill_id == TF_POISON) //Additional ATK from Envenom is treated as mastery type damage [helvetica]
+		if (skill_id == SK_TF_POISONSLASH) //Additional ATK from Envenom is treated as mastery type damage [helvetica]
 			ATK_ADD(wd->masteryAtk, wd->masteryAtk2, 15 * skill_lv);
-		if (skill_id != MC_CARTREVOLUTION && pc_checkskill(sd, BS_HILTBINDING) > 0)
-			ATK_ADD(wd->masteryAtk, wd->masteryAtk2, 4);
-		if (skill_id != CR_SHIELDBOOMERANG)
+		if (skill_id != SK_CR_SHIELDBOOMERANG)
 			ATK_ADD2(wd->masteryAtk, wd->masteryAtk2, ((wd->div_ < 1) ? 1 : wd->div_) * sd->right_weapon.star, ((wd->div_ < 1) ? 1 : wd->div_) * sd->left_weapon.star);
-		if (skill_id == MO_FINGEROFFENSIVE) {
+		if (skill_id == SK_MO_TRHOWSPIRITSPHERE) {
 			ATK_ADD(wd->masteryAtk, wd->masteryAtk2, ((wd->div_ < 1) ? 1 : wd->div_) * sd->spiritball_old * 3);
 		}
 		else
@@ -379,26 +370,10 @@ int64 SkillBaseDamageCalculator::battle_addmastery(map_session_data * sd, block_
 	damage = 0;
 	nullpo_ret(sd);
 
-	if ((skill = pc_checkskill(sd, AL_DEMONBANE)) > 0 &&
-		target->type == BL_MOB && //This bonus doesn't work against players.
-		(battle_check_undead(status->race, status->def_ele) || status->race == RC_DEMON))
-		damage += (skill*(int)(3 + (sd->status.base_level + 1)*0.05));	// submitted by orn
-	// if ((skill = pc_checkskill(sd, RA_RANGERMAIN)) > 0 && (status->race == RC_BRUTE || status->race == RC_PLANT || status->race == RC_FISH))
+	
+	// if ((skill = pc_checkskill(sd, SK_HT_TRACKINGBREEZE)) > 0 && (status->race == RC_BRUTE || status->race == RC_PLANT || status->race == RC_FISH))
 	// 	damage += (skill * 5);
-	if ((skill = pc_checkskill(sd, NC_RESEARCHFE)) > 0 && (status->def_ele == ELE_FIRE || status->def_ele == ELE_EARTH))
-		damage += (skill * 10);
-
-	damage += (15 * pc_checkskill(sd, NC_MADOLICENCE)); // Attack bonus is granted even without the Madogear
-
-	if ((skill = pc_checkskill(sd, HT_BEASTBANE)) > 0 && (status->race == RC_BRUTE || status->race == RC_INSECT)) {
-		damage += (skill * 4);
-		if (sd->sc.data[SC_SPIRIT] && sd->sc.data[SC_SPIRIT]->val2 == SL_HUNTER)
-			damage += sd->status.str;
-	}
-
-	//Weapon Research bonus applies to all weapons
-	if ((skill = pc_checkskill(sd, BS_WEAPONRESEARCH)) > 0)
-		damage += (skill * 2);
+	
 
 	if (type == 0)
 		weapon = sd->weapontype1;
@@ -407,52 +382,44 @@ int64 SkillBaseDamageCalculator::battle_addmastery(map_session_data * sd, block_
 
 	switch (weapon) {
 		case W_2HSWORD:
-			if ((skill = pc_checkskill(sd, SM_TWOHAND)) > 0)
+			if ((skill = pc_checkskill(sd, SK_SM_TWOHAND)) > 0)
 				damage += (skill * 8);
 		case W_1HSWORD:
-			if ((skill = pc_checkskill(sd, SM_SWORD)) > 0)
+			if ((skill = pc_checkskill(sd, SK_SM_SWORD)) > 0)
 				damage += (skill * 8);
-			if ((skill = pc_checkskill(sd, MC_SWORD)) > 0)
-				damage += (skill * 8);
-			if ((skill = pc_checkskill(sd, TF_SWORD)) > 0)
+			if ((skill = pc_checkskill(sd, SK_TF_SWORD)) > 0)
 				damage += (skill * 8);
 		case W_DAGGER:
-			if ((skill = pc_checkskill(sd, TF_DAGGER)) > 0)
+			if ((skill = pc_checkskill(sd, SK_TF_DAGGER)) > 0)
 				damage += (skill * 8);
 			break;
 		case W_1HSPEAR:
 		case W_2HSPEAR:
-			if ((skill = pc_checkskill(sd, KN_SPEARMASTERY)) > 0) {
+			if ((skill = pc_checkskill(sd, SK_SM_SPEARMASTERY)) > 0) {
 				damage += (skill * 8);
 			}
 			break;
 		case W_BOW:
-			if ((skill = pc_checkskill(sd, AC_BOW)) > 0)
+			if ((skill = pc_checkskill(sd, SK_AC_BOW)) > 0)
 				damage += (skill * 8);
 			break;
 		case W_1HAXE:
 		case W_2HAXE:
-			if ((skill = pc_checkskill(sd, AM_AXEMASTERY)) > 0)
+			if ((skill = pc_checkskill(sd, SK_MC_AXEMASTERY)) > 0)
 				damage += (skill * 8);
 			break;
 		case W_MACE:
 		case W_2HMACE:
-		case W_2HSTAFF:
-		case W_STAFF:
 		case W_KNUCKLE:
-			if ((skill = pc_checkskill(sd, PR_MACEMASTERY)) > 0)
+			if ((skill = pc_checkskill(sd, SK_AL_MACEMASTERY)) > 0)
 				damage += (skill * 8);
 			break;
 		case W_MUSICAL:
-			if ((skill = pc_checkskill(sd, BA_MUSICALLESSON)) > 0)
+			if ((skill = pc_checkskill(sd, SK_BA_SHOWMANSHIP)) > 0)
 				damage += (skill * 8);
 			break;
-		case W_BOOK:
-			if ((skill = pc_checkskill(sd, SA_ADVANCEDBOOK)) > 0)
-				damage += (skill * 3);
-			break;
 		case W_KATAR:
-			if ((skill = pc_checkskill(sd, AS_KATAR)) > 0)
+			if ((skill = pc_checkskill(sd, SK_AS_KATAR)) > 0)
 				damage += (skill * 8);
 			break;
 	}

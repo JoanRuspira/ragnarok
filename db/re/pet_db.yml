@@ -808,7 +808,7 @@ Body:
       
   #     if( .@i >= PET_INTIMATE_LOYAL ){
   #       bonus bMaxHPRate,3;
-  #       bonus3 bAutoSpellWhenHit,"AL_HEAL",1,10;
+  #       bonus3 bAutoSpellWhenHit,"SK_AL_HEAL",1,10;
   #     }
   # - Mob: CIVIL_SERVANT
   #   TameItem: Knife_Goblin_Ring

@@ -785,7 +785,7 @@ Body:
     Refineable: true
     View: 197
     Script: |
-      bonus3 bAutoSpell,"SM_PROVOKE",3,30;
+      bonus3 bAutoSpell,"SK_SM_PROVOKE",3,30;
   - Id: 2256
     AegisName: Magestic_Goat
     Name: Majestic Goat

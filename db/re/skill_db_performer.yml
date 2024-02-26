@@ -5,7 +5,7 @@ Header:
 
 Body:
   - Id: 2381
-    Name: MI_RUSH_WINDMILL
+    Name: SK_BA_WINDMILLPOEM
     Description: Windmill Poem
     MaxLevel: 5
     TargetType: Self
@@ -25,12 +25,12 @@ Body:
         - Item: Protect_Neck_Candy
           Amount: 1
   - Id: 315
-    Name: BA_MUSICALLESSON
+    Name: SK_BA_SHOWMANSHIP
     Description: Music Lessons
     MaxLevel: 5
     Type: Weapon
   - Id: 307
-    Name: BD_RICHMANKIM
+    Name: SK_BA_ACOUSTICRYTHM
     Description: Acoustic Rythm
     MaxLevel: 5
     Type: Misc
@@ -54,7 +54,7 @@ Body:
         - Item: Protect_Neck_Candy
           Amount: 1
   - Id: 320
-    Name: BA_ASSASSINCROSS
+    Name: SK_BA_IMPRESSIVERIFF
     Description: Impressive Riff
     MaxLevel: 5
     Type: Misc
@@ -78,7 +78,7 @@ Body:
         - Item: Protect_Neck_Candy
           Amount: 1
   - Id: 321
-    Name: BA_POEMBRAGI
+    Name: SK_BA_MAGICSTRINGS
     Description: Enchanted Symphony
     MaxLevel: 5
     Type: Misc
@@ -102,7 +102,7 @@ Body:
         - Item: Protect_Neck_Candy
           Amount: 1
   - Id: 316
-    Name: BA_MUSICALSTRIKE
+    Name: SK_BA_MELODYSTRIKE
     Description: Melody Strike
     MaxLevel: 5
     Type: Weapon
@@ -127,7 +127,7 @@ Body:
         Arrow: true
       AmmoAmount: 1
   - Id: 2426
-    Name: WM_GREAT_ECHO
+    Name: SK_BA_GREATECHO
     Description: Great Echo
     MaxLevel: 5
     Type: Weapon
@@ -147,7 +147,7 @@ Body:
       Weapon:
         Musical: true
   - Id: 2413
-    Name: WM_METALICSOUND
+    Name: SK_BA_METALLICSOUND
     Description: Metallic Sound
     MaxLevel: 5
     Type: Magic
@@ -168,7 +168,7 @@ Body:
       Weapon:
         Musical: true
   - Id: 2414
-    Name: WM_REVERBERATION
+    Name: SK_BA_REVERBERATION
     Description: Reverberation
     MaxLevel: 5
     Type: Magic
@@ -190,7 +190,7 @@ Body:
       Weapon:
         Musical: true
   - Id: 2382
-    Name: MI_ECHOSONG
+    Name: SK_BA_ECHONOCTURNAE
     Description: Echo Nocturnae
     MaxLevel: 5
     TargetType: Self
@@ -212,7 +212,7 @@ Body:
       Weapon:
         Musical: true
   - Id: 2423
-    Name: WM_SIRCLEOFNATURE
+    Name: SK_BA_TWILIGHTCHORD
     Description: Circle of Nature's Sound
     MaxLevel: 5
     TargetType: Support
@@ -234,7 +234,7 @@ Body:
       Weapon:
         Musical: true
   - Id: 312
-    Name: BD_INTOABYSS
+    Name: SK_BA_MOONLIGHTSONATA
     Description: Power Chord
     MaxLevel: 5
     Type: Misc
@@ -265,7 +265,7 @@ Body:
         - Item: Protect_Neck_Candy
           Amount: 1
   - Id: 898
-    Name: BA_ALLNIGHTLONG
+    Name: SK_BA_ALLNIGHTLONG
     Description: All Night Long
     MaxLevel: 5
     Type: Magic

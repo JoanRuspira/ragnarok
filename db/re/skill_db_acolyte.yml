@@ -5,7 +5,7 @@ Header:
 
 Body:
   - Id: 156
-    Name: AL_HOLYLIGHT
+    Name: SK_AL_HOLYGHOST
     Description: Holy Ghost
     MaxLevel: 5
     Type: Magic
@@ -28,7 +28,7 @@ Body:
     Requires:
       SpCost: 30
   - Id: 11
-    Name: MG_NAPALMBEAT
+    Name: SK_AL_SACREDWAVE
     Description: Napalm Beat
     MaxLevel: 5
     Type: Magic
@@ -55,7 +55,7 @@ Body:
     Requires:
       SpCost: 30
   - Id: 32
-    Name: AL_CRUCIS
+    Name: SK_AL_SIGNUMCRUCIS
     Description: Signum Crucis
     MaxLevel: 10
     Type: Magic
@@ -73,7 +73,7 @@ Body:
     Requires:
       SpCost: 50
   - Id: 859
-    Name: AL_HEAL2
+    Name: SK_AL_JGHEAL
     Description: Heal
     MaxLevel: 5
     TargetType: Support
@@ -88,7 +88,7 @@ Body:
     Requires:
       SpCost: 40
   - Id: 2050
-    Name: AB_RENOVATIO
+    Name: SK_AL_RENEW
     Description: Renovatio
     MaxLevel: 5
     Type: Magic
@@ -125,7 +125,7 @@ Body:
         - Item: Blue_Gemstone
           Amount: 1
   - Id: 24
-    Name: AL_RUWACH
+    Name: SK_AL_RUWACH
     Description: Ruwach
     MaxLevel: 5
     Type: Magic
@@ -146,7 +146,7 @@ Body:
     Requires:
       SpCost: 10
   - Id: 33
-    Name: AL_ANGELUS
+    Name: SK_AL_ANGELUS
     Description: Angelus
     MaxLevel: 5
     Type: Magic
@@ -179,7 +179,7 @@ Body:
     Requires:
       SpCost: 45
   - Id: 29
-    Name: AL_INCAGI
+    Name: SK_AL_INCREASEAGI
     Description: Increase AGI
     MaxLevel: 5
     Type: Magic
@@ -213,7 +213,7 @@ Body:
     Requires:
       SpCost: 45
   - Id: 34
-    Name: AL_BLESSING
+    Name: SK_AL_BLESSING
     Description: Blessing
     MaxLevel: 5
     Type: Magic
@@ -246,12 +246,12 @@ Body:
     Requires:
       SpCost: 65
   - Id: 65
-    Name: PR_MACEMASTERY
+    Name: SK_AL_MACEMASTERY
     Description: Mace Mastery
     MaxLevel: 5
     Type: Weapon
   - Id: 820
-    Name: AL_MACEQUICKEN
+    Name: SK_AL_MACEQUICKEN
     Description: Mace Quicken
     MaxLevel: 5
     Type: Weapon
@@ -280,3 +280,28 @@ Body:
         2hMace: true
         Staff: true
         2hStaff: true
+  - Id: 28
+    Name: SK_AL_HEAL
+    Description: Heal
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Support
+    DamageFlags:
+      NoDamage: true
+      IgnoreDefense: true
+    Flags:
+      IsAutoShadowSpell: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    Element: Holy
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    CastCancel: true
+    CastTime: 3000
+    Cooldown: 5000
+    AfterCastActDelay: 1000
+    Requires:
+      SpCost: 40

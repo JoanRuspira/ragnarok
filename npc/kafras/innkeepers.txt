@@ -203,7 +203,7 @@ lhz_in02,231,284,4	script	Hotel Employee#lhz	798,{
 		close2;
 		warp "lhz_in02",219,150;
 		percentheal 100,100;
-		npcskill "AL_BLESSING",10,99,99;
+		npcskill "SK_AL_BLESSING",10,99,99;
 		end;
 	case 3:
 		mes "[Hotel Employee]";

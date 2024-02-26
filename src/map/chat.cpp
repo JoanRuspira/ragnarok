@@ -226,7 +226,7 @@ int chat_leavechat(struct map_session_data* sd, bool kicked)
 		map_delblock(&cd->bl);
 		map_freeblock(&cd->bl);
 
-		unit = map_find_skill_unit_oncell(&sd->bl, sd->bl.x, sd->bl.y, AL_WARP, NULL, 0);
+		unit = map_find_skill_unit_oncell(&sd->bl, sd->bl.x, sd->bl.y, 1, NULL, 0);
 		group = (unit != NULL) ? unit->group : NULL;
 
 		if (group != NULL)

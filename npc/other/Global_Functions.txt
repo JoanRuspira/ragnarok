@@ -569,7 +569,7 @@ function	script	F_GetNumSuffix	{
 // Indicate if attached player can open storage
 //////////////////////////////////////////////////////////////////////////////////
 function	script	F_CanOpenStorage	{
-	return (!basicskillcheck() || !(getskilllv("NV_BASIC") < 6 && getskilllv("SU_BASIC_SKILL") < 1));
+	return (!basicskillcheck() || !(getskilllv("SK_NV_BASIC") < 6 && getskilllv("SU_BASIC_SKILL") < 1));
 }
 
 //////////////////////////////////////////////////////////////////////////////////
@@ -577,7 +577,7 @@ function	script	F_CanOpenStorage	{
 // basic skill level 9.
 //////////////////////////////////////////////////////////////////////////////////
 function	script	F_CanChangeJob	{
-	return (!basicskillcheck() || getskilllv("NV_BASIC") > 7);
+	return (!basicskillcheck() || getskilllv("SK_NV_BASIC") > 7);
 }
 
 //////////////////////////////////////////////////////////////////////////////////
@@ -615,39 +615,39 @@ function	script	F_getpositionname	{
 // Gives attached player their Platinum Skill based on their class.
 //////////////////////////////////////////////////////////////////////////////////
 function	script	F_GetPlatinumSkills	{
-	skill "NV_FIRSTAID",1,SKILL_PERM;
+	skill "SK_NV_FIRSTAID",1,SKILL_PERM;
 	switch (BaseClass) {
 	case Job_Novice:
 		if (Class != Job_Super_Novice)
-			skill "NV_TRICKDEAD",1,SKILL_PERM;
+			skill "SK_NV_TRICKDEAD",1,SKILL_PERM;
 		break;
 	case Job_Swordman:
 		skill "SM_MOVINGRECOVERY",1,SKILL_PERM;
 		skill "SM_FATALBLOW",1,SKILL_PERM;
-		skill "SM_AUTOBERSERK",1,SKILL_PERM;
+		skill "SK_SM_AUTOBERSERK",1,SKILL_PERM;
 		break;
 	case Job_Mage:
-		skill "MG_ENERGYCOAT",1,SKILL_PERM;
+		skill "SK_MG_ENERGYCOAT",1,SKILL_PERM;
 		break;
 	case Job_Archer:
-		skill "AC_MAKINGARROW",1,SKILL_PERM;
+		skill "SK_AC_MAKINGARROW",1,SKILL_PERM;
 		skill "AC_CHARGEARROW",1,SKILL_PERM;
 		break;
 	case Job_Acolyte:
-		skill "AL_HOLYLIGHT",1,SKILL_PERM;
+		skill "SK_AL_HOLYGHOST",1,SKILL_PERM;
 		break;
 	case Job_Merchant:
 		skill "MC_CARTREVOLUTION",1,SKILL_PERM;
 		skill "MC_CHANGECART",1,SKILL_PERM;
-		skill "MC_LOUD",1,SKILL_PERM;
+		skill "SK_MC_LOUD",1,SKILL_PERM;
 		if(PACKETVER >= 20150826)
 			skill "MC_CARTDECORATE",1,SKILL_PERM;
 		break;
 	case Job_Thief:
 		skill "TF_SPRINKLESAND",1,SKILL_PERM;
-		skill "TF_BACKSLIDING",1,SKILL_PERM;
+		skill "SK_TF_BACKSLIDING",1,SKILL_PERM;
 		skill "TF_PICKSTONE",1,SKILL_PERM;
-		skill "TF_THROWSTONE",1,SKILL_PERM;
+		skill "SK_TF_THROWSTONE",1,SKILL_PERM;
 		break;
 	default:
 		break;
@@ -664,21 +664,21 @@ function	script	F_GetPlatinumSkills	{
 		break;
 	case Job_Blacksmith:
 		skill "BS_UNFAIRLYTRICK",1,SKILL_PERM;
-		skill "BS_GREED",1,SKILL_PERM;
+		skill "SK_MC_GREED",1,SKILL_PERM;
 		break;
 	case Job_Hunter:
-		skill "HT_PHANTASMIC",1,SKILL_PERM;
+		skill "SK_AC_ARROWRAIN",1,SKILL_PERM;
 		break;
 	case Job_Assassin:
-		skill "AS_SONICACCEL",1,SKILL_PERM;
-		skill "AS_VENOMKNIFE",1,SKILL_PERM;
+		skill "SK_EX_SONICACCELERATION",1,SKILL_PERM;
+		skill "SK_TF_VENOMKNIFE",1,SKILL_PERM;
 		break;
 	case Job_Crusader:
 		skill "CR_SHRINK",1,SKILL_PERM;
 		break;
 	case Job_Monk:
 		skill "MO_KITRANSLATION",1,SKILL_PERM;
-		skill "MO_BALKYOUNG",1,SKILL_PERM;
+		skill "SK_MO_FALINGFIST",1,SKILL_PERM;
 		break;
 	case Job_Sage:
 		skill "SA_CREATECON",1,SKILL_PERM;
@@ -688,10 +688,10 @@ function	script	F_GetPlatinumSkills	{
 		skill "SA_ELEMENTWIND",1,SKILL_PERM;
 		break;
 	case Job_Rogue:
-		skill "RG_CLOSECONFINE",1,SKILL_PERM;
+		skill "SK_RG_CLOSECONFINE",1,SKILL_PERM;
 		break;
 	case Job_Alchemist:
-		skill "AM_BIOETHICS",1,SKILL_PERM;
+		skill "SK_AM_BIOETHICS",1,SKILL_PERM;
 		break;
 	case Job_Bard:
 		skill "BA_PANGVOICE",1,SKILL_PERM;

@@ -5,7 +5,7 @@ Header:
 
 Body:
   - Id: 905
-    Name: SA_ELEMENTAL_CONTROL
+    Name: SK_SA_ELEMENTALCONTROL
     Description: Elemental Control
     MaxLevel: 5
     TargetType: Self
@@ -19,7 +19,7 @@ Body:
     Requires:
       SpCost: 25
   - Id: 906
-    Name: EL_ICICLE
+    Name: SK_SA_ICICLE
     Description: Icicle
     MaxLevel: 5
     Type: Magic
@@ -33,7 +33,7 @@ Body:
     Requires:
       SpCost: 60
   - Id: 907
-    Name: EL_FIRE_BALL
+    Name: SK_SA_FIREBALL
     Description: Fire Ball
     MaxLevel: 5
     Type: Magic
@@ -47,7 +47,7 @@ Body:
     Requires:
       SpCost: 60
   - Id: 8439
-    Name: EL_STONE_HAMMER
+    Name: SK_SA_EARTHSPIKE
     Description: Stone Hammer
     MaxLevel: 5
     Type: Magic
@@ -61,7 +61,7 @@ Body:
     Requires:
       SpCost: 60
   - Id: 8434
-    Name: EL_WIND_SLASH
+    Name: SK_SA_WINDSLASH
     Description: Wind Slasher
     MaxLevel: 5
     Type: Magic
@@ -75,7 +75,7 @@ Body:
     Requires:
       SpCost: 60
   - Id: 2464
-    Name: SO_EL_CURE
+    Name: SK_SA_ELEMENTALTRANSFUSION
     Description: Spirit Recovery
     MaxLevel: 5
     TargetType: Self
@@ -88,7 +88,7 @@ Body:
       SpCost: 0
       State: Elementalspirit
   - Id: 829
-    Name: JG_EL_ACTION
+    Name: SK_SA_ELEMENTALACTION2
     Description: Elemental Action
     MaxLevel: 5
     TargetType: Attack
@@ -103,7 +103,7 @@ Body:
       SpCost: 75
       State: Elementalspirit
   - Id: 841
-    Name: EL_ROCK_CRUSHER_JG
+    Name: SK_SA_ROCKCRUSHER
     Description: Rock Crusher
     MaxLevel: 5
     Type: Magic
@@ -118,7 +118,7 @@ Body:
     Requires:
       SpCost: 75
   - Id: 842
-    Name: EL_WATER_SCREW_JG
+    Name: SK_SA_WATERBLAST
     Description: Water Screw
     MaxLevel: 5
     Type: Magic
@@ -133,7 +133,7 @@ Body:
     Requires:
       SpCost: 75
   - Id: 843
-    Name: EL_FIRE_BOMB_JG
+    Name: SK_SA_FIREBOMB
     Description: Fire Bomb
     MaxLevel: 5
     Type: Magic
@@ -163,7 +163,7 @@ Body:
     Requires:
       SpCost: 75
   - Id: 76
-    Name: PR_LEXDIVINA
+    Name: SK_SA_SILENCE
     Description: Silence
     MaxLevel: 5
     Type: Magic
@@ -192,7 +192,7 @@ Body:
         - Item: Old_Magic_Book
           Amount: 1
   - Id: 289
-    Name: SA_DISPELL
+    Name: SK_SA_DISPELL
     Description: Dispell
     MaxLevel: 5
     Type: Magic
@@ -217,7 +217,7 @@ Body:
         - Item: Old_Magic_Book
           Amount: 1
   - Id: 402
-    Name: PF_MINDBREAKER
+    Name: SK_SA_MINDGAMES
     Description: Mind Breaker
     MaxLevel: 5
     TargetType: Support
@@ -232,7 +232,7 @@ Body:
     Requires:
       SpCost: 65
   - Id: 2201
-    Name: WL_WHITEIMPRISON
+    Name: SK_SA_WHITEIMPRISON
     Description: White Imprison
     MaxLevel: 5
     Type: Magic
@@ -262,7 +262,7 @@ Body:
       - Item: Old_Magic_Book
         Amount: 1
   - Id: 830
-    Name: SA_QUICKSTUDY
+    Name: SK_SA_BOOKQUICKEN
     Description: Quick Study
     MaxLevel: 5
     Type: Weapon
@@ -289,7 +289,7 @@ Body:
       Weapon:
         Book: true
   - Id: 279
-    Name: SA_AUTOSPELL
+    Name: SK_SA_AUTOSPELL
     Description: Hindsight
     MaxLevel: 5
     Type: Magic
@@ -321,7 +321,7 @@ Body:
         - Item: Stone_Of_Intelligence
           Amount: 1
   - Id: 375
-    Name: PF_SOULBURN
+    Name: SK_SA_SOULBURN
     Description: Soul Siphon
     MaxLevel: 5
     Type: Magic
@@ -339,7 +339,7 @@ Body:
         - Item: Rent_Spell_Book
           Amount: 1
   - Id: 2210
-    Name: WL_DRAINLIFE
+    Name: SK_SA_DRAINLIFE
     Description: Drain Life
     MaxLevel: 5
     Type: Magic
@@ -361,7 +361,7 @@ Body:
         - Item: Rent_Spell_Book
           Amount: 1
   - Id: 2460
-    Name: SA_SUMMON_ELEMENTAL
+    Name: SK_SA_SUMMONELEMENTAL
     Description: Summon Earth Spirit Tera
     MaxLevel: 5
     TargetType: Self
@@ -408,7 +408,7 @@ Body:
         - Level: 5
           Amount: 10
   - Id: 2461
-    Name: SO_EL_ACTION
+    Name: SK_SA_ELEMENTALACTION1
     Description: Elemental Action
     MaxLevel: 5
     TargetType: Attack

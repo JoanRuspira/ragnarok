@@ -10,30 +10,30 @@
 int ArcherSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list* target, int base_lv, int skill_id, int skill_lv)
 {
 	switch (skill_id) {
-		case AC_DOUBLE:
+		case SK_AC_DOUBLESTRAFE:
 			return calculate_double_strafe_atk_ratio(base_lv, skill_lv);
 			break;
-		case AC_SHOWER:
+		case SK_AC_ARROWSHOWER:
 			add_arrow_shower_special_effects(target);
 			return calculate_arrow_shower_atk_ratio(base_lv, skill_lv, src);
 			break;
-		case HT_POWER:
+		case SK_AC_SPIRITUALSTRAFE:
 		    add_spiritual_strafe_special_effects(target);
 			return calculate_spiritual_strafe_atk_ratio(skill_lv, src);
 			break;
-		case AC_PARALIZING:
+		case SK_AC_PARALIZINGDART:
 			add_paralyzing_shot_special_effects(target);
 			return -99;
 			break;
-		case AC_TRANQUILIZING:
+		case SK_AC_TRANQUILIZINGDART:
 			add_tranquilizer_shot_special_effects(target);
 			return -99;
 			break;
-		case RK_STORMBLAST:
+		case SK_AC_CHARGEDARROW:
 			add_charge_arrow_special_effects(target);
 			return calculate_charge_arrow_atk_ratio(base_lv, skill_lv);
 			break;
-		case HT_PHANTASMIC:
+		case SK_AC_ARROWRAIN:
 			add_arrow_rain_special_effects(target);
 			return calculate_arrow_rain_atk_ratio(base_lv, skill_lv, src);
 			break;

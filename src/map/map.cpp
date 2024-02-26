@@ -105,7 +105,7 @@ static DBMap* bossid_db=NULL; /// int id -> struct mob_data* (MVP db)
 static DBMap* map_db=NULL; /// unsigned int mapindex -> struct map_data*
 static DBMap* nick_db=NULL; /// uint32 char_id -> struct charid2nick* (requested names of offline characters)
 static DBMap* charid_db=NULL; /// uint32 char_id -> struct map_session_data*
-static DBMap* regen_db=NULL; /// int id -> struct block_list* (status_natural_heal processing)
+static DBMap* regen_db=NULL; /// int id -> struct block_list* (status_naturSK_AL_HEAL processing)
 static DBMap* map_msg_db=NULL;
 
 static int map_users=0;
@@ -506,16 +506,6 @@ int map_moveblock(struct block_list *bl, int x1, int y1, t_tick tick)
 					struct block_list *d_bl;
 					if( (d_bl = map_id2bl(sc->data[SC__SHADOWFORM]->val2)) == NULL || !check_distance_bl(bl,d_bl,10) )
 						status_change_end(bl,SC__SHADOWFORM,INVALID_TIMER);
-				}
-
-				if (sc->data[SC_PROPERTYWALK]
-					&& sc->data[SC_PROPERTYWALK]->val3 < skill_get_maxcount(sc->data[SC_PROPERTYWALK]->val1,sc->data[SC_PROPERTYWALK]->val2)
-					&& map_find_skill_unit_oncell(bl,bl->x,bl->y,SO_ELECTRICWALK,NULL,0) == NULL
-					&& map_find_skill_unit_oncell(bl,bl->x,bl->y,NPC_ELECTRICWALK,NULL,0) == NULL
-					&& map_find_skill_unit_oncell(bl,bl->x,bl->y,SO_FIREWALK,NULL,0) == NULL
-					&& map_find_skill_unit_oncell(bl,bl->x,bl->y,NPC_FIREWALK,NULL,0) == NULL
-					&& skill_unitsetting(bl,sc->data[SC_PROPERTYWALK]->val1,sc->data[SC_PROPERTYWALK]->val2,x0, y0,0)) {
-						sc->data[SC_PROPERTYWALK]->val3++;
 				}
 
 
@@ -5195,7 +5185,7 @@ int do_init(int argc, char *argv[])
 	map_db = uidb_alloc(DB_OPT_BASE);
 	nick_db = idb_alloc(DB_OPT_BASE);
 	charid_db = uidb_alloc(DB_OPT_BASE);
-	regen_db = idb_alloc(DB_OPT_BASE); // efficient status_natural_heal processing
+	regen_db = idb_alloc(DB_OPT_BASE); // efficient status_naturSK_AL_HEAL processing
 	iwall_db = strdb_alloc(DB_OPT_RELEASE_DATA,2*NAME_LENGTH+2+1); // [Zephyrus] Invisible Walls
 
 	map_sql_init();

@@ -5,7 +5,7 @@ Header:
 
 Body:
   - Id: 839
-    Name: MG_EARTHBOLT
+    Name: SK_MG_EARTHBOLT
     Description: Earth Bolt
     MaxLevel: 5
     Type: Magic
@@ -37,7 +37,7 @@ Body:
     Requires:
       SpCost: 30
   - Id: 20
-    Name: MG_LIGHTNINGBOLT
+    Name: SK_MG_LIGHTNINGBOLT
     Description: Lightning Bolt
     MaxLevel: 5
     Type: Magic
@@ -69,7 +69,7 @@ Body:
     Requires:
       SpCost: 30
   - Id: 14
-    Name: MG_COLDBOLT
+    Name: SK_MG_COLDBOLT
     Description: Cold Bolt
     MaxLevel: 5
     Type: Magic
@@ -101,7 +101,7 @@ Body:
     Requires:
       SpCost: 30
   - Id: 19
-    Name: MG_FIREBOLT
+    Name: SK_MG_FIREBOLT
     Description: Fire Bolt
     MaxLevel: 5
     Type: Magic
@@ -133,11 +133,11 @@ Body:
     Requires:
       SpCost: 30
   - Id: 837
-    Name: JG_SRECOVERY
+    Name: SK_MG_SRECOVERY
     Description: Increase SP Recovery
     MaxLevel: 5
   - Id: 275
-    Name: SA_CASTCANCEL
+    Name: SK_MG_CASTCANCEL
     Description: Cast Cancel
     MaxLevel: 5
     Type: Magic
@@ -149,7 +149,7 @@ Body:
     Requires:
       SpCost: 0
   - Id: 157
-    Name: MG_ENERGYCOAT
+    Name: SK_MG_ENERGYCOAT
     Description: Energy Coat
     MaxLevel: 5
     Type: Magic
@@ -176,7 +176,7 @@ Body:
     Requires:
       SpCost: 30
   - Id: 2231
-    Name: WL_READING_SB
+    Name: SK_MG_READING_SB
     Description: Reading Spellbook
     MaxLevel: 5
     Type: Magic
@@ -191,14 +191,14 @@ Body:
     Requires:
       SpCost: 1
   - Id: 5078
-    Name: WL_READING_SB_READING
+    Name: SK_MG_READING_SB_READING
     Description: Reading Spellbook
     MaxLevel: 10
     TargetType: Self
     CastTime: 5000
     AfterCastActDelay: 400
   - Id: 2202
-    Name: WL_SOULEXPANSION
+    Name: SK_MG_VOIDEXPANSION
     Description: Void Expansion
     MaxLevel: 5
     Type: Magic
@@ -221,7 +221,7 @@ Body:
     Requires:
       SpCost: 30
   - Id: 340
-    Name: NPC_DARKSTRIKE
+    Name: SK_MG_DARKSTRIKE
     Description: Soul Strike of Darkness
     MaxLevel: 5
     Type: Magic
@@ -253,7 +253,7 @@ Body:
     Requires:
       SpCost: 30
   - Id: 13
-    Name: MG_SOULSTRIKE
+    Name: SK_MG_SOULSTRIKE
     Description: Soul Strike
     MaxLevel: 5
     Type: Magic
@@ -285,7 +285,7 @@ Body:
     Requires:
       SpCost: 30
   - Id: 800
-    Name: MG_UNDEADEMBRACE
+    Name: SK_MG_CORRUPT
     Description: Devil's Embrace
     MaxLevel: 5
     Type: Magic
@@ -305,7 +305,7 @@ Body:
     Requires:
       SpCost: 30
   - Id: 16
-    Name: MG_STONECURSE
+    Name: SK_MG_STONECURSE
     Description: Stone Curse
     MaxLevel: 5
     Type: Magic
@@ -322,7 +322,7 @@ Body:
     Requires:
       SpCost: 37
   - Id: 92
-    Name: WZ_QUAGMIRE
+    Name: SK_MG_QUAGMIRE
     Description: Quagmire
     MaxLevel: 5
     Type: Magic
@@ -373,7 +373,7 @@ Body:
         PathCheck: true
         RemovedByFireRain: true
   - Id: 15
-    Name: MG_FROSTDIVER
+    Name: SK_MG_FROSTDIVER
     Description: Frost Diver
     MaxLevel: 5
     Type: Magic
@@ -394,7 +394,7 @@ Body:
     Requires:
       SpCost: 37
   - Id: 87
-    Name: WZ_ICEWALL
+    Name: SK_MG_ICEWALL
     Description: Ice Wall
     MaxLevel: 5
     Type: Magic

@@ -14,45 +14,45 @@
 int BlacksmithSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv, struct status_data* sstatus)
 {
 	switch (skill_id) {
-		case MC_SHRAPNEL:
+		case SK_BS_CARTSHRAPNEL:
 			return calculate_cart_shrapnel_atk_ratio(skill_lv,  sstatus->dex);
 			break;
-		case MC_CARTBRUME:
+		case SK_MC_CARTBRUME:
 			return calculate_cart_brume_atk_ratio(skill_lv,  sstatus->int_);
 			break;
-		case MC_FIREWORKS:
+		case SK_MC_CARTFIREWORKS:
 			return calculate_cart_brume_atk_ratio(skill_lv,  sstatus->int_);
 			break;
-		case GN_CARTCANNON:
+		case SK_BS_CARTCANNON:
 			return calculate_cart_cannon_atk_ratio(skill_lv,  sstatus->dex);
 			break;
-		case NC_AXEBOOMERANG:
+		case SK_BS_AXEBOOMERANG:
 			return calculate_axe_boomerang_atk_ratio(skill_lv);
 			break;
-		case NC_AXETORNADO:
+		case SK_BS_AXETORNADO:
 			return calculate_axe_tornado_atk_ratio(skill_lv, sstatus->luk);
 			break;
-		case BS_HAMMERFALL:
+		case SK_BS_HAMMERFALL:
 			add_hammerfall_special_effects(target);
 			return calculate_hammerfall_atk_ratio(skill_lv, sstatus->str);
 			break;
-		case WS_HAMMERDOWN_PROTOCOL:
+		case SK_MS_HAMMERDOWNPROTOCOL:
 			clif_specialeffect(target, EF_SPRINGTRAP, AREA);
 			return calculate_hammerdown_protocol_atk_ratio(skill_lv, sstatus->str, sstatus->dex);
 			break;
-		case NC_POWERSWING:
+		case SK_MS_POWERSWING:
 			return calculate_power_swing_atk_ratio(skill_lv, sstatus->str, sstatus->luk);
 			break;
-		case GS_SPREADATTACK:
+		case SK_BS_CROWDCONTROLSHOT:
 			clif_soundeffectall(target, "crowdcontrol.wav", 0, AREA);
 			return calculate_crowd_control_shot_atk_ratio(skill_lv, sstatus->dex);
 			break;
-		case GS_RAPIDSHOWER:
+		case SK_MS_TRIGGERHAPPYCART:
 			clif_specialeffect(src, 1137, AREA);
 			clif_specialeffect(target, 1150, AREA);
 			return calculate_trigger_happy_cart_atk_ratio(skill_lv, sstatus->dex);
 			break;
-		case WS_CARTTERMINATION:
+		case SK_MS_CARTTERMINATION:
 			return calculate_cart_termination_atk_ratio(skill_lv,  sstatus->dex);
 			break;
 		default:

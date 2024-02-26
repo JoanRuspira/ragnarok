@@ -5,7 +5,7 @@ Header:
 
 Body:
   - Id: 2222
-    Name: WL_SUMMONFB
+    Name: SK_SO_SUMMONELEMENTALSPHERES
     Description: Summon Fire Ball
     CastCancel: true
     MaxLevel: 5
@@ -33,7 +33,7 @@ Body:
     Requires:
       SpCost: 30
   - Id: 889
-    Name: WL_TETRAVORTEX_NEUTRAL
+    Name: SK_SO_TETRAVORTEX_NEUTRAL
     Description: Tetra Vortex Neutral
     MaxLevel: 5
     Type: Magic
@@ -48,7 +48,7 @@ Body:
     Requires:
       SpCost: 1
   - Id: 2219
-    Name: WL_TETRAVORTEX_WATER
+    Name: SK_SO_TETRAVORTEX_WATER
     Description: Tetra Vortex Water
     MaxLevel: 5
     Type: Magic
@@ -63,7 +63,7 @@ Body:
     Requires:
       SpCost: 1
   - Id: 2220
-    Name: WL_TETRAVORTEX_WIND
+    Name: SK_SO_TETRAVORTEX_WIND
     Description: Tetra Vortex Wind
     MaxLevel: 5
     Type: Magic
@@ -78,7 +78,7 @@ Body:
     Requires:
       SpCost: 1
   - Id: 2221
-    Name: WL_TETRAVORTEX_GROUND
+    Name: SK_SO_TETRAVORTEX_GROUND
     Description: Tetra Vortex Earth
     MaxLevel: 5
     Type: Magic
@@ -93,7 +93,7 @@ Body:
     Requires:
       SpCost: 1
   - Id: 895
-    Name: HW_TETRAVORTEX_FIRE
+    Name: SK_SO_TETRAVORTEX_FIRE
     Description: Tetra Vortex Fire
     MaxLevel: 5
     Type: Magic
@@ -108,7 +108,7 @@ Body:
     Requires:
       SpCost: 1
   - Id: 2217
-    Name: WL_TETRAVORTEX
+    Name: SK_SO_TETRAVORTEX
     Description: Tetra Vortex
     MaxLevel: 5
     Type: Magic
@@ -131,7 +131,7 @@ Body:
     Requires:
       SpCost: 120
   - Id: 2206
-    Name: WL_RECOGNIZEDSPELL
+    Name: SK_SO_HINDSIGHT
     Description: Recognized Spell
     MaxLevel: 5
     Type: Magic
@@ -161,7 +161,7 @@ Body:
         - Item: Old_Magic_Circle
           Amount: 1
   - Id: 366
-    Name: HW_MAGICPOWER
+    Name: SK_SO_MYSTICALAMPLIFICATION
     Description: Mystical Amplification
     CastCancel: true
     MaxLevel: 5
@@ -181,7 +181,7 @@ Body:
         - Item: Old_Magic_Circle
           Amount: 1
   - Id: 883
-    Name: HW_PHANTOMSPEAR
+    Name: SK_SO_PHANTOMSPEAR
     Description: Phantom Spear
     MaxLevel: 5
     Type: Magic
@@ -215,7 +215,7 @@ Body:
     Requires:
       SpCost: 95
   - Id: 882
-    Name: HW_SHADOWBOMB
+    Name: SK_SO_SHADOWBOMB
     Description: Shadow Bomb
     MaxLevel: 5
     Type: Magic
@@ -249,7 +249,7 @@ Body:
     Requires:
       SpCost: 95
   - Id: 887
-    Name: HW_DIAMONDDUST
+    Name: SK_SO_DIAMONDDUST
     Description: Diamond Dust
     MaxLevel: 5
     Type: Magic
@@ -272,7 +272,7 @@ Body:
     Requires:
       SpCost: 90
   - Id: 888
-    Name: HW_ASTRALSTRIKE
+    Name: SK_SO_ASTRALSTRIKE
     Description: Astral Strike
     MaxLevel: 5
     Type: Magic
@@ -308,7 +308,7 @@ Body:
     Requires:
       SpCost: 120
   - Id: 5012
-    Name: WL_TELEKINESIS_INTENSE
+    Name: SK_SO_VOIDMAGEPRODIGY
     Description: Intense Telekinesis
     CastCancel: true
     MaxLevel: 5
@@ -326,7 +326,7 @@ Body:
         - Item: Old_Magic_Circle
           Amount: 1
   - Id: 885
-    Name: HW_DOOM
+    Name: SK_SO_DOOM
     Description: Doom
     MaxLevel: 5
     Type: Magic
@@ -354,7 +354,7 @@ Body:
         - Item: Suspicious_Magic_Stone
           Amount: 1
   - Id: 886
-    Name: HW_DOOM_GHOST
+    Name: SK_SO_DOOM_GHOST
     Description: Doom
     MaxLevel: 5
     Type: Magic

@@ -73,7 +73,7 @@ int SkillAdditionalEffects::skill_additional_effect(struct block_list* src, stru
 			if (rate)
 				skill_break_equip(src, src, EQP_WEAPON, rate, BCT_SELF);
 		}
-		if (battle_config.equip_skill_break_rate && skill_id != ITM_TOMAHAWK)
+		if (battle_config.equip_skill_break_rate && skill_id != SK_HT_MAGICTOMAHAWK)
 		{	// Cart Termination/Tomahawk won't trigger breaking data. Why? No idea, go ask Gravity.
 			// Target weapon breaking
 			rate = 0;
@@ -174,8 +174,7 @@ int SkillAdditionalEffects::skill_additional_effect(struct block_list* src, stru
 				!battle_check_range(bl, tbl, skill_get_range2(src, skill, autospl_skill_lv, true)))
 				continue;
 
-			if (skill == PF_SPIDERWEB) //Special case, due to its nature of coding.
-				type = CAST_GROUND;
+			
 
 			sd->state.autocast = 1;
 			skill_consume_requirement(sd, skill, autospl_skill_lv, 1);
@@ -246,29 +245,29 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 					// Automatic trigger of Blitz Beat
 					if( sd->ed ) {
 						if( sd->ed->elemental.class_ == ELEMENTALID_VENTUS_S) {
-							if ((skill = pc_checkskill(sd, SO_SUMMON_VENTUS)) > 0 &&
+							if ((skill = pc_checkskill(sd, SK_HT_FALCONRY)) > 0 &&
 								rnd() % 1000 <= sstatus->luk * (2*skill) / 5 + 1) {
-								skill_castend_nodamage_id(src, bl, HT_FALCON_1, skill, tick, 0);
+								skill_castend_nodamage_id(src, bl, SK_HT_BLITZBEAT, skill, tick, 0);
 							}
 						}
 					}
 					// Automatic trigger of Warg Strike
 					if( sd->ed ) {
 						if( sd->ed->elemental.class_ == ELEMENTALID_AQUA_S) {
-							if ((skill = pc_checkskill(sd, SO_SUMMON_AQUA)) > 0 &&
+							if ((skill = pc_checkskill(sd, SK_HT_WARGTRAINING)) > 0 &&
 								rnd() % 1000 <= sstatus->luk * (2*skill) / 5 + 1) {
-								skill_castend_nodamage_id(src, bl, HT_WARG_1, skill, tick, 0);
+								skill_castend_nodamage_id(src, bl, SK_HT_SLASH, skill, tick, 0);
 							}
 						}
 					}
 					//Mug
 					if (dstmd && sd->status.weapon != W_BOW && 
-						(skill = pc_checkskill(sd, RG_SNATCHER)) > 0 
+						(skill = pc_checkskill(sd, SK_TF_MUG)) > 0 
 						&& rnd() % 100 <= skill * 4)
-						skill_castend_damage_id(src, bl, TF_SNATCH, skill, tick, 0, true);
+						skill_castend_damage_id(src, bl, SK_TF_SNATCH, skill, tick, 0, true);
 					
 					if (sc && sc->data[SC_PYROCLASTIC] && ((rnd() % 100) <= sc->data[SC_PYROCLASTIC]->val3))
-						skill_castend_pos2(src, bl->x, bl->y, BS_HAMMERFALL, sc->data[SC_PYROCLASTIC]->val1, tick, 0);
+						skill_castend_pos2(src, bl->x, bl->y, SK_BS_HAMMERFALL, sc->data[SC_PYROCLASTIC]->val1, tick, 0);
 				}
 
 				if (sc) {
@@ -276,121 +275,118 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 					// Enchant Poison gives a chance to poison attacked enemies
 					if ((sce = sc->data[SC_ENCPOISON])) //Don't use sc_start since chance comes in 1/10000 rate.
 						status_change_start(src, bl, SC_POISON, sce->val2, sce->val1, src->id, 0, 0,
-							skill_get_time2(AS_ENCHANTPOISON, sce->val1), SCSTART_NONE);
+							skill_get_time2(SK_AS_ENCHANTPOISON, sce->val1), SCSTART_NONE);
 					// Enchant Deadly Poison gives a chance to deadly poison attacked enemies
 					if ((sce = sc->data[SC_EDP]))
 						sc_start4(src, bl, SC_DPOISON, sce->val2, sce->val1, src->id, 0, 0,
-							skill_get_time2(ASC_EDP, sce->val1));
+							skill_get_time2(SK_EX_ENCHANTDEADLYPOISON, sce->val1));
 
 					
 				}
 			}
 			break;
 
-		case SM_BASH:
+		case SK_SM_BASH:
 			SwordsmanAdditionalEffectsCalculator::apply_bash_additional_effect(src, bl, skill_lv);
 			break;
-		case LK_HEADCRUSH:
+		case SK_SM_TRAUMATIC_STRIKE:
 			SwordsmanAdditionalEffectsCalculator::apply_traumatic_blow_additional_effect(src, bl, skill_lv);
 			break;
-		case AC_TRANQUILIZING:
+		case SK_AC_TRANQUILIZINGDART:
 			ArcherAdditionalEffectsCalculator::apply_tranquilizer_shot_additional_effect(src, bl, skill_lv);
 			break;
-		case AC_PARALIZING:
+		case SK_AC_PARALIZINGDART:
 			ArcherAdditionalEffectsCalculator::apply_paralyzing_shot_additional_effect(src, bl, skill_lv);
 			break;
-		case AL_HOLYLIGHT:
+		case SK_AL_HOLYGHOST:
 			AcolyteAdditionalEffectsCalculator::apply_holy_light_additional_effect(src, bl, skill_lv);
 			break;
-		case AS_VENOMKNIFE:
-		case TF_POISON:
+		case SK_TF_VENOMKNIFE:
+		case SK_TF_POISONSLASH:
 			ThiefAdditionalEffectsCalculator::apply_envenom_additional_effect(src, bl, skill_lv);
 			break;
-		case TF_THROWSTONE:
+		case SK_TF_THROWSTONE:
 			ThiefAdditionalEffectsCalculator::apply_throw_stone_additional_effect(src, bl, skill_lv);
 			break;
-		case TF_SNATCH:
+		case SK_TF_SNATCH:
 			ThiefAdditionalEffectsCalculator::apply_snatch_additional_effect(src, bl, sd, skill_lv, skill);
 			break;
-		case TF_SANDATTACK:
+		case SK_TF_SANDATTACK:
 			ThiefAdditionalEffectsCalculator::apply_sand_attack_additional_effect(src, bl, skill_lv);
 			break;
-		case MG_FROSTDIVER:
+		case SK_MG_FROSTDIVER:
 			MageAdditionalEffectsCalculator::apply_frost_diver_additional_effect(src, bl, skill_lv);
 			break;
-		case LK_SPIRALPIERCE:
-		case KN_AUTOCOUNTER:
+		case SK_CM_CLASHINGSPIRAL:
+		case SK_KN_COUNTERATTACK:
 			KnightAdditionalEffectsCalculator::apply_auto_counter_additional_effect(src, bl, skill_lv);
 			break;
-		case PA_SHIELDSLAM:
+		case SK_PA_SHIELDSLAM:
 			KnightAdditionalEffectsCalculator::apply_smite_additional_effect(src, bl, skill_lv);
 			break;
-		case CR_HOLYCROSS:
-		case LG_RAYOFGENESIS:
+		case SK_CR_HOLYCROSS:
+		case SK_PA_GENESISRAY:
 			CrusaderAdditionalEffectsCalculator::apply_holy_cross_additional_effect(src, bl, skill_lv);
 			break;
-		case PR_UNHOLYCROSS:
-		case HP_PENITENTIA:
+		case SK_PR_UNHOLYCROSS:
+		case SK_BI_PENITENTIA:
 			PriestAdditionalEffectsCalculator::apply_unholy_cross_additional_effect(src, bl, skill_lv);
 			break;
-		case RG_BACKSTAP:
-		case GC_COUNTERSLASH:
+		case SK_RG_BACKSTAB:
+		case SK_RG_HACKANDSLASH:
 			RogueAdditionalEffectsCalculator::apply_back_stab_additional_effect(src, bl, skill_lv);
 			break;
-		case WM_GREAT_ECHO:
+		case SK_BA_GREATECHO:
 			BardAdditionalEffectsCalculator::apply_great_echo_additional_effect(src, bl, skill_lv);
 			break;
-		case WM_SEVERE_RAINSTORM:
-		case WM_SEVERE_RAINSTORM_MELEE:
+		case SK_CL_SEVERERAINSTORM:
+		case SK_CL_SEVERERAINSTORM_MELEE:
 			BardAdditionalEffectsCalculator::apply_severe_rainstorm_additional_effect(src, bl, skill_lv);
 			break;
-		case JG_TAROTCARD:
-			BardAdditionalEffectsCalculator::apply_tarot_cards_additional_effect(src, bl, skill_lv);
-			break;
-		case WZ_EARTHSPIKE:
+		case SK_WZ_STALAGMITE:
 			WizardAdditionalEffectsCalculator::apply_stalagmite_additional_effect(src, bl, skill_lv);
 			break;
-		case WZ_ICEBERG:
+		case SK_WZ_ICEBERG:
 			WizardAdditionalEffectsCalculator::apply_iceberg_additional_effect(src, bl, skill_lv);
 			break;
-		case WL_CRIMSONROCK:
+		case SK_WZ_CRIMSONROCK:
 			WizardAdditionalEffectsCalculator::apply_crimson_rock_additional_effect(src, bl, skill_lv);
 			break;
-		case AM_ACIDTERROR:
+		case SK_AM_ACIDTERROR:
 			AlchemistAdditionalEffectsCalculator::apply_acid_terror_additional_effect(src, bl, skill_lv);
 			break;
-		case GN_SPORE_EXPLOSION:
+		case SK_AM_BOMB:
 			AlchemistAdditionalEffectsCalculator::apply_bomb_additional_effect(src, bl, skill_lv);
 			break;
-		case MO_BALKYOUNG:
+		case SK_MO_FALINGFIST:
 			MonkAdditionalEffectsCalculator::apply_excruciating_fist_additional_effect(src, bl, skill_lv);
 			break;
-		case RK_HUNDREDSPEAR:
+		case SK_CM_HUNDREDSPEAR:
 			KnightAdditionalEffectsCalculator::apply_a_hundred_spears_additional_effect(src, bl, skill_lv, tick);
 			break;
-		case CG_ARROWVULCAN:
-			clif_skill_damage(src,bl,tick, status_get_amotion(src), 0, -30000, 1, DUMMY_ARROWVULCAN, skill_lv, DMG_SINGLE);
+		case SK_CL_ARROWVULCAN:
+			clif_skill_damage(src,bl,tick, status_get_amotion(src), 0, -30000, 1, SK_CL_DUMMY_ARROWVULCAN, skill_lv, DMG_SINGLE);
 			break;
-		case AS_SONICBLOW:
-			clif_skill_damage(src,bl,tick, status_get_amotion(src), 0, -30000, 1, DUMMY_SONICBLOW, skill_lv, DMG_SINGLE);
+		case SK_AS_SONICBLOW:
+			clif_skill_damage(src,bl,tick, status_get_amotion(src), 0, -30000, 1, SK_AS_DUMMY_SONICBLOW, skill_lv, DMG_SINGLE);
 			break;
-		case GC_CROSSIMPACT:
-			clif_skill_damage(src,bl,tick, status_get_amotion(src), 0, -30000, 1, DUMMY_CROSSIMPACT, skill_lv, DMG_SINGLE);
+		case SK_EX_CROSSIMPACT:
+			clif_skill_damage(src,bl,tick, status_get_amotion(src), 0, -30000, 1, SK_EX_DUMMY_CROSSIMPACT, skill_lv, DMG_SINGLE);
 			break;
-		case CH_PALMSTRIKE:
+		case SK_MO_PALMSTRIKE:
 			clif_specialeffect(bl, EF_DECAGILITY, AREA);
 			sc_start(src, bl, SC_DECREASEAGI, 100, -50, skill_get_time(skill_id, skill_lv));
 			break;
-		case HW_SHADOWBOMB:
+		case SK_SO_SHADOWBOMB:
 			WizardAdditionalEffectsCalculator::apply_shadow_bomb_additional_effect(src, bl, skill_lv);
 			break;
-		case HW_PHANTOMSPEAR:
+		case SK_SO_PHANTOMSPEAR:
 			WizardAdditionalEffectsCalculator::apply_phantom_spear_additional_effect(src, bl, skill_lv);
 			break;
-		case WZ_LIGHTNINGROD:
+		case SK_WZ_THUNDERSTORM:
 			WizardAdditionalEffectsCalculator::apply_lightning_rod_additional_effect(src, bl, skill_lv);
 			break;
-		case SR_DRAGONCOMBO:
+		case SK_SH_GUILLOTINEFISTS:
 		{
 			int percentage = rand()%(100) + 1;
 			int margin = skill_lv*2;
@@ -406,55 +402,7 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 
 void SkillAdditionalEffects::monster_skill_additional_effect(struct block_list* src, struct block_list *bl, 
 	struct status_data *sstatus, uint16 skill_id, uint16 skill_lv, int &rate) {
-	switch (skill_id) {
-		case NPC_PETRIFYATTACK:
-			sc_start4(src, bl, status_skill2sc(skill_id), (20 * skill_lv),
-				skill_lv, 0, 0, skill_get_time(skill_id, skill_lv),
-				skill_get_time2(skill_id, skill_lv));
-			break;
-		case NPC_CURSEATTACK:
-		case NPC_SLEEPATTACK:
-		case NPC_BLINDATTACK:
-		case NPC_POISON:
-		case NPC_SILENCEATTACK:
-		case NPC_STUNATTACK:
-		case NPC_BLEEDING:
-			sc_start(src, bl, status_skill2sc(skill_id), (20 * skill_lv), skill_lv, skill_get_time2(skill_id, skill_lv));
-			break;
-		case NPC_ACIDBREATH:
-		case NPC_ICEBREATH:
-			sc_start(src, bl, status_skill2sc(skill_id), 70, skill_lv, skill_get_time2(skill_id, skill_lv));
-			break;
-		case NPC_MENTALBREAKER:
-		{	
-			rate = sstatus->matk_min;
-			if (rate < sstatus->matk_max)
-				rate += rnd() % (sstatus->matk_max - sstatus->matk_min);
-			rate *= skill_lv;
-			status_zap(bl, 0, rate);
-			break;
-		}
-		// Equipment breaking monster skills [Celest]
-		case NPC_WEAPONBRAKER:
-			skill_break_equip(src, bl, EQP_WEAPON, 150 * skill_lv, BCT_ENEMY);
-			break;
-		case NPC_ARMORBRAKE:
-			skill_break_equip(src, bl, EQP_ARMOR, 150 * skill_lv, BCT_ENEMY);
-			break;
-		case NPC_HELMBRAKE:
-			skill_break_equip(src, bl, EQP_HELM, 150 * skill_lv, BCT_ENEMY);
-			break;
-		case NPC_SHIELDBRAKE:
-			skill_break_equip(src, bl, EQP_SHIELD, 150 * skill_lv, BCT_ENEMY);
-			break;
-
-		case NPC_COMET:
-			sc_start4(src, bl, SC_BURNING, 100, skill_lv, 1000, src->id, 0, skill_get_time(skill_id, skill_lv));
-			break;
-		case NPC_JACKFROST:
-			sc_start(src, bl, SC_FREEZE, 200, skill_lv, skill_get_time(skill_id, skill_lv));
-			break;
-	}
+	
 }
 
 
@@ -463,7 +411,7 @@ void SkillAdditionalEffects::skill_trigger_status_even_by_blocked_damage(struct 
 
 	if (sd)
 	{ // These statuses would be applied anyway even if the damage was blocked by some skills. [Inkfish]
-		if ( skill_id != CR_REFLECTSHIELD && skill_id != MS_REFLECTSHIELD
+		if ( skill_id != SK_CR_REFLECTSHIELD
 			) {
 			// Trigger status effects
 			enum sc_type type;
@@ -542,15 +490,15 @@ bool skill_strip_equip2(struct block_list *src, struct block_list *target, uint1
 	int rate, time, location, mod = 100;
 
 	// switch (skill_id) { // Rate
-	// case RG_STRIPWEAPON:
-	// case RG_STRIPARMOR:
-	// case RG_STRIPSHIELD:
-	// case RG_STRIPHELM:
+	// case SK_ST_STRIPWEAPON:
+	// case SK_ST_STRIPARMOR:
+	// case SK_ST_STRIPSHIELD:
+	// case SK_ST_STRIPHELM:
 	// case GC_WEAPONCRUSH:
 	// 	rate = 50 * (skill_lv + 1) + 2 * (sstatus->dex - tstatus->dex);
 	// 	mod = 1000;
 	// 	break;
-	// case ST_FULLSTRIP: {
+	// case SK_ST_FULLSTRIP: {
 		
 	// 	rate = 100;
 	
@@ -568,7 +516,7 @@ bool skill_strip_equip2(struct block_list *src, struct block_list *target, uint1
 	// 	rate = 6 * skill_lv + job_lv / 4 + sstatus->dex / 10;
 	// 	break;
 	// }
-	// case SC_STRIPACCESSORY:
+	// case SK_RG_STRIPACCESSORY:
 	// case SC_STRIPACCESSARY:
 	// 	// rate = 12 + 2 * skill_lv;
 	// 	rate = 100;
@@ -581,24 +529,19 @@ bool skill_strip_equip2(struct block_list *src, struct block_list *target, uint1
 	// 	return false;
 
 	switch (skill_id) { // Duration
-		case SC_STRIPACCESSORY:
-		case SC_STRIPACCESSARY:
+		case SK_RG_STRIPACCESSORY:
 			time = skill_get_time(skill_id, skill_lv);
 			break;
-		case ST_FULLSTRIP:
-			if (skill_id == WL_EARTHSTRAIN)
-				time = skill_get_time2(skill_id, skill_lv);
-			else
-				time = skill_get_time(skill_id, skill_lv);
+		case SK_ST_FULLSTRIP:
+			time = skill_get_time(skill_id, skill_lv);
 			break;
 	}
 
 	switch (skill_id) { // Location
-		case ST_FULLSTRIP:
+		case SK_ST_FULLSTRIP:
 			location = EQP_WEAPON | EQP_SHIELD | EQP_ARMOR | EQP_HELM;
 			break;
-		case SC_STRIPACCESSORY:
-		case SC_STRIPACCESSARY:
+		case SK_RG_STRIPACCESSORY:
 			location = EQP_ACC;
 			break;
 	}

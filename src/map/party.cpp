@@ -968,16 +968,6 @@ int party_skill_check(struct map_session_data *sd, int party_id, uint16 skill_id
 		return 0;
 	party_check_state(p);
 	switch(skill_id) {
-		case TK_COUNTER: //Increase Triple Attack rate of Monks.
-			if (!p->state.monk) return 0;
-			break;
-		case MO_COMBOFINISH: //Increase Counter rate of Star Gladiators
-			if (!p->state.sg) return 0;
-			break;
-		case AM_TWILIGHT2: //Twilight Pharmacy, requires Super Novice
-			return p->state.snovice;
-		case AM_TWILIGHT3: //Twilight Pharmacy, Requires Taekwon
-			return p->state.tk;
 		default:
 			return 0; //Unknown case?
 	}
@@ -989,17 +979,7 @@ int party_skill_check(struct map_session_data *sd, int party_id, uint16 skill_id
 		if (sd->bl.m != p_sd->bl.m)
 			continue;
 
-		switch(skill_id) {
-			case MO_COMBOFINISH: //Increase Counter rate of Star Gladiators
-				if((p_sd->class_&MAPID_UPPERMASK) == MAPID_STAR_GLADIATOR
-					&& p_sd->sc.data[SC_READYCOUNTER]
-					&& pc_checkskill(p_sd,SG_FRIEND)) {
-					sc_start4(&p_sd->bl,&p_sd->bl,SC_SKILLRATE_UP,100,TK_COUNTER,
-						50+50*pc_checkskill(p_sd,SG_FRIEND), //+100/150/200% rate
-						0,0,skill_get_time(SG_FRIEND, 1));
-				}
-				break;
-		}
+		
 	}
 
 	return 0;

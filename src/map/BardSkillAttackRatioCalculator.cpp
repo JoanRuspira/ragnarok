@@ -10,32 +10,29 @@
 int BardSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv, struct status_data* sstatus)
 {
 	switch (skill_id) {
-		case BA_MUSICALSTRIKE:
+		case SK_BA_MELODYSTRIKE:
 			add_melody_strike_special_effects(target);
 			return calculate_melody_strike_atk_ratio(skill_lv);
 			break;
-        case WM_GREAT_ECHO:
+        case SK_BA_GREATECHO:
 			add_great_echo_special_effects(target);
 			return calculate_great_echo_atk_ratio(skill_lv);
 			break;
-		case CG_METALLICFURY:
+		case SK_CL_METALLICFURY:
 			add_metallic_fury_special_effects(target);
 			return calculate_metallic_fury_atk_ratio(skill_lv, target);
 			break;
-		case WM_METALICSOUND:
+		case SK_BA_METALLICSOUND:
 			return calculate_metallic_sound_atk_ratio(skill_lv, target);
 			break;
-		case JG_TAROTCARD:
-			add_tarot_cards_special_effects(target);
-			return calculate_tarot_cards_atk_ratio(skill_lv);
-		case WM_REVERBERATION:
+		case SK_BA_REVERBERATION:
 			add_reverberation_special_effects(target);
 			return calculate_reverberation_atk_ratio(skill_lv, target);
-		case CG_ARROWVULCAN:	
+		case SK_CL_ARROWVULCAN:	
     		clif_specialeffect(target, 1355, AREA); //new_armscannon_explosion
 			return calculate_arrow_vulcan_atk_ratio(skill_lv, target);
-		case WM_SEVERE_RAINSTORM:
-		case WM_SEVERE_RAINSTORM_MELEE:
+		case SK_CL_SEVERERAINSTORM:
+		case SK_CL_SEVERERAINSTORM_MELEE:
 			return calculate_severe_rainstorm_atk_ratio(skill_lv);
 		default:
 			return 0;

@@ -11,16 +11,13 @@ int MerchntSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 {
 	
 	switch (skill_id) {
-	case MC_MAMMONITE:
+	case SK_MC_MAMMONITE:
 		return calculate_mammonite_atk_ratio(skill_lv, zeny);
 		break;
-	case MC_CARTREVOLUTION:
-		return calculate_cart_revolution_atk_ratio(skill_lv);
-		break;
-	case MC_CARTCYCLONE:
+	case SK_MC_CARTCYCLONE:
 		return calculate_cart_quake_atk_ratio(skill_lv,  sstatus->int_);
 		break;
-	case MC_CARTQUAKE:
+	case SK_MC_CARTQUAKE:
 		return calculate_cart_quake_atk_ratio(skill_lv,  sstatus->int_);
 		break;
 	default:

@@ -528,7 +528,7 @@ static TIMER_FUNC(unit_walktoxy_timer)
 				!(ud->walk_count%WALK_SKILL_INTERVAL) &&
 				map[bl->m].users > 0 &&
 				mobskill_use(md, tick, -1)) {
-				if (!(ud->skill_id == NPC_SELFDESTRUCTION && ud->skilltimer != INVALID_TIMER)
+				if (!(false && ud->skilltimer != INVALID_TIMER)
 					&& md->state.skillstate != MSS_WALK) //Walk skills are supposed to be used while walking
 				{ // Skill used, abort walking
 					clif_fixpos(bl); // Fix position as walk has been cancelled.
@@ -911,14 +911,6 @@ void unit_run_hit(struct block_list *bl, struct status_change *sc, struct map_se
 	// Set running to 0 beforehand so status_change_end knows not to enable spurt [Kevin]
 	unit_bl2ud(bl)->state.running = 0;
 	status_change_end(bl, type, INVALID_TIMER);
-
-	if (type == SC_RUN) {
-		skill_blown(bl, bl, skill_get_blewcount(TK_RUN, lv), unit_getdir(bl), BLOWN_NONE);
-		clif_status_change(bl, EFST_TING, 0, 0, 0, 0, 0);
-	} else if (sd) {
-		clif_fixpos(bl);
-		skill_castend_damage_id(bl, &sd->bl, RA_WUGDASH, lv, gettick(), SD_LEVEL);
-	}
 	return;
 }
 
@@ -1470,7 +1462,7 @@ int unit_can_move(struct block_list *bl) {
 	if (!ud)
 		return 0;
 
-	if (ud->skilltimer != INVALID_TIMER && ud->skill_id != LG_EXEEDBREAK && (!sd ))
+	if (ud->skilltimer != INVALID_TIMER && (!sd ))
 		return 0; // Prevent moving while casting
 
 	if (DIFF_TICK(ud->canmove_tick, gettick()) > 0)
@@ -1483,13 +1475,7 @@ int unit_can_move(struct block_list *bl) {
 	if (sc) {
 		if( sc->cant.move // status placed here are ones that cannot be cached by sc->cant.move for they depend on other conditions other than their availability
 			|| sc->data[SC_SPIDERWEB]
-			|| (sc->data[SC_DANCING] && sc->data[SC_DANCING]->val4 && (
-#ifndef RENEWAL
-				!sc->data[SC_LONGING] ||
-#endif
-				(sc->data[SC_DANCING]->val1&0xFFFF) == CG_MOONLIT ||
-				(sc->data[SC_DANCING]->val1&0xFFFF) == CG_HERMODE
-				) )
+			|| (sc->data[SC_DANCING] && sc->data[SC_DANCING]->val4)
 			)
 			return 0;
 
@@ -1523,13 +1509,6 @@ int unit_can_move(struct block_list *bl) {
 TIMER_FUNC(unit_resume_running){
 	struct unit_data *ud = (struct unit_data *)data;
 	TBL_PC *sd = map_id2sd(id);
-
-	if (sd && pc_isridingwug(sd))
-		clif_skill_nodamage(ud->bl,ud->bl,RA_WUGDASH,ud->skill_lv,
-			sc_start4(ud->bl,ud->bl,status_skill2sc(RA_WUGDASH),100,ud->skill_lv,unit_getdir(ud->bl),0,0,0));
-	else
-		clif_skill_nodamage(ud->bl,ud->bl,TK_RUN,ud->skill_lv,
-			sc_start4(ud->bl,ud->bl,status_skill2sc(TK_RUN),100,ud->skill_lv,unit_getdir(ud->bl),0,0,0));
 
 	if (sd)
 		clif_walkok(sd);
@@ -1655,43 +1634,11 @@ int unit_skilluse_id2(struct block_list *src, int target_id, uint16 skill_id, ui
 		if(skill_isNotOk(skill_id, sd))
 			return 0;
 
-		switch(skill_id) { // Check for skills that auto-select target
-			case GC_WEAPONCRUSH:
-				if (sc && sc->data[SC_WEAPONBLOCK_ON]) {
-					if ((target = map_id2bl(sc->data[SC_WEAPONBLOCK_ON]->val1)) == nullptr)
-						return 0;
-					combo = 1;
-				}
-				break;
-			case RL_QD_SHOT:
-				if (sc && sc->data[SC_QD_SHOT_READY]) {
-					if ((target = map_id2bl(sc->data[SC_QD_SHOT_READY]->val1)) == nullptr)
-						return 0;
-					combo = 1;
-				}
-				break;
-			case WE_MALE:
-			case WE_FEMALE:
-				if (!sd->status.partner_id)
-					return 0;
-
-				target = (struct block_list*)map_charid2sd(sd->status.partner_id);
-
-				if (!target) {
-					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-					return 0;
-				}
-				break;
-		}
-
 		if (target)
 			target_id = target->id;
 	} else if (src->type == BL_HOM) {
 		switch(skill_id) { // Homun-auto-target skills.
-			case HLIF_HEAL:
-			case HAMI_HEAL:
-			case HLIF_AVOID:
-			case HAMI_CASTLE:
+			case SK_AM_WARMWIND:
 				target = battle_get_master(src);
 
 				if (!target)
@@ -1699,11 +1646,6 @@ int unit_skilluse_id2(struct block_list *src, int target_id, uint16 skill_id, ui
 
 				target_id = target->id;
 				break;
-			case MH_SONIC_CRAW:
-			case MH_TINDER_BREAKER: {
-				int skill_id2 = ((skill_id==MH_SONIC_CRAW)?MH_MIDNIGHT_FRENZY:MH_EQC);
-				break;
-			}
 		}
 	}
 
@@ -1717,7 +1659,7 @@ int unit_skilluse_id2(struct block_list *src, int target_id, uint16 skill_id, ui
 		return 0;
 
 	// Normally not needed because clif.cpp checks for it, but the at/char/script commands don't! [Skotlex]
-	if(ud->skilltimer != INVALID_TIMER && skill_id != SA_CASTCANCEL && skill_id != SO_SPELLFIST)
+	if(ud->skilltimer != INVALID_TIMER && skill_id != SK_MG_CASTCANCEL && skill_id != SK_PF_SPELLFIST)
 		return 0;
 
 	if(skill->inf2[INF2_NOTARGETSELF] && src->id == target_id)
@@ -1739,37 +1681,28 @@ int unit_skilluse_id2(struct block_list *src, int target_id, uint16 skill_id, ui
 	// Record the status of the previous skill)
 	if(sd) {
 		switch(skill_id) {
-			case SA_CASTCANCEL:
+			case SK_MG_CASTCANCEL:
 				if(ud->skill_id != skill_id) {
 					sd->skill_id_old = ud->skill_id;
 					sd->skill_lv_old = ud->skill_lv;
 				}
 				break;
-			case BD_ENCORE:
-				// Prevent using the dance skill if you no longer have the skill in your tree.
-				if(!sd->skill_id_dance || pc_checkskill(sd,sd->skill_id_dance)<=0) {
-					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-					return 0;
-				}
-
-				sd->skill_id_old = skill_id;
-				break;
-			case WL_WHITEIMPRISON:
+			case SK_SA_WHITEIMPRISON:
 				if( battle_check_target(src,target,BCT_SELF|BCT_ENEMY) < 0 ) {
 					clif_skill_fail(sd,skill_id,USESKILL_FAIL_TOTARGET,0);
 					return 0;
 				}
 				break;
-			case MG_FIREBOLT:
-			case MG_LIGHTNINGBOLT:
-			case MG_COLDBOLT:
-			case MG_EARTHBOLT:
-			case MG_SOULSTRIKE:
-			case NPC_DARKSTRIKE:
+			case SK_MG_FIREBOLT:
+			case SK_MG_LIGHTNINGBOLT:
+			case SK_MG_COLDBOLT:
+			case SK_MG_EARTHBOLT:
+			case SK_MG_SOULSTRIKE:
+			case SK_MG_DARKSTRIKE:
 				sd->skill_id_old = skill_id;
 				sd->skill_lv_old = skill_lv;
 				break;
-			case CR_DEVOTION:
+			case SK_CR_SWORNPROTECTOR:
 				if (target->type == BL_PC) {
 					uint8 i = 0, count = 1; //MAX_DEVOTION
 
@@ -1783,35 +1716,12 @@ int unit_skilluse_id2(struct block_list *src, int target_id, uint16 skill_id, ui
 					}
 				}
 				break;
-			case RL_C_MARKER: {
-					uint8 i = 0;
-
-					ARR_FIND(0, MAX_SKILL_CRIMSON_MARKER, i, sd->c_marker[i] == target_id);
-					if (i == MAX_SKILL_CRIMSON_MARKER) {
-						ARR_FIND(0, MAX_SKILL_CRIMSON_MARKER, i, sd->c_marker[i] == 0);
-						if (i == MAX_SKILL_CRIMSON_MARKER) { // No free slots, skill Fail
-							clif_skill_fail(sd, skill_id, USESKILL_FAIL_LEVEL, 0);
-							return 0;
-						}
-					}
-				}
-				break;
 		}
 
 		if (!skill_check_condition_castbegin(sd, skill_id, skill_lv))
 			return 0;
 	}
 
-	if( src->type == BL_MOB ) {
-		switch( skill_id ) {
-			case NPC_SUMMONSLAVE:
-			case NPC_SUMMONMONSTER:
-			case NPC_DEATHSUMMON:
-			case AL_TELEPORT:
-				if( ((TBL_MOB*)src)->master_id && ((TBL_MOB*)src)->special_state.ai )
-					return 0;
-		}
-	}
 
 	if (src->type == BL_NPC) // NPC-objects can override cast distance
 		range = AREA_SIZE; // Maximum visible distance before NPC goes out of sight
@@ -1836,9 +1746,6 @@ int unit_skilluse_id2(struct block_list *src, int target_id, uint16 skill_id, ui
 		if( skill_get_state(ud->skill_id) == ST_MOVE_ENABLE ) {
 			if( !unit_can_reach_bl(src, target, range + 1, 1, NULL, NULL) )
 				return 0; // Walk-path check failed.
-		} else if( src->type == BL_MER && skill_id == MA_REMOVETRAP ) {
-			if( !battle_check_range(battle_get_master(src), target, range + 1) )
-				return 0; // Aegis calc remove trap based on Master position, ignoring mercenary O.O
 		} else if( !battle_check_range(src, target, range) )
 			return 0; // Arrow-path check failed.
 	}
@@ -1854,29 +1761,18 @@ int unit_skilluse_id2(struct block_list *src, int target_id, uint16 skill_id, ui
 	combo = 0;
 
 	switch(skill_id) {
-		case ALL_RESURRECTION:
+		case SK_PR_RESURRECTIO:
 			if(battle_check_undead(tstatus->race,tstatus->def_ele))
 				combo = 1;
 			else if (!status_isdead(target))
 				return 0; // Can't cast on non-dead characters.
 		break;
-		case MO_FINGEROFFENSIVE:
+		case SK_MO_TRHOWSPIRITSPHERE:
 			if(sd)
 				casttime += casttime * min(skill_lv, sd->spiritball);
 		break;
-		case SA_SPELLBREAKER:
-			combo = 1;
-		break;
-#ifndef RENEWAL_CAST
-		case ST_CHASEWALK:
-			if (sc && sc->data[SC_CHASEWALK])
-				casttime = -1;
-		break;
-#endif
-		case TK_RUN:
-			if (sc && sc->data[SC_RUN])
-				casttime = -1;
-		break;
+		
+
 #ifndef RENEWAL
 		case HP_BASILICA:
 			if( sc && sc->data[SC_BASILICA] )
@@ -1893,35 +1789,26 @@ int unit_skilluse_id2(struct block_list *src, int target_id, uint16 skill_id, ui
 		}
 		break;
 #endif
-		case GD_EMERGENCYCALL: // Emergency Call double cast when the user has learned Leap [Daegaladh]
-			if (sd && (pc_checkskill(sd,TK_HIGHJUMP) || pc_checkskill(sd,SU_LOPE) >= 3))
-				casttime *= 2;
-			break;
-		case RA_WUGDASH:
-			if (sc && sc->data[SC_WUGDASH])
-				casttime = -1;
-			break;
-		case EL_WIND_SLASH:
-		case EL_STONE_HAMMER:
-		case EL_ICICLE:
-		case EL_FIRE_BALL:
+		
+		case SK_SA_WINDSLASH:
+		case SK_SA_EARTHSPIKE:
+		case SK_SA_ICICLE:
+		case SK_SA_FIREBALL:
 		case EL_TORNADO_JG:
-		case EL_ROCK_CRUSHER_JG:
-		case EL_WATER_SCREW_JG:
-		case EF_FIRE_BOMB_JG:
-		case HM_BASILISK_1:
-		case HFLI_SBR44:
-		case HM_BEHOLDER_1:
-		case HM_LANDBOOST:
-		case HM_FIREBOOST:
-		case HM_BEHOLDER_2:
-		case HM_BASILISK_2:
-		case SM_PROVOKE:
+		case SK_SA_ROCKCRUSHER:
+		case SK_SA_WATERBLAST:
+		case SK_AM_BASILISK1:
+		case SK_AM_BEHOLDER1:
+		case SK_AM_PETROLOGY:
+		case SK_AM_PYROTECHNIA:
+		case SK_AM_BEHOLDER2:
+		case SK_AM_BASILISK2:
+		case SK_SM_PROVOKE:
 			if( src->type == BL_ELEM ) {
 				sd = BL_CAST(BL_PC, battle_get_master(src));
-				if( sd && (sd->skill_id_old == SO_EL_ACTION || sd->skill_id_old == JG_EL_ACTION
-				|| sd->skill_id_old == AM_EL_ACTION || sd->skill_id_old == AM2_HOM_ACTION
-				|| sd->skill_id_old == HT_WARG_1
+				if( sd && (sd->skill_id_old == SK_SA_ELEMENTALACTION1 || sd->skill_id_old == SK_SA_ELEMENTALACTION2
+				|| sd->skill_id_old == SK_AM_HOMUNCULUSACTIONI || sd->skill_id_old == SK_AM_HOMUNCULUSACTIONII
+				|| sd->skill_id_old == SK_HT_SLASH
 				)) {
 					casttime = -1;
 					sd->skill_id_old = 0;
@@ -1983,7 +1870,7 @@ int unit_skilluse_id2(struct block_list *src, int target_id, uint16 skill_id, ui
 
 	if( sd ) {
 		switch( skill_id ) {
-			case CG_ARROWVULCAN:
+			case SK_CL_ARROWVULCAN:
 				sd->canequip_tick = tick + casttime;
 				break;
 		}
@@ -1997,13 +1884,9 @@ int unit_skilluse_id2(struct block_list *src, int target_id, uint16 skill_id, ui
 
 	if( sc ) {
 		// These 3 status do not stack, so it's efficient to use if-else
- 		if( sc->data[SC_CLOAKING] && !(sc->data[SC_CLOAKING]->val4&4) && skill_id != AS_CLOAKING ) {
+ 		if( sc->data[SC_CLOAKING] && !(sc->data[SC_CLOAKING]->val4&4) && skill_id != SK_AS_CLOAKING ) {
 			status_change_end(src, SC_CLOAKING, INVALID_TIMER);
 
-			if (!src->prev)
-				return 0; // Warped away!
-		} else if (sc->data[SC_NEWMOON] && skill_id != SJ_NEWMOONKICK) {
-			status_change_end(src, SC_NEWMOON, INVALID_TIMER);
 			if (!src->prev)
 				return 0; // Warped away!
 		}
@@ -2093,14 +1976,8 @@ int unit_skilluse_pos2( struct block_list *src, short skill_x, short skill_y, ui
 	if( sd ) {
 		if( skill_isNotOk(skill_id, sd) || !skill_check_condition_castbegin(sd, skill_id, skill_lv) )
 			return 0;
-		if (skill_id == MG_FIREWALL && !skill_pos_maxcount_check(src, skill_x, skill_y, skill_id, skill_lv, BL_PC, true))
-			return 0; // Special check for Firewall only
 	}
 
-	if( (skill_id >= SC_MANHOLE && skill_id <= SC_FEINTBOMB) && map_getcell(src->m, skill_x, skill_y, CELL_CHKMAELSTROM) ) {
-		clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-		return 0;
-	}
 
 	if (!status_check_skilluse(src, NULL, skill_id, 0))
 		return 0;
@@ -2821,7 +2698,7 @@ int unit_skillcastcancel(struct block_list *bl, char type)
 
 	if( sd ) {
 		switch( skill_id ) {
-			case CG_ARROWVULCAN:
+			case SK_CL_ARROWVULCAN:
 				sd->canequip_tick = tick;
 				break;
 		}
@@ -3008,7 +2885,7 @@ int unit_remove_map_(struct block_list *bl, clr_type clrtype, const char* file, 
 
 			searchstore_close(sd);
 
-			if (sd->menuskill_id != AL_TELEPORT) { //bugreport:8027
+
 				if (sd->state.storage_flag == 1)
 					storage_storage_quit(sd,0);
 				else if (sd->state.storage_flag == 2)
@@ -3017,7 +2894,7 @@ int unit_remove_map_(struct block_list *bl, clr_type clrtype, const char* file, 
 					storage_premiumStorage_quit(sd);
 
 				sd->state.storage_flag = 0; //Force close it when being warped.
-			}
+
 
 			if(sd->party_invite > 0)
 				party_reply_invite(sd,sd->party_invite,0);

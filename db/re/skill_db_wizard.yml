@@ -5,7 +5,7 @@ Header:
 
 Body:
   - Id: 2446
-    Name: SO_EARTHGRAVE
+    Name: SK_WZ_EARTHSTRAIN
     Description: Earth Grave
     MaxLevel: 5
     Type: Magic
@@ -60,7 +60,7 @@ Body:
         NoOverlap: true
         PathCheck: true
   - Id: 85
-    Name: WZ_VERMILION
+    Name: SK_WZ_LORDOFVERMILION
     Description: Lord of Vermilion
     MaxLevel: 5
     Type: Magic
@@ -118,7 +118,7 @@ Body:
         NoOverlap: true
         PathCheck: true
   - Id: 89
-    Name: WZ_STORMGUST
+    Name: SK_WZ_STORMGUST
     Description: Storm Gust
     MaxLevel: 5
     Type: Magic
@@ -155,7 +155,7 @@ Body:
         NoOverlap: true
         PathCheck: true
   - Id: 83
-    Name: WZ_METEOR
+    Name: SK_WZ_METEORSTORM
     Description: Meteor Storm
     MaxLevel: 5
     Type: Magic
@@ -210,7 +210,7 @@ Body:
       Flag:
         PathCheck: true
   - Id: 90
-    Name: WZ_EARTHSPIKE
+    Name: SK_WZ_STALAGMITE
     Description: Stalagmite
     MaxLevel: 5
     Type: Magic
@@ -244,7 +244,7 @@ Body:
     Requires:
       SpCost: 65
   - Id: 884
-    Name: WZ_LIGHTNINGROD
+    Name: SK_WZ_THUNDERSTORM
     Description: Lightning Rod
     MaxLevel: 5
     Type: Magic
@@ -278,7 +278,7 @@ Body:
     Requires:
       SpCost: 65
   - Id: 838
-    Name: WZ_ICEBERG
+    Name: SK_WZ_ICEBERG
     Description: Iceberg
     MaxLevel: 5
     Type: Magic
@@ -312,7 +312,7 @@ Body:
     Requires:
       SpCost: 65
   - Id: 2211
-    Name: WL_CRIMSONROCK
+    Name: SK_WZ_CRIMSONROCK
     Description: Crimson Rock
     MaxLevel: 5
     Type: Magic
@@ -346,7 +346,7 @@ Body:
     Requires:
       SpCost: 65
   - Id: 844
-    Name: WZ_CORRUPT
+    Name: SK_WZ_ICONOFSIN
     Description: Icon of Sin
     MaxLevel: 5
     Type: Magic
@@ -370,7 +370,7 @@ Body:
     Requires:
       SpCost: 65
   - Id: 469
-    Name: SL_SMA
+    Name: SK_WZ_ILLUSIONARYBLADES
     Description: Illusionary Blades
     MaxLevel: 5
     Type: Magic
@@ -403,7 +403,7 @@ Body:
     Requires:
       SpCost: 65
   - Id: 845
-    Name: WZ_EXTREMEVACUUM
+    Name: SK_WZ_EXTREMEVACUUM
     Description: Extreme Vacuum
     MaxLevel: 5
     Type: Magic
@@ -439,7 +439,7 @@ Body:
         - Item: Magic_Gem_Black
           Amount: 1
   - Id: 846
-    Name: WZ_LANDOFEVIL
+    Name: SK_WZ_REALITYBREAKER
     Description: Reality Breaker
     MaxLevel: 5
     Type: Magic
@@ -478,11 +478,11 @@ Body:
         - Item: Suspicious_Magic_Stone
           Amount: 1
   - Id: 2208
-    Name: WL_RADIUS
+    Name: SK_WZ_RADIUS
     Description: Radius
     MaxLevel: 5
   - Id: 403
-    Name: PF_MEMORIZE
+    Name: SK_WZ_FORESIGHT
     Description: Foresight
     MaxLevel: 5
     Type: Magic
@@ -503,7 +503,7 @@ Body:
         - Item: Old_Magic_Circle
           Amount: 1
   - Id: 365
-    Name: HW_MAGICCRASHER
+    Name: SK_WZ_MAGICCRASHER
     Description: Stave Crasher
     MaxLevel: 5
     Type: Magic
@@ -518,7 +518,7 @@ Body:
     Requires:
       SpCost: 40
   - Id: 2449
-    Name: SO_PSYCHIC_WAVE
+    Name: SK_WZ_PSYCHICWAVE
     Description: Psychic Wave
     MaxLevel: 5
     Type: Magic

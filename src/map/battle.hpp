@@ -279,8 +279,8 @@ struct Battle_Config
 	int summer_ignorepalette; // [Zephyrus]
 	int hanbok_ignorepalette;
 	int oktoberfest_ignorepalette;
-	int natural_healhp_interval;
-	int natural_healsp_interval;
+	int natural_heal_hp_interval;
+	int natural_heal_sp_interval;
 	int natural_heal_skill_interval;
 	int natural_heal_weight_rate;
 	int natural_heal_weight_rate_renewal;

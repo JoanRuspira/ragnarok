@@ -1237,7 +1237,7 @@ ACMD_FUNC(alive)
 		clif_displaymessage(fd, msg_txt(sd,667)); // You're not dead.
 		return -1;
 	}
-	clif_skill_nodamage(&sd->bl,&sd->bl,ALL_RESURRECTION,4,1);
+	clif_skill_nodamage(&sd->bl,&sd->bl,SK_PR_RESURRECTIO,4,1);
 	clif_displaymessage(fd, msg_txt(sd,16)); // You've been revived! It's a miracle!
 	return 0;
 }
@@ -3278,7 +3278,7 @@ static void atcommand_raise_sub(struct map_session_data* sd) {
 
 	status_revive(&sd->bl, 100, 100);
 
-	clif_skill_nodamage(&sd->bl,&sd->bl,ALL_RESURRECTION,4,1);
+	clif_skill_nodamage(&sd->bl,&sd->bl,SK_PR_RESURRECTIO,4,1);
 	clif_displaymessage(sd->fd, msg_txt(sd,63)); // Mercy has been shown.
 }
 
@@ -4430,35 +4430,35 @@ ACMD_FUNC(mount_peco)
 		return -1;
 	}
 
-	if( (sd->class_&MAPID_THIRDMASK) == MAPID_RUNE_KNIGHT && pc_checkskill(sd,RK_DRAGONTRAINING) > 0 ) {
-		if( !(sd->sc.option&OPTION_DRAGON) ) {
-			unsigned int option = OPTION_DRAGON1;
-			if( message[0] ) {
-				int color = atoi(message);
-				option = ( color == 2 ? OPTION_DRAGON2 :
-				           color == 3 ? OPTION_DRAGON3 :
-				           color == 4 ? OPTION_DRAGON4 :
-				           color == 5 ? OPTION_DRAGON5 :
-				                        OPTION_DRAGON1 );
-			}
-			clif_displaymessage(sd->fd,msg_txt(sd,1119)); // You have mounted your Dragon.
-			pc_setoption(sd, sd->sc.option|option);
-		} else {
-			clif_displaymessage(sd->fd,msg_txt(sd,1120)); // You have released your Dragon.
-			pc_setoption(sd, sd->sc.option&~OPTION_DRAGON);
-		}
-		return 0;
-	}
-	if( (sd->class_&MAPID_THIRDMASK) == MAPID_RANGER && pc_checkskill(sd,RA_WUGRIDER) > 0 && (!pc_isfalcon(sd) || battle_config.warg_can_falcon) ) {
-		if( !pc_isridingwug(sd) ) {
-			clif_displaymessage(sd->fd,msg_txt(sd,1121)); // You have mounted your Warg.
-			pc_setoption(sd, sd->sc.option|OPTION_WUGRIDER);
-		} else {
-			clif_displaymessage(sd->fd,msg_txt(sd,1122)); // You have released your Warg.
-			pc_setoption(sd, sd->sc.option&~OPTION_WUGRIDER);
-		}
-		return 0;
-	}
+	//if( (sd->class_&MAPID_THIRDMASK) == MAPID_RUNE_KNIGHT && pc_checkskill(sd,RK_DRAGONTRAINING) > 0 ) {
+	//	if( !(sd->sc.option&OPTION_DRAGON) ) {
+	//		unsigned int option = OPTION_DRAGON1;
+	//		if( message[0] ) {
+	//			int color = atoi(message);
+	//			option = ( color == 2 ? OPTION_DRAGON2 :
+	//			           color == 3 ? OPTION_DRAGON3 :
+	//			           color == 4 ? OPTION_DRAGON4 :
+	//			           color == 5 ? OPTION_DRAGON5 :
+	//			                        OPTION_DRAGON1 );
+	//		}
+	//		clif_displaymessage(sd->fd,msg_txt(sd,1119)); // You have mounted your Dragon.
+	//		pc_setoption(sd, sd->sc.option|option);
+	//	} else {
+	//		clif_displaymessage(sd->fd,msg_txt(sd,1120)); // You have released your Dragon.
+	//		pc_setoption(sd, sd->sc.option&~OPTION_DRAGON);
+	//	}
+	//	return 0;
+	//}
+	//if( (sd->class_&MAPID_THIRDMASK) == MAPID_RANGER && pc_checkskill(sd,RA_WUGRIDER) > 0 && (!pc_isfalcon(sd) || battle_config.warg_can_falcon) ) {
+	//	if( !pc_isridingwug(sd) ) {
+	//		clif_displaymessage(sd->fd,msg_txt(sd,1121)); // You have mounted your Warg.
+	//		pc_setoption(sd, sd->sc.option|OPTION_WUGRIDER);
+	//	} else {
+	//		clif_displaymessage(sd->fd,msg_txt(sd,1122)); // You have released your Warg.
+	//		pc_setoption(sd, sd->sc.option&~OPTION_WUGRIDER);
+	//	}
+	//	return 0;
+	//}
 	if( (sd->class_&MAPID_THIRDMASK) == MAPID_MECHANIC ) {
 		if( !pc_ismadogear(sd) ) {
 			e_mado_type type = MADO_ROBOT;
@@ -4670,7 +4670,7 @@ ACMD_FUNC(nuke)
 
 	if ((pl_sd = map_nick2sd(atcmd_player_name,false)) != NULL) {
 		if (pc_get_group_level(sd) >= pc_get_group_level(pl_sd)) { // you can kill only lower or same GM level
-			skill_castend_nodamage_id(&pl_sd->bl, &pl_sd->bl, NPC_SELFDESTRUCTION, 99, gettick(), 0);
+			//skill_castend_nodamage_id(&pl_sd->bl, &pl_sd->bl, NPC_SELFDESTRUCTION, 99, gettick(), 0);
 			clif_displaymessage(fd, msg_txt(sd,109)); // Player has been nuked!
 		} else {
 			clif_displaymessage(fd, msg_txt(sd,81)); // Your GM level don't authorise you to do this action on this player.
@@ -5985,7 +5985,7 @@ ACMD_FUNC(skilltree)
 	i = pc_calc_skilltree_normalize_job(pl_sd);
 	c = pc_mapid2jobid(i, pl_sd->status.sex);
 
-	sprintf(atcmd_output, msg_txt(sd,1168), job_name(c), pc_checkskill(pl_sd, NV_BASIC)); // Player is using %s skill tree (%d basic points).
+	sprintf(atcmd_output, msg_txt(sd,1168), job_name(c), pc_checkskill(pl_sd, SK_NV_BASIC)); // Player is using %s skill tree (%d basic points).
 	clif_displaymessage(fd, atcmd_output);
 
 	c = pc_class2idx(c);
@@ -7016,7 +7016,7 @@ ACMD_FUNC(summon)
 	clif_specialeffect(&md->bl,EF_ENTRY2,AREA);
 	mob_spawn(md);
 	sc_start4(NULL,&md->bl, SC_MODECHANGE, 100, 1, 0, MD_AGGRESSIVE, 0, 60000);
-	clif_skill_poseffect(&sd->bl,AM_CALLHOMUN,1,md->bl.x,md->bl.y,tick);
+	//clif_skill_poseffect(&sd->bl,AM_CALLHOMUN,1,md->bl.x,md->bl.y,tick);
 	clif_displaymessage(fd, msg_txt(sd,39));	// All monster summoned!
 
 	return 0;
@@ -9597,7 +9597,6 @@ ACMD_FUNC(cart) {
 	sd->status.skill[(idx)].flag = (x)?SKILL_FLAG_TEMPORARY:SKILL_FLAG_PERMANENT;
 
 	int val = atoi(message);
-	bool need_skill = (pc_checkskill(sd, MC_PUSHCART) == 0);
 	uint16 sk_idx = 0;
 
 	if( !message || !*message || val < 0 || val > MAX_CARTS ) {
@@ -9614,20 +9613,13 @@ ACMD_FUNC(cart) {
 	// if (!(sk_idx = skill_get_index(MC_PUSHCART)))
 	// 	return -1;
 
-	if( need_skill ) {
-		MC_CART_MDFY(sk_idx,1);
-	}
+	
 
 	if( !pc_setcart(sd, val) ) {
-		if( need_skill ) {
-			MC_CART_MDFY(sk_idx,0);
-		}
+		
 		return -1;/* @cart failed */
 	}
 
-	if( need_skill ) {
-		MC_CART_MDFY(sk_idx,0);
-	}
 
 	clif_displaymessage(fd, msg_txt(sd,1392)); // Cart Added
 

@@ -5,11 +5,11 @@ Header:
 
 Body:
   - Id: 1
-    Name: NV_BASIC
+    Name: SK_NV_BASIC
     Description: Basic Skill
     MaxLevel: 8
   - Id: 5067
-    Name: ALL_EQSWITCH
+    Name: SK_NV_EQSWITCH
     Description: Equip Switch
     MaxLevel: 1
     TargetType: Self
@@ -24,3 +24,26 @@ Body:
       IgnoreDex: true
       IgnoreStatus: true
       IgnoreItemBonus: true
+  - Id: 143
+    Name: SK_NV_TRICKDEAD
+    Description: Play Dead
+    MaxLevel: 1
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Duration1: 600000
+    Requires:
+      SpCost: 5
+  - Id: 142
+    Name: SK_NV_FIRSTAID
+    Description: First Aid
+    MaxLevel: 1
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    Requires:
+      SpCost: 3

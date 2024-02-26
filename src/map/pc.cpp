@@ -395,12 +395,6 @@ unsigned int equip_bitmask[EQI_MAX] = {
 	EQP_SHADOW_ACC_L		// EQI_SHADOW_ACC_L
 };
 
-//Links related info to the sd->hate_mob[]/sd->feel_map[] entries
-const struct sg_data sg_info[MAX_PC_FEELHATE] = {
-		{ SG_SUN_ANGER, SG_SUN_BLESS, SG_SUN_COMFORT, "PC_FEEL_SUN", "PC_HATE_MOB_SUN", is_day_of_sun },
-		{ SG_MOON_ANGER, SG_MOON_BLESS, SG_MOON_COMFORT, "PC_FEEL_MOON", "PC_HATE_MOB_MOON", is_day_of_moon },
-		{ SG_STAR_ANGER, SG_STAR_BLESS, SG_STAR_COMFORT, "PC_FEEL_STAR", "PC_HATE_MOB_STAR", is_day_of_star }
-	};
 
 void pc_set_reg_load( bool val ){
 	reg_load = val;
@@ -658,10 +652,6 @@ int pc_addsoulball(map_session_data *sd, int max)
 
 	status_change *sc = status_get_sc(&sd->bl);
 
-	if (sc == nullptr || sc->data[SC_SOULENERGY] == nullptr) {
-		sc_start(&sd->bl, &sd->bl, SC_SOULENERGY, 100, 0, skill_get_time2(SP_SOULCOLLECT, 1));
-		sd->soulball = 0;
-	}
 
 	max = min(max, MAX_SOUL_BALL);
 	sd->soulball = cap_value(sd->soulball, 0, MAX_SOUL_BALL);
@@ -670,7 +660,6 @@ int pc_addsoulball(map_session_data *sd, int max)
 		sd->soulball--;
 
 	sd->soulball++;
-	sc_start(&sd->bl, &sd->bl, SC_SOULENERGY, 100, sd->soulball, skill_get_time2(SP_SOULCOLLECT, 1));
 	clif_soulball(sd);
 
 	return 0;
@@ -1071,7 +1060,7 @@ int pc_equippoint_sub(struct map_session_data *sd,struct item_data* id){
 
 	ep = id->equip;
 	if(id->subtype == W_DAGGER	|| id->subtype == W_1HSWORD || id->subtype == W_1HAXE) {
-		if(pc_checkskill(sd,AS_LEFT) > 0 || (sd->class_&MAPID_UPPERMASK) == MAPID_KAGEROUOBORO) { //Kagerou and Oboro can dual wield daggers. [Rytech]
+		if(pc_checkskill(sd,SK_AS_DUALWIELDING) > 0 || (sd->class_&MAPID_UPPERMASK) == MAPID_KAGEROUOBORO) { //Kagerou and Oboro can dual wield daggers. [Rytech]
 			if (ep == EQP_WEAPON)
 				return EQP_ARMS;
 			if (ep == EQP_SHADOW_WEAPON)
@@ -1344,15 +1333,6 @@ bool pc_adoption(struct map_session_data *p1_sd, struct map_session_data *p2_sd,
 		b_sd->status.job_exp = jobexp;
 		clif_updatestatus(b_sd, SP_JOBEXP);
 
-		// Baby Skills
-		pc_skill(b_sd, WE_BABY, 1, ADDSKILL_PERMANENT);
-		pc_skill(b_sd, WE_CALLPARENT, 1, ADDSKILL_PERMANENT);
-		pc_skill(b_sd, WE_CHEERUP, 1, ADDSKILL_PERMANENT);
-
-		// Parents Skills
-		pc_skill(p1_sd, WE_CALLBABY, 1, ADDSKILL_PERMANENT);
-		pc_skill(p2_sd, WE_CALLBABY, 1, ADDSKILL_PERMANENT);
-
 		chrif_save(p1_sd, CSAVE_NORMAL);
 		chrif_save(p2_sd, CSAVE_NORMAL);
 		chrif_save(b_sd, CSAVE_NORMAL);
@@ -1476,7 +1456,7 @@ uint8 pc_isequip(struct map_session_data *sd,int n)
 				}
 				break;
 			case AMMO_DAGGER:
-				if (!pc_checkskill(sd, AS_VENOMKNIFE))
+				if (!pc_checkskill(sd, SK_TF_VENOMKNIFE))
 					return ITEM_EQUIP_ACK_FAIL;
 				break;
 			case AMMO_BULLET:
@@ -1528,22 +1508,6 @@ uint8 pc_isequip(struct map_session_data *sd,int n)
 		if(item->equip && (sd->sc.data[SC_KYOUGAKU] || sd->sc.data[SC_SUHIDE]))
 			return ITEM_EQUIP_ACK_FAIL;
 
-		if (sd->sc.data[SC_SPIRIT] && sd->sc.data[SC_SPIRIT]->val2 == SL_SUPERNOVICE) {
-			//Spirit of Super Novice equip bonuses. [Skotlex]
-			if (sd->status.base_level > 90 && item->equip & EQP_HELM)
-				return ITEM_EQUIP_ACK_OK; //Can equip all helms
-
-			if (sd->status.base_level > 96 && item->equip & EQP_ARMS && item->type == IT_WEAPON && item->wlv == 4)
-				switch(item->subtype) { //In weapons, the look determines type of weapon.
-					case W_DAGGER: //All level 4 - Daggers
-					case W_1HSWORD: //All level 4 - 1H Swords
-					case W_1HAXE: //All level 4 - 1H Axes
-					case W_MACE: //All level 4 - 1H Maces
-					case W_STAFF: //All level 4 - 1H Staves
-					case W_2HSTAFF: //All level 4 - 2H Staves
-						return ITEM_EQUIP_ACK_OK;
-				}
-		}
 	}
 
 	//Not equipable by class. [Skotlex]
@@ -1874,7 +1838,7 @@ void pc_reg_received(struct map_session_data *sd)
 		sd->hate_mob[i] = static_cast<short>(pc_readglobalreg(sd, add_str(sg_info[i].hate_var)))-1;
 	}
 
-	if ((i = pc_checkskill(sd,JG_PLAGIARISM)) > 0) {
+	if ((i = pc_checkskill(sd,SK_RG_PLAGIARISM)) > 0) {
 		unsigned short skid = static_cast<unsigned short>(pc_readglobalreg(sd, add_str(SKILL_VAR_PLAGIARISM)));
 		sd->cloneskill_idx = skill_get_index(skid);
 		if (sd->cloneskill_idx > 0) {
@@ -1885,7 +1849,7 @@ void pc_reg_received(struct map_session_data *sd)
 			sd->status.skill[sd->cloneskill_idx].flag = SKILL_FLAG_PLAGIARIZED;
 		}
 	}
-	if ((i = pc_checkskill(sd,SC_REPRODUCE)) > 0) {
+	if ((i = pc_checkskill(sd,SK_ST_REPRODUCE)) > 0) {
 		unsigned short skid = static_cast<unsigned short>(pc_readglobalreg(sd, add_str(SKILL_VAR_REPRODUCE)));
 		sd->reproduceskill_idx = skill_get_index(skid);
 		if (sd->reproduceskill_idx > 0) {
@@ -2018,7 +1982,7 @@ static bool pc_grant_allskills(struct map_session_data *sd, bool addlv) {
 	* Dummy skills must NOT be added here otherwise they'll be displayed in the,
 	* skill tree and since they have no icons they'll give resource errors
 	* Get ALL skills except npc/guild ones. [Skotlex]
-	* Don't add SG_DEVIL [Komurka] and RG_SNATCHER [ultramage]
+	* Don't add SG_DEVIL [Komurka] and SK_TF_MUG [ultramage]
 	**/
 	for (const auto &skill : skill_db) {
 		uint16 skill_id = skill.second->nameid;
@@ -2026,25 +1990,15 @@ static bool pc_grant_allskills(struct map_session_data *sd, bool addlv) {
 		if (skill_id == 0 || skill.second->inf2[INF2_ISNPC]|| skill.second->inf2[INF2_ISGUILD])
 			continue;
 		switch (skill_id) {
-			case SM_SELFPROVOKE:
-			case AB_DUPLELIGHT_MELEE:
-			case AB_DUPLELIGHT_MAGIC:
-			case WL_CHAINLIGHTNING_ATK:
-			case HW_TETRAVORTEX_FIRE:
-			case WL_TETRAVORTEX_WATER:
-			case WL_TETRAVORTEX_WIND:
-			case WL_TETRAVORTEX_GROUND:
-			case WL_TETRAVORTEX_NEUTRAL:
-			case WL_SUMMON_ATK_FIRE:
-			case WL_SUMMON_ATK_WIND:
-			case WL_SUMMON_ATK_WATER:
-			case WL_SUMMON_ATK_GROUND:
-			case LG_OVERBRAND_BRANDISH:
-			case LG_OVERBRAND_PLUSATK:
-			case WM_SEVERE_RAINSTORM_MELEE:
-			case RL_R_TRIP_PLUSATK:
-			case SG_DEVIL:
-			case RG_SNATCHER:
+			case SK_PR_DUPLELUX_MELEE:
+			case SK_PR_DUPLELUX_MAGIC:
+			case SK_SO_TETRAVORTEX_FIRE:
+			case SK_SO_TETRAVORTEX_WATER:
+			case SK_SO_TETRAVORTEX_WIND:
+			case SK_SO_TETRAVORTEX_GROUND:
+			case SK_SO_TETRAVORTEX_NEUTRAL:
+			case SK_CL_SEVERERAINSTORM_MELEE:
+			case SK_TF_MUG:
 				continue;
 			default:
 				{
@@ -2097,7 +2051,7 @@ void pc_calc_skilltree(struct map_session_data *sd)
 				continue;
 			}
 			switch (skill_id) {
-				case NV_TRICKDEAD:
+				case SK_NV_TRICKDEAD:
 					if( (sd->class_&MAPID_UPPERMASK) != MAPID_NOVICE ) {
 						sd->status.skill[idx].id = 0;
 						sd->status.skill[idx].lv = 0;
@@ -2130,7 +2084,7 @@ void pc_calc_skilltree(struct map_session_data *sd)
 				continue;
 
 			if (sd->status.skill[sk_idx].flag != SKILL_FLAG_PLAGIARIZED && sd->status.skill[sk_idx].flag != SKILL_FLAG_PERM_GRANTED) {
-				if (sk_id == NV_BASIC || sk_id == NV_FIRSTAID || sk_id == WE_CALLBABY)
+				if (sk_id == SK_NV_BASIC || sk_id == SK_NV_FIRSTAID)
 					continue;
 				sd->status.skill[sk_idx].id = 0;
 			}
@@ -2233,27 +2187,12 @@ void pc_calc_skilltree(struct map_session_data *sd)
 			if( sd->status.skill[sk_idx].id == 0 ) {
 				sd->status.skill[sk_idx].id = skid;
 				sd->status.skill[sk_idx].flag = SKILL_FLAG_TEMPORARY; // So it is not saved, and tagged as a "bonus" skill.
-			} else if( skid != NV_BASIC )
+			} else if( skid != SK_NV_BASIC )
 				sd->status.skill[sk_idx].flag = SKILL_FLAG_REPLACED_LV_0 + sd->status.skill[sk_idx].lv; // Remember original level
 			sd->status.skill[sk_idx].lv = skill_tree_get_max(skid, sd->status.class_);
 		}
 	}
 
-	// Enable Bard/Dancer spirit linked skills.
-	if (sd->sc.count && sd->sc.data[SC_SPIRIT] && sd->sc.data[SC_SPIRIT]->val2 == SL_BARDDANCER) {
-		std::vector<std::vector<uint16>> linked_skills = { { BA_WHISTLE, DC_HUMMING },
-														   { BA_ASSASSINCROSS, DC_DONTFORGETME },
-														   { BA_POEMBRAGI, DC_FORTUNEKISS },
-														   { DC_SERVICEFORYOU } };
-
-		for (const auto &skill : linked_skills) {
-			if (pc_checkskill(sd, skill[!sd->status.sex]) < 10)
-				continue;
-
-			// Tag it as a non-savable, non-uppable, bonus skill
-			pc_skill(sd, skill[sd->status.sex], 10, ADDSKILL_TEMP);
-		}
-	}
 }
 
 //Checks if you can learn a new skill after having leveled up a skill.
@@ -4827,10 +4766,8 @@ int pc_identifyall(struct map_session_data *sd, bool identify_item)
 int pc_modifybuyvalue(struct map_session_data *sd,int orig_value)
 {
 	int skill,val = orig_value,rate1 = 0,rate2 = 0;
-	if((skill=pc_checkskill(sd,MC_OVERCHARGE))>0)	// merchant discount
+	if((skill=pc_checkskill(sd,SK_MC_OVERCHARGE))>0)	// merchant discount
 		rate1 = 5*skill;
-	if((skill=pc_checkskill(sd,RG_COMPULSION))>0)	 // rogue discount
-		rate2 = 5+skill*4;
 	if(rate1 < rate2) rate1 = rate2;
 	if(rate1)
 		val = (int)((double)orig_value*(double)(100-rate1)/100.);
@@ -4846,7 +4783,7 @@ int pc_modifybuyvalue(struct map_session_data *sd,int orig_value)
 int pc_modifysellvalue(struct map_session_data *sd,int orig_value)
 {
 	int skill,val = orig_value,rate = 0;
-	if((skill=pc_checkskill(sd,MC_OVERCHARGE))>0)	//OverCharge
+	if((skill=pc_checkskill(sd,SK_MC_OVERCHARGE))>0)	//OverCharge
 		rate = 5*skill;
 	if(rate)
 		val = (int)((double)orig_value*(double)(100+rate)/100.);
@@ -5319,7 +5256,7 @@ bool pc_takeitem(struct map_session_data *sd,struct flooritem_data *fitem)
 	nullpo_ret(sd);
 	nullpo_ret(fitem);
 
-	if (!check_distance_bl(&fitem->bl, &sd->bl, 2) && sd->ud.skill_id!=BS_GREED)
+	if (!check_distance_bl(&fitem->bl, &sd->bl, 2) && sd->ud.skill_id!=SK_MC_GREED)
 		return false;	// Distance is too far
 
 	if (sd->sc.cant.pickup)
@@ -5604,7 +5541,7 @@ int pc_useitem(struct map_session_data *sd,int n)
 	//perform a skill-use check before going through. [Skotlex]
 	//resurrection was picked as testing skill, as a non-offensive, generic skill, it will do.
 	//FIXME: Is this really needed here? It'll be checked in unit.cpp after all and this prevents skill items using when silenced [Inkfish]
-	if( id->flag.delay_consume > 0 && ( sd->ud.skilltimer != INVALID_TIMER /*|| !status_check_skilluse(&sd->bl, &sd->bl, ALL_RESURRECTION, 0)*/ ) )
+	if( id->flag.delay_consume > 0 && ( sd->ud.skilltimer != INVALID_TIMER /*|| !status_check_skilluse(&sd->bl, &sd->bl, SK_PR_RESURRECTIO, 0)*/ ) )
 		return 0;
 
 	if( id->delay.duration > 0 && !pc_has_permission(sd,PC_PERM_ITEM_UNCONDITIONAL) && pc_itemcd_check(sd, id, tick, n))
@@ -5992,7 +5929,7 @@ int pc_steal_coin(struct map_session_data *sd,struct block_list *target)
 	if (md->state.steal_coin_flag || md->sc.data[SC_STONE] || md->sc.data[SC_FREEZE] || status_bl_has_mode(target,MD_STATUSIMMUNE) || util::vector_exists(status_get_race2(&md->bl), RC2_TREASURE))
 		return 0;
 
-	rate = sd->battle_status.dex / 2 + 2 * (sd->status.base_level - target_lv) + (10 * pc_checkskill(sd, RG_STEALCOIN)) + sd->battle_status.luk / 2;
+	rate = sd->battle_status.dex / 2 + 2 * (sd->status.base_level - target_lv) + sd->battle_status.luk / 2;
 	// if(rnd()%1000 < rate)
 	// {
 	// Zeny Steal Amount: (rnd() % (10 * target_lv + 1 - 8 * target_lv)) + 8 * target_lv
@@ -6069,12 +6006,7 @@ enum e_setpos pc_setpos(struct map_session_data* sd, unsigned short mapindex, in
 			status_change_end(&sd->bl, SC_MOON_COMFORT, INVALID_TIMER);
 			status_change_end(&sd->bl, SC_STAR_COMFORT, INVALID_TIMER);
 			status_change_end(&sd->bl, SC_MIRACLE, INVALID_TIMER);
-			if (sc->data[SC_KNOWLEDGE]) {
-				struct status_change_entry *sce = sc->data[SC_KNOWLEDGE];
-				if (sce->timer != INVALID_TIMER)
-					delete_timer(sce->timer, status_change_timer);
-				sce->timer = add_timer(gettick() + skill_get_time(SG_KNOWLEDGE, sce->val1), status_change_timer, sd->bl.id, SC_KNOWLEDGE);
-			}
+	
 			status_change_end(&sd->bl, SC_PROPERTYWALK, INVALID_TIMER);
 			status_change_end(&sd->bl, SC_CLOAKING, INVALID_TIMER);
 			status_change_end(&sd->bl, SC_SUHIDE, INVALID_TIMER);
@@ -6291,7 +6223,7 @@ bool pc_memo(struct map_session_data* sd, int pos)
 		return false; // invalid input
 
 	// check required skill level
-	skill = pc_checkskill(sd, AL_WARP);
+	/*skill = pc_checkskill(sd, AL_WARP);*/
 	if( skill < 1 ) {
 		clif_skill_memomessage(sd,2); // "You haven't learned Warp."
 		return false;
@@ -6337,20 +6269,13 @@ bool pc_memo(struct map_session_data* sd, int pos)
  * @return player skill cooldown
  */
 int pc_get_skillcooldown(struct map_session_data *sd, uint16 skill_id, uint16 skill_lv) {
-	if (skill_id == SJ_NOVAEXPLOSING) {
-		struct status_change *sc = status_get_sc(&sd->bl);
-
-		if (sc && sc->data[SC_DIMENSION])
-			return 0;
-	}
-
+	
 	int cooldown = skill_get_cooldown(skill_id, skill_lv);
 
 	if (cooldown == 0)
 		return 0;
 
-	if (skill_id == SU_TUNABELLY && pc_checkskill(sd, SU_SPIRITOFSEA))
-		cooldown -= skill_get_time(SU_TUNABELLY, skill_lv);
+	
 
 	for (auto &it : sd->skillcooldown) {
 		if (it.id == skill_id) {
@@ -6396,20 +6321,7 @@ uint8 pc_checkskill_summoner(map_session_data *sd, e_summoner_power_type type) {
 
 	uint8 count = 0;
 
-	switch (type) {
-		case SUMMONER_POWER_SEA:
-			count = pc_checkskill(sd, SU_TUNABELLY) + pc_checkskill(sd, SU_TUNAPARTY) + pc_checkskill(sd, SU_BUNCHOFSHRIMP) + pc_checkskill(sd, SU_FRESHSHRIMP) +
-				pc_checkskill(sd, SU_GROOMING) + pc_checkskill(sd, SU_PURRING) + pc_checkskill(sd, SU_SHRIMPARTY);
-			break;
-		case SUMMONER_POWER_LAND:
-			count = pc_checkskill(sd, SU_SV_STEMSPEAR) + pc_checkskill(sd, SU_CN_POWDERING) + pc_checkskill(sd, SU_CN_METEOR) + pc_checkskill(sd, SU_SV_ROOTTWIST) +
-				pc_checkskill(sd, SU_CHATTERING) + pc_checkskill(sd, SU_MEOWMEOW) + pc_checkskill(sd, SU_NYANGGRASS);
-			break;
-		case SUMMONER_POWER_LIFE:
-			count = pc_checkskill(sd, SU_SCAROFTAROU) + pc_checkskill(sd, SU_PICKYPECK) + pc_checkskill(sd, SU_ARCLOUSEDASH) + pc_checkskill(sd, SU_LUNATICCARROTBEAT) +
-				pc_checkskill(sd, SU_HISS) + pc_checkskill(sd, SU_POWEROFFLOCK) + pc_checkskill(sd, SU_SVG_SPIRIT);
-			break;
-	}
+	
 
 	return count;
 }
@@ -7229,16 +7141,15 @@ int pc_checkbaselevelup(struct map_session_data *sd) {
 	status_percent_heal(&sd->bl,100,100);
 
 	if ((sd->class_&MAPID_UPPERMASK) == MAPID_SUPER_NOVICE) {
-		sc_start(&sd->bl,&sd->bl,status_skill2sc(PR_KYRIE),100,1,skill_get_time(PR_KYRIE,1));
-		sc_start(&sd->bl,&sd->bl,status_skill2sc(PR_IMPOSITIO),100,1,skill_get_time(PR_IMPOSITIO,1));
-		sc_start(&sd->bl,&sd->bl,status_skill2sc(PR_MAGNIFICAT),100,1,skill_get_time(PR_MAGNIFICAT,1));
-		sc_start(&sd->bl,&sd->bl,status_skill2sc(PR_GLORIA),100,1,skill_get_time(PR_GLORIA,1));
-		sc_start(&sd->bl,&sd->bl,status_skill2sc(PR_SUFFRAGIUM),100,1,skill_get_time(PR_SUFFRAGIUM,1));
+		sc_start(&sd->bl,&sd->bl,status_skill2sc(SK_PR_KYRIE),100,1,skill_get_time(SK_PR_KYRIE,1));
+		sc_start(&sd->bl,&sd->bl,status_skill2sc(SK_PR_IMPOSITIO),100,1,skill_get_time(SK_PR_IMPOSITIO,1));
+		sc_start(&sd->bl,&sd->bl,status_skill2sc(SK_PR_MAGNIFICAT),100,1,skill_get_time(SK_PR_MAGNIFICAT,1));
+		sc_start(&sd->bl,&sd->bl,status_skill2sc(SK_PR_SUFFRAGIUM),100,1,skill_get_time(SK_PR_SUFFRAGIUM,1));
 		if (sd->state.snovice_dead_flag)
 			sd->state.snovice_dead_flag = 0; //Reenable steelbody resurrection on dead.
 	} else if( (sd->class_&MAPID_BASEMASK) == MAPID_TAEKWON ) {
-		sc_start(&sd->bl,&sd->bl,status_skill2sc(AL_INCAGI),100,10,600000);
-		sc_start(&sd->bl,&sd->bl,status_skill2sc(AL_BLESSING),100,10,600000);
+		sc_start(&sd->bl,&sd->bl,status_skill2sc(SK_AL_INCREASEAGI),100,10,600000);
+		sc_start(&sd->bl,&sd->bl,status_skill2sc(SK_AL_BLESSING),100,10,600000);
 	}
 	clif_misceffect(&sd->bl,0);
 	npc_script_event(sd, NPCE_BASELVUP); //LORDALFA - LVLUPEVENT
@@ -7296,9 +7207,7 @@ int pc_checkjoblevelup(struct map_session_data *sd)
 	clif_updatestatus(sd,SP_SKILLPOINT);
 	status_calc_pc(sd,SCO_FORCE);
 	clif_misceffect(&sd->bl,1);
-	if (pc_checkskill(sd, SG_DEVIL) && ((sd->class_&MAPID_THIRDMASK) == MAPID_STAR_EMPEROR || pc_is_maxjoblv(sd)) )
-		clif_status_change(&sd->bl, EFST_DEVIL1, 1, 0, 0, 0, 1); //Permanent blind effect from SG_DEVIL.
-
+	
 	npc_script_event(sd, NPCE_JOBLVUP);
 	for (; job_level <= sd->status.job_level; job_level++)
 		achievement_update_objective(sd, AG_GOAL_LEVEL, 1, job_level);
@@ -7847,10 +7756,7 @@ void pc_skillup(struct map_session_data *sd,uint16 skill_id)
 			upgradable = (lv < skill_tree_get_max(sd->status.skill[idx].id, sd->status.class_)) ? 1 : 0;
 			clif_skillup(sd,skill_id,lv,range,upgradable);
 			clif_updatestatus(sd,SP_SKILLPOINT);
-			if( skill_id == GN_REMODELING_CART ) /* cart weight info was updated by status_calc_pc */
-				clif_updatestatus(sd,SP_CARTINFO);
-			if (pc_checkskill(sd, SG_DEVIL) && ((sd->class_&MAPID_THIRDMASK) == MAPID_STAR_EMPEROR || pc_is_maxjoblv(sd)))
-				clif_status_change(&sd->bl, EFST_DEVIL1, 1, 0, 0, 0, 1); //Permanent blind effect from SG_DEVIL.
+	
 			if (!pc_has_permission(sd, PC_PERM_ALL_SKILL)) // may skill everything at any time anyways, and this would cause a huge slowdown
 				clif_skillinfoblock(sd);
 		}
@@ -7889,8 +7795,7 @@ int pc_allskillup(struct map_session_data *sd)
 
 			if (
 				(skill->inf2[INF2_ISQUEST] && !battle_config.quest_skill_learn) ||
-				((skill->inf2[INF2_ISWEDDING] || skill->inf2[INF2_ISSPIRIT])) ||
-				sk_id == SG_DEVIL
+				((skill->inf2[INF2_ISWEDDING] || skill->inf2[INF2_ISSPIRIT])) 
 			)
 				continue; //Cannot be learned normally.
 
@@ -7935,8 +7840,8 @@ int pc_resetlvl(struct map_session_data* sd,int type)
 		if(sd->status.class_ == JOB_NOVICE_HIGH) {
 			sd->status.status_point=100;	// not 88 [celest]
 			// give platinum skills upon changing
-			pc_skill(sd,NV_FIRSTAID,1,ADDSKILL_PERMANENT);
-			pc_skill(sd,NV_TRICKDEAD,1,ADDSKILL_PERMANENT);
+			pc_skill(sd,SK_NV_FIRSTAID,1,ADDSKILL_PERMANENT);
+			pc_skill(sd,SK_NV_TRICKDEAD,1,ADDSKILL_PERMANENT);
 		}
 	}
 
@@ -8083,21 +7988,9 @@ int pc_resetskill(struct map_session_data* sd, int flag)
 		if( pc_is_taekwon_ranker(sd) )
 			return 0;
 
-		if( pc_checkskill(sd, SG_DEVIL) && ((sd->class_&MAPID_THIRDMASK) == MAPID_STAR_EMPEROR || pc_is_maxjoblv(sd)) )
-			clif_status_load(&sd->bl, EFST_DEVIL1, 0); //Remove perma blindness due to skill-reset. [Skotlex]
 		i = sd->sc.option;
 		if( i&OPTION_RIDING && 1 ) //pc_checkskill(sd, KN_RIDING)
 			i &= ~OPTION_RIDING;
-		if( i&OPTION_FALCON && pc_checkskill(sd, HT_FALCON) )
-			i &= ~OPTION_FALCON;
-		if( i&OPTION_DRAGON && pc_checkskill(sd, RK_DRAGONTRAINING) )
-			i &= ~OPTION_DRAGON;
-		if( i&OPTION_WUG && pc_checkskill(sd, RA_WUGMASTERY) )
-			i &= ~OPTION_WUG;
-		if( i&OPTION_WUGRIDER && pc_checkskill(sd, RA_WUGRIDER) )
-			i &= ~OPTION_WUGRIDER;
-		if( i&OPTION_MADOGEAR && ( sd->class_&MAPID_THIRDMASK ) == MAPID_MECHANIC )
-			i &= ~OPTION_MADOGEAR;
 
 		// if( sd->sc.data[SC_PUSH_CART] )
 		// 	pc_setcart(sd, 0);
@@ -8105,11 +7998,7 @@ int pc_resetskill(struct map_session_data* sd, int flag)
 		if( i != sd->sc.option )
 			pc_setoption(sd, i);
 
-		if( hom_is_active(sd->hd) && pc_checkskill(sd, AM_CALLHOMUN) )
-			hom_vaporize(sd, HOM_ST_ACTIVE);
-
-		if (sd->sc.data[SC_SPRITEMABLE] && pc_checkskill(sd, SU_SPRITEMABLE))
-			status_change_end(&sd->bl, SC_SPRITEMABLE, INVALID_TIMER);
+	
 	}
 
 	for (const auto &skill : skill_db) {
@@ -8123,7 +8012,7 @@ int pc_resetskill(struct map_session_data* sd, int flag)
 			continue;
 
 		// Don't reset trick dead if not a novice/baby
-		if( skill_id == NV_TRICKDEAD && (sd->class_&MAPID_UPPERMASK) != MAPID_NOVICE )
+		if( skill_id == SK_NV_TRICKDEAD && (sd->class_&MAPID_UPPERMASK) != MAPID_NOVICE )
 		{
 			sd->status.skill[idx].lv = 0;
 			sd->status.skill[idx].flag = SKILL_FLAG_PERMANENT;
@@ -8131,17 +8020,17 @@ int pc_resetskill(struct map_session_data* sd, int flag)
 		}
 
 		// do not reset basic skill
-		if (skill_id == NV_BASIC && (sd->class_&MAPID_UPPERMASK) != MAPID_NOVICE )
+		if (skill_id == SK_NV_BASIC && (sd->class_&MAPID_UPPERMASK) != MAPID_NOVICE )
 			continue;
 			
-		if (skill_id == ALL_EQSWITCH && (sd->class_&MAPID_UPPERMASK) != MAPID_NOVICE )
+		if (skill_id == SK_NV_EQSWITCH && (sd->class_&MAPID_UPPERMASK) != MAPID_NOVICE )
 			continue;
 
 		if( sd->status.skill[idx].flag == SKILL_FLAG_PERM_GRANTED )
 			continue;
 
-		if( flag&4 && !skill_ischangesex(skill_id) )
-			continue;
+		// if( flag&4 && !skill_ischangesex(skill_id) )
+		// 	continue;
 
 		if( skill.second->inf2[INF2_ISQUEST] && !battle_config.quest_skill_learn )
 		{ //Only handle quest skills in a special way when you can't learn them manually
@@ -8254,11 +8143,11 @@ int pc_skillheal_bonus(struct map_session_data *sd, uint16 skill_id) {
 
 	if( bonus ) {
 		switch( skill_id ) {
-			case AL_HEAL:           if( !(battle_config.skill_add_heal_rate&1) ) bonus = 0; break;
-			case AM_POTIONPITCHER:  if( !(battle_config.skill_add_heal_rate&4) ) bonus = 0; break;
-			case AM_SLIMPITCHER:  if( !(battle_config.skill_add_heal_rate&4) ) bonus = 0; break;
-			// case CR_HEAL:           if( !(battle_config.skill_add_heal_rate&4) ) bonus = 0; break;
-			case CR_SLIMPITCHER:    if( !(battle_config.skill_add_heal_rate&8) ) bonus = 0; break;
+			case SK_AL_HEAL:           if( !(battle_config.skill_add_heal_rate&1) ) bonus = 0; break;
+			case SK_AM_AIDPOTION:  if( !(battle_config.skill_add_heal_rate&4) ) bonus = 0; break;
+			case SK_AM_AIDCONDENSEDPOTION:  if( !(battle_config.skill_add_heal_rate&4) ) bonus = 0; break;
+			// case SK_CR_SWORDSTOPLOWSHARES:           if( !(battle_config.skill_add_heal_rate&4) ) bonus = 0; break;
+			case SK_CR_POTIONPITCHER:    if( !(battle_config.skill_add_heal_rate&8) ) bonus = 0; break;
 		}
 	}
 
@@ -8417,7 +8306,7 @@ int pc_dead(struct map_session_data *sd,struct block_list *src)
 			clif_resurrection(&sd->bl, 1);
 			if(battle_config.pc_invincible_time)
 				pc_setinvincibletimer(sd, battle_config.pc_invincible_time);
-			sc_start(&sd->bl,&sd->bl,status_skill2sc(MO_STEELBODY),100,5,skill_get_time(MO_STEELBODY,5));
+			sc_start(&sd->bl,&sd->bl,status_skill2sc(SK_SH_MENTALSTRENGTH),100,5,skill_get_time(SK_SH_MENTALSTRENGTH,5));
 			if(mapdata_flag_gvg2(mapdata))
 				pc_respawn_timer(INVALID_TIMER, gettick(), sd->bl.id, 0);
 			return 0;
@@ -8796,7 +8685,7 @@ bool pc_revive_item(struct map_session_data *sd) {
 	else
 		pc_delitem(sd, item_position, 1, 0, 1, LOG_TYPE_CONSUME);
 
-	clif_skill_nodamage(&sd->bl, &sd->bl, ALL_RESURRECTION, 4, 1);
+	clif_skill_nodamage(&sd->bl, &sd->bl, SK_PR_RESURRECTIO, 4, 1);
 
 	return true;
 }
@@ -9233,12 +9122,10 @@ int pc_itemheal(struct map_session_data *sd, t_itemid itemid, int hp, int sp)
 	int bonus, tmp, penalty = 0;
 
 	if (hp) {
-		bonus = 100 + (sd->battle_status.vit << 1) + pc_checkskill(sd, SM_RECOVERY) * 10 + pc_checkskill(sd, AM_LEARNINGPOTION) * 5;
+		bonus = 100 + (sd->battle_status.vit << 1) + pc_checkskill(sd, SK_SM_RECOVERY) * 10;
 		// A potion produced by an Alchemist in the Fame Top 10 gets +50% effect [DracoRPG]
 		if (potion_flag == 2) {
 			bonus += bonus * 50 / 100;
-			if (sd->sc.data[SC_SPIRIT] && sd->sc.data[SC_SPIRIT]->val2 == SL_ROGUE)
-				bonus += bonus; // Receive an additional +100% effect from ranked potions to HP only
 		}
 		//All item bonuses.
 		bonus += sd->bonus.itemhealrate2;
@@ -9263,7 +9150,7 @@ int pc_itemheal(struct map_session_data *sd, t_itemid itemid, int hp, int sp)
 			hp = tmp;
 	}
 	if (sp) {
-		bonus = 100 + (sd->battle_status.int_ << 1) + (pc_checkskill(sd, MG_SRECOVERY)*2) * 10 + (pc_checkskill(sd, JG_SRECOVERY)*2) * 10 +pc_checkskill(sd, AM_LEARNINGPOTION) * 5;
+		bonus = 100 + (sd->battle_status.int_ << 1) + (pc_checkskill(sd, SK_SM_SRECOVERY)*2) * 10 + (pc_checkskill(sd, SK_MG_SRECOVERY)*2) * 10;
 		// A potion produced by an Alchemist in the Fame Top 10 gets +50% effect [DracoRPG]
 		if (potion_flag == 2)
 			bonus += bonus * 50 / 100;
@@ -9527,16 +9414,7 @@ bool pc_jobchange(struct map_session_data *sd,int job, char upper)
 	i = sd->sc.option;
 	if( i&OPTION_RIDING && !1 ) //pc_checkskill(sd, KN_RIDING)
 		i&=~OPTION_RIDING;
-	if( i&OPTION_FALCON && !pc_checkskill(sd, HT_FALCON) )
-		i&=~OPTION_FALCON;
-	if( i&OPTION_DRAGON && !pc_checkskill(sd,RK_DRAGONTRAINING) )
-		i&=~OPTION_DRAGON;
-	if( i&OPTION_WUGRIDER && !pc_checkskill(sd,RA_WUGMASTERY) )
-		i&=~OPTION_WUGRIDER;
-	if( i&OPTION_WUG && !pc_checkskill(sd,RA_WUGMASTERY) )
-		i&=~OPTION_WUG;
-	if( i&OPTION_MADOGEAR ) //You do not need a skill for this.
-		i&=~OPTION_MADOGEAR;
+	
 
 	// if( sd->sc.data[SC_PUSH_CART] && !pc_checkskill(sd, MC_PUSHCART) )
 	// 	pc_setcart(sd, 0);
@@ -9544,12 +9422,7 @@ bool pc_jobchange(struct map_session_data *sd,int job, char upper)
 	if(i != sd->sc.option)
 		pc_setoption(sd, i);
 
-	if(hom_is_active(sd->hd) && !pc_checkskill(sd, AM_CALLHOMUN))
-		hom_vaporize(sd, HOM_ST_ACTIVE);
-
-	if (sd->sc.data[SC_SPRITEMABLE] && !pc_checkskill(sd, SU_SPRITEMABLE))
-		status_change_end(&sd->bl, SC_SPRITEMABLE, INVALID_TIMER);
-
+	
 	if(sd->status.manner < 0)
 		clif_changestatus(sd,SP_MANNER,sd->status.manner);
 
@@ -9682,12 +9555,13 @@ void pc_setoption(struct map_session_data *sd,int type, int subtype)
 	sd->sc.option=type;
 	clif_changeoption(&sd->bl);
 
-	if( (type&OPTION_RIDING && !(p_type&OPTION_RIDING)) || (type&OPTION_DRAGON && !(p_type&OPTION_DRAGON) && pc_checkskill(sd,RK_DRAGONTRAINING) > 0) )
+	if( (type&OPTION_RIDING && !(p_type&OPTION_RIDING)) || (type&OPTION_DRAGON && !(p_type&OPTION_DRAGON) && false) )
 	{ // Mounting
 		clif_status_load(&sd->bl,EFST_RIDING,1);
 		status_calc_pc(sd,SCO_NONE);
 	}
-	else if( (!(type&OPTION_RIDING) && p_type&OPTION_RIDING) || (!(type&OPTION_DRAGON) && p_type&OPTION_DRAGON && pc_checkskill(sd,RK_DRAGONTRAINING) > 0) )
+	else
+		if( (!(type&OPTION_RIDING) && p_type&OPTION_RIDING) || (!(type&OPTION_DRAGON) && p_type&OPTION_DRAGON && false) )
 	{ // Dismount
 		clif_status_load(&sd->bl,EFST_RIDING,0);
 		status_calc_pc(sd,SCO_NONE);
@@ -9795,8 +9669,7 @@ bool pc_setcart(struct map_session_data *sd,int type) {
 void pc_setfalcon(struct map_session_data* sd, int flag)
 {
 	if( flag ){
-		if( pc_checkskill(sd,HT_FALCON)>0 )	// add falcon if he have the skill
-			pc_setoption(sd,sd->sc.option|OPTION_FALCON);
+		pc_setoption(sd,sd->sc.option|OPTION_FALCON);
 	} else if( pc_isfalcon(sd) ){
 		pc_setoption(sd,sd->sc.option&~OPTION_FALCON); // remove falcon
 	}
@@ -9830,8 +9703,7 @@ void pc_setmadogear(struct map_session_data *sd, bool flag, e_mado_type type)
 		return;
 
 	if (flag) {
-		if (pc_checkskill(sd, NC_MADOLICENCE) > 0)
-			pc_setoption(sd, sd->sc.option | OPTION_MADOGEAR, type);
+		pc_setoption(sd, sd->sc.option | OPTION_MADOGEAR, type);
 	} else if (pc_ismadogear(sd)) {
 		pc_setoption(sd, sd->sc.option & ~OPTION_MADOGEAR);
 	}
@@ -10933,7 +10805,7 @@ bool pc_unequipitem(struct map_session_data *sd, int n, int flag) {
 		}
 	}
 	if(pos & EQP_HAND_L) {
-		if (sd->status.shield && battle_getcurrentskill(&sd->bl) == LG_SHIELDSPELL)
+		if (sd->status.shield && false)
 			unit_skillcastcancel(&sd->bl, 0); // Cancel Shield Spell if player swaps shields.
 
 		sd->status.shield = sd->weapontype2 = W_FIST;
@@ -11628,22 +11500,7 @@ bool pc_setstand(struct map_session_data *sd, bool force){
  * @param heat: Amount of Heat to adjust
  **/
 void pc_overheat(struct map_session_data *sd, int16 heat) {
-	nullpo_retv(sd);
-
-	status_change_entry *sce = sd->sc.data[SC_OVERHEAT_LIMITPOINT];
-
-	if (sce) {
-		static std::vector<int16> limit = { 150, 200, 280, 360, 450 };
-		uint16 skill_lv = cap_value(pc_checkskill(sd, NC_MAINFRAME), 0, (uint16)(limit.size()-1));
-
-		sce->val1 += heat;
-		sce->val1 = cap_value(sce->val1, 0, 1000);
-		if (sd->sc.data[SC_OVERHEAT])
-			status_change_end(&sd->bl, SC_OVERHEAT, INVALID_TIMER);
-		if (sce->val1 > limit[skill_lv])
-			sc_start(&sd->bl, &sd->bl, SC_OVERHEAT, 100, sce->val1, 1000);
-	} else if (heat > 0)
-		sc_start(&sd->bl, &sd->bl, SC_OVERHEAT_LIMITPOINT, 100, heat, 1000);
+	
 }
 
 /**

@@ -5,7 +5,7 @@ Header:
 
 Body:
   - Id: 2247
-    Name: RA_CAMOUFLAGE
+    Name: SK_HT_CAMOUFLAGE
     Description: Camouflage
     MaxLevel: 5
     TargetType: Self
@@ -22,7 +22,7 @@ Body:
     Requires:
       SpCost: 25
   - Id: 2282
-    Name: NC_MAGICDECOY
+    Name: SK_HT_ELEMENTALTOTEM
     Description: FAW - Magic Decoy
     MaxLevel: 5
     TargetType: Ground
@@ -47,7 +47,7 @@ Body:
     Requires:
       SpCost: 35
   - Id: 337
-    Name: ITM_TOMAHAWK
+    Name: SK_HT_MAGICTOMAHAWK
     Description: Throw Tomahawk
     MaxLevel: 5
     Type: Magic
@@ -65,7 +65,7 @@ Body:
     Requires:
       SpCost: 25
   - Id: 824
-    Name: HT_MAGICDECOY
+    Name: SK_HT_MYSTICTOTEM
     Description: FAW - Magic Decoy
     MaxLevel: 5
     TargetType: Ground
@@ -92,7 +92,7 @@ Body:
     Requires:
       SpCost: 35
   - Id: 823
-    Name: HT_BOWQUICKEN
+    Name: SK_HT_BOWQUICKEN
     Description: Bow Quicken
     MaxLevel: 5
     Type: Weapon
@@ -119,7 +119,7 @@ Body:
       Weapon:
         Bow: true
   - Id: 2458
-    Name: SO_SUMMON_AQUA
+    Name: SK_HT_WARGTRAINING
     Description: Summon Water Spirit Aqua
     MaxLevel: 5
     TargetType: Self
@@ -166,7 +166,7 @@ Body:
         - Level: 5
           Amount: 10
   - Id: 857
-    Name: HT_WARG_1
+    Name: SK_HT_SLASH
     Description: Elemental Action
     MaxLevel: 5
     TargetType: Attack
@@ -181,7 +181,7 @@ Body:
       SpCost: 25
       State: Elementalspirit
   - Id: 2459
-    Name: SO_SUMMON_VENTUS
+    Name: SK_HT_FALCONRY
     Description: Summon Wind Spirit Ventus
     MaxLevel: 5
     TargetType: Self
@@ -228,7 +228,7 @@ Body:
         - Level: 5
           Amount: 10
   - Id: 858
-    Name: HT_FALCON_1
+    Name: SK_HT_BLITZBEAT
     Description: Elemental Action
     MaxLevel: 5
     TargetType: Attack
@@ -243,11 +243,11 @@ Body:
       SpCost: 22
       State: Elementalspirit
   - Id: 2235
-    Name: RA_RANGERMAIN
+    Name: SK_HT_TRACKINGBREEZE
     Description: Ranger Main
     MaxLevel: 5
   - Id: 825
-    Name: HT_CYCLONICCHARGE
+    Name: SK_HT_CYCLONICCHARGE
     Description: Cyclonic Charge
     MaxLevel: 5
     Type: Weapon
@@ -277,7 +277,7 @@ Body:
       Weapon:
         Bow: true
   - Id: 383
-    Name: SN_WINDWALK
+    Name: SK_HT_WINDRACER
     Description: Wind Walker
     MaxLevel: 5
     Type: Weapon
@@ -308,7 +308,7 @@ Body:
         - Item: Wind_Stone
           Amount: 1
   - Id: 513
-    Name: HT_HURRICANEFURY
+    Name: SK_HT_LIVINGTORNADO
     Description: Hurricane Fury
     MaxLevel: 5
     Type: Weapon
@@ -337,7 +337,7 @@ Body:
       Weapon:
         Bow: true
   - Id: 2243
-    Name: RA_WUGSTRIKE
+    Name: SK_WG_SLASH
     Description: Warg Strike
     MaxLevel: 5
     Type: Misc
@@ -356,7 +356,7 @@ Body:
     Requires:
       SpCost: 25
   - Id: 129
-    Name: HT_BLITZBEAT
+    Name: SK_FC_BLITZBEAT
     Description: Blitz Beat
     MaxLevel: 5
     Type: Misc

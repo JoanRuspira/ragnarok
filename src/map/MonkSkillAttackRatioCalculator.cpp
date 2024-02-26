@@ -10,14 +10,14 @@
 int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv, struct status_data* sstatus, bool revealed_hidden_enemy, map_session_data *sd, status_change *sc)
 {
 	switch (skill_id) {
-		case GS_FULLBUSTER:
+		case SK_MO_TRIPLEARMCANNON:
 			if(!is_in_combo(sc)) {
 				sc_start(&sd->bl,&sd->bl, SC_COMBO1, 100, 17, 4000);
 			}else{
 				increment_combo(sc, sd);
 			}
 			return calculate_raging_triple_blow_atk_ratio(skill_lv);
-		case GS_PIERCINGSHOT:
+		case SK_MO_TIGERFIST:
 		{
 			bool is_using_mace = false;
 			if (sd && sd->status.weapon == W_MACE || sd->status.weapon == W_2HMACE) {
@@ -30,13 +30,13 @@ int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 			clif_specialeffect(target, EF_ENERVATION2, AREA); //groomy	
 			return calculate_chain_combo_atk_ratio(skill_lv, is_using_mace, combo_counter);
 		}
-		case NJ_ZENYNAGE:
+		case SK_SH_GATEOFHELL:
 			if(is_in_combo(sc)) {
 				increment_combo(sc, sd);
 			}
 			clif_specialeffect(target, EF_ENERVATION3, AREA); //ignorance
 			return calculate_gate_of_hell_atk_ratio(skill_lv);
-		case NC_BOOSTKNUCKLE:
+		case SK_SH_DRAGONDARKNESSFLAME:
 			{
 				int combo_counter = get_combo_counter(sc);
 				clif_specialeffect(target, EF_TINDER_BREAKER, AREA); //tinder
@@ -52,28 +52,28 @@ int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 				status_change_end(&sd->bl, SC_COMBO10, INVALID_TIMER);
 				return calculate_dragon_flame_atk_ratio(skill_lv, combo_counter);
 			}
-		case MO_FINGEROFFENSIVE:
+		case SK_MO_TRHOWSPIRITSPHERE:
 			return calculate_throw_spirit_sphere_atk_ratio(skill_lv);
-        case MO_INVESTIGATE:
+        case SK_MO_OCCULTIMPACT:
             return calculate_occult_impact(skill_lv, status_get_def(target));
-		case MO_KI_BLAST:
+		case SK_MO_KIBLAST:
 			return calculate_ki_blast_atk_ratio(skill_lv, sstatus->str);
-		case SR_WINDMILL:
+		case SK_MO_CIRCULARFISTS:
 			return calculate_circular_fists_atk_ratio(skill_lv, revealed_hidden_enemy);
-		case CH_PALMSTRIKE:
+		case SK_MO_PALMSTRIKE:
 			if(is_in_combo(sc)) {
 				increment_combo(sc, sd);
 			}
 			return calculate_palm_strike_atk_ratio(skill_lv);
-		case MO_BALKYOUNG:
+		case SK_MO_FALINGFIST:
 			if(is_in_combo(sc)) {
 				increment_combo(sc, sd);
 			}
 			add_falling_fist_special_effects(target);
 			return calculate_falling_fist_atk_ratio(skill_lv);
-		case SR_DRAGONCOMBO:
+		case SK_SH_GUILLOTINEFISTS:
 			return calculate_guillotine_fists_atk_ratio(skill_lv);
-		case MO_EXTREMITYFIST:
+		case SK_SH_ASURASTRIKE:
 			return (1000 + sstatus->sp) * skill_lv;
 		default:
 			return 0;

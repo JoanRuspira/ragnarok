@@ -138,31 +138,15 @@ int EquipmentAttackCalculator::battle_get_weapon_element(Damage * wd, block_list
 	else if (element == ELE_RANDOM) //Use random element
 		element = rnd() % ELE_ALL;
 
-	switch (skill_id) {
-	case GS_GROUNDDRIFT:
-		element = wd->miscflag; //element comes in flag.
-		break;
-	case LG_HESPERUSLIT:
-		if (sc && sc->data[SC_BANDING] && sc->data[SC_BANDING]->val2 > 4)
-			element = ELE_HOLY;
-		break;
-	case SJ_PROMINENCEKICK:
-		element = ELE_FIRE;
-		break;
-	case RL_H_MINE:
-		if (sd && sd->flicker) //Force RL_H_MINE deals fire damage if activated by RL_FLICKER
-			element = ELE_FIRE;
-		break;
-	}
 
-	if (sc && sc->data[SC_GOLDENE_FERSE] && ((!skill_id && (rnd() % 100 < sc->data[SC_GOLDENE_FERSE]->val4)) || skill_id == MH_STAHL_HORN))
+	if (sc && sc->data[SC_GOLDENE_FERSE] && ((!skill_id && (rnd() % 100 < sc->data[SC_GOLDENE_FERSE]->val4))))
 		element = ELE_HOLY;
 
 	// calc_flag means the element should be calculated for damage only
 	if (calc_for_damage_only)
 		return element;
 
-	// if (skill_id == CR_SHIELDBOOMERANG)
+	// if (skill_id == SK_CR_SHIELDBOOMERANG)
 	// 	element = ELE_NEUTRAL;
 
 	return element;
@@ -222,8 +206,7 @@ int EquipmentAttackCalculator::battle_calc_sizefix(int64 damage, map_session_dat
  */
 bool EquipmentAttackCalculator::battle_skill_stacks_masteries_vvs(uint16 skill_id)
 {
-	if (skill_id == RK_DRAGONBREATH || skill_id == RK_DRAGONBREATH_WATER || skill_id == NC_SELFDESTRUCTION ||
-		skill_id == LG_SHIELDPRESS || skill_id == LG_EARTHDRIVE)
+	if (skill_id == SK_CM_DRAGONBREATH)
 		return false;
 
 	return true;

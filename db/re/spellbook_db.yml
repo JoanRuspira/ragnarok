@@ -32,81 +32,81 @@ Header:
   Version: 1
 
 Body:
-  - Skill: MG_FIREBOLT
+  - Skill: SK_MG_FIREBOLT
     Book: Magic_Book_FireBolt
     PreservePoints: 1
-  - Skill: MG_COLDBOLT
+  - Skill: SK_MG_COLDBOLT
     Book: Magic_Book_ColdBolt
     PreservePoints: 1
-  - Skill: MG_LIGHTNINGBOLT
+  - Skill: SK_MG_LIGHTNINGBOLT
     Book: Magic_Book_LightningBolt
     PreservePoints: 1
-  - Skill: MG_EARTHBOLT
+  - Skill: SK_MG_EARTHBOLT
     Book: Magic_Book_EarthBolt
     PreservePoints: 1
-  - Skill: WL_SOULEXPANSION
+  - Skill: SK_MG_VOIDEXPANSION
     Book: Magic_Book_VoidExpansion
     PreservePoints: 1
-  - Skill: MG_UNDEADEMBRACE
+  - Skill: SK_MG_CORRUPT
     Book: Magic_Book_Corrupt
     PreservePoints: 1
-  - Skill: NPC_DARKSTRIKE
+  - Skill: SK_MG_DARKSTRIKE
     Book: Magic_Book_DarkStrike
     PreservePoints: 1
-  - Skill: MG_SOULSTRIKE
+  - Skill: SK_MG_SOULSTRIKE
     Book: Magic_Book_SoulStrike
     PreservePoints: 1
-  - Skill: SO_EARTHGRAVE
+  - Skill: SK_WZ_EARTHSTRAIN
     Book: Magic_Book_EarthSpikes
     PreservePoints: 1
-  - Skill: WZ_VERMILION
+  - Skill: SK_WZ_LORDOFVERMILION
     Book: Magic_Book_LordOfVermillion
     PreservePoints: 1
-  - Skill: WZ_STORMGUST
+  - Skill: SK_WZ_STORMGUST
     Book: Magic_Book_StormGust
     PreservePoints: 1
-  - Skill: WZ_METEOR
+  - Skill: SK_WZ_METEORSTORM
     Book: Magic_Book_MeteorStorm
     PreservePoints: 1
-  - Skill: WZ_EARTHSPIKE
+  - Skill: SK_WZ_STALAGMITE
     Book: Magic_Book_Stalagmite
     PreservePoints: 1
-  - Skill: WZ_LIGHTNINGROD
+  - Skill: SK_WZ_THUNDERSTORM
     Book: Magic_Book_Thunderstorm
     PreservePoints: 1
-  - Skill: WZ_ICEBERG
+  - Skill: SK_WZ_ICEBERG
     Book: Magic_Book_Iceberg
     PreservePoints: 1
-  - Skill: WL_CRIMSONROCK
+  - Skill: SK_WZ_CRIMSONROCK
     Book: Magic_Book_CrimsonRock
     PreservePoints: 1
-  - Skill: SO_PSYCHIC_WAVE
+  - Skill: SK_WZ_PSYCHICWAVE
     Book: Magic_Book_PsychicWave
     PreservePoints: 1
-  - Skill: SL_SMA
+  - Skill: SK_WZ_ILLUSIONARYBLADES
     Book: Magic_Book_IllusionaryBlades
     PreservePoints: 1
-  - Skill: WZ_EXTREMEVACUUM
+  - Skill: SK_WZ_EXTREMEVACUUM
     Book: Magic_Book_ExtremeVacuum
     PreservePoints: 1
-  - Skill: WZ_LANDOFEVIL
+  - Skill: SK_WZ_REALITYBREAKER
     Book: Magic_Book_RealityBreaker
     PreservePoints: 1
-  - Skill: WL_TETRAVORTEX
+  - Skill: SK_SO_TETRAVORTEX
     Book: Magic_Book_TetraVortex
     PreservePoints: 1
-  - Skill: HW_PHANTOMSPEAR
+  - Skill: SK_SO_PHANTOMSPEAR
     Book: Magic_Book_PhantomSpear
     PreservePoints: 1
-  - Skill: HW_SHADOWBOMB
+  - Skill: SK_SO_SHADOWBOMB
     Book: Magic_Book_ShadowBomb
     PreservePoints: 1
-  - Skill: HW_DOOM
+  - Skill: SK_SO_DOOM
     Book: Magic_Book_Doom
     PreservePoints: 1
-  - Skill: HW_DIAMONDDUST
+  - Skill: SK_SO_DIAMONDDUST
     Book: Magic_Book_DiamondDust
     PreservePoints: 1
-  - Skill: HW_ASTRALSTRIKE
+  - Skill: SK_SO_ASTRALSTRIKE
     Book: Magic_Book_AstralStrike
     PreservePoints: 1

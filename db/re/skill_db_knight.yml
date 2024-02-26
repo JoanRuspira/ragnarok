@@ -5,7 +5,7 @@ Header:
 
 Body:
   - Id: 817
-    Name: KN_THQUICKEN
+    Name: SK_KN_THQUICKEN
     Description: Two Hand Quicken
     MaxLevel: 5
     Type: Weapon
@@ -32,7 +32,7 @@ Body:
       Weapon:
         2hSword: true
   - Id: 835
-    Name: KN_ADRENALINE
+    Name: SK_KN_ADRENALINERUSH
     Description: Adrenaline Rush
     MaxLevel: 5
     Type: Weapon
@@ -65,7 +65,7 @@ Body:
     Requires:
       SpCost: 40
   - Id: 876
-    Name: KN_FURY
+    Name: SK_KN_FURY
     Description: Fury
     MaxLevel: 5
     Type: Weapon
@@ -82,7 +82,7 @@ Body:
         - Item: Runstone_Turisus
           Amount: 1
   - Id: 368
-    Name: PA_SACRIFICE
+    Name: SK_KN_RECKONING
     Description: Martyr's Reckoning
     MaxLevel: 5
     Type: Weapon
@@ -111,7 +111,7 @@ Body:
       Weapon:
         2hSword: true
   - Id: 816
-    Name: KN_SQUICKEN
+    Name: SK_KN_SQUICKEN
     Description: Spear Quicken
     MaxLevel: 5
     Type: Weapon
@@ -139,7 +139,7 @@ Body:
         1hSpear: true
         2hSpear: true
   - Id: 59
-    Name: KN_SPEARBOOMERANG
+    Name: SK_KN_SPEARCANNON
     Description: Spear Boomerang
     MaxLevel: 5
     Type: Weapon
@@ -170,7 +170,7 @@ Body:
         1hSpear: true
         2hSpear: true
   - Id: 57
-    Name: KN_BRANDISHSPEAR
+    Name: SK_KN_BRANDISHSPEAR
     Description: Brandish Spear
     MaxLevel: 5
     Type: Weapon
@@ -198,7 +198,7 @@ Body:
         1hSpear: true
         2hSpear: true
   - Id: 815
-    Name: KN_OHQUICKEN
+    Name: SK_KN_OHQUICKEN
     Description: One Hand Quicken
     MaxLevel: 5
     Type: Weapon
@@ -225,7 +225,7 @@ Body:
       Weapon:
         1hSword: true
   - Id: 2005
-    Name: RK_WINDCUTTER
+    Name: SK_KN_WINDCUTTER
     Description: Wind Cutter
     MaxLevel: 5
     Type: Weapon
@@ -247,7 +247,7 @@ Body:
     Requires:
       SpCost: 30
   - Id: 2001
-    Name: RK_ENCHANTBLADE
+    Name: SK_KN_ENCHANTBLADE
     Description: Enchant Blade
     MaxLevel: 5
     TargetType: Self
@@ -277,7 +277,7 @@ Body:
         - Item: Runstone_Pertz
           Amount: 1
   - Id: 2002
-    Name: RK_SONICWAVE
+    Name: SK_KN_SONICWAVE
     Description: Sonic Wave
     MaxLevel: 5
     Type: Weapon
@@ -305,7 +305,7 @@ Body:
     Requires:
       SpCost: 30
   - Id: 2016
-    Name: RK_VITALITYACTIVATION
+    Name: SK_KN_VIGOR
     Description: Vitality Activation
     MaxLevel: 5
     TargetType: Self
@@ -322,7 +322,7 @@ Body:
     Requires:
       SpCost: 40
   - Id: 2015
-    Name: RK_STONEHARDSKIN
+    Name: SK_KN_STONESKIN
     Description: Stone Hard Skin
     MaxLevel: 5
     TargetType: Self
@@ -343,7 +343,7 @@ Body:
         - Item: Runstone_Rhydo
           Amount: 1
   - Id: 61
-    Name: KN_AUTOCOUNTER
+    Name: SK_KN_COUNTERATTACK
     Description: Counter Attack
     MaxLevel: 5
     Type: Weapon
@@ -386,7 +386,7 @@ Body:
         Knuckle: true
         Katar: true
   - Id: 56
-    Name: KN_PIERCE
+    Name: SK_KN_PIERCE
     Description: Pierce
     MaxLevel: 5
     Type: Weapon
@@ -407,7 +407,7 @@ Body:
         1hSpear: true
         2hSpear: true
   - Id: 62
-    Name: KN_BOWLINGBASH
+    Name: SK_KN_BOWLINGBASH
     Description: Bowling Bash
     MaxLevel: 5
     Type: Weapon

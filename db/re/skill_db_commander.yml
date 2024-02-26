@@ -5,12 +5,12 @@ Header:
 
 Body:
   - Id: 863
-    Name: LK_TWOHAND
+    Name: SK_CM_TWOHAND
     Description: Advanced Two-Handed Sword Mastery
     MaxLevel: 5
     Type: Weapon
   - Id: 359
-    Name: LK_BERSERK
+    Name: SK_CM_FRENZY
     Description: Frenzy
     MaxLevel: 5
     Type: Weapon
@@ -31,7 +31,7 @@ Body:
       Weapon:
         2hSword: true
   - Id: 397
-    Name: LK_SPIRALPIERCE
+    Name: SK_CM_CLASHINGSPIRAL
     Description: Spiral Pierce
     MaxLevel: 5
     Type: Weapon
@@ -57,7 +57,7 @@ Body:
         1hSword: true
         2hSword: true
   - Id: 355
-    Name: LK_AURABLADE
+    Name: SK_CM_AURABLADE
     Description: Aura Blade
     MaxLevel: 5
     Type: Weapon
@@ -90,7 +90,7 @@ Body:
         - Item: Runstone_Asir
           Amount: 1
   - Id: 357
-    Name: LK_CONCENTRATION
+    Name: SK_CM_SPEAR_DYNAMO
     Description: Concentration
     MaxLevel: 5
     Type: Weapon
@@ -111,7 +111,7 @@ Body:
         - Item: Runstone_Hagalas
           Amount: 1
   - Id: 2004
-    Name: RK_HUNDREDSPEAR
+    Name: SK_CM_HUNDREDSPEAR
     Description: Hundred Spear
     MaxLevel: 5
     Type: Weapon
@@ -128,7 +128,7 @@ Body:
         1hSpear: true
         2hSpear: true
   - Id: 356
-    Name: LK_PARRYING
+    Name: SK_CM_PARRY
     Description: Parrying
     MaxLevel: 5
     Type: Weapon
@@ -150,7 +150,7 @@ Body:
         - Item: Runstone_Rhydo
           Amount: 1
   - Id: 5013
-    Name: LG_KINGS_GRACE
+    Name: SK_CM_MILLENIUMSHIELDS
     Description: King's Grace
     MaxLevel: 5
     TargetType: Self
@@ -186,7 +186,7 @@ Body:
         NoReiteration: true
         RangedSingleUnit: true
   - Id: 5004
-    Name: RK_DRAGONBREATH_WATER
+    Name: SK_CM_DRAGONBREATH
     Description: Dragon Breath - Water
     MaxLevel: 5
     Type: Magic
@@ -208,7 +208,7 @@ Body:
         - Item: Runstone_Pertz
           Amount: 1
   - Id: 2006
-    Name: RK_IGNITIONBREAK
+    Name: SK_CM_IGNITIONBREAK
     Description: Ignition Break
     MaxLevel: 5
     Type: Weapon
@@ -233,7 +233,7 @@ Body:
         - Item: Runstone_Pertz
           Amount: 1
   - Id: 867
-    Name: DUMMY_HUNDREDSPEAR
+    Name: SK_CM_DUMMY_HUNDREDSPEAR
     Description: Vulcan Arrow
     MaxLevel: 5
     Type: Weapon

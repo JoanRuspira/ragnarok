@@ -10,23 +10,23 @@
 int SwordsmanSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv, struct status_data* sstatus)
 {
 	switch (skill_id) {
-		case SM_BASH:
+		case SK_SM_BASH:
 			add_bash_special_effects(target);
 			return calculate_bash_atk_ratio(skill_lv);
 			break;
-		case SM_MAGNUM:
+		case SK_SM_MAGNUM:
 			// add_magnum_break_special_effects(src);
 			return calculate_magnum_break_atk_ratio(skill_lv, sstatus->int_);
 			break;
-		case KN_SPEARSTAB:
+		case SK_SM_SPEARSTAB:
 			add_spear_stab_special_effects(src, target);
 			return calculate_spear_stab_atk_ratio(skill_lv, target);
 			break;
-		case LK_HEADCRUSH:
+		case SK_SM_TRAUMATIC_STRIKE:
 			add_traumatic_blow_special_effects(src, target);
 			calculate_traumatic_blow_atk_ratio(skill_lv);
 			break;
-		case LK_JOINTBEAT:
+		case SK_SM_LIGHTNING_STRIKE:
 			add_lightning_strike_special_effects(target);
 			calculate_lightning_strike_atk_ratio(skill_lv, sstatus->int_);
 			break;

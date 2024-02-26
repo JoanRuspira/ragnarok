@@ -5,7 +5,7 @@ Header:
 
 Body:
   - Id: 877
-    Name: AB_LAUDATEDOMINIUM
+    Name: SK_BI_LAUDATEDOMINIUM
     Description: Laudate Dominium
     MaxLevel: 5
     Type: Weapon
@@ -22,7 +22,7 @@ Body:
         - Item: White_Gemstone
           Amount: 2
   - Id: 2040  
-    Name: AB_ADORAMUS
+    Name: SK_BI_SENTENTIA
     Description: Adoramus
     MaxLevel: 5
     Type: Magic
@@ -56,7 +56,7 @@ Body:
     Requires:
       SpCost: 80
   - Id: 878
-    Name: HP_PENITENTIA
+    Name: SK_BI_PENITENTIA
     Description: Penitentia
     MaxLevel: 5
     Type: Magic
@@ -85,7 +85,7 @@ Body:
         - Item: Black_Gemstone
           Amount: 1
   - Id: 879
-    Name: HP_VITUPERATUM
+    Name: SK_BI_DIABOLICRUCIATUS
     Description: Diaboli Cruciatus
     MaxLevel: 5
     Type: Magic
@@ -106,7 +106,7 @@ Body:
     Requires:
       SpCost: 80
   - Id: 5011
-    Name: AB_OFFERTORIUM
+    Name: SK_BI_OFFERTORIUM
     Description: Offertorium
     MaxLevel: 5
     TargetType: Self
@@ -120,7 +120,7 @@ Body:
     Requires:
       SpCost: 50
   - Id: 2044
-    Name: AB_EPICLESIS
+    Name: SK_BI_EPICLESIS
     Description: Epiclesis
     MaxLevel: 5
     Type: Magic
@@ -163,7 +163,7 @@ Body:
         NoOverlap: true
         PathCheck: true
   - Id: 2053
-    Name: AB_EXPIATIO
+    Name: SK_BI_EXPIATIO
     Description: Expiatio
     MaxLevel: 5
     Type: Magic
@@ -191,7 +191,7 @@ Body:
     Requires:
       SpCost: 75
   - Id: 880
-    Name: AB_ULTOR
+    Name: SK_BI_INLUCEMBATALIA
     Description: In Lucem Batalia
     MaxLevel: 5
     Type: Magic
@@ -212,7 +212,7 @@ Body:
         - Item: Red_Gemstone
           Amount: 1
   - Id: 69
-    Name: PR_BENEDICTIO
+    Name: SK_BI_BENEDICTIO
     Description: B.S. Sacramenti
     MaxLevel: 5
     Type: Magic
@@ -239,7 +239,7 @@ Body:
         - Item: Yellow_Gemstone
           Amount: 1
   - Id: 361
-    Name: HP_ASSUMPTIO
+    Name: SK_BI_ASSUMPTIO
     Description: Assumptio
     MaxLevel: 5
     Type: Magic

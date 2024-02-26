@@ -31,7 +31,7 @@
 //  	Negative values decrease damage and positive values increase it (0 = no change).
 //
 // Examples:
-// MC_MAMMONITE,BL_PC,1,50 // In normal maps, players deal +50% damage to other players with Mammonite.
-// MO_EXTREMITYFIST,BL_PC,6,-50 // In PVP and GVG, players deal -50% (half) damage to other players with Asura Strike.
-// AB_ADORAMUS,BL_PC,6,50,0,10,15 // In PVP and GVG, players deal +50% damage to other players, +0% to mobs, +10% to bosses, and +15% to other with Adoramus.
+// SK_MC_MAMMONITE,BL_PC,1,50 // In normal maps, players deal +50% damage to other players with Mammonite.
+// SK_SH_ASURASTRIKE,BL_PC,6,-50 // In PVP and GVG, players deal -50% (half) damage to other players with Asura Strike.
+// SK_BI_SENTENTIA,BL_PC,6,50,0,10,15 // In PVP and GVG, players deal +50% damage to other players, +0% to mobs, +10% to bosses, and +15% to other with Adoramus.
 

@@ -5,7 +5,7 @@ Header:
 
 Body:
   - Id: 2445
-    Name: SO_SPELLFIST
+    Name: SK_PF_SPELLFIST
     Description: Spell Fist
     MaxLevel: 5
     TargetType: Self
@@ -35,7 +35,7 @@ Body:
         - Item: Stone_Of_Intelligence
           Amount: 1
   - Id: 482
-    Name: PF_DOUBLECASTING
+    Name: SK_PF_MAGICSQUARED
     Description: Double Casting
     MaxLevel: 5
     Type: Magic
@@ -56,7 +56,7 @@ Body:
         - Item: Stone_Of_Intelligence
           Amount: 1
   - Id: 288
-    Name: SA_LANDPROTECTOR
+    Name: SK_PF_LANDPROTECTOR
     Description: Magnetic Earth
     MaxLevel: 5
     Type: Magic
@@ -102,7 +102,7 @@ Body:
         PathCheck: true
         RemovedByFireRain: true
   - Id: 894
-    Name: PF_STASIS
+    Name: SK_PF_STASIS
     Description: Stasis
     MaxLevel: 5
     TargetType: Self
@@ -122,7 +122,7 @@ Body:
         - Item: Old_Magic_Book
           Amount: 2
   - Id: 373
-    Name: PF_HPCONVERSION
+    Name: SK_PF_INDULGE
     Description: Indulge
     MaxLevel: 5
     Type: Magic
@@ -136,7 +136,7 @@ Body:
     Requires:
       SpCost: 5
   - Id: 374
-    Name: PF_SOULCHANGE
+    Name: SK_PF_SOULEXHALE
     Description: Soul Exhale
     MaxLevel: 5
     TargetType: Attack

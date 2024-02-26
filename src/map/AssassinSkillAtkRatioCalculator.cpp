@@ -7,48 +7,48 @@
 int AssassinSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv, struct status_data* sstatus, int rolling_cutter_counters)
 {
 	switch (skill_id) {
-		case AS_SONICBLOW:
+		case SK_AS_SONICBLOW:
 			add_sonic_blow_especial_effects(target);
 			return calculate_sonic_blow_atk_ratio(skill_lv);
 			break;
-		case SO_CLOUD_KILL:
+		case SK_AS_POISONOUSCLOUD:
 			return calculate_venom_dust_atk_ratio(skill_lv, sstatus->int_);
 			break;
-		case GC_ROLLINGCUTTER:
+		case SK_AS_ROLLINGCUTTER:
 			return calculate_rolling_cutter_atk_ratio(skill_lv, sstatus->luk);
 			break;
-		case GC_CROSSRIPPERSLASHER:
+		case SK_AS_CROSSRIPPERSLASHER:
 			return calculate_cross_ripper_slasher_atk_ratio(skill_lv, rolling_cutter_counters);
 			break;
-		case AS_SPLASHER:
+		case SK_AS_VENOMSPLASHER:
 			add_venom_splasher_especial_effects(target);
 			return calculate_venom_splasher_atk_ratio(skill_lv, sstatus->int_);
 			break;
-		case NJ_KUNAI:
+		case SK_AS_KUNAI:
 			add_throw_kunai_especial_effects(target);
 			return calculate_throw_kunai_atk_ratio(skill_lv, sstatus->dex);
 			break;
-		case ASC_METEORASSAULT:
+		case SK_EX_METEORASSAULT:
 			// add_meteor_assault_special_effects(src);
 			return calculate_meteor_assault_atk_ratio(skill_lv, sstatus->dex);
 			break;
-		case ASC_BREAKER:
+		case SK_EX_SOULDESTROYER:
 			return calculate_soul_destroyer_atk_ratio(skill_lv, sstatus->dex);
 			break;
-		case GC_DARKCROW:
+		case SK_EX_DARKCLAW:
 			add_dark_claw_special_effects(target);
 			return calculate_dark_claw_atk_ratio(skill_lv);
 			break;
-		case DUMMY_CROSSIMPACT:
-		case GC_CROSSIMPACT:
+		case SK_EX_DUMMY_CROSSIMPACT:
+		case SK_EX_CROSSIMPACT:
 			add_cross_impact_special_effects(target);
 			return calculate_cross_impact_atk_ratio(skill_lv, sstatus->luk);
 			break;
-		case NJ_SYURIKEN:
+		case SK_AS_SHURIKEN:
 			add_throw_shuriken_especial_effects(target);
 			return calculate_throw_shuriken_atk_ratio(skill_lv, sstatus->dex);
 			break;
-		case SO_POISON_BUSTER:
+		case SK_EX_POISONBUSTER:
 			return calculate_poison_buster_atk_ratio(skill_lv, sstatus->int_);
 			break;
 		default:

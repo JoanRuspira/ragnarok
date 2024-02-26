@@ -10,26 +10,26 @@
 int HunterSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv, struct status_data* sstatus)
 {
 	switch (skill_id) {
-		case RA_WUGSTRIKE:
+		case SK_WG_SLASH:
 			add_slash_special_effects(target);
 			return 0;
 			break;
 		// 	return calculate_slash_atk_ratio(skill_lv,sstatus->int_);
-		// case HT_BLITZBEAT:
+		// case SK_FC_BLITZBEAT:
 		// 	return calculate_blitz_beat_atk_ratio(skill_lv,sstatus->agi);
-		case SN_ZEPHYR_SNIPING:
+		case SK_RA_ZEPHYRSNIPING:
 			add_hurricane_fury_special_effects(target);
 			return calculate_zephyr_sniping_atk_ratio(skill_lv);
-		case HT_HURRICANEFURY:
+		case SK_HT_LIVINGTORNADO:
     		clif_specialeffect(target, 1402, AREA); //new_cannon_spear_03_clock
 			return calculate_cyclonic_charge_atk_ratio(skill_lv);
-		case ITM_TOMAHAWK:
+		case SK_HT_MAGICTOMAHAWK:
 			add_magic_tomahawk_special_effects(target);
 			return calculate_magic_tomahawk_atk_ratio(skill_lv, sstatus->matk_max);
-		case SN_SHARPSHOOTING:
+		case SK_ST_SHARPSHOOTING:
 			add_sharp_shooting_special_effects(target);
 			return calculate_sharp_shooting_atk_ratio(skill_lv,sstatus->dex);
-		case SN_ULLR_ATK:
+		case SK_RA_ULLREAGLETOTEM_ATK:
 			return calculate_ullrs_magic_shot_atk_ratio(skill_lv);
 		default:
 			return 0;

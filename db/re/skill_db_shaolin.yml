@@ -5,7 +5,7 @@ Header:
 
 Body:
   - Id: 270
-    Name: MO_EXPLOSIONSPIRITS
+    Name: SK_SH_ULTRAINSTINCT
     Description: Ultra Instinct
     MaxLevel: 5
     Type: Weapon
@@ -22,7 +22,7 @@ Body:
         - Item: Dragonball_Green
           Amount: 1
   - Id: 2326
-    Name: SR_DRAGONCOMBO
+    Name: SK_SH_GUILLOTINEFISTS
     Description: Dragon Combo
     MaxLevel: 5
     Type: Weapon
@@ -44,7 +44,7 @@ Body:
       Weapon:
         Knuckle: true
   - Id: 526
-    Name: NJ_ZENYNAGE
+    Name: SK_SH_GATEOFHELL
     Description: Throw Zeny
     MaxLevel: 5
     Type: Misc
@@ -67,7 +67,7 @@ Body:
         Mace: true
         2hMace: true
   - Id: 2256
-    Name: NC_BOOSTKNUCKLE
+    Name: SK_SH_DRAGONDARKNESSFLAME
     Description: Boost Knuckle
     MaxLevel: 5
     Type: Weapon
@@ -85,12 +85,12 @@ Body:
           Amount: 1
       SpiritSphereCost: 1
   - Id: 875
-    Name: CH_ZEN
+    Name: SK_SH_ZEN
     Description: Zen
     MaxLevel: 5
     Type: Weapon
   - Id: 271
-    Name: MO_EXTREMITYFIST
+    Name: SK_SH_ASURASTRIKE
     Description: Asura Strike
     MaxLevel: 5
     Type: Weapon
@@ -115,7 +115,7 @@ Body:
           Amount: 1
       SpiritSphereCost: 5
   - Id: 269
-    Name: MO_BLADESTOP
+    Name: SK_SH_GRAPPLE
     Description: Root
     MaxLevel: 5
     Type: Weapon
@@ -140,7 +140,7 @@ Body:
       SpCost: 10
       SpiritSphereCost: 1
   - Id: 268
-    Name: MO_STEELBODY
+    Name: SK_SH_MENTALSTRENGTH
     Description: Mental Strength
     MaxLevel: 5
     Type: Weapon

@@ -3891,7 +3891,7 @@ void clif_arrow_create_list( struct map_session_data *sd ){
 	WFIFOSET( fd, p->packetLength );
 
 	if( count > 0 ){
-		sd->menuskill_id = AC_MAKINGARROW;
+		sd->menuskill_id = SK_AC_MAKINGARROW;
 		sd->menuskill_val = count;
 	}
 }
@@ -5190,7 +5190,7 @@ void clif_getareachar_skillunit(struct block_list *bl, struct skill_unit *unit, 
 	}
 	clif_send(buf, len, bl, target);
 
-	if (unit->group->skill_id == WZ_ICEWALL)
+	if (unit->group->skill_id == SK_MG_ICEWALL)
 		clif_changemapcell(fd, unit->bl.m, unit->bl.x, unit->bl.y, 5, SELF);
 }
 
@@ -5207,7 +5207,7 @@ static void clif_clearchar_skillunit(struct skill_unit *unit, int fd)
 	WFIFOL(fd, 2)=unit->bl.id;
 	WFIFOSET(fd,packet_len(0x120));
 
-	if(unit->group && unit->group->skill_id == WZ_ICEWALL)
+	if(unit->group && unit->group->skill_id == SK_MG_ICEWALL)
 		clif_changemapcell(fd,unit->bl.m,unit->bl.x,unit->bl.y,unit->val2,SELF);
 }
 
@@ -5577,7 +5577,7 @@ void clif_skillcasting(struct block_list* bl, int src_id, int dst_id, int dst_x,
 	WBUFB(buf,24) = 0;  // isDisposable
 #endif
 
-	if (skill_id == PF_STASIS) {
+	if (skill_id == SK_PF_STASIS) {
 		clif_specialeffect(bl, EF_DELUGE, AREA);
 	}
 
@@ -5610,7 +5610,7 @@ void clif_skillcastcancel(struct block_list* bl)
 
 /// Notifies the client about the result of a skill use request (ZC_ACK_TOUSESKILL).
 /// 0110 <skill id>.W <num>.L <result>.B <cause>.B
-/// num (only used when skill id = NV_BASIC and cause = 0):
+/// num (only used when skill id = SK_NV_BASIC and cause = 0):
 ///     0 = "skill failed" MsgStringTable[159]
 ///     1 = "no emotions" MsgStringTable[160]
 ///     2 = "no sit" MsgStringTable[161]
@@ -5622,8 +5622,8 @@ void clif_skillcastcancel(struct block_list* bl)
 ///     ? = ignored
 /// cause:
 ///     0 = "not enough skill level" MsgStringTable[214] (AL_WARP)
-///         "steal failed" MsgStringTable[205] (TF_STEAL)
-///         "envenom failed" MsgStringTable[207] (TF_POISON)
+///         "steal failed" MsgStringTable[205] (SK_TF_STEAL)
+///         "envenom failed" MsgStringTable[207] (SK_TF_POISONSLASH)
 ///         "skill failed" MsgStringTable[204] (otherwise)
 ///   ... = @see enum useskill_fail_cause
 ///     ? = ignored
@@ -5646,10 +5646,10 @@ void clif_skill_fail( struct map_session_data *sd, uint16 skill_id, enum useskil
 	if(cause==USESKILL_FAIL_SKILLINTERVAL && !sd->state.showdelay)
 		return; //Disable delay failed messages
 
-	if(skill_id == RG_SNATCHER && battle_config.display_skill_fail&4)
+	if(skill_id == SK_TF_MUG && battle_config.display_skill_fail&4)
 		return;
 
-	if(skill_id == TF_POISON && battle_config.display_skill_fail&8)
+	if(skill_id == SK_TF_POISONSLASH && battle_config.display_skill_fail&8)
 		return;
 
 	struct PACKET_ZC_ACK_TOUSESKILL p;
@@ -5702,8 +5702,8 @@ int clif_skill_damage(struct block_list *src,struct block_list *dst,t_tick tick,
 			damage = clif_hallucination_damage();
 	}
 
-	if (skill_id == CG_ARROWVULCAN || skill_id == AS_SONICBLOW || skill_id == RK_HUNDREDSPEAR){
-		skill_id = GC_CROSSIMPACT;
+	if (skill_id == SK_CL_ARROWVULCAN || skill_id == SK_AS_SONICBLOW || skill_id == SK_CM_HUNDREDSPEAR){
+		skill_id = SK_EX_CROSSIMPACT;
 	}
 
 	WBUFW(buf,0)=0x1de;
@@ -5895,11 +5895,7 @@ void clif_skill_warppoint(struct map_session_data* sd, uint16 skill_id, uint16 s
 	WFIFOSET(fd,packet_len(0x11c));
 
 	sd->menuskill_id = skill_id;
-	if (skill_id == AL_WARP) {
-		sd->menuskill_val = (sd->ud.skillx<<16)|sd->ud.skilly; //Store warp position here.
-		sd->state.workinprogress = WIP_DISABLE_ALL;
-	} else
-		sd->menuskill_val = skill_lv;
+
 }
 
 
@@ -6007,8 +6003,6 @@ void clif_skill_produce_mix_list( struct map_session_data *sd, int skill_id, int
 
 	if (sd->menuskill_id == skill_id)
 		return; //Avoid resending the menu twice or more times...
-	if (skill_id == GC_CREATENEWPOISON)
-		skill_id = GC_RESEARCHNEWPOISON;
 
 	WFIFOHEAD( fd, sizeof( struct PACKET_ZC_MAKABLEITEMLIST ) + MAX_SKILL_PRODUCE_DB * sizeof( struct PACKET_ZC_MAKABLEITEMLIST_sub ) );
 	struct PACKET_ZC_MAKABLEITEMLIST *p = (struct PACKET_ZC_MAKABLEITEMLIST *)WFIFOP( fd, 0 );
@@ -6092,7 +6086,7 @@ void clif_skill_produce_mix_list( struct map_session_data *sd, int skill_id, int
 		}
 	}
 
-	if ((AM_PHARMACY > 0 )) {
+	if ((SK_AM_PHARMACY > 0 )) {
 		if(pc_search_inventory(sd, ITEMID_POTION_GUIDE) >= 0) {
 			clif_add_item_to_produce_list(p, 501, count);
 			clif_add_item_to_produce_list(p, 502, count);
@@ -6176,7 +6170,7 @@ void clif_cooking_list( struct map_session_data *sd, int trigger, uint16 skill_i
 		count++;
 	}
 
-	if( count > 0 || skill_id == AM_PHARMACY ){
+	if( count > 0 || skill_id == SK_AM_PHARMACY ){
 		p->packetLength = sizeof( struct PACKET_ZC_MAKINGITEM_LIST ) + count * sizeof( struct PACKET_ZC_MAKINGITEM_LIST_sub );
 		WFIFOSET( fd, p->packetLength );
 
@@ -6921,7 +6915,6 @@ void clif_item_identify_list(struct map_session_data *sd)
 	if(c > 0) {
 		WFIFOW(fd,2)=c*2+4;
 		WFIFOSET(fd,WFIFOW(fd,2));
-		sd->menuskill_id = MC_IDENTIFY;
 		sd->menuskill_val = c;
 		sd->state.workinprogress = WIP_DISABLE_ALL;
 	}
@@ -6997,7 +6990,7 @@ void clif_item_repair_list( struct map_session_data *sd,struct map_session_data 
 
 		WFIFOSET( fd, len );
 
-		sd->menuskill_id = BS_REPAIRWEAPON;
+		sd->menuskill_id = SK_BS_REPAIRWEAPON;
 		sd->menuskill_val = dstsd->bl.id;
 		sd->menuskill_val2 = lv;
 	}else{
@@ -7059,7 +7052,7 @@ void clif_item_refine_list( struct map_session_data *sd ){
 	struct PACKET_ZC_NOTIFY_WEAPONITEMLIST *p = (struct PACKET_ZC_NOTIFY_WEAPONITEMLIST *)WFIFOP( fd, 0 );
 	p->packetType = 0x221;
 
-	uint16 skill_lv = pc_checkskill( sd, WS_WEAPONREFINE );
+	uint16 skill_lv = pc_checkskill( sd, SK_MS_WEAPONREFINE );
 
 	int refine_item[6];
 
@@ -7095,7 +7088,7 @@ void clif_item_refine_list( struct map_session_data *sd ){
 	WFIFOSET( fd, p->packetLength );
 
 	if( count > 0 ){
-		sd->menuskill_id = WS_WEAPONREFINE;
+		sd->menuskill_id = SK_MS_WEAPONREFINE;
 		sd->menuskill_val = 10;
 	}
 }
@@ -8179,7 +8172,6 @@ void clif_sendegg(struct map_session_data *sd)
 	WFIFOW(fd,2)=4+n*2;
 	WFIFOSET(fd,WFIFOW(fd,2));
 
-	sd->menuskill_id = SA_TAMINGMONSTER;
 	sd->menuskill_val = -1;
 }
 
@@ -8288,12 +8280,12 @@ void clif_autospell(struct map_session_data *sd,uint16 skill_lv)
 
 
 	uint16 autospell_skill[][2] = { 
-		{ MG_EARTHBOLT, 0 }, 
-		{ MG_LIGHTNINGBOLT, 1 }, 
-		{ MG_COLDBOLT, 2 },  
-		{ MG_FIREBOLT, 3 },  
-		{ NPC_DARKSTRIKE, 4 },
-		{ MG_SOULSTRIKE, 4 }, 
+		{ SK_MG_EARTHBOLT, 0 }, 
+		{ SK_MG_LIGHTNINGBOLT, 1 }, 
+		{ SK_MG_COLDBOLT, 2 },  
+		{ SK_MG_FIREBOLT, 3 },  
+		{ SK_MG_DARKSTRIKE, 4 },
+		{ SK_MG_SOULSTRIKE, 4 }, 
 	};
 	int count = 0;
 
@@ -8312,7 +8304,7 @@ void clif_autospell(struct map_session_data *sd,uint16 skill_lv)
 
 	WFIFOSET(fd, WFIFOW(fd, 2));
 
-	sd->menuskill_id = SA_AUTOSPELL;
+	sd->menuskill_id = SK_SA_AUTOSPELL;
 	sd->menuskill_val = skill_lv;
 }
 
@@ -8328,16 +8320,7 @@ void clif_devotion(struct block_list *src, struct map_session_data *tsd)
 
 	WBUFW(buf,0) = 0x1cf;
 	WBUFL(buf,2) = src->id;
-	if( src->type == BL_MER )
-	{
-		struct mercenary_data *md = BL_CAST(BL_MER,src);
-		if( md && md->master && md->devotion_flag )
-			WBUFL(buf,6) = md->master->bl.id;
-
-		WBUFW(buf,26) = skill_get_range2(src, ML_DEVOTION, mercenary_checkskill(md, ML_DEVOTION), false);
-	}
-	else
-	{
+	
 		int i;
 		struct map_session_data *sd = BL_CAST(BL_PC,src);
 		if( sd == NULL )
@@ -8345,8 +8328,8 @@ void clif_devotion(struct block_list *src, struct map_session_data *tsd)
 
 		for( i = 0; i < 5 /*MAX_DEVOTION*/; i++ ) // Client only able show to 5 links
 			WBUFL(buf,6+4*i) = sd->devotion[i];
-		WBUFW(buf,26) = skill_get_range2(src, CR_DEVOTION, pc_checkskill(sd, CR_DEVOTION), false);
-	}
+		WBUFW(buf,26) = skill_get_range2(src, SK_CR_SWORNPROTECTOR, pc_checkskill(sd, SK_CR_SWORNPROTECTOR), false);
+
 
 	if( tsd )
 		clif_send(buf, packet_len(0x1cf), &tsd->bl, SELF);
@@ -10004,17 +9987,17 @@ void clif_party_xy_remove(struct map_session_data *sd)
 /// Displays a skill message (thanks to Rayce) (ZC_SKILLMSG).
 /// 0215 <msg id>.L
 /// msg id:
-///     0x15 = End all negative status (PA_GOSPEL)
-///     0x16 = Immunity to all status (PA_GOSPEL)
-///     0x17 = MaxHP +100% (PA_GOSPEL)
-///     0x18 = MaxSP +100% (PA_GOSPEL)
-///     0x19 = All stats +20 (PA_GOSPEL)
-///     0x1c = Enchant weapon with Holy element (PA_GOSPEL)
-///     0x1d = Enchant armor with Holy element (PA_GOSPEL)
-///     0x1e = DEF +25% (PA_GOSPEL)
-///     0x1f = ATK +100% (PA_GOSPEL)
-///     0x20 = HIT/Flee +50 (PA_GOSPEL)
-///     0x28 = Full strip failed because of coating (ST_FULLSTRIP)
+///     0x15 = End all negative status (SK_PA_GOSPEL)
+///     0x16 = Immunity to all status (SK_PA_GOSPEL)
+///     0x17 = MaxHP +100% (SK_PA_GOSPEL)
+///     0x18 = MaxSP +100% (SK_PA_GOSPEL)
+///     0x19 = All stats +20 (SK_PA_GOSPEL)
+///     0x1c = Enchant weapon with Holy element (SK_PA_GOSPEL)
+///     0x1d = Enchant armor with Holy element (SK_PA_GOSPEL)
+///     0x1e = DEF +25% (SK_PA_GOSPEL)
+///     0x1f = ATK +100% (SK_PA_GOSPEL)
+///     0x20 = HIT/Flee +50 (SK_PA_GOSPEL)
+///     0x28 = Full strip failed because of coating (SK_ST_FULLSTRIP)
 ///     ? = nothing
 void clif_gospel_info(struct map_session_data *sd, int type)
 {
@@ -10766,13 +10749,6 @@ void clif_parse_LoadEndAck(int fd,struct map_session_data *sd)
 		if(sd->status.manner < 0)
 			sc_start(&sd->bl,&sd->bl,SC_NOCHAT,100,0,0);
 
-		//Auron reported that This skill only triggers when you logon on the map o.O [Skotlex]
-		if ((lv = pc_checkskill(sd,SG_KNOWLEDGE)) > 0) {
-			if(sd->bl.m == sd->feel_map[0].m
-				|| sd->bl.m == sd->feel_map[1].m
-				|| sd->bl.m == sd->feel_map[2].m)
-				sc_start(&sd->bl,&sd->bl, SC_KNOWLEDGE, 100, lv, skill_get_time(SG_KNOWLEDGE, lv));
-		}
 
 		if(sd->pd && sd->pd->pet.intimate > 900)
 			clif_pet_emotion(sd->pd,(sd->pd->pet.class_ - 100)*100 + 50 + pet_hungry_val(sd->pd));
@@ -10937,9 +10913,7 @@ void clif_parse_LoadEndAck(int fd,struct map_session_data *sd)
 	if(!sd->state.autotrade && mapdata->flag[MF_LOADEVENT]) // Lance
 		npc_script_event(sd, NPCE_LOADMAP);
 
-	if (pc_checkskill(sd, SG_DEVIL) && ((sd->class_&MAPID_THIRDMASK) == MAPID_STAR_EMPEROR || pc_is_maxjoblv(sd)))
-		clif_status_load(&sd->bl, EFST_DEVIL1, 1);  //blindness [Komurka]
-
+	
 	if (sd->sc.opt2) //Client loses these on warp.
 		clif_changeoption(&sd->bl);
 
@@ -11424,7 +11398,7 @@ void clif_parse_Emotion(int fd, struct map_session_data *sd)
 {
 	int emoticon = RFIFOB(fd,packet_db[RFIFOW(fd,0)].pos[0]);
 
-	if (battle_config.basic_skill_check == 0 || pc_checkskill(sd, NV_BASIC) >= 2 || pc_checkskill(sd, SU_BASIC_SKILL) >= 1) {
+	if (battle_config.basic_skill_check == 0 || pc_checkskill(sd, SK_NV_BASIC) >= 2) {
 		if (emoticon == ET_CHAT_PROHIBIT) {// prevent use of the mute emote [Valaris]
 			clif_skill_fail(sd, 1, USESKILL_FAIL_LEVEL, 1);
 			return;
@@ -11534,7 +11508,7 @@ void clif_parse_ActionRequest_sub(struct map_session_data *sd, int action_type, 
 		unit_attack(&sd->bl, target_id, action_type != 0);
 		break;
 	case 0x02: // sitdown
-		if (battle_config.basic_skill_check && pc_checkskill(sd, NV_BASIC) < 3 && pc_checkskill(sd, SU_BASIC_SKILL) < 1) {
+		if (battle_config.basic_skill_check && pc_checkskill(sd, SK_NV_BASIC) < 3) {
 			clif_skill_fail(sd, 1, USESKILL_FAIL_LEVEL, 2);
 			break;
 		}
@@ -12020,7 +11994,7 @@ void clif_parse_NpcClicked(int fd,struct map_session_data *sd)
 			break;
 		case BL_NPC:
 #ifdef RENEWAL
-			if (sd->ud.skill_id < RK_ENCHANTBLADE && sd->ud.skilltimer != INVALID_TIMER) { // Should only show an error message for non-3rd job skills with a running timer
+			if (sd->ud.skill_id < SK_KN_ENCHANTBLADE && sd->ud.skilltimer != INVALID_TIMER) { // Should only show an error message for non-3rd job skills with a running timer
 				clif_msg(sd, WORK_IN_PROGRESS);
 				break;
 			}
@@ -12151,7 +12125,7 @@ void clif_parse_CreateChatRoom(int fd, struct map_session_data* sd)
 
 	if (sd->sc.data[SC_NOCHAT] && sd->sc.data[SC_NOCHAT]->val1&MANNER_NOROOM)
 		return;
-	if(battle_config.basic_skill_check && pc_checkskill(sd,NV_BASIC) < 4 && pc_checkskill(sd, SU_BASIC_SKILL) < 1) {
+	if(battle_config.basic_skill_check && pc_checkskill(sd,SK_NV_BASIC) < 4) {
 		clif_skill_fail(sd,1,USESKILL_FAIL_LEVEL,3);
 		return;
 	}
@@ -12286,7 +12260,7 @@ void clif_parse_TradeRequest(int fd,struct map_session_data *sd)
 		}
 	}
 
-	if( battle_config.basic_skill_check && pc_checkskill(sd,NV_BASIC) < 1 && pc_checkskill(sd, SU_BASIC_SKILL) < 1) {
+	if( battle_config.basic_skill_check && pc_checkskill(sd,SK_NV_BASIC) < 1) {
 		clif_skill_fail(sd,1,USESKILL_FAIL_LEVEL,0);
 		return;
 	}
@@ -12422,7 +12396,7 @@ void clif_parse_SelectCart(int fd,struct map_session_data *sd) {
 	int type;
 
 	// Check identity
-	if( !sd || pc_checkskill(sd,MC_CARTDECORATE) < 1 || RFIFOL(fd,2) != sd->status.account_id )
+	if( !sd || RFIFOL(fd,2) != sd->status.account_id )
 	return;
 
 	type = (int)RFIFOB(fd,6);
@@ -12442,7 +12416,7 @@ void clif_parse_ChangeCart(int fd,struct map_session_data *sd)
 {// TODO: State tracking?
 	int type;
 
-	if( !sd || pc_checkskill(sd, MC_CHANGECART) < 1 )
+	if( !sd )
 		return;
 
 #ifdef RENEWAL
@@ -12512,7 +12486,7 @@ static void clif_parse_UseSkillToId_homun(struct homun_data *hd, struct map_sess
 	if( hd->bl.id != target_id && skill_get_inf(skill_id)&INF_SELF_SKILL )
 		target_id = hd->bl.id;
 	if( hd->ud.skilltimer != INVALID_TIMER ) {
-		if( skill_id != SA_CASTCANCEL && skill_id != SO_SPELLFIST ) return;
+		if( skill_id != SK_MG_CASTCANCEL && skill_id != SK_PF_SPELLFIST ) return;
 	} else if( DIFF_TICK(tick, hd->ud.canact_tick) < 0 ) {
 		clif_emotion(&hd->bl, ET_THINK);
 		if (hd->master)
@@ -12537,7 +12511,7 @@ static void clif_parse_UseSkillToPos_homun(struct homun_data *hd, struct map_ses
 		return;
 	}
 	if( hd->ud.skilltimer != INVALID_TIMER ) {
-		if( skill_id != SA_CASTCANCEL && skill_id != SO_SPELLFIST ) return;
+		if( skill_id != SK_MG_CASTCANCEL && skill_id != SK_PF_SPELLFIST ) return;
 	} else if( DIFF_TICK(tick, hd->ud.canact_tick) < 0 ) {
 		clif_emotion(&hd->bl, ET_THINK);
 		if (hd->master)
@@ -12570,7 +12544,7 @@ static void clif_parse_UseSkillToId_mercenary(struct mercenary_data *md, struct 
 		target_id = md->bl.id;
 	if( md->ud.skilltimer != INVALID_TIMER )
 	{
-		if( skill_id != SA_CASTCANCEL && skill_id != SO_SPELLFIST ) return;
+		if( skill_id != SK_MG_CASTCANCEL && skill_id != SK_PF_SPELLFIST ) return;
 	}
 	else if( DIFF_TICK(tick, md->ud.canact_tick) < 0 )
 		return;
@@ -12653,9 +12627,7 @@ void clif_parse_skill_toid( struct map_session_data* sd, uint16 skill_id, uint16
 		}
 	}
 
-	if ((pc_cant_act2(sd) || sd->chatID) && 
-		skill_id != RK_REFRESH && 
-		!( ( skill_id == SR_GENTLETOUCH_CURE || skill_id == SU_GROOMING ) && (sd->sc.opt1 == OPT1_STONE || sd->sc.opt1 == OPT1_FREEZE || sd->sc.opt1 == OPT1_STUN)) &&
+	if ((pc_cant_act2(sd) || sd->chatID) &&  
 		!(sd->state.storage_flag && (inf&INF_SELF_SKILL))) //SELF skills can be used with the storage open, issue: 8027
 		return;
 
@@ -12672,7 +12644,7 @@ void clif_parse_skill_toid( struct map_session_data* sd, uint16 skill_id, uint16
 		target_id = sd->bl.id;
 
 	if( sd->ud.skilltimer != INVALID_TIMER ) {
-		if( skill_id != SA_CASTCANCEL && skill_id != SO_SPELLFIST )
+		if( skill_id != SK_MG_CASTCANCEL && skill_id != SK_PF_SPELLFIST )
 			return;
 	} else if( DIFF_TICK(tick, sd->ud.canact_tick) < 0 ) {
 		if( sd->skillitem != skill_id ) {
@@ -12690,11 +12662,7 @@ void clif_parse_skill_toid( struct map_session_data* sd, uint16 skill_id, uint16
 #endif
 
 	if( sd->menuskill_id ) {
-		if( sd->menuskill_id == SA_TAMINGMONSTER ) {
-			clif_menuskill_clear(sd); //Cancel pet capture.
-		}else if( sd->menuskill_id == SG_FEEL ){
-			clif_menuskill_clear( sd ); // Cancel selection
-		}else if( sd->menuskill_id != SA_AUTOSPELL )
+		if( sd->menuskill_id != SK_SA_AUTOSPELL )
 			return; //Can't use skills while a menu is open.
 	}
 
@@ -12714,7 +12682,7 @@ void clif_parse_skill_toid( struct map_session_data* sd, uint16 skill_id, uint16
 		else
 			skill_lv = 0;
 	} else {
-		if( skill_id != ALL_EQSWITCH ){
+		if( skill_id != SK_NV_EQSWITCH ){
 			skill_lv = min(pc_checkskill(sd, skill_id),skill_lv); //never trust client
 		}
 	}
@@ -12806,11 +12774,7 @@ static void clif_parse_UseSkillToPosSub(int fd, struct map_session_data *sd, uin
 #endif
 
 	if( sd->menuskill_id ) {
-		if( sd->menuskill_id == SA_TAMINGMONSTER ) {
-			clif_menuskill_clear(sd); //Cancel pet capture.
-		}else if( sd->menuskill_id == SG_FEEL ){
-			clif_menuskill_clear( sd ); // Cancel selection
-		} else if( sd->menuskill_id != SA_AUTOSPELL )
+		if( sd->menuskill_id != SK_SA_AUTOSPELL )
 			return; //Can't use skills while a menu is open.
 	}
 
@@ -12894,7 +12858,7 @@ void clif_parse_UseSkillMap(int fd, struct map_session_data* sd)
 		return;
 
 	//It is possible to use teleport with the storage window open bugreport:8027
-	if (pc_cant_act(sd) && !sd->state.storage_flag && skill_id != AL_TELEPORT) {
+	if (pc_cant_act(sd) && !sd->state.storage_flag) {
 		clif_menuskill_clear(sd);
 		return;
 	}
@@ -12919,9 +12883,7 @@ void clif_parse_ProduceMix(int fd,struct map_session_data *sd){
 	const struct PACKET_CZ_REQMAKINGITEM *p = (struct PACKET_CZ_REQMAKINGITEM*)RFIFOP( fd, 0 );
 	switch( sd->menuskill_id ) {
 		case -1:
-		case AM_PHARMACY:
-		case RK_RUNEMASTERY:
-		case GC_RESEARCHNEWPOISON:
+		case SK_AM_PHARMACY:
 			break;
 		default:
 			return;
@@ -12956,7 +12918,7 @@ void clif_parse_Cooking(int fd,struct map_session_data *sd) {
 	int amount = sd->menuskill_val2 ? sd->menuskill_val2 : 1;
 	short food_idx = -1;
 
-	if( p->type == 6 && sd->menuskill_id != GN_MIX_COOKING && sd->menuskill_id != GN_S_PHARMACY )
+	if( p->type == 6 )
 		return;
 
 	if (pc_istrading(sd)) {
@@ -12977,7 +12939,7 @@ void clif_parse_Cooking(int fd,struct map_session_data *sd) {
 void clif_parse_RepairItem( int fd, struct map_session_data *sd ){
 	const struct PACKET_CZ_REQ_ITEMREPAIR *p = (struct PACKET_CZ_REQ_ITEMREPAIR *)RFIFOP( fd, 0 );
 
-	if (sd->menuskill_id != BS_REPAIRWEAPON)
+	if (sd->menuskill_id != SK_BS_REPAIRWEAPON)
 		return;
 	if (pc_istrading(sd)) {
 		//Make it fail to avoid shop exploits where you sell something different than you see.
@@ -12993,7 +12955,7 @@ void clif_parse_RepairItem( int fd, struct map_session_data *sd ){
 /// Answer to refine weapon item selection dialog (CZ_REQ_WEAPONREFINE).
 /// 0222 <index>.L
 void clif_parse_WeaponRefine( int fd, struct map_session_data *sd ){
-	if (sd->menuskill_id != WS_WEAPONREFINE) //Packet exploit?
+	if (sd->menuskill_id != SK_MS_WEAPONREFINE) //Packet exploit?
 		return;
 	if (pc_istrading(sd)) {
 		//Make it fail to avoid shop exploits where you sell something different than you see.
@@ -13116,8 +13078,6 @@ void clif_parse_NpcCloseClicked(int fd,struct map_session_data *sd)
 void clif_parse_ItemIdentify(int fd,struct map_session_data *sd) {
 	short idx = RFIFOW(fd,packet_db[RFIFOW(fd,0)].pos[0]) - 2;
 
-	if (sd->menuskill_id != MC_IDENTIFY)
-		return;
 
 	// Ignore the request
 	// - Invalid item index
@@ -13149,37 +13109,31 @@ void clif_parse_SelectArrow(int fd,struct map_session_data *sd) {
 	
 	struct PACKET_CZ_REQ_MAKINGARROW* p = (struct PACKET_CZ_REQ_MAKINGARROW*)RFIFOP( fd, 0 );
 	switch (sd->menuskill_id) {
-		case AC_MAKINGARROW:
+		case SK_AC_MAKINGARROW:
 			skill_arrow_create(sd,p->itemId);
 			break;
-		case SA_CREATECON:
-			skill_produce_mix(sd,SA_CREATECON,p->itemId,0,0,0,1,-1);
+		case SK_HT_MYSTICTOTEM:
+			skill_magicdecoy(sd,p->itemId,SK_HT_MYSTICTOTEM);
 			break;
-		case GC_POISONINGWEAPON:
-			skill_poisoningweapon(sd,p->itemId);
+		case SK_HT_ELEMENTALTOTEM:
+			skill_magicdecoy(sd,p->itemId,SK_HT_ELEMENTALTOTEM);
 			break;
-		case HT_MAGICDECOY:
-			skill_magicdecoy(sd,p->itemId,HT_MAGICDECOY);
+		case SK_AM_PLANTCULTIVATION:
+			skill_plant_cultivation(sd,p->itemId,SK_AM_PLANTCULTIVATION);
 			break;
-		case NC_MAGICDECOY:
-			skill_magicdecoy(sd,p->itemId,NC_MAGICDECOY);
-			break;
-		case CR_CULTIVATION:
-			skill_plant_cultivation(sd,p->itemId,CR_CULTIVATION);
-			break;
-		case WL_SUMMONFB:
-			skill_summon_elemental_sphere(sd,p->itemId,WL_SUMMONFB);
+		case SK_SO_SUMMONELEMENTALSPHERES:
+			skill_summon_elemental_sphere(sd,p->itemId,SK_SO_SUMMONELEMENTALSPHERES);
 			break;
 	}
 	clif_menuskill_clear(sd);
 }
 
 
-/// Answer to SA_AUTOSPELL skill selection dialog (CZ_SELECTAUTOSPELL).
+/// Answer to SK_SA_AUTOSPELL skill selection dialog (CZ_SELECTAUTOSPELL).
 /// 01ce <skill id>.L
 void clif_parse_AutoSpell(int fd,struct map_session_data *sd)
 {
-	if (sd->menuskill_id != SA_AUTOSPELL)
+	if (sd->menuskill_id != SK_SA_AUTOSPELL)
 		return;
 	sd->state.workinprogress = WIP_DISABLE_NONE;
 	skill_autospell(sd,RFIFOL(fd,packet_db[RFIFOW(fd,0)].pos[0]));
@@ -13441,7 +13395,7 @@ void clif_parse_CreateParty(int fd, struct map_session_data *sd){
 		clif_displaymessage(fd, msg_txt(sd,227));
 		return;
 	}
-	if( battle_config.basic_skill_check && pc_checkskill(sd,NV_BASIC) < 7 && pc_checkskill(sd, SU_BASIC_SKILL) < 1 ) {
+	if( battle_config.basic_skill_check && pc_checkskill(sd,SK_NV_BASIC) < 7 ) {
 		clif_skill_fail(sd,1,USESKILL_FAIL_LEVEL,4);
 		return;
 	}
@@ -13461,7 +13415,7 @@ void clif_parse_CreateParty2(int fd, struct map_session_data *sd){
 		clif_displaymessage(fd, msg_txt(sd,227));
 		return;
 	}
-	if( battle_config.basic_skill_check && pc_checkskill(sd,NV_BASIC) < 7 && pc_checkskill(sd, SU_BASIC_SKILL) < 1 ) {
+	if( battle_config.basic_skill_check && pc_checkskill(sd,SK_NV_BASIC) < 7 ) {
 		clif_skill_fail(sd,1,USESKILL_FAIL_LEVEL,4);
 		return;
 	}
@@ -14372,7 +14326,7 @@ void clif_parse_CatchPet(int fd, struct map_session_data *sd){
 /// Answer to pet incubator egg selection dialog (CZ_SELECT_PETEGG).
 /// 01a7 <index>.W
 void clif_parse_SelectEgg(int fd, struct map_session_data *sd){
-	if (sd->menuskill_id != SA_TAMINGMONSTER || sd->menuskill_val != -1)
+	/*if (sd->menuskill_id != SA_TAMINGMONSTER || sd->menuskill_val != -1)*/
 		return;
 
 	pet_select_egg(sd,RFIFOW(fd,packet_db[RFIFOW(fd,0)].pos[0])-2);
@@ -14904,8 +14858,8 @@ void clif_parse_NoviceExplosionSpirits(int fd, struct map_session_data *sd)
 			int percent = (int)( ( (double)sd->status.base_exp/(double)next )*1000. );
 
 			if( percent && ( percent%100 ) == 0 ) {// 10.0%, 20.0%, ..., 90.0%
-				sc_start(&sd->bl,&sd->bl, status_skill2sc(MO_EXPLOSIONSPIRITS), 100, 17, skill_get_time(MO_EXPLOSIONSPIRITS, 5)); //Lv17-> +50 critical (noted by Poki) [Skotlex]
-				clif_skill_nodamage(&sd->bl, &sd->bl, MO_EXPLOSIONSPIRITS, 5, 1);  // prayer always shows successful Lv5 cast and disregards noskill restrictions
+				sc_start(&sd->bl,&sd->bl, status_skill2sc(SK_SH_ULTRAINSTINCT), 100, 17, skill_get_time(SK_SH_ULTRAINSTINCT, 5)); //Lv17-> +50 critical (noted by Poki) [Skotlex]
+				clif_skill_nodamage(&sd->bl, &sd->bl, SK_SH_ULTRAINSTINCT, 5, 1);  // prayer always shows successful Lv5 cast and disregards noskill restrictions
 			}
 		}
 	}
@@ -15254,7 +15208,7 @@ void clif_parse_FeelSaveOk(int fd,struct map_session_data *sd)
 {
 	int i;
 	//int wich = RFIFOB(fd,packet_db[RFIFOW(fd,0)].pos[0]);
-	if (sd->menuskill_id != SG_FEEL)
+	if (true)
 		return;
 	i = sd->menuskill_val-1;
 	if (i<0 || i >= MAX_PC_FEELHATE) return; //Bug?
@@ -15283,7 +15237,7 @@ void clif_feel_req(int fd, struct map_session_data *sd, uint16 skill_lv)
 	WFIFOW(fd,0)=0x253;
 	WFIFOB(fd,2)=TOB(skill_lv-1);
 	WFIFOSET(fd, packet_len(0x253));
-	sd->menuskill_id = SG_FEEL;
+	//sd->menuskill_id = SG_FEEL;
 	sd->menuskill_val = skill_lv;
 }
 
@@ -18507,7 +18461,7 @@ void clif_parse_ItemListWindowSelected(int fd, struct map_session_data* sd) {
 		return; // Canceled by player.
 	}
 
-	if( sd->menuskill_id != SO_EL_ANALYSIS && sd->menuskill_id != GN_CHANGEMATERIAL ) {
+	if( true && true ) {
 		clif_menuskill_clear(sd);
 		return; // Prevent hacking.
 	}
@@ -19111,7 +19065,7 @@ void clif_elementalconverter_list( struct map_session_data *sd ){
 	WFIFOSET( fd, p->packetLength );
 
 	if( count > 0 ){
-		sd->menuskill_id = SA_CREATECON;
+		/*sd->menuskill_id = SA_CREATECON;*/
 		sd->menuskill_val = count;
 	}
 }
@@ -19231,19 +19185,19 @@ void clif_magicdecoy_list( struct map_session_data *sd, uint16 skill_lv, short x
 	// 		count++;
 	// 	}
 	// }
-	if (skill_id == NC_MAGICDECOY) {
+	if (skill_id == SK_HT_ELEMENTALTOTEM) {
 		p->items[0].itemId = client_nameid(ITEMID_EARTH_BOLT_TOTEM);
 		p->items[1].itemId = client_nameid(ITEMID_LIGHTNING_BOLT_TOTEM);
 		p->items[2].itemId = client_nameid(ITEMID_COLD_BOLT_TOTEM);
 		p->items[3].itemId = client_nameid(ITEMID_FIRE_BOLT_TOTEM);
 	}
-	if (skill_id == HT_MAGICDECOY) {
+	if (skill_id == SK_HT_MYSTICTOTEM) {
 		p->items[0].itemId = client_nameid(ITEMID_HOLY_GHOST_TOTEM);
 		p->items[1].itemId = client_nameid(ITEMID_CORRUPT_TOTEM);
 		p->items[2].itemId = client_nameid(ITEMID_SACRED_WAVE_TOTEM);
 		p->items[3].itemId = client_nameid(ITEMID_EVIL_EYE_TOTEM);
 	}
-	if (skill_id == WL_SUMMONFB) {
+	if (skill_id == SK_SO_SUMMONELEMENTALSPHERES) {
 		count = 5;
 		p->items[0].itemId = client_nameid(1);
 		p->items[1].itemId = client_nameid(2);
@@ -19286,14 +19240,14 @@ void clif_poison_list( struct map_session_data *sd, uint16 skill_lv ){
 		}
 	}
 
-	if( count > 0 ){
-		p->packetLength = sizeof( struct PACKET_ZC_MAKINGARROW_LIST ) + count * sizeof( struct PACKET_ZC_MAKINGARROW_LIST_sub );
-		WFIFOSET( fd, p->packetLength );
-		sd->menuskill_id = GC_POISONINGWEAPON;
-		sd->menuskill_val = skill_lv;
-	}else{
-		clif_skill_fail( sd, GC_POISONINGWEAPON, USESKILL_FAIL_GUILLONTINE_POISON, 0 );
-	}
+	//if( count > 0 ){
+	//	p->packetLength = sizeof( struct PACKET_ZC_MAKINGARROW_LIST ) + count * sizeof( struct PACKET_ZC_MAKINGARROW_LIST_sub );
+	//	WFIFOSET( fd, p->packetLength );
+	//	sd->menuskill_id = GC_POISONINGWEAPON;
+	//	sd->menuskill_val = skill_lv;
+	//}else{
+	//	clif_skill_fail( sd, GC_POISONINGWEAPON, USESKILL_FAIL_GUILLONTINE_POISON, 0 );
+	//}
 }
 
 /// 0442 <Length>.W <count>.L <Skill_list>.W (ZC_SKILL_SELECT_REQUEST).
@@ -19305,13 +19259,13 @@ int clif_autoshadowspell_list(struct map_session_data *sd) {
 	if( !session_isActive(fd) ) 
 		return 0;
 
-	if( sd->menuskill_id == SC_AUTOSHADOWSPELL )
+	if( sd->menuskill_id == SK_ST_AUTOSHADOWSPELL )
 		return 0;
 
 	WFIFOHEAD(fd, 2 * 6 + 4);
 	WFIFOW(fd,0) = 0x442;
 	
-	//AEGIS listed the specified skills that available for SC_AUTOSHADOWSPELL
+	//AEGIS listed the specified skills that available for SK_ST_AUTOSHADOWSPELL
 	for( i = 0, c = 0; i < MAX_SKILL; i++ )
 		if( sd->status.skill[i].flag == SKILL_FLAG_PLAGIARIZED && sd->status.skill[i].id > 0 &&
 			skill_get_inf2(sd->status.skill[i].id, INF2_ISAUTOSHADOWSPELL))
@@ -19324,11 +19278,11 @@ int clif_autoshadowspell_list(struct map_session_data *sd) {
 		WFIFOW(fd,2) = 8 + c * 2;
 		WFIFOL(fd,4) = c;
 		WFIFOSET(fd,WFIFOW(fd,2));
-		sd->menuskill_id = SC_AUTOSHADOWSPELL;
+		sd->menuskill_id = SK_ST_AUTOSHADOWSPELL;
 		sd->menuskill_val = c;
 	} else {
 		status_change_end(&sd->bl,SC_STOP,INVALID_TIMER);
-		clif_skill_fail(sd,SC_AUTOSHADOWSPELL,USESKILL_FAIL_IMITATION_SKILL_NONE,0);
+		clif_skill_fail(sd,SK_ST_AUTOSHADOWSPELL,USESKILL_FAIL_IMITATION_SKILL_NONE,0);
 	}
 
 	return 1;
@@ -19348,8 +19302,6 @@ int clif_skill_itemlistwindow( struct map_session_data *sd, uint16 skill_id, uin
 	sd->menuskill_id = skill_id; // To prevent hacking.
 	sd->menuskill_val = skill_lv;
 
-	if( skill_id == GN_CHANGEMATERIAL )
-		skill_lv = 0; // Changematerial
 
 	WFIFOHEAD(fd, packet_len(0x7e3));
 	WFIFOW(fd,0) = 0x7e3;
@@ -19361,18 +19313,18 @@ int clif_skill_itemlistwindow( struct map_session_data *sd, uint16 skill_id, uin
 }
 
 /*==========================================
- * Select a skill into a given list (used by SA_AUTOSPELL/SC_AUTOSHADOWSPELL)
+ * Select a skill into a given list (used by SK_SA_AUTOSPELL/SK_ST_AUTOSHADOWSPELL)
  * 0443 <type>.L <skill_id>.W (CZ_SKILL_SELECT_RESPONSE)
  * RFIFOL(fd,2) - type (currently not used)
  *------------------------------------------*/
 void clif_parse_SkillSelectMenu(int fd, struct map_session_data *sd) {
 	struct s_packet_db* info = &packet_db[RFIFOW(fd,0)];
-	//int type = RFIFOL(fd,info->pos[0]); //WHY_LOWERVER_COMPATIBILITY =  0x0, WHY_SC_AUTOSHADOWSPELL =  0x1,
+	//int type = RFIFOL(fd,info->pos[0]); //WHY_LOWERVER_COMPATIBILITY =  0x0, WHY_SK_ST_AUTOSHADOWSPELL =  0x1,
 
-	if (sd->menuskill_id == SA_AUTOSPELL) {
+	if (sd->menuskill_id == SK_SA_AUTOSPELL) {
 		sd->state.workinprogress = WIP_DISABLE_NONE;
 		skill_autospell(sd, RFIFOW(fd, info->pos[1]));
-	} else if (sd->menuskill_id == SC_AUTOSHADOWSPELL) {
+	} else if (sd->menuskill_id == SK_ST_AUTOSHADOWSPELL) {
 		if (pc_istrading(sd)) {
 			clif_skill_fail(sd, sd->ud.skill_id, USESKILL_FAIL_LEVEL, 0);
 			clif_menuskill_clear(sd);
@@ -21677,7 +21629,7 @@ void clif_parse_equipswitch_request( int fd, struct map_session_data* sd ){
 #if PACKETVER >= 20170208
 	int i;
 	t_tick tick = gettick();
-	uint16 skill_id = ALL_EQSWITCH, skill_lv = 1;
+	uint16 skill_id = SK_NV_EQSWITCH, skill_lv = 1;
 
 	if( DIFF_TICK(tick, sd->equipswitch_tick) < 0 ) {
 		// Client will not let you send a request
@@ -21752,7 +21704,7 @@ void clif_parse_StartUseSkillToId( int fd, struct map_session_data* sd ){
 	const struct PACKET_CZ_START_USE_SKILL *p = (struct PACKET_CZ_START_USE_SKILL *)RFIFOP( fd, 0 );
 
 	// Only rolling cutter is supported for now
-	if( p->skillId != GC_ROLLINGCUTTER ){
+	if( p->skillId != SK_AS_ROLLINGCUTTER ){
 		return;
 	}
 

@@ -10,37 +10,37 @@
 int PriestSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv, struct status_data* sstatus)
 {
 	switch (skill_id) {
-		case PR_SPIRITUSANCTI:
+		case SK_PR_SPIRITUSANCTI:
 			add_spiritu_sancti_special_effects(target);
 			return calculate_spiritu_sancti_atk_ratio(skill_lv);
 			break;
-        case HP_JUDEX:
+        case SK_PR_JUDEX:
 			add_judex_special_effects(target);
 			return calculate_judex_atk_ratio(skill_lv);
 			break;
-		case PR_MAGNUS:
+		case SK_PR_MAGNUSEXORCISMUS:
 			return calculate_magnus_exorcismus_atk_ratio(skill_lv);
-        case PR_UNHOLYCROSS:
+        case SK_PR_UNHOLYCROSS:
 			add_unholy_cross_special_effects(target);
 			return calculate_unholy_cross_atk_ratio(skill_lv, sstatus->int_);
 			break;
-		case AB_DUPLELIGHT_MELEE:
+		case SK_PR_DUPLELUX_MELEE:
 			add_duple_liight_melee_special_effects(target);
 			return calculate_duple_light_melee_atk_ratio(skill_lv);
 			break;
-		case AB_DUPLELIGHT_MAGIC:
+		case SK_PR_DUPLELUX_MAGIC:
 			add_duple_liight_magic_special_effects(target);
 			return calculate_duple_light_magic_atk_ratio(skill_lv);
 			break;
-		case AB_ADORAMUS:
+		case SK_BI_SENTENTIA:
 			return calculate_sententia_atk_ratio(skill_lv);
-		case HP_VITUPERATUM:
+		case SK_BI_DIABOLICRUCIATUS:
 			clif_specialeffect(src, EF_DARKCASTING2, AREA);
 			clif_specialeffect(target, 1121, AREA); //wide_criticalwound
 			return calculate_diabolis_cruciatus_atk_ratio(skill_lv);
-		case PR_BENEDICTIO:
+		case SK_BI_BENEDICTIO:
 			return calculate_benedictio_atk_ratio(skill_lv);
-		case HP_PENITENTIA:
+		case SK_BI_PENITENTIA:
 			clif_specialeffect(target, EF_BLACKBODY, AREA);
 			return calculate_penitentia_atk_ratio(skill_lv);
 		default:

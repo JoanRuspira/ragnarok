@@ -5,16 +5,16 @@ Header:
 
 Body:
   - Id: 1
-    Name: NV_BASIC
+    Name: SK_NV_BASIC
     Description: Basic Skill
     MaxLevel: 8
   - Id: 3
-    Name: SM_TWOHAND
+    Name: SK_SM_TWOHAND
     Description: Two-Handed Sword Mastery
     MaxLevel: 5
     Type: Weapon
   - Id: 398
-    Name: LK_HEADCRUSH
+    Name: SK_SM_TRAUMATIC_STRIKE
     Description: Traumatic Blow
     MaxLevel: 5
     Type: Weapon  
@@ -48,7 +48,7 @@ Body:
         Book: true
         Katar: true
   - Id: 6
-    Name: SM_PROVOKE
+    Name: SK_SM_PROVOKE
     Description: Provoke
     MaxLevel: 5
     TargetType: Attack
@@ -66,7 +66,7 @@ Body:
     Requires:
       SpCost: 15
   - Id: 146
-    Name: SM_AUTOBERSERK
+    Name: SK_SM_AUTOBERSERK
     Description: Auto Berserk
     MaxLevel: 5
     Type: Weapon
@@ -80,7 +80,7 @@ Body:
       SpCost: 40
 
   - Id: 5
-    Name: SM_BASH
+    Name: SK_SM_BASH
     Description: Bash
     MaxLevel: 5
     Type: Weapon
@@ -115,7 +115,7 @@ Body:
         Book: true
         Katar: true
   - Id: 813
-    Name: SM_SPEARSTANCE
+    Name: SK_SM_SPEARSTANCE
     Description: Spear Stance
     MaxLevel: 5
     Type: Weapon
@@ -149,7 +149,7 @@ Body:
         1hSpear: true
         2hSpear: true
   - Id: 58
-    Name: KN_SPEARSTAB
+    Name: SK_SM_SPEARSTAB
     Description: Spear Stab
     MaxLevel: 5
     Type: Weapon
@@ -175,12 +175,12 @@ Body:
         1hSpear: true
         2hSpear: true
   - Id: 2
-    Name: SM_SWORD
+    Name: SK_SM_SWORD
     Description: Sword Mastery
     MaxLevel: 5
     Type: Weapon
   - Id: 399
-    Name: LK_JOINTBEAT
+    Name: SK_SM_LIGHTNING_STRIKE
     Description: Vital Strike
     MaxLevel: 5
     Type: Weapon
@@ -210,7 +210,7 @@ Body:
         Book: true
         Katar: true
   - Id: 819
-    Name: SM_SPIRITGROWTH
+    Name: SK_SM_SPIRITGROWTH
     Description: Spirit Growth
     MaxLevel: 5
     Type: Weapon
@@ -241,7 +241,7 @@ Body:
     Requires:
       SpCost: 20
   - Id: 7
-    Name: SM_MAGNUM
+    Name: SK_SM_MAGNUM
     Description: Magnum Break
     MaxLevel: 5
     Type: Weapon
@@ -290,15 +290,15 @@ Body:
         Book: true
         Katar: true
   - Id: 4
-    Name: SM_RECOVERY
+    Name: SK_SM_RECOVERY
     Description: Increase HP Recovery
     MaxLevel: 5
   - Id: 248
-    Name: CR_TRUST
+    Name: SK_SM_INNER_STRENGTH
     Description: Faith
     MaxLevel: 5
   - Id: 363
-    Name: HP_MEDITATIO
+    Name: SK_SM_MEDITATE
     Description: Meditatio
     MaxLevel: 5
     Type: Magic
@@ -714,57 +714,8 @@ Body:
         NoReiteration: true
         NoFootSet: true
         NoOverlap: true
-  - Id: 28
-    Name: AL_HEAL
-    Description: Heal
-    MaxLevel: 5
-    Type: Magic
-    TargetType: Support
-    DamageFlags:
-      NoDamage: true
-      IgnoreDefense: true
-    Flags:
-      IsAutoShadowSpell: true
-    Range: 9
-    Hit: Single
-    HitCount: 1
-    Element: Holy
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
-    CastCancel: true
-    CastTime: 3000
-    Cooldown: 5000
-    AfterCastActDelay: 1000
-    Requires:
-      SpCost: 40
-  - Id: 30
-    Name: AL_DECAGI
-    Description: Decrease AGI
-    MaxLevel: 5
-    Type: Magic
-    TargetType: Attack
-    DamageFlags:
-      NoDamage: true
-    Range: 9
-    Hit: Single
-    HitCount: 1
-    CastCancel: true
-    Cooldown: 4000
-    Duration1:
-      - Level: 1
-        Time: 10000
-      - Level: 2
-        Time: 20000
-      - Level: 3
-        Time: 30000
-      - Level: 4
-        Time: 40000
-      - Level: 5
-        Time: 50000
-    Requires:
-      SpCost: 39
+
+
   - Id: 31
     Name: AL_HOLYWATER
     Description: Aqua Benedicta
@@ -830,7 +781,7 @@ Body:
     MaxLevel: 5
     Type: Weapon
   - Id: 50
-    Name: TF_STEAL
+    Name: SK_TF_STEAL
     Description: Steal
     MaxLevel: 5
     Type: Weapon
@@ -846,7 +797,7 @@ Body:
     Requires:
       SpCost: 0
   - Id: 802
-    Name: TF_SNATCH
+    Name: SK_TF_SNATCH
     Description: Snatch
     MaxLevel: 5
     Type: Weapon
@@ -2240,29 +2191,7 @@ Body:
       Target: Enemy
       Flag:
         RemovedByFireRain: true
-  - Id: 142
-    Name: NV_FIRSTAID
-    Description: First Aid
-    MaxLevel: 1
-    TargetType: Self
-    DamageFlags:
-      NoDamage: true
-    Hit: Single
-    HitCount: 1
-    Requires:
-      SpCost: 3
-  - Id: 143
-    Name: NV_TRICKDEAD
-    Description: Play Dead
-    MaxLevel: 1
-    TargetType: Self
-    DamageFlags:
-      NoDamage: true
-    Hit: Single
-    HitCount: 1
-    Duration1: 600000
-    Requires:
-      SpCost: 5
+
   - Id: 144
     Name: SM_MOVINGRECOVERY
     Description: Moving HP-Recovery
@@ -2377,7 +2306,7 @@ Body:
       SpCost: 40
       State: Cart
   - Id: 156
-    Name: AL_HOLYLIGHT
+    Name: SK_AL_HOLYGHOST
     Description: Holy Ghost
     MaxLevel: 5
     Type: Magic
@@ -3156,150 +3085,7 @@ Body:
     Name: RG_TUNNELDRIVE
     Description: Stalk
     MaxLevel: 5
-  - Id: 215
-    Name: RG_STRIPWEAPON
-    Description: Divest Weapon
-    MaxLevel: 5
-    Type: Weapon
-    TargetType: Attack
-    DamageFlags:
-      NoDamage: true
-    Range: 1
-    Hit: Single
-    HitCount: 1
-    CastTime: 1000
-    AfterCastActDelay: 1000
-    Duration1:
-      - Level: 1
-        Time: 75000
-      - Level: 2
-        Time: 90000
-      - Level: 3
-        Time: 105000
-      - Level: 4
-        Time: 120000
-      - Level: 5
-        Time: 135000
-    Requires:
-      SpCost:
-        - Level: 1
-          Amount: 17
-        - Level: 2
-          Amount: 19
-        - Level: 3
-          Amount: 21
-        - Level: 4
-          Amount: 23
-        - Level: 5
-          Amount: 25
-  - Id: 216
-    Name: RG_STRIPSHIELD
-    Description: Divest Shield
-    MaxLevel: 5
-    Type: Weapon
-    TargetType: Attack
-    DamageFlags:
-      NoDamage: true
-    Range: 1
-    Hit: Single
-    HitCount: 1
-    CastTime: 1000
-    AfterCastActDelay: 1000
-    Duration1:
-      - Level: 1
-        Time: 75000
-      - Level: 2
-        Time: 90000
-      - Level: 3
-        Time: 105000
-      - Level: 4
-        Time: 120000
-      - Level: 5
-        Time: 135000
-    Requires:
-      SpCost:
-        - Level: 1
-          Amount: 12
-        - Level: 2
-          Amount: 14
-        - Level: 3
-          Amount: 16
-        - Level: 4
-          Amount: 18
-        - Level: 5
-          Amount: 20
-  - Id: 217
-    Name: RG_STRIPARMOR
-    Description: Divest Armor
-    MaxLevel: 5
-    Type: Weapon
-    TargetType: Attack
-    DamageFlags:
-      NoDamage: true
-    Range: 1
-    Hit: Single
-    HitCount: 1
-    CastTime: 1000
-    AfterCastActDelay: 1000
-    Duration1:
-      - Level: 1
-        Time: 75000
-      - Level: 2
-        Time: 90000
-      - Level: 3
-        Time: 105000
-      - Level: 4
-        Time: 120000
-      - Level: 5
-        Time: 135000
-    Requires:
-      SpCost:
-        - Level: 1
-          Amount: 17
-        - Level: 2
-          Amount: 19
-        - Level: 3
-          Amount: 21
-        - Level: 4
-          Amount: 23
-        - Level: 5
-          Amount: 25
-  - Id: 218
-    Name: RG_STRIPHELM
-    Description: Divest Helm
-    MaxLevel: 5
-    Type: Weapon
-    TargetType: Attack
-    DamageFlags:
-      NoDamage: true
-    Range: 1
-    Hit: Single
-    HitCount: 1
-    CastTime: 1000
-    AfterCastActDelay: 1000
-    Duration1:
-      - Level: 1
-        Time: 75000
-      - Level: 2
-        Time: 90000
-      - Level: 3
-        Time: 105000
-      - Level: 4
-        Time: 120000
-      - Level: 5
-        Time: 135000
-    Requires:
-      SpCost:
-        - Level: 1
-          Amount: 12
-        - Level: 2
-          Amount: 14
-        - Level: 3
-          Amount: 16
-        - Level: 4
-          Amount: 18
-        - Level: 5
-          Amount: 20
+
   - Id: 219
     Name: RG_INTIMIDATE
     Description: Snatch
@@ -3432,122 +3218,7 @@ Body:
     Duration1: 30000
     Requires:
       SpCost: 10
-  - Id: 234
-    Name: AM_CP_WEAPON
-    Description: Alchemical Weapon
-    MaxLevel: 5
-    Type: Weapon
-    TargetType: Support
-    DamageFlags:
-      NoDamage: true
-    Range: 1
-    Hit: Single
-    HitCount: 1
-    CastCancel: true
-    CastTime: 2000
-    Duration1:
-      - Level: 1
-        Time: 120000
-      - Level: 2
-        Time: 240000
-      - Level: 3
-        Time: 360000
-      - Level: 4
-        Time: 480000
-      - Level: 5
-        Time: 600000
-    Requires:
-      SpCost: 30
-      ItemCost:
-        - Item: Coating_Bottle
-          Amount: 1
-  - Id: 235
-    Name: AM_CP_SHIELD
-    Description: Synthesized Shield
-    MaxLevel: 5
-    Type: Weapon
-    TargetType: Support
-    DamageFlags:
-      NoDamage: true
-    Range: 1
-    Hit: Single
-    HitCount: 1
-    CastCancel: true
-    CastTime: 2000
-    Duration1:
-      - Level: 1
-        Time: 120000
-      - Level: 2
-        Time: 240000
-      - Level: 3
-        Time: 360000
-      - Level: 4
-        Time: 480000
-      - Level: 5
-        Time: 600000
-    Requires:
-      SpCost: 25
-      ItemCost:
-        - Item: Coating_Bottle
-          Amount: 1
-  - Id: 236
-    Name: AM_CP_ARMOR
-    Description: Synthetic Armor
-    MaxLevel: 5
-    Type: Weapon
-    TargetType: Support
-    DamageFlags:
-      NoDamage: true
-    Range: 1
-    Hit: Single
-    HitCount: 1
-    CastCancel: true
-    CastTime: 2000
-    Duration1:
-      - Level: 1
-        Time: 120000
-      - Level: 2
-        Time: 240000
-      - Level: 3
-        Time: 360000
-      - Level: 4
-        Time: 480000
-      - Level: 5
-        Time: 600000
-    Requires:
-      SpCost: 25
-      ItemCost:
-        - Item: Coating_Bottle
-          Amount: 1
-  - Id: 237
-    Name: AM_CP_HELM
-    Description: Biochemical Helm
-    MaxLevel: 5
-    Type: Weapon
-    TargetType: Support
-    DamageFlags:
-      NoDamage: true
-    Range: 1
-    Hit: Single
-    HitCount: 1
-    CastCancel: true
-    CastTime: 2000
-    Duration1:
-      - Level: 1
-        Time: 120000
-      - Level: 2
-        Time: 240000
-      - Level: 3
-        Time: 360000
-      - Level: 4
-        Time: 480000
-      - Level: 5
-        Time: 600000
-    Requires:
-      SpCost: 25
-      ItemCost:
-        - Item: Coating_Bottle
-          Amount: 1
+
   - Id: 243
     Name: AM_CALLHOMUN
     Description: Call Homunculus
@@ -5456,66 +5127,7 @@ Body:
     HitCount: 1
 
 
-  - Id: 380
-    Name: SN_SIGHT
-    Description: Falcon Eyes
-    MaxLevel: 10
-    Type: Weapon
-    TargetType: Self
-    DamageFlags:
-      NoDamage: true
-    Hit: Single
-    HitCount: 1
-    Duration1: 30000
-    Requires:
-      SpCost:
-        - Level: 1
-          Amount: 20
-        - Level: 2
-          Amount: 20
-        - Level: 3
-          Amount: 25
-        - Level: 4
-          Amount: 25
-        - Level: 5
-          Amount: 30
-        - Level: 6
-          Amount: 30
-        - Level: 7
-          Amount: 35
-        - Level: 8
-          Amount: 35
-        - Level: 9
-          Amount: 40
-        - Level: 10
-          Amount: 40
-  - Id: 381
-    Name: SN_FALCONASSAULT
-    Description: Falcon Assault
-    MaxLevel: 5
-    Type: Misc
-    TargetType: Attack
-    DamageFlags:
-      IgnoreFlee: true
-    Range: 9
-    Hit: Multi_Hit
-    HitCount: 1
-    CastCancel: true
-    CastTime: 1000
-    AfterCastActDelay: 3000
-    Requires:
-      SpCost:
-        - Level: 1
-          Amount: 30
-        - Level: 2
-          Amount: 34
-        - Level: 3
-          Amount: 38
-        - Level: 4
-          Amount: 42
-        - Level: 5
-          Amount: 46
-      State: Falcon
+
 
 
   - Id: 385
@@ -6941,7 +6553,7 @@ Body:
         - Level: 5
           Amount: 60
   - Id: 459
-    Name: BS_ADRENALINE2
+    Name: SK_BS_WEAPONRYEXPERTISE2
     Description: Advanced Adrenaline Rush
     MaxLevel: 1
     Type: Weapon
@@ -11587,25 +11199,7 @@ Body:
     Name: WL_FREEZE_SP
     Description: Freeze Spell
     MaxLevel: 10
-  - Id: 2022
-    Name: GC_CROSSIMPACT
-    Description: Cross Impact
-    MaxLevel: 5
-    Type: Weapon
-    TargetType: Attack
-    Range: 5
-    Hit: Multi_Hit
-    HitCount: -8
-    Element: Weapon
-    Cooldown: 5000
-    AfterCastActDelay: 2000
-    Duration2: 5000
-    CastDelayFlags:
-      IgnoreStatus: true
-    Requires:
-      SpCost: 45
-      Weapon:
-        Katar: true
+
   - Id: 2023
     Name: GC_DARKILLUSION
     Description: Dark Illusion
@@ -15420,7 +15014,7 @@ Body:
     Description: Lesson
     MaxLevel: 10
   - Id: 2415
-    Name: WM_REVERBERATION_MELEE
+    Name: SK_BA_REVERBERATION_MELEE
     Description: Reverberation Melee
     MaxLevel: 5
     Type: Weapon
@@ -15438,7 +15032,7 @@ Body:
     Requires:
       SpCost: 1
   - Id: 2416
-    Name: WM_REVERBERATION_MAGIC
+    Name: SK_BA_REVERBERATION_MAGIC
     Description: Reverberation Magic
     MaxLevel: 5
     Type: Magic
@@ -17113,32 +16707,7 @@ Body:
       Flag:
         NoReiteration: true
         RemovedByFireRain: true
-  - Id: 2491
-    Name: SN_ULLR_ATK
-    Description: Hell's Plant Attack
-    MaxLevel: 5
-    Type: Magic
-    TargetType: Attack
-    DamageFlags:
-      Splash: true
-    Hit: Single
-    HitCount: 1
-    SplashArea:
-      - Level: 1
-        Area: 4
-      - Level: 2
-        Area: 4
-      - Level: 3
-        Area: 4
-      - Level: 4
-        Area: 4
-      - Level: 5
-        Area: 4
-    CopyFlags:
-      Skill:
-        Reproduce: true
-    Requires:
-      SpCost: 1
+
   - Id: 2492
     Name: GN_MANDRAGORA
     Description: Howling of Mandragora
@@ -19370,7 +18939,7 @@ Body:
         - Item: Alchol
           Amount: 1
   - Id: 5004
-    Name: RK_DRAGONBREATH_WATER
+    Name: SK_CM_DRAGONBREATH
     Description: Dragon Breath - Water
     MaxLevel: 5
     Type: Magic

@@ -17,7 +17,7 @@
 	mes "Aha!";
 	mes "A seasoned Champion, what outfit would you like to wear?";
 	next;
-	switch(select("Champion:Shaolin:Sura:Inquisitor")) {
+	switch(select("Shaolin:Champion:Sura:Inquisitor")) {
 		case 1:
 			setlook LOOK_CLOTHES_COLOR,0;
 			setlook LOOK_BODY2,0;

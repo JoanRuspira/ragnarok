@@ -5,7 +5,7 @@ Header:
 
 Body:
   - Id: 255
-    Name: CR_DEVOTION
+    Name: SK_CR_SWORNPROTECTOR
     Description: Sacrifice
     MaxLevel: 5
     TargetType: Support
@@ -34,7 +34,7 @@ Body:
     Requires:
       SpCost: 40
   - Id: 832
-    Name: CR_HEAL
+    Name: SK_CR_SWORDSTOPLOWSHARES
     Description: Heal
     MaxLevel: 5
     TargetType: Support
@@ -53,7 +53,7 @@ Body:
     Requires:
       SpCost: 35
   - Id: 833
-    Name: CR_BINDINGLIGHT
+    Name: SK_CR_BINDINGOATH
     Description: Blessing
     MaxLevel: 5
     TargetType: Support
@@ -72,7 +72,7 @@ Body:
     Requires:
       SpCost: 80
   - Id: 834
-    Name: CR_DIVINELIGHT
+    Name: SK_CR_DIVINELIGHT
     Description: Divine Light
     MaxLevel: 5
     Type: Magic
@@ -97,7 +97,7 @@ Body:
         - Item: Magic_Gem_Yellow
           Amount: 1
   - Id: 862
-    Name: CR_OHQUICKEN
+    Name: SK_CR_OHQUICKEN
     Description: One Hand Quicken
     MaxLevel: 5
     Type: Weapon
@@ -124,7 +124,7 @@ Body:
       Weapon:
         1hSword: true
   - Id: 249
-    Name: CR_AUTOGUARD
+    Name: SK_CR_AUTOGUARD
     Description: Guard
     MaxLevel: 5
     Type: Weapon
@@ -140,7 +140,7 @@ Body:
       SpCost: 30
       State: Shield
   - Id: 252
-    Name: CR_REFLECTSHIELD
+    Name: SK_CR_REFLECTSHIELD
     Description: Shield Reflect
     MaxLevel: 5
     Type: Weapon
@@ -160,7 +160,7 @@ Body:
       SpCost: 50
       State: Shield
   - Id: 2318
-    Name: LG_PRESTIGE
+    Name: SK_CR_VANGUARDFORCE
     Description: Prestige
     MaxLevel: 5
     TargetType: Self
@@ -180,7 +180,7 @@ Body:
         - Item: Magic_Gem_Green
           Amount: 1
   - Id: 250
-    Name: CR_SHIELDCHARGE
+    Name: SK_CR_SMITE
     Description: Smite
     MaxLevel: 5
     Type: Weapon
@@ -201,7 +201,7 @@ Body:
       SpCost: 15
       State: Shield
   - Id: 251
-    Name: CR_SHIELDBOOMERANG
+    Name: SK_CR_SHIELDBOOMERANG
     Description: Shield Boomerang
     MaxLevel: 5
     Type: Weapon
@@ -232,7 +232,7 @@ Body:
       SpCost: 15
       State: Shield
   - Id: 253
-    Name: CR_HOLYCROSS
+    Name: SK_CR_HOLYCROSS
     Description: Holy Cross
     MaxLevel: 5
     Type: Weapon
@@ -253,7 +253,7 @@ Body:
     Requires:
       SpCost: 20
   - Id: 254
-    Name: CR_GRANDCROSS
+    Name: SK_CR_GRANDCROSS
     Description: Grand Cross
     MaxLevel: 5
     Type: Magic

@@ -10,27 +10,27 @@
 int ThiefSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv)
 {
 	switch (skill_id) {
-	case TF_POISON:
+	case SK_TF_POISONSLASH:
 		add_envenom_special_effects(src, target);
 		return calculate_envenom_atk_ratio(skill_lv);
 		break;
-	case TF_THROWSTONE:
+	case SK_TF_THROWSTONE:
 		add_throw_stone_special_effects(target);
 		return calculate_throw_stone_atk_ratio(skill_lv);
 		break;
-	case TF_SNATCH:
+	case SK_TF_SNATCH:
 		add_snatch_special_effects(target);
 		return calculate_snatch_atk_ratio(skill_lv);
 		break;
-	case TF_SANDATTACK:
+	case SK_TF_SANDATTACK:
 		add_sand_attack_special_effects(target);
 		return calculate_sand_attack_atk_ratio(skill_lv);
 		break;
-	case AS_VENOMKNIFE:
+	case SK_TF_VENOMKNIFE:
 		add_venom_knife_special_effects(src, target);
 		return calculate_venom_knife_atk_ratio(skill_lv);
 		break;
-	case AS_POISONREACT:
+	case SK_TF_POISONREACT:
 		return calculate_poison_react_atk_ratio(skill_lv);
 		break;
 	default:

@@ -558,7 +558,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      skill "TF_HIDING",1;
+      skill "SK_TF_HIDING",1;
     UnEquipScript: |
       sc_end SC_HIDING;
   - Id: 4045
@@ -612,7 +612,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      skill "TF_POISON",3;
+      skill "SK_TF_POISONSLASH",3;
   - Id: 4049
     AegisName: Vadon_Card
     Name: Vadon Card
@@ -675,7 +675,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      skill "AL_HEAL",1;
+      skill "SK_AL_HEAL",1;
       bonus bUseSPrate,25;
   - Id: 4054
     AegisName: Angeling_Card
@@ -926,7 +926,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      skill "MC_OVERCHARGE",5;
+      skill "SK_MC_OVERCHARGE",5;
   - Id: 4074
     AegisName: BigFoot_Card
     Name: Bigfoot Card
@@ -1063,7 +1063,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      skill "SM_MAGNUM",3;
+      skill "SK_SM_MAGNUM",3;
   - Id: 4085
     AegisName: Orc_Skeleton_Card
     Name: Orc Skeleton Card
@@ -1114,7 +1114,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      skill "AS_CLOAKING",1;
+      skill "SK_AS_CLOAKING",1;
     UnEquipScript: |
       sc_end SC_CLOAKING;
   - Id: 4089
@@ -1491,7 +1491,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      skill "TF_DOUBLE",1;
+      skill "SK_AS_DOUBLEATTACK",1;
       bonus bDoubleRate,5;
   - Id: 4118
     AegisName: Petit_Card
@@ -1775,7 +1775,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      skill "TF_STEAL",1;
+      skill "SK_TF_STEAL",1;
   - Id: 4140
     AegisName: Knight_Of_Abyss_Card
     Name: Abysmal Knight Card
@@ -2095,7 +2095,7 @@ Body:
       bonus bFlee,2;
       bonus bCritical,7;
       if (BaseClass == Job_Swordman)
-         bonus3 bAutoSpell,"KN_BOWLINGBASH",5,10;
+         bonus3 bAutoSpell,"SK_KN_BOWLINGBASH",5,10;
   - Id: 4164
     AegisName: Gullinbursti_Card
     Name: Gullinbursti Card
@@ -2161,7 +2161,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus3 bAutoSpellWhenHit,"WZ_METEOR",5,100;
+      bonus3 bAutoSpellWhenHit,"SK_WZ_METEORSTORM",5,100;
   - Id: 4169
     AegisName: Dark_Illusion_Card
     Name: Dark Illusion Card
@@ -2261,7 +2261,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus3 bAutoSpell,"TF_POISON",1,20;
+      bonus3 bAutoSpell,"SK_TF_POISONSLASH",1,20;
       bonus2 bAddSkillBlow,52,5;
   - Id: 4176
     AegisName: Dullahan_Card
@@ -2304,8 +2304,8 @@ Body:
     Script: |
       bonus bAgi,1;
       bonus bFlee,10;
-      bonus2 bSkillAtk,"AC_DOUBLE",5;
-      bonus2 bSkillAtk,"AC_SHOWER",5;
+      bonus2 bSkillAtk,"SK_AC_DOUBLESTRAFE",5;
+      bonus2 bSkillAtk,"SK_AC_ARROWSHOWER",5;
   - Id: 4179
     AegisName: Dragon_Fly_Card
     Name: Dragon Fly Card
@@ -2475,7 +2475,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus3 bAutoSpellWhenHit,"AL_HEAL",3,50;
+      bonus3 bAutoSpellWhenHit,"SK_AL_HEAL",3,50;
   - Id: 4192
     AegisName: Rotar_Zairo_Card
     Name: Rotar Zairo Card
@@ -2501,7 +2501,7 @@ Body:
       BuyingStore: true
     Script: |
       if (BaseJob == Job_Novice || BaseJob == Job_SuperNovice)
-         bonus3 bAutoSpellWhenHit,"SM_ENDURE",1,200;
+         bonus3 bAutoSpellWhenHit,"SK_BS_ENDURE",1,200;
   - Id: 4194
     AegisName: Rybio_Card
     Name: Rybio Card
@@ -2696,7 +2696,7 @@ Body:
       BuyingStore: true
     Script: |
       bonus bMaxSPrate,10;
-      bonus2 bSkillAtk,"MG_FROSTDIVER",5;
+      bonus2 bSkillAtk,"SK_MG_FROSTDIVER",5;
   - Id: 4209
     AegisName: Violy_Card
     Name: Violy Card
@@ -2747,8 +2747,8 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus3 bAutoSpell,"SM_BASH",1,20;
-      bonus2 bAddSkillBlow,"SM_BASH",5;
+      bonus3 bAutoSpell,"SK_SM_BASH",1,20;
+      bonus2 bAddSkillBlow,"SK_SM_BASH",5;
       bonus2 bAddDefMonster,1026,-100;
   - Id: 4213
     AegisName: Brilight_Card
@@ -2810,7 +2810,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus3 bAutoSpell,"AL_HEAL",1+9*(getskilllv("AL_HEAL") == 10),20;
+      bonus3 bAutoSpell,"SK_AL_HEAL",1+9*(getskilllv("SK_AL_HEAL") == 10),20;
   - Id: 4218
     AegisName: Succubus_Card
     Name: Succubus Card
@@ -2984,7 +2984,7 @@ Body:
       BuyingStore: true
     Script: |
       bonus bAgi,1;
-      bonus3 bAutoSpellWhenHit,"AS_CLOAKING",5,100;
+      bonus3 bAutoSpellWhenHit,"SK_AS_CLOAKING",5,100;
   - Id: 4231
     AegisName: Increase_Soil_Card
     Name: Mi Gao Card
@@ -3041,7 +3041,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus3 bAutoSpellWhenHit,"AC_CONCENTRATION",1+9*(getskilllv("AC_CONCENTRATION") == 10),30;
+      bonus3 bAutoSpellWhenHit,"SK_AC_IMPROVECONCENTRATION",1+9*(getskilllv("SK_AC_IMPROVECONCENTRATION") == 10),30;
   - Id: 4235
     AegisName: Cookie_XMAS_Card
     Name: Christmas Cookie Card
@@ -3067,7 +3067,7 @@ Body:
       BuyingStore: true
     Script: |
       bonus bAllStats,1;
-      bonus3 bAutoSpellWhenHit,"PR_KYRIE",10,(30+70*(readparam(bInt)>=99));
+      bonus3 bAutoSpellWhenHit,"SK_PR_KYRIE",10,(30+70*(readparam(bInt)>=99));
   - Id: 4237
     AegisName: Owl_Duke_Card
     Name: Owl Duke Card
@@ -3079,7 +3079,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus3 bAutoSpell,"PR_IMPOSITIO",3,3;
+      bonus3 bAutoSpell,"SK_PR_IMPOSITIO",3,3;
   - Id: 4238
     AegisName: Owl_Baron_Card
     Name: Owl Baron Card
@@ -3230,7 +3230,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus3 bAutoSpellWhenHit,"AL_CRUCIS",5,30;
+      bonus3 bAutoSpellWhenHit,"SK_AL_SIGNUMCRUCIS",5,30;
   - Id: 4249
     AegisName: Ancient_Worm_Card
     Name: Ancient Worm Card
@@ -3500,7 +3500,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus3 bAutoSpell,"AS_SONICBLOW",1,50;
+      bonus3 bAutoSpell,"SK_AS_SONICBLOW",1,50;
   - Id: 4269
     AegisName: Incubus_Card
     Name: Incubus Card
@@ -3626,7 +3626,7 @@ Body:
       BuyingStore: true
     Script: |
       bonus bLuk,2;
-      bonus2 bSkillAtk,"BA_MUSICALSTRIKE",10;
+      bonus2 bSkillAtk,"SK_BA_MELODYSTRIKE",10;
       bonus2 bSkillAtk,"DC_THROWARROW",10;
   - Id: 4278
     AegisName: Gibbet_Card
@@ -3669,7 +3669,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus3 bAutoSpellWhenHit,"AL_BLESSING",2+8*(getskilllv("AL_BLESSING") == 10),30;
+      bonus3 bAutoSpellWhenHit,"SK_AL_BLESSING",2+8*(getskilllv("SK_AL_BLESSING") == 10),30;
   - Id: 4281
     AegisName: Zipper_Bear_Card
     Name: Zipper Bear Card
@@ -3720,7 +3720,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus4 bAutoSpell,"AL_HEAL",5,50,1;
+      bonus4 bAutoSpell,"SK_AL_HEAL",5,50,1;
   - Id: 4285
     AegisName: Choco_Card
     Name: Choco Card
@@ -3839,7 +3839,7 @@ Body:
       BuyingStore: true
     Script: |
       bonus bLuk,2;
-      bonus2 bSkillAtk,"AL_HOLYLIGHT",10;
+      bonus2 bSkillAtk,"SK_AL_HOLYGHOST",10;
   - Id: 4294
     AegisName: Quve_Card
     Name: Quve Card
@@ -3852,7 +3852,7 @@ Body:
       BuyingStore: true
     Script: |
       if (BaseJob == Job_Novice || BaseJob == Job_SuperNovice)
-         bonus3 bAutoSpellWhenHit,"AL_INCAGI",1,100;
+         bonus3 bAutoSpellWhenHit,"SK_AL_INCREASEAGI",1,100;
   - Id: 4295
     AegisName: Kraben_Card
     Name: Kraben Card
@@ -3916,7 +3916,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus3 bAutoSpellWhenHit,"CR_AUTOGUARD",3+7*(getskilllv("CR_AUTOGUARD") == 10),30;
+      bonus3 bAutoSpellWhenHit,"SK_CR_AUTOGUARD",3+7*(getskilllv("SK_CR_AUTOGUARD") == 10),30;
     UnEquipScript: |
       sc_end SC_AUTOGUARD;
   - Id: 4300
@@ -3984,8 +3984,8 @@ Body:
       BuyingStore: true
     Script: |
       bonus bDef,2;
-      bonus2 bSkillAtk,"CR_SHIELDCHARGE",10;
-      bonus2 bSkillAtk,"CR_SHIELDBOOMERANG",10;
+      bonus2 bSkillAtk,"SK_CR_SMITE",10;
+      bonus2 bSkillAtk,"SK_CR_SHIELDBOOMERANG",10;
   - Id: 4305
     AegisName: Turtle_General_Card
     Name: Turtle General Card
@@ -3998,7 +3998,7 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bAddClass,Class_All,20;
-      bonus3 bAutoSpell,"SM_MAGNUM",10,30;
+      bonus3 bAutoSpell,"SK_SM_MAGNUM",10,30;
   - Id: 4306
     AegisName: Toad_Card
     Name: Toad Card
@@ -4108,7 +4108,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus4 bAutoSpellWhenHit,"WZ_QUAGMIRE",1+4*(getskilllv("WZ_QUAGMIRE") == 5),50,0;
+      bonus4 bAutoSpellWhenHit,"SK_MG_QUAGMIRE",1+4*(getskilllv("SK_MG_QUAGMIRE") == 5),50,0;
   - Id: 4314
     AegisName: Penomena_Card
     Name: Penomena Card
@@ -4172,7 +4172,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus3 bAutoSpell,"WZ_STORMGUST",2,20;
+      bonus3 bAutoSpell,"SK_WZ_STORMGUST",2,20;
       bonus2 bAddEff,Eff_Freeze,2000;
   - Id: 4319
     AegisName: Freezer_Card
@@ -4187,7 +4187,7 @@ Body:
     Script: |
       bonus bMaxHP,300;
       if (getrefine()>=9)
-         bonus2 bSkillAtk,"SM_BASH",10;
+         bonus2 bSkillAtk,"SK_SM_BASH",10;
   - Id: 4320
     AegisName: Bloody_Knight_Card
     Name: Bloody Knight Card
@@ -4199,7 +4199,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus3 bAutoSpell,"WZ_METEOR",1,20;
+      bonus3 bAutoSpell,"SK_WZ_METEORSTORM",1,20;
   - Id: 4321
     AegisName: Hylozoist_Card
     Name: Hylozoist Card
@@ -4236,7 +4236,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus3 bAutoSpell,"MG_FROSTDIVER",3,50;
+      bonus3 bAutoSpell,"SK_MG_FROSTDIVER",3,50;
   - Id: 4324
     AegisName: Garm_Card
     Name: Hatii Card
@@ -4261,7 +4261,7 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Neutral,15;
-      bonus2 bSkillAtk,"MG_NAPALMBEAT",5;
+      bonus2 bSkillAtk,"SK_AL_SACREDWAVE",5;
   - Id: 4326
     AegisName: See_Otter_Card
     Name: Sea-Otter Card
@@ -4397,7 +4397,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus2 bSkillAtk,"WZ_EARTHSPIKE",5;
+      bonus2 bSkillAtk,"SK_WZ_STALAGMITE",5;
       bonus2 bSkillAtk,"WZ_HEAVENDRIVE",5;
     UnEquipScript: |
       heal 0,-50;
@@ -4477,7 +4477,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus3 bAutoSpell,"RG_STRIPWEAPON",1,50;
+      bonus3 bAutoSpell,"SK_ST_STRIPWEAPON",1,50;
   - Id: 4342
     AegisName: Rsx_0806_Card
     Name: RSX-0806 Card
@@ -4531,7 +4531,7 @@ Body:
     Script: |
       bonus2 bSkillAtk,"MG_THUNDERSTORM",5;
       bonus2 bSkillAtk,"WZ_JUPITEL",5;
-      bonus2 bSkillAtk,"WZ_VERMILION",5;
+      bonus2 bSkillAtk,"SK_WZ_LORDOFVERMILION",5;
     UnEquipScript: |
       heal 0,-50;
   - Id: 4346
@@ -4569,7 +4569,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus3 bAutoSpell,"RG_STRIPARMOR",1,50;
+      bonus3 bAutoSpell,"SK_ST_STRIPARMOR",1,50;
   - Id: 4349
     AegisName: Erend_Card
     Name: Errende Ebecee Card
@@ -4594,7 +4594,7 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bSkillAtk,"WZ_FROSTNOVA",3;
-      bonus2 bSkillAtk,"WZ_STORMGUST",3;
+      bonus2 bSkillAtk,"SK_WZ_STORMGUST",3;
     UnEquipScript: |
       heal 0,-50;
   - Id: 4351
@@ -4687,7 +4687,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      skill "SA_CASTCANCEL",1;
+      skill "SK_MG_CASTCANCEL",1;
   - Id: 4357
     AegisName: B_Seyren_Card
     Name: Lord Knight Card
@@ -4701,7 +4701,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      skill "LK_BERSERK",1;
+      skill "SK_CM_FRENZY",1;
       bonus bMaxHPrate,-50;
   - Id: 4358
     AegisName: Seyren_Card
@@ -4728,7 +4728,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      skill "AS_CLOAKING",3;
+      skill "SK_AS_CLOAKING",3;
     UnEquipScript: |
       sc_end SC_CLOAKING;
   - Id: 4360
@@ -4781,7 +4781,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus5 bAutoSpellWhenHit,"HP_ASSUMPTIO",1,50,BF_WEAPON|BF_MAGIC,0;
+      bonus5 bAutoSpellWhenHit,"SK_BI_ASSUMPTIO",1,50,BF_WEAPON|BF_MAGIC,0;
   - Id: 4364
     AegisName: Magaleta_Card
     Name: Margaretha Sorin Card
@@ -4796,7 +4796,7 @@ Body:
       BuyingStore: true
     Script: |
       bonus bInt,1;
-      bonus5 bAutoSpellWhenHit,"PR_LEXDIVINA",5,150,BF_MAGIC,1;
+      bonus5 bAutoSpellWhenHit,"SK_SA_SILENCE",5,150,BF_MAGIC,1;
   - Id: 4365
     AegisName: B_Katrinn_Card
     Name: High Wizard Card
@@ -5037,7 +5037,7 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bSkillAtk,"WZ_FIREPILLAR",5;
-      bonus2 bSkillAtk,"WZ_METEOR",5;
+      bonus2 bSkillAtk,"SK_WZ_METEORSTORM",5;
     UnEquipScript: |
       heal 0,-50;
   - Id: 4381
@@ -5115,7 +5115,7 @@ Body:
     Script: |
       bonus bMdef,-20;
       bonus2 bResEff,Eff_Freeze,10000;
-      bonus5 bAutoSpellWhenHit,"SA_LANDPROTECTOR",1,70,BF_MAGIC,0;
+      bonus5 bAutoSpellWhenHit,"SK_PF_LANDPROTECTOR",1,70,BF_MAGIC,0;
   - Id: 4387
     AegisName: Ancient_Mimic_Card
     Name: Ancient Mimic Card
@@ -5139,8 +5139,8 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus2 bSkillAtk,"MG_NAPALMBEAT",5;
-      bonus2 bSkillAtk,"MG_SOULSTRIKE",5;
+      bonus2 bSkillAtk,"SK_AL_SACREDWAVE",5;
+      bonus2 bSkillAtk,"SK_MG_SOULSTRIKE",5;
       bonus2 bSkillAtk,"HW_NAPALMVULCAN",5;
     UnEquipScript: |
       heal 0,-50;
@@ -5220,7 +5220,7 @@ Body:
       BuyingStore: true
     Script: |
       if (BaseJob == Job_Priest)
-         bonus3 bAutoSpell,"CR_GRANDCROSS",5,20;
+         bonus3 bAutoSpell,"SK_CR_GRANDCROSS",5,20;
   - Id: 4395
     AegisName: Tha_Maero_Card
     Name: Maero of Thanatos Card
@@ -5233,7 +5233,7 @@ Body:
       BuyingStore: true
     Script: |
       bonus bBaseAtk,5;
-      bonus3 bAutoSpell,"AL_DECAGI",3,50;
+      bonus3 bAutoSpell,"SK_MO_DECAGI",3,50;
   - Id: 4396
     AegisName: Tha_Odium_Card
     Name: Odium of Thanatos Card
@@ -5394,7 +5394,7 @@ Body:
     Script: |
       bonus bUnbreakableWeapon;
       bonus2 bAddClass,Class_All,10;
-      bonus3 bAutoSpell,"SA_DISPELL",1,50;
+      bonus3 bAutoSpell,"SK_SA_DISPELL",1,50;
   - Id: 4408
     AegisName: Gloom_Under_Night_Card
     Name: Gloom Under Night Card
@@ -5493,7 +5493,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      skill "MG_STONECURSE",1;
+      skill "SK_MG_STONECURSE",1;
       bonus2 bResEff,Eff_Stone,3000;
       bonus bMdef,10;
   - Id: 4415
@@ -5520,8 +5520,8 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus2 bSkillAtk,"MG_COLDBOLT",25;
-      bonus2 bCastrate,"MG_COLDBOLT",-25;
+      bonus2 bSkillAtk,"SK_MG_COLDBOLT",25;
+      bonus2 bCastrate,"SK_MG_COLDBOLT",-25;
   - Id: 4417
     AegisName: Ice_Titan_Card
     Name: Ice Titan Card
@@ -5546,7 +5546,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus3 bAutoSpell,"MG_COLDBOLT",2,100;
+      bonus3 bAutoSpell,"SK_MG_COLDBOLT",2,100;
   - Id: 4419
     AegisName: Ktullanux_Card
     Name: Ktullanux Card
@@ -5571,8 +5571,8 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus3 bAutoSpellWhenHit,"AL_HEAL",1,100;
-      bonus3 bAutoSpellWhenHit,"AL_INCAGI",1,100;
+      bonus3 bAutoSpellWhenHit,"SK_AL_HEAL",1,100;
+      bonus3 bAutoSpellWhenHit,"SK_AL_INCREASEAGI",1,100;
   - Id: 4421
     AegisName: Drosera_Card
     Name: Drosera Card
@@ -5625,7 +5625,7 @@ Body:
       BuyingStore: true
     Script: |
       skill "TF_PICKSTONE",1;
-      skill "TF_THROWSTONE",1;
+      skill "SK_TF_THROWSTONE",1;
   - Id: 4425
     AegisName: Atroce_Card
     Name: Atroce Card
@@ -5698,7 +5698,7 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bSkillAtk,"WZ_FIREPILLAR",40;
-      bonus2 bSkillAtk,"WZ_METEOR",40;
+      bonus2 bSkillAtk,"SK_WZ_METEORSTORM",40;
   - Id: 4430
     AegisName: Ifrit_Card
     Name: Ifrit Card
@@ -5726,7 +5726,7 @@ Body:
       BuyingStore: true
     Script: |
       bonus3 bAutoSpell,"MG_FIREBALL",5,20;
-      bonus3 bAutoSpell,"MG_FIREBOLT",5,20;
+      bonus3 bAutoSpell,"SK_MG_FIREBOLT",5,20;
   - Id: 4432
     AegisName: Magmaring_Card
     Name: Magmaring Card
@@ -5754,8 +5754,8 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus2 bSkillAtk,"MG_FIREBOLT",25;
-      bonus2 bCastrate,"MG_FIREBOLT",-25;
+      bonus2 bSkillAtk,"SK_MG_FIREBOLT",25;
+      bonus2 bCastrate,"SK_MG_FIREBOLT",-25;
   - Id: 4434
     AegisName: Knocker_Card
     Name: Knocker Card
@@ -5836,8 +5836,8 @@ Body:
       if (BaseClass == Job_Mage) {
          bonus bMaxSP,100;
          bonus bMaxHP,-100;
-         bonus2 bSkillAtk,"MG_NAPALMBEAT",20;
-         bonus2 bSkillAtk,"MG_SOULSTRIKE",20;
+         bonus2 bSkillAtk,"SK_AL_SACREDWAVE",20;
+         bonus2 bSkillAtk,"SK_MG_SOULSTRIKE",20;
          bonus2 bSkillAtk,"HW_NAPALMVULCAN",20;
       }
   - Id: 4439

@@ -48,7 +48,7 @@ void map_msg_reload(void);
 #define MAX_MOB_LIST_PER_MAP 128
 #define MAX_EVENTQUEUE 2
 #define MAX_EVENTTIMER 32
-#define NATURAL_HEAL_INTERVAL 500
+#define NATURSK_AL_HEAL_INTERVAL 500
 #define MIN_FLOORITEM 2
 #define MAX_FLOORITEM START_ACCOUNT_NUM
 #define MAX_LEVEL 200
@@ -677,7 +677,7 @@ enum cell_chk : uint8 {
 	CELL_CHKNPC,			// Whether the cell has an OnTouch NPC
 	CELL_CHKBASILICA,		// Whether the cell has Basilica
 	CELL_CHKLANDPROTECTOR,	// Whether the cell has Land Protector
-	CELL_CHKNOVENDING,		// Whether the cell denies MC_VENDING skill
+	CELL_CHKNOVENDING,		// Whether the cell denies SK_MC_VENDING skill
 	CELL_CHKNOCHAT,			// Whether the cell denies Player Chat Window
 	CELL_CHKMAELSTROM,		// Whether the cell has Maelstrom
 	CELL_CHKICEWALL,		// Whether the cell has Ice Wall

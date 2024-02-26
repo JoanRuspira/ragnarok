@@ -13,7 +13,7 @@
 int MageSkillAtkRatioCalculator::calculate_skill_atk_ratio(int base_lv, int skill_id, int skill_lv, struct block_list *target, bool is_spellfist)
 {
 	switch (skill_id) {
-		case MG_EARTHBOLT:
+		case SK_MG_EARTHBOLT:
 			if (!is_spellfist) {
 				add_earth_bolt_special_effects(target);
 			} else {
@@ -21,35 +21,35 @@ int MageSkillAtkRatioCalculator::calculate_skill_atk_ratio(int base_lv, int skil
 			}
 			return calculate_bolt_attack(skill_lv);
 			break;
-		case MG_LIGHTNINGBOLT:
+		case SK_MG_LIGHTNINGBOLT:
 			if (is_spellfist) {
 				clif_specialeffect(target, EF_LIGHTNINGLOADER, AREA);
 			}
 			return calculate_bolt_attack(skill_lv);
 			break;
-		case MG_COLDBOLT:
+		case SK_MG_COLDBOLT:
 			if (is_spellfist) {
 				clif_specialeffect(target, EF_FROSTWEAPON, AREA);
 			}
 			return calculate_bolt_attack(skill_lv);
 			break;
-		case MG_FIREBOLT:
+		case SK_MG_FIREBOLT:
 			if (is_spellfist) {
 				clif_specialeffect(target, EF_FLAMELAUNCHER, AREA);
 			}
 			return calculate_bolt_attack(skill_lv);
 			break;
-		case MG_UNDEADEMBRACE:
+		case SK_MG_CORRUPT:
 			add_undead_embrace_special_effects(target);
 			return calculate_undead_embrace_attack(skill_lv);
 			break;
-		case NPC_DARKSTRIKE:
+		case SK_MG_DARKSTRIKE:
 			if (is_spellfist) {
 				clif_specialeffect(target, 1238, AREA);
 			}
 			return calculate_soul_strike_attack(skill_lv);
 			break;
-		case MG_SOULSTRIKE:
+		case SK_MG_SOULSTRIKE:
 			if (is_spellfist) {
 				clif_specialeffect(target, EF_BANISHING_BUSTER, AREA);
 			}

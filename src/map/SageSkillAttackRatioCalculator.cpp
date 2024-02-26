@@ -10,51 +10,51 @@
 int SageSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv, struct status_data* sstatus)
 {
 	switch (skill_id) {
-		case SO_EARTHGRAVE:
+		case SK_WZ_EARTHSTRAIN:
 			return calculate_earth_spikes_atk_ratio(skill_lv);
 			break;
-        case WZ_VERMILION:
+        case SK_WZ_LORDOFVERMILION:
 			return calculate_vermillion_atk_ratio(skill_lv);
 			break;
-		case WZ_STORMGUST:
+		case SK_WZ_STORMGUST:
 			return calculate_storm_gust_atk_ratio(skill_lv);
 			break;
-		case WZ_METEOR:
+		case SK_WZ_METEORSTORM:
 			return calculate_meteor_storm_atk_ratio(skill_lv);
 			break;
-		case WL_DRAINLIFE:
-		case PF_SOULBURN:
+		case SK_SA_DRAINLIFE:
+		case SK_SA_SOULBURN:
 			return calculate_soul_burn_atk_ratio(skill_lv);
 			break;
-		case EL_ICICLE:
+		case SK_SA_ICICLE:
 			clif_specialeffect(target, 133, AREA);
 			clif_specialeffect(target, 135, AREA);
 			return calculate_el_action_atk_ratio(skill_lv);
 			break;
-		case EL_WIND_SLASH:
+		case SK_SA_WINDSLASH:
 			return calculate_el_action_atk_ratio(skill_lv);
 			break;
-		case EL_STONE_HAMMER:
+		case SK_SA_EARTHSPIKE:
 			clif_specialeffect(target, EF_EARTHSPIKE, AREA);
 			return calculate_el_action_atk_ratio(skill_lv);
 			break;
-		case EL_FIRE_BALL:
+		case SK_SA_FIREBALL:
 			clif_specialeffect(target, 1254, AREA);
 			return calculate_el_action_atk_ratio(skill_lv);
 			break;
 		case EL_TORNADO_JG:
 			add_chain_lighting_special_effects(target);
 			return calculate_el_action_2_atk_ratio(skill_lv);
-		case EL_ROCK_CRUSHER_JG:
+		case SK_SA_ROCKCRUSHER:
 			add_rock_crusher_special_effects(target);
 			return calculate_el_action_2_atk_ratio(skill_lv);
-		case EL_WATER_SCREW_JG:
+		case SK_SA_WATERBLAST:
 			add_water_blast_special_effects(target);
 			return calculate_el_action_2_atk_ratio(skill_lv);
-		case EF_FIRE_BOMB_JG:
+		case SK_SA_FIREBOMB:
 			add_fire_bomb_special_effects(target);
 			return calculate_el_action_2_atk_ratio(skill_lv);
-		case JG_EL_ACTION:
+		case SK_SA_ELEMENTALACTION2:
 			return calculate_el_action_2_atk_ratio(skill_lv);
 		default:
 			return 0;

@@ -7,31 +7,31 @@
 int RogueSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv, struct status_data* sstatus, bool is_hiding)
 {
 	switch (skill_id) {
-		case AS_GRIMTOOTH:
+		case SK_AS_GRIMTOOTH:
 			return calculate_grimtooth_atk_ratio(skill_lv);
 			break;
-		case RG_RAID:
+		case SK_AS_PHANTOMMENACE:
 			return calculate_phantom_menace_atk_ratio(skill_lv, is_hiding);
 			break;
-		case RG_BACKSTAP:
+		case SK_RG_BACKSTAB:
 			add_back_stab_special_effects(target);
 			return calculate_back_stab_atk_ratio(skill_lv);
 			break;
-		case GC_COUNTERSLASH:
+		case SK_RG_HACKANDSLASH:
 			add_back_stab_special_effects(target);
 			add_hack_and_slash_special_effects(src, target);
 			return calculate_hack_and_slash_atk_ratio(skill_lv, sstatus->luk);
 			break;
-		case NJ_KIRIKAGE:
+		case SK_RG_SHADYSLASH:
 			add_shady_slash_special_effects(target);
 			return calculate_shady_slash_atk_ratio(skill_lv);
-		case RA_AIMEDBOLT:
+		case SK_RG_QUICKSHOT:
 			return calculate_quick_shot_atk_ratio(skill_lv);
-		case SC_TRIANGLESHOT:
+		case SK_RG_TRIANGLESHOT:
 			return calculate_triangle_shot_atk_ratio(skill_lv);
-		case RA_ARROWSTORM:
+		case SK_RG_ARROWSTORM:
 			return calculate_arrow_storm_atk_ratio(skill_lv, sstatus->dex);
-		case LG_MOONSLASHER:
+		case SK_ST_FATALMENACE:
 			clif_specialeffect(target, 1405, AREA); //new_cannon_spear_07_clock
 			clif_soundeffectall(src, "fatalmenace.wav", 0, AREA);
 			return calculate_fatal_menace_atk_ratio(skill_lv, sstatus->luk);

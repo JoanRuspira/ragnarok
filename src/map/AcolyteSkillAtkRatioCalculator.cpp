@@ -10,15 +10,15 @@
 int AcolyteSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv)
 {
 	switch (skill_id) {
-		case MG_NAPALMBEAT:
+		case SK_AL_SACREDWAVE:
 			add_sacred_wave_special_effects(target);
 			return calculate_sacred_wave_atk_ratio(skill_lv);
 			break;
-		case AL_HOLYLIGHT:
+		case SK_AL_HOLYGHOST:
 			add_holy_light_special_effects(target);
 			return calculate_holy_light_atk_ratio(skill_lv);
 			break;
-		case AL_RUWACH:
+		case SK_AL_RUWACH:
 			return 100 * skill_lv;
 		default:
 			return 0;
