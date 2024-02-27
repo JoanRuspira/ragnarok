@@ -2453,7 +2453,6 @@ void do_init_guild(void) {
 		char* dbsubpath1 = (char*)aMalloc(n1+1);
 		safesnprintf(dbsubpath1,n1,"%s%s",db_path,dbsubpath[i]);
 		
-		sv_readdb(dbsubpath1, "castle_db.txt", ',', 4, 4, -1, &guild_read_castledb, i > 0);
 
 		aFree(dbsubpath1);
 	}

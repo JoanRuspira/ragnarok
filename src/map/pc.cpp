@@ -12140,30 +12140,6 @@ static bool pc_readdb_job_basehpsp(char* fields[], int columns, int current)
 */
 static bool pc_readdb_job_param(char* fields[], int columns, int current)
 {
-	int64 class_tmp;
-	int idx, class_;
-	uint16 str, agi, vit, int_, dex, luk;
-
-	script_get_constant(trim(fields[0]),&class_tmp);
-	class_ = static_cast<int>(class_tmp);
-
-	if ((idx = pc_class2idx(class_)) < 0) {
-		ShowError("pc_readdb_job_param: Invalid job '%s'. Skipping!",fields[0]);
-		return false;
-	}
-	str = cap_value(atoi(fields[1]),10,SHRT_MAX);
-	agi = atoi(fields[2]) ? cap_value(atoi(fields[2]),10,SHRT_MAX) : str;
-	vit = atoi(fields[3]) ? cap_value(atoi(fields[3]),10,SHRT_MAX) : str;
-	int_ = atoi(fields[4]) ? cap_value(atoi(fields[4]),10,SHRT_MAX) : str;
-	dex = atoi(fields[5]) ? cap_value(atoi(fields[5]),10,SHRT_MAX) : str;
-	luk = atoi(fields[6]) ? cap_value(atoi(fields[6]),10,SHRT_MAX) : str;
-
-	job_info[idx].max_param.str = str;
-	job_info[idx].max_param.agi = agi;
-	job_info[idx].max_param.vit = vit;
-	job_info[idx].max_param.int_ = int_;
-	job_info[idx].max_param.dex = dex;
-	job_info[idx].max_param.luk = luk;
 	
 	return true;
 }
@@ -12172,26 +12148,7 @@ static bool pc_readdb_job_param(char* fields[], int columns, int current)
  * Read job_noenter_map.txt
  **/
 static bool pc_readdb_job_noenter_map(char *str[], int columns, int current) {
-	int idx, class_ = -1;
-	int64 class_tmp;
-
-	if (ISDIGIT(str[0][0])) {
-		class_ = atoi(str[0]);
-	} else {
-		if (!script_get_constant(str[0], &class_tmp)) {
-			ShowError("pc_readdb_job_noenter_map: Invalid job %s specified.\n", str[0]);
-			return false;
-		}
-		class_ = static_cast<int>(class_tmp);
-	}
-
-	if (!pcdb_checkid(class_) || (idx = pc_class2idx(class_)) < 0) {
-		ShowError("pc_readdb_job_noenter_map: Invalid job %d specified.\n", class_);
-		return false;
-	}
-
-	job_info[idx].noenter_map.zone = atoi(str[1]);
-	job_info[idx].noenter_map.group_lv = atoi(str[2]);
+	
 	return true;
 }
 
@@ -12282,8 +12239,6 @@ void pc_readdb(void) {
 #ifdef HP_SP_TABLES
 		sv_readdb(dbsubpath2, "job_basehpsp_db.txt", ',', 4, 4+500, CLASS_COUNT*2, &pc_readdb_job_basehpsp, i > 0); //Make it support until lvl 500!
 #endif
-		sv_readdb(dbsubpath2, "job_param_db.txt", ',', 2, PARAM_MAX+1, CLASS_COUNT, &pc_readdb_job_param, i > 0);
-		sv_readdb(dbsubpath2, "job_noenter_map.txt", ',', 3, 3, CLASS_COUNT, &pc_readdb_job_noenter_map, i > 0);
 		aFree(dbsubpath1);
 		aFree(dbsubpath2);
 	}

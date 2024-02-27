@@ -1523,16 +1523,7 @@ static bool read_homunculusdb_sub(char* str[], int columns, int current)
 * Read homunculus db (check the files)
 */
 void read_homunculusdb(void) {
-	uint8 i;
-	const char *filename[] = {
-		DBPATH"homunculus_db.txt",
-		DBIMPORT"/homunculus_db.txt",
-	};
-	homunculus_count = 0;
-	memset(homunculus_db,0,sizeof(homunculus_db));
-	for(i = 0; i<ARRAYLENGTH(filename); i++){
-		sv_readdb(db_path, filename[i], ',', 50, 50, MAX_HOMUNCULUS_CLASS, &read_homunculusdb_sub, i > 0);
-	}
+	
 }
 
 /**
@@ -1580,12 +1571,7 @@ static bool read_homunculus_skilldb_sub(char* split[], int columns, int current)
 * Read homunculus skill db (check the files)
 */
 static void read_homunculus_skilldb(void) {
-	const char *filename[] = { "homun_skill_tree.txt", DBIMPORT"/homun_skill_tree.txt"};
-	int i;
-	memset(hskill_tree,0,sizeof(hskill_tree));
-	for (i = 0; i<ARRAYLENGTH(filename); i++) {
-		sv_readdb(db_path, filename[i], ',', 15, 15, -1, &read_homunculus_skilldb_sub, i > 0);
-	}
+	// 
 }
 
 /**
@@ -1593,42 +1579,7 @@ static void read_homunculus_skilldb(void) {
 */
 void read_homunculus_expdb(void)
 {
-	int i;
-	const char *filename[]={
-		DBPATH"exp_homun.txt",
-		DBIMPORT"/exp_homun.txt"
-	};
-
-	memset(hexptbl,0,sizeof(hexptbl));
-	for (i = 0; i < ARRAYLENGTH(filename); i++) {
-		FILE *fp;
-		char path[1024];
-		char line[1024];
-		int j=0;
-		
-		sprintf(path, "%s/%s", db_path, filename[i]);
-		fp = fopen(path,"r");
-		if (fp == NULL) {
-			if (i != 0)
-				continue;
-			ShowError("read_homunculus_expdb: Can't read %s\n",line);
-			return;
-		}
-		while (fgets(line, sizeof(line), fp) && j < MAX_LEVEL) {
-			if (line[0] == '/' && line[1] == '/')
-				continue;
-
-			hexptbl[j] = strtoull(line, NULL, 10);
-			if (!hexptbl[j++])
-				break;
-		}
-		if (hexptbl[MAX_LEVEL - 1]) { // Last permitted level have to be 0!
-			ShowWarning("read_homunculus_expdb: Reached max level in %s [%d]. Remaining lines were not read.\n ",path,MAX_LEVEL);
-			hexptbl[MAX_LEVEL - 1] = 0;
-		}
-		fclose(fp);
-		//ShowStatus("Done reading '" CL_WHITE "%d" CL_RESET "' levels in '" CL_WHITE "%s" CL_RESET "'.\n", j, path);
-	}
+	
 }
 
 void hom_reload(void){

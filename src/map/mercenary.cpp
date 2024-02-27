@@ -547,14 +547,14 @@ static bool mercenary_readdb_sub(char* str[], int columns, int current)
 * Load Mercenary's database
 **/
 void mercenary_readdb(void) {
-	const char *filename[]={ "mercenary_db.txt",DBIMPORT"/mercenary_db.txt"};
-	uint8 i;
+	// const char *filename[]={ "mercenary_db.txt",DBIMPORT"/mercenary_db.txt"};
+	// uint8 i;
 
-	mercenary_db_data.clear();
+	// mercenary_db_data.clear();
 
-	for(i = 0; i<ARRAYLENGTH(filename); i++){
-		sv_readdb(db_path, filename[i], ',', 26, 26, -1, &mercenary_readdb_sub, i > 0);
-	}
+	// for(i = 0; i<ARRAYLENGTH(filename); i++){
+	// 	sv_readdb(db_path, filename[i], ',', 26, 26, -1, &mercenary_readdb_sub, i > 0);
+	// }
 }
 
 /**
@@ -591,12 +591,12 @@ static bool mercenary_read_skilldb_sub(char* str[], int columns, int current)
 * Load Mercenary's skill database
 **/
 void mercenary_read_skilldb(void){
-	const char *filename[]={ "mercenary_skill_db.txt",DBIMPORT"/mercenary_skill_db.txt"};
-	uint8 i;
+	// const char *filename[]={ "mercenary_skill_db.txt",DBIMPORT"/mercenary_skill_db.txt"};
+	// uint8 i;
 
-	for(i = 0; i<ARRAYLENGTH(filename); i++){
-		sv_readdb(db_path, filename[i], ',', 3, 3, -1, &mercenary_read_skilldb_sub, i > 0);
-	}
+	// for(i = 0; i<ARRAYLENGTH(filename); i++){
+	// 	sv_readdb(db_path, filename[i], ',', 3, 3, -1, &mercenary_read_skilldb_sub, i > 0);
+	// }
 }
 
 /**

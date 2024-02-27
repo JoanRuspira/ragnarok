@@ -14346,21 +14346,21 @@ void status_change_clear_onChangeMap(struct block_list *bl, struct status_change
  */
 static bool status_readdb_status_disabled(char **str, int columns, int current)
 {
-	int64 type = SC_NONE;
+	// int64 type = SC_NONE;
 
-	if (ISDIGIT(str[0][0]))
-		type = atoi(str[0]);
-	else {
-		if (!script_get_constant(str[0],&type))
-			type = SC_NONE;
-	}
+	// if (ISDIGIT(str[0][0]))
+	// 	type = atoi(str[0]);
+	// else {
+	// 	if (!script_get_constant(str[0],&type))
+	// 		type = SC_NONE;
+	// }
 
-	if (type <= SC_NONE || type >= SC_MAX) {
-		ShowError("status_readdb_status_disabled: Invalid SC with type %s.\n", str[0]);
-		return false;
-	}
+	// if (type <= SC_NONE || type >= SC_MAX) {
+	// 	ShowError("status_readdb_status_disabled: Invalid SC with type %s.\n", str[0]);
+	// 	return false;
+	// }
 
-	SCDisabled[type] = (unsigned int)atol(str[1]);
+	// SCDisabled[type] = (unsigned int)atol(str[1]);
 	return true;
 }
 
@@ -14592,7 +14592,7 @@ int status_readdb(void)
 		}
 
 		status_readdb_attrfix(dbsubpath2,i > 0); // !TODO use sv_readdb ?
-		sv_readdb(dbsubpath1, "status_disabled.txt", ',', 2, 2, -1, &status_readdb_status_disabled, i > 0);
+		// sv_readdb(dbsubpath1, "status_disabled.txt", ',', 2, 2, -1, &status_readdb_status_disabled, i > 0);
 
 		status_yaml_readdb_refine(dbsubpath2, "refine_db.yml");
 		aFree(dbsubpath1);
