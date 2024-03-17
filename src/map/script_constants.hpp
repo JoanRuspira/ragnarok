@@ -28,7 +28,6 @@
 	export_constant(MAX_GUILDLEVEL);
 	export_constant(MAX_GUARDIANS);
 	export_constant(MAX_GUILD_STORAGE);
-	export_constant(MAX_BG_MEMBERS);
 	export_constant(MAX_CHAT_USERS);
 	export_constant(VIP_SCRIPT);
 	export_constant(MIN_STORAGE);
@@ -7474,14 +7473,7 @@
 	export_constant(UNT_GD_SOULCOLD);
 	export_constant(UNT_GD_HAWKEYES);
 
-	/* battleground info types */
-	export_constant(BG_INFO_ID);
-	export_constant(BG_INFO_REQUIRED_PLAYERS);
-	export_constant(BG_INFO_MAX_PLAYERS);
-	export_constant(BG_INFO_MIN_LEVEL);
-	export_constant(BG_INFO_MAX_LEVEL);
-	export_constant(BG_INFO_MAPS);
-	export_constant(BG_INFO_DESERTER_TIME);
+
 
 	/* item job classes */
 	export_constant(ITEMJ_NORMAL);

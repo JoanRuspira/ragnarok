@@ -21,7 +21,6 @@
 #include "../common/utils.hpp"
 
 #include "battle.hpp"
-#include "battleground.hpp"
 #include "clif.hpp"
 #include "elemental.hpp"
 #include "guild.hpp"
@@ -1042,12 +1041,7 @@ int status_damage(struct block_list *src,struct block_list *target,int64 dhp, in
 	//cf SC_REBIRTH, SC_KAIZEL, pc_dead...
 	if(target->type == BL_PC) {
 		TBL_PC *sd = BL_CAST(BL_PC,target);
-		if( sd->bg_id ) {
-			std::shared_ptr<s_battleground_data> bg = util::umap_find(bg_team_db, sd->bg_id);
-
-			if( bg && !(bg->die_event.empty()) )
-				npc_event(sd, bg->die_event.c_str(), 0);
-		}
+		
 
 		npc_script_event(sd,NPCE_DIE);
 	}

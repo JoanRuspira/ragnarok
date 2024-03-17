@@ -33,7 +33,6 @@
 
 #include "atcommand.hpp"
 #include "battle.hpp"
-#include "battleground.hpp"
 #include "channel.hpp"
 #include "chat.hpp"
 #include "chrif.hpp"
@@ -19958,111 +19957,13 @@ BUILDIN_FUNC(showevent)
  *------------------------------------------*/
 BUILDIN_FUNC(waitingroom2bg)
 {
-	struct npc_data *nd;
-	struct chat_data *cd;
-	const char *map_name;
-	int mapindex = 0, bg_id;
-	unsigned char i,c=0;
-	struct s_battleground_team team;
-
-	if( script_hasdata(st,7) )
-		nd = npc_name2id(script_getstr(st,7));
-	else
-		nd = (struct npc_data *)map_id2bl(st->oid);
-
-	if( nd == NULL || (cd = (struct chat_data *)map_id2bl(nd->chat_id)) == NULL )
-	{
-		script_pushint(st,0);
-		return SCRIPT_CMD_SUCCESS;
-	}
-
-	map_name = script_getstr(st,2);
-	if (strcmp(map_name, "-") != 0 && (mapindex = mapindex_name2id(map_name)) == 0)
-	{ // Invalid Map
-		script_pushint(st, 0);
-		return SCRIPT_CMD_SUCCESS;
-	}
-
-	team.warp_x = script_getnum(st,3);
-	team.warp_y = script_getnum(st,4);
-	if (script_hasdata(st,5)) {
-		team.quit_event = script_getstr(st,5); // Logout Event
-		check_event(st, team.quit_event.c_str());
-	} else
-		team.quit_event = "";
-	if (script_hasdata(st,6)) {
-		team.death_event = script_getstr(st,6); // Die Event
-		check_event(st, team.death_event.c_str());
-	} else
-		team.death_event = "";
-
-	if( (bg_id = bg_create(mapindex, &team)) == 0 )
-	{ // Creation failed
-		script_pushint(st,0);
-		return SCRIPT_CMD_SUCCESS;
-	}
-
-	for (i = 0; i < cd->users; i++) { // Only add those who are in the chat room
-		struct map_session_data *sd;
-		if( (sd = cd->usersd[i]) != NULL && bg_team_join(bg_id, sd, false) ){
-			mapreg_setreg(reference_uid(add_str("$@arenamembers"), c), sd->bl.id);
-			++c;
-		}
-	}
-
-	mapreg_setreg(add_str("$@arenamembersnum"), c);
-	script_pushint(st,bg_id);
+	
 	return SCRIPT_CMD_SUCCESS;
 }
 
 BUILDIN_FUNC(waitingroom2bg_single)
 {
-	const char* map_name;
-	struct npc_data *nd;
-	struct chat_data *cd;
-	struct map_session_data *sd;
-	int x, y, mapindex, bg_id = script_getnum(st,2);
-	std::shared_ptr<s_battleground_data> bg = util::umap_find(bg_team_db, bg_id);
-
-	if (!bg) {
-		script_pushint(st, false);
-		return SCRIPT_CMD_SUCCESS;
-	}
-	if (script_hasdata(st, 3)) {
-		map_name = script_getstr(st, 3);
-		if ((mapindex = mapindex_name2id(map_name)) == 0) {
-			script_pushint(st, false);
-			return SCRIPT_CMD_SUCCESS; // Invalid Map
-		}
-		x = script_getnum(st, 4);
-		y = script_getnum(st, 5);
-	}
-	else {
-		mapindex = bg->cemetery.map;
-		x = bg->cemetery.x;
-		y = bg->cemetery.y;
-	}
-	if (!map_getmapflag(map_mapindex2mapid(mapindex), MF_BATTLEGROUND)) {
-		ShowWarning("buildin_waitingroom2bg_single: Map %s requires the mapflag MF_BATTLEGROUND.\n", mapindex_id2name(mapindex));
-		script_pushint(st, false);
-		return SCRIPT_CMD_FAILURE;
-	}
-
-	nd = npc_name2id(script_getstr(st,6));
-
-	if( nd == NULL || (cd = (struct chat_data *)map_id2bl(nd->chat_id)) == NULL || cd->users <= 0 )
-		return SCRIPT_CMD_SUCCESS;
-
-	if( (sd = cd->usersd[0]) == NULL )
-		return SCRIPT_CMD_SUCCESS;
-
-	if( bg_team_join(bg_id, sd, false) && pc_setpos(sd, mapindex, x, y, CLR_TELEPORT) == SETPOS_OK)
-	{
-		script_pushint(st, true);
-	}
-	else
-		script_pushint(st, false);
-
+	
 	return SCRIPT_CMD_SUCCESS;
 }
 
@@ -20071,31 +19972,7 @@ BUILDIN_FUNC(waitingroom2bg_single)
 /// *bg_create("<map name>",<x>,<y>{,"<On Quit Event>","<On Death Event>"});
 /// @author [secretdataz]
 BUILDIN_FUNC(bg_create) {
-	const char *map_name;
-	int mapindex = 0;
-	struct s_battleground_team team;
-
-	map_name = script_getstr(st, 2);
-	if (strcmp(map_name, "-") != 0 && (mapindex = mapindex_name2id(map_name)) == 0)
-	{ // Invalid Map
-		script_pushint(st, 0);
-		return SCRIPT_CMD_SUCCESS;
-	}
-
-	team.warp_x = script_getnum(st,3);
-	team.warp_y = script_getnum(st,4);
-	if (script_hasdata(st,5)) {
-		team.quit_event = script_getstr(st,5); // Logout Event
-		check_event(st, team.quit_event.c_str());
-	} else
-		team.quit_event = "";
-	if (script_hasdata(st,6)) {
-		team.death_event = script_getstr(st,6); // Die Event
-		check_event(st, team.death_event.c_str());
-	} else
-		team.death_event = "";
-
-	script_pushint(st, bg_create(mapindex, &team));
+	
 	return SCRIPT_CMD_SUCCESS;
 }
 
@@ -20105,204 +19982,64 @@ BUILDIN_FUNC(bg_create) {
 /// bg_join(<battle group>,{"<map name>",<x>,<y>{,<char id>}});
 /// @author [secretdataz]
 BUILDIN_FUNC(bg_join) {
-	const char* map_name;
-	struct map_session_data *sd;
-	int x, y, mapindex, bg_id = script_getnum(st, 2);
-	std::shared_ptr<s_battleground_data> bg = util::umap_find(bg_team_db, bg_id);
-
-	if (!bg) {
-		script_pushint(st, false);
-		return SCRIPT_CMD_SUCCESS;
-	}
-	if (script_hasdata(st, 3)) {
-		map_name = script_getstr(st, 3);
-		if ((mapindex = mapindex_name2id(map_name)) == 0) {
-			script_pushint(st, false);
-			return SCRIPT_CMD_SUCCESS; // Invalid Map
-		}
-		x = script_getnum(st, 4);
-		y = script_getnum(st, 5);
-	} else {
-		mapindex = bg->cemetery.map;
-		x = bg->cemetery.x;
-		y = bg->cemetery.y;
-	}
-
-	if (!script_charid2sd(6, sd)) {
-		script_pushint(st, false);
-		return SCRIPT_CMD_FAILURE;
-	}
-	if (!map_getmapflag(map_mapindex2mapid(mapindex), MF_BATTLEGROUND)) {
-		ShowWarning("buildin_bg_join: Map %s requires the mapflag MF_BATTLEGROUND.\n", mapindex_id2name(mapindex));
-		script_pushint(st, false);
-		return SCRIPT_CMD_FAILURE;
-	}
-
-	if (bg_team_join(bg_id, sd, false) && pc_setpos(sd, mapindex, x, y, CLR_TELEPORT) == SETPOS_OK)
-	{
-		script_pushint(st, true);
-	}
-	else
-		script_pushint(st, false);
+	
 
 	return SCRIPT_CMD_SUCCESS;
 }
 
 BUILDIN_FUNC(bg_team_setxy)
 {
-	int bg_id = script_getnum(st,2);
-	std::shared_ptr<s_battleground_data> bg = util::umap_find(bg_team_db, bg_id);
-
-	if (bg) {
-		bg->cemetery.x = script_getnum(st, 3);
-		bg->cemetery.y = script_getnum(st, 4);
-	}
+	
 
 	return SCRIPT_CMD_SUCCESS;
 }
 
 BUILDIN_FUNC(bg_warp)
 {
-	int x, y, mapindex, bg_id;
-	const char* map_name;
-
-	bg_id = script_getnum(st,2);
-	map_name = script_getstr(st,3);
-	if( (mapindex = mapindex_name2id(map_name)) == 0 )
-		return SCRIPT_CMD_SUCCESS; // Invalid Map
-	x = script_getnum(st,4);
-	y = script_getnum(st,5);
-	bg_team_warp(bg_id, mapindex, x, y);
+	
 	return SCRIPT_CMD_SUCCESS;
 }
 
 BUILDIN_FUNC(bg_monster)
 {
-	int class_ = 0, x = 0, y = 0, bg_id = 0;
-	const char *str,*mapname, *evt="";
-
-	bg_id  = script_getnum(st,2);
-	mapname    = script_getstr(st,3);
-	x      = script_getnum(st,4);
-	y      = script_getnum(st,5);
-	str    = script_getstr(st,6);
-	class_ = script_getnum(st,7);
-	if( script_hasdata(st,8) ) evt = script_getstr(st,8);
-	check_event(st, evt);
-	script_pushint(st, mob_spawn_bg(mapname,x,y,str,class_,evt,bg_id));
+	
 	return SCRIPT_CMD_SUCCESS;
 }
 
 BUILDIN_FUNC(bg_monster_set_team)
 {
-	struct mob_data *md;
-	struct block_list *mbl;
-	int id = script_getnum(st,2),
-		bg_id = script_getnum(st,3);
-
-	if( id == 0 || (mbl = map_id2bl(id)) == NULL || mbl->type != BL_MOB )
-		return SCRIPT_CMD_SUCCESS;
-	md = (TBL_MOB *)mbl;
-	md->bg_id = bg_id;
-
-	mob_stop_attack(md);
-	mob_stop_walking(md, 0);
-	md->target_id = md->attacked_id = 0;
-	clif_name_area(&md->bl);
+	
 
 	return SCRIPT_CMD_SUCCESS;
 }
 
 BUILDIN_FUNC(bg_leave)
 {
-	struct map_session_data *sd = NULL;
-	bool deserter = false;
-
-	if( !script_charid2sd(2,sd) || !sd->bg_id )
-		return SCRIPT_CMD_SUCCESS;
-
-	if (!strcmp(script_getfuncname(st), "bg_desert"))
-		deserter = true;
-
-	bg_team_leave(sd, false, deserter);
+	
 	return SCRIPT_CMD_SUCCESS;
 }
 
 BUILDIN_FUNC(bg_destroy)
 {
-	int bg_id = script_getnum(st,2);
-	bg_team_delete(bg_id);
+	
 	return SCRIPT_CMD_SUCCESS;
 }
 
 BUILDIN_FUNC(bg_getareausers)
 {
-	const char *str = script_getstr(st, 3);
-	int16 m, x0, y0, x1, y1;
-	int bg_id = script_getnum(st, 2), c = 0;
-	std::shared_ptr<s_battleground_data> bg = util::umap_find(bg_team_db, bg_id);
-
-	if (!bg || (m = map_mapname2mapid(str)) < 0) {
-		script_pushint(st,0);
-		return SCRIPT_CMD_SUCCESS;
-	}
-
-	x0 = script_getnum(st,4);
-	y0 = script_getnum(st,5);
-	x1 = script_getnum(st,6);
-	y1 = script_getnum(st,7);
-
-	for (const auto &member : bg->members) {
-		if( member.sd->bl.m != m || member.sd->bl.x < x0 || member.sd->bl.y < y0 || member.sd->bl.x > x1 || member.sd->bl.y > y1 )
-			continue;
-		c++;
-	}
-
-	script_pushint(st,c);
+	
 	return SCRIPT_CMD_SUCCESS;
 }
 
 BUILDIN_FUNC(bg_updatescore)
 {
-	const char *str;
-	int16 m;
-
-	str = script_getstr(st,2);
-	if( (m = map_mapname2mapid(str)) < 0 )
-		return SCRIPT_CMD_SUCCESS;
-
-	struct map_data *mapdata = map_getmapdata(m);
-
-	mapdata->bgscore_lion = script_getnum(st,3);
-	mapdata->bgscore_eagle = script_getnum(st,4);
-
-	clif_bg_updatescore(m);
+	
 	return SCRIPT_CMD_SUCCESS;
 }
 
 BUILDIN_FUNC(bg_get_data)
 {
-	int bg_id = script_getnum(st,2), type = script_getnum(st,3), i = 0;
-	std::shared_ptr<s_battleground_data> bg = util::umap_find(bg_team_db, bg_id);
-
-	if (bg) {
-		switch (type) {
-		case 0:
-			script_pushint(st, bg->members.size());
-			break;
-		case 1:
-			for (const auto &member : bg->members)
-				mapreg_setreg(reference_uid(add_str("$@arenamembers"), i++), member.sd->bl.id);
-			mapreg_setreg(add_str("$@arenamemberscount"), i);
-			script_pushint(st, i);
-			break;
-		default:
-			ShowError("script:bg_get_data: unknown data identifier %d\n", type);
-			break;
-		}
-	} else
-		script_pushint(st, 0);
-
+	
 	return SCRIPT_CMD_SUCCESS;
 }
 
@@ -20312,11 +20049,7 @@ BUILDIN_FUNC(bg_get_data)
  */
 BUILDIN_FUNC(bg_reserve)
 {
-	const char *str = script_getstr(st, 2);
-	bool ended = script_hasdata(st, 3) ? script_getnum(st, 3) != 0 : false;
-
-	if (!bg_queue_reserve(str, ended))
-		ShowWarning("buildin_bg_reserve: Could not reserve battleground with name %s\n", str);
+	
 	return SCRIPT_CMD_SUCCESS;
 }
 
@@ -20326,10 +20059,7 @@ BUILDIN_FUNC(bg_reserve)
  */
 BUILDIN_FUNC(bg_unbook)
 {
-	const char *str = script_getstr(st, 2);
-
-	if (!bg_queue_unbook(str))
-		ShowWarning("buildin_bg_unbook: Could not unreserve battleground with name %s\n", str);
+	
 	return SCRIPT_CMD_SUCCESS;
 }
 
@@ -20339,48 +20069,7 @@ BUILDIN_FUNC(bg_unbook)
  */
 BUILDIN_FUNC(bg_info)
 {
-	std::shared_ptr<s_battleground_type> bg = bg_search_name(script_getstr(st, 2));
-
-	if (!bg) {
-		ShowError("bg_info: Invalid Battleground name %s.\n", script_getstr(st, 2));
-		return SCRIPT_CMD_FAILURE;
-	}
-
-	int type = script_getnum(st, 3);
-
-	switch (type) {
-		case BG_INFO_ID:
-			script_pushint(st, bg->id);
-			break;
-		case BG_INFO_REQUIRED_PLAYERS:
-			script_pushint(st, bg->required_players);
-			break;
-		case BG_INFO_MAX_PLAYERS:
-			script_pushint(st, bg->max_players);
-			break;
-		case BG_INFO_MIN_LEVEL:
-			script_pushint(st, bg->min_lvl);
-			break;
-		case BG_INFO_MAX_LEVEL:
-			script_pushint(st, bg->max_lvl);
-			break;
-		case BG_INFO_MAPS: {
-			size_t i;
-
-			for (i = 0; i < bg->maps.size(); i++)
-				setd_sub_str(st, nullptr, ".@bgmaps$", i, mapindex_id2name(bg->maps[i].mapindex), nullptr);
-			setd_sub_num(st, nullptr, ".@bgmapscount", 0, i, nullptr);
-			script_pushint(st, i);
-			break;
-		}
-		case BG_INFO_DESERTER_TIME:
-			script_pushint(st, bg->deserter_time);
-			break;
-		default:
-			ShowError("bg_info: Unknown battleground info type %d given.\n", type);
-			return SCRIPT_CMD_FAILURE;
-	}
-
+	
 	return SCRIPT_CMD_SUCCESS;
 }
 

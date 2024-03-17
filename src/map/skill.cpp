@@ -22,7 +22,6 @@
 #include "../common/utils.hpp"
 
 #include "battle.hpp"
-#include "battleground.hpp"
 #include "chrif.hpp"
 #include "clif.hpp"
 #include "date.hpp"
@@ -10693,7 +10692,6 @@ struct skill_unit_group* skill_initunitgroup(struct block_list* src, int count, 
 	group->src_id     = src->id;
 	group->party_id   = status_get_party_id(src);
 	group->guild_id   = status_get_guild_id(src);
-	group->bg_id      = bg_team_get_id(src);
 	group->group_id   = skill_get_new_group_id();
 	group->link_group_id = 0;
 	group->unit       = (struct skill_unit *)aCalloc(count,sizeof(struct skill_unit));

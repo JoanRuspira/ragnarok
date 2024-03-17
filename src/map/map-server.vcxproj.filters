@@ -233,9 +233,6 @@
     <ClInclude Include="battle.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="battleground.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="buyingstore.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -488,9 +485,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="battle.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="battleground.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="buyingstore.cpp">

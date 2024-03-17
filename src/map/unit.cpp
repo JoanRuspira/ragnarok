@@ -16,7 +16,6 @@
 #include "../common/timer.hpp"
 
 #include "battle.hpp"
-#include "battleground.hpp"
 #include "channel.hpp"
 #include "chat.hpp"
 #include "clif.hpp"
@@ -2893,7 +2892,6 @@ int unit_remove_map_(struct block_list *bl, clr_type clrtype, const char* file, 
 
 			party_send_dot_remove(sd);// minimap dot fix [Kevin]
 			guild_send_dot_remove(sd);
-			bg_send_dot_remove(sd);
 
 			if( map[bl->m].users <= 0 || sd->state.debug_remove_map ) {
 				// This is only place where map users is decreased, if the mobs were removed

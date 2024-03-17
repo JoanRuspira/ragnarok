@@ -18,7 +18,6 @@
 #include "../common/utils.hpp"
 
 #include "atcommand.hpp"
-#include "battleground.hpp"
 #include "chrif.hpp"
 #include "clif.hpp"
 #include "elemental.hpp"
@@ -4870,11 +4869,7 @@ int battle_check_target( struct block_list *src, struct block_list *target,int f
 	if( mapdata_flag_vs(mapdata) )
 	{ //Check rivalry settings.
 		int sbg_id = 0, tbg_id = 0;
-		if(mapdata->flag[MF_BATTLEGROUND] )
-		{
-			sbg_id = bg_team_get_id(s_bl);
-			tbg_id = bg_team_get_id(t_bl);
-		}
+		
 		if( flag&(BCT_PARTY|BCT_ENEMY) )
 		{
 			int s_party = status_get_party_id(s_bl);

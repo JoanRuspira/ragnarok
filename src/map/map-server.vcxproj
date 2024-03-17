@@ -176,7 +176,6 @@
     <ClInclude Include="BardAdditionalEffectsCalculator.h" />
     <ClInclude Include="BardSkillAttackRatioCalculator.h" />
     <ClInclude Include="battle.hpp" />
-    <ClInclude Include="battleground.hpp" />
     <ClInclude Include="BlacksmithSkillAtkRatioCalculator.h" />
     <ClInclude Include="buyingstore.hpp" />
     <ClInclude Include="cashshop.hpp" />
@@ -262,7 +261,6 @@
     <ClCompile Include="BardAdditionalEffectsCalculator.cpp" />
     <ClCompile Include="BardSkillAttackRatioCalculator.cpp" />
     <ClCompile Include="battle.cpp" />
-    <ClCompile Include="battleground.cpp" />
     <ClCompile Include="BlacksmithSkillAtkRatioCalculator.cpp" />
     <ClCompile Include="buyingstore.cpp" />
     <ClCompile Include="cashshop.cpp" />

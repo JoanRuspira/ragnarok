@@ -26,7 +26,6 @@
 
 #include "atcommand.hpp"
 #include "battle.hpp"
-#include "battleground.hpp"
 #include "cashshop.hpp"
 #include "channel.hpp"
 #include "chat.hpp"
@@ -672,27 +671,6 @@ int clif_send(const void* buf, int len, struct block_list* bl, enum send_target 
 		y0 = bl->y - AREA_SIZE;
 		x1 = bl->x + AREA_SIZE;
 		y1 = bl->y + AREA_SIZE;
-	case BG_SAMEMAP:
-	case BG_SAMEMAP_WOS:
-	case BG:
-	case BG_WOS:
-		if( sd && sd->bg_id > 0 && (bg = util::umap_find(bg_team_db, sd->bg_id)))
-		{
-			for (const auto &member : bg->members) {
-				if( ( sd = member.sd ) == nullptr || !session_isActive( fd = sd->fd ) )
-					continue;
-				if(sd->bl.id == bl->id && (type == BG_WOS || type == BG_SAMEMAP_WOS || type == BG_AREA_WOS) )
-					continue;
-				if( type != BG && type != BG_WOS && sd->bl.m != bl->m )
-					continue;
-				if( (type == BG_AREA || type == BG_AREA_WOS) && (sd->bl.x < x0 || sd->bl.y < y0 || sd->bl.x > x1 || sd->bl.y > y1) )
-					continue;
-				WFIFOHEAD(fd,len);
-				memcpy(WFIFOP(fd,0), buf, len);
-				WFIFOSET(fd,len);
-			}
-		}
-		break;
 	case CLAN:
 		if( sd && sd->clan ){
 			struct clan* clan = sd->clan;
@@ -14150,10 +14128,8 @@ void clif_parse_GuildMessage(int fd, struct map_session_data* sd){
 	if( !clif_process_message( sd, false, name, message, output ) )
 		return;
 
-	if( sd->bg_id )
-		bg_send_message(sd, output, strlen(output) );
-	else
-		guild_send_message(sd, output, strlen(output) );
+	
+	guild_send_message(sd, output, strlen(output) );
 }
 
 
@@ -17870,24 +17846,7 @@ void clif_bg_xy_remove(struct map_session_data *sd)
 /// Notifies clients of a battleground message.
 /// 02DC <packet len>.W <account id>.L <name>.24B <message>.?B (ZC_BATTLEFIELD_CHAT)
 void clif_bg_message( struct s_battleground_data *bg, int src_id, const char *name, const char *mes, int len ){
-	struct map_session_data *sd = bg_getavailablesd( bg );
-
-	if( sd == nullptr ){
-		return;
-	}
-
-	// limit length
-	len = min( len + 1, CHAT_SIZE_MAX );
-
-	unsigned char buf[8 + NAME_LENGTH + CHAT_SIZE_MAX];
-
-	WBUFW(buf,0) = 0x2dc;
-	WBUFW(buf,2) = len + NAME_LENGTH + 8;
-	WBUFL(buf,4) = src_id;
-	safestrncpy(WBUFCP(buf,8), name, NAME_LENGTH);
-	safestrncpy(WBUFCP(buf,8+NAME_LENGTH), mes, len );
-
-	clif_send(buf,WBUFW(buf,2), &sd->bl, BG);
+	
 }
 
 /// Validates and processes battlechat messages.
@@ -17899,7 +17858,6 @@ void clif_parse_BattleChat(int fd, struct map_session_data* sd){
 	if( !clif_process_message( sd, false, name, message, output ) )
 		return;
 
-	bg_send_message(sd, output, strlen(output) );
 }
 
 
@@ -17967,31 +17925,7 @@ void clif_sendbgemblem_single(int fd, struct map_session_data *sd)
 /// 0x8d7 <queue type>.W <battleground name>.24B (CZ_REQ_ENTRY_QUEUE_APPLY)
 void clif_parse_bg_queue_apply_request(int fd, struct map_session_data *sd)
 {
-	if (!battle_config.feature_bgqueue)
-		return;
-
-	nullpo_retv(sd);
-
-	short type = RFIFOW(fd,2);
-	char name[NAME_LENGTH];
-
-	safestrncpy(name, RFIFOCP(fd, 4), NAME_LENGTH);
-
-	if (sd->bg_queue_id > 0) {
-		//ShowWarning("clif_parse_bg_queue_apply_request: Received duplicate queue application: %d from player %s (AID:%d CID:%d).\n", type, sd->status.name, sd->status.account_id, sd->status.char_id);
-		clif_bg_queue_apply_result(BG_APPLY_DUPLICATE, name, sd); // Duplicate application warning
-		return;
-	} else if (type == 1) // Solo
-		bg_queue_join_solo(name, sd);
-	else if (type == 2) // Party
-		bg_queue_join_party(name, sd);
-	else if (type == 4) // Guild
-		bg_queue_join_guild(name, sd);
-	else {
-		ShowWarning("clif_parse_bg_queue_apply_request: Received invalid queue type: %d from player %s (AID:%d CID:%d).\n", type, sd->status.name, sd->status.account_id, sd->status.char_id);
-		clif_bg_queue_apply_result(BG_APPLY_INVALID_APP, name, sd); // Someone sent an invalid queue type packet
-		return;
-	}
+	
 }
 
 /// Outgoing battlegrounds queue apply result.
@@ -17999,15 +17933,7 @@ void clif_parse_bg_queue_apply_request(int fd, struct map_session_data *sd)
 /// 0x8d8 <result>.B <battleground name>.24B (ZC_ACK_ENTRY_QUEUE_APPLY)
 void clif_bg_queue_apply_result(e_bg_queue_apply_ack result, const char *name, struct map_session_data *sd)
 {
-	nullpo_retv(sd);
-
-	int fd = sd->fd;
-
-	WFIFOHEAD(fd, packet_len(0x8d8));
-	WFIFOW(fd,0) = 0x8d8;
-	WFIFOB(fd,2) = result;
-	safestrncpy(WFIFOCP(fd,3), name, NAME_LENGTH);
-	WFIFOSET(fd, packet_len(0x8d8));
+	
 }
 
 /// Outgoing battlegrounds queue apply notification.
@@ -18015,82 +17941,27 @@ void clif_bg_queue_apply_result(e_bg_queue_apply_ack result, const char *name, s
 /// 0x8d9 <battleground name>.24B <queue number>.L (ZC_NOTIFY_ENTRY_QUEUE_APPLY)
 void clif_bg_queue_apply_notify(const char *name, struct map_session_data *sd)
 {
-	nullpo_retv(sd);
-
-	std::shared_ptr<s_battleground_queue> queue = bg_search_queue(sd->bg_queue_id);
-
-	if (queue == nullptr) {
-		ShowError("clif_bg_queue_apply_notify: Player is not in a battleground queue.\n");
-		return;
-	}
-
-	int fd = sd->fd;
-
-	WFIFOHEAD(fd, packet_len(0x8d9));
-	WFIFOW(fd,0) = 0x8d9;
-	safestrncpy(WFIFOCP(fd,2), name, NAME_LENGTH);
-	WFIFOL(fd,2+NAME_LENGTH) = queue->teama_members.size() + queue->teamb_members.size();
-	WFIFOSET(fd, packet_len(0x8d9));
+	
 }
 
 /// Battlegrounds queue outgoing cancel result.
 /// 0x8db <result>.B <battleground name>.24B (ZC_ACK_ENTRY_QUEUE_CANCEL)
-void clif_bg_queue_cancel_result(bool success, const char *name, struct map_session_data *sd)
+void clif_bg_queue_cancel_result(bool success, const char* name, struct map_session_data* sd)
 {
-	nullpo_retv(sd);
 
-	int fd = sd->fd;
-
-	WFIFOHEAD(fd, packet_len(0x8d8));
-	WFIFOW(fd,0) = 0x8db;
-	WFIFOB(fd,2) = success;
-	safestrncpy(WFIFOCP(fd,3), name, NAME_LENGTH);
-	WFIFOSET(fd, packet_len(0x8d8));
 }
 
 /// Battlegrounds queue incoming cancel request from client.
 /// 0x8da <battleground name>.24B (CZ_REQ_ENTRY_QUEUE_CANCEL)
 void clif_parse_bg_queue_cancel_request(int fd, struct map_session_data *sd)
 {
-	if (!battle_config.feature_bgqueue)
-		return;
-
-	nullpo_retv(sd);
-
-	bool success;
-
-	if (sd->bg_queue_id > 0) {
-		std::shared_ptr<s_battleground_queue> queue = bg_search_queue(sd->bg_queue_id);
-
-		if (queue && queue->state == QUEUE_STATE_SETUP_DELAY)
-			return; // Make the cancel button do nothing if the entry window is open. Otherwise it'll crash the game when you click on both the queue status and entry status window.
-		else
-			success = bg_queue_leave(sd);
-	} else {
-		ShowWarning("clif_parse_bg_queue_cancel_request: Player trying to request leaving non-existent queue with name: %s (AID:%d CID:%d).\n", sd->status.name, sd->status.account_id, sd->status.char_id);
-		success = false;
-	}
-
-	char name[NAME_LENGTH];
-
-	safestrncpy( name, RFIFOCP( fd, 2 ), NAME_LENGTH );
-
-	clif_bg_queue_cancel_result(success, name, sd);
 }
 
 /// Battleground is ready to be joined, send a window asking for players to accept or decline.
 /// 0x8df <battleground name>.24B <lobby name>.24B (ZC_NOTIFY_LOBBY_ADMISSION)
 void clif_bg_queue_lobby_notify(const char *name, struct map_session_data *sd)
 {
-	nullpo_retv(sd);
-
-	int fd = sd->fd;
-
-	WFIFOHEAD(fd, packet_len(0x8df));
-	WFIFOW(fd,0) = 0x8df;
-	safestrncpy(WFIFOCP(fd,2), name, NAME_LENGTH);
-	safestrncpy(WFIFOCP(fd,2+NAME_LENGTH), name, NAME_LENGTH);
-	WFIFOSET(fd, packet_len(0x8df));
+	
 }
 
 /// Incoming packet from client telling server whether player wants to enter battleground or cancel.
@@ -18098,47 +17969,21 @@ void clif_bg_queue_lobby_notify(const char *name, struct map_session_data *sd)
 /// 0x8e0 <result>.B <battleground name>.24B <lobby name>.24B (CZ_REPLY_LOBBY_ADMISSION)
 void clif_parse_bg_queue_lobby_reply(int fd, struct map_session_data *sd)
 {
-	nullpo_retv(sd);
-
-	if(sd->bg_queue_id > 0) {
-		uint8 result = RFIFOB(fd, 2);
-
-		if(result == 1) { // Accept
-			bg_queue_on_accept_invite(sd);
-		} else if(result == 2) { // Decline
-			bg_queue_leave(sd);
-			clif_bg_queue_entry_init(sd);
-		}
-	}
+	
 }
 
 /// Plays a gong sound, signaling that someone has accepted the invite to enter a battleground.
 /// 0x8e1 <result>.B <battleground name>.24B <lobby name>.24B (ZC_REPLY_ACK_LOBBY_ADMISSION)
 void clif_bg_queue_ack_lobby(bool result, const char *name, const char *lobbyname, struct map_session_data *sd)
 {
-	nullpo_retv(sd);
-
-	int fd = sd->fd;
-
-	WFIFOHEAD(fd, packet_len(0x8e1));
-	WFIFOW(fd,0) = 0x8e1;
-	WFIFOB(fd,2) = result;
-	safestrncpy(WFIFOCP(fd,3), name, NAME_LENGTH);
-	safestrncpy(WFIFOCP(fd,3+NAME_LENGTH), lobbyname, NAME_LENGTH);
-	WFIFOSET(fd, packet_len(0x8e1));
+	
 }
 
 /// Battlegrounds queue incoming queue number request from client.
 /// 0x90a <battleground name>.24B (CZ_REQ_ENTRY_QUEUE_RANKING)
 void clif_parse_bg_queue_request_queue_number(int fd, struct map_session_data *sd)
 {
-	nullpo_retv(sd);
-
-	char name[NAME_LENGTH];
-
-	safestrncpy( name, RFIFOCP(fd, 2), NAME_LENGTH );
-
-	clif_bg_queue_apply_notify(name, sd);
+	
 }
 
 /// Silently removes all the battlegrounds stuff client side so that you will open the first BG window when you press battle on the interface.
@@ -18146,13 +17991,7 @@ void clif_parse_bg_queue_request_queue_number(int fd, struct map_session_data *s
 /// 0x90e (ZC_ENTRY_QUEUE_INIT)
 void clif_bg_queue_entry_init(struct map_session_data *sd)
 {
-	nullpo_retv(sd);
-
-	int fd = sd->fd;
-
-	WFIFOHEAD(fd, packet_len(0x90e));
-	WFIFOW(fd,0) = 0x90e;
-	WFIFOSET(fd, packet_len(0x90e));
+	
 }
 
 /// Custom Fonts (ZC_NOTIFY_FONT).

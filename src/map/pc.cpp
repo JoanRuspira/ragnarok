@@ -27,7 +27,6 @@
 
 #include "atcommand.hpp" // get_atcommand_level()
 #include "battle.hpp" // battle_config
-#include "battleground.hpp"
 #include "buyingstore.hpp"  // struct s_buyingstore
 #include "channel.hpp"
 #include "chat.hpp"
@@ -456,7 +455,6 @@ static TIMER_FUNC(pc_on_expire_active)
 
 	sd->tid_queue_active = INVALID_TIMER;
 
-	bg_queue_leave(sd);
 	clif_bg_queue_entry_init(sd);
 	return 0;
 }
@@ -5968,8 +5966,7 @@ enum e_setpos pc_setpos(struct map_session_data* sd, unsigned short mapindex, in
 				instance_addusers(new_map_instance_id);
 		}
 
-		if (sd->bg_id && mapdata && !mapdata->flag[MF_BATTLEGROUND]) // Moving to a map that isn't a Battlegrounds
-			bg_team_leave(sd, false, true);
+		
 
 		sd->state.pmap = sd->bl.m;
 		if (sc && sc->count) { // Cancel some map related stuff.
@@ -5985,7 +5982,6 @@ enum e_setpos pc_setpos(struct map_session_data* sd, unsigned short mapindex, in
 			skill_clear_unitgroup(&sd->bl);
 		party_send_dot_remove(sd); //minimap dot fix [Kevin]
 		guild_send_dot_remove(sd);
-		bg_send_dot_remove(sd);
 		if (sd->regen.state.gc)
 			sd->regen.state.gc = 0;
 		// make sure vending is allowed here
@@ -6024,8 +6020,6 @@ enum e_setpos pc_setpos(struct map_session_data* sd, unsigned short mapindex, in
 			st = nullptr;
 		}
 
-		if (sd->bg_id) // Switching map servers, remove from bg
-			bg_team_leave(sd, false, true);
 
 		if (sd->state.vending) // Stop vending
 			vending_closevending(sd);
@@ -8120,8 +8114,7 @@ void pc_respawn(struct map_session_data* sd, clr_type clrtype)
 {
 	if( !pc_isdead(sd) )
 		return; // not applicable
-	if( sd->bg_id && bg_member_respawn(sd) )
-		return; // member revived by battleground
+
 
 	pc_setstand(sd, true);
 	pc_setrestartvalue(sd,3);
@@ -8559,16 +8552,7 @@ int pc_dead(struct map_session_data *sd,struct block_list *src)
 		sd->respawn_tid = add_timer(tick+1000, pc_respawn_timer, sd->bl.id, 0);
 		return 1|8;
 	}
-	else if( sd->bg_id ) {
-		std::shared_ptr<s_battleground_data> bg = util::umap_find(bg_team_db, sd->bg_id);
 
-		if (bg) {
-			if (bg->cemetery.map > 0) { // Respawn by BG
-				sd->respawn_tid = add_timer(tick + 1000, pc_respawn_timer, sd->bl.id, 0);
-				return 1|8;
-			}
-		}
-	}
 
 	//Reset "can log out" tick.
 	if( battle_config.prevent_logout )
