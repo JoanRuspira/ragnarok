@@ -81,7 +81,7 @@ ein_in01,164,153,2	script	Sword Clan Leader	10058,{
 					}else{
 						cutin "laperm02.bmp", 2;
 						if (clan_join(SWORDCLAN)) {
-							sc_start2 SC_SWORDCLAN, INFINITE_TICK, 0, SWORDCLAN;
+							sc_start2 STATUS_SWORDCLAN, INFINITE_TICK, 0, SWORDCLAN;
 							mes "[Raffam Oranpere]";
 							mes "Welcome to the ^3131FFSword Clan^000000!";
 							mes "You can review Clan info with ^3131FFCtrl+G^000000.";
@@ -117,7 +117,7 @@ ein_in01,164,153,2	script	Sword Clan Leader	10058,{
 					mes "Hey, talk to your guild master if you want to leave.";
 				}else{
 					if (clan_leave()) {
-						sc_end SC_SWORDCLAN;
+						sc_end STATUS_SWORDCLAN;
 						mes "[Raffam Oranpere]";
 						mes "Okay, it's done. But let's not be strangers, okay?";
 						mes "It was nice having you!";
@@ -132,7 +132,7 @@ ein_in01,164,153,2	script	Sword Clan Leader	10058,{
 	end;
 
 OnInit:
-	sc_start2 SC_SWORDCLAN, INFINITE_TICK, 0, SWORDCLAN, 10000, SCSTART_NOAVOID, getnpcid(0);
+	sc_start2 STATUS_SWORDCLAN, INFINITE_TICK, 0, SWORDCLAN, 10000, SCSTART_NOAVOID, getnpcid(0);
 	end;
 }
 
@@ -237,7 +237,7 @@ yuno_in04,111,106,3	script	Arc Wand Clan Leader	10059,{
 						mes "Oh, I can be funny, too--FIRE PILLAR!";
 					}else{
 						if (clan_join(ARCWANDCLAN)) {
-							sc_start2 SC_ARCWANDCLAN, INFINITE_TICK, 0, ARCWANDCLAN;
+							sc_start2 STATUS_ARCWANDCLAN, INFINITE_TICK, 0, ARCWANDCLAN;
 							mes "[Devon Aire]";
 							mes "You have joined the ^3131FFArc Wand Clan^000000.";
 							next;
@@ -275,7 +275,7 @@ yuno_in04,111,106,3	script	Arc Wand Clan Leader	10059,{
 					mes "You're barking up the wrong tree. Go to your Clan master.";
 				}else{
 					if (clan_leave()) {
-						sc_end SC_ARCWANDCLAN;
+						sc_end STATUS_ARCWANDCLAN;
 						mes "[Devon Aire]";
 						mes "You are withdrawn from the Clan.";
 						mes "Now leave. I don't feel like talking anymore.";
@@ -290,7 +290,7 @@ yuno_in04,111,106,3	script	Arc Wand Clan Leader	10059,{
 	end;
 
 OnInit:
-	sc_start2 SC_ARCWANDCLAN, INFINITE_TICK, 0, ARCWANDCLAN, 10000, SCSTART_NOAVOID, getnpcid(0);
+	sc_start2 STATUS_ARCWANDCLAN, INFINITE_TICK, 0, ARCWANDCLAN, 10000, SCSTART_NOAVOID, getnpcid(0);
 	end;
 }
 
@@ -383,7 +383,7 @@ ve_in,339,358,5	script	Golden Mace Clan Leader	10060,{
 						mes "You're just confused, right?";
 					}else{
 						if (clan_join(GOLDENMACECLAN)) {
-							sc_start2 SC_GOLDENMACECLAN, INFINITE_TICK, 0, GOLDENMACECLAN;
+							sc_start2 STATUS_GOLDENMACECLAN, INFINITE_TICK, 0, GOLDENMACECLAN;
 							cutin "birman02.bmp", 2;
 							mes "[Berman Aire]";
 							mes "Welcome to the ^3131FFGolden Mace Clan^000000!";
@@ -414,7 +414,7 @@ ve_in,339,358,5	script	Golden Mace Clan Leader	10060,{
 					mes "I'm sorry, but I can't remove you from another Clan...";
 				}else{
 					if (clan_leave()) {
-						sc_end SC_GOLDENMACECLAN;
+						sc_end STATUS_GOLDENMACECLAN;
 						mes "[Berman Aire]";
 						mes "It's processed.";
 						mes "Come back anytime to the ^3131FFGolden Mace Clan^000000. I'll be here.";
@@ -429,7 +429,7 @@ ve_in,339,358,5	script	Golden Mace Clan Leader	10060,{
 	end;
 
 OnInit:
-	sc_start2 SC_GOLDENMACECLAN, INFINITE_TICK, 0, GOLDENMACECLAN, 10000, SCSTART_NOAVOID, getnpcid(0);
+	sc_start2 STATUS_GOLDENMACECLAN, INFINITE_TICK, 0, GOLDENMACECLAN, 10000, SCSTART_NOAVOID, getnpcid(0);
 	end;
 }
 
@@ -520,7 +520,7 @@ payon,263,157,3	script	Crossbow Clan Leader	10027,{
 						mes "Eh, you're already in a Clan. Hey, this isn't funny.";
 					}else{
 						if (clan_join(CROSSBOWCLAN)) {
-							sc_start2 SC_CROSSBOWCLAN, INFINITE_TICK, 0, CROSSBOWCLAN;
+							sc_start2 STATUS_CROSSBOWCLAN, INFINITE_TICK, 0, CROSSBOWCLAN;
 							cutin "sham02.bmp", 2;
 							mes "[Shaam Rumi]";
 							mes "Welcome to the ^3131FFCrossbow Clan^000000!";
@@ -559,7 +559,7 @@ payon,263,157,3	script	Crossbow Clan Leader	10027,{
 					mes "Sorry, but I don't meddle with other Clans' business.";
 				}else{
 					if (clan_leave()) {
-						sc_end SC_CROSSBOWCLAN;
+						sc_end STATUS_CROSSBOWCLAN;
 						mes "[Shaam Rumi]";
 						mes "It's done.";
 						mes "If you ever miss us, don't hesitate to come back, alright?";
@@ -574,6 +574,6 @@ payon,263,157,3	script	Crossbow Clan Leader	10027,{
 	end;
 
 OnInit:
-	sc_start2 SC_CROSSBOWCLAN, INFINITE_TICK, 0, CROSSBOWCLAN, 10000, SCSTART_NOAVOID, getnpcid(0);
+	sc_start2 STATUS_CROSSBOWCLAN, INFINITE_TICK, 0, CROSSBOWCLAN, 10000, SCSTART_NOAVOID, getnpcid(0);
 	end;
 }

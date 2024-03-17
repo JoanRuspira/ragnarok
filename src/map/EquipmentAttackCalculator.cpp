@@ -68,13 +68,13 @@ int EquipmentAttackCalculator::battle_calc_base_weapon_attack(block_list * src, 
 		atkmin = max(0, (int)(atkmin - variance));
 		atkmax = min(UINT16_MAX, (int)(atkmax + variance));
 
-		if (sc && sc->data[SC_MAXIMIZEPOWER])
+		if (sc && sc->data[STATUS_MAXIMIZEPOWER])
 			damage = atkmax;
 		else
 			damage = rnd_value(atkmin, atkmax);
 	}
 
-	if (sc && sc->data[SC_WEAPONPERFECTION])
+	if (sc && sc->data[STATUS_WEAPONSHARPENING])
 		weapon_perfection = 1;
 
 	battle_add_weapon_damage(sd, &damage, type);
@@ -130,8 +130,7 @@ int EquipmentAttackCalculator::battle_get_weapon_element(Damage * wd, block_list
 		if (sd && sd->spiritcharm_type != CHARM_TYPE_NONE && sd->spiritcharm >= MAX_SPIRITCHARM)
 			element = sd->spiritcharm_type; // Summoning 10 spiritcharm will endow your weapon
 		// on official endows override all other elements [helvetica]
-		if (sc && sc->data[SC_ENCHANTARMS]) // Check for endows
-			element = sc->data[SC_ENCHANTARMS]->val1;
+		
 	}
 	else if (element == ELE_ENDOWED) //Use enchantment's element
 		element = status_get_attack_sc_element(src, sc);
@@ -139,8 +138,7 @@ int EquipmentAttackCalculator::battle_get_weapon_element(Damage * wd, block_list
 		element = rnd() % ELE_ALL;
 
 
-	if (sc && sc->data[SC_GOLDENE_FERSE] && ((!skill_id && (rnd() % 100 < sc->data[SC_GOLDENE_FERSE]->val4))))
-		element = ELE_HOLY;
+	
 
 	// calc_flag means the element should be calculated for damage only
 	if (calc_for_damage_only)

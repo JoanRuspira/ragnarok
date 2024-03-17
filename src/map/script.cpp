@@ -5950,13 +5950,12 @@ BUILDIN_FUNC(percentheal)
 		return SCRIPT_CMD_SUCCESS;
 
 
-	if (sd->sc.data[SC_NORECOVER_STATE]) {
+	if (sd->sc.data[STATUS_NORECOVER_STATE]) {
 		hp = 0;
 		sp = 0;
 	}
 
-	if (sd->sc.data[SC_BITESCAR])
-		hp = 0;
+	
 
 	pc_percentheal(sd,hp,sp);
 	return SCRIPT_CMD_SUCCESS;
@@ -11688,7 +11687,7 @@ BUILDIN_FUNC(sc_start)
 	else
 		bl = map_id2bl(st->rid);
 
-	if(tick == 0 && val1 > 0 && type > SC_NONE && type < SC_MAX && status_sc2skill(type) != 0)
+	if(tick == 0 && val1 > 0 && type > STATUS_NONE && type < SC_MAX && status_sc2skill(type) != 0)
 	{// When there isn't a duration specified, try to get it from the skill_db
 		tick = skill_get_time(status_sc2skill(type), val1);
 	}
@@ -11748,33 +11747,11 @@ BUILDIN_FUNC(sc_end)
 			return SCRIPT_CMD_SUCCESS;
 
 		switch (type) {
-			case SC_WEIGHT50:
-			case SC_WEIGHT90:
-			case SC_NOCHAT:
-			case SC_PUSH_CART:
-			case SC_ALL_RIDING:
-			case SC_STYLE_CHANGE:
-			case SC_MONSTER_TRANSFORM:
-			case SC_ACTIVE_MONSTER_TRANSFORM:
-			case SC_MTF_ASPD:
-			case SC_MTF_RANGEATK:
-			case SC_MTF_MATK:
-			case SC_MTF_MLEATKED:
-			case SC_MTF_CRIDAMAGE:
-			case SC_MTF_ASPD2:
-			case SC_MTF_RANGEATK2:
-			case SC_MTF_MATK2:
-			case SC_MTF_MHP:
-			case SC_MTF_MSP:
-			case SC_MTF_PUMPKIN:
-			case SC_MTF_HITFLEE:
-			case SC_ATTHASTE_CASH:
-			case SC_REUSE_LIMIT_A:				case SC_REUSE_LIMIT_B:			case SC_REUSE_LIMIT_C:
-			case SC_REUSE_LIMIT_D:				case SC_REUSE_LIMIT_E:			case SC_REUSE_LIMIT_F:
-			case SC_REUSE_LIMIT_G:				case SC_REUSE_LIMIT_H:			case SC_REUSE_LIMIT_MTF:
-			case SC_REUSE_LIMIT_ASPD_POTION:	case SC_REUSE_MILLENNIUMSHIELD:	case SC_REUSE_CRUSHSTRIKE:
-			case SC_REUSE_STORMBLAST:			case SC_ALL_RIDING_REUSE_LIMIT:	case SC_REUSE_REFRESH:
-			case SC_REUSE_LIMIT_ECL:			case SC_REUSE_LIMIT_RECALL:
+			case STATUS_WEIGHT50:
+			case STATUS_WEIGHT90:
+			case STATUS_NOCHAT:
+			case STATUS_PUSHCART:
+			case STATUS_ALL_RIDING:
 				return SCRIPT_CMD_SUCCESS;
 			default:
 				break;
@@ -11816,7 +11793,7 @@ BUILDIN_FUNC(sc_end_class)
 	for (int i = 0; i < MAX_SKILL_TREE && (skill_id = skill_tree[pc_class2idx(class_)][i].skill_id) > 0; i++) {
 		enum sc_type sc = status_skill2sc(skill_id);
 
-		if (sc > SC_COMMON_MAX && sd->sc.data[sc])
+		if (sc > STATUS_COMMON_MAX && sd->sc.data[sc])
 			status_change_end(&sd->bl, sc, INVALID_TIMER);
 	}
 
@@ -11860,7 +11837,7 @@ BUILDIN_FUNC(getstatus)
 	id = script_getnum(st, 2);
 	type = script_hasdata(st, 3) ? script_getnum(st, 3) : 0;
 
-	if( id <= SC_NONE || id >= SC_MAX )
+	if( id <= STATUS_NONE || id >= SC_MAX )
 	{// invalid status type given
 		ShowWarning("script.cpp:getstatus: Invalid status type given (%d).\n", id);
 		return SCRIPT_CMD_SUCCESS;
@@ -14521,7 +14498,7 @@ BUILDIN_FUNC(petrecovery)
 		return SCRIPT_CMD_FAILURE;
 
 	sc = script_getnum(st,2);
-	if (sc <= SC_NONE || sc >= SC_MAX) {
+	if (sc <= STATUS_NONE || sc >= SC_MAX) {
 		ShowError("buildin_petrecovery: Invalid SC type: %d\n", sc);
 		return SCRIPT_CMD_FAILURE;
 	}
@@ -21505,11 +21482,11 @@ BUILDIN_FUNC(toggledragon) {
 	if (!script_charid2sd(3,sd)){
 		return SCRIPT_CMD_FAILURE;
 	}
-	if( sd->sc.data[SC_ALL_RIDING] ){
-		status_change_end(&sd->bl, SC_ALL_RIDING, INVALID_TIMER); //release mount
+	if( sd->sc.data[STATUS_ALL_RIDING] ){
+		status_change_end(&sd->bl, STATUS_ALL_RIDING, INVALID_TIMER); //release mount
 		clif_soundeffectall(&sd->bl, "acidus_damage.wav", 0, AREA);
 	} else {
-		sc_start(NULL, &sd->bl, SC_ALL_RIDING, 10000, 1, INFINITE_TICK); //mount
+		sc_start(NULL, &sd->bl, STATUS_ALL_RIDING, 10000, 1, INFINITE_TICK); //mount
 		clif_soundeffectall(&sd->bl, "ferus_stand.wav", 0, AREA);
 	}
 	script_pushint(st,1);//in both cases, return 1.
@@ -21525,7 +21502,7 @@ BUILDIN_FUNC(ismounting) {
 	if (!script_charid2sd(2,sd)){
 		return SCRIPT_CMD_FAILURE;
 	}	
-	if( sd->sc.data[SC_ALL_RIDING] ){
+	if( sd->sc.data[STATUS_ALL_RIDING] ){
 		script_pushint(st,1);
 	}else{
 		script_pushint(st,0);
@@ -21547,7 +21524,7 @@ BUILDIN_FUNC(ismounting) {
 
 
 /**
- * setmounting({<char_id>}) returns 1 on success or 0 otherwise
+ * setmounting({<STATUS_ALL_RIDINGturns 1 on success or 0 otherwise
  * - Toggles new mounts on a player when he can mount
  * - Will fail if the player is mounting a non-new mount, e.g. dragon, peco, wug, etc.
  * - Will unmount the player is he is already mounting
@@ -21557,8 +21534,8 @@ BUILDIN_FUNC(setmounting) {
 	
 	if (!script_charid2sd(2,sd))
 		return SCRIPT_CMD_FAILURE;
-	if (sd->sc.data[SC_CLOAKING] || sd->sc.data[SC_CHASEWALK] || sd->sc.data[SC_CAMOUFLAGE] || sd->sc.data[SC_STEALTHFIELD] || sd->sc.data[SC__FEINTBOMB]) {
-		// SC_HIDING, SC__INVISIBILITY, SC__SHADOWFORM, SC_SUHIDE already disable item usage
+	if (sd->sc.data[STATUS_CLOAKING] || sd->sc.data[STATUS_CHASEWALK] || sd->sc.data[STATUS_CAMOUFLAGE]) {
+		// STATUS_HIDING, STATUS_INVISIBILITY, STATUS_STALK, SC_SUHIDE already disable item usage
 		script_pushint(st, 0); // Silent failure
 	} else {
 		if (
@@ -21576,10 +21553,10 @@ BUILDIN_FUNC(setmounting) {
 			script_pushint(st,1);//in both cases, return 1.
 			return SCRIPT_CMD_SUCCESS;
 		}
-		if( sd->sc.data[SC_ALL_RIDING] ){
-			status_change_end(&sd->bl, SC_ALL_RIDING, INVALID_TIMER); //release mount
+		if( sd->sc.data[STATUS_ALL_RIDING] ){
+			status_change_end(&sd->bl, STATUS_ALL_RIDING, INVALID_TIMER); //release mount
 		} else {
-			sc_start(NULL, &sd->bl, SC_ALL_RIDING, 10000, 1, INFINITE_TICK); //mount
+			sc_start(NULL, &sd->bl, STATUS_ALL_RIDING, 10000, 1, INFINITE_TICK); //mount
 			clif_soundeffectall(&sd->bl, "kocot_stand.wav", 0, AREA);
 		}	
 		script_pushint(st,1);//in both cases, return 1.
@@ -22440,7 +22417,7 @@ BUILDIN_FUNC(montransform) {
 	if (script_hasdata(st, 4))
 		type = (sc_type)script_getnum(st, 4);
 	else
-		type = SC_NONE;
+		type = STATUS_NONE;
 
 	if (mob_id == 0) {
 		if( script_isstring(st, 2) )
@@ -22455,7 +22432,7 @@ BUILDIN_FUNC(montransform) {
 		return SCRIPT_CMD_FAILURE;
 	}
 
-	if (!(type >= SC_NONE && type < SC_MAX)) {
+	if (!(type >= STATUS_NONE && type < SC_MAX)) {
 		ShowWarning("buildin_montransform: Unsupported status change id %d\n", type);
 		return SCRIPT_CMD_FAILURE;
 	}
@@ -22483,14 +22460,8 @@ BUILDIN_FUNC(montransform) {
 			return SCRIPT_CMD_FAILURE;
 		}
 
-		if (!strcmp(script_getfuncname(st), "active_transform")) {
-			status_change_end(&sd->bl, SC_ACTIVE_MONSTER_TRANSFORM, INVALID_TIMER); // Clear previous
-			sc_start2(NULL, &sd->bl, SC_ACTIVE_MONSTER_TRANSFORM, 100, mob_id, type, tick);
-		} else {
-			status_change_end(&sd->bl, SC_MONSTER_TRANSFORM, INVALID_TIMER); // Clear previous
-			sc_start2(NULL, &sd->bl, SC_MONSTER_TRANSFORM, 100, mob_id, type, tick);
-		}
-		if (type != SC_NONE)
+		
+		if (type != STATUS_NONE)
 			sc_start4(NULL, &sd->bl, type, 100, val1, val2, val3, val4, tick);
 	}
 

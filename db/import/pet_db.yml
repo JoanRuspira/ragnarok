@@ -126,7 +126,7 @@ Header:
 #    RetaliateRate: 500
 #    ChangeTargetRate: 500
 #    SupportScript: >
-#      petrecovery SC_POISON,60;
+#      petrecovery STATUS_POISON,60;
 #  - Mob: POISON_SPORE
 #    AttackRate: 600
 #    RetaliateRate: 200

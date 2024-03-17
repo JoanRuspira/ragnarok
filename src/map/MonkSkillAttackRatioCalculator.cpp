@@ -12,7 +12,7 @@ int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 	switch (skill_id) {
 		case SK_MO_TRIPLEARMCANNON:
 			if(!is_in_combo(sc)) {
-				sc_start(&sd->bl,&sd->bl, SC_COMBO1, 100, 17, 4000);
+				sc_start(&sd->bl,&sd->bl, STATUS_COMBO1, 100, 17, 4000);
 			}else{
 				increment_combo(sc, sd);
 			}
@@ -40,16 +40,16 @@ int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 			{
 				int combo_counter = get_combo_counter(sc);
 				clif_specialeffect(target, EF_TINDER_BREAKER, AREA); //tinder
-				status_change_end(&sd->bl, SC_COMBO1, INVALID_TIMER);
-				status_change_end(&sd->bl, SC_COMBO2, INVALID_TIMER);
-				status_change_end(&sd->bl, SC_COMBO3, INVALID_TIMER);
-				status_change_end(&sd->bl, SC_COMBO4, INVALID_TIMER);
-				status_change_end(&sd->bl, SC_COMBO5, INVALID_TIMER);
-				status_change_end(&sd->bl, SC_COMBO6, INVALID_TIMER);
-				status_change_end(&sd->bl, SC_COMBO7, INVALID_TIMER);
-				status_change_end(&sd->bl, SC_COMBO8, INVALID_TIMER);
-				status_change_end(&sd->bl, SC_COMBO9, INVALID_TIMER);
-				status_change_end(&sd->bl, SC_COMBO10, INVALID_TIMER);
+				status_change_end(&sd->bl, STATUS_COMBO1, INVALID_TIMER);
+				status_change_end(&sd->bl, STATUS_COMBO2, INVALID_TIMER);
+				status_change_end(&sd->bl, STATUS_COMBO3, INVALID_TIMER);
+				status_change_end(&sd->bl, STATUS_COMBO4, INVALID_TIMER);
+				status_change_end(&sd->bl, STATUS_COMBO5, INVALID_TIMER);
+				status_change_end(&sd->bl, STATUS_COMBO6, INVALID_TIMER);
+				status_change_end(&sd->bl, STATUS_COMBO7, INVALID_TIMER);
+				status_change_end(&sd->bl, STATUS_COMBO8, INVALID_TIMER);
+				status_change_end(&sd->bl, STATUS_COMBO9, INVALID_TIMER);
+				status_change_end(&sd->bl, STATUS_COMBO10, INVALID_TIMER);
 				return calculate_dragon_flame_atk_ratio(skill_lv, combo_counter);
 			}
 		case SK_MO_TRHOWSPIRITSPHERE:
@@ -83,34 +83,34 @@ int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 
 int MonkSkillAttackRatioCalculator::get_combo_counter(status_change *sc)
 {
-	if(sc->data[SC_COMBO1]) {
+	if(sc->data[STATUS_COMBO1]) {
 		return 1;
 	}
-	if(sc->data[SC_COMBO2]) {
+	if(sc->data[STATUS_COMBO2]) {
 		return 2;
 	}
-	if(sc->data[SC_COMBO3]) {
+	if(sc->data[STATUS_COMBO3]) {
 		return 3;
 	}
-	if(sc->data[SC_COMBO4]) {
+	if(sc->data[STATUS_COMBO4]) {
 		return 4;
 	}
-	if(sc->data[SC_COMBO5]) {
+	if(sc->data[STATUS_COMBO5]) {
 		return 5;
 	}
-	if(sc->data[SC_COMBO6]) {
+	if(sc->data[STATUS_COMBO6]) {
 		return 6;
 	}
-	if(sc->data[SC_COMBO7]) {
+	if(sc->data[STATUS_COMBO7]) {
 		return 7;
 	}
-	if(sc->data[SC_COMBO8]) {
+	if(sc->data[STATUS_COMBO8]) {
 		return 8;
 	}
-	if(sc->data[SC_COMBO9]) {
+	if(sc->data[STATUS_COMBO9]) {
 		return 9;
 	}
-	if(sc->data[SC_COMBO10]) {
+	if(sc->data[STATUS_COMBO10]) {
 		return 10;
 	}
 	return 0;
@@ -118,54 +118,54 @@ int MonkSkillAttackRatioCalculator::get_combo_counter(status_change *sc)
 
 void MonkSkillAttackRatioCalculator::increment_combo(status_change *sc,  map_session_data *sd)
 {
-	if(sc->data[SC_COMBO1]) {
-		sc_start(&sd->bl,&sd->bl, SC_COMBO2, 100, 17, 4000);
-		status_change_end(&sd->bl, SC_COMBO1, INVALID_TIMER);
+	if(sc->data[STATUS_COMBO1]) {
+		sc_start(&sd->bl,&sd->bl, STATUS_COMBO2, 100, 17, 4000);
+		status_change_end(&sd->bl, STATUS_COMBO1, INVALID_TIMER);
 		return;
 	}
-	if(sc->data[SC_COMBO2]) {
-		sc_start(&sd->bl,&sd->bl, SC_COMBO3, 100, 17, 4000);
-		status_change_end(&sd->bl, SC_COMBO2, INVALID_TIMER);
+	if(sc->data[STATUS_COMBO2]) {
+		sc_start(&sd->bl,&sd->bl, STATUS_COMBO3, 100, 17, 4000);
+		status_change_end(&sd->bl, STATUS_COMBO2, INVALID_TIMER);
 		return;
 	}
-	if(sc->data[SC_COMBO3]) {
-		sc_start(&sd->bl,&sd->bl, SC_COMBO4, 100, 17, 4000);
-		status_change_end(&sd->bl, SC_COMBO3, INVALID_TIMER);
+	if(sc->data[STATUS_COMBO3]) {
+		sc_start(&sd->bl,&sd->bl, STATUS_COMBO4, 100, 17, 4000);
+		status_change_end(&sd->bl, STATUS_COMBO3, INVALID_TIMER);
 		return;
 	}
-	if(sc->data[SC_COMBO4]) {
-		sc_start(&sd->bl,&sd->bl, SC_COMBO5, 100, 17, 4000);
-		status_change_end(&sd->bl, SC_COMBO4, INVALID_TIMER);
+	if(sc->data[STATUS_COMBO4]) {
+		sc_start(&sd->bl,&sd->bl, STATUS_COMBO5, 100, 17, 4000);
+		status_change_end(&sd->bl, STATUS_COMBO4, INVALID_TIMER);
 		return;
 	}
-	if(sc->data[SC_COMBO5]) {
-		sc_start(&sd->bl,&sd->bl, SC_COMBO6, 100, 17, 4000);
-		status_change_end(&sd->bl, SC_COMBO5, INVALID_TIMER);
+	if(sc->data[STATUS_COMBO5]) {
+		sc_start(&sd->bl,&sd->bl, STATUS_COMBO6, 100, 17, 4000);
+		status_change_end(&sd->bl, STATUS_COMBO5, INVALID_TIMER);
 		return;
 	}
-	if(sc->data[SC_COMBO6]) {
-		sc_start(&sd->bl,&sd->bl, SC_COMBO7, 100, 17, 4000);
-		status_change_end(&sd->bl, SC_COMBO6, INVALID_TIMER);
+	if(sc->data[STATUS_COMBO6]) {
+		sc_start(&sd->bl,&sd->bl, STATUS_COMBO7, 100, 17, 4000);
+		status_change_end(&sd->bl, STATUS_COMBO6, INVALID_TIMER);
 		return;
 	}
-	if(sc->data[SC_COMBO7]) {
-		sc_start(&sd->bl,&sd->bl, SC_COMBO8, 100, 17, 4000);
-		status_change_end(&sd->bl, SC_COMBO7, INVALID_TIMER);
+	if(sc->data[STATUS_COMBO7]) {
+		sc_start(&sd->bl,&sd->bl, STATUS_COMBO8, 100, 17, 4000);
+		status_change_end(&sd->bl, STATUS_COMBO7, INVALID_TIMER);
 		return;
 	}
-	if(sc->data[SC_COMBO8]) {
-		sc_start(&sd->bl,&sd->bl, SC_COMBO9, 100, 17, 4000);
-		status_change_end(&sd->bl, SC_COMBO8, INVALID_TIMER);
+	if(sc->data[STATUS_COMBO8]) {
+		sc_start(&sd->bl,&sd->bl, STATUS_COMBO9, 100, 17, 4000);
+		status_change_end(&sd->bl, STATUS_COMBO8, INVALID_TIMER);
 		return;
 	}
-	if(sc->data[SC_COMBO9]) {
-		sc_start(&sd->bl,&sd->bl, SC_COMBO10, 100, 17, 4000);
-		status_change_end(&sd->bl, SC_COMBO9, INVALID_TIMER);
+	if(sc->data[STATUS_COMBO9]) {
+		sc_start(&sd->bl,&sd->bl, STATUS_COMBO10, 100, 17, 4000);
+		status_change_end(&sd->bl, STATUS_COMBO9, INVALID_TIMER);
 		return;
 	}
-	if(sc->data[SC_COMBO10]) {
-		status_change_end(&sd->bl, SC_COMBO10, INVALID_TIMER);
-		sc_start(&sd->bl,&sd->bl, SC_COMBO10, 100, 17, 4000);
+	if(sc->data[STATUS_COMBO10]) {
+		status_change_end(&sd->bl, STATUS_COMBO10, INVALID_TIMER);
+		sc_start(&sd->bl,&sd->bl, STATUS_COMBO10, 100, 17, 4000);
 		return;
 	}
 }
@@ -173,9 +173,9 @@ void MonkSkillAttackRatioCalculator::increment_combo(status_change *sc,  map_ses
 
 bool MonkSkillAttackRatioCalculator::is_in_combo(status_change *sc)
 {
-	if(!sc->data[SC_COMBO1] && !sc->data[SC_COMBO2] && !sc->data[SC_COMBO3] &&
-		!sc->data[SC_COMBO4] && !sc->data[SC_COMBO5] && !sc->data[SC_COMBO6] &&
-		!sc->data[SC_COMBO7] && !sc->data[SC_COMBO8] && !sc->data[SC_COMBO9] && !sc->data[SC_COMBO10]) {
+	if(!sc->data[STATUS_COMBO1] && !sc->data[STATUS_COMBO2] && !sc->data[STATUS_COMBO3] &&
+		!sc->data[STATUS_COMBO4] && !sc->data[STATUS_COMBO5] && !sc->data[STATUS_COMBO6] &&
+		!sc->data[STATUS_COMBO7] && !sc->data[STATUS_COMBO8] && !sc->data[STATUS_COMBO9] && !sc->data[STATUS_COMBO10]) {
 			return false;
 	}
 	return true;

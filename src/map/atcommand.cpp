@@ -4959,50 +4959,7 @@ ACMD_FUNC(servertime)
  *------------------------------------------*/
 ACMD_FUNC(jail)
 {
-	struct map_session_data *pl_sd;
-	int x, y;
-	unsigned short m_index;
-	nullpo_retr(-1, sd);
-
-	memset(atcmd_player_name, '\0', sizeof(atcmd_player_name));
-
-	if (!message || !*message || sscanf(message, "%23[^\n]", atcmd_player_name) < 1) {
-		clif_displaymessage(fd, msg_txt(sd,1134)); // Please enter a player name (usage: @jail <char_name>).
-		return -1;
-	}
-
-	if ((pl_sd = map_nick2sd(atcmd_player_name,false)) == NULL) {
-		clif_displaymessage(fd, msg_txt(sd,3)); // Character not found.
-		return -1;
-	}
-
-	if (pc_get_group_level(sd) < pc_get_group_level(pl_sd)) { // you can jail only lower or same GM
-		clif_displaymessage(fd, msg_txt(sd,81)); // Your GM level don't authorise you to do this action on this player.
-		return -1;
-	}
-
-	if (pl_sd->sc.data[SC_JAILED]) {
-		clif_displaymessage(fd, msg_txt(sd,118)); // Player warped in jails.
-		return -1;
-	}
-
-	switch(rnd() % 2) { //Jail Locations
-	case 0:
-		m_index = mapindex_name2id(MAP_JAIL);
-		x = 24;
-		y = 75;
-		break;
-	default:
-		m_index = mapindex_name2id(MAP_JAIL);
-		x = 49;
-		y = 75;
-		break;
-	}
-
-	//Duration of INT_MAX to specify infinity.
-	sc_start4(NULL,&pl_sd->bl,SC_JAILED,100,INT_MAX,m_index,x,y,1000);
-	clif_displaymessage(pl_sd->fd, msg_txt(sd,117)); // GM has send you in jails.
-	clif_displaymessage(fd, msg_txt(sd,118)); // Player warped in jails.
+	
 	return 0;
 }
 
@@ -5012,146 +4969,17 @@ ACMD_FUNC(jail)
  *------------------------------------------*/
 ACMD_FUNC(unjail)
 {
-	struct map_session_data *pl_sd;
-
-	memset(atcmd_player_name, '\0', sizeof(atcmd_player_name));
-
-	if (!message || !*message || sscanf(message, "%23[^\n]", atcmd_player_name) < 1) {
-		clif_displaymessage(fd, msg_txt(sd,1135)); // Please enter a player name (usage: @unjail/@discharge <char_name>).
-		return -1;
-	}
-
-	if ((pl_sd = map_nick2sd(atcmd_player_name,false)) == NULL) {
-		clif_displaymessage(fd, msg_txt(sd,3)); // Character not found.
-		return -1;
-	}
-
-	if (pc_get_group_level(sd) < pc_get_group_level(pl_sd)) { // you can jail only lower or same GM
-
-		clif_displaymessage(fd, msg_txt(sd,81)); // Your GM level don't authorise you to do this action on this player.
-		return -1;
-	}
-
-	if (!pl_sd->sc.data[SC_JAILED]) {
-		clif_displaymessage(fd, msg_txt(sd,119)); // This player is not in jails.
-		return -1;
-	}
-
-	//Reset jail time to 1 sec.
-	sc_start(NULL,&pl_sd->bl,SC_JAILED,100,1,1000);
-	clif_displaymessage(pl_sd->fd, msg_txt(sd,120)); // A GM has discharged you from jail.
-	clif_displaymessage(fd, msg_txt(sd,121)); // Player unjailed.
 	return 0;
 }
 
 ACMD_FUNC(jailfor) {
-	struct map_session_data *pl_sd = NULL;
-	char * modif_p;
-	int jailtime = 0,x,y;
-	short m_index = 0;
-	nullpo_retr(-1, sd);
-
-	memset(atcmd_output, '\0', sizeof(atcmd_output));
 	
-	if (!message || !*message || sscanf(message, "%255s %23[^\n]",atcmd_output,atcmd_player_name) < 2) {
-		clif_displaymessage(fd, msg_txt(sd,400));	//Usage: @jailfor <time> <character name>
-		return -1;
-	}
-
-	atcmd_output[sizeof(atcmd_output)-1] = '\0';
-
-	modif_p = atcmd_output;
-	jailtime = (int)solve_time(modif_p)/60; // Change to minutes
-
-	if (jailtime == 0) {
-		clif_displaymessage(fd, msg_txt(sd,1136)); // Invalid time for jail command.
-		clif_displaymessage(fd, msg_txt(sd,702)); // Time parameter format is +/-<value> to alter. y/a = Year, m = Month, d/j = Day, h = Hour, n/mn = Minute, s = Second.
-		return -1;
-	}
-
-	if ((pl_sd = map_nick2sd(atcmd_player_name,false)) == NULL) {
-		clif_displaymessage(fd, msg_txt(sd,3)); // Character not found.
-		return -1;
-	}
-
-	if (pc_get_group_level(pl_sd) > pc_get_group_level(sd)) {
-		clif_displaymessage(fd, msg_txt(sd,81)); // Your GM level don't authorise you to do this action on this player.
-		return -1;
-	}
-
-	// Added by Coltaro
-	if(pl_sd->sc.data[SC_JAILED] && pl_sd->sc.data[SC_JAILED]->val1 != INT_MAX) { // Update the player's jail time
-		jailtime += pl_sd->sc.data[SC_JAILED]->val1;
-		if (jailtime <= 0) {
-			jailtime = 0;
-			clif_displaymessage(pl_sd->fd, msg_txt(sd,120)); // GM has discharge you.
-			clif_displaymessage(fd, msg_txt(sd,121)); // Player unjailed
-		} else {
-			int year = 0, month = 0, day = 0, hour = 0, minute = 0, second = 0;
-			char timestr[21];
-			time_t now=time(NULL);
-			split_time(jailtime*60,&year,&month,&day,&hour,&minute,&second);
-			sprintf(atcmd_output,msg_txt(sd,402),msg_txt(sd,1137),year,month,day,hour,minute); // %s in jail for %d years, %d months, %d days, %d hours and %d minutes
-			clif_displaymessage(pl_sd->fd, atcmd_output);
-			sprintf(atcmd_output,msg_txt(sd,402),msg_txt(sd,1138),year,month,day,hour,minute); // This player is now in jail for %d years, %d months, %d days, %d hours and %d minutes
-			clif_displaymessage(fd, atcmd_output);
-			timestamp2string(timestr,20,now+jailtime*60,"%Y-%m-%d %H:%M");
-			sprintf(atcmd_output,"Release date is: %s",timestr);
-			clif_displaymessage(pl_sd->fd, atcmd_output);
-			clif_displaymessage(fd, atcmd_output);
-		}
-	} else if (jailtime < 0) {
-		clif_displaymessage(fd, msg_txt(sd,1136)); // Invalid time for jail command.
-		return -1;
-	}
-
-	// Jail locations, add more as you wish.
-	switch(rnd()%2) {
-		case 1: // Jail #1
-			m_index = mapindex_name2id(MAP_JAIL);
-			x = 49; y = 75;
-			break;
-		default: // Default Jail
-			m_index = mapindex_name2id(MAP_JAIL);
-			x = 24; y = 75;
-			break;
-	}
-
-	sc_start4(NULL,&pl_sd->bl,SC_JAILED,100,jailtime,m_index,x,y,jailtime?60000:1000); //jailtime = 0: Time was reset to 0. Wait 1 second to warp player out (since it's done in status_change_timer).
 	return 0;
 }
 
 //By Coltaro
 ACMD_FUNC(jailtime){
-	int year, month, day, hour, minute, second;
-	char timestr[21];
-	time_t now = time(NULL);
-
-	nullpo_retr(-1, sd);
-
-	if (!sd->sc.data[SC_JAILED]) {
-		clif_displaymessage(fd, msg_txt(sd,1139)); // You are not in jail.
-		return -1;
-	}
-
-	if (sd->sc.data[SC_JAILED]->val1 == INT_MAX) {
-		clif_displaymessage(fd, msg_txt(sd,1140)); // You have been jailed indefinitely.
-		return 0;
-	}
-
-	if (sd->sc.data[SC_JAILED]->val1 <= 0) { // Was not jailed with @jailfor (maybe @jail? or warped there? or got recalled?)
-		clif_displaymessage(fd, msg_txt(sd,1141)); // You have been jailed for an unknown amount of time.
-		return -1;
-	}
-
-	// Get remaining jail time
-	split_time(sd->sc.data[SC_JAILED]->val1*60,&year,&month,&day,&hour,&minute,&second);
-	sprintf(atcmd_output,msg_txt(sd,402),msg_txt(sd,1142),year,month,day,hour,minute); // You will remain in jail for %d years, %d months, %d days, %d hours and %d minutes
-	clif_displaymessage(fd, atcmd_output);
-	timestamp2string(timestr,20,now+sd->sc.data[SC_JAILED]->val1*60,"%Y-%m-%d %H:%M");
-	sprintf(atcmd_output,"Release date is: %s",timestr);
-	clif_displaymessage(fd, atcmd_output);
-
+	
 	return 0;
 }
 
@@ -5160,47 +4988,7 @@ ACMD_FUNC(jailtime){
  *------------------------------------------*/
 ACMD_FUNC(disguise)
 {
-	int id = 0;
-	nullpo_retr(-1, sd);
-
-	if (!message || !*message) {
-		clif_displaymessage(fd, msg_txt(sd,1143)); // Please enter a Monster/NPC name/ID (usage: @disguise <name/ID>).
-		return -1;
-	}
-
-	if ((id = atoi(message)) > 0)
-	{	//Acquired an ID
-		if (!mobdb_checkid(id) && !npcdb_checkid(id))
-			id = 0; //Invalid id for either mobs or npcs.
-	}	else	{ //Acquired a Name
-		if ((id = mobdb_searchname(message)) == 0)
-		{
-			struct npc_data* nd = npc_name2id(message);
-			if (nd != NULL)
-				id = nd->class_;
-		}
-	}
-
-	if (id == 0)
-	{
-		clif_displaymessage(fd, msg_txt(sd,123));	// Invalid Monster/NPC name/ID specified.
-		return -1;
-	}
-
-	if(pc_isriding(sd))
-	{
-		clif_displaymessage(fd, msg_txt(sd,1144)); // Character cannot be disguised while mounted.
-		return -1;
-	}
-
-	if (sd->sc.data[SC_MONSTER_TRANSFORM] || sd->sc.data[SC_ACTIVE_MONSTER_TRANSFORM]) {
-		clif_displaymessage(fd, msg_txt(sd,730)); // Character cannot be disguised while in monster transform.
-		return -1;
-	}
-
-	pc_disguise(sd, id);
-	clif_displaymessage(fd, msg_txt(sd,122)); // Disguise applied.
-
+	
 	return 0;
 }
 
@@ -6154,10 +5942,10 @@ ACMD_FUNC(autotrade) {
 		}
 	}
 
-	if( battle_config.at_timeout ) {
+	/*if( battle_config.at_timeout ) {
 		int timeout = atoi(message);
 		status_change_start(NULL,&sd->bl, SC_AUTOTRADE, 10000, 0, 0, 0, 0, ((timeout > 0) ? min(timeout,battle_config.at_timeout) : battle_config.at_timeout) * 60000, SCSTART_NONE);
-	}
+	}*/
 
 	if (battle_config.at_logout_event)
 		npc_script_event(sd, NPCE_LOGOUT); //Logout Event
@@ -7015,7 +6803,6 @@ ACMD_FUNC(summon)
 	md->deletetimer=add_timer(tick+(duration*60000),mob_timer_delete,md->bl.id,0);
 	clif_specialeffect(&md->bl,EF_ENTRY2,AREA);
 	mob_spawn(md);
-	sc_start4(NULL,&md->bl, SC_MODECHANGE, 100, 1, 0, MD_AGGRESSIVE, 0, 60000);
 	//clif_skill_poseffect(&sd->bl,AM_CALLHOMUN,1,md->bl.x,md->bl.y,tick);
 	clif_displaymessage(fd, msg_txt(sd,39));	// All monster summoned!
 
@@ -7125,13 +6912,13 @@ ACMD_FUNC(unmute)
 		return -1;
 	}
 
-	if(!pl_sd->sc.data[SC_NOCHAT]) {
+	if(!pl_sd->sc.data[STATUS_NOCHAT]) {
 		clif_displaymessage(sd->fd,msg_txt(sd,1235)); // Player is not muted.
 		return -1;
 	}
 
 	pl_sd->status.manner = 0;
-	status_change_end(&pl_sd->bl, SC_NOCHAT, INVALID_TIMER);
+	status_change_end(&pl_sd->bl, STATUS_NOCHAT, INVALID_TIMER);
 	clif_displaymessage(sd->fd,msg_txt(sd,1236)); // Player unmuted.
 
 	return 0;
@@ -7235,10 +7022,10 @@ ACMD_FUNC(mute)
 
 	if( pl_sd->status.manner < manner ) {
 		pl_sd->status.manner -= manner;
-		sc_start(NULL,&pl_sd->bl,SC_NOCHAT,100,0,0);
+		sc_start(NULL,&pl_sd->bl,STATUS_NOCHAT,100,0,0);
 	} else {
 		pl_sd->status.manner = 0;
-		status_change_end(&pl_sd->bl, SC_NOCHAT, INVALID_TIMER);
+		status_change_end(&pl_sd->bl, STATUS_NOCHAT, INVALID_TIMER);
 	}
 
 	clif_GM_silence(sd, pl_sd, (manner > 0 ? 1 : 0));
@@ -8098,9 +7885,9 @@ static int atcommand_mutearea_sub(struct block_list *bl,va_list ap)
 	if (id != bl->id && !pc_get_group_level(pl_sd)) {
 		pl_sd->status.manner -= time;
 		if (pl_sd->status.manner < 0)
-			sc_start(NULL,&pl_sd->bl,SC_NOCHAT,100,0,0);
+			sc_start(NULL,&pl_sd->bl,STATUS_NOCHAT,100,0,0);
 		else
-			status_change_end(&pl_sd->bl, SC_NOCHAT, INVALID_TIMER);
+			status_change_end(&pl_sd->bl, STATUS_NOCHAT, INVALID_TIMER);
 	}
 	return 0;
 }
@@ -9366,12 +9153,12 @@ ACMD_FUNC(charcommands) {
 /* for new mounts */
 ACMD_FUNC(mount2) {
 	clif_displaymessage(sd->fd,msg_txt(sd,1362)); // NOTICE: If you crash with mount your LUA is outdated.
-	if (!sd->sc.data[SC_ALL_RIDING]) {
+	if (!sd->sc.data[STATUS_ALL_RIDING]) {
 		clif_displaymessage(sd->fd,msg_txt(sd,1363)); // You have mounted.
-		sc_start(NULL, &sd->bl, SC_ALL_RIDING, 10000, 1, INFINITE_TICK);
+		sc_start(NULL, &sd->bl, STATUS_ALL_RIDING, 10000, 1, INFINITE_TICK);
 	} else {
 		clif_displaymessage(sd->fd,msg_txt(sd,1364)); // You have released your mount.
-		status_change_end(&sd->bl, SC_ALL_RIDING, INVALID_TIMER);
+		status_change_end(&sd->bl, STATUS_ALL_RIDING, INVALID_TIMER);
 	}
 	return 0;
 }
@@ -9946,83 +9733,13 @@ ACMD_FUNC(fullstrip) {
 }
 
 ACMD_FUNC(changedress){
-	sc_type name2id[] = {
-		SC_WEDDING,
-		SC_XMAS,
-		SC_SUMMER,
-		SC_DRESSUP,
-		SC_HANBOK,
-		SC_OKTOBERFEST
-	};
 
-	for( sc_type type : name2id ) {
-		if( sd->sc.data[type] ) {
-			status_change_end( &sd->bl, type, INVALID_TIMER );
-			// You should only be able to have one - so we cancel here
-			break;
-		}
-	}
 
 	return 0;
 }
 
 ACMD_FUNC(costume) {
-	const char* names[] = {
-		"Wedding",
-		"Xmas",
-		"Summer",
-		"Summer2",
-		"Hanbok",
-		"Oktoberfest"
-	};
-	const int name2id[] = {
-		SC_WEDDING,
-		SC_XMAS,
-		SC_SUMMER,
-		SC_DRESSUP,
-		SC_HANBOK,
-		SC_OKTOBERFEST
-	};
-	unsigned short k = 0, len = ARRAYLENGTH(names);
-
-	if( !message || !*message ) {
-		for( k = 0; k < len; k++ ) {
-			if( sd->sc.data[name2id[k]] ) {
-				sprintf(atcmd_output, msg_txt(sd, 727), names[k]); // '%s' Costume removed.
-				clif_displaymessage(sd->fd, atcmd_output);
-				status_change_end(&sd->bl, (sc_type)name2id[k], INVALID_TIMER);
-				return 0;
-			}
-		}
-
-		clif_displaymessage(sd->fd, msg_txt(sd, 726)); // Available Costumes
-		for( k = 0; k < len; k++ ) {
-			sprintf(atcmd_output, msg_txt(sd, 725), names[k]); // -- %s
-			clif_displaymessage(sd->fd, atcmd_output);
-		}
-		return -1;
-	}
-
-	for( k = 0; k < len; k++ ) {
-		if( sd->sc.data[name2id[k]] ) {
-			sprintf(atcmd_output, msg_txt(sd, 724), names[k]); // You're already wearing a(n) '%s' costume, type '@costume' to remove it.
-			clif_displaymessage(sd->fd, atcmd_output);
-			return -1;
-		}
-	}
-
-	for( k = 0; k < len; k++ )
-		if( strcmpi(message, names[k]) == 0 )
-			break;
-
-	if( k == len ) {
-		sprintf(atcmd_output, msg_txt(sd, 723), message); // '%s' is an unknown costume
-		clif_displaymessage(sd->fd, atcmd_output);
-		return -1;
-	}
-
-	sc_start(&sd->bl, &sd->bl, (sc_type)name2id[k], 100, name2id[k] == SC_DRESSUP ? 1 : 0, INFINITE_TICK);
-
+	
 	return 0;
 }
 
@@ -10787,7 +10504,7 @@ bool is_atcommand(const int fd, struct map_session_data* sd, const char* message
 		return false;
 
 	//Block NOCHAT but do not display it as a normal message
-	if ( sd->sc.data[SC_NOCHAT] && sd->sc.data[SC_NOCHAT]->val1&MANNER_NOCOMMAND )
+	if ( sd->sc.data[STATUS_NOCHAT] && sd->sc.data[STATUS_NOCHAT]->val1&MANNER_NOCOMMAND )
 		return true;
 
 	// skip 10/11-langtype's codepage indicator, if detected

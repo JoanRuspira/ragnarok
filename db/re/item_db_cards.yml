@@ -560,7 +560,7 @@ Body:
     Script: |
       skill "SK_TF_HIDING",1;
     UnEquipScript: |
-      sc_end SC_HIDING;
+      sc_end STATUS_HIDING;
   - Id: 4045
     AegisName: Horn_Card
     Name: Horn Card
@@ -1116,7 +1116,7 @@ Body:
     Script: |
       skill "SK_AS_CLOAKING",1;
     UnEquipScript: |
-      sc_end SC_CLOAKING;
+      sc_end STATUS_CLOAKING;
   - Id: 4089
     AegisName: Sword_Fish_Card
     Name: Swordfish Card
@@ -3918,7 +3918,7 @@ Body:
     Script: |
       bonus3 bAutoSpellWhenHit,"SK_CR_AUTOGUARD",3+7*(getskilllv("SK_CR_AUTOGUARD") == 10),30;
     UnEquipScript: |
-      sc_end SC_AUTOGUARD;
+      sc_end STATUS_AUTOGUARD;
   - Id: 4300
     AegisName: Chimera_Card
     Name: Chimera Card
@@ -4730,7 +4730,7 @@ Body:
     Script: |
       skill "SK_AS_CLOAKING",3;
     UnEquipScript: |
-      sc_end SC_CLOAKING;
+      sc_end STATUS_CLOAKING;
   - Id: 4360
     AegisName: Eremes_Card
     Name: Eremes Guile Card

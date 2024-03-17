@@ -436,17 +436,10 @@ int map_moveblock(struct block_list *bl, int x1, int y1, t_tick tick)
 		skill_unit_move(bl,tick,2);
 		if ( sc && sc->count ) //at least one to cancel
 		{
-			status_change_end(bl, SC_CLOSECONFINE, INVALID_TIMER);
-			status_change_end(bl, SC_CLOSECONFINE2, INVALID_TIMER);
-			status_change_end(bl, SC_TINDER_BREAKER, INVALID_TIMER);
-			status_change_end(bl, SC_TINDER_BREAKER2, INVALID_TIMER);
-	//		status_change_end(bl, SC_BLADESTOP, INVALID_TIMER); //Won't stop when you are knocked away, go figure...
-			status_change_end(bl, SC_TATAMIGAESHI, INVALID_TIMER);
-			status_change_end(bl, SC_MAGICROD, INVALID_TIMER);
-			status_change_end(bl, SC_SU_STOOP, INVALID_TIMER);
-			if (sc->data[SC_PROPERTYWALK] &&
-				sc->data[SC_PROPERTYWALK]->val3 >= skill_get_maxcount(sc->data[SC_PROPERTYWALK]->val1,sc->data[SC_PROPERTYWALK]->val2) )
-				status_change_end(bl,SC_PROPERTYWALK,INVALID_TIMER);
+			status_change_end(bl, STATUS_CLOSECONFINE, INVALID_TIMER);
+			status_change_end(bl, STATUS_CLOSECONFINE2, INVALID_TIMER);
+	//		status_change_end(bl, STATUS_GRAPPLE, INVALID_TIMER); //Won't stop when you are knocked away, go figure...
+
 		}
 	} else
 	if (bl->type == BL_NPC)
@@ -473,7 +466,7 @@ int map_moveblock(struct block_list *bl, int x1, int y1, t_tick tick)
 			struct block_list *d_bl;
 			if( (d_bl = map_id2bl(((TBL_PC*)bl)->shadowform_id)) == NULL || !check_distance_bl(bl,d_bl,10) ) {
 				if( d_bl )
-					status_change_end(d_bl,SC__SHADOWFORM,INVALID_TIMER);
+					status_change_end(d_bl,STATUS_STALK,INVALID_TIMER);
 				((TBL_PC*)bl)->shadowform_id = 0;
 			}
 		}
@@ -481,46 +474,25 @@ int map_moveblock(struct block_list *bl, int x1, int y1, t_tick tick)
 			struct block_list *d_bl;
 			if( (d_bl = map_id2bl(((TBL_MOB*)bl)->shadowform_id)) == NULL || !check_distance_bl(bl,d_bl,10) ) {
 				if( d_bl )
-					status_change_end(d_bl,SC__SHADOWFORM,INVALID_TIMER);
+					status_change_end(d_bl,STATUS_STALK,INVALID_TIMER);
 				((TBL_MOB*)bl)->shadowform_id = 0;
 			}
 		}
 
 		if (sc && sc->count) {
-			if (sc->data[SC_DANCING])
-				skill_unit_move_unit_group(skill_id2group(sc->data[SC_DANCING]->val2), bl->m, x1-x0, y1-y0);
-			else {
-				if (sc->data[SC_CLOAKING] && sc->data[SC_CLOAKING]->val1 < 3 && !skill_check_cloaking(bl, NULL))
-					status_change_end(bl, SC_CLOAKING, INVALID_TIMER);
-				if (sc->data[SC_WARM])
-					skill_unit_move_unit_group(skill_id2group(sc->data[SC_WARM]->val4), bl->m, x1-x0, y1-y0);
-				if (sc->data[SC_BANDING])
-					skill_unit_move_unit_group(skill_id2group(sc->data[SC_BANDING]->val4), bl->m, x1-x0, y1-y0);
-
-				if (sc->data[SC_NEUTRALBARRIER_MASTER])
-					skill_unit_move_unit_group(skill_id2group(sc->data[SC_NEUTRALBARRIER_MASTER]->val2), bl->m, x1-x0, y1-y0);
-				else if (sc->data[SC_STEALTHFIELD_MASTER])
-					skill_unit_move_unit_group(skill_id2group(sc->data[SC_STEALTHFIELD_MASTER]->val2), bl->m, x1-x0, y1-y0);
-
-				if( sc->data[SC__SHADOWFORM] ) {//Shadow Form Caster Moving
+			
+				if (sc->data[STATUS_CLOAKING] && sc->data[STATUS_CLOAKING]->val1 < 3 && !skill_check_cloaking(bl, NULL))
+					status_change_end(bl, STATUS_CLOAKING, INVALID_TIMER);
+				
+				
+				if( sc->data[STATUS_STALK] ) {//Shadow Form Caster Moving
 					struct block_list *d_bl;
-					if( (d_bl = map_id2bl(sc->data[SC__SHADOWFORM]->val2)) == NULL || !check_distance_bl(bl,d_bl,10) )
-						status_change_end(bl,SC__SHADOWFORM,INVALID_TIMER);
+					if( (d_bl = map_id2bl(sc->data[STATUS_STALK]->val2)) == NULL || !check_distance_bl(bl,d_bl,10) )
+						status_change_end(bl,STATUS_STALK,INVALID_TIMER);
 				}
 
 
-			}
-			/* Guild Aura Moving */
-			if( bl->type == BL_PC && ((TBL_PC*)bl)->state.gmaster_flag ) {
-				if (sc->data[SC_LEADERSHIP])
-					skill_unit_move_unit_group(skill_id2group(sc->data[SC_LEADERSHIP]->val4), bl->m, x1-x0, y1-y0);
-				if (sc->data[SC_GLORYWOUNDS])
-					skill_unit_move_unit_group(skill_id2group(sc->data[SC_GLORYWOUNDS]->val4), bl->m, x1-x0, y1-y0);
-				if (sc->data[SC_SOULCOLD])
-					skill_unit_move_unit_group(skill_id2group(sc->data[SC_SOULCOLD]->val4), bl->m, x1-x0, y1-y0);
-				if (sc->data[SC_HAWKEYES])
-					skill_unit_move_unit_group(skill_id2group(sc->data[SC_HAWKEYES]->val4), bl->m, x1-x0, y1-y0);
-			}
+			
 		}
 	} else
 	if (bl->type == BL_NPC)
@@ -2075,80 +2047,28 @@ int map_quit(struct map_session_data *sd) {
 	//(changing map-servers invokes unit_free but bypasses map_quit)
 	if( sd->sc.count ) {
 		//Status that are not saved...
-		status_change_end(&sd->bl, SC_BOSSMAPINFO, INVALID_TIMER);
-		status_change_end(&sd->bl, SC_AUTOTRADE, INVALID_TIMER);
-		status_change_end(&sd->bl, SC_SPURT, INVALID_TIMER);
-		status_change_end(&sd->bl, SC_BERSERK, INVALID_TIMER);
-		status_change_end(&sd->bl, SC__BLOODYLUST, INVALID_TIMER);
-		status_change_end(&sd->bl, SC_TRICKDEAD, INVALID_TIMER);
-		status_change_end(&sd->bl, SC_LEADERSHIP, INVALID_TIMER);
-		status_change_end(&sd->bl, SC_GLORYWOUNDS, INVALID_TIMER);
-		status_change_end(&sd->bl, SC_SOULCOLD, INVALID_TIMER);
-		status_change_end(&sd->bl, SC_HAWKEYES, INVALID_TIMER);
-		status_change_end(&sd->bl, SC_EMERGENCY_MOVE, INVALID_TIMER);
-		status_change_end(&sd->bl, SC_CHASEWALK2, INVALID_TIMER);
-		if(sd->sc.data[SC_PROVOKE] && sd->sc.data[SC_PROVOKE]->timer == INVALID_TIMER)
-			status_change_end(&sd->bl, SC_PROVOKE, INVALID_TIMER); //Infinite provoke ends on logout
-		status_change_end(&sd->bl, SC_WEIGHT50, INVALID_TIMER);
-		status_change_end(&sd->bl, SC_WEIGHT90, INVALID_TIMER);
-		status_change_end(&sd->bl, SC_SATURDAYNIGHTFEVER, INVALID_TIMER);
-		status_change_end(&sd->bl, SC_KYOUGAKU, INVALID_TIMER);
-		status_change_end(&sd->bl, SC_C_MARKER, INVALID_TIMER);
-		status_change_end(&sd->bl, SC_READYSTORM, INVALID_TIMER);
-		status_change_end(&sd->bl, SC_READYDOWN, INVALID_TIMER);
-		status_change_end(&sd->bl, SC_READYTURN, INVALID_TIMER);
-		status_change_end(&sd->bl, SC_READYCOUNTER, INVALID_TIMER);
-		status_change_end(&sd->bl, SC_DODGE, INVALID_TIMER);
-		status_change_end(&sd->bl, SC_CBC, INVALID_TIMER);
-		status_change_end(&sd->bl, SC_EQC, INVALID_TIMER);
-		status_change_end(&sd->bl, SC_SPRITEMABLE, INVALID_TIMER);
-		status_change_end(&sd->bl, SC_SV_ROOTTWIST, INVALID_TIMER);
-		// Remove visuals effect from headgear
-		status_change_end(&sd->bl, SC_MOONSTAR, INVALID_TIMER); 
-		status_change_end(&sd->bl, SC_SUPER_STAR, INVALID_TIMER); 
-		status_change_end(&sd->bl, SC_STRANGELIGHTS, INVALID_TIMER); 
-		status_change_end(&sd->bl, SC_DECORATION_OF_MUSIC, INVALID_TIMER); 
+		
+		status_change_end(&sd->bl, STATUS_FRENZY, INVALID_TIMER);
+		status_change_end(&sd->bl, STATUS_TRICKDEAD, INVALID_TIMER);
+		status_change_end(&sd->bl, STATUS_CHASEWALK2, INVALID_TIMER);
+		if(sd->sc.data[STATUS_PROVOKE] && sd->sc.data[STATUS_PROVOKE]->timer == INVALID_TIMER)
+			status_change_end(&sd->bl, STATUS_PROVOKE, INVALID_TIMER); //Infinite provoke ends on logout
+		status_change_end(&sd->bl, STATUS_WEIGHT50, INVALID_TIMER);
+		status_change_end(&sd->bl, STATUS_WEIGHT90, INVALID_TIMER);
+	
 		if (battle_config.debuff_on_logout&1) { //Remove negative buffs
-			status_change_end(&sd->bl, SC_ORCISH, INVALID_TIMER);
-			status_change_end(&sd->bl, SC_STRIPWEAPON, INVALID_TIMER);
-			status_change_end(&sd->bl, SC_STRIPARMOR, INVALID_TIMER);
-			status_change_end(&sd->bl, SC_STRIPSHIELD, INVALID_TIMER);
-			status_change_end(&sd->bl, SC_STRIPHELM, INVALID_TIMER);
-			status_change_end(&sd->bl, SC_EXPLOSIONSPIRITS, INVALID_TIMER);
-			if(sd->sc.data[SC_REGENERATION] && sd->sc.data[SC_REGENERATION]->val4)
-				status_change_end(&sd->bl, SC_REGENERATION, INVALID_TIMER);
-			//TO-DO Probably there are way more NPC_type negative status that are removed
-			status_change_end(&sd->bl, SC_CHANGEUNDEAD, INVALID_TIMER);
-			// Both these statuses are removed on logout. [L0ne_W0lf]
-			status_change_end(&sd->bl, SC_SLOWCAST, INVALID_TIMER);
-			status_change_end(&sd->bl, SC_CRITICALWOUND, INVALID_TIMER);
-			status_change_end(&sd->bl, SC_H_MINE, INVALID_TIMER);
-			status_change_end(&sd->bl, SC_ANTI_M_BLAST, INVALID_TIMER);
-			status_change_end(&sd->bl, SC_B_TRAP, INVALID_TIMER);
+			status_change_end(&sd->bl, STATUS_STRIPWEAPON, INVALID_TIMER);
+			status_change_end(&sd->bl, STATUS_STRIPARMOR, INVALID_TIMER);
+			status_change_end(&sd->bl, STATUS_STRIPSHIELD, INVALID_TIMER);
+			status_change_end(&sd->bl, STATUS_STRIPHELM, INVALID_TIMER);
+			status_change_end(&sd->bl, STATUS_ULTRAINSTINCT, INVALID_TIMER);
+		
 		}
 		if (battle_config.debuff_on_logout&2) { //Remove positive buffs
-			status_change_end(&sd->bl, SC_MAXIMIZEPOWER, INVALID_TIMER);
-			status_change_end(&sd->bl, SC_MAXOVERTHRUST, INVALID_TIMER);
-			status_change_end(&sd->bl, SC_STEELBODY, INVALID_TIMER);
-			status_change_end(&sd->bl, SC_PRESERVE, INVALID_TIMER);
-			status_change_end(&sd->bl, SC_KAAHI, INVALID_TIMER);
-			status_change_end(&sd->bl, SC_SPIRIT, INVALID_TIMER);
-			status_change_end(&sd->bl, SC_HEAT_BARREL, INVALID_TIMER);
-			status_change_end(&sd->bl, SC_P_ALTER, INVALID_TIMER);
-			status_change_end(&sd->bl, SC_E_CHAIN, INVALID_TIMER);
-			status_change_end(&sd->bl, SC_SIGHTBLASTER, INVALID_TIMER);
-			status_change_end(&sd->bl, SC_BENEDICTIO, INVALID_TIMER);
-			status_change_end(&sd->bl, SC_GLASTHEIM_ATK, INVALID_TIMER);
-			status_change_end(&sd->bl, SC_GLASTHEIM_DEF, INVALID_TIMER);
-			status_change_end(&sd->bl, SC_GLASTHEIM_HEAL, INVALID_TIMER);
-			status_change_end(&sd->bl, SC_GLASTHEIM_HIDDEN, INVALID_TIMER);
-			status_change_end(&sd->bl, SC_GLASTHEIM_STATE, INVALID_TIMER);
-			status_change_end(&sd->bl, SC_GLASTHEIM_ITEMDEF, INVALID_TIMER);
-			status_change_end(&sd->bl, SC_GLASTHEIM_HPSP, INVALID_TIMER);
-			status_change_end(&sd->bl, SC_SOULGOLEM, INVALID_TIMER);
-			status_change_end(&sd->bl, SC_SOULSHADOW, INVALID_TIMER);
-			status_change_end(&sd->bl, SC_SOULFALCON, INVALID_TIMER);
-			status_change_end(&sd->bl, SC_SOULFAIRY, INVALID_TIMER);
+			status_change_end(&sd->bl, STATUS_MAXIMIZEPOWER, INVALID_TIMER);
+			status_change_end(&sd->bl, STATUS_MAXPOWERTHRUST, INVALID_TIMER);
+			status_change_end(&sd->bl, STATUS_MENTALSTRENGTH, INVALID_TIMER);
+			status_change_end(&sd->bl, STATUS_BENEDICTIO, INVALID_TIMER);
 		}
 	}
 

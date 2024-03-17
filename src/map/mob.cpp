@@ -593,8 +593,6 @@ bool mob_ksprotected (struct block_list *src, struct block_list *target)
 		if( md->get_bosstype() == BOSSTYPE_MVP || md->master_id )
 			return false; // MVP, Slaves mobs ignores KS
 
-		if( (sce = md->sc.data[SC_KSPROTECTED]) == nullptr )
-			break; // No KS Protected
 
 		if( sd->bl.id == sce->val1 || // Same Owner
 			(sce->val2 == 2 && sd->status.party_id && sd->status.party_id == sce->val3) || // Party KS allowed
@@ -634,8 +632,7 @@ bool mob_ksprotected (struct block_list *src, struct block_list *target)
 		return true;
 	} while(0);
 
-	status_change_start(src, target, SC_KSPROTECTED, 10000, sd->bl.id, sd->state.noks, sd->status.party_id, sd->status.guild_id, battle_config.ksprotection, SCSTART_NOAVOID);
-
+	
 	return false;
 }
 
@@ -722,10 +719,7 @@ int mob_once_spawn(struct map_session_data* sd, int16 m, int16 x, int16 y, const
 
 		mob_spawn(md);
 
-		if (mob_id < 0 && battle_config.dead_branch_active)
-			//Behold Aegis's masterful decisions yet again...
-			//"I understand the "Aggressive" part, but the "Can Move" and "Can Attack" is just stupid" - Poki#3
-			sc_start4(NULL,&md->bl, SC_MODECHANGE, 100, 1, 0, MD_AGGRESSIVE|MD_CANATTACK|MD_CANMOVE|MD_ANGRY, 0, 60000);
+		
 	}
 
 	return (md) ? md->bl.id : 0; // id of last spawned mob
@@ -1720,12 +1714,12 @@ static bool mob_ai_sub_hard(struct mob_data *md, t_tick tick)
 
 	// Abnormalities
 	if(( md->sc.opt1 > 0 && md->sc.opt1 != OPT1_STONEWAIT && md->sc.opt1 != OPT1_BURNING )
-	   || md->sc.data[SC_BLADESTOP] || md->sc.data[SC__MANHOLE] || md->sc.data[SC_CURSEDCIRCLE_TARGET]) {//Should reset targets.
+	   || md->sc.data[STATUS_GRAPPLE]) {//Should reset targets.
 		md->target_id = md->attacked_id = md->norm_attacked_id = 0;
 		return false;
 	}
 
-	if (md->sc.count && md->sc.data[SC_BLIND])
+	if (md->sc.count && md->sc.data[STATUS_BLIND])
 		view_range = 3;
 	else
 		view_range = md->db->range2;
@@ -1760,9 +1754,7 @@ static bool mob_ai_sub_hard(struct mob_data *md, t_tick tick)
 		{	//Rude attacked check.
 			if( !battle_check_range(&md->bl, tbl, md->status.rhw.range)
 			&&  ( //Can't attack back and can't reach back.
-					(!can_move && DIFF_TICK(tick, md->ud.canmove_tick) > 0 && (battle_config.mob_ai&0x2 || md->sc.data[SC_SPIDERWEB]
-						|| md->sc.data[SC_BITE] || md->sc.data[SC_VACUUM_EXTREME] || md->sc.data[SC_THORNSTRAP]
-						|| md->sc.data[SC__MANHOLE] // Not yet confirmed if boss will teleport once it can't reach target.
+					(!can_move && DIFF_TICK(tick, md->ud.canmove_tick) > 0 && (battle_config.mob_ai&0x2 
 						|| md->walktoxy_fail_count > 0)
 					)
 					|| !mob_can_reach(md, tbl, md->min_chase, MSS_RUSH)
@@ -1785,9 +1777,8 @@ static bool mob_ai_sub_hard(struct mob_data *md, t_tick tick)
 				|| (battle_config.mob_ai&0x2 && !status_check_skilluse(&md->bl, abl, 0, 0)) // Cannot normal attack back to Attacker
 				|| (!battle_check_range(&md->bl, abl, md->status.rhw.range) // Not on Melee Range and ...
 				&& ( // Reach check
-					(!can_move && DIFF_TICK(tick, md->ud.canmove_tick) > 0 && (battle_config.mob_ai&0x2 || md->sc.data[SC_SPIDERWEB]
-						|| md->sc.data[SC_BITE] || md->sc.data[SC_VACUUM_EXTREME] || md->sc.data[SC_THORNSTRAP]
-						|| md->sc.data[SC__MANHOLE] // Not yet confirmed if boss will teleport once it can't reach target.
+					(!can_move && DIFF_TICK(tick, md->ud.canmove_tick) > 0 && (battle_config.mob_ai&0x2 
+						
 						|| md->walktoxy_fail_count > 0)
 					)
 					|| !mob_can_reach(md, abl, dist+md->db->range3, MSS_RUSH)
@@ -2606,7 +2597,7 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 		int pnum = 0;
 		if(sd) {
 			temp = status_get_class(&md->bl);
-			if(sd->sc.data[SC_MIRACLE]) i = 2; //All mobs are Star Targets
+			if(false) i = 2; //All mobs are Star Targets
 			else
 			ARR_FIND(0, MAX_PC_FEELHATE, i, temp == sd->hate_mob[i] &&
 				(battle_config.allow_skill_without_day || sg_info[i].day_func()));
@@ -2804,9 +2795,7 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 				drop_rate_bonus += sd->indexed_bonus.dropaddclass[md->status.class_] + sd->indexed_bonus.dropaddclass[CLASS_ALL];
 				drop_rate_bonus += sd->indexed_bonus.dropaddrace[md->status.race] + sd->indexed_bonus.dropaddrace[RC_ALL];
 
-				// Increase drop rate if user has SC_ITEMBOOST
-				if (sd->sc.data[SC_ITEMBOOST])
-					drop_rate_bonus += sd->sc.data[SC_ITEMBOOST]->val1;
+				
 
 				drop_rate_bonus = (int)(0.5 + drop_rate * drop_rate_bonus / 100.);
 				// Now rig the drop rate to never be over 90% unless it is originally >90%.
@@ -3032,7 +3021,7 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 		//Emperium destroyed by script. Discard mvp character. [Skotlex]
 		mvp_sd = NULL;
 
-	rebirth =  ( md->sc.data[SC_KAIZEL] || (md->sc.data[SC_REBIRTH] && !md->state.rebirth) );
+	rebirth = false;
 	if( !rebirth ) { // Only trigger event on final kill
 		if( src ) {
 			switch( src->type ) { //allowed type
@@ -3328,8 +3317,7 @@ int mob_class_change (struct mob_data *md, int mob_id)
 	else
 		memcpy(md->name,md->db->jname.c_str(),NAME_LENGTH);
 
-	status_change_end(&md->bl,SC_KEEPING,INVALID_TIMER); // End before calling status_calc_mob().
-	status_change_end(&md->bl,SC_BARRIER,INVALID_TIMER);
+
 	mob_stop_attack(md);
 	mob_stop_walking(md, 0);
 	unit_skillcastcancel(&md->bl, 0);
@@ -3613,7 +3601,7 @@ int mob_getfriendstatus_sub(struct block_list *bl,va_list ap)
 	fr=va_arg(ap,struct mob_data **);
 	if( cond2==-1 ){
 		int j;
-		for(j=SC_COMMON_MIN;j<=SC_COMMON_MAX && !flag;j++){
+		for(j=STATUS_COMMON_MIN;j<=STATUS_COMMON_MAX && !flag;j++){
 			if ((flag=(md->sc.data[j] != NULL))) //Once an effect was found, break out. [Skotlex]
 				break;
 		}
@@ -3702,7 +3690,7 @@ int mobskill_use(struct mob_data *md, t_tick tick, int event)
 					if (!md->sc.count) {
 						flag = 0;
 					} else if (ms[i]->cond2 == -1) {
-						for (j = SC_COMMON_MIN; j <= SC_COMMON_MAX; j++)
+						for (j = STATUS_COMMON_MIN; j <= STATUS_COMMON_MAX; j++)
 							if ((flag = (md->sc.data[j]!=NULL)) != 0)
 								break;
 					} else {
@@ -5429,7 +5417,7 @@ uint64 MobAvailDatabase::parseBodyNode(const YAML::Node &node) {
 
 #ifdef NEW_CARTS
 			if (constant & OPTION_CART) {
-				this->invalidWarning(optionNode, "OPTION_CART was replace by SC_PUSH_CART, skipping.\n");
+				this->invalidWarning(optionNode, "OPTION_CART was replace by STATUS_PUSHCART, skipping.\n");
 				continue;
 			}
 #endif
@@ -5608,17 +5596,16 @@ static bool mob_parse_row_mobskilldb(char** str, int columns, int current)
 		{ "onspawn",           MSC_SPAWN             },
 	}, cond2[] ={
 		{	"anybad",		-1				},
-		{	"stone",		SC_STONE		},
-		{	"freeze",		SC_FREEZE		},
-		{	"stun",			SC_STUN			},
-		{	"sleep",		SC_SLEEP		},
-		{	"poison",		SC_POISON		},
-		{	"curse",		SC_CURSE		},
-		{	"silence",		SC_SILENCE		},
-		{	"confusion",	SC_CONFUSION	},
-		{	"blind",		SC_BLIND		},
-		{	"hiding",		SC_HIDING		},
-		{	"sight",		SC_SIGHT		},
+		{	"stone",		STATUS_STONECURSE		},
+		{	"freeze",		STATUS_FREEZE		},
+		{	"stun",			STATUS_STUN			},
+		{	"sleep",		STATUS_SLEEP		},
+		{	"poison",		STATUS_POISON		},
+		{	"curse",		STATUS_CURSE		},
+		{	"silence",		STATUS_SILENCE		},
+		{	"confusion",	STATUS_CONFUSION	},
+		{	"blind",		STATUS_BLIND		},
+		{	"hiding",		STATUS_HIDING		},
 	}, target[] = {
 		// enum e_mob_skill_target
 		{	"target",	MST_TARGET	},

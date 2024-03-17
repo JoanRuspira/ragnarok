@@ -135,14 +135,13 @@ Body:
     Weight: 70
     Delay:
       Duration: 3000
-      Status: All_Riding_Reuse_Limit
     Flags:
       BuyingStore: true
     Script: |
-      sc_end SC_Poison;
-      sc_end SC_Silence;
-      sc_end SC_Blind;
-      sc_end SC_Confusion;
+      sc_end STATUS_POISON;
+      sc_end STATUS_SILENCE;
+      sc_end STATUS_BLIND;
+      sc_end STATUS_CONFUSION;
   - Id: 507
     AegisName: Red_Herb
     Name: Red Herb
@@ -202,7 +201,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_end SC_Poison;
+      sc_end STATUS_POISON;
   - Id: 512
     AegisName: Apple
     Name: Apple
@@ -322,7 +321,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_end SC_Curse;
+      sc_end STATUS_CURSE;
   - Id: 525
     AegisName: Panacea
     Name: Panacea
@@ -332,11 +331,11 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_end SC_Poison;
-      sc_end SC_Silence;
-      sc_end SC_Blind;
-      sc_end SC_Confusion;
-      sc_end SC_Curse;
+      sc_end STATUS_POISON;
+      sc_end STATUS_SILENCE;
+      sc_end STATUS_BLIND;
+      sc_end STATUS_CONFUSION;
+      sc_end STATUS_CURSE;
       sc_end SC_Hallucination;
   - Id: 526
     AegisName: Royal_Jelly
@@ -348,11 +347,11 @@ Body:
       BuyingStore: true
     Script: |
       itemheal rand(325,405),rand(40,60);
-      sc_end SC_Poison;
-      sc_end SC_Silence;
-      sc_end SC_Blind;
-      sc_end SC_Confusion;
-      sc_end SC_Curse;
+      sc_end STATUS_POISON;
+      sc_end STATUS_SILENCE;
+      sc_end STATUS_BLIND;
+      sc_end STATUS_CONFUSION;
+      sc_end STATUS_CURSE;
       sc_end SC_Hallucination;
   - Id: 528
     AegisName: Monster's_Feed
@@ -444,7 +443,7 @@ Body:
       BuyingStore: true
     Script: |
       itemheal rand(105,145),0;
-      sc_start SC_Freeze,10000,0,2500,0;
+      sc_start STATUS_FREEZE,10000,0,2500,0;
   - Id: 537
     AegisName: Pet_Food
     Name: Pet Food
@@ -545,7 +544,7 @@ Body:
       BuyingStore: true
     Script: |
       itemheal rand(50,100),0;
-      sc_start SC_Stun,3000,0,1500,0;
+      sc_start STATUS_STUN,3000,0,1500,0;
   - Id: 550
     AegisName: Popped_Rice
     Name: Rice Cake
@@ -592,8 +591,8 @@ Body:
     Weight: 80
     Script: |
       itemheal rand(105,145),0;
-      sc_start SC_Stun,3000,0;
-      sc_start SC_Blind,2000,0,1500,0;
+      sc_start STATUS_STUN,3000,0;
+      sc_start STATUS_BLIND,2000,0,1500,0;
   - Id: 555
     AegisName: Rice_Cake
     Name: Traditional Rice Cake
@@ -694,11 +693,11 @@ Body:
       BuyingStore: true
     Script: |
       itemheal rand(244,350),rand(10,30);
-      sc_end SC_Poison;
-      sc_end SC_Silence;
-      sc_end SC_Blind;
-      sc_end SC_Confusion;
-      sc_end SC_Curse;
+      sc_end STATUS_POISON;
+      sc_end STATUS_SILENCE;
+      sc_end STATUS_BLIND;
+      sc_end STATUS_CONFUSION;
+      sc_end STATUS_CURSE;
       sc_end SC_Hallucination;
   - Id: 567
     AegisName: Prawn
@@ -767,11 +766,11 @@ Body:
     Weight: 150
     Script: |
       itemheal rand(330,410),rand(45,65);
-      sc_end SC_Poison;
-      sc_end SC_Silence;
-      sc_end SC_Blind;
-      sc_end SC_Confusion;
-      sc_end SC_Curse;
+      sc_end STATUS_POISON;
+      sc_end STATUS_SILENCE;
+      sc_end STATUS_BLIND;
+      sc_end STATUS_CONFUSION;
+      sc_end STATUS_CURSE;
       sc_end SC_Hallucination;
   - Id: 574
     AegisName: Egg
@@ -869,11 +868,11 @@ Body:
     Weight: 150
     Script: |
       itemheal rand(325,405),rand(40,60);
-      sc_end SC_Poison;
-      sc_end SC_Silence;
-      sc_end SC_Blind;
-      sc_end SC_Confusion;
-      sc_end SC_Curse;
+      sc_end STATUS_POISON;
+      sc_end STATUS_SILENCE;
+      sc_end STATUS_BLIND;
+      sc_end STATUS_CONFUSION;
+      sc_end STATUS_CURSE;
       sc_end SC_Hallucination;
   - Id: 584
     AegisName: Fish_Ball_Soup
@@ -945,11 +944,11 @@ Body:
       BuyingStore: true
     Script: |
       itemheal rand(325,405),rand(40,60);
-      sc_end SC_Poison;
-      sc_end SC_Silence;
-      sc_end SC_Blind;
-      sc_end SC_Confusion;
-      sc_end SC_Curse;
+      sc_end STATUS_POISON;
+      sc_end STATUS_SILENCE;
+      sc_end STATUS_BLIND;
+      sc_end STATUS_CONFUSION;
+      sc_end STATUS_CURSE;
       sc_end SC_Hallucination;
   - Id: 592
     AegisName: Jam_Pancake
@@ -961,11 +960,11 @@ Body:
       BuyingStore: true
     Script: |
       itemheal rand(325,405),rand(40,60);
-      sc_end SC_Poison;
-      sc_end SC_Silence;
-      sc_end SC_Blind;
-      sc_end SC_Confusion;
-      sc_end SC_Curse;
+      sc_end STATUS_POISON;
+      sc_end STATUS_SILENCE;
+      sc_end STATUS_BLIND;
+      sc_end STATUS_CONFUSION;
+      sc_end STATUS_CURSE;
       sc_end SC_Hallucination;
   - Id: 593
     AegisName: Honey_Pancake
@@ -977,11 +976,11 @@ Body:
       BuyingStore: true
     Script: |
       itemheal rand(325,405),rand(40,60);
-      sc_end SC_Poison;
-      sc_end SC_Silence;
-      sc_end SC_Blind;
-      sc_end SC_Confusion;
-      sc_end SC_Curse;
+      sc_end STATUS_POISON;
+      sc_end STATUS_SILENCE;
+      sc_end STATUS_BLIND;
+      sc_end STATUS_CONFUSION;
+      sc_end STATUS_CURSE;
       sc_end SC_Hallucination;
   - Id: 594
     AegisName: Sour_Cream_Pancake
@@ -993,11 +992,11 @@ Body:
       BuyingStore: true
     Script: |
       itemheal rand(325,405),rand(40,60);
-      sc_end SC_Poison;
-      sc_end SC_Silence;
-      sc_end SC_Blind;
-      sc_end SC_Confusion;
-      sc_end SC_Curse;
+      sc_end STATUS_POISON;
+      sc_end STATUS_SILENCE;
+      sc_end STATUS_BLIND;
+      sc_end STATUS_CONFUSION;
+      sc_end STATUS_CURSE;
       sc_end SC_Hallucination;
   - Id: 595
     AegisName: Mushroom_Pancake
@@ -1009,11 +1008,11 @@ Body:
       BuyingStore: true
     Script: |
       itemheal rand(325,405),rand(40,60);
-      sc_end SC_Poison;
-      sc_end SC_Silence;
-      sc_end SC_Blind;
-      sc_end SC_Confusion;
-      sc_end SC_Curse;
+      sc_end STATUS_POISON;
+      sc_end STATUS_SILENCE;
+      sc_end STATUS_BLIND;
+      sc_end STATUS_CONFUSION;
+      sc_end STATUS_CURSE;
       sc_end SC_Hallucination;
   - Id: 596
     AegisName: Cute_Strawberry_Choco
@@ -1111,7 +1110,6 @@ Body:
       BuyingStore: true
     Delay:
       Duration: 5000
-      Status: Reuse_Limit_F
     Script: |
       percentheal 100,100;
   - Id: 608
@@ -1124,7 +1122,6 @@ Body:
       BuyingStore: true
     Delay:
       Duration: 3000
-      Status: Reuse_Limit_G
     Script: |
       percentheal 50,50;
   - Id: 609
@@ -1506,7 +1503,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_ASPDPOTION0,1800000,0;
+      sc_start STATUS_ASPDPOTION0,1800000,0;
   - Id: 656
     AegisName: Awakening_Potion
     Name: Awakening Potion
@@ -1540,7 +1537,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_ASPDPOTION1,1800000,0;
+      sc_start STATUS_ASPDPOTION1,1800000,0;
   - Id: 657
     AegisName: Berserk_Potion
     Name: Berserk Potion
@@ -1565,7 +1562,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_ASPDPOTION2,1800000,0;
+      sc_start STATUS_ASPDPOTION2,1800000,0;
   - Id: 658
     AegisName: Union_Of_Tribe
     Name: Union of Tribe
@@ -1663,8 +1660,8 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_DPoison,10000,0,1000,0;
-      sc_start SC_Poison,50000,0;
+      sc_start STATUS_DPOISON,10000,0,1000,0;
+      sc_start STATUS_POISON,50000,0;
   - Id: 680
     AegisName: Magical_Carnation
     Name: Magic Carnation
@@ -2165,7 +2162,6 @@ Body:
       BuyingStore: true
     Delay:
       Duration: 1000
-      Status: Reuse_Limit_E
     Script: |
       itemheal rand(400,800),0;
   - Id: 11523
@@ -2178,7 +2174,6 @@ Body:
       BuyingStore: true
     Delay:
       Duration: 2000
-      Status: Reuse_Limit_E
     Script: |
       itemheal rand(600,1000),0;
   - Id: 11524
@@ -2191,7 +2186,6 @@ Body:
       BuyingStore: true
     Delay:
       Duration: 3000
-      Status: Reuse_Limit_E
     Script: |
       itemheal rand(800,1200),0;
   - Id: 11525
@@ -2204,7 +2198,6 @@ Body:
       BuyingStore: true
     Delay:
       Duration: 5000
-      Status: Reuse_Limit_H
     Script: |
       itemheal rand(1500,2000),0;
   - Id: 11526
@@ -2600,7 +2593,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_STRFOOD,1200000,1;
+      sc_start STATUS_STRFOOD,1200000,1;
       percentheal 5,0;
   - Id: 12042
     AegisName: Str_Dish02
@@ -2611,7 +2604,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_STRFOOD,1200000,2;
+      sc_start STATUS_STRFOOD,1200000,2;
       percentheal 5,0;
   - Id: 12043
     AegisName: Str_Dish03
@@ -2622,7 +2615,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_STRFOOD,1200000,3;
+      sc_start STATUS_STRFOOD,1200000,3;
       percentheal 5,0;
   - Id: 12044
     AegisName: Str_Dish04
@@ -2633,7 +2626,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_STRFOOD,1200000,4;
+      sc_start STATUS_STRFOOD,1200000,4;
       percentheal 5,0;
   - Id: 12045
     AegisName: Str_Dish05
@@ -2644,7 +2637,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_STRFOOD,1200000,5;
+      sc_start STATUS_STRFOOD,1200000,5;
       percentheal 10,0;
   - Id: 12046
     AegisName: Int_Dish01
@@ -2655,7 +2648,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_INTFOOD,1200000,1;
+      sc_start STATUS_INTFOOD,1200000,1;
       percentheal 0,5;
   - Id: 12047
     AegisName: Int_Dish02
@@ -2666,7 +2659,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_INTFOOD,1200000,2;
+      sc_start STATUS_INTFOOD,1200000,2;
       percentheal 0,5;
   - Id: 12048
     AegisName: Int_Dish03
@@ -2677,7 +2670,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_INTFOOD,1200000,3;
+      sc_start STATUS_INTFOOD,1200000,3;
       percentheal 0,5;
   - Id: 12049
     AegisName: Int_Dish04
@@ -2688,7 +2681,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_INTFOOD,1200000,4;
+      sc_start STATUS_INTFOOD,1200000,4;
       percentheal 0,5;
   - Id: 12050
     AegisName: Int_Dish05
@@ -2699,7 +2692,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_INTFOOD,1200000,5;
+      sc_start STATUS_INTFOOD,1200000,5;
       percentheal 0,10;
   - Id: 12051
     AegisName: Vit_Dish01
@@ -2710,7 +2703,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_VITFOOD,1200000,1;
+      sc_start STATUS_VITFOOD,1200000,1;
       percentheal 5,0;
   - Id: 12052
     AegisName: Vit_Dish02
@@ -2721,7 +2714,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_VITFOOD,1200000,2;
+      sc_start STATUS_VITFOOD,1200000,2;
       percentheal 5,0;
   - Id: 12053
     AegisName: Vit_Dish03
@@ -2732,7 +2725,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_VITFOOD,1200000,3;
+      sc_start STATUS_VITFOOD,1200000,3;
       percentheal 5,0;
   - Id: 12054
     AegisName: Vit_Dish04
@@ -2743,7 +2736,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_VITFOOD,1200000,4;
+      sc_start STATUS_VITFOOD,1200000,4;
       percentheal 5,0;
   - Id: 12055
     AegisName: Vit_Dish05
@@ -2754,7 +2747,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_VITFOOD,1200000,5;
+      sc_start STATUS_VITFOOD,1200000,5;
       percentheal 10,0;
   - Id: 12056
     AegisName: Agi_Dish01
@@ -2765,7 +2758,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_AGIFOOD,1200000,1;
+      sc_start STATUS_AGIFOOD,1200000,1;
       percentheal 3,1;
   - Id: 12057
     AegisName: Agi_Dish02
@@ -2776,7 +2769,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_AGIFOOD,1200000,2;
+      sc_start STATUS_AGIFOOD,1200000,2;
       percentheal 3,1;
   - Id: 12058
     AegisName: Agi_Dish03
@@ -2787,7 +2780,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_AGIFOOD,1200000,3;
+      sc_start STATUS_AGIFOOD,1200000,3;
       percentheal 3,1;
   - Id: 12059
     AegisName: Agi_Dish04
@@ -2798,7 +2791,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_AGIFOOD,1200000,4;
+      sc_start STATUS_AGIFOOD,1200000,4;
       percentheal 3,1;
   - Id: 12060
     AegisName: Agi_Dish05
@@ -2809,7 +2802,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_AGIFOOD,1200000,5;
+      sc_start STATUS_AGIFOOD,1200000,5;
       percentheal 6,2;
   - Id: 12061
     AegisName: Dex_Dish01
@@ -2820,7 +2813,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_DEXFOOD,1200000,1;
+      sc_start STATUS_DEXFOOD,1200000,1;
       percentheal 2,2;
   - Id: 12062
     AegisName: Dex_Dish02
@@ -2831,7 +2824,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_DEXFOOD,1200000,2;
+      sc_start STATUS_DEXFOOD,1200000,2;
       percentheal 2,2;
   - Id: 12063
     AegisName: Dex_Dish03
@@ -2842,7 +2835,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_DEXFOOD,1200000,3;
+      sc_start STATUS_DEXFOOD,1200000,3;
       percentheal 2,2;
   - Id: 12064
     AegisName: Dex_Dish04
@@ -2853,7 +2846,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_DEXFOOD,1200000,4;
+      sc_start STATUS_DEXFOOD,1200000,4;
       percentheal 2,2;
   - Id: 12065
     AegisName: Dex_Dish05
@@ -2864,7 +2857,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_DEXFOOD,1200000,5;
+      sc_start STATUS_DEXFOOD,1200000,5;
       percentheal 5,5;
   - Id: 12066
     AegisName: Luk_Dish01
@@ -2875,7 +2868,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_LUKFOOD,1200000,1;
+      sc_start STATUS_LUKFOOD,1200000,1;
       percentheal 3,2;
   - Id: 12067
     AegisName: Luk_Dish02
@@ -2886,7 +2879,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_LUKFOOD,1200000,2;
+      sc_start STATUS_LUKFOOD,1200000,2;
       percentheal 3,2;
   - Id: 12068
     AegisName: Luk_Dish03
@@ -2897,7 +2890,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_LUKFOOD,1200000,3;
+      sc_start STATUS_LUKFOOD,1200000,3;
       percentheal 4,2;
   - Id: 12069
     AegisName: Luk_Dish04
@@ -2908,7 +2901,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_LUKFOOD,1200000,4;
+      sc_start STATUS_LUKFOOD,1200000,4;
       percentheal 4,2;
   - Id: 12070
     AegisName: Luk_Dish05
@@ -2919,7 +2912,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_LUKFOOD,1200000,5;
+      sc_start STATUS_LUKFOOD,1200000,5;
       percentheal 5,2;
   - Id: 12071
     AegisName: Str_Dish06
@@ -2930,7 +2923,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_STRFOOD,1200000,6;
+      sc_start STATUS_STRFOOD,1200000,6;
       percentheal 10,2;
   - Id: 12072
     AegisName: Str_Dish07
@@ -2941,7 +2934,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_STRFOOD,1200000,7;
+      sc_start STATUS_STRFOOD,1200000,7;
       percentheal 10,4;
   - Id: 12073
     AegisName: Str_Dish08
@@ -2952,7 +2945,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_STRFOOD,1200000,8;
+      sc_start STATUS_STRFOOD,1200000,8;
       percentheal 15,6;
   - Id: 12074
     AegisName: Str_Dish09
@@ -2963,7 +2956,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_STRFOOD,1200000,9;
+      sc_start STATUS_STRFOOD,1200000,9;
       percentheal 15,8;
   - Id: 12075
     AegisName: Str_Dish10
@@ -2974,7 +2967,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_STRFOOD,1200000,10;
+      sc_start STATUS_STRFOOD,1200000,10;
       percentheal 20,20;
   - Id: 12076
     AegisName: Int_Dish06
@@ -2985,7 +2978,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_INTFOOD,1200000,6;
+      sc_start STATUS_INTFOOD,1200000,6;
       percentheal 2,10;
   - Id: 12077
     AegisName: Int_Dish07
@@ -2996,7 +2989,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_INTFOOD,1200000,7;
+      sc_start STATUS_INTFOOD,1200000,7;
       percentheal 4,10;
   - Id: 12078
     AegisName: Int_Dish08
@@ -3007,7 +3000,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_INTFOOD,1200000,8;
+      sc_start STATUS_INTFOOD,1200000,8;
       percentheal 6,10;
   - Id: 12079
     AegisName: Int_Dish09
@@ -3018,7 +3011,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_INTFOOD,1200000,9;
+      sc_start STATUS_INTFOOD,1200000,9;
       percentheal 8,15;
   - Id: 12080
     AegisName: Int_Dish10
@@ -3029,7 +3022,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_INTFOOD,1200000,10;
+      sc_start STATUS_INTFOOD,1200000,10;
       percentheal 10,20;
   - Id: 12081
     AegisName: Vit_Dish06
@@ -3040,7 +3033,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_VITFOOD,1200000,6;
+      sc_start STATUS_VITFOOD,1200000,6;
       percentheal 13,0;
   - Id: 12082
     AegisName: Vit_Dish07
@@ -3051,7 +3044,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_VITFOOD,1200000,7;
+      sc_start STATUS_VITFOOD,1200000,7;
       percentheal 16,0;
   - Id: 12083
     AegisName: Vit_Dish08
@@ -3062,7 +3055,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_VITFOOD,1200000,8;
+      sc_start STATUS_VITFOOD,1200000,8;
       percentheal 19,0;
   - Id: 12084
     AegisName: Vit_Dish09
@@ -3073,7 +3066,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_VITFOOD,1200000,9;
+      sc_start STATUS_VITFOOD,1200000,9;
       percentheal 22,0;
   - Id: 12085
     AegisName: Vit_Dish10
@@ -3084,7 +3077,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_VITFOOD,1200000,10;
+      sc_start STATUS_VITFOOD,1200000,10;
       percentheal 25,0;
   - Id: 12086
     AegisName: Agi_Dish06
@@ -3095,7 +3088,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_AGIFOOD,1200000,6;
+      sc_start STATUS_AGIFOOD,1200000,6;
       percentheal 7,2;
   - Id: 12087
     AegisName: Agi_Dish07
@@ -3106,7 +3099,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_AGIFOOD,1200000,7;
+      sc_start STATUS_AGIFOOD,1200000,7;
       percentheal 8,2;
   - Id: 12088
     AegisName: Agi_Dish08
@@ -3117,7 +3110,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_AGIFOOD,1200000,8;
+      sc_start STATUS_AGIFOOD,1200000,8;
       percentheal 9,2;
   - Id: 12089
     AegisName: Agi_Dish09
@@ -3128,7 +3121,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_AGIFOOD,1200000,9;
+      sc_start STATUS_AGIFOOD,1200000,9;
       percentheal 10,2;
   - Id: 12090
     AegisName: Agi_Dish10
@@ -3139,7 +3132,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_AGIFOOD,1200000,10;
+      sc_start STATUS_AGIFOOD,1200000,10;
       percentheal 15,5;
   - Id: 12091
     AegisName: Dex_Dish06
@@ -3150,7 +3143,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_DEXFOOD,1200000,6;
+      sc_start STATUS_DEXFOOD,1200000,6;
       percentheal 5,6;
   - Id: 12092
     AegisName: Dex_Dish07
@@ -3161,7 +3154,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_DEXFOOD,1200000,7;
+      sc_start STATUS_DEXFOOD,1200000,7;
       percentheal 5,7;
   - Id: 12093
     AegisName: Dex_Dish08
@@ -3172,7 +3165,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_DEXFOOD,1200000,8;
+      sc_start STATUS_DEXFOOD,1200000,8;
       percentheal 5,8;
   - Id: 12094
     AegisName: Dex_Dish09
@@ -3183,7 +3176,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_DEXFOOD,1200000,9;
+      sc_start STATUS_DEXFOOD,1200000,9;
       percentheal 5,9;
   - Id: 12095
     AegisName: Dex_Dish10
@@ -3194,7 +3187,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_DEXFOOD,1200000,10;
+      sc_start STATUS_DEXFOOD,1200000,10;
       percentheal 10,10;
   - Id: 12096
     AegisName: Luk_Dish06
@@ -3205,7 +3198,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_LUKFOOD,1200000,6;
+      sc_start STATUS_LUKFOOD,1200000,6;
       percentheal 6,3;
   - Id: 12097
     AegisName: Luk_Dish07
@@ -3216,7 +3209,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_LUKFOOD,1200000,7;
+      sc_start STATUS_LUKFOOD,1200000,7;
       percentheal 7,3;
   - Id: 12098
     AegisName: Luk_Dish08
@@ -3227,7 +3220,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_LUKFOOD,1200000,8;
+      sc_start STATUS_LUKFOOD,1200000,8;
       percentheal 9,3;
   - Id: 12099
     AegisName: Luk_Dish09
@@ -3238,7 +3231,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_LUKFOOD,1200000,9;
+      sc_start STATUS_LUKFOOD,1200000,9;
       percentheal 10,4;
   - Id: 12100
     AegisName: Luk_Dish10
@@ -3249,7 +3242,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_LUKFOOD,1200000,10;
+      sc_start STATUS_LUKFOOD,1200000,10;
       percentheal 14,8;
   - Id: 12101
     AegisName: Citron
@@ -3387,7 +3380,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_Curse,10000,1;
+      sc_start STATUS_CURSE,10000,1;
   - Id: 12113
     AegisName: Vermilion_The_Beach
     Name: Vermilion on the Beach
@@ -3397,7 +3390,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_Stun,10000,1;
+      sc_start STATUS_STUN,10000,1;
   - Id: 12114
     AegisName: Elemental_Fire
     Name: Elemental Converter
@@ -3613,7 +3606,7 @@ Body:
     Weight: 30
     Script: |
       percentheal 50,50;
-      sc_start SC_Confusion,10000,0,1000,0;
+      sc_start STATUS_CONFUSION,10000,0,1000,0;
   - Id: 12136
     AegisName: Women's_Bundle
     Name: Women's Bundle
@@ -3656,7 +3649,7 @@ Body:
       NoMail: true
       NoAuction: true
     Script: |
-      sc_start SC_AGIFOOD,1800000,10;
+      sc_start STATUS_AGIFOOD,1800000,10;
   - Id: 12143
     AegisName: Red_Can
     Name: Red Can
@@ -4549,7 +4542,6 @@ Body:
     Weight: 10
     Delay:
       Duration: 60000
-      Status: Reuse_Limit_C
     Trade:
       Override: 100
       NoDrop: true
@@ -4586,7 +4578,6 @@ Body:
     Weight: 10
     Delay:
       Duration: 60000
-      Status: Reuse_Limit_D
     Trade:
       Override: 100
       NoDrop: true
@@ -4685,7 +4676,7 @@ Body:
       NoAuction: true
     Script: |
       skilleffect "SK_AL_BLESSING",0;
-      sc_start SC_BLESSING,240000,10;
+      sc_start STATUS_BLESSING,240000,10;
   - Id: 12216
     AegisName: Inc_Agi_10_Scroll
     Name: LV10 Agil Scroll
@@ -4707,7 +4698,7 @@ Body:
     Script: |
       if (Hp>15) {
          skilleffect "SK_AL_INCREASEAGI",0;
-         sc_start SC_INCREASEAGI,240000,10;
+         sc_start STATUS_INCREASEAGI,240000,10;
          heal -15,0;
       }
   - Id: 12217
@@ -4731,7 +4722,7 @@ Body:
     Script: |
       if (countitem(523)>0) {
          skilleffect "SK_PR_ASPERSIO",0;
-         sc_start SC_ASPERSIO,180000,5;
+         sc_start STATUS_ASPERSIO,180000,5;
          delitem 523,1;
       }
   - Id: 12218
@@ -4753,7 +4744,7 @@ Body:
       NoMail: true
       NoAuction: true
     Script: |
-      sc_start SC_ASSUMPTIO,100000,5;
+      sc_start STATUS_ASSUMPTIO,100000,5;
       skilleffect "SK_BI_ASSUMPTIO",0;
   - Id: 12219
     AegisName: Wind_Walk_10_Scroll
@@ -4775,7 +4766,7 @@ Body:
       NoAuction: true
     Script: |
       skilleffect "SK_HT_WINDRACER",0;
-      sc_start SC_WINDWALK,250000,5;
+      sc_start STATUS_WINDRACER,250000,5;
   - Id: 12220
     AegisName: Adrenaline_Scroll
     Name: LV5 Adrenaline Scroll
@@ -4798,7 +4789,7 @@ Body:
       set .@type,getiteminfo(getequipid(EQI_HAND_R), ITEMINFO_VIEW);
       if (.@type == W_1HAXE || .@type == W_2HAXE || .@type == W_MACE) {
          skilleffect "SK_BS_WEAPONRYEXPERTISE",0;
-         sc_start SC_ADRENALINE,150000,5;
+         sc_start STATUS_WEAPONRYEXPERTISE,150000,5;
       }
   - Id: 12221
     AegisName: Megaphone_
@@ -4838,8 +4829,8 @@ Body:
     Script: |
       sc_start SC_SPEEDUP0,5400000,25;
       percentheal 100,100;
-      sc_start SC_STRFOOD,5400000,10;
-      sc_start SC_DEXFOOD,5400000,5;
+      sc_start STATUS_STRFOOD,5400000,10;
+      sc_start STATUS_DEXFOOD,5400000,5;
       sc_start SC_ATKPOTION,5400000,22;
       sc_start SC_MATKFOOD,5400000,15;
   - Id: 12227
@@ -4851,9 +4842,9 @@ Body:
     Script: |
       sc_start SC_SPEEDUP0,5400000,25;
       percentheal 100,100;
-      sc_start SC_INTFOOD,5400000,8;
-      sc_start SC_VITFOOD,5400000,7;
-      sc_start SC_LUKFOOD,5400000,7;
+      sc_start STATUS_INTFOOD,5400000,8;
+      sc_start STATUS_VITFOOD,5400000,7;
+      sc_start STATUS_LUKFOOD,5400000,7;
       sc_start SC_ATKPOTION,5400000,10;
   - Id: 12228
     AegisName: Examination3
@@ -4864,7 +4855,7 @@ Body:
     Script: |
       sc_start SC_SPEEDUP0,5400000,25;
       percentheal 100,100;
-      sc_start SC_AGIFOOD,5400000,15;
+      sc_start STATUS_AGIFOOD,5400000,15;
       sc_start SC_ATKPOTION,5400000,52;
       sc_start SC_MATKFOOD,5400000,10;
   - Id: 12229
@@ -4876,9 +4867,9 @@ Body:
     Script: |
       sc_start SC_SPEEDUP0,5400000,25;
       percentheal 100,100;
-      sc_start SC_STRFOOD,5400000,3;
-      sc_start SC_AGIFOOD,5400000,5;
-      sc_start SC_VITFOOD,5400000,10;
+      sc_start STATUS_STRFOOD,5400000,3;
+      sc_start STATUS_AGIFOOD,5400000,5;
+      sc_start STATUS_VITFOOD,5400000,10;
       sc_start SC_MATKFOOD,5400000,52;
   - Id: 12230
     AegisName: Examination5
@@ -4889,8 +4880,8 @@ Body:
     Script: |
       sc_start SC_SPEEDUP0,5400000,25;
       percentheal 100,100;
-      sc_start SC_INTFOOD,5400000,3;
-      sc_start SC_DEXFOOD,5400000,12;
+      sc_start STATUS_INTFOOD,5400000,3;
+      sc_start STATUS_DEXFOOD,5400000,12;
       sc_start SC_ATKPOTION,5400000,20;
       sc_start SC_MATKFOOD,5400000,20;
   - Id: 12231
@@ -4902,12 +4893,12 @@ Body:
     Script: |
       percentheal 100,100;
       sc_start SC_SPEEDUP0,5400000,25;
-      sc_start SC_STRFOOD,5400000,6;
-      sc_start SC_DEXFOOD,5400000,6;
-      sc_start SC_AGIFOOD,5400000,6;
-      sc_start SC_INTFOOD,5400000,6;
-      sc_start SC_VITFOOD,5400000,6;
-      sc_start SC_LUKFOOD,5400000,6;
+      sc_start STATUS_STRFOOD,5400000,6;
+      sc_start STATUS_DEXFOOD,5400000,6;
+      sc_start STATUS_AGIFOOD,5400000,6;
+      sc_start STATUS_INTFOOD,5400000,6;
+      sc_start STATUS_VITFOOD,5400000,6;
+      sc_start STATUS_LUKFOOD,5400000,6;
       sc_start SC_ATKPOTION,5400000,24;
       sc_start SC_MATKFOOD,5400000,24;
   - Id: 12232
@@ -4917,7 +4908,7 @@ Body:
     Buy: 20
     Weight: 150
     Script: |
-      sc_start SC_ASPDPOTION1,900000,0;
+      sc_start STATUS_ASPDPOTION1,900000,0;
       sc_start SC_SPEEDUP0,900000,25;
   - Id: 12233
     AegisName: Kvass
@@ -4947,7 +4938,7 @@ Body:
     Script: |
       percentheal 0,5;
       skilleffect "SK_AL_BLESSING",0;
-      sc_start SC_BLESSING,240000,10;
+      sc_start STATUS_BLESSING,240000,10;
   - Id: 12236
     AegisName: Choco_Tart
     Name: Chocolate Tart
@@ -4970,8 +4961,8 @@ Body:
       Sitting: true
     Script: |
       percentheal 0,5;
-      sc_start SC_Poison,18000,0;
-      sc_start SC_Bleeding,18000,0;
+      sc_start STATUS_POISON,18000,0;
+      sc_start STATUS_BLEEDING,18000,0;
   - Id: 12238
     AegisName: New_Year_Rice_Cake_1
     Name: New Year Rice Cake
@@ -4979,8 +4970,8 @@ Body:
     Buy: 20
     Weight: 100
     Script: |
-      sc_start SC_DPoison,10000,0,1000,0;
-      sc_start SC_Poison,50000,0;
+      sc_start STATUS_DPOISON,10000,0,1000,0;
+      sc_start STATUS_POISON,50000,0;
   - Id: 12239
     AegisName: New_Year_Rice_Cake_2
     Name: New Year Rice Cake
@@ -4988,8 +4979,8 @@ Body:
     Buy: 20
     Weight: 100
     Script: |
-      sc_start SC_DPoison,10000,0,1000,0;
-      sc_start SC_Poison,50000,0;
+      sc_start STATUS_DPOISON,10000,0,1000,0;
+      sc_start STATUS_POISON,50000,0;
   - Id: 12240
     AegisName: Old_Yellow_Box
     Name: Old Yellow Box
@@ -5009,7 +5000,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      mercenary_sc_start SC_ASPDPOTION0,1800000,0;
+      mercenary_sc_start STATUS_ASPDPOTION0,1800000,0;
   - Id: 12242
     AegisName: M_Awakening_Potion
     Name: Mercenary Awakening Potion
@@ -5019,7 +5010,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      mercenary_sc_start SC_ASPDPOTION1,1800000,0;
+      mercenary_sc_start STATUS_ASPDPOTION1,1800000,0;
   - Id: 12243
     AegisName: M_Berserk_Potion
     Name: Mercenary Berserk Potion
@@ -5029,7 +5020,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      mercenary_sc_start SC_ASPDPOTION2,1800000,0;
+      mercenary_sc_start STATUS_ASPDPOTION2,1800000,0;
   - Id: 12244
     AegisName: Old_Gift_Box
     Name: Old Gift Box
@@ -5090,7 +5081,7 @@ Body:
     Type: Usable
     Weight: 10
     Script: |
-      sc_start SC_STRFOOD,3600000,10;
+      sc_start STATUS_STRFOOD,3600000,10;
       percentheal 20,20;
   - Id: 12251
     AegisName: Agi_Dish10_M
@@ -5098,7 +5089,7 @@ Body:
     Type: Usable
     Weight: 10
     Script: |
-      sc_start SC_AGIFOOD,3600000,10;
+      sc_start STATUS_AGIFOOD,3600000,10;
       percentheal 15,5;
   - Id: 12252
     AegisName: Int_Dish10_M
@@ -5106,7 +5097,7 @@ Body:
     Type: Usable
     Weight: 10
     Script: |
-      sc_start SC_INTFOOD,3600000,10;
+      sc_start STATUS_INTFOOD,3600000,10;
       percentheal 10,20;
   - Id: 12253
     AegisName: Dex_Dish10_M
@@ -5114,7 +5105,7 @@ Body:
     Type: Usable
     Weight: 10
     Script: |
-      sc_start SC_DEXFOOD,3600000,10;
+      sc_start STATUS_DEXFOOD,3600000,10;
       percentheal 10,10;
   - Id: 12254
     AegisName: Luk_Dish10_M
@@ -5122,7 +5113,7 @@ Body:
     Type: Usable
     Weight: 10
     Script: |
-      sc_start SC_LUKFOOD,3600000,10;
+      sc_start STATUS_LUKFOOD,3600000,10;
       percentheal 14,8;
   - Id: 12255
     AegisName: Vit_Dish10_M
@@ -5130,7 +5121,7 @@ Body:
     Type: Usable
     Weight: 10
     Script: |
-      sc_start SC_VITFOOD,3600000,10;
+      sc_start STATUS_VITFOOD,3600000,10;
       percentheal 25,0;
   - Id: 12256
     AegisName: PRO_Gift_Box
@@ -5502,7 +5493,7 @@ Body:
     Weight: 10
     Script: |
       specialeffect2 EF_BENEDICTIO;
-      sc_start SC_BENEDICTIO,300000,1;
+      sc_start STATUS_BENEDICTIO,300000,1;
   - Id: 12281
     AegisName: Tresure_Box_WoE
     Name: Event Treasure Box
@@ -5631,7 +5622,7 @@ Body:
     Script: |
       percentheal 5,0;
       skilleffect "SK_AL_BLESSING",0;
-      sc_start SC_BLESSING,120000,5;
+      sc_start STATUS_BLESSING,120000,5;
   - Id: 12291
     AegisName: Mysterious_PET_Bottle
     Name: Mysterious PET Bottle
@@ -5646,7 +5637,7 @@ Body:
     Script: |
       percentheal 5,0;
       skilleffect "SK_AL_INCREASEAGI",0;
-      sc_start SC_INCREASEAGI,120000,5;
+      sc_start STATUS_INCREASEAGI,120000,5;
   - Id: 12292
     AegisName: Unripe_Fruit
     Name: Unripe Fruit
@@ -6058,7 +6049,6 @@ Body:
       NoConsume: true
     Delay:
       Duration: 3000
-      Status: All_Riding_Reuse_Limit
     Trade:
       Override: 100
       NoDrop: true
@@ -6081,7 +6071,6 @@ Body:
       NoConsume: true
     Delay:
       Duration: 3000
-      Status: All_Riding_Reuse_Limit
     Trade:
       Override: 100
       NoDrop: true

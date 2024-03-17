@@ -72,21 +72,21 @@ bool CriticalHitCalculator::is_attack_critical(Damage * wd, block_list * src, bl
 			}
 		}
 
-		if (sc && sc->data[SC_CAMOUFLAGE])
-			cri += 100 * min(10, sc->data[SC_CAMOUFLAGE]->val3); //max 100% (1K)
+		if (sc && sc->data[STATUS_CAMOUFLAGE])
+			cri += 100 * min(10, sc->data[STATUS_CAMOUFLAGE]->val3); //max 100% (1K)
 
 		//The official equation is *2, but that only applies when sd's do critical.
 		//Therefore, we use the old value 3 on cases when an sd gets attacked by a mob
 		cri -= tstatus->luk * ((!sd && tsd) ? 3 : 2);
 
-		if (tsc && tsc->data[SC_SLEEP])
+		if (tsc && tsc->data[STATUS_SLEEP])
 			cri <<= 1;
 
 		switch (skill_id) {
 		case 0:
-			if (sc && !sc->data[SC_AUTOCOUNTER])
+			if (sc && !sc->data[STATUS_AUTOCOUNTER])
 				break;
-			status_change_end(src, SC_AUTOCOUNTER, INVALID_TIMER);
+			status_change_end(src, STATUS_AUTOCOUNTER, INVALID_TIMER);
 		case SK_KN_COUNTERATTACK:
 			if (battle_config.auto_counter_type &&
 				(battle_config.auto_counter_type&src->type))

@@ -76,7 +76,7 @@ void SkillBaseDamageCalculator::battle_calc_skill_base_damage(Damage * wd, block
 		battle_calc_damage_parts(wd, src, target, skill_id, skill_lv);
 	} else {
 		i = (CriticalHitCalculator::is_attack_critical(wd, src, target, skill_id, skill_lv, false) ? 1 : 0) |
-			(!skill_id && sc && sc->data[SC_CHANGE] ? 4 : 0);
+			(!skill_id && sc && false ? 4 : 0);
 
 		wd->damage = battle_calc_base_damage(src, sstatus, &sstatus->rhw, sc, tstatus->size, i);
 		if (EquipmentAttackCalculator::is_attack_left_handed(src, skill_id)) {
@@ -164,7 +164,7 @@ int64 SkillBaseDamageCalculator::battle_calc_base_damage(block_list * src, statu
 		}
 	}
 
-	if (sc && sc->data[SC_MAXIMIZEPOWER])
+	if (sc && sc->data[STATUS_MAXIMIZEPOWER])
 		atkmin = atkmax;
 
 	//Weapon Damage calculation
@@ -191,26 +191,18 @@ int64 SkillBaseDamageCalculator::battle_calc_base_damage(block_list * src, statu
 			case ELEMENTALID_AGNI_S:
 			case ELEMENTALID_AGNI_M:
 			case ELEMENTALID_AGNI_L:
-				if (ele_sc->data[SC_FIRE_INSIGNIA] && ele_sc->data[SC_FIRE_INSIGNIA]->val1 == 1)
-					damage += damage * 20 / 100;
 				break;
 			case ELEMENTALID_AQUA_S:
 			case ELEMENTALID_AQUA_M:
 			case ELEMENTALID_AQUA_L:
-				if (ele_sc->data[SC_WATER_INSIGNIA] && ele_sc->data[SC_WATER_INSIGNIA]->val1 == 1)
-					damage += damage * 20 / 100;
 				break;
 			case ELEMENTALID_VENTUS_S:
 			case ELEMENTALID_VENTUS_M:
 			case ELEMENTALID_VENTUS_L:
-				if (ele_sc->data[SC_WIND_INSIGNIA] && ele_sc->data[SC_WIND_INSIGNIA]->val1 == 1)
-					damage += damage * 20 / 100;
 				break;
 			case ELEMENTALID_TERA_S:
 			case ELEMENTALID_TERA_M:
 			case ELEMENTALID_TERA_L:
-				if (ele_sc->data[SC_EARTH_INSIGNIA] && ele_sc->data[SC_EARTH_INSIGNIA]->val1 == 1)
-					damage += damage * 20 / 100;
 				break;
 			}
 		}
@@ -249,15 +241,10 @@ void SkillBaseDamageCalculator::battle_calc_damage_parts(Damage * wd, block_list
 	wd->statusAtk += battle_calc_status_attack(sstatus, EQI_HAND_R);
 	wd->statusAtk2 += battle_calc_status_attack(sstatus, EQI_HAND_L);
 
-	if (sd && sd->sc.data[SC_SEVENWIND]) { // Mild Wind applies element to status ATK as well as weapon ATK [helvetica]
-		wd->statusAtk = battle_attr_fix(src, target, wd->statusAtk, right_element, tstatus->def_ele, tstatus->ele_lv);
-		wd->statusAtk2 = battle_attr_fix(src, target, wd->statusAtk, left_element, tstatus->def_ele, tstatus->ele_lv);
-	}
-	else { // status atk is considered neutral on normal attacks [helvetica]
-		wd->statusAtk = battle_attr_fix(src, target, wd->statusAtk, ELE_NEUTRAL, tstatus->def_ele, tstatus->ele_lv);
-		wd->statusAtk2 = battle_attr_fix(src, target, wd->statusAtk, ELE_NEUTRAL, tstatus->def_ele, tstatus->ele_lv);
-	}
-
+	// status atk is considered neutral on normal attacks [helvetica]
+	wd->statusAtk = battle_attr_fix(src, target, wd->statusAtk, ELE_NEUTRAL, tstatus->def_ele, tstatus->ele_lv);
+	wd->statusAtk2 = battle_attr_fix(src, target, wd->statusAtk, ELE_NEUTRAL, tstatus->def_ele, tstatus->ele_lv);
+	
 	wd->weaponAtk += EquipmentAttackCalculator::battle_calc_base_weapon_attack(src, tstatus, &sstatus->rhw, sd);
 	wd->weaponAtk = battle_attr_fix(src, target, wd->weaponAtk, right_element, tstatus->def_ele, tstatus->ele_lv);
 
@@ -331,23 +318,13 @@ void SkillBaseDamageCalculator::battle_calc_attack_masteries(Damage * wd, block_
 		// 	break;
 		// }
 		if (sc) { // Status change considered as masteries
-			if (sc->data[SC_NIBELUNGEN]) // With renewal, the level 4 weapon limitation has been removed
-				ATK_ADD(wd->masteryAtk, wd->masteryAtk2, sc->data[SC_NIBELUNGEN]->val2);
-
-			if (sc->data[SC_CAMOUFLAGE]) {
-				ATK_ADD(wd->damage, wd->damage2, 30 * min(10, sc->data[SC_CAMOUFLAGE]->val3));
-				ATK_ADD(wd->masteryAtk, wd->masteryAtk2, 30 * min(10, sc->data[SC_CAMOUFLAGE]->val3));
+			
+			if (sc->data[STATUS_CAMOUFLAGE]) {
+				ATK_ADD(wd->damage, wd->damage2, 30 * min(10, sc->data[STATUS_CAMOUFLAGE]->val3));
+				ATK_ADD(wd->masteryAtk, wd->masteryAtk2, 30 * min(10, sc->data[STATUS_CAMOUFLAGE]->val3));
 			}
-			if (sc->data[SC_GN_CARTBOOST]) {
-				ATK_ADD(wd->damage, wd->damage2, 10 * sc->data[SC_GN_CARTBOOST]->val1);
-
-				ATK_ADD(wd->masteryAtk, wd->masteryAtk2, 10 * sc->data[SC_GN_CARTBOOST]->val1);
-			}
-			if (sc->data[SC_P_ALTER]) {
-				ATK_ADD(wd->damage, wd->damage2, sc->data[SC_P_ALTER]->val2);
-				ATK_ADD(wd->masteryAtk, wd->masteryAtk2, sc->data[SC_P_ALTER]->val2);
-
-			}
+			
+			
 		}
 	}
 }

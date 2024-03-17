@@ -912,7 +912,7 @@ static bool skill_parse_row_requiredb(char* split[], int columns, int current)
 		int64 require[MAX_SKILL_STATUS_REQUIRE];
 		int32 count;
 
-		if ((count = skill_split_atoi2(split[11], require, ":", SC_STONE, ARRAYLENGTH(require)))) {
+		if ((count = skill_split_atoi2(split[11], require, ":", STATUS_STONECURSE, ARRAYLENGTH(require)))) {
 			for (int i = 0; i < count; i++) {
 				entry.status.push_back((sc_type)require[i]);
 			}

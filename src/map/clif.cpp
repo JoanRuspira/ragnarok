@@ -437,8 +437,7 @@ static int clif_send_sub(struct block_list *bl, va_list ap)
 	}
 
 	/* unless visible, hold it here */
-	if (!battle_config.update_enemy_position && clif_ally_only && !sd->special_state.intravision &&
-		!sd->sc.data[SC_INTRAVISION] && battle_check_target(src_bl,&sd->bl,BCT_ENEMY) > 0)
+	if (!battle_config.update_enemy_position && clif_ally_only && !sd->special_state.intravision && battle_check_target(src_bl,&sd->bl,BCT_ENEMY) > 0)
 		return 0;
 
 	WFIFOHEAD(fd, len);
@@ -1495,13 +1494,11 @@ static void clif_millenniumshield_single(int fd, map_session_data *sd)
 {
 	nullpo_retv(sd);
 
-	if (sd->sc.data[SC_MILLENNIUMSHIELD] == nullptr)
-		return;
+	
 
 	WFIFOHEAD(fd, packet_len(0x440));
 	WFIFOW(fd, 0) = 0x440;
 	WFIFOL(fd, 2) = sd->bl.id;
-	WFIFOW(fd, 6) = sd->sc.data[SC_MILLENNIUMSHIELD]->val2;
 	WFIFOW(fd, 8) = 0;
 	WFIFOSET(fd, packet_len(0x440));
 }
@@ -1624,8 +1621,6 @@ int clif_spawn( struct block_list *bl, bool walking ){
 
 			if (sd->spiritball > 0)
 				clif_spiritball(&sd->bl);
-			if (sd->sc.data[SC_MILLENNIUMSHIELD])
-				clif_millenniumshield(&sd->bl, sd->sc.data[SC_MILLENNIUMSHIELD]->val2);
 			if (sd->soulball > 0)
 				clif_soulball(sd);
 			if(sd->state.size==SZ_BIG) // tiny/big players [Valaris]
@@ -4074,10 +4069,10 @@ void clif_changeoption_target( struct block_list* bl, struct block_list* target 
 
 		//Whenever we send "changeoption" to the client, the provoke icon is lost
 		//There is probably an option for the provoke icon, but as we don't know it, we have to do this for now
-		if( sc->data[SC_PROVOKE] ){
-			const struct TimerData *td = get_timer( sc->data[SC_PROVOKE]->timer );
+		if( sc->data[STATUS_PROVOKE] ){
+			const struct TimerData *td = get_timer( sc->data[STATUS_PROVOKE]->timer );
 
-			clif_status_change( bl, StatusIconChangeTable[SC_PROVOKE], 1, ( !td ? INFINITE_TICK : DIFF_TICK( td->tick, gettick() ) ), 0, 0, 0 );
+			clif_status_change( bl, StatusIconChangeTable[STATUS_PROVOKE], 1, ( !td ? INFINITE_TICK : DIFF_TICK( td->tick, gettick() ) ), 0, 0, 0 );
 		}
 	}else{
 		if( disguised( bl ) ){
@@ -4710,8 +4705,6 @@ static void clif_getareachar_pc(struct map_session_data* sd,struct map_session_d
 
 	if(dstsd->spiritball > 0)
 		clif_spiritball( &dstsd->bl, &sd->bl, SELF );
-	if (dstsd->sc.data[SC_MILLENNIUMSHIELD])
-		clif_millenniumshield_single(sd->fd, dstsd);
 	if (dstsd->spiritcharm_type != CHARM_TYPE_NONE && dstsd->spiritcharm > 0)
 		clif_spiritcharm_single(sd->fd, dstsd);
 	if (dstsd->soulball > 0)
@@ -4731,7 +4724,7 @@ static void clif_getareachar_pc(struct map_session_data* sd,struct map_session_d
 	if( i < MAX_DEVOTION )
 		clif_devotion(&dstsd->bl, sd);
 	// display link (dstsd - crusader) to sd
-	if( dstsd->sc.data[SC_DEVOTION] && (d_bl = map_id2bl(dstsd->sc.data[SC_DEVOTION]->val1)) != NULL )
+	if( dstsd->sc.data[STATUS_SWORNPROTECTOR] && (d_bl = map_id2bl(dstsd->sc.data[STATUS_SWORNPROTECTOR]->val1)) != NULL )
 		clif_devotion(d_bl, sd);
 }
 
@@ -4912,12 +4905,7 @@ int clif_damage(struct block_list* src, struct block_list* dst, t_tick tick, int
 	if (type != DMG_MULTI_HIT_CRITICAL)
 		type = clif_calc_delay(type,div,damage+damage2,ddelay);
 	sc = status_get_sc(dst);
-	if(sc && sc->count) {
-		if(sc->data[SC_HALLUCINATION]) {
-			if(damage) damage = clif_hallucination_damage();
-			if(damage2) damage2 = clif_hallucination_damage();
-		}
-	}
+	
 
 	WBUFW(buf,0) = cmd;
 	WBUFL(buf,2) = src->id;
@@ -5697,10 +5685,7 @@ int clif_skill_damage(struct block_list *src,struct block_list *dst,t_tick tick,
 
 	type = clif_calc_delay(type,div,damage,ddelay);
 
-	if( ( sc = status_get_sc(dst) ) && sc->count ) {
-		if(sc->data[SC_HALLUCINATION] && damage)
-			damage = clif_hallucination_damage();
-	}
+	
 
 	if (skill_id == SK_CL_ARROWVULCAN || skill_id == SK_AS_SONICBLOW || skill_id == SK_CM_HUNDREDSPEAR){
 		skill_id = SK_EX_CROSSIMPACT;
@@ -6330,7 +6315,7 @@ void clif_efst_status_change_sub(struct block_list *tbl, struct block_list *bl, 
 		if (td)
 			tick = DIFF_TICK(td->tick, gettick());
 
-		if( spheres_sent && type >= SC_SPHERE_1 && type <= SC_SPHERE_5 ){
+		if( spheres_sent && type >= STATUS_SPHERE_1 && type <= STATUS_SPHERE_5 ){
 #if PACKETVER > 20120418
 			clif_efst_status_change(tbl, bl->id, AREA_WOS, StatusIconChangeTable[type], tick, sc_display[i]->val1, sc_display[i]->val2, sc_display[i]->val3);
 #else
@@ -9686,8 +9671,6 @@ void clif_refresh(struct map_session_data *sd)
 	clif_updatestatus(sd,SP_LUK);
 	if (sd->spiritball)
 		clif_spiritball( &sd->bl, &sd->bl, SELF );
-	if (sd->sc.data[SC_MILLENNIUMSHIELD])
-		clif_millenniumshield_single(sd->fd, sd);
 	if (sd->spiritcharm_type != CHARM_TYPE_NONE && sd->spiritcharm > 0)
 		clif_spiritcharm_single(sd->fd, sd);
 	if (sd->soulball)
@@ -10742,12 +10725,12 @@ void clif_parse_LoadEndAck(int fd,struct map_session_data *sd)
 			clif_status_load(&sd->bl, EFST_RIDING, 1);
 		else if (sd->sc.option&OPTION_WUGRIDER)
 			clif_status_load(&sd->bl, EFST_WUGRIDER, 1);
-		else if (sd->sc.data[SC_ALL_RIDING])
+		else if (sd->sc.data[STATUS_ALL_RIDING])
 			clif_status_load(&sd->bl, EFST_ALL_RIDING, 1);
 		
 
 		if(sd->status.manner < 0)
-			sc_start(&sd->bl,&sd->bl,SC_NOCHAT,100,0,0);
+			sc_start(&sd->bl,&sd->bl,STATUS_NOCHAT,100,0,0);
 
 
 		if(sd->pd && sd->pd->pet.intimate > 900)
@@ -10917,11 +10900,7 @@ void clif_parse_LoadEndAck(int fd,struct map_session_data *sd)
 	if (sd->sc.opt2) //Client loses these on warp.
 		clif_changeoption(&sd->bl);
 
-	if ((sd->sc.data[SC_MONSTER_TRANSFORM] || sd->sc.data[SC_ACTIVE_MONSTER_TRANSFORM]) && battle_config.mon_trans_disable_in_gvg && mapdata_flag_gvg2(mapdata)) {
-		status_change_end(&sd->bl, SC_MONSTER_TRANSFORM, INVALID_TIMER);
-		status_change_end(&sd->bl, SC_ACTIVE_MONSTER_TRANSFORM, INVALID_TIMER);
-		clif_displaymessage(sd->fd, msg_txt(sd,731)); // Transforming into monster is not allowed in Guild Wars.
-	}
+	
 
 	clif_weather_check(sd);
 
@@ -11171,8 +11150,6 @@ void clif_parse_WalkToXY(int fd, struct map_session_data *sd)
 	} else if (pc_cant_act(sd))
 		return;
 
-	if(sd->sc.data[SC_RUN] || sd->sc.data[SC_WUGDASH])
-		return;
 
 	RFIFOPOS(fd, packet_db[RFIFOW(fd,0)].pos[0], &x, &y, NULL);
 
@@ -11183,9 +11160,9 @@ void clif_parse_WalkToXY(int fd, struct map_session_data *sd)
 
 	// Cloaking wall check is actually updated when you click to process next movement
 	// not when you move each cell.  This is official behaviour.
-	if (sd->sc.data[SC_CLOAKING])
-		skill_check_cloaking(&sd->bl, sd->sc.data[SC_CLOAKING]);
-	status_change_end(&sd->bl, SC_ROLLINGCUTTER, INVALID_TIMER); // If you move, you lose your counters. [malufett]
+	if (sd->sc.data[STATUS_CLOAKING])
+		skill_check_cloaking(&sd->bl, sd->sc.data[STATUS_CLOAKING]);
+	status_change_end(&sd->bl, STATUS_ROLLINGCUTTER, INVALID_TIMER); // If you move, you lose your counters. [malufett]
 
 	pc_delinvincibletimer(sd);
 
@@ -11226,7 +11203,7 @@ void clif_parse_QuitGame(int fd, struct map_session_data *sd)
 {
 	/*	Rovert's prevent logout option fixed [Valaris]	*/
 	//int type = RFIFOW(fd,packet_db[RFIFOW(fd,0)].pos[0]);
-	if( !sd->sc.data[SC_CLOAKING] && !sd->sc.data[SC_HIDING] && !sd->sc.data[SC_CHASEWALK] && !sd->sc.data[SC_SUHIDE] && !sd->sc.data[SC_NEWMOON] &&
+	if( !sd->sc.data[STATUS_CLOAKING] && !sd->sc.data[STATUS_HIDING] && !sd->sc.data[STATUS_CHASEWALK] &&
 		(!battle_config.prevent_logout || sd->canlog_tick == 0 || DIFF_TICK(gettick(), sd->canlog_tick) > battle_config.prevent_logout) )
 	{
 		pc_damage_log_clear(sd,0);
@@ -11465,12 +11442,10 @@ void clif_parse_ActionRequest_sub(struct map_session_data *sd, int action_type, 
 	// Statuses that don't let the player sit / attack / talk with NPCs(targeted)
 	// (not all are included in pc_can_attack)
 	if (sd->sc.count &&
-		(sd->sc.data[SC_TRICKDEAD] ||
-		(sd->sc.data[SC_AUTOCOUNTER] && action_type != 0x07) ||
-		 sd->sc.data[SC_BLADESTOP] ||
-		 sd->sc.data[SC__MANHOLE] ||
-		 sd->sc.data[SC_SUHIDE] ||
-		 sd->sc.data[SC_GRAVITYCONTROL]))
+		(sd->sc.data[STATUS_TRICKDEAD] ||
+		(sd->sc.data[STATUS_AUTOCOUNTER] && action_type != 0x07) ||
+		 sd->sc.data[STATUS_GRAPPLE] 
+		 ))
 		return;
 
 	if(action_type != 0x00 && action_type != 0x07)
@@ -11522,11 +11497,7 @@ void clif_parse_ActionRequest_sub(struct map_session_data *sd, int action_type, 
 		if (sd->ud.skilltimer != INVALID_TIMER || (sd->sc.opt1 && sd->sc.opt1 != OPT1_STONEWAIT && sd->sc.opt1 != OPT1_BURNING))
 			break;
 
-		if (sd->sc.count && (
-			sd->sc.data[SC_DANCING] ||
-			(sd->sc.data[SC_GRAVITATION] && sd->sc.data[SC_GRAVITATION]->val3 == BCT_SELF)
-		)) //No sitting during these states either.
-			break;
+		
 
 		if (sd->state.block_action & PCBLOCK_SITSTAND) {
 			clif_displaymessage(sd->fd, msg_txt(sd,794)); // This action is currently blocked.
@@ -11609,7 +11580,7 @@ void clif_parse_Restart(int fd, struct map_session_data *sd)
 		break;
 	case 0x01:
 		/*	Rovert's Prevent logout option - Fixed [Valaris]	*/
-		if( !sd->sc.data[SC_CLOAKING] && !sd->sc.data[SC_HIDING] && !sd->sc.data[SC_CHASEWALK] && !sd->sc.data[SC_SUHIDE] && !sd->sc.data[SC_NEWMOON] &&
+		if( !sd->sc.data[STATUS_CLOAKING] && !sd->sc.data[STATUS_HIDING] && !sd->sc.data[STATUS_CHASEWALK] &&
 			(!battle_config.prevent_logout || sd->canlog_tick == 0 || DIFF_TICK(gettick(), sd->canlog_tick) > battle_config.prevent_logout) )
 		{	//Send to char-server for character selection.
 			pc_damage_log_clear(sd,0);
@@ -11812,9 +11783,9 @@ void clif_parse_DropItem(int fd, struct map_session_data *sd){
 			break;
 
 		if (sd->sc.count && (
-			sd->sc.data[SC_AUTOCOUNTER] ||
-			sd->sc.data[SC_BLADESTOP] ||
-			(sd->sc.data[SC_NOCHAT] && sd->sc.data[SC_NOCHAT]->val1&MANNER_NOITEM)
+			sd->sc.data[STATUS_AUTOCOUNTER] ||
+			sd->sc.data[STATUS_GRAPPLE] ||
+			(sd->sc.data[STATUS_NOCHAT] && sd->sc.data[STATUS_NOCHAT]->val1&MANNER_NOITEM)
 		))
 			break;
 
@@ -12123,7 +12094,7 @@ void clif_parse_CreateChatRoom(int fd, struct map_session_data* sd)
 	char s_password[CHATROOM_PASS_SIZE];
 	char s_title[CHATROOM_TITLE_SIZE];
 
-	if (sd->sc.data[SC_NOCHAT] && sd->sc.data[SC_NOCHAT]->val1&MANNER_NOROOM)
+	if (sd->sc.data[STATUS_NOCHAT] && sd->sc.data[STATUS_NOCHAT]->val1&MANNER_NOROOM)
 		return;
 	if(battle_config.basic_skill_check && pc_checkskill(sd,SK_NV_BASIC) < 4) {
 		clif_skill_fail(sd,1,USESKILL_FAIL_LEVEL,3);
@@ -12358,7 +12329,7 @@ void clif_parse_RemoveOption(int fd,struct map_session_data *sd)
 {
 	if( !(sd->sc.option&(OPTION_RIDING|OPTION_FALCON|OPTION_DRAGON|OPTION_MADOGEAR))
 #ifdef NEW_CARTS
-		&& sd->sc.data[SC_PUSH_CART] )
+		&& sd->sc.data[STATUS_PUSHCART] )
 		pc_setcart(sd,0);
 #else
 		)
@@ -12519,11 +12490,6 @@ static void clif_parse_UseSkillToPos_homun(struct homun_data *hd, struct map_ses
 		return;
 	}
 
-#ifdef RENEWAL
-	if (hd->sc.data[SC_BASILICA_CELL])
-#else
-	if (hd->sc.data[SC_BASILICA])
-#endif
 		return;
 	lv = hom_checkskill(hd, skill_id);
 	if( skill_lv > lv )
@@ -12572,12 +12538,6 @@ static void clif_parse_UseSkillToPos_mercenary(struct mercenary_data *md, struct
 		return;
 	}
 
-#ifdef RENEWAL
-	if (md->sc.data[SC_BASILICA_CELL])
-#else
-	if (md->sc.data[SC_BASILICA])
-#endif
-		return;
 	lv = mercenary_checkskill(md, skill_id);
 	if( skill_lv > lv )
 		skill_lv = lv;
@@ -13818,7 +13778,7 @@ void clif_parse_OpenVending(int fd, struct map_session_data* sd){
 		}
 	}
 
-	if( sd->sc.data[SC_NOCHAT] && sd->sc.data[SC_NOCHAT]->val1&MANNER_NOROOM )
+	if( sd->sc.data[STATUS_NOCHAT] && sd->sc.data[STATUS_NOCHAT]->val1&MANNER_NOROOM )
 		return;
 	if( map_getmapflag(sd->bl.m, MF_NOVENDING) ) {
 		clif_displaymessage (sd->fd, msg_txt(sd,276)); // "You can't open a shop on this map"
@@ -19281,7 +19241,6 @@ int clif_autoshadowspell_list(struct map_session_data *sd) {
 		sd->menuskill_id = SK_ST_AUTOSHADOWSPELL;
 		sd->menuskill_val = c;
 	} else {
-		status_change_end(&sd->bl,SC_STOP,INVALID_TIMER);
 		clif_skill_fail(sd,SK_ST_AUTOSHADOWSPELL,USESKILL_FAIL_IMITATION_SKILL_NONE,0);
 	}
 

@@ -1241,7 +1241,7 @@ int party_sub_count_banding(struct block_list *bl, va_list ap)
 	if ((sd->class_&MAPID_THIRDMASK) != MAPID_ROYAL_GUARD)
 		return 0;
 
-	if (!sd->sc.data[SC_BANDING])
+	if (true)
 		return 0;
 
 	if (type == 1)

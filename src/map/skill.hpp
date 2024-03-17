@@ -93,7 +93,7 @@ enum e_skill_inf2 : uint8 {
 	INF2_ALLOWWHENHIDDEN, // Skill that can be use in hiding
 	INF2_ALLOWWHENPERFORMING, // Skill that can be use while in dancing state
 	INF2_TARGETEMPERIUM, // Skill that could hit emperium
-	INF2_IGNORESTASIS, // Skill that can ignore SC_STASIS
+	INF2_IGNORESTASIS, // Skill that can ignore STATUS_STASIS
 	INF2_IGNOREKAGEHUMI, // Skill blocked by kagehumi
 	INF2_ALTERRANGEVULTURE, // Skill range affected by SK_AC_VULTURE
 	INF2_ALTERRANGESNAKEEYE, // Skill range affected by GS_SNAKEEYE
@@ -107,7 +107,7 @@ enum e_skill_inf2 : uint8 {
 	INF2_TARGETHIDDEN, // Skill that affects hidden targets
 	INF2_INCREASEDANCEWITHWUGDAMAGE, // Skill that is affected by SC_DANCEWITHWUG
 	INF2_IGNOREWUGBITE, // Skill blocked by RA_WUGBITE
-	INF2_IGNOREAUTOGUARD , // Skill is not blocked by SC_AUTOGUARD (physical-skill only)
+	INF2_IGNOREAUTOGUARD , // Skill is not blocked by STATUS_AUTOGUARD (physical-skill only)
 	INF2_IGNORECICADA, // Skill is not blocked by SC_UTSUSEMI or SC_BUNSINJYUTSU (physical-skill only)
 	INF2_SHOWSCALE, // Skill shows AoE area while casting
 	INF2_MAX,

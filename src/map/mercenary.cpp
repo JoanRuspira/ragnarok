@@ -312,7 +312,7 @@ int mercenary_delete(struct mercenary_data *md, int reply) {
 	if( md->devotion_flag )
 	{
 		md->devotion_flag = 0;
-		status_change_end(&sd->bl, SC_DEVOTION, INVALID_TIMER);
+		status_change_end(&sd->bl, STATUS_SWORNPROTECTOR, INVALID_TIMER);
 	}
 
 	switch( reply )
@@ -444,10 +444,10 @@ bool mercenary_dead(struct mercenary_data *md) {
 * @param md Mercenary
 **/
 void mercenary_killbonus(struct mercenary_data *md) {
-	const enum sc_type scs[] = { SC_MERC_FLEEUP, SC_MERC_ATKUP, SC_MERC_HPUP, SC_MERC_SPUP, SC_MERC_HITUP };
-	uint8 index = rnd() % ARRAYLENGTH(scs);
+	//const enum sc_type scs[] = { SC_MERC_FLEEUP, SC_MERC_ATKUP, SC_MERC_HPUP, SC_MERC_SPUP, SC_MERC_HITUP };
+	/*uint8 index = rnd() % ARRAYLENGTH(scs);
 
-	sc_start(&md->bl,&md->bl, scs[index], 100, rnd() % 5, 600000);
+	sc_start(&md->bl,&md->bl, scs[index], 100, rnd() % 5, 600000);*/
 }
 
 /**

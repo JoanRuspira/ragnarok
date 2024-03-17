@@ -517,7 +517,7 @@ struct map_session_data {
 		int critical_def,double_rate;
 		int short_attack_atk_rate; // Short range atk rate, not weapon based.
 		int long_attack_atk_rate; //Long range atk rate, not weapon based. [Skotlex]
-		int near_attack_def_rate,long_attack_def_rate,magic_def_rate,misc_def_rate;
+		int near_attack_def_rate,long_attack_def_rate,magic_def_rate,miSTATUS_DEF_RATE;
 		int ignore_mdef_ele;
 		int ignore_mdef_race;
 		int ignore_mdef_class;
@@ -993,7 +993,7 @@ extern struct s_job_info job_info[CLASS_COUNT];
 	#define pc_isvip(sd)      ( false )
 #endif
 #ifdef NEW_CARTS
-	#define pc_iscarton(sd)       ( (sd)->sc.data[SC_PUSH_CART] )
+	#define pc_iscarton(sd)       ( (sd)->sc.data[STATUS_PUSHCART] )
 #else
 	#define pc_iscarton(sd)       ( (sd)->sc.option&OPTION_CART )
 #endif
@@ -1080,14 +1080,14 @@ enum e_mado_type : uint16 {
 	#define pc_rightside_mdef(sd) ( (sd)->battle_status.mdef2 - ((sd)->battle_status.vit>>1) )
 #define pc_leftside_matk(sd) \
     (\
-    ((sd)->sc.data[SC_MAGICPOWER] && (sd)->sc.data[SC_MAGICPOWER]->val4) \
-		?((sd)->battle_status.matk_min * 100 + 50) / ((sd)->sc.data[SC_MAGICPOWER]->val3+100) \
+    ((sd)->sc.data[STATUS_MYSTICALAMPLIFICATION] && (sd)->sc.data[STATUS_MYSTICALAMPLIFICATION]->val4) \
+		?((sd)->battle_status.matk_min * 100 + 50) / ((sd)->sc.data[STATUS_MYSTICALAMPLIFICATION]->val3+100) \
         :(sd)->battle_status.matk_min \
     )
 #define pc_rightside_matk(sd) \
     (\
-    ((sd)->sc.data[SC_MAGICPOWER] && (sd)->sc.data[SC_MAGICPOWER]->val4) \
-		?((sd)->battle_status.matk_max * 100 + 50) / ((sd)->sc.data[SC_MAGICPOWER]->val3+100) \
+    ((sd)->sc.data[STATUS_MYSTICALAMPLIFICATION] && (sd)->sc.data[STATUS_MYSTICALAMPLIFICATION]->val4) \
+		?((sd)->battle_status.matk_max * 100 + 50) / ((sd)->sc.data[STATUS_MYSTICALAMPLIFICATION]->val3+100) \
         :(sd)->battle_status.matk_max \
     )
 #endif

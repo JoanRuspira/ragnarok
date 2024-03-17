@@ -600,9 +600,6 @@ static TIMER_FUNC(unit_walktoxy_timer)
 		ud->walktimer = add_timer(tick+speed,unit_walktoxy_timer,id,speed);
 		if( md && DIFF_TICK(tick,md->dmgtick) < 3000 ) // Not required not damaged recently
 			clif_move(ud);
-	} else if(ud->state.running) { // Keep trying to run.
-		if (!(unit_run(bl, NULL, SC_RUN) || unit_run(bl, sd, SC_WUGDASH)) )
-			ud->state.running = 0;
 	} else if (!ud->stepaction && ud->target_to) {
 		// Update target trajectory.
 		struct block_list *tbl = map_id2bl(ud->target_to);
@@ -753,7 +750,7 @@ int unit_walktoxy( struct block_list *bl, short x, short y, unsigned char flag)
 	unit_stop_attack(bl); //Sets target to 0
 
 	status_change* sc = status_get_sc(bl);
-	if (sc && sc->data[SC_CONFUSION]) // Randomize the target position
+	if (sc && sc->data[STATUS_CONFUSION]) // Randomize the target position
 		map_random_dir(bl, &ud->to_x, &ud->to_y);
 
 	if(ud->walktimer != INVALID_TIMER) {
@@ -765,8 +762,8 @@ int unit_walktoxy( struct block_list *bl, short x, short y, unsigned char flag)
 
 	TBL_PC *sd = BL_CAST(BL_PC, bl);
 
-	if( sd && sc && sc->data[SC_ZEPHYR_SNIPING]){
-		status_change_end(&sd->bl,SC_ZEPHYR_SNIPING,INVALID_TIMER);
+	if( sd && sc && sc->data[STATUS_ZEPHYRSNIPING]){
+		status_change_end(&sd->bl,STATUS_ZEPHYRSNIPING,INVALID_TIMER);
 	}
 	// Start timer to recall summon
 	if( sd != nullptr ){
@@ -869,7 +866,7 @@ int unit_walktobl(struct block_list *bl, struct block_list *tbl, int range, unsi
 	unit_stop_attack(bl); //Sets target to 0
 
 	status_change *sc = status_get_sc(bl);
-	if (sc && sc->data[SC_CONFUSION]) // Randomize the target position
+	if (sc && sc->data[STATUS_CONFUSION]) // Randomize the target position
 		map_random_dir(bl, &ud->to_x, &ud->to_y);
 
 	if(ud->walktimer != INVALID_TIMER) {
@@ -905,8 +902,7 @@ void unit_run_hit(struct block_list *bl, struct status_change *sc, struct map_se
 	int lv = sc->data[type]->val1;
 
 	// If you can't run forward, you must be next to a wall, so bounce back. [Skotlex]
-	if (type == SC_RUN)
-		clif_status_change(bl, EFST_TING, 1, 0, 0, 0, 0);
+	
 
 	// Set running to 0 beforehand so status_change_end knows not to enable spurt [Kevin]
 	unit_bl2ud(bl)->state.running = 0;
@@ -1398,10 +1394,7 @@ int unit_stop_walking(struct block_list *bl,int type)
 		ud->canmove_tick = gettick() + (type>>8);
 
 	// Re-added, the check in unit_set_walkdelay means dmg during running won't fall through to this place in code [Kevin]
-	if (ud->state.running) {
-		status_change_end(bl, SC_RUN, INVALID_TIMER);
-		status_change_end(bl, SC_WUGDASH, INVALID_TIMER);
-	}
+	
 
 	return 1;
 }
@@ -1474,8 +1467,6 @@ int unit_can_move(struct block_list *bl) {
 	// Status changes that block movement
 	if (sc) {
 		if( sc->cant.move // status placed here are ones that cannot be cached by sc->cant.move for they depend on other conditions other than their availability
-			|| sc->data[SC_SPIDERWEB]
-			|| (sc->data[SC_DANCING] && sc->data[SC_DANCING]->val4)
 			)
 			return 0;
 
@@ -1827,7 +1818,7 @@ int unit_skilluse_id2(struct block_list *src, int target_id, uint16 skill_id, ui
 	if(!ud->state.running) // Need TK_RUN or WUGDASH handler to be done before that, see bugreport:6026
 		unit_stop_walking(src, 1); // Even though this is not how official works but this will do the trick. bugreport:6829
 
-	// SC_MAGICPOWER needs to switch states at start of cast
+	// STATUS_MYSTICALAMPLIFICATION needs to switch states at start of cast
 	skill_toggle_magicpower(src, skill_id);
 
 	// In official this is triggered even if no cast time.
@@ -1884,8 +1875,8 @@ int unit_skilluse_id2(struct block_list *src, int target_id, uint16 skill_id, ui
 
 	if( sc ) {
 		// These 3 status do not stack, so it's efficient to use if-else
- 		if( sc->data[SC_CLOAKING] && !(sc->data[SC_CLOAKING]->val4&4) && skill_id != SK_AS_CLOAKING ) {
-			status_change_end(src, SC_CLOAKING, INVALID_TIMER);
+ 		if( sc->data[STATUS_CLOAKING] && !(sc->data[STATUS_CLOAKING]->val4&4) && skill_id != SK_AS_CLOAKING ) {
+			status_change_end(src, STATUS_CLOAKING, INVALID_TIMER);
 
 			if (!src->prev)
 				return 0; // Warped away!
@@ -2051,22 +2042,17 @@ int unit_skilluse_pos2( struct block_list *src, short skill_x, short skill_y, ui
 
 	if( sc ) {
 		// These 3 status do not stack, so it's efficient to use if-else
-		if (sc->data[SC_CLOAKING] && !(sc->data[SC_CLOAKING]->val4&4)) {
-			status_change_end(src, SC_CLOAKING, INVALID_TIMER);
+		if (sc->data[STATUS_CLOAKING] && !(sc->data[STATUS_CLOAKING]->val4&4)) {
+			status_change_end(src, STATUS_CLOAKING, INVALID_TIMER);
 
 			if (!src->prev)
 				return 0; // Warped away!
-		} else if (sc->data[SC_NEWMOON]) {
-			status_change_end(src, SC_NEWMOON, INVALID_TIMER);
-
-			if (!src->prev)
-				return 0;
-		}
+		} 
 	}
 
 	unit_stop_walking(src,1);
 
-	// SC_MAGICPOWER needs to switch states at start of cast
+	// STATUS_MYSTICALAMPLIFICATION needs to switch states at start of cast
 	skill_toggle_magicpower(src, skill_id);
 
 	// In official this is triggered even if no cast time.
@@ -2212,10 +2198,7 @@ bool unit_can_attack(struct block_list *src, int target_id)
 {
 	struct status_change *sc = status_get_sc(src);
 
-	if( sc != NULL ) {
-		if( sc->data[SC__MANHOLE] )
-			return false;
-	}
+	
 
 	if( src->type == BL_PC )
 		return pc_can_attack(BL_CAST(BL_PC, src), target_id);
@@ -2672,7 +2655,7 @@ int unit_skillcastcancel(struct block_list *bl, char type)
 			return 0;
 
 		if (sd && (sd->special_state.no_castcancel2 ||
-			((sd->sc.data[SC_UNLIMITEDHUMMINGVOICE] || sd->special_state.no_castcancel) && !map_flag_gvg2(bl->m) && !map_getmapflag(bl->m, MF_BATTLEGROUND)))) // fixed flags being read the wrong way around [blackhole89]
+			(( sd->special_state.no_castcancel) && !map_flag_gvg2(bl->m) && !map_getmapflag(bl->m, MF_BATTLEGROUND)))) // fixed flags being read the wrong way around [blackhole89]
 			return 0;
 	}
 
@@ -2821,48 +2804,26 @@ int unit_remove_map_(struct block_list *bl, clr_type clrtype, const char* file, 
 	ud->attackabletime = ud->canmove_tick /*= ud->canact_tick*/ = gettick();
 
 	if(sc && sc->count ) { // map-change/warp dispells.
-		status_change_end(bl, SC_BLADESTOP, INVALID_TIMER);
-#ifdef RENEWAL
-		status_change_end(bl, SC_BASILICA_CELL, INVALID_TIMER);
-#else
-		status_change_end(bl, SC_BASILICA, INVALID_TIMER);
-#endif
-		status_change_end(bl, SC_ANKLE, INVALID_TIMER);
-		status_change_end(bl, SC_TRICKDEAD, INVALID_TIMER);
-		status_change_end(bl, SC_BLADESTOP_WAIT, INVALID_TIMER);
-		status_change_end(bl, SC_RUN, INVALID_TIMER);
-		status_change_end(bl, SC_DANCING, INVALID_TIMER);
-		status_change_end(bl, SC_WARM, INVALID_TIMER);
-		status_change_end(bl, SC_DEVOTION, INVALID_TIMER);
-		status_change_end(bl, SC_MARIONETTE, INVALID_TIMER);
-		status_change_end(bl, SC_MARIONETTE2, INVALID_TIMER);
-		status_change_end(bl, SC_CLOSECONFINE, INVALID_TIMER);
-		status_change_end(bl, SC_CLOSECONFINE2, INVALID_TIMER);
-		status_change_end(bl, SC_TINDER_BREAKER, INVALID_TIMER);
-		status_change_end(bl, SC_TINDER_BREAKER2, INVALID_TIMER);
-		status_change_end(bl, SC_FLASHKICK, INVALID_TIMER);
-		status_change_end(bl, SC_HIDING, INVALID_TIMER);
+		status_change_end(bl, STATUS_GRAPPLE, INVALID_TIMER);
+		status_change_end(bl, STATUS_TRICKDEAD, INVALID_TIMER);
+		status_change_end(bl, STATUS_GRAPPLE_WAIT, INVALID_TIMER);
+		status_change_end(bl, STATUS_SWORNPROTECTOR, INVALID_TIMER);
+		status_change_end(bl, STATUS_MARIONETTE, INVALID_TIMER);
+		status_change_end(bl, STATUS_MARIONETTE2, INVALID_TIMER);
+		status_change_end(bl, STATUS_CLOSECONFINE, INVALID_TIMER);
+		status_change_end(bl, STATUS_CLOSECONFINE2, INVALID_TIMER);
+		status_change_end(bl, STATUS_HIDING, INVALID_TIMER);
 		// Ensure the bl is a PC; if so, we'll handle the removal of cloaking and cloaking exceed later
 		if ( bl->type != BL_PC ) {
-			status_change_end(bl, SC_CLOAKING, INVALID_TIMER);
+			status_change_end(bl, STATUS_CLOAKING, INVALID_TIMER);
 		}
-		status_change_end(bl, SC_CHASEWALK, INVALID_TIMER);
-		if (sc->data[SC_GOSPEL] && sc->data[SC_GOSPEL]->val4 == BCT_SELF)
-			status_change_end(bl, SC_GOSPEL, INVALID_TIMER);
-		if (sc->data[SC_PROVOKE] && sc->data[SC_PROVOKE]->timer == INVALID_TIMER)
-			status_change_end(bl, SC_PROVOKE, INVALID_TIMER); //End infinite provoke to prevent exploit
-		status_change_end(bl, SC_CHANGE, INVALID_TIMER);
-		status_change_end(bl, SC_STOP, INVALID_TIMER);
-		status_change_end(bl, SC_WUGDASH, INVALID_TIMER);
-		status_change_end(bl, SC_CAMOUFLAGE, INVALID_TIMER);
-		status_change_end(bl, SC_NEUTRALBARRIER_MASTER, INVALID_TIMER);
-		status_change_end(bl, SC_STEALTHFIELD_MASTER, INVALID_TIMER);
-		status_change_end(bl, SC__SHADOWFORM, INVALID_TIMER);
-		status_change_end(bl, SC__MANHOLE, INVALID_TIMER);
-		status_change_end(bl, SC_VACUUM_EXTREME, INVALID_TIMER);
-		status_change_end(bl, SC_NEWMOON, INVALID_TIMER);
-		status_change_end(bl, SC_CURSEDCIRCLE_ATKER, INVALID_TIMER); // callme before warp
-		status_change_end(bl, SC_SUHIDE, INVALID_TIMER);
+		status_change_end(bl, STATUS_CHASEWALK, INVALID_TIMER);
+		if (sc->data[STATUS_GOSPEL] && sc->data[STATUS_GOSPEL]->val4 == BCT_SELF)
+			status_change_end(bl, STATUS_GOSPEL, INVALID_TIMER);
+		if (sc->data[STATUS_PROVOKE] && sc->data[STATUS_PROVOKE]->timer == INVALID_TIMER)
+			status_change_end(bl, STATUS_PROVOKE, INVALID_TIMER); //End infinite provoke to prevent exploit
+		status_change_end(bl, STATUS_CAMOUFLAGE, INVALID_TIMER);
+		status_change_end(bl, STATUS_STALK, INVALID_TIMER);
 	}
 
 	switch( bl->type ) {
@@ -2873,7 +2834,7 @@ int unit_remove_map_(struct block_list *bl, clr_type clrtype, const char* file, 
 			    struct block_list *d_bl = map_id2bl(sd->shadowform_id);
 
 			    if( d_bl )
-				    status_change_end(d_bl,SC__SHADOWFORM,INVALID_TIMER);
+				    status_change_end(d_bl,STATUS_STALK,INVALID_TIMER);
 			}
 
 			// Leave/reject all invitations.
@@ -2913,7 +2874,7 @@ int unit_remove_map_(struct block_list *bl, clr_type clrtype, const char* file, 
 
 			// Check if warping and not changing the map.
 			if ( sd->state.warping && !sd->state.changemap ) {
-				status_change_end(bl, SC_CLOAKING, INVALID_TIMER);
+				status_change_end(bl, STATUS_CLOAKING, INVALID_TIMER);
 			}
 
 			sd->npc_shopid = 0;
@@ -2977,7 +2938,7 @@ int unit_remove_map_(struct block_list *bl, clr_type clrtype, const char* file, 
 			    struct block_list *d_bl = map_id2bl(md->shadowform_id);
 
 			    if( d_bl )
-				    status_change_end(d_bl,SC__SHADOWFORM,INVALID_TIMER);
+				    status_change_end(d_bl,STATUS_STALK,INVALID_TIMER);
 			}
 			// Drop previous target mob_slave_keep_target: no.
 			if (!battle_config.mob_slave_keep_target)

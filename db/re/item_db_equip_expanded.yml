@@ -22979,7 +22979,7 @@ Body:
       bonus2 bSubRace,RC_All,30;
       bonus bUnbreakableShield;
       /*todo instead of autobonus2 bonus4 bAutoSpellWhenHit,"ALL_RAY_OF_PROTECTION",1,50,0;*/
-      autobonus2 "{ sc_end SC_STUN; sc_end SC_SLEEP; sc_end SC_CURSE; sc_end SC_STONE; sc_end SC_POISON; sc_end SC_BLIND; sc_end SC_SILENCE; sc_end SC_BLEEDING; sc_end SC_CONFUSION; sc_end SC_FREEZE; bonus2 bResEff,Eff_Stun,10000; bonus2 bResEff,Eff_Sleep,10000; bonus2 bResEff,Eff_Curse,10000; bonus2 bResEff,Eff_Stone,10000; bonus2 bResEff,Eff_Poison,10000; bonus2 bResEff,Eff_Blind,10000; bonus2 bResEff,Eff_Silence,10000; bonus2 bResEff,Eff_Bleeding,10000; bonus2 bResEff,Eff_Confusion,10000; bonus2 bResEff,Eff_Freeze,10000; }",1,50000,BF_SHORT;
+      autobonus2 "{ sc_end STATUS_STUN; sc_end STATUS_SLEEP; sc_end STATUS_CURSE; sc_end STATUS_STONECURSE; sc_end STATUS_POISON; sc_end STATUS_BLIND; sc_end STATUS_SILENCE; sc_end STATUS_BLEEDING; sc_end STATUS_CONFUSION; sc_end STATUS_FREEZE; bonus2 bResEff,Eff_Stun,10000; bonus2 bResEff,Eff_Sleep,10000; bonus2 bResEff,Eff_Curse,10000; bonus2 bResEff,Eff_Stone,10000; bonus2 bResEff,Eff_Poison,10000; bonus2 bResEff,Eff_Blind,10000; bonus2 bResEff,Eff_Silence,10000; bonus2 bResEff,Eff_Bleeding,10000; bonus2 bResEff,Eff_Confusion,10000; bonus2 bResEff,Eff_Freeze,10000; }",1,50000,BF_SHORT;
   - Id: 2183
     AegisName: Impr_Angel's_Safeguard
     Name: Advanced Angelic Guard
@@ -37045,7 +37045,7 @@ Body:
       bonus bMatk,30;
       skill "SK_TF_HIDING",1;
     UnEquipScript: |
-      sc_end SC_HIDING;
+      sc_end STATUS_HIDING;
   - Id: 2986
     AegisName: Snake_Ring
     Name: Snake Ring
@@ -40639,7 +40639,7 @@ Body:
       bonus bMaxSP,10;
       skill "SK_AL_RUWACH",1;
     UnEquipScript: |
-      sc_end SC_RUWACH;
+      sc_end STATUS_RUWACH;
   - Id: 5213
     AegisName: Black_Bunny_Band
     Name: Sheila Hairnet
@@ -41704,7 +41704,7 @@ Body:
       bonus bDef,4;
       skill "SK_TF_HIDING",1;
     UnEquipScript: |
-      sc_end SC_HIDING;
+      sc_end STATUS_HIDING;
   - Id: 5274
     AegisName: Shiny_Wig
     Name: Shiny Wig
@@ -41722,7 +41722,7 @@ Body:
       bonus bDef,4;
       skill "SK_TF_HIDING",1;
     UnEquipScript: |
-      sc_end SC_HIDING;
+      sc_end STATUS_HIDING;
   - Id: 5275
     AegisName: Marvelous_Wig
     Name: Marvelous Wig
@@ -41740,7 +41740,7 @@ Body:
       bonus bDef,4;
       skill "SK_TF_HIDING",1;
     UnEquipScript: |
-      sc_end SC_HIDING;
+      sc_end STATUS_HIDING;
   - Id: 5276
     AegisName: Fantastic_Wig
     Name: Fantastic Wig
@@ -41758,7 +41758,7 @@ Body:
       bonus bDef,4;
       skill "SK_TF_HIDING",1;
     UnEquipScript: |
-      sc_end SC_HIDING;
+      sc_end STATUS_HIDING;
   - Id: 5277
     AegisName: Yellow_Bandana
     Name: Yellow Bandana
@@ -43717,7 +43717,7 @@ Body:
       bonus bVit,1;
       skill "SK_AL_ANGELUS",1;
     UnEquipScript: |
-      sc_end SC_ANGELUS;
+      sc_end STATUS_ANGELUS;
   - Id: 5383
     AegisName: Hunting_Cap
     Name: Hunter's Cap
@@ -43774,7 +43774,7 @@ Body:
     Script: |
       skill "SK_TF_HIDING",1;
     UnEquipScript: |
-      sc_end SC_HIDING;
+      sc_end STATUS_HIDING;
   - Id: 5386
     AegisName: Ayam_
     Name: Ayam
@@ -75188,7 +75188,7 @@ Body:
       bonus2 bSkillAtk,"SK_MG_COLDBOLT",50;
       bonus bMdef,10;
       if (.@r>6)
-         bonus2 bSkillAtk,"SC_SPELLFIST",25;
+         bonus2 bSkillAtk,"STATUS_SPELLFIST",25;
       if (.@r>8)
          bonus bAspd,5;
   - Id: 18796
@@ -80427,7 +80427,7 @@ Body:
          bonus bVariableCastrate,-15;
       }
     UnEquipScript: |
-      sc_end SC_TELEKINESIS_INTENSE;
+      sc_end STATUS_VOIDMAGEPRODIGY;
   - Id: 19273
     AegisName: Gemini_Red_Eyes
     Name: Gemini Red Eyes
@@ -93208,7 +93208,7 @@ Body:
       bonus2 bSkillCooldown,"SK_RG_ARROWSTORM",-200;
       bonus2 bSkillAtk,"SK_RG_ARROWSTORM",getskilllv("SK_RG_QUICKSHOT");
     UnEquipScript: |
-      sc_end SC_UNLIMIT;
+      sc_end STATUS_UNLIMIT;
   - Id: 20932
     AegisName: Old_Moc_Shawl
     Name: Old Morocc Shawl
@@ -99643,7 +99643,7 @@ Body:
       skill "SK_TF_HIDING",1;
       bonus2 bSkillUseSP,"SK_TF_HIDING",-50+(.@r*5);
     UnEquipScript: |
-      sc_end SC_HIDING;
+      sc_end STATUS_HIDING;
   - Id: 24127
     AegisName: S_Hiding_Shoes
     Name: Hiding Shadow Shoes
@@ -99658,7 +99658,7 @@ Body:
       skill "SK_TF_HIDING",1;
       bonus2 bSkillUseSP,"SK_TF_HIDING",-50+(.@r*5);
     UnEquipScript: |
-      sc_end SC_HIDING;
+      sc_end STATUS_HIDING;
   - Id: 24128
     AegisName: S_Hiding_Shield
     Name: Hiding Shadow Shield
@@ -99673,7 +99673,7 @@ Body:
       skill "SK_TF_HIDING",1;
       bonus2 bSkillUseSP,"SK_TF_HIDING",-50+(.@r*5);
     UnEquipScript: |
-      sc_end SC_HIDING;
+      sc_end STATUS_HIDING;
   - Id: 24129
     AegisName: S_Hiding_Weapon
     Name: Hiding Shadow Weapon
@@ -99689,7 +99689,7 @@ Body:
       skill "SK_TF_HIDING",1;
       bonus2 bSkillUseSP,"SK_TF_HIDING",-50+(.@r*5);
     UnEquipScript: |
-      sc_end SC_HIDING;
+      sc_end STATUS_HIDING;
   - Id: 24130
     AegisName: S_Hiding_Earring
     Name: Hiding Shadow Earring
@@ -99704,7 +99704,7 @@ Body:
       skill "SK_TF_HIDING",1;
       bonus2 bSkillUseSP,"SK_TF_HIDING",-50+(.@r*5);
     UnEquipScript: |
-      sc_end SC_HIDING;
+      sc_end STATUS_HIDING;
   - Id: 24131
     AegisName: S_Hiding_Pendant
     Name: Hiding Shadow Pendant
@@ -99719,7 +99719,7 @@ Body:
       skill "SK_TF_HIDING",1;
       bonus2 bSkillUseSP,"SK_TF_HIDING",-50+(.@r*5);
     UnEquipScript: |
-      sc_end SC_HIDING;
+      sc_end STATUS_HIDING;
   - Id: 24132
     AegisName: S_Cloaking_Armor
     Name: Cloaking Shadow Armor
@@ -99734,7 +99734,7 @@ Body:
       skill "SK_AS_CLOAKING",1;
       bonus2 bSkillUseSP,"SK_AS_CLOAKING",-50+(.@r*5);
     UnEquipScript: |
-      sc_end SC_CLOAKING;
+      sc_end STATUS_CLOAKING;
   - Id: 24133
     AegisName: S_Cloaking_Shoes
     Name: Cloaking Shadow Shoes
@@ -99749,7 +99749,7 @@ Body:
       skill "SK_AS_CLOAKING",1;
       bonus2 bSkillUseSP,"SK_AS_CLOAKING",-50+(.@r*5);
     UnEquipScript: |
-      sc_end SC_CLOAKING;
+      sc_end STATUS_CLOAKING;
   - Id: 24134
     AegisName: S_Cloaking_Shield
     Name: Cloaking Shadow Shield
@@ -99764,7 +99764,7 @@ Body:
       skill "SK_AS_CLOAKING",1;
       bonus2 bSkillUseSP,"SK_AS_CLOAKING",-50+(.@r*5);
     UnEquipScript: |
-      sc_end SC_CLOAKING;
+      sc_end STATUS_CLOAKING;
   - Id: 24135
     AegisName: S_Cloaking_Weapon
     Name: Cloaking Shadow Weapon
@@ -99780,7 +99780,7 @@ Body:
       skill "SK_AS_CLOAKING",1;
       bonus2 bSkillUseSP,"SK_AS_CLOAKING",-50+(.@r*5);
     UnEquipScript: |
-      sc_end SC_CLOAKING;
+      sc_end STATUS_CLOAKING;
   - Id: 24136
     AegisName: S_Cloaking_Earring
     Name: Cloaking Shadow Earring
@@ -99795,7 +99795,7 @@ Body:
       skill "SK_AS_CLOAKING",1;
       bonus2 bSkillUseSP,"SK_AS_CLOAKING",-50+(.@r*5);
     UnEquipScript: |
-      sc_end SC_CLOAKING;
+      sc_end STATUS_CLOAKING;
   - Id: 24137
     AegisName: S_Cloaking_Pendant
     Name: Cloaking Shadow Pendant
@@ -99810,7 +99810,7 @@ Body:
       skill "SK_AS_CLOAKING",1;
       bonus2 bSkillUseSP,"SK_AS_CLOAKING",-50+(.@r*5);
     UnEquipScript: |
-      sc_end SC_CLOAKING;
+      sc_end STATUS_CLOAKING;
   - Id: 24138
     AegisName: S_Teleport_Armor
     Name: Teleport Shadow Armor
@@ -111219,7 +111219,7 @@ Body:
     EquipLevelMin: 100
     Refineable: true
     Script: |
-      autobonus "{ bonus bDefEle,Ele_Undead; sc_start SC_ENDURE,6000,1; }",40,6000,BF_WEAPON|BF_SHORT,"{ active_transform 1036,6000; specialeffect2 EF_POTION_BERSERK; /* todo replace by 3753 when implemented */ }";
+      autobonus "{ bonus bDefEle,Ele_Undead; sc_start STATUS_ENDURE,6000,1; }",40,6000,BF_WEAPON|BF_SHORT,"{ active_transform 1036,6000; specialeffect2 EF_POTION_BERSERK; /* todo replace by 3753 when implemented */ }";
   - Id: 28024
     AegisName: Probation_Katar
     Name: Trial Guillotine Cross's Katar
@@ -113672,7 +113672,7 @@ Body:
       bonus bFlee2,3;
       bonus2 bAddEff2,Eff_Curse,50;
     UnEquipScript: |
-      sc_end SC_CLOAKING;
+      sc_end STATUS_CLOAKING;
       /*FIXME: Because the combo has Cloaking skill*/
   - Id: 28359
     AegisName: VesperGear4

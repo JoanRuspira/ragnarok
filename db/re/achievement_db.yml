@@ -1810,7 +1810,7 @@ Body:
   #   Condition: " BaseLevel >= 99 "
   #   Rewards:
   #     Item: White_Slim_Pot_Box2
-  #     Script: " specialeffect2 EF_BLESSING; sc_start SC_BLESSING,30000,10; "
+  #     Script: " specialeffect2 EF_BLESSING; sc_start STATUS_BLESSING,30000,10; "
   #     TitleId: 1000
   #   Score: 50
   # - Id: 200001
@@ -1821,7 +1821,7 @@ Body:
   #     200000: true
   #   Rewards:
   #     Item: Dark_Snake_Lord_Hat
-  #     Script: " specialeffect2 EF_BLESSING; sc_start SC_BLESSING,30000,10; "
+  #     Script: " specialeffect2 EF_BLESSING; sc_start STATUS_BLESSING,30000,10; "
   #     TitleId: 1001
   #   Score: 60
   # - Id: 200002
@@ -1832,7 +1832,7 @@ Body:
   #     200001: true
   #   Rewards:
   #   #  Item: BLACKDEATHKING_GOLDEN
-  #     Script: " specialeffect2 EF_BLESSING; sc_start SC_BLESSING,30000,10; "
+  #     Script: " specialeffect2 EF_BLESSING; sc_start STATUS_BLESSING,30000,10; "
   #     TitleId: 1002
   #   Score: 70
   # - Id: 200003
@@ -1841,7 +1841,7 @@ Body:
   #   Condition: " JobLevel >= 50 "
   #   Rewards:
   #     Item: Magic_Card_Album
-  #     Script: " specialeffect2 EF_BLESSING; sc_start SC_BLESSING,30000,10; "
+  #     Script: " specialeffect2 EF_BLESSING; sc_start STATUS_BLESSING,30000,10; "
   #     TitleId: 1003
   #   Score: 30
   # - Id: 200004
@@ -1852,7 +1852,7 @@ Body:
   #     200003: true
   #   Rewards:
   #   #  Item: Old_Card_Album_
-  #     Script: " specialeffect2 EF_BLESSING; sc_start SC_BLESSING,30000,10; "
+  #     Script: " specialeffect2 EF_BLESSING; sc_start STATUS_BLESSING,30000,10; "
   #     TitleId: 1004
   #   Score: 50
   # - Id: 200005
@@ -1860,42 +1860,42 @@ Body:
   #   Name: Official Adventurer
   #   Condition: " Class >= JOB_SWORDMAN && Class <= JOB_THIEF "
   #   Rewards:
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #   Score: 10
   # - Id: 200006
   #   Group: Job_Change
   #   Name: First step of job change!
   #   Condition: " Class >= JOB_SWORDMAN && Class <= JOB_THIEF "
   #   Rewards:
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #   Score: 20
   # - Id: 200007
   #   Group: Job_Change
   #   Name: Veteran Adventurer! (1)
   #   Condition: " Class >= JOB_KNIGHT && Class <= JOB_ASSASSIN "
   #   Rewards:
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #   Score: 25
   # - Id: 200008
   #   Group: Job_Change
   #   Name: Veteran Adventurer! (2)
   #   Condition: " Class >= JOB_CRUSADER && Class <= JOB_DANCER "
   #   Rewards:
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #   Score: 25
   # - Id: 200009
   #   Group: Job_Change
   #   Name: Warrior (1)
   #   Condition: " Class >= JOB_LORD_KNIGHT && Class <= JOB_ASSASSIN_CROSS "
   #   Rewards:
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #   Score: 30
   # - Id: 200010
   #   Group: Job_Change
   #   Name: Warrior (2)
   #   Condition: " Class >= JOB_PALADIN && Class <= JOB_GYPSY "
   #   Rewards:
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #   Score: 30
   # - Id: 200011
   #   Group: Job_Change
@@ -1903,7 +1903,7 @@ Body:
   #   Condition: " Class >= JOB_RUNE_KNIGHT && Class <= JOB_GUILLOTINE_CROSS "
   #   Rewards:
   #   #  Item: Abrasive_Box_10
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #   Score: 50
   # - Id: 200012
   #   Group: Job_Change
@@ -1911,7 +1911,7 @@ Body:
   #   Condition: " Class >= JOB_RUNE_KNIGHT_T && Class <= JOB_GUILLOTINE_CROSS_T "
   #   Rewards:
   #   #  Item: Abrasive_Box_10
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #   Score: 60
   # - Id: 200013
   #   Group: Job_Change
@@ -1919,7 +1919,7 @@ Body:
   #   Condition: " Class >= JOB_ROYAL_GUARD && Class <= JOB_SHADOW_CHASER "
   #   Rewards:
   #   #  Item: Abrasive_Box_10
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #   Score: 50
   # - Id: 200014
   #   Group: Job_Change
@@ -1927,14 +1927,14 @@ Body:
   #   Condition: " Class >= JOB_ROYAL_GUARD_T && Class <= JOB_SHADOW_CHASER_T "
   #   Rewards:
   #   #  Item: Abrasive_Box_10
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #   Score: 60
   # - Id: 200015
   #   Group: Job_Change
   #   Name: The way of exceptional character
   #   Condition: " Class == JOB_SUPER_NOVICE || Class == JOB_GUNSLINGER || Class == JOB_NINJA || Class == JOB_TAEKWON "
   #   Rewards:
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #   Score: 10
   # - Id: 200016
   #   Group: Job_Change
@@ -1942,7 +1942,7 @@ Body:
   #   Condition: " Class == JOB_STAR_GLADIATOR || Class == JOB_SOUL_LINKER || Class == JOB_KAGEROU || Class == JOB_OBORO || Class == JOB_REBELLION "
   #   Rewards:
   #   #  Item: Abrasive_Box_10
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #   Score: 20
   # - Id: 200017
   #   Group: Goal_Status
@@ -2022,7 +2022,7 @@ Body:
   #   Condition: " BaseLevel == 99 && Class == JOB_NOVICE "
   #   Rewards:
   #   #  Item: Abrasive_Box_10
-  #     Script: " specialeffect2 EF_BLESSING; sc_start SC_BLESSING,30000,10; "
+  #     Script: " specialeffect2 EF_BLESSING; sc_start STATUS_BLESSING,30000,10; "
   #   Score: 30
   # - Id: 200030
   #   Group: Goal_Status
@@ -2030,7 +2030,7 @@ Body:
   #   Condition: " BaseLevel == 99 && (Class >= JOB_SWORDMAN && Class <= JOB_THIEF) "
   #   Rewards:
   #   #  Item: Bubble_Gum_Box_10
-  #     Script: " specialeffect2 EF_BLESSING; sc_start SC_BLESSING,30000,10; "
+  #     Script: " specialeffect2 EF_BLESSING; sc_start STATUS_BLESSING,30000,10; "
   #   Score: 30
   # - Id: 200031
   #   Group: Job_Change
@@ -2038,7 +2038,7 @@ Body:
   #   Condition: " Class == JOB_NOVICE_HIGH "
   #   Rewards:
   #   #  Item: Adventurer_Box_1
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #   Score: 10
   # - Id: 200032
   #   Group: Goal_Level
@@ -2270,7 +2270,7 @@ Body:
   #     230103: true
   #     230104: true
   #   Rewards:
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #     TitleId: 1025
   #   Score: 50
   # - Id: 230110
@@ -2284,7 +2284,7 @@ Body:
   #     230115: true
   #     230116: true
   #   Rewards:
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #     TitleId: 1026
   #   Score: 50
   # - Id: 230120
@@ -2300,7 +2300,7 @@ Body:
   #     230127: true
   #     230128: true
   #   Rewards:
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #     TitleId: 1027
   #   Score: 50
   # - Id: 230140
@@ -2315,7 +2315,7 @@ Body:
   #     230146: true
   #     230147: true
   #   Rewards:
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #     TitleId: 1029
   #   Score: 50
   # - Id: 230101
@@ -2561,7 +2561,7 @@ Body:
   #   Condition: " AchievementLevel >= 1 "
   #   Rewards:
   #     Item: Magic_Card_Album
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #   Score: 10
   # - Id: 240002
   #   Group: Goal_Achieve
@@ -2571,7 +2571,7 @@ Body:
   #     240001: true
   #   Rewards:
   #     Item: Magic_Card_Album
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #   Score: 10
   # - Id: 240003
   #   Group: Goal_Achieve
@@ -2581,7 +2581,7 @@ Body:
   #     240002: true
   #   Rewards:
   #     Item: Magic_Card_Album
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #   Score: 10
   # - Id: 240004
   #   Group: Goal_Achieve
@@ -2591,7 +2591,7 @@ Body:
   #     240003: true
   #   Rewards:
   #     Item: Magic_Card_Album
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #   Score: 10
   # - Id: 240005
   #   Group: Goal_Achieve
@@ -2601,7 +2601,7 @@ Body:
   #     240004: true
   #   Rewards:
   #     Item: Magic_Card_Album
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #   Score: 10
   # - Id: 240006
   #   Group: Goal_Achieve
@@ -2611,7 +2611,7 @@ Body:
   #     240005: true
   #   Rewards:
   #     Item: Magic_Card_Album
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #   Score: 10
   # - Id: 240007
   #   Group: Goal_Achieve
@@ -2621,7 +2621,7 @@ Body:
   #     240006: true
   #   Rewards:
   #     Item: Magic_Card_Album
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #   Score: 10
   # - Id: 240008
   #   Group: Goal_Achieve
@@ -2631,7 +2631,7 @@ Body:
   #     240007: true
   #   Rewards:
   #     Item: Magic_Card_Album
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #   Score: 10
   # - Id: 240009
   #   Group: Goal_Achieve
@@ -2641,7 +2641,7 @@ Body:
   #     240008: true
   #   Rewards:
   #     Item: Magic_Card_Album
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #   Score: 10
   # - Id: 240010
   #   Group: Goal_Achieve
@@ -2651,7 +2651,7 @@ Body:
   #     240009: true
   #   Rewards:
   #     Item: Magic_Card_Album
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #     TitleId: 1023
   #   Score: 10
   # - Id: 240011
@@ -2662,7 +2662,7 @@ Body:
   #     240010: true
   #   Rewards:
   #     Item: Magic_Card_Album
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #   Score: 10
   # - Id: 240012
   #   Group: Goal_Achieve
@@ -2672,7 +2672,7 @@ Body:
   #     240011: true
   #   Rewards:
   #     Item: Magic_Card_Album
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #   Score: 10
   # - Id: 240013
   #   Group: Goal_Achieve
@@ -2682,7 +2682,7 @@ Body:
   #     240012: true
   #   Rewards:
   #     Item: Magic_Card_Album
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #   Score: 10
   # - Id: 240014
   #   Group: Goal_Achieve
@@ -2692,7 +2692,7 @@ Body:
   #     240013: true
   #   Rewards:
   #     Item: Magic_Card_Album
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #   Score: 10
   # - Id: 240015
   #   Group: Goal_Achieve
@@ -2702,7 +2702,7 @@ Body:
   #     240014: true
   #   Rewards:
   #     Item: Magic_Card_Album
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #   Score: 10
   # - Id: 240016
   #   Group: Goal_Achieve
@@ -2712,7 +2712,7 @@ Body:
   #     240015: true
   #   Rewards:
   #     Item: Magic_Card_Album
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #   Score: 10
   # - Id: 240017
   #   Group: Goal_Achieve
@@ -2722,7 +2722,7 @@ Body:
   #     240016: true
   #   Rewards:
   #     Item: Magic_Card_Album
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #   Score: 10
   # - Id: 240018
   #   Group: Goal_Achieve
@@ -2732,7 +2732,7 @@ Body:
   #     240017: true
   #   Rewards:
   #     Item: Magic_Card_Album
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #   Score: 10
   # - Id: 240019
   #   Group: Goal_Achieve
@@ -2742,7 +2742,7 @@ Body:
   #     240018: true
   #   Rewards:
   #     Item: Magic_Card_Album
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #   Score: 10
   # - Id: 240020
   #   Group: Goal_Achieve
@@ -2752,6 +2752,6 @@ Body:
   #     240019: true
   #   Rewards:
   #     Item: Magic_Card_Album
-  #     Script: " specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,30000,10; "
+  #     Script: " specialeffect2 EF_INCAGILITY; sc_start STATUS_INCREASEAGI,30000,10; "
   #     TitleId: 1024
   #   Score: 10

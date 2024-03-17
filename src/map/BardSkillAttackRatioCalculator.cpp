@@ -117,7 +117,7 @@ int BardSkillAttackRatioCalculator::calculate_arrow_vulcan_atk_ratio(int skill_l
 
 	target_status = status_get_sc(target);
 
-	if (target_status->data[SC_CONFUSION]) {
+	if (target_status->data[STATUS_CONFUSION]) {
 		return calculate_arrow_vulcan_confused_atk_ratio(skill_lv);
 	}
 	return calculate_arrow_vulcan_normal_atk_ratio(skill_lv);
@@ -131,7 +131,7 @@ int BardSkillAttackRatioCalculator::calculate_metallic_fury_atk_ratio(int skill_
 
 	target_status = status_get_sc(target);
 
-	if (target_status->data[SC_SLEEP]) {
+	if (target_status->data[STATUS_SLEEP]) {
 		return calculate_metallic_fury_sleep_atk_ratio(skill_lv);
 	}
 	return calculate_metallic_fury_normal_atk_ratio(skill_lv);
@@ -145,7 +145,7 @@ int BardSkillAttackRatioCalculator::calculate_reverberation_atk_ratio(int skill_
 
 	target_status = status_get_sc(target);
 
-	if (target_status->data[SC_SLEEP]) {
+	if (target_status->data[STATUS_SLEEP]) {
 		return calculate_reverberation_sleep_atk_ratio(skill_lv);
 	}
 	return calculate_reverberation_normal_atk_ratio(skill_lv);
@@ -159,7 +159,7 @@ int BardSkillAttackRatioCalculator::calculate_metallic_sound_atk_ratio(int skill
 
 	target_status = status_get_sc(target);
 
-	if (target_status->data[SC_SLEEP]) {
+	if (target_status->data[STATUS_SLEEP]) {
 		return calculate_metallic_sound_sleep_atk_ratio(skill_lv);
 	}
 	return calculate_metallic_sound_normal_atk_ratio(skill_lv);

@@ -111,7 +111,7 @@ int KnightSkillAtkRatioCalculator::calculate_clashing_spiral_atk_ratio(int skill
 
 	target_status = status_get_sc(target);
 
-	if (target_status->data[SC_BLEEDING]) {
+	if (target_status->data[STATUS_BLEEDING]) {
 		return calculate_clashing_spiral_bleeding_atk_ratio(skill_lv);
 	}
 	return calculate_clashing_spiral_normal_atk_ratio(skill_lv);
@@ -390,7 +390,7 @@ int KnightSkillAtkRatioCalculator::calculate_bowling_bash_atk_ratio(int skill_lv
 
 	target_status = status_get_sc(target);
 
-	if (target_status->data[SC_BLEEDING]) {
+	if (target_status->data[STATUS_BLEEDING]) {
 		return calculate_bowling_bash_bleeding_atk_ratio(skill_lv);
 	}
 	return calculate_bowling_bash_normal_atk_ratio(skill_lv);

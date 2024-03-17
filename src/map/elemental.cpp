@@ -177,7 +177,7 @@ int elemental_delete(struct elemental_data *ed) {
 
 	sd->ed = NULL;
 	sd->status.ele_id = 0;
-	sc_start2(&sd->bl,&sd->bl, SC_BIOETHICS, 100, 5, sd->bl.id, 1);
+	sc_start2(&sd->bl,&sd->bl, STATUS_BIOETHICS, 100, 5, sd->bl.id, 1);
 	return unit_remove_map(&ed->bl, CLR_OUTSIGHT);
 }
 
@@ -257,48 +257,7 @@ int elemental_data_received(struct s_elemental *ele, bool flag) {
 }
 
 int elemental_clean_single_effect(struct elemental_data *ed, uint16 skill_id) {
-	struct block_list *bl;
-	sc_type type = status_skill2sc(skill_id);
-
-	nullpo_ret(ed);
-
-	bl = battle_get_master(&ed->bl);
-
-	if( type ) {
-		switch( type ) {
-				// Just remove status change.
-			case SC_PYROTECHNIC_OPTION:
-			case SC_HEATER_OPTION:
-			case SC_TROPIC_OPTION:
-			case SC_FIRE_CLOAK_OPTION:
-			case SC_AQUAPLAY_OPTION:
-			case SC_WATER_SCREEN_OPTION:
-			case SC_COOLER_OPTION:
-			case SC_CHILLY_AIR_OPTION:
-			case SC_GUST_OPTION:
-			case SC_WIND_STEP_OPTION:
-			case SC_BLAST_OPTION:
-			case SC_WATER_DROP_OPTION:
-			case SC_WIND_CURTAIN_OPTION:
-			case SC_WILD_STORM_OPTION:
-			case SC_PETROLOGY_OPTION:
-			case SC_SOLID_SKIN_OPTION:
-			case SC_CURSED_SOIL_OPTION:
-			case SC_STONE_SHIELD_OPTION:
-			case SC_UPHEAVAL_OPTION:
-			case SC_CIRCLE_OF_FIRE_OPTION:
-			case SC_TIDAL_WEAPON_OPTION:
-				if( bl ) status_change_end(bl,type,INVALID_TIMER);	// Master
-				status_change_end(&ed->bl,static_cast<sc_type>(type-1),INVALID_TIMER);	// Elemental Spirit
-				break;
-			case SC_ZEPHYR:
-				if( bl ) status_change_end(bl,type,INVALID_TIMER);
-				break;
-			default:
-				ShowWarning("Invalid SC=%d in elemental_clean_single_effect\n",type);
-				break;
-		}
-	}
+	
 
 	return 1;
 }
@@ -308,57 +267,8 @@ int elemental_clean_effect(struct elemental_data *ed) {
 
 	nullpo_ret(ed);
 
-	// Elemental side
-	status_change_end(&ed->bl, SC_TROPIC, INVALID_TIMER);
-	status_change_end(&ed->bl, SC_HEATER, INVALID_TIMER);
-	status_change_end(&ed->bl, SC_AQUAPLAY, INVALID_TIMER);
-	status_change_end(&ed->bl, SC_COOLER, INVALID_TIMER);
-	status_change_end(&ed->bl, SC_CHILLY_AIR, INVALID_TIMER);
-	status_change_end(&ed->bl, SC_PYROTECHNIC, INVALID_TIMER);
-	status_change_end(&ed->bl, SC_FIRE_CLOAK, INVALID_TIMER);
-	status_change_end(&ed->bl, SC_WATER_DROP, INVALID_TIMER);
-	status_change_end(&ed->bl, SC_WATER_SCREEN, INVALID_TIMER);
-	status_change_end(&ed->bl, SC_GUST, INVALID_TIMER);
-	status_change_end(&ed->bl, SC_WIND_STEP, INVALID_TIMER);
-	status_change_end(&ed->bl, SC_BLAST, INVALID_TIMER);
-	status_change_end(&ed->bl, SC_WIND_CURTAIN, INVALID_TIMER);
-	status_change_end(&ed->bl, SC_WILD_STORM, INVALID_TIMER);
-	status_change_end(&ed->bl, SC_PETROLOGY, INVALID_TIMER);
-	status_change_end(&ed->bl, SC_SOLID_SKIN, INVALID_TIMER);
-	status_change_end(&ed->bl, SC_CURSED_SOIL, INVALID_TIMER);
-	status_change_end(&ed->bl, SC_STONE_SHIELD, INVALID_TIMER);
-	status_change_end(&ed->bl, SC_UPHEAVAL, INVALID_TIMER);
-	status_change_end(&ed->bl, SC_CIRCLE_OF_FIRE, INVALID_TIMER);
-	status_change_end(&ed->bl, SC_TIDAL_WEAPON, INVALID_TIMER);
-
-	if( (sd = ed->master) == NULL )
-		return 0;
-
-	// Master side
-	status_change_end(&sd->bl, SC_TROPIC_OPTION, INVALID_TIMER);
-	status_change_end(&sd->bl, SC_HEATER_OPTION, INVALID_TIMER);
-	status_change_end(&sd->bl, SC_AQUAPLAY_OPTION, INVALID_TIMER);
-	status_change_end(&sd->bl, SC_COOLER_OPTION, INVALID_TIMER);
-	status_change_end(&sd->bl, SC_CHILLY_AIR_OPTION, INVALID_TIMER);
-	status_change_end(&sd->bl, SC_PYROTECHNIC_OPTION, INVALID_TIMER);
-	status_change_end(&sd->bl, SC_FIRE_CLOAK_OPTION, INVALID_TIMER);
-	status_change_end(&sd->bl, SC_WATER_DROP_OPTION, INVALID_TIMER);
-	status_change_end(&sd->bl, SC_WATER_SCREEN_OPTION, INVALID_TIMER);
-	status_change_end(&sd->bl, SC_GUST_OPTION, INVALID_TIMER);
-	status_change_end(&sd->bl, SC_WIND_STEP_OPTION, INVALID_TIMER);
-	status_change_end(&sd->bl, SC_BLAST_OPTION, INVALID_TIMER);
-	status_change_end(&sd->bl, SC_WATER_DROP_OPTION, INVALID_TIMER);
-	status_change_end(&sd->bl, SC_WIND_CURTAIN_OPTION, INVALID_TIMER);
-	status_change_end(&sd->bl, SC_WILD_STORM_OPTION, INVALID_TIMER);
-	status_change_end(&sd->bl, SC_ZEPHYR, INVALID_TIMER);
-	status_change_end(&sd->bl, SC_WIND_STEP_OPTION, INVALID_TIMER);
-	status_change_end(&sd->bl, SC_PETROLOGY_OPTION, INVALID_TIMER);
-	status_change_end(&sd->bl, SC_SOLID_SKIN_OPTION, INVALID_TIMER);
-	status_change_end(&sd->bl, SC_CURSED_SOIL_OPTION, INVALID_TIMER);
-	status_change_end(&sd->bl, SC_STONE_SHIELD_OPTION, INVALID_TIMER);
-	status_change_end(&sd->bl, SC_UPHEAVAL_OPTION, INVALID_TIMER);
-	status_change_end(&sd->bl, SC_CIRCLE_OF_FIRE_OPTION, INVALID_TIMER);
-	status_change_end(&sd->bl, SC_TIDAL_WEAPON_OPTION, INVALID_TIMER);
+	
+	
 
 	return 1;
 }
@@ -699,7 +609,7 @@ static int elemental_ai_sub_timer(struct elemental_data *ed, struct map_session_
 	if(ed->ud.walkpath.path_pos < ed->ud.walkpath.path_len && ed->ud.target == sd->bl.id)
 		return 0; //No thinking until be near the master.
 
-	if( ed->sc.count && ed->sc.data[SC_BLIND] )
+	if( ed->sc.count && ed->sc.data[STATUS_BLIND] )
 		view_range = 3;
 	else
 		view_range = ed->db->range2;

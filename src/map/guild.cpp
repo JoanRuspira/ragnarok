@@ -1002,11 +1002,6 @@ int guild_member_withdraw(int guild_id, uint32 account_id, uint32 char_id, int f
 		}
 
 		clif_name_area(&sd->bl); //Update display name [Skotlex]
-		status_change_end(&sd->bl,SC_LEADERSHIP,INVALID_TIMER);
-		status_change_end(&sd->bl,SC_GLORYWOUNDS,INVALID_TIMER);
-		status_change_end(&sd->bl,SC_SOULCOLD,INVALID_TIMER);
-		status_change_end(&sd->bl,SC_HAWKEYES,INVALID_TIMER);
-		status_change_end(&sd->bl,SC_EMERGENCY_MOVE,INVALID_TIMER);
 		//@TODO: Send emblem update to self and people around
 	}
 	return 0;
@@ -1883,11 +1878,7 @@ int guild_broken(int guild_id,int flag) {
 			sd->state.gmaster_flag = 0;
 			clif_guild_broken(g->member[i].sd,0);
 			clif_name_area(&sd->bl); // [LuzZza]
-			status_change_end(&sd->bl,SC_LEADERSHIP,INVALID_TIMER);
-			status_change_end(&sd->bl,SC_GLORYWOUNDS,INVALID_TIMER);
-			status_change_end(&sd->bl,SC_SOULCOLD,INVALID_TIMER);
-			status_change_end(&sd->bl,SC_HAWKEYES,INVALID_TIMER);
-			status_change_end(&sd->bl,SC_EMERGENCY_MOVE,INVALID_TIMER);
+			
 		}
 	}
 

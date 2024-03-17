@@ -4,12 +4,12 @@
 
 void KnightAdditionalEffectsCalculator::apply_auto_counter_additional_effect(struct block_list* src, struct block_list *bl, int skill_lv)
 {
-	status_change_start(src, bl, SC_BLEEDING, 10000, skill_lv, 0, 0, 0, 10000, SCSTART_NONE);
+	status_change_start(src, bl, STATUS_BLEEDING, 10000, skill_lv, 0, 0, 0, 10000, SCSTART_NONE);
 }
 
 void KnightAdditionalEffectsCalculator::apply_smite_additional_effect(struct block_list* src, struct block_list *bl, int skill_lv)
 {
-	status_change_start(src, bl, SC_STUN, 10000, skill_lv, 0, 0, 0, skill_lv * 200, SCSTART_NONE);
+	status_change_start(src, bl, STATUS_STUN, 10000, skill_lv, 0, 0, 0, skill_lv * 200, SCSTART_NONE);
 }
 
 void KnightAdditionalEffectsCalculator::apply_a_hundred_spears_additional_effect(struct block_list* src, struct block_list *bl, int skill_lv, t_tick tick)

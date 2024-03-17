@@ -62,7 +62,7 @@ int SkillAdditionalEffects::skill_additional_effect(struct block_list* src, stru
 	//		rate += sd->indexed_bonus.weapon_coma_class[tstatus->class_] + sd->indexed_bonus.weapon_coma_class[CLASS_ALL];
 	//	}
 	//	if (rate > 0)
-	//		status_change_start(src, bl, SC_COMA, rate, 0, 0, src->id, 0, 0, SCSTART_NONE);
+	//		status_change_start(src, bl, STATUS_COMA, rate, 0, 0, src->id, 0, 0, SCSTART_NONE);
 	//}
 
 	if (attack_type&BF_WEAPON)
@@ -79,8 +79,8 @@ int SkillAdditionalEffects::skill_additional_effect(struct block_list* src, stru
 			rate = 0;
 			if (sd)
 				rate += sd->bonus.break_weapon_rate;
-			if (sc && sc->data[SC_MELTDOWN])
-				rate += sc->data[SC_MELTDOWN]->val2;
+			if (sc && sc->data[STATUS_MELTDOWN])
+				rate += sc->data[STATUS_MELTDOWN]->val2;
 			if (rate)
 				skill_break_equip(src, bl, EQP_WEAPON, rate, BCT_ENEMY);
 
@@ -88,20 +88,20 @@ int SkillAdditionalEffects::skill_additional_effect(struct block_list* src, stru
 			rate = 0;
 			if (sd)
 				rate += sd->bonus.break_armor_rate;
-			if (sc && sc->data[SC_MELTDOWN])
-				rate += sc->data[SC_MELTDOWN]->val3;
+			if (sc && sc->data[STATUS_MELTDOWN])
+				rate += sc->data[STATUS_MELTDOWN]->val3;
 			if (rate)
 				skill_break_equip(src, bl, EQP_ARMOR, rate, BCT_ENEMY);
 		}
 		if (sd && !skill_id && bl->type == BL_PC) { // This effect does not work with skills.
 			if (sd->def_set_race[tstatus->race].rate)
-				status_change_start(src, bl, SC_DEFSET, sd->def_set_race[tstatus->race].rate, sd->def_set_race[tstatus->race].value,
+				status_change_start(src, bl, STATUS_DEFSET, sd->def_set_race[tstatus->race].rate, sd->def_set_race[tstatus->race].value,
 					0, 0, 0, sd->def_set_race[tstatus->race].tick, SCSTART_NOTICKDEF);
 			if (sd->mdef_set_race[tstatus->race].rate)
-				status_change_start(src, bl, SC_MDEFSET, sd->mdef_set_race[tstatus->race].rate, sd->mdef_set_race[tstatus->race].value,
+				status_change_start(src, bl, STATUS_MDEFSET, sd->mdef_set_race[tstatus->race].rate, sd->mdef_set_race[tstatus->race].value,
 					0, 0, 0, sd->mdef_set_race[tstatus->race].tick, SCSTART_NOTICKDEF);
 			if (sd->norecover_state_race[tstatus->race].rate)
-				status_change_start(src, bl, SC_NORECOVER_STATE, sd->norecover_state_race[tstatus->race].rate,
+				status_change_start(src, bl, STATUS_NORECOVER_STATE, sd->norecover_state_race[tstatus->race].rate,
 					0, 0, 0, 0, sd->norecover_state_race[tstatus->race].tick, SCSTART_NONE);
 		}
 	}
@@ -109,7 +109,7 @@ int SkillAdditionalEffects::skill_additional_effect(struct block_list* src, stru
 	if (sd && sd->ed && sc && !status_isdead(bl) && !skill_id) {
 		struct unit_data *ud = unit_bl2ud(src);
 
-		if (sc->data[SC_WILD_STORM_OPTION])
+		/*if (sc->data[SC_WILD_STORM_OPTION])
 			skill = sc->data[SC_WILD_STORM_OPTION]->val2;
 		else if (sc->data[SC_UPHEAVAL_OPTION])
 			skill = sc->data[SC_UPHEAVAL_OPTION]->val3;
@@ -131,7 +131,7 @@ int SkillAdditionalEffects::skill_additional_effect(struct block_list* src, stru
 						clif_status_change(src, EFST_POSTDELAY, 1, rate, 0, 0, 0);
 				}
 			}
-		}
+		}*/
 	}
 
 	// Autospell when attacking
@@ -266,19 +266,18 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 						&& rnd() % 100 <= skill * 4)
 						skill_castend_damage_id(src, bl, SK_TF_SNATCH, skill, tick, 0, true);
 					
-					if (sc && sc->data[SC_PYROCLASTIC] && ((rnd() % 100) <= sc->data[SC_PYROCLASTIC]->val3))
-						skill_castend_pos2(src, bl->x, bl->y, SK_BS_HAMMERFALL, sc->data[SC_PYROCLASTIC]->val1, tick, 0);
+					
 				}
 
 				if (sc) {
 					struct status_change_entry *sce;
 					// Enchant Poison gives a chance to poison attacked enemies
-					if ((sce = sc->data[SC_ENCPOISON])) //Don't use sc_start since chance comes in 1/10000 rate.
-						status_change_start(src, bl, SC_POISON, sce->val2, sce->val1, src->id, 0, 0,
+					if ((sce = sc->data[STATUS_ENCHANTPOISON])) //Don't use sc_start since chance comes in 1/10000 rate.
+						status_change_start(src, bl, STATUS_POISON, sce->val2, sce->val1, src->id, 0, 0,
 							skill_get_time2(SK_AS_ENCHANTPOISON, sce->val1), SCSTART_NONE);
 					// Enchant Deadly Poison gives a chance to deadly poison attacked enemies
-					if ((sce = sc->data[SC_EDP]))
-						sc_start4(src, bl, SC_DPOISON, sce->val2, sce->val1, src->id, 0, 0,
+					if ((sce = sc->data[STATUS_ENCHANTDEADLYPOISON]))
+						sc_start4(src, bl, STATUS_DPOISON, sce->val2, sce->val1, src->id, 0, 0,
 							skill_get_time2(SK_EX_ENCHANTDEADLYPOISON, sce->val1));
 
 					
@@ -375,7 +374,7 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 			break;
 		case SK_MO_PALMSTRIKE:
 			clif_specialeffect(bl, EF_DECAGILITY, AREA);
-			sc_start(src, bl, SC_DECREASEAGI, 100, -50, skill_get_time(skill_id, skill_lv));
+			sc_start(src, bl, STATUS_DECREASEAGI, 100, -50, skill_get_time(skill_id, skill_lv));
 			break;
 		case SK_SO_SHADOWBOMB:
 			WizardAdditionalEffectsCalculator::apply_shadow_bomb_additional_effect(src, bl, skill_lv);
@@ -391,7 +390,7 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 			int percentage = rand()%(100) + 1;
 			int margin = skill_lv*2;
 			if (percentage <= margin) {
-				status_change_start(src, bl, SC_COMA, 10000, skill_lv, 0, 0, 0, skill_lv * 2000, SCSTART_NONE);
+				status_change_start(src, bl, STATUS_COMA, 10000, skill_lv, 0, 0, 0, skill_lv * 2000, SCSTART_NONE);
 				clif_specialeffect(bl, EF_BLEEDING, AREA);
 			}
 			break;
@@ -444,11 +443,6 @@ void SkillAdditionalEffects::skill_trigger_status_even_by_blocked_damage(struct 
 				type = it.sc;
 				time = it.duration;
 
-				if (it.flag&ATF_TARGET)
-					status_change_start(src, bl, type, rate, 7, 0, (type == SC_BURNING) ? src->id : 0, 0, time, SCSTART_NONE);
-
-				if (it.flag&ATF_SELF)
-					status_change_start(src, src, type, rate, 7, 0, (type == SC_BURNING) ? src->id : 0, 0, time, SCSTART_NONE);
 			}
 		}
 
@@ -484,8 +478,8 @@ bool skill_strip_equip2(struct block_list *src, struct block_list *target, uint1
 		return false;
 
 	const int pos[5] = { EQP_WEAPON, EQP_SHIELD, EQP_ARMOR, EQP_HELM, EQP_ACC };
-	const enum sc_type sc_atk[5] = { SC_STRIPWEAPON, SC_STRIPSHIELD, SC_STRIPARMOR, SC_STRIPHELM, SC__STRIPACCESSORY };
-	const enum sc_type sc_def[5] = { SC_CP_WEAPON, SC_CP_SHIELD, SC_CP_ARMOR, SC_CP_HELM, SC_NONE };
+	const enum sc_type sc_atk[5] = { STATUS_STRIPWEAPON, STATUS_STRIPSHIELD, STATUS_STRIPARMOR, STATUS_STRIPHELM, STATUS_STRIPACCESSORY };
+	const enum sc_type sc_def[5] = { STATUS_CP_WEAPON, STATUS_CP_SHIELD, STATUS_CP_ARMOR, STATUS_CP_HELM, STATUS_NONE };
 	struct status_data *sstatus = status_get_status_data(src), *tstatus = status_get_status_data(target);
 	int rate, time, location, mod = 100;
 
@@ -547,7 +541,7 @@ bool skill_strip_equip2(struct block_list *src, struct block_list *target, uint1
 	}
 
 	for (uint8 i = 0; i < ARRAYLENGTH(pos); i++) {
-		if (location&pos[i] && sc_def[i] > SC_NONE && tsc->data[sc_def[i]])
+		if (location&pos[i] && sc_def[i] > STATUS_NONE && tsc->data[sc_def[i]])
 			location &= ~pos[i];
 	}
 	if (!location)

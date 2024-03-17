@@ -117,7 +117,7 @@ int SwordsmanSkillAtkRatioCalculator::calculate_spear_stab_atk_ratio(int skill_l
 
 	target_status = status_get_sc(target);
 
-	if (target_status->data[SC_BLEEDING]) {
+	if (target_status->data[STATUS_BLEEDING]) {
 		return calculate_spear_stab_bleeding_atk_ratio(skill_lv);
 	}
 	return calculate_spear_stab_normal_atk_ratio(skill_lv);

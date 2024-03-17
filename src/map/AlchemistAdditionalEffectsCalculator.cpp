@@ -10,7 +10,7 @@ void AlchemistAdditionalEffectsCalculator::apply_acid_terror_additional_effect(s
 	}else {
 		int rate = rnd() % 100;
 		if (rate <= (2*skill_lv)) {
-			sc_start(src, bl, SC_INCDEFRATE, 100, -30, 10000);
+			sc_start(src, bl, STATUS_INCDEFRATE, 100, -30, 10000);
 			clif_emotion(bl, ET_HUK);
 		}
 	}
@@ -25,7 +25,7 @@ void AlchemistAdditionalEffectsCalculator::apply_bomb_additional_effect(struct b
 	}else {
 		int rate = rnd() % 100;
 		if (rate <= (2*skill_lv)) {
-			sc_start(src, bl, SC_INCATKRATE, 100, -30, 10000);
+			sc_start(src, bl, STATUS_INCATKRATE, 100, -30, 10000);
 			clif_emotion(bl, ET_HUK);
 		}	
 	}

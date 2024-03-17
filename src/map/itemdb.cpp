@@ -687,20 +687,20 @@ uint64 ItemDatabase::parseBodyNode(const YAML::Node &node) {
 			std::string status_constant = "SC_" + status;
 			int64 constant;
 
-			if (!script_get_constant(status_constant.c_str(), &constant) || constant < SC_NONE || constant >= SC_MAX) {
-				this->invalidWarning(delayNode[status], "Invalid item delay status %s, defaulting to SC_NONE.\n", status.c_str());
-				constant = SC_NONE;
+			if (!script_get_constant(status_constant.c_str(), &constant) || constant < STATUS_NONE || constant >= SC_MAX) {
+				this->invalidWarning(delayNode[status], "Invalid item delay status %s, defaulting to STATUS_NONE.\n", status.c_str());
+				constant = STATUS_NONE;
 			}
 
 			item->delay.sc = static_cast<sc_type>(constant);
 		} else {
 			if (!exists)
-				item->delay.sc = SC_NONE;
+				item->delay.sc = STATUS_NONE;
 		}
 	} else {
 		if (!exists) {
 			item->delay.duration = 0;
-			item->delay.sc = SC_NONE;
+			item->delay.sc = STATUS_NONE;
 		}
 	}
 

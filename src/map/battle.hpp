@@ -482,8 +482,8 @@ struct Battle_Config
 	int custom_cell_stack_limit; // [Skotlex]
 	int skill_caster_check; // [Skotlex]
 	int sc_castcancel; // [Skotlex]
-	int pc_sc_def_rate; // [Skotlex]
-	int mob_sc_def_rate;
+	int pc_STATUS_DEF_RATE; // [Skotlex]
+	int mob_STATUS_DEF_RATE;
 	int pc_max_sc_def;
 	int mob_max_sc_def;
 
