@@ -23,7 +23,6 @@
 
 #include "atcommand.hpp"
 #include "battle.hpp"
-#include "cashshop.hpp"
 #include "channel.hpp"
 #include "chat.hpp"
 #include "chrif.hpp"
@@ -4814,7 +4813,6 @@ void do_final(void){
 	do_final_unit();
 	do_final_duel();
 	do_final_elemental();
-	do_final_cashshop();
 	do_final_channel(); //should be called after final guild
 	do_final_vending();
 	do_final_buyingstore();
@@ -5126,7 +5124,6 @@ int do_init(int argc, char *argv[])
 	do_init_script();
 	do_init_itemdb();
 	do_init_channel();
-	do_init_cashshop();
 	do_init_skill();
 	do_init_mob();
 	do_init_pc();

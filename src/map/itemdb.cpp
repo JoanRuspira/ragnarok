@@ -14,7 +14,6 @@
 #include "../common/utilities.hpp"
 
 #include "battle.hpp" // struct battle_config
-#include "cashshop.hpp"
 #include "clif.hpp"
 #include "intif.hpp"
 #include "log.hpp"
@@ -2704,7 +2703,6 @@ void itemdb_reload(void) {
 
 	// read new data
 	itemdb_read();
-	cashshop_reloaddb();
 
 	if (battle_config.feature_roulette)
 		itemdb_parse_roulette_db();

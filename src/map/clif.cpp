@@ -26,7 +26,6 @@
 
 #include "atcommand.hpp"
 #include "battle.hpp"
-#include "cashshop.hpp"
 #include "channel.hpp"
 #include "chat.hpp"
 #include "chrif.hpp"
@@ -16735,88 +16734,19 @@ void clif_parse_CashShopReqTab(int fd, struct map_session_data *sd) {
 
 //08ca <len>.W <itemcount> W <tabcode>.W (ZC_ACK_SCHEDULER_CASHITEM)
 void clif_cashshop_list( struct map_session_data* sd ){
-	nullpo_retv( sd );
+	
 
-	int fd = sd->fd;
-
-	if( !session_isActive( fd ) ){
-		return;
-	}
-
-	for( int tab = CASHSHOP_TAB_NEW; tab < CASHSHOP_TAB_MAX; tab++ ){
-		// Skip empty tabs, the client only expects filled ones
-		if( cash_shop_items[tab].count == 0 ){
-			continue;
-		}
-
-		int len = sizeof( struct PACKET_ZC_ACK_SCHEDULER_CASHITEM ) + ( cash_shop_items[tab].count * sizeof( struct PACKET_ZC_ACK_SCHEDULER_CASHITEM_sub ) );
-		WFIFOHEAD( fd, len );
-		struct PACKET_ZC_ACK_SCHEDULER_CASHITEM *p = (struct PACKET_ZC_ACK_SCHEDULER_CASHITEM *)WFIFOP( fd, 0 );
-
-		p->packetType = 0x8ca;
-		p->packetLength = len;
-		p->count = cash_shop_items[tab].count;
-		p->tabNum = tab;
-
-		for( int i = 0; i < cash_shop_items[tab].count; i++ ){
-			p->items[i].itemId = client_nameid( cash_shop_items[tab].item[i]->nameid );
-			p->items[i].price = cash_shop_items[tab].item[i]->price;
-		}
-
-		WFIFOSET( fd, len );
-	}
 }
 
 void clif_parse_cashshop_list_request( int fd, struct map_session_data* sd ){
-	if( !sd->status.cashshop_sent ) {
-		clif_cashshop_list( sd );
-#if PACKETVER_SUPPORTS_SALES
-		sale_notify_login(sd);
-#endif
-		sd->status.cashshop_sent = true;
-	}
+	
 }
 
 /// List of items offered in a cash shop (ZC_PC_CASH_POINT_ITEMLIST).
 /// 0287 <packet len>.W <cash point>.L { <sell price>.L <discount price>.L <item type>.B <name id>.W }*
 /// 0287 <packet len>.W <cash point>.L <kafra point>.L { <sell price>.L <discount price>.L <item type>.B <name id>.W }* (PACKETVER >= 20070711)
 void clif_cashshop_show( struct map_session_data *sd, struct npc_data *nd ){
-	nullpo_retv( sd );
-	nullpo_retv( nd );
-
-	int fd = sd->fd;
-
-	if( !session_isActive( fd ) ){
-		return;
-	}
-
-	sd->npc_shopid = nd->bl.id;
-
-	int cost[2] = { 0, 0 };
-
-	npc_shop_currency_type( sd, nd, cost, true );
-
-	uint16 len = sizeof( struct PACKET_ZC_PC_CASH_POINT_ITEMLIST ) + nd->u.shop.count * sizeof( struct PACKET_ZC_PC_CASH_POINT_ITEMLIST_sub );
-	WFIFOHEAD( fd, len );
-	struct PACKET_ZC_PC_CASH_POINT_ITEMLIST* p = (struct PACKET_ZC_PC_CASH_POINT_ITEMLIST *)WFIFOP( fd, 0 );
-
-	p->packetType = 0x287;
-	p->packetLength = len;
-	p->cashPoints = cost[0];
-#if PACKETVER >= 20070711
-	p->kafraPoints = cost[1];
-#endif
-
-	for( int i = 0; i < nd->u.shop.count; i++ ) {
-		struct item_data* id = itemdb_search( nd->u.shop.shop_item[i].nameid );
-
-		p->items[i].price = nd->u.shop.shop_item[i].value;
-		p->items[i].discountPrice = nd->u.shop.shop_item[i].value; // Discount Price
-		p->items[i].itemType = itemtype( id->nameid );
-		p->items[i].itemId = client_nameid( id->nameid );
-	}
-
-	WFIFOSET( fd, len );
+	
 }
 
 /// Cashshop Buy Ack (ZC_PC_CASH_POINT_UPDATE).
@@ -16834,46 +16764,7 @@ void clif_cashshop_show( struct map_session_data *sd, struct npc_data *nd ){
 ///     8 = Some items could not be purchased. (ERROR_TYPE_PURCHASE_FAIL)
 void clif_cashshop_ack(struct map_session_data* sd, int error)
 {
-	int fd, cost[2] = { 0, 0 };
-	struct npc_data *nd;
 
-	nullpo_retv(sd);
-
-	fd = sd->fd;
-	nd = map_id2nd(sd->npc_shopid);
-
-	npc_shop_currency_type(sd, nd, cost, false);
-
-	WFIFOHEAD(fd, packet_len(0x289));
-	WFIFOW(fd,0) = 0x289;
-	WFIFOL(fd,2) = cost[0];
-#if PACKETVER < 20070711
-	WFIFOW(fd,6) = TOW(error);
-#else
-	WFIFOL(fd,6) = cost[1];
-	WFIFOW(fd,10) = TOW(error);
-#endif
-	WFIFOSET(fd, packet_len(0x289));
-}
-
-void clif_cashshop_result( struct map_session_data *sd, t_itemid item_id, uint16 result ){
-#if PACKETVER_MAIN_NUM >= 20101123 || PACKETVER_RE_NUM >= 20120328 || defined( PACKETVER_ZERO )
-	nullpo_retv( sd );
-
-	struct PACKET_ZC_SE_PC_BUY_CASHITEM_RESULT packet;
-
-	packet.packetType = 0x849;
-	if( item_id != 0 ){
-		packet.itemId = client_nameid( item_id );
-	}else{
-		packet.itemId = 0;
-	}
-	packet.result = result;
-	packet.cashPoints = sd->cashPoints;
-	packet.kafraPoints = sd->kafraPoints;
-
-	clif_send( &packet, sizeof( struct PACKET_ZC_SE_PC_BUY_CASHITEM_RESULT ), &sd->bl, SELF );
-#endif
 }
 
 /// Request to buy item(s) from cash shop.
@@ -16881,44 +16772,13 @@ void clif_cashshop_result( struct map_session_data *sd, t_itemid item_id, uint16
 /// 0288 <name id>.W <amount>.W <kafra points>.L (PACKETVER >= 20070711)
 /// 0288 <packet len>.W <kafra points>.L <count>.W { <amount>.W <name id>.W }.4B*count (PACKETVER >= 20100803)
 void clif_parse_npccashshop_buy( int fd, struct map_session_data *sd ){
-	nullpo_retv( sd );
-
-	if( sd->state.trading || !sd->npc_shopid ){
-		clif_cashshop_ack( sd, 1 );
-		return;
-	}
-
-	struct PACKET_CZ_PC_BUY_CASH_POINT_ITEM* p = (struct PACKET_CZ_PC_BUY_CASH_POINT_ITEM *)RFIFOP( fd, 0 );
-
-#if PACKETVER < 20070711
-	clif_cashshop_ack( sd, npc_cashshop_buy( sd, p->itemId, p->amount, 0 ) );
-#elif PACKETVER < 20101116
-	clif_cashshop_ack( sd, npc_cashshop_buy( sd, p->itemId, p->amount, p->kafraPoints ) );
-#else
-	int s_itl = sizeof( struct PACKET_CZ_PC_BUY_CASH_POINT_ITEM_sub );
-
-	if( p->packetLength < sizeof( struct PACKET_CZ_PC_BUY_CASH_POINT_ITEM ) || p->packetLength != sizeof( struct PACKET_CZ_PC_BUY_CASH_POINT_ITEM ) + p->count * s_itl ){
-		ShowWarning( "Player %u sent incorrect cash shop buy packet (len %u:%" PRIdPTR ")!\n", sd->status.char_id, p->packetLength, sizeof( struct PACKET_CZ_PC_BUY_CASH_POINT_ITEM ) + p->count * s_itl );
-		return;
-	}
-
-	clif_cashshop_ack( sd, npc_cashshop_buylist( sd, p->kafraPoints, p->count, p->items ) );
-#endif
+	
 }
 
 /// Request to buy item(s) from cash shop.
 /// 0848 <packet len>.W <count>.W <packet len>.W <kafra points>.L <count>.W { <amount>.W <name id>.W <tab>.W }.6B*count (CZ_SE_PC_BUY_CASHITEM_LIST)
 void clif_parse_cashshop_buy( int fd, struct map_session_data *sd ){
-	struct PACKET_CZ_SE_PC_BUY_CASHITEM_LIST* p = (struct PACKET_CZ_SE_PC_BUY_CASHITEM_LIST*)RFIFOP( fd, 0 );
-
-	int s_itl = sizeof( struct PACKET_CZ_SE_PC_BUY_CASHITEM_LIST_sub );
-
-	if( p->packetLength < sizeof( struct PACKET_CZ_SE_PC_BUY_CASHITEM_LIST ) || p->packetLength != sizeof( struct PACKET_CZ_SE_PC_BUY_CASHITEM_LIST ) + p->count * s_itl ){
-		ShowWarning( "Player %u sent incorrect cash shop buy packet (len %u:%" PRIdPTR ")!\n", sd->status.char_id, p->packetLength, sizeof( struct PACKET_CZ_SE_PC_BUY_CASHITEM_LIST ) + p->count * s_itl );
-		return;
-	}
-
-	cashshop_buylist( sd, p->kafraPoints, p->count, p->items );
+	
 }
 
 /// Adoption System
@@ -20629,64 +20489,25 @@ void clif_hat_effect_single( struct map_session_data* sd, uint16 effectId, bool 
 /// Notify the client that a sale has started
 /// 09b2 <item id>.W <remaining time>.L (ZC_NOTIFY_BARGAIN_SALE_SELLING)
 void clif_sale_start( struct sale_item_data* sale_item, struct block_list* bl, enum send_target target ){
-#if PACKETVER_SUPPORTS_SALES
-	struct PACKET_ZC_NOTIFY_BARGAIN_SALE_SELLING p;
 
-	p.packetType = HEADER_ZC_NOTIFY_BARGAIN_SALE_SELLING;
-	p.itemId = client_nameid( sale_item->nameid );
-	p.remainingTime = (uint32)(sale_item->end - time(NULL)); // time in S
-
-	clif_send( &p, sizeof( p ), bl, target );
-#endif
 }
 
 /// Notify the client that a sale has ended
 /// 09b3 <item id>.W (ZC_NOTIFY_BARGAIN_SALE_CLOSE)
 void clif_sale_end( struct sale_item_data* sale_item, struct block_list* bl, enum send_target target ){
-#if PACKETVER_SUPPORTS_SALES
-	struct PACKET_ZC_NOTIFY_BARGAIN_SALE_CLOSE p;
 
-	p.packetType = HEADER_ZC_NOTIFY_BARGAIN_SALE_CLOSE;
-	p.itemId = client_nameid( sale_item->nameid );
-
-	clif_send( &p, sizeof( p ), bl, target );
-#endif
 }
 
 /// Update the remaining amount of a sale item.
 /// 09c4 <item id>.W <amount>.L (ZC_ACK_COUNT_BARGAIN_SALE_ITEM)
 void clif_sale_amount( struct sale_item_data* sale_item, struct block_list* bl, enum send_target target ){
-#if PACKETVER_SUPPORTS_SALES
-	struct PACKET_ZC_ACK_COUNT_BARGAIN_SALE_ITEM p;
 
-	p.packetType = HEADER_ZC_ACK_COUNT_BARGAIN_SALE_ITEM;
-	p.itemId = client_nameid( sale_item->nameid );
-	p.amount = sale_item->amount;
-
-	clif_send( &p, sizeof( p ), bl, target );
-#endif
 }
 
 /// The client requested a refresh of the current remaining count of a sale item
 /// 09ac <account id>.L <item id>.W (CZ_REQ_CASH_BARGAIN_SALE_ITEM_INFO)
 void clif_parse_sale_refresh( int fd, struct map_session_data* sd ){
-#if PACKETVER_SUPPORTS_SALES
-	struct PACKET_CZ_REQ_CASH_BARGAIN_SALE_ITEM_INFO* p = (struct PACKET_CZ_REQ_CASH_BARGAIN_SALE_ITEM_INFO*)RFIFOP( fd, 0 );
 
-	struct sale_item_data* sale;
-
-	if( p->AID != sd->status.account_id ){
-		return;
-	}
-
-	sale = sale_find_item( p->itemId, true );
-
-	if( sale == NULL ){
-		return;
-	}
-
-	clif_sale_amount(sale, &sd->bl, SELF);
-#endif
 }
 
 /// Opens the sale administration window on the client
@@ -20765,23 +20586,7 @@ void clif_parse_sale_close(int fd, struct map_session_data* sd) {
 /// Reply to a item search request for item sale administration.
 /// 09ad <result>.W <item id>.W <price>.L (ZC_ACK_CASH_BARGAIN_SALE_ITEM_INFO)
 void clif_sale_search_reply( struct map_session_data* sd, struct cash_item_data* item ){
-#if PACKETVER_SUPPORTS_SALES
-	struct PACKET_ZC_ACK_CASH_BARGAIN_SALE_ITEM_INFO p;
 
-	p.packetType = HEADER_ZC_ACK_CASH_BARGAIN_SALE_ITEM_INFO;
-
-	if( item != NULL ){
-		p.result = 0;
-		p.itemId = client_nameid( item->nameid );
-		p.price = item->price;
-	}else{
-		p.result = 1;
-		p.itemId = 0;
-		p.price = 0;
-	}
-
-	clif_send( &p, sizeof( p ), &sd->bl, SELF );
-#endif
 }
 
 /// Search request for an item sale administration.
@@ -20805,16 +20610,7 @@ void clif_parse_sale_search( int fd, struct map_session_data* sd ){
 
 	id = itemdb_searchname(item_name);
 
-	if( id ){
-		int i;
-
-		for( i = 0; i < cash_shop_items[CASHSHOP_TAB_SALE].count; i++ ){
-			if( cash_shop_items[CASHSHOP_TAB_SALE].item[i]->nameid == id->nameid ){
-				clif_sale_search_reply( sd, cash_shop_items[CASHSHOP_TAB_SALE].item[i] );
-				return;
-			}
-		}
-	}
+	
 
 	// not found
 	clif_sale_search_reply( sd, NULL );
@@ -20853,7 +20649,6 @@ void clif_parse_sale_add( int fd, struct map_session_data* sd ){
 	
 	time_t endTime = p->startTime + p->hours * 60 * 60;
 
-	clif_sale_add_reply( sd, sale_add_item( p->itemId, p->amount, p->startTime, endTime ) );
 #endif
 }
 
@@ -20886,7 +20681,6 @@ void clif_parse_sale_remove( int fd, struct map_session_data* sd ){
 		return;
 	}
 
-	clif_sale_remove_reply( sd, !sale_remove_item( p->itemId ) );
 #endif
 }
 

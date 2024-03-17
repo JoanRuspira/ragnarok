@@ -236,9 +236,6 @@
     <ClInclude Include="buyingstore.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="cashshop.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="channel.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -488,9 +485,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="buyingstore.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="cashshop.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="channel.cpp">

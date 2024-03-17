@@ -178,7 +178,6 @@
     <ClInclude Include="battle.hpp" />
     <ClInclude Include="BlacksmithSkillAtkRatioCalculator.h" />
     <ClInclude Include="buyingstore.hpp" />
-    <ClInclude Include="cashshop.hpp" />
     <ClInclude Include="channel.hpp" />
     <ClInclude Include="chat.hpp" />
     <ClInclude Include="chrif.hpp" />
@@ -263,7 +262,6 @@
     <ClCompile Include="battle.cpp" />
     <ClCompile Include="BlacksmithSkillAtkRatioCalculator.cpp" />
     <ClCompile Include="buyingstore.cpp" />
-    <ClCompile Include="cashshop.cpp" />
     <ClCompile Include="channel.cpp" />
     <ClCompile Include="chat.cpp" />
     <ClCompile Include="chrif.cpp" />
