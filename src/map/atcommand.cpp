@@ -24,7 +24,6 @@
 #include "../common/utilities.hpp"
 #include "../common/utils.hpp"
 
-#include "achievement.hpp"
 #include "battle.hpp"
 #include "channel.hpp"
 #include "chat.hpp"
@@ -1559,10 +1558,6 @@ ACMD_FUNC(baselevelup)
 		status_calc_pc(sd, SCO_FORCE);
 		status_percent_heal(&sd->bl, 100, 100);
 		clif_misceffect(&sd->bl, 0);
-		for (uint32 j = sd->status.base_level - level; j <= sd->status.base_level; j++) {
-			achievement_update_objective(sd, AG_GOAL_LEVEL, 1, j);
-			achievement_update_objective(sd, AG_GOAL_STATUS, 2, j, sd->status.class_);
-		}
 		clif_displaymessage(fd, msg_txt(sd,21)); // Base level raised.
 	} else {
 		if (sd->status.base_level == 1) {
@@ -1624,8 +1619,6 @@ ACMD_FUNC(joblevelup)
 		sd->status.job_level += (unsigned int)level;
 		sd->status.skill_point += level;
 		clif_misceffect(&sd->bl, 1);
-		for (uint32 i = sd->status.job_level - level; i <= sd->status.job_level; i++)
-			achievement_update_objective(sd, AG_GOAL_LEVEL, 1, i);
 		clif_displaymessage(fd, msg_txt(sd,24)); // Job level raised.
 	} else {
 		if (sd->status.job_level == 1) {
@@ -2353,7 +2346,6 @@ ACMD_FUNC(refine)
 			clif_additem(sd, i, 1, 0);
 			pc_equipitem(sd, i, current_position);
 			clif_misceffect(&sd->bl, 3);
-			achievement_update_objective(sd, AG_ENCHANT_SUCCESS, 2, sd->inventory_data[i]->wlv, sd->inventory.u.items_inventory[i].refine);
 			count++;
 		}
 	}
@@ -2691,7 +2683,6 @@ ACMD_FUNC(param)
 		status_calc_pc(sd, SCO_FORCE);
 		clif_displaymessage(fd, msg_txt(sd,42)); // Stat changed.
 
-		achievement_update_objective(sd, AG_GOAL_STATUS, 0);
 	} else {
 		if (value < 0)
 			clif_displaymessage(fd, msg_txt(sd,41)); // Unable to decrease the number/value.
@@ -2763,8 +2754,6 @@ ACMD_FUNC(stat_all)
 	if (count > 0) { // if at least 1 stat modified
 		status_calc_pc(sd, SCO_FORCE);
 		clif_displaymessage(fd, msg_txt(sd,84)); // All stats changed!
-
-		achievement_update_objective(sd, AG_GOAL_STATUS, 0);
 	} else {
 		if (value < 0)
 			clif_displaymessage(fd, msg_txt(sd,177)); // You cannot decrease that stat anymore.
@@ -4062,9 +4051,6 @@ ACMD_FUNC(reload) {
 	} else if (strstr(command, "instancedb") || strncmp(message, "instancedb", 4) == 0) {
 		if (instance_db.reload())
 			clif_displaymessage(fd, msg_txt(sd,516)); // Instance database has been reloaded.
-	} else if (strstr(command, "achievementdb") || strncmp(message, "achievementdb", 4) == 0) {
-		achievement_db_reload();
-		clif_displaymessage(fd, msg_txt(sd,771)); // Achievement database has been reloaded.
 	} else if (strstr(command, "attendancedb") || strncmp(message, "attendancedb", 4) == 0) {
 		attendance_db.reload();
 		clif_displaymessage(fd, msg_txt(sd, 795)); // Attendance database has been reloaded.

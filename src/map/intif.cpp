@@ -13,7 +13,6 @@
 #include "../common/strlib.hpp"
 #include "../common/timer.hpp"
 
-#include "achievement.hpp"
 #include "battle.hpp"
 #include "chrif.hpp"
 #include "clan.hpp"
@@ -2157,61 +2156,7 @@ void intif_request_achievements(uint32 char_id)
  */
 void intif_parse_achievements(int fd)
 {
-	uint32 char_id = RFIFOL(fd, 4), num_received = (RFIFOW(fd, 2) - 8) / sizeof(struct achievement);
-	struct map_session_data *sd = map_charid2sd(char_id);
-
-	if (!sd) // User not online anymore
-		return;
-
-	if (num_received == 0) {
-		if (sd->achievement_data.achievements) {
-			aFree(sd->achievement_data.achievements);
-			sd->achievement_data.achievements = NULL;
-			sd->achievement_data.incompleteCount = 0;
-			sd->achievement_data.count = 0;
-		}
-	} else {
-		struct achievement *received = (struct achievement *)RFIFOP(fd, 8);
-		int i, k = num_received;
-
-		if (sd->achievement_data.achievements)
-			RECREATE(sd->achievement_data.achievements, struct achievement, num_received);
-		else
-			CREATE(sd->achievement_data.achievements, struct achievement, num_received);
-
-		for (i = 0; i < num_received; i++) {
-			std::shared_ptr<s_achievement_db> adb = achievement_db.find( received[i].achievement_id );
-
-			if (!adb) {
-				ShowError("intif_parse_achievements: Achievement %d not found in achievement_db.\n", received[i].achievement_id);
-				continue;
-			}
-
-			received[i].score = adb->score;
-
-			if (received[i].completed == 0) // Insert at the beginning
-				memcpy(&sd->achievement_data.achievements[sd->achievement_data.incompleteCount++], &received[i], sizeof(struct achievement));
-			else // Insert at the end
-				memcpy(&sd->achievement_data.achievements[--k], &received[i], sizeof(struct achievement));
-			sd->achievement_data.count++;
-		}
-		if (sd->achievement_data.incompleteCount < k) {
-			// sd->achievement_data.incompleteCount and k didn't meet in the middle: some entries were skipped
-			if (k < num_received) // Move the entries at the end to fill the gap
-				memmove(&sd->achievement_data.achievements[k], &sd->achievement_data.achievements[sd->achievement_data.incompleteCount], sizeof(struct achievement) * (num_received - k));
-			sd->achievement_data.achievements = (struct achievement *)aRealloc(sd->achievement_data.achievements, sizeof(struct achievement) * sd->achievement_data.count);
-		}
-	}
-
-	// Check all conditions and counters on login
-	for( int group = AG_NONE + 1; group < AG_MAX; group++ ){
-		achievement_update_objective( sd, static_cast<e_achievement_group>( group ), 0 );
-	}
-
-	achievement_level(sd, false); // Calculate level info but don't give any AG_GOAL_ACHIEVE achievements
-	achievement_get_titles(sd->status.char_id); // Populate the title list for completed achievements
-	clif_achievement_update(sd, NULL, 0);
-	clif_achievement_list_all(sd);
+	
 }
 
 /**
@@ -2263,34 +2208,14 @@ int intif_achievement_save(struct map_session_data *sd)
  * @param fd : char-serv link
  */
 void intif_parse_achievementreward(int fd){
-	struct map_session_data *sd = map_charid2sd(RFIFOL(fd,2));
 
-	// User not online anymore
-	if( !sd ){
-		return;
-	}
-
-	achievement_get_reward(sd, RFIFOL(fd, 6), RFIFOL(fd, 10));
 }
 
 /**
  * Request the achievement rewards from the inter server.
  */
 int intif_achievement_reward(struct map_session_data *sd, struct s_achievement_db *adb){
-	if( CheckForCharServer() ){
-		return 0;
-	}
-
-	WFIFOHEAD(inter_fd, 16+NAME_LENGTH+ACHIEVEMENT_NAME_LENGTH);
-	WFIFOW(inter_fd, 0) = 0x3064;
-	WFIFOL(inter_fd, 2) = sd->status.char_id;
-	WFIFOL(inter_fd, 6) = adb->achievement_id;
-	WFIFOL(inter_fd, 10) = adb->rewards.nameid;
-	WFIFOW(inter_fd, 14) = adb->rewards.amount;
-	safestrncpy(WFIFOCP(inter_fd, 16), sd->status.name, NAME_LENGTH);
-	safestrncpy(WFIFOCP(inter_fd, 16+NAME_LENGTH), adb->name.c_str(), ACHIEVEMENT_NAME_LENGTH);
-	WFIFOSET(inter_fd, 16+NAME_LENGTH+ACHIEVEMENT_NAME_LENGTH);
-
+	
 	return 1;
 }
 

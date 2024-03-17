@@ -164,7 +164,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="achievement.hpp" />
     <ClInclude Include="AcolyteAdditionalEffectsCalculator.h" />
     <ClInclude Include="AcolyteSkillAtkRatioCalculator.h" />
     <ClInclude Include="AlchemistAdditionalEffectsCalculator.h" />
@@ -251,7 +250,6 @@
     <ClInclude Include="WizardSkillAttackRatioCalculator.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="achievement.cpp" />
     <ClCompile Include="AcolyteAdditionalEffectsCalculator.cpp" />
     <ClCompile Include="AcolyteSkillAtkRatioCalculator.cpp" />
     <ClCompile Include="AlchemistAdditionalEffectsCalculator.cpp" />

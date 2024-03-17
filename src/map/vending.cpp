@@ -11,7 +11,6 @@
 #include "../common/strlib.hpp"
 #include "../common/timer.hpp"  // DIFF_TICK
 
-#include "achievement.hpp"
 #include "atcommand.hpp"
 #include "battle.hpp"
 #include "buyingstore.hpp"
@@ -214,7 +213,6 @@ void vending_purchasereq(struct map_session_data* sd, int aid, int uid, const ui
 	}
 
 	pc_payzeny(sd, (int)z, LOG_TYPE_VENDING, vsd);
-	achievement_update_objective(sd, AG_SPEND_ZENY, 1, (int)z);
 	z = vending_calc_tax(sd, z);
 	pc_getzeny(vsd, (int)z, LOG_TYPE_VENDING, sd);
 

@@ -32,7 +32,6 @@
 #endif
 
 // Only for constants - do not use functions of it or linking will fail
-#include "../map/achievement.hpp"
 #include "../map/battle.hpp"
 #include "../map/battleground.hpp"
 #include "../map/channel.hpp"

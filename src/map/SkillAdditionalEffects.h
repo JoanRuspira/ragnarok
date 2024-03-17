@@ -15,7 +15,6 @@
 #include "battle.hpp"
 #include "unit.hpp"
 #include "clif.hpp"
-#include "achievement.hpp"
 #include "battleground.hpp"
 #include "chrif.hpp"
 #include "date.hpp"

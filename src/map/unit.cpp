@@ -15,7 +15,6 @@
 #include "../common/socket.hpp"
 #include "../common/timer.hpp"
 
-#include "achievement.hpp"
 #include "battle.hpp"
 #include "battleground.hpp"
 #include "channel.hpp"
@@ -3194,8 +3193,7 @@ int unit_free(struct block_list *bl, clr_type clrtype)
 			sd->hatEffects.clear();
 #endif
 
-			if (sd->achievement_data.achievements)
-				achievement_free(sd);
+	
 
 			// Clearing...
 			if (sd->bonus_script.head)

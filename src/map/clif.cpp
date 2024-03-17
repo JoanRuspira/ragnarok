@@ -24,7 +24,6 @@
 #include "../common/utilities.hpp"
 #include "../common/utils.hpp"
 
-#include "achievement.hpp"
 #include "atcommand.hpp"
 #include "battle.hpp"
 #include "battleground.hpp"
@@ -15040,7 +15039,6 @@ void clif_parse_FriendsListReply(int fd, struct map_session_data *sd)
 		safestrncpy(f_sd->status.friends[i].name, sd->status.name, NAME_LENGTH);
 		clif_friendslist_reqack(f_sd, sd, 0);
 
-		achievement_update_objective(f_sd, AG_ADD_FRIEND, 1, i + 1);
 
 		if (battle_config.friend_auto_add) {
 			// Also add f_sd to sd's friendlist.
@@ -15060,7 +15058,6 @@ void clif_parse_FriendsListReply(int fd, struct map_session_data *sd)
 			safestrncpy(sd->status.friends[i].name, f_sd->status.name, NAME_LENGTH);
 			clif_friendslist_reqack(sd, f_sd, 0);
 
-			achievement_update_objective(sd, AG_ADD_FRIEND, 1, i + 1);
 		}
 	}
 }
@@ -21063,40 +21060,7 @@ void clif_parse_sale_remove( int fd, struct map_session_data* sd ){
  */
 void clif_achievement_list_all(struct map_session_data *sd)
 {
-	nullpo_retv(sd);
-
-	if (!battle_config.feature_achievement) {
-		clif_messagecolor(&sd->bl,color_table[COLOR_RED],msg_txt(sd,772),false,SELF); // Achievements are disabled.
-		return;
-	}
-
-	int count = sd->achievement_data.count; // All achievements should be sent to the client
-
-	if (count == 0)
-		return;
-
-	int len = (50 * count) + 22;
-	int fd = sd->fd;
-	int *info = achievement_level(sd, true);
-
-	WFIFOHEAD(fd,len);
-	WFIFOW(fd, 0) = 0xa23;
-	WFIFOW(fd, 2) = len;
-	WFIFOL(fd, 4) = count; // Amount of achievements the player has in their list (started/completed)
-	WFIFOL(fd, 8) = sd->achievement_data.total_score; // Top number
-	WFIFOW(fd, 12) = sd->achievement_data.level; // Achievement Level (gold circle)
-	WFIFOL(fd, 14) = info[0]; // Achievement EXP (left number in bar)
-	WFIFOL(fd, 18) = info[1]; // Achievement EXP TNL (right number in bar)
-
-	for (int i = 0; i < count; i++) {
-		WFIFOL(fd, i * 50 + 22) = (uint32)sd->achievement_data.achievements[i].achievement_id;
-		WFIFOB(fd, i * 50 + 26) = (uint32)sd->achievement_data.achievements[i].completed > 0;
-		for (int j = 0; j < MAX_ACHIEVEMENT_OBJECTIVES; j++) 
-			WFIFOL(fd, (i * 50) + 27 + (j * 4)) = (uint32)sd->achievement_data.achievements[i].count[j];
-		WFIFOL(fd, i * 50 + 67) = (uint32)sd->achievement_data.achievements[i].completed;
-		WFIFOB(fd, i * 50 + 71) = sd->achievement_data.achievements[i].rewarded > 0;
-	}
-	WFIFOSET(fd, len);
+	
 }
 
 /**
@@ -21105,32 +21069,7 @@ void clif_achievement_list_all(struct map_session_data *sd)
  */
 void clif_achievement_update(struct map_session_data *sd, struct achievement *ach, int count)
 {
-	nullpo_retv(sd);
 
-	if (!battle_config.feature_achievement) {
-		clif_messagecolor(&sd->bl,color_table[COLOR_RED],msg_txt(sd,772),false,SELF); // Achievements are disabled.
-		return;
-	}
-
-	int fd = sd->fd;
-	int *info = achievement_level(sd, true);
-
-	WFIFOHEAD(fd, packet_len(0xa24));
-	WFIFOW(fd, 0) = 0xa24;
-	WFIFOL(fd, 2) = sd->achievement_data.total_score; // Total Achievement Points (top of screen)
-	WFIFOW(fd, 6) = sd->achievement_data.level; // Achievement Level (gold circle)
-	WFIFOL(fd, 8) = info[0]; // Achievement EXP (left number in bar)
-	WFIFOL(fd, 12) = info[1]; // Achievement EXP TNL (right number in bar)
-	if (ach) {
-		WFIFOL(fd, 16) = ach->achievement_id; // Achievement ID
-		WFIFOB(fd, 20) = ach->completed > 0; // Is it complete?
-		for (int i = 0; i < MAX_ACHIEVEMENT_OBJECTIVES; i++)
-			WFIFOL(fd, 21 + (i * 4)) = (uint32)ach->count[i]; // 1~10 pre-reqs
-		WFIFOL(fd, 61) = (uint32)ach->completed; // Epoch time
-		WFIFOB(fd, 65) = ach->rewarded > 0; // Got reward?
-	} else
-		memset(WFIFOP(fd, 16), 0, 40);
-	WFIFOSET(fd, packet_len(0xa24));
 }
 
 /**
@@ -21144,7 +21083,6 @@ void clif_parse_AchievementCheckReward(int fd, struct map_session_data *sd)
 	if( sd->achievement_data.save )
 		intif_achievement_save(sd);
 
-	achievement_check_reward(sd, RFIFOL(fd,2));
 }
 
 /**

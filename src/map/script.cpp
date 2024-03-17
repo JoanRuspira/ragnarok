@@ -31,7 +31,6 @@
 #include "../common/utilities.hpp"
 #include "../common/utils.hpp"
 
-#include "achievement.hpp"
 #include "atcommand.hpp"
 #include "battle.hpp"
 #include "battleground.hpp"
@@ -9252,7 +9251,6 @@ BUILDIN_FUNC(successrefitem) {
 		clif_additem(sd,i,1,0);
 		pc_equipitem(sd,i,ep);
 		clif_misceffect(&sd->bl,3);
-		achievement_update_objective(sd, AG_ENCHANT_SUCCESS, 2, sd->inventory_data[i]->wlv, sd->inventory.u.items_inventory[i].refine);
 		if (sd->inventory.u.items_inventory[i].refine == battle_config.blacksmith_fame_refine_threshold &&
 			sd->inventory.u.items_inventory[i].card[0] == CARD0_FORGE &&
 			sd->status.char_id == (int)MakeDWord(sd->inventory.u.items_inventory[i].card[2],sd->inventory.u.items_inventory[i].card[3]))
@@ -9302,7 +9300,6 @@ BUILDIN_FUNC(failedrefitem) {
 		clif_refine(sd->fd,1,i,sd->inventory.u.items_inventory[i].refine); //notify client of failure
 		pc_delitem(sd,i,1,0,2,LOG_TYPE_SCRIPT);
 		clif_misceffect(&sd->bl,2); 	// display failure effect
-		achievement_update_objective(sd, AG_ENCHANT_FAIL, 1, 1);
 		script_pushint(st, 1);
 		return SCRIPT_CMD_SUCCESS;
 	}
@@ -9351,7 +9348,6 @@ BUILDIN_FUNC(downrefitem) {
 		clif_additem(sd,i,1,0);
 		pc_equipitem(sd,i,ep);
 		clif_misceffect(&sd->bl,2);
-		achievement_update_objective(sd, AG_ENCHANT_FAIL, 1, sd->inventory.u.items_inventory[i].refine);
 		script_pushint(st, sd->inventory.u.items_inventory[i].refine);
 		return SCRIPT_CMD_SUCCESS;
 	}
@@ -24165,29 +24161,7 @@ BUILDIN_FUNC(unloadnpc) {
  * achievementadd(<achievement ID>{,<char ID>});
  */
 BUILDIN_FUNC(achievementadd) {
-	struct map_session_data *sd;
-	int achievement_id = script_getnum(st, 2);
-
-	if (!script_charid2sd(3, sd)) {
-		script_pushint(st, false);
-		return SCRIPT_CMD_FAILURE;
-	}
-
-	if (achievement_db.exists(achievement_id) == false) {
-		ShowWarning("buildin_achievementadd: Achievement '%d' doesn't exist.\n", achievement_id);
-		script_pushint(st, false);
-		return SCRIPT_CMD_FAILURE;
-	}
-
-	if( !sd->state.pc_loaded ){
-		// Simply ignore it on the first call, because the status will be recalculated after loading anyway
-		return SCRIPT_CMD_SUCCESS;
-	}
-
-	if (achievement_add(sd, achievement_id))
-		script_pushint(st, true);
-	else
-		script_pushint(st, false);
+	
 	return SCRIPT_CMD_SUCCESS;
 }
 
@@ -24197,29 +24171,7 @@ BUILDIN_FUNC(achievementadd) {
  * Just for Atemo. ;)
  */
 BUILDIN_FUNC(achievementremove) {
-	struct map_session_data *sd;
-	int achievement_id = script_getnum(st, 2);
-
-	if (!script_charid2sd(3, sd)) {
-		script_pushint(st, false);
-		return SCRIPT_CMD_FAILURE;
-	}
-
-	if (achievement_db.exists(achievement_id) == false) {
-		ShowWarning("buildin_achievementremove: Achievement '%d' doesn't exist.\n", achievement_id);
-		script_pushint(st, false);
-		return SCRIPT_CMD_SUCCESS;
-	}
-
-	if( !sd->state.pc_loaded ){
-		// Simply ignore it on the first call, because the status will be recalculated after loading anyway
-		return SCRIPT_CMD_SUCCESS;
-	}
-
-	if (achievement_remove(sd, achievement_id))
-		script_pushint(st, true);
-	else
-		script_pushint(st, false);
+	
 	return SCRIPT_CMD_SUCCESS;
 }
 
@@ -24228,27 +24180,7 @@ BUILDIN_FUNC(achievementremove) {
  * achievementinfo(<achievement ID>,<type>{,<char ID>});
  */
 BUILDIN_FUNC(achievementinfo) {
-	struct map_session_data *sd;
-	int achievement_id = script_getnum(st, 2);
-
-	if (!script_charid2sd(4, sd)) {
-		script_pushint(st, false);
-		return SCRIPT_CMD_FAILURE;
-	}
-
-	if (achievement_db.exists(achievement_id) == false) {
-		ShowWarning("buildin_achievementinfo: Achievement '%d' doesn't exist.\n", achievement_id);
-		script_pushint(st, false);
-		return SCRIPT_CMD_FAILURE;
-	}
-
-	if( !sd->state.pc_loaded ){
-		script_pushint(st, false);
-		// Simply ignore it on the first call, because the status will be recalculated after loading anyway
-		return SCRIPT_CMD_SUCCESS;
-	}
-
-	script_pushint(st, achievement_check_progress(sd, achievement_id, script_getnum(st, 3)));
+	
 	return SCRIPT_CMD_SUCCESS;
 }
 
@@ -24257,30 +24189,7 @@ BUILDIN_FUNC(achievementinfo) {
  * achievementcomplete(<achievement ID>{,<char ID>});
  */
 BUILDIN_FUNC(achievementcomplete) {
-	struct map_session_data *sd;
-	int i, achievement_id = script_getnum(st, 2);
-
-	if (!script_charid2sd(3, sd)) {
-		script_pushint(st, false);
-		return SCRIPT_CMD_FAILURE;
-	}
-
-	if (achievement_db.exists(achievement_id) == false) {
-		ShowWarning("buildin_achievementcomplete: Achievement '%d' doesn't exist.\n", achievement_id);
-		script_pushint(st, false);
-		return SCRIPT_CMD_FAILURE;
-	}
 	
-	if( !sd->state.pc_loaded ){
-		// Simply ignore it on the first call, because the status will be recalculated after loading anyway
-		return SCRIPT_CMD_SUCCESS;
-	}
-
-	ARR_FIND(0, sd->achievement_data.count, i, sd->achievement_data.achievements[i].achievement_id == achievement_id);
-	if (i == sd->achievement_data.count)
-		achievement_add(sd, achievement_id);
-	achievement_update_achievement(sd, achievement_id, true);
-	script_pushint(st, true);
 	return SCRIPT_CMD_SUCCESS;
 }
 
@@ -24289,28 +24198,7 @@ BUILDIN_FUNC(achievementcomplete) {
  * achievementexists(<achievement ID>{,<char ID>});
  */
 BUILDIN_FUNC(achievementexists) {
-	struct map_session_data *sd;
-	int i, achievement_id = script_getnum(st, 2);
-
-	if (!script_charid2sd(3, sd)) {
-		script_pushint(st, false);
-		return SCRIPT_CMD_FAILURE;
-	}
-
-	if (achievement_db.exists(achievement_id) == false) {
-		ShowWarning("buildin_achievementexists: Achievement '%d' doesn't exist.\n", achievement_id);
-		script_pushint(st, false);
-		return SCRIPT_CMD_SUCCESS;
-	}
-
-	if( !sd->state.pc_loaded ){
-		script_pushint(st, false);
-		// Simply ignore it on the first call, because the status will be recalculated after loading anyway
-		return SCRIPT_CMD_SUCCESS;
-	}
-
-	ARR_FIND(0, sd->achievement_data.count, i, sd->achievement_data.achievements[i].achievement_id == achievement_id && sd->achievement_data.achievements[i].completed > 0 );
-	script_pushint(st, i < sd->achievement_data.count ? true : false);
+	
 	return SCRIPT_CMD_SUCCESS;
 }
 
@@ -24319,53 +24207,7 @@ BUILDIN_FUNC(achievementexists) {
  * achievementupdate(<achievement ID>,<type>,<value>{,<char ID>});
  */
 BUILDIN_FUNC(achievementupdate) {
-	struct map_session_data *sd;
-	int i, achievement_id, type, value;
 
-	achievement_id = script_getnum(st, 2);
-	type = script_getnum(st, 3);
-	value = script_getnum(st, 4);
-
-	if (!script_charid2sd(5, sd)) {
-		script_pushint(st, false);
-		return SCRIPT_CMD_FAILURE;
-	}
-
-	if (achievement_db.exists(achievement_id) == false) {
-		ShowWarning("buildin_achievementupdate: Achievement '%d' doesn't exist.\n", achievement_id);
-		script_pushint(st, false);
-		return SCRIPT_CMD_FAILURE;
-	}
-
-	if( !sd->state.pc_loaded ){
-		// Simply ignore it on the first call, because the status will be recalculated after loading anyway
-		return SCRIPT_CMD_SUCCESS;
-	}
-
-	ARR_FIND(0, sd->achievement_data.count, i, sd->achievement_data.achievements[i].achievement_id == achievement_id);
-	if (i == sd->achievement_data.count)
-		achievement_add(sd, achievement_id);
-
-	ARR_FIND(0, sd->achievement_data.count, i, sd->achievement_data.achievements[i].achievement_id == achievement_id);
-	if (i == sd->achievement_data.count) {
-		script_pushint(st, false);
-		return SCRIPT_CMD_SUCCESS;
-	}
-
-	if (type >= ACHIEVEINFO_COUNT1 && type <= ACHIEVEINFO_COUNT10)
-		sd->achievement_data.achievements[i].count[type - 1] = value;
-	else if (type == ACHIEVEINFO_COMPLETE || type == ACHIEVEINFO_COMPLETEDATE)
-		sd->achievement_data.achievements[i].completed = value;
-	else if (type == ACHIEVEINFO_GOTREWARD)
-		sd->achievement_data.achievements[i].rewarded = value;
-	else {
-		ShowWarning("buildin_achievementupdate: Unknown type '%d'.\n", type);
-		script_pushint(st, false);
-		return SCRIPT_CMD_FAILURE;
-	}
-
-	achievement_update_achievement(sd, achievement_id, false);
-	script_pushint(st, true);
 	return SCRIPT_CMD_SUCCESS;
 }
 

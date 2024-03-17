@@ -25,7 +25,6 @@
 #include "../common/utilities.hpp"
 #include "../common/utils.hpp"
 
-#include "achievement.hpp"
 #include "atcommand.hpp" // get_atcommand_level()
 #include "battle.hpp" // battle_config
 #include "battleground.hpp"
@@ -1325,10 +1324,6 @@ bool pc_adoption(struct map_session_data *p1_sd, struct map_session_data *p2_sd,
 		chrif_save(p1_sd, CSAVE_NORMAL);
 		chrif_save(p2_sd, CSAVE_NORMAL);
 		chrif_save(b_sd, CSAVE_NORMAL);
-
-		achievement_update_objective(b_sd, AG_BABY, 1, 1);
-		achievement_update_objective(p1_sd, AG_BABY, 1, 2);
-		achievement_update_objective(p2_sd, AG_BABY, 1, 2);
 
 		return true;
 	}
@@ -4907,7 +4902,6 @@ char pc_getzeny(struct map_session_data *sd, int zeny, enum e_log_pick_type type
 		clif_messagecolor(&sd->bl, color_table[COLOR_LIGHT_GREEN], output, false, SELF);
 	}
 
-	achievement_update_objective(sd, AG_GET_ZENY, 1, sd->status.zeny);
 
 	return 0;
 }
@@ -5134,8 +5128,6 @@ enum e_additem_result pc_additem(struct map_session_data *sd,struct item *item,i
 			pc_inventory_rental_add(sd, seconds);
 		}
 	}
-
-	achievement_update_objective(sd, AG_GET_ITEM, 1, id->value_sell);
 	pc_show_questinfo(sd);
 
 	return ADDITEM_SUCCESS;
@@ -7120,10 +7112,7 @@ int pc_checkbaselevelup(struct map_session_data *sd) {
 		party_send_levelup(sd);
 
 	pc_baselevelchanged(sd);
-	for (; base_level <= sd->status.base_level; base_level++) {
-		achievement_update_objective(sd, AG_GOAL_LEVEL, 1, base_level);
-		achievement_update_objective(sd, AG_GOAL_STATUS, 2, base_level, sd->status.class_);
-	}
+	
 	return 1;
 }
 
@@ -7171,9 +7160,7 @@ int pc_checkjoblevelup(struct map_session_data *sd)
 	clif_misceffect(&sd->bl,1);
 	
 	npc_script_event(sd, NPCE_JOBLVUP);
-	for (; job_level <= sd->status.job_level; job_level++)
-		achievement_update_objective(sd, AG_GOAL_LEVEL, 1, job_level);
-
+	
 	pc_show_questinfo(sd);
 	return 1;
 }
@@ -7616,7 +7603,6 @@ bool pc_statusup(struct map_session_data* sd, int type, int increase)
 	if( final_value > 255 )
 		clif_updatestatus(sd, type); // send after the 'ack' to override the truncated value
 
-	achievement_update_objective(sd, AG_GOAL_STATUS, 1, final_value);
 
 	return true;
 }
@@ -9344,7 +9330,6 @@ bool pc_jobchange(struct map_session_data *sd,int job, char upper)
 	pc_checkallowskill(sd);
 	pc_equiplookall(sd);
 	pc_show_questinfo(sd);
-	achievement_update_objective(sd, AG_JOB_CHANGE, 2, sd->status.base_level, job);
 	if( sd->status.party_id ){
 		struct party_data* p;
 		
@@ -11056,9 +11041,7 @@ bool pc_marriage(struct map_session_data *sd,struct map_session_data *dstsd)
 		return false;
 	sd->status.partner_id = dstsd->status.char_id;
 	dstsd->status.partner_id = sd->status.char_id;
-
-	achievement_update_objective(sd, AG_MARRY, 1, 1);
-	achievement_update_objective(dstsd, AG_MARRY, 1, 1);
+	 
 
 	return true;
 }
@@ -12994,7 +12977,7 @@ void pc_show_questinfo(struct map_session_data *sd) {
 		bool show = false;
 
 		for (auto &qi : nd->qi_data) {
-			if (!qi->condition || achievement_check_condition(qi->condition, sd)) {
+			if (!qi->condition) {
 				show = true;
 				// Check if need to be displayed
 				if (!sd->qi_display[i].is_active || qi->icon != sd->qi_display[i].icon || qi->color != sd->qi_display[i].color) {

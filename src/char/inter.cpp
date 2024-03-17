@@ -22,7 +22,6 @@
 #include "char_logif.hpp"
 #include "char_mapif.hpp"
 #include "inter.hpp"
-#include "int_achievement.hpp"
 #include "int_auction.hpp"
 #include "int_clan.hpp"
 #include "int_elemental.hpp"
@@ -1428,7 +1427,6 @@ int inter_parse_frommap(int fd)
 		  || inter_auction_parse_frommap(fd)
 		  || inter_quest_parse_frommap(fd)
 		  || inter_clan_parse_frommap(fd)
-		  || inter_achievement_parse_frommap(fd)
 		   )
 			break;
 		else
