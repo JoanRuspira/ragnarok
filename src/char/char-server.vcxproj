@@ -171,7 +171,6 @@
     <ClInclude Include="int_guild.hpp" />
     <ClInclude Include="int_homun.hpp" />
     <ClInclude Include="int_mail.hpp" />
-    <ClInclude Include="int_mercenary.hpp" />
     <ClInclude Include="int_party.hpp" />
     <ClInclude Include="int_pet.hpp" />
     <ClInclude Include="int_quest.hpp" />
@@ -190,7 +189,6 @@
     <ClCompile Include="int_guild.cpp" />
     <ClCompile Include="int_homun.cpp" />
     <ClCompile Include="int_mail.cpp" />
-    <ClCompile Include="int_mercenary.cpp" />
     <ClCompile Include="int_party.cpp" />
     <ClCompile Include="int_pet.cpp" />
     <ClCompile Include="int_quest.cpp" />

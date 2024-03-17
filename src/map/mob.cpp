@@ -32,7 +32,6 @@
 #include "itemdb.hpp"
 #include "log.hpp"
 #include "map.hpp"
-#include "mercenary.hpp"
 #include "npc.hpp"
 #include "party.hpp"
 #include "path.hpp"
@@ -2354,15 +2353,7 @@ void mob_log_damage(struct mob_data *md, struct block_list *src, int damage)
 				md->attacked_id = src->id;
 			break;
 		}
-		case BL_MER:
-		{
-			struct mercenary_data *mer = (TBL_MER*)src;
-			if( mer->master )
-				char_id = mer->master->status.char_id;
-			if( damage )
-				md->attacked_id = src->id;
-			break;
-		}
+		
 		case BL_PET:
 		{
 			struct pet_data *pd = (TBL_PET*)src;
@@ -3058,9 +3049,7 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 
 			
 
-			// The master or Mercenary can increase the kill count
-			if (sd->md && src && (src->type == BL_PC || src->type == BL_MER) && mob->lv > sd->status.base_level / 2)
-				mercenary_kills(sd->md);
+		
 		}
 
 		if( md->npc_event[0] && !md->state.npc_killmonster ) {

@@ -32,7 +32,6 @@
 #include "int_guild.hpp"
 #include "int_homun.hpp"
 #include "int_mail.hpp"
-#include "int_mercenary.hpp"
 #include "int_party.hpp"
 #include "int_storage.hpp"
 
@@ -358,17 +357,7 @@ int char_mmo_char_tosql(uint32 char_id, struct mmo_charstatus* p){
 			strcat(save_status, " status2");
 	}
 
-	/* Mercenary Owner */
-	if( (p->mer_id != cp->mer_id) ||
-		(p->arch_calls != cp->arch_calls) || (p->arch_faith != cp->arch_faith) ||
-		(p->spear_calls != cp->spear_calls) || (p->spear_faith != cp->spear_faith) ||
-		(p->sword_calls != cp->sword_calls) || (p->sword_faith != cp->sword_faith) )
-	{
-		if (mercenary_owner_tosql(char_id, p))
-			strcat(save_status, " mercenary");
-		else
-			errors++;
-	}
+	
 
 	//memo points
 	if( memcmp(p->memo_point, cp->memo_point, sizeof(p->memo_point)) )
@@ -1221,9 +1210,6 @@ int char_mmo_char_fromsql(uint32 char_id, struct mmo_charstatus* p, bool load_ev
 	StringBuf_AppendStr(&msg_buf, " hotkeys");
 #endif
 
-	/* Mercenary Owner DataBase */
-	mercenary_owner_fromsql(char_id, p);
-	StringBuf_AppendStr(&msg_buf, " mercenary");
 
 
 	if (charserv_config.save_log)
@@ -1647,8 +1633,7 @@ enum e_char_del_response char_delete(struct char_session_data* sd, uint32 char_i
 	if (elemental_id)
 		mapif_elemental_delete(elemental_id);
 
-	/* remove mercenary data */
-	mercenary_owner_delete(char_id);
+
 
 	/* delete char's friends list */
 	if( SQL_ERROR == Sql_Query(sql_handle, "DELETE FROM `%s` WHERE `char_id` = '%d'", schema_config.friend_db, char_id) )

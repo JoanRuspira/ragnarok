@@ -296,9 +296,6 @@
     <ClInclude Include="mapreg.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="mercenary.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="mob.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -536,9 +533,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="mapreg.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="mercenary.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="mob.cpp">

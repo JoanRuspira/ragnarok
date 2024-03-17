@@ -24,7 +24,6 @@
 #include "itemdb.hpp"
 #include "log.hpp"
 #include "map.hpp"
-#include "mercenary.hpp"
 #include "mob.hpp"
 #include "npc.hpp"
 #include "party.hpp"

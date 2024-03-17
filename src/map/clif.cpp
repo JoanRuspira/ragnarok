@@ -40,7 +40,6 @@
 #include "log.hpp"
 #include "mail.hpp"
 #include "map.hpp"
-#include "mercenary.hpp"
 #include "mob.hpp"
 #include "npc.hpp"
 #include "party.hpp"
@@ -4750,10 +4749,7 @@ void clif_getareachar_unit( struct map_session_data* sd,struct block_list *bl ){
 			clif_hat_effects(sd,bl,SELF);
 		}
 		break;
-	case BL_MER: // Devotion Effects
-		if( ((TBL_MER*)bl)->devotion_flag )
-			clif_devotion(bl, sd);
-		break;
+	
 	case BL_NPC:
 		{
 			TBL_NPC* nd = (TBL_NPC*)bl;
@@ -9776,9 +9772,6 @@ void clif_name( struct block_list* src, struct block_list *bl, send_target targe
 				case BL_HOM:
 					memcpy(packet.name, ((TBL_HOM *)bl)->homunculus.name, NAME_LENGTH);
 					break;
-				case BL_MER:
-					memcpy(packet.name, ((TBL_MER *)bl)->db->name, NAME_LENGTH);
-					break;
 				case BL_PET:
 					safestrncpy(packet.name, ((TBL_PET *)bl)->pet.name, NAME_LENGTH);
 					break;
@@ -10658,14 +10651,7 @@ void clif_parse_LoadEndAck(int fd,struct map_session_data *sd)
 			skill_unit_move(&sd->hd->bl,gettick(),1); // apply land skills immediately
 	}
 
-	if( sd->md ) {
-		if(map_addblock(&sd->md->bl))
-			return;
-		clif_spawn(&sd->md->bl);
-		clif_mercenary_info(sd);
-		clif_mercenary_skillblock(sd);
-		status_calc_bl(&sd->md->bl, SCB_SPEED); // Mercenary mimic their master's speed on each map change
-	}
+	
 
 	if( sd->ed ) {
 		if (map_addblock(&sd->ed->bl))
@@ -12476,49 +12462,12 @@ static void clif_parse_UseSkillToPos_homun(struct homun_data *hd, struct map_ses
 
 static void clif_parse_UseSkillToId_mercenary(struct mercenary_data *md, struct map_session_data *sd, t_tick tick, uint16 skill_id, uint16 skill_lv, int target_id)
 {
-	int lv;
-
-	if( !md )
-		return;
-	if( skill_isNotOk_mercenary(skill_id, md) )
-		return;
-	if( md->bl.id != target_id && skill_get_inf(skill_id)&INF_SELF_SKILL )
-		target_id = md->bl.id;
-	if( md->ud.skilltimer != INVALID_TIMER )
-	{
-		if( skill_id != SK_MG_CASTCANCEL && skill_id != SK_PF_SPELLFIST ) return;
-	}
-	else if( DIFF_TICK(tick, md->ud.canact_tick) < 0 )
-		return;
-
-	lv = mercenary_checkskill(md, skill_id);
-	if( skill_lv > lv )
-		skill_lv = lv;
-	if( skill_lv )
-		unit_skilluse_id(&md->bl, target_id, skill_id, skill_lv);
+	
 }
 
 static void clif_parse_UseSkillToPos_mercenary(struct mercenary_data *md, struct map_session_data *sd, t_tick tick, uint16 skill_id, uint16 skill_lv, short x, short y, int skillmoreinfo)
 {
-	int lv;
-	if( !md )
-		return;
-	if( skill_isNotOk_mercenary(skill_id, md) )
-		return;
-	if( md->ud.skilltimer != INVALID_TIMER )
-		return;
-	if( DIFF_TICK(tick, md->ud.canact_tick) < 0 )
-	{
-		if (md->master)
-			clif_skill_fail(md->master, skill_id, USESKILL_FAIL_SKILLINTERVAL, 0);
-		return;
-	}
 
-	lv = mercenary_checkskill(md, skill_id);
-	if( skill_lv > lv )
-		skill_lv = lv;
-	if( skill_lv )
-		unit_skilluse_pos(&md->bl, x, y, skill_id, skill_lv);
 }
 
 void clif_parse_skill_toid( struct map_session_data* sd, uint16 skill_id, uint16 skill_lv, int target_id ){
@@ -15188,9 +15137,7 @@ void clif_parse_HomMoveToMaster(int fd, struct map_session_data *sd){
 	struct block_list *bl = NULL;
 	struct unit_data *ud = NULL;
 
-	if( sd->md && sd->md->bl.id == id )
-		bl = &sd->md->bl;
-	else if( hom_is_active(sd->hd) && sd->hd->bl.id == id )
+	if( hom_is_active(sd->hd) && sd->hd->bl.id == id )
 		bl = &sd->hd->bl; // Moving Homunculus
 	else
 		return;
@@ -15204,21 +15151,7 @@ void clif_parse_HomMoveToMaster(int fd, struct map_session_data *sd){
 /// Request to move homunculus/mercenary (CZ_REQUEST_MOVENPC).
 /// 0232 <id>.L <position data>.3B
 void clif_parse_HomMoveTo(int fd, struct map_session_data *sd){
-	struct s_packet_db* info = &packet_db[RFIFOW(fd,0)];
-	int id = RFIFOL(fd,info->pos[0]); // Mercenary or Homunculus
-	struct block_list *bl = NULL;
-	short x, y;
-
-	RFIFOPOS(fd, info->pos[1], &x, &y, NULL);
-
-	if( sd->md && sd->md->bl.id == id )
-		bl = &sd->md->bl; // Moving Mercenary
-	else if( hom_is_active(sd->hd) && sd->hd->bl.id == id )
-		bl = &sd->hd->bl; // Moving Homunculus
-	else
-		return;
-
-	unit_walktoxy(bl, x, y, 4);
+	
 }
 
 
@@ -15228,20 +15161,7 @@ void clif_parse_HomMoveTo(int fd, struct map_session_data *sd){
 ///     always 0
 void clif_parse_HomAttack(int fd,struct map_session_data *sd)
 {
-	struct block_list *bl = NULL;
-	struct s_packet_db* info = &packet_db[RFIFOW(fd,0)];
-	int id = RFIFOL(fd,info->pos[0]);
-	int target_id = RFIFOL(fd,info->pos[1]);
-	int action_type = RFIFOB(fd,info->pos[2]);
-
-	if( hom_is_active(sd->hd) && sd->hd->bl.id == id )
-		bl = &sd->hd->bl;
-	else if( sd->md && sd->md->bl.id == id )
-		bl = &sd->md->bl;
-	else return;
-
-	unit_stop_attack(bl);
-	unit_attack(bl, target_id, action_type != 0);
+	
 }
 
 
@@ -17421,65 +17341,7 @@ void clif_quest_show_event(struct map_session_data *sd, struct block_list *bl, e
 /// 02a2 <var id>.W <value>.L
 void clif_mercenary_updatestatus(struct map_session_data *sd, int type)
 {
-	struct mercenary_data *md;
-	struct status_data *status;
-	int fd;
-	if( !clif_session_isValid(sd) || (md = sd->md) == NULL )
-		return;
 
-	fd = sd->fd;
-	status = &md->battle_status;
-	WFIFOHEAD(fd,packet_len(0x2a2));
-	WFIFOW(fd,0) = 0x2a2;
-	WFIFOW(fd,2) = type;
-	switch( type ) {
-		case SP_ATK1:
-			{
-				int atk = rnd()%(status->rhw.atk2 - status->rhw.atk + 1) + status->batk + status->rhw.atk;
-				WFIFOL(fd,4) = cap_value(atk, 0, INT16_MAX);
-			}
-			break;
-		case SP_MATK1:
-			WFIFOL(fd,4) = min(status->matk_max, UINT16_MAX);
-			break;
-		case SP_HIT:
-			WFIFOL(fd,4) = status->hit;
-			break;
-		case SP_CRITICAL:
-			WFIFOL(fd,4) = status->cri/10;
-			break;
-		case SP_DEF1:
-			WFIFOL(fd,4) = status->def;
-			break;
-		case SP_MDEF1:
-			WFIFOL(fd,4) = status->mdef;
-			break;
-		case SP_MERCFLEE:
-			WFIFOL(fd,4) = status->flee;
-			break;
-		case SP_ASPD:
-			WFIFOL(fd,4) = status->amotion;
-			break;
-		case SP_HP:
-			WFIFOL(fd,4) = status->hp;
-			break;
-		case SP_MAXHP:
-			WFIFOL(fd,4) = status->max_hp;
-			break;
-		case SP_SP:
-			WFIFOL(fd,4) = status->sp;
-			break;
-		case SP_MAXSP:
-			WFIFOL(fd,4) = status->max_sp;
-			break;
-		case SP_MERCKILLS:
-			WFIFOL(fd,4) = md->mercenary.kill_count;
-			break;
-		case SP_MERCFAITH:
-			WFIFOL(fd,4) = mercenary_get_faith(md);
-			break;
-	}
-	WFIFOSET(fd,packet_len(0x2a2));
 }
 
 
@@ -17489,43 +17351,7 @@ void clif_mercenary_updatestatus(struct map_session_data *sd, int type)
 ///     <calls>.L <kills>.L <atk range>.W
 void clif_mercenary_info(struct map_session_data *sd)
 {
-	int fd;
-	struct mercenary_data *md;
-	struct status_data *status;
-	int atk;
-
-	if( !clif_session_isValid(sd) || (md = sd->md) == NULL )
-		return;
-
-	fd = sd->fd;
-	status = &md->battle_status;
-
-	WFIFOHEAD(fd,packet_len(0x29b));
-	WFIFOW(fd,0) = 0x29b;
-	WFIFOL(fd,2) = md->bl.id;
-
-	// Mercenary shows ATK as a random value between ATK ~ ATK2
-	atk = rnd()%(status->rhw.atk2 - status->rhw.atk + 1) + status->batk + status->rhw.atk;
-	WFIFOW(fd,6) = cap_value(atk, 0, INT16_MAX);
-	WFIFOW(fd,8) = min(status->matk_max, UINT16_MAX);
-	WFIFOW(fd,10) = status->hit;
-	WFIFOW(fd,12) = status->cri/10;
-	WFIFOW(fd,14) = status->def;
-	WFIFOW(fd,16) = status->mdef;
-	WFIFOW(fd,18) = status->flee;
-	WFIFOW(fd,20) = status->amotion;
-	safestrncpy(WFIFOCP(fd,22), md->db->name, NAME_LENGTH);
-	WFIFOW(fd,46) = md->db->lv;
-	WFIFOL(fd,48) = status->hp;
-	WFIFOL(fd,52) = status->max_hp;
-	WFIFOL(fd,56) = status->sp;
-	WFIFOL(fd,60) = status->max_sp;
-	WFIFOL(fd,64) = client_tick(time(NULL) + (mercenary_get_lifetime(md) / 1000));
-	WFIFOW(fd,68) = mercenary_get_faith(md);
-	WFIFOL(fd,70) = mercenary_get_calls(md);
-	WFIFOL(fd,74) = md->mercenary.kill_count;
-	WFIFOW(fd,78) = md->battle_status.rhw.range;
-	WFIFOSET(fd,packet_len(0x29b));
+	
 }
 
 
@@ -17533,36 +17359,7 @@ void clif_mercenary_info(struct map_session_data *sd)
 /// 029d <packet len>.W { <skill id>.W <type>.L <level>.W <sp cost>.W <attack range>.W <skill name>.24B <upgradable>.B }*
 void clif_mercenary_skillblock(struct map_session_data *sd)
 {
-	struct mercenary_data *md;
-	int fd, i, len = 4;
-
-	if( sd == NULL || (md = sd->md) == NULL )
-		return;
-
-	fd = sd->fd;
-	WFIFOHEAD(fd,4+37*MAX_MERCSKILL);
-	WFIFOW(fd,0) = 0x29d;
-	for( i = 0; i < MAX_MERCSKILL; i++ )
-	{
-		uint16 id;
-		short idx = -1;
-		if( (id = md->db->skill[i].id) == 0 )
-			continue;
-		if ((idx = mercenary_skill_get_index(id)) == -1)
-			continue;
-
-		WFIFOW(fd,len) = id;
-		WFIFOL(fd,len+2) = skill_get_inf(id);
-		WFIFOW(fd,len+6) = md->db->skill[idx].lv;
-		WFIFOW(fd,len+8) = skill_get_sp(id, md->db->skill[idx].lv);
-		WFIFOW(fd,len+10) = skill_get_range2(&md->bl, id, md->db->skill[idx].lv, false);
-		safestrncpy(WFIFOCP(fd,len+12), skill_get_name(id), NAME_LENGTH);
-		WFIFOB(fd,len+36) = 0; // Skillable for Mercenary?
-		len += 37;
-	}
-
-	WFIFOW(fd,2) = len;
-	WFIFOSET(fd,len);
+	
 }
 
 
@@ -17572,11 +17369,7 @@ void clif_mercenary_skillblock(struct map_session_data *sd)
 ///     2 = delete
 void clif_parse_mercenary_action(int fd, struct map_session_data* sd)
 {
-	int option = RFIFOB(fd,packet_db[RFIFOW(fd,0)].pos[0]);
-	if( sd->md == NULL )
-		return;
-
-	if( option == 2 ) mercenary_delete(sd->md, 2);
+	
 }
 
 

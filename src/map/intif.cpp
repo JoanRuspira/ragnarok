@@ -23,7 +23,6 @@
 #include "log.hpp"
 #include "mail.hpp"
 #include "map.hpp"
-#include "mercenary.hpp"
 #include "party.hpp"
 #include "pc.hpp"
 #include "pc_groups.hpp"
@@ -2891,15 +2890,7 @@ int intif_mercenary_create(struct s_mercenary *merc)
  */
 int intif_parse_mercenary_received(int fd)
 {
-	int len = RFIFOW(fd,2) - 5;
-	if( sizeof(struct s_mercenary) != len )
-	{
-		if( battle_config.etc_log )
-			ShowError("intif: create mercenary data size error %" PRIuPTR " != %d\n", sizeof(struct s_mercenary), len);
-		return 0;
-	}
-
-	mercenary_recv_data((struct s_mercenary*)RFIFOP(fd,5), RFIFOB(fd,4) > 0);
+	
 	return 1;
 }
 

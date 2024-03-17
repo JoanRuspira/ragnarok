@@ -25,7 +25,6 @@
 #include "homunculus.hpp"
 #include "log.hpp"
 #include "map.hpp"
-#include "mercenary.hpp"
 #include "mob.hpp"
 #include "party.hpp"
 #include "path.hpp"
@@ -125,7 +124,6 @@ int battle_gettarget(struct block_list* bl)
 		case BL_MOB: return ((struct mob_data*)bl)->target_id;
 		case BL_PET: return ((struct pet_data*)bl)->target_id;
 		case BL_HOM: return ((struct homun_data*)bl)->ud.target;
-		case BL_MER: return ((struct mercenary_data*)bl)->ud.target;
 		case BL_ELEM: return ((struct elemental_data*)bl)->ud.target;
 	}
 
@@ -1108,8 +1106,7 @@ bool battle_status_block_damage(struct block_list *src, struct block_list *targe
 		if (sd && pc_issit(sd))
 			pc_setstand(sd, true);
 		if (sce_d && (d_bl = map_id2bl(sce_d->val1)) &&
-			((d_bl->type == BL_MER && ((TBL_MER*)d_bl)->master && ((TBL_MER*)d_bl)->master->bl.id == target->id) ||
-			(d_bl->type == BL_PC && ((TBL_PC*)d_bl)->devotion[sce_d->val2] == target->id)) &&
+			((d_bl->type == BL_PC && ((TBL_PC*)d_bl)->devotion[sce_d->val2] == target->id)) &&
 			check_distance_bl(target, d_bl, sce_d->val3))
 		{ //If player is target of devotion, show guard effect on the devotion caster rather than the target
 			clif_skill_nodamage(d_bl, d_bl, SK_CR_AUTOGUARD, sce->val1, 1);
@@ -3904,7 +3901,7 @@ int64 battle_calc_return_damage(struct block_list* bl, struct block_list *src, i
 				struct block_list *d_bl = NULL;
 
 				if( (sce_d = sc->data[STATUS_SWORNPROTECTOR]) && (d_bl = map_id2bl(sce_d->val1)) &&
-					((d_bl->type == BL_MER && ((TBL_MER*)d_bl)->master && ((TBL_MER*)d_bl)->master->bl.id == bl->id) ||
+					(
 					(d_bl->type == BL_PC && ((TBL_PC*)d_bl)->devotion[sce_d->val2] == bl->id)) )
 				{ //Don't reflect non-skill attack if has STATUS_REFLECTSHIELD from Devotion bonus inheritance
 					if( (!skill_id && battle_config.devotion_rdamage_skill_only && sc->data[STATUS_REFLECTSHIELD]->val4) ||
@@ -4362,7 +4359,6 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 			struct block_list *d_bl = map_id2bl(sce->val1);
 
 			if( d_bl && (
-				(d_bl->type == BL_MER && ((TBL_MER*)d_bl)->master && ((TBL_MER*)d_bl)->master->bl.id == target->id) ||
 				(d_bl->type == BL_PC && ((TBL_PC*)d_bl)->devotion[sce->val2] == target->id)
 				) && check_distance_bl(target, d_bl, sce->val3) )
 			{
@@ -4573,10 +4569,6 @@ struct block_list* battle_get_master(struct block_list *src)
 			case BL_HOM:
 				if (((TBL_HOM*)src)->master)
 					src = (struct block_list*)((TBL_HOM*)src)->master;
-				break;
-			case BL_MER:
-				if (((TBL_MER*)src)->master)
-					src = (struct block_list*)((TBL_MER*)src)->master;
 				break;
 			case BL_ELEM:
 				if (((TBL_ELEM*)src)->master)

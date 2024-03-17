@@ -25,7 +25,6 @@
 #include "homunculus.hpp"
 #include "intif.hpp"
 #include "map.hpp"
-#include "mercenary.hpp"
 #include "mob.hpp"
 #include "npc.hpp"
 #include "party.hpp"
@@ -63,7 +62,6 @@ struct unit_data* unit_bl2ud(struct block_list *bl)
 	case BL_PET: return &((struct pet_data*)bl)->ud;
 	case BL_NPC: return &((struct npc_data*)bl)->ud;
 	case BL_HOM: return &((struct homun_data*)bl)->ud;
-	case BL_MER: return &((struct mercenary_data*)bl)->ud;
 	case BL_ELEM: return &((struct elemental_data*)bl)->ud;
 	default : return NULL;
 	}
@@ -154,7 +152,6 @@ TBL_PC* unit_get_master(struct block_list *bl)
 			case BL_HOM: return (((TBL_HOM *)bl)->master);
 			case BL_ELEM: return (((TBL_ELEM *)bl)->master);
 			case BL_PET: return (((TBL_PET *)bl)->master);
-			case BL_MER: return (((TBL_MER *)bl)->master);
 			case BL_MOB:
 			 	return (((TBL_MOB *)bl)->master);
 			 break;
@@ -174,7 +171,6 @@ int* unit_get_masterteleport_timer(struct block_list *bl)
 			case BL_HOM: return &(((TBL_HOM *)bl)->masterteleport_timer);
 			case BL_ELEM: return &(((TBL_ELEM *)bl)->masterteleport_timer);
 			case BL_PET: return &(((TBL_PET *)bl)->masterteleport_timer);
-			case BL_MER: return &(((TBL_MER *)bl)->masterteleport_timer);
 			case BL_MOB: return &(((TBL_MOB *)bl)->masterteleport_timer);
 		}
 	}
@@ -235,7 +231,6 @@ int unit_check_start_teleport_timer(struct block_list *sbl)
 		case BL_HOM:	max_dist = AREA_SIZE;			break;
 		case BL_ELEM:	max_dist = MAX_ELEDISTANCE;		break;
 		case BL_PET:	max_dist = AREA_SIZE;			break;
-		case BL_MER:	max_dist = MAX_MER_DISTANCE;	break;
 		case BL_MOB:	max_dist = MAX_ELEDISTANCE;	break;
 	}
 	// If there is a master and it's a valid type
@@ -765,8 +760,6 @@ int unit_walktoxy( struct block_list *bl, short x, short y, unsigned char flag)
 	}
 	// Start timer to recall summon
 	if( sd != nullptr ){
-		if (sd->md != nullptr)
-			unit_check_start_teleport_timer(&sd->md->bl);
 		if (sd->ed != nullptr)
 			unit_check_start_teleport_timer(&sd->ed->bl);
 		if (sd->hd != nullptr)
@@ -2976,21 +2969,7 @@ int unit_remove_map_(struct block_list *bl, clr_type clrtype, const char* file, 
 			}
 			break;
 		}
-		case BL_MER: {
-			struct mercenary_data *md = (struct mercenary_data *)bl;
-
-			ud->canact_tick = ud->canmove_tick;
-
-			if( mercenary_get_lifetime(md) <= 0 && !(md->master && !md->master->state.active) ) {
-				clif_clearunit_area(bl,clrtype);
-				map_delblock(bl);
-				unit_free(bl,CLR_OUTSIGHT);
-				map_freeblock_unlock();
-
-				return 0;
-			}
-			break;
-		}
+		
 		case BL_ELEM: {
 			struct elemental_data *ed = (struct elemental_data *)bl;
 
@@ -3082,8 +3061,6 @@ void unit_remove_map_pc(struct map_session_data *sd, clr_type clrtype)
 	if(hom_is_active(sd->hd))
 		unit_remove_map(&sd->hd->bl, clrtype);
 
-	if(sd->md)
-		unit_remove_map(&sd->md->bl, clrtype);
 
 	if(sd->ed)
 		unit_remove_map(&sd->ed->bl, clrtype);
@@ -3102,8 +3079,6 @@ void unit_free_pc(struct map_session_data *sd)
 	if (sd->hd)
 		unit_free(&sd->hd->bl,CLR_OUTSIGHT);
 
-	if (sd->md)
-		unit_free(&sd->md->bl,CLR_OUTSIGHT);
 
 	if (sd->ed)
 		unit_free(&sd->ed->bl,CLR_OUTSIGHT);
@@ -3312,29 +3287,7 @@ int unit_free(struct block_list *bl, clr_type clrtype)
 			status_change_clear(bl,1);
 			break;
 		}
-		case BL_MER: {
-			struct mercenary_data *md = (TBL_MER*)bl;
-			struct map_session_data *sd = md->master;
-
-			if( mercenary_get_lifetime(md) > 0 )
-				mercenary_save(md);
-			else {
-				intif_mercenary_delete(md->mercenary.mercenary_id);
-
-				if( sd )
-					sd->status.mer_id = 0;
-			}
-
-			if( sd )
-				sd->md = NULL;
-
-			mercenary_contract_stop(md);
-			md->master = NULL;
-
-			skill_clear_unitgroup(bl);
-			status_change_clear(bl,1);
-			break;
-		}
+		
 		case BL_ELEM: {
 			struct elemental_data *ed = (TBL_ELEM*)bl;
 			struct map_session_data *sd = ed->master;

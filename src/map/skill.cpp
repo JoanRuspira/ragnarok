@@ -32,7 +32,6 @@
 #include "itemdb.hpp"
 #include "log.hpp"
 #include "map.hpp"
-#include "mercenary.hpp"
 #include "mob.hpp"
 #include "npc.hpp"
 #include "party.hpp"
@@ -799,12 +798,9 @@ bool skill_isNotOk_hom(struct homun_data *hd, uint16 skill_id, uint16 skill_lv)
  */
 bool skill_isNotOk_mercenary(uint16 skill_id, struct mercenary_data *md)
 {
-	nullpo_retr(1, md);
 
-	if (util::vector_exists(md->blockskill, skill_id))
-		return true;
 
-	return skill_isNotOk(skill_id, md->master);
+	return true;
 }
 
 /**
@@ -1847,7 +1843,6 @@ int64 skill_attack (int attack_type, struct block_list* src, struct block_list *
 			struct block_list *d_bl = map_id2bl(sce->val1);
 
 			if (d_bl && (
-				(d_bl->type == BL_MER && ((TBL_MER*)d_bl)->master && ((TBL_MER*)d_bl)->master->bl.id == bl->id) ||
 				(d_bl->type == BL_PC && ((TBL_PC*)d_bl)->devotion[sce->val2] == bl->id)
 				) && check_distance_bl(bl, d_bl, sce->val3) )
 			{
@@ -2084,7 +2079,6 @@ static int skill_check_condition_mercenary(struct block_list *bl, uint16 skill_i
 	switch( bl->type )
 	{
 		case BL_HOM: sd = ((TBL_HOM*)bl)->master; break;
-		case BL_MER: sd = ((TBL_MER*)bl)->master; break;
 	}
 
 	status = status_get_status_data(bl);
@@ -4146,8 +4140,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 
 				sd->devotion[i] = bl->id;
 			}
-			else
-				mer->devotion_flag = 1; // Mercenary Devoting Owner
+			
 
 			clif_skill_nodamage(src, bl, skill_id, skill_lv,
 				sc_start4(src, bl, type, 10000, src->id, i, skill_get_range2(src, skill_id, skill_lv, true), 0, skill_get_time2(skill_id, skill_lv)));
@@ -12559,35 +12552,13 @@ int skill_blockhomun_start(struct homun_data *hd, uint16 skill_id, int tick)	//[
 }
 
 TIMER_FUNC(skill_blockmerc_end){
-	struct mercenary_data *md = (TBL_MER*)map_id2bl(id);
-
-	if (md) {
-		auto skill = util::vector_get(md->blockskill, (uint16)data);
-
-		if (skill != md->blockskill.end())
-			md->blockskill.erase(skill);
-	}
-
+	
 	return 1;
 }
 
 int skill_blockmerc_start(struct mercenary_data *md, uint16 skill_id, int tick)
 {
-	nullpo_retr(-1, md);
-
-	if (!skill_db.exists(skill_id))
-		return -1;
-
-	auto skill = util::vector_get(md->blockskill, skill_id);
-
-	if (tick < 1 && skill != md->blockskill.end()) {
-		md->blockskill.erase(skill);
-		return -1;
-	}
-
-	md->blockskill.push_back(skill_id);
-
-	return add_timer(gettick() + tick, skill_blockmerc_end, md->bl.id, skill_id);
+	return 1;
 }
 /**
  * Adds a new skill unit entry for this player to recast after map load

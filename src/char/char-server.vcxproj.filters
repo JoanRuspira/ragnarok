@@ -41,9 +41,6 @@
     <ClInclude Include="int_mail.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="int_mercenary.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="int_party.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -92,9 +89,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="int_mail.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="int_mercenary.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="int_party.cpp">

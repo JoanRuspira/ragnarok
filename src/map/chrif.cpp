@@ -25,7 +25,6 @@
 #include "intif.hpp"
 #include "log.hpp"
 #include "map.hpp"
-#include "mercenary.hpp"
 #include "npc.hpp"
 #include "pc.hpp"
 #include "pc_groups.hpp"
@@ -359,8 +358,6 @@ int chrif_save(struct map_session_data *sd, int flag) {
 		intif_save_petdata(sd->status.account_id,&sd->pd->pet);
 	if( hom_is_active(sd->hd) )
 		hom_save(sd->hd);
-	if( sd->md && mercenary_get_lifetime(sd->md) > 0 )
-		mercenary_save(sd->md);
 	if( sd->ed && elemental_get_lifetime(sd->ed) > 0 )
 		elemental_save(sd->ed);
 	if( sd->save_quest )

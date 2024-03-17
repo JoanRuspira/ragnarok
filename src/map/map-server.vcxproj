@@ -208,7 +208,6 @@
     <ClInclude Include="mail.hpp" />
     <ClInclude Include="map.hpp" />
     <ClInclude Include="mapreg.hpp" />
-    <ClInclude Include="mercenary.hpp" />
     <ClInclude Include="MerchntSkillAtkRatioCalculator.h" />
     <ClInclude Include="mob.hpp" />
     <ClInclude Include="MonkAdditionalEffectsCalculator.h" />
@@ -288,7 +287,6 @@
     <ClCompile Include="mail.cpp" />
     <ClCompile Include="map.cpp" />
     <ClCompile Include="mapreg.cpp" />
-    <ClCompile Include="mercenary.cpp" />
     <ClCompile Include="MerchntSkillAtkRatioCalculator.cpp" />
     <ClCompile Include="mob.cpp">
       <Optimization Condition="'$(Configuration)'=='Release'">Disabled</Optimization>

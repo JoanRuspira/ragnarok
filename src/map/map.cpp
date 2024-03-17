@@ -36,7 +36,6 @@
 #include "intif.hpp"
 #include "log.hpp"
 #include "mapreg.hpp"
-#include "mercenary.hpp"
 #include "mob.hpp"
 #include "npc.hpp"
 #include "party.hpp"
@@ -4805,7 +4804,6 @@ void do_final(void){
 	do_final_pc();
 	do_final_pet();
 	do_final_homunculus();
-	do_final_mercenary();
 	do_final_mob(false);
 	do_final_msg();
 	do_final_skill();
@@ -5133,7 +5131,6 @@ int do_init(int argc, char *argv[])
 	do_init_storage();
 	do_init_pet();
 	do_init_homunculus();
-	do_init_mercenary();
 	do_init_elemental();
 	do_init_quest();
 	do_init_npc();

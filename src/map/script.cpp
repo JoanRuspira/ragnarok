@@ -49,7 +49,6 @@
 #include "mail.hpp"
 #include "map.hpp"
 #include "mapreg.hpp"
-#include "mercenary.hpp"
 #include "mob.hpp"
 #include "npc.hpp"
 #include "party.hpp"
@@ -15072,42 +15071,6 @@ BUILDIN_FUNC(gethominfo)
 /// getmercinfo <type>[,<char id>];
 BUILDIN_FUNC(getmercinfo)
 {
-	int type;
-	struct map_session_data* sd;
-	struct mercenary_data* md;
-
-	if( !script_charid2sd(3,sd) ){
-		script_pushnil(st);
-		return SCRIPT_CMD_FAILURE;
-	}
-
-	type = script_getnum(st,2);
-	md = sd->md;
-
-	if( md == NULL ){
-		if( type == 2 )
-			script_pushconststr(st,"");
-		else
-			script_pushint(st,0);
-		return SCRIPT_CMD_SUCCESS;
-	}
-
-	switch( type )
-	{
-		case 0: script_pushint(st,md->mercenary.mercenary_id); break;
-		case 1: script_pushint(st,md->mercenary.class_); break;
-		case 2: script_pushstrcopy(st,md->db->name); break;
-		case 3: script_pushint(st,mercenary_get_faith(md)); break;
-		case 4: script_pushint(st,mercenary_get_calls(md)); break;
-		case 5: script_pushint(st,md->mercenary.kill_count); break;
-		case 6: script_pushint(st,mercenary_get_lifetime(md)); break;
-		case 7: script_pushint(st,md->db->lv); break;
-		case 8: script_pushint(st,md->bl.id); break;
-		default:
-			ShowError("buildin_getmercinfo: Invalid type %d (char_id=%d).\n", type, sd->status.char_id);
-			script_pushnil(st);
-			return SCRIPT_CMD_FAILURE;
-	}
 
 	return SCRIPT_CMD_SUCCESS;
 }
@@ -15472,10 +15435,6 @@ BUILDIN_FUNC(getmapxy)
 		case BL_HOM:	//Get Homun Position
 			if (sd->hd && ((script_isstring(st, 6) && script_nick2sd(6, sd)) || script_mapid2sd(6, sd)))
 				bl = &sd->hd->bl;
-			break;
-		case BL_MER: //Get Mercenary Position
-			if (sd->md && ((script_isstring(st, 6) && script_nick2sd(6, sd)) || script_mapid2sd(6, sd)))
-				bl = &sd->md->bl;
 			break;
 		case BL_ELEM: //Get Elemental Position
 			if (sd->ed && ((script_isstring(st, 6) && script_nick2sd(6, sd)) || script_mapid2sd(6, sd)))
@@ -17665,7 +17624,6 @@ BUILDIN_FUNC(rid2name)
 			case BL_NPC: script_pushstrcopy(st,((TBL_NPC*)bl)->exname); break;
 			case BL_PET: script_pushstrcopy(st,((TBL_PET*)bl)->pet.name); break;
 			case BL_HOM: script_pushstrcopy(st,((TBL_HOM*)bl)->homunculus.name); break;
-			case BL_MER: script_pushstrcopy(st,((TBL_MER*)bl)->db->name); break;
 			default:
 				ShowError("buildin_rid2name: BL type unknown.\n");
 				script_pushconststr(st,"");
@@ -18022,51 +17980,6 @@ BUILDIN_FUNC(getunitdata)
 			getunitdata_sub(UPET_ADELAY, pd->status.adelay);
 			getunitdata_sub(UPET_DMOTION, pd->status.dmotion);
 			getunitdata_sub(UPET_GROUP_ID, pd->ud.group_id);
-			break;
-
-		case BL_MER:
-			if (!mc) {
-				ShowWarning("buildin_getunitdata: Error in finding object BL_MER!\n");
-				return SCRIPT_CMD_FAILURE;
-			}
-			getunitdata_sub(UMER_SIZE, mc->base_status.size);
-			getunitdata_sub(UMER_HP, mc->base_status.hp);
-			getunitdata_sub(UMER_MAXHP, mc->base_status.max_hp);
-			getunitdata_sub(UMER_MASTERCID, mc->mercenary.char_id);
-			getunitdata_sub(UMER_MAPID, mc->bl.m);
-			getunitdata_sub(UMER_X, mc->bl.x);
-			getunitdata_sub(UMER_Y, mc->bl.y);
-			getunitdata_sub(UMER_KILLCOUNT, mc->mercenary.kill_count);
-			getunitdata_sub(UMER_LIFETIME, mc->mercenary.life_time);
-			getunitdata_sub(UMER_SPEED, mc->base_status.speed);
-			getunitdata_sub(UMER_LOOKDIR, mc->ud.dir);
-			getunitdata_sub(UMER_CANMOVETICK, mc->ud.canmove_tick);
-			getunitdata_sub(UMER_STR, mc->base_status.str);
-			getunitdata_sub(UMER_AGI, mc->base_status.agi);
-			getunitdata_sub(UMER_VIT, mc->base_status.vit);
-			getunitdata_sub(UMER_INT, mc->base_status.int_);
-			getunitdata_sub(UMER_DEX, mc->base_status.dex);
-			getunitdata_sub(UMER_LUK, mc->base_status.luk);
-			getunitdata_sub(UMER_DMGIMMUNE, mc->ud.immune_attack);
-			getunitdata_sub(UMER_ATKRANGE, mc->base_status.rhw.range);
-			getunitdata_sub(UMER_ATKMIN, mc->base_status.rhw.atk);
-			getunitdata_sub(UMER_ATKMAX, mc->base_status.rhw.atk2);
-			getunitdata_sub(UMER_MATKMIN, mc->base_status.matk_min);
-			getunitdata_sub(UMER_MATKMAX, mc->base_status.matk_max);
-			getunitdata_sub(UMER_DEF, mc->base_status.def);
-			getunitdata_sub(UMER_MDEF, mc->base_status.mdef);
-			getunitdata_sub(UMER_HIT, mc->base_status.hit);
-			getunitdata_sub(UMER_FLEE, mc->base_status.flee);
-			getunitdata_sub(UMER_PDODGE, mc->base_status.flee2);
-			getunitdata_sub(UMER_CRIT, mc->base_status.cri);
-			getunitdata_sub(UMER_RACE, mc->base_status.race);
-			getunitdata_sub(UMER_ELETYPE, mc->base_status.def_ele);
-			getunitdata_sub(UMER_ELELEVEL, mc->base_status.ele_lv);
-			getunitdata_sub(UMER_AMOTION, mc->base_status.amotion);
-			getunitdata_sub(UMER_ADELAY, mc->base_status.adelay);
-			getunitdata_sub(UMER_DMOTION, mc->base_status.dmotion);
-			getunitdata_sub(UMER_TARGETID, mc->ud.target);
-			getunitdata_sub(UMER_GROUP_ID, mc->ud.group_id);
 			break;
 
 		case BL_ELEM:
@@ -18458,69 +18371,7 @@ BUILDIN_FUNC(setunitdata)
 			}
 		break;
 
-	case BL_MER:
-		if (!mc) {
-			ShowWarning("buildin_setunitdata: Error in finding object BL_MER!\n");
-			return SCRIPT_CMD_FAILURE;
-		}
-		switch (type) {
-			case UMER_SIZE: mc->battle_status.size = mc->base_status.size = (unsigned char)value; break;
-			case UMER_HP: mc->base_status.hp = (unsigned int)value; status_set_hp(bl, (unsigned int)value, 0); break;
-			case UMER_MAXHP: mc->base_status.hp = mc->base_status.max_hp = (unsigned int)value; status_set_maxhp(bl, (unsigned int)value, 0); break;
-			case UMER_MASTERCID: mc->mercenary.char_id = (uint32)value; break;
-			case UMER_MAPID: if (mapname) value = map_mapname2mapid(mapname); unit_warp(bl, (short)value, 0, 0, CLR_TELEPORT); break;
-			case UMER_X: if (!unit_walktoxy(bl, (short)value, mc->bl.y, 2)) unit_movepos(bl, (short)value, mc->bl.y, 0, 0); break;
-			case UMER_Y: if (!unit_walktoxy(bl, mc->bl.x, (short)value, 2)) unit_movepos(bl, mc->bl.x, (short)value, 0, 0); break;
-			case UMER_KILLCOUNT: mc->mercenary.kill_count = (unsigned int)value; break;
-			case UMER_LIFETIME: mc->mercenary.life_time = (unsigned int)value; break;
-			case UMER_SPEED: mc->base_status.speed = (unsigned short)value; status_calc_misc(bl, &mc->base_status, mc->db->lv); calc_status = true; break;
-			case UMER_LOOKDIR: unit_setdir(bl, (uint8)value); break;
-			case UMER_CANMOVETICK: mc->ud.canmove_tick = value > 0 ? (unsigned int)value : 0; break;
-			case UMER_STR: mc->base_status.str = (unsigned short)value; status_calc_misc(bl, &mc->base_status, mc->db->lv); calc_status = true; break;
-			case UMER_AGI: mc->base_status.agi = (unsigned short)value; status_calc_misc(bl, &mc->base_status, mc->db->lv); calc_status = true; break;
-			case UMER_VIT: mc->base_status.vit = (unsigned short)value; status_calc_misc(bl, &mc->base_status, mc->db->lv); calc_status = true; break;
-			case UMER_INT: mc->base_status.int_ = (unsigned short)value; status_calc_misc(bl, &mc->base_status, mc->db->lv); calc_status = true; break;
-			case UMER_DEX: mc->base_status.dex = (unsigned short)value; status_calc_misc(bl, &mc->base_status, mc->db->lv); calc_status = true; break;
-			case UMER_LUK: mc->base_status.luk = (unsigned short)value; status_calc_misc(bl, &mc->base_status, mc->db->lv); calc_status = true; break;
-			case UMER_DMGIMMUNE: mc->ud.immune_attack = value > 0; break;
-			case UMER_ATKRANGE: mc->base_status.rhw.range = (unsigned short)value; calc_status = true; break;
-			case UMER_ATKMIN: mc->base_status.rhw.atk = (unsigned short)value; calc_status = true; break;
-			case UMER_ATKMAX: mc->base_status.rhw.atk2 = (unsigned short)value; calc_status = true; break;
-			case UMER_MATKMIN: mc->base_status.matk_min = (unsigned short)value; calc_status = true; break;
-			case UMER_MATKMAX: mc->base_status.matk_max = (unsigned short)value; calc_status = true; break;
-			case UMER_DEF: mc->base_status.def = (defType)value; calc_status = true; break;
-			case UMER_MDEF: mc->base_status.mdef = (defType)value; calc_status = true; break;
-			case UMER_HIT: mc->base_status.hit = (short)value; calc_status = true; break;
-			case UMER_FLEE: mc->base_status.flee = (short)value; calc_status = true; break;
-			case UMER_PDODGE: mc->base_status.flee2 = (short)value; calc_status = true; break;
-			case UMER_CRIT: mc->base_status.cri = (short)value; calc_status = true; break;
-			case UMER_RACE: mc->battle_status.race = mc->base_status.race = (unsigned char)value; break;
-			case UMER_ELETYPE: mc->base_status.def_ele = (unsigned char)value; calc_status = true; break;
-			case UMER_ELELEVEL: mc->base_status.ele_lv = (unsigned char)value; calc_status = true; break;
-			case UMER_AMOTION: mc->base_status.amotion = (short)value; calc_status = true; break;
-			case UMER_ADELAY: mc->base_status.adelay = (short)value; calc_status = true; break;
-			case UMER_DMOTION: mc->base_status.dmotion = (short)value; calc_status = true; break;
-			case UMER_TARGETID: {
-				if (value==0) {
-					unit_stop_attack(&mc->bl);
-					break;
-				}
-				struct block_list* target = map_id2bl(value);
-				if (!target) {
-					ShowWarning("buildin_setunitdata: Error in finding target for BL_MER!\n");
-					return SCRIPT_CMD_FAILURE;
-				}
-				unit_attack(&mc->bl, target->id, 1);
-				break;
-			}
-			case UMER_GROUP_ID: mc->ud.group_id = value; unit_refresh(bl); break;
-			default:
-				ShowError("buildin_setunitdata: Unknown data identifier %d for BL_MER.\n", type);
-				return SCRIPT_CMD_FAILURE;
-			}
-			if (calc_status)
-				status_calc_bl(&mc->bl, SCB_BATTLE);
-		break;
+	
 
 	case BL_ELEM:
 		if (!ed) {
@@ -18658,10 +18509,6 @@ BUILDIN_FUNC(setunitdata)
 			break;
 		case BL_PET:
 			clif_send_petstatus(pd->master);
-			break;
-		case BL_MER:
-			clif_mercenary_info(map_charid2sd(mc->mercenary.char_id));
-			clif_mercenary_skillblock(map_charid2sd(mc->mercenary.char_id));
 			break;
 		case BL_ELEM:
 			clif_elemental_info(ed->master);
@@ -19502,171 +19349,43 @@ BUILDIN_FUNC(getfreecell)
  *------------------------------------------*/
 BUILDIN_FUNC(mercenary_create)
 {
-	struct map_session_data *sd;
-	int class_, contract_time;
-
-	if( !script_rid2sd(sd) || sd->md || sd->status.mer_id != 0 )
-		return SCRIPT_CMD_SUCCESS;
-
-	class_ = script_getnum(st,2);
-
-	if( !mercenary_db(class_) )
-		return SCRIPT_CMD_SUCCESS;
-
-	contract_time = script_getnum(st,3);
-	mercenary_create(sd, class_, contract_time);
 
 	return SCRIPT_CMD_SUCCESS;
 }
 
 BUILDIN_FUNC(mercenary_heal)
 {
-	struct map_session_data *sd;
-	int hp, sp;
 
-	if( !script_rid2sd(sd) || sd->md == NULL )
-		return SCRIPT_CMD_SUCCESS;
-	hp = script_getnum(st,2);
-	sp = script_getnum(st,3);
-
-	status_heal(&sd->md->bl, hp, sp, 0);
 	return SCRIPT_CMD_SUCCESS;
 }
 
 BUILDIN_FUNC(mercenary_sc_start)
 {
-	struct map_session_data *sd;
-	enum sc_type type;
-	int tick, val1;
 
-	if( !script_rid2sd(sd) || sd->md == NULL )
-		return SCRIPT_CMD_SUCCESS;
-
-	type = (sc_type)script_getnum(st,2);
-	tick = script_getnum(st,3);
-	val1 = script_getnum(st,4);
-
-	status_change_start(NULL, &sd->md->bl, type, 10000, val1, 0, 0, 0, tick, SCSTART_NOTICKDEF);
 	return SCRIPT_CMD_SUCCESS;
 }
 
 BUILDIN_FUNC(mercenary_get_calls)
 {
-	struct map_session_data *sd;
-	int guild;
 
-	if( !script_rid2sd(sd) )
-		return SCRIPT_CMD_SUCCESS;
-
-	guild = script_getnum(st,2);
-	switch( guild )
-	{
-		case ARCH_MERC_GUILD:
-			script_pushint(st,sd->status.arch_calls);
-			break;
-		case SPEAR_MERC_GUILD:
-			script_pushint(st,sd->status.spear_calls);
-			break;
-		case SWORD_MERC_GUILD:
-			script_pushint(st,sd->status.sword_calls);
-			break;
-		default:
-			script_pushint(st,0);
-			break;
-	}
 	return SCRIPT_CMD_SUCCESS;
 }
 
 BUILDIN_FUNC(mercenary_set_calls)
 {
-	struct map_session_data *sd;
-	int guild, value, *calls;
 
-	if( !script_rid2sd(sd) )
-		return SCRIPT_CMD_SUCCESS;
-
-	guild = script_getnum(st,2);
-	value = script_getnum(st,3);
-
-	switch( guild )
-	{
-		case ARCH_MERC_GUILD:
-			calls = &sd->status.arch_calls;
-			break;
-		case SPEAR_MERC_GUILD:
-			calls = &sd->status.spear_calls;
-			break;
-		case SWORD_MERC_GUILD:
-			calls = &sd->status.sword_calls;
-			break;
-		default:
-			ShowError("buildin_mercenary_set_calls: Invalid guild '%d'.\n", guild);
-			return SCRIPT_CMD_SUCCESS; // Invalid Guild
-	}
-
-	*calls += value;
-	*calls = cap_value(*calls, 0, INT_MAX);
 	return SCRIPT_CMD_SUCCESS;
 }
 
 BUILDIN_FUNC(mercenary_get_faith)
 {
-	struct map_session_data *sd;
-	int guild;
 
-	if( !script_rid2sd(sd) )
-		return SCRIPT_CMD_SUCCESS;
-
-	guild = script_getnum(st,2);
-	switch( guild )
-	{
-		case ARCH_MERC_GUILD:
-			script_pushint(st,sd->status.arch_faith);
-			break;
-		case SPEAR_MERC_GUILD:
-			script_pushint(st,sd->status.spear_faith);
-			break;
-		case SWORD_MERC_GUILD:
-			script_pushint(st,sd->status.sword_faith);
-			break;
-		default:
-			script_pushint(st,0);
-			break;
-	}
 	return SCRIPT_CMD_SUCCESS;
 }
 
 BUILDIN_FUNC(mercenary_set_faith)
 {
-	struct map_session_data *sd;
-	int guild, value, *calls;
 
-	if( !script_rid2sd(sd) )
-		return SCRIPT_CMD_SUCCESS;
-
-	guild = script_getnum(st,2);
-	value = script_getnum(st,3);
-
-	switch( guild )
-	{
-		case ARCH_MERC_GUILD:
-			calls = &sd->status.arch_faith;
-			break;
-		case SPEAR_MERC_GUILD:
-			calls = &sd->status.spear_faith;
-			break;
-		case SWORD_MERC_GUILD:
-			calls = &sd->status.sword_faith;
-			break;
-		default:
-			ShowError("buildin_mercenary_set_faith: Invalid guild '%d'.\n", guild);
-			return SCRIPT_CMD_SUCCESS; // Invalid Guild
-	}
-
-	*calls += value;
-	*calls = cap_value(*calls, 0, INT_MAX);
-	if( mercenary_get_guild(sd->md) == guild )
-		clif_mercenary_updatestatus(sd,SP_MERCFAITH);
 
 	return SCRIPT_CMD_SUCCESS;
 }

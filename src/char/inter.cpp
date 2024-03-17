@@ -28,7 +28,6 @@
 #include "int_guild.hpp"
 #include "int_homun.hpp"
 #include "int_mail.hpp"
-#include "int_mercenary.hpp"
 #include "int_party.hpp"
 #include "int_pet.hpp"
 #include "int_quest.hpp"
@@ -955,7 +954,6 @@ int inter_init_sql(const char *file)
 	inter_party_sql_init();
 	inter_pet_sql_init();
 	inter_homunculus_sql_init();
-	inter_mercenary_sql_init();
 	inter_elemental_sql_init();
 	inter_mail_sql_init();
 	inter_auction_sql_init();
@@ -975,7 +973,6 @@ void inter_final(void)
 	inter_party_sql_final();
 	inter_pet_sql_final();
 	inter_homunculus_sql_final();
-	inter_mercenary_sql_final();
 	inter_elemental_sql_final();
 	inter_mail_sql_final();
 	inter_auction_sql_final();
@@ -1421,7 +1418,6 @@ int inter_parse_frommap(int fd)
 		  || inter_storage_parse_frommap(fd)
 		  || inter_pet_parse_frommap(fd)
 		  || inter_homunculus_parse_frommap(fd)
-		  || inter_mercenary_parse_frommap(fd)
 		  || inter_elemental_parse_frommap(fd)
 		  || inter_mail_parse_frommap(fd)
 		  || inter_auction_parse_frommap(fd)

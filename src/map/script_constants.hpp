@@ -3536,10 +3536,6 @@
 	export_constant(BG_AREA_WOS);
 	export_constant(CLAN);
 
-	/* mercenary guilds */
-	export_constant(ARCH_MERC_GUILD);
-	export_constant(SPEAR_MERC_GUILD);
-	export_constant(SWORD_MERC_GUILD);
 
 	/* item types */
 	export_constant(IT_HEALING);

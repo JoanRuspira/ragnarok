@@ -43,7 +43,6 @@
 #include "itemdb.hpp" // MAX_ITEMGROUP
 #include "log.hpp"
 #include "map.hpp"
-#include "mercenary.hpp"
 #include "mob.hpp"
 #include "npc.hpp"
 #include "party.hpp" // party_search()
@@ -5386,20 +5385,7 @@ bool pc_isUseitem(struct map_session_data *sd,int n)
 			if( mapdata->flag[MF_NORETURN] && nameid != ITEMID_WING_OF_FLY && nameid != ITEMID_GIANT_FLY_WING && nameid != ITEMID_N_FLY_WING )
 				return false;
 			break;
-		case ITEMID_MERCENARY_RED_POTION:
-		case ITEMID_MERCENARY_BLUE_POTION:
-		case ITEMID_M_CENTER_POTION:
-		case ITEMID_M_AWAKENING_POTION:
-		case ITEMID_M_BERSERK_POTION:
-			if( sd->md == NULL || sd->md->db == NULL )
-				return false;
-			if( sd->md->sc.data[STATUS_FRENZY] )
-				return false;
-			if( nameid == ITEMID_M_AWAKENING_POTION && sd->md->db->lv < 40 )
-				return false;
-			if( nameid == ITEMID_M_BERSERK_POTION && sd->md->db->lv < 80 )
-				return false;
-			break;
+	
 
 		case ITEMID_NEURALIZER:
 			if( !mapdata->flag[MF_RESET] )
@@ -6105,13 +6091,7 @@ enum e_setpos pc_setpos(struct map_session_data* sd, unsigned short mapindex, in
 		sd->hd->ud.dir = sd->ud.dir;
 	}
 
-	if( sd->md )
-	{
-		sd->md->bl.m = m;
-		sd->md->bl.x = sd->md->ud.to_x = x;
-		sd->md->bl.y = sd->md->ud.to_y = y;
-		sd->md->ud.dir = sd->ud.dir;
-	}
+	
 
 	if( sd->ed ) {
 		sd->ed->bl.m = m;
@@ -8292,8 +8272,6 @@ int pc_dead(struct map_session_data *sd,struct block_list *src)
 	if (hom_is_active(sd->hd) && battle_config.homunculus_auto_vapor && get_percentage(sd->hd->battle_status.hp, sd->hd->battle_status.max_hp) >= battle_config.homunculus_auto_vapor)
 		hom_vaporize(sd, HOM_ST_ACTIVE);
 
-	if( sd->md )
-		mercenary_delete(sd->md, 3); // Your mercenary soldier has ran away.
 
 	if( sd->ed )
 		elemental_delete(sd->ed);
