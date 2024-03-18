@@ -195,7 +195,6 @@
     <ClInclude Include="EquipmentAttackCalculator.h" />
     <ClInclude Include="guild.hpp" />
     <ClInclude Include="Damage.h" />
-    <ClInclude Include="homunculus.hpp" />
     <ClInclude Include="HunterSkillAttackRatioCalculator.h" />
     <ClInclude Include="intif.hpp" />
     <ClInclude Include="itemdb.hpp" />
@@ -272,7 +271,6 @@
     <ClCompile Include="elemental.cpp" />
     <ClCompile Include="EquipmentAttackCalculator.cpp" />
     <ClCompile Include="guild.cpp" />
-    <ClCompile Include="homunculus.cpp" />
     <ClCompile Include="HunterSkillAttackRatioCalculator.cpp" />
     <ClCompile Include="intif.cpp" />
     <ClCompile Include="itemdb.cpp" />

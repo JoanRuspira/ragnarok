@@ -25,7 +25,6 @@
 #include "int_clan.hpp"
 #include "int_elemental.hpp"
 #include "int_guild.hpp"
-#include "int_homun.hpp"
 #include "int_party.hpp"
 #include "int_pet.hpp"
 #include "int_quest.hpp"
@@ -951,7 +950,6 @@ int inter_init_sql(const char *file)
 	inter_storage_sql_init();
 	inter_party_sql_init();
 	inter_pet_sql_init();
-	inter_homunculus_sql_init();
 	inter_elemental_sql_init();
 	inter_clan_init();
 
@@ -968,7 +966,6 @@ void inter_final(void)
 	inter_storage_sql_final();
 	inter_party_sql_final();
 	inter_pet_sql_final();
-	inter_homunculus_sql_final();
 	inter_elemental_sql_final();
 
 	if(geoip_cache) aFree(geoip_cache);
@@ -1410,7 +1407,6 @@ int inter_parse_frommap(int fd)
 		  || inter_guild_parse_frommap(fd)
 		  || inter_storage_parse_frommap(fd)
 		  || inter_pet_parse_frommap(fd)
-		  || inter_homunculus_parse_frommap(fd)
 		  || inter_elemental_parse_frommap(fd)
 		  || inter_quest_parse_frommap(fd)
 		  || inter_clan_parse_frommap(fd)

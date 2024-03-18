@@ -19,7 +19,6 @@
 #include "date.hpp"
 #include "elemental.hpp"
 #include "guild.hpp"
-#include "homunculus.hpp"
 #include "intif.hpp"
 #include "itemdb.hpp"
 #include "log.hpp"

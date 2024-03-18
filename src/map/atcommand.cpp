@@ -33,7 +33,6 @@
 #include "duel.hpp"
 #include "elemental.hpp"
 #include "guild.hpp"
-#include "homunculus.hpp"
 #include "intif.hpp"
 #include "itemdb.hpp" // MAX_ITEMGROUP
 #include "log.hpp"
@@ -3931,12 +3930,11 @@ ACMD_FUNC(reload) {
 	} else if (strstr(command, "mobdb") || strncmp(message, "mobdb", 3) == 0) {
 		mob_reload();
 		pet_db.reload();
-		hom_reload();
 		reload_elementaldb();
 		clif_displaymessage(fd, msg_txt(sd,98)); // Monster database has been reloaded.
 	} else if (strstr(command, "skilldb") || strncmp(message, "skilldb", 4) == 0) {
 		skill_reload();
-		hom_reload_skill();
+		
 		reload_elemental_skilldb();
 		clif_displaymessage(fd, msg_txt(sd,99)); // Skill database has been reloaded.
 	} else if (strstr(command, "atcommand") || strncmp(message, "atcommand", 4) == 0) {
@@ -5675,9 +5673,7 @@ ACMD_FUNC(useskill)
 		return -1;
 	}
 
-	if (SKILL_CHK_HOMUN(skill_id) && hom_is_active(sd->hd)) // (If used with @useskill, put the homunc as dest)
-		bl = &sd->hd->bl;
-	else
+	
 		bl = &sd->bl;
 
 	if (skill_get_inf(skill_id)&INF_GROUND_SKILL)
@@ -7346,32 +7342,7 @@ ACMD_FUNC(showmobs)
  *------------------------------------------*/
 ACMD_FUNC(homlevel)
 {
-	TBL_HOM * hd;
-	int level = 0, i = 0;
-
-	nullpo_retr(-1, sd);
-
-	if ( !message || !*message || ( level = atoi(message) ) < 1 ) {
-		clif_displaymessage(fd, msg_txt(sd,1253)); // Please enter a level adjustment (usage: @homlevel <number of levels>).
-		return -1;
-	}
-
-	if ( !hom_is_active(sd->hd) ) {
-		clif_displaymessage(fd, msg_txt(sd,1254)); // You do not have a homunculus.
-		return -1;
-	}
-
-	hd = sd->hd;
-
-	for (i = 1; i <= level && hd->exp_next; i++){
-		hd->homunculus.exp += hd->exp_next;
-		if( !hom_levelup(hd) )
-			break;
-	}
-
-	status_calc_homunculus(hd, SCO_NONE);
-	status_percent_heal(&hd->bl, 100, 100);
-	clif_specialeffect(&hd->bl,EF_HO_UP,AREA);
+	
 
 	return 0;
 }
@@ -7381,45 +7352,13 @@ ACMD_FUNC(homlevel)
  *------------------------------------------*/
 ACMD_FUNC(homevolution)
 {
-	nullpo_retr(-1, sd);
-
-	if ( !hom_is_active(sd->hd) ) {
-		clif_displaymessage(fd, msg_txt(sd,1254)); // You do not have a homunculus.
-		return -1;
-	}
-
-	if ( !hom_evolution(sd->hd) ) {
-		clif_displaymessage(fd, msg_txt(sd,1255)); // Your homunculus doesn't evolve.
-		return -1;
-	}
-	clif_homskillinfoblock(sd);
+	
 	return 0;
 }
 
 ACMD_FUNC(hommutate)
 {
-	int homun_id, m_class = 0, m_id;
-	nullpo_retr(-1, sd);
-
-	if (!hom_is_active(sd->hd)) {
-		clif_displaymessage(fd, msg_txt(sd,1254)); // You do not have a homunculus.
-		return -1;
-	}
-
-	if (!message || !*message) {
-		homun_id = 6048 + (rnd() % 4);
-	} else {
-		homun_id = atoi(message);
-	}
-
-	m_class = hom_class2mapid(sd->hd->homunculus.class_);
-	m_id	= hom_class2mapid(homun_id);
-
-	if (m_class != -1 && m_id != -1 && m_class&HOM_EVO && m_id&HOM_S && sd->hd->homunculus.level >= 99) {
-		hom_mutate(sd->hd, homun_id);
-	} else {
-		clif_emotion(&sd->hd->bl, ET_SWEAT);
-	}
+	
 	return 0;
 }
 
@@ -7428,27 +7367,7 @@ ACMD_FUNC(hommutate)
  *------------------------------------------*/
 ACMD_FUNC(makehomun)
 {
-	int homunid;
-	nullpo_retr(-1, sd);
-
-	if ( sd->status.hom_id ) {
-		clif_displaymessage(fd, msg_txt(sd,450)); // You already have a homunculus
-		return -1;
-	}
-
-	if (!message || !*message) {
-		clif_displaymessage(fd, msg_txt(sd,1256)); // Please enter a homunculus ID (usage: @makehomun <homunculus id>).
-		return -1;
-	}
-
-	homunid = atoi(message);
-	if( homunid < HM_CLASS_BASE || homunid > HM_CLASS_BASE + MAX_HOMUNCULUS_CLASS - 1 )
-	{
-		clif_displaymessage(fd, msg_txt(sd,1257)); // Invalid Homunculus ID.
-		return -1;
-	}
-
-	hom_create_request(sd,homunid);
+	
 	return 0;
 }
 
@@ -7457,25 +7376,7 @@ ACMD_FUNC(makehomun)
  *------------------------------------------*/
 ACMD_FUNC(homfriendly)
 {
-	int friendly = 0;
-
-	nullpo_retr(-1, sd);
-
-	if ( !hom_is_active(sd->hd) ) {
-		clif_displaymessage(fd, msg_txt(sd,1254)); // You do not have a homunculus.
-		return -1;
-	}
-
-	if (!message || !*message) {
-		clif_displaymessage(fd, msg_txt(sd,1258)); // Please enter a friendly value (usage: @homfriendly <friendly value [0-1000]>).
-		return -1;
-	}
-
-	friendly = atoi(message);
-	friendly = cap_value(friendly, 0, 1000);
-
-	sd->hd->homunculus.intimacy = friendly * 100 ;
-	clif_send_homdata(sd,SP_INTIMATE,friendly);
+	
 	return 0;
 }
 
@@ -7484,25 +7385,7 @@ ACMD_FUNC(homfriendly)
  *------------------------------------------*/
 ACMD_FUNC(homhungry)
 {
-	int hungry = 0;
-
-	nullpo_retr(-1, sd);
-
-	if ( !hom_is_active(sd->hd) ) {
-		clif_displaymessage(fd, msg_txt(sd,1254)); // You do not have a homunculus.
-		return -1;
-	}
-
-	if (!message || !*message) {
-		clif_displaymessage(fd, msg_txt(sd,1259)); // Please enter a hunger value (usage: @homhungry <hunger value [0-100]>).
-		return -1;
-	}
-
-	hungry = atoi(message);
-	hungry = cap_value(hungry, 0, 100);
-
-	sd->hd->homunculus.hunger = hungry;
-	clif_send_homdata(sd,SP_HUNGRY,hungry);
+	
 	return 0;
 }
 
@@ -7511,32 +7394,7 @@ ACMD_FUNC(homhungry)
  *------------------------------------------*/
 ACMD_FUNC(homtalk)
 {
-	char mes[100],temp[CHAT_SIZE_MAX];
-
-	nullpo_retr(-1, sd);
-
-	if ( battle_config.min_chat_delay ) {
-		if( DIFF_TICK(sd->cantalk_tick, gettick()) > 0 )
-			return 0;
-		sd->cantalk_tick = gettick() + battle_config.min_chat_delay;
-	}
-
-	if (sd->sc.cant.chat || (sd->state.block_action & PCBLOCK_CHAT))
-		return -1; //no "chatting" while muted.
-
-	if ( !hom_is_active(sd->hd) ) {
-		clif_displaymessage(fd, msg_txt(sd,1254)); // You do not have a homunculus.
-		return -1;
-	}
-
-	if (!message || !*message || sscanf(message, "%99[^\n]", mes) < 1) {
-		clif_displaymessage(fd, msg_txt(sd,1260)); // Please enter a message (usage: @homtalk <message>).
-		return -1;
-	}
-
-	snprintf(temp, sizeof temp ,"%s : %s", sd->hd->homunculus.name, mes);
-	clif_disp_overhead(&sd->hd->bl, temp);
-
+	
 	return 0;
 }
 
@@ -7545,121 +7403,21 @@ ACMD_FUNC(homtalk)
  *------------------------------------------*/
 ACMD_FUNC(hominfo)
 {
-	struct homun_data *hd;
-	struct status_data *status;
-	nullpo_retr(-1, sd);
-
-	if ( !hom_is_active(sd->hd) ) {
-		clif_displaymessage(fd, msg_txt(sd,1254)); // You do not have a homunculus.
-		return -1;
-	}
-
-	hd = sd->hd;
-	status = status_get_status_data(&hd->bl);
-	clif_displaymessage(fd, msg_txt(sd,1261)); // Homunculus stats:
-
-	snprintf(atcmd_output, sizeof(atcmd_output) ,msg_txt(sd,1262), // HP: %d/%d - SP: %d/%d
-		status->hp, status->max_hp, status->sp, status->max_sp);
-	clif_displaymessage(fd, atcmd_output);
-
-	snprintf(atcmd_output, sizeof(atcmd_output) ,msg_txt(sd,1263), // ATK: %d - MATK: %d~%d
-		status->rhw.atk2 +status->batk, status->matk_min, status->matk_max);
-	clif_displaymessage(fd, atcmd_output);
-
-	snprintf(atcmd_output, sizeof(atcmd_output) ,msg_txt(sd,1264), // Hungry: %d - Intimacy: %u
-		hd->homunculus.hunger, hd->homunculus.intimacy/100);
-	clif_displaymessage(fd, atcmd_output);
-
-	snprintf(atcmd_output, sizeof(atcmd_output) ,
-		msg_txt(sd,1265), // Stats: Str %d / Agi %d / Vit %d / Int %d / Dex %d / Luk %d
-		status->str, status->agi, status->vit,
-		status->int_, status->dex, status->luk);
-	clif_displaymessage(fd, atcmd_output);
+	
 
 	return 0;
 }
 
 ACMD_FUNC(homstats)
 {
-	struct homun_data *hd;
-	struct s_homunculus_db *db;
-	struct s_homunculus *hom;
-	int lv, min, max, evo;
-
-	nullpo_retr(-1, sd);
-
-	if ( !hom_is_active(sd->hd) ) {
-		clif_displaymessage(fd, msg_txt(sd,1254)); // You do not have a homunculus.
-		return -1;
-	}
-
-	hd = sd->hd;
-
-	hom = &hd->homunculus;
-	db = hd->homunculusDB;
-	lv = hom->level;
-
-	snprintf(atcmd_output, sizeof(atcmd_output) ,
-		msg_txt(sd,1266), lv, db->name); // Homunculus growth stats (Lv %d %s):
-	clif_displaymessage(fd, atcmd_output);
-	lv--; //Since the first increase is at level 2.
-
-	evo = (hom->class_ == db->evo_class);
-	min = db->base.HP +lv*db->gmin.HP +(evo?db->emin.HP:0);
-	max = db->base.HP +lv*db->gmax.HP +(evo?db->emax.HP:0);;
-	snprintf(atcmd_output, sizeof(atcmd_output) ,msg_txt(sd,1267), hom->max_hp, min, max); // Max HP: %d (%d~%d)
-	clif_displaymessage(fd, atcmd_output);
-
-	min = db->base.SP +lv*db->gmin.SP +(evo?db->emin.SP:0);
-	max = db->base.SP +lv*db->gmax.SP +(evo?db->emax.SP:0);;
-	snprintf(atcmd_output, sizeof(atcmd_output) ,msg_txt(sd,1268), hom->max_sp, min, max); // Max SP: %d (%d~%d)
-	clif_displaymessage(fd, atcmd_output);
-
-	min = db->base.str +lv*(db->gmin.str/10) +(evo?db->emin.str:0);
-	max = db->base.str +lv*(db->gmax.str/10) +(evo?db->emax.str:0);;
-	snprintf(atcmd_output, sizeof(atcmd_output) ,msg_txt(sd,1269), hom->str/10, min, max); // Str: %d (%d~%d)
-	clif_displaymessage(fd, atcmd_output);
-
-	min = db->base.agi +lv*(db->gmin.agi/10) +(evo?db->emin.agi:0);
-	max = db->base.agi +lv*(db->gmax.agi/10) +(evo?db->emax.agi:0);;
-	snprintf(atcmd_output, sizeof(atcmd_output) ,msg_txt(sd,1270), hom->agi/10, min, max); // Agi: %d (%d~%d)
-	clif_displaymessage(fd, atcmd_output);
-
-	min = db->base.vit +lv*(db->gmin.vit/10) +(evo?db->emin.vit:0);
-	max = db->base.vit +lv*(db->gmax.vit/10) +(evo?db->emax.vit:0);;
-	snprintf(atcmd_output, sizeof(atcmd_output) ,msg_txt(sd,1271), hom->vit/10, min, max); // Vit: %d (%d~%d)
-	clif_displaymessage(fd, atcmd_output);
-
-	min = db->base.int_ +lv*(db->gmin.int_/10) +(evo?db->emin.int_:0);
-	max = db->base.int_ +lv*(db->gmax.int_/10) +(evo?db->emax.int_:0);;
-	snprintf(atcmd_output, sizeof(atcmd_output) ,msg_txt(sd,1272), hom->int_/10, min, max); // Int: %d (%d~%d)
-	clif_displaymessage(fd, atcmd_output);
-
-	min = db->base.dex +lv*(db->gmin.dex/10) +(evo?db->emin.dex:0);
-	max = db->base.dex +lv*(db->gmax.dex/10) +(evo?db->emax.dex:0);;
-	snprintf(atcmd_output, sizeof(atcmd_output) ,msg_txt(sd,1273), hom->dex/10, min, max); // Dex: %d (%d~%d)
-	clif_displaymessage(fd, atcmd_output);
-
-	min = db->base.luk +lv*(db->gmin.luk/10) +(evo?db->emin.luk:0);
-	max = db->base.luk +lv*(db->gmax.luk/10) +(evo?db->emax.luk:0);;
-	snprintf(atcmd_output, sizeof(atcmd_output) ,msg_txt(sd,1274), hom->luk/10, min, max); // Luk: %d (%d~%d)
-	clif_displaymessage(fd, atcmd_output);
+	
 
 	return 0;
 }
 
 ACMD_FUNC(homshuffle)
 {
-	nullpo_retr(-1, sd);
-
-	if(!sd->hd)
-		return -1; // nothing to do
-
-	if(!hom_shuffle(sd->hd))
-		return -1;
-
-	clif_displaymessage(sd->fd, msg_txt(sd,1275)); // Homunculus stats altered.
-	atcommand_homstats(fd, sd, command, message); //Print out the new stats
+	
 	return 0;
 }
 

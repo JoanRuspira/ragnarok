@@ -27,7 +27,6 @@
 #include "date.hpp"
 #include "elemental.hpp"
 #include "guild.hpp"
-#include "homunculus.hpp"
 #include "intif.hpp"
 #include "itemdb.hpp"
 #include "log.hpp"
@@ -757,36 +756,8 @@ bool skill_isNotOk(uint16 skill_id, struct map_session_data *sd)
  */
 bool skill_isNotOk_hom(struct homun_data *hd, uint16 skill_id, uint16 skill_lv)
 {
-	struct map_session_data *sd = NULL;
-	struct status_change *sc;
-	int8 spiritball = 0;
-
-	nullpo_retr(true, hd);
-
-	spiritball = skill_get_spiritball(skill_id, skill_lv);
-	sd = hd->master;
-	sc = status_get_sc(&hd->bl);
-
-	if (!sd)
-		return true;
-
-	if (sc && !sc->count)
-		sc = NULL;
-
-	if (util::vector_exists(hd->blockskill, skill_id))
-		return true;
-
-
-	if (spiritball) {
-		if (hd->homunculus.spiritball < spiritball) {
-			clif_skill_fail(sd, skill_id, USESKILL_FAIL_SPIRITS, spiritball);
-			return true;
-		}
-		hom_delspiritball(hd, spiritball, 1);
-	}
-
-	//Use master's criteria.
-	return skill_isNotOk(skill_id, hd->master);
+	
+	return 1;
 }
 
 /**
@@ -2076,10 +2047,7 @@ static int skill_check_condition_mercenary(struct block_list *bl, uint16 skill_i
 
 	nullpo_retr(0, bl);
 
-	switch( bl->type )
-	{
-		case BL_HOM: sd = ((TBL_HOM*)bl)->master; break;
-	}
+	
 
 	status = status_get_status_data(bl);
 	skill_lv = cap_value(skill_lv, 1, MAX_SKILL_LEVEL);
@@ -12520,35 +12488,15 @@ int skill_blockpc_clear(struct map_session_data *sd) {
 }
 
 TIMER_FUNC(skill_blockhomun_end){
-	struct homun_data *hd = (TBL_HOM*) map_id2bl(id);
-
-	if (hd) {
-		auto skill = util::vector_get(hd->blockskill, (uint16)data);
-
-		if (skill != hd->blockskill.end())
-			hd->blockskill.erase(skill);
-	}
+	
 
 	return 1;
 }
 
 int skill_blockhomun_start(struct homun_data *hd, uint16 skill_id, int tick)	//[orn]
 {
-	nullpo_retr(-1, hd);
-
-	if (!skill_db.exists(skill_id))
-		return -1;
-
-	auto skill = util::vector_get(hd->blockskill, skill_id);
-
-	if (tick < 1 && skill != hd->blockskill.end()) {
-		hd->blockskill.erase(skill);
-		return -1;
-	}
-
-	hd->blockskill.push_back(skill_id);
-
-	return add_timer(gettick() + tick, skill_blockhomun_end, hd->bl.id, skill_id);
+	
+	return 1;
 }
 
 TIMER_FUNC(skill_blockmerc_end){

@@ -27,7 +27,6 @@
 #include "clif.hpp"
 #include "elemental.hpp"
 #include "guild.hpp"
-#include "homunculus.hpp"
 #include "intif.hpp"
 #include "itemdb.hpp"
 #include "log.hpp"
@@ -1302,10 +1301,6 @@ static int mob_ai_sub_hard_activesearch(struct block_list *bl,va_list ap)
 			!status_has_mode(&md->status,MD_STATUSIMMUNE))
 			return 0; //Gangster paradise protection.
 	default:
-		if (battle_config.hom_setting&HOMSET_FIRST_TARGET &&
-			(*target) && (*target)->type == BL_HOM && bl->type != BL_HOM)
-			return 0; //For some reason Homun targets are never overriden.
-
 		dist = distance_bl(&md->bl, bl);
 		if(
 			((*target) == NULL || !check_distance_bl(&md->bl, *target, dist)) &&
@@ -2343,16 +2338,7 @@ void mob_log_damage(struct mob_data *md, struct block_list *src, int damage)
 				md->attacked_id = src->id;
 			break;
 		}
-		case BL_HOM:
-		{
-			struct homun_data *hd = (TBL_HOM*)src;
-			flag = MDLF_HOMUN;
-			if( hd->master )
-				char_id = hd->master->status.char_id;
-			if( damage )
-				md->attacked_id = src->id;
-			break;
-		}
+		
 		
 		case BL_PET:
 		{
@@ -2541,8 +2527,6 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 		count++; //Only logged into same map chars are counted for the total.
 		if (pc_isdead(tsd))
 			continue; // skip dead players
-		if (md->dmglog[i].flag == MDLF_HOMUN && !hom_is_active(tsd->hd))
-			continue; // skip homunc's share if inactive
 		if (md->dmglog[i].flag == MDLF_PET && (!tsd->status.pet_id || !tsd->pd))
 			continue; // skip pet's share if inactive
 
@@ -2688,13 +2672,7 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 					flag = 0;
 				}
 			}
-#ifdef RENEWAL
-			if (base_exp && tmpsd[i] && tmpsd[i]->hd)
-				hom_gainexp(tmpsd[i]->hd, base_exp * battle_config.homunculus_exp_gain / 100); // Homunculus only receive 10% of EXP
-#else
-			if (base_exp && md->dmglog[i].flag == MDLF_HOMUN) //tmpsd[i] is null if it has no homunc.
-				hom_gainexp(tmpsd[i]->hd, base_exp);
-#endif
+
 			if(flag) {
 				if(base_exp || job_exp) {
 					if( md->dmglog[i].flag != MDLF_PET || battle_config.pet_attack_exp_to_master ) {

@@ -30,7 +30,6 @@
 #include "inter.hpp"
 #include "int_elemental.hpp"
 #include "int_guild.hpp"
-#include "int_homun.hpp"
 #include "int_party.hpp"
 #include "int_storage.hpp"
 
@@ -1624,9 +1623,7 @@ enum e_char_del_response char_delete(struct char_session_data* sd, uint32 char_i
 	if( SQL_ERROR == Sql_Query(sql_handle, "DELETE FROM `%s` USING `%s` JOIN `%s` ON `pet_id` = `card1`|`card2`<<16 WHERE `%s`.char_id = '%d' AND card0 = 256", schema_config.pet_db, schema_config.pet_db, schema_config.cart_db, schema_config.cart_db, char_id) )
 		Sql_ShowDebug(sql_handle);
 
-	/* remove homunculus */
-	if( hom_id )
-		mapif_homunculus_delete(hom_id);
+
 
 	/* remove elemental */
 	if (elemental_id)

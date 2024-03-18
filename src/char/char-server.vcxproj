@@ -168,7 +168,6 @@
     <ClInclude Include="int_clan.hpp" />
     <ClInclude Include="int_elemental.hpp" />
     <ClInclude Include="int_guild.hpp" />
-    <ClInclude Include="int_homun.hpp" />
     <ClInclude Include="int_party.hpp" />
     <ClInclude Include="int_pet.hpp" />
     <ClInclude Include="int_quest.hpp" />
@@ -184,7 +183,6 @@
     <ClCompile Include="int_clan.cpp" />
     <ClCompile Include="int_elemental.cpp" />
     <ClCompile Include="int_guild.cpp" />
-    <ClCompile Include="int_homun.cpp" />
     <ClCompile Include="int_party.cpp" />
     <ClCompile Include="int_pet.cpp" />
     <ClCompile Include="int_quest.cpp" />

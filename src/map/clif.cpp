@@ -33,7 +33,6 @@
 #include "clif.hpp"
 #include "elemental.hpp"
 #include "guild.hpp"
-#include "homunculus.hpp"
 #include "intif.hpp"
 #include "itemdb.hpp"
 #include "log.hpp"
@@ -1642,86 +1641,7 @@ int clif_spawn( struct block_list *bl, bool walking ){
 /// 022e <name>.24B <modified>.B <level>.W <hunger>.W <intimacy>.W <equip id>.W <atk>.W <matk>.W <hit>.W <crit>.W <def>.W <mdef>.W <flee>.W <aspd>.W <hp>.W <max hp>.W <sp>.W <max sp>.W <exp>.L <max exp>.L <skill points>.W <atk range>.W	(ZC_PROPERTY_HOMUN)
 /// 09f7 <name>.24B <modified>.B <level>.W <hunger>.W <intimacy>.W <equip id>.W <atk>.W <matk>.W <hit>.W <crit>.W <def>.W <mdef>.W <flee>.W <aspd>.W <hp>.L <max hp>.L <sp>.W <max sp>.W <exp>.L <max exp>.L <skill points>.W <atk range>.W (ZC_PROPERTY_HOMUN_2)
 void clif_hominfo( struct map_session_data *sd, struct homun_data *hd, int flag ){
-#if PACKETVER_MAIN_NUM >= 20101005 || PACKETVER_RE_NUM >= 20080827 || defined(PACKETVER_ZERO)
-	nullpo_retv( sd );
-	nullpo_retv( hd );
 
-	struct status_data *status = &hd->battle_status;
-	struct PACKET_ZC_PROPERTY_HOMUN p;
-
-	p.packetType = HEADER_ZC_PROPERTY_HOMUN;
-	safestrncpy( p.name, hd->homunculus.name, sizeof( p.name ) );
-	// Bit field, bit 0 : rename_flag (1 = already renamed), bit 1 : homunc vaporized (1 = true), bit 2 : homunc dead (1 = true)
-	p.flags = ( !battle_config.hom_rename && hd->homunculus.rename_flag ? 0x1 : 0x0 ) | ( hd->homunculus.vaporize == HOM_ST_REST ? 0x2 : 0 ) | ( hd->homunculus.hp > 0 ? 0x4 : 0 );
-	p.level = hd->homunculus.level;
-	p.hunger = hd->homunculus.hunger;
-	p.intimacy = hd->homunculus.intimacy / 100;
-#if !(PACKETVER_MAIN_NUM >= 20190619 || PACKETVER_RE_NUM >= 20190605 || PACKETVER_ZERO_NUM >= 20190626)
-	p.itemId = 0; // equip id
-#endif
-	p.atk2 = cap_value( status->rhw.atk2 + status->batk, 0, INT16_MAX );
-	p.matk = i16min( status->matk_max, INT16_MAX ); //FIXME capping to INT16 here is too late
-	p.hit = status->hit;
-	if( battle_config.hom_setting&HOMSET_DISPLAY_LUK ){
-		p.crit = status->luk / 3 + 1;	//crit is a +1 decimal value! Just display purpose.[Vicious]
-	}else{
-		p.crit = status->cri / 10;
-	}
-#ifdef RENEWAL
-	p.def = status->def + status->def2;
-	p.mdef = status->mdef + status->mdef2;
-#else
-	p.def = status->def + status->vit;
-	p.mdef = status->mdef;
-#endif
-	p.flee = status->flee;
-	p.amotion = (flag) ? 0 : status->amotion;
-#if PACKETVER >= 20141016
-	// Homunculus HP bar will screw up if the percentage calculation exceeds signed values
-	// Tested maximum: 21474836(=INT32_MAX/100), any value above will screw up the HP bar
-	if( status->max_hp > ( INT32_MAX / 100 ) ){
-		p.hp = status->hp / ( status->max_hp / 100 );
-		p.maxHp = 100;
-	}else{
-		p.hp = status->hp;
-		p.maxHp = status->max_hp;
-	}
-#else
-	if( status->max_hp > INT16_MAX ){
-		p.hp = status->hp / ( status->max_hp / 100 );
-		p.maxHp = 100;
-	}else{
-		p.hp = status->hp;
-		p.maxHp = status->max_hp;
-	}
-#endif
-	if( status->max_sp > INT16_MAX ){
-		p.sp = status->sp / ( status->max_sp / 100 );
-		p.maxSp = 100;
-	}else{
-		p.sp = status->sp;
-		p.maxSp = status->max_sp;
-	}
-	p.exp = (uint32)hd->homunculus.exp;
-	p.expNext = (uint32)hd->exp_next;
-	switch( hom_class2type( hd->homunculus.class_ ) ){
-		case HT_REG:
-		case HT_EVO:
-			if( hd->homunculus.level >= battle_config.hom_max_level ){
-				p.expNext = 0;
-			}
-			break;
-		case HT_S:
-			if( hd->homunculus.level >= battle_config.hom_S_max_level ){
-				p.expNext = 0;
-			}
-			break;
-	}
-	p.skillPoints = hd->homunculus.skillpts;
-	p.range = status_get_range( &hd->bl );
-
-	clif_send( &p, sizeof( p ), &sd->bl, SELF );
-#endif
 }
 
 
@@ -1737,80 +1657,19 @@ void clif_hominfo( struct map_session_data *sd, struct homun_data *hd, int flag 
 ///     ? = ignored
 void clif_send_homdata(struct map_session_data *sd, int state, int param)
 {	//[orn]
-	int fd = sd->fd;
-
-	if ( (state == SP_INTIMATE) && (param >= 910) && (sd->hd->homunculus.class_ == sd->hd->homunculusDB->evo_class) )
-		hom_calc_skilltree(sd->hd, 0);
-
-	WFIFOHEAD(fd, packet_len(0x230));
-	WFIFOW(fd,0)=0x230;
-	WFIFOB(fd,2)=0;
-	WFIFOB(fd,3)=state;
-	WFIFOL(fd,4)=sd->hd->bl.id;
-	WFIFOL(fd,8)=param;
-	WFIFOSET(fd,packet_len(0x230));
+	
 }
 
 
 int clif_homskillinfoblock(struct map_session_data *sd)
 {	//[orn]
-	struct homun_data *hd;
-	int fd = sd->fd;
-	int i, len=4;
-
-	nullpo_ret(sd);
-
-	hd = sd->hd;
-	if ( !hd )
-		return 0 ;
-
-	WFIFOHEAD(fd, 4+37*MAX_HOMUNSKILL);
-	WFIFOW(fd,0)=0x235;
-	for ( i = 0; i < MAX_HOMUNSKILL; i++){
-		int id = hd->homunculus.hskill[i].id;
-		if( id != 0 ){
-			int combo = (hd->homunculus.hskill[i].flag)&SKILL_FLAG_TMP_COMBO;
-			short idx = hom_skill_get_index(id);
-			if (idx == -1)
-				continue;
-			WFIFOW(fd,len  ) = id;
-			WFIFOW(fd,len+2) = ((combo)?INF_SELF_SKILL:skill_get_inf(id));
-			WFIFOW(fd,len+4) = 0;
-			WFIFOW(fd,len+6) = hd->homunculus.hskill[idx].lv;
-			WFIFOW(fd,len+8) = skill_get_sp(id,hd->homunculus.hskill[idx].lv);
-			WFIFOW(fd,len+10)= skill_get_range2(&sd->hd->bl,id,hd->homunculus.hskill[idx].lv,false);
-			safestrncpy(WFIFOCP(fd,len+12), skill_get_name(id), NAME_LENGTH);
-			WFIFOB(fd,len+36) = (hd->homunculus.level < hom_skill_get_min_level(hd->homunculus.class_, id) || hd->homunculus.hskill[idx].lv >= hom_skill_tree_get_max(id, hd->homunculus.class_)) ? 0 : 1;
-			len+=37;
-		}
-	}
-	WFIFOW(fd,2)=len;
-	WFIFOSET(fd,len);
 
 	return 0;
 }
 
 void clif_homskillup(struct map_session_data *sd, uint16 skill_id)
 {	//[orn]
-	struct homun_data *hd;
-	int fd;
-	short idx = -1;
-	nullpo_retv(sd);
-
-	if ((idx = hom_skill_get_index(skill_id)) == -1)
-		return;
-
-	fd = sd->fd;
-	hd = sd->hd;
-
-	WFIFOHEAD(fd, packet_len(0x239));
-	WFIFOW(fd,0) = 0x239;
-	WFIFOW(fd,2) = skill_id;
-	WFIFOW(fd,4) = hd->homunculus.hskill[idx].lv;
-	WFIFOW(fd,6) = skill_get_sp(skill_id,hd->homunculus.hskill[idx].lv);
-	WFIFOW(fd,8) = skill_get_range2(&hd->bl,skill_id,hd->homunculus.hskill[idx].lv,false);
-	WFIFOB(fd,10) = (hd->homunculus.level < hom_skill_get_min_level(hd->homunculus.class_, skill_id) || hd->homunculus.hskill[idx].lv >= hom_skill_tree_get_max(hd->homunculus.hskill[idx].id, hd->homunculus.class_)) ? 0 : 1;
-	WFIFOSET(fd,packet_len(0x239));
+	
 }
 
 /// Result of request to feed a homun/merc.
@@ -1819,15 +1678,7 @@ void clif_homskillup(struct map_session_data *sd, uint16 skill_id)
 ///     0 = failure
 ///     1 = success
 void clif_hom_food( struct map_session_data *sd, int foodid, int fail ){
-	nullpo_retv( sd );
-
-	struct PACKET_ZC_FEED_MER p;
-
-	p.packetType = 0x22f;
-	p.result = fail;
-	p.itemId = client_nameid( foodid );
-
-	clif_send( &p, sizeof( p ), &sd->bl, SELF );
+	
 }
 
 
@@ -8307,9 +8158,6 @@ void clif_spiritball( struct block_list *bl, struct block_list* target, enum sen
 		case BL_PC:
 			p.amount = ( (struct map_session_data*)bl )->spiritball;
 			break;
-		case BL_HOM:
-			p.amount = ( (struct homun_data*)bl )->homunculus.spiritball;
-			break;
 	}
 
 	clif_send( &p, sizeof( p ), target == nullptr ? bl : target, send_target );
@@ -9649,8 +9497,7 @@ void clif_refresh(struct map_session_data *sd)
 		clif_refreshlook(&sd->bl,sd->bl.id,LOOK_CLOTHES_COLOR,sd->vd.cloth_color,SELF);
 	if (sd->vd.body_style)
 		clif_refreshlook(&sd->bl,sd->bl.id,LOOK_BODY2,sd->vd.body_style,SELF);
-	if(hom_is_active(sd->hd))
-		clif_send_homdata(sd,SP_ACK,0);
+
 	if( sd->md ) {
 		clif_mercenary_info(sd);
 		clif_mercenary_skillblock(sd);
@@ -9765,9 +9612,7 @@ void clif_name( struct block_list* src, struct block_list *bl, send_target targe
 			packet.gid = bl->id;
 
 			switch (bl->type) {
-				case BL_HOM:
-					memcpy(packet.name, ((TBL_HOM *)bl)->homunculus.name, NAME_LENGTH);
-					break;
+				
 				case BL_PET:
 					safestrncpy(packet.name, ((TBL_PET *)bl)->pet.name, NAME_LENGTH);
 					break;
@@ -10632,20 +10477,7 @@ void clif_parse_LoadEndAck(int fd,struct map_session_data *sd)
 		}
 	}
 
-	//homunculus [blackhole89]
-	if( hom_is_active(sd->hd) ) {
-		if(map_addblock(&sd->hd->bl))
-			return;
-		clif_spawn(&sd->hd->bl);
-		clif_send_homdata(sd,SP_ACK,0);
-		clif_hominfo(sd,sd->hd,1);
-		clif_hominfo(sd,sd->hd,0); //for some reason, at least older clients want this sent twice
-		clif_homskillinfoblock(sd);
-		if( battle_config.hom_setting&HOMSET_COPY_SPEED )
-			status_calc_bl(&sd->hd->bl, SCB_SPEED); //Homunc mimic their master's speed on each map change
-		if( !(battle_config.hom_setting&HOMSET_NO_INSTANT_LAND_SKILL) )
-			skill_unit_move(&sd->hd->bl,gettick(),1); // apply land skills immediately
-	}
+	
 
 	
 
@@ -10694,8 +10526,7 @@ void clif_parse_LoadEndAck(int fd,struct map_session_data *sd)
 		if(sd->pd && sd->pd->pet.intimate > 900)
 			clif_pet_emotion(sd->pd,(sd->pd->pet.class_ - 100)*100 + 50 + pet_hungry_val(sd->pd));
 
-		if(hom_is_active(sd->hd))
-			hom_init_timers(sd->hd);
+	
 
 		if (night_flag && mapdata->flag[MF_NIGHTENABLED]) {
 			sd->state.night = 1;
@@ -10747,21 +10578,7 @@ void clif_parse_LoadEndAck(int fd,struct map_session_data *sd)
 			}
 		}
 #endif
-#if PACKETVER >= 20170920
-		if( battle_config.homunculus_autofeed_always ){
-			// Always send ON or OFF
-			if( sd->hd && battle_config.feature_homunculus_autofeed ){
-				clif_configuration( sd, CONFIG_HOMUNCULUS_AUTOFEED, sd->hd->homunculus.autofeed );
-			}else{
-				clif_configuration( sd, CONFIG_HOMUNCULUS_AUTOFEED, false );
-			}
-		}else{
-			// Only send when enabled
-			if( sd->hd && battle_config.feature_homunculus_autofeed && sd->hd->homunculus.autofeed ){
-				clif_configuration( sd, CONFIG_HOMUNCULUS_AUTOFEED, true );
-			}
-		}
-#endif
+
 
 		if (sd->guild && battle_config.guild_notice_changemap == 1){
 			clif_guild_notice(sd); // Displays after VIP
@@ -12403,56 +12220,12 @@ void clif_parse_SkillUp(int fd,struct map_session_data *sd)
 
 static void clif_parse_UseSkillToId_homun(struct homun_data *hd, struct map_session_data *sd, t_tick tick, uint16 skill_id, uint16 skill_lv, int target_id)
 {
-	int lv;
-
-	if( !hd )
-		return;
-	if( skill_isNotOk_hom(hd, skill_id, skill_lv) ) {
-		clif_emotion(&hd->bl, ET_THINK);
-		return;
-	}
-	if( hd->bl.id != target_id && skill_get_inf(skill_id)&INF_SELF_SKILL )
-		target_id = hd->bl.id;
-	if( hd->ud.skilltimer != INVALID_TIMER ) {
-		if( skill_id != SK_MG_CASTCANCEL && skill_id != SK_PF_SPELLFIST ) return;
-	} else if( DIFF_TICK(tick, hd->ud.canact_tick) < 0 ) {
-		clif_emotion(&hd->bl, ET_THINK);
-		if (hd->master)
-			clif_skill_fail(hd->master, skill_id, USESKILL_FAIL_SKILLINTERVAL, 0);
-		return;
-	}
-
-	lv = hom_checkskill(hd, skill_id);
-	if( skill_lv > lv )
-		skill_lv = lv;
-	if( skill_lv )
-		unit_skilluse_id(&hd->bl, target_id, skill_id, skill_lv);
+	
 }
 
 static void clif_parse_UseSkillToPos_homun(struct homun_data *hd, struct map_session_data *sd, t_tick tick, uint16 skill_id, uint16 skill_lv, short x, short y, int skillmoreinfo)
 {
-	int lv;
-	if( !hd )
-		return;
-	if( skill_isNotOk_hom(hd, skill_id, skill_lv) ) {
-		clif_emotion(&hd->bl, ET_THINK);
-		return;
-	}
-	if( hd->ud.skilltimer != INVALID_TIMER ) {
-		if( skill_id != SK_MG_CASTCANCEL && skill_id != SK_PF_SPELLFIST ) return;
-	} else if( DIFF_TICK(tick, hd->ud.canact_tick) < 0 ) {
-		clif_emotion(&hd->bl, ET_THINK);
-		if (hd->master)
-			clif_skill_fail(hd->master, skill_id, USESKILL_FAIL_SKILLINTERVAL, 0);
-		return;
-	}
-
-		return;
-	lv = hom_checkskill(hd, skill_id);
-	if( skill_lv > lv )
-		skill_lv = lv;
-	if( skill_lv )
-		unit_skilluse_pos(&hd->bl, x, y, skill_id, skill_lv);
+	
 }
 
 static void clif_parse_UseSkillToId_mercenary(struct mercenary_data *md, struct map_session_data *sd, t_tick tick, uint16 skill_id, uint16 skill_lv, int target_id)
@@ -15121,25 +14894,14 @@ void clif_feel_req(int fd, struct map_session_data *sd, uint16 skill_lv)
 /// Request to change homunculus' name (CZ_RENAME_MER).
 /// 0231 <name>.24B
 void clif_parse_ChangeHomunculusName(int fd, struct map_session_data *sd){
-	hom_change_name(sd,RFIFOCP(fd,packet_db[RFIFOW(fd,0)].pos[0]));
+
 }
 
 
 /// Request to warp/move homunculus/mercenary to it's owner (CZ_REQUEST_MOVETOOWNER).
 /// 0234 <id>.L
 void clif_parse_HomMoveToMaster(int fd, struct map_session_data *sd){
-	int id = RFIFOL(fd,packet_db[RFIFOW(fd,0)].pos[0]); // Mercenary or Homunculus
-	struct block_list *bl = NULL;
-	struct unit_data *ud = NULL;
-
-	if( hom_is_active(sd->hd) && sd->hd->bl.id == id )
-		bl = &sd->hd->bl; // Moving Homunculus
-	else
-		return;
-
-	unit_calc_pos(bl, sd->bl.x, sd->bl.y, sd->ud.dir);
-	ud = unit_bl2ud(bl);
-	unit_walktoxy(bl, ud->to_x, ud->to_y, 4);
+	
 }
 
 
@@ -15169,13 +14931,7 @@ void clif_parse_HomAttack(int fd,struct map_session_data *sd)
 ///     1 = feed
 ///     2 = delete
 void clif_parse_HomMenu(int fd, struct map_session_data *sd)
-{	//[orn]
-	int cmd = RFIFOW(fd,0);
-	//int type = RFIFOW(fd,packet_db[cmd].pos[0]);
-	if(!hom_is_active(sd->hd))
-		return;
-
-	hom_menu(sd,RFIFOB(fd,packet_db[cmd].pos[1]));
+{	
 }
 
 
@@ -16107,14 +15863,6 @@ void clif_parse_configuration( int fd, struct map_session_data* sd ){
 			}
 
 			sd->pd->pet.autofeed = flag;
-			break;
-		case CONFIG_HOMUNCULUS_AUTOFEED:
-			// Player can not click this if he does not have a homunculus or it is vaporized
-			if( sd->hd == nullptr || sd->hd->homunculus.vaporize || !battle_config.feature_homunculus_autofeed ){
-				return;
-			}
-
-			sd->hd->homunculus.autofeed = flag;
 			break;
 		default:
 			ShowWarning( "clif_parse_configuration: received unknown configuration type '%d'...\n", type );

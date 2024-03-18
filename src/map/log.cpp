@@ -12,7 +12,6 @@
 #include "../common/strlib.hpp"
 
 #include "battle.hpp"
-#include "homunculus.hpp"
 #include "itemdb.hpp"
 #include "map.hpp"
 #include "mob.hpp"
@@ -544,13 +543,6 @@ void log_feeding(struct map_session_data *sd, e_log_feeding_type type, t_itemid 
 		return;
 
 	switch (type) {
-		case LOG_FEED_HOMUNCULUS:
-			if (sd->hd) {
-				target_id = sd->hd->homunculus.hom_id;
-				target_class = sd->hd->homunculus.class_;
-				intimacy = sd->hd->homunculus.intimacy;
-			}
-			break;
 		case LOG_FEED_PET:
 			if (sd->pd) {
 				target_id = sd->pd->pet.pet_id;

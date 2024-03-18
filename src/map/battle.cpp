@@ -22,7 +22,6 @@
 #include "clif.hpp"
 #include "elemental.hpp"
 #include "guild.hpp"
-#include "homunculus.hpp"
 #include "log.hpp"
 #include "map.hpp"
 #include "mob.hpp"
@@ -123,7 +122,6 @@ int battle_gettarget(struct block_list* bl)
 		case BL_PC:  return ((struct map_session_data*)bl)->ud.target;
 		case BL_MOB: return ((struct mob_data*)bl)->target_id;
 		case BL_PET: return ((struct pet_data*)bl)->target_id;
-		case BL_HOM: return ((struct homun_data*)bl)->ud.target;
 		case BL_ELEM: return ((struct elemental_data*)bl)->ud.target;
 	}
 
@@ -4566,10 +4564,7 @@ struct block_list* battle_get_master(struct block_list *src)
 				if (((TBL_MOB*)src)->master_id)
 					src = map_id2bl(((TBL_MOB*)src)->master_id);
 				break;
-			case BL_HOM:
-				if (((TBL_HOM*)src)->master)
-					src = (struct block_list*)((TBL_HOM*)src)->master;
-				break;
+			
 			case BL_ELEM:
 				if (((TBL_ELEM*)src)->master)
 					src = (struct block_list*)((TBL_ELEM*)src)->master;

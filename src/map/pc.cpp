@@ -37,7 +37,6 @@
 #include "duel.hpp"
 #include "elemental.hpp"
 #include "guild.hpp"
-#include "homunculus.hpp"
 #include "intif.hpp"
 #include "itemdb.hpp" // MAX_ITEMGROUP
 #include "log.hpp"
@@ -6060,13 +6059,7 @@ enum e_setpos pc_setpos(struct map_session_data* sd, unsigned short mapindex, in
 		sd->pd->ud.dir = sd->ud.dir;
 	}
 
-	if( hom_is_active(sd->hd) )
-	{
-		sd->hd->bl.m = m;
-		sd->hd->bl.x = sd->hd->ud.to_x = x;
-		sd->hd->bl.y = sd->hd->ud.to_y = y;
-		sd->hd->ud.dir = sd->ud.dir;
-	}
+
 
 	
 
@@ -7621,11 +7614,6 @@ void pc_skillup(struct map_session_data *sd,uint16 skill_id)
 		guild_skillup(sd, skill_id);
 		return;
 	}
-	// Level up homunculus skill
-	else if (sd->hd && SKILL_CHK_HOMUN(skill_id)) {
-		hom_skillup(sd->hd, skill_id);
-		return;
-	}
 	else {
 		if( sd->status.skill_point > 0 &&
 			sd->status.skill[idx].id &&
@@ -8246,8 +8234,6 @@ int pc_dead(struct map_session_data *sd,struct block_list *src)
 			pet_unlocktarget(sd->pd);
 	}
 
-	if (hom_is_active(sd->hd) && battle_config.homunculus_auto_vapor && get_percentage(sd->hd->battle_status.hp, sd->hd->battle_status.max_hp) >= battle_config.homunculus_auto_vapor)
-		hom_vaporize(sd, HOM_ST_ACTIVE);
 
 
 	if( sd->ed )

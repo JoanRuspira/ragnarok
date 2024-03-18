@@ -41,7 +41,6 @@
 #include "date.hpp" // date type enum, date_get()
 #include "elemental.hpp"
 #include "guild.hpp"
-#include "homunculus.hpp"
 #include "intif.hpp"
 #include "itemdb.hpp"
 #include "log.hpp"
@@ -10462,10 +10461,7 @@ BUILDIN_FUNC(getexp)
 		job = (int) cap_value(job * bonus, 0, INT_MAX);
 
 	pc_gainexp(sd, NULL, base, job, 1);
-#ifdef RENEWAL
-	if (base && sd->hd)
-		hom_gainexp(sd->hd, base * battle_config.homunculus_exp_gain / 100); // Homunculus only receive 10% of EXP
-#endif
+
 
 	return SCRIPT_CMD_SUCCESS;
 }
@@ -11879,18 +11875,7 @@ BUILDIN_FUNC(catchpet)
  *------------------------------------------*/
 BUILDIN_FUNC(homunculus_evolution)
 {
-	TBL_PC *sd;
-
-	if( !script_rid2sd(sd) )
-		return SCRIPT_CMD_SUCCESS;
-
-	if(hom_is_active(sd->hd))
-	{
-		if (sd->hd->homunculus.intimacy >= battle_config.homunculus_evo_intimacy_need)
-			hom_evolution(sd->hd);
-		else
-			clif_emotion(&sd->hd->bl, ET_SWEAT);
-	}
+	
 	return SCRIPT_CMD_SUCCESS;
 }
 
@@ -11900,35 +11885,6 @@ BUILDIN_FUNC(homunculus_evolution)
  *------------------------------------------*/
 BUILDIN_FUNC(homunculus_mutate)
 {
-	int homun_id;
-	TBL_PC *sd;
-
-	if( !script_rid2sd(sd) || sd->hd == NULL )
-		return SCRIPT_CMD_SUCCESS;
-
-	if(script_hasdata(st,2))
-		homun_id = script_getnum(st,2);
-	else
-		homun_id = 6048 + (rnd() % 4);
-
-	if( sd->hd->homunculus.vaporize == HOM_ST_MORPH ) {
-		int m_class = hom_class2mapid(sd->hd->homunculus.class_);
-		int m_id = hom_class2mapid(homun_id);
-		short i = pc_search_inventory(sd, ITEMID_STRANGE_EMBRYO);
-
-		if ( m_class != -1 && m_id != -1 && m_class&HOM_EVO && m_id&HOM_S && sd->hd->homunculus.level >= 99 && i >= 0 ) {
-			sd->hd->homunculus.vaporize = HOM_ST_REST; // Remove morph state.
-			hom_call(sd); // Respawn homunculus.
-			hom_mutate(sd->hd, homun_id);
-			pc_delitem(sd, i, 1, 0, 0, LOG_TYPE_SCRIPT);
-			script_pushint(st, 1);
-			return SCRIPT_CMD_SUCCESS;
-		} else
-			clif_emotion(&sd->bl, ET_SWEAT);
-	} else
-		clif_emotion(&sd->bl, ET_SWEAT);
-
-	script_pushint(st, 0);
 
 	return SCRIPT_CMD_SUCCESS;
 }
@@ -11939,35 +11895,7 @@ BUILDIN_FUNC(homunculus_mutate)
  *------------------------------------------*/
 BUILDIN_FUNC(morphembryo)
 {
-	struct item item_tmp;
-	TBL_PC *sd;
-
-	if( !script_rid2sd(sd) || sd->hd == NULL )
-		return SCRIPT_CMD_SUCCESS;
-
-	if( hom_is_active(sd->hd) ) {
-		int m_class = hom_class2mapid(sd->hd->homunculus.class_);
-
-		if ( m_class != -1 && m_class&HOM_EVO && sd->hd->homunculus.level >= 99 ) {
-			char i;
-			memset(&item_tmp, 0, sizeof(item_tmp));
-			item_tmp.nameid = ITEMID_STRANGE_EMBRYO;
-			item_tmp.identify = 1;
-
-			if( (i = pc_additem(sd, &item_tmp, 1, LOG_TYPE_SCRIPT)) ) {
-				clif_additem(sd, 0, 0, i);
-				clif_emotion(&sd->bl, ET_SWEAT); // Fail to avoid item drop exploit.
-			} else {
-				hom_vaporize(sd, HOM_ST_MORPH);
-				script_pushint(st, 1);
-				return SCRIPT_CMD_SUCCESS;
-			}
-		} else
-			clif_emotion(&sd->hd->bl, ET_SWEAT);
-	} else
-		clif_emotion(&sd->bl, ET_SWEAT);
-
-	script_pushint(st, 0);
+	
 
 	return SCRIPT_CMD_SUCCESS;
 }
@@ -11975,14 +11903,7 @@ BUILDIN_FUNC(morphembryo)
 // [Zephyrus]
 BUILDIN_FUNC(homunculus_shuffle)
 {
-	TBL_PC *sd;
-
-	if( !script_rid2sd(sd) )
-		return SCRIPT_CMD_SUCCESS;
-
-	if(hom_is_active(sd->hd))
-		hom_shuffle(sd->hd);
-
+	
 	return SCRIPT_CMD_SUCCESS;
 }
 
@@ -11995,19 +11916,7 @@ BUILDIN_FUNC(homunculus_shuffle)
  *------------------------------------------*/
 BUILDIN_FUNC(checkhomcall)
 {
-	TBL_PC *sd;
-	TBL_HOM *hd;
-
-	if( !script_rid2sd(sd) )
-		return SCRIPT_CMD_SUCCESS;
-
-	hd = sd->hd;
-
-	if( !hd )
-		script_pushint(st, -1);
-	else
-		script_pushint(st, hd->homunculus.vaporize);
-
+	
 	return SCRIPT_CMD_SUCCESS;
 }
 
@@ -15012,31 +14921,7 @@ BUILDIN_FUNC(getpetinfo)
  *------------------------------------------*/
 BUILDIN_FUNC(gethominfo)
 {
-	TBL_PC *sd;
-	TBL_HOM *hd;
-	int type=script_getnum(st,2);
-
-	if (!script_charid2sd(3, sd) || !(hd = sd->hd)) {
-		if (type == 2)
-			script_pushconststr(st,"null");
-		else
-			script_pushint(st,0);
-		return SCRIPT_CMD_SUCCESS;
-	}
-
-	switch(type){
-		case 0: script_pushint(st,hd->homunculus.hom_id); break;
-		case 1: script_pushint(st,hd->homunculus.class_); break;
-		case 2: script_pushstrcopy(st,hd->homunculus.name); break;
-		case 3: script_pushint(st,hd->homunculus.intimacy); break;
-		case 4: script_pushint(st,hd->homunculus.hunger); break;
-		case 5: script_pushint(st,hd->homunculus.rename_flag); break;
-		case 6: script_pushint(st,hd->homunculus.level); break;
-		case 7: script_pushint(st,hd->bl.id); break;
-		default:
-			script_pushint(st,0);
-			break;
-	}
+	
 	return SCRIPT_CMD_SUCCESS;
 }
 
@@ -15405,10 +15290,7 @@ BUILDIN_FUNC(getmapxy)
 			if (sd->pd && ((script_isstring(st, 6) && script_nick2sd(6, sd)) || script_mapid2sd(6, sd)))
 				bl = &sd->pd->bl;
 			break;
-		case BL_HOM:	//Get Homun Position
-			if (sd->hd && ((script_isstring(st, 6) && script_nick2sd(6, sd)) || script_mapid2sd(6, sd)))
-				bl = &sd->hd->bl;
-			break;
+		
 		case BL_ELEM: //Get Elemental Position
 			if (sd->ed && ((script_isstring(st, 6) && script_nick2sd(6, sd)) || script_mapid2sd(6, sd)))
 				bl = &sd->ed->bl;
@@ -17596,7 +17478,6 @@ BUILDIN_FUNC(rid2name)
 			case BL_PC:  script_pushstrcopy(st,((TBL_PC*)bl)->status.name); break;
 			case BL_NPC: script_pushstrcopy(st,((TBL_NPC*)bl)->exname); break;
 			case BL_PET: script_pushstrcopy(st,((TBL_PET*)bl)->pet.name); break;
-			case BL_HOM: script_pushstrcopy(st,((TBL_HOM*)bl)->homunculus.name); break;
 			default:
 				ShowError("buildin_rid2name: BL type unknown.\n");
 				script_pushconststr(st,"");
@@ -17862,53 +17743,7 @@ BUILDIN_FUNC(getunitdata)
 			getunitdata_sub(UMOB_GROUP_ID, md->ud.group_id);
 			break;
 
-		case BL_HOM:
-			if (!hd) {
-				ShowWarning("buildin_getunitdata: Error in finding object BL_HOM!\n");
-				return SCRIPT_CMD_FAILURE;
-			}
-			getunitdata_sub(UHOM_SIZE, hd->base_status.size);
-			getunitdata_sub(UHOM_LEVEL, hd->homunculus.level);
-			getunitdata_sub(UHOM_HP, hd->homunculus.hp);
-			getunitdata_sub(UHOM_MAXHP, hd->homunculus.max_hp);
-			getunitdata_sub(UHOM_SP, hd->homunculus.sp);
-			getunitdata_sub(UHOM_MAXSP, hd->homunculus.max_sp);
-			getunitdata_sub(UHOM_MASTERCID, hd->homunculus.char_id);
-			getunitdata_sub(UHOM_MAPID, hd->bl.m);
-			getunitdata_sub(UHOM_X, hd->bl.x);
-			getunitdata_sub(UHOM_Y, hd->bl.y);
-			getunitdata_sub(UHOM_HUNGER, hd->homunculus.hunger);
-			getunitdata_sub(UHOM_INTIMACY, hd->homunculus.intimacy);
-			getunitdata_sub(UHOM_SPEED, hd->base_status.speed);
-			getunitdata_sub(UHOM_LOOKDIR, hd->ud.dir);
-			getunitdata_sub(UHOM_CANMOVETICK, hd->ud.canmove_tick);
-			getunitdata_sub(UHOM_STR, hd->base_status.str);
-			getunitdata_sub(UHOM_AGI, hd->base_status.agi);
-			getunitdata_sub(UHOM_VIT, hd->base_status.vit);
-			getunitdata_sub(UHOM_INT, hd->base_status.int_);
-			getunitdata_sub(UHOM_DEX, hd->base_status.dex);
-			getunitdata_sub(UHOM_LUK, hd->base_status.luk);
-			getunitdata_sub(UHOM_DMGIMMUNE, hd->ud.immune_attack);
-			getunitdata_sub(UHOM_ATKRANGE, hd->battle_status.rhw.range);
-			getunitdata_sub(UHOM_ATKMIN, hd->base_status.rhw.atk);
-			getunitdata_sub(UHOM_ATKMAX, hd->base_status.rhw.atk2);
-			getunitdata_sub(UHOM_MATKMIN, hd->base_status.matk_min);
-			getunitdata_sub(UHOM_MATKMAX, hd->base_status.matk_max);
-			getunitdata_sub(UHOM_DEF, hd->battle_status.def);
-			getunitdata_sub(UHOM_MDEF, hd->battle_status.mdef);
-			getunitdata_sub(UHOM_HIT, hd->battle_status.hit);
-			getunitdata_sub(UHOM_FLEE, hd->battle_status.flee);
-			getunitdata_sub(UHOM_PDODGE, hd->battle_status.flee2);
-			getunitdata_sub(UHOM_CRIT, hd->battle_status.cri);
-			getunitdata_sub(UHOM_RACE, hd->battle_status.race);
-			getunitdata_sub(UHOM_ELETYPE, hd->battle_status.def_ele);
-			getunitdata_sub(UHOM_ELELEVEL, hd->battle_status.ele_lv);
-			getunitdata_sub(UHOM_AMOTION, hd->battle_status.amotion);
-			getunitdata_sub(UHOM_ADELAY, hd->battle_status.adelay);
-			getunitdata_sub(UHOM_DMOTION, hd->battle_status.dmotion);
-			getunitdata_sub(UHOM_TARGETID, hd->ud.target);
-			getunitdata_sub(UHOM_GROUP_ID, hd->ud.group_id);
-			break;
+		
 
 		case BL_PET:
 			if (!pd) {
@@ -18227,72 +18062,7 @@ BUILDIN_FUNC(setunitdata)
 				status_calc_bl(&md->bl, SCB_BATTLE);
 		break;
 
-	case BL_HOM:
-		if (!hd) {
-			ShowWarning("buildin_setunitdata: Error in finding object BL_HOM!\n");
-			return SCRIPT_CMD_FAILURE;
-		}
-		switch (type) {
-			case UHOM_SIZE: hd->battle_status.size = hd->base_status.size = (unsigned char)value; break;
-			case UHOM_LEVEL: hd->homunculus.level = (unsigned short)value; break;
-			case UHOM_HP: hd->base_status.hp = (unsigned int)value; status_set_hp(bl, (unsigned int)value, 0); break;
-			case UHOM_MAXHP: hd->base_status.hp = hd->base_status.max_hp = (unsigned int)value; status_set_maxhp(bl, (unsigned int)value, 0); break;
-			case UHOM_SP: hd->base_status.sp = (unsigned int)value; status_set_sp(bl, (unsigned int)value, 0); break;
-			case UHOM_MAXSP: hd->base_status.sp = hd->base_status.max_sp = (unsigned int)value; status_set_maxsp(bl, (unsigned int)value, 0); break;
-			case UHOM_MASTERCID: hd->homunculus.char_id = (uint32)value; break;
-			case UHOM_MAPID: if (mapname) value = map_mapname2mapid(mapname); unit_warp(bl, (short)value, 0, 0, CLR_TELEPORT); break;
-			case UHOM_X: if (!unit_walktoxy(bl, (short)value, hd->bl.y, 2)) unit_movepos(bl, (short)value, hd->bl.y, 0, 0); break;
-			case UHOM_Y: if (!unit_walktoxy(bl, hd->bl.x, (short)value, 2)) unit_movepos(bl, hd->bl.x, (short)value, 0, 0); break;
-			case UHOM_HUNGER: hd->homunculus.hunger = (short)value; clif_send_homdata(map_charid2sd(hd->homunculus.char_id), SP_HUNGRY, hd->homunculus.hunger); break;
-			case UHOM_INTIMACY: hom_increase_intimacy(hd, (unsigned int)value); clif_send_homdata(map_charid2sd(hd->homunculus.char_id), SP_INTIMATE, hd->homunculus.intimacy / 100); break;
-			case UHOM_SPEED: hd->base_status.speed = (unsigned short)value; status_calc_misc(bl, &hd->base_status, hd->homunculus.level); calc_status = true; break;
-			case UHOM_LOOKDIR: unit_setdir(bl, (uint8)value); break;
-			case UHOM_CANMOVETICK: hd->ud.canmove_tick = value > 0 ? (unsigned int)value : 0; break;
-			case UHOM_STR: hd->base_status.str = (unsigned short)value; status_calc_misc(bl, &hd->base_status, hd->homunculus.level); calc_status = true; break;
-			case UHOM_AGI: hd->base_status.agi = (unsigned short)value; status_calc_misc(bl, &hd->base_status, hd->homunculus.level); calc_status = true; break;
-			case UHOM_VIT: hd->base_status.vit = (unsigned short)value; status_calc_misc(bl, &hd->base_status, hd->homunculus.level); calc_status = true; break;
-			case UHOM_INT: hd->base_status.int_ = (unsigned short)value; status_calc_misc(bl, &hd->base_status, hd->homunculus.level); calc_status = true; break;
-			case UHOM_DEX: hd->base_status.dex = (unsigned short)value; status_calc_misc(bl, &hd->base_status, hd->homunculus.level); calc_status = true; break;
-			case UHOM_LUK: hd->base_status.luk = (unsigned short)value; status_calc_misc(bl, &hd->base_status, hd->homunculus.level); calc_status = true; break;
-			case UHOM_DMGIMMUNE: hd->ud.immune_attack = value > 0; break;
-			case UHOM_ATKRANGE: hd->base_status.rhw.range = (unsigned short)value; calc_status = true; break;
-			case UHOM_ATKMIN: hd->base_status.rhw.atk = (unsigned short)value; calc_status = true; break;
-			case UHOM_ATKMAX: hd->base_status.rhw.atk2 = (unsigned short)value; calc_status = true; break;
-			case UHOM_MATKMIN: hd->base_status.matk_min = (unsigned short)value; calc_status = true; break;
-			case UHOM_MATKMAX: hd->base_status.matk_max = (unsigned short)value; calc_status = true; break;
-			case UHOM_DEF: hd->base_status.def = (defType)value; calc_status = true; break;
-			case UHOM_MDEF: hd->base_status.mdef = (defType)value; calc_status = true; break;
-			case UHOM_HIT: hd->base_status.hit = (short)value; calc_status = true; break;
-			case UHOM_FLEE: hd->base_status.flee = (short)value; calc_status = true; break;
-			case UHOM_PDODGE: hd->base_status.flee2 = (short)value; calc_status = true; break;
-			case UHOM_CRIT: hd->base_status.cri = (short)value; calc_status = true; break;
-			case UHOM_RACE: hd->battle_status.race = hd->base_status.race = (unsigned char)value; break;
-			case UHOM_ELETYPE: hd->base_status.def_ele = (unsigned char)value; calc_status = true; break;
-			case UHOM_ELELEVEL: hd->base_status.ele_lv = (unsigned char)value; calc_status = true; break;
-			case UHOM_AMOTION: hd->base_status.amotion = (short)value; calc_status = true; break;
-			case UHOM_ADELAY: hd->base_status.adelay = (short)value; calc_status = true; break;
-			case UHOM_DMOTION: hd->base_status.dmotion = (short)value; calc_status = true; break;
-			case UHOM_TARGETID: {
-				if (value==0) {
-					unit_stop_attack(&hd->bl);
-					break;
-				}
-				struct block_list* target = map_id2bl(value);
-				if (!target) {
-					ShowWarning("buildin_setunitdata: Error in finding target for BL_HOM!\n");
-					return SCRIPT_CMD_FAILURE;
-				}
-				unit_attack(&hd->bl, target->id, 1);
-				break;
-			}
-			case UHOM_GROUP_ID: hd->ud.group_id = value; unit_refresh(bl); break;
-			default:
-				ShowError("buildin_setunitdata: Unknown data identifier %d for BL_HOM.\n", type);
-				return SCRIPT_CMD_FAILURE;
-			}
-			if (calc_status)
-				status_calc_bl(&hd->bl, SCB_BATTLE);
-		break;
+	
 
 	case BL_PET:
 		if (!pd) {
@@ -18477,9 +18247,7 @@ BUILDIN_FUNC(setunitdata)
 
 	// Client information updates
 	switch (bl->type) {
-		case BL_HOM:
-			clif_send_homdata(hd->master, SP_ACK, 0);
-			break;
+		
 		case BL_PET:
 			clif_send_petstatus(pd->master);
 			break;
@@ -18545,13 +18313,7 @@ BUILDIN_FUNC(setunitname)
 			}
 			safestrncpy(md->name, script_getstr(st, 3), NAME_LENGTH);
 			break;
-		case BL_HOM:
-			if (!hd) {
-				ShowWarning("buildin_setunitname: Error in finding object BL_HOM!\n");
-				return SCRIPT_CMD_FAILURE;
-			}
-			safestrncpy(hd->homunculus.name, script_getstr(st, 3), NAME_LENGTH);
-			break;
+		
 		case BL_PET:
 			if (!pd) {
 				ShowWarning("buildin_setunitname: Error in finding object BL_PET!\n");

@@ -20,7 +20,6 @@
 #include "clif.hpp"
 #include "elemental.hpp"
 #include "guild.hpp"
-#include "homunculus.hpp"
 #include "intif.hpp"
 #include "log.hpp"
 #include "map.hpp"
@@ -355,8 +354,7 @@ int chrif_save(struct map_session_data *sd, int flag) {
 
 	if( sd->status.pet_id > 0 && sd->pd )
 		intif_save_petdata(sd->status.account_id,&sd->pd->pet);
-	if( hom_is_active(sd->hd) )
-		hom_save(sd->hd);
+	
 	if( sd->ed && elemental_get_lifetime(sd->ed) > 0 )
 		elemental_save(sd->ed);
 	if( sd->save_quest )

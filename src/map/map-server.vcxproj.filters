@@ -272,9 +272,6 @@
     <ClInclude Include="guild.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="homunculus.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="intif.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -503,9 +500,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="guild.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="homunculus.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="intif.cpp">

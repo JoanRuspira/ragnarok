@@ -19,7 +19,6 @@
 #include "clif.hpp"
 #include "elemental.hpp"
 #include "guild.hpp"
-#include "homunculus.hpp"
 #include "log.hpp"
 #include "map.hpp"
 #include "party.hpp"
@@ -1944,9 +1943,6 @@ int intif_parse_ChangeNameOk(int fd)
 	case 1: //Pets
 		pet_change_name_ack(sd, RFIFOCP(fd,12), RFIFOB(fd,11));
 		break;
-	case 2: //Hom
-		hom_change_name_ack(sd, RFIFOCP(fd,12), RFIFOB(fd,11));
-		break;
 	}
 	return 1;
 }
@@ -1961,14 +1957,7 @@ int intif_parse_ChangeNameOk(int fd)
  */
 int intif_parse_CreateHomunculus(int fd)
 {
-	int len;
-	len=RFIFOW(fd,2)-9;
-	if(sizeof(struct s_homunculus)!=len) {
-		if(battle_config.etc_log)
-			ShowError("intif: create homun data: data size error %" PRIuPTR " != %d\n",sizeof(struct s_homunculus),len);
-		return 0;
-	}
-	hom_recv_data(RFIFOL(fd,4), (struct s_homunculus*)RFIFOP(fd,9), RFIFOB(fd,8)) ;
+	
 	return 1;
 }
 
@@ -1988,7 +1977,7 @@ int intif_parse_RecvHomunculusData(int fd)
 			ShowError("intif: homun data: data size error %" PRIuPTR " %d\n",sizeof(struct s_homunculus),len);
 		return 0;
 	}
-	hom_recv_data(RFIFOL(fd,4), (struct s_homunculus*)RFIFOP(fd,9), RFIFOB(fd,8));
+	
 	return 1;
 }
 

@@ -5,7 +5,6 @@
 #include "status.hpp"
 #include "Damage.h"
 #include "map.hpp"
-#include "homunculus.hpp"
 #include "battle.hpp"
 #include "pc.hpp"
 #include "party.hpp"

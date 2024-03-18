@@ -22,7 +22,6 @@
 #include "duel.hpp"
 #include "elemental.hpp"
 #include "guild.hpp"
-#include "homunculus.hpp"
 #include "intif.hpp"
 #include "map.hpp"
 #include "mob.hpp"
@@ -61,7 +60,6 @@ struct unit_data* unit_bl2ud(struct block_list *bl)
 	case BL_MOB: return &((struct mob_data*)bl)->ud;
 	case BL_PET: return &((struct pet_data*)bl)->ud;
 	case BL_NPC: return &((struct npc_data*)bl)->ud;
-	case BL_HOM: return &((struct homun_data*)bl)->ud;
 	case BL_ELEM: return &((struct elemental_data*)bl)->ud;
 	default : return NULL;
 	}
@@ -149,7 +147,6 @@ TBL_PC* unit_get_master(struct block_list *bl)
 {
 	if(bl)
 		switch(bl->type) {
-			case BL_HOM: return (((TBL_HOM *)bl)->master);
 			case BL_ELEM: return (((TBL_ELEM *)bl)->master);
 			case BL_PET: return (((TBL_PET *)bl)->master);
 			case BL_MOB:
@@ -168,7 +165,6 @@ int* unit_get_masterteleport_timer(struct block_list *bl)
 {
 	if(bl){
 		switch(bl->type) {
-			case BL_HOM: return &(((TBL_HOM *)bl)->masterteleport_timer);
 			case BL_ELEM: return &(((TBL_ELEM *)bl)->masterteleport_timer);
 			case BL_PET: return &(((TBL_PET *)bl)->masterteleport_timer);
 			case BL_MOB: return &(((TBL_MOB *)bl)->masterteleport_timer);
@@ -762,8 +758,6 @@ int unit_walktoxy( struct block_list *bl, short x, short y, unsigned char flag)
 	if( sd != nullptr ){
 		if (sd->ed != nullptr)
 			unit_check_start_teleport_timer(&sd->ed->bl);
-		if (sd->hd != nullptr)
-			unit_check_start_teleport_timer(&sd->hd->bl);
 		if (sd->pd != nullptr)
 			unit_check_start_teleport_timer(&sd->pd->bl);
 		if (sd->td != nullptr){
@@ -2952,23 +2946,7 @@ int unit_remove_map_(struct block_list *bl, clr_type clrtype, const char* file, 
 			}
 			break;
 		}
-		case BL_HOM: {
-			struct homun_data *hd = (struct homun_data *)bl;
-
-			ud->canact_tick = ud->canmove_tick; // It appears HOM do reset the can-act tick.
-
-			if( !hd->homunculus.intimacy && !(hd->master && !hd->master->state.active) ) {
-				// If logging out, this is deleted on unit_free
-				clif_emotion(bl, ET_CRY);
-				clif_clearunit_area(bl,clrtype);
-				map_delblock(bl);
-				unit_free(bl,CLR_OUTSIGHT);
-				map_freeblock_unlock();
-
-				return 0;
-			}
-			break;
-		}
+		
 		
 		case BL_ELEM: {
 			struct elemental_data *ed = (struct elemental_data *)bl;
@@ -3058,8 +3036,6 @@ void unit_remove_map_pc(struct map_session_data *sd, clr_type clrtype)
 	if(sd->pd)
 		unit_remove_map(&sd->pd->bl, clrtype);
 
-	if(hom_is_active(sd->hd))
-		unit_remove_map(&sd->hd->bl, clrtype);
 
 
 	if(sd->ed)
@@ -3076,9 +3052,7 @@ void unit_free_pc(struct map_session_data *sd)
 	if (sd->pd)
 		unit_free(&sd->pd->bl,CLR_OUTSIGHT);
 
-	if (sd->hd)
-		unit_free(&sd->hd->bl,CLR_OUTSIGHT);
-
+	
 
 	if (sd->ed)
 		unit_free(&sd->ed->bl,CLR_OUTSIGHT);
@@ -3263,30 +3237,7 @@ int unit_free(struct block_list *bl, clr_type clrtype)
 				mvptomb_destroy(md);
 			break;
 		}
-		case BL_HOM:
-		{
-			struct homun_data *hd = (TBL_HOM*)bl;
-			struct map_session_data *sd = hd->master;
-
-			hom_hungry_timer_delete(hd);
-
-			if( hd->homunculus.intimacy > 0 )
-				hom_save(hd);
-			else {
-				intif_homunculus_requestdelete(hd->homunculus.hom_id);
-
-				if( sd )
-					sd->status.hom_id = 0;
-			}
-
-			if( sd )
-				sd->hd = NULL;
-			hd->master = NULL;
-
-			skill_clear_unitgroup(bl);
-			status_change_clear(bl,1);
-			break;
-		}
+		
 		
 		case BL_ELEM: {
 			struct elemental_data *ed = (TBL_ELEM*)bl;
