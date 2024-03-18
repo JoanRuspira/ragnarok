@@ -26,9 +26,6 @@
     <ClInclude Include="char_mapif.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="int_auction.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="int_elemental.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -71,9 +68,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="char_mapif.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="int_auction.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="int_elemental.cpp">

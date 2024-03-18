@@ -165,7 +165,6 @@
     <ClInclude Include="char_logif.hpp" />
     <ClInclude Include="char_mapif.hpp" />
     <ClInclude Include="inter.hpp" />
-    <ClInclude Include="int_auction.hpp" />
     <ClInclude Include="int_clan.hpp" />
     <ClInclude Include="int_elemental.hpp" />
     <ClInclude Include="int_guild.hpp" />
@@ -182,7 +181,6 @@
     <ClCompile Include="char_logif.cpp" />
     <ClCompile Include="char_mapif.cpp" />
     <ClCompile Include="inter.cpp" />
-    <ClCompile Include="int_auction.cpp" />
     <ClCompile Include="int_clan.cpp" />
     <ClCompile Include="int_elemental.cpp" />
     <ClCompile Include="int_guild.cpp" />
