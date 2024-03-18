@@ -438,21 +438,8 @@ struct s_skill_arrow_db {
 };
 extern struct s_skill_arrow_db skill_arrow_db[MAX_SKILL_ARROW_DB];
 
-/// Abracadabra database
-struct s_skill_abra_db {
-	uint16 skill_id; /// Skill ID
-	std::array<uint16, MAX_SKILL_LEVEL> per; /// Probability summoned
-};
 
-class AbraDatabase : public TypesafeYamlDatabase<uint16, s_skill_abra_db> {
-public:
-	AbraDatabase() : TypesafeYamlDatabase("ABRA_DB", 1) {
 
-	}
-
-	const std::string getDefaultLocation();
-	uint64 parseBodyNode(const YAML::Node& node);
-};
 
 struct s_skill_improvise_db {
 	uint16 skill_id, per;

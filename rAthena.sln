@@ -102,11 +102,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Npc", "Npc", "{E51CD77F-011
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{4DB6C3F0-3E81-44D8-9E66-2E3E7DCD9B06}"
 	ProjectSection(SolutionItems) = preProject
-		db\abra_db.yml = db\abra_db.yml
-		db\achievement_db.yml = db\achievement_db.yml
-		db\achievement_level_db.yml = db\achievement_level_db.yml
-		db\attendance.yml = db\attendance.yml
-		db\battleground_db.yml = db\battleground_db.yml
 		db\const.txt = db\const.txt
 		db\create_arrow_db.txt = db\create_arrow_db.txt
 		db\elemental_db.txt = db\elemental_db.txt
@@ -132,12 +127,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{4DB6C3F0-3E81-
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "import", "import", "{36EEB3EF-941E-4D73-9719-8727CEDB6AAD}"
 	ProjectSection(SolutionItems) = preProject
-		db\import\abra_db.yml = db\import\abra_db.yml
-		db\import\achievement_db.yml = db\import\achievement_db.yml
-		db\import\achievement_level_db.yml = db\import\achievement_level_db.yml
-		db\import\attendance.yml = db\import\attendance.yml
 		db\import\attr_fix.txt = db\import\attr_fix.txt
-		db\import\battleground_db.yml = db\import\battleground_db.yml
 		db\import\const.txt = db\import\const.txt
 		db\import\create_arrow_db.txt = db\import\create_arrow_db.txt
 		db\import\create_arrow_db.yml = db\import\create_arrow_db.yml
@@ -198,10 +188,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "import", "import", "{36EEB3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "re", "re", "{4B5B448D-74D7-48D7-8440-C131F98235A0}"
 	ProjectSection(SolutionItems) = preProject
-		db\re\abra_db.yml = db\re\abra_db.yml
-		db\re\achievement_db.yml = db\re\achievement_db.yml
-		db\re\achievement_level_db.yml = db\re\achievement_level_db.yml
-		db\re\attendance.yml = db\re\attendance.yml
 		db\re\attr_fix.txt = db\re\attr_fix.txt
 		db\re\exp_guild.txt = db\re\exp_guild.txt
 		db\re\exp_homun.txt = db\re\exp_homun.txt

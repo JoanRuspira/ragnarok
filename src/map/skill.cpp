@@ -83,8 +83,6 @@ static unsigned short skill_produce_count;
 struct s_skill_arrow_db skill_arrow_db[MAX_SKILL_ARROW_DB];
 static unsigned short skill_arrow_count;
 
-AbraDatabase abra_db;
-
 ReadingSpellbookDatabase reading_spellbook_db;
 
 #define MAX_SKILL_CHANGEMATERIAL_DB 75
@@ -14272,81 +14270,6 @@ static bool skill_parse_row_createarrowdb(char* split[], int columns, int curren
 	return true;
 }
 
-const std::string AbraDatabase::getDefaultLocation() {
-	return std::string(db_path) + "/abra_db.yml";
-}
-
-/**
- * Reads and parses an entry from the abra_db.
- * @param node: YAML node containing the entry.
- * @return count of successfully parsed rows
- */
-uint64 AbraDatabase::parseBodyNode(const YAML::Node &node) {
-	std::string skill_name;
-
-	if (!this->asString(node, "Skill", skill_name))
-		return 0;
-
-	uint16 skill_id = skill_name2id(skill_name.c_str());
-
-	if (!skill_id) {
-		this->invalidWarning(node["Skill"], "Invalid Abra skill name \"%s\", skipping.\n", skill_name.c_str());
-		return 0;
-	}
-
-	if (!skill_get_inf(skill_id)) {
-		this->invalidWarning(node["Skill"], "Passive skill %s cannot be casted by Abra.\n", skill_name.c_str());
-		return 0;
-	}
-
-	std::shared_ptr<s_skill_abra_db> abra = this->find(skill_id);
-	bool exists = abra != nullptr;
-
-	if (!exists) {
-		abra = std::make_shared<s_skill_abra_db>();
-		abra->skill_id = skill_id;
-	}
-
-	if (this->nodeExists(node, "Probability")) {
-		const YAML::Node probNode = node["Probability"];
-		uint16 probability;
-
-		if (probNode.IsScalar()) {
-			if (!this->asUInt16Rate(probNode, "Probability", probability))
-				return 0;
-
-			abra->per.fill(probability);
-		} else {
-			abra->per.fill(0);
-
-			for (const YAML::Node &it : probNode) {
-				uint16 skill_lv;
-
-				if (!this->asUInt16(it, "Level", skill_lv))
-					continue;
-
-				if (skill_lv > MAX_SKILL_LEVEL) {
-					this->invalidWarning(probNode["Level"], "Probability Level exceeds the maximum skill level of %d, skipping.\n", MAX_SKILL_LEVEL);
-					return 0;
-				}
-
-				if (!this->asUInt16Rate(it, "Probability", probability))
-					continue;
-
-				abra->per[skill_lv - 1] = probability;
-			}
-		}
-	} else {
-		if (!exists)
-			abra->per.fill(500);
-	}
-
-	if (!exists)
-		this->put(skill_id, abra);
-
-	return 1;
-}
-
 /** Reads change material db
  * Structure: ProductID,BaseRate,MakeAmount1,MakeAmountRate1...,MakeAmount5,MakeAmountRate5
  */
@@ -14518,7 +14441,6 @@ static void skill_readdb(void)
 		aFree(dbsubpath2);
 	}
 
-	abra_db.load();
 	magic_mushroom_db.load();
 	reading_spellbook_db.load();
 	skill_init_unit_layout();
@@ -14527,7 +14449,6 @@ static void skill_readdb(void)
 
 void skill_reload (void) {
 	skill_db.clear();
-	abra_db.clear();
 	magic_mushroom_db.clear();
 	reading_spellbook_db.clear();
 
