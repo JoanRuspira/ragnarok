@@ -46,7 +46,6 @@
 #include "intif.hpp"
 #include "itemdb.hpp"
 #include "log.hpp"
-#include "mail.hpp"
 #include "map.hpp"
 #include "mapreg.hpp"
 #include "mob.hpp"
@@ -19197,12 +19196,6 @@ BUILDIN_FUNC(warpportal)
  **/
 BUILDIN_FUNC(openmail)
 {
-	TBL_PC* sd;
-
-	if (!script_charid2sd(2,sd))
-		return SCRIPT_CMD_FAILURE;
-
-	mail_openmail(sd);
 
 	return SCRIPT_CMD_SUCCESS;
 }

@@ -205,7 +205,6 @@
     <ClInclude Include="log.hpp" />
     <ClInclude Include="MageAdditionalEffectsCalculator.h" />
     <ClInclude Include="MageSkillAttackRatioCalculator.h" />
-    <ClInclude Include="mail.hpp" />
     <ClInclude Include="map.hpp" />
     <ClInclude Include="mapreg.hpp" />
     <ClInclude Include="MerchntSkillAtkRatioCalculator.h" />
@@ -284,7 +283,6 @@
     <ClCompile Include="log.cpp" />
     <ClCompile Include="MageAdditionalEffectsCalculator.cpp" />
     <ClCompile Include="MageSkillAtkRatioCalculator.cpp" />
-    <ClCompile Include="mail.cpp" />
     <ClCompile Include="map.cpp" />
     <ClCompile Include="mapreg.cpp" />
     <ClCompile Include="MerchntSkillAtkRatioCalculator.cpp" />

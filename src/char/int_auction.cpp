@@ -18,7 +18,6 @@
 #include "char.hpp"
 #include "char_mapif.hpp"
 #include "inter.hpp"
-#include "int_mail.hpp"
 
 static DBMap* auction_db_ = NULL; // int auction_id -> struct auction_data*
 
@@ -152,38 +151,13 @@ void mapif_Auction_message(uint32 char_id, unsigned char result)
 }
 
 TIMER_FUNC(auction_end_timer){
-	struct auction_data *auction;
-	if( (auction = (struct auction_data *)idb_get(auction_db_, id)) != NULL )
-	{
-		if( auction->buyer_id )
-		{
-			mail_sendmail(0, msg_txt(200), auction->buyer_id, auction->buyer_name, msg_txt(201), msg_txt(202), 0, &auction->item, 1);
-			mapif_Auction_message(auction->buyer_id, 6); // You have won the auction
-			mail_sendmail(0, msg_txt(200), auction->seller_id, auction->seller_name, msg_txt(201), msg_txt(203), auction->price, NULL, 0);
-		}
-		else
-			mail_sendmail(0, msg_txt(200), auction->seller_id, auction->seller_name, msg_txt(201), msg_txt(204), 0, &auction->item, 1);
-
-		ShowInfo("Auction End: id %u.\n", auction->auction_id);
-
-		auction->auction_end_timer = INVALID_TIMER;
-		auction_delete(auction);
-	}
-
+	
 	return 0;
 }
 
 void auction_delete(struct auction_data *auction)
 {
-	unsigned int auction_id = auction->auction_id;
-
-	if( SQL_ERROR == Sql_Query(sql_handle, "DELETE FROM `%s` WHERE `auction_id` = '%d'", schema_config.auction_db, auction_id) )
-		Sql_ShowDebug(sql_handle);
-
-	if( auction->auction_end_timer != INVALID_TIMER )
-		delete_timer(auction->auction_end_timer, auction_end_timer);
-
-	idb_remove(auction_db_, auction_id);
+	
 }
 
 void inter_auctions_fromsql(void)
@@ -359,31 +333,7 @@ void mapif_Auction_cancel(int fd, uint32 char_id, unsigned char result)
 
 void mapif_parse_Auction_cancel(int fd)
 {
-	uint32 char_id = RFIFOL(fd,2), auction_id = RFIFOL(fd,6);
-	struct auction_data *auction;
 
-	if( (auction = (struct auction_data *)idb_get(auction_db_, auction_id)) == NULL )
-	{
-		mapif_Auction_cancel(fd, char_id, 1); // Bid Number is Incorrect
-		return;
-	}
-
-	if( auction->seller_id != char_id )
-	{
-		mapif_Auction_cancel(fd, char_id, 2); // You cannot end the auction
-		return;
-	}
-
-	if( auction->buyer_id > 0 )
-	{
-		mapif_Auction_cancel(fd, char_id, 3); // An auction with at least one bidder cannot be canceled
-		return;
-	}
-
-	mail_sendmail(0, msg_txt(200), auction->seller_id, auction->seller_name, msg_txt(201), msg_txt(205), 0, &auction->item, 1);
-	auction_delete(auction);
-
-	mapif_Auction_cancel(fd, char_id, 0); // The auction has been canceled
 }
 
 void mapif_Auction_close(int fd, uint32 char_id, unsigned char result)
@@ -397,35 +347,7 @@ void mapif_Auction_close(int fd, uint32 char_id, unsigned char result)
 
 void mapif_parse_Auction_close(int fd)
 {
-	uint32 char_id = RFIFOL(fd,2), auction_id = RFIFOL(fd,6);
-	struct auction_data *auction;
-
-	if( (auction = (struct auction_data *)idb_get(auction_db_, auction_id)) == NULL )
-	{
-		mapif_Auction_close(fd, char_id, 2); // Bid Number is Incorrect
-		return;
-	}
-
-	if( auction->seller_id != char_id )
-	{
-		mapif_Auction_close(fd, char_id, 1); // You cannot end the auction
-		return;
-	}
-
-	if( auction->buyer_id == 0 )
-	{
-		mapif_Auction_close(fd, char_id, 1); // You cannot end the auction
-		return;
-	}
-
-	// Send Money to Seller
-	mail_sendmail(0, msg_txt(200), auction->seller_id, auction->seller_name, msg_txt(201), msg_txt(206), auction->price, NULL, 0);
-	// Send Item to Buyer
-	mail_sendmail(0, msg_txt(200), auction->buyer_id, auction->buyer_name, msg_txt(201), msg_txt(207), 0, &auction->item, 1);
-	mapif_Auction_message(auction->buyer_id, 6); // You have won the auction
-	auction_delete(auction);
-
-	mapif_Auction_close(fd, char_id, 0); // You have ended the auction
+	
 }
 
 void mapif_Auction_bid(int fd, uint32 char_id, int bid, unsigned char result)
@@ -440,52 +362,7 @@ void mapif_Auction_bid(int fd, uint32 char_id, int bid, unsigned char result)
 
 void mapif_parse_Auction_bid(int fd)
 {
-	uint32 char_id = RFIFOL(fd,4), auction_id = RFIFOL(fd,8);
-	int bid = RFIFOL(fd,12);
-	struct auction_data *auction;
-
-	if( (auction = (struct auction_data *)idb_get(auction_db_, auction_id)) == NULL || auction->price >= bid || auction->seller_id == char_id )
-	{
-		mapif_Auction_bid(fd, char_id, bid, 0); // You have failed to bid in the auction
-		return;
-	}
-
-	if( auction_count(char_id, true) > 4 && bid < auction->buynow && auction->buyer_id != char_id )
-	{
-		mapif_Auction_bid(fd, char_id, bid, 9); // You cannot place more than 5 bids at a time
-		return;
-	}
-
-	if( auction->buyer_id > 0 )
-	{ // Send Money back to the previous Buyer
-		if( auction->buyer_id != char_id )
-		{
-			mail_sendmail(0, msg_txt(200), auction->buyer_id, auction->buyer_name, msg_txt(201), msg_txt(208), auction->price, NULL, 0);
-			mapif_Auction_message(auction->buyer_id, 7); // You have failed to win the auction
-		}
-		else
-			mail_sendmail(0, msg_txt(200), auction->buyer_id, auction->buyer_name, msg_txt(201), msg_txt(209), auction->price, NULL, 0);
-	}
-
-	auction->buyer_id = char_id;
-	safestrncpy(auction->buyer_name, RFIFOCP(fd,16), NAME_LENGTH);
-	auction->price = bid;
-
-	if( bid >= auction->buynow )
-	{ // Automatic won the auction
-		mapif_Auction_bid(fd, char_id, bid - auction->buynow, 1); // You have successfully bid in the auction
-
-		mail_sendmail(0, msg_txt(200), auction->buyer_id, auction->buyer_name, msg_txt(201), msg_txt(210), 0, &auction->item, 1);
-		mapif_Auction_message(char_id, 6); // You have won the auction
-		mail_sendmail(0, msg_txt(200), auction->seller_id, auction->seller_name, msg_txt(201), msg_txt(211), auction->buynow, NULL, 0);
-
-		auction_delete(auction);
-		return;
-	}
-
-	auction_save(auction);
-
-	mapif_Auction_bid(fd, char_id, 0, 1); // You have successfully bid in the auction
+	
 }
 
 /*==========================================

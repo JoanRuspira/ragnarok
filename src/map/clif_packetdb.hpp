@@ -2216,40 +2216,10 @@
 
 // 2015-05-13aRagexe
 #if PACKETVER >= 20150513
-	// RODEX Mail system
-	packet(0x09E7,3); // ZC_NOTIFY_UNREADMAIL
-	parseable_packet(0x09E8,11,clif_parse_Mail_refreshinbox,2,3); // CZ_OPEN_MAILBOX
-	parseable_packet(0x09E9,2,clif_parse_dull,0); // CZ_CLOSE_MAILBOX
-	parseable_packet(0x09EA,11,clif_parse_Mail_read,2,3); // CZ_REQ_READ_MAIL
-	packet(rodexread,-1); // ZC_ACK_READ_MAIL
-	parseable_packet(0x09EC,-1,clif_parse_Mail_send,2,4,28,52,60,62,64); // CZ_REQ_WRITE_MAIL
-	packet(0x09ED,3); // ZC_ACK_WRITE_MAIL
-	parseable_packet(0x09EE,11,clif_parse_Mail_refreshinbox,2,3); // CZ_REQ_NEXT_MAIL_LIST
-	parseable_packet(0x09EF,11,clif_parse_Mail_refreshinbox,2,3); // CZ_REQ_REFRESH_MAIL_LIST
-	packet(0x09F0,-1); // ZC_ACK_MAIL_LIST
-	parseable_packet(0x09F1,11,clif_parse_Mail_getattach,0); // CZ_REQ_ZENY_FROM_MAIL
-	packet(0x09F2,12); // ZC_ACK_ZENY_FROM_MAIL
-	parseable_packet(0x09F3,11,clif_parse_Mail_getattach,0); // CZ_REQ_ITEM_FROM_MAIL
-	packet(0x09F4,12); // ZC_ACK_ITEM_FROM_MAIL
-	parseable_packet(0x09F5,11,clif_parse_Mail_delete,0); // CZ_REQ_DELETE_MAIL
-	packet(0x09F6,11); // ZC_ACK_DELETE_MAIL
-	parseable_packet(0x0A03,2,clif_parse_Mail_cancelwrite,0); // CZ_REQ_CANCEL_WRITE_MAIL
-	parseable_packet(0x0A04,6,clif_parse_Mail_setattach,2,4); // CZ_REQ_ADD_ITEM_TO_MAIL
-	packet( rodexadditem, sizeof( struct PACKET_ZC_ADD_ITEM_TO_MAIL ) ); // ZC_ACK_ADD_ITEM_TO_MAIL
-	parseable_packet(0x0A06,6,clif_parse_Mail_winopen,2,4); // CZ_REQ_REMOVE_ITEM_MAIL
-	packet(0x0A07,9); // ZC_ACK_REMOVE_ITEM_MAIL
-	parseable_packet(0x0A08,26,clif_parse_Mail_beginwrite,0); // CZ_REQ_OPEN_WRITE_MAIL
-	packet(0x0A12,27); // ZC_ACK_OPEN_WRITE_MAIL
-	parseable_packet(0x0A13,26,clif_parse_Mail_Receiver_Check,2); // CZ_CHECK_RECEIVE_CHARACTER_NAME
-	packet(0x0A14,10); // ZC_CHECK_RECEIVE_CHARACTER_NAME
-	packet(0x0A32,2); // ZC_OPEN_RODEX_THROUGH_NPC_ONLY
+	
 	// OneClick Itemidentify
 	parseable_packet(0x0A35,4,clif_parse_Oneclick_Itemidentify,2); // CZ_REQ_ONECLICK_ITEMIDENTIFY
-	// Achievement System
-	packet(0x0A23,-1); // ZC_ALL_ACH_LIST
-	packet(0x0A24,66); // ZC_ACH_UPDATE
-	parseable_packet(0x0A25,6,clif_parse_AchievementCheckReward,0); // CZ_REQ_ACH_REWARD
-	packet(0x0A26,7); // ZC_REQ_ACH_REWARD_ACK
+	
 	// Title System
 	parseable_packet(0x0A2E,6,clif_parse_change_title,0); // CZ_REQ_CHANGE_TITLE
 	packet(0x0A2F,7); // ZC_ACK_CHANGE_TITLE

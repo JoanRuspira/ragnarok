@@ -21,7 +21,6 @@
 #include "guild.hpp"
 #include "homunculus.hpp"
 #include "log.hpp"
-#include "mail.hpp"
 #include "map.hpp"
 #include "party.hpp"
 #include "pc.hpp"
@@ -2231,15 +2230,7 @@ int intif_achievement_reward(struct map_session_data *sd, struct s_achievement_d
  */
 int intif_Mail_requestinbox(uint32 char_id, unsigned char flag, enum mail_inbox_type type)
 {
-	if (CheckForCharServer())
-		return 0;
-
-	WFIFOHEAD(inter_fd,8);
-	WFIFOW(inter_fd,0) = 0x3048;
-	WFIFOL(inter_fd,2) = char_id;
-	WFIFOB(inter_fd,6) = flag;
-	WFIFOB(inter_fd,7) = type;
-	WFIFOSET(inter_fd,8);
+	
 
 	return 1;
 }
@@ -2335,35 +2326,7 @@ bool intif_mail_getattach( struct map_session_data* sd, struct mail_message *msg
  */
 int intif_parse_Mail_getattach(int fd)
 {
-	struct map_session_data *sd;
-	struct item item[MAIL_MAX_ITEM];
-	int i, mail_id, zeny;
-
-	if (RFIFOW(fd, 2) - 16 != sizeof(struct item)*MAIL_MAX_ITEM)
-	{
-		ShowError("intif_parse_Mail_getattach: data size error %d %" PRIuPTR "\n", RFIFOW(fd, 2) - 16, sizeof(struct item));
-		return 0;
-	}
-
-	sd = map_charid2sd( RFIFOL(fd,4) );
-
-	if (sd == NULL)
-	{
-		ShowError("intif_parse_Mail_getattach: char not found %d\n",RFIFOL(fd,4));
-		return 0;
-	}
-
-	mail_id = RFIFOL(fd, 8);
-
-	ARR_FIND(0, MAIL_MAX_INBOX, i, sd->mail.inbox.msg[i].id == mail_id);
-	if (i == MAIL_MAX_INBOX)
-		return 0;
-
-	zeny = RFIFOL(fd, 12);
-
-	memcpy(item, RFIFOP(fd,16), sizeof(struct item)*MAIL_MAX_ITEM);
-
-	mail_getattachment(sd, &sd->mail.inbox.msg[i], zeny, item);
+	
 	return 1;
 }
 
@@ -2517,32 +2480,7 @@ int intif_Mail_send(uint32 account_id, struct mail_message *msg)
  */
 static void intif_parse_Mail_send(int fd)
 {
-	struct mail_message msg;
-	struct map_session_data *sd;
-	bool fail;
 
-	if( RFIFOW(fd,2) - 4 != sizeof(struct mail_message) )
-	{
-		ShowError("intif_parse_Mail_send: data size error %d %" PRIuPTR "\n", RFIFOW(fd,2) - 4, sizeof(struct mail_message));
-		return;
-	}
-
-	memcpy(&msg, RFIFOP(fd,4), sizeof(struct mail_message));
-	fail = (msg.id == 0);
-
-	// notify sender
-	sd = map_charid2sd(msg.send_id);
-	if( sd != NULL )
-	{
-		if( fail )
-			mail_deliveryfail(sd, &msg);
-		else
-		{
-			clif_Mail_send(sd, WRITE_MAIL_SUCCESS);
-			if( save_settings&CHARSAVE_MAIL )
-				chrif_save(sd, CSAVE_INVENTORY);
-		}
-	}
 }
 
 /**
@@ -2551,52 +2489,10 @@ static void intif_parse_Mail_send(int fd)
  */
 static void intif_parse_Mail_new(int fd)
 {
-	struct map_session_data *sd = map_charid2sd(RFIFOL(fd,2));
-	int mail_id = RFIFOL(fd,6);
-	const char* sender_name = RFIFOCP(fd,10);
-	const char* title = RFIFOCP(fd,34);
-
-	if( sd == NULL )
-		return;
-	sd->mail.changed = true;
-	sd->mail.inbox.unread++;
-	clif_Mail_new(sd, mail_id, sender_name, title);
-#if PACKETVER >= 20150513
-	// Make sure the window gets refreshed when its open
-	intif_Mail_requestinbox(sd->status.char_id, 1, static_cast<mail_inbox_type>(RFIFOB(fd,74)));
-#endif
-}
-
-static void intif_parse_Mail_receiver( int fd ){
-	struct map_session_data *sd;
-
-	sd = map_charid2sd( RFIFOL( fd, 2 ) );
-
-	// Only f the player is online
-	if( sd ){
-		clif_Mail_Receiver_Ack( sd, RFIFOL( fd, 6 ), RFIFOW( fd, 10 ), RFIFOW( fd, 12 ), RFIFOCP( fd, 14 ) );
-	}
+	
 }
 
 bool intif_mail_checkreceiver( struct map_session_data* sd, char* name ){
-	struct map_session_data *tsd;
-
-	tsd = map_nick2sd( name, false );
-
-	// If the target player is online on this map-server
-	if( tsd != NULL ){
-		clif_Mail_Receiver_Ack( sd, tsd->status.char_id, tsd->status.class_, tsd->status.base_level, name );
-		return true;
-	}
-
-	if( CheckForCharServer() )
-		return false;
-
-	WFIFOHEAD(inter_fd, 6 + NAME_LENGTH);
-	WFIFOW(inter_fd, 0) = 0x304e;
-	WFIFOL(inter_fd, 2) = sd->status.char_id;
-	safestrncpy(WFIFOCP(inter_fd, 6), name, NAME_LENGTH);
-	WFIFOSET(inter_fd, 6 + NAME_LENGTH);
 
 	return true;
 }
@@ -3705,15 +3601,6 @@ int intif_parse(int fd)
 	case 0x3840:	intif_parse_GuildCastleDataLoad(fd); break;
 	case 0x3841:	intif_parse_GuildEmblemVersionChanged(fd); break;
 	case 0x3843:	intif_parse_GuildMasterChanged(fd); break;
-
-	// Mail System
-	case 0x3848:	intif_parse_Mail_inboxreceived(fd); break;
-	case 0x3849:	intif_parse_Mail_new(fd); break;
-	case 0x384a:	intif_parse_Mail_getattach(fd); break;
-	case 0x384b:	intif_parse_Mail_delete(fd); break;
-	case 0x384c:	intif_parse_Mail_return(fd); break;
-	case 0x384d:	intif_parse_Mail_send(fd); break;
-	case 0x384e:	intif_parse_Mail_receiver(fd); break;
 
 	// Auction System
 	case 0x3850:	intif_parse_Auction_results(fd); break;

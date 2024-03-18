@@ -31,7 +31,6 @@
 #include "int_elemental.hpp"
 #include "int_guild.hpp"
 #include "int_homun.hpp"
-#include "int_mail.hpp"
 #include "int_party.hpp"
 #include "int_storage.hpp"
 
@@ -3229,14 +3228,6 @@ int do_init(int argc, char **argv)
 	// periodically remove players that have not logged in for a long time from clans
 	add_timer_func_list(char_clan_member_cleanup, "clan_member_cleanup");
 	add_timer_interval(gettick() + 1000, char_clan_member_cleanup, 0, 0, 60 * 60 * 1000); // every 60 minutes
-
-	// periodically check if mails need to be returned to their sender
-	add_timer_func_list(mail_return_timer, "mail_return_timer");
-	add_timer_interval(gettick() + 1000, mail_return_timer, 0, 0, 1 * 60 * 1000); // every minute
-
-	// periodically check if mails need to be deleted completely
-	add_timer_func_list(mail_delete_timer, "mail_delete_timer");
-	add_timer_interval(gettick() + 1000, mail_delete_timer, 0, 0, 1 * 60 * 1000); // every minute
 
 	//check db tables
 	if(charserv_config.char_check_db && char_checkdb() == 0){

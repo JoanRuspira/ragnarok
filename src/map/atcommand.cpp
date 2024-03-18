@@ -38,7 +38,6 @@
 #include "intif.hpp"
 #include "itemdb.hpp" // MAX_ITEMGROUP
 #include "log.hpp"
-#include "mail.hpp"
 #include "map.hpp"
 #include "mapreg.hpp"
 #include "mob.hpp"
@@ -7121,8 +7120,6 @@ ACMD_FUNC(misceffect)
  *------------------------------------------*/
 ACMD_FUNC(mail)
 {
-	nullpo_ret(sd);
-	mail_openmail(sd);
 	return 0;
 }
 
