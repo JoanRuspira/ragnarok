@@ -32,7 +32,6 @@
 #include "elemental.hpp"
 #include "guild.hpp"
 #include "homunculus.hpp"
-#include "instance.hpp"
 #include "intif.hpp"
 #include "log.hpp"
 #include "mapreg.hpp"
@@ -2080,8 +2079,7 @@ int map_quit(struct map_session_data *sd) {
 
 	struct map_data *mapdata = map_getmapdata(sd->bl.m);
 
-	if( mapdata->instance_id > 0 )
-		instance_delusers(mapdata->instance_id);
+	
 
 	unit_remove_map_pc(sd,CLR_RESPAWN);
 
@@ -2605,77 +2603,8 @@ bool map_addnpc(int16 m,struct npc_data *nd)
  *------------------------------------------*/
 int map_addinstancemap(int src_m, int instance_id)
 {
-	if(src_m < 0)
-		return -1;
-
-	const char *name = map_mapid2mapname(src_m);
-
-	if(strlen(name) > 20) {
-		// against buffer overflow
-		ShowError("map_addinstancemap: Map name \"%s\" is too long.\n", name);
-		return -2;
-	}
-
-	int16 dst_m = -1, i;
-
-	for (i = instance_start; i < MAX_MAP_PER_SERVER; i++) {
-		if (!map[i].name[0])
-			break;
-	}
-	if (i < map_num) // Destination map value overwrites another
-		dst_m = i;
-	else if (i < MAX_MAP_PER_SERVER) // Destination map value increments to new map
-		dst_m = map_num++;
-	else {
-		// Out of bounds
-		ShowError("map_addinstancemap failed. map_num(%d) > map_max(%d)\n", map_num, MAX_MAP_PER_SERVER);
-		return -3;
-	}
-
-	struct map_data *src_map = map_getmapdata(src_m);
-	struct map_data *dst_map = map_getmapdata(dst_m);
-
-	// Alter the name
-	// This also allows us to maintain complete independence with main map functions
-	instance_generate_mapname(src_m, instance_id, dst_map->name);
-
-	dst_map->m = dst_m;
-	dst_map->instance_id = instance_id;
-	dst_map->instance_src_map = src_m;
-	dst_map->users = 0;
-	dst_map->xs = src_map->xs;
-	dst_map->ys = src_map->ys;
-	dst_map->bxs = src_map->bxs;
-	dst_map->bys = src_map->bys;
-	dst_map->iwall_num = src_map->iwall_num;
-
-	memset(dst_map->npc, 0, sizeof(dst_map->npc));
-	dst_map->npc_num = 0;
-	dst_map->npc_num_area = 0;
-	dst_map->npc_num_warp = 0;
-
-	// Reallocate cells
-	size_t num_cell = dst_map->xs * dst_map->ys;
-
-	CREATE( dst_map->cell, struct mapcell, num_cell );
-	memcpy( dst_map->cell, src_map->cell, num_cell * sizeof(struct mapcell) );
-
-	size_t size = dst_map->bxs * dst_map->bys * sizeof(struct block_list*);
-
-	dst_map->block = (struct block_list **)aCalloc(1,size);
-	dst_map->block_mob = (struct block_list **)aCalloc(1,size);
-
-	dst_map->index = mapindex_addmap(-1, dst_map->name);
-	dst_map->channel = nullptr;
-	dst_map->mob_delete_timer = INVALID_TIMER;
-
-	map_data_copy(dst_map, src_map);
-
-	ShowInfo("[Instance] Created map '%s' (%d) from '%s' (%d).\n", dst_map->name, dst_map->m, name, src_map->m);
-
-	map_addmap2db(dst_map);
-
-	return dst_m;
+	
+	return 1;
 }
 
 /*==========================================
@@ -2698,26 +2627,7 @@ static int map_instancemap_leave(struct block_list *bl, va_list ap)
  *------------------------------------------*/
 static int map_instancemap_clean(struct block_list *bl, va_list ap)
 {
-	nullpo_retr(0, bl);
-	switch(bl->type) {
-		/*case BL_PC:
-		// BL_PET, BL_HOM, BL_MER, and BL_ELEM are moved when BL_PC warped out in map_instancemap_leave
-			map_quit((struct map_session_data *) bl);
-			break;*/
-		case BL_NPC:
-			npc_unload((struct npc_data *)bl,true);
-			break;
-		case BL_MOB:
-			unit_free(bl,CLR_OUTSIGHT);
-			break;
-		case BL_ITEM:
-			map_clearflooritem(bl);
-			break;
-		case BL_SKILL:
-			skill_delunit((struct skill_unit *) bl);
-			break;
-	}
-
+	
 	return 1;
 }
 
@@ -2892,18 +2802,7 @@ const char* map_mapid2mapname(int m)
 	if (!mapdata)
 		return "";
 
-	if (mapdata->instance_id > 0) { // Instance map check
-		std::shared_ptr<s_instance_data> idata = util::umap_find(instances, map[m].instance_id);
-
-		if (!idata) // This shouldn't happen but if it does give them the map we intended to give
-			return mapdata->name;
-		else {
-			for (const auto &it : idata->map) { // Loop to find the src map we want
-				if (it.m == m)
-					return map_getmapdata(it.src_m)->name;
-			}
-		}
-	}
+	
 
 	return mapdata->name;
 }
@@ -3502,7 +3401,6 @@ int map_addmap(char* mapname)
 	if( strcmpi(mapname,"clear")==0 )
 	{
 		map_num = 0;
-		instance_start = 0;
 		return 0;
 	}
 
@@ -3566,8 +3464,7 @@ void map_flags_init(void){
 		mapdata->skill_duration.clear();
 		map_free_questinfo(mapdata);
 
-		if (instance_start && i >= instance_start)
-			continue;
+		
 
 		// adjustments
 		if( battle_config.pk_mode && !mapdata_flag_vs2(mapdata) )
@@ -3599,14 +3496,8 @@ void map_data_copy(struct map_data *dst_map, struct map_data *src_map) {
 * that were cleared in map_flags_init() after reloadscript
 */
 void map_data_copyall (void) {
-	if (!instance_start)
-		return;
-	for (int i = instance_start; i < map_num; i++) {
-		struct map_data *mapdata = &map[i];
-		if (!mapdata || mapdata->name[0] == '\0' || !mapdata->instance_src_map)
-			continue;
-		map_data_copy(mapdata, &map[mapdata->instance_src_map]);
-	}
+	
+	
 }
 
 /*
@@ -4796,7 +4687,6 @@ void do_final(void){
 	do_final_npc();
 	do_final_quest();
 	do_final_script();
-	do_final_instance();
 	do_final_itemdb();
 	do_final_storage();
 	do_final_guild();
@@ -5115,7 +5005,6 @@ int do_init(int argc, char *argv[])
 	do_init_path();
 	do_init_atcommand();
 	do_init_battle();
-	do_init_instance();
 	do_init_chrif();
 	do_init_clan();
 	do_init_clif();

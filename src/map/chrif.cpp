@@ -21,7 +21,6 @@
 #include "elemental.hpp"
 #include "guild.hpp"
 #include "homunculus.hpp"
-#include "instance.hpp"
 #include "intif.hpp"
 #include "log.hpp"
 #include "map.hpp"
@@ -392,12 +391,11 @@ int chrif_connect(int fd) {
 int chrif_sendmap(int fd) {
 	ShowStatus("Sending maps to char server...\n");
 
-	// Sending normal maps, not instances
-	WFIFOHEAD(fd, 4 + instance_start * 4);
+	WFIFOHEAD(fd, 4 + 999 * 4);
 	WFIFOW(fd,0) = 0x2afa;
-	for (int i = 0; i < instance_start; i++)
+	for (int i = 0; i < 999; i++)
 		WFIFOW(fd, 4 + i * 4) = map[i].index;
-	WFIFOW(fd, 2) = 4 + instance_start * 4;
+	WFIFOW(fd, 2) = 4 + 999 * 4;
 	WFIFOSET(fd, WFIFOW(fd, 2));
 
 	return 0;

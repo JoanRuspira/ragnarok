@@ -4073,12 +4073,6 @@
 	export_constant(DIR_EAST);
 	export_constant(DIR_NORTHEAST);
 
-	/* instance modes */
-	export_constant(IM_NONE);
-	export_constant(IM_CHAR);
-	export_constant(IM_PARTY);
-	export_constant(IM_GUILD);
-	export_constant(IM_CLAN);
 
 	/* mob random groups */
 	export_constant(MOBG_Branch_Of_Dead_Tree);
@@ -4116,13 +4110,7 @@
 	export_constant(STOR_MODE_NONE);
 	export_constant(STOR_MODE_GET);
 	export_constant(STOR_MODE_PUT);
-	
-	/* instance enter */
-	export_constant(IE_OK);
-	export_constant(IE_NOMEMBER);
-	export_constant(IE_NOINSTANCE);
-	export_constant(IE_OTHER);
-	
+		
 	/* months */
 	export_constant(JANUARY);
 	export_constant(FEBRUARY);

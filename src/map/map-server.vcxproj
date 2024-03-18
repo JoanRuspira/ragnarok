@@ -197,7 +197,6 @@
     <ClInclude Include="Damage.h" />
     <ClInclude Include="homunculus.hpp" />
     <ClInclude Include="HunterSkillAttackRatioCalculator.h" />
-    <ClInclude Include="instance.hpp" />
     <ClInclude Include="intif.hpp" />
     <ClInclude Include="itemdb.hpp" />
     <ClInclude Include="KnightAdditionalEffectsCalculator.h" />
@@ -275,7 +274,6 @@
     <ClCompile Include="guild.cpp" />
     <ClCompile Include="homunculus.cpp" />
     <ClCompile Include="HunterSkillAttackRatioCalculator.cpp" />
-    <ClCompile Include="instance.cpp" />
     <ClCompile Include="intif.cpp" />
     <ClCompile Include="itemdb.cpp" />
     <ClCompile Include="KnightAdditionalEffectsCalculator.cpp" />

@@ -34,7 +34,6 @@
 #include "elemental.hpp"
 #include "guild.hpp"
 #include "homunculus.hpp"
-#include "instance.hpp"
 #include "intif.hpp"
 #include "itemdb.hpp" // MAX_ITEMGROUP
 #include "log.hpp"
@@ -4035,9 +4034,6 @@ ACMD_FUNC(reload) {
 	} else if (strstr(command, "questdb") || strncmp(message, "questdb", 3) == 0) {
 		if (quest_db.reload())
 			clif_displaymessage(fd, msg_txt(sd,1377)); // Quest database has been reloaded.
-	} else if (strstr(command, "instancedb") || strncmp(message, "instancedb", 4) == 0) {
-		if (instance_db.reload())
-			clif_displaymessage(fd, msg_txt(sd,516)); // Instance database has been reloaded.
 	} else if (strstr(command, "attendancedb") || strncmp(message, "attendancedb", 4) == 0) {
 		attendance_db.reload();
 		clif_displaymessage(fd, msg_txt(sd, 795)); // Attendance database has been reloaded.

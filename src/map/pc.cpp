@@ -38,7 +38,6 @@
 #include "elemental.hpp"
 #include "guild.hpp"
 #include "homunculus.hpp"
-#include "instance.hpp"
 #include "intif.hpp"
 #include "itemdb.hpp" // MAX_ITEMGROUP
 #include "log.hpp"
@@ -1847,17 +1846,8 @@ void pc_reg_received(struct map_session_data *sd)
 	intif_storage_request(sd,TABLE_CART, 0, STOR_MODE_ALL); // Request cart data
 	intif_storage_request(sd,TABLE_INVENTORY, 0, STOR_MODE_ALL); // Request inventory data
 
-	// Restore IM_CHAR instance to the player
-	for (const auto &instance : instances) {
-		if (instance.second->mode == IM_CHAR && instance.second->owner_id == sd->status.char_id) {
-			sd->instance_id = instance.first;
-			break;
-		}
-	}
 
 #if PACKETVER_MAIN_NUM < 20190403 || PACKETVER_RE_NUM < 20190320 || PACKETVER_ZERO_NUM < 20190410
-	if (sd->instance_id > 0)
-		instance_reqinfo(sd, sd->instance_id);
 	if (sd->status.party_id > 0)
 		party_member_joined(sd);
 	if (sd->status.guild_id > 0)
@@ -5940,20 +5930,7 @@ enum e_setpos pc_setpos(struct map_session_data* sd, unsigned short mapindex, in
 	sd->state.mail_writing = false;
 
 	if( sd->state.changemap ) { // Misc map-changing settings
-		int curr_map_instance_id = map_getmapdata(sd->bl.m)->instance_id, new_map_instance_id = (mapdata ? mapdata->instance_id : 0);
-
-		if (curr_map_instance_id != new_map_instance_id) {
-			if (curr_map_instance_id > 0) { // Update instance timer for the map on leave
-				instance_delusers(curr_map_instance_id);
-				sd->instance_mode = util::umap_find(instances, curr_map_instance_id)->mode; // Store mode for instance destruction button checks
-			}
-
-			if (new_map_instance_id > 0) // Update instance timer for the map on enter
-				instance_addusers(new_map_instance_id);
-		}
-
 		
-
 		sd->state.pmap = sd->bl.m;
 		if (sc && sc->count) { // Cancel some map related stuff.
 

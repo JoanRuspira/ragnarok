@@ -275,9 +275,6 @@
     <ClInclude Include="homunculus.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="instance.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="intif.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -509,9 +506,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="homunculus.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="instance.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="intif.cpp">

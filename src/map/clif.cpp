@@ -34,7 +34,6 @@
 #include "elemental.hpp"
 #include "guild.hpp"
 #include "homunculus.hpp"
-#include "instance.hpp"
 #include "intif.hpp"
 #include "itemdb.hpp"
 #include "log.hpp"
@@ -16896,26 +16895,7 @@ void clif_font(struct map_session_data *sd)
 /// S 0x2cb <Instance name>.61B <Standby Position>.W
 void clif_instance_create(int instance_id, int num)
 {
-#if PACKETVER >= 20071128
-	struct map_session_data *sd = NULL;
-	enum send_target target = PARTY;
-	unsigned char buf[65];
 
-	instance_getsd(instance_id, sd, &target);
-
-	if (!sd)
-		return;
-
-	std::shared_ptr<s_instance_db> db = instance_db.find(util::umap_find(instances, instance_id)->id);
-
-	if (!db)
-		return;
-
-	WBUFW(buf,0) = 0x2cb;
-	safestrncpy(WBUFCP(buf,2), db->name.c_str(), INSTANCE_NAME_LENGTH);
-	WBUFW(buf,63) = num;
-	clif_send(buf,packet_len(0x2cb),&sd->bl,target);
-#endif
 
 	return;
 }
@@ -16924,20 +16904,7 @@ void clif_instance_create(int instance_id, int num)
 /// S 0x2cc <Standby Position>.W
 void clif_instance_changewait(int instance_id, int num)
 {
-#if PACKETVER >= 20071128
-	struct map_session_data *sd = NULL;
-	enum send_target target = PARTY;
-	unsigned char buf[4];
 
-	instance_getsd(instance_id, sd, &target);
-
-	if (!sd)
-		return;
-
-	WBUFW(buf,0) = 0x2cc;
-	WBUFW(buf,2) = num;
-	clif_send(buf,packet_len(0x2cc),&sd->bl,target);
-#endif
 
 	return;
 }
@@ -16946,27 +16913,7 @@ void clif_instance_changewait(int instance_id, int num)
 /// S 0x2cd <Instance Name>.61B <Instance Remaining Time>.L <Instance Noplayers close time>.L
 void clif_instance_status(int instance_id, unsigned int limit1, unsigned int limit2)
 {
-#if PACKETVER >= 20071128
-	struct map_session_data *sd = NULL;
-	enum send_target target = PARTY;
-	unsigned char buf[71];
 
-	instance_getsd(instance_id, sd, &target);
-
-	if (!sd)
-		return;
-
-	std::shared_ptr<s_instance_db> db = instance_db.find(util::umap_find(instances, instance_id)->id);
-
-	if (!db)
-		return;
-
-	WBUFW(buf,0) = 0x2cd;
-	safestrncpy(WBUFCP(buf,2), db->name.c_str(), INSTANCE_NAME_LENGTH);
-	WBUFL(buf,63) = limit1;
-	WBUFL(buf,67) = limit2;
-	clif_send(buf,packet_len(0x2cd),&sd->bl,target);
-#endif
 
 	return;
 }
@@ -16980,21 +16927,6 @@ void clif_instance_status(int instance_id, unsigned int limit1, unsigned int lim
 /// 4 = Create failure (removes the instance window)
 void clif_instance_changestatus(int instance_id, e_instance_notify type, unsigned int limit)
 {
-#if PACKETVER >= 20071128
-	struct map_session_data *sd = NULL;
-	enum send_target target = PARTY;
-	unsigned char buf[10];
-
-	instance_getsd(instance_id, sd, &target);
-
-	if (!sd)
-		return;
-
-	WBUFW(buf,0) = 0x2ce;
-	WBUFL(buf,2) = type;
-	WBUFL(buf,6) = limit;
-	clif_send(buf,packet_len(0x2ce),&sd->bl,target);
-#endif
 
 	return;
 }
@@ -17003,16 +16935,7 @@ void clif_instance_changestatus(int instance_id, e_instance_notify type, unsigne
 /// 02cf <command>.L (CZ_MEMORIALDUNGEON_COMMAND)
 void clif_parse_MemorialDungeonCommand(int fd, map_session_data *sd)
 {
-	if (pc_istrading(sd) || pc_isdead(sd) || map_getmapdata(sd->bl.m)->instance_id > 0)
-		return;
-
-	const PACKET_CZ_MEMORIALDUNGEON_COMMAND *p = (PACKET_CZ_MEMORIALDUNGEON_COMMAND *)RFIFOP(fd, 0);
-
-	switch (p->command) {
-		case COMMAND_MEMORIALDUNGEON_DESTROY_FORCE:
-			instance_destroy_command(sd);
-			break;
-	}
+	
 }
 
 /// Notifies clients about item picked up by a party member.
@@ -18155,8 +18078,7 @@ static void clif_loadConfirm( struct map_session_data *sd ){
 
 	clif_send( &p, sizeof(p), &sd->bl, SELF );
 
-	if (sd->instance_id > 0)
-		instance_reqinfo(sd, sd->instance_id);
+	
 	if (sd->status.party_id > 0)
 		party_member_joined(sd);
 	if (sd->status.guild_id > 0)
