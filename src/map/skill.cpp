@@ -3276,6 +3276,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case SK_AM_BASILISK2:
 	case SK_AM_BEHOLDER2:
 	case SK_AM_PETROLOGY:
+	case SK_CR_HARMONIZE:
 	case SK_AM_PYROTECHNIA:
 	case SK_SM_PROVOKE:
 		clif_skill_nodamage(src,battle_get_master(src),skill_id,skill_lv,1);
@@ -3648,8 +3649,16 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		clif_skill_nodamage (src, bl, skill_id, skill_lv,
 			sc_start(src,bl, type, 100, skill_lv*2, skill_get_time(skill_id,skill_lv)));
 		break;
+	case SK_CR_HARMONIZE:
+		clif_soundeffectall(bl, "harmonize.wav", 0, AREA);
+		clif_specialeffect(bl, 1385, AREA);
+		clif_specialeffect(bl, 1272, AREA);
+    	clif_specialeffect(src, EF_GUMGANG8, AREA);	
+		clif_skill_nodamage (src, bl, skill_id, skill_lv,
+			sc_start(src,bl, type, 100, skill_lv*2, skill_get_time(skill_id,skill_lv)));
+		break;
 	
-	case SK_MO_DECAGI:
+	// case SK_MO_DECAGI:
 	
 
 	case SK_AL_SIGNUMCRUCIS:
@@ -5749,6 +5758,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		break;
 
 	case SK_AM_HOMUNCULUSACTIONII:
+	case SK_CR_HOMUNCULUSACTIONIII:
 	case SK_SA_ELEMENTALACTION2:
 		if( sd ) {
 			int duration = 7000;
@@ -8404,7 +8414,9 @@ bool skill_check_condition_castbegin(struct map_session_data* sd, uint16 skill_i
 			//Consume
 			sd->itemid = 0;
 			sd->itemindex = -1;
-			if( sd->inventory.u.items_inventory[i].expire_time == 0 )
+			if(  sd->inventory_data[i]->flag.delay_consume & DELAYCONSUME_NOCONSUME ) // [marquis007]
+				; //Do not consume item.
+			else if( sd->inventory.u.items_inventory[i].expire_time == 0 )
 				pc_delitem(sd,i,1,0,0,LOG_TYPE_CONSUME); // Rental usable items are not consumed until expiration
 		}
 		if(!sd->skillitem_keep_requirement)

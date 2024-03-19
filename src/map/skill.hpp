@@ -1076,6 +1076,8 @@ enum e_skill {
 	SK_CR_CP_SHIELD=235,
 	SK_CR_CP_ARMOR=236,
 	SK_CR_CP_HELM=237,
+	SK_CR_HOMUNCULUSACTIONIII=908,
+	SK_CR_HARMONIZE=909,
 };
 
 /// The client view ids for land skills.

@@ -378,3 +378,39 @@ Body:
       ItemCost:
         - Item: Coating_Bottle
           Amount: 1
+  - Id: 908
+    Name: SK_CR_HOMUNCULUSACTIONIII
+    Description: Elemental Action
+    MaxLevel: 5
+    TargetType: Support
+    DamageFlags:
+      NoDamage: true
+    Range: 7
+    Hit: Single
+    HitCount: 1
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    Requires:
+      SpCost: 20
+      State: Elementalspirit
+  - Id: 909
+    Name: SK_CR_HARMONIZE
+    Description: Normal Boost
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Support
+    DamageFlags:
+      NoDamage: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    Cooldown: 2000
+    AfterCastActDelay: 500
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Duration1: 60000
+    Requires:
+      SpCost: 60

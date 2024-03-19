@@ -327,6 +327,28 @@ int elemental_action(struct elemental_data *ed, struct block_list *bl, t_tick ti
 				break;
 		}
 	}
+
+	if (caller_skill_id == SK_CR_HOMUNCULUSACTIONIII) {
+		ARR_FIND(0, MAX_ELESKILLTREE, i, ed->db->skill[i].id && (ed->db->skill[i].mode & EL_SKILLMODE_ALCHEMIST_3));
+		skill_id = ed->db->skill[i].id;
+		
+		switch(ed->vd->class_){
+			case ELEMENTALID_VENTUS_M:
+				skill_id = SK_AM_BASILISK2;
+				break;
+			case ELEMENTALID_TERA_M:
+				skill_id = SK_AM_BEHOLDER2;
+				break;
+			case ELEMENTALID_AGNI_M:
+				skill_id = SK_CR_HARMONIZE;
+				break;
+			case ELEMENTALID_AQUA_M:
+				skill_id = SK_AM_HEALPULSE;
+				break;
+		}
+	}
+
+	
 	
 
 
@@ -375,6 +397,7 @@ int elemental_action(struct elemental_data *ed, struct block_list *bl, t_tick ti
 		if( sd ){
 			if( sd->skill_id_old != SK_SA_ELEMENTALACTION1 && sd->skill_id_old != SK_SA_ELEMENTALACTION2 
 			&& sd->skill_id_old != SK_AM_HOMUNCULUSACTIONI && sd->skill_id_old != SK_AM_HOMUNCULUSACTIONII
+			&& sd->skill_id_old != SK_CR_HOMUNCULUSACTIONIII
 			&& sd->skill_id_old != SK_HT_SLASH
 			&& sd->skill_id_old != SK_HT_BLITZBEAT
 			&&//regardless of remaining HP/SP it can be cast

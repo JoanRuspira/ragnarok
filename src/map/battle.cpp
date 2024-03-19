@@ -500,6 +500,10 @@ int64 battle_attr_fix(struct block_list *src, struct block_list *target, int64 d
 				if (sc->data[STATUS_LAUDATEDOMINIUM])
 					ratio += sc->data[STATUS_LAUDATEDOMINIUM]->val3;
 				break;
+			case ELE_NEUTRAL:
+				if (sc->data[STATUS_HARMONIZE])
+					ratio += sc->data[STATUS_HARMONIZE]->val1*10;
+				break;
 		}
 	}
 

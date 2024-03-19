@@ -1777,13 +1777,14 @@ int unit_skilluse_id2(struct block_list *src, int target_id, uint16 skill_id, ui
 		case SK_AM_BEHOLDER1:
 		case SK_AM_PETROLOGY:
 		case SK_AM_PYROTECHNIA:
+		case SK_CR_HARMONIZE:
 		case SK_AM_BEHOLDER2:
 		case SK_AM_BASILISK2:
 		case SK_SM_PROVOKE:
 			if( src->type == BL_ELEM ) {
 				sd = BL_CAST(BL_PC, battle_get_master(src));
 				if( sd && (sd->skill_id_old == SK_SA_ELEMENTALACTION1 || sd->skill_id_old == SK_SA_ELEMENTALACTION2
-				|| sd->skill_id_old == SK_AM_HOMUNCULUSACTIONI || sd->skill_id_old == SK_AM_HOMUNCULUSACTIONII
+				|| sd->skill_id_old == SK_AM_HOMUNCULUSACTIONI || sd->skill_id_old == SK_AM_HOMUNCULUSACTIONII || sd->skill_id_old == SK_CR_HOMUNCULUSACTIONIII
 				|| sd->skill_id_old == SK_HT_SLASH
 				)) {
 					casttime = -1;

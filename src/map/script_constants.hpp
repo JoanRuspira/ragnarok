@@ -925,6 +925,7 @@
 	export_constant(STATUS_NEUTRALBARRIER_MASTER);
 	export_constant(STATUS_BIOETHICS);
 	export_constant(STATUS_PETROLOGY);
+	export_constant(STATUS_HARMONIZE);
 	export_constant(STATUS_PYROTECHNIA);
 	export_constant(STATUS_GEOGRAFIELD);
 	export_constant(STATUS_CP_WEAPON);
