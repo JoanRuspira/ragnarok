@@ -3405,6 +3405,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 {
 	struct map_session_data *sd, *dstsd;
 	struct mob_data *md, *dstmd;
+	struct elemental_data* ed;
 	struct homun_data *hd;
 	struct mercenary_data *mer;
 	struct status_data *sstatus, *tstatus;
@@ -3423,6 +3424,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		return 1;
 
 	sd = BL_CAST(BL_PC, src);
+	ed = BL_CAST(BL_ELEM, src);
 	hd = BL_CAST(BL_HOM, src);
 	md = BL_CAST(BL_MOB, src);
 	mer = BL_CAST(BL_MER, src);
@@ -3454,7 +3456,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	
 	//Check for undead skills that convert a no-damage skill into a damage one. [Skotlex]
 	switch (skill_id) {
-		
+		case SK_CR_SUNLIGHT:
 		case SK_AM_WARMWIND:
 			if (bl->type != BL_HOM) {
 				if (sd) clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0) ;
@@ -3614,12 +3616,12 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		break;
 	case SK_AM_HEALPULSE:
 		if( !BL_CAST( BL_PC, bl ) || BL_CAST( BL_PC, bl )->status.party_id == 0 || flag&1 ) {
-				int healing,skill_lv, matk = 0;
-				struct status_data *status;
-				skill_lv = pc_checkskill(sd, SK_CR_HOMUNCULUSRESEARCH);
-				status = status_get_status_data(&sd->bl);
-				matk = rand()%(status->matk_max-status->matk_min + 1) + status->matk_min;
-				healing = (200 * skill_lv) + (status_get_lv(src) * 3) + (status_get_int(src) * 3) + (matk * 3) + (skill_lv*200);
+				int healing,research_skill_lv, matk = 0;
+				struct map_session_data *msd = BL_CAST(BL_PC, bl);
+				research_skill_lv = pc_checkskill(msd, SK_CR_HOMUNCULUSRESEARCH);
+				matk = rand()%(ed->elemental.matk-ed->elemental.matk_min + 1) + ed->elemental.matk_min;
+
+				healing = (200 * skill_lv) + (status_get_lv(src) * 3) + (status_get_int(src) * 3) + (matk * 3) + (research_skill_lv*200);
 				clif_specialeffect(bl, 1000, AREA);
 				clif_specialeffect(src, EF_GROUNDSHAKE, AREA);
 				clif_skill_nodamage(src,bl,SK_AM_HEALPULSE,healing,1);
@@ -4617,6 +4619,24 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			status_heal(bl,healing,0,0);
 		}
 		break;
+	case SK_CR_SUNLIGHT:
+		{
+			int healing, buff_skill_lv, matk = 0;
+			struct elemental_data *ed = (TBL_ELEM*) map_id2bl(src->id);
+			struct block_list *mbl;
+			mbl = battle_get_master(&ed->bl);
+			struct map_session_data *msd = BL_CAST(BL_PC, bl);
+
+			buff_skill_lv = pc_checkskill(msd, SK_CR_HOMUNCULUSRESEARCH);
+			matk = rand()%(ed->elemental.matk-ed->elemental.matk_min + 1) + ed->elemental.matk_min;
+			healing = (250 * skill_lv) + (status_get_lv(src) * 3) + (status_get_int(src) * 3) + (matk * 3) + (buff_skill_lv*200);
+			clif_skill_nodamage(src,bl,SK_CR_SUNLIGHT,healing,1);
+			clif_specialeffect(bl, 1383, AREA);//new_dragonbreath_11_clock
+			clif_skill_nodamage(NULL,bl,SK_AL_HEAL,healing,1);
+			clif_soundeffectall(bl, "sunlight.wav", 0, AREA);
+			status_heal(bl,healing,0,0);
+		}
+		break;	
 	case SK_AM_WARMWIND:
 		{
 			int healing, buff_skill_lv, matk = 0;
@@ -5311,6 +5331,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		if( !sd || sd->status.party_id == 0 || flag&1 ) {
 			
 				clif_specialeffect(bl, EF_ALL_RAY_OF_PROTECTION, AREA);
+				clif_specialeffect(bl, 1382, AREA);//new_dragonbreath_07_clock
 				clif_skill_nodamage(bl, bl, skill_id, skill_lv, sc_start(src, bl, type, 100, skill_lv, skill_get_time(skill_id, skill_lv)));
 			
 		} else if( sd )

@@ -414,3 +414,18 @@ Body:
     Duration1: 60000
     Requires:
       SpCost: 60
+  - Id: 910
+    Name: SK_CR_SUNLIGHT
+    Description: Sunlight
+    MaxLevel: 5
+    TargetType: Support
+    DamageFlags:
+      NoDamage: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    CastTime: 3000
+    Cooldown: 5000
+    AfterCastActDelay: 1000
+    Requires:
+      SpCost: 100

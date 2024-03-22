@@ -343,7 +343,7 @@ int elemental_action(struct elemental_data *ed, struct block_list *bl, t_tick ti
 				skill_id = SK_CR_HARMONIZE;
 				break;
 			case ELEMENTALID_AQUA_M:
-				skill_id = SK_AM_HEALPULSE;
+				skill_id = SK_CR_SUNLIGHT;
 				break;
 		}
 	}
