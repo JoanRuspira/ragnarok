@@ -337,7 +337,7 @@ int elemental_action(struct elemental_data *ed, struct block_list *bl, t_tick ti
 				skill_id = SK_AM_BASILISK2;
 				break;
 			case ELEMENTALID_TERA_M:
-				skill_id = SK_AM_BEHOLDER2;
+				skill_id = SK_CR_BEHOLDER3;
 				break;
 			case ELEMENTALID_AGNI_M:
 				skill_id = SK_CR_HARMONIZE;

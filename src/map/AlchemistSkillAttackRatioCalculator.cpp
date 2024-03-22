@@ -18,6 +18,11 @@ int AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_
 			calculate_beholder_1_special_effects(target);
 			return calculate_basilisk_1_attack_ratio(skill_lv);
 			break;
+		case SK_CR_BEHOLDER3:
+			clif_soundeffectall(target, "abracadabra.wav", 0, AREA);
+			clif_specialeffect(target, 1382, AREA);//new_dragonbreath_07_clock
+			return calculate_beholder_3_attack_ratio(skill_lv);
+			break;
 		case SK_AM_BASILISK2:
 			return calculate_basilisk_2_attack_ratio(skill_lv);
 			break;
@@ -246,6 +251,28 @@ int AlchemistSkillAttackRatioCalculator::calculate_demonstration_attack_ratio(in
 	return ratio + (intelligence);
 }
 
+int AlchemistSkillAttackRatioCalculator::calculate_beholder_3_attack_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 400;
+			break;
+		case 2:
+			ratio = 500;
+			break;
+		case 3:
+			ratio = 600;
+			break;
+		case 4:
+			ratio = 700;
+			break;
+		case 5:
+			ratio = 800;
+			break;
+		}
+	return ratio;
+}
 
 int AlchemistSkillAttackRatioCalculator::calculate_basilisk_1_attack_ratio(int skill_lv)
 {

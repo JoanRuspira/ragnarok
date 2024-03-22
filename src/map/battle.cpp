@@ -3342,6 +3342,7 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 				skill_id == SK_SA_WATERBLAST ||
 				skill_id == SK_SA_FIREBOMB ||
 				skill_id == SK_AM_BEHOLDER1 ||
+				skill_id == SK_CR_BEHOLDER3 ||
 				skill_id == SK_SM_PROVOKE ||
 				skill_id == SK_AM_BASILISK2 ||
 				skill_id == SK_AM_BEHOLDER2
@@ -3455,6 +3456,7 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 						skillratio +=  KnightSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
 					case SK_AM_BEHOLDER1:
+					case SK_CR_BEHOLDER3:
 					case SK_AM_BEHOLDER2:
 					case SK_AM_BASILISK2:
 					case SK_AM_WILDTHORNS:

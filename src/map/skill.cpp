@@ -1736,6 +1736,7 @@ int64 skill_attack (int attack_type, struct block_list* src, struct block_list *
 		
 		case SK_AM_BASILISK1:
 		case SK_AM_BEHOLDER1:
+		case SK_CR_BEHOLDER3:
 		case SK_AM_BASILISK2:
 		case SK_AM_BEHOLDER2:
 			dmg.dmotion = clif_skill_damage(src,bl,tick,dmg.amotion,dmg.dmotion,damage,dmg.div_,skill_id,-1,DMG_SPLASH);
@@ -3273,6 +3274,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case SK_SA_FIREBOMB:
 	case SK_AM_BASILISK1:
 	case SK_AM_BEHOLDER1:
+	case SK_CR_BEHOLDER3:
 	case SK_AM_BASILISK2:
 	case SK_AM_BEHOLDER2:
 	case SK_AM_PETROLOGY:
@@ -5331,7 +5333,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		if( !sd || sd->status.party_id == 0 || flag&1 ) {
 			
 				clif_specialeffect(bl, EF_ALL_RAY_OF_PROTECTION, AREA);
-				clif_specialeffect(bl, 1382, AREA);//new_dragonbreath_07_clock
 				clif_skill_nodamage(bl, bl, skill_id, skill_lv, sc_start(src, bl, type, 100, skill_lv, skill_get_time(skill_id, skill_lv)));
 			
 		} else if( sd )

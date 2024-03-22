@@ -15,6 +15,7 @@ class AlchemistSkillAttackRatioCalculator
 	private:
 		static int calculate_basilisk_1_attack_ratio(int skill_lv);
 		static int calculate_basilisk_2_attack_ratio(int skill_lv);
+		static int calculate_beholder_3_attack_ratio(int skill_lv);
 		static int calculate_demonstration_attack_ratio(int skill_lv, int intelligence);
 		static int calculate_acid_terror_attack_ratio(int skill_lv, int dex);
 		static int calculate_bomb_attack_ratio(int skill_lv, int dex);

@@ -425,7 +425,21 @@ Body:
     Hit: Single
     HitCount: 1
     CastTime: 3000
-    Cooldown: 5000
+    Cooldown: 7000
     AfterCastActDelay: 1000
     Requires:
       SpCost: 100
+  - Id: 911
+    Name: SK_CR_BEHOLDER3
+    Description: Beholder 3
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 7
+    Hit: Single
+    HitCount: 1
+    Element: Neutral
+    Cooldown: 7000
+    AfterCastActDelay: 400
+    Requires:
+      SpCost: 75

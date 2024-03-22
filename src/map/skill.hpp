@@ -1079,6 +1079,7 @@ enum e_skill {
 	SK_CR_HOMUNCULUSACTIONIII=908,
 	SK_CR_HARMONIZE=909,
 	SK_CR_SUNLIGHT=910,
+	SK_CR_BEHOLDER3=911,
 };
 
 /// The client view ids for land skills.
