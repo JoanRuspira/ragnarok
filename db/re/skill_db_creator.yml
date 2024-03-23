@@ -443,3 +443,17 @@ Body:
     AfterCastActDelay: 400
     Requires:
       SpCost: 75
+  - Id: 912
+    Name: SK_AM_BASILISK3
+    Description: Basilisk 3
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: 1
+    Hit: Single
+    HitCount: 2
+    Element: Neutral
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    Requires:
+      SpCost: 30

@@ -23,6 +23,11 @@ int AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_
 			clif_specialeffect(target, 1382, AREA);//new_dragonbreath_07_clock
 			return calculate_beholder_3_attack_ratio(skill_lv);
 			break;
+		case SK_CR_BASILISK3:
+			clif_soundeffectall(target, "silvervein.wav", 0, AREA);
+			clif_specialeffect(target, EF_MIDNIGHT_FRENZY, AREA);
+			return calculate_beholder_3_attack_ratio(skill_lv);
+			break;
 		case SK_AM_BASILISK2:
 			return calculate_basilisk_2_attack_ratio(skill_lv);
 			break;

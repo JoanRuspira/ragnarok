@@ -1733,7 +1733,7 @@ int64 skill_attack (int attack_type, struct block_list* src, struct block_list *
 		case SK_SA_ICICLE:
 	
 		case SK_SA_WINDSLASH:
-		
+		case SK_CR_BASILISK3:
 		case SK_AM_BASILISK1:
 		case SK_AM_BEHOLDER1:
 		case SK_CR_BEHOLDER3:
@@ -3273,6 +3273,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case SK_SA_WATERBLAST:
 	case SK_SA_FIREBOMB:
 	case SK_AM_BASILISK1:
+	case SK_CR_BASILISK3:
 	case SK_AM_BEHOLDER1:
 	case SK_CR_BEHOLDER3:
 	case SK_AM_BASILISK2:

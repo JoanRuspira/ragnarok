@@ -2323,6 +2323,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			break;
 		case SK_AM_BASILISK1:
 		case SK_AM_BASILISK2:
+		case SK_CR_BASILISK3:
 		case SK_AM_ACIDTERROR:
 		case SK_AM_BOMB:
 		case SK_CR_ACIDBOMB:
