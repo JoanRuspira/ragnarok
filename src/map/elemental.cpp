@@ -296,6 +296,10 @@ int elemental_action(struct elemental_data *ed, struct block_list *bl, t_tick ti
 		ARR_FIND(0, MAX_ELESKILLTREE, i, ed->db->skill[i].id && (ed->db->skill[i].mode&EL_SKILLMODE_ASSIST));
 		skill_id = ed->db->skill[i].id;	
 	}
+	if (caller_skill_id == SK_PF_ELEMENTALACTION3) {
+		ARR_FIND(0, MAX_ELESKILLTREE, i, ed->db->skill[i].id && (ed->db->skill[i].mode&EL_SKILLMODE_AGGRESSIVE));
+		skill_id = ed->db->skill[i].id;	
+	}
 	if (caller_skill_id == SK_AM_HOMUNCULUSACTIONI) {
 		ARR_FIND(0, MAX_ELESKILLTREE, i, ed->db->skill[i].id && (ed->db->skill[i].mode&EL_SKILLMODE_ALCHEMIST_1));
 		skill_id = ed->db->skill[i].id;
@@ -348,7 +352,26 @@ int elemental_action(struct elemental_data *ed, struct block_list *bl, t_tick ti
 		}
 	}
 
-	
+	if (caller_skill_id == SK_PF_ELEMENTALACTION3) {
+		ARR_FIND(0, MAX_ELESKILLTREE, i, ed->db->skill[i].id && (ed->db->skill[i].mode & EL_SKILLMODE_ALCHEMIST_3));
+		skill_id = ed->db->skill[i].id;
+		
+		switch(ed->vd->class_){
+			case ELEMENTALID_TERA_L:
+				skill_id = SK_PF_ROCKTOMB;
+				break;
+			case ELEMENTALID_VENTUS_L:
+				skill_id = SK_PF_JUPITELTHUNDER;
+				break;
+			case ELEMENTALID_AQUA_L:
+				skill_id = SK_PF_HYDROPUMP;
+				break;
+			case ELEMENTALID_AGNI_L:
+				skill_id = SK_PF_INFERNO;
+				break;
+		}
+	}
+
 	
 
 
@@ -395,7 +418,7 @@ int elemental_action(struct elemental_data *ed, struct block_list *bl, t_tick ti
 	if(req.hp || req.sp){
 		struct map_session_data *sd = BL_CAST(BL_PC, battle_get_master(&ed->bl));
 		if( sd ){
-			if( sd->skill_id_old != SK_SA_ELEMENTALACTION1 && sd->skill_id_old != SK_SA_ELEMENTALACTION2 
+			if( sd->skill_id_old != SK_SA_ELEMENTALACTION1 && sd->skill_id_old != SK_SA_ELEMENTALACTION2 && sd->skill_id_old != SK_PF_ELEMENTALACTION3
 			&& sd->skill_id_old != SK_AM_HOMUNCULUSACTIONI && sd->skill_id_old != SK_AM_HOMUNCULUSACTIONII
 			&& sd->skill_id_old != SK_CR_HOMUNCULUSACTIONIII
 			&& sd->skill_id_old != SK_HT_SLASH

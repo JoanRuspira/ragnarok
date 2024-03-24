@@ -1771,6 +1771,10 @@ int unit_skilluse_id2(struct block_list *src, int target_id, uint16 skill_id, ui
 		case SK_SA_EARTHSPIKE:
 		case SK_SA_ICICLE:
 		case SK_SA_FIREBALL:
+		case SK_PF_INFERNO:
+		case SK_PF_ROCKTOMB:
+		case SK_PF_HYDROPUMP:
+		case SK_PF_JUPITELTHUNDER:
 		case EL_TORNADO_JG:
 		case SK_SA_ROCKCRUSHER:
 		case SK_SA_WATERBLAST:
@@ -1786,7 +1790,7 @@ int unit_skilluse_id2(struct block_list *src, int target_id, uint16 skill_id, ui
 		case SK_SM_PROVOKE:
 			if( src->type == BL_ELEM ) {
 				sd = BL_CAST(BL_PC, battle_get_master(src));
-				if( sd && (sd->skill_id_old == SK_SA_ELEMENTALACTION1 || sd->skill_id_old == SK_SA_ELEMENTALACTION2
+				if( sd && (sd->skill_id_old == SK_SA_ELEMENTALACTION1 || sd->skill_id_old == SK_SA_ELEMENTALACTION2 || sd->skill_id_old == SK_PF_ELEMENTALACTION3
 				|| sd->skill_id_old == SK_AM_HOMUNCULUSACTIONI || sd->skill_id_old == SK_AM_HOMUNCULUSACTIONII || sd->skill_id_old == SK_CR_HOMUNCULUSACTIONIII
 				|| sd->skill_id_old == SK_HT_SLASH
 				)) {

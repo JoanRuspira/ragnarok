@@ -168,3 +168,74 @@ Body:
       ItemCost:
         - Item: Rent_Spell_Book
           Amount: 1
+  - Id: 913
+    Name: SK_PF_ELEMENTALACTION3
+    Description: Elemental Action
+    MaxLevel: 5
+    TargetType: Attack
+    DamageFlags:
+      NoDamage: true
+    Range: 7
+    Hit: Single
+    HitCount: 1
+    Cooldown: 7000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 75
+      State: Elementalspirit
+  - Id: 914
+    Name: SK_PF_INFERNO
+    Description: Inferno
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    Element: Fire
+    Cooldown: 7000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 90
+  - Id: 84
+    Name: SK_PF_JUPITELTHUNDER
+    Description: Jupitel Thunder
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    Element: Wind
+    Cooldown: 7000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 90
+  - Id: 915
+    Name: SK_PF_ROCKTOMB
+    Description: Rock Tomb
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    Element: Earth
+    Cooldown: 7000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 90
+  - Id: 916
+    Name: SK_PF_HYDROPUMP
+    Description: Hydro Pump
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    Element: Water
+    Cooldown: 7000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 90

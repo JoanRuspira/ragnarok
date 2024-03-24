@@ -20,6 +20,7 @@ class SageSkillAttackRatioCalculator
 		static int calculate_soul_burn_atk_ratio(int skill_lv);
 		static int calculate_el_action_atk_ratio(int skill_lv);
 		static int calculate_el_action_2_atk_ratio(int skill_lv);
+	static int calculate_el_action_3_atk_ratio(int skill_lv);
 		static void add_fire_bomb_special_effects(struct block_list *target);
 		static void add_water_blast_special_effects(struct block_list *target);
 		static void add_chain_lighting_special_effects(struct block_list *target);

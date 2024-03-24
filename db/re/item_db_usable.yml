@@ -6568,7 +6568,7 @@ Body:
       NoMail: true
       NoAuction: true
     Script: |
-      specialeffect2 1261;
+      specialeffect2 1150;
       itemskill "SK_SA_SUMMONELEMENTAL",1;
   - Id: 40
     AegisName: Ventus_Scroll
@@ -6590,7 +6590,7 @@ Body:
       NoMail: true
       NoAuction: true
     Script: |
-      specialeffect2 1261;
+      specialeffect2 1150;
       itemskill "SK_SA_SUMMONELEMENTAL",2;
   - Id: 41
     AegisName: Aqua_Scroll
@@ -6612,7 +6612,7 @@ Body:
       NoMail: true
       NoAuction: true
     Script: |
-      specialeffect2 1261;
+      specialeffect2 1150;
       itemskill "SK_SA_SUMMONELEMENTAL",3;
   - Id: 42
     AegisName: Agni_Scroll
@@ -6634,5 +6634,5 @@ Body:
       NoMail: true
       NoAuction: true
     Script: |
-      specialeffect2 1261;
+      specialeffect2 1150;
       itemskill "SK_SA_SUMMONELEMENTAL",4;

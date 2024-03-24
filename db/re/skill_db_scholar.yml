@@ -38,7 +38,7 @@ Body:
     MaxLevel: 5
     Type: Magic
     TargetType: Attack
-    Range: 6
+    Range: 9
     Hit: Single
     HitCount: 1
     Element: Fire
@@ -52,7 +52,7 @@ Body:
     MaxLevel: 5
     Type: Magic
     TargetType: Attack
-    Range: 5
+    Range: 9
     Hit: Single
     HitCount: 1
     Element: Earth
@@ -66,7 +66,7 @@ Body:
     MaxLevel: 5
     Type: Magic
     TargetType: Attack
-    Range: 11
+    Range: 9
     Hit: Single
     HitCount: 1
     Element: Wind

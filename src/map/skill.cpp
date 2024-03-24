@@ -1731,7 +1731,10 @@ int64 skill_attack (int attack_type, struct block_list* src, struct block_list *
 	
 		case SK_SA_FIREBALL:
 		case SK_SA_ICICLE:
-	
+		case SK_PF_INFERNO:
+		case SK_PF_ROCKTOMB:
+		case SK_PF_HYDROPUMP:
+		case SK_PF_JUPITELTHUNDER:
 		case SK_SA_WINDSLASH:
 		case SK_CR_BASILISK3:
 		case SK_AM_BASILISK1:
@@ -3265,6 +3268,10 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	// 	skill_attack(BF_MAGIC,src,src,bl,skill_id,skill_lv,tick,flag);
 
 	case SK_SA_FIREBALL:
+	case SK_PF_INFERNO:
+	case SK_PF_ROCKTOMB:
+	case SK_PF_HYDROPUMP:
+	case SK_PF_JUPITELTHUNDER:
 	case SK_SA_ICICLE:
 	case SK_SA_WINDSLASH:
 	case SK_SA_EARTHSPIKE:
@@ -5782,6 +5789,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 
 	case SK_AM_HOMUNCULUSACTIONII:
 	case SK_CR_HOMUNCULUSACTIONIII:
+	case SK_PF_ELEMENTALACTION3:
 	case SK_SA_ELEMENTALACTION2:
 		if( sd ) {
 			int duration = 7000;

@@ -46,16 +46,32 @@ int SageSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 			add_chain_lighting_special_effects(target);
 			return calculate_el_action_2_atk_ratio(skill_lv);
 		case SK_SA_ROCKCRUSHER:
-			add_rock_crusher_special_effects(target);
+			// add_rock_crusher_special_effects(target);
 			return calculate_el_action_2_atk_ratio(skill_lv);
 		case SK_SA_WATERBLAST:
-			add_water_blast_special_effects(target);
+			// add_water_blast_special_effects(target);
 			return calculate_el_action_2_atk_ratio(skill_lv);
 		case SK_SA_FIREBOMB:
-			add_fire_bomb_special_effects(target);
+			// add_fire_bomb_special_effects(target);
 			return calculate_el_action_2_atk_ratio(skill_lv);
 		case SK_SA_ELEMENTALACTION2:
 			return calculate_el_action_2_atk_ratio(skill_lv);
+		case SK_PF_INFERNO:
+			clif_specialeffect(target, 1270, AREA);
+			clif_specialeffect(target, EF_MAGMA_FLOW, AREA);
+			return calculate_el_action_3_atk_ratio(skill_lv);
+		case SK_PF_JUPITELTHUNDER:
+			clif_specialeffect(target, 1272, AREA);
+			return calculate_el_action_3_atk_ratio(skill_lv);
+		case SK_PF_ROCKTOMB:
+			clif_soundeffectall(target, "rocktomb.wav", 0, AREA);
+    		clif_specialeffect(target, 1255, AREA);
+			return calculate_el_action_3_atk_ratio(skill_lv);
+		case SK_PF_HYDROPUMP:
+			clif_soundeffectall(target, "hydropump.wav", 0, AREA);
+			clif_specialeffect(target, 1271, AREA);
+			clif_specialeffect(target, 1041, AREA);
+			return calculate_el_action_3_atk_ratio(skill_lv);
 		default:
 			return 0;
 			break;
@@ -129,6 +145,29 @@ int SageSkillAttackRatioCalculator::calculate_el_action_2_atk_ratio(int skill_lv
 			break;
 		case 5:
 			ratio = 400;
+			break;
+		}
+	return ratio;
+}
+
+int SageSkillAttackRatioCalculator::calculate_el_action_3_atk_ratio(int skill_lv)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 300;
+			break;
+		case 2:
+			ratio = 400;
+			break;
+		case 3:
+			ratio = 500;
+			break;
+		case 4:
+			ratio = 600;
+			break;
+		case 5:
+			ratio = 700;
 			break;
 		}
 	return ratio;
