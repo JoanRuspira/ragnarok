@@ -42,20 +42,6 @@ int SageSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 			clif_specialeffect(target, 1254, AREA);
 			return calculate_el_action_atk_ratio(skill_lv);
 			break;
-		case EL_TORNADO_JG:
-			add_chain_lighting_special_effects(target);
-			return calculate_el_action_2_atk_ratio(skill_lv);
-		case SK_SA_ROCKCRUSHER:
-			// add_rock_crusher_special_effects(target);
-			return calculate_el_action_2_atk_ratio(skill_lv);
-		case SK_SA_WATERBLAST:
-			// add_water_blast_special_effects(target);
-			return calculate_el_action_2_atk_ratio(skill_lv);
-		case SK_SA_FIREBOMB:
-			// add_fire_bomb_special_effects(target);
-			return calculate_el_action_2_atk_ratio(skill_lv);
-		case SK_SA_ELEMENTALACTION2:
-			return calculate_el_action_2_atk_ratio(skill_lv);
 		case SK_PF_INFERNO:
 			clif_specialeffect(target, 1270, AREA);
 			clif_specialeffect(target, EF_MAGMA_FLOW, AREA);

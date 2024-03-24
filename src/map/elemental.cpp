@@ -54,7 +54,7 @@ int elemental_create(struct map_session_data *sd, int class_, unsigned int lifet
 	struct s_elemental ele;
 	struct s_elemental_db *db;
 	struct status_data *status;
-	int i, skill_lv;
+	int i, homunculus_research_skill_lv, elemental_empathy_skill_lv;
 	nullpo_retr(1,sd);
 	
 	if( (i = elemental_search_index(class_)) < 0 )
@@ -69,32 +69,47 @@ int elemental_create(struct map_session_data *sd, int class_, unsigned int lifet
 	i = db->status.size+1; // summon level
 
 	status = status_get_status_data(&sd->bl);
-	skill_lv = pc_checkskill(sd, SK_CR_HOMUNCULUSRESEARCH);
+	homunculus_research_skill_lv = pc_checkskill(sd, SK_CR_HOMUNCULUSRESEARCH);
+	elemental_empathy_skill_lv = pc_checkskill(sd, SK_PF_ELEMENTALEMPATHY);
 
 	ele.hp = ele.max_hp = sd->battle_status.max_hp;
 	ele.sp = ele.max_sp = sd->battle_status.max_sp;
 	ele.atk = status->batk*3;
 	ele.atk2 = status->watk*3;
 	ele.hit = sd->battle_status.hit;
-	ele.matk = status->matk_max + (skill_lv*20);
-	ele.matk_min = status->matk_min + (skill_lv*20);
+	ele.matk = status->matk_max;
+	ele.matk_min = status->matk_min;
 	ele.amotion =sd->battle_status.amotion;
 	ele.def = sd->battle_status.def;
 	ele.mdef = sd->battle_status.mdef;
 	ele.flee = sd->battle_status.flee;
 	
-	if (skill_lv > 0){
+	if (homunculus_research_skill_lv > 0){
 		switch( class_ ) {
 			case ELEMENTALID_AGNI_M:	
-				ele.hp = ele.max_hp = sd->battle_status.max_hp + (skill_lv*200);		
+				ele.hp = ele.max_hp = sd->battle_status.max_hp + (homunculus_research_skill_lv*200);		
 				break;
 			case ELEMENTALID_TERA_M:	
-				ele.matk = status->matk_max + (skill_lv*20); 
-				ele.matk_min = status->matk_min + (skill_lv*20);	   
+				ele.matk = status->matk_max + (homunculus_research_skill_lv*20); 
+				ele.matk_min = status->matk_min + (homunculus_research_skill_lv*20);	   
 				break;
 			case ELEMENTALID_VENTUS_M:	
-				ele.atk = (status->batk + (skill_lv*20)) *3;
-				ele.atk2 = (status->watk + (skill_lv*20)*3);		
+				ele.atk = (status->batk + (homunculus_research_skill_lv*20)) *3;
+				ele.atk2 = (status->watk + (homunculus_research_skill_lv*20)*3);		
+				break;
+		}
+	}
+	if (elemental_empathy_skill_lv > 0){
+		switch( class_ ) {
+			case ELEMENTALID_AGNI_L:	
+			case ELEMENTALID_VENTUS_L:	
+			case ELEMENTALID_AQUA_L:	
+			case ELEMENTALID_TERA_L:	
+				ele.matk = status->matk_max + (elemental_empathy_skill_lv*20); 
+				ele.matk_min = status->matk_min + (elemental_empathy_skill_lv*20);	   
+				ele.atk = (status->batk + (elemental_empathy_skill_lv*20)) *3;
+				ele.atk2 = (status->watk + (elemental_empathy_skill_lv*20)*3);		
+				break;
 				break;
 		}
 	}
@@ -122,8 +137,6 @@ int elemental_save(struct elemental_data *ed) {
 	ed->elemental.max_sp = ed->battle_status.max_sp;
 	ed->elemental.atk = ed->battle_status.rhw.atk;
 	ed->elemental.atk2 = ed->battle_status.rhw.atk2;
-	ShowMessage("Atk: %d\n", ed->battle_status.rhw.atk);
-	ShowMessage("Atk2: %d\n", ed->battle_status.rhw.atk2);
 	ed->elemental.matk = ed->battle_status.matk_min;
 	ed->elemental.def = ed->battle_status.def;
 	ed->elemental.mdef = ed->battle_status.mdef;

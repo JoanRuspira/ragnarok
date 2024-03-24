@@ -1775,9 +1775,6 @@ int unit_skilluse_id2(struct block_list *src, int target_id, uint16 skill_id, ui
 		case SK_PF_ROCKTOMB:
 		case SK_PF_HYDROPUMP:
 		case SK_PF_JUPITELTHUNDER:
-		case EL_TORNADO_JG:
-		case SK_SA_ROCKCRUSHER:
-		case SK_SA_WATERBLAST:
 		case SK_AM_BASILISK1:
 		case SK_CR_BASILISK3:
 		case SK_AM_BEHOLDER1:

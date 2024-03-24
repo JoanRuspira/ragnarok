@@ -451,6 +451,8 @@ int64 battle_attr_fix(struct block_list *src, struct block_list *target, int64 d
 					ratio += 5;
 				if (sc->data[STATUS_PYROTECHNIA])
 					ratio += sc->data[STATUS_PYROTECHNIA]->val1*10;
+				if (sc->data[STATUS_FIREINSIGNIA])
+					ratio += sc->data[STATUS_FIREINSIGNIA]->val1*4;
 				break;
 			case ELE_WIND:
 				if (sc->data[STATUS_SPHERE_1] && sc->data[STATUS_SPHERE_1]->val1 == WLS_WIND)
@@ -461,6 +463,8 @@ int64 battle_attr_fix(struct block_list *src, struct block_list *target, int64 d
 					ratio += 5;
 				if (sc->data[STATUS_SPHERE_4] && sc->data[STATUS_SPHERE_4]->val1 == WLS_WIND)
 					ratio += 5;
+				if (sc->data[STATUS_WINDINSIGNIA])
+					ratio += sc->data[STATUS_WINDINSIGNIA]->val1*4;
 				break;
 			case ELE_WATER:
 				if (sc->data[STATUS_SPHERE_1] && sc->data[STATUS_SPHERE_1]->val1 == WLS_WATER)
@@ -471,6 +475,8 @@ int64 battle_attr_fix(struct block_list *src, struct block_list *target, int64 d
 					ratio += 5;
 				if (sc->data[STATUS_SPHERE_4] && sc->data[STATUS_SPHERE_4]->val1 == WLS_WATER)
 					ratio += 5;
+				if (sc->data[STATUS_WATERINSIGNIA])
+					ratio += sc->data[STATUS_WATERINSIGNIA]->val1*4;
 				break;
 			case ELE_EARTH:
 				if (sc->data[STATUS_SPHERE_1] && sc->data[STATUS_SPHERE_1]->val1 == WLS_STONE)
@@ -485,6 +491,8 @@ int64 battle_attr_fix(struct block_list *src, struct block_list *target, int64 d
 					ratio += sc->data[STATUS_GEOGRAFIELD]->val1 * 10;
 				if (sc->data[STATUS_PETROLOGY])
 					ratio += sc->data[STATUS_PETROLOGY]->val1*10;
+				if (sc->data[STATUS_EARTHINSIGNIA])
+					ratio += sc->data[STATUS_EARTHINSIGNIA]->val1*4;
 				break;
 			case ELE_GHOST:
 				if (sc->data[STATUS_VOIDMAGEPRODIGY])
@@ -3342,10 +3350,10 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 				skill_id == SK_SA_WINDSLASH ||
 				skill_id == SK_SA_ICICLE ||
 				skill_id == SK_SA_EARTHSPIKE ||
-				skill_id == EL_TORNADO_JG ||
-				skill_id == SK_SA_ROCKCRUSHER ||
-				skill_id == SK_SA_WATERBLAST ||
-				skill_id == SK_SA_FIREBOMB ||
+				skill_id == SK_SA_FIREINSIGNIA ||
+				skill_id == SK_SA_WATERINSIGNIA ||
+				skill_id == SK_SA_WINDINSIGNIA ||
+				skill_id == SK_SA_EARTHINSIGNIA ||
 				skill_id == SK_AM_BEHOLDER1 ||
 				skill_id == SK_CR_BEHOLDER3 ||
 				skill_id == SK_SM_PROVOKE ||
@@ -3431,11 +3439,6 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case SK_PF_JUPITELTHUNDER:
 					case SK_SA_ELEMENTALACTION1:
 					case SK_PF_ELEMENTALACTION3:
-					case EL_TORNADO_JG:
-					case SK_SA_ROCKCRUSHER:
-					case SK_SA_WATERBLAST:
-					case SK_SA_FIREBOMB:
-					case SK_SA_ELEMENTALACTION2:
 						skillratio += SageSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
 					case SK_WZ_CRIMSONROCK:

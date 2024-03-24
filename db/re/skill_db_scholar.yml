@@ -91,77 +91,126 @@ Body:
     Name: SK_SA_ELEMENTALACTION2
     Description: Elemental Action
     MaxLevel: 5
-    TargetType: Attack
+    Type: Magic
+    TargetType: Self
     DamageFlags:
       NoDamage: true
-    Range: 7
+    Range: 9
     Hit: Single
     HitCount: 1
-    Cooldown: 7000
+    Cooldown: 5000
     AfterCastActDelay: 2000
     Requires:
-      SpCost: 75
+      SpCost: 90
       State: Elementalspirit
-  - Id: 841
-    Name: SK_SA_ROCKCRUSHER
-    Description: Rock Crusher
+  - Id: 2465
+    Name: SK_SA_FIREINSIGNIA
+    Description: Fire Insignia
     MaxLevel: 5
     Type: Magic
-    TargetType: Attack
-    Range: 11
+    TargetType: Ground
+    DamageFlags:
+      NoDamage: true
+    Range: 9
     Hit: Single
-    HitCount: -2
-    SplashArea: 5
-    Element: Earth
-    Cooldown: 5000
-    AfterCastActDelay: 2000
-    Requires:
-      SpCost: 75
-  - Id: 842
-    Name: SK_SA_WATERBLAST
-    Description: Water Screw
-    MaxLevel: 5
-    Type: Magic
-    TargetType: Attack
-    Range: 11
-    Hit: Single
-    HitCount: -2
-    SplashArea: 5
-    Element: Water
-    Cooldown: 5000
-    AfterCastActDelay: 2000
-    Requires:
-      SpCost: 75
-  - Id: 843
-    Name: SK_SA_FIREBOMB
-    Description: Fire Bomb
-    MaxLevel: 5
-    Type: Magic
-    TargetType: Attack
-    Range: 11
-    Hit: Single
-    HitCount: -2
-    SplashArea: 5
+    HitCount: 1
     Element: Fire
-    Cooldown: 5000
-    AfterCastActDelay: 2000
+    ActiveInstance: 1
+    CastCancel: true
+    CastTime: 2000
+    Duration1: 20000
+    Cooldown: 20000
     Requires:
-      SpCost: 75
-  - Id: 840
-    Name: EL_TORNADO_JG
-    Description: Tornado
+      SpCost: 90
+    Unit:
+      Id: Fire_Insignia
+      Layout: 1
+      Interval: -1
+      Flag:
+        PathCheck: true
+        RangedSingleUnit: true
+    Status: Fire_Insignia
+  - Id: 2466
+    Name: SK_SA_WATERNSIGNIA
+    Description: Water Insignia
     MaxLevel: 5
     Type: Magic
-    TargetType: Attack
-    Range: 11
+    TargetType: Ground
+    DamageFlags:
+      NoDamage: true
+    Range: 9
     Hit: Single
-    HitCount: -2
-    SplashArea: 5
-    Element: Wind
-    Cooldown: 5000
-    AfterCastActDelay: 2000
+    HitCount: 1
+    Element: Water
+    ActiveInstance: 1
+    CastCancel: true
+    CastTime: 2000
+    Duration1: 20000
+    Cooldown: 20000
     Requires:
-      SpCost: 75
+      SpCost: 90
+    Unit:
+      Id: Water_Insignia
+      Layout: 1
+      Interval: -1
+      Flag:
+        PathCheck: true
+        RangedSingleUnit: true
+    Status: Water_Insignia
+  - Id: 2467
+    Name: SK_SA_WINDINSIGNIA
+    Description: Wind Insignia
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Ground
+    DamageFlags:
+      NoDamage: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    Element: Wind
+    ActiveInstance: 1
+    CastCancel: true
+    CastTime: 2000
+    Duration1: 20000
+    Cooldown: 20000
+    Requires:
+      SpCost: 90
+    Unit:
+      Id: Wind_Insignia
+      Layout: 1
+      Interval: -1
+      Flag:
+        PathCheck: true
+        RangedSingleUnit: true
+    Status: Wind_Insignia
+  - Id: 2468
+    Name: SK_SA_EARTHINSIGNIA
+    Description: Earth Insignia
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Ground
+    DamageFlags:
+      NoDamage: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    Element: Earth
+    ActiveInstance: 1
+    CastCancel: true
+    CastTime: 2000
+    Duration1: 20000
+    Cooldown: 20000
+    Requires:
+      SpCost: 90
+    Unit:
+      Id: Earth_Insignia
+      Layout: 1
+      Interval: -1
+      Flag:
+        PathCheck: true
+        RangedSingleUnit: true
+    Status: Earth_Insignia
   - Id: 76
     Name: SK_SA_SILENCE
     Description: Silence

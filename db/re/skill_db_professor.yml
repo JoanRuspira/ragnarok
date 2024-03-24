@@ -239,3 +239,8 @@ Body:
     AfterCastActDelay: 2000
     Requires:
       SpCost: 90
+  - Id: 917
+    Name: SK_PF_ELEMENTAL_EMPATHY
+    Description: Elemental Empathy
+    MaxLevel: 5
+    Type: Weapon

@@ -3275,10 +3275,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case SK_SA_ICICLE:
 	case SK_SA_WINDSLASH:
 	case SK_SA_EARTHSPIKE:
-	case EL_TORNADO_JG:
-	case SK_SA_ROCKCRUSHER:
-	case SK_SA_WATERBLAST:
-	case SK_SA_FIREBOMB:
 	case SK_AM_BASILISK1:
 	case SK_CR_BASILISK3:
 	case SK_AM_BEHOLDER1:
@@ -3577,7 +3573,17 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		}
 		break;
 
-	
+	case SK_SA_ELEMENTALACTION2:
+		if( sd ) {
+			int duration = 7000;
+			if( !sd->ed )
+				break;
+			sd->skill_id_old = skill_id;
+			elemental_action(sd->ed, &sd->ed->bl, tick, skill_id, skill_lv);
+			clif_skill_nodamage(&sd->ed->bl,&sd->ed->bl,skill_id,skill_lv,1);
+			skill_blockpc_start(sd, skill_id, duration);
+		}
+		break;
 
 	case SK_PR_RESURRECTIO:
 		if(sd && (map_flag_gvg2(bl->m) || map_getmapflag(bl->m, MF_BATTLEGROUND)))
@@ -5790,7 +5796,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case SK_AM_HOMUNCULUSACTIONII:
 	case SK_CR_HOMUNCULUSACTIONIII:
 	case SK_PF_ELEMENTALACTION3:
-	case SK_SA_ELEMENTALACTION2:
 		if( sd ) {
 			int duration = 7000;
 			if( !sd->ed )
@@ -6508,6 +6513,10 @@ int skill_castend_pos2(struct block_list* src, int x, int y, uint16 skill_id, ui
 	case SK_SO_DOOM_GHOST:
 	case SK_SO_DIAMONDDUST:
 	case SK_PR_SANCTUARIO:
+	case SK_SA_FIREINSIGNIA:
+	case SK_SA_WATERINSIGNIA:
+	case SK_SA_WINDINSIGNIA:
+	case SK_SA_EARTHINSIGNIA:
 	case SK_PR_MAGNUSEXORCISMUS:
 	case SK_CR_GRANDCROSS:
 	case SK_PF_LANDPROTECTOR:
@@ -6529,7 +6538,6 @@ int skill_castend_pos2(struct block_list* src, int x, int y, uint16 skill_id, ui
 		flag |= 4;
 		skill_unitsetting(src,skill_id,skill_lv,x,y,0);
 		break;
-
 	// Fall through
 	case SK_WZ_METEORSTORM: {
 			int area = skill_get_splash(skill_id, skill_lv);

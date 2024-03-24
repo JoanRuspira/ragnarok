@@ -495,7 +495,7 @@ Body:
     Name: SK_AM_BASILISK2
     Description: Basilisk 2
     MaxLevel: 5
-    Type: Magic
+    Type: Weapon
     TargetType: Self
     DamageFlags:
       Splash: true

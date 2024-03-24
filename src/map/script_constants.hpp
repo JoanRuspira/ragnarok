@@ -927,6 +927,10 @@
 	export_constant(STATUS_PETROLOGY);
 	export_constant(STATUS_HARMONIZE);
 	export_constant(STATUS_PYROTECHNIA);
+	export_constant(STATUS_FIREINSIGNIA);
+	export_constant(STATUS_WATERINSIGNIA);
+	export_constant(STATUS_WINDINSIGNIA);
+	export_constant(STATUS_EARTHINSIGNIA);
 	export_constant(STATUS_GEOGRAFIELD);
 	export_constant(STATUS_CP_WEAPON);
 	export_constant(STATUS_CP_SHIELD);
