@@ -4619,22 +4619,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
 		break;
 	}
-	case SK_AL_JGHEAL:
-		{
-			int healing, matk = 0;
-			struct status_data *status;
-			struct status_change *sc;
-			status = status_get_status_data(&sd->bl);
-			matk = rand()%(status->matk_max-status->matk_min + 1) + status->matk_min;
-			healing = (200 * skill_lv) + (status_get_lv(src) * 3) + (status_get_int(src) * 3) + (matk * 3);
-			sc = status_get_sc(src);
-			if (sc && sc->data[STATUS_OFFERTORIUM])
-				healing = healing*sc->data[STATUS_OFFERTORIUM]->val2;
-			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
-			clif_skill_nodamage(NULL,bl,SK_AL_HEAL,healing,1);
-			status_heal(bl,healing,0,0);
-		}
-		break;
 	case SK_CR_SUNLIGHT:
 		{
 			int healing, buff_skill_lv, matk = 0;
@@ -4704,6 +4688,22 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				status_heal(src,healing_self,0,0);
 				status_heal(bl,healing_target,0,0);
 			}
+		}
+		break;
+	case SK_AL_JGHEAL:
+		{
+			int healing, matk = 0;
+			struct status_data *status;
+			struct status_change *sc;
+			status = status_get_status_data(&sd->bl);
+			matk = rand()%(status->matk_max-status->matk_min + 1) + status->matk_min;
+			healing = (200 * skill_lv) + (status_get_lv(src) * 3) + (status_get_int(src) * 3) + (matk * 3);
+			sc = status_get_sc(src);
+			if (sc && sc->data[STATUS_OFFERTORIUM])
+				healing = healing*sc->data[STATUS_OFFERTORIUM]->val2;
+			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
+			clif_skill_nodamage(NULL,bl,SK_AL_HEAL,healing,1);
+			status_heal(bl,healing,0,0);
 		}
 		break;
 	case SK_PR_SUBLIMITASHEAL:
@@ -5989,7 +5989,14 @@ static int8 skill_castend_id_check(struct block_list *src, struct block_list *ta
 			break;
 		
 		case SK_SA_SILENCE:
-		
+			{
+				//If it's not an enemy, and not silenced, you can't use the skill on them. [Skotlex]
+				if (battle_check_target(src,target, BCT_ENEMY) <= 0 && (!tsc || !tsc->data[STATUS_SILENCE]))
+					return USESKILL_FAIL_LEVEL;
+				else
+					return -1; //Works on silenced allies
+			}
+			break;
 		case SK_WG_SLASH:
 			// Check if path can be reached
 			if (!path_search(NULL,src->m,src->x,src->y,target->x,target->y,1,CELL_CHKNOREACH))

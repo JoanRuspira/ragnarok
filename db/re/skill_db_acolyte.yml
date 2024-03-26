@@ -76,12 +76,18 @@ Body:
     Name: SK_AL_JGHEAL
     Description: Heal
     MaxLevel: 5
+    Type: Magic
     TargetType: Support
     DamageFlags:
       NoDamage: true
     Range: 9
     Hit: Single
     HitCount: 1
+    Element: Holy
+    CopyFlags:
+      Skill:
+        Reproduce: true
+    CastCancel: true
     CastTime: 3000
     Cooldown: 5000
     AfterCastActDelay: 1000
