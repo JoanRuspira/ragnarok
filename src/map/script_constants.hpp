@@ -924,6 +924,7 @@
 	export_constant(STATUS_NEUTRALBARRIER);
 	export_constant(STATUS_NEUTRALBARRIER_MASTER);
 	export_constant(STATUS_BIOETHICS);
+	export_constant(STATUS_ELEMENTALCONTROL);
 	export_constant(STATUS_PETROLOGY);
 	export_constant(STATUS_HARMONIZE);
 	export_constant(STATUS_PYROTECHNIA);

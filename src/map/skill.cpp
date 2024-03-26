@@ -5769,7 +5769,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 					elemental_delete(sd->ed);
 					break;
 				}
-				if (sc->data[STATUS_BIOETHICS]) {
+				if (sc->data[STATUS_ELEMENTALCONTROL]) {
 					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
 					break;
 				}
@@ -5778,7 +5778,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 					elemental_delete(sd->ed);
 				}
 			}
-			if (sc->data[STATUS_BIOETHICS]) {
+			if (sc->data[STATUS_ELEMENTALCONTROL]) {
 				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
 				break;
 			}
@@ -5789,7 +5789,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			}
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 			
-			sc_start2(src,src, STATUS_BIOETHICS, 100, skill_lv, src->id, 60000);
+			sc_start2(src,src, STATUS_ELEMENTALCONTROL, 100, skill_lv, src->id, 60000);
 		}
 		break;
 
@@ -13077,18 +13077,18 @@ int skill_get_elemental_type( uint16 skill_id , uint16 skill_lv ) {
 
 	if (skill_id == SK_SA_SUMMONELEMENTAL) { //ELEMENTAL
 		switch( skill_lv ) {
-			case 4:	type = ELEMENTALID_AGNI_L;		break;
-			case 3:	type = ELEMENTALID_AQUA_L;		break;
-			case 2:	type = ELEMENTALID_VENTUS_L;	break;
-			case 1:	type = ELEMENTALID_TERA_L;		break;
+			case 4:	type = PETID_AGNI;		break;
+			case 3:	type = PETID_AQUA;		break;
+			case 2:	type = PETID_VENTUS;	break;
+			case 1:	type = PETID_TERA;		break;
 		}
 	}
 	if (skill_id == SK_AM_HATCHHOMUNCULUS) { //HOMUN
 		switch( skill_lv ) {
-			case 4:	type = ELEMENTALID_AQUA_M;		break;
-			case 3:	type = ELEMENTALID_AGNI_M;		break;
-			case 2:	type = ELEMENTALID_TERA_M;	    break;
-			case 1:	type = ELEMENTALID_VENTUS_M;		break;
+			case 4:	type = PETID_PHOENIX;		break;
+			case 3:	type = PETID_MANDRAKE;		break;
+			case 2:	type = PETID_BEHOLDER;	    break;
+			case 1:	type = PETID_BASILISK;		break;
 		}
 	}
 

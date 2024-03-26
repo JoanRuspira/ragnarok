@@ -86,14 +86,14 @@ int elemental_create(struct map_session_data *sd, int class_, unsigned int lifet
 	
 	if (homunculus_research_skill_lv > 0){
 		switch( class_ ) {
-			case ELEMENTALID_AGNI_M:	
+			case PETID_MANDRAKE:	
 				ele.hp = ele.max_hp = sd->battle_status.max_hp + (homunculus_research_skill_lv*200);		
 				break;
-			case ELEMENTALID_TERA_M:	
+			case PETID_BEHOLDER:	
 				ele.matk = status->matk_max + (homunculus_research_skill_lv*20); 
 				ele.matk_min = status->matk_min + (homunculus_research_skill_lv*20);	   
 				break;
-			case ELEMENTALID_VENTUS_M:	
+			case PETID_BASILISK:	
 				ele.atk = (status->batk + (homunculus_research_skill_lv*20)) *3;
 				ele.atk2 = (status->watk + (homunculus_research_skill_lv*20)*3);		
 				break;
@@ -101,10 +101,10 @@ int elemental_create(struct map_session_data *sd, int class_, unsigned int lifet
 	}
 	if (elemental_empathy_skill_lv > 0){
 		switch( class_ ) {
-			case ELEMENTALID_AGNI_L:	
-			case ELEMENTALID_VENTUS_L:	
-			case ELEMENTALID_AQUA_L:	
-			case ELEMENTALID_TERA_L:	
+			case PETID_AGNI:	
+			case PETID_VENTUS:	
+			case PETID_AQUA:	
+			case PETID_TERA:	
 				ele.matk = status->matk_max + (elemental_empathy_skill_lv*20); 
 				ele.matk_min = status->matk_min + (elemental_empathy_skill_lv*20);	   
 				ele.atk = (status->batk + (elemental_empathy_skill_lv*20)) *3;
@@ -190,7 +190,14 @@ int elemental_delete(struct elemental_data *ed) {
 
 	sd->ed = NULL;
 	sd->status.ele_id = 0;
-	sc_start2(&sd->bl,&sd->bl, STATUS_BIOETHICS, 100, 5, sd->bl.id, 1);
+	if (ed->vd->class_ == PETID_BASILISK || ed->vd->class_ == PETID_BEHOLDER || ed->vd->class_ == PETID_MANDRAKE || ed->vd->class_ == PETID_PHOENIX){
+		status_change_start(&sd->bl, &sd->bl, STATUS_BIOETHICS, 60000, 5, 0, 0, 0, 60000, SCSTART_NONE);
+	}
+	if (ed->vd->class_ == PETID_TERA || ed->vd->class_ == PETID_VENTUS || ed->vd->class_ == PETID_AQUA || ed->vd->class_ == PETID_AGNI){
+		ShowMessage("ELEMENTAL DELETED\n");
+		status_change_start(&sd->bl, &sd->bl, STATUS_ELEMENTALCONTROL, 60000, 5, 0, 0, 0, 60000, SCSTART_NONE);
+
+	}
 	return unit_remove_map(&ed->bl, CLR_OUTSIGHT);
 }
 
@@ -330,16 +337,16 @@ int elemental_action(struct elemental_data *ed, struct block_list *bl, t_tick ti
 		skill_id = ed->db->skill[i].id;
 		
 		switch(ed->vd->class_){
-			case ELEMENTALID_VENTUS_M:
+			case PETID_BASILISK:
 				skill_id = SK_AM_BASILISK2;
 				break;
-			case ELEMENTALID_TERA_M:
+			case PETID_BEHOLDER:
 				skill_id = SK_AM_BEHOLDER2;
 				break;
-			case ELEMENTALID_AGNI_M:
+			case PETID_MANDRAKE:
 				skill_id = SK_AM_PYROTECHNIA;
 				break;
-			case ELEMENTALID_AQUA_M:
+			case PETID_PHOENIX:
 				skill_id = SK_AM_HEALPULSE;
 				break;
 		}
@@ -350,16 +357,16 @@ int elemental_action(struct elemental_data *ed, struct block_list *bl, t_tick ti
 		skill_id = ed->db->skill[i].id;
 		
 		switch(ed->vd->class_){
-			case ELEMENTALID_VENTUS_M:
+			case PETID_BASILISK:
 				skill_id = SK_CR_BASILISK3;
 				break;
-			case ELEMENTALID_TERA_M:
+			case PETID_BEHOLDER:
 				skill_id = SK_CR_BEHOLDER3;
 				break;
-			case ELEMENTALID_AGNI_M:
+			case PETID_MANDRAKE:
 				skill_id = SK_CR_HARMONIZE;
 				break;
-			case ELEMENTALID_AQUA_M:
+			case PETID_PHOENIX:
 				skill_id = SK_CR_SUNLIGHT;
 				break;
 		}
@@ -370,16 +377,16 @@ int elemental_action(struct elemental_data *ed, struct block_list *bl, t_tick ti
 		skill_id = ed->db->skill[i].id;
 		
 		switch(ed->vd->class_){
-			case ELEMENTALID_TERA_L:
+			case PETID_TERA:
 				skill_id = SK_PF_ROCKTOMB;
 				break;
-			case ELEMENTALID_VENTUS_L:
+			case PETID_VENTUS:
 				skill_id = SK_PF_JUPITELTHUNDER;
 				break;
-			case ELEMENTALID_AQUA_L:
+			case PETID_AQUA:
 				skill_id = SK_PF_HYDROPUMP;
 				break;
-			case ELEMENTALID_AGNI_L:
+			case PETID_AGNI:
 				skill_id = SK_PF_INFERNO;
 				break;
 		}
@@ -640,12 +647,12 @@ static int elemental_ai_sub_timer(struct elemental_data *ed, struct map_session_
 		int sp = 5;
 
 		switch(ed->vd->class_){
-			case ELEMENTALID_AGNI_M:	case ELEMENTALID_AQUA_M:
-			case ELEMENTALID_VENTUS_M:	case ELEMENTALID_TERA_M:
+			case PETID_MANDRAKE:	case PETID_PHOENIX:
+			case PETID_BASILISK:	case PETID_BEHOLDER:
 				sp = 8;
 				break;
-			case ELEMENTALID_AGNI_L:	case ELEMENTALID_AQUA_L:
-			case ELEMENTALID_VENTUS_L:	case ELEMENTALID_TERA_L:
+			case PETID_AGNI:	case PETID_AQUA:
+			case PETID_VENTUS:	case PETID_TERA:
 				sp = 11;
 				break;
 		}

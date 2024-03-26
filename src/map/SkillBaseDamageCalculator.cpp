@@ -188,20 +188,20 @@ int64 SkillBaseDamageCalculator::battle_calc_base_damage(block_list * src, statu
 		if (ele_sc) {
 			switch (ele_class) {
 			case ELEMENTALID_AGNI_S:
-			case ELEMENTALID_AGNI_M:
-			case ELEMENTALID_AGNI_L:
+			case PETID_MANDRAKE:
+			case PETID_AGNI:
 				break;
 			case ELEMENTALID_AQUA_S:
-			case ELEMENTALID_AQUA_M:
-			case ELEMENTALID_AQUA_L:
+			case PETID_PHOENIX:
+			case PETID_AQUA:
 				break;
 			case ELEMENTALID_VENTUS_S:
-			case ELEMENTALID_VENTUS_M:
-			case ELEMENTALID_VENTUS_L:
+			case PETID_BASILISK:
+			case PETID_VENTUS:
 				break;
 			case ELEMENTALID_TERA_S:
-			case ELEMENTALID_TERA_M:
-			case ELEMENTALID_TERA_L:
+			case PETID_BEHOLDER:
+			case PETID_TERA:
 				break;
 			}
 		}
