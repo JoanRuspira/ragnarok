@@ -575,7 +575,7 @@ int skill_calc_heal(struct block_list *src, struct block_list *target, uint16 sk
 				}
 
 				if( sc && sc->data[STATUS_HINDSIGHT] )
-					min = max;
+					min = max + 50;
 
 				if( sd && sd->right_weapon.overrefine > 0 ){
 					min++;
@@ -9159,8 +9159,8 @@ struct s_skill_condition skill_get_requirement(struct map_session_data* sd, uint
 
 	if( sc ) {
 		
-		if( sc->data[STATUS_HINDSIGHT] )
-			req.sp += req.sp / 4;
+		// if( sc->data[STATUS_HINDSIGHT] )
+		// 	req.sp += req.sp / 4;
 		if( sc->data[STATUS_OFFERTORIUM]  && ( skill_id == SK_AL_JGHEAL || skill_id == SK_PR_COLUSEOHEAL || skill_id == SK_PR_SUBLIMITASHEAL))
 			req.sp += req.sp * sc->data[STATUS_OFFERTORIUM]->val3 / 100;
 		
