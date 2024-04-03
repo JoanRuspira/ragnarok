@@ -63,7 +63,7 @@
 2043,MagicDecoyFire@SK_MG_FIREBOLT,attack,19,5,2000,1000,5000,yes,target,always,0,,,,,,,
 2044,MagicDecoyWater@SK_MG_COLDBOLT,attack,14,5,2000,1000,5000,yes,target,always,0,,,,,,,
 2046,MagicDecoyWind@SK_MG_LIGHTNINGBOLT,attack,20,5,2000,1000,5000,yes,target,always,0,,,,,,,
-2045,MagicDecoyEarth@SK_WZ_STALAGMITE,attack,90,5,2000,1000,5000,yes,target,always,0,,,,,,,
+2045,MagicDecoyEarth@SK_MG_EARTHBOLT,attack,839,5,2000,1000,5000,yes,target,always,0,,,,,,,
 //1001,Scorpion@NPC_FIREATTACK,attack,186,1,2000,0,5000,yes,target,always,0,,,,,,,
 //1001,Scorpion@NPC_POISON,attack,176,3,500,800,5000,no,target,always,0,,,,,,,
 //1002,Poring@NPC_EMOTION,loot,197,1,2000,0,5000,yes,self,always,0,2,,,,,,
