@@ -936,7 +936,6 @@ int status_damage(struct block_list *src,struct block_list *target,int64 dhp, in
 				status_change_end(target, STATUS_STONECURSE, INVALID_TIMER);
 			status_change_end(target, STATUS_FREEZE, INVALID_TIMER);
 			status_change_end(target, STATUS_SLEEP, INVALID_TIMER);
-			status_change_end(target, STATUS_CONFUSION, INVALID_TIMER);
 			status_change_end(target, STATUS_TRICKDEAD, INVALID_TIMER);
 			status_change_end(target, STATUS_HIDING, INVALID_TIMER);
 			status_change_end(target, STATUS_CLOAKING, INVALID_TIMER);
