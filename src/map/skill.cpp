@@ -4252,7 +4252,8 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			src, skill_id, skill_lv, tick, flag | BCT_ENEMY | 0,
 			skill_castend_damage_id);
 		break;
-	
+	case SK_AL_INCREASEAGI:
+	case SK_AL_BLESSING:
 	case SK_AL_ANGELUS:
 	case SK_PR_SUFFRAGIUM:
 	case SK_PR_IMPOSITIO:
