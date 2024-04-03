@@ -6525,7 +6525,8 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 	
 	case STATUS_MYSTICALAMPLIFICATION:
 	case STATUS_IMPOSITIOMANUS:
-	
+			status_change_end(bl, type, INVALID_TIMER);
+		break;
 	case STATUS_ENDURE:
 		if (sd && sd->special_state.no_walk_delay)
 			return 1;

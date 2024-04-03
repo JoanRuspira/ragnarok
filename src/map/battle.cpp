@@ -3617,7 +3617,7 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 		MATK_ADDRATE(skill_damage);
 
 	battle_absorb_damage(target, &ad);
-
+	status_change_end(src, STATUS_MYSTICALAMPLIFICATION, INVALID_TIMER);
 	//battle_do_reflect(BF_MAGIC,&ad, src, target, skill_id, skill_lv); //WIP [lighta] Magic skill has own handler at skill_attack
 	return ad;
 }
