@@ -579,7 +579,7 @@ void initChangeTables(void)
 	StatusIconChangeTable[STATUS_SPELLBOOK5] = EFST_SPELLBOOK5;
 	StatusIconChangeTable[STATUS_SPELLBOOK6] = EFST_SPELLBOOK6;
 	StatusIconChangeTable[STATUS_MAXSPELLBOOK] = EFST_SPELLBOOK7;
-
+	StatusIconChangeTable[STATUS_STORE_SPELLBOOK] = EFST_STORE_SPELLBOOK;
 	//StatusIconChangeTable[STATUS_NEUTRALBARRIER_MASTER] = EFST_NEUTRALBARRIER_MASTER;
 	
 	StatusIconChangeTable[STATUS_CONFUSION] = EFST_CONFUSION;
@@ -7136,7 +7136,10 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			val2 = 50 * val1; // Evasion rate of physical attacks. Flee
 			val3 = 10 * val1; // Evasion rate of magical attacks.
 			break;
-		
+		case STATUS_STORE_SPELLBOOK:
+			// val2 = sp drain per 10 seconds
+			tick_time = 10000; // [GodLesZ] tick time
+			break;
 		case STATUS_SPHERE_1:
 		case STATUS_SPHERE_2:
 		case STATUS_SPHERE_3:
@@ -8209,6 +8212,15 @@ TIMER_FUNC(status_change_timer){
 		}
 		break;
 
+	case STATUS_STORE_SPELLBOOK:
+		if( !status_charge(bl, 0, sce->val2) ) {
+			int i;
+			for(i = STATUS_SPELLBOOK1; i <= STATUS_MAXSPELLBOOK; i++) // Also remove stored spell as well.
+				status_change_end(bl, (sc_type)i, INVALID_TIMER);
+			break;
+		}
+		sc_timer_next(10000 + tick);
+		return 0;
 
 	case STATUS_CAMOUFLAGE:
 		if (!status_charge(bl, 0, 7 - sce->val1))

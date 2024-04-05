@@ -191,7 +191,7 @@ Body:
     Requires:
       SpCost: 1
   - Id: 5078
-    Name: SK_MG_READING_SB_READING
+    Name: SK_MG_BOOK_READ
     Description: Reading Spellbook
     MaxLevel: 10
     TargetType: Self

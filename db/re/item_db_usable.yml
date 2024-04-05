@@ -6117,7 +6117,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "SK_MG_READING_SB_READING",1;
+      itemskill "SK_MG_BOOK_READ",1;
   - Id: 6190
     AegisName: Magic_Book_ColdBolt
     Name: Spell Book (Cold Bolt)
@@ -6129,7 +6129,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "SK_MG_READING_SB_READING",2;
+      itemskill "SK_MG_BOOK_READ",2;
   - Id: 6191
     AegisName: Magic_Book_LightningBolt
     Name: Spell Book (Lightening Bolt)
@@ -6141,7 +6141,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "SK_MG_READING_SB_READING",3;
+      itemskill "SK_MG_BOOK_READ",3;
   - Id: 6201
     AegisName: Magic_Book_EarthBolt
     Name: Spell Book (Earth Bolt)
@@ -6153,7 +6153,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "SK_MG_READING_SB_READING",4;
+      itemskill "SK_MG_BOOK_READ",4;
   - Id: 6205
     AegisName: Magic_Book_VoidExpansion
     Name: Spell Book (Void Expansion)
@@ -6165,7 +6165,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "SK_MG_READING_SB_READING",5;
+      itemskill "SK_MG_BOOK_READ",5;
   - Id: 62051
     AegisName: Magic_Book_Corrupt
     Name: Spell Book (Corrupt)
@@ -6177,7 +6177,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "SK_MG_READING_SB_READING",6;
+      itemskill "SK_MG_BOOK_READ",6;
   - Id: 62052
     AegisName: Magic_Book_DarkStrike
     Name: Spell Book (Dark Strike)
@@ -6189,7 +6189,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "SK_MG_READING_SB_READING",7;
+      itemskill "SK_MG_BOOK_READ",7;
   - Id: 62053
     AegisName: Magic_Book_SoulStrike
     Name: Spell Book (Soul Strike)
@@ -6201,7 +6201,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "SK_MG_READING_SB_READING",8;
+      itemskill "SK_MG_BOOK_READ",8;
   - Id: 62054
     AegisName: Magic_Book_EarthSpikes
     Name: Spell Book (Earth Spikes)
@@ -6213,7 +6213,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "SK_MG_READING_SB_READING",9;
+      itemskill "SK_MG_BOOK_READ",9;
   - Id: 62055
     AegisName: Magic_Book_LordOfVermillion
     Name: Spell Book (Lord of Vermillion)
@@ -6225,7 +6225,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "SK_MG_READING_SB_READING",10;
+      itemskill "SK_MG_BOOK_READ",10;
   - Id: 62056
     AegisName: Magic_Book_StormGust
     Name: Spell Book (Storm Gust)
@@ -6237,7 +6237,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "SK_MG_READING_SB_READING",11;
+      itemskill "SK_MG_BOOK_READ",11;
   - Id: 62057
     AegisName: Magic_Book_MeteorStorm
     Name: Spell Book (Meteor Storm)
@@ -6249,7 +6249,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "SK_MG_READING_SB_READING",12;
+      itemskill "SK_MG_BOOK_READ",12;
   - Id: 62058
     AegisName: Magic_Book_Stalagmite
     Name: Spell Book (Stalagmite)
@@ -6261,7 +6261,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "SK_MG_READING_SB_READING",13;
+      itemskill "SK_MG_BOOK_READ",13;
   - Id: 62059
     AegisName: Magic_Book_Thunderstorm
     Name: Spell Book (Thunderstorm)
@@ -6273,7 +6273,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "SK_MG_READING_SB_READING",14;
+      itemskill "SK_MG_BOOK_READ",14;
   - Id: 62060
     AegisName: Magic_Book_Iceberg
     Name: Spell Book (Iceberg)
@@ -6285,7 +6285,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "SK_MG_READING_SB_READING",15;
+      itemskill "SK_MG_BOOK_READ",15;
   - Id: 62061
     AegisName: Magic_Book_CrimsonRock
     Name: Spell Book (Crimson Rock)
@@ -6297,7 +6297,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "SK_MG_READING_SB_READING",16;
+      itemskill "SK_MG_BOOK_READ",16;
   - Id: 62062
     AegisName: Magic_Book_PsychicWave
     Name: Spell Book (Psychic Wave)
@@ -6309,7 +6309,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "SK_MG_READING_SB_READING",17;
+      itemskill "SK_MG_BOOK_READ",17;
   - Id: 62063
     AegisName: Magic_Book_IllusionaryBlades
     Name: Spell Book (Illusionary Blades)
@@ -6321,7 +6321,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "SK_MG_READING_SB_READING",18;
+      itemskill "SK_MG_BOOK_READ",18;
   - Id: 62064
     AegisName: Magic_Book_ExtremeVacuum
     Name: Spell Book (ExtremeVacuum)
@@ -6333,7 +6333,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "SK_MG_READING_SB_READING",19;
+      itemskill "SK_MG_BOOK_READ",19;
   - Id: 62065
     AegisName: Magic_Book_RealityBreaker
     Name: Spell Book (Reality Breaker)
@@ -6345,7 +6345,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "SK_MG_READING_SB_READING",20;
+      itemskill "SK_MG_BOOK_READ",20;
   - Id: 62066
     AegisName: Magic_Book_TetraVortex
     Name: Spell Book (Tetra Vortex)
@@ -6357,7 +6357,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "SK_MG_READING_SB_READING",21;
+      itemskill "SK_MG_BOOK_READ",21;
   - Id: 62067
     AegisName: Magic_Book_PhantomSpear
     Name: Spell Book (Phantom Spear)
@@ -6369,7 +6369,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "SK_MG_READING_SB_READING",22;
+      itemskill "SK_MG_BOOK_READ",22;
   - Id: 62068
     AegisName: Magic_Book_ShadowBomb
     Name: Spell Book (Shadow Bomb)
@@ -6381,7 +6381,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "SK_MG_READING_SB_READING",23;
+      itemskill "SK_MG_BOOK_READ",23;
   - Id: 62069
     AegisName: Magic_Book_Doom
     Name: Spell Book (Doom)
@@ -6393,7 +6393,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "SK_MG_READING_SB_READING",24;
+      itemskill "SK_MG_BOOK_READ",24;
   - Id: 62070
     AegisName: Magic_Book_DiamondDust
     Name: Spell Book (Diamond Dust)
@@ -6405,7 +6405,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "SK_MG_READING_SB_READING",25;
+      itemskill "SK_MG_BOOK_READ",25;
   - Id: 62071
     AegisName: Magic_Book_AstralStrike
     Name: Spell Book (Astral Strike)
@@ -6417,7 +6417,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "SK_MG_READING_SB_READING",26;
+      itemskill "SK_MG_BOOK_READ",26;
   - Id: 62072
     AegisName: Magic_Book_LandProtector
     Name: Spell Book (Land Protector)
@@ -6429,7 +6429,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "SK_MG_READING_SB_READING",27;
+      itemskill "SK_MG_BOOK_READ",27;
   - Id: 62073
     AegisName: Magic_Book_Stasis
     Name: Spell Book (Stasis)
@@ -6441,7 +6441,7 @@ Body:
       NoConsume: true
     Script: |
       specialeffect2 1232;
-      itemskill "SK_MG_READING_SB_READING",28;
+      itemskill "SK_MG_BOOK_READ",28;
   - Id: 34
     AegisName: Orange_Slim_Potion
     Name: Condensed Orange Potion

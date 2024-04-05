@@ -3163,6 +3163,8 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 		if (sd) {
 			int i;
 			skill_toggle_magicpower(src, skill_id); // No hit will be amplified
+			if (sc->data[STATUS_STORE_SPELLBOOK] == nullptr)
+				break;
 			bool found_spell = false;
 
 			for (i = STATUS_MAXSPELLBOOK; i >= STATUS_SPELLBOOK1; i--) { // List all available spell to be released
@@ -3180,6 +3182,10 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 
 			status_change_end(src, static_cast<sc_type>(i), INVALID_TIMER);
 
+			if( sc->data[STATUS_STORE_SPELLBOOK]->val2 > point )
+				sc->data[STATUS_STORE_SPELLBOOK]->val2 -= point;
+			else // Last spell to be released
+				status_change_end(src, STATUS_STORE_SPELLBOOK, INVALID_TIMER);
 
 			if( !skill_check_condition_castbegin(sd, pres_skill_id, pres_skill_lv) )
 				break;
@@ -5375,7 +5381,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case SK_SO_SUMMONELEMENTALSPHERES:
 		if (sd) clif_magicdecoy_list(sd, skill_lv, 0, 0, skill_id);
 		break;
-	case SK_MG_READING_SB_READING:
+	case SK_MG_BOOK_READ:
 		if (sd) {
 			switch(skill_lv){
 				case 1:
@@ -12263,7 +12269,21 @@ void skill_spellbook(struct map_session_data *sd, t_itemid nameid) {
 	}
 	int points = spell->points;
 
-	{
+	if (sc && sc->data[STATUS_STORE_SPELLBOOK]) {
+		if ((sc->data[STATUS_STORE_SPELLBOOK]->val2 + points) > pc_checkskill(sd, SK_MG_READING_SB)) {
+			clif_skill_fail(sd, SK_MG_READING_SB, USESKILL_FAIL_SPELLBOOK_PRESERVATION_POINT, 0);
+			return;
+		}
+
+		for (int i = STATUS_MAXSPELLBOOK; i >= STATUS_SPELLBOOK1; i--) { // This is how official saves spellbook. [malufett]
+			if (!sc->data[i]) {
+				sc->data[STATUS_STORE_SPELLBOOK]->val2 += points; // increase points
+				sc_start4(&sd->bl,&sd->bl, (sc_type)i, 100, skill_id, skill_lv, points, 0, INFINITE_TICK);
+				break;
+			}
+		}
+	} else {
+		sc_start2(&sd->bl, &sd->bl, STATUS_STORE_SPELLBOOK, 100, 0, points, INFINITE_TICK);
 		sc_start4(&sd->bl, &sd->bl, STATUS_MAXSPELLBOOK, 100, skill_id, skill_lv, points, 0, INFINITE_TICK);
 	}
 	// Reading Spell Book SP cost same as the sealed spell.
