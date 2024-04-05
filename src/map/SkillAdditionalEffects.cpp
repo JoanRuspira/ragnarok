@@ -373,8 +373,7 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 			clif_skill_damage(src,bl,tick, status_get_amotion(src), 0, -30000, 1, SK_EX_DUMMY_CROSSIMPACT, skill_lv, DMG_SINGLE);
 			break;
 		case SK_MO_PALMSTRIKE:
-			clif_specialeffect(bl, EF_DECAGILITY, AREA);
-			sc_start(src, bl, STATUS_DECREASEAGI, 100, -50, skill_get_time(skill_id, skill_lv));
+			skill_castend_nodamage_id(src, bl, SK_MO_DECAGI, skill_lv, tick, 0);
 			break;
 		case SK_SO_SHADOWBOMB:
 			WizardAdditionalEffectsCalculator::apply_shadow_bomb_additional_effect(src, bl, skill_lv);

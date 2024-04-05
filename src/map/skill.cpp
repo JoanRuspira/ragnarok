@@ -3681,10 +3681,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		clif_skill_nodamage (src, bl, skill_id, skill_lv,
 			sc_start(src,bl, type, 100, skill_lv*2, skill_get_time(skill_id,skill_lv)));
 		break;
-	
-	// case SK_MO_DECAGI:
-	
-
 	case SK_AL_SIGNUMCRUCIS:
 		if (flag&1)
 			sc_start(src,bl,type, 23+skill_lv*4 +status_get_lv(src) -status_get_lv(bl), skill_lv,skill_get_time(skill_id,skill_lv));
@@ -4257,6 +4253,10 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			skill_get_splash(skill_id, skill_lv), skill_get_maxcount(skill_id, skill_lv), 0, splash_target(src),
 			src, skill_id, skill_lv, tick, flag | BCT_ENEMY | 0,
 			skill_castend_damage_id);
+		break;
+	case SK_MO_DECAGI:
+		clif_skill_nodamage(bl, bl, skill_id, skill_lv, 1);
+		sc_start(src, bl, type, 100, skill_lv, skill_get_time(skill_id, skill_lv));
 		break;
 	case SK_AL_INCREASEAGI:
 	case SK_AL_BLESSING:
