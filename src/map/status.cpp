@@ -8159,7 +8159,12 @@ TIMER_FUNC(status_change_timer){
 		}
 		break;*/
 
-
+	case STATUS_MILLENIUMSHIELDS:
+		if( --(sce->val4) >= 0 ) {
+			sc_timer_next(1000 + tick);
+			return 0;
+		}
+		break;
 	case STATUS_PAGANPARTY:
 		if( --(sce->val4) > 0 ) {
 			int healing, matk = 0;

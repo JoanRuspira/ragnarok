@@ -1153,7 +1153,10 @@ bool battle_status_block_damage(struct block_list *src, struct block_list *targe
 		return false;
 	}
 
-	
+	if (sce = sc->data[STATUS_MILLENIUMSHIELDS]) {
+		clif_specialeffect(target, EF_MAXPAIN, AREA);
+		return false;
+	}
 
 	return true;
 }
