@@ -2201,12 +2201,8 @@ static TIMER_FUNC(skill_timerskill){
 					break;
 				
 				case SK_SA_SILENCE:
-					if (src->type == BL_MOB) {
-						// Monsters use the default duration when casting Lex Divina
 						sc_start(src, target, status_skill2sc(skl->skill_id), skl->type, skl->skill_lv, skill_get_time2(status_sc2skill(status_skill2sc(skl->skill_id)), 1));
 						break;
-					}
-					// Fall through
 				
 				case SK_SO_TETRAVORTEX_FIRE:
 				case SK_SO_TETRAVORTEX_WATER:
