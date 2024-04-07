@@ -7425,7 +7425,7 @@ static int skill_unit_onplace(struct skill_unit *unit, struct block_list *bl, t_
 				tsd = BL_CAST(BL_PC, bl);
 				if (sd && tsd){
 					if(sd->status.party_id == tsd->status.party_id){
-						 status_change_start(ss, bl, type, 10000, sg->skill_lv, 0, 0, 0, sg->limit, SCSTART_NOICON);		
+						 status_change_start(ss, bl, type, 10000, sg->skill_lv, 0, 0, 0, sg->limit, SCSTART_NONE);		
 						//sc_start2(ss,bl,STATUS_NEUTRALBARRIER,100,sg->skill_lv,sg->group_id,skill_get_time(sg->skill_id,sg->skill_lv));
 					
 					}

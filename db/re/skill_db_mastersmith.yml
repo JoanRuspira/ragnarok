@@ -79,6 +79,8 @@ Body:
       Id: Neutralbarrier
       Layout: 2
       Interval: -1
+      Flag:
+        NoMob: true
   - Id: 384
     Name: SK_MS_MELTDOWN
     Description: Shattering Strike
