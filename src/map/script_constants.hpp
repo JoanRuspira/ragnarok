@@ -922,7 +922,7 @@
 	export_constant(STATUS_ARMORREINFORCEMENT);
 	export_constant(STATUS_MAXPOWERTHRUST);
 	export_constant(STATUS_NEUTRALBARRIER);
-	export_constant(STATUS_NEUTRALBARRIER_MASTER);
+	export_constant(STATUS_NEUTRAL_BARRIER_MASTER);
 	export_constant(STATUS_BIOETHICS);
 	export_constant(STATUS_ELEMENTALCONTROL);
 	export_constant(STATUS_PETROLOGY);

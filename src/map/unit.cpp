@@ -2814,6 +2814,7 @@ int unit_remove_map_(struct block_list *bl, clr_type clrtype, const char* file, 
 			status_change_end(bl, STATUS_PROVOKE, INVALID_TIMER); //End infinite provoke to prevent exploit
 		status_change_end(bl, STATUS_CAMOUFLAGE, INVALID_TIMER);
 		status_change_end(bl, STATUS_STALK, INVALID_TIMER);
+		status_change_end(bl, STATUS_NEUTRAL_BARRIER_MASTER, INVALID_TIMER);
 	}
 
 	switch( bl->type ) {

@@ -478,7 +478,9 @@ int map_moveblock(struct block_list *bl, int x1, int y1, t_tick tick)
 				if (sc->data[STATUS_CLOAKING] && sc->data[STATUS_CLOAKING]->val1 < 3 && !skill_check_cloaking(bl, NULL))
 					status_change_end(bl, STATUS_CLOAKING, INVALID_TIMER);
 				
-				
+				if (sc->data[STATUS_NEUTRAL_BARRIER_MASTER])
+					skill_unit_move_unit_group(skill_id2group(sc->data[STATUS_NEUTRAL_BARRIER_MASTER]->val2), bl->m, x1-x0, y1-y0);
+			
 				if( sc->data[STATUS_STALK] ) {//Shadow Form Caster Moving
 					struct block_list *d_bl;
 					if( (d_bl = map_id2bl(sc->data[STATUS_STALK]->val2)) == NULL || !check_distance_bl(bl,d_bl,10) )

@@ -580,7 +580,8 @@ void initChangeTables(void)
 	StatusIconChangeTable[STATUS_SPELLBOOK6] = EFST_SPELLBOOK6;
 	StatusIconChangeTable[STATUS_MAXSPELLBOOK] = EFST_SPELLBOOK7;
 	StatusIconChangeTable[STATUS_STORE_SPELLBOOK] = EFST_STORE_SPELLBOOK;
-	//StatusIconChangeTable[STATUS_NEUTRALBARRIER_MASTER] = EFST_NEUTRALBARRIER_MASTER;
+	StatusIconChangeTable[STATUS_NEUTRAL_BARRIER_MASTER] = EFST_NEUTRALBARRIER_MASTER;
+	StatusIconChangeTable[STATUS_NEUTRALBARRIER] = EFST_NEUTRALBARRIER_MASTER;
 	
 	StatusIconChangeTable[STATUS_CONFUSION] = EFST_CONFUSION;
 	StatusIconChangeTable[STATUS_PARALYSIS] = EFST_PARALYSE;
@@ -4689,6 +4690,8 @@ static defType status_calc_def(struct block_list *bl, struct status_change *sc, 
 		def += sc->data[STATUS_ARMORREINFORCEMENT]->val1*sc->data[STATUS_ARMORREINFORCEMENT]->val3;
 	if(sc->data[STATUS_WINDMILLPOEM])
 		def += sc->data[STATUS_WINDMILLPOEM]->val3;
+	if( sc->data[STATUS_NEUTRALBARRIER] )
+		def += def * sc->data[STATUS_NEUTRALBARRIER]->val2 / 100;
 	if(sc->data[STATUS_ENDURE])
 		def += sc->data[STATUS_ENDURE]->val1*4;
 	if(sc->data[STATUS_FORTIFY])
@@ -4779,7 +4782,8 @@ static defType status_calc_mdef(struct block_list *bl, struct status_change *sc,
 		mdef += sc->data[STATUS_ENDURE]->val1*4;
 	if(sc->data[STATUS_FORTIFY])
 		mdef += sc->data[STATUS_FORTIFY]->val2;
-	
+	if( sc->data[STATUS_NEUTRALBARRIER] )
+		mdef += mdef * sc->data[STATUS_NEUTRALBARRIER]->val2 / 100;
 	if(sc->data[STATUS_STONESKIN])
 		mdef += sc->data[STATUS_STONESKIN]->val1;
 	if(sc->data[STATUS_DEFENSIVESTANCE])
@@ -7160,6 +7164,10 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 				tick_time = 1000; // [GodLesZ] tick time
 			}
 			break;
+		case STATUS_NEUTRALBARRIER:
+			val2 = 15 + val1 * 5; // Def/Mdef
+			tick = INFINITE_TICK;
+			break;
 		case STATUS_STRIPACCESSORY:
 			if (!sd)
 				val2 = 20;
@@ -7813,7 +7821,14 @@ int status_change_end_(struct block_list* bl, enum sc_type type, int tid, const 
 				}
 			}
 			break;
-
+		case STATUS_NEUTRAL_BARRIER_MASTER:
+			if( sce->val2 ) {
+				struct skill_unit_group* group = skill_id2group(sce->val2);
+				sce->val2 = 0;
+				if( group ) // Might have been cleared before status ended, e.g. land protector
+					skill_delunitgroup(group);
+			}
+			break;
 		case STATUS_TRICKDEAD:
 			if (vd) vd->dead_sit = 0;
 			break;

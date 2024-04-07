@@ -4986,7 +4986,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 					case STATUS_BATTLEDRUMS:	
 					case STATUS_MOONLIGHTSONATA:		case STATUS_PAGANPARTY:	
 					case STATUS_STRIPACCESSORY:
-					case STATUS_NEUTRALBARRIER_MASTER:		case STATUS_NEUTRALBARRIER:		
+					case STATUS_NEUTRAL_BARRIER_MASTER:		case STATUS_NEUTRALBARRIER:		
 					case STATUS_STONESKIN:	case STATUS_VIGOR:
 					case STATUS_STALK:
 					case STATUS_HINDSIGHT:
@@ -6673,13 +6673,13 @@ int skill_castend_pos2(struct block_list* src, int x, int y, uint16 skill_id, ui
 		break;
 	
 	case SK_MS_NEUTRALBARRIER:
-		if( (sc->data[STATUS_NEUTRALBARRIER_MASTER] && skill_id == SK_MS_NEUTRALBARRIER) ) {
+		if( (sc->data[STATUS_NEUTRAL_BARRIER_MASTER] && skill_id == SK_MS_NEUTRALBARRIER) ) {
 			skill_clear_unitgroup(src);
 			return 0;
 		}
 		skill_clear_unitgroup(src); // To remove previous skills - cannot used combined
 		if( (sg = skill_unitsetting(src,skill_id,skill_lv,src->x,src->y,0)) != NULL ) {
-			sc_start2(src,src,skill_id == SK_MS_NEUTRALBARRIER ? STATUS_NEUTRALBARRIER_MASTER : STATUS_NEUTRALBARRIER_MASTER,100,skill_lv,sg->group_id,skill_get_time(skill_id,skill_lv));
+			sc_start2(src,src,STATUS_NEUTRAL_BARRIER_MASTER,100,skill_lv,sg->group_id,skill_get_time(skill_id,skill_lv));
 		}
 		break;
 
@@ -10796,10 +10796,10 @@ int skill_delunitgroup_(struct skill_unit_group *group, const char* file, int li
 			{
 				struct status_change *sc = NULL;
 				if( (sc = status_get_sc(src)) != NULL ) {
-					if ( sc->data[STATUS_NEUTRALBARRIER_MASTER] )
+					if ( sc->data[STATUS_NEUTRAL_BARRIER_MASTER] )
 					{
-						sc->data[STATUS_NEUTRALBARRIER_MASTER]->val2 = 0;
-						status_change_end(src,STATUS_NEUTRALBARRIER_MASTER,INVALID_TIMER);
+						sc->data[STATUS_NEUTRAL_BARRIER_MASTER]->val2 = 0;
+						status_change_end(src,STATUS_NEUTRAL_BARRIER_MASTER,INVALID_TIMER);
 					}
 					status_change_end(src,STATUS_NEUTRALBARRIER,INVALID_TIMER);
 				}
@@ -12612,7 +12612,7 @@ void skill_usave_trigger(struct map_session_data *sd)
 
 	if ((group = skill_unitsetting(&sd->bl, sus->skill_id, sus->skill_lv, sd->bl.x, sd->bl.y, 0)))
 		if (sus->skill_id == SK_MS_NEUTRALBARRIER  )
-			sc_start2(&sd->bl, &sd->bl, (sus->skill_id == SK_MS_NEUTRALBARRIER ? STATUS_NEUTRALBARRIER_MASTER : STATUS_NEUTRALBARRIER_MASTER), 100, sus->skill_lv, group->group_id, skill_get_time(sus->skill_id, sus->skill_lv));
+			sc_start2(&sd->bl, &sd->bl, STATUS_NEUTRAL_BARRIER_MASTER, 100, sus->skill_lv, group->group_id, skill_get_time(sus->skill_id, sus->skill_lv));
 	idb_remove(skillusave_db, sd->status.char_id);
 }
 
@@ -13079,7 +13079,7 @@ int skill_disable_check(struct status_change *sc, uint16 skill_id)
 
 		// These 2 skills contain a master and are not correctly pulled using skill2sc
 		case SK_MS_NEUTRALBARRIER:
-			if( sc->data[STATUS_NEUTRALBARRIER_MASTER] )
+			if( sc->data[STATUS_NEUTRAL_BARRIER_MASTER] )
 				return 1;
 			break;
 		
