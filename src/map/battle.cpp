@@ -4432,11 +4432,11 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 	}
 	if (sd) {
 		uint16 r_skill = 0, sk_idx = 0;
-		if( wd.flag&BF_WEAPON && sc && sc->data[STATUS_AUTOSHADOWSPELL] && rnd()%100 < sc->data[STATUS_AUTOSHADOWSPELL]->val3 &&
-			(r_skill = (uint16)sc->data[STATUS_AUTOSHADOWSPELL]->val1) && (sk_idx = skill_get_index(r_skill)) &&
+		if( wd.flag&BF_WEAPON && sc && sc->data[STATUS_CHEATSKILL] && rnd()%100 < sc->data[STATUS_CHEATSKILL]->val3 &&
+			(r_skill = (uint16)sc->data[STATUS_CHEATSKILL]->val1) && (sk_idx = skill_get_index(r_skill)) &&
 			sd->status.skill[sk_idx].id != 0 && sd->status.skill[sk_idx].flag == SKILL_FLAG_PLAGIARIZED )
 		{
-			int r_lv = sc->data[STATUS_AUTOSHADOWSPELL]->val2;
+			int r_lv = sc->data[STATUS_CHEATSKILL]->val2;
 			std::shared_ptr<s_skill_db> skill = skill_db.find(r_skill);
 			bool abort_autoshadowspell = false;
 			if (skill->require.state == ST_SHIELD){

@@ -5476,7 +5476,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		clif_skill_nodamage(src, bl, skill_id, skill_lv, sc_start(src,bl, type, 100, skill_lv, skill_get_time(skill_id, skill_lv)));
 		break;
 
-	case SK_ST_AUTOSHADOWSPELL:
+	case SK_ST_CHEATSKILL:
 		if( sd ) {
 			if( (sd->reproduceskill_idx > 0 && sd->status.skill[sd->reproduceskill_idx].id) ||
 				(sd->cloneskill_idx > 0 && sd->status.skill[sd->cloneskill_idx].id) )
@@ -12287,7 +12287,7 @@ void skill_spellbook(struct map_session_data *sd, t_itemid nameid) {
 }
 
 int skill_select_menu(struct map_session_data *sd,uint16 skill_id) {
-	int lv, prob, aslvl = 0;
+	int skill_lv, prob = 0;
 	uint16 id, sk_idx = 0;
 	nullpo_ret(sd);
 
@@ -12297,13 +12297,12 @@ int skill_select_menu(struct map_session_data *sd,uint16 skill_id) {
 		return 0;
 
 	if( !skill_get_inf2(skill_id, INF2_ISAUTOSHADOWSPELL) || (id = sd->status.skill[sk_idx].id) == 0 || sd->status.skill[sk_idx].flag != SKILL_FLAG_PLAGIARIZED ) {
-		clif_skill_fail(sd,SK_ST_AUTOSHADOWSPELL,USESKILL_FAIL_LEVEL,0);
+		clif_skill_fail(sd,SK_ST_CHEATSKILL,USESKILL_FAIL_LEVEL,0);
 		return 0;
 	}
-
-	lv = (aslvl); // The level the skill will be autocasted
-	prob = aslvl *4; // Probability to auto cast
-	sc_start4(&sd->bl,&sd->bl,STATUS_AUTOSHADOWSPELL,100,id,lv,prob,0,skill_get_time(SK_ST_AUTOSHADOWSPELL,aslvl));
+	skill_lv = pc_checkskill(sd, SK_ST_CHEATSKILL);
+	prob = skill_lv *4; // Probability to auto cast
+	sc_start4(&sd->bl,&sd->bl,STATUS_CHEATSKILL,100,id,skill_lv,prob,0,skill_get_time(SK_ST_CHEATSKILL,skill_lv));
 	return 0;
 }
 

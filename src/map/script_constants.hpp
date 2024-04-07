@@ -1024,7 +1024,7 @@
 	export_constant(STATUS_STRIPARMOR);
 	export_constant(STATUS_STRIPHELM);
 	export_constant(STATUS_REPRODUCE);
-	export_constant(STATUS_AUTOSHADOWSPELL);
+	export_constant(STATUS_CHEATSKILL);
 	export_constant(STATUS_IMPROVECONCENTRATION);
 	export_constant(STATUS_CAMOUFLAGE);
 	export_constant(STATUS_BOWQUICKEN);

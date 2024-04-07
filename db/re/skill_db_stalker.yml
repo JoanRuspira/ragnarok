@@ -110,7 +110,7 @@ Body:
         - Item: Scroll
           Amount: 1
   - Id: 2286
-    Name: SK_ST_AUTOSHADOWSPELL
+    Name: SK_ST_CHEATSKILL
     Description: Auto Shadow Spell
     MaxLevel: 5
     TargetType: Self
@@ -120,7 +120,7 @@ Body:
     HitCount: 1
     CastCancel: true
     CastTime: 2500
-    Duration1: 300000
+    Duration1: 120000
     Cooldown: 1000
     AfterCastActDelay: 1000
     Requires:

@@ -235,6 +235,8 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Wind
+    Flags:
+      IsAutoShadowSpell: true
     Cooldown: 7000
     AfterCastActDelay: 400
     SplashArea: 4

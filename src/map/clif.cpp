@@ -17608,13 +17608,13 @@ int clif_autoshadowspell_list(struct map_session_data *sd) {
 	if( !session_isActive(fd) ) 
 		return 0;
 
-	if( sd->menuskill_id == SK_ST_AUTOSHADOWSPELL )
+	if( sd->menuskill_id == SK_ST_CHEATSKILL )
 		return 0;
 
 	WFIFOHEAD(fd, 2 * 6 + 4);
 	WFIFOW(fd,0) = 0x442;
 	
-	//AEGIS listed the specified skills that available for SK_ST_AUTOSHADOWSPELL
+	//AEGIS listed the specified skills that available for SK_ST_CHEATSKILL
 	for( i = 0, c = 0; i < MAX_SKILL; i++ )
 		if( sd->status.skill[i].flag == SKILL_FLAG_PLAGIARIZED && sd->status.skill[i].id > 0 &&
 			skill_get_inf2(sd->status.skill[i].id, INF2_ISAUTOSHADOWSPELL))
@@ -17627,10 +17627,10 @@ int clif_autoshadowspell_list(struct map_session_data *sd) {
 		WFIFOW(fd,2) = 8 + c * 2;
 		WFIFOL(fd,4) = c;
 		WFIFOSET(fd,WFIFOW(fd,2));
-		sd->menuskill_id = SK_ST_AUTOSHADOWSPELL;
+		sd->menuskill_id = SK_ST_CHEATSKILL;
 		sd->menuskill_val = c;
 	} else {
-		clif_skill_fail(sd,SK_ST_AUTOSHADOWSPELL,USESKILL_FAIL_IMITATION_SKILL_NONE,0);
+		clif_skill_fail(sd,SK_ST_CHEATSKILL,USESKILL_FAIL_IMITATION_SKILL_NONE,0);
 	}
 
 	return 1;
@@ -17661,18 +17661,18 @@ int clif_skill_itemlistwindow( struct map_session_data *sd, uint16 skill_id, uin
 }
 
 /*==========================================
- * Select a skill into a given list (used by SK_SA_AUTOSPELL/SK_ST_AUTOSHADOWSPELL)
+ * Select a skill into a given list (used by SK_SA_AUTOSPELL/SK_ST_CHEATSKILL)
  * 0443 <type>.L <skill_id>.W (CZ_SKILL_SELECT_RESPONSE)
  * RFIFOL(fd,2) - type (currently not used)
  *------------------------------------------*/
 void clif_parse_SkillSelectMenu(int fd, struct map_session_data *sd) {
 	struct s_packet_db* info = &packet_db[RFIFOW(fd,0)];
-	//int type = RFIFOL(fd,info->pos[0]); //WHY_LOWERVER_COMPATIBILITY =  0x0, WHY_SK_ST_AUTOSHADOWSPELL =  0x1,
+	//int type = RFIFOL(fd,info->pos[0]); //WHY_LOWERVER_COMPATIBILITY =  0x0, WHY_SK_ST_CHEATSKILL =  0x1,
 
 	if (sd->menuskill_id == SK_SA_AUTOSPELL) {
 		sd->state.workinprogress = WIP_DISABLE_NONE;
 		skill_autospell(sd, RFIFOW(fd, info->pos[1]));
-	} else if (sd->menuskill_id == SK_ST_AUTOSHADOWSPELL) {
+	} else if (sd->menuskill_id == SK_ST_CHEATSKILL) {
 		if (pc_istrading(sd)) {
 			clif_skill_fail(sd, sd->ud.skill_id, USESKILL_FAIL_LEVEL, 0);
 			clif_menuskill_clear(sd);

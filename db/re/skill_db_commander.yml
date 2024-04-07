@@ -219,6 +219,8 @@ Body:
     HitCount: 1
     Element: Weapon
     SplashArea: 3
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Reproduce: true

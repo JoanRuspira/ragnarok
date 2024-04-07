@@ -102287,7 +102287,7 @@ Body:
     Script: |
       .@r = getrefine();
       bonus bMaxHP,.@r*10;
-      autobonus3 "{ .@r = getrefine(); if (.@r>=9) { bonus bAspd,2; } else if (.@r>=7) { bonus bAspd,1; } bonus bAspdRate,.@r; }",1000,50000,"SK_ST_AUTOSHADOWSPELL";
+      autobonus3 "{ .@r = getrefine(); if (.@r>=9) { bonus bAspd,2; } else if (.@r>=7) { bonus bAspd,1; } bonus bAspdRate,.@r; }",1000,50000,"SK_ST_CHEATSKILL";
   - Id: 24309
     AegisName: S_Warlock_Shield
     Name: Warlock Shadow Shield
