@@ -1742,6 +1742,7 @@ int64 skill_attack (int attack_type, struct block_list* src, struct block_list *
 		case SK_CR_BEHOLDER3:
 		case SK_AM_BASILISK2:
 		case SK_AM_BEHOLDER2:
+		case SK_RA_ULLREAGLETOTEM_ATK:
 			dmg.dmotion = clif_skill_damage(src,bl,tick,dmg.amotion,dmg.dmotion,damage,dmg.div_,skill_id,-1,DMG_SPLASH);
 			break;
 		case SK_CL_SEVERERAINSTORM_MELEE:
