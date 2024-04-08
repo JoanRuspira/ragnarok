@@ -2288,7 +2288,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case SK_AS_CROSSRIPPERSLASHER:
 		case SK_AS_VENOMSPLASHER:
 		case SK_EX_METEORASSAULT:
-		case SK_AS_KUNAI:
+		case SK_AS_TRIPLE_SHURIKEN:
 		case SK_EX_DARKCLAW:
 		case SK_EX_DUMMY_CROSSIMPACT:
 		case SK_EX_CROSSIMPACT:

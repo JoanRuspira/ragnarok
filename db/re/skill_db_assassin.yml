@@ -363,7 +363,7 @@ Body:
         Shuriken: true
       AmmoAmount: 1
   - Id: 524
-    Name: SK_AS_KUNAI
+    Name: SK_AS_TRIPLE_SHURIKEN
     Description: Throw Kunai
     MaxLevel: 5
     Type: Weapon
@@ -378,7 +378,7 @@ Body:
     Requires:
       SpCost: 15
       Ammo:
-        Kunai: true
+        Shuriken: true
       AmmoAmount: 3
   - Id: 133
     Name: SK_AS_DUALWIELDING

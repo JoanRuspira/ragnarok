@@ -2608,7 +2608,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case SK_TF_VENOMKNIFE:
 	case SK_MS_TRIGGERHAPPYCART:
 	case SK_AS_SHURIKEN:
-	case SK_AS_KUNAI:
+	case SK_AS_TRIPLE_SHURIKEN:
 	case SK_EX_SOULDESTROYER:
 	case SK_KN_SONICWAVE:
 	case SK_PR_DUPLELUX_MELEE:
@@ -4214,7 +4214,9 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		int starget = BL_CHAR|BL_SKILL;
 
 		
-		
+		if (skill_id == SK_EX_METEORASSAULT){
+			clif_specialeffect(src, EF_THROW_HAPPOKUNAI, AREA);
+		}
 		
 
 		skill_area_temp[1] = 0;

@@ -24,12 +24,11 @@ int AssassinSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list
 			add_venom_splasher_especial_effects(target);
 			return calculate_venom_splasher_atk_ratio(skill_lv, sstatus->int_);
 			break;
-		case SK_AS_KUNAI:
+		case SK_AS_TRIPLE_SHURIKEN:
 			add_throw_kunai_especial_effects(target);
 			return calculate_throw_kunai_atk_ratio(skill_lv, sstatus->dex);
 			break;
 		case SK_EX_METEORASSAULT:
-			// add_meteor_assault_special_effects(src);
 			return calculate_meteor_assault_atk_ratio(skill_lv, sstatus->dex);
 			break;
 		case SK_EX_SOULDESTROYER:
