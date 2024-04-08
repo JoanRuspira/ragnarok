@@ -57,7 +57,7 @@ int AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_
     		clif_specialeffect(target, 1406, AREA); //new_cannon_spear_09_clock
 			return calculate_acid_bomb_atk_ratio(skill_lv, sstatus->int_, sstatus->dex, tstatus->vit);
 			break;
-		case SK_CR_GEOGRAFIELD_ATK:
+		case SK_CR_GEOGRAFIELD:
 			return calculate_geografield_atk_ratio(skill_lv);
 			break;
 		case SK_CR_MANDRAKERAID_ATK:
@@ -96,19 +96,19 @@ int AlchemistSkillAttackRatioCalculator::calculate_geografield_atk_ratio(int ski
 	int ratio = 0;
 	switch (skill_lv) {
 		case 1:
-			ratio = -50;
-			break;
-		case 2:
-			ratio = -25;
-			break;
-		case 3:
 			ratio = 0;
 			break;
+		case 2:
+			ratio = 200;
+			break;
+		case 3:
+			ratio = 400;
+			break;
 		case 4:
-			ratio = 25;
+			ratio = 600;
 			break;
 		case 5:
-			ratio = 50;
+			ratio = 800;
 			break;
 	}
 	return ratio;

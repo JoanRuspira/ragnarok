@@ -13,79 +13,27 @@ Body:
     Name: SK_CR_GEOGRAFIELD
     Description: Geographer Field
     MaxLevel: 5
-    Type: Misc
+    Type: Magic
     TargetType: Self
     DamageFlags:
-      NoDamage: true
       Splash: true
-    Flags:
-      IsTrap: true
-    Range: 9
-    Hit: Single
-    HitCount: 1
-    SplashArea: 6
-    ActiveInstance:
-      - Level: 1
-        Max: 2
-      - Level: 2
-        Max: 3
-      - Level: 3
-        Max: 4
-      - Level: 4
-        Max: 5
-      - Level: 5
-        Max: 6
-    CopyFlags:
-      Skill:
-        Reproduce: true
-    CastCancel: true
+    Hit: Multi_Hit
+    HitCount: -5
+    Element: Earth
     CastTime: 7000
     Cooldown: 7000
     AfterCastActDelay: 2000
-    Duration1:
-      - Level: 1
-        Time: 14000
-      - Level: 2
-        Time: 21000
-      - Level: 3
-        Time: 28000
-      - Level: 4
-        Time: 35000
-      - Level: 5
-        Time: 42000
+    SplashArea: 6
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Duration2: 10000
     Requires:
       SpCost: 60
       ItemCost:
         - Item: MenEater_Plant_Bottle
           Amount: 2
-  - Id: 897
-    Name: SK_CR_GEOGRAFIELD_ATK
-    Description: Crazy Weed Attack
-    MaxLevel: 5
-    Type: Magic
-    TargetType: Ground
-    DamageFlags:
-      Splash: true
-    Flags:
-      TargetTrap: true
-      IgnoreLandProtector: true
-    Hit: Single
-    HitCount: 1  
-    Element: Earth
-    SplashArea: 6
-    CopyFlags:
-      Skill:
-        Reproduce: true
-    Duration1: 6000
-    Requires:
-      SpCost: 1
-    Unit:
-      Id: Dummyskill
-      Range: 9
-      Interval: 1000
-      Target: Enemy
-      Flag:
-        Skill: true
   - Id: 2483
     Name: SK_CR_MANDRAKERAID
     Description: Crazy Weed

@@ -3478,8 +3478,8 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case SK_AM_WILDTHORNS:
 					case SK_AM_FIREDEMONSTRATION:
 					case SK_CR_INCENDIARYBOMB:
-					case SK_CR_GEOGRAFIELD_ATK:
 					case SK_CR_MANDRAKERAID_ATK:
+					case SK_CR_GEOGRAFIELD:
 						skillratio += AlchemistSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, tstatus);
 						break;
 					case SK_RA_ULLREAGLETOTEM_ATK:

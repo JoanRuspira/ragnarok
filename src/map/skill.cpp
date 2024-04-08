@@ -418,8 +418,6 @@ unsigned short skill_dummy2skill_id(unsigned short skill_id) {
 			return SK_CL_SEVERERAINSTORM;
 		case SK_CR_MANDRAKERAID_ATK:
 			return SK_CR_MANDRAKERAID;
-		case SK_CR_GEOGRAFIELD_ATK:
-			return SK_CR_GEOGRAFIELD;
 		case SK_RA_ULLREAGLETOTEM_ATK:
 			return SK_RA_ULLREAGLETOTEM;
 	}
@@ -2238,7 +2236,6 @@ static TIMER_FUNC(skill_timerskill){
 				break;
 			switch( skl->skill_id )
 			{
-				case SK_CR_GEOGRAFIELD_ATK:
 				case SK_CR_MANDRAKERAID_ATK:
 					{
 						int dummy = 1, i = skill_get_unit_range(skl->skill_id,skl->skill_lv);
@@ -2552,6 +2549,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 		status_change_end(src, STATUS_INVISIBILITY, INVALID_TIMER);
 	}
 	switch(skill_id) {
+	case SK_CR_GEOGRAFIELD:
 	case SK_MC_CARTQUAKE:
 	case SK_MC_CARTCYCLONE:
 	case SK_MC_CARTBRUME:
@@ -3531,25 +3529,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	map_freeblock_lock();
 	switch(skill_id)
 	{
-	case SK_CR_GEOGRAFIELD: {
-		clif_specialeffect(&sd->bl, EF_SPR_PLANT, AREA);
-		int area = skill_get_splash(SK_CR_GEOGRAFIELD, skill_lv);
-		// for( i = 0; i < 3 + (skill_lv/2); i++ ) {
-			int x1 = sd->bl.x - area + rnd()%(area * 2 + 1);
-			int y1 = sd->bl.y - area + rnd()%(area * 2 + 1);
-			skill_addtimerskill(src,tick+i*150,0,x1,y1,SK_CR_GEOGRAFIELD_ATK,skill_lv,-1,0);
-		// }
-
-		if (sd == NULL || sd->status.party_id == 0 || (flag & 1)) {
-			sc_start2(src, bl, STATUS_GEOGRAFIELD, 100, skill_lv, (src == bl) ? 1 : 0, 20000);
-		} else if (sd) {
-			party_foreachsamemap(skill_area_sub,
-				sd,skill_get_splash(skill_id, skill_lv),
-				src,skill_id,skill_lv,tick, flag|BCT_PARTY|1,
-				skill_castend_nodamage_id);
-		}
-	}
-	break;
 	case SK_AL_HEAL:
 	// case SK_CR_SWORDSTOPLOWSHARES:
 		{
@@ -3758,6 +3737,15 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case SK_PR_KYRIE:
 		clif_skill_nodamage(bl,bl,skill_id,skill_lv,
 			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
+		break;
+	
+	case SK_CR_GEOGRAFIELD:
+		clif_specialeffect(src, EF_SPR_PLANT, AREA);
+		skill_area_temp[1] = 0;
+		map_foreachinshootrange(skill_area_sub, src, skill_get_splash(skill_id, skill_lv), BL_SKILL|BL_CHAR,
+		src,skill_id,skill_lv,tick, flag|BCT_ENEMY|1, skill_castend_damage_id);
+		clif_skill_nodamage (src,src,skill_id,skill_lv,1);
+		sc_start2(src, bl, STATUS_GEOGRAFIELD, 100, skill_lv, (src == bl) ? 1 : 0, 20000);
 		break;
 	case SK_MC_CARTQUAKE:
 		MerchntSkillAtkRatioCalculator::add_cart_quake_effects(src);
@@ -10150,7 +10138,6 @@ static int skill_cell_overlap(struct block_list *bl, va_list ap)
 				}
 			}
 			break;
-		case SK_CR_GEOGRAFIELD_ATK:
 		case SK_CR_MANDRAKERAID_ATK:
 			if (skill_get_unit_flag(unit->group->skill_id, UF_CRAZYWEEDIMMUNE))
 				break;
