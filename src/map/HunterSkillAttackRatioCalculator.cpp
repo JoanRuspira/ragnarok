@@ -89,16 +89,16 @@ int HunterSkillAttackRatioCalculator::calculate_slash_atk_ratio(int skill_lv, in
 	int ratio = 0;
 	switch (skill_lv) {
 		case 1:
-			ratio = 150;
+			ratio = 110;
 			break;
 		case 2:
-			ratio = 250;
+			ratio = 220;
 			break;
 		case 3:
-			ratio = 350;
+			ratio = 330;
 			break;
 		case 4:
-			ratio = 450;
+			ratio = 440;
 			break;
 		case 5:
 			ratio = 550;

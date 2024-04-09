@@ -1735,6 +1735,7 @@ int64 skill_attack (int attack_type, struct block_list* src, struct block_list *
 		case SK_PF_JUPITELTHUNDER:
 		case SK_SA_WINDSLASH:
 		case SK_CR_BASILISK3:
+		case SK_WG_SLASH:
 		case SK_AM_BASILISK1:
 		case SK_AM_BEHOLDER1:
 		case SK_CR_BEHOLDER3:
@@ -2797,7 +2798,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case SK_AS_GRIMTOOTH:
 		flag |= SD_PREAMBLE; // a fake packet will be sent for the first target to be hit
 	case SK_AS_VENOMSPLASHER:
-	case SK_WG_SLASH:
 	case SK_FC_BLITZBEAT:
 	case SK_AC_ARROWSHOWER:
 	case SK_AC_ARROWRAIN:
@@ -3264,6 +3264,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case SK_SA_EARTHSPIKE:
 	case SK_AM_BASILISK1:
 	case SK_CR_BASILISK3:
+	case SK_WG_SLASH:
 	case SK_AM_BEHOLDER1:
 	case SK_CR_BEHOLDER3:
 	case SK_AM_BASILISK2:
@@ -5617,14 +5618,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				if( sd ) {
 			int wargtraining_lvl = 0;
 			wargtraining_lvl = pc_checkskill(sd, SK_HT_WARG_TRAINING);
-			// if (wargtraining_lvl < 2){
-			// 	clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-			// 	break;
-			// }
-			// if (wargtraining_lvl < (skill_lv + 1)){
-			// 	clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-			// 	break;
-			// }
 
 			struct status_change *sc = status_get_sc(src);
 			
@@ -5655,8 +5648,8 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
 				break;
 			}
+			clif_soundeffectall(&sd->bl, "call_warg.wav", 0, AREA);
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
-			
 			sc_start2(src,src, STATUS_WARG_TRAINING, 100, skill_lv, src->id, 60000);
 		}
 		break;
@@ -5960,6 +5953,30 @@ static int8 skill_castend_id_check(struct block_list *src, struct block_list *ta
 					return -1; //Works on silenced allies
 			}
 			break;
+		case SK_AM_BEHOLDER1:
+		case SK_AM_BEHOLDER2:
+		case SK_CR_BEHOLDER3:
+		case SK_AM_BASILISK1:
+		case SK_AM_BASILISK2:
+		case SK_CR_BASILISK3:
+		case SK_AM_PETROLOGY:
+		case SK_AM_PYROTECHNIA:
+		case SK_CR_HARMONIZE:
+		case SK_AM_WARMWIND:
+		case SK_AM_HEALPULSE:
+		case SK_CR_SUNLIGHT:
+		case SK_SA_FIREBALL:
+		case SK_SA_ICICLE:
+		case SK_SA_WINDSLASH:
+		case SK_SA_EARTHSPIKE:
+		case SK_SA_EARTHINSIGNIA:
+		case SK_SA_WATERINSIGNIA:
+		case SK_SA_FIREINSIGNIA:
+		case SK_SA_WINDINSIGNIA:
+		case SK_PF_HYDROPUMP:
+		case SK_PF_INFERNO:
+		case SK_PF_ROCKTOMB:
+		case SK_PF_JUPITELTHUNDER:
 		case SK_WG_SLASH:
 			// Check if path can be reached
 			if (!path_search(NULL,src->m,src->x,src->y,target->x,target->y,1,CELL_CHKNOREACH))

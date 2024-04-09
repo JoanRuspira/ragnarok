@@ -6656,5 +6656,5 @@ Body:
       NoMail: true
       NoAuction: true
     Script: |
-      specialeffect2 1150;
+      specialeffect2 865;
       itemskill "SK_HT_CALL_WARG",1;

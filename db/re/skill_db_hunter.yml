@@ -324,17 +324,12 @@ Body:
     Name: SK_WG_SLASH
     Description: Warg Strike
     MaxLevel: 5
-    Type: Misc
+    Type: Weapon
     TargetType: Attack
-    DamageFlags:
-      IgnoreFlee: true
-    Flags:
-      TargetTrap: true
-      AlterRangeVulture: true
     Range: 1
     Hit: Single
-    HitCount: 1
-    CastCancel: true
+    HitCount: 2
+    Element: Neutral
     Cooldown: 5000
     AfterCastActDelay: 400
     Requires:

@@ -2330,6 +2330,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case SK_HT_SLASH:
 		case SK_HT_BLITZBEAT:
 		case SK_ST_SHARPSHOOTING:
+		case SK_WG_SLASH:
 			skillratio += HunterSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
 		case SK_AM_BASILISK1:
@@ -3685,11 +3686,6 @@ struct Damage battle_calc_misc_attack(struct block_list *src,struct block_list *
 		case SK_TF_THROWSTONE:
 			md.damage = 50;
 			md.flag |= BF_WEAPON;
-			break;
-		case SK_WG_SLASH:
-			md.damage = (sstatus->dex / 5 + sstatus->int_ / 2 + skill_lv * 30) * 10;
-			RE_LVL_MDMOD(100);
-			HunterSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
 		case SK_FC_BLITZBEAT:
 		case SK_RA_FALCONASSAULT:
