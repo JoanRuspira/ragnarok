@@ -191,11 +191,11 @@ int64 SkillBaseDamageCalculator::battle_calc_base_damage(block_list * src, statu
 			case PETID_MANDRAKE:
 			case PETID_AGNI:
 				break;
-			case ELEMENTALID_AQUA_S:
+			case PETID_WARG:
 			case PETID_PHOENIX:
 			case PETID_AQUA:
 				break;
-			case ELEMENTALID_VENTUS_S:
+			case PETID_FALCON:
 			case PETID_BASILISK:
 			case PETID_VENTUS:
 				break;

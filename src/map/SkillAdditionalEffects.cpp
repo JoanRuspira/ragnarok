@@ -244,7 +244,7 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 				if (sd) {
 					// Automatic trigger of Blitz Beat
 					if( sd->ed ) {
-						if( sd->ed->elemental.class_ == ELEMENTALID_VENTUS_S) {
+						if( sd->ed->elemental.class_ == PETID_FALCON) {
 							if ((skill = pc_checkskill(sd, SK_HT_FALCONRY)) > 0 &&
 								rnd() % 1000 <= sstatus->luk * (2*skill) / 5 + 1) {
 								skill_castend_nodamage_id(src, bl, SK_HT_BLITZBEAT, skill, tick, 0);
@@ -253,8 +253,8 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 					}
 					// Automatic trigger of Warg Strike
 					if( sd->ed ) {
-						if( sd->ed->elemental.class_ == ELEMENTALID_AQUA_S) {
-							if ((skill = pc_checkskill(sd, SK_HT_WARGTRAINING)) > 0 &&
+						if( sd->ed->elemental.class_ == PETID_WARG) {
+							if ((skill = pc_checkskill(sd, SK_HT_WARG_TRAINING)) > 0 &&
 								rnd() % 1000 <= sstatus->luk * (2*skill) / 5 + 1) {
 								skill_castend_nodamage_id(src, bl, SK_HT_SLASH, skill, tick, 0);
 							}

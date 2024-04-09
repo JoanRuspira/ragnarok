@@ -12,7 +12,7 @@ int HunterSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 	switch (skill_id) {
 		case SK_WG_SLASH:
 			add_slash_special_effects(target);
-			return 0;
+			return calculate_slash_atk_ratio(skill_lv,sstatus->int_);
 			break;
 		// 	return calculate_slash_atk_ratio(skill_lv,sstatus->int_);
 		// case SK_FC_BLITZBEAT:

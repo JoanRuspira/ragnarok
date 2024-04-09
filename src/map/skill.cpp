@@ -3210,20 +3210,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 				skill_blockpc_start(sd, pres_skill_id, cooldown);
 		}
 		break;
-	
-	// case SK_WG_SLASH:
-	// 	if( sd && pc_isridingwug(sd) ){
-	// 		short x[8]={0,-1,-1,-1,0,1,1,1};
-	// 		short y[8]={1,1,0,-1,-1,-1,0,1};
-	// 		uint8 dir = map_calc_dir(bl, src->x, src->y);
-
-	// 		if( unit_movepos(src, bl->x+x[dir], bl->y+y[dir], 1, 1) ) {
-	// 			clif_blown(src);
-	// 			// skill_attack(BF_WEAPON, src, src, bl, skill_id, skill_lv, tick, flag);
-	// 		}
-	// 		break;
-	// 	}
-	
 
 	case SK_SH_GUILLOTINEFISTS:
 		skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,flag);
@@ -5547,6 +5533,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		}
 		break;
 	case SK_SA_ELEMENTALCONTROL:
+	case SK_HT_WARG_TRAINING:
 	case SK_AM_BIOETHICS:
 		{
 			if( !sd->ed ) {
@@ -5612,7 +5599,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
 					break;
 				}
-				if( sd->ed->elemental.class_ != ELEMENTALID_VENTUS_S) {
+				if( sd->ed->elemental.class_ != PETID_FALCON) {
 					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
 					break;
 				}
@@ -5626,69 +5613,51 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 		}
 		break;
-	case SK_HT_WARGTRAINING: //WARG
-		if( sd ) {
+	case SK_HT_CALL_WARG: //WARG
+				if( sd ) {
+			int wargtraining_lvl = 0;
+			wargtraining_lvl = pc_checkskill(sd, SK_HT_WARG_TRAINING);
+			// if (wargtraining_lvl < 2){
+			// 	clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+			// 	break;
+			// }
+			// if (wargtraining_lvl < (skill_lv + 1)){
+			// 	clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+			// 	break;
+			// }
+
+			struct status_change *sc = status_get_sc(src);
+			
 			enum e_mode mode = EL_MODE_PASSIVE;	// Default mode.
+			int elemental_class = skill_get_elemental_type(skill_id,skill_lv);
 
-			if( skill_lv != 5 ) {
-				int required_item_id = 0;
-				switch(skill_lv) {
-					case 1:
-						required_item_id = ITEMID_YELLOW_LIVE;
-						break;
-					case 2:
-						required_item_id = ITEMID_YELLOW_LIVE;
-						break;
-					case 3:
-						required_item_id = ITEMID_YELLOW_LIVE;
-						break;
-					case 4:
-						required_item_id = ITEMID_YELLOW_LIVE;
-						break;
-				}
-				int elemental_class = skill_get_elemental_type(skill_id,skill_lv);
-
-				if( sd->ed ) {
-					// Just remove elemental if its the same class
-					if( sd->ed->elemental.class_ == elemental_class) {
-						elemental_delete(sd->ed);
-						break;
-					}
-					// // Remove previous elemental first.
-					if( sd->ed->elemental.class_ != elemental_class) {
-						elemental_delete(sd->ed);
-					}
-				}
-
-				// Summoning new one elemental
-				int index_inventory_cost = pc_search_inventory(sd,required_item_id);
-				if(index_inventory_cost == -1) {
-					clif_skill_fail(sd,skill_id,USESKILL_FAIL_NEED_ITEM,1,required_item_id);
+			if( sd->ed ) {
+				// Just remove elemental if its the same class
+				if( sd->ed->elemental.class_ == elemental_class) {
+					elemental_delete(sd->ed);
 					break;
 				}
-
-				if( !elemental_create(sd,elemental_class,skill_get_time(skill_id,skill_lv)) ) {
+				if (sc->data[STATUS_WARG_TRAINING]) {
 					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
 					break;
+				}
+				// Remove previous elemental first.
+				if( sd->ed->elemental.class_ != elemental_class) {
+					elemental_delete(sd->ed);
 				}
 			}
-			if( skill_lv == 5 ) {
-				if( !sd->ed ) {
-					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-					break;
-				}
-				if( sd->ed->elemental.class_ != ELEMENTALID_AQUA_S) {
-					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-					break;
-				}
-				enum e_mode current_mode = status_get_mode(&sd->ed->bl);
-				enum e_mode new_mode = static_cast<e_mode>(EL_MODE_AGGRESSIVE);
-				if (current_mode == static_cast<e_mode>(EL_MODE_AGGRESSIVE)){
-					new_mode = static_cast<e_mode>(EL_MODE_PASSIVE);
-				} 
-				elemental_change_mode(sd->ed,new_mode);
+			if (sc->data[STATUS_WARG_TRAINING]) {
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				break;
+			}
+			// Summoning new one elemental
+			if( !elemental_create(sd,elemental_class,skill_get_time(skill_id,skill_lv)) ) {
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				break;
 			}
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
+			
+			sc_start2(src,src, STATUS_WARG_TRAINING, 100, skill_lv, src->id, 60000);
 		}
 		break;
 	case SK_AM_HATCHHOMUNCULUS: //HOMUN
@@ -5802,7 +5771,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		break;
 	case SK_HT_BLITZBEAT:
 		if( sd->ed ) {
-			if( sd->ed->elemental.class_ != ELEMENTALID_VENTUS_S) {
+			if( sd->ed->elemental.class_ != PETID_FALCON) {
 				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
 				break;
 			}
@@ -5819,7 +5788,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		break;
 	case SK_HT_SLASH:
 		if( sd->ed ) {
-			if( sd->ed->elemental.class_ != ELEMENTALID_AQUA_S) {
+			if( sd->ed->elemental.class_ != PETID_WARG) {
 				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
 				break;
 			}
@@ -9199,7 +9168,7 @@ struct s_skill_condition skill_get_requirement(struct map_session_data* sd, uint
 		/* Skill level-dependent checks */
 
 		case SK_AM_HATCHHOMUNCULUS:
-		case SK_HT_WARGTRAINING:
+		case SK_HT_CALL_WARG:
 		case SK_HT_FALCONRY:
 		case SK_SA_SUMMONELEMENTAL:
 			req.itemid[0] = skill->require.itemid[min(skill_lv-1,MAX_SKILL_ITEM_REQUIRE-1)];
@@ -13081,11 +13050,11 @@ int skill_disable_check(struct status_change *sc, uint16 skill_id)
 int skill_get_elemental_type( uint16 skill_id , uint16 skill_lv ) {
 	int type = 0;
 
-	if (skill_id == SK_HT_WARGTRAINING) { //WARG
-		type = ELEMENTALID_AQUA_S;
+	if (skill_id == SK_HT_CALL_WARG) { //WARG
+		type = PETID_WARG;
 	}
 	if (skill_id == SK_HT_FALCONRY) { //FALCON
-		type = ELEMENTALID_VENTUS_S;
+		type = PETID_FALCON;
 	}
 
 	if (skill_id == SK_SA_SUMMONELEMENTAL) { //ELEMENTAL

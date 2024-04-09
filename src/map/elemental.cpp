@@ -194,9 +194,10 @@ int elemental_delete(struct elemental_data *ed) {
 		status_change_start(&sd->bl, &sd->bl, STATUS_BIOETHICS, 60000, 5, 0, 0, 0, 60000, SCSTART_NONE);
 	}
 	if (ed->vd->class_ == PETID_TERA || ed->vd->class_ == PETID_VENTUS || ed->vd->class_ == PETID_AQUA || ed->vd->class_ == PETID_AGNI){
-		ShowMessage("ELEMENTAL DELETED\n");
 		status_change_start(&sd->bl, &sd->bl, STATUS_ELEMENTALCONTROL, 60000, 5, 0, 0, 0, 60000, SCSTART_NONE);
-
+	}
+	if (ed->vd->class_ == PETID_WARG){
+		status_change_start(&sd->bl, &sd->bl, STATUS_WARG_TRAINING, 60000, 5, 0, 0, 0, 60000, SCSTART_NONE);
 	}
 	return unit_remove_map(&ed->bl, CLR_OUTSIGHT);
 }

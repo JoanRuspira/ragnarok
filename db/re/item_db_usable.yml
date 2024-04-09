@@ -6636,3 +6636,25 @@ Body:
     Script: |
       specialeffect2 1150;
       itemskill "SK_SA_SUMMONELEMENTAL",4;
+  - Id: 43
+    AegisName: Wolf_Flute
+    Name: Wolf Flute
+    Type: Usable
+    Buy: 10
+    Weight: 0
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      specialeffect2 1150;
+      itemskill "SK_HT_CALL_WARG",1;

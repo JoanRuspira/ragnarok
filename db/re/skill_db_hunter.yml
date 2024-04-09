@@ -118,9 +118,23 @@ Body:
       SpCost: 50
       Weapon:
         Bow: true
+  - Id: 918
+    Name: SK_HT_WARG_TRAINING
+    Description: Warg Training
+    MaxLevel: 5
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    CastTime: 0
+    AfterCastActDelay: 500
+    Cooldown: 500
+    Requires:
+      SpCost: 10
   - Id: 2458
-    Name: SK_HT_WARGTRAINING
-    Description: Summon Water Spirit Aqua
+    Name: SK_HT_CALL_WARG
+    Description: Call Warg
     MaxLevel: 5
     TargetType: Self
     DamageFlags:
@@ -129,42 +143,12 @@ Body:
     HitCount: 1
     Element: Earth
     CastCancel: true
-    CastTime: 
-      - Level: 1
-        Time: 3000
-      - Level: 2
-        Time: 3000
-      - Level: 3
-        Time: 3000
-      - Level: 4
-        Time: 3000
-      - Level: 5
-        Time: 0
+    CastTime: 3000
     Duration1: 1200000
     AfterCastActDelay: 400
-    Cooldown:
-      - Level: 1
-        Time: 1
-      - Level: 2
-        Time: 1
-      - Level: 3
-        Time: 1
-      - Level: 4
-        Time: 1
-      - Level: 5
-        Time: 0
+    Cooldown: 1000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 50
-        - Level: 2
-          Amount: 50
-        - Level: 3
-          Amount: 50
-        - Level: 4
-          Amount: 50
-        - Level: 5
-          Amount: 10
+      SpCost: 50
   - Id: 857
     Name: SK_HT_SLASH
     Description: Elemental Action
