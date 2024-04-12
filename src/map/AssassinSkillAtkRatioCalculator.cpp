@@ -26,6 +26,7 @@ int AssassinSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list
 			break;
 		case SK_AS_TRIPLE_SHURIKEN:
 			add_throw_kunai_especial_effects(target);
+			clif_specialeffect(target, 984, AREA);
 			return calculate_throw_kunai_atk_ratio(skill_lv, sstatus->dex);
 			break;
 		case SK_EX_METEORASSAULT:

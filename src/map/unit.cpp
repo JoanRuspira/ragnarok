@@ -1780,6 +1780,7 @@ int unit_skilluse_id2(struct block_list *src, int target_id, uint16 skill_id, ui
 		case SK_WG_SLASH:
 		case SK_FC_BLITZBEAT:
 		case SK_FC_FALCONASSAULT:
+		case SK_WG_CRUNCH:
 		case SK_AM_BEHOLDER1:
 		case SK_CR_BEHOLDER3:
 		case SK_AM_PETROLOGY:

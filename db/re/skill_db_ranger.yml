@@ -229,3 +229,32 @@ Body:
     AfterCastActDelay: 400
     Requires:
       SpCost: 45
+  - Id: 921
+    Name: SK_RA_CRUNCH
+    Description: Crunch
+    MaxLevel: 5
+    TargetType: Attack
+    DamageFlags:
+      NoDamage: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    Requires:
+      SpCost: 25
+      State: Elementalspirit
+  - Id: 922
+    Name: SK_WG_CRUNCH
+    Description: Crunch
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: 1
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    Requires:
+      SpCost: 45

@@ -3265,6 +3265,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case SK_CR_BASILISK3:
 	case SK_WG_SLASH:
 	case SK_FC_FALCONASSAULT:
+	case SK_WG_CRUNCH:
 	case SK_FC_BLITZBEAT:
 	case SK_AM_BEHOLDER1:
 	case SK_CR_BEHOLDER3:
@@ -5776,18 +5777,17 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			sd->skill_id_old = skill_id;
 			if (skill_id == SK_RA_FALCONASSAULT){
 				clif_soundeffectall(&sd->bl, "falconassault.wav", 0, AREA);
-				clif_specialeffect(src, EF_GUMGANG6, AREA);
-
 			}
 			elemental_action(sd->ed, bl, tick, skill_id, skill_lv);
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
 			skill_blockpc_start(sd, skill_id, duration);
 		}
 		break;
+	case SK_RA_CRUNCH:
 	case SK_HT_SLASH:
 		if( sd->ed ) {
 			if( sd->ed->elemental.class_ != PETID_WARG) {
-				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL,0);
 				break;
 			}
 		}
@@ -5984,6 +5984,7 @@ static int8 skill_castend_id_check(struct block_list *src, struct block_list *ta
 		case SK_PF_JUPITELTHUNDER:
 		case SK_WG_SLASH:
 		case SK_FC_FALCONASSAULT:
+		case SK_WG_CRUNCH:
 		case SK_FC_BLITZBEAT:
 			// Check if path can be reached
 			if (!path_search(NULL,src->m,src->x,src->y,target->x,target->y,1,CELL_CHKNOREACH))

@@ -10,13 +10,17 @@
 int HunterSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list* src, struct block_list *target, int base_lv, int skill_id, int skill_lv, struct status_data* sstatus)
 {
 	switch (skill_id) {
+		case SK_WG_CRUNCH:
+			clif_specialeffect(target, 965, AREA); 
+			clif_soundeffectall(src, "crunch.wav", 0, AREA);
+			return calculate_crunch_atk_ratio(skill_lv,sstatus->int_);
 		case SK_WG_SLASH:
 			add_slash_special_effects(target);
 			return calculate_slash_atk_ratio(skill_lv,sstatus->int_);
-			break;
 		case SK_FC_BLITZBEAT:
 			return calculate_blitz_beat_atk_ratio(skill_lv,sstatus->agi);
 		case SK_FC_FALCONASSAULT:
+			clif_specialeffect(target, EF_GUMGANG6, AREA);
 			return calculate_falcon_assault_atk_ratio(skill_lv,sstatus->agi);
 		case SK_RA_ZEPHYRSNIPING:
 			add_hurricane_fury_special_effects(target);
@@ -34,7 +38,6 @@ int HunterSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 			return calculate_ullrs_magic_shot_atk_ratio(skill_lv);
 		default:
 			return 0;
-			break;
 	}
 }
 
@@ -84,6 +87,28 @@ int HunterSkillAttackRatioCalculator::calculate_sharp_shooting_atk_ratio(int ski
 	return ratio + dex;
 }
 
+int HunterSkillAttackRatioCalculator::calculate_crunch_atk_ratio(int skill_lv, int int_)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 450;
+			break;
+		case 2:
+			ratio = 550;
+			break;
+		case 3:
+			ratio = 650;
+			break;
+		case 4:
+			ratio = 750;
+			break;
+		case 5:
+			ratio = 850;
+			break;
+		}
+	return ratio + int_;
+}
 
 int HunterSkillAttackRatioCalculator::calculate_slash_atk_ratio(int skill_lv, int int_)
 {

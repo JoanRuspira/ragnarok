@@ -341,6 +341,10 @@ int elemental_action(struct elemental_data *ed, struct block_list *bl, t_tick ti
 		ARR_FIND(0, MAX_ELESKILLTREE, i, ed->db->skill[i].id && (ed->db->skill[i].mode&EL_SKILLMODE_FALCON_1));
 		skill_id = SK_FC_FALCONASSAULT;
 	}
+	if (caller_skill_id == SK_RA_CRUNCH) {
+		ARR_FIND(0, MAX_ELESKILLTREE, i, ed->db->skill[i].id && (ed->db->skill[i].mode&EL_SKILLMODE_FALCON_1));
+		skill_id = SK_WG_CRUNCH;
+	}
 	
 	if (caller_skill_id == SK_AM_HOMUNCULUSACTIONII) {
 		ARR_FIND(0, MAX_ELESKILLTREE, i, ed->db->skill[i].id && (ed->db->skill[i].mode & EL_SKILLMODE_ALCHEMIST_2));
@@ -454,6 +458,7 @@ int elemental_action(struct elemental_data *ed, struct block_list *bl, t_tick ti
 			&& sd->skill_id_old != SK_HT_SLASH
 			&& sd->skill_id_old != SK_HT_BLITZBEAT
 			&& sd->skill_id_old != SK_RA_FALCONASSAULT
+			&& sd->skill_id_old != SK_RA_CRUNCH
 			&&//regardless of remaining HP/SP it can be cast
 				(status_get_hp(&ed->bl) < req.hp || status_get_sp(&ed->bl) < req.sp) )
 				return 1;
