@@ -3844,7 +3844,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case SK_CM_PARRY:
 	case SK_CM_SPEAR_DYNAMO:
 	case SK_BS_CARTBOOST:
-	case SK_RA_FALCONEYES:
 	case SK_ST_KILLERINSTIINCT:
 	case SK_EX_ENCHANTDEADLYPOISON:
 	case SK_PR_DUPLELUX:
@@ -4010,7 +4009,25 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		clif_skill_nodamage(src,bl,skill_id,skill_lv,
 			sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
 		break;
-
+	case SK_RA_FALCONEYES:
+		{
+			if( !sd->ed ) {
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL,0);
+				break;
+			}
+			if( sd->ed ) {
+				if( sd->ed->elemental.class_ != PETID_FALCON) {
+					clif_skill_fail(sd,skill_id,USESKILL_FAIL,0);
+					break;
+				}
+			}
+			int splash = skill_get_splash(skill_id, skill_lv);
+			clif_skill_nodamage(src,bl,skill_id,skill_lv,
+				sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
+			skill_reveal_trap_inarea(src, splash, src->x, src->y);
+			map_foreachinallrange( status_change_timer_sub, src,
+				splash, BL_CHAR, src, NULL, type, tick);
+		}
 	case SK_AC_IMPROVECONCENTRATION:
 		{
 			int splash = skill_get_splash(skill_id, skill_lv);
@@ -5556,7 +5573,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			int falconry_lvl = 0;
 			falconry_lvl = pc_checkskill(sd, SK_HT_FALCONRY);
 			if (falconry_lvl < 1){
-				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL,0);
 				break;
 			}
 			struct status_change *sc = status_get_sc(src);
@@ -5571,7 +5588,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 					break;
 				}
 				if (sc->data[STATUS_FALCONRY]) {
-					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+					clif_skill_fail(sd,skill_id,USESKILL_FAIL,0);
 					break;
 				}
 				// Remove previous elemental first.
@@ -5580,12 +5597,12 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				}
 			}
 			if (sc->data[STATUS_FALCONRY]) {
-				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL,0);
 				break;
 			}
 			// Summoning new one elemental
 			if( !elemental_create(sd,elemental_class,skill_get_time(skill_id,skill_lv)) ) {
-				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL,0);
 				break;
 			}
 			clif_soundeffectall(&sd->bl, "call_falcon.wav", 0, AREA);
@@ -5598,7 +5615,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			int wargtraining_lvl = 0;
 			wargtraining_lvl = pc_checkskill(sd, SK_HT_WARG_TRAINING);
 			if (wargtraining_lvl < 1){
-				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL,0);
 				break;
 			}
 			struct status_change *sc = status_get_sc(src);
@@ -5613,7 +5630,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 					break;
 				}
 				if (sc->data[STATUS_WARG_TRAINING]) {
-					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+					clif_skill_fail(sd,skill_id,USESKILL_FAIL,0);
 					break;
 				}
 				// Remove previous elemental first.
@@ -5622,12 +5639,12 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				}
 			}
 			if (sc->data[STATUS_WARG_TRAINING]) {
-				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL,0);
 				break;
 			}
 			// Summoning new one elemental
 			if( !elemental_create(sd,elemental_class,skill_get_time(skill_id,skill_lv)) ) {
-				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL,0);
 				break;
 			}
 			clif_soundeffectall(&sd->bl, "call_warg.wav", 0, AREA);
@@ -5640,11 +5657,11 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			int bioethics_lvl = 0;
 			bioethics_lvl = pc_checkskill(sd, SK_AM_BIOETHICS);
 			if (bioethics_lvl < 2){
-				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL,0);
 				break;
 			}
 			if (bioethics_lvl < (skill_lv + 1)){
-				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL,0);
 				break;
 			}
 
@@ -5660,7 +5677,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 					break;
 				}
 				if (sc->data[STATUS_BIOETHICS]) {
-					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+					clif_skill_fail(sd,skill_id,USESKILL_FAIL,0);
 					break;
 				}
 				// Remove previous elemental first.
@@ -5669,12 +5686,12 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				}
 			}
 			if (sc->data[STATUS_BIOETHICS]) {
-				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL,0);
 				break;
 			}
 			// Summoning new one elemental
 			if( !elemental_create(sd,elemental_class,skill_get_time(skill_id,skill_lv)) ) {
-				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL,0);
 				break;
 			}
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
@@ -5688,11 +5705,11 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			int elemental_control_lvl = 0;
 			elemental_control_lvl = pc_checkskill(sd, SK_SA_ELEMENTALCONTROL);
 			if (elemental_control_lvl < 2){
-				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL,0);
 				break;
 			}
 			if (elemental_control_lvl < (skill_lv + 1)){
-				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL,0);
 				break;
 			}
 
@@ -5708,7 +5725,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 					break;
 				}
 				if (sc->data[STATUS_ELEMENTALCONTROL]) {
-					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+					clif_skill_fail(sd,skill_id,USESKILL_FAIL,0);
 					break;
 				}
 				// Remove previous elemental first.
@@ -5717,12 +5734,12 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				}
 			}
 			if (sc->data[STATUS_ELEMENTALCONTROL]) {
-				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL,0);
 				break;
 			}
 			// Summoning new one elemental
 			if( !elemental_create(sd,elemental_class,skill_get_time(skill_id,skill_lv)) ) {
-				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL,0);
 				break;
 			}
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
@@ -5747,7 +5764,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case SK_HT_BLITZBEAT:
 		if( sd->ed ) {
 			if( sd->ed->elemental.class_ != PETID_FALCON) {
-				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL,0);
 				break;
 			}
 		}

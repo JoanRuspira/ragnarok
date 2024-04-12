@@ -209,4 +209,21 @@ Body:
         Reproduce: true
     Requires:
       SpCost: 1
-
+  - Id: 380
+    Name: SK_RA_FALCONEYES
+    Description: Falcon Eyes
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+      Splash: true
+    SplashArea: 3
+    Hit: Single
+    HitCount: 1
+    Duration1: 30000
+    Cooldown: 3000
+    AfterCastActDelay: 400
+    Requires:
+      SpCost: 50
+    Status: TrueSight

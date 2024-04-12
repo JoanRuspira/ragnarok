@@ -355,6 +355,10 @@ void initChangeTables(void)
 	
 	
 	set_sc( SK_AC_IMPROVECONCENTRATION	, STATUS_IMPROVECONCENTRATION	, EFST_CONCENTRATION, SCB_AGI|SCB_DEX );
+	set_sc( SK_RA_FALCONEYES	, STATUS_FALCONEYES	, EFST_TRUESIGHT, SCB_AGI|SCB_DEX|SCB_INT|SCB_VIT|SCB_STR|SCB_LUK );
+
+
+	
 	set_sc( SK_RA_SPIRITANIMAL	, STATUS_SPIRITANIMAL	, EFST_SPIRITANIMAL, SCB_INT|SCB_MATK );
 	set_sc( SK_TF_HIDING		, STATUS_HIDING		, EFST_HIDING		, SCB_SPEED );
 	add_sc( SK_TF_POISONSLASH		, STATUS_POISON		);
@@ -4116,7 +4120,8 @@ static unsigned short status_calc_str(struct block_list *bl, struct status_chang
 
 	if( sc->data[STATUS_ACCOUSTICRYTHM] )
 		str += sc->data[STATUS_ACCOUSTICRYTHM]->val2;
-	
+	if(sc->data[STATUS_FALCONEYES] && !sc->data[STATUS_QUAGMIRE])
+		str += (sc->data[STATUS_FALCONEYES]->val1 * 2);
 	if(sc->data[STATUS_CHASEWALK2])
 		str += sc->data[STATUS_CHASEWALK]->val1*2;
 	
@@ -4173,7 +4178,8 @@ static unsigned short status_calc_agi(struct block_list *bl, struct status_chang
 		agi += sc->data[STATUS_IMPRESSIVERIFF]->val2;
 	if(sc->data[STATUS_IMPROVECONCENTRATION] && !sc->data[STATUS_QUAGMIRE])
 		agi += (agi-sc->data[STATUS_IMPROVECONCENTRATION]->val3 * 2)*(sc->data[STATUS_IMPROVECONCENTRATION]->val2 * 2)/100;
-	
+	if(sc->data[STATUS_FALCONEYES] && !sc->data[STATUS_QUAGMIRE])
+		agi += (sc->data[STATUS_FALCONEYES]->val1 * 2);
 	if(sc->data[STATUS_AGIFOOD])
 		agi += sc->data[STATUS_AGIFOOD]->val1;
 	
@@ -4231,7 +4237,8 @@ static unsigned short status_calc_vit(struct block_list *bl, struct status_chang
 	
 	if(sc->data[STATUS_MARIONETTE2])
 		vit += sc->data[STATUS_MARIONETTE2]->val3&0xFF;
-	
+	if(sc->data[STATUS_FALCONEYES] && !sc->data[STATUS_QUAGMIRE])
+		vit += (sc->data[STATUS_FALCONEYES]->val1 * 2);
 	if(sc->data[STATUS_SWORDCLAN])
 		vit += 1;
 	if(sc->data[STATUS_JUMPINGCLAN])
@@ -4258,7 +4265,8 @@ static unsigned short status_calc_int(struct block_list *bl, struct status_chang
 	if(!sc || !sc->count)
 		return cap_value(int_,0,USHRT_MAX);
 
-
+	if(sc->data[STATUS_FALCONEYES] && !sc->data[STATUS_QUAGMIRE])
+		int_ += (sc->data[STATUS_FALCONEYES]->val1 * 2);
 
 	if(sc->data[STATUS_SPIRITANIMAL])
 		int_ += sc->data[STATUS_SPIRITANIMAL]->val1*3;
@@ -4312,6 +4320,8 @@ static unsigned short status_calc_dex(struct block_list *bl, struct status_chang
 		dex += sc->data[STATUS_MAGICSTRINGS]->val2;
 	if(sc->data[STATUS_IMPROVECONCENTRATION] && !sc->data[STATUS_QUAGMIRE])
 		dex += (dex-sc->data[STATUS_IMPROVECONCENTRATION]->val4 * 2)*(sc->data[STATUS_IMPROVECONCENTRATION]->val2 *2)/100;
+	if(sc->data[STATUS_FALCONEYES] && !sc->data[STATUS_QUAGMIRE])
+		dex += (sc->data[STATUS_FALCONEYES]->val1 * 2);
 	
 	if(sc->data[STATUS_DEXFOOD])
 		dex += sc->data[STATUS_DEXFOOD]->val1;
@@ -4362,7 +4372,9 @@ static unsigned short status_calc_luk(struct block_list *bl, struct status_chang
 	if(!sc || !sc->count)
 		return cap_value(luk,0,USHRT_MAX);
 
-	
+	if(sc->data[STATUS_FALCONEYES] && !sc->data[STATUS_QUAGMIRE])
+		luk += (sc->data[STATUS_FALCONEYES]->val1 * 2);
+
 	if(sc->data[STATUS_CURSE])
 		return 0;
 	if(sc->data[STATUS_BENEDICTIO])
@@ -6268,7 +6280,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			return 0;
 	case STATUS_INCREASEAGI:
 	case STATUS_IMPROVECONCENTRATION:
-
+	case STATUS_FALCONEYES:
 	case STATUS_WINDRACER:
 	case STATUS_IMPRESSIVERIFF:
 		if (sc->option&OPTION_MADOGEAR)
@@ -6444,10 +6456,11 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			status_change_end(bl, SC_SPIRIT, INVALID_TIMER);*/
 		break;
 	case STATUS_QUAGMIRE:
-		status_change_end(bl, STATUS_LOUDEXCLAMATION, INVALID_TIMER);
 		status_change_end(bl, STATUS_IMPROVECONCENTRATION, INVALID_TIMER);
+		status_change_end(bl, STATUS_FALCONEYES, INVALID_TIMER);
 		status_change_end(bl, STATUS_WINDRACER, INVALID_TIMER);
-		// Also blocks the ones below...
+		status_change_end(bl, STATUS_INCREASEAGI, INVALID_TIMER);
+		status_change_end(bl, STATUS_CARTBOOST, INVALID_TIMER);
 	case STATUS_DECREASEAGI:
 		if (type == STATUS_DECREASEAGI) {
 			status_change_end(bl, STATUS_DECREASEAGI, INVALID_TIMER);
@@ -8316,6 +8329,7 @@ int status_change_timer_sub(struct block_list* bl, va_list ap)
 	tsc = status_get_sc(bl);
 
 	switch( type ) {
+	case STATUS_FALCONEYES:
 	case STATUS_IMPROVECONCENTRATION:
 		status_change_end(bl, STATUS_HIDING, INVALID_TIMER);
 		status_change_end(bl, STATUS_CLOAKING, INVALID_TIMER);
