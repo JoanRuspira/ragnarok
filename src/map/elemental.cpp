@@ -199,6 +199,10 @@ int elemental_delete(struct elemental_data *ed) {
 	if (ed->vd->class_ == PETID_WARG){
 		status_change_start(&sd->bl, &sd->bl, STATUS_WARG_TRAINING, 60000, 5, 0, 0, 0, 60000, SCSTART_NONE);
 	}
+	if (ed->vd->class_ == PETID_FALCON){
+		status_change_start(&sd->bl, &sd->bl, STATUS_FALCONRY, 60000, 5, 0, 0, 0, 60000, SCSTART_NONE);
+	}
+	
 	return unit_remove_map(&ed->bl, CLR_OUTSIGHT);
 }
 

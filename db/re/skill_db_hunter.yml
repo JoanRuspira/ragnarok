@@ -132,6 +132,20 @@ Body:
     Cooldown: 500
     Requires:
       SpCost: 10
+  - Id: 919
+    Name: SK_HT_FALCONRY
+    Description: Warg Training
+    MaxLevel: 5
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    CastTime: 0
+    AfterCastActDelay: 500
+    Cooldown: 500
+    Requires:
+      SpCost: 10
   - Id: 2458
     Name: SK_HT_CALL_WARG
     Description: Call Warg
@@ -148,7 +162,7 @@ Body:
     AfterCastActDelay: 400
     Cooldown: 1000
     Requires:
-      SpCost: 50
+      SpCost: 1
   - Id: 857
     Name: SK_HT_SLASH
     Description: Elemental Action
@@ -162,11 +176,11 @@ Body:
     Cooldown: 5000
     AfterCastActDelay: 2000
     Requires:
-      SpCost: 25
+      SpCost: 20
       State: Elementalspirit
   - Id: 2459
-    Name: SK_HT_FALCONRY
-    Description: Summon Wind Spirit Ventus
+    Name: SK_HT_CALL_FALCON
+    Description: Call Falcon
     MaxLevel: 5
     TargetType: Self
     DamageFlags:
@@ -175,42 +189,12 @@ Body:
     HitCount: 1
     Element: Earth
     CastCancel: true
-    CastTime: 
-      - Level: 1
-        Time: 3000
-      - Level: 2
-        Time: 3000
-      - Level: 3
-        Time: 3000
-      - Level: 4
-        Time: 3000
-      - Level: 5
-        Time: 0
+    CastTime: 3000
     Duration1: 1200000
     AfterCastActDelay: 400
-    Cooldown:
-      - Level: 1
-        Time: 1
-      - Level: 2
-        Time: 60000
-      - Level: 3
-        Time: 60000
-      - Level: 4
-        Time: 60000
-      - Level: 5
-        Time: 0
+    Cooldown: 1000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 50
-        - Level: 2
-          Amount: 50
-        - Level: 3
-          Amount: 50
-        - Level: 4
-          Amount: 50
-        - Level: 5
-          Amount: 10
+      SpCost: 1
   - Id: 858
     Name: SK_HT_BLITZBEAT
     Description: Elemental Action
@@ -224,7 +208,7 @@ Body:
     Cooldown: 5000
     AfterCastActDelay: 2000
     Requires:
-      SpCost: 22
+      SpCost: 17
       State: Elementalspirit
   - Id: 2235
     Name: SK_HT_TRACKINGBREEZE
@@ -333,32 +317,18 @@ Body:
     Cooldown: 5000
     AfterCastActDelay: 400
     Requires:
-      SpCost: 25
+      SpCost: 35
   - Id: 129
     Name: SK_FC_BLITZBEAT
     Description: Blitz Beat
     MaxLevel: 5
-    Type: Misc
+    Type: Weapon
     TargetType: Attack
-    DamageFlags:
-      IgnoreFlee: true
-    Flags:
-      TargetTrap: true
     Range: 1
-    Hit: Multi_Hit
-    HitCount:
-      - Level: 1
-        Count: 1
-      - Level: 2
-        Count: 2
-      - Level: 3
-        Count: 3
-      - Level: 4
-        Count: 4
-      - Level: 5
-        Count: 5
+    Hit: Single
+    HitCount: 1
     CastCancel: true
     Cooldown: 5000
     AfterCastActDelay: 400
     Requires:
-      SpCost: 22
+      SpCost: 30

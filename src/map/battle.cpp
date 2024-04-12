@@ -2331,6 +2331,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case SK_HT_BLITZBEAT:
 		case SK_ST_SHARPSHOOTING:
 		case SK_WG_SLASH:
+		case SK_FC_BLITZBEAT:
 			skillratio += HunterSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
 		case SK_AM_BASILISK1:
@@ -3686,21 +3687,6 @@ struct Damage battle_calc_misc_attack(struct block_list *src,struct block_list *
 		case SK_TF_THROWSTONE:
 			md.damage = 50;
 			md.flag |= BF_WEAPON;
-			break;
-		case SK_FC_BLITZBEAT:
-		case SK_RA_FALCONASSAULT:
-			{
-				uint16 skill;
-				md.damage = (sstatus->dex / 5 + sstatus->agi / 2 + skill_lv * 30) * 2;
-				RE_LVL_MDMOD(100);
-
-				if (skill_id == SK_RA_FALCONASSAULT) {
-					//Div fix of Blitzbeat
-					DAMAGE_DIV_FIX2(md.damage, skill_get_num(SK_FC_BLITZBEAT, 5));
-					//Falcon Assault Modifier
-					md.damage = md.damage * (150 + 70 * skill_lv) / 100;
-				}
-			}
 			break;
 	}
 

@@ -14,9 +14,8 @@ int HunterSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 			add_slash_special_effects(target);
 			return calculate_slash_atk_ratio(skill_lv,sstatus->int_);
 			break;
-		// 	return calculate_slash_atk_ratio(skill_lv,sstatus->int_);
-		// case SK_FC_BLITZBEAT:
-		// 	return calculate_blitz_beat_atk_ratio(skill_lv,sstatus->agi);
+		case SK_FC_BLITZBEAT:
+			return calculate_blitz_beat_atk_ratio(skill_lv,sstatus->agi);
 		case SK_RA_ZEPHYRSNIPING:
 			add_hurricane_fury_special_effects(target);
 			return calculate_zephyr_sniping_atk_ratio(skill_lv);

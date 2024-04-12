@@ -1736,6 +1736,7 @@ int64 skill_attack (int attack_type, struct block_list* src, struct block_list *
 		case SK_SA_WINDSLASH:
 		case SK_CR_BASILISK3:
 		case SK_WG_SLASH:
+		case SK_FC_BLITZBEAT:
 		case SK_AM_BASILISK1:
 		case SK_AM_BEHOLDER1:
 		case SK_CR_BEHOLDER3:
@@ -2798,7 +2799,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case SK_AS_GRIMTOOTH:
 		flag |= SD_PREAMBLE; // a fake packet will be sent for the first target to be hit
 	case SK_AS_VENOMSPLASHER:
-	case SK_FC_BLITZBEAT:
 	case SK_AC_ARROWSHOWER:
 	case SK_AC_ARROWRAIN:
 	case SK_AL_HOLYGHOST:
@@ -3265,6 +3265,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case SK_AM_BASILISK1:
 	case SK_CR_BASILISK3:
 	case SK_WG_SLASH:
+	case SK_FC_BLITZBEAT:
 	case SK_AM_BEHOLDER1:
 	case SK_CR_BEHOLDER3:
 	case SK_AM_BASILISK2:
@@ -5535,6 +5536,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		break;
 	case SK_SA_ELEMENTALCONTROL:
 	case SK_HT_WARG_TRAINING:
+	case SK_HT_FALCONRY:
 	case SK_AM_BIOETHICS:
 		{
 			if( !sd->ed ) {
@@ -5549,76 +5551,56 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			elemental_change_mode(sd->ed,new_mode);
 		}
 		break;
-	case SK_HT_FALCONRY: //FALCON
+	case SK_HT_CALL_FALCON: //FALCON
 		if( sd ) {
+			int falconry_lvl = 0;
+			falconry_lvl = pc_checkskill(sd, SK_HT_FALCONRY);
+			if (falconry_lvl < 1){
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				break;
+			}
+			struct status_change *sc = status_get_sc(src);
+			
 			enum e_mode mode = EL_MODE_PASSIVE;	// Default mode.
+			int elemental_class = skill_get_elemental_type(skill_id,skill_lv);
 
-			if( skill_lv != 5 ) {
-				int required_item_id = 0;
-				switch(skill_lv) {
-					case 1:
-						required_item_id = ITEMID_YELLOW_LIVE;
-						break;
-					case 2:
-						required_item_id = ITEMID_YELLOW_LIVE;
-						break;
-					case 3:
-						required_item_id = ITEMID_YELLOW_LIVE;
-						break;
-					case 4:
-						required_item_id = ITEMID_YELLOW_LIVE;
-						break;
-				}
-				int elemental_class = skill_get_elemental_type(skill_id,skill_lv);
-
-				if( sd->ed ) {
-					// Just remove elemental if its the same class
-					if( sd->ed->elemental.class_ == elemental_class) {
-						elemental_delete(sd->ed);
-						break;
-					}
-					// // Remove previous elemental first.
-					if( sd->ed->elemental.class_ != elemental_class) {
-						elemental_delete(sd->ed);
-					}
-				}
-
-				// Summoning new one elemental
-				int index_inventory_cost = pc_search_inventory(sd,required_item_id);
-				if(index_inventory_cost == -1) {
-					clif_skill_fail(sd,skill_id,USESKILL_FAIL_NEED_ITEM,1,required_item_id);
+			if( sd->ed ) {
+				// Just remove elemental if its the same class
+				if( sd->ed->elemental.class_ == elemental_class) {
+					elemental_delete(sd->ed);
 					break;
 				}
-
-				if( !elemental_create(sd,elemental_class,skill_get_time(skill_id,skill_lv)) ) {
+				if (sc->data[STATUS_FALCONRY]) {
 					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
 					break;
+				}
+				// Remove previous elemental first.
+				if( sd->ed->elemental.class_ != elemental_class) {
+					elemental_delete(sd->ed);
 				}
 			}
-			if( skill_lv == 5 ) {
-				if( !sd->ed ) {
-					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-					break;
-				}
-				if( sd->ed->elemental.class_ != PETID_FALCON) {
-					clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
-					break;
-				}
-				enum e_mode current_mode = status_get_mode(&sd->ed->bl);
-				enum e_mode new_mode = static_cast<e_mode>(EL_MODE_AGGRESSIVE);
-				if (current_mode == static_cast<e_mode>(EL_MODE_AGGRESSIVE)){
-					new_mode = static_cast<e_mode>(EL_MODE_PASSIVE);
-				} 
-				elemental_change_mode(sd->ed,new_mode);
+			if (sc->data[STATUS_FALCONRY]) {
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				break;
 			}
+			// Summoning new one elemental
+			if( !elemental_create(sd,elemental_class,skill_get_time(skill_id,skill_lv)) ) {
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				break;
+			}
+			clif_soundeffectall(&sd->bl, "call_falcon.wav", 0, AREA);
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
+			sc_start2(src,src, STATUS_FALCONRY, 100, skill_lv, src->id, 60000);
 		}
 		break;
 	case SK_HT_CALL_WARG: //WARG
-				if( sd ) {
+		if( sd ) {
 			int wargtraining_lvl = 0;
 			wargtraining_lvl = pc_checkskill(sd, SK_HT_WARG_TRAINING);
-
+			if (wargtraining_lvl < 1){
+				clif_skill_fail(sd,skill_id,USESKILL_FAIL_LEVEL,0);
+				break;
+			}
 			struct status_change *sc = status_get_sc(src);
 			
 			enum e_mode mode = EL_MODE_PASSIVE;	// Default mode.
@@ -5978,12 +5960,12 @@ static int8 skill_castend_id_check(struct block_list *src, struct block_list *ta
 		case SK_PF_ROCKTOMB:
 		case SK_PF_JUPITELTHUNDER:
 		case SK_WG_SLASH:
+		case SK_FC_BLITZBEAT:
 			// Check if path can be reached
 			if (!path_search(NULL,src->m,src->x,src->y,target->x,target->y,1,CELL_CHKNOREACH))
 				return USESKILL_FAIL_MAX;
 			break;
 		case SK_AL_SACREDWAVE:
-		case SK_FC_BLITZBEAT:
 		case SK_AS_GRIMTOOTH:
 		case SK_AS_PHANTOMMENACE:
 			// These can damage traps, but can't target traps directly
@@ -9186,7 +9168,7 @@ struct s_skill_condition skill_get_requirement(struct map_session_data* sd, uint
 
 		case SK_AM_HATCHHOMUNCULUS:
 		case SK_HT_CALL_WARG:
-		case SK_HT_FALCONRY:
+		case SK_HT_CALL_FALCON:
 		case SK_SA_SUMMONELEMENTAL:
 			req.itemid[0] = skill->require.itemid[min(skill_lv-1,MAX_SKILL_ITEM_REQUIRE-1)];
 			req.amount[0] = skill->require.amount[min(skill_lv-1,MAX_SKILL_ITEM_REQUIRE-1)];
@@ -13070,7 +13052,7 @@ int skill_get_elemental_type( uint16 skill_id , uint16 skill_lv ) {
 	if (skill_id == SK_HT_CALL_WARG) { //WARG
 		type = PETID_WARG;
 	}
-	if (skill_id == SK_HT_FALCONRY) { //FALCON
+	if (skill_id == SK_HT_CALL_FALCON) { //FALCON
 		type = PETID_FALCON;
 	}
 
