@@ -170,11 +170,11 @@ Body:
     TargetType: Attack
     DamageFlags:
       NoDamage: true
-    Range: 7
+    Range: 9
     Hit: Single
     HitCount: 1
     Cooldown: 5000
-    AfterCastActDelay: 2000
+    AfterCastActDelay: 400
     Requires:
       SpCost: 20
       State: Elementalspirit
@@ -202,11 +202,11 @@ Body:
     TargetType: Attack
     DamageFlags:
       NoDamage: true
-    Range: 7
+    Range: 9
     Hit: Single
     HitCount: 1
     Cooldown: 5000
-    AfterCastActDelay: 2000
+    AfterCastActDelay: 400
     Requires:
       SpCost: 17
       State: Elementalspirit

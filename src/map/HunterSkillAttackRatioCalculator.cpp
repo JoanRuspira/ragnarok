@@ -16,6 +16,8 @@ int HunterSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 			break;
 		case SK_FC_BLITZBEAT:
 			return calculate_blitz_beat_atk_ratio(skill_lv,sstatus->agi);
+		case SK_FC_FALCONASSAULT:
+			return calculate_falcon_assault_atk_ratio(skill_lv,sstatus->agi);
 		case SK_RA_ZEPHYRSNIPING:
 			add_hurricane_fury_special_effects(target);
 			return calculate_zephyr_sniping_atk_ratio(skill_lv);
@@ -124,6 +126,29 @@ int HunterSkillAttackRatioCalculator::calculate_blitz_beat_atk_ratio(int skill_l
 			break;
 		case 5:
 			ratio = 550;
+			break;
+		}
+	return ratio + agi;
+}
+
+int HunterSkillAttackRatioCalculator::calculate_falcon_assault_atk_ratio(int skill_lv, int agi)
+{
+	int ratio = 0;
+	switch (skill_lv) {
+		case 1:
+			ratio = 450;
+			break;
+		case 2:
+			ratio = 550;
+			break;
+		case 3:
+			ratio = 650;
+			break;
+		case 4:
+			ratio = 750;
+			break;
+		case 5:
+			ratio = 850;
 			break;
 		}
 	return ratio + agi;

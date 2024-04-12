@@ -156,33 +156,6 @@ Body:
           Amount: 40
         - Level: 10
           Amount: 40
-  - Id: 381
-    Name: SK_RA_FALCONASSAULT
-    Description: Falcon Assault
-    MaxLevel: 5
-    Type: Misc
-    TargetType: Attack
-    DamageFlags:
-      IgnoreFlee: true
-    Range: 9
-    Hit: Multi_Hit
-    HitCount: 1
-    CastCancel: true
-    CastTime: 1000
-    AfterCastActDelay: 3000
-    Requires:
-      SpCost:
-        - Level: 1
-          Amount: 30
-        - Level: 2
-          Amount: 34
-        - Level: 3
-          Amount: 38
-        - Level: 4
-          Amount: 42
-        - Level: 5
-          Amount: 46
-      State: Falcon
   - Id: 2491
     Name: SK_RA_ULLREAGLETOTEM_ATK
     Description: Hell's Plant Attack
@@ -227,3 +200,32 @@ Body:
     Requires:
       SpCost: 50
     Status: TrueSight
+  - Id: 920
+    Name: SK_RA_FALCONASSAULT
+    Description: Falcon Assault
+    MaxLevel: 5
+    TargetType: Attack
+    DamageFlags:
+      NoDamage: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    Requires:
+      SpCost: 22
+      State: Elementalspirit
+  - Id: 381
+    Name: SK_FC_FALCONASSAULT
+    Description: Falcon Assault
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Attack
+    Range: 1
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    Requires:
+      SpCost: 45
