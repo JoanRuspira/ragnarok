@@ -4444,7 +4444,7 @@ static unsigned short status_calc_watk(struct block_list *bl, struct status_chan
 	if (sc->data[STATUS_IMPOSITIOMANUS])
 		watk += sc->data[STATUS_IMPOSITIOMANUS]->val2;
 	if (sc->data[STATUS_LEADEROFTHEPACK])
-		watk += sc->data[STATUS_LEADEROFTHEPACK]->val1*10;
+		watk += (sc->data[STATUS_LEADEROFTHEPACK]->val1*10) + sc->data[STATUS_LEADEROFTHEPACK]->val2;
 	if (sc->data[STATUS_WEAPONSHARPENING])
 		watk += sc->data[STATUS_WEAPONSHARPENING]->val2 * sc->data[STATUS_WEAPONSHARPENING]->val1;
 	if (sc->data[STATUS_AXEQUICKEN])
@@ -4530,7 +4530,7 @@ static unsigned short status_calc_matk(struct block_list *bl, struct status_chan
 	if(!sc || !sc->count)
 		return cap_value(matk,0,USHRT_MAX);
 	if (sc->data[STATUS_LEADEROFTHEPACK])
-		matk += sc->data[STATUS_LEADEROFTHEPACK]->val1*10;
+		matk += (sc->data[STATUS_LEADEROFTHEPACK]->val1*10) + sc->data[STATUS_LEADEROFTHEPACK]->val2;
 	if(sc->data[STATUS_BENEDICTIO])
 		matk += sc->data[STATUS_BENEDICTIO]->val1*5;
 	if(sc->data[STATUS_SPIRITANIMAL])
@@ -6360,8 +6360,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 		}
 		if (tick == 1) return 1; // Minimal duration: Only strip without causing the SC
 	break;
-	
-	break;
+
 	case STATUS_STRFOOD:
 	
 	break;
@@ -6696,6 +6695,26 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			// Val2 Skill ID to cast
 			// Val3 Max Lv to cast
 			val4 = val1 * 3; // Chance of casting
+			break;
+		case STATUS_LEADEROFTHEPACK:
+			{
+				if (sd) {
+					int party_count = 0;
+					int match_count = 0;
+					int p_id = sd->status.party_id;
+					struct party_data* p_data = party_search(p_id);
+					if (p_data) {
+						for (party_count = 0; party_count < 5; party_count++) {
+							if (p_data->party.member[party_count].online &&
+								p_data->party.member[party_count].map == sd->mapindex &&
+								p_data->party.member[party_count].char_id != sd->status.char_id) {
+								match_count++;
+							}
+						}
+					}
+					val2 = match_count * 5;
+				}
+			}	
 			break;
 		case STATUS_IMPRESSIVERIFF:
 		case STATUS_ACCOUSTICRYTHM:
