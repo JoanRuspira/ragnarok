@@ -6656,7 +6656,7 @@ Body:
       NoMail: true
       NoAuction: true
     Script: |
-      specialeffect2 1299;
+      specialeffect2 439;
       itemskill "SK_HT_CALL_WARG",1;
   - Id: 44
     AegisName: Falcon_Flute
@@ -6678,5 +6678,5 @@ Body:
       NoMail: true
       NoAuction: true
     Script: |
-      specialeffect2 1299;
+      specialeffect2 439;
       itemskill "SK_HT_CALL_FALCON",1;

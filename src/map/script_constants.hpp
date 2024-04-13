@@ -2068,6 +2068,7 @@
 	export_constant(EFST_MAGICPOWER);
 	export_constant(EFST_EDP);
 	export_constant(EFST_TRUESIGHT);
+	export_constant(EFST_LEADEROFTHEPACK);
 	export_constant(EFST_WINDWALK);
 	export_constant(EFST_MELTDOWN);
 	export_constant(EFST_CARTBOOST);

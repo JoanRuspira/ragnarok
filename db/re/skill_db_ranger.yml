@@ -258,3 +258,20 @@ Body:
     AfterCastActDelay: 400
     Requires:
       SpCost: 45
+  - Id: 923
+    Name: SK_RA_LEADEROFTHEPACK
+    Description: Leader of the Pack
+    MaxLevel: 5
+    Type: Weapon
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+      Splash: true
+    SplashArea: 3
+    Hit: Single
+    HitCount: 1
+    Duration1: 300000
+    Cooldown: 30000
+    AfterCastActDelay: 2000
+    Requires:
+      SpCost: 100

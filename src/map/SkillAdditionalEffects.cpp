@@ -384,6 +384,13 @@ void SkillAdditionalEffects::player_skill_additional_effect(struct block_list* s
 		case SK_WZ_THUNDERSTORM:
 			WizardAdditionalEffectsCalculator::apply_lightning_rod_additional_effect(src, bl, skill_lv);
 			break;
+		case SK_WG_CRUNCH:
+			clif_specialeffect(bl, EF_DECAGILITY, AREA);
+			status_change_start(src, bl, STATUS_DECREASEAGI, 10000, skill_lv, 0, 0, 0, skill_lv * 1000, SCSTART_NONE);
+			break;
+		case SK_FC_FALCONASSAULT:
+			status_change_start(src, bl, STATUS_STUN, 10000, skill_lv, 0, 0, 0, skill_lv * 400, SCSTART_NONE);
+			break;
 		case SK_SH_GUILLOTINEFISTS:
 		{
 			int percentage = rand()%(100) + 1;
