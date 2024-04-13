@@ -3563,11 +3563,6 @@ yuno_in03,181,38,4	script	Yuno Citizen#yuno:npcid	spriteid,{
 	end;
 }
 
-yuno_in03,232,56,5	script	Yuno Citizen#yuno:npcid	865,{
-	npctalk "npcdialog";
-	end;
-}
-
 yuno_in03,232,49,1	script	Yuno Citizen#yuno:npcid	982,{
 	npctalk "npcdialog";
 	end;

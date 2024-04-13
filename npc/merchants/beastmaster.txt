@@ -1,0 +1,65 @@
+
+
+-	script	Beastmaster#beastmaster::beastmaster	-1,{
+
+	mes "[Beastmaster]";
+	mes "Hello!";
+	mes "I breed and sell Wargs and Falcons. They make good allies in battle!";
+	mes "They can be called with the flutes and whistles I sell.";
+	mes "Would you like to buy one? They cost 75000z each.";
+	next;
+	 
+	if (!(Class == Job_Hunter || Class == Job_Sniper)) {
+		mes "[Beastmaster]";
+		mes "Hang on... I am only allowed to sell my beasts to hunters.";
+		close;
+	}
+
+	if (Zeny < 75000) {
+		mes "[Beastmaster]";
+		mes "Well.. Looks like you can't afford it.";
+		close;
+	}
+	
+	switch(select("Buy Wolf Flute:Buy Falcon Whistle:Cancel")) {
+		case 1:
+			if( countitem(43) > 0 ) {
+				mes "[Beastmaster]";
+				mes "Looks like you own a Wolf Flute already.";
+				close;
+			}
+			mes "[Beastmaster]";
+			mes "You want a Wolf Flute huh!";
+			mes "Here you go! Treat it well.";
+			set Zeny, Zeny-75000;
+			getitem 43,1;
+			close;
+		case 2:
+			if( countitem(44) > 0 ) {
+				mes "[Beastmaster]";
+				mes "Looks like you own a Falcon Whistle already.";
+				close;
+			}
+			mes "[Beastmaster]";
+			mes "You want a Falcon Whistle huh!";
+			mes "Here you go! Treat it well.";
+			set Zeny, Zeny-75000;
+			getitem 44,1;
+			close;
+		case 3:
+			mes "[Beastmaster]";
+			mes "Oh... Let me know if you change your mind.";
+			close;
+	}
+	if ((MaxWeight-Weight) < 200 || checkweight(1201,1) == 0) {
+		mes "[Beastmaster]";
+		mes "Wait a moment!";
+		mes "Currently you're carrying too many items with you.";
+		next;
+		mes "[Beastmaster]";
+		mes "Please come back later after you put some items into Kafra storage.";
+		close;
+	}
+}
+
+hugel,214,226,4	duplicate(beastmaster)	Beastmaster#beastmaster	832

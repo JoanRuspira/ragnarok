@@ -1,0 +1,88 @@
+
+
+-	script	Homunculus Researcher#homunculusresearcher::homunculusresearcher	-1,{
+
+	mes "[Homunculus Researcher]";
+	mes "Hello!";
+	mes "I research and sell homunculus embryos. They make good allies in battle!";
+	mes "Would you like to buy one? They cost 75000z each, I have a variety of them.";
+	next;
+	 
+	if (!(Class == Job_Alchemist || Class == Job_Creator)) {
+		mes "[Homunculus Researcher]";
+		mes "Hang on... I am only allowed to sell my research to alchemists.";
+		close;
+	}
+
+	if (Zeny < 75000) {
+		mes "[Homunculus Researcher]";
+		mes "Well.. Looks like you can't afford it.";
+		close;
+	}
+	
+	switch(select("Buy Basilisk Embryo:Buy Beholder Embryo:Buy Mandrake Embryo:Buy Phoenix Embryo:Cancel")) {
+		case 1:
+			if( countitem(7142) > 0 ) {
+				mes "[Homunculus Researcher]";
+				mes "Looks like you own a Basilisk embryo already.";
+				close;
+			}
+			mes "[Homunculus Researcher]";
+			mes "Basilisk! The physical homunculus!";
+			mes "Here you go! Treat it well.";
+			set Zeny, Zeny-75000;
+			getitem 7142,1;
+			close;
+		case 2:
+			if( countitem(36) > 0 ) {
+				mes "[Homunculus Researcher]";
+				mes "Looks like you own a Beholder embryo already.";
+				close;
+			}
+			mes "[Homunculus Researcher]";
+			mes "Beholder! The magic homunculus!";
+			mes "Here you go! Treat it well.";
+			set Zeny, Zeny-75000;
+			getitem 36,1;
+			close;
+		case 3:
+			if( countitem(37) > 0 ) {
+				mes "[Homunculus Researcher]";
+				mes "Looks like you own a Mandrake embryo already.";
+				close;
+			}
+			mes "[Homunculus Researcher]";
+			mes "Mandrake! The support homunculus!";
+			mes "Here you go! Treat it well.";
+			set Zeny, Zeny-75000;
+			getitem 37,1;
+			close;
+		case 4:
+			if( countitem(38) > 0 ) {
+				mes "[Homunculus Researcher]";
+				mes "Looks like you own a Phoenix embryo already.";
+				close;
+			}
+			mes "[Homunculus Researcher]";
+			mes "Phoenix! The healing homunculus!";
+			mes "Here you go! Treat it well.";
+			set Zeny, Zeny-75000;
+			getitem 38,1;
+			close;
+		case 5:
+			mes "[Homunculus Researcher]";
+			mes "Oh... Let me know if you change your mind.";
+			close;
+	}
+	if ((MaxWeight-Weight) < 200 || checkweight(1201,1) == 0) {
+		mes "[Homunculus Researcher]";
+		mes "Wait a moment!";
+		mes "Currently you're carrying too many items with you.";
+		next;
+		mes "[Homunculus Researcher]";
+		mes "Please come back later after you put some items into Kafra storage.";
+		close;
+	}
+}
+
+alde_alche,109,186,3	duplicate(homunculusresearcher)	Homunculus Researcher#homunculusresearcher	633

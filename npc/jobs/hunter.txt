@@ -1,0 +1,81 @@
+//===== Script =======================================
+// Hunter Job Change
+//====================================================
+
+-	script	Hunter Guildmaster#hntgld::Hntgld	-1,{
+	if (Class == Job_Archer) {
+		mes "[Hunter Guildmaster]";
+		mes "Good day! I am the Hunter Guildmaster.";
+		mes "I train Archers that meet the requirements and allow them to become Hunters.";
+		next;
+		mes "[Hunter Guildmaster]";
+		mes "As a Hunter you will gain new skills.";
+		mes "The requirements are:";
+		mes "- Being a first class job.";
+		mes "- Being Job level 50.";
+		mes "- Having used all your skill points.";
+		next;
+		mes "[Hunter Guildmaster]";
+		mes "Do you want to become a Hunter?";
+		next;
+		switch(select("Yes:No")) {
+			case 1:
+				mes "[Hunter Guildmaster]";
+				mes "Good! Let me see if you pass our requirements...";
+				next;
+				if (JobLevel < 50) {
+					mes "[Hunter Guildmaster]";
+					mes "Hmm... Your job level does not meet our requirements.";
+					mes "You need to be more experienced before being a Hunter.";
+					close;
+				}
+				if (SkillPoint) {
+					mes "[Hunter Guildmaster]";
+					mes "Looks like you have not used all your skill points.";
+					mes "Use them and I'll be able to make you a Hunter.";
+					close;
+				}
+				mes "[Hunter Guildmaster]";
+				mes "Okay! Looks like you pass all of them!";
+				mes "You are allowed to join the Hunter guild.";
+				mes "Congratulations!";
+				jobchange Job_Hunter;
+				specialeffect2 EF_JOBLVUP50;
+				close;
+			case 2:
+				mes "[Hunter Guildmaster]";
+				mes "Ah! Let me know if you change your mind.";
+				mes "We are always looking for new adventurers";
+				mes "to join the guild.";
+				close;
+		}
+		
+	}
+
+	if (Class == Job_Hunter) {
+		mes "[Hunter Guildmaster]";
+		mes "Hi fellow Hunter!";
+		mes "Are you thinking about your next job?";
+		next;
+		mes "[Hunter Guildmaster]";
+		mes "You can become a Ranger if you reach job level 50.";
+		next;
+		mes "[Hunter Guildmaster]";
+		mes "Go find the legendary Ranger in Payon.";
+		mes "I'm sure he will be able to train you.";
+		close;
+	}
+
+	if (Class == Job_Sniper) {
+		mes "[Hunter Guildmaster]";
+		mes "Ah! An experienced member of the guild!";
+		mes "Are you here to help train the new members?";
+		close;
+	}
+
+	mes "[Hunter Guildmaster]";
+	mes "Welcome to the Hunter guild. We accept applications from Archers that meet our requirements.";
+	close;
+}
+
+hu_in01,387,375,3	duplicate(Hntgld)	Hunter Guildmaster#hntgld	732

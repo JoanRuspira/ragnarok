@@ -1,0 +1,56 @@
+//===== Script =======================================
+// Ranger Armorer NPC
+//====================================================
+
+-	script	Ranger Armorer#htnar1::Ranger_Armorer	-1,{
+	set .n$,"[Ranger Armorer]";
+	mes .n$;
+	mes "Hello! I am an expert in customising armors.";
+	mes "I am part of the Hunter Guild, so I can make changes to a member's outfit for free";
+	next;
+	if (Class != Job_Sniper) {
+		mes "[Ranger Armorer]";
+		mes "Oh! I can only provide my services to Rangers...";
+		mes "Sorry!";
+		close;
+	}
+	mes "Aha!";
+	mes "A seasoned Ranger, what outfit would you like to wear?";
+	next;
+	switch(select("Ranger:Beastmaster:Sniper:Windhawk")) {
+		case 1:
+			setlook LOOK_CLOTHES_COLOR,0;
+        	setlook LOOK_BODY2,0;
+			specialeffect2 EF_ENTRY2;
+			mes "[Ranger Armorer]";
+			mes "There you go!";
+			mes "Come back if you want to change your outfit again!";
+			close;
+		case 2:
+			setlook LOOK_CLOTHES_COLOR,0;
+        	setlook LOOK_BODY2,1;
+			specialeffect2 EF_ENTRY2;
+			mes "[Ranger Armorer]";
+			mes "There you go!";
+			mes "Come back if you want to change your outfit again!";
+			close;
+		case 3:
+			setlook LOOK_CLOTHES_COLOR,0;
+        	setlook LOOK_BODY2,2;
+			specialeffect2 EF_ENTRY2;
+			mes "[Ranger Armorer]";
+			mes "There you go!";
+			mes "Come back if you want to change your outfit again!";
+			close;
+		case 4:
+			setlook LOOK_CLOTHES_COLOR,0;
+        	setlook LOOK_BODY2,3;
+			specialeffect2 EF_ENTRY2;
+			mes "[Ranger Armorer]";
+			mes "There you go!";
+			mes "Come back if you want to change your outfit again!";
+			close;;
+	}	
+}
+
+hu_in01,382,384,5	duplicate(Ranger_Armorer)	Ranger Armorer#htnar1	664

@@ -449,11 +449,6 @@ hu_in01,378,371,1	script	Hugel Villager#hugel:npcid	spriteid,{
 	end;
 }
 
-hu_in01,387,375,3	script	Hunter Guildmaster#hugel:npcid	732,{
-	npctalk "I will make you a hunter.";
-	end;
-}
-
 hugel,210,221,4	script	Hugel Villager#hugel:npcid	spriteid,{
 	npctalk "npcdialog";
 	end;

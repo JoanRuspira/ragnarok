@@ -4,7 +4,7 @@
 	if( countitem(12622 ) > 0 ) {
 		mes "[Peco Breeder]";
 		mes "Oh hello!.";
-		mes "Looks like you own a Peco alreay. You two seem happy with each other. I'm happy to see that.";
+		mes "Looks like you own a Peco already. You two seem happy with each other. I'm happy to see that.";
 		close;
 	}
 
@@ -19,7 +19,7 @@
 		mes "Currently you're carrying too many items with you.";
 		next;
 		mes "[Peco Breeder]";
-		mes "Please come back later after you put some items into kafra storage.";
+		mes "Please come back later after you put some items into Kafra storage.";
 		close;
 	}
 

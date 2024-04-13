@@ -19853,6 +19853,11 @@ void clif_parse_equipswitch_request( int fd, struct map_session_data* sd ){
 	t_tick tick = gettick();
 	uint16 skill_id = SK_NV_EQSWITCH, skill_lv = 1;
 
+	if(!pc_checkskill(sd, SK_NV_EQSWITCH)){
+		clif_skill_fail(sd,SK_NV_EQSWITCH,USESKILL_FAIL,0);
+		return;
+	} 
+
 	if( DIFF_TICK(tick, sd->equipswitch_tick) < 0 ) {
 		// Client will not let you send a request
 		return;

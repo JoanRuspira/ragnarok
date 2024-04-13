@@ -1,0 +1,88 @@
+
+
+-	script	Elemental Researcher#elementalresearcher::elementalresearcher	-1,{
+
+	mes "[Elemental Researcher]";
+	mes "Hello!";
+	mes "I research and sell elemental summoning scrolls. They make good allies in battle!";
+	mes "Would you like to buy one? They cost 75000z each, I have a variety of them.";
+	next;
+	 
+	if (!(Class == Job_Sage || Class == Job_Professor)) {
+		mes "[Elemental Researcher]";
+		mes "Hang on... I am only allowed to sell my research to scholars.";
+		close;
+	}
+
+	if (Zeny < 75000) {
+		mes "[Elemental Researcher]";
+		mes "Well.. Looks like you can't afford it.";
+		close;
+	}
+	
+	switch(select("Buy Tera Scroll:Buy Ventus Scroll:Buy Aqua Scroll:Buy Agni Scroll:Cancel")) {
+		case 1:
+			if( countitem(39) > 0 ) {
+				mes "[Elemental Researcher]";
+				mes "Looks like you own a Tera scroll already.";
+				close;
+			}
+			mes "[Elemental Researcher]";
+			mes "Tera! The earth elemental!";
+			mes "Here you go! Treat it well.";
+			set Zeny, Zeny-75000;
+			getitem 39,1;
+			close;
+		case 2:
+			if( countitem(40) > 0 ) {
+				mes "[Elemental Researcher]";
+				mes "Looks like you own a Ventus scroll already.";
+				close;
+			}
+			mes "[Elemental Researcher]";
+			mes "Ventus! The wind elemental!";
+			mes "Here you go! Treat it well.";
+			set Zeny, Zeny-75000;
+			getitem 40,1;
+			close;
+		case 3:
+			if( countitem(41) > 0 ) {
+				mes "[Elemental Researcher]";
+				mes "Looks like you own an Aqua scroll already.";
+				close;
+			}
+			mes "[Elemental Researcher]";
+			mes "Aqua! The water elemental!";
+			mes "Here you go! Treat it well.";
+			set Zeny, Zeny-75000;
+			getitem 41,1;
+			close;
+		case 4:
+			if( countitem(42) > 0 ) {
+				mes "[Elemental Researcher]";
+				mes "Looks like you own an Agni scroll already.";
+				close;
+			}
+			mes "[Elemental Researcher]";
+			mes "Agni! The fire elemental!";
+			mes "Here you go! Treat it well.";
+			set Zeny, Zeny-75000;
+			getitem 42,1;
+			close;
+		case 5:
+			mes "[Elemental Researcher]";
+			mes "Oh... Let me know if you change your mind.";
+			close;
+	}
+	if ((MaxWeight-Weight) < 200 || checkweight(1201,1) == 0) {
+		mes "[Elemental Researcher]";
+		mes "Wait a moment!";
+		mes "Currently you're carrying too many items with you.";
+		next;
+		mes "[Elemental Researcher]";
+		mes "Please come back later after you put some items into Kafra storage.";
+		close;
+	}
+}
+
+yuno_in03,232,56,5	duplicate(elementalresearcher)	Elemental Researcher#elementalresearcher	865
