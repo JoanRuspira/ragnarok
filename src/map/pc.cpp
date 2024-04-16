@@ -12030,20 +12030,26 @@ void pc_readdb(void) {
 		uint16 j;
 		if (!pcdb_checkid(i))
 			continue;
-		if (i == JOB_WEDDING || i == JOB_XMAS || i == JOB_SUMMER || i == JOB_HANBOK || i == JOB_OKTOBERFEST || i == JOB_SUMMER2)
-			continue; //Classes that do not need exp tables.
-		idx = pc_class2idx(i);
-		if (!job_info[idx].max_level[0])
-			ShowWarning("Class %s (%d) does not have a base exp table.\n", job_name(i), i);
-		if (!job_info[idx].max_level[1])
-			ShowWarning("Class %s (%d) does not have a job exp table.\n", job_name(i), i);
-		
-		//Init and checking the empty value of Base HP/SP [Cydh]
-		for (j = 0; j < (job_info[idx].max_level[0] ? job_info[idx].max_level[0] : MAX_LEVEL); j++) {
-			if (job_info[idx].base_hp[j] == 0)
-				job_info[idx].base_hp[j] = pc_calc_basehp(j+1,i);
-			if (job_info[idx].base_sp[j] == 0)
-				job_info[idx].base_sp[j] = pc_calc_basesp(j+1,i);
+		if (i == JOB_NOVICE || i == JOB_NOVICE_HIGH || i == JOB_SWORDMAN || i == JOB_SWORDMAN_HIGH || i == JOB_ACOLYTE || i == JOB_ACOLYTE_HIGH || 
+			i == JOB_MERCHANT || i == JOB_MERCHANT_HIGH || i == JOB_ARCHER || i == JOB_ARCHER_HIGH || i == JOB_KNIGHT || i == JOB_LORD_KNIGHT  ||
+			i == JOB_CRUSADER || i == JOB_PALADIN  || i == JOB_HUNTER || i == JOB_SNIPER  || i == JOB_BARD || i == JOB_CLOWN  ||
+			i == JOB_DANCER || i == JOB_GYPSY  || i == JOB_BLACKSMITH || i == JOB_WHITESMITH  || i == JOB_ALCHEMIST || i == JOB_CREATOR  ||
+			i == JOB_ASSASSIN || i == JOB_ASSASSIN_CROSS  || i == JOB_ROGUE || i == JOB_STALKER  || i == JOB_PRIEST || i == JOB_HIGH_PRIEST  ||
+			i == JOB_WIZARD || i == JOB_HIGH_WIZARD || i == JOB_SAGE || i == JOB_PROFESSOR) {
+
+			idx = pc_class2idx(i);
+			if (!job_info[idx].max_level[0])
+				ShowWarning("Class %s (%d) does not have a base exp table.\n", job_name(i), i);
+			if (!job_info[idx].max_level[1])
+				ShowWarning("Class %s (%d) does not have a job exp table.\n", job_name(i), i);
+			
+			//Init and checking the empty value of Base HP/SP [Cydh]
+			for (j = 0; j < (job_info[idx].max_level[0] ? job_info[idx].max_level[0] : MAX_LEVEL); j++) {
+				if (job_info[idx].base_hp[j] == 0)
+					job_info[idx].base_hp[j] = pc_calc_basehp(j+1,i);
+				if (job_info[idx].base_sp[j] == 0)
+					job_info[idx].base_sp[j] = pc_calc_basesp(j+1,i);
+			}
 		}
 	}
 }

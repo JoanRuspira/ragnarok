@@ -1,0 +1,623 @@
+# This file is a part of rAthena.
+#   Copyright(C) 2021 rAthena Development Team
+#   https://rathena.org - https://github.com/rathena
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+###########################################################################
+# Item Database
+###########################################################################
+#
+# Item Settings
+#
+###########################################################################
+# - Id                      Item ID.
+#   AegisName               Server name to reference the item in scripts and lookups, should use no spaces.
+#   Name                    Name in English for displaying as output.
+#   Type                    Item type. (Default: Etc)
+#   SubType                 Weapon or Ammo type. (Default: 0)
+#   Buy                     Buying price. When not specified, becomes double the sell price. (Default: 0)
+#   Sell                    Selling price. When not specified, becomes half the buy price. (Default: 0)
+#   Weight                  Item weight. Each 10 is 1 weight. (Default: 0)
+#   Attack                  Weapon's attack. (Default: 0)
+#   MagicAttack             Weapon's magic attack. (Default: 0)
+#   Defense                 Armor's defense. (Default: 0)
+#   Range                   Weapon's attack range. (Default: 0)
+#   Slots                   Available slots in item. (Default: 0)
+#   Jobs                    Jobs that can equip the item. (Map default is 'All: true')
+#   Classes                 Upper class types that can equip the item. (Map default is 'All: true')
+#   Gender                  Gender that can equip the item. (Default: Both)
+#   Locations               Equipment's placement. (Default: None)
+#   WeaponLevel             Weapon level. (Default: 0)
+#   EquipLevelMin           Minimum required level to equip. (Default: 0)
+#   EquipLevelMax           Maximum level that can equip. (Default: 0)
+#   Refineable              If the item can be refined. (Default: false)
+#   View                    View sprite of an item. (Default: 0)
+#   AliasName               Another item's AegisName that will be sent to the client instead of this item's AegisName. (Default: null)
+#   Flags:                  Item flags. (Default: null)
+#     BuyingStore           If the item is available for Buyingstores. (Default: false)
+#     DeadBranch            If the item is a Dead Branch. (Default: false)
+#     Container             If the item is part of a container. (Default: false)
+#     UniqueId              If the item is a unique stack. (Default: false)
+#     BindOnEquip           If the item is bound to the character upon equipping. (Default: false)
+#     DropAnnounce          If the item has a special announcement to self on drop. (Default: false)
+#     NoConsume             If the item is consumed on use. (Default: false)
+#     DropEffect            If the item has a special effect on the ground when dropped by a monster. (Default: None)
+#   Delay:                  Item use delay. (Default: null)
+#     Duration              Duration of delay in seconds.
+#     Status                Status Change used to track delay. (Default: None)
+#   Stack:                  Item stack amount. (Default: null)
+#     Amount                Maximum amount that can be stacked.
+#     Inventory             If the stack is applied to player's inventory. (Default: true)
+#     Cart                  If the stack is applied to the player's cart. (Default: false)
+#     Storage               If the stack is applied to the player's storage. (Default: false)
+#     GuildStorage          If the stack is applied to the player's guild storage. (Default: false)
+#   NoUse:                  Conditions when the item is unusable. (Default: null)
+#     Override              Group level to override these conditions.
+#     Sitting               If the item can not be used while sitting. (Default: false)
+#   Trade:                  Trade restrictions. (Default: null)
+#     Override              Group level to override these conditions.
+#     NoDrop                If the item can not be dropped. (Default: false)
+#     NoTrade               If the item can not be traded. (Default: false)
+#     TradePartner          If the item can not be traded to the player's partner. (Default: false)
+#     NoSell                If the item can not be sold. (Default: false)
+#     NoCart                If the item can not be put in a cart. (Default: false)
+#     NoStorage             If the item can not be put in a storage. (Default: false)
+#     NoGuildStorage        If the item can not be put in a guild storage. (Default: false)
+#     NoMail                If the item can not be put in a mail. (Default: false)
+#     NoAuction             If the item can not be put in an auction. (Default: false)
+#   Script                  Script to execute when the item is used/equipped. (Default: null)
+#   EquipScript             Script to execute when the item is equipped. (Default: null)
+#   UnEquipScript           Script to execute when the item is unequipped or when a rental item expires. (Default: null)
+###########################################################################
+
+Header:
+  Type: ITEM_DB
+  Version: 1
+
+Body:
+  - Id: 910
+    AegisName: Garlet
+    Name: Garlet
+    Type: Etc
+    Buy: 40
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 911
+    AegisName: Scell
+    Name: Scell
+    Type: Etc
+    Buy: 160
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 912
+    AegisName: Zargon
+    Name: Zargon
+    Type: Etc
+    Buy: 480
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 712
+    AegisName: Flower
+    Name: Flower
+    Type: Etc
+    Buy: 2
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 744
+    AegisName: Bunch_Of_Flowers
+    Name: Bouquet
+    Type: Etc
+    Buy: 2000
+    Weight: 50
+    Flags:
+      BuyingStore: true
+  - Id: 748
+    AegisName: Witherless_Rose
+    Name: Witherless Rose
+    Type: Etc
+    Buy: 55000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 6113
+    AegisName: Vital_Flower_
+    Name: Vital Flower
+    Type: Etc
+    Buy: 1000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 6114
+    AegisName: Flame_Gemstone
+    Name: Flame Gemstone
+    Type: Etc
+    Buy: 1000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 6115
+    AegisName: Bun_
+    Name: Bun
+    Type: Etc
+    Buy: 1000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 734
+    AegisName: Red_Frame
+    Name: Red Frame
+    Type: Etc
+    Buy: 3000
+    Weight: 200
+    Flags:
+      BuyingStore: true
+  - Id: 735
+    AegisName: Blue_Porcelain
+    Name: Chung Jah
+    Type: Etc
+    Buy: 5000
+    Weight: 500
+    Flags:
+      BuyingStore: true
+  - Id: 736
+    AegisName: White_Platter
+    Name: China
+    Type: Etc
+    Buy: 1000
+    Weight: 300
+    Flags:
+      BuyingStore: true
+  - Id: 737
+    AegisName: Black_Ladle
+    Name: Black Ladle
+    Type: Etc
+    Buy: 400
+    Weight: 50
+    Flags:
+      BuyingStore: true
+  - Id: 746
+    AegisName: Glass_Bead
+    Name: Glass Bead
+    Type: Etc
+    Buy: 1400
+    Weight: 50
+    Flags:
+      BuyingStore: true
+  - Id: 905
+    AegisName: Stem
+    Name: Stem
+    Type: Etc
+    Buy: 46
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7033
+    AegisName: Poison_Spore
+    Name: Poison Spore
+    Type: Etc
+    Buy: 114
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 965
+    AegisName: Clam_Shell
+    Name: Clam Shell
+    Type: Etc
+    Buy: 56
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 964
+    AegisName: Crap_Shell
+    Name: Crab Shell
+    Type: Etc
+    Buy: 90
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 718
+    AegisName: Dark_Red_Jewel
+    Name: Garnet
+    Type: Etc
+    Buy: 6000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 719
+    AegisName: Violet_Jewel
+    Name: Amethyst
+    Type: Etc
+    Buy: 6000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 720
+    AegisName: Skyblue_Jewel
+    Name: Aquamarine
+    Type: Etc
+    Buy: 6000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 721
+    AegisName: Azure_Jewel
+    Name: Emerald
+    Type: Etc
+    Buy: 6000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 722
+    AegisName: Scarlet_Jewel
+    Name: Pearl
+    Type: Etc
+    Buy: 6000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 723
+    AegisName: Cardinal_Jewel
+    Name: Ruby
+    Type: Etc
+    Buy: 6000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 724
+    AegisName: Cardinal_Jewel_
+    Name: Cursed Ruby
+    Type: Etc
+    Buy: 600
+    Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 725
+    AegisName: Red_Jewel
+    Name: Sardonyx
+    Type: Etc
+    Buy: 6000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 726
+    AegisName: Blue_Jewel
+    Name: Sapphire
+    Type: Etc
+    Buy: 6000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 727
+    AegisName: White_Jewel
+    Name: Opal
+    Type: Etc
+    Buy: 6000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 728
+    AegisName: Golden_Jewel
+    Name: Topaz
+    Type: Etc
+    Buy: 6000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 729
+    AegisName: Bluish_Green_Jewel
+    Name: Zircon
+    Type: Etc
+    Buy: 6000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 730
+    AegisName: Crystal_Jewel
+    Name: 1carat Diamond
+    Type: Etc
+    Buy: 10000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 731
+    AegisName: Crystal_Jewel_
+    Name: 2carat Diamond
+    Type: Etc
+    Buy: 25000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 732
+    AegisName: Crystal_Jewel__
+    Name: 3carat Diamond
+    Type: Etc
+    Buy: 55000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 733
+    AegisName: Crystal_Jewel___
+    Name: Cracked Diamond
+    Type: Etc
+    Buy: 10
+    Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 745
+    AegisName: Wedding_Bouquet
+    Name: Wedding Bouquet
+    Type: Etc
+    Buy: 12000
+    Weight: 50
+    Flags:
+      BuyingStore: true
+  - Id: 7170
+    AegisName: Tuxedo
+    Name: Tuxedo
+    Type: Etc
+    Buy: 43000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 740
+    AegisName: Stuffed_Doll
+    Name: Puppet
+    Type: Etc
+    Buy: 1000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 741
+    AegisName: Poring_Doll
+    Name: Poring Doll
+    Type: Etc
+    Buy: 1800
+    Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 742
+    AegisName: Chonchon_Doll
+    Name: Chonchon Doll
+    Type: Etc
+    Buy: 3000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 743
+    AegisName: Spore_Doll
+    Name: Spore Doll
+    Type: Etc
+    Buy: 5500
+    Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 6094
+    AegisName: Traditional_Cookie
+    Name: Traditional Sweets
+    Type: Etc
+    Buy: 20
+    Weight: 10
+  - Id: 6095
+    AegisName: Flavored_Alcohol
+    Name: Flavored Alcohol
+    Type: Etc
+    Buy: 1000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 6096
+    AegisName: Fish_With_Blue_Back
+    Name: Fish With Blue Back
+    Type: Etc
+    Buy: 20
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 6097
+    AegisName: Pumpkin_Pie_
+    Name: Pumpkin Pie
+    Type: Etc
+    Buy: 20
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 6111
+    AegisName: Mystic_Stone
+    Name: Mystic Stone
+    Type: Etc
+    Buy: 1000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 6108
+    AegisName: Apple_Pudding
+    Name: Apple Pudding
+    Type: Etc
+    Buy: 1000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 6099
+    AegisName: Grilled_Rice_Cake
+    Name: Grilled Rice Cake
+    Type: Etc
+    Buy: 20
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 6104
+    AegisName: Big_Cell
+    Name: Big Cell
+    Type: Etc
+    Buy: 1000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 6112
+    AegisName: Fresh_Plant
+    Name: Fresh Plant
+    Type: Etc
+    Buy: 1000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 6098
+    AegisName: Small_Snow_Flower
+    Name: Small Snow Flower
+    Type: Etc
+    Buy: 1000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 6100
+    AegisName: Damp_Darkness
+    Name: Damp Darkness
+    Type: Etc
+    Buy: 1000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 975
+    AegisName: Scarlet_Dyestuffs
+    Name: Scarlet Dyestuffs
+    Type: Etc
+    Buy: 8000
+    Weight: 150
+    Flags:
+      BuyingStore: true
+  - Id: 976
+    AegisName: Lemon_Dyestuffs
+    Name: Lemon Dyestuffs
+    Type: Etc
+    Buy: 8000
+    Weight: 150
+    Flags:
+      BuyingStore: true
+  - Id: 978
+    AegisName: Cobaltblue_Dyestuffs
+    Name: Cobaltblue Dyestuffs
+    Type: Etc
+    Buy: 8000
+    Weight: 150
+    Flags:
+      BuyingStore: true
+  - Id: 979
+    AegisName: Darkgreen_Dyestuffs
+    Name: Darkgreen Dyestuffs
+    Type: Etc
+    Buy: 8000
+    Weight: 150
+    Flags:
+      BuyingStore: true
+  - Id: 980
+    AegisName: Orange_Dyestuffs
+    Name: Orange Dyestuffs
+    Type: Etc
+    Buy: 8000
+    Weight: 150
+    Flags:
+      BuyingStore: true
+  - Id: 981
+    AegisName: Violet_Dyestuffs
+    Name: Violet Dyestuffs
+    Type: Etc
+    Buy: 8000
+    Weight: 150
+    Flags:
+      BuyingStore: true
+  - Id: 982
+    AegisName: White_Dyestuffs
+    Name: White Dyestuffs
+    Type: Etc
+    Buy: 8000
+    Weight: 150
+    Flags:
+      BuyingStore: true
+  - Id: 983
+    AegisName: Black_Dyestuffs
+    Name: Black Dyestuffs
+    Type: Etc
+    Buy: 8000
+    Weight: 150
+    Flags:
+      BuyingStore: true
+  - Id: 919
+    AegisName: Animal's_Skin
+    Name: Animal Skin
+    Type: Etc
+    Buy: 36
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 925
+    AegisName: Bill_Of_Birds
+    Name: Bill of Birds
+    Type: Etc
+    Buy: 64
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 747
+    AegisName: Crystal_Mirror
+    Name: Crystal Mirror
+    Type: Etc
+    Buy: 15000
+    Weight: 50
+    Flags:
+      BuyingStore: true
+  - Id: 929
+    AegisName: Immortal_Heart
+    Name: Immortal Heart
+    Type: Etc
+    Buy: 374
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 6110
+    AegisName: Vital_Flower
+    Name: Vital Flower
+    Type: Etc
+    Buy: 1000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 1010
+    AegisName: Phracon
+    Name: Phracon
+    Type: Etc
+    Buy: 200
+    Weight: 200
+    Flags:
+      BuyingStore: true
+  - Id: 1011
+    AegisName: Emveretarcon
+    Name: Emveretarcon
+    Type: Etc
+    Buy: 1000
+    Weight: 200
+    Flags:
+      BuyingStore: true
+  - Id: 909
+    AegisName: Jellopy
+    Name: Jellopy
+    Type: Etc
+    Buy: 6
+    Weight: 10
+    Flags:
+      BuyingStore: true

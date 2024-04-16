@@ -11,63 +11,23 @@
 // NOTE:
 // - Up to MAX_ARROW_RESULT (typically 5) ID/Amount pairs can be specified.
 // - To remove entry by importing, put 0 on 'MakeID'
-// Trunk --> 10 Arrows
-1019,1750,10
-// Iron Ore --> 10 Iron Arrows
-1002,1770,10
-// Phracon --> 25 Iron Arrows
-1010,1770,25
-// Emveretarcon --> 40 Iron Arrows
-1011,1770,40
-// Iron --> 50 Iron Arrows
-998,1770,50
-// Steel --> 50 Steel Arrows
-999,1753,50
-// Rough Oridecon --> 10 Oridecon Arrows
-756,1765,10
-// Rough Elunium --> 60 Steel Arrows
-757,1753,60
-// Oridecon --> 50 Oridecon Arrows
-984,1765,50
-// Elunium --> 200 Steel Arrows
-985,1753,200
-// Red Blood --> 40 Fire Arrows
-990,1752,40
-// Crystal Blue --> 40 Crystal Arrows
-991,1754,40
-// Wind of Verdure --> 40 Arrows of Wind
-992,1755,40
-// Green Live --> 40 Stone Arrows
-993,1756,40
-// Flame Heart --> 100 Fire Arrows
-994,1752,100
-// Mystic Frozen --> 100 Crystal Arrows
-995,1754,100
-// Rough Wind --> 100 Arrows of Wind
-996,1755,100
-// Great Nature --> 100 Stone Arrows
-997,1756,100
-// Bee Sting --> 2 Rusty Arrow
-939,1762,2
-// Venom Canine --> 2 Poison Arrow
-937,1763,2
-// Scorpion Tail --> 3 Rusty Arrows
-904,1762,3
-// Garlet --> 10 Rusty Arrows
-910,1762,10
-// Zargon --> 10 Silver Arrows
-912,1751,10
-// Coal --> 10 Shadow Arrows
-1003,1767,10
-// Star Dust --> 10 Immaterial Arrows
-1001,1757,30
-// Star Crumb --> 50 Immaterial Arrows
-1000,1757,50
-// Cracked Diamond --> 25 Sharp Arrows
-733,1764,25
-// 1 Carat Diamond --> 50 Sharp Arrows
-730,1764,50
-// 2 Carat Diamond --> 200 Sharp Arrows
-731,1764,200
-// 3 Carat Diamond --> 500 Sharp Arrows
-732,1764,500
+// Trunk --> 50 Arrows
+1019,1750,50
+// Trunk --> 100 Arrows
+1067,1750,100
+// Red Blood --> 500 Fire Arrows
+990,1752,500
+// Crystal Blue --> 500 Crystal Arrows
+991,1754,500
+// Wind of Verdure --> 500 Arrows of Wind
+992,1755,500
+// Green Live --> 500 Stone Arrows
+993,1756,500
+// Flame Heart --> 1000 Fire Arrows
+994,1752,1000
+// Mystic Frozen --> 1000 Crystal Arrows
+995,1754,1000
+// Rough Wind --> 1000 Arrows of Wind
+996,1755,1000
+// Great Nature --> 1000 Stone Arrows
+997,1756,1000
