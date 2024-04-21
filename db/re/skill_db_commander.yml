@@ -42,6 +42,7 @@ Body:
     Element: Weapon
     CastTime: 1000
     AfterCastActDelay: 400
+    CastCancel: True
     Cooldown: 7000
     Duration2: 1000
     Flags:
@@ -91,7 +92,7 @@ Body:
           Amount: 1
   - Id: 357
     Name: SK_CM_SPEAR_DYNAMO
-    Description: Concentration
+    Description: Spear Dynamo
     MaxLevel: 5
     Type: Weapon
     TargetType: Self
@@ -121,6 +122,11 @@ Body:
     HitCount: -10
     Element: Weapon
     AfterCastActDelay: 400
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Cooldown: 7000
     Requires:
       SpCost: 30
@@ -187,7 +193,7 @@ Body:
         RangedSingleUnit: true
   - Id: 5004
     Name: SK_CM_DRAGONBREATH
-    Description: Dragon Breath - Water
+    Description: Dragon Breath
     MaxLevel: 5
     Type: Magic
     TargetType: Ground
@@ -197,9 +203,15 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Neutral
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     SplashArea: 5
     CastTime: 2000
     Cooldown: 8000
+    CastCancel: true
     AfterCastActDelay: 400
     Duration1: 40000
     Requires:
@@ -215,17 +227,18 @@ Body:
     TargetType: Self
     DamageFlags:
       Splash: true
-    Hit: Single
-    HitCount: 1
-    Element: Weapon
-    SplashArea: 3
     Flags:
       IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Reproduce: true
+    Hit: Single
+    HitCount: 1
+    Element: Weapon
+    SplashArea: 3
     CastTime: 2000
     Cooldown: 8000
+    CastCancel: true
     AfterCastActDelay: 400
     Requires:
       SpCost: 40
@@ -236,7 +249,7 @@ Body:
           Amount: 1
   - Id: 867
     Name: SK_CM_DUMMY_HUNDREDSPEAR
-    Description: Vulcan Arrow
+    Description: A Hundred Spears
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack

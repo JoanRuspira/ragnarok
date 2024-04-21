@@ -39,6 +39,12 @@ Body:
     TargetType: Attack
     DamageFlags:
       Splash: true
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Range: -1
     Hit: Multi_Hit
     HitCount: -1
@@ -52,22 +58,23 @@ Body:
         Knuckle: true
   - Id: 2337
     Name: SK_MO_CIRCULARFISTS
-    Description: Windmill
+    Description: Circular Fists
     MaxLevel: 5
     Type: Weapon
     TargetType: Self
     DamageFlags:
       Splash: true
     Flags:
-      IgnoreHovering: true
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Range: 1
     Hit: Multi_Hit
     HitCount: -2
     Element: Weapon
     SplashArea: 4
-    CopyFlags:
-      Skill:
-        Reproduce: true
     CastCancel: true
     AfterCastActDelay: 400
     Cooldown: 5000
@@ -80,7 +87,7 @@ Body:
         Knuckle: true
   - Id: 370
     Name: SK_MO_PALMSTRIKE
-    Description: Raging Palm Strike
+    Description: Palm Strike
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
@@ -102,6 +109,12 @@ Body:
         Time: 16000
       - Level: 5
         Time: 20000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 20
       Weapon:
@@ -128,8 +141,6 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    Flags:
-      TargetTrap: true
     Range: 9
     Hit: Multi_Hit
     HitCount:
@@ -144,10 +155,7 @@ Body:
       - Level: 5
         Count: 5
     Element: Neutral
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
+    CastCancel: true
     CastTime: 750
     Cooldown: 5000
     AfterCastActDelay: 400
@@ -160,6 +168,12 @@ Body:
         Time: 600
       - Level: 5
         Time: 800
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 25
       SpiritSphereCost:
@@ -175,23 +189,22 @@ Body:
           Amount: 5
   - Id: 266
     Name: SK_MO_OCCULTIMPACT
-    Description: Occult Impaction
+    Description: Occult Impact
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     Element: Weapon
-    DamageFlags:
-      IgnoreFlee: true
     Flags:
-      TargetTrap: true
-    Range: 1
-    Hit: Single
-    HitCount: -1
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
+    Range: 1
+    Hit: Single
+    HitCount: -1
     Cooldown: 5000
+    CastCancel: true
     CastTime: 1000
     AfterCastActDelay: 400
     Requires:
@@ -206,7 +219,11 @@ Body:
     DamageFlags:
       Splash: true
     Flags:
-      TargetTrap: true
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Hit: Multi_Hit
     HitCount: -2
     Element: Neutral
@@ -224,10 +241,6 @@ Body:
       - Level: 5
         Area: 4
     Knockback: 2
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     Requires:
       SpCost: 23
       ItemCost:
@@ -236,7 +249,7 @@ Body:
       SpiritSphereCost: 1
   - Id: 519
     Name: SK_MO_TRIPLEARMCANNON
-    Description: Full Buster
+    Description: Triple Arm Cannon
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
@@ -247,6 +260,12 @@ Body:
     CastCancel: true
     Cooldown: 5000
     AfterCastActDelay: 100
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 15
       ItemCost:
@@ -258,7 +277,7 @@ Body:
         2hMace: true
   - Id: 514
     Name: SK_MO_TIGERFIST
-    Description: Piercing Shot
+    Description: Tiger Fist
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
@@ -268,6 +287,12 @@ Body:
     Element: Weapon
     Cooldown: 5000
     AfterCastActDelay: 100
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 15
       Weapon:
@@ -281,6 +306,12 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Support
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     DamageFlags:
       NoDamage: true
     Range: 9
@@ -296,7 +327,7 @@ Body:
           Amount: 1
   - Id: 264
     Name: SK_MO_BODYRELOCATION
-    Description: Snap
+    Description: Body Relocation
     MaxLevel: 5
     TargetType: Ground
     DamageFlags:

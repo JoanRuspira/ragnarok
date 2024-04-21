@@ -25,7 +25,7 @@ Body:
         2hsword: true
   - Id: 2258
     Name: SK_ST_FATALMENACE
-    Description: Moon Slasher
+    Description: Fatal Menace
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
@@ -35,12 +35,14 @@ Body:
     Element: Weapon
     DamageFlags:
       Critical: true
-    CopyFlags:
-      Skill:
-        Reproduce: true
     AfterCastActDelay: 400
     Duration1: 1000
     Cooldown: 6000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Requires: 
       SpCost: 20
       Weapon:
@@ -49,7 +51,7 @@ Body:
         2hsword: true
   - Id: 2287
     Name: SK_ST_STALK
-    Description: Shadow Form
+    Description: Stalk
     MaxLevel: 5
     TargetType: Attack
     DamageFlags:
@@ -64,13 +66,18 @@ Body:
       SpCost: 25
   - Id: 476
     Name: SK_ST_FULLSTRIP
-    Description: Divest All
+    Description: Full Strip
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     DamageFlags:
       NoDamage: true
     Range: 1
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Hit: Single
     HitCount: 1
     Cooldown: 25000
@@ -111,7 +118,7 @@ Body:
           Amount: 1
   - Id: 2286
     Name: SK_ST_CHEATSKILL
-    Description: Auto Shadow Spell
+    Description: Cheat Skill
     MaxLevel: 5
     TargetType: Self
     DamageFlags:
@@ -127,7 +134,7 @@ Body:
       SpCost: 100
   - Id: 5002
     Name: SK_ST_UNLIMIT
-    Description: Unlimited
+    Description: Unlimit
     MaxLevel: 5
     TargetType: Self
     DamageFlags:
@@ -143,13 +150,17 @@ Body:
         Bow: true
   - Id: 382
     Name: SK_ST_SHARPSHOOTING
-    Description: Focused Arrow Strike
+    Description: Sharp Shooting
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     Range: 9
     Flags:
       AlterRangeVulture: true
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Hit: Multi_Hit
     HitCount: 1
     Element: Weapon
@@ -168,7 +179,7 @@ Body:
       AmmoAmount: 1
   - Id: 215
     Name: SK_ST_STRIPWEAPON
-    Description: Divest Weapon
+    Description: Strip Weapon
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
@@ -204,7 +215,7 @@ Body:
           Amount: 25
   - Id: 216
     Name: SK_ST_STRIPSHIELD
-    Description: Divest Shield
+    Description: Strip Shield
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
@@ -240,7 +251,7 @@ Body:
           Amount: 20
   - Id: 217
     Name: SK_ST_STRIPARMOR
-    Description: Divest Armor
+    Description: Strip Armor
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
@@ -276,7 +287,7 @@ Body:
           Amount: 25
   - Id: 218
     Name: SK_ST_STRIPHELM
-    Description: Divest Helm
+    Description: Strip Helm
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack

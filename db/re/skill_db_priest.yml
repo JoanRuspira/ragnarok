@@ -16,12 +16,15 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Ghost
-    CopyFlags:
-      Skill:
-        Reproduce: true
     CastCancel: true
     Cooldown: 3000
     AfterCastActDelay: 1000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 35
   - Id: 881
@@ -47,13 +50,16 @@ Body:
         Area: 4
       - Level: 5
         Area: 5
-    CopyFlags:
-      Skill:
-        Reproduce: true
     CastCancel: true
     Cooldown: 5000
     CastTime: 5000
     AfterCastActDelay: 1000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 60
   - Id: 79
@@ -76,12 +82,6 @@ Body:
       - Level: 5
         Count: 10
     Element: Holy
-    Flags:
-      IsAutoShadowSpell: true
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     CastCancel: true
     Cooldown: 20000
     CastTime: 7000
@@ -97,6 +97,12 @@ Body:
         Time: 12000
       - Level: 5
         Time: 15000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 80
       ItemCost:
@@ -118,19 +124,19 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    Flags:
-      TargetTrap: true
     Range: -2
     Hit: Multi_Hit
     HitCount: -2
     Element: Dark
+    Duration2: 30000
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
-    Duration2: 30000
-    Cooldown: 5000
-    AfterCastActDelay: 400
     Requires:
       SpCost: 40
   - Id: 5072
@@ -148,6 +154,12 @@ Body:
     Cooldown: 4000
     AfterCastActDelay: 1000
     Duration1: 600000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 40
       ItemCost:
@@ -168,10 +180,6 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Holy
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     CastCancel: true
     AfterCastActDelay: 3000
     Duration1:
@@ -185,6 +193,12 @@ Body:
         Time: 150000
       - Level: 5
         Time: 180000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 30
       ItemCost:
@@ -216,6 +230,12 @@ Body:
     CastCancel: true
     Cooldown: 7000
     AfterCastActDelay: 1000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 70
   - Id: 70
@@ -232,10 +252,6 @@ Body:
     HitCount: 1
     Element: Holy
     Knockback: 2
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     CastCancel: true
     CastTime: 8000
     Cooldown: 30000
@@ -251,6 +267,12 @@ Body:
         Time: 25000
       - Level: 5
         Time: 30000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 90
       ItemCost:
@@ -276,13 +298,16 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Holy
-    CopyFlags:
-      Skill:
-        Reproduce: true
     CastCancel: true
     CastTime: 6000
     AfterCastActDelay: 1000
     Cooldown: 10000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 100
       ItemCost:
@@ -312,6 +337,12 @@ Body:
         Time: 75000
       - Level: 5
         Time: 90000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 40
   - Id: 2054
@@ -324,9 +355,6 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Holy
-    CopyFlags:
-      Skill:
-        Reproduce: true
     CastCancel: true
     CastTime: 2000
     AfterCastActDelay: 3000
@@ -351,6 +379,12 @@ Body:
     CastTime: 2000
     AfterCastActDelay: 2000
     Duration1: 120000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 45
   - Id: 74
@@ -380,6 +414,12 @@ Body:
         Time: 75000
       - Level: 5
         Time: 90000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 60
       ItemCost:
@@ -409,6 +449,12 @@ Body:
         Time: 75000
       - Level: 5
         Time: 90000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 60
   - Id: 54
@@ -423,10 +469,6 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Holy
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     CastCancel: true
     CastTime:
       - Level: 1
@@ -441,6 +483,12 @@ Body:
         Time: 1000
     Cooldown: 20000
     AfterCastActDelay: 3000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 100
       ItemCost:
@@ -448,7 +496,7 @@ Body:
           Amount: 1
   - Id: 2055
     Name: SK_PR_DUPLELUX_MELEE
-    Description: Duple Light Melee
+    Description: Duple Lux Melee
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
@@ -456,14 +504,11 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Weapon
-    CopyFlags:
-      Skill:
-        Reproduce: true
     Requires:
       SpCost: 1
   - Id: 2056
     Name: SK_PR_DUPLELUX_MAGIC
-    Description: Duple Light Magic
+    Description: Duple Lux Magic
     MaxLevel: 5
     Type: Magic
     TargetType: Attack
@@ -471,8 +516,5 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Weapon
-    CopyFlags:
-      Skill:
-        Reproduce: true
     Requires:
       SpCost: 1

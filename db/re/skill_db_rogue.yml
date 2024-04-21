@@ -6,7 +6,7 @@ Header:
 Body:
   - Id: 814
     Name: SK_RG_DAGGERQUICKEN
-    Description: Axe Quicken
+    Description: Dagger Quicken
     MaxLevel: 5
     Type: Weapon
     TargetType: Self
@@ -45,6 +45,8 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Weapon
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -66,11 +68,13 @@ Body:
     HitCount: 1
     Element: Weapon
     Cooldown: 5000
+    AfterCastActDelay: 500
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
-    AfterCastActDelay: 500
     Requires:
       SpCost: 16
       Weapon:
@@ -85,7 +89,6 @@ Body:
     TargetType: Self
     DamageFlags:
       Splash: true
-      IgnoreDefense: true
     Hit: Single
     HitCount: 3
     Element: Weapon
@@ -102,6 +105,8 @@ Body:
       - Level: 5
         Area: 3
     AfterCastActDelay: 500
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -118,20 +123,21 @@ Body:
     MaxLevel: 5
   - Id: 2236
     Name: SK_RG_QUICKSHOT
-    Description: Aimed Bolt
+    Description: Quick Shot
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     Flags:
       AlterRangeVulture: true
-    Range: 9
-    Hit: Single
-    HitCount: 1
-    Element: Weapon
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    Element: Weapon
     CastCancel: true
     AfterCastActDelay: 200
     Requires:
@@ -150,13 +156,14 @@ Body:
     Range: 9
     Flags:
       AlterRangeVulture: true
-    Hit: Multi_Hit
-    HitCount: -3
-    Element: Weapon
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
+    Hit: Multi_Hit
+    HitCount: -3
+    Element: Weapon
     CastCancel: true
     Cooldown: 5000
     AfterCastActDelay: 400
@@ -177,6 +184,11 @@ Body:
       Splash: true
     Flags:
       AlterRangeVulture: true
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Range: 9
     Hit: Multi_Hit
     HitCount: -3
@@ -192,10 +204,6 @@ Body:
         Area: 5
       - Level: 5
         Area: 5
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     CastCancel: true
     AfterCastActDelay: 400
     Cooldown: 7000
@@ -230,6 +238,12 @@ Body:
         Time: 12000
       - Level: 5
         Time: 15000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 20
       ItemCost:
@@ -259,6 +273,12 @@ Body:
         Time: 12000
       - Level: 5
         Time: 15000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 20
       ItemCost:

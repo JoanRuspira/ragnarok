@@ -17,6 +17,12 @@ Body:
     AfterCastActDelay: 200
     DamageFlags:
       NoDamage: true
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     HitCount: 1
     Requires:
       SpCost: 0
@@ -32,6 +38,8 @@ Body:
     Element: Weapon
     Cooldown: 5000
     AfterCastActDelay: 400
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -49,16 +57,18 @@ Body:
     HitCount: 1
     Element: Weapon
     Cooldown: 5000
-    AfterCastActDelay: 400
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
+    AfterCastActDelay: 400
     Requires:
       SpCost: 14
   - Id: 210
     Name: SK_TF_MUG
-    Description: Gank
+    Description: Mug
     MaxLevel: 10
     Type: Weapon
     Element: Weapon
@@ -77,12 +87,14 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Weapon
-    Cooldown: 5000
-    AfterCastActDelay: 400
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
+    Cooldown: 5000
+    AfterCastActDelay: 400
     Duration2: 60000
     Requires:
       SpCost: 12
@@ -111,23 +123,22 @@ Body:
       SpCost: 30
   - Id: 1004
     Name: SK_TF_VENOMKNIFE
-    Description: Throw Venom Knife
+    Description: Venom Knife
     MaxLevel: 5
     Type: Weapon
     Element: Poison
     TargetType: Attack
     Flags:
-      IgnoreAutoGuard: true
-      IgnoreCicada: true
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Range: 9
     Hit: Single
     HitCount: 1
     Cooldown: 5000
     AfterCastActDelay: 300
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     Requires:
       SpCost: 13
       ItemCost:
@@ -140,11 +151,6 @@ Body:
     TargetType: Self
     DamageFlags:
       NoDamage: true
-    Flags:
-      AllowWhenHidden: true
-      IgnoreKagehumi: true
-      AllowOnMado: true
-      IgnoreWugBite: true
     Range: 1
     Cooldown: 1000
     AfterCastActDelay: 400
@@ -181,21 +187,23 @@ Body:
       SpCost: 5
   - Id: 152
     Name: SK_TF_THROWSTONE
-    Description: Stone Fling
+    Description: Throw Stone
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     DamageFlags:
       IgnoreFlee: true
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Range: 7
     Hit: Single
     HitCount: 1
     Cooldown: 5000
     AfterCastActDelay: 400
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     Duration1: 5000
     Duration2: 30000
     Requires:

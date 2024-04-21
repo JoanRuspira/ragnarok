@@ -6,13 +6,18 @@ Header:
 Body:
   - Id: 369
     Name: SK_PA_GOSPEL
-    Description: Battle Chant
+    Description: Gospel
     MaxLevel: 5
     Type: Misc
     TargetType: Self
     DamageFlags:
       NoDamage: true
       IgnoreFlee: true
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -35,13 +40,18 @@ Body:
         NoOverlap: true
   - Id: 2322
     Name: SK_PA_KINGSGRACE
-    Description: Holy Grace
+    Description: Kings Grace
     MaxLevel: 5
     Type: Magic
     TargetType: Self
     DamageFlags:
       NoDamage: true
       Splash: true
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Hit: Single
     HitCount: 1
     Element: Holy
@@ -89,11 +99,16 @@ Body:
         Time: 5000
       - Level: 5
         Time: 6000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Requires:
       SpCost: 50
   - Id: 2321
     Name: SK_PA_GENESISRAY
-    Description: Ray of Genesis
+    Description: Genesis Ray
     MaxLevel: 5
     Type: Magic
     TargetType: Ground
@@ -109,6 +124,11 @@ Body:
     AfterCastActDelay: 1000
     Duration1: 10000
     Cooldown: 10000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Requires:
       SpCost: 75
       ItemCost:
@@ -160,6 +180,11 @@ Body:
     Range: 1
     Hit: Single
     Element: Neutral
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     HitCount: 1
     Cooldown: 7000
     AfterCastActDelay: 400
@@ -168,11 +193,16 @@ Body:
       State: Shield
   - Id: 480
     Name: SK_PA_RAPIDSMITING
-    Description: Shield Chain
+    Description: Rapid Smiting
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     Element: Neutral
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Range:
       - Level: 1
         Size: 2
@@ -186,6 +216,7 @@ Body:
         Size: 6
     Hit: Multi_Hit
     HitCount: -5
+    CastCancel: true
     CastTime: 1000
     Cooldown: 7000
     AfterCastActDelay: 400

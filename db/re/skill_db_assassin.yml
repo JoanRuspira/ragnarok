@@ -22,8 +22,12 @@ Body:
     Cooldown: 5000
     AfterCastActDelay: 2000
     Duration2: 5000
-    CastDelayFlags:
-      IgnoreStatus: true
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 25
       Weapon:
@@ -52,6 +56,12 @@ Body:
         Area: 2
     AfterCastActDelay: 0
     Duration1: 3000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 2
       Weapon:
@@ -78,6 +88,12 @@ Body:
     Element: Weapon
     Cooldown: 5000
     AfterCastActDelay: 400
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 20
       Weapon:
@@ -115,15 +131,15 @@ Body:
     TargetType: Attack
     Cooldown: 5000
     AfterCastActDelay: 400
+    DamageFlags:
+      Splash: true
+    Flags:
+      AllowWhenHidden: true
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
-    DamageFlags:
-      Splash: true
-    Flags:
-      TargetTrap: true
-      AllowWhenHidden: true
     Range:
       - Level: 1
         Size: 3
@@ -148,8 +164,6 @@ Body:
     TargetType: Self
     DamageFlags:
       NoDamage: true
-    Flags:
-      IgnoreKagehumi: true
     Hit: Single
     HitCount: 1
     CastTime: 1000
@@ -161,19 +175,19 @@ Body:
       SpCost: 20
   - Id: 214
     Name: SK_AS_PHANTOMMENACE
-    Description: Sightless Mind
+    Description: Phantom Menace
     MaxLevel: 5
     Type: Weapon
     TargetType: Self
+    DamageFlags:
+      Splash: true
+    Flags:
+      AllowWhenHidden: true
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
-    DamageFlags:
-      Splash: true
-    Flags:
-      TargetTrap: true
-      AllowWhenHidden: true
     Hit: Single
     HitCount: 1
     Element: Weapon
@@ -193,7 +207,11 @@ Body:
     DamageFlags:
       NoDamage: true
     Flags:
-      PartyOnly: true
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Range: 1
     Hit: Single
     HitCount: 1
@@ -222,10 +240,6 @@ Body:
         Time: 20000
       - Level: 5
         Time: 20000
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     Requires:
       SpCost: 20
       ItemCost:
@@ -233,7 +247,7 @@ Body:
           Amount: 1
   - Id: 2450
     Name: SK_AS_POISONOUSCLOUD
-    Description: Cloud Kill
+    Description: Poisonouss Cloud
     MaxLevel: 5
     Type: Weapon
     TargetType: Self
@@ -241,9 +255,6 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Poison
-    CopyFlags:
-      Skill:
-        Reproduce: true
     CastCancel: true
     CastTime: 0
     AfterCastActDelay: 500
@@ -270,6 +281,12 @@ Body:
       - Level: 5
         Time: 20000
     Cooldown: 15000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 35
       ItemCost:
@@ -306,6 +323,12 @@ Body:
         Time: 40000
       - Level: 5
         Time: 50000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 15
   - Id: 141
@@ -325,10 +348,6 @@ Body:
     SplashArea: 2
     Cooldown: 5000
     AfterCastActDelay: 400
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     CastCancel: true
     Duration1:
       - Level: 1
@@ -342,6 +361,12 @@ Body:
       - Level: 5
         Time: 0
     Duration2: 60000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 25
       ItemCost:
@@ -357,6 +382,12 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Weapon
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 14
       Ammo:
@@ -364,7 +395,7 @@ Body:
       AmmoAmount: 1
   - Id: 524
     Name: SK_AS_TRIPLE_SHURIKEN
-    Description: Throw Kunai
+    Description: Shuriken Burst
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
@@ -375,6 +406,12 @@ Body:
     Cooldown: 5000
     CastTime: 0
     AfterCastActDelay: 400
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 15
       Ammo:
@@ -382,7 +419,7 @@ Body:
       AmmoAmount: 3
   - Id: 133
     Name: SK_AS_DUALWIELDING
-    Description: Lefthand Mastery
+    Description: Dual Wielding
     MaxLevel: 5
     Type: Weapon
   - Id: 48
@@ -396,7 +433,7 @@ Body:
     Element: Weapon
   - Id: 868
     Name: SK_AS_DUMMY_SONICBLOW
-    Description: Vulcan Arrow
+    Description: Sonic Bloww
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack

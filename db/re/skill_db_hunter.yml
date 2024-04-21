@@ -11,9 +11,6 @@ Body:
     TargetType: Self
     DamageFlags:
       NoDamage: true
-    Flags:
-      IgnoreKagehumi: true
-      IgnoreWugBite: true
     Hit: Single
     HitCount: 1
     Duration1: 10000
@@ -23,7 +20,7 @@ Body:
       SpCost: 25
   - Id: 2282
     Name: SK_HT_ELEMENTALTOTEM
-    Description: FAW - Magic Decoy
+    Description: Elemental Totem
     MaxLevel: 5
     TargetType: Ground
     DamageFlags:
@@ -52,27 +49,27 @@ Body:
     MaxLevel: 5
     Type: Magic
     TargetType: Attack
-    Range: 9
-    Hit: Single
-    HitCount: 1
-    Element: Neutral
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    Element: Neutral
     Cooldown: 5000
     AfterCastActDelay: 400
     Requires:
       SpCost: 25
   - Id: 824
     Name: SK_HT_MYSTICTOTEM
-    Description: FAW - Magic Decoy
+    Description: Mystic Totem
     MaxLevel: 5
     TargetType: Ground
     DamageFlags:
       NoDamage: true
-    Flags:
-      AllowOnMado: true
     Range: 2
     Hit: Single
     HitCount: 1
@@ -293,6 +290,8 @@ Body:
     Cooldown: 15000
     AfterCastActDelay: 400
     Duration1: 50000
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true

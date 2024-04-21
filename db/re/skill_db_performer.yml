@@ -19,6 +19,12 @@ Body:
     Cooldown: 5000
     AfterCastActDelay: 5000
     Duration1: 60000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 85
       ItemCost:
@@ -39,6 +45,11 @@ Body:
       NoDamage: true
     Flags:
       IsSong: true
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Hit: Single
     HitCount: 1
     SplashArea: 5
@@ -63,6 +74,11 @@ Body:
       NoDamage: true
     Flags:
       IsSong: true
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Hit: Single
     HitCount: 1
     SplashArea: 5
@@ -79,7 +95,7 @@ Body:
           Amount: 1
   - Id: 321
     Name: SK_BA_MAGICSTRINGS
-    Description: Enchanted Symphony
+    Description: Magic Strings
     MaxLevel: 5
     Type: Misc
     TargetType: Self
@@ -87,6 +103,11 @@ Body:
       NoDamage: true
     Flags:
       IsSong: true
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Hit: Single
     HitCount: 1
     SplashArea: 5
@@ -107,14 +128,14 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    Flags:
-      AllowWhenPerforming: true
     Range: 9
     Hit: Single
     HitCount: 1
     Element: Weapon
     Cooldown: 5000
     AfterCastActDelay: 400
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -135,6 +156,12 @@ Body:
     Element: Neutral
     DamageFlags:
       Splash: true
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Range: 9
     Hit: Single
     HitCount: 1
@@ -156,13 +183,16 @@ Body:
     Hit: Multi_Hit
     HitCount: -4
     Element: Neutral
-    CopyFlags:
-      Skill:
-        Reproduce: true
     CastCancel: true
     CastTime: 1000
     AfterCastActDelay: 400
     Cooldown: 5000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 40
       Weapon:
@@ -185,6 +215,12 @@ Body:
     AfterCastActDelay: 400
     Duration1: 10000
     Cooldown: 7000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 50
       Weapon:
@@ -204,6 +240,12 @@ Body:
     Cooldown: 5000
     AfterCastActDelay: 5000
     Duration1: 60000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 85
       ItemCost:
@@ -213,7 +255,7 @@ Body:
         Musical: true
   - Id: 2423
     Name: SK_BA_TWILIGHTCHORD
-    Description: Circle of Nature's Sound
+    Description: Twilight Chord
     MaxLevel: 5
     TargetType: Support
     DamageFlags:
@@ -221,21 +263,23 @@ Body:
     Range: 9
     Hit: Single
     HitCount: 1
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     CastCancel: true
     CastTime: 3000
     AfterCastActDelay: 1000
     Cooldown: 5000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 40
       Weapon:
         Musical: true
   - Id: 312
     Name: SK_BA_MOONLIGHTSONATA
-    Description: Power Chord
+    Description: Moonlight Sonata
     MaxLevel: 5
     Type: Misc
     TargetType: Self
@@ -257,6 +301,12 @@ Body:
         Time: 120000
     Cooldown: 10000
     AfterCastActDelay: 10000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 100
       Weapon:
@@ -277,13 +327,16 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Holy
-    CopyFlags:
-      Skill:
-        Reproduce: true
     CastCancel: true
     CastTime: 6000
     AfterCastActDelay: 2000
     Cooldown: 10000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 100
       Weapon:

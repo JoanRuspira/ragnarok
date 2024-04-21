@@ -44,6 +44,7 @@ Body:
       NoDamage: true
     Hit: Single
     HitCount: 1
+    CastCancel: true
     CastTime: 2000
     Duration1: 90000
     Cooldown: 15000
@@ -109,6 +110,11 @@ Body:
     DamageFlags:
       NoDamage: true
       Splash: true
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Hit: Single
     HitCount: 1
     SplashArea: 6
@@ -144,8 +150,10 @@ Body:
       NoDamage: true
     Flags:
       NoTargetSelf: true
-      PartyOnly: true
-      GuildOnly: true
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Range: 9
     Hit: Single
     HitCount: 1

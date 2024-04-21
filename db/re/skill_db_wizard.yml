@@ -6,19 +6,22 @@ Header:
 Body:
   - Id: 2446
     Name: SK_WZ_EARTHSTRAIN
-    Description: Earth Grave
+    Description: Earth Strain
     MaxLevel: 5
     Type: Magic
     TargetType: Ground
     Flags:
       TargetHidden: true
+      IsAutoShadowSpell: true
+      AlterRangeRadius: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Range: 7
     Hit: Single
     HitCount: -5
     Element: Earth
-    CopyFlags:
-      Skill:
-        Reproduce: true
     CastCancel: true
     CastTime: 7000
     Cooldown: 7500
@@ -65,22 +68,23 @@ Body:
     MaxLevel: 5
     Type: Magic
     TargetType: Ground
-    Flags:
-      IsAutoShadowSpell: true
     Range: 7
     Hit: Multi_Hit
     HitCount: -5
     Element: Wind
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     CastCancel: true
     CastTime: 7000
     Cooldown: 7500
     AfterCastActDelay: 2000
     Duration1: 4000
     Duration2: 30000
+    Flags:
+      IsAutoShadowSpell: true
+      AlterRangeRadius: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 85
       ItemCost:
@@ -99,18 +103,6 @@ Body:
           Size: 5
         - Level: 5
           Size: 5
-        - Level: 6
-          Size: 5
-        - Level: 7
-          Size: 5
-        - Level: 8
-          Size: 5
-        - Level: 9
-          Size: 5
-        - Level: 10
-          Size: 5
-        - Level: 11
-          Size: 7
       Range: 1
       Interval: 2000
       Target: Enemy
@@ -123,23 +115,24 @@ Body:
     MaxLevel: 5
     Type: Magic
     TargetType: Ground
-    Flags:
-      IsAutoShadowSpell: true
     Range: 7
     Hit: Single
     HitCount: 1
     Element: Water
     Knockback: 2
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     CastCancel: true
     CastTime: 7000
     Cooldown: 7500
     AfterCastActDelay: 2000
     Duration1: 4600
     Duration2: 12000
+    Flags:
+      IsAutoShadowSpell: true
+      AlterRangeRadius: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 85
       ItemCost:
@@ -160,8 +153,6 @@ Body:
     MaxLevel: 5
     Type: Magic
     TargetType: Ground
-    Flags:
-      IsAutoShadowSpell: true
     Range: 7
     Hit: Multi_Hit
     HitCount:
@@ -177,10 +168,6 @@ Body:
         Count: 2
     Element: Fire
     SplashArea: 3
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     CastCancel: true
     CastTime: 7000
     Cooldown: 7500
@@ -197,6 +184,13 @@ Body:
       - Level: 5
         Time: 7000
     Duration2: 5000
+    Flags:
+      IsAutoShadowSpell: true
+      AlterRangeRadius: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 85
       ItemCost:
@@ -217,8 +211,6 @@ Body:
     TargetType: Attack
     DamageFlags:
       Splash: true
-    Flags:
-      AlterRangeRadius: true
     Range: 7
     Hit: Multi_Hit
     HitCount:
@@ -233,14 +225,18 @@ Body:
       - Level: 5
         Count: 5
     Element: Earth
-    CopyFlags:
-      Skill:
-        Reproduce: true
     CastCancel: true
     CastTime: 7000
     AfterCastActDelay: 2000
     Duration1: 5000
     Cooldown: 5000
+    Flags:
+      IsAutoShadowSpell: true
+      AlterRangeRadius: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 65
   - Id: 884
@@ -251,8 +247,6 @@ Body:
     TargetType: Attack
     DamageFlags:
       Splash: false
-    Flags:
-      AlterRangeRadius: true
     Range: 7
     Hit: Multi_Hit
     HitCount:
@@ -267,14 +261,18 @@ Body:
       - Level: 5
         Count: 5
     Element: Wind
-    CopyFlags:
-      Skill:
-        Reproduce: true
     CastCancel: true
     CastTime: 7000
     AfterCastActDelay: 2000
     Duration1: 5000
     Cooldown: 5000
+    Flags:
+      IsAutoShadowSpell: true
+      AlterRangeRadius: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 65
   - Id: 838
@@ -285,8 +283,6 @@ Body:
     TargetType: Attack
     DamageFlags:
       Splash: true
-    Flags:
-      AlterRangeRadius: true
     Range: 7
     Hit: Multi_Hit
     HitCount:
@@ -301,14 +297,18 @@ Body:
       - Level: 5
         Count: 5
     Element: Water
-    CopyFlags:
-      Skill:
-        Reproduce: true
     CastCancel: true
     CastTime: 7000
     AfterCastActDelay: 2000
     Duration1: 5000
     Cooldown: 5000
+    Flags:
+      IsAutoShadowSpell: true
+      AlterRangeRadius: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 65
   - Id: 2211
@@ -319,8 +319,6 @@ Body:
     TargetType: Attack
     DamageFlags:
       Splash: true
-    Flags:
-      AlterRangeRadius: true
     Range: 7
     Hit: Multi_Hit
     HitCount:
@@ -335,14 +333,18 @@ Body:
       - Level: 5
         Count: 5
     Element: Fire
-    CopyFlags:
-      Skill:
-        Reproduce: true
     CastCancel: true
     CastTime: 7000
     AfterCastActDelay: 2000
     Duration1: 5000
     Cooldown: 5000
+    Flags:
+      IsAutoShadowSpell: true
+      AlterRangeRadius: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 65
   - Id: 844
@@ -357,16 +359,16 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Dark
+    CastCancel: true
+    Cooldown: 4000
+    AfterCastActDelay: 1000
+    Flags:
+      IsAutoShadowSpell: true
+      AlterRangeRadius: true
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
-    CopyFlags:
-      Skill:
-        Reproduce: true
-    CastCancel: true
-    Cooldown: 4000
-    AfterCastActDelay: 1000
     Requires:
       SpCost: 65
   - Id: 469
@@ -390,16 +392,17 @@ Body:
         Count: 5
     Element: Ghost
     CastCancel: true
-    Flags:
-      IsAutoShadowSpell: true
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     CastTime: 2000
     AfterCastActDelay: 2000
     Duration1: 3000
     Cooldown: 5000
+    Flags:
+      IsAutoShadowSpell: true
+      AlterRangeRadius: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 65
   - Id: 845
@@ -425,14 +428,17 @@ Body:
         Area: 4
       - Level: 5
         Area: 5
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     CastCancel: true
     Cooldown: 5000
     CastTime: 5000
     AfterCastActDelay: 1000
+    Flags:
+      IsAutoShadowSpell: true
+      AlterRangeRadius: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 75
       ItemCost:
@@ -450,10 +456,6 @@ Body:
     Hit: Multi_Hit
     HitCount: -3
     Element: Dark
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     SplashArea:
       - Level: 1
         Area: 1
@@ -465,13 +467,17 @@ Body:
         Area: 4
       - Level: 5
         Area: 5
-    CopyFlags:
-      Skill:
-        Reproduce: true
     CastCancel: true
     Cooldown: 5000
     CastTime: 5000
     AfterCastActDelay: 1000
+    Flags:
+      IsAutoShadowSpell: true
+      AlterRangeRadius: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 75
       ItemCost:
@@ -515,6 +521,13 @@ Body:
     CastCancel: true
     AfterCastActDelay: 1000
     Cooldown: 5000
+    Flags:
+      IsAutoShadowSpell: true
+      AlterRangeRadius: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 40
   - Id: 2449
@@ -527,14 +540,18 @@ Body:
     Range: 7
     Hit: Single
     HitCount: 1
-    CopyFlags:
-      Skill:
-        Reproduce: true
     CastCancel: true
     CastTime: 7000
     AfterCastActDelay: 2000
     Duration1: 3200
     Cooldown: 10000
+    Flags:
+      IsAutoShadowSpell: true
+      AlterRangeRadius: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 85
     Unit:

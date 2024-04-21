@@ -48,7 +48,7 @@ Body:
       SpCost: 60
   - Id: 8439
     Name: SK_SA_EARTHSPIKE
-    Description: Stone Hammer
+    Description: Earth Spike
     MaxLevel: 5
     Type: Magic
     TargetType: Attack
@@ -76,7 +76,7 @@ Body:
       SpCost: 60
   - Id: 2464
     Name: SK_SA_ELEMENTALTRANSFUSION
-    Description: Spirit Recovery
+    Description: Elemental Transfusion
     MaxLevel: 5
     TargetType: Self
     DamageFlags:
@@ -89,7 +89,7 @@ Body:
       State: Elementalspirit
   - Id: 829
     Name: SK_SA_ELEMENTALACTION2
-    Description: Elemental Action
+    Description: Elemental Action 2
     MaxLevel: 5
     Type: Magic
     TargetType: Self
@@ -235,6 +235,12 @@ Body:
         Time: 8000
       - Level: 5
         Time: 9000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 30
       ItemCost:
@@ -250,10 +256,11 @@ Body:
       NoDamage: true
     Flags:
       NoTargetSelf: true
-      PartyOnly: true
-      GuildOnly: true
-      IgnoreStasis: true
-      TargetHidden: true
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Range: 7
     Hit: Single
     HitCount: 1
@@ -272,6 +279,12 @@ Body:
     TargetType: Support
     DamageFlags:
       NoDamage: true
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Range: 7
     Hit: Single
     HitCount: 1
@@ -286,8 +299,6 @@ Body:
     MaxLevel: 5
     Type: Magic
     TargetType: Support
-    Flags:
-      AlterRangeRadius: true
     Range: 7
     Hit: Single
     HitCount: 1
@@ -305,6 +316,12 @@ Body:
         Time: 5000
     Cooldown: 10000
     AfterCastActDelay: 1000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 75
     ItemCost:
@@ -382,6 +399,12 @@ Body:
     CastCancel: true
     Cooldown: 5000
     AfterCastActDelay: 1000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 60
     ItemCost:
@@ -393,17 +416,18 @@ Body:
     MaxLevel: 5
     Type: Magic
     TargetType: Attack
-    Flags:
-      AlterRangeRadius: true
     Range: 7
     Hit: Single
     HitCount: 1
-    CopyFlags:
-      Skill:
-        Reproduce: true
     CastCancel: true
     Cooldown: 5000
     AfterCastActDelay: 1000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 80
       ItemCost:
@@ -411,7 +435,7 @@ Body:
           Amount: 1
   - Id: 2460
     Name: SK_SA_SUMMONELEMENTAL
-    Description: Summon Earth Spirit Tera
+    Description: Summon Elemental
     MaxLevel: 5
     TargetType: Self
     DamageFlags:
@@ -420,17 +444,7 @@ Body:
     HitCount: 1
     Element: Earth
     CastCancel: true
-    CastTime: 
-      - Level: 1
-        Time: 3000
-      - Level: 2
-        Time: 3000
-      - Level: 3
-        Time: 3000
-      - Level: 4
-        Time: 3000
-      - Level: 5
-        Time: 0
+    CastTime: 3000
     Duration1: 1200000
     AfterCastActDelay: 400
     Cooldown:
@@ -458,7 +472,7 @@ Body:
           Amount: 10
   - Id: 2461
     Name: SK_SA_ELEMENTALACTION1
-    Description: Elemental Action
+    Description: Elemental Action 1
     MaxLevel: 5
     TargetType: Attack
     DamageFlags:

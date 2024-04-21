@@ -21,16 +21,18 @@ Body:
       State: Recover_Weight_Rate
   - Id: 1009
     Name: SK_AC_ARROWRAIN
-    Description: Arrow Shower
+    Description: Arrow Rain
     MaxLevel: 5
     Type: Weapon
     TargetType: Ground
     DamageFlags:
       Splash: true
     Flags:
-      TargetTrap: true
-      IgnoreLandProtector: true
-      AlterRangeVulture: true
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Range: -9
     Hit: Single
     HitCount: -1
@@ -39,10 +41,6 @@ Body:
     AfterCastActDelay: 400
     SplashArea: 5
     Knockback: 2
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     Duration1: 100
     Requires:
       SpCost: 20
@@ -54,12 +52,17 @@ Body:
       AmmoAmount: 5
   - Id: 499
     Name: SK_AC_SPIRITUALSTRAFE
-    Description: Beast Strafing
+    Description: Spiritual Strafe
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     Flags:
       AlterRangeVulture: true
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Range: -9
     Hit: Multi_Hit
     HitCount: 1
@@ -86,7 +89,7 @@ Body:
     Type: Weapon
   - Id: 2017
     Name: SK_AC_CHARGEDARROW
-    Description: Arrow Repel
+    Description: Charged Arrow
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
@@ -94,6 +97,11 @@ Body:
       Splash: true
     Flags:
       AlterRangeVulture: true
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Range: -9
     Hit: Single
     HitCount: 1
@@ -101,10 +109,6 @@ Body:
     Knockback: 4
     Cooldown: 5000
     AfterCastActDelay: 400
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     CastTime: 0
     Requires:
       SpCost: 14
@@ -122,9 +126,12 @@ Body:
     DamageFlags:
       Splash: true
     Flags:
-      TargetTrap: true
-      IgnoreLandProtector: true
       AlterRangeVulture: true
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Range: -9
     Hit: Single
     HitCount: -1
@@ -133,10 +140,6 @@ Body:
     AfterCastActDelay: 400
     SplashArea: 5
     Knockback: 2
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     Duration1: 100
     Requires:
       SpCost: 17
@@ -153,14 +156,15 @@ Body:
     TargetType: Attack
     Flags:
       AlterRangeVulture: true
-    Range: -9
-    Hit: Multi_Hit
-    HitCount: -2
-    Element: Weapon
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
+    Range: -9
+    Hit: Multi_Hit
+    HitCount: -2
+    Element: Weapon
     Duration1: 100
     Cooldown: 5000
     AfterCastActDelay: 400
@@ -212,20 +216,21 @@ Body:
       SpCost: 70
   - Id: 807
     Name: SK_AC_PARALIZINGDART
-    Description: Paralyzing Shot
+    Description: Paralyzing Dart
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     Flags:
       AlterRangeVulture: true
-    Range: -9
-    Hit: Single
-    HitCount: 1
-    Element: Weapon
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
+    Range: -9
+    Hit: Single
+    HitCount: 1
+    Element: Weapon
     Duration1: 100
     Cooldown: 10000
     AfterCastActDelay: 400
@@ -236,10 +241,17 @@ Body:
       AmmoAmount: 1
   - Id: 831
     Name: SK_AC_TRANQUILIZINGDART
-    Description: Phantasmic Arrow
+    Description: Tramquilizing Dart
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
+    Flags:
+      AlterRangeVulture: true
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Range: -9
     Hit: Single
     HitCount: 1

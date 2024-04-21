@@ -40,16 +40,10 @@ Body:
     DamageFlags:
       NoDamage: true
       Splash: true
-    Flags:
-      AllowOnMado: true
     Hit: Single
     HitCount: 1
     Cooldown: 20000
     AfterCastActDelay: 3000
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     SplashArea: -1
     Duration1:
       - Level: 1
@@ -93,16 +87,18 @@ Body:
       IgnoreDefense: true
       IgnoreFlee: true
       Critical: true
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Hit: Single
     HitCount: 1
     CastCancel: true
     Cooldown: 15000
     AfterCastActDelay: 40
     Duration1: 50000
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     Requires:
       SpCost: 30
       ItemCost:
@@ -160,6 +156,8 @@ Body:
     Element: Weapon
     Cooldown: 5000
     AfterCastActDelay: 400
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -177,6 +175,12 @@ Body:
     TargetType: Attack
     DamageFlags:
       NoDamage: true
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Range: -2
     Hit: Single
     HitCount: 1
@@ -188,10 +192,6 @@ Body:
     Duration1: 1000
     Cooldown: 7000
     AfterCastActDelay: 400
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     Requires:
       SpCost: 22
       Weapon:
@@ -232,19 +232,19 @@ Body:
     TargetType: Self
     DamageFlags:
       Splash: true
-    Hit: Single
-    HitCount: 1
-    Element: Wind
     Flags:
       IsAutoShadowSpell: true
-    Cooldown: 7000
-    AfterCastActDelay: 400
-    SplashArea: 4
-    Knockback: 2
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
+    Hit: Single
+    HitCount: 1
+    Element: Wind
+    Cooldown: 7000
+    AfterCastActDelay: 400
+    SplashArea: 4
+    Knockback: 2
     Duration2: 10000
     Requires:
       SpCost: 30
@@ -298,17 +298,19 @@ Body:
     Hit: Single
     HitCount: -3
     Element: Weapon
+    AfterCastActDelay: 500
+    Cooldown: 3000
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
-    AfterCastActDelay: 500
-    Cooldown: 3000
     Requires:
       SpCost: 30
   - Id: 2016
     Name: SK_KN_VIGOR
-    Description: Vitality Activation
+    Description: Vigor
     MaxLevel: 5
     TargetType: Self
     DamageFlags:
@@ -316,6 +318,7 @@ Body:
     Range: 1
     Hit: Single
     HitCount: 1
+    CastCancel: true
     CastTime: 1000
     Duration1: 300000
     Duration2: 10000
@@ -325,7 +328,7 @@ Body:
       SpCost: 40
   - Id: 2015
     Name: SK_KN_STONESKIN
-    Description: Stone Hard Skin
+    Description: Stone Skin
     MaxLevel: 5
     TargetType: Self
     DamageFlags:
@@ -357,10 +360,6 @@ Body:
     AfterCastActDelay: 100
     HitCount: 1
     Element: Weapon
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     Duration1:
       - Level: 1
         Time: 400
@@ -372,6 +371,12 @@ Body:
         Time: 1600
       - Level: 5
         Time: 2000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 15
       Weapon:
@@ -399,6 +404,8 @@ Body:
     Element: Weapon
     Cooldown: 5000
     AfterCastActDelay: 400
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -417,17 +424,17 @@ Body:
     DamageFlags:
       Splash: true
     Flags:
-      TargetTrap: true
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Range: -1
     Hit: Multi_Hit
     HitCount: -3
     Element: Weapon
     SplashArea: 1
     Knockback: 1
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     Cooldown: 7000
     AfterCastActDelay: 400
     Requires:

@@ -11,7 +11,7 @@ Body:
     Type: Weapon
   - Id: 398
     Name: SK_SM_TRAUMATIC_STRIKE
-    Description: Traumatic Blow
+    Description: Traumatic Strike
     MaxLevel: 5
     Type: Weapon  
     TargetType: Attack
@@ -22,6 +22,8 @@ Body:
     Cooldown: 3000
     AfterCastActDelay: 500
     Duration2: 120000
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -55,6 +57,8 @@ Body:
     HitCount: 1
     Duration1: 30000
     Cooldown: 1000
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -63,7 +67,7 @@ Body:
       SpCost: 15
   - Id: 146
     Name: SK_SM_AUTOBERSERK
-    Description: Auto Berserk
+    Description: Anger
     MaxLevel: 5
     Type: Weapon
     TargetType: Self
@@ -128,10 +132,6 @@ Body:
     HitCount: 1
     Cooldown: 20000
     AfterCastActDelay: 2000
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     Duration1:
       - Level: 1
         Time: 24000
@@ -165,6 +165,8 @@ Body:
     Knockback: 6
     Cooldown: 3000
     AfterCastActDelay: 400
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -181,7 +183,7 @@ Body:
     Type: Weapon
   - Id: 399
     Name: SK_SM_LIGHTNING_STRIKE
-    Description: Vital Strike
+    Description: Lightning Strike
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
@@ -192,6 +194,12 @@ Body:
     Cooldown: 5000
     AfterCastActDelay: 400
     Duration2: 30000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 17
       Weapon:
@@ -249,7 +257,11 @@ Body:
     DamageFlags:
       Splash: true
     Flags:
-      TargetTrap: true
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Hit: Multi_Hit
     HitCount: -2
     Element: Fire
@@ -267,10 +279,6 @@ Body:
       - Level: 5
         Area: 4
     Knockback: 2
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     Duration2: 10000
     Requires:
       SpCost: 22
@@ -303,6 +311,6 @@ Body:
     MaxLevel: 5
   - Id: 363
     Name: SK_SM_MEDITATE
-    Description: Meditatio
+    Description: Meditate
     MaxLevel: 5
     Type: Magic

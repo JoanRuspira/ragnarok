@@ -12,17 +12,19 @@ Body:
     TargetType: Self
     DamageFlags:
       Splash: true
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Hit: Single
     HitCount: -1
     Element: Weapon
     AfterCastActDelay: 400
     SplashArea: 5
     Knockback: 2
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     Duration2: 10000
+    CastCancel: true
     CastTime: 2000
     Cooldown: 8000
     Requires:
@@ -42,6 +44,11 @@ Body:
     TargetType: Support
     DamageFlags:
       NoDamage: true
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Range: 9
     Hit: Single
     HitCount: 1
@@ -63,6 +70,11 @@ Body:
     TargetType: Self
     DamageFlags:
       NoDamage: true
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Hit: Single
     HitCount: 1
     Duration1: 30000
@@ -90,7 +102,10 @@ Body:
     DamageFlags:
       NoDamage: true
     Flags:
-      AllowOnMado: true
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     HitCount: 1
     CastCancel: true
     Duration1: 60000
@@ -130,7 +145,10 @@ Body:
     DamageFlags:
       NoDamage: true
     Flags:
-      AllowOnMado: true
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Hit: Single
     HitCount: 1
     Duration1: 30000
@@ -171,9 +189,13 @@ Body:
     DamageFlags:
       NoDamage: true
     Flags:
-      AllowOnMado: true
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Hit: Single
     HitCount: 1
+    CastCancel: true
     Casttime: 5000
     CoolDown:  5000
     AfterCastActDelay: 3000
@@ -194,6 +216,11 @@ Body:
     Hit: Single
     DamageFlags:
       Splash: true
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     SplashArea: 5
     HitCount: 1
     Element: Neutral
@@ -211,6 +238,11 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Range: 1
     Hit: Single
     HitCount: -2
@@ -233,8 +265,14 @@ Body:
     Hit: Multi_Hit
     HitCount: -5
     Element: Weapon
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     AfterCastActDelay: 400
     Cooldown: 7000
+    CastCancel: true
     CastTime: 2000
     Requires:
       SpCost: 30

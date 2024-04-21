@@ -10,13 +10,13 @@ Body:
     MaxLevel: 5
     Type: Magic
     TargetType: Attack
-    Flags:
-      IsAutoShadowSpell: true
     Range: 9
     Hit: Single
     HitCount: 1
     Element: Ghost
     SplashArea: 1
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -29,21 +29,20 @@ Body:
       SpCost: 30
   - Id: 11
     Name: SK_AL_SACREDWAVE
-    Description: Napalm Beat
+    Description: Sacred Wave
     MaxLevel: 5
     Type: Magic
     TargetType: Attack
     DamageFlags:
       Splash: true
       SplashSplit: false
-    Flags:
-      IsAutoShadowSpell: true
-      TargetTrap: true
     Range: 9
     Hit: Single
     HitCount: 1
     Element: Holy
     SplashArea: 1
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -84,8 +83,11 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Holy
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
+        Plagiarism: true
         Reproduce: true
     CastCancel: true
     CastTime: 3000
@@ -106,6 +108,8 @@ Body:
     HitCount: 1
     Element: Holy
     SplashArea: 15
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -143,6 +147,8 @@ Body:
     HitCount: 1
     Element: Holy
     SplashArea: 2
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -167,6 +173,8 @@ Body:
     CastTime: 2000
     Cooldown: 10000
     AfterCastActDelay: 1000
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -190,14 +198,14 @@ Body:
     MaxLevel: 5
     Type: Magic
     TargetType: Support
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
-    DamageFlags:
-      NoDamage: true
-    Flags:
-      IgnoreHovering: true
     Range: 9
     Hit: Single
     HitCount: 1
@@ -227,17 +235,17 @@ Body:
     DamageFlags:
       NoDamage: true
     Flags:
-      IgnoreHovering: true
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
     Cooldown: 2000
     AfterCastActDelay: 500
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     Duration1:
       - Level: 1
         Time: 80000
@@ -268,6 +276,7 @@ Body:
     HitCount: 1
     Cooldown: 10000
     AfterCastActDelay: 1000
+    CastCancel: true
     Duration1:
       - Level: 1
         Time: 60000
@@ -297,14 +306,14 @@ Body:
       IgnoreDefense: true
     Flags:
       IsAutoShadowSpell: true
-    Range: 9
-    Hit: Single
-    HitCount: 1
-    Element: Holy
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    Element: Holy
     CastCancel: true
     CastTime: 3000
     Cooldown: 5000

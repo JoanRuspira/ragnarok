@@ -40,12 +40,13 @@ Body:
     DamageFlags:
       NoDamage: true
       Splash: true
-    Flags:
-      IsTrap: true
     Range: 9
     Hit: Single
     HitCount: 1
     SplashArea: 1
+    CastCancel: true
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Reproduce: true
@@ -83,10 +84,6 @@ Body:
         Time: 150000
       - Level: 5
         Time: 180000
-    CastTimeFlags:
-      IgnoreDex: true
-      IgnoreStatus: true
-      IgnoreItemBonus: true
     Requires:
       SpCost: 75
       ItemCost:
@@ -106,16 +103,17 @@ Body:
       IgnoreDefense: true
       IgnoreFlee: true
       Critical: true
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Hit: Single
     HitCount: 1
     CastCancel: true
     Cooldown: 60000
     AfterCastActDelay: 400
     Duration1: 50000
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     Requires:
       SpCost: 120
       ItemCost:
@@ -158,7 +156,7 @@ Body:
           Amount: 40
   - Id: 2491
     Name: SK_RA_ULLREAGLETOTEM_ATK
-    Description: Hell's Plant Attack
+    Description: Ullr Eagle Totem Attack
     MaxLevel: 5
     Type: Magic
     TargetType: Attack
@@ -177,9 +175,6 @@ Body:
         Area: 4
       - Level: 5
         Area: 4
-    CopyFlags:
-      Skill:
-        Reproduce: true
     Requires:
       SpCost: 1
   - Id: 380

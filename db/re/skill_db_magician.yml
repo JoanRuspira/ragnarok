@@ -12,6 +12,11 @@ Body:
     TargetType: Attack
     Flags:
       IsAutoShadowSpell: true
+      AlterRangeRadius: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Range: 7
     Hit: Multi_Hit
     HitCount:
@@ -26,10 +31,6 @@ Body:
       - Level: 5
         Count: 5
     Element: Earth
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     CastCancel: true
     CastTime: 3000
     Cooldown: 5000
@@ -44,6 +45,11 @@ Body:
     TargetType: Attack
     Flags:
       IsAutoShadowSpell: true
+      AlterRangeRadius: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Range: 7
     Hit: Multi_Hit
     HitCount:
@@ -58,10 +64,6 @@ Body:
       - Level: 5
         Count: 5
     Element: Wind
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     CastCancel: true
     CastTime: 3000
     Cooldown: 5000
@@ -76,6 +78,11 @@ Body:
     TargetType: Attack
     Flags:
       IsAutoShadowSpell: true
+      AlterRangeRadius: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Range: 7
     Hit: Multi_Hit
     HitCount:
@@ -90,10 +97,6 @@ Body:
       - Level: 5
         Count: 5
     Element: Water
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     CastCancel: true
     CastTime: 3000
     Cooldown: 5000
@@ -108,6 +111,11 @@ Body:
     TargetType: Attack
     Flags:
       IsAutoShadowSpell: true
+      AlterRangeRadius: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Range: 7
     Hit: Multi_Hit
     HitCount:
@@ -122,10 +130,6 @@ Body:
       - Level: 5
         Count: 5
     Element: Fire
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     CastCancel: true
     CastTime: 3000
     Cooldown: 5000
@@ -195,6 +199,7 @@ Body:
     Description: Reading Spellbook
     MaxLevel: 10
     TargetType: Self
+    CastCancel: true
     CastTime: 5000
     AfterCastActDelay: 400
   - Id: 2202
@@ -206,14 +211,16 @@ Body:
     DamageFlags:
       Splash: true
     Flags:
+      IsAutoShadowSpell: true
       AlterRangeRadius: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Range: 7
     Hit: Multi_Hit
     HitCount: -2
     Element: Ghost
-    CopyFlags:
-      Skill:
-        Reproduce: true
     CastCancel: true
     CastTime: 2000
     Cooldown: 5000
@@ -222,12 +229,17 @@ Body:
       SpCost: 30
   - Id: 340
     Name: SK_MG_DARKSTRIKE
-    Description: Soul Strike of Darkness
+    Description: Dark Strike
     MaxLevel: 5
     Type: Magic
     TargetType: Attack
     Flags:
-      IsNpc: true
+      IsAutoShadowSpell: true
+      AlterRangeRadius: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Range: 9
     Hit: Multi_Hit
     HitCount:
@@ -245,10 +257,6 @@ Body:
     CastCancel: true
     CastTime: 3000
     Cooldown: 5000
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     AfterCastActDelay: 1000
     Requires:
       SpCost: 30
@@ -260,6 +268,11 @@ Body:
     TargetType: Attack
     Flags:
       IsAutoShadowSpell: true
+      AlterRangeRadius: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Range: 7
     Hit: Multi_Hit
     HitCount:
@@ -274,10 +287,6 @@ Body:
       - Level: 5
         Count: 5
     Element: Ghost
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     CastCancel: true
     CastTime: 3000
     Cooldown: 5000
@@ -286,7 +295,7 @@ Body:
       SpCost: 30
   - Id: 800
     Name: SK_MG_CORRUPT
-    Description: Devil's Embrace
+    Description: Corrupt
     MaxLevel: 5
     Type: Magic
     TargetType: Attack
@@ -294,9 +303,13 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Dark
+    CastCancel: true
     CastTime: 3000
     Cooldown: 5000
     AfterCastActDelay: 1000
+    Flags:
+      IsAutoShadowSpell: true
+      AlterRangeRadius: true
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -312,6 +325,13 @@ Body:
     TargetType: Attack
     DamageFlags:
       NoDamage: true
+    Flags:
+      IsAutoShadowSpell: true
+      AlterRangeRadius: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Range: 7
     Hit: Single
     HitCount: 1
@@ -330,8 +350,12 @@ Body:
     DamageFlags:
       NoDamage: true
     Flags:
-      IgnoreHovering: true
-      TargetHidden: true
+      IsAutoShadowSpell: true
+      AlterRangeRadius: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Range: 7
     Hit: Single
     HitCount: 1
@@ -380,14 +404,15 @@ Body:
     TargetType: Attack
     Flags:
       IsAutoShadowSpell: true
-    Range: 7
-    Hit: Single
-    HitCount: 1
-    Element: Water
+      AlterRangeRadius: true
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
+    Range: 7
+    Hit: Single
+    HitCount: 1
+    Element: Water
     CastCancel: true
     Cooldown: 15000
     AfterCastActDelay: 500
@@ -401,6 +426,8 @@ Body:
     TargetType: Ground
     DamageFlags:
       NoDamage: true
+    Flags:
+      AlterRangeRadius: true
     Range: 7
     Hit: Single
     HitCount: 1

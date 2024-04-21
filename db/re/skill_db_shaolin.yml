@@ -33,6 +33,8 @@ Body:
     Element: Weapon
     DamageFlags:
       IgnoreDefense: true
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Reproduce: true
@@ -45,7 +47,7 @@ Body:
         Knuckle: true
   - Id: 526
     Name: SK_SH_GATEOFHELL
-    Description: Throw Zeny
+    Description: Gate of Hell
     MaxLevel: 5
     Type: Misc
     TargetType: Attack
@@ -53,12 +55,13 @@ Body:
     Range: 1
     Hit: Multi_Hit
     HitCount: -5
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     AfterCastActDelay: 400
     Cooldown: 3000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Requires:
       SpCost: 30
       SpiritSphereCost: 1
@@ -68,7 +71,7 @@ Body:
         2hMace: true
   - Id: 2256
     Name: SK_SH_DRAGONDARKNESSFLAME
-    Description: Boost Knuckle
+    Description: Dragon of the Darkness Flame
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
@@ -78,6 +81,11 @@ Body:
     Hit: Multi_Hit
     HitCount: -5
     Element: Weapon
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Requires:
       SpCost: 40
       ItemCost:
@@ -99,15 +107,17 @@ Body:
     Hit: Single
     Element: Weapon
     HitCount: 1
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     CastCancel: true
     Cooldown: 30000
     CastTime: 2000
+    CastCancel: true
     AfterCastActDelay: 3000
     Duration2: 300000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Requires:
       SpCost: 1
       ItemCost:
@@ -116,7 +126,7 @@ Body:
       SpiritSphereCost: 5
   - Id: 269
     Name: SK_SH_GRAPPLE
-    Description: Root
+    Description: Grapple
     MaxLevel: 5
     Type: Weapon
     TargetType: Self
@@ -136,6 +146,11 @@ Body:
         Time: 8000
       - Level: 5
         Time: 10000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Requires:
       SpCost: 10
       SpiritSphereCost: 1
@@ -151,6 +166,7 @@ Body:
     HitCount: 1
     Cooldown: 75000
     AfterCastActDelay: 3000
+    CastCancel: true
     CastTime: 5000
     Duration1: 60000
     Requires:

@@ -12,8 +12,6 @@ Body:
     TargetType: Self
     DamageFlags:
       NoDamage: true
-    Flags:
-      AllowOnMado: true
     Hit: Single
     Cooldown: 20000
     AfterCastActDelay: 1000
@@ -43,7 +41,12 @@ Body:
     TargetType: Attack
     DamageFlags:
       Splash: true
-      IgnoreFlee: true
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Range:
       - Level: 1
         Size: 11
@@ -87,6 +90,12 @@ Body:
     TargetType: Self
     DamageFlags:
       Splash: true
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Hit: Multi_Hit
     HitCount: 3
     Element: Weapon
@@ -104,10 +113,6 @@ Body:
       - Level: 5
         Area: 4
     Knockback: 2
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     Duration2: 10000
     Requires:
       SpCost: 25
@@ -120,15 +125,18 @@ Body:
       AmmoAmount: 1
   - Id: 520
     Name: SK_BS_CROWDCONTROLSHOT
-    Description: Spread Attack
+    Description: Crowd Control Shot
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
     DamageFlags:
       Splash: true
     Flags:
-      TargetTrap: true
-      AlterRangeSnakeEye: true
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Range: -9
     Hit: Multi_Hit
     HitCount: -2
@@ -144,7 +152,7 @@ Body:
       AmmoAmount: 3
   - Id: 111
     Name: SK_BS_WEAPONRYEXPERTISE
-    Description: Adrenaline Rush
+    Description: Weaponry Expertise
     MaxLevel: 5
     Type: Weapon
     TargetType: Self
@@ -152,15 +160,15 @@ Body:
       NoDamage: true
       Splash: true
     Flags:
-      AllowOnMado: true
-    Hit: Single
-    HitCount: 1
-    Cooldown: 20000
-    AfterCastActDelay: 3000
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
+    Hit: Single
+    HitCount: 1
+    Cooldown: 20000
+    AfterCastActDelay: 3000
     SplashArea: -1
     Duration1:
       - Level: 1
@@ -196,7 +204,7 @@ Body:
         2hStaff: true
   - Id: 112
     Name: SK_BS_WEAPONSHARPENING
-    Description: Weapon Perfection
+    Description: Weapon Sharpening
     MaxLevel: 5
     Type: Weapon
     TargetType: Self
@@ -204,7 +212,11 @@ Body:
       NoDamage: true
       Splash: true
     Flags:
-      AllowOnMado: true
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Hit: Single
     HitCount: 1
     Cooldown: 20000
@@ -259,7 +271,11 @@ Body:
       NoDamage: true
       Splash: true
     Flags:
-      AllowOnMado: true
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Hit: Single
     HitCount: 1
     SplashArea: -1
@@ -298,8 +314,6 @@ Body:
     TargetType: Self
     DamageFlags:
       NoDamage: true
-    Flags:
-      AllowOnMado: true
     Hit: Single
     HitCount: 1
     AfterCastActDelay: 3000
@@ -385,6 +399,8 @@ Body:
     Element: Weapon
     Cooldown: 5000
     AfterCastActDelay: 400
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -402,15 +418,18 @@ Body:
     TargetType: Self
     DamageFlags:
       Splash: true
-    Flags:
-      TargetTrap: true
-      AllowOnMado: true
     Hit: Multi_Hit
     HitCount: -5
     Element: Weapon
     Cooldown: 5000
     AfterCastActDelay: 200
     SplashArea: 3
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 12
       Weapon:
@@ -429,6 +448,12 @@ Body:
     Cooldown: 5000
     AfterCastActDelay: 400
     Duration2: 5000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 16
       Weapon:
@@ -473,9 +498,13 @@ Body:
     TargetType: Support
     DamageFlags:
       NoDamage: true
-    Flags:
-      AllowOnMado: true
     Range: 2
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Hit: Single
     HitCount: 1
     CastCancel: true
@@ -486,14 +515,12 @@ Body:
       SpCost: 40
   - Id: 101
     Name: BS_AXE
-    Description: Forge Equipment
+    Description: Forging
     MaxLevel: 5
     Type: Weapon
     TargetType: Self
     DamageFlags:
       NoDamage: true
-    Flags:
-      AllowOnMado: true
     Range: 2
     Hit: Single
     HitCount: 1

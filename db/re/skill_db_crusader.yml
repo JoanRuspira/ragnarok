@@ -6,7 +6,7 @@ Header:
 Body:
   - Id: 255
     Name: SK_CR_SWORNPROTECTOR
-    Description: Sacrifice
+    Description: Sworn Protector
     MaxLevel: 5
     TargetType: Support
     DamageFlags:
@@ -31,11 +31,15 @@ Body:
     Cooldown: 5000
     CastTime: 3000
     Duration2: 90000
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 40
   - Id: 832
     Name: SK_CR_SWORDSTOPLOWSHARES
-    Description: Heal
+    Description: Swords to Plowshares
     MaxLevel: 5
     TargetType: Support
     DamageFlags:
@@ -43,9 +47,12 @@ Body:
     Range: 9
     Hit: Single
     HitCount: 1
+    CastCancel: true
     CastTime: 3000
     Cooldown: 5000
     AfterCastActDelay: 1000
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -54,7 +61,7 @@ Body:
       SpCost: 35
   - Id: 833
     Name: SK_CR_BINDINGOATH
-    Description: Blessing
+    Description: Binding Oath
     MaxLevel: 5
     TargetType: Support
     DamageFlags:
@@ -62,9 +69,12 @@ Body:
     Range: 9
     Hit: Single
     HitCount: 1
+    CastCancel: true
     CastTime: 4000
     Cooldown: 5000
     AfterCastActDelay: 1000
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -83,14 +93,16 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Holy
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     CastCancel: true
     CastTime: 6000
     AfterCastActDelay: 1000
     Cooldown: 10000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 100
       ItemCost:
@@ -152,16 +164,12 @@ Body:
     Cooldown: 30000
     AfterCastActDelay: 5000
     Duration1: 300000
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     Requires:
       SpCost: 50
       State: Shield
   - Id: 2318
     Name: SK_CR_VANGUARDFORCE
-    Description: Prestige
+    Description: Vanguard Force
     MaxLevel: 5
     TargetType: Self
     DamageFlags:
@@ -192,11 +200,13 @@ Body:
     Knockback: 3
     Cooldown: 5000
     AfterCastActDelay: 400
+    Duration2: 5000
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
-    Duration2: 5000
     Requires:
       SpCost: 15
       State: Shield
@@ -237,19 +247,19 @@ Body:
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
-    Flags:
-      TargetTrap: true
     Range: -2
     Hit: Multi_Hit
     HitCount: -2
     Element: Holy
+    Duration2: 30000
+    Cooldown: 5000
+    AfterCastActDelay: 400
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
-    Duration2: 30000
-    Cooldown: 5000
-    AfterCastActDelay: 400
     Requires:
       SpCost: 20
   - Id: 254
@@ -262,10 +272,6 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Holy
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     CastDefenseReduction: 33
     CastTime: 3000
     AfterCastActDelay: 400
@@ -273,6 +279,12 @@ Body:
     Cooldown: 7000
     Duration1: 950
     Duration2: 30000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 100
       HpRateCost: 0

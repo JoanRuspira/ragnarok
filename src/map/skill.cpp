@@ -377,7 +377,7 @@ int skill_get_range2(struct block_list *bl, uint16 skill_id, uint16 skill_lv, bo
 
 	if(inf2[INF2_ALTERRANGEVULTURE] || inf2[INF2_ALTERRANGESNAKEEYE] ){
 		if( bl->type == BL_PC ) {
-			if(inf2[INF2_ALTERRANGEVULTURE]) range += (pc_checkskill((TBL_PC*)bl, SK_AC_VULTURE) *2);
+			if(inf2[INF2_ALTERRANGEVULTURE]) range += (pc_checkskill((TBL_PC*)bl, SK_AC_VULTURE) *2) + (pc_checkskill((TBL_PC*)bl, SK_RG_VULTURE) *2);
 			// added to allow GS skills to be effected by the range of Snake Eyes [Reddozen]
 			
 		} else
@@ -5055,26 +5055,32 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case SK_MG_CASTCANCEL:
 	case SK_PF_SPELLFIST:
 		clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
-		switch (sd->skill_id_old){
-			case SK_MG_FIREBOLT:
-				clif_specialeffect(src, 1270, AREA);
-				break;
-			case SK_MG_COLDBOLT:
-				clif_specialeffect(src, 1271, AREA);
-				break;
-			case SK_MG_LIGHTNINGBOLT:
-				clif_specialeffect(src, 1272, AREA);
-				break;
-			case SK_MG_EARTHBOLT:
-				clif_specialeffect(src, 1273, AREA);
-				break;
-			case SK_MG_DARKSTRIKE:
-				clif_specialeffect(src, 995, AREA);
-				break;
-			case SK_MG_SOULSTRIKE:
-				clif_specialeffect(src, 992, AREA);
-				break;				
+		if (skill_id == SK_MG_CASTCANCEL){
+			clif_specialeffect(src, EF_DETECT4, AREA);
 		}
+		if (skill_id == SK_PF_SPELLFIST){
+			switch (sd->skill_id_old){
+				case SK_MG_FIREBOLT:
+					clif_specialeffect(src, 1270, AREA);
+					break;
+				case SK_MG_COLDBOLT:
+					clif_specialeffect(src, 1271, AREA);
+					break;
+				case SK_MG_LIGHTNINGBOLT:
+					clif_specialeffect(src, 1272, AREA);
+					break;
+				case SK_MG_EARTHBOLT:
+					clif_specialeffect(src, 1273, AREA);
+					break;
+				case SK_MG_DARKSTRIKE:
+					clif_specialeffect(src, 995, AREA);
+					break;
+				case SK_MG_SOULSTRIKE:
+					clif_specialeffect(src, 992, AREA);
+					break;				
+			}
+		}
+
 		unit_skillcastcancel(src,1);
 		if(sd) {
 			int sp = skill_get_sp(sd->skill_id_old,sd->skill_lv_old);

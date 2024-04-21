@@ -17,6 +17,12 @@ Body:
     Element: Earth
     Cooldown: 5000
     AfterCastActDelay: 400
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     SplashArea:
       - Level: 1
         Area: 2
@@ -29,10 +35,6 @@ Body:
       - Level: 5
         Area: 4
     Knockback: 2
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     Duration2: 10000
     Requires:
       SpCost: 15
@@ -50,6 +52,12 @@ Body:
     Element: Wind
     Cooldown: 5000
     AfterCastActDelay: 400
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     SplashArea:
       - Level: 1
         Area: 2
@@ -62,10 +70,6 @@ Body:
       - Level: 5
         Area: 4
     Knockback: 2
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     Duration2: 10000
     Requires:
       SpCost: 15
@@ -83,6 +87,12 @@ Body:
     Element: Water
     Cooldown: 5000
     AfterCastActDelay: 400
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     SplashArea:
       - Level: 1
         Area: 2
@@ -95,10 +105,6 @@ Body:
       - Level: 5
         Area: 4
     Knockback: 2
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     Duration2: 10000
     Requires:
       SpCost: 15
@@ -116,6 +122,12 @@ Body:
     Element: Fire
     Cooldown: 5000
     AfterCastActDelay: 400
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     SplashArea:
       - Level: 1
         Area: 2
@@ -128,10 +140,6 @@ Body:
       - Level: 5
         Area: 4
     Knockback: 2
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     Duration2: 10000
     Requires:
       SpCost: 15
@@ -150,15 +158,15 @@ Body:
     Cooldown: 5000
     AfterCastActDelay: 400
     Flags:
-      AllowOnMado: true
-    Range: -1
-    Hit: Single
-    HitCount: 1
-    Element: Weapon
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
         Reproduce: true
+    Range: -1
+    Hit: Single
+    HitCount: 1
+    Element: Weapon
     Requires:
       SpCost: 15
       Weapon:
@@ -174,14 +182,8 @@ Body:
     AfterCastActDelay: 2000
     DamageFlags:
       NoDamage: true
-    Flags:
-      AllowOnMado: true
     Hit: Single
     HitCount: 1
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     Duration1:
       - Level: 1
         Time: 24000
@@ -203,16 +205,10 @@ Body:
     TargetType: Self
     DamageFlags:
       NoDamage: true
-    Flags:
-      AllowOnMado: true
     Hit: Single
     HitCount: 1
     Cooldown: 30000
     AfterCastActDelay: 2000
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     Duration1:
       - Level: 1
         Time: 24000
@@ -235,9 +231,6 @@ Body:
     DamageFlags:
       NoDamage: true
       Splash: true
-    Flags:
-      AllowOnWarg: true
-      AllowOnMado: true
     Hit: Single
     SplashArea: 2
     Cooldown: 5000
@@ -282,8 +275,6 @@ Body:
     TargetType: Self
     DamageFlags:
       NoDamage: true
-    Flags:
-      AllowOnMado: true
     Range: 1
     Hit: Single
     HitCount: 1

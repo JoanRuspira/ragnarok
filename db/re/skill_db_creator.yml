@@ -17,17 +17,19 @@ Body:
     TargetType: Self
     DamageFlags:
       Splash: true
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Hit: Multi_Hit
     HitCount: -5
     Element: Earth
     CastTime: 7000
     Cooldown: 7000
+    CastCancel: true
     AfterCastActDelay: 2000
     SplashArea: 6
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     Duration2: 10000
     Requires:
       SpCost: 60
@@ -36,7 +38,7 @@ Body:
           Amount: 2
   - Id: 2483
     Name: SK_CR_MANDRAKERAID
-    Description: Crazy Weed
+    Description: Mandrake Raid
     MaxLevel: 5
     Type: Magic
     TargetType: Ground
@@ -45,14 +47,14 @@ Body:
       NoDamage: true
       Splash: true
     Flags:
-      IgnoreLandProtector: true
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Range: 11
     Hit: Single
     HitCount: 1
     SplashArea: 5
-    CopyFlags:
-      Skill:
-        Reproduce: true
     CastCancel: true
     CastTime: 7000
     AfterCastActDelay: 500
@@ -64,22 +66,16 @@ Body:
           Amount: 2
   - Id: 2484
     Name: SK_CR_MANDRAKERAID_ATK
-    Description: Crazy Weed Attack
+    Description: Mandrake Raid Attack
     MaxLevel: 5
     Type: Magic
     TargetType: Ground
     DamageFlags:
       Splash: true
-    Flags:
-      TargetTrap: true
-      IgnoreLandProtector: true
     Hit: Multi_Hit
     HitCount: -5
     Element: Earth
     SplashArea: 5
-    CopyFlags:
-      Skill:
-        Reproduce: true
     Duration1: 1000
     Requires:
       SpCost: 1
@@ -116,6 +112,11 @@ Body:
       - Level: 5
         Time: 10000
     Cooldown: 7000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Requires:
       SpCost: 40
       ItemCost:
@@ -145,6 +146,11 @@ Body:
     CastTime: 500
     Cooldown: 7000
     AfterCastActDelay: 400
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Requires:
       SpCost: 30
       ItemCost:
@@ -166,6 +172,11 @@ Body:
     CastCancel: true
     Cooldown: 2000
     AfterCastActDelay: 1000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Duration1:
       - Level: 1
         Time: 120000
@@ -194,9 +205,15 @@ Body:
     Hit: Single
     HitCount: 1
     SplashArea: 3
+    CastCancel: true
     CastTime: 6000
     Cooldown: 7000
     AfterCastActDelay: 1000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Requires:
       SpCost: 100
       ItemCost:
@@ -328,7 +345,7 @@ Body:
           Amount: 1
   - Id: 908
     Name: SK_CR_HOMUNCULUSACTIONIII
-    Description: Elemental Action
+    Description: Elemental Action 3
     MaxLevel: 5
     TargetType: Support
     DamageFlags:
@@ -355,10 +372,6 @@ Body:
     CastCancel: true
     Cooldown: 2000
     AfterCastActDelay: 500
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     Duration1: 60000
     Requires:
       SpCost: 60
@@ -372,6 +385,7 @@ Body:
     Range: 9
     Hit: Single
     HitCount: 1
+    CastCancel: true
     CastTime: 3000
     Cooldown: 7000
     AfterCastActDelay: 1000

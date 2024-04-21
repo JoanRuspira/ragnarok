@@ -6,7 +6,7 @@ Header:
 Body:
   - Id: 2222
     Name: SK_SO_SUMMONELEMENTALSPHERES
-    Description: Summon Fire Ball
+    Description: Summon Elemental Spheres
     CastCancel: true
     MaxLevel: 5
     Type: Magic
@@ -16,9 +16,6 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Fire
-    CopyFlags:
-      Skill:
-        Reproduce: true
     Duration1:
       - Level: 1
         Time: 60000
@@ -42,9 +39,6 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Neutral
-    CopyFlags:
-      Skill:
-        Reproduce: true
     Requires:
       SpCost: 1
   - Id: 2219
@@ -57,9 +51,6 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Water
-    CopyFlags:
-      Skill:
-        Reproduce: true
     Requires:
       SpCost: 1
   - Id: 2220
@@ -72,9 +63,6 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Wind
-    CopyFlags:
-      Skill:
-        Reproduce: true
     Requires:
       SpCost: 1
   - Id: 2221
@@ -87,9 +75,6 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Earth
-    CopyFlags:
-      Skill:
-        Reproduce: true
     Requires:
       SpCost: 1
   - Id: 895
@@ -102,9 +87,6 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Fire
-    CopyFlags:
-      Skill:
-        Reproduce: true
     Requires:
       SpCost: 1
   - Id: 2217
@@ -115,15 +97,16 @@ Body:
     TargetType: Attack
     Flags:
       AlterRangeRadius: true
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Range: 11
     DamageFlags:
       Splash: true
     Hit: Single
     HitCount: 1
     SplashArea: 5
-    CopyFlags:
-      Skill:
-        Reproduce: true
     CastCancel: true
     CastTime: 7000
     AfterCastActDelay: 2000
@@ -132,7 +115,7 @@ Body:
       SpCost: 120
   - Id: 2206
     Name: SK_SO_HINDSIGHT
-    Description: Recognized Spell
+    Description: Hindsight
     MaxLevel: 5
     Type: Magic
     TargetType: Self
@@ -190,6 +173,10 @@ Body:
       Splash: false
     Flags:
       AlterRangeRadius: true
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Range: 7
     Hit: Multi_Hit
     HitCount:
@@ -204,9 +191,6 @@ Body:
       - Level: 5
         Count: 5
     Element: Ghost
-    CopyFlags:
-      Skill:
-        Reproduce: true
     CastCancel: true
     CastTime: 7000
     AfterCastActDelay: 2000
@@ -224,6 +208,10 @@ Body:
       Splash: false
     Flags:
       AlterRangeRadius: true
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Range: 7
     Hit: Multi_Hit
     HitCount:
@@ -238,9 +226,6 @@ Body:
       - Level: 5
         Count: 5
     Element: Dark
-    CopyFlags:
-      Skill:
-        Reproduce: true
     CastCancel: true
     CastTime: 7000
     AfterCastActDelay: 2000
@@ -258,17 +243,16 @@ Body:
     Hit: Multi_Hit
     HitCount: -4
     Element: Neutral
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
-    CopyFlags:
-      Skill:
-        Reproduce: true
     CastCancel: true
     Cooldown: 5000
     CastTime: 5000
     AfterCastActDelay: 2000
+    Flags:
+      AlterRangeRadius: true
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Requires:
       SpCost: 90
   - Id: 888
@@ -294,22 +278,21 @@ Body:
       - Level: 5
         Area: 5
     Element: Neutral
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
-    CopyFlags:
-      Skill:
-        Reproduce: true
     CastCancel: true
     Cooldown: 20000
     CastTime: 7000
     AfterCastActDelay: 2000
+    Flags:
+      AlterRangeRadius: true
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Requires:
       SpCost: 120
   - Id: 5012
     Name: SK_SO_VOIDMAGEPRODIGY
-    Description: Intense Telekinesis
+    Description: Voidmage Prodigy
     CastCancel: true
     MaxLevel: 5
     TargetType: Self
@@ -335,17 +318,16 @@ Body:
     Hit: Multi_Hit
     HitCount: -2
     Element: Dark
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
-    CopyFlags:
-      Skill:
-        Reproduce: true
     CastCancel: true
     Cooldown: 5000
     CastTime: 3000
     AfterCastActDelay: 1000
+    Flags:
+      AlterRangeRadius: true
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Requires:
       SpCost: 150
       ItemCost:
@@ -363,13 +345,6 @@ Body:
     Hit: Multi_Hit
     HitCount: -2
     Element: Ghost
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
-    CopyFlags:
-      Skill:
-        Reproduce: true
     CastCancel: true
     Cooldown: 0
     CastTime: 0

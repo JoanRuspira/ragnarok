@@ -15,12 +15,13 @@ Body:
     HitCount: 1
     CastTime: 0
     AfterCastActDelay: 500
+    CastCancel: true
     Cooldown: 500
     Requires:
       SpCost: 15
   - Id: 847
     Name: SK_AM_HOMUNCULUSACTIONI
-    Description: Elemental Action
+    Description: Hommunculus Action 1
     MaxLevel: 5
     TargetType: Support
     DamageFlags:
@@ -30,12 +31,13 @@ Body:
     HitCount: 1
     Cooldown: 5000
     AfterCastActDelay: 400
+    CastCancel: true
     Requires:
       SpCost: 20
       State: Elementalspirit
   - Id: 2457
     Name: SK_AM_HATCHHOMUNCULUS
-    Description: Summon Earth Spirit Agni
+    Description: Hatch Homunculus
     MaxLevel: 5
     TargetType: Self
     DamageFlags:
@@ -82,7 +84,7 @@ Body:
           Amount: 10
   - Id: 850
     Name: SK_AM_REGENETATION
-    Description: Homunculus Recovery
+    Description: Regeneration
     MaxLevel: 5
     TargetType: Self
     DamageFlags:
@@ -98,7 +100,7 @@ Body:
       State: Elementalspirit
   - Id: 851
     Name: SK_AM_HOMUNCULUSACTIONII
-    Description: Elemental Action
+    Description: Elemental Action 2
     MaxLevel: 5
     Type: Magic
     TargetType: Self
@@ -107,6 +109,7 @@ Body:
     Hit: Multi_Hit
     HitCount: 3
     Element: Neutral
+    CastCancel: true
     Cooldown: 6000
     AfterCastActDelay: 400
     SplashArea:
@@ -120,20 +123,17 @@ Body:
         Area: 4
       - Level: 5
         Area: 4
-    Knockback: 2
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
+    Knockback: 
     Duration2: 10000
     Requires:
       SpCost: 25
       State: Elementalspirit
   - Id: 228
     Name: SK_AM_PHARMACY
-    Description: Prepare Potion
+    Description: Pharmacy
     MaxLevel: 5
     TargetType: Self
+    CastCancel: true
     DamageFlags:
       NoDamage: true
     Hit: Single
@@ -141,7 +141,7 @@ Body:
       SpCost: 7
   - Id: 229
     Name: SK_AM_FIREDEMONSTRATION
-    Description: Bomb
+    Description: Fire Demonstration
     MaxLevel: 5
     Type: Magic
     TargetType: Ground
@@ -156,10 +156,12 @@ Body:
     Duration1: 20000
     Hit: Single
     HitCount: 1
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Plagiarism: true
-        Reproduce: true 
+        Reproduce: true
     Requires:
       SpCost: 15
       ItemCost:
@@ -184,23 +186,22 @@ Body:
     DamageFlags:
       IgnoreAtkCard: true
       IgnoreFlee: true
-    Flags:
-      IgnoreAutoGuard: true
-      IgnoreCicada: true
     Range: 9
     Hit: Multi_Hit
     Element: Neutral
     HitCount: -2
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     CastTime: 500
     CastCancel: true
     Cooldown: 5000
     AfterCastActDelay: 400
     Duration1: 1
     Duration2: 120000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 15
       ItemCost:
@@ -208,7 +209,7 @@ Body:
           Amount: 1
   - Id: 490
     Name: SK_AM_BOMB
-    Description: Spore Explosion
+    Description: Bomb
     MaxLevel: 5
     Type: Weapon
     TargetType: Attack
@@ -218,11 +219,14 @@ Body:
     Hit: Multi_Hit
     HitCount: -2
     Element: Neutral
+    CastCancel: true
+    CastTime: 500
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
+        Plagiarism: true
         Reproduce: true
-    CastTime: 500
-    CastCancel: true
     AfterCastActDelay: 400
     Cooldown: 5000
     Requires:
@@ -256,9 +260,6 @@ Body:
     Element: Earth
     HitCount: 1
     ActiveInstance: 1
-    CopyFlags:
-      Skill:
-        Reproduce: true
     CastCancel: true
     CastTime: 7000
     AfterCastActDelay: 2000
@@ -274,6 +275,12 @@ Body:
       - Level: 5
         Time: 15000
     Cooldown: 20000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 50
       ItemCost:
@@ -293,15 +300,18 @@ Body:
     TargetType: Support
     DamageFlags:
       NoDamage: true
-    Flags:
-      PartyOnly: true
-      GuildOnly: true
     Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
     Cooldown: 3000
     AfterCastActDelay: 100
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 30
       ItemCost:
@@ -322,15 +332,18 @@ Body:
     TargetType: Support
     DamageFlags:
       NoDamage: true
-    Flags:
-      PartyOnly: true
-      GuildOnly: true
     Range: 9
     Hit: Single
     HitCount: 1
     CastCancel: true
     Cooldown: 5000
     AfterCastActDelay: 100
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
     Requires:
       SpCost: 50
       ItemCost:
@@ -354,6 +367,7 @@ Body:
     Hit: Single
     HitCount: 2
     Element: Neutral
+    CastCancel: true
     Cooldown: 5000
     AfterCastActDelay: 400
     Requires:
@@ -368,6 +382,7 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Neutral
+    CastCancel: true
     Cooldown: 5000
     AfterCastActDelay: 400
     Requires:
@@ -383,6 +398,7 @@ Body:
     Hit: Multi_Hit
     HitCount: 3
     Element: Neutral
+    CastCancel: true
     Cooldown: 6000
     AfterCastActDelay: 400
     SplashArea:
@@ -397,10 +413,6 @@ Body:
       - Level: 5
         Area: 4
     Knockback: 2
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     Duration2: 10000
     Requires:
       SpCost: 25
@@ -418,10 +430,6 @@ Body:
     CastCancel: true
     Cooldown: 2000
     AfterCastActDelay: 500
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     Duration1: 60000
     Requires:
       SpCost: 40
@@ -434,16 +442,11 @@ Body:
     DamageFlags:
       NoDamage: true
       Splash: true
-    Flags:
-      AllowOnMado: true
     Hit: Single
     HitCount: 1
     Cooldown: 2000
+    CastCancel: true
     AfterCastActDelay: 3000
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     SplashArea: -1
     Duration1: 60000
     Requires:
@@ -488,6 +491,7 @@ Body:
     HitCount: 1
     CastTime: 3000
     Cooldown: 5000
+    CastCancel: true
     AfterCastActDelay: 1000
     Requires:
       SpCost: 40
@@ -503,6 +507,7 @@ Body:
     HitCount: 3
     Element: Neutral
     Cooldown: 6000
+    CastCancel: true
     AfterCastActDelay: 400
     SplashArea:
       - Level: 1
@@ -516,10 +521,6 @@ Body:
       - Level: 5
         Area: 4
     Knockback: 2
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     Duration2: 10000
     Requires:
       SpCost: 25

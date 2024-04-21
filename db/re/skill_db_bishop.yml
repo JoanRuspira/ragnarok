@@ -29,6 +29,11 @@ Body:
     TargetType: Attack
     DamageFlags:
       Splash: true
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Range: 11
     Hit: Multi_Hit
     HitCount: -3
@@ -44,9 +49,6 @@ Body:
         Area: 3
       - Level: 5
         Area: 3
-    CopyFlags:
-      Skill:
-        Reproduce: true
     CastCancel: true
     CastTime: 3500
     AfterCastActDelay: 1000
@@ -63,21 +65,20 @@ Body:
     TargetType: Attack
     DamageFlags:
       Splash: true
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Range: 11
     Hit: Multi_Hit
     HitCount: -2
     Element: Dark
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
     SplashArea: 5
-    CopyFlags:
-      Skill:
-        Reproduce: true
     CastCancel: true
     Cooldown: 10000
     CastTime: 5000
+    CastCancel: true
     AfterCastActDelay: 2000
     Requires:
       SpCost: 85
@@ -94,6 +95,8 @@ Body:
     Hit: Multi_Hit
     HitCount: -3
     Element: Dark
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
         Reproduce: true
@@ -115,6 +118,7 @@ Body:
     Hit: Single
     HitCount: 1
     CastTime: 1000
+    CastCancel: true
     AfterCastActDelay: 500
     Duration1: 30000
     Requires:
@@ -127,6 +131,11 @@ Body:
     TargetType: Ground
     DamageFlags:
       NoDamage: true
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Range: 11
     Hit: Single
     HitCount: 1
@@ -173,6 +182,11 @@ Body:
     Range: 11
     Hit: Single
     HitCount: 1
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     CastCancel: true
     CastTime: 1000
     AfterCastActDelay: 2000
@@ -223,11 +237,12 @@ Body:
     Range: 9
     Hit: Single
     HitCount: 1
-    SplashArea: 5
+    Flags:
+      IsAutoShadowSpell: true
     CopyFlags:
       Skill:
-        Plagiarism: true
         Reproduce: true
+    SplashArea: 5
     CastCancel: true
     CastTime: 5000
     Cooldown: 10000
@@ -247,6 +262,11 @@ Body:
     DamageFlags:
       NoDamage: true
     Range: 9
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Hit: Single
     HitCount: 1
     SplashArea: 1

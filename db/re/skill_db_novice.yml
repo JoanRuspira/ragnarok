@@ -16,14 +16,6 @@ Body:
     DamageFlags:
       NoDamage: true
     Cooldown: 10000
-    CastTimeFlags:
-      IgnoreDex: true
-      IgnoreStatus: true
-      IgnoreItemBonus: true
-    CastDelayFlags:
-      IgnoreDex: true
-      IgnoreStatus: true
-      IgnoreItemBonus: true
   - Id: 143
     Name: SK_NV_TRICKDEAD
     Description: Play Dead

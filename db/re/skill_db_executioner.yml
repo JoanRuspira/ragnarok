@@ -14,12 +14,14 @@ Body:
     Hit: Single
     HitCount: 1
     Element: Weapon
-    CopyFlags:
-      Skill:
-        Reproduce: true
     AfterCastActDelay: 400
     Duration1: 10000
     Cooldown: 30000
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Requires:
       SpCost: 50
       Weapon:
@@ -37,8 +39,6 @@ Body:
     Cooldown: 7000
     AfterCastActDelay: 2000
     Duration2: 5000
-    CastDelayFlags:
-      IgnoreStatus: true
     Requires:
       SpCost: 35
       Weapon:
@@ -56,6 +56,11 @@ Body:
     CastCancel: true
     CastTime: 0
     AfterCastActDelay: 400
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Cooldown: 7000
     Requires:
       SpCost: 17
@@ -70,10 +75,6 @@ Body:
     TargetType: Self
     DamageFlags:
       Splash: true
-    Flags:
-      TargetTrap: true
-      IgnoreAutoGuard: true
-      IgnoreCicada: true
     Hit: Single
     HitCount: 1
     Element: Weapon
@@ -81,6 +82,11 @@ Body:
     Cooldown: 7000
     CastTime: 0
     AfterCastActDelay: 400
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Duration2:
       - Level: 1
         Time: 30000
@@ -123,7 +129,7 @@ Body:
       SpCost: 15
   - Id: 870
     Name: SK_EX_DANCINGBLADES
-    Description: Dancing Blade
+    Description: Dancing Blades
     MaxLevel: 5
     Type: Weapon
     TargetType: Self
@@ -168,14 +174,16 @@ Body:
     TargetType: Attack
     DamageFlags:
       Splash: true
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Range: 1
     Hit: Single
     HitCount: 1
     Element: Poison
     SplashArea: 2
-    CopyFlags:
-      Skill:
-        Reproduce: true
     CastCancel: true
     AfterCastActDelay: 400
     Cooldown: 7000
@@ -213,14 +221,17 @@ Body:
     Type: Weapon
     TargetType: Attack
     Range: 5
+    Flags:
+      IsAutoShadowSpell: true
+    CopyFlags:
+      Skill:
+        Reproduce: true
     Hit: Multi_Hit
     HitCount: -8
     Element: Weapon
     Cooldown: 5000
     AfterCastActDelay: 2000
     Duration2: 5000
-    CastDelayFlags:
-      IgnoreStatus: true
     Requires:
       SpCost: 45
       Weapon:
