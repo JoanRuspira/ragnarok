@@ -979,7 +979,7 @@ ra_fild01,237,328,4	script	Board#sgn::160	858,{
 	close;
 }
 
-dic_fild01,28,74,7	script	Board#sgn::160	858,{
+dic_fild01,28,74,7	script	Board#sgn::160aa	858,{
 	mes "Ice Cave entrance.";
 	close;
 }
