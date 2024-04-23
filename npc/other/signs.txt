@@ -975,10 +975,14 @@ man_fild01,363,243,4	script	Board#sgn::159a	835,{
 }
 
 ra_fild01,237,328,4	script	Board#sgn::160	858,{
-	mes "Ice Cave entrance.";
+	mes "Scaraba Hole entrance.";
 	close;
 }
 
+dic_fild01,28,74,7	script	Board#sgn::160	858,{
+	mes "Ice Cave entrance.";
+	close;
+}
 
 lhz_fild01,360,227,4	script	Bulletin Board#sgn::161	837,{
 	mes "You are now in Fortu Luna.";

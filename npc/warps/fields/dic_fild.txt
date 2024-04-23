@@ -2,11 +2,7 @@
 //= Dicastes Field Warp Script
 //============================================================
 
-//dic_dun01,371,44,0	warp	dic_field0001	1,1,dic_fild01,28,79
-//dic_fild01,24,79,0	warp	dic_field0002	1,1,dic_dun01,366,45
-//dic_fild01,69,23,0	warp	dic_field0003	1,1,dic_fild02,70,373
-//dic_fild02,71,375,0	warp	dic_field0004	1,1,dic_fild01,69,25
-//dicastes01,199,34,0	warp	dic_field0005	1,1,dic_fild01,149,279
-dic_fild01,25,79,0	warp	dic_field0006	1,1,dic_dun02,101,143
-dic_dun02,101,147	warp	dic_field0007	1,1,dic_fild01,29,80,0
+
+dic_fild01,25,79,0	warp	dic_field0006	1,1,ice_dun01,157,15
+dic_dun02,101,147	warp	dic_field0007	1,1,ra_fild01,233,327
 

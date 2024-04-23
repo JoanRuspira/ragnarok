@@ -88,5 +88,5 @@ Header:
 
 Footer:
   Imports:
-  - Path: db/re/item_db_etc_skill_requirements.yml
   - Path: db/re/item_db_etc_drops.yml
+  - Path: db/re/item_db_etc_skill_requirements.yml

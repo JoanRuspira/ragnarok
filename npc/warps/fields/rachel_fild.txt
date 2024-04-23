@@ -6,7 +6,7 @@ ra_fild06,248,379,0	warp	dic00	1,1,dic_fild01,69,26
 dic_fild01,69,22,0	warp	dic01	1,1,ra_fild06,249,375
 dic_fild01,149,281,0	warp	dic02	1,1,dicastes01,199,38
 dicastes01,199,34,0	warp	dic03	1,1,dic_fild01,149,278
-ra_fild01,233,333,0	warp	ra000	1,1,ice_dun01,157,15
+ra_fild01,233,333,0	warp	ra000	1,1,dic_dun02,101,143
 ra_fild01,306,38,0	warp	ra001	1,1,ra_fild04,322,371
 ra_fild04,322,378,0	warp	ra002	1,1,ra_fild01,306,43
 ra_fild04,362,351,0	warp	ra003	1,1,ra_fild05,39,353
