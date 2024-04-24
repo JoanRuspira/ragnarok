@@ -3,7 +3,7 @@
 //===== By: ==================================================
 //= Athena (1.0)
 //===== Current Version: =====================================
-//= 1.5
+//= 1.3
 //===== Compatible With: =====================================
 //= rAthena Project
 //===== Additional Comments: =================================
@@ -11,18 +11,16 @@
 //= 1.1 Updated [Playtester]
 //= 1.2 More accurate spawns [Playtester]
 //= 1.3 Corrected MVP spawn variance. [L0ne_W0lf]
-//= 1.4 Updated to Renewal Spawns [Kisuka]
-//= 1.5 Renewal spawn update.
-//= 1.6 Correct Spawn by Navigation's mob data. [attackjom]
 //============================================================
 
 //==================================================
-// ra_fild01 - Audhumbla Grassland
+// ra_fild01 - Rachel Field
 //==================================================
-ra_fild01,0,0	monster	Desert Wolf	1106,145,5000
-ra_fild01,0,0	monster	Roween	1782,33,5000
-ra_fild01,0,0	monster	Baby Desert Wolf	1107,22,5000
-ra_fild01,0,0	monster	Anopheles	1627,11,5000
+ra_fild01,0,0	monster	Muscipular	1780,60
+ra_fild01,173,170,106,80	monster	Geographer	1368,30,300000,120000
+ra_fild01,0,0	monster	Drosera	1781,20
+ra_fild01,0,0	monster	Galion	1783,5
+ra_fild01,0,0	monster	Gryphon	1259,3,3600000
 
 //==================================================
 // ra_fild02 - Rachel Field
@@ -33,40 +31,36 @@ ra_fild02,0,0	monster	Galion	1783,15
 ra_fild02,0,0,0,0	boss_monster	Atroce	1785,1,14400000,600000,1
 
 //==================================================
-// ra_fild03 - The Plain of Ida
+// ra_fild03 - Rachel Field
 //==================================================
-ra_fild03,0,0	monster	Hill Wind	1680,154,5000
-ra_fild03,0,0	monster	Roween	1782,35,5000
-ra_fild03,0,0	monster	Anacondaq	1030,23,5000
-ra_fild03,0,0	monster	Anopheles	1627,23,5000
+ra_fild03,0,0	monster	Galion	1783,35
+ra_fild03,0,0	monster	Drosera	1781,10
+ra_fild03,0,0	monster	Roween	1782,10
+ra_fild03,0,0	monster	Stapo	1784,10
 ra_fild03,0,0,0,0	boss_monster	Atroce	1785,1,10800000,600000,1
 
 //==================================================
-// ra_fild04 - Audhumbla Grassland
+// ra_fild04 - Rachel Field
 //==================================================
-ra_fild04,0,0	monster	Hill Wind	1680,155,5000
-ra_fild04,0,0	monster	Roween	1782,35,5000
-ra_fild04,0,0	monster	Desert Wolf	1106,23,5000
-ra_fild04,0,0	monster	Anopheles	1627,23,5000
+ra_fild04,0,0	monster	Roween	1782,60
+ra_fild04,0,0	monster	Stapo	1784,20
+ra_fild04,0,0	monster	Wild Rose	1261,10
+ra_fild04,0,0	monster	Galion	1783,3
 ra_fild04,0,0,0,0	boss_monster	Atroce	1785,1,18000000,600000,1
 
 //==================================================
-// ra_fild05 - Audhumbla Grassland
+// ra_fild05 - Rachel Field
 //==================================================
-ra_fild05,0,0	monster	Kobold	1133,81,5000
-ra_fild05,0,0	monster	Kobold	1134,81,5000
-ra_fild05,0,0	monster	Kobold	1135,81,5000
-ra_fild05,0,0	monster	Anopheles	1627,11,5000
+ra_fild05,0,0	monster	Hill Wind	1680,70
+ra_fild05,0,0	monster	Drosera	1781,20
+ra_fild05,170,200,106,115	monster	Geographer	1368,10
 
 //==================================================
-// ra_fild06 - Portus Luna
+// ra_fild06 - Rachel Field
 //==================================================
-ra_fild06,0,0	monster	Kobold Archer	1282,87,5000
-ra_fild06,0,0	monster	Kobold	1133,49,5000
-ra_fild06,0,0	monster	Kobold	1134,49,5000
-ra_fild06,0,0	monster	Kobold	1135,49,5000
-ra_fild06,0,0	monster	Anopheles	1627,12,5000
-ra_fild06,0,0	monster	Kobold Leader	1296,1,1800000,1200000
+ra_fild06,0,0	monster	Hill Wind	1680,50
+ra_fild06,0,0	monster	Anopheles	1627,20
+ra_fild06,0,0	monster	Drosera	1781,10
 
 //==================================================
 // ra_fild07 - Rachel Field
@@ -76,13 +70,11 @@ ra_fild07,0,0	monster	Galion	1783,20
 ra_fild07,0,0	monster	Stapo	1784,10
 
 //==================================================
-// ra_fild08 - The Plain of Ida
+// ra_fild08 - Rachel Field
 //==================================================
-ra_fild08,0,0	monster	Anacondaq	1030,159,5000
-ra_fild08,0,0	monster	Roween	1782,79,5000
-ra_fild08,0,0	monster	Hill Wind	1680,31,5000
-ra_fild08,0,0	monster	Baby Desert Wolf	1107,15,5000
-ra_fild08,0,0	monster	Anopheles	1627,15,5000
+ra_fild08,0,0	monster	Stapo	1784,100
+ra_fild08,0,0	monster	Drops	1113,40
+ra_fild08,0,0	monster	Drosera	1781,20
 
 //==================================================
 // ra_fild09 - Rachel Field
@@ -93,32 +85,29 @@ ra_fild09,0,0	monster	Hill Wind	1680,10
 ra_fild09,0,0	monster	Harpy	1376,1,3600000
 
 //==================================================
-// ra_fild10
+// ra_fild10 - Rachel Field
 //==================================================
-ra_fild10	monster	Drosera	1781,5
-ra_fild10	monster	Magmaring	1836,5
-ra_fild10	monster	Grey Baby Wolf	21324,50
-ra_fild10	monster	Grey Goat	21323,60
-ra_fild10	monster	Rake Hand	21296,5
+ra_fild10,0,0	monster	Stapo	1784,30
+ra_fild10,0,0	monster	Galion	1783,20
+ra_fild10,0,0	monster	Roween	1782,10
 
 //==================================================
-// ra_fild11
+// ra_fild11 - Rachel Field
 //==================================================
-ra_fild11	monster	Red Plant	1078,5
-ra_fild11	monster	Yellow Plant	1081,15
-ra_fild11	monster	Drosera	1781,10
-ra_fild11	monster	Grey Baby Wolf	21324,50
-ra_fild11	monster	Grey Goat	21323,70
-ra_fild11	monster	Rake Hand	21296,5
+ra_fild11,0,0	monster	Drops	1113,100
+ra_fild11,0,0	monster	Stapo	1784,40
+ra_fild11,0,0	monster	Roween	1782,2
+ra_fild11,0,0	monster	Yellow Plant	1081,15
+ra_fild11,0,0	monster	Red Plant	1078,5
 
 //==================================================
-// ra_fild12 - The Plain of Ida
+// ra_fild12 - Rachel Field
 //==================================================
-ra_fild12,0,0	monster	Roween	1782,216,5000
-ra_fild12,0,0	monster	Anopheles	1627,49,5000
-ra_fild12,0,0	monster	Baby Desert Wolf	1107,24,5000
-ra_fild12,0,0	monster	Yellow Plant	1081,15,10000
-ra_fild12,0,0	monster	Red Plant	1078,5,10000
+ra_fild12,0,0	monster	Drops	1113,100
+ra_fild12,0,0	monster	Stapo	1784,40
+ra_fild12,0,0	monster	Poporing	1031,5
+ra_fild12,0,0	monster	Yellow Plant	1081,15
+ra_fild12,0,0	monster	Red Plant	1078,5
 
 //==================================================
 // ra_fild13 - Rachel Field

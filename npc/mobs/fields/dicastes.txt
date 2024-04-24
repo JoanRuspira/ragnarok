@@ -1,0 +1,38 @@
+//===== rAthena Script =======================================
+//= Manuk Fields Monster Spawn Script
+//===== By: ==================================================
+//= alexx, MaC
+//===== Current Version: =====================================
+//= 1.1a
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Additional Comments: =================================
+//= 1.0 Official spawn ammounts from Aegis script [alexx]
+//= 1.1 Added 13.2 mob spawn update [scriptor]
+//= 1.1a Corrected fild2 mobs spawning on fild1. (bugreport:4248)
+//============================================================
+
+//============================================================
+// man_fild01 - Manuk Field
+//============================================================
+man_fild01,0,0	monster	Bradium Golem	2024,10
+man_fild01,0,0	monster	Tatacho	1986,50
+man_fild01,0,0	monster	Dolomedes	2092,30
+man_fild01,0,0	monster	Hardrock Mammoth	1990,1
+
+//============================================================
+// man_fild02 - Manuk Field
+//============================================================
+man_fild01,0,0	monster	Bradium Golem	2024,50
+man_fild01,0,0	monster	Tatacho	1986,10
+man_fild01,0,0	monster	Dolomedes	2092,30
+man_fild01,0,0	monster	Stormy Knight	1251,1,7200000,600000,1
+
+//==================================================
+// dic_fild01 - At the Foot of the Kamidal Mountain
+//==================================================
+dic_fild01,0,0	monster	Nepenthes	1988,60,5000
+dic_fild01,0,0	monster	Hillslion	1989,30,5000
+dic_fild01,0,0	monster	Garm Baby	1515,25,5000
+dic_fild01,0,0	monster	Tendrilion	1991,1,5000
+dic_fild01,0,0	monster	Garm	1252,1,7200000,600000,1
