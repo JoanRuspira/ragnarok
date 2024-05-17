@@ -2331,3 +2331,84 @@ Body:
     View: 555
     Script: |
       bonus bHit,3;
+  - Id: 2297
+    AegisName: Goblini_Mask
+    Name: Goblin Mask
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Head_Low: true
+      Head_Mid: true
+    View: 84
+  - Id: 5010
+    AegisName: Indian_Hair_Piece
+    Name: Indian Fillet
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 5
+    Locations:
+      Head_Top: true
+    Refineable: true
+    View: 96
+  - Id: 2275
+    AegisName: Red_Bandana
+    Name: Red Bandana
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 4
+    Locations:
+      Head_Top: true
+    Refineable: true
+    View: 62
+  - Id: 5087
+    AegisName: Goblin_Mask_01
+    Name: Poker Face
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 1
+    Locations:
+      Head_Low: true
+      Head_Mid: true
+    View: 171
+  - Id: 5088
+    AegisName: Goblin_Mask_02
+    Name: Surprised Mask
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 1
+    Locations:
+      Head_Low: true
+      Head_Mid: true
+    View: 172
+  - Id: 5089
+    AegisName: Goblin_Mask_03
+    Name: Annoyed Mask
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 1
+    Locations:
+      Head_Low: true
+      Head_Mid: true
+    View: 173
+  - Id: 5090
+    AegisName: Goblin_Mask_04
+    Name: Goblin Leader Mask
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 2
+    Locations:
+      Head_Low: true
+      Head_Mid: true
+    View: 174

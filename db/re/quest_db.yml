@@ -56,93 +56,93 @@ Header:
   Version: 2
 
 Body:
-  - Id: 1
-    Title: "Request : Hunt Poring"
-    Targets:
-      - Mob: PORING
-        Count: 10
-  - Id: 2
-    Title: "Request : Hunt Lunatic"
-    Targets:
-      - Mob: LUNATIC
-        Count: 10
-  - Id: 3
-    Title: "Request : Hunt Fabre"
-    Targets:
-      - Mob: FABRE
-        Count: 10
-  - Id: 6
-    Title: "Request : Hunt Honet"
-    Targets:
-      - Mob: HORNET
-        Count: 10
-  - Id: 7
-    Title: "Request : Hunt Condor"
-    Targets:
-      - Mob: CONDOR
-        Count: 10
-  - Id: 8
-    Title: "Request : Bring Feather of Birds"
-  - Id: 9
-    Title: "Request : Hunt Drops"
-    Targets:
-      - Mob: DROPS
-        Count: 10
-  - Id: 10
-    Title: "Request : Hunt Pecopeco Egg"
-    Targets:
-      - Mob: PECOPECO_EGG
-        Count: 10
-  - Id: 11
-    Title: "Request : Bring Shell"
-  - Id: 12
-    Title: "Request : Hunt Willow"
-    Targets:
-      - Mob: WILOW
-        Count: 10
-  - Id: 13
-    Title: "Request : Hunt Rocker"
-    Targets:
-      - Mob: ROCKER
-        Count: 15
-  - Id: 14
-    Title: "Request : Hunt Mandragora"
-    Targets:
-      - Mob: MANDRAGORA
-        Count: 15
-  - Id: 15
-    Title: "Request : Hunt Savage Babe"
-    Targets:
-      - Mob: SAVAGE_BABE
-        Count: 15
-  - Id: 16
-    Title: "Request : Bring Stycky Webfoot"
-  - Id: 17
-    Title: "Request : Hunt Baby Desert Wolf"
-    Targets:
-      - Mob: DESERT_WOLF_B
-        Count: 15
-  - Id: 18
-    Title: "Request : Hunt Scorpion"
-    Targets:
-      - Mob: SCORPION
-        Count: 15
-  - Id: 19
-    Title: "Request : Hunt Zombie"
-    Targets:
-      - Mob: ZOMBIE
-        Count: 15
-  - Id: 20
-    Title: "Request : Bring Pointed Scale"
-  - Id: 21
-    Title: "Request : Hunt Snake"
-    Targets:
-      - Mob: SNAKE
-        Count: 15
-  - Id: 22
-    Title: "Request : Hunt Spore"
-    Targets:
-      - Mob: SPORE
-        Count: 15
-  - Id: 23
-    Title: "Request : Bring Snail's Shell"
+  # - Id: 1
+  #   Title: "Request : Hunt Poring"
+  #   Targets:
+  #     - Mob: PORING
+  #       Count: 10
+  # - Id: 2
+  #   Title: "Request : Hunt Lunatic"
+  #   Targets:
+  #     - Mob: LUNATIC
+  #       Count: 10
+  # - Id: 3
+  #   Title: "Request : Hunt Fabre"
+  #   Targets:
+  #     - Mob: FABRE
+  #       Count: 10
+  # - Id: 6
+  #   Title: "Request : Hunt Honet"
+  #   Targets:
+  #     - Mob: HORNET
+  #       Count: 10
+  # - Id: 7
+  #   Title: "Request : Hunt Condor"
+  #   Targets:
+  #     - Mob: CONDOR
+  #       Count: 10
+  # - Id: 8
+  #   Title: "Request : Bring Feather of Birds"
+  # - Id: 9
+  #   Title: "Request : Hunt Drops"
+  #   Targets:
+  #     - Mob: DROPS
+  #       Count: 10
+  # - Id: 10
+  #   Title: "Request : Hunt Pecopeco Egg"
+  #   Targets:
+  #     - Mob: PECOPECO_EGG
+  #       Count: 10
+  # - Id: 11
+  #   Title: "Request : Bring Shell"
+  # - Id: 12
+  #   Title: "Request : Hunt Willow"
+  #   Targets:
+  #     - Mob: WILOW
+  #       Count: 10
+  # - Id: 13
+  #   Title: "Request : Hunt Rocker"
+  #   Targets:
+  #     - Mob: ROCKER
+  #       Count: 15
+  # - Id: 14
+  #   Title: "Request : Hunt Mandragora"
+  #   Targets:
+  #     - Mob: MANDRAGORA
+  #       Count: 15
+  # - Id: 15
+  #   Title: "Request : Hunt Savage Babe"
+  #   Targets:
+  #     - Mob: SAVAGE_BABE
+  #       Count: 15
+  # - Id: 16
+  #   Title: "Request : Bring Stycky Webfoot"
+  # - Id: 17
+  #   Title: "Request : Hunt Baby Desert Wolf"
+  #   Targets:
+  #     - Mob: DESERT_WOLF_B
+  #       Count: 15
+  # - Id: 18
+  #   Title: "Request : Hunt Scorpion"
+  #   Targets:
+  #     - Mob: SCORPION
+  #       Count: 15
+  # - Id: 19
+  #   Title: "Request : Hunt Zombie"
+  #   Targets:
+  #     - Mob: ZOMBIE
+  #       Count: 15
+  # - Id: 20
+  #   Title: "Request : Bring Pointed Scale"
+  # - Id: 21
+  #   Title: "Request : Hunt Snake"
+  #   Targets:
+  #     - Mob: SNAKE
+  #       Count: 15
+  # - Id: 22
+  #   Title: "Request : Hunt Spore"
+  #   Targets:
+  #     - Mob: SPORE
+  #       Count: 15
+  # - Id: 23
+  #   Title: "Request : Bring Snail's Shell"

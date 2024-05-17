@@ -210,3 +210,39 @@ Body:
     WeaponLevel: 3
     EquipLevelMin: 27
     Refineable: true
+  - Id: 1916
+    AegisName: Guitar_Of_Vast_Land
+    Name: Green Acre Guitar
+    Type: Weapon
+    SubType: Musical
+    Buy: 20
+    Weight: 900
+    Attack: 110
+    Range: 1
+    Jobs:
+      BardDancer: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Earth;
+  - Id: 1917
+    AegisName: Guitar_Of_Gentle_Breeze
+    Name: Gentle Breeze Guitar
+    Type: Weapon
+    SubType: Musical
+    Buy: 20
+    Weight: 900
+    Attack: 110
+    Range: 1
+    Jobs:
+      BardDancer: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Wind;

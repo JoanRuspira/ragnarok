@@ -87,6 +87,86 @@ Header:
   Version: 1
 
 Body:
+  - Id: 7053
+    AegisName: Cyfar
+    Name: Cyfar
+    Type: Etc
+    Buy: 772
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7054
+    AegisName: Brigan
+    Name: Brigan
+    Type: Etc
+    Buy: 746
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 702
+    AegisName: Animal_Blood
+    Name: Animal Gore
+    Type: Etc
+    Buy: 450
+    Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 703
+    AegisName: Hinalle
+    Name: Hinalle
+    Type: Etc
+    Buy: 500
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7011
+    AegisName: Claw_Of_Monkey
+    Name: Claw of Monkey
+    Type: Etc
+    Buy: 466
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7182
+    AegisName: Cacao
+    Name: Cacao
+    Type: Etc
+    Buy: 200
+    Weight: 20
+    Flags:
+      BuyingStore: true
+  - Id: 711
+    AegisName: Shoot
+    Name: Shoot
+    Type: Etc
+    Buy: 16
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 706
+    AegisName: Four_Leaf_Clover
+    Name: Four Leaf Clover
+    Type: Etc
+    Buy: 80000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 705
+    AegisName: Clover
+    Name: Clover
+    Type: Etc
+    Buy: 10
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 713
+    AegisName: Empty_Bottle
+    Name: Empty Bottle
+    Type: Etc
+    Buy: 6
+    Weight: 20
+    Flags:
+      BuyingStore: true
   - Id: 910
     AegisName: Garlet
     Name: Garlet

@@ -1795,19 +1795,6 @@ Body:
       Sitting: true
     Script: |
       itemskill "SK_MG_FIREBOLT",5;
-  - Id: 692
-    AegisName: Wind_Scroll_1_3
-    Name: Level 3 Lightening Bolt
-    Type: Delayconsume
-    Buy: 1000
-    Weight: 10
-    Flags:
-      BuyingStore: true
-    NoUse:
-      Override: 100
-      Sitting: true
-    Script: |
-      itemskill "SK_MG_LIGHTNINGBOLT",3;
   - Id: 693
     AegisName: Wind_Scroll_1_5
     Name: Level 5 Lightening Bolt

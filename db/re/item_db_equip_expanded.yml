@@ -24203,19 +24203,6 @@ Body:
     Locations:
       Head_Low: true
     View: 49
-  - Id: 2263
-    AegisName: Gangster_Patch
-    Name: Zorro Masque
-    Type: Armor
-    Buy: 20
-    Weight: 100
-    Jobs:
-      All: true
-      Novice: false
-      SuperNovice: false
-    Locations:
-      Head_Mid: true
-    View: 50
   - Id: 2264
     AegisName: Munak_Turban
     Name: Munak Hat
@@ -24375,17 +24362,6 @@ Body:
     Script: |
       bonus bAgi,2;
       bonus2 bSubEle,Ele_Ghost,15;
-  - Id: 2275
-    AegisName: Red_Bandana
-    Name: Red Bandana
-    Type: Armor
-    Buy: 20
-    Weight: 100
-    Defense: 4
-    Locations:
-      Head_Top: true
-    Refineable: true
-    View: 62
   - Id: 2276
     AegisName: Eagle_Eyes
     Name: Angled Glasses
@@ -24674,21 +24650,6 @@ Body:
     View: 83
     Script: |
       bonus bDex,1;
-  - Id: 2297
-    AegisName: Goblini_Mask
-    Name: Goblin Mask
-    Type: Armor
-    Buy: 20
-    Weight: 100
-    Defense: 1
-    Jobs:
-      All: true
-      Novice: false
-      SuperNovice: false
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-    View: 84
   - Id: 2298
     AegisName: Green_Feeler
     Name: Green Feeler
@@ -37449,17 +37410,6 @@ Body:
     Script: |
       bonus bMdef,3;
       bonus bUnbreakableHelm;
-  - Id: 5010
-    AegisName: Indian_Hair_Piece
-    Name: Indian Fillet
-    Type: Armor
-    Buy: 20
-    Weight: 100
-    Defense: 5
-    Locations:
-      Head_Top: true
-    Refineable: true
-    View: 96
   - Id: 5011
     AegisName: Antenna
     Name: Aerial
@@ -38590,50 +38540,6 @@ Body:
     View: 170
     Script: |
       bonus2 bResEff,Eff_Blind,5000;
-  - Id: 5087
-    AegisName: Goblin_Mask_01
-    Name: Poker Face
-    Type: Armor
-    Buy: 20
-    Weight: 100
-    Defense: 1
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-    View: 171
-  - Id: 5088
-    AegisName: Goblin_Mask_02
-    Name: Surprised Mask
-    Type: Armor
-    Buy: 20
-    Weight: 100
-    Defense: 1
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-    View: 172
-  - Id: 5089
-    AegisName: Goblin_Mask_03
-    Name: Annoyed Mask
-    Type: Armor
-    Buy: 20
-    Weight: 100
-    Defense: 1
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-    View: 173
-  - Id: 5090
-    AegisName: Goblin_Mask_04
-    Name: Goblin Leader Mask
-    Type: Armor
-    Buy: 20
-    Weight: 100
-    Defense: 2
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-    View: 174
   - Id: 5091
     AegisName: Big_Golden_Bell
     Name: Decorative Golden Bell
