@@ -3513,3 +3513,226 @@ Body:
       - Item: Orc_Archer_Card
         Rate: 1
         StealProtected: true
+  - Id: 1415
+    AegisName: BABY_LEOPARD
+    Name: Baby Leopard
+    Level: 32
+    Hp: 2590
+    BaseExp: 352
+    JobExp: 201
+    Attack: 155
+    Attack2: 207
+    MagicDefense: 5
+    Str: 20
+    Agi: 44
+    Vit: 20
+    Int: 4
+    Dex: 49
+    Luk: 10
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Brute
+    Element: Ghost
+    ElementLevel: 1
+    WalkSpeed: 150
+    AttackDelay: 318
+    AttackMotion: 528
+    DamageMotion: 420
+    Ai: 04
+    Drops:
+      - Item: Leopard_Skin
+        Rate: 5200
+      - Item: Leopard_Talon
+        Rate: 3200
+      - Item: Oridecon_Stone
+        Rate: 150
+      - Item: Meat
+        Rate: 2000
+      - Item: Dagger_
+        Rate: 100
+      - Item: Baby_Leopard_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1498
+    AegisName: WOOTAN_SHOOTER
+    Name: Wootan Shooter
+    Level: 39
+    Hp: 3977
+    BaseExp: 886
+    JobExp: 453
+    Attack: 84
+    Attack2: 105
+    Defense: 10
+    MagicDefense: 28
+    Str: 15
+    Agi: 35
+    Vit: 29
+    Int: 15
+    Dex: 100
+    Luk: 42
+    AttackRange: 10
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Earth
+    ElementLevel: 2
+    WalkSpeed: 200
+    AttackDelay: 857
+    AttackMotion: 1056
+    DamageMotion: 576
+    Ai: 04
+    Drops:
+      - Item: Flexible_String
+        Rate: 3500
+      - Item: Banana
+        Rate: 1000
+      - Item: Elunium_Stone
+        Rate: 1000
+      - Item: Apple
+        Rate: 100
+      - Item: Cacao
+        Rate: 100
+      - Item: Banana_Hat
+        Rate: 10
+      - Item: Wootan_Shooter_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1499
+    AegisName: WOOTAN_FIGHTER
+    Name: Wootan Fighter
+    Level: 41
+    Hp: 4457
+    BaseExp: 1790
+    JobExp: 833
+    Attack: 395
+    Attack2: 480
+    Defense: 30
+    MagicDefense: 19
+    Agi: 41
+    Vit: 31
+    Int: 10
+    Dex: 45
+    Luk: 30
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Fire
+    ElementLevel: 2
+    WalkSpeed: 200
+    AttackDelay: 912
+    AttackMotion: 1344
+    DamageMotion: 480
+    Ai: 04
+    Drops:
+      - Item: Meat
+        Rate: 4500
+      - Item: Shoulder_Protection
+        Rate: 4000
+      - Item: Waghnakh
+        Rate: 3
+      - Item: Finger_
+        Rate: 1
+      - Item: Banana
+        Rate: 1000
+      - Item: Great_Leaf
+        Rate: 1000
+      - Item: Banana_Hat
+        Rate: 5
+      - Item: Wootan_Fighter_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1128
+    AegisName: HORN
+    Name: Horn
+    Level: 18
+    Hp: 659
+    BaseExp: 134
+    JobExp: 86
+    Attack: 58
+    Attack2: 69
+    Defense: 10
+    Str: 22
+    Agi: 18
+    Vit: 28
+    Int: 10
+    Dex: 47
+    Luk: 15
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Insect
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1528
+    AttackMotion: 528
+    DamageMotion: 288
+    Ai: 17
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Yellow_Live
+        Rate: 80
+      - Item: Emveretarcon
+        Rate: 35
+      - Item: Horn
+        Rate: 5500
+      - Item: Guisarme_
+        Rate: 15
+      - Item: Shell
+        Rate: 5500
+      - Item: Solid_Shell
+        Rate: 70
+      - Item: Horn_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1494
+    AegisName: KIND_OF_BEETLE
+    Name: Beetle King
+    Level: 34
+    Hp: 1874
+    BaseExp: 679
+    JobExp: 442
+    Attack: 191
+    Attack2: 243
+    Defense: 45
+    MagicDefense: 12
+    Agi: 34
+    Vit: 10
+    Int: 0
+    Dex: 40
+    Luk: 0
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Insect
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 165
+    AttackDelay: 1247
+    AttackMotion: 768
+    DamageMotion: 576
+    Ai: 03
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Solid_Peeling
+        Rate: 6500
+      - Item: Beetle_Nipper
+        Rate: 4500
+      - Item: Insect_Feeler
+        Rate: 1000
+      - Item: Worm_Peelings
+        Rate: 500
+      - Item: Guard_
+        Rate: 1
+      - Item: Kind_Of_Beetle_Card
+        Rate: 1
+        StealProtected: true

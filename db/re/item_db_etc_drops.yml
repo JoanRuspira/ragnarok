@@ -1239,11 +1239,27 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
+  - Id: 7202
+    AegisName: Beetle_Nipper
+    Name: Pincher of Beetle
+    Type: Etc
+    Buy: 290
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 947
     AegisName: Horn
     Name: Horn
     Type: Etc
     Buy: 116
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7190
+    AegisName: Solid_Peeling
+    Name: Solid Husk
+    Type: Etc
+    Buy: 140
     Weight: 10
     Flags:
       BuyingStore: true
@@ -2169,6 +2185,14 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
+  - Id: 7200
+    AegisName: Flexible_String
+    Name: Elastic Band
+    Type: Etc
+    Buy: 380
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 1062
     AegisName: Pumpkin_Head
     Name: Jack o' Pumpkin
@@ -2182,6 +2206,22 @@ Body:
     Name: Fang
     Type: Etc
     Buy: 680
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7172
+    AegisName: Leopard_Talon
+    Name: Leopard Claw
+    Type: Etc
+    Buy: 290
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7171
+    AegisName: Leopard_Skin
+    Name: Leopard Skin
+    Type: Etc
+    Buy: 282
     Weight: 10
     Flags:
       BuyingStore: true
@@ -3450,6 +3490,22 @@ Body:
     Name: Vital Flower
     Type: Etc
     Buy: 1000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7196
+    AegisName: Shoulder_Protection
+    Name: Shoulder Protector
+    Type: Etc
+    Buy: 230
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7198
+    AegisName: Great_Leaf
+    Name: Huge Leaf
+    Type: Etc
+    Buy: 610
     Weight: 10
     Flags:
       BuyingStore: true
