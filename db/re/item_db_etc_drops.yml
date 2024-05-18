@@ -645,6 +645,14 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
+  - Id: 7064
+    AegisName: Dragon_Fly_Wing
+    Name: Wing of Dragonfly
+    Type: Etc
+    Buy: 520
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 925
     AegisName: Bill_Of_Birds
     Name: Bill of Birds
@@ -1545,6 +1553,14 @@ Body:
     Weight: 1000
     Flags:
       BuyingStore: true
+  - Id: 714
+    AegisName: Emperium
+    Name: Emperium
+    Type: Etc
+    Buy: 10000
+    Weight: 1000
+    Flags:
+      BuyingStore: true
   - Id: 990
     AegisName: Boody_Red
     Name: Red Blood
@@ -1921,6 +1937,14 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
+  - Id: 7023
+    AegisName: Blade_Lost_In_Darkness
+    Name: Blade Lost in Darkness
+    Type: Etc
+    Buy: 12000
+    Weight: 40
+    Flags:
+      BuyingStore: true
   - Id: 1039
     AegisName: Petite_DiablOfs_Wing
     Name: Little Evil Wing
@@ -2149,6 +2173,14 @@ Body:
   - Id: 1068
     AegisName: Tree_Of_Archer_3
     Name: Barren Trunk
+    Type: Etc
+    Buy: 2
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 1067
+    AegisName: Tree_Of_Archer_2
+    Name: Solid Trunk
     Type: Etc
     Buy: 2
     Weight: 10

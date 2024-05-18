@@ -2412,3 +2412,89 @@ Body:
       Head_Low: true
       Head_Mid: true
     View: 174
+  - Id: 5035
+    AegisName: Poring_Hat
+    Name: Poring Hat
+    Type: Armor
+    Buy: 20
+    Weight: 700
+    Defense: 3
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 38
+    Refineable: true
+    View: 120
+  - Id: 2274
+    AegisName: Ghost_Bandana
+    Name: Ghost Bandana
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Head_Top: true
+    Refineable: true
+    View: 61
+    Script: |
+      bonus bAgi,2;
+      bonus2 bSubEle,Ele_Ghost,15;
+  - Id: 2254
+    AegisName: Angelic_Chain
+    Name: Angel Wing
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 4
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 38
+    Script: |
+      bonus bMdef,3;
+      bonus bAgi,1;
+      bonus bLuk,1;
+      bonus2 bSubRace,RC_Demon,3;
+  - Id: 2282
+    AegisName: Spirit_Chain
+    Name: Halo
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    View: 69
+    Script: |
+      bonus2 bSubEle,Ele_Holy,15;
+  - Id: 2255
+    AegisName: Satanic_Chain
+    Name: Evil Wing
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 6
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 39
+    Script: |
+      bonus bMdef,2;
+      bonus bStr,1;
+      bonus2 bSubRace,RC_Angel,3;

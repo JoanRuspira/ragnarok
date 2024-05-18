@@ -751,3 +751,31 @@ Body:
     WeaponLevel: 3
     EquipLevelMin: 27
     Refineable: true
+  - Id: 1133
+    AegisName: Fire_Brand
+    Name: Fireblend
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 20
+    Weight: 500
+    Attack: 100
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 40
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Fire;
+      skill "MG_FIREBOLT",3;
+      bonus3 bAutoSpell,"MG_FIREBOLT",3,100;

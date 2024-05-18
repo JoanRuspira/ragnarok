@@ -986,3 +986,27 @@ Body:
     Refineable: true
     Script: |
       bonus bDef,5;
+  - Id: 13046
+    AegisName: Krieg
+    Name: Krierg
+    Type: Weapon
+    SubType: Dagger
+    Buy: 20
+    Weight: 500
+    Attack: 110
+    Range: 1
+    Slots: 3
+    Jobs:
+      Assassin: true
+      Rogue: true
+      Thief: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 50
+    Refineable: true
+    Script: |
+      bonus3 bAddEffOnSkill,"SK_RG_BACKSTAB",Eff_Bleeding,1000;
+      bonus2 bSkillAtk,"SK_RG_BACKSTAB",15;

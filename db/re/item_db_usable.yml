@@ -6667,3 +6667,16 @@ Body:
     Script: |
       specialeffect2 439;
       itemskill "SK_HT_CALL_FALCON",1;
+  - Id: 603
+    AegisName: Old_Blue_Box
+    Name: Old Blue Box
+    Type: Usable
+    Buy: 10000
+    Weight: 200
+    Flags:
+      BuyingStore: true
+      Container: true
+    Trade:
+      NoSell: true
+    Script: |
+      getgroupitem(IG_BlueBox);

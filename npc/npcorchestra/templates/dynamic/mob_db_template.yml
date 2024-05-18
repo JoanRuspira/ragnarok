@@ -331,6 +331,8 @@ Body:
         Rate: 400
       - Item: Apple
         Rate: 1000
+      - Item: Poring_Hat
+        Rate: 10
       - Item: Empty_Bottle
         Rate: 1500
       - Item: Apple
@@ -1045,6 +1047,8 @@ Body:
         Rate: 800
       - Item: Orange_Juice
         Rate: 20
+      - Item: Poring_Hat
+        Rate: 10
       - Item: Drops_Card
         Rate: 1
         StealProtected: true
@@ -1682,4 +1686,769 @@ Body:
       - Item: Steam_Goblin_Card
         Rate: 1
         StealProtected: true
-
+  - Id: 1010
+    AegisName: WILOW
+    Name: Willow
+    Level: 4
+    Hp: 95
+    BaseExp: 5
+    JobExp: 4
+    Attack: 9
+    Attack2: 12
+    Defense: 5
+    MagicDefense: 15
+    Agi: 4
+    Vit: 8
+    Int: 30
+    Dex: 9
+    Luk: 10
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Plant
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1672
+    AttackMotion: 672
+    DamageMotion: 432
+    Ai: 01
+    Drops:
+      - Item: Tree_Root
+        Rate: 9000
+      - Item: Wooden_Block
+        Rate: 100
+      - Item: Resin
+        Rate: 1500
+      - Item: Sweet_Potato
+        Rate: 700
+      - Item: Tree_Of_Archer_3
+        Rate: 3500
+      - Item: Tree_Of_Archer_2
+        Rate: 2000
+      - Item: Tree_Of_Archer_1
+        Rate: 1000
+      - Item: Wilow_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1014
+    AegisName: SPORE
+    Name: Spore
+    Level: 16
+    Hp: 510
+    BaseExp: 66
+    JobExp: 108
+    Attack: 24
+    Attack2: 48
+    MagicDefense: 5
+    Agi: 12
+    Vit: 12
+    Int: 5
+    Dex: 19
+    Luk: 8
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Plant
+    Element: Water
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1872
+    AttackMotion: 672
+    DamageMotion: 288
+    Ai: 01
+    Drops:
+      - Item: Mushroom_Spore
+        Rate: 9000
+      - Item: Red_Herb
+        Rate: 800
+      - Item: Blue_Herb
+        Rate: 50
+      - Item: Spore_Doll
+        Rate: 10
+      - Item: Hat
+        Rate: 40
+      - Item: Poison_Spore
+        Rate: 5
+      - Item: Strawberry
+        Rate: 600
+      - Item: Spore_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1025
+    AegisName: SNAKE
+    Name: Boa
+    JapaneseName: Snake
+    Level: 15
+    Hp: 471
+    BaseExp: 72
+    JobExp: 48
+    Attack: 46
+    Attack2: 55
+    Agi: 15
+    Vit: 15
+    Int: 10
+    Dex: 35
+    Luk: 5
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Brute
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1576
+    AttackMotion: 576
+    DamageMotion: 576
+    Ai: 01
+    Drops:
+      - Item: Scale_Of_Snakes
+        Rate: 9000
+      - Item: Katana_
+        Rate: 15
+      - Item: Red_Herb
+        Rate: 900
+      - Item: Emveretarcon
+        Rate: 35
+      - Item: Posionous_Canine
+        Rate: 800
+      - Item: Shining_Scales
+        Rate: 1
+      - Item: Strawberry
+        Rate: 600
+      - Item: Snake_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1013
+    AegisName: WOLF
+    Name: Wolf
+    Level: 25
+    Hp: 919
+    BaseExp: 329
+    JobExp: 199
+    Attack: 37
+    Attack2: 46
+    Agi: 20
+    Vit: 28
+    Int: 15
+    Dex: 32
+    Luk: 20
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Brute
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1054
+    AttackMotion: 504
+    DamageMotion: 432
+    Ai: 03
+    Drops:
+      - Item: Emveretarcon
+        Rate: 20
+      - Item: Claw_Of_Wolves
+        Rate: 9000
+      - Item: Mantle_
+        Rate: 10
+      - Item: Meat
+        Rate: 650
+      - Item: Monster's_Feed
+        Rate: 1050
+      - Item: Animal's_Skin
+        Rate: 5500
+      - Item: Strawberry
+        Rate: 600
+      - Item: Wolf_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1090
+    AegisName: MASTERING
+    Name: Mastering
+    Level: 2
+    Hp: 2415
+    BaseExp: 30
+    JobExp: 10
+    Attack: 18
+    Attack2: 24
+    MagicDefense: 10
+    Agi: 2
+    Vit: 2
+    Int: 0
+    Dex: 17
+    Luk: 60
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Plant
+    Element: Water
+    ElementLevel: 1
+    WalkSpeed: 300
+    AttackDelay: 1072
+    AttackMotion: 672
+    DamageMotion: 480
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Scarlet_Jewel
+        Rate: 2000
+      - Item: Azure_Jewel
+        Rate: 2000
+      - Item: Bluish_Green_Jewel
+        Rate: 2000
+      - Item: White_Jewel
+        Rate: 2000
+      - Item: Skyblue_Jewel
+        Rate: 2000
+      - Item: Apple
+        Rate: 8000
+      - Item: Apple
+        Rate: 8000
+      - Item: Apple_Juice
+        Rate: 4000
+      - Item: Mastering_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1242
+    AegisName: MARIN
+    Name: Marin
+    Level: 15
+    Hp: 742
+    BaseExp: 66
+    JobExp: 44
+    Attack: 39
+    Attack2: 43
+    MagicDefense: 10
+    Agi: 10
+    Vit: 10
+    Int: 5
+    Dex: 35
+    Luk: 15
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Plant
+    Element: Water
+    ElementLevel: 2
+    WalkSpeed: 400
+    AttackDelay: 1872
+    AttackMotion: 672
+    DamageMotion: 480
+    Ai: 01
+    Drops:
+      - Item: Garlet
+        Rate: 3200
+      - Item: Sticky_Mucus
+        Rate: 1500
+      - Item: Skyblue_Jewel
+        Rate: 40
+      - Item: Blue_Herb
+        Rate: 75
+      - Item: Candy
+        Rate: 350
+      - Item: Poring_Hat
+        Rate: 10
+      - Item: Marin_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1120
+    AegisName: GHOSTRING
+    Name: Ghostring
+    Level: 18
+    Hp: 73300
+    BaseExp: 101
+    JobExp: 108
+    Attack: 82
+    Attack2: 122
+    MagicDefense: 60
+    Str: 40
+    Agi: 27
+    Vit: 18
+    Int: 45
+    Dex: 72
+    Luk: 30
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Ghost
+    ElementLevel: 4
+    WalkSpeed: 300
+    AttackDelay: 1220
+    AttackMotion: 1080
+    DamageMotion: 648
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Transparent_Cloth
+        Rate: 5335
+      - Item: Ghost_Bandana
+        Rate: 100
+      - Item: Thief_Clothes_
+        Rate: 50
+      - Item: Old_Blue_Box
+        Rate: 10
+      - Item: Emperium
+        Rate: 30
+      - Item: Ghostring_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1096
+    AegisName: ANGELING
+    Name: Angeling
+    Level: 20
+    Hp: 55000
+    BaseExp: 163
+    JobExp: 144
+    Attack: 120
+    Attack2: 195
+    MagicDefense: 70
+    Agi: 50
+    Vit: 20
+    Int: 75
+    Dex: 68
+    Luk: 200
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Angel
+    Element: Holy
+    ElementLevel: 4
+    WalkSpeed: 200
+    AttackDelay: 1072
+    AttackMotion: 672
+    DamageMotion: 672
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Angelic_Chain
+        Rate: 100
+      - Item: Scapulare_
+        Rate: 60
+      - Item: Spirit_Chain
+        Rate: 1
+      - Item: White_Herb
+        Rate: 2000
+      - Item: Apple
+        Rate: 28
+      - Item: Emperium
+        Rate: 40
+      - Item: Angeling_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1582
+    AegisName: DEVILING
+    Name: Deviling
+    Level: 31
+    Hp: 64500
+    BaseExp: 211
+    JobExp: 412
+    Attack: 135
+    Attack2: 270
+    Defense: 5
+    MagicDefense: 70
+    Str: 30
+    Agi: 50
+    Vit: 20
+    Int: 75
+    Dex: 77
+    Luk: 200
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Dark
+    ElementLevel: 4
+    WalkSpeed: 200
+    AttackDelay: 1072
+    AttackMotion: 1056
+    DamageMotion: 384
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Petite_DiablOfs_Wing
+        Rate: 3000
+      - Item: Zargon
+        Rate: 4850
+      - Item: Satanic_Chain
+        Rate: 100
+      - Item: Apple
+        Rate: 5000
+      - Item: Blade_Lost_In_Darkness
+        Rate: 1
+      - Item: Black_Dyestuffs
+        Rate: 100
+      - Item: Deviling_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1321
+    AegisName: DRAGON_TAIL
+    Name: Dragon Tail
+    Level: 61
+    Hp: 8368
+    BaseExp: 3587
+    JobExp: 1453
+    Attack: 520
+    Attack2: 715
+    Defense: 25
+    MagicDefense: 19
+    Str: 10
+    Agi: 68
+    Vit: 15
+    Int: 5
+    Dex: 67
+    Luk: 67
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Insect
+    Element: Wind
+    ElementLevel: 2
+    WalkSpeed: 175
+    AttackDelay: 862
+    AttackMotion: 534
+    DamageMotion: 312
+    Ai: 21
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Dragon_Fly_Wing
+        Rate: 4413
+      - Item: Round_Shell
+        Rate: 400
+      - Item: Solid_Shell
+        Rate: 800
+      - Item: Cap_
+        Rate: 2
+      - Item: Wing_Of_Fly
+        Rate: 300
+      - Item: Wing_Of_Butterfly
+        Rate: 150
+      - Item: Dragon_Tail_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1077
+    AegisName: POISON_SPORE
+    Name: Poison Spore
+    Level: 19
+    Hp: 665
+    BaseExp: 186
+    JobExp: 93
+    Attack: 89
+    Attack2: 101
+    Agi: 19
+    Vit: 25
+    Int: 0
+    Dex: 24
+    Luk: 0
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Plant
+    Element: Poison
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1672
+    AttackMotion: 672
+    DamageMotion: 288
+    Ai: 04
+    Drops:
+      - Item: Poison_Spore
+        Rate: 9000
+      - Item: Hat_
+        Rate: 20
+      - Item: Green_Herb
+        Rate: 550
+      - Item: Blue_Herb
+        Rate: 60
+      - Item: Karvodailnirol
+        Rate: 50
+      - Item: Mushroom_Spore
+        Rate: 1200
+      - Item: Zargon
+        Rate: 5
+      - Item: Poison_Spore_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1024
+    AegisName: WORM_TAIL
+    Name: Wormtail
+    Level: 14
+    Hp: 426
+    BaseExp: 59
+    JobExp: 40
+    Attack: 42
+    Attack2: 51
+    Defense: 5
+    Agi: 14
+    Vit: 28
+    Int: 5
+    Dex: 46
+    Luk: 5
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Plant
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1048
+    AttackMotion: 48
+    DamageMotion: 192
+    Ai: 17
+    Drops:
+      - Item: Yellow_Live
+        Rate: 60
+      - Item: Emveretarcon
+        Rate: 25
+      - Item: Pointed_Scale
+        Rate: 5500
+      - Item: Pike_
+        Rate: 30
+      - Item: Yellow_Herb
+        Rate: 70
+      - Item: Azure_Jewel
+        Rate: 5
+      - Item: Worm_Tail_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1033
+    AegisName: ELDER_WILOW
+    Name: Elder Willow
+    Level: 20
+    Hp: 693
+    BaseExp: 163
+    JobExp: 101
+    Attack: 58
+    Attack2: 70
+    Defense: 10
+    MagicDefense: 30
+    Agi: 20
+    Vit: 25
+    Int: 35
+    Dex: 38
+    Luk: 30
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Plant
+    Element: Fire
+    ElementLevel: 2
+    WalkSpeed: 200
+    AttackDelay: 1372
+    AttackMotion: 672
+    DamageMotion: 432
+    Ai: 09
+    Drops:
+      - Item: Boody_Red
+        Rate: 50
+      - Item: Resin
+        Rate: 9000
+      - Item: Wooden_Block
+        Rate: 350
+      - Item: Elunium_Stone
+        Rate: 40
+      - Item: Wooden_Mail_
+        Rate: 30
+      - Item: Elder_Wilow_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1060
+    AegisName: BIGFOOT
+    Name: Bigfoot
+    Level: 25
+    Hp: 1619
+    BaseExp: 310
+    JobExp: 188
+    Attack: 198
+    Attack2: 220
+    Defense: 10
+    Agi: 25
+    Vit: 55
+    Int: 15
+    Dex: 20
+    Luk: 25
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Brute
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 300
+    AttackDelay: 1260
+    AttackMotion: 192
+    DamageMotion: 192
+    Ai: 17
+    Drops:
+      - Item: Bear's_Foot
+        Rate: 9000
+      - Item: Animal's_Skin
+        Rate: 5000
+      - Item: Stuffed_Doll
+        Rate: 80
+      - Item: Sweet_Potato
+        Rate: 1500
+      - Item: Honey
+        Rate: 450
+      - Item: Oridecon_Stone
+        Rate: 43
+      - Item: BigFoot_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1277
+    AegisName: GREATEST_GENERAL
+    Name: Greatest General
+    Level: 40
+    Hp: 3632
+    BaseExp: 1238
+    JobExp: 752
+    Attack: 350
+    Attack2: 400
+    Defense: 15
+    MagicDefense: 15
+    Agi: 20
+    Vit: 60
+    Int: 55
+    Dex: 82
+    Luk: 140
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Fire
+    ElementLevel: 2
+    WalkSpeed: 200
+    AttackDelay: 1152
+    AttackMotion: 1152
+    DamageMotion: 384
+    Ai: 10
+    Drops:
+      - Item: Brigan
+        Rate: 2000
+      - Item: Wooden_Block
+        Rate: 2000
+      - Item: Club
+        Rate: 100
+      - Item: Yellow_Herb
+        Rate: 250
+      - Item: Wooden_Mail_
+        Rate: 30
+      - Item: Greatest_General_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1180
+    AegisName: NINE_TAIL
+    Name: Nine Tail
+    Level: 51
+    Hp: 7766
+    BaseExp: 2812
+    JobExp: 825
+    Attack: 610
+    Attack2: 734
+    Defense: 10
+    MagicDefense: 25
+    Agi: 80
+    Vit: 46
+    Dex: 74
+    Luk: 85
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Brute
+    Element: Fire
+    ElementLevel: 3
+    WalkSpeed: 150
+    AttackDelay: 840
+    AttackMotion: 540
+    DamageMotion: 480
+    Ai: 21
+    Drops:
+      - Item: Fox_Tail
+        Rate: 4656
+      - Item: Glass_Bead
+        Rate: 200
+      - Item: Old_Blue_Box
+        Rate: 100
+      - Item: Royal_Jelly
+        Rate: 250
+      - Item: Panacea
+        Rate: 350
+      - Item: Oridecon_Stone
+        Rate: 100
+      - Item: Nine_Tail_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1115
+    AegisName: EDDGA
+    Name: Eddga
+    Level: 65
+    Hp: 152000
+    BaseExp: 25025
+    JobExp: 12870
+    MvpExp: 12512
+    Attack: 1215
+    Attack2: 1565
+    Defense: 15
+    MagicDefense: 15
+    Str: 78
+    Agi: 70
+    Vit: 85
+    Int: 66
+    Dex: 90
+    Luk: 85
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Brute
+    Element: Fire
+    ElementLevel: 1
+    WalkSpeed: 300
+    AttackDelay: 872
+    AttackMotion: 1344
+    DamageMotion: 432
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Tiger's_Skin
+        Rate: 5000
+      - Item: Tiger_Footskin
+        Rate: 1000
+      - Item: Flame_Heart
+        Rate: 3000
+    Drops:
+      - Item: Fire_Brand
+        Rate: 150
+      - Item: Smoking_Pipe
+        Rate: 250
+      - Item: Honey
+        Rate: 10000
+      - Item: Katar_Of_Raging_Blaze
+        Rate: 500
+      - Item: Tiger_Footskin
+        Rate: 250
+      - Item: Elunium
+        Rate: 2300
+      - Item: Krieg
+        Rate: 100
+      - Item: Eddga_Card
+        Rate: 1
+        StealProtected: true

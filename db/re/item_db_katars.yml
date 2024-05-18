@@ -108,3 +108,22 @@ Body:
     WeaponLevel: 3
     EquipLevelMin: 33
     Refineable: true
+  - Id: 1258
+    AegisName: Katar_Of_Raging_Blaze
+    Name: Katar of Raging Blaze
+    Type: Weapon
+    SubType: Katar
+    Buy: 45000
+    Weight: 1200
+    Attack: 105
+    Range: 1
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Fire;
+      bonus2 bAddEff,Eff_Silence,500;

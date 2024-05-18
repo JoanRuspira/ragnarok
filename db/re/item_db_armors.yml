@@ -732,3 +732,19 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 70
     Refineable: true
+  - Id: 2324
+    AegisName: Scapulare_
+    Name: Scapulare
+    Type: Armor
+    Buy: 6500
+    Weight: 400
+    Defense: 24
+    Slots: 1
+    Jobs:
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true

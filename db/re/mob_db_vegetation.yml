@@ -37,14 +37,10 @@ Body:
         Rate: 500
       - Item: Stem
         Rate: 10000
-      - Item: Poison_Herb_Rantana
-        Rate: 150
       - Item: Fluff
         Rate: 250
-      - Item: Ment
-        Rate: 50
-      - Item: Centimental_Flower
-        Rate: 20
+      - Item: Centimental_Leaf
+        Rate: 1
         StealProtected: true
   - Id: 1079
     AegisName: BLUE_PLANT
@@ -80,8 +76,6 @@ Body:
         Rate: 500
       - Item: Stem
         Rate: 10000
-      - Item: Poison_Herb_Nerium
-        Rate: 150
       - Item: Fruit_Of_Mastela
         Rate: 25
       - Item: Grape
@@ -117,8 +111,6 @@ Body:
     Drops:
       - Item: Green_Herb
         Rate: 10000
-      - Item: Poison_Herb_Makulata
-        Rate: 150
       - Item: Bitter_Herb
         Rate: 10
       - Item: Stem
@@ -166,10 +158,6 @@ Body:
         Rate: 500
       - Item: Stem
         Rate: 10000
-      - Item: Poison_Herb_Seratum
-        Rate: 150
-      - Item: Singing_Plant
-        Rate: 3
       - Item: Fluff
         Rate: 250
       - Item: Centimental_Flower
@@ -209,10 +197,6 @@ Body:
         Rate: 500
       - Item: Stem
         Rate: 10000
-      - Item: Poison_Herb_Seratum
-        Rate: 150
-      - Item: Singing_Plant
-        Rate: 3
       - Item: Fluff
         Rate: 250
       - Item: Centimental_Flower
@@ -248,12 +232,8 @@ Body:
         Rate: 10000
       - Item: Flower
         Rate: 500
-      - Item: Deadly_Noxious_Herb
-        Rate: 10
       - Item: Stem
         Rate: 10000
-      - Item: Poison_Herb_Seratum
-        Rate: 150
       - Item: Leaflet_Of_Aloe
         Rate: 25
       - Item: Hinalle
@@ -294,8 +274,6 @@ Body:
         Rate: 2500
       - Item: White_Herb
         Rate: 2500
-      - Item: Illusion_Flower
-        Rate: 500
       - Item: Seed_Of_Yggdrasil
         Rate: 5000
       - Item: Honey
@@ -335,10 +313,6 @@ Body:
         Rate: 50
       - Item: Detrimindexta
         Rate: 50
-      - Item: Dew_Laden_Moss
-        Rate: 20
-      - Item: Feather
-        Rate: 2000
       - Item: Crystal_Blue
         Rate: 10000
       - Item: Mushroom_Spore
@@ -376,10 +350,6 @@ Body:
         Rate: 50
       - Item: Karvodailnirol
         Rate: 50
-      - Item: Dew_Laden_Moss
-        Rate: 20
-      - Item: Feather
-        Rate: 1000
       - Item: Boody_Red
         Rate: 10000
       - Item: Mushroom_Spore
@@ -417,10 +387,6 @@ Body:
         Rate: 50
       - Item: Karvodailnirol
         Rate: 50
-      - Item: Dew_Laden_Moss
-        Rate: 20
-      - Item: Feather
-        Rate: 1000
       - Item: Yellow_Live
         Rate: 10000
       - Item: Mushroom_Spore
@@ -458,10 +424,6 @@ Body:
         Rate: 50
       - Item: Karvodailnirol
         Rate: 50
-      - Item: Dew_Laden_Moss
-        Rate: 20
-      - Item: Feather
-        Rate: 1000
       - Item: Wind_Of_Verdure
         Rate: 10000
       - Item: Mushroom_Spore
@@ -499,10 +461,6 @@ Body:
         Rate: 50
       - Item: Karvodailnirol
         Rate: 50
-      - Item: Dew_Laden_Moss
-        Rate: 20
-      - Item: Feather
-        Rate: 1000
       - Item: Crystal_Blue
         Rate: 10000
       - Item: Mushroom_Spore
