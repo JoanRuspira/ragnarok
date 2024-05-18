@@ -331,8 +331,6 @@ Body:
         Rate: 400
       - Item: Apple
         Rate: 1000
-      - Item: Poring_Hat
-        Rate: 10
       - Item: Empty_Bottle
         Rate: 1500
       - Item: Apple
@@ -1047,8 +1045,6 @@ Body:
         Rate: 800
       - Item: Orange_Juice
         Rate: 20
-      - Item: Poring_Hat
-        Rate: 10
       - Item: Drops_Card
         Rate: 1
         StealProtected: true
@@ -1952,8 +1948,6 @@ Body:
         Rate: 75
       - Item: Candy
         Rate: 350
-      - Item: Poring_Hat
-        Rate: 10
       - Item: Marin_Card
         Rate: 1
         StealProtected: true
@@ -2450,5 +2444,1072 @@ Body:
       - Item: Krieg
         Rate: 100
       - Item: Eddga_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1012
+    AegisName: RODA_FROG
+    Name: Roda Frog
+    Level: 5
+    Hp: 133
+    BaseExp: 6
+    JobExp: 5
+    Attack: 11
+    Attack2: 14
+    MagicDefense: 5
+    Agi: 5
+    Vit: 5
+    Int: 5
+    Dex: 10
+    Luk: 5
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Fish
+    Element: Water
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 2016
+    AttackMotion: 816
+    DamageMotion: 288
+    Ai: 01
+    Drops:
+      - Item: Sticky_Webfoot
+        Rate: 9000
+      - Item: Spawn
+        Rate: 500
+      - Item: Green_Herb
+        Rate: 300
+      - Item: Azure_Jewel
+        Rate: 7
+      - Item: Empty_Bottle
+        Rate: 2000
+      - Item: Roda_Frog_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1089
+    AegisName: TOAD
+    Name: Toad
+    Level: 10
+    Hp: 5065
+    BaseExp: 100
+    JobExp: 50
+    Attack: 26
+    Attack2: 32
+    Agi: 5
+    Vit: 10
+    Int: 10
+    Dex: 10
+    Luk: 25
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Fish
+    Element: Water
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1236
+    AttackMotion: 336
+    DamageMotion: 432
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Big_Sis'_Ribbon
+        Rate: 50
+      - Item: Honey
+        Rate: 2000
+      - Item: Bluish_Green_Jewel
+        Rate: 1000
+      - Item: Glass_Bead
+        Rate: 1500
+      - Item: Alchol
+        Rate: 100
+      - Item: Detrimindexta
+        Rate: 100
+      - Item: Toad_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1023
+    AegisName: ORK_WARRIOR
+    Name: Orc Warrior
+    Level: 24
+    Hp: 1400
+    BaseExp: 408
+    JobExp: 160
+    Attack: 104
+    Attack2: 126
+    Defense: 10
+    MagicDefense: 5
+    Agi: 24
+    Vit: 48
+    Int: 25
+    Dex: 34
+    Luk: 10
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    RaceGroups:
+      Orc: true
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1864
+    AttackMotion: 864
+    DamageMotion: 288
+    Ai: 04
+    Drops:
+      - Item: Iron
+        Rate: 210
+      - Item: Orcish_Voucher
+        Rate: 9000
+      - Item: Oridecon_Stone
+        Rate: 40
+      - Item: Cigar
+        Rate: 3
+      - Item: Battle_Axe_
+        Rate: 10
+      - Item: Orcish_Axe
+        Rate: 5
+      - Item: Axe
+        Rate: 100
+      - Item: Orc_Warrior_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1104
+    AegisName: COCO
+    Name: Coco
+    Level: 17
+    Hp: 817
+    BaseExp: 120
+    JobExp: 78
+    Attack: 56
+    Attack2: 67
+    Str: 24
+    Agi: 17
+    Vit: 34
+    Int: 20
+    Dex: 24
+    Luk: 10
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Brute
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 150
+    AttackDelay: 1864
+    AttackMotion: 864
+    DamageMotion: 1008
+    Ai: 17
+    Drops:
+      - Item: Acorn
+        Rate: 9000
+      - Item: Hood_
+        Rate: 20
+      - Item: Fluff
+        Rate: 3000
+      - Item: Animal's_Skin
+        Rate: 2500
+      - Item: Sweet_Potato
+        Rate: 500
+      - Item: Sandals_
+        Rate: 25
+      - Item: Strawberry
+        Rate: 600
+      - Item: Coco_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1213
+    AegisName: HIGH_ORC
+    Name: High Orc
+    Level: 52
+    Hp: 6890
+    BaseExp: 3618
+    JobExp: 1639
+    Attack: 428
+    Attack2: 533
+    Defense: 15
+    MagicDefense: 5
+    Str: 55
+    Agi: 46
+    Vit: 55
+    Int: 35
+    Dex: 82
+    Luk: 40
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demihuman
+    RaceGroups:
+      Orc: true
+    Element: Fire
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 1500
+    AttackMotion: 500
+    DamageMotion: 1000
+    Ai: 21
+    Drops:
+      - Item: Ogre_Tooth
+        Rate: 2500
+      - Item: Orcish_Axe
+        Rate: 10
+      - Item: Steel
+        Rate: 90
+      - Item: Orcish_Voucher
+        Rate: 7500
+      - Item: Zargon
+        Rate: 1300
+      - Item: Oridecon_Stone
+        Rate: 196
+      - Item: Yellow_Herb
+        Rate: 900
+      - Item: High_Orc_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1011
+    AegisName: CHONCHON
+    Name: Chonchon
+    Level: 4
+    Hp: 67
+    BaseExp: 5
+    JobExp: 4
+    Attack: 10
+    Attack2: 13
+    Defense: 10
+    Agi: 10
+    Vit: 4
+    Int: 5
+    Dex: 12
+    Luk: 2
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Insect
+    Element: Wind
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1076
+    AttackMotion: 576
+    DamageMotion: 480
+    Ai: 01
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Iron
+        Rate: 50
+      - Item: Shell
+        Rate: 6500
+      - Item: Jellopy
+        Rate: 1500
+      - Item: Cutter_
+        Rate: 55
+      - Item: Wing_Of_Fly
+        Rate: 100
+      - Item: Chonchon_Doll
+        Rate: 5
+      - Item: Iron_Ore
+        Rate: 150
+      - Item: Chonchon_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1133
+    AegisName: KOBOLD_1
+    Name: Kobold
+    Level: 36
+    Hp: 3893
+    BaseExp: 988
+    JobExp: 625
+    Attack: 265
+    Attack2: 318
+    Defense: 15
+    MagicDefense: 10
+    Agi: 90
+    Vit: 36
+    Int: 30
+    Dex: 52
+    Luk: 20
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    RaceGroups:
+      Kobold: true
+    Element: Wind
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 1028
+    AttackMotion: 528
+    DamageMotion: 360
+    Ai: 13
+    Drops:
+      - Item: Steel
+        Rate: 100
+      - Item: Cobold_Hair
+        Rate: 5335
+      - Item: Zargon
+        Rate: 700
+      - Item: Elunium_Stone
+        Rate: 25
+      - Item: Gladius_
+        Rate: 2
+      - Item: Buckler_
+        Rate: 5
+      - Item: Kobold_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1134
+    AegisName: KOBOLD_2
+    Name: Kobold
+    Level: 31
+    Hp: 2179
+    BaseExp: 806
+    JobExp: 407
+    Attack: 262
+    Attack2: 324
+    Defense: 15
+    MagicDefense: 10
+    Agi: 31
+    Vit: 31
+    Int: 20
+    Dex: 46
+    Luk: 20
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    RaceGroups:
+      Kobold: true
+    Element: Poison
+    ElementLevel: 2
+    WalkSpeed: 200
+    AttackDelay: 1528
+    AttackMotion: 528
+    DamageMotion: 360
+    Ai: 13
+    Drops:
+      - Item: Steel
+        Rate: 100
+      - Item: Cobold_Hair
+        Rate: 5335
+      - Item: Zargon
+        Rate: 200
+      - Item: Buckler_
+        Rate: 3
+      - Item: Yellow_Herb
+        Rate: 100
+      - Item: Guard_
+        Rate: 50
+      - Item: Kobold_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1135
+    AegisName: KOBOLD_3
+    Name: Kobold
+    Level: 31
+    Hp: 2179
+    BaseExp: 644
+    JobExp: 407
+    Attack: 186
+    Attack2: 216
+    Defense: 15
+    MagicDefense: 10
+    Agi: 31
+    Vit: 31
+    Int: 20
+    Dex: 88
+    Luk: 20
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    RaceGroups:
+      Kobold: true
+    Element: Fire
+    ElementLevel: 2
+    WalkSpeed: 300
+    AttackDelay: 1228
+    AttackMotion: 528
+    DamageMotion: 360
+    Ai: 13
+    Drops:
+      - Item: Boody_Red
+        Rate: 35
+      - Item: Steel
+        Rate: 100
+      - Item: Cobold_Hair
+        Rate: 5335
+      - Item: Zargon
+        Rate: 200
+      - Item: Hammer_
+        Rate: 5
+      - Item: Buckler_
+        Rate: 3
+      - Item: Yellow_Herb
+        Rate: 100
+      - Item: Kobold_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1282
+    AegisName: KOBOLD_ARCHER
+    Name: Kobold Archer
+    Level: 33
+    Hp: 2560
+    BaseExp: 739
+    JobExp: 455
+    Attack: 155
+    Attack2: 185
+    Defense: 10
+    MagicDefense: 5
+    Str: 10
+    Agi: 20
+    Vit: 15
+    Int: 30
+    Dex: 100
+    Luk: 25
+    AttackRange: 9
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Demihuman
+    RaceGroups:
+      Kobold: true
+    Element: Fire
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1008
+    AttackMotion: 1008
+    DamageMotion: 384
+    Ai: 05
+    Drops:
+      - Item: Zargon
+        Rate: 250
+      - Item: Steel
+        Rate: 60
+      - Item: Cobold_Hair
+        Rate: 4850
+      - Item: CrossBow_
+        Rate: 5
+      - Item: Oridecon_Stone
+        Rate: 79
+      - Item: Kobold_Archer_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1139
+    AegisName: MANTIS
+    Name: Mantis
+    Level: 26
+    Hp: 2472
+    BaseExp: 393
+    JobExp: 248
+    Attack: 118
+    Attack2: 149
+    Defense: 10
+    Agi: 26
+    Vit: 24
+    Int: 5
+    Dex: 45
+    Luk: 15
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Insect
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1528
+    AttackMotion: 660
+    DamageMotion: 432
+    Ai: 09
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Yellow_Live
+        Rate: 110
+      - Item: Limb_Of_Mantis
+        Rate: 9000
+      - Item: Scell
+        Rate: 1400
+      - Item: Elunium_Stone
+        Rate: 70
+      - Item: Solid_Shell
+        Rate: 250
+      - Item: Azure_Jewel
+        Rate: 10
+      - Item: Red_Herb
+        Rate: 650
+      - Item: Mantis_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1094
+    AegisName: AMBERNITE
+    Name: Ambernite
+    Level: 13
+    Hp: 495
+    BaseExp: 57
+    JobExp: 38
+    Attack: 39
+    Attack2: 46
+    Defense: 30
+    Agi: 13
+    Vit: 13
+    Int: 5
+    Dex: 18
+    Luk: 5
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Insect
+    Element: Water
+    ElementLevel: 1
+    WalkSpeed: 400
+    AttackDelay: 2048
+    AttackMotion: 648
+    DamageMotion: 648
+    Ai: 17
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Crystal_Blue
+        Rate: 50
+      - Item: Snail's_Shell
+        Rate: 9000
+      - Item: Garlet
+        Rate: 1200
+      - Item: Shell
+        Rate: 3000
+      - Item: Solid_Shell
+        Rate: 2
+      - Item: Elunium_Stone
+        Rate: 14
+      - Item: Iron_Ore
+        Rate: 150
+      - Item: Ambernite_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1273
+    AegisName: ORC_LADY
+    Name: Orc Lady
+    Level: 31
+    Hp: 2000
+    BaseExp: 644
+    JobExp: 407
+    Attack: 135
+    Attack2: 170
+    Defense: 10
+    MagicDefense: 10
+    Str: 35
+    Agi: 42
+    Vit: 25
+    Int: 15
+    Dex: 69
+    Luk: 55
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    RaceGroups:
+      Orc: true
+    Element: Earth
+    ElementLevel: 2
+    WalkSpeed: 200
+    AttackDelay: 1050
+    AttackMotion: 900
+    DamageMotion: 288
+    Ai: 21
+    Drops:
+      - Item: Cyfar
+        Rate: 4656
+      - Item: Iron
+        Rate: 300
+      - Item: Earring
+        Rate: 1
+      - Item: Orcish_Voucher
+        Rate: 9000
+      - Item: Orc_Lady_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1686
+    AegisName: ORC_BABY
+    Name: Orc Baby
+    Level: 21
+    Hp: 912
+    BaseExp: 220
+    JobExp: 220
+    Attack: 135
+    Attack2: 270
+    Defense: 10
+    MagicDefense: 10
+    Str: 30
+    Agi: 15
+    Vit: 10
+    Int: 18
+    Dex: 35
+    Luk: 2
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Demihuman
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 672
+    AttackMotion: 864
+    DamageMotion: 288
+    Ai: 04
+    Drops:
+      - Item: Large_Jellopy
+        Rate: 1000
+      - Item: Viking_Helm
+        Rate: 1
+      - Item: Milk
+        Rate: 5000
+      - Item: Orc_Baby_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1299
+    AegisName: GOBLIN_LEADER
+    Name: Goblin Leader
+    Level: 64
+    Hp: 20152
+    BaseExp: 6036
+    JobExp: 2184
+    Attack: 663
+    Attack2: 752
+    Defense: 48
+    MagicDefense: 16
+    Str: 5
+    Agi: 55
+    Vit: 37
+    Int: 30
+    Dex: 69
+    Luk: 58
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    RaceGroups:
+      Goblin: true
+    Element: Wind
+    ElementLevel: 1
+    WalkSpeed: 120
+    AttackDelay: 1120
+    AttackMotion: 620
+    DamageMotion: 240
+    Ai: 21
+    Drops:
+      - Item: Brigan
+        Rate: 1500
+      - Item: Steel
+        Rate: 800
+      - Item: Oridecon_Stone
+        Rate: 120
+      - Item: Goblin_Mask_04
+        Rate: 50
+      - Item: Shield_
+        Rate: 2
+      - Item: Yellow_Herb
+        Rate: 650
+      - Item: Angry_Mouth
+        Rate: 10
+      - Item: Goblin_Leader_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1392
+    AegisName: ROTAR_ZAIRO
+    Name: Rotar Zairo
+    Level: 25
+    Hp: 1209
+    BaseExp: 351
+    JobExp: 215
+    Attack: 109
+    Attack2: 137
+    Defense: 4
+    MagicDefense: 34
+    Agi: 62
+    Vit: 45
+    Int: 26
+    Dex: 55
+    Luk: 5
+    AttackRange: 10
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Formless
+    Element: Wind
+    ElementLevel: 2
+    WalkSpeed: 155
+    AttackDelay: 2416
+    AttackMotion: 2016
+    DamageMotion: 432
+    Ai: 05
+    Drops:
+      - Item: Large_Jellopy
+        Rate: 500
+      - Item: Padded_Armor_
+        Rate: 1
+      - Item: Cyfar
+        Rate: 1000
+      - Item: Steel
+        Rate: 450
+      - Item: Oridecon
+        Rate: 1
+      - Item: Zargon
+        Rate: 2500
+      - Item: Garlet
+        Rate: 5500
+      - Item: Rotar_Zairo_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1190
+    AegisName: ORC_LORD
+    Name: Orc Lord
+    Level: 74
+    Hp: 783000
+    BaseExp: 62205
+    JobExp: 8580
+    MvpExp: 31102
+    Attack: 3700
+    Attack2: 4150
+    Defense: 40
+    MagicDefense: 5
+    Str: 85
+    Agi: 82
+    Vit: 30
+    Int: 70
+    Dex: 110
+    Luk: 85
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demihuman
+    Element: Earth
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 1248
+    AttackMotion: 500
+    DamageMotion: 360
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Voucher_Of_Orcish_Hero
+        Rate: 5500
+      - Item: Old_Violet_Box
+        Rate: 2000
+    Drops:
+      - Item: Brood_Axe
+        Rate: 400
+      - Item: Ring_
+        Rate: 400
+      - Item: Loard_Circlet
+        Rate: 400
+      - Item: Doom_Slayer_
+        Rate: 400
+      - Item: Old_Violet_Box
+        Rate: 1000
+      - Item: Elunium
+        Rate: 4268
+      - Item: Erde
+        Rate: 3100
+      - Item: Orc_Load_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1417
+    AegisName: ZIPPER_BEAR
+    Name: Zipper Bear
+    Level: 35
+    Hp: 2901
+    BaseExp: 370
+    JobExp: 225
+    Attack: 248
+    Attack2: 289
+    Defense: 10
+    MagicDefense: 5
+    Str: 30
+    Agi: 25
+    Vit: 55
+    Int: 15
+    Dex: 28
+    Luk: 25
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Brute
+    Element: Dark
+    ElementLevel: 1
+    WalkSpeed: 155
+    AttackDelay: 780
+    AttackMotion: 1008
+    DamageMotion: 420
+    Ai: 17
+    Drops:
+      - Item: Black_Bear's_Skin
+        Rate: 4462
+      - Item: Steel
+        Rate: 3500
+      - Item: Royal_Jelly
+        Rate: 400
+      - Item: Honey
+        Rate: 900
+      - Item: Apple
+        Rate: 90
+      - Item: Zipper_Bear_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1408
+    AegisName: BLOOD_BUTTERFLY
+    Name: Bloody Butterfly
+    Level: 55
+    Hp: 8082
+    BaseExp: 2119
+    JobExp: 1562
+    Attack: 121
+    Attack2: 342
+    Defense: 5
+    MagicDefense: 23
+    Agi: 59
+    Vit: 14
+    Int: 55
+    Dex: 68
+    Luk: 15
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Insect
+    Element: Wind
+    ElementLevel: 2
+    WalkSpeed: 145
+    AttackDelay: 472
+    AttackMotion: 576
+    DamageMotion: 288
+    Ai: 13
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Sharp_Feeler
+        Rate: 4608
+      - Item: Great_Wing
+        Rate: 2500
+      - Item: Wing_Of_Butterfly
+        Rate: 1200
+      - Item: Powder_Of_Butterfly
+        Rate: 5500
+      - Item: Waghnakh_
+        Rate: 3
+      - Item: Blood_Butterfly_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1296
+    AegisName: KOBOLD_LEADER
+    Name: Kobold Leader
+    Level: 65
+    Hp: 18313
+    BaseExp: 7432
+    JobExp: 2713
+    Attack: 649
+    Attack2: 958
+    Defense: 37
+    MagicDefense: 37
+    Str: 5
+    Agi: 90
+    Vit: 36
+    Int: 30
+    Dex: 77
+    Luk: 59
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    RaceGroups:
+      Kobold: true
+    Element: Wind
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 1028
+    AttackMotion: 528
+    DamageMotion: 360
+    Ai: 21
+    Drops:
+      - Item: Steel
+        Rate: 450
+      - Item: Cobold_Hair
+        Rate: 6305
+      - Item: Zargon
+        Rate: 1200
+      - Item: Flail_
+        Rate: 6
+      - Item: Mighty_Staff
+        Rate: 2
+      - Item: Panacea
+        Rate: 150
+      - Item: Royal_Jelly
+        Rate: 100
+      - Item: Kobold_Leader_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1213
+    AegisName: HIGH_ORC
+    Name: High Orc
+    Level: 52
+    Hp: 6890
+    BaseExp: 3618
+    JobExp: 1639
+    Attack: 428
+    Attack2: 533
+    Defense: 15
+    MagicDefense: 5
+    Str: 55
+    Agi: 46
+    Vit: 55
+    Int: 35
+    Dex: 82
+    Luk: 40
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demihuman
+    RaceGroups:
+      Orc: true
+    Element: Fire
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 1500
+    AttackMotion: 500
+    DamageMotion: 1000
+    Ai: 21
+    Drops:
+      - Item: Ogre_Tooth
+        Rate: 2500
+      - Item: Orcish_Axe
+        Rate: 10
+      - Item: Steel
+        Rate: 90
+      - Item: Orcish_Voucher
+        Rate: 7500
+      - Item: Zargon
+        Rate: 1300
+      - Item: Oridecon_Stone
+        Rate: 196
+      - Item: Yellow_Herb
+        Rate: 900
+      - Item: High_Orc_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1087
+    AegisName: ORK_HERO
+    Name: Orc Hero
+    Level: 77
+    Hp: 585700
+    BaseExp: 58630
+    JobExp: 32890
+    MvpExp: 29315
+    Attack: 2257
+    Attack2: 2542
+    Defense: 40
+    MagicDefense: 45
+    Agi: 91
+    Vit: 30
+    Int: 70
+    Dex: 105
+    Luk: 90
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demihuman
+    Element: Earth
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 1678
+    AttackMotion: 780
+    DamageMotion: 648
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Red_Jewel
+        Rate: 2000
+      - Item: Yggdrasilberry
+        Rate: 1500
+      - Item: Steel
+        Rate: 5000
+    Drops:
+      - Item: Voucher_Of_Orcish_Hero
+        Rate: 9700
+      - Item: Right_Epsilon
+        Rate: 150
+      - Item: Shield_
+        Rate: 250
+      - Item: Orcish_Sword
+        Rate: 1000
+      - Item: Elunium
+        Rate: 4559
+      - Item: Giant_Axe
+        Rate: 100
+      - Item: Orc_Hero_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1189
+    AegisName: ORC_ARCHER
+    Name: Orc Archer
+    Level: 49
+    Hp: 7440
+    BaseExp: 1729
+    JobExp: 1787
+    Attack: 310
+    Attack2: 390
+    Defense: 10
+    MagicDefense: 5
+    Agi: 44
+    Vit: 25
+    Int: 20
+    Dex: 125
+    Luk: 20
+    AttackRange: 9
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    RaceGroups:
+      Orc: true
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 300
+    AttackDelay: 1960
+    AttackMotion: 620
+    DamageMotion: 480
+    Ai: 09
+    Drops:
+      - Item: Sharpened_Cuspid
+        Rate: 4656
+      - Item: Kakkung_
+        Rate: 10
+      - Item: Red_Herb
+        Rate: 1400
+      - Item: White_Herb
+        Rate: 900
+      - Item: Orc_Archer_Card
         Rate: 1
         StealProtected: true

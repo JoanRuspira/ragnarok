@@ -6680,3 +6680,14 @@ Body:
       NoSell: true
     Script: |
       getgroupitem(IG_BlueBox);
+  - Id: 617
+    AegisName: Old_Violet_Box
+    Name: Old Purple Box
+    Type: Usable
+    Buy: 10000
+    Weight: 200
+    Flags:
+      BuyingStore: true
+      Container: true
+    Script: |
+      getrandgroupitem(IG_VioletBox,1);

@@ -293,3 +293,82 @@ Body:
       NoAuction: true
     Script: |
       bonus2 bAddSize,Size_All,40;
+  - Id: 1363
+    AegisName: Brood_Axe
+    Name: Bloody Axe
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 20
+    Weight: 4000
+    Attack: 170
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 44
+    Refineable: true
+    Script: |
+      bonus bStr,10;
+      bonus bSpeedRate,25;
+  - Id: 1371
+    AegisName: Doom_Slayer_
+    Name: Doom Slayer
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 20
+    Weight: 6000
+    Attack: 10
+    Range: 1
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 80
+    Refineable: true
+    Script: |
+      bonus bAspdRate,-40;
+      bonus bUseSPrate,100;
+      if (readparam(bStr)>=95) {
+         bonus bBaseAtk,340;
+         bonus2 bAddEff,Eff_Stun,3000;
+         bonus bBreakArmorRate,500;
+      }
+  - Id: 1366
+    AegisName: Right_Epsilon
+    Name: Light Epsilon
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 20
+    Weight: 2300
+    Attack: 180
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 44
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Holy;
+      skill "AL_HEAL",3;
+      bonus2 bAddRace,RC_Demon,3;

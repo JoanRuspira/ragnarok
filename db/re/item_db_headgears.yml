@@ -2498,3 +2498,21 @@ Body:
       bonus bMdef,2;
       bonus bStr,1;
       bonus2 bSubRace,RC_Angel,3;
+  - Id: 2244
+    AegisName: Big_Sis'_Ribbon
+    Name: Big Ribbon
+    Type: Armor
+    Buy: 15000
+    Weight: 200
+    Defense: 3
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 28
+    Script: |
+      bonus bMdef,3;

@@ -87,6 +87,14 @@ Header:
   Version: 1
 
 Body:
+  - Id: 7002
+    AegisName: Ogre_Tooth
+    Name: Ogre Tooth
+    Type: Etc
+    Buy: 658
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 7053
     AegisName: Cyfar
     Name: Cyfar
@@ -1215,6 +1223,14 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
+  - Id: 7126
+    AegisName: Large_Jellopy
+    Name: Large Jellopy
+    Type: Etc
+    Buy: 840
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 946
     AegisName: Snail's_Shell
     Name: Snail's Shell
@@ -1388,6 +1404,30 @@ Body:
     Name: Turtle Shell
     Type: Etc
     Buy: 680
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7163
+    AegisName: Sharp_Feeler
+    Name: Hard Feeler
+    Type: Etc
+    Buy: 570
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7168
+    AegisName: Great_Wing
+    Name: Giant Butterfly Wing
+    Type: Etc
+    Buy: 614
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7161
+    AegisName: Black_Bear's_Skin
+    Name: Black Bear Skin
+    Type: Etc
+    Buy: 384
     Weight: 10
     Flags:
       BuyingStore: true
