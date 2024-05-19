@@ -171,3 +171,26 @@ Body:
     WeaponLevel: 1
     EquipLevelMin: 4
     Refineable: true
+  - Id: 1417
+    AegisName: Pole_Axe
+    Name: Pole Axe
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 20
+    Weight: 3800
+    Attack: 160
+    Range: 3
+    Slots: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 71
+    Refineable: true
+    Script: |
+      bonus bStr,1;
+      bonus bInt,2;
+      bonus bDex,1;

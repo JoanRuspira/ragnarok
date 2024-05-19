@@ -3736,3 +3736,709 @@ Body:
       - Item: Kind_Of_Beetle_Card
         Rate: 1
         StealProtected: true
+  - Id: 1271
+    AegisName: ALLIGATOR
+    Name: Alligator
+    Level: 42
+    Hp: 6962
+    BaseExp: 1379
+    JobExp: 866
+    Attack: 315
+    Attack2: 360
+    Defense: 2
+    MagicDefense: 5
+    Agi: 45
+    Vit: 50
+    Int: 10
+    Dex: 69
+    Luk: 65
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Brute
+    Element: Water
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1100
+    AttackMotion: 900
+    DamageMotion: 480
+    Ai: 17
+    Drops:
+      - Item: Zargon
+        Rate: 1000
+      - Item: Worn_Out_Prison_Uniform
+        Rate: 600
+      - Item: Anolian_Skin
+        Rate: 2000
+      - Item: Seed_Of_Yggdrasil
+        Rate: 50
+      - Item: Oridecon_Stone
+        Rate: 129
+      - Item: Alligator_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1266
+    AegisName: ASTER
+    Name: Aster
+    Level: 18
+    Hp: 1372
+    BaseExp: 122
+    JobExp: 78
+    Attack: 56
+    Attack2: 64
+    MagicDefense: 10
+    Agi: 19
+    Vit: 15
+    Int: 0
+    Dex: 34
+    Luk: 5
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Fish
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 400
+    AttackDelay: 1264
+    AttackMotion: 864
+    DamageMotion: 216
+    Ai: 17
+    Drops:
+      - Item: Sticky_Mucus
+        Rate: 500
+      - Item: Coral_Reef
+        Rate: 40
+      - Item: Single_Cell
+        Rate: 1200
+      - Item: Yellow_Herb
+        Rate: 200
+      - Item: Zargon
+        Rate: 60
+      - Item: Apple
+        Rate: 100
+      - Item: Aster_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1073
+    AegisName: CRAB
+    Name: Crab
+    Level: 20
+    Hp: 2451
+    BaseExp: 163
+    JobExp: 101
+    Attack: 71
+    Attack2: 81
+    Defense: 35
+    Str: 18
+    Agi: 20
+    Vit: 15
+    Int: 0
+    Dex: 36
+    Luk: 15
+    AttackRange: 1
+    SkillRange: 7
+    ChaseRange: 12
+    Size: Small
+    Race: Fish
+    Element: Water
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 992
+    AttackMotion: 792
+    DamageMotion: 360
+    Ai: 01
+    Drops:
+      - Item: Crap_Shell
+        Rate: 5500
+      - Item: Nipper
+        Rate: 1500
+      - Item: Sparkling_Dust
+        Rate: 13
+      - Item: Elunium_Stone
+        Rate: 37
+      - Item: Crab_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1074
+    AegisName: SHELLFISH
+    Name: Shellfish
+    Level: 15
+    Hp: 920
+    BaseExp: 66
+    JobExp: 44
+    Attack: 35
+    Attack2: 42
+    Defense: 35
+    Agi: 12
+    Vit: 8
+    Int: 0
+    Dex: 32
+    Luk: 5
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Fish
+    Element: Water
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 864
+    AttackMotion: 864
+    DamageMotion: 384
+    Ai: 17
+    Drops:
+      - Item: Clam_Shell
+        Rate: 5500
+      - Item: Flesh_Of_Clam
+        Rate: 1000
+      - Item: Grit
+        Rate: 1000
+      - Item: Sparkling_Dust
+        Rate: 10
+      - Item: Elunium_Stone
+        Rate: 18
+      - Item: Shellfish_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1254
+    AegisName: RAGGLER
+    Name: Raggler
+    Level: 21
+    Hp: 1020
+    BaseExp: 218
+    JobExp: 140
+    Attack: 102
+    Attack2: 113
+    MagicDefense: 5
+    Str: 18
+    Agi: 10
+    Vit: 32
+    Int: 20
+    Dex: 39
+    Luk: 35
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Brute
+    Element: Wind
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1000
+    AttackMotion: 900
+    DamageMotion: 384
+    Ai: 21
+    Drops:
+      - Item: Cyfar
+        Rate: 3000
+      - Item: Feather_Of_Birds
+        Rate: 5000
+      - Item: Center_Potion
+        Rate: 200
+      - Item: Grape
+        Rate: 200
+      - Item: Wind_Of_Verdure
+        Rate: 90
+      - Item: Goggle_
+        Rate: 7
+      - Item: Oridecon_Stone
+        Rate: 32
+      - Item: Raggler_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1067
+    AegisName: CORNUTUS
+    Name: Cornutus
+    Level: 23
+    Hp: 1620
+    BaseExp: 240
+    JobExp: 149
+    Attack: 109
+    Attack2: 131
+    Defense: 30
+    Agi: 23
+    Vit: 23
+    Int: 5
+    Dex: 36
+    Luk: 12
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Fish
+    Element: Water
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1248
+    AttackMotion: 48
+    DamageMotion: 480
+    Ai: 17
+    Drops:
+      - Item: Crystal_Blue
+        Rate: 45
+      - Item: Conch
+        Rate: 5500
+      - Item: Scell
+        Rate: 800
+      - Item: Elunium_Stone
+        Rate: 53
+      - Item: Shield_
+        Rate: 5
+      - Item: Solid_Shell
+        Rate: 1000
+      - Item: Blue_Gemstone
+        Rate: 100
+      - Item: Cornutus_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1317
+    AegisName: FUR_SEAL
+    Name: Seal
+    JapaneseName: Fur Seal
+    Level: 63
+    Hp: 9114
+    BaseExp: 3765
+    JobExp: 1824
+    Attack: 845
+    Attack2: 1203
+    Defense: 25
+    MagicDefense: 33
+    Str: 5
+    Agi: 28
+    Vit: 22
+    Int: 15
+    Dex: 69
+    Luk: 84
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Brute
+    Element: Water
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1612
+    AttackMotion: 622
+    DamageMotion: 583
+    Ai: 04
+    Drops:
+      - Item: Zargon
+        Rate: 4365
+      - Item: Blue_Herb
+        Rate: 250
+      - Item: Coat_
+        Rate: 5
+      - Item: Cyfar
+        Rate: 1200
+      - Item: Guisarme_
+        Rate: 1
+      - Item: Panacea
+        Rate: 200
+      - Item: Glass_Bead
+        Rate: 120
+      - Item: Fur_Seal_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1391
+    AegisName: GALAPAGO
+    Name: Galapago
+    Level: 61
+    Hp: 9145
+    BaseExp: 3204
+    JobExp: 1966
+    Attack: 457
+    Attack2: 608
+    Defense: 33
+    MagicDefense: 33
+    Agi: 56
+    Vit: 56
+    Int: 45
+    Dex: 66
+    Luk: 57
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Brute
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 165
+    AttackDelay: 1430
+    AttackMotion: 1080
+    DamageMotion: 1080
+    Ai: 07
+    Drops:
+      - Item: Cyfar
+        Rate: 5335
+      - Item: Yellow_Herb
+        Rate: 3500
+      - Item: Aloebera
+        Rate: 100
+      - Item: Galapago_Cap
+        Rate: 1
+      - Item: Orange
+        Rate: 1000
+      - Item: Galapago_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1206
+    AegisName: ANOLIAN
+    Name: Anolian
+    Level: 61
+    Hp: 18960
+    BaseExp: 5900
+    JobExp: 3700
+    Attack: 640
+    Attack2: 980
+    Defense: 15
+    MagicDefense: 15
+    Agi: 43
+    Vit: 58
+    Int: 25
+    Dex: 80
+    Luk: 65
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Fish
+    Element: Water
+    ElementLevel: 2
+    WalkSpeed: 190
+    AttackDelay: 900
+    AttackMotion: 500
+    DamageMotion: 864
+    Ai: 21
+    Drops:
+      - Item: Anolian_Skin
+        Rate: 4850
+      - Item: Royal_Jelly
+        Rate: 5
+      - Item: Solid_Shell
+        Rate: 5335
+      - Item: Brooch_
+        Rate: 1
+      - Item: Oridecon
+        Rate: 134
+      - Item: Anolian_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1323
+    AegisName: SEE_OTTER
+    Name: Sea Otter
+    Level: 59
+    Hp: 9999
+    BaseExp: 3048
+    JobExp: 1642
+    Attack: 650
+    Attack2: 813
+    Defense: 33
+    MagicDefense: 35
+    Str: 5
+    Agi: 36
+    Vit: 40
+    Int: 25
+    Dex: 82
+    Luk: 65
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Brute
+    Element: Water
+    ElementLevel: 3
+    WalkSpeed: 190
+    AttackDelay: 1132
+    AttackMotion: 583
+    DamageMotion: 532
+    Ai: 04
+    Drops:
+      - Item: Scarlet_Jewel
+        Rate: 150
+      - Item: Clam_Shell
+        Rate: 5500
+      - Item: Sea_Otter_Leather
+        Rate: 4365
+      - Item: Red_Jewel
+        Rate: 50
+      - Item: Blue_Jewel
+        Rate: 50
+      - Item: Glass_Bead
+        Rate: 650
+      - Item: Cyfar
+        Rate: 1200
+      - Item: See_Otter_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1119
+    AegisName: FRILLDORA
+    Name: Frilldora
+    Level: 30
+    Hp: 2023
+    BaseExp: 529
+    JobExp: 319
+    Attack: 200
+    Attack2: 239
+    MagicDefense: 10
+    Str: 35
+    Agi: 30
+    Vit: 38
+    Int: 15
+    Dex: 53
+    Luk: 30
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Brute
+    Element: Fire
+    ElementLevel: 1
+    WalkSpeed: 300
+    AttackDelay: 1540
+    AttackMotion: 720
+    DamageMotion: 432
+    Ai: 04
+    Drops:
+      - Item: Lizard_Scruff
+        Rate: 5500
+      - Item: Elunium_Stone
+        Rate: 90
+      - Item: Reptile_Tongue
+        Rate: 1500
+      - Item: Azure_Jewel
+        Rate: 15
+      - Item: Yellow_Gemstone
+        Rate: 200
+      - Item: Red_Herb
+        Rate: 800
+      - Item: Zargon
+        Rate: 120
+      - Item: Frilldora_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1037
+    AegisName: SIDE_WINDER
+    Name: Side Winder
+    Level: 43
+    Hp: 4929
+    BaseExp: 1996
+    JobExp: 993
+    Attack: 240
+    Attack2: 320
+    Defense: 5
+    MagicDefense: 10
+    Str: 38
+    Agi: 43
+    Vit: 40
+    Int: 15
+    Dex: 115
+    Luk: 20
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Brute
+    Element: Poison
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1576
+    AttackMotion: 576
+    DamageMotion: 576
+    Ai: 09
+    Drops:
+      - Item: Shining_Scales
+        Rate: 5335
+      - Item: Zargon
+        Rate: 1400
+      - Item: Oridecon_Stone
+        Rate: 134
+      - Item: Tsurugi_
+        Rate: 2
+      - Item: Posionous_Canine
+        Rate: 2500
+      - Item: Scale_Of_Snakes
+        Rate: 5000
+      - Item: White_Herb
+        Rate: 1000
+      - Item: Side_Winder_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1215
+    AegisName: STEM_WORM
+    Name: Stem Worm
+    Level: 40
+    Hp: 6136
+    BaseExp: 1452
+    JobExp: 939
+    Attack: 290
+    Attack2: 375
+    Defense: 5
+    MagicDefense: 10
+    Agi: 30
+    Vit: 26
+    Int: 15
+    Dex: 79
+    Luk: 35
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Plant
+    Element: Wind
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1500
+    AttackMotion: 500
+    DamageMotion: 1000
+    Ai: 09
+    Drops:
+      - Item: Tough_Scalelike_Stem
+        Rate: 5335
+      - Item: White_Herb
+        Rate: 1800
+      - Item: Oridecon_Stone
+        Rate: 115
+      - Item: Great_Nature
+        Rate: 5
+      - Item: Glaive_
+        Rate: 20
+      - Item: Seed_Of_Yggdrasil
+        Rate: 45
+      - Item: Stem_Worm_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1380
+    AegisName: DRILLER
+    Name: Driller
+    Level: 52
+    Hp: 7452
+    BaseExp: 3215
+    JobExp: 1860
+    Attack: 666
+    Attack2: 886
+    Defense: 48
+    MagicDefense: 31
+    Agi: 66
+    Vit: 58
+    Int: 50
+    Dex: 60
+    Luk: 47
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Brute
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 165
+    AttackDelay: 1300
+    AttackMotion: 900
+    DamageMotion: 336
+    Ai: 04
+    Drops:
+      - Item: Lizard_Scruff
+        Rate: 7500
+      - Item: Yellow_Gemstone
+        Rate: 3880
+      - Item: Red_Gemstone
+        Rate: 3500
+      - Item: Driller_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1035
+    AegisName: HUNTER_FLY
+    Name: Hunter Fly
+    Level: 42
+    Hp: 5242
+    BaseExp: 1517
+    JobExp: 952
+    Attack: 246
+    Attack2: 333
+    Defense: 25
+    MagicDefense: 15
+    Str: 33
+    Agi: 105
+    Vit: 32
+    Int: 15
+    Dex: 72
+    Luk: 30
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Insect
+    Element: Wind
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 676
+    AttackMotion: 576
+    DamageMotion: 480
+    Ai: 04
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Rough_Wind
+        Rate: 30
+      - Item: Steel
+        Rate: 100
+      - Item: Solid_Shell
+        Rate: 5335
+      - Item: Zargon
+        Rate: 1300
+      - Item: Oridecon_Stone
+        Rate: 129
+      - Item: Damascus_
+        Rate: 2
+      - Item: Hunter_Fly_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1259
+    AegisName: GRYPHON
+    Name: Gryphon
+    Level: 72
+    Hp: 27800
+    BaseExp: 5896
+    JobExp: 4400
+    Attack: 880
+    Attack2: 1260
+    Defense: 35
+    MagicDefense: 35
+    Str: 68
+    Agi: 95
+    Vit: 78
+    Int: 65
+    Dex: 115
+    Luk: 75
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Brute
+    Element: Wind
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 704
+    AttackMotion: 504
+    DamageMotion: 432
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Talon_Of_Griffin
+        Rate: 2500
+      - Item: Brigan
+        Rate: 5335
+      - Item: Soft_Feather
+        Rate: 120
+      - Item: Guisarme_
+        Rate: 1500
+      - Item: Pole_Axe
+        Rate: 1
+      - Item: Oridecon
+        Rate: 185
+      - Item: Rough_Wind
+        Rate: 150
+      - Item: Gryphon_Card
+        Rate: 1
+        StealProtected: true

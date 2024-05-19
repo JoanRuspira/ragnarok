@@ -1079,6 +1079,14 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
+  - Id: 7012
+    AegisName: Tough_Scalelike_Stem
+    Name: Tough Scalelike Stem
+    Type: Etc
+    Buy: 412
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 926
     AegisName: Scale_Of_Snakes
     Name: Snake Scale
@@ -1364,6 +1372,14 @@ Body:
     Name: Nipper
     Type: Etc
     Buy: 114
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7065
+    AegisName: Sea_Otter_Leather
+    Name: Sea-Otter Fur
+    Type: Etc
+    Buy: 820
     Weight: 10
     Flags:
       BuyingStore: true
@@ -1663,6 +1679,22 @@ Body:
     Type: Etc
     Buy: 3000
     Weight: 300
+    Flags:
+      BuyingStore: true
+  - Id: 7063
+    AegisName: Soft_Feather
+    Name: Soft Feather
+    Type: Etc
+    Buy: 280
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7048
+    AegisName: Talon_Of_Griffin
+    Name: Talon of Griffon
+    Type: Etc
+    Buy: 5418
+    Weight: 10
     Flags:
       BuyingStore: true
   - Id: 996
@@ -2416,6 +2448,22 @@ Body:
     Name: Worn Out Page
     Type: Etc
     Buy: 948
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7013
+    AegisName: Coral_Reef
+    Name: Coral Reef
+    Type: Etc
+    Buy: 772
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7003
+    AegisName: Anolian_Skin
+    Name: Anolian Skin
+    Type: Etc
+    Buy: 968
     Weight: 10
     Flags:
       BuyingStore: true
