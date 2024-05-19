@@ -2534,3 +2534,42 @@ Body:
     View: 33
     Script: |
       bonus bInt,1;
+  - Id: 5126
+    AegisName: Morpheus's_Hood
+    Name: Morpheus's Hood
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 33
+    Refineable: true
+    View: 256
+    Script: |
+      bonus bInt,2;
+  - Id: 5127
+    AegisName: Morrigane's_Helm
+    Name: Morrigane's Helm
+    Type: Armor
+    Buy: 30000
+    Weight: 500
+    Defense: 8
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 61
+    Refineable: true
+    View: 257
+    Script: |
+      bonus bLuk,2;
+      bonus bBaseAtk,3;

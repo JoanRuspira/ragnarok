@@ -748,3 +748,24 @@ Body:
       Armor: true
     ArmorLevel: 1
     Refineable: true
+  - Id: 2527
+    AegisName: Dragon_Breath
+    Name: Dragon Breath
+    Type: Armor
+    Buy: 20
+    Weight: 600
+    Defense: 16
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Classes:
+      All_Upper: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 48
+    Refineable: true
+    Script: |
+      bonus2 bSubRace,RC_Dragon,15;

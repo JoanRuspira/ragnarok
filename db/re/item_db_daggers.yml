@@ -1070,3 +1070,23 @@ Body:
     Script: |
       bonus3 bAddEffOnSkill,"SK_AS_PHANTOMMENACE",Eff_Poison,1000;
       autobonus "{ bonus2 bAddClass,Class_All,10; }",5,5000,BF_WEAPON|BF_SHORT,"{ specialeffect2 EF_POTION_BERSERK; }";
+  - Id: 13006
+    AegisName: Khukri
+    Name: Khukri
+    Type: Weapon
+    SubType: Dagger
+    Buy: 240000
+    Weight: 600
+    Attack: 150
+    Range: 1
+    Jobs:
+      KagerouOboro: true
+      Ninja: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Dark;
+      bonus2 bAddEff,Eff_Curse,1000;

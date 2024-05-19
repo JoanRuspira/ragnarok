@@ -3658,6 +3658,21 @@ Body:
       bonus bSPGainValue,10;
     UnEquipScript: |
       heal 0,-100;
+  - Id: 27162
+    AegisName: Gopinich_Card
+    Name: Gopinich Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Head_Low: true
+      Head_Mid: true
+      Head_Top: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus bSPDrainValue,5;
+      bonus bUseSPrate,50;
   - Id: 4280
     AegisName: Geographer_Card
     Name: Geographer Card

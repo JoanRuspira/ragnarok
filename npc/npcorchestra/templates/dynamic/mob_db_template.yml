@@ -5560,3 +5560,568 @@ Body:
       - Item: Dustiness_Card
         Rate: 1
         StealProtected: true
+  - Id: 1687
+    AegisName: GREEN_IGUANA
+    Name: Grove
+    JapaneseName: Green Iguana
+    Level: 54
+    Hp: 6444
+    BaseExp: 2400
+    JobExp: 2050
+    Attack: 550
+    Attack2: 650
+    MagicDefense: 10
+    Agi: 52
+    Vit: 64
+    Int: 5
+    Dex: 98
+    Luk: 14
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Brute
+    Element: Earth
+    ElementLevel: 2
+    WalkSpeed: 200
+    AttackDelay: 720
+    AttackMotion: 528
+    DamageMotion: 432
+    Ai: 02
+    Drops:
+      - Item: Leaflet_Of_Aloe
+        Rate: 1500
+      - Item: Reptile_Tongue
+        Rate: 1000
+      - Item: Leaflet_Of_Hinal
+        Rate: 1000
+      - Item: Green_Herb
+        Rate: 1000
+      - Item: Monster's_Feed
+        Rate: 2000
+      - Item: Aloebera
+        Rate: 10
+      - Item: Green_Herb
+        Rate: 1
+      - Item: Green_Iguana_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1885
+    AegisName: GOPINICH
+    Name: Gopinich
+    Level: 85
+    Hp: 299321
+    BaseExp: 45250
+    JobExp: 16445
+    MvpExp: 22625
+    Attack: 1868
+    Attack2: 6124
+    Defense: 20
+    MagicDefense: 42
+    Str: 50
+    Agi: 65
+    Vit: 55
+    Int: 103
+    Dex: 152
+    Luk: 35
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Dragon
+    Element: Earth
+    ElementLevel: 3
+    WalkSpeed: 150
+    AttackDelay: 1536
+    AttackMotion: 864
+    DamageMotion: 432
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Yggdrasilberry
+        Rate: 5500
+      - Item: Old_Violet_Box
+        Rate: 5000
+    Drops:
+      - Item: Old_Violet_Box
+        Rate: 4000
+      - Item: Ring_
+        Rate: 200
+      - Item: Int_Dish10
+        Rate: 1000
+      - Item: Ixion_Wing
+        Rate: 100
+      - Item: Pole_Axe
+        Rate: 5
+      - Item: Treasure_Box
+        Rate: 5000
+      - Item: Loard_Circlet
+        Rate: 1
+      - Item: Gopinich_Card
+        Rate: 1
+  - Id: 1384
+    AegisName: DELETER
+    Name: Deleter
+    Level: 66
+    Hp: 17292
+    BaseExp: 3403
+    JobExp: 2066
+    Attack: 446
+    Attack2: 593
+    Defense: 45
+    MagicDefense: 53
+    Agi: 104
+    Vit: 40
+    Int: 65
+    Dex: 72
+    Luk: 54
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Dragon
+    Element: Fire
+    ElementLevel: 2
+    WalkSpeed: 175
+    AttackDelay: 1020
+    AttackMotion: 720
+    DamageMotion: 384
+    Ai: 13
+    Drops:
+      - Item: Dragon's_Skin
+        Rate: 4074
+      - Item: Dragon_Canine
+        Rate: 5335
+      - Item: Dragon_Train
+        Rate: 3880
+      - Item: Dragon_Scale
+        Rate: 3589
+      - Item: Flying_Deleter_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1385
+    AegisName: DELETER_
+    Name: Deleter
+    Level: 65
+    Hp: 15168
+    BaseExp: 3403
+    JobExp: 2066
+    Attack: 446
+    Attack2: 593
+    Defense: 52
+    MagicDefense: 53
+    Agi: 66
+    Vit: 40
+    Int: 65
+    Dex: 72
+    Luk: 68
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Dragon
+    Element: Fire
+    ElementLevel: 2
+    WalkSpeed: 175
+    AttackDelay: 1024
+    AttackMotion: 624
+    DamageMotion: 336
+    Ai: 13
+    Drops:
+      - Item: Dragon's_Skin
+        Rate: 4074
+      - Item: Dragon_Canine
+        Rate: 5335
+      - Item: Dragon_Train
+        Rate: 3880
+      - Item: Dragon_Scale
+        Rate: 3589
+      - Item: Deleter_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1155
+    AegisName: PETIT
+    Name: Petite
+    Level: 44
+    Hp: 6881
+    BaseExp: 1677
+    JobExp: 1034
+    Attack: 360
+    Attack2: 427
+    Defense: 30
+    MagicDefense: 30
+    Agi: 44
+    Vit: 62
+    Int: 55
+    Dex: 79
+    Luk: 60
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Dragon
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1624
+    AttackMotion: 620
+    DamageMotion: 384
+    Ai: 09
+    Drops:
+      - Item: Dragon_Canine
+        Rate: 5335
+      - Item: Dragon_Train
+        Rate: 300
+      - Item: Oridecon_Stone
+        Rate: 140
+      - Item: White_Herb
+        Rate: 1000
+      - Item: Flail
+        Rate: 150
+      - Item: Zargon
+        Rate: 1500
+      - Item: Aloebera
+        Rate: 15
+      - Item: Petit_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1156
+    AegisName: PETIT_
+    Name: Petite
+    Level: 45
+    Hp: 5747
+    BaseExp: 1758
+    JobExp: 1075
+    Attack: 300
+    Attack2: 355
+    Defense: 20
+    MagicDefense: 45
+    Agi: 113
+    Vit: 45
+    Int: 55
+    Dex: 73
+    Luk: 80
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Dragon
+    Element: Wind
+    ElementLevel: 1
+    WalkSpeed: 150
+    AttackDelay: 1420
+    AttackMotion: 1080
+    DamageMotion: 528
+    Ai: 09
+    Drops:
+      - Item: Dragon_Scale
+        Rate: 5335
+      - Item: Dragon_Train
+        Rate: 300
+      - Item: Elunium
+        Rate: 61
+      - Item: White_Herb
+        Rate: 1000
+      - Item: Khukri
+        Rate: 5
+      - Item: Zargon
+        Rate: 1500
+      - Item: Aloebera
+        Rate: 15
+      - Item: Petit__Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1715
+    AegisName: NOVUS
+    Name: Novus
+    Level: 42
+    Hp: 5430
+    BaseExp: 1320
+    JobExp: 1002
+    Attack: 284
+    Attack2: 384
+    Defense: 20
+    MagicDefense: 28
+    Agi: 56
+    Vit: 43
+    Int: 45
+    Dex: 124
+    Luk: 43
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Dragon
+    Element: Neutral
+    ElementLevel: 1
+    WalkSpeed: 110
+    AttackDelay: 151
+    AttackMotion: 288
+    DamageMotion: 360
+    Ai: 04
+    Drops:
+      - Item: Green_Herb
+        Rate: 3000
+      - Item: Cyfar
+        Rate: 1035
+      - Item: Dragon_Scale
+        Rate: 589
+      - Item: Novus_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1718
+    AegisName: NOVUS_
+    Name: Novus
+    Level: 43
+    Hp: 5830
+    BaseExp: 1411
+    JobExp: 1100
+    Attack: 314
+    Attack2: 414
+    Defense: 24
+    MagicDefense: 28
+    Agi: 60
+    Vit: 43
+    Int: 39
+    Dex: 119
+    Luk: 43
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Dragon
+    Element: Neutral
+    ElementLevel: 1
+    WalkSpeed: 100
+    AttackDelay: 252
+    AttackMotion: 816
+    DamageMotion: 480
+    Ai: 04
+    Drops:
+      - Item: Yellow_Herb
+        Rate: 2000
+      - Item: Cyfar
+        Rate: 1035
+      - Item: Dragon_Scale
+        Rate: 589
+      - Item: Novus__Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1378
+    AegisName: DEMON_PUNGUS
+    Name: Demon Pungus
+    Level: 56
+    Hp: 7259
+    BaseExp: 3148
+    JobExp: 1817
+    Attack: 360
+    Attack2: 479
+    Defense: 48
+    MagicDefense: 31
+    Agi: 83
+    Vit: 55
+    Int: 59
+    Dex: 63
+    Luk: 34
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Demon
+    Element: Poison
+    ElementLevel: 3
+    WalkSpeed: 170
+    AttackDelay: 1260
+    AttackMotion: 960
+    DamageMotion: 672
+    Ai: 04
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Spawns
+        Rate: 4074
+      - Item: Mould_Powder
+        Rate: 4559
+      - Item: Yellow_Gemstone
+        Rate: 3880
+      - Item: Starsand_Of_Witch
+        Rate: 5000
+      - Item: Demon_Pungus_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1721
+    AegisName: DRAGON_EGG
+    Name: Dragon Egg
+    Level: 43
+    Hp: 18322
+    BaseExp: 6740
+    Attack: 1
+    Attack2: 2
+    Defense: 78
+    MagicDefense: 60
+    Vit: 56
+    Int: 67
+    Luk: 63
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Dragon
+    Element: Neutral
+    ElementLevel: 2
+    WalkSpeed: 1000
+    AttackDelay: 24
+    AttackMotion: 1
+    DamageMotion: 1
+    Drops:
+      - Item: Elunium
+        Rate: 5
+      - Item: Piece_Of_Egg_Shell
+        Rate: 100
+      - Item: Crystal_Jewel_
+        Rate: 10
+      - Item: Crystal_Jewel__
+        Rate: 5
+      - Item: Dark_Red_Jewel
+        Rate: 10
+      - Item: Skyblue_Jewel
+        Rate: 10
+      - Item: Golden_Jewel
+        Rate: 10
+      - Item: Dragon_Egg_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1262
+    AegisName: MUTANT_DRAGON
+    Name: Mutant Dragonoid
+    JapaneseName: Mutant Dragon
+    Level: 65
+    Hp: 62600
+    BaseExp: 4730
+    JobExp: 3536
+    Attack: 2400
+    Attack2: 3400
+    Defense: 15
+    MagicDefense: 20
+    Str: 75
+    Agi: 47
+    Vit: 30
+    Int: 68
+    Dex: 45
+    Luk: 35
+    AttackRange: 4
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Dragon
+    Element: Fire
+    ElementLevel: 2
+    WalkSpeed: 250
+    AttackDelay: 1280
+    AttackMotion: 1080
+    DamageMotion: 240
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Brigan
+        Rate: 4850
+      - Item: Dragon_Canine
+        Rate: 500
+      - Item: Dragon_Scale
+        Rate: 500
+      - Item: Rotten_Bandage
+        Rate: 500
+      - Item: Legacy_Of_Dragon
+        Rate: 100
+      - Item: Pyroxene
+        Rate: 1500
+      - Item: Dragon_Breath
+        Rate: 50
+      - Item: Mutant_Dragon_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1720
+    AegisName: HYDRO
+    Name: Hydrolancer
+    JapaneseName: Hydro
+    Level: 89
+    Hp: 308230
+    BaseExp: 83450
+    JobExp: 2480
+    Attack: 2554
+    Attack2: 3910
+    Defense: 52
+    MagicDefense: 62
+    Agi: 96
+    Vit: 110
+    Int: 86
+    Dex: 94
+    Luk: 32
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Dragon
+    Element: Dark
+    ElementLevel: 2
+    WalkSpeed: 160
+    AttackDelay: 140
+    AttackMotion: 672
+    DamageMotion: 432
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Dragon's_Skin
+        Rate: 4000
+      - Item: Dragon_Canine
+        Rate: 4000
+      - Item: Tri_Headed_Dragon_Head
+        Rate: 3880
+      - Item: Morpheus's_Hood
+        Rate: 500
+      - Item: Morrigane's_Helm
+        Rate: 500
+      - Item: Vit_Dish10
+        Rate: 300
+      - Item: Fricca_Circlet
+        Rate: 500
+      - Item: Hydro_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1368
+    AegisName: GEOGRAPHER
+    Name: Geographer
+    Level: 56
+    Hp: 8071
+    BaseExp: 2715
+    JobExp: 2000
+    Attack: 467
+    Attack2: 621
+    Defense: 28
+    MagicDefense: 26
+    Agi: 66
+    Vit: 47
+    Int: 60
+    Dex: 68
+    Luk: 44
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Plant
+    Element: Earth
+    ElementLevel: 3
+    WalkSpeed: 1000
+    AttackDelay: 1308
+    AttackMotion: 1008
+    DamageMotion: 480
+    Ai: 10
+    Drops:
+      - Item: Blossom_Of_Maneater
+        Rate: 6200
+      - Item: Root_Of_Maneater
+        Rate: 5500
+      - Item: Geographer_Card
+        Rate: 1
+        StealProtected: true

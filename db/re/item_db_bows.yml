@@ -489,3 +489,24 @@ Body:
     Script: |
       .@r = getrefine();
       bonus bDef,2+3*(.@r>5)+5*(.@r>8);
+  - Id: 1737
+    AegisName: Ixion_Wing
+    Name: Ixion Wings
+    Type: Weapon
+    SubType: Bow
+    Buy: 20
+    Weight: 300
+    Attack: 135
+    Range: 5
+    Slots: 1
+    Jobs:
+      Hunter: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      autobonus "{ bonus bAspdRate,7; }",5+getrefine(),7000,BF_WEAPON,"{ specialeffect2 EF_HASTEUP; }";

@@ -927,11 +927,35 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
+  - Id: 7443
+    AegisName: Tri_Headed_Dragon_Head
+    Name: Three-Headed Dragon's Head
+    Type: Etc
+    Buy: 956
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7123
+    AegisName: Dragon's_Skin
+    Name: Dragon Skin
+    Type: Etc
+    Buy: 1025
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 902
     AegisName: Tree_Root
     Name: Tree Root
     Type: Etc
     Buy: 12
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7444
+    AegisName: Treasure_Box
+    Name: Treasure Box
+    Type: Etc
+    Buy: 300000
     Weight: 10
     Flags:
       BuyingStore: true
@@ -1134,6 +1158,14 @@ Body:
     Type: Etc
     Buy: 374
     Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7296
+    AegisName: Pyroxene
+    Name: Pyroxene
+    Type: Etc
+    Buy: 3000
+    Weight: 100
     Flags:
       BuyingStore: true
   - Id: 930
@@ -2026,6 +2058,22 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
+  - Id: 7001
+    AegisName: Mould_Powder
+    Name: Mould Powder
+    Type: Etc
+    Buy: 466
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7119
+    AegisName: Spawns
+    Name: Bacillus
+    Type: Etc
+    Buy: 1025
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 1035
     AegisName: Dragon_Canine
     Name: Dragon Canine
@@ -2247,6 +2295,14 @@ Body:
     Name: Golden Hair
     Type: Etc
     Buy: 430
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7032
+    AegisName: Piece_Of_Egg_Shell
+    Name: Piece of Egg Shell
+    Type: Etc
+    Buy: 168
     Weight: 10
     Flags:
       BuyingStore: true

@@ -251,3 +251,26 @@ Body:
     Refineable: true
     Script: |
       bonus bAtkEle,Ele_Wind;
+  - Id: 1589
+    AegisName: Legacy_Of_Dragon_
+    Name: Legacy of Dragon
+    Type: Weapon
+    SubType: Book
+    Buy: 20
+    Weight: 700
+    Attack: 130
+    Range: 1
+    Slots: 2
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bInt,3;
+      bonus bIgnoreDefRace,RC_Dragon;
+      bonus2 bSPGainRace,RC_Dragon,10;
