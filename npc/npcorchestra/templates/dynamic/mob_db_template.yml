@@ -5210,3 +5210,353 @@ Body:
       - Item: Dragon_Fly_Card
         Rate: 1
         StealProtected: true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  - Id: 1174
+    AegisName: STAINER
+    Name: Stainer
+    Level: 16
+    Hp: 538
+    BaseExp: 105
+    JobExp: 70
+    Attack: 53
+    Attack2: 64
+    Defense: 10
+    Agi: 40
+    Vit: 16
+    Int: 5
+    Dex: 30
+    Luk: 5
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Insect
+    Element: Wind
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1688
+    AttackMotion: 1188
+    DamageMotion: 612
+    Ai: 17
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Wind_Of_Verdure
+        Rate: 70
+      - Item: Emveretarcon
+        Rate: 30
+      - Item: Colorful_Shell
+        Rate: 9000
+      - Item: Garlet
+        Rate: 2100
+      - Item: Elunium_Stone
+        Rate: 25
+      - Item: Solid_Shell
+        Rate: 10
+      - Item: Iron_Ore
+        Rate: 300
+      - Item: Stainer_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1103
+    AegisName: CARAMEL
+    Name: Caramel
+    Level: 23
+    Hp: 1424
+    BaseExp: 264
+    JobExp: 162
+    Attack: 90
+    Attack2: 112
+    Defense: 5
+    MagicDefense: 5
+    Str: 35
+    Agi: 23
+    Vit: 46
+    Int: 5
+    Dex: 38
+    Luk: 10
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Brute
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1604
+    AttackMotion: 840
+    DamageMotion: 756
+    Ai: 17
+    Drops:
+      - Item: Porcupine_Spike
+        Rate: 9000
+      - Item: Coat_
+        Rate: 5
+      - Item: Animal's_Skin
+        Rate: 5500
+      - Item: Glaive_
+        Rate: 10
+      - Item: Spear__
+        Rate: 15
+      - Item: Pike__
+        Rate: 20
+      - Item: Caramel_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1118
+    AegisName: FLORA
+    Name: Flora
+    Level: 26
+    Hp: 2092
+    BaseExp: 357
+    JobExp: 226
+    Attack: 242
+    Attack2: 273
+    Defense: 10
+    MagicDefense: 35
+    Agi: 26
+    Vit: 35
+    Int: 5
+    Dex: 43
+    Luk: 80
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Plant
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 1000
+    AttackDelay: 1432
+    AttackMotion: 432
+    DamageMotion: 576
+    Ai: 10
+    Drops:
+      - Item: Blossom_Of_Maneater
+        Rate: 9000
+      - Item: Aloe
+        Rate: 10
+      - Item: Leaflet_Of_Aloe
+        Rate: 50
+      - Item: Stem
+        Rate: 2000
+      - Item: Witherless_Rose
+        Rate: 1
+      - Item: Flora_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1100
+    AegisName: ARGOS
+    Name: Argos
+    Level: 25
+    Hp: 1117
+    BaseExp: 388
+    JobExp: 188
+    Attack: 158
+    Attack2: 191
+    Defense: 15
+    Agi: 25
+    Vit: 25
+    Int: 5
+    Dex: 32
+    Luk: 15
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Insect
+    Element: Poison
+    ElementLevel: 1
+    WalkSpeed: 300
+    AttackDelay: 1468
+    AttackMotion: 468
+    DamageMotion: 768
+    Ai: 09
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Spiderweb
+        Rate: 9000
+      - Item: Scell
+        Rate: 1200
+      - Item: Short_Leg
+        Rate: 500
+      - Item: Elunium_Stone
+        Rate: 61
+      - Item: Green_Herb
+        Rate: 670
+      - Item: Yellow_Herb
+        Rate: 250
+      - Item: Argos_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1059
+    AegisName: MISTRESS
+    Name: Mistress
+    Level: 74
+    Hp: 212000
+    BaseExp: 39325
+    JobExp: 27170
+    MvpExp: 19662
+    Attack: 880
+    Attack2: 1110
+    Defense: 40
+    MagicDefense: 60
+    Str: 50
+    Agi: 165
+    Vit: 60
+    Int: 95
+    Dex: 70
+    Luk: 130
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Insect
+    Element: Wind
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 1148
+    AttackMotion: 648
+    DamageMotion: 300
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Rough_Wind
+        Rate: 1500
+      - Item: Royal_Jelly
+        Rate: 4000
+      - Item: Scarlet_Jewel
+        Rate: 3000
+    Drops:
+      - Item: Gungnir
+        Rate: 150
+      - Item: Honey
+        Rate: 10000
+      - Item: Coronet
+        Rate: 250
+      - Item: Old_Card_Album
+        Rate: 1000
+      - Item: Young_Twig
+        Rate: 10
+      - Item: Elunium
+        Rate: 4268
+      - Item: Red_Square_Bag
+        Rate: 100
+      - Item: Mistress_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1099
+    AegisName: ARGIOPE
+    Name: Argiope
+    Level: 41
+    Hp: 4382
+    BaseExp: 1797
+    JobExp: 849
+    Attack: 395
+    Attack2: 480
+    Defense: 30
+    Agi: 41
+    Vit: 31
+    Int: 10
+    Dex: 56
+    Luk: 30
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Insect
+    Element: Poison
+    ElementLevel: 1
+    WalkSpeed: 300
+    AttackDelay: 1792
+    AttackMotion: 792
+    DamageMotion: 336
+    Ai: 21
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Short_Leg
+        Rate: 5335
+      - Item: Zargon
+        Rate: 1200
+      - Item: Elunium_Stone
+        Rate: 175
+      - Item: Boots_
+        Rate: 5
+      - Item: Green_Herb
+        Rate: 1500
+      - Item: Violet_Jewel
+        Rate: 10
+      - Item: Argiope_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1114
+    AegisName: DUSTINESS
+    Name: Dustiness
+    Level: 21
+    Hp: 1044
+    BaseExp: 218
+    JobExp: 140
+    Attack: 80
+    Attack2: 102
+    MagicDefense: 10
+    Agi: 53
+    Vit: 17
+    Int: 0
+    Dex: 38
+    Luk: 5
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Insect
+    Element: Wind
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 1004
+    AttackMotion: 504
+    DamageMotion: 384
+    Ai: 17
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Moth_Dust
+        Rate: 9000
+      - Item: Wing_Of_Moth
+        Rate: 500
+      - Item: Insect_Feeler
+        Rate: 2000
+      - Item: Sparkling_Dust
+        Rate: 10
+      - Item: Red_Herb
+        Rate: 1200
+      - Item: Dustiness_Card
+        Rate: 1
+        StealProtected: true

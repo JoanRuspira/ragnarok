@@ -343,6 +343,14 @@ Body:
     Weight: 100
     Flags:
       BuyingStore: true
+  - Id: 7018
+    AegisName: Young_Twig
+    Name: Young Twig
+    Type: Etc
+    Buy: 50
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 721
     AegisName: Azure_Jewel
     Name: Emerald

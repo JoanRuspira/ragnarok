@@ -194,3 +194,48 @@ Body:
       bonus bStr,1;
       bonus bInt,2;
       bonus bDex,1;
+  - Id: 1413
+    AegisName: Gungnir
+    Name: Gungnir
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 20
+    Weight: 500
+    Attack: 120
+    Range: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 4
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Wind;
+      bonus bPerfectHitAddRate,25;
+      bonus bHit,30;
+  - Id: 1418
+    AegisName: Gungnir_
+    Name: Gungnir
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 20
+    Weight: 500
+    Attack: 120
+    Range: 3
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 4
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Wind;
+      bonus bPerfectHitAddRate,25;
+      bonus bHit,30;

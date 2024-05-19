@@ -2516,3 +2516,21 @@ Body:
     View: 28
     Script: |
       bonus bMdef,3;
+  - Id: 2249
+    AegisName: Coronet
+    Name: Coronet
+    Type: Armor
+    Buy: 20
+    Weight: 300
+    Defense: 5
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 33
+    Script: |
+      bonus bInt,1;
