@@ -4442,3 +4442,771 @@ Body:
       - Item: Gryphon_Card
         Rate: 1
         StealProtected: true
+  - Id: 1240
+    AegisName: META_PICKY
+    Name: Picky
+    Level: 3
+    Hp: 80
+    BaseExp: 4
+    JobExp: 3
+    Attack: 9
+    Attack2: 12
+    Agi: 3
+    Vit: 3
+    Int: 0
+    Dex: 10
+    Luk: 30
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Brute
+    Element: Fire
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 988
+    AttackMotion: 288
+    DamageMotion: 168
+    Ai: 01
+    Drops:
+      - Item: Feather_Of_Birds
+        Rate: 6500
+      - Item: Feather
+        Rate: 850
+      - Item: Cotton_Shirt_
+        Rate: 150
+      - Item: Red_Herb
+        Rate: 650
+      - Item: Milk
+        Rate: 350
+      - Item: Yellow_Gemstone
+        Rate: 60
+      - Item: Picky_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1097
+    AegisName: ANT_EGG
+    Name: Ant Egg
+    Level: 4
+    Hp: 420
+    BaseExp: 5
+    JobExp: 4
+    Attack: 1
+    Attack2: 2
+    Defense: 20
+    MagicDefense: 20
+    Int: 0
+    Luk: 20
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 1000
+    AttackDelay: 1001
+    AttackMotion: 1
+    DamageMotion: 1
+    Drops:
+      - Item: Phracon
+        Rate: 320
+      - Item: Shell
+        Rate: 2000
+      - Item: Jellopy
+        Rate: 2000
+      - Item: Sticky_Mucus
+        Rate: 650
+      - Item: Empty_Bottle
+        Rate: 2000
+      - Item: Iron_Ore
+        Rate: 200
+      - Item: Andre_Egg_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1092
+    AegisName: VAGABOND_WOLF
+    Name: Vagabond Wolf
+    Level: 24
+    Hp: 12240
+    BaseExp: 247
+    JobExp: 176
+    Attack: 135
+    Attack2: 159
+    Defense: 10
+    Str: 57
+    Agi: 45
+    Vit: 48
+    Int: 20
+    Dex: 50
+    Luk: 65
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Brute
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 150
+    AttackDelay: 1048
+    AttackMotion: 648
+    DamageMotion: 432
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Western_Grace
+        Rate: 200
+      - Item: Claw_Of_Wolves
+        Rate: 8000
+      - Item: Golden_Jewel
+        Rate: 1500
+      - Item: Red_Jewel
+        Rate: 10
+      - Item: Monster_Juice
+        Rate: 50
+      - Item: Vagabond_Wolf_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1106
+    AegisName: DESERT_WOLF
+    Name: Desert Wolf
+    Level: 27
+    Hp: 1716
+    BaseExp: 427
+    JobExp: 266
+    Attack: 169
+    Attack2: 208
+    MagicDefense: 10
+    Str: 56
+    Agi: 27
+    Vit: 45
+    Int: 15
+    Dex: 56
+    Luk: 10
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Brute
+    Element: Fire
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1120
+    AttackMotion: 420
+    DamageMotion: 288
+    Ai: 13
+    Drops:
+      - Item: Katar_
+        Rate: 5
+      - Item: Claw_Of_Desert_Wolf
+        Rate: 5500
+      - Item: Mink_Coat
+        Rate: 5
+      - Item: Meat
+        Rate: 1200
+      - Item: Claw_Of_Wolves
+        Rate: 2000
+      - Item: Oridecon_Stone
+        Rate: 53
+      - Item: Stiletto_
+        Rate: 140
+      - Item: Desert_Wolf_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1001
+    AegisName: SCORPION
+    Name: Scorpion
+    Level: 24
+    Hp: 1109
+    BaseExp: 287
+    JobExp: 176
+    Attack: 80
+    Attack2: 135
+    Defense: 30
+    Agi: 24
+    Vit: 24
+    Int: 5
+    Dex: 52
+    Luk: 5
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Insect
+    Element: Fire
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1564
+    AttackMotion: 864
+    DamageMotion: 576
+    Ai: 09
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Boody_Red
+        Rate: 70
+      - Item: Scorpion's_Tail
+        Rate: 5500
+      - Item: Elunium_Stone
+        Rate: 57
+      - Item: Solid_Shell
+        Rate: 210
+      - Item: Fine_Grit
+        Rate: 100
+      - Item: Yellow_Herb
+        Rate: 200
+      - Item: Scorpion_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1058
+    AegisName: METALLER
+    Name: Metaller
+    Level: 22
+    Hp: 926
+    BaseExp: 241
+    JobExp: 152
+    Attack: 131
+    Attack2: 159
+    Defense: 15
+    MagicDefense: 30
+    Agi: 22
+    Vit: 22
+    Int: 20
+    Dex: 49
+    Luk: 50
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Insect
+    Element: Fire
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1708
+    AttackMotion: 1008
+    DamageMotion: 540
+    Ai: 07
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Boody_Red
+        Rate: 60
+      - Item: Grasshopper's_Leg
+        Rate: 6500
+      - Item: Scell
+        Rate: 400
+      - Item: Elunium_Stone
+        Rate: 49
+      - Item: Shell
+        Rate: 3000
+      - Item: Guitar_Of_Passion
+        Rate: 10
+      - Item: Metaller_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1138
+    AegisName: MAGNOLIA
+    Name: Magnolia
+    Level: 26
+    Hp: 3195
+    BaseExp: 393
+    JobExp: 248
+    Attack: 120
+    Attack2: 151
+    Defense: 5
+    MagicDefense: 30
+    Agi: 26
+    Vit: 26
+    Int: 0
+    Dex: 39
+    Luk: 5
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Demon
+    Element: Water
+    ElementLevel: 1
+    WalkSpeed: 250
+    AttackDelay: 1560
+    AttackMotion: 360
+    DamageMotion: 360
+    Ai: 02
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Old_Frying_Pan
+        Rate: 9000
+      - Item: Garlet
+        Rate: 800
+      - Item: Scell
+        Rate: 100
+      - Item: Zargon
+        Rate: 10
+      - Item: Black_Ladle
+        Rate: 40
+      - Item: Yellow_Herb
+        Rate: 400
+      - Item: Magnolia_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1040
+    AegisName: GOLEM
+    Name: Golem
+    Level: 25
+    Hp: 3900
+    BaseExp: 465
+    JobExp: 94
+    Attack: 175
+    Attack2: 187
+    Defense: 40
+    Agi: 15
+    Vit: 25
+    Int: 0
+    Dex: 15
+    Luk: 0
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Formless
+    RaceGroups:
+      Golem: true
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 300
+    AttackDelay: 1608
+    AttackMotion: 816
+    DamageMotion: 396
+    Ai: 17
+    Drops:
+      - Item: Steel
+        Rate: 150
+      - Item: Stone_Heart
+        Rate: 9000
+      - Item: Zargon
+        Rate: 220
+      - Item: Elunium_Stone
+        Rate: 70
+      - Item: Coal
+        Rate: 210
+      - Item: Yellow_Gemstone
+        Rate: 200
+      - Item: Iron
+        Rate: 350
+      - Item: Golem_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1019
+    AegisName: PECOPECO
+    Name: Peco Peco
+    Level: 19
+    Hp: 531
+    BaseExp: 159
+    JobExp: 72
+    Attack: 50
+    Attack2: 64
+    Agi: 13
+    Vit: 13
+    Int: 25
+    Dex: 27
+    Luk: 9
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Brute
+    Element: Fire
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1564
+    AttackMotion: 864
+    DamageMotion: 576
+    Ai: 03
+    Drops:
+      - Item: Bill_Of_Birds
+        Rate: 9000
+      - Item: Sandals_
+        Rate: 20
+      - Item: Yellow_Herb
+        Rate: 200
+      - Item: Red_Herb
+        Rate: 900
+      - Item: Wand_
+        Rate: 100
+      - Item: Orange
+        Rate: 1000
+      - Item: Pecopeco_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1055
+    AegisName: MUKA
+    Name: Muka
+    Level: 17
+    Hp: 610
+    BaseExp: 273
+    JobExp: 120
+    Attack: 40
+    Attack2: 49
+    Defense: 5
+    MagicDefense: 5
+    Str: 15
+    Agi: 15
+    Vit: 30
+    Int: 5
+    Dex: 20
+    Luk: 10
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Plant
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 300
+    AttackDelay: 1960
+    AttackMotion: 960
+    DamageMotion: 384
+    Ai: 01
+    Drops:
+      - Item: Yellow_Live
+        Rate: 70
+      - Item: Cactus_Needle
+        Rate: 9000
+      - Item: Empty_Bottle
+        Rate: 2000
+      - Item: Green_Herb
+        Rate: 400
+      - Item: Red_Herb
+        Rate: 1000
+      - Item: Guisarme_
+        Rate: 50
+      - Item: Iron_Ore
+        Rate: 250
+      - Item: Muka_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1030
+    AegisName: ANACONDAQ
+    Name: Anacondaq
+    Level: 23
+    Hp: 1109
+    BaseExp: 300
+    JobExp: 149
+    Attack: 124
+    Attack2: 157
+    Agi: 23
+    Vit: 28
+    Int: 10
+    Dex: 36
+    Luk: 5
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Brute
+    Element: Poison
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1576
+    AttackMotion: 576
+    DamageMotion: 576
+    Ai: 17
+    Drops:
+      - Item: Emveretarcon
+        Rate: 50
+      - Item: Posionous_Canine
+        Rate: 9000
+      - Item: Glaive_
+        Rate: 10
+      - Item: Scale_Of_Snakes
+        Rate: 1500
+      - Item: Scales_Shell
+        Rate: 200
+      - Item: Yellow_Herb
+        Rate: 150
+      - Item: Oridecon_Stone
+        Rate: 50
+      - Item: Anacondaq_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1127
+    AegisName: HODE
+    Name: Hode
+    Level: 26
+    Hp: 2282
+    BaseExp: 550
+    JobExp: 300
+    Attack: 146
+    Attack2: 177
+    MagicDefense: 30
+    Agi: 26
+    Vit: 42
+    Int: 5
+    Dex: 49
+    Luk: 40
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Brute
+    Element: Earth
+    ElementLevel: 2
+    WalkSpeed: 200
+    AttackDelay: 1480
+    AttackMotion: 480
+    DamageMotion: 720
+    Ai: 01
+    Drops:
+      - Item: Yellow_Live
+        Rate: 120
+      - Item: Earthworm_Peeling
+        Rate: 9000
+      - Item: Elunium_Stone
+        Rate: 80
+      - Item: Sticky_Mucus
+        Rate: 3000
+      - Item: Lapier_
+        Rate: 10
+      - Item: Hode_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1042
+    AegisName: STEEL_CHONCHON
+    Name: Steel Chonchon
+    Level: 17
+    Hp: 530
+    BaseExp: 109
+    JobExp: 71
+    Attack: 54
+    Attack2: 65
+    Defense: 15
+    Agi: 43
+    Vit: 17
+    Int: 5
+    Dex: 33
+    Luk: 10
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Insect
+    Element: Wind
+    ElementLevel: 1
+    WalkSpeed: 150
+    AttackDelay: 1076
+    AttackMotion: 576
+    DamageMotion: 480
+    Ai: 07
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Wind_Of_Verdure
+        Rate: 90
+      - Item: Steel
+        Rate: 30
+      - Item: Garlet
+        Rate: 2400
+      - Item: Shell
+        Rate: 9000
+      - Item: Solid_Shell
+        Rate: 30
+      - Item: Iron
+        Rate: 200
+      - Item: Iron_Ore
+        Rate: 300
+      - Item: Steel_Chonchon_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1165
+    AegisName: SAND_MAN
+    Name: Sandman
+    Level: 34
+    Hp: 3413
+    BaseExp: 810
+    JobExp: 492
+    Attack: 180
+    Attack2: 205
+    Defense: 10
+    MagicDefense: 25
+    Str: 24
+    Agi: 34
+    Vit: 58
+    Int: 38
+    Dex: 60
+    Luk: 5
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Earth
+    ElementLevel: 3
+    WalkSpeed: 250
+    AttackDelay: 1672
+    AttackMotion: 720
+    DamageMotion: 288
+    Ai: 04
+    Drops:
+      - Item: Great_Nature
+        Rate: 35
+      - Item: Grit
+        Rate: 5335
+      - Item: Elunium_Stone
+        Rate: 118
+      - Item: Fine_Sand
+        Rate: 350
+      - Item: Sparkling_Dust
+        Rate: 200
+      - Item: Katar_Of_Thornbush
+        Rate: 1
+      - Item: Hypnotist's_Staff_
+        Rate: 5
+      - Item: Sand_Man_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1095
+    AegisName: ANDRE
+    Name: Andre
+    Level: 17
+    Hp: 688
+    BaseExp: 109
+    JobExp: 71
+    Attack: 60
+    Attack2: 71
+    Defense: 10
+    Agi: 17
+    Vit: 24
+    Int: 20
+    Dex: 26
+    Luk: 20
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Insect
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 300
+    AttackDelay: 1288
+    AttackMotion: 288
+    DamageMotion: 384
+    Ai: 07
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Worm_Peelings
+        Rate: 9000
+      - Item: Garlet
+        Rate: 1000
+      - Item: Sticky_Mucus
+        Rate: 500
+      - Item: Yellow_Live
+        Rate: 50
+      - Item: Sparkling_Dust
+        Rate: 4
+      - Item: Iron_Ore
+        Rate: 350
+      - Item: Elunium_Stone
+        Rate: 28
+      - Item: Andre_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1159
+    AegisName: PHREEONI
+    Name: Phreeoni
+    Level: 69
+    Hp: 188000
+    BaseExp: 32175
+    JobExp: 16445
+    MvpExp: 16087
+    Attack: 880
+    Attack2: 1530
+    Defense: 10
+    MagicDefense: 20
+    Agi: 85
+    Vit: 78
+    Int: 35
+    Dex: 130
+    Luk: 60
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Brute
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 200
+    AttackDelay: 1020
+    AttackMotion: 1020
+    DamageMotion: 288
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Frozen_Heart
+        Rate: 500
+      - Item: Crystal_Jewel
+        Rate: 1000
+      - Item: Star_Crumb
+        Rate: 4000
+    Drops:
+      - Item: Thin_N'_Long_Tongue
+        Rate: 9700
+      - Item: Forturn_Sword
+        Rate: 500
+      - Item: Sucsamad_
+        Rate: 150
+      - Item: Jaws_Of_Ant
+        Rate: 5000
+      - Item: Elunium
+        Rate: 2900
+      - Item: Weihna
+        Rate: 100
+      - Item: Phreeoni_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1091
+    AegisName: DRAGON_FLY
+    Name: Dragon Fly
+    Level: 8
+    Hp: 2400
+    BaseExp: 88
+    JobExp: 44
+    Attack: 22
+    Attack2: 27
+    Defense: 40
+    Agi: 20
+    Vit: 8
+    Int: 15
+    Dex: 17
+    Luk: 5
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Insect
+    Element: Wind
+    ElementLevel: 1
+    WalkSpeed: 100
+    AttackDelay: 1076
+    AttackMotion: 576
+    DamageMotion: 480
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Sweet_Gents
+        Rate: 200
+      - Item: Red_Herb
+        Rate: 8000
+      - Item: Violet_Jewel
+        Rate: 1500
+      - Item: Chonchon_Doll
+        Rate: 2000
+      - Item: Clip
+        Rate: 3000
+      - Item: Grape_Juice
+        Rate: 3000
+      - Item: Dragon_Fly_Card
+        Rate: 1
+        StealProtected: true

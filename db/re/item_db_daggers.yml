@@ -1010,3 +1010,63 @@ Body:
     Script: |
       bonus3 bAddEffOnSkill,"SK_RG_BACKSTAB",Eff_Bleeding,1000;
       bonus2 bSkillAtk,"SK_RG_BACKSTAB",15;
+  - Id: 1223
+    AegisName: Forturn_Sword
+    Name: Fortune Sword
+    Type: Weapon
+    SubType: Dagger
+    Buy: 20
+    Weight: 500
+    Attack: 90
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      KagerouOboro: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 24
+    Refineable: true
+    Script: |
+      bonus bLuk,5;
+      bonus bFlee2,20;
+  - Id: 13047
+    AegisName: Weihna
+    Name: Weihna
+    Type: Weapon
+    SubType: Dagger
+    Buy: 20
+    Weight: 500
+    Attack: 135
+    Range: 1
+    Slots: 2
+    Jobs:
+      Assassin: true
+      Rogue: true
+      Thief: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+    Script: |
+      bonus3 bAddEffOnSkill,"SK_AS_PHANTOMMENACE",Eff_Poison,1000;
+      autobonus "{ bonus2 bAddClass,Class_All,10; }",5,5000,BF_WEAPON|BF_SHORT,"{ specialeffect2 EF_POTION_BERSERK; }";

@@ -399,6 +399,14 @@ Body:
     Weight: 100
     Flags:
       BuyingStore: true
+  - Id: 7030
+    AegisName: Claw_Of_Desert_Wolf
+    Name: Claw of Desert Wolf
+    Type: Etc
+    Buy: 208
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 728
     AegisName: Golden_Jewel
     Name: Topaz
@@ -927,6 +935,15 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
+  - Id: 7041
+    AegisName: Fine_Grit
+    Name: Fine Grit
+    Type: Etc
+    Buy: 120
+    Weight: 10
+    Flags:
+      BuyingStore: true
+
   - Id: 904
     AegisName: Scorpion's_Tail
     Name: Scorpion Tail
@@ -1180,6 +1197,14 @@ Body:
     Name: Bee Sting
     Type: Etc
     Buy: 32
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7031
+    AegisName: Old_Frying_Pan
+    Name: Old Frying Pan
+    Type: Etc
+    Buy: 196
     Weight: 10
     Flags:
       BuyingStore: true
@@ -2166,6 +2191,14 @@ Body:
     Name: Earthworm Peeling
     Type: Etc
     Buy: 196
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7043
+    AegisName: Fine_Sand
+    Name: Fine Sand
+    Type: Etc
+    Buy: 100
     Weight: 10
     Flags:
       BuyingStore: true

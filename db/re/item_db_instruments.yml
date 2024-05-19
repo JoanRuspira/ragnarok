@@ -246,3 +246,22 @@ Body:
     Refineable: true
     Script: |
       bonus bAtkEle,Ele_Wind;
+  - Id: 1914
+    AegisName: Guitar_Of_Passion
+    Name: Burning Passion Guitar
+    Type: Weapon
+    SubType: Musical
+    Buy: 20
+    Weight: 900
+    Attack: 110
+    Range: 1
+    Jobs:
+      BardDancer: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Fire;

@@ -101,10 +101,10 @@ gef_fild04,0,0	monster	Green Mushroom	21431,10
 // gef_fild05 - Geffen Field
 //==================================================
 gef_fild05,0,0	monster	Kobold Archer	1282,30
-gef_fild06,0,0	monster	Kobold	1133,30
-gef_fild06,0,0	monster	Kobold	1134,30
-gef_fild06,0,0	monster	Kobold	1135,30
-gef_fild06,0,0	monster	Kobold Leader	1296,1
+gef_fild05,0,0	monster	Kobold	1133,30
+gef_fild05,0,0	monster	Kobold	1134,30
+gef_fild05,0,0	monster	Kobold	1135,30
+gef_fild05,0,0	monster	Kobold Leader	1296,1
 gef_fild05,235,322	monster	Red Plant	1078,1,180000,90000
 gef_fild05,238,326	monster	Red Plant	1078,1,180000,90000
 gef_fild05,170,337	monster	Red Plant	1078,1,180000,90000
@@ -127,7 +127,7 @@ gef_fild05,0,0	monster	Green Mushroom	21431,10
 //==================================================
 // gef_fild06 - Geffen Field
 //==================================================
-gef_fild08,0,0	monster	Poison Spore	1077,30
+gef_fild06,0,0	monster	Poison Spore	1077,30
 gef_fild06,0,0	monster	Poporing	1031,20
 gef_fild06,0,0	monster	Mantis	1139,30
 gef_fild06,0,0	monster	Shining Plant	1083,4,1800000,900000
