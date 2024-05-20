@@ -6125,3 +6125,309 @@ Body:
       - Item: Geographer_Card
         Rate: 1
         StealProtected: true
+  - Id: 1386
+    AegisName: SLEEPER
+    Name: Sleeper
+    Level: 67
+    Hp: 8237
+    BaseExp: 3603
+    JobExp: 2144
+    Attack: 593
+    Attack2: 789
+    Defense: 49
+    MagicDefense: 35
+    Agi: 48
+    Vit: 100
+    Int: 57
+    Dex: 75
+    Luk: 28
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Earth
+    ElementLevel: 2
+    WalkSpeed: 195
+    AttackDelay: 1350
+    AttackMotion: 1200
+    DamageMotion: 432
+    Ai: 04
+    Drops:
+      - Item: Sand_Lump
+        Rate: 4947
+      - Item: Grit
+        Rate: 5335
+      - Item: Great_Nature
+        Rate: 2500
+      - Item: Oridecon_Stone
+        Rate: 300
+      - Item: Damascus_
+        Rate: 5
+      - Item: Hypnotist's_Staff_
+        Rate: 5
+      - Item: Fine_Sand
+        Rate: 1200
+      - Item: Sleeper_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1628
+    AegisName: MOLE
+    Name: Holden
+    JapaneseName: Mole
+    Level: 36
+    Hp: 2209
+    BaseExp: 268
+    JobExp: 172
+    Attack: 52
+    Attack2: 63
+    MagicDefense: 5
+    Str: 24
+    Agi: 18
+    Vit: 23
+    Int: 30
+    Dex: 45
+    Luk: 5
+    AttackRange: 9
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Brute
+    Element: Earth
+    ElementLevel: 2
+    WalkSpeed: 300
+    AttackDelay: 140
+    AttackMotion: 960
+    DamageMotion: 504
+    Ai: 03
+    Drops:
+      - Item: Moustache_Of_Mole
+        Rate: 5000
+      - Item: Nail_Of_Mole
+        Rate: 5000
+      - Item: Mole_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1199
+    AegisName: PUNK
+    Name: Punk
+    Level: 43
+    Hp: 3620
+    BaseExp: 1699
+    JobExp: 1033
+    Attack: 292
+    Attack2: 365
+    MagicDefense: 45
+    Agi: 105
+    Vit: 5
+    Int: 45
+    Dex: 65
+    Luk: 20
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Plant
+    Element: Wind
+    ElementLevel: 1
+    WalkSpeed: 300
+    AttackDelay: 1500
+    AttackMotion: 500
+    DamageMotion: 1000
+    Ai: 09
+    Drops:
+      - Item: Mould_Powder
+        Rate: 5335
+      - Item: Yellow_Gemstone
+        Rate: 800
+      - Item: Starsand_Of_Witch
+        Rate: 1000
+      - Item: Moth_Dust
+        Rate: 3000
+      - Item: Wing_Of_Fly
+        Rate: 1100
+      - Item: Manteau_
+        Rate: 15
+      - Item: Punk_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1388
+    AegisName: ARCHANGELING
+    Name: Arc Angeling
+    JapaneseName: Archangeling
+    Level: 60
+    Hp: 79523
+    BaseExp: 4152
+    JobExp: 2173
+    Attack: 669
+    Attack2: 890
+    Defense: 54
+    MagicDefense: 58
+    Agi: 65
+    Vit: 80
+    Int: 74
+    Dex: 65
+    Luk: 105
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Angel
+    Element: Holy
+    ElementLevel: 3
+    WalkSpeed: 180
+    AttackDelay: 1072
+    AttackMotion: 672
+    DamageMotion: 480
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Satanic_Chain
+        Rate: 5
+      - Item: Seed_Of_Yggdrasil
+        Rate: 150
+      - Item: Agate
+        Rate: 1500
+      - Item: Angelic_Chain
+        Rate: 5
+      - Item: Plate_Armor_
+        Rate: 3
+      - Item: Turquoise
+        Rate: 1500
+      - Item: Archangeling_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1372
+    AegisName: GOAT
+    Name: Goat
+    Level: 69
+    Hp: 11077
+    BaseExp: 3357
+    JobExp: 2015
+    Attack: 457
+    Attack2: 608
+    Defense: 44
+    MagicDefense: 25
+    Agi: 58
+    Vit: 66
+    Int: 62
+    Dex: 67
+    Luk: 43
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Brute
+    Element: Fire
+    ElementLevel: 3
+    WalkSpeed: 165
+    AttackDelay: 1380
+    AttackMotion: 1080
+    DamageMotion: 336
+    Ai: 03
+    Drops:
+      - Item: Goat's_Horn
+        Rate: 4559
+      - Item: Gaoat's_Skin
+        Rate: 2500
+      - Item: Empty_Bottle
+        Rate: 5000
+      - Item: Red_Herb
+        Rate: 500
+      - Item: Blue_Herb
+        Rate: 1000
+      - Item: Yellow_Herb
+        Rate: 2500
+      - Item: Green_Herb
+        Rate: 5500
+      - Item: Goat_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1369
+    AegisName: GRAND_PECO
+    Name: Grand Peco
+    Level: 58
+    Hp: 8054
+    BaseExp: 2387
+    JobExp: 1361
+    Attack: 444
+    Attack2: 565
+    Defense: 37
+    MagicDefense: 30
+    Agi: 66
+    Vit: 66
+    Int: 50
+    Dex: 71
+    Luk: 51
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Brute
+    Element: Fire
+    ElementLevel: 2
+    WalkSpeed: 165
+    AttackDelay: 1460
+    AttackMotion: 960
+    DamageMotion: 432
+    Ai: 03
+    Drops:
+      - Item: Peco_Wing_Feather
+        Rate: 4850
+      - Item: Fruit_Of_Mastela
+        Rate: 300
+      - Item: Wind_Of_Verdure
+        Rate: 1000
+      - Item: Gold
+        Rate: 5
+      - Item: Orange
+        Rate: 500
+      - Item: Grand_Peco_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1376
+    AegisName: HARPY
+    Name: Harpy
+    Level: 70
+    Hp: 16599
+    BaseExp: 3562
+    JobExp: 2133
+    Attack: 926
+    Attack2: 1231
+    Defense: 42
+    MagicDefense: 44
+    Agi: 112
+    Vit: 72
+    Int: 67
+    Dex: 74
+    Luk: 76
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Wind
+    ElementLevel: 3
+    WalkSpeed: 155
+    AttackDelay: 972
+    AttackMotion: 672
+    DamageMotion: 470
+    Ai: 04
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Harpy's_Feather
+        Rate: 4850
+      - Item: Harpy's_Claw
+        Rate: 2500
+      - Item: Yellow_Herb
+        Rate: 1500
+      - Item: Yellow_Herb
+        Rate: 800
+      - Item: Izidor
+        Rate: 20
+      - Item: Electric_Fist
+        Rate: 20
+      - Item: Harpy_Card
+        Rate: 1
+        StealProtected: true

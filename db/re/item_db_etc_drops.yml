@@ -1666,6 +1666,30 @@ Body:
     Weight: 500
     Flags:
       BuyingStore: true
+  - Id: 7115
+    AegisName: Harpy's_Feather
+    Name: Harpy Feather
+    Type: Etc
+    Buy: 1142
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7116
+    AegisName: Harpy's_Claw
+    Name: Harpy Talon
+    Type: Etc
+    Buy: 1210
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 709
+    AegisName: Izidor
+    Name: Izidor
+    Type: Etc
+    Buy: 500
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 987
     AegisName: Oridecon_Anvil
     Name: Oridecon Anvil
@@ -1911,6 +1935,14 @@ Body:
     Name: Rat Tail
     Type: Etc
     Buy: 52
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7124
+    AegisName: Sand_Lump
+    Name: Sand Clump
+    Type: Etc
+    Buy: 706
     Weight: 10
     Flags:
       BuyingStore: true
@@ -2256,6 +2288,46 @@ Body:
     Type: Etc
     Buy: 100
     Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7106
+    AegisName: Goat's_Horn
+    Name: Antelope Horn
+    Type: Etc
+    Buy: 672
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7101
+    AegisName: Peco_Wing_Feather
+    Name: Peco Peco Feather
+    Type: Etc
+    Buy: 454
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7107
+    AegisName: Gaoat's_Skin
+    Name: Antelope Skin
+    Type: Etc
+    Buy: 756
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7291
+    AegisName: Agate
+    Name: Agate
+    Type: Etc
+    Buy: 3000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 7294
+    AegisName: Turquoise
+    Name: Turquoise
+    Type: Etc
+    Buy: 3000
+    Weight: 100
     Flags:
       BuyingStore: true
   - Id: 1056

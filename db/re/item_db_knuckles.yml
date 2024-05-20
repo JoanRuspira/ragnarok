@@ -222,3 +222,24 @@ Body:
     WeaponLevel: 3
     EquipLevelMin: 24
     Refineable: true
+  - Id: 1820
+    AegisName: Electric_Fist
+    Name: Electric Fist
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 20
+    Weight: 650
+    Attack: 80
+    Range: 1
+    Slots: 3
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 75
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Wind;
+      bonus3 bAutoSpell,"SK_MG_LIGHTNINGBOLT",5,10;
