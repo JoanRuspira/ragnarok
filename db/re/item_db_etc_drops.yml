@@ -319,6 +319,14 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
+  - Id: 7312
+    AegisName: Jubilee
+    Name: Jubilee
+    Type: Etc
+    Buy: 32
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 718
     AegisName: Dark_Red_Jewel
     Name: Garnet
@@ -412,6 +420,14 @@ Body:
     Name: Claw of Desert Wolf
     Type: Etc
     Buy: 208
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7315
+    AegisName: Dark_Crystal_Fragment
+    Name: Dark Crystal Fragment
+    Type: Etc
+    Buy: 422
     Weight: 10
     Flags:
       BuyingStore: true
@@ -1296,6 +1312,22 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
+  - Id: 7321
+    AegisName: Fragment_Of_Crystal
+    Name: Crystal Fragment
+    Type: Etc
+    Buy: 552
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7317
+    AegisName: Screw
+    Name: Rusty Screw
+    Type: Etc
+    Buy: 534
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 7126
     AegisName: Large_Jellopy
     Name: Large Jellopy
@@ -1333,6 +1365,14 @@ Body:
     Name: Solid Husk
     Type: Etc
     Buy: 140
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7316
+    AegisName: Long_Limb
+    Name: Insect Leg
+    Type: Etc
+    Buy: 658
     Weight: 10
     Flags:
       BuyingStore: true
@@ -1903,6 +1943,22 @@ Body:
     Name: Frill
     Type: Etc
     Buy: 250
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7289
+    AegisName: Olivine
+    Name: Peridot
+    Type: Etc
+    Buy: 3000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 7326
+    AegisName: Fluorescent_Liquid
+    Name: Fluorescent Liquid
+    Type: Etc
+    Buy: 712
     Weight: 10
     Flags:
       BuyingStore: true
@@ -2576,6 +2632,14 @@ Body:
     Name: Payon Solution
     Type: Etc
     Weight: 30
+    Flags:
+      BuyingStore: true
+  - Id: 7325
+    AegisName: Tube
+    Name: Flexible Tube
+    Type: Etc
+    Buy: 102
+    Weight: 10
     Flags:
       BuyingStore: true
   - Id: 1090

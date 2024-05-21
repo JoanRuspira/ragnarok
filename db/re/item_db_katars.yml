@@ -146,3 +146,24 @@ Body:
     Script: |
       bonus bAtkEle,Ele_Earth;
       bonus2 bAddEff,Eff_Blind,500;
+  - Id: 1263
+    AegisName: Unholy_Touch
+    Name: Unholy Touch
+    Type: Weapon
+    SubType: Katar
+    Buy: 20
+    Weight: 1250
+    Attack: 151
+    Range: 1
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Dark;
+      bonus2 bAddEff,Eff_Curse,200;
+      bonus bCritical,-1;
+      bonus bUnbreakableWeapon;

@@ -6431,3 +6431,281 @@ Body:
       - Item: Harpy_Card
         Rate: 1
         StealProtected: true
+  - Id: 1381
+    AegisName: GRIZZLY
+    Name: Grizzly
+    Level: 68
+    Hp: 11733
+    BaseExp: 3341
+    JobExp: 2012
+    Attack: 809
+    Attack2: 1076
+    Defense: 44
+    MagicDefense: 32
+    Agi: 55
+    Vit: 68
+    Int: 58
+    Dex: 70
+    Luk: 61
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Brute
+    Element: Fire
+    ElementLevel: 3
+    WalkSpeed: 165
+    AttackDelay: 1492
+    AttackMotion: 1092
+    DamageMotion: 192
+    Ai: 04
+    Drops:
+      - Item: Bear's_Foot
+        Rate: 5000
+      - Item: Animal's_Skin
+        Rate: 5000
+      - Item: Nice_Sweet_Potato
+        Rate: 2500
+      - Item: Grizzly_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1618
+    AegisName: UNGOLIANT
+    Name: Ungoliant
+    Level: 69
+    Hp: 29140
+    BaseExp: 8211
+    JobExp: 142
+    Attack: 1290
+    Attack2: 2280
+    Defense: 25
+    MagicDefense: 25
+    Str: 33
+    Agi: 52
+    Vit: 57
+    Int: 25
+    Dex: 119
+    Luk: 43
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Insect
+    Element: Poison
+    ElementLevel: 2
+    WalkSpeed: 350
+    AttackDelay: 420
+    AttackMotion: 576
+    DamageMotion: 420
+    Ai: 21
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Long_Limb
+        Rate: 4500
+      - Item: Jaws_Of_Ant
+        Rate: 3500
+      - Item: Colorful_Shell
+        Rate: 1000
+      - Item: Olivine
+        Rate: 1500
+      - Item: Fluorescent_Liquid
+        Rate: 2500
+      - Item: Dark_Red_Jewel
+        Rate: 1500
+      - Item: Boots_
+        Rate: 500
+      - Item: Ungoliant_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1619
+    AegisName: PORCELLIO
+    Name: Porcellio
+    Level: 28
+    Hp: 1654
+    BaseExp: 512
+    JobExp: 346
+    Attack: 82
+    Attack2: 247
+    MagicDefense: 8
+    Str: 0
+    Agi: 31
+    Vit: 21
+    Int: 50
+    Dex: 54
+    Luk: 85
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Insect
+    Element: Earth
+    ElementLevel: 3
+    WalkSpeed: 150
+    AttackDelay: 720
+    AttackMotion: 360
+    DamageMotion: 360
+    Ai: 02
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Jubilee
+        Rate: 5000
+      - Item: Main_Gauche_
+        Rate: 25
+      - Item: Insect_Feeler
+        Rate: 1000
+      - Item: Single_Cell
+        Rate: 3000
+      - Item: Fluorescent_Liquid
+        Rate: 30
+      - Item: Porcellio_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1613
+    AegisName: METALING
+    Name: Metaling
+    Level: 26
+    Hp: 889
+    BaseExp: 492
+    JobExp: 249
+    Attack: 135
+    Attack2: 270
+    Defense: 5
+    MagicDefense: 3
+    Str: 30
+    Agi: 15
+    Vit: 10
+    Int: 18
+    Dex: 35
+    Luk: 2
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 1
+    WalkSpeed: 300
+    AttackDelay: 384
+    AttackMotion: 672
+    DamageMotion: 480
+    Ai: 02
+    Drops:
+      - Item: Tube
+        Rate: 4000
+      - Item: Iron_Ore
+        Rate: 1000
+      - Item: Iron
+        Rate: 500
+      - Item: Large_Jellopy
+        Rate: 1000
+      - Item: Screw
+        Rate: 200
+      - Item: Jubilee
+        Rate: 5000
+      - Item: Metaling_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1614
+    AegisName: MINERAL
+    Name: Mineral
+    Level: 56
+    Hp: 7950
+    BaseExp: 3563
+    JobExp: 1768
+    Attack: 723
+    Attack2: 812
+    Defense: 29
+    MagicDefense: 35
+    Str: 60
+    Agi: 52
+    Vit: 35
+    Int: 21
+    Dex: 67
+    Luk: 32
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 2
+    WalkSpeed: 250
+    AttackDelay: 648
+    AttackMotion: 480
+    DamageMotion: 360
+    Ai: 17
+    Drops:
+      - Item: Fragment_Of_Crystal
+        Rate: 3000
+      - Item: Golden_Jewel
+        Rate: 500
+      - Item: Emperium
+        Rate: 2
+      - Item: Oridecon
+        Rate: 80
+      - Item: Emveretarcon
+        Rate: 800
+      - Item: Yellow_Gemstone
+        Rate: 100
+      - Item: Red_Gemstone
+        Rate: 100
+      - Item: Blue_Gemstone
+        Rate: 100
+      - Item: Gold
+        Rate: 2
+      - Item: Mineral_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1615
+    AegisName: OBSIDIAN
+    Name: Obsidian
+    Level: 50
+    Hp: 8812
+    BaseExp: 2799
+    JobExp: 1802
+    Attack: 841
+    Attack2: 980
+    Defense: 35
+    MagicDefense: 5
+    Str: 62
+    Agi: 32
+    Vit: 42
+    Int: 24
+    Dex: 61
+    Luk: 55
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Formless
+    Element: Earth
+    ElementLevel: 2
+    WalkSpeed: 350
+    AttackDelay: 720
+    AttackMotion: 864
+    DamageMotion: 504
+    Ai: 04
+    Drops:
+      - Item: Dark_Crystal_Fragment
+        Rate: 3000
+      - Item: Crystal_Jewel
+        Rate: 500
+      - Item: White_Gemstone
+        Rate: 100
+      - Item: Black_Gemstone
+        Rate: 100
+      - Item: Red_Gemstone
+        Rate: 100
+      - Item: Coal
+        Rate: 500
+      - Item: Elunium
+        Rate: 50
+      - Item: Steel
+        Rate: 500
+      - Item: Unholy_Touch
+        Rate: 10
+      - Item: Obsidian_Card
+        Rate: 1
+        StealProtected: true
