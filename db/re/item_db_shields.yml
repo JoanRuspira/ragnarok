@@ -385,3 +385,25 @@ Body:
     View: 1
     Script: |
       bonus bMdef,5;
+  - Id: 2133
+    AegisName: Tournament_Shield
+    Name: Tournament Shield
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 105
+    Slots: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    EquipLevelMin: 50
+    Refineable: true
+    View: 4
+    Script: |
+      bonus2 bAddClass,Class_All,1;

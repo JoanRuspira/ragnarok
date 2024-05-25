@@ -2573,3 +2573,31 @@ Body:
     Script: |
       bonus bLuk,2;
       bonus bBaseAtk,3;
+  - Id: 5398
+    AegisName: Bone_Head
+    Name: Bone Head
+    Type: Armor
+    Buy: 20
+    Weight: 1200
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 85
+    Refineable: true
+    View: 401
+    Script: |
+      bonus bStr,2;
+      bonus bMdef,5;
+      bonus2 bResEff,Eff_Stun,500;
+      bonus2 bResEff,Eff_Bleeding,500;

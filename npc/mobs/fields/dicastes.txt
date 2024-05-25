@@ -12,27 +12,55 @@
 //= 1.1a Corrected fild2 mobs spawning on fild1. (bugreport:4248)
 //============================================================
 
+
+//==================================================
+// dic_fild01 - Kamidal Mountains
+//==================================================
+dic_fild01,0,0	monster	Nepenthes	1988,30
+dic_fild01,0,0	monster	Marin	1242,60
+dic_fild01,0,0	monster	Hillslion	1989,20
+dic_fild01,0,0	monster	Sasquatch	1243,20
+dic_fild01,0,0	monster	Leib Olmai	1306,1
+dic_fild01,0,0	monster	White Plant	1082,30
+
+
+//==================================================
+// dic_fild02 - Kamidal Mountains
+//==================================================
+dic_fild02,0,0	monster	Garm Baby	1515,55
+dic_fild02,0,0	monster	Bradium Golem	2024,30
+dic_fild02,0,0	monster	Dolomedes	2092,30
+dic_fild02,0,0	monster	Tatacho	1986,10
+dic_fild02,0,0	monster	Garm	1252,1,7200000,600000,1
+dic_fild02,0,0	monster	White Plant	1082,30
+
+
 //============================================================
-// man_fild01 - Manuk Field
+// man_fild01 - Kamidal Mountains
 //============================================================
-man_fild01,0,0	monster	Bradium Golem	2024,10
+man_fild01,0,0	monster	Marin	1242,40
 man_fild01,0,0	monster	Tatacho	1986,50
-man_fild01,0,0	monster	Dolomedes	2092,30
+man_fild01,0,0	monster	Hillslion	1989,40
 man_fild01,0,0	monster	Hardrock Mammoth	1990,1
+man_fild01,0,0	monster	Tendrilion	1991,1,5000
+man_fild01,0,0	monster	White Plant	1082,30
+
 
 //============================================================
-// man_fild02 - Manuk Field
+// man_fild02 - Kamidal Mountains
 //============================================================
-man_fild01,0,0	monster	Bradium Golem	2024,50
-man_fild01,0,0	monster	Tatacho	1986,10
-man_fild01,0,0	monster	Dolomedes	2092,30
-man_fild01,0,0	monster	Stormy Knight	1251,1,7200000,600000,1
+man_fild02,0,0	monster	Nepenthes	1988,40
+man_fild02,0,0	monster	Marin	1242,20
+man_fild02,0,0	monster	Hillslion	1989,30
+man_fild02,0,0	monster	Sasquatch	1243,30
+man_fild02,0,0	monster	White Plant	1082,30
 
-//==================================================
-// dic_fild01 - At the Foot of the Kamidal Mountain
-//==================================================
-dic_fild01,0,0	monster	Nepenthes	1988,60,5000
-dic_fild01,0,0	monster	Hillslion	1989,30,5000
-dic_fild01,0,0	monster	Garm Baby	1515,25,5000
-dic_fild01,0,0	monster	Tendrilion	1991,1,5000
-dic_fild01,0,0	monster	Garm	1252,1,7200000,600000,1
+
+//============================================================
+// man_fild03 - Kamidal Mountains
+//============================================================
+man_fild03,0,0	monster	Dolomedes	2092,50
+man_fild03,0,0	monster	Bradium Golem	2024,40
+man_fild03,0,0	monster	Garm Baby	1515,10
+man_fild03,0,0	monster	Stormy Knight	1251,1,7200000,600000,1
+man_fild03,0,0	monster	White Plant	1082,30

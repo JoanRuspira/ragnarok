@@ -670,3 +670,32 @@ Body:
       bonus2 bAddMonsterDropItem,505,10;
       if (readparam(bStr)>=95)
          bonus2 bAddEff,Eff_Stun,500;
+  - Id: 1544
+    AegisName: Lunakaligo
+    Name: Lunakaligo
+    Type: Weapon
+    SubType: Mace
+    Buy: 20
+    Weight: 700
+    Attack: 110
+    Range: 1
+    Slots: 3
+    Jobs:
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+    Script: |
+      if (readparam(bStr)>=77) {
+         bonus bAspdRate,4;
+         bonus2 bAddEff,Eff_Stun,1500;
+         bonus3 bAddMonsterDropItem,12065,RC_Plant,500;
+         bonus3 bAddMonsterDropItem,12043,RC_Brute,500;
+         bonus3 bAddMonsterDropItem,12069,RC_Fish,500;
+      }

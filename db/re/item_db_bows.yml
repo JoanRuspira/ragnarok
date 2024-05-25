@@ -510,3 +510,24 @@ Body:
     Refineable: true
     Script: |
       autobonus "{ bonus bAspdRate,7; }",5+getrefine(),7000,BF_WEAPON,"{ specialeffect2 EF_HASTEUP; }";
+  - Id: 1740
+    AegisName: Nepenthes_Bow
+    Name: Nepenthes Bow
+    Type: Weapon
+    SubType: Bow
+    Buy: 20
+    Weight: 1000
+    Attack: 105
+    Range: 5
+    Slots: 2
+    Jobs:
+      Hunter: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus4 bAutoSpellOnSkill,"SK_AC_DOUBLESTRAFE","SK_AC_CHARGEDARROW",1,20;

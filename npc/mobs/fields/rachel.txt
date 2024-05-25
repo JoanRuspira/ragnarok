@@ -13,6 +13,7 @@
 //= 1.3 Corrected MVP spawn variance. [L0ne_W0lf]
 //============================================================
 
+
 //==================================================
 // ra_fild01 - Rachel Field
 //==================================================
@@ -58,9 +59,14 @@ ra_fild05,170,200,106,115	monster	Geographer	1368,10
 //==================================================
 // ra_fild06 - Rachel Field
 //==================================================
-ra_fild06,0,0	monster	Hill Wind	1680,50
-ra_fild06,0,0	monster	Anopheles	1627,20
-ra_fild06,0,0	monster	Drosera	1781,10
+ra_fild06,0,0	monster	Rafflesia	1162,35
+ra_fild06,0,0	monster	Poporing	1031,55
+ra_fild06,0,0	monster	Lunatic	1063,55
+ra_fild06,0,0	monster	Muscipular	1780,20
+ra_fild06,0,0	monster	Green Plant	1080,10
+ra_fild06,0,0	monster	Blue Plant	1079,10
+ra_fild06,0,0	monster	Blue Mushroom	21433,10
+ra_fild06,0,0	monster	Green Mushroom	21431,10
 
 //==================================================
 // ra_fild07 - Rachel Field

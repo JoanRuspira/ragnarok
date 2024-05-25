@@ -265,3 +265,51 @@ Body:
     Refineable: true
     Script: |
       bonus bAtkEle,Ele_Fire;
+  - Id: 1926
+    AegisName: Harp_Of_Nepenthes
+    Name: Harp of Nepenthes
+    Type: Weapon
+    SubType: Musical
+    Buy: 20
+    Weight: 1000
+    Attack: 120
+    Range: 1
+    Slots: 2
+    Jobs:
+      BardDancer: true
+    Classes:
+      All_Upper: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bInt,2;
+      bonus3 bAddEffOnSkill,"BA_MUSICALSTRIKE",Eff_Stun,(getrefine()>=9?2000:1000);
+  - Id: 1925
+    AegisName: Cello
+    Name: Cello
+    Type: Weapon
+    SubType: Musical
+    Buy: 20
+    Weight: 700
+    Attack: 110
+    Range: 1
+    Slots: 3
+    Jobs:
+      BardDancer: true
+    Classes:
+      All_Upper: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bAgi,2;
+      bonus bDex,3;
+      bonus2 bAddSkillBlow,"SK_BA_MELODYSTRIKE",2;
+      bonus2 bAddSkillBlow,"SK_CL_ARROWVULCAN",3;

@@ -1090,3 +1090,40 @@ Body:
     Script: |
       bonus bAtkEle,Ele_Dark;
       bonus2 bAddEff,Eff_Curse,1000;
+  - Id: 13039
+    AegisName: Ivory_Knife
+    Name: Ivory Knife
+    Type: Weapon
+    SubType: Dagger
+    Buy: 20
+    Weight: 700
+    Attack: 130
+    Range: 1
+    Slots: 2
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Rogue: true
+      Sage: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+    Script: |
+      bonus bAgi,2;
+      bonus bAspdRate,3;
+      bonus2 bAddEff,Eff_Bleeding,300;

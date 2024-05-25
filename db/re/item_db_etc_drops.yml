@@ -781,6 +781,30 @@ Body:
     Weight: 100
     Flags:
       BuyingStore: true
+  - Id: 7197
+    AegisName: Tough_Vines
+    Name: Tough Vines
+    Type: Etc
+    Buy: 500
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7008
+    AegisName: Stiff_Horn
+    Name: Stiff Horn
+    Type: Etc
+    Buy: 636
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7036
+    AegisName: Fang_Of_Garm
+    Name: Fang of Hatii
+    Type: Etc
+    Buy: 100
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 739
     AegisName: Rouge
     Name: Rouge
@@ -789,12 +813,12 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
-  - Id: 740
-    AegisName: Stuffed_Doll
-    Name: Puppet
+  - Id: 6325
+    AegisName: White_Spider_Limb
+    Name: White Spider Limb
     Type: Etc
-    Buy: 1000
-    Weight: 100
+    Buy: 1004
+    Weight: 10
     Flags:
       BuyingStore: true
   - Id: 741

@@ -2306,6 +2306,19 @@ Body:
       bonus bFlee,10;
       bonus2 bSkillAtk,"SK_AC_DOUBLESTRAFE",5;
       bonus2 bSkillAtk,"SK_AC_ARROWSHOWER",5;
+  - Id: 4470
+    AegisName: Nepenthes_Card
+    Name: Nepenthes Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bMagicAddRace,RC_Plant,10;
   - Id: 4179
     AegisName: Dragon_Fly_Card
     Name: Dragon Fly Card
@@ -4252,6 +4265,47 @@ Body:
       BuyingStore: true
     Script: |
       bonus3 bAutoSpell,"SK_MG_FROSTDIVER",3,50;
+  - Id: 4462
+    AegisName: Hardrock_Mommos_Card
+    Name: Hardrock Mammoth Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Armor: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      .@r = getrefine();
+      bonus bDef,5;
+      if (.@r>=12) {
+         bonus bDef,20;
+         bonus bMaxHPrate,10;
+      }
+      if (.@r>=14) {
+         bonus bMaxHPrate,3;
+      }
+  - Id: 4463
+    AegisName: Tendrilion_Card
+    Name: Tendrilrion Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bCritical,5;
+      .@r = getrefine();
+      if (.@r>=12) {
+         bonus bBaseAtk,35;
+      }
+      if (.@r>=14) {
+         bonus bCritical,10;
+      }
   - Id: 4324
     AegisName: Garm_Card
     Name: Hatii Card
@@ -4481,6 +4535,38 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bSubRace,RC_Undead,30;
+  - Id: 4472
+    AegisName: Bradium_Goram_Card
+    Name: Bradium Golem Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bMagicAddRace,RC_Brute,10;
+      bonus2 bMagicAddRace,RC_Player_Doram,10;
+  - Id: 4506
+    AegisName: Dolomedes_Card
+    Name: Dolomedes Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Head_Low: true
+      Head_Mid: true
+      Head_Top: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bDex,2;
+      if (BaseClass == Job_Archer) {
+         bonus bDex,getrefine()/3;
+      }
   - Id: 4341
     AegisName: Metaling_Card
     Name: Metaling Card

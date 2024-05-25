@@ -300,3 +300,39 @@ Body:
     Locations:
       Both_Accessory: true
     EquipLevelMin: 25
+  - Id: 2717
+    AegisName: Pocket_Watch_
+    Name: Pocket Watch
+    Type: Armor
+    Buy: 20
+    Weight: 200
+    Defense: 1
+    Jobs:
+      Mage: true
+      Sage: true
+      SoulLinker: true
+      Wizard: true
+    Locations:
+      Both_Accessory: true
+    ArmorLevel: 1
+    EquipLevelMin: 80
+  - Id: 2789
+    AegisName: Bradium_Ring
+    Name: Bradium Ring
+    Type: Armor
+    Buy: 20
+    Weight: 200
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Accessory: true
+    ArmorLevel: 1
+    Script: |
+      bonus bStr,1;
+      bonus bVit,1;
+      bonus bBaseAtk,5;

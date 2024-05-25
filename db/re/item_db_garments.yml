@@ -302,3 +302,35 @@ Body:
     Script: |
       bonus bFlee,15;
       bonus bFlee2,5;
+  - Id: 2544
+    AegisName: Leather_Of_Tendrilion
+    Name: Leather of Tendrilion
+    Type: Armor
+    Buy: 20
+    Weight: 500
+    Defense: 14
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Monk: true
+      Priest: true
+      Rogue: true
+      Sage: true
+      Wizard: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    Script: |
+      bonus2 bSubEle,Ele_Water,5;
+      bonus2 bSubEle,Ele_Earth,5;
+      bonus2 bSubRace,RC_Plant,5;
+      bonus2 bSubRace,RC_Brute,5;

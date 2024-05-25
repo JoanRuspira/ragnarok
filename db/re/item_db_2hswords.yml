@@ -349,3 +349,28 @@ Body:
       NoAuction: true
     Script: |
       bonus2 bAddSize,Size_All,40;
+  - Id: 1186
+    AegisName: Death_Guidance
+    Name: Death Guidance
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 20
+    Weight: 2000
+    Attack: 200
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bStr,5;
+      bonus bAgi,2;
+      bonus bFlee2,20;

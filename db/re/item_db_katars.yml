@@ -167,3 +167,22 @@ Body:
       bonus2 bAddEff,Eff_Curse,200;
       bonus bCritical,-1;
       bonus bUnbreakableWeapon;
+  - Id: 1256
+    AegisName: Katar_Of_Cold_Icicle
+    Name: Katar of Frozen Icicle
+    Type: Weapon
+    SubType: Katar
+    Buy: 45000
+    Weight: 1200
+    Attack: 105
+    Range: 1
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Water;
+      bonus2 bAddEff,Eff_Freeze,500;

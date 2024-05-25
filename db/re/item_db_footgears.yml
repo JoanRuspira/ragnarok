@@ -225,3 +225,34 @@ Body:
       Shoes: true
     ArmorLevel: 1
     EquipLevelMin: 30
+  - Id: 2440
+    AegisName: Sprint_Shoes
+    Name: Sprint Shoes
+    Type: Armor
+    Buy: 20
+    Weight: 300
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Monk: true
+      Priest: true
+      Rogue: true
+      Sage: true
+      Wizard: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Shoes: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bAgi,1;
+      bonus bSPrecovRate,5;

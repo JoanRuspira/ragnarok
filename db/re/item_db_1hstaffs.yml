@@ -565,3 +565,31 @@ Body:
     Refineable: true
     Script: |
       bonus bInt,1;
+  - Id: 1637
+    AegisName: Eraser
+    Name: Eraser
+    Type: Weapon
+    SubType: Staff
+    Buy: 20
+    Weight: 500
+    Attack: 80
+    MagicAttack: 170
+    Range: 1
+    Jobs:
+      Acolyte: true
+      Mage: true
+      Monk: true
+      Priest: true
+      Sage: true
+      Wizard: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bInt,3;
+      bonus bDex,2;
+      bonus bSPrecovRate,8;

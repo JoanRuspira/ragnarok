@@ -337,3 +337,51 @@ Body:
     WeaponLevel: 3
     EquipLevelMin: 33
     Refineable: true
+  - Id: 1483
+    AegisName: Ivory_Lance
+    Name: Ivory Lance
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 20
+    Weight: 1000
+    Attack: 160
+    Range: 3
+    Slots: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+    Script: |
+      bonus bAgi,2;
+      bonus bAspdRate,3;
+      bonus2 bAddEff,Eff_Bleeding,300;
+      skill "SK_SM_SPEARSTAB",5;
+  - Id: 1468
+    AegisName: Zephyrus
+    Name: Zephyrus
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 20
+    Weight: 2000
+    Attack: 170
+    Range: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 48
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Wind;
+      bonus2 bAddEff,Eff_Silence,200;
+      bonus3 bAutoSpell,"SK_WZ_THUNDERSTORM",3,100;

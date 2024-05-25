@@ -777,5 +777,35 @@ Body:
     Refineable: true
     Script: |
       bonus bAtkEle,Ele_Fire;
-      skill "MG_FIREBOLT",3;
-      bonus3 bAutoSpell,"MG_FIREBOLT",3,100;
+      skill "SK_MG_FIREBOLT",3;
+      bonus3 bAutoSpell,"SK_MG_FIREBOLT",3,100;
+  - Id: 1131
+    AegisName: Ice_Falchon
+    Name: Ice Falchion
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 20
+    Weight: 600
+    Attack: 100
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 40
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Water;
+      bonus2 bAddEff,Eff_Freeze,500;
+      bonus2 bAddEff2,Eff_Freeze,100;
+      skill "SK_MG_COLDBOLT",3;
+      bonus3 bAutoSpell,"SK_MG_COLDBOLT",3,100;

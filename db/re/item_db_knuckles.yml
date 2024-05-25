@@ -243,3 +243,47 @@ Body:
     Script: |
       bonus bAtkEle,Ele_Wind;
       bonus3 bAutoSpell,"SK_MG_LIGHTNINGBOLT",5,10;
+  - Id: 1825
+    AegisName: Horn_Of_Hilthrion
+    Name: Horn of Hillslion
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 20
+    Weight: 600
+    Attack: 95
+    Range: 1
+    Slots: 3
+    Jobs:
+      Monk: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus4 bAutoSpellOnSkill,"SK_MO_PALMSTRIKE","SK_MO_OCCULTIMPACT",1,100;
+      bonus3 bAutoSpell,"SK_MO_SUMMONSPIRITSPHERE",5,10;
+  - Id: 1815
+    AegisName: Claw_Of_Garm
+    Name: Hatii Claw
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 20
+    Weight: 550
+    Attack: 152
+    Range: 1
+    Slots: 1
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Dark;
+      bonus bMaxHPrate,-2;
+      bonus2 bAddEff,Eff_Bleeding,200;
