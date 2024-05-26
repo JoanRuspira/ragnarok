@@ -186,3 +186,45 @@ Body:
     Script: |
       bonus bAtkEle,Ele_Water;
       bonus2 bAddEff,Eff_Freeze,500;
+  - Id: 1269
+    AegisName: Inverse_Scale
+    Name: Inverse Scale
+    Type: Weapon
+    SubType: Katar
+    Buy: 20
+    Weight: 1500
+    Attack: 140
+    Range: 1
+    Jobs:
+      Assassin: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      skill "SK_MC_UPROAR",3;
+    UnEquipScript: |
+      sc_end STATUS_CRAZYUPROAR;
+  - Id: 28007
+    AegisName: Scarlet_Katar
+    Name: Crimson Katar
+    Type: Weapon
+    SubType: Katar
+    Buy: 20
+    Weight: 1300
+    Attack: 130
+    Range: 1
+    Slots: 2
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      .@r = getrefine();
+      bonus bBaseAtk,(((BaseLevel-70)/10)*5)+(.@r<=15?pow(.@r,2):225);

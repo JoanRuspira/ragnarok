@@ -809,3 +809,30 @@ Body:
       bonus2 bAddEff2,Eff_Freeze,100;
       skill "SK_MG_COLDBOLT",3;
       bonus3 bAutoSpell,"SK_MG_COLDBOLT",3,100;
+  - Id: 13431
+    AegisName: Chrome_Sword
+    Name: Chrome Sword
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 20
+    Weight: 2200
+    Attack: 180
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 110
+    Refineable: true
+    Script: |
+      bonus bAgi,1;
+      bonus bMaxHPrate,-5;
+      bonus bUnbreakableWeapon;

@@ -162,6 +162,21 @@ Body:
       bonus2 bResEff,Eff_Poison,10000;
       bonus2 bSubRace,RC_Undead,4;
       bonus2 bSubRace,RC_Demon,4;
+  - Id: 2718
+    AegisName: Lunatic_Brooch
+    Name: Lunatic Brooch
+    Type: Armor
+    Buy: 20
+    Weight: 200
+    Slots: 1
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+    Locations:
+      Both_Accessory: true
+    ArmorLevel: 1
+    EquipLevelMin: 65
   - Id: 2615
     AegisName: Safety_Ring
     Name: Safety Ring
@@ -225,6 +240,34 @@ Body:
     EquipLevelMin: 90
     Script: |
       bonus bInt,1;
+  - Id: 2744
+    AegisName: Sprint_Ring
+    Name: Sprint Ring
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Monk: true
+      Priest: true
+      Rogue: true
+      Sage: true
+      Wizard: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Accessory: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Script: |
+      bonus bVariableCastrate,-10;
+      bonus bDelayrate,5;
   - Id: 2623
     AegisName: Necklace_
     Name: Necklace

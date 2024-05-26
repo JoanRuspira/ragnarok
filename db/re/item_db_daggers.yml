@@ -1127,3 +1127,79 @@ Body:
       bonus bAgi,2;
       bonus bAspdRate,3;
       bonus2 bAddEff,Eff_Bleeding,300;
+  - Id: 1229
+    AegisName: Mama's_Knife
+    Name: Kitchen Knife
+    Type: Weapon
+    SubType: Dagger
+    Buy: 20
+    Weight: 500
+    Attack: 75
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      KagerouOboro: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 36
+    Refineable: true
+    Script: |
+      bonus bCritical,30;
+      bonus3 bAddMonsterDropItem,517,RC_Brute,5000;
+      bonus2 bAddRace,RC_DemiHuman,3;
+  - Id: 13002
+    AegisName: Ginnungagap
+    Name: Ginnungagap
+    Type: Weapon
+    SubType: Dagger
+    Buy: 20
+    Weight: 700
+    Attack: 148
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      KagerouOboro: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Novice: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Dark;
+      bonus2 bAddEff,Eff_Blind,500;
+      bonus2 bAddEff2,Eff_Blind,50;

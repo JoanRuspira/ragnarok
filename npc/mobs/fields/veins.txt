@@ -19,49 +19,49 @@
 //Tikbalang
 //======== [Veins Field-01] ==================================
 ve_fild01,0,0	monster	Stapo	1784,20
-ve_fild01,0,0	monster	Coyote	1055,70
-ve_fild01,0,0	monster	Headless Mule	1055,30
+ve_fild01,0,0	monster	Coyote	3739,70
+ve_fild01,0,0	monster	Headless Mule	2071,30
 ve_fild01,0,0	monster	Desert Wolf	1106,30
-ve_fild01,0,0,0,0	boss_monster	Muspellskoll	1785,1,14400000,600000,1
+ve_fild01,0,0,0,0	boss_monster	Muspellskoll	3092,1,14400000,600000,1
 ve_fild01,0,0	monster	Orange Plant	21435,20
 ve_fild01,0,0	monster	Yellow Plant	1081,10
 ve_fild01,270,80,20,7	monster	Shining Plant	1083,1,960000
 
 //======== [Veins Field-02] ===================================
 ve_fild02,0,0	monster	Stapo	1784,45
-ve_fild02,0,0	monster	Ludicola Vespa	1166,30
-ve_fild02,0,0	monster	Hermit Plant	1166,30
-ve_fild02,0,0	monster	Aipom	1166,20
+ve_fild02,0,0	monster	Luciola Vespa	1994,30
+ve_fild02,0,0	monster	Hermit Plant	1413,30
+ve_fild02,0,0	monster	Pom Spider	2132,20
 ve_fild02,0,0	monster	Orange Plant	21435,20
 ve_fild02,0,0	monster	Yellow Plant	1081,10
 
 //======== [Veins Field-03] ===================================
-ve_fild03,200,212,114,60	monster	Magmaring	1836,40
-ve_fild03,0,0	monster	Headless Mule	1055,40
+ve_fild03,0,0	monster	Magmaring	1836,40
+ve_fild03,0,0	monster	Headless Mule	2071,40
 ve_fild03,0,0	monster	Desert Wolf	1106,30
 ve_fild03,0,0	monster	Orange Plant	21435,20
 ve_fild03,0,0	monster	Yellow Plant	1081,10
 
 //======== [Veins Field-04] ===================================
 ve_fild04,0,0	monster	Stapo	1784,45
-ve_fild04,0,0	monster	Ludicola Vespa	1166,30
-ve_fild04,0,0	monster	Hermit Plant	1166,30
-ve_fild04,0,0	monster	Aipom	1166,20
+ve_fild04,0,0	monster	Luciola Vespa	1994,30
+ve_fild04,0,0	monster	Hermit Plant	1413,30
+ve_fild04,0,0	monster	Pom Spider	2132,20
 ve_fild04,0,0	monster	Orange Plant	21435,20
 ve_fild04,0,0	monster	Yellow Plant	1081,10
 
 //======== [Veins Field-05] ===================================
 ve_fild05,0,0	monster	Stapo	1784,45
-ve_fild05,0,0	monster	Ludicola Vespa	1166,20
-ve_fild05,0,0	monster	Aipom	1166,40
+ve_fild05,0,0	monster	Luciola Vespa	1994,20
+ve_fild05,0,0	monster	Pom Spider	2132,40
 ve_fild05,0,0	monster	Magmaring	1836,20
 ve_fild05,0,0	monster	Orange Plant	21435,20
 ve_fild05,0,0	monster	Yellow Plant	1081,10
 
 //======== [Veins Field-07] ===================================
 ve_fild07,0,0	monster	Stapo	1784,30
-ve_fild07,0,0	monster	Ludicola Vespa	1166,30
-ve_fild07,0,0	monster	Hermit Plant	1166,40
-ve_fild07,0,0	monster	Aipom	1166,40
+ve_fild07,0,0	monster	Luciola Vespa	1994,30
+ve_fild07,0,0	monster	Hermit Plant	1413,40
+ve_fild07,0,0	monster	Pom Spider	2132,40
 ve_fild07,0,0	monster	Orange Plant	21435,20
 ve_fild07,0,0	monster	Yellow Plant	1081,10

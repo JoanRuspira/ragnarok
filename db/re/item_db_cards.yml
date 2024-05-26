@@ -1027,6 +1027,54 @@ Body:
     Script: |
       bonus2 bSubEle,Ele_Earth,30;
       bonus bFlee,5;
+  - Id: 27125
+    AegisName: Headless_Mule_Card
+    Name: Headless Mule Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Both_Accessory: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Water,20;
+      bonus2 bMagicAtkEle,Ele_Holy,20;
+  - Id: 27325
+    AegisName: Muspellskoll_Card
+    Name: Muspellskoll Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Left_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bSubEle,Ele_Fire,30;
+  - Id: 27179
+    AegisName: Coyote_Card
+    Name: Coyote Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Shoes: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bNoCastCancel;
+      .@hp = -12;
+      .@sp = -6;
+      if (getrefine() >= 10) {
+         .@hp += 6;
+         .@sp += 3;
+      }
+      bonus bMaxHPrate,.@hp;
+      bonus bMaxSPrate,.@sp;
   - Id: 4082
     AegisName: Desert_Wolf_Card
     Name: Desert Wolf Card
@@ -3032,6 +3080,36 @@ Body:
       if (BaseClass == Job_Thief) {
          bonus bCritAtkRate,getrefine()/2;
       }
+  - Id: 4432
+    AegisName: Magmaring_Card
+    Name: Magmaring Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Garment: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bBaseAtk,5;
+      bonus2 bAddEle,Ele_Earth,10;
+      bonus2 bCriticalAddRace,RC_Brute,15;
+      bonus2 bCriticalAddRace,RC_Player_Doram,15;
+      bonus2 bCriticalAddRace,RC_Plant,15;
+  - Id: 4514
+    AegisName: Pom_Spider_Card
+    Name: Pom Spider Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bAddRace,RC_Undead,20;
   - Id: 4232
     AegisName: Wild_Ginseng_Card
     Name: Hermit Plant Card

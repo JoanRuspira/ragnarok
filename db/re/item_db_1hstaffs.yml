@@ -593,3 +593,31 @@ Body:
       bonus bInt,3;
       bonus bDex,2;
       bonus bSPrecovRate,8;
+  - Id: 1654
+    AegisName: Mental_Stick
+    Name: Mental Stick
+    Type: Weapon
+    SubType: Staff
+    Buy: 20
+    Weight: 500
+    Attack: 40
+    MagicAttack: 170
+    Range: 1
+    Slots: 1
+    Jobs:
+      Sage: true
+    Classes:
+      All_Third: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 102
+    Refineable: true
+    Script: |
+      .@r = getrefine();
+      if (.@r>5) {
+         bonus2 bSkillAtk,"SK_WZ_PSYCHICWAVE",(.@r-6)*2;
+         bonus bMaxHPrate,-(.@r-6)*2;
+      }
+      bonus2 bSkillVariableCast,"SK_WZ_PSYCHICWAVE",-3000;
+      bonus2 bSkillUseSP,"SK_WZ_PSYCHICWAVE",-60;

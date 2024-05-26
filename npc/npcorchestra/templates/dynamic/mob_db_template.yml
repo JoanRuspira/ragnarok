@@ -7759,3 +7759,653 @@ Body:
       - Item: Rafflesia_Card
         Rate: 1
         StealProtected: true
+  - Id: 3739
+    AegisName: COYOTE
+    Name: Coyote
+    Level: 110
+    Hp: 17854
+    BaseExp: 1852
+    JobExp: 1757
+    Attack: 630
+    Attack2: 115
+    Defense: 100
+    MagicDefense: 21
+    Str: 49
+    Agi: 79
+    Vit: 67
+    Int: 8
+    Dex: 106
+    Luk: 24
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Brute
+    RaceGroups:
+      Rockridge: true
+    Element: Earth
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 750
+    AttackMotion: 400
+    ClientAttackMotion: 480
+    DamageMotion: 420
+    Ai: 01
+    Modes:
+      Angry: true
+      ChangeTargetChase: true
+      ChangeTargetMelee: true
+    Drops:
+      - Item: CleanBone
+        Rate: 2500
+      - Item: Rotten_Meat
+        Rate: 1500
+      - Item: Rough_Wind
+        Rate: 5
+      - Item: Ulfhedinn
+        Rate: 3
+      - Item: Animal_Blood
+        Rate: 500
+      - Item: Coyote_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 2071
+    AegisName: HEADLESS_MULE
+    Name: Headless Mule
+    Level: 80
+    Hp: 6620
+    BaseExp: 869
+    JobExp: 809
+    Attack: 231
+    Attack2: 57
+    Defense: 33
+    MagicDefense: 44
+    Str: 68
+    Agi: 51
+    Vit: 50
+    Int: 35
+    Dex: 80
+    Luk: 20
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Fire
+    ElementLevel: 3
+    WalkSpeed: 165
+    AttackDelay: 1216
+    AttackMotion: 816
+    ClientAttackMotion: 288
+    DamageMotion: 432
+    Ai: 04
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Burning_Horse_Shoe
+        Rate: 2000
+      - Item: Plate_Armor_
+        Rate: 5
+      - Item: Burning_Heart
+        Rate: 500
+      - Item: Hot_Hair
+        Rate: 500
+      - Item: Scarlet_Katar
+        Rate: 50
+        RandomOptionGroup: Group_5
+      - Item: Headless_Mule_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 3092
+    AegisName: MM_MUSPELLSKOLL
+    Name: Muspellskoll
+    Level: 165
+    Hp: 55620000
+    Attack: 9672
+    Attack2: 98
+    Defense: 211
+    MagicDefense: 140
+    Str: 202
+    Agi: 119
+    Vit: 6
+    Int: 45
+    Dex: 275
+    Luk: 71
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Fire
+    ElementLevel: 3
+    WalkSpeed: 200
+    AttackDelay: 608
+    AttackMotion: 408
+    ClientAttackMotion: 360
+    DamageMotion: 336
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Yggdrasilberry
+        Rate: 5500
+      - Item: Old_Violet_Box
+        Rate: 5000
+      - Item: Old_Violet_Box
+        Rate: 5000
+    Drops:
+      - Item: Bloody_Rune
+        Rate: 7000
+      - Item: Seed_Of_Yggdrasil
+        Rate: 1000
+      - Item: Inverse_Scale
+        Rate: 100
+      - Item: Old_Violet_Box
+        Rate: 5000
+      - Item: Yggdrasilberry
+        Rate: 5000
+      - Item: Muspellskoll_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1994
+    AegisName: LUCIOLA_VESPA
+    Name: Luciola Vespa
+    Level: 104
+    Hp: 32600
+    BaseExp: 16300
+    JobExp: 11410
+    Attack: 9000
+    Attack2: 9900
+    Defense: 29
+    MagicDefense: 5
+    Str: 104
+    Agi: 56
+    Vit: 30
+    Int: 20
+    Dex: 116
+    Luk: 4
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Insect
+    RaceGroups:
+      Splendide: true
+    Element: Wind
+    ElementLevel: 1
+    WalkSpeed: 110
+    AttackDelay: 1000
+    AttackMotion: 864
+    ClientAttackMotion: 720
+    DamageMotion: 432
+    Ai: 08
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Sprint_Ring
+        Rate: 2
+      - Item: Worm_Peelings
+        Rate: 9000
+      - Item: Bee_Sting
+        Rate: 9000
+      - Item: Honey
+        Rate: 300
+      - Item: Wind_Of_Verdure
+        Rate: 160
+      - Item: Royal_Jelly
+        Rate: 200
+      - Item: Solid_Shell
+        Rate: 3000
+      - Item: Luciola_Vespa_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 2132
+    AegisName: POM_SPIDER
+    Name: Pom Spider
+    Level: 145
+    Hp: 122110
+    BaseExp: 5206
+    JobExp: 5303
+    Attack: 948
+    Attack2: 215
+    Defense: 240
+    MagicDefense: 115
+    Str: 156
+    Agi: 85
+    Vit: 178
+    Int: 88
+    Dex: 209
+    Luk: 102
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Insect
+    Element: Earth
+    ElementLevel: 3
+    WalkSpeed: 250
+    AttackDelay: 864
+    AttackMotion: 1056
+    ClientAttackMotion: 360
+    DamageMotion: 576
+    Ai: 04
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Spiderweb
+        Rate: 9000
+      - Item: Apple
+        Rate: 9000
+      - Item: Scell
+        Rate: 1200
+      - Item: Short_Leg
+        Rate: 500
+      - Item: Elunium_Stone
+        Rate: 61
+      - Item: Mental_Stick
+        Rate: 1
+      - Item: Chrome_Sword
+        Rate: 25
+      - Item: Pom_Spider_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1836
+    AegisName: MAGMARING
+    Name: Magmaring
+    Level: 40
+    Hp: 5300
+    BaseExp: 2110
+    JobExp: 1910
+    Attack: 550
+    Attack2: 700
+    Defense: 25
+    MagicDefense: 24
+    Str: 40
+    Agi: 60
+    Vit: 30
+    Int: 10
+    Dex: 60
+    Luk: 17
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Formless
+    Element: Fire
+    ElementLevel: 2
+    WalkSpeed: 300
+    AttackDelay: 1472
+    AttackMotion: 384
+    DamageMotion: 288
+    Ai: 02
+    Drops:
+      - Item: Burning_Heart
+        Rate: 3000
+      - Item: Elunium_Stone
+        Rate: 34
+      - Item: Magmaring_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1508
+    AegisName: QUVE
+    Name: Quve
+    Level: 40
+    Hp: 4559
+    BaseExp: 414
+    JobExp: 306
+    Attack: 299
+    Attack2: 469
+    Defense: 12
+    MagicDefense: 12
+    Str: 0
+    Agi: 61
+    Vit: 24
+    Int: 19
+    Dex: 37
+    Luk: 24
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Undead
+    Element: Undead
+    ElementLevel: 1
+    WalkSpeed: 150
+    AttackDelay: 912
+    AttackMotion: 1248
+    DamageMotion: 576
+    Ai: 04
+    Drops:
+      - Item: Piece_Of_Black_Cloth
+        Rate: 3200
+      - Item: Ectoplasm
+        Rate: 5723
+      - Item: Poison_Powder
+        Rate: 100
+      - Item: Oridecon_Stone
+        Rate: 10
+      - Item: Quve_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1509
+    AegisName: LUDE
+    Name: Lude
+    Level: 36
+    Hp: 3214
+    BaseExp: 392
+    JobExp: 247
+    Attack: 287
+    Attack2: 451
+    Defense: 14
+    MagicDefense: 10
+    Str: 0
+    Agi: 59
+    Vit: 21
+    Int: 18
+    Dex: 36
+    Luk: 21
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Undead
+    Element: Undead
+    ElementLevel: 1
+    WalkSpeed: 150
+    AttackDelay: 890
+    AttackMotion: 960
+    DamageMotion: 480
+    Ai: 04
+    Drops:
+      - Item: Pumpkin_Bucket
+        Rate: 3200
+      - Item: Ectoplasm
+        Rate: 5723
+      - Item: Transparent_Cloth
+        Rate: 1000
+      - Item: Spirit_Chain
+        Rate: 10
+      - Item: Elunium_Stone
+        Rate: 10
+      - Item: Lude_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1510
+    AegisName: HYLOZOIST
+    Name: Heirozoist
+    JapaneseName: Hylozoist
+    Level: 51
+    Hp: 7186
+    BaseExp: 2314
+    JobExp: 1297
+    Attack: 317
+    Attack2: 498
+    Defense: 16
+    MagicDefense: 51
+    Str: 0
+    Agi: 28
+    Vit: 26
+    Int: 47
+    Dex: 66
+    Luk: 14
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Demon
+    Element: Dark
+    ElementLevel: 2
+    WalkSpeed: 155
+    AttackDelay: 741
+    AttackMotion: 1536
+    DamageMotion: 480
+    Ai: 04
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Broken_Needle
+        Rate: 4365
+      - Item: Spool
+        Rate: 5335
+      - Item: Needle_Pouch
+        Rate: 2000
+      - Item: Stuffed_Doll
+        Rate: 80
+      - Item: Ectoplasm
+        Rate: 300
+      - Item: Elunium_Stone
+        Rate: 10
+      - Item: Angry_Mouth
+        Rate: 1
+      - Item: Hylozoist_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1503
+    AegisName: GIBBET
+    Name: Gibbet
+    Level: 58
+    Hp: 6841
+    BaseExp: 4011
+    JobExp: 1824
+    Attack: 418
+    Attack2: 656
+    Defense: 28
+    MagicDefense: 31
+    Str: 0
+    Agi: 42
+    Vit: 42
+    Int: 27
+    Dex: 46
+    Luk: 28
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Dark
+    ElementLevel: 1
+    WalkSpeed: 180
+    AttackDelay: 917
+    AttackMotion: 1584
+    DamageMotion: 576
+    Ai: 04
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Hanging_Doll
+        Rate: 1800
+      - Item: Rotten_Rope
+        Rate: 5335
+      - Item: Tree_Knot
+        Rate: 4074
+      - Item: Cardinal_Jewel_
+        Rate: 300
+      - Item: Red_Gemstone
+        Rate: 100
+      - Item: Gibbet_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1504
+    AegisName: DULLAHAN
+    Name: Dullahan
+    Level: 62
+    Hp: 12437
+    BaseExp: 4517
+    JobExp: 2963
+    Attack: 647
+    Attack2: 1065
+    Defense: 47
+    MagicDefense: 38
+    Str: 0
+    Agi: 30
+    Vit: 5
+    Int: 45
+    Dex: 62
+    Luk: 22
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 2
+    WalkSpeed: 155
+    AttackDelay: 847
+    AttackMotion: 1152
+    DamageMotion: 480
+    Ai: 04
+    Drops:
+      - Item: Dullahan's_Helm
+        Rate: 3200
+      - Item: Dullahan_Armor
+        Rate: 4850
+      - Item: An_Eye_Of_Dullahan
+        Rate: 1
+      - Item: Manteau_
+        Rate: 5
+      - Item: Dullahan_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1505
+    AegisName: LOLI_RURI
+    Name: Loli Ruri
+    Level: 71
+    Hp: 23470
+    BaseExp: 6641
+    JobExp: 4314
+    Attack: 1476
+    Attack2: 2317
+    Defense: 39
+    MagicDefense: 44
+    Str: 0
+    Agi: 66
+    Vit: 54
+    Int: 74
+    Dex: 81
+    Luk: 43
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Dark
+    ElementLevel: 4
+    WalkSpeed: 125
+    AttackDelay: 747
+    AttackMotion: 1632
+    DamageMotion: 576
+    Ai: 04
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Black_Kitty_Doll
+        Rate: 800
+      - Item: Striped_Socks
+        Rate: 3000
+      - Item: Bat_Cage
+        Rate: 5044
+      - Item: Elunium
+        Rate: 100
+      - Item: Loki's_Whispers
+        Rate: 100
+      - Item: Lunatic_Brooch
+        Rate: 5
+      - Item: Loli_Ruri_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1506
+    AegisName: DISGUISE
+    Name: Disguise
+    Level: 55
+    Hp: 7543
+    Sp: 180
+    BaseExp: 2815
+    JobExp: 1919
+    Attack: 279
+    Attack2: 546
+    Defense: 18
+    MagicDefense: 29
+    Str: 0
+    Agi: 72
+    Vit: 45
+    Int: 35
+    Dex: 48
+    Luk: 65
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Earth
+    ElementLevel: 4
+    WalkSpeed: 147
+    AttackDelay: 516
+    AttackMotion: 768
+    DamageMotion: 384
+    Ai: 04
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Red_Scarf
+        Rate: 4850
+      - Item: Tangled_Chain
+        Rate: 3686
+      - Item: Hood_
+        Rate: 50
+      - Item: Honey
+        Rate: 100
+      - Item: Ragamuffin_Cape
+        Rate: 50
+      - Item: Muffler_
+        Rate: 20
+      - Item: Rider_Insignia
+        Rate: 5
+      - Item: Disguise_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1507
+    AegisName: BLOODY_MURDERER
+    Name: Bloody Murderer
+    Level: 72
+    Hp: 27521
+    BaseExp: 9742
+    JobExp: 3559
+    Attack: 864
+    Attack2: 1081
+    Defense: 37
+    MagicDefense: 41
+    Str: 0
+    Agi: 30
+    Vit: 90
+    Int: 15
+    Dex: 52
+    Luk: 12
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demihuman
+    Element: Dark
+    ElementLevel: 3
+    WalkSpeed: 175
+    AttackDelay: 914
+    AttackMotion: 1344
+    DamageMotion: 384
+    Ai: 04
+    Drops:
+      - Item: Old_Manteau
+        Rate: 4171
+      - Item: Distorted_Portrait
+        Rate: 1000
+      - Item: Rusty_Cleaver
+        Rate: 2000
+      - Item: Oridecon
+        Rate: 100
+      - Item: Mama's_Knife
+        Rate: 3
+      - Item: Ginnungagap
+        Rate: 1
+      - Item: Bloody_Murderer_Card
+        Rate: 1
+        StealProtected: true

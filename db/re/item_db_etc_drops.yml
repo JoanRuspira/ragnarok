@@ -375,12 +375,100 @@ Body:
     Weight: 100
     Flags:
       BuyingStore: true
+  - Id: 7221
+    AegisName: Tangled_Chain
+    Name: Tangled Chains
+    Type: Etc
+    Buy: 740
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7223
+    AegisName: Distorted_Portrait
+    Name: Contorted Self-Portrait
+    Type: Etc
+    Buy: 2032
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7208
+    AegisName: Rusty_Cleaver
+    Name: Rusty Kitchen Knife
+    Type: Etc
+    Buy: 1780
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7207
+    AegisName: Old_Manteau
+    Name: Old Manteau
+    Type: Etc
+    Buy: 1050
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 723
     AegisName: Cardinal_Jewel
     Name: Ruby
     Type: Etc
     Buy: 6000
     Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 7216
+    AegisName: Red_Scarf
+    Name: Red Muffler
+    Type: Etc
+    Buy: 660
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7214
+    AegisName: Bat_Cage
+    Name: Bat Cage
+    Type: Etc
+    Buy: 880
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7019
+    AegisName: Loki's_Whispers
+    Name: Loki's Whispers
+    Type: Etc
+    Buy: 20
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7219
+    AegisName: Striped_Socks
+    Name: Striped Sock
+    Type: Etc
+    Buy: 920
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7206
+    AegisName: Black_Kitty_Doll
+    Name: Black Cat Doll
+    Type: Etc
+    Buy: 1440
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7209
+    AegisName: Dullahan's_Helm
+    Name: Helm of Dullahan
+    Type: Etc
+    Buy: 1350
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7210
+    AegisName: Dullahan_Armor
+    Name: Armor Piece of Dullahan
+    Type: Etc
+    Buy: 790
+    Weight: 10
     Flags:
       BuyingStore: true
   - Id: 724
@@ -487,11 +575,35 @@ Body:
     Weight: 50
     Flags:
       BuyingStore: true
+  - Id: 7222
+    AegisName: Tree_Knot
+    Name: Wooden Gnarl
+    Type: Etc
+    Buy: 468
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7218
+    AegisName: Rotten_Rope
+    Name: Decomposed Rope
+    Type: Etc
+    Buy: 390
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 7170
     AegisName: Tuxedo
     Name: Tuxedo
     Type: Etc
     Buy: 43000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7212
+    AegisName: Hanging_Doll
+    Name: Hung Doll
+    Type: Etc
+    Buy: 1020
     Weight: 10
     Flags:
       BuyingStore: true
@@ -1100,6 +1212,62 @@ Body:
     Name: Fluff
     Type: Etc
     Buy: 8
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7220
+    AegisName: Ectoplasm
+    Name: Ectoplasm
+    Type: Etc
+    Buy: 322
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7225
+    AegisName: Pumpkin_Bucket
+    Name: Pumpkin Lantern
+    Type: Etc
+    Buy: 486
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7154
+    AegisName: Poison_Powder
+    Name: Poisonous Powder
+    Type: Etc
+    Buy: 160
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7205
+    AegisName: Piece_Of_Black_Cloth
+    Name: Piece of Black Cloth
+    Type: Etc
+    Buy: 526
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7120
+    AegisName: Burning_Horse_Shoe
+    Name: Burning Horseshoe
+    Type: Etc
+    Buy: 823
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7122
+    AegisName: Hot_Hair
+    Name: Burning Hair
+    Type: Etc
+    Buy: 974
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7097
+    AegisName: Burning_Heart
+    Name: Burning Heart
+    Type: Etc
+    Buy: 924
     Weight: 10
     Flags:
       BuyingStore: true
@@ -2457,11 +2625,35 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
+  - Id: 7213
+    AegisName: Needle_Pouch
+    Name: Needle Packet
+    Type: Etc
+    Buy: 832
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7217
+    AegisName: Spool
+    Name: Spool
+    Type: Etc
+    Buy: 424
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 1058
     AegisName: Wing_Of_Moth
     Name: Moth Wings
     Type: Etc
     Buy: 200
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7215
+    AegisName: Broken_Needle
+    Name: Broken Needle
+    Type: Etc
+    Buy: 690
     Weight: 10
     Flags:
       BuyingStore: true
@@ -3280,6 +3472,14 @@ Body:
       NoGuildStorage: true
       NoMail: true
       NoAuction: true
+  - Id: 25276
+    AegisName: CleanBone
+    Name: Clean Bone
+    Type: Etc
+    Buy: 348
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 6051
     AegisName: Gray_Hollow
     Name: Gray Hollow
