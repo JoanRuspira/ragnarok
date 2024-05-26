@@ -3013,7 +3013,25 @@ Body:
       bonus2 bAddDamageClass,1286,-50;
       bonus2 bAddDamageClass,1287,-50;
       bonus2 bAddDamageClass,1899,-50;
-      bonus2 bAddDamageClass,1900,-50;  
+      bonus2 bAddDamageClass,1900,-50;
+  - Id: 4513
+    AegisName: Angra_Mantis_Card
+    Name: Angra Mantis Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Head_Low: true
+      Head_Mid: true
+      Head_Top: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bCritAtkRate,2;
+      if (BaseClass == Job_Thief) {
+         bonus bCritAtkRate,getrefine()/2;
+      }
   - Id: 4232
     AegisName: Wild_Ginseng_Card
     Name: Hermit Plant Card

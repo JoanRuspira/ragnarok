@@ -287,3 +287,51 @@ Body:
       bonus bAtkEle,Ele_Dark;
       bonus bMaxHPrate,-2;
       bonus2 bAddEff,Eff_Bleeding,200;
+  - Id: 1821
+    AegisName: Seismic_Fist
+    Name: Seismic Fist
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 20
+    Weight: 650
+    Attack: 80
+    Range: 1
+    Slots: 3
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 75
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Earth;
+      bonus3 bAutoSpell,"SK_MG_EARTHBOLT",5,10;
+  - Id: 1830
+    AegisName: Sura_Rampage
+    Name: Sura Rampage
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 20
+    Weight: 500
+    Attack: 142
+    Range: 1
+    Slots: 1
+    Jobs:
+      Monk: true
+    Classes:
+      All_Third: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 102
+    Refineable: true
+    Script: |
+      bonus2 bSkillAtk,"SK_MO_PALMSTRIKE",20;
+      bonus2 bSkillAtk,"SK_SH_GUILLOTINEFISTS",20;
+      bonus bUseSPrate,5;
+      .@r = getrefine();
+      if (.@r>6) {
+         bonus bUseSPrate,-1*(.@r-6);
+      }

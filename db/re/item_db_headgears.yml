@@ -1748,6 +1748,27 @@ Body:
     View: 146
     Script: |
       bonus bAgi,1;
+  - Id: 5123
+    AegisName: Ulle_Cap
+    Name: Ulle's Cap
+    Type: Armor
+    Buy: 30000
+    Weight: 500
+    Defense: 6
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 65
+    Refineable: true
+    View: 254
+    Script: |
+      bonus bDex,2;
+      bonus bAgi,1;
   - Id: 5493
     AegisName: Ulle_Cap_I
     Name: Ulle's Cap

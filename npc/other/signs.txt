@@ -504,7 +504,7 @@ cmd_fild06,205,128,3	script	Board#sgn::77	837,{
 }
 
 cmd_fild05,148,30,4	script	Board#sgn::78	837,{
-	mes "Papuchica Forest ahead.";
+	mes "Papuchica Jungle ahead.";
 	close;
 }
 
@@ -533,7 +533,7 @@ cmd_fild09,326,181,4	script	Board#sgn::82	835,{
 }
 
 cmd_fild03,180,130,5	script	Board#sgn::83	837,{
-	mes "Papuchica Forest ahead.";
+	mes "Papuchica Jungle ahead.";
 	close;
 }
 
@@ -548,12 +548,12 @@ cmd_fild02,217,370,7	script	Board#sgn::85	837,{
 }
 
 cmd_fild01,220,41,4	script	Board#sgn::86	837,{
-	mes "You are entering the Papuchica Forest.";
+	mes "You are entering the Papuchica Jungle.";
 	close;
 }
 
 cmd_fild01,32,321,4	script	Board#sgn::87	837,{
-	mes "You are entering the Papuchica Forest.";
+	mes "You are entering the Papuchica Jungle.";
 	close;
 }
 
@@ -564,12 +564,12 @@ cmd_fild01,42,323,4	script	Board#sgn::88	835,{
 }
 
 cmd_fild01,70,361,7	script	Board#sgn::89	837,{
-	mes "You are entering the Papuchica Forest.";
+	mes "You are entering the Papuchica Jungle.";
 	close;
 }
 
 cmd_fild01,170,362,7	script	Board#sgn::90	837,{
-	mes "Papuchica Forest ahead.";
+	mes "Papuchica Jungle ahead.";
 	close;
 }
 

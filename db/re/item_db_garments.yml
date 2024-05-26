@@ -334,3 +334,32 @@ Body:
       bonus2 bSubEle,Ele_Earth,5;
       bonus2 bSubRace,RC_Plant,5;
       bonus2 bSubRace,RC_Brute,5;
+  - Id: 2531
+    AegisName: Ulfhedinn
+    Name: Ulfhedinn
+    Type: Armor
+    Buy: 20
+    Weight: 700
+    Defense: 13
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      skill "SK_KN_VIGOR",3;
+    UnEquipScript: |
+      sc_end STATUS_VIGOR;

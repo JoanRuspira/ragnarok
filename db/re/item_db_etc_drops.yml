@@ -797,6 +797,14 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
+  - Id: 7565
+    AegisName: Sticky_Poison
+    Name: Sticky Poison
+    Type: Etc
+    Buy: 350
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 7036
     AegisName: Fang_Of_Garm
     Name: Fang of Hatii
@@ -1015,7 +1023,6 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
-
   - Id: 904
     AegisName: Scorpion's_Tail
     Name: Scorpion Tail
@@ -1101,6 +1108,14 @@ Body:
     Name: Chrysalis
     Type: Etc
     Buy: 8
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7564
+    AegisName: Rotten_Meat
+    Name: Rotten Meat
+    Type: Etc
+    Buy: 102
     Weight: 10
     Flags:
       BuyingStore: true
@@ -1349,6 +1364,14 @@ Body:
     Name: Rusty Screw
     Type: Etc
     Buy: 534
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7194
+    AegisName: Soft_Leaf
+    Name: Soft Blade of Grass
+    Type: Etc
+    Buy: 400
     Weight: 10
     Flags:
       BuyingStore: true
@@ -1960,6 +1983,14 @@ Body:
     Type: Etc
     Buy: 1000
     Weight: 200
+    Flags:
+      BuyingStore: true
+  - Id: 7563
+    AegisName: Bloody_Rune
+    Name: Bloody Rune
+    Type: Etc
+    Buy: 2016
+    Weight: 10
     Flags:
       BuyingStore: true
   - Id: 1012
