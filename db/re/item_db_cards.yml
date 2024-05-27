@@ -3706,6 +3706,44 @@ Body:
     Script: |
       bonus2 bSubRace,RC_Undead,-20;
       bonus2 bExpAddRace,RC_Undead,10;
+  - Id: 27123
+    AegisName: Toucan_Card
+    Name: Toucan Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Head_Low: true
+      Head_Mid: true
+      Head_Top: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      .@val = 10;
+      if (getrefine() >= 9) {
+         .@val += 5;
+      }
+      bonus2 bMagicAddRace,RC_Insect,.@val;
+  - Id: 27124
+    AegisName: Jaguar_Card
+    Name: Jaguar Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Head_Low: true
+      Head_Mid: true
+      Head_Top: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      .@val = 10;
+      if (getrefine() >= 9) {
+         .@val += 5;
+      }
+      bonus2 bMagicAddRace,RC_Brute,.@val;
   - Id: 4276
     AegisName: Lord_Of_Death_Card
     Name: Lord of The Dead Card

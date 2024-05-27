@@ -1247,14 +1247,6 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
-  - Id: 7154
-    AegisName: Poison_Powder
-    Name: Poisonous Powder
-    Type: Etc
-    Buy: 160
-    Weight: 10
-    Flags:
-      BuyingStore: true
   - Id: 7205
     AegisName: Piece_Of_Black_Cloth
     Name: Piece of Black Cloth
@@ -3270,6 +3262,22 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
+  - Id: 7004
+    AegisName: Mud_Lump
+    Name: Mud Lump
+    Type: Etc
+    Buy: 876
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7264
+    AegisName: Dried_Sand
+    Name: Dry Sand
+    Type: Etc
+    Buy: 322
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 6033
     AegisName: Horn_Of_Tendrilion
     Name: Horn of Tendrilion
@@ -4058,6 +4066,14 @@ Body:
     Name: Huge Leaf
     Type: Etc
     Buy: 610
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7298
+    AegisName: Leaf_Clothes
+    Name: Fig Leaf
+    Type: Etc
+    Buy: 538
     Weight: 10
     Flags:
       BuyingStore: true
@@ -5101,3 +5117,59 @@ Body:
       NoGuildStorage: true
       NoMail: true
       NoAuction: true
+  - Id: 7267
+    AegisName: Tiger_Skin_Panties
+    Name: Tiger Panty
+    Type: Etc
+    Buy: 298
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7268
+    AegisName: Little_Blacky_Ghost
+    Name: Little Ghost Doll
+    Type: Etc
+    Buy: 1210
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7151
+    AegisName: Oil_Paper
+    Name: Oil Paper
+    Type: Etc
+    Buy: 210
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7150
+    AegisName: Bamboo_Cut
+    Name: Piece of Bamboo
+    Type: Etc
+    Buy: 310
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7111
+    AegisName: Smooth_Paper
+    Name: Slick Paper
+    Type: Etc
+    Buy: 706
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7149
+    AegisName: Yellow_Plate
+    Name: Yellow Plate
+    Type: Etc
+    Buy: 220
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7155
+    AegisName: Poison_Toad's_Skin
+    Name: Poisonous Toad Skin
+    Type: Etc
+    Buy: 280
+    Weight: 10
+    Flags:
+      BuyingStore: true

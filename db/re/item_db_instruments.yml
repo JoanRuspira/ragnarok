@@ -313,3 +313,22 @@ Body:
       bonus bDex,3;
       bonus2 bAddSkillBlow,"SK_BA_MELODYSTRIKE",2;
       bonus2 bAddSkillBlow,"SK_CL_ARROWVULCAN",3;
+  - Id: 1915
+    AegisName: Guitar_Of_Blue_Solo
+    Name: Loner's Guitar
+    Type: Weapon
+    SubType: Musical
+    Buy: 20
+    Weight: 900
+    Attack: 110
+    Range: 1
+    Jobs:
+      BardDancer: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 27
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Water;

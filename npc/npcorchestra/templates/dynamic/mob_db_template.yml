@@ -8467,3 +8467,400 @@ Body:
       - Item: Lord_Of_Death_Card
         Rate: 1
         StealProtected: true
+  - Id: 2072
+    AegisName: JAGUAR
+    Name: Jaguar
+    Level: 71
+    Hp: 12590
+    BaseExp: 1820
+    JobExp: 1012
+    Attack: 538
+    Attack2: 580
+    Defense: 44
+    MagicDefense: 15
+    Str: 69
+    Agi: 30
+    Vit: 45
+    Int: 5
+    Dex: 59
+    Luk: 5
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Brute
+    Element: Earth
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 576
+    AttackMotion: 1248
+    ClientAttackMotion: 432
+    DamageMotion: 480
+    Ai: 17
+    Drops:
+      - Item: Leopard_Skin
+        Rate: 3000
+      - Item: Leopard_Talon
+        Rate: 2000
+      - Item: Animal's_Skin
+        Rate: 1000
+      - Item: Oridecon_Stone
+        Rate: 40
+      - Item: Claw_
+        Rate: 1
+      - Item: Jaguar_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 2073
+    AegisName: TOUCAN
+    Name: Toucan
+    Level: 70
+    Hp: 10555
+    BaseExp: 1002
+    JobExp: 1552
+    Attack: 478
+    Attack2: 513
+    Defense: 12
+    MagicDefense: 12
+    Str: 54
+    Agi: 14
+    Vit: 40
+    Int: 35
+    Dex: 44
+    Luk: 10
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Brute
+    Element: Wind
+    ElementLevel: 2
+    WalkSpeed: 155
+    AttackDelay: 960
+    AttackMotion: 1440
+    ClientAttackMotion: 300
+    DamageMotion: 960
+    Ai: 03
+    Drops:
+      - Item: Talon
+        Rate: 3000
+      - Item: Cyfar
+        Rate: 1000
+      - Item: Blue_Herb
+        Rate: 50
+      - Item: Yellow_Herb
+        Rate: 100
+      - Item: Feather
+        Rate: 4000
+      - Item: Bill_Of_Birds
+        Rate: 9000
+      - Item: Toucan_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1586
+    AegisName: LEAF_CAT
+    Name: Leaf Cat
+    Level: 38
+    Hp: 2396
+    BaseExp: 165
+    JobExp: 1212
+    Attack: 266
+    Attack2: 307
+    Defense: 5
+    MagicDefense: 19
+    Str: 25
+    Agi: 67
+    Vit: 12
+    Int: 45
+    Dex: 60
+    Luk: 29
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Brute
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 150
+    AttackDelay: 960
+    AttackMotion: 864
+    DamageMotion: 720
+    Ai: 02
+    Drops:
+      - Item: Great_Leaf
+        Rate: 4365
+      - Item: Leaflet_Of_Hinal
+        Rate: 300
+      - Item: Seed_Of_Yggdrasil
+        Rate: 5
+      - Item: Fish_Tail
+        Rate: 1100
+      - Item: Lemon
+        Rate: 250
+      - Item: Prawn
+        Rate: 500
+      - Item: Leaf_Clothes
+        Rate: 5335
+      - Item: Leaf_Cat_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1516
+    AegisName: INCREASE_SOIL
+    Name: Mi Gao
+    JapaneseName: Increase Soil
+    Level: 51
+    Hp: 8230
+    BaseExp: 2760
+    JobExp: 2110
+    Attack: 560
+    Attack2: 700
+    Defense: 30
+    MagicDefense: 12
+    Str: 40
+    Agi: 45
+    Vit: 23
+    Int: 12
+    Dex: 69
+    Luk: 12
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Earth
+    ElementLevel: 3
+    WalkSpeed: 445
+    AttackDelay: 106
+    AttackMotion: 1056
+    DamageMotion: 576
+    Ai: 17
+    Drops:
+      - Item: Dried_Sand
+        Rate: 4365
+      - Item: Mud_Lump
+        Rate: 2300
+      - Item: Great_Nature
+        Rate: 10
+      - Item: Gold
+        Rate: 2
+      - Item: Increase_Soil_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1517
+    AegisName: LI_ME_MANG_RYANG
+    Name: Jing Guai
+    JapaneseName: Li Me Mang Ryang
+    Level: 48
+    Hp: 5920
+    BaseExp: 1643
+    JobExp: 1643
+    Attack: 434
+    Attack2: 633
+    Defense: 23
+    MagicDefense: 16
+    Str: 46
+    Agi: 51
+    Vit: 19
+    Int: 8
+    Dex: 57
+    Luk: 30
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Earth
+    ElementLevel: 3
+    WalkSpeed: 165
+    AttackDelay: 1120
+    AttackMotion: 576
+    DamageMotion: 420
+    Ai: 04
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Tiger_Skin_Panties
+        Rate: 4500
+      - Item: Little_Blacky_Ghost
+        Rate: 400
+      - Item: Club_
+        Rate: 10
+      - Item: Spike
+        Rate: 1
+      - Item: Li_Me_Mang_Ryang_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1400
+    AegisName: KARAKASA
+    Name: Karakasa
+    Level: 30
+    Hp: 3092
+    BaseExp: 489
+    JobExp: 322
+    Attack: 141
+    Attack2: 183
+    Defense: 1
+    MagicDefense: 5
+    Agi: 45
+    Vit: 12
+    Int: 20
+    Dex: 49
+    Luk: 60
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 155
+    AttackDelay: 1638
+    AttackMotion: 2016
+    DamageMotion: 576
+    Ai: 01
+    Drops:
+      - Item: Oil_Paper
+        Rate: 5000
+      - Item: Bamboo_Cut
+        Rate: 4268
+      - Item: Wooden_Block
+        Rate: 3200
+      - Item: Smooth_Paper
+        Rate: 2200
+      - Item: Zargon
+        Rate: 4074
+      - Item: Glass_Bead
+        Rate: 30
+      - Item: Murasame
+        Rate: 5
+      - Item: Karakasa_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1406
+    AegisName: KAPHA
+    Name: Kapha
+    Level: 41
+    Hp: 7892
+    BaseExp: 2278
+    JobExp: 1552
+    Attack: 399
+    Attack2: 719
+    Defense: 20
+    MagicDefense: 38
+    Agi: 51
+    Vit: 49
+    Int: 22
+    Dex: 73
+    Luk: 45
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Fish
+    Element: Water
+    ElementLevel: 1
+    WalkSpeed: 165
+    AttackDelay: 2012
+    AttackMotion: 1728
+    DamageMotion: 672
+    Ai: 04
+    Drops:
+      - Item: Yellow_Plate
+        Rate: 6500
+      - Item: Cyfar
+        Rate: 3500
+      - Item: Leaflet_Of_Aloe
+        Rate: 2300
+      - Item: Guitar_Of_Blue_Solo
+        Rate: 10
+      - Item: Jitte_
+        Rate: 5
+      - Item: Kapha_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1402
+    AegisName: POISON_TOAD
+    Name: Poison Toad
+    Level: 46
+    Hp: 6629
+    BaseExp: 1929
+    JobExp: 1457
+    Attack: 288
+    Attack2: 408
+    Defense: 5
+    MagicDefense: 10
+    Str: 20
+    Agi: 34
+    Vit: 19
+    Int: 14
+    Dex: 66
+    Luk: 55
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Brute
+    Element: Poison
+    ElementLevel: 2
+    WalkSpeed: 160
+    AttackDelay: 1148
+    AttackMotion: 1728
+    DamageMotion: 864
+    Ai: 01
+    Drops:
+      - Item: Poison_Toad's_Skin
+        Rate: 5500
+      - Item: Poison_Powder
+        Rate: 2400
+      - Item: Green_Herb
+        Rate: 540
+      - Item: Cardinal_Jewel_
+        Rate: 2
+      - Item: Royal_Jelly
+        Rate: 2
+      - Item: Poison_Toad_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1068
+    AegisName: HYDRA
+    Name: Hydra
+    Level: 14
+    Hp: 660
+    BaseExp: 59
+    JobExp: 40
+    Attack: 22
+    Attack2: 28
+    MagicDefense: 40
+    Agi: 14
+    Vit: 14
+    Int: 0
+    Dex: 40
+    Luk: 2
+    AttackRange: 7
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Plant
+    Element: Water
+    ElementLevel: 2
+    WalkSpeed: 1000
+    AttackDelay: 800
+    AttackMotion: 432
+    DamageMotion: 600
+    Ai: 10
+    Drops:
+      - Item: Emveretarcon
+        Rate: 25
+      - Item: Tentacle
+        Rate: 5500
+      - Item: Sticky_Mucus
+        Rate: 1500
+      - Item: Detrimindexta
+        Rate: 20
+      - Item: Panacea
+        Rate: 5
+      - Item: Meat
+        Rate: 700
+      - Item: Hydra_Card
+        Rate: 1
+        StealProtected: true

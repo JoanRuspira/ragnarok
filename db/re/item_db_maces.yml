@@ -716,3 +716,25 @@ Body:
     WeaponLevel: 3
     EquipLevelMin: 78
     Refineable: true
+  - Id: 1523
+    AegisName: Spike
+    Name: Spike
+    Type: Weapon
+    SubType: Mace
+    Buy: 20
+    Weight: 700
+    Attack: 85
+    Range: 1
+    Jobs:
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 40
+    Refineable: true
+    Script: |
+      bonus bCritical,40;
+      bonus bDefRate,-66;
+      bonus bDef2Rate,-66;

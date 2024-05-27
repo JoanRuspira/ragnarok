@@ -1238,3 +1238,45 @@ Body:
     Refineable: true
     Script: |
       bonus bDefRatioAtkClass,Class_All;
+  - Id: 13012
+    AegisName: Murasame
+    Name: Murasame
+    Type: Weapon
+    SubType: Dagger
+    Buy: 20
+    Weight: 700
+    Attack: 95
+    Range: 1
+    Slots: 1
+    Jobs:
+      KagerouOboro: true
+      Ninja: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 24
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Water;
+      bonus2 bCriticalAddRace,RC_DemiHuman,10;
+      bonus2 bCriticalAddRace,RC_Player_Human,10;
+  - Id: 13008
+    AegisName: Jitte_
+    Name: Jitte
+    Type: Weapon
+    SubType: Dagger
+    Buy: 20000
+    Weight: 400
+    Attack: 70
+    Range: 1
+    Slots: 1
+    Jobs:
+      KagerouOboro: true
+      Ninja: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 35
+    Refineable: true
+    Script: |
+      bonus bBreakWeaponRate,200;
