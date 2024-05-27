@@ -1203,3 +1203,38 @@ Body:
       bonus bAtkEle,Ele_Dark;
       bonus2 bAddEff,Eff_Blind,500;
       bonus2 bAddEff2,Eff_Blind,50;
+  - Id: 1230
+    AegisName: House_Auger
+    Name: Ice Pick
+    Type: Weapon
+    SubType: Dagger
+    Buy: 20
+    Weight: 600
+    Attack: 80
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      KagerouOboro: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 36
+    Refineable: true
+    Script: |
+      bonus bDefRatioAtkClass,Class_All;

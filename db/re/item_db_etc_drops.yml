@@ -383,6 +383,22 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
+  - Id: 7108
+    AegisName: Boroken_Shiled_Piece
+    Name: Piece of Shield
+    Type: Etc
+    Buy: 1680
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7109
+    AegisName: Shine_Spear_Blade
+    Name: Shining Spear Blade
+    Type: Etc
+    Buy: 840
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 7223
     AegisName: Distorted_Portrait
     Name: Contorted Self-Portrait

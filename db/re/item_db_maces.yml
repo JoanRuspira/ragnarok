@@ -699,3 +699,20 @@ Body:
          bonus3 bAddMonsterDropItem,12043,RC_Brute,500;
          bonus3 bAddMonsterDropItem,12069,RC_Fish,500;
       }
+  - Id: 1529
+    AegisName: Iron_Driver
+    Name: Iron Driver
+    Type: Weapon
+    SubType: Mace
+    Buy: 20
+    Weight: 3000
+    Attack: 155
+    Range: 2
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 78
+    Refineable: true

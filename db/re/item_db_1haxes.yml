@@ -171,3 +171,24 @@ Body:
       NoAuction: true
     Script: |
       bonus2 bAddSize,Size_All,70;
+  - Id: 1306
+    AegisName: War_Axe
+    Name: War Axe
+    Type: Weapon
+    SubType: 1hAxe
+    Buy: 20
+    Weight: 4200
+    Attack: 140
+    Range: 1
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 76
+    Refineable: true
+    Script: |
+      bonus bDex,2;
+      bonus bLuk,2;

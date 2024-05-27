@@ -8409,3 +8409,61 @@ Body:
       - Item: Bloody_Murderer_Card
         Rate: 1
         StealProtected: true
+  - Id: 1373
+    AegisName: LORD_OF_DEATH
+    Name: Lord of the Dead
+    JapaneseName: Lord of Death
+    Level: 94
+    Hp: 603383
+    BaseExp: 131343
+    JobExp: 43345
+    MvpExp: 65671
+    Attack: 3430
+    Attack2: 4232
+    Defense: 77
+    MagicDefense: 73
+    Agi: 99
+    Vit: 30
+    Int: 109
+    Dex: 100
+    Luk: 106
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Dark
+    ElementLevel: 3
+    WalkSpeed: 180
+    AttackDelay: 1446
+    AttackMotion: 1296
+    DamageMotion: 360
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Yggdrasilberry
+        Rate: 5500
+      - Item: Crystal_Jewel__
+        Rate: 5000
+      - Item: Old_Violet_Box
+        Rate: 5000
+    Drops:
+      - Item: Boroken_Shiled_Piece
+        Rate: 5335
+      - Item: Pole_Axe
+        Rate: 5
+      - Item: House_Auger
+        Rate: 10
+      - Item: Ring_
+        Rate: 2
+      - Item: Shine_Spear_Blade
+        Rate: 1000
+      - Item: War_Axe
+        Rate: 1
+      - Item: Iron_Driver
+        Rate: 2
+      - Item: Lord_Of_Death_Card
+        Rate: 1
+        StealProtected: true
