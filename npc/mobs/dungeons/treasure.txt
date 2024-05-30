@@ -106,9 +106,8 @@ treasure01,169,40	monster	Hydra	1068,1,300000,100000
 //==================================================
 // treasure02 - Sunken Ship F2
 //==================================================
-treasure02,0,0	monster	Ghostring	1120,1,1980000,1200000
+treasure02,0,0	monster	Ghostring	1120,1
 treasure02,0,0	monster	Whisper	1179,5
-treasure02,0,0	monster	Wanderer	1208,1,600000,300000
 treasure02,0,0	monster	Penomena	1216,22,300000,120000
 treasure02,0,0	monster	Kukre	1070,20
 treasure02,0,0	monster	Pirate Skeleton	1071,5
@@ -155,4 +154,3 @@ treasure02,157,143,1,1	monster	Whisper	1179,1,100000,100000
 treasure02,151,138,1,1	monster	Whisper	1179,1,100000,100000
 treasure02,45,144,1,1	monster	Whisper	1179,1,200000,100000
 treasure02,52,139,1,1	monster	Whisper	1179,1,200000,100000
-treasure02,23,142,1,1	monster	Marionette	1143,1,200000,100000

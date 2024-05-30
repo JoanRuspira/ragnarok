@@ -10857,3 +10857,232 @@ Body:
       - Item: Pharaoh_Card
         Rate: 1
         StealProtected: true
+  - Id: 1070
+    AegisName: KUKRE
+    Name: Kukre
+    Level: 11
+    Hp: 507
+    BaseExp: 38
+    JobExp: 28
+    Attack: 28
+    Attack2: 37
+    Defense: 15
+    Agi: 11
+    Vit: 11
+    Int: 5
+    Dex: 16
+    Luk: 2
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Fish
+    Element: Water
+    ElementLevel: 1
+    WalkSpeed: 150
+    AttackDelay: 1776
+    AttackMotion: 576
+    DamageMotion: 288
+    Ai: 02
+    Drops:
+      - Item: Crystal_Blue
+        Rate: 30
+      - Item: Worm_Peelings
+        Rate: 5500
+      - Item: Garlet
+        Rate: 400
+      - Item: Monster's_Feed
+        Rate: 500
+      - Item: Red_Herb
+        Rate: 650
+      - Item: Insect_Feeler
+        Rate: 450
+      - Item: Kukre_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1179
+    AegisName: WHISPER
+    Name: Whisper
+    Level: 34
+    Hp: 1796
+    BaseExp: 591
+    JobExp: 599
+    Attack: 180
+    Attack2: 221
+    MagicDefense: 45
+    Agi: 51
+    Vit: 14
+    Int: 0
+    Dex: 60
+    Luk: 0
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Demon
+    Element: Ghost
+    ElementLevel: 3
+    WalkSpeed: 150
+    AttackDelay: 1960
+    AttackMotion: 960
+    DamageMotion: 504
+    Ai: 09
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Sparkling_Dust
+        Rate: 150
+      - Item: Transparent_Cloth
+        Rate: 5335
+      - Item: Spirit_Chain
+        Rate: 25
+      - Item: Silver_Robe_
+        Rate: 10
+      - Item: Whisper_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1071
+    AegisName: PIRATE_SKEL
+    Name: Pirate Skeleton
+    Level: 25
+    Hp: 1676
+    BaseExp: 233
+    JobExp: 142
+    Attack: 145
+    Attack2: 178
+    Defense: 10
+    MagicDefense: 15
+    Str: 25
+    Agi: 13
+    Vit: 25
+    Int: 5
+    Dex: 25
+    Luk: 10
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1754
+    AttackMotion: 554
+    DamageMotion: 288
+    Ai: 04
+    Drops:
+      - Item: Skel_Bone
+        Rate: 3000
+      - Item: Pirate_Bandana
+        Rate: 25
+      - Item: Bandana
+        Rate: 250
+      - Item: Falchion_
+        Rate: 250
+      - Item: Oridecon_Stone
+        Rate: 43
+      - Item: Pirate_Skel_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1216
+    AegisName: PENOMENA
+    Name: Penomena
+    Level: 57
+    Hp: 7256
+    BaseExp: 2870
+    JobExp: 2200
+    Attack: 415
+    Attack2: 565
+    Defense: 5
+    MagicDefense: 50
+    Agi: 5
+    Vit: 35
+    Int: 15
+    Dex: 136
+    Luk: 30
+    AttackRange: 7
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Fish
+    Element: Poison
+    ElementLevel: 1
+    WalkSpeed: 400
+    AttackDelay: 832
+    AttackMotion: 500
+    DamageMotion: 600
+    Ai: 21
+    Drops:
+      - Item: Coral_Reef
+        Rate: 4850
+      - Item: Tentacle
+        Rate: 8000
+      - Item: Sticky_Mucus
+        Rate: 7000
+      - Item: Panacea
+        Rate: 200
+      - Item: Violet_Jewel
+        Rate: 15
+      - Item: Katar_Of_Raging_Blaze
+        Rate: 5
+      - Item: Red_Gemstone
+        Rate: 550
+      - Item: Penomena_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1112
+    AegisName: DRAKE
+    Name: Drake
+    Level: 70
+    Hp: 326666
+    BaseExp: 28600
+    JobExp: 22880
+    MvpExp: 14300
+    Attack: 1800
+    Attack2: 2100
+    Defense: 20
+    MagicDefense: 35
+    Str: 85
+    Agi: 80
+    Vit: 49
+    Int: 75
+    Dex: 79
+    Luk: 50
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 1
+    WalkSpeed: 400
+    AttackDelay: 620
+    AttackMotion: 420
+    DamageMotion: 360
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: White_Potion
+        Rate: 5000
+      - Item: Violet_Jewel
+        Rate: 500
+    Drops:
+      - Item: Saber_
+        Rate: 600
+      - Item: Ring_Pommel_Saber_
+        Rate: 950
+      - Item: Cutlas
+        Rate: 150
+      - Item: Hae_Dong_Gum_
+        Rate: 400
+      - Item: Corsair
+        Rate: 350
+      - Item: Elunium
+        Rate: 3200
+      - Item: Krasnaya
+        Rate: 100
+      - Item: Drake_Card
+        Rate: 1
+        StealProtected: true

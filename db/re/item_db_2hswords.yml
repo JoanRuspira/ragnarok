@@ -399,3 +399,28 @@ Body:
       bonus bCritical,10;
       if (readparam(bStr)>=80)
          bonus bBreakArmorRate,500;
+  - Id: 1189
+    AegisName: Krasnaya
+    Name: Krasnaya
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 20
+    Weight: 3800
+    Attack: 200
+    Range: 2
+    Slots: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 50
+    Refineable: true
+    Script: |
+      if (readparam(bStr)>=95) {
+         bonus bBaseAtk,20;
+      }

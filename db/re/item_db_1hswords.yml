@@ -891,3 +891,31 @@ Body:
     Refineable: true
     Script: |
       bonus bAtkEle,Ele_Fire;
+  - Id: 1135
+    AegisName: Cutlas
+    Name: Cutlus
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 20
+    Weight: 900
+    Attack: 150
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 40
+    Refineable: true
+    Script: |
+      skill "SM_BASH",5;
+      bonus bStr,2;
+      bonus bDef,1;
