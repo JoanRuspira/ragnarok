@@ -865,3 +865,29 @@ Body:
       bonus3 bSPVanishRate,3,30,BF_WEAPON;
       bonus bSPDrainValue,-1;
       bonus bUnbreakableWeapon;
+  - Id: 1136
+    AegisName: Solar_Sword
+    Name: Solar Sword
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 20
+    Weight: 1200
+    Attack: 85
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 40
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Fire;

@@ -621,3 +621,25 @@ Body:
       }
       bonus2 bSkillVariableCast,"SK_WZ_PSYCHICWAVE",-3000;
       bonus2 bSkillUseSP,"SK_WZ_PSYCHICWAVE",-60;
+  - Id: 1625
+    AegisName: Healing_Staff
+    Name: Healing Staff
+    Type: Weapon
+    SubType: Staff
+    Buy: 20
+    Weight: 400
+    Attack: 10
+    MagicAttack: 105
+    Range: 1
+    Jobs:
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Holy;
+      bonus bHealPower,(getrefine()/2)*3;

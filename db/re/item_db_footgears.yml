@@ -133,17 +133,6 @@ Body:
     Script: |
       bonus bMdef,10;
       bonus bLuk,5;
-  - Id: 2408
-    AegisName: Cuffs
-    Name: Shackles
-    Type: Armor
-    Buy: 5000
-    Weight: 3000
-    Defense: 18
-    Locations:
-      Shoes: true
-    ArmorLevel: 1
-    Refineable: true
   - Id: 2409
     AegisName: Spiky_Heel
     Name: High Heels

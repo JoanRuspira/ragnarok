@@ -543,6 +543,14 @@ Body:
     Weight: 100
     Flags:
       BuyingStore: true
+  - Id: 7006
+    AegisName: Wing_Of_Red_Bat
+    Name: Wing of Red Bat
+    Type: Etc
+    Buy: 168
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 729
     AegisName: Bluish_Green_Jewel
     Name: Zircon
@@ -867,6 +875,30 @@ Body:
     Type: Etc
     Buy: 200
     Weight: 200
+    Flags:
+      BuyingStore: true
+  - Id: 7121
+    AegisName: Honey_Jar
+    Name: Honey Pot
+    Type: Etc
+    Buy: 622
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7110
+    AegisName: Vroken_Sword
+    Name: Broken Sword
+    Type: Etc
+    Buy: 588
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7211
+    AegisName: Rojerta_Piece
+    Name: Fragment of Rossata Stone
+    Type: Etc
+    Buy: 2600
+    Weight: 10
     Flags:
       BuyingStore: true
   - Id: 1011
@@ -1405,6 +1437,22 @@ Body:
     Type: Etc
     Buy: 3000
     Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 7114
+    AegisName: Tutankhamen's_Mask
+    Name: Masque of Tutankhamen
+    Type: Etc
+    Buy: 10
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7113
+    AegisName: Broken_Pharaoh_Symbol
+    Name: Broken Pharaoh Emblem
+    Type: Etc
+    Buy: 2016
+    Weight: 10
     Flags:
       BuyingStore: true
   - Id: 930

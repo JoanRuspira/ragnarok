@@ -9936,3 +9936,924 @@ Body:
       - Item: Maya_Card
         Rate: 1
         StealProtected: true
+  - Id: 1005
+    AegisName: FARMILIAR
+    Name: Familiar
+    Level: 8
+    Hp: 155
+    BaseExp: 28
+    JobExp: 15
+    Attack: 20
+    Attack2: 28
+    Agi: 12
+    Vit: 8
+    Int: 5
+    Dex: 28
+    Luk: 0
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Brute
+    Element: Dark
+    ElementLevel: 1
+    WalkSpeed: 150
+    AttackDelay: 1276
+    AttackMotion: 576
+    DamageMotion: 384
+    Ai: 04
+    Drops:
+      - Item: Tooth_Of_Bat
+        Rate: 5500
+      - Item: Falchion_
+        Rate: 20
+      - Item: Ribbon_
+        Rate: 15
+      - Item: Grape
+        Rate: 100
+      - Item: Red_Herb
+        Rate: 700
+      - Item: Center_Potion
+        Rate: 50
+      - Item: Farmiliar_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1111
+    AegisName: DRAINLIAR
+    Name: Drainliar
+    Level: 24
+    Hp: 1162
+    BaseExp: 431
+    JobExp: 176
+    Attack: 74
+    Attack2: 84
+    Agi: 36
+    Vit: 24
+    Int: 0
+    Dex: 78
+    Luk: 0
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Brute
+    Element: Dark
+    ElementLevel: 2
+    WalkSpeed: 250
+    AttackDelay: 1276
+    AttackMotion: 576
+    DamageMotion: 384
+    Ai: 09
+    Drops:
+      - Item: Emveretarcon
+        Rate: 60
+      - Item: Tooth_Of_Bat
+        Rate: 3000
+      - Item: Red_Jewel
+        Rate: 20
+      - Item: Red_Herb
+        Rate: 1000
+      - Item: Wing_Of_Red_Bat
+        Rate: 5500
+      - Item: Wing_Of_Red_Bat
+        Rate: 1500
+      - Item: Oridecon_Stone
+        Rate: 40
+      - Item: Drainliar_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1041
+    AegisName: MUMMY
+    Name: Mummy
+    Level: 37
+    Hp: 5176
+    BaseExp: 800
+    JobExp: 602
+    Attack: 305
+    Attack2: 360
+    MagicDefense: 10
+    Str: 28
+    Agi: 19
+    Vit: 32
+    Int: 0
+    Dex: 63
+    Luk: 20
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 2
+    WalkSpeed: 300
+    AttackDelay: 1772
+    AttackMotion: 72
+    DamageMotion: 384
+    Ai: 04
+    Drops:
+      - Item: Rotten_Bandage
+        Rate: 9000
+      - Item: Oridecon_Stone
+        Rate: 100
+      - Item: Mementos
+        Rate: 550
+      - Item: Glove
+        Rate: 10
+      - Item: Panacea
+        Rate: 250
+      - Item: Yellow_Herb
+        Rate: 850
+      - Item: Mummy_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1029
+    AegisName: ISIS
+    Name: Isis
+    Level: 47
+    Hp: 7003
+    BaseExp: 3709
+    JobExp: 1550
+    Attack: 423
+    Attack2: 507
+    Defense: 10
+    MagicDefense: 35
+    Str: 38
+    Agi: 65
+    Vit: 43
+    Int: 50
+    Dex: 66
+    Luk: 15
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Dark
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1384
+    AttackMotion: 768
+    DamageMotion: 336
+    Ai: 09
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Scales_Shell
+        Rate: 5335
+      - Item: Circlet_
+        Rate: 5
+      - Item: Necklace
+        Rate: 10
+      - Item: Crystal_Jewel___
+        Rate: 150
+      - Item: Crystal_Jewel__
+        Rate: 20
+      - Item: Shining_Scales
+        Rate: 1000
+      - Item: Crystal_Jewel_
+        Rate: 5
+      - Item: Isis_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1028
+    AegisName: SOLDIER_SKELETON
+    Name: Soldier Skeleton
+    Level: 29
+    Hp: 2334
+    BaseExp: 372
+    JobExp: 226
+    Attack: 221
+    Attack2: 245
+    Defense: 10
+    MagicDefense: 15
+    Agi: 15
+    Vit: 22
+    Int: 5
+    Dex: 40
+    Luk: 15
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 2276
+    AttackMotion: 576
+    DamageMotion: 432
+    Ai: 04
+    Drops:
+      - Item: Skel_Bone
+        Rate: 5500
+      - Item: Oridecon_Stone
+        Rate: 60
+      - Item: Dagger_
+        Rate: 12
+      - Item: Red_Herb
+        Rate: 700
+      - Item: Mementos
+        Rate: 10
+      - Item: Knife_
+        Rate: 150
+      - Item: Stiletto
+        Rate: 50
+      - Item: Soldier_Skeleton_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1016
+    AegisName: ARCHER_SKELETON
+    Name: Archer Skeleton
+    Level: 31
+    Hp: 3040
+    BaseExp: 483
+    JobExp: 283
+    Attack: 128
+    Attack2: 153
+    Agi: 8
+    Vit: 14
+    Int: 5
+    Dex: 90
+    Luk: 5
+    AttackRange: 9
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 1
+    WalkSpeed: 300
+    AttackDelay: 2864
+    AttackMotion: 864
+    DamageMotion: 576
+    Ai: 05
+    Drops:
+      - Item: Skel_Bone
+        Rate: 4500
+      - Item: Oridecon_Stone
+        Rate: 70
+      - Item: Apple_Of_Archer
+        Rate: 5
+      - Item: Great_Bow_
+        Rate: 35
+      - Item: Fire_Arrow
+        Rate: 1000
+      - Item: Red_Herb
+        Rate: 1800
+      - Item: Bow_
+        Rate: 150
+      - Item: Archer_Skeleton_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1191
+    AegisName: MIMIC
+    Name: Mimic
+    Level: 51
+    Hp: 6120
+    Sp: 182
+    BaseExp: 165
+    JobExp: 165
+    Attack: 150
+    Attack2: 900
+    Defense: 10
+    MagicDefense: 40
+    Str: 44
+    Agi: 121
+    Int: 60
+    Dex: 75
+    Luk: 110
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 100
+    AttackDelay: 972
+    AttackMotion: 500
+    DamageMotion: 288
+    Ai: 09
+    Drops:
+      - Item: Old_Violet_Box
+        Rate: 5
+      - Item: Old_Blue_Box
+        Rate: 45
+      - Item: Emperium
+        Rate: 3
+      - Item: Rosary_
+        Rate: 1
+      - Item: Elunium_Stone
+        Rate: 270
+      - Item: Mimic_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1146
+    AegisName: MATYR
+    Name: Matyr
+    Level: 31
+    Hp: 2585
+    BaseExp: 967
+    JobExp: 407
+    Attack: 134
+    Attack2: 160
+    Agi: 47
+    Vit: 38
+    Int: 5
+    Dex: 64
+    Luk: 5
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Brute
+    Element: Dark
+    ElementLevel: 1
+    WalkSpeed: 150
+    AttackDelay: 432
+    AttackMotion: 432
+    DamageMotion: 360
+    Ai: 09
+    Drops:
+      - Item: Matyr's_Flea_Guard
+        Rate: 10
+      - Item: Monster's_Feed
+        Rate: 5000
+      - Item: Animal's_Skin
+        Rate: 5500
+      - Item: Elunium_Stone
+        Rate: 100
+      - Item: Grape
+        Rate: 200
+      - Item: Matyr_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1032
+    AegisName: VERIT
+    Name: Verit
+    Level: 38
+    Hp: 5272
+    BaseExp: 835
+    JobExp: 517
+    Attack: 389
+    Attack2: 469
+    MagicDefense: 5
+    Agi: 19
+    Vit: 38
+    Int: 0
+    Dex: 38
+    Luk: 20
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 1
+    WalkSpeed: 250
+    AttackDelay: 2468
+    AttackMotion: 768
+    DamageMotion: 480
+    Ai: 02
+    Drops:
+      - Item: Immortal_Heart
+        Rate: 9000
+      - Item: Zargon
+        Rate: 700
+      - Item: Rotten_Bandage
+        Rate: 1100
+      - Item: White_Herb
+        Rate: 600
+      - Item: Skul_Ring
+        Rate: 10
+      - Item: Flower_Ring
+        Rate: 10
+      - Item: Verit_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1297
+    AegisName: ANCIENT_MUMMY
+    Name: Ancient Mummy
+    Level: 64
+    Hp: 9999
+    BaseExp: 8040
+    JobExp: 3499
+    Attack: 836
+    Attack2: 1129
+    Defense: 27
+    MagicDefense: 27
+    Str: 28
+    Agi: 19
+    Vit: 32
+    Int: 5
+    Dex: 83
+    Luk: 35
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 2
+    WalkSpeed: 175
+    AttackDelay: 1772
+    AttackMotion: 120
+    DamageMotion: 384
+    Ai: 21
+    Drops:
+      - Item: Rotten_Bandage
+        Rate: 4413
+      - Item: Mementos
+        Rate: 1800
+      - Item: Glove_
+        Rate: 20
+      - Item: Silver_Ring
+        Rate: 50
+      - Item: Yellow_Herb
+        Rate: 650
+      - Item: Oridecon_Stone
+        Rate: 150
+      - Item: Elunium_Stone
+        Rate: 100
+      - Item: Ancient_Mummy_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1038
+    AegisName: OSIRIS
+    Name: Osiris
+    Level: 78
+    Hp: 415400
+    BaseExp: 71500
+    JobExp: 28600
+    MvpExp: 35750
+    Attack: 780
+    Attack2: 2880
+    Defense: 10
+    MagicDefense: 25
+    Agi: 75
+    Vit: 30
+    Int: 37
+    Dex: 86
+    Luk: 40
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 1072
+    AttackMotion: 672
+    DamageMotion: 384
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Old_Blue_Box
+        Rate: 4000
+      - Item: Seed_Of_Yggdrasil
+        Rate: 3000
+      - Item: Osiris_Doll
+        Rate: 500
+    Drops:
+      - Item: Old_Violet_Box
+        Rate: 2000
+      - Item: Assasin_Dagger
+        Rate: 150
+      - Item: Crown
+        Rate: 200
+      - Item: Jamadhar_
+        Rate: 600
+      - Item: Sacred_Marks
+        Rate: 1000
+      - Item: Spinx_Helm
+        Rate: 150
+      - Item: Cakram
+        Rate: 100
+      - Item: Osiris_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1149
+    AegisName: MINOROUS
+    Name: Minorous
+    Level: 52
+    Hp: 7431
+    BaseExp: 2750
+    JobExp: 1379
+    Attack: 590
+    Attack2: 770
+    Defense: 15
+    MagicDefense: 5
+    Str: 65
+    Agi: 42
+    Vit: 61
+    Int: 66
+    Dex: 52
+    Luk: 25
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Brute
+    Element: Fire
+    ElementLevel: 2
+    WalkSpeed: 200
+    AttackDelay: 1360
+    AttackMotion: 960
+    DamageMotion: 432
+    Ai: 09
+    Drops:
+      - Item: Nose_Ring
+        Rate: 5335
+      - Item: Oridecon_Stone
+        Rate: 196
+      - Item: Two_Handed_Axe_
+        Rate: 2
+      - Item: Hammer_Of_Blacksmith
+        Rate: 300
+      - Item: Sweet_Potato
+        Rate: 1500
+      - Item: Axe_
+        Rate: 200
+      - Item: Lemon
+        Rate: 300
+      - Item: Minorous_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1194
+    AegisName: ARCLOUSE
+    Name: Arclouze
+    JapaneseName: Arclouse
+    Level: 59
+    Hp: 6075
+    BaseExp: 860
+    JobExp: 1000
+    Attack: 570
+    Attack2: 640
+    Defense: 10
+    MagicDefense: 15
+    Agi: 75
+    Vit: 5
+    Int: 5
+    Dex: 75
+    Luk: 50
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Insect
+    Element: Earth
+    ElementLevel: 2
+    WalkSpeed: 100
+    AttackDelay: 960
+    AttackMotion: 500
+    DamageMotion: 480
+    Ai: 09
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Round_Shell
+        Rate: 3500
+      - Item: Sticky_Mucus
+        Rate: 3000
+      - Item: Solid_Shell
+        Rate: 800
+      - Item: Zargon
+        Rate: 450
+      - Item: Red_Gemstone
+        Rate: 300
+      - Item: Great_Nature
+        Rate: 20
+      - Item: Zargon
+        Rate: 2500
+      - Item: Arclouse_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1511
+    AegisName: AMON_RA
+    Name: Amon Ra
+    Level: 88
+    Hp: 1214138
+    BaseExp: 87264
+    JobExp: 35891
+    MvpExp: 43632
+    Attack: 1647
+    Attack2: 2576
+    Defense: 26
+    MagicDefense: 52
+    Str: 0
+    Vit: 90
+    Int: 124
+    Dex: 74
+    Luk: 45
+    AttackRange: 3
+    SkillRange: 14
+    ChaseRange: 12
+    Size: Large
+    Race: Demihuman
+    Element: Earth
+    ElementLevel: 3
+    WalkSpeed: 170
+    AttackDelay: 854
+    AttackMotion: 2016
+    DamageMotion: 480
+    Ai: 10
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Yggdrasilberry
+        Rate: 5500
+      - Item: Seed_Of_Yggdrasil
+        Rate: 3500
+      - Item: Crystal_Jewel__
+        Rate: 5500
+    Drops:
+      - Item: Spinx_Helm
+        Rate: 150
+      - Item: Safety_Ring
+        Rate: 50
+      - Item: Rojerta_Piece
+        Rate: 7760
+      - Item: Elunium
+        Rate: 3880
+      - Item: Old_Card_Album
+        Rate: 400
+      - Item: Tablet
+        Rate: 500
+      - Item: Yggdrasilberry
+        Rate: 3000
+      - Item: Amon_Ra_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1164
+    AegisName: REQUIEM
+    Name: Requiem
+    Level: 35
+    Hp: 3089
+    BaseExp: 800
+    JobExp: 458
+    Attack: 220
+    Attack2: 272
+    MagicDefense: 15
+    Agi: 53
+    Vit: 35
+    Int: 5
+    Dex: 57
+    Luk: 2
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Dark
+    ElementLevel: 1
+    WalkSpeed: 400
+    AttackDelay: 1516
+    AttackMotion: 816
+    DamageMotion: 432
+    Ai: 04
+    Drops:
+      - Item: Old_Blue_Box
+        Rate: 35
+      - Item: Emperium
+        Rate: 1
+      - Item: Zargon
+        Rate: 2500
+      - Item: Horrendous_Mouth
+        Rate: 3500
+      - Item: Mementos
+        Rate: 1500
+      - Item: Mantle_
+        Rate: 10
+      - Item: Requiem_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1178
+    AegisName: ZEROM
+    Name: Zerom
+    Level: 23
+    Hp: 1109
+    BaseExp: 240
+    JobExp: 149
+    Attack: 127
+    Attack2: 155
+    MagicDefense: 10
+    Agi: 23
+    Vit: 23
+    Int: 5
+    Dex: 42
+    Luk: 0
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Fire
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1780
+    AttackMotion: 1080
+    DamageMotion: 432
+    Ai: 04
+    Drops:
+      - Item: Emveretarcon
+        Rate: 55
+      - Item: Iron
+        Rate: 190
+      - Item: Iron_Ore
+        Rate: 300
+      - Item: Iron_Ore
+        Rate: 300
+      - Item: Zerom_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1154
+    AegisName: PASANA
+    Name: Pasana
+    Level: 61
+    Hp: 8289
+    BaseExp: 4087
+    JobExp: 2135
+    Attack: 513
+    Attack2: 682
+    Defense: 29
+    MagicDefense: 35
+    Agi: 73
+    Vit: 50
+    Int: 61
+    Dex: 59
+    Luk: 43
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Fire
+    ElementLevel: 2
+    WalkSpeed: 165
+    AttackDelay: 976
+    AttackMotion: 576
+    DamageMotion: 288
+    Ai: 09
+    Drops:
+      - Item: Vroken_Sword
+        Rate: 4365
+      - Item: Honey_Jar
+        Rate: 2500
+      - Item: Elunium_Stone
+        Rate: 20
+      - Item: Falchion_
+        Rate: 500
+      - Item: Stiletto_
+        Rate: 150
+      - Item: Pasana_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1140
+    AegisName: MARDUK
+    Name: Marduk
+    Level: 40
+    Hp: 4214
+    BaseExp: 1238
+    JobExp: 752
+    Attack: 315
+    Attack2: 382
+    MagicDefense: 60
+    Agi: 40
+    Vit: 20
+    Int: 79
+    Dex: 78
+    Luk: 20
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demihuman
+    Element: Fire
+    ElementLevel: 1
+    WalkSpeed: 300
+    AttackDelay: 1540
+    AttackMotion: 840
+    DamageMotion: 504
+    Ai: 09
+    Drops:
+      - Item: Flame_Heart
+        Rate: 35
+      - Item: Sacred_Masque
+        Rate: 4365
+      - Item: Staff__
+        Rate: 10
+      - Item: Mitten_Of_Presbyter
+        Rate: 20
+      - Item: Blessed_Wand
+        Rate: 3
+      - Item: Marduk_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1098
+    AegisName: ANUBIS
+    Name: Anubis
+    Level: 75
+    Hp: 38000
+    BaseExp: 28000
+    JobExp: 22000
+    Attack: 530
+    Attack2: 1697
+    Defense: 25
+    MagicDefense: 31
+    Str: 5
+    Agi: 65
+    Vit: 10
+    Int: 82
+    Dex: 77
+    Luk: 33
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demihuman
+    Element: Undead
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 1250
+    AttackMotion: 768
+    DamageMotion: 360
+    Ai: 21
+    Drops:
+      - Item: Rotten_Bandage
+        Rate: 3000
+      - Item: Healing_Staff
+        Rate: 10
+      - Item: Mementos
+        Rate: 550
+      - Item: Oridecon
+        Rate: 105
+      - Item: Sacred_Masque
+        Rate: 4365
+      - Item: Mitten_Of_Presbyter
+        Rate: 20
+      - Item: Blessed_Wand
+        Rate: 3
+      - Item: Anubis_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1157
+    AegisName: PHARAOH
+    Name: Pharaoh
+    Level: 93
+    Hp: 445997
+    BaseExp: 114990
+    JobExp: 41899
+    MvpExp: 57495
+    Attack: 2267
+    Attack2: 3015
+    Defense: 67
+    MagicDefense: 70
+    Agi: 93
+    Vit: 100
+    Int: 104
+    Dex: 89
+    Luk: 112
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demihuman
+    Element: Dark
+    ElementLevel: 3
+    WalkSpeed: 125
+    AttackDelay: 868
+    AttackMotion: 768
+    DamageMotion: 288
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Yggdrasilberry
+        Rate: 5500
+      - Item: Royal_Jelly
+        Rate: 5000
+      - Item: Crystal_Jewel__
+        Rate: 5000
+    Drops:
+      - Item: Broken_Pharaoh_Symbol
+        Rate: 5820
+      - Item: Tutankhamen's_Mask
+        Rate: 2500
+      - Item: Solar_Sword
+        Rate: 100
+      - Item: Holy_Robe
+        Rate: 150
+      - Item: Gemmed_Crown
+        Rate: 500
+      - Item: Tablet
+        Rate: 300
+      - Item: Bazerald
+        Rate: 80
+      - Item: Pharaoh_Card
+        Rate: 1
+        StealProtected: true

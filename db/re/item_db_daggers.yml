@@ -1280,3 +1280,40 @@ Body:
     Refineable: true
     Script: |
       bonus bBreakWeaponRate,200;
+  - Id: 1231
+    AegisName: Bazerald
+    Name: Bazerald
+    Type: Weapon
+    SubType: Dagger
+    Buy: 20
+    Weight: 500
+    Attack: 70
+    MagicAttack: 105
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      KagerouOboro: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 36
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Fire;
+      bonus bInt,5;

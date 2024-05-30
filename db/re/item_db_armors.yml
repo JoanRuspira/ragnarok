@@ -676,17 +676,6 @@ Body:
     Refineable: true
     Script: |
       bonus bMdef,15;
-  - Id: 2339
-    AegisName: G_Strings
-    Name: Pantie
-    Type: Armor
-    Buy: 1000
-    Weight: 100
-    Defense: 22
-    Locations:
-      Armor: true
-    ArmorLevel: 1
-    Refineable: true
   - Id: 2340
     AegisName: Novice_Breast
     Name: Novice Breastplate

@@ -228,3 +228,27 @@ Body:
     Script: |
       .@r = getrefine();
       bonus bBaseAtk,(((BaseLevel-70)/10)*5)+(.@r<=15?pow(.@r,2):225);
+  - Id: 1285
+    AegisName: Cakram
+    Name: Chakram
+    Type: Weapon
+    SubType: Katar
+    Buy: 20
+    Weight: 1000
+    Attack: 130
+    Range: 1
+    Slots: 2
+    Jobs:
+      Assassin: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+    Script: |
+      if (getskilllv("SK_AS_KATAR") == 5) {
+         bonus bHit,10;
+      }
+      bonus2 bSkillAtk,"SK_AS_TRIPLE_SHURIKEN",20;
