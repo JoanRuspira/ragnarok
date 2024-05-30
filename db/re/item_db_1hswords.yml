@@ -836,3 +836,32 @@ Body:
       bonus bAgi,1;
       bonus bMaxHPrate,-5;
       bonus bUnbreakableWeapon;
+  - Id: 1141
+    AegisName: Immaterial_Sword
+    Name: Immaterial Sword
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 20
+    Weight: 900
+    Attack: 140
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 40
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Ghost;
+      bonus3 bSPVanishRate,3,30,BF_WEAPON;
+      bonus bSPDrainValue,-1;
+      bonus bUnbreakableWeapon;

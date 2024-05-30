@@ -430,6 +430,20 @@ Body:
       BuyingStore: true
     Script: |
       bonus bDex,2;
+  - Id: 4534
+    AegisName: Giant_Octopus_Card
+    Name: Giant Octopus Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Armor: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bMaxHPrate,12;
+      skill "SK_WZ_ICEBERG",5;
   - Id: 4035
     AegisName: Hydra_Card
     Name: Hydra Card

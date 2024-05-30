@@ -49,3 +49,31 @@ Body:
     Script: |
       bonus bInt,6;
       bonus bDex,2;
+  - Id: 2005
+    AegisName: Dea_Staff
+    Name: Dea Staff
+    Type: Weapon
+    SubType: 2hStaff
+    Buy: 20
+    Weight: 1000
+    Attack: 30
+    MagicAttack: 220
+    Range: 1
+    Slots: 1
+    Jobs:
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Holy;
+      bonus bMatkRate,getrefine()/2;
+      bonus bInt,6;
+      bonus bVit,2;
+      autobonus3 "{ }",20,1000,"AL_HEAL","{ specialeffect2 EF_MAGICALATTHIT; heal 0,200; }";

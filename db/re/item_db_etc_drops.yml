@@ -551,6 +551,14 @@ Body:
     Weight: 100
     Flags:
       BuyingStore: true
+  - Id: 7020
+    AegisName: Mother's_Nightmare
+    Name: Mother's Nightmare
+    Type: Etc
+    Buy: 20
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 730
     AegisName: Crystal_Jewel
     Name: 1carat Diamond
@@ -1759,11 +1767,43 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
+  - Id: 7070
+    AegisName: Broken_Shell
+    Name: Broken Shell
+    Type: Etc
+    Buy: 900
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7066
+    AegisName: Ice_Piece
+    Name: Ice Cubic
+    Type: Etc
+    Buy: 660
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7069
+    AegisName: Broken_Armor_Piece
+    Name: Destroyed Armor
+    Type: Etc
+    Buy: 1042
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 967
     AegisName: Turtle_Shell
     Name: Turtle Shell
     Type: Etc
     Buy: 680
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7068
+    AegisName: Burn_Tree
+    Name: Burnt Tree
+    Type: Etc
+    Buy: 722
     Weight: 10
     Flags:
       BuyingStore: true
@@ -4066,6 +4106,22 @@ Body:
     Name: Huge Leaf
     Type: Etc
     Buy: 610
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7300
+    AegisName: Gemstone
+    Name: Gemstone
+    Type: Etc
+    Buy: 1420
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7067
+    AegisName: Stone_Piece
+    Name: Stone Fragment
+    Type: Etc
+    Buy: 640
     Weight: 10
     Flags:
       BuyingStore: true

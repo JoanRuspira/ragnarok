@@ -2622,3 +2622,41 @@ Body:
       bonus bMdef,5;
       bonus2 bResEff,Eff_Stun,500;
       bonus2 bResEff,Eff_Bleeding,500;
+  - Id: 2234
+    AegisName: Tiara
+    Name: Tiara
+    Type: Armor
+    Buy: 20
+    Weight: 400
+    Defense: 7
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 45
+    Refineable: true
+    View: 19
+    Script: |
+      bonus bInt,2;
+  - Id: 2235
+    AegisName: Crown
+    Name: Crown
+    Type: Armor
+    Buy: 20
+    Weight: 400
+    Defense: 7
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 45
+    Refineable: true
+    View: 45
+    Script: |
+      bonus bInt,2;

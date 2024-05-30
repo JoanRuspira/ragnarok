@@ -1563,16 +1563,6 @@ Body:
       BuyingStore: true
     Script: |
       sc_start STATUS_ASPDPOTION2,1800000,0;
-  - Id: 658
-    AegisName: Union_Of_Tribe
-    Name: Union of Tribe
-    Type: Usable
-    Buy: 2
-    Weight: 500
-    Flags:
-      BuyingStore: true
-    Script: |
-      guildgetexp rand(600000,1200000);
   - Id: 659
     AegisName: Heart_Of_Her
     Name: Her Heart
