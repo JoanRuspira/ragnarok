@@ -676,6 +676,25 @@ Body:
     Refineable: true
     Script: |
       bonus bMdef,15;
+  - Id: 2347
+    AegisName: Water_Sprits_Armor_
+    Name: Saphien's Armor of Ocean
+    Type: Armor
+    Buy: 136000
+    Weight: 2200
+    Defense: 25
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    EquipLevelMin: 45
+    Refineable: true
+    Script: |
+      bonus bDefEle,Ele_Water;
   - Id: 2340
     AegisName: Novice_Breast
     Name: Novice Breastplate

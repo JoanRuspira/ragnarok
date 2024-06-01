@@ -239,3 +239,28 @@ Body:
       bonus bAtkEle,Ele_Wind;
       bonus bPerfectHitAddRate,25;
       bonus bHit,30;
+  - Id: 1422
+    AegisName: Hunting_Spear
+    Name: Hunting Spear
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 20
+    Weight: 4200
+    Attack: 180
+    Range: 3
+    Slots: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bIgnoreDefRace,RC_Brute;
+      bonus bIgnoreDefRace,RC_Player_Doram;
+      bonus3 bAutoSpell,"KN_SPEARBOOMERANG",5,100;

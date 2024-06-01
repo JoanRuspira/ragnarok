@@ -1004,6 +1004,21 @@ Body:
       BuyingStore: true
     Script: |
       bonus bVit,3;
+  - Id: 4525
+    AegisName: Kraken_Card
+    Name: Kraken Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Garment: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bFlee,10;
+      skill "SK_TF_HIDING",1;
+      skill "SK_AS_PHANTOMMENACE",5;
   - Id: 4079
     AegisName: Mantis_Card
     Name: Mantis Card

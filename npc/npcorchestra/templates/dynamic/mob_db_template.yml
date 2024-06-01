@@ -9503,7 +9503,7 @@ Body:
       - Item: Honey
         Rate: 850
       - Item: Chain_
-        Rate: 1
+        Rate: 15
       - Item: Solider_Card
         Rate: 1
         StealProtected: true
@@ -11570,5 +11570,543 @@ Body:
       - Item: Skul_Ring
         Rate: 30
       - Item: Skeleton_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1161
+    AegisName: PLANKTON
+    Name: Plankton
+    Level: 10
+    Hp: 354
+    BaseExp: 23
+    JobExp: 18
+    Attack: 26
+    Attack2: 31
+    MagicDefense: 5
+    Agi: 10
+    Vit: 10
+    Int: 0
+    Dex: 15
+    Luk: 0
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Plant
+    Element: Water
+    ElementLevel: 3
+    WalkSpeed: 400
+    AttackDelay: 2208
+    AttackMotion: 1008
+    DamageMotion: 324
+    Ai: 01
+    Drops:
+      - Item: Single_Cell
+        Rate: 9000
+      - Item: Garlet
+        Rate: 300
+      - Item: Sticky_Mucus
+        Rate: 700
+      - Item: Alchol
+        Rate: 4
+      - Item: Empty_Bottle
+        Rate: 1000
+      - Item: Center_Potion
+        Rate: 50
+      - Item: Plankton_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1141
+    AegisName: MARINA
+    Name: Marina
+    Level: 21
+    Hp: 2087
+    BaseExp: 218
+    JobExp: 140
+    Attack: 84
+    Attack2: 106
+    MagicDefense: 5
+    Agi: 21
+    Vit: 21
+    Int: 0
+    Dex: 36
+    Luk: 10
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Plant
+    Element: Water
+    ElementLevel: 2
+    WalkSpeed: 400
+    AttackDelay: 2280
+    AttackMotion: 1080
+    DamageMotion: 864
+    Ai: 01
+    Drops:
+      - Item: Single_Cell
+        Rate: 5000
+      - Item: Sticky_Mucus
+        Rate: 1500
+      - Item: Crystal_Blue
+        Rate: 45
+      - Item: Mistic_Frozen
+        Rate: 20
+      - Item: Blue_Gemstone
+        Rate: 200
+      - Item: Marina_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1066
+    AegisName: VADON
+    Name: Vadon
+    Level: 19
+    Hp: 1017
+    BaseExp: 135
+    JobExp: 85
+    Attack: 74
+    Attack2: 85
+    Defense: 20
+    Agi: 19
+    Vit: 16
+    Int: 10
+    Dex: 36
+    Luk: 15
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Fish
+    Element: Water
+    ElementLevel: 1
+    WalkSpeed: 300
+    AttackDelay: 1632
+    AttackMotion: 432
+    DamageMotion: 540
+    Ai: 17
+    Drops:
+      - Item: Crystal_Blue
+        Rate: 40
+      - Item: Nipper
+        Rate: 9000
+      - Item: Garlet
+        Rate: 3000
+      - Item: Padded_Armor_
+        Rate: 15
+      - Item: Solid_Shell
+        Rate: 100
+      - Item: Elunium_Stone
+        Rate: 40
+      - Item: Blue_Gemstone
+        Rate: 50
+      - Item: Vadon_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1144
+    AegisName: MARSE
+    Name: Marse
+    Level: 31
+    Hp: 5034
+    BaseExp: 586
+    JobExp: 370
+    Attack: 211
+    Attack2: 252
+    MagicDefense: 5
+    Agi: 31
+    Vit: 25
+    Int: 5
+    Dex: 52
+    Luk: 30
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Fish
+    Element: Water
+    ElementLevel: 2
+    WalkSpeed: 300
+    AttackDelay: 1956
+    AttackMotion: 756
+    DamageMotion: 528
+    Ai: 17
+    Drops:
+      - Item: Chinese_Ink
+        Rate: 9000
+      - Item: Tentacle
+        Rate: 3000
+      - Item: Blue_Gemstone
+        Rate: 200
+      - Item: Skyblue_Jewel
+        Rate: 10
+      - Item: Mistic_Frozen
+        Rate: 12
+      - Item: Penetration
+        Rate: 50
+      - Item: Grape
+        Rate: 300
+      - Item: Marse_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1044
+    AegisName: OBEAUNE
+    Name: Obeaune
+    Level: 31
+    Hp: 3952
+    BaseExp: 644
+    JobExp: 407
+    Attack: 141
+    Attack2: 165
+    MagicDefense: 40
+    Agi: 31
+    Vit: 31
+    Int: 55
+    Dex: 74
+    Luk: 85
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Fish
+    Element: Water
+    ElementLevel: 2
+    WalkSpeed: 200
+    AttackDelay: 1872
+    AttackMotion: 672
+    DamageMotion: 288
+    Ai: 09
+    Drops:
+      - Item: Mistic_Frozen
+        Rate: 19
+      - Item: Heart_Of_Mermaid
+        Rate: 9000
+      - Item: Saint_Robe_
+        Rate: 15
+      - Item: Skyblue_Jewel
+        Rate: 10
+      - Item: Fin
+        Rate: 500
+      - Item: Witherless_Rose
+        Rate: 30
+      - Item: Obeaune_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1158
+    AegisName: PHEN
+    Name: Phen
+    Level: 26
+    Hp: 3347
+    BaseExp: 357
+    JobExp: 226
+    Attack: 138
+    Attack2: 150
+    MagicDefense: 15
+    Agi: 26
+    Vit: 26
+    Int: 0
+    Dex: 88
+    Luk: 75
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Fish
+    Element: Water
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 2544
+    AttackMotion: 1344
+    DamageMotion: 1152
+    Ai: 17
+    Drops:
+      - Item: Fish_Tail
+        Rate: 5500
+      - Item: Sharp_Scale
+        Rate: 2000
+      - Item: Skyblue_Jewel
+        Rate: 5
+      - Item: Meat
+        Rate: 1000
+      - Item: Fin
+        Rate: 500
+      - Item: Oridecon_Stone
+        Rate: 25
+      - Item: Phen_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1142
+    AegisName: MARINE_SPHERE
+    Name: Marine Sphere
+    Level: 28
+    Hp: 3518
+    BaseExp: 461
+    JobExp: 284
+    Attack: 120
+    Attack2: 320
+    MagicDefense: 40
+    Agi: 28
+    Vit: 28
+    Int: 0
+    Dex: 33
+    Luk: 50
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Plant
+    Element: Water
+    ElementLevel: 2
+    WalkSpeed: 800
+    AttackDelay: 1201
+    AttackMotion: 1
+    DamageMotion: 1
+    Drops:
+      - Item: Tendon
+        Rate: 5000
+      - Item: Detonator
+        Rate: 2500
+      - Item: Chain_
+        Rate: 15
+      - Item: Skyblue_Jewel
+        Rate: 10
+      - Item: Blue_Gemstone
+        Rate: 150
+      - Item: Marine_Sphere_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1069
+    AegisName: SWORD_FISH
+    Name: Swordfish
+    Level: 30
+    Hp: 4299
+    BaseExp: 1251
+    JobExp: 638
+    Attack: 168
+    Attack2: 199
+    Defense: 5
+    MagicDefense: 20
+    Agi: 30
+    Vit: 30
+    Int: 41
+    Dex: 62
+    Luk: 30
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Fish
+    Element: Water
+    ElementLevel: 2
+    WalkSpeed: 200
+    AttackDelay: 1968
+    AttackMotion: 768
+    DamageMotion: 384
+    Ai: 04
+    Drops:
+      - Item: Mistic_Frozen
+        Rate: 15
+      - Item: Sharp_Scale
+        Rate: 9000
+      - Item: Oridecon_Stone
+        Rate: 33
+      - Item: Elunium_Stone
+        Rate: 50
+      - Item: Katana_
+        Rate: 25
+      - Item: Gill
+        Rate: 600
+      - Item: Sword_Fish_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1045
+    AegisName: MARC
+    Name: Marc
+    Level: 36
+    Hp: 6900
+    BaseExp: 988
+    JobExp: 625
+    Attack: 220
+    Attack2: 280
+    Defense: 5
+    MagicDefense: 10
+    Agi: 36
+    Vit: 36
+    Int: 20
+    Dex: 56
+    Luk: 30
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Fish
+    Element: Water
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 1272
+    AttackMotion: 72
+    DamageMotion: 480
+    Ai: 04
+    Drops:
+      - Item: Mistic_Frozen
+        Rate: 18
+      - Item: Gill
+        Rate: 9000
+      - Item: Oridecon_Stone
+        Rate: 95
+      - Item: Fin
+        Rate: 1000
+      - Item: Skyblue_Jewel
+        Rate: 10
+      - Item: Blue_Gemstone
+        Rate: 200
+      - Item: White_Herb
+        Rate: 700
+      - Item: Marc_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1065
+    AegisName: STROUF
+    Name: Strouf
+    Level: 48
+    Hp: 11990
+    BaseExp: 3080
+    JobExp: 2098
+    Attack: 200
+    Attack2: 1250
+    Defense: 5
+    MagicDefense: 50
+    Agi: 40
+    Vit: 45
+    Int: 92
+    Dex: 43
+    Luk: 65
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Fish
+    Element: Water
+    ElementLevel: 3
+    WalkSpeed: 150
+    AttackDelay: 1872
+    AttackMotion: 672
+    DamageMotion: 384
+    Ai: 04
+    Drops:
+      - Item: Fin
+        Rate: 5335
+      - Item: Oridecon_Stone
+        Rate: 115
+      - Item: Trident_
+        Rate: 20
+      - Item: Feather
+        Rate: 3000
+      - Item: Skyblue_Jewel
+        Rate: 20
+      - Item: Gill
+        Rate: 1500
+      - Item: Strouf_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1108
+    AegisName: DEVIACE
+    Name: Deviace
+    Level: 47
+    Hp: 20090
+    BaseExp: 9988
+    JobExp: 7207
+    Attack: 514
+    Attack2: 1024
+    Defense: 10
+    MagicDefense: 20
+    Agi: 47
+    Vit: 62
+    Int: 48
+    Dex: 62
+    Luk: 25
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Fish
+    Element: Water
+    ElementLevel: 4
+    WalkSpeed: 400
+    AttackDelay: 1680
+    AttackMotion: 480
+    DamageMotion: 384
+    Ai: 17
+    Drops:
+      - Item: Mistic_Frozen
+        Rate: 25
+      - Item: Tooth_Of_Ancient_Fish
+        Rate: 9000
+      - Item: Lip_Of_Ancient_Fish
+        Rate: 1000
+      - Item: Detrimindexta
+        Rate: 200
+      - Item: Katar_Of_Cold_Icicle
+        Rate: 13
+      - Item: Oridecon_Stone
+        Rate: 161
+      - Item: Deviace_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 2202
+    AegisName: KRAKEN
+    Name: Kraken
+    Level: 124
+    Hp: 5602800
+    BaseExp: 983332
+    JobExp: 1057222
+    MvpExp: 491666
+    Attack: 3823
+    Attack2: 1830
+    Defense: 55
+    MagicDefense: 229
+    Str: 196
+    Agi: 99
+    Vit: 165
+    Int: 117
+    Dex: 162
+    Luk: 99
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Fish
+    Element: Water
+    ElementLevel: 4
+    WalkSpeed: 130
+    AttackDelay: 432
+    AttackMotion: 864
+    ClientAttackMotion: 480
+    DamageMotion: 360
+    DamageTaken: 10
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Yggdrasilberry
+        Rate: 5500
+      - Item: Old_Violet_Box
+        Rate: 2250
+      - Item: Old_Card_Album
+        Rate: 450
+    Drops:
+      - Item: Tentacle
+        Rate: 2500
+      - Item: Cardo
+        Rate: 250
+      - Item: Ice_Falchon
+        Rate: 250
+      - Item: Hunting_Spear
+        Rate: 250
+      - Item: Water_Sprits_Armor_
+        Rate: 250
+      - Item: Treasure_Box
+        Rate: 2500
+      - Item: Mistic_Frozen
+        Rate: 250
+      - Item: Kraken_Card
         Rate: 1
         StealProtected: true

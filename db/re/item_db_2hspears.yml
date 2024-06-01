@@ -412,3 +412,25 @@ Body:
       bonus2 bAddRace,RC_Demon,20;
       bonus2 bAddEff2,Eff_Confusion,1000;
       bonus bHPGainValue,50;
+  - Id: 1484
+    AegisName: Cardo
+    Name: Cardo
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 20
+    Weight: 5600
+    Attack: 150
+    Range: 3
+    Slots: 1
+    Jobs:
+      Knight: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bAspdRate,-10;
+      bonus bDef,getrefine()/2;
