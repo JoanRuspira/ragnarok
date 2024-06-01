@@ -965,6 +965,24 @@ Body:
     View: 105
     Script: |
       bonus bVit,1;
+  - Id: 2277
+    AegisName: Nurse_Cap
+    Name: Nurse Cap
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 4
+    Jobs:
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 64
+    Script: |
+      bonus bInt,1;
   - Id: 5075
     AegisName: Cowboy_Hat
     Name: Cowboy Hat

@@ -1317,3 +1317,39 @@ Body:
     Script: |
       bonus bAtkEle,Ele_Fire;
       bonus bInt,5;
+  - Id: 1234
+    AegisName: Moonlight_Sword
+    Name: Moonlight Dagger
+    Type: Weapon
+    SubType: Dagger
+    Buy: 20
+    Weight: 700
+    Attack: 50
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      KagerouOboro: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 36
+    Refineable: true
+    Script: |
+      bonus bMaxSPrate,10;
+      bonus bSPDrainValue,3;

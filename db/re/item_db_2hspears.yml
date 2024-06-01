@@ -385,3 +385,30 @@ Body:
       bonus bAtkEle,Ele_Wind;
       bonus2 bAddEff,Eff_Silence,200;
       bonus3 bAutoSpell,"SK_WZ_THUNDERSTORM",3,100;
+  - Id: 1477
+    AegisName: Spectral_Spear
+    Name: Spectral Spear
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 20
+    Weight: 2000
+    Attack: 170
+    Range: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 75
+    Refineable: true
+    Script: |
+      bonus2 bSubRace,RC_Undead,10;
+      bonus2 bSubRace,RC_Demon,10;
+      bonus2 bSubEle,Ele_Dark,10;
+      bonus2 bAddEle,Ele_Dark,20;
+      bonus2 bAddEle,Ele_Undead,20;
+      bonus2 bAddRace,RC_Demon,20;
+      bonus2 bAddEff2,Eff_Confusion,1000;
+      bonus bHPGainValue,50;

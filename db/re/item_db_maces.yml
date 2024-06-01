@@ -738,3 +738,23 @@ Body:
       bonus bCritical,40;
       bonus bDefRate,-66;
       bonus bDef2Rate,-66;
+  - Id: 1525
+    AegisName: Long_Mace
+    Name: Long Mace
+    Type: Weapon
+    SubType: Mace
+    Buy: 20
+    Weight: 800
+    Attack: 135
+    Range: 3
+    Jobs:
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 40
+    Refineable: true
+    Script: |
+      bonus bLongAtkDef,10;

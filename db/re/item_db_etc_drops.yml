@@ -2081,6 +2081,14 @@ Body:
     Weight: 50
     Flags:
       BuyingStore: true
+  - Id: 7014
+    AegisName: Old_Portrait
+    Name: Old Portrait
+    Type: Etc
+    Buy: 1500
+    Weight: 100
+    Flags:
+      BuyingStore: true
   - Id: 991
     AegisName: Crystal_Blue
     Name: Crystal Blue

@@ -643,3 +643,28 @@ Body:
     Script: |
       bonus bAtkEle,Ele_Holy;
       bonus bHealPower,(getrefine()/2)*3;
+  - Id: 1648
+    AegisName: Staff_Of_Bordeaux
+    Name: Staff Of Bordeaux
+    Type: Weapon
+    SubType: Staff
+    Buy: 20
+    Weight: 500
+    Attack: 30
+    MagicAttack: 170
+    Range: 1
+    Jobs:
+      Mage: true
+      Sage: true
+      Wizard: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 50
+    Refineable: true
+    Script: |
+      bonus bInt,3;
+      bonus bDex,3;
+      bonus bUseSPrate,-15;

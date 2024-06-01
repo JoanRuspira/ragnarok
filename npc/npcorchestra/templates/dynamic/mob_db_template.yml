@@ -11086,3 +11086,489 @@ Body:
       - Item: Drake_Card
         Rate: 1
         StealProtected: true
+  - Id: 1015
+    AegisName: ZOMBIE
+    Name: Zombie
+    Level: 15
+    Hp: 534
+    BaseExp: 50
+    JobExp: 33
+    Attack: 67
+    Attack2: 79
+    MagicDefense: 10
+    Agi: 8
+    Vit: 7
+    Int: 0
+    Dex: 15
+    Luk: 0
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 1
+    WalkSpeed: 400
+    AttackDelay: 2612
+    AttackMotion: 912
+    DamageMotion: 288
+    Ai: 04
+    Drops:
+      - Item: Decayed_Nail
+        Rate: 9000
+      - Item: Cardinal_Jewel_
+        Rate: 5
+      - Item: Sticky_Mucus
+        Rate: 1000
+      - Item: Horrendous_Mouth
+        Rate: 50
+      - Item: White_Jewel
+        Rate: 70
+      - Item: Zombie_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1116
+    AegisName: EGGYRA
+    Name: Eggyra
+    Level: 24
+    Hp: 633
+    BaseExp: 215
+    JobExp: 220
+    Attack: 85
+    Attack2: 107
+    Defense: 20
+    MagicDefense: 25
+    Agi: 36
+    Vit: 24
+    Int: 0
+    Dex: 32
+    Luk: 0
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Ghost
+    ElementLevel: 2
+    WalkSpeed: 200
+    AttackDelay: 1816
+    AttackMotion: 816
+    DamageMotion: 288
+    Ai: 17
+    Drops:
+      - Item: Scell
+        Rate: 1000
+      - Item: Egg_Shell
+        Rate: 20
+      - Item: Piece_Of_Egg_Shell
+        Rate: 550
+      - Item: Red_Herb
+        Rate: 1000
+      - Item: Center_Potion
+        Rate: 250
+      - Item: Elunium_Stone
+        Rate: 57
+      - Item: Eggyra_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1026
+    AegisName: MUNAK
+    Name: Munak
+    Level: 30
+    Hp: 2872
+    BaseExp: 601
+    JobExp: 318
+    Attack: 150
+    Attack2: 230
+    Agi: 15
+    Vit: 20
+    Int: 5
+    Dex: 46
+    Luk: 15
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 2468
+    AttackMotion: 768
+    DamageMotion: 288
+    Ai: 04
+    Drops:
+      - Item: Danggie
+        Rate: 9000
+      - Item: Munak_Turban
+        Rate: 20
+      - Item: Shoes_
+        Rate: 15
+      - Item: Ninja_Suit
+        Rate: 10
+      - Item: Adventure_Suit
+        Rate: 100
+      - Item: Girl's_Diary
+        Rate: 15
+      - Item: Munak_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1188
+    AegisName: BON_GUN
+    Name: Bongun
+    Level: 32
+    Hp: 3520
+    BaseExp: 424
+    JobExp: 242
+    Attack: 220
+    Attack2: 260
+    Str: 45
+    Agi: 15
+    Vit: 36
+    Int: 10
+    Dex: 48
+    Luk: 15
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1720
+    AttackMotion: 500
+    DamageMotion: 420
+    Ai: 09
+    Drops:
+      - Item: Short_Daenggie
+        Rate: 5500
+      - Item: Old_Portrait
+        Rate: 400
+      - Item: Bongun_Hat
+        Rate: 15
+      - Item: Yellow_Herb
+        Rate: 1000
+      - Item: Yellow_Herb
+        Rate: 1250
+      - Item: Bon_Gun_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1170
+    AegisName: SOHEE
+    Name: Sohee
+    Level: 33
+    Hp: 5628
+    BaseExp: 739
+    JobExp: 455
+    Attack: 210
+    Attack2: 251
+    MagicDefense: 10
+    Agi: 33
+    Vit: 33
+    Int: 10
+    Dex: 58
+    Luk: 15
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Water
+    ElementLevel: 1
+    WalkSpeed: 250
+    AttackDelay: 2112
+    AttackMotion: 912
+    DamageMotion: 576
+    Ai: 17
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Long_Hair
+        Rate: 9000
+      - Item: Skirt_Of_Virgin
+        Rate: 500
+      - Item: Nurse_Cap
+        Rate: 20
+      - Item: Muffler_
+        Rate: 15
+      - Item: Stiletto_
+        Rate: 15
+      - Item: Red_Herb
+        Rate: 1000
+      - Item: Sohee_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1129
+    AegisName: HORONG
+    Name: Horong
+    Level: 34
+    Hp: 1939
+    BaseExp: 786
+    JobExp: 479
+    Attack: 275
+    Attack2: 327
+    Defense: 99
+    MagicDefense: 50
+    Agi: 34
+    Vit: 10
+    Int: 0
+    Dex: 50
+    Luk: 0
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Formless
+    Element: Fire
+    ElementLevel: 4
+    WalkSpeed: 400
+    AttackDelay: 1888
+    AttackMotion: 1152
+    DamageMotion: 828
+    Ai: 13
+    Drops:
+      - Item: Stone_Heart
+        Rate: 6500
+      - Item: Zargon
+        Rate: 500
+      - Item: Elunium_Stone
+        Rate: 118
+      - Item: Alchol
+        Rate: 50
+      - Item: Horong_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1110
+    AegisName: DOKEBI
+    Name: Dokebi
+    Level: 33
+    Hp: 2697
+    BaseExp: 889
+    JobExp: 455
+    Attack: 197
+    Attack2: 249
+    MagicDefense: 10
+    Str: 50
+    Agi: 50
+    Vit: 40
+    Int: 35
+    Dex: 69
+    Luk: 40
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Demon
+    Element: Dark
+    ElementLevel: 1
+    WalkSpeed: 250
+    AttackDelay: 1156
+    AttackMotion: 456
+    DamageMotion: 384
+    Ai: 17
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Dokkaebi_Horn
+        Rate: 9000
+      - Item: Elunium_Stone
+        Rate: 150
+      - Item: Sword_Mace_
+        Rate: 20
+      - Item: Mighty_Staff
+        Rate: 10
+      - Item: Gold
+        Rate: 10
+      - Item: Club_
+        Rate: 300
+      - Item: Dokebi_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1301
+    AegisName: AM_MUT
+    Name: Am Mut
+    Level: 61
+    Hp: 12099
+    BaseExp: 7709
+    JobExp: 2690
+    Attack: 1040
+    Attack2: 1121
+    Defense: 50
+    MagicDefense: 10
+    Str: 50
+    Agi: 65
+    Vit: 40
+    Int: 35
+    Dex: 83
+    Luk: 45
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Demon
+    Element: Dark
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1156
+    AttackMotion: 456
+    DamageMotion: 384
+    Ai: 21
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Dokkaebi_Horn
+        Rate: 4550
+      - Item: Elunium_Stone
+        Rate: 250
+      - Item: Sword_Mace_
+        Rate: 30
+      - Item: Gold
+        Rate: 50
+      - Item: Old_Card_Album
+        Rate: 10
+      - Item: Glass_Bead
+        Rate: 250
+      - Item: Am_Mut_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1307
+    AegisName: CAT_O_NINE_TAIL
+    Name: Cat o' Nine Tails
+    Level: 76
+    Hp: 64512
+    BaseExp: 10869
+    JobExp: 4283
+    Attack: 1112
+    Attack2: 1275
+    Defense: 61
+    MagicDefense: 55
+    Str: 55
+    Agi: 75
+    Vit: 55
+    Int: 82
+    Dex: 86
+    Luk: 120
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Fire
+    ElementLevel: 3
+    WalkSpeed: 155
+    AttackDelay: 1276
+    AttackMotion: 576
+    DamageMotion: 288
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Elunium
+        Rate: 800
+      - Item: Oridecon
+        Rate: 1000
+      - Item: Gold
+        Rate: 60
+      - Item: Old_Violet_Box
+        Rate: 40
+      - Item: Cat_O_Nine_Tail_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1150
+    AegisName: MOONLIGHT
+    Name: Moonlight Flower
+    Level: 67
+    Hp: 120000
+    BaseExp: 27500
+    JobExp: 14300
+    MvpExp: 13750
+    Attack: 1200
+    Attack2: 1700
+    Defense: 10
+    MagicDefense: 55
+    Str: 55
+    Agi: 99
+    Vit: 55
+    Int: 82
+    Dex: 95
+    Luk: 120
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Fire
+    ElementLevel: 3
+    WalkSpeed: 150
+    AttackDelay: 1276
+    AttackMotion: 576
+    DamageMotion: 288
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Fox_Tail
+        Rate: 5000
+      - Item: White_Potion
+        Rate: 1500
+      - Item: Golden_Jewel
+        Rate: 500
+    Drops:
+      - Item: Spectral_Spear
+        Rate: 500
+      - Item: Moonlight_Sword
+        Rate: 100
+      - Item: Long_Mace
+        Rate: 150
+      - Item: Elunium
+        Rate: 2600
+      - Item: Staff_Of_Bordeaux
+        Rate: 100
+      - Item: Moonlight_Flower_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1076
+    AegisName: SKELETON
+    Name: Skeleton
+    Level: 10
+    Hp: 234
+    BaseExp: 18
+    JobExp: 14
+    Attack: 39
+    Attack2: 47
+    Defense: 10
+    MagicDefense: 10
+    Agi: 5
+    Vit: 10
+    Int: 0
+    Dex: 12
+    Luk: 0
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 2228
+    AttackMotion: 528
+    DamageMotion: 576
+    Ai: 17
+    Drops:
+      - Item: Phracon
+        Rate: 90
+      - Item: Skel_Bone
+        Rate: 800
+      - Item: Mace_
+        Rate: 80
+      - Item: Jellopy
+        Rate: 3000
+      - Item: Red_Herb
+        Rate: 850
+      - Item: Skul_Ring
+        Rate: 30
+      - Item: Skeleton_Card
+        Rate: 1
+        StealProtected: true
