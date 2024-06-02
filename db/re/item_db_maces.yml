@@ -758,3 +758,25 @@ Body:
     Refineable: true
     Script: |
       bonus bLongAtkDef,10;
+  - Id: 1524
+    AegisName: Golden_Mace
+    Name: Golden Mace
+    Type: Weapon
+    SubType: Mace
+    Buy: 20
+    Weight: 800
+    Attack: 110
+    Range: 1
+    Slots: 1
+    Jobs:
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 40
+    Refineable: true
+    Script: |
+      bonus2 bAddRace,RC_Undead,10;
+      bonus bUnbreakableWeapon;

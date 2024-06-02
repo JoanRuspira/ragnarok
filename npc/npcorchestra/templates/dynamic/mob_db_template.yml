@@ -12110,3 +12110,432 @@ Body:
       - Item: Kraken_Card
         Rate: 1
         StealProtected: true
+  - Id: 1294
+    AegisName: KILLER_MANTIS
+    Name: Killer Mantis
+    Level: 56
+    Hp: 13183
+    BaseExp: 6509
+    JobExp: 2366
+    Attack: 764
+    Attack2: 927
+    Defense: 35
+    MagicDefense: 20
+    Str: 5
+    Agi: 26
+    Vit: 24
+    Int: 5
+    Dex: 75
+    Luk: 40
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Insect
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 175
+    AttackDelay: 1528
+    AttackMotion: 660
+    DamageMotion: 432
+    Ai: 21
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Limb_Of_Mantis
+        Rate: 4550
+      - Item: Solid_Shell
+        Rate: 2500
+      - Item: Azure_Jewel
+        Rate: 10
+      - Item: White_Herb
+        Rate: 15
+      - Item: Grape
+        Rate: 25
+      - Item: Nail_Of_Loki
+        Rate: 15
+      - Item: Mirror_Shield_
+        Rate: 15
+      - Item: Killer_Mantis_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1311
+    AegisName: GULLINBURSTI
+    Name: Gullinbursti
+    Level: 62
+    Hp: 21331
+    BaseExp: 5814
+    JobExp: 2376
+    Attack: 699
+    Attack2: 1431
+    Defense: 10
+    MagicDefense: 15
+    Str: 55
+    Agi: 25
+    Vit: 60
+    Int: 5
+    Dex: 70
+    Luk: 45
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Brute
+    Element: Earth
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 1960
+    AttackMotion: 960
+    DamageMotion: 384
+    Ai: 21
+    Drops:
+      - Item: Wild_Boar's_Mane
+        Rate: 3500
+      - Item: Grape
+        Rate: 290
+      - Item: Animal_Blood
+        Rate: 70
+      - Item: Belt
+        Rate: 220
+      - Item: Zargon
+        Rate: 160
+      - Item: Gullinbursti_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1101
+    AegisName: BAPHOMET_
+    Name: Baphomet Jr.
+    Level: 50
+    Hp: 8578
+    BaseExp: 2706
+    JobExp: 1480
+    Attack: 487
+    Attack2: 590
+    Defense: 15
+    MagicDefense: 25
+    Agi: 75
+    Vit: 55
+    Dex: 93
+    Luk: 45
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Demon
+    Element: Dark
+    ElementLevel: 1
+    WalkSpeed: 100
+    AttackDelay: 868
+    AttackMotion: 480
+    DamageMotion: 120
+    Ai: 21
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Evil_Horn
+        Rate: 500
+      - Item: Oridecon
+        Rate: 63
+      - Item: Halberd_
+        Rate: 20
+      - Item: Yggdrasilberry
+        Rate: 50
+      - Item: Yellow_Herb
+        Rate: 1300
+      - Item: Boots_
+        Rate: 50
+      - Item: Baphomet__Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1039
+    AegisName: BAPHOMET
+    Name: Baphomet
+    Level: 81
+    Hp: 668000
+    BaseExp: 107250
+    JobExp: 37895
+    MvpExp: 53625
+    Attack: 3220
+    Attack2: 4040
+    Defense: 35
+    MagicDefense: 45
+    Agi: 152
+    Vit: 30
+    Int: 85
+    Dex: 120
+    Luk: 95
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Dark
+    ElementLevel: 3
+    WalkSpeed: 100
+    AttackDelay: 768
+    AttackMotion: 768
+    DamageMotion: 576
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Yggdrasilberry
+        Rate: 2000
+      - Item: Baphomet_Doll
+        Rate: 500
+      - Item: Evil_Horn
+        Rate: 5000
+    Drops:
+      - Item: Crescent_Scythe
+        Rate: 400
+      - Item: Magestic_Goat
+        Rate: 300
+      - Item: Crescent_Scythe_
+        Rate: 50
+      - Item: Emperium
+        Rate: 500
+      - Item: Elunium
+        Rate: 5432
+      - Item: Oridecon
+        Rate: 4171
+      - Item: Baphomet_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1175
+    AegisName: TAROU
+    Name: Tarou
+    Level: 11
+    Hp: 284
+    BaseExp: 57
+    JobExp: 28
+    Attack: 34
+    Attack2: 45
+    Agi: 20
+    Vit: 11
+    Int: 10
+    Dex: 24
+    Luk: 5
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Brute
+    Element: Dark
+    ElementLevel: 1
+    WalkSpeed: 150
+    AttackDelay: 1744
+    AttackMotion: 1044
+    DamageMotion: 684
+    Ai: 17
+    Drops:
+      - Item: Rat_Tail
+        Rate: 9000
+      - Item: Animal's_Skin
+        Rate: 3000
+      - Item: Feather
+        Rate: 800
+      - Item: Monster's_Feed
+        Rate: 1000
+      - Item: Tarou_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1053
+    AegisName: THIEF_BUG_FEMALE
+    Name: Thief Bug Female
+    Level: 10
+    Hp: 170
+    BaseExp: 35
+    JobExp: 18
+    Attack: 33
+    Attack2: 40
+    Defense: 5
+    MagicDefense: 5
+    Agi: 15
+    Vit: 10
+    Int: 5
+    Dex: 23
+    Luk: 5
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Insect
+    Element: Dark
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 988
+    AttackMotion: 288
+    DamageMotion: 768
+    Ai: 25
+    Modes:
+      NoCast: true
+      CastSensorChase: true
+      CastSensorIdle: true
+      ChangeChase: true
+    Drops:
+      - Item: Worm_Peelings
+        Rate: 3500
+      - Item: Garlet
+        Rate: 250
+      - Item: Blade_
+        Rate: 25
+      - Item: Insect_Feeler
+        Rate: 200
+      - Item: Red_Herb
+        Rate: 400
+      - Item: Red_Gemstone
+        Rate: 50
+      - Item: Iron_Ore
+        Rate: 400
+      - Item: Thief_Bug_Female_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1054
+    AegisName: THIEF_BUG_MALE
+    Name: Thief Bug Male
+    Level: 19
+    Hp: 583
+    BaseExp: 223
+    JobExp: 93
+    Attack: 76
+    Attack2: 88
+    Defense: 15
+    MagicDefense: 5
+    Agi: 29
+    Vit: 16
+    Int: 5
+    Dex: 36
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Insect
+    Element: Dark
+    ElementLevel: 1
+    WalkSpeed: 300
+    AttackDelay: 988
+    AttackMotion: 288
+    DamageMotion: 768
+    Ai: 25
+    Modes:
+      NoCast: true
+      Looter: true
+      CastSensorChase: true
+      CastSensorIdle: true
+      ChangeChase: true
+    Drops:
+      - Item: Emveretarcon
+        Rate: 40
+      - Item: Insect_Feeler
+        Rate: 5500
+      - Item: Worm_Peelings
+        Rate: 1500
+      - Item: Slayer_
+        Rate: 20
+      - Item: Yellow_Herb
+        Rate: 90
+      - Item: Bluish_Green_Jewel
+        Rate: 5
+      - Item: Katana_
+        Rate: 20
+      - Item: Thief_Bug_Male_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1209
+    AegisName: CRAMP
+    Name: Cramp
+    Level: 56
+    Hp: 4720
+    BaseExp: 2300
+    JobExp: 1513
+    Attack: 395
+    Attack2: 465
+    MagicDefense: 5
+    Agi: 85
+    Vit: 35
+    Int: 5
+    Dex: 65
+    Luk: 60
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Brute
+    Element: Poison
+    ElementLevel: 2
+    WalkSpeed: 100
+    AttackDelay: 1000
+    AttackMotion: 500
+    DamageMotion: 1000
+    Ai: 09
+    Drops:
+      - Item: Claw_Of_Rat
+        Rate: 4656
+      - Item: Monster's_Feed
+        Rate: 1000
+      - Item: Blue_Jewel
+        Rate: 80
+      - Item: Glass_Bead
+        Rate: 110
+      - Item: Lemon
+        Rate: 250
+      - Item: Blue_Herb
+        Rate: 70
+      - Item: Oridecon
+        Rate: 95
+      - Item: Cramp_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1086
+    AegisName: GOLDEN_BUG
+    Name: Golden Thief Bug
+    Level: 64
+    Hp: 126000
+    BaseExp: 14300
+    JobExp: 7150
+    MvpExp: 7150
+    Attack: 870
+    Attack2: 1145
+    Defense: 60
+    MagicDefense: 45
+    Str: 65
+    Agi: 75
+    Vit: 35
+    Int: 45
+    Dex: 85
+    Luk: 150
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Insect
+    Element: Fire
+    ElementLevel: 2
+    WalkSpeed: 100
+    AttackDelay: 768
+    AttackMotion: 768
+    DamageMotion: 480
+    Ai: 07
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Gold_Ring
+        Rate: 1000
+    Drops:
+      - Item: Gold
+        Rate: 1000
+      - Item: Golden_Mace
+        Rate: 150
+      - Item: Golden_Gear
+        Rate: 250
+      - Item: Emperium
+        Rate: 300
+      - Item: Elunium
+        Rate: 2000
+      - Item: Oridecon
+        Rate: 1500
+      - Item: Golden_Bug_Card
+        Rate: 1
+        StealProtected: true

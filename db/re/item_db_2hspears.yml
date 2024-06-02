@@ -434,3 +434,24 @@ Body:
     Script: |
       bonus bAspdRate,-10;
       bonus bDef,getrefine()/2;
+  - Id: 1466
+    AegisName: Crescent_Scythe
+    Name: Crescent Scythe
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 20
+    Weight: 2500
+    Attack: 180
+    Range: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 48
+    Refineable: true
+    Script: |
+      bonus bCritical,30;
+      bonus bHit,10;

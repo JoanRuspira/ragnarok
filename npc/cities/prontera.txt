@@ -585,27 +585,4 @@ prt_church,103,71,0	script	Henson#pront	120,{
 	end;
 }
 
-// Hidden Temple
-//============================================================
-prt_maze02,100,69,0	script	Soldier#pront	105,{
-	mes "[Soldier]";
-	mes "H-hey!";
-	mes "What are";
-	mes "you doing here?!";
-	next;
-	mes "[Soldier]";
-	mes "Don't you know there's a Demon living in this forest?! I can't guarantee your safety";
-	mes "if you go in!";
-	close;
-}
-
-prt_maze02,110,69,0	script	Soldier#2pront	105,{
-	mes "[Soldier]";
-	mes "*Sigh...* The last guy that entered this place haven't come back at all. He didn't listen to me and went in to gather Herbs or something dumb like that...";
-	next;
-	mes "[Soldier]";
-	mes "Whaaaat a stupid guy. Why would anyone want to throw his life away just to collect some silly Herbs?";
-	close;
-}
-
 

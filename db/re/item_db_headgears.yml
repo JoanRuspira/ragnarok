@@ -808,6 +808,30 @@ Body:
     View: 41
     Script: |
       bonus bStr,1;
+  - Id: 5160
+    AegisName: Magestic_Goat_
+    Name: Majestic Goat
+    Type: Armor
+    Buy: 20
+    Weight: 800
+    Defense: 9
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      StarGladiator: true
+      Swordman: true
+      Taekwon: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 41
+    Script: |
+      bonus bStr,1;
   - Id: 5170
     AegisName: Feather_Beret
     Name: Feather Beret

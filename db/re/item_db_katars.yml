@@ -252,3 +252,19 @@ Body:
          bonus bHit,10;
       }
       bonus2 bSkillAtk,"SK_AS_TRIPLE_SHURIKEN",20;
+  - Id: 1262
+    AegisName: Nail_Of_Loki
+    Name: Loki's Nail
+    Type: Weapon
+    SubType: Katar
+    Buy: 20
+    Weight: 1200
+    Attack: 115
+    Range: 1
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
