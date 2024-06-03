@@ -919,3 +919,31 @@ Body:
       skill "SM_BASH",5;
       bonus bStr,2;
       bonus bDef,1;
+  - Id: 13442
+    AegisName: Old_Parasol
+    Name: Old Parasol
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 10
+    Weight: 500
+    Attack: 120
+    MagicAttack: 80
+    Slots: 3
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 80
+    Refineable: true
+    Script: |
+      bonus bMatk,getrefine()*10;
+      skill "SK_MG_SOULSTRIKE",5;

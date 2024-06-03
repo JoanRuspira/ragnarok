@@ -455,3 +455,26 @@ Body:
     Script: |
       bonus bCritical,30;
       bonus bHit,10;
+  - Id: 1478
+    AegisName: Ahlspiess
+    Name: Ahlspiess
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 20
+    Weight: 1000
+    Attack: 120
+    Range: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bIgnoreDefClass,Class_Normal;
+      bonus bIgnoreDefClass,Class_Boss;
+      bonus2 bAddRace,RC_DemiHuman,10;
+      bonus2 bAddRace,RC_Player_Human,10;
+      bonus3 bAutoSpell,"SK_KN_PIERCE",5,30;

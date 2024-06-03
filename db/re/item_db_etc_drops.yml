@@ -2569,6 +2569,21 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
+  - Id: 7640
+    AegisName: Butterfly_Hair_Clip
+    Name: Butterfly Hair Decoration
+    Type: Etc
+    Buy: 10
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7642
+    AegisName: Bloody_Coin
+    Name: Bloody Coin
+    Type: Etc
+    Buy: 10
+    Flags:
+      BuyingStore: true
   - Id: 1044
     AegisName: Tooth_Of_
     Name: Zenorc's Fang

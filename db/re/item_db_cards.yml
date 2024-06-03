@@ -1717,6 +1717,19 @@ Body:
     Script: |
       bonus bNoMagicDamage,100;
       bonus bUseSPrate,100;
+  - Id: 31023
+    AegisName: XM_Celine_Kimi_Card
+    Name: Celine Kimi Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bMatkRate,25;
   - Id: 4129
     AegisName: Baphomet__Card
     Name: Bapho Jr. Card

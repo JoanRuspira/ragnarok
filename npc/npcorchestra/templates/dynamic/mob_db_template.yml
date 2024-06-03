@@ -10426,8 +10426,6 @@ Body:
         Rate: 200
       - Item: Jamadhar_
         Rate: 600
-      - Item: Sacred_Marks
-        Rate: 1000
       - Item: Spinx_Helm
         Rate: 150
       - Item: Cakram
@@ -12537,5 +12535,708 @@ Body:
       - Item: Oridecon
         Rate: 1500
       - Item: Golden_Bug_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1153
+    AegisName: ORC_ZOMBIE
+    Name: Orc Zombie
+    Level: 24
+    Hp: 1568
+    BaseExp: 196
+    JobExp: 120
+    Attack: 151
+    Attack2: 184
+    Defense: 5
+    MagicDefense: 10
+    Agi: 12
+    Vit: 24
+    Int: 0
+    Dex: 24
+    Luk: 5
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    RaceGroups:
+      Orc: true
+    Element: Undead
+    ElementLevel: 1
+    WalkSpeed: 400
+    AttackDelay: 2852
+    AttackMotion: 1152
+    DamageMotion: 840
+    Ai: 04
+    Drops:
+      - Item: Nail_Of_Orc
+        Rate: 5500
+      - Item: Sticky_Mucus
+        Rate: 3000
+      - Item: Emperium
+        Rate: 5
+      - Item: Orc_Zombie_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1152
+    AegisName: ORC_SKELETON
+    Name: Orc Skeleton
+    Level: 28
+    Hp: 2278
+    BaseExp: 315
+    JobExp: 194
+    Attack: 190
+    Attack2: 236
+    Defense: 10
+    MagicDefense: 10
+    Agi: 14
+    Vit: 18
+    Int: 0
+    Dex: 30
+    Luk: 15
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    RaceGroups:
+      Orc: true
+    Element: Undead
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 2420
+    AttackMotion: 720
+    DamageMotion: 648
+    Ai: 04
+    Drops:
+      - Item: Orcish_Cuspid
+        Rate: 5500
+      - Item: Skel_Bone
+        Rate: 3500
+      - Item: Elunium_Stone
+        Rate: 80
+      - Item: Viking_Helm
+        Rate: 20
+      - Item: Buster_
+        Rate: 15
+      - Item: Green_Herb
+        Rate: 50
+      - Item: Orc_Skeleton_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1177
+    AegisName: ZENORC
+    Name: Zenorc
+    Level: 31
+    Hp: 2585
+    BaseExp: 967
+    JobExp: 407
+    Attack: 188
+    Attack2: 223
+    MagicDefense: 15
+    Agi: 77
+    Vit: 15
+    Int: 0
+    Dex: 76
+    Luk: 10
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Dark
+    ElementLevel: 1
+    WalkSpeed: 150
+    AttackDelay: 1180
+    AttackMotion: 480
+    DamageMotion: 360
+    Ai: 02
+    Drops:
+      - Item: Tooth_Of_
+        Rate: 5500
+      - Item: Oridecon_Stone
+        Rate: 70
+      - Item: Sticky_Mucus
+        Rate: 2500
+      - Item: Yellow_Herb
+        Rate: 100
+      - Item: Zenorc_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 2996
+    AegisName: XM_CELINE_KIMI
+    Name: Celine Kimi
+    Level: 160
+    Hp: 66666666
+    BaseExp: 4444444
+    JobExp: 4033332
+    MvpExp: 444444
+    Attack: 6666
+    Attack2: 6666
+    Defense: 479
+    MagicDefense: 444
+    Str: 144
+    Agi: 166
+    Vit: 44
+    Int: 444
+    Dex: 166
+    Luk: 166
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Undead
+    Element: Ghost
+    ElementLevel: 1
+    WalkSpeed: 100
+    AttackDelay: 768
+    AttackMotion: 1056
+    ClientAttackMotion: 360
+    DamageMotion: 480
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Old_Card_Album
+        Rate: 10000
+      - Item: Old_Violet_Box
+        Rate: 10000
+    Drops:
+      - Item: Elunium
+        Rate: 2000
+      - Item: Oridecon
+        Rate: 1500
+      - Item: Sacred_Marks
+        Rate: 4000
+      - Item: Butterfly_Hair_Clip
+        Rate: 4000
+      - Item: Bloody_Coin
+        Rate: 4000
+      - Item: Old_Parasol
+        Rate: 100
+      - Item: XM_Celine_Kimi_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1130
+    AegisName: JAKK
+    Name: Jakk
+    Level: 38
+    Hp: 3581
+    BaseExp: 1408
+    JobExp: 880
+    Attack: 315
+    Attack2: 382
+    Defense: 5
+    MagicDefense: 30
+    Agi: 38
+    Vit: 38
+    Int: 43
+    Dex: 75
+    Luk: 45
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Fire
+    ElementLevel: 2
+    WalkSpeed: 200
+    AttackDelay: 1180
+    AttackMotion: 480
+    DamageMotion: 648
+    Ai: 21
+    Drops:
+      - Item: Pumpkin_Head
+        Rate: 9000
+      - Item: Zargon
+        Rate: 900
+      - Item: Elunium
+        Rate: 31
+      - Item: Tights_
+        Rate: 15
+      - Item: Frozen_Heart
+        Rate: 15
+      - Item: Pumpkin
+        Rate: 1000
+      - Item: Jakk_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1379
+    AegisName: NIGHTMARE_TERROR
+    Name: Nightmare Terror
+    Level: 78
+    Hp: 22605
+    BaseExp: 6683
+    JobExp: 4359
+    Attack: 757
+    Attack2: 1007
+    Defense: 37
+    MagicDefense: 37
+    Agi: 76
+    Vit: 55
+    Int: 60
+    Dex: 76
+    Luk: 54
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Dark
+    ElementLevel: 3
+    WalkSpeed: 165
+    AttackDelay: 1216
+    AttackMotion: 816
+    DamageMotion: 432
+    Ai: 04
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Burning_Horse_Shoe
+        Rate: 4947
+      - Item: Rosary_
+        Rate: 15
+      - Item: Blue_Potion
+        Rate: 50
+      - Item: Blue_Herb
+        Rate: 150
+      - Item: Infiltrator
+        Rate: 15
+      - Item: Nightmare_Terror_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1382
+    AegisName: DIABOLIC
+    Name: Diabolic
+    Level: 67
+    Hp: 9642
+    BaseExp: 3662
+    JobExp: 2223
+    Attack: 796
+    Attack2: 1059
+    Defense: 64
+    MagicDefense: 36
+    Agi: 84
+    Vit: 53
+    Int: 67
+    Dex: 71
+    Luk: 69
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Demon
+    Element: Dark
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 1080
+    AttackMotion: 780
+    DamageMotion: 180
+    Ai: 04
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Petite_DiablOfs_Horn
+        Rate: 5820
+      - Item: Petite_DiablOfs_Wing
+        Rate: 4850
+      - Item: Brooch_
+        Rate: 20
+      - Item: Oridecon
+        Rate: 20
+      - Item: Unholy_Touch
+        Rate: 10
+      - Item: Diabolic_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1061
+    AegisName: NIGHTMARE
+    Name: Nightmare
+    Level: 49
+    Hp: 4437
+    BaseExp: 1912
+    JobExp: 1912
+    Attack: 447
+    Attack2: 529
+    MagicDefense: 40
+    Agi: 74
+    Vit: 25
+    Int: 15
+    Dex: 64
+    Luk: 10
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Ghost
+    ElementLevel: 3
+    WalkSpeed: 150
+    AttackDelay: 1816
+    AttackMotion: 816
+    DamageMotion: 432
+    Ai: 20
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Horseshoe
+        Rate: 6000
+      - Item: Blue_Herb
+        Rate: 500
+      - Item: Rosary_
+        Rate: 5
+      - Item: Old_Blue_Box
+        Rate: 30
+      - Item: Blue_Potion
+        Rate: 100
+      - Item: Infiltrator
+        Rate: 5
+      - Item: Oridecon
+        Rate: 60
+      - Item: Nightmare_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1371
+    AegisName: FAKE_ANGEL
+    Name: False Angel
+    JapaneseName: Fake Angel
+    Level: 65
+    Hp: 16845
+    BaseExp: 3371
+    JobExp: 1949
+    Attack: 513
+    Attack2: 682
+    Defense: 50
+    MagicDefense: 35
+    Agi: 64
+    Vit: 57
+    Int: 70
+    Dex: 61
+    Luk: 88
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Angel
+    Element: Holy
+    ElementLevel: 3
+    WalkSpeed: 160
+    AttackDelay: 920
+    AttackMotion: 720
+    DamageMotion: 336
+    Ai: 04
+    Drops:
+      - Item: Blue_Gemstone
+        Rate: 1000
+      - Item: Yellow_Gemstone
+        Rate: 1000
+      - Item: Red_Gemstone
+        Rate: 1000
+      - Item: White_Gemstone
+        Rate: 1000
+      - Item: Black_Gemstone
+        Rate: 1000
+      - Item: Fake_Angel_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1109
+    AegisName: DEVIRUCHI
+    Name: Deviruchi
+    Level: 46
+    Hp: 6666
+    BaseExp: 2662
+    JobExp: 1278
+    Attack: 475
+    Attack2: 560
+    Defense: 10
+    MagicDefense: 25
+    Agi: 69
+    Vit: 40
+    Int: 55
+    Dex: 70
+    Luk: 30
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Demon
+    Element: Dark
+    ElementLevel: 1
+    WalkSpeed: 150
+    AttackDelay: 980
+    AttackMotion: 600
+    DamageMotion: 384
+    Ai: 21
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Petite_DiablOfs_Horn
+        Rate: 5335
+      - Item: Petite_DiablOfs_Wing
+        Rate: 400
+      - Item: Oridecon
+        Rate: 20
+      - Item: Partizan_
+        Rate: 15
+      - Item: Zargon
+        Rate: 1500
+      - Item: Oridecon_Stone
+        Rate: 154
+      - Item: Deviruchi_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1186
+    AegisName: WHISPER_BOSS
+    Name: Giant Whisper
+    Level: 34
+    Hp: 5040
+    BaseExp: 537
+    JobExp: 545
+    Attack: 198
+    Attack2: 239
+    MagicDefense: 45
+    Agi: 51
+    Vit: 14
+    Int: 0
+    Dex: 60
+    Luk: 0
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Demon
+    Element: Ghost
+    ElementLevel: 2
+    WalkSpeed: 250
+    AttackDelay: 2536
+    AttackMotion: 1536
+    DamageMotion: 672
+    Ai: 21
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Sparkling_Dust
+        Rate: 150
+      - Item: Transparent_Cloth
+        Rate: 5335
+      - Item: Spirit_Chain
+        Rate: 20
+      - Item: Silver_Robe_
+        Rate: 15
+      - Item: Whisper_Boss_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1143
+    AegisName: MARIONETTE
+    Name: Marionette
+    Level: 41
+    Hp: 3222
+    BaseExp: 1078
+    JobExp: 1276
+    Attack: 355
+    Attack2: 422
+    MagicDefense: 25
+    Agi: 62
+    Vit: 36
+    Int: 44
+    Dex: 69
+    Luk: 45
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Demon
+    Element: Ghost
+    ElementLevel: 3
+    WalkSpeed: 300
+    AttackDelay: 1480
+    AttackMotion: 480
+    DamageMotion: 1056
+    Ai: 09
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Golden_Hair
+        Rate: 9000
+      - Item: Brooch_
+        Rate: 15
+      - Item: Chain_
+        Rate: 15
+      - Item: Chrystal_Pumps
+        Rate: 15
+      - Item: Marionette_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1390
+    AegisName: VIOLY
+    Name: Violy
+    Level: 75
+    Hp: 18257
+    BaseExp: 6353
+    JobExp: 3529
+    Attack: 738
+    Attack2: 982
+    Defense: 37
+    MagicDefense: 36
+    Agi: 93
+    Vit: 54
+    Int: 58
+    Dex: 101
+    Luk: 83
+    AttackRange: 10
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Neutral
+    ElementLevel: 2
+    WalkSpeed: 170
+    AttackDelay: 1356
+    AttackMotion: 1056
+    DamageMotion: 540
+    Ai: 05
+    Drops:
+      - Item: Golden_Hair
+        Rate: 6305
+      - Item: Stuffed_Doll
+        Rate: 1200
+      - Item: Royal_Jelly
+        Rate: 1400
+      - Item: Violin_
+        Rate: 200
+      - Item: Violy_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1370
+    AegisName: SUCCUBUS
+    Name: Succubus
+    Level: 85
+    Hp: 16955
+    BaseExp: 5357
+    JobExp: 4322
+    Attack: 1268
+    Attack2: 1686
+    Defense: 54
+    MagicDefense: 48
+    Agi: 97
+    Vit: 95
+    Int: 103
+    Dex: 89
+    Luk: 87
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Dark
+    ElementLevel: 3
+    WalkSpeed: 155
+    AttackDelay: 1306
+    AttackMotion: 1056
+    DamageMotion: 288
+    Ai: 21
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Fruit_Of_Mastela
+        Rate: 1500
+      - Item: Chrystal_Pumps
+        Rate: 15
+      - Item: Diamond_Ring
+        Rate: 25
+      - Item: Staff_Of_Soul
+        Rate: 15
+      - Item: Blue_Potion
+        Rate: 1000
+      - Item: Succubus_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1374
+    AegisName: INCUBUS
+    Name: Incubus
+    Level: 75
+    Hp: 17281
+    BaseExp: 5254
+    JobExp: 4212
+    Attack: 1408
+    Attack2: 1873
+    Defense: 58
+    MagicDefense: 46
+    Agi: 97
+    Vit: 95
+    Int: 103
+    Dex: 89
+    Luk: 87
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Dark
+    ElementLevel: 3
+    WalkSpeed: 165
+    AttackDelay: 850
+    AttackMotion: 600
+    DamageMotion: 336
+    Ai: 21
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Fruit_Of_Mastela
+        Rate: 1500
+      - Item: White_Herb
+        Rate: 5500
+      - Item: Ring_
+        Rate: 15
+      - Item: White_Herb
+        Rate: 2200
+      - Item: Incubus_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1292
+    AegisName: MINI_DEMON
+    Name: Mini Demon
+    Level: 68
+    Hp: 32538
+    BaseExp: 8396
+    JobExp: 3722
+    Attack: 1073
+    Attack2: 1414
+    Defense: 30
+    MagicDefense: 25
+    Str: 5
+    Agi: 75
+    Vit: 40
+    Int: 55
+    Dex: 89
+    Luk: 42
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Demon
+    Element: Dark
+    ElementLevel: 1
+    WalkSpeed: 150
+    AttackDelay: 1000
+    AttackMotion: 600
+    DamageMotion: 384
+    Ai: 21
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Petite_DiablOfs_Horn
+        Rate: 4413
+      - Item: Petite_DiablOfs_Wing
+        Rate: 450
+      - Item: Satanic_Chain
+        Rate: 20
+      - Item: Elunium_Stone
+        Rate: 160
+      - Item: Zargon
+        Rate: 2500
+      - Item: Ahlspiess
+        Rate: 15
+      - Item: Mini_Demon_Card
         Rate: 1
         StealProtected: true

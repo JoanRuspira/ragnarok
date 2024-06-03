@@ -268,3 +268,25 @@ Body:
     WeaponLevel: 3
     EquipLevelMin: 55
     Refineable: true
+  - Id: 1261
+    AegisName: Infiltrator
+    Name: Infiltrator
+    Type: Weapon
+    SubType: Katar
+    Buy: 57000
+    Weight: 1500
+    Attack: 140
+    Range: 1
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 75
+    Refineable: true
+    Script: |
+      bonus2 bAddRace,RC_DemiHuman,50;
+      bonus2 bAddRace,RC_Player_Human,50;
+      bonus bDef,3;
+      bonus bFlee,5;
+      bonus bFlee2,2;
