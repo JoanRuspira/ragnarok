@@ -274,3 +274,46 @@ Body:
       bonus bInt,3;
       bonus bIgnoreDefRace,RC_Dragon;
       bonus2 bSPGainRace,RC_Dragon,10;
+  - Id: 1573
+    AegisName: Ancient_Magic
+    Name: Ancient Magic
+    Type: Weapon
+    SubType: Book
+    Buy: 20
+    Weight: 700
+    Attack: 30
+    MagicAttack: 140
+    Range: 1
+    Slots: 2
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+  - Id: 1572
+    AegisName: Principles_Of_Magic
+    Name: Principles of Magic
+    Type: Weapon
+    SubType: Book
+    Buy: 20
+    Weight: 300
+    Attack: 60
+    MagicAttack: 160
+    Range: 1
+    Slots: 2
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bInt,3;
+      bonus bSPrecovRate,5;

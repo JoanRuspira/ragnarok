@@ -372,3 +372,32 @@ Body:
       bonus bAtkEle,Ele_Holy;
       skill "AL_HEAL",3;
       bonus2 bAddRace,RC_Demon,3;
+  - Id: 1377
+    AegisName: Hurricane_Fury
+    Name: Hurricane's Fury
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 20
+    Weight: 3500
+    Attack: 332
+    Range: 1
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 80
+    Refineable: true
+    Script: |
+      .@r = getrefine();
+      bonus2 bSubSize,Size_Medium,10+.@r;
+      bonus bAspdRate,.@r;
+      bonus3 bAutoSpell,"SK_KN_BOWLINGBASH",5,20;

@@ -2233,6 +2233,14 @@ Body:
     Weight: 100
     Flags:
       BuyingStore: true
+  - Id: 7203
+    AegisName: Solid_Twig
+    Name: Strong Branch
+    Type: Etc
+    Buy: 190
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 1009
     AegisName: Sacred_Marks
     Name: Hand of God
@@ -3342,6 +3350,84 @@ Body:
       NoGuildStorage: true
       NoMail: true
       NoAuction: true
+  - Id: 7201
+    AegisName: Log
+    Name: Log
+    Type: Etc
+    Buy: 250
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7188
+    AegisName: Browny_Root
+    Name: Brown Root
+    Type: Etc
+    Buy: 560
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7189
+    AegisName: Heart_Of_Tree
+    Name: Wooden Heart
+    Type: Etc
+    Buy: 680
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7762
+    AegisName: Yaga_Pestle
+    Name: Yaga's Pestle
+    Type: Etc
+    Buy: 20
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7226
+    AegisName: Pill
+    Name: Pellet
+    Type: Etc
+    Buy: 2
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 707
+    AegisName: Singing_Plant
+    Name: Singing Plant
+    Type: Etc
+    Buy: 500
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 27161
+    AegisName: Mavka_Card
+    Name: Mavka Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Both_Accessory: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Fire,20;
+      bonus2 bMagicAtkEle,Ele_Earth,20;
+  - Id: 7100
+    AegisName: Sharp_Leaf
+    Name: Sharp Leaf
+    Type: Etc
+    Buy: 806
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 710
+    AegisName: Illusion_Flower
+    Name: Illusion Flower
+    Type: Etc
+    Buy: 1000
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 6029
     AegisName: Morocc_Tracing_Log
     Name: Morocc Tracing Log

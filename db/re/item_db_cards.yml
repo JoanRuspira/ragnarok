@@ -2366,6 +2366,34 @@ Body:
     Script: |
       bonus bCritAtkRate,10;
       bonus2 bCriticalAddRace,RC_Dragon,7;
+  - Id: 27159
+    AegisName: Uzhas_Card
+    Name: Uzhas Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Head_Low: true
+      Head_Mid: true
+      Head_Top: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bMagicAddRace,RC_Demon,(getrefine() >= 9 ? 15 : 10);
+  - Id: 27160
+    AegisName: Vavayaga_Card
+    Name: Vavayaga Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Shoes: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bFlee,getrefine()*2;
   - Id: 4177
     AegisName: Dryad_Card
     Name: Dryad Card
@@ -3901,6 +3929,53 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bAddMonsterDropItemGroup,IG_Recovery,600;
+  - Id: 27157
+    AegisName: Wood_Goblin_Card
+    Name: Wood Goblin Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Armor: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      .@r = getrefine();
+      bonus2 bAddEle,Ele_Water,(.@r >= 9 ? 10 : 5);
+      bonus2 bAddEle,Ele_Earth,(.@r >= 9 ? 10 : 5);
+      bonus2 bSubEle,Ele_Water,-5;
+      bonus2 bSubEle,Ele_Earth,-5;
+  - Id: 27158
+    AegisName: Les_Card
+    Name: Les Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Left_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bSubEle,Ele_Wind,30;
+  - Id: 27126
+    AegisName: Boitata_Card
+    Name: Boitata Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Armor: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bAddEle,Ele_Wind,40;
+      bonus2 bAddEle,Ele_Earth,40;
+      bonus2 bAddRace,RC_Brute,40;
+      bonus2 bAddRace,RC_Player_Doram,40;
+      bonus2 bAddRace,RC_Insect,40;
   - Id: 4283
     AegisName: Greatest_General_Card
     Name: Greatest General Card

@@ -1300,7 +1300,7 @@ Body:
       - Item: Goggle_
         Rate: 10
       - Item: Anodyne
-        Rate: 10
+        Rate: 50
       - Item: Elunium_Stone
         Rate: 70
       - Item: Royal_Jelly
@@ -5409,7 +5409,7 @@ Body:
       - Item: Stem
         Rate: 2000
       - Item: Witherless_Rose
-        Rate: 1
+        Rate: 20
       - Item: Flora_Card
         Rate: 1
         StealProtected: true
@@ -9456,7 +9456,7 @@ Body:
       - Item: Fruit_Of_Mastela
         Rate: 25
       - Item: Anodyne
-        Rate: 1
+        Rate: 50
       - Item: Permeter_Card
         Rate: 1
         StealProtected: true
@@ -11783,7 +11783,7 @@ Body:
       - Item: Fin
         Rate: 500
       - Item: Witherless_Rose
-        Rate: 30
+        Rate: 20
       - Item: Obeaune_Card
         Rate: 1
         StealProtected: true
@@ -13238,5 +13238,556 @@ Body:
       - Item: Ahlspiess
         Rate: 15
       - Item: Mini_Demon_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1145
+    AegisName: MARTIN
+    Name: Martin
+    Level: 18
+    Hp: 1109
+    BaseExp: 134
+    JobExp: 86
+    Attack: 52
+    Attack2: 63
+    MagicDefense: 5
+    Str: 12
+    Agi: 18
+    Vit: 30
+    Int: 15
+    Dex: 15
+    Luk: 5
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Brute
+    Element: Earth
+    ElementLevel: 2
+    WalkSpeed: 300
+    AttackDelay: 1480
+    AttackMotion: 480
+    DamageMotion: 480
+    Ai: 01
+    Drops:
+      - Item: Moustache_Of_Mole
+        Rate: 9000
+      - Item: Nail_Of_Mole
+        Rate: 500
+      - Item: Jur_
+        Rate: 10
+      - Item: Goggle_
+        Rate: 15
+      - Item: Martin_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1169
+    AegisName: SKEL_WORKER
+    Name: Skeleton Worker
+    Level: 30
+    Hp: 2872
+    BaseExp: 397
+    JobExp: 240
+    Attack: 242
+    Attack2: 288
+    MagicDefense: 15
+    Agi: 15
+    Vit: 30
+    Int: 5
+    Dex: 42
+    Luk: 10
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 1
+    WalkSpeed: 400
+    AttackDelay: 2420
+    AttackMotion: 720
+    DamageMotion: 384
+    Ai: 04
+    Drops:
+      - Item: Iron
+        Rate: 400
+      - Item: Lantern
+        Rate: 5500
+      - Item: Elunium_Stone
+        Rate: 90
+      - Item: Steel
+        Rate: 100
+      - Item: Coal
+        Rate: 200
+      - Item: Iron_Ore
+        Rate: 800
+      - Item: Skel_Worker_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1121
+    AegisName: GIEARTH
+    Name: Giearth
+    Level: 29
+    Hp: 2252
+    BaseExp: 495
+    JobExp: 301
+    Attack: 154
+    Attack2: 185
+    Defense: 10
+    MagicDefense: 50
+    Str: 25
+    Agi: 29
+    Vit: 46
+    Int: 60
+    Dex: 64
+    Luk: 105
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Demon
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1848
+    AttackMotion: 1296
+    DamageMotion: 432
+    Ai: 17
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Great_Nature
+        Rate: 30
+      - Item: Coal
+        Rate: 150
+      - Item: Elven_Ears
+        Rate: 10
+      - Item: Cap_
+        Rate: 20
+      - Item: Sparkling_Dust
+        Rate: 100
+      - Item: Giearth_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1151
+    AegisName: MYST
+    Name: Myst
+    Level: 38
+    Hp: 3745
+    BaseExp: 1391
+    JobExp: 688
+    Attack: 365
+    Attack2: 445
+    MagicDefense: 40
+    Agi: 38
+    Vit: 18
+    Int: 0
+    Dex: 53
+    Luk: 10
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Formless
+    Element: Poison
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1576
+    AttackMotion: 576
+    DamageMotion: 384
+    Ai: 21
+    Drops:
+      - Item: Wooden_Block
+        Rate: 800
+      - Item: Oridecon_Stone
+        Rate: 65
+      - Item: Elunium_Stone
+        Rate: 97
+      - Item: Anodyne
+        Rate: 50
+      - Item: Grape
+        Rate: 75
+      - Item: Myst_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1495
+    AegisName: STONE_SHOOTER
+    Name: Stone Shooter
+    Level: 42
+    Hp: 4104
+    BaseExp: 1238
+    JobExp: 752
+    Attack: 309
+    Attack2: 350
+    Defense: 12
+    MagicDefense: 45
+    Agi: 40
+    Vit: 20
+    Int: 79
+    Dex: 92
+    Luk: 20
+    AttackRange: 10
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Plant
+    Element: Fire
+    ElementLevel: 3
+    WalkSpeed: 175
+    AttackDelay: 2413
+    AttackMotion: 1248
+    DamageMotion: 768
+    Ai: 04
+    Drops:
+      - Item: Solid_Twig
+        Rate: 5000
+      - Item: Log
+        Rate: 5000
+      - Item: Browny_Root
+        Rate: 1000
+      - Item: Wooden_Block
+        Rate: 2000
+      - Item: Oridecon_Stone
+        Rate: 100
+      - Item: Stone
+        Rate: 1000
+      - Item: Stone_Shooter_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1497
+    AegisName: WOODEN_GOLEM
+    Name: Wooden Golem
+    Level: 51
+    Hp: 9200
+    BaseExp: 1926
+    JobExp: 1353
+    Attack: 570
+    Attack2: 657
+    Defense: 32
+    MagicDefense: 36
+    Agi: 41
+    Vit: 69
+    Int: 5
+    Dex: 85
+    Luk: 155
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Plant
+    RaceGroups:
+      Golem: true
+    Element: Earth
+    ElementLevel: 4
+    WalkSpeed: 165
+    AttackDelay: 1543
+    AttackMotion: 1632
+    DamageMotion: 480
+    Ai: 04
+    Drops:
+      - Item: Heart_Of_Tree
+        Rate: 4000
+      - Item: Browny_Root
+        Rate: 4000
+      - Item: Elunium_Stone
+        Rate: 110
+      - Item: Centimental_Leaf
+        Rate: 15
+      - Item: Log
+        Rate: 5000
+      - Item: Mushroom_Spore
+        Rate: 1000
+      - Item: Wooden_Golem_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1883
+    AegisName: UZHAS
+    Name: Kikimora
+    JapaneseName: Uzhas
+    Level: 85
+    Hp: 7140
+    BaseExp: 1018
+    JobExp: 953
+    Attack: 298
+    Attack2: 35
+    Defense: 49
+    MagicDefense: 8
+    Str: 69
+    Agi: 14
+    Vit: 41
+    Int: 30
+    Dex: 66
+    Luk: 20
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Water
+    ElementLevel: 3
+    WalkSpeed: 200
+    AttackDelay: 576
+    AttackMotion: 672
+    ClientAttackMotion: 480
+    DamageMotion: 384
+    Ai: 04
+    Drops:
+      - Item: Leaflet_Of_Hinal
+        Rate: 450
+      - Item: Ancient_Magic
+        Rate: 20
+      - Item: Fruit_Of_Mastela
+        Rate: 50
+      - Item: Sticky_Webfoot
+        Rate: 1750
+      - Item: Delicious_Fish
+        Rate: 750
+      - Item: Old_Blue_Box
+        Rate: 10
+      - Item: Uzhas_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1882
+    AegisName: VAVAYAGA
+    Name: Baba-Yaga
+    JapaneseName: Baba Yaga
+    Level: 87
+    Hp: 6498
+    BaseExp: 1052
+    JobExp: 987
+    Attack: 310
+    Attack2: 71
+    Defense: 63
+    MagicDefense: 60
+    Str: 69
+    Agi: 45
+    Vit: 30
+    Int: 60
+    Dex: 61
+    Luk: 35
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Water
+    ElementLevel: 1
+    WalkSpeed: 270
+    AttackDelay: 1536
+    AttackMotion: 600
+    ClientAttackMotion: 420
+    DamageMotion: 420
+    Ai: 04
+    Drops:
+      - Item: Old_Magic_Circle
+        Rate: 500
+      - Item: Yaga_Pestle
+        Rate: 2500
+      - Item: Release_Of_Wish
+        Rate: 15
+      - Item: Pill
+        Rate: 750
+      - Item: Vavayaga_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1884
+    AegisName: MAVKA
+    Name: Mavka
+    Level: 84
+    Hp: 5421
+    BaseExp: 1052
+    JobExp: 937
+    Attack: 289
+    Attack2: 60
+    Defense: 98
+    MagicDefense: 58
+    Str: 65
+    Agi: 31
+    Vit: 50
+    Int: 35
+    Dex: 97
+    Luk: 30
+    AttackRange: 7
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Plant
+    Element: Earth
+    ElementLevel: 3
+    WalkSpeed: 170
+    AttackDelay: 1536
+    AttackMotion: 504
+    ClientAttackMotion: 384
+    DamageMotion: 360
+    Ai: 04
+    Drops:
+      - Item: Principles_Of_Magic
+        Rate: 3
+      - Item: Singing_Plant
+        Rate: 3500
+      - Item: Illusion_Flower
+        Rate: 2500
+      - Item: Crystal_Mirror
+        Rate: 750
+      - Item: Witherless_Rose
+        Rate: 20
+      - Item: Blue_Herb
+        Rate: 1500
+      - Item: Mavka_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 2068
+    AegisName: BOITATA
+    Name: Boitata
+    Level: 93
+    Hp: 1283990
+    BaseExp: 44573
+    JobExp: 38975
+    MvpExp: 37144
+    Attack: 1378
+    Attack2: 962
+    Defense: 32
+    MagicDefense: 66
+    Str: 140
+    Agi: 99
+    Vit: 30
+    Int: 109
+    Dex: 120
+    Luk: 90
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Brute
+    Element: Fire
+    ElementLevel: 3
+    WalkSpeed: 200
+    AttackDelay: 1152
+    AttackMotion: 1152
+    ClientAttackMotion: 240
+    DamageMotion: 576
+    DamageTaken: 10
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Old_Violet_Box
+        Rate: 5500
+      - Item: Old_Violet_Box
+        Rate: 5000
+      - Item: Old_Card_Album
+        Rate: 2000
+    Drops:
+      - Item: Treasure_Box
+        Rate: 2500
+      - Item: Hurricane_Fury
+        Rate: 50
+      - Item: Hunting_Spear
+        Rate: 50
+      - Item: Yggdrasilberry
+        Rate: 250
+      - Item: Elunium
+        Rate: 500
+      - Item: Oridecon
+        Rate: 500
+      - Item: Hell_Fire
+        Rate: 50
+      - Item: Boitata_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1880
+    AegisName: WOOD_GOBLIN
+    Name: Leshij
+    JapaneseName: Wood Goblin
+    Level: 81
+    Hp: 5499
+    BaseExp: 1001
+    JobExp: 889
+    Attack: 212
+    Attack2: 15
+    Defense: 144
+    MagicDefense: 12
+    Str: 73
+    Agi: 19
+    Vit: 56
+    Int: 15
+    Dex: 67
+    Luk: 25
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Plant
+    Element: Earth
+    ElementLevel: 3
+    WalkSpeed: 320
+    AttackDelay: 2304
+    AttackMotion: 840
+    ClientAttackMotion: 360
+    DamageMotion: 360
+    Ai: 01
+    Drops:
+      - Item: Iron_Wrist
+        Rate: 20
+      - Item: Solid_Twig
+        Rate: 2000
+      - Item: Log
+        Rate: 1000
+      - Item: Resin
+        Rate: 1000
+      - Item: Feather_Of_Birds
+        Rate: 250
+      - Item: Piece_Of_Egg_Shell
+        Rate: 250
+      - Item: Wood_Goblin_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1881
+    AegisName: LES
+    Name: Lesavka
+    JapaneseName: Les
+    Level: 82
+    Hp: 6216
+    BaseExp: 1018
+    JobExp: 905
+    Attack: 297
+    Attack2: 30
+    Defense: 123
+    MagicDefense: 30
+    Str: 63
+    Agi: 20
+    Vit: 35
+    Int: 25
+    Dex: 62
+    Luk: 30
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Plant
+    Element: Earth
+    ElementLevel: 4
+    WalkSpeed: 230
+    AttackDelay: 1728
+    AttackMotion: 720
+    ClientAttackMotion: 420
+    DamageMotion: 576
+    Ai: 03
+    Drops:
+      - Item: Sharp_Leaf
+        Rate: 1000
+      - Item: Green_Herb
+        Rate: 500
+      - Item: Shoot
+        Rate: 500
+      - Item: Stem
+        Rate: 1250
+      - Item: Centimental_Leaf
+        Rate: 15
+      - Item: Leaflet_Of_Aloe
+        Rate: 250
+      - Item: Blue_Herb
+        Rate: 25
+      - Item: Les_Card
         Rate: 1
         StealProtected: true

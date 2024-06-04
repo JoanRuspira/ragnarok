@@ -429,3 +429,24 @@ Body:
       bonus bStr,1;
       bonus bVit,1;
       bonus bBaseAtk,5;
+  - Id: 2719
+    AegisName: Iron_Wrist
+    Name: Iron Wrist
+    Type: Armor
+    Buy: 20
+    Weight: 700
+    Defense: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Both_Accessory: true
+    ArmorLevel: 1
+    EquipLevelMin: 50
+    Script: |
+      bonus2 bSkillAtk,"SK_SM_BASH",6;
+      bonus2 bSkillAtk,"SK_MC_MAMMONITE",6;

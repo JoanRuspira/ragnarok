@@ -478,3 +478,25 @@ Body:
       bonus2 bAddRace,RC_DemiHuman,10;
       bonus2 bAddRace,RC_Player_Human,10;
       bonus3 bAutoSpell,"SK_KN_PIERCE",5,30;
+  - Id: 1471
+    AegisName: Hell_Fire
+    Name: Hellfire
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 20
+    Weight: 3500
+    Attack: 200
+    Range: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 48
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Fire;
+      bonus3 bAutoSpell,"SK_MG_FIREBALL",5,100;
+      bonus bStr,3;
