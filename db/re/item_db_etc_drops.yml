@@ -2393,12 +2393,44 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
+  - Id: 7071
+    AegisName: Tatters_Clothes
+    Name: Tattered Clothes
+    Type: Etc
+    Buy: 1280
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7005
+    AegisName: Skull
+    Name: Skull
+    Type: Etc
+    Buy: 1044
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7118
+    AegisName: Rent_Scroll
+    Name: Torn Scroll
+    Type: Etc
+    Buy: 1361
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 1024
     AegisName: Chinese_Ink
     Name: Squid Ink
     Type: Etc
     Buy: 264
     Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7015
+    AegisName: Bookclip_In_Memory
+    Name: Bookclip in Memory
+    Type: Etc
+    Buy: 3000
+    Weight: 20
     Flags:
       BuyingStore: true
   - Id: 1025
@@ -3417,6 +3449,14 @@ Body:
     Name: Sharp Leaf
     Type: Etc
     Buy: 806
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7009
+    AegisName: Glitter_Shell
+    Name: Glitter Shell
+    Type: Etc
+    Buy: 528
     Weight: 10
     Flags:
       BuyingStore: true

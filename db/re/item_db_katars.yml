@@ -290,3 +290,22 @@ Body:
       bonus bDef,3;
       bonus bFlee,5;
       bonus bFlee2,2;
+  - Id: 1259
+    AegisName: Katar_Of_Piercing_Wind
+    Name: Katar of Piercing Wind
+    Type: Weapon
+    SubType: Katar
+    Buy: 45000
+    Weight: 1200
+    Attack: 105
+    Range: 1
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Wind;
+      bonus2 bAddEff,Eff_Sleep,500;

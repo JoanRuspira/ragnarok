@@ -3728,7 +3728,7 @@ Body:
       - Item: Horn
         Rate: 5500
       - Item: Guisarme_
-        Rate: 15
+        Rate: 5
       - Item: Shell
         Rate: 5500
       - Item: Solid_Shell
@@ -4077,7 +4077,7 @@ Body:
       - Item: Cyfar
         Rate: 1200
       - Item: Guisarme_
-        Rate: 1
+        Rate: 5
       - Item: Panacea
         Rate: 200
       - Item: Glass_Bead
@@ -4478,7 +4478,7 @@ Body:
       - Item: Guisarme_
         Rate: 1500
       - Item: Pole_Axe
-        Rate: 1
+        Rate: 15
       - Item: Oridecon
         Rate: 185
       - Item: Rough_Wind
@@ -4923,7 +4923,7 @@ Body:
       - Item: Red_Herb
         Rate: 1000
       - Item: Guisarme_
-        Rate: 50
+        Rate: 15
       - Item: Iron_Ore
         Rate: 250
       - Item: Muka_Card
@@ -5254,31 +5254,6 @@ Body:
       - Item: Dragon_Fly_Card
         Rate: 1
         StealProtected: true
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   - Id: 1174
     AegisName: STAINER
     Name: Stainer
@@ -13789,5 +13764,542 @@ Body:
       - Item: Blue_Herb
         Rate: 25
       - Item: Les_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1211
+    AegisName: BRILIGHT
+    Name: Brilight
+    Level: 46
+    Hp: 5562
+    BaseExp: 1826
+    JobExp: 1331
+    Attack: 298
+    Attack2: 383
+    Defense: 30
+    MagicDefense: 5
+    Agi: 90
+    Vit: 15
+    Int: 10
+    Dex: 50
+    Luk: 35
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Insect
+    Element: Fire
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1500
+    AttackMotion: 500
+    DamageMotion: 1000
+    Ai: 09
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Glitter_Shell
+        Rate: 5335
+      - Item: Wind_Of_Verdure
+        Rate: 200
+      - Item: Zargon
+        Rate: 1200
+      - Item: Elunium_Stone
+        Rate: 220
+      - Item: White_Herb
+        Rate: 2600
+      - Item: Brilight_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1304
+    AegisName: GIANT_SPIDER
+    Name: Giant Spider
+    Level: 55
+    Hp: 11874
+    BaseExp: 6211
+    JobExp: 2146
+    Attack: 624
+    Attack2: 801
+    Defense: 41
+    MagicDefense: 28
+    Str: 5
+    Agi: 36
+    Vit: 43
+    Int: 5
+    Dex: 73
+    Luk: 69
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Insect
+    Element: Poison
+    ElementLevel: 1
+    WalkSpeed: 165
+    AttackDelay: 1468
+    AttackMotion: 468
+    DamageMotion: 768
+    Ai: 21
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Spiderweb
+        Rate: 4550
+      - Item: Short_Leg
+        Rate: 1200
+      - Item: Elunium_Stone
+        Rate: 140
+      - Item: Panacea
+        Rate: 450
+      - Item: Solid_Shell
+        Rate: 1200
+      - Item: Round_Shell
+        Rate: 680
+      - Item: Cyfar
+        Rate: 800
+      - Item: Giant_Spider_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1305
+    AegisName: ANCIENT_WORM
+    Name: Ancient Worm
+    Level: 67
+    Hp: 22598
+    BaseExp: 8174
+    JobExp: 3782
+    Attack: 948
+    Attack2: 1115
+    Defense: 35
+    MagicDefense: 30
+    Str: 5
+    Agi: 35
+    Vit: 56
+    Int: 55
+    Dex: 81
+    Luk: 72
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Insect
+    Element: Poison
+    ElementLevel: 1
+    WalkSpeed: 165
+    AttackDelay: 1792
+    AttackMotion: 792
+    DamageMotion: 336
+    Ai: 21
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Short_Leg
+        Rate: 4413
+      - Item: Zargon
+        Rate: 2500
+      - Item: Boots_
+        Rate: 9
+      - Item: Bowman_Scarf
+        Rate: 5
+      - Item: Round_Shell
+        Rate: 680
+      - Item: Sticky_Mucus
+        Rate: 3500
+      - Item: Brigan
+        Rate: 2500
+      - Item: Ancient_Worm_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1102
+    AegisName: BATHORY
+    Name: Bathory
+    Level: 44
+    Hp: 5415
+    BaseExp: 2503
+    JobExp: 1034
+    Attack: 198
+    Attack2: 398
+    MagicDefense: 60
+    Agi: 76
+    Vit: 24
+    Int: 85
+    Dex: 65
+    Luk: 15
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Dark
+    ElementLevel: 1
+    WalkSpeed: 100
+    AttackDelay: 1504
+    AttackMotion: 840
+    DamageMotion: 900
+    Ai: 21
+    Drops:
+      - Item: Sparkling_Dust
+        Rate: 200
+      - Item: Starsand_Of_Witch
+        Rate: 4850
+      - Item: Star_Sparkling
+        Rate: 10
+      - Item: Arc_Wand_
+        Rate: 15
+      - Item: Star_Crumb
+        Rate: 80
+      - Item: Old_Magic_Book
+        Rate: 600
+      - Item: Bathory_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1131
+    AegisName: JOKER
+    Name: Joker
+    Level: 57
+    Hp: 12450
+    BaseExp: 3706
+    JobExp: 2362
+    Attack: 621
+    Attack2: 738
+    Defense: 10
+    MagicDefense: 35
+    Agi: 143
+    Vit: 47
+    Int: 75
+    Dex: 98
+    Luk: 175
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demihuman
+    Element: Wind
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 1364
+    AttackMotion: 864
+    DamageMotion: 432
+    Ai: 21
+    Drops:
+      - Item: Zargon
+        Rate: 2000
+      - Item: Old_Card_Album
+        Rate: 2
+      - Item: Yellow_Herb
+        Rate: 1000
+      - Item: Katar_Of_Piercing_Wind
+        Rate: 15
+      - Item: Oridecon
+        Rate: 100
+      - Item: Joker_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1195
+    AegisName: RIDEWORD
+    Name: Rideword
+    Level: 59
+    Hp: 11638
+    BaseExp: 2007
+    JobExp: 3106
+    Attack: 584
+    Attack2: 804
+    Defense: 5
+    MagicDefense: 35
+    Str: 48
+    Agi: 75
+    Vit: 10
+    Int: 20
+    Dex: 120
+    Luk: 45
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 150
+    AttackDelay: 864
+    AttackMotion: 500
+    DamageMotion: 192
+    Ai: 21
+    Drops:
+      - Item: Worn_Out_Page
+        Rate: 4850
+      - Item: Book_Of_Billows
+        Rate: 15
+      - Item: Book_Of_Mother_Earth
+        Rate: 15
+      - Item: Book_Of_Blazing_Sun
+        Rate: 15
+      - Item: Book_Of_Gust_Of_Wind
+        Rate: 15
+      - Item: Bookclip_In_Memory
+        Rate: 300
+      - Item: Old_Magic_Book
+        Rate: 500
+      - Item: Rideword_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1193
+    AegisName: ALARM
+    Name: Alarm
+    Level: 58
+    Hp: 10647
+    BaseExp: 3987
+    JobExp: 2300
+    Attack: 480
+    Attack2: 600
+    Defense: 15
+    MagicDefense: 15
+    Agi: 62
+    Vit: 72
+    Int: 10
+    Dex: 85
+    Luk: 45
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 300
+    AttackDelay: 1020
+    AttackMotion: 500
+    DamageMotion: 768
+    Ai: 21
+    Drops:
+      - Item: Needle_Of_Alarm
+        Rate: 5335
+      - Item: Clip
+        Rate: 15
+      - Item: Skull
+        Rate: 1500
+      - Item: Oridecon
+        Rate: 105
+      - Item: Zargon
+        Rate: 1500
+      - Item: Alarm_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1269
+    AegisName: CLOCK
+    Name: Clock
+    Level: 60
+    Hp: 11050
+    BaseExp: 3410
+    JobExp: 2904
+    Attack: 720
+    Attack2: 909
+    Defense: 15
+    MagicDefense: 10
+    Agi: 70
+    Vit: 50
+    Int: 25
+    Dex: 90
+    Luk: 50
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Earth
+    ElementLevel: 2
+    WalkSpeed: 200
+    AttackDelay: 1092
+    AttackMotion: 792
+    DamageMotion: 480
+    Ai: 17
+    Drops:
+      - Item: Needle_Of_Alarm
+        Rate: 5335
+      - Item: Wooden_Block
+        Rate: 800
+      - Item: White_Herb
+        Rate: 1900
+      - Item: Lemon
+        Rate: 320
+      - Item: Elunium
+        Rate: 163
+      - Item: Clock_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1377
+    AegisName: ELDER
+    Name: Elder
+    Level: 64
+    Hp: 21592
+    BaseExp: 5650
+    JobExp: 3408
+    Attack: 421
+    Attack2: 560
+    Defense: 45
+    MagicDefense: 68
+    Agi: 76
+    Vit: 68
+    Int: 108
+    Dex: 72
+    Luk: 86
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demihuman
+    Element: Neutral
+    ElementLevel: 4
+    WalkSpeed: 165
+    AttackDelay: 1552
+    AttackMotion: 1152
+    DamageMotion: 336
+    Ai: 04
+    Drops:
+      - Item: Old_Magic_Circle
+        Rate: 4000
+      - Item: Rent_Spell_Book
+        Rate: 1500
+      - Item: Rent_Scroll
+        Rate: 1500
+      - Item: Encyclopedia
+        Rate: 10
+      - Item: Wizardy_Staff
+        Rate: 15
+      - Item: Old_Card_Album
+        Rate: 2
+      - Item: Elder_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1699
+    AegisName: ANCIENT_MIMIC
+    Name: Ancient Mimic
+    Level: 60
+    Hp: 8080
+    BaseExp: 2950
+    JobExp: 2650
+    Attack: 530
+    Attack2: 1697
+    Defense: 20
+    MagicDefense: 40
+    Str: 50
+    Agi: 100
+    Vit: 30
+    Int: 40
+    Dex: 150
+    Luk: 110
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 100
+    AttackDelay: 168
+    AttackMotion: 480
+    DamageMotion: 360
+    Ai: 04
+    Drops:
+      - Item: Old_Blue_Box
+        Rate: 30
+      - Item: Old_Violet_Box
+        Rate: 1
+      - Item: Gift_Box
+        Rate: 50
+      - Item: Shoes_
+        Rate: 15
+      - Item: Manteau_
+        Rate: 15
+      - Item: Fricco_Shoes
+        Rate: 10
+      - Item: Gold_Ring
+        Rate: 15
+      - Item: Ancient_Mimic_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1270
+    AegisName: C_TOWER_MANAGER
+    Name: Clock Tower Manager
+    Level: 63
+    Hp: 18600
+    BaseExp: 4378
+    JobExp: 2850
+    Attack: 880
+    Attack2: 1180
+    Defense: 35
+    MagicDefense: 30
+    Agi: 75
+    Vit: 20
+    Int: 64
+    Dex: 75
+    Luk: 60
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 4
+    WalkSpeed: 200
+    AttackDelay: 1072
+    AttackMotion: 672
+    DamageMotion: 384
+    Ai: 17
+    Drops:
+      - Item: Needle_Of_Alarm
+        Rate: 5335
+      - Item: Brigan
+        Rate: 5335
+      - Item: Steel
+        Rate: 500
+      - Item: Leaflet_Of_Hinal
+        Rate: 850
+      - Item: Memorize_Book
+        Rate: 15
+      - Item: C_Tower_Manager_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1320
+    AegisName: OWL_DUKE
+    Name: Owl Duke
+    Level: 75
+    Hp: 26623
+    BaseExp: 7217
+    JobExp: 3474
+    Attack: 715
+    Attack2: 910
+    Defense: 27
+    MagicDefense: 49
+    Str: 15
+    Agi: 45
+    Vit: 40
+    Int: 75
+    Dex: 79
+    Luk: 88
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 195
+    AttackDelay: 1345
+    AttackMotion: 824
+    DamageMotion: 440
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Tatters_Clothes
+        Rate: 4413
+      - Item: Soft_Feather
+        Rate: 1500
+      - Item: Crystal_Mirror
+        Rate: 500
+      - Item: Guisarme
+        Rate: 15
+      - Item: Morning_Star
+        Rate: 15
+      - Item: Magician_Hat
+        Rate: 15
+      - Item: Owl_Duke_Card
         Rate: 1
         StealProtected: true

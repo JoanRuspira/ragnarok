@@ -2702,3 +2702,28 @@ Body:
     View: 45
     Script: |
       bonus bInt,2;
+  - Id: 5045
+    AegisName: Magician_Hat
+    Name: Magician Hat
+    Type: Armor
+    Buy: 20
+    Weight: 500
+    Defense: 6
+    Jobs:
+      Acolyte: true
+      Mage: true
+      Monk: true
+      Priest: true
+      Sage: true
+      SoulLinker: true
+      Wizard: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 50
+    Refineable: true
+    View: 130
+    Script: |
+      bonus bDex,1;
+      bonus bAgi,1;
+      bonus bMaxSP,50;

@@ -317,3 +317,47 @@ Body:
     Script: |
       bonus bInt,3;
       bonus bSPrecovRate,5;
+  - Id: 1564
+    AegisName: Encyclopedia
+    Name: Encyclopedia
+    Type: Weapon
+    SubType: Book
+    Buy: 20
+    Weight: 2000
+    Attack: 110
+    MagicAttack: 100
+    Range: 1
+    Slots: 2
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bInt,3;
+      bonus bDex,2;
+      bonus bCritical,20+((readparam(bLuk)*2)/10);
+  - Id: 2109
+    AegisName: Memorize_Book
+    Name: Memory Book
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 25
+    Jobs:
+      Mage: true
+      Sage: true
+      SoulLinker: true
+      Wizard: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 5
+    Script: |
+      bonus bInt,1;
+      bonus bMdef,2;

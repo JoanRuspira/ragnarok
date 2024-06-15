@@ -1406,6 +1406,17 @@ Body:
       Sitting: true
     Script: |
       pet 1026;
+  - Id: 644
+    AegisName: Gift_Box
+    Name: Gift Box
+    Type: Usable
+    Buy: 1000
+    Weight: 200
+    Flags:
+      BuyingStore: true
+      Container: true
+    Script: |
+      getrandgroupitem(IG_GiftBox,1);
   - Id: 637
     AegisName: Old_Broom
     Name: Old Broom

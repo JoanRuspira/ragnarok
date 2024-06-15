@@ -245,3 +245,22 @@ Body:
     Script: |
       bonus bAgi,1;
       bonus bSPrecovRate,5;
+  - Id: 2417
+    AegisName: Fricco_Shoes
+    Name: Fricco's Shoes
+    Type: Armor
+    Buy: 30000
+    Weight: 500
+    Defense: 12
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Shoes: true
+    ArmorLevel: 1
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bAgi,2;
+      bonus2 bAddItemGroupHealRate,IG_Potion,20;

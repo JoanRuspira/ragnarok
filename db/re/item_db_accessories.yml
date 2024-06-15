@@ -450,3 +450,20 @@ Body:
     Script: |
       bonus2 bSkillAtk,"SK_SM_BASH",6;
       bonus2 bSkillAtk,"SK_MC_MAMMONITE",6;
+  - Id: 2727
+    AegisName: Bowman_Scarf
+    Name: Bowman Scarf
+    Type: Armor
+    Buy: 20
+    Weight: 200
+    Jobs:
+      Hunter: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Accessory: true
+    ArmorLevel: 1
+    EquipLevelMin: 70
+    Script: |
+      bonus bMaxSP,50;
+      bonus bDex,3;
