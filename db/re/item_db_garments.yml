@@ -401,3 +401,59 @@ Body:
     Refineable: true
     Script: |
       bonus bAgi,2;
+  - Id: 2518
+    AegisName: Morpheus's_Shawl
+    Name: Morpheus's Shawl
+    Type: Armor
+    Buy: 30000
+    Weight: 600
+    Defense: 8
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 33
+    Refineable: true
+    Script: |
+      bonus bMaxSPrate,10;
+      bonus bMdef,3;
+  - Id: 2516
+    AegisName: Falcon_Robe
+    Name: Falcon Muffler
+    Type: Armor
+    Buy: 30000
+    Weight: 400
+    Defense: 8
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bFlee,15;
+      bonus bFlee2,5;
+  - Id: 2517
+    AegisName: Vali's_Manteau
+    Name: Vali's Manteau
+    Type: Armor
+    Buy: 30000
+    Weight: 600
+    Defense: 13
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus2 bSubEle,Ele_Neutral,15;

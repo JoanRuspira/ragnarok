@@ -985,7 +985,7 @@ Body:
     AegisName: Rouge
     Name: Rouge
     Type: Etc
-    Buy: 10000
+    Buy: 200
     Weight: 10
     Flags:
       BuyingStore: true
@@ -1588,6 +1588,30 @@ Body:
     Name: Crystal Fragment
     Type: Etc
     Buy: 552
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7512
+    AegisName: Burnt_Parts
+    Name: Burnt Part
+    Type: Etc
+    Buy: 1600
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7507
+    AegisName: Sturdy_Iron_Piece
+    Name: Solid Iron Piece
+    Type: Etc
+    Buy: 842
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7451
+    AegisName: Scale_Of_Red_Dragon
+    Name: Fire Dragon Scale
+    Type: Etc
+    Buy: 1852
     Weight: 10
     Flags:
       BuyingStore: true

@@ -309,3 +309,25 @@ Body:
     Script: |
       bonus bAtkEle,Ele_Wind;
       bonus2 bAddEff,Eff_Sleep,500;
+  - Id: 1270
+    AegisName: Drill_Katar
+    Name: Drill Katar
+    Type: Weapon
+    SubType: Katar
+    Buy: 20
+    Weight: 1400
+    Attack: 110
+    Range: 1
+    Slots: 1
+    Jobs:
+      Assassin: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus bHit,30;
+      bonus3 bAutoSpell,"SK_ST_FULLSTRIP",1,150;

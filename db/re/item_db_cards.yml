@@ -5662,6 +5662,71 @@ Body:
     Script: |
       bonus bFlee,10;
       bonus bDef,-5;
+  - Id: 300017
+    AegisName: Acidus_B_Card
+    Name: Black Acidus Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bAddEle,Ele_Dark,25;
+  - Id: 300018
+    AegisName: Acidus_S_Card
+    Name: Silver Acidus Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bAddEle,Ele_Holy,25;
+  - Id: 300019
+    AegisName: Bone_Ferus_Card
+    Name: Bone Ferus Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Left_Accessory: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bAddRace,RC_Dragon,5;
+  - Id: 300020
+    AegisName: Bone_Acidus_Card
+    Name: Bone Acidus Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Right_Accessory: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bAddRace,RC_Brute,5;
+  - Id: 300015
+    AegisName: Ferus_P_Card
+    Name: Purple Ferus Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Head_Top: true
+      Head_Mid: true
+      Head_Low: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bAtkRate,3;
+      bonus bMaxHPrate,-5;
+      bonus bMaxSPrate,-5;
+      bonus bAtkRate,(getrefine()/4);
   - Id: 4402
     AegisName: Aliot_Card
     Name: Aliot Card

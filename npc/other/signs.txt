@@ -708,22 +708,22 @@ prt_fild01,140,366,4	script	Board#sgn::115	858,{
 }
 
 yuno_fild08,217,196,5	script	Bulletin Board#sgn::116	837,{
-	mes "Kiel Hyre´s old academy. Abandoned now.";
+	mes "Kiel Hyre´s old robot academy. Abandoned now.";
 	close;
 }
 
 yuno_fild08,190,245,7	script	Bulletin Board#sgn::117	837,{
-	mes "Kiel Hyre´s old academy. Abandoned now.";
+	mes "Kiel Hyre´s old robot academy. Abandoned now.";
 	close;
 }
 
 yuno_fild08,217,196,5	script	Bulletin Board#sgn::118	837,{
-	mes "Kiel Hyre´s old academy. Abandoned now.";
+	mes "Kiel Hyre´s old robot academy. Abandoned now.";
 	close;
 }
 
 yuno_fild08,158,194,6	script	Board#sgn::119	858,{
-	mes "Kiel Hyre's Academy entrance, caution!";
+	mes "Kiel Hyre's robot Academy entrance, caution!";
 	close;
 }
 

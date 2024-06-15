@@ -8152,7 +8152,7 @@ Body:
       - Item: Elunium_Stone
         Rate: 10
       - Item: Angry_Mouth
-        Rate: 1
+        Rate: 5
       - Item: Hylozoist_Card
         Rate: 1
         StealProtected: true
@@ -14301,5 +14301,740 @@ Body:
       - Item: Magician_Hat
         Rate: 15
       - Item: Owl_Duke_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1275
+    AegisName: ALICE
+    Name: Alice
+    Level: 62
+    Hp: 10000
+    Sp: 221
+    BaseExp: 3583
+    JobExp: 2400
+    Attack: 550
+    Attack2: 700
+    Defense: 5
+    MagicDefense: 5
+    Str: 64
+    Agi: 64
+    Vit: 42
+    Int: 85
+    Dex: 100
+    Luk: 130
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 200
+    AttackDelay: 502
+    AttackMotion: 2304
+    DamageMotion: 480
+    Ai: 17
+    Drops:
+      - Item: Alice's_Apron
+        Rate: 2500
+      - Item: Chrystal_Pumps
+        Rate: 15
+      - Item: Rouge
+        Rate: 100
+      - Item: Alice_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1737
+    AegisName: ALIZA
+    Name: Aliza
+    Level: 69
+    Hp: 19000
+    BaseExp: 6583
+    JobExp: 3400
+    Attack: 750
+    Attack2: 1100
+    Defense: 8
+    MagicDefense: 5
+    Str: 74
+    Agi: 74
+    Vit: 52
+    Int: 35
+    Dex: 110
+    Luk: 140
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 220
+    AttackDelay: 1440
+    AttackMotion: 576
+    DamageMotion: 600
+    Ai: 17
+    Drops:
+      - Item: Brigan
+        Rate: 4000
+      - Item: Morpheus's_Shawl
+        Rate: 10
+      - Item: Rosary_
+        Rate: 10
+      - Item: Alice's_Apron
+        Rate: 2500
+      - Item: Orleans_Server
+        Rate: 5
+      - Item: Aliza_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1622
+    AegisName: TEDDY_BEAR
+    Name: Teddy Bear
+    Level: 71
+    Hp: 8109
+    BaseExp: 5891
+    JobExp: 3455
+    Attack: 621
+    Attack2: 1432
+    Defense: 19
+    MagicDefense: 32
+    Str: 5
+    Agi: 155
+    Vit: 32
+    Int: 41
+    Dex: 121
+    Luk: 26
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 200
+    AttackDelay: 512
+    AttackMotion: 780
+    DamageMotion: 504
+    Ai: 20
+    Drops:
+      - Item: Screw
+        Rate: 3800
+      - Item: Honey
+        Rate: 1000
+      - Item: Angry_Mouth
+        Rate: 5
+      - Item: Cursed_Lucky_Brooch
+        Rate: 10
+      - Item: Elunium
+        Rate: 100
+      - Item: Teddy_Bear_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1736
+    AegisName: ALIOT
+    Name: Aliot
+    Level: 75
+    Hp: 48290
+    BaseExp: 13020
+    JobExp: 4006
+    Attack: 950
+    Attack2: 2470
+    Defense: 35
+    MagicDefense: 15
+    Str: 50
+    Agi: 32
+    Vit: 87
+    Int: 12
+    Dex: 68
+    Luk: 19
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 200
+    AttackDelay: 1296
+    AttackMotion: 432
+    DamageMotion: 360
+    Ai: 13
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Burnt_Parts
+        Rate: 2000
+      - Item: Sturdy_Iron_Piece
+        Rate: 3000
+      - Item: Falcon_Robe
+        Rate: 10
+      - Item: Screw
+        Rate: 500
+      - Item: Claw_
+        Rate: 10
+      - Item: Elunium
+        Rate: 10
+      - Item: Curved_Sword
+        Rate: 15
+      - Item: Aliot_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1735
+    AegisName: ALICEL
+    Name: Alicel
+    Level: 75
+    Hp: 37520
+    BaseExp: 8890
+    JobExp: 5420
+    Attack: 1800
+    Attack2: 2770
+    Defense: 30
+    MagicDefense: 30
+    Str: 50
+    Agi: 58
+    Vit: 50
+    Int: 51
+    Dex: 92
+    Luk: 40
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 250
+    AttackDelay: 1080
+    AttackMotion: 480
+    DamageMotion: 504
+    Ai: 13
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Burnt_Parts
+        Rate: 2000
+      - Item: Sturdy_Iron_Piece
+        Rate: 3000
+      - Item: Steel
+        Rate: 200
+      - Item: Screw
+        Rate: 500
+      - Item: Drill_Katar
+        Rate: 5
+      - Item: Elunium
+        Rate: 10
+      - Item: Vali's_Manteau
+        Rate: 20
+      - Item: Alicel_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1734
+    AegisName: KIEL_
+    Name: Kiel D-01
+    Level: 90
+    Hp: 1523000
+    BaseExp: 2356200
+    JobExp: 512602
+    MvpExp: 1178100
+    Attack: 3280
+    Attack2: 6560
+    Defense: 28
+    MagicDefense: 32
+    Str: 100
+    Agi: 130
+    Vit: 30
+    Int: 160
+    Dex: 199
+    Luk: 180
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Dark
+    ElementLevel: 2
+    WalkSpeed: 130
+    AttackDelay: 1152
+    AttackMotion: 576
+    DamageMotion: 432
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Old_Violet_Box
+        Rate: 5500
+      - Item: Old_Blue_Box
+        Rate: 5000
+      - Item: Old_Card_Album
+        Rate: 2000
+    Drops:
+      - Item: Pocket_Watch_
+        Rate: 3000
+      - Item: Old_Violet_Box
+        Rate: 3000
+      - Item: Morrigane's_Pendant
+        Rate: 1000
+      - Item: Glittering_Clothes
+        Rate: 1000
+      - Item: Survival_Rod_
+        Rate: 500
+      - Item: Counter_Dagger
+        Rate: 500
+      - Item: Morrigane's_Belt
+        Rate: 1000
+      - Item: Kiel_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1714
+    AegisName: FERUS
+    Name: Ferus
+    Level: 70
+    Hp: 29218
+    BaseExp: 8093
+    JobExp: 3952
+    Attack: 1056
+    Attack2: 1496
+    Defense: 14
+    MagicDefense: 45
+    Agi: 78
+    Vit: 45
+    Int: 72
+    Dex: 81
+    Luk: 73
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Dragon
+    Element: Fire
+    ElementLevel: 2
+    WalkSpeed: 100
+    AttackDelay: 108
+    AttackMotion: 576
+    DamageMotion: 432
+    Ai: 09
+    Drops:
+      - Item: Strawberry
+        Rate: 2200
+      - Item: Dragon_Canine
+        Rate: 1000
+      - Item: Dragon's_Skin
+        Rate: 1000
+      - Item: Dragon_Scale
+        Rate: 2000
+      - Item: Dragonball_Red
+        Rate: 800
+      - Item: Flame_Heart
+        Rate: 20
+      - Item: Magni_Cap
+        Rate: 50
+      - Item: Ferus_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 20612
+    AegisName: FERUS_P
+    Name: Ferus
+    Level: 70
+    Hp: 29218
+    BaseExp: 8093
+    JobExp: 3952
+    Attack: 1056
+    Attack2: 1496
+    Defense: 14
+    MagicDefense: 45
+    Agi: 78
+    Vit: 45
+    Int: 72
+    Dex: 81
+    Luk: 73
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Dragon
+    Element: Poison
+    ElementLevel: 2
+    WalkSpeed: 100
+    AttackDelay: 108
+    AttackMotion: 576
+    DamageMotion: 432
+    Ai: 09
+    Drops:
+      - Item: Strawberry
+        Rate: 2200
+      - Item: Dragon_Canine
+        Rate: 1000
+      - Item: Dragon's_Skin
+        Rate: 1000
+      - Item: Dragon_Scale
+        Rate: 2000
+      - Item: Flame_Heart
+        Rate: 20
+      - Item: Magni_Cap
+        Rate: 10
+      - Item: Ferus_P_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1717
+    AegisName: FERUS_
+    Name: Ferus
+    Level: 69
+    Hp: 21182
+    BaseExp: 6750
+    JobExp: 2230
+    Attack: 930
+    Attack2: 1170
+    Defense: 14
+    MagicDefense: 38
+    Agi: 66
+    Vit: 77
+    Int: 60
+    Dex: 79
+    Luk: 35
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Dragon
+    Element: Earth
+    ElementLevel: 2
+    WalkSpeed: 120
+    AttackDelay: 108
+    AttackMotion: 576
+    DamageMotion: 432
+    Ai: 09
+    Drops:
+      - Item: Delicious_Fish
+        Rate: 5100
+      - Item: Dragon_Canine
+        Rate: 1000
+      - Item: Dragon_Scale
+        Rate: 3589
+      - Item: Dragonball_Green
+        Rate: 800
+      - Item: Great_Nature
+        Rate: 20
+      - Item: Dragonball_Green
+        Rate: 100
+      - Item: Ferus__Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1713
+    AegisName: ACIDUS
+    Name: Acidus
+    Level: 80
+    Hp: 51112
+    BaseExp: 28043
+    JobExp: 8023
+    Attack: 1289
+    Attack2: 2109
+    Defense: 29
+    MagicDefense: 69
+    Agi: 71
+    Vit: 55
+    Int: 135
+    Dex: 103
+    Luk: 69
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Dragon
+    Element: Holy
+    ElementLevel: 2
+    WalkSpeed: 170
+    AttackDelay: 168
+    AttackMotion: 1008
+    DamageMotion: 300
+    Ai: 09
+    Drops:
+      - Item: Orange
+        Rate: 5100
+      - Item: Dragon_Canine
+        Rate: 4000
+      - Item: Treasure_Box
+        Rate: 5
+      - Item: Dragon_Scale
+        Rate: 3589
+      - Item: Dragonball_Yellow
+        Rate: 800
+      - Item: Stone_Buckler
+        Rate: 20
+      - Item: Acidus_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1716
+    AegisName: ACIDUS_
+    Name: Acidus
+    Level: 76
+    Hp: 39111
+    BaseExp: 14392
+    JobExp: 4203
+    Attack: 1180
+    Attack2: 2000
+    Defense: 21
+    MagicDefense: 47
+    Agi: 78
+    Vit: 31
+    Int: 93
+    Dex: 88
+    Luk: 52
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Dragon
+    Element: Wind
+    ElementLevel: 2
+    WalkSpeed: 180
+    AttackDelay: 168
+    AttackMotion: 768
+    DamageMotion: 360
+    Ai: 09
+    Drops:
+      - Item: Blue_Potion
+        Rate: 150
+      - Item: Dragon_Canine
+        Rate: 4000
+      - Item: Blue_Herb
+        Rate: 150
+      - Item: Dragon_Scale
+        Rate: 3589
+      - Item: Dragonball_Blue
+        Rate: 800
+      - Item: Rough_Wind
+        Rate: 20
+      - Item: Dragonball_Blue
+        Rate: 100
+      - Item: Acidus__Card
+        Rate: 1
+        StealProtected: true
+  - Id: 20614
+    AegisName: ACIDUS_B
+    Name: Acidus
+    Level: 76
+    Hp: 39111
+    BaseExp: 14392
+    JobExp: 4203
+    Attack: 1180
+    Attack2: 2000
+    Defense: 21
+    MagicDefense: 47
+    Agi: 78
+    Vit: 31
+    Int: 93
+    Dex: 88
+    Luk: 52
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Dragon
+    Element: Dark
+    ElementLevel: 2
+    WalkSpeed: 180
+    AttackDelay: 168
+    AttackMotion: 768
+    DamageMotion: 360
+    Ai: 09
+    Drops:
+      - Item: Blue_Potion
+        Rate: 150
+      - Item: Dragon_Canine
+        Rate: 4000
+      - Item: Blue_Herb
+        Rate: 150
+      - Item: Dragon_Scale
+        Rate: 3589
+      - Item: Rough_Wind
+        Rate: 20
+      - Item: Dragonball_Blue
+        Rate: 100
+      - Item: Acidus_B_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 20615
+    AegisName: ACIDUS_S
+    Name: Acidus
+    Level: 80
+    Hp: 51112
+    BaseExp: 28043
+    JobExp: 8023
+    Attack: 1289
+    Attack2: 2109
+    Defense: 29
+    MagicDefense: 69
+    Agi: 71
+    Vit: 55
+    Int: 135
+    Dex: 103
+    Luk: 69
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Dragon
+    Element: Ghost
+    ElementLevel: 2
+    WalkSpeed: 170
+    AttackDelay: 168
+    AttackMotion: 1008
+    DamageMotion: 300
+    Ai: 09
+    Drops:
+      - Item: Orange
+        Rate: 5100
+      - Item: Dragon_Canine
+        Rate: 4000
+      - Item: Treasure_Box
+        Rate: 5
+      - Item: Dragon_Scale
+        Rate: 3589
+      - Item: Stone_Buckler
+        Rate: 20
+      - Item: Acidus_S_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 20616
+    AegisName: BONE_FERUS
+    Name: Ferus
+    Level: 85
+    Hp: 61112
+    BaseExp: 28043
+    JobExp: 8023
+    Attack: 1289
+    Attack2: 2109
+    Defense: 29
+    MagicDefense: 69
+    Agi: 71
+    Vit: 55
+    Int: 135
+    Dex: 103
+    Luk: 69
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Dragon
+    Element: Undead
+    ElementLevel: 2
+    WalkSpeed: 170
+    AttackDelay: 168
+    AttackMotion: 1008
+    DamageMotion: 300
+    Ai: 09
+    Drops:
+      - Item: Orange
+        Rate: 5100
+      - Item: Dragon_Canine
+        Rate: 4000
+      - Item: Treasure_Box
+        Rate: 5
+      - Item: Dragon_Scale
+        Rate: 3589
+      - Item: Inverse_Scale
+        Rate: 10
+      - Item: Bone_Ferus_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 20617
+    AegisName: BONE_ACIDUS
+    Name: Acidus
+    Level: 85
+    Hp: 61112
+    BaseExp: 28043
+    JobExp: 8023
+    Attack: 1289
+    Attack2: 2109
+    Defense: 29
+    MagicDefense: 69
+    Agi: 71
+    Vit: 55
+    Int: 135
+    Dex: 103
+    Luk: 69
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Dragon
+    Element: Undead
+    ElementLevel: 2
+    WalkSpeed: 170
+    AttackDelay: 168
+    AttackMotion: 1008
+    DamageMotion: 300
+    Ai: 09
+    Drops:
+      - Item: Orange
+        Rate: 5100
+      - Item: Dragon_Canine
+        Rate: 4000
+      - Item: Treasure_Box
+        Rate: 5
+      - Item: Dragon_Scale
+        Rate: 3589
+      - Item: Inverse_Scale
+        Rate: 10
+      - Item: Bone_Acidus_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1719
+    AegisName: DETALE
+    Name: Detardeurus
+    JapaneseName: Detale
+    Level: 90
+    Hp: 960000
+    BaseExp: 291850
+    JobExp: 123304
+    MvpExp: 145925
+    Attack: 4560
+    Attack2: 5548
+    Defense: 66
+    MagicDefense: 59
+    Str: 100
+    Agi: 90
+    Vit: 30
+    Int: 136
+    Dex: 140
+    Luk: 56
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Dragon
+    Element: Dark
+    ElementLevel: 3
+    WalkSpeed: 250
+    AttackDelay: 432
+    AttackMotion: 936
+    DamageMotion: 360
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Old_Violet_Box
+        Rate: 5500
+      - Item: Old_Blue_Box
+        Rate: 5000
+      - Item: Crystal_Jewel__
+        Rate: 2000
+    Drops:
+      - Item: Morpheus's_Armlet
+        Rate: 1000
+      - Item: Morpheus's_Ring
+        Rate: 1000
+      - Item: Treasure_Box
+        Rate: 5000
+      - Item: Scale_Of_Red_Dragon
+        Rate: 3589
+      - Item: Int_Dish10
+        Rate: 1000
+      - Item: Pole_Axe
+        Rate: 100
+      - Item: Gemmed_Crown
+        Rate: 500
+      - Item: Detale_Card
         Rate: 1
         StealProtected: true

@@ -1353,3 +1353,24 @@ Body:
     Script: |
       bonus bMaxSPrate,10;
       bonus bSPDrainValue,3;
+  - Id: 1242
+    AegisName: Counter_Dagger
+    Name: Dagger of Counter
+    Type: Weapon
+    SubType: Dagger
+    Buy: 120000
+    Weight: 550
+    Attack: 140
+    Range: 1
+    Jobs:
+      Mage: true
+      Sage: true
+      SoulLinker: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus bCritical,90;

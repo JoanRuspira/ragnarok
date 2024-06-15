@@ -467,3 +467,83 @@ Body:
     Script: |
       bonus bMaxSP,50;
       bonus bDex,3;
+  - Id: 2652
+    AegisName: Cursed_Lucky_Brooch
+    Name: Goddess of Fortune's Cursed Brooch
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Locations:
+      Both_Accessory: true
+    ArmorLevel: 1
+    EquipLevelMin: 40
+    Script: |
+      bonus bCritical,6;
+  - Id: 2651
+    AegisName: Morrigane's_Pendant
+    Name: Morrigane's Pendant
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Both_Accessory: true
+    ArmorLevel: 1
+    EquipLevelMin: 61
+    Script: |
+      bonus bStr,2;
+      bonus bCritical,3;
+  - Id: 2649
+    AegisName: Morpheus's_Armlet
+    Name: Morpheus's Bracelet
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Both_Accessory: true
+    ArmorLevel: 1
+    EquipLevelMin: 33
+    Script: |
+      bonus bInt,1;
+      bonus bMaxSPrate,5;
+  - Id: 2650
+    AegisName: Morrigane's_Belt
+    Name: Morrigane's Belt
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Both_Accessory: true
+    ArmorLevel: 1
+    EquipLevelMin: 61
+    Script: |
+      bonus bBaseAtk,5;
+      bonus bCritical,3;
+  - Id: 2648
+    AegisName: Morpheus's_Ring
+    Name: Morpheus's Ring
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Both_Accessory: true
+    ArmorLevel: 1
+    EquipLevelMin: 33
+    Script: |
+      bonus bInt,1;
+      bonus bMaxSPrate,5;
