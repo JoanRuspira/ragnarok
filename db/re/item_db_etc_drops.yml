@@ -1311,11 +1311,107 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
+  - Id: 7125
+    AegisName: Scropion's_Nipper
+    Name: Scorpion Claw
+    Type: Etc
+    Buy: 706
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 7097
     AegisName: Burning_Heart
     Name: Burning Heart
     Type: Etc
     Buy: 924
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7356
+    AegisName: Piece_Of_Crest1
+    Name: Crest Piece
+    Type: Etc
+    Buy: 5000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7093
+    AegisName: Wheel
+    Name: Cogwheel
+    Type: Etc
+    Buy: 1512
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7112
+    AegisName: Fright_Paper_Blade
+    Name: Sharp Paper
+    Type: Etc
+    Buy: 907
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7095
+    AegisName: Broken_Steel_Piece
+    Name: Metal Fragment
+    Type: Etc
+    Buy: 1075
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7094
+    AegisName: Mystery_Piece
+    Name: Fragment
+    Type: Etc
+    Buy: 1344
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7319
+    AegisName: Old_Steel_Plate
+    Name: Used Iron Plate
+    Type: Etc
+    Buy: 1024
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7352
+    AegisName: Transparent_Plate01
+    Name: Transparent Plate
+    Type: Etc
+    Buy: 20
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7357
+    AegisName: Piece_Of_Crest2
+    Name: Crest Piece
+    Type: Etc
+    Buy: 5000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7358
+    AegisName: Piece_Of_Crest3
+    Name: Crest Piece
+    Type: Etc
+    Buy: 5000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7359
+    AegisName: Piece_Of_Crest4
+    Name: Crest Piece
+    Type: Etc
+    Buy: 5000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7096
+    AegisName: Cold_Magma
+    Name: Lava
+    Type: Etc
+    Buy: 1109
     Weight: 10
     Flags:
       BuyingStore: true
@@ -1604,6 +1700,22 @@ Body:
     Name: Solid Iron Piece
     Type: Etc
     Buy: 842
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7096
+    AegisName: Cold_Magma
+    Name: Lava
+    Type: Etc
+    Buy: 1109
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7098
+    AegisName: Live_Coal
+    Name: Live Coal
+    Type: Etc
+    Buy: 638
     Weight: 10
     Flags:
       BuyingStore: true

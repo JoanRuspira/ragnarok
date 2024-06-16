@@ -547,3 +547,147 @@ Body:
     Script: |
       bonus bInt,1;
       bonus bMaxSPrate,5;
+  - Id: 2656
+    AegisName: Hyper_Changer
+    Name: Armor Charm
+    Type: Armor
+    Buy: 20000
+    Weight: 1000
+    Defense: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Both_Accessory: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Script: |
+      bonus bMaxHP,50;
+      bonus bDef,1;
+  - Id: 2659
+    AegisName: Vesper_Core01
+    Name: Vesper Core 01
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Monk: true
+      Priest: true
+      Rogue: true
+      Sage: true
+      Wizard: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Accessory: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Script: |
+      bonus bMdef,3;
+      bonus bInt,2;
+      bonus bMaxSPrate,5;
+  - Id: 2660
+    AegisName: Vesper_Core02
+    Name: Vesper Core 02
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Monk: true
+      Priest: true
+      Rogue: true
+      Sage: true
+      Wizard: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Accessory: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Script: |
+      bonus bMdef,3;
+      bonus bStr,3;
+      bonus bBaseAtk,10;
+  - Id: 2661
+    AegisName: Vesper_Core03
+    Name: Vesper Core 03
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Monk: true
+      Priest: true
+      Rogue: true
+      Sage: true
+      Wizard: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Accessory: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Script: |
+      bonus bMdef,3;
+      bonus bAgi,3;
+      bonus bFlee,5;
+  - Id: 2662
+    AegisName: Vesper_Core04
+    Name: Vesper Core 04
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Monk: true
+      Priest: true
+      Rogue: true
+      Sage: true
+      Wizard: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Accessory: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Script: |
+      bonus bMdef,3;
+      bonus bDex,3;
+      bonus bHit,10;

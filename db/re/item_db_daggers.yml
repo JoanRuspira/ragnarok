@@ -1374,3 +1374,24 @@ Body:
     Refineable: true
     Script: |
       bonus bCritical,90;
+  - Id: 13009
+    AegisName: Kamaitachi
+    Name: Kamaitachi
+    Type: Weapon
+    SubType: Dagger
+    Buy: 48000
+    Weight: 900
+    Attack: 125
+    Range: 2
+    Jobs:
+      KagerouOboro: true
+      Ninja: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Wind;
+      bonus bCritical,3;
+      bonus bAspdRate,3;

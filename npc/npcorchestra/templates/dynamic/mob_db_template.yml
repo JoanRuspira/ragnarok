@@ -15038,3 +15038,754 @@ Body:
       - Item: Detale_Card
         Rate: 1
         StealProtected: true
+  - Id: 1367
+    AegisName: BLAZZER
+    Name: Blazer
+    Level: 43
+    Hp: 8252
+    BaseExp: 3173
+    JobExp: 1871
+    Attack: 533
+    Attack2: 709
+    Defense: 50
+    MagicDefense: 40
+    Agi: 52
+    Vit: 50
+    Int: 39
+    Dex: 69
+    Luk: 40
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Fire
+    ElementLevel: 2
+    WalkSpeed: 180
+    AttackDelay: 1732
+    AttackMotion: 1332
+    DamageMotion: 540
+    Ai: 20
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Burning_Heart
+        Rate: 4850
+      - Item: Live_Coal
+        Rate: 3400
+      - Item: White_Herb
+        Rate: 3000
+      - Item: Blazzer_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1366
+    AegisName: LAVA_GOLEM
+    Name: Lava Golem
+    Level: 77
+    Hp: 24324
+    BaseExp: 6470
+    JobExp: 3879
+    Attack: 1541
+    Attack2: 2049
+    Defense: 65
+    MagicDefense: 50
+    Agi: 57
+    Vit: 115
+    Int: 70
+    Dex: 76
+    Luk: 68
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Formless
+    RaceGroups:
+      Golem: true
+    Element: Fire
+    ElementLevel: 4
+    WalkSpeed: 400
+    AttackDelay: 2190
+    AttackMotion: 2040
+    DamageMotion: 336
+    Ai: 09
+    Drops:
+      - Item: Cold_Magma
+        Rate: 4559
+      - Item: Burning_Heart
+        Rate: 3686
+      - Item: Plate_Armor_
+        Rate: 10
+      - Item: White_Herb
+        Rate: 2500
+      - Item: Magma_Fist
+        Rate: 20
+      - Item: Lava_Golem_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1072
+    AegisName: KAHO
+    Name: Kaho
+    Level: 60
+    Hp: 8409
+    BaseExp: 3990
+    JobExp: 450
+    Attack: 110
+    Attack2: 760
+    Defense: 5
+    MagicDefense: 50
+    Agi: 55
+    Vit: 43
+    Int: 88
+    Dex: 80
+    Luk: 46
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Fire
+    ElementLevel: 4
+    WalkSpeed: 150
+    AttackDelay: 1700
+    AttackMotion: 1000
+    DamageMotion: 500
+    Ai: 04
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Flame_Heart
+        Rate: 50
+      - Item: Coal
+        Rate: 150
+      - Item: Burning_Heart
+        Rate: 3000
+      - Item: Elunium_Stone
+        Rate: 1000
+      - Item: Red_Gemstone
+        Rate: 300
+      - Item: Alchol
+        Rate: 5
+      - Item: Kaho_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1383
+    AegisName: EXPLOSION
+    Name: Explosion
+    Level: 46
+    Hp: 8054
+    BaseExp: 2404
+    JobExp: 1642
+    Attack: 336
+    Attack2: 447
+    Defense: 35
+    MagicDefense: 27
+    Agi: 61
+    Vit: 56
+    Int: 50
+    Dex: 66
+    Luk: 38
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Brute
+    Element: Fire
+    ElementLevel: 3
+    WalkSpeed: 165
+    AttackDelay: 1260
+    AttackMotion: 960
+    DamageMotion: 336
+    Ai: 04
+    Drops:
+      - Item: Wing_Of_Red_Bat
+        Rate: 5500
+      - Item: Burning_Heart
+        Rate: 2200
+      - Item: Hot_Hair
+        Rate: 3200
+      - Item: Oridecon_Stone
+        Rate: 800
+      - Item: Fruit_Of_Mastela
+        Rate: 400
+      - Item: Explosion_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1387
+    AegisName: GIG
+    Name: Gig
+    Level: 60
+    Hp: 8409
+    BaseExp: 3934
+    JobExp: 2039
+    Attack: 360
+    Attack2: 479
+    Defense: 60
+    MagicDefense: 28
+    Agi: 61
+    Vit: 80
+    Int: 53
+    Dex: 59
+    Luk: 46
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Brute
+    Element: Fire
+    ElementLevel: 2
+    WalkSpeed: 170
+    AttackDelay: 1264
+    AttackMotion: 864
+    DamageMotion: 576
+    Ai: 04
+    Drops:
+      - Item: Scropion's_Nipper
+        Rate: 4365
+      - Item: Scorpion's_Tail
+        Rate: 5500
+      - Item: Red_Gemstone
+        Rate: 150
+      - Item: Panacea
+        Rate: 2500
+      - Item: Flame_Heart
+        Rate: 50
+      - Item: Gig_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1676
+    AegisName: VENATU_1
+    Name: Venatu
+    Level: 72
+    Hp: 8900
+    BaseExp: 4000
+    JobExp: 2000
+    Attack: 800
+    Attack2: 1400
+    Defense: 30
+    MagicDefense: 20
+    Str: 5
+    Agi: 26
+    Vit: 24
+    Int: 5
+    Dex: 82
+    Luk: 30
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 504
+    AttackMotion: 1020
+    DamageMotion: 360
+    Ai: 04
+    Drops:
+      - Item: Screw
+        Rate: 2000
+      - Item: Piece_Of_Crest1
+        Rate: 350
+      - Item: Steel
+        Rate: 300
+      - Item: Mystery_Piece
+        Rate: 300
+      - Item: Elunium
+        Rate: 10
+      - Item: Venatu_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1677
+    AegisName: VENATU_2
+    Name: Venatu
+    Level: 80
+    Hp: 9000
+    BaseExp: 4000
+    JobExp: 2000
+    Attack: 900
+    Attack2: 1500
+    Defense: 30
+    MagicDefense: 20
+    Str: 5
+    Agi: 82
+    Vit: 32
+    Int: 5
+    Dex: 105
+    Luk: 30
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Wind
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 504
+    AttackMotion: 1020
+    DamageMotion: 360
+    Ai: 04
+    Drops:
+      - Item: Screw
+        Rate: 2000
+      - Item: Piece_Of_Crest2
+        Rate: 500
+      - Item: Steel
+        Rate: 300
+      - Item: Mystery_Piece
+        Rate: 300
+      - Item: Elunium
+        Rate: 10
+      - Item: Venatu_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1678
+    AegisName: VENATU_3
+    Name: Venatu
+    Level: 78
+    Hp: 9500
+    BaseExp: 4500
+    JobExp: 2000
+    Attack: 800
+    Attack2: 1400
+    Defense: 30
+    MagicDefense: 20
+    Str: 5
+    Agi: 26
+    Vit: 68
+    Int: 5
+    Dex: 95
+    Luk: 30
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Earth
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 504
+    AttackMotion: 1020
+    DamageMotion: 360
+    Ai: 04
+    Drops:
+      - Item: Screw
+        Rate: 2000
+      - Item: Piece_Of_Crest3
+        Rate: 400
+      - Item: Steel
+        Rate: 300
+      - Item: Mystery_Piece
+        Rate: 300
+      - Item: Hyper_Changer
+        Rate: 20
+      - Item: Elunium
+        Rate: 10
+      - Item: Venatu_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1679
+    AegisName: VENATU_4
+    Name: Venatu
+    Level: 75
+    Hp: 12300
+    BaseExp: 4000
+    JobExp: 2000
+    Attack: 800
+    Attack2: 1400
+    Defense: 30
+    MagicDefense: 20
+    Str: 5
+    Agi: 26
+    Vit: 24
+    Int: 5
+    Dex: 100
+    Luk: 30
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Water
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 504
+    AttackMotion: 1020
+    DamageMotion: 360
+    Ai: 04
+    Drops:
+      - Item: Screw
+        Rate: 2000
+      - Item: Piece_Of_Crest4
+        Rate: 300
+      - Item: Steel
+        Rate: 300
+      - Item: Mystery_Piece
+        Rate: 300
+      - Item: Hyper_Changer
+        Rate: 20
+      - Item: Elunium
+        Rate: 10
+      - Item: Venatu_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1670
+    AegisName: DIMIK_1
+    Name: Dimik
+    Level: 79
+    Hp: 16000
+    BaseExp: 6400
+    JobExp: 3500
+    Attack: 1140
+    Attack2: 1980
+    Defense: 45
+    MagicDefense: 28
+    Str: 15
+    Agi: 88
+    Vit: 20
+    Int: 20
+    Dex: 120
+    Luk: 40
+    AttackRange: 7
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Wind
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 576
+    AttackMotion: 720
+    DamageMotion: 432
+    Ai: 04
+    Drops:
+      - Item: Old_Steel_Plate
+        Rate: 2000
+      - Item: Transparent_Plate01
+        Rate: 50
+      - Item: Steel
+        Rate: 300
+      - Item: Mystery_Piece
+        Rate: 300
+      - Item: Oridecon
+        Rate: 10
+      - Item: Dimik_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1671
+    AegisName: DIMIK_2
+    Name: Dimik
+    Level: 89
+    Hp: 29000
+    BaseExp: 8000
+    JobExp: 5000
+    Attack: 1440
+    Attack2: 2280
+    Defense: 45
+    MagicDefense: 28
+    Str: 15
+    Agi: 40
+    Vit: 30
+    Int: 30
+    Dex: 150
+    Luk: 70
+    AttackRange: 5
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Water
+    ElementLevel: 2
+    WalkSpeed: 200
+    AttackDelay: 576
+    AttackMotion: 720
+    DamageMotion: 432
+    Ai: 04
+    Drops:
+      - Item: Old_Steel_Plate
+        Rate: 2000
+      - Item: Transparent_Plate02
+        Rate: 50
+      - Item: Steel
+        Rate: 300
+      - Item: Mystery_Piece
+        Rate: 300
+      - Item: Oridecon
+        Rate: 10
+      - Item: Dimik_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1672
+    AegisName: DIMIK_3
+    Name: Dimik
+    Level: 80
+    Hp: 19000
+    BaseExp: 5900
+    JobExp: 2800
+    Attack: 1240
+    Attack2: 2080
+    Defense: 68
+    MagicDefense: 28
+    Str: 15
+    Agi: 30
+    Vit: 78
+    Int: 20
+    Dex: 120
+    Luk: 30
+    AttackRange: 5
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Earth
+    ElementLevel: 2
+    WalkSpeed: 200
+    AttackDelay: 576
+    AttackMotion: 720
+    DamageMotion: 432
+    Ai: 04
+    Drops:
+      - Item: Old_Steel_Plate
+        Rate: 2000
+      - Item: Transparent_Plate03
+        Rate: 50
+      - Item: Steel
+        Rate: 300
+      - Item: Mystery_Piece
+        Rate: 300
+      - Item: Hyper_Changer
+        Rate: 20
+      - Item: Oridecon
+        Rate: 10
+      - Item: Dimik_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1673
+    AegisName: DIMIK_4
+    Name: Dimik
+    Level: 82
+    Hp: 13900
+    BaseExp: 5800
+    JobExp: 4500
+    Attack: 1840
+    Attack2: 2840
+    Defense: 45
+    MagicDefense: 28
+    Str: 15
+    Agi: 20
+    Vit: 20
+    Int: 10
+    Dex: 120
+    Luk: 30
+    AttackRange: 5
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Fire
+    ElementLevel: 2
+    WalkSpeed: 200
+    AttackDelay: 576
+    AttackMotion: 720
+    DamageMotion: 432
+    Ai: 04
+    Drops:
+      - Item: Old_Steel_Plate
+        Rate: 2000
+      - Item: Transparent_Plate04
+        Rate: 50
+      - Item: Steel
+        Rate: 300
+      - Item: Mystery_Piece
+        Rate: 300
+      - Item: Hyper_Changer
+        Rate: 20
+      - Item: Oridecon
+        Rate: 10
+      - Item: Dimik_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1365
+    AegisName: APOCALIPS
+    Name: Apocalypse
+    Level: 66
+    Hp: 22880
+    BaseExp: 6540
+    JobExp: 4935
+    Attack: 1030
+    Attack2: 1370
+    Defense: 62
+    MagicDefense: 49
+    Agi: 48
+    Vit: 120
+    Int: 48
+    Dex: 66
+    Luk: 85
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 400
+    AttackDelay: 1840
+    AttackMotion: 1440
+    DamageMotion: 384
+    Ai: 17
+    Drops:
+      - Item: Broken_Steel_Piece
+        Rate: 5335
+      - Item: Mystery_Piece
+        Rate: 2400
+      - Item: Wheel
+        Rate: 2200
+      - Item: Elunium
+        Rate: 5
+      - Item: Manteau_
+        Rate: 20
+      - Item: Steel
+        Rate: 2500
+      - Item: Apocalips_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1668
+    AegisName: ARCHDAM
+    Name: Archdam
+    Level: 79
+    Hp: 25000
+    BaseExp: 8000
+    JobExp: 5000
+    Attack: 1000
+    Attack2: 2000
+    Defense: 15
+    MagicDefense: 15
+    Str: 65
+    Agi: 65
+    Vit: 35
+    Int: 75
+    Dex: 75
+    Luk: 15
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demihuman
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 180
+    AttackDelay: 580
+    AttackMotion: 288
+    DamageMotion: 360
+    Ai: 21
+    Drops:
+      - Item: Screw
+        Rate: 5000
+      - Item: Steel
+        Rate: 500
+      - Item: Oridecon
+        Rate: 200
+      - Item: Elunium
+        Rate: 200
+      - Item: Archdam_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1685
+    AegisName: APOCALIPS_H
+    Name: Vesper
+    Level: 97
+    Hp: 640700
+    BaseExp: 200000
+    JobExp: 100000
+    MvpExp: 100000
+    Attack: 4000
+    Attack2: 10000
+    Defense: 50
+    MagicDefense: 54
+    Str: 100
+    Agi: 50
+    Vit: 30
+    Int: 70
+    Dex: 160
+    Luk: 150
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Brute
+    Element: Holy
+    ElementLevel: 2
+    WalkSpeed: 180
+    AttackDelay: 504
+    AttackMotion: 912
+    DamageMotion: 432
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Old_Violet_Box
+        Rate: 5500
+      - Item: Old_Blue_Box
+        Rate: 5000
+      - Item: Crystal_Jewel__
+        Rate: 2000
+    Drops:
+      - Item: Broken_Steel_Piece
+        Rate: 5000
+      - Item: Mystery_Piece
+        Rate: 3000
+      - Item: Old_Violet_Box
+        Rate: 1000
+      - Item: Vesper_Core01
+        Rate: 100
+      - Item: Vesper_Core02
+        Rate: 100
+      - Item: Vesper_Core03
+        Rate: 100
+      - Item: Vesper_Core04
+        Rate: 100
+      - Item: Apocalips_H_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1375
+    AegisName: THE_PAPER
+    Name: The Paper
+    Level: 56
+    Hp: 18557
+    BaseExp: 2849
+    JobExp: 1998
+    Attack: 845
+    Attack2: 1124
+    Defense: 25
+    MagicDefense: 24
+    Agi: 66
+    Vit: 52
+    Int: 76
+    Dex: 71
+    Luk: 79
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 170
+    AttackDelay: 1160
+    AttackMotion: 960
+    DamageMotion: 336
+    Ai: 04
+    Drops:
+      - Item: Smooth_Paper
+        Rate: 4947
+      - Item: Fright_Paper_Blade
+        Rate: 3200
+      - Item: Yellow_Herb
+        Rate: 1800
+      - Item: Green_Herb
+        Rate: 2000
+      - Item: Kamaitachi
+        Rate: 10
+      - Item: The_Paper_Card
+        Rate: 1
+        StealProtected: true

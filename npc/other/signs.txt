@@ -733,7 +733,7 @@ jupe_cave,55,49,7	script	Board#sgn::120	858,{
 }
 
 yuno_fild03,38,144,5	script	Board#sgn::121	858,{
-	mes "Magma Dungeon entrance.";
+	mes "Magma Chamber entrance.";
 	close;
 }
 

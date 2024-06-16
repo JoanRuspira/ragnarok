@@ -335,3 +335,24 @@ Body:
       if (.@r>6) {
          bonus bUseSPrate,-1*(.@r-6);
       }
+  - Id: 1818
+    AegisName: Magma_Fist
+    Name: Magma Fist
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 20
+    Weight: 650
+    Attack: 80
+    Range: 1
+    Slots: 3
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 75
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Fire;
+      bonus3 bAutoSpell,"SK_MG_FIREBOLT",5,10;
