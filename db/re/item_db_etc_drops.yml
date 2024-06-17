@@ -1343,6 +1343,14 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
+  - Id: 7320
+    AegisName: Air_Pollutant
+    Name: Dust Pollutant
+    Type: Etc
+    Buy: 256
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 7112
     AegisName: Fright_Paper_Blade
     Name: Sharp Paper
@@ -3167,6 +3175,22 @@ Body:
     Name: Morocc Solution
     Type: Etc
     Weight: 30
+    Flags:
+      BuyingStore: true
+  - Id: 7323
+    AegisName: Battered_Kettle
+    Name: Battered Kettle
+    Type: Etc
+    Buy: 256
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7327
+    AegisName: Headlamp
+    Name: Flashlight
+    Type: Etc
+    Buy: 1024
+    Weight: 10
     Flags:
       BuyingStore: true
   - Id: 1089

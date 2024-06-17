@@ -6,3 +6,8 @@
 dic_fild01,25,79,0	warp	dic_field0006	1,1,ice_dun01,157,15
 dic_dun02,101,147	warp	dic_field0007	1,1,ra_fild01,233,327
 
+man_fild03,266,94	warp	dic_field0008	1,1,teg_dun02,15,159
+teg_dun02,11,159	warp	dic_field0009	1,1,man_fild03,261,94
+
+ein_dun02,16,249	warp	dic_field0010	1,1,teg_dun02,185,112
+teg_dun02,188,112	warp	dic_field0010	1,1,ein_dun02,20,249

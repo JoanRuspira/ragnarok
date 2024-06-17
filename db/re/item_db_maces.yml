@@ -780,3 +780,26 @@ Body:
     Script: |
       bonus2 bAddRace,RC_Undead,10;
       bonus bUnbreakableWeapon;
+  - Id: 1531
+    AegisName: Spanner
+    Name: Wrench
+    Type: Weapon
+    SubType: Mace
+    Buy: 20
+    Weight: 2500
+    Attack: 115
+    Range: 1
+    Jobs:
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus2 bAddEff,Eff_Blind,100;
+      bonus2 bAddEff,Eff_Stun,100;
+      bonus2 bAddEff,Eff_Poison,100;
+      bonus2 bAddEff,Eff_Freeze,100;

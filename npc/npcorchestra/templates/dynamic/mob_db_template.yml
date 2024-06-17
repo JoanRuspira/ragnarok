@@ -89,6 +89,12 @@ Body:
   - Id: 3819
     AegisName: E_MAGIC_PLANT
     Name: E_MAGIC_PLANT
+  - Id: 3820
+    AegisName: POISONOUS_Z
+    Name: POISONOUS_Z
+  - Id: 3821
+    AegisName: TOXIOUS_Z
+    Name: TOXIOUS_Z
   - Id: 2367
     AegisName: LICHTERN_B
     Name: MagicDecoyFire
@@ -15787,5 +15793,315 @@ Body:
       - Item: Kamaitachi
         Rate: 10
       - Item: The_Paper_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1620
+    AegisName: NOXIOUS
+    Name: Noxious
+    Level: 35
+    Hp: 2038
+    BaseExp: 698
+    JobExp: 698
+    Attack: 299
+    Attack2: 400
+    MagicDefense: 60
+    Str: 12
+    Agi: 41
+    Vit: 10
+    Int: 30
+    Dex: 44
+    Luk: 2
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Ghost
+    ElementLevel: 3
+    WalkSpeed: 350
+    AttackDelay: 768
+    AttackMotion: 1440
+    DamageMotion: 672
+    Ai: 04
+    Drops:
+      - Item: Poisonous_Gas
+        Rate: 1000
+      - Item: Mould_Powder
+        Rate: 3000
+      - Item: Anodyne
+        Rate: 50
+      - Item: Air_Pollutant
+        Rate: 3000
+      - Item: Old_Blue_Box
+        Rate: 10
+      - Item: Noxious_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1621
+    AegisName: VENOMOUS
+    Name: Venomous
+    Level: 42
+    Hp: 4653
+    BaseExp: 1780
+    JobExp: 1280
+    Attack: 422
+    Attack2: 844
+    MagicDefense: 49
+    Str: 12
+    Agi: 60
+    Vit: 17
+    Int: 19
+    Dex: 60
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Poison
+    ElementLevel: 1
+    WalkSpeed: 350
+    AttackDelay: 768
+    AttackMotion: 1440
+    DamageMotion: 672
+    Ai: 04
+    Drops:
+      - Item: Air_Pollutant
+        Rate: 5000
+      - Item: Spawns
+        Rate: 3000
+      - Item: Poison_Powder
+        Rate: 1000
+      - Item: Poisonous_Gas
+        Rate: 2000
+      - Item: Old_Blue_Box
+        Rate: 10
+      - Item: Venomous_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 20557
+    AegisName: POISONOUS
+    Name: Poisonous
+    Level: 60
+    Hp: 7038
+    BaseExp: 698
+    JobExp: 698
+    Attack: 299
+    Attack2: 400
+    MagicDefense: 60
+    Str: 12
+    Agi: 41
+    Vit: 10
+    Int: 30
+    Dex: 44
+    Luk: 2
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Ghost
+    ElementLevel: 3
+    WalkSpeed: 350
+    AttackDelay: 768
+    AttackMotion: 1440
+    DamageMotion: 672
+    Ai: 04
+    Drops:
+      - Item: Poisonous_Gas
+        Rate: 1000
+      - Item: Mould_Powder
+        Rate: 3000
+      - Item: Anodyne
+        Rate: 50
+      - Item: Air_Pollutant
+        Rate: 3000
+      - Item: Old_Blue_Box
+        Rate: 10
+      - Item: Poisonous_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 20554
+    AegisName: TOXIOUS
+    Name: Toxious
+    Level: 60
+    Hp: 7653
+    BaseExp: 1780
+    JobExp: 1280
+    Attack: 422
+    Attack2: 844
+    MagicDefense: 49
+    Str: 12
+    Agi: 60
+    Vit: 17
+    Int: 19
+    Dex: 60
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Poison
+    ElementLevel: 1
+    WalkSpeed: 350
+    AttackDelay: 768
+    AttackMotion: 1440
+    DamageMotion: 672
+    Ai: 04
+    Drops:
+      - Item: Air_Pollutant
+        Rate: 5000
+      - Item: Spawns
+        Rate: 3000
+      - Item: Poison_Powder
+        Rate: 1000
+      - Item: Poisonous_Gas
+        Rate: 2000
+      - Item: Old_Blue_Box
+        Rate: 10
+      - Item: Toxious_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1738
+    AegisName: CONSTANT
+    Name: Constant
+    Level: 65
+    Hp: 10000
+    BaseExp: 3230
+    JobExp: 116
+    Attack: 460
+    Attack2: 580
+    Defense: 12
+    MagicDefense: 12
+    Str: 50
+    Agi: 28
+    Vit: 26
+    Int: 47
+    Dex: 66
+    Luk: 14
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Formless
+    Element: Dark
+    ElementLevel: 3
+    WalkSpeed: 150
+    AttackDelay: 720
+    AttackMotion: 360
+    DamageMotion: 360
+    Ai: 04
+    Drops:
+      - Item: Burnt_Parts
+        Rate: 100
+      - Item: Sturdy_Iron_Piece
+        Rate: 1500
+      - Item: Tube
+        Rate: 10
+      - Item: Steel
+        Rate: 10
+      - Item: Elunium
+        Rate: 10
+      - Item: Constant_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1617
+    AegisName: WASTE_STOVE
+    Name: Old Stove
+    JapaneseName: Waste Stove
+    Level: 68
+    Hp: 15895
+    BaseExp: 4412
+    JobExp: 1135
+    Attack: 692
+    Attack2: 1081
+    Defense: 23
+    MagicDefense: 10
+    Str: 20
+    Agi: 69
+    Vit: 55
+    Int: 5
+    Dex: 59
+    Luk: 77
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 1
+    WalkSpeed: 300
+    AttackDelay: 1152
+    AttackMotion: 528
+    DamageMotion: 360
+    Ai: 04
+    Drops:
+      - Item: Battered_Kettle
+        Rate: 1000
+      - Item: Burn_Tree
+        Rate: 1000
+      - Item: Iron
+        Rate: 500
+      - Item: Iron_Ore
+        Rate: 1000
+      - Item: Old_Steel_Plate
+        Rate: 3800
+      - Item: Waste_Stove_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1623
+    AegisName: RSX_0806
+    Name: RSX-0806
+    JapaneseName: RSX 0806
+    Level: 86
+    Hp: 560733
+    BaseExp: 31010
+    JobExp: 32011
+    MvpExp: 15505
+    Attack: 2740
+    Attack2: 5620
+    Defense: 39
+    MagicDefense: 41
+    Str: 85
+    Agi: 51
+    Vit: 30
+    Int: 25
+    Dex: 93
+    Luk: 84
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 220
+    AttackDelay: 128
+    AttackMotion: 1104
+    DamageMotion: 240
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Yggdrasilberry
+        Rate: 5500
+      - Item: Dark_Blindfold
+        Rate: 3500
+      - Item: Crystal_Jewel__
+        Rate: 5500
+    Drops:
+      - Item: Wheel
+        Rate: 6000
+      - Item: House_Auger
+        Rate: 10
+      - Item: Old_Violet_Box
+        Rate: 1000
+      - Item: Headlamp
+        Rate: 5000
+      - Item: Counter_Dagger
+        Rate: 50
+      - Item: Spanner
+        Rate: 20
+      - Item: Rsx_0806_Card
         Rate: 1
         StealProtected: true

@@ -4761,6 +4761,18 @@ Body:
       BuyingStore: true
     Script: |
       bonus bVit,readparam(bDex)/18;
+  - Id: 300003
+    AegisName: Constant_Card
+    Name: Constant Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Armor: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus bStr,readparam(bLuk)/18;
   - Id: 4339
     AegisName: Mineral_Card
     Name: Mineral Card
@@ -5727,6 +5739,31 @@ Body:
       bonus bMaxHPrate,-5;
       bonus bMaxSPrate,-5;
       bonus bAtkRate,(getrefine()/4);
+  - Id: 300001
+    AegisName: Poisonous_Card
+    Name: Poisonous Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bAddEle,Ele_Poison,25;
+  - Id: 300002
+    AegisName: Toxious_Card
+    Name: Toxious Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Armor: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bLongAtkDef,5;
+      bonus bMaxHPrate,10;
   - Id: 4402
     AegisName: Aliot_Card
     Name: Aliot Card
