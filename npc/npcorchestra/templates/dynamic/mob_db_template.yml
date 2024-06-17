@@ -95,6 +95,27 @@ Body:
   - Id: 3821
     AegisName: TOXIOUS_Z
     Name: TOXIOUS_Z
+  - Id: 3822
+    AegisName: JEWELIANT_MJ
+    Name: JEWELIANT_MJ
+  - Id: 3823
+    AegisName: JEWEL_MJ
+    Name: JEWEL_MJ
+  - Id: 3824
+    AegisName: UNGOLIANT_Z
+    Name: UNGOLIANT_Z
+
+
+
+
+
+
+
+
+
+
+
+
   - Id: 2367
     AegisName: LICHTERN_B
     Name: MagicDecoyFire
@@ -6957,34 +6978,31 @@ Body:
   - Id: 2092
     AegisName: DOLOMEDES
     Name: Dolomedes
-    Level: 132
-    Hp: 54591
-    BaseExp: 3351
-    JobExp: 3401
-    Attack: 1016
-    Attack2: 286
-    Defense: 112
-    MagicDefense: 52
-    Str: 149
-    Agi: 34
-    Vit: 82
-    Int: 55
-    Dex: 143
-    Luk: 67
-    AttackRange: 3
+    Level: 75
+    Hp: 45422
+    BaseExp: 20620
+    JobExp: 10
+    Attack: 1110
+    Attack2: 1780
+    Defense: 20
+    MagicDefense: 15
+    Agi: 69
+    Vit: 60
+    Int: 50
+    Dex: 76
+    Luk: 52
+    AttackRange: 2
     SkillRange: 10
     ChaseRange: 12
     Size: Large
     Race: Insect
     Element: Water
     ElementLevel: 3
-    WalkSpeed: 250
-    AttackDelay: 360
-    AttackMotion: 360
-    DamageMotion: 600
-    Ai: 04
-    Modes:
-      Detector: true
+    WalkSpeed: 150
+    AttackDelay: 480
+    AttackMotion: 576
+    DamageMotion: 432
+    Ai: 20
     Drops:
       - Item: White_Spider_Limb
         Rate: 2500
@@ -16103,5 +16121,212 @@ Body:
       - Item: Spanner
         Rate: 20
       - Item: Rsx_0806_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 20550
+    AegisName: JEWELIANT
+    Name: Jeweliant
+    Level: 80
+    Hp: 55422
+    BaseExp: 20620
+    JobExp: 10
+    Attack: 1110
+    Attack2: 1780
+    Defense: 20
+    MagicDefense: 15
+    Agi: 69
+    Vit: 60
+    Int: 50
+    Dex: 76
+    Luk: 52
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Insect
+    Element: Water
+    ElementLevel: 3
+    WalkSpeed: 150
+    AttackDelay: 480
+    AttackMotion: 576
+    DamageMotion: 432
+    Ai: 20
+    Drops:
+      - Item: White_Spider_Limb
+        Rate: 2500
+      - Item: Brigan
+        Rate: 3500
+      - Item: Steel
+        Rate: 1000
+      - Item: Bradium_Ring
+        Rate: 10
+      - Item: Diamond_Ring
+        Rate: 15
+      - Item: Oridecon
+        Rate: 50
+      - Item: Elunium
+        Rate: 50
+      - Item: Violet_Jewel
+        Rate: 500
+      - Item: Fluorescent_Liquid
+        Rate: 2500
+      - Item: Jeweliant_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 20551
+    AegisName: JEWEL
+    Name: Jewel
+    Level: 80
+    Hp: 65422
+    BaseExp: 20620
+    JobExp: 10
+    Attack: 1110
+    Attack2: 1780
+    Defense: 20
+    MagicDefense: 15
+    Agi: 69
+    Vit: 60
+    Int: 50
+    Dex: 76
+    Luk: 52
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Formless
+    Element: Earth
+    ElementLevel: 4
+    WalkSpeed: 150
+    AttackDelay: 480
+    AttackMotion: 576
+    DamageMotion: 432
+    Ai: 20
+    Drops:
+      - Item: Crystal_Jewel___
+        Rate: 150
+      - Item: Crystal_Jewel__
+        Rate: 20
+      - Item: Crystal_Jewel_
+        Rate: 20
+      - Item: Cardinal_Jewel_
+        Rate: 5
+      - Item: Blue_Jewel
+        Rate: 20
+      - Item: Bluish_Green_Jewel
+        Rate: 10
+      - Item: Azure_Jewel
+        Rate: 10
+      - Item: Skyblue_Jewel
+        Rate: 20
+      - Item: Golden_Jewel
+        Rate: 500
+      - Item: White_Jewel
+        Rate: 15
+      - Item: Violet_Jewel
+        Rate: 500
+      - Item: Jewel_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 20555
+    AegisName: UNGOLIANTZ
+    Name: Jungoliant
+    Level: 85
+    Hp: 79140
+    BaseExp: 8211
+    JobExp: 142
+    Attack: 1290
+    Attack2: 2280
+    Defense: 25
+    MagicDefense: 25
+    Str: 33
+    Agi: 52
+    Vit: 57
+    Int: 25
+    Dex: 119
+    Luk: 43
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Insect
+    Element: Poison
+    ElementLevel: 3
+    WalkSpeed: 350
+    AttackDelay: 420
+    AttackMotion: 576
+    DamageMotion: 420
+    Ai: 21
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Long_Limb
+        Rate: 4500
+      - Item: Jaws_Of_Ant
+        Rate: 3500
+      - Item: Colorful_Shell
+        Rate: 1000
+      - Item: Olivine
+        Rate: 1500
+      - Item: Fluorescent_Liquid
+        Rate: 2500
+      - Item: Dark_Red_Jewel
+        Rate: 1500
+      - Item: Boots_
+        Rate: 500
+      - Item: White_Spider_Limb
+        Rate: 2500
+      - Item: Oridecon
+        Rate: 50
+      - Item: Elunium
+        Rate: 50
+      - Item: Jungoliant_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 3091
+    AegisName: MM_BRINARANEA
+    Name: Brinaranea
+    Level: 88
+    Hp: 660733
+    BaseExp: 31010
+    JobExp: 32011
+    MvpExp: 15505
+    Attack: 2740
+    Attack2: 5620
+    Defense: 39
+    MagicDefense: 41
+    Str: 85
+    Agi: 51
+    Vit: 30
+    Int: 25
+    Dex: 93
+    Luk: 84
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Insect
+    Element: Water
+    ElementLevel: 4
+    WalkSpeed: 220
+    AttackDelay: 128
+    AttackMotion: 1104
+    DamageMotion: 240
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Yggdrasilberry
+        Rate: 5500
+      - Item: Crystal_Jewel__
+        Rate: 5500
+    Drops:
+      - Item: Fluorescent_Liquid
+        Rate: 2500
+      - Item: Cardinal_Jewel_
+        Rate: 6000
+      - Item: Old_Violet_Box
+        Rate: 1000
+      - Item: Brinaranea_Card
         Rate: 1
         StealProtected: true

@@ -55,6 +55,14 @@ Body:
     Sprite: POISONOUS_Z
   - Mob: TOXIOUS
     Sprite: TOXIOUS_Z
+
+
+  - Mob: JEWELIANT
+    Sprite: JEWELIANT_MJ
+  - Mob: JEWEL
+    Sprite: JEWEL_MJ
+  - Mob: UNGOLIANTZ
+    Sprite: UNGOLIANT_Z
 #NPCBUILDER_MOBS
 #END_NPCBUILDER_MOBS
 

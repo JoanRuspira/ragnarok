@@ -4812,6 +4812,79 @@ Body:
     Script: |
       bonus2 bMagicAddRace,RC_Brute,10;
       bonus2 bMagicAddRace,RC_Player_Doram,10;
+  - Id: 300007
+    AegisName: Jungoliant_Card
+    Name: Jeweled Ungoliant Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Armor: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bAddEle,Ele_Fire,40;
+      bonus2 bAddEle,Ele_Water,40;
+      bonus2 bAddRace,RC_Formless,40;
+      bonus2 bAddRace,RC_Plant,40;
+  - Id: 27324
+    AegisName: Brinaranea_Card
+    Name: Brinaranea Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Water,50;
+  - Id: 300009
+    AegisName: Jewel_Card
+    Name: Jewel Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      .@r = getequiprefinerycnt(EQI_HAND_R);
+      if (getiteminfo(getequipid(EQI_HAND_R), ITEMINFO_VIEW) == W_STAFF || getiteminfo(getequipid(EQI_HAND_R), ITEMINFO_VIEW) == W_2HSTAFF) {
+         bonus2 bMagicAtkEle,Ele_Ghost,10;
+      }
+      if (.@r>=7) {
+         bonus2 bMagicAtkEle,Ele_Ghost,10;
+      }
+  - Id: 300007
+    AegisName: Jungoliant_Card
+    Name: Jeweled Ungoliant Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Armor: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bAddEle,Ele_Fire,20;
+      bonus2 bAddEle,Ele_Water,20;
+      bonus2 bAddRace,RC_Formless,20;
+      bonus2 bAddRace,RC_Plant,20;
+  - Id: 300006
+    AegisName: Jeweliant_Card
+    Name: Jewelry Ant Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Left_Accessory: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus5 bAutoSpell,"SK_WZ_PSYCHICWAVE",1,100,BF_SHORT,1;
   - Id: 4506
     AegisName: Dolomedes_Card
     Name: Dolomedes Card

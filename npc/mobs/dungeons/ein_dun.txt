@@ -33,4 +33,15 @@ ein_dun02,0,0	monster	Constant	1738,35
 ein_dun02,0,0	monster	Old Stove	1617,35
 ein_dun02,0,0	monster	Toxious	20554,35
 ein_dun02,0,0	monster	Poisonous	20557,35
-ein_dun02,0,0,0,0	boss_monster	RSX-0806	1623,1,7500000,600000,0
+ein_dun02,0,0	boss_monster	RSX-0806	1623,1,7500000,600000,0
+
+//==================================================
+// teg_dun02 - Abandoned Mine
+//==================================================
+teg_dun02,0,0	monster	Dolomedes	2092,10
+teg_dun02,0,0	monster	Jeweliant	20550,15
+teg_dun02,0,0	monster	Jewel	20551,15
+teg_dun02,0,0	monster	Jungoliant	20555,1
+teg_dun02,0,0	boss_monster	Brinaranea	3091,1,7500000,600000,0
+
+
