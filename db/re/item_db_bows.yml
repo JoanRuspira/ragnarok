@@ -531,3 +531,25 @@ Body:
     Refineable: true
     Script: |
       bonus4 bAutoSpellOnSkill,"SK_AC_DOUBLESTRAFE","SK_AC_CHARGEDARROW",1,20;
+  - Id: 1731
+    AegisName: Frozen_Bow
+    Name: Frozen Bow
+    Type: Weapon
+    SubType: Bow
+    Buy: 20
+    Weight: 1400
+    Attack: 100
+    Range: 5
+    Slots: 1
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus2 bAddEff,Eff_Freeze,1000;

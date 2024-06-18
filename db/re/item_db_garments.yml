@@ -457,3 +457,23 @@ Body:
     Refineable: true
     Script: |
       bonus2 bSubEle,Ele_Neutral,15;
+  - Id: 2509
+    AegisName: Clack_Of_Servival
+    Name: Survivor's Manteau
+    Type: Armor
+    Buy: 20000
+    Weight: 550
+    Defense: 10
+    Jobs:
+      Mage: true
+      Sage: true
+      SoulLinker: true
+      Wizard: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 75
+    Refineable: true
+    Script: |
+      bonus bMdef,5;
+      bonus bVit,10;

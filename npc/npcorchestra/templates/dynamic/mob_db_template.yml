@@ -6849,14 +6849,14 @@ Body:
   - Id: 1306
     AegisName: LEIB_OLMAI
     Name: Leib Olmai
-    Level: 58
-    Hp: 24233
-    BaseExp: 6011
-    JobExp: 2171
-    Attack: 740
-    Attack2: 1390
-    Defense: 27
-    MagicDefense: 31
+    Level: 50
+    Hp: 7500
+    BaseExp: 3000
+    JobExp: 1500
+    Attack: 300
+    Attack2: 500
+    Defense: 20
+    MagicDefense: 15
     Str: 5
     Agi: 35
     Vit: 95
@@ -16328,5 +16328,236 @@ Body:
       - Item: Old_Violet_Box
         Rate: 1000
       - Item: Brinaranea_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1776
+    AegisName: SIROMA
+    Name: Siroma
+    Level: 42
+    Hp: 6800
+    BaseExp: 2230
+    JobExp: 1005
+    Attack: 220
+    Attack2: 440
+    Defense: 12
+    MagicDefense: 8
+    Str: 33
+    Agi: 23
+    Vit: 52
+    Int: 11
+    Dex: 40
+    Luk: 19
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Formless
+    Element: Water
+    ElementLevel: 3
+    WalkSpeed: 180
+    AttackDelay: 432
+    AttackMotion: 648
+    DamageMotion: 240
+    Ai: 02
+    Drops:
+      - Item: Ice_Heart
+        Rate: 1000
+      - Item: Ice_Piece
+        Rate: 500
+      - Item: Blue_Herb
+        Rate: 10
+      - Item: Crystal_Blue
+        Rate: 20
+      - Item: Siroma_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1775
+    AegisName: SNOWIER
+    Name: Snowier
+    Level: 60
+    Hp: 19230
+    BaseExp: 5882
+    JobExp: 2699
+    Attack: 770
+    Attack2: 1347
+    Defense: 22
+    MagicDefense: 12
+    Str: 73
+    Agi: 46
+    Vit: 72
+    Int: 15
+    Dex: 52
+    Luk: 25
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Formless
+    Element: Water
+    ElementLevel: 2
+    WalkSpeed: 220
+    AttackDelay: 936
+    AttackMotion: 1020
+    DamageMotion: 420
+    Ai: 04
+    Drops:
+      - Item: Ice_Heart
+        Rate: 3000
+      - Item: Ice_Piece
+        Rate: 1000
+      - Item: Elunium_Stone
+        Rate: 100
+      - Item: Blue_Herb
+        Rate: 50
+      - Item: White_Herb
+        Rate: 500
+      - Item: Icicle_Fist
+        Rate: 10
+      - Item: Crystal_Blue
+        Rate: 100
+      - Item: Snowier_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1777
+    AegisName: ICE_TITAN
+    Name: Ice Titan
+    Level: 60
+    Hp: 38200
+    BaseExp: 13872
+    JobExp: 7928
+    Attack: 1090
+    Attack2: 1570
+    Defense: 71
+    MagicDefense: 15
+    Str: 99
+    Agi: 34
+    Vit: 88
+    Int: 10
+    Dex: 79
+    Luk: 29
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Formless
+    Element: Water
+    ElementLevel: 3
+    WalkSpeed: 250
+    AttackDelay: 861
+    AttackMotion: 660
+    DamageMotion: 144
+    Ai: 04
+    Drops:
+      - Item: Ice_Heart
+        Rate: 5000
+      - Item: Ice_Piece
+        Rate: 3000
+      - Item: Frozen_Rose
+        Rate: 100
+      - Item: Oridecon
+        Rate: 10
+      - Item: Elunium
+        Rate: 30
+      - Item: Mistic_Frozen
+        Rate: 100
+      - Item: Ice_Titan_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1778
+    AegisName: GAZETI
+    Name: Gazeti
+    Level: 55
+    Hp: 12300
+    BaseExp: 5758
+    JobExp: 2075
+    Attack: 512
+    Attack2: 612
+    Defense: 65
+    MagicDefense: 25
+    Agi: 12
+    Vit: 20
+    Int: 60
+    Dex: 101
+    Luk: 5
+    AttackRange: 10
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Water
+    ElementLevel: 1
+    WalkSpeed: 190
+    AttackDelay: 576
+    AttackMotion: 370
+    DamageMotion: 270
+    Ai: 20
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Ice_Heart
+        Rate: 3000
+      - Item: Ice_Piece
+        Rate: 3000
+      - Item: Elunium
+        Rate: 20
+      - Item: Frozen_Bow
+        Rate: 15
+      - Item: Gazeti_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1779
+    AegisName: KTULLANUX
+    Name: Ktullanux
+    Level: 98
+    Hp: 4417000
+    BaseExp: 2720050
+    JobExp: 1120020
+    MvpExp: 1360025
+    Attack: 1680
+    Attack2: 10360
+    Defense: 40
+    MagicDefense: 42
+    Str: 85
+    Agi: 126
+    Vit: 30
+    Int: 125
+    Dex: 177
+    Luk: 112
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Brute
+    Element: Water
+    ElementLevel: 4
+    WalkSpeed: 400
+    AttackDelay: 432
+    AttackMotion: 840
+    DamageMotion: 216
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Yggdrasilberry
+        Rate: 5500
+      - Item: Old_Violet_Box
+        Rate: 5000
+      - Item: Old_Violet_Box
+        Rate: 5000
+    Drops:
+      - Item: Ice_Scale
+        Rate: 9000
+      - Item: Old_Card_Album
+        Rate: 3000
+      - Item: Clack_Of_Servival
+        Rate: 3000
+      - Item: Herald_Of_GOD
+        Rate: 5000
+      - Item: Old_Violet_Box
+        Rate: 5000
+      - Item: Yggdrasilberry
+        Rate: 5000
+      - Item: Ktullanux_Card
         Rate: 1
         StealProtected: true

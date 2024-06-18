@@ -1576,8 +1576,3 @@ prontera,148,194,4	script	Bulletin Board#sgn::267	838,{
 	mes "Prontera, capital of the Rune-Midgard Kingdom. Explore one of the busiest cities in Midgard. Visit the Cathedral and the Kight and Crusader guilds.";
 	close;
 }
-
-dic_fild01,30,86,5	script	Board#sgn::160a	858,{
-	mes "Scaraba Hole entrance.";
-	close;
-}

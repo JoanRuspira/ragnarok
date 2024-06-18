@@ -3200,6 +3200,22 @@ Body:
     Weight: 30
     Flags:
       BuyingStore: true
+  - Id: 7561
+    AegisName: Ice_Heart
+    Name: Glacial Heart
+    Type: Etc
+    Buy: 606
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7562
+    AegisName: Ice_Scale
+    Name: Ice Scale
+    Type: Etc
+    Buy: 3020
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 7325
     AegisName: Tube
     Name: Flexible Tube
