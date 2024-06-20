@@ -104,18 +104,6 @@ Body:
   - Id: 3824
     AegisName: UNGOLIANT_Z
     Name: UNGOLIANT_Z
-
-
-
-
-
-
-
-
-
-
-
-
   - Id: 2367
     AegisName: LICHTERN_B
     Name: MagicDecoyFire
@@ -6933,7 +6921,7 @@ Body:
         StealProtected: true
   - Id: 2024
     AegisName: BRADIUM_GOLEM
-    Name: Bradium Golem
+    Name: Oridecon Golem
     Level: 101
     Hp: 45200
     BaseExp: 14000
@@ -16559,5 +16547,1642 @@ Body:
       - Item: Yggdrasilberry
         Rate: 5000
       - Item: Ktullanux_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1681
+    AegisName: GEMINI
+    Name: Gemini-S58
+    Level: 72
+    Hp: 57870
+    BaseExp: 22024
+    JobExp: 9442
+    Attack: 2150
+    Attack2: 3030
+    Defense: 60
+    MagicDefense: 45
+    Str: 88
+    Agi: 75
+    Vit: 70
+    Int: 77
+    Dex: 105
+    Luk: 55
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Water
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1872
+    AttackMotion: 360
+    DamageMotion: 864
+    Ai: 04
+    Class: Boss
+    Drops:
+      - Item: Skull
+        Rate: 3000
+      - Item: Old_Blue_Box
+        Rate: 1000
+      - Item: Yellow_Slim_Potion
+        Rate: 500
+      - Item: White_Slim_Potion
+        Rate: 400
+      - Item: Stone_Of_Intelligence
+        Rate: 300
+      - Item: Gemini_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1682
+    AegisName: REMOVAL
+    Name: Remover
+    JapaneseName: Removal
+    Level: 55
+    Hp: 10289
+    BaseExp: 3831
+    JobExp: 1278
+    Attack: 558
+    Attack2: 797
+    Defense: 5
+    MagicDefense: 20
+    Agi: 20
+    Vit: 56
+    Int: 35
+    Dex: 57
+    Luk: 20
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 2
+    WalkSpeed: 250
+    AttackDelay: 1536
+    AttackMotion: 1056
+    DamageMotion: 1152
+    Ai: 04
+    Drops:
+      - Item: Empty_Bottle
+        Rate: 5000
+      - Item: Old_Steel_Plate
+        Rate: 5000
+      - Item: Gas_Mask
+        Rate: 10
+      - Item: Nice_Sweet_Potato
+        Rate: 500
+      - Item: Detrimindexta
+        Rate: 50
+      - Item: Karvodailnirol
+        Rate: 100
+      - Item: Fedora_
+        Rate: 10
+      - Item: Removal_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1652
+    AegisName: YGNIZEM
+    Name: Egnigem Cenia
+    JapaneseName: Ygnizem
+    Level: 58
+    Hp: 11200
+    BaseExp: 4870
+    JobExp: 98
+    Attack: 823
+    Attack2: 1212
+    Defense: 35
+    MagicDefense: 8
+    Str: 60
+    Agi: 35
+    Vit: 52
+    Int: 18
+    Dex: 79
+    Luk: 20
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Fire
+    ElementLevel: 2
+    WalkSpeed: 145
+    AttackDelay: 576
+    AttackMotion: 432
+    DamageMotion: 288
+    Ai: 04
+    Drops:
+      - Item: Lab_Staff_Record
+        Rate: 1000
+      - Item: Katzbalger
+        Rate: 10
+      - Item: Two_Hand_Sword_
+        Rate: 20
+      - Item: Saber_
+        Rate: 20
+      - Item: Padded_Armor_
+        Rate: 20
+      - Item: Slayer_
+        Rate: 80
+      - Item: Plate_Armor_
+        Rate: 10
+      - Item: Ygnizem_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1653
+    AegisName: WHIKEBAIN
+    Name: Wickebine Tres
+    JapaneseName: Whikebain
+    Level: 62
+    Hp: 7320
+    BaseExp: 4204
+    JobExp: 21
+    Attack: 693
+    Attack2: 889
+    Defense: 9
+    MagicDefense: 8
+    Agi: 102
+    Vit: 34
+    Int: 20
+    Dex: 83
+    Luk: 30
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Dark
+    ElementLevel: 3
+    WalkSpeed: 120
+    AttackDelay: 576
+    AttackMotion: 432
+    DamageMotion: 288
+    Ai: 04
+    Drops:
+      - Item: Armlet_Of_Prisoner
+        Rate: 2000
+      - Item: Forturn_Sword
+        Rate: 10
+      - Item: Adventurere's_Suit_
+        Rate: 40
+      - Item: Gladius_
+        Rate: 10
+      - Item: Chain_Mail_
+        Rate: 10
+      - Item: Ring_Of_Rogue
+        Rate: 10
+      - Item: Coward_
+        Rate: 10
+      - Item: Whikebain_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1654
+    AegisName: ARMAIA
+    Name: Armeyer Dinze
+    JapaneseName: Armaia
+    Level: 66
+    Hp: 7110
+    BaseExp: 4008
+    JobExp: 35
+    Attack: 750
+    Attack2: 913
+    Defense: 42
+    MagicDefense: 6
+    Str: 5
+    Agi: 36
+    Vit: 50
+    Int: 15
+    Dex: 89
+    Luk: 60
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Earth
+    ElementLevel: 3
+    WalkSpeed: 120
+    AttackDelay: 576
+    AttackMotion: 432
+    DamageMotion: 288
+    Ai: 04
+    Drops:
+      - Item: Armlet_Of_Prisoner
+        Rate: 1000
+      - Item: Muffler_
+        Rate: 20
+      - Item: Buster_
+        Rate: 50
+      - Item: Battle_Axe_
+        Rate: 40
+      - Item: Mink_Coat
+        Rate: 15
+      - Item: Windhawk
+        Rate: 10
+      - Item: Armaia_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1655
+    AegisName: EREND
+    Name: Errende Ebecee
+    JapaneseName: Erend
+    Level: 59
+    Hp: 6980
+    BaseExp: 4501
+    JobExp: 67
+    Attack: 896
+    Attack2: 1159
+    Defense: 14
+    MagicDefense: 30
+    Agi: 31
+    Vit: 41
+    Int: 93
+    Dex: 67
+    Luk: 30
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Holy
+    ElementLevel: 2
+    WalkSpeed: 130
+    AttackDelay: 576
+    AttackMotion: 432
+    DamageMotion: 288
+    Ai: 04
+    Drops:
+      - Item: Armlet_Of_Prisoner
+        Rate: 500
+      - Item: Biretta_
+        Rate: 15
+      - Item: Morning_Star_
+        Rate: 50
+      - Item: Sword_Mace_
+        Rate: 20
+      - Item: Saint_Robe_
+        Rate: 10
+      - Item: Scapulare_
+        Rate: 10
+      - Item: Spike
+        Rate: 10
+      - Item: Erend_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1656
+    AegisName: KAVAC
+    Name: Kavach Icarus
+    JapaneseName: Kavac
+    Level: 60
+    Hp: 7899
+    BaseExp: 4090
+    JobExp: 86
+    Attack: 684
+    Attack2: 904
+    Defense: 12
+    MagicDefense: 5
+    Str: 48
+    Agi: 100
+    Vit: 10
+    Int: 15
+    Dex: 118
+    Luk: 40
+    AttackRange: 9
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Wind
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 576
+    AttackMotion: 432
+    DamageMotion: 288
+    Ai: 04
+    Drops:
+      - Item: Lab_Staff_Record
+        Rate: 2000
+      - Item: Kakkung_
+        Rate: 10
+      - Item: Great_Bow_
+        Rate: 20
+      - Item: Mantle_
+        Rate: 15
+      - Item: Shoes_
+        Rate: 10
+      - Item: Kavac_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1657
+    AegisName: RAWREL
+    Name: Laurell Weinder
+    JapaneseName: Rawrel
+    Level: 61
+    Hp: 6168
+    BaseExp: 4620
+    JobExp: 30
+    Attack: 430
+    Attack2: 517
+    Defense: 8
+    MagicDefense: 48
+    Agi: 41
+    Vit: 5
+    Int: 120
+    Dex: 45
+    Luk: 10
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Ghost
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 576
+    AttackMotion: 432
+    DamageMotion: 288
+    Ai: 04
+    Drops:
+      - Item: Mementos
+        Rate: 1000
+      - Item: Staff_Of_Wing
+        Rate: 10
+      - Item: Guard_
+        Rate: 15
+      - Item: Staff_
+        Rate: 50
+      - Item: Silk_Robe_
+        Rate: 10
+      - Item: Silver_Robe_
+        Rate: 30
+      - Item: Clip
+        Rate: 10
+      - Item: Rawrel_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 2415
+    AegisName: L_SEYREN
+    Name: Knight Seyren
+    Level: 42
+    Hp: 6800
+    BaseExp: 2230
+    JobExp: 1005
+    Attack: 220
+    Attack2: 440
+    Defense: 12
+    MagicDefense: 8
+    Str: 33
+    Agi: 23
+    Vit: 52
+    Int: 11
+    Dex: 40
+    Luk: 19
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Fire
+    ElementLevel: 3
+    WalkSpeed: 180
+    AttackDelay: 432
+    AttackMotion: 648
+    DamageMotion: 240
+    Ai: 02
+    Drops:
+      - Item: Lab_Staff_Record
+        Rate: 1000
+      - Item: Katzbalger
+        Rate: 20
+      - Item: Two_Hand_Sword_
+        Rate: 30
+      - Item: Saber_
+        Rate: 30
+      - Item: Padded_Armor_
+        Rate: 30
+      - Item: Slayer_
+        Rate: 100
+      - Item: Plate_Armor_
+        Rate: 15
+  - Id: 2419
+    AegisName: L_KATRINN
+    Name: Wizard Kathryne
+    Level: 42
+    Hp: 6800
+    BaseExp: 2230
+    JobExp: 1005
+    Attack: 220
+    Attack2: 440
+    Defense: 12
+    MagicDefense: 8
+    Str: 33
+    Agi: 23
+    Vit: 52
+    Int: 11
+    Dex: 40
+    Luk: 19
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Ghost
+    ElementLevel: 3
+    WalkSpeed: 180
+    AttackDelay: 432
+    AttackMotion: 648
+    DamageMotion: 240
+    Ai: 02
+    Drops:
+      - Item: Mementos
+        Rate: 2000
+      - Item: Staff_Of_Wing
+        Rate: 15
+      - Item: Guard_
+        Rate: 20
+      - Item: Silk_Robe_
+        Rate: 25
+      - Item: Silver_Robe_
+        Rate: 50
+      - Item: Clip
+        Rate: 20
+  - Id: 2416
+    AegisName: L_EREMES
+    Name: Assassin Eremes
+    Level: 42
+    Hp: 6800
+    BaseExp: 2230
+    JobExp: 1005
+    Attack: 220
+    Attack2: 440
+    Defense: 12
+    MagicDefense: 8
+    Str: 33
+    Agi: 23
+    Vit: 52
+    Int: 11
+    Dex: 40
+    Luk: 19
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Dark
+    ElementLevel: 3
+    WalkSpeed: 180
+    AttackDelay: 432
+    AttackMotion: 648
+    DamageMotion: 240
+    Ai: 02
+    Drops:
+      - Item: Armlet_Of_Prisoner
+        Rate: 2000
+      - Item: Forturn_Sword
+        Rate: 20
+      - Item: Adventurere's_Suit_
+        Rate: 60
+      - Item: Gladius_
+        Rate: 20
+      - Item: Chain_Mail_
+        Rate: 15
+      - Item: Ring_Of_Rogue
+        Rate: 15
+      - Item: Coward_
+        Rate: 15
+  - Id: 2417
+    AegisName: L_HARWORD
+    Name: Blacksmith Howard
+    Level: 42
+    Hp: 6800
+    BaseExp: 2230
+    JobExp: 1005
+    Attack: 220
+    Attack2: 440
+    Defense: 12
+    MagicDefense: 8
+    Str: 33
+    Agi: 23
+    Vit: 52
+    Int: 11
+    Dex: 40
+    Luk: 19
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Earth
+    ElementLevel: 3
+    WalkSpeed: 180
+    AttackDelay: 432
+    AttackMotion: 648
+    DamageMotion: 240
+    Ai: 02
+    Drops:
+      - Item: Armlet_Of_Prisoner
+        Rate: 1000
+      - Item: Muffler_
+        Rate: 30
+      - Item: Buster_
+        Rate: 50
+      - Item: Battle_Axe_
+        Rate: 50
+      - Item: Mink_Coat
+        Rate: 20
+      - Item: Windhawk
+        Rate: 15
+  - Id: 2418
+    AegisName: L_SHECIL
+    Name: Hunter Cecil
+    Level: 42
+    Hp: 6800
+    BaseExp: 2230
+    JobExp: 1005
+    Attack: 220
+    Attack2: 440
+    Defense: 12
+    MagicDefense: 8
+    Str: 33
+    Agi: 23
+    Vit: 52
+    Int: 11
+    Dex: 40
+    Luk: 19
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Wind
+    ElementLevel: 3
+    WalkSpeed: 180
+    AttackDelay: 432
+    AttackMotion: 648
+    DamageMotion: 240
+    Ai: 02
+    Drops:
+      - Item: Lab_Staff_Record
+        Rate: 2000
+      - Item: Kakkung_
+        Rate: 15
+      - Item: Arbalest_
+        Rate: 20
+      - Item: Mantle_
+        Rate: 30
+      - Item: Shoes_
+        Rate: 15
+  - Id: 2420
+    AegisName: L_MAGALETA
+    Name: Priest Margaretha
+    Level: 42
+    Hp: 6800
+    BaseExp: 2230
+    JobExp: 1005
+    Attack: 220
+    Attack2: 440
+    Defense: 12
+    MagicDefense: 8
+    Str: 33
+    Agi: 23
+    Vit: 52
+    Int: 11
+    Dex: 40
+    Luk: 19
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Holy
+    ElementLevel: 3
+    WalkSpeed: 180
+    AttackDelay: 432
+    AttackMotion: 648
+    DamageMotion: 240
+    Ai: 02
+    Drops:
+      - Item: Armlet_Of_Prisoner
+        Rate: 500
+      - Item: Biretta_
+        Rate: 20
+      - Item: Morning_Star_
+        Rate: 70
+      - Item: Sword_Mace_
+        Rate: 25
+      - Item: Saint_Robe_
+        Rate: 15
+      - Item: Scapulare_
+        Rate: 15
+      - Item: Spike
+        Rate: 15
+  - Id: 2421
+    AegisName: L_YGNIZEM
+    Name: Crusader Ygnizem
+    Level: 42
+    Hp: 6800
+    BaseExp: 2230
+    JobExp: 1005
+    Attack: 220
+    Attack2: 440
+    Defense: 12
+    MagicDefense: 8
+    Str: 33
+    Agi: 23
+    Vit: 52
+    Int: 11
+    Dex: 40
+    Luk: 19
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Fire
+    ElementLevel: 3
+    WalkSpeed: 180
+    AttackDelay: 432
+    AttackMotion: 648
+    DamageMotion: 240
+    Ai: 02
+    Drops:
+      - Item: Lab_Staff_Record
+        Rate: 1000
+      - Item: Katzbalger
+        Rate: 20
+      - Item: Two_Hand_Sword_
+        Rate: 30
+      - Item: Saber_
+        Rate: 30
+      - Item: Padded_Armor_
+        Rate: 30
+      - Item: Slayer_
+        Rate: 100
+      - Item: Plate_Armor_
+        Rate: 15
+  - Id: 2426
+    AegisName: L_RAWREL
+    Name: Sage Rawrel
+    Level: 42
+    Hp: 6800
+    BaseExp: 2230
+    JobExp: 1005
+    Attack: 220
+    Attack2: 440
+    Defense: 12
+    MagicDefense: 8
+    Str: 33
+    Agi: 23
+    Vit: 52
+    Int: 11
+    Dex: 40
+    Luk: 19
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Ghost
+    ElementLevel: 3
+    WalkSpeed: 180
+    AttackDelay: 432
+    AttackMotion: 648
+    DamageMotion: 240
+    Ai: 02
+    Drops:
+      - Item: Mementos
+        Rate: 2000
+      - Item: Staff_Of_Wing
+        Rate: 15
+      - Item: Guard_
+        Rate: 20
+      - Item: Silk_Robe_
+        Rate: 25
+      - Item: Silver_Robe_
+        Rate: 50
+      - Item: Clip
+        Rate: 20
+  - Id: 2422
+    AegisName: L_WHIKEBAIN
+    Name: Rogue Whikebain
+    Level: 42
+    Hp: 6800
+    BaseExp: 2230
+    JobExp: 1005
+    Attack: 220
+    Attack2: 440
+    Defense: 12
+    MagicDefense: 8
+    Str: 33
+    Agi: 23
+    Vit: 52
+    Int: 11
+    Dex: 40
+    Luk: 19
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Dark
+    ElementLevel: 3
+    WalkSpeed: 180
+    AttackDelay: 432
+    AttackMotion: 648
+    DamageMotion: 240
+    Ai: 02
+    Drops:
+      - Item: Armlet_Of_Prisoner
+        Rate: 2000
+      - Item: Forturn_Sword
+        Rate: 20
+      - Item: Adventurere's_Suit_
+        Rate: 60
+      - Item: Gladius_
+        Rate: 20
+      - Item: Chain_Mail_
+        Rate: 15
+      - Item: Ring_Of_Rogue
+        Rate: 15
+      - Item: Coward_
+        Rate: 15
+  - Id: 2423
+    AegisName: L_ARMAIA
+    Name: Alchemist Armaia
+    Level: 42
+    Hp: 6800
+    BaseExp: 2230
+    JobExp: 1005
+    Attack: 220
+    Attack2: 440
+    Defense: 12
+    MagicDefense: 8
+    Str: 33
+    Agi: 23
+    Vit: 52
+    Int: 11
+    Dex: 40
+    Luk: 19
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Earth
+    ElementLevel: 3
+    WalkSpeed: 180
+    AttackDelay: 432
+    AttackMotion: 648
+    DamageMotion: 240
+    Ai: 02
+    Drops:
+      - Item: Armlet_Of_Prisoner
+        Rate: 1000
+      - Item: Muffler_
+        Rate: 30
+      - Item: Buster_
+        Rate: 50
+      - Item: Battle_Axe_
+        Rate: 50
+      - Item: Mink_Coat
+        Rate: 20
+      - Item: Windhawk
+        Rate: 15
+  - Id: 2425
+    AegisName: L_DANCER
+    Name: Dancer Joshepina
+    Level: 42
+    Hp: 6800
+    BaseExp: 2230
+    JobExp: 1005
+    Attack: 220
+    Attack2: 440
+    Defense: 12
+    MagicDefense: 8
+    Str: 33
+    Agi: 23
+    Vit: 52
+    Int: 11
+    Dex: 40
+    Luk: 19
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Wind
+    ElementLevel: 3
+    WalkSpeed: 180
+    AttackDelay: 432
+    AttackMotion: 648
+    DamageMotion: 240
+    Ai: 02
+    Drops:
+      - Item: Lab_Staff_Record
+        Rate: 2000
+      - Item: Kakkung_
+        Rate: 15
+      - Item: Arbalest_
+        Rate: 20
+      - Item: Mantle_
+        Rate: 30
+      - Item: Shoes_
+        Rate: 15
+  - Id: 2427
+    AegisName: L_EREND
+    Name: Monk Erend
+    Level: 42
+    Hp: 6800
+    BaseExp: 2230
+    JobExp: 1005
+    Attack: 220
+    Attack2: 440
+    Defense: 12
+    MagicDefense: 8
+    Str: 33
+    Agi: 23
+    Vit: 52
+    Int: 11
+    Dex: 40
+    Luk: 19
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Holy
+    ElementLevel: 3
+    WalkSpeed: 180
+    AttackDelay: 432
+    AttackMotion: 648
+    DamageMotion: 240
+    Ai: 02
+    Drops:
+      - Item: Armlet_Of_Prisoner
+        Rate: 500
+      - Item: Biretta_
+        Rate: 20
+      - Item: Morning_Star_
+        Rate: 70
+      - Item: Sword_Mace_
+        Rate: 25
+      - Item: Saint_Robe_
+        Rate: 15
+      - Item: Scapulare_
+        Rate: 15
+      - Item: Spike
+        Rate: 15
+  - Id: 1634
+    AegisName: SEYREN
+    Name: Seyren Windsor
+    JapaneseName: Seyren
+    Level: 91
+    Hp: 88402
+    BaseExp: 100000
+    JobExp: 116460
+    Attack: 2100
+    Attack2: 2530
+    Defense: 63
+    MagicDefense: 12
+    Str: 90
+    Agi: 89
+    Vit: 72
+    Int: 20
+    Dex: 99
+    Luk: 25
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Fire
+    ElementLevel: 3
+    WalkSpeed: 170
+    AttackDelay: 76
+    AttackMotion: 384
+    DamageMotion: 288
+    Ai: 09
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Armlet_Of_Prisoner
+        Rate: 3000
+      - Item: Claymore_
+        Rate: 100
+      - Item: Helm_
+        Rate: 15
+      - Item: Pauldron
+        Rate: 15
+      - Item: Plate_Armor_
+        Rate: 15
+      - Item: Ruber
+        Rate: 15
+      - Item: Seyren_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1635
+    AegisName: EREMES
+    Name: Eremes Guile
+    JapaneseName: Eremes
+    Level: 87
+    Hp: 60199
+    BaseExp: 100000
+    JobExp: 99800
+    Attack: 2020
+    Attack2: 2320
+    Defense: 23
+    MagicDefense: 12
+    Str: 45
+    Agi: 138
+    Vit: 31
+    Int: 19
+    Dex: 99
+    Luk: 30
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Dark
+    ElementLevel: 4
+    WalkSpeed: 180
+    AttackDelay: 76
+    AttackMotion: 384
+    DamageMotion: 288
+    Ai: 09
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Lab_Staff_Record
+        Rate: 2000
+      - Item: Krishna
+        Rate: 10
+      - Item: Nail_Of_Loki
+        Rate: 15
+      - Item: Poison_Bottle
+        Rate: 1000
+      - Item: Thief_Clothes_
+        Rate: 15
+      - Item: Eremes_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1636
+    AegisName: HARWORD
+    Name: Howard Alt-Eisen
+    JapaneseName: Harword
+    Level: 83
+    Hp: 78690
+    BaseExp: 100000
+    JobExp: 112540
+    Attack: 1890
+    Attack2: 2390
+    Defense: 59
+    MagicDefense: 10
+    Str: 90
+    Agi: 62
+    Vit: 99
+    Int: 35
+    Dex: 98
+    Luk: 66
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Earth
+    ElementLevel: 4
+    WalkSpeed: 180
+    AttackDelay: 76
+    AttackMotion: 384
+    DamageMotion: 288
+    Ai: 09
+    Drops:
+      - Item: Armlet_Of_Prisoner
+        Rate: 3000
+      - Item: Pauldron
+        Rate: 15
+      - Item: Vecer_Axe
+        Rate: 15
+      - Item: Two_Handed_Axe_
+        Rate: 110
+      - Item: Buckler_
+        Rate: 20
+      - Item: Clothes_Of_The_Lord
+        Rate: 15
+      - Item: Old_Blue_Box
+        Rate: 50
+      - Item: Harword_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1637
+    AegisName: MAGALETA
+    Name: Margaretha Sorin
+    JapaneseName: Magaleta
+    Level: 90
+    Hp: 61282
+    BaseExp: 100000
+    JobExp: 117800
+    Attack: 1300
+    Attack2: 2053
+    Defense: 35
+    MagicDefense: 60
+    Agi: 9
+    Vit: 97
+    Int: 145
+    Dex: 88
+    Luk: 40
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Holy
+    ElementLevel: 3
+    WalkSpeed: 180
+    AttackDelay: 1152
+    AttackMotion: 384
+    DamageMotion: 288
+    Ai: 20
+    Drops:
+      - Item: Lab_Staff_Record
+        Rate: 2000
+      - Item: Croce_Staff
+        Rate: 10
+      - Item: Holy_Robe
+        Rate: 15
+      - Item: Old_Blue_Box
+        Rate: 50
+      - Item: Muffler_
+        Rate: 20
+      - Item: Magaleta_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1638
+    AegisName: SHECIL
+    Name: Cecil Damon
+    JapaneseName: Shecil
+    Level: 82
+    Hp: 58900
+    BaseExp: 100000
+    JobExp: 118260
+    Attack: 1226
+    Attack2: 1854
+    Defense: 25
+    MagicDefense: 15
+    Agi: 145
+    Vit: 27
+    Int: 32
+    Dex: 134
+    Luk: 80
+    AttackRange: 14
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Wind
+    ElementLevel: 3
+    WalkSpeed: 180
+    AttackDelay: 76
+    AttackMotion: 384
+    DamageMotion: 288
+    Ai: 09
+    Drops:
+      - Item: Armlet_Of_Prisoner
+        Rate: 3000
+      - Item: Tights_
+        Rate: 15
+      - Item: Old_Blue_Box
+        Rate: 50
+      - Item: Falken_Blitz
+        Rate: 10
+      - Item: Shecil_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1639
+    AegisName: KATRINN
+    Name: Kathryne Keyron
+    JapaneseName: Katrinn
+    Level: 92
+    Hp: 47280
+    BaseExp: 100000
+    JobExp: 116470
+    Attack: 497
+    Attack2: 1697
+    Defense: 10
+    MagicDefense: 74
+    Agi: 5
+    Vit: 77
+    Int: 180
+    Dex: 110
+    Luk: 39
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Ghost
+    ElementLevel: 3
+    WalkSpeed: 150
+    AttackDelay: 1152
+    AttackMotion: 384
+    DamageMotion: 288
+    Ai: 20
+    Drops:
+      - Item: Armlet_Of_Prisoner
+        Rate: 3000
+      - Item: Old_Blue_Box
+        Rate: 50
+      - Item: La'cryma_Stick
+        Rate: 15
+      - Item: Survival_Rod2_
+        Rate: 10
+      - Item: Shoes_
+        Rate: 30
+      - Item: Katrinn_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 2221
+    AegisName: RANDEL
+    Name: Randel
+    Level: 91
+    Hp: 88402
+    BaseExp: 100000
+    JobExp: 116460
+    Attack: 2100
+    Attack2: 2530
+    Defense: 63
+    MagicDefense: 12
+    Str: 90
+    Agi: 89
+    Vit: 72
+    Int: 20
+    Dex: 99
+    Luk: 25
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Fire
+    ElementLevel: 3
+    WalkSpeed: 170
+    AttackDelay: 76
+    AttackMotion: 384
+    DamageMotion: 288
+    Ai: 09
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Armlet_Of_Prisoner
+        Rate: 3000
+      - Item: Claymore
+        Rate: 200
+      - Item: Old_Blue_Box
+        Rate: 30
+      - Item: Pauldron
+        Rate: 15
+      - Item: Plate_Armor_
+        Rate: 15
+      - Item: Imperial_Guard
+        Rate: 10
+  - Id: 2225
+    AegisName: GERTIE
+    Name: Gertie
+    Level: 87
+    Hp: 60199
+    BaseExp: 100000
+    JobExp: 99800
+    Attack: 2020
+    Attack2: 2320
+    Defense: 23
+    MagicDefense: 12
+    Str: 45
+    Agi: 138
+    Vit: 31
+    Int: 19
+    Dex: 99
+    Luk: 30
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Dark
+    ElementLevel: 4
+    WalkSpeed: 180
+    AttackDelay: 76
+    AttackMotion: 384
+    DamageMotion: 288
+    Ai: 09
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Lab_Staff_Record
+        Rate: 2000
+      - Item: Dragon_Killer
+        Rate: 25
+      - Item: Pauldron
+        Rate: 15
+      - Item: Thief_Clothes_
+        Rate: 20
+        StealProtected: true
+  - Id: 2222
+    AegisName: FLAMEL
+    Name: Flamel
+    Level: 83
+    Hp: 78690
+    BaseExp: 100000
+    JobExp: 112540
+    Attack: 1890
+    Attack2: 2390
+    Defense: 59
+    MagicDefense: 10
+    Str: 90
+    Agi: 62
+    Vit: 99
+    Int: 35
+    Dex: 98
+    Luk: 66
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Earth
+    ElementLevel: 4
+    WalkSpeed: 180
+    AttackDelay: 76
+    AttackMotion: 384
+    DamageMotion: 288
+    Ai: 09
+    Drops:
+      - Item: Armlet_Of_Prisoner
+        Rate: 3000
+      - Item: Doram_High_Cape
+        Rate: 10
+      - Item: Clothes_Of_The_Lord
+        Rate: 15
+      - Item: Old_Blue_Box
+        Rate: 50
+      - Item: Harword_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 2224
+    AegisName: CHEN
+    Name: Chen
+    Level: 90
+    Hp: 61282
+    BaseExp: 100000
+    JobExp: 117800
+    Attack: 1300
+    Attack2: 2053
+    Defense: 35
+    MagicDefense: 60
+    Agi: 9
+    Vit: 97
+    Int: 145
+    Dex: 88
+    Luk: 40
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Holy
+    ElementLevel: 3
+    WalkSpeed: 180
+    AttackDelay: 1152
+    AttackMotion: 384
+    DamageMotion: 288
+    Ai: 20
+    Drops:
+      - Item: Lab_Staff_Record
+        Rate: 2000
+      - Item: Croce_Staff
+        Rate: 15
+      - Item: Hardback
+        Rate: 15
+      - Item: Holy_Robe
+        Rate: 20
+      - Item: Buckler_
+        Rate: 10
+      - Item: Old_Blue_Box
+        Rate: 50
+  - Id: 2226
+    AegisName: ALPHOCCIO
+    Name: Alphoccio
+    Level: 82
+    Hp: 58900
+    BaseExp: 100000
+    JobExp: 118260
+    Attack: 1226
+    Attack2: 1854
+    Defense: 25
+    MagicDefense: 15
+    Agi: 145
+    Vit: 27
+    Int: 32
+    Dex: 134
+    Luk: 80
+    AttackRange: 14
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Wind
+    ElementLevel: 3
+    WalkSpeed: 180
+    AttackDelay: 76
+    AttackMotion: 384
+    DamageMotion: 288
+    Ai: 09
+    Drops:
+      - Item: Armlet_Of_Prisoner
+        Rate: 3000
+      - Item: Mystic_Bow
+        Rate: 15
+      - Item: Tights_
+        Rate: 15
+      - Item: Old_Blue_Box
+        Rate: 50
+        StealProtected: true
+  - Id: 2223
+    AegisName: CELIA
+    Name: Celia
+    Level: 92
+    Hp: 47280
+    BaseExp: 100000
+    JobExp: 116470
+    Attack: 497
+    Attack2: 1697
+    Defense: 10
+    MagicDefense: 74
+    Agi: 5
+    Vit: 77
+    Int: 180
+    Dex: 110
+    Luk: 39
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Ghost
+    ElementLevel: 3
+    WalkSpeed: 150
+    AttackDelay: 1152
+    AttackMotion: 384
+    DamageMotion: 288
+    Ai: 20
+    Drops:
+      - Item: Armlet_Of_Prisoner
+        Rate: 3000
+      - Item: Old_Blue_Box
+        Rate: 50
+      - Item: Hardback
+        Rate: 20
+      - Item: Doram_High_Cape
+        Rate: 10
+      - Item: Shoes_
+        Rate: 30
+        StealProtected: true
+  - Id: 2083
+    AegisName: HORN_SCARABA
+    Name: One-Horned Scaraba
+    JapaneseName: Scaraba
+    Level: 130
+    Hp: 51100
+    BaseExp: 2610
+    JobExp: 2646
+    Attack: 886
+    Attack2: 91
+    Defense: 135
+    MagicDefense: 20
+    Str: 44
+    Agi: 59
+    Vit: 55
+    Int: 21
+    Dex: 99
+    Luk: 33
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Insect
+    RaceGroups:
+      Scaraba: true
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 384
+    AttackMotion: 672
+    DamageMotion: 360
+    Ai: 03
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Singlehorn_Helm
+        Rate: 3250
+      - Item: Elder_Branch
+        Rate: 1500
+      - Item: Imperial_Spear
+        Rate: 5
+      - Item: Yellow_Live
+        Rate: 50
+      - Item: Scaraba_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 2084
+    AegisName: HORN_SCARABA2
+    Name: Two-Horned Scaraba
+    JapaneseName: Scaraba
+    Level: 134
+    Hp: 58900
+    BaseExp: 2890
+    JobExp: 3000
+    Attack: 1935
+    Attack2: 105
+    Defense: 150
+    MagicDefense: 38
+    Str: 44
+    Agi: 68
+    Vit: 72
+    Int: 45
+    Dex: 126
+    Luk: 51
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Insect
+    RaceGroups:
+      Scaraba: true
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 150
+    AttackDelay: 336
+    AttackMotion: 360
+    DamageMotion: 360
+    Ai: 03
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Twinhorn_Helm
+        Rate: 3250
+      - Item: Black_Wing
+        Rate: 5
+      - Item: Elder_Branch
+        Rate: 1500
+      - Item: Yellow_Live
+        Rate: 50
+      - Item: Scaraba_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 2085
+    AegisName: ANTLER_SCARABA
+    Name: Antler Scaraba
+    Level: 136
+    Hp: 62600
+    BaseExp: 3165
+    JobExp: 3467
+    Attack: 1418
+    Attack2: 410
+    Defense: 155
+    MagicDefense: 102
+    Str: 23
+    Agi: 99
+    Vit: 59
+    Int: 129
+    Dex: 137
+    Luk: 45
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Insect
+    RaceGroups:
+      Scaraba: true
+    Element: Earth
+    ElementLevel: 2
+    WalkSpeed: 200
+    AttackDelay: 504
+    AttackMotion: 624
+    DamageMotion: 360
+    Ai: 04
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Antler_Helm
+        Rate: 3250
+      - Item: Elder_Branch
+        Rate: 1500
+      - Item: Yellow_Live
+        Rate: 50
+      - Item: Magical_Foxtail
+        Rate: 5
+      - Item: Scaraba_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 2086
+    AegisName: RAKE_SCARABA
+    Name: Rake Scaraba
+    Level: 139
+    Hp: 67700
+    BaseExp: 3495
+    JobExp: 3955
+    Attack: 1645
+    Attack2: 112
+    Defense: 250
+    MagicDefense: 70
+    Str: 90
+    Agi: 66
+    Vit: 145
+    Int: 52
+    Dex: 168
+    Luk: 77
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Insect
+    RaceGroups:
+      Scaraba: true
+    Element: Earth
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 588
+    AttackMotion: 768
+    DamageMotion: 480
+    Ai: 04
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Rakehorn_Helm
+        Rate: 3250
+      - Item: Bone_Plate
+        Rate: 10
+      - Item: Elder_Branch
+        Rate: 1500
+      - Item: Yellow_Live
+        Rate: 50
+      - Item: Doram_High_Cape
+        Rate: 10
+      - Item: Scaraba_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 2087
+    AegisName: QUEEN_SCARABA
+    Name: Scaraba Queen
+    JapaneseName: Queen Scaraba
+    Level: 140
+    Hp: 2441600
+    BaseExp: 266643
+    JobExp: 116710
+    MvpExp: 133321
+    Attack: 2834
+    Attack2: 1240
+    Defense: 350
+    MagicDefense: 220
+    Str: 100
+    Agi: 88
+    Vit: 82
+    Int: 149
+    Dex: 317
+    Luk: 144
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Insect
+    RaceGroups:
+      Scaraba: true
+    Element: Earth
+    ElementLevel: 3
+    WalkSpeed: 120
+    AttackDelay: 864
+    AttackMotion: 1000
+    DamageMotion: 360
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Old_Card_Album
+        Rate: 5500
+      - Item: Old_Card_Album
+        Rate: 5000
+      - Item: Old_Card_Album
+        Rate: 2000
+    Drops:
+      - Item: Queen_Wing_Piece
+        Rate: 3500
+      - Item: Alca_Bringer
+        Rate: 500
+      - Item: Meteo_Plate_Armor
+        Rate: 500
+      - Item: Chrome_Twohand_Sword
+        Rate: 200
+      - Item: Mystic_Bow
+        Rate: 250
+      - Item: Q_Scaraba_Card
         Rate: 1
         StealProtected: true

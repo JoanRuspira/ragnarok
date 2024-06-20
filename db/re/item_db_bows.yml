@@ -553,3 +553,47 @@ Body:
     Refineable: true
     Script: |
       bonus2 bAddEff,Eff_Freeze,1000;
+  - Id: 18103
+    AegisName: Mystic_Bow
+    Name: Mystic Bow
+    Type: Weapon
+    SubType: Bow
+    Weight: 1700
+    Attack: 75
+    MagicAttack: 100
+    Range: 5
+    Jobs:
+      BardDancer: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bInt,4;
+      bonus2 bSkillUseSP,"SK_CL_SEVERERAINSTORM",10;
+  - Id: 1745
+    AegisName: Falken_Blitz
+    Name: Falken Blitz
+    Type: Weapon
+    SubType: Bow
+    Buy: 20
+    Weight: 1000
+    Attack: 100
+    Range: 5
+    Slots: 2
+    Jobs:
+      Hunter: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+    Script: |
+      bonus2 bSkillAtk,"SK_ST_SHARPSHOOTING",10;
+      bonus2 bSkillAtk,"SK_AC_DOUBLESTRAFE",10;
+      bonus2 bSkillAtk,"SK_AC_CHARGEDARROW",10;

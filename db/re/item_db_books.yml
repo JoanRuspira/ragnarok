@@ -361,3 +361,25 @@ Body:
     Script: |
       bonus bInt,1;
       bonus bMdef,2;
+  - Id: 1561
+    AegisName: Hardback
+    Name: Hardcover Book
+    Type: Weapon
+    SubType: Book
+    Buy: 20
+    Weight: 1500
+    Attack: 140
+    Range: 1
+    Slots: 1
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus bStr,3;
+      bonus bDex,2;

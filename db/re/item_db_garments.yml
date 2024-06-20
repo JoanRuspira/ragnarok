@@ -477,3 +477,37 @@ Body:
     Script: |
       bonus bMdef,5;
       bonus bVit,10;
+  - Id: 20789
+    AegisName: Doram_High_Cape
+    Name: Luxury Doram Manteau
+    Type: Armor
+    Buy: 20
+    Weight: 400
+    Defense: 25
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Monk: true
+      Priest: true
+      Rogue: true
+      Sage: true
+      Wizard: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 80
+    Refineable: true
+    Script: |
+      bonus bFlee,7;
+      bonus2 bSubEle,Ele_Neutral,3;
+      .@r = getrefine()/3;
+      bonus bFlee2,.@r;
+      bonus bLuk,.@r;

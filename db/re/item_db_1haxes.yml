@@ -192,3 +192,64 @@ Body:
     Script: |
       bonus bDex,2;
       bonus bLuk,2;
+  - Id: 1307
+    AegisName: Windhawk
+    Name: Windhawk
+    Type: Weapon
+    SubType: 1hAxe
+    Buy: 18000
+    Weight: 1500
+    Attack: 115
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 14
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Wind;
+      bonus bAspdRate,5;
+  - Id: 1311
+    AegisName: Vecer_Axe
+    Name: Vecer Axe
+    Type: Weapon
+    SubType: 1hAxe
+    Buy: 20
+    Weight: 1500
+    Attack: 140
+    Range: 1
+    Slots: 2
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+    Script: |
+      if (readparam(bLuk)>=90) {
+         bonus bBaseAtk,20;
+      }
+      if (readparam(bDex)>=90) {
+         bonus bCritical,5;
+      }
+      if (readparam(bDex)>=90 && readparam(bLuk)>=90) {
+         bonus2 bSkillAtk,"SK_MC_MAMMONITE",15;
+      }

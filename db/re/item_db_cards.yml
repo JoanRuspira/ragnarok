@@ -4800,7 +4800,7 @@ Body:
       bonus2 bSubRace,RC_Undead,30;
   - Id: 4472
     AegisName: Bradium_Goram_Card
-    Name: Bradium Golem Card
+    Name: Oridecon Golem Card
     Type: Card
     Buy: 20
     Weight: 10
@@ -5007,6 +5007,34 @@ Body:
       BuyingStore: true
     Script: |
       bonus3 bAutoSpell,"SK_ST_STRIPARMOR",1,50;
+  - Id: 4505
+    AegisName: Scaraba_Card
+    Name: Scaraba Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Both_Accessory: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bMatk,20;
+      bonus bMaxSPrate,-1;
+  - Id: 4507
+    AegisName: Q_Scaraba_Card
+    Name: Queen Scaraba Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bAddRace2,RC2_SCARABA,30;
+      bonus2 bAddMonsterDropItem,12806,50;
   - Id: 4349
     AegisName: Erend_Card
     Name: Errende Ebecee Card

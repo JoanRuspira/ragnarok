@@ -2545,6 +2545,70 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
+  - Id: 6326
+    AegisName: Queen_Wing_Piece
+    Name: Queen Wing Piece
+    Type: Etc
+    Buy: 1630
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7939
+    AegisName: Elder_Branch
+    Name: Elder Branch
+    Type: Etc
+    Buy: 1500
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 6322
+    AegisName: Antler_Helm
+    Name: Antler Helmet
+    Type: Etc
+    Buy: 800
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 6321
+    AegisName: Rakehorn_Helm
+    Name: Rakehorn Helm
+    Type: Etc
+    Buy: 822
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 6323
+    AegisName: Twinhorn_Helm
+    Name: Two-Horned Helmet
+    Type: Etc
+    Buy: 728
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 6324
+    AegisName: Singlehorn_Helm
+    Name: Single Horned Helmet
+    Type: Etc
+    Buy: 702
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7347
+    AegisName: Lab_Staff_Record
+    Name: Research Chart
+    Type: Etc
+    Buy: 840
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7345
+    AegisName: Armlet_Of_Prisoner
+    Name: Handcuffs
+    Type: Etc
+    Buy: 724
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 7005
     AegisName: Skull
     Name: Skull

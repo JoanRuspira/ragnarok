@@ -424,3 +424,69 @@ Body:
       if (readparam(bStr)>=95) {
          bonus bBaseAtk,20;
       }
+  - Id: 1170
+    AegisName: Katzbalger
+    Name: Katzbalger
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 20
+    Weight: 2000
+    Attack: 175
+    Range: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 48
+    Refineable: true
+    Script: |
+      bonus bVit,5;
+      bonus bDef,10;
+  - Id: 1191
+    AegisName: Alca_Bringer
+    Name: Alca Bringer
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 20
+    Weight: 3400
+    Attack: 280
+    Range: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bAspd,(getrefine()/2);
+  - Id: 1196
+    AegisName: Chrome_Twohand_Sword
+    Name: Chrome Two-Handed Sword
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 20
+    Weight: 400
+    Attack: 280
+    Range: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bUnbreakableWeapon;
+      bonus bAgi,3;
+      bonus bMaxHPrate,-10;

@@ -977,3 +977,29 @@ Body:
     Script: |
       bonus bAspdRate,10;
       bonus2 bAddEff,Eff_Curse,300;
+  - Id: 13421
+    AegisName: Ruber
+    Name: Ruber
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 20
+    Weight: 1500
+    Attack: 170
+    Range: 1
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+    Script: |
+      autobonus "{ bonus2 bSkillAtk,\"KN_BOWLINGBASH\",20; bonus2 bSkillAtk,\"SM_BASH\",20; }",5,15000,BF_WEAPON,"{ specialeffect2 EF_ENHANCE; }";

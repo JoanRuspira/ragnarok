@@ -450,3 +450,25 @@ Body:
       bonus bInt,2;
       bonus bMdef,3;
       bonus bUnbreakableShield;
+  - Id: 2153
+    AegisName: Imperial_Guard
+    Name: Imperial Guard
+    Type: Armor
+    Buy: 20
+    Weight: 2500
+    Defense: 120
+    Slots: 1
+    Jobs:
+      Crusader: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    EquipLevelMin: 102
+    Refineable: true
+    View: 4
+    Script: |
+      .@r = getrefine();
+      bonus bMdef,5;
+      bonus2 bSkillAtk,"SK_PA_SHIELDSLAM",(.@r>=6?20+((.@r-5)*2):20);

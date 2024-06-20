@@ -264,3 +264,26 @@ Body:
       bonus bIgnoreDefRace,RC_Brute;
       bonus bIgnoreDefRace,RC_Player_Doram;
       bonus3 bAutoSpell,"KN_SPEARBOOMERANG",5,100;
+  - Id: 1433
+    AegisName: Imperial_Spear
+    Name: Imperial Spear
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 20
+    Weight: 1800
+    Attack: 180
+    MagicAttack: 40
+    Range: 3
+    Slots: 1
+    Jobs:
+      Crusader: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      .@r = getrefine();
+      bonus2 bSkillAtk,"SK_CR_HOLYCROSS",20+(.@r/2*3);

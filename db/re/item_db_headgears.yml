@@ -2727,3 +2727,34 @@ Body:
       bonus bDex,1;
       bonus bAgi,1;
       bonus bMaxSP,50;
+  - Id: 5005
+    AegisName: Gas_Mask
+    Name: Gas Mask
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Head_Low: true
+      Head_Mid: true
+    ArmorLevel: 1
+    View: 91
+    Script: |
+      bonus2 bResEff,Eff_Poison,3000;
+  - Id: 5120
+    AegisName: Fedora_
+    Name: Bucket Hat
+    Type: Armor
+    Buy: 6000
+    Weight: 300
+    Defense: 6
+    Slots: 1
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 195

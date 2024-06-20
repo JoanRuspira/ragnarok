@@ -331,3 +331,25 @@ Body:
     Script: |
       bonus bHit,30;
       bonus3 bAutoSpell,"SK_ST_FULLSTRIP",1,150;
+  - Id: 1284
+    AegisName: Krishna
+    Name: Krishna
+    Type: Weapon
+    SubType: Katar
+    Buy: 20
+    Weight: 1200
+    Attack: 120
+    Range: 1
+    Slots: 2
+    Jobs:
+      Assassin: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+    Script: |
+      bonus2 bSkillAtk,"SK_AS_GRIMTOOTH",10;
+      bonus3 bAutoSpell,"SK_AS_SONICBLOW",max(getskilllv("SK_AS_SONICBLOW"),1),100;

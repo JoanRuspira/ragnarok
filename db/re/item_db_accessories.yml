@@ -691,3 +691,28 @@ Body:
       bonus bMdef,3;
       bonus bDex,3;
       bonus bHit,10;
+  - Id: 2620
+    AegisName: Ring_Of_Rogue
+    Name: Rogue's Treasure
+    Type: Armor
+    Buy: 10000
+    Weight: 100
+    Jobs:
+      Assassin: true
+      KagerouOboro: true
+      Ninja: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Both_Accessory: true
+    ArmorLevel: 1
+    EquipLevelMin: 70
+    Script: |
+      if (readparam(bStr)>=70) {
+         bonus bHit,10;
+         bonus bFlee,10;
+      }
+      if (readparam(bAgi)>=70) {
+         bonus bBaseAtk,10;
+         bonus bCritical,10;
+      }

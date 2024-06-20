@@ -777,3 +777,60 @@ Body:
     Refineable: true
     Script: |
       bonus2 bSubRace,RC_Dragon,15;
+  - Id: 15000
+    AegisName: Bone_Plate
+    Name: Bone Plate
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 60
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bStr,1;
+      bonus bMdef,3;
+      bonus2 bIgnoreDefRaceRate,RC_DemiHuman,10;
+      bonus2 bIgnoreDefRaceRate,RC_Player_Human,10;
+      bonus2 bIgnoreDefRaceRate,RC_Brute,10;
+      bonus2 bIgnoreDefRaceRate,RC_Player_Doram,10;
+  - Id: 2364
+    AegisName: Meteo_Plate_Armor
+    Name: Meteo Plate Armor
+    Type: Armor
+    Buy: 20
+    Weight: 3000
+    Defense: 85
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus2 bResEff,Eff_Stun,3000;
+      bonus2 bResEff,Eff_Freeze,3000;

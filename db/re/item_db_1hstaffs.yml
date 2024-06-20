@@ -692,3 +692,90 @@ Body:
       bonus bInt,3;
       bonus bHealPower,5;
       autobonus "{ bonus2 bHPRegenRate,200,2000; bonus2 bSPRegenRate,50,2000; }",10,10000,BF_MAGIC,"{ specialeffect2 EF_HEAL; }";
+  - Id: 1692
+    AegisName: Magical_Foxtail
+    Name: Magical Foxtail Staff
+    Type: Weapon
+    SubType: Staff
+    Buy: 100000
+    Weight: 600
+    Attack: 120
+    MagicAttack: 260
+    Range: 1
+    Slots: 2
+    Jobs:
+      Wizard: true
+      Sage: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 85
+    Refineable: true
+    Script: |
+      bonus bMaxSP,100;
+      .@r = getrefine();
+      bonus bMatkRate,2*(.@r/2);
+      bonus bMaxSPrate,.@r/2;
+      if (.@r>=7) {
+         .@r = min(.@r,10)-7;
+         bonus bBaseAtk,(24*.@r)+48;
+         bonus bMatk,(52*.@r)+104;
+      }
+      bonus bUnbreakableWeapon;
+  - Id: 1647
+    AegisName: Croce_Staff
+    Name: Croce Staff
+    Type: Weapon
+    SubType: Staff
+    Buy: 20
+    Weight: 500
+    Attack: 30
+    MagicAttack: 175
+    Range: 1
+    Slots: 1
+    Jobs:
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Holy;
+      bonus bInt,4;
+      bonus4 bAutoSpellOnSkill,"SK_AL_JGHEAL","SK_AL_BLESSING",max(getskilllv("SK_AL_BLESSING"),1),20;
+  - Id: 1646
+    AegisName: La'cryma_Stick
+    Name: La'cryma Stick
+    Type: Weapon
+    SubType: Staff
+    Buy: 20
+    Weight: 500
+    Attack: 30
+    MagicAttack: 180
+    Range: 1
+    Slots: 2
+    Jobs:
+      Mage: true
+      Sage: true
+      Wizard: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+    Script: |
+      .@r = getrefine();
+      bonus bInt,4;
+      bonus bMdef,.@r;
+      bonus2 bSkillAtk,"SK_WZ_STORMGUST",.@r;
+      if (.@r > 9)
+         bonus2 bVariableCastrate,"SK_WZ_STORMGUST",-8;
