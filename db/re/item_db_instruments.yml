@@ -332,3 +332,27 @@ Body:
     Refineable: true
     Script: |
       bonus bAtkEle,Ele_Water;
+  - Id: 1920
+    AegisName: Berserk_Guitar
+    Name: Berserk Guitar
+    Type: Weapon
+    SubType: Musical
+    Buy: 20
+    Weight: 1800
+    Attack: 10
+    Range: 1
+    Jobs:
+      BardDancer: true
+    Classes:
+      All_Upper: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bAspdRate,100;
+      bonus bHPrecovRate,-100;
+      bonus2 bHPLossRate,50,5000;
+      bonus bDex,-readparam(bDex);

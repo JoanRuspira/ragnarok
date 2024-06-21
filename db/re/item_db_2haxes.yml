@@ -428,3 +428,32 @@ Body:
     Script: |
       bonus2 bSubSize,Size_Medium,13;
       bonus2 bSubSize,Size_Large,15;
+  - Id: 1376
+    AegisName: Heart_Breaker
+    Name: Heart Breaker
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 20
+    Weight: 2000
+    Attack: 175
+    Range: 1
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bCritical,20+getrefine();
+      bonus bAspdRate,5;
+      if (Class == Job_Whitesmith || Class == Job_Creator)
+         bonus3 bAutoSpell,"SK_BS_HAMMERFALL",3,30;

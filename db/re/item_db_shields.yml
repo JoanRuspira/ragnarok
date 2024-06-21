@@ -472,3 +472,25 @@ Body:
       .@r = getrefine();
       bonus bMdef,5;
       bonus2 bSkillAtk,"SK_PA_SHIELDSLAM",(.@r>=6?20+((.@r-5)*2):20);
+  - Id: 2124
+    AegisName: Thorny_Buckler
+    Name: Thorny Buckler
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 85
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Classes:
+      All_Upper: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    EquipLevelMin: 55
+    Refineable: true
+    View: 2
+    Script: |
+      bonus bMdef,2;

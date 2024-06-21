@@ -18708,3 +18708,553 @@ Body:
       - Item: Gloom_Under_Night_Card
         Rate: 1
         StealProtected: true
+  - Id: 3021
+    AegisName: FIRE_SAND_MAN
+    Name: Fire Sandman
+    Level: 50
+    Hp: 7755
+    BaseExp: 2202
+    JobExp: 4023
+    Attack: 889
+    Attack2: 990
+    Defense: 28
+    MagicDefense: 50
+    Str: 25
+    Agi: 44
+    Vit: 50
+    Int: 62
+    Dex: 65
+    Luk: 60
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Fire
+    ElementLevel: 3
+    WalkSpeed: 150
+    AttackDelay: 1672
+    AttackMotion: 720
+    ClientAttackMotion: 432
+    DamageMotion: 288
+    Ai: 04
+    Drops:
+      - Item: Flame_Heart
+        Rate: 35
+      - Item: Coal
+        Rate: 580
+      - Item: Elunium_Stone
+        Rate: 118
+      - Item: Burning_Heart
+        Rate: 3000
+      - Item: Sparkling_Dust
+        Rate: 200
+      - Item: Burning_Bow
+        Rate: 10
+      - Item: Fire_Sand_Man_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1838
+    AegisName: KNOCKER
+    Name: Knocker
+    Level: 50
+    Hp: 7755
+    BaseExp: 2202
+    JobExp: 4023
+    Attack: 889
+    Attack2: 990
+    Defense: 28
+    MagicDefense: 50
+    Str: 25
+    Agi: 44
+    Vit: 50
+    Int: 62
+    Dex: 65
+    Luk: 60
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Brute
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1548
+    AttackMotion: 384
+    DamageMotion: 288
+    Ai: 17
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Great_Nature
+        Rate: 30
+      - Item: Coal
+        Rate: 150
+      - Item: Elder_Pixie's_Beard
+        Rate: 5500
+      - Item: Elven_Ears
+        Rate: 10
+      - Item: Thorny_Buckler
+        Rate: 5
+      - Item: Earth_Bow
+        Rate: 10
+      - Item: Knocker_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1839
+    AegisName: BYORGUE
+    Name: Byorgue
+    Level: 86
+    Hp: 38133
+    BaseExp: 19000
+    JobExp: 9500
+    Attack: 1340
+    Attack2: 2590
+    Defense: 20
+    MagicDefense: 13
+    Str: 25
+    Agi: 80
+    Vit: 12
+    Int: 30
+    Dex: 70
+    Luk: 10
+    AttackRange: 2
+    SkillRange: 14
+    ChaseRange: 16
+    Size: Medium
+    Race: Demihuman
+    Element: Neutral
+    ElementLevel: 1
+    WalkSpeed: 170
+    AttackDelay: 800
+    AttackMotion: 600
+    DamageMotion: 360
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Drill_Katar
+        Rate: 50
+      - Item: Assassin_Mask_
+        Rate: 50
+      - Item: Agi_Dish07
+        Rate: 500
+      - Item: Old_Blue_Box
+        Rate: 40
+      - Item: Rider_Insignia_
+        Rate: 50
+      - Item: Vroken_Sword
+        Rate: 4365
+      - Item: Byorgue_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1837
+    AegisName: IMP
+    Name: Fire Imp
+    JapaneseName: Imp
+    Level: 76
+    Hp: 46430
+    BaseExp: 25200
+    JobExp: 11077
+    Attack: 1059
+    Attack2: 1509
+    Defense: 27
+    MagicDefense: 50
+    Str: 37
+    Agi: 76
+    Vit: 30
+    Int: 150
+    Dex: 99
+    Luk: 10
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Demon
+    Element: Fire
+    ElementLevel: 3
+    WalkSpeed: 150
+    AttackDelay: 824
+    AttackMotion: 432
+    DamageMotion: 360
+    Ai: 20
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Hot_Hair
+        Rate: 3000
+      - Item: Live_Coal
+        Rate: 2500
+      - Item: Heart_Breaker
+        Rate: 10
+      - Item: Imp_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1833
+    AegisName: KASA
+    Name: Kasa
+    Level: 85
+    Hp: 80375
+    BaseExp: 49000
+    JobExp: 38000
+    Attack: 3030
+    Attack2: 3500
+    Defense: 23
+    MagicDefense: 70
+    Str: 45
+    Agi: 110
+    Vit: 31
+    Int: 200
+    Dex: 140
+    Luk: 30
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Formless
+    Element: Fire
+    ElementLevel: 3
+    WalkSpeed: 150
+    AttackDelay: 800
+    AttackMotion: 600
+    DamageMotion: 288
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Burning_Heart
+        Rate: 3000
+      - Item: Hot_Hair
+        Rate: 2500
+      - Item: Flame_Heart
+        Rate: 30
+      - Item: Burning_Bow
+        Rate: 10
+      - Item: Piercing_Staff
+        Rate: 10
+      - Item: Kasa_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1831
+    AegisName: SALAMANDER
+    Name: Salamander
+    Level: 91
+    Hp: 97934
+    BaseExp: 72000
+    JobExp: 55000
+    Attack: 7590
+    Attack2: 10860
+    Defense: 65
+    MagicDefense: 50
+    Str: 90
+    Agi: 55
+    Vit: 44
+    Int: 45
+    Dex: 180
+    Luk: 25
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Formless
+    Element: Fire
+    ElementLevel: 3
+    WalkSpeed: 160
+    AttackDelay: 140
+    AttackMotion: 384
+    DamageMotion: 288
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Burning_Heart
+        Rate: 3000
+      - Item: Flame_Heart
+        Rate: 30
+      - Item: Red_Gemstone
+        Rate: 100
+      - Item: Berserk_Guitar
+        Rate: 50
+      - Item: Ring_
+        Rate: 5
+      - Item: Meteo_Plate_Armor
+        Rate: 20
+      - Item: Salamander_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1832
+    AegisName: IFRIT
+    Name: Ifrit
+    Level: 99
+    Hp: 7700000
+    BaseExp: 3154321
+    JobExp: 3114520
+    MvpExp: 1577160
+    Attack: 13530
+    Attack2: 17000
+    Defense: 40
+    MagicDefense: 50
+    Str: 120
+    Agi: 180
+    Vit: 25
+    Int: 190
+    Dex: 199
+    Luk: 50
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Formless
+    Element: Fire
+    ElementLevel: 4
+    WalkSpeed: 130
+    AttackDelay: 212
+    AttackMotion: 384
+    DamageMotion: 360
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Old_Violet_Box
+        Rate: 5500
+      - Item: Old_Blue_Box
+        Rate: 5000
+      - Item: Old_Card_Album
+        Rate: 2000
+    Drops:
+      - Item: Flame_Heart
+        Rate: 10000
+      - Item: Spiritual_Ring
+        Rate: 3000
+      - Item: Hell_Fire
+        Rate: 2000
+      - Item: Fire_Brand
+        Rate: 2000
+      - Item: Ifrit_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1512
+    AegisName: HYEGUN
+    Name: Yao Jun
+    JapaneseName: Hyegun
+    Level: 56
+    Hp: 9981
+    BaseExp: 2199
+    JobExp: 1022
+    Attack: 710
+    Attack2: 1128
+    Defense: 12
+    MagicDefense: 10
+    Str: 60
+    Agi: 40
+    Vit: 36
+    Int: 10
+    Dex: 73
+    Luk: 15
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 2
+    WalkSpeed: 180
+    AttackDelay: 890
+    AttackMotion: 1320
+    DamageMotion: 720
+    Ai: 04
+    Drops:
+      - Item: Brigan
+        Rate: 3880
+      - Item: Elunium
+        Rate: 10
+      - Item: Boots_
+        Rate: 10
+      - Item: Munak_Doll
+        Rate: 300
+      - Item: Hyegun_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1513
+    AegisName: CIVIL_SERVANT
+    Name: Mao Guai
+    JapaneseName: Civil Servant
+    Level: 62
+    Hp: 14390
+    BaseExp: 4023
+    JobExp: 2750
+    Attack: 650
+    Attack2: 1010
+    Defense: 42
+    MagicDefense: 5
+    Str: 58
+    Agi: 15
+    Vit: 20
+    Int: 60
+    Dex: 80
+    Luk: 50
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Brute
+    Element: Wind
+    ElementLevel: 2
+    WalkSpeed: 200
+    AttackDelay: 1257
+    AttackMotion: 528
+    DamageMotion: 432
+    Ai: 04
+    Drops:
+      - Item: Fan
+        Rate: 4171
+      - Item: Cat_Eyed_Stone
+        Rate: 2000
+      - Item: Aloebera
+        Rate: 10
+      - Item: Fish_Tail
+        Rate: 100
+      - Item: Civil_Servant_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1514
+    AegisName: DANCING_DRAGON
+    Name: Zhu Po Long
+    JapaneseName: Dancing Dragon
+    Level: 54
+    Hp: 9136
+    BaseExp: 3030
+    JobExp: 769
+    Attack: 550
+    Attack2: 789
+    Defense: 39
+    MagicDefense: 10
+    Str: 55
+    Agi: 62
+    Vit: 55
+    Int: 25
+    Dex: 72
+    Luk: 22
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Dragon
+    Element: Wind
+    ElementLevel: 2
+    WalkSpeed: 160
+    AttackDelay: 600
+    AttackMotion: 840
+    DamageMotion: 504
+    Ai: 02
+    Drops:
+      - Item: Dragon_Fang
+        Rate: 4365
+      - Item: Dragon_Horn
+        Rate: 3000
+      - Item: Little_Blacky_Ghost
+        Rate: 800
+      - Item: Dragon_Scale
+        Rate: 1000
+      - Item: Yarn
+        Rate: 3000
+      - Item: Dancing_Dragon_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1630
+    AegisName: BACSOJIN_
+    Name: White Lady
+    JapaneseName: Bacsojin
+    Level: 85
+    Hp: 253221
+    BaseExp: 45250
+    JobExp: 16445
+    MvpExp: 22625
+    Attack: 1868
+    Attack2: 6124
+    Defense: 20
+    MagicDefense: 55
+    Str: 52
+    Agi: 65
+    Vit: 44
+    Int: 112
+    Dex: 152
+    Luk: 35
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demihuman
+    Element: Wind
+    ElementLevel: 3
+    WalkSpeed: 130
+    AttackDelay: 576
+    AttackMotion: 960
+    DamageMotion: 480
+    Ai: 04
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Yggdrasilberry
+        Rate: 5500
+      - Item: Celestial_Robe
+        Rate: 2000
+      - Item: Old_Violet_Box
+        Rate: 5000
+    Drops:
+      - Item: Long_Hair
+        Rate: 5500
+      - Item: Old_Blue_Box
+        Rate: 5000
+      - Item: Limpid_Celestial_Robe
+        Rate: 3000
+      - Item: Soft_Silk_Cloth
+        Rate: 1000
+      - Item: Red_Silk_Seal
+        Rate: 100
+      - Item: Tiara
+        Rate: 100
+      - Item: Bacsojin_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1631
+    AegisName: CHUNG_E_
+    Name: Green Maiden
+    JapaneseName: Chung E
+    Level: 59
+    Hp: 23900
+    BaseExp: 4256
+    JobExp: 920
+    Attack: 460
+    Attack2: 1050
+    Defense: 8
+    MagicDefense: 15
+    Str: 38
+    Agi: 65
+    Vit: 43
+    Int: 30
+    Dex: 90
+    Luk: 15
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Wind
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 1728
+    AttackMotion: 816
+    DamageMotion: 1188
+    Ai: 04
+    Drops:
+      - Item: Cyfar
+        Rate: 4200
+      - Item: Stuffed_Doll
+        Rate: 100
+      - Item: Hora_
+        Rate: 15
+      - Item: Honey
+        Rate: 500
+      - Item: Chung_E_Card
+        Rate: 1
+        StealProtected: true

@@ -5141,6 +5141,20 @@ Body:
       BuyingStore: true
     Script: |
       bonus3 bAddMonsterDropItem,12043,RC_Brute,50;
+  - Id: 27027
+    AegisName: Fire_Sand_Man_Card
+    Name: Fire Sandman Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Armor: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bDef,50;
+      bonus2 bSubEle,Ele_Fire,10;
   - Id: 4356
     AegisName: Beholder_Card
     Name: Beholder Card

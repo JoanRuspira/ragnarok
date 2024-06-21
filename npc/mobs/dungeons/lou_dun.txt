@@ -13,31 +13,17 @@
 //============================================================
 
 //==================================================
-// lou_dun01 - The Royal Tomb
-//==================================================
-lou_dun01,0,0	monster	Mi Gao	1516,30
-lou_dun01,0,0	monster	Jing Guai	1517,55
-lou_dun01,0,0	monster	Bigfoot	1060,20
-lou_dun01,0,0	monster	Anacondaq	1030,20
-lou_dun01,0,0	monster	Green Plant	1080,15
-lou_dun01,0,0	monster	Red Plant	1078,15
-lou_dun01,0,0	monster	Green Mushroom	21431,15
-lou_dun01,0,0	monster	Red Mushroom	1085,15
-lou_dun01,0,0	monster	Shining Plant	1083,5
-
-//==================================================
 // lou_dun02 - Inside the Royal Tomb
 //==================================================
 lou_dun02,0,0	monster	Yao Jun	1512,40,300000,120000
-lou_dun02,0,0	monster	Munak	1026,25
-lou_dun02,0,0	monster	Zhu Po Long	1514,5
-lou_dun02,0,0	monster	Mimic	1191,5
+lou_dun02,0,0	monster	Jing Guai	1517,30
+lou_dun02,0,0	monster	Zhu Po Long	1514,30
+lou_dun02,0,0	monster	Red Mushroom	1085,20
 
 //==================================================
 // lou_dun03 - Suei Long Gon
 //==================================================
-lou_dun03,0,0	monster	Yao Jun	1512,25,120000,60000
 lou_dun03,0,0	monster	Zhu Po Long	1514,25,120000,60000
-lou_dun03,0,0	monster	Mao Guai	1513,15
-lou_dun03,0,0	monster	Green Maiden	1631,5,3000000,1800000
+lou_dun03,0,0	monster	Mao Guai	1513,25
+lou_dun03,0,0	monster	Green Maiden	1631,25,3000000,1800000
 lou_dun03,0,0,0,0	boss_monster	White Lady	1630,1,7000000,600000,1

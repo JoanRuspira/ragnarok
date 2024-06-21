@@ -597,3 +597,47 @@ Body:
       bonus2 bSkillAtk,"SK_ST_SHARPSHOOTING",10;
       bonus2 bSkillAtk,"SK_AC_DOUBLESTRAFE",10;
       bonus2 bSkillAtk,"SK_AC_CHARGEDARROW",10;
+  - Id: 1732
+    AegisName: Earth_Bow
+    Name: Earth Bow
+    Type: Weapon
+    SubType: Bow
+    Buy: 20
+    Weight: 1400
+    Attack: 105
+    Range: 5
+    Slots: 1
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus2 bSubEle,Ele_Earth,10;
+  - Id: 1730
+    AegisName: Burning_Bow
+    Name: Burning Bow
+    Type: Weapon
+    SubType: Bow
+    Buy: 20
+    Weight: 1400
+    Attack: 95
+    Range: 5
+    Slots: 1
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus2 bSubEle,Ele_Fire,10;

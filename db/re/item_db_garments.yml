@@ -511,3 +511,24 @@ Body:
       .@r = getrefine()/3;
       bonus bFlee2,.@r;
       bonus bLuk,.@r;
+  - Id: 2530
+    AegisName: Rider_Insignia_
+    Name: Rider Insignia
+    Type: Armor
+    Buy: 20
+    Weight: 500
+    Defense: 13
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Classes:
+      All_Upper: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus bAgi,2;

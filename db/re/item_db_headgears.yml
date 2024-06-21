@@ -2786,3 +2786,18 @@ Body:
     ArmorLevel: 1
     Refineable: true
     View: 98
+  - Id: 5096
+    AegisName: Assassin_Mask_
+    Name: Assassin Mask
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 1
+    Jobs:
+      Assassin: true
+      Priest: true
+    Locations:
+      Head_Low: true
+    ArmorLevel: 1
+    EquipLevelMin: 70
+    View: 180

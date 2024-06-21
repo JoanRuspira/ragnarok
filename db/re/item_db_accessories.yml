@@ -716,3 +716,31 @@ Body:
          bonus bBaseAtk,10;
          bonus bCritical,10;
       }
+  - Id: 2677
+    AegisName: Spiritual_Ring
+    Name: Spiritual Ring
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Locations:
+      Both_Accessory: true
+    ArmorLevel: 1
+    Script: |
+      bonus bInt,2;
+      bonus bDex,1;
+  - Id: 2700
+    AegisName: Red_Silk_Seal
+    Name: Red Silk Seal
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Accessory: true
+    ArmorLevel: 1
+    EquipLevelMin: 60

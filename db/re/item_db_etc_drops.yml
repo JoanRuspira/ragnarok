@@ -5722,3 +5722,51 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
+  - Id: 7166
+    AegisName: Soft_Silk_Cloth
+    Name: Soft Silk
+    Type: Etc
+    Buy: 1200
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7165
+    AegisName: Limpid_Celestial_Robe
+    Name: Transparent Celestial Robe
+    Type: Etc
+    Buy: 650
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7265
+    AegisName: Dragon_Horn
+    Name: Dragon Horn
+    Type: Etc
+    Buy: 544
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7266
+    AegisName: Dragon_Fang
+    Name: Denture from Dragon Mask
+    Type: Etc
+    Buy: 436
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7263
+    AegisName: Cat_Eyed_Stone
+    Name: Cat's Eye
+    Type: Etc
+    Buy: 954
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7262
+    AegisName: Fan
+    Name: Folding Fan of Cat Ghost
+    Type: Etc
+    Buy: 466
+    Weight: 10
+    Flags:
+      BuyingStore: true
