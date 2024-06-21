@@ -264,3 +264,46 @@ Body:
     Script: |
       bonus bAgi,2;
       bonus2 bAddItemGroupHealRate,IG_Potion,20;
+  - Id: 2422
+    AegisName: High_Fashion_Sandals
+    Name: High Fashion Sandals
+    Type: Armor
+    Buy: 24000
+    Weight: 200
+    Defense: 7
+    Slots: 1
+    Jobs:
+      Acolyte: true
+      Mage: true
+      Monk: true
+      Priest: true
+      Sage: true
+      SoulLinker: true
+      Wizard: true
+    Locations:
+      Shoes: true
+    ArmorLevel: 1
+    EquipLevelMin: 40
+    Refineable: true
+    Script: |
+      bonus bMdef,10;
+  - Id: 2426
+    AegisName: Shadow_Walk
+    Name: Shadow Walk
+    Type: Armor
+    Buy: 20
+    Weight: 2000
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Classes:
+      All_Upper: true
+    Locations:
+      Shoes: true
+    ArmorLevel: 1
+    EquipLevelMin: 75
+    Refineable: true
+    Script: |
+      bonus bMdef,10;
+      bonus5 bAutoSpellWhenHit,"AS_CLOAKING",max(2,getskilllv("AS_CLOAKING")),100,BF_MAGIC,0;

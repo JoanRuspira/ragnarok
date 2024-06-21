@@ -2758,3 +2758,31 @@ Body:
     ArmorLevel: 1
     Refineable: true
     View: 195
+  - Id: 18874
+    AegisName: One_Eyed_Glass_
+    Name: Monocle
+    Type: Armor
+    Buy: 10
+    Weight: 100
+    Slots: 1
+    Locations:
+      Head_Mid: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 23
+  - Id: 5012
+    AegisName: Ph.D_Hat
+    Name: Ph.D Hat
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 5
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 98

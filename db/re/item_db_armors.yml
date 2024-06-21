@@ -834,3 +834,49 @@ Body:
     Script: |
       bonus2 bResEff,Eff_Stun,3000;
       bonus2 bResEff,Eff_Freeze,3000;
+  - Id: 15089
+    AegisName: Lounge_Suit
+    Name: Menswear
+    Type: Armor
+    Buy: 10
+    Weight: 300
+    Defense: 40
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    EquipLevelMin: 80
+    Refineable: true
+    Script: |
+      .@r = getrefine();
+      bonus bAspdRate,3+((.@r>=7)?2:0);
+      bonus bDelayrate,-3-((.@r>=7)?2:0);
+      bonus bVariableCastrate,-3-((.@r>=7)?2:0);
+  - Id: 2366
+    AegisName: Divine_Cloth
+    Name: Divine Cloth
+    Type: Armor
+    Buy: 20
+    Weight: 1500
+    Defense: 50
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Classes:
+      All_Upper: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus2 bResEff,Eff_Curse,500;
+      bonus2 bResEff,Eff_Silence,500;
+      bonus2 bResEff,Eff_Stun,500;
+      bonus2 bResEff,Eff_Stone,500;
+      bonus2 bResEff,Eff_Sleep,500;

@@ -3,7 +3,9 @@
 //============================================================
 
 
-rachel,150,249,0	warp	rachel01	1,1,ra_temple,120,30
+rachel,150,249,0	warp	rachel01	1,1,ra_san01,139,135
+ra_san01,139,139,0	warp2	sanctuary15	1,1,rachel,150,245
+
 //inn
 rachel,81,33,0	warp	rachel02	1,1,ra_in01,237,198
 rachel,61,33,0	warp	rachel03	1,1,ra_in01,181,198

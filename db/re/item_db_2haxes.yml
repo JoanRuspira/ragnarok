@@ -401,3 +401,30 @@ Body:
       bonus2 bSubSize,Size_Medium,10+.@r;
       bonus bAspdRate,.@r;
       bonus3 bAutoSpell,"SK_KN_BOWLINGBASH",5,20;
+  - Id: 1375
+    AegisName: Berdysz
+    Name: Berdysz
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 20
+    Weight: 2500
+    Attack: 200
+    Range: 1
+    Slots: 2
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus2 bSubSize,Size_Medium,13;
+      bonus2 bSubSize,Size_Large,15;

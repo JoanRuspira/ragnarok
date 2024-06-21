@@ -803,3 +803,26 @@ Body:
       bonus2 bAddEff,Eff_Stun,100;
       bonus2 bAddEff,Eff_Poison,100;
       bonus2 bAddEff,Eff_Freeze,100;
+  - Id: 16024
+    AegisName: Quadrille_
+    Name: Quadrille
+    Type: Weapon
+    SubType: Mace
+    Buy: 10
+    Weight: 900
+    Attack: 165
+    Slots: 2
+    Jobs:
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 40
+    Refineable: true
+    Script: |
+      bonus2 bAddRace,RC_DemiHuman,10;
+      bonus2 bAddRace,RC_Player_Human,10;
+      bonus2 bAddEle,Ele_Undead,10;
+      bonus2 bAddEle,Ele_Earth,10;

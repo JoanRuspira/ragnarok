@@ -383,3 +383,24 @@ Body:
     Script: |
       bonus bStr,3;
       bonus bDex,2;
+  - Id: 2121
+    AegisName: Memorize_Book_
+    Name: Memory Book
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 25
+    Slots: 1
+    Jobs:
+      Mage: true
+      Sage: true
+      SoulLinker: true
+      Wizard: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 5
+    Script: |
+      bonus bInt,1;
+      bonus bMdef,2;

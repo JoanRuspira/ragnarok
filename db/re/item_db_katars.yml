@@ -353,3 +353,25 @@ Body:
     Script: |
       bonus2 bSkillAtk,"SK_AS_GRIMTOOTH",10;
       bonus3 bAutoSpell,"SK_AS_SONICBLOW",max(getskilllv("SK_AS_SONICBLOW"),1),100;
+  - Id: 1265
+    AegisName: Bloody_Roar
+    Name: Bloody Roar
+    Type: Weapon
+    SubType: Katar
+    Buy: 20
+    Weight: 1000
+    Attack: 120
+    Range: 1
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 75
+    Refineable: true
+    Script: |
+      bonus bIgnoreDefRace,RC_DemiHuman;
+      bonus bIgnoreDefRace,RC_Player_Human;
+      bonus bFlee,-(readparam(bAgi)+BaseLevel);
+      bonus bNoRegen,1;
+      bonus bNoRegen,2;

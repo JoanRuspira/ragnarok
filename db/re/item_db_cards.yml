@@ -5152,7 +5152,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      skill "SK_MG_CASTCANCEL",1;
+      skill "SK_MG_CASTCANCEL",3;
   - Id: 4357
     AegisName: B_Seyren_Card
     Name: Lord Knight Card
@@ -5168,6 +5168,34 @@ Body:
     Script: |
       skill "SK_CM_FRENZY",1;
       bonus bMaxHPrate,-50;
+  - Id: 4625
+    AegisName: Timeholder_Card
+    Name: Time Holder Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bMatkRate,20;
+      bonus bUseSPrate,10;
+  - Id: 4638
+    AegisName: Watcher_Card
+    Name: Watcher Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Armor: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bBaseAtk,30;
+      bonus bSPDrainValue,-5;
   - Id: 4358
     AegisName: Seyren_Card
     Name: Seyren Windsor Card

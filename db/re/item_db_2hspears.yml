@@ -500,3 +500,24 @@ Body:
       bonus bAtkEle,Ele_Fire;
       bonus3 bAutoSpell,"SK_MG_FIREBALL",5,100;
       bonus bStr,3;
+  - Id: 1474
+    AegisName: Gae_Bolg
+    Name: Gae Bolg
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 20
+    Weight: 2000
+    Attack: 160
+    Range: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bIgnoreDefRace,RC_Dragon;
+      bonus2 bAddClass,Class_Boss,10;

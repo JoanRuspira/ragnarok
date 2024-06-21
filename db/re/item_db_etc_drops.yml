@@ -2409,6 +2409,38 @@ Body:
     Weight: 200
     Flags:
       BuyingStore: true
+  - Id: 7566
+    AegisName: Will_Of_Darkness_
+    Name: Will of Red Darkness
+    Type: Etc
+    Buy: 1530
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7022
+    AegisName: Old_Hilt
+    Name: Old Hilt
+    Type: Etc
+    Buy: 150
+    Weight: 30
+    Flags:
+      BuyingStore: true
+  - Id: 7340
+    AegisName: Will_Of_Darkness
+    Name: Will of the Darkness
+    Type: Etc
+    Buy: 734
+    Weight: 50
+    Flags:
+      BuyingStore: true
+  - Id: 7567
+    AegisName: Suspicious_Hat
+    Name: Suspicious Hat
+    Type: Etc
+    Buy: 1290
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 7563
     AegisName: Bloody_Rune
     Name: Bloody Rune
@@ -2545,11 +2577,35 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
+  - Id: 7568
+    AegisName: White_Mask
+    Name: White Mask
+    Type: Etc
+    Buy: 1060
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 6326
     AegisName: Queen_Wing_Piece
     Name: Queen Wing Piece
     Type: Etc
     Buy: 1630
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7169
+    AegisName: Taegeuk_Plate
+    Name: Ba Gua
+    Type: Etc
+    Buy: 2800
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 6924
+    AegisName: Red_Eyes
+    Name: Red Eye
+    Type: Etc
+    Buy: 10
     Weight: 10
     Flags:
       BuyingStore: true
