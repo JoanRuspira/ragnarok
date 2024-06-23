@@ -880,3 +880,25 @@ Body:
       bonus2 bResEff,Eff_Stun,500;
       bonus2 bResEff,Eff_Stone,500;
       bonus2 bResEff,Eff_Sleep,500;
+  - Id: 2365
+    AegisName: Orleans_Gown
+    Name: Orleans's Gown
+    Type: Armor
+    Buy: 20
+    Weight: 300
+    Defense: 15
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Classes:
+      All_Upper: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus bVariableCastrate,15;
+      bonus bNoCastCancel;

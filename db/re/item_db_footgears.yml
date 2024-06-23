@@ -307,3 +307,67 @@ Body:
     Script: |
       bonus bMdef,10;
       bonus5 bAutoSpellWhenHit,"AS_CLOAKING",max(2,getskilllv("AS_CLOAKING")),100,BF_MAGIC,0;
+  - Id: 2424
+    AegisName: Tidal_Shoes
+    Name: Tidal Shoes
+    Type: Armor
+    Buy: 20
+    Weight: 300
+    Defense: 13
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Classes:
+      All_Upper: true
+    Locations:
+      Shoes: true
+    ArmorLevel: 1
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus2 bSubEle,Ele_Water,5;
+  - Id: 2425
+    AegisName: Black_Leather_Boots
+    Name: Black Leather Boots
+    Type: Armor
+    Buy: 20
+    Weight: 500
+    Defense: 16
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Classes:
+      All_Upper: true
+    Locations:
+      Shoes: true
+    ArmorLevel: 1
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus bAgi,(getrefine()>=9?3:1);
+  - Id: 2423
+    AegisName: Variant_Shoes
+    Name: Variant Shoes
+    Type: Armor
+    Buy: 20
+    Weight: 500
+    Defense: 13
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Classes:
+      All_Upper: true
+    Locations:
+      Shoes: true
+    ArmorLevel: 1
+    EquipLevelMin: 85
+    Refineable: true
+    Script: |
+      .@r = getrefine();
+      bonus bMaxHPrate,20-.@r;
+      bonus bMaxSPrate,20-.@r;
+      bonus bDef,.@r/2;

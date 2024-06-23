@@ -744,3 +744,42 @@ Body:
       Both_Accessory: true
     ArmorLevel: 1
     EquipLevelMin: 60
+  - Id: 2703
+    AegisName: Expert_Ring
+    Name: Expert Ring
+    Type: Armor
+    Buy: 20
+    Weight: 150
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Accessory: true
+    ArmorLevel: 1
+    EquipLevelMin: 50
+    Script: |
+      bonus bDelayrate,-5;
+      bonus bUseSPrate,5;
+  - Id: 2702
+    AegisName: Bison_Horn
+    Name: Bison Horn
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Accessory: true
+    ArmorLevel: 1
+    EquipLevelMin: 90
+    Script: |
+      bonus bAgi,2;

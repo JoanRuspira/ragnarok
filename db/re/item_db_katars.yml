@@ -375,3 +375,24 @@ Body:
       bonus bFlee,-(readparam(bAgi)+BaseLevel);
       bonus bNoRegen,1;
       bonus bNoRegen,2;
+  - Id: 1268
+    AegisName: Wild_Beast_Claw
+    Name: Wild Beast Claw
+    Type: Weapon
+    SubType: Katar
+    Buy: 20
+    Weight: 1450
+    Attack: 160
+    Range: 1
+    Slots: 1
+    Jobs:
+      Assassin: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus3 bAutoSpell,"SK_SM_TRAUMATIC_STRIKE",5,100;

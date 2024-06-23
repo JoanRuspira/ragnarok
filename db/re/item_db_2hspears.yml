@@ -384,7 +384,7 @@ Body:
     Script: |
       bonus bAtkEle,Ele_Wind;
       bonus2 bAddEff,Eff_Silence,200;
-      bonus3 bAutoSpell,"SK_WZ_THUNDERSTORM",3,100;
+      bonus3 bAutoSpell,"SK_WZ_THUNDERSTORM",5,100;
   - Id: 1477
     AegisName: Spectral_Spear
     Name: Spectral Spear

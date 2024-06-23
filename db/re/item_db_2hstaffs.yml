@@ -77,3 +77,31 @@ Body:
       bonus bInt,6;
       bonus bVit,2;
       autobonus3 "{ }",20,1000,"AL_HEAL","{ specialeffect2 EF_MAGICALATTHIT; heal 0,200; }";
+  - Id: 2000
+    AegisName: Destruction_Rod
+    Name: Staff of Destruction
+    Type: Weapon
+    SubType: 2hStaff
+    Buy: 20
+    Weight: 2500
+    Attack: 130
+    MagicAttack: 280
+    Range: 1
+    Slots: 1
+    Jobs:
+      Wizard: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 80
+    Refineable: true
+    Script: |
+      .@r = getrefine();
+      bonus bMatkRate,.@r/2;
+      bonus bInt,3;
+      bonus bAgi,10;
+      bonus bUseSPrate,(.@r*2);
+      bonus3 bAutoSpellWhenHit,"SK_WZ_THUNDERSTORM",5,(.@r*20);
+      bonus2 bVariableCastrate,"SK_SO_MYSTICALAMPLIFICATION",-50;

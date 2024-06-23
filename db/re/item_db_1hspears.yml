@@ -287,3 +287,28 @@ Body:
     Script: |
       .@r = getrefine();
       bonus2 bSkillAtk,"SK_CR_HOLYCROSS",20+(.@r/2*3);
+  - Id: 1420
+    AegisName: Long_Horn
+    Name: Long Horn
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 20
+    Weight: 1000
+    Attack: 150
+    Range: 3
+    Slots: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Holy;
+      bonus2 bAddEff,Eff_Blind,500;
+      bonus bUnbreakableWeapon;

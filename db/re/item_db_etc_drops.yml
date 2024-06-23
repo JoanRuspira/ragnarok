@@ -2665,6 +2665,14 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
+  - Id: 7754
+    AegisName: Broken_Crown
+    Name: Broken Crown
+    Type: Etc
+    Buy: 3000
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 7005
     AegisName: Skull
     Name: Skull
@@ -5743,6 +5751,30 @@ Body:
     Name: Dragon Horn
     Type: Etc
     Buy: 544
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7751
+    AegisName: Old_White_Cloth
+    Name: Old White Cloth
+    Type: Etc
+    Buy: 550
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7752
+    AegisName: Clattering_Skull
+    Name: Clattering Skull
+    Type: Etc
+    Buy: 840
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7753
+    AegisName: Broken_Farming_Utensil
+    Name: Broken Farming Utensil
+    Type: Etc
+    Buy: 330
     Weight: 10
     Flags:
       BuyingStore: true

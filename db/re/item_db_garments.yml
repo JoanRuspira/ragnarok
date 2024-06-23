@@ -532,3 +532,52 @@ Body:
     Refineable: true
     Script: |
       bonus bAgi,2;
+  - Id: 2528
+    AegisName: Wool_Scarf
+    Name: Wool Scarf
+    Type: Armor
+    Buy: 20
+    Weight: 500
+    Defense: 11
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Classes:
+      All_Upper: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus bMdef,4;
+  - Id: 2532
+    AegisName: Mithril_Magic_Cape
+    Name: Mithril Magic Cape
+    Type: Armor
+    Buy: 20
+    Weight: 400
+    Defense: 8
+    Slots: 1
+    Jobs:
+      Acolyte: true
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Mage: true
+      Monk: true
+      Priest: true
+      Sage: true
+      Wizard: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bMdef,5;
+      bonus5 bAutoSpellWhenHit,"SK_CR_VANGUARDFORCE",6,200,BF_MAGIC,0;

@@ -777,8 +777,8 @@ Body:
     Refineable: true
     Script: |
       bonus bAtkEle,Ele_Fire;
-      skill "SK_MG_FIREBOLT",3;
-      bonus3 bAutoSpell,"SK_MG_FIREBOLT",3,100;
+      skill "SK_MG_FIREBOLT",5;
+      bonus3 bAutoSpell,"SK_MG_FIREBOLT",5,100;
   - Id: 1131
     AegisName: Ice_Falchon
     Name: Ice Falchion
@@ -807,8 +807,8 @@ Body:
       bonus bAtkEle,Ele_Water;
       bonus2 bAddEff,Eff_Freeze,500;
       bonus2 bAddEff2,Eff_Freeze,100;
-      skill "SK_MG_COLDBOLT",3;
-      bonus3 bAutoSpell,"SK_MG_COLDBOLT",3,100;
+      skill "SK_MG_COLDBOLT",5;
+      bonus3 bAutoSpell,"SK_MG_COLDBOLT",5,100;
   - Id: 13431
     AegisName: Chrome_Sword
     Name: Chrome Sword
@@ -1002,4 +1002,33 @@ Body:
     EquipLevelMin: 50
     Refineable: true
     Script: |
-      autobonus "{ bonus2 bSkillAtk,\"KN_BOWLINGBASH\",20; bonus2 bSkillAtk,\"SM_BASH\",20; }",5,15000,BF_WEAPON,"{ specialeffect2 EF_ENHANCE; }";
+      autobonus "{ bonus2 bSkillAtk,\"SK_KN_BOWLINGBASH\",20; bonus2 bSkillAtk,\"SK_SM_BASH\",20; }",5,15000,BF_WEAPON,"{ specialeffect2 EF_ENHANCE; }";
+  - Id: 13404
+    AegisName: Platinum_Shotel
+    Name: Platinum Shotel
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 20
+    Weight: 1500
+    Attack: 130
+    Range: 1
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus bCritical,50;

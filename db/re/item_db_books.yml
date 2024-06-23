@@ -404,3 +404,31 @@ Body:
     Script: |
       bonus bInt,1;
       bonus bMdef,2;
+  - Id: 1565
+    AegisName: Death_Note
+    Name: Ledger of Death
+    Type: Weapon
+    SubType: Book
+    Buy: 20
+    Weight: 1000
+    Attack: 137
+    MagicAttack: 100
+    Range: 1
+    Slots: 2
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 85
+    Refineable: true
+    Script: |
+      bonus bStr,3;
+      bonus bInt,3;
+      bonus bLuk,-20;
+      bonus2 bComaRace,RC_DemiHuman,10;
+      bonus2 bComaRace,RC_Player_Human,10;
+      bonus bAspdRate,getrefine();
+      bonus3 bAutoSpell,"SK_PR_IMPOSITIO",5,20;
