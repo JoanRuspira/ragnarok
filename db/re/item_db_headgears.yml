@@ -2801,3 +2801,24 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 70
     View: 180
+  - Id: 2254
+    AegisName: Angelic_Chain
+    Name: Angel Wing
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 4
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 38
+    Script: |
+      bonus bMdef,3;
+      bonus bAgi,1;
+      bonus bLuk,1;
+      bonus2 bSubRace,RC_Demon,3;

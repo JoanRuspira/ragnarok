@@ -11553,7 +11553,7 @@ Body:
       - Item: Red_Herb
         Rate: 850
       - Item: Skul_Ring
-        Rate: 30
+        Rate: 5
       - Item: Skeleton_Card
         Rate: 1
         StealProtected: true
@@ -19624,5 +19624,455 @@ Body:
       - Item: Elunium
         Rate: 5432
       - Item: Berzebub_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1753
+    AegisName: FRUS
+    Name: Frus
+    Level: 69
+    Hp: 83422
+    BaseExp: 20620
+    JobExp: 10
+    Attack: 1110
+    Attack2: 1780
+    Defense: 20
+    MagicDefense: 15
+    Agi: 69
+    Vit: 60
+    Int: 50
+    Dex: 76
+    Luk: 52
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Dark
+    ElementLevel: 3
+    WalkSpeed: 150
+    AttackDelay: 480
+    AttackMotion: 576
+    DamageMotion: 432
+    Ai: 20
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Rune_Of_Darkness
+        Rate: 3500
+      - Item: Brigan
+        Rate: 1000
+      - Item: Red_Gemstone
+        Rate: 1000
+      - Item: Earring_
+        Rate: 10
+      - Item: Mantle_
+        Rate: 20
+      - Item: Elunium_Stone
+        Rate: 500
+      - Item: Frus_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 20606
+    AegisName: HOLY_FRUS
+    Name: Frus
+    Level: 69
+    Hp: 83422
+    BaseExp: 20620
+    JobExp: 10
+    Attack: 1110
+    Attack2: 1780
+    Defense: 20
+    MagicDefense: 15
+    Agi: 69
+    Vit: 60
+    Int: 50
+    Dex: 76
+    Luk: 52
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Holy
+    ElementLevel: 3
+    WalkSpeed: 150
+    AttackDelay: 480
+    AttackMotion: 576
+    DamageMotion: 432
+    Ai: 20
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Holy_Water
+        Rate: 3500
+      - Item: Brigan
+        Rate: 1000
+      - Item: Red_Gemstone
+        Rate: 1000
+      - Item: Earring_
+        Rate: 10
+      - Item: Mantle_
+        Rate: 20
+      - Item: Elunium_Stone
+        Rate: 500
+      - Item: Holy_Frus_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1752
+    AegisName: SKOGUL
+    Name: Skogul
+    Level: 70
+    Hp: 87544
+    BaseExp: 27620
+    JobExp: 10
+    Attack: 1110
+    Attack2: 1930
+    Defense: 20
+    MagicDefense: 15
+    Agi: 69
+    Vit: 70
+    Int: 50
+    Dex: 67
+    Luk: 52
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Dark
+    ElementLevel: 3
+    WalkSpeed: 190
+    AttackDelay: 720
+    AttackMotion: 384
+    DamageMotion: 480
+    Ai: 20
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Rune_Of_Darkness
+        Rate: 3500
+      - Item: Brigan
+        Rate: 1000
+      - Item: Red_Gemstone
+        Rate: 1000
+      - Item: Rouge
+        Rate: 500
+      - Item: Skul_Ring
+        Rate: 15
+      - Item: Elunium_Stone
+        Rate: 500
+      - Item: Blood_Tears
+        Rate: 10
+      - Item: Skogul_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 20607
+    AegisName: HOLY_SKOGUL
+    Name: Skogul
+    Level: 70
+    Hp: 87544
+    BaseExp: 27620
+    JobExp: 10
+    Attack: 1110
+    Attack2: 1930
+    Defense: 20
+    MagicDefense: 15
+    Agi: 69
+    Vit: 70
+    Int: 50
+    Dex: 67
+    Luk: 52
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Holy
+    ElementLevel: 3
+    WalkSpeed: 190
+    AttackDelay: 720
+    AttackMotion: 384
+    DamageMotion: 480
+    Ai: 20
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Holy_Water
+        Rate: 3500
+      - Item: Brigan
+        Rate: 1000
+      - Item: Red_Gemstone
+        Rate: 1000
+      - Item: Rouge
+        Rate: 500
+      - Item: Skul_Ring
+        Rate: 15
+      - Item: Elunium_Stone
+        Rate: 500
+      - Item: Angelic_Chain
+        Rate: 10
+      - Item: Holy_Skogul_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1754
+    AegisName: SKEGGIOLD
+    Name: Skeggiold
+    Level: 81
+    Hp: 295200
+    BaseExp: 91100
+    JobExp: 10
+    Attack: 1400
+    Attack2: 2020
+    Defense: 12
+    MagicDefense: 24
+    Str: 80
+    Agi: 100
+    Vit: 50
+    Int: 72
+    Dex: 90
+    Luk: 50
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Angel
+    Element: Dark
+    ElementLevel: 2
+    WalkSpeed: 250
+    AttackDelay: 672
+    AttackMotion: 780
+    DamageMotion: 480
+    Ai: 21
+    Drops:
+      - Item: Rune_Of_Darkness
+        Rate: 6000
+      - Item: Blood_Tears
+        Rate: 10
+      - Item: Soft_Feather
+        Rate: 1000
+      - Item: Divine_Cross
+        Rate: 10
+      - Item: Rune_Of_Darkness
+        Rate: 1000
+      - Item: Silk_Robe_
+        Rate: 20
+      - Item: Odin's_Blessing
+        Rate: 10
+      - Item: Skeggiold_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 20604
+    AegisName: ANGELGOLT
+    Name: Angelgolt
+    Level: 81
+    Hp: 295200
+    BaseExp: 91100
+    JobExp: 10
+    Attack: 1400
+    Attack2: 2020
+    Defense: 12
+    MagicDefense: 24
+    Str: 80
+    Agi: 100
+    Vit: 50
+    Int: 72
+    Dex: 90
+    Luk: 50
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Angel
+    Element: Holy
+    ElementLevel: 2
+    WalkSpeed: 250
+    AttackDelay: 672
+    AttackMotion: 780
+    DamageMotion: 480
+    Ai: 21
+    Drops:
+      - Item: Holy_Water
+        Rate: 6000
+      - Item: Angelic_Chain
+        Rate: 10
+      - Item: Soft_Feather
+        Rate: 1000
+      - Item: Divine_Cross
+        Rate: 10
+      - Item: Holy_Water
+        Rate: 1000
+      - Item: Silk_Robe_
+        Rate: 20
+      - Item: Odin's_Blessing
+        Rate: 10
+      - Item: Angelgolt_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1751
+    AegisName: RANDGRIS
+    Name: Valkyrie Randgris
+    Level: 99
+    Hp: 3567200
+    BaseExp: 2854900
+    JobExp: 3114520
+    MvpExp: 1427450
+    Attack: 5560
+    Attack2: 9980
+    Defense: 25
+    MagicDefense: 42
+    Str: 100
+    Agi: 120
+    Vit: 30
+    Int: 120
+    Dex: 220
+    Luk: 210
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Angel
+    Element: Holy
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 576
+    AttackMotion: 576
+    DamageMotion: 480
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Old_Violet_Box
+        Rate: 5500
+      - Item: Old_Blue_Box
+        Rate: 5000
+      - Item: Old_Card_Album
+        Rate: 2000
+    Drops:
+      - Item: Valhalla_Flower
+        Rate: 5000
+      - Item: Valkyrie_Armor
+        Rate: 1600
+      - Item: Valkyrie_Manteau
+        Rate: 3000
+      - Item: Valkyrie_Shoes
+        Rate: 3000
+      - Item: Helm_
+        Rate: 5000
+      - Item: Bloody_Edge
+        Rate: 2500
+      - Item: Randgris_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 20610
+    AegisName: REGINLEIF
+    Name: Valkyrie Reginleif
+    Level: 99
+    Hp: 3567200
+    BaseExp: 2854900
+    JobExp: 3114520
+    MvpExp: 1427450
+    Attack: 5560
+    Attack2: 9980
+    Defense: 25
+    MagicDefense: 42
+    Str: 100
+    Agi: 120
+    Vit: 30
+    Int: 120
+    Dex: 220
+    Luk: 210
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Angel
+    Element: Holy
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 576
+    AttackMotion: 576
+    DamageMotion: 480
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Old_Violet_Box
+        Rate: 5500
+      - Item: Old_Blue_Box
+        Rate: 5000
+      - Item: Old_Card_Album
+        Rate: 2000
+    Drops:
+      - Item: Valhalla_Flower
+        Rate: 5000
+      - Item: Valkyrie_Armor
+        Rate: 1600
+      - Item: Valkyrie_Manteau
+        Rate: 3000
+      - Item: Valkyrie_Shoes
+        Rate: 3000
+      - Item: Helm_
+        Rate: 5000
+      - Item: Bloody_Edge
+        Rate: 2500
+      - Item: Reginleif_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 20611
+    AegisName: INGRID
+    Name: Valkyrie Ingrid
+    Level: 99
+    Hp: 3567200
+    BaseExp: 2854900
+    JobExp: 3114520
+    MvpExp: 1427450
+    Attack: 5560
+    Attack2: 9980
+    Defense: 25
+    MagicDefense: 42
+    Str: 100
+    Agi: 120
+    Vit: 30
+    Int: 120
+    Dex: 220
+    Luk: 210
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Angel
+    Element: Holy
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 576
+    AttackMotion: 576
+    DamageMotion: 480
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Old_Violet_Box
+        Rate: 5500
+      - Item: Old_Blue_Box
+        Rate: 5000
+      - Item: Old_Card_Album
+        Rate: 2000
+    Drops:
+      - Item: Valhalla_Flower
+        Rate: 5000
+      - Item: Valkyrie_Armor
+        Rate: 1600
+      - Item: Valkyrie_Manteau
+        Rate: 3000
+      - Item: Valkyrie_Shoes
+        Rate: 3000
+      - Item: Helm_
+        Rate: 5000
+      - Item: Bloody_Edge
+        Rate: 2500
+      - Item: Ingrid_Card
         Rate: 1
         StealProtected: true

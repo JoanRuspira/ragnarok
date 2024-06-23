@@ -2649,6 +2649,22 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
+  - Id: 7024
+    AegisName: Bloody_Edge
+    Name: Bloody Edge
+    Type: Etc
+    Buy: 10000
+    Weight: 40
+    Flags:
+      BuyingStore: true
+  - Id: 7510
+    AegisName: Valhalla_Flower
+    Name: Valhalla's Flower
+    Type: Etc
+    Buy: 200000
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 7347
     AegisName: Lab_Staff_Record
     Name: Research Chart
@@ -2670,6 +2686,14 @@ Body:
     Name: Broken Crown
     Type: Etc
     Buy: 3000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7511
+    AegisName: Rune_Of_Darkness
+    Name: Rune of Darkness
+    Type: Etc
+    Buy: 2526
     Weight: 10
     Flags:
       BuyingStore: true

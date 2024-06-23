@@ -581,3 +581,27 @@ Body:
     Script: |
       bonus bMdef,5;
       bonus5 bAutoSpellWhenHit,"SK_CR_VANGUARDFORCE",6,200,BF_MAGIC,0;
+  - Id: 2524
+    AegisName: Valkyrie_Manteau
+    Name: Valkyrian Manteau
+    Type: Armor
+    Weight: 500
+    Defense: 10
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Classes:
+      All_Upper: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    Script: |
+      bonus bUnbreakableGarment;
+      .@r = getrefine();
+      if (BaseClass == Job_Mage || BaseClass == Job_Archer || BaseClass == Job_Acolyte)
+         bonus bFlee2,5+(min(.@r,10)*2);
+      else if (BaseClass == Job_Swordman || BaseClass == Job_Merchant || BaseClass == Job_Thief)
+         bonus bShortWeaponDamageReturn,5+(min(.@r,10)*2);

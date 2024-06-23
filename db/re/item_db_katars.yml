@@ -396,3 +396,24 @@ Body:
     Refineable: true
     Script: |
       bonus3 bAutoSpell,"SK_SM_TRAUMATIC_STRIKE",5,100;
+  - Id: 1271
+    AegisName: Blood_Tears
+    Name: Blood Tears
+    Type: Weapon
+    SubType: Katar
+    Buy: 20
+    Weight: 1700
+    Attack: 120
+    Range: 1
+    Slots: 2
+    Jobs:
+      Assassin: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus3 bAutoSpell,"SK_PR_UNHOLYCROSS",5,100;

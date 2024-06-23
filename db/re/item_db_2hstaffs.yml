@@ -105,3 +105,26 @@ Body:
       bonus bUseSPrate,(.@r*2);
       bonus3 bAutoSpellWhenHit,"SK_WZ_THUNDERSTORM",5,(.@r*20);
       bonus2 bVariableCastrate,"SK_SO_MYSTICALAMPLIFICATION",-50;
+  - Id: 2001
+    AegisName: Divine_Cross
+    Name: Divine Cross
+    Type: Weapon
+    SubType: 2hStaff
+    Buy: 20
+    Weight: 1500
+    Attack: 120
+    MagicAttack: 210
+    Range: 1
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Holy;
+      bonus bDex,4;
+      bonus2 bSubRace,RC_Demon,15;
+      bonus2 bSubRace,RC_Undead,15;

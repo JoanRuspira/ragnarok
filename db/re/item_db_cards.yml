@@ -1931,6 +1931,73 @@ Body:
       BuyingStore: true
     Script: |
       bonus bRestartFullRecover;
+  - Id: 300011
+    AegisName: Holy_Frus_Card
+    Name: Holy Frus Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Holy,10;
+  - Id: 300013
+    AegisName: Reginleif_Card
+    Name: Reginleif Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Armor: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bUnbreakableArmor;
+      bonus bAtkRate,30;
+      bonus bMaxHPrate,-15;
+  - Id: 300014
+    AegisName: Ingrid_Card
+    Name: Ingrid Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Armor: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bUnbreakableArmor;
+      bonus bAtkRate,-15;
+      bonus bMaxHPrate,40;
+      bonus2 bHPLossRate,1000,4000;
+    UnEquipScript: |
+      heal -10000,0;
+  - Id: 300008
+    AegisName: Angelgolt_Card
+    Name: Angelgolt Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bMagicAddRace,RC_Demon,10;
+  - Id: 300012
+    AegisName: Holy_Skogul_Card
+    Name: Holy Skogul Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Shoes: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bHealPower,10;
   - Id: 4145
     AegisName: Berzebub_Card
     Name: Berzebub Card

@@ -371,3 +371,27 @@ Body:
       bonus bMaxHPrate,20-.@r;
       bonus bMaxSPrate,20-.@r;
       bonus bDef,.@r/2;
+  - Id: 2421
+    AegisName: Valkyrie_Shoes
+    Name: Valkyrian Shoes
+    Type: Armor
+    Weight: 500
+    Defense: 13
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Classes:
+      All_Upper: true
+    Locations:
+      Shoes: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bUnbreakableShoes;
+      if (BaseClass == Job_Mage || BaseClass == Job_Archer || BaseClass == Job_Acolyte)
+         bonus bMaxHP,(BaseLevel*5);
+      else if (BaseClass == Job_Swordman || BaseClass == Job_Merchant || BaseClass == Job_Thief)
+         bonus bMaxSP,(JobLevel*2);
