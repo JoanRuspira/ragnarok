@@ -641,3 +641,20 @@ Body:
     Refineable: true
     Script: |
       bonus2 bSubEle,Ele_Fire,10;
+  - Id: 1722
+    AegisName: Balistar
+    Name: Ballista
+    Type: Weapon
+    SubType: Bow
+    Buy: 124000
+    Weight: 3500
+    Attack: 145
+    Range: 5
+    Jobs:
+      BardDancer: true
+      Hunter: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 77
+    Refineable: true

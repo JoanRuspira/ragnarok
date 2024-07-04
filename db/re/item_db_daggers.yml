@@ -1532,3 +1532,22 @@ Body:
     Refineable: true
     Script: |
       bonus3 bAutoSpell,"SK_SM_TRAUMATIC_STRIKE",5,100;
+  - Id: 13035
+    AegisName: Sandstorm
+    Name: Sandstorm
+    Type: Weapon
+    SubType: Dagger
+    Buy: 20
+    Weight: 600
+    Attack: 50
+    Range: 1
+    Slots: 4
+    Jobs:
+      Assassin: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 70
+    Refineable: true

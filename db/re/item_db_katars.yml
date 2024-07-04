@@ -417,3 +417,21 @@ Body:
     Refineable: true
     Script: |
       bonus3 bAutoSpell,"SK_PR_UNHOLYCROSS",5,100;
+  - Id: 1260
+    AegisName: Ghoul_Leg
+    Name: Sharpened Legbone of Ghoul
+    Type: Weapon
+    SubType: Katar
+    Buy: 52500
+    Weight: 1700
+    Attack: 150
+    Range: 1
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Undead;

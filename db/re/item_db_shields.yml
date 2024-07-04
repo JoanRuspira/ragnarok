@@ -494,3 +494,26 @@ Body:
     View: 2
     Script: |
       bonus bMdef,2;
+  - Id: 2131
+    AegisName: Magic_Study_Vol1
+    Name: Magic Bible Vol1
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 18
+    Slots: 1
+    Jobs:
+      Mage: true
+      Sage: true
+      SoulLinker: true
+      Wizard: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    EquipLevelMin: 70
+    Refineable: true
+    View: 5
+    Script: |
+      bonus bMdef,3;
+      bonus bInt,2;
+      bonus2 bAddEffWhenHit,Eff_Stun,1000;

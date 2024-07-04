@@ -20076,3 +20076,237 @@ Body:
       - Item: Ingrid_Card
         Rate: 1
         StealProtected: true
+  - Id: 1309
+    AegisName: GAJOMART
+    Name: Gajomart
+    Level: 63
+    Hp: 13669
+    BaseExp: 6625
+    JobExp: 2900
+    Attack: 917
+    Attack2: 950
+    Defense: 85
+    MagicDefense: 50
+    Str: 5
+    Agi: 34
+    Vit: 10
+    Int: 5
+    Dex: 75
+    Luk: 140
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Formless
+    Element: Fire
+    ElementLevel: 4
+    WalkSpeed: 300
+    AttackDelay: 1000
+    AttackMotion: 1152
+    DamageMotion: 828
+    Ai: 21
+    Drops:
+      - Item: Stone_Heart
+        Rate: 6500
+      - Item: Zargon
+        Rate: 2300
+      - Item: Yellow_Herb
+        Rate: 870
+      - Item: Magic_Study_Vol1
+        Rate: 20
+      - Item: Flame_Heart
+        Rate: 180
+      - Item: Gajomart_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1298
+    AegisName: ZOMBIE_MASTER
+    Name: Zombie Master
+    Level: 62
+    Hp: 14211
+    BaseExp: 7610
+    JobExp: 2826
+    Attack: 824
+    Attack2: 1084
+    Defense: 37
+    MagicDefense: 26
+    Str: 25
+    Agi: 20
+    Vit: 30
+    Int: 5
+    Dex: 77
+    Luk: 35
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 1
+    WalkSpeed: 175
+    AttackDelay: 2612
+    AttackMotion: 912
+    DamageMotion: 288
+    Ai: 21
+    Drops:
+      - Item: Tatters_Clothes
+        Rate: 4413
+      - Item: Sticky_Mucus
+        Rate: 1500
+      - Item: Horrendous_Mouth
+        Rate: 1500
+      - Item: Cardinal_Jewel
+        Rate: 200
+      - Item: White_Jewel
+        Rate: 100
+      - Item: Ghoul_Leg
+        Rate: 10
+      - Item: Scapulare_
+        Rate: 15
+      - Item: Zombie_Master_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1290
+    AegisName: SKELETON_GENERAL
+    Name: Skeleton General
+    Level: 73
+    Hp: 17402
+    BaseExp: 8170
+    JobExp: 3370
+    Attack: 910
+    Attack2: 1089
+    Defense: 25
+    MagicDefense: 25
+    Str: 90
+    Agi: 25
+    Vit: 40
+    Int: 20
+    Dex: 77
+    Luk: 25
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 1
+    WalkSpeed: 150
+    AttackDelay: 2276
+    AttackMotion: 576
+    DamageMotion: 432
+    Ai: 21
+    Drops:
+      - Item: Burn_Tree
+        Rate: 2550
+      - Item: Oridecon_Stone
+        Rate: 160
+      - Item: Yellow_Herb
+        Rate: 800
+      - Item: Gladius_
+        Rate: 35
+      - Item: Sandstorm
+        Rate: 15
+      - Item: Skeleton_General_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1036
+    AegisName: GHOUL
+    Name: Ghoul
+    Level: 40
+    Hp: 5418
+    BaseExp: 1088
+    JobExp: 622
+    Attack: 420
+    Attack2: 500
+    Defense: 5
+    MagicDefense: 20
+    Agi: 20
+    Vit: 29
+    Int: 0
+    Dex: 45
+    Luk: 20
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 2
+    WalkSpeed: 250
+    AttackDelay: 2456
+    AttackMotion: 912
+    DamageMotion: 504
+    Ai: 04
+    Drops:
+      - Item: Horrendous_Mouth
+        Rate: 6000
+      - Item: Oridecon_Stone
+        Rate: 110
+      - Item: White_Herb
+        Rate: 700
+      - Item: Green_Herb
+        Rate: 800
+      - Item: Skul_Ring
+        Rate: 10
+      - Item: Mementos
+        Rate: 150
+      - Item: Ghoul_Leg
+        Rate: 5
+      - Item: Ghoul_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1389
+    AegisName: DRACULA
+    Name: Dracula
+    Level: 85
+    Hp: 320096
+    BaseExp: 120157
+    JobExp: 38870
+    MvpExp: 60078
+    Attack: 1625
+    Attack2: 1890
+    Defense: 45
+    MagicDefense: 76
+    Agi: 95
+    Vit: 90
+    Int: 87
+    Dex: 85
+    Luk: 100
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Dark
+    ElementLevel: 4
+    WalkSpeed: 145
+    AttackDelay: 1290
+    AttackMotion: 1140
+    DamageMotion: 576
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Yggdrasilberry
+        Rate: 5500
+      - Item: Crystal_Jewel__
+        Rate: 5000
+      - Item: Fruit_Of_Mastela
+        Rate: 5000
+    Drops:
+      - Item: Yggdrasilberry
+        Rate: 4700
+      - Item: Wizardy_Staff
+        Rate: 100
+      - Item: Balistar
+        Rate: 500
+      - Item: Cape_Of_Ancient_Lord
+        Rate: 15
+      - Item: Ring_
+        Rate: 400
+      - Item: Book_Of_The_Apocalypse
+        Rate: 400
+      - Item: Dracula_Card
+        Rate: 1
+        StealProtected: true

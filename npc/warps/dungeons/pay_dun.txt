@@ -22,3 +22,5 @@ pay_dun04,191,41,0	warp	payd04-2	1,1,pay_dun03,124,62
 pay_dun04,202,206,0	warp	payd04-3	1,1,pay_dun03,124,62
 pay_dun04,32,204,0	warp	payd04-4	2,1,pay_dun03,124,62
 pay_dun04,40,37,0	warp	payd04-1	2,2,pay_dun03,124,62
+pay_gld,139,155,0	warp	payd04a-1	2,2,gld_dun01,120,17
+gld_dun01,120,13,0	warp	payd04n-1	2,2,pay_gld,139,159

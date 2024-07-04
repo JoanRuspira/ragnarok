@@ -83,51 +83,14 @@ pay_dun02,55,254,10,10	monster	Red Plant	1078,4,180000,90000
 //==================================================
 // pay_dun03 - Payon Cave F4
 //==================================================
-pay_dun03,0,0	monster	Sohee	1170,50
-pay_dun03,0,0	monster	Munak	1026,5
-pay_dun03,0,0	monster	Bongun	1188,5
-pay_dun03,0,0	monster	Horong	1129,10
-pay_dun03,66,73	monster	Hydra	1068,1,600000,300000
-pay_dun03,68,72	monster	Hydra	1068,1,600000,300000
-pay_dun03,67,71	monster	Hydra	1068,1,600000,300000
-pay_dun03,63,70	monster	Hydra	1068,1,600000,300000
-pay_dun03,58,69	monster	Hydra	1068,1,600000,300000
-pay_dun03,67,69	monster	Hydra	1068,1,600000,300000
-pay_dun03,60,68	monster	Hydra	1068,1,600000,300000
-pay_dun03,69,68	monster	Hydra	1068,1,600000,300000
-pay_dun03,62,67	monster	Hydra	1068,1,600000,300000
-pay_dun03,71,67	monster	Hydra	1068,1,600000,300000
-pay_dun03,64,66	monster	Hydra	1068,1,600000,300000
-pay_dun03,57,65	monster	Hydra	1068,1,600000,300000
-pay_dun03,66,65	monster	Hydra	1068,1,600000,300000
-pay_dun03,59,64	monster	Hydra	1068,1,600000,300000
-pay_dun03,68,64	monster	Hydra	1068,1,600000,300000
-pay_dun03,71,64	monster	Hydra	1068,1,600000,300000
-pay_dun03,66,63	monster	Hydra	1068,1,600000,300000
-pay_dun03,71,243	monster	Sohee	1170,2,300000,100000
-pay_dun03,86,248	monster	Sohee	1170,2,300000,100000
-pay_dun03,85,178	monster	Sohee	1170,2,300000,100000
-pay_dun03,115,190	monster	Sohee	1170,2,300000,100000
-pay_dun03,230,244	monster	Sohee	1170,2,300000,100000
-pay_dun03,240,244	monster	Sohee	1170,2,300000,100000
-pay_dun03,219,244	monster	Sohee	1170,2,300000,100000
-pay_dun03,243,220	monster	Sohee	1170,2,300000,100000
-pay_dun03,219,185	monster	Sohee	1170,2,300000,100000
-pay_dun03,228,185	monster	Sohee	1170,2,300000,100000
+pay_dun03,0,0	monster	Sohee	1170,30
+pay_dun03,0,0	monster	Ghoul	1036,30
+pay_dun03,0,0	monster	Horong	1129,20
+pay_dun03,0,0	monster	Yao Jun	1512,20
 pay_dun03,228,61	monster	Red Plant	1078,1,600000,300000
 pay_dun03,138,42	monster	Blue Plant	1079,1,600000,300000
 pay_dun03,120,186	monster	Green Plant	1080,1,600000,300000
 pay_dun03,88,35	monster	Yellow Plant	1081,1,600000,300000
-pay_dun03,126,135	monster	Penomena	1216,1,300000,100000
-pay_dun03,126,134	monster	Penomena	1216,1,300000,100000
-pay_dun03,126,133	monster	Penomena	1216,1,300000,100000
-pay_dun03,126,132	monster	Penomena	1216,1,300000,100000
-pay_dun03,126,131	monster	Penomena	1216,1,300000,100000
-pay_dun03,179,134	monster	Penomena	1216,1,300000,100000
-pay_dun03,179,133	monster	Penomena	1216,1,300000,100000
-pay_dun03,179,132	monster	Penomena	1216,1,300000,100000
-pay_dun03,179,131	monster	Penomena	1216,1,300000,100000
-pay_dun03,179,130	monster	Penomena	1216,1,300000,100000
 pay_dun03,0,0	monster	Red Plant	1078,15,180000,90000
 pay_dun03,246,56,20,20	monster	White Plant	1082,3,180000,90000
 pay_dun03,52,262,10,4	monster	White Plant	1082,2,180000,90000
@@ -135,15 +98,25 @@ pay_dun03,52,262,10,4	monster	White Plant	1082,2,180000,90000
 //==================================================
 // pay_dun04 - Payon Cave F5
 //==================================================
-pay_dun04,0,0	monster	Dokebi	1110,45
-pay_dun04,0,0	monster	Am Mut	1301,1
-pay_dun04,0,0	monster	Horong	1129,40
-pay_dun04,0,0	monster	Nine Tail	1180,45,60000,30000
-pay_dun04,120,115	monster	Cat o' Nine Tails	1307,1
-pay_dun04,120,115,0,0	boss_monster	Moonlight Flower	1150,1,3600000,600000,1
+pay_dun04,0,0	monster	Horong	1129,20
+pay_dun04,0,0	monster	Ghoul	1036,20
+pay_dun04,0,0	monster	Yao Jun	1512,20
+pay_dun04,0,0	monster	Gajomart	1309,20
+pay_dun04,0,0	monster	Zombie Master	1298,20
+pay_dun04,0,0	monster	Skeleton General	1290,20
+pay_dun04,0,0,	boss_monster	Dracula	1389,1,3600000,600000,1
 pay_dun04,120,120,10,10	monster	Shining Plant	1083,1,1800000,900000
 pay_dun04,28,110,5,5	monster	Shining Plant	1083,1,1800000,900000
 pay_dun04,0,0	monster	Red Plant	1078,10,180000,90000
 pay_dun04,107,206,5,5	monster	White Plant	1082,2,180000,90000
 pay_dun04,28,110,10,10	monster	White Plant	1082,2,180000,90000
 pay_dun04,190,207,5,5	monster	White Plant	1082,2,180000,90000
+
+//==================================================
+// gld_dun01 - Greenwood Lake
+//==================================================
+gld_dun01,0,0	monster	Dokebi	1110,45
+gld_dun01,0,0	monster	Am Mut	1301,1
+gld_dun01,0,0	monster	Nine Tail	1180,45
+gld_dun01,0,0	monster	Cat o' Nine Tails	1307,1
+gld_dun01,0,0	boss_monster	Moonlight Flower	1150,1,3600000,600000,1
