@@ -8440,17 +8440,17 @@ Body:
       - Item: Boroken_Shiled_Piece
         Rate: 5335
       - Item: Pole_Axe
-        Rate: 5
+        Rate: 50
       - Item: House_Auger
         Rate: 10
       - Item: Ring_
-        Rate: 2
+        Rate: 200
       - Item: Shine_Spear_Blade
         Rate: 1000
       - Item: War_Axe
-        Rate: 1
+        Rate: 100
       - Item: Iron_Driver
-        Rate: 2
+        Rate: 50
       - Item: Lord_Of_Death_Card
         Rate: 1
         StealProtected: true
@@ -14213,7 +14213,7 @@ Body:
       - Item: Old_Blue_Box
         Rate: 30
       - Item: Old_Violet_Box
-        Rate: 1
+        Rate: 10
       - Item: Gift_Box
         Rate: 50
       - Item: Shoes_
@@ -20308,5 +20308,616 @@ Body:
       - Item: Book_Of_The_Apocalypse
         Rate: 400
       - Item: Dracula_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1300
+    AegisName: CATERPILLAR
+    Name: Caterpillar
+    Level: 64
+    Hp: 14439
+    BaseExp: 6272
+    JobExp: 3107
+    Attack: 894
+    Attack2: 1447
+    Defense: 47
+    MagicDefense: 29
+    Str: 35
+    Agi: 25
+    Vit: 85
+    Int: 15
+    Dex: 69
+    Luk: 45
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Insect
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 300
+    AttackDelay: 1672
+    AttackMotion: 672
+    DamageMotion: 480
+    Ai: 21
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Feather
+        Rate: 3000
+      - Item: Brigan
+        Rate: 5335
+      - Item: Twilight_Desert
+        Rate: 20
+      - Item: Star_Crumb
+        Rate: 100
+      - Item: Great_Nature
+        Rate: 50
+      - Item: Blue_Potion
+        Rate: 12
+      - Item: Yellow_Herb
+        Rate: 500
+      - Item: Caterpillar_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 2917
+    AegisName: BIG_BELL
+    Name: Big Bell
+    Level: 65
+    Hp: 12647
+    BaseExp: 4287
+    JobExp: 2700
+    Attack: 480
+    Attack2: 600
+    Defense: 15
+    MagicDefense: 15
+    Agi: 62
+    Vit: 72
+    Int: 10
+    Dex: 85
+    Luk: 45
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 300
+    AttackDelay: 1020
+    AttackMotion: 500
+    DamageMotion: 768
+    Ai: 21
+    Drops:
+      - Item: Needle_Of_Alarm
+        Rate: 5335
+      - Item: Clip
+        Rate: 15
+      - Item: Skull
+        Rate: 1500
+      - Item: Oridecon
+        Rate: 105
+      - Item: Zargon
+        Rate: 1500
+      - Item: Big_Bell_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 2916
+    AegisName: BIG_BEN
+    Name: Big Ben
+    Level: 60
+    Hp: 11050
+    BaseExp: 3910
+    JobExp: 3504
+    Attack: 720
+    Attack2: 909
+    Defense: 15
+    MagicDefense: 10
+    Agi: 70
+    Vit: 50
+    Int: 25
+    Dex: 90
+    Luk: 50
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Earth
+    ElementLevel: 2
+    WalkSpeed: 200
+    AttackDelay: 1092
+    AttackMotion: 792
+    DamageMotion: 480
+    Ai: 17
+    Drops:
+      - Item: Needle_Of_Alarm
+        Rate: 5335
+      - Item: Wooden_Block
+        Rate: 800
+      - Item: White_Herb
+        Rate: 1900
+      - Item: Lemon
+        Rate: 320
+      - Item: Elunium
+        Rate: 163
+      - Item: Big_Ben_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1703
+    AegisName: SOLACE
+    Name: Lady Solace
+    JapaneseName: Solace
+    Level: 77
+    Hp: 25252
+    BaseExp: 21000
+    JobExp: 25110
+    Attack: 1392
+    Attack2: 1462
+    Defense: 21
+    MagicDefense: 67
+    Str: 12
+    Agi: 76
+    Vit: 29
+    Int: 145
+    Dex: 99
+    Luk: 100
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Angel
+    Element: Holy
+    ElementLevel: 3
+    WalkSpeed: 180
+    AttackDelay: 576
+    AttackMotion: 420
+    DamageMotion: 360
+    Ai: 20
+    Class: Boss
+    Drops:
+      - Item: Blue_Feather
+        Rate: 200
+      - Item: Ring_
+        Rate: 5
+      - Item: Dark_Red_Jewel
+        Rate: 1000
+      - Item: Harp_
+        Rate: 50
+      - Item: Cursed_Seal
+        Rate: 50
+      - Item: Solace_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1295
+    AegisName: OWL_BARON
+    Name: Owl Baron
+    Level: 75
+    Hp: 60746
+    BaseExp: 10967
+    JobExp: 4811
+    Attack: 1252
+    Attack2: 1610
+    Defense: 65
+    MagicDefense: 25
+    Str: 25
+    Agi: 25
+    Vit: 80
+    Int: 95
+    Dex: 95
+    Luk: 55
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 175
+    AttackDelay: 1345
+    AttackMotion: 824
+    DamageMotion: 440
+    Ai: 21
+    Drops:
+      - Item: Tatters_Clothes
+        Rate: 3500
+      - Item: Soft_Feather
+        Rate: 2500
+      - Item: Kakkung_
+        Rate: 10
+      - Item: Staff_Of_Soul
+        Rate: 10
+      - Item: Walking_Stick
+        Rate: 10
+      - Item: Magician_Hat
+        Rate: 10
+      - Item: Owl_Baron_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 2921
+    AegisName: OWL_VISCOUNT
+    Name: Owl Viscount
+    Level: 80
+    Hp: 65746
+    BaseExp: 12967
+    JobExp: 4811
+    Attack: 1252
+    Attack2: 1610
+    Defense: 65
+    MagicDefense: 25
+    Str: 25
+    Agi: 25
+    Vit: 80
+    Int: 95
+    Dex: 95
+    Luk: 55
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 175
+    AttackDelay: 1345
+    AttackMotion: 824
+    DamageMotion: 440
+    Ai: 21
+    Drops:
+      - Item: Tatters_Clothes
+        Rate: 3500
+      - Item: Soft_Feather
+        Rate: 2500
+      - Item: Staff_Of_Soul
+        Rate: 10
+      - Item: Magician_Hat
+        Rate: 10
+      - Item: Owl_Viscount_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 2923
+    AegisName: OWL_MARQUEES
+    Name: Owl Marquis
+    Level: 80
+    Hp: 65746
+    BaseExp: 14967
+    JobExp: 4811
+    Attack: 1252
+    Attack2: 1610
+    Defense: 65
+    MagicDefense: 25
+    Str: 25
+    Agi: 25
+    Vit: 80
+    Int: 95
+    Dex: 95
+    Luk: 55
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 175
+    AttackDelay: 1345
+    AttackMotion: 824
+    DamageMotion: 440
+    Ai: 21
+    Drops:
+      - Item: Tatters_Clothes
+        Rate: 3500
+      - Item: Soft_Feather
+        Rate: 2500
+      - Item: Walking_Stick
+        Rate: 10
+      - Item: Magician_Hat
+        Rate: 10
+      - Item: Owl_Marquees_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 20613
+    AegisName: TREASURE_MIMIC
+    Name: Treasure Mimic
+    Level: 70
+    Hp: 1080
+    BaseExp: 3950
+    JobExp: 2950
+    Attack: 530
+    Attack2: 1697
+    Defense: 20
+    MagicDefense: 40
+    Str: 50
+    Agi: 100
+    Vit: 30
+    Int: 40
+    Dex: 150
+    Luk: 110
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 100
+    AttackDelay: 168
+    AttackMotion: 480
+    DamageMotion: 360
+    Ai: 04
+    Drops:
+      - Item: Old_Blue_Box
+        Rate: 30
+      - Item: Old_Violet_Box
+        Rate: 10
+      - Item: Gift_Box
+        Rate: 50
+      - Item: Shoes_
+        Rate: 15
+      - Item: Manteau_
+        Rate: 15
+      - Item: Fricco_Shoes
+        Rate: 10
+      - Item: Gold_Ring
+        Rate: 15
+      - Item: Treasure_Mimic_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 20779
+    AegisName: VOID_MIMIC
+    Name: Void Mimic
+    Level: 80
+    Hp: 15080
+    BaseExp: 4650
+    JobExp: 3250
+    Attack: 530
+    Attack2: 1697
+    Defense: 20
+    MagicDefense: 40
+    Str: 50
+    Agi: 100
+    Vit: 30
+    Int: 40
+    Dex: 150
+    Luk: 110
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 100
+    AttackDelay: 168
+    AttackMotion: 480
+    DamageMotion: 360
+    Ai: 04
+    Drops:
+      - Item: Old_Blue_Box
+        Rate: 30
+      - Item: Old_Violet_Box
+        Rate: 10
+      - Item: Gift_Box
+        Rate: 50
+      - Item: Shoes_
+        Rate: 15
+      - Item: Manteau_
+        Rate: 15
+      - Item: Fricco_Shoes
+        Rate: 10
+      - Item: Gold_Ring
+        Rate: 15
+      - Item: Void_Mimic_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1698
+    AegisName: DEATHWORD
+    Name: Death Word
+    JapaneseName: Deathword
+    Level: 65
+    Hp: 18990
+    BaseExp: 2986
+    JobExp: 4912
+    Attack: 622
+    Attack2: 1102
+    Defense: 10
+    MagicDefense: 40
+    Str: 50
+    Agi: 75
+    Vit: 10
+    Int: 20
+    Dex: 140
+    Luk: 45
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 150
+    AttackDelay: 176
+    AttackMotion: 912
+    DamageMotion: 300
+    Ai: 21
+    Drops:
+      - Item: Worn_Out_Page
+        Rate: 4000
+      - Item: Bookclip_In_Memory
+        Rate: 300
+      - Item: Bloody_Page
+        Rate: 500
+      - Item: Vidar's_Boots
+        Rate: 10
+      - Item: Deathword_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1293
+    AegisName: CREMY_FEAR
+    Name: Creamy Fear
+    Level: 62
+    Hp: 13387
+    BaseExp: 7365
+    JobExp: 2691
+    Attack: 666
+    Attack2: 829
+    Defense: 45
+    MagicDefense: 30
+    Str: 5
+    Agi: 40
+    Vit: 16
+    Int: 15
+    Dex: 68
+    Luk: 55
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Insect
+    Element: Wind
+    ElementLevel: 1
+    WalkSpeed: 155
+    AttackDelay: 1136
+    AttackMotion: 720
+    DamageMotion: 840
+    Ai: 21
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Powder_Of_Butterfly
+        Rate: 4550
+      - Item: Silver_Robe_
+        Rate: 15
+      - Item: Honey
+        Rate: 550
+      - Item: Icarus_Wing
+        Rate: 10
+      - Item: Fruit_Of_Mastela
+        Rate: 70
+      - Item: Cremy_Fear_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 20365
+    AegisName: EP17_1_TWIN_CAPUT1
+    Name: Caput
+    Level: 31
+    Hp: 2585
+    BaseExp: 967
+    JobExp: 407
+    Attack: 188
+    Attack2: 223
+    MagicDefense: 15
+    Agi: 77
+    Vit: 15
+    Int: 0
+    Dex: 76
+    Luk: 10
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Dark
+    ElementLevel: 1
+    WalkSpeed: 150
+    AttackDelay: 1180
+    AttackMotion: 480
+    DamageMotion: 360
+    Ai: 02
+    Drops:
+      - Item: Tooth_Of_
+        Rate: 5500
+      - Item: Oridecon_Stone
+        Rate: 70
+      - Item: Sticky_Mucus
+        Rate: 2500
+      - Item: Yellow_Herb
+        Rate: 100
+      - Item: Caput_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1796
+    AegisName: AUNOE
+    Name: Aunoe
+    Level: 62
+    Hp: 21297
+    BaseExp: 4102
+    JobExp: 4102
+    Attack: 89
+    Attack2: 733
+    Defense: 11
+    MagicDefense: 19
+    Agi: 28
+    Vit: 12
+    Int: 97
+    Dex: 57
+    Luk: 12
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Neutral
+    ElementLevel: 4
+    WalkSpeed: 250
+    AttackDelay: 768
+    AttackMotion: 432
+    DamageMotion: 360
+    Ai: 20
+    Drops:
+      - Item: White_Mask
+        Rate: 2500
+      - Item: High_Fashion_Sandals
+        Rate: 10
+      - Item: Bloody_Rune
+        Rate: 4000
+      - Item: Memorize_Book
+        Rate: 10
+      - Item: Bloody_Rune
+        Rate: 100
+      - Item: Musika
+        Rate: 10
+      - Item: Aunoe_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1797
+    AegisName: FANAT
+    Name: Fanat
+    Level: 62
+    Hp: 21297
+    BaseExp: 4102
+    JobExp: 4102
+    Attack: 89
+    Attack2: 733
+    Defense: 11
+    MagicDefense: 19
+    Agi: 28
+    Vit: 12
+    Int: 97
+    Dex: 57
+    Luk: 12
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Neutral
+    ElementLevel: 4
+    WalkSpeed: 250
+    AttackDelay: 768
+    AttackMotion: 432
+    DamageMotion: 360
+    Ai: 21
+    Drops:
+      - Item: Kandura
+        Rate: 10
+      - Item: High_Fashion_Sandals
+        Rate: 10
+      - Item: Bloody_Rune
+        Rate: 4000
+      - Item: Memorize_Book
+        Rate: 10
+      - Item: White_Mask
+        Rate: 2500
+      - Item: Panat_Card
         Rate: 1
         StealProtected: true

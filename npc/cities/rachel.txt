@@ -121,10 +121,8 @@ rachel,144,243,5	script	Freya Temple Guard::ChesGuard	934,{
 	mes "[Freya Temple Guard]";
 	mes "You are at Freya's Temple,";
 	mes "the hallowed grounds occupied";
-	mes "by our pope, Freya's mortal";
-	mes "incarnation. In respect for";
-	mes "her Excellency. We expect you";
-	mes "to enter with a pious heart.";
+	mes "by fanatics.";
+	mes "We expect you to enter with a pious heart.";
 	close;
 }
 

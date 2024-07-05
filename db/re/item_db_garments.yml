@@ -605,3 +605,23 @@ Body:
          bonus bFlee2,5+(min(.@r,10)*2);
       else if (BaseClass == Job_Swordman || BaseClass == Job_Merchant || BaseClass == Job_Thief)
          bonus bShortWeaponDamageReturn,5+(min(.@r,10)*2);
+  - Id: 2545
+    AegisName: Musika
+    Name: Musika
+    Type: Armor
+    Buy: 20
+    Weight: 500
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Priest: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bMdef,3;
+      bonus3 bAutoSpellWhenHit,"SK_AL_JGHEAL",max(1,getskilllv("SK_AL_JGHEAL")),20;

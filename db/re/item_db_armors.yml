@@ -944,3 +944,24 @@ Body:
          bonus2 bResEff,Eff_Silence,5000;
       else if (BaseClass == Job_Swordman || BaseClass == Job_Merchant || BaseClass == Job_Thief)
          bonus2 bResEff,Eff_Stun,5000;
+  - Id: 2388
+    AegisName: Kandura
+    Name: Kandura
+    Type: Armor
+    Buy: 20
+    Weight: 300
+    Defense: 36
+    Slots: 1
+    Jobs:
+      Assassin: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bAgi,1;
+      bonus bFlee,5;
+      bonus bAspdRate,2;

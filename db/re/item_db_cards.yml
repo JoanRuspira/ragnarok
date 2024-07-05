@@ -54,6 +54,41 @@ Body:
     Script: |
       bonus bDex,1;
       bonus bHit,3;
+  - Id: 4464
+    AegisName: Aunoe_Card
+    Name: Aunoe Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bCritAtkRate,20;
+  - Id: 4465
+    AegisName: Panat_Card
+    Name: Fanat Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bBaseAtk,10;
+      if (getiteminfo(getequipid(EQI_HAND_R), ITEMINFO_VIEW) == W_2HSWORD) {
+         .@r = getrefine();
+         if (.@r>=10) {
+            bonus bAspd,1;
+         }
+         if (.@r>=14) {
+            bonus bAspd,1;
+         }
+      }
   - Id: 4005
     AegisName: Poring__Card
     Name: Santa Poring Card
@@ -3050,6 +3085,98 @@ Body:
     Script: |
       bonus bDef,2;
       bonus bMdef,2;
+  - Id: 4627
+    AegisName: Big_Bell_Card
+    Name: Big Bell Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bAddRace,RC_Formless,10;
+      bonus2 bAddRace,RC_Demon,10;
+  - Id: 4626
+    AegisName: Big_Ben_Card
+    Name: Big Ben Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bMagicAddRace,RC_Formless,5;
+      bonus2 bMagicAddRace,RC_Demon,5;
+  - Id: 300278
+    AegisName: Void_Mimic_Card
+    Name: Void Mimic Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Both_Accessory: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bCritAtkRate,15;
+  - Id: 27316
+    AegisName: Caput_Card
+    Name: Twin Caput Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Armor: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bSubEle,Ele_Poison,10;
+  - Id: 300016
+    AegisName: Treasure_Mimic_Card
+    Name: Treasure Mimic Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Garment: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bCritical,5;
+      bonus bFlee,30;
+  - Id: 4631
+    AegisName: Owl_Viscount_Card
+    Name: Owl Viscount Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Both_Accessory: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bAspdRate,3;
+  - Id: 4632
+    AegisName: Owl_Marquees_Card
+    Name: Owl Marquees Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Both_Accessory: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus5 bAutoSpell,"SK_WZ_MAGICCRASHER",5,20,BF_WEAPON,0;
   - Id: 4221
     AegisName: Skeleton_General_Card
     Name: Skeleton General Card

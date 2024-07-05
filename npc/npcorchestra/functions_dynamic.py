@@ -9,6 +9,7 @@ from interiors import all_interiors
 
 iterations = 4
 initial_mob_id = 20021
+excluded_ids = [20365]
 
 adventurers_novice = []
 adventurers_swordsman = []
@@ -158,7 +159,10 @@ def buildMobsAvail():
     mob_names = buildMobArrayIterations()
     mobs_avail = []
     mob_id = initial_mob_id
-    for mob_name in mob_names:    
+    for mob_name in mob_names:
+        if mob_id in excluded_ids:
+            mob_id += 1
+            continue
         mob_avail = buildMobAvail(mob_id, mob_name)
         mob_id += 1
         mobs_avail.append(mob_avail)

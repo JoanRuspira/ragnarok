@@ -16,4 +16,6 @@ ra_san05,289,149,0	warp	sanctuary05a	1,1,ra_san03,282,21
 ra_san04,119,104,0	warp	sanctuary04	1,1,ra_san03,118,284
 ra_san03,123,283,0	warp	sanctuary04a	1,1,ra_san04,119,108
 ra_san04,120,48,0	warp	sanctuary08a	1,1,ra_san05,150,282
-ra_san05,150,286,0	warp	sanctuary08d	1,1,ra_san04,120,44 
+ra_san05,150,286,0	warp	sanctuary08d	1,1,ra_san04,120,44
+aru_gld,288,107,0	warp	sanctuary09a	1,1,arug_dun01,199,16 
+arug_dun01,199,12,0	warp	sanctuary10a	1,1,aru_gld,293,107 

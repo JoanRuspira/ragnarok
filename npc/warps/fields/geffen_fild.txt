@@ -60,3 +60,9 @@ gef_fild13,380,56,0	warp	geff18	1,1,gef_fild09,27,56
 gef_fild13,41,373,0	warp	geff13-1	1,1,gef_fild07,40,23
 gef_fild14,180,360,0	warp	geff17-1	1,1,gef_fild13,200,29
 gef_fild14,371,219,0	warp	geff19	1,1,gef_fild10,31,219
+
+
+
+gef_fild13,142,240,0	warp	geff13a-1	1,1,gld_dun04,112,22
+gld_dun04,112,18,0	warp	geff13b-1	1,1,gef_fild13,145,240
+

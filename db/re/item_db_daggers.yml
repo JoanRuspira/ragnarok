@@ -1551,3 +1551,22 @@ Body:
     WeaponLevel: 2
     EquipLevelMin: 70
     Refineable: true
+  - Id: 13034
+    AegisName: Twilight_Desert
+    Name: Desert Twilight
+    Type: Weapon
+    SubType: Dagger
+    Buy: 20
+    Weight: 600
+    Attack: 130
+    Range: 1
+    Slots: 2
+    Jobs:
+      Assassin: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 70
+    Refineable: true

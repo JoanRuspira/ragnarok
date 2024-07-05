@@ -19,27 +19,18 @@ c_tower1,0,0	monster	Rideword	1195,70
 //==================================================
 // c_tower2 - Clock Tower F2
 //==================================================
-c_tower2,0,0	monster	Alarm	1193,40
-c_tower2,0,0	monster	Clock	1269,40
-c_tower2,0,0	monster	Rideword	1195,7
-c_tower2,128,100,10,10	monster	Rideword	1195,1,60000,30000
-c_tower2,149,199,10,10	monster	Rideword	1195,1,120000,60000
-c_tower2,149,199,10,10	monster	Rideword	1195,1,300000,120000
-c_tower2,273,286,20,20	monster	Rideword	1195,1,120000,60000
-c_tower2,273,286,20,20	monster	Rideword	1195,1,300000,120000
-c_tower2,0,0	monster	Mimic	1191,3
-c_tower2,0,0	monster	Mimic	1191,1,3600000,1800000
-c_tower2,0,0	monster	Mimic	1191,1,3600000,1800000
+c_tower2,0,0	monster	Alarm	1193,48
+c_tower2,0,0	monster	Clock	1269,49
 
 //==================================================
 // c_tower3 - Clock Tower F3
 //==================================================
 c_tower3,0,0	monster	Alarm	1193,40
 c_tower3,0,0	monster	Elder	1377,40
-c_tower3,0,0	monster	Ancient Mimic	1699,5
-c_tower3,153,220,10,10	monster	Ancient Mimic	1699,1,126000,100000
-c_tower3,0,0	monster	Ancient Mimic	1699,7
-c_tower3,0,0	monster	Ancient Mimic	1699,3
+c_tower3,0,0	monster	Big Ben	2916,5
+c_tower3,153,220,10,10	monster	Big Ben	2916,1,126000,100000
+c_tower3,0,0	monster	Big Ben	2916,7
+c_tower3,0,0	monster	Big Ben	2916,3
 
 //==================================================
 // c_tower4 - Clock Tower F4
@@ -59,41 +50,41 @@ c_tower4,108,78,100,10	monster	Clock	1269,7
 c_tower4,108,58,100,10	monster	Clock	1269,7
 c_tower4,108,38,100,10	monster	Clock	1269,7
 c_tower4,108,18,100,10	monster	Clock	1269,7
-c_tower4,108,198,100,10	monster	Owl Duke	1320,3
-c_tower4,108,178,100,10	monster	Owl Duke	1320,3
-c_tower4,108,158,100,10	monster	Owl Duke	1320,3
-c_tower4,108,138,100,10	monster	Owl Duke	1320,3
-c_tower4,108,118,100,10	monster	Owl Duke	1320,3
-c_tower4,108,98,100,10	monster	Owl Duke	1320,3
-c_tower4,108,78,100,10	monster	Owl Duke	1320,3
-c_tower4,108,58,100,10	monster	Owl Duke	1320,3
-c_tower4,108,38,100,10	monster	Owl Duke	1320,3
-c_tower4,108,18,100,10	monster	Owl Duke	1320,3
-c_tower4,98,180	monster	Owl Duke	1320,1,300000,150000
-c_tower4,97,180	monster	Owl Duke	1320,1,240000,150000
-c_tower4,96,180	monster	Owl Duke	1320,1,350000,150000
-c_tower4,95,180	monster	Owl Duke	1320,1,410000,150000
-c_tower4,94,180	monster	Owl Duke	1320,1,320000,150000
-c_tower4,93,180	monster	Owl Duke	1320,1,260000,150000
-c_tower4,92,180	monster	Owl Duke	1320,1,280000,150000
-c_tower4,91,180	monster	Owl Duke	1320,1,330000,150000
-c_tower4,87,180	monster	Owl Duke	1320,1,400000,150000
-c_tower4,86,180	monster	Owl Duke	1320,1,380000,150000
-c_tower4,80,179	monster	Owl Duke	1320,1,360000,150000
-c_tower4,80,180	monster	Owl Duke	1320,1,350000,150000
-c_tower4,80,181	monster	Owl Duke	1320,1,290000,150000
-c_tower4,80,182	monster	Owl Duke	1320,1,300000,150000
-c_tower4,80,183	monster	Owl Duke	1320,1,340000,150000
-c_tower4,128,194	monster	Ancient Mimic	1699,1,1800000,900000
-c_tower4,38,193	monster	Ancient Mimic	1699,1,1800000,900000
-c_tower4,37,159	monster	Ancient Mimic	1699,1,1800000,900000
-c_tower4,31,139	monster	Ancient Mimic	1699,1,1800000,900000
-c_tower4,104,14	monster	Ancient Mimic	1699,1,1800000,900000
-c_tower4,104,27	monster	Ancient Mimic	1699,1,900000,400000
-c_tower4,105,24	monster	Ancient Mimic	1699,1,900000,400000
-c_tower4,205,105	monster	Ancient Mimic	1699,1,1800000,900000
-c_tower4,0,0	monster	Ancient Mimic	1699,1,1800000,900000
-c_tower4,148,85	monster	Ancient Mimic	1699,1,1800000,900000
-c_tower4,189,51	monster	Ancient Mimic	1699,1,1800000,900000
-c_tower4,170,34	monster	Ancient Mimic	1699,1,1800000,900000
+c_tower4,108,198,100,10	monster	Big Bell	2917,3
+c_tower4,108,178,100,10	monster	Big Bell	2917,3
+c_tower4,108,158,100,10	monster	Big Bell	2917,3
+c_tower4,108,138,100,10	monster	Big Bell	2917,3
+c_tower4,108,118,100,10	monster	Big Bell	2917,3
+c_tower4,108,98,100,10	monster	Big Bell	2917,3
+c_tower4,108,78,100,10	monster	Big Bell	2917,3
+c_tower4,108,58,100,10	monster	Big Bell	2917,3
+c_tower4,108,38,100,10	monster	Big Bell	2917,3
+c_tower4,108,18,100,10	monster	Big Bell	2917,3
+c_tower4,98,180	monster	Big Bell	2917,1,300000,150000
+c_tower4,97,180	monster	Big Bell	2917,1,240000,150000
+c_tower4,96,180	monster	Big Bell	2917,1,350000,150000
+c_tower4,95,180	monster	Big Bell	2917,1,410000,150000
+c_tower4,94,180	monster	Big Bell	2917,1,320000,150000
+c_tower4,93,180	monster	Big Bell	2917,1,260000,150000
+c_tower4,92,180	monster	Big Bell	2917,1,280000,150000
+c_tower4,91,180	monster	Big Bell	2917,1,330000,150000
+c_tower4,87,180	monster	Big Bell	2917,1,400000,150000
+c_tower4,86,180	monster	Big Bell	2917,1,380000,150000
+c_tower4,80,179	monster	Big Bell	2917,1,360000,150000
+c_tower4,80,180	monster	Big Bell	2917,1,350000,150000
+c_tower4,80,181	monster	Big Bell	2917,1,290000,150000
+c_tower4,80,182	monster	Big Bell	2917,1,300000,150000
+c_tower4,80,183	monster	Big Bell	2917,1,340000,150000
+c_tower4,128,194	monster	Big Ben	2916,1,1800000,900000
+c_tower4,38,193	monster	Big Ben	2916,1,1800000,900000
+c_tower4,37,159	monster	Big Ben	2916,1,1800000,900000
+c_tower4,31,139	monster	Big Ben	2916,1,1800000,900000
+c_tower4,104,14	monster	Big Ben	2916,1,1800000,900000
+c_tower4,104,27	monster	Big Ben	2916,1,900000,400000
+c_tower4,105,24	monster	Big Ben	2916,1,900000,400000
+c_tower4,205,105	monster	Big Ben	2916,1,1800000,900000
+c_tower4,0,0	monster	Big Ben	2916,1,1800000,900000
+c_tower4,148,85	monster	Big Ben	2916,1,1800000,900000
+c_tower4,189,51	monster	Big Ben	2916,1,1800000,900000
+c_tower4,170,34	monster	Big Ben	2916,1,1800000,900000
 c_tower4,0,0	boss_monster	Timeholder	3074,1,18000000,600000,0

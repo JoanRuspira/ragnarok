@@ -1578,7 +1578,17 @@ prontera,148,194,4	script	Bulletin Board#sgn::267	858,{
 }
 
 
-pay_gld,135,160,5	script	Board#sgn::260	858,{
-	mes "Path to underground Greenwod Lake.";
+pay_gld,135,160,5	script	Board#sgn::268	858,{
+	mes "Path to Greenwood Lake Underground Forest.";
+	close;
+}
+
+gef_fild13,145,245,5	script	Board#sgn::269	858,{
+	mes "Britoniah Castle Cavern.";
+	close;
+}
+	
+aru_gld,291,112,5	script	Board#sgn::270	858,{
+	mes "Valfreyja Fortress.";
 	close;
 }

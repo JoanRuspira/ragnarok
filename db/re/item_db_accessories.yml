@@ -783,3 +783,20 @@ Body:
     EquipLevelMin: 90
     Script: |
       bonus bAgi,2;
+  - Id: 2726
+    AegisName: Icarus_Wing
+    Name: Icarus Wings
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Jobs:
+      Hunter: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Accessory: true
+    ArmorLevel: 1
+    EquipLevelMin: 70
+    Script: |
+      bonus bMaxSP,50;
+      bonus bDex,3;

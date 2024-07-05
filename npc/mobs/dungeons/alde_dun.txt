@@ -22,7 +22,7 @@ alde_dun01,0,0	monster	Eggyra	1116,35
 //==================================================
 // alde_dun02 - Clock Tower B2
 //==================================================
-alde_dun02,0,0	monster	Brilight	1211,30
+alde_dun02,0,0	monster	Caterpillar	1300,30
 alde_dun02,0,0	monster	Giant Spider	1304,30
 alde_dun02,0,0	monster	Ancient Worm	1305,30
 alde_dun02,0,0	monster	Arclouze	1194,50
@@ -31,19 +31,19 @@ alde_dun02,0,0	monster	Arclouze	1194,50
 // alde_dun03 - Clock Tower B3
 //==================================================
 alde_dun03,0,0	monster	Cramp	1209,25
-alde_dun03,0,0	monster	Brilight	1211,20
+alde_dun03,0,0	monster	Caterpillar	1300,20
 alde_dun03,77,28,5,5	monster	Cramp	1209,3,40000,20000
 alde_dun03,0,0	monster	Penomena	1216,45,180000,120000
 alde_dun03,184,61,30,30	monster	Cramp	1209,10,300000,150000
-alde_dun03,184,61,30,30	monster	Brilight	1211,10,300000,150000
+alde_dun03,184,61,30,30	monster	Caterpillar	1300,10,300000,150000
 alde_dun03,163,56,10,10	monster	Penomena	1216,3,600000,300000
 alde_dun03,168,42,6,6	monster	Penomena	1216,2,600000,300000
 alde_dun03,147,30,8,8	monster	Penomena	1216,2,600000,300000
 alde_dun03,126,53,20,20	monster	Cramp	1209,5,300000,150000
-alde_dun03,126,53,20,20	monster	Brilight	1211,5,300000,150000
+alde_dun03,126,53,20,20	monster	Caterpillar	1300,5,300000,150000
 alde_dun03,102,40,10,10	monster	Penomena	1216,4,600000,300000
 alde_dun03,130,220,40,40	monster	Cramp	1209,10,300000,150000
-alde_dun03,130,220,40,40	monster	Brilight	1211,10,300000,150000
+alde_dun03,130,220,40,40	monster	Caterpillar	1300,10,300000,150000
 alde_dun03,155,201,25,25	monster	Penomena	1216,7,600000,300000
 alde_dun03,160,181,8,8	monster	Penomena	1216,2,600000,300000
 alde_dun03,179,166,6,6	monster	Penomena	1216,4,600000,300000
@@ -52,7 +52,7 @@ alde_dun03,127,204,9,9	monster	Cramp	1209,3,300000,150000
 alde_dun03,142,157,8,8	monster	Penomena	1216,5,600000,300000
 alde_dun03,135,140,8,8	monster	Penomena	1216,3,600000,300000
 alde_dun03,120,157,8,8	monster	Penomena	1216,3,600000,300000
-alde_dun03,120,157,8,8	monster	Brilight	1211,10,300000,150000
+alde_dun03,120,157,8,8	monster	Caterpillar	1300,10,300000,150000
 
 //==================================================
 // alde_dun04 - Clock Tower B4
