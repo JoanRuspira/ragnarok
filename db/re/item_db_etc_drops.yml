@@ -527,6 +527,36 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
+  - Id: 7440
+    AegisName: Red_Feather
+    Name: Red Feather
+    Type: Etc
+    Buy: 1335
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7436
+    AegisName: Piece_Of_Memory_Green
+    Name: Fragment of Agony
+    Type: Etc
+    Buy: 1506
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7438
+    AegisName: Piece_Of_Memory_Blue
+    Name: Fragment of Hatred
+    Type: Etc
+    Buy: 1506
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7799
+    AegisName: Dark_Crystal
+    Name: Crystal of Darkness
+    Type: Etc
+    Buy: 10
+    Weight: 10
   - Id: 7315
     AegisName: Dark_Crystal_Fragment
     Name: Dark Crystal Fragment
@@ -535,6 +565,12 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
+  - Id: 7798
+    AegisName: Dark_Debris
+    Name: Fragment of Darkness
+    Type: Etc
+    Buy: 500
+    Weight: 10
   - Id: 728
     AegisName: Golden_Jewel
     Name: Topaz
@@ -2655,6 +2691,22 @@ Body:
     Type: Etc
     Buy: 10000
     Weight: 40
+    Flags:
+      BuyingStore: true
+  - Id: 7435
+    AegisName: Golden_Bracelet
+    Name: Golden Ornament
+    Type: Etc
+    Buy: 1907
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7439
+    AegisName: Piece_Of_Memory_Red
+    Name: Fragment of Despair
+    Type: Etc
+    Buy: 1506
+    Weight: 10
     Flags:
       BuyingStore: true
   - Id: 7441

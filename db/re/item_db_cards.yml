@@ -1039,9 +1039,35 @@ Body:
       BuyingStore: true
     Script: |
       bonus bVit,3;
+  - Id: 300272
+    AegisName: Pray_Giver_Card
+    Name: Pray Giver Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Garment: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Holy,10;
+      bonus bMaxSPrate,-25;
+  - Id: 300270
+    AegisName: Empathizer_Card
+    Name: Empathizer Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Garment: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bLongAtkRate,10;
+      bonus bMaxSPrate,-25;
   - Id: 4525
-    AegisName: Kraken_Card
-    Name: Kraken Card
+    AegisName: Coelacanth_Card
+    Name: Coelacanth Card
     Type: Card
     Buy: 20
     Weight: 10
@@ -5888,6 +5914,31 @@ Body:
   - Id: 4392
     AegisName: Observation_Card
     Name: Dame of Sentinel Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Armor: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus bInt,readparam(bDex)/18;
+  - Id: 4581
+    AegisName: Rudo_Card
+    Name: Rudo Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Shoes: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      autobonus2 "{ bonus bAgi,44; bonus bNoWalkDelay; heal 0,-40; }",50,3000,0,"{ }";
+  - Id: 4469
+    AegisName: Garden_Watcher_Card
+    Name: Garden Watcher Card
     Type: Card
     Buy: 20
     Weight: 10

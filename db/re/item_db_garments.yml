@@ -123,24 +123,6 @@ Body:
     Refineable: true
     Script: |
       bonus bAgi,1;
-  - Id: 2508
-    AegisName: Ragamuffin_Cape
-    Name: Ragamuffin Manteau
-    Type: Armor
-    Buy: 56000
-    Weight: 500
-    Defense: 4
-    Jobs:
-      All: true
-      Novice: false
-      SuperNovice: false
-    Locations:
-      Garment: true
-    ArmorLevel: 1
-    Refineable: true
-    Script: |
-      bonus bUnbreakableGarment;
-      bonus bMdef,10;
   - Id: 2509
     AegisName: Clack_Of_Servival
     Name: Survivor's Manteau
@@ -625,3 +607,44 @@ Body:
     Script: |
       bonus bMdef,3;
       bonus3 bAutoSpellWhenHit,"SK_AL_JGHEAL",max(1,getskilllv("SK_AL_JGHEAL")),20;
+  - Id: 2536
+    AegisName: Skin_Of_Ventus
+    Name: Skin of Ventus
+    Type: Armor
+    Buy: 20
+    Weight: 250
+    Defense: 7
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bMdef,2;
+      bonus bMaxHP,200;
+      bonus bFlee,10;
+  - Id: 2520
+    AegisName: Goibne's_Shoulder_Arms
+    Name: Goibne's Spaulders
+    Type: Armor
+    Buy: 30000
+    Weight: 700
+    Defense: 11
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 54
+    Refineable: true
+    Script: |
+      bonus bLongAtkDef,10;
+      bonus bMdef,2;
+      bonus bVit,1;

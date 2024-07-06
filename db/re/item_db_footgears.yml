@@ -395,3 +395,23 @@ Body:
          bonus bMaxHP,(BaseLevel*5);
       else if (BaseClass == Job_Swordman || BaseClass == Job_Merchant || BaseClass == Job_Thief)
          bonus bMaxSP,(JobLevel*2);
+  - Id: 2419
+    AegisName: Goibne's_Combat_Boots
+    Name: Goibne's Greaves
+    Type: Armor
+    Buy: 30000
+    Weight: 700
+    Defense: 13
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Shoes: true
+    ArmorLevel: 1
+    EquipLevelMin: 54
+    Refineable: true
+    Script: |
+      bonus bMdef,3;
+      bonus bMaxHPrate,5;
+      bonus bMaxSPrate,5;

@@ -432,3 +432,23 @@ Body:
       bonus2 bComaRace,RC_Player_Human,10;
       bonus bAspdRate,getrefine();
       bonus3 bAutoSpell,"SK_PR_IMPOSITIO",5,20;
+  - Id: 2129
+    AegisName: Exorcism_Bible
+    Name: Exorcism Bible
+    Type: Armor
+    Buy: 20
+    Weight: 600
+    Defense: 80
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    EquipLevelMin: 50
+    Refineable: true
+    View: 5
+    Script: |
+      bonus bHPrecovRate,3;
+      bonus bSPrecovRate,3;
+      bonus bInt,1;

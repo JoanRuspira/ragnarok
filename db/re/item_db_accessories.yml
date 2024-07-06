@@ -800,3 +800,34 @@ Body:
     Script: |
       bonus bMaxSP,50;
       bonus bDex,3;
+  - Id: 2729
+    AegisName: Diabolus_Ring
+    Name: Diabolus Ring
+    Type: Armor
+    Buy: 20
+    Weight: 50
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Monk: true
+      Priest: true
+      Rogue: true
+      Sage: true
+      Wizard: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Accessory: true
+    ArmorLevel: 1
+    Script: |
+      bonus bMaxHP,100;
+      bonus bMaxSP,100;
+      bonus bHealPower,5;
+      bonus2 bAddDamageClass,1916,10;
+      bonus2 bAddDamageClass,1917,10;

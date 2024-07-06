@@ -490,3 +490,28 @@ Body:
       bonus bUnbreakableWeapon;
       bonus bAgi,3;
       bonus bMaxHPrate,-10;
+  - Id: 1182
+    AegisName: Bloody_Eater
+    Name: Bloody Eater
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 20
+    Weight: 1200
+    Attack: 200
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 50
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Ghost;
+      autobonus "{ bonus bCritical,100; bonus bBaseAtk,50; }",1,5000,0,"{ specialeffect2 EF_FIRESPLASHHIT; }";
+      bonus bHPGainValue,100;

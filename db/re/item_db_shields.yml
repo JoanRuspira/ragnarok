@@ -517,3 +517,24 @@ Body:
       bonus bMdef,3;
       bonus bInt,2;
       bonus2 bAddEffWhenHit,Eff_Stun,1000;
+  - Id: 2130
+    AegisName: Cross_Shield
+    Name: Cross Shield
+    Type: Armor
+    Buy: 20
+    Weight: 2000
+    Defense: 130
+    Slots: 1
+    Jobs:
+      Crusader: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    EquipLevelMin: 80
+    Refineable: true
+    View: 4
+    Script: |
+      bonus bStr,1;
+      bonus2 bSkillAtk,"SK_PA_RAPIDSMITING",30;
+      bonus2 bSkillAtk,"SK_CR_SHIELDBOOMERANG",30;
+      bonus bUseSPrate,10;
