@@ -5727,6 +5727,22 @@ Body:
     Weight: 1
     Flags:
       BuyingStore: true
+  - Id: 7437
+    AegisName: Piece_Of_Memory_Purple
+    Name: Fragment of Misery
+    Type: Etc
+    Buy: 1506
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7450
+    AegisName: Piece_Of_Bone_Armor
+    Name: Skeletal Armor Piece
+    Type: Etc
+    Buy: 2050
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 6212
     AegisName: Bomb_Mushroom_Spore
     Name: Bomb Mushroom Spore

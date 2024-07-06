@@ -648,3 +648,22 @@ Body:
       bonus bLongAtkDef,10;
       bonus bMdef,2;
       bonus bVit,1;
+  - Id: 2519
+    AegisName: Morrigane's_Manteau
+    Name: Morrigane's Manteau
+    Type: Armor
+    Buy: 30000
+    Weight: 600
+    Defense: 9
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 61
+    Refineable: true
+    Script: |
+      bonus bLuk,2;
+      bonus bFlee2,8;

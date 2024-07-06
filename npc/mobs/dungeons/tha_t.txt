@@ -73,7 +73,6 @@ tha_t07,0,0	monster	Dame of Sentinel	1700,15
 tha_t07,0,0	monster	False Angel	1371,15
 tha_t07,0,0	monster	Garden Watcher	1933,15
 tha_t07,0,0	monster	Rudo	2256,15
-tha_t07,0,0	monster	Despero of Thanatos	1705,2
 
 ////==================================================
 //// tha_t08 - Thanatos Tower F8
@@ -82,7 +81,6 @@ tha_t08,0,0	monster	Incarnation of Pain	1919,15
 tha_t08,0,0	monster	Incarnation of Fear	1920,15
 tha_t08,0,0	monster	Incarnation of Sorrow	1921,15
 tha_t08,0,0	monster	Incarnation of Fury	3097,15
-tha_t08,0,0	monster	Odium of Thanatos	1704,2
 
 ////==================================================
 //// tha_t09 - Thanatos Tower F9
@@ -91,40 +89,36 @@ tha_t09,0,0	monster	Mistress of Shelter	1701,7
 tha_t09,0,0	monster	Baroness of Retribution	1702,7
 tha_t09,0,0	monster	Pray Giver	20844,7
 tha_t09,0,0	monster	Empathizer	20773,7
-tha_t09,0,0	monster	Dolor of Thanatos	1707,1
+tha_t09,0,0	monster	Despero of Thanatos	1705,1
 
-//
 ////==================================================
 //// tha_t10 - Thanatos Tower F10
 ////==================================================
-//tha_t10,129,129,35,35	monster	Plasma	1697,5
-//tha_t10,129,129,35,35	monster	Baroness of Retribution	1702,20,600000
-//tha_t10,129,129,35,35	monster	Lady Solace	1703,5,420000
-//tha_t10,129,129,35,35	monster	Mistress of Shelter	1701,5,420000
-//tha_t10,129,129,35,35	monster	Dame of Sentinel	1700,5,420000
-//tha_t10,129,129,35,35	monster	Maero of Thanatos	1706,1,1800000,1200000
-//tha_t10,129,129,35,35	monster	Maero of Thanatos	1711,3,1800000,1200000
-//
+tha_t10,0,0	monster	Mistress of Shelter	1701,7
+tha_t10,0,0	monster	Baroness of Retribution	1702,7
+tha_t10,0,0	monster	Pray Giver	20844,7
+tha_t10,0,0	monster	Empathizer	20773,7
+tha_t10,0,0	monster	Odium of Thanatos	1704,1
+
 ////==================================================
 //// tha_t11 - Thanatos Tower F11
 ////==================================================
-//tha_t11,50,51,35,35	monster	Plasma	1695,5
-//tha_t11,50,51,35,35	monster	Mistress of Shelter	1701,20,600000
-//tha_t11,50,51,35,35	monster	Lady Solace	1703,5,420000
-//tha_t11,50,51,35,35	monster	Baroness of Retribution	1702,5,420000
-//tha_t11,50,51,35,35	monster	Dame of Sentinel	1700,5,420000
-//tha_t11,50,51,35,35	monster	Despero of Thanatos	1705,1,1800000,1200000
-//tha_t11,50,51,35,35	monster	Despero of Thanatos	1710,3,1800000,1200000
-//
+tha_t11,0,0	monster	Archangel of Misery	20358,7
+tha_t11,0,0	monster	Archangel of Glory	20357,7
+tha_t11,0,0	monster	Archangel of Rage	20692,7
+tha_t11,0,0	monster	Void Archangel	20932,7
+tha_t11,0,0	monster	Dolor of Thanatos	1707,1
+
 ////==================================================
 //// tha_t12 - Thanatos Tower F12
 ////==================================================
-//tha_t12,129,51,35,35	monster	Plasma	1693,5
-//tha_t12,129,51,35,35	monster	Dame of Sentinel	1700,13,600000
-//tha_t12,129,51,35,35	monster	Lady Solace	1703,5,420000
-//tha_t12,129,51,35,35	monster	Mistress of Shelter	1701,5,420000
-//tha_t12,129,51,35,35	monster	Baroness of Retribution	1702,5,420000
-//tha_t12,129,51,35,35	monster	Odium of Thanatos	1709,4,1800000,1200000
+tha_t12,0,0	monster	Archangel of Misery	20358,7
+tha_t12,0,0	monster	Archangel of Glory	20357,7
+tha_t12,0,0	monster	Archangel of Rage	20692,7
+tha_t12,0,0	monster	Void Archangel	20932,7
+tha_t12,0,0	monster	Maero of Thanatos	1706,1
 
-
-//betelgeuse.act
+////==================================================
+//// thana_boss - Thanatos Tower F12
+////==================================================
+thana_boss,0,0	monster	Memory of Thanatos	1708,1,3600000,600000,1

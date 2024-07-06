@@ -15,7 +15,7 @@
 //==================================================
 // pay_dun00 - Payon Cave F1
 //==================================================
-pay_dun00,0,0	monster	Familiar	1005,15
+pay_dun00,0,0	monster	Familiar	1005,20
 pay_dun00,0,0	monster	Zombie	1015,20
 pay_dun00,0,0	monster	Skeleton	1076,35
 pay_dun00,0,0	monster	Poporing	1031,15
@@ -25,7 +25,7 @@ pay_dun00,140,140,5,5	monster	Blue Mushroom	21433,3,360000,180000
 //==================================================
 // pay_dun01 - Payon Cave F2
 //==================================================
-pay_dun01,0,0	monster	Drainliar	1111,20
+pay_dun01,0,0	monster	Drainliar	1111,30
 pay_dun01,0,0	monster	Soldier Skeleton	1028,40,300000,150000
 pay_dun01,0,0	monster	Archer Skeleton	1016,40,300000,150000
 pay_dun01,235,54,10,10	monster	Blue Mushroom	21433,7,900000,450000

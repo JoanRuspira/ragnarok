@@ -22199,3 +22199,329 @@ Body:
       - Item: Tiyanak_Card
         Rate: 1
         StealProtected: true
+  - Id: 1310
+    AegisName: MAJORUROS
+    Name: Majoruros
+    Level: 66
+    Hp: 57991
+    BaseExp: 8525
+    JobExp: 3799
+    Attack: 780
+    Attack2: 1300
+    Defense: 10
+    MagicDefense: 25
+    Str: 65
+    Agi: 50
+    Vit: 75
+    Int: 50
+    Dex: 85
+    Luk: 48
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Brute
+    Element: Fire
+    ElementLevel: 2
+    WalkSpeed: 250
+    AttackDelay: 1100
+    AttackMotion: 960
+    DamageMotion: 780
+    Ai: 21
+    Drops:
+      - Item: Nose_Ring
+        Rate: 4413
+      - Item: Two_Handed_Axe_
+        Rate: 40
+      - Item: Lemon
+        Rate: 300
+      - Item: Oridecon
+        Rate: 16
+      - Item: White_Herb
+        Rate: 1850
+      - Item: Silver_Ring
+        Rate: 40
+      - Item: Star_Crumb
+        Rate: 250
+      - Item: Majoruros_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 20358
+    AegisName: EP17_1_SANARE2
+    Name: Archangel of Misery
+    Level: 80
+    Hp: 38000
+    BaseExp: 29010
+    JobExp: 25110
+    Attack: 1871
+    Attack2: 1971
+    Defense: 22
+    MagicDefense: 63
+    Str: 12
+    Agi: 67
+    Vit: 34
+    Int: 167
+    Dex: 157
+    Luk: 120
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Angel
+    Element: Poison
+    ElementLevel: 3
+    WalkSpeed: 160
+    AttackDelay: 432
+    AttackMotion: 420
+    DamageMotion: 360
+    Ai: 20
+    Drops:
+      - Item: Red_Feather
+        Rate: 200
+      - Item: Scarlet_Jewel
+        Rate: 1000
+      - Item: Elunium_Stone
+        Rate: 300
+      - Item: Elunium
+        Rate: 24
+      - Item: Explosive_Powder
+        Rate: 500
+      - Item: High_Sanare_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 20357
+    AegisName: EP17_1_SANARE1
+    Name: Archangel of Glory
+    Level: 80
+    Hp: 38000
+    BaseExp: 29010
+    JobExp: 25110
+    Attack: 1871
+    Attack2: 1971
+    Defense: 22
+    MagicDefense: 63
+    Str: 12
+    Agi: 67
+    Vit: 34
+    Int: 167
+    Dex: 157
+    Luk: 120
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Angel
+    Element: Holy
+    ElementLevel: 3
+    WalkSpeed: 160
+    AttackDelay: 432
+    AttackMotion: 420
+    DamageMotion: 360
+    Ai: 20
+    Drops:
+      - Item: Red_Feather
+        Rate: 200
+      - Item: Scarlet_Jewel
+        Rate: 1000
+      - Item: Elunium_Stone
+        Rate: 300
+      - Item: Elunium
+        Rate: 24
+      - Item: Explosive_Powder
+        Rate: 500
+      - Item: Sanare_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 20692
+    AegisName: EP17_2_SANARE3
+    Name: Archangel of Rage
+    Level: 80
+    Hp: 38000
+    BaseExp: 29010
+    JobExp: 25110
+    Attack: 1871
+    Attack2: 1971
+    Defense: 22
+    MagicDefense: 63
+    Str: 12
+    Agi: 67
+    Vit: 34
+    Int: 167
+    Dex: 157
+    Luk: 120
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Angel
+    Element: Fire
+    ElementLevel: 3
+    WalkSpeed: 160
+    AttackDelay: 432
+    AttackMotion: 420
+    DamageMotion: 360
+    Ai: 20
+    Drops:
+      - Item: Red_Feather
+        Rate: 200
+      - Item: Scarlet_Jewel
+        Rate: 1000
+      - Item: Elunium_Stone
+        Rate: 300
+      - Item: Elunium
+        Rate: 24
+      - Item: Explosive_Powder
+        Rate: 500
+      - Item: Sanare3_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 20932
+    AegisName: DEADRE
+    Name: Void Archangel
+    Level: 80
+    Hp: 38000
+    BaseExp: 29010
+    JobExp: 25110
+    Attack: 1871
+    Attack2: 1971
+    Defense: 22
+    MagicDefense: 63
+    Str: 12
+    Agi: 67
+    Vit: 34
+    Int: 167
+    Dex: 157
+    Luk: 120
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Angel
+    Element: Dark
+    ElementLevel: 3
+    WalkSpeed: 160
+    AttackDelay: 432
+    AttackMotion: 420
+    DamageMotion: 360
+    Ai: 20
+    Drops:
+      - Item: Red_Feather
+        Rate: 200
+      - Item: Scarlet_Jewel
+        Rate: 1000
+      - Item: Elunium_Stone
+        Rate: 300
+      - Item: Elunium
+        Rate: 24
+      - Item: Explosive_Powder
+        Rate: 500
+      - Item: Deadre_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1706
+    AegisName: THA_MAERO
+    Name: Maero of Thanatos
+    JapaneseName: Thanatos Maero
+    Level: 83
+    Hp: 62000
+    BaseExp: 56699
+    JobExp: 63880
+    Attack: 2022
+    Attack2: 2288
+    Defense: 29
+    MagicDefense: 72
+    Str: 100
+    Agi: 176
+    Vit: 30
+    Int: 200
+    Dex: 122
+    Luk: 29
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Ghost
+    ElementLevel: 4
+    WalkSpeed: 150
+    AttackDelay: 160
+    AttackMotion: 480
+    DamageMotion: 360
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Brigan
+        Rate: 1000
+      - Item: Crystal_Jewel_
+        Rate: 500
+      - Item: Crystal_Jewel__
+        Rate: 100
+      - Item: Piece_Of_Memory_Purple
+        Rate: 10000
+      - Item: Old_Card_Album
+        Rate: 10
+      - Item: Goibne's_Armor
+        Rate: 1000
+      - Item: Tha_Maero_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1708
+    AegisName: THANATOS
+    Name: Memory of Thanatos
+    JapaneseName: Thanatos
+    Level: 99
+    Hp: 445660
+    BaseExp: 3666000
+    JobExp: 2145060
+    MvpExp: 1833000
+    Attack: 3812
+    Attack2: 7483
+    Defense: 35
+    MagicDefense: 35
+    Str: 100
+    Agi: 108
+    Vit: 30
+    Int: 86
+    Dex: 147
+    Luk: 32
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Ghost
+    ElementLevel: 4
+    WalkSpeed: 120
+    AttackDelay: 115
+    AttackMotion: 816
+    DamageMotion: 504
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Old_Violet_Box
+        Rate: 5500
+      - Item: Old_Blue_Box
+        Rate: 5000
+      - Item: Crystal_Jewel__
+        Rate: 2000
+    Drops:
+      - Item: Treasure_Box
+        Rate: 1000
+      - Item: Morrigane's_Manteau
+        Rate: 1000
+      - Item: Piece_Of_Bone_Armor
+        Rate: 5000
+      - Item: Full_Plate_Armor_
+        Rate: 5000
+      - Item: Grave_
+        Rate: 5000
+      - Item: Wing_Of_Eagle
+        Rate: 1000
+      - Item: Thanatos_Card
+        Rate: 1
+        StealProtected: true
+        
+
+

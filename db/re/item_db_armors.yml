@@ -965,3 +965,22 @@ Body:
       bonus bAgi,1;
       bonus bFlee,5;
       bonus bAspdRate,2;
+  - Id: 2354
+    AegisName: Goibne's_Armor
+    Name: Goibne's Armor
+    Type: Armor
+    Buy: 50000
+    Weight: 3500
+    Defense: 58
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    EquipLevelMin: 54
+    Refineable: true
+    Script: |
+      bonus bVit,2;
+      bonus bMaxHPrate,10;

@@ -1053,6 +1053,82 @@ Body:
     Script: |
       bonus bNoRegen,2;
       bonus bSPDrainValue,1;
+  - Id: 300115
+    AegisName: Sanare3_Card
+    Name: Archangel of Rage Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Head_Top: true
+      Head_Mid: true
+      Head_Low: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bMatk,10;
+      .@val = 5;
+      if (getrefine() >= 7) {
+         .@val += 5;
+      }
+      bonus2 bMagicAtkEle,Ele_Fire,.@val;
+  - Id: 300252
+    AegisName: Deadre_Card
+    Name: Void Archangel Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Head_Top: true
+      Head_Mid: true
+      Head_Low: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bMatk,10;
+      .@val = 5;
+      if (getrefine() >= 7) {
+         .@val += 5;
+      }
+      bonus2 bMagicAtkEle,Ele_Dark,.@val;
+  - Id: 27308
+    AegisName: Sanare_Card
+    Name: Archangel of Glory Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      .@r = getrefine();
+      .@val = 5;
+      if (.@r >= 7) {
+         .@val += 5;
+      }
+      bonus bHealPower,.@val;
+  - Id: 27309
+    AegisName: High_Sanare_Card
+    Name: Archangel of Misery Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Head_Top: true
+      Head_Mid: true
+      Head_Low: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bMatk,10;
+      .@val = 5;
+      if (getrefine() >= 7) {
+         .@val += 5;
+      }
+      bonus2 bMagicAtkEle,Ele_Poison,.@val;
   - Id: 4587
     AegisName: Tiyanak_Card
     Name: Tiyanak Card
