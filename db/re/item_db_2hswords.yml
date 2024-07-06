@@ -515,3 +515,27 @@ Body:
       bonus bAtkEle,Ele_Ghost;
       autobonus "{ bonus bCritical,100; bonus bBaseAtk,50; }",1,5000,0,"{ specialeffect2 EF_FIRESPLASHHIT; }";
       bonus bHPGainValue,100;
+  - Id: 1165
+    AegisName: Masamune
+    Name: Masamune
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 20
+    Weight: 1000
+    Attack: 200
+    Range: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 48
+    Refineable: true
+    Script: |
+      bonus bFlee,30;
+      bonus bStr,-5;
+      bonus bAspd,2;
+      bonus bDefRate,-66;
+      bonus bDef2Rate,-66;

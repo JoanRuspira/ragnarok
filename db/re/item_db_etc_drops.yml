@@ -519,11 +519,83 @@ Body:
     Weight: 100
     Flags:
       BuyingStore: true
+  - Id: 7156
+    AegisName: Broken_Shuriken
+    Name: Broken Shuriken
+    Type: Etc
+    Buy: 470
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 6509
+    AegisName: Mysterious_Flower
+    Name: Mysterious Flower
+    Type: Etc
+    Buy: 500
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 6508
+    AegisName: Silver_Bracelet
+    Name: Silver Bracelet
+    Type: Etc
+    Buy: 300
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 6939
+    AegisName: Shabby_Old_Belt
+    Name: Worn-Out Belt
+    Type: Etc
+    Buy: 10
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7157
+    AegisName: Black_Mask
+    Name: Dark Mask
+    Type: Etc
+    Buy: 315
+    Weight: 10
+    Flags:
+      BuyingStore: true
   - Id: 7030
     AegisName: Claw_Of_Desert_Wolf
     Name: Claw of Desert Wolf
     Type: Etc
     Buy: 208
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7159
+    AegisName: Tengu's_Nose
+    Name: Tengu Nose
+    Type: Etc
+    Buy: 400
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7152
+    AegisName: Glossy_Hair
+    Name: Glossy Hair
+    Type: Etc
+    Buy: 340
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7153
+    AegisName: Old_Japaness_Clothes
+    Name: Worn-out Kimono
+    Type: Etc
+    Buy: 590
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7158
+    AegisName: Broken_Wine_Vessel
+    Name: Broken Liquor Jar
+    Type: Etc
+    Buy: 160
     Weight: 10
     Flags:
       BuyingStore: true
@@ -540,6 +612,14 @@ Body:
     Name: Fragment of Agony
     Type: Etc
     Buy: 1506
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7301
+    AegisName: Sword_Accessory
+    Name: Tassel
+    Type: Etc
+    Buy: 798
     Weight: 10
     Flags:
       BuyingStore: true

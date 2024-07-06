@@ -23,10 +23,10 @@ moc_pryd01,0,0	monster	Poporing	1031,20
 //==================================================
 moc_pryd02,0,0	monster	Poporing	1031,20
 moc_pryd02,0,0	monster	Drainliar	1111,20
-moc_pryd02,0,0	monster	Mummy	1041,30
+moc_pryd02,0,0	monster	Mummy	1041,45
 moc_pryd02,0,0	monster	Isis	1029,5
-moc_pryd02,0,0	monster	Soldier Skeleton	1028,30
-moc_pryd02,0,0	monster	Archer Skeleton	1016,30
+moc_pryd03,0,0	monster	Matyr	1146,25
+moc_pryd03,0,0	monster	Verit	1032,20
 
 //==================================================
 // moc_pryd03 - Inside Pyramid F3
@@ -56,6 +56,5 @@ moc_pryd05,0,0	monster	Verit	1032,50
 // moc_pryd06 - Inside Pyramid B2
 //==================================================
 moc_pryd06,0,0	monster	Verit	1032,10
-moc_pryd06,0,0	monster	Arclouze	1194,25
-moc_pryd06,100,90,80,50	monster	Ancient Mummy	1297,25
+moc_pryd06,100,90,80,50	monster	Ancient Mummy	1297,50
 moc_pryd06,102,180,1,1	boss_monster	Amon Ra	1511,1,3600000,600000,0

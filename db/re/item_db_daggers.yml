@@ -1570,3 +1570,43 @@ Body:
     WeaponLevel: 2
     EquipLevelMin: 70
     Refineable: true
+  - Id: 13013
+    AegisName: Murasame_
+    Name: Murasame
+    Type: Weapon
+    SubType: Dagger
+    Buy: 20
+    Weight: 700
+    Attack: 95
+    Range: 1
+    Slots: 2
+    Jobs:
+      KagerouOboro: true
+      Ninja: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    EquipLevelMin: 24
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Water;
+      bonus2 bCriticalAddRace,RC_DemiHuman,10;
+      bonus2 bCriticalAddRace,RC_Player_Human,10;
+  - Id: 1235
+    AegisName: Azoth
+    Name: Azoth
+    Type: Weapon
+    SubType: Dagger
+    Buy: 20
+    Weight: 700
+    Attack: 110
+    Range: 1
+    Jobs:
+      Alchemist: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 36
+    Refineable: true
+    Script: |
+      bonus bClassChange,300;

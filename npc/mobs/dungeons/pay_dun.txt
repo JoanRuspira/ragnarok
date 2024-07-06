@@ -25,53 +25,18 @@ pay_dun00,140,140,5,5	monster	Blue Mushroom	21433,3,360000,180000
 //==================================================
 // pay_dun01 - Payon Cave F2
 //==================================================
-pay_dun01,0,0	monster	Drainliar	1111,5
-pay_dun01,0,0	monster	Eggyra	1116,15
-pay_dun01,0,0	monster	Soldier Skeleton	1028,50,300000,150000
-pay_dun01,0,0	monster	Archer Skeleton	1016,30,300000,150000
+pay_dun01,0,0	monster	Drainliar	1111,20
+pay_dun01,0,0	monster	Soldier Skeleton	1028,40,300000,150000
+pay_dun01,0,0	monster	Archer Skeleton	1016,40,300000,150000
 pay_dun01,235,54,10,10	monster	Blue Mushroom	21433,7,900000,450000
 pay_dun01,0,0	monster	Red Plant	1078,10,180000,90000
 
 //==================================================
 // pay_dun02 - Payon Cave F3
 //==================================================
-pay_dun02,0,0	monster	Munak	1026,43
-pay_dun02,0,0	monster	Bongun	1188,42
-pay_dun01,0,0	monster	Eggyra	1116,30
-pay_dun02,116,205	monster	Hydra	1068,1,345000,100000
-pay_dun02,116,199	monster	Hydra	1068,1,306000,100000
-pay_dun02,116,196	monster	Hydra	1068,1,300000,100000
-pay_dun02,116,190	monster	Hydra	1068,1,326000,100000
-pay_dun02,117,206	monster	Hydra	1068,1,302000,100000
-pay_dun02,117,200	monster	Hydra	1068,1,275000,100000
-pay_dun02,117,197	monster	Hydra	1068,1,314000,100000
-pay_dun02,117,191	monster	Hydra	1068,1,300000,100000
-pay_dun02,118,207	monster	Hydra	1068,1,332000,100000
-pay_dun02,118,201	monster	Hydra	1068,1,300000,100000
-pay_dun02,118,198	monster	Hydra	1068,1,312000,100000
-pay_dun02,118,192	monster	Hydra	1068,1,285000,100000
-pay_dun02,119,205	monster	Hydra	1068,1,324000,100000
-pay_dun02,119,199	monster	Hydra	1068,1,300000,100000
-pay_dun02,119,196	monster	Hydra	1068,1,315000,100000
-pay_dun02,120,203	monster	Hydra	1068,1,300000,100000
-pay_dun02,120,200	monster	Hydra	1068,1,303000,100000
-pay_dun02,120,194	monster	Hydra	1068,1,300000,100000
-pay_dun02,121,200	monster	Hydra	1068,1,333000,100000
-pay_dun02,122,200	monster	Hydra	1068,1,300000,100000
-pay_dun02,122,197	monster	Hydra	1068,1,321000,100000
-pay_dun02,110,194	monster	Hydra	1068,1,300000,100000
-pay_dun02,113,194	monster	Hydra	1068,1,319000,100000
-pay_dun02,109,193	monster	Hydra	1068,1,300000,100000
-pay_dun02,113,193	monster	Hydra	1068,1,300000,100000
-pay_dun02,109,192	monster	Hydra	1068,1,374000,100000
-pay_dun02,112,192	monster	Hydra	1068,1,300000,100000
-pay_dun02,108,191	monster	Hydra	1068,1,332000,100000
-pay_dun02,111,191	monster	Hydra	1068,1,300000,100000
-pay_dun02,107,190	monster	Hydra	1068,1,320000,100000
-pay_dun02,110,190	monster	Hydra	1068,1,300000,100000
-pay_dun02,227,185	monster	Hydra	1068,1,300000,100000
-pay_dun02,227,184	monster	Hydra	1068,1,300000,100000
-pay_dun02,229,183	monster	Hydra	1068,1,300000,100000
+pay_dun02,0,0	monster	Revenant	20579,43
+pay_dun02,0,0	monster	Boney	2405,42
+pay_dun02,0,0	monster	Skeleton Officer	2406,30
 pay_dun02,214,266	monster	Red Plant	1078,1,600000,300000
 pay_dun02,37,243	monster	Blue Mushroom	21433,1,600000,300000
 pay_dun02,111,199,10,10	monster	Blue Mushroom	21433,7,900000,450000
@@ -83,10 +48,10 @@ pay_dun02,55,254,10,10	monster	Red Plant	1078,4,180000,90000
 //==================================================
 // pay_dun03 - Payon Cave F4
 //==================================================
-pay_dun03,0,0	monster	Sohee	1170,30
-pay_dun03,0,0	monster	Ghoul	1036,30
-pay_dun03,0,0	monster	Horong	1129,20
-pay_dun03,0,0	monster	Yao Jun	1512,20
+pay_dun03,0,0	monster	Revenant	20579,20
+pay_dun03,0,0	monster	Horong	1129,30
+pay_dun03,0,0	monster	Ghoul	1036,20
+pay_dun03,0,0	monster	Skeleton Officer	2406,30
 pay_dun03,228,61	monster	Red Plant	1078,1,600000,300000
 pay_dun03,138,42	monster	Blue Plant	1079,1,600000,300000
 pay_dun03,120,186	monster	Green Plant	1080,1,600000,300000
@@ -98,9 +63,8 @@ pay_dun03,52,262,10,4	monster	White Plant	1082,2,180000,90000
 //==================================================
 // pay_dun04 - Payon Cave F5
 //==================================================
-pay_dun04,0,0	monster	Horong	1129,20
-pay_dun04,0,0	monster	Ghoul	1036,20
-pay_dun04,0,0	monster	Yao Jun	1512,20
+pay_dun04,0,0	monster	Horong	1129,30
+pay_dun04,0,0	monster	Ghoul	1036,30
 pay_dun04,0,0	monster	Gajomart	1309,20
 pay_dun04,0,0	monster	Zombie Master	1298,20
 pay_dun04,0,0	monster	Skeleton General	1290,20

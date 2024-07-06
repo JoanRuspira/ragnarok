@@ -1515,7 +1515,7 @@ prt_fild04,367,163,5	script	Bulletin Board#sgn::255	837,{
 }
 
 ama_fild01,169,326,5	script	Board#sgn::256	858,{
-	mes "Tatami Maze ahead.";
+	mes "Amatsu Shrine.";
 	close;
 }
 

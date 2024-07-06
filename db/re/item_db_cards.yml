@@ -1039,6 +1039,88 @@ Body:
       BuyingStore: true
     Script: |
       bonus bVit,3;
+  - Id: 4641
+    AegisName: Zombie_Guard_Card
+    Name: Zombie Guard Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Left_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bNoRegen,2;
+      bonus bSPDrainValue,1;
+  - Id: 4587
+    AegisName: Tiyanak_Card
+    Name: Tiyanak Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Both_Accessory: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bCriticalAddRace,RC_DemiHuman,12;
+      bonus2 bCriticalAddRace,RC_Player_Human,12;
+      bonus2 bCriticalAddRace,RC_Brute,12;
+      bonus2 bCriticalAddRace,RC_Player_Doram,12;
+      bonus2 bCriticalAddRace,RC_Fish,12;
+  - Id: 4519
+    AegisName: Butoijo_Card
+    Name: Butoijo Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bAddRace,RC_Angel,20;
+  - Id: 4574
+    AegisName: Daehyon_Card
+    Name: General Daehyon Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      .@i = getiteminfo(getequipid(EQI_HAND_R), ITEMINFO_VIEW);
+      if (.@i == W_1HSWORD || .@i == W_2HSWORD) {
+         bonus bBaseAtk,100;
+      }
+  - Id: 4575
+    AegisName: Soheon_Card
+    Name: Soheon Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bBaseAtk,10;
+      if (getiteminfo(getequipid(EQI_HAND_R), ITEMINFO_VIEW) == W_DAGGER) {
+         .@r = getrefine();
+         if (.@r>=10) {
+            bonus bAspd,1;
+         }
+         if (.@r>=14) {
+            bonus bAspd,1;
+         }
+      }
   - Id: 300272
     AegisName: Pray_Giver_Card
     Name: Pray Giver Card

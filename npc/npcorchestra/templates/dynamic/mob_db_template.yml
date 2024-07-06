@@ -21528,3 +21528,674 @@ Body:
       - Item: Tha_Dolor_Card
         Rate: 1
         StealProtected: true
+  - Id: 2254
+    AegisName: SOHEON
+    Name: Soheon
+    Level: 43
+    Hp: 7628
+    BaseExp: 1739
+    JobExp: 1455
+    Attack: 210
+    Attack2: 251
+    MagicDefense: 10
+    Agi: 33
+    Vit: 33
+    Int: 10
+    Dex: 58
+    Luk: 15
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Water
+    ElementLevel: 1
+    WalkSpeed: 250
+    AttackDelay: 2112
+    AttackMotion: 912
+    DamageMotion: 576
+    Ai: 21
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Long_Hair
+        Rate: 9000
+      - Item: Skirt_Of_Virgin
+        Rate: 500
+      - Item: Nurse_Cap
+        Rate: 20
+      - Item: Muffler_
+        Rate: 15
+      - Item: Stiletto_
+        Rate: 15
+      - Item: Red_Herb
+        Rate: 1000
+      - Item: Soheon_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1584
+    AegisName: TAMRUAN
+    Name: Tamruan
+    Level: 52
+    Hp: 10234
+    BaseExp: 3812
+    JobExp: 55
+    Attack: 489
+    Attack2: 534
+    Defense: 15
+    MagicDefense: 35
+    Str: 80
+    Agi: 62
+    Vit: 38
+    Int: 75
+    Dex: 72
+    Luk: 15
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Dark
+    ElementLevel: 3
+    WalkSpeed: 140
+    AttackDelay: 512
+    AttackMotion: 1152
+    DamageMotion: 672
+    Ai: 13
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Sword_Accessory
+        Rate: 4850
+      - Item: Broken_Armor_Piece
+        Rate: 3000
+      - Item: Katana_
+        Rate: 40
+      - Item: Bastard_Sword_
+        Rate: 15
+      - Item: Chain_Mail_
+        Rate: 10
+      - Item: Tamruan_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 2155
+    AegisName: BUTOIJO
+    Name: Butoijo
+    Level: 88
+    Hp: 7524
+    BaseExp: 1069
+    JobExp: 1004
+    Attack: 358
+    Attack2: 102
+    Defense: 77
+    MagicDefense: 12
+    Str: 66
+    Agi: 65
+    Vit: 30
+    Int: 30
+    Dex: 106
+    Luk: 44
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Fire
+    ElementLevel: 2
+    WalkSpeed: 170
+    AttackDelay: 576
+    AttackMotion: 768
+    ClientAttackMotion: 336
+    DamageMotion: 432
+    Ai: 17
+    Modes:
+      Aggressive: true
+      Angry: true
+      Detector: true
+      TargetWeak: true
+    Drops:
+      - Item: Sticky_Mucus
+        Rate: 1375
+      - Item: Meat
+        Rate: 250
+      - Item: Leaflet_Of_Hinal
+        Rate: 225
+      - Item: Butoijo_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1405
+    AegisName: TENGU
+    Name: Tengu
+    Level: 65
+    Hp: 16940
+    BaseExp: 4207
+    JobExp: 2843
+    Attack: 660
+    Attack2: 980
+    Defense: 12
+    MagicDefense: 82
+    Str: 90
+    Agi: 42
+    Vit: 69
+    Int: 45
+    Dex: 78
+    Luk: 80
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Earth
+    ElementLevel: 2
+    WalkSpeed: 200
+    AttackDelay: 1439
+    AttackMotion: 1920
+    DamageMotion: 672
+    Ai: 04
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Tengu's_Nose
+        Rate: 3500
+      - Item: Broken_Wine_Vessel
+        Rate: 5500
+      - Item: Fruit_Of_Mastela
+        Rate: 150
+      - Item: Tengu_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 2253
+    AegisName: DAEHYON
+    Name: General Daehyun
+    JapaneseName: Daehyon
+    Level: 89
+    Hp: 493000
+    BaseExp: 64995
+    JobExp: 43222
+    MvpExp: 32497
+    Attack: 450
+    Attack2: 2170
+    Defense: 20
+    MagicDefense: 44
+    Agi: 125
+    Vit: 48
+    Int: 78
+    Dex: 210
+    Luk: 38
+    AttackRange: 14
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demihuman
+    Element: Earth
+    ElementLevel: 3
+    WalkSpeed: 100
+    AttackDelay: 576
+    AttackMotion: 432
+    DamageMotion: 360
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Magic_Card_Album
+        Rate: 5000
+      - Item: Old_Violet_Box
+        Rate: 5000
+      - Item: Old_Violet_Box
+        Rate: 5000
+    Drops:
+      - Item: Dex_Dish10
+        Rate: 5000
+      - Item: Old_Violet_Box
+        Rate: 3000
+      - Item: Old_Card_Album
+        Rate: 500
+      - Item: Daehyon_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1416
+    AegisName: WICKED_NYMPH
+    Name: Evil Nymph
+    JapaneseName: Wicked Nymph
+    Level: 63
+    Hp: 16029
+    BaseExp: 3945
+    JobExp: 2599
+    Attack: 399
+    Attack2: 1090
+    Defense: 12
+    MagicDefense: 75
+    Agi: 64
+    Vit: 12
+    Int: 69
+    Dex: 100
+    Luk: 80
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Dark
+    ElementLevel: 3
+    WalkSpeed: 200
+    AttackDelay: 637
+    AttackMotion: 1008
+    DamageMotion: 360
+    Ai: 21
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Limpid_Celestial_Robe
+        Rate: 3977
+      - Item: Soft_Silk_Cloth
+        Rate: 1380
+      - Item: Oridecon
+        Rate: 10
+      - Item: Mandolin_
+        Rate: 15
+      - Item: Lute_
+        Rate: 10
+      - Item: Oriental_Lute
+        Rate: 10
+      - Item: Wicked_Nymph_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1404
+    AegisName: MIYABI_NINGYO
+    Name: Miyabi Doll
+    JapaneseName: Miyabi Ningyo
+    Level: 33
+    Hp: 6300
+    BaseExp: 795
+    JobExp: 453
+    Attack: 250
+    Attack2: 305
+    Defense: 1
+    MagicDefense: 20
+    Agi: 52
+    Vit: 15
+    Int: 10
+    Dex: 62
+    Luk: 15
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Dark
+    ElementLevel: 1
+    WalkSpeed: 250
+    AttackDelay: 1938
+    AttackMotion: 2112
+    DamageMotion: 768
+    Ai: 17
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Glossy_Hair
+        Rate: 5335
+      - Item: Old_Japaness_Clothes
+        Rate: 2500
+      - Item: White_Herb
+        Rate: 1550
+      - Item: Star_Crumb
+        Rate: 1250
+      - Item: Mandolin_
+        Rate: 15
+      - Item: Miyabi_Ningyo_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1401
+    AegisName: SHINOBI
+    Name: Shinobi
+    Level: 69
+    Hp: 12700
+    BaseExp: 4970
+    JobExp: 3010
+    Attack: 460
+    Attack2: 1410
+    Defense: 34
+    MagicDefense: 21
+    Str: 85
+    Agi: 85
+    Vit: 25
+    Int: 25
+    Dex: 100
+    Luk: 100
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    RaceGroups:
+      Ninja: true
+    Element: Dark
+    ElementLevel: 3
+    WalkSpeed: 150
+    AttackDelay: 1003
+    AttackMotion: 1152
+    DamageMotion: 336
+    Ai: 21
+    Drops:
+      - Item: Broken_Shuriken
+        Rate: 5335
+      - Item: Ninja_Suit
+        Rate: 15
+      - Item: Cyfar
+        Rate: 2200
+      - Item: Shinobi's_Sash
+        Rate: 30
+      - Item: Thief_Clothes_
+        Rate: 10
+      - Item: Black_Mask
+        Rate: 2000
+      - Item: Murasame_
+        Rate: 10
+      - Item: Shinobi_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1403
+    AegisName: ANTIQUE_FIRELOCK
+    Name: Firelock Soldier
+    JapaneseName: Antique Firelock
+    Level: 47
+    Hp: 3852
+    BaseExp: 1293
+    JobExp: 1003
+    Attack: 289
+    Attack2: 336
+    Defense: 10
+    MagicDefense: 10
+    Str: 15
+    Agi: 35
+    Vit: 29
+    Int: 15
+    Dex: 120
+    Luk: 42
+    AttackRange: 10
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 2
+    WalkSpeed: 170
+    AttackDelay: 1084
+    AttackMotion: 2304
+    DamageMotion: 576
+    Ai: 05
+    Drops:
+      - Item: Iron
+        Rate: 5500
+      - Item: Apple_Of_Archer
+        Rate: 10
+      - Item: Large_Jellopy
+        Rate: 1400
+      - Item: Yellow_Herb
+        Rate: 40
+      - Item: Panacea
+        Rate: 250
+      - Item: Antique_Firelock_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 1492
+    AegisName: INCANTATION_SAMURAI
+    Name: Samurai Specter
+    JapaneseName: Incantation Samurai
+    Level: 71
+    Hp: 218652
+    BaseExp: 33095
+    JobExp: 18214
+    MvpExp: 16547
+    Attack: 2219
+    Attack2: 3169
+    Defense: 10
+    MagicDefense: 51
+    Str: 91
+    Agi: 85
+    Vit: 30
+    Int: 85
+    Dex: 150
+    Luk: 60
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demihuman
+    Element: Dark
+    ElementLevel: 3
+    WalkSpeed: 135
+    AttackDelay: 874
+    AttackMotion: 1344
+    DamageMotion: 576
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Yggdrasilberry
+        Rate: 5500
+      - Item: Seed_Of_Yggdrasil
+        Rate: 3500
+      - Item: Elunium
+        Rate: 5500
+    Drops:
+      - Item: Masamune
+        Rate: 1000
+      - Item: Elunium
+        Rate: 3500
+      - Item: Assassin_Mask_
+        Rate: 1000
+      - Item: Yggdrasilberry
+        Rate: 4500
+      - Item: Steel
+        Rate: 6305
+      - Item: Azoth
+        Rate: 1000
+      - Item: Incant_Samurai_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 20579
+    AegisName: MD_C_ZOMBIE
+    Name: Revenant
+    Level: 30
+    Hp: 2872
+    BaseExp: 601
+    JobExp: 318
+    Attack: 150
+    Attack2: 230
+    Agi: 15
+    Vit: 20
+    Int: 5
+    Dex: 46
+    Luk: 15
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 2468
+    AttackMotion: 768
+    DamageMotion: 288
+    Ai: 04
+    Drops:
+      - Item: Horrendous_Mouth
+        Rate: 6000
+      - Item: Oridecon_Stone
+        Rate: 110
+      - Item: White_Herb
+        Rate: 700
+      - Item: Green_Herb
+        Rate: 800
+      - Item: Skul_Ring
+        Rate: 10
+      - Item: Mementos
+        Rate: 150
+  - Id: 2405
+    AegisName: WEAK_SKELETON
+    Name: Boney
+    Level: 30
+    Hp: 2872
+    BaseExp: 601
+    JobExp: 318
+    Attack: 150
+    Attack2: 230
+    Agi: 15
+    Vit: 20
+    Int: 5
+    Dex: 46
+    Luk: 15
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 2468
+    AttackMotion: 768
+    DamageMotion: 288
+    Ai: 04
+    Drops:
+      - Item: Phracon
+        Rate: 45
+      - Item: Skel_Bone
+        Rate: 800
+      - Item: Mace_
+        Rate: 40
+      - Item: Jellopy
+        Rate: 1500
+      - Item: Red_Herb
+        Rate: 500
+      - Item: Skul_Ring
+        Rate: 15
+  - Id: 3452
+    AegisName: ZOMBIE_GUARD
+    Name: Zombie Guard
+    Level: 40
+    Hp: 5418
+    BaseExp: 1088
+    JobExp: 622
+    Attack: 420
+    Attack2: 500
+    Defense: 5
+    MagicDefense: 20
+    Agi: 20
+    Vit: 29
+    Int: 0
+    Dex: 45
+    Luk: 20
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 2
+    WalkSpeed: 250
+    AttackDelay: 2456
+    AttackMotion: 912
+    DamageMotion: 504
+    Ai: 04
+    Drops:
+      - Item: Shabby_Old_Belt
+        Rate: 4000
+      - Item: Clattering_Skull
+        Rate: 1500
+      - Item: Tatters_Clothes
+        Rate: 2207
+      - Item: Sticky_Mucus
+        Rate: 750
+      - Item: Cardinal_Jewel
+        Rate: 100
+      - Item: White_Jewel
+        Rate: 50
+      - Item: Zombie_Guard_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 2406
+    AegisName: WEAK_SKEL_SOLDIER
+    Name: Skeleton Officer
+    Level: 35
+    Hp: 3172
+    BaseExp: 801
+    JobExp: 418
+    Attack: 160
+    Attack2: 240
+    Agi: 15
+    Vit: 20
+    Int: 5
+    Dex: 46
+    Luk: 15
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 2468
+    AttackMotion: 768
+    DamageMotion: 288
+    Ai: 04
+    Drops:
+      - Item: Skel_Bone
+        Rate: 5000
+      - Item: Oridecon_Stone
+        Rate: 150
+      - Item: Red_Herb
+        Rate: 1700
+      - Item: Mementos
+        Rate: 2000
+      - Item: Chain_Mail_
+        Rate: 10
+      - Item: Stiletto_
+        Rate: 15
+  - Id: 2314
+    AegisName: TIYANAK
+    Name: Tiyanak
+    Level: 105
+    Hp: 17146
+    BaseExp: 1625
+    JobExp: 1547
+    Attack: 457
+    Attack2: 251
+    Defense: 76
+    MagicDefense: 21
+    Str: 41
+    Agi: 58
+    Vit: 41
+    Int: 51
+    Dex: 72
+    Luk: 47
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Demon
+    Element: Dark
+    ElementLevel: 2
+    WalkSpeed: 100
+    AttackDelay: 496
+    AttackMotion: 504
+    ClientAttackMotion: 360
+    DamageMotion: 360
+    Ai: 21
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Silver_Bracelet
+        Rate: 1500
+      - Item: Mysterious_Flower
+        Rate: 1000
+      - Item: Sticky_Mucus
+        Rate: 1000
+      - Item: Tiyanak_Card
+        Rate: 1
+        StealProtected: true

@@ -831,3 +831,24 @@ Body:
       bonus bHealPower,5;
       bonus2 bAddDamageClass,1916,10;
       bonus2 bAddDamageClass,1917,10;
+  - Id: 2654
+    AegisName: Shinobi's_Sash
+    Name: Shinobi Sash
+    Type: Armor
+    Buy: 20000
+    Weight: 300
+    Defense: 1
+    Jobs:
+      Assassin: true
+      KagerouOboro: true
+      Ninja: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Both_Accessory: true
+    ArmorLevel: 1
+    EquipLevelMin: 30
+    Script: |
+      bonus bStr,1;
+      bonus bAgi,1;
+      bonus bMdef,1;

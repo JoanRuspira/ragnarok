@@ -13,17 +13,20 @@
 //============================================================
 
 //==================================================
-// lou_dun02 - Inside the Royal Tomb
+// lou_dun02 - Royal Tomb
 //==================================================
-lou_dun02,0,0	monster	Yao Jun	1512,40
-lou_dun02,0,0	monster	Jing Guai	1517,30
-lou_dun02,0,0	monster	Zhu Po Long	1514,30
+lou_dun02,0,0	monster	Munak	1026,30
+lou_dun02,0,0	monster	Bongun	1188,30
+lou_dun02,0,0	monster	Sohee	1170,40
+lou_dun02,0,0	monster	Miyabi Doll	1404,20
 lou_dun02,0,0	monster	Red Mushroom	1085,20
 
+
 //==================================================
-// lou_dun03 - Suei Long Gon
+// lou_dun03 - Royal Tomb
 //==================================================
-lou_dun03,0,0	monster	Zhu Po Long	1514,25
-lou_dun03,0,0	monster	Mao Guai	1513,25
+lou_dun03,0,0	monster	Yao Jun	1512,25
+lou_dun03,0,0	monster	Soheon	2254,25
+lou_dun03,0,0	monster	Evil Nymph	1416,25
 lou_dun03,0,0	monster	Green Maiden	1631,25
 lou_dun03,0,0,0,0	boss_monster	White Lady	1630,1,7000000,600000,1

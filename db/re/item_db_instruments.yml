@@ -356,3 +356,23 @@ Body:
       bonus bHPrecovRate,-100;
       bonus2 bHPLossRate,50,5000;
       bonus bDex,-readparam(bDex);
+  - Id: 1918
+    AegisName: Oriental_Lute
+    Name: Oriental Lute
+    Type: Weapon
+    SubType: Musical
+    Buy: 20
+    Weight: 1200
+    Attack: 150
+    Range: 1
+    Jobs:
+      BardDancer: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus2 bSkillAtk,"CG_ARROWVULCAN",10;
+      bonus2 bSkillAtk,"BA_MUSICALSTRIKE",10;
