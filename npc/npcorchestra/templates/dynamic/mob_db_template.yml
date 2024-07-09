@@ -379,8 +379,7 @@ Body:
     AttackMotion: 672
     DamageMotion: 480
     Ai: 01
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Fluff
         Rate: 6500
@@ -421,8 +420,7 @@ Body:
     AttackDelay: 1001
     AttackMotion: 1
     DamageMotion: 1
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Phracon
         Rate: 80
@@ -468,8 +466,7 @@ Body:
     AttackMotion: 720
     DamageMotion: 840
     Ai: 01
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Powder_Of_Butterfly
         Rate: 9000
@@ -554,8 +551,7 @@ Body:
     AttackMotion: 792
     DamageMotion: 216
     Ai: 03
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Wind_Of_Verdure
         Rate: 80
@@ -599,8 +595,7 @@ Body:
     AttackMotion: 288
     DamageMotion: 768
     Ai: 07
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Worm_Peelings
         Rate: 2500
@@ -909,8 +904,7 @@ Body:
     AttackMotion: 864
     DamageMotion: 540
     Ai: 01
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Grasshopper's_Leg
         Rate: 9000
@@ -956,8 +950,7 @@ Body:
     AttackMotion: 648
     DamageMotion: 480
     Ai: 21
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Oldman's_Romance
         Rate: 50
@@ -999,8 +992,7 @@ Body:
     AttackDelay: 701
     AttackMotion: 1
     DamageMotion: 1
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Phracon
         Rate: 300
@@ -2172,8 +2164,7 @@ Body:
     AttackMotion: 534
     DamageMotion: 312
     Ai: 21
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Dragon_Fly_Wing
         Rate: 4413
@@ -2758,8 +2749,7 @@ Body:
     AttackMotion: 576
     DamageMotion: 480
     Ai: 01
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Iron
         Rate: 50
@@ -2990,8 +2980,7 @@ Body:
     AttackMotion: 660
     DamageMotion: 432
     Ai: 09
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Yellow_Live
         Rate: 110
@@ -3037,8 +3026,7 @@ Body:
     AttackMotion: 648
     DamageMotion: 648
     Ai: 17
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Crystal_Blue
         Rate: 50
@@ -3361,8 +3349,7 @@ Body:
     AttackMotion: 576
     DamageMotion: 288
     Ai: 13
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Sharp_Feeler
         Rate: 4608
@@ -3733,8 +3720,7 @@ Body:
     AttackMotion: 528
     DamageMotion: 288
     Ai: 17
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Yellow_Live
         Rate: 80
@@ -3779,8 +3765,7 @@ Body:
     AttackMotion: 768
     DamageMotion: 576
     Ai: 03
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Solid_Peeling
         Rate: 6500
@@ -4435,8 +4420,7 @@ Body:
     AttackMotion: 576
     DamageMotion: 480
     Ai: 04
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Rough_Wind
         Rate: 30
@@ -4698,8 +4682,7 @@ Body:
     AttackMotion: 864
     DamageMotion: 576
     Ai: 09
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Boody_Red
         Rate: 70
@@ -4744,8 +4727,7 @@ Body:
     AttackMotion: 1008
     DamageMotion: 540
     Ai: 07
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Boody_Red
         Rate: 60
@@ -4790,8 +4772,7 @@ Body:
     AttackMotion: 360
     DamageMotion: 360
     Ai: 02
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Old_Frying_Pan
         Rate: 9000
@@ -5056,8 +5037,7 @@ Body:
     AttackMotion: 576
     DamageMotion: 480
     Ai: 07
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Wind_Of_Verdure
         Rate: 90
@@ -5150,8 +5130,7 @@ Body:
     AttackMotion: 288
     DamageMotion: 384
     Ai: 07
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Worm_Peelings
         Rate: 9000
@@ -5296,8 +5275,7 @@ Body:
     AttackMotion: 1188
     DamageMotion: 612
     Ai: 17
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Wind_Of_Verdure
         Rate: 70
@@ -5430,8 +5408,7 @@ Body:
     AttackMotion: 468
     DamageMotion: 768
     Ai: 09
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Spiderweb
         Rate: 9000
@@ -5533,8 +5510,7 @@ Body:
     AttackMotion: 792
     DamageMotion: 336
     Ai: 21
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Short_Leg
         Rate: 5335
@@ -5578,8 +5554,7 @@ Body:
     AttackMotion: 504
     DamageMotion: 384
     Ai: 17
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Moth_Dust
         Rate: 9000
@@ -5971,8 +5946,7 @@ Body:
     AttackMotion: 960
     DamageMotion: 672
     Ai: 04
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Spawns
         Rate: 4074
@@ -6447,8 +6421,7 @@ Body:
     AttackMotion: 672
     DamageMotion: 470
     Ai: 04
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Harpy's_Feather
         Rate: 4850
@@ -6532,8 +6505,7 @@ Body:
     AttackMotion: 576
     DamageMotion: 420
     Ai: 21
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Long_Limb
         Rate: 4500
@@ -6580,8 +6552,7 @@ Body:
     AttackMotion: 360
     DamageMotion: 360
     Ai: 02
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Jubilee
         Rate: 5000
@@ -7689,8 +7660,7 @@ Body:
     ClientAttackMotion: 336
     DamageMotion: 480
     Ai: 04
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Withered_Flower
         Rate: 1500
@@ -7826,8 +7796,7 @@ Body:
     ClientAttackMotion: 288
     DamageMotion: 432
     Ai: 04
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Burning_Horse_Shoe
         Rate: 2000
@@ -7927,8 +7896,7 @@ Body:
     ClientAttackMotion: 720
     DamageMotion: 432
     Ai: 08
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Sprint_Ring
         Rate: 2
@@ -7977,8 +7945,7 @@ Body:
     ClientAttackMotion: 360
     DamageMotion: 576
     Ai: 04
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Spiderweb
         Rate: 9000
@@ -8148,8 +8115,7 @@ Body:
     AttackMotion: 1536
     DamageMotion: 480
     Ai: 04
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Broken_Needle
         Rate: 4365
@@ -8197,8 +8163,7 @@ Body:
     AttackMotion: 1584
     DamageMotion: 576
     Ai: 04
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Hanging_Doll
         Rate: 1800
@@ -8283,8 +8248,7 @@ Body:
     AttackMotion: 1632
     DamageMotion: 576
     Ai: 04
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Black_Kitty_Doll
         Rate: 800
@@ -8331,8 +8295,7 @@ Body:
     AttackMotion: 768
     DamageMotion: 384
     Ai: 04
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Red_Scarf
         Rate: 4850
@@ -8663,8 +8626,7 @@ Body:
     AttackMotion: 576
     DamageMotion: 420
     Ai: 04
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Tiger_Skin_Panties
         Rate: 4500
@@ -8929,8 +8891,7 @@ Body:
     AttackMotion: 1320
     DamageMotion: 360
     Ai: 21
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Slender_Snake
         Rate: 5335
@@ -9192,8 +9153,7 @@ Body:
     AttackMotion: 660
     DamageMotion: 624
     Ai: 21
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Cyfar
         Rate: 100
@@ -9710,8 +9670,7 @@ Body:
     AttackMotion: 288
     DamageMotion: 576
     Ai: 07
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Worm_Peelings
         Rate: 9000
@@ -9757,8 +9716,7 @@ Body:
     AttackMotion: 288
     DamageMotion: 576
     Ai: 07
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Worm_Peelings
         Rate: 9000
@@ -9805,8 +9763,7 @@ Body:
     AttackMotion: 768
     DamageMotion: 384
     Ai: 17
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Yellow_Live
         Rate: 90
@@ -10082,8 +10039,7 @@ Body:
     AttackMotion: 768
     DamageMotion: 336
     Ai: 09
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Scales_Shell
         Rate: 5335
@@ -10496,8 +10452,7 @@ Body:
     AttackMotion: 500
     DamageMotion: 480
     Ai: 09
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Round_Shell
         Rate: 3500
@@ -10912,8 +10867,7 @@ Body:
     AttackMotion: 960
     DamageMotion: 504
     Ai: 09
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Sparkling_Dust
         Rate: 150
@@ -11266,8 +11220,7 @@ Body:
     AttackMotion: 912
     DamageMotion: 576
     Ai: 17
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Long_Hair
         Rate: 9000
@@ -11352,8 +11305,7 @@ Body:
     AttackMotion: 456
     DamageMotion: 384
     Ai: 17
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Dokkaebi_Horn
         Rate: 9000
@@ -11399,8 +11351,7 @@ Body:
     AttackMotion: 456
     DamageMotion: 384
     Ai: 21
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Dokkaebi_Horn
         Rate: 4550
@@ -12124,8 +12075,7 @@ Body:
     AttackMotion: 660
     DamageMotion: 432
     Ai: 21
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Limb_Of_Mantis
         Rate: 4550
@@ -12214,8 +12164,7 @@ Body:
     AttackMotion: 480
     DamageMotion: 120
     Ai: 21
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Evil_Horn
         Rate: 500
@@ -12776,8 +12725,7 @@ Body:
     AttackMotion: 816
     DamageMotion: 432
     Ai: 04
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Burning_Horse_Shoe
         Rate: 4947
@@ -12820,8 +12768,7 @@ Body:
     AttackMotion: 780
     DamageMotion: 180
     Ai: 04
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Petite_DiablOfs_Horn
         Rate: 5820
@@ -12863,8 +12810,7 @@ Body:
     AttackMotion: 816
     DamageMotion: 432
     Ai: 20
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Horseshoe
         Rate: 6000
@@ -12953,8 +12899,7 @@ Body:
     AttackMotion: 600
     DamageMotion: 384
     Ai: 21
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Petite_DiablOfs_Horn
         Rate: 5335
@@ -12998,8 +12943,7 @@ Body:
     AttackMotion: 1536
     DamageMotion: 672
     Ai: 21
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Sparkling_Dust
         Rate: 150
@@ -13039,8 +12983,7 @@ Body:
     AttackMotion: 480
     DamageMotion: 1056
     Ai: 09
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Golden_Hair
         Rate: 9000
@@ -13121,8 +13064,7 @@ Body:
     AttackMotion: 1056
     DamageMotion: 288
     Ai: 21
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Fruit_Of_Mastela
         Rate: 1500
@@ -13165,8 +13107,7 @@ Body:
     AttackMotion: 600
     DamageMotion: 336
     Ai: 21
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Fruit_Of_Mastela
         Rate: 1500
@@ -13208,8 +13149,7 @@ Body:
     AttackMotion: 600
     DamageMotion: 384
     Ai: 21
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Petite_DiablOfs_Horn
         Rate: 4413
@@ -13338,8 +13278,7 @@ Body:
     AttackMotion: 1296
     DamageMotion: 432
     Ai: 17
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Great_Nature
         Rate: 30
@@ -13805,8 +13744,7 @@ Body:
     AttackMotion: 500
     DamageMotion: 1000
     Ai: 09
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Glitter_Shell
         Rate: 5335
@@ -13850,8 +13788,7 @@ Body:
     AttackMotion: 468
     DamageMotion: 768
     Ai: 21
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Spiderweb
         Rate: 4550
@@ -13899,8 +13836,7 @@ Body:
     AttackMotion: 792
     DamageMotion: 336
     Ai: 21
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Short_Leg
         Rate: 4413
@@ -14469,8 +14405,7 @@ Body:
     AttackMotion: 432
     DamageMotion: 360
     Ai: 13
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Burnt_Parts
         Rate: 2000
@@ -14518,8 +14453,7 @@ Body:
     AttackMotion: 480
     DamageMotion: 504
     Ai: 13
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Burnt_Parts
         Rate: 2000
@@ -15077,8 +15011,7 @@ Body:
     AttackMotion: 1332
     DamageMotion: 540
     Ai: 20
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Burning_Heart
         Rate: 4850
@@ -15161,8 +15094,7 @@ Body:
     AttackMotion: 1000
     DamageMotion: 500
     Ai: 04
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Flame_Heart
         Rate: 50
@@ -16243,8 +16175,7 @@ Body:
     AttackMotion: 576
     DamageMotion: 420
     Ai: 21
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Long_Limb
         Rate: 4500
@@ -16478,8 +16409,7 @@ Body:
     AttackMotion: 370
     DamageMotion: 270
     Ai: 20
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Ice_Heart
         Rate: 3000
@@ -17460,8 +17390,7 @@ Body:
     AttackMotion: 384
     DamageMotion: 288
     Ai: 09
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Armlet_Of_Prisoner
         Rate: 3000
@@ -17508,8 +17437,7 @@ Body:
     AttackMotion: 384
     DamageMotion: 288
     Ai: 09
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Lab_Staff_Record
         Rate: 2000
@@ -17728,8 +17656,7 @@ Body:
     AttackMotion: 384
     DamageMotion: 288
     Ai: 09
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Armlet_Of_Prisoner
         Rate: 3000
@@ -17772,8 +17699,7 @@ Body:
     AttackMotion: 384
     DamageMotion: 288
     Ai: 09
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Lab_Staff_Record
         Rate: 2000
@@ -17976,8 +17902,7 @@ Body:
     AttackMotion: 672
     DamageMotion: 360
     Ai: 03
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Singlehorn_Helm
         Rate: 3250
@@ -18022,8 +17947,7 @@ Body:
     AttackMotion: 360
     DamageMotion: 360
     Ai: 03
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Twinhorn_Helm
         Rate: 3250
@@ -18067,8 +17991,7 @@ Body:
     AttackMotion: 624
     DamageMotion: 360
     Ai: 04
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Antler_Helm
         Rate: 3250
@@ -18112,8 +18035,7 @@ Body:
     AttackMotion: 768
     DamageMotion: 480
     Ai: 04
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Rakehorn_Helm
         Rate: 3250
@@ -18454,8 +18376,7 @@ Body:
     AttackMotion: 528
     DamageMotion: 432
     Ai: 04
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Prickly_Fruit_
         Rate: 1000
@@ -18503,8 +18424,7 @@ Body:
     AttackMotion: 540
     DamageMotion: 432
     Ai: 17
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Will_Of_Darkness
         Rate: 3000
@@ -18782,8 +18702,7 @@ Body:
     AttackMotion: 384
     DamageMotion: 288
     Ai: 17
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Great_Nature
         Rate: 30
@@ -18876,8 +18795,7 @@ Body:
     AttackMotion: 432
     DamageMotion: 360
     Ai: 20
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Hot_Hair
         Rate: 3000
@@ -19369,8 +19287,7 @@ Body:
     AttackMotion: 432
     DamageMotion: 360
     Ai: 21
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Monster's_Feed
         Rate: 5000
@@ -19412,8 +19329,7 @@ Body:
     AttackMotion: 504
     DamageMotion: 504
     Ai: 21
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Old_White_Cloth
         Rate: 3000
@@ -19459,8 +19375,7 @@ Body:
     AttackMotion: 648
     DamageMotion: 432
     Ai: 09
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Skull
         Rate: 5000
@@ -19653,8 +19568,7 @@ Body:
     AttackMotion: 576
     DamageMotion: 432
     Ai: 20
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Rune_Of_Darkness
         Rate: 3500
@@ -19699,8 +19613,7 @@ Body:
     AttackMotion: 576
     DamageMotion: 432
     Ai: 20
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Holy_Water
         Rate: 3500
@@ -19745,8 +19658,7 @@ Body:
     AttackMotion: 384
     DamageMotion: 480
     Ai: 20
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Rune_Of_Darkness
         Rate: 3500
@@ -19793,8 +19705,7 @@ Body:
     AttackMotion: 384
     DamageMotion: 480
     Ai: 20
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Holy_Water
         Rate: 3500
@@ -20338,8 +20249,7 @@ Body:
     AttackMotion: 672
     DamageMotion: 480
     Ai: 21
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Feather
         Rate: 3000
@@ -20779,8 +20689,7 @@ Body:
     AttackMotion: 720
     DamageMotion: 840
     Ai: 21
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Powder_Of_Butterfly
         Rate: 4550
@@ -21555,8 +21464,7 @@ Body:
     AttackMotion: 912
     DamageMotion: 576
     Ai: 21
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Long_Hair
         Rate: 9000
@@ -21602,8 +21510,7 @@ Body:
     AttackMotion: 1152
     DamageMotion: 672
     Ai: 13
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Sword_Accessory
         Rate: 4850
@@ -21692,8 +21599,7 @@ Body:
     AttackMotion: 1920
     DamageMotion: 672
     Ai: 04
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Tengu's_Nose
         Rate: 3500
@@ -21783,8 +21689,7 @@ Body:
     AttackMotion: 1008
     DamageMotion: 360
     Ai: 21
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Limpid_Celestial_Robe
         Rate: 3977
@@ -21830,8 +21735,7 @@ Body:
     AttackMotion: 2112
     DamageMotion: 768
     Ai: 17
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Glossy_Hair
         Rate: 5335
@@ -22187,8 +22091,7 @@ Body:
     ClientAttackMotion: 360
     DamageMotion: 360
     Ai: 21
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Silver_Bracelet
         Rate: 1500
@@ -22551,8 +22454,7 @@ Body:
     AttackMotion: 792
     DamageMotion: 340
     Ai: 21
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Royal_Jelly
         Rate: 550
@@ -22691,8 +22593,7 @@ Body:
     AttackMotion: 720
     DamageMotion: 384
     Ai: 05
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Zargon
         Rate: 3880
@@ -22865,8 +22766,7 @@ Body:
     AttackMotion: 1440
     DamageMotion: 540
     Ai: 13
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Thin_N'_Long_Tongue
         Rate: 3880
@@ -23490,8 +23390,7 @@ Body:
     AttackMotion: 768
     DamageMotion: 384
     Ai: 21
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Brigan
         Rate: 3200
@@ -23534,8 +23433,7 @@ Body:
     AttackMotion: 720
     DamageMotion: 200
     Ai: 21
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Brigan
         Rate: 4656
@@ -23577,8 +23475,7 @@ Body:
     AttackMotion: 500
     DamageMotion: 192
     Ai: 21
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Skull
         Rate: 4850
@@ -23778,8 +23675,7 @@ Body:
     AttackMotion: 1152
     DamageMotion: 480
     Ai: 05
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Brigan
         Rate: 4656
@@ -24332,8 +24228,7 @@ Body:
     AttackMotion: 1152
     DamageMotion: 480
     Ai: 05
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Sticky_Poison
         Rate: 1000
@@ -24377,8 +24272,7 @@ Body:
     AttackMotion: 500
     DamageMotion: 192
     Ai: 21
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Sticky_Poison
         Rate: 1000
@@ -24652,8 +24546,7 @@ Body:
     AttackMotion: 1332
     DamageMotion: 540
     Ai: 20
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Piece_Of_Black_Cloth
         Rate: 2500
@@ -24694,8 +24587,7 @@ Body:
     AttackMotion: 1332
     DamageMotion: 540
     Ai: 20
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Browny_Root
         Rate: 1500
@@ -24732,8 +24624,7 @@ Body:
     AttackMotion: 1332
     DamageMotion: 540
     Ai: 20
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Piece_Of_Darkness
         Rate: 250
@@ -24772,8 +24663,7 @@ Body:
     AttackMotion: 1332
     DamageMotion: 540
     Ai: 20
-    Modes:
-      Detector: true
+
     Drops:
       - Item: Piece_Of_Darkness
         Rate: 250
@@ -24839,6 +24729,6 @@ Body:
         Rate: 5141
       - Item: Bone_Helm_
         Rate: 200
-      - Item: Dark_Lord_Card
+      - Item: Nahtzigger_Card
         Rate: 1
         StealProtected: true
