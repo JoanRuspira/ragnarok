@@ -926,6 +926,7 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bAddEle,Ele_Water,20;
+      bonus2 bMagicAddEle,Ele_Water,20; 
   - Id: 4070
     AegisName: Eggyra_Card
     Name: Eggyra Card
@@ -3242,6 +3243,22 @@ Body:
       bonus bVit,-3;
       bonus bHPrecovRate,-20;
       bonus bMaxHP,1000;
+  - Id: 27264
+    AegisName: Tower_Shadow_Card
+    Name: Tower Shadow Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Left_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bSubEle,Ele_Dark,30;
+      bonus2 bSubEle,Ele_Undead,30;
+      bonus2 bSubEle,Ele_Holy,-30;
+      bonus2 bSubEle,Ele_Fire,-30;
   - Id: 4219
     AegisName: Sageworm_Card
     Name: Sage Worm Card
@@ -3855,6 +3872,207 @@ Body:
     Script: |
       bonus2 bSubClass,Class_Boss,40;
       bonus2 bSubClass,Class_Normal,-40;
+  - Id: 27354
+    AegisName: Polluted_Raydric_Card
+    Name: Polluted Raydric Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Armor: true
+    Flags:
+      DropEffect: CLIENT
+    Script: |
+      bonus bAtkRate,5;
+  - Id: 27355
+    AegisName: Polluted_Ray_A_Card
+    Name: Polluted Raydric Archer Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      DropEffect: CLIENT
+    Script: |
+      bonus bLongAtkRate,10;
+  - Id: 27357
+    AegisName: Mutant_Sting_Card
+    Name: Mutant Sting Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Armor: true
+    Flags:
+      DropEffect: CLIENT
+    Script: |
+      bonus bDef,100+25*(getrefine()/3);
+  - Id: 4457
+    AegisName: Nahtzigger_Card
+    Name: Naght Sieger Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Armor: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Ghost,30;
+  - Id: 27165
+    AegisName: Faceworm_D_Card
+    Name: Dark Faceworm Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Both_Accessory: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bVit,-1;
+      bonus bInt,-1;
+      bonus bDelayrate,-3;
+  - Id: 4458
+    AegisName: Duneirre_Card
+    Name: Duneyrr Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Head_Low: true
+      Head_Mid: true
+      Head_Top: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bBaseAtk,10;
+      autobonus "{ bonus bFlee2,10; }",10,4000,BF_NORMAL,"{ specialeffect2 EF_HASTEUP; }";
+  - Id: 4468
+    AegisName: Pinguicula_Dark_Card
+    Name: Dark Pinguicula Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Head_Low: true
+      Head_Mid: true
+      Head_Top: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bBaseAtk,10;
+      bonus2 bAddMonsterDropItem,7932,10;
+      bonus2 bAddMonsterDropItem,7933,10;
+      bonus2 bAddMonsterDropItem,7934,10;
+      bonus2 bAddMonsterDropItem,7935,10;
+      bonus2 bAddMonsterDropItem,7936,10;
+      bonus2 bAddMonsterDropItem,7937,10;
+  - Id: 4449
+    AegisName: Dark_Shadow_Card
+    Name: Dark Shadow Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Left_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bSubEle,Ele_Dark,20;
+      bonus2 bAddEle,Ele_Dark,5;
+  - Id: 27163
+    AegisName: Faceworm_Card
+    Name: Faceworm Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Both_Accessory: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bAgi,-1;
+      bonus bDex,-1;
+      bonus bAspdRate,3;
+  - Id: 27167
+    AegisName: Faceworm_L_Card
+    Name: Faceworm Larva Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Garment: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bSubEle,Ele_Neutral,15;
+      bonus2 bMagicAtkEle,Ele_Water,getrefine()*3;
+  - Id: 27361
+    AegisName: Polluted_W_Man_Card
+    Name: Polluted Wanderer Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bAddSize,Size_Large,30;
+      bonus2 bAddSize,Size_Medium,30;
+  - Id: 27314
+    AegisName: Venenum_Card
+    Name: Venenum Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Garment: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bAddRace,RC_Brute,15;
+      bonus2 bAddRace,RC_Player_Doram,15;
+  - Id: 300253
+    AegisName: Venedi_Card
+    Name: Venedi Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Head_Top: true
+      Head_Mid: true
+      Head_Low: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bMatk,15;
+      bonus2 bMagicAtkEle,Ele_Poison,7;
+      bonus bUseSPrate,5;
+  - Id: 27315
+    AegisName: Mt_Venenum_Card
+    Name: Mutant Venenum Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Garment: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bMagicAddRace,RC_Brute,15;
+      bonus2 bMagicAddRace,RC_Player_Doram,15;
   - Id: 4254
     AegisName: Tirfing_Card
     Name: Ogretooth Card
@@ -3997,6 +4215,42 @@ Body:
       else {
          heal -999,0;
       }
+  - Id: 27360
+    AegisName: Flame_Ghost_Card
+    Name: Flame Ghost Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Both_Accessory: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus3 bAutoSpell,"SK_WZ_CRIMSONROCK",3+7*(getskilllv("SK_WZ_CRIMSONROCK") == 10),20;
+  - Id: 27359
+    AegisName: Ice_Ghost_Card
+    Name: Ice Ghost Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Both_Accessory: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus3 bAutoSpell,"SK_WZ_ICEBERG",3+7*(getskilllv("SK_WZ_ICEBERG") == 10),20;
+  - Id: 31025
+    AegisName: Sand_Ghost_Card
+    Name: Sand Ghost Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Both_Accessory: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus3 bAutoSpell,"SK_WZ_STALAGMITE",3+7*(getskilllv("SK_WZ_STALAGMITE") == 10),20;
   - Id: 4264
     AegisName: Wind_Ghost_Card
     Name: Wind Ghost Card
@@ -4008,7 +4262,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus3 bAutoSpell,"WZ_JUPITEL",3+7*(getskilllv("WZ_JUPITEL") == 10),20;
+      bonus3 bAutoSpell,"SK_WZ_THUNDERSTORM",3+7*(getskilllv("SK_WZ_THUNDERSTORM") == 10),20;
   - Id: 4265
     AegisName: Li_Me_Mang_Ryang_Card
     Name: Jing Guai Card

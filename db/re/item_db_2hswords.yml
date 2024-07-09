@@ -539,3 +539,25 @@ Body:
       bonus bAspd,2;
       bonus bDefRate,-66;
       bonus bDef2Rate,-66;
+  - Id: 1164
+    AegisName: Muramasa
+    Name: Muramasa
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 20
+    Weight: 1000
+    Attack: 155
+    Range: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 48
+    Refineable: true
+    Script: |
+      bonus bCritical,30;
+      bonus bAspdRate,8;
+      bonus2 bAddEff2,Eff_Curse,10;

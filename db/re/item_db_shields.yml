@@ -538,3 +538,32 @@ Body:
       bonus2 bSkillAtk,"SK_PA_RAPIDSMITING",30;
       bonus2 bSkillAtk,"SK_CR_SHIELDBOOMERANG",30;
       bonus bUseSPrate,10;
+  - Id: 2125
+    AegisName: Strong_Shield
+    Name: Strong Shield
+    Type: Armor
+    Buy: 20
+    Weight: 2500
+    Defense: 90
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Rogue: true
+      Swordman: true
+      Thief: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    EquipLevelMin: 75
+    Refineable: true
+    View: 4
+    Script: |
+      bonus2 bSubEle,Ele_All,-20;
+      bonus bNoKnockback;

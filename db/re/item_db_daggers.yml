@@ -1610,3 +1610,83 @@ Body:
     Refineable: true
     Script: |
       bonus bClassChange,300;
+  - Id: 1241
+    AegisName: Cursed_Dagger
+    Name: Cursed Dagger
+    Type: Weapon
+    SubType: Dagger
+    Buy: 80000
+    Weight: 400
+    Attack: 55
+    Range: 1
+    Jobs:
+      Mage: true
+      Sage: true
+      SoulLinker: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 85
+    Refineable: true
+    Script: |
+      bonus2 bAddEff,Eff_Curse,5000;
+  - Id: 1237
+    AegisName: Grimtooth_
+    Name: Grimtooth
+    Type: Weapon
+    SubType: Dagger
+    Buy: 20
+    Weight: 800
+    Attack: 180
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      KagerouOboro: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 36
+    Refineable: true
+    Script: |
+      bonus bFlee,10;
+      bonus bFlee2,5;
+      bonus bDefRate,-50;
+      bonus bDef2Rate,-50;
+  - Id: 13015
+    AegisName: Hakujin_
+    Name: Hakujin
+    Type: Weapon
+    SubType: Dagger
+    Buy: 20
+    Weight: 800
+    Attack: 120
+    Range: 1
+    Slots: 1
+    Jobs:
+      KagerouOboro: true
+      Ninja: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 42
+    Refineable: true
+    Script: |
+      bonus bInt,2;
+      bonus3 bAutoSpell,"SK_AL_JGHEAL",1,10;

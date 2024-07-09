@@ -447,6 +447,38 @@ Body:
     Weight: 10
     Flags:
       BuyingStore: true
+  - Id: 7290
+    AegisName: Phlogopite
+    Name: Phlogopite
+    Type: Etc
+    Buy: 3000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 7292
+    AegisName: Muscovite
+    Name: Muscovite
+    Type: Etc
+    Buy: 3000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 7296
+    AegisName: Pyroxene
+    Name: Pyroxene
+    Type: Etc
+    Buy: 3000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 7297
+    AegisName: Biotite
+    Name: Biotite
+    Type: Etc
+    Buy: 3000
+    Weight: 100
+    Flags:
+      BuyingStore: true
   - Id: 7019
     AegisName: Loki's_Whispers
     Name: Loki's Whispers
@@ -2819,6 +2851,30 @@ Body:
     Type: Etc
     Buy: 840
     Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7293
+    AegisName: Rose_Quartz
+    Name: Rose Quartz
+    Type: Etc
+    Buy: 3000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 7295
+    AegisName: Citrine
+    Name: Citrin
+    Type: Etc
+    Buy: 3000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 7017
+    AegisName: Executioner's_Mitten
+    Name: Executioner's Mitten
+    Type: Etc
+    Buy: 4500
+    Weight: 30
     Flags:
       BuyingStore: true
   - Id: 7345
@@ -5741,6 +5797,14 @@ Body:
     Type: Etc
     Buy: 2050
     Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 7016
+    AegisName: Spoon_Stub
+    Name: Spoon Stub
+    Type: Etc
+    Buy: 2500
+    Weight: 20
     Flags:
       BuyingStore: true
   - Id: 6212

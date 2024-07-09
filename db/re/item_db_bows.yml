@@ -658,3 +658,27 @@ Body:
     WeaponLevel: 4
     EquipLevelMin: 77
     Refineable: true
+  - Id: 1736
+    AegisName: Double_Bound
+    Name: Double Bound
+    Type: Weapon
+    SubType: Bow
+    Buy: 20
+    Weight: 900
+    Attack: 70
+    Range: 5
+    Slots: 3
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus3 bAutoSpell,"SK_AC_DOUBLESTRAFE",getskilllv("SK_AC_DOUBLESTRAFE"),10;

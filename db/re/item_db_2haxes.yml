@@ -457,3 +457,27 @@ Body:
       bonus bAspdRate,5;
       if (Class == Job_Whitesmith || Class == Job_Creator)
          bonus3 bAutoSpell,"SK_BS_HAMMERFALL",3,30;
+  - Id: 1364
+    AegisName: Great_Axe
+    Name: Great Axe
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 20
+    Weight: 1800
+    Attack: 187
+    Range: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 44
+    Refineable: true
+    Script: |
+      bonus2 bAddSkillBlow,"SK_MC_MAMMONITE",5;
+      bonus2 bAddEff,Eff_Stun,1500;

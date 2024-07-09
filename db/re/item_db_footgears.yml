@@ -415,3 +415,20 @@ Body:
       bonus bMdef,3;
       bonus bMaxHPrate,5;
       bonus bMaxSPrate,5;
+  - Id: 2409
+    AegisName: Spiky_Heel
+    Name: High Heels
+    Type: Armor
+    Buy: 8500
+    Weight: 600
+    Defense: 10
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Shoes: true
+    ArmorLevel: 1
+    Refineable: true
+    Script: |
+      bonus bMdef,5;

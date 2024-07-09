@@ -9,7 +9,7 @@ from interiors import all_interiors
 
 iterations = 4
 initial_mob_id = 20021
-excluded_ids = [20365, 20357, 20358]
+excluded_ids = [20365, 20357, 20358, 20363,20364, 20367, 20368, 20370, 20379, 20380, 20420]
 
 adventurers_novice = []
 adventurers_swordsman = []

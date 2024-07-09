@@ -312,3 +312,29 @@ Body:
       bonus bAtkEle,Ele_Holy;
       bonus2 bAddEff,Eff_Blind,500;
       bonus bUnbreakableWeapon;
+  - Id: 1421
+    AegisName: Battle_Hook
+    Name: Battle Hook
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 20
+    Weight: 900
+    Attack: 140
+    Range: 3
+    Slots: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus2 bAddEff,Eff_Stun,500;
+      bonus2 bAddRace,RC_DemiHuman,20;
+      bonus2 bAddRace,RC_Player_Human,20;
+      skill "SK_KN_PIERCE",5;

@@ -128,3 +128,29 @@ Body:
       bonus bDex,4;
       bonus2 bSubRace,RC_Demon,15;
       bonus2 bSubRace,RC_Undead,15;
+  - Id: 2004
+    AegisName: Kronos
+    Name: Kronos
+    Type: Weapon
+    SubType: 2hStaff
+    Buy: 20
+    Weight: 1000
+    Attack: 30
+    MagicAttack: 240
+    Range: 1
+    Jobs:
+      Mage: true
+      Sage: true
+      Wizard: true
+    Classes:
+      All_Upper: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 50
+    Refineable: true
+    Script: |
+      .@r = getrefine();
+      bonus bInt,3+(.@r/2);
+      bonus bMaxHP,300+(50*.@r/2);
+      autobonus "{ bonus bMatkRate,12; bonus bUseSPrate,20; }",1,5000,BF_MAGIC,"{ specialeffect2 EF_ENHANCE; }";

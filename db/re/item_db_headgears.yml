@@ -2822,3 +2822,19 @@ Body:
       bonus bAgi,1;
       bonus bLuk,1;
       bonus2 bSubRace,RC_Demon,3;
+  - Id: 2266
+    AegisName: Iron_Cane
+    Name: Iron Cain
+    Type: Armor
+    Buy: 20
+    Weight: 300
+    Defense: 4
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Head_Low: true
+    ArmorLevel: 1
+    EquipLevelMin: 50
+    View: 53

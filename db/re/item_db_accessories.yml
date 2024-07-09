@@ -144,6 +144,22 @@ Body:
     Script: |
       bonus bMatk,5;
       bonus2 bMagicAtkEle,Ele_Fire,5;
+  - Id: 2619
+    AegisName: Thimble_Of_Archer
+    Name: Bow Thimble
+    Type: Armor
+    Buy: 10000
+    Weight: 100
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+    Locations:
+      Both_Accessory: true
+    ArmorLevel: 1
+    EquipLevelMin: 65
+    Script: |
+      bonus bLongAtkRate,3;
   - Id: 2611
     AegisName: Silver_Ring
     Name: Silver Ring
@@ -852,3 +868,20 @@ Body:
       bonus bStr,1;
       bonus bAgi,1;
       bonus bMdef,1;
+  - Id: 2716
+    AegisName: Librarian_Glove
+    Name: Librarian Glove
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Slots: 1
+    Jobs:
+      Sage: true
+      SoulLinker: true
+      Wizard: true
+    Locations:
+      Both_Accessory: true
+    ArmorLevel: 1
+    EquipLevelMin: 80
+    Script: |
+      bonus bMaxSP,20;
