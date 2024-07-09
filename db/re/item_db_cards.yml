@@ -3953,8 +3953,8 @@ Body:
       bonus bBaseAtk,10;
       autobonus "{ bonus bFlee2,10; }",10,4000,BF_NORMAL,"{ specialeffect2 EF_HASTEUP; }";
   - Id: 4468
-    AegisName: Pinguicula_Dark_Card
-    Name: Dark Pinguicula Card
+    AegisName: Cave_Specter_Card
+    Name: Cave Specter Card
     Type: Card
     Buy: 20
     Weight: 10
@@ -3974,8 +3974,8 @@ Body:
       bonus2 bAddMonsterDropItem,7936,10;
       bonus2 bAddMonsterDropItem,7937,10;
   - Id: 4449
-    AegisName: Dark_Shadow_Card
-    Name: Dark Shadow Card
+    AegisName: Cave_Shadow_Card
+    Name: Cave Shadow Card
     Type: Card
     Buy: 20
     Weight: 10

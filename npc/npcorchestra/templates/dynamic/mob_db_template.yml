@@ -24626,7 +24626,7 @@ Body:
         StealProtected: true
   - Id: 2023
     AegisName: DARK_SHADOW
-    Name: Dark Shadow
+    Name: Cave Shadow
     Level: 75
     Hp: 12252
     BaseExp: 5173
@@ -24663,12 +24663,12 @@ Body:
         Rate: 500
       - Item: Oridecon
         Rate: 5
-      - Item: Dark_Shadow_Card
+      - Item: Cave_Shadow_Card
         Rate: 1
         StealProtected: true
   - Id: 2015
     AegisName: PINGUICULA_D
-    Name: Dark Pinguicula
+    Name: Cave Specter
     Level: 75
     Hp: 12252
     BaseExp: 5173
@@ -24687,7 +24687,7 @@ Body:
     ChaseRange: 12
     Size: Medium
     Race: Demon
-    Element: Dark
+    Element: Ghost
     ElementLevel: 2
     WalkSpeed: 180
     AttackDelay: 1732
@@ -24701,7 +24701,7 @@ Body:
         Rate: 1500
       - Item: Withered_Flower
         Rate: 2500
-      - Item: Pinguicula_Dark_Card
+      - Item: Cave_Specter_Card
         Rate: 1
         StealProtected: true
   - Id: 2018

@@ -132,14 +132,14 @@ gl_sew04,0,0	monster	Contaminated Wanderer	20420,30
 //==================================================
 // gl_dun01 - The Lowest Cave in Glast Heim F1
 //==================================================
-gl_dun01,0,0	monster	Dark Shadow	2023,40
-gl_dun01,0,0	monster	Dark Pinguicula	2015,40
+gl_dun01,0,0	monster	Cave Shadow	2023,40
+gl_dun01,0,0	monster	Cave Specter	2015,40
 gl_dun01,0,0	monster	Duneyrr	2018,30
 
 //==================================================
 // gl_dun02 - The Lowest Cave in Glast Heim F2
 //==================================================
-gl_dun02,0,0	monster	Dark Shadow	2023,40
-gl_dun02,0,0	monster	Dark Pinguicula	2015,40
+gl_dun02,0,0	monster	Cave Shadow	2023,40
+gl_dun02,0,0	monster	Cave Specter	2015,40
 gl_dun02,0,0	monster	Torturous Redeemer	2959,30
 gl_dun02,0,0	boss_monster	Nacht Sieger	1956,1,3600000,600000,1
