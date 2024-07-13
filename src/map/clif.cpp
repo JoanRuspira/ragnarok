@@ -5750,7 +5750,7 @@ void clif_skill_teleportmessage(struct map_session_data *sd, int type)
 }
 
 
-/// Displays Sense (WZ_ESTIMATION) information window (ZC_MONSTER_INFO).
+/// Displays Sense (SK_WZ_ESTIMATION) information window (ZC_MONSTER_INFO).
 /// 018c <class>.W <level>.W <size>.W <hp>.L <def>.W <race>.W <mdef>.W <element>.W
 ///     <water%>.B <earth%>.B <fire%>.B <wind%>.B <poison%>.B <holy%>.B <shadow%>.B <ghost%>.B <undead%>.B
 void clif_skill_estimation(struct map_session_data *sd,struct block_list *dst)

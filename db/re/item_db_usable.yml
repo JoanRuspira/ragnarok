@@ -1329,7 +1329,7 @@ Body:
   Flags:
     BuyingStore: true
   Script: |
-    itemskill "MC_IDENTIFY",1;
+    itemskill "SK_WZ_ESTIMATION",1;
 - Id: 656
   AegisName: Awakening_Potion
   Name: Awakening Potion

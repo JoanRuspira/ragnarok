@@ -4,6 +4,20 @@ Header:
   Version: 1
 
 Body:
+  - Id: 93
+    Name: SK_WZ_ESTIMATION
+    Description: Sense
+    MaxLevel: 1
+    Type: Magic
+    TargetType: Attack
+    DamageFlags:
+      NoDamage: true
+    Range: 9
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    Requires:
+      SpCost: 1
   - Id: 2446
     Name: SK_WZ_EARTHSTRAIN
     Description: Earth Strain

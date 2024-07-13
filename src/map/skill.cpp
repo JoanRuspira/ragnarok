@@ -4554,7 +4554,17 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case SK_MG_STONECURSE:
 		MageAdditionalEffectsCalculator::apply_stone_curse_additional_effect(src, bl, skill_lv);
 		break;
-
+	case SK_WZ_ESTIMATION:
+		if( sd == nullptr )
+			break;
+		if( dstsd )
+		{ // Fail on Players
+			clif_skill_fail(sd,skill_id,USESKILL_FAIL,0);
+			break;
+		}
+		clif_skill_nodamage(src, bl, skill_id, skill_lv, 1);
+		clif_skill_estimation(sd, bl);
+		break;
 	case SK_NV_FIRSTAID:
 		clif_skill_nodamage(src,bl,skill_id,5,1);
 		status_heal(bl,5,0,0);
