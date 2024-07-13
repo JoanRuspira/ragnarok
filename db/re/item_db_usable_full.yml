@@ -1,0 +1,6694 @@
+# This file is a part of rAthena.
+#   Copyright(C) 2021 rAthena Development Team
+#   https://rathena.org - https://github.com/rathena
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+###########################################################################
+# Item Database
+###########################################################################
+#
+# Item Settings
+#
+###########################################################################
+# - Id                      Item ID.
+#   AegisName               Server name to reference the item in scripts and lookups, should use no spaces.
+#   Name                    Name in English for displaying as output.
+#   Type                    Item type. (Default: Etc)
+#   SubType                 Weapon or Ammo type. (Default: 0)
+#   Buy                     Buying price. When not specified, becomes double the sell price. (Default: 0)
+#   Sell                    Selling price. When not specified, becomes half the buy price. (Default: 0)
+#   Weight                  Item weight. Each 10 is 1 weight. (Default: 0)
+#   Attack                  Weapon's attack. (Default: 0)
+#   MagicAttack             Weapon's magic attack. (Default: 0)
+#   Defense                 Armor's defense. (Default: 0)
+#   Range                   Weapon's attack range. (Default: 0)
+#   Slots                   Available slots in item. (Default: 0)
+#   Jobs                    Jobs that can equip the item. (Map default is 'All: true')
+#   Classes                 Upper class types that can equip the item. (Map default is 'All: true')
+#   Gender                  Gender that can equip the item. (Default: Both)
+#   Locations               Equipment's placement. (Default: None)
+#   WeaponLevel             Weapon level. (Default: 0)
+#   EquipLevelMin           Minimum required level to equip. (Default: 0)
+#   EquipLevelMax           Maximum level that can equip. (Default: 0)
+#   Refineable              If the item can be refined. (Default: false)
+#   View                    View sprite of an item. (Default: 0)
+#   AliasName               Another item's AegisName that will be sent to the client instead of this item's AegisName. (Default: null)
+#   Flags:                  Item flags. (Default: null)
+#     BuyingStore           If the item is available for Buyingstores. (Default: false)
+#     DeadBranch            If the item is a Dead Branch. (Default: false)
+#     Container             If the item is part of a container. (Default: false)
+#     UniqueId              If the item is a unique stack. (Default: false)
+#     BindOnEquip           If the item is bound to the character upon equipping. (Default: false)
+#     DropAnnounce          If the item has a special announcement to self on drop. (Default: false)
+#     NoConsume             If the item is consumed on use. (Default: false)
+#     DropEffect            If the item has a special effect on the ground when dropped by a monster. (Default: None)
+#   Delay:                  Item use delay. (Default: null)
+#     Duration              Duration of delay in seconds.
+#     Status                Status Change used to track delay. (Default: None)
+#   Stack:                  Item stack amount. (Default: null)
+#     Amount                Maximum amount that can be stacked.
+#     Inventory             If the stack is applied to player's inventory. (Default: true)
+#     Cart                  If the stack is applied to the player's cart. (Default: false)
+#     Storage               If the stack is applied to the player's storage. (Default: false)
+#     GuildStorage          If the stack is applied to the player's guild storage. (Default: false)
+#   NoUse:                  Conditions when the item is unusable. (Default: null)
+#     Override              Group level to override these conditions.
+#     Sitting               If the item can not be used while sitting. (Default: false)
+#   Trade:                  Trade restrictions. (Default: null)
+#     Override              Group level to override these conditions.
+#     NoDrop                If the item can not be dropped. (Default: false)
+#     NoTrade               If the item can not be traded. (Default: false)
+#     TradePartner          If the item can not be traded to the player's partner. (Default: false)
+#     NoSell                If the item can not be sold. (Default: false)
+#     NoCart                If the item can not be put in a cart. (Default: false)
+#     NoStorage             If the item can not be put in a storage. (Default: false)
+#     NoGuildStorage        If the item can not be put in a guild storage. (Default: false)
+#     NoMail                If the item can not be put in a mail. (Default: false)
+#     NoAuction             If the item can not be put in an auction. (Default: false)
+#   Script                  Script to execute when the item is used/equipped. (Default: null)
+#   EquipScript             Script to execute when the item is equipped. (Default: null)
+#   UnEquipScript           Script to execute when the item is unequipped or when a rental item expires. (Default: null)
+###########################################################################
+
+Header:
+  Type: ITEM_DB
+  Version: 1
+
+Body:
+  - Id: 501
+    AegisName: Red_Potion
+    Name: Red Potion
+    Type: Healing
+    Buy: 50
+    Weight: 70
+    Script: |
+      itemheal rand(45,65),0;
+  - Id: 502
+    AegisName: Orange_Potion
+    Name: Orange Potion
+    Type: Healing
+    Buy: 200
+    Weight: 100
+    Script: |
+      itemheal rand(105,145),0;
+  - Id: 503
+    AegisName: Yellow_Potion
+    Name: Yellow Potion
+    Type: Healing
+    Buy: 550
+    Weight: 130
+    Script: |
+      itemheal rand(175,235),0;
+  - Id: 504
+    AegisName: White_Potion
+    Name: White Potion
+    Type: Healing
+    Buy: 1200
+    Weight: 150
+    Script: |
+      itemheal rand(325,405),0;
+  - Id: 505
+    AegisName: Blue_Potion
+    Name: Blue Potion
+    Type: Healing
+    Buy: 5000
+    Weight: 150
+    Script: |
+      itemheal 0,rand(40,60);
+  - Id: 506
+    AegisName: Green_Potion
+    Name: Green Potion
+    Type: Healing
+    Buy: 40
+    Weight: 70
+    Delay:
+      Duration: 3000
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_end STATUS_POISON;
+      sc_end STATUS_SILENCE;
+      sc_end STATUS_BLIND;
+      sc_end STATUS_CONFUSION;
+  - Id: 507
+    AegisName: Red_Herb
+    Name: Red Herb
+    Type: Healing
+    Buy: 18
+    Weight: 30
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(18,28),0;
+  - Id: 508
+    AegisName: Yellow_Herb
+    Name: Yellow Herb
+    Type: Healing
+    Buy: 40
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(38,58),0;
+  - Id: 32
+    AegisName: Orange_Herb
+    Name: Orange Herb
+    Type: Healing
+    Buy: 40
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(28,38),0;
+  - Id: 509
+    AegisName: White_Herb
+    Name: White Herb
+    Type: Healing
+    Buy: 120
+    Weight: 70
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(75,115),0;
+  - Id: 510
+    AegisName: Blue_Herb
+    Name: Blue Herb
+    Type: Healing
+    Buy: 60
+    Weight: 70
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal 0,rand(15,30);
+  - Id: 511
+    AegisName: Green_Herb
+    Name: Green Herb
+    Type: Healing
+    Buy: 10
+    Weight: 30
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_end STATUS_POISON;
+  - Id: 512
+    AegisName: Apple
+    Name: Apple
+    Type: Healing
+    Buy: 15
+    Weight: 20
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(16,22),0;
+  - Id: 513
+    AegisName: Banana
+    Name: Banana
+    Type: Healing
+    Buy: 15
+    Weight: 20
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(17,21),0;
+  - Id: 514
+    AegisName: Grape
+    Name: Grape
+    Type: Healing
+    Buy: 200
+    Weight: 20
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal 0,rand(10,15);
+  - Id: 515
+    AegisName: Carrot
+    Name: Carrot
+    Type: Healing
+    Buy: 15
+    Weight: 20
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(18,20),0;
+  - Id: 516
+    AegisName: Sweet_Potato
+    Name: Potato
+    Type: Healing
+    Buy: 15
+    Weight: 20
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(15,23),0;
+  - Id: 517
+    AegisName: Meat
+    Name: Meat
+    Type: Healing
+    Buy: 50
+    Weight: 150
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(70,100),0;
+  - Id: 518
+    AegisName: Honey
+    Name: Honey
+    Type: Healing
+    Buy: 500
+    Weight: 100
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(70,100),rand(20,40);
+  - Id: 519
+    AegisName: Milk
+    Name: Milk
+    Type: Healing
+    Buy: 25
+    Weight: 30
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(27,37),0;
+  - Id: 520
+    AegisName: Leaflet_Of_Hinal
+    Name: Hinalle Leaflet
+    Type: Healing
+    Buy: 150
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(175,235),0;
+  - Id: 521
+    AegisName: Leaflet_Of_Aloe
+    Name: Aloe Leaflet
+    Type: Healing
+    Buy: 360
+    Weight: 20
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(325,405),0;
+  - Id: 522
+    AegisName: Fruit_Of_Mastela
+    Name: Mastela Fruit
+    Type: Healing
+    Buy: 8500
+    Weight: 30
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(400,600),0;
+  - Id: 523
+    AegisName: Holy_Water
+    Name: Holy Water
+    Type: Healing
+    Buy: 50
+    Weight: 30
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_end STATUS_CURSE;
+  - Id: 525
+    AegisName: Panacea
+    Name: Panacea
+    Type: Healing
+    Buy: 500
+    Weight: 100
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_end STATUS_POISON;
+      sc_end STATUS_SILENCE;
+      sc_end STATUS_BLIND;
+      sc_end STATUS_CONFUSION;
+      sc_end STATUS_CURSE;
+      sc_end SC_Hallucination;
+  - Id: 526
+    AegisName: Royal_Jelly
+    Name: Royal Jelly
+    Type: Healing
+    Buy: 7000
+    Weight: 150
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(325,405),rand(40,60);
+      sc_end STATUS_POISON;
+      sc_end STATUS_SILENCE;
+      sc_end STATUS_BLIND;
+      sc_end STATUS_CONFUSION;
+      sc_end STATUS_CURSE;
+      sc_end SC_Hallucination;
+  - Id: 528
+    AegisName: Monster's_Feed
+    Name: Monster's Feed
+    Type: Healing
+    Buy: 60
+    Weight: 150
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(72,108),0;
+  - Id: 529
+    AegisName: Candy
+    Name: Candy
+    Type: Healing
+    Buy: 10
+    Weight: 30
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(45,65),0;
+  - Id: 530
+    AegisName: Candy_Striper
+    Name: Candy Cane
+    Type: Healing
+    Buy: 20
+    Weight: 40
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(105,145),0;
+  - Id: 531
+    AegisName: Apple_Juice
+    Name: Apple Juice
+    Type: Healing
+    Buy: 20
+    Weight: 40
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(25,35),0;
+  - Id: 532
+    AegisName: Banana_Juice
+    Name: Banana Juice
+    Type: Healing
+    Buy: 20
+    Weight: 40
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(26,34),0;
+  - Id: 533
+    AegisName: Grape_Juice
+    Name: Grape Juice
+    Type: Healing
+    Buy: 250
+    Weight: 40
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal 0,rand(15,25);
+  - Id: 534
+    AegisName: Carrot_Juice
+    Name: Carrot Juice
+    Type: Healing
+    Buy: 20
+    Weight: 40
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(27,33),0;
+  - Id: 535
+    AegisName: Pumpkin
+    Name: Pumpkin
+    Type: Healing
+    Buy: 15
+    Weight: 20
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal 19,0;
+  - Id: 536
+    AegisName: Ice_Cream
+    Name: Ice Cream
+    Type: Healing
+    Buy: 150
+    Weight: 80
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(105,145),0;
+      sc_start STATUS_FREEZE,10000,0,2500,0;
+  - Id: 537
+    AegisName: Pet_Food
+    Name: Pet Food
+    Type: Healing
+    Buy: 1000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(50,90),0;
+  - Id: 538
+    AegisName: Well_Baked_Cookie
+    Name: Well-baked Cookie
+    Type: Healing
+    Buy: 1000
+    Weight: 30
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(160,200),0;
+  - Id: 539
+    AegisName: Piece_Of_Cake
+    Name: Piece of Cake
+    Type: Healing
+    Buy: 3000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(270,330),0;
+  - Id: 540
+    AegisName: Falcon's_Feed
+    Name: Falcon Food
+    Type: Healing
+    Buy: 2000
+    Weight: 50
+    Script: |
+      itemheal rand(185,225),0;
+  - Id: 541
+    AegisName: Pecopeco's_Feed
+    Name: PecoPeco Food
+    Type: Healing
+    Buy: 3000
+    Weight: 50
+    Script: |
+      itemheal rand(325,405),0;
+  - Id: 544
+    AegisName: Fish_Slice
+    Name: Raw Fish
+    Type: Healing
+    Buy: 20
+    Weight: 30
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(25,60),0;
+  - Id: 545
+    AegisName: Red_Slim_Potion
+    Name: Condensed Red Potion
+    Type: Healing
+    Buy: 150
+    Weight: 10
+    Script: |
+      itemheal rand(45,65),0;
+  - Id: 546
+    AegisName: Yellow_Slim_Potion
+    Name: Condensed Yellow Potion
+    Type: Healing
+    Buy: 600
+    Weight: 20
+    Script: |
+      itemheal rand(175,235),0;
+  - Id: 547
+    AegisName: White_Slim_Potion
+    Name: Condensed White Potion
+    Type: Healing
+    Buy: 1650
+    Weight: 20
+    Script: |
+      itemheal rand(325,405),0;
+  - Id: 548
+    AegisName: Cheese
+    Name: Cheese
+    Type: Healing
+    Buy: 2800
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal 0,rand(10,15);
+  - Id: 549
+    AegisName: Nice_Sweet_Potato
+    Name: Yam
+    Type: Healing
+    Buy: 180
+    Weight: 80
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(50,100),0;
+      sc_start STATUS_STUN,3000,0,1500,0;
+  - Id: 550
+    AegisName: Popped_Rice
+    Name: Rice Cake
+    Type: Healing
+    Buy: 10
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(10,15),0;
+  - Id: 551
+    AegisName: Shusi
+    Name: Sushi
+    Type: Healing
+    Buy: 1
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(50,60),0;
+  - Id: 552
+    AegisName: KETUPAT
+    Name: Ketupat
+    Type: Healing
+    Buy: 1
+    Weight: 10
+    Script: |
+      itemheal rand(70,90),rand(20,30);
+  - Id: 553
+    AegisName: Bun
+    Name: Bao
+    Type: Healing
+    Buy: 1
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(35,70),0;
+  - Id: 554
+    AegisName: Mojji
+    Name: Mochi
+    Type: Healing
+    Buy: 400
+    Weight: 80
+    Script: |
+      itemheal rand(105,145),0;
+      sc_start STATUS_STUN,3000,0;
+      sc_start STATUS_BLIND,2000,0,1500,0;
+  - Id: 555
+    AegisName: Rice_Cake
+    Name: Traditional Rice Cake
+    Type: Healing
+    Buy: 100
+    Weight: 20
+    Script: |
+      itemheal rand(105,145),0;
+  - Id: 556
+    AegisName: Long_Rice_Cake
+    Name: Rice Cake Stick
+    Type: Healing
+    Buy: 10
+    Weight: 10
+    Script: |
+      itemheal rand(20,25),0;
+  - Id: 557
+    AegisName: Hash_Rice_Cake
+    Name: Neatly Sliced Rice Cake
+    Type: Healing
+    Buy: 10
+    Weight: 10
+    Script: |
+      itemheal rand(25,30),0;
+  - Id: 558
+    AegisName: Chocolate
+    Name: Chocolate
+    Type: Healing
+    Buy: 1
+    Weight: 20
+    Script: |
+      itemheal 1,1;
+  - Id: 559
+    AegisName: HandMade_Chocolate
+    Name: Hand-made Chocolate
+    Type: Healing
+    Buy: 1
+    Weight: 80
+    Script: |
+      itemheal 50,50;
+  - Id: 560
+    AegisName: HandMade_Chocolate_
+    Name: Handmade White Chocolate
+    Type: Healing
+    Buy: 5000
+    Weight: 80
+    Script: |
+      itemheal 50,50;
+  - Id: 561
+    AegisName: White_Chocolate
+    Name: White Chocolate
+    Type: Healing
+    Buy: 5000
+    Weight: 80
+    Script: |
+      itemheal 50,50;
+  - Id: 562
+    AegisName: Pizza
+    Name: Doublecrust Swiss Fondue
+    Type: Healing
+    Buy: 100
+    Weight: 150
+    Script: |
+      itemheal rand(70,100),0;
+  - Id: 563
+    AegisName: Pizza_01
+    Name: Doublecrust Swiss Fondue
+    Type: Healing
+    Buy: 1200
+    Weight: 150
+    Script: |
+      itemheal rand(375,445),0;
+  - Id: 564
+    AegisName: Rice_Ball
+    Name: Rice Ball
+    Type: Healing
+    Buy: 1
+    Weight: 30
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal 200,0;
+  - Id: 565
+    AegisName: Vita500_Bottle
+    Name: Vita500
+    Type: Healing
+    Buy: 580
+    Weight: 100
+    Script: |
+      itemheal rand(142,274),0;
+  - Id: 566
+    AegisName: Tomyumkung
+    Name: Tom Yum Goong
+    Type: Healing
+    Buy: 10000
+    Weight: 150
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(244,350),rand(10,30);
+      sc_end STATUS_POISON;
+      sc_end STATUS_SILENCE;
+      sc_end STATUS_BLIND;
+      sc_end STATUS_CONFUSION;
+      sc_end STATUS_CURSE;
+      sc_end SC_Hallucination;
+  - Id: 567
+    AegisName: Prawn
+    Name: Shrimp
+    Type: Healing
+    Buy: 500
+    Weight: 40
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(117,192),0;
+  - Id: 568
+    AegisName: Lemon
+    Name: Lemon
+    Type: Healing
+    Buy: 60
+    Weight: 40
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal 0,rand(10,20);
+  - Id: 569
+    AegisName: Novice_Potion
+    Name: Novice Potion
+    Type: Healing
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(22,33),0;
+  - Id: 570
+    AegisName: Lucky_Candy
+    Name: Lucky Candy
+    Type: Healing
+    Buy: 10
+    Weight: 30
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(45,65),0;
+  - Id: 571
+    AegisName: Lucky_Candy_Cane
+    Name: Lucky Candy Cane
+    Type: Healing
+    Buy: 20
+    Weight: 40
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(105,145),0;
+  - Id: 572
+    AegisName: Lucky_Cookie
+    Name: Lucky Cookie
+    Type: Healing
+    Buy: 1000
+    Weight: 30
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(160,200),0;
+  - Id: 573
+    AegisName: Chocolate_Drink
+    Name: Chocolate Drink
+    Type: Healing
+    Buy: 7000
+    Weight: 150
+    Script: |
+      itemheal rand(330,410),rand(45,65);
+      sc_end STATUS_POISON;
+      sc_end STATUS_SILENCE;
+      sc_end STATUS_BLIND;
+      sc_end STATUS_CONFUSION;
+      sc_end STATUS_CURSE;
+      sc_end SC_Hallucination;
+  - Id: 574
+    AegisName: Egg
+    Name: Egg
+    Type: Healing
+    Buy: 20
+    Weight: 30
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(33,42),0;
+  - Id: 575
+    AegisName: Piece_Of_Cake_
+    Name: 2nd Anniversary Cake
+    Type: Healing
+    Buy: 10
+    Weight: 100
+    Script: |
+      itemheal rand(270,330),0;
+  - Id: 576
+    AegisName: Prickly_Fruit
+    Name: Prickly Fruit
+    Type: Healing
+    Buy: 540
+    Weight: 60
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(150,300),rand(20,30);
+  - Id: 577
+    AegisName: Grain
+    Name: Bag of Grain
+    Type: Healing
+    Buy: 200
+    Weight: 20
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(60,70),0;
+  - Id: 578
+    AegisName: Strawberry
+    Name: Strawberry
+    Type: Healing
+    Buy: 200
+    Weight: 20
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal 0,rand(16,28);
+  - Id: 579
+    AegisName: Delicious_Fish
+    Name: Fresh Fish
+    Type: Healing
+    Buy: 250
+    Weight: 20
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(100,150),0;
+  - Id: 580
+    AegisName: Bread
+    Name: Bread
+    Type: Healing
+    Buy: 150
+    Weight: 20
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(50,90),0;
+  - Id: 581
+    AegisName: Mushroom
+    Name: Edible Mushroom
+    Type: Healing
+    Buy: 40
+    Weight: 20
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(20,30),0;
+  - Id: 582
+    AegisName: Orange
+    Name: Orange
+    Type: Healing
+    Buy: 300
+    Weight: 20
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(10,20),rand(10,20);
+  - Id: 583
+    AegisName: KETUPAT_
+    Name: Ketupat Sayur
+    Type: Healing
+    Buy: 7000
+    Weight: 150
+    Script: |
+      itemheal rand(325,405),rand(40,60);
+      sc_end STATUS_POISON;
+      sc_end STATUS_SILENCE;
+      sc_end STATUS_BLIND;
+      sc_end STATUS_CONFUSION;
+      sc_end STATUS_CURSE;
+      sc_end SC_Hallucination;
+  - Id: 584
+    AegisName: Fish_Ball_Soup
+    Name: Fish Cake Soup
+    Type: Healing
+    Buy: 100
+    Weight: 60
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(40,70),0;
+  - Id: 585
+    AegisName: Wurst
+    Name: Brusti
+    Type: Delayconsume
+    Buy: 2
+    Weight: 40
+    Script: |
+      itemheal rand(15,20),0;
+      itemskill "SK_PR_MAGNIFICAT",3;
+  - Id: 586
+    AegisName: Mother's_Cake
+    Name: Mother's Cake
+    Type: Healing
+    Buy: 20
+    Weight: 100
+    Script: |
+      itemheal rand(325,405),0;
+  - Id: 587
+    AegisName: Prickly_Fruit_
+    Name: Red Prickly Fruit
+    Type: Healing
+    Buy: 880
+    Weight: 60
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(270,330),rand(20,30);
+  - Id: 588
+    AegisName: Spaghetti
+    Name: Spaghetti
+    Type: Healing
+    Buy: 100
+    Weight: 100
+    Script: |
+      itemheal rand(40,70),0;
+  - Id: 589
+    AegisName: Pizza_02
+    Name: Pizza
+    Type: Healing
+    Buy: 1200
+    Weight: 150
+    Script: |
+      itemheal rand(375,445),0;
+  - Id: 590
+    AegisName: Brezel_
+    Name: Pretzel
+    Type: Healing
+    Buy: 2
+    Weight: 20
+    Script: |
+      itemheal rand(50,90),0;
+  - Id: 591
+    AegisName: Caviar_Pancake
+    Name: Caviar Pancake
+    Type: Healing
+    Weight: 150
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(325,405),rand(40,60);
+      sc_end STATUS_POISON;
+      sc_end STATUS_SILENCE;
+      sc_end STATUS_BLIND;
+      sc_end STATUS_CONFUSION;
+      sc_end STATUS_CURSE;
+      sc_end SC_Hallucination;
+  - Id: 592
+    AegisName: Jam_Pancake
+    Name: Jam Pancake
+    Type: Healing
+    Weight: 150
+    Buy: 200
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(325,405),rand(40,60);
+      sc_end STATUS_POISON;
+      sc_end STATUS_SILENCE;
+      sc_end STATUS_BLIND;
+      sc_end STATUS_CONFUSION;
+      sc_end STATUS_CURSE;
+      sc_end SC_Hallucination;
+  - Id: 593
+    AegisName: Honey_Pancake
+    Name: Honey Pancake
+    Type: Healing
+    Weight: 150
+    Buy: 200
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(325,405),rand(40,60);
+      sc_end STATUS_POISON;
+      sc_end STATUS_SILENCE;
+      sc_end STATUS_BLIND;
+      sc_end STATUS_CONFUSION;
+      sc_end STATUS_CURSE;
+      sc_end SC_Hallucination;
+  - Id: 594
+    AegisName: Sour_Cream_Pancake
+    Name: Sour-Cream Pancake
+    Type: Healing
+    Weight: 150
+    Buy: 200
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(325,405),rand(40,60);
+      sc_end STATUS_POISON;
+      sc_end STATUS_SILENCE;
+      sc_end STATUS_BLIND;
+      sc_end STATUS_CONFUSION;
+      sc_end STATUS_CURSE;
+      sc_end SC_Hallucination;
+  - Id: 595
+    AegisName: Mushroom_Pancake
+    Name: Mushroom Pancake
+    Type: Healing
+    Weight: 150
+    Buy: 200
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(325,405),rand(40,60);
+      sc_end STATUS_POISON;
+      sc_end STATUS_SILENCE;
+      sc_end STATUS_BLIND;
+      sc_end STATUS_CONFUSION;
+      sc_end STATUS_CURSE;
+      sc_end SC_Hallucination;
+  - Id: 596
+    AegisName: Cute_Strawberry_Choco
+    Name: Cute Strawberry-Choco
+    Type: Healing
+    Buy: 20
+    Weight: 100
+    Script: |
+      itemheal 0,rand(1,100);
+  - Id: 597
+    AegisName: Lovely_Choco_Tart
+    Name: Lovely Choco-Tart
+    Type: Healing
+    Buy: 20
+    Weight: 100
+    Script: |
+      itemheal rand(10,400),0;
+  - Id: 598
+    AegisName: Light_Red_Pot
+    Name: Light Red Potion
+    Type: Healing
+    Buy: 50
+    Weight: 10
+    Script: |
+      itemheal rand(45,65),0;
+  - Id: 599
+    AegisName: Light_Orange_Pot
+    Name: Light Orange Potion
+    Type: Healing
+    Buy: 200
+    Weight: 10
+    Script: |
+      itemheal rand(105,145),0;
+  - Id: 601
+    AegisName: Wing_Of_Fly
+    Name: Fly Wing
+    Type: Delayconsume
+    Buy: 60
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemskill "AL_TELEPORT",1;
+  - Id: 602
+    AegisName: Wing_Of_Butterfly
+    Name: Butterfly Wing
+    Type: Delayconsume
+    Buy: 300
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemskill "AL_TELEPORT",3;
+  - Id: 604
+    AegisName: Branch_Of_Dead_Tree
+    Name: Dead Branch
+    Type: Usable
+    Buy: 50
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      DeadBranch: true
+    Script: |
+      monster "this",-1,-1,"--ja--",-1,1,"";
+  - Id: 605
+    AegisName: Anodyne
+    Name: Anodyne
+    Type: Delayconsume
+    Buy: 2000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemskill "SK_BS_ENDURE",1;
+  - Id: 606
+    AegisName: Aloebera
+    Name: Aloevera
+    Type: Delayconsume
+    Buy: 1500
+    Weight: 100
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      itemskill "SM_SELFPROVOKE",1;
+  - Id: 607
+    AegisName: Yggdrasilberry
+    Name: Yggdrasil Berry
+    Type: Healing
+    Buy: 50000
+    Weight: 300
+    Flags:
+      BuyingStore: true
+    Delay:
+      Duration: 5000
+    Script: |
+      percentheal 100,100;
+  - Id: 608
+    AegisName: Seed_Of_Yggdrasil
+    Name: Yggdrasil Seed
+    Type: Healing
+    Buy: 25000
+    Weight: 300
+    Flags:
+      BuyingStore: true
+    Delay:
+      Duration: 3000
+    Script: |
+      percentheal 50,50;
+  - Id: 609
+    AegisName: Amulet
+    Name: Amulet
+    Type: Usable
+    Buy: 100
+    Weight: 100
+    Flags:
+      BuyingStore: true
+  - Id: 610
+    AegisName: Leaf_Of_Yggdrasil
+    Name: Yggdrasil Leaf
+    Type: Delayconsume
+    Buy: 4000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemskill "SK_PR_RESURRECTIO",1;
+  - Id: 611
+    AegisName: Spectacles
+    Name: Magnifier
+    Type: Delayconsume
+    Buy: 40
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemskill "MC_IDENTIFY",1;
+  - Id: 616
+    AegisName: Old_Card_Album
+    Name: Old Card Album
+    Type: Usable
+    Buy: 10000
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      Container: true
+    Script: |
+      getrandgroupitem(IG_CardAlbum),1;
+  - Id: 618
+    AegisName: Worn_Out_Scroll
+    Name: Worn Out Scroll
+    Type: Usable
+    Buy: 50
+    Weight: 20
+    Flags:
+      BuyingStore: true
+      Container: true
+  - Id: 619
+    AegisName: Unripe_Apple
+    Name: Unripe Apple
+    Type: Usable
+    Buy: 1000
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      pet 1002;
+  - Id: 620
+    AegisName: Orange_Juice
+    Name: Orange Juice
+    Type: Usable
+    Buy: 1500
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      pet 1113;
+  - Id: 621
+    AegisName: Bitter_Herb
+    Name: Bitter Herb
+    Type: Usable
+    Buy: 20
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      pet 1031;
+  - Id: 622
+    AegisName: Rainbow_Carrot
+    Name: Rainbow Carrot
+    Type: Usable
+    Buy: 2500
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      pet 1063;
+  - Id: 623
+    AegisName: Earthworm_The_Dude
+    Name: Earthworm the Dude
+    Type: Usable
+    Buy: 4000
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      pet 1049;
+  - Id: 624
+    AegisName: Rotten_Fish
+    Name: Rotten Fish
+    Type: Usable
+    Buy: 2500
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      pet 1011;
+  - Id: 625
+    AegisName: Lusty_Iron
+    Name: Rusty Iron
+    Type: Usable
+    Buy: 100
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      pet 1042;
+  - Id: 626
+    AegisName: Monster_Juice
+    Name: Monster Juice
+    Type: Usable
+    Buy: 1500
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      pet 1035;
+  - Id: 627
+    AegisName: Sweet_Milk
+    Name: Sweet Milk
+    Type: Usable
+    Buy: 7000
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      pet 1167;
+  - Id: 628
+    AegisName: Well_Dried_Bone
+    Name: Well-Dried Bone
+    Type: Usable
+    Buy: 10000
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      pet 1107;
+  - Id: 629
+    AegisName: Singing_Flower
+    Name: Singing Flower
+    Type: Usable
+    Buy: 300
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      pet 1052;
+  - Id: 630
+    AegisName: Dew_Laden_Moss
+    Name: Dew Laden Moss
+    Type: Usable
+    Buy: 10
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      pet 1014;
+  - Id: 631
+    AegisName: Deadly_Noxious_Herb
+    Name: Deadly Noxious Herb
+    Type: Usable
+    Buy: 20
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      pet 1077;
+  - Id: 632
+    AegisName: Fatty_Chubby_Earthworm
+    Name: Fatty Chubby Earthworm
+    Type: Usable
+    Buy: 5000
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      pet 1019;
+  - Id: 633
+    AegisName: Baked_Yam
+    Name: Sweet Potato
+    Type: Usable
+    Buy: 20
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      pet 1056;
+  - Id: 634
+    AegisName: Tropical_Banana
+    Name: Tropical Banana
+    Type: Usable
+    Buy: 20
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      pet 1057;
+  - Id: 635
+    AegisName: Horror_Of_Tribe
+    Name: Orc Trophy
+    Type: Usable
+    Buy: 300
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      pet 1023;
+  - Id: 636
+    AegisName: No_Recipient
+    Name: No Recipient
+    Type: Usable
+    Buy: 100
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      pet 1026;
+  - Id: 644
+    AegisName: Gift_Box
+    Name: Gift Box
+    Type: Usable
+    Buy: 1000
+    Weight: 200
+    Flags:
+      BuyingStore: true
+      Container: true
+    Script: |
+      getrandgroupitem(IG_GiftBox,1);
+  - Id: 637
+    AegisName: Old_Broom
+    Name: Old Broom
+    Type: Usable
+    Buy: 350
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      pet 1110;
+  - Id: 638
+    AegisName: Silver_Knife_Of_Chaste
+    Name: Silver Knife of Chastity
+    Type: Usable
+    Buy: 12000
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      pet 1170;
+  - Id: 639
+    AegisName: Armlet_Of_Obedience
+    Name: Armlet of Obedience
+    Type: Usable
+    Buy: 18000
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      pet 1029;
+  - Id: 640
+    AegisName: Shining_Stone
+    Name: Shining Stone
+    Type: Usable
+    Buy: 3000
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      pet 1155;
+  - Id: 641
+    AegisName: Contracts_In_Shadow
+    Name: Contract in Shadow
+    Type: Usable
+    Buy: 100
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      pet 1109;
+  - Id: 642
+    AegisName: Book_Of_Devil
+    Name: Book of the Devil
+    Type: Usable
+    Buy: 1800
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      pet 1101;
+  - Id: 643
+    AegisName: Pet_Incubator
+    Name: Pet Incubator
+    Type: Usable
+    Buy: 3000
+    Weight: 30
+    Flags:
+      BuyingStore: true
+    Script: |
+      bpet;
+  - Id: 645
+    AegisName: Center_Potion
+    Name: Concentration Potion
+    Type: Usable
+    Buy: 800
+    Weight: 100
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_ASPDPOTION0,1800000,0;
+  - Id: 656
+    AegisName: Awakening_Potion
+    Name: Awakening Potion
+    Type: Usable
+    Buy: 1500
+    Weight: 150
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Gunslinger: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Monk: true
+      Ninja: true
+      Novice: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      StarGladiator: true
+      SuperNovice: true
+      Swordman: true
+      Taekwon: true
+      Thief: true
+      Wizard: true
+    EquipLevelMin: 40
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_ASPDPOTION1,1800000,0;
+  - Id: 657
+    AegisName: Berserk_Potion
+    Name: Berserk Potion
+    Type: Usable
+    Buy: 3000
+    Weight: 200
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Gunslinger: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Rogue: true
+      SoulLinker: true
+      StarGladiator: true
+      Swordman: true
+      Taekwon: true
+      Wizard: true
+    EquipLevelMin: 85
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_ASPDPOTION2,1800000,0;
+  - Id: 659
+    AegisName: Heart_Of_Her
+    Name: Her Heart
+    Type: Usable
+    Buy: 500
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      pet 1188;
+  - Id: 660
+    AegisName: Prohibition_Red_Candle
+    Name: Forbidden Red Candle
+    Type: Usable
+    Buy: 20000
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      pet 1200;
+  - Id: 661
+    AegisName: Sway_Apron
+    Name: Soft Apron
+    Type: Usable
+    Buy: 20000
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      pet 1275;
+  - Id: 662
+    AegisName: Inspector_Certificate
+    Name: Authoritative Badge
+    Type: Usable
+    Buy: 1450
+    Weight: 30
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start SC_SPEEDUP0,180000,25;
+  - Id: 663
+    AegisName: Korea_Rice_Cake
+    Name: Korean Rice Cake
+    Type: Healing
+    Buy: 1
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    Script: |
+      percentheal 10,0;
+  - Id: 668
+    AegisName: Handsei
+    Name: Red Envelope
+    Type: Usable
+    Weight: 20
+    Flags:
+      BuyingStore: true
+    Script: |
+      set Zeny,Zeny+rand(1000,10000);
+  - Id: 669
+    AegisName: Rice_Cake_Soup
+    Name: Tempting Rice-Cake Soup
+    Type: Healing
+    Buy: 500
+    Weight: 100
+    Flags:
+      BuyingStore: true
+    Script: |
+      percentheal -100,-100;
+  - Id: 679
+    AegisName: Gold_Pill
+    Name: Pilule
+    Type: Usable
+    Buy: 5000
+    Weight: 300
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_DPOISON,10000,0,1000,0;
+      sc_start STATUS_POISON,50000,0;
+  - Id: 680
+    AegisName: Magical_Carnation
+    Name: Magic Carnation
+    Type: Healing
+    Weight: 1000
+    Script: |
+      percentheal 0,20;
+  - Id: 681
+    AegisName: Memory_Of_Wedding
+    Name: Sweet Memory of Marriage
+    Type: Usable
+    Buy: 50000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    Script: |
+      if (getpartnerid())
+         sc_start SC_WEDDING,600000,0;
+  - Id: 682
+    AegisName: Realgar_Wine
+    Name: Distilled Fighting Spirit
+    Type: Usable
+    Weight: 100
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start SC_ATKPOTION,60000,30;
+  - Id: 683
+    AegisName: Exorcize_Herb
+    Name: Herb of Incantation
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start SC_MATKPOTION,60000,30;
+  - Id: 684
+    AegisName: Durian
+    Name: Durian
+    Type: Usable
+    Buy: 15000
+    Weight: 300
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start SC_ATKPOTION,60000,10;
+      sc_start SC_MATKPOTION,60000,10;
+  - Id: 685
+    AegisName: RAMADAN
+    Name: Ramadan
+    Type: Healing
+    Buy: 5000
+    Weight: 300
+    Script: |
+      percentheal 100,50;
+  - Id: 686
+    AegisName: Earth_Scroll_1_3
+    Name: Level 3 Earth Spike
+    Type: Delayconsume
+    Buy: 1000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      itemskill "SK_WZ_STALAGMITE",3;
+  - Id: 687
+    AegisName: Earth_Scroll_1_5
+    Name: Level 5 Earth Spike
+    Type: Delayconsume
+    Buy: 2000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      itemskill "SK_WZ_STALAGMITE",5;
+  - Id: 688
+    AegisName: Cold_Scroll_1_3
+    Name: Level 3 Cold Bolt
+    Type: Delayconsume
+    Buy: 1000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      itemskill "SK_MG_COLDBOLT",3;
+  - Id: 689
+    AegisName: Cold_Scroll_1_5
+    Name: Level 5 Cold Bolt
+    Type: Delayconsume
+    Buy: 2000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      itemskill "SK_MG_COLDBOLT",5;
+  - Id: 690
+    AegisName: Fire_Scroll_1_3
+    Name: Level 3 Fire Bolt
+    Type: Delayconsume
+    Buy: 1000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      itemskill "SK_MG_FIREBOLT",3;
+  - Id: 691
+    AegisName: Fire_Scroll_1_5
+    Name: Level 5 Fire Bolt
+    Type: Delayconsume
+    Buy: 2000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      itemskill "SK_MG_FIREBOLT",5;
+  - Id: 693
+    AegisName: Wind_Scroll_1_5
+    Name: Level 5 Lightening Bolt
+    Type: Delayconsume
+    Buy: 2000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      itemskill "SK_MG_LIGHTNINGBOLT",5;
+  - Id: 694
+    AegisName: Ghost_Scroll_1_3
+    Name: Level 3 Soul Strike
+    Type: Delayconsume
+    Buy: 1000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      itemskill "SK_MG_SOULSTRIKE",3;
+  - Id: 695
+    AegisName: Ghost_Scroll_1_5
+    Name: Level 5 Soul Strike
+    Type: Delayconsume
+    Buy: 2000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      itemskill "SK_MG_SOULSTRIKE",5;
+  - Id: 696
+    AegisName: Fire_Scroll_2_1
+    Name: Level 1 Fire Ball
+    Type: Delayconsume
+    Buy: 1000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      itemskill "MG_FIREBALL",1;
+  - Id: 697
+    AegisName: Fire_Scroll_2_5
+    Name: Level 5 Fire Ball
+    Type: Delayconsume
+    Buy: 2000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      itemskill "MG_FIREBALL",5;
+  - Id: 698
+    AegisName: Fire_Scroll_3_1
+    Name: Level 1 Fire Wall
+    Type: Delayconsume
+    Buy: 1000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      itemskill "MG_FIREWALL",1;
+  - Id: 699
+    AegisName: Fire_Scroll_3_5
+    Name: Level 5 Fire Wall
+    Type: Delayconsume
+    Buy: 2000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      itemskill "MG_FIREWALL",5;
+  - Id: 700
+    AegisName: Cold_Scroll_2_1
+    Name: Level 1 Frost Diver
+    Type: Delayconsume
+    Buy: 1000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      itemskill "SK_MG_FROSTDIVER",1;
+  - Id: 6046
+    AegisName: Clothing_Dye_Coupon
+    Name: Clothing Dye Coupon
+    Type: Usable
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+  - Id: 6047
+    AegisName: Clothing_Dye_Coupon_II
+    Name: Clothing Dye Coupon II
+    Type: Usable
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+  - Id: 11500
+    AegisName: Light_Yellow_Pot
+    Name: Light Yellow Potion
+    Type: Healing
+    Buy: 550
+    Weight: 10
+    Script: |
+      itemheal rand(175,235),0;
+  - Id: 11501
+    AegisName: Light_White_Pot
+    Name: Light White Potion
+    Type: Healing
+    Buy: 1200
+    Weight: 10
+    Script: |
+      itemheal rand(325,405),0;
+  - Id: 11502
+    AegisName: Light_Blue_Pot
+    Name: Light Blue Potion
+    Type: Healing
+    Buy: 5000
+    Weight: 10
+    Script: |
+      itemheal 0,rand(40,60);
+  - Id: 11503
+    AegisName: Siege_White_Potion
+    Name: WoE White Potion
+    Type: Healing
+    Weight: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      itemheal rand(400,500),0;
+  - Id: 11504
+    AegisName: Siege_Blue_Potion
+    Name: WoE Blue Potion
+    Type: Healing
+    Weight: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      itemheal 0,rand(50,70);
+  - Id: 11505
+    AegisName: Iris
+    Name: Iris
+    Type: Healing
+    Weight: 30
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      itemheal 0,150;
+  - Id: 11506
+    AegisName: Fanta_Orange
+    Name: Fanta Orange
+    Type: Healing
+    Buy: 800
+    Weight: 100
+    Script: |
+      itemheal rand(50,70),rand(10,12);
+  - Id: 11507
+    AegisName: Fanta_Grape
+    Name: Fanta Grape
+    Type: Healing
+    Buy: 800
+    Weight: 100
+    Script: |
+      itemheal rand(50,70),rand(10,12);
+  - Id: 11508
+    AegisName: Karada_Meguri_Tea
+    Name: Karada Meguricha
+    Type: Healing
+    Buy: 800
+    Weight: 100
+    Script: |
+      itemheal rand(50,70),rand(10,12);
+  - Id: 11509
+    AegisName: Royal_Milk_Tea
+    Name: Black Tea Kochakaden
+    Type: Healing
+    Buy: 800
+    Weight: 100
+    Script: |
+      itemheal rand(50,70),rand(10,12);
+  - Id: 11510
+    AegisName: Coke_Zero
+    Name: Coca Cola Zero
+    Type: Healing
+    Buy: 800
+    Weight: 100
+    Script: |
+      itemheal rand(50,70),rand(10,12);
+  - Id: 11511
+    AegisName: Coke_No_Cal
+    Name: Diet Coca Cola
+    Type: Healing
+    Buy: 800
+    Weight: 100
+    Script: |
+      itemheal rand(50,70),rand(10,12);
+  - Id: 11512
+    AegisName: Coca_Cola
+    Name: Coca Cola
+    Type: Healing
+    Buy: 800
+    Weight: 100
+    Script: |
+      itemheal rand(50,70),rand(10,12);
+  - Id: 11514
+    AegisName: Enriched_Slim_Pot
+    Name: Enriched Slim Pot
+    Type: Healing
+    Weight: 50
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      itemheal rand(335,415),0;
+  - Id: 11515
+    AegisName: Coconut
+    Name: Coconut
+    Type: Healing
+    Buy: 1500
+    Weight: 120
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(300,400),0;
+  - Id: 11516
+    AegisName: Asai_Fruit
+    Name: Asai Fruit
+    Type: Healing
+    Buy: 15
+    Weight: 20
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(16,22),0;
+  - Id: 11517
+    AegisName: Puri_Potion
+    Name: Puri Potion
+    Type: Healing
+    Buy: 20
+    Weight: 100
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(400,600),0;
+  - Id: 11518
+    AegisName: N_Blue_Potion
+    Name: Blue Potion
+    Type: Healing
+    Weight: 50
+    Script: |
+      itemheal 0,5;
+  - Id: 11519
+    AegisName: Beef_Toast
+    Name: Beef Toast
+    Type: Healing
+    Buy: 650
+    Weight: 40
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(170,250),0;
+  - Id: 11520
+    AegisName: Mora_Mandarin
+    Name: Mora Mandar
+    Type: Healing
+    Buy: 500
+    Weight: 20
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal 0,rand(50,80);
+  - Id: 11521
+    AegisName: Pingui_Berry_Juice
+    Name: Pingui Berry Juice
+    Type: Healing
+    Buy: 500
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(400,800),rand(50,80);
+  - Id: 11522
+    AegisName: Red_Raffle_Sap
+    Name: Red Raffle Sap
+    Type: Healing
+    Buy: 2000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+    Delay:
+      Duration: 1000
+    Script: |
+      itemheal rand(400,800),0;
+  - Id: 11523
+    AegisName: Yellow_Raffle_Sap
+    Name: Yellow Raffle Sap
+    Type: Healing
+    Buy: 2400
+    Weight: 120
+    Flags:
+      BuyingStore: true
+    Delay:
+      Duration: 2000
+    Script: |
+      itemheal rand(600,1000),0;
+  - Id: 11524
+    AegisName: White_Raffle_Sap
+    Name: White Raffle Sap
+    Type: Healing
+    Buy: 2800
+    Weight: 140
+    Flags:
+      BuyingStore: true
+    Delay:
+      Duration: 3000
+    Script: |
+      itemheal rand(800,1200),0;
+  - Id: 11525
+    AegisName: Mora_Hip_Tea
+    Name: Mora HIp Tea
+    Type: Healing
+    Buy: 20
+    Weight: 150
+    Flags:
+      BuyingStore: true
+    Delay:
+      Duration: 5000
+    Script: |
+      itemheal rand(1500,2000),0;
+  - Id: 11526
+    AegisName: Rafflecino
+    Name: Rafflecino
+    Type: Healing
+    Buy: 20
+    Weight: 100
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal 0,rand(120,160);
+  - Id: 11527
+    AegisName: Baklava
+    Name: Baklava
+    Type: Healing
+    Buy: 3500
+    Weight: 600
+    Script: |
+      itemheal 1200,440;
+  - Id: 11528
+    AegisName: Kanafeh
+    Name: Kanafeh
+    Type: Healing
+    Buy: 1500
+    Weight: 200
+    Script: |
+      itemheal 300,240;
+  - Id: 11529
+    AegisName: MAAMOUL_
+    Name: Maamoul
+    Type: Healing
+    Buy: 500
+    Weight: 100
+    Script: |
+      itemheal 120,60;
+  - Id: 11530
+    AegisName: Jujube
+    Name: Jujube
+    Type: Healing
+    Buy: 10
+    Weight: 100
+    Script: |
+      itemheal 30,0;
+  - Id: 11531
+    AegisName: Coffee
+    Name: Coffee
+    Type: Healing
+    Buy: 10
+    Weight: 100
+    Script: |
+      itemheal 0,10;
+  - Id: 11701
+    AegisName: Girl_Bunch_Of_Flower
+    Name: Girl's Bouquet
+    Type: Healing
+    Buy: 20
+    Weight: 50
+    Script: |
+      itemheal rand(105,145),0;
+  - Id: 11702
+    AegisName: Moon_Cookie
+    Name: Moon Cookie
+    Type: Healing
+    Weight: 300
+    NoUse:
+      Override: 100
+      Sitting: true
+  - Id: 11703
+    AegisName: Mysterious_Blood
+    Name: Mystery Blood
+    Type: Healing
+    Weight: 30
+    Script: |
+      itemheal 0,rand(25,35);
+  - Id: 11704
+    AegisName: KETUPAT_F
+    Name: Ketupat
+    Type: Healing
+    Buy: 2
+    Weight: 10
+    Script: |
+      itemheal rand(70,90),0;
+  - Id: 11705
+    AegisName: Special_White_Potion
+    Name: Children's Potion
+    Type: Healing
+    Buy: 1
+    Weight: 10
+    Script: |
+      itemheal rand(425,425),0;
+  - Id: 11706
+    AegisName: Steak
+    Name: Steak
+    Type: Healing
+    Buy: 1
+    Weight: 200
+    Script: |
+      itemheal rand(700,1000),0;
+  - Id: 11707
+    AegisName: Roasted_Beef
+    Name: Roast Beef
+    Type: Healing
+    Buy: 1
+    Weight: 200
+    Script: |
+      itemheal 0,rand(100,200);
+  - Id: 11708
+    AegisName: Fore_Flank_Sirloin
+    Name: Fore Flank Sirloin
+    Type: Healing
+    Buy: 20
+    Weight: 100
+    Script: |
+      itemheal rand(30,50),rand(1,5);
+  - Id: 11709
+    AegisName: Fanta_Zero_Lemon
+    Name: Fanta Zero Lemon
+    Type: Healing
+    Buy: 800
+    Weight: 100
+    Script: |
+      itemheal rand(50,70),rand(10,12);
+  - Id: 11710
+    AegisName: Sakura_Mist
+    Name: Sakura Mist
+    Type: Healing
+    Buy: 800
+    Weight: 100
+    Script: |
+      itemheal rand(50,70),rand(10,12);
+  - Id: 11711
+    AegisName: Sakura_Milk_Tea
+    Name: Sakura Milk Tea
+    Type: Healing
+    Buy: 800
+    Weight: 100
+    Script: |
+      itemheal rand(50,70),rand(10,12);
+  - Id: 11712
+    AegisName: First_Leaf_Tea
+    Name: Flower
+    Type: Healing
+    Buy: 800
+    Weight: 100
+    Script: |
+      itemheal rand(50,70),rand(10,12);
+  - Id: 12000
+    AegisName: Cold_Scroll_2_5
+    Name: Level 5 Frost Diver
+    Type: Delayconsume
+    Buy: 2000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      itemskill "SK_MG_FROSTDIVER",5;
+  - Id: 12001
+    AegisName: Holy_Scroll_1_3
+    Name: Level 3 Heal
+    Type: Delayconsume
+    Buy: 2000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      itemskill "SK_AL_HEAL",3;
+  - Id: 12002
+    AegisName: Holy_Scroll_1_5
+    Name: Level 5 Heal
+    Type: Delayconsume
+    Buy: 2000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      itemskill "SK_AL_HEAL",5;
+  - Id: 12003
+    AegisName: Holy_Scroll_2_1
+    Name: Level 1 Teleport
+    Type: Delayconsume
+    Buy: 1000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemskill "AL_TELEPORT",1;
+  - Id: 12004
+    AegisName: Arrow_Container
+    Name: Quiver
+    Type: Usable
+    Buy: 2
+    Weight: 250
+    Flags:
+      BuyingStore: true
+    Script: |
+      getitem 1750,500;
+  - Id: 12005
+    AegisName: Iron_Arrow_Container
+    Name: Iron Arrow Quiver
+    Type: Usable
+    Buy: 2
+    Weight: 250
+    Flags:
+      BuyingStore: true
+    Script: |
+      getitem 1770,500;
+  - Id: 12006
+    AegisName: Steel_Arrow_Container
+    Name: Steel Arrow Quiver
+    Type: Usable
+    Buy: 2
+    Weight: 250
+    Flags:
+      BuyingStore: true
+    Script: |
+      getitem 1753,500;
+  - Id: 12007
+    AegisName: Ori_Arrow_Container
+    Name: Oridecon Arrow Quiver
+    Type: Usable
+    Buy: 2
+    Weight: 250
+    Flags:
+      BuyingStore: true
+    Script: |
+      getitem 1765,500;
+  - Id: 12008
+    AegisName: Fire_Arrow_Container
+    Name: Fire Arrow Quiver
+    Type: Usable
+    Buy: 2
+    Weight: 250
+    Flags:
+      BuyingStore: true
+    Script: |
+      getitem 1752,500;
+  - Id: 12009
+    AegisName: Silver_Arrow_Container
+    Name: Silver Arrow Quiver
+    Type: Usable
+    Buy: 2
+    Weight: 250
+    Flags:
+      BuyingStore: true
+    Script: |
+      getitem 1751,500;
+  - Id: 12010
+    AegisName: Wind_Arrow_Container
+    Name: Wind Arrow Quiver
+    Type: Usable
+    Buy: 2
+    Weight: 250
+    Flags:
+      BuyingStore: true
+    Script: |
+      getitem 1755,500;
+  - Id: 12011
+    AegisName: Stone_Arrow_Container
+    Name: Stone Arrow Quiver
+    Type: Usable
+    Buy: 2
+    Weight: 250
+    Flags:
+      BuyingStore: true
+    Script: |
+      getitem 1756,500;
+  - Id: 12012
+    AegisName: Crystal_Arrow_Container
+    Name: Crystal Arrow Quiver
+    Type: Usable
+    Buy: 2
+    Weight: 250
+    Flags:
+      BuyingStore: true
+    Script: |
+      getitem 1754,500;
+  - Id: 12013
+    AegisName: Shadow_Arrow_Container
+    Name: Shadow Arrow Quiver
+    Type: Usable
+    Buy: 2
+    Weight: 250
+    Flags:
+      BuyingStore: true
+    Script: |
+      getitem 1767,500;
+  - Id: 12014
+    AegisName: Imma_Arrow_Container
+    Name: Immaterial Arrow Quiver
+    Type: Usable
+    Buy: 2
+    Weight: 250
+    Flags:
+      BuyingStore: true
+    Script: |
+      getitem 1757,500;
+  - Id: 12015
+    AegisName: Rusty_Arrow_Container
+    Name: Rusty Arrow Quiver
+    Type: Usable
+    Buy: 2
+    Weight: 250
+    Flags:
+      BuyingStore: true
+    Script: |
+      getitem 1762,500;
+  - Id: 12016
+    AegisName: Speed_Up_Potion
+    Name: Speed Potion
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start SC_SPEEDUP1,5000,50;
+  - Id: 12017
+    AegisName: Slow_Down_Potion
+    Name: Slow Potion
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start SC_SlowDown,5000,0;
+  - Id: 12018
+    AegisName: Fire_Cracker
+    Name: Firecracker
+    Type: Usable
+    Buy: 2
+    Weight: 20
+    Flags:
+      BuyingStore: true
+  - Id: 12019
+    AegisName: Holy_Egg
+    Name: Holy Egg
+    Type: Delayconsume
+    Buy: 2
+    Weight: 150
+    Script: |
+      itemskill "SK_PR_RESURRECTIO",2;
+  - Id: 12020
+    AegisName: Water_Of_Darkness
+    Name: Cursed Water
+    Type: Delayconsume
+    Buy: 2
+    Weight: 30
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemskill "ITEM_ENCHANTARMS",8;
+  - Id: 12021
+    AegisName: Pork_Belly
+    Name: Pork
+    Type: Healing
+    Weight: 10
+    Script: |
+      itemheal rand(70,99),0;
+  - Id: 12022
+    AegisName: Spareribs
+    Name: Galbi
+    Type: Healing
+    Weight: 10
+    Script: |
+      itemheal rand(70,99),0;
+  - Id: 12040
+    AegisName: Stone_Of_Intelligence_
+    Name: Stone of Sage
+    Type: Usable
+    Buy: 100000
+    Weight: 300
+    Flags:
+      BuyingStore: true
+    Script: |
+      homevolution;
+  - Id: 12041
+    AegisName: Str_Dish01
+    Name: Fried Grasshopper Legs
+    Type: Healing
+    Buy: 2000
+    Weight: 60
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_STRFOOD,1200000,1;
+      percentheal 5,0;
+  - Id: 12042
+    AegisName: Str_Dish02
+    Name: Seasoned Sticky Webfoot
+    Type: Healing
+    Buy: 4000
+    Weight: 500
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_STRFOOD,1200000,2;
+      percentheal 5,0;
+  - Id: 12043
+    AegisName: Str_Dish03
+    Name: Bomber Steak
+    Type: Healing
+    Buy: 6000
+    Weight: 500
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_STRFOOD,1200000,3;
+      percentheal 5,0;
+  - Id: 12044
+    AegisName: Str_Dish04
+    Name: Herb Marinade Beef
+    Type: Healing
+    Buy: 8000
+    Weight: 500
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_STRFOOD,1200000,4;
+      percentheal 5,0;
+  - Id: 12045
+    AegisName: Str_Dish05
+    Name: Lutie Lady's Pancake
+    Type: Healing
+    Buy: 10000
+    Weight: 500
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_STRFOOD,1200000,5;
+      percentheal 10,0;
+  - Id: 12046
+    AegisName: Int_Dish01
+    Name: Grape Juice Herbal Tea
+    Type: Healing
+    Buy: 2000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_INTFOOD,1200000,1;
+      percentheal 0,5;
+  - Id: 12047
+    AegisName: Int_Dish02
+    Name: Autumn Red Tea
+    Type: Healing
+    Buy: 4000
+    Weight: 500
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_INTFOOD,1200000,2;
+      percentheal 0,5;
+  - Id: 12048
+    AegisName: Int_Dish03
+    Name: Honey Herbal Tea
+    Type: Healing
+    Buy: 6000
+    Weight: 500
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_INTFOOD,1200000,3;
+      percentheal 0,5;
+  - Id: 12049
+    AegisName: Int_Dish04
+    Name: Morocc Fruit Wine
+    Type: Healing
+    Buy: 8000
+    Weight: 300
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_INTFOOD,1200000,4;
+      percentheal 0,5;
+  - Id: 12050
+    AegisName: Int_Dish05
+    Name: Mastela Fruit Wine
+    Type: Healing
+    Buy: 10000
+    Weight: 400
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_INTFOOD,1200000,5;
+      percentheal 0,10;
+  - Id: 12051
+    AegisName: Vit_Dish01
+    Name: Steamed Crab Nippers
+    Type: Healing
+    Buy: 2000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_VITFOOD,1200000,1;
+      percentheal 5,0;
+  - Id: 12052
+    AegisName: Vit_Dish02
+    Name: Assorted Seafood
+    Type: Healing
+    Buy: 4000
+    Weight: 200
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_VITFOOD,1200000,2;
+      percentheal 5,0;
+  - Id: 12053
+    AegisName: Vit_Dish03
+    Name: Clam Soup
+    Type: Healing
+    Buy: 6000
+    Weight: 300
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_VITFOOD,1200000,3;
+      percentheal 5,0;
+  - Id: 12054
+    AegisName: Vit_Dish04
+    Name: Seasoned Jellyfish
+    Type: Healing
+    Buy: 8000
+    Weight: 500
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_VITFOOD,1200000,4;
+      percentheal 5,0;
+  - Id: 12055
+    AegisName: Vit_Dish05
+    Name: Spicy Fried Bao
+    Type: Healing
+    Buy: 10000
+    Weight: 800
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_VITFOOD,1200000,5;
+      percentheal 10,0;
+  - Id: 12056
+    AegisName: Agi_Dish01
+    Name: Frog Egg Squid Ink Soup
+    Type: Healing
+    Buy: 2000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_AGIFOOD,1200000,1;
+      percentheal 3,1;
+  - Id: 12057
+    AegisName: Agi_Dish02
+    Name: Smooth Noodle
+    Type: Healing
+    Buy: 4000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_AGIFOOD,1200000,2;
+      percentheal 3,1;
+  - Id: 12058
+    AegisName: Agi_Dish03
+    Name: Tentacle Cheese Gratin
+    Type: Healing
+    Buy: 6000
+    Weight: 500
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_AGIFOOD,1200000,3;
+      percentheal 3,1;
+  - Id: 12059
+    AegisName: Agi_Dish04
+    Name: Lutie Cold Noodle
+    Type: Healing
+    Buy: 8000
+    Weight: 400
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_AGIFOOD,1200000,4;
+      percentheal 3,1;
+  - Id: 12060
+    AegisName: Agi_Dish05
+    Name: Steamed Bat Wing in Pumpkin
+    Type: Healing
+    Buy: 10000
+    Weight: 500
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_AGIFOOD,1200000,5;
+      percentheal 6,2;
+  - Id: 12061
+    AegisName: Dex_Dish01
+    Name: Honey Grape Juice
+    Type: Healing
+    Buy: 2000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_DEXFOOD,1200000,1;
+      percentheal 2,2;
+  - Id: 12062
+    AegisName: Dex_Dish02
+    Name: Chocolate Mousse Cake
+    Type: Healing
+    Buy: 4000
+    Weight: 200
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_DEXFOOD,1200000,2;
+      percentheal 2,2;
+  - Id: 12063
+    AegisName: Dex_Dish03
+    Name: Fruit Mix
+    Type: Healing
+    Buy: 6000
+    Weight: 200
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_DEXFOOD,1200000,3;
+      percentheal 2,2;
+  - Id: 12064
+    AegisName: Dex_Dish04
+    Name: Cream Sandwich
+    Type: Healing
+    Buy: 8000
+    Weight: 500
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_DEXFOOD,1200000,4;
+      percentheal 2,2;
+  - Id: 12065
+    AegisName: Dex_Dish05
+    Name: Green Salad
+    Type: Healing
+    Buy: 10000
+    Weight: 200
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_DEXFOOD,1200000,5;
+      percentheal 5,5;
+  - Id: 12066
+    AegisName: Luk_Dish01
+    Name: Fried Monkey Tails
+    Type: Healing
+    Buy: 2000
+    Weight: 60
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_LUKFOOD,1200000,1;
+      percentheal 3,2;
+  - Id: 12067
+    AegisName: Luk_Dish02
+    Name: Mixed Juice
+    Type: Healing
+    Buy: 4000
+    Weight: 200
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_LUKFOOD,1200000,2;
+      percentheal 3,2;
+  - Id: 12068
+    AegisName: Luk_Dish03
+    Name: Fried Sweet Potato
+    Type: Healing
+    Buy: 6000
+    Weight: 500
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_LUKFOOD,1200000,3;
+      percentheal 4,2;
+  - Id: 12069
+    AegisName: Luk_Dish04
+    Name: Steamed Ancient Lips
+    Type: Healing
+    Buy: 8000
+    Weight: 500
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_LUKFOOD,1200000,4;
+      percentheal 4,2;
+  - Id: 12070
+    AegisName: Luk_Dish05
+    Name: Fried Scorpion Tails
+    Type: Healing
+    Buy: 10000
+    Weight: 400
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_LUKFOOD,1200000,5;
+      percentheal 5,2;
+  - Id: 12071
+    AegisName: Str_Dish06
+    Name: Shiny Marinade Beef
+    Type: Healing
+    Buy: 20000
+    Weight: 800
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_STRFOOD,1200000,6;
+      percentheal 10,2;
+  - Id: 12072
+    AegisName: Str_Dish07
+    Name: Whole Roast
+    Type: Healing
+    Buy: 40000
+    Weight: 1000
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_STRFOOD,1200000,7;
+      percentheal 10,4;
+  - Id: 12073
+    AegisName: Str_Dish08
+    Name: Bearfoot Special
+    Type: Healing
+    Buy: 60000
+    Weight: 500
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_STRFOOD,1200000,8;
+      percentheal 15,6;
+  - Id: 12074
+    AegisName: Str_Dish09
+    Name: Tendon Satay
+    Type: Healing
+    Buy: 80000
+    Weight: 1000
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_STRFOOD,1200000,9;
+      percentheal 15,8;
+  - Id: 12075
+    AegisName: Str_Dish10
+    Name: Steamed Tongue
+    Type: Healing
+    Buy: 100000
+    Weight: 1000
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_STRFOOD,1200000,10;
+      percentheal 20,20;
+  - Id: 12076
+    AegisName: Int_Dish06
+    Name: Red Mushroom Wine
+    Type: Healing
+    Buy: 20000
+    Weight: 300
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_INTFOOD,1200000,6;
+      percentheal 2,10;
+  - Id: 12077
+    AegisName: Int_Dish07
+    Name: Special Royal Jelly Herbal Tea
+    Type: Healing
+    Buy: 40000
+    Weight: 800
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_INTFOOD,1200000,7;
+      percentheal 4,10;
+  - Id: 12078
+    AegisName: Int_Dish08
+    Name: Royal Family Tea
+    Type: Healing
+    Buy: 60000
+    Weight: 1000
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_INTFOOD,1200000,8;
+      percentheal 6,10;
+  - Id: 12079
+    AegisName: Int_Dish09
+    Name: Tristan XII
+    Type: Healing
+    Buy: 80000
+    Weight: 1000
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_INTFOOD,1200000,9;
+      percentheal 8,15;
+  - Id: 12080
+    AegisName: Int_Dish10
+    Name: Dragon Breath Cocktail
+    Type: Healing
+    Buy: 100000
+    Weight: 1000
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_INTFOOD,1200000,10;
+      percentheal 10,20;
+  - Id: 12081
+    AegisName: Vit_Dish06
+    Name: Awfully Bitter Bracer
+    Type: Healing
+    Buy: 20000
+    Weight: 500
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_VITFOOD,1200000,6;
+      percentheal 13,0;
+  - Id: 12082
+    AegisName: Vit_Dish07
+    Name: Sumptuous Feast
+    Type: Healing
+    Buy: 40000
+    Weight: 400
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_VITFOOD,1200000,7;
+      percentheal 16,0;
+  - Id: 12083
+    AegisName: Vit_Dish08
+    Name: Giant Burito
+    Type: Healing
+    Buy: 60000
+    Weight: 1000
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_VITFOOD,1200000,8;
+      percentheal 19,0;
+  - Id: 12084
+    AegisName: Vit_Dish09
+    Name: Ascending Dragon Soup
+    Type: Healing
+    Buy: 80000
+    Weight: 1000
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_VITFOOD,1200000,9;
+      percentheal 22,0;
+  - Id: 12085
+    AegisName: Vit_Dish10
+    Name: Immortal Stew
+    Type: Healing
+    Buy: 100000
+    Weight: 1000
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_VITFOOD,1200000,10;
+      percentheal 25,0;
+  - Id: 12086
+    AegisName: Agi_Dish06
+    Name: Chile Shrimp Gratin
+    Type: Healing
+    Buy: 20000
+    Weight: 800
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_AGIFOOD,1200000,6;
+      percentheal 7,2;
+  - Id: 12087
+    AegisName: Agi_Dish07
+    Name: Steamed Alligator with Vegetable
+    Type: Healing
+    Buy: 40000
+    Weight: 800
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_AGIFOOD,1200000,7;
+      percentheal 8,2;
+  - Id: 12088
+    AegisName: Agi_Dish08
+    Name: Incredibly Spicy Curry
+    Type: Healing
+    Buy: 60000
+    Weight: 1000
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_AGIFOOD,1200000,8;
+      percentheal 9,2;
+  - Id: 12089
+    AegisName: Agi_Dish09
+    Name: Special Meat Stew
+    Type: Healing
+    Buy: 80000
+    Weight: 1000
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_AGIFOOD,1200000,9;
+      percentheal 10,2;
+  - Id: 12090
+    AegisName: Agi_Dish10
+    Name: Steamed Desert Scorpions
+    Type: Healing
+    Buy: 100000
+    Weight: 1000
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_AGIFOOD,1200000,10;
+      percentheal 15,5;
+  - Id: 12091
+    AegisName: Dex_Dish06
+    Name: Peach Cake
+    Type: Healing
+    Buy: 20000
+    Weight: 800
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_DEXFOOD,1200000,6;
+      percentheal 5,6;
+  - Id: 12092
+    AegisName: Dex_Dish07
+    Name: Soul Haunted Bread
+    Type: Healing
+    Buy: 40000
+    Weight: 800
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_DEXFOOD,1200000,7;
+      percentheal 5,7;
+  - Id: 12093
+    AegisName: Dex_Dish08
+    Name: Special Toast
+    Type: Healing
+    Buy: 60000
+    Weight: 1000
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_DEXFOOD,1200000,8;
+      percentheal 5,8;
+  - Id: 12094
+    AegisName: Dex_Dish09
+    Name: Heavenly Fruit Juice
+    Type: Healing
+    Buy: 80000
+    Weight: 500
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_DEXFOOD,1200000,9;
+      percentheal 5,9;
+  - Id: 12095
+    AegisName: Dex_Dish10
+    Name: Hwergelmir's Tonic
+    Type: Healing
+    Buy: 100000
+    Weight: 1000
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_DEXFOOD,1200000,10;
+      percentheal 10,10;
+  - Id: 12096
+    AegisName: Luk_Dish06
+    Name: Lucky Soup
+    Type: Healing
+    Buy: 20000
+    Weight: 300
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_LUKFOOD,1200000,6;
+      percentheal 6,3;
+  - Id: 12097
+    AegisName: Luk_Dish07
+    Name: Assorted Shish Kebob
+    Type: Healing
+    Buy: 40000
+    Weight: 800
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_LUKFOOD,1200000,7;
+      percentheal 7,3;
+  - Id: 12098
+    AegisName: Luk_Dish08
+    Name: Strawberry Flavored Rice Ball
+    Type: Healing
+    Buy: 60000
+    Weight: 400
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_LUKFOOD,1200000,8;
+      percentheal 9,3;
+  - Id: 12099
+    AegisName: Luk_Dish09
+    Name: Blood Flavored Soda
+    Type: Healing
+    Buy: 80000
+    Weight: 1000
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_LUKFOOD,1200000,9;
+      percentheal 10,4;
+  - Id: 12100
+    AegisName: Luk_Dish10
+    Name: Cooked Nine Tail's Tails
+    Type: Healing
+    Buy: 100000
+    Weight: 500
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_LUKFOOD,1200000,10;
+      percentheal 14,8;
+  - Id: 12101
+    AegisName: Citron
+    Name: Citron
+    Type: Healing
+    Buy: 20
+    Weight: 300
+    Flags:
+      BuyingStore: true
+  - Id: 12102
+    AegisName: Meat_Skewer
+    Name: Grilled Skewer
+    Type: Healing
+    Buy: 20
+    Weight: 300
+    Flags:
+      BuyingStore: true
+  - Id: 12103
+    AegisName: Bloody_Dead_Branch
+    Name: Bloody Branch
+    Type: Usable
+    Buy: 10000
+    Weight: 200
+    Flags:
+      BuyingStore: true
+      DeadBranch: true
+    Script: |
+      monster "this",-1,-1,"--ja--",-3,1,"";
+  - Id: 12104
+    AegisName: Random_Quiver
+    Name: Random Quiver
+    Type: Usable
+    Buy: 10000
+    Weight: 200
+    Flags:
+      BuyingStore: true
+      Container: true
+    Script: |
+      getrandgroupitem(IG_Quiver),1;
+  - Id: 12105
+    AegisName: Set_Of_Taiming_Item
+    Name: Taming Gift Set
+    Type: Usable
+    Buy: 10000
+    Weight: 200
+    Flags:
+      BuyingStore: true
+      Container: true
+    Script: |
+      getrandgroupitem(IG_Taming),1;
+      getrandgroupitem(IG_Taming),1;
+      getrandgroupitem(IG_Taming),1;
+  - Id: 12106
+    AegisName: Accessory_Box
+    Name: Jewelry Box
+    Type: Usable
+    Buy: 10000
+    Weight: 200
+    Flags:
+      BuyingStore: true
+      Container: true
+    Script: |
+      getrandgroupitem(IG_Accesory),1;
+  - Id: 12107
+    AegisName: Wrapped_Mask
+    Name: Wrapped Mask
+    Type: Usable
+    Buy: 10000
+    Weight: 200
+    Flags:
+      BuyingStore: true
+      Container: true
+    Script: |
+      getrandgroupitem(IG_Mask),1;
+  - Id: 12108
+    AegisName: Bundle_Of_Magic_Scroll
+    Name: Scroll Package
+    Type: Usable
+    Buy: 10000
+    Weight: 200
+    Flags:
+      BuyingStore: true
+      Container: true
+    Script: |
+      getrandgroupitem(IG_Scroll),1;
+      getrandgroupitem(IG_Scroll),1;
+      getrandgroupitem(IG_Scroll),1;
+      getrandgroupitem(IG_Scroll),1;
+      getrandgroupitem(IG_Scroll),1;
+  - Id: 12109
+    AegisName: Poring_Box
+    Name: Poring Box
+    Type: Usable
+    Buy: 10000
+    Weight: 200
+    Flags:
+      BuyingStore: true
+      DeadBranch: true
+    Script: |
+      monster "this",-1,-1,"--ja--",-2,1,"";
+  - Id: 12110
+    AegisName: First_Aid_Kit
+    Name: First Aid Kit
+    Type: Usable
+    Buy: 10000
+    Weight: 200
+    Flags:
+      BuyingStore: true
+      Container: true
+    Script: |
+      getrandgroupitem(IG_FirstAid),1;
+      getrandgroupitem(IG_FirstAid),1;
+      getrandgroupitem(IG_FirstAid),1;
+      getrandgroupitem(IG_FirstAid),1;
+      getrandgroupitem(IG_FirstAid),1;
+  - Id: 12111
+    AegisName: Food_Package
+    Name: Bundle of Food
+    Type: Usable
+    Buy: 10000
+    Weight: 200
+    Flags:
+      BuyingStore: true
+      Container: true
+    Script: |
+      getrandgroupitem(IG_FoodBag),1;
+      getrandgroupitem(IG_FoodBag),1;
+      getrandgroupitem(IG_FoodBag),1;
+  - Id: 12112
+    AegisName: Tropical_Sograt
+    Name: Tropical Sograt
+    Type: Usable
+    Buy: 1000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_CURSE,10000,1;
+  - Id: 12113
+    AegisName: Vermilion_The_Beach
+    Name: Vermilion on the Beach
+    Type: Usable
+    Buy: 1000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start STATUS_STUN,10000,1;
+  - Id: 12114
+    AegisName: Elemental_Fire
+    Name: Elemental Converter
+    Type: Delayconsume
+    Buy: 2
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemskill "ITEM_ENCHANTARMS",4;
+  - Id: 12115
+    AegisName: Elemental_Water
+    Name: Elemental Converter
+    Type: Delayconsume
+    Buy: 2
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemskill "ITEM_ENCHANTARMS",2;
+  - Id: 12116
+    AegisName: Elemental_Earth
+    Name: Elemental Converter
+    Type: Delayconsume
+    Buy: 2
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemskill "ITEM_ENCHANTARMS",3;
+  - Id: 12117
+    AegisName: Elemental_Wind
+    Name: Elemental Converter
+    Type: Delayconsume
+    Buy: 2
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemskill "ITEM_ENCHANTARMS",5;
+  - Id: 12118
+    AegisName: Resist_Fire
+    Name: Fireproof Potion
+    Type: Usable
+    Buy: 2
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start4 SC_ARMOR_ELEMENT_FIRE,1200000,-15,0,20,0;
+  - Id: 12119
+    AegisName: Resist_Water
+    Name: Coldproof Potion
+    Type: Usable
+    Buy: 2
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start4 SC_ARMOR_ELEMENT_WATER,1200000,20,0,0,-15;
+  - Id: 12120
+    AegisName: Resist_Earth
+    Name: Earthproof Potion
+    Type: Usable
+    Buy: 2
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start4 SC_ARMOR_ELEMENT_EARTH,1200000,0,20,-15,0;
+  - Id: 12121
+    AegisName: Resist_Wind
+    Name: Thunderproof Potion
+    Type: Usable
+    Buy: 2
+    Weight: 10
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start4 SC_ARMOR_ELEMENT_WIND,1200000,0,-15,0,20;
+  - Id: 12122
+    AegisName: Sesame_Pastry
+    Name: Sesame Pastry
+    Type: Usable
+    Buy: 2
+    Weight: 70
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start SC_HITFOOD,1800000,30;
+  - Id: 12123
+    AegisName: Honey_Pastry
+    Name: Honey Pastry
+    Type: Usable
+    Buy: 2
+    Weight: 70
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start SC_FLEEFOOD,1800000,30;
+  - Id: 12124
+    AegisName: Rainbow_Cake
+    Name: Rainbow Cake
+    Type: Usable
+    Buy: 2
+    Weight: 70
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start SC_BATKFOOD,60000,10;
+      sc_start SC_MATKFOOD,60000,10;
+  - Id: 12125
+    AegisName: Outdoor_Cooking_Kits
+    Name: Outdoor Cooking Kit
+    Type: Usable
+    Buy: 500
+    Weight: 20
+    Flags:
+      BuyingStore: true
+    Script: |
+      cooking 11;
+  - Id: 12126
+    AegisName: Indoor_Cooking_Kits
+    Name: Home Cooking Kit
+    Type: Usable
+    Buy: 1000
+    Weight: 30
+    Flags:
+      BuyingStore: true
+    Script: |
+      cooking 12;
+  - Id: 12127
+    AegisName: High_end_Cooking_Kits
+    Name: Professional Cooking Kit
+    Type: Usable
+    Buy: 2000
+    Weight: 50
+    Flags:
+      BuyingStore: true
+    Script: |
+      cooking 13;
+  - Id: 12128
+    AegisName: Imperial_Cooking_Kits
+    Name: Royal Cooking Kit
+    Type: Usable
+    Buy: 5000
+    Weight: 70
+    Flags:
+      BuyingStore: true
+    Script: |
+      cooking 14;
+  - Id: 12129
+    AegisName: Fantastic_Cooking_Kits
+    Name: Fantastic Cooking Kit
+    Type: Usable
+    Buy: 10000
+    Weight: 70
+    Flags:
+      BuyingStore: true
+    Script: |
+      cooking 15;
+  - Id: 12130
+    AegisName: Cookie_Bag
+    Name: Cookie Bag
+    Type: Usable
+    Buy: 2
+    Weight: 70
+    Flags:
+      BuyingStore: true
+      Container: true
+    Script: |
+      getrandgroupitem(IG_CookieBag),1;
+      getrandgroupitem(IG_CookieBag),1;
+      getrandgroupitem(IG_CookieBag),1;
+  - Id: 12131
+    AegisName: Lucky_Potion
+    Name: Lucky Potion
+    Type: Healing
+    Buy: 2
+    Weight: 100
+  - Id: 12132
+    AegisName: Red_Bag
+    Name: Santa's Bag
+    Type: Usable
+    Weight: 200
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start SC_Xmas,600000,0;
+  - Id: 12133
+    AegisName: Ice_Cream_
+    Name: McDonald's Ice Cone
+    Type: Healing
+    Weight: 80
+    Script: |
+      if (gettime(DT_DAYOFMONTH) != MDiceCone) {
+         set MDiceCone,gettime(DT_DAYOFMONTH);
+         percentheal 50,50;
+      }
+  - Id: 12134
+    AegisName: Red_Envelope
+    Name: Red Envelope
+    Type: Usable
+    Buy: 1
+    Weight: 10
+    Script: |
+      set Zeny,Zeny+rand(1000,10000);
+  - Id: 12135
+    AegisName: Green_Ale
+    Name: Green Ale
+    Type: Usable
+    Buy: 20
+    Weight: 30
+    Script: |
+      percentheal 50,50;
+      sc_start STATUS_CONFUSION,10000,0,1000,0;
+  - Id: 12136
+    AegisName: Women's_Bundle
+    Name: Women's Bundle
+    Type: Usable
+    Weight: 100
+    Script: |
+      getitem callfunc("F_Rand",558,529,2668,7518),1;
+  - Id: 12137
+    AegisName: 1st_Stage_Prize
+    Name: First Stage Prize
+    Type: Usable
+  - Id: 12138
+    AegisName: 2nd_Stage_Prize
+    Name: Second Stage Prize
+    Type: Usable
+  - Id: 12139
+    AegisName: 3rd_Stage_Prize
+    Name: Third Stage Prize
+    Type: Usable
+  - Id: 12140
+    AegisName: 4th_Stage_Prize
+    Name: Fourth Stage Prize
+    Type: Usable
+  - Id: 12141
+    AegisName: 5th_Stage_Prize
+    Name: Fifth Stage Prize
+    Type: Usable
+  - Id: 12142
+    AegisName: Magic_Book
+    Name: Book of Magic
+    Type: Usable
+    Weight: 100
+    Trade:
+      Override: 100
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start STATUS_AGIFOOD,1800000,10;
+  - Id: 12143
+    AegisName: Red_Can
+    Name: Red Can
+    Type: Usable
+    Buy: 50000
+    Weight: 300
+  - Id: 12144
+    AegisName: Sphere_Case_Wind
+    Name: Lightning Sphere Pack
+    Type: Usable
+    Buy: 2
+    Weight: 350
+    Flags:
+      BuyingStore: true
+    Script: |
+      getitem 13204,500;
+  - Id: 12145
+    AegisName: Sphere_Case_Darkness
+    Name: Blind Sphere Pack
+    Type: Usable
+    Buy: 2
+    Weight: 350
+    Flags:
+      BuyingStore: true
+    Script: |
+      getitem 13206,500;
+  - Id: 12146
+    AegisName: Sphere_Case_Poison
+    Name: Poison Sphere Pack
+    Type: Usable
+    Buy: 2
+    Weight: 350
+    Flags:
+      BuyingStore: true
+    Script: |
+      getitem 13205,500;
+  - Id: 12147
+    AegisName: Sphere_Case_Water
+    Name: Freezing Sphere Pack
+    Type: Usable
+    Buy: 2
+    Weight: 350
+    Flags:
+      BuyingStore: true
+    Script: |
+      getitem 13207,500;
+  - Id: 12148
+    AegisName: Sphere_Case_Fire
+    Name: Flare Sphere Pack
+    Type: Usable
+    Buy: 2
+    Weight: 350
+    Flags:
+      BuyingStore: true
+    Script: |
+      getitem 13203,500;
+  - Id: 12149
+    AegisName: Bullet_Case
+    Name: Cartridge
+    Type: Usable
+    Buy: 2
+    Weight: 250
+    Flags:
+      BuyingStore: true
+    Script: |
+      getitem 13200,500;
+  - Id: 12150
+    AegisName: Bullet_Case_Blood
+    Name: Blood Cartridge
+    Type: Usable
+    Buy: 2
+    Weight: 250
+    Flags:
+      BuyingStore: true
+    Script: |
+      getitem 13202,500;
+  - Id: 12151
+    AegisName: Bullet_Case_Silver
+    Name: Silver Cartridge
+    Type: Usable
+    Buy: 2
+    Weight: 250
+    Flags:
+      BuyingStore: true
+    Script: |
+      getitem 13201,500;
+  - Id: 12152
+    AegisName: Special_Box
+    Name: Special Present
+    Type: Usable
+    Weight: 100
+  - Id: 12153
+    AegisName: Bow_Mercenary_Scroll1
+    Name: Bowman Scroll 1
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 6017,1800000;
+  - Id: 12154
+    AegisName: Bow_Mercenary_Scroll2
+    Name: Bowman Scroll 2
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 6018,1800000;
+  - Id: 12155
+    AegisName: Bow_Mercenary_Scroll3
+    Name: Bowman Scroll 3
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 6019,1800000;
+  - Id: 12156
+    AegisName: Bow_Mercenary_Scroll4
+    Name: Bowman Scroll 4
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 6020,1800000;
+  - Id: 12157
+    AegisName: Bow_Mercenary_Scroll5
+    Name: Bowman Scroll 5
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 6021,1800000;
+  - Id: 12158
+    AegisName: Bow_Mercenary_Scroll6
+    Name: Bowman Scroll 6
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 6022,1800000;
+  - Id: 12159
+    AegisName: Bow_Mercenary_Scroll7
+    Name: Bowman Scroll 7
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 6023,1800000;
+  - Id: 12160
+    AegisName: Bow_Mercenary_Scroll8
+    Name: Bowman Scroll 8
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 6024,1800000;
+  - Id: 12161
+    AegisName: Bow_Mercenary_Scroll9
+    Name: Bowman Scroll 9
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 6025,1800000;
+  - Id: 12162
+    AegisName: Bow_Mercenary_Scroll10
+    Name: Bowman Scroll 10
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 6026,1800000;
+  - Id: 12163
+    AegisName: SwordMercenary_Scroll1
+    Name: Fencer Scroll 1
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 6037,1800000;
+  - Id: 12164
+    AegisName: SwordMercenary_Scroll2
+    Name: Fencer Scroll 2
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 6038,1800000;
+  - Id: 12165
+    AegisName: SwordMercenary_Scroll3
+    Name: Fencer Scroll 3
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 6039,1800000;
+  - Id: 12166
+    AegisName: SwordMercenary_Scroll4
+    Name: Fencer Scroll 4
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 6040,1800000;
+  - Id: 12167
+    AegisName: SwordMercenary_Scroll5
+    Name: Fencer Scroll 5
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 6041,1800000;
+  - Id: 12168
+    AegisName: SwordMercenary_Scroll6
+    Name: Fencer Scroll 6
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 6042,1800000;
+  - Id: 12169
+    AegisName: SwordMercenary_Scroll7
+    Name: Fencer Scroll 7
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 6043,1800000;
+  - Id: 12170
+    AegisName: SwordMercenary_Scroll8
+    Name: Fencer Scroll 8
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 6044,1800000;
+  - Id: 12171
+    AegisName: SwordMercenary_Scroll9
+    Name: Fencer Scroll 9
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 6045,1800000;
+  - Id: 12172
+    AegisName: SwordMercenary_Scroll10
+    Name: Fencer Scroll 10
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 6046,1800000;
+  - Id: 12173
+    AegisName: SpearMercenary_Scroll1
+    Name: Spearman Scroll 1
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 6027,1800000;
+  - Id: 12174
+    AegisName: SpearMercenary_Scroll2
+    Name: Spearman Scroll 2
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 6028,1800000;
+  - Id: 12175
+    AegisName: SpearMercenary_Scroll3
+    Name: Spearman Scroll 3
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 6029,1800000;
+  - Id: 12176
+    AegisName: SpearMercenary_Scroll4
+    Name: Spearman Scroll 4
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 6030,1800000;
+  - Id: 12177
+    AegisName: SpearMercenary_Scroll5
+    Name: Spearman Scroll 5
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 6031,1800000;
+  - Id: 12178
+    AegisName: SpearMercenary_Scroll6
+    Name: Spearman Scroll 6
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 6032,1800000;
+  - Id: 12179
+    AegisName: SpearMercenary_Scroll7
+    Name: Spearman Scroll 7
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 6033,1800000;
+  - Id: 12180
+    AegisName: SpearMercenary_Scroll8
+    Name: Spearman Scroll 8
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 6034,1800000;
+  - Id: 12181
+    AegisName: SpearMercenary_Scroll9
+    Name: Spearman Scroll 9
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 6035,1800000;
+  - Id: 12182
+    AegisName: SpearMercenary_Scroll10
+    Name: Spearman Scroll 10
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 6036,1800000;
+  - Id: 12183
+    AegisName: Holy_Arrow_Quiver
+    Name: Holy Arrow Quiver
+    Type: Usable
+    Buy: 2
+    Weight: 250
+    Flags:
+      BuyingStore: true
+    Script: |
+      getitem 1772,500;
+  - Id: 12184
+    AegisName: Mercenary_Red_Potion
+    Name: Mercenary Red Potion
+    Type: Usable
+    Buy: 500
+    Weight: 100
+    Flags:
+      BuyingStore: true
+    Script: |
+      mercenary_heal 1000,0;
+  - Id: 12185
+    AegisName: Mercenary_Blue_Potion
+    Name: Mercenary Blue Potion
+    Type: Usable
+    Buy: 1000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+    Script: |
+      mercenary_heal 0,100;
+  - Id: 12186
+    AegisName: Red_Box
+    Name: Old Red Box
+    Type: Usable
+    Buy: 50000
+    Weight: 200
+    Flags:
+      Container: true
+    Script: |
+      getrandgroupitem(IG_RedBox),1;
+  - Id: 12187
+    AegisName: Green_Box
+    Name: Old Green Box
+    Type: Usable
+    Buy: 50000
+    Weight: 200
+    Flags:
+      Container: true
+    Script: |
+      getrandgroupitem(IG_GreenBox),1;
+  - Id: 12188
+    AegisName: Magical_Moon_Cake
+    Name: Grace Moon Cake
+    Type: Healing
+    Buy: 20
+    Weight: 300
+    Script: |
+      percentheal 50,50;
+  - Id: 12189
+    AegisName: Red_Box_
+    Name: Old Red Box
+    Type: Usable
+    Buy: 50000
+    Weight: 200
+    Flags:
+      Container: true
+    Script: |
+      getrandgroupitem(IG_RedBox_2),1;
+  - Id: 12190
+    AegisName: Moon_Cake
+    Name: Moon Cake
+    Type: Usable
+    Buy: 2
+    Weight: 300
+  - Id: 12191
+    AegisName: Special_Moon_Cake
+    Name: Special Moon Cake
+    Type: Usable
+    Buy: 2
+    Weight: 500
+  - Id: 12192
+    AegisName: Pumpkin_Pie
+    Name: Pumpkin Pie
+    Type: Healing
+    Buy: 20
+    Weight: 10
+    Script: |
+      percentheal 5,5;
+  - Id: 12193
+    AegisName: Brezel
+    Name: Pretzel
+    Type: Usable
+    Buy: 20
+    Weight: 20
+  - Id: 12194
+    AegisName: Hometown_Gift
+    Name: Hometown Gift
+    Type: Usable
+    Buy: 20
+    Weight: 200
+    Flags:
+      BuyingStore: true
+      Container: true
+    Script: |
+      getrandgroupitem(IG_HometownGift),1;
+      getrandgroupitem(IG_HometownGift),1;
+      getrandgroupitem(IG_HometownGift),1;
+  - Id: 12195
+    AegisName: Plain_Rice_Cake
+    Name: Plain Rice Cake
+    Type: Healing
+    Buy: 20
+    Weight: 100
+    Flags:
+      BuyingStore: true
+    Script: |
+      percentheal 0,20;
+  - Id: 12196
+    AegisName: Hearty_Rice_Cake
+    Name: Hearty Rice Cake
+    Type: Healing
+    Buy: 20
+    Weight: 100
+    Flags:
+      BuyingStore: true
+    Script: |
+      percentheal 50,0;
+  - Id: 12197
+    AegisName: Salty_Rice_Cake
+    Name: Salty Rice Cake
+    Type: Healing
+    Buy: 20
+    Weight: 100
+    Flags:
+      BuyingStore: true
+    Script: |
+      percentheal 10,10;
+  - Id: 12198
+    AegisName: Lucky_Rice_Cake
+    Name: Lucky Rice Cake
+    Type: Usable
+    Buy: 20
+    Weight: 100
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start SC_INCLUK,1200000,21;
+  - Id: 12199
+    AegisName: Rice_Scroll
+    Name: Scroll of Magic
+    Type: Usable
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+  - Id: 12200
+    AegisName: Event_Cake
+    Name: X-mas Cake
+    Type: Delayconsume
+    Buy: 20
+    Weight: 50
+    Script: |
+      itemskill "SK_PR_MAGNIFICAT",3;
+  - Id: 12201
+    AegisName: Red_Box_C
+    Name: Commonplace Red Box
+    Type: Usable
+    Buy: 20
+    Weight: 200
+  - Id: 12202
+    AegisName: Str_Dish10_
+    Name: Steamed Tongue
+    Type: Healing
+    Buy: 2
+    Weight: 10
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start SC_FOOD_STR_CASH,1800000,10;
+      percentheal 15,5;
+  - Id: 12203
+    AegisName: Agi_Dish10_
+    Name: Steamed Scorpion
+    Type: Healing
+    Buy: 2
+    Weight: 10
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start SC_FOOD_AGI_CASH,1800000,10;
+      percentheal 15,5;
+  - Id: 12204
+    AegisName: Int_Dish10_
+    Name: Dragon Breath Cocktail
+    Type: Healing
+    Buy: 2
+    Weight: 10
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start SC_FOOD_INT_CASH,1800000,10;
+      percentheal 15,5;
+  - Id: 12205
+    AegisName: Dex_Dish10_
+    Name: Hwergelmir's Tonic
+    Type: Healing
+    Buy: 2
+    Weight: 10
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start SC_FOOD_DEX_CASH,1800000,10;
+      percentheal 15,5;
+  - Id: 12206
+    AegisName: Luk_Dish10_
+    Name: Cooked Nine Tail's Tails
+    Type: Healing
+    Buy: 2
+    Weight: 10
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start SC_FOOD_LUK_CASH,1800000,10;
+      percentheal 15,5;
+  - Id: 12207
+    AegisName: Vit_Dish10_
+    Name: Stew Of Immortality
+    Type: Healing
+    Buy: 2
+    Weight: 10
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start SC_FOOD_VIT_CASH,1800000,10;
+      percentheal 15,5;
+  - Id: 12208
+    AegisName: Battle_Manual
+    Name: Battle Manual
+    Type: Usable
+    Buy: 2
+    Weight: 10
+    Delay:
+      Duration: 60000
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start SC_EXPBOOST,1800000,50;
+  - Id: 12209
+    AegisName: Insurance
+    Name: Life Insurance
+    Type: Usable
+    Buy: 2
+    Weight: 10
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start SC_LIFEINSURANCE,1800000,0;
+  - Id: 12210
+    AegisName: Bubble_Gum
+    Name: Bubble Gum
+    Type: Usable
+    Buy: 2
+    Weight: 10
+    Delay:
+      Duration: 60000
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start SC_ITEMBOOST,1800000,200;
+  - Id: 12211
+    AegisName: Kafra_Card
+    Name: Kafra Card
+    Type: Usable
+    Buy: 2
+    Weight: 10
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      callfunc "F_CashStore";
+  - Id: 12212
+    AegisName: Giant_Fly_Wing
+    Name: Giant Fly Wing
+    Type: Usable
+    Buy: 2
+    Weight: 10
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      callfunc "F_CashPartyCall";
+  - Id: 12213
+    AegisName: Neuralizer
+    Name: Neuralizer
+    Type: Delayconsume
+    Buy: 2
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      callfunc "F_CashReset";
+  - Id: 12214
+    AegisName: Convex_Mirror
+    Name: Convex Mirror
+    Type: Usable
+    Buy: 2
+    Weight: 10
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start SC_BOSSMAPINFO,600000,0;
+  - Id: 12215
+    AegisName: Blessing_10_Scroll
+    Name: LV10 Blessing Scroll
+    Type: Usable
+    Buy: 2000
+    Weight: 10
+    NoUse:
+      Override: 100
+      Sitting: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      skilleffect "SK_AL_BLESSING",0;
+      sc_start STATUS_BLESSING,240000,10;
+  - Id: 12216
+    AegisName: Inc_Agi_10_Scroll
+    Name: LV10 Agil Scroll
+    Type: Usable
+    Buy: 2000
+    Weight: 10
+    NoUse:
+      Override: 100
+      Sitting: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      if (Hp>15) {
+         skilleffect "SK_AL_INCREASEAGI",0;
+         sc_start STATUS_INCREASEAGI,240000,10;
+         heal -15,0;
+      }
+  - Id: 12217
+    AegisName: Aspersio_5_Scroll
+    Name: LV5 Aspersio Scroll
+    Type: Usable
+    Buy: 2000
+    Weight: 10
+    NoUse:
+      Override: 100
+      Sitting: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      if (countitem(523)>0) {
+         skilleffect "SK_PR_ASPERSIO",0;
+         sc_start STATUS_ASPERSIO,180000,5;
+         delitem 523,1;
+      }
+  - Id: 12218
+    AegisName: Assumptio_5_Scroll
+    Name: LV5 Assumptio Scroll
+    Type: Usable
+    Buy: 2
+    Weight: 10
+    NoUse:
+      Override: 100
+      Sitting: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start STATUS_ASSUMPTIO,100000,5;
+      skilleffect "SK_BI_ASSUMPTIO",0;
+  - Id: 12219
+    AegisName: Wind_Walk_10_Scroll
+    Name: LV10 Wind Walker Scroll
+    Type: Usable
+    Buy: 2
+    Weight: 10
+    NoUse:
+      Override: 100
+      Sitting: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      skilleffect "SK_HT_WINDRACER",0;
+      sc_start STATUS_WINDRACER,250000,5;
+  - Id: 12220
+    AegisName: Adrenaline_Scroll
+    Name: LV5 Adrenaline Scroll
+    Type: Usable
+    Buy: 2
+    Weight: 10
+    NoUse:
+      Override: 100
+      Sitting: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      set .@type,getiteminfo(getequipid(EQI_HAND_R), ITEMINFO_VIEW);
+      if (.@type == W_1HAXE || .@type == W_2HAXE || .@type == W_MACE) {
+         skilleffect "SK_BS_WEAPONRYEXPERTISE",0;
+         sc_start STATUS_WEAPONRYEXPERTISE,150000,5;
+      }
+  - Id: 12221
+    AegisName: Megaphone_
+    Name: Megaphone
+    Type: Usable
+    Buy: 2
+    Weight: 10
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      input @megaphone$;
+      announce strcharinfo(0) + ": " + @megaphone$,bc_all,0xFF0000;
+  - Id: 12225
+    AegisName: Sweet_Candy_Striper
+    Name: Sweet Candy Cane
+    Type: Usable
+    Buy: 20
+    Weight: 50
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      pet 1245;
+  - Id: 12226
+    AegisName: Examination1
+    Name: Examination 1
+    Type: Healing
+    Buy: 20
+    Weight: 50
+    Script: |
+      sc_start SC_SPEEDUP0,5400000,25;
+      percentheal 100,100;
+      sc_start STATUS_STRFOOD,5400000,10;
+      sc_start STATUS_DEXFOOD,5400000,5;
+      sc_start SC_ATKPOTION,5400000,22;
+      sc_start SC_MATKFOOD,5400000,15;
+  - Id: 12227
+    AegisName: Examination2
+    Name: Examination 2
+    Type: Healing
+    Buy: 20
+    Weight: 50
+    Script: |
+      sc_start SC_SPEEDUP0,5400000,25;
+      percentheal 100,100;
+      sc_start STATUS_INTFOOD,5400000,8;
+      sc_start STATUS_VITFOOD,5400000,7;
+      sc_start STATUS_LUKFOOD,5400000,7;
+      sc_start SC_ATKPOTION,5400000,10;
+  - Id: 12228
+    AegisName: Examination3
+    Name: Examination 3
+    Type: Healing
+    Buy: 20
+    Weight: 50
+    Script: |
+      sc_start SC_SPEEDUP0,5400000,25;
+      percentheal 100,100;
+      sc_start STATUS_AGIFOOD,5400000,15;
+      sc_start SC_ATKPOTION,5400000,52;
+      sc_start SC_MATKFOOD,5400000,10;
+  - Id: 12229
+    AegisName: Examination4
+    Name: Examination 4
+    Type: Healing
+    Buy: 20
+    Weight: 50
+    Script: |
+      sc_start SC_SPEEDUP0,5400000,25;
+      percentheal 100,100;
+      sc_start STATUS_STRFOOD,5400000,3;
+      sc_start STATUS_AGIFOOD,5400000,5;
+      sc_start STATUS_VITFOOD,5400000,10;
+      sc_start SC_MATKFOOD,5400000,52;
+  - Id: 12230
+    AegisName: Examination5
+    Name: Examination 5
+    Type: Healing
+    Buy: 20
+    Weight: 50
+    Script: |
+      sc_start SC_SPEEDUP0,5400000,25;
+      percentheal 100,100;
+      sc_start STATUS_INTFOOD,5400000,3;
+      sc_start STATUS_DEXFOOD,5400000,12;
+      sc_start SC_ATKPOTION,5400000,20;
+      sc_start SC_MATKFOOD,5400000,20;
+  - Id: 12231
+    AegisName: Examination6
+    Name: Examination 6
+    Type: Healing
+    Buy: 20
+    Weight: 50
+    Script: |
+      percentheal 100,100;
+      sc_start SC_SPEEDUP0,5400000,25;
+      sc_start STATUS_STRFOOD,5400000,6;
+      sc_start STATUS_DEXFOOD,5400000,6;
+      sc_start STATUS_AGIFOOD,5400000,6;
+      sc_start STATUS_INTFOOD,5400000,6;
+      sc_start STATUS_VITFOOD,5400000,6;
+      sc_start STATUS_LUKFOOD,5400000,6;
+      sc_start SC_ATKPOTION,5400000,24;
+      sc_start SC_MATKFOOD,5400000,24;
+  - Id: 12232
+    AegisName: Gingerbread
+    Name: Ginger Bread
+    Type: Usable
+    Buy: 20
+    Weight: 150
+    Script: |
+      sc_start STATUS_ASPDPOTION1,900000,0;
+      sc_start SC_SPEEDUP0,900000,25;
+  - Id: 12233
+    AegisName: Kvass
+    Name: Kvass
+    Type: Healing
+    Buy: 20
+    Weight: 200
+    Script: |
+      percentheal 100,100;
+  - Id: 12234
+    AegisName: Cacao99
+    Name: Fierce Cacao 99%
+    Type: Healing
+    Buy: 20
+    Weight: 100
+    Script: |
+      percentheal 25,0;
+  - Id: 12235
+    AegisName: Strawberry_Choco
+    Name: Chocolate Strawberry
+    Type: Usable
+    Buy: 20
+    Weight: 100
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      percentheal 0,5;
+      skilleffect "SK_AL_BLESSING",0;
+      sc_start STATUS_BLESSING,240000,10;
+  - Id: 12236
+    AegisName: Choco_Tart
+    Name: Chocolate Tart
+    Type: Delayconsume
+    Buy: 20
+    Weight: 100
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      percentheal 5,0;
+      itemskill "SK_AL_ANGELUS",5;
+  - Id: 12237
+    AegisName: Choco_Lump
+    Name: Junky Chocolate
+    Type: Usable
+    Weight: 100
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      percentheal 0,5;
+      sc_start STATUS_POISON,18000,0;
+      sc_start STATUS_BLEEDING,18000,0;
+  - Id: 12238
+    AegisName: New_Year_Rice_Cake_1
+    Name: New Year Rice Cake
+    Type: Usable
+    Buy: 20
+    Weight: 100
+    Script: |
+      sc_start STATUS_DPOISON,10000,0,1000,0;
+      sc_start STATUS_POISON,50000,0;
+  - Id: 12239
+    AegisName: New_Year_Rice_Cake_2
+    Name: New Year Rice Cake
+    Type: Usable
+    Buy: 20
+    Weight: 100
+    Script: |
+      sc_start STATUS_DPOISON,10000,0,1000,0;
+      sc_start STATUS_POISON,50000,0;
+  - Id: 12240
+    AegisName: Old_Yellow_Box
+    Name: Old Yellow Box
+    Type: Usable
+    Buy: 20
+    Weight: 200
+    Flags:
+      Container: true
+    Script: |
+      getrandgroupitem(IG_YellowBox),1;
+  - Id: 12241
+    AegisName: M_Center_Potion
+    Name: Mercenary Concentration Potion
+    Type: Usable
+    Buy: 800
+    Weight: 100
+    Flags:
+      BuyingStore: true
+    Script: |
+      mercenary_sc_start STATUS_ASPDPOTION0,1800000,0;
+  - Id: 12242
+    AegisName: M_Awakening_Potion
+    Name: Mercenary Awakening Potion
+    Type: Usable
+    Buy: 1500
+    Weight: 150
+    Flags:
+      BuyingStore: true
+    Script: |
+      mercenary_sc_start STATUS_ASPDPOTION1,1800000,0;
+  - Id: 12243
+    AegisName: M_Berserk_Potion
+    Name: Mercenary Berserk Potion
+    Type: Usable
+    Buy: 3000
+    Weight: 200
+    Flags:
+      BuyingStore: true
+    Script: |
+      mercenary_sc_start STATUS_ASPDPOTION2,1800000,0;
+  - Id: 12244
+    AegisName: Old_Gift_Box
+    Name: Old Gift Box
+    Type: Usable
+    Buy: 20
+    Weight: 200
+    Flags:
+      Container: true
+    Script: |
+      getrandgroupitem(IG_OldGiftBox),1;
+  - Id: 12245
+    AegisName: Green_Ale_US
+    Name: Green Ale
+    Type: Healing
+    Buy: 5000
+    Weight: 500
+    Script: |
+      percentheal 100,0;
+  - Id: 12246
+    AegisName: Magic_Card_Album
+    Name: Mystical Card Album
+    Type: Usable
+    Buy: 10000
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      Container: true
+    Script: |
+      getrandgroupitem(IG_MagicCardAlbum),1;
+  - Id: 12247
+    AegisName: Halohalo
+    Name: Halo-Halo
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    EquipLevelMin: 20
+    Script: |
+      sc_start SC_INCALLSTATUS,600000,3;
+  - Id: 12248
+    AegisName: Masquerade_Ball_Box
+    Name: Fancy Ball Box
+    Type: Usable
+    Buy: 20
+    Weight: 10
+    Flags:
+      Container: true
+    Script: |
+      getrandgroupitem(IG_Masquerade),1;
+  - Id: 12249
+    AegisName: Payroll_Of_Kafra_
+    Name: Payment Statement for Kafra Employee
+    Type: Usable
+    Buy: 20
+    Weight: 10
+  - Id: 12250
+    AegisName: Str_Dish10_M
+    Name: Steamed Tongue
+    Type: Usable
+    Weight: 10
+    Script: |
+      sc_start STATUS_STRFOOD,3600000,10;
+      percentheal 20,20;
+  - Id: 12251
+    AegisName: Agi_Dish10_M
+    Name: Steamed Desert Scorpions
+    Type: Usable
+    Weight: 10
+    Script: |
+      sc_start STATUS_AGIFOOD,3600000,10;
+      percentheal 15,5;
+  - Id: 12252
+    AegisName: Int_Dish10_M
+    Name: Dragon Breath Cocktail
+    Type: Usable
+    Weight: 10
+    Script: |
+      sc_start STATUS_INTFOOD,3600000,10;
+      percentheal 10,20;
+  - Id: 12253
+    AegisName: Dex_Dish10_M
+    Name: Hwergelmir's Tonic
+    Type: Usable
+    Weight: 10
+    Script: |
+      sc_start STATUS_DEXFOOD,3600000,10;
+      percentheal 10,10;
+  - Id: 12254
+    AegisName: Luk_Dish10_M
+    Name: Cooked Nine Tail
+    Type: Usable
+    Weight: 10
+    Script: |
+      sc_start STATUS_LUKFOOD,3600000,10;
+      percentheal 14,8;
+  - Id: 12255
+    AegisName: Vit_Dish10_M
+    Name: Immortal Stew
+    Type: Usable
+    Weight: 10
+    Script: |
+      sc_start STATUS_VITFOOD,3600000,10;
+      percentheal 25,0;
+  - Id: 12256
+    AegisName: PRO_Gift_Box
+    Name: PRO Gift Box
+    Type: Usable
+    Weight: 10
+  - Id: 12257
+    AegisName: Cold_Medicine
+    Name: Cold Medicine
+    Type: Healing
+    Buy: 20
+    Weight: 100
+    EquipLevelMin: 50
+    Script: |
+      percentheal 25,25;
+  - Id: 12258
+    AegisName: Bombring_Box
+    Name: Bomb Poring Box
+    Type: Usable
+    Weight: 10
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      if (strcharinfo(3) == "job3_rang02") {
+         monster "this",-1,-1,"--ja--",1904,1,"";
+      }
+  - Id: 12259
+    AegisName: Miracle_Medicine
+    Name: Miracle Tonic
+    Type: Usable
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      getexp2(3000000,1500000);
+  - Id: 12260
+    AegisName: Cool_Summer_Outfit
+    Name: Cool Summer Outfit
+    Type: Usable
+    Weight: 100
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start SC_Summer,600000,0;
+  - Id: 12261
+    AegisName: Secret_Medicine
+    Name: Leap of Fantasy
+    Type: Usable
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      getexp2(2000000,1000000);
+  - Id: 12262
+    AegisName: Inspector_Certificate_
+    Name: Authoritative Badge
+    Type: Usable
+    Weight: 10
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start SC_SPEEDUP0,540000,25;
+  - Id: 12263
+    AegisName: Comp_Battle_Manual
+    Name: Field Manual
+    Type: Usable
+    Buy: 2
+    Weight: 10
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start SC_EXPBOOST,1800000,50;
+  - Id: 12264
+    AegisName: Comp_Bubble_Gum
+    Name: Bubble Gum
+    Type: Usable
+    Buy: 2
+    Weight: 10
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start SC_ITEMBOOST,1800000,200;
+  - Id: 12265
+    AegisName: Comp_Insurance
+    Name: Life Insurrance
+    Type: Usable
+    Buy: 2
+    Weight: 10
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start SC_LIFEINSURANCE,1800000,0;
+  - Id: 12266
+    AegisName: Sesame_Pastry_
+    Name: Sesame Pastry
+    Type: Usable
+    Buy: 2
+    Weight: 70
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start SC_HITFOOD,180000,30;
+  - Id: 12267
+    AegisName: Honey_Pastry_
+    Name: Honey Pastry
+    Type: Usable
+    Buy: 2
+    Weight: 70
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start SC_FLEEFOOD,180000,30;
+  - Id: 12268
+    AegisName: Rainbow_Cake_
+    Name: Rainbow Cake
+    Type: Usable
+    Buy: 2
+    Weight: 70
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start SC_ATKPOTION,60000,10;
+      sc_start SC_MATKFOOD,60000,10;
+  - Id: 12269
+    AegisName: Tasty_Colonel
+    Name: Tasty Pink Ration
+    Type: Usable
+    Buy: 2
+    Weight: 70
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start SC_ATKPOTION,600000,15;
+  - Id: 12270
+    AegisName: Tasty_Major
+    Name: Tasty White Ration
+    Type: Usable
+    Buy: 2
+    Weight: 70
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start SC_MATKPOTION,600000,15;
+  - Id: 12271
+    AegisName: Mre_A
+    Name: Military Ration A
+    Type: Healing
+    Buy: 2
+    Weight: 70
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      percentheal 5,0;
+  - Id: 12272
+    AegisName: Mre_B
+    Name: Military Ration B
+    Type: Usable
+    Buy: 2
+    Weight: 70
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start SC_HITFOOD,600000,33;
+  - Id: 12273
+    AegisName: Mre_C
+    Name: Military Ration C
+    Type: Usable
+    Buy: 2
+    Weight: 70
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start SC_FLEEFOOD,600000,33;
+  - Id: 12274
+    AegisName: Gold_Pill_1
+    Name: Daehwandan
+    Type: Healing
+    Weight: 10
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start2 SC_INCREASE_MAXHP,3600000,5,10;
+      percentheal 10,0;
+  - Id: 12275
+    AegisName: Gold_Pill_2
+    Name: Taecheongdan
+    Type: Healing
+    Weight: 10
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start2 SC_INCREASE_MAXSP,3600000,5,10;
+      percentheal 0,10;
+  - Id: 12276
+    AegisName: Mimic_Scroll
+    Name: Mimic Scroll
+    Type: Usable
+    Buy: 2
+    Weight: 10
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoSell: true
+      NoGuildStorage: true
+    Script: |
+      mercenary_create 2058,1800000;
+  - Id: 12277
+    AegisName: Disguise_Scroll
+    Name: Disguise Scroll
+    Type: Usable
+    Buy: 2
+    Weight: 10
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoSell: true
+      NoGuildStorage: true
+    Script: |
+      mercenary_create 2059,1800000;
+  - Id: 12278
+    AegisName: Alice_Scroll
+    Name: Alice Scroll
+    Type: Usable
+    Buy: 2
+    Weight: 10
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoSell: true
+      NoGuildStorage: true
+    Script: |
+      mercenary_create 2060,1800000;
+  - Id: 12279
+    AegisName: Undead_Element_Scroll
+    Name: Undead Elemental Scroll
+    Type: Usable
+    Weight: 10
+    Script: |
+      sc_start4 SC_ARMOR_RESIST,300000,20,20,20,20;
+  - Id: 12280
+    AegisName: Holy_Element_Scroll
+    Name: Holy Elemental Scroll
+    Type: Usable
+    Weight: 10
+    Script: |
+      specialeffect2 EF_BENEDICTIO;
+      sc_start STATUS_BENEDICTIO,300000,1;
+  - Id: 12281
+    AegisName: Tresure_Box_WoE
+    Name: Event Treasure Box
+    Type: Usable
+    Buy: 20
+    Weight: 150
+    Flags:
+      Container: true
+    Script: |
+      getrandgroupitem(IG_Tresure_Box_WoE),1;
+  - Id: 12282
+    AegisName: Internet_Cafe1
+    Name: Internet Cafe1
+    Type: Usable
+    Weight: 10
+    Script: |
+      sc_start SC_INCALLSTATUS,5400000,3;
+      sc_start SC_ATKPOTION,5400000,15;
+      sc_start SC_MATKPOTION,5400000,15;
+  - Id: 12283
+    AegisName: Internet_Cafe2
+    Name: Internet Cafe2
+    Type: Usable
+    Weight: 10
+    Script: |
+      sc_start SC_INCSTR,5400000,8;
+      sc_start SC_INCDEX,5400000,4;
+      sc_start SC_INCAGI,5400000,6;
+      sc_start SC_ATKPOTION,5400000,32;
+      sc_start SC_INCFLEE,5400000,5;
+  - Id: 12284
+    AegisName: Internet_Cafe3
+    Name: Internet Cafe3
+    Type: Usable
+    Weight: 10
+    Script: |
+      sc_start SC_INCINT,5400000,8;
+      sc_start SC_INCVIT,5400000,4;
+      sc_start SC_INCDEX,5400000,6;
+      sc_start SC_MATKPOTION,5400000,40;
+  - Id: 12285
+    AegisName: Internet_Cafe4
+    Name: Internet Cafe4
+    Type: Usable
+    Weight: 10
+    Script: |
+      sc_start SC_INCDEX,5400000,8;
+      sc_start SC_INCLUK,5400000,4;
+      sc_start SC_INCAGI,5400000,6;
+      sc_start SC_ATKPOTION,5400000,24;
+      sc_start SC_MATKPOTION,5400000,24;
+  - Id: 12286
+    AegisName: Masquerade_Ball_Box2
+    Name: Masquerade Ball Box2
+    Type: Usable
+    Weight: 10
+    Flags:
+      Container: true
+    Script: |
+      getrandgroupitem(IG_Masquerade_2),1;
+  - Id: 12287
+    AegisName: Love_Angel
+    Name: Love Angel Magic Powder
+    Type: Usable
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      setfont 1;
+    UnEquipScript: |
+      setfont 0;
+  - Id: 12288
+    AegisName: Squirrel
+    Name: Squirrel Magic Powder
+    Type: Usable
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      setfont 2;
+    UnEquipScript: |
+      setfont 0;
+  - Id: 12289
+    AegisName: Gogo
+    Name: Gogo Magic Powder
+    Type: Usable
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      setfont 3;
+    UnEquipScript: |
+      setfont 0;
+  - Id: 12290
+    AegisName: Mysterious_Can
+    Name: Mysterious Can Magic Powder
+    Type: Usable
+    Buy: 10
+    Weight: 100
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      percentheal 5,0;
+      skilleffect "SK_AL_BLESSING",0;
+      sc_start STATUS_BLESSING,120000,5;
+  - Id: 12291
+    AegisName: Mysterious_PET_Bottle
+    Name: Mysterious PET Bottle
+    Type: Usable
+    Buy: 10
+    Weight: 100
+    Flags:
+      BuyingStore: true
+    NoUse:
+      Override: 100
+      Sitting: true
+    Script: |
+      percentheal 5,0;
+      skilleffect "SK_AL_INCREASEAGI",0;
+      sc_start STATUS_INCREASEAGI,120000,5;
+  - Id: 12292
+    AegisName: Unripe_Fruit
+    Name: Unripe Fruit
+    Type: Healing
+    Buy: 500
+    Weight: 200
+    Flags:
+      BuyingStore: true
+    Script: |
+      percentheal 20,0;
+  - Id: 12293
+    AegisName: Dried_Yggdrasilberry
+    Name: Dried Yggdrasilberry
+    Type: Healing
+    Buy: 500
+    Weight: 200
+    Flags:
+      BuyingStore: true
+    Script: |
+      percentheal 0,20;
+  - Id: 12294
+    AegisName: PC_Bang_Coin_Box1
+    Name: PC-Room Coin Box
+    Type: Usable
+    Weight: 10
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      getitem 2740,1;
+  - Id: 12295
+    AegisName: PC_Bang_Coin_Box2
+    Name: PC-Room Coin Box
+    Type: Usable
+    Weight: 10
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      getitem 2739,1;
+  - Id: 12296
+    AegisName: PC_Bang_Coin_Box3
+    Name: PC-Room Coin Box
+    Type: Usable
+    Weight: 10
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      getitem 2738,1;
+  - Id: 12297
+    AegisName: PC_Bang_Coin_Box4
+    Name: PC-Room Coin Box
+    Type: Usable
+    Weight: 10
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      getitem 2738,2;
+  - Id: 12298
+    AegisName: SP_Potion
+    Name: SP Consumption Reduction Potion
+    Type: Usable
+    Weight: 10
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start SC_SPCOST_RATE,3600000,15;
+  - Id: 12299
+    AegisName: Mega_Resist_Potion
+    Name: Mega Resist Potion
+    Type: Usable
+    Weight: 10
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start SC_COMMONSC_RESIST,3600000,10;
+  - Id: 12300
+    AegisName: Wild_Rose_Scroll
+    Name: Wild Rose Contract
+    Type: Usable
+    Weight: 10
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 1965,1800000;
+  - Id: 12301
+    AegisName: Doppelganger_Scroll
+    Name: Doppelganger Contract
+    Type: Usable
+    Weight: 10
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 1966,1800000;
+  - Id: 12302
+    AegisName: Ygnizem_Scroll
+    Name: Egnigem Cenia Contract
+    Type: Usable
+    Weight: 10
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      mercenary_create 1967,1800000;
+  - Id: 12303
+    AegisName: Water_Of_Blessing
+    Name: Blessing Of Water
+    Type: Usable
+    Weight: 10
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+  - Id: 12304
+    AegisName: Picture_Diary
+    Name: Diary Magic Powder
+    Type: Usable
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      setfont 4;
+    UnEquipScript: |
+      setfont 0;
+  - Id: 12305
+    AegisName: Mini_Heart
+    Name: Mini Heart Magic Powder
+    Type: Usable
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      setfont 5;
+    UnEquipScript: |
+      setfont 0;
+  - Id: 12306
+    AegisName: Newcomer
+    Name: Freshman Magic Powder
+    Type: Usable
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      setfont 6;
+    UnEquipScript: |
+      setfont 0;
+  - Id: 12307
+    AegisName: Kid
+    Name: Kid Magic Powder
+    Type: Usable
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      setfont 7;
+    UnEquipScript: |
+      setfont 0;
+  - Id: 12308
+    AegisName: Magic_Castle
+    Name: Magic Magic Powder
+    Type: Usable
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      setfont 8;
+    UnEquipScript: |
+      setfont 0;
+  - Id: 12309
+    AegisName: Bulging_Head
+    Name: JJangu Magic Powder
+    Type: Usable
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      setfont 9;
+    UnEquipScript: |
+      setfont 0;
+  - Id: 12310
+    AegisName: Spray_Of_Flowers
+    Name: Spray Of Flowers
+    Type: Usable
+    Weight: 50
+    NoUse:
+      Override: 100
+      Sitting: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start SC_FLEEFOOD,300000,10;
+  - Id: 12311
+    AegisName: Large_Spray_Of_Flowers
+    Name: Huge Spray Of Flowers
+    Type: Delayconsume
+    Weight: 100
+    NoUse:
+      Override: 100
+      Sitting: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      itemskill "ALL_PARTYFLEE",1;
+  - Id: 12312
+    AegisName: Thick_Manual50
+    Name: Thick Battle Manual
+    Type: Usable
+    Script: |
+      sc_start SC_EXPBOOST,3600000,50;
+  - Id: 12313
+    AegisName: Protection_Of_Angel
+    Name: Guardian Angel
+    Type: Usable
+    NoUse:
+      Override: 100
+      Sitting: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      /* itemskill "ALL_ANGEL_PROTECT",1; */
+  - Id: 12315
+    AegisName: Goddess_Bless
+    Name: Goddess Of Blessing
+    Type: Usable
+    Weight: 10
+  - Id: 12316
+    AegisName: Angel_Bless
+    Name: Angel Of Blessing
+    Type: Usable
+    Weight: 10
+  - Id: 12317
+    AegisName: Powder_Snow
+    Name: Snow Powder
+    Type: Usable
+    Weight: 10
+  - Id: 12318
+    AegisName: Little_Heart
+    Name: Small Hearts
+    Type: Usable
+    Weight: 10
+  - Id: 12319
+    AegisName: Strawberry_Cake
+    Name: Rune Strawberry Cake
+    Type: Usable
+    Weight: 300
+    Script: |
+      sc_start SC_ATKPOTION,600000,5;
+      sc_start SC_MATKPOTION,600000,5;
+  - Id: 12320
+    AegisName: Pineapple_Juice
+    Name: Schwarzwald Pine Jubilee
+    Type: Usable
+    Weight: 300
+    Script: |
+      sc_start SC_HITFOOD,600000,10;
+      sc_start SC_FLEEFOOD,600000,20;
+  - Id: 12321
+    AegisName: Spicy_Sandwich
+    Name: Arunafeltz Desert Sandwich
+    Type: Usable
+    Weight: 300
+    Script: |
+      sc_start SC_INCCRI,600000,7;
+  - Id: 12322
+    AegisName: Chocolate_Pie
+    Name: Chocolate Pie
+    Type: Healing
+    Weight: 50
+    Script: |
+      percentheal 5,5;
+  - Id: 12314
+    AegisName: Noive_Box
+    Name: Dragon Mount
+    Type: Usable
+    Buy: 750000
+    Flags:
+      NoConsume: true
+    Delay:
+      Duration: 3000
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      specialeffect2 EF_INVINCIBLEOFF2;
+      toggledragon();
+  - Id: 12622
+    AegisName: Boarding_Halter
+    Name: Peco Mount
+    Type: Usable
+    Buy: 750000
+    Flags:
+      NoConsume: true
+    Delay:
+      Duration: 3000
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      specialeffect2 EF_INVINCIBLEOFF2;
+      togglepeco();
+  - Id: 12711
+    AegisName: Pretzel
+    Name: Pretzel
+    Type: Healing
+    Buy: 2
+    Weight: 100
+    Script: |
+      itemheal rand(50,90),0;
+  - Id: 12712
+    AegisName: Green_Beer
+    Name: Green Beer
+    Type: Usable
+    Buy: 2
+    Weight: 100
+    Script: |
+      percentheal 0,50;
+  - Id: 12713
+    AegisName: Monster_Extract
+    Name: Monster Extract
+    Type: Usable
+    Buy: 20
+    Weight: 10
+  - Id: 6189
+    AegisName: Magic_Book_FireBolt
+    Name: Spell Book (Fire Bolt)
+    Buy: 25000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "SK_MG_BOOK_READ",1;
+  - Id: 6190
+    AegisName: Magic_Book_ColdBolt
+    Name: Spell Book (Cold Bolt)
+    Buy: 25000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "SK_MG_BOOK_READ",2;
+  - Id: 6191
+    AegisName: Magic_Book_LightningBolt
+    Name: Spell Book (Lightening Bolt)
+    Buy: 25000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "SK_MG_BOOK_READ",3;
+  - Id: 6201
+    AegisName: Magic_Book_EarthBolt
+    Name: Spell Book (Earth Bolt)
+    Buy: 25000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "SK_MG_BOOK_READ",4;
+  - Id: 6205
+    AegisName: Magic_Book_VoidExpansion
+    Name: Spell Book (Void Expansion)
+    Buy: 25000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "SK_MG_BOOK_READ",5;
+  - Id: 62051
+    AegisName: Magic_Book_Corrupt
+    Name: Spell Book (Corrupt)
+    Buy: 25000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "SK_MG_BOOK_READ",6;
+  - Id: 62052
+    AegisName: Magic_Book_DarkStrike
+    Name: Spell Book (Dark Strike)
+    Buy: 25000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "SK_MG_BOOK_READ",7;
+  - Id: 62053
+    AegisName: Magic_Book_SoulStrike
+    Name: Spell Book (Soul Strike)
+    Buy: 25000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "SK_MG_BOOK_READ",8;
+  - Id: 62054
+    AegisName: Magic_Book_EarthSpikes
+    Name: Spell Book (Earth Spikes)
+    Buy: 50000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "SK_MG_BOOK_READ",9;
+  - Id: 62055
+    AegisName: Magic_Book_LordOfVermillion
+    Name: Spell Book (Lord of Vermillion)
+    Buy: 50000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "SK_MG_BOOK_READ",10;
+  - Id: 62056
+    AegisName: Magic_Book_StormGust
+    Name: Spell Book (Storm Gust)
+    Buy: 50000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "SK_MG_BOOK_READ",11;
+  - Id: 62057
+    AegisName: Magic_Book_MeteorStorm
+    Name: Spell Book (Meteor Storm)
+    Buy: 50000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "SK_MG_BOOK_READ",12;
+  - Id: 62058
+    AegisName: Magic_Book_Stalagmite
+    Name: Spell Book (Stalagmite)
+    Buy: 50000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "SK_MG_BOOK_READ",13;
+  - Id: 62059
+    AegisName: Magic_Book_Thunderstorm
+    Name: Spell Book (Thunderstorm)
+    Buy: 50000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "SK_MG_BOOK_READ",14;
+  - Id: 62060
+    AegisName: Magic_Book_Iceberg
+    Name: Spell Book (Iceberg)
+    Buy: 50000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "SK_MG_BOOK_READ",15;
+  - Id: 62061
+    AegisName: Magic_Book_CrimsonRock
+    Name: Spell Book (Crimson Rock)
+    Buy: 50000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "SK_MG_BOOK_READ",16;
+  - Id: 62062
+    AegisName: Magic_Book_PsychicWave
+    Name: Spell Book (Psychic Wave)
+    Buy: 50000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "SK_MG_BOOK_READ",17;
+  - Id: 62063
+    AegisName: Magic_Book_IllusionaryBlades
+    Name: Spell Book (Illusionary Blades)
+    Buy: 50000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "SK_MG_BOOK_READ",18;
+  - Id: 62064
+    AegisName: Magic_Book_ExtremeVacuum
+    Name: Spell Book (ExtremeVacuum)
+    Buy: 50000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "SK_MG_BOOK_READ",19;
+  - Id: 62065
+    AegisName: Magic_Book_RealityBreaker
+    Name: Spell Book (Reality Breaker)
+    Buy: 50000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "SK_MG_BOOK_READ",20;
+  - Id: 62066
+    AegisName: Magic_Book_TetraVortex
+    Name: Spell Book (Tetra Vortex)
+    Buy: 75000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "SK_MG_BOOK_READ",21;
+  - Id: 62067
+    AegisName: Magic_Book_PhantomSpear
+    Name: Spell Book (Phantom Spear)
+    Buy: 75000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "SK_MG_BOOK_READ",22;
+  - Id: 62068
+    AegisName: Magic_Book_ShadowBomb
+    Name: Spell Book (Shadow Bomb)
+    Buy: 75000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "SK_MG_BOOK_READ",23;
+  - Id: 62069
+    AegisName: Magic_Book_Doom
+    Name: Spell Book (Doom)
+    Buy: 75000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "SK_MG_BOOK_READ",24;
+  - Id: 62070
+    AegisName: Magic_Book_DiamondDust
+    Name: Spell Book (Diamond Dust)
+    Buy: 75000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "SK_MG_BOOK_READ",25;
+  - Id: 62071
+    AegisName: Magic_Book_AstralStrike
+    Name: Spell Book (Astral Strike)
+    Buy: 75000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "SK_MG_BOOK_READ",26;
+  - Id: 62072
+    AegisName: Magic_Book_LandProtector
+    Name: Spell Book (Land Protector)
+    Buy: 75000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "SK_MG_BOOK_READ",27;
+  - Id: 62073
+    AegisName: Magic_Book_Stasis
+    Name: Spell Book (Stasis)
+    Buy: 75000
+    Type: Usable
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Script: |
+      specialeffect2 1232;
+      itemskill "SK_MG_BOOK_READ",28;
+  - Id: 34
+    AegisName: Orange_Slim_Potion
+    Name: Condensed Orange Potion
+    Type: Healing
+    Buy: 300
+    Weight: 10
+    Script: |
+      specialeffect2 205;
+      itemheal rand(105,45),0;
+  - Id: 35
+    AegisName: Blue_Slim_Potion
+    Name: Condensed Blue Potion
+    Type: Healing
+    Buy: 2000
+    Weight: 20
+    Script: |
+      specialeffect2 208;
+      itemheal 0,rand(40,60);
+  - Id: 7142
+    AegisName: Germination_Breed
+    Name: Embryo
+    Type: Usable
+    Buy: 10
+    Weight: 0
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      specialeffect2 1261;
+      itemskill "SK_AM_HATCHHOMUNCULUS",1;
+  - Id: 36
+    AegisName: Beholder_Embryo
+    Name: Beholder Embryo
+    Type: Usable
+    Buy: 10
+    Weight: 0
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      specialeffect2 1261;
+      itemskill "SK_AM_HATCHHOMUNCULUS",2;
+  - Id: 37
+    AegisName: Mandrake_Embryo
+    Name: Mandrake Embryo
+    Type: Usable
+    Buy: 10
+    Weight: 0
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      specialeffect2 1261;
+      itemskill "SK_AM_HATCHHOMUNCULUS",3;
+  - Id: 38
+    AegisName: Pheonix_Embryo
+    Name: Pheonix Embryo
+    Type: Usable
+    Buy: 10
+    Weight: 0
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      specialeffect2 1261;
+      itemskill "SK_AM_HATCHHOMUNCULUS",4;
+  - Id: 39
+    AegisName: Tera_Scroll
+    Name: Tera Scroll
+    Type: Usable
+    Buy: 10
+    Weight: 0
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      specialeffect2 1150;
+      itemskill "SK_SA_SUMMONELEMENTAL",1;
+  - Id: 40
+    AegisName: Ventus_Scroll
+    Name: Ventus Scroll
+    Type: Usable
+    Buy: 10
+    Weight: 0
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      specialeffect2 1150;
+      itemskill "SK_SA_SUMMONELEMENTAL",2;
+  - Id: 41
+    AegisName: Aqua_Scroll
+    Name: Aqua Scroll
+    Type: Usable
+    Buy: 10
+    Weight: 0
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      specialeffect2 1150;
+      itemskill "SK_SA_SUMMONELEMENTAL",3;
+  - Id: 42
+    AegisName: Agni_Scroll
+    Name: Agni Scroll
+    Type: Usable
+    Buy: 10
+    Weight: 0
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      specialeffect2 1150;
+      itemskill "SK_SA_SUMMONELEMENTAL",4;
+  - Id: 43
+    AegisName: Wolf_Flute
+    Name: Wolf Flute
+    Type: Usable
+    Buy: 10
+    Weight: 0
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      specialeffect2 439;
+      itemskill "SK_HT_CALL_WARG",1;
+  - Id: 44
+    AegisName: Falcon_Flute
+    Name: Falcon Flute
+    Type: Usable
+    Buy: 10
+    Weight: 0
+    Flags:
+      BuyingStore: true
+      NoConsume: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      specialeffect2 439;
+      itemskill "SK_HT_CALL_FALCON",1;
+  - Id: 603
+    AegisName: Old_Blue_Box
+    Name: Old Blue Box
+    Type: Usable
+    Buy: 10000
+    Weight: 200
+    Flags:
+      BuyingStore: true
+      Container: true
+    Trade:
+      NoSell: true
+    Script: |
+      getgroupitem(IG_BlueBox);
+  - Id: 617
+    AegisName: Old_Violet_Box
+    Name: Old Purple Box
+    Type: Usable
+    Buy: 10000
+    Weight: 200
+    Flags:
+      BuyingStore: true
+      Container: true
+    Script: |
+      getrandgroupitem(IG_VioletBox,1);

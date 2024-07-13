@@ -25,14 +25,13 @@ if __name__ == "__main__":
 
     body = []
     for item in data.get("Body", ""):
-        if(item.get("AegisName") not in drops):
-            item_names.append(item.get("AegisName"))
-        # if(item.get("AegisName") in drops):
-        #     body.append(item)
+        # if(item.get("AegisName") not in drops):
+        #     item_names.append(item.get("AegisName"))
+        if(item.get("AegisName") in drops):
+            body.append(item)
         
-    print(len(item_names))        
+    # print(len(item_names))        
     # print(item_names)       
         
-    # with open(filepath, 'w') as file:
-    #     documents = yaml.dump(body, file, sort_keys=False)
-
+    with open(filepath, 'w') as file:
+        documents = yaml.dump(body, file, sort_keys=False)
