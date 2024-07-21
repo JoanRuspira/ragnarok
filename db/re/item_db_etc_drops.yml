@@ -3166,22 +3166,6 @@ Body:
   Weight: 10
   Flags:
     BuyingStore: true
-- Id: 27161
-  AegisName: Mavka_Card
-  Name: Mavka Card
-  Type: Card
-  Buy: 20
-  Weight: 10
-  Locations:
-    Both_Accessory: true
-  Flags:
-    BuyingStore: true
-    DropEffect: CLIENT
-  Script: 'bonus2 bMagicAtkEle,Ele_Fire,20;
-
-    bonus2 bMagicAtkEle,Ele_Earth,20;
-
-    '
 - Id: 7100
   AegisName: Sharp_Leaf
   Name: Sharp Leaf

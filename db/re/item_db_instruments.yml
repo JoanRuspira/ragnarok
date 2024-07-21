@@ -20,23 +20,6 @@ Body:
     WeaponLevel: 1
     EquipLevelMin: 2
     Refineable: true
-  - Id: 1902
-    AegisName: Violin_
-    Name: Violin
-    Type: Weapon
-    SubType: Musical
-    Buy: 4000
-    Weight: 700
-    Attack: 50
-    Range: 1
-    Slots: 4
-    Jobs:
-      BardDancer: true
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 1
-    EquipLevelMin: 2
-    Refineable: true
   - Id: 1903
     AegisName: Mandolin
     Name: Mandolin
@@ -47,23 +30,6 @@ Body:
     Attack: 90
     Range: 1
     Slots: 2
-    Jobs:
-      BardDancer: true
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 2
-    EquipLevelMin: 14
-    Refineable: true
-  - Id: 1904
-    AegisName: Mandolin_
-    Name: Mandolin
-    Type: Weapon
-    SubType: Musical
-    Buy: 18000
-    Weight: 400
-    Attack: 90
-    Range: 1
-    Slots: 3
     Jobs:
       BardDancer: true
     Locations:
@@ -88,23 +54,6 @@ Body:
     WeaponLevel: 2
     EquipLevelMin: 14
     Refineable: true
-  - Id: 1906
-    AegisName: Lute_
-    Name: Lute
-    Type: Weapon
-    SubType: Musical
-    Buy: 24500
-    Weight: 500
-    Attack: 105
-    Range: 1
-    Slots: 3
-    Jobs:
-      BardDancer: true
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 2
-    EquipLevelMin: 14
-    Refineable: true
   - Id: 1907
     AegisName: Guitar
     Name: Guitar
@@ -114,23 +63,6 @@ Body:
     Weight: 900
     Attack: 142
     Range: 1
-    Jobs:
-      BardDancer: true
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 3
-    EquipLevelMin: 27
-    Refineable: true
-  - Id: 1908
-    AegisName: Guitar_
-    Name: Guitar
-    Type: Weapon
-    SubType: Musical
-    Buy: 47000
-    Weight: 900
-    Attack: 142
-    Range: 1
-    Slots: 1
     Jobs:
       BardDancer: true
     Locations:
@@ -157,25 +89,6 @@ Body:
     Refineable: true
     Script: |
       bonus bInt,2;
-  - Id: 1910
-    AegisName: Harp_
-    Name: Harp
-    Type: Weapon
-    SubType: Musical
-    Buy: 62000
-    Weight: 900
-    Attack: 114
-    Range: 1
-    Slots: 2
-    Jobs:
-      BardDancer: true
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 3
-    EquipLevelMin: 27
-    Refineable: true
-    Script: |
-      bonus bInt,2;
   - Id: 1911
     AegisName: Guh_Moon_Goh
     Name: Gumoongoh
@@ -193,186 +106,3 @@ Body:
     WeaponLevel: 3
     EquipLevelMin: 27
     Refineable: true
-  - Id: 1912
-    AegisName: Guh_Moon_Goh_
-    Name: Gumoongoh
-    Type: Weapon
-    SubType: Musical
-    Buy: 54000
-    Weight: 1300
-    Attack: 126
-    Range: 1
-    Slots: 2
-    Jobs:
-      BardDancer: true
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 3
-    EquipLevelMin: 27
-    Refineable: true
-  - Id: 1916
-    AegisName: Guitar_Of_Vast_Land
-    Name: Green Acre Guitar
-    Type: Weapon
-    SubType: Musical
-    Buy: 20
-    Weight: 900
-    Attack: 110
-    Range: 1
-    Jobs:
-      BardDancer: true
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 3
-    EquipLevelMin: 27
-    Refineable: true
-    Script: |
-      bonus bAtkEle,Ele_Earth;
-  - Id: 1917
-    AegisName: Guitar_Of_Gentle_Breeze
-    Name: Gentle Breeze Guitar
-    Type: Weapon
-    SubType: Musical
-    Buy: 20
-    Weight: 900
-    Attack: 110
-    Range: 1
-    Jobs:
-      BardDancer: true
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 3
-    EquipLevelMin: 27
-    Refineable: true
-    Script: |
-      bonus bAtkEle,Ele_Wind;
-  - Id: 1914
-    AegisName: Guitar_Of_Passion
-    Name: Burning Passion Guitar
-    Type: Weapon
-    SubType: Musical
-    Buy: 20
-    Weight: 900
-    Attack: 110
-    Range: 1
-    Jobs:
-      BardDancer: true
-    Gender: Male
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 3
-    EquipLevelMin: 27
-    Refineable: true
-    Script: |
-      bonus bAtkEle,Ele_Fire;
-  - Id: 1926
-    AegisName: Harp_Of_Nepenthes
-    Name: Harp of Nepenthes
-    Type: Weapon
-    SubType: Musical
-    Buy: 20
-    Weight: 1000
-    Attack: 120
-    Range: 1
-    Slots: 2
-    Jobs:
-      BardDancer: true
-    Classes:
-      All_Upper: true
-    Gender: Male
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 4
-    EquipLevelMin: 60
-    Refineable: true
-    Script: |
-      bonus bInt,2;
-      bonus3 bAddEffOnSkill,"BA_MUSICALSTRIKE",Eff_Stun,(getrefine()>=9?2000:1000);
-  - Id: 1925
-    AegisName: Cello
-    Name: Cello
-    Type: Weapon
-    SubType: Musical
-    Buy: 20
-    Weight: 700
-    Attack: 110
-    Range: 1
-    Slots: 3
-    Jobs:
-      BardDancer: true
-    Classes:
-      All_Upper: true
-    Gender: Male
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 3
-    EquipLevelMin: 70
-    Refineable: true
-    Script: |
-      bonus bAgi,2;
-      bonus bDex,3;
-      bonus2 bAddSkillBlow,"SK_BA_MELODYSTRIKE",2;
-      bonus2 bAddSkillBlow,"SK_CL_ARROWVULCAN",3;
-  - Id: 1915
-    AegisName: Guitar_Of_Blue_Solo
-    Name: Loner's Guitar
-    Type: Weapon
-    SubType: Musical
-    Buy: 20
-    Weight: 900
-    Attack: 110
-    Range: 1
-    Jobs:
-      BardDancer: true
-    Gender: Male
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 3
-    EquipLevelMin: 27
-    Refineable: true
-    Script: |
-      bonus bAtkEle,Ele_Water;
-  - Id: 1920
-    AegisName: Berserk_Guitar
-    Name: Berserk Guitar
-    Type: Weapon
-    SubType: Musical
-    Buy: 20
-    Weight: 1800
-    Attack: 10
-    Range: 1
-    Jobs:
-      BardDancer: true
-    Classes:
-      All_Upper: true
-    Gender: Male
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 4
-    EquipLevelMin: 70
-    Refineable: true
-    Script: |
-      bonus bAspdRate,100;
-      bonus bHPrecovRate,-100;
-      bonus2 bHPLossRate,50,5000;
-      bonus bDex,-readparam(bDex);
-  - Id: 1918
-    AegisName: Oriental_Lute
-    Name: Oriental Lute
-    Type: Weapon
-    SubType: Musical
-    Buy: 20
-    Weight: 1200
-    Attack: 150
-    Range: 1
-    Jobs:
-      BardDancer: true
-    Gender: Male
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 4
-    EquipLevelMin: 65
-    Refineable: true
-    Script: |
-      bonus2 bSkillAtk,"CG_ARROWVULCAN",10;
-      bonus2 bSkillAtk,"BA_MUSICALSTRIKE",10;

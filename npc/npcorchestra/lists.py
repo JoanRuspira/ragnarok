@@ -28,22 +28,11 @@ mobs_second_job = ["JOB_KNIGHT","JOB_PRIEST","JOB_WIZARD","JOB_BLACKSMITH","JOB_
 mobs_advanced_job = ["JOB_LORD_KNIGHT","JOB_HIGH_PRIEST","JOB_HIGH_WIZARD","JOB_WHITESMITH","JOB_SNIPER","JOB_ASSASSIN_CROSS","JOB_PALADIN","JOB_CHAMPION","JOB_PROFESSOR","JOB_STALKER","JOB_CREATOR","JOB_CLOWN","JOB_GYPSY"]
 mobs_third_job = ["JOB_RUNE_KNIGHT","JOB_WARLOCK","JOB_RANGER","JOB_ARCH_BISHOP","JOB_MECHANIC","JOB_GUILLOTINE_CROSS","JOB_ROYAL_GUARD","JOB_SORCERER","JOB_MINSTREL","JOB_WANDERER","JOB_SURA","JOB_GENETIC","JOB_SHADOW_CHASER"]
 
-top_headgears = ["Alice_Doll","Anubis_Helm","Apple_Of_Archer","Prontera_Army_Cap","Ayothaya_Hat","Banana_Hat","Bandana","Magestic_Goat",
-"Beret","Biretta","Bone_Head","Bone_Helm","Bongun_Hat","Boy's_Cap","Fedora","Cap","Circlet","Classic_Hat","Corsair","Cowboy_Hat","Crown","Headgear_Of_Queen",
-"C_Desert_Prince","Dragon_Skull","Egg_Shell","Feather_Beret","Feather_Bonnet","Fricca_Circlet","Galapago_Cap","Gemmed_Sallet",
-"Goibne's_Helmet", "Golden_Gear", "Loard_Circlet", "Helm", "Helm_Of_Abyss", "Helm_Of_Angel","Headband_Of_Power","Hunting_Cap",
-"Indian_Headband","Gemmed_Crown","Joker_Jester","Mask_Of_Fox", "Soldier_Hat","Wizardry_Hat","Magni_Cap","Marionette_Doll","Mine_Helm",
-"Holy_Bonnet","Morrigane's_Helm","Munak_Turban","Viking_Helm","Pirate_Bandana","Poo_Poo_Hat","Cowboy_Hat_J","Mottled_Egg_Shell",
-"Red_Wizardry_Hat","Coke_Hat","Detective_Hat","Oldman's_Romance","Sahkkat","Sea_Otter_Cap","J_Captain_Hat","Skull_Cap","Sombrero",
-"Straw_Hat","Ulle_Cap_I","Valkyrie_Helm","Minstrel_Hat","Western_Grace","Star_Sparkling",
-"Cap_Of_Blindness","Diabolus_Helmet","Necromencer's_Hood","Spinx_Helm","Goggle"]
+top_headgears = ["Goggle"]
  
-mid_headgears = ["Ear_Of_Angel's_Wing","Dark_Blindfold","Blinker","Elven_Ears","Ear_Of_Devil's_Wing",
-"Hawk_Eyes01","Machoman_Glasses","Opera_Ghost_Mask","Pecopeco_Wing_Ears","Luxury_Sunglasses","Sunglasses"]
+mid_headgears = ["Opera_Ghost_Mask"]
 
-low_headgears = ["Angry_Mouth","Assassin_Mask","Antique_Pipe","Choco_Donut_In_Mouth","Cigar","Pierrot_Nose","Well_Baked_Toast",
-"Donut_In_Mouth","Gang_Scarf","Fish_In_Mouth","Smoking_Pipe","Pirate_Dagger","Rainbow_Scarf","Centimental_Flower","Centimental_Leaf",
-"Romantic_White_Flower","Well_Baked_Toast","Pencil_In_Mouth"]
+low_headgears = ["Choco_Donut_In_Mouth"]
 
 jobs_riding = ["JOB_SWORDMAN", "JOB_MAGE", "JOB_ARCHER", "JOB_ACOLYTE", "JOB_MERCHANT", "JOB_THIEF",
 "JOB_KNIGHT", "JOB_CRUSADER", "JOB_LORD_KNIGHT", "JOB_PALAIN"]

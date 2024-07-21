@@ -21,24 +21,6 @@ Body:
     WeaponLevel: 1
     EquipLevelMin: 1
     Refineable: true
-  - Id: 1802
-    AegisName: Waghnakh_
-    Name: Waghnak
-    Type: Weapon
-    SubType: Knuckle
-    Buy: 8000
-    Weight: 400
-    Attack: 30
-    Range: 1
-    Slots: 4
-    Jobs:
-      Monk: true
-      Priest: true
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 1
-    EquipLevelMin: 1
-    Refineable: true
   - Id: 1803
     AegisName: Knuckle_Duster
     Name: Knuckle Dusters
@@ -49,24 +31,6 @@ Body:
     Attack: 50
     Range: 1
     Slots: 2
-    Jobs:
-      Monk: true
-      Priest: true
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 2
-    EquipLevelMin: 12
-    Refineable: true
-  - Id: 1804
-    AegisName: Knuckle_Duster_
-    Name: Knuckle Dusters
-    Type: Weapon
-    SubType: Knuckle
-    Buy: 25000
-    Weight: 450
-    Attack: 50
-    Range: 1
-    Slots: 3
     Jobs:
       Monk: true
       Priest: true
@@ -93,24 +57,6 @@ Body:
     WeaponLevel: 2
     EquipLevelMin: 12
     Refineable: true
-  - Id: 1806
-    AegisName: Hora_
-    Name: Studded Knuckles
-    Type: Weapon
-    SubType: Knuckle
-    Buy: 32000
-    Weight: 450
-    Attack: 65
-    Range: 1
-    Slots: 3
-    Jobs:
-      Monk: true
-      Priest: true
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 2
-    EquipLevelMin: 12
-    Refineable: true
   - Id: 1807
     AegisName: Fist
     Name: Fist
@@ -120,24 +66,6 @@ Body:
     Weight: 650
     Attack: 115
     Range: 1
-    Jobs:
-      Monk: true
-      Priest: true
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 3
-    EquipLevelMin: 24
-    Refineable: true
-  - Id: 1808
-    AegisName: Fist_
-    Name: Fist
-    Type: Weapon
-    SubType: Knuckle
-    Buy: 53000
-    Weight: 650
-    Attack: 115
-    Range: 1
-    Slots: 1
     Jobs:
       Monk: true
       Priest: true
@@ -166,26 +94,6 @@ Body:
     Refineable: true
     Script: |
       bonus bStr,2;
-  - Id: 1810
-    AegisName: Claw_
-    Name: Claw
-    Type: Weapon
-    SubType: Knuckle
-    Buy: 67000
-    Weight: 500
-    Attack: 86
-    Range: 1
-    Slots: 2
-    Jobs:
-      Monk: true
-      Priest: true
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 3
-    EquipLevelMin: 24
-    Refineable: true
-    Script: |
-      bonus bStr,2;
   - Id: 1811
     AegisName: Finger
     Name: Finger
@@ -204,176 +112,3 @@ Body:
     WeaponLevel: 3
     EquipLevelMin: 24
     Refineable: true
-  - Id: 1812
-    AegisName: Finger_
-    Name: Finger
-    Type: Weapon
-    SubType: Knuckle
-    Buy: 58000
-    Weight: 500
-    Attack: 97
-    Range: 1
-    Slots: 2
-    Jobs:
-      Monk: true
-      Priest: true
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 3
-    EquipLevelMin: 24
-    Refineable: true
-  - Id: 1820
-    AegisName: Electric_Fist
-    Name: Electric Fist
-    Type: Weapon
-    SubType: Knuckle
-    Buy: 20
-    Weight: 650
-    Attack: 80
-    Range: 1
-    Slots: 3
-    Jobs:
-      Monk: true
-      Priest: true
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 3
-    EquipLevelMin: 75
-    Refineable: true
-    Script: |
-      bonus bAtkEle,Ele_Wind;
-      bonus3 bAutoSpell,"SK_MG_LIGHTNINGBOLT",5,10;
-  - Id: 1825
-    AegisName: Horn_Of_Hilthrion
-    Name: Horn of Hillslion
-    Type: Weapon
-    SubType: Knuckle
-    Buy: 20
-    Weight: 600
-    Attack: 95
-    Range: 1
-    Slots: 3
-    Jobs:
-      Monk: true
-    Classes:
-      All_Upper: true
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 3
-    EquipLevelMin: 60
-    Refineable: true
-    Script: |
-      bonus4 bAutoSpellOnSkill,"SK_MO_PALMSTRIKE","SK_MO_OCCULTIMPACT",1,100;
-      bonus3 bAutoSpell,"SK_MO_SUMMONSPIRITSPHERE",5,10;
-  - Id: 1815
-    AegisName: Claw_Of_Garm
-    Name: Hatii Claw
-    Type: Weapon
-    SubType: Knuckle
-    Buy: 20
-    Weight: 550
-    Attack: 152
-    Range: 1
-    Slots: 1
-    Jobs:
-      Monk: true
-      Priest: true
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 4
-    EquipLevelMin: 70
-    Refineable: true
-    Script: |
-      bonus bAtkEle,Ele_Dark;
-      bonus bMaxHPrate,-2;
-      bonus2 bAddEff,Eff_Bleeding,200;
-  - Id: 1821
-    AegisName: Seismic_Fist
-    Name: Seismic Fist
-    Type: Weapon
-    SubType: Knuckle
-    Buy: 20
-    Weight: 650
-    Attack: 80
-    Range: 1
-    Slots: 3
-    Jobs:
-      Monk: true
-      Priest: true
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 3
-    EquipLevelMin: 75
-    Refineable: true
-    Script: |
-      bonus bAtkEle,Ele_Earth;
-      bonus3 bAutoSpell,"SK_MG_EARTHBOLT",5,10;
-  - Id: 1830
-    AegisName: Sura_Rampage
-    Name: Sura Rampage
-    Type: Weapon
-    SubType: Knuckle
-    Buy: 20
-    Weight: 500
-    Attack: 142
-    Range: 1
-    Slots: 1
-    Jobs:
-      Monk: true
-    Classes:
-      All_Third: true
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 3
-    EquipLevelMin: 102
-    Refineable: true
-    Script: |
-      bonus2 bSkillAtk,"SK_MO_PALMSTRIKE",20;
-      bonus2 bSkillAtk,"SK_SH_GUILLOTINEFISTS",20;
-      bonus bUseSPrate,5;
-      .@r = getrefine();
-      if (.@r>6) {
-         bonus bUseSPrate,-1*(.@r-6);
-      }
-  - Id: 1818
-    AegisName: Magma_Fist
-    Name: Magma Fist
-    Type: Weapon
-    SubType: Knuckle
-    Buy: 20
-    Weight: 650
-    Attack: 80
-    Range: 1
-    Slots: 3
-    Jobs:
-      Monk: true
-      Priest: true
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 3
-    EquipLevelMin: 75
-    Refineable: true
-    Script: |
-      bonus bAtkEle,Ele_Fire;
-      bonus3 bAutoSpell,"SK_MG_FIREBOLT",5,10;
-  - Id: 1819
-    AegisName: Icicle_Fist
-    Name: Icicle Fist
-    Type: Weapon
-    SubType: Knuckle
-    Buy: 20
-    Weight: 650
-    Attack: 80
-    Range: 1
-    Slots: 3
-    Jobs:
-      Monk: true
-      Priest: true
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 3
-    EquipLevelMin: 75
-    Refineable: true
-    Script: |
-      bonus bAtkEle,Ele_Water;
-      bonus3 bAutoSpell,"SK_MG_COLDBOLT",5,10;
