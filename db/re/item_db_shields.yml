@@ -15,19 +15,6 @@ Body:
     ArmorLevel: 1
     Refineable: true
     View: 1
-  - Id: 2102
-    AegisName: Guard_
-    Name: Guard
-    Type: Armor
-    Buy: 500
-    Weight: 300
-    Defense: 20
-    Slots: 1
-    Locations:
-      Left_Hand: true
-    ArmorLevel: 1
-    Refineable: true
-    View: 1
   - Id: 2103
     AegisName: Buckler
     Name: Buckler
@@ -54,33 +41,6 @@ Body:
     ArmorLevel: 1
     Refineable: true
     View: 2
-  - Id: 2104
-    AegisName: Buckler_
-    Name: Buckler
-    Type: Armor
-    Buy: 14000
-    Weight: 600
-    Defense: 40
-    Slots: 1
-    Jobs:
-      Acolyte: true
-      Alchemist: true
-      Assassin: true
-      BardDancer: true
-      Blacksmith: true
-      Crusader: true
-      Knight: true
-      Merchant: true
-      Monk: true
-      Priest: true
-      Rogue: true
-      Swordman: true
-      Thief: true
-    Locations:
-      Left_Hand: true
-    ArmorLevel: 1
-    Refineable: true
-    View: 2
   - Id: 2105
     AegisName: Shield
     Name: Shield
@@ -88,23 +48,6 @@ Body:
     Buy: 56000
     Weight: 1300
     Defense: 60
-    Jobs:
-      Crusader: true
-      Knight: true
-      Swordman: true
-    Locations:
-      Left_Hand: true
-    ArmorLevel: 1
-    Refineable: true
-    View: 3
-  - Id: 2106
-    AegisName: Shield_
-    Name: Shield
-    Type: Armor
-    Buy: 56000
-    Weight: 1300
-    Defense: 60
-    Slots: 1
     Jobs:
       Crusader: true
       Knight: true

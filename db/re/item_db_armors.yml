@@ -15,6 +15,32 @@ Body:
       Armor: true
     ArmorLevel: 1
     Refineable: true
+  - Id: 2305
+    AegisName: Adventure_Suit
+    Name: Adventurer's Suit
+    Type: Armor
+    Buy: 1000
+    Weight: 300
+    Defense: 20
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+  - Id: 2309
+    AegisName: Coat
+    Name: Coat
+    Type: Armor
+    Buy: 22000
+    Weight: 1200
+    Defense: 42
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
   - Id: 2328
     AegisName: Wooden_Mail
     Name: Wooden Mail

@@ -490,7 +490,7 @@ Header:
 #    Name: Eden Group Mark
 #    Type: Delayconsume
 #    Script: |
-#      unitskilluseid getcharid(3),"AL_TELEPORT",3;
+#      unitskilluseid getcharid(3),"SK_AL_TELEPORT",3;
 
 # Gender restrictions that were removed on official servers
 #=============================================================

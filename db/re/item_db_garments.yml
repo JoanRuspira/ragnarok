@@ -15,18 +15,6 @@ Body:
       Garment: true
     ArmorLevel: 1
     Refineable: true
-  - Id: 2502
-    AegisName: Hood_
-    Name: Hood
-    Type: Armor
-    Buy: 1000
-    Weight: 200
-    Defense: 4
-    Slots: 1
-    Locations:
-      Garment: true
-    ArmorLevel: 1
-    Refineable: true
   - Id: 2503
     AegisName: Muffler
     Name: Muffler
@@ -42,22 +30,6 @@ Body:
       Garment: true
     ArmorLevel: 1
     Refineable: true
-  - Id: 2504
-    AegisName: Muffler_
-    Name: Muffler
-    Type: Armor
-    Buy: 5000
-    Weight: 400
-    Defense: 8
-    Slots: 1
-    Jobs:
-      All: true
-      Novice: false
-      SuperNovice: false
-    Locations:
-      Garment: true
-    ArmorLevel: 1
-    Refineable: true
   - Id: 2505
     AegisName: Manteau
     Name: Manteau
@@ -65,30 +37,6 @@ Body:
     Buy: 32000
     Weight: 600
     Defense: 13
-    Jobs:
-      Alchemist: true
-      Assassin: true
-      Blacksmith: true
-      Crusader: true
-      Knight: true
-      Merchant: true
-      Rogue: true
-      StarGladiator: true
-      Swordman: true
-      Taekwon: true
-      Thief: true
-    Locations:
-      Garment: true
-    ArmorLevel: 1
-    Refineable: true
-  - Id: 2506
-    AegisName: Manteau_
-    Name: Manteau
-    Type: Armor
-    Buy: 32000
-    Weight: 600
-    Defense: 13
-    Slots: 1
     Jobs:
       Alchemist: true
       Assassin: true

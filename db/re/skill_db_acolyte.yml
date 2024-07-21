@@ -4,6 +4,26 @@ Header:
   Version: 1
 
 Body:
+  - Id: 26
+    Name: SK_AL_TELEPORT
+    Description: Teleport
+    MaxLevel: 2
+    Type: Magic
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      IgnoreKagehumi: true
+      AllowOnMado: true
+    Hit: Single
+    HitCount: 1
+    CastCancel: true
+    Requires:
+      SpCost:
+        - Level: 1
+          Amount: 10
+        - Level: 2
+          Amount: 9
   - Id: 156
     Name: SK_AL_HOLYGHOST
     Description: Holy Ghost

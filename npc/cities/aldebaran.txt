@@ -1166,13 +1166,11 @@ aldeba_in,79,161,7	script	Kafra Employee#reserve1	4_F_KAFRA3,{
 						mes "drinking with your friends~";
 					}
 					else if (.@choose_prize <= 15) {
-						getitem 602,4;// Wing_Of_Butterfly
+						getitem 504,4;
 						mes "It's Third Prize!";
-						mes "4 Butterfly Wings~";
+						mes "4 WWhite Potions~";
 						mes "When you're in trouble,";
-						mes "just wave one of these";
-						mes "to take you away...";
-						mes "To your safe place.";
+						mes "just wave one of these.";
 					}
 					else if (.@choose_prize <= 19) {
 						getitem 2403,1;// Shoes

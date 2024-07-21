@@ -4603,7 +4603,17 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			}
 		}
 		break;
-
+	case SK_AL_TELEPORT:
+		if(sd)
+		{
+			if( skill_lv == 1 )
+				pc_randomwarp(sd,CLR_TELEPORT);
+			else
+				pc_setpos(sd, sd->status.save_point.map, sd->status.save_point.x, sd->status.save_point.y, CLR_TELEPORT);
+			break;
+		} else
+			unit_warp(bl,-1,-1,-1,CLR_TELEPORT);
+		break;
 
 	case SK_ST_STRIPWEAPON:
 	case SK_ST_STRIPSHIELD:

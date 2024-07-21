@@ -15,18 +15,6 @@ Body:
       Shoes: true
     ArmorLevel: 1
     Refineable: true
-  - Id: 2402
-    AegisName: Sandals_
-    Name: Sandals
-    Type: Armor
-    Buy: 400
-    Weight: 200
-    Defense: 5
-    Slots: 1
-    Locations:
-      Shoes: true
-    ArmorLevel: 1
-    Refineable: true
   - Id: 2403
     AegisName: Shoes
     Name: Shoes
@@ -34,22 +22,6 @@ Body:
     Buy: 3500
     Weight: 400
     Defense: 10
-    Jobs:
-      All: true
-      Novice: false
-      SuperNovice: false
-    Locations:
-      Shoes: true
-    ArmorLevel: 1
-    Refineable: true
-  - Id: 2404
-    AegisName: Shoes_
-    Name: Shoes
-    Type: Armor
-    Buy: 3500
-    Weight: 400
-    Defense: 10
-    Slots: 1
     Jobs:
       All: true
       Novice: false
@@ -86,35 +58,6 @@ Body:
       Shoes: true
     ArmorLevel: 1
     Refineable: true
-  - Id: 2406
-    AegisName: Boots_
-    Name: Boots
-    Type: Armor
-    Buy: 18000
-    Weight: 600
-    Defense: 16
-    Slots: 1
-    Jobs:
-      Alchemist: true
-      Archer: true
-      Assassin: true
-      BardDancer: true
-      Blacksmith: true
-      Crusader: true
-      Gunslinger: true
-      Hunter: true
-      Knight: true
-      Merchant: true
-      Rebellion: true
-      Rogue: true
-      StarGladiator: true
-      Swordman: true
-      Taekwon: true
-      Thief: true
-    Locations:
-      Shoes: true
-    ArmorLevel: 1
-    Refineable: true
   - Id: 2411
     AegisName: Grave
     Name: Greaves
@@ -122,22 +65,6 @@ Body:
     Buy: 48000
     Weight: 750
     Defense: 27
-    Jobs:
-      Crusader: true
-      Knight: true
-    Locations:
-      Shoes: true
-    ArmorLevel: 1
-    EquipLevelMin: 65
-    Refineable: true
-  - Id: 2412
-    AegisName: Grave_
-    Name: Greaves
-    Type: Armor
-    Buy: 54000
-    Weight: 750
-    Defense: 27
-    Slots: 1
     Jobs:
       Crusader: true
       Knight: true

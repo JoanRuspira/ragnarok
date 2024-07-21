@@ -465,8 +465,6 @@ Body:
       Rate: 9000
     - Item: Honey
       Rate: 150
-    - Item: Wing_Of_Butterfly
-      Rate: 100
     - Item: Flower
       Rate: 500
     - Item: Creamy_Card
@@ -2087,8 +2085,6 @@ Body:
       Rate: 2
     - Item: Wing_Of_Fly
       Rate: 300
-    - Item: Wing_Of_Butterfly
-      Rate: 150
     - Item: Dragon_Tail_Card
       Rate: 1
       StealProtected: true
@@ -3226,8 +3222,6 @@ Body:
       Rate: 4608
     - Item: Great_Wing
       Rate: 2500
-    - Item: Wing_Of_Butterfly
-      Rate: 1200
     - Item: Powder_Of_Butterfly
       Rate: 5500
     - Item: Blood_Butterfly_Card

@@ -555,7 +555,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      skill "AL_TELEPORT",1;
+      skill "SK_AL_TELEPORT",1;
   - Id: 4041
     AegisName: Coco_Card
     Name: Coco Card
@@ -3726,18 +3726,6 @@ Body:
       bonus bVit,2;
       if (getrefine()>8)
          bonus bMaxHP,800;
-  - Id: 4243
-    AegisName: Antonio_Card
-    Name: Antonio Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAutoSpellWhenHit,"AL_TELEPORT",1,500;
   - Id: 4244
     AegisName: Alarm_Card
     Name: Alarm Card
