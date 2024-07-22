@@ -553,7 +553,7 @@ Body:
     Override: 100
     Sitting: true
   Script: |
-      itemskill "SM_SELFPROVOKE",1;
+      itemheal rand(270,330),rand(20,30);
 - Id: 607
   AegisName: Yggdrasilberry
   Name: Yggdrasil Berry
@@ -1467,16 +1467,6 @@ Body:
     BuyingStore: true
   Script: |
     itemheal rand(270,330),0;
-- Id: 610
-  AegisName: Leaf_Of_Yggdrasil
-  Name: Yggdrasil Leaf
-  Type: Delayconsume
-  Buy: 4000
-  Weight: 100
-  Flags:
-    BuyingStore: true
-  Script: |
-    itemskill "SK_PR_RESURRECTIO",1;
 - Id: 669
   AegisName: Rice_Cake_Soup
   Name: Tempting Rice-Cake Soup

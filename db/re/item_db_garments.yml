@@ -53,14 +53,13 @@ Body:
       Garment: true
     ArmorLevel: 1
     Refineable: true
-  - Id: 2514
+  - Id: 450186
     AegisName: Pauldron
     Name: Pauldron
     Type: Armor
-    Buy: 20
+    Buy: 40000
     Weight: 800
     Defense: 25
-    Slots: 1
     Jobs:
       Alchemist: true
       Assassin: true
