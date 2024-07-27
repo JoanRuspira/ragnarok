@@ -9,7 +9,7 @@ from interiors import all_interiors
 
 iterations = 4
 initial_mob_id = 20021
-excluded_ids = [20365, 20357, 20358, 20363,20364, 20367, 20368, 20370, 20379, 20380, 20420]
+excluded_ids = [20365, 20357, 20358, 20363,20364, 20367, 20368, 20370, 20379, 20380, 20420, 20932]
 
 adventurers_novice = []
 adventurers_swordsman = []
@@ -117,7 +117,7 @@ def buildMobsMapCity(city, end_mob_id):
     fout = open("./generated/dynamic/" + city.get("Name") + "_npcorchestra.txt", "wt")
     city_mobs = []
     for _ in range(city.get("Density")):
-        city_mobs.append(random.randint(initial_mob_id, end_mob_id))
+        city_mobs.append(random.choice([i for i in range(initial_mob_id,end_mob_id) if i not in excluded_ids]))
     
     for city_mob_id in city_mobs:
         mob_line = city.get("Name") + ",0,0	monster	 Adventurer	" + str(city_mob_id) + ",1,5000\n"

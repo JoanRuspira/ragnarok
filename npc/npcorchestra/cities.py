@@ -72,16 +72,8 @@ all_cities = [
     "Density": 0
   },
   {
-    "Name": "lighthalzen_rekenber",
-    "Density": 0
-  },
-  {
     "Name": "dicastes01",
     "Density": 100
-  },
-  {
-    "Name": "cmd_fild07",
-    "Density": 65
   },
   {
     "Name": "amatsu",
@@ -106,10 +98,6 @@ all_cities = [
   {
     "Name": "rachel",
     "Density": 180
-  },
-  {
-    "Name": "ra_temple",
-    "Density": 90
   },
   {
     "Name": "yuno",

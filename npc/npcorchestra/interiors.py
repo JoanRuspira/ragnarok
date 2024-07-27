@@ -24,18 +24,6 @@ all_interiors = [
     "Density": 25
   },
   {
-    "Name": "moc_ruins",
-    "Density": 20
-  },
-  {
-    "Name": "izlu2dun",
-    "Density": 15
-  },
-  {
-    "Name": "alb2trea",
-    "Density": 10
-  },
-  {
     "Name": "in_rogue",
     "Density": 8
   },
@@ -66,10 +54,6 @@ all_interiors = [
   {
     "Name": "alde_alche",
     "Density": 10
-  },
-  {
-    "Name": "moc_fild19",
-    "Density": 15
   },
   {
     "Name": "hu_in01",

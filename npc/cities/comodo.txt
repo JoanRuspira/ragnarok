@@ -241,10 +241,10 @@ cmd_fild07,195,60,4	script	Rahasu#cmd	100,{
 	mes "Hey, I'm Rahasu.";
 	mes "If you want to learn";
 	mes "a little more about";
-	mes "Paros Lighthouse, I'll";
+	mes "Phharos Lighthouse, I'll";
 	mes "be happy to tell you.";
 	next;
-	if (select("Paros Lighthouse?:Cancel") == 1) {
+	if (select("Pharos Lighthouse?:Cancel") == 1) {
 		mes "[Rahasu]";
 		mes "For many years, this";
 		mes "lighthouse guided many";
@@ -274,7 +274,7 @@ cmd_fild07,52,280,4	script	Hallosu#cmd	100,{
 	mes "[Hallosu]";
 	mes "Hello, this is one of the";
 	mes "lighthouses that make up";
-	mes "Paros Lighthouse. However,";
+	mes "Pharos Lighthouse. However,";
 	mes "right now it's undergoing";
 	mes "renovation, so it's not";
 	mes "open to the public.";
@@ -396,7 +396,7 @@ moc_fild12,25,308,5	script	Serutero#cmd	59,{
 		mes "[Serutero]";
 		mes "There's nothing around";
 		mes "Saint Darmain now. Well, nothing";
-		mes "except maybe Paros Lighthouse,";
+		mes "except maybe Pharos Lighthouse,";
 		mes "which is southwest of here. That place might be of interest to";
 		mes "aspiring Rogues, I hear...";
 		close;

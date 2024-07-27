@@ -4093,6 +4093,7 @@ int battle_damage_area(struct block_list *bl, va_list ap) {
  * Do a basic physical attack (call through unit_attack_timer)
  *------------------------------------------*/
 enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* target, t_tick tick, int flag) {
+	
 	struct map_session_data *sd = NULL, *tsd = NULL;
 	struct status_data *sstatus, *tstatus;
 	struct status_change *sc, *tsc;
@@ -4123,6 +4124,10 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 
 	if (sd)
 	{
+		std::set<int> prevent_attack_maps {187,524,483,392,589,441,635,428,622,409,674,505,684,485,486,557,10,47,84,459,3,164,181,134,325,420,209,4,182,183,458,85,135,383,131,323,324,427,48,9,382,558,496,484,506,507,675,431,685,460,461,406,435,436,590,397,398,399,400,522,523,648,649,192,205,};
+		if(prevent_attack_maps.find(sd->mapindex) != prevent_attack_maps.end()){
+			return ATK_NONE;
+		}
 		sd->state.arrow_atk = (sd->status.weapon == W_BOW || (sd->status.weapon >= W_REVOLVER && sd->status.weapon <= W_GRENADE));
 		if (sd->state.arrow_atk)
 		{
