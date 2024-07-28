@@ -1,200 +1,37 @@
-mid_camp,138,231,5	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
 
-mid_camp,147,244,0	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_camp,141,254,1	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_camp,162,208,1	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_camp,248,266,1	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_camp,278,295,2	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_camp,187,229,5	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_camp,139,271,4	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_camp,146,287,7	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_camp,134,300,5	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_camp,158,285,3	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_camp,164,263,5	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_camp,177,256,1	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_camp,174,241,0	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_camp,177,223,6	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_camp,161,296,5	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_camp,190,245,2	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_camp,201,232,6	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_camp,210,220,5	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_camp,219,238,1	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_camp,227,209,0	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_camp,233,234,2	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_camp,245,240,4	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_camp,240,255,7	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_camp,261,244,3	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_camp,268,251,1	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_camp,263,274,0	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_camp,273,285,5	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_camp,269,398,4	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_camp,282,308,3	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_camp,257,317,2	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_camp,242,325,5	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_camp,222,334,1	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
 
 mid_camp,209,291,0	script	Hel's Camp Miner#hlcmp:npcid	848,{
-	npctalk "npcdialog";
+	npctalk "...";
 	end;
 }
 
 mid_camp,226,293,1	script	Hel's Camp Miner#hlcmp:npcid	848,{
-	npctalk "npcdialog";
+	npctalk "...";
 	end;
 }
 
 mid_camp,239,299,2	script	Hel's Camp Miner#hlcmp:npcid	848,{
-	npctalk "npcdialog";
+	npctalk "...";
 	end;
 }
 
 mid_camp,227,315,4	script	Hel's Camp Miner#hlcmp:npcid	848,{
-	npctalk "npcdialog";
+	npctalk "...";
 	end;
 }
 
 mid_camp,210,310,4	script	Hel's Camp Miner#hlcmp:npcid	848,{
-	npctalk "npcdialog";
+	npctalk "...";
 	end;
 }
 
 mid_camp,183,313,5	script	Hel's Camp Miner#hlcmp:npcid	848,{
-	npctalk "npcdialog";
+	npctalk "...";
 	end;
 }
 
 mid_camp,185,297,7	script	Hel's Camp Miner#hlcmp:npcid	848,{
-	npctalk "npcdialog";
+	npctalk "...";
 	end;
 }
 
@@ -292,131 +129,5 @@ mid_camp,296,265,6	script	Hel's Camp Guard#hlcmp:npcid	417,{
 
 mid_camp,296,302,6	script	Hel's Camp Guard#hlcmp:npcid	417,{
 	npctalk "Welcome to Hel's Camp.";
-	end;
-}
-
-ra_fild01,230,326,7	script	Arunafeltz Adventurer#hlcmp:npcid	698,{
-	npctalk "npcdialog";
-	end;
-}
-
-ra_fild01,232,320,4	script	Arunafeltz Adventurer#hlcmp:npcid	633,{
-	npctalk "npcdialog";
-	end;
-}
-
-ra_fild01,239,321,3	script	Arunafeltz Adventurer#hlcmp:npcid	628,{
-	npctalk "npcdialog";
-	end;
-}
-
-ra_fild01,242,327,2	script	Arunafeltz Adventurer#hlcmp:npcid	690,{
-	npctalk "npcdialog";
-	end;
-}
-
-ra_fild01,227,329,5	script	Arunafeltz Adventurer#hlcmp:npcid	630,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_campin,98,109,1	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_campin,102,120,3	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_campin,99,128,7	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_campin,89,131,4	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_campin,80,122,5	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_campin,79,109,7	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_campin,91,113,2	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_campin,79,136,7	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_campin,98,136,4	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_campin,109,111,1	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_campin,167,169,2	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_campin,116,184,1	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_campin,17,165,7	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_campin,21,122,2	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_camp,212,243,7	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_campin,221,121,2	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-mid_campin,213,124,0	script	Hel's Camp Settler#hlcmp:npcid	spriteid,{
-	npctalk "npcdialog";
-	end;
-}
-
-
-dic_fild01,30,86,7	script	Arunafeltz Adventurer#hlcmp:npcid	698,{
-	npctalk "npcdialog";
-	end;
-}
-
-dic_fild01,36,84,2	script	Arunafeltz Adventurer#hlcmp:npcid	690,{
-	npctalk "npcdialog";
-	end;
-}
-
-dic_fild01,40,79,6	script	Arunafeltz Adventurer#hlcmp:npcid	628,{
-	npctalk "npcdialog";
 	end;
 }

@@ -866,7 +866,7 @@ lhz_in02,283,276,4	script	Customer#amano12	815,{
 	close;
 }
 
-lighthalzen,123,212,4	script	Merpi#zen2	700,{
+lighthalzen,101,206,4	script	Merpi#zen2	700,{
 	mes "[Merpi]";
 	mes "Isn't the weather nice";
 	mes "today? All this sunlight";

@@ -2,12 +2,12 @@
 
 
 izlude,194,214,4	script	Izlude Guard#iz_npc27::iz_npc27a	105,{
-	npctalk "Welcome to Izlude";
+	npctalk "Welcome to Izlude.";
 	end;
 }
 
 izlude,197,214,4	script	Izlude Guard#iz_npc27::iz_npc27b	105,{
-	npctalk "Welcome to Izlude";
+	npctalk "Welcome to Izlude.";
 	end;
 }
 

@@ -72,14 +72,14 @@ aldebaran,155,61,5	shop	Blacksmith Merchant#alde22	665,998:-1,999:-1,1000:-1,612
 aldebaran,220,46,1	shop	Scholar Vendor#alde23	668,1006:-1,7117:-1,7224:-1
 aldebaran,228,82,3	shop	Assassin Merchant#alde24	703,1771:-1,678:-1,7322:-1,7154:-1
 aldebaran,222,135,6	shop	Arrow Vendor#alde25	740,1750:-1,1751:-1,1752:-1,1754:-1,1755:-1,1756:-1,1757:-1,1767:-1
-aldebaran,116,238,4	shop	Potion Master#ayo10	749,501:-1,502:-1,503:-1,504:-1,505:-1,506:-1
-aldebaran,147,225,0	shop	Fish Vendor#ama15	101,965:-1,964:-1,544:-1,579:-1,584:-1,12054:-1
-aldebaran,205,125,4	shop	Butcher#ayo15	54,517:-1
-aldebaran,231,119,1	shop	Waitress#ama12	757,12045:-1,12055:-1,12050:-1,12065:-1,12060:-1,12070:-1
-aldebaran,176,68,4	shop	Herb Vendor#cmd47	579,507:-1,508:-1,32:-1,509:-1,510:-1,511:-1
-aldebaran,85,71,3	shop	Vegetable Gardener#cmd50	576,522:-1,512:-1,513:-1,515:-1,516:-1,535:-1
-aldebaran,43,174,5	shop	Juice Vendor#ayo8	931,531:-1,532:-1,533:-1,534:-1
-aldebaran,73,239,4	shop	Baker#ayo16	91,580:-1,592:-1,593:-1,594:-1,595:-1
+aldebaran,116,238,4	shop	Potion Master#alde26	749,501:-1,502:-1,503:-1,504:-1,505:-1,506:-1
+aldebaran,147,225,0	shop	Fish Vendor#alde27	101,965:-1,964:-1,544:-1,579:-1,584:-1,12054:-1
+aldebaran,205,125,4	shop	Butcher#alde28	54,517:-1
+aldebaran,231,119,1	shop	Waitress#alde29	757,12045:-1,12055:-1,12050:-1,12065:-1,12060:-1,12070:-1
+aldebaran,176,68,4	shop	Herb Vendor#alde30	579,507:-1,508:-1,32:-1,509:-1,510:-1,511:-1
+aldebaran,85,71,3	shop	Vegetable Gardener#alde31	576,522:-1,512:-1,513:-1,515:-1,516:-1,535:-1
+aldebaran,43,174,5	shop	Juice Vendor#alde32	931,531:-1,532:-1,533:-1,534:-1
+aldebaran,73,239,4	shop	Baker#alde33	91,580:-1,592:-1,593:-1,594:-1,595:-1
 
 
 //=======================================================
@@ -128,6 +128,22 @@ ayothaya,152,247,2	shop	Baker#ayo16	91,580:-1,592:-1,593:-1,594:-1,595:-1
 //ayothaya,243,272,5	shop	Pet Vendor#ayo17	537,9027:-1
 ayo_in01,140,165,1	shop	Waitress#ayo18	80,12045:-1,12055:-1,12050:-1,12065:-1,12060:-1,12070:-1
 ayo_fild02,276,144,1	shop	Tool Dealer#ayo19	807,1750:-1,611:-1,501:-1,502:-1,503:-1,504:-1,506:-1,645:-1,656:-1
+ayothaya,137,87,5	shop	Runestone Merchant#ayo19	541,12733:-1,12729:-1,12726:-1,12732:-1,12731:-1
+ayothaya,156,108,3	shop	Performer Vendor#ayo20	576,11513:-1,6144:-1
+ayothaya,142,156,7	shop	Scholar Vendor#ayo21	577,1006:-1,7117:-1,7224:-1
+ayothaya,151,172,4 	shop	Blacksmith Merchant#ayo22	578,998:-1,999:-1,1000:-1,612:-1,1005:-1
+ayothaya,115,164,3	shop	Dragon Ball Vendor#ayo23	579,7445:-1,7446:-1,7447:-1,7448:-1
+ayothaya,54,125,7	shop	Shard Vendor#ayo24	662,6363:-1,6362:-1,6361:-1,6360:-1,7430:-1,6307:-1,7099:-1
+ayothaya,111,106,3	shop	Gemstone Dealer#ayo25	663,717:-1,716:-1,715:-1,20:-1,21:-1,523:-1
+ayothaya,205,135,3	shop	Hunting Vendor#ayo26	668,7523:-1,7522:-1,7521:-1,10:-1,7524:-1,7525:-1,7526:-1,7527:-1,1067:-1
+ayothaya,98,118,5	shop	Cannon Ball Vendor#ayo27	706,6244:-1,18000:-1,18001:-1,18002:-1,18003:-1,18004:-1,98004:-1,98005:-1,98006:-1
+ayothaya,220,184,3	shop	Rogue Supplies Vendor#ayo28	841,1771:-1,1098:-1,7432:-1,7433:-1
+ayothaya,203,201,5	shop	Noblestone Merchant#ayo29	843,7428:-1,7427:-1,7429:-1,7426:-1
+ayothaya,213,265,3	shop	Assassin Merchant#ayo30	842,1771:-1,678:-1,7322:-1,7154:-1
+ayothaya,165,270,6	shop	Shuriken Merchant#ayo31	864,13250:-1,13251:-1,13252:-1,13253:-1,13254:-1,15:-1,16:-1,17:-1
+ayothaya,249,257,1	shop	Alchemy Supplier#ayo32	996,905:-1,7033:-1,7134:-1,7135:-1,7136:-1,7137:-1,7139:-1
+ayothaya,248,181,4	shop	Arrow Vendor#ayo33	534,1750:-1,1751:-1,1752:-1,1754:-1,1755:-1,1756:-1,1757:-1,1767:-1
+
 
 
 //=======================================================
@@ -207,6 +223,20 @@ dicastes01,273,155,1	shop	Food Vendor#dic15	102,549:-1,548:-1,553:-1,554:-1
 dicastes01,247,129,0	shop	Food Vendor#dic16	534,12098:-1,556:-1,555:-1,550:-1
 //dicastes01,250,150,5	shop	Costume Dealer#dic17	900,20592:-1,19682:-1,19686:-1,19685:-1,20030:-1,19992:-1
 dicastes01,271,147,3	shop	Performer Vendor#dic18	70,11513:-1,6144:-1
+dicastes01,191,125,6	shop	Dragon Ball Vendor#dic19	85,7445:-1,7446:-1,7447:-1,7448:-1
+dicastes01,204,157,3	shop	Runestone Merchant#dic20	68,12733:-1,12729:-1,12726:-1,12732:-1,12731:-1
+dicastes01,160,178,4	shop	Shard Vendor#dic21	62,6363:-1,6362:-1,6361:-1,6360:-1,7430:-1,6307:-1,7099:-1
+dicastes01,134,210,5	shop	Hunting Vendor#dic22	86,7523:-1,7522:-1,7521:-1,10:-1,7524:-1,7525:-1,7526:-1,7527:-1,1067:-1
+dicastes01,111,247,5	shop	Blacksmith Merchant#dic23	49,998:-1,999:-1,1000:-1,612:-1,1005:-1
+dicastes01,180,224,3	shop	Cannon Ball Vendor#dic24	51,6244:-1,18000:-1,18001:-1,18002:-1,18003:-1,18004:-1,98004:-1,98005:-1,98006:-1
+dicastes01,221,197,0	shop	Scholar Vendor#dic25	67,1006:-1,7117:-1,7224:-1
+dicastes01,260,210,4	shop	Gemstone Dealer#dic26	70,717:-1,716:-1,715:-1,20:-1,21:-1,523:-1
+dicastes01,262,256,4	shop	Rogue Supplies Vendor#dic27	83,1771:-1,1098:-1,7432:-1,7433:-1
+dicastes01,224,235,5	shop	Noblestone Merchant#dic28	69,7428:-1,7427:-1,7429:-1,7426:-1
+dicastes01,180,204,5	shop	Shuriken Merchant#dic29	79,13250:-1,13251:-1,13252:-1,13253:-1,13254:-1,15:-1,16:-1,17:-1
+dicastes01,204,262,1	shop	Alchemy Supplier#dic30	89,905:-1,7033:-1,7134:-1,7135:-1,7136:-1,7137:-1,7139:-1
+dicastes01,192,290,6	shop	Assassin Merchant#dic31	92,1771:-1,678:-1,7322:-1,7154:-1
+dicastes01,192,324,5	shop	Arrow Vendor#dic32	95,1750:-1,1751:-1,1752:-1,1754:-1,1755:-1,1756:-1,1757:-1,1767:-1
 
 
 //=======================================================
@@ -229,6 +259,36 @@ ein_in01,287,94,5	shop	Waiter#ein15	74,12045:-1,12055:-1,12050:-1,12065:-1,12060
 ein_in01,181,11,2	shop	Potion Master#ein16	749,501:-1,502:-1,503:-1,504:-1,505:-1,506:-1
 //einbech,64,214,0	shop	Costume Vendor#ein17	67,19960:-1,19959:-1,19958:-1,19957:-1,19956:-1,19851:-1,19635:-1
 tha_scene01,139,193,2	shop	Tool Dealer#ein18	869,1750:-1,1752:-1,1751:-1,611:-1,501:-1,502:-1,503:-1,504:-1,506:-1,645:-1,656:-1
+einbech,71,222,4	shop	Performer Vendor#ein119	846,11513:-1,6144:-1
+einbech,38,204,7	shop	Dragon Ball Vendor#ein20	854,7445:-1,7446:-1,7447:-1,7448:-1
+einbech,105,153,5	shop	Runestone Merchant#ein21	855,12733:-1,12729:-1,12726:-1,12732:-1,12731:-1
+einbech,78,125,4	shop	Shard Vendor#ein22	742,6363:-1,6362:-1,6361:-1,6360:-1,7430:-1,6307:-1,7099:-1
+einbech,88,109,1	shop	Hunting Vendor#ein23	850,7523:-1,7522:-1,7521:-1,10:-1,7524:-1,7525:-1,7526:-1,7527:-1,1067:-1
+einbech,127,126,4	shop	Blacksmith Merchant#ein24	727,998:-1,999:-1,1000:-1,612:-1,1005:-1
+einbech,167,90,1	shop	Cannon Ball Vendor#ein25	742,6244:-1,18000:-1,18001:-1,18002:-1,18003:-1,18004:-1,98004:-1,98005:-1,98006:-1
+einbech,166,124,5	shop	Scholar Vendor#ein26	854,1006:-1,7117:-1,7224:-1
+einbech,194,125,7	shop	Gemstone Dealer#ein27	804,717:-1,716:-1,715:-1,20:-1,21:-1,523:-1
+einbech,204,135,3	shop	Rogue Supplies Vendor#ein28	805,1771:-1,1098:-1,7432:-1,7433:-1
+einbech,213,118,4	shop	Noblestone Merchant#ein29	855,7428:-1,7427:-1,7429:-1,7426:-1
+einbech,96,223,3	shop	Assassin Merchant#ein30	806,1771:-1,678:-1,7322:-1,7154:-1
+einbech,197,84,3	shop	Shuriken Merchant#ein31	410,13250:-1,13251:-1,13252:-1,13253:-1,13254:-1,15:-1,16:-1,17:-1
+einbech,142,218,4	shop	Alchemy Supplier#ein32	531,905:-1,7033:-1,7134:-1,7135:-1,7136:-1,7137:-1,7139:-1
+einbech,155,244,5	shop	Arrow Vendor#ein33	847,1750:-1,1751:-1,1752:-1,1754:-1,1755:-1,1756:-1,1757:-1,1767:-1
+einbroch,206,257,3	shop	Runestone Merchant#ein34	109,12733:-1,12729:-1,12726:-1,12732:-1,12731:-1
+einbroch,148,252,5	shop	Performer Vendor#ein35	410,11513:-1,6144:-1
+einbroch,117,248,4	shop	Scholar Vendor#ein36	531,1006:-1,7117:-1,7224:-1
+einbroch,86,215,5 	shop	Blacksmith Merchant#ein36	573,998:-1,999:-1,1000:-1,612:-1,1005:-1
+einbroch,45,185,7	shop	Dragon Ball Vendor#ein37	654,7445:-1,7446:-1,7447:-1,7448:-1
+einbroch,41,215,4	shop	Shard Vendor#ein38	701,6363:-1,6362:-1,6361:-1,6360:-1,7430:-1,6307:-1,7099:-1
+einbroch,43,110,7	shop	Gemstone Dealer#ein39	702,717:-1,716:-1,715:-1,20:-1,21:-1,523:-1
+einbroch,86,96,7	shop	Hunting Vendor#ein40	727,7523:-1,7522:-1,7521:-1,10:-1,7524:-1,7525:-1,7526:-1,7527:-1,1067:-1
+einbroch,98,118,5	shop	Cannon Ball Vendor#ein41	742,6244:-1,18000:-1,18001:-1,18002:-1,18003:-1,18004:-1,98004:-1,98005:-1,98006:-1
+einbroch,130,81,3	shop	Rogue Supplies Vendor#ein42	754,1771:-1,1098:-1,7432:-1,7433:-1
+einbroch,167,51,6	shop	Noblestone Merchant#ein43	804,7428:-1,7427:-1,7429:-1,7426:-1
+einbroch,216,122,4	shop	Assassin Merchant#ein44	805,1771:-1,678:-1,7322:-1,7154:-1
+einbroch,244,157,1	shop	Shuriken Merchant#ein45	806,13250:-1,13251:-1,13252:-1,13253:-1,13254:-1,15:-1,16:-1,17:-1
+einbroch,277,332,3	shop	Alchemy Supplier#ein46	853,905:-1,7033:-1,7134:-1,7135:-1,7136:-1,7137:-1,7139:-1
+einbroch,240,266,5	shop	Arrow Vendor#ein47	850,1750:-1,1751:-1,1752:-1,1754:-1,1755:-1,1756:-1,1757:-1,1767:-1
 
 
 //=======================================================
@@ -314,6 +374,13 @@ mid_camp,271,300,4	shop	Cannon Ball Dealer#hcamp9	665,6244:-1,18000:-1,18001:-1,
 mid_camp,222,221,2	shop	Hunting Vendor#hcamp10	536,7523:-1,7522:-1,7521:-1,10:-1,7524:-1,7525:-1,7526:-1,7527:-1,1067:-1
 ra_fild01,225,325,5	shop	Tool Dealer#hcamp11	90,1750:-1,611:-1,501:-1,502:-1,503:-1,504:-1,506:-1,645:-1,656:-1
 dic_fild01,37,88,4	shop	Tool Dealer#shole1	53,1750:-1,611:-1,501:-1,502:-1,503:-1,504:-1,506:-1,645:-1,656:-1
+mid_camp,133,229,5	shop	Rogue Supplies Vendor#hcamp12	636,1771:-1,1098:-1,7432:-1,7433:-1
+mid_camp,155,280,3	shop	Gemstone Dealer#hcamp13	637,717:-1,716:-1,715:-1,20:-1,21:-1,523:-1
+mid_camp,139,237,4	shop	Alchemy Supplier#hcamp14	641,905:-1,7033:-1,7134:-1,7135:-1,7136:-1,7137:-1,7139:-1
+mid_camp,197,236,3	shop	Shuriken Merchant#hcamp15	642,13250:-1,13251:-1,13252:-1,13253:-1,13254:-1,15:-1,16:-1,17:-1
+mid_camp,235,251,7	shop	Shard Vendor#hcamp16	644,6363:-1,6362:-1,6361:-1,6360:-1,7430:-1,6307:-1,7099:-1
+mid_camp,225,239,2	shop	Scholar Vendor#hcamp17	645,1006:-1,7117:-1,7224:-1
+mid_camp,265,261,2	shop	Performer Vendor#hcamp18	67,11513:-1,6144:-1
 
 
 //=======================================================
@@ -381,6 +448,22 @@ izlude,96,169,5	shop	Market Butcher#izlude17	87,517:-1,528:-1
 izlu2dun,103,97,4	shop	Tool Dealer#izlude18	73,1750:-1,611:-1,501:-1,502:-1,503:-1,504:-1,506:-1,645:-1,656:-1
 izlude_in,125,176,4	shop	Sword Vendor#izlude19	47,1101:-1,1104:-1,1116:-1
 izlude_in,116,176,6	shop	Spear Vendor#izlude20	54,1401:-1,1404:-1,1407:-1
+izlude,156,45,1	shop	Blacksmith Merchant#izlude21	49,998:-1,999:-1,1000:-1,612:-1,1005:-1
+izlude,151,76,3	shop	Cannon Ball Vendor#izlude22	51,6244:-1,18000:-1,18001:-1,18002:-1,18003:-1,18004:-1,98004:-1,98005:-1,98006:-1
+izlude,115,185,5	shop	Shard Vendor#izlude23	62,6363:-1,6362:-1,6361:-1,6360:-1,7430:-1,6307:-1,7099:-1
+izlude,94,150,0	shop	Scholar Vendor#izlude24	67,1006:-1,7117:-1,7224:-1
+izlude,59,165,3	shop	Runestone Merchant#izlude25	68,12733:-1,12729:-1,12726:-1,12732:-1,12731:-1
+izlude,44,170,5	shop	Noblestone Merchant#izlude26	69,7428:-1,7427:-1,7429:-1,7426:-1
+izlude,163,151,1	shop	Gemstone Dealer#izlude27	70,717:-1,716:-1,715:-1,20:-1,21:-1,523:-1
+izlude,121,125,5	shop	Shuriken Merchant#izlude28	79,13250:-1,13251:-1,13252:-1,13253:-1,13254:-1,15:-1,16:-1,17:-1
+izlude,135,100,2	shop	Rogue Supplies Vendor#izlude29	83,1771:-1,1098:-1,7432:-1,7433:-1
+izlude,123,57,6	shop	Performer Vendor#izlude30	84,11513:-1,6144:-1
+izlude,170,71,4	shop	Dragon Ball Vendor#izlude31	85,7445:-1,7446:-1,7447:-1,7448:-1
+izlude,188,78,3	shop	Hunting Vendor#izlude32	86,7523:-1,7522:-1,7521:-1,10:-1,7524:-1,7525:-1,7526:-1,7527:-1,1067:-1
+izlude,94,92,0	shop	Alchemy Supplier#izlude33	89,905:-1,7033:-1,7134:-1,7135:-1,7136:-1,7137:-1,7139:-1
+izlude,49,104,4	shop	Assassin Merchant#izlude34	92,1771:-1,678:-1,7322:-1,7154:-1
+izlude,45,91,7	shop	Arrow Vendor#izlude35	95,1750:-1,1751:-1,1752:-1,1754:-1,1755:-1,1756:-1,1757:-1,1767:-1
+
 
 //=======================================================
 // Lighthalzen
@@ -418,6 +501,21 @@ lighthalzen,83,79,0	shop	Dye Vendor#lhz30	742,975:-1,976:-1,978:-1,979:-1,980:-1
 lighthalzen,125,151,0	shop	Butcher#lhz32	996,517:-1,528:-1,12102:-1
 lighthalzen,223,117,4	shop	Baker#lhz33	91,580:-1,592:-1,593:-1,594:-1,595:-1
 //lighthalzen,225,96,3	shop	Pet Vendor#lhz34	536,9027:-1
+lighthalzen,84,149,6	shop	Performer Vendor#lhz35	531,11513:-1,6144:-1
+lighthalzen,46,114,5	shop	Scholar Vendor#lhz36	573,1006:-1,7117:-1,7224:-1
+lighthalzen,74,59,0 	shop	Blacksmith Merchant#lhz37	654,998:-1,999:-1,1000:-1,612:-1,1005:-1
+lighthalzen,146,51,0	shop	Dragon Ball Vendor#lhz38	701,7445:-1,7446:-1,7447:-1,7448:-1
+lighthalzen,208,127,3	shop	Runestone Merchant#lhz39	702,12733:-1,12729:-1,12726:-1,12732:-1,12731:-1
+lighthalzen,229,68,0	shop	Shard Vendor#lhz40	727,6363:-1,6362:-1,6361:-1,6360:-1,7430:-1,6307:-1,7099:-1
+lighthalzen,253,125,2	shop	Gemstone Dealer#lhz41	742,717:-1,716:-1,715:-1,20:-1,21:-1,523:-1
+lighthalzen,207,165,3	shop	Hunting Vendor#lhz42	741,7523:-1,7522:-1,7521:-1,10:-1,7524:-1,7525:-1,7526:-1,7527:-1,1067:-1
+lighthalzen,293,203,6	shop	Cannon Ball Vendor#lhz43	754,6244:-1,18000:-1,18001:-1,18002:-1,18003:-1,18004:-1,98004:-1,98005:-1,98006:-1
+lighthalzen,220,234,3	shop	Rogue Supplies Vendor#lhz44	755,1771:-1,1098:-1,7432:-1,7433:-1
+lighthalzen,197,235,5	shop	Noblestone Merchant#lhz45	804,7428:-1,7427:-1,7429:-1,7426:-1
+lighthalzen,201,258,7	shop	Assassin Merchant#lhz46	805,1771:-1,678:-1,7322:-1,7154:-1
+lighthalzen,230,282,3	shop	Shuriken Merchant#lhz47	806,13250:-1,13251:-1,13252:-1,13253:-1,13254:-1,15:-1,16:-1,17:-1
+lighthalzen,134,309,6	shop	Alchemy Supplier#lhz48	853,905:-1,7033:-1,7134:-1,7135:-1,7136:-1,7137:-1,7139:-1
+lighthalzen,305,289,6	shop	Arrow Vendor#lhz49	869,1750:-1,1751:-1,1752:-1,1754:-1,1755:-1,1756:-1,1757:-1,1767:-1
 
 
 //=======================================================
@@ -521,6 +619,21 @@ nif_in,36,174,5	shop	Spell Book Dealer#nif16	476,549:-1
 nif_in,38,161,3	shop	Gemstone Dealer#nif17	58,717:-1,716:-1,715:-1,20:-1,21:-1,523:-1
 //nif_in,125,168,4	shop	Pet Vendor#nif18	456,9049:-1,9042:-1
 niflheim,222,141,1	shop	Fruit Trader#nif19	583,512:-1,513:-1,514:-1,515:-1,516:-1
+niflheim,179,192,5	shop	Noblestone Merchant#nif20	60,7428:-1,7427:-1,7429:-1,7426:-1
+niflheim,207,228,7	shop	Shard Vendor#nif21	82,6363:-1,6362:-1,6361:-1,6360:-1,7430:-1,6307:-1,7099:-1
+niflheim,230,243,3	shop	Dragon Ball Vendor#nif22	98,7445:-1,7446:-1,7447:-1,7448:-1
+niflheim,197,256,1	shop	Alchemy Supplier#nif23	476,905:-1,7033:-1,7134:-1,7135:-1,7136:-1,7137:-1,7139:-1
+niflheim,187,243,3	shop	Hunting Vendor#nif24	477,7523:-1,7522:-1,7521:-1,10:-1,7524:-1,7525:-1,7526:-1,7527:-1,1067:-1
+niflheim,175,227,3	shop	Cannon Ball Vendor#nif25	604,6244:-1,18000:-1,18001:-1,18002:-1,18003:-1,18004:-1,98004:-1,98005:-1,98006:-1
+niflheim,146,200,1	shop	Gemstone Dealer#nif26	605,717:-1,716:-1,715:-1,20:-1,21:-1,523:-1
+niflheim,167,104,4	shop	Shuriken Merchant#nif27	630,13250:-1,13251:-1,13252:-1,13253:-1,13254:-1,15:-1,16:-1,17:-1
+niflheim,185,79,3	shop	Runestone Merchant#nif28	667,12733:-1,12729:-1,12726:-1,12732:-1,12731:-1
+niflheim,334,59,2	shop	Arrow Vendor#nif29	686,1750:-1,1751:-1,1752:-1,1754:-1,1755:-1,1756:-1,1757:-1,1767:-1
+niflheim,201,99,7	shop	Performer Vendor#nif30	735,11513:-1,6144:-1
+niflheim,204,179,3	shop	Assassin Merchant#nif31	792,1771:-1,678:-1,7322:-1,7154:-1
+niflheim,143,95,4	shop	Rogue Supplies Vendor#nif32	794,1771:-1,1098:-1,7432:-1,7433:-1
+niflheim,209,53,4	shop	Blacksmith Merchant#nif33	795,998:-1,999:-1,1000:-1,612:-1,1005:-1
+niflheim,134,56,5	shop	Scholar Vendor#nif34	89,1006:-1,7117:-1,7224:-1
 
 
 //=======================================================
@@ -705,6 +818,22 @@ rachel,43,155,7	shop	Alchemy Supplier#rachel30	749,905:-1,7033:-1,7134:-1,7135:-
 ra_in01,267,287,4	shop	Potion Master#rachel33	749,501:-1,502:-1,503:-1,504:-1,505:-1,506:-1
 ra_in01,278,148,4	shop	Waitress#rachel34	124,12045:-1,12055:-1,12050:-1,12065:-1,12060:-1,12070:-1
 aru_gld,297,111,3	shop	Tool Dealer#rachelvalfreyja	533,1750:-1,611:-1,501:-1,502:-1,503:-1,504:-1,506:-1,645:-1,656:-1
+rachel,252,119,7	shop	Performer Vendor#rachel35	475,11513:-1,6144:-1
+rachel,261,162,3	shop	Dragon Ball Vendor#rachel36	476,7445:-1,7446:-1,7447:-1,7448:-1
+rachel,244,193,4	shop	Runestone Merchant#rachel37	477,12733:-1,12729:-1,12726:-1,12732:-1,12731:-1
+rachel,232,218,2	shop	Shard Vendor#rachel38	478,6363:-1,6362:-1,6361:-1,6360:-1,7430:-1,6307:-1,7099:-1
+rachel,179,219,5	shop	Gemstone Dealer#rachel39	915,717:-1,716:-1,715:-1,20:-1,21:-1,523:-1
+rachel,111,231,4	shop	Hunting Vendor#rachel40	918,7523:-1,7522:-1,7521:-1,10:-1,7524:-1,7525:-1,7526:-1,7527:-1,1067:-1
+rachel,72,244,3	shop	Blacksmith Merchant#rachel41	920,998:-1,999:-1,1000:-1,612:-1,1005:-1
+rachel,70,199,1	shop	Cannon Ball Vendor#rachel42	923,6244:-1,18000:-1,18001:-1,18002:-1,18003:-1,18004:-1,98004:-1,98005:-1,98006:-1
+rachel,62,160,6	shop	Scholar Vendor#rachel43	928,1006:-1,7117:-1,7224:-1
+rachel,55,89,5	shop	Rogue Supplies Vendor#rachel44	475,1771:-1,1098:-1,7432:-1,7433:-1
+rachel,120,47,4	shop	Noblestone Merchant#rachel45	476,7428:-1,7427:-1,7429:-1,7426:-1
+rachel,264,98,3	shop	Assassin Merchant#rachel46	477,1771:-1,678:-1,7322:-1,7154:-1
+rachel,212,30,4	shop	Shuriken Merchant#rachel47	478,13250:-1,13251:-1,13252:-1,13253:-1,13254:-1,15:-1,16:-1,17:-1
+rachel,182,76,5	shop	Alchemy Supplier#rachel48	915,905:-1,7033:-1,7134:-1,7135:-1,7136:-1,7137:-1,7139:-1
+rachel,57,257,4	shop	Arrow Vendor#rachel49	918,1750:-1,1751:-1,1752:-1,1754:-1,1755:-1,1756:-1,1757:-1,1767:-1
+
 
 //=======================================================
 // Tidal Island
@@ -720,6 +849,19 @@ nameless_n,102,91,7	shop	Arrow Vendor#tid8	732,1750:-1,1751:-1,1752:-1,1754:-1,1
 nameless_n,218,236,3	shop	Tool Dealer#tid9	83,1750:-1,611:-1,501:-1,502:-1,506:-1,645:-1
 ve_fild07,109,146,5	shop	Cannon Ball Dealer#tid10	100,6244:-1,18000:-1,18001:-1,18002:-1,18003:-1,18004:-1,98004:-1,98005:-1,98006:-1
 ve_fild04,270,284,3	shop	Fish Vendor#tid11	84,544:-1,579:-1,584:-1
+nameless_n,229,230,4	shop	Blacksmith Merchant#tid12	78,998:-1,999:-1,1000:-1,612:-1,1005:-1
+nameless_n,175,198,5	shop	Shuriken Merchant#tid13	82,13250:-1,13251:-1,13252:-1,13253:-1,13254:-1,15:-1,16:-1,17:-1
+nameless_n,185,172,1	shop	Dragon Ball Vendor#tid14	84,7445:-1,7446:-1,7447:-1,7448:-1
+nameless_n,251,119,1	shop	Noblestone Merchant#tid15	92,7428:-1,7427:-1,7429:-1,7426:-1
+nameless_n,260,91,1	shop	Hunting Vendor#tid16	93,7523:-1,7522:-1,7521:-1,10:-1,7524:-1,7525:-1,7526:-1,7527:-1,1067:-1
+nameless_n,221,83,7	shop	Cannon Ball Vendor#tid17	777,6244:-1,18000:-1,18001:-1,18002:-1,18003:-1,18004:-1,98004:-1,98005:-1,98006:-1
+nameless_n,204,117,5	shop	Shard Vendor#tid18	630,6363:-1,6362:-1,6361:-1,6360:-1,7430:-1,6307:-1,7099:-1
+nameless_n,80,98,7	shop	Alchemy Supplier#tid19	642,905:-1,7033:-1,7134:-1,7135:-1,7136:-1,7137:-1,7139:-1
+nameless_n,176,257,4	shop	Runestone Merchant#tid20	641,12733:-1,12729:-1,12726:-1,12732:-1,12731:-1
+nameless_n,95,258,4	shop	Performer Vendor#tid21	654,11513:-1,6144:-1
+nameless_n,65,189,7	shop	Assassin Merchant#tid22	701,1771:-1,678:-1,7322:-1,7154:-1
+nameless_n,114,181,3	shop	Rogue Supplies Vendor#tid23	704,1771:-1,1098:-1,7432:-1,7433:-1
+nameless_n,199,192,6	shop	Scholar Vendor#tid24	755,1006:-1,7117:-1,7224:-1
 
 
 //=======================================================
@@ -774,6 +916,22 @@ ve_in,241,313,5	shop	Potion Master#veins15	749,501:-1,502:-1,503:-1,504:-1,505:-
 ve_in,237,135,5	shop	Waitress#veins17	124,12045:-1,12055:-1,12050:-1,12065:-1,12060:-1,12070:-1
 ve_fild03,161,238,5	shop	Tool Dealer#veins18	900,1750:-1,611:-1,501:-1,502:-1,503:-1,504:-1,506:-1,645:-1,656:-1
 ve_fild05,102,196,0	shop	Herb Vendor#veins19	123,507:-1,508:-1,32:-1,509:-1,510:-1,511:-1
+veins,181,135,5	shop	Shuriken Merchant#veins20	58,13250:-1,13251:-1,13252:-1,13253:-1,13254:-1,15:-1,16:-1,17:-1
+veins,127,173,0	shop	Noblestone Merchant#veins21	93,7428:-1,7427:-1,7429:-1,7426:-1
+veins,94,169,5	shop	Hunting Vendor#veins22	99,7523:-1,7522:-1,7521:-1,10:-1,7524:-1,7525:-1,7526:-1,7527:-1,1067:-1
+veins,84,145,6	shop	Shard Vendor#veins23	456,6363:-1,6362:-1,6361:-1,6360:-1,7430:-1,6307:-1,7099:-1
+veins,94,240,5	shop	Dragon Ball Vendor#veins24	481,7445:-1,7446:-1,7447:-1,7448:-1
+veins,112,278,2	shop	Alchemy Supplier#veins25	482,905:-1,7033:-1,7134:-1,7135:-1,7136:-1,7137:-1,7139:-1
+veins,157,274,1	shop	Cannon Ball Vendor#veins26	494,6244:-1,18000:-1,18001:-1,18002:-1,18003:-1,18004:-1,98004:-1,98005:-1,98006:-1
+veins,325,259,5	shop	Gemstone Dealer#veins27	526,717:-1,716:-1,715:-1,20:-1,21:-1,523:-1
+veins,329,216,3	shop	Runestone Merchant#veins28	583,12733:-1,12729:-1,12726:-1,12732:-1,12731:-1
+veins,291,221,1	shop	Arrow Vendor#veins29	603,1750:-1,1751:-1,1752:-1,1754:-1,1755:-1,1756:-1,1757:-1,1767:-1
+veins,269,215,4	shop	Performer Vendor#veins30	648,11513:-1,6144:-1
+veins,274,153,1	shop	Assassin Merchant#veins31	667,1771:-1,678:-1,7322:-1,7154:-1
+veins,244,184,0	shop	Blacksmith Merchant#veins32	803,998:-1,999:-1,1000:-1,612:-1,1005:-1
+veins,201,236,3	shop	Rogue Supplies Vendor#veins33	919,1771:-1,1098:-1,7432:-1,7433:-1
+veins,158,253,7	shop	Scholar Vendor#veins34	921,1006:-1,7117:-1,7224:-1
+
 
 //=======================================================
 // Yuno
@@ -823,6 +981,21 @@ yuno_in03,179,43,5	shop	Tool Dealer#yuno41	533,1750:-1,611:-1,501:-1,502:-1,503:
 yuno_in03,159,66,6	shop	Elemental Vendor#yuno42	58,994:-1,995:-1,996:-1,997:-1,1000:-1
 yuno_in03,175,66,3	shop	Scroll Merchant#yuno43	102,7433:-1
 yuno,37,189,7	shop	Jeweler#yuno44	91,721:-1,723:-1,726:-1,728:-1,729:-1,730:-1
+yuno,147,80,6	shop	Blacksmith Merchant#yuno45	755,998:-1,999:-1,1000:-1,612:-1,1005:-1
+yuno,175,86,1	shop	Cannon Ball Vendor#yuno46	704,6244:-1,18000:-1,18001:-1,18002:-1,18003:-1,18004:-1,98004:-1,98005:-1,98006:-1
+yuno,159,115,0	shop	Gemstone Dealer#yuno47	124,717:-1,716:-1,715:-1,20:-1,21:-1,523:-1
+yuno,117,155,5	shop	Shard Vendor#yuno48	125,6363:-1,6362:-1,6361:-1,6360:-1,7430:-1,6307:-1,7099:-1
+yuno,80,150,4	shop	Shuriken Merchant#yuno49	720,13250:-1,13251:-1,13252:-1,13253:-1,13254:-1,15:-1,16:-1,17:-1
+yuno,96,197,3	shop	Rogue Supplies Vendor#yuno50	706,1771:-1,1098:-1,7432:-1,7433:-1
+yuno,165,210,3	shop	Hunting Vendor#yuno51	96,7523:-1,7522:-1,7521:-1,10:-1,7524:-1,7525:-1,7526:-1,7527:-1,1067:-1
+yuno,161,315,4	shop	Scholar Vendor#yuno52	72,1006:-1,7117:-1,7224:-1
+yuno,207,310,5	shop	Noblestone Merchant#yuno53	735,7428:-1,7427:-1,7429:-1,7426:-1
+yuno,280,288,3	shop	Alchemy Supplier#yuno54	805,905:-1,7033:-1,7134:-1,7135:-1,7136:-1,7137:-1,7139:-1
+yuno,289,247,0	shop	Performer Vendor#yuno55	878,11513:-1,6144:-1
+yuno,306,185,5	shop	Dragon Ball Vendor#yuno56	893,7445:-1,7446:-1,7447:-1,7448:-1
+yuno,334,135,2	shop	Runestone Merchant#yuno57	742,12733:-1,12729:-1,12726:-1,12732:-1,12731:-1
+yuno,320,95,7	shop	Assassin Merchant#yuno58	743,1771:-1,678:-1,7322:-1,7154:-1
+yuno,278,111,4	shop	Arrow Vendor#yuno59	754,1750:-1,1751:-1,1752:-1,1754:-1,1755:-1,1756:-1,1757:-1,1767:-1
 
 
 //=======================================================

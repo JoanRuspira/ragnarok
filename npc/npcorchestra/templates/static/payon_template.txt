@@ -1,26 +1,56 @@
 
+payon,248,301,4	script	Peco#payn::npcid	428,{ 
+	npctalk "...";
+	end;
+}
+
+payon,253,299,1	script	Peco#payn::npcid	428,{ 
+	npctalk "...";
+	end;
+}
+
+payon,252,305,7	script	Peco#payn::npcid	428,{ 
+	npctalk "...";
+	end;
+}
+
+payon,245,308,2	script	Peco#payn::npcid	428,{ 
+	npctalk "...";
+	end;
+}
+
+payon,251,283,2	script	Peco#payn::npcid	428,{ 
+	npctalk "...";
+	end;
+}
+
+payon,255,279,6	script	Peco#payn::npcid	428,{ 
+	npctalk "...";
+	end;
+}
+
 payon,168,67,4	script	Payon Guard#payn::pay_npc1	708,{
-	npctalk "Welcome to Payon";
+	npctalk "Welcome to Payon.";
 	end;
 }
 
 payon,16,148,6	script	Payon Guard#payn::pay_npc0	708,{
-	npctalk "Welcome to Payon";
+	npctalk "Welcome to Payon.";
 	end;
 }
 
 payon,16,138,6	script	Payon Guard#payn::pay_npc00	708,{
-	npctalk "Welcome to Payon";
+	npctalk "Welcome to Payon.";
 	end;
 }
 
 payon,168,64,2	script	Payon Guard#payn::pay_npc2	708,{
-	npctalk "Welcome to Payon";
+	npctalk "Welcome to Payon.";
 	end;
 }
 
 payon,215,79,5	script	Payon Guard#payn::pay_npc24	708,{
-	npctalk "Welcome to Payon";
+	npctalk "Welcome to Payon.";
 	end;
 }
 
@@ -55,12 +85,12 @@ payon,218,246,6	script	Palace Guard#payn::pay_npc35	708,{
 }
 
 payon,84,178,4	script	Payon Guard#payn::pay_npc48	708,{ 
-	npctalk "Welcome to Payon";
+	npctalk "Welcome to Payon.";
 	end;
 }
 
 payon,92,178,4	script	Payon Guard#payn::pay_npc49	708,{ 
-	npctalk "Welcome to Payon";
+	npctalk "Welcome to Payon.";
 	end;
 }
 
@@ -76,21 +106,12 @@ payon_in03,103,180,5	script	Palace Guard#payn::pay_npc75	708,{
 }
 
 pay_fild01,330,352,4	script	Payon Guard#payn::npcid	708,{ 
-	npctalk "Welcome to Payon";
+	npctalk "Welcome to Payon.";
 	end;
 }
 
 pay_fild01,337,352,4	script	Payon Guard#payn::npcid	708,{ 
-	npctalk "Welcome to Payon";
-	end;
-}
-
-pay_fild01,332,347,0	script	Payon Adventurer#payn::npcid	645,{ 
-	npctalk "npcdialog";
-	end;
-}
-pay_fild01,337,344,5	script	Payon Adventurer#payn::npcid	118,{ 
-	npctalk "npcdialog";
+	npctalk "Welcome to Payon.";
 	end;
 }
 
