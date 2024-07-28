@@ -20,22 +20,22 @@ amatsu,202,93,3	script	Amatsu Guard#amat::npcid	767,{
 }
 
 amatsu,195,253,6	script	Amatsu Guard#amat::npcid	767,{
-	npctalk "Welcome to the Amatsu Palace grounds.";
+	npctalk "Welcome to the Amatsu Palace.";
 	end;
 }
 
 amatsu,195,246,6	script	Amatsu Guard#amat::npcid	767,{
-	npctalk "Welcome to the Amatsu Palace grounds.";
+	npctalk "Welcome to the Amatsu Palace.";
 	end;
 }
 
 amatsu,112,165,4	script	Amatsu Guard#amat::npcid	767,{
-	npctalk "Welcome to the Amatsu Palace grounds.";
+	npctalk "Welcome to the Amatsu Palace.";
 	end;
 }
 
 amatsu,119,165,4	script	Amatsu Guard#amat::npcid	767,{
-	npctalk "Welcome to the Amatsu Palace grounds.";
+	npctalk "Welcome to the Amatsu Palace.";
 	end;
 }
 
