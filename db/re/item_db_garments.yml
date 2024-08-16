@@ -10,7 +10,19 @@ Body:
     Type: Armor
     Buy: 1000
     Weight: 200
-    Defense: 4
+    Defense: 1
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+  - Id: 2502
+    AegisName: Hood_
+    Name: Hood
+    Type: Armor
+    Buy: 1000
+    Weight: 200
+    Defense: 1
+    Slots: 1
     Locations:
       Garment: true
     ArmorLevel: 1
@@ -21,38 +33,973 @@ Body:
     Type: Armor
     Buy: 5000
     Weight: 400
-    Defense: 8
+    Defense: 3
     Jobs:
       All: true
       Novice: false
-      SuperNovice: false
     Locations:
       Garment: true
     ArmorLevel: 1
     Refineable: true
+  - Id: 2504
+    AegisName: Muffler_
+    Name: Muffler
+    Type: Armor
+    Buy: 5000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+  - Id: 2511
+    AegisName: Strength_Muffler
+    Name: Muffler
+    Type: Armor
+    Buy: 5000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    Script: |
+      bonus bStr,5;
+  - Id: 2512
+    AegisName: Agility_Muffler
+    Name: Muffler
+    Type: Armor
+    Buy: 5000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    Script: |
+      bonus bAgi,5;
+  - Id: 2507
+    AegisName: Vitality_Muffler
+    Name: Muffler
+    Type: Armor
+    Buy: 5000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    Script: |
+      bonus bVit,5;
+  - Id: 2508
+    AegisName: Intelligence_Muffler
+    Name: Muffler
+    Type: Armor
+    Buy: 5000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    Script: |
+      bonus bInt,5;
+  - Id: 2509
+    AegisName: Dexterity_Muffler
+    Name: Muffler
+    Type: Armor
+    Buy: 5000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    Script: |
+      bonus bDex,5;
+  - Id: 2510
+    AegisName: Luck_Muffler
+    Name: Muffler
+    Type: Armor
+    Buy: 5000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    Script: |
+      bonus bLuk,5;
+  - Id: 2513
+    AegisName: Ravage_Magic_Muffler
+    Name: Muffler
+    Type: Armor
+    Buy: 5000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 30
+    Script: |
+      bonus bMdef,10;
+  - Id: 2514
+    AegisName: Magic_Vanquisher_Muffler
+    Name: Muffler
+    Type: Armor
+    Buy: 5000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Mage: true
+      Sage: true
+      Wizard: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 40
+    Script: |
+      bonus bMatkRate,10;
+  - Id: 2515
+    AegisName: Casters_Wrap
+    Name: Muffler
+    Type: Armor
+    Buy: 5000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Mage: true
+      Acolyte: true
+      Monk: true
+      Priest: true
+      Monk: true
+      Sage: true
+      Wizard: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 45
+    Script: |
+      bonus bCastrate,-15;
+  - Id: 2516
+    AegisName: Drifters_Wrap
+    Name: Muffler
+    Type: Armor
+    Buy: 5000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Mage: true
+      Acolyte: true
+      Monk: true
+      Priest: true
+      Monk: true
+      Sage: true
+      Wizard: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 45
+    Script: |
+      bonus bDelayRate,-15;
+  - Id: 2517
+    AegisName: Wool_Scarf
+    Name: Muffler
+    Type: Armor
+    Buy: 5000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 50
+    Script: |
+      bonus2 bSubEle,Ele_Neutral,15;
+  - Id: 2518
+    AegisName: Natures_Leather
+    Name: Muffler
+    Type: Armor
+    Buy: 5000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 40
+    Script: |
+      bonus2 bAtkEle,Ele_Earth,10;
+      bonus2 bMagicAtkEle,Ele_Earth,10;
+  - Id: 2519
+    AegisName: Lava_Leather_Muffler
+    Name: Muffler
+    Type: Armor
+    Buy: 5000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 40
+    Script: |
+      bonus2 bAtkEle,Ele_Fire,10;
+      bonus2 bMagicAtkEle,Ele_Fire,10;
+  - Id: 2519
+    AegisName: Lava_Leather_Muffler
+    Name: Muffler
+    Type: Armor
+    Buy: 5000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 40
+    Script: |
+      bonus2 bAtkEle,Ele_Fire,10;
+      bonus2 bMagicAtkEle,Ele_Fire,10;
+  - Id: 2520
+    AegisName: Glacier_Muffler
+    Name: Muffler
+    Type: Armor
+    Buy: 5000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 40
+    Script: |
+      bonus2 bAtkEle,Ele_Water,10;
+      bonus2 bMagicAtkEle,Ele_Water,10;
+  - Id: 2521
+    AegisName: Jupitel_Muffler
+    Name: Muffler
+    Type: Armor
+    Buy: 5000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 40
+    Script: |
+      bonus2 bAtkEle,Ele_Wind,10;
+      bonus2 bMagicAtkEle,Ele_Wind,10;
+  - Id: 2522
+    AegisName: Musika
+    Name: Muffler
+    Type: Armor
+    Buy: 5000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 40
+    Script: |
+      bonus2 bAtkEle,Ele_Holy,10;
+      bonus2 bMagicAtkEle,Ele_Holy,10;
+  - Id: 2523
+    AegisName: Gloomy_Muffler
+    Name: Muffler
+    Type: Armor
+    Buy: 5000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 40
+    Script: |
+      bonus2 bAtkEle,Ele_Dark,10;
+      bonus2 bMagicAtkEle,Ele_Dark,10;
+  - Id: 2524
+    AegisName: Ferlocks_Cloak
+    Name: Muffler
+    Type: Armor
+    Buy: 5000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 40
+    Script: |
+      bonus2 bAtkEle,Ele_Ghost,10;
+      bonus2 bMagicAtkEle,Ele_Ghost,10;
+  - Id: 2525
+    AegisName: Freyja_Cloak
+    Name: Muffler
+    Type: Armor
+    Buy: 5000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 40
+    Script: |
+      bonus2 bAtkEle,Ele_Neutral,10;
+      bonus2 bMagicAtkEle,Ele_Neutral,10;
+  - Id: 2526
+    AegisName: Leather_Strapped_Muffler
+    Name: Muffler
+    Type: Armor
+    Buy: 5000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Mage: true
+      Acolyte: true
+      Monk: true
+      Priest: true
+      Monk: true
+      Sage: true
+      Wizard: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 40
+    Script: |
+      bonus bAtkRate,10;
+  - Id: 2527
+    AegisName: Elegant_Muffler
+    Name: Muffler
+    Type: Armor
+    Buy: 5000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Mage: true
+      Acolyte: true
+      Monk: true
+      Priest: true
+      Monk: true
+      Sage: true
+      Wizard: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 40
+    Script: |
+      bonus bMAtk,20;
+  - Id: 2528
+    AegisName: Dragon_Scale_Muffler
+    Name: Muffler
+    Type: Armor
+    Buy: 5000
+    Weight: 400
+    Defense: 10
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 50
+  - Id: 2529
+    AegisName: Angel_Feather_Muffler
+    Name: Muffler
+    Type: Armor
+    Buy: 5000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Acolyte: true
+      Monk: true
+      Priest: true
+      Monk: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 55
+    Script: |
+      bonus bHealPower,10;
+  - Id: 2530
+    AegisName: Giant_Snake_Skin
+    Name: Muffler
+    Type: Armor
+    Buy: 5000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 65
+    Script: |
+      bonus bMaxHPrate,10;
+  - Id: 2531
+    AegisName: Mystic_Breath
+    Name: Muffler
+    Type: Armor
+    Buy: 5000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 65
+    Script: |
+      bonus bMaxSPrate,10;
   - Id: 2505
     AegisName: Manteau
     Name: Manteau
     Type: Armor
     Buy: 32000
     Weight: 600
-    Defense: 13
+    Defense: 10
     Jobs:
+      Swordman: true
+      Thief: true
+      Merchant: true
+      Archer: true
+      BardDancer: true
       Alchemist: true
       Assassin: true
+      Rogue: true
+      Hunter: true
       Blacksmith: true
       Crusader: true
       Knight: true
-      Merchant: true
-      Rogue: true
-      StarGladiator: true
-      Swordman: true
-      Taekwon: true
-      Thief: true
     Locations:
       Garment: true
     ArmorLevel: 1
     Refineable: true
+  - Id: 2506
+    AegisName: Manteau_
+    Name: Manteau
+    Type: Armor
+    Buy: 32000
+    Weight: 600
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Thief: true
+      Merchant: true
+      Archer: true
+      BardDancer: true
+      Alchemist: true
+      Assassin: true
+      Rogue: true
+      Hunter: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+  - Id: 2532
+    AegisName: Anti_Magic_Manteau
+    Name: Manteau
+    Type: Armor
+    Buy: 32000
+    Weight: 600
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Thief: true
+      Merchant: true
+      Archer: true
+      BardDancer: true
+      Alchemist: true
+      Assassin: true
+      Rogue: true
+      Hunter: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 45
+    Script: |
+      bonus bMdef,10;
+  - Id: 2533
+    AegisName: Channeler_Manteau
+    Name: Manteau
+    Type: Armor
+    Buy: 32000
+    Weight: 600
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Thief: true
+      Merchant: true
+      Archer: true
+      BardDancer: true
+      Alchemist: true
+      Assassin: true
+      Rogue: true
+      Hunter: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 45
+    Script: |
+      bonus bMAtk,20;
+  - Id: 2534
+    AegisName: Black_Cape
+    Name: Manteau
+    Type: Armor
+    Buy: 32000
+    Weight: 600
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Thief: true
+      Merchant: true
+      Archer: true
+      BardDancer: true
+      Alchemist: true
+      Assassin: true
+      Rogue: true
+      Hunter: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 50
+    Script: |
+      bonus bAtkRate,10;
+  - Id: 2535
+    AegisName: Ancient_Cape
+    Name: Manteau
+    Type: Armor
+    Buy: 32000
+    Weight: 600
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Thief: true
+      Merchant: true
+      Archer: true
+      BardDancer: true
+      Alchemist: true
+      Assassin: true
+      Rogue: true
+      Hunter: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 30
+    Script: |
+      bonus bFlee,20;
+  - Id: 2536
+    AegisName: Cloak_Of_Gray
+    Name: Manteau
+    Type: Armor
+    Buy: 32000
+    Weight: 600
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Thief: true
+      Assassin: true
+      Rogue: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 60
+    Script: |
+      bonus bCritical,5;
+  - Id: 2537
+    AegisName: Falcon_Muffler
+    Name: Manteau
+    Type: Armor
+    Buy: 32000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Archer: true
+      Thief: true
+      Assassin: true
+      Rogue: true
+      Hunter: true
+      BardDancer: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 55
+    Script: |
+      bonus bLongAtkRate,10;
+  - Id: 2538
+    AegisName: Regia_Manteau
+    Name: Manteau
+    Type: Armor
+    Buy: 32000
+    Weight: 600
+    Defense: 25
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Thief: true
+      Merchant: true
+      Archer: true
+      BardDancer: true
+      Alchemist: true
+      Assassin: true
+      Rogue: true
+      Hunter: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 35
+  - Id: 2539
+    AegisName: Strength_Manteau
+    Name: Manteau
+    Type: Armor
+    Buy: 32000
+    Weight: 600
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Thief: true
+      Merchant: true
+      Archer: true
+      BardDancer: true
+      Alchemist: true
+      Assassin: true
+      Rogue: true
+      Hunter: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 35
+    Script: |
+      bonus bStr,5;
+  - Id: 2540
+    AegisName: Agility_Manteau
+    Name: Manteau
+    Type: Armor
+    Buy: 32000
+    Weight: 600
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Thief: true
+      Merchant: true
+      Archer: true
+      BardDancer: true
+      Alchemist: true
+      Assassin: true
+      Rogue: true
+      Hunter: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 35
+    Script: |
+      bonus bAgi,5;
+  - Id: 2541
+    AegisName: Vitality_Manteau
+    Name: Manteau
+    Type: Armor
+    Buy: 32000
+    Weight: 600
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Thief: true
+      Merchant: true
+      Archer: true
+      BardDancer: true
+      Alchemist: true
+      Assassin: true
+      Rogue: true
+      Hunter: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 35
+    Script: |
+      bonus bVit,5;
+  - Id: 2542
+    AegisName: Intelligence_Manteau
+    Name: Manteau
+    Type: Armor
+    Buy: 32000
+    Weight: 600
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Thief: true
+      Merchant: true
+      Archer: true
+      BardDancer: true
+      Alchemist: true
+      Assassin: true
+      Rogue: true
+      Hunter: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 35
+    Script: |
+      bonus bInt,5;
+  - Id: 2543
+    AegisName: Dexterity_Manteau
+    Name: Manteau
+    Type: Armor
+    Buy: 32000
+    Weight: 600
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Thief: true
+      Merchant: true
+      Archer: true
+      BardDancer: true
+      Alchemist: true
+      Assassin: true
+      Rogue: true
+      Hunter: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 35
+    Script: |
+      bonus bDex,5;
+  - Id: 2544
+    AegisName: Luck_Manteau
+    Name: Manteau
+    Type: Armor
+    Buy: 32000
+    Weight: 600
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Thief: true
+      Merchant: true
+      Archer: true
+      Alchemist: true
+      Assassin: true
+      Rogue: true
+      BardDancer: true
+      Hunter: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 35
+    Script: |
+      bonus bLuk,5;
+  - Id: 2545
+    AegisName: Morriganes_Manteau
+    Name: Manteau
+    Type: Armor
+    Buy: 32000
+    Weight: 600
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Thief: true
+      Merchant: true
+      Archer: true
+      Alchemist: true
+      Assassin: true
+      Rogue: true
+      BardDancer: true
+      Hunter: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 35
+    Script: |
+      bonus bMaxHPrate,10;
+  - Id: 2546
+    AegisName: Morpheus_Shawl
+    Name: Manteau
+    Type: Armor
+    Buy: 32000
+    Weight: 600
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Thief: true
+      Merchant: true
+      Archer: true
+      Alchemist: true
+      Assassin: true
+      Rogue: true
+      BardDancer: true
+      Hunter: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 35
+    Script: |
+      bonus bMaxSPrate,10;
   - Id: 450186
     AegisName: Pauldron
     Name: Pauldron
@@ -61,17 +1008,391 @@ Body:
     Weight: 800
     Defense: 25
     Jobs:
-      Alchemist: true
-      Assassin: true
-      Blacksmith: true
       Crusader: true
       Knight: true
-      Merchant: true
-      Rogue: true
-      Swordman: true
-      Thief: true
     Locations:
       Garment: true
     ArmorLevel: 1
-    EquipLevelMin: 80
+    EquipLevelMin: 60
     Refineable: true
+  - Id: 2547
+    AegisName: Pauldron_
+    Name: Pauldron
+    Type: Armor
+    Buy: 32000
+    Weight: 800
+    Defense: 25
+    Slots: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 60
+  - Id: 2548
+    AegisName: Spaulders
+    Name: Pauldron
+    Type: Armor
+    Buy: 32000
+    Weight: 800
+    Defense: 35
+    Slots: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 60
+  - Id: 2549
+    AegisName: Urs_Mantau
+    Name: Pauldron
+    Type: Armor
+    Buy: 32000
+    Weight: 800
+    Defense: 25
+    Slots: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 70
+    Script: |
+      bonus bAtkRate,10;
+  - Id: 2550
+    AegisName: Peuzs_Manteau
+    Name: Pauldron
+    Type: Armor
+    Buy: 32000
+    Weight: 800
+    Defense: 25
+    Slots: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 70
+    Script: |
+      bonus bLongAtkRate,10;
+  - Id: 2551
+    AegisName: Spiked_Shoulderpads
+    Name: Pauldron
+    Type: Armor
+    Buy: 32000
+    Weight: 800
+    Defense: 25
+    Slots: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 65
+    Script: |
+      bonus bMAtk,20;
+  - Id: 2552
+    AegisName: Cape_of_Elements
+    Name: Muffler
+    Type: Armor
+    Buy: 32000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Wizard: true
+      Sage: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 75
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Fire,7;
+      bonus2 bMagicAtkEle,Ele_Water,7;
+      bonus2 bMagicAtkEle,Ele_Wind,7;
+      bonus2 bMagicAtkEle,Ele_Earth,7;
+      bonus2 bMagicAtkEle,Ele_Neutral,7;
+  - Id: 2553
+    AegisName: All_Hallows_Muffler
+    Name: Muffler
+    Type: Armor
+    Buy: 32000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Wizard: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 75
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Dark,7;
+      bonus2 bMagicAtkEle,Ele_Ghost,7;
+  - Id: 2554
+    AegisName: Bandit_Scarf
+    Name: Muffler
+    Type: Armor
+    Buy: 32000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Assassin: true
+      Rogue: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 70
+    Script: |
+      bonus bCritical,5;
+  - Id: 2555
+    AegisName: Funfair_Cape
+    Name: Manteau
+    Type: Armor
+    Buy: 32000
+    Weight: 600
+    Defense: 10
+    Slots: 1
+    Jobs:
+      BardDancer: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 65
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Neutral,15;
+  - Id: 2556
+    AegisName: Exorcist_Muffler
+    Name: Muffler
+    Type: Armor
+    Buy: 32000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Priest: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 65
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Holy,7;
+      bonus2 bMagicAtkEle,Ele_Ghost,7;
+      bonus2 bMagicAtkEle,Ele_Shadow,7;
+  - Id: 2557
+    AegisName: Beast_Skin
+    Name: Manteau
+    Type: Armor
+    Buy: 32000
+    Weight: 600
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Hunter: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 75
+    Script: |
+      bonus bLongAtkRate,15;
+  - Id: 2558
+    AegisName: Skeleton_Cape
+    Name: Manteau
+    Type: Armor
+    Buy: 32000
+    Weight: 600
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Thief: true
+      Merchant: true
+      Archer: true
+      BardDancer: true
+      Alchemist: true
+      Assassin: true
+      Rogue: true
+      Hunter: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 55
+    Script: |
+      bonus bAtk,20;
+  - Id: 2559
+    AegisName: Protector_Garb
+    Name: Muffler
+    Type: Armor
+    Buy: 32000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Monk: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 75
+    Script: |
+      bonus bLongAtkDef,10;
+      bonus2 bSubEle,Ele_Neutral,20;
+  - Id: 2560
+    AegisName: Old_Morroc_Shawl
+    Name: Manteau
+    Type: Armor
+    Buy: 32000
+    Weight: 600
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Assassin: true
+      Rogue: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 65
+    Script: |
+      bonus bFlee,10;
+      bonus bSpeedRate,15;
+  - Id: 2561
+    AegisName: Vali_Manteau
+    Name: Manteau
+    Type: Armor
+    Buy: 32000
+    Weight: 600
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Crusader: true
+      BardDancer: true
+      Alchemist: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 55
+    Script: |
+      bonus bHealPower,5;
+      bonus bMaxSPrate,5;
+  - Id: 2562
+    AegisName: Golden_Scarf
+    Name: Manteau
+    Type: Armor
+    Buy: 32000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Assassin: true
+      Rogue: true
+      Hunter: true
+      BardDancer: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 60
+    Script: |
+      bonus bLongAtkRate,5;
+      bonus bHit,20;
+      bonus bFlee,10;
+  - Id: 2563
+    AegisName: Medical_Cape
+    Name: Manteau
+    Type: Armor
+    Buy: 32000
+    Weight: 600
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Alchemist: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 60
+    Script: |
+      bonus bHealPower,10;
+      bonus2 bAddItemGroupHealRate,IG_POTION,25;
+  - Id: 2564
+    AegisName: Owl_Baron_Mantle
+    Name: Manteau
+    Type: Armor
+    Buy: 32000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Rogue: true
+      Assassin: true
+      Crusader: true
+      Knight: true
+      BardDancer: true
+      Hunter: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 70
+    Script: |
+      bonus bAtkRate,10;
+      bonus bMatkRate,10;
+  - Id: 2565
+    AegisName: Dragon_Garb
+    Name: Manteau
+    Type: Armor
+    Buy: 32000
+    Weight: 400
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Rogue: true
+      Assassin: true
+      Crusader: true
+      Knight: true
+      BardDancer: true
+      Hunter: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 80
+    Script: |
+      bonus bAtk,20;
+      bonus bMatk,20;
+      bonus bDelayRate,-10;

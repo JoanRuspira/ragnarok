@@ -15,6 +15,18 @@ Body:
       Shoes: true
     ArmorLevel: 1
     Refineable: true
+  - Id: 2402
+    AegisName: Sandals_
+    Name: Sandals
+    Type: Armor
+    Buy: 400
+    Weight: 200
+    Defense: 2
+    Slots: 1
+    Locations:
+      Shoes: true
+    ArmorLevel: 1
+    Refineable: true
   - Id: 2403
     AegisName: Shoes
     Name: Shoes

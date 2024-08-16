@@ -10,7 +10,19 @@ Body:
     Type: Armor
     Buy: 10
     Weight: 100
-    Defense: 10
+    Defense: 5
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+  - Id: 2302
+    AegisName: Cotton_Shirt_
+    Name: Cotton Shirt
+    Type: Armor
+    Buy: 10
+    Weight: 100
+    Defense: 5
+    Slots: 1
     Locations:
       Armor: true
     ArmorLevel: 1
@@ -22,25 +34,646 @@ Body:
     Buy: 1000
     Weight: 300
     Defense: 20
-    Locations:
-      Armor: true
-    ArmorLevel: 1
-    Refineable: true
-  - Id: 2309
-    AegisName: Coat
-    Name: Coat
-    Type: Armor
-    Buy: 22000
-    Weight: 1200
-    Defense: 42
     Jobs:
       All: true
       Novice: false
-      SuperNovice: false
     Locations:
       Armor: true
     ArmorLevel: 1
     Refineable: true
+    EquipLevelMin: 10
+  - Id: 2306
+    AegisName: Adventure_Suit_
+    Name: Adventurer's Suit
+    Type: Armor
+    Buy: 1000
+    Weight: 300
+    Defense: 10
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 10
+  - Id: 2307
+    AegisName: Holy_Robe
+    Name: Holy Robe
+    Type: Armor
+    Buy: 1000
+    Weight: 300
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 20
+    Script: |
+      bonus bMaxSP,250;
+      bonus bHealPower,getrefine()*2;
+  - Id: 2308
+    AegisName: Magician_Robe
+    Name: Magician Robe
+    Type: Armor
+    Buy: 1000
+    Weight: 300
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Mage: true
+      Sage: true
+      Wizard: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 20
+    Script: |
+      bonus bInt,5;
+      bonus bMAtk,getrefine()*5;
+  - Id: 2310
+    AegisName: Agenda_Robe
+    Name: Agenda Robe
+    Type: Armor
+    Buy: 1000
+    Weight: 300
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Mage: true
+      Sage: true
+      Wizard: true
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 25
+    Script: |
+      bonus bDex,5;
+      bonus bCastrate,getrefine()*3;
+  - Id: 2311
+    AegisName: Robe_of_Haste
+    Name: Robe of Haste
+    Type: Armor
+    Buy: 1000
+    Weight: 300
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Priest: true
+      Sage: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 50
+    Script: |
+      bonus bAgi,5;
+      bonus bAspdRate,getrefine();
+  - Id: 2343
+    AegisName: Lightbringer_Robe
+    Name: Lightbringer Robe
+    Type: Armor
+    Buy: 1000
+    Weight: 300
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 30
+    Script: |
+      bonus2 bAtkEle,Ele_Holy,10;
+      bonus2 bAtkEle,Ele_Ghost,10;
+      bonus2 bMagicAtkEle,Ele_Holy,10;
+      bonus2 bMagicAtkEle,Ele_Ghost,10;
+  - Id: 2344
+    AegisName: Flattery_Robe
+    Name: Flattery Robe
+    Type: Armor
+    Buy: 1000
+    Weight: 300
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Mage: true
+      Sage: true
+      Wizard: true
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 25
+    Script: |
+      bonus bDelayRate,getrefine()*3;
+  - Id: 2345
+    AegisName: Meditation_Robe
+    Name: Meditation Robe
+    Type: Armor
+    Buy: 1000
+    Weight: 300
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Monk: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 65
+    Script: |
+      bonus bMaxHP,250;
+      bonus2 bSubEle,Ele_Neutral,30;
+  - Id: 2346
+    AegisName: Forest_Robe
+    Name: Forest Robe
+    Type: Armor
+    Buy: 1000
+    Weight: 300
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Mage: true
+      Sage: true
+      Wizard: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 20
+    Script: |
+      bonus2 bAtkEle,Ele_Earth,10;
+      bonus2 bMagicAtkEle,Ele_Earth,10;
+  - Id: 2347
+    AegisName: Devoid_Robe
+    Name: Devoid Robe
+    Type: Armor
+    Buy: 1000
+    Weight: 300
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Mage: true
+      Sage: true
+      Wizard: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 20
+    Script: |
+      bonus2 bAtkEle,Ele_Dark,10;
+      bonus2 bMagicAtkEle,Ele_Dark,10;
+      bonus2 bAtkEle,Ele_Ghost,10;
+      bonus2 bMagicAtkEle,Ele_Ghost,10;
+  - Id: 2348
+    AegisName: Judgement_Robe
+    Name: Judgement Robe
+    Type: Armor
+    Buy: 1000
+    Weight: 300
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Priest: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 50
+    Script: |
+      bonus2 bAtkEle,Ele_Dark,10;
+      bonus2 bMagicAtkEle,Ele_Dark,10;
+  - Id: 2349
+    AegisName: Tournament_Attire
+    Name: Tournament Attire
+    Type: Armor
+    Buy: 1000
+    Weight: 300
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Monk: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 65
+    Script: |
+      bonus bAspdRate,3;
+      bonus bAtk,getrefine()*5;
+  - Id: 2350
+    AegisName: Follower_Clothes
+    Name: Follower Clothes
+    Type: Armor
+    Buy: 1000
+    Weight: 300
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Acolyte: true
+      Priest: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 35
+    Script: |
+      bonus bAtk,30;
+  - Id: 2351
+    AegisName: Silk_Robe
+    Name: Silk Robe
+    Type: Armor
+    Buy: 1000
+    Weight: 300
+    Defense: 10
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 35
+    Script: |
+      bonus bMdef,15;
+  - Id: 2352
+    AegisName: Runic_Clothes
+    Name: Runic Clothes
+    Type: Armor
+    Buy: 1000
+    Weight: 300
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Wizard: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 55
+    Script: |
+      bonus2 bAtkEle,Ele_Neutral,10;
+      bonus2 bMagicAtkEle,Ele_Neutral,10;
+  - Id: 2353
+    AegisName: Crimson_Robe
+    Name: Crimson Robe
+    Type: Armor
+    Buy: 1000
+    Weight: 300
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Mage: true
+      Sage: true
+      Wizard: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 20
+    Script: |
+      bonus2 bAtkEle,Ele_Fire,10;
+      bonus2 bMagicAtkEle,Ele_Fire,10;
+  - Id: 2354
+    AegisName: Snowflower_Robe
+    Name: Snowflower Robe
+    Type: Armor
+    Buy: 1000
+    Weight: 300
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Mage: true
+      Sage: true
+      Wizard: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 20
+    Script: |
+      bonus2 bAtkEle,Ele_Water,10;
+      bonus2 bMagicAtkEle,Ele_Water,10;
+  - Id: 2355
+    AegisName: Armored_Clothes
+    Name: Armored Clothes
+    Type: Armor
+    Buy: 1000
+    Weight: 300
+    Defense: 30
+    Slots: 1
+    Jobs:
+      Mage: true
+      Sage: true
+      Wizard: true
+      Acolyte: true
+      Priest: true
+      Monk: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 25
+  - Id: 2356
+    AegisName: Breeze_Robe
+    Name: Breeze Robe
+    Type: Armor
+    Buy: 1000
+    Weight: 300
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Mage: true
+      Sage: true
+      Wizard: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 20
+    Script: |
+      bonus2 bAtkEle,Ele_Wind,10;
+      bonus2 bMagicAtkEle,Ele_Wind,10;
+  - Id: 2357
+    AegisName: Celine_Clothes
+    Name: Celines Clothes
+    Type: Armor
+    Buy: 1000
+    Weight: 300
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Priest: true
+      Wizard: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 80
+    Script: |
+      bonus2 bAtkEle,Ele_Ghost,15;
+      bonus2 bMagicAtkEle,Ele_Ghost,15;
+      bonus2 bAtkEle,Ele_Dark,15;
+      bonus2 bMagicAtkEle,Ele_Dark,15;
+      bonus2 bAtkEle,Ele_Holy,15;
+      bonus2 bMagicAtkEle,Ele_Holy,15;
+  - Id: 2358
+    AegisName: Robe_of_Elements
+    Name: Robe of Elements
+    Type: Armor
+    Buy: 1000
+    Weight: 300
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Sage: true
+      Wizard: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 80
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Fire,7;
+      bonus2 bMagicAtkEle,Ele_Water,7;
+      bonus2 bMagicAtkEle,Ele_Wind,7;
+      bonus2 bMagicAtkEle,Ele_Earth,7;
+      bonus2 bMagicAtkEle,Ele_Neutral,7;
+  - Id: 2359
+    AegisName: Lecturer_Robes
+    Name: Lecturer Robes
+    Type: Armor
+    Buy: 1000
+    Weight: 300
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Sage: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 70
+    Script: |
+      bonus bInt,2;
+      bonus bDex,2;
+      bonus bCastrate,getrefine()*2;
+      bonus bDelayRate,getrefine()*2;
+  - Id: 2309
+    AegisName: Mantle
+    Name: Mantle
+    Type: Armor
+    Buy: 22000
+    Weight: 600
+    Defense: 30
+    Jobs:
+      Swordman: true
+      Thief: true
+      Merchant: true
+      Archer: true
+      BardDancer: true
+      Alchemist: true
+      Assassin: true
+      Rogue: true
+      Hunter: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+  - Id: 2310
+    AegisName: Mantle_
+    Name: Mantle
+    Type: Armor
+    Buy: 22000
+    Weight: 600
+    Defense: 30
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Thief: true
+      Merchant: true
+      Archer: true
+      BardDancer: true
+      Alchemist: true
+      Assassin: true
+      Rogue: true
+      Hunter: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+  - Id: 2360
+    AegisName: Marksman_Suit
+    Name: Marksman Suit
+    Type: Armor
+    Buy: 22000
+    Weight: 600
+    Defense: 30
+    Slots: 1
+    Jobs:
+      Thief: true
+      Merchant: true
+      Archer: true
+      BardDancer: true
+      Alchemist: true
+      Assassin: true
+      Rogue: true
+      Hunter: true
+      Blacksmith: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 20
+    Script: |
+      bonus bLongAtkRate,10;
+  - Id: 2361
+    AegisName: Assassin_Clothes
+    Name: Assassin Clothes
+    Type: Armor
+    Buy: 22000
+    Weight: 600
+    Defense: 30
+    Slots: 1
+    Jobs:
+      Assassin: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 60
+    Script: |
+      bonus bAtk,10;
+      bonus bAtkRate,getrefine()*2;
+      bonus bCritical,3;
+  - Id: 2362
+    AegisName: Reinforced_Suit
+    Name: Armored Suit
+    Type: Armor
+    Buy: 22000
+    Weight: 600
+    Defense: 70
+    Slots: 1
+    Jobs:
+      Thief: true
+      Merchant: true
+      Archer: true
+      BardDancer: true
+      Alchemist: true
+      Assassin: true
+      Rogue: true
+      Hunter: true
+      Blacksmith: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 20
+  - Id: 2363
+    AegisName: Performer_Suit
+    Name: Performer Suit
+    Type: Armor
+    Buy: 22000
+    Weight: 600
+    Defense: 30
+    Slots: 1
+    Jobs:
+      BardDancer: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 60
+    Script: |
+      bonus bAtk,10;
+      bonus bLongAtkRate,getrefine()*2;
+      bonus bMaxSP,250;  
+  - Id: 2364
+    AegisName: Sniping_Suit
+    Name: Sniping Suit
+    Type: Armor
+    Buy: 22000
+    Weight: 600
+    Defense: 30
+    Slots: 1
+    Jobs:
+      Hunter: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 60
+    Script: |
+      bonus bAtk,10;
+      bonus bLongAtkRate,getrefine()*2;
+      bonus bAspdRate,3;
+  - Id: 2365
+    AegisName: Faint_Star_Suit
+    Name: Faint Star Suit
+    Type: Armor
+    Buy: 22000
+    Weight: 600
+    Defense: 30
+    Slots: 1
+    Jobs:
+      Assassin: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 65
+    Script: |
+      bonus bAtk,10;
+      bonus2 bAtkEle,Ele_Poison,getrefine()*2;
+      bonus2 bMagicAtkEle,Ele_Poison,getrefine()*2;
+      bonus bInt,3;
+  - Id: 2366
+    AegisName: Felrock_Suit
+    Name: Felrock Suit
+    Type: Armor
+    Buy: 22000
+    Weight: 600
+    Defense: 30
+    Slots: 1
+    Jobs:
+      Alchemist: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 65
+    Script: |
+      bonus bAtk,getrefine()*2;
+      bonus bMAtk,getrefine()*2;
+      bonus bInt,3;
+      bonus bDex,3;
+
   - Id: 2328
     AegisName: Wooden_Mail
     Name: Wooden Mail
