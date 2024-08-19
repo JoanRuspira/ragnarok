@@ -98,7 +98,7 @@ Body:
     Script: |
       bonus bInt,5;
       bonus bMAtk,getrefine()*5;
-  - Id: 2310
+  - Id: 2394
     AegisName: Agenda_Robe
     Name: Agenda Robe
     Type: Armor
@@ -569,9 +569,9 @@ Body:
     Refineable: true
     EquipLevelMin: 60
     Script: |
-      bonus bAtk,10;
+      bonus bFlee,10;
       bonus bAtkRate,getrefine()*2;
-      bonus bCritical,3;
+      bonus bSpeedRate,10;
   - Id: 2362
     AegisName: Reinforced_Suit
     Name: Armored Suit
@@ -609,11 +609,11 @@ Body:
       Armor: true
     ArmorLevel: 1
     Refineable: true
-    EquipLevelMin: 60
+    EquipLevelMin: 50
     Script: |
       bonus bAtk,10;
       bonus bLongAtkRate,getrefine()*2;
-      bonus bMaxSP,250;  
+      bonus bMaxHP,250;  
   - Id: 2364
     AegisName: Sniping_Suit
     Name: Sniping Suit
@@ -673,94 +673,781 @@ Body:
       bonus bMAtk,getrefine()*2;
       bonus bInt,3;
       bonus bDex,3;
-
-  - Id: 2328
-    AegisName: Wooden_Mail
-    Name: Wooden Mail
+  - Id: 2367
+    AegisName: Golden_Suit
+    Name: Golden Suit
     Type: Armor
-    Buy: 5500
-    Weight: 1000
-    Defense: 25
+    Buy: 22000
+    Weight: 600
+    Defense: 30
+    Slots: 1
     Jobs:
-      Alchemist: true
-      Blacksmith: true
-      Crusader: true
-      Knight: true
-      Merchant: true
-      Swordman: true
+      Assassin: true
+      Rogue: true
+      Hunter: true
+      BardDancer: true
     Locations:
       Armor: true
     ArmorLevel: 1
     Refineable: true
-  - Id: 2312
-    AegisName: Padded_Armor
-    Name: Padded Armor
+    EquipLevelMin: 20
+    Script: |
+      bonus bHit,20;
+      bonus bFlee,20;
+  - Id: 2368
+    AegisName: Spectacle_Clothes
+    Name: Spectacle Clothes
     Type: Armor
-    Buy: 48000
-    Weight: 2800
-    Defense: 35
+    Buy: 22000
+    Weight: 600
+    Defense: 30
+    Slots: 1
+    Jobs:
+      BardDancer: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 50
+    Script: |
+      bonus bMAtk,10;
+      bonus bHealPower,getrefine()*2;
+      bonus bMaxSP,250;
+  - Id: 2369
+    AegisName: Researcher_Suit
+    Name: Researcher Suit
+    Type: Armor
+    Buy: 22000
+    Weight: 600
+    Defense: 30
+    Slots: 1
     Jobs:
       Alchemist: true
-      Assassin: true
-      Blacksmith: true
-      Crusader: true
-      Knight: true
-      Merchant: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 60
+    Script: |
+      bonus bDelayRate,getrefine()*2;
+      bonus bHealPower,getrefine()*2;
+      bonus bMaxSP,250;
+  - Id: 2370
+    AegisName: Gray_Wolf_Suit
+    Name: Gray Wolf Suit
+    Type: Armor
+    Buy: 22000
+    Weight: 600
+    Defense: 30
+    Slots: 1
+    Jobs:
+      Hunter: true
       Rogue: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 45
+    Script: |
+      bonus bLongAtkRate,7;
+      bonus bMatk,15;
+      bonus bInt,3;
+  - Id: 2371
+    AegisName: White_Wing_Suit
+    Name: White Wing Suit
+    Type: Armor
+    Buy: 22000
+    Weight: 600
+    Defense: 30
+    Slots: 1
+    Jobs:
+      Hunter: true
+      Rogue: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 55
+    Script: |
+      bonus bLongAtkRate,5;
+      bonus bAspdRate,getrefine();
+      bonus bAgi,3;
+  - Id: 2372
+    AegisName: Formal_Attire
+    Name: Formal Attire
+    Type: Armor
+    Buy: 1000
+    Weight: 600
+    Defense: 30
+    Slots: 1
+    Jobs:
       Swordman: true
       Thief: true
+      Merchant: true
+      Archer: true
+      BardDancer: true
+      Alchemist: true
+      Assassin: true
+      Rogue: true
+      Hunter: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
     Locations:
       Armor: true
     ArmorLevel: 1
     Refineable: true
+    EquipLevelMin: 20
+    Script: |
+      bonus bInt,5;
+      bonus bMAtk,getrefine()*5;
+  - Id: 2373
+    AegisName: Lords_Clothes
+    Name: Lord Clothes
+    Type: Armor
+    Buy: 1000
+    Weight: 600
+    Defense: 30
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Thief: true
+      Merchant: true
+      Archer: true
+      BardDancer: true
+      Alchemist: true
+      Assassin: true
+      Rogue: true
+      Hunter: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 35
+    Script: |
+      bonus bMdef,15;
+  - Id: 2374
+    AegisName: Ninja_Suit
+    Name: Ninja Suit
+    Type: Armor
+    Buy: 22000
+    Weight: 600
+    Defense: 30
+    Slots: 1
+    Jobs:
+      Assassin: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 55
+    Script: |
+      bonus bLongAtkRate,5;
+      bonus bAgi,5;
+      bonus bDex,5;
+  - Id: 2375
+    AegisName: Sleeveless_Attire
+    Name: Sleeveless Attire
+    Type: Armor
+    Buy: 22000
+    Weight: 600
+    Defense: 30
+    Slots: 1
+    Jobs:
+      Assassin: true
+      Rogue: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 70
+    Script: |
+      bonus bAspdRate,getrefine()*2;
+  - Id: 2376
+    AegisName: Nobility_Outfit
+    Name: Nobility Outfit
+    Type: Armor
+    Buy: 22000
+    Weight: 600
+    Defense: 30
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Thief: true
+      Merchant: true
+      Archer: true
+      BardDancer: true
+      Alchemist: true
+      Assassin: true
+      Rogue: true
+      Hunter: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 40
+    Script: |
+      bonus bHealPower,10;
+  - Id: 2377
+    AegisName: Mineworker_Vest
+    Name: Mineworkers Vest
+    Type: Armor
+    Buy: 22000
+    Weight: 600
+    Defense: 45
+    Slots: 1
+    Jobs:
+      Blacksmith: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 65
+    Script: |
+      bonus2 bSubEle,Ele_Neutral,20;
+  - Id: 2378
+    AegisName: Sharp_Suit
+    Name: Sharp Suit
+    Type: Armor
+    Buy: 1000
+    Weight: 600
+    Defense: 30
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Thief: true
+      Merchant: true
+      Archer: true
+      BardDancer: true
+      Alchemist: true
+      Assassin: true
+      Rogue: true
+      Hunter: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 20
+    Script: |
+      bonus bStr,5;
+      bonus bAtk,getrefine()*5;
+  - Id: 2379
+    AegisName: Pirate_Coat
+    Name: Pirate Coat
+    Type: Armor
+    Buy: 22000
+    Weight: 600
+    Defense: 30
+    Slots: 1
+    Jobs:
+      Rogue: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 55
+    Script: |
+      bonus bCritical,5;
+      bonus bAgi,5;
+      bonus bLuk,5;
+  - Id: 2380
+    AegisName: Feathery_Suit
+    Name: Feathery Outfit
+    Type: Armor
+    Buy: 1000
+    Weight: 600
+    Defense: 30
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Thief: true
+      Merchant: true
+      Archer: true
+      BardDancer: true
+      Alchemist: true
+      Assassin: true
+      Rogue: true
+      Hunter: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 25
+    Script: |
+      bonus bFlee,15;
+      bonus bDelayRate,getrefine()*2;
   - Id: 2314
     AegisName: Chain_Mail
     Name: Chain Mail
     Type: Armor
     Buy: 65000
-    Weight: 3300
-    Defense: 55
+    Weight: 2000
+    Defense: 70
     Jobs:
-      Alchemist: true
-      Assassin: true
-      Blacksmith: true
+      Swordman: true
       Crusader: true
       Knight: true
-      Merchant: true
-      Rogue: true
-      Swordman: true
-      Thief: true
     Locations:
       Armor: true
     ArmorLevel: 1
     Refineable: true
-  - Id: 2316
-    AegisName: Plate_Armor
+    EquipLevelMin: 25
+  - Id: 2315
+    AegisName: Chain_Mail_
+    Name: Chain Mail
+    Type: Armor
+    Buy: 65000
+    Weight: 2000
+    Defense: 70
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 25
+  - Id: 2381
+    AegisName: Arcane_Plate
+    Name: Arcane Plate
+    Type: Armor
+    Buy: 1000
+    Weight: 2000
+    Defense: 70
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 30
+    Script: |
+      bonus bInt,5;
+      bonus bMAtk,getrefine()*5;
+  - Id: 2382
+    AegisName: Regia_Plate
+    Name: Regia Plate
+    Type: Armor
+    Buy: 1000
+    Weight: 2000
+    Defense: 70
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 40
+    Script: |
+      bonus bInt,5;
+      bonus bMatkRate,getrefine();
+  - Id: 2383
+    AegisName: Mana_Plate
+    Name: Mana Plate
+    Type: Armor
+    Buy: 1000
+    Weight: 2000
+    Defense: 70
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 35
+    Script: |
+      bonus bMaxSPrate,10;
+  - Id: 2384
+    AegisName: Bone_Plate
+    Name: Bone Plate
+    Type: Armor
+    Buy: 1000
+    Weight: 2000
+    Defense: 70
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 30
+    Script: |
+      bonus bStr,5;
+      bonus bAtk,getrefine()*5;
+  - Id: 2385
+    AegisName: Urs_Plate
+    Name: Ur Runestone Plate
+    Type: Armor
+    Buy: 1000
+    Weight: 2000
+    Defense: 70
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 55
+    Script: |
+      bonus bStr,5;
+      bonus bAtkRate,10;
+  - Id: 2386
+    AegisName: Vigor_Plate
+    Name: Vigor Plate
+    Type: Armor
+    Buy: 1000
+    Weight: 2000
+    Defense: 70
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 35
+    Script: |
+      bonus bMaxHPrate,10;
+  - Id: 2387
+    AegisName: Peuzs_Plate
+    Name: Peuz Plate
+    Type: Armor
+    Buy: 1000
+    Weight: 2000
+    Defense: 70
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 55
+    Script: |
+      bonus bDex,5;
+      bonus bLongAtkRate,10;
+  - Id: 2388
+    AegisName: Spiked_Mail
+    Name: Peuz Mail
+    Type: Armor
+    Buy: 1000
+    Weight: 2000
+    Defense: 70
+    Slots: 1
+    Jobs:
+      Knight: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 55
+    Script: |
+      bonus bLuk,5;
+      bonus bCritical,7;
+  - Id: 2389
+    AegisName: Ebon_Armor
+    Name: Ebon Armor
+    Type: Armor
+    Buy: 1000
+    Weight: 2000
+    Defense: 70
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 35
+    Script: |
+      bonus bMdef,15;
+  - Id: 2390
+    AegisName: Full_Plate
     Name: Full Plate
     Type: Armor
-    Buy: 80000
-    Weight: 4500
+    Buy: 1000
+    Weight: 2000
+    Defense: 100
+    Slots: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 60
+  - Id: 2391
+    AegisName: Meteor_Plate
+    Name: Meteor Plate
+    Type: Armor
+    Buy: 1000
+    Weight: 2000
+    Defense: 70
+    Slots: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 70
+    Script: |
+      bonus bVit,5;
+      bonus2 bSubEle,Ele_Neutral,10;
+      bonus bMaxHP,250;
+  - Id: 2313
+    AegisName: Padded_Armor_
+    Name: Padded Armor
+    Type: Armor
+    Buy: 48000
+    Weight: 2800
+    Defense: 70
+    Slots: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 70
+    Script: |
+      bonus bVit,5;
+      bonus bLongAtkDef,10;
+      bonus bMaxHP,250;
+  - Id: 2392
+    AegisName: Swift_Armor
+    Name: Swift Armor
+    Type: Armor
+    Buy: 1000
+    Weight: 2000
+    Defense: 70
+    Slots: 1
+    Jobs:
+      Knight: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 70
+    Script: |
+      bonus bAgi,5;
+      bonus bAspdRate,getrefine();
+  - Id: 2393
+    AegisName: Short_Plate
+    Name: Short Plate
+    Type: Armor
+    Buy: 1000
+    Weight: 2000
+    Defense: 70
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 20
+    Script: |
+      bonus bAgi,5;
+      bonus bFlee,20;
+  - Id: 2395
+    AegisName: Sophisticated_Plate
+    Name: Sophisticated Plate
+    Type: Armor
+    Buy: 1000
+    Weight: 2000
+    Defense: 70
+    Slots: 1
+    Jobs:
+      Crusader: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 65
+    Script: |
+      bonus bDex,5;
+      bonus bCastrate,getrefine()*3;
+  - Id: 2396
+    AegisName: Armor_of_Punishment
+    Name: Armor of Punishment
+    Type: Armor
+    Buy: 1000
+    Weight: 2000
+    Defense: 70
+    Slots: 1
+    Jobs:
+      Crusader: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 60
+    Script: |
+      bonus2 bAtkEle,Ele_Holy,10;
+      bonus2 bMagicAtkEle,Ele_Holy,10;
+  - Id: 2397
+    AegisName: Plate_of_Grace
+    Name: Plate of Grace
+    Type: Armor
+    Buy: 1000
+    Weight: 2000
+    Defense: 70
+    Slots: 1
+    Jobs:
+      Crusader: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 65
+    Script: |
+      bonus bMaxSP,250;
+      bonus bHealPower,getrefine()*2;
+  - Id: 2398
+    AegisName: Njord_Plate
+    Name: Njord Plate
+    Type: Armor
+    Buy: 1000
+    Weight: 2000
+    Defense: 70
+    Slots: 1
+    Jobs:
+      Knight: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 50
+    Script: |
+      bonus2 bAtkEle,Ele_Wind,10;
+      bonus2 bMagicAtkEle,Ele_Wind,10;
+  - Id: 2399
+    AegisName: Lucious_Plate
+    Name: Lucious Plate
+    Type: Armor
+    Buy: 1000
+    Weight: 2000
+    Defense: 70
+    Slots: 1
+    Jobs:
+      Knight: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 50
+    Script: |
+      bonus2 bAtkEle,Ele_Fire,10;
+      bonus2 bMagicAtkEle,Ele_Fire,10;
+  - Id: 2312
+    AegisName: Padded_Armor_0
+    Name: Padded Armor
+    Type: Armor
+    Buy: 48000
+    Weight: 2800
     Defense: 70
     Jobs:
       Crusader: true
       Knight: true
-      Swordman: true
     Locations:
       Armor: true
     ArmorLevel: 1
-    EquipLevelMin: 40
     Refineable: true
-  - Id: 2341
-    AegisName: Full_Plate_Armor
-    Name: Legion Plate Armor
+    EquipLevelMin: 70
+    Script: |
+      bonus bVit,5;
+      bonus bLongAtkDef,10;
+      bonus bMaxHP,250;
+  - Id: 2400
+    AegisName: Meteor_Plate_0
+    Name: Meteor Plate
     Type: Armor
-    Buy: 94000
-    Weight: 5500
-    Defense: 79
+    Buy: 1000
+    Weight: 2000
+    Defense: 70
     Jobs:
       Crusader: true
+      Knight: true
     Locations:
       Armor: true
     ArmorLevel: 1
-    EquipLevelMin: 70
     Refineable: true
+    EquipLevelMin: 70
+    Script: |
+      bonus bVit,5;
+      bonus2 bSubEle,Ele_Neutral,10;
+      bonus bMaxHP,250;
+  - Id: 24000
+    AegisName: Ebon_Armor_0
+    Name: Ebon Armor
+    Type: Armor
+    Buy: 1000
+    Weight: 2000
+    Defense: 70
+    Jobs:
+      Swordman: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 35
+    Script: |
+      bonus bMdef,15;
+  - Id: 24001
+    AegisName: Full_Plate_0
+    Name: Full Plate
+    Type: Armor
+    Buy: 1000
+    Weight: 2000
+    Defense: 100
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    EquipLevelMin: 60
