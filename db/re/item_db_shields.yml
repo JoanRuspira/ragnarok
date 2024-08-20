@@ -9,45 +9,332 @@ Body:
     Type: Armor
     Buy: 500
     Weight: 300
-    Defense: 20
+    Defense: 10
+    Jobs:
+      Mage: true
+      Sage: true
+      Wizard: true
+      Acolyte: true
+      Monk: true
+      Priest: true
     Locations:
       Left_Hand: true
     ArmorLevel: 1
     Refineable: true
     View: 1
+  - Id: 2102
+    AegisName: Guard_
+    Name: Guard
+    Type: Armor
+    Buy: 500
+    Weight: 300
+    Defense: 10
+    Jobs:
+      Mage: true
+      Sage: true
+      Wizard: true
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Slots: 1
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 1
+  - Id: 2107
+    AegisName: Silver_Guard
+    Name: Silver Guard
+    Type: Armor
+    Buy: 500
+    Weight: 300
+    Defense: 10
+    Jobs:
+      Mage: true
+      Sage: true
+      Wizard: true
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Slots: 1
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 1
+    EquipLevelMin: 40
+    Script: |
+      bonus2 bSubEle,Ele_Neutral,10;
+  - Id: 2108
+    AegisName: Gold_Guard
+    Name: Gold Guard
+    Type: Armor
+    Buy: 500
+    Weight: 300
+    Defense: 10
+    Jobs:
+      Mage: true
+      Sage: true
+      Wizard: true
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Slots: 1
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 1
+    EquipLevelMin: 40
+    Script: |
+      bonus bLongAtkDef,10;
+  - Id: 2109
+    AegisName: Cross_Shield
+    Name: Cross Shield
+    Type: Armor
+    Buy: 500
+    Weight: 300
+    Defense: 10
+    Jobs:
+      Mage: true
+      Sage: true
+      Wizard: true
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Slots: 1
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 1
+    EquipLevelMin: 50
+    Script: |
+      bonus2 bAtkEle,Ele_Holy,15;
+      bonus2 bMagicAtkEle,Ele_Holy,15;
+      bonus2 bAtkEle,Ele_Ghost,15;
+      bonus2 bMagicAtkEle,Ele_Ghost,15;
+  - Id: 2110
+    AegisName: Ultralight_Magic_Shield
+    Name: Ultralight Magic Shield
+    Type: Armor
+    Buy: 500
+    Weight: 300
+    Defense: 10
+    Jobs:
+      Mage: true
+      Sage: true
+      Wizard: true
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Slots: 1
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 1
+    EquipLevelMin: 55
+    Script: |
+      bonus bCastrate,10;
   - Id: 2103
     AegisName: Buckler
     Name: Buckler
     Type: Armor
     Buy: 14000
     Weight: 600
-    Defense: 40
+    Defense: 30
     Jobs:
-      Acolyte: true
+      Merchant: true
+      Swordman: true
       Alchemist: true
-      Assassin: true
-      BardDancer: true
       Blacksmith: true
       Crusader: true
       Knight: true
-      Merchant: true
-      Monk: true
-      Priest: true
       Rogue: true
-      Swordman: true
-      Thief: true
+      Monk: true
     Locations:
       Left_Hand: true
     ArmorLevel: 1
     Refineable: true
     View: 2
+  - Id: 2104
+    AegisName: Buckler_
+    Name: Buckler
+    Type: Armor
+    Buy: 14000
+    Weight: 600
+    Defense: 30
+    Slots: 1
+    Jobs:
+      Merchant: true
+      Swordman: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Rogue: true
+      Monk: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 2
+  - Id: 2111
+    AegisName: Fancy_Buckler
+    Name: Fancy Buckler
+    Type: Armor
+    Buy: 14000
+    Weight: 600
+    Defense: 70
+    Slots: 1
+    Jobs:
+      Merchant: true
+      Swordman: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Rogue: true
+      Monk: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 2
+    EquipLevelMin: 45
+  - Id: 2112
+    AegisName: Rose_Buckler
+    Name: Rose Buckler
+    Type: Armor
+    Buy: 14000
+    Weight: 600
+    Defense: 30
+    Slots: 1
+    Jobs:
+      Merchant: true
+      Swordman: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Rogue: true
+      Monk: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 2
+    EquipLevelMin: 50
+    Script: |
+      bonus bMdef,15;
+  - Id: 2113
+    AegisName: Orleans_Buckler
+    Name: Orleans Buckler
+    Type: Armor
+    Buy: 14000
+    Weight: 600
+    Defense: 30
+    Slots: 1
+    Jobs:
+      Merchant: true
+      Swordman: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Rogue: true
+      Monk: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1                                                         
+    Refineable: true
+    View: 2
+    EquipLevelMin: 40
+    Script: |
+      bonus bDelayRate,10;
+  - Id: 2114
+    AegisName: Compact_Buckler
+    Name: Compact Buckler
+    Type: Armor
+    Buy: 14000
+    Weight: 600
+    Defense: 30
+    Slots: 1
+    Jobs:
+      Merchant: true
+      Swordman: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Rogue: true
+      Monk: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 2
+    EquipLevelMin: 70
+    Script: |
+      bonus2 bResEff,Eff_Stun,5000;
+  - Id: 2115
+    AegisName: Arm_Buckler
+    Name: Arm Buckler
+    Type: Armor
+    Buy: 14000
+    Weight: 600
+    Defense: 30
+    Slots: 1
+    Jobs:
+      Merchant: true
+      Swordman: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Rogue: true
+      Monk: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 2
+    EquipLevelMin: 50
+    Script: |
+      bonus bLongAtkDef,10;
+  - Id: 2116
+    AegisName: Stone_Buckler
+    Name: Stone Buckler
+    Type: Armor
+    Buy: 14000
+    Weight: 600
+    Defense: 30
+    Slots: 1
+    Jobs:
+      Merchant: true
+      Swordman: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Rogue: true
+      Monk: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 2
+    EquipLevelMin: 50
+    Script: |
+      bonus2 bSubEle,Ele_Neutral,10;
   - Id: 2105
     AegisName: Shield
     Name: Shield
     Type: Armor
     Buy: 56000
     Weight: 1300
-    Defense: 60
+    Defense: 70
     Jobs:
       Crusader: true
       Knight: true
@@ -57,3 +344,229 @@ Body:
     ArmorLevel: 1
     Refineable: true
     View: 3
+  - Id: 2106
+    AegisName: Shield_
+    Name: Shield
+    Type: Armor
+    Buy: 56000
+    Weight: 1300
+    Defense: 70
+    Slots: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 3
+  - Id: 2117
+    AegisName: Thorny_Shield
+    Name: Thorny Shield
+    Type: Armor
+    Buy: 14000
+    Weight: 1300
+    Defense: 70
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 3
+    EquipLevelMin: 25
+    Script: |
+      bonus bAtkRate,10;
+  - Id: 2118
+    AegisName: Bloody_Shield
+    Name: Bloody Knight Shield
+    Type: Armor
+    Buy: 14000
+    Weight: 1300
+    Defense: 70
+    Slots: 1
+    Jobs:
+      Knight: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 3
+    EquipLevelMin: 75
+    Script: |
+      bonus bAtkRate,10;
+      bonus bMAtkRate,10;
+  - Id: 2119
+    AegisName: Spellcaster_Shield
+    Name: Spellcaster Shield
+    Type: Armor
+    Buy: 14000
+    Weight: 1300
+    Defense: 70
+    Slots: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 3
+    EquipLevelMin: 50
+    Script: |
+      bonus bMAtk,20;
+  - Id: 2120
+    AegisName: Mirror_Shield
+    Name: Mirror Shield
+    Type: Armor
+    Buy: 14000
+    Weight: 1300
+    Defense: 70
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 3
+    EquipLevelMin: 50
+    Script: |
+      bonus bMDef,15;
+  - Id: 2121
+    AegisName: Angelic_Shield
+    Name: Angelic Shield
+    Type: Armor
+    Buy: 14000
+    Weight: 1300
+    Defense: 70
+    Slots: 1
+    Jobs:
+      Crusader: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 3
+    EquipLevelMin: 65
+    Script: |
+      bonus bHealPower,10;
+  - Id: 2122
+    AegisName: Shield_of_Alleviation
+    Name: Shield of Alleviation
+    Type: Armor
+    Buy: 14000
+    Weight: 1300
+    Defense: 70
+    Slots: 1
+    Jobs:
+      Crusader: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 3
+    EquipLevelMin: 65
+    Script: |
+      bonus bHealPower,10;
+  - Id: 2123
+    AegisName: Royal_Guard_Shield
+    Name: Royal Guard Shield
+    Type: Armor
+    Buy: 14000
+    Weight: 1300
+    Defense: 70
+    Slots: 1
+    Jobs:
+      Crusader: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 3
+    EquipLevelMin: 70
+    Script: |
+      bonus bLongAtkRate,10;
+  - Id: 2124
+    AegisName: Strong_Shield
+    Name: Strong Shield
+    Type: Armor
+    Buy: 14000
+    Weight: 1300
+    Defense: 70
+    Slots: 1
+    Jobs:
+      Knight: true
+      Crusader: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 3
+    EquipLevelMin: 55
+    Script: |
+      bonus2 bSubEle,Ele_Neutral,10;
+  - Id: 2125
+    AegisName: Imperial_Shield
+    Name: Imperial Shield
+    Type: Armor
+    Buy: 14000
+    Weight: 1300
+    Defense: 70
+    Slots: 1
+    Jobs:
+      Knight: true
+      Crusader: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 3
+    EquipLevelMin: 55
+    Script: |
+      bonus bLongAtkDef,10;
+  - Id: 2126
+    AegisName: Hardened_Shield
+    Name: Hardened Shield
+    Type: Armor
+    Buy: 14000
+    Weight: 1300
+    Defense: 100
+    Slots: 1
+    Jobs:
+      Knight: true
+      Crusader: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 3
+    EquipLevelMin: 50
+  - Id: 2127
+    AegisName: Valkyrjas_Shield
+    Name: Valkyrie Shield
+    Type: Armor
+    Buy: 30000
+    Weight: 1300
+    Defense: 70
+    Slots: 1
+    Jobs:
+      Knight: true
+      Crusader: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    EquipLevelMin: 80
+    Refineable: true
+    View: 4
+    Script: |
+      bonus2 bSubEle,Ele_Water,20;
+      bonus2 bSubEle,Ele_Fire,20;
+      bonus2 bSubEle,Ele_Dark,20;
+      bonus2 bSubEle,Ele_Holy,20;
