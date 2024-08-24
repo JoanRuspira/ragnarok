@@ -12,12 +12,11 @@ Body:
     Jobs:
       All: true
       Novice: false
-      SuperNovice: false
     Locations:
       Both_Accessory: true
     EquipLevelMin: 20
     Script: |
-      bonus bStr,2;
+      bonus bStr,5;
   - Id: 2602
     AegisName: Earring
     Name: Earring
@@ -27,12 +26,11 @@ Body:
     Jobs:
       All: true
       Novice: false
-      SuperNovice: false
     Locations:
       Both_Accessory: true
     EquipLevelMin: 20
     Script: |
-      bonus bInt,2;
+      bonus bInt,5;
   - Id: 2603
     AegisName: Necklace
     Name: Necklace
@@ -42,12 +40,11 @@ Body:
     Jobs:
       All: true
       Novice: false
-      SuperNovice: false
     Locations:
       Both_Accessory: true
     EquipLevelMin: 20
     Script: |
-      bonus bVit,2;
+      bonus bVit,5;
   - Id: 2604
     AegisName: Glove
     Name: Glove
@@ -57,12 +54,11 @@ Body:
     Jobs:
       All: true
       Novice: false
-      SuperNovice: false
     Locations:
       Both_Accessory: true
     EquipLevelMin: 20
     Script: |
-      bonus bDex,2;
+      bonus bDex,5;
   - Id: 2605
     AegisName: Brooch
     Name: Brooch
@@ -72,12 +68,11 @@ Body:
     Jobs:
       All: true
       Novice: false
-      SuperNovice: false
     Locations:
       Both_Accessory: true
     EquipLevelMin: 20
     Script: |
-      bonus bAgi,2;
+      bonus bAgi,5;
   - Id: 2608
     AegisName: Rosary
     Name: Rosary
@@ -87,10 +82,883 @@ Body:
     Jobs:
       All: true
       Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 20
+    Script: |
+      bonus bLuk,5;
+  - Id: 2609
+    AegisName: Immediacy_Glove
+    Name: Glove
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 30
+    Script: |
+      bonus bDex,3;
+      bonus bDelayRate,5;
+  - Id: 2610
+    AegisName: Celebrants_Mitten
+    Name: Glove
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 40
+    Script: |
+      bonus bDex,3;
+      bonus bMAtk,10;
+  - Id: 2611
+    AegisName: Combo_Battle_Glove
+    Name: Glove
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 40
+    Script: |
+      bonus bDex,3;
+      bonus bAtk,10;
+  - Id: 2612
+    AegisName: Padded_Glove
+    Name: Glove
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 35
+    Script: |
+      bonus bDex,3;
+      bonus bMaxHP,150;
+  - Id: 2613
+    AegisName: Orlean_Glove
+    Name: Glove
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 35
+    Script: |
+      bonus bDex,3;
+      bonus bMaxSP,150;
+  - Id: 2614
+    AegisName: Falconry_Glove
+    Name: Glove
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 50
+    Script: |
+      bonus bDex,3;
+      bonus bLongAtkRate,5;
+  - Id: 2615
+    AegisName: Leather_Glove
+    Name: Glove
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 50
+    Script: |
+      bonus bDex,3;
+      bonus bAspdRate,2;
+  - Id: 2616
+    AegisName: Haste_Glove
+    Name: Glove
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 50
+    Script: |
+      bonus bDex,3;
+      bonus bCastrate,5;
+  - Id: 2617
+    AegisName: Steel_Gauntlet
+    Name: Glove
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Defense: 10
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 25
+    Script: |
+      bonus bDex,3;
+  - Id: 2618
+    AegisName: Glove_
+    Name: Glove
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
       SuperNovice: false
     Locations:
       Both_Accessory: true
     EquipLevelMin: 20
     Script: |
-      bonus bMdef,5;
-      bonus bLuk,2;
+      bonus bDex,5;
+  - Id: 2619
+    AegisName: Jeweled_Earring
+    Name: Earring
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 40
+    Script: |
+      bonus bInt,3;
+      bonus bHealPower,5;
+  - Id: 2620
+    AegisName: Potara_Earring
+    Name: Earring
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 65
+    Script: |
+      bonus bInt,3;
+      bonus bMatkRate,5;
+  - Id: 2621
+    AegisName: Shaman_Earring
+    Name: Earring
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 50
+    Script: |
+      bonus bInt,3;
+      bonus bCastrate,5;
+  - Id: 2622
+    AegisName: Gaeblog_Earring
+    Name: Earring
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 30
+    Script: |
+      bonus bInt,3;
+      bonus bDelayRate,5;
+  - Id: 2623
+    AegisName: Saphire_Earring
+    Name: Earring
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 40
+    Script: |
+      bonus bInt,3;
+      bonus bMaxSP,150;
+  - Id: 2624
+    AegisName: Emerald_Earring
+    Name: Earring
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 40
+    Script: |
+      bonus bInt,3;
+      bonus bMaxHP,150;
+  - Id: 2625
+    AegisName: Wolf_Tooth_Earring
+    Name: Earring
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 35
+    Script: |
+      bonus bInt,3;
+      bonus bMAtk,10;
+  - Id: 2626
+    AegisName: Gold_Earring
+    Name: Earring
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 25
+    Script: |
+      bonus bInt,3;
+      bonus bMDef,10;
+  - Id: 2627
+    AegisName: Earring_
+    Name: Earring
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 20
+    Script: |
+      bonus bInt,5;
+  - Id: 2628
+    AegisName: Necklace_of_Wisdom
+    Name: Necklace
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 35
+    Script: |
+      bonus bVit,3;
+      bonus bMAtk,10;
+  - Id: 2629
+    AegisName: Guardian_Sword_Necklace
+    Name: Necklace
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 35
+    Script: |
+      bonus bVit,3;
+      bonus bAtk,10;
+  - Id: 2630
+    AegisName: Necklace_of_Oblivion
+    Name: Necklace
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 50
+    Script: |
+      bonus bVit,3;
+      bonus bAspdRate,2;
+  - Id: 2631
+    AegisName: Gold_Necklace
+    Name: Necklace
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 25
+    Script: |
+      bonus bVit,3;
+      bonus bMDef,10;
+  - Id: 2632
+    AegisName: Morrigan_Pendant
+    Name: Necklace
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 55
+    Script: |
+      bonus bVit,3;
+      bonus2 bSubEle,Ele_Neutral,5;
+  - Id: 2633
+    AegisName: Ancient_Pendant
+    Name: Necklace
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 55
+    Script: |
+      bonus bVit,3;
+      bonus bLongAtkDef,5;
+  - Id: 2634
+    AegisName: Moonlight_Necklace
+    Name: Necklace
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 40
+    Script: |
+      bonus bVit,3;
+      bonus bHealPower,5;
+  - Id: 2637
+    AegisName: Fortitude_Necklace
+    Name: Necklace
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 65
+    Script: |
+      bonus bVit,3;
+      bonus bMaxHP,150;
+  - Id: 2636
+    AegisName: Spirituality_Necklace
+    Name: Necklace
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 65
+    Script: |
+      bonus bVit,3;
+      bonus bMaxSP,150;
+  - Id: 2638
+    AegisName: Necklace_
+    Name: Necklace
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 20
+    Script: |
+      bonus bVit,5;
+  - Id: 2639
+    AegisName: Black_Rosary
+    Name: Rosary
+    Type: Armor
+    Buy: 15000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 55
+    Script: |
+      bonus bLuk,3;
+      bonus bCritical,3;
+  - Id: 2640
+    AegisName: Runic_Rosary
+    Name: Rosary
+    Type: Armor
+    Buy: 15000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 40
+    Script: |
+      bonus bLuk,3;
+      bonus bAspdRate,2;
+  - Id: 2641
+    AegisName: Gold_Rosary
+    Name: Rosary
+    Type: Armor
+    Buy: 15000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 25
+    Script: |
+      bonus bLuk,3;
+      bonus bAtk,10;
+  - Id: 2642
+    AegisName: Silver_Rosary
+    Name: Rosary
+    Type: Armor
+    Buy: 15000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 25
+    Script: |
+      bonus bLuk,3;
+      bonus bMAtk,10;
+  - Id: 2643
+    AegisName: Wood_Rosary
+    Name: Rosary
+    Type: Armor
+    Buy: 15000
+    Weight: 100
+    Defense: 10
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 35
+    Script: |
+      bonus bLuk,3;
+  - Id: 2644
+    AegisName: Rosary_
+    Name: Rosary
+    Type: Armor
+    Buy: 15000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 20
+    Script: |
+      bonus bLuk,5;
+  - Id: 2645
+    AegisName: Ring_of_Resonance
+    Name: Ring
+    Type: Armor
+    Buy: 15000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 50
+    Script: |
+      bonus bStr,3;
+      bonus bAtk,10;
+  - Id: 2646
+    AegisName: Black_Eagle_Ring
+    Name: Ring
+    Type: Armor
+    Buy: 15000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 50
+    Script: |
+      bonus bStr,3;
+      bonus bMAtk,10;
+  - Id: 2647
+    AegisName: Oridecon_Ring
+    Name: Ring
+    Type: Armor
+    Buy: 15000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 70
+    Script: |
+      bonus bStr,3;
+      bonus bAtkRate,5;
+  - Id: 2648
+    AegisName: Feather_Ring
+    Name: Ring
+    Type: Armor
+    Buy: 15000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 35
+    Script: |
+      bonus bStr,3;
+      bonus bAspdRate,2;
+  - Id: 2649
+    AegisName: Spiked_Ring
+    Name: Ring
+    Type: Armor
+    Buy: 15000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 35
+    Script: |
+      bonus bStr,3;
+      bonus bCritical,3;
+  - Id: 2650
+    AegisName: Shapphire_Ring
+    Name: Ring
+    Type: Armor
+    Buy: 15000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 45
+    Script: |
+      bonus bStr,3;
+      bonus bMaxSP,150;
+  - Id: 2651
+    AegisName: Emerald_Ring
+    Name: Ring
+    Type: Armor
+    Buy: 15000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 45
+    Script: |
+      bonus bStr,3;
+      bonus bMaxHP,150;
+  - Id: 2652
+    AegisName: Safety_Ring
+    Name: Ring
+    Type: Armor
+    Buy: 15000
+    Weight: 100
+    Defense: 10
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 50
+    Script: |
+      bonus bStr,3;
+  - Id: 2653
+    AegisName: Allysia_Ring
+    Name: Ring
+    Type: Armor
+    Buy: 15000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 45
+    Script: |
+      bonus bStr,3;
+      bonus bDelayRate,5;
+  - Id: 2654
+    AegisName: Ring_
+    Name: Ring
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 20
+    Script: |
+      bonus bStr,5;
+  - Id: 2655
+    AegisName: Black_Wing_Brooch
+    Name: Brooch
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 30
+    Script: |
+      bonus bAgi,3;
+      bonus bAtk,10;
+  - Id: 2656
+    AegisName: White_Wing_Brooch
+    Name: Brooch
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 40
+    Script: |
+      bonus bAgi,3;
+      bonus bAtkRate,5;
+  - Id: 2657
+    AegisName: Sprint_Brooch
+    Name: Brooch
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 70
+    Script: |
+      bonus bAgi,3;
+      bonus bAspdRate,2;
+  - Id: 2658
+    AegisName: Lunatic_Brooch
+    Name: Brooch
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 35
+    Script: |
+      bonus bAgi,3;
+      bonus bCritical,3;
+  - Id: 2659
+    AegisName: Heros_Badge
+    Name: Brooch
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Defense: 10
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 35
+    Script: |
+      bonus bAgi,3;
+  - Id: 2660
+    AegisName: Royal_Insignia
+    Name: Brooch
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 65
+    Script: |
+      bonus bAgi,3;
+      bonus bLongAtkRate,5;
+  - Id: 2661
+    AegisName: Colorful_Brooch
+    Name: Brooch
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 25
+    Script: |
+      bonus bAgi,3;
+      bonus bHit,15;
+  - Id: 2662
+    AegisName: Rider_Insignia
+    Name: Brooch
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 25
+    Script: |
+      bonus bAgi,3;
+      bonus bFlee,15;
+  - Id: 2663
+    AegisName: Dullahan_Eye
+    Name: Brooch
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 40
+    Script: |
+      bonus bAgi,3;
+      bonus bMatk,10;
+  - Id: 2664
+    AegisName: Brooch_
+    Name: Brooch
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 20
+    Script: |
+      bonus bAgi,5;

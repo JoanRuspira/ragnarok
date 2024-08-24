@@ -8543,8 +8543,6 @@ Body:
       Rate: 250
     - Item: Turtle_Shell
       Rate: 3500
-    - Item: Penetration
-      Rate: 50
     - Item: Medusa_Card
       Rate: 1
       StealProtected: true
@@ -11191,8 +11189,6 @@ Body:
       Rate: 10
     - Item: Mistic_Frozen
       Rate: 12
-    - Item: Penetration
-      Rate: 50
     - Item: Grape
       Rate: 300
     - Item: Marse_Card
@@ -12178,8 +12174,6 @@ Body:
       Rate: 900
     - Item: Elunium
       Rate: 31
-    - Item: Frozen_Heart
-      Rate: 15
     - Item: Pumpkin
       Rate: 1000
     - Item: Jakk_Card
@@ -21523,8 +21517,6 @@ Body:
       Rate: 1800
     - Item: Crystal_Jewel_
       Rate: 30
-    - Item: Frozen_Heart
-      Rate: 100
     - Item: Oridecon
       Rate: 100
     - Item: Izidor
