@@ -4,259 +4,3181 @@ Header:
   Version: 1
 
 Body:
-
-  - Id: 2211
+  - Id: 8001
     AegisName: Bandana
     Name: Bandana
     Type: Armor
     Buy: 400
-    Weight: 100
-    Defense: 1
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
     Locations:
       Head_Top: true
     Refineable: true
+    EquipLevelMin: 15
     View: 6
-  - Id: 2216
-    AegisName: Biretta
-    Name: Biretta
-    Type: Armor
-    Buy: 9000
-    Weight: 100
-    Defense: 4
-    Jobs:
-      Acolyte: true
-      Monk: true
-      Priest: true
-    Locations:
-      Head_Top: true
-    Refineable: true
-    View: 11
-  - Id: 2217
-    AegisName: Biretta_
-    Name: Biretta
-    Type: Armor
-    Buy: 9000
-    Weight: 100
-    Defense: 4
-    Slots: 1
-    Jobs:
-      Acolyte: true
-      Monk: true
-      Priest: true
-    Locations:
-      Head_Top: true
-    Refineable: true
-    View: 11
-  - Id: 2220
-    AegisName: Hat
-    Name: Hat
-    Type: Armor
-    Buy: 1000
-    Weight: 200
-    Defense: 2
-    Locations:
-      Head_Top: true
-    Refineable: true
-    View: 16
-  - Id: 2221
-    AegisName: Hat_
-    Name: Hat
-    Type: Armor
-    Buy: 1000
-    Weight: 200
-    Defense: 2
-    Slots: 1
-    Locations:
-      Head_Top: true
-    Refineable: true
-    View: 16
-  - Id: 2222
-    AegisName: Turban
-    Name: Turban
-    Type: Armor
-    Buy: 4500
-    Weight: 300
-    Defense: 3
-    Jobs:
-      All: true
-      Novice: false
-      SuperNovice: false
-    Locations:
-      Head_Top: true
-    Refineable: true
-    View: 7
-  - Id: 2223
-    AegisName: Turban_
-    Name: Turban
-    Type: Armor
-    Buy: 4500
-    Weight: 300
-    Defense: 3
-    Slots: 1
-    Jobs:
-      All: true
-      Novice: false
-      SuperNovice: false
-    Locations:
-      Head_Top: true
-    Refineable: true
-    View: 7
-  - Id: 2224
-    AegisName: Goggle
-    Name: Goggles
-    Type: Armor
-    Buy: 20
-    Weight: 300
-    Defense: 5
-    Jobs:
-      Alchemist: true
-      Archer: true
-      Assassin: true
-      BardDancer: true
-      Blacksmith: true
-      Crusader: true
-      Hunter: true
-      Knight: true
-      Merchant: true
-      Rogue: true
-      Swordman: true
-      Thief: true
-    Locations:
-      Head_Mid: true
-      Head_Top: true
-    Refineable: true
-    View: 1
-  - Id: 2225
-    AegisName: Goggle_
-    Name: Goggles
-    Type: Armor
-    Buy: 20
-    Weight: 300
-    Defense: 5
-    Slots: 1
-    Jobs:
-      Alchemist: true
-      Archer: true
-      Assassin: true
-      BardDancer: true
-      Blacksmith: true
-      Crusader: true
-      Hunter: true
-      Knight: true
-      Merchant: true
-      Rogue: true
-      Swordman: true
-      Thief: true
-    Locations:
-      Head_Mid: true
-      Head_Top: true
-    Refineable: true
-    View: 1
-  - Id: 2226
+  - Id: 8002
     AegisName: Cap
     Name: Cap
     Type: Armor
     Buy: 12000
-    Weight: 400
-    Defense: 4
-    Jobs:
-      Alchemist: true
-      Archer: true
-      Assassin: true
-      BardDancer: true
-      Blacksmith: true
-      Crusader: true
-      Hunter: true
-      Knight: true
-      Merchant: true
-      Rogue: true
-      Swordman: true
-      Thief: true
-    Locations:
-      Head_Top: true
-    Refineable: true
-    View: 14
-  - Id: 2227
-    AegisName: Cap_
-    Name: Cap
-    Type: Armor
-    Buy: 12000
-    Weight: 400
-    Defense: 4
-    Slots: 1
-    Jobs:
-      Alchemist: true
-      Archer: true
-      Assassin: true
-      BardDancer: true
-      Blacksmith: true
-      Crusader: true
-      Hunter: true
-      Knight: true
-      Merchant: true
-      Rogue: true
-      Swordman: true
-      Thief: true
-    Locations:
-      Head_Top: true
-    Refineable: true
-    View: 14
-  - Id: 2228
-    AegisName: Helm
-    Name: Helm
-    Type: Armor
-    Buy: 44000
-    Weight: 600
-    Defense: 6
-    Jobs:
-      Crusader: true
-      Knight: true
-      Swordman: true
-    Locations:
-      Head_Top: true
-    Refineable: true
-    View: 40
-  - Id: 2229
-    AegisName: Helm_
-    Name: Helm
-    Type: Armor
-    Buy: 44000
-    Weight: 600
-    Defense: 6
-    Slots: 1
-    Jobs:
-      Crusader: true
-      Knight: true
-      Swordman: true
-    Locations:
-      Head_Top: true
-    Refineable: true
-    View: 40
-  - Id: 5043
-    AegisName: Opera_Ghost_Mask
-    Name: Opera Phantom Mask
-    Type: Armor
-    Buy: 20
     Weight: 200
-    Defense: 2
+    Defense: 5
+    Slots: 1
     Jobs:
       All: true
       Novice: false
-      SuperNovice: false
+    Locations:
+      Head_Top: true
+    Refineable: true
+    EquipLevelMin: 20
+    View: 14
+  - Id: 8003
+    AegisName: Fancy_Cap
+    Name: Cap
+    Type: Armor
+    Buy: 12000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Head_Top: true
+    Refineable: true
+    EquipLevelMin: 25
+    View: 193
+  - Id: 8004
+    AegisName: Magni_Cap
+    Name: Magni's Cap
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 25
+    Refineable: true
+    View: 250
+  - Id: 8005
+    AegisName: Carnival_Hat
+    Name: Carnival Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 25
+    Refineable: true
+    View: 505
+  - Id: 8006
+    AegisName: Lucky_Hat
+    Name: Lucky Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 25
+    Refineable: true
+    View: 740
+  - Id: 8007
+    AegisName: Hunting_Hat
+    Name: Hunting Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 30
+    Refineable: true
+    View: 389
+  - Id: 8008
+    AegisName: Morroc_Hat
+    Name: Morroc Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 25
+    Refineable: true
+    View: 362
+  - Id: 8009
+    AegisName: Louyang_Cap
+    Name: Louyang Cap
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 25
+    Refineable: true
+    View: 396
+  - Id: 8010
+    AegisName: Sailor_Cap
+    Name: Sailor Cap
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 25
+    Refineable: true
+    View: 798
+  - Id: 8011
+    AegisName: Sweet_Gent
+    Name: Sweet Gent
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 35
+    Refineable: true
+    View: 29
+  - Id: 8011
+    AegisName: Sweet_Gent
+    Name: Sweet Gent
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 35
+    Refineable: true
+    View: 29
+  - Id: 8012
+    AegisName: Old_Romance
+    Name: Romantic Gent
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 35
+    Refineable: true
+    View: 31
+  - Id: 8013
+    AegisName: Straw_Hat
+    Name: Straw Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 35
+    Refineable: true
+    View: 146
+  - Id: 8014
+    AegisName: Bucket_Hat
+    Name: Bucket Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 35
+    Refineable: true
+    View: 195
+  - Id: 8015
+    AegisName: Classic_Hat
+    Name: Classic Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 35
+    Refineable: true
+    View: 475
+  - Id: 8016
+    AegisName: Hattah
+    Name: Classic Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 35
+    Refineable: true
+    View: 676
+  - Id: 8017
+    AegisName: Ribbon_Straw_Hat
+    Name: Ribbon Straw Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 35
+    Refineable: true
+    View: 1181
+  - Id: 8018
+    AegisName: Orc_Helmet
+    Name: Orc Helmet
+    Type: Armor
+    Buy: 30000
+    Weight: 600
+    Defense: 15
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 45
+    Refineable: true
+    View: 86
+  - Id: 8019
+    AegisName: Morrigan_Helm
+    Name: Morrigan Helm
+    Type: Armor
+    Buy: 30000
+    Weight: 600
+    Defense: 15
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 45
+    Refineable: true
+    View: 257
+  - Id: 8020
+    AegisName: Vanguard_Helm
+    Name: Vanguard Helm
+    Type: Armor
+    Buy: 30000
+    Weight: 600
+    Defense: 15
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 45
+    Refineable: true
+    View: 804
+  - Id: 8021
+    AegisName: Helm
+    Name: Helm
+    Type: Armor
+    Buy: 30000
+    Weight: 600
+    Defense: 15
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 45
+    Refineable: true
+    View: 40
+  - Id: 8022
+    AegisName: Prontera_Guard_Cap
+    Name: Prontera Guard Cap
+    Type: Armor
+    Buy: 30000
+    Weight: 600
+    Defense: 15
+    Slots: 1
+    Jobs:
+      Swordman: true
+      Crusader: true
+      Knight: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 45
+    Refineable: true
+    View: 48
+  - Id: 8023
+    AegisName: Pirate_Bandana
+    Name: Pirate Bandana
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Thief: true
+      Assassin: true
+      Rogue: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 45
+    Refineable: true
+    View: 74
+  - Id: 8024
+    AegisName: Sakkat
+    Name: Sakkat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Thief: true
+      Assassin: true
+      Rogue: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 45
+    Refineable: true
+    View: 67
+  - Id: 8025
+    AegisName: Gangster_Scarf
+    Name: Gangster Scarf
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 1
+    Jobs:
+      Thief: true
+      Assassin: true
+      Rogue: true
+    Locations:
+      Head_Low: true
+    ArmorLevel: 1
+    EquipLevelMin: 45
+    Refineable: false
+    View: 369
+  - Id: 8026
+    AegisName: Mobster_Scarf
+    Name: Mobster Scarf
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 1
+    Jobs:
+      Thief: true
+      Assassin: true
+      Rogue: true
+    Locations:
+      Head_Low: true
+    ArmorLevel: 1
+    EquipLevelMin: 45
+    Refineable: false
+    View: 1568
+  - Id: 8027
+    AegisName: Pirate_Dagger
+    Name: Pirate Dagger
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 0
+    Jobs:
+      Thief: true
+      Assassin: true
+      Rogue: true
+    Locations:
+      Head_Low: true
+    ArmorLevel: 1
+    EquipLevelMin: 45
+    Refineable: false
+    View: 327
+  - Id: 8028
+    AegisName: Circlet
+    Name: Circlet
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Mage: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 45
+    Refineable: true
+    View: 18
+  - Id: 8029
+    AegisName: Grand_Circlet
+    Name: Grand Circlet
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Mage: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 45
+    Refineable: true
+    View: 93 
+  - Id: 8030
+    AegisName: Crown
+    Name: Crown
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Mage: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 45
+    Refineable: true
+    View: 45 
+  - Id: 8031
+    AegisName: Frigg_Circlet
+    Name: Frigg Circlet
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Mage: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 45
+    Refineable: true
+    View: 251 
+  - Id: 8032
+    AegisName: Tiara
+    Name: Tiara
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Mage: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 45
+    Refineable: true
+    View: 19 
+  - Id: 8033
+    AegisName: Sea_Trader_Hat
+    Name: Sea Trader Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Merchant: true
+      Blacksmith: true
+      Alchemist: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 45
+    Refineable: true
+    View: 1128 
+  - Id: 8034
+    AegisName: Trader_Hat
+    Name: Trader Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Merchant: true
+      Blacksmith: true
+      Alchemist: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 45
+    Refineable: true
+    View: 236 
+  - Id: 8035
+    AegisName: Republic_Hat
+    Name: Republic Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Merchant: true
+      Blacksmith: true
+      Alchemist: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 45
+    Refineable: true
+    View: 1458 
+  - Id: 8036
+    AegisName: Boy_Hat
+    Name: Boy Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Merchant: true
+      Blacksmith: true
+      Alchemist: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 45
+    Refineable: true
+    View: 102 
+  - Id: 8037
+    AegisName: Ayothaya_Hat
+    Name: Ayothaya Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Merchant: true
+      Blacksmith: true
+      Alchemist: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 45
+    Refineable: true
+    View: 334 
+  - Id: 8038
+    AegisName: Stripe_Band
+    Name: Stripe Band
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 45
+    Refineable: true
+    View: 133 
+  - Id: 8039
+    AegisName: Blue_Band
+    Name: Blue Band
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 45
+    Refineable: true
+    View: 136
+  - Id: 8040
+    AegisName: Indian_Fillet
+    Name: Indian Fillet
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 45
+    Refineable: true
+    View: 155
+  - Id: 8041
+    AegisName: Apple_of_Archer
+    Name: Apple of Archer
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 45
+    Refineable: true
+    View: 72
+  - Id: 8042
+    AegisName: Goggles
+    Name: Goggles
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
     Locations:
       Head_Mid: true
-    EquipLevelMin: 20
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 45
+    Refineable: true
+    View: 1
+  - Id: 8043
+    AegisName: Acolyte_Cap
+    Name: Acolyte Cap
+    Type: Armor
+    Buy: 4500
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Acolyte: true
+      Priest: false
+      Monk: false
+    Locations:
+      Head_Top: true
+    Refineable: true
+    EquipLevelMin: 45
+    View: 7
+  - Id: 8044
+    AegisName: Holy_Bonnet
+    Name: Holy Bonnet
+    Type: Armor
+    Buy: 4500
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Acolyte: true
+      Priest: false
+      Monk: false
+    Locations:
+      Head_Top: true
+    Refineable: true
+    EquipLevelMin: 45
+    View: 35
+  - Id: 8045
+    AegisName: Biretta
+    Name: Biretta
+    Type: Armor
+    Buy: 4500
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Acolyte: true
+      Priest: false
+      Monk: false
+    Locations:
+      Head_Top: true
+    Refineable: true
+    EquipLevelMin: 45
+    View: 11
+  - Id: 8046
+    AegisName: White_Scarf
+    Name: White Scarf
+    Type: Armor
+    Buy: 4500
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Acolyte: true
+      Priest: false
+      Monk: false
+    Locations:
+      Head_Top: true
+    Refineable: true
+    EquipLevelMin: 45
+    View: 343
+  - Id: 8047
+    AegisName: Western_Grace
+    Name: Western Grace
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 30
+    Refineable: true
+    View: 32
+  - Id: 8048
+    AegisName: Munak_Turban
+    Name: Munak Turban
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Head_Low: true
+      Head_Mid: true
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 30
+    Refineable: true
+    View: 51
+  - Id: 8049
+    AegisName: Bongun_Turban
+    Name: Bongun Turban
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Head_Mid: true
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 30
+    Refineable: true
+    View: 139
+  - Id: 8050
+    AegisName: Haegoon_Turban
+    Name: Haegoon Turban
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 7
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 40
+    Refineable: true
+    View: 375
+  - Id: 8051
+    AegisName: Bone_Helm
+    Name: Bone Helm
+    Type: Armor
+    Buy: 30000
+    Weight: 1000
+    Defense: 15
+    Slots: 1
+    Jobs:
+      Knight: true
+      Crusader: true
+      Blacksmith: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 55
+    Refineable: true
+    View: 103
+  - Id: 8052
+    AegisName: Cross_Helm
+    Name: Cross Helm
+    Type: Armor
+    Buy: 30000
+    Weight: 1000
+    Defense: 15
+    Slots: 1
+    Jobs:
+      Crusader: true
+    Locations:
+      Head_Mid: true
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 55
+    Refineable: true
+    View: 203
+  - Id: 8053
+    AegisName: Bullock_Helm
+    Name: Bullock Helm
+    Type: Armor
+    Buy: 30000
+    Weight: 1000
+    Defense: 15
+    Slots: 1
+    Jobs:
+      Knight: true
+      Crusader: true
+    Locations:
+      Head_Mid: true
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 60
+    Refineable: true
+    View: 322
+  - Id: 8054
+    AegisName: Dragoon_Helm
+    Name: Dragoon Helm
+    Type: Armor
+    Buy: 30000
+    Weight: 1000
+    Defense: 15
+    Slots: 1
+    Jobs:
+      Knight: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 80
+    Refineable: true
+    View: 464
+  - Id: 8055
+    AegisName: Aqua_Helm
+    Name: Aqua Helm
+    Type: Armor
+    Buy: 30000
+    Weight: 1000
+    Defense: 15
+    Slots: 1
+    Jobs:
+      Knight: true
+      Crusader: true
+    Locations:
+      Head_Mid: true
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 60
+    Refineable: true
+    View: 512
+  - Id: 8056
+    AegisName: Goat_Helm
+    Name: Goat Helm
+    Type: Armor
+    Buy: 30000
+    Weight: 1000
+    Defense: 15
+    Slots: 1
+    Jobs:
+      Knight: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 65
+    Refineable: true
+    View: 531
+  - Id: 8057
+    AegisName: Goibne_Helm  
+    Name: Goibne Helm
+    Type: Armor
+    Buy: 30000
+    Weight: 1000
+    Defense: 15
+    Slots: 1
+    Jobs:
+      Crusader: true
+    Locations:
+      Head_Mid: true
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 65
+    Refineable: true
+    View: 258
+  - Id: 8058
+    AegisName: Valkyrie_Helm  
+    Name: Goibne Helm
+    Type: Armor
+    Buy: 30000
+    Weight: 1000
+    Defense: 15
+    Slots: 1
+    Jobs:
+      Crusader: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 80
+    Refineable: true
+    View: 225
+  - Id: 8059
+    AegisName: Giant_Helm  
+    Name: Giant Helm
+    Type: Armor
+    Buy: 30000
+    Weight: 1000
+    Defense: 15
+    Slots: 1
+    Jobs:
+      Knight: true
+      Crusader: true
+    Locations:
+      Head_Mid: true
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 75
+    Refineable: true
+    View: 1221
+  - Id: 8060
+    AegisName: Runic_Helm  
+    Name: Runic Helm
+    Type: Armor
+    Buy: 30000
+    Weight: 1000
+    Defense: 15
+    Slots: 1
+    Jobs:
+      Knight: true
+      Crusader: true
+    Locations:
+      Head_Mid: true
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 65
+    Refineable: true
+    View: 1361
+  - Id: 8061
+    AegisName: Khalitzburg_Helm  
+    Name: Khalitzburg Helm
+    Type: Armor
+    Buy: 30000
+    Weight: 1000
+    Defense: 15
+    Slots: 1
+    Jobs:
+      Knight: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 70
+    Refineable: true
+    View: 1442
+  - Id: 8062
+    AegisName: Orc_Hero_Helm  
+    Name: Orc Hero
+    Type: Armor
+    Buy: 30000
+    Weight: 1000
+    Defense: 15
+    Slots: 1
+    Jobs:
+      Knight: true
+      Crusader: true
+      Blacksmith: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 80
+    Refineable: true
+    View: 178
+  - Id: 8063
+    AegisName: Baphomet_Horns  
+    Name: Baphomet Horns
+    Type: Armor
+    Buy: 30000
+    Weight: 1000
+    Defense: 15
+    Slots: 1
+    Jobs:
+      Knight: true
+      Crusader: true
+      Blacksmith: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 80
+    Refineable: true
+    View: 41
+  - Id: 8064
+    AegisName: Joken_Jester  
+    Name: Joker Jester
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      BardDancer: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 50
+    Refineable: true
+    View: 89
+  - Id: 8065
+    AegisName: Feather_Bonnet
+    Name: Feeather Bonnet
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      BardDancer: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 50
+    Refineable: true
+    View: 104
+  - Id: 8066
+    AegisName: Opera_Angel
+    Name: Opera Angel
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      BardDancer: true
+    Locations:
+      Head_Low: true
+      Head_Mid: true
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 60
+    Refineable: true
+    View: 394
+  - Id: 8067
+    AegisName: Fancy_Opera_Phantom
+    Name: Fancy Opera Phantom
+    Type: Armor
+    Buy: 30000
+    Weight: 20
+    Defense: 3
+    Slots: 1
+    Jobs:
+      BardDancer: true
+    Locations:
+      Head_Mid: true
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 70
+    Refineable: true
+    View: 710
+  - Id: 8068
+    AegisName: Opera_Phantom
+    Name: Opera Phantom
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Defense: 1
+    Jobs:
+      BardDancer: true
+    Locations:
+      Head_Mid: true
+    ArmorLevel: 1
+    EquipLevelMin: 55
+    Refineable: false
     View: 128
-  - Id: 5775
+  - Id: 8069
+    AegisName: Opera_Mask
+    Name: Opera Mask
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Defense: 2
+    Jobs:
+      BardDancer: true
+    Locations:
+      Head_Low: true
+      Head_Mid: true
+    ArmorLevel: 1
+    EquipLevelMin: 50
+    Refineable: false
+    View: 68    
+  - Id: 8070
+    AegisName: Feathered_Hat
+    Name: Feathered Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      BardDancer: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 60
+    Refineable: true
+    View: 466   
+  - Id: 8071
+    AegisName: Celestial_Hat
+    Name: Celestial Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      BardDancer: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 60
+    Refineable: true
+    View: 462   
+  - Id: 8072
+    AegisName: Minstrel_Hat
+    Name: Minstrel Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      BardDancer: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 65
+    Refineable: true
+    View: 628  
+  - Id: 8073
+    AegisName: Hunting_Goggles
+    Name: Hunting Goggles
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Hunter: true
+    Locations:
+      Head_Mid: true
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 55
+    Refineable: true
+    View: 625  
+  - Id: 8074
+    AegisName: Dream_Whisper
+    Name: Dream Whisper
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Hunter: true
+    Locations:
+      Head_Mid: true
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 55
+    Refineable: true
+    View: 633  
+  - Id: 8075
+    AegisName: Windproof_Goggles
+    Name: Windproof Goggles
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Hunter: true
+    Locations:
+      Head_Mid: true
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 60
+    Refineable: true
+    View: 820  
+  - Id: 8076
+    AegisName: Hard_Goggles
+    Name: Hard Goggles
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 7
+    Slots: 1
+    Jobs:
+      Hunter: true
+    Locations:
+      Head_Mid: true
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 65
+    Refineable: true
+    View: 1721  
+  - Id: 8077
+    AegisName: Wolf_Skin
+    Name: Wolf Skin
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Hunter: true
+    Locations:
+      Head_Mid: true
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 70
+    Refineable: true
+    View: 490  
+  - Id: 8078
+    AegisName: Camouflage_Goggles
+    Name: Camouflage Goggles
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Hunter: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 60
+    Refineable: true
+    View: 1142  
+  - Id: 8079
+    AegisName: Volume_Feather_Hat
+    Name: Volume Feather Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      BardDancer: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 60
+    Refineable: true
+    View: 1240  
+  - Id: 8080
+    AegisName: Lyrica_Hat
+    Name: Lyrica Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      BardDancer: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 70
+    Refineable: true
+    View: 1126  
+  - Id: 8081
+    AegisName: Grand_Peco_Hairdress
+    Name: Grand Peco Hairdress
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Hunter: true
+    Locations:
+      Head_Mid: true
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 75
+    Refineable: true
+    View: 473  
+  - Id: 8082
+    AegisName: Mitra
+    Name: Mitra
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Priest: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 55
+    Refineable: true
+    View: 624  
+  - Id: 8083
+    AegisName: Flying_Angel
+    Name: Flying Angel
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Priest: true
+      Monk: true
+      Crusader: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 65
+    Refineable: true
+    View: 635  
+  - Id: 8084
+    AegisName: Coif
+    Name: Coif
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Priest: true
+    Locations:
+      Head_Mid: true
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 60
+    Refineable: true
+    View: 176  
+  - Id: 8085
+    AegisName: Pope_Crown
+    Name: Pope Crown
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Priest: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 80
+    Refineable: true
+    View: 1475  
+  - Id: 8086
+    AegisName: Ullr_Cap
+    Name: Ullr Cap
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Hunter: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 70
+    Refineable: true
+    View: 254  
+  - Id: 8087
+    AegisName: Valkyrie_Feather
+    Name: Valkyrie Feather
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Priest: true
+      Monk: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 70
+    Refineable: true
+    View: 300  
+  - Id: 8088
+    AegisName: Hermode_Cap
+    Name: Hermode Cap
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Priest: true
+      Monk: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 60
+    Refineable: true
+    View: 478  
+  - Id: 8089
+    AegisName: Anubis_Hat
+    Name: Anubis Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Priest: true
+    Locations:
+      Head_Mid: true
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 70
+    Refineable: true
+    View: 485  
+  - Id: 8090
+    AegisName: Light_Dark_Crown
+    Name: Light Dark Crown
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Priest: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 75
+    Refineable: true
+    View: 988  
+  - Id: 8091
+    AegisName: Protection_Feathers
+    Name: Protection Feathers
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 0
+    Jobs:
+      Priest: true
+      Monk: true
+    Locations:
+      Head_Mid: true
+    ArmorLevel: 1
+    EquipLevelMin: 70
+    Refineable: false
+    View: 1232  
+  - Id: 8092
+    AegisName: Holy_Night_Hat
+    Name: Holy Night Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Priest: true
+      Monk: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 60
+    Refineable: true
+    View: 1253  
+  - Id: 8093
+    AegisName: Angel_Feather_Hat
+    Name: Angel Feather Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Priest: true
+      Crusader: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 65
+    Refineable: true
+    View: 1470  
+  - Id: 8094
+    AegisName: Tiger_Skin
+    Name: Tiger Skin
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Monk: true
+      Hunter: true
+    Locations:
+      Head_Mid: true
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 70
+    Refineable: true
+    View: 181  
+  - Id: 8095
+    AegisName: Morpheus_Bandana
+    Name: Morpheus Bandana
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Monk: true
+      Rogue: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 55
+    Refineable: true
+    View: 256  
+  - Id: 8096
+    AegisName: Hot_Blooded_Bandana
+    Name: Hot Blooded Bandana
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Monk: true
+      Rogue: true
+      Assassin: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 60
+    Refineable: true
+    View: 154  
+  - Id: 8097
+    AegisName: Ancient_Dragon
+    Name: Ancient Dragon
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Monk: true
+    Locations:
+      Head_Mid: true
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 80
+    Refineable: true
+    View: 452  
+  - Id: 8098
+    AegisName: Bear_Skin
+    Name: Bear Skin
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Monk: true
+      Hunter: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 65
+    Refineable: true
+    View: 143  
+  - Id: 8099
+    AegisName: Jolly_Roger
+    Name: Bear Skin
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Rogue: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 70
+    Refineable: true
+    View: 962  
+  - Id: 8100
+    AegisName: Dark_Bacillum
+    Name: Dark Bacilium
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Hunter: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 60
+    Refineable: true
+    View: 809 
+  - Id: 8101
+    AegisName: Red_Wing_Hat
+    Name: Red Wing Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Rogue: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 55
+    Refineable: true
+    View: 613 
+  - Id: 8102
+    AegisName: Satgat
+    Name: Wanderer's Sakkat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Assassin: true
+      Rogue: true
+    Locations:
+      Head_Mid: true
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 60
+    Refineable: true
+    View: 558 
+  - Id: 8103
+    AegisName: Skull_Cap
+    Name: Sull Cap
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Rogue: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 65
+    Refineable: true
+    View: 713 
+  - Id: 8104
+    AegisName: Steampunk_Hat
+    Name: Steampunk Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Alchemist: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 70
+    Refineable: true
+    View: 1406 
+  - Id: 8105
+    AegisName: Striped_Cap
+    Name: Striped Cap
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Alchemist: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 55
+    Refineable: true
+    View: 1728 
+  - Id: 8106
+    AegisName: Striking_Hat
+    Name: Striking Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 65
+    Refineable: true
+    View: 1759 
+  - Id: 8107
+    AegisName: Clockwork_Cap
+    Name: Clockwork Cap
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Alchemist: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 65
+    Refineable: true
+    View: 1777 
+  - Id: 8108
+    AegisName: Biological_Cap
+    Name: Biological Cap
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Alchemist: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 75
+    Refineable: true
+    View: 1868 
+  - Id: 8109
+    AegisName: Brown_cap
+    Name: Brown Cap
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Alchemist: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 60
+    Refineable: true
+    View: 1878 
+  - Id: 8110
+    AegisName: White_Cap
+    Name: White Cap
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 60
+    Refineable: true
+    View: 877 
+  - Id: 8111
+    AegisName: Silk_Earth_Hat
+    Name: Silk Earth Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Alchemist: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 65
+    Refineable: true
+    View: 1078 
+  - Id: 8112
+    AegisName: Speedster_Cap
+    Name: Speedster Cap
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Blacksmith: true
+      Alchemist: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 65
+    Refineable: true
+    View: 1076 
+  - Id: 8113
+    AegisName: Mechanical_Plant_Hat
+    Name: Mechanical Plant Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Alchemist: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 70
+    Refineable: true
+    View: 1069 
+  - Id: 8114
+    AegisName: Cowboy_Hat
+    Name: Cowboy Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Blacksmith: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 60
+    Refineable: true
+    View: 159 
+  - Id: 8115
+    AegisName: Igni_Cap
+    Name: Igni Cap
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Blacksmith: true
+      Alchemist: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 60
+    Refineable: true
+    View: 803 
+  - Id: 8116
+    AegisName: Duneyrr_Hat
+    Name: Duneyrr Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Blacksmith: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 80
+    Refineable: true
+    View: 639 
+  - Id: 8117
+    AegisName: Artist_Beret
+    Name: Artist Beret
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      BardDancer: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 65
+    Refineable: true
+    View: 1209 
+  - Id: 8118
+    AegisName: Gemstone_Hat
+    Name: Gemstone Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Blacksmith: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 65
+    Refineable: true
+    View: 866 
+  - Id: 8119
+    AegisName: PDH_Hat
+    Name: PDH Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Sage: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 60
+    Refineable: true
+    View: 98 
+  - Id: 8120
+    AegisName: Dark_Snake_Lord_Hat
+    Name: PDH Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Sage: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 65
+    Refineable: true
+    View: 372 
+  - Id: 8121
+    AegisName: Cap_Of_Concentration
+    Name: Cap of Concentration
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Sage: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 55
+    Refineable: true
+    View: 157 
+  - Id: 8122
+    AegisName: Mustang_Hat
+    Name: Mustang Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Sage: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 70
+    Refineable: true
+    View: 771 
+  - Id: 8123
+    AegisName: Rune_Circlet
+    Name: Rune Circlet
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 55
+    Refineable: true
+    View: 623 
+  - Id: 8124
+    AegisName: Sapphire_Circlet
+    Name: Sapphire Circlet
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 65
+    Refineable: true
+    View: 509 
+  - Id: 8125
+    AegisName: Emerald_Circlet
+    Name: Emerald Circlet
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 60
+    Refineable: true
+    View: 566 
+  - Id: 8126
+    AegisName: Levitation_Crown
+    Name: Levitation Crown
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 60
+    Refineable: true
+    View: 594 
+  - Id: 8127
+    AegisName: Memory_Hat
+    Name: Memory Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Sage: true
+    Locations:
+      Head_Mid: true
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 65
+    Refineable: true
+    View: 1454 
+  - Id: 8128
+    AegisName: Azure_Circlet
+    Name: Azure Circlet
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Mid: true
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 75
+    Refineable: true
+    View: 618 
+  - Id: 8129
+    AegisName: Magic_Eyes
+    Name: Magic Eyes
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Wizard: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 65
+    Refineable: true
+    View: 209 
+  - Id: 8130
+    AegisName: Star_Sparkling
+    Name: Star_Sparkling
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Wizard: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 55
+    Refineable: true
+    View: 36 
+  - Id: 8131
+    AegisName: Spell_Hat
+    Name: Spell Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Wizard: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 60
+    Refineable: true
+    View: 1023 
+  - Id: 8132
+    AegisName: Necromancer_Hood
+    Name: Necromancer Hood
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Wizard: true
+    Locations:
+      Head_Low: true
+      Head_Mid: true
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 75
+    Refineable: true
+    View: 491 
+  - Id: 8133
+    AegisName: Barrel_Helm
+    Name: Barrel Helm
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 15
+    Slots: 1
+    Jobs:
+      Crusader: true
+    Locations:
+      Head_Low: true
+      Head_Mid: true
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 70
+    Refineable: true
+    View: 1498 
+  - Id: 8134
+    AegisName: Magic_Stone_Hat
+    Name: Magic_Stone_Hat
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Wizard: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 65
+    Refineable: true
+    View: 630 
+  - Id: 8135
+    AegisName: Cap_Blindness
+    Name: Cap_Blindness
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Assassin: true
+      Rogue: true
+    Locations:
+      Head_Low: true
+      Head_Mid: true
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 70
+    Refineable: true
+    View: 326 
+  - Id: 8136
+    AegisName: Helm_of_Darkness
+    Name: Helm_of_Darkness
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Assassin: true
+    Locations:
+      Head_Low: true
+      Head_Mid: true
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 65
+    Refineable: true
+    View: 233 
+  - Id: 8137
+    AegisName: Bone_Crown
+    Name: Bone_Crown
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 5
+    Slots: 1
+    Jobs:
+      Assassin: true
+      Rogue: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 60
+    Refineable: true
+    View: 1141 
+  - Id: 8138
+    AegisName: Dragon_Skull
+    Name: Dragon_Skull
+    Type: Armor
+    Buy: 30000
+    Weight: 500
+    Defense: 10
+    Slots: 1
+    Jobs:
+      Knight: true
+      Assassin: true
+      Rogue: true
+    Locations:
+      Head_Mid: true
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 75
+    Refineable: true
+    View: 401
+  - Id: 8139
+    AegisName: Devil_Wing_Ears
+    Name: Devil_Wing_Ears
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Defense: 1
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Mid: true
+    ArmorLevel: 1
+    EquipLevelMin: 70
+    Refineable: false
+    View: 152 
+  - Id: 8140
+    AegisName: Angel_Wing_Ears
+    Name: Angel_Wing_Ears
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Defense: 1
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Mid: true
+    ArmorLevel: 1
+    EquipLevelMin: 70
+    Refineable: false
+    View: 158 
+  - Id: 8141
+    AegisName: Pecopeco_Wing_Ears
+    Name: Pecopeco_Wing_Ears
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Defense: 1
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Mid: true
+    ArmorLevel: 1
+    EquipLevelMin: 60
+    Refineable: false
+    View: 366 
+  - Id: 8142
+    AegisName: Sunglasses
+    Name: Sunglasses
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Defense: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Head_Mid: true
+    ArmorLevel: 1
+    EquipLevelMin: 20
+    Refineable: false
+    View: 12 
+  - Id: 8143
+    AegisName: Quality_Sunglasses
+    Name: Quality_Sunglasses
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Defense: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Head_Mid: true
+    ArmorLevel: 1
+    EquipLevelMin: 30
+    Refineable: false
+    View: 26 
+  - Id: 8144
+    AegisName: Aviator_Sunglasses
+    Name: Aviator_Sunglasses
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Defense: 1
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Head_Mid: true
+    ArmorLevel: 1
+    EquipLevelMin: 40
+    Refineable: false
+    View: 92 
+  - Id: 8145
+    AegisName: Dark_Blinker
+    Name: Dark_Blinker
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Defense: 0
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Mid: true
+    ArmorLevel: 1
+    EquipLevelMin: 55
+    Refineable: false
+    View: 187 
+  - Id: 8146
+    AegisName: Elven_Ears
+    Name: Elven_Ears
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Defense: 0
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Mid: true
+    ArmorLevel: 1
+    EquipLevelMin: 60
+    Refineable: false
+    View: 73 
+  - Id: 8147
+    AegisName: Alarm_Mask
+    Name: Alarm_Mask
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Defense: 2
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Low: true
+      Head_Mid: true
+    ArmorLevel: 1
+    EquipLevelMin: 65
+    Refineable: false
+    View: 170 
+  - Id: 8148
+    AegisName: Four_Leaf_Clover_Mouth
+    Name: Four_Leaf_Clover_Mouth
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Defense: 0
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Low: true
+    ArmorLevel: 1
+    EquipLevelMin: 50
+    Refineable: false
+    View: 571 
+  - Id: 8149
+    AegisName: Chewing_Gum
+    Name: Chewing_Gum
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Defense: 0
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Low: true
+    ArmorLevel: 1
+    EquipLevelMin: 55
+    Refineable: false
+    View: 572 
+  - Id: 8150
+    AegisName: Candy_Cane_Mouth
+    Name: Candy_Cane_Mouth
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Defense: 0
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Head_Low: true
+    ArmorLevel: 1
+    EquipLevelMin: 35
+    Refineable: false
+    View: 446 
+  - Id: 8151
+    AegisName: Long_Pipe
+    Name: Long_Pipe
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Defense: 0
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Low: true
+    ArmorLevel: 1
+    EquipLevelMin: 60
+    Refineable: false
+    View: 383 
+  - Id: 8152
     AegisName: Choco_Donut_In_Mouth
     Name: Choco Donut In Mouth
     Type: Armor
     Buy: 20
-    Weight: 50
-    Defense: 1
+    Weight: 100
+    Defense: 0
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
     Locations:
       Head_Low: true
-    EquipLevelMin: 1
+    EquipLevelMin: 60
     View: 653
-    Script: |
-      bonus bMaxHP,50;
+  - Id: 8153
+    AegisName: Donut_In_Mouth
+    Name: Donut_In_Mouth
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 0
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 60
+    View: 569
+  - Id: 8154
+    AegisName: Clown_Nose
+    Name: Clown_Nose
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 0
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 50
+    View: 49
+  - Id: 8155
+    AegisName: Crunch_Toast
+    Name: Crunch_Toast
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 0
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 65
+    View: 188
+  - Id: 8156
+    AegisName: Smoking_Pipe
+    Name: Smoking_Pipe
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 0
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 65
+    View: 55
+  - Id: 8157
+    AegisName: Rainbow_Scarf
+    Name: Rainbow_Scarf
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 0
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 55
+    View: 460
+  - Id: 8158
+    AegisName: Romantic_Leaf
+    Name: Romantic_Leaf
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 0
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 30
+    View: 57
+  - Id: 8159
+    AegisName: Romantic_Flower
+    Name: Romantic_Flower
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 0
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 30
+    View: 56
+  - Id: 8160
+    AegisName: Romantic_White_Flower
+    Name: Romantic_White_Flower
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 0
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 40
+    View: 259
+  - Id: 8161
+    AegisName: Scarlet_Rose
+    Name: Scarlet_Rose
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 0
+    Jobs:
+      All: true
+      Novice: false
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 50
+    View: 534
+  - Id: 8162
+    AegisName: Spiked_Scarf
+    Name: Spiked_Scarf
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 0
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 60
+    View: 459
+  - Id: 8163
+    AegisName: Chewed_Pencil
+    Name: Chewed_Pencil
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 0
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 60
+    View: 555
+  - Id: 8164
+    AegisName: Iron_Chain
+    Name: Iron_Chain
+    Type: Armor
+    Buy: 20
+    Weight: 200
+    Defense: 5
+    Jobs:
+      Knight: true
+      Crusader: true
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 65
+    View: 53
+  - Id: 8165
+    AegisName: Assassin_Mask
+    Name: Assassin_Mask
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 1
+    Jobs:
+      Assassin: true
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 70
+    View: 180
+  - Id: 8166
+    AegisName: Owl_Duke_Hat
+    Name: Owl_Duke_Hat
+    Type: Armor
+    Buy: 20
+    Weight: 200
+    Defense: 5
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 60
+    View: 982
+  - Id: 8167
+    AegisName: Tiraya_Bonnet
+    Name: Tiraya_Bonnet
+    Type: Armor
+    Buy: 20
+    Weight: 200
+    Defense: 5
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 65
+    View: 398
+  - Id: 8168
+    AegisName: Over_Protector
+    Name: Over_Protector
+    Type: Armor
+    Buy: 20
+    Weight: 200
+    Defense: 5
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 60
+    View: 1329
+  - Id: 8169
+    AegisName: Beret
+    Name: Beret
+    Type: Armor
+    Buy: 20
+    Weight: 200
+    Defense: 5
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 60
+    View: 226
+  - Id: 8170
+    AegisName: Feather_Beret
+    Name: Beret
+    Type: Armor
+    Buy: 20
+    Weight: 200
+    Defense: 5
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 70
+    View: 224
+  - Id: 8171
+    AegisName: Navy_Hat
+    Name: Navy_Hat
+    Type: Armor
+    Buy: 20
+    Weight: 200
+    Defense: 5
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 60
+    View: 792
+  - Id: 8172
+    AegisName: Fancy_Highcap
+    Name: Fancy_Highcap
+    Type: Armor
+    Buy: 20
+    Weight: 200
+    Defense: 5
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 60
+    View: 830
+  - Id: 8173
+    AegisName: Gemmed_Crown
+    Name: Gemmed_Crown
+    Type: Armor
+    Buy: 20
+    Weight: 200
+    Defense: 5
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 70
+    View: 88
+  - Id: 8174
+    AegisName: Golden_Gear
+    Name: Golden_Gear
+    Type: Armor
+    Buy: 20
+    Weight: 200
+    Defense: 5
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 70
+    View: 30
+  - Id: 8175
+    AegisName: Remover_Hat
+    Name: Remover_Hat
+    Type: Armor
+    Buy: 20
+    Weight: 200
+    Defense: 5
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 65
+    View: 655

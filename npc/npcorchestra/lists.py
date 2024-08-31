@@ -28,9 +28,9 @@ mobs_second_job = ["JOB_KNIGHT","JOB_PRIEST","JOB_WIZARD","JOB_BLACKSMITH","JOB_
 mobs_advanced_job = ["JOB_LORD_KNIGHT","JOB_HIGH_PRIEST","JOB_HIGH_WIZARD","JOB_WHITESMITH","JOB_SNIPER","JOB_ASSASSIN_CROSS","JOB_PALADIN","JOB_CHAMPION","JOB_PROFESSOR","JOB_STALKER","JOB_CREATOR","JOB_CLOWN","JOB_GYPSY"]
 mobs_third_job = ["JOB_RUNE_KNIGHT","JOB_WARLOCK","JOB_RANGER","JOB_ARCH_BISHOP","JOB_MECHANIC","JOB_GUILLOTINE_CROSS","JOB_ROYAL_GUARD","JOB_SORCERER","JOB_MINSTREL","JOB_WANDERER","JOB_SURA","JOB_GENETIC","JOB_SHADOW_CHASER"]
 
-top_headgears = ["Goggle"]
+top_headgears = ["Goggles"]
  
-mid_headgears = ["Opera_Ghost_Mask"]
+mid_headgears = ["Opera_Mask"]
 
 low_headgears = ["Choco_Donut_In_Mouth"]
 
