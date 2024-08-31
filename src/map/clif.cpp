@@ -19311,7 +19311,7 @@ void clif_parse_sale_search( int fd, struct map_session_data* sd ){
 
 /// Reply if an item was successfully put on sale or not.
 /// 09af <result>.W (ZC_ACK_APPLY_BARGAIN_SALE_ITEM)
-void clif_sale_add_reply( struct map_session_data* sd, enum e_sale_add_result result ){
+void clif_sale_add_reply( struct map_session_data* sd, uint16 result ){
 #if PACKETVER_SUPPORTS_SALES
 	int fd = sd->fd;
 

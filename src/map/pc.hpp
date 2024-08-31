@@ -1371,6 +1371,7 @@ struct sg_data {
 	char feel_var[NAME_LENGTH];
 	char hate_var[NAME_LENGTH];
 	bool (*day_func)(void);
+	sg_data(){}
 };
 const struct sg_data sg_info[MAX_PC_FEELHATE];
 
