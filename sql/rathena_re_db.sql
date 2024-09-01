@@ -832,7 +832,7 @@ CREATE TABLE `login` (
 INSERT INTO `login` (`account_id`, `userid`, `user_pass`, `sex`, `email`, `group_id`, `state`, `unban_time`, `expiration_time`, `logincount`, `lastlogin`, `last_ip`, `birthdate`, `character_slots`, `pincode`, `pincode_change`, `vip_time`, `old_group`, `web_auth_token`, `web_auth_token_enabled`) VALUES
 (1, 'inter_user', 'fba1bf81cf214153dcdd484b02520be4', 'S', 'athena@athena.com', 0, 0, 0, 0, 4166, '2023-04-17 13:51:50', '127.0.0.1', NULL, 0, '', 0, 0, 0, NULL, 0),
 (2000000, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'M', 'a@a.com', 99, 0, 0, 0, 198, '2023-04-16 12:11:39', '127.0.0.1', NULL, 15, '', 0, 0, 0, NULL, 0),
-(2000001, 'joangr', 'e10adc3949ba59abbe56e057f20f883e', 'M', 'a@a.com', 99, 0, 0, 0, 7119, '2023-04-17 14:41:56', '127.0.0.1', NULL, 15, '', 0, 0, 0, '4ac975eb6587fbed', 0);
+(2000001, 'joangr', 'e10adc3949ba59abbe56e057f20f883e', 'M', 'a@a.com', 1, 0, 0, 0, 7119, '2023-04-17 14:41:56', '127.0.0.1', NULL, 15, '', 0, 0, 0, '4ac975eb6587fbed', 0);
 
 
 

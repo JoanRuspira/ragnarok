@@ -188,23 +188,6 @@ Body:
     EquipLevelMin: 35
     Refineable: true
     View: 29
-  - Id: 8011
-    AegisName: Sweet_Gent
-    Name: Sweet Gent
-    Type: Armor
-    Buy: 30000
-    Weight: 200
-    Defense: 5
-    Slots: 1
-    Jobs:
-      All: true
-      Novice: false
-    Locations:
-      Head_Top: true
-    ArmorLevel: 1
-    EquipLevelMin: 35
-    Refineable: true
-    View: 29
   - Id: 8012
     AegisName: Old_Romance
     Name: Romantic Gent
@@ -765,8 +748,8 @@ Body:
     Slots: 1
     Jobs:
       Acolyte: true
-      Priest: false
-      Monk: false
+      Priest: true
+      Monk: true
     Locations:
       Head_Top: true
     Refineable: true
@@ -782,8 +765,8 @@ Body:
     Slots: 1
     Jobs:
       Acolyte: true
-      Priest: false
-      Monk: false
+      Priest: true
+      Monk: true
     Locations:
       Head_Top: true
     Refineable: true
@@ -799,8 +782,8 @@ Body:
     Slots: 1
     Jobs:
       Acolyte: true
-      Priest: false
-      Monk: false
+      Priest: true
+      Monk: true
     Locations:
       Head_Top: true
     Refineable: true
@@ -816,8 +799,8 @@ Body:
     Slots: 1
     Jobs:
       Acolyte: true
-      Priest: false
-      Monk: false
+      Priest: true
+      Monk: true
     Locations:
       Head_Top: true
     Refineable: true

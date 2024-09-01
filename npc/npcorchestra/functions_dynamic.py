@@ -184,21 +184,65 @@ def buildMobAvail(mob_id, mob_name):
     mob_avail += "    ClothColor: " + str(random.randint(0, 3)) + "\n"
     mob_avail += "    Weapon: Gladius\n"
     mob_avail += "    Shield: Guard\n"
-
-    mob_avail = build_headgear_section(mob_avail)
+    
+    mob_avail = build_headgear_section(mob_avail, mob_name)
     mob_avail = build_special_options_section(mob_avail, mob_name)
 
     return mob_avail
 
-def build_headgear_section(mob_avail):
+def build_headgear_section(mob_avail, mob_name):
     has_headgear = random.randint(0, 9)
+    pool_top_headgears = []
+    pool_mid_headgears = mid_headgears
+    pool_low_headgears = low_headgears
+    if (mob_name == "JOB_NOVICE"):
+        return mob_avail
+    if (mob_name == "JOB_SWORDMAN"):
+        pool_top_headgears = top_headgears_1stJob + top_headgears_swordsman
+    if (mob_name == "JOB_THIEF"):
+        pool_top_headgears = top_headgears_1stJob + top_headgears_thief
+    if (mob_name == "JOB_MAGE"):
+        pool_top_headgears = top_headgears_1stJob + top_headgears_magician
+    if (mob_name == "JOB_MERCHANT"):
+        pool_top_headgears = top_headgears_1stJob + top_headgears_merchant
+    if (mob_name == "JOB_ARCHER"):
+        pool_top_headgears = top_headgears_1stJob + top_headgears_archer
+    if (mob_name == "JOB_ACOLYTE"):
+        pool_top_headgears = top_headgears_1stJob + top_headgears_acolyte
+    if (mob_name == "JOB_KNIGHT" or mob_name == "JOB_LORD_KNIGHT"):
+        pool_top_headgears = top_headgears_1stJob + top_headgears_2ndJob + top_headgears_swordsman + top_headgears_knight
+    if (mob_name == "JOB_CRUSADER" or mob_name == "JOB_PALADIN"):
+        pool_top_headgears = top_headgears_1stJob + top_headgears_2ndJob + top_headgears_swordsman + top_headgears_crusader
+    if (mob_name == "JOB_ASSASSIN" or mob_name == "JOB_ASSASSIN_CROSS"):
+        pool_top_headgears = top_headgears_1stJob + top_headgears_2ndJob + top_headgears_thief + top_headgears_assassin
+    if (mob_name == "JOB_ROGUE" or mob_name == "JOB_STALKER"):
+        pool_top_headgears = top_headgears_1stJob + top_headgears_2ndJob + top_headgears_thief + top_headgears_rogue
+    if (mob_name == "JOB_WIZARD" or mob_name == "JOB_HIGH_WIZARD"):
+        pool_top_headgears = top_headgears_1stJob + top_headgears_2ndJob + top_headgears_magician + top_headgears_wizard
+    if (mob_name == "JOB_SAGE" or mob_name == "JOB_PROFESSOR"):
+        pool_top_headgears = top_headgears_1stJob + top_headgears_2ndJob + top_headgears_magician + top_headgears_sage
+    if (mob_name == "JOB_BLACKSMITH" or mob_name == "JOB_WHITESMITH"):
+        pool_top_headgears = top_headgears_1stJob + top_headgears_2ndJob + top_headgears_merchant + top_headgears_blacksmith
+    if (mob_name == "JOB_ALCHEMIST" or mob_name == "JOB_CREATOR"):
+        pool_top_headgears = top_headgears_1stJob + top_headgears_2ndJob + top_headgears_merchant + top_headgears_alchemist
+    if (mob_name == "JOB_HUNTER" or mob_name == "JOB_SNIPER"):
+        pool_top_headgears = top_headgears_1stJob + top_headgears_2ndJob + top_headgears_archer + top_headgears_hunter
+    if (mob_name == "JOB_BARD" or mob_name == "JOB_CLOWN" or mob_name == "JOB_DANCER" or mob_name == "JOB_GYPSY"):
+        pool_top_headgears = top_headgears_1stJob + top_headgears_2ndJob + top_headgears_archer + top_headgears_bard
+    if (mob_name == "JOB_PRIEST" or mob_name == "JOB_HIGH_PRIEST"):
+        pool_top_headgears = top_headgears_1stJob + top_headgears_2ndJob + top_headgears_acolyte + top_headgears_priest
+    if (mob_name == "JOB_MONK" or mob_name == "JOB_CHAMPION"):
+        pool_top_headgears = top_headgears_1stJob + top_headgears_2ndJob + top_headgears_acolyte + top_headgears_monk
+
     if(has_headgear not in [9]):
-        mob_avail += "    HeadTop: " + random.choice(top_headgears) + "\n"
+        mob_avail += "    HeadTop: " + random.choice(pool_top_headgears) + "\n"
     if(has_headgear in [0,1,2,3,4]):
-        mob_avail += "    HeadMid: " + random.choice(mid_headgears) + "\n"
+        mob_avail += "    HeadMid: " + random.choice(pool_mid_headgears) + "\n"
     if(has_headgear in [5,6,7,8,9]):
-        mob_avail += "    HeadLow: " + random.choice(low_headgears) + "\n"
+        mob_avail += "    HeadLow: " + random.choice(pool_low_headgears) + "\n"
     return mob_avail
+
+
 
 def build_special_options_section(mob_avail, mob_name):
     
