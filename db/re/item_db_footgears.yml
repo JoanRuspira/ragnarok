@@ -585,7 +585,7 @@ Body:
     ArmorLevel: 1
     Refineable: true
     Script: |
-      bonus bMAtk,20;
+      bonus bMatk,20;
   - Id: 2437
     AegisName: Satin_Boots
     Name: Boots
@@ -1065,7 +1065,7 @@ Body:
     EquipLevelMin: 45
     Refineable: true
     Script: |
-      bonus bMAtk,20;
+      bonus bMatk,20;
   - Id: 2454
     AegisName: Variant_Greaves
     Name: Greaves
@@ -1459,7 +1459,7 @@ Body:
     EquipLevelMin: 70
     Script: |
       bonus bAtkRate,10;
-      bonus bMAtkRate,10;
+      bonus bMatkRate,10;
   - Id: 2476
     AegisName: White_Wing_Boots
     Name: Boots

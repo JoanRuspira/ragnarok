@@ -40,22 +40,23 @@ top_headgears_archer = ["Stripe_Band","Blue_Band","Indian_Fillet","Apple_of_Arch
 top_headgears_acolyte = ["Acolyte_Cap","Holy_Bonnet","Biretta","White_Scarf","Goggles"]
 
 
-top_headgears_knight = ["Bone_Helm","Bullock_Helm","Dragoon_Helm","Aqua_Helm","Goat_Helm","Giant_Helm","Runic_Helm","Khalitzburg_Helm","Baphomet_Horns","Dragon_Skull"]
+top_headgears_knight = ["Bone_Helm","Bullock_Helm","Dragoon_Helm","Aqua_Helm","Goat_Helm","Giant_Helm","Runic_Helm","Khalitzburg_Helm","Baphomet_Horns","Dragon_Skull","Rune_Circlet"]
 top_headgears_crusader = ["Bone_Helm","Cross_Helm","Bullock_Helm","Aqua_Helm","Goibne_Helm","Valkyrie_Helm","Giant_Helm","Runic_Helm","Orc_Hero_Helm","Baphomet_Horns","Flying_Angel","Flying_Angel","Angel_Feather_Hat","Barrel_Helm"]
-top_headgears_assassin = ["Hot_Blooded_Bandana","Satgat","Cap_Blindness","Helm_of_Darkness","Bone_Crown","Dragon_Skull"]
-top_headgears_rogue = ["Hot_Blooded_Bandana","Morpheus_Bandana","Cap_Blindness","Jolly_Roger","Red_Wing_Hat","Satgat", "Skull_Cap"]
-top_headgears_wizard = ["Rune_Circlet","Sapphire_Circlet","Emerald_Circlet","Levitation_Crown","Azure_Circlet","Magic_Eyes","Star_Sparkling","Spell_Hat","Necromancer_Hood"]
-top_headgears_sage = ["Rune_Circlet","Sapphire_Circlet","Emerald_Circlet","Levitation_Crown","Azure_Circlet","Memory_Hat","Mustang_Hat","Cap_Of_Concentration","Dark_Snake_Lord_Hat","PDH_Hat"]
-top_headgears_blacksmith = ["Bone_Helm","Orc_Hero_Helm","Baphomet_Horns","Striking_Hat","White_Cap","Speedster_Cap","Cowboy_Hat","Igni_Cap","Duneyrr_Hat","Gemstone_Hat"]
+top_headgears_assassin = ["Hot_Blooded_Bandana","Satgat","Cap_Blindness","Helm_of_Darkness","Bone_Crown","Dragon_Skull", "Leopard_Skin_Hat"]
+top_headgears_rogue = ["Hot_Blooded_Bandana","Morpheus_Bandana","Cap_Blindness","Jolly_Roger","Red_Wing_Hat","Satgat", "Skull_Cap", "Leopard_Skin_Hat", "Black_Beret"]
+top_headgears_wizard = ["Rune_Circlet","Sapphire_Circlet","Emerald_Circlet","Levitation_Crown","Azure_Circlet","Magic_Eyes","Star_Sparkling","Spell_Hat","Necromancer_Hood","Galaxy_Circlet"]
+top_headgears_sage = ["Rune_Circlet","Sapphire_Circlet","Emerald_Circlet","Levitation_Crown","Azure_Circlet","Memory_Hat","Mustang_Hat","Cap_Of_Concentration","Dark_Snake_Lord_Hat","PDH_Hat","Galaxy_Circlet"]
+top_headgears_blacksmith = ["Bone_Helm","Orc_Hero_Helm","Baphomet_Horns","Striking_Hat","White_Cap","Speedster_Cap","Cowboy_Hat","Igni_Cap","Duneyrr_Hat","Gemstone_Hat","Flameboy_Hat","Cowhide_Hat"]
 top_headgears_alchemist = ["Steampunk_Hat","Striped_Cap","Striking_Hat","Clockwork_Cap","Biological_Cap","Brown_cap","White_Cap","Silk_Earth_Hat","Speedster_Cap","Mechanical_Plant_Hat","Igni_Cap"]
 top_headgears_bard = ["Joken_Jester","Feather_Bonnet","Opera_Angel","Fancy_Opera_Phantom","Feathered_Hat","Celestial_Hat","Minstrel_Hat","Volume_Feather_Hat","Lyrica_Hat","Artist_Beret"]
 top_headgears_hunter = ["Hunting_Goggles","Dream_Whisper","Windproof_Goggles","Hard_Goggles","Wolf_Skin","Camouflage_Goggles","Grand_Peco_Hairdress","Ullr_Cap","Tiger_Skin","Bear_Skin","Dark_Bacillum"]
-top_headgears_priest = ["Mitra","Flying_Angel","Coif","Pope_Crown","Valkyrie_Feather","Hermode_Cap","Anubis_Hat","Light_Dark_Crown","Protection_Feathers","Holy_Night_Hat","Angel_Feather_Hat"]
-top_headgears_monk = ["Flying_Angel","Valkyrie_Feather","Hermode_Cap","Protection_Feathers","Holy_Night_Hat","Tiger_Skin","Morpheus_Bandana","Hot_Blooded_Bandana","Ancient_Dragon","Bear_Skin"]
+top_headgears_priest = ["Mitra","Flying_Angel","Pope_Crown","Noah_Cap","Valkyrie_Feather","Hermode_Cap","Anubis_Hat","Light_Dark_Crown","Christianity_Cap","Holy_Night_Hat","Angel_Feather_Hat"]
+top_headgears_monk = ["Flying_Angel","Valkyrie_Feather","Hermode_Cap","Holy_Night_Hat","Tiger_Skin","Morpheus_Bandana","Hot_Blooded_Bandana","Ancient_Dragon","Bear_Skin"]
 
-mid_headgears = ["Devil_Wing_Ears","Angel_Wing_Ears","Pecopeco_Wing_Ears","Sunglasses","Quality_Sunglasses","Aviator_Sunglasses","Dark_Blinker","Elven_Ears"]
+mid_headgears = ["Devil_Wing_Ears","Angel_Wing_Ears","Pecopeco_Wing_Ears","Sunglasses","Aviator_Sunglasses","Dark_Blinker","Elven_Ears"]
 low_headgears = ["Four_Leaf_Clover_Mouth","Chewing_Gum","Candy_Cane_Mouth","Long_Pipe","Choco_Donut_In_Mouth","Donut_In_Mouth","Crunch_Toast","Smoking_Pipe"
-,"Romantic_Leaf","Romantic_Flower","Romantic_White_Flower","Scarlet_Rose","Spiked_Scarf","Chewed_Pencil"]
+,"Romantic_Leaf","Romantic_Flower","Romantic_White_Flower","Scarlet_Rose","Spiked_Scarf","Chewed_Pencil","Poker_Mouth","Leek_Mouth","Cherry_Blossom_Mouth"
+,"CD_in_Mouth",]
 
 jobs_riding = ["JOB_SWORDMAN", "JOB_MAGE", "JOB_ARCHER", "JOB_ACOLYTE", "JOB_MERCHANT", "JOB_THIEF",
 "JOB_KNIGHT", "JOB_CRUSADER", "JOB_LORD_KNIGHT", "JOB_PALAIN"]

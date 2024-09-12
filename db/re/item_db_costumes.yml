@@ -436,3 +436,69 @@ Body:
       Costume_Head_Low: true
     EquipLevelMin: 40
     View: 1901 
+  - Id: 19028
+    AegisName: Blue_Eyes
+    Name: Blue_Eyes
+    Type: Armor
+    Weight: 100
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Costume_Head_Mid: true
+    EquipLevelMin: 60
+    View: 1456 
+  - Id: 19029
+    AegisName: Malefic_Horns
+    Name: Malefic_Horns
+    Type: Armor
+    Weight: 200
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 75
+    View: 536 
+  - Id: 19030
+    AegisName: Long_Veil
+    Name: Long_Veil
+    Type: Armor
+    Weight: 200
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Costume_Head_Top: true
+    EquipLevelMin: 75
+    View: 1217 

@@ -20,6 +20,8 @@ Body:
     Refineable: true
     EquipLevelMin: 15
     View: 6
+    Script: |
+      bonus bAgi,7;
   - Id: 8002
     AegisName: Cap
     Name: Cap
@@ -36,6 +38,9 @@ Body:
     Refineable: true
     EquipLevelMin: 20
     View: 14
+    Script: |
+      bonus bStr,3;
+      bonus bDex,3;
   - Id: 8003
     AegisName: Fancy_Cap
     Name: Cap
@@ -52,6 +57,9 @@ Body:
     Refineable: true
     EquipLevelMin: 25
     View: 193
+    Script: |
+      bonus bStr,3;
+      bonus bVit,3;   
   - Id: 8004
     AegisName: Magni_Cap
     Name: Magni's Cap
@@ -69,6 +77,8 @@ Body:
     EquipLevelMin: 25
     Refineable: true
     View: 250
+    Script: |
+      bonus bStr,7; 
   - Id: 8005
     AegisName: Carnival_Hat
     Name: Carnival Hat
@@ -86,6 +96,9 @@ Body:
     EquipLevelMin: 25
     Refineable: true
     View: 505
+    Script: |
+      bonus bVit,3;
+      bonus bAgi,3; 
   - Id: 8006
     AegisName: Lucky_Hat
     Name: Lucky Hat
@@ -103,6 +116,8 @@ Body:
     EquipLevelMin: 25
     Refineable: true
     View: 740
+    Script: |
+      bonus bLuk,7;
   - Id: 8007
     AegisName: Hunting_Hat
     Name: Hunting Hat
@@ -120,6 +135,9 @@ Body:
     EquipLevelMin: 30
     Refineable: true
     View: 389
+    Script: |
+      bonus bDex,3;
+      bonus bAgi,3;
   - Id: 8008
     AegisName: Morroc_Hat
     Name: Morroc Hat
@@ -137,6 +155,9 @@ Body:
     EquipLevelMin: 25
     Refineable: true
     View: 362
+    Script: |
+      bonus bLuk,3;
+      bonus bAgi,3;
   - Id: 8009
     AegisName: Louyang_Cap
     Name: Louyang Cap
@@ -154,6 +175,8 @@ Body:
     EquipLevelMin: 25
     Refineable: true
     View: 396
+    Script: |
+      bonus bVit,7;
   - Id: 8010
     AegisName: Sailor_Cap
     Name: Sailor Cap
@@ -171,6 +194,9 @@ Body:
     EquipLevelMin: 25
     Refineable: true
     View: 798
+    Script: |
+      bonus bInt,3;
+      bonus bStr,3;
   - Id: 8011
     AegisName: Sweet_Gent
     Name: Sweet Gent
@@ -188,6 +214,9 @@ Body:
     EquipLevelMin: 35
     Refineable: true
     View: 29
+    Script: |
+      bonus bStr,3;
+      bonus bLuk,3;
   - Id: 8012
     AegisName: Old_Romance
     Name: Romantic Gent
@@ -205,6 +234,9 @@ Body:
     EquipLevelMin: 35
     Refineable: true
     View: 31
+    Script: |
+      bonus bVit,3;
+      bonus bDex,3;
   - Id: 8013
     AegisName: Straw_Hat
     Name: Straw Hat
@@ -222,6 +254,9 @@ Body:
     EquipLevelMin: 35
     Refineable: true
     View: 146
+    Script: |
+      bonus bStr,3;
+      bonus bAgi,3;
   - Id: 8014
     AegisName: Bucket_Hat
     Name: Bucket Hat
@@ -239,6 +274,9 @@ Body:
     EquipLevelMin: 35
     Refineable: true
     View: 195
+    Script: |
+      bonus bVit,3;
+      bonus bLuk,3;
   - Id: 8015
     AegisName: Classic_Hat
     Name: Classic Hat
@@ -256,6 +294,9 @@ Body:
     EquipLevelMin: 35
     Refineable: true
     View: 475
+    Script: |
+      bonus bInt,3;
+      bonus bAgi,3;
   - Id: 8016
     AegisName: Hattah
     Name: Classic Hat
@@ -273,6 +314,9 @@ Body:
     EquipLevelMin: 35
     Refineable: true
     View: 676
+    Script: |
+      bonus bLuk,3;
+      bonus bInt,3;
   - Id: 8017
     AegisName: Ribbon_Straw_Hat
     Name: Ribbon Straw Hat
@@ -290,6 +334,9 @@ Body:
     EquipLevelMin: 35
     Refineable: true
     View: 1181
+    Script: |
+      bonus bVit,3;
+      bonus bInt,3;
   - Id: 8018
     AegisName: Orc_Helmet
     Name: Orc Helmet
@@ -308,6 +355,9 @@ Body:
     EquipLevelMin: 45
     Refineable: true
     View: 86
+    Script: |
+      bonus bAtk,10;
+      bonus bCritical,3;
   - Id: 8019
     AegisName: Morrigan_Helm
     Name: Morrigan Helm
@@ -326,6 +376,8 @@ Body:
     EquipLevelMin: 45
     Refineable: true
     View: 257
+    Script: |
+      bonus bAtk,15;
   - Id: 8020
     AegisName: Vanguard_Helm
     Name: Vanguard Helm
@@ -344,6 +396,8 @@ Body:
     EquipLevelMin: 45
     Refineable: true
     View: 804
+    Script: |
+      bonus bMdef,10;
   - Id: 8021
     AegisName: Helm
     Name: Helm
@@ -362,6 +416,9 @@ Body:
     EquipLevelMin: 45
     Refineable: true
     View: 40
+    Script: |
+      bonus bStr,3;
+      bonus bAtk,15;
   - Id: 8022
     AegisName: Prontera_Guard_Cap
     Name: Prontera Guard Cap
@@ -380,6 +437,8 @@ Body:
     EquipLevelMin: 45
     Refineable: true
     View: 48
+    Script: |
+      bonus bVit,5;
   - Id: 8023
     AegisName: Pirate_Bandana
     Name: Pirate Bandana
@@ -398,6 +457,9 @@ Body:
     EquipLevelMin: 45
     Refineable: true
     View: 74
+    Script: |
+      bonus bLuk,5;
+      bonus bCritical,3;
   - Id: 8024
     AegisName: Sakkat
     Name: Sakkat
@@ -416,6 +478,9 @@ Body:
     EquipLevelMin: 45
     Refineable: true
     View: 67
+    Script: |
+      bonus bAgi,5;
+      bonus bAspdRate,3;
   - Id: 8025
     AegisName: Gangster_Scarf
     Name: Gangster Scarf
@@ -433,6 +498,9 @@ Body:
     EquipLevelMin: 45
     Refineable: false
     View: 369
+    Script: |
+      bonus bAgi,3;
+      bonus bCrit,2;
   - Id: 8026
     AegisName: Mobster_Scarf
     Name: Mobster Scarf
@@ -450,6 +518,9 @@ Body:
     EquipLevelMin: 45
     Refineable: false
     View: 1568
+    Script: |
+      bonus bAtk,5;
+      bonus bCrit,2;
   - Id: 8027
     AegisName: Pirate_Dagger
     Name: Pirate Dagger
@@ -467,6 +538,9 @@ Body:
     EquipLevelMin: 45
     Refineable: false
     View: 327
+    Script: |
+      bonus bAtk,5;
+      bonus bLuk,2;
   - Id: 8028
     AegisName: Circlet
     Name: Circlet
@@ -485,6 +559,9 @@ Body:
     EquipLevelMin: 45
     Refineable: true
     View: 18
+    Script: |
+      bonus bInt,5;
+      bonus bMatk,10;
   - Id: 8029
     AegisName: Grand_Circlet
     Name: Grand Circlet
@@ -503,6 +580,9 @@ Body:
     EquipLevelMin: 45
     Refineable: true
     View: 93 
+    Script: |
+      bonus bDex,5;
+      bonus bMatk,10;
   - Id: 8030
     AegisName: Crown
     Name: Crown
@@ -521,6 +601,9 @@ Body:
     EquipLevelMin: 45
     Refineable: true
     View: 45 
+    Script: |
+      bonus bDex,5;
+      bonus bCastrate,5;
   - Id: 8031
     AegisName: Frigg_Circlet
     Name: Frigg Circlet
@@ -539,6 +622,9 @@ Body:
     EquipLevelMin: 45
     Refineable: true
     View: 251 
+    Script: |
+      bonus bInt,5;
+      bonus bDelayRate,5;
   - Id: 8032
     AegisName: Tiara
     Name: Tiara
@@ -556,7 +642,10 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 45
     Refineable: true
-    View: 19 
+    View: 19
+    Script: |
+      bonus bInt,5;
+      bonus bDex,5;
   - Id: 8033
     AegisName: Sea_Trader_Hat
     Name: Sea Trader Hat
@@ -574,7 +663,10 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 45
     Refineable: true
-    View: 1128 
+    View: 1128
+    Script: |
+      bonus bDex,5;
+      bonus bStr,5;
   - Id: 8034
     AegisName: Trader_Hat
     Name: Trader Hat
@@ -592,7 +684,10 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 45
     Refineable: true
-    View: 236 
+    View: 236
+    Script: |
+      bonus bDex,5;
+      bonus bMatk,10;
   - Id: 8035
     AegisName: Republic_Hat
     Name: Republic Hat
@@ -611,6 +706,9 @@ Body:
     EquipLevelMin: 45
     Refineable: true
     View: 1458 
+    Script: |
+      bonus bAgi,5;
+      bonus bCritical,3;
   - Id: 8036
     AegisName: Boy_Hat
     Name: Boy Hat
@@ -629,6 +727,9 @@ Body:
     EquipLevelMin: 45
     Refineable: true
     View: 102 
+    Script: |
+      bonus bStr,5;
+      bonus bAspdRate,3;  
   - Id: 8037
     AegisName: Ayothaya_Hat
     Name: Ayothaya Hat
@@ -647,6 +748,9 @@ Body:
     EquipLevelMin: 45
     Refineable: true
     View: 334 
+    Script: |
+      bonus bVit,5;
+      bonus bAtk,10; 
   - Id: 8038
     AegisName: Stripe_Band
     Name: Stripe Band
@@ -664,7 +768,10 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 45
     Refineable: true
-    View: 133 
+    View: 133
+    Script: |
+      bonus bFlee,15;
+      bonus bAgi,5; 
   - Id: 8039
     AegisName: Blue_Band
     Name: Blue Band
@@ -683,6 +790,9 @@ Body:
     EquipLevelMin: 45
     Refineable: true
     View: 136
+    Script: |
+      bonus bMaxSP,150;
+      bonus bInt,5;  
   - Id: 8040
     AegisName: Indian_Fillet
     Name: Indian Fillet
@@ -701,6 +811,9 @@ Body:
     EquipLevelMin: 45
     Refineable: true
     View: 155
+    Script: |
+      bonus bMatk,10;
+      bonus bInt,5;    
   - Id: 8041
     AegisName: Apple_of_Archer
     Name: Apple of Archer
@@ -719,6 +832,8 @@ Body:
     EquipLevelMin: 45
     Refineable: true
     View: 72
+    Script: |
+      bonus bDex,7;
   - Id: 8042
     AegisName: Goggles
     Name: Goggles
@@ -738,6 +853,9 @@ Body:
     EquipLevelMin: 45
     Refineable: true
     View: 1
+    Script: |
+      bonus bAgi,5;
+      bonus bLongAtkRate,5;
   - Id: 8043
     AegisName: Acolyte_Cap
     Name: Acolyte Cap
@@ -755,6 +873,9 @@ Body:
     Refineable: true
     EquipLevelMin: 45
     View: 7
+    Script: |
+      bonus bDex,5;
+      bonus bMatk,10;
   - Id: 8044
     AegisName: Holy_Bonnet
     Name: Holy Bonnet
@@ -772,6 +893,9 @@ Body:
     Refineable: true
     EquipLevelMin: 45
     View: 35
+    Script: |
+      bonus bInt,5;
+      bonus bHealPower,5;
   - Id: 8045
     AegisName: Biretta
     Name: Biretta
@@ -789,6 +913,10 @@ Body:
     Refineable: true
     EquipLevelMin: 45
     View: 11
+    Script: |
+      bonus bInt,5;
+      bonus2 bAtkEle,Ele_Holy,5;
+      bonus2 bMagicAtkEle,Ele_Holy,5;
   - Id: 8046
     AegisName: White_Scarf
     Name: White Scarf
@@ -806,6 +934,9 @@ Body:
     Refineable: true
     EquipLevelMin: 45
     View: 343
+    Script: |
+      bonus bAgi,5;
+      bonus bAspdRate,5;  
   - Id: 8047
     AegisName: Western_Grace
     Name: Western Grace
@@ -823,6 +954,9 @@ Body:
     EquipLevelMin: 30
     Refineable: true
     View: 32
+    Script: |
+      bonus bStr,5;
+      bonus bLuk,5;  
   - Id: 8048
     AegisName: Munak_Turban
     Name: Munak Turban
@@ -842,6 +976,8 @@ Body:
     EquipLevelMin: 30
     Refineable: true
     View: 51
+    Script: |
+      bonus bInt,10;  
   - Id: 8049
     AegisName: Bongun_Turban
     Name: Bongun Turban
@@ -860,6 +996,8 @@ Body:
     EquipLevelMin: 30
     Refineable: true
     View: 139
+    Script: |
+      bonus bInt,7;  
   - Id: 8050
     AegisName: Haegoon_Turban
     Name: Haegoon Turban
@@ -877,13 +1015,17 @@ Body:
     EquipLevelMin: 40
     Refineable: true
     View: 375
+    Script: |
+      bonus bInt,5;
+      bonus2 bAtkEle,Ele_Dark,5;
+      bonus2 bMagicAtkEle,Ele_Dark,5;  
   - Id: 8051
     AegisName: Bone_Helm
     Name: Bone Helm
     Type: Armor
     Buy: 30000
     Weight: 1000
-    Defense: 15
+    Defense: 20
     Slots: 1
     Jobs:
       Knight: true
@@ -895,13 +1037,18 @@ Body:
     EquipLevelMin: 55
     Refineable: true
     View: 103
+    Script: |
+      bonus2 bSubEle,Ele_Dark,15;
+      if (getrefine()>5) {
+         bonus bAtk,20;
+      }
   - Id: 8052
     AegisName: Cross_Helm
     Name: Cross Helm
     Type: Armor
     Buy: 30000
     Weight: 1000
-    Defense: 15
+    Defense: 25
     Slots: 1
     Jobs:
       Crusader: true
@@ -912,13 +1059,16 @@ Body:
     EquipLevelMin: 55
     Refineable: true
     View: 203
+    Script: |
+      bonus bVit,5;
+      bonus bHPrecovRate,15;
   - Id: 8053
     AegisName: Bullock_Helm
     Name: Bullock Helm
     Type: Armor
     Buy: 30000
     Weight: 1000
-    Defense: 15
+    Defense: 20
     Slots: 1
     Jobs:
       Knight: true
@@ -930,13 +1080,15 @@ Body:
     EquipLevelMin: 60
     Refineable: true
     View: 322
+    Script: |
+      bonus bAtk,getrefine()*3;
   - Id: 8054
     AegisName: Dragoon_Helm
     Name: Dragoon Helm
     Type: Armor
     Buy: 30000
     Weight: 1000
-    Defense: 15
+    Defense: 20
     Slots: 1
     Jobs:
       Knight: true
@@ -946,13 +1098,18 @@ Body:
     EquipLevelMin: 80
     Refineable: true
     View: 464
+    Script: |
+      bonus2 bSubRace,RC_Dragon,15;
+      if (getrefine()>5) {
+         bonus bMatk,20;
+      }
   - Id: 8055
     AegisName: Aqua_Helm
     Name: Aqua Helm
     Type: Armor
     Buy: 30000
     Weight: 1000
-    Defense: 15
+    Defense: 20
     Slots: 1
     Jobs:
       Knight: true
@@ -964,13 +1121,15 @@ Body:
     EquipLevelMin: 60
     Refineable: true
     View: 512
+    Script: |
+      bonus bMdef,getrefine()*2;
   - Id: 8056
     AegisName: Goat_Helm
     Name: Goat Helm
     Type: Armor
     Buy: 30000
     Weight: 1000
-    Defense: 15
+    Defense: 20
     Slots: 1
     Jobs:
       Knight: true
@@ -980,13 +1139,16 @@ Body:
     EquipLevelMin: 65
     Refineable: true
     View: 531
+    Script: |
+      bonus bLuk,5;
+      bonus bCritical,getrefine();
   - Id: 8057
     AegisName: Goibne_Helm  
     Name: Goibne Helm
     Type: Armor
     Buy: 30000
     Weight: 1000
-    Defense: 15
+    Defense: 25
     Slots: 1
     Jobs:
       Crusader: true
@@ -997,6 +1159,9 @@ Body:
     EquipLevelMin: 65
     Refineable: true
     View: 258
+    Script: |
+      bonus bMaxHPrate,getrefine();
+      bonus2 bSubEle,Ele_Neutral,5;
   - Id: 8058
     AegisName: Valkyrie_Helm  
     Name: Goibne Helm
@@ -1013,13 +1178,20 @@ Body:
     EquipLevelMin: 80
     Refineable: true
     View: 225
+    Script: |
+      bonus2 bAtkEle,Ele_Holy,10;
+      bonus2 bMagicAtkEle,Ele_Holy,10;
+      if (getrefine()>5) {
+        bonus2 bAtkEle,Ele_Holy,10;
+        bonus2 bMagicAtkEle,Ele_Holy,10;
+      }
   - Id: 8059
     AegisName: Giant_Helm  
     Name: Giant Helm
     Type: Armor
     Buy: 30000
     Weight: 1000
-    Defense: 15
+    Defense: 25
     Slots: 1
     Jobs:
       Knight: true
@@ -1031,13 +1203,20 @@ Body:
     EquipLevelMin: 75
     Refineable: true
     View: 1221
+    Script: |
+      bonus bStr,getrefine();
+      bonus bAgi,getrefine();
+      bonus bVit,getrefine();
+      bonus bInt,getrefine();
+      bonus bDex,getrefine();
+      bonus bLuk,getrefine();
   - Id: 8060
     AegisName: Runic_Helm  
     Name: Runic Helm
     Type: Armor
     Buy: 30000
     Weight: 1000
-    Defense: 15
+    Defense: 20
     Slots: 1
     Jobs:
       Knight: true
@@ -1049,13 +1228,16 @@ Body:
     EquipLevelMin: 65
     Refineable: true
     View: 1361
+    Script: |
+      bonus bAgi,5;
+      bonus bAspdRate,3;
   - Id: 8061
     AegisName: Khalitzburg_Helm  
     Name: Khalitzburg Helm
     Type: Armor
     Buy: 30000
     Weight: 1000
-    Defense: 15
+    Defense: 20
     Slots: 1
     Jobs:
       Knight: true
@@ -1065,13 +1247,15 @@ Body:
     EquipLevelMin: 70
     Refineable: true
     View: 1442
+    Script: |
+      bonus bAtkRate,getrefine()*2;
   - Id: 8062
     AegisName: Orc_Hero_Helm  
     Name: Orc Hero
     Type: Armor
     Buy: 30000
     Weight: 1000
-    Defense: 15
+    Defense: 20
     Slots: 1
     Jobs:
       Knight: true
@@ -1083,13 +1267,18 @@ Body:
     EquipLevelMin: 80
     Refineable: true
     View: 178
+    Script: |
+      bonus bVit,getrefine();
+      bonus bAtk,getrefine();
+      bonus2 bSubEle,Ele_Fire,getrefine()*2;
+      bonus2 bSubEle,Ele_Water,getrefine()*2;
   - Id: 8063
     AegisName: Baphomet_Horns  
     Name: Baphomet Horns
     Type: Armor
     Buy: 30000
     Weight: 1000
-    Defense: 15
+    Defense: 20
     Slots: 1
     Jobs:
       Knight: true
@@ -1101,6 +1290,10 @@ Body:
     EquipLevelMin: 80
     Refineable: true
     View: 41
+    Script: |
+      bonus bAtkRate,getrefine();
+      bonus bMatkRate,getrefine();
+      bonus2 bSubEle,Ele_Neutral,getrefine();
   - Id: 8064
     AegisName: Joken_Jester  
     Name: Joker Jester
@@ -1117,6 +1310,10 @@ Body:
     EquipLevelMin: 50
     Refineable: true
     View: 89
+    Script: |
+      bonus bDex,3;
+      bonus bInt,3;
+      bonus bFlee2,25;
   - Id: 8065
     AegisName: Feather_Bonnet
     Name: Feeather Bonnet
@@ -1133,6 +1330,11 @@ Body:
     EquipLevelMin: 50
     Refineable: true
     View: 104
+    Script: |
+      bonus bDex,getrefine();
+      if (getrefine()>5) {
+        bonus bAtk,15;
+      }
   - Id: 8066
     AegisName: Opera_Angel
     Name: Opera Angel
@@ -1151,6 +1353,9 @@ Body:
     EquipLevelMin: 60
     Refineable: true
     View: 394
+    Script: |
+      bonus bInt,getrefine();
+      bonus bHealPower,10;
   - Id: 8067
     AegisName: Fancy_Opera_Phantom
     Name: Fancy Opera Phantom
@@ -1168,6 +1373,12 @@ Body:
     EquipLevelMin: 70
     Refineable: true
     View: 710
+    Script: |
+      bonus bDex,5;
+      if (getrefine()>5) {
+        bonus bMatk,15;
+        bonus bHealPower,5;
+      }
   - Id: 8068
     AegisName: Opera_Phantom
     Name: Opera Phantom
@@ -1183,6 +1394,8 @@ Body:
     EquipLevelMin: 55
     Refineable: false
     View: 128
+    Script: |
+      bonus bMaxSP,50;
   - Id: 8069
     AegisName: Opera_Mask
     Name: Opera Mask
@@ -1199,6 +1412,8 @@ Body:
     EquipLevelMin: 50
     Refineable: false
     View: 68    
+    Script: |
+      bonus bInt,3;
   - Id: 8070
     AegisName: Feathered_Hat
     Name: Feathered Hat
@@ -1214,7 +1429,10 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 60
     Refineable: true
-    View: 466   
+    View: 466  
+    Script: |
+      bonus bDex,getrefine();
+      bonus bLongAtkRate,5;
   - Id: 8071
     AegisName: Celestial_Hat
     Name: Celestial Hat
@@ -1231,6 +1449,9 @@ Body:
     EquipLevelMin: 60
     Refineable: true
     View: 462   
+    Script: |
+      bonus bInt,getrefine();
+      bonus bMatk,10;
   - Id: 8072
     AegisName: Minstrel_Hat
     Name: Minstrel Hat
@@ -1247,6 +1468,12 @@ Body:
     EquipLevelMin: 65
     Refineable: true
     View: 628  
+    Script: |
+      bonus bInt,getrefine()/3;
+      bonus bDex,getrefine()/3;
+      bonus bAgi,getrefine()/3;
+      bonus bAtkRate,getrefine();
+      bonus bMatkRate,getrefine();
   - Id: 8073
     AegisName: Hunting_Goggles
     Name: Hunting Goggles
@@ -1263,7 +1490,10 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 55
     Refineable: true
-    View: 625  
+    View: 625
+    Script: |
+      bonus bDex,3;
+      bonus bLongAtkRate,5;
   - Id: 8074
     AegisName: Dream_Whisper
     Name: Dream Whisper
@@ -1275,12 +1505,14 @@ Body:
     Jobs:
       Hunter: true
     Locations:
-      Head_Mid: true
       Head_Top: true
     ArmorLevel: 1
     EquipLevelMin: 55
     Refineable: true
-    View: 633  
+    View: 633
+    Script: |
+      bonus bInt,3;
+      bonus bMatk,getrefine()*3;
   - Id: 8075
     AegisName: Windproof_Goggles
     Name: Windproof Goggles
@@ -1298,13 +1530,16 @@ Body:
     EquipLevelMin: 60
     Refineable: true
     View: 820  
+    Script: |
+      bonus bAgi,3;
+      bonus bAspdRate,5;
   - Id: 8076
     AegisName: Hard_Goggles
     Name: Hard Goggles
     Type: Armor
     Buy: 30000
     Weight: 200
-    Defense: 7
+    Defense: 10
     Slots: 1
     Jobs:
       Hunter: true
@@ -1315,6 +1550,8 @@ Body:
     EquipLevelMin: 65
     Refineable: true
     View: 1721  
+    Script: |
+      bonus bAtk,getrefine()*3;
   - Id: 8077
     AegisName: Wolf_Skin
     Name: Wolf Skin
@@ -1332,6 +1569,8 @@ Body:
     EquipLevelMin: 70
     Refineable: true
     View: 490  
+    Script: |
+      bonus bMatk,getrefine()*5;
   - Id: 8078
     AegisName: Camouflage_Goggles
     Name: Camouflage Goggles
@@ -1348,6 +1587,9 @@ Body:
     EquipLevelMin: 60
     Refineable: true
     View: 1142  
+    Script: |
+      bonus bAtk,getrefine()*2;
+      bonus bSpeedRate,10;
   - Id: 8079
     AegisName: Volume_Feather_Hat
     Name: Volume Feather Hat
@@ -1364,6 +1606,9 @@ Body:
     EquipLevelMin: 60
     Refineable: true
     View: 1240  
+    Script: |
+      bonus bAtk,15;
+      bonus bMatk,15;
   - Id: 8080
     AegisName: Lyrica_Hat
     Name: Lyrica Hat
@@ -1379,7 +1624,10 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 70
     Refineable: true
-    View: 1126  
+    View: 1126
+    Script: |
+      bonus bDelayRate,getrefine()*2;
+      bonus bCastrate,getrefine()*2;
   - Id: 8081
     AegisName: Grand_Peco_Hairdress
     Name: Grand Peco Hairdress
@@ -1397,6 +1645,12 @@ Body:
     EquipLevelMin: 75
     Refineable: true
     View: 473  
+    Script: |
+      bonus bInt,3;
+      bonus bMatkRate,getrefine();
+      if (getrefine()>6) {
+         bonus bMatk,15;
+      }
   - Id: 8082
     AegisName: Mitra
     Name: Mitra
@@ -1413,6 +1667,9 @@ Body:
     EquipLevelMin: 55
     Refineable: true
     View: 624  
+    Script: |
+      bonus bInt,5;
+      bonus bCastrate,getrefine()*2;
   - Id: 8083
     AegisName: Flying_Angel
     Name: Flying Angel
@@ -1431,9 +1688,12 @@ Body:
     EquipLevelMin: 65
     Refineable: true
     View: 635  
+    Script: |
+      bonus bDex,5;
+      bonus bHealPower,5;
   - Id: 8084
-    AegisName: Coif
-    Name: Coif
+    AegisName: Noah_Cap
+    Name: Noah_Cap
     Type: Armor
     Buy: 30000
     Weight: 200
@@ -1442,12 +1702,14 @@ Body:
     Jobs:
       Priest: true
     Locations:
-      Head_Mid: true
       Head_Top: true
     ArmorLevel: 1
     EquipLevelMin: 60
     Refineable: true
-    View: 176  
+    View: 636  
+    Script: |
+      bonus bDex,getrefine()*2;
+      bonus bInt,getrefine()*2;
   - Id: 8085
     AegisName: Pope_Crown
     Name: Pope Crown
@@ -1463,7 +1725,13 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 80
     Refineable: true
-    View: 1475  
+    View: 1475
+    Script: |
+      bonus bDex,3;
+      bonus bHealPower,5;
+      if (getrefine()>5) {
+         bonus bHealPower,getrefine();
+      }
   - Id: 8086
     AegisName: Ullr_Cap
     Name: Ullr Cap
@@ -1480,6 +1748,10 @@ Body:
     EquipLevelMin: 70
     Refineable: true
     View: 254  
+    Script: |
+      bonus bDex,getrefine();
+      bonus bInt,getrefine();
+      bonus bAgi,getrefine();
   - Id: 8087
     AegisName: Valkyrie_Feather
     Name: Valkyrie Feather
@@ -1497,6 +1769,13 @@ Body:
     EquipLevelMin: 70
     Refineable: true
     View: 300  
+    Script: |
+      bonus bInt,3;
+      bonus2 bAtkEle,Ele_Holy,10;
+      bonus2 bMagicAtkEle,Ele_Holy,10;
+      if (getrefine()>5) {
+        bonus bHealPower,5;
+      }
   - Id: 8088
     AegisName: Hermode_Cap
     Name: Hermode Cap
@@ -1514,6 +1793,10 @@ Body:
     EquipLevelMin: 60
     Refineable: true
     View: 478  
+    Script: |
+      bonus bDex,getrefine();
+      bonus bInt,getrefine();
+      bonus bCastrate,5;
   - Id: 8089
     AegisName: Anubis_Hat
     Name: Anubis Hat
@@ -1531,6 +1814,10 @@ Body:
     EquipLevelMin: 70
     Refineable: true
     View: 485  
+    Script: |
+      bonus bMatk,20;
+      bonus2 bAtkEle,Ele_Dark,10;
+      bonus2 bMagicAtkEle,Ele_Dark,10;
   - Id: 8090
     AegisName: Light_Dark_Crown
     Name: Light Dark Crown
@@ -1546,10 +1833,15 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 75
     Refineable: true
-    View: 988  
+    View: 988
+    Script: |
+      bonus2 bAtkEle,Ele_Dark,getrefine();
+      bonus2 bMagicAtkEle,Ele_Dark,getrefine(); 
+      bonus2 bAtkEle,Ele_Holy,getrefine();
+      bonus2 bMagicAtkEle,Ele_Holy,getrefine();  
   - Id: 8091
-    AegisName: Protection_Feathers
-    Name: Protection Feathers
+    AegisName: Christianity_Cap
+    Name: Christianity_Cap
     Type: Armor
     Buy: 30000
     Weight: 200
@@ -1557,13 +1849,16 @@ Body:
     Slots: 0
     Jobs:
       Priest: true
-      Monk: true
     Locations:
-      Head_Mid: true
+      Head_Top: true
     ArmorLevel: 1
     EquipLevelMin: 70
     Refineable: false
-    View: 1232  
+    View: 1443  
+    Script: |
+      bonus bDex,getrefine();
+      bonus bInt,getrefine();
+      bonus bDelayRate,5;
   - Id: 8092
     AegisName: Holy_Night_Hat
     Name: Holy Night Hat
@@ -1581,6 +1876,9 @@ Body:
     EquipLevelMin: 60
     Refineable: true
     View: 1253  
+    Script: |
+      bonus bInt,3;
+      bonus bMatk,getrefine()*3;
   - Id: 8093
     AegisName: Angel_Feather_Hat
     Name: Angel Feather Hat
@@ -1598,6 +1896,9 @@ Body:
     EquipLevelMin: 65
     Refineable: true
     View: 1470  
+    Script: |
+      bonus bAtk,getrefine()*2;
+      bonus bMatk,getrefine()*2;
   - Id: 8094
     AegisName: Tiger_Skin
     Name: Tiger Skin
@@ -1616,6 +1917,9 @@ Body:
     EquipLevelMin: 70
     Refineable: true
     View: 181  
+    Script: |
+      bonus bAtk,15;
+      bonus bAspdRate,3;
   - Id: 8095
     AegisName: Morpheus_Bandana
     Name: Morpheus Bandana
@@ -1632,7 +1936,10 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 55
     Refineable: true
-    View: 256  
+    View: 256
+    Script: |
+      bonus bMAtk,15;
+      bonus bMaxSPrate,getrefine();  
   - Id: 8096
     AegisName: Hot_Blooded_Bandana
     Name: Hot Blooded Bandana
@@ -1651,6 +1958,9 @@ Body:
     EquipLevelMin: 60
     Refineable: true
     View: 154  
+    Script: |
+      bonus bbAtk,15;
+      bonus bAtkRate,getrefine();
   - Id: 8097
     AegisName: Ancient_Dragon
     Name: Ancient Dragon
@@ -1667,7 +1977,9 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 80
     Refineable: true
-    View: 452  
+    View: 452
+    Script: |
+      bonus bAtkRate,getrefine()*2;  
   - Id: 8098
     AegisName: Bear_Skin
     Name: Bear Skin
@@ -1685,6 +1997,9 @@ Body:
     EquipLevelMin: 65
     Refineable: true
     View: 143  
+    Script: |
+      bonus bAtkRate,5;
+      bonus bMaxHPrate,getrefine();
   - Id: 8099
     AegisName: Jolly_Roger
     Name: Bear Skin
@@ -1701,6 +2016,9 @@ Body:
     EquipLevelMin: 70
     Refineable: true
     View: 962  
+    Script: |
+      bonus bAtkRate,5;
+      bonus bCritical,getrefine();
   - Id: 8100
     AegisName: Dark_Bacillum
     Name: Dark Bacilium
@@ -1717,6 +2035,9 @@ Body:
     EquipLevelMin: 60
     Refineable: true
     View: 809 
+    Script: |
+      bonus bInt,getrefine();
+      bonus bMatk,15;
   - Id: 8101
     AegisName: Red_Wing_Hat
     Name: Red Wing Hat
@@ -1733,6 +2054,9 @@ Body:
     EquipLevelMin: 55
     Refineable: true
     View: 613 
+    Script: |
+      bonus bAspdRate,getrefine();
+      bonus bCritical,3;
   - Id: 8102
     AegisName: Satgat
     Name: Wanderer's Sakkat
@@ -1751,6 +2075,9 @@ Body:
     EquipLevelMin: 60
     Refineable: true
     View: 558 
+    Script: |
+      bonus bAtk,20;
+      bonus bSpeedRate,10;
   - Id: 8103
     AegisName: Skull_Cap
     Name: Sull Cap
@@ -1767,6 +2094,9 @@ Body:
     EquipLevelMin: 65
     Refineable: true
     View: 713 
+    Script: |
+      bonus bInt,3;
+      bonus bMatkRate,getrefine();
   - Id: 8104
     AegisName: Steampunk_Hat
     Name: Steampunk Hat
@@ -1783,6 +2113,9 @@ Body:
     EquipLevelMin: 70
     Refineable: true
     View: 1406 
+    Script: |
+      bonus bDex,3;
+      bonus bAtkRate,getrefine();
   - Id: 8105
     AegisName: Striped_Cap
     Name: Striped Cap
@@ -1799,6 +2132,9 @@ Body:
     EquipLevelMin: 55
     Refineable: true
     View: 1728 
+    Script: |
+      bonus bInt,3;
+      bonus bCastrate,getrefine()*2;
   - Id: 8106
     AegisName: Striking_Hat
     Name: Striking Hat
@@ -1816,6 +2152,9 @@ Body:
     EquipLevelMin: 65
     Refineable: true
     View: 1759 
+    Script: |
+      bonus bAtk,getrefine();
+      bonus bLongAtkRate,5;
   - Id: 8107
     AegisName: Clockwork_Cap
     Name: Clockwork Cap
@@ -1832,6 +2171,9 @@ Body:
     EquipLevelMin: 65
     Refineable: true
     View: 1777 
+    Script: |
+      bonus bInt,5;
+      bonus bHealPower,5; 
   - Id: 8108
     AegisName: Biological_Cap
     Name: Biological Cap
@@ -1848,6 +2190,11 @@ Body:
     EquipLevelMin: 75
     Refineable: true
     View: 1868 
+    Script: |
+      bonus bInt,getrefine();
+      bonus bDex,getrefine();
+      bonus bAtk,getrefine();
+      bonus bMatk,getrefine();
   - Id: 8109
     AegisName: Brown_cap
     Name: Brown Cap
@@ -1864,6 +2211,10 @@ Body:
     EquipLevelMin: 60
     Refineable: true
     View: 1878 
+    Script: |
+      bonus bMatk,20;
+      bonus2 bAtkEle,Ele_Fire,5;
+      bonus2 bMagicAtkEle,Ele_Fire,5;
   - Id: 8110
     AegisName: White_Cap
     Name: White Cap
@@ -1881,6 +2232,9 @@ Body:
     EquipLevelMin: 60
     Refineable: true
     View: 877 
+    Script: |
+      bonus bAspdRate,5;
+      bonus bLongAtkRate,3;
   - Id: 8111
     AegisName: Silk_Earth_Hat
     Name: Silk Earth Hat
@@ -1897,6 +2251,10 @@ Body:
     EquipLevelMin: 65
     Refineable: true
     View: 1078 
+    Script: |
+      bonus bMatkRate,getrefine();
+      bonus2 bAtkEle,Ele_Earth,5;
+      bonus2 bMagicAtkEle,Ele_Earth,5;
   - Id: 8112
     AegisName: Speedster_Cap
     Name: Speedster Cap
@@ -1914,6 +2272,9 @@ Body:
     EquipLevelMin: 65
     Refineable: true
     View: 1076 
+    Script: |
+      bonus bAtk,20;
+      bonus bDelayRate,getrefine()*2;
   - Id: 8113
     AegisName: Mechanical_Plant_Hat
     Name: Mechanical Plant Hat
@@ -1930,6 +2291,10 @@ Body:
     EquipLevelMin: 70
     Refineable: true
     View: 1069 
+    Script: |
+      bonus bMatk,20;
+      bonus2 bAtkEle,Ele_Earth,5;
+      bonus2 bMagicAtkEle,Ele_Earth,5;
   - Id: 8114
     AegisName: Cowboy_Hat
     Name: Cowboy Hat
@@ -1945,7 +2310,10 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 60
     Refineable: true
-    View: 159 
+    View: 159
+    Script: |
+      bonus bAtk,15;
+      bonus bAspdRate,5;
   - Id: 8115
     AegisName: Igni_Cap
     Name: Igni Cap
@@ -1963,6 +2331,12 @@ Body:
     EquipLevelMin: 60
     Refineable: true
     View: 803 
+    Script: |
+      bonus bFlee,15;
+      bonus2 bSubEle,Ele_Neutral,5;
+      if (getrefine()>5) {
+         bonus bLongAtkDef,5;
+      }
   - Id: 8116
     AegisName: Duneyrr_Hat
     Name: Duneyrr Hat
@@ -1978,7 +2352,10 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 80
     Refineable: true
-    View: 639 
+    View: 639
+    Script: |
+      bonus bCritical,getrefine();
+      bonus bAtk,20;
   - Id: 8117
     AegisName: Artist_Beret
     Name: Artist Beret
@@ -1995,13 +2372,16 @@ Body:
     EquipLevelMin: 65
     Refineable: true
     View: 1209 
+    Script: |
+      bonus bAtk,10;
+      bonus bLongAtkRate,3;
   - Id: 8118
     AegisName: Gemstone_Hat
     Name: Gemstone Hat
     Type: Armor
     Buy: 30000
     Weight: 200
-    Defense: 5
+    Defense: 15
     Slots: 1
     Jobs:
       Blacksmith: true
@@ -2010,7 +2390,12 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 65
     Refineable: true
-    View: 866 
+    View: 866
+    Script: |
+      bonus2 bSubEle,Ele_Neutral,5;
+      if (getrefine()>5) {
+         bonus2 bSubEle,Ele_Neutral,getrefine();
+      }
   - Id: 8119
     AegisName: PDH_Hat
     Name: PDH Hat
@@ -2027,6 +2412,12 @@ Body:
     EquipLevelMin: 60
     Refineable: true
     View: 98 
+    Script: |
+      bonus bInt,3;
+      bonus bMatk,15;
+      if (getrefine()>4) {
+         bonus bMatk,5;
+      }
   - Id: 8120
     AegisName: Dark_Snake_Lord_Hat
     Name: PDH Hat
@@ -2043,6 +2434,12 @@ Body:
     EquipLevelMin: 65
     Refineable: true
     View: 372 
+    Script: |
+      bonus bDex,3;
+      bonus bMatk,15;
+      if (getrefine()>4) {
+        bonus bMatkRate,2;
+      }
   - Id: 8121
     AegisName: Cap_Of_Concentration
     Name: Cap of Concentration
@@ -2059,6 +2456,12 @@ Body:
     EquipLevelMin: 55
     Refineable: true
     View: 157 
+    Script: |
+      bonus bDex,3;
+      bonus bCastrate,5;
+      if (getrefine()>6) {
+        bonus bCastrate,5;
+      }
   - Id: 8122
     AegisName: Mustang_Hat
     Name: Mustang Hat
@@ -2074,7 +2477,10 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 70
     Refineable: true
-    View: 771 
+    View: 771
+    Script: |
+      bonus bAtk,20;
+      bonus bAspdRate,getrefine();
   - Id: 8123
     AegisName: Rune_Circlet
     Name: Rune Circlet
@@ -2086,12 +2492,17 @@ Body:
     Jobs:
       Wizard: true
       Sage: true
+      Knight: true
     Locations:
       Head_Top: true
     ArmorLevel: 1
     EquipLevelMin: 55
     Refineable: true
     View: 623 
+    Script: |
+      bonus bMatkRate,getrefine();
+      bonus bInt, 3;
+      bonus bStr, 3;
   - Id: 8124
     AegisName: Sapphire_Circlet
     Name: Sapphire Circlet
@@ -2099,16 +2510,20 @@ Body:
     Buy: 30000
     Weight: 200
     Defense: 3
-    Slots: 1
+    Slots:   1
     Jobs:
       Wizard: true
       Sage: true
     Locations:
+      Head_Mid: true
       Head_Top: true
     ArmorLevel: 1
     EquipLevelMin: 65
     Refineable: true
     View: 509 
+    Script: |
+      bonus bMatk,15;
+      bonus bDelayRate,5;
   - Id: 8125
     AegisName: Emerald_Circlet
     Name: Emerald Circlet
@@ -2121,11 +2536,15 @@ Body:
       Wizard: true
       Sage: true
     Locations:
+      Head_Mid: true
       Head_Top: true
     ArmorLevel: 1
     EquipLevelMin: 60
     Refineable: true
-    View: 566 
+    View: 566
+    Script: |
+      bonus bMatk,15;
+      bonus bCastrate,5;
   - Id: 8126
     AegisName: Levitation_Crown
     Name: Levitation Crown
@@ -2143,6 +2562,13 @@ Body:
     EquipLevelMin: 60
     Refineable: true
     View: 594 
+    Script: |
+      bonus bDelayRate,5;
+      bonus bCastrate,5;
+      if (getrefine()>7) {
+          bonus bDelayRate,5;
+          bonus bCastrate,5;
+      }
   - Id: 8127
     AegisName: Memory_Hat
     Name: Memory Hat
@@ -2160,6 +2586,9 @@ Body:
     EquipLevelMin: 65
     Refineable: true
     View: 1454 
+    Script: |
+      bonus bInt,3;
+      bonus bDelayRate,getrefine();
   - Id: 8128
     AegisName: Azure_Circlet
     Name: Azure Circlet
@@ -2178,6 +2607,12 @@ Body:
     EquipLevelMin: 75
     Refineable: true
     View: 618 
+    Script: |
+      bonus bMatkRate,getrefine();
+      bonus bInt,3;
+      if (getrefine()>6) {
+         bonus bMatk,getrefine()*2;
+      }
   - Id: 8129
     AegisName: Magic_Eyes
     Name: Magic Eyes
@@ -2194,6 +2629,13 @@ Body:
     EquipLevelMin: 65
     Refineable: true
     View: 209 
+    Script: |
+      bonus bInt,getrefine();
+      bonus bDex,getrefine();
+      if (getrefine()>6) {
+        bonus bInt,3;
+        bonus bDex,3;
+      }
   - Id: 8130
     AegisName: Star_Sparkling
     Name: Star_Sparkling
@@ -2210,6 +2652,15 @@ Body:
     EquipLevelMin: 55
     Refineable: true
     View: 36 
+    Script: |
+      bonus2 bAtkEle,Ele_Fire,5;
+      bonus2 bMagicAtkEle,Ele_Fire,5;
+      bonus2 bAtkEle,Ele_Water,5;
+      bonus2 bMagicAtkEle,Ele_Water,5;
+      bonus2 bAtkEle,Ele_Wind,5;
+      bonus2 bMagicAtkEle,Ele_Wind,5;
+      bonus2 bAtkEle,Ele_Earth,5;
+      bonus2 bMagicAtkEle,Ele_Earth,5;
   - Id: 8131
     AegisName: Spell_Hat
     Name: Spell Hat
@@ -2226,6 +2677,9 @@ Body:
     EquipLevelMin: 60
     Refineable: true
     View: 1023 
+    Script: |
+      bonus bInt,5;
+      bonus bMatk,getrefine()*2;
   - Id: 8132
     AegisName: Necromancer_Hood
     Name: Necromancer Hood
@@ -2244,13 +2698,18 @@ Body:
     EquipLevelMin: 75
     Refineable: true
     View: 491 
+    Script: |
+      bonus2 bAtkEle,Ele_Ghost,10;
+      bonus2 bMagicAtkEle,Ele_Ghost,10;
+      bonus2 bAtkEle,Ele_Dark,10;
+      bonus2 bMagicAtkEle,Ele_Dark,10;
   - Id: 8133
     AegisName: Barrel_Helm
     Name: Barrel Helm
     Type: Armor
     Buy: 30000
     Weight: 200
-    Defense: 15
+    Defense: 30
     Slots: 1
     Jobs:
       Crusader: true
@@ -2261,7 +2720,12 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 70
     Refineable: true
-    View: 1498 
+    View: 1498
+    Script: |
+      bonus2 bSubEle,Ele_Neutral,5;
+      if (getrefine()>4) {
+         bonus bLongAtkDef,getrefine();
+      }
   - Id: 8134
     AegisName: Magic_Stone_Hat
     Name: Magic_Stone_Hat
@@ -2278,6 +2742,10 @@ Body:
     EquipLevelMin: 65
     Refineable: true
     View: 630 
+    Script: |
+      bonus bDex,3;
+      bonus bAtk,20;
+      bonus bMatk,20;
   - Id: 8135
     AegisName: Cap_Blindness
     Name: Cap_Blindness
@@ -2297,6 +2765,9 @@ Body:
     EquipLevelMin: 70
     Refineable: true
     View: 326 
+    Script: |
+      bonus bCritical,5;
+      bonus bSpeedRate,15;
   - Id: 8136
     AegisName: Helm_of_Darkness
     Name: Helm_of_Darkness
@@ -2315,6 +2786,9 @@ Body:
     EquipLevelMin: 65
     Refineable: true
     View: 233 
+    Script: |
+      bonus bAtk,getrefine()*2;
+      bonus bInt,getrefine();
   - Id: 8137
     AegisName: Bone_Crown
     Name: Bone_Crown
@@ -2332,6 +2806,9 @@ Body:
     EquipLevelMin: 60
     Refineable: true
     View: 1141 
+    Script: |
+      bonus bStr,3;
+      bonus bAtkRate,getrefine();
   - Id: 8138
     AegisName: Dragon_Skull
     Name: Dragon_Skull
@@ -2351,6 +2828,10 @@ Body:
     EquipLevelMin: 75
     Refineable: true
     View: 401
+    Script: |
+      bonus bAtk,getrefine();
+      bonus bMatk,getrefine();
+      bonus bInt,3;
   - Id: 8139
     AegisName: Devil_Wing_Ears
     Name: Devil_Wing_Ears
@@ -2377,6 +2858,9 @@ Body:
     EquipLevelMin: 70
     Refineable: false
     View: 152 
+    Script: |
+      bonus bStr,2;
+      bonus bLuk,2;
   - Id: 8140
     AegisName: Angel_Wing_Ears
     Name: Angel_Wing_Ears
@@ -2403,6 +2887,9 @@ Body:
     EquipLevelMin: 70
     Refineable: false
     View: 158 
+    Script: |
+      bonus bAgi,2;
+      bonus bVit,2;
   - Id: 8141
     AegisName: Pecopeco_Wing_Ears
     Name: Pecopeco_Wing_Ears
@@ -2429,13 +2916,15 @@ Body:
     EquipLevelMin: 60
     Refineable: false
     View: 366 
+    Script: |
+      bonus bInt,2;
+      bonus bDex,2;
   - Id: 8142
     AegisName: Sunglasses
     Name: Sunglasses
     Type: Armor
     Buy: 30000
     Weight: 100
-    Defense: 1
     Jobs:
       All: true
       Novice: false
@@ -2445,13 +2934,14 @@ Body:
     EquipLevelMin: 20
     Refineable: false
     View: 12 
+    Script: |
+      bonus2 bResEff,Eff_Blind,1000;
   - Id: 8143
-    AegisName: Quality_Sunglasses
-    Name: Quality_Sunglasses
+    AegisName: Glasses
+    Name: Glasses
     Type: Armor
     Buy: 30000
     Weight: 100
-    Defense: 1
     Jobs:
       All: true
       Novice: false
@@ -2460,7 +2950,9 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 30
     Refineable: false
-    View: 26 
+    View: 404 
+    Script: |
+      bonus bInt,3;
   - Id: 8144
     AegisName: Aviator_Sunglasses
     Name: Aviator_Sunglasses
@@ -2477,6 +2969,8 @@ Body:
     EquipLevelMin: 40
     Refineable: false
     View: 92 
+    Script: |
+      bonus2 bResEff,Eff_Blind,500;
   - Id: 8145
     AegisName: Dark_Blinker
     Name: Dark_Blinker
@@ -2503,6 +2997,8 @@ Body:
     EquipLevelMin: 55
     Refineable: false
     View: 187 
+    Script: |
+      bonus2 bResEff,Eff_Stun,500;
   - Id: 8146
     AegisName: Elven_Ears
     Name: Elven_Ears
@@ -2529,6 +3025,8 @@ Body:
     EquipLevelMin: 60
     Refineable: false
     View: 73 
+    Script: |
+      bonus bAgi,3;
   - Id: 8147
     AegisName: Alarm_Mask
     Name: Alarm_Mask
@@ -2582,6 +3080,8 @@ Body:
     EquipLevelMin: 50
     Refineable: false
     View: 571 
+    Script: |
+      bonus bLuk,3;
   - Id: 8149
     AegisName: Chewing_Gum
     Name: Chewing_Gum
@@ -2608,6 +3108,8 @@ Body:
     EquipLevelMin: 55
     Refineable: false
     View: 572 
+    Script: |
+      bonus2 bExpAddClass,Class_All,5;
   - Id: 8150
     AegisName: Candy_Cane_Mouth
     Name: Candy_Cane_Mouth
@@ -2624,6 +3126,8 @@ Body:
     EquipLevelMin: 35
     Refineable: false
     View: 446 
+    Script: |
+      bonus bHPrecovRate,5;
   - Id: 8151
     AegisName: Long_Pipe
     Name: Long_Pipe
@@ -2650,6 +3154,8 @@ Body:
     EquipLevelMin: 60
     Refineable: false
     View: 383 
+    Script: |
+      bonus bLongAtkDef,2;
   - Id: 8152
     AegisName: Choco_Donut_In_Mouth
     Name: Choco Donut In Mouth
@@ -2674,6 +3180,8 @@ Body:
       Head_Low: true
     EquipLevelMin: 60
     View: 653
+    Script: |
+      bonus bMaxHP,150;
   - Id: 8153
     AegisName: Donut_In_Mouth
     Name: Donut_In_Mouth
@@ -2698,6 +3206,9 @@ Body:
       Head_Low: true
     EquipLevelMin: 60
     View: 569
+    Script: |
+      bonus2 bHPRegenRate,5,10000;
+      bonus bMaxHP,100;
   - Id: 8154
     AegisName: Clown_Nose
     Name: Clown_Nose
@@ -2722,6 +3233,8 @@ Body:
       Head_Low: true
     EquipLevelMin: 50
     View: 49
+    Script: |
+      bonus bFlee2,5;
   - Id: 8155
     AegisName: Crunch_Toast
     Name: Crunch_Toast
@@ -2746,6 +3259,8 @@ Body:
       Head_Low: true
     EquipLevelMin: 65
     View: 188
+    Script: |
+      bonus2 bHPRegenRate,10,10000;
   - Id: 8156
     AegisName: Smoking_Pipe
     Name: Smoking_Pipe
@@ -2770,6 +3285,8 @@ Body:
       Head_Low: true
     EquipLevelMin: 65
     View: 55
+    Script: |
+      bonus bVit,3;
   - Id: 8157
     AegisName: Rainbow_Scarf
     Name: Rainbow_Scarf
@@ -2794,6 +3311,8 @@ Body:
       Head_Low: true
     EquipLevelMin: 55
     View: 460
+    Script: |
+      bonus bMatk,5;
   - Id: 8158
     AegisName: Romantic_Leaf
     Name: Romantic_Leaf
@@ -2808,6 +3327,8 @@ Body:
       Head_Low: true
     EquipLevelMin: 30
     View: 57
+    Script: |
+      bonus2 bSubRace,RC_Plant,5;
   - Id: 8159
     AegisName: Romantic_Flower
     Name: Romantic_Flower
@@ -2822,6 +3343,8 @@ Body:
       Head_Low: true
     EquipLevelMin: 30
     View: 56
+    Script: |
+      bonus2 bSubEle,Ele_Earth,5;
   - Id: 8160
     AegisName: Romantic_White_Flower
     Name: Romantic_White_Flower
@@ -2834,8 +3357,10 @@ Body:
       Novice: false
     Locations:
       Head_Low: true
-    EquipLevelMin: 40
+    EquipLevelMin: 30
     View: 259
+    Script: |
+      bonus2 bSubEle,Ele_Earth,5;
   - Id: 8161
     AegisName: Scarlet_Rose
     Name: Scarlet_Rose
@@ -2850,6 +3375,8 @@ Body:
       Head_Low: true
     EquipLevelMin: 50
     View: 534
+    Script: |
+      bonus bStr,3; 
   - Id: 8162
     AegisName: Spiked_Scarf
     Name: Spiked_Scarf
@@ -2874,6 +3401,8 @@ Body:
       Head_Low: true
     EquipLevelMin: 60
     View: 459
+    Script: |
+      bonus bCritical,3; 
   - Id: 8163
     AegisName: Chewed_Pencil
     Name: Chewed_Pencil
@@ -2898,6 +3427,8 @@ Body:
       Head_Low: true
     EquipLevelMin: 60
     View: 555
+    Script: |
+      bonus bDex,3;   
   - Id: 8164
     AegisName: Iron_Chain
     Name: Iron_Chain
@@ -2918,13 +3449,15 @@ Body:
     Type: Armor
     Buy: 20
     Weight: 100
-    Defense: 1
     Jobs:
       Assassin: true
     Locations:
       Head_Low: true
     EquipLevelMin: 70
     View: 180
+    Script: |
+      bonus bAtk,5;
+      bonus bCritical,2;
   - Id: 8166
     AegisName: Owl_Duke_Hat
     Name: Owl_Duke_Hat
@@ -2949,6 +3482,9 @@ Body:
       Head_Top: true
     EquipLevelMin: 60
     View: 982
+    Script: |
+      bonus bAtkRate,getrefine();
+      bonus bMatkRate,getrefine();
   - Id: 8167
     AegisName: Tiraya_Bonnet
     Name: Tiraya_Bonnet
@@ -2973,6 +3509,10 @@ Body:
       Head_Top: true
     EquipLevelMin: 65
     View: 398
+    Script: |
+      bonus bHit,20;
+      bonus bVit, 3;
+      bonus bLuk, 3;
   - Id: 8168
     AegisName: Over_Protector
     Name: Over_Protector
@@ -2997,6 +3537,9 @@ Body:
       Head_Top: true
     EquipLevelMin: 60
     View: 1329
+    Script: |
+      bonus bMaxHPrate,7;
+      bonus bVit,3;
   - Id: 8169
     AegisName: Beret
     Name: Beret
@@ -3021,6 +3564,10 @@ Body:
       Head_Top: true
     EquipLevelMin: 60
     View: 226
+    Script: |
+      bonus bAtk,15;
+      bonus2 bSubRace,RC_DemiHuman,10;
+      bonus2 bSubRace,RC_Player_Human,10;
   - Id: 8170
     AegisName: Feather_Beret
     Name: Beret
@@ -3045,6 +3592,10 @@ Body:
       Head_Top: true
     EquipLevelMin: 70
     View: 224
+    Script: |
+      bonus bAspdRate,5;
+      bonus bAgi,3;
+      bonus bDex,3;
   - Id: 8171
     AegisName: Navy_Hat
     Name: Navy_Hat
@@ -3069,6 +3620,11 @@ Body:
       Head_Top: true
     EquipLevelMin: 60
     View: 792
+    Script: |
+      bonus bStr,2;
+      bonus bInt,2;
+      bonus bDex,2;
+      bonus2 bSubEle,Ele_Water,10;
   - Id: 8172
     AegisName: Fancy_Highcap
     Name: Fancy_Highcap
@@ -3093,6 +3649,10 @@ Body:
       Head_Top: true
     EquipLevelMin: 60
     View: 830
+    Script: |
+      bonus bLuk,3;
+      bonus bAgi,3;
+      bonus bCritical,3;
   - Id: 8173
     AegisName: Gemmed_Crown
     Name: Gemmed_Crown
@@ -3117,6 +3677,9 @@ Body:
       Head_Top: true
     EquipLevelMin: 70
     View: 88
+    Script: |
+      bonus bStr,getrefine()*2;
+      bonus bInt,getrefine()*2;
   - Id: 8174
     AegisName: Golden_Gear
     Name: Golden_Gear
@@ -3141,13 +3704,16 @@ Body:
       Head_Top: true
     EquipLevelMin: 70
     View: 30
+    Script: |
+      bonus bMatk,15;
+      bonus2 bSubEle,Ele_Holy,10;
   - Id: 8175
     AegisName: Remover_Hat
     Name: Remover_Hat
     Type: Armor
     Buy: 20
     Weight: 200
-    Defense: 5
+    Defense: 10
     Jobs:
       Knight: true
       Crusader: true
@@ -3165,3 +3731,223 @@ Body:
       Head_Top: true
     EquipLevelMin: 65
     View: 655
+    Script: |
+      bonus bMdef,10;
+      bonus2 bSubRace,RC_Undead,10;
+  - Id: 8176
+    AegisName: Black_Beret
+    Name: Black_Beret
+    Type: Armor
+    Buy: 20
+    Weight: 200
+    Defense: 5
+    Jobs:
+      Rogue: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 60
+    View: 731
+    Script: |
+      bonus bAgi,3;
+      bonus bLongAtkRate,7;
+  - Id: 8177
+    AegisName: Leopard_Skin_Hat
+    Name: Leopard_Skin_Hat
+    Type: Armor
+    Buy: 20
+    Weight: 200
+    Defense: 5
+    Jobs:
+      Assassin: true
+      Rogue: true
+    Locations:
+      Head_Mid: true
+      Head_Top: true
+    EquipLevelMin: 65
+    View: 1293
+    Script: |
+      bonus bAtk,15;
+      bonus bCritical,3;
+  - Id: 8178
+    AegisName: Lord_of_Death_Helm
+    Name: Lord_of_Death_Helm
+    Type: Armor
+    Buy: 20
+    Weight: 200
+    Defense: 5
+    Jobs:
+      Assassin: true
+    Locations:
+      Head_Low: true
+      Head_Mid: true
+      Head_Top: true
+    EquipLevelMin: 80
+    View: 742
+    Script: |
+      bonus bAtk,getrefine()*2;
+      bonus bAtkRate,getrefine()*2;
+  - Id: 8179
+    AegisName: Flameboy_Hat
+    Name: Flameboy_Hat
+    Type: Armor
+    Buy: 20
+    Weight: 200
+    Defense: 5
+    Jobs:
+      Blacksmith: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 70
+    View: 1075
+    Script: |
+      bonus2 bSubEle,Ele_Neutral,5;
+      bonus2 bSubEle,Ele_Fire,5;
+      if (getrefine()>5) {
+         bonus2 bSubEle,Ele_Fire,getrefine();
+      }
+  - Id: 8180
+    AegisName: Cowhide_Hat
+    Name: Cowhide_Hat
+    Type: Armor
+    Buy: 20
+    Weight: 200
+    Defense: 5
+    Jobs:
+      Blacksmith: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 70
+    View: 819
+    Script: |
+      bonus bAtkRate,5;
+      bonus bAspdRate,getrefine();
+  - Id: 8181
+    AegisName: Galaxy_Circlet
+    Name: Galaxy Circlet
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Defense: 3
+    Slots: 1
+    Jobs:
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Mid: true
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 70
+    Refineable: true
+    View: 725 
+    Script: |
+      bonus bMatk,getrefine()*2;
+      bonus bAtk,getrefine()*2;
+      if (getrefine()>5) {
+        bonus2 bAtkEle,Ele_Neutral,5;
+        bonus2 bMagicAtkEle,Ele_Neutral,5;
+      }
+  - Id: 8182
+    AegisName: CD_in_Mouth
+    Name: CD_in_Mouth
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 0
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 65
+    View: 815
+    Script: |
+      bonus2 bSubRace,RC_Formless,5;
+  - Id: 8183
+    AegisName: Cherry_Blossom_Mouth 
+    Name: Cherry_Blossom_Mouth 
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 0
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 65
+    View: 823
+    Script: |
+      bonus2 bSubRace,RC_Dragon,5;
+  - Id: 8184
+    AegisName: Leek_Mouth 
+    Name: Leek_Mouth 
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 0
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 60
+    View: 824
+    Script: |
+      bonus2 bSubRace,RC_Brute,5;
+  - Id: 8185
+    AegisName: Poker_Mouth 
+    Name: Poker_Mouth 
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 0
+    Jobs:
+      Knight: true
+      Crusader: true
+      Assassin: true
+      Rogue: true
+      Blacksmith: true
+      Alchemist: true
+      Hunter: true
+      BardDancer: true
+      Priest: true
+      Monk: true
+      Wizard: true
+      Sage: true
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 60
+    View: 889
+    Script: |
+      bonus bDex,2;
+      bonus bLuk,2;

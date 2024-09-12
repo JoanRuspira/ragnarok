@@ -118,7 +118,7 @@ Body:
     EquipLevelMin: 40
     Script: |
       bonus bDex,3;
-      bonus bMAtk,10;
+      bonus bMatk,10;
   - Id: 2611
     AegisName: Combo_Battle_Glove
     Name: Glove
@@ -358,7 +358,7 @@ Body:
     EquipLevelMin: 35
     Script: |
       bonus bInt,3;
-      bonus bMAtk,10;
+      bonus bMatk,10;
   - Id: 2626
     AegisName: Gold_Earring
     Name: Earring
@@ -405,7 +405,7 @@ Body:
     EquipLevelMin: 35
     Script: |
       bonus bVit,3;
-      bonus bMAtk,10;
+      bonus bMatk,10;
   - Id: 2629
     AegisName: Guardian_Sword_Necklace
     Name: Necklace
@@ -612,7 +612,7 @@ Body:
     EquipLevelMin: 25
     Script: |
       bonus bLuk,3;
-      bonus bMAtk,10;
+      bonus bMatk,10;
   - Id: 2643
     AegisName: Wood_Rosary
     Name: Rosary
@@ -675,7 +675,7 @@ Body:
     EquipLevelMin: 50
     Script: |
       bonus bStr,3;
-      bonus bMAtk,10;
+      bonus bMatk,10;
   - Id: 2647
     AegisName: Oridecon_Ring
     Name: Ring

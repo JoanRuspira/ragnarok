@@ -97,7 +97,7 @@ Body:
     EquipLevelMin: 20
     Script: |
       bonus bInt,5;
-      bonus bMAtk,getrefine()*5;
+      bonus bMatk,getrefine()*5;
   - Id: 2394
     AegisName: Agenda_Robe
     Name: Agenda Robe
@@ -670,7 +670,7 @@ Body:
     EquipLevelMin: 65
     Script: |
       bonus bAtk,getrefine()*2;
-      bonus bMAtk,getrefine()*2;
+      bonus bMatk,getrefine()*2;
       bonus bInt,3;
       bonus bDex,3;
   - Id: 2367
@@ -710,7 +710,7 @@ Body:
     Refineable: true
     EquipLevelMin: 50
     Script: |
-      bonus bMAtk,10;
+      bonus bMatk,10;
       bonus bHealPower,getrefine()*2;
       bonus bMaxSP,250;
   - Id: 2369
@@ -800,7 +800,7 @@ Body:
     EquipLevelMin: 20
     Script: |
       bonus bInt,5;
-      bonus bMAtk,getrefine()*5;
+      bonus bMatk,getrefine()*5;
   - Id: 2373
     AegisName: Lords_Clothes
     Name: Lord Clothes
@@ -1040,7 +1040,7 @@ Body:
     EquipLevelMin: 30
     Script: |
       bonus bInt,5;
-      bonus bMAtk,getrefine()*5;
+      bonus bMatk,getrefine()*5;
   - Id: 2382
     AegisName: Regia_Plate
     Name: Regia Plate

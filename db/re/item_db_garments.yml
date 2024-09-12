@@ -475,7 +475,7 @@ Body:
     Refineable: true
     EquipLevelMin: 40
     Script: |
-      bonus bMAtk,20;
+      bonus bMatk,20;
   - Id: 2528
     AegisName: Dragon_Scale_Muffler
     Name: Muffler
@@ -652,7 +652,7 @@ Body:
     Refineable: true
     EquipLevelMin: 45
     Script: |
-      bonus bMAtk,20;
+      bonus bMatk,20;
   - Id: 2534
     AegisName: Black_Cape
     Name: Manteau
@@ -1100,7 +1100,7 @@ Body:
     Refineable: true
     EquipLevelMin: 65
     Script: |
-      bonus bMAtk,20;
+      bonus bMatk,20;
   - Id: 2552
     AegisName: Cape_of_Elements
     Name: Muffler

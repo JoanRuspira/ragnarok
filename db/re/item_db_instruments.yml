@@ -16,7 +16,7 @@ Body:
     Jobs:
       BardDancer: true
     Locations:
-      Right_Hand: true
+      Both_Hand: true
     WeaponLevel: 1
     EquipLevelMin: 2
     Refineable: true
@@ -33,7 +33,7 @@ Body:
     Jobs:
       BardDancer: true
     Locations:
-      Right_Hand: true
+      Both_Hand: true
     WeaponLevel: 2
     EquipLevelMin: 14
     Refineable: true
@@ -50,7 +50,7 @@ Body:
     Jobs:
       BardDancer: true
     Locations:
-      Right_Hand: true
+      Both_Hand: true
     WeaponLevel: 2
     EquipLevelMin: 14
     Refineable: true
@@ -66,7 +66,7 @@ Body:
     Jobs:
       BardDancer: true
     Locations:
-      Right_Hand: true
+      Both_Hand: true
     WeaponLevel: 3
     EquipLevelMin: 27
     Refineable: true
@@ -83,7 +83,7 @@ Body:
     Jobs:
       BardDancer: true
     Locations:
-      Right_Hand: true
+      Both_Hand: true
     WeaponLevel: 3
     EquipLevelMin: 27
     Refineable: true
@@ -102,7 +102,7 @@ Body:
     Jobs:
       BardDancer: true
     Locations:
-      Right_Hand: true
+      Both_Hand: true
     WeaponLevel: 3
     EquipLevelMin: 27
     Refineable: true

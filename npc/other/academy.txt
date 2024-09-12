@@ -237,11 +237,7 @@
 	}
 	mes "[Academy Teleporter]";
 	mes "Hello new adventurer!";
-	mes "I offer a free teleport service for novices,";
-	mes "and can send you to one of the cities";
-	mes "containing basic job guilds. I'm excluding";
-	mes "the local Swordman Guild as it is located";
-	mes "here in Izlude.";
+	mes "I offer a free teleport service for novices, and can send you to one of the cities containing basic job guilds. I'm excluding the local Swordman Guild as it is located here in Izlude.";
 	mes "Sound good?";
 	next;
 	switch(select("Yeah!:I'd rather stay here")) {
@@ -250,62 +246,49 @@
 			mes "Excellent! Where would you want";
 			mes "to go?";
 			next;
-			switch(select("Prontera:Payon:Alberta:Morroc:Geffen")) {
+			switch(select("Prontera -> Acolyte Guild:Payon -> Archer Guild:Alberta -> Merchant Guild:Morroc -> Thief Guild:Geffen -> Magician Guild")) {
 				case 1:
 					mes "[Academy Teleporter]";
-					mes "The Acolite Guild is part of";
-					mes "The Prontera church. I'll send you";
-					mes "to Prontera now.";
+					mes "The Acolite Guild is part of the Prontera church. I'll send you to Prontera now.";
 					next;
 					mes "[Academy Teleporter]";
-					mes "I suggest finding a local inn and";
-					mes "saving your respawn there.";
+					mes "I suggest finding a local inn and saving your respawn there.";
 					next;
 					warp "prontera",163,77;
 					close;
 				case 2:
 					mes "[Academy Teleporter]";
-					mes "The Archer Guild is in the ";
-					mes "Archer Village, north of";
-					mes "Payon. I'll send you to Payon now.";
+					mes "The Archer Guild is in the Archer Village, north of Payon. I'll send you to Payon now.";
 					next;
 					mes "[Academy Teleporter]";
-					mes "I suggest finding a local inn and";
-					mes "saving your respawn there.";
+					mes "I suggest finding a local inn and saving your respawn there.";
 					next;
 					warp "payon",175,103;
 					close;
 				case 3:
 					mes "[Academy Teleporter]";
-					mes "The Merchant Guild is located ";
-					mes "in Alberta. I'll send you to Alberta now.";
+					mes "The Merchant Guild is located in Alberta. I'll send you to Alberta now.";
 					next;
 					mes "[Academy Teleporter]";
-					mes "I suggest finding a local inn and";
-					mes "saving your respawn there.";
+					mes "I suggest finding a local inn and saving your respawn there.";
 					next;
 					warp "alberta",30,244;
 					close;
 				case 4:
 					mes "[Academy Teleporter]";
-					mes "The Thief Guild is located ";
-					mes "under the Morroc Pyramids.";
-					mes "I'll send you to Morroc now.";
+					mes "The Thief Guild is located under the Morroc Pyramids. I'll send you to Morroc now.";
 					next;
 					mes "[Academy Teleporter]";
-					mes "I suggest finding a local inn and";
-					mes "saving your respawn there.";
+					mes "I suggest finding a local inn and saving your respawn there.";
 					next;
 					warp "morroc",146,85;
 					close;
 				case 5:
 					mes "[Academy Teleporter]";
-					mes "The Mage Guild is located in Geffen.";
-					mes "I'll send you to Morroc now.";
+					mes "The Mage Guild is located in Geffen. I'll send you to Morroc now.";
 					next;
 					mes "[Academy Teleporter]";
-					mes "I suggest finding a local inn and";
-					mes "saving your respawn there.";
+					mes "I suggest finding a local inn and saving your respawn there.";
 					next;
 					warp "geffen",110,60;
 					close;

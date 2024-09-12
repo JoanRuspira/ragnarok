@@ -399,7 +399,7 @@ Body:
     EquipLevelMin: 75
     Script: |
       bonus bAtkRate,10;
-      bonus bMAtkRate,10;
+      bonus bMatkRate,10;
   - Id: 2119
     AegisName: Spellcaster_Shield
     Name: Spellcaster Shield
@@ -418,7 +418,7 @@ Body:
     View: 3
     EquipLevelMin: 50
     Script: |
-      bonus bMAtk,20;
+      bonus bMatk,20;
   - Id: 2120
     AegisName: Mirror_Shield
     Name: Mirror Shield
@@ -564,7 +564,7 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 80
     Refineable: true
-    View: 4
+    View: 3
     Script: |
       bonus2 bSubEle,Ele_Water,20;
       bonus2 bSubEle,Ele_Fire,20;
