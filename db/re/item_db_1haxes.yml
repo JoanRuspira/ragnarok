@@ -10,23 +10,321 @@ Body:
     SubType: 1hAxe
     Buy: 500
     Weight: 800
-    Attack: 38
+    Attack: 50
+    Range: 1
+    Slots: 0
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Merchant: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 10
+    Refineable: true
+  - Id: 1302
+    AegisName: Axe_
+    Name: Axe
+    Type: Weapon
+    SubType: 1hAxe
+    Buy: 500
+    Weight: 800
+    Attack: 50
+    Range: 1
+    Slots: 4
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Merchant: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 3
+    Refineable: true
+  - Id: 1303
+    AegisName: Cleaver
+    Name: Cleaver
+    Type: Weapon
+    SubType: 1hAxe
+    Buy: 20
+    Weight: 1000
+    Attack: 70
     Range: 1
     Slots: 3
     Jobs:
       Alchemist: true
-      Assassin: true
       Blacksmith: true
-      Crusader: true
-      Knight: true
       Merchant: true
-      Novice: true
-      Rogue: true
-      SuperNovice: true
-      Swordman: true
-      Thief: true
     Locations:
       Right_Hand: true
-    WeaponLevel: 1
-    EquipLevelMin: 3
+    WeaponLevel: 3
+    EquipLevelMin: 20
     Refineable: true
+    Script: |
+      bonus2 bAddRace,RC_Brute,10;
+      bonus2 bMagicAddRace,RC_Brute,10;
+  - Id: 1304
+    AegisName: Guardian_Axe
+    Name: Guardian_Axe
+    Type: Weapon
+    SubType: 1hAxe
+    Buy: 20
+    Weight: 1000
+    Attack: 75
+    Range: 1
+    Slots: 3
+    Defense: 10
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Merchant: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
+  - Id: 1305
+    AegisName: Serrated_Axe
+    Name: Serrated_Axe
+    Type: Weapon
+    SubType: 1hAxe
+    Buy: 20
+    Weight: 1000
+    Attack: 95
+    Range: 1
+    Slots: 2
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus bCritical,5;
+  - Id: 1306
+    AegisName: Orcish_Axe
+    Name: Orcish_Axe
+    Type: Weapon
+    SubType: 1hAxe
+    Buy: 20
+    Weight: 1000
+    Attack: 80
+    Range: 1
+    Slots: 2
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+    Script: |
+      bonus2 bAddRace,RC_DemiHuman,10;
+      bonus2 bAddRace,RC_Player_Human,10;
+      bonus2 bMagicAddRace,RC_DemiHuman,10;
+      bonus2 bMagicAddRace,RC_Player_Human,10;
+  - Id: 1307
+    AegisName: Vecer_Axe
+    Name: Vecer_Axe
+    Type: Weapon
+    SubType: 1hAxe
+    Buy: 20
+    Weight: 800
+    Attack: 50
+    MagicAttack: 95
+    Range: 1
+    Slots: 2
+    Jobs:
+      Alchemist: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+  - Id: 1308
+    AegisName: Windhawk
+    Name: Windhawk
+    Type: Weapon
+    SubType: 1hAxe
+    Buy: 20
+    Weight: 1000
+    Attack: 90
+    Range: 1
+    Slots: 2
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bAspdRate,5;
+  - Id: 1309
+    AegisName: Bloody_Axe
+    Name: Bloody_Axe
+    Type: Weapon
+    SubType: 1hAxe
+    Buy: 20
+    Weight: 1000
+    Attack: 70
+    Range: 1
+    Slots: 3
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 35
+    Refineable: true
+    Script: |
+      bonus bStr, 5;
+      bonus bSpeedRate,10;
+  - Id: 1310
+    AegisName: War_Axe
+    Name: War_Axe
+    Type: Weapon
+    SubType: 1hAxe
+    Buy: 20
+    Weight: 1200
+    Attack: 100
+    Range: 1
+    Slots: 2
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bAtkRate,getrefine();
+  - Id: 1311
+    AegisName: Golden_Wrench
+    Name: Golden_Wrench
+    Type: Weapon
+    SubType: 1hAxe
+    Buy: 20
+    Weight: 1200
+    Attack: 100
+    Range: 1
+    Slots: 2
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bLongAtkRate,getrefine();
+  - Id: 1312
+    AegisName: Buster
+    Name: Buster
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 34000
+    Weight: 1000
+    Attack: 70
+    Range: 1
+    Slots: 0
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Merchant: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
+    Script: |
+      bonus bAtk,getrefine()*2;
+  - Id: 1313
+    AegisName: Buster_
+    Name: Buster
+    Type: Weapon
+    SubType: 1hAxe
+    Buy: 34000
+    Weight: 1000
+    Attack: 70
+    Range: 1
+    Slots: 3
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Merchant: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
+    Script: |
+      bonus bAtk,getrefine()*2;
+  - Id: 1314
+    AegisName: Heart_Breaker
+    Name: Heart_Breaker
+    Type: Weapon
+    SubType: 1hAxe
+    Buy: 34000
+    Weight: 1000
+    Attack: 75
+    Range: 1
+    Slots: 3
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Merchant: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
+    Script: |
+      bonus2 bAddEff,Eff_Stun,500;
+  - Id: 1315
+    AegisName: Light_Epsilon
+    Name: Light_Epsilon
+    Type: Weapon
+    SubType: 1hAxe
+    Buy: 34000
+    Weight: 1000
+    Attack: 50
+    MagicAttack: 55
+    Range: 1
+    Slots: 2
+    Jobs:
+      Alchemist: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bHealPower,10;
+  - Id: 1316
+    AegisName: Sabbath
+    Name: Sabbath
+    Type: Weapon
+    SubType: 1hAxe
+    Buy: 34000
+    Weight: 1000
+    Attack: 90
+    Range: 1
+    Slots: 2
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus2 bComaRace,RC_All,50;

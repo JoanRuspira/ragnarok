@@ -3,24 +3,6 @@ Header:
   Version: 1
 
 Body:
-  - Id: 1410
-    AegisName: Lance
-    Name: Lance
-    Type: Weapon
-    SubType: 2hSpear
-    Buy: 60000
-    Weight: 2500
-    Attack: 185
-    Range: 3
-    Jobs:
-      Crusader: true
-      Knight: true
-      Swordman: true
-    Locations:
-      Both_Hand: true
-    WeaponLevel: 3
-    EquipLevelMin: 33
-    Refineable: true
   - Id: 1451
     AegisName: Guisarme
     Name: Guisarme

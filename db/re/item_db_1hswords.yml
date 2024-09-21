@@ -10,34 +10,85 @@ Body:
     SubType: 1hSword
     Buy: 100
     Weight: 500
-    Attack: 25
+    Attack: 50
     Range: 1
-    Slots: 3
+    Slots: 0
     Jobs:
       Alchemist: true
       Assassin: true
       Blacksmith: true
       Crusader: true
       Knight: true
-      Merchant: true
-      Novice: true
       Rogue: true
-      SuperNovice: true
       Swordman: true
+      Merchant: true
       Thief: true
     Locations:
       Right_Hand: true
-    WeaponLevel: 1
-    EquipLevelMin: 2
+    WeaponLevel: 3
+    EquipLevelMin: 10
     Refineable: true
-  - Id: 1104
+  - Id: 1102
+    AegisName: Sword_
+    Name: Sword
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 100
+    Weight: 500
+    Attack: 50
+    Range: 1
+    Slots: 4
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Rogue: true
+      Swordman: true
+      Merchant: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 10
+    Refineable: true
+  - Id: 1103
     AegisName: Falchion
     Name: Falchion
     Type: Weapon
     SubType: 1hSword
     Buy: 1500
     Weight: 600
-    Attack: 39
+    Attack: 70
+    Range: 1
+    Slots: 0
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Rogue: true
+      Swordman: true
+      Merchant: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 20
+    Refineable: true
+    Script: |
+      bonus2 bAddRace,RC_Formless,10;
+      bonus2 bMagicAddRace,RC_Formless,10;
+  - Id: 1104
+    AegisName: Falchion_
+    Name: Falchion
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 1500
+    Weight: 600
+    Attack: 70
     Range: 1
     Slots: 3
     Jobs:
@@ -46,25 +97,53 @@ Body:
       Blacksmith: true
       Crusader: true
       Knight: true
-      Merchant: true
-      Novice: true
       Rogue: true
-      SuperNovice: true
       Swordman: true
+      Merchant: true
       Thief: true
     Locations:
       Right_Hand: true
-    WeaponLevel: 1
-    EquipLevelMin: 2
+    WeaponLevel: 3
+    EquipLevelMin: 20
     Refineable: true
-  - Id: 1107
+    Script: |
+      bonus2 bAddRace,RC_Formless,10;
+      bonus2 bMagicAddRace,RC_Formless,10;
+  - Id: 1105
     AegisName: Blade
     Name: Blade
     Type: Weapon
     SubType: 1hSword
     Buy: 2900
     Weight: 700
-    Attack: 53
+    Attack: 70
+    Range: 1
+    Slots: 0
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Rogue: true
+      Swordman: true
+      Merchant: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 25
+    Refineable: true
+    Script: |
+      bonus bAtk,getrefine()*2;
+  - Id: 1106
+    AegisName: Blade_
+    Name: Blade
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 2900
+    Weight: 700
+    Attack: 70
     Range: 1
     Slots: 3
     Jobs:
@@ -73,187 +152,275 @@ Body:
       Blacksmith: true
       Crusader: true
       Knight: true
-      Merchant: true
-      Novice: true
       Rogue: true
-      SuperNovice: true
       Swordman: true
+      Merchant: true
       Thief: true
     Locations:
       Right_Hand: true
-    WeaponLevel: 1
-    EquipLevelMin: 2
+    WeaponLevel: 3
+    EquipLevelMin: 25
     Refineable: true
-  - Id: 1110
+    Script: |
+      bonus bAtk,getrefine()*2;
+  - Id: 1107
     AegisName: Lapier
     Name: Rapier
     Type: Weapon
     SubType: 1hSword
     Buy: 10000
-    Weight: 500
-    Attack: 70
+    Weight: 700
+    Attack: 75
     Range: 1
-    Slots: 2
+    Slots: 0
     Jobs:
       Alchemist: true
       Assassin: true
       Blacksmith: true
       Crusader: true
       Knight: true
-      Merchant: true
-      Novice: true
       Rogue: true
-      SuperNovice: true
       Swordman: true
+      Merchant: true
       Thief: true
     Locations:
       Right_Hand: true
-    WeaponLevel: 2
-    EquipLevelMin: 14
+    WeaponLevel: 3
+    EquipLevelMin: 30
     Refineable: true
-  - Id: 1113
+    Script: |
+      bonus2 bAddEff,Eff_Bleeding,1000;
+  - Id: 1108
+    AegisName: Lapier_
+    Name: Rapier
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 10000
+    Weight: 700
+    Attack: 75
+    Range: 1
+    Slots: 3
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Rogue: true
+      Swordman: true
+      Merchant: true
+      Thief: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
+    Script: |
+      bonus2 bAddEff,Eff_Bleeding,1000;
+  - Id: 1109
     AegisName: Scimiter
     Name: Scimitar
     Type: Weapon
     SubType: 1hSword
     Buy: 17000
     Weight: 700
-    Attack: 85
+    Attack: 80
     Range: 1
-    Slots: 2
+    Slots: 3
     Jobs:
       Alchemist: true
-      Assassin: true
-      Blacksmith: true
       Crusader: true
       Knight: true
-      Merchant: true
-      Novice: true
-      Rogue: true
-      SuperNovice: true
-      Swordman: true
-      Thief: true
     Locations:
       Right_Hand: true
-    WeaponLevel: 2
-    EquipLevelMin: 14
+    WeaponLevel: 3
+    EquipLevelMin: 40
     Refineable: true
-  - Id: 1126
+    Script: |
+      bonus bStr,5;
+      bonus bAgi,5;
+  - Id: 1110
     AegisName: Saber
     Name: Saber
     Type: Weapon
     SubType: 1hSword
     Buy: 49000
-    Weight: 1000
-    Attack: 115
+    Weight: 700
+    Attack: 85
     Range: 1
-    Slots: 2
+    Slots: 3
     Jobs:
       Alchemist: true
-      Assassin: true
-      Blacksmith: true
       Crusader: true
       Knight: true
-      Merchant: true
-      Rogue: true
-      Swordman: true
-      Thief: true
     Locations:
       Right_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 27
+    EquipLevelMin: 50
     Refineable: true
-  - Id: 1122
+    Script: |
+      bonus bMatk,getrefine()*2;
+  - Id: 1111
     AegisName: Ring_Pommel_Saber
     Name: Ring Pommel Saber
     Type: Weapon
     SubType: 1hSword
     Buy: 24000
-    Weight: 900
-    Attack: 100
+    Weight: 700
+    Attack: 90
     Range: 1
-    Slots: 2
+    Slots: 3
     Jobs:
       Alchemist: true
-      Assassin: true
-      Blacksmith: true
       Crusader: true
       Knight: true
-      Merchant: true
-      Rogue: true
-      Swordman: true
-      Thief: true
     Locations:
       Right_Hand: true
-    WeaponLevel: 2
-    EquipLevelMin: 14
+    WeaponLevel: 3
+    EquipLevelMin: 55
     Refineable: true
-  - Id: 1123
+    Script: |
+      bonus bCritical,5;
+  - Id: 1112
     AegisName: Haedonggum
     Name: Haedonggum
     Type: Weapon
     SubType: 1hSword
     Buy: 50000
-    Weight: 900
-    Attack: 120
+    Weight: 800
+    Attack: 90
     Range: 1
-    Slots: 1
+    Slots: 2
     Jobs:
-      Alchemist: true
-      Assassin: true
-      Blacksmith: true
       Crusader: true
       Knight: true
-      Merchant: true
-      Rogue: true
-      Swordman: true
-      Thief: true
     Locations:
       Right_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 27
+    EquipLevelMin: 60
     Refineable: true
     Script: |
-      bonus bInt,3;
-  - Id: 1119
+      bonus bInt,5;
+      bonus bMatkRate,getrefine();
+  - Id: 1113
     AegisName: Tsurugi
     Name: Tsurugi
     Type: Weapon
     SubType: 1hSword
     Buy: 51000
-    Weight: 1200
-    Attack: 130
+    Weight: 800
+    Attack: 90
     Range: 1
-    Slots: 1
+    Slots: 2
     Jobs:
-      Alchemist: true
-      Assassin: true
-      Blacksmith: true
       Crusader: true
       Knight: true
-      Merchant: true
-      Rogue: true
-      Swordman: true
-      Thief: true
     Locations:
       Right_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 27
+    EquipLevelMin: 60
     Refineable: true
-  - Id: 1129
+    Script: |
+      bonus bStr,5;
+      bonus bAtkRate,getrefine();
+  - Id: 1114
     AegisName: Flamberge
     Name: Flamberge
     Type: Weapon
     SubType: 1hSword
     Buy: 60000
-    Weight: 1500
-    Attack: 150
+    Weight: 800
+    Attack: 95
     Range: 1
+    Slots: 2
     Jobs:
       Crusader: true
       Knight: true
     Locations:
       Right_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 27
+    EquipLevelMin: 65
     Refineable: true
+    Script: |
+      bonus bAspdRate,5;
+  - Id: 1115
+    AegisName: Holy_Avenger
+    Name: Holy_Avenger
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 60000
+    Weight: 1000
+    Attack: 100
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus2 bAtkEle,Ele_Holy,10;
+      bonus2 bMagicAtkEle,Ele_Holy,10;
+  - Id: 1116
+    AegisName: Jeweled_Sword
+    Name: Jeweled_Sword
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 60000
+    Weight: 1000
+    Attack: 100
+    Range: 1
+    Slots: 2
+    Jobs:
+      Knight: true
+      Crusader: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bStr,getrefine();
+      bonus bInt,getrefine();
+  - Id: 1117
+    AegisName: Knightguard_Sword
+    Name: Knightguard_Sword
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 60000
+    Weight: 1000
+    Attack: 100
+    Range: 1
+    Slots: 2
+    Jobs:
+      Knight: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus2 bAtkEle,Ele_Fire,10;
+      bonus2 bMagicAtkEle,Ele_Fire,10;
+  - Id: 1118
+    AegisName: Star_Dust_Blade
+    Name: Star_Dust_Blade
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 60000
+    Weight: 1200
+    Attack: 130
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bUnbreakableWeapon;

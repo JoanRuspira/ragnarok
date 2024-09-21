@@ -4,90 +4,257 @@ Header:
 
 Body:
   - Id: 1351
-    AegisName: Battle_Axe
-    Name: Battle Axe
-    Type: Weapon
-    SubType: 2hAxe
-    Buy: 5400
-    Weight: 1500
-    Attack: 80
-    Range: 1
-    Slots: 3
-    Jobs:
-      Alchemist: true
-      Blacksmith: true
-      Crusader: true
-      Knight: true
-      Merchant: true
-      Swordman: true
-    Locations:
-      Both_Hand: true
-    WeaponLevel: 1
-    EquipLevelMin: 3
-    Refineable: true
-  - Id: 1354
-    AegisName: Hammer
-    Name: Hammer
-    Type: Weapon
-    SubType: 2hAxe
-    Buy: 15500
-    Weight: 2000
-    Attack: 120
-    Range: 1
-    Slots: 2
-    Jobs:
-      Alchemist: true
-      Blacksmith: true
-      Crusader: true
-      Knight: true
-      Merchant: true
-      Swordman: true
-    Locations:
-      Both_Hand: true
-    WeaponLevel: 2
-    EquipLevelMin: 16
-    Refineable: true
-  - Id: 1357
-    AegisName: Buster
-    Name: Buster
-    Type: Weapon
-    SubType: 2hAxe
-    Buy: 34000
-    Weight: 2200
-    Attack: 155
-    Range: 1
-    Slots: 1
-    Jobs:
-      Alchemist: true
-      Blacksmith: true
-      Crusader: true
-      Knight: true
-      Merchant: true
-      Swordman: true
-    Locations:
-      Both_Hand: true
-    WeaponLevel: 3
-    EquipLevelMin: 30
-    Refineable: true
-  - Id: 1360
     AegisName: Two_Handed_Axe
     Name: Two-Handed Axe
     Type: Weapon
     SubType: 2hAxe
     Buy: 55000
-    Weight: 2500
-    Attack: 185
+    Weight: 2000
+    Attack: 120
     Range: 1
-    Slots: 1
+    Slots: 0
     Jobs:
-      Alchemist: true
       Blacksmith: true
-      Crusader: true
-      Knight: true
-      Merchant: true
-      Swordman: true
     Locations:
       Both_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 30
+    EquipLevelMin: 50
+    Refineable: true
+  - Id: 1352
+    AegisName: Two_Handed_Axe_
+    Name: Two-Handed Axe
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 55000
+    Weight: 2000
+    Attack: 120
+    Range: 1
+    Slots: 2
+    Jobs:
+      Blacksmith: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+  - Id: 1353
+    AegisName: Great_Axe
+    Name: Great_Axe
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 55000
+    Weight: 2000
+    Attack: 120
+    Range: 1
+    Slots: 2
+    Jobs:
+      Blacksmith: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+  - Id: 1354
+    AegisName: Battle_Axe
+    Name: Battle_Axe
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 55000
+    Weight: 2000
+    Attack: 120
+    Range: 1
+    Slots: 0
+    Jobs:
+      Blacksmith: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+  - Id: 1355
+    AegisName: Battle_Axe_
+    Name: Battle_Axe
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 55000
+    Weight: 2000
+    Attack: 120
+    Range: 1
+    Slots: 2
+    Jobs:
+      Blacksmith: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+  - Id: 1356
+    AegisName: Hammer_Axe
+    Name: Hammer_Axe
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 55000
+    Weight: 2000
+    Attack: 120
+    Range: 1
+    Slots: 0
+    Jobs:
+      Blacksmith: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+  - Id: 1357
+    AegisName: Hammer_Axe_
+    Name: Hammer_Axe
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 55000
+    Weight: 2000
+    Attack: 120
+    Range: 1
+    Slots: 2
+    Jobs:
+      Blacksmith: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+  - Id: 1358
+    AegisName: Club_Axe
+    Name: Club_Axe
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 55000
+    Weight: 2000
+    Attack: 120
+    Range: 1
+    Slots: 2
+    Jobs:
+      Blacksmith: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+  - Id: 1359
+    AegisName: Power_Axe
+    Name: Power_Axe
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 55000
+    Weight: 2000
+    Attack: 120
+    Range: 1
+    Slots: 2
+    Jobs:
+      Blacksmith: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+  - Id: 1360
+    AegisName: Avenger
+    Name: Avenger
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 55000
+    Weight: 2000
+    Attack: 120
+    Range: 1
+    Slots: 2
+    Jobs:
+      Blacksmith: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+  - Id: 1361
+    AegisName: Crimson_Axe
+    Name: Crimson_Axe
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 55000
+    Weight: 2000
+    Attack: 120
+    Range: 1
+    Slots: 2
+    Jobs:
+      Blacksmith: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+  - Id: 1362
+    AegisName: Guillotine
+    Name: Guillotine
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 55000
+    Weight: 2000
+    Attack: 120
+    Range: 1
+    Slots: 2
+    Jobs:
+      Blacksmith: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+  - Id: 1363
+    AegisName: Penitentia_Ascia
+    Name: Penitentia_Ascia
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 55000
+    Weight: 2000
+    Attack: 120
+    Range: 1
+    Slots: 2
+    Jobs:
+      Blacksmith: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+  - Id: 1364
+    AegisName: Heroic_Axe
+    Name: Heroic_Axe
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 55000
+    Weight: 2000
+    Attack: 120
+    Range: 1
+    Slots: 2
+    Jobs:
+      Blacksmith: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+  - Id: 1365
+    AegisName: Doom_Slayer
+    Name: Doom_Slayer
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 55000
+    Weight: 2000
+    Attack: 120
+    Range: 1
+    Slots: 2
+    Jobs:
+      Blacksmith: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
     Refineable: true

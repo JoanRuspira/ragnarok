@@ -4,202 +4,403 @@ Header:
 
 Body:
   - Id: 1501
-    AegisName: Club
-    Name: Club
-    Type: Weapon
-    SubType: Mace
-    Buy: 120
-    Weight: 700
-    Attack: 23
-    Range: 1
-    Slots: 3
-    Jobs:
-      Acolyte: true
-      Alchemist: true
-      Blacksmith: true
-      Crusader: true
-      Knight: true
-      Merchant: true
-      Monk: true
-      Novice: true
-      Priest: true
-      SuperNovice: true
-      Swordman: true
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 1
-    EquipLevelMin: 2
-    Refineable: true
-  - Id: 1504
     AegisName: Mace
     Name: Mace
     Type: Weapon
     SubType: Mace
     Buy: 1600
-    Weight: 800
-    Attack: 37
+    Weight: 700
+    Attack: 50
+    Range: 1
+    Slots: 0
+    Jobs:
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 10
+    Refineable: true
+  - Id: 1502
+    AegisName: Mace_
+    Name: Mace
+    Type: Weapon
+    SubType: Mace
+    Buy: 1600
+    Weight: 700
+    Attack: 50
+    Range: 1
+    Slots: 4
+    Jobs:
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 10
+    Refineable: true
+  - Id: 1503
+    AegisName: Quadrille
+    Name: Quadrille
+    Type: Weapon
+    SubType: Mace
+    Buy: 1600
+    Weight: 700
+    Attack: 70
+    Range: 1
+    Slots: 0
+    Jobs:
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 20
+    Refineable: true
+    Script: |
+      bonus2 bAddSize,Size_Small,10;
+      bonus2 bMagicAddSize,Size_Small,10;
+  - Id: 1504
+    AegisName: Quadrille_
+    Name: Quadrille
+    Type: Weapon
+    SubType: Mace
+    Buy: 1600
+    Weight: 700
+    Attack: 70
     Range: 1
     Slots: 3
     Jobs:
       Acolyte: true
-      Alchemist: true
-      Blacksmith: true
-      Crusader: true
-      Knight: true
-      Merchant: true
       Monk: true
-      Novice: true
       Priest: true
-      SuperNovice: true
-      Swordman: true
     Locations:
       Right_Hand: true
-    WeaponLevel: 1
-    EquipLevelMin: 2
+    WeaponLevel: 3
+    EquipLevelMin: 20
     Refineable: true
-  - Id: 1507
-    AegisName: Smasher
-    Name: Smasher
-    Type: Weapon
-    SubType: Mace
-    Buy: 9000
-    Weight: 1000
-    Attack: 54
-    Range: 1
-    Slots: 2
-    Jobs:
-      Acolyte: true
-      Alchemist: true
-      Blacksmith: true
-      Crusader: true
-      Knight: true
-      Merchant: true
-      Monk: true
-      Novice: true
-      Priest: true
-      SuperNovice: true
-      Swordman: true
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 2
-    EquipLevelMin: 14
-    Refineable: true
-  - Id: 1510
+    Script: |
+      bonus2 bAddSize,Size_Small,10;
+      bonus2 bMagicAddSize,Size_Small,10;
+  - Id: 1505
     AegisName: Flail
     Name: Flail
     Type: Weapon
     SubType: Mace
-    Buy: 16000
-    Weight: 900
-    Attack: 69
+    Buy: 1600
+    Weight: 700
+    Attack: 75
     Range: 1
-    Slots: 2
+    Slots: 0
     Jobs:
       Acolyte: true
-      Alchemist: true
-      Blacksmith: true
-      Crusader: true
-      Knight: true
-      Merchant: true
       Monk: true
       Priest: true
-      Swordman: true
     Locations:
       Right_Hand: true
-    WeaponLevel: 2
-    EquipLevelMin: 14
+    WeaponLevel: 3
+    EquipLevelMin: 30
     Refineable: true
-  - Id: 1513
+    Script: |
+      bonus2 bAddRace,RC_Demon,10;
+      bonus2 bMagicAddRace,RC_Demon,10;
+  - Id: 1506
+    AegisName: Flail_
+    Name: Flail
+    Type: Weapon
+    SubType: Mace
+    Buy: 1600
+    Weight: 700
+    Attack: 75
+    Range: 1
+    Slots: 3
+    Jobs:
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
+    Script: |
+      bonus2 bAddRace,RC_Demon,10;
+      bonus2 bMagicAddRace,RC_Demon,10;
+  - Id: 1507
     AegisName: Morning_Star
+    Name: Quadrille
+    Type: Weapon
+    SubType: Mace
+    Buy: 1600
+    Weight: 800
+    Attack: 85
+    Range: 1
+    Slots: 0
+    Jobs:
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 40
+    Refineable: true
+    Script: |
+      bonus bInt,5;
+      bonus bAtk,getrefine()*2; 
+  - Id: 1508
+    AegisName: Morning_Star_
     Name: Morning Star
     Type: Weapon
     SubType: Mace
-    Buy: 41000
-    Weight: 1500
-    Attack: 110
+    Buy: 1600
+    Weight: 800
+    Attack: 85
     Range: 1
-    Slots: 1
+    Slots: 3
     Jobs:
       Acolyte: true
-      Alchemist: true
-      Blacksmith: true
-      Crusader: true
-      Knight: true
-      Merchant: true
       Monk: true
       Priest: true
-      Swordman: true
     Locations:
       Right_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 27
+    EquipLevelMin: 40
     Refineable: true
-  - Id: 1516
-    AegisName: Sword_Mace
-    Name: Sword Mace
+    Script: |
+      bonus bInt,5;
+      bonus bAtk,getrefine()*2;    
+  - Id: 1509
+    AegisName: Slash
+    Name: Slash
     Type: Weapon
     SubType: Mace
-    Buy: 50000
-    Weight: 1200
-    Attack: 130
+    Buy: 1600
+    Weight: 800
+    Attack: 85
     Range: 1
+    Slots: 3
     Jobs:
-      Acolyte: true
-      Alchemist: true
-      Blacksmith: true
-      Crusader: true
-      Knight: true
-      Merchant: true
       Monk: true
       Priest: true
-      Swordman: true
     Locations:
       Right_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 27
+    EquipLevelMin: 55
     Refineable: true
-  - Id: 1519
+    Script: |
+      bonus bStr,5;
+      bonus bCritical,getrefine(); 
+  - Id: 1510
     AegisName: Chain
     Name: Chain
     Type: Weapon
     SubType: Mace
-    Buy: 23000
+    Buy: 1600
     Weight: 800
-    Attack: 84
+    Attack: 90
     Range: 1
     Slots: 2
     Jobs:
-      Acolyte: true
-      Alchemist: true
-      Blacksmith: true
-      Crusader: true
-      Knight: true
-      Merchant: true
-      Monk: true
-      Priest: true
-      Swordman: true
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 2
-    EquipLevelMin: 14
-    Refineable: true
-  - Id: 1522
-    AegisName: Stunner
-    Name: Stunner
-    Type: Weapon
-    SubType: Mace
-    Buy: 60000
-    Weight: 2000
-    Attack: 140
-    Range: 1
-    Jobs:
-      Acolyte: true
       Monk: true
       Priest: true
     Locations:
       Right_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 27
+    EquipLevelMin: 60
     Refineable: true
     Script: |
-      bonus2 bAddEff,Eff_Stun,1000;
+      bonus bDex,5;
+      bonus bAtkRate,getrefine();   
+  - Id: 1511
+    AegisName: Long_Mace
+    Name: Long Mace
+    Type: Weapon
+    SubType: Mace
+    Buy: 1600
+    Weight: 700
+    Attack: 70
+    Range: 1
+    Slots: 2
+    Jobs:
+      Monk: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bLongAtkRate,getrefine();
+      bonus bLongAtkDef,10;
+  - Id: 1512
+    AegisName: Smasher
+    Name: Smasher
+    Type: Weapon
+    SubType: Mace
+    Buy: 1600
+    Weight: 900
+    Attack: 90
+    Range: 1
+    Slots: 2
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus2 bAddEff,Eff_Stun,500;
+  - Id: 1513
+    AegisName: Sword_Mace
+    Name: Sword Mace
+    Type: Weapon
+    SubType: Mace
+    Buy: 1600
+    Weight: 900
+    Attack: 100
+    Range: 1
+    Slots: 2
+    Jobs:
+      Monk: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bAspdRate,5;
+  - Id: 1514
+    AegisName: Royal_Pillar
+    Name: Royal Pillar
+    Type: Weapon
+    SubType: Mace
+    Buy: 1600
+    Weight: 900
+    Attack: 110
+    Range: 1
+    Slots: 2
+    Jobs:
+      Monk: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bMatkRate,getrefine()*2;
+  - Id: 1515
+    AegisName: Golden_Mace
+    Name: Golden Mace
+    Type: Weapon
+    SubType: Mace
+    Buy: 1600
+    Weight: 800
+    Attack: 90
+    MagicAttack: 70
+    Range: 1
+    Slots: 2
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus2 bAtkEle,Ele_Holy,10;
+      bonus2 bMagicAtkEle,Ele_Holy,10;
+  - Id: 1516
+    AegisName: Grand_Cross
+    Name: Gold Cross
+    Type: Weapon
+    SubType: Mace
+    Buy: 1600
+    Weight: 700
+    Attack: 70
+    MagicAttack: 90
+    Range: 1
+    Slots: 2
+    Jobs:
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus2 bAtkEle,Ele_Holy,10;
+      bonus2 bMagicAtkEle,Ele_Holy,10;
+  - Id: 1517
+    AegisName: Grand_Darkness
+    Name: Dark Cross
+    Type: Weapon
+    SubType: Mace
+    Buy: 1600
+    Weight: 700
+    Attack: 70
+    MagicAttack: 90
+    Range: 1
+    Slots: 2
+    Jobs:
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus2 bAtkEle,Ele_Dark,10;
+      bonus2 bMagicAtkEle,Ele_Dark,10;
+  - Id: 1518
+    AegisName: Demonic_Mace
+    Name: Demonic Mace
+    Type: Weapon
+    SubType: Mace
+    Buy: 1600
+    Weight: 800
+    Attack: 90
+    MagicAttack: 70
+    Range: 1
+    Slots: 2
+    Jobs:
+      Monk: true
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus2 bAtkEle,Ele_Dark,10;
+      bonus2 bMagicAtkEle,Ele_Dark,10;
+  - Id: 1519
+    AegisName: Wicked_Cross
+    Name: Wicked Cross
+    Type: Weapon
+    SubType: Mace
+    Buy: 1600
+    Weight: 700
+    Attack: 70
+    MagicAttack: 90
+    Range: 1
+    Slots: 2
+    Jobs:
+      Priest: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 75
+    Refineable: true
+    Script: |
+      bonus2 bAtkEle,Ele_Holy,5;
+      bonus2 bMagicAtkEle,Ele_Holy,5;
+      bonus2 bAtkEle,Ele_Dark,5;
+      bonus2 bMagicAtkEle,Ele_Dark,5;
+      bonus2 bAtkEle,Ele_Ghost,5;
+      bonus2 bMagicAtkEle,Ele_Ghost,5;

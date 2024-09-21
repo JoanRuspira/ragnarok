@@ -4,33 +4,73 @@ Header:
 
 Body:
   - Id: 1401
-    AegisName: Javelin
-    Name: Javelin
-    Type: Weapon
-    SubType: 1hSpear
-    Buy: 150
-    Weight: 700
-    Attack: 28
-    Range: 3
-    Slots: 3
-    Jobs:
-      Crusader: true
-      Knight: true
-      Swordman: true
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 1
-    EquipLevelMin: 4
-    Refineable: true
-  - Id: 1404
     AegisName: Spear
     Name: Spear
     Type: Weapon
     SubType: 1hSpear
+    Buy: 150
+    Weight: 700
+    Attack: 50
+    Range: 1
+    Slots: 0
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 10
+    Refineable: true
+  - Id: 1402
+    AegisName: Spear_
+    Name: Spear
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 150
+    Weight: 700
+    Attack: 50
+    Range: 1
+    Slots: 4
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 10
+    Refineable: true
+  - Id: 1403
+    AegisName: Javelin
+    Name: Javelin
+    Type: Weapon
+    SubType: 1hSpear
     Buy: 1700
     Weight: 850
-    Attack: 44
-    Range: 3
+    Attack: 70
+    Range: 1
+    Slots: 0
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 20
+    Refineable: true
+    Script: |
+      bonus bLongAtkRate,getrefine();
+  - Id: 1404
+    AegisName: Javelin_
+    Name: Javelin
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 1700
+    Weight: 850
+    Attack: 70
+    Range: 1
     Slots: 3
     Jobs:
       Crusader: true
@@ -38,18 +78,42 @@ Body:
       Swordman: true
     Locations:
       Right_Hand: true
-    WeaponLevel: 1
-    EquipLevelMin: 4
+    WeaponLevel: 3
+    EquipLevelMin: 20
     Refineable: true
-  - Id: 1407
+    Script: |
+      bonus bLongAtkRate,getrefine();
+  - Id: 1405
     AegisName: Pike
     Name: Pike
     Type: Weapon
     SubType: 1hSpear
     Buy: 3450
     Weight: 1000
-    Attack: 60
-    Range: 3
+    Attack: 75
+    Range: 1
+    Slots: 0
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 25
+    Refineable: true
+    Script: |
+      bonus2 bAddSize,Size_Medium,10;
+      bonus2 bMagicAddSize,Size_Medium,10;
+  - Id: 1406
+    AegisName: Pike_
+    Name: Pike
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 3450
+    Weight: 1000
+    Attack: 75
+    Range: 1
     Slots: 3
     Jobs:
       Crusader: true
@@ -57,6 +121,234 @@ Body:
       Swordman: true
     Locations:
       Right_Hand: true
-    WeaponLevel: 1
-    EquipLevelMin: 4
+    WeaponLevel: 3
+    EquipLevelMin: 25
     Refineable: true
+    Script: |
+      bonus2 bAddSize,Size_Medium,10;
+      bonus2 bMagicAddSize,Size_Medium,10;
+  - Id: 1407
+    AegisName: Brocca
+    Name: Brocca
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 3450
+    Weight: 1000
+    Attack: 80
+    Range: 1
+    Slots: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 35
+    Refineable: true
+    Script: |
+      bonus bIgnoreDefClass,Class_Normal;
+  - Id: 1408
+    AegisName: Battle_Hook
+    Name: Battle Hook
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 3450
+    Weight: 1000
+    Attack: 85
+    Range: 1
+    Slots: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 45
+    Refineable: true
+    Script: |
+      bonus2 bAddRace,RC_DemiHuman,10;
+      bonus2 bAddRace,RC_Player_Human,10;
+      bonus2 bMagicAddRace,RC_DemiHuman,10;
+      bonus2 bMagicAddRace,RC_Player_Human,10;
+  - Id: 1409
+    AegisName: Harpoon
+    Name: Harpoon
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 3450
+    Weight: 1000
+    Attack: 85
+    Range: 1
+    Slots: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+    Script: |
+      bonus2 bAddSize,Size_Large,10;
+      bonus2 bMagicAddSize,Size_Large,10;
+  - Id: 1410
+    AegisName: Blocking_Spear
+    Name: Blocking Spear
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 3450
+    Weight: 1000
+    Attack: 70
+    Defense: 10
+    Range: 1
+    Slots: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
+  - Id: 1411
+    AegisName: Gungnir
+    Name: Gungnir
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 3450
+    Weight: 1000
+    Attack: 100
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bHit,20;
+      bonus bAspdRate,5;
+  - Id: 1412
+    AegisName: Bayonet
+    Name: Bayonet
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 3450
+    Weight: 1000
+    Attack: 100
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bCritical,10;
+  - Id: 1413
+    AegisName: Kingsguard_Spear
+    Name: Kingsguard Spear
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 3450
+    Weight: 1100
+    Attack: 100
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bAtkRate,10;
+  - Id: 1414
+    AegisName: Lancet
+    Name: Lancet
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 3450
+    Weight: 800
+    Attack: 90
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bLongAtkRate,5;
+      bonus bAtkRate,5;
+  - Id: 1415
+    AegisName: Vivatus_Fides
+    Name: Vivatus Fides
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 3450
+    Weight: 1100
+    Attack: 110
+    Range: 1
+    Slots: 2
+    Jobs:
+      Knight: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bCritical,5;
+      bonus bAspdRate,5;
+  - Id: 1416
+    AegisName: Argent_Blanco
+    Name: Argent Blanco
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 3450
+    Weight: 1100
+    Attack: 85
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bHealPower,10;
+  - Id: 1417
+    AegisName: Pole_Axe
+    Name: Pole Axe
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 3450
+    Weight: 1100
+    Attack: 120
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 75
+    Refineable: true
+    Script: |
+      bonus bAtkRate,getrefine()*2;
