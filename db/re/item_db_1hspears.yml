@@ -147,7 +147,8 @@ Body:
     EquipLevelMin: 35
     Refineable: true
     Script: |
-      bonus bIgnoreDefClass,Class_Normal;
+      .@r = getrefine()*2;
+      bonus2 bIgnoreDefClassRate,Class_All,20+.@r;
   - Id: 1408
     AegisName: Battle_Hook
     Name: Battle Hook
@@ -320,7 +321,8 @@ Body:
     SubType: 1hSpear
     Buy: 3450
     Weight: 1100
-    Attack: 85
+    Attack: 70
+    MagicAttack: 95
     Range: 1
     Slots: 2
     Jobs:

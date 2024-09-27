@@ -4,160 +4,421 @@ Header:
 
 Body:
   - Id: 1601
-    AegisName: Rod
-    Name: Rod
+    AegisName: Staff
+    Name: Staff
     Type: Weapon
     SubType: Staff
     Buy: 50
     Weight: 400
     Attack: 15
-    MagicAttack: 30
+    MagicAttack: 50
     Range: 1
-    Slots: 3
+    Slots: 0
     Jobs:
       Acolyte: true
-      Mage: true
-      Monk: true
-      Novice: true
       Priest: true
+      Monk: true
+      Mage: true
       Sage: true
-      SoulLinker: true
-      SuperNovice: true
       Wizard: true
     Locations:
       Right_Hand: true
-    WeaponLevel: 1
-    EquipLevelMin: 1
+    WeaponLevel: 3
+    EquipLevelMin: 10
     Refineable: true
-  - Id: 1604
+  - Id: 1602
+    AegisName: Staff_
+    Name: Staff
+    Type: Weapon
+    SubType: Staff
+    Buy: 50
+    Weight: 400
+    Attack: 15
+    MagicAttack: 50
+    Range: 1
+    Slots: 4
+    Jobs:
+      Acolyte: true
+      Priest: true
+      Monk: true
+      Mage: true
+      Sage: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 10
+    Refineable: true
+  - Id: 1603
     AegisName: Wand
     Name: Wand
     Type: Weapon
     SubType: Staff
-    Buy: 2500
+    Buy: 50
     Weight: 400
-    Attack: 25
-    MagicAttack: 45
-    Range: 1
-    Slots: 2
-    Jobs:
-      Acolyte: true
-      Mage: true
-      Monk: true
-      Novice: true
-      Priest: true
-      Sage: true
-      SoulLinker: true
-      SuperNovice: true
-      Wizard: true
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 2
-    EquipLevelMin: 12
-    Refineable: true
-    Script: |
-      bonus bInt,1;
-  - Id: 1607
-    AegisName: Staff
-    Name: Staff
-    Type: Weapon
-    SubType: Staff
-    Buy: 9500
-    Weight: 400
-    Attack: 40
+    Attack: 15
     MagicAttack: 70
     Range: 1
+    Slots: 0
+    Jobs:
+      Acolyte: true
+      Priest: true
+      Monk: true
+      Mage: true
+      Sage: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 20
+    Refineable: true
+    Script: |
+      bonus bInt,5;
+      bonus bDelayRate,getrefine();
+  - Id: 1604
+    AegisName: Wand_
+    Name: Wand
+    Type: Weapon
+    SubType: Staff
+    Buy: 50
+    Weight: 400
+    Attack: 15
+    MagicAttack: 70
+    Range: 1
+    Slots: 3
+    Jobs:
+      Acolyte: true
+      Priest: true
+      Monk: true
+      Mage: true
+      Sage: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 20
+    Refineable: true
+    Script: |
+      bonus bInt,5;
+      bonus bDelayRate,getrefine();
+  - Id: 1605
+    AegisName: Sceptre
+    Name: Sceptre
+    Type: Weapon
+    SubType: Staff
+    Buy: 50
+    Weight: 400
+    Attack: 15
+    MagicAttack: 80
+    Range: 1
+    Slots: 0
+    Jobs:
+      Acolyte: true
+      Priest: true
+      Monk: true
+      Mage: true
+      Sage: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
+    Script: |
+      bonus bDex,5;
+      bonus bCastrate,getrefine();
+  - Id: 1606
+    AegisName: Sceptre_
+    Name: Sceptre
+    Type: Weapon
+    SubType: Staff
+    Buy: 50
+    Weight: 400
+    Attack: 15
+    MagicAttack: 80
+    Range: 1
+    Slots: 3
+    Jobs:
+      Acolyte: true
+      Priest: true
+      Monk: true
+      Mage: true
+      Sage: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
+    Script: |
+      bonus bDex,5;
+      bonus bCastrate,getrefine();
+  - Id: 1607
+    AegisName: Arc_Wand
+    Name: Arc Staff
+    Type: Weapon
+    SubType: Staff
+    Buy: 50
+    Weight: 400
+    Attack: 15
+    MagicAttack: 80
+    Range: 1
+    Slots: 0
+    Jobs:
+      Acolyte: true
+      Priest: true
+      Monk: true
+      Mage: true
+      Sage: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 40
+    Refineable: true
+    Script: |
+      bonus bInt,2;
+      bonus bDex,2;
+      bonus bMatkRate,getrefine();
+  - Id: 1608
+    AegisName: Arc_Wand_
+    Name: Arc Staff
+    Type: Weapon
+    SubType: Staff
+    Buy: 50
+    Weight: 400
+    Attack: 15
+    MagicAttack: 80
+    Range: 1
+    Slots: 3
+    Jobs:
+      Acolyte: true
+      Priest: true
+      Monk: true
+      Mage: true
+      Sage: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 40
+    Refineable: true
+    Script: |
+      bonus bInt,2;
+      bonus bDex,2;
+      bonus bMatkRate,getrefine();
+  - Id: 1609
+    AegisName: Mighty_Staff
+    Name: Mighty Staff
+    Type: Weapon
+    SubType: Staff
+    Buy: 50
+    Weight: 400
+    Attack: 80
+    MagicAttack: 80
+    Range: 1
+    Slots: 3
+    Jobs:
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Neutral,15;
+  - Id: 1610
+    AegisName: Wing_Staff
+    Name: Wing Staff
+    Type: Weapon
+    SubType: Staff
+    Buy: 50
+    Weight: 400
+    Attack: 15
+    MagicAttack: 85
+    Range: 1
+    Slots: 3
+    Jobs:
+      Sage: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bDelayRate,getrefine();
+      bonus bCastrate,getrefine();
+  - Id: 1611
+    AegisName: Wand_of_Occult
+    Name: Staff Of Occult
+    Type: Weapon
+    SubType: Staff
+    Buy: 50
+    Weight: 400
+    Attack: 15
+    MagicAttack: 90
+    Range: 1
     Slots: 2
     Jobs:
-      Acolyte: true
-      Mage: true
-      Monk: true
-      Priest: true
-      Sage: true
-      SoulLinker: true
       Wizard: true
     Locations:
       Right_Hand: true
-    WeaponLevel: 2
-    EquipLevelMin: 12
+    WeaponLevel: 3
+    EquipLevelMin: 60
     Refineable: true
     Script: |
-      bonus bInt,2;
-  - Id: 1610
-    AegisName: Arc_Wand
-    Name: Arc Wand
+      bonus2 bMagicAtkEle,Ele_Ghost,10;
+  - Id: 1612
+    AegisName: Noble_Staff
+    Name: Noble Staff
     Type: Weapon
     SubType: Staff
-    Buy: 45000
+    Buy: 50
     Weight: 400
-    Attack: 60
+    Attack: 15
     MagicAttack: 95
     Range: 1
-    Slots: 1
+    Slots: 2
     Jobs:
-      Acolyte: true
-      Mage: true
-      Monk: true
-      Priest: true
       Sage: true
-      SoulLinker: true
       Wizard: true
     Locations:
       Right_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 24
+    EquipLevelMin: 70
     Refineable: true
     Script: |
-      bonus bInt,3;
+      bonus bInt,getrefine();
+      bonus bDex,getrefine();
+  - Id: 1613
+    AegisName: Evil_Bone_Staff
+    Name: Evil Bone Staff
+    Type: Weapon
+    SubType: Staff
+    Buy: 50
+    Weight: 400
+    Attack: 15
+    MagicAttack: 90
+    Range: 1
+    Slots: 2
+    Jobs:
+      Priest: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Dark,10;
+  - Id: 1614
+    AegisName: Piercing_Staff
+    Name: Staff of Piercing
+    Type: Weapon
+    SubType: Staff
+    Buy: 50
+    Weight: 400
+    Attack: 15
+    MagicAttack: 80
+    Range: 1
+    Slots: 2
+    Jobs:
+      Sage: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      .@r = getrefine()*2;
+      bonus2 bIgnoreMdefClassRate,Class_All,20+.@r;
+  - Id: 1615
+    AegisName: Staff_of_Bordeaux
+    Name: Staff of Justice
+    Type: Weapon
+    SubType: Staff
+    Buy: 50
+    Weight: 400
+    Attack: 15
+    MagicAttack: 100
+    Range: 1
+    Slots: 2
+    Jobs:
+      Sage: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bMAtk,getrefine()*5;
+  - Id: 1616
+    AegisName: Staff_of_Elements
+    Name: Staff of Elements
+    Type: Weapon
+    SubType: Staff
+    Buy: 50
+    Weight: 400
+    Attack: 15
+    MagicAttack: 100
+    Range: 1
+    Slots: 2
+    Jobs:
+      Sage: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Fire,7;
+      bonus2 bMagicAtkEle,Ele_Water,7;
+      bonus2 bMagicAtkEle,Ele_Wind,7;
+      bonus2 bMagicAtkEle,Ele_Earth,7;
   - Id: 1617
-    AegisName: Survival_Rod
-    Name: Survivor's Rod
+    AegisName: Croce_Staff
+    Name: Croce Staff
     Type: Weapon
     SubType: Staff
-    Buy: 85000
-    Weight: 1000
-    Attack: 50
-    MagicAttack: 120
+    Buy: 50
+    Weight: 400
+    Attack: 15
+    MagicAttack: 110
     Range: 1
+    Slots: 2
     Jobs:
-      Acolyte: true
-      Mage: true
-      Monk: true
       Priest: true
-      Sage: true
-      SoulLinker: true
-      Wizard: true
+      Monk: true
     Locations:
       Right_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 24
+    EquipLevelMin: 65
     Refineable: true
     Script: |
-      bonus bDex,2;
-      bonus bMaxHP,300;
-  - Id: 1619
-    AegisName: Survival_Rod2
-    Name: Survivor's Rod
+      bonus2 bMagicAtkEle,Ele_Holy,7;
+      bonus2 bMagicAtkEle,Ele_Ghost,7;
+  - Id: 1618
+    AegisName: Staff_of_Recovery
+    Name: Staff of Recovery
     Type: Weapon
     SubType: Staff
-    Buy: 85000
-    Weight: 1000
-    Attack: 50
-    MagicAttack: 120
+    Buy: 50
+    Weight: 400
+    Attack: 15
+    MagicAttack: 110
     Range: 1
+    Slots: 2
     Jobs:
-      Acolyte: true
-      Mage: true
-      Monk: true
       Priest: true
-      Sage: true
-      SoulLinker: true
-      Wizard: true
+      Monk: true
     Locations:
       Right_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 24
+    EquipLevelMin: 70
     Refineable: true
     Script: |
-      bonus bInt,2;
-      bonus bMaxHP,300;
+      bonus bHealPower,10;

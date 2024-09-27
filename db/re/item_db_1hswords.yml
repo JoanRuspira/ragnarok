@@ -247,6 +247,7 @@ Body:
     Buy: 49000
     Weight: 700
     Attack: 85
+    MagicAttack: 50
     Range: 1
     Slots: 3
     Jobs:
@@ -259,7 +260,7 @@ Body:
     EquipLevelMin: 50
     Refineable: true
     Script: |
-      bonus bMatk,getrefine()*2;
+      bonus bMatk,getrefine()*5;
   - Id: 1111
     AegisName: Ring_Pommel_Saber
     Name: Ring Pommel Saber
