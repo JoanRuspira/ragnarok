@@ -16,7 +16,7 @@ class PriestSkillAttackRatioCalculator
 		static int calculate_spiritu_sancti_atk_ratio(int skill_lv);
 		static int calculate_judex_atk_ratio(int skill_lv);
 		static int calculate_magnus_exorcismus_atk_ratio(int skill_lv);
-		static int calculate_unholy_cross_atk_ratio(int skill_lv, int intelligence);
+		static int calculate_unholy_cross_atk_ratio(int skill_lv, int strength);
 		static int calculate_duple_light_melee_atk_ratio(int skill_lv);
 		static int calculate_duple_light_magic_atk_ratio(int skill_lv);
 		static int calculate_sententia_atk_ratio(int skill_lv);

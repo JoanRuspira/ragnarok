@@ -198,7 +198,7 @@ Body:
     EquipLevelMin: 50
     Script: |
       bonus bDex,3;
-      bonus bAspdRate,2;
+      bonus bAspd,2;
   - Id: 2616
     AegisName: Haste_Glove
     Name: Glove
@@ -437,7 +437,7 @@ Body:
     EquipLevelMin: 50
     Script: |
       bonus bVit,3;
-      bonus bAspdRate,2;
+      bonus bAspd,2;
   - Id: 2631
     AegisName: Gold_Necklace
     Name: Necklace
@@ -580,7 +580,7 @@ Body:
     EquipLevelMin: 40
     Script: |
       bonus bLuk,3;
-      bonus bAspdRate,2;
+      bonus bAspd,2;
   - Id: 2641
     AegisName: Gold_Rosary
     Name: Rosary
@@ -707,7 +707,7 @@ Body:
     EquipLevelMin: 35
     Script: |
       bonus bStr,3;
-      bonus bAspdRate,2;
+      bonus bAspd,2;
   - Id: 2649
     AegisName: Spiked_Ring
     Name: Ring
@@ -850,7 +850,7 @@ Body:
     EquipLevelMin: 70
     Script: |
       bonus bAgi,3;
-      bonus bAspdRate,2;
+      bonus bAspd,2;
   - Id: 2658
     AegisName: Lunatic_Brooch
     Name: Brooch

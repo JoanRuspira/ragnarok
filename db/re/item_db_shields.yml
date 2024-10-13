@@ -7,7 +7,7 @@ Body:
     AegisName: Guard
     Name: Guard
     Type: Armor
-    Buy: 500
+    Buy: 5000
     Weight: 300
     Defense: 10
     Jobs:
@@ -26,7 +26,7 @@ Body:
     AegisName: Guard_
     Name: Guard
     Type: Armor
-    Buy: 500
+    Buy: 5000
     Weight: 300
     Defense: 10
     Jobs:
@@ -46,7 +46,7 @@ Body:
     AegisName: Silver_Guard
     Name: Silver Guard
     Type: Armor
-    Buy: 500
+    Buy: 5000
     Weight: 300
     Defense: 10
     Jobs:
@@ -69,7 +69,7 @@ Body:
     AegisName: Gold_Guard
     Name: Gold Guard
     Type: Armor
-    Buy: 500
+    Buy: 5000
     Weight: 300
     Defense: 10
     Jobs:
@@ -92,7 +92,7 @@ Body:
     AegisName: Cross_Shield
     Name: Cross Shield
     Type: Armor
-    Buy: 500
+    Buy: 5000
     Weight: 300
     Defense: 10
     Jobs:
@@ -102,6 +102,7 @@ Body:
       Acolyte: true
       Monk: true
       Priest: true
+      Crusader: true
     Slots: 1
     Locations:
       Left_Hand: true
@@ -110,15 +111,13 @@ Body:
     View: 1
     EquipLevelMin: 50
     Script: |
-      bonus2 bAtkEle,Ele_Holy,15;
       bonus2 bMagicAtkEle,Ele_Holy,15;
-      bonus2 bAtkEle,Ele_Ghost,15;
       bonus2 bMagicAtkEle,Ele_Ghost,15;
   - Id: 2110
     AegisName: Ultralight_Magic_Shield
     Name: Ultralight Magic Shield
     Type: Armor
-    Buy: 500
+    Buy: 5000
     Weight: 300
     Defense: 10
     Jobs:
@@ -141,7 +140,7 @@ Body:
     AegisName: Buckler
     Name: Buckler
     Type: Armor
-    Buy: 14000
+    Buy: 15000
     Weight: 600
     Defense: 30
     Jobs:
@@ -162,7 +161,7 @@ Body:
     AegisName: Buckler_
     Name: Buckler
     Type: Armor
-    Buy: 14000
+    Buy: 15000
     Weight: 600
     Defense: 30
     Slots: 1
@@ -184,7 +183,7 @@ Body:
     AegisName: Fancy_Buckler
     Name: Fancy Buckler
     Type: Armor
-    Buy: 14000
+    Buy: 15000
     Weight: 600
     Defense: 70
     Slots: 1
@@ -207,7 +206,7 @@ Body:
     AegisName: Rose_Buckler
     Name: Rose Buckler
     Type: Armor
-    Buy: 14000
+    Buy: 15000
     Weight: 600
     Defense: 30
     Slots: 1
@@ -232,7 +231,7 @@ Body:
     AegisName: Orleans_Buckler
     Name: Orleans Buckler
     Type: Armor
-    Buy: 14000
+    Buy: 15000
     Weight: 600
     Defense: 30
     Slots: 1
@@ -257,7 +256,7 @@ Body:
     AegisName: Compact_Buckler
     Name: Compact Buckler
     Type: Armor
-    Buy: 14000
+    Buy: 15000
     Weight: 600
     Defense: 30
     Slots: 1
@@ -282,7 +281,7 @@ Body:
     AegisName: Arm_Buckler
     Name: Arm Buckler
     Type: Armor
-    Buy: 14000
+    Buy: 15000
     Weight: 600
     Defense: 30
     Slots: 1
@@ -307,7 +306,7 @@ Body:
     AegisName: Stone_Buckler
     Name: Stone Buckler
     Type: Armor
-    Buy: 14000
+    Buy: 15000
     Weight: 600
     Defense: 30
     Slots: 1
@@ -332,7 +331,7 @@ Body:
     AegisName: Shield
     Name: Shield
     Type: Armor
-    Buy: 56000
+    Buy: 50000
     Weight: 1300
     Defense: 70
     Jobs:
@@ -348,7 +347,7 @@ Body:
     AegisName: Shield_
     Name: Shield
     Type: Armor
-    Buy: 56000
+    Buy: 50000
     Weight: 1300
     Defense: 70
     Slots: 1
@@ -365,7 +364,7 @@ Body:
     AegisName: Thorny_Shield
     Name: Thorny Shield
     Type: Armor
-    Buy: 14000
+    Buy: 50000
     Weight: 1300
     Defense: 70
     Slots: 1
@@ -385,7 +384,7 @@ Body:
     AegisName: Bloody_Shield
     Name: Bloody Knight Shield
     Type: Armor
-    Buy: 14000
+    Buy: 50000
     Weight: 1300
     Defense: 70
     Slots: 1
@@ -404,7 +403,7 @@ Body:
     AegisName: Spellcaster_Shield
     Name: Spellcaster Shield
     Type: Armor
-    Buy: 14000
+    Buy: 50000
     Weight: 1300
     Defense: 70
     Slots: 1
@@ -423,7 +422,7 @@ Body:
     AegisName: Mirror_Shield
     Name: Mirror Shield
     Type: Armor
-    Buy: 14000
+    Buy: 50000
     Weight: 1300
     Defense: 70
     Slots: 1
@@ -443,7 +442,7 @@ Body:
     AegisName: Angelic_Shield
     Name: Angelic Shield
     Type: Armor
-    Buy: 14000
+    Buy: 50000
     Weight: 1300
     Defense: 70
     Slots: 1
@@ -461,7 +460,7 @@ Body:
     AegisName: Shield_of_Alleviation
     Name: Shield of Alleviation
     Type: Armor
-    Buy: 14000
+    Buy: 50000
     Weight: 1300
     Defense: 70
     Slots: 1
@@ -479,7 +478,7 @@ Body:
     AegisName: Royal_Guard_Shield
     Name: Royal Guard Shield
     Type: Armor
-    Buy: 14000
+    Buy: 50000
     Weight: 1300
     Defense: 70
     Slots: 1
@@ -497,7 +496,7 @@ Body:
     AegisName: Strong_Shield
     Name: Strong Shield
     Type: Armor
-    Buy: 14000
+    Buy: 50000
     Weight: 1300
     Defense: 70
     Slots: 1
@@ -516,7 +515,7 @@ Body:
     AegisName: Imperial_Shield
     Name: Imperial Shield
     Type: Armor
-    Buy: 14000
+    Buy: 50000
     Weight: 1300
     Defense: 70
     Slots: 1
@@ -535,7 +534,7 @@ Body:
     AegisName: Hardened_Shield
     Name: Hardened Shield
     Type: Armor
-    Buy: 14000
+    Buy: 50000
     Weight: 1300
     Defense: 100
     Slots: 1
@@ -552,7 +551,7 @@ Body:
     AegisName: Valkyrjas_Shield
     Name: Valkyrie Shield
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 1300
     Defense: 70
     Slots: 1

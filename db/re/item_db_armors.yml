@@ -8,7 +8,7 @@ Body:
     AegisName: Cotton_Shirt
     Name: Cotton Shirt
     Type: Armor
-    Buy: 10
+    Buy: 100
     Weight: 100
     Defense: 5
     Locations:
@@ -19,7 +19,7 @@ Body:
     AegisName: Cotton_Shirt_
     Name: Cotton Shirt
     Type: Armor
-    Buy: 10
+    Buy: 100
     Weight: 100
     Defense: 5
     Slots: 1
@@ -32,7 +32,7 @@ Body:
     Name: Adventurer's Suit
     Type: Armor
     Buy: 1000
-    Weight: 300
+    Weight: 1000
     Defense: 10
     Jobs:
       All: true
@@ -62,7 +62,7 @@ Body:
     AegisName: Holy_Robe
     Name: Holy Robe
     Type: Armor
-    Buy: 1000
+    Buy: 20000
     Weight: 300
     Defense: 10
     Slots: 1
@@ -82,7 +82,7 @@ Body:
     AegisName: Magician_Robe
     Name: Magician Robe
     Type: Armor
-    Buy: 1000
+    Buy: 20000
     Weight: 300
     Defense: 10
     Slots: 1
@@ -102,7 +102,7 @@ Body:
     AegisName: Agenda_Robe
     Name: Agenda Robe
     Type: Armor
-    Buy: 1000
+    Buy: 20000
     Weight: 300
     Defense: 10
     Slots: 1
@@ -125,7 +125,7 @@ Body:
     AegisName: Robe_of_Haste
     Name: Robe of Haste
     Type: Armor
-    Buy: 1000
+    Buy: 20000
     Weight: 300
     Defense: 10
     Slots: 1
@@ -144,7 +144,7 @@ Body:
     AegisName: Lightbringer_Robe
     Name: Lightbringer Robe
     Type: Armor
-    Buy: 1000
+    Buy: 20000
     Weight: 300
     Defense: 10
     Slots: 1
@@ -158,15 +158,13 @@ Body:
     Refineable: true
     EquipLevelMin: 30
     Script: |
-      bonus2 bAtkEle,Ele_Holy,10;
-      bonus2 bAtkEle,Ele_Ghost,10;
       bonus2 bMagicAtkEle,Ele_Holy,10;
       bonus2 bMagicAtkEle,Ele_Ghost,10;
   - Id: 2344
     AegisName: Flattery_Robe
     Name: Flattery Robe
     Type: Armor
-    Buy: 1000
+    Buy: 20000
     Weight: 300
     Defense: 10
     Slots: 1
@@ -188,7 +186,7 @@ Body:
     AegisName: Meditation_Robe
     Name: Meditation Robe
     Type: Armor
-    Buy: 1000
+    Buy: 20000
     Weight: 300
     Defense: 10
     Slots: 1
@@ -206,7 +204,7 @@ Body:
     AegisName: Forest_Robe
     Name: Forest Robe
     Type: Armor
-    Buy: 1000
+    Buy: 20000
     Weight: 300
     Defense: 10
     Slots: 1
@@ -220,13 +218,12 @@ Body:
     Refineable: true
     EquipLevelMin: 20
     Script: |
-      bonus2 bAtkEle,Ele_Earth,10;
       bonus2 bMagicAtkEle,Ele_Earth,10;
   - Id: 2347
     AegisName: Devoid_Robe
     Name: Devoid Robe
     Type: Armor
-    Buy: 1000
+    Buy: 20000
     Weight: 300
     Defense: 10
     Slots: 1
@@ -240,15 +237,13 @@ Body:
     Refineable: true
     EquipLevelMin: 20
     Script: |
-      bonus2 bAtkEle,Ele_Dark,10;
       bonus2 bMagicAtkEle,Ele_Dark,10;
-      bonus2 bAtkEle,Ele_Ghost,10;
       bonus2 bMagicAtkEle,Ele_Ghost,10;
   - Id: 2348
     AegisName: Judgement_Robe
     Name: Judgement Robe
     Type: Armor
-    Buy: 1000
+    Buy: 20000
     Weight: 300
     Defense: 10
     Slots: 1
@@ -260,13 +255,12 @@ Body:
     Refineable: true
     EquipLevelMin: 50
     Script: |
-      bonus2 bAtkEle,Ele_Dark,10;
       bonus2 bMagicAtkEle,Ele_Dark,10;
   - Id: 2349
     AegisName: Tournament_Attire
     Name: Tournament Attire
     Type: Armor
-    Buy: 1000
+    Buy: 20000
     Weight: 300
     Defense: 10
     Slots: 1
@@ -278,13 +272,13 @@ Body:
     Refineable: true
     EquipLevelMin: 65
     Script: |
-      bonus bAspdRate,3;
+      bonus bAspd,3;
       bonus bAtk,getrefine()*5;
   - Id: 2350
     AegisName: Follower_Clothes
     Name: Follower Clothes
     Type: Armor
-    Buy: 1000
+    Buy: 20000
     Weight: 300
     Defense: 10
     Slots: 1
@@ -302,7 +296,7 @@ Body:
     AegisName: Silk_Robe
     Name: Silk Robe
     Type: Armor
-    Buy: 1000
+    Buy: 20000
     Weight: 300
     Defense: 10
     Slots: 1
@@ -320,7 +314,7 @@ Body:
     AegisName: Runic_Clothes
     Name: Runic Clothes
     Type: Armor
-    Buy: 1000
+    Buy: 20000
     Weight: 300
     Defense: 10
     Slots: 1
@@ -332,13 +326,12 @@ Body:
     Refineable: true
     EquipLevelMin: 55
     Script: |
-      bonus2 bAtkEle,Ele_Neutral,10;
       bonus2 bMagicAtkEle,Ele_Neutral,10;
   - Id: 2353
     AegisName: Crimson_Robe
     Name: Crimson Robe
     Type: Armor
-    Buy: 1000
+    Buy: 20000
     Weight: 300
     Defense: 10
     Slots: 1
@@ -352,13 +345,12 @@ Body:
     Refineable: true
     EquipLevelMin: 20
     Script: |
-      bonus2 bAtkEle,Ele_Fire,10;
       bonus2 bMagicAtkEle,Ele_Fire,10;
   - Id: 2354
     AegisName: Snowflower_Robe
     Name: Snowflower Robe
     Type: Armor
-    Buy: 1000
+    Buy: 20000
     Weight: 300
     Defense: 10
     Slots: 1
@@ -372,13 +364,12 @@ Body:
     Refineable: true
     EquipLevelMin: 20
     Script: |
-      bonus2 bAtkEle,Ele_Water,10;
       bonus2 bMagicAtkEle,Ele_Water,10;
   - Id: 2355
     AegisName: Armored_Clothes
     Name: Armored Clothes
     Type: Armor
-    Buy: 1000
+    Buy: 20000
     Weight: 300
     Defense: 30
     Slots: 1
@@ -398,7 +389,7 @@ Body:
     AegisName: Breeze_Robe
     Name: Breeze Robe
     Type: Armor
-    Buy: 1000
+    Buy: 20000
     Weight: 300
     Defense: 10
     Slots: 1
@@ -412,13 +403,12 @@ Body:
     Refineable: true
     EquipLevelMin: 20
     Script: |
-      bonus2 bAtkEle,Ele_Wind,10;
       bonus2 bMagicAtkEle,Ele_Wind,10;
   - Id: 2357
     AegisName: Celine_Clothes
     Name: Celines Clothes
     Type: Armor
-    Buy: 1000
+    Buy: 20000
     Weight: 300
     Defense: 10
     Slots: 1
@@ -431,17 +421,14 @@ Body:
     Refineable: true
     EquipLevelMin: 80
     Script: |
-      bonus2 bAtkEle,Ele_Ghost,15;
       bonus2 bMagicAtkEle,Ele_Ghost,15;
-      bonus2 bAtkEle,Ele_Dark,15;
       bonus2 bMagicAtkEle,Ele_Dark,15;
-      bonus2 bAtkEle,Ele_Holy,15;
       bonus2 bMagicAtkEle,Ele_Holy,15;
   - Id: 2358
     AegisName: Robe_of_Elements
     Name: Robe of Elements
     Type: Armor
-    Buy: 1000
+    Buy: 20000
     Weight: 300
     Defense: 10
     Slots: 1
@@ -463,7 +450,7 @@ Body:
     AegisName: Lecturer_Robes
     Name: Lecturer Robes
     Type: Armor
-    Buy: 1000
+    Buy: 20000
     Weight: 300
     Defense: 10
     Slots: 1
@@ -532,7 +519,7 @@ Body:
     AegisName: Marksman_Suit
     Name: Marksman Suit
     Type: Armor
-    Buy: 22000
+    Buy: 30000
     Weight: 600
     Defense: 30
     Slots: 1
@@ -557,7 +544,7 @@ Body:
     AegisName: Assassin_Clothes
     Name: Assassin Clothes
     Type: Armor
-    Buy: 22000
+    Buy: 30000
     Weight: 600
     Defense: 30
     Slots: 1
@@ -576,7 +563,7 @@ Body:
     AegisName: Reinforced_Suit
     Name: Armored Suit
     Type: Armor
-    Buy: 22000
+    Buy: 30000
     Weight: 600
     Defense: 70
     Slots: 1
@@ -599,7 +586,7 @@ Body:
     AegisName: Performer_Suit
     Name: Performer Suit
     Type: Armor
-    Buy: 22000
+    Buy: 30000
     Weight: 600
     Defense: 30
     Slots: 1
@@ -618,7 +605,7 @@ Body:
     AegisName: Sniping_Suit
     Name: Sniping Suit
     Type: Armor
-    Buy: 22000
+    Buy: 30000
     Weight: 600
     Defense: 30
     Slots: 1
@@ -632,12 +619,12 @@ Body:
     Script: |
       bonus bAtk,10;
       bonus bLongAtkRate,getrefine()*2;
-      bonus bAspdRate,3;
+      bonus bAspd,2;
   - Id: 2365
     AegisName: Faint_Star_Suit
     Name: Faint Star Suit
     Type: Armor
-    Buy: 22000
+    Buy: 30000
     Weight: 600
     Defense: 30
     Slots: 1
@@ -650,14 +637,13 @@ Body:
     EquipLevelMin: 65
     Script: |
       bonus bAtk,10;
-      bonus2 bAtkEle,Ele_Poison,getrefine()*2;
       bonus2 bMagicAtkEle,Ele_Poison,getrefine()*2;
       bonus bInt,3;
   - Id: 2366
     AegisName: Felrock_Suit
     Name: Felrock Suit
     Type: Armor
-    Buy: 22000
+    Buy: 30000
     Weight: 600
     Defense: 30
     Slots: 1
@@ -677,7 +663,7 @@ Body:
     AegisName: Golden_Suit
     Name: Golden Suit
     Type: Armor
-    Buy: 22000
+    Buy: 30000
     Weight: 600
     Defense: 30
     Slots: 1
@@ -698,7 +684,7 @@ Body:
     AegisName: Spectacle_Clothes
     Name: Spectacle Clothes
     Type: Armor
-    Buy: 22000
+    Buy: 30000
     Weight: 600
     Defense: 30
     Slots: 1
@@ -717,7 +703,7 @@ Body:
     AegisName: Researcher_Suit
     Name: Researcher Suit
     Type: Armor
-    Buy: 22000
+    Buy: 30000
     Weight: 600
     Defense: 30
     Slots: 1
@@ -736,7 +722,7 @@ Body:
     AegisName: Gray_Wolf_Suit
     Name: Gray Wolf Suit
     Type: Armor
-    Buy: 22000
+    Buy: 30000
     Weight: 600
     Defense: 30
     Slots: 1
@@ -756,7 +742,7 @@ Body:
     AegisName: White_Wing_Suit
     Name: White Wing Suit
     Type: Armor
-    Buy: 22000
+    Buy: 30000
     Weight: 600
     Defense: 30
     Slots: 1
@@ -776,7 +762,7 @@ Body:
     AegisName: Formal_Attire
     Name: Formal Attire
     Type: Armor
-    Buy: 1000
+    Buy: 30000
     Weight: 600
     Defense: 30
     Slots: 1
@@ -805,7 +791,7 @@ Body:
     AegisName: Lords_Clothes
     Name: Lord Clothes
     Type: Armor
-    Buy: 1000
+    Buy: 30000
     Weight: 600
     Defense: 30
     Slots: 1
@@ -833,7 +819,7 @@ Body:
     AegisName: Ninja_Suit
     Name: Ninja Suit
     Type: Armor
-    Buy: 22000
+    Buy: 30000
     Weight: 600
     Defense: 30
     Slots: 1
@@ -852,7 +838,7 @@ Body:
     AegisName: Sleeveless_Attire
     Name: Sleeveless Attire
     Type: Armor
-    Buy: 22000
+    Buy: 30000
     Weight: 600
     Defense: 30
     Slots: 1
@@ -870,7 +856,7 @@ Body:
     AegisName: Nobility_Outfit
     Name: Nobility Outfit
     Type: Armor
-    Buy: 22000
+    Buy: 30000
     Weight: 600
     Defense: 30
     Slots: 1
@@ -898,7 +884,7 @@ Body:
     AegisName: Mineworker_Vest
     Name: Mineworkers Vest
     Type: Armor
-    Buy: 22000
+    Buy: 30000
     Weight: 600
     Defense: 45
     Slots: 1
@@ -915,7 +901,7 @@ Body:
     AegisName: Sharp_Suit
     Name: Sharp Suit
     Type: Armor
-    Buy: 1000
+    Buy: 30000
     Weight: 600
     Defense: 30
     Slots: 1
@@ -944,7 +930,7 @@ Body:
     AegisName: Pirate_Coat
     Name: Pirate Coat
     Type: Armor
-    Buy: 22000
+    Buy: 30000
     Weight: 600
     Defense: 30
     Slots: 1
@@ -963,7 +949,7 @@ Body:
     AegisName: Feathery_Suit
     Name: Feathery Outfit
     Type: Armor
-    Buy: 1000
+    Buy: 30000
     Weight: 600
     Defense: 30
     Slots: 1
@@ -1025,7 +1011,7 @@ Body:
     AegisName: Arcane_Plate
     Name: Arcane Plate
     Type: Armor
-    Buy: 1000
+    Buy: 65000
     Weight: 2000
     Defense: 70
     Slots: 1
@@ -1045,7 +1031,7 @@ Body:
     AegisName: Regia_Plate
     Name: Regia Plate
     Type: Armor
-    Buy: 1000
+    Buy: 65000
     Weight: 2000
     Defense: 70
     Slots: 1
@@ -1065,7 +1051,7 @@ Body:
     AegisName: Mana_Plate
     Name: Mana Plate
     Type: Armor
-    Buy: 1000
+    Buy: 65000
     Weight: 2000
     Defense: 70
     Slots: 1
@@ -1084,7 +1070,7 @@ Body:
     AegisName: Bone_Plate
     Name: Bone Plate
     Type: Armor
-    Buy: 1000
+    Buy: 65000
     Weight: 2000
     Defense: 70
     Slots: 1
@@ -1104,7 +1090,7 @@ Body:
     AegisName: Urs_Plate
     Name: Ur Runestone Plate
     Type: Armor
-    Buy: 1000
+    Buy: 65000
     Weight: 2000
     Defense: 70
     Slots: 1
@@ -1124,7 +1110,7 @@ Body:
     AegisName: Vigor_Plate
     Name: Vigor Plate
     Type: Armor
-    Buy: 1000
+    Buy: 65000
     Weight: 2000
     Defense: 70
     Slots: 1
@@ -1143,7 +1129,7 @@ Body:
     AegisName: Peuzs_Plate
     Name: Peuz Plate
     Type: Armor
-    Buy: 1000
+    Buy: 65000
     Weight: 2000
     Defense: 70
     Slots: 1
@@ -1163,7 +1149,7 @@ Body:
     AegisName: Spiked_Mail
     Name: Peuz Mail
     Type: Armor
-    Buy: 1000
+    Buy: 65000
     Weight: 2000
     Defense: 70
     Slots: 1
@@ -1181,7 +1167,7 @@ Body:
     AegisName: Ebon_Armor
     Name: Ebon Armor
     Type: Armor
-    Buy: 1000
+    Buy: 65000
     Weight: 2000
     Defense: 70
     Slots: 1
@@ -1200,7 +1186,7 @@ Body:
     AegisName: Full_Plate
     Name: Full Plate
     Type: Armor
-    Buy: 1000
+    Buy: 65000
     Weight: 2000
     Defense: 100
     Slots: 1
@@ -1216,7 +1202,7 @@ Body:
     AegisName: Meteor_Plate
     Name: Meteor Plate
     Type: Armor
-    Buy: 1000
+    Buy: 65000
     Weight: 2000
     Defense: 70
     Slots: 1
@@ -1236,7 +1222,7 @@ Body:
     AegisName: Padded_Armor_
     Name: Padded Armor
     Type: Armor
-    Buy: 48000
+    Buy: 65000
     Weight: 2800
     Defense: 70
     Slots: 1
@@ -1256,7 +1242,7 @@ Body:
     AegisName: Swift_Armor
     Name: Swift Armor
     Type: Armor
-    Buy: 1000
+    Buy: 65000
     Weight: 2000
     Defense: 70
     Slots: 1
@@ -1274,7 +1260,7 @@ Body:
     AegisName: Short_Plate
     Name: Short Plate
     Type: Armor
-    Buy: 1000
+    Buy: 65000
     Weight: 2000
     Defense: 70
     Slots: 1
@@ -1294,7 +1280,7 @@ Body:
     AegisName: Sophisticated_Plate
     Name: Sophisticated Plate
     Type: Armor
-    Buy: 1000
+    Buy: 65000
     Weight: 2000
     Defense: 70
     Slots: 1
@@ -1312,7 +1298,7 @@ Body:
     AegisName: Armor_of_Punishment
     Name: Armor of Punishment
     Type: Armor
-    Buy: 1000
+    Buy: 65000
     Weight: 2000
     Defense: 70
     Slots: 1
@@ -1324,13 +1310,12 @@ Body:
     Refineable: true
     EquipLevelMin: 60
     Script: |
-      bonus2 bAtkEle,Ele_Holy,10;
       bonus2 bMagicAtkEle,Ele_Holy,10;
   - Id: 2397
     AegisName: Plate_of_Grace
     Name: Plate of Grace
     Type: Armor
-    Buy: 1000
+    Buy: 65000
     Weight: 2000
     Defense: 70
     Slots: 1
@@ -1348,7 +1333,7 @@ Body:
     AegisName: Njord_Plate
     Name: Njord Plate
     Type: Armor
-    Buy: 1000
+    Buy: 65000
     Weight: 2000
     Defense: 70
     Slots: 1
@@ -1360,13 +1345,12 @@ Body:
     Refineable: true
     EquipLevelMin: 50
     Script: |
-      bonus2 bAtkEle,Ele_Wind,10;
       bonus2 bMagicAtkEle,Ele_Wind,10;
   - Id: 2399
     AegisName: Lucious_Plate
     Name: Lucious Plate
     Type: Armor
-    Buy: 1000
+    Buy: 65000
     Weight: 2000
     Defense: 70
     Slots: 1
@@ -1378,13 +1362,12 @@ Body:
     Refineable: true
     EquipLevelMin: 50
     Script: |
-      bonus2 bAtkEle,Ele_Fire,10;
       bonus2 bMagicAtkEle,Ele_Fire,10;
   - Id: 2312
     AegisName: Padded_Armor_0
     Name: Padded Armor
     Type: Armor
-    Buy: 48000
+    Buy: 65000
     Weight: 2800
     Defense: 70
     Jobs:
@@ -1403,7 +1386,7 @@ Body:
     AegisName: Meteor_Plate_0
     Name: Meteor Plate
     Type: Armor
-    Buy: 1000
+    Buy: 65000
     Weight: 2000
     Defense: 70
     Jobs:
@@ -1422,7 +1405,7 @@ Body:
     AegisName: Ebon_Armor_0
     Name: Ebon Armor
     Type: Armor
-    Buy: 1000
+    Buy: 65000
     Weight: 2000
     Defense: 70
     Jobs:
@@ -1440,7 +1423,7 @@ Body:
     AegisName: Full_Plate_0
     Name: Full Plate
     Type: Armor
-    Buy: 1000
+    Buy: 65000
     Weight: 2000
     Defense: 100
     Jobs:

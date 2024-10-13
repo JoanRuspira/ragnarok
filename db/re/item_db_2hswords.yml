@@ -3,14 +3,73 @@ Header:
   Version: 1
 
 Body:
-  - Id: 11160
+  - Id: 1151
+    AegisName: Two_Hand_Sword
+    Name: Two-Handed Sword
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 30000
+    Weight: 1500
+    Attack: 120
+    Range: 1
+    Slots: 0
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 25
+    Refineable: true
+  - Id: 1152
+    AegisName: Two_Hand_Sword_
+    Name: Two-Handed Sword
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 30000
+    Weight: 1500
+    Attack: 120
+    Range: 1
+    Slots: 4
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 25
+    Refineable: true
+  - Id: 1153
     AegisName: Katana
     Name: Katana
     Type: Weapon
     SubType: 2hSword
-    Buy: 2000
-    Weight: 1000
-    Attack: 60
+    Buy: 40000
+    Weight: 1500
+    Attack: 140
+    Range: 1
+    Slots: 0
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
+    Script: |
+      bonus bCritical,5; 
+  - Id: 1154
+    AegisName: Katana_
+    Name: Katana
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 40000
+    Weight: 1500
+    Attack: 140
     Range: 1
     Slots: 3
     Jobs:
@@ -19,102 +78,300 @@ Body:
       Swordman: true
     Locations:
       Both_Hand: true
-    WeaponLevel: 1
-    EquipLevelMin: 4
+    WeaponLevel: 3
+    EquipLevelMin: 30
     Refineable: true
-  - Id: 1151
-    AegisName: Slayer
-    Name: Slayer
-    Type: Weapon
-    SubType: 2hSword
-    Buy: 15000
-    Weight: 1300
-    Attack: 100
-    Range: 1
-    Slots: 2
-    Jobs:
-      Crusader: true
-      Knight: true
-      Swordman: true
-    Locations:
-      Both_Hand: true
-    WeaponLevel: 2
-    EquipLevelMin: 18
-    Refineable: true
-  - Id: 1154
+    Script: |
+      bonus bCritical,5; 
+  - Id: 1155
     AegisName: Bastard_Sword
     Name: Bastard Sword
     Type: Weapon
     SubType: 2hSword
-    Buy: 22500
-    Weight: 1600
-    Attack: 115
+    Buy: 50000
+    Weight: 1500
+    Attack: 150
+    Range: 1
+    Slots: 0
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 35
+    Refineable: true
+    Script: |
+      bonus bAspdRate,getrefine();
+  - Id: 1156
+    AegisName: Bastard_Sword_
+    Name: Bastard Sword
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 50000
+    Weight: 1500
+    Attack: 150
+    Range: 1
+    Slots: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 35
+    Refineable: true
+    Script: |
+      bonus bAspdRate,getrefine();
+  - Id: 1157
+    AegisName: Slayer
+    Name: Bastard Sword
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 60000
+    Weight: 1500
+    Attack: 160
+    Range: 1
+    Slots: 0
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 40
+    Refineable: true
+    Script: |
+      bonus2 bAddSize,Size_Medium,10;
+      bonus2 bMagicAddSize,Size_Medium,10;
+  - Id: 1158
+    AegisName: Slayer_
+    Name: Bastard Sword
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 60000
+    Weight: 1500
+    Attack: 160
+    Range: 1
+    Slots: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 40
+    Refineable: true
+    Script: |
+      bonus2 bAddSize,Size_Medium,10;
+      bonus2 bMagicAddSize,Size_Medium,10;
+  - Id: 1159
+    AegisName: Broad_Sword
+    Name: Broad Sword
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 60000
+    Weight: 1500
+    Attack: 180
     Range: 1
     Slots: 2
     Jobs:
       Crusader: true
       Knight: true
-      Swordman: true
-    Locations:
-      Both_Hand: true
-    WeaponLevel: 2
-    EquipLevelMin: 18
-    Refineable: true
-  - Id: 1157
-    AegisName: Two_Hand_Sword
-    Name: Two-Handed Sword
-    Type: Weapon
-    SubType: 2hSword
-    Buy: 60000
-    Weight: 2200
-    Attack: 160
-    Range: 1
-    Slots: 1
-    Jobs:
-      Crusader: true
-      Knight: true
-      Swordman: true
     Locations:
       Both_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 33
-    Refineable: true
-  - Id: 1160
-    AegisName: Broad_Sword
-    Name: Broad Sword
-    Type: Weapon
-    SubType: 2hSword
-    Buy: 65000
-    Weight: 2000
-    Attack: 140
-    Range: 1
-    Slots: 1
-    Jobs:
-      Crusader: true
-      Knight: true
-      Swordman: true
-    Locations:
-      Both_Hand: true
-    WeaponLevel: 3
-    EquipLevelMin: 33
+    EquipLevelMin: 50
     Refineable: true
     Script: |
-      bonus bDef,5;
-      bonus bUnbreakableWeapon;
-  - Id: 1163
+      bonus2 bAddSize,Size_Large,10;
+      bonus2 bMagicAddSize,Size_Large,10;
+  - Id: 1160
     AegisName: Claymore
     Name: Claymore
     Type: Weapon
     SubType: 2hSword
-    Buy: 74000
-    Weight: 2500
-    Attack: 180
+    Buy: 60000
+    Weight: 1500
+    Attack: 185
     Range: 1
+    Slots: 2
     Jobs:
       Crusader: true
       Knight: true
     Locations:
       Both_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 33
+    EquipLevelMin: 60
     Refineable: true
+    Script: |
+      bonus bAspd,5;
+  - Id: 1161
+    AegisName: Muscle_Cutter
+    Name: Muscle Cutter
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 60000
+    Weight: 1500
+    Attack: 180
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bCritAtkRate,10;
+  - Id: 1162
+    AegisName: Atlas_Sword
+    Name: Atlas Sword
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 60000
+    Weight: 2000
+    Attack: 190
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bAtkRate,10;
+  - Id: 1163
+    AegisName: Dragon_Slayer
+    Name: Dragon Slayer
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 60000
+    Weight: 1500
+    Attack: 180
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus2 bAddRace,RC_Dragon,10;
+      bonus2 bMagicAddRace,RC_Dragon,10;
+  - Id: 1164
+    AegisName: Executioner
+    Name: Executioner
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 60000
+    Weight: 1700
+    Attack: 190
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bStr,getrefine();
+      bonus bLuk,getrefine();
+  - Id: 1165
+    AegisName: Silver_Fear
+    Name: Silver Fear
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 60000
+    Weight: 1700
+    Attack: 185
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bStr,5;
+      bonus bAtkRate,getrefine();
+  - Id: 1166
+    AegisName: Katzbalger
+    Name: Katzbalger
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 60000
+    Weight: 1700
+    Attack: 200
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bAgi,5;
+      bonus bAtkRate,getrefine();
+  - Id: 1167
+    AegisName: Krasnaya
+    Name: Krasnaya
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 60000
+    Weight: 1500
+    Attack: 200
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bLuk,5;
+      bonus bAtkRate,getrefine();
+  - Id: 1168
+    AegisName: Full_Force
+    Name: Full Force
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 60000
+    Weight: 1700
+    Attack: 210
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 75
+    Refineable: true
+    Script: |
+      bonus bAtk,getrefine()*5;

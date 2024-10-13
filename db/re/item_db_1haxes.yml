@@ -8,7 +8,7 @@ Body:
     Name: Axe
     Type: Weapon
     SubType: 1hAxe
-    Buy: 500
+    Buy: 1000
     Weight: 800
     Attack: 50
     Range: 1
@@ -27,7 +27,7 @@ Body:
     Name: Axe
     Type: Weapon
     SubType: 1hAxe
-    Buy: 500
+    Buy: 1000
     Weight: 800
     Attack: 50
     Range: 1
@@ -41,12 +41,34 @@ Body:
     WeaponLevel: 3
     EquipLevelMin: 3
     Refineable: true
-  - Id: 1303
+  - Id: 1317
     AegisName: Cleaver
     Name: Cleaver
     Type: Weapon
     SubType: 1hAxe
-    Buy: 20
+    Buy: 2500
+    Weight: 1000
+    Attack: 70
+    Range: 1
+    Slots: 0
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Merchant: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 20
+    Refineable: true
+    Script: |
+      bonus2 bAddRace,RC_Brute,10;
+      bonus2 bMagicAddRace,RC_Brute,10;
+  - Id: 1303
+    AegisName: Cleaver_
+    Name: Cleaver
+    Type: Weapon
+    SubType: 1hAxe
+    Buy: 2500
     Weight: 1000
     Attack: 70
     Range: 1
@@ -68,7 +90,7 @@ Body:
     Name: Guardian_Axe
     Type: Weapon
     SubType: 1hAxe
-    Buy: 20
+    Buy: 50000
     Weight: 1000
     Attack: 75
     Range: 1
@@ -88,7 +110,7 @@ Body:
     Name: Serrated_Axe
     Type: Weapon
     SubType: 1hAxe
-    Buy: 20
+    Buy: 50000
     Weight: 1000
     Attack: 95
     Range: 1
@@ -108,7 +130,7 @@ Body:
     Name: Orcish_Axe
     Type: Weapon
     SubType: 1hAxe
-    Buy: 20
+    Buy: 50000
     Weight: 1000
     Attack: 80
     Range: 1
@@ -131,7 +153,7 @@ Body:
     Name: Vecer_Axe
     Type: Weapon
     SubType: 1hAxe
-    Buy: 20
+    Buy: 50000
     Weight: 800
     Attack: 50
     MagicAttack: 95
@@ -149,7 +171,7 @@ Body:
     Name: Windhawk
     Type: Weapon
     SubType: 1hAxe
-    Buy: 20
+    Buy: 50000
     Weight: 1000
     Attack: 90
     Range: 1
@@ -163,13 +185,13 @@ Body:
     EquipLevelMin: 60
     Refineable: true
     Script: |
-      bonus bAspdRate,5;
+      bonus bAspd,5;
   - Id: 1309
     AegisName: Bloody_Axe
     Name: Bloody_Axe
     Type: Weapon
     SubType: 1hAxe
-    Buy: 20
+    Buy: 50000
     Weight: 1000
     Attack: 70
     Range: 1
@@ -190,7 +212,7 @@ Body:
     Name: War_Axe
     Type: Weapon
     SubType: 1hAxe
-    Buy: 20
+    Buy: 50000
     Weight: 1200
     Attack: 100
     Range: 1
@@ -210,7 +232,7 @@ Body:
     Name: Golden_Wrench
     Type: Weapon
     SubType: 1hAxe
-    Buy: 20
+    Buy: 50000
     Weight: 1200
     Attack: 100
     Range: 1
@@ -230,7 +252,7 @@ Body:
     Name: Buster
     Type: Weapon
     SubType: 2hAxe
-    Buy: 34000
+    Buy: 5000
     Weight: 1000
     Attack: 70
     Range: 1
@@ -251,7 +273,7 @@ Body:
     Name: Buster
     Type: Weapon
     SubType: 1hAxe
-    Buy: 34000
+    Buy: 5000
     Weight: 1000
     Attack: 70
     Range: 1
@@ -272,7 +294,7 @@ Body:
     Name: Heart_Breaker
     Type: Weapon
     SubType: 1hAxe
-    Buy: 34000
+    Buy: 50000
     Weight: 1000
     Attack: 75
     Range: 1
@@ -293,7 +315,7 @@ Body:
     Name: Light_Epsilon
     Type: Weapon
     SubType: 1hAxe
-    Buy: 34000
+    Buy: 50000
     Weight: 1000
     Attack: 50
     MagicAttack: 55
@@ -313,7 +335,7 @@ Body:
     Name: Sabbath
     Type: Weapon
     SubType: 1hAxe
-    Buy: 34000
+    Buy: 50000
     Weight: 1000
     Attack: 90
     Range: 1
@@ -327,4 +349,4 @@ Body:
     EquipLevelMin: 65
     Refineable: true
     Script: |
-      bonus2 bComaRace,RC_All,50;
+      bonus bCritAtkRate,15;

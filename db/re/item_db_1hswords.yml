@@ -8,9 +8,10 @@ Body:
     Name: Sword
     Type: Weapon
     SubType: 1hSword
-    Buy: 100
+    Buy: 1000
     Weight: 500
     Attack: 50
+    MagicAttack: 50
     Range: 1
     Slots: 0
     Jobs:
@@ -33,9 +34,10 @@ Body:
     Name: Sword
     Type: Weapon
     SubType: 1hSword
-    Buy: 100
+    Buy: 1000
     Weight: 500
     Attack: 50
+    MagicAttack: 50
     Range: 1
     Slots: 4
     Jobs:
@@ -58,9 +60,10 @@ Body:
     Name: Falchion
     Type: Weapon
     SubType: 1hSword
-    Buy: 1500
+    Buy: 2500
     Weight: 600
     Attack: 70
+    MagicAttack: 70
     Range: 1
     Slots: 0
     Jobs:
@@ -86,9 +89,10 @@ Body:
     Name: Falchion
     Type: Weapon
     SubType: 1hSword
-    Buy: 1500
+    Buy: 2500
     Weight: 600
     Attack: 70
+    MagicAttack: 70
     Range: 1
     Slots: 3
     Jobs:
@@ -114,9 +118,10 @@ Body:
     Name: Blade
     Type: Weapon
     SubType: 1hSword
-    Buy: 2900
+    Buy: 5000
     Weight: 700
     Attack: 70
+    MagicAttack: 70
     Range: 1
     Slots: 0
     Jobs:
@@ -135,15 +140,16 @@ Body:
     EquipLevelMin: 25
     Refineable: true
     Script: |
-      bonus bAtk,getrefine()*2;
+      bonus bAtk,getrefine()*5;
   - Id: 1106
     AegisName: Blade_
     Name: Blade
     Type: Weapon
     SubType: 1hSword
-    Buy: 2900
+    Buy: 5000
     Weight: 700
     Attack: 70
+    MagicAttack: 70
     Range: 1
     Slots: 3
     Jobs:
@@ -162,7 +168,7 @@ Body:
     EquipLevelMin: 25
     Refineable: true
     Script: |
-      bonus bAtk,getrefine()*2;
+      bonus bAtk,getrefine()*5;
   - Id: 1107
     AegisName: Lapier
     Name: Rapier
@@ -171,6 +177,7 @@ Body:
     Buy: 10000
     Weight: 700
     Attack: 75
+    MagicAttack: 75
     Range: 1
     Slots: 0
     Jobs:
@@ -198,6 +205,7 @@ Body:
     Buy: 10000
     Weight: 700
     Attack: 75
+    MagicAttack: 75
     Range: 1
     Slots: 3
     Jobs:
@@ -222,9 +230,10 @@ Body:
     Name: Scimitar
     Type: Weapon
     SubType: 1hSword
-    Buy: 17000
+    Buy: 50000
     Weight: 700
     Attack: 80
+    MagicAttack: 80
     Range: 1
     Slots: 3
     Jobs:
@@ -244,7 +253,7 @@ Body:
     Name: Saber
     Type: Weapon
     SubType: 1hSword
-    Buy: 49000
+    Buy: 50000
     Weight: 700
     Attack: 85
     MagicAttack: 50
@@ -266,9 +275,10 @@ Body:
     Name: Ring Pommel Saber
     Type: Weapon
     SubType: 1hSword
-    Buy: 24000
+    Buy: 50000
     Weight: 700
     Attack: 90
+    MagicAttack: 90
     Range: 1
     Slots: 3
     Jobs:
@@ -290,6 +300,7 @@ Body:
     Buy: 50000
     Weight: 800
     Attack: 90
+    MagicAttack: 100
     Range: 1
     Slots: 2
     Jobs:
@@ -308,9 +319,10 @@ Body:
     Name: Tsurugi
     Type: Weapon
     SubType: 1hSword
-    Buy: 51000
+    Buy: 50000
     Weight: 800
-    Attack: 90
+    Attack: 100
+    MagicAttack: 100
     Range: 1
     Slots: 2
     Jobs:
@@ -329,9 +341,10 @@ Body:
     Name: Flamberge
     Type: Weapon
     SubType: 1hSword
-    Buy: 60000
+    Buy: 50000
     Weight: 800
     Attack: 95
+    MagicAttack: 95
     Range: 1
     Slots: 2
     Jobs:
@@ -343,15 +356,16 @@ Body:
     EquipLevelMin: 65
     Refineable: true
     Script: |
-      bonus bAspdRate,5;
+      bonus bAspd,5;
   - Id: 1115
     AegisName: Holy_Avenger
     Name: Holy_Avenger
     Type: Weapon
     SubType: 1hSword
-    Buy: 60000
+    Buy: 50000
     Weight: 1000
     Attack: 100
+    MagicAttack: 100
     Range: 1
     Slots: 2
     Jobs:
@@ -362,16 +376,16 @@ Body:
     EquipLevelMin: 65
     Refineable: true
     Script: |
-      bonus2 bAtkEle,Ele_Holy,10;
       bonus2 bMagicAtkEle,Ele_Holy,10;
   - Id: 1116
     AegisName: Jeweled_Sword
     Name: Jeweled_Sword
     Type: Weapon
     SubType: 1hSword
-    Buy: 60000
+    Buy: 50000
     Weight: 1000
     Attack: 100
+    MagicAttack: 100
     Range: 1
     Slots: 2
     Jobs:
@@ -390,9 +404,10 @@ Body:
     Name: Knightguard_Sword
     Type: Weapon
     SubType: 1hSword
-    Buy: 60000
+    Buy: 50000
     Weight: 1000
     Attack: 100
+    MagicAttack: 100
     Range: 1
     Slots: 2
     Jobs:
@@ -403,16 +418,17 @@ Body:
     EquipLevelMin: 65
     Refineable: true
     Script: |
-      bonus2 bAtkEle,Ele_Fire,10;
       bonus2 bMagicAtkEle,Ele_Fire,10;
+      bonus2 bMagicAtkEle,Ele_Wind,10;
   - Id: 1118
     AegisName: Star_Dust_Blade
     Name: Star_Dust_Blade
     Type: Weapon
     SubType: 1hSword
-    Buy: 60000
+    Buy: 50000
     Weight: 1200
     Attack: 130
+    MagicAttack: 130
     Range: 1
     Slots: 2
     Jobs:

@@ -22,7 +22,7 @@ int PriestSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_lis
 			return calculate_magnus_exorcismus_atk_ratio(skill_lv);
         case SK_PR_UNHOLYCROSS:
 			add_unholy_cross_special_effects(target);
-			return calculate_unholy_cross_atk_ratio(skill_lv, sstatus->int_);
+			return calculate_unholy_cross_atk_ratio(skill_lv, sstatus->str);
 			break;
 		case SK_PR_DUPLELUX_MELEE:
 			add_duple_liight_melee_special_effects(target);
@@ -223,7 +223,7 @@ int PriestSkillAttackRatioCalculator::calculate_duple_light_magic_atk_ratio(int 
 }
 
 
-int PriestSkillAttackRatioCalculator::calculate_unholy_cross_atk_ratio(int skill_lv, int intelligence)
+int PriestSkillAttackRatioCalculator::calculate_unholy_cross_atk_ratio(int skill_lv, int strength)
 {
 	int ratio = 0;
 	switch (skill_lv) {
@@ -243,7 +243,7 @@ int PriestSkillAttackRatioCalculator::calculate_unholy_cross_atk_ratio(int skill
 			ratio = 225;
 			break;
 		}
-	return ratio + (intelligence*2);
+	return ratio + (strength *2);
 }
 
 

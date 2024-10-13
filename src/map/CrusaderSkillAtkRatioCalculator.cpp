@@ -8,7 +8,7 @@ int CrusaderSkillAtkRatioCalculator::calculate_skill_atk_ratio(struct block_list
 {
 	switch (skill_id) {
 		case SK_CR_HOLYCROSS:
-			return calculate_holy_cross_atk_ratio(skill_lv, sstatus->int_);
+			return calculate_holy_cross_atk_ratio(skill_lv, sstatus->str);
 			break;
 		case SK_CR_GRANDCROSS:
 			return calculate_grand_cross_atk_ratio(skill_lv);
@@ -153,7 +153,7 @@ int CrusaderSkillAtkRatioCalculator::calculate_grand_cross_atk_ratio(int skill_l
 	return ratio;
 }
 
-int CrusaderSkillAtkRatioCalculator::calculate_holy_cross_atk_ratio(int skill_lv, int intelligence)
+int CrusaderSkillAtkRatioCalculator::calculate_holy_cross_atk_ratio(int skill_lv, int strength)
 {
 	int ratio = 0;
 	switch (skill_lv) {
@@ -173,6 +173,6 @@ int CrusaderSkillAtkRatioCalculator::calculate_holy_cross_atk_ratio(int skill_lv
 			ratio = 225;
 			break;
 		}
-	return ratio + (intelligence*2);
+	return ratio + (strength*2);
 }
 

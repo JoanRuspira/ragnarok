@@ -4,72 +4,95 @@ Header:
 
 Body:
   - Id: 1451
-    AegisName: Guisarme
-    Name: Guisarme
+    AegisName: Two_Handed_Spear
+    Name: Two-Handed Spear
     Type: Weapon
     SubType: 2hSpear
-    Buy: 13000
-    Weight: 1000
-    Attack: 84
-    Range: 3
-    Slots: 2
+    Buy: 30000
+    Weight: 1500
+    Attack: 120
+    Range: 1
+    Slots: 0
     Jobs:
       Crusader: true
       Knight: true
       Swordman: true
     Locations:
       Both_Hand: true
-    WeaponLevel: 2
-    EquipLevelMin: 18
+    WeaponLevel: 3
+    EquipLevelMin: 25
     Refineable: true
+  - Id: 1452
+    AegisName: Two_Handed_Spear_
+    Name: Two-Handed Spear
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 30000
+    Weight: 1500
+    Attack: 120
+    Range: 1
+    Slots: 4
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 25
+    Refineable: true
+  - Id: 1453
+    AegisName: Spike
+    Name: Spike
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 40000
+    Weight: 1500
+    Attack: 140
+    Range: 1
+    Slots: 0
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
+    Script: |
+      bonus3 bAddEff,Eff_Bleeding,2000,ATF_SHORT;
   - Id: 1454
-    AegisName: Glaive
-    Name: Glaive
+    AegisName: Spike_
+    Name: Spike
     Type: Weapon
     SubType: 2hSpear
-    Buy: 20000
-    Weight: 1200
-    Attack: 104
-    Range: 3
-    Slots: 2
+    Buy: 40000
+    Weight: 1500
+    Attack: 140
+    Range: 1
+    Slots: 3
     Jobs:
       Crusader: true
       Knight: true
       Swordman: true
     Locations:
       Both_Hand: true
-    WeaponLevel: 2
-    EquipLevelMin: 18
+    WeaponLevel: 3
+    EquipLevelMin: 30
     Refineable: true
-  - Id: 1457
+    Script: |
+      bonus3 bAddEff,Eff_Bleeding,2000,ATF_SHORT;
+  - Id: 1455
     AegisName: Partizan
     Name: Partizan
     Type: Weapon
     SubType: 2hSpear
-    Buy: 27000
-    Weight: 2000
-    Attack: 124
-    Range: 3
-    Slots: 1
-    Jobs:
-      Crusader: true
-      Knight: true
-      Swordman: true
-    Locations:
-      Both_Hand: true
-    WeaponLevel: 2
-    EquipLevelMin: 18
-    Refineable: true
-  - Id: 1460
-    AegisName: Trident
-    Name: Trident
-    Type: Weapon
-    SubType: 2hSpear
-    Buy: 51000
-    Weight: 1200
+    Buy: 50000
+    Weight: 1500
     Attack: 150
-    Range: 3
-    Slots: 2
+    Range: 1
+    Slots: 0
     Jobs:
       Crusader: true
       Knight: true
@@ -77,24 +100,279 @@ Body:
     Locations:
       Both_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 33
+    EquipLevelMin: 35
     Refineable: true
-  - Id: 1463
+    Script: |
+      bonus2 bAddSize,Size_Large,10;
+      bonus2 bMagicAddSize,Size_Large,10;
+  - Id: 1456
+    AegisName: Partizan_
+    Name: Partizan
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 50000
+    Weight: 1500
+    Attack: 150
+    Range: 1
+    Slots: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 35
+    Refineable: true
+    Script: |
+      bonus2 bAddSize,Size_Large,10;
+      bonus2 bMagicAddSize,Size_Large,10;
+  - Id: 1457
+    AegisName: Lance
+    Name: Lance
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 60000
+    Weight: 1500
+    Attack: 160
+    Range: 1
+    Slots: 0
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 40
+    Refineable: true
+    Script: |
+      bonus bVit,getrefine()*2;
+  - Id: 1458
+    AegisName: Lance_
+    Name: Lance
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 60000
+    Weight: 1500
+    Attack: 160
+    Range: 1
+    Slots: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 40
+    Refineable: true
+    Script: |
+      bonus bVit,getrefine()*2;
+  - Id: 1459
+    AegisName: Battle_Fork
+    Name: Ballte Fork
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 60000
+    Weight: 1500
+    Attack: 160
+    Range: 1
+    Slots: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+    Script: |
+      bonus2 bAddRace,RC_Fish,10;
+      bonus2 bMagicAddRace,RC_Fish,10;
+  - Id: 1460
     AegisName: Halberd
     Name: Halberd
     Type: Weapon
     SubType: 2hSpear
-    Buy: 54000
-    Weight: 2500
-    Attack: 165
-    Range: 3
-    Slots: 1
+    Buy: 60000
+    Weight: 1750
+    Attack: 180
+    Range: 1
+    Slots: 2
     Jobs:
       Crusader: true
       Knight: true
-      Swordman: true
     Locations:
       Both_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 33
+    EquipLevelMin: 60
     Refineable: true
+    Script: |
+      bonus bAtk,getrefine()*2;
+  - Id: 1461
+    AegisName: Trident
+    Name: Trident
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 60000
+    Weight: 1750
+    Attack: 180
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bCritAtkRate,10;
+  - Id: 1462
+    AegisName: Brionac
+    Name: Brionac
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 60000
+    Weight: 1750
+    Attack: 190
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bStr,getrefine();
+      bonus bAgi,getrefine();
+  - Id: 1463
+    AegisName: Piercer
+    Name: Piercer
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 60000
+    Weight: 1750
+    Attack: 180
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus2 bIgnoreDefClassRate,Class_All,15;
+  - Id: 1464
+    AegisName: Guisarme
+    Name: Guisarme
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 60000
+    Weight: 1750
+    Attack: 180
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bStr,getrefine();
+      bonus bVit,getrefine();
+  - Id: 1465
+    AegisName: Zephyrus
+    Name: Zephyrus
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 60000
+    Weight: 1750
+    Attack: 190
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bAspd,5;
+  - Id: 1466
+    AegisName: Hatchet
+    Name: Hatchet
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 60000
+    Weight: 1750
+    Attack: 200
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 75
+    Refineable: true
+    Script: |
+      bonus bAtkRate,getrefine();
+  - Id: 1467
+    AegisName: Catapulter
+    Name: Catapulter
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 60000
+    Weight: 1400
+    Attack: 180
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      .@r = getrefine();
+      bonus2 bLongAtkRate,Class_All,5+.@r;
+  - Id: 1468
+    AegisName: Impaler
+    Name: Impaler
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 60000
+    Weight: 1750
+    Attack: 210
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 75
+    Refineable: true
+    Script: |
+      bonus bStr,5;
+      if (getrefine()>5) {
+         bonus bAtkRate,getrefine();
+      }

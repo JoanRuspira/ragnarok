@@ -245,9 +245,9 @@ Body:
     Name: SK_CR_HOLYCROSS
     Description: Holy Cross
     MaxLevel: 5
-    Type: Weapon
+    Type: Magic
     TargetType: Attack
-    Range: -2
+    Range: 1
     Hit: Multi_Hit
     HitCount: -2
     Element: Holy

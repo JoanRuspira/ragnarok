@@ -8,7 +8,7 @@ Body:
     Name: Mace
     Type: Weapon
     SubType: Mace
-    Buy: 1600
+    Buy: 1000
     Weight: 700
     Attack: 50
     Range: 1
@@ -27,7 +27,7 @@ Body:
     Name: Mace
     Type: Weapon
     SubType: Mace
-    Buy: 1600
+    Buy: 1000
     Weight: 700
     Attack: 50
     Range: 1
@@ -46,7 +46,7 @@ Body:
     Name: Quadrille
     Type: Weapon
     SubType: Mace
-    Buy: 1600
+    Buy: 2500
     Weight: 700
     Attack: 70
     Range: 1
@@ -68,7 +68,7 @@ Body:
     Name: Quadrille
     Type: Weapon
     SubType: Mace
-    Buy: 1600
+    Buy: 2500
     Weight: 700
     Attack: 70
     Range: 1
@@ -90,7 +90,7 @@ Body:
     Name: Flail
     Type: Weapon
     SubType: Mace
-    Buy: 1600
+    Buy: 5000
     Weight: 700
     Attack: 75
     Range: 1
@@ -112,7 +112,7 @@ Body:
     Name: Flail
     Type: Weapon
     SubType: Mace
-    Buy: 1600
+    Buy: 5000
     Weight: 700
     Attack: 75
     Range: 1
@@ -134,7 +134,7 @@ Body:
     Name: Quadrille
     Type: Weapon
     SubType: Mace
-    Buy: 1600
+    Buy: 10000
     Weight: 800
     Attack: 85
     Range: 1
@@ -156,7 +156,7 @@ Body:
     Name: Morning Star
     Type: Weapon
     SubType: Mace
-    Buy: 1600
+    Buy: 10000
     Weight: 800
     Attack: 85
     Range: 1
@@ -178,7 +178,7 @@ Body:
     Name: Slash
     Type: Weapon
     SubType: Mace
-    Buy: 1600
+    Buy: 50000
     Weight: 800
     Attack: 85
     Range: 1
@@ -199,7 +199,7 @@ Body:
     Name: Chain
     Type: Weapon
     SubType: Mace
-    Buy: 1600
+    Buy: 50000
     Weight: 800
     Attack: 90
     Range: 1
@@ -220,7 +220,7 @@ Body:
     Name: Long Mace
     Type: Weapon
     SubType: Mace
-    Buy: 1600
+    Buy: 50000
     Weight: 700
     Attack: 70
     Range: 1
@@ -240,7 +240,7 @@ Body:
     Name: Smasher
     Type: Weapon
     SubType: Mace
-    Buy: 1600
+    Buy: 50000
     Weight: 900
     Attack: 90
     Range: 1
@@ -260,7 +260,7 @@ Body:
     Name: Sword Mace
     Type: Weapon
     SubType: Mace
-    Buy: 1600
+    Buy: 50000
     Weight: 900
     Attack: 100
     Range: 1
@@ -273,13 +273,13 @@ Body:
     EquipLevelMin: 65
     Refineable: true
     Script: |
-      bonus bAspdRate,5;
+      bonus bAspd,5;
   - Id: 1514
     AegisName: Royal_Pillar
     Name: Royal Pillar
     Type: Weapon
     SubType: Mace
-    Buy: 1600
+    Buy: 50000
     Weight: 900
     Attack: 110
     Range: 1
@@ -298,7 +298,7 @@ Body:
     Name: Golden Mace
     Type: Weapon
     SubType: Mace
-    Buy: 1600
+    Buy: 50000
     Weight: 800
     Attack: 90
     MagicAttack: 70
@@ -313,14 +313,13 @@ Body:
     EquipLevelMin: 65
     Refineable: true
     Script: |
-      bonus2 bAtkEle,Ele_Holy,10;
       bonus2 bMagicAtkEle,Ele_Holy,10;
   - Id: 1516
     AegisName: Grand_Cross
     Name: Gold Cross
     Type: Weapon
     SubType: Mace
-    Buy: 1600
+    Buy: 50000
     Weight: 700
     Attack: 70
     MagicAttack: 90
@@ -334,14 +333,13 @@ Body:
     EquipLevelMin: 70
     Refineable: true
     Script: |
-      bonus2 bAtkEle,Ele_Holy,10;
       bonus2 bMagicAtkEle,Ele_Holy,10;
   - Id: 1517
     AegisName: Grand_Darkness
     Name: Dark Cross
     Type: Weapon
     SubType: Mace
-    Buy: 1600
+    Buy: 50000
     Weight: 700
     Attack: 70
     MagicAttack: 90
@@ -355,14 +353,13 @@ Body:
     EquipLevelMin: 70
     Refineable: true
     Script: |
-      bonus2 bAtkEle,Ele_Dark,10;
       bonus2 bMagicAtkEle,Ele_Dark,10;
   - Id: 1518
     AegisName: Demonic_Mace
     Name: Demonic Mace
     Type: Weapon
     SubType: Mace
-    Buy: 1600
+    Buy: 50000
     Weight: 800
     Attack: 90
     MagicAttack: 70
@@ -377,14 +374,13 @@ Body:
     EquipLevelMin: 65
     Refineable: true
     Script: |
-      bonus2 bAtkEle,Ele_Dark,10;
       bonus2 bMagicAtkEle,Ele_Dark,10;
   - Id: 1519
     AegisName: Wicked_Cross
     Name: Wicked Cross
     Type: Weapon
     SubType: Mace
-    Buy: 1600
+    Buy: 50000
     Weight: 700
     Attack: 70
     MagicAttack: 90
@@ -398,9 +394,6 @@ Body:
     EquipLevelMin: 75
     Refineable: true
     Script: |
-      bonus2 bAtkEle,Ele_Holy,5;
       bonus2 bMagicAtkEle,Ele_Holy,5;
-      bonus2 bAtkEle,Ele_Dark,5;
       bonus2 bMagicAtkEle,Ele_Dark,5;
-      bonus2 bAtkEle,Ele_Ghost,5;
       bonus2 bMagicAtkEle,Ele_Ghost,5;

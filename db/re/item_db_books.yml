@@ -8,85 +8,379 @@ Body:
     Name: Book
     Type: Weapon
     SubType: Book
-    Buy: 30000
+    Buy: 1000
     Weight: 600
+    Attack: 50
     MagicAttack: 50
-    Attack: 10
     Range: 1
-    Slots: 3
+    Slots: 0
     Jobs:
-      Priest: true
       Sage: true
-      StarGladiator: true
     Locations:
       Right_Hand: true
-    WeaponLevel: 2
-    EquipLevelMin: 14
+    WeaponLevel: 3
+    EquipLevelMin: 50
     Refineable: true
-  - Id: 1572
-    AegisName: Principles_Of_Magic
+  - Id: 1551
+    AegisName: Book_
+    Name: Book
+    Type: Weapon
+    SubType: Book
+    Buy: 1000
+    Weight: 600
+    Attack: 50
+    MagicAttack: 50
+    Range: 1
+    Slots: 4
+    Jobs:
+      Sage: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+  - Id: 1552
+    AegisName: Principles_of_Magic
     Name: Principles of Magic
     Type: Weapon
     SubType: Book
-    Buy: 20
-    Weight: 300
-    Attack: 10
-    MagicAttack: 90
+    Buy: 2500
+    Weight: 600
+    Attack: 70
+    MagicAttack: 70
     Range: 1
-    Slots: 2
+    Slots: 0
     Jobs:
-      Priest: true
       Sage: true
-      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus2 bAddSize,Size_Small,10;
+      bonus2 bMagicAddSize,Size_Small,10;
+  - Id: 1553
+    AegisName: Principles_of_Magic_
+    Name: Principles of Magic
+    Type: Weapon
+    SubType: Book
+    Buy: 2500
+    Weight: 600
+    Attack: 70
+    MagicAttack: 70
+    Range: 1
+    Slots: 3
+    Jobs:
+      Sage: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus2 bAddSize,Size_Small,10;
+      bonus2 bMagicAddSize,Size_Small,10;
+  - Id: 1554
+    AegisName: Enciclopedia
+    Name: Enciclopedia
+    Type: Weapon
+    SubType: Book
+    Buy: 5000
+    Weight: 600
+    Attack: 90
+    MagicAttack: 70
+    Range: 1
+    Slots: 0
+    Jobs:
+      Sage: true
     Locations:
       Right_Hand: true
     WeaponLevel: 3
     EquipLevelMin: 60
     Refineable: true
     Script: |
-      bonus bInt,3;
-      bonus bSPrecovRate,5;
-  - Id: 1573
+      bonus bStr,5;
+      bonus bAtk,getrefine()*5;
+  - Id: 1555
+    AegisName: Enciclopedia_
+    Name: Enciclopedia
+    Type: Weapon
+    SubType: Book
+    Buy: 5000
+    Weight: 600
+    Attack: 90
+    MagicAttack: 70
+    Range: 1
+    Slots: 3
+    Jobs:
+      Sage: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bStr,5;
+      bonus bAtk,getrefine()*5;
+  - Id: 1556
     AegisName: Ancient_Magic
     Name: Ancient Magic
     Type: Weapon
     SubType: Book
-    Buy: 20
-    Weight: 700
-    Attack: 10
-    MagicAttack: 120
+    Buy: 10000
+    Weight: 600
+    Attack: 70
+    MagicAttack: 90
     Range: 1
-    Slots: 2
+    Slots: 0
     Jobs:
-      Priest: true
       Sage: true
-      StarGladiator: true
     Locations:
       Right_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 70
+    EquipLevelMin: 65
     Refineable: true
-  - Id: 1564
-    AegisName: Encyclopedia
-    Name: Encyclopedia
+    Script: |
+      bonus bInt,5;
+      bonus bMatk,getrefine()*5;    
+  - Id: 1557
+    AegisName: Ancient_Magic_
+    Name: Ancient Magic
     Type: Weapon
     SubType: Book
-    Buy: 20
-    Weight: 2000
-    Attack: 110
+    Buy: 10000
+    Weight: 600
+    Attack: 70
     MagicAttack: 90
+    Range: 1
+    Slots: 3
+    Jobs:
+      Sage: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bInt,5;
+      bonus bMatk,getrefine()*5;  
+  - Id: 1558
+    AegisName: Battle_Textbook
+    Name: Battle Textbook
+    Type: Weapon
+    SubType: Book
+    Buy: 50000
+    Weight: 600
+    Attack: 85
+    MagicAttack: 85
+    Range: 1
+    Slots: 3
+    Jobs:
+      Sage: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bMaxHP,250;
+      bonus bMatk,getrefine()*5;  
+  - Id: 1559
+    AegisName: Agenda
+    Name: Agenda
+    Type: Weapon
+    SubType: Book
+    Buy: 50000
+    Weight: 600
+    Attack: 50
+    MagicAttack: 85
+    Range: 1
+    Slots: 3
+    Jobs:
+      Sage: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+    Script: |
+      bonus bCastrate,10;
+      bonus bDelayRate,10;
+  - Id: 1560
+    AegisName: Boltijin
+    Name: Boltijin
+    Type: Weapon
+    SubType: Book
+    Buy: 50000
+    Weight: 600
+    Attack: 75
+    MagicAttack: 100
     Range: 1
     Slots: 2
     Jobs:
-      Priest: true
       Sage: true
-      StarGladiator: true
     Locations:
       Right_Hand: true
     WeaponLevel: 3
     EquipLevelMin: 70
     Refineable: true
     Script: |
-      bonus bInt,3;
-      bonus bDex,2;
-      bonus bCritical,20+((readparam(bLuk)*2)/10);
+      bonus bMaxSP,250;
+      bonus bMatkRate,getrefine();
+  - Id: 1561
+    AegisName: Book_of_the_Dead
+    Name: Book of the Dead
+    Type: Weapon
+    SubType: Book
+    Buy: 50000
+    Weight: 600
+    Attack: 75
+    MagicAttack: 100
+    Range: 1
+    Slots: 2
+    Jobs:
+      Sage: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Dark,15;
+      bonus2 bMagicAtkEle,Ele_Ghost,15;
+  - Id: 1562
+    AegisName: Booster_Spellbook
+    Name: Booster Spellbook
+    Type: Weapon
+    SubType: Book
+    Buy: 50000
+    Weight: 600
+    Attack: 80
+    MagicAttack: 90
+    Range: 1
+    Slots: 2
+    Jobs:
+      Sage: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bInt,getrefine();
+      bonus bDex,getrefine();
+      bonus bAgi,getrefine();
+  - Id: 1563
+    AegisName: Dictionary
+    Name: Dictionary
+    Type: Weapon
+    SubType: Book
+    Buy: 50000
+    Weight: 600
+    Attack: 110
+    MagicAttack: 75
+    Range: 1
+    Slots: 2
+    Jobs:
+      Sage: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bStr,5;
+      bonus bAtkRate,getrefine();
+  - Id: 1564
+    AegisName: Elemental_Origin
+    Name: Elemental Origin
+    Type: Weapon
+    SubType: Book
+    Buy: 50000
+    Weight: 600
+    Attack: 60
+    MagicAttack: 95
+    Range: 1
+    Slots: 2
+    Jobs:
+      Sage: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 75
+    Refineable: true
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Fire,7;
+      bonus2 bMagicAtkEle,Ele_Water,7;
+      bonus2 bMagicAtkEle,Ele_Wind,7;
+      bonus2 bMagicAtkEle,Ele_Earth,7;
+  - Id: 1565
+    AegisName: Adventurer_Chronicles
+    Name: Adventurer Chronicles
+    Type: Weapon
+    SubType: Book
+    Buy: 50000
+    Weight: 600
+    Attack: 90
+    MagicAttack: 90
+    Range: 1
+    Slots: 2
+    Jobs:
+      Sage: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bAspd,5;
+      if (getrefine()>5) {
+         bonus bMatk,30;
+      }
+  - Id: 1566
+    AegisName: Primordial_Script
+    Name: Primordial Script
+    Type: Weapon
+    SubType: Book
+    Buy: 50000
+    Weight: 600
+    Attack: 70
+    MagicAttack: 110
+    Range: 1
+    Slots: 2
+    Jobs:
+      Sage: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 75
+    Refineable: true
+    Script: |
+      bonus bDex,5;
+      if (getrefine()>5) {
+         bonus bMatk,30;
+      }
+  - Id: 1567
+    AegisName: Legacy_of_Dragon
+    Name: Legacy of Dragon
+    Type: Weapon
+    SubType: Book
+    Buy: 50000
+    Weight: 600
+    Attack: 75
+    MagicAttack: 110
+    Range: 1
+    Slots: 2
+    Jobs:
+      Sage: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 75
+    Refineable: true
+    Script: |
+      bonus bInt,5;
+      if (getrefine()>5) {
+         bonus bMatkRate,getrefine();
+      }

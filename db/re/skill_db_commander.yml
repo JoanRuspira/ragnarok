@@ -223,7 +223,7 @@ Body:
     Name: SK_CM_IGNITIONBREAK
     Description: Ignition Break
     MaxLevel: 5
-    Type: Weapon
+    Type: Magic
     TargetType: Self
     DamageFlags:
       Splash: true

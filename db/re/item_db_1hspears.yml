@@ -8,7 +8,7 @@ Body:
     Name: Spear
     Type: Weapon
     SubType: 1hSpear
-    Buy: 150
+    Buy: 1000
     Weight: 700
     Attack: 50
     Range: 1
@@ -27,7 +27,7 @@ Body:
     Name: Spear
     Type: Weapon
     SubType: 1hSpear
-    Buy: 150
+    Buy: 1000
     Weight: 700
     Attack: 50
     Range: 1
@@ -46,7 +46,7 @@ Body:
     Name: Javelin
     Type: Weapon
     SubType: 1hSpear
-    Buy: 1700
+    Buy: 2500
     Weight: 850
     Attack: 70
     Range: 1
@@ -67,7 +67,7 @@ Body:
     Name: Javelin
     Type: Weapon
     SubType: 1hSpear
-    Buy: 1700
+    Buy: 2500
     Weight: 850
     Attack: 70
     Range: 1
@@ -88,7 +88,7 @@ Body:
     Name: Pike
     Type: Weapon
     SubType: 1hSpear
-    Buy: 3450
+    Buy: 5000
     Weight: 1000
     Attack: 75
     Range: 1
@@ -110,7 +110,7 @@ Body:
     Name: Pike
     Type: Weapon
     SubType: 1hSpear
-    Buy: 3450
+    Buy: 5000
     Weight: 1000
     Attack: 75
     Range: 1
@@ -132,7 +132,7 @@ Body:
     Name: Brocca
     Type: Weapon
     SubType: 1hSpear
-    Buy: 3450
+    Buy: 50000
     Weight: 1000
     Attack: 80
     Range: 1
@@ -147,14 +147,14 @@ Body:
     EquipLevelMin: 35
     Refineable: true
     Script: |
-      .@r = getrefine()*2;
+      .@r = getrefine();
       bonus2 bIgnoreDefClassRate,Class_All,20+.@r;
   - Id: 1408
     AegisName: Battle_Hook
     Name: Battle Hook
     Type: Weapon
     SubType: 1hSpear
-    Buy: 3450
+    Buy: 50000
     Weight: 1000
     Attack: 85
     Range: 1
@@ -177,7 +177,7 @@ Body:
     Name: Harpoon
     Type: Weapon
     SubType: 1hSpear
-    Buy: 3450
+    Buy: 50000
     Weight: 1000
     Attack: 85
     Range: 1
@@ -198,7 +198,7 @@ Body:
     Name: Blocking Spear
     Type: Weapon
     SubType: 1hSpear
-    Buy: 3450
+    Buy: 50000
     Weight: 1000
     Attack: 70
     Defense: 10
@@ -217,7 +217,7 @@ Body:
     Name: Gungnir
     Type: Weapon
     SubType: 1hSpear
-    Buy: 3450
+    Buy: 50000
     Weight: 1000
     Attack: 100
     Range: 1
@@ -232,13 +232,13 @@ Body:
     Refineable: true
     Script: |
       bonus bHit,20;
-      bonus bAspdRate,5;
+      bonus bAspd,3;
   - Id: 1412
     AegisName: Bayonet
     Name: Bayonet
     Type: Weapon
     SubType: 1hSpear
-    Buy: 3450
+    Buy: 50000
     Weight: 1000
     Attack: 100
     Range: 1
@@ -258,7 +258,7 @@ Body:
     Name: Kingsguard Spear
     Type: Weapon
     SubType: 1hSpear
-    Buy: 3450
+    Buy: 50000
     Weight: 1100
     Attack: 100
     Range: 1
@@ -278,7 +278,7 @@ Body:
     Name: Lancet
     Type: Weapon
     SubType: 1hSpear
-    Buy: 3450
+    Buy: 50000
     Weight: 800
     Attack: 90
     Range: 1
@@ -299,7 +299,7 @@ Body:
     Name: Vivatus Fides
     Type: Weapon
     SubType: 1hSpear
-    Buy: 3450
+    Buy: 50000
     Weight: 1100
     Attack: 110
     Range: 1
@@ -313,13 +313,13 @@ Body:
     Refineable: true
     Script: |
       bonus bCritical,5;
-      bonus bAspdRate,5;
+      bonus bAspd,3;
   - Id: 1416
     AegisName: Argent_Blanco
     Name: Argent Blanco
     Type: Weapon
     SubType: 1hSpear
-    Buy: 3450
+    Buy: 50000
     Weight: 1100
     Attack: 70
     MagicAttack: 95
@@ -339,7 +339,7 @@ Body:
     Name: Pole Axe
     Type: Weapon
     SubType: 1hSpear
-    Buy: 3450
+    Buy: 50000
     Weight: 1100
     Attack: 120
     Range: 1

@@ -218,6 +218,7 @@ int KnightSkillAtkRatioCalculator::calculate_smite_atk_ratio(int skill_lv)
 
 int KnightSkillAtkRatioCalculator::calculate_sonic_wave_atk_ratio(int skill_lv, int intelligence)
 {
+	ShowMessage( "Sonic wave\n");
 	int ratio = 0;
 	switch (skill_lv) {
 		case 1:

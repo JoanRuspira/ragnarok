@@ -8,7 +8,7 @@ Body:
     Name: Two-Handed Axe
     Type: Weapon
     SubType: 2hAxe
-    Buy: 55000
+    Buy: 30000
     Weight: 2000
     Attack: 120
     Range: 1
@@ -18,50 +18,73 @@ Body:
     Locations:
       Both_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 50
+    EquipLevelMin: 30
     Refineable: true
   - Id: 1352
     AegisName: Two_Handed_Axe_
     Name: Two-Handed Axe
     Type: Weapon
     SubType: 2hAxe
-    Buy: 55000
+    Buy: 30000
     Weight: 2000
     Attack: 120
     Range: 1
-    Slots: 2
+    Slots: 4
     Jobs:
       Blacksmith: true
     Locations:
       Both_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 50
+    EquipLevelMin: 30
     Refineable: true
   - Id: 1353
     AegisName: Great_Axe
     Name: Great_Axe
     Type: Weapon
     SubType: 2hAxe
-    Buy: 55000
+    Buy: 40000
     Weight: 2000
-    Attack: 120
+    Attack: 140
     Range: 1
-    Slots: 2
+    Slots: 0
     Jobs:
       Blacksmith: true
     Locations:
       Both_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 50
+    EquipLevelMin: 40
     Refineable: true
+    Script: |
+      bonus2 bAddSize,Size_Large,10;
+      bonus2 bMagicAddSize,Size_Large,10;
+  - Id: 1368
+    AegisName: Great_Axe_
+    Name: Great Axe
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 40000
+    Weight: 2000
+    Attack: 140
+    Range: 1
+    Slots: 3
+    Jobs:
+      Blacksmith: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 40
+    Refineable: true
+    Script: |
+      bonus2 bAddSize,Size_Large,10;
+      bonus2 bMagicAddSize,Size_Large,10;
   - Id: 1354
     AegisName: Battle_Axe
     Name: Battle_Axe
     Type: Weapon
     SubType: 2hAxe
-    Buy: 55000
+    Buy: 50000
     Weight: 2000
-    Attack: 120
+    Attack: 150
     Range: 1
     Slots: 0
     Jobs:
@@ -71,16 +94,18 @@ Body:
     WeaponLevel: 3
     EquipLevelMin: 50
     Refineable: true
+    Script: |
+      bonus bUnbreakableWeapon;
   - Id: 1355
     AegisName: Battle_Axe_
     Name: Battle_Axe
     Type: Weapon
     SubType: 2hAxe
-    Buy: 55000
+    Buy: 50000
     Weight: 2000
-    Attack: 120
+    Attack: 150
     Range: 1
-    Slots: 2
+    Slots: 3
     Jobs:
       Blacksmith: true
     Locations:
@@ -88,14 +113,16 @@ Body:
     WeaponLevel: 3
     EquipLevelMin: 50
     Refineable: true
+    Script: |
+      bonus bUnbreakableWeapon;
   - Id: 1356
     AegisName: Hammer_Axe
     Name: Hammer_Axe
     Type: Weapon
     SubType: 2hAxe
-    Buy: 55000
+    Buy: 60000
     Weight: 2000
-    Attack: 120
+    Attack: 160
     Range: 1
     Slots: 0
     Jobs:
@@ -103,67 +130,75 @@ Body:
     Locations:
       Both_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 50
+    EquipLevelMin: 60
     Refineable: true
+    Script: |
+      bonus3 bAutoSpell,"SK_MO_DECAGI",1,500;
   - Id: 1357
     AegisName: Hammer_Axe_
     Name: Hammer_Axe
     Type: Weapon
     SubType: 2hAxe
-    Buy: 55000
+    Buy: 60000
     Weight: 2000
-    Attack: 120
+    Attack: 160
     Range: 1
-    Slots: 2
+    Slots: 3
     Jobs:
       Blacksmith: true
     Locations:
       Both_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 50
+    EquipLevelMin: 60
     Refineable: true
+    Script: |
+      bonus3 bAutoSpell,"SK_MO_DECAGI",1,500;
   - Id: 1358
     AegisName: Club_Axe
     Name: Club_Axe
     Type: Weapon
     SubType: 2hAxe
-    Buy: 55000
+    Buy: 60000
     Weight: 2000
-    Attack: 120
+    Attack: 170
     Range: 1
-    Slots: 2
+    Slots: 3
     Jobs:
       Blacksmith: true
     Locations:
       Both_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 50
+    EquipLevelMin: 60
     Refineable: true
+    Script: |
+      bonus bStr,getrefine()*2;
   - Id: 1359
     AegisName: Power_Axe
     Name: Power_Axe
     Type: Weapon
     SubType: 2hAxe
-    Buy: 55000
+    Buy: 60000
     Weight: 2000
-    Attack: 120
+    Attack: 170
     Range: 1
-    Slots: 2
+    Slots: 3
     Jobs:
       Blacksmith: true
     Locations:
       Both_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 50
+    EquipLevelMin: 65
     Refineable: true
+    Script: |
+      bonus2 bIgnoreDefClassRate,Class_All,15;
   - Id: 1360
     AegisName: Avenger
     Name: Avenger
     Type: Weapon
     SubType: 2hAxe
-    Buy: 55000
+    Buy: 60000
     Weight: 2000
-    Attack: 120
+    Attack: 180
     Range: 1
     Slots: 2
     Jobs:
@@ -171,16 +206,37 @@ Body:
     Locations:
       Both_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 50
+    EquipLevelMin: 65
     Refineable: true
+    Script: |
+      bonus bAspd,5;
+  - Id: 1367
+    AegisName: Hacker
+    Name: Hacker
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 60000
+    Weight: 2000
+    Attack: 180
+    Range: 1
+    Slots: 2
+    Jobs:
+      Blacksmith: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bLongAtkRate,getrefine();
   - Id: 1361
     AegisName: Crimson_Axe
     Name: Crimson_Axe
     Type: Weapon
     SubType: 2hAxe
-    Buy: 55000
+    Buy: 60000
     Weight: 2000
-    Attack: 120
+    Attack: 190
     Range: 1
     Slots: 2
     Jobs:
@@ -188,16 +244,37 @@ Body:
     Locations:
       Both_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 50
+    EquipLevelMin: 70
     Refineable: true
+    Script: |
+      bonus bAtkRate,getrefine();
+  - Id: 1366
+    AegisName: Chopper
+    Name: Chopper
+    Type: Weapon
+    SubType: 2hAxe
+    Buy: 60000
+    Weight: 2000
+    Attack: 190
+    Range: 1
+    Slots: 2
+    Jobs:
+      Blacksmith: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBreakArmorRate,500;
   - Id: 1362
     AegisName: Guillotine
     Name: Guillotine
     Type: Weapon
     SubType: 2hAxe
-    Buy: 55000
+    Buy: 60000
     Weight: 2000
-    Attack: 120
+    Attack: 200
     Range: 1
     Slots: 2
     Jobs:
@@ -205,16 +282,18 @@ Body:
     Locations:
       Both_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 50
+    EquipLevelMin: 75
     Refineable: true
+    Script: |
+      bonus2 bComaRace,RC_All,50;
   - Id: 1363
     AegisName: Penitentia_Ascia
     Name: Penitentia_Ascia
     Type: Weapon
     SubType: 2hAxe
-    Buy: 55000
+    Buy: 60000
     Weight: 2000
-    Attack: 120
+    Attack: 200
     Range: 1
     Slots: 2
     Jobs:
@@ -222,16 +301,18 @@ Body:
     Locations:
       Both_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 50
+    EquipLevelMin: 75
     Refineable: true
+    Script: |
+      bonus bCritAtkRate,10;
   - Id: 1364
     AegisName: Heroic_Axe
     Name: Heroic_Axe
     Type: Weapon
     SubType: 2hAxe
-    Buy: 55000
+    Buy: 60000
     Weight: 2000
-    Attack: 120
+    Attack: 190
     Range: 1
     Slots: 2
     Jobs:
@@ -239,16 +320,18 @@ Body:
     Locations:
       Both_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 50
+    EquipLevelMin: 70
     Refineable: true
+    Script: |
+      bonus bCritical,10; 
   - Id: 1365
     AegisName: Doom_Slayer
     Name: Doom_Slayer
     Type: Weapon
     SubType: 2hAxe
-    Buy: 55000
-    Weight: 2000
-    Attack: 120
+    Buy: 60000
+    Weight: 2500
+    Attack: 220
     Range: 1
     Slots: 2
     Jobs:
@@ -256,5 +339,10 @@ Body:
     Locations:
       Both_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 50
+    EquipLevelMin: 75
     Refineable: true
+    Script: |
+      if (readparam(bStr)>=95) {
+         bonus bAtk,30;
+      }
+      bonus3 bAutoSpell,"SK_KN_BOWLINGBASH",5,500;

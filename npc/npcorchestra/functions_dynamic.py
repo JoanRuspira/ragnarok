@@ -182,7 +182,7 @@ def buildMobAvail(mob_id, mob_name):
     mob_avail += "    HairStyle: " + str(random.randint(0, 8)) + "\n"
     mob_avail += "    HairColor: " + str(random.randint(0, 8)) + "\n"
     mob_avail += "    ClothColor: " + str(random.randint(0, 3)) + "\n"
-    mob_avail += "    Weapon: Gladius\n"
+    mob_avail += "    Weapon: Knife\n"
     mob_avail += "    Shield: Guard\n"
     
     mob_avail = build_headgear_section(mob_avail, mob_name)

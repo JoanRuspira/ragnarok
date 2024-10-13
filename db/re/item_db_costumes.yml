@@ -8,6 +8,7 @@ Body:
     Name: Lunatic_Balloons
     Type: Armor
     Weight: 200
+    Buy: 50000
     Jobs:
       All: true
       Novice: false
@@ -20,6 +21,7 @@ Body:
     Name: Happy_Balloons
     Type: Armor
     Weight: 200
+    Buy: 50000
     Jobs:
       All: true
       Novice: false
@@ -31,6 +33,7 @@ Body:
     AegisName: Imperial_Glory
     Name: Imperial_Glory
     Type: Armor
+    Buy: 50000
     Weight: 200
     Jobs:
       Knight: true
@@ -43,6 +46,7 @@ Body:
     AegisName: Super_Saiyan_Hair
     Name: Super_Saiyan_Hair
     Type: Armor
+    Buy: 50000
     Weight: 200
     Jobs:
       Monk: true
@@ -54,6 +58,7 @@ Body:
     AegisName: Brown_Stole
     Name: Brown_Stole
     Type: Armor
+    Buy: 50000
     Weight: 200
     Jobs:
       Knight: true
@@ -76,6 +81,7 @@ Body:
     AegisName: Books_of_Magic
     Name: Books_of_Magic
     Type: Armor
+    Buy: 50000
     Weight: 200
     Jobs:
       Wizard: true
@@ -88,6 +94,7 @@ Body:
     AegisName: Snowman_Scarf
     Name: Snowman_Scarf
     Type: Armor
+    Buy: 50000
     Weight: 200
     Jobs:
       All: true
@@ -100,6 +107,7 @@ Body:
     AegisName: Dark_Stall
     Name: Dark_Stall
     Type: Armor
+    Buy: 50000
     Weight: 200
     Jobs:
       Knight: true
@@ -122,6 +130,7 @@ Body:
     AegisName: Disguise_Mantle
     Name: Disguise_Mantle
     Type: Armor
+    Buy: 50000
     Weight: 200
     Jobs:
       Knight: true
@@ -144,6 +153,7 @@ Body:
     AegisName: Magic_Muffler
     Name: Magic_Muffler
     Type: Armor
+    Buy: 50000
     Weight: 200
     Jobs:
       Knight: true
@@ -166,6 +176,7 @@ Body:
     AegisName: Long_Blue_Scarf
     Name: Long_Blue_Scarf
     Type: Armor
+    Buy: 50000
     Weight: 200
     Jobs:
       Knight: true
@@ -188,6 +199,7 @@ Body:
     AegisName: Long_Red_Scarf
     Name: Long_Red_Scarf
     Type: Armor
+    Buy: 50000
     Weight: 200
     Jobs:
       Knight: true
@@ -210,6 +222,7 @@ Body:
     AegisName: Dominion_Stall
     Name: Dominion_Stall
     Type: Armor
+    Buy: 50000
     Weight: 200
     Jobs:
       Priest: true
@@ -221,6 +234,7 @@ Body:
     AegisName: Angel_Stall
     Name: Angel_Stall
     Type: Armor
+    Buy: 50000
     Weight: 200
     Jobs:
       Priest: true
@@ -232,6 +246,7 @@ Body:
     AegisName: Protect_cloth
     Name: Protect_cloth
     Type: Armor
+    Buy: 50000
     Weight: 200
     Jobs:
       Knight: true
@@ -254,6 +269,7 @@ Body:
     AegisName: Stall_of_Bat
     Name: Stall_of_Bat
     Type: Armor
+    Buy: 50000
     Weight: 200
     Jobs:
       Priest: true
@@ -266,6 +282,7 @@ Body:
     AegisName: Exuberant_Hat
     Name: Exuberant_Hat
     Type: Armor
+    Buy: 50000
     Weight: 200
     Jobs:
       BardDancer: true
@@ -277,6 +294,7 @@ Body:
     AegisName: Crow_Mask
     Name: Crow_Mask
     Type: Armor
+    Buy: 50000
     Weight: 200
     Jobs:
       BardDancer: true
@@ -288,6 +306,7 @@ Body:
     AegisName: Fluttering_Feathers
     Name: Fluttering_Feathers
     Type: Armor
+    Buy: 50000
     Weight: 200
     Jobs:
       Hunter: true
@@ -302,6 +321,7 @@ Body:
     AegisName: Maple_Leaves
     Name: Maple_Leaves
     Type: Armor
+    Buy: 50000
     Weight: 200
     Jobs:
       Hunter: true
@@ -316,6 +336,7 @@ Body:
     AegisName: Desert_Prince
     Name: Desert_Prince
     Type: Armor
+    Buy: 50000
     Weight: 200
     Jobs:
       Assassin: true
@@ -328,6 +349,7 @@ Body:
     AegisName: Corsairs_Revenge
     Name: Corsairs_Revenge
     Type: Armor
+    Buy: 50000
     Weight: 200
     Jobs:
       Knight: true
@@ -350,6 +372,7 @@ Body:
     AegisName: Hat_of_the_Sun_God
     Name: Hat_of_the_Sun_God
     Type: Armor
+    Buy: 50000
     Weight: 200
     Jobs:
       Knight: true
@@ -372,6 +395,7 @@ Body:
     AegisName: Blinking_Eyes
     Name: Blinking_Eyes
     Type: Armor
+    Buy: 50000
     Weight: 100
     Jobs:
       Knight: true
@@ -394,6 +418,7 @@ Body:
     AegisName: Smiling_Eyes
     Name: Smiling_Eyes
     Type: Armor
+    Buy: 50000
     Weight: 100
     Jobs:
       Knight: true
@@ -416,6 +441,7 @@ Body:
     AegisName: Magic_Heir
     Name: Magic Heir
     Type: Armor
+    Buy: 50000
     Weight: 200
     Jobs:
       Blacksmith: true
@@ -428,6 +454,7 @@ Body:
     AegisName: Fortune_Sealed
     Name: Fortune_Sealed
     Type: Armor
+    Buy: 50000
     Weight: 200
     Jobs:
       All: true
@@ -440,6 +467,7 @@ Body:
     AegisName: Blue_Eyes
     Name: Blue_Eyes
     Type: Armor
+    Buy: 50000
     Weight: 100
     Jobs:
       Knight: true
@@ -462,6 +490,7 @@ Body:
     AegisName: Malefic_Horns
     Name: Malefic_Horns
     Type: Armor
+    Buy: 50000
     Weight: 200
     Jobs:
       Knight: true
@@ -484,6 +513,7 @@ Body:
     AegisName: Long_Veil
     Name: Long_Veil
     Type: Armor
+    Buy: 50000
     Weight: 200
     Jobs:
       Knight: true

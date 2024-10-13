@@ -8,7 +8,7 @@ Body:
     AegisName: Bandana
     Name: Bandana
     Type: Armor
-    Buy: 400
+    Buy: 5000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -860,7 +860,7 @@ Body:
     AegisName: Acolyte_Cap
     Name: Acolyte Cap
     Type: Armor
-    Buy: 4500
+    Buy: 30000
     Weight: 200
     Defense: 3
     Slots: 1
@@ -880,7 +880,7 @@ Body:
     AegisName: Holy_Bonnet
     Name: Holy Bonnet
     Type: Armor
-    Buy: 4500
+    Buy: 30000
     Weight: 200
     Defense: 3
     Slots: 1
@@ -900,7 +900,7 @@ Body:
     AegisName: Biretta
     Name: Biretta
     Type: Armor
-    Buy: 4500
+    Buy: 30000
     Weight: 200
     Defense: 3
     Slots: 1
@@ -915,13 +915,12 @@ Body:
     View: 11
     Script: |
       bonus bInt,5;
-      bonus2 bAtkEle,Ele_Holy,5;
       bonus2 bMagicAtkEle,Ele_Holy,5;
   - Id: 8046
     AegisName: White_Scarf
     Name: White Scarf
     Type: Armor
-    Buy: 4500
+    Buy: 30000
     Weight: 200
     Defense: 3
     Slots: 1
@@ -1017,13 +1016,12 @@ Body:
     View: 375
     Script: |
       bonus bInt,5;
-      bonus2 bAtkEle,Ele_Dark,5;
       bonus2 bMagicAtkEle,Ele_Dark,5;  
   - Id: 8051
     AegisName: Bone_Helm
     Name: Bone Helm
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 1000
     Defense: 20
     Slots: 1
@@ -1046,7 +1044,7 @@ Body:
     AegisName: Cross_Helm
     Name: Cross Helm
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 1000
     Defense: 25
     Slots: 1
@@ -1066,7 +1064,7 @@ Body:
     AegisName: Bullock_Helm
     Name: Bullock Helm
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 1000
     Defense: 20
     Slots: 1
@@ -1086,7 +1084,7 @@ Body:
     AegisName: Dragoon_Helm
     Name: Dragoon Helm
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 1000
     Defense: 20
     Slots: 1
@@ -1107,7 +1105,7 @@ Body:
     AegisName: Aqua_Helm
     Name: Aqua Helm
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 1000
     Defense: 20
     Slots: 1
@@ -1127,7 +1125,7 @@ Body:
     AegisName: Goat_Helm
     Name: Goat Helm
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 1000
     Defense: 20
     Slots: 1
@@ -1146,7 +1144,7 @@ Body:
     AegisName: Goibne_Helm  
     Name: Goibne Helm
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 1000
     Defense: 25
     Slots: 1
@@ -1164,9 +1162,9 @@ Body:
       bonus2 bSubEle,Ele_Neutral,5;
   - Id: 8058
     AegisName: Valkyrie_Helm  
-    Name: Goibne Helm
+    Name: Valkyrie Helm
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 1000
     Defense: 15
     Slots: 1
@@ -1179,17 +1177,15 @@ Body:
     Refineable: true
     View: 225
     Script: |
-      bonus2 bAtkEle,Ele_Holy,10;
       bonus2 bMagicAtkEle,Ele_Holy,10;
       if (getrefine()>5) {
-        bonus2 bAtkEle,Ele_Holy,10;
         bonus2 bMagicAtkEle,Ele_Holy,10;
       }
   - Id: 8059
     AegisName: Giant_Helm  
     Name: Giant Helm
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 1000
     Defense: 25
     Slots: 1
@@ -1214,7 +1210,7 @@ Body:
     AegisName: Runic_Helm  
     Name: Runic Helm
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 1000
     Defense: 20
     Slots: 1
@@ -1235,7 +1231,7 @@ Body:
     AegisName: Khalitzburg_Helm  
     Name: Khalitzburg Helm
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 1000
     Defense: 20
     Slots: 1
@@ -1253,7 +1249,7 @@ Body:
     AegisName: Orc_Hero_Helm  
     Name: Orc Hero
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 1000
     Defense: 20
     Slots: 1
@@ -1276,7 +1272,7 @@ Body:
     AegisName: Baphomet_Horns  
     Name: Baphomet Horns
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 1000
     Defense: 20
     Slots: 1
@@ -1298,7 +1294,7 @@ Body:
     AegisName: Joken_Jester  
     Name: Joker Jester
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -1318,7 +1314,7 @@ Body:
     AegisName: Feather_Bonnet
     Name: Feeather Bonnet
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -1339,7 +1335,7 @@ Body:
     AegisName: Opera_Angel
     Name: Opera Angel
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 3
     Slots: 1
@@ -1360,7 +1356,7 @@ Body:
     AegisName: Fancy_Opera_Phantom
     Name: Fancy Opera Phantom
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 20
     Defense: 3
     Slots: 1
@@ -1383,7 +1379,7 @@ Body:
     AegisName: Opera_Phantom
     Name: Opera Phantom
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 100
     Defense: 1
     Jobs:
@@ -1400,7 +1396,7 @@ Body:
     AegisName: Opera_Mask
     Name: Opera Mask
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 100
     Defense: 2
     Jobs:
@@ -1418,7 +1414,7 @@ Body:
     AegisName: Feathered_Hat
     Name: Feathered Hat
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -1437,7 +1433,7 @@ Body:
     AegisName: Celestial_Hat
     Name: Celestial Hat
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -1456,7 +1452,7 @@ Body:
     AegisName: Minstrel_Hat
     Name: Minstrel Hat
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -1478,7 +1474,7 @@ Body:
     AegisName: Hunting_Goggles
     Name: Hunting Goggles
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -1498,7 +1494,7 @@ Body:
     AegisName: Dream_Whisper
     Name: Dream Whisper
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 3
     Slots: 1
@@ -1517,7 +1513,7 @@ Body:
     AegisName: Windproof_Goggles
     Name: Windproof Goggles
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -1537,7 +1533,7 @@ Body:
     AegisName: Hard_Goggles
     Name: Hard Goggles
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 10
     Slots: 1
@@ -1556,7 +1552,7 @@ Body:
     AegisName: Wolf_Skin
     Name: Wolf Skin
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -1575,7 +1571,7 @@ Body:
     AegisName: Camouflage_Goggles
     Name: Camouflage Goggles
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -1594,7 +1590,7 @@ Body:
     AegisName: Volume_Feather_Hat
     Name: Volume Feather Hat
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -1613,7 +1609,7 @@ Body:
     AegisName: Lyrica_Hat
     Name: Lyrica Hat
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -1632,7 +1628,7 @@ Body:
     AegisName: Grand_Peco_Hairdress
     Name: Grand Peco Hairdress
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -1655,7 +1651,7 @@ Body:
     AegisName: Mitra
     Name: Mitra
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 3
     Slots: 1
@@ -1674,7 +1670,7 @@ Body:
     AegisName: Flying_Angel
     Name: Flying Angel
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 3
     Slots: 1
@@ -1695,7 +1691,7 @@ Body:
     AegisName: Noah_Cap
     Name: Noah_Cap
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 3
     Slots: 1
@@ -1714,7 +1710,7 @@ Body:
     AegisName: Pope_Crown
     Name: Pope Crown
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -1736,7 +1732,7 @@ Body:
     AegisName: Ullr_Cap
     Name: Ullr Cap
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -1756,7 +1752,7 @@ Body:
     AegisName: Valkyrie_Feather
     Name: Valkyrie Feather
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 3
     Slots: 1
@@ -1771,7 +1767,6 @@ Body:
     View: 300  
     Script: |
       bonus bInt,3;
-      bonus2 bAtkEle,Ele_Holy,10;
       bonus2 bMagicAtkEle,Ele_Holy,10;
       if (getrefine()>5) {
         bonus bHealPower,5;
@@ -1780,7 +1775,7 @@ Body:
     AegisName: Hermode_Cap
     Name: Hermode Cap
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 3
     Slots: 1
@@ -1801,7 +1796,7 @@ Body:
     AegisName: Anubis_Hat
     Name: Anubis Hat
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -1816,13 +1811,12 @@ Body:
     View: 485  
     Script: |
       bonus bMatk,20;
-      bonus2 bAtkEle,Ele_Dark,10;
       bonus2 bMagicAtkEle,Ele_Dark,10;
   - Id: 8090
     AegisName: Light_Dark_Crown
     Name: Light Dark Crown
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 3
     Slots: 1
@@ -1835,15 +1829,13 @@ Body:
     Refineable: true
     View: 988
     Script: |
-      bonus2 bAtkEle,Ele_Dark,getrefine();
       bonus2 bMagicAtkEle,Ele_Dark,getrefine(); 
-      bonus2 bAtkEle,Ele_Holy,getrefine();
       bonus2 bMagicAtkEle,Ele_Holy,getrefine();  
   - Id: 8091
     AegisName: Christianity_Cap
     Name: Christianity_Cap
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 3
     Slots: 0
@@ -1863,7 +1855,7 @@ Body:
     AegisName: Holy_Night_Hat
     Name: Holy Night Hat
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 3
     Slots: 1
@@ -1883,7 +1875,7 @@ Body:
     AegisName: Angel_Feather_Hat
     Name: Angel Feather Hat
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 3
     Slots: 1
@@ -1903,7 +1895,7 @@ Body:
     AegisName: Tiger_Skin
     Name: Tiger Skin
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -1924,7 +1916,7 @@ Body:
     AegisName: Morpheus_Bandana
     Name: Morpheus Bandana
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 3
     Slots: 1
@@ -1944,7 +1936,7 @@ Body:
     AegisName: Hot_Blooded_Bandana
     Name: Hot Blooded Bandana
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 3
     Slots: 1
@@ -1965,7 +1957,7 @@ Body:
     AegisName: Ancient_Dragon
     Name: Ancient Dragon
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -1984,7 +1976,7 @@ Body:
     AegisName: Bear_Skin
     Name: Bear Skin
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -2004,7 +1996,7 @@ Body:
     AegisName: Jolly_Roger
     Name: Bear Skin
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -2023,7 +2015,7 @@ Body:
     AegisName: Dark_Bacillum
     Name: Dark Bacilium
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -2042,7 +2034,7 @@ Body:
     AegisName: Red_Wing_Hat
     Name: Red Wing Hat
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -2061,7 +2053,7 @@ Body:
     AegisName: Satgat
     Name: Wanderer's Sakkat
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -2082,7 +2074,7 @@ Body:
     AegisName: Skull_Cap
     Name: Sull Cap
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -2101,7 +2093,7 @@ Body:
     AegisName: Steampunk_Hat
     Name: Steampunk Hat
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -2120,7 +2112,7 @@ Body:
     AegisName: Striped_Cap
     Name: Striped Cap
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -2139,7 +2131,7 @@ Body:
     AegisName: Striking_Hat
     Name: Striking Hat
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -2159,7 +2151,7 @@ Body:
     AegisName: Clockwork_Cap
     Name: Clockwork Cap
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -2178,7 +2170,7 @@ Body:
     AegisName: Biological_Cap
     Name: Biological Cap
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -2199,7 +2191,7 @@ Body:
     AegisName: Brown_cap
     Name: Brown Cap
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -2213,13 +2205,12 @@ Body:
     View: 1878 
     Script: |
       bonus bMatk,20;
-      bonus2 bAtkEle,Ele_Fire,5;
       bonus2 bMagicAtkEle,Ele_Fire,5;
   - Id: 8110
     AegisName: White_Cap
     Name: White Cap
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -2239,7 +2230,7 @@ Body:
     AegisName: Silk_Earth_Hat
     Name: Silk Earth Hat
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -2253,13 +2244,12 @@ Body:
     View: 1078 
     Script: |
       bonus bMatkRate,getrefine();
-      bonus2 bAtkEle,Ele_Earth,5;
       bonus2 bMagicAtkEle,Ele_Earth,5;
   - Id: 8112
     AegisName: Speedster_Cap
     Name: Speedster Cap
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -2279,7 +2269,7 @@ Body:
     AegisName: Mechanical_Plant_Hat
     Name: Mechanical Plant Hat
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -2293,13 +2283,12 @@ Body:
     View: 1069 
     Script: |
       bonus bMatk,20;
-      bonus2 bAtkEle,Ele_Earth,5;
       bonus2 bMagicAtkEle,Ele_Earth,5;
   - Id: 8114
     AegisName: Cowboy_Hat
     Name: Cowboy Hat
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -2318,7 +2307,7 @@ Body:
     AegisName: Igni_Cap
     Name: Igni Cap
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -2341,7 +2330,7 @@ Body:
     AegisName: Duneyrr_Hat
     Name: Duneyrr Hat
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -2360,7 +2349,7 @@ Body:
     AegisName: Artist_Beret
     Name: Artist Beret
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -2379,7 +2368,7 @@ Body:
     AegisName: Gemstone_Hat
     Name: Gemstone Hat
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 15
     Slots: 1
@@ -2400,7 +2389,7 @@ Body:
     AegisName: PDH_Hat
     Name: PDH Hat
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 3
     Slots: 1
@@ -2422,7 +2411,7 @@ Body:
     AegisName: Dark_Snake_Lord_Hat
     Name: PDH Hat
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 3
     Slots: 1
@@ -2444,7 +2433,7 @@ Body:
     AegisName: Cap_Of_Concentration
     Name: Cap of Concentration
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 3
     Slots: 1
@@ -2466,7 +2455,7 @@ Body:
     AegisName: Mustang_Hat
     Name: Mustang Hat
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 3
     Slots: 1
@@ -2485,7 +2474,7 @@ Body:
     AegisName: Rune_Circlet
     Name: Rune Circlet
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 3
     Slots: 1
@@ -2507,7 +2496,7 @@ Body:
     AegisName: Sapphire_Circlet
     Name: Sapphire Circlet
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 3
     Slots:   1
@@ -2528,7 +2517,7 @@ Body:
     AegisName: Emerald_Circlet
     Name: Emerald Circlet
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 3
     Slots: 1
@@ -2549,7 +2538,7 @@ Body:
     AegisName: Levitation_Crown
     Name: Levitation Crown
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 3
     Slots: 1
@@ -2573,7 +2562,7 @@ Body:
     AegisName: Memory_Hat
     Name: Memory Hat
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 3
     Slots: 1
@@ -2593,7 +2582,7 @@ Body:
     AegisName: Azure_Circlet
     Name: Azure Circlet
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 3
     Slots: 1
@@ -2617,7 +2606,7 @@ Body:
     AegisName: Magic_Eyes
     Name: Magic Eyes
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 3
     Slots: 1
@@ -2640,7 +2629,7 @@ Body:
     AegisName: Star_Sparkling
     Name: Star_Sparkling
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 3
     Slots: 1
@@ -2653,19 +2642,15 @@ Body:
     Refineable: true
     View: 36 
     Script: |
-      bonus2 bAtkEle,Ele_Fire,5;
       bonus2 bMagicAtkEle,Ele_Fire,5;
-      bonus2 bAtkEle,Ele_Water,5;
       bonus2 bMagicAtkEle,Ele_Water,5;
-      bonus2 bAtkEle,Ele_Wind,5;
       bonus2 bMagicAtkEle,Ele_Wind,5;
-      bonus2 bAtkEle,Ele_Earth,5;
       bonus2 bMagicAtkEle,Ele_Earth,5;
   - Id: 8131
     AegisName: Spell_Hat
     Name: Spell Hat
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 3
     Slots: 1
@@ -2684,7 +2669,7 @@ Body:
     AegisName: Necromancer_Hood
     Name: Necromancer Hood
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 3
     Slots: 1
@@ -2699,15 +2684,13 @@ Body:
     Refineable: true
     View: 491 
     Script: |
-      bonus2 bAtkEle,Ele_Ghost,10;
       bonus2 bMagicAtkEle,Ele_Ghost,10;
-      bonus2 bAtkEle,Ele_Dark,10;
       bonus2 bMagicAtkEle,Ele_Dark,10;
   - Id: 8133
     AegisName: Barrel_Helm
     Name: Barrel Helm
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 30
     Slots: 1
@@ -2730,7 +2713,7 @@ Body:
     AegisName: Magic_Stone_Hat
     Name: Magic_Stone_Hat
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 3
     Slots: 1
@@ -2750,7 +2733,7 @@ Body:
     AegisName: Cap_Blindness
     Name: Cap_Blindness
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -2772,7 +2755,7 @@ Body:
     AegisName: Helm_of_Darkness
     Name: Helm_of_Darkness
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -2793,7 +2776,7 @@ Body:
     AegisName: Bone_Crown
     Name: Bone_Crown
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 5
     Slots: 1
@@ -2813,7 +2796,7 @@ Body:
     AegisName: Dragon_Skull
     Name: Dragon_Skull
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 500
     Defense: 10
     Slots: 1
@@ -2836,7 +2819,7 @@ Body:
     AegisName: Devil_Wing_Ears
     Name: Devil_Wing_Ears
     Type: Armor
-    Buy: 30000
+    Buy: 25000
     Weight: 100
     Defense: 1
     Jobs:
@@ -2865,7 +2848,7 @@ Body:
     AegisName: Angel_Wing_Ears
     Name: Angel_Wing_Ears
     Type: Armor
-    Buy: 30000
+    Buy: 25000
     Weight: 100
     Defense: 1
     Jobs:
@@ -2894,7 +2877,7 @@ Body:
     AegisName: Pecopeco_Wing_Ears
     Name: Pecopeco_Wing_Ears
     Type: Armor
-    Buy: 30000
+    Buy: 25000
     Weight: 100
     Defense: 1
     Jobs:
@@ -2923,7 +2906,7 @@ Body:
     AegisName: Sunglasses
     Name: Sunglasses
     Type: Armor
-    Buy: 30000
+    Buy: 25000
     Weight: 100
     Jobs:
       All: true
@@ -2940,7 +2923,7 @@ Body:
     AegisName: Glasses
     Name: Glasses
     Type: Armor
-    Buy: 30000
+    Buy: 25000
     Weight: 100
     Jobs:
       All: true
@@ -2957,7 +2940,7 @@ Body:
     AegisName: Aviator_Sunglasses
     Name: Aviator_Sunglasses
     Type: Armor
-    Buy: 30000
+    Buy: 25000
     Weight: 100
     Defense: 1
     Jobs:
@@ -2975,7 +2958,7 @@ Body:
     AegisName: Dark_Blinker
     Name: Dark_Blinker
     Type: Armor
-    Buy: 30000
+    Buy: 25000
     Weight: 100
     Defense: 0
     Jobs:
@@ -3003,7 +2986,7 @@ Body:
     AegisName: Elven_Ears
     Name: Elven_Ears
     Type: Armor
-    Buy: 30000
+    Buy: 25000
     Weight: 100
     Defense: 0
     Jobs:
@@ -3031,7 +3014,7 @@ Body:
     AegisName: Alarm_Mask
     Name: Alarm_Mask
     Type: Armor
-    Buy: 30000
+    Buy: 25000
     Weight: 100
     Defense: 2
     Jobs:
@@ -3058,7 +3041,7 @@ Body:
     AegisName: Four_Leaf_Clover_Mouth
     Name: Four_Leaf_Clover_Mouth
     Type: Armor
-    Buy: 30000
+    Buy: 25000
     Weight: 100
     Defense: 0
     Jobs:
@@ -3086,7 +3069,7 @@ Body:
     AegisName: Chewing_Gum
     Name: Chewing_Gum
     Type: Armor
-    Buy: 30000
+    Buy: 25000
     Weight: 100
     Defense: 0
     Jobs:
@@ -3114,7 +3097,7 @@ Body:
     AegisName: Candy_Cane_Mouth
     Name: Candy_Cane_Mouth
     Type: Armor
-    Buy: 30000
+    Buy: 25000
     Weight: 100
     Defense: 0
     Jobs:
@@ -3132,7 +3115,7 @@ Body:
     AegisName: Long_Pipe
     Name: Long_Pipe
     Type: Armor
-    Buy: 30000
+    Buy: 25000
     Weight: 100
     Defense: 0
     Jobs:
@@ -3160,7 +3143,7 @@ Body:
     AegisName: Choco_Donut_In_Mouth
     Name: Choco Donut In Mouth
     Type: Armor
-    Buy: 20
+    Buy: 25000
     Weight: 100
     Defense: 0
     Jobs:
@@ -3186,7 +3169,7 @@ Body:
     AegisName: Donut_In_Mouth
     Name: Donut_In_Mouth
     Type: Armor
-    Buy: 20
+    Buy: 25000
     Weight: 100
     Defense: 0
     Jobs:
@@ -3213,7 +3196,7 @@ Body:
     AegisName: Clown_Nose
     Name: Clown_Nose
     Type: Armor
-    Buy: 20
+    Buy: 25000
     Weight: 100
     Defense: 0
     Jobs:
@@ -3239,7 +3222,7 @@ Body:
     AegisName: Crunch_Toast
     Name: Crunch_Toast
     Type: Armor
-    Buy: 20
+    Buy: 25000
     Weight: 100
     Defense: 0
     Jobs:
@@ -3265,7 +3248,7 @@ Body:
     AegisName: Smoking_Pipe
     Name: Smoking_Pipe
     Type: Armor
-    Buy: 20
+    Buy: 25000
     Weight: 100
     Defense: 0
     Jobs:
@@ -3291,7 +3274,7 @@ Body:
     AegisName: Rainbow_Scarf
     Name: Rainbow_Scarf
     Type: Armor
-    Buy: 20
+    Buy: 25000
     Weight: 100
     Defense: 0
     Jobs:
@@ -3317,7 +3300,7 @@ Body:
     AegisName: Romantic_Leaf
     Name: Romantic_Leaf
     Type: Armor
-    Buy: 20
+    Buy: 25000
     Weight: 100
     Defense: 0
     Jobs:
@@ -3333,7 +3316,7 @@ Body:
     AegisName: Romantic_Flower
     Name: Romantic_Flower
     Type: Armor
-    Buy: 20
+    Buy: 25000
     Weight: 100
     Defense: 0
     Jobs:
@@ -3349,7 +3332,7 @@ Body:
     AegisName: Romantic_White_Flower
     Name: Romantic_White_Flower
     Type: Armor
-    Buy: 20
+    Buy: 25000
     Weight: 100
     Defense: 0
     Jobs:
@@ -3365,7 +3348,7 @@ Body:
     AegisName: Scarlet_Rose
     Name: Scarlet_Rose
     Type: Armor
-    Buy: 20
+    Buy: 25000
     Weight: 100
     Defense: 0
     Jobs:
@@ -3381,7 +3364,7 @@ Body:
     AegisName: Spiked_Scarf
     Name: Spiked_Scarf
     Type: Armor
-    Buy: 20
+    Buy: 25000
     Weight: 100
     Defense: 0
     Jobs:
@@ -3407,7 +3390,7 @@ Body:
     AegisName: Chewed_Pencil
     Name: Chewed_Pencil
     Type: Armor
-    Buy: 20
+    Buy: 25000
     Weight: 100
     Defense: 0
     Jobs:
@@ -3433,7 +3416,7 @@ Body:
     AegisName: Iron_Chain
     Name: Iron_Chain
     Type: Armor
-    Buy: 20
+    Buy: 25000
     Weight: 200
     Defense: 5
     Jobs:
@@ -3447,7 +3430,7 @@ Body:
     AegisName: Assassin_Mask
     Name: Assassin_Mask
     Type: Armor
-    Buy: 20
+    Buy: 25000
     Weight: 100
     Jobs:
       Assassin: true
@@ -3462,7 +3445,7 @@ Body:
     AegisName: Owl_Duke_Hat
     Name: Owl_Duke_Hat
     Type: Armor
-    Buy: 20
+    Buy: 50000
     Weight: 200
     Defense: 5
     Jobs:
@@ -3489,7 +3472,7 @@ Body:
     AegisName: Tiraya_Bonnet
     Name: Tiraya_Bonnet
     Type: Armor
-    Buy: 20
+    Buy: 50000
     Weight: 200
     Defense: 5
     Jobs:
@@ -3517,7 +3500,7 @@ Body:
     AegisName: Over_Protector
     Name: Over_Protector
     Type: Armor
-    Buy: 20
+    Buy: 50000
     Weight: 200
     Defense: 5
     Jobs:
@@ -3544,7 +3527,7 @@ Body:
     AegisName: Beret
     Name: Beret
     Type: Armor
-    Buy: 20
+    Buy: 50000
     Weight: 200
     Defense: 5
     Jobs:
@@ -3572,7 +3555,7 @@ Body:
     AegisName: Feather_Beret
     Name: Beret
     Type: Armor
-    Buy: 20
+    Buy: 50000
     Weight: 200
     Defense: 5
     Jobs:
@@ -3600,7 +3583,7 @@ Body:
     AegisName: Navy_Hat
     Name: Navy_Hat
     Type: Armor
-    Buy: 20
+    Buy: 50000
     Weight: 200
     Defense: 5
     Jobs:
@@ -3629,7 +3612,7 @@ Body:
     AegisName: Fancy_Highcap
     Name: Fancy_Highcap
     Type: Armor
-    Buy: 20
+    Buy: 50000
     Weight: 200
     Defense: 5
     Jobs:
@@ -3657,7 +3640,7 @@ Body:
     AegisName: Gemmed_Crown
     Name: Gemmed_Crown
     Type: Armor
-    Buy: 20
+    Buy: 50000
     Weight: 200
     Defense: 5
     Jobs:
@@ -3684,7 +3667,7 @@ Body:
     AegisName: Golden_Gear
     Name: Golden_Gear
     Type: Armor
-    Buy: 20
+    Buy: 50000
     Weight: 200
     Defense: 5
     Jobs:
@@ -3711,7 +3694,7 @@ Body:
     AegisName: Remover_Hat
     Name: Remover_Hat
     Type: Armor
-    Buy: 20
+    Buy: 50000
     Weight: 200
     Defense: 10
     Jobs:
@@ -3738,7 +3721,7 @@ Body:
     AegisName: Black_Beret
     Name: Black_Beret
     Type: Armor
-    Buy: 20
+    Buy: 50000
     Weight: 200
     Defense: 5
     Jobs:
@@ -3754,7 +3737,7 @@ Body:
     AegisName: Leopard_Skin_Hat
     Name: Leopard_Skin_Hat
     Type: Armor
-    Buy: 20
+    Buy: 50000
     Weight: 200
     Defense: 5
     Jobs:
@@ -3772,7 +3755,7 @@ Body:
     AegisName: Lord_of_Death_Helm
     Name: Lord_of_Death_Helm
     Type: Armor
-    Buy: 20
+    Buy: 50000
     Weight: 200
     Defense: 5
     Jobs:
@@ -3790,7 +3773,7 @@ Body:
     AegisName: Flameboy_Hat
     Name: Flameboy_Hat
     Type: Armor
-    Buy: 20
+    Buy: 50000
     Weight: 200
     Defense: 5
     Jobs:
@@ -3809,7 +3792,7 @@ Body:
     AegisName: Cowhide_Hat
     Name: Cowhide_Hat
     Type: Armor
-    Buy: 20
+    Buy: 50000
     Weight: 200
     Defense: 5
     Jobs:
@@ -3825,7 +3808,7 @@ Body:
     AegisName: Galaxy_Circlet
     Name: Galaxy Circlet
     Type: Armor
-    Buy: 30000
+    Buy: 50000
     Weight: 200
     Defense: 3
     Slots: 1
@@ -3843,14 +3826,13 @@ Body:
       bonus bMatk,getrefine()*2;
       bonus bAtk,getrefine()*2;
       if (getrefine()>5) {
-        bonus2 bAtkEle,Ele_Neutral,5;
         bonus2 bMagicAtkEle,Ele_Neutral,5;
       }
   - Id: 8182
     AegisName: CD_in_Mouth
     Name: CD_in_Mouth
     Type: Armor
-    Buy: 20
+    Buy: 50000
     Weight: 100
     Defense: 0
     Jobs:
@@ -3876,7 +3858,7 @@ Body:
     AegisName: Cherry_Blossom_Mouth 
     Name: Cherry_Blossom_Mouth 
     Type: Armor
-    Buy: 20
+    Buy: 50000
     Weight: 100
     Defense: 0
     Jobs:
@@ -3902,7 +3884,7 @@ Body:
     AegisName: Leek_Mouth 
     Name: Leek_Mouth 
     Type: Armor
-    Buy: 20
+    Buy: 50000
     Weight: 100
     Defense: 0
     Jobs:
@@ -3928,7 +3910,7 @@ Body:
     AegisName: Poker_Mouth 
     Name: Poker_Mouth 
     Type: Armor
-    Buy: 20
+    Buy: 50000
     Weight: 100
     Defense: 0
     Jobs:

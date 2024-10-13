@@ -285,7 +285,6 @@ Body:
     Refineable: true
     EquipLevelMin: 40
     Script: |
-      bonus2 bAtkEle,Ele_Fire,10;
       bonus2 bMagicAtkEle,Ele_Fire,10;
   - Id: 2425
     AegisName: Vital_Tree_Shoes
@@ -304,7 +303,6 @@ Body:
     Refineable: true
     EquipLevelMin: 40
     Script: |
-      bonus2 bAtkEle,Ele_Earth,10;
       bonus2 bMagicAtkEle,Ele_Earth,10;
   - Id: 2426
     AegisName: Windflow_Shoes
@@ -323,7 +321,6 @@ Body:
     Refineable: true
     EquipLevelMin: 40
     Script: |
-      bonus2 bAtkEle,Ele_Wind,10;
       bonus2 bMagicAtkEle,Ele_Wind,10;
   - Id: 2427
     AegisName: Aegir_Shoes
@@ -342,8 +339,7 @@ Body:
     Refineable: true
     EquipLevelMin: 40
     Script: |
-      bonus2 bAtkEle,Ele_Wind,10;
-      bonus2 bMagicAtkEle,Ele_Wind,10;
+      bonus2 bMagicAtkEle,Ele_Water,10;
   - Id: 2428
     AegisName: Angels_Reincarnation
     Name: Shoes
@@ -361,7 +357,6 @@ Body:
     Refineable: true
     EquipLevelMin: 40
     Script: |
-      bonus2 bAtkEle,Ele_Holy,10;
       bonus2 bMagicAtkEle,Ele_Holy,10;
   - Id: 2429
     AegisName: Gray_Leather_Shoes
@@ -380,7 +375,6 @@ Body:
     Refineable: true
     EquipLevelMin: 40
     Script: |
-      bonus2 bAtkEle,Ele_Dark,10;
       bonus2 bMagicAtkEle,Ele_Dark,10;
   - Id: 2430
     AegisName: Nab_Shoes
@@ -399,7 +393,6 @@ Body:
     Refineable: true
     EquipLevelMin: 40
     Script: |
-      bonus2 bAtkEle,Ele_Ghost,10;
       bonus2 bMagicAtkEle,Ele_Ghost,10;
   - Id: 2431
     AegisName: Fricco_Shoes
@@ -418,7 +411,6 @@ Body:
     Refineable: true
     EquipLevelMin: 40
     Script: |
-      bonus2 bAtkEle,Ele_Neutral,10;
       bonus2 bMagicAtkEle,Ele_Neutral,10;
   - Id: 2432
     AegisName: Angel_Poring_Shoes
@@ -1291,8 +1283,7 @@ Body:
     EquipLevelMin: 70
     Refineable: true
     Script: |
-      bonus2 bAtkEle,Ele_Holy,10;
-      bonus2 bMagicAtkEle,Ele_Holy,10;
+      bonus2 bMagicAtkEle,Ele_Holy,15;
   - Id: 2467
     AegisName: Runic_Greaves
     Name: Greaves
@@ -1388,7 +1379,6 @@ Body:
     Refineable: true
     EquipLevelMin: 70
     Script: |
-      bonus2 bAtkEle,Ele_Earth,15;
       bonus2 bMagicAtkEle,Ele_Earth,15;
   - Id: 2472
     AegisName: Shoes_of_Punishment
@@ -1440,7 +1430,6 @@ Body:
     Refineable: true
     EquipLevelMin: 50
     Script: |
-      bonus2 bAtkEle,Ele_Poison,15;
       bonus2 bMagicAtkEle,Ele_Poison,15;
   - Id: 2475
     AegisName: Improv_Boots

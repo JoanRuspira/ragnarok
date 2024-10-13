@@ -8,276 +8,437 @@ Body:
     Name: Knife
     Type: Weapon
     SubType: Dagger
-    Buy: 50
+    Buy: 100
     Weight: 400
-    Attack: 17
+    Attack: 25
     Range: 1
-    Slots: 3
+    Slots: 0
     Jobs:
-      Alchemist: true
-      Archer: true
-      Assassin: true
-      BardDancer: true
-      Blacksmith: true
-      Crusader: true
-      Hunter: true
-      Knight: true
-      Mage: true
-      Merchant: true
-      Ninja: true
-      Novice: true
-      Rogue: true
-      Sage: true
-      SoulLinker: true
-      SuperNovice: true
-      Swordman: true
       Thief: true
-      Wizard: true
+      Novice: true
+      Assassin: true
+      Rogue: true
     Locations:
       Right_Hand: true
-    WeaponLevel: 1
+    WeaponLevel: 3
     EquipLevelMin: 1
+    Refineable: true
+  - Id: 1202
+    AegisName: Dagger
+    Name: Dagger
+    Type: Weapon
+    SubType: Dagger
+    Buy: 1000
+    Weight: 400
+    Attack: 50
+    Range: 1
+    Slots: 0
+    Jobs:
+      Thief: true
+      Assassin: true
+      Rogue: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 10
+    Refineable: true
+  - Id: 1203
+    AegisName: Dagger_
+    Name: Dagger
+    Type: Weapon
+    SubType: Dagger
+    Buy: 1000
+    Weight: 400
+    Attack: 50
+    Range: 1
+    Slots: 4
+    Jobs:
+      Thief: true
+      Assassin: true
+      Rogue: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 10
     Refineable: true
   - Id: 1204
     AegisName: Cutter
     Name: Cutter
     Type: Weapon
     SubType: Dagger
-    Buy: 1250
-    Weight: 500
-    Attack: 30
+    Buy: 2500
+    Weight: 400
+    Attack: 70
     Range: 1
-    Slots: 3
+    Slots: 0
     Jobs:
-      Alchemist: true
-      Archer: true
-      Assassin: true
-      BardDancer: true
-      Blacksmith: true
-      Crusader: true
-      Hunter: true
-      Knight: true
-      Mage: true
-      Merchant: true
-      Ninja: true
-      Novice: true
-      Rogue: true
-      Sage: true
-      SoulLinker: true
-      SuperNovice: true
-      Swordman: true
       Thief: true
-      Wizard: true
+      Assassin: true
+      Rogue: true
     Locations:
       Right_Hand: true
-    WeaponLevel: 1
-    EquipLevelMin: 1
+    WeaponLevel: 3
+    EquipLevelMin: 20
     Refineable: true
-  - Id: 1207
-    AegisName: Main_Gauche
-    Name: Main Gauche
+    Script: |
+      bonus2 bAddSize,Size_Medium,10;
+      bonus2 bMagicAddSize,Size_Medium,10;
+  - Id: 1205
+    AegisName: Cutter_
+    Name: Cutter
     Type: Weapon
     SubType: Dagger
-    Buy: 2400
-    Weight: 600
-    Attack: 43
+    Buy: 2500
+    Weight: 400
+    Attack: 70
     Range: 1
     Slots: 3
     Jobs:
-      Alchemist: true
-      Archer: true
-      Assassin: true
-      BardDancer: true
-      Blacksmith: true
-      Crusader: true
-      Hunter: true
-      Knight: true
-      Mage: true
-      Merchant: true
-      Ninja: true
-      Novice: true
-      Rogue: true
-      Sage: true
-      SoulLinker: true
-      SuperNovice: true
-      Swordman: true
       Thief: true
-      Wizard: true
+      Assassin: true
+      Rogue: true
     Locations:
       Right_Hand: true
-    WeaponLevel: 1
-    EquipLevelMin: 1
+    WeaponLevel: 3
+    EquipLevelMin: 20
     Refineable: true
-  - Id: 1210
+    Script: |
+      bonus2 bAddSize,Size_Medium,10;
+      bonus2 bMagicAddSize,Size_Medium,10;
+  - Id: 1206
     AegisName: Dirk
     Name: Dirk
     Type: Weapon
     SubType: Dagger
-    Buy: 8500
-    Weight: 500
-    Attack: 59
+    Buy: 5000
+    Weight: 400
+    Attack: 80
     Range: 1
-    Slots: 2
+    Slots: 0
     Jobs:
-      Alchemist: true
-      Archer: true
-      Assassin: true
-      BardDancer: true
-      Blacksmith: true
-      Crusader: true
-      Hunter: true
-      Knight: true
-      Mage: true
-      Merchant: true
-      Ninja: true
-      Novice: true
-      Rogue: true
-      Sage: true
-      SoulLinker: true
-      SuperNovice: true
-      Swordman: true
       Thief: true
-      Wizard: true
+      Assassin: true
+      Rogue: true
     Locations:
       Right_Hand: true
-    WeaponLevel: 2
-    EquipLevelMin: 12
+    WeaponLevel: 3
+    EquipLevelMin: 30
     Refineable: true
-  - Id: 1213
-    AegisName: Dagger
-    Name: Dagger
+    Script: |
+      bonus2 bAddRace,RC_DemiHuman,10;
+      bonus2 bAddRace,RC_Player_Human,10;
+      bonus2 bMagicAddRace,RC_DemiHuman,10;
+      bonus2 bMagicAddRace,RC_Player_Human,10;
+  - Id: 1207
+    AegisName: Dirk_
+    Name: Dirk
     Type: Weapon
     SubType: Dagger
-    Buy: 14000
-    Weight: 600
-    Attack: 73
+    Buy: 5000
+    Weight: 400
+    Attack: 80
     Range: 1
-    Slots: 2
+    Slots: 3
     Jobs:
-      Alchemist: true
-      Archer: true
-      Assassin: true
-      BardDancer: true
-      Blacksmith: true
-      Crusader: true
-      Hunter: true
-      Knight: true
-      Mage: true
-      Merchant: true
-      Ninja: true
-      Novice: true
-      Rogue: true
-      Sage: true
-      SoulLinker: true
-      SuperNovice: true
-      Swordman: true
       Thief: true
-      Wizard: true
+      Assassin: true
+      Rogue: true
     Locations:
       Right_Hand: true
-    WeaponLevel: 2
-    EquipLevelMin: 12
+    WeaponLevel: 3
+    EquipLevelMin: 30
     Refineable: true
-  - Id: 1216
+    Script: |
+      bonus2 bAddRace,RC_DemiHuman,10;
+      bonus2 bAddRace,RC_Player_Human,10;
+      bonus2 bMagicAddRace,RC_DemiHuman,10;
+      bonus2 bMagicAddRace,RC_Player_Human,10;
+  - Id: 1208
+    AegisName: Main_Gauche
+    Name: Main Offhand
+    Type: Weapon
+    SubType: Dagger
+    Buy: 10000
+    Weight: 400
+    Attack: 80
+    Range: 1
+    Slots: 0
+    Jobs:
+      Thief: true
+      Assassin: true
+      Rogue: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 40
+    Refineable: true
+    Script: |
+      bonus bHit,20;
+      bonus bAspd,2;
+  - Id: 1209
+    AegisName: Main_Gauche_
+    Name: Main Offhand
+    Type: Weapon
+    SubType: Dagger
+    Buy: 10000
+    Weight: 400
+    Attack: 80
+    Range: 1
+    Slots: 3
+    Jobs:
+      Thief: true
+      Assassin: true
+      Rogue: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 40
+    Refineable: true
+    Script: |
+      bonus bHit,20;
+      bonus bAspd,2;
+  - Id: 1210
+    AegisName: Combat_Knife
+    Name: Combat Knife
+    Type: Weapon
+    SubType: Dagger
+    Buy: 50000
+    Weight: 400
+    Attack: 85
+    Range: 1
+    Slots: 3
+    Jobs:
+      Assassin: true
+      Rogue: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+    Script: |
+      bonus bAtk,getrefine()*5;
+  - Id: 1211
+    AegisName: Cinquedea
+    Name: Cinquedea
+    Type: Weapon
+    SubType: Dagger
+    Buy: 50000
+    Weight: 400
+    Attack: 85
+    Range: 1
+    Slots: 3
+    Jobs:
+      Assassin: true
+      Rogue: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus bLuk,getrefine()*5;
+      bonus bStr,getrefine()*5;
+  - Id: 1212
     AegisName: Stiletto
     Name: Stiletto
     Type: Weapon
     SubType: Dagger
-    Buy: 19500
-    Weight: 700
-    Attack: 87
+    Buy: 50000
+    Weight: 400
+    Attack: 95
     Range: 1
     Slots: 2
     Jobs:
-      Alchemist: true
-      Archer: true
       Assassin: true
-      BardDancer: true
-      Blacksmith: true
-      Crusader: true
-      Hunter: true
-      Knight: true
-      Mage: true
-      Merchant: true
-      Ninja: true
-      Novice: true
       Rogue: true
-      Sage: true
-      SoulLinker: true
-      SuperNovice: true
-      Swordman: true
-      Thief: true
-      Wizard: true
     Locations:
       Right_Hand: true
-    WeaponLevel: 2
-    EquipLevelMin: 12
+    WeaponLevel: 3
+    EquipLevelMin: 60
     Refineable: true
-  - Id: 1219
+    Script: |
+      bonus bLongAtkRate,getrefine();
+  - Id: 1213
     AegisName: Gladius
     Name: Gladius
     Type: Weapon
     SubType: Dagger
-    Buy: 43000
-    Weight: 700
-    Attack: 105
+    Buy: 50000
+    Weight: 400
+    Attack: 100
     Range: 1
     Slots: 2
     Jobs:
-      Alchemist: true
-      Archer: true
       Assassin: true
-      BardDancer: true
-      Blacksmith: true
-      Crusader: true
-      Hunter: true
-      Knight: true
-      Mage: true
-      Merchant: true
-      Ninja: true
       Rogue: true
-      Sage: true
-      SoulLinker: true
-      Swordman: true
-      Thief: true
-      Wizard: true
     Locations:
       Right_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 24
+    EquipLevelMin: 60
     Refineable: true
-  - Id: 1222
+    Script: |
+      bonus bCritical,5;
+  - Id: 1214
     AegisName: Damascus
     Name: Damascus
     Type: Weapon
     SubType: Dagger
-    Buy: 49000
-    Weight: 800
-    Attack: 118
+    Buy: 50000
+    Weight: 400
+    Attack: 105
     Range: 1
-    Slots: 1
+    Slots: 2
     Jobs:
-      Alchemist: true
-      Archer: true
       Assassin: true
-      BardDancer: true
-      Blacksmith: true
-      Crusader: true
-      Hunter: true
-      Knight: true
-      Mage: true
-      Merchant: true
-      Ninja: true
       Rogue: true
-      Sage: true
-      SoulLinker: true
-      Swordman: true
-      Thief: true
-      Wizard: true
     Locations:
       Right_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 24
+    EquipLevelMin: 60
     Refineable: true
     Script: |
-      bonus bUnbreakableWeapon;
+      bonus bStr,5;
+      bonus bAtkRate,getrefine();
+  - Id: 1215
+    AegisName: Poniard
+    Name: Poniard
+    Type: Weapon
+    SubType: Dagger
+    Buy: 50000
+    Weight: 400
+    Attack: 110
+    Range: 1
+    Slots: 2
+    Jobs:
+      Assassin: true
+      Rogue: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bStr,5;
+      bonus bAspd,3;
+  - Id: 1216
+    AegisName: Cutlass
+    Name: Cutlass
+    Type: Weapon
+    SubType: Dagger
+    Buy: 50000
+    Weight: 400
+    Attack: 110
+    MagicAttack: 90
+    Range: 1
+    Slots: 2
+    Jobs:
+      Rogue: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bDex,5;
+      bonus bMatkRate,getrefine();
+  - Id: 1217
+    AegisName: Dragon_Cutter
+    Name: Dragon Cutter
+    Type: Weapon
+    SubType: Dagger
+    Buy: 50000
+    Weight: 400
+    Attack: 115
+    Range: 1
+    Slots: 2
+    Jobs:
+      Assassin: true
+      Rogue: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bInt,5;
+      bonus bAtkRate,getrefine();
+  - Id: 1218
+    AegisName: Fatalist
+    Name: Fatalist
+    Type: Weapon
+    SubType: Dagger
+    Buy: 50000
+    Weight: 400
+    Attack: 120
+    Range: 1
+    Slots: 2
+    Jobs:
+      Assassin: true
+      Rogue: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bCritAtkRate,10;
+  - Id: 1219
+    AegisName: Ginnungagap
+    Name: Ginnungagap
+    Type: Weapon
+    SubType: Dagger
+    Buy: 50000
+    Weight: 400
+    Attack: 120
+    Range: 1
+    Slots: 2
+    Jobs:
+      Assassin: true
+      Rogue: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus2 bAddEff,Eff_Poison,1000;
+  - Id: 1220
+    AegisName: Bazerald
+    Name: Bazerald
+    Type: Weapon
+    SubType: Dagger
+    Buy: 50000
+    Weight: 400
+    Attack: 50
+    MagicAttack: 120
+    Range: 1
+    Slots: 2
+    Jobs:
+      Rogue: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bHealPower,10;
+  - Id: 1221
+    AegisName: Ice_Pick
+    Name: Ice Pick
+    Type: Weapon
+    SubType: Dagger
+    Buy: 50000
+    Weight: 400
+    Attack: 90
+    Range: 1
+    Slots: 2
+    Jobs:
+      Assassin: true
+      Rogue: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus2 bIgnoreDefClassRate,Class_All,15;

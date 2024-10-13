@@ -122,9 +122,9 @@ Body:
     Name: SK_PR_UNHOLYCROSS
     Description: Unholy Cross
     MaxLevel: 5
-    Type: Weapon
+    Type: Magic
     TargetType: Attack
-    Range: -2
+    Range: 1
     Hit: Multi_Hit
     HitCount: -2
     Element: Dark

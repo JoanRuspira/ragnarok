@@ -2255,17 +2255,13 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case SK_KN_COUNTERATTACK:
 		case SK_KN_BRANDISHSPEAR:
 		case SK_KN_PIERCE:
-		case SK_KN_WINDCUTTER:
-		case SK_KN_SONICWAVE:
 		case SK_CR_SMITE:
 		case SK_CR_SHIELDBOOMERANG:
 		case SK_KN_RECKONING:
 		case SK_CM_HUNDREDSPEAR:
 		case SK_CM_CLASHINGSPIRAL:
-		case SK_CM_IGNITIONBREAK:
 			skillratio += KnightSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
-		case SK_CR_HOLYCROSS:
 		case SK_CR_GRANDCROSS:
 		case SK_PA_RAPIDSMITING:
 		case SK_PA_SHIELDSLAM:
@@ -2300,7 +2296,6 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			skillratio += AssassinSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus, 0);
 			break;
 		case SK_PR_DUPLELUX_MELEE:
-		case SK_PR_UNHOLYCROSS:
 			skillratio += PriestSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 			break;
 		case SK_MC_CARTBRUME:
@@ -3416,6 +3411,7 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case SK_PR_SPIRITUSANCTI:
 					case SK_PR_MAGNUSEXORCISMUS:
 					case SK_PR_DUPLELUX_MAGIC:
+					case SK_PR_UNHOLYCROSS:
 					case SK_BI_SENTENTIA:
 					case SK_BI_BENEDICTIO:
 					case SK_BI_DIABOLICRUCIATUS:
@@ -3427,6 +3423,7 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case SK_CL_METALLICFURY:
 						skillratio += BardSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
+					case SK_CR_HOLYCROSS:
 					case SK_CR_GRANDCROSS:
 					case SK_PA_GENESISRAY:
 					case SK_PA_GLORIADOMINI:
@@ -3474,7 +3471,10 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case SK_SO_TETRAVORTEX_NEUTRAL:
 						skillratio += WizardSkillAttackRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
+					case SK_KN_WINDCUTTER:
+					case SK_KN_SONICWAVE:
 					case SK_CM_DRAGONBREATH:
+					case SK_CM_IGNITIONBREAK:
 						skillratio +=  KnightSkillAtkRatioCalculator::calculate_skill_atk_ratio(src, target, status_get_lv(src), skill_id, skill_lv, sstatus);
 						break;
 					case SK_AM_BEHOLDER1:

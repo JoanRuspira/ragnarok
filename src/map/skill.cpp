@@ -1574,7 +1574,8 @@ int64 skill_attack (int attack_type, struct block_list* src, struct block_list *
 	if (tsc && tsc->data[STATUS_TRICKDEAD])
 		return 0;
 	
-	if (skill_id == SK_AM_FIREDEMONSTRATION || skill_id == SK_CR_INCENDIARYBOMB || skill_id == SK_CR_MANDRAKERAID || skill_id == SK_CR_MANDRAKERAID_ATK)
+	if (skill_id == SK_AM_FIREDEMONSTRATION || skill_id == SK_CR_INCENDIARYBOMB || skill_id == SK_CR_MANDRAKERAID || skill_id == SK_CR_MANDRAKERAID_ATK
+		|| skill_id == SK_CR_HOLYCROSS || skill_id == SK_KN_SONICWAVE)
 		attack_type = BF_MAGIC;
 	dmg = battle_calc_attack(attack_type,src,bl,skill_id,skill_lv,flag&0xFFF);
 

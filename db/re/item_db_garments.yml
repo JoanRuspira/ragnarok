@@ -60,7 +60,7 @@ Body:
     AegisName: Strength_Muffler
     Name: Muffler
     Type: Armor
-    Buy: 5000
+    Buy: 20000
     Weight: 400
     Defense: 3
     Slots: 1
@@ -77,7 +77,7 @@ Body:
     AegisName: Agility_Muffler
     Name: Muffler
     Type: Armor
-    Buy: 5000
+    Buy: 20000
     Weight: 400
     Defense: 3
     Slots: 1
@@ -94,7 +94,7 @@ Body:
     AegisName: Vitality_Muffler
     Name: Muffler
     Type: Armor
-    Buy: 5000
+    Buy: 20000
     Weight: 400
     Defense: 3
     Slots: 1
@@ -111,7 +111,7 @@ Body:
     AegisName: Intelligence_Muffler
     Name: Muffler
     Type: Armor
-    Buy: 5000
+    Buy: 20000
     Weight: 400
     Defense: 3
     Slots: 1
@@ -128,7 +128,7 @@ Body:
     AegisName: Dexterity_Muffler
     Name: Muffler
     Type: Armor
-    Buy: 5000
+    Buy: 20000
     Weight: 400
     Defense: 3
     Slots: 1
@@ -145,7 +145,7 @@ Body:
     AegisName: Luck_Muffler
     Name: Muffler
     Type: Armor
-    Buy: 5000
+    Buy: 20000
     Weight: 400
     Defense: 3
     Slots: 1
@@ -162,7 +162,7 @@ Body:
     AegisName: Ravage_Magic_Muffler
     Name: Muffler
     Type: Armor
-    Buy: 5000
+    Buy: 20000
     Weight: 400
     Defense: 3
     Slots: 1
@@ -180,7 +180,7 @@ Body:
     AegisName: Magic_Vanquisher_Muffler
     Name: Muffler
     Type: Armor
-    Buy: 5000
+    Buy: 20000
     Weight: 400
     Defense: 3
     Slots: 1
@@ -199,7 +199,7 @@ Body:
     AegisName: Casters_Wrap
     Name: Muffler
     Type: Armor
-    Buy: 5000
+    Buy: 20000
     Weight: 400
     Defense: 3
     Slots: 1
@@ -222,7 +222,7 @@ Body:
     AegisName: Drifters_Wrap
     Name: Muffler
     Type: Armor
-    Buy: 5000
+    Buy: 20000
     Weight: 400
     Defense: 3
     Slots: 1
@@ -245,7 +245,7 @@ Body:
     AegisName: Wool_Scarf
     Name: Muffler
     Type: Armor
-    Buy: 5000
+    Buy: 20000
     Weight: 400
     Defense: 3
     Slots: 1
@@ -263,7 +263,7 @@ Body:
     AegisName: Natures_Leather
     Name: Muffler
     Type: Armor
-    Buy: 5000
+    Buy: 20000
     Weight: 400
     Defense: 3
     Slots: 1
@@ -276,13 +276,12 @@ Body:
     Refineable: true
     EquipLevelMin: 40
     Script: |
-      bonus2 bAtkEle,Ele_Earth,10;
       bonus2 bMagicAtkEle,Ele_Earth,10;
   - Id: 2519
     AegisName: Lava_Leather_Muffler
     Name: Muffler
     Type: Armor
-    Buy: 5000
+    Buy: 20000
     Weight: 400
     Defense: 3
     Slots: 1
@@ -295,32 +294,12 @@ Body:
     Refineable: true
     EquipLevelMin: 40
     Script: |
-      bonus2 bAtkEle,Ele_Fire,10;
-      bonus2 bMagicAtkEle,Ele_Fire,10;
-  - Id: 2519
-    AegisName: Lava_Leather_Muffler
-    Name: Muffler
-    Type: Armor
-    Buy: 5000
-    Weight: 400
-    Defense: 3
-    Slots: 1
-    Jobs:
-      All: true
-      Novice: false
-    Locations:
-      Garment: true
-    ArmorLevel: 1
-    Refineable: true
-    EquipLevelMin: 40
-    Script: |
-      bonus2 bAtkEle,Ele_Fire,10;
       bonus2 bMagicAtkEle,Ele_Fire,10;
   - Id: 2520
     AegisName: Glacier_Muffler
     Name: Muffler
     Type: Armor
-    Buy: 5000
+    Buy: 20000
     Weight: 400
     Defense: 3
     Slots: 1
@@ -333,13 +312,12 @@ Body:
     Refineable: true
     EquipLevelMin: 40
     Script: |
-      bonus2 bAtkEle,Ele_Water,10;
       bonus2 bMagicAtkEle,Ele_Water,10;
   - Id: 2521
     AegisName: Jupitel_Muffler
     Name: Muffler
     Type: Armor
-    Buy: 5000
+    Buy: 20000
     Weight: 400
     Defense: 3
     Slots: 1
@@ -352,13 +330,12 @@ Body:
     Refineable: true
     EquipLevelMin: 40
     Script: |
-      bonus2 bAtkEle,Ele_Wind,10;
       bonus2 bMagicAtkEle,Ele_Wind,10;
   - Id: 2522
     AegisName: Musika
     Name: Muffler
     Type: Armor
-    Buy: 5000
+    Buy: 20000
     Weight: 400
     Defense: 3
     Slots: 1
@@ -371,13 +348,12 @@ Body:
     Refineable: true
     EquipLevelMin: 40
     Script: |
-      bonus2 bAtkEle,Ele_Holy,10;
       bonus2 bMagicAtkEle,Ele_Holy,10;
   - Id: 2523
     AegisName: Gloomy_Muffler
     Name: Muffler
     Type: Armor
-    Buy: 5000
+    Buy: 20000
     Weight: 400
     Defense: 3
     Slots: 1
@@ -390,13 +366,12 @@ Body:
     Refineable: true
     EquipLevelMin: 40
     Script: |
-      bonus2 bAtkEle,Ele_Dark,10;
       bonus2 bMagicAtkEle,Ele_Dark,10;
   - Id: 2524
     AegisName: Ferlocks_Cloak
     Name: Muffler
     Type: Armor
-    Buy: 5000
+    Buy: 20000
     Weight: 400
     Defense: 3
     Slots: 1
@@ -409,13 +384,12 @@ Body:
     Refineable: true
     EquipLevelMin: 40
     Script: |
-      bonus2 bAtkEle,Ele_Ghost,10;
       bonus2 bMagicAtkEle,Ele_Ghost,10;
   - Id: 2525
     AegisName: Freyja_Cloak
     Name: Muffler
     Type: Armor
-    Buy: 5000
+    Buy: 20000
     Weight: 400
     Defense: 3
     Slots: 1
@@ -428,13 +402,12 @@ Body:
     Refineable: true
     EquipLevelMin: 40
     Script: |
-      bonus2 bAtkEle,Ele_Neutral,10;
       bonus2 bMagicAtkEle,Ele_Neutral,10;
   - Id: 2526
     AegisName: Leather_Strapped_Muffler
     Name: Muffler
     Type: Armor
-    Buy: 5000
+    Buy: 20000
     Weight: 400
     Defense: 3
     Slots: 1
@@ -457,7 +430,7 @@ Body:
     AegisName: Elegant_Muffler
     Name: Muffler
     Type: Armor
-    Buy: 5000
+    Buy: 20000
     Weight: 400
     Defense: 3
     Slots: 1
@@ -480,7 +453,7 @@ Body:
     AegisName: Dragon_Scale_Muffler
     Name: Muffler
     Type: Armor
-    Buy: 5000
+    Buy: 20000
     Weight: 400
     Defense: 10
     Slots: 1
@@ -516,7 +489,7 @@ Body:
     AegisName: Giant_Snake_Skin
     Name: Muffler
     Type: Armor
-    Buy: 5000
+    Buy: 20000
     Weight: 400
     Defense: 3
     Slots: 1
@@ -534,7 +507,7 @@ Body:
     AegisName: Mystic_Breath
     Name: Muffler
     Type: Armor
-    Buy: 5000
+    Buy: 20000
     Weight: 400
     Defense: 3
     Slots: 1
@@ -1019,7 +992,7 @@ Body:
     AegisName: Pauldron_
     Name: Pauldron
     Type: Armor
-    Buy: 32000
+    Buy: 40000
     Weight: 800
     Defense: 25
     Slots: 1
@@ -1035,7 +1008,7 @@ Body:
     AegisName: Spaulders
     Name: Pauldron
     Type: Armor
-    Buy: 32000
+    Buy: 40000
     Weight: 800
     Defense: 35
     Slots: 1
@@ -1051,7 +1024,7 @@ Body:
     AegisName: Urs_Mantau
     Name: Pauldron
     Type: Armor
-    Buy: 32000
+    Buy: 40000
     Weight: 800
     Defense: 25
     Slots: 1
@@ -1069,7 +1042,7 @@ Body:
     AegisName: Peuzs_Manteau
     Name: Pauldron
     Type: Armor
-    Buy: 32000
+    Buy: 40000
     Weight: 800
     Defense: 25
     Slots: 1
@@ -1087,7 +1060,7 @@ Body:
     AegisName: Spiked_Shoulderpads
     Name: Pauldron
     Type: Armor
-    Buy: 32000
+    Buy: 40000
     Weight: 800
     Defense: 25
     Slots: 1
@@ -1105,7 +1078,7 @@ Body:
     AegisName: Cape_of_Elements
     Name: Muffler
     Type: Armor
-    Buy: 32000
+    Buy: 20000
     Weight: 400
     Defense: 3
     Slots: 1
@@ -1127,7 +1100,7 @@ Body:
     AegisName: All_Hallows_Muffler
     Name: Muffler
     Type: Armor
-    Buy: 32000
+    Buy: 20000
     Weight: 400
     Defense: 3
     Slots: 1
@@ -1180,7 +1153,7 @@ Body:
     AegisName: Exorcist_Muffler
     Name: Muffler
     Type: Armor
-    Buy: 32000
+    Buy: 20000
     Weight: 400
     Defense: 3
     Slots: 1
@@ -1244,7 +1217,7 @@ Body:
     AegisName: Protector_Garb
     Name: Muffler
     Type: Armor
-    Buy: 32000
+    Buy: 20000
     Weight: 400
     Defense: 3
     Slots: 1
@@ -1341,7 +1314,7 @@ Body:
     AegisName: Owl_Baron_Mantle
     Name: Manteau
     Type: Armor
-    Buy: 32000
+    Buy: 20000
     Weight: 400
     Defense: 3
     Slots: 1
@@ -1370,7 +1343,7 @@ Body:
     AegisName: Dragon_Garb
     Name: Manteau
     Type: Armor
-    Buy: 32000
+    Buy: 20000
     Weight: 400
     Defense: 3
     Slots: 1

@@ -8,7 +8,7 @@ Body:
     Name: Staff
     Type: Weapon
     SubType: Staff
-    Buy: 50
+    Buy: 1000
     Weight: 400
     Attack: 15
     MagicAttack: 50
@@ -31,7 +31,7 @@ Body:
     Name: Staff
     Type: Weapon
     SubType: Staff
-    Buy: 50
+    Buy: 1000
     Weight: 400
     Attack: 15
     MagicAttack: 50
@@ -54,7 +54,7 @@ Body:
     Name: Wand
     Type: Weapon
     SubType: Staff
-    Buy: 50
+    Buy: 2500
     Weight: 400
     Attack: 15
     MagicAttack: 70
@@ -80,7 +80,7 @@ Body:
     Name: Wand
     Type: Weapon
     SubType: Staff
-    Buy: 50
+    Buy: 2500
     Weight: 400
     Attack: 15
     MagicAttack: 70
@@ -106,7 +106,7 @@ Body:
     Name: Sceptre
     Type: Weapon
     SubType: Staff
-    Buy: 50
+    Buy: 5000
     Weight: 400
     Attack: 15
     MagicAttack: 80
@@ -132,7 +132,7 @@ Body:
     Name: Sceptre
     Type: Weapon
     SubType: Staff
-    Buy: 50
+    Buy: 5000
     Weight: 400
     Attack: 15
     MagicAttack: 80
@@ -158,7 +158,7 @@ Body:
     Name: Arc Staff
     Type: Weapon
     SubType: Staff
-    Buy: 50
+    Buy: 10000
     Weight: 400
     Attack: 15
     MagicAttack: 80
@@ -185,7 +185,7 @@ Body:
     Name: Arc Staff
     Type: Weapon
     SubType: Staff
-    Buy: 50
+    Buy: 10000
     Weight: 400
     Attack: 15
     MagicAttack: 80
@@ -212,7 +212,7 @@ Body:
     Name: Mighty Staff
     Type: Weapon
     SubType: Staff
-    Buy: 50
+    Buy: 50000
     Weight: 400
     Attack: 80
     MagicAttack: 80
@@ -232,7 +232,7 @@ Body:
     Name: Wing Staff
     Type: Weapon
     SubType: Staff
-    Buy: 50
+    Buy: 50000
     Weight: 400
     Attack: 15
     MagicAttack: 85
@@ -254,7 +254,7 @@ Body:
     Name: Staff Of Occult
     Type: Weapon
     SubType: Staff
-    Buy: 50
+    Buy: 50000
     Weight: 400
     Attack: 15
     MagicAttack: 90
@@ -274,7 +274,7 @@ Body:
     Name: Noble Staff
     Type: Weapon
     SubType: Staff
-    Buy: 50
+    Buy: 50000
     Weight: 400
     Attack: 15
     MagicAttack: 95
@@ -296,7 +296,7 @@ Body:
     Name: Evil Bone Staff
     Type: Weapon
     SubType: Staff
-    Buy: 50
+    Buy: 50000
     Weight: 400
     Attack: 15
     MagicAttack: 90
@@ -317,7 +317,7 @@ Body:
     Name: Staff of Piercing
     Type: Weapon
     SubType: Staff
-    Buy: 50
+    Buy: 50000
     Weight: 400
     Attack: 15
     MagicAttack: 80
@@ -339,7 +339,7 @@ Body:
     Name: Staff of Justice
     Type: Weapon
     SubType: Staff
-    Buy: 50
+    Buy: 50000
     Weight: 400
     Attack: 15
     MagicAttack: 100
@@ -360,7 +360,7 @@ Body:
     Name: Staff of Elements
     Type: Weapon
     SubType: Staff
-    Buy: 50
+    Buy: 50000
     Weight: 400
     Attack: 15
     MagicAttack: 100
@@ -384,7 +384,7 @@ Body:
     Name: Croce Staff
     Type: Weapon
     SubType: Staff
-    Buy: 50
+    Buy: 50000
     Weight: 400
     Attack: 15
     MagicAttack: 110
@@ -406,7 +406,7 @@ Body:
     Name: Staff of Recovery
     Type: Weapon
     SubType: Staff
-    Buy: 50
+    Buy: 50000
     Weight: 400
     Attack: 15
     MagicAttack: 110

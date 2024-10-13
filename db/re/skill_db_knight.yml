@@ -228,7 +228,7 @@ Body:
     Name: SK_KN_WINDCUTTER
     Description: Wind Cutter
     MaxLevel: 5
-    Type: Weapon
+    Type: Magic
     TargetType: Self
     DamageFlags:
       Splash: true
@@ -282,7 +282,7 @@ Body:
     Name: SK_KN_SONICWAVE
     Description: Sonic Wave
     MaxLevel: 5
-    Type: Weapon
+    Type: Magic
     TargetType: Attack
     Range:
       - Level: 1
@@ -297,7 +297,7 @@ Body:
         Size: 11
     Hit: Single
     HitCount: -3
-    Element: Weapon
+    Element: Wind
     AfterCastActDelay: 500
     Cooldown: 3000
     Flags:
