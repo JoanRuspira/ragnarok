@@ -359,7 +359,7 @@ Body:
       bonus bAspd,5;
   - Id: 1115
     AegisName: Holy_Avenger
-    Name: Holy_Avenger
+    Name: Holy Avenger
     Type: Weapon
     SubType: 1hSword
     Buy: 50000
@@ -379,7 +379,7 @@ Body:
       bonus2 bMagicAtkEle,Ele_Holy,10;
   - Id: 1116
     AegisName: Jeweled_Sword
-    Name: Jeweled_Sword
+    Name: Jeweled Sword
     Type: Weapon
     SubType: 1hSword
     Buy: 50000
@@ -401,7 +401,7 @@ Body:
       bonus bInt,getrefine();
   - Id: 1117
     AegisName: Knightguard_Sword
-    Name: Knightguard_Sword
+    Name: Knightguard Sword
     Type: Weapon
     SubType: 1hSword
     Buy: 50000
@@ -422,7 +422,7 @@ Body:
       bonus2 bMagicAtkEle,Ele_Wind,10;
   - Id: 1118
     AegisName: Star_Dust_Blade
-    Name: Star_Dust_Blade
+    Name: Star Dust Blade
     Type: Weapon
     SubType: 1hSword
     Buy: 50000

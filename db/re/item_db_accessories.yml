@@ -89,7 +89,7 @@ Body:
       bonus bLuk,5;
   - Id: 2609
     AegisName: Immediacy_Glove
-    Name: Glove
+    Name: Immediacy Glove
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -105,7 +105,7 @@ Body:
       bonus bDelayRate,5;
   - Id: 2610
     AegisName: Celebrants_Mitten
-    Name: Glove
+    Name: Celebrants Mitten
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -121,7 +121,7 @@ Body:
       bonus bMatk,10;
   - Id: 2611
     AegisName: Combo_Battle_Glove
-    Name: Glove
+    Name: Combo Battle Glove
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -137,7 +137,7 @@ Body:
       bonus bAtk,10;
   - Id: 2612
     AegisName: Padded_Glove
-    Name: Glove
+    Name: Padded Glove
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -153,7 +153,7 @@ Body:
       bonus bMaxHP,150;
   - Id: 2613
     AegisName: Orlean_Glove
-    Name: Glove
+    Name: Orlean Glove
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -169,7 +169,7 @@ Body:
       bonus bMaxSP,150;
   - Id: 2614
     AegisName: Falconry_Glove
-    Name: Glove
+    Name: Falconry Glove
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -185,7 +185,7 @@ Body:
       bonus bLongAtkRate,5;
   - Id: 2615
     AegisName: Leather_Glove
-    Name: Glove
+    Name: Leather Glove
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -201,7 +201,7 @@ Body:
       bonus bAspd,2;
   - Id: 2616
     AegisName: Haste_Glove
-    Name: Glove
+    Name: Haste Glove
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -217,7 +217,7 @@ Body:
       bonus bCastrate,5;
   - Id: 2617
     AegisName: Steel_Gauntlet
-    Name: Glove
+    Name: Steel Gauntlet
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -249,7 +249,7 @@ Body:
       bonus bDex,5;
   - Id: 2619
     AegisName: Jeweled_Earring
-    Name: Earring
+    Name: Jeweled Earring
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -265,7 +265,7 @@ Body:
       bonus bHealPower,5;
   - Id: 2620
     AegisName: Potara_Earring
-    Name: Earring
+    Name: Potara Earring
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -281,7 +281,7 @@ Body:
       bonus bMatkRate,5;
   - Id: 2621
     AegisName: Shaman_Earring
-    Name: Earring
+    Name: Shaman Earring
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -297,7 +297,7 @@ Body:
       bonus bCastrate,5;
   - Id: 2622
     AegisName: Gaeblog_Earring
-    Name: Earring
+    Name: Gaeblog Earring
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -313,7 +313,7 @@ Body:
       bonus bDelayRate,5;
   - Id: 2623
     AegisName: Saphire_Earring
-    Name: Earring
+    Name: Saphire Earring
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -329,7 +329,7 @@ Body:
       bonus bMaxSP,150;
   - Id: 2624
     AegisName: Emerald_Earring
-    Name: Earring
+    Name: Emerald Earring
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -345,7 +345,7 @@ Body:
       bonus bMaxHP,150;
   - Id: 2625
     AegisName: Wolf_Tooth_Earring
-    Name: Earring
+    Name: Wolf Tooth Earring
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -361,7 +361,7 @@ Body:
       bonus bMatk,10;
   - Id: 2626
     AegisName: Gold_Earring
-    Name: Earring
+    Name: Gold Earring
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -392,7 +392,7 @@ Body:
       bonus bInt,5;
   - Id: 2628
     AegisName: Necklace_of_Wisdom
-    Name: Necklace
+    Name: Necklace of Wisdom
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -408,7 +408,7 @@ Body:
       bonus bMatk,10;
   - Id: 2629
     AegisName: Guardian_Sword_Necklace
-    Name: Necklace
+    Name: Guardian Sword Necklace
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -424,7 +424,7 @@ Body:
       bonus bAtk,10;
   - Id: 2630
     AegisName: Necklace_of_Oblivion
-    Name: Necklace
+    Name: Necklace of Oblivion
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -440,7 +440,7 @@ Body:
       bonus bAspd,2;
   - Id: 2631
     AegisName: Gold_Necklace
-    Name: Necklace
+    Name: Gold Necklace
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -456,7 +456,7 @@ Body:
       bonus bMDef,10;
   - Id: 2632
     AegisName: Morrigan_Pendant
-    Name: Necklace
+    Name: Morrigan Pendant
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -472,7 +472,7 @@ Body:
       bonus2 bSubEle,Ele_Neutral,5;
   - Id: 2633
     AegisName: Ancient_Pendant
-    Name: Necklace
+    Name: Ancient Pendant
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -488,7 +488,7 @@ Body:
       bonus bLongAtkDef,5;
   - Id: 2634
     AegisName: Moonlight_Necklace
-    Name: Necklace
+    Name: Moonlight Necklace
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -504,7 +504,7 @@ Body:
       bonus bHealPower,5;
   - Id: 2637
     AegisName: Fortitude_Necklace
-    Name: Necklace
+    Name: Fortitude Necklace
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -520,7 +520,7 @@ Body:
       bonus bMaxHP,150;
   - Id: 2636
     AegisName: Spirituality_Necklace
-    Name: Necklace
+    Name: Spirituality Necklace
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -551,7 +551,7 @@ Body:
       bonus bVit,5;
   - Id: 2639
     AegisName: Black_Rosary
-    Name: Rosary
+    Name: Black Rosary
     Type: Armor
     Buy: 15000
     Weight: 100
@@ -567,7 +567,7 @@ Body:
       bonus bCritical,3;
   - Id: 2640
     AegisName: Runic_Rosary
-    Name: Rosary
+    Name: Runic Rosary
     Type: Armor
     Buy: 15000
     Weight: 100
@@ -583,7 +583,7 @@ Body:
       bonus bAspd,2;
   - Id: 2641
     AegisName: Gold_Rosary
-    Name: Rosary
+    Name: Gold Rosary
     Type: Armor
     Buy: 15000
     Weight: 100
@@ -599,7 +599,7 @@ Body:
       bonus bAtk,10;
   - Id: 2642
     AegisName: Silver_Rosary
-    Name: Rosary
+    Name: Silver Rosary
     Type: Armor
     Buy: 15000
     Weight: 100
@@ -615,7 +615,7 @@ Body:
       bonus bMatk,10;
   - Id: 2643
     AegisName: Wood_Rosary
-    Name: Rosary
+    Name: Wood Rosary
     Type: Armor
     Buy: 15000
     Weight: 100
@@ -646,7 +646,7 @@ Body:
       bonus bLuk,5;
   - Id: 2645
     AegisName: Ring_of_Resonance
-    Name: Ring
+    Name: Ring of Resonance
     Type: Armor
     Buy: 15000
     Weight: 100
@@ -662,7 +662,7 @@ Body:
       bonus bAtk,10;
   - Id: 2646
     AegisName: Black_Eagle_Ring
-    Name: Ring
+    Name: Black Eagle Ring
     Type: Armor
     Buy: 15000
     Weight: 100
@@ -678,7 +678,7 @@ Body:
       bonus bMatk,10;
   - Id: 2647
     AegisName: Oridecon_Ring
-    Name: Ring
+    Name: Oridecon Ring
     Type: Armor
     Buy: 15000
     Weight: 100
@@ -694,7 +694,7 @@ Body:
       bonus bAtkRate,5;
   - Id: 2648
     AegisName: Feather_Ring
-    Name: Ring
+    Name: Feather Ring
     Type: Armor
     Buy: 15000
     Weight: 100
@@ -710,7 +710,7 @@ Body:
       bonus bAspd,2;
   - Id: 2649
     AegisName: Spiked_Ring
-    Name: Ring
+    Name: Spiked Ring
     Type: Armor
     Buy: 15000
     Weight: 100
@@ -726,7 +726,7 @@ Body:
       bonus bCritical,3;
   - Id: 2650
     AegisName: Shapphire_Ring
-    Name: Ring
+    Name: Shapphire Ring
     Type: Armor
     Buy: 15000
     Weight: 100
@@ -742,7 +742,7 @@ Body:
       bonus bMaxSP,150;
   - Id: 2651
     AegisName: Emerald_Ring
-    Name: Ring
+    Name: Emerald Ring
     Type: Armor
     Buy: 15000
     Weight: 100
@@ -758,7 +758,7 @@ Body:
       bonus bMaxHP,150;
   - Id: 2652
     AegisName: Safety_Ring
-    Name: Ring
+    Name: Safety Ring
     Type: Armor
     Buy: 15000
     Weight: 100
@@ -774,7 +774,7 @@ Body:
       bonus bStr,3;
   - Id: 2653
     AegisName: Allysia_Ring
-    Name: Ring
+    Name: Allysia Ring
     Type: Armor
     Buy: 15000
     Weight: 100
@@ -805,7 +805,7 @@ Body:
       bonus bStr,5;
   - Id: 2655
     AegisName: Black_Wing_Brooch
-    Name: Brooch
+    Name: Black Wing Brooch
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -821,7 +821,7 @@ Body:
       bonus bAtk,10;
   - Id: 2656
     AegisName: White_Wing_Brooch
-    Name: Brooch
+    Name: White Wing Brooch
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -837,7 +837,7 @@ Body:
       bonus bAtkRate,5;
   - Id: 2657
     AegisName: Sprint_Brooch
-    Name: Brooch
+    Name: Sprint Brooch
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -853,7 +853,7 @@ Body:
       bonus bAspd,2;
   - Id: 2658
     AegisName: Lunatic_Brooch
-    Name: Brooch
+    Name: Lunatic Brooch
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -869,7 +869,7 @@ Body:
       bonus bCritical,3;
   - Id: 2659
     AegisName: Heros_Badge
-    Name: Brooch
+    Name: Heros Badge
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -885,7 +885,7 @@ Body:
       bonus bAgi,3;
   - Id: 2660
     AegisName: Royal_Insignia
-    Name: Brooch
+    Name: Royal Insignia
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -901,7 +901,7 @@ Body:
       bonus bLongAtkRate,5;
   - Id: 2661
     AegisName: Colorful_Brooch
-    Name: Brooch
+    Name: Colorful Brooch
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -917,7 +917,7 @@ Body:
       bonus bHit,15;
   - Id: 2662
     AegisName: Rider_Insignia
-    Name: Brooch
+    Name: Rider Insignia
     Type: Armor
     Buy: 30000
     Weight: 100
@@ -933,7 +933,7 @@ Body:
       bonus bFlee,15;
   - Id: 2663
     AegisName: Dullahan_Eye
-    Name: Brooch
+    Name: Dullahan Eye
     Type: Armor
     Buy: 30000
     Weight: 100

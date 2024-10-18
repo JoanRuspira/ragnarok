@@ -354,7 +354,7 @@ Body:
     EquipLevelMin: 70
     Refineable: true
     Script: |
-      bonus bMAtk,getrefine()*5;
+      bonus bMatk,getrefine()*5;
   - Id: 1616
     AegisName: Staff_of_Elements
     Name: Staff of Elements

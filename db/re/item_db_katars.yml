@@ -4,54 +4,373 @@ Header:
 
 Body:
   - Id: 1250
+    AegisName: Katar
+    Name: Katar
+    Type: Weapon
+    SubType: Katar
+    Buy: 5000
+    Weight: 1400
+    Attack: 120
+    Range: 1
+    Slots: 0
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+  - Id: 1251
+    AegisName: Katar_
+    Name: Katar
+    Type: Weapon
+    SubType: Katar
+    Buy: 5000
+    Weight: 1400
+    Attack: 120
+    Range: 1
+    Slots: 4
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+  - Id: 1252
     AegisName: Jur
     Name: Jur
     Type: Weapon
     SubType: Katar
-    Buy: 19500
-    Weight: 800
-    Attack: 125
+    Buy: 10000
+    Weight: 1400
+    Attack: 140
+    Range: 1
+    Slots: 0
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus bStr,5;
+      bonus bAgi,5;
+  - Id: 1253
+    AegisName: Jur_
+    Name: Jur
+    Type: Weapon
+    SubType: Katar
+    Buy: 10000
+    Weight: 1400
+    Attack: 140
+    Range: 1
+    Slots: 3
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus bStr,5;
+      bonus bAgi,5;
+  - Id: 1254
+    AegisName: Jamadhar
+    Name: Jamadhar
+    Type: Weapon
+    SubType: Katar
+    Buy: 20000
+    Weight: 1400
+    Attack: 150
+    Range: 1
+    Slots: 0
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus bLongAtkRate,getrefine();
+  - Id: 1255
+    AegisName: Jamadhar_
+    Name: Jamadhar
+    Type: Weapon
+    SubType: Katar
+    Buy: 20000
+    Weight: 1400
+    Attack: 150
+    Range: 1
+    Slots: 3
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus bLongAtkRate,getrefine();
+  - Id: 1256
+    AegisName: Eazam
+    Name: Eazam
+    Type: Weapon
+    SubType: Katar
+    Buy: 30000
+    Weight: 1400
+    Attack: 160
+    Range: 1
+    Slots: 0
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bAgi,5;
+      bonus bLuk,5;
+  - Id: 1257
+    AegisName: Eazam_
+    Name: Eazam
+    Type: Weapon
+    SubType: Katar
+    Buy: 30000
+    Weight: 1400
+    Attack: 160
+    Range: 1
+    Slots: 3
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bAgi,5;
+      bonus bLuk,5;
+  - Id: 1258
+    AegisName: Infiltrator
+    Name: Infiltrator
+    Type: Weapon
+    SubType: Katar
+    Buy: 50000
+    Weight: 1400
+    Attack: 160
+    Range: 1
+    Slots: 3
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bSpeedRate,15;
+  - Id: 1259
+    AegisName: Bloody_Roar
+    Name: Bloody Roar
+    Type: Weapon
+    SubType: Katar
+    Buy: 50000
+    Weight: 1400
+    Attack: 160
+    Range: 1
+    Slots: 3
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus2 bAddRace,RC_DemiHuman,10;
+      bonus2 bAddRace,RC_Player_Human,10;
+      bonus2 bMagicAddRace,RC_DemiHuman,10;
+      bonus2 bMagicAddRace,RC_Player_Human,10;
+  - Id: 1260
+    AegisName: Flesh_Tearer
+    Name: Flesh Tearer
+    Type: Weapon
+    SubType: Katar
+    Buy: 50000
+    Weight: 1400
+    Attack: 160
+    Range: 1
+    Slots: 3
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus2 bAddSize,Size_Large,10;
+      bonus2 bMagicAddSize,Size_Large,10;
+  - Id: 1261
+    AegisName: Chakram
+    Name: Chakram
+    Type: Weapon
+    SubType: Katar
+    Buy: 50000
+    Weight: 1650
+    Attack: 180
     Range: 1
     Slots: 2
     Jobs:
       Assassin: true
     Locations:
       Both_Hand: true
-    WeaponLevel: 2
-    EquipLevelMin: 18
-    Refineable: true
-  - Id: 1252
-    AegisName: Katar
-    Name: Katar
-    Type: Weapon
-    SubType: Katar
-    Buy: 41000
-    Weight: 1200
-    Attack: 148
-    Range: 1
-    Slots: 1
-    Jobs:
-      Assassin: true
-    Locations:
-      Both_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 33
+    EquipLevelMin: 60
     Refineable: true
     Script: |
-      bonus bDex,1;
-  - Id: 1254
-    AegisName: Jamadhar
-    Name: Jamadhar
+      bonus bLuk,getrefine()*2;
+  - Id: 1262
+    AegisName: Krishna
+    Name: Krishna
     Type: Weapon
     SubType: Katar
-    Buy: 37200
-    Weight: 1500
-    Attack: 165
+    Buy: 50000
+    Weight: 1650
+    Attack: 180
     Range: 1
+    Slots: 2
     Jobs:
       Assassin: true
     Locations:
       Both_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 33
+    EquipLevelMin: 60
     Refineable: true
+    Script: |
+      bonus bHit,20;
+      bonus bAtk,getrefine()*2;
+  - Id: 1263
+    AegisName: Hate_Machine
+    Name: Hate Machine
+    Type: Weapon
+    SubType: Katar
+    Buy: 50000
+    Weight: 1650
+    Attack: 185
+    Range: 1
+    Slots: 2
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bCritAtkRate,10;
+  - Id: 1264
+    AegisName: Toxic_Shock
+    Name: Toxic Shock
+    Type: Weapon
+    SubType: Katar
+    Buy: 50000
+    Weight: 1650
+    Attack: 190
+    Range: 1
+    Slots: 2
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bInt,3;
+      bonus2 bAddEff,Eff_Poison,1000;
+  - Id: 1265
+    AegisName: Agudo_Filo
+    Name: Agudo Filo
+    Type: Weapon
+    SubType: Katar
+    Buy: 50000
+    Weight: 1650
+    Attack: 190
+    Range: 1
+    Slots: 2
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bCritical,getrefine();
+  - Id: 1266
+    AegisName: Muqaddas_Dayats 
+    Name: Muqaddas Dayats
+    Type: Weapon
+    SubType: Katar
+    Buy: 50000
+    Weight: 1650
+    Attack: 200
+    Range: 1
+    Slots: 2
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bAtkRate,getrefine();
+  - Id: 1267
+    AegisName: Scissor_Hands 
+    Name: Scissor Hands
+    Type: Weapon
+    SubType: Katar
+    Buy: 50000
+    Weight: 1650
+    Attack: 200
+    Range: 1
+    Slots: 2
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bAspd,3;
+  - Id: 1268
+    AegisName: Juliette_De_Rachel 
+    Name: Juliette DeRachel 
+    Type: Weapon
+    SubType: Katar
+    Buy: 50000
+    Weight: 1650
+    Attack: 220
+    Range: 1
+    Slots: 2
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bStr,5;
+      bonus bLuk,5;
+      if (getrefine()>5) {
+         bonus bLongAtkRate,5;
+      }

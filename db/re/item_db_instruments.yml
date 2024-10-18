@@ -8,101 +8,357 @@ Body:
     Name: Violin
     Type: Weapon
     SubType: Musical
-    Buy: 4000
-    Weight: 700
-    Attack: 50
+    Buy: 5000
+    Weight: 750
+    Attack: 120
+    MagicAttack: 120
     Range: 1
-    Slots: 3
+    Slots: 0
     Jobs:
       BardDancer: true
     Locations:
       Both_Hand: true
-    WeaponLevel: 1
-    EquipLevelMin: 2
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+  - Id: 1902
+    AegisName: Violin_
+    Name: Violin
+    Type: Weapon
+    SubType: Musical
+    Buy: 5000
+    Weight: 750
+    Attack: 120
+    MagicAttack: 120
+    Range: 1
+    Slots: 4
+    Jobs:
+      BardDancer: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
     Refineable: true
   - Id: 1903
     AegisName: Mandolin
     Name: Mandolin
     Type: Weapon
     SubType: Musical
-    Buy: 18000
-    Weight: 400
-    Attack: 90
+    Buy: 10000
+    Weight: 750
+    Attack: 140
+    MagicAttack: 140
     Range: 1
-    Slots: 2
+    Slots: 0
     Jobs:
       BardDancer: true
     Locations:
       Both_Hand: true
-    WeaponLevel: 2
-    EquipLevelMin: 14
+    WeaponLevel: 3
+    EquipLevelMin: 55
     Refineable: true
-  - Id: 1905
-    AegisName: Lute
-    Name: Lute
+    Script: |
+      bonus bInt,getrefine()*2;
+  - Id: 1904
+    AegisName: Mandolin_
+    Name: Mandolin
     Type: Weapon
     SubType: Musical
-    Buy: 24500
-    Weight: 500
-    Attack: 105
+    Buy: 10000
+    Weight: 750
+    Attack: 140
+    MagicAttack: 140
     Range: 1
-    Slots: 2
+    Slots: 3
     Jobs:
       BardDancer: true
     Locations:
       Both_Hand: true
-    WeaponLevel: 2
-    EquipLevelMin: 14
+    WeaponLevel: 3
+    EquipLevelMin: 55
     Refineable: true
+    Script: |
+      bonus bInt,getrefine()*2;
+  - Id: 1905
+    AegisName: Lute
+    Name: Mandolin
+    Type: Weapon
+    SubType: Musical
+    Buy: 15000
+    Weight: 750
+    Attack: 140
+    MagicAttack: 140
+    Range: 1
+    Slots: 0
+    Jobs:
+      BardDancer: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus bDex,getrefine()*2;
+  - Id: 1906
+    AegisName: Lute_
+    Name: Mandolin
+    Type: Weapon
+    SubType: Musical
+    Buy: 15000
+    Weight: 750
+    Attack: 140
+    MagicAttack: 140
+    Range: 1
+    Slots: 3
+    Jobs:
+      BardDancer: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus bDex,getrefine()*2;
   - Id: 1907
     AegisName: Guitar
     Name: Guitar
     Type: Weapon
     SubType: Musical
-    Buy: 47000
-    Weight: 900
-    Attack: 142
+    Buy: 30000
+    Weight: 750
+    Attack: 150
+    MagicAttack: 150
     Range: 1
+    Slots: 0
     Jobs:
       BardDancer: true
     Locations:
       Both_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 27
-    Refineable: true
-  - Id: 1909
-    AegisName: Harp
-    Name: Harp
-    Type: Weapon
-    SubType: Musical
-    Buy: 62000
-    Weight: 900
-    Attack: 114
-    Range: 1
-    Slots: 1
-    Jobs:
-      BardDancer: true
-    Locations:
-      Both_Hand: true
-    WeaponLevel: 3
-    EquipLevelMin: 27
+    EquipLevelMin: 60
     Refineable: true
     Script: |
-      bonus bInt,2;
-  - Id: 1911
-    AegisName: Guh_Moon_Goh
-    Name: Gumoongoh
+      bonus bLongAtkRate,getrefine();
+  - Id: 1908
+    AegisName: Guitar_
+    Name: Guitar
     Type: Weapon
     SubType: Musical
-    Buy: 54000
-    Weight: 1300
-    Attack: 126
+    Buy: 30000
+    Weight: 750
+    Attack: 150
+    MagicAttack: 150
     Range: 1
-    Slots: 1
+    Slots: 3
     Jobs:
       BardDancer: true
     Locations:
       Both_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 27
+    EquipLevelMin: 60
     Refineable: true
+    Script: |
+      bonus bLongAtkRate,getrefine();
+  - Id: 1909
+    AegisName: Parlor_Guitar
+    Name: Parlor Guitar
+    Type: Weapon
+    SubType: Musical
+    Buy: 50000
+    Weight: 750
+    Attack: 150
+    MagicAttack: 150
+    Range: 1
+    Slots: 3
+    Jobs:
+      BardDancer: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bDex,getrefine();
+      bonus bInt,getrefine();
+  - Id: 1910
+    AegisName: Pipa
+    Name: Pipa
+    Type: Weapon
+    SubType: Musical
+    Buy: 50000
+    Weight: 750
+    Attack: 150
+    MagicAttack: 120
+    Range: 1
+    Slots: 3
+    Jobs:
+      BardDancer: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bAtk,getrefine()*5;
+  - Id: 1911
+    AegisName: Cello
+    Name: Cello
+    Type: Weapon
+    SubType: Musical
+    Buy: 50000
+    Weight: 750
+    Attack: 120
+    MagicAttack: 150
+    Range: 1
+    Slots: 3
+    Jobs:
+      BardDancer: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bDex,5;      
+      bonus bHealPower,10;
+  - Id: 1912
+    AegisName: Bass
+    Name: Bass
+    Type: Weapon
+    SubType: Musical
+    Buy: 50000
+    Weight: 750
+    Attack: 120
+    MagicAttack: 150
+    Range: 1
+    Slots: 3
+    Jobs:
+      BardDancer: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bMatk,getrefine()*5;
+  - Id: 1913
+    AegisName: Contrabass
+    Name: Contrabass
+    Type: Weapon
+    SubType: Musical
+    Buy: 50000
+    Weight: 750
+    Attack: 150
+    MagicAttack: 180
+    Range: 1
+    Slots: 2
+    Jobs:
+      BardDancer: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bMatkRate,getrefine();
+  - Id: 1914
+    AegisName: Ukulele
+    Name: Ukulele
+    Type: Weapon
+    SubType: Musical
+    Buy: 50000
+    Weight: 500
+    Attack: 180
+    MagicAttack: 180
+    Range: 1
+    Slots: 2
+    Jobs:
+      BardDancer: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bSpeedRate,15;
+  - Id: 1915
+    AegisName: Fiddle
+    Name: Fiddle
+    Type: Weapon
+    SubType: Musical
+    Buy: 50000
+    Weight: 750
+    Attack: 180
+    MagicAttack: 180
+    Range: 1
+    Slots: 2
+    Jobs:
+      BardDancer: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bDelayRate,getrefine();
+      bonus bCastrate,getrefine();
+  - Id: 1916
+    AegisName: Black_Circle
+    Name: Black Circle
+    Type: Weapon
+    SubType: Musical
+    Buy: 50000
+    Weight: 750
+    Attack: 150
+    MagicAttack: 190
+    Range: 1
+    Slots: 2
+    Jobs:
+      BardDancer: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 75
+    Refineable: true
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Neutral,15;
+  - Id: 1917
+    AegisName: Viola
+    Name: Viola
+    Type: Weapon
+    SubType: Musical
+    Buy: 50000
+    Weight: 750
+    Attack: 150
+    MagicAttack: 200
+    Range: 1
+    Slots: 2
+    Jobs:
+      BardDancer: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 75
+    Refineable: true
+    Script: |     
+      bonus bHealPower,10;
+  - Id: 1918
+    AegisName: Baroque_Violin
+    Name: Baroque Violin
+    Type: Weapon
+    SubType: Musical
+    Buy: 50000
+    Weight: 750
+    Attack: 200
+    MagicAttack: 150
+    Range: 1
+    Slots: 2
+    Jobs:
+      BardDancer: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 75
+    Refineable: true
+    Script: |
+      bonus bMatkRate,getrefine();

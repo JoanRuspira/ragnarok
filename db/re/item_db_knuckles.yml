@@ -4,111 +4,326 @@ Header:
 
 Body:
   - Id: 1801
-    AegisName: Waghnakh
+    AegisName: Knuckles
+    Name: Knuckles
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 5000
+    Weight: 1400
+    Attack: 120
+    Range: 1
+    Slots: 0
+    Jobs:
+      Monk: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+  - Id: 1802
+    AegisName: Knuckles_
+    Name: Knuckles
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 5000
+    Weight: 1400
+    Attack: 120
+    Range: 1
+    Slots: 4
+    Jobs:
+      Monk: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 50
+    Refineable: true
+  - Id: 1803
+    AegisName: Knuckle_Dusters
+    Name: Knuckle Dusters
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 10000
+    Weight: 1100
+    Attack: 140
+    Range: 1
+    Slots: 0
+    Defense: 10
+    Jobs:
+      Monk: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus bStr,5;
+  - Id: 1804
+    AegisName: Knuckle_Dusters_
+    Name: Knuckle Dusters
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 10000
+    Weight: 1400
+    Attack: 1240
+    Range: 1
+    Slots: 3
+    Defense: 10
+    Jobs:
+      Monk: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus bStr,5;
+  - Id: 1805
+    AegisName: Waghnak
     Name: Waghnak
     Type: Weapon
     SubType: Knuckle
-    Buy: 8000
-    Weight: 400
-    Attack: 30
+    Buy: 20000
+    Weight: 1400
+    Attack: 150
+    Range: 1
+    Slots: 0
+    Jobs:
+      Monk: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus2 bAddSize,Size_Medium,10;
+      bonus2 bMagicAddSize,Size_Medium,10;
+  - Id: 1806
+    AegisName: Waghnak_
+    Name: Waghnak
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 20000
+    Weight: 1400
+    Attack: 150
     Range: 1
     Slots: 3
     Jobs:
       Monk: true
-      Priest: true
     Locations:
-      Right_Hand: true
-    WeaponLevel: 1
-    EquipLevelMin: 1
-    Refineable: true
-  - Id: 1803
-    AegisName: Knuckle_Duster
-    Name: Knuckle Dusters
-    Type: Weapon
-    SubType: Knuckle
-    Buy: 25000
-    Weight: 450
-    Attack: 50
-    Range: 1
-    Slots: 2
-    Jobs:
-      Monk: true
-      Priest: true
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 2
-    EquipLevelMin: 12
-    Refineable: true
-  - Id: 1805
-    AegisName: Hora
-    Name: Studded Knuckles
-    Type: Weapon
-    SubType: Knuckle
-    Buy: 32000
-    Weight: 450
-    Attack: 65
-    Range: 1
-    Slots: 2
-    Jobs:
-      Monk: true
-      Priest: true
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 2
-    EquipLevelMin: 12
-    Refineable: true
-  - Id: 1807
-    AegisName: Fist
-    Name: Fist
-    Type: Weapon
-    SubType: Knuckle
-    Buy: 53000
-    Weight: 650
-    Attack: 115
-    Range: 1
-    Jobs:
-      Monk: true
-      Priest: true
-    Locations:
-      Right_Hand: true
+      Both_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 24
-    Refineable: true
-  - Id: 1809
-    AegisName: Claw
-    Name: Claw
-    Type: Weapon
-    SubType: Knuckle
-    Buy: 67000
-    Weight: 500
-    Attack: 86
-    Range: 1
-    Slots: 1
-    Jobs:
-      Monk: true
-      Priest: true
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 3
-    EquipLevelMin: 24
+    EquipLevelMin: 55
     Refineable: true
     Script: |
-      bonus bStr,2;
-  - Id: 1811
-    AegisName: Finger
-    Name: Finger
+      bonus2 bAddSize,Size_Medium,10;
+      bonus2 bMagicAddSize,Size_Medium,10;
+  - Id: 1807
+    AegisName: Claws
+    Name: Claws
     Type: Weapon
     SubType: Knuckle
-    Buy: 58000
-    Weight: 500
-    Attack: 97
+    Buy: 30000
+    Weight: 1400
+    Attack: 160
     Range: 1
-    Slots: 1
+    Slots: 0
     Jobs:
       Monk: true
-      Priest: true
     Locations:
-      Right_Hand: true
+      Both_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 24
+    EquipLevelMin: 60
     Refineable: true
+    Script: |
+      bonus bAtkRate,10;
+  - Id: 1808
+    AegisName: Claws_
+    Name: Claws
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 30000
+    Weight: 1400
+    Attack: 160
+    Range: 1
+    Slots: 3
+    Jobs:
+      Monk: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bAtkRate,10;
+  - Id: 1809
+    AegisName: Steel_Nails
+    Name: Steel Nails
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 50000
+    Weight: 1400
+    Attack: 180
+    Range: 1
+    Slots: 2
+    Jobs:
+      Monk: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bAtk,getrefine()*5;
+  - Id: 1810
+    AegisName: Icicle_Fists
+    Name: Icicle Fists
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 50000
+    Weight: 1400
+    Attack: 180
+    Range: 1
+    Slots: 2
+    Jobs:
+      Monk: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus2 bAddEff,Eff_Freeze,500;
+  - Id: 1811
+    AegisName: Bladed_Paws
+    Name: Bladed Paws
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 50000
+    Weight: 1400
+    Attack: 190
+    Range: 1
+    Slots: 2
+    Jobs:
+      Monk: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bCritical,5; 
+      bonus bCritAtkRate,5;
+  - Id: 1812
+    AegisName: Gold_Knuckles
+    Name: Gold Knuckles
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 50000
+    Weight: 1400
+    Attack: 190
+    Range: 1
+    Slots: 2
+    Jobs:
+      Monk: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bStr,getrefine()*2;
+  - Id: 1813
+    AegisName: Hillslion_Horns
+    Name: Hillslion Horns
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 50000
+    Weight: 1400
+    Attack: 200
+    Range: 1
+    Slots: 2
+    Jobs:
+      Monk: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus2 bAddEff,Eff_Stun,500;
+  - Id: 1814
+    AegisName: Silver_Knuckles
+    Name: Silver Knuckles
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 50000
+    Weight: 1400
+    Attack: 190
+    Range: 1
+    Slots: 2
+    Jobs:
+      Monk: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bAgi,getrefine()*2;
+  - Id: 1815
+    AegisName: Bronze_Knuckles
+    Name: Bronze Knuckles
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 50000
+    Weight: 1400
+    Attack: 190
+    Range: 1
+    Slots: 2
+    Jobs:
+      Monk: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bDex,getrefine()*2;
+  - Id: 1816
+    AegisName: Berserk
+    Name: Berserk
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 50000
+    Weight: 1400
+    Attack: 180
+    Range: 1
+    Slots: 2
+    Jobs:
+      Monk: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bAspd,5;
+  - Id: 1817
+    AegisName: Reapers
+    Name: Reapers
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 50000
+    Weight: 1400
+    Attack: 210
+    Range: 1
+    Slots: 2
+    Jobs:
+      Monk: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 75
+    Refineable: true
+    Script: |
+      bonus3 bAutoSpell,"SK_MO_DECAGI",1,500;

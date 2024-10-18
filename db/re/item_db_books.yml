@@ -8,7 +8,7 @@ Body:
     Name: Book
     Type: Weapon
     SubType: Book
-    Buy: 1000
+    Buy: 5000
     Weight: 600
     Attack: 50
     MagicAttack: 50
@@ -26,7 +26,7 @@ Body:
     Name: Book
     Type: Weapon
     SubType: Book
-    Buy: 1000
+    Buy: 5000
     Weight: 600
     Attack: 50
     MagicAttack: 50
@@ -44,7 +44,7 @@ Body:
     Name: Principles of Magic
     Type: Weapon
     SubType: Book
-    Buy: 2500
+    Buy: 10000
     Weight: 600
     Attack: 70
     MagicAttack: 70
@@ -65,7 +65,7 @@ Body:
     Name: Principles of Magic
     Type: Weapon
     SubType: Book
-    Buy: 2500
+    Buy: 10000
     Weight: 600
     Attack: 70
     MagicAttack: 70
@@ -86,7 +86,7 @@ Body:
     Name: Enciclopedia
     Type: Weapon
     SubType: Book
-    Buy: 5000
+    Buy: 20000
     Weight: 600
     Attack: 90
     MagicAttack: 70
@@ -107,7 +107,7 @@ Body:
     Name: Enciclopedia
     Type: Weapon
     SubType: Book
-    Buy: 5000
+    Buy: 20000
     Weight: 600
     Attack: 90
     MagicAttack: 70
@@ -128,7 +128,7 @@ Body:
     Name: Ancient Magic
     Type: Weapon
     SubType: Book
-    Buy: 10000
+    Buy: 30000
     Weight: 600
     Attack: 70
     MagicAttack: 90
@@ -149,7 +149,7 @@ Body:
     Name: Ancient Magic
     Type: Weapon
     SubType: Book
-    Buy: 10000
+    Buy: 30000
     Weight: 600
     Attack: 70
     MagicAttack: 90

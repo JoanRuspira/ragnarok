@@ -12,7 +12,7 @@ int MonkSkillAttackRatioCalculator::calculate_skill_atk_ratio(struct block_list*
 	switch (skill_id) {
 		case SK_MO_TRIPLEARMCANNON:
 			if(!is_in_combo(sc)) {
-				sc_start(&sd->bl,&sd->bl, STATUS_COMBO1, 100, 17, 4000);
+				sc_start(&sd->bl,&sd->bl, STATUS_COMBO1, 100, 17, 20000);
 			}else{
 				increment_combo(sc, sd);
 			}
@@ -119,53 +119,53 @@ int MonkSkillAttackRatioCalculator::get_combo_counter(status_change *sc)
 void MonkSkillAttackRatioCalculator::increment_combo(status_change *sc,  map_session_data *sd)
 {
 	if(sc->data[STATUS_COMBO1]) {
-		sc_start(&sd->bl,&sd->bl, STATUS_COMBO2, 100, 17, 4000);
+		sc_start(&sd->bl,&sd->bl, STATUS_COMBO2, 100, 17, 20000);
 		status_change_end(&sd->bl, STATUS_COMBO1, INVALID_TIMER);
 		return;
 	}
 	if(sc->data[STATUS_COMBO2]) {
-		sc_start(&sd->bl,&sd->bl, STATUS_COMBO3, 100, 17, 4000);
+		sc_start(&sd->bl,&sd->bl, STATUS_COMBO3, 100, 17, 20000);
 		status_change_end(&sd->bl, STATUS_COMBO2, INVALID_TIMER);
 		return;
 	}
 	if(sc->data[STATUS_COMBO3]) {
-		sc_start(&sd->bl,&sd->bl, STATUS_COMBO4, 100, 17, 4000);
+		sc_start(&sd->bl,&sd->bl, STATUS_COMBO4, 100, 17, 20000);
 		status_change_end(&sd->bl, STATUS_COMBO3, INVALID_TIMER);
 		return;
 	}
 	if(sc->data[STATUS_COMBO4]) {
-		sc_start(&sd->bl,&sd->bl, STATUS_COMBO5, 100, 17, 4000);
+		sc_start(&sd->bl,&sd->bl, STATUS_COMBO5, 100, 17, 20000);
 		status_change_end(&sd->bl, STATUS_COMBO4, INVALID_TIMER);
 		return;
 	}
 	if(sc->data[STATUS_COMBO5]) {
-		sc_start(&sd->bl,&sd->bl, STATUS_COMBO6, 100, 17, 4000);
+		sc_start(&sd->bl,&sd->bl, STATUS_COMBO6, 100, 17, 20000);
 		status_change_end(&sd->bl, STATUS_COMBO5, INVALID_TIMER);
 		return;
 	}
 	if(sc->data[STATUS_COMBO6]) {
-		sc_start(&sd->bl,&sd->bl, STATUS_COMBO7, 100, 17, 4000);
+		sc_start(&sd->bl,&sd->bl, STATUS_COMBO7, 100, 17, 20000);
 		status_change_end(&sd->bl, STATUS_COMBO6, INVALID_TIMER);
 		return;
 	}
 	if(sc->data[STATUS_COMBO7]) {
-		sc_start(&sd->bl,&sd->bl, STATUS_COMBO8, 100, 17, 4000);
+		sc_start(&sd->bl,&sd->bl, STATUS_COMBO8, 100, 17, 20000);
 		status_change_end(&sd->bl, STATUS_COMBO7, INVALID_TIMER);
 		return;
 	}
 	if(sc->data[STATUS_COMBO8]) {
-		sc_start(&sd->bl,&sd->bl, STATUS_COMBO9, 100, 17, 4000);
+		sc_start(&sd->bl,&sd->bl, STATUS_COMBO9, 100, 17, 20000);
 		status_change_end(&sd->bl, STATUS_COMBO8, INVALID_TIMER);
 		return;
 	}
 	if(sc->data[STATUS_COMBO9]) {
-		sc_start(&sd->bl,&sd->bl, STATUS_COMBO10, 100, 17, 4000);
+		sc_start(&sd->bl,&sd->bl, STATUS_COMBO10, 100, 17, 20000);
 		status_change_end(&sd->bl, STATUS_COMBO9, INVALID_TIMER);
 		return;
 	}
 	if(sc->data[STATUS_COMBO10]) {
 		status_change_end(&sd->bl, STATUS_COMBO10, INVALID_TIMER);
-		sc_start(&sd->bl,&sd->bl, STATUS_COMBO10, 100, 17, 4000);
+		sc_start(&sd->bl,&sd->bl, STATUS_COMBO10, 100, 17, 20000);
 		return;
 	}
 }

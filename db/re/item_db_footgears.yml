@@ -58,7 +58,7 @@ Body:
     Refineable: true
   - Id: 2413
     AegisName: Strength_Shoes
-    Name: Shoes
+    Name: Strength Shoes
     Type: Armor
     Buy: 3500
     Weight: 400
@@ -75,7 +75,7 @@ Body:
       bonus bStr,5;
   - Id: 2414
     AegisName: Intelligence_Shoes
-    Name: Shoes
+    Name: Intelligence Shoes
     Type: Armor
     Buy: 3500
     Weight: 400
@@ -92,7 +92,7 @@ Body:
       bonus bInt,5;
   - Id: 2415
     AegisName: Agility_Shoes
-    Name: Shoes
+    Name: Agility Shoes
     Type: Armor
     Buy: 3500
     Weight: 400
@@ -109,7 +109,7 @@ Body:
       bonus bAgi,5;
   - Id: 2416
     AegisName: Dexterity_Shoes
-    Name: Shoes
+    Name: Dexterity Shoes
     Type: Armor
     Buy: 3500
     Weight: 400
@@ -126,7 +126,7 @@ Body:
       bonus bDex,5;
   - Id: 2417
     AegisName: Vitality_Shoes
-    Name: Shoes
+    Name: Vitality Shoes
     Type: Armor
     Buy: 3500
     Weight: 400
@@ -143,7 +143,7 @@ Body:
       bonus bVit,5;
   - Id: 2418
     AegisName: Luck_Shoes
-    Name: Shoes
+    Name: Luck Shoes
     Type: Armor
     Buy: 3500
     Weight: 400
@@ -160,7 +160,7 @@ Body:
       bonus bLuk,5;
   - Id: 2419
     AegisName: Lian_Shoes
-    Name: Shoes
+    Name: Lian Shoes
     Type: Armor
     Buy: 3500
     Weight: 400
@@ -182,7 +182,7 @@ Body:
       bonus bLuk,3;
   - Id: 2420
     AegisName: Safety_Shoes
-    Name: Shoes
+    Name: Safety Shoes
     Type: Armor
     Buy: 3500
     Weight: 400
@@ -198,7 +198,7 @@ Body:
     EquipLevelMin: 20
   - Id: 2421
     AegisName: High_Heels
-    Name: Shoes
+    Name: High Heels
     Type: Armor
     Buy: 3500
     Weight: 400
@@ -216,7 +216,7 @@ Body:
       bonus bMatk,20;
   - Id: 2422
     AegisName: Mystic_Shoes
-    Name: Shoes
+    Name: Mystic Shoes
     Type: Armor
     Buy: 3500
     Weight: 400
@@ -234,7 +234,7 @@ Body:
       bonus bMdef,10;
   - Id: 2423
     AegisName: Thorny_Shoes
-    Name: Shoes
+    Name: Thorny Shoes
     Type: Armor
     Buy: 3500
     Weight: 400
@@ -252,7 +252,7 @@ Body:
       bonus bAtk,20;
   - Id: 2465
     AegisName: Soul_Charged_Shoes
-    Name: Shoes
+    Name: Soul Charged Shoes
     Type: Armor
     Buy: 3500
     Weight: 400
@@ -270,7 +270,7 @@ Body:
       bonus bMaxSPrate,10;
   - Id: 2424
     AegisName: Lava_Leather_Shoes
-    Name: Shoes
+    Name: Lava Leather Shoes
     Type: Armor
     Buy: 3500
     Weight: 400
@@ -288,7 +288,7 @@ Body:
       bonus2 bMagicAtkEle,Ele_Fire,10;
   - Id: 2425
     AegisName: Vital_Tree_Shoes
-    Name: Shoes
+    Name: Vital Tree Shoes
     Type: Armor
     Buy: 3500
     Weight: 400
@@ -306,7 +306,7 @@ Body:
       bonus2 bMagicAtkEle,Ele_Earth,10;
   - Id: 2426
     AegisName: Windflow_Shoes
-    Name: Shoes
+    Name: Windflow Shoes
     Type: Armor
     Buy: 3500
     Weight: 400
@@ -324,7 +324,7 @@ Body:
       bonus2 bMagicAtkEle,Ele_Wind,10;
   - Id: 2427
     AegisName: Aegir_Shoes
-    Name: Shoes
+    Name: Aegir Shoes
     Type: Armor
     Buy: 3500
     Weight: 400
@@ -342,7 +342,7 @@ Body:
       bonus2 bMagicAtkEle,Ele_Water,10;
   - Id: 2428
     AegisName: Angels_Reincarnation
-    Name: Shoes
+    Name: Angels Reincarnation
     Type: Armor
     Buy: 3500
     Weight: 400
@@ -360,7 +360,7 @@ Body:
       bonus2 bMagicAtkEle,Ele_Holy,10;
   - Id: 2429
     AegisName: Gray_Leather_Shoes
-    Name: Shoes
+    Name: Gray Leather Shoes
     Type: Armor
     Buy: 3500
     Weight: 400
@@ -378,7 +378,7 @@ Body:
       bonus2 bMagicAtkEle,Ele_Dark,10;
   - Id: 2430
     AegisName: Nab_Shoes
-    Name: Shoes
+    Name: Nab Shoes
     Type: Armor
     Buy: 3500
     Weight: 400
@@ -396,7 +396,7 @@ Body:
       bonus2 bMagicAtkEle,Ele_Ghost,10;
   - Id: 2431
     AegisName: Fricco_Shoes
-    Name: Shoes
+    Name: Fricco Shoes
     Type: Armor
     Buy: 3500
     Weight: 400
@@ -414,7 +414,7 @@ Body:
       bonus2 bMagicAtkEle,Ele_Neutral,10;
   - Id: 2432
     AegisName: Angel_Poring_Shoes
-    Name: Shoes
+    Name: Angel Poring Shoes
     Type: Armor
     Buy: 3500
     Weight: 400
@@ -432,7 +432,7 @@ Body:
       bonus bHealPower,10;
   - Id: 2433
     AegisName: Sprint_Shoes
-    Name: Shoes
+    Name: Sprint Shoes
     Type: Armor
     Buy: 3500
     Weight: 400
@@ -499,7 +499,7 @@ Body:
     Refineable: true
   - Id: 2434
     AegisName: Siege_Boots
-    Name: Boots
+    Name: Siege Boots
     Type: Armor
     Buy: 18000
     Weight: 600
@@ -525,7 +525,7 @@ Body:
     EquipLevelMin: 30
   - Id: 2435
     AegisName: Diablous_Boots
-    Name: Boots
+    Name: Diablous Boots
     Type: Armor
     Buy: 18000
     Weight: 600
@@ -553,7 +553,7 @@ Body:
       bonus bAtk,20;
   - Id: 2436
     AegisName: Silver_Fox_Boots
-    Name: Boots
+    Name: Silver Fox Boots
     Type: Armor
     Buy: 18000
     Weight: 600
@@ -580,7 +580,7 @@ Body:
       bonus bMatk,20;
   - Id: 2437
     AegisName: Satin_Boots
-    Name: Boots
+    Name: Satin_Boots
     Type: Armor
     Buy: 18000
     Weight: 600
@@ -608,7 +608,7 @@ Body:
       bonus bMDef,10;
   - Id: 2438
     AegisName: Shadow_Walk
-    Name: Boots
+    Name: Shadow Walk
     Type: Armor
     Buy: 18000
     Weight: 600
@@ -636,7 +636,7 @@ Body:
       bonus bFlee,20;
   - Id: 2439
     AegisName: Sapha_Boots
-    Name: Boots
+    Name: Sapha Boots
     Type: Armor
     Buy: 18000
     Weight: 600
@@ -664,7 +664,7 @@ Body:
       bonus bCritical,5;
   - Id: 2440
     AegisName: Assaulter_Boots
-    Name: Boots
+    Name: Assaulter Boots
     Type: Armor
     Buy: 18000
     Weight: 600
@@ -692,7 +692,7 @@ Body:
       bonus bAtkRate,10;
   - Id: 2441
     AegisName: Marksman_Boots
-    Name: Boots
+    Name: Marksman Boots
     Type: Armor
     Buy: 18000
     Weight: 600
@@ -720,7 +720,7 @@ Body:
       bonus bLongAtkRate,10;
   - Id: 2442
     AegisName: Boots_of_Attenuation
-    Name: Boots
+    Name: Boots of Attenuation
     Type: Armor
     Buy: 18000
     Weight: 600
@@ -748,7 +748,7 @@ Body:
       bonus bHealPower,10;
   - Id: 2443
     AegisName: Boots_of_Vibrancy
-    Name: Boots
+    Name: Boots of Vibrancy
     Type: Armor
     Buy: 18000
     Weight: 600
@@ -776,7 +776,7 @@ Body:
       bonus bMaxHPrate,10;
   - Id: 2444
     AegisName: Boots_of_Mana
-    Name: Boots
+    Name: Boots of Mana
     Type: Armor
     Buy: 18000
     Weight: 600
@@ -804,7 +804,7 @@ Body:
       bonus bMaxSPrate,10;
   - Id: 2445
     AegisName: Boots_of_Strength
-    Name: Boots
+    Name: Boots of Strength
     Type: Armor
     Buy: 18000
     Weight: 600
@@ -832,7 +832,7 @@ Body:
       bonus bStr,5;
   - Id: 2446
     AegisName: Boots_of_Intelligence
-    Name: Boots
+    Name: Boots of Intelligence
     Type: Armor
     Buy: 18000
     Weight: 600
@@ -860,7 +860,7 @@ Body:
       bonus bInt,5;
   - Id: 2447
     AegisName: Boots_of_Vitality
-    Name: Boots
+    Name: Boots of Vitality
     Type: Armor
     Buy: 18000
     Weight: 600
@@ -888,7 +888,7 @@ Body:
       bonus bVit,5;
   - Id: 2448
     AegisName: Boots_of_Agility
-    Name: Boots
+    Name: Boots of Agility
     Type: Armor
     Buy: 18000
     Weight: 600
@@ -916,7 +916,7 @@ Body:
       bonus bAgi,5;
   - Id: 2449
     AegisName: Boots_of_Dexterity
-    Name: Boots
+    Name: Boots of Dexterity
     Type: Armor
     Buy: 18000
     Weight: 600
@@ -944,7 +944,7 @@ Body:
       bonus bDex,5;
   - Id: 2450
     AegisName: Boots_of_Luck
-    Name: Boots
+    Name: Boots of Luck
     Type: Armor
     Buy: 18000
     Weight: 600
@@ -1005,7 +1005,7 @@ Body:
     Refineable: true
   - Id: 2451
     AegisName: Reinforced_Greaves
-    Name: Greaves
+    Name: Reinforced Greaves
     Type: Armor
     Buy: 54000
     Weight: 750
@@ -1022,7 +1022,7 @@ Body:
     Refineable: true
   - Id: 2452
     AegisName: Charging_Greaves
-    Name: Greaves
+    Name: Charging Greaves
     Type: Armor
     Buy: 54000
     Weight: 750
@@ -1041,7 +1041,7 @@ Body:
       bonus bAtk,20;
   - Id: 2453
     AegisName: Mana_Charged_Greaves
-    Name: Greaves
+    Name: Mana Charged Greaves
     Type: Armor
     Buy: 54000
     Weight: 750
@@ -1060,7 +1060,7 @@ Body:
       bonus bMatk,20;
   - Id: 2454
     AegisName: Variant_Greaves
-    Name: Greaves
+    Name: Variant Greaves
     Type: Armor
     Buy: 54000
     Weight: 750
@@ -1079,7 +1079,7 @@ Body:
       bonus bMDef,10;
   - Id: 2455
     AegisName: Urs_Greaves
-    Name: Greaves
+    Name: Urs Greaves
     Type: Armor
     Buy: 54000
     Weight: 750
@@ -1098,7 +1098,7 @@ Body:
       bonus bAtkRate,10;
   - Id: 2456
     AegisName: Peuzs_Greaves
-    Name: Greaves
+    Name: Peuzs Greaves
     Type: Armor
     Buy: 54000
     Weight: 750
@@ -1117,7 +1117,7 @@ Body:
       bonus bLongAtkRate,10;
   - Id: 2457
     AegisName: Ferus_Greaves
-    Name: Greaves
+    Name: Ferus Greaves
     Type: Armor
     Buy: 54000
     Weight: 750
@@ -1136,7 +1136,7 @@ Body:
       bonus bMaxHPrate,10;
   - Id: 2458
     AegisName: Acidus_Greaves
-    Name: Greaves
+    Name: Acidus Greaves
     Type: Armor
     Buy: 54000
     Weight: 750
@@ -1155,7 +1155,7 @@ Body:
       bonus bMaxSPrate,10;
   - Id: 2459
     AegisName: Strength_Boosting_Greaves
-    Name: Greaves
+    Name: Strength Boosting Greaves
     Type: Armor
     Buy: 54000
     Weight: 750
@@ -1174,7 +1174,7 @@ Body:
       bonus bStr,5;
   - Id: 2460
     AegisName: Agility_Boosting_Greaves
-    Name: Greaves
+    Name: Agility Boosting Greaves
     Type: Armor
     Buy: 54000
     Weight: 750
@@ -1193,7 +1193,7 @@ Body:
       bonus bAgi,5;
   - Id: 2461
     AegisName: Intelligence_Boosting_Greaves
-    Name: Greaves
+    Name: Intelligence Boosting Greaves
     Type: Armor
     Buy: 54000
     Weight: 750
@@ -1212,7 +1212,7 @@ Body:
       bonus bInt,5;
   - Id: 2462
     AegisName: Dexterity_Boosting_Greaves
-    Name: Greaves
+    Name: Dexterity Boosting Greaves
     Type: Armor
     Buy: 54000
     Weight: 750
@@ -1231,7 +1231,7 @@ Body:
       bonus bDex,5;
   - Id: 2463
     AegisName: Vitality_Boosting_Greaves
-    Name: Greaves
+    Name: Vitality Boosting Greaves
     Type: Armor
     Buy: 54000
     Weight: 750
@@ -1250,7 +1250,7 @@ Body:
       bonus bVit,5;
   - Id: 2464
     AegisName: Luck_Boosting_Greaves
-    Name: Greaves
+    Name: Luck Boosting Greaves
     Type: Armor
     Buy: 54000
     Weight: 750
@@ -1269,7 +1269,7 @@ Body:
       bonus bLuk,5;
   - Id: 2466
     AegisName: Valkirye_Greaves
-    Name: Greaves
+    Name: Valkirye Greaves
     Type: Armor
     Buy: 54000
     Weight: 750
@@ -1286,7 +1286,7 @@ Body:
       bonus2 bMagicAtkEle,Ele_Holy,15;
   - Id: 2467
     AegisName: Runic_Greaves
-    Name: Greaves
+    Name: Runic Greaves
     Type: Armor
     Buy: 54000
     Weight: 750
@@ -1305,7 +1305,7 @@ Body:
       bonus2 bMagicAtkEle,Ele_Wind,10;
   - Id: 2468
     AegisName: Fifth_Element
-    Name: Shoes
+    Name: Fifth Element
     Type: Armor
     Buy: 3500
     Weight: 400
@@ -1327,7 +1327,7 @@ Body:
       bonus2 bMagicAtkEle,Ele_Neutral,7;
   - Id: 2469
     AegisName: Ritual_Shoes
-    Name: Shoes
+    Name: Ritual Shoes
     Type: Armor
     Buy: 3500
     Weight: 400
@@ -1347,7 +1347,7 @@ Body:
       bonus2 bMagicAtkEle,Ele_Neutral,7;
   - Id: 2470
     AegisName: Beast_Leather_Shoes
-    Name: Shoes
+    Name: Beast Leather Shoes
     Type: Armor
     Buy: 3500
     Weight: 400
@@ -1365,7 +1365,7 @@ Body:
       bonus2 bMagicAtkEle,Ele_Fire,15;
   - Id: 2471
     AegisName: Gardening_Boots
-    Name: Boots
+    Name: Gardening Boots
     Type: Armor
     Buy: 18000
     Weight: 600
@@ -1382,7 +1382,7 @@ Body:
       bonus2 bMagicAtkEle,Ele_Earth,15;
   - Id: 2472
     AegisName: Shoes_of_Punishment
-    Name: Shoes
+    Name: Shoes of Punishment
     Type: Armor
     Buy: 3500
     Weight: 400
@@ -1399,7 +1399,7 @@ Body:
       bonus2 bMagicAtkEle,Ele_Holy,15;
   - Id: 2473
     AegisName: Shoes_of_Judgement
-    Name: Shoes
+    Name: Shoes of Judgement
     Type: Armor
     Buy: 3500
     Weight: 400
@@ -1416,7 +1416,7 @@ Body:
       bonus2 bMagicAtkEle,Ele_Dark,15;
   - Id: 2474
     AegisName: Death_Rune_Boots
-    Name: Boots
+    Name: Death Rune Boots
     Type: Armor
     Buy: 18000
     Weight: 600
@@ -1433,7 +1433,7 @@ Body:
       bonus2 bMagicAtkEle,Ele_Poison,15;
   - Id: 2475
     AegisName: Improv_Boots
-    Name: Boots
+    Name: Improv Boots
     Type: Armor
     Buy: 18000
     Weight: 600
@@ -1451,7 +1451,7 @@ Body:
       bonus bMatkRate,10;
   - Id: 2476
     AegisName: White_Wing_Boots
-    Name: Boots
+    Name: White Wing Boots
     Type: Armor
     Buy: 18000
     Weight: 600
@@ -1470,7 +1470,7 @@ Body:
       bonus bAspdRate,5;
   - Id: 2477
     AegisName: Shoes_of_Champion
-    Name: Shoes
+    Name: Shoes of Champion
     Type: Armor
     Buy: 3500
     Weight: 400

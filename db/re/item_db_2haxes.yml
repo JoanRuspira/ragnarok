@@ -39,7 +39,7 @@ Body:
     Refineable: true
   - Id: 1353
     AegisName: Great_Axe
-    Name: Great_Axe
+    Name: Great Axe
     Type: Weapon
     SubType: 2hAxe
     Buy: 40000
@@ -79,7 +79,7 @@ Body:
       bonus2 bMagicAddSize,Size_Large,10;
   - Id: 1354
     AegisName: Battle_Axe
-    Name: Battle_Axe
+    Name: Battle _Axe
     Type: Weapon
     SubType: 2hAxe
     Buy: 50000
@@ -98,7 +98,7 @@ Body:
       bonus bUnbreakableWeapon;
   - Id: 1355
     AegisName: Battle_Axe_
-    Name: Battle_Axe
+    Name: Battle Axe
     Type: Weapon
     SubType: 2hAxe
     Buy: 50000
@@ -117,7 +117,7 @@ Body:
       bonus bUnbreakableWeapon;
   - Id: 1356
     AegisName: Hammer_Axe
-    Name: Hammer_Axe
+    Name: Hammer Axe
     Type: Weapon
     SubType: 2hAxe
     Buy: 60000
@@ -136,7 +136,7 @@ Body:
       bonus3 bAutoSpell,"SK_MO_DECAGI",1,500;
   - Id: 1357
     AegisName: Hammer_Axe_
-    Name: Hammer_Axe
+    Name: Hammer Axe
     Type: Weapon
     SubType: 2hAxe
     Buy: 60000
@@ -155,7 +155,7 @@ Body:
       bonus3 bAutoSpell,"SK_MO_DECAGI",1,500;
   - Id: 1358
     AegisName: Club_Axe
-    Name: Club_Axe
+    Name: Club Axe
     Type: Weapon
     SubType: 2hAxe
     Buy: 60000
@@ -174,7 +174,7 @@ Body:
       bonus bStr,getrefine()*2;
   - Id: 1359
     AegisName: Power_Axe
-    Name: Power_Axe
+    Name: Power Axe
     Type: Weapon
     SubType: 2hAxe
     Buy: 60000
@@ -231,7 +231,7 @@ Body:
       bonus bLongAtkRate,getrefine();
   - Id: 1361
     AegisName: Crimson_Axe
-    Name: Crimson_Axe
+    Name: Crimson Axe
     Type: Weapon
     SubType: 2hAxe
     Buy: 60000
@@ -307,7 +307,7 @@ Body:
       bonus bCritAtkRate,10;
   - Id: 1364
     AegisName: Heroic_Axe
-    Name: Heroic_Axe
+    Name: Heroic Axe
     Type: Weapon
     SubType: 2hAxe
     Buy: 60000
@@ -326,7 +326,7 @@ Body:
       bonus bCritical,10; 
   - Id: 1365
     AegisName: Doom_Slayer
-    Name: Doom_Slayer
+    Name: Doom Slayer
     Type: Weapon
     SubType: 2hAxe
     Buy: 60000

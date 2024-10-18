@@ -87,7 +87,7 @@ Body:
       bonus2 bMagicAddRace,RC_Brute,10;
   - Id: 1304
     AegisName: Guardian_Axe
-    Name: Guardian_Axe
+    Name: Guardian Axe
     Type: Weapon
     SubType: 1hAxe
     Buy: 50000
@@ -107,7 +107,7 @@ Body:
     Refineable: true
   - Id: 1305
     AegisName: Serrated_Axe
-    Name: Serrated_Axe
+    Name: Serrated Axe
     Type: Weapon
     SubType: 1hAxe
     Buy: 50000
@@ -127,7 +127,7 @@ Body:
       bonus bCritical,5;
   - Id: 1306
     AegisName: Orcish_Axe
-    Name: Orcish_Axe
+    Name: Orcish Axe
     Type: Weapon
     SubType: 1hAxe
     Buy: 50000
@@ -144,13 +144,11 @@ Body:
     EquipLevelMin: 50
     Refineable: true
     Script: |
-      bonus2 bAddRace,RC_DemiHuman,10;
-      bonus2 bAddRace,RC_Player_Human,10;
-      bonus2 bMagicAddRace,RC_DemiHuman,10;
-      bonus2 bMagicAddRace,RC_Player_Human,10;
+      bonus2 bAddRace2,3,10;
+      bonus2 bMagicAddRace,3,10;
   - Id: 1307
     AegisName: Vecer_Axe
-    Name: Vecer_Axe
+    Name: Vecer Axe
     Type: Weapon
     SubType: 1hAxe
     Buy: 50000
@@ -188,7 +186,7 @@ Body:
       bonus bAspd,5;
   - Id: 1309
     AegisName: Bloody_Axe
-    Name: Bloody_Axe
+    Name: Bloody Axe
     Type: Weapon
     SubType: 1hAxe
     Buy: 50000
@@ -209,7 +207,7 @@ Body:
       bonus bSpeedRate,10;
   - Id: 1310
     AegisName: War_Axe
-    Name: War_Axe
+    Name: War Axe
     Type: Weapon
     SubType: 1hAxe
     Buy: 50000
@@ -229,7 +227,7 @@ Body:
       bonus bAtkRate,getrefine();
   - Id: 1311
     AegisName: Golden_Wrench
-    Name: Golden_Wrench
+    Name: Golden Wrench
     Type: Weapon
     SubType: 1hAxe
     Buy: 50000
@@ -291,7 +289,7 @@ Body:
       bonus bAtk,getrefine()*2;
   - Id: 1314
     AegisName: Heart_Breaker
-    Name: Heart_Breaker
+    Name: Heart Breaker
     Type: Weapon
     SubType: 1hAxe
     Buy: 50000
@@ -312,7 +310,7 @@ Body:
       bonus2 bAddEff,Eff_Stun,500;
   - Id: 1315
     AegisName: Light_Epsilon
-    Name: Light_Epsilon
+    Name: Light Epsilon
     Type: Weapon
     SubType: 1hAxe
     Buy: 50000

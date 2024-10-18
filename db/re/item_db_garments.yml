@@ -58,7 +58,7 @@ Body:
     Refineable: true
   - Id: 2511
     AegisName: Strength_Muffler
-    Name: Muffler
+    Name: Strength Muffler
     Type: Armor
     Buy: 20000
     Weight: 400
@@ -75,7 +75,7 @@ Body:
       bonus bStr,5;
   - Id: 2512
     AegisName: Agility_Muffler
-    Name: Muffler
+    Name: Agility Muffler
     Type: Armor
     Buy: 20000
     Weight: 400
@@ -92,7 +92,7 @@ Body:
       bonus bAgi,5;
   - Id: 2507
     AegisName: Vitality_Muffler
-    Name: Muffler
+    Name: Vitality Muffler
     Type: Armor
     Buy: 20000
     Weight: 400
@@ -109,7 +109,7 @@ Body:
       bonus bVit,5;
   - Id: 2508
     AegisName: Intelligence_Muffler
-    Name: Muffler
+    Name: Intelligence Muffler
     Type: Armor
     Buy: 20000
     Weight: 400
@@ -126,7 +126,7 @@ Body:
       bonus bInt,5;
   - Id: 2509
     AegisName: Dexterity_Muffler
-    Name: Muffler
+    Name: Dexterity Muffler
     Type: Armor
     Buy: 20000
     Weight: 400
@@ -143,7 +143,7 @@ Body:
       bonus bDex,5;
   - Id: 2510
     AegisName: Luck_Muffler
-    Name: Muffler
+    Name: Luck Muffler
     Type: Armor
     Buy: 20000
     Weight: 400
@@ -160,7 +160,7 @@ Body:
       bonus bLuk,5;
   - Id: 2513
     AegisName: Ravage_Magic_Muffler
-    Name: Muffler
+    Name: Ravage Magic Muffler
     Type: Armor
     Buy: 20000
     Weight: 400
@@ -178,7 +178,7 @@ Body:
       bonus bMdef,10;
   - Id: 2514
     AegisName: Magic_Vanquisher_Muffler
-    Name: Muffler
+    Name: Magic Vanquisher Muffler
     Type: Armor
     Buy: 20000
     Weight: 400
@@ -197,7 +197,7 @@ Body:
       bonus bMatkRate,10;
   - Id: 2515
     AegisName: Casters_Wrap
-    Name: Muffler
+    Name: Casters Wrap
     Type: Armor
     Buy: 20000
     Weight: 400
@@ -220,7 +220,7 @@ Body:
       bonus bCastrate,-15;
   - Id: 2516
     AegisName: Drifters_Wrap
-    Name: Muffler
+    Name: Drifters Wrap
     Type: Armor
     Buy: 20000
     Weight: 400
@@ -243,7 +243,7 @@ Body:
       bonus bDelayRate,-15;
   - Id: 2517
     AegisName: Wool_Scarf
-    Name: Muffler
+    Name: Wool Scarf
     Type: Armor
     Buy: 20000
     Weight: 400
@@ -261,7 +261,7 @@ Body:
       bonus2 bSubEle,Ele_Neutral,15;
   - Id: 2518
     AegisName: Natures_Leather
-    Name: Muffler
+    Name: Natures Leather
     Type: Armor
     Buy: 20000
     Weight: 400
@@ -279,7 +279,7 @@ Body:
       bonus2 bMagicAtkEle,Ele_Earth,10;
   - Id: 2519
     AegisName: Lava_Leather_Muffler
-    Name: Muffler
+    Name: Lava Leather Muffler
     Type: Armor
     Buy: 20000
     Weight: 400
@@ -297,7 +297,7 @@ Body:
       bonus2 bMagicAtkEle,Ele_Fire,10;
   - Id: 2520
     AegisName: Glacier_Muffler
-    Name: Muffler
+    Name: Glacier Muffler
     Type: Armor
     Buy: 20000
     Weight: 400
@@ -315,7 +315,7 @@ Body:
       bonus2 bMagicAtkEle,Ele_Water,10;
   - Id: 2521
     AegisName: Jupitel_Muffler
-    Name: Muffler
+    Name: Jupitel Muffler
     Type: Armor
     Buy: 20000
     Weight: 400
@@ -333,7 +333,7 @@ Body:
       bonus2 bMagicAtkEle,Ele_Wind,10;
   - Id: 2522
     AegisName: Musika
-    Name: Muffler
+    Name: Musika
     Type: Armor
     Buy: 20000
     Weight: 400
@@ -351,7 +351,7 @@ Body:
       bonus2 bMagicAtkEle,Ele_Holy,10;
   - Id: 2523
     AegisName: Gloomy_Muffler
-    Name: Muffler
+    Name: Gloomy Muffler
     Type: Armor
     Buy: 20000
     Weight: 400
@@ -369,7 +369,7 @@ Body:
       bonus2 bMagicAtkEle,Ele_Dark,10;
   - Id: 2524
     AegisName: Ferlocks_Cloak
-    Name: Muffler
+    Name: Ferlocks Cloak
     Type: Armor
     Buy: 20000
     Weight: 400
@@ -387,7 +387,7 @@ Body:
       bonus2 bMagicAtkEle,Ele_Ghost,10;
   - Id: 2525
     AegisName: Freyja_Cloak
-    Name: Muffler
+    Name: Freyja Cloak
     Type: Armor
     Buy: 20000
     Weight: 400
@@ -405,7 +405,7 @@ Body:
       bonus2 bMagicAtkEle,Ele_Neutral,10;
   - Id: 2526
     AegisName: Leather_Strapped_Muffler
-    Name: Muffler
+    Name: Leather Strapped Muffler
     Type: Armor
     Buy: 20000
     Weight: 400
@@ -428,7 +428,7 @@ Body:
       bonus bAtkRate,10;
   - Id: 2527
     AegisName: Elegant_Muffler
-    Name: Muffler
+    Name: Elegant Muffler
     Type: Armor
     Buy: 20000
     Weight: 400
@@ -451,7 +451,7 @@ Body:
       bonus bMatk,20;
   - Id: 2528
     AegisName: Dragon_Scale_Muffler
-    Name: Muffler
+    Name: Dragon Scale Muffler
     Type: Armor
     Buy: 20000
     Weight: 400
@@ -467,7 +467,7 @@ Body:
     EquipLevelMin: 50
   - Id: 2529
     AegisName: Angel_Feather_Muffler
-    Name: Muffler
+    Name: Angel Feather Muffler
     Type: Armor
     Buy: 5000
     Weight: 400
@@ -487,7 +487,7 @@ Body:
       bonus bHealPower,10;
   - Id: 2530
     AegisName: Giant_Snake_Skin
-    Name: Muffler
+    Name: Giant Snake Skin
     Type: Armor
     Buy: 20000
     Weight: 400
@@ -505,7 +505,7 @@ Body:
       bonus bMaxHPrate,10;
   - Id: 2531
     AegisName: Mystic_Breath
-    Name: Muffler
+    Name: Mystic Breath
     Type: Armor
     Buy: 20000
     Weight: 400
@@ -572,7 +572,7 @@ Body:
     Refineable: true
   - Id: 2532
     AegisName: Anti_Magic_Manteau
-    Name: Manteau
+    Name: Anti Magic Manteau
     Type: Armor
     Buy: 32000
     Weight: 600
@@ -600,7 +600,7 @@ Body:
       bonus bMdef,10;
   - Id: 2533
     AegisName: Channeler_Manteau
-    Name: Manteau
+    Name: Channeler Manteau
     Type: Armor
     Buy: 32000
     Weight: 600
@@ -628,7 +628,7 @@ Body:
       bonus bMatk,20;
   - Id: 2534
     AegisName: Black_Cape
-    Name: Manteau
+    Name: Black Cape
     Type: Armor
     Buy: 32000
     Weight: 600
@@ -656,7 +656,7 @@ Body:
       bonus bAtkRate,10;
   - Id: 2535
     AegisName: Ancient_Cape
-    Name: Manteau
+    Name: Ancient Cape
     Type: Armor
     Buy: 32000
     Weight: 600
@@ -684,7 +684,7 @@ Body:
       bonus bFlee,20;
   - Id: 2536
     AegisName: Cloak_Of_Gray
-    Name: Manteau
+    Name: Cloak of Gray
     Type: Armor
     Buy: 32000
     Weight: 600
@@ -703,7 +703,7 @@ Body:
       bonus bCritical,5;
   - Id: 2537
     AegisName: Falcon_Muffler
-    Name: Manteau
+    Name: Falcon Muffler
     Type: Armor
     Buy: 32000
     Weight: 400
@@ -725,7 +725,7 @@ Body:
       bonus bLongAtkRate,10;
   - Id: 2538
     AegisName: Regia_Manteau
-    Name: Manteau
+    Name: Regia Manteau
     Type: Armor
     Buy: 32000
     Weight: 600
@@ -751,7 +751,7 @@ Body:
     EquipLevelMin: 35
   - Id: 2539
     AegisName: Strength_Manteau
-    Name: Manteau
+    Name: Strength Manteau
     Type: Armor
     Buy: 32000
     Weight: 600
@@ -779,7 +779,7 @@ Body:
       bonus bStr,5;
   - Id: 2540
     AegisName: Agility_Manteau
-    Name: Manteau
+    Name: Agility Manteau
     Type: Armor
     Buy: 32000
     Weight: 600
@@ -807,7 +807,7 @@ Body:
       bonus bAgi,5;
   - Id: 2541
     AegisName: Vitality_Manteau
-    Name: Manteau
+    Name: Vitality Manteau
     Type: Armor
     Buy: 32000
     Weight: 600
@@ -835,7 +835,7 @@ Body:
       bonus bVit,5;
   - Id: 2542
     AegisName: Intelligence_Manteau
-    Name: Manteau
+    Name: Intelligence Manteau
     Type: Armor
     Buy: 32000
     Weight: 600
@@ -863,7 +863,7 @@ Body:
       bonus bInt,5;
   - Id: 2543
     AegisName: Dexterity_Manteau
-    Name: Manteau
+    Name: Dexterity Manteau
     Type: Armor
     Buy: 32000
     Weight: 600
@@ -891,7 +891,7 @@ Body:
       bonus bDex,5;
   - Id: 2544
     AegisName: Luck_Manteau
-    Name: Manteau
+    Name: MantLuck Manteaueau
     Type: Armor
     Buy: 32000
     Weight: 600
@@ -919,7 +919,7 @@ Body:
       bonus bLuk,5;
   - Id: 2545
     AegisName: Morriganes_Manteau
-    Name: Manteau
+    Name: Morriganes Manteau
     Type: Armor
     Buy: 32000
     Weight: 600
@@ -947,7 +947,7 @@ Body:
       bonus bMaxHPrate,10;
   - Id: 2546
     AegisName: Morpheus_Shawl
-    Name: Manteau
+    Name: Morpheus Shawl
     Type: Armor
     Buy: 32000
     Weight: 600
@@ -1006,7 +1006,7 @@ Body:
     EquipLevelMin: 60
   - Id: 2548
     AegisName: Spaulders
-    Name: Pauldron
+    Name: Spaulders
     Type: Armor
     Buy: 40000
     Weight: 800
@@ -1022,7 +1022,7 @@ Body:
     EquipLevelMin: 60
   - Id: 2549
     AegisName: Urs_Mantau
-    Name: Pauldron
+    Name: Urs Mantau
     Type: Armor
     Buy: 40000
     Weight: 800
@@ -1040,7 +1040,7 @@ Body:
       bonus bAtkRate,10;
   - Id: 2550
     AegisName: Peuzs_Manteau
-    Name: Pauldron
+    Name: Peuzs Manteau
     Type: Armor
     Buy: 40000
     Weight: 800
@@ -1058,7 +1058,7 @@ Body:
       bonus bLongAtkRate,10;
   - Id: 2551
     AegisName: Spiked_Shoulderpads
-    Name: Pauldron
+    Name: Spiked Shoulderpads
     Type: Armor
     Buy: 40000
     Weight: 800
@@ -1076,7 +1076,7 @@ Body:
       bonus bMatk,20;
   - Id: 2552
     AegisName: Cape_of_Elements
-    Name: Muffler
+    Name: Cape of Elements
     Type: Armor
     Buy: 20000
     Weight: 400
@@ -1098,7 +1098,7 @@ Body:
       bonus2 bMagicAtkEle,Ele_Neutral,7;
   - Id: 2553
     AegisName: All_Hallows_Muffler
-    Name: Muffler
+    Name: All Hallows Muffler
     Type: Armor
     Buy: 20000
     Weight: 400
@@ -1116,7 +1116,7 @@ Body:
       bonus2 bMagicAtkEle,Ele_Ghost,7;
   - Id: 2554
     AegisName: Bandit_Scarf
-    Name: Muffler
+    Name: Bandit Scarf
     Type: Armor
     Buy: 32000
     Weight: 400
@@ -1134,7 +1134,7 @@ Body:
       bonus bCritical,5;
   - Id: 2555
     AegisName: Funfair_Cape
-    Name: Manteau
+    Name: Funfair Cape
     Type: Armor
     Buy: 32000
     Weight: 600
@@ -1151,7 +1151,7 @@ Body:
       bonus2 bMagicAtkEle,Ele_Neutral,15;
   - Id: 2556
     AegisName: Exorcist_Muffler
-    Name: Muffler
+    Name: Exorcist Muffler
     Type: Armor
     Buy: 20000
     Weight: 400
@@ -1170,7 +1170,7 @@ Body:
       bonus2 bMagicAtkEle,Ele_Shadow,7;
   - Id: 2557
     AegisName: Beast_Skin
-    Name: Manteau
+    Name: Beast Skin
     Type: Armor
     Buy: 32000
     Weight: 600
@@ -1187,7 +1187,7 @@ Body:
       bonus bLongAtkRate,15;
   - Id: 2558
     AegisName: Skeleton_Cape
-    Name: Manteau
+    Name: Skeleton Cape
     Type: Armor
     Buy: 32000
     Weight: 600
@@ -1215,7 +1215,7 @@ Body:
       bonus bAtk,20;
   - Id: 2559
     AegisName: Protector_Garb
-    Name: Muffler
+    Name: Protector Garb
     Type: Armor
     Buy: 20000
     Weight: 400
@@ -1233,7 +1233,7 @@ Body:
       bonus2 bSubEle,Ele_Neutral,20;
   - Id: 2560
     AegisName: Old_Morroc_Shawl
-    Name: Manteau
+    Name: Old Morroc Shawl
     Type: Armor
     Buy: 32000
     Weight: 600
@@ -1252,7 +1252,7 @@ Body:
       bonus bSpeedRate,15;
   - Id: 2561
     AegisName: Vali_Manteau
-    Name: Manteau
+    Name: Vali Manteau
     Type: Armor
     Buy: 32000
     Weight: 600
@@ -1272,7 +1272,7 @@ Body:
       bonus bMaxSPrate,5;
   - Id: 2562
     AegisName: Golden_Scarf
-    Name: Manteau
+    Name: Golden Scarf
     Type: Armor
     Buy: 32000
     Weight: 400
@@ -1294,7 +1294,7 @@ Body:
       bonus bFlee,10;
   - Id: 2563
     AegisName: Medical_Cape
-    Name: Manteau
+    Name: Medical Cape
     Type: Armor
     Buy: 32000
     Weight: 600
@@ -1312,7 +1312,7 @@ Body:
       bonus2 bAddItemGroupHealRate,IG_POTION,25;
   - Id: 2564
     AegisName: Owl_Baron_Mantle
-    Name: Manteau
+    Name: Owl Baron Mantle
     Type: Armor
     Buy: 20000
     Weight: 400
@@ -1341,7 +1341,7 @@ Body:
       bonus bMatkRate,10;
   - Id: 2565
     AegisName: Dragon_Garb
-    Name: Manteau
+    Name: Dragon Garb
     Type: Armor
     Buy: 20000
     Weight: 400

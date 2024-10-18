@@ -8,11 +8,11 @@ Body:
     Name: Bow
     Type: Weapon
     SubType: Bow
-    Buy: 1000
-    Weight: 500
-    Attack: 15
+    Buy: 5000
+    Weight: 1000
+    Attack: 120
     Range: 5
-    Slots: 3
+    Slots: 0
     Jobs:
       Archer: true
       BardDancer: true
@@ -21,17 +21,62 @@ Body:
       Thief: true
     Locations:
       Both_Hand: true
-    WeaponLevel: 1
-    EquipLevelMin: 4
+    WeaponLevel: 3
+    EquipLevelMin: 10
     Refineable: true
-  - Id: 1704
+  - Id: 1702
+    AegisName: Bow_
+    Name: Bow
+    Type: Weapon
+    SubType: Bow
+    Buy: 5000
+    Weight: 1000
+    Attack: 120
+    Range: 5
+    Slots: 4
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 10
+    Refineable: true
+  - Id: 1703
     AegisName: Composite_Bow
     Name: Composite Bow
     Type: Weapon
     SubType: Bow
-    Buy: 2500
-    Weight: 600
-    Attack: 29
+    Buy: 10000
+    Weight: 1000
+    Attack: 140
+    Range: 5
+    Slots: 0
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 20
+    Refineable: true
+    Script: |
+      bonus2 bAddSize,Size_Small,10;
+      bonus2 bMagicAddSize,Size_Small,10;
+  - Id: 1704
+    AegisName: Composite_Bow_
+    Name: Composite Bow
+    Type: Weapon
+    SubType: Bow
+    Buy: 10000
+    Weight: 1000
+    Attack: 140
     Range: 5
     Slots: 3
     Jobs:
@@ -42,61 +87,23 @@ Body:
       Thief: true
     Locations:
       Both_Hand: true
-    WeaponLevel: 1
-    EquipLevelMin: 4
+    WeaponLevel: 3
+    EquipLevelMin: 20
     Refineable: true
-  - Id: 1707
-    AegisName: Great_Bow
-    Name: Great Bow
+    Script: |
+      bonus2 bAddSize,Size_Small,10;
+      bonus2 bMagicAddSize,Size_Small,10;
+  - Id: 1705
+    AegisName: Recurve_Bow
+    Name: Recurve Bow
     Type: Weapon
     SubType: Bow
-    Buy: 10000
+    Buy: 15000
     Weight: 1000
-    Attack: 50
+    Attack: 140
+    MagicAttack: 120
     Range: 5
-    Slots: 2
-    Jobs:
-      Archer: true
-      BardDancer: true
-      Hunter: true
-      Rogue: true
-      Thief: true
-    Locations:
-      Both_Hand: true
-    WeaponLevel: 2
-    EquipLevelMin: 18
-    Refineable: true
-  - Id: 1710
-    AegisName: CrossBow
-    Name: Crossbow
-    Type: Weapon
-    SubType: Bow
-    Buy: 17000
-    Weight: 900
-    Attack: 65
-    Range: 5
-    Slots: 2
-    Jobs:
-      Archer: true
-      BardDancer: true
-      Hunter: true
-      Rogue: true
-      Thief: true
-    Locations:
-      Both_Hand: true
-    WeaponLevel: 2
-    EquipLevelMin: 18
-    Refineable: true
-  - Id: 1713
-    AegisName: Arbalest
-    Name: Arbalest
-    Type: Weapon
-    SubType: Bow
-    Buy: 48000
-    Weight: 1000
-    Attack: 90
-    Range: 5
-    Slots: 1
+    Slots: 0
     Jobs:
       Archer: true
       BardDancer: true
@@ -106,80 +113,293 @@ Body:
     Locations:
       Both_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 33
+    EquipLevelMin: 20
     Refineable: true
     Script: |
-      bonus bDex,2;
-  - Id: 1714
-    AegisName: Kakkung
+      bonus bInt,getrefine()*2;
+  - Id: 1706
+    AegisName: Recurve_Bow_
+    Name: Recurve Bow
+    Type: Weapon
+    SubType: Bow
+    Buy: 15000
+    Weight: 1000
+    Attack: 140
+    MagicAttack: 120
+    Range: 5
+    Slots: 3
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 20
+    Refineable: true
+    Script: |
+      bonus bInt,getrefine()*2;
+  - Id: 1707
+    AegisName: Longbow
+    Name: Longbow
+    Type: Weapon
+    SubType: Bow
+    Buy: 30000
+    Weight: 1000
+    Attack: 150
+    Range: 5
+    Slots: 0
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 40
+    Refineable: true
+    Script: |
+      bonus bLongAtkRate,getrefine();
+  - Id: 1708
+    AegisName: Longbow_
+    Name: Longbow
+    Type: Weapon
+    SubType: Bow
+    Buy: 30000
+    Weight: 1000
+    Attack: 150
+    Range: 5
+    Slots: 3
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 40
+    Refineable: true
+    Script: |
+      bonus bLongAtkRate,getrefine();
+  - Id: 1709
+    AegisName: Gakkung_Bow
     Name: Gakkung Bow
     Type: Weapon
     SubType: Bow
-    Buy: 42000
+    Buy: 50000
     Weight: 1100
-    Attack: 100
+    Attack: 150
     Range: 5
-    Slots: 1
+    Slots: 3
     Jobs:
-      Archer: true
       BardDancer: true
       Hunter: true
       Rogue: true
-      Thief: true
     Locations:
       Both_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 33
+    EquipLevelMin: 50
     Refineable: true
-  - Id: 1718
-    AegisName: Hunter_Bow
-    Name: Hunter Bow
+    Script: |
+      bonus bDex,getrefine()*2;
+  - Id: 1710
+    AegisName: Yumi
+    Name: Yumi
     Type: Weapon
     SubType: Bow
-    Buy: 64000
-    Weight: 1500
-    Attack: 125
+    Buy: 50000
+    Weight: 1100
+    Attack: 150
     Range: 5
+    Slots: 3
     Jobs:
-      Hunter: true
-    Locations:
-      Both_Hand: true
-    WeaponLevel: 3
-    EquipLevelMin: 33
-    Refineable: true
-  - Id: 1721
-    AegisName: Repeting_CrossBow
-    Name: Repeating Crossbow
-    Type: Weapon
-    SubType: Bow
-    Buy: 89000
-    Weight: 2000
-    Attack: 95
-    Range: 9
-    Slots: 1
-    Jobs:
+      BardDancer: true
       Hunter: true
       Rogue: true
-      Thief: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus2 bAddRace,RC_Brute,10;
+      bonus2 bMagicAddRace,RC_Brute,10;
+  - Id: 1711
+    AegisName: Orcish_Bow
+    Name: Orcish Bow
+    Type: Weapon
+    SubType: Bow
+    Buy: 50000
+    Weight: 1100
+    Attack: 150
+    Range: 5
+    Slots: 3
+    Jobs:
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus2 bAddRace2,3,10;
+      bonus2 bMagicAddRace,3,10;
+  - Id: 1712
+    AegisName: Rudra_Bow
+    Name: Rudra Bow
+    Type: Weapon
+    SubType: Bow
+    Buy: 50000
+    Weight: 1100
+    Attack: 150
+    MagicAttack: 150
+    Range: 5
+    Slots: 3
+    Jobs:
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus bMatk,getrefine()*5;
+  - Id: 1713
+    AegisName: Double_Bound
+    Name: Double Bound
+    Type: Weapon
+    SubType: Bow
+    Buy: 50000
+    Weight: 1100
+    Attack: 180
+    Range: 5
+    Slots: 2
+    Jobs:
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus3 bAutoSpell,"SK_AC_DOUBLESTRAFE",5,5000;
+  - Id: 1714
+    AegisName: Eden_Bow
+    Name: Eden Bow
+    Type: Weapon
+    SubType: Bow
+    Buy: 50000
+    Weight: 1100
+    Attack: 180
+    Range: 5
+    Slots: 2
+    Jobs:
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bAtk,getrefine()*5;
+  - Id: 1715
+    AegisName: Cool_Breeze
+    Name: Cool Breeze
+    Type: Weapon
+    SubType: Bow
+    Buy: 50000
+    Weight: 900
+    Attack: 180
+    Range: 5
+    Slots: 2
+    Jobs:
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus bDex,getrefine();
+      bonus bAgi,getrefine();
+      bonus bInt,getrefine();
+  - Id: 1716
+    AegisName: Luna_Bow
+    Name: Luna Bow
+    Type: Weapon
+    SubType: Bow
+    Buy: 50000
+    Weight: 1200
+    Attack: 150
+    MagicAttack: 190
+    Range: 5
+    Slots: 2
+    Jobs:
+      BardDancer: true
+      Hunter: true
+      Rogue: true
     Locations:
       Both_Hand: true
     WeaponLevel: 3
     EquipLevelMin: 65
     Refineable: true
-  - Id: 1722
-    AegisName: Balistar
-    Name: Ballista
+    Script: |
+      bonus bMatkRate,10;
+  - Id: 1717
+    AegisName: Falken_Blitz
+    Name: Falken Blitz
     Type: Weapon
     SubType: Bow
-    Buy: 124000
-    Weight: 3500
-    Attack: 145
+    Buy: 50000
+    Weight: 1200
+    Attack: 190
     Range: 5
+    Slots: 2
     Jobs:
       BardDancer: true
       Hunter: true
+      Rogue: true
     Locations:
       Both_Hand: true
-    WeaponLevel: 4
-    EquipLevelMin: 77
+    WeaponLevel: 3
+    EquipLevelMin: 65
     Refineable: true
+    Script: |
+      bonus bAspd,3;
+  - Id: 1718
+    AegisName: Giant_Bow
+    Name: Giant Bow
+    Type: Weapon
+    SubType: Bow
+    Buy: 50000
+    Weight: 1200
+    Attack: 200
+    Range: 5
+    Slots: 2
+    Jobs:
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bAtkRate,10;

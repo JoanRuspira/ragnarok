@@ -43,7 +43,7 @@ Body:
       bonus bDex,3;
   - Id: 8003
     AegisName: Fancy_Cap
-    Name: Cap
+    Name: Fancy Cap
     Type: Armor
     Buy: 12000
     Weight: 200
@@ -259,7 +259,7 @@ Body:
       bonus bAgi,3;
   - Id: 8014
     AegisName: Bucket_Hat
-    Name: Bucket Hat
+    Name: Fedora
     Type: Armor
     Buy: 30000
     Weight: 200
@@ -299,7 +299,7 @@ Body:
       bonus bAgi,3;
   - Id: 8016
     AegisName: Hattah
-    Name: Classic Hat
+    Name: Hattah
     Type: Armor
     Buy: 30000
     Weight: 200
@@ -1930,7 +1930,7 @@ Body:
     Refineable: true
     View: 256
     Script: |
-      bonus bMAtk,15;
+      bonus bMatk,15;
       bonus bMaxSPrate,getrefine();  
   - Id: 8096
     AegisName: Hot_Blooded_Bandana
@@ -2711,7 +2711,7 @@ Body:
       }
   - Id: 8134
     AegisName: Magic_Stone_Hat
-    Name: Magic_Stone_Hat
+    Name: Magic Stone Hat
     Type: Armor
     Buy: 50000
     Weight: 200
@@ -2731,7 +2731,7 @@ Body:
       bonus bMatk,20;
   - Id: 8135
     AegisName: Cap_Blindness
-    Name: Cap_Blindness
+    Name: Cap Blindness
     Type: Armor
     Buy: 50000
     Weight: 200
@@ -2753,7 +2753,7 @@ Body:
       bonus bSpeedRate,15;
   - Id: 8136
     AegisName: Helm_of_Darkness
-    Name: Helm_of_Darkness
+    Name: Helm of Darkness
     Type: Armor
     Buy: 50000
     Weight: 200
@@ -2774,7 +2774,7 @@ Body:
       bonus bInt,getrefine();
   - Id: 8137
     AegisName: Bone_Crown
-    Name: Bone_Crown
+    Name: Bone Crown
     Type: Armor
     Buy: 50000
     Weight: 200
@@ -2794,7 +2794,7 @@ Body:
       bonus bAtkRate,getrefine();
   - Id: 8138
     AegisName: Dragon_Skull
-    Name: Dragon_Skull
+    Name: Dragon Skull
     Type: Armor
     Buy: 50000
     Weight: 500
@@ -2817,7 +2817,7 @@ Body:
       bonus bInt,3;
   - Id: 8139
     AegisName: Devil_Wing_Ears
-    Name: Devil_Wing_Ears
+    Name: Devil Wing Ears
     Type: Armor
     Buy: 25000
     Weight: 100
@@ -2846,7 +2846,7 @@ Body:
       bonus bLuk,2;
   - Id: 8140
     AegisName: Angel_Wing_Ears
-    Name: Angel_Wing_Ears
+    Name: Angel Wing Ears
     Type: Armor
     Buy: 25000
     Weight: 100
@@ -2875,7 +2875,7 @@ Body:
       bonus bVit,2;
   - Id: 8141
     AegisName: Pecopeco_Wing_Ears
-    Name: Pecopeco_Wing_Ears
+    Name: Pecopeco Wing Ears
     Type: Armor
     Buy: 25000
     Weight: 100
@@ -2938,7 +2938,7 @@ Body:
       bonus bInt,3;
   - Id: 8144
     AegisName: Aviator_Sunglasses
-    Name: Aviator_Sunglasses
+    Name: Aviator Sunglasses
     Type: Armor
     Buy: 25000
     Weight: 100
@@ -2956,7 +2956,7 @@ Body:
       bonus2 bResEff,Eff_Blind,500;
   - Id: 8145
     AegisName: Dark_Blinker
-    Name: Dark_Blinker
+    Name: Dark Blinker
     Type: Armor
     Buy: 25000
     Weight: 100
@@ -2984,7 +2984,7 @@ Body:
       bonus2 bResEff,Eff_Stun,500;
   - Id: 8146
     AegisName: Elven_Ears
-    Name: Elven_Ears
+    Name: Elven Ears
     Type: Armor
     Buy: 25000
     Weight: 100
@@ -3012,7 +3012,7 @@ Body:
       bonus bAgi,3;
   - Id: 8147
     AegisName: Alarm_Mask
-    Name: Alarm_Mask
+    Name: Alarm Mask
     Type: Armor
     Buy: 25000
     Weight: 100
@@ -3039,7 +3039,7 @@ Body:
     View: 170 
   - Id: 8148
     AegisName: Four_Leaf_Clover_Mouth
-    Name: Four_Leaf_Clover_Mouth
+    Name: Four Leaf Clover Mouth
     Type: Armor
     Buy: 25000
     Weight: 100
@@ -3067,7 +3067,7 @@ Body:
       bonus bLuk,3;
   - Id: 8149
     AegisName: Chewing_Gum
-    Name: Chewing_Gum
+    Name: Chewing Gum
     Type: Armor
     Buy: 25000
     Weight: 100
@@ -3095,7 +3095,7 @@ Body:
       bonus2 bExpAddClass,Class_All,5;
   - Id: 8150
     AegisName: Candy_Cane_Mouth
-    Name: Candy_Cane_Mouth
+    Name: Candy Cane Mouth
     Type: Armor
     Buy: 25000
     Weight: 100
@@ -3113,7 +3113,7 @@ Body:
       bonus bHPrecovRate,5;
   - Id: 8151
     AegisName: Long_Pipe
-    Name: Long_Pipe
+    Name: Long Pipe
     Type: Armor
     Buy: 25000
     Weight: 100
@@ -3167,7 +3167,7 @@ Body:
       bonus bMaxHP,150;
   - Id: 8153
     AegisName: Donut_In_Mouth
-    Name: Donut_In_Mouth
+    Name: Donut in Mouth
     Type: Armor
     Buy: 25000
     Weight: 100
@@ -3194,7 +3194,7 @@ Body:
       bonus bMaxHP,100;
   - Id: 8154
     AegisName: Clown_Nose
-    Name: Clown_Nose
+    Name: Jester Nose
     Type: Armor
     Buy: 25000
     Weight: 100
@@ -3220,7 +3220,7 @@ Body:
       bonus bFlee2,5;
   - Id: 8155
     AegisName: Crunch_Toast
-    Name: Crunch_Toast
+    Name: Crunch Toast
     Type: Armor
     Buy: 25000
     Weight: 100
@@ -3246,7 +3246,7 @@ Body:
       bonus2 bHPRegenRate,10,10000;
   - Id: 8156
     AegisName: Smoking_Pipe
-    Name: Smoking_Pipe
+    Name: Smoking Pipe
     Type: Armor
     Buy: 25000
     Weight: 100
@@ -3272,7 +3272,7 @@ Body:
       bonus bVit,3;
   - Id: 8157
     AegisName: Rainbow_Scarf
-    Name: Rainbow_Scarf
+    Name: Rainbow Scarf
     Type: Armor
     Buy: 25000
     Weight: 100
@@ -3298,7 +3298,7 @@ Body:
       bonus bMatk,5;
   - Id: 8158
     AegisName: Romantic_Leaf
-    Name: Romantic_Leaf
+    Name: Romantic Leaf
     Type: Armor
     Buy: 25000
     Weight: 100
@@ -3314,7 +3314,7 @@ Body:
       bonus2 bSubRace,RC_Plant,5;
   - Id: 8159
     AegisName: Romantic_Flower
-    Name: Romantic_Flower
+    Name: Romantic Flower
     Type: Armor
     Buy: 25000
     Weight: 100
@@ -3330,7 +3330,7 @@ Body:
       bonus2 bSubEle,Ele_Earth,5;
   - Id: 8160
     AegisName: Romantic_White_Flower
-    Name: Romantic_White_Flower
+    Name: Romantic White Flower
     Type: Armor
     Buy: 25000
     Weight: 100
@@ -3346,7 +3346,7 @@ Body:
       bonus2 bSubEle,Ele_Earth,5;
   - Id: 8161
     AegisName: Scarlet_Rose
-    Name: Scarlet_Rose
+    Name: Scarlet Rose
     Type: Armor
     Buy: 25000
     Weight: 100
@@ -3362,7 +3362,7 @@ Body:
       bonus bStr,3; 
   - Id: 8162
     AegisName: Spiked_Scarf
-    Name: Spiked_Scarf
+    Name: Spiked Scarf
     Type: Armor
     Buy: 25000
     Weight: 100
@@ -3388,7 +3388,7 @@ Body:
       bonus bCritical,3; 
   - Id: 8163
     AegisName: Chewed_Pencil
-    Name: Chewed_Pencil
+    Name: Chewed Pencil
     Type: Armor
     Buy: 25000
     Weight: 100
@@ -3414,7 +3414,7 @@ Body:
       bonus bDex,3;   
   - Id: 8164
     AegisName: Iron_Chain
-    Name: Iron_Chain
+    Name: Iron Chain
     Type: Armor
     Buy: 25000
     Weight: 200
@@ -3428,7 +3428,7 @@ Body:
     View: 53
   - Id: 8165
     AegisName: Assassin_Mask
-    Name: Assassin_Mask
+    Name: Assassin Mask
     Type: Armor
     Buy: 25000
     Weight: 100
@@ -3443,7 +3443,7 @@ Body:
       bonus bCritical,2;
   - Id: 8166
     AegisName: Owl_Duke_Hat
-    Name: Owl_Duke_Hat
+    Name: Owl Duke Hat
     Type: Armor
     Buy: 50000
     Weight: 200
@@ -3470,7 +3470,7 @@ Body:
       bonus bMatkRate,getrefine();
   - Id: 8167
     AegisName: Tiraya_Bonnet
-    Name: Tiraya_Bonnet
+    Name: Tiraya Bonnet
     Type: Armor
     Buy: 50000
     Weight: 200
@@ -3498,7 +3498,7 @@ Body:
       bonus bLuk, 3;
   - Id: 8168
     AegisName: Over_Protector
-    Name: Over_Protector
+    Name: Over Protector
     Type: Armor
     Buy: 50000
     Weight: 200
@@ -3553,7 +3553,7 @@ Body:
       bonus2 bSubRace,RC_Player_Human,10;
   - Id: 8170
     AegisName: Feather_Beret
-    Name: Beret
+    Name: Feather Beret
     Type: Armor
     Buy: 50000
     Weight: 200
@@ -3581,7 +3581,7 @@ Body:
       bonus bDex,3;
   - Id: 8171
     AegisName: Navy_Hat
-    Name: Navy_Hat
+    Name: Navy Hat
     Type: Armor
     Buy: 50000
     Weight: 200
@@ -3610,7 +3610,7 @@ Body:
       bonus2 bSubEle,Ele_Water,10;
   - Id: 8172
     AegisName: Fancy_Highcap
-    Name: Fancy_Highcap
+    Name: Fancy Highcap
     Type: Armor
     Buy: 50000
     Weight: 200
@@ -3638,7 +3638,7 @@ Body:
       bonus bCritical,3;
   - Id: 8173
     AegisName: Gemmed_Crown
-    Name: Gemmed_Crown
+    Name: Gemmed Crown
     Type: Armor
     Buy: 50000
     Weight: 200
@@ -3665,7 +3665,7 @@ Body:
       bonus bInt,getrefine()*2;
   - Id: 8174
     AegisName: Golden_Gear
-    Name: Golden_Gear
+    Name: Golden Gear
     Type: Armor
     Buy: 50000
     Weight: 200
@@ -3692,7 +3692,7 @@ Body:
       bonus2 bSubEle,Ele_Holy,10;
   - Id: 8175
     AegisName: Remover_Hat
-    Name: Remover_Hat
+    Name: Remover Hat
     Type: Armor
     Buy: 50000
     Weight: 200
@@ -3719,7 +3719,7 @@ Body:
       bonus2 bSubRace,RC_Undead,10;
   - Id: 8176
     AegisName: Black_Beret
-    Name: Black_Beret
+    Name: Black Beret
     Type: Armor
     Buy: 50000
     Weight: 200
@@ -3735,7 +3735,7 @@ Body:
       bonus bLongAtkRate,7;
   - Id: 8177
     AegisName: Leopard_Skin_Hat
-    Name: Leopard_Skin_Hat
+    Name: Leopard Skin Hat
     Type: Armor
     Buy: 50000
     Weight: 200
@@ -3753,7 +3753,7 @@ Body:
       bonus bCritical,3;
   - Id: 8178
     AegisName: Lord_of_Death_Helm
-    Name: Lord_of_Death_Helm
+    Name: Lord of Death Helm
     Type: Armor
     Buy: 50000
     Weight: 200
@@ -3771,7 +3771,7 @@ Body:
       bonus bAtkRate,getrefine()*2;
   - Id: 8179
     AegisName: Flameboy_Hat
-    Name: Flameboy_Hat
+    Name: Flameboy Hat
     Type: Armor
     Buy: 50000
     Weight: 200
@@ -3790,7 +3790,7 @@ Body:
       }
   - Id: 8180
     AegisName: Cowhide_Hat
-    Name: Cowhide_Hat
+    Name: Cowhide Hat
     Type: Armor
     Buy: 50000
     Weight: 200
@@ -3830,7 +3830,7 @@ Body:
       }
   - Id: 8182
     AegisName: CD_in_Mouth
-    Name: CD_in_Mouth
+    Name: CD in Mouth
     Type: Armor
     Buy: 50000
     Weight: 100
@@ -3856,7 +3856,7 @@ Body:
       bonus2 bSubRace,RC_Formless,5;
   - Id: 8183
     AegisName: Cherry_Blossom_Mouth 
-    Name: Cherry_Blossom_Mouth 
+    Name: Cherry Blossom Mouth 
     Type: Armor
     Buy: 50000
     Weight: 100
@@ -3882,7 +3882,7 @@ Body:
       bonus2 bSubRace,RC_Dragon,5;
   - Id: 8184
     AegisName: Leek_Mouth 
-    Name: Leek_Mouth 
+    Name: Leek in Mouth 
     Type: Armor
     Buy: 50000
     Weight: 100
@@ -3908,7 +3908,7 @@ Body:
       bonus2 bSubRace,RC_Brute,5;
   - Id: 8185
     AegisName: Poker_Mouth 
-    Name: Poker_Mouth 
+    Name: Poker Card in Mouth 
     Type: Armor
     Buy: 50000
     Weight: 100
