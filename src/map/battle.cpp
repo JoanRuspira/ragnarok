@@ -2727,8 +2727,8 @@ static void battle_calc_attack_left_right_hands(struct Damage* wd, struct block_
 			wd->damage = wd->damage2;
 			wd->damage2 = 0;
 		} else if(sd->status.weapon == W_KATAR && !skill_id) { //Katars (offhand damage only applies to normal attacks, tested on Aegis 10.2)
-			skill = pc_checkskill(sd,SK_AS_DOUBLEATTACK);
-			wd->damage2 = (int64)wd->damage * (1 + (skill * 4))/100;
+			skill = pc_checkskill(sd,SK_AS_KATAR);
+			wd->damage2 = (int64)wd->damage * (1 + (skill * 5))/100;
 		} else if (is_attack_right_handed(src, skill_id) && EquipmentAttackCalculator::is_attack_left_handed(src, skill_id)) {	//Dual-wield
 			if (wd->damage) {
 				if( (sd->class_&MAPID_BASEMASK) == MAPID_THIEF ) {

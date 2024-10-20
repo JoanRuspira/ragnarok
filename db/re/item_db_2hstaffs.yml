@@ -4,48 +4,481 @@ Header:
 
 Body:
   - Id: 1472
-    AegisName: Staff_Of_Soul
-    Name: Soul Staff
+    AegisName: Two_Handed_Staff
+    Name: Two-Handed Staff
     Type: Weapon
     SubType: 2hStaff
-    Buy: 20
-    Weight: 1400
+    Buy: 30000
+    Weight: 900
     Attack: 25
-    MagicAttack: 200
+    MagicAttack: 120
     Range: 1
+    Slots: 0
     Jobs:
       Mage: true
       Sage: true
-      SoulLinker: true
+      Wizard: true
+      Acolyte: true
+      Priest: true
+      Monk: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 25
+    Refineable: true
+  - Id: 1473
+    AegisName: Two_Handed_Staff_
+    Name: Two-Handed Staff
+    Type: Weapon
+    SubType: 2hStaff
+    Buy: 30000
+    Weight: 900
+    Attack: 25
+    MagicAttack: 120
+    Range: 1
+    Slots: 4
+    Jobs:
+      Mage: true
+      Sage: true
+      Wizard: true
+      Acolyte: true
+      Priest: true
+      Monk: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 25
+    Refineable: true
+  - Id: 1474
+    AegisName: Booster_Staff
+    Name: Booster Staff
+    Type: Weapon
+    SubType: 2hStaff
+    Buy: 40000
+    Weight: 900
+    Attack: 25
+    MagicAttack: 140
+    Range: 1
+    Slots: 0
+    Jobs:
+      Mage: true
+      Sage: true
+      Wizard: true
+      Acolyte: true
+      Priest: true
+      Monk: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
+    Script: |
+      bonus bInt,getrefine();
+      bonus bDex,getrefine();
+  - Id: 1475
+    AegisName: Booster_Staff_
+    Name: Booster Staff
+    Type: Weapon
+    SubType: 2hStaff
+    Buy: 40000
+    Weight: 900
+    Attack: 25
+    MagicAttack: 140
+    Range: 1
+    Slots: 3
+    Jobs:
+      Mage: true
+      Sage: true
+      Wizard: true
+      Acolyte: true
+      Priest: true
+      Monk: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 30
+    Refineable: true
+    Script: |
+      bonus bInt,getrefine();
+      bonus bDex,getrefine();
+  - Id: 1476
+    AegisName: Aqua_Staff
+    Name: Aqua Staff
+    Type: Weapon
+    SubType: 2hStaff
+    Buy: 50000
+    Weight: 900
+    Attack: 25
+    MagicAttack: 150
+    Range: 1
+    Slots: 0
+    Jobs:
+      Mage: true
+      Sage: true
       Wizard: true
     Locations:
       Both_Hand: true
     WeaponLevel: 3
-    EquipLevelMin: 73
+    EquipLevelMin: 35
     Refineable: true
     Script: |
-      bonus bInt,5;
-      bonus bAgi,2;
-  - Id: 1473
-    AegisName: Wizardy_Staff
-    Name: Wizardry Staff
+      bonus2 bMagicAtkEle,Ele_Water,15;
+  - Id: 1477
+    AegisName: Aqua_Staff_
+    Name: Aqua Staff
     Type: Weapon
     SubType: 2hStaff
-    Buy: 20
-    Weight: 2400
-    Attack: 120
-    MagicAttack: 200
+    Buy: 50000
+    Weight: 900
+    Attack: 25
+    MagicAttack: 150
     Range: 1
+    Slots: 3
     Jobs:
       Mage: true
       Sage: true
-      SoulLinker: true
       Wizard: true
     Locations:
       Both_Hand: true
-    WeaponLevel: 4
-    EquipLevelMin: 90
+    WeaponLevel: 3
+    EquipLevelMin: 35
     Refineable: true
     Script: |
-      bonus bInt,6;
-      bonus bDex,2;
+      bonus2 bMagicAtkEle,Ele_Water,15;
+  - Id: 1478
+    AegisName: Vellum_Arc_Wand
+    Name: Vellum Arc Wand
+    Type: Weapon
+    SubType: 2hStaff
+    Buy: 60000
+    Weight: 900
+    Attack: 50
+    MagicAttack: 160
+    Range: 1
+    Slots: 0
+    Jobs:
+      Mage: true
+      Sage: true
+      Wizard: true
+      Acolyte: true
+      Priest: true
+      Monk: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 40
+    Refineable: true
+    Script: |
+      bonus bDelayRate,getrefine();
+      bonus bCastrate,getrefine();
+  - Id: 1479
+    AegisName: Vellum_Arc_Wand_
+    Name: Vellum Arc Wand
+    Type: Weapon
+    SubType: 2hStaff
+    Buy: 60000
+    Weight: 900
+    Attack: 50
+    MagicAttack: 160
+    Range: 1
+    Slots: 3
+    Jobs:
+      Mage: true
+      Sage: true
+      Wizard: true
+      Acolyte: true
+      Priest: true
+      Monk: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 40
+    Refineable: true
+    Script: |
+      bonus bDelayRate,getrefine();
+      bonus bCastrate,getrefine();
+  - Id: 1480
+    AegisName: Forest_Staff
+    Name: Forest Staff
+    Type: Weapon
+    SubType: 2hStaff
+    Buy: 60000
+    Weight: 900
+    Attack: 25
+    MagicAttack: 150
+    Range: 1
+    Slots: 3
+    Jobs:
+      Sage: true
+      Wizard: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Earth,15;
+  - Id: 1481
+    AegisName: Staff_of_Wind
+    Name: Staff of Wind
+    Type: Weapon
+    SubType: 2hStaff
+    Buy: 60000
+    Weight: 900
+    Attack: 25
+    MagicAttack: 150
+    Range: 1
+    Slots: 3
+    Jobs:
+      Sage: true
+      Wizard: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Wind,15;
+  - Id: 1482
+    AegisName: Fiery_Staff
+    Name: Fiery Staff
+    Type: Weapon
+    SubType: 2hStaff
+    Buy: 60000
+    Weight: 900
+    Attack: 25
+    MagicAttack: 150
+    Range: 1
+    Slots: 3
+    Jobs:
+      Sage: true
+      Wizard: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Fire,15;
+  - Id: 1483
+    AegisName: Arcane_Staff
+    Name: Arcane Staff
+    Type: Weapon
+    SubType: 2hStaff
+    Buy: 60000
+    Weight: 900
+    Attack: 100
+    MagicAttack: 150
+    Range: 1
+    Slots: 3
+    Jobs:
+      Sage: true
+      Wizard: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Neutral,15;
+  - Id: 1484
+    AegisName: Lich_Bone_Wand
+    Name: Lich Bone Wand
+    Type: Weapon
+    SubType: 2hStaff
+    Buy: 60000
+    Weight: 900
+    Attack: 25
+    MagicAttack: 180
+    Range: 1
+    Slots: 2
+    Jobs:
+      Sage: true
+      Wizard: true
+      Priest: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Dark,15;
+      bonus2 bMagicAtkEle,Ele_Ghost,15;
+  - Id: 1485
+    AegisName: Blue_Flame_Cane
+    Name: Blue Flame Cane
+    Type: Weapon
+    SubType: 2hStaff
+    Buy: 60000
+    Weight: 900
+    Attack: 25
+    MagicAttack: 180
+    Range: 1
+    Slots: 2
+    Jobs:
+      Sage: true
+      Wizard: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Fire,15;
+      bonus2 bMagicAtkEle,Ele_Water,15;
+  - Id: 1486
+    AegisName: Miracle_Jewel
+    Name: Miracle Jewel
+    Type: Weapon
+    SubType: 2hStaff
+    Buy: 60000
+    Weight: 900
+    Attack: 25
+    MagicAttack: 180
+    Range: 1
+    Slots: 2
+    Jobs:
+      Sage: true
+      Wizard: true
+      Priest: true
+      Monk: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bDelayRate,getrefine()*2;
+  - Id: 1487
+    AegisName: Staff_Of_Destruction
+    Name: Staff of Destruction
+    Type: Weapon
+    SubType: 2hStaff
+    Buy: 60000
+    Weight: 900
+    Attack: 100
+    MagicAttack: 200
+    Range: 1
+    Slots: 2
+    Jobs:
+      Sage: true
+      Wizard: true
+      Priest: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bInt,5;
+      bonus bMatrate,getrefine();
+  - Id: 1488
+    AegisName: Kronos
+    Name: Kronos
+    Type: Weapon
+    SubType: 2hStaff
+    Buy: 60000
+    Weight: 900
+    Attack: 25
+    MagicAttack: 190
+    Range: 1
+    Slots: 2
+    Jobs:
+      Sage: true
+      Wizard: true
+      Priest: true
+      Monk: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bCastrate,getrefine()*2;
+  - Id: 1489
+    AegisName: Staff_Of_Destiny
+    Name: Staff of Destiny
+    Type: Weapon
+    SubType: 2hStaff
+    Buy: 60000
+    Weight: 900
+    Attack: 75
+    MagicAttack: 180
+    Range: 1
+    Slots: 2
+    Jobs:
+      Sage: true
+      Wizard: true
+      Priest: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      .@r = getrefine();
+      bonus2 bIgnoreMdefClassRate,Class_All,10+.@r;
+  - Id: 1490
+    AegisName: Deus_Staff
+    Name: Deus_Staff
+    Type: Weapon
+    SubType: 2hStaff
+    Buy: 60000
+    Weight: 900
+    Attack: 25
+    MagicAttack: 180
+    Range: 1
+    Slots: 2
+    Jobs:
+      Priest: true
+      Monk: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 65
+    Refineable: true
+    Script: |
+      bonus bHealPower,10;
+  - Id: 1491
+    AegisName: Divine_Cross
+    Name: Divine Cross
+    Type: Weapon
+    SubType: 2hStaff
+    Buy: 60000
+    Weight: 900
+    Attack: 75
+    MagicAttack: 180
+    Range: 1
+    Slots: 2
+    Jobs:
+      Priest: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 60
+    Refineable: true
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Dark,15;
+      bonus2 bMagicAtkEle,Ele_Holy,15;
+  - Id: 1492
+    AegisName: Adoramus
+    Name: Adoramus
+    Type: Weapon
+    SubType: 2hStaff
+    Buy: 60000
+    Weight: 900
+    Attack: 25
+    MagicAttack: 200
+    Range: 1
+    Slots: 2
+    Jobs:
+      Priest: true
+      Monk: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 40
+    Refineable: true
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Holy,getrefine();
+      bonus bHealPower,getrefine();

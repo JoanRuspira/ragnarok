@@ -332,7 +332,7 @@ Body:
     EquipLevelMin: 65
     Refineable: true
     Script: |
-      .@r = getrefine()*2;
+      .@r = getrefine();
       bonus2 bIgnoreMdefClassRate,Class_All,20+.@r;
   - Id: 1615
     AegisName: Staff_of_Bordeaux

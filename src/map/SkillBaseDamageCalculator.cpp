@@ -359,44 +359,44 @@ int64 SkillBaseDamageCalculator::battle_addmastery(map_session_data * sd, block_
 	switch (weapon) {
 		case W_2HSWORD:
 			if ((skill = pc_checkskill(sd, SK_SM_TWOHAND)) > 0)
-				damage += (skill * 8);
+				damage += (skill * 20);
 		case W_1HSWORD:
 			if ((skill = pc_checkskill(sd, SK_SM_SWORD)) > 0)
-				damage += (skill * 8);
+				damage += (skill * 20);
 			if ((skill = pc_checkskill(sd, SK_TF_SWORD)) > 0)
-				damage += (skill * 8);
+				damage += (skill * 20);
 		case W_DAGGER:
 			if ((skill = pc_checkskill(sd, SK_TF_DAGGER)) > 0)
-				damage += (skill * 8);
+				damage += (skill * 20);
 			break;
 		case W_1HSPEAR:
 		case W_2HSPEAR:
 			if ((skill = pc_checkskill(sd, SK_SM_SPEARMASTERY)) > 0) {
-				damage += (skill * 8);
+				damage += (skill * 20);
 			}
 			break;
 		case W_BOW:
 			if ((skill = pc_checkskill(sd, SK_AC_BOW)) > 0)
-				damage += (skill * 8);
+				damage += (skill * 20);
 			break;
 		case W_1HAXE:
 		case W_2HAXE:
 			if ((skill = pc_checkskill(sd, SK_MC_AXEMASTERY)) > 0)
-				damage += (skill * 8);
+				damage += (skill * 20);
 			break;
 		case W_MACE:
 		case W_2HMACE:
 		case W_KNUCKLE:
 			if ((skill = pc_checkskill(sd, SK_AL_MACEMASTERY)) > 0)
-				damage += (skill * 8);
+				damage += (skill * 20);
 			break;
 		case W_MUSICAL:
 			if ((skill = pc_checkskill(sd, SK_BA_SHOWMANSHIP)) > 0)
-				damage += (skill * 8);
+				damage += (skill * 20);
 			break;
 		case W_KATAR:
 			if ((skill = pc_checkskill(sd, SK_AS_KATAR)) > 0)
-				damage += (skill * 8);
+				damage += (skill * 20);
 			break;
 	}
 
