@@ -603,7 +603,7 @@ Body:
     View: 45 
     Script: |
       bonus bDex,5;
-      bonus bCastrate,5;
+      bonus bCastrate,-5;
   - Id: 8031
     AegisName: Frigg_Circlet
     Name: Frigg Circlet
@@ -624,7 +624,7 @@ Body:
     View: 251 
     Script: |
       bonus bInt,5;
-      bonus bDelayRate,5;
+      bonus bDelayRate,-5;
   - Id: 8032
     AegisName: Tiara
     Name: Tiara
@@ -1622,8 +1622,8 @@ Body:
     Refineable: true
     View: 1126
     Script: |
-      bonus bDelayRate,getrefine()*2;
-      bonus bCastrate,getrefine()*2;
+      bonus bDelayRate,-getrefine()*2;
+      bonus bCastrate,-getrefine()*2;
   - Id: 8081
     AegisName: Grand_Peco_Hairdress
     Name: Grand Peco Hairdress
@@ -1665,7 +1665,7 @@ Body:
     View: 624  
     Script: |
       bonus bInt,5;
-      bonus bCastrate,getrefine()*2;
+      bonus bCastrate,-getrefine()*2;
   - Id: 8083
     AegisName: Flying_Angel
     Name: Flying Angel
@@ -1791,7 +1791,7 @@ Body:
     Script: |
       bonus bDex,getrefine();
       bonus bInt,getrefine();
-      bonus bCastrate,5;
+      bonus bCastrate,-5;
   - Id: 8089
     AegisName: Anubis_Hat
     Name: Anubis Hat
@@ -1850,7 +1850,7 @@ Body:
     Script: |
       bonus bDex,getrefine();
       bonus bInt,getrefine();
-      bonus bDelayRate,5;
+      bonus bDelayRate,-5;
   - Id: 8092
     AegisName: Holy_Night_Hat
     Name: Holy Night Hat
@@ -2126,7 +2126,7 @@ Body:
     View: 1728 
     Script: |
       bonus bInt,3;
-      bonus bCastrate,getrefine()*2;
+      bonus bCastrate,-getrefine()*2;
   - Id: 8106
     AegisName: Striking_Hat
     Name: Striking Hat
@@ -2264,7 +2264,7 @@ Body:
     View: 1076 
     Script: |
       bonus bAtk,20;
-      bonus bDelayRate,getrefine()*2;
+      bonus bDelayRate,-getrefine()*2;
   - Id: 8113
     AegisName: Mechanical_Plant_Hat
     Name: Mechanical Plant Hat
@@ -2447,9 +2447,9 @@ Body:
     View: 157 
     Script: |
       bonus bDex,3;
-      bonus bCastrate,5;
+      bonus bCastrate,-5;
       if (getrefine()>6) {
-        bonus bCastrate,5;
+        bonus bCastrate,-5;
       }
   - Id: 8122
     AegisName: Mustang_Hat
@@ -2512,7 +2512,7 @@ Body:
     View: 509 
     Script: |
       bonus bMatk,15;
-      bonus bDelayRate,5;
+      bonus bDelayRate,-5;
   - Id: 8125
     AegisName: Emerald_Circlet
     Name: Emerald Circlet
@@ -2533,7 +2533,7 @@ Body:
     View: 566
     Script: |
       bonus bMatk,15;
-      bonus bCastrate,5;
+      bonus bCastrate,-5;
   - Id: 8126
     AegisName: Levitation_Crown
     Name: Levitation Crown
@@ -2552,11 +2552,11 @@ Body:
     Refineable: true
     View: 594 
     Script: |
-      bonus bDelayRate,5;
-      bonus bCastrate,5;
+      bonus bDelayRate,-5;
+      bonus bCastrate,-5;
       if (getrefine()>7) {
-          bonus bDelayRate,5;
-          bonus bCastrate,5;
+          bonus bDelayRate,-5;
+          bonus bCastrate,-5;
       }
   - Id: 8127
     AegisName: Memory_Hat
@@ -2577,7 +2577,7 @@ Body:
     View: 1454 
     Script: |
       bonus bInt,3;
-      bonus bDelayRate,getrefine();
+      bonus bDelayRate,-getrefine();
   - Id: 8128
     AegisName: Azure_Circlet
     Name: Azure Circlet

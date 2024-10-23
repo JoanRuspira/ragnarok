@@ -4,21 +4,8 @@ Header:
 
 Body:  
   - Id: 4001
-    AegisName: Poring_Card
-    Name: Poring Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bLuk,2;
-      bonus bFlee2,1;
-  - Id: 4002
-    AegisName: Fabre_Card
-    Name: Fabre Card
+    AegisName: Small_Kaun_Rune
+    Name: Small Kaun Rune
     Type: Card
     Buy: 20
     Weight: 10
@@ -27,11 +14,343 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus bVit,1;
-      bonus bMaxHP,100;
+      bonus2 bAddSize,Size_Small,10;
+  - Id: 4002
+    AegisName: Medium_Kaun_Rune
+    Name: Medium Kaun Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus2 bAddSize,Size_Medium,10;
   - Id: 4003
-    AegisName: Pupa_Card
-    Name: Pupa Card
+    AegisName: Large_Kaun_Rune
+    Name: Large Kaun Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus2 bAddSize,Size_Large,10;
+  - Id: 4004
+    AegisName: Fire_Hagall_Rune
+    Name: Fire Hagall Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus2 bAddEle,Ele_Fire,10;
+      bonus2 bMagicAddEle,Ele_Fire,10; 
+  - Id: 4005
+    AegisName: Water_Hagall_Rune
+    Name: Water Hagall Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus2 bAddEle,Ele_Water,10;
+      bonus2 bMagicAddEle,Ele_Water,10; 
+  - Id: 4006
+    AegisName: Wind_Hagall_Rune
+    Name: Wind Hagall Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus2 bAddEle,Ele_Wind,10;
+      bonus2 bMagicAddEle,Ele_Wind,10; 
+  - Id: 4007
+    AegisName: Earth_Hagall_Rune
+    Name: Earth Hagall Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus2 bAddEle,Ele_Earth,10;
+      bonus2 bMagicAddEle,Ele_Earth,10; 
+  - Id: 4008
+    AegisName: Dark_Hagall_Rune
+    Name: Dark Hagall Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus2 bAddEle,Ele_Dark,10;
+      bonus2 bMagicAddEle,Ele_Dark,10; 
+  - Id: 4009
+    AegisName: Holy_Hagall_Rune
+    Name: Holy Hagall Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus2 bAddEle,Ele_Holy,10;
+      bonus2 bMagicAddEle,Ele_Holy,10; 
+  - Id: 4010
+    AegisName: Ghost_Hagall_Rune
+    Name: Ghost Hagall Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus2 bAddEle,Ele_Ghost,10;
+      bonus2 bMagicAddEle,Ele_Ghost,10; 
+  - Id: 4011
+    AegisName: Neutral_Hagall_Rune
+    Name: Neutral Hagall Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus2 bAddEle,Ele_Neutral,10;
+      bonus2 bMagicAddEle,Ele_Neutral,10; 
+  - Id: 4012
+    AegisName: Poison_Hagall_Rune
+    Name: Poison Hagall Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus2 bAddEle,Ele_Poison,10;
+      bonus2 bMagicAddEle,Ele_Poison,10; 
+  - Id: 4013
+    AegisName: Angel_Reidh_Rune
+    Name: Angel Reidh Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus2 bAddRace,RC_Angel,10;
+      bonus2 bMagicAddRace,RC_Angel,10;
+  - Id: 4014
+    AegisName: Brute_Reidh_Rune
+    Name: Brute Reidh Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus2 bAddRace,RC_Brute,10;
+      bonus2 bMagicAddRace,RC_Brute,10;
+  - Id: 4015
+    AegisName: DemiHuman_Reidh_Rune
+    Name: Demi-Human Reidh Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus2 bAddRace,RC_DemiHuman,10;
+      bonus2 bAddRace,RC_Player_Human,10;
+      bonus2 bMagicAddRace,RC_DemiHuman,10;
+      bonus2 bMagicAddRace,RC_Player_Human,10;
+  - Id: 4016
+    AegisName: Demon_Reidh_Rune
+    Name: Demon Reidh Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus2 bAddRace,RC_Demon,10;
+      bonus2 bMagicAddRace,RC_Demon,10;
+  - Id: 4017
+    AegisName: Dragon_Reidh_Rune
+    Name: Dragon Reidh Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus2 bAddRace,RC_Dragon,10;
+      bonus2 bMagicAddRace,RC_Dragon,10;
+  - Id: 4018
+    AegisName: Fish_Reidh_Rune
+    Name: Fish Reidh Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus2 bAddRace,RC_Fish,10;
+      bonus2 bMagicAddRace,RC_Fish,10;
+  - Id: 4019
+    AegisName: Formless_Reidh_Rune
+    Name: Formless Reidh Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus2 bAddRace,RC_Formless,10;
+      bonus2 bMagicAddRace,RC_Formless,10;
+  - Id: 4020
+    AegisName: Insect_Reidh_Rune
+    Name: Insect Reidh Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus2 bAddRace,RC_Insect,10;
+      bonus2 bMagicAddRace,RC_Insect,10;
+  - Id: 4021
+    AegisName: Plant_Reidh_Rune
+    Name: Plant Reidh Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus2 bAddRace,RC_Plant,10;
+      bonus2 bMagicAddRace,RC_Plant,10;
+  - Id: 4022
+    AegisName: Undead_Reidh_Rune
+    Name: Undead Reidh Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus2 bAddRace,RC_Undead,10;
+      bonus2 bMagicAddRace,RC_Undead,10;
+  - Id: 4023
+    AegisName: Atk_Sol_Rune
+    Name: Sol Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus bAtk,20;
+  - Id: 4024
+    AegisName: Perc_Sol_Rune
+    Name: Rate Sol Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus bAtkRate,5;
+  - Id: 4025
+    AegisName: Matk_Aesir_Rune
+    Name: Attack Aesir Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus bMatk,20;
+  - Id: 4026
+    AegisName: Perc_Aesir_Rune
+    Name: Aesir Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus bMatkRate,5;
+  - Id: 4027
+    AegisName: Heal_Aesir_Rune
+    Name: Healing Aesir Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus bHealPower,5;
+  - Id: 4028
+    AegisName: HP_Laugr_Rune
+    Name: Laugr Rune
     Type: Card
     Buy: 20
     Weight: 10
@@ -41,385 +360,33 @@ Body:
       BuyingStore: true
     Script: |
       bonus bMaxHP,700;
-  - Id: 4004
-    AegisName: Drops_Card
-    Name: Drops Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bDex,1;
-      bonus bHit,3;
-  - Id: 4464
-    AegisName: Aunoe_Card
-    Name: Aunoe Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus bCritAtkRate,20;
-  - Id: 4465
-    AegisName: Panat_Card
-    Name: Fanat Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus bBaseAtk,10;
-      if (getiteminfo(getequipid(EQI_HAND_R), ITEMINFO_VIEW) == W_2HSWORD) {
-         .@r = getrefine();
-         if (.@r>=10) {
-            bonus bAspd,1;
-         }
-         if (.@r>=14) {
-            bonus bAspd,1;
-         }
-      }
-  - Id: 4005
-    AegisName: Poring__Card
-    Name: Santa Poring Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEle,Ele_Dark,20;
-  - Id: 4006
-    AegisName: Lunatic_Card
-    Name: Lunatic Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bLuk,1;
-      bonus bCritical,1;
-      bonus bFlee2,1;
-  - Id: 4007
-    AegisName: Pecopeco_Egg_Card
-    Name: Peco Peco Egg Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddRace,RC_Formless,20;
-  - Id: 4008
-    AegisName: Picky_Card
-    Name: Picky Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bStr,1;
-      bonus bBaseAtk,10;
-  - Id: 4009
-    AegisName: Chonchon_Card
-    Name: Chonchon Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bAgi,1;
-      bonus bFlee,2;
-  - Id: 4010
-    AegisName: Wilow_Card
-    Name: Willow Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bMaxSP,80;
-  - Id: 4011
-    AegisName: Picky__Card
-    Name: Picky Egg Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bVit,1;
-      bonus bMaxHP,100;
-  - Id: 4012
-    AegisName: Thief_Bug_Egg_Card
-    Name: Thief Bug Egg Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bMaxHP,400;
-  - Id: 4013
-    AegisName: Andre_Egg_Card
-    Name: Andre Egg Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bMaxHPrate,5;
-  - Id: 4014
-    AegisName: Roda_Frog_Card
-    Name: Roda Frog Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bMaxHP,400;
-      bonus bMaxSP,50;
-  - Id: 4015
-    AegisName: Condor_Card
-    Name: Condor Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bFlee,10;
-  - Id: 4016
-    AegisName: Thief_Bug_Card
-    Name: Thief Bug Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bAgi,1;
-  - Id: 4017
-    AegisName: Savage_Babe_Card
-    Name: Savage Babe Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEff,Eff_Stun,500;
-  - Id: 4018
-    AegisName: Andre_Larva_Card
-    Name: Andre Larva Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bInt,1;
-      bonus bMaxSP,10;
-  - Id: 4019
-    AegisName: Hornet_Card
-    Name: Hornet Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bStr,1;
-      bonus bBaseAtk,3;
-  - Id: 4020
-    AegisName: Farmiliar_Card
-    Name: Familiar Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEff,Eff_Blind,500;
-      bonus bBaseAtk,5;
-  - Id: 4021
-    AegisName: Rocker_Card
-    Name: Rocker Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bDex,1;
-      bonus bBaseAtk,5;
-  - Id: 4022
-    AegisName: Spore_Card
-    Name: Spore Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bVit,2;
-  - Id: 4023
-    AegisName: Desert_Wolf_Babe_Card
-    Name: Baby Desert Wolf Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bInt,1;
-  - Id: 4024
-    AegisName: Plankton_Card
-    Name: Plankton Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEff,Eff_Sleep,500;
-      bonus bBaseAtk,5;
-  - Id: 4025
-    AegisName: Skeleton_Card
-    Name: Skeleton Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bBaseAtk,10;
-      bonus2 bAddEff,Eff_Stun,200;
-  - Id: 4026
-    AegisName: Thief_Bug_Female_Card
-    Name: Female Thief Bug Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bAgi,1;
-      bonus bFlee,1;
-  - Id: 4027
-    AegisName: Kukre_Card
-    Name: Kukre Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bAgi,2;
-  - Id: 4028
-    AegisName: Tarou_Card
-    Name: Tarou Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bStr,2;
   - Id: 4029
-    AegisName: Wolf_Card
-    Name: Wolf Card
+    AegisName: Perc_Laugr_Rune
+    Name: Rate Laugr Rune
     Type: Card
     Buy: 20
     Weight: 10
     Locations:
-      Right_Hand: true
+      Armor: true
     Flags:
       BuyingStore: true
     Script: |
-      bonus bBaseAtk,15;
-      bonus bCritical,1;
+      bonus bMaxHPrate,10;
   - Id: 4030
-    AegisName: Mandragora_Card
-    Name: Mandragora Card
+    AegisName: Recov_Laugr_Rune
+    Name: Recovery Laugr Rune
     Type: Card
     Buy: 20
     Weight: 10
     Locations:
-      Right_Hand: true
+      Armor: true
     Flags:
       BuyingStore: true
     Script: |
-      bonus2 bAddEle,Ele_Wind,20;
+      bonus bHPrecovRate,25;
   - Id: 4031
-    AegisName: Pecopeco_Card
-    Name: Peco Peco Card
+    AegisName: SP_Ar_Rune
+    Name: Ar Rune
     Type: Card
     Buy: 20
     Weight: 10
@@ -428,46 +395,34 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus bMaxHPrate,10;
+      bonus bMaxSP,250;
   - Id: 4032
-    AegisName: Ambernite_Card
-    Name: Ambernite Card
+    AegisName: Perc_Ar_Rune
+    Name: Rate Ar Rune
     Type: Card
     Buy: 20
     Weight: 10
     Locations:
-      Left_Hand: true
+      Armor: true
     Flags:
       BuyingStore: true
     Script: |
-      bonus bDef,2;
+      bonus bMaxSPrate,10;
   - Id: 4033
-    AegisName: Poporing_Card
-    Name: Poporing Card
+    AegisName: Recov_Ar_Rune
+    Name: Recovery Ar Rune
     Type: Card
     Buy: 20
     Weight: 10
     Locations:
-      Both_Accessory: true
+      Armor: true
     Flags:
       BuyingStore: true
     Script: |
-      skill "TF_DETOXIFY",1;
+      bonus bSPrecovRate,25;
   - Id: 4034
-    AegisName: Worm_Tail_Card
-    Name: Wormtail Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bDex,2;
-  - Id: 4534
-    AegisName: Giant_Octopus_Card
-    Name: Giant Octopus Card
+    AegisName: Def_Naudh_Rune
+    Name: Physical Naudh Rune
     Type: Card
     Buy: 20
     Weight: 10
@@ -475,1077 +430,59 @@ Body:
       Armor: true
     Flags:
       BuyingStore: true
-      DropEffect: CLIENT
     Script: |
-      bonus bMaxHPrate,12;
-      skill "SK_WZ_ICEBERG",5;
+      bonus bDef,20;
   - Id: 4035
-    AegisName: Hydra_Card
-    Name: Hydra Card
+    AegisName: Mdef_Naudh_Rune
+    Name: Magical Naudh Rune
     Type: Card
     Buy: 20
     Weight: 10
     Locations:
-      Right_Hand: true
+      Armor: true
     Flags:
       BuyingStore: true
     Script: |
-      bonus2 bAddRace,RC_DemiHuman,20;
-      bonus2 bAddRace,RC_Player_Human,20;
+      bonus bMdef,20;
   - Id: 4036
-    AegisName: Muka_Card
-    Name: Muka Card
+    AegisName: Long_Naudh_Rune
+    Name: Long Naudh Rune
     Type: Card
     Buy: 20
     Weight: 10
     Locations:
-      Both_Accessory: true
+      Armor: true
     Flags:
       BuyingStore: true
     Script: |
-      bonus bHPrecovRate,10;
+      bonus bLongAtkDef,5;
   - Id: 4037
-    AegisName: Snake_Card
-    Name: Snake Card
+    AegisName: Near_Naudh_Rune
+    Name: Short Naudh Rune
     Type: Card
     Buy: 20
     Weight: 10
     Locations:
-      Right_Hand: true
+      Armor: true
     Flags:
       BuyingStore: true
     Script: |
-      bonus2 bAddEff,Eff_Poison,500;
-      bonus bBaseAtk,5;
+      bonus bNearAtkDef,5;
   - Id: 4038
-    AegisName: Zombie_Card
-    Name: Zombie Card
+    AegisName: Crit_Naudh_Rune
+    Name: Critical Naudh Rune
     Type: Card
     Buy: 20
     Weight: 10
     Locations:
-      Shoes: true
+      Armor: true
     Flags:
       BuyingStore: true
     Script: |
-      bonus bHPrecovRate,20;
+      bonus bCriticalDef,10;
   - Id: 4039
-    AegisName: Stainer_Card
-    Name: Stainer Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bResEff,Eff_Silence,2000;
-      bonus bDef,1;
-  - Id: 4040
-    AegisName: Creamy_Card
-    Name: Creamy Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      skill "SK_AL_TELEPORT",1;
-  - Id: 4041
-    AegisName: Coco_Card
-    Name: Coco Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bResEff,Eff_Sleep,2000;
-      bonus bDef,1;
-  - Id: 4042
-    AegisName: Steel_Chonchon_Card
-    Name: Steel Chonchon Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubEle,Ele_Wind,10;
-      bonus bDef,2;
-  - Id: 4043
-    AegisName: Andre_Card
-    Name: Andre Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bBaseAtk,20;
-  - Id: 4044
-    AegisName: Smokie_Card
-    Name: Smokie Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      skill "SK_TF_HIDING",1;
-    UnEquipScript: |
-      sc_end STATUS_HIDING;
-  - Id: 4045
-    AegisName: Horn_Card
-    Name: Horn Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bLongAtkDef,35;
-  - Id: 4046
-    AegisName: Martin_Card
-    Name: Martin Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bResEff,Eff_Blind,2000;
-      bonus bDef,1;
-  - Id: 4047
-    AegisName: Ghostring_Card
-    Name: Ghostring Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bDefEle,Ele_Ghost;
-      bonus bHPrecovRate,-25;
-  - Id: 4048
-    AegisName: Poison_Spore_Card
-    Name: Poison Spore Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      skill "SK_TF_POISONSLASH",3;
-  - Id: 4049
-    AegisName: Vadon_Card
-    Name: Vadon Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEle,Ele_Fire,20;
-  - Id: 4050
-    AegisName: Thief_Bug_Male_Card
-    Name: Male Thief Bug Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bAgi,2;
-  - Id: 4051
-    AegisName: Yoyo_Card
-    Name: Yoyo Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bFlee2,5;
-      bonus bAgi,1;
-  - Id: 4052
-    AegisName: Elder_Wilow_Card
-    Name: Elder Willow Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bInt,2;
-  - Id: 4053
-    AegisName: Vitata_Card
-    Name: Vitata Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      skill "SK_AL_HEAL",1;
-      bonus bUseSPrate,25;
-  - Id: 4054
-    AegisName: Angeling_Card
-    Name: Angeling Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bDefEle,Ele_Holy;
-  - Id: 4055
-    AegisName: Marina_Card
-    Name: Marina Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEff,Eff_Freeze,500;
-      bonus bBaseAtk,5;
-  - Id: 4056
-    AegisName: Dustiness_Card
-    Name: Dustiness Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubEle,Ele_Wind,30;
-      bonus bFlee,5;
-  - Id: 4057
-    AegisName: Metaller_Card
-    Name: Metaller Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEff,Eff_Silence,500;
-      bonus bBaseAtk,5;
-  - Id: 4058
-    AegisName: Thara_Frog_Card
-    Name: Thara Frog Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubRace,RC_DemiHuman,30;
-      bonus2 bSubRace,RC_Player_Human,30;
-  - Id: 4059
-    AegisName: Soldier_Andre_Card
-    Name: Soldier Andre Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubRace,RC_Plant,30;
-  - Id: 4060
-    AegisName: Goblin_Card
-    Name: Goblin Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddRace,RC_Brute,20;
-      bonus2 bAddRace,RC_Player_Doram,20;
-  - Id: 4061
-    AegisName: Cornutus_Card
-    Name: Cornutus Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bUnbreakableArmor;
-      bonus bDef,1;
-  - Id: 4062
-    AegisName: Anacondaq_Card
-    Name: Anacondaq Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEle,Ele_Poison,20;
-  - Id: 4063
-    AegisName: Caramel_Card
-    Name: Caramel Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddRace,RC_Insect,20;
-  - Id: 4064
-    AegisName: Zerom_Card
-    Name: Zerom Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bDex,3;
-  - Id: 4065
-    AegisName: Kaho_Card
-    Name: Kaho Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEle,Ele_Earth,20;
-  - Id: 4066
-    AegisName: Orc_Warrior_Card
-    Name: Orc Warrior Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubRace,RC_Brute,30;
-      bonus2 bSubRace,RC_Player_Doram,30;
-  - Id: 4067
-    AegisName: Megalodon_Card
-    Name: Megalodon Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bResEff,Eff_Freeze,2000;
-      bonus bDef,1;
-  - Id: 4068
-    AegisName: Scorpion_Card
-    Name: Scorpion Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddRace,RC_Plant,20;
-  - Id: 4069
-    AegisName: Drainliar_Card
-    Name: Drainliar Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEle,Ele_Water,20;
-      bonus2 bMagicAddEle,Ele_Water,20; 
-  - Id: 4070
-    AegisName: Eggyra_Card
-    Name: Eggyra Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bSPrecovRate,15;
-  - Id: 4071
-    AegisName: Orc_Zombie_Card
-    Name: Orc Zombie Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubEle,Ele_Undead,30;
-      bonus bFlee,5;
-  - Id: 4072
-    AegisName: Golem_Card
-    Name: Golem Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bUnbreakableWeapon;
-      bonus bBaseAtk,5;
-  - Id: 4073
-    AegisName: Pirate_Skel_Card
-    Name: Pirate Skeleton Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      skill "SK_MC_OVERCHARGE",5;
-  - Id: 4074
-    AegisName: BigFoot_Card
-    Name: Bigfoot Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubRace,RC_Insect,30;
-  - Id: 4075
-    AegisName: Argos_Card
-    Name: Argos Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bResEff,Eff_Stone,2000;
-      bonus bDef,1;
-  - Id: 4076
-    AegisName: Magnolia_Card
-    Name: Magnolia Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEff,Eff_Curse,500;
-      bonus bBaseAtk,5;
-  - Id: 4077
-    AegisName: Phen_Card
-    Name: Phen Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bNoCastCancel;
-      bonus bCastrate,25;
-  - Id: 4078
-    AegisName: Savage_Card
-    Name: Savage Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bVit,3;
-  - Id: 4641
-    AegisName: Zombie_Guard_Card
-    Name: Zombie Guard Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus bNoRegen,2;
-      bonus bSPDrainValue,1;
-  - Id: 300115
-    AegisName: Sanare3_Card
-    Name: Archangel of Rage Card
-    Type: Card
-    Weight: 10
-    Locations:
-      Head_Top: true
-      Head_Mid: true
-      Head_Low: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus bMatk,10;
-      .@val = 5;
-      if (getrefine() >= 7) {
-         .@val += 5;
-      }
-      bonus2 bMagicAtkEle,Ele_Fire,.@val;
-  - Id: 300252
-    AegisName: Deadre_Card
-    Name: Void Archangel Card
-    Type: Card
-    Weight: 10
-    Locations:
-      Head_Top: true
-      Head_Mid: true
-      Head_Low: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus bMatk,10;
-      .@val = 5;
-      if (getrefine() >= 7) {
-         .@val += 5;
-      }
-      bonus2 bMagicAtkEle,Ele_Dark,.@val;
-  - Id: 27308
-    AegisName: Sanare_Card
-    Name: Archangel of Glory Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      .@r = getrefine();
-      .@val = 5;
-      if (.@r >= 7) {
-         .@val += 5;
-      }
-      bonus bHealPower,.@val;
-  - Id: 27309
-    AegisName: High_Sanare_Card
-    Name: Archangel of Misery Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Top: true
-      Head_Mid: true
-      Head_Low: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus bMatk,10;
-      .@val = 5;
-      if (getrefine() >= 7) {
-         .@val += 5;
-      }
-      bonus2 bMagicAtkEle,Ele_Poison,.@val;
-  - Id: 4587
-    AegisName: Tiyanak_Card
-    Name: Tiyanak Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bCriticalAddRace,RC_DemiHuman,12;
-      bonus2 bCriticalAddRace,RC_Player_Human,12;
-      bonus2 bCriticalAddRace,RC_Brute,12;
-      bonus2 bCriticalAddRace,RC_Player_Doram,12;
-      bonus2 bCriticalAddRace,RC_Fish,12;
-  - Id: 4519
-    AegisName: Butoijo_Card
-    Name: Butoijo Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bAddRace,RC_Angel,20;
-  - Id: 4574
-    AegisName: Daehyon_Card
-    Name: General Daehyon Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      .@i = getiteminfo(getequipid(EQI_HAND_R), ITEMINFO_VIEW);
-      if (.@i == W_1HSWORD || .@i == W_2HSWORD) {
-         bonus bBaseAtk,100;
-      }
-  - Id: 4575
-    AegisName: Soheon_Card
-    Name: Soheon Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus bBaseAtk,10;
-      if (getiteminfo(getequipid(EQI_HAND_R), ITEMINFO_VIEW) == W_DAGGER) {
-         .@r = getrefine();
-         if (.@r>=10) {
-            bonus bAspd,1;
-         }
-         if (.@r>=14) {
-            bonus bAspd,1;
-         }
-      }
-  - Id: 300272
-    AegisName: Pray_Giver_Card
-    Name: Pray Giver Card
-    Type: Card
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bMagicAtkEle,Ele_Holy,10;
-      bonus bMaxSPrate,-25;
-  - Id: 300270
-    AegisName: Empathizer_Card
-    Name: Empathizer Card
-    Type: Card
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus bLongAtkRate,10;
-      bonus bMaxSPrate,-25;
-  - Id: 4525
-    AegisName: Coelacanth_Card
-    Name: Coelacanth Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus bFlee,10;
-      skill "SK_TF_HIDING",1;
-      skill "SK_AS_PHANTOMMENACE",5;
-  - Id: 4079
-    AegisName: Mantis_Card
-    Name: Mantis Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bStr,3;
-  - Id: 4080
-    AegisName: Flora_Card
-    Name: Flora Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddRace,RC_Fish,20;
-  - Id: 4081
-    AegisName: Hode_Card
-    Name: Hode Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubEle,Ele_Earth,30;
-      bonus bFlee,5;
-  - Id: 27125
-    AegisName: Headless_Mule_Card
-    Name: Headless Mule Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bMagicAtkEle,Ele_Water,20;
-      bonus2 bMagicAtkEle,Ele_Holy,20;
-  - Id: 27325
-    AegisName: Muspellskoll_Card
-    Name: Muspellskoll Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bSubEle,Ele_Fire,30;
-  - Id: 27179
-    AegisName: Coyote_Card
-    Name: Coyote Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus bNoCastCancel;
-      .@hp = -12;
-      .@sp = -6;
-      if (getrefine() >= 10) {
-         .@hp += 6;
-         .@sp += 3;
-      }
-      bonus bMaxHPrate,.@hp;
-      bonus bMaxSPrate,.@sp;
-  - Id: 4082
-    AegisName: Desert_Wolf_Card
-    Name: Desert Wolf Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddSize,Size_Small,15;
-      bonus bBaseAtk,5;
-  - Id: 4083
-    AegisName: Rafflesia_Card
-    Name: Rafflesia Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubRace,RC_Fish,30;
-  - Id: 4084
-    AegisName: Marine_Sphere_Card
-    Name: Marine Sphere Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      skill "SK_SM_MAGNUM",3;
-  - Id: 4085
-    AegisName: Orc_Skeleton_Card
-    Name: Orc Skeleton Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEle,Ele_Holy,20;
-  - Id: 4086
-    AegisName: Soldier_Skeleton_Card
-    Name: Soldier Skeleton Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bCritical,9;
-  - Id: 4087
-    AegisName: Giearth_Card
-    Name: Giearth Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bResEff,Eff_Confusion,10000;
-      bonus2 bSubEle,Ele_Earth,15;
-  - Id: 4088
-    AegisName: Frilldora_Card
-    Name: Frilldora Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      skill "SK_AS_CLOAKING",1;
-    UnEquipScript: |
-      sc_end STATUS_CLOAKING;
-  - Id: 4089
-    AegisName: Sword_Fish_Card
-    Name: Swordfish Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bDefEle,Ele_Water;
-      bonus bDef,1;
-  - Id: 4090
-    AegisName: Munak_Card
-    Name: Munak Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bResEff,Eff_Stone,1500;
-      bonus2 bSubEle,Ele_Earth,5;
-      bonus bDef,1;
-  - Id: 4091
-    AegisName: Kobold_Card
-    Name: Kobold Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bStr,1;
-      bonus bCritical,4;
-  - Id: 4092
-    AegisName: Skel_Worker_Card
-    Name: Skeleton Worker Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddSize,Size_Medium,15;
-      bonus bBaseAtk,5;
-  - Id: 4093
-    AegisName: Obeaune_Card
-    Name: Obeaune Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      skill "AL_CURE",1;
-  - Id: 4094
-    AegisName: Archer_Skeleton_Card
-    Name: Archer Skeleton Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bLongAtkRate,10;
-  - Id: 4095
-    AegisName: Marse_Card
-    Name: Marse Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubEle,Ele_Water,30;
-      bonus bFlee,5;
-  - Id: 4096
-    AegisName: Zenorc_Card
-    Name: Zenorc Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEff,Eff_Poison,400;
-      bonus bBaseAtk,10;
-  - Id: 4097
-    AegisName: Matyr_Card
-    Name: Matyr Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bMaxHPrate,10;
-      bonus bAgi,1;
-  - Id: 4098
-    AegisName: Dokebi_Card
-    Name: Dokebi Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bDefEle,Ele_Wind;
-      bonus bDef,1;
-  - Id: 4099
-    AegisName: Pasana_Card
-    Name: Pasana Card
+    AegisName: Fire_Jera_Rune
+    Name: Fire Jera Rune
     Type: Card
     Buy: 20
     Weight: 10
@@ -1555,23 +492,33 @@ Body:
       BuyingStore: true
     Script: |
       bonus bDefEle,Ele_Fire;
-      bonus bDef,1;
-  - Id: 4100
-    AegisName: Sohee_Card
-    Name: Sohee Card
+  - Id: 4040
+    AegisName: Water_Jera_Rune
+    Name: Water Jera Rune
     Type: Card
     Buy: 20
     Weight: 10
     Locations:
-      Shoes: true
+      Armor: true
     Flags:
       BuyingStore: true
     Script: |
-      bonus bMaxSPrate,15;
-      bonus bSPrecovRate,3;
-  - Id: 4101
-    AegisName: Sand_Man_Card
-    Name: Sandman Card
+      bonus bDefEle,Ele_Water;
+  - Id: 4041
+    AegisName: Wind_Jera_Rune
+    Name: Wind Jera Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Armor: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus bDefEle,Ele_Wind;
+  - Id: 4042
+    AegisName: Earth_Jera_Rune
+    Name: Earth Jera Rune
     Type: Card
     Buy: 20
     Weight: 10
@@ -1581,230 +528,9 @@ Body:
       BuyingStore: true
     Script: |
       bonus bDefEle,Ele_Earth;
-      bonus bDef,1;
-  - Id: 4102
-    AegisName: Whisper_Card
-    Name: Whisper Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bFlee,20;
-      bonus2 bSubEle,Ele_Ghost,-50;
-  - Id: 4103
-    AegisName: Horong_Card
-    Name: Horong Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      skill "MG_SIGHT",1;
-    UnEquipScript: |
-      sc_end SC_SIGHT;
-  - Id: 4104
-    AegisName: Requiem_Card
-    Name: Requiem Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEff,Eff_Confusion,500;
-  - Id: 4105
-    AegisName: Marc_Card
-    Name: Marc Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubEle,Ele_Water,5;
-      bonus2 bResEff,Eff_Freeze,10000;
-  - Id: 4106
-    AegisName: Mummy_Card
-    Name: Mummy Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bHit,20;
-  - Id: 4107
-    AegisName: Verit_Card
-    Name: Verit Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bMaxHPrate,8;
-      bonus bMaxSPrate,8;
-  - Id: 4108
-    AegisName: Myst_Card
-    Name: Myst Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubEle,Ele_Poison,30;
-      bonus bFlee,5;
-  - Id: 4109
-    AegisName: Jakk_Card
-    Name: Jakk Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubEle,Ele_Fire,30;
-      bonus bFlee,5;
-  - Id: 4110
-    AegisName: Ghoul_Card
-    Name: Ghoul Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bResEff,Eff_Poison,2000;
-      bonus bDef,1;
-  - Id: 4111
-    AegisName: Strouf_Card
-    Name: Strouf Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddRace,RC_Demon,20;
-  - Id: 4112
-    AegisName: Marduk_Card
-    Name: Marduk Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bResEff,Eff_Silence,10000;
-  - Id: 4113
-    AegisName: Marionette_Card
-    Name: Marionette Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubEle,Ele_Ghost,30;
-      bonus bFlee,5;
-  - Id: 4114
-    AegisName: Argiope_Card
-    Name: Argiope Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bDefEle,Ele_Poison;
-      bonus bDef,1;
-  - Id: 4115
-    AegisName: Hunter_Fly_Card
-    Name: Hunter Fly Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bHPDrainRate,30,15;
-  - Id: 4116
-    AegisName: Isis_Card
-    Name: Isis Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubEle,Ele_Dark,30;
-      bonus bFlee,5;
-  - Id: 4117
-    AegisName: Side_Winder_Card
-    Name: Sidewinder Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      skill "SK_AS_DOUBLEATTACK",1;
-      bonus bDoubleRate,5;
-  - Id: 4118
-    AegisName: Petit_Card
-    Name: Earth Petite Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddRace,RC_Dragon,20;
-  - Id: 4119
-    AegisName: Bathory_Card
-    Name: Bathory Card
+  - Id: 4043
+    AegisName: Dark_Jera_Rune
+    Name: Dark Jera Rune
     Type: Card
     Buy: 20
     Weight: 10
@@ -1814,9 +540,45 @@ Body:
       BuyingStore: true
     Script: |
       bonus bDefEle,Ele_Dark;
-  - Id: 4120
-    AegisName: Petit__Card
-    Name: Sky Petite Card
+  - Id: 4044
+    AegisName: Holy_Jera_Rune
+    Name: Holy Jera Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Armor: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus bDefEle,Ele_Holy;
+  - Id: 4045
+    AegisName: Ghost_Jera_Rune
+    Name: Ghost Jera Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Armor: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus bDefEle,Ele_Ghost;
+  - Id: 4046
+    AegisName: Poison_Jera_Rune
+    Name: Poison Jera Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Armor: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus bDefEle,Ele_Poison;
+  - Id: 4047
+    AegisName: Angel_Inguz_Rune
+    Name: Angel Inguz Rune
     Type: Card
     Buy: 20
     Weight: 10
@@ -1825,50 +587,10 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus2 bSubRace,RC_Dragon,30;
-  - Id: 4121
-    AegisName: Phreeoni_Card
-    Name: Phreeoni Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bHit,100;
-  - Id: 4122
-    AegisName: Deviruchi_Card
-    Name: Deviruchi Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bStr,1;
-      bonus2 bResEff,Eff_Blind,10000;
-  - Id: 4123
-    AegisName: Eddga_Card
-    Name: Eddga Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bMaxHPrate,-25;
-      bonus bNoWalkDelay;
-  - Id: 4124
-    AegisName: Medusa_Card
-    Name: Medusa Card
+        bonus2 bSubRace,RC_Angel,20;
+  - Id: 4048
+    AegisName: Brute_Inguz_Rune
+    Name: Brute Inguz Rune
     Type: Card
     Buy: 20
     Weight: 10
@@ -1877,56 +599,10 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus2 bSubRace,RC_Demon,15;
-      bonus2 bResEff,Eff_Stone,10000;
-  - Id: 4125
-    AegisName: Deviace_Card
-    Name: Deviace Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddRace,RC_DemiHuman,7;
-      bonus2 bAddRace,RC_Player_Human,7;
-      bonus2 bAddRace,RC_Brute,7;
-      bonus2 bAddRace,RC_Player_Doram,7;
-      bonus2 bAddRace,RC_Plant,7;
-      bonus2 bAddRace,RC_Insect,7;
-  - Id: 4126
-    AegisName: Minorous_Card
-    Name: Minorous Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddSize,Size_Large,15;
-      bonus bBaseAtk,5;
-  - Id: 4127
-    AegisName: Nightmare_Card
-    Name: Nightmare Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bResEff,Eff_Sleep,10000;
-      bonus bAgi,1;
-  - Id: 4128
-    AegisName: Golden_Bug_Card
-    Name: Golden Thief Bug Card
+        bonus2 bSubRace,RC_Brute,20;
+  - Id: 4049
+    AegisName: DemiHuman_Inguz_Rune
+    Name: Demi-Human Inguz Rune
     Type: Card
     Buy: 20
     Weight: 10
@@ -1935,24 +611,134 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus bNoMagicDamage,100;
-      bonus bUseSPrate,100;
-  - Id: 31023
-    AegisName: XM_Celine_Kimi_Card
-    Name: Celine Kimi Card
+        bonus2 bSubRace,RC_DemiHuman,20;
+        bonus2 bSubRace,RC_Player_Human,20;
+  - Id: 4050
+    AegisName: Demon_Inguz_Rune
+    Name: Demon Inguz Rune
     Type: Card
     Buy: 20
     Weight: 10
     Locations:
-      Right_Hand: true
+      Left_Hand: true
     Flags:
       BuyingStore: true
-      DropEffect: CLIENT
     Script: |
-      bonus bMatkRate,25;
-  - Id: 4129
-    AegisName: Baphomet__Card
-    Name: Bapho Jr. Card
+        bonus2 bSubRace,RC_Demon,20;
+  - Id: 4051
+    AegisName: Dragon_Inguz_Rune
+    Name: Dragon Inguz Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Left_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+        bonus2 bSubRace,RC_Dragon,20;
+  - Id: 4052
+    AegisName: Fish_Inguz_Rune
+    Name: Fish Inguz Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Left_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+        bonus2 bSubRace,RC_Fish,20;
+  - Id: 4053
+    AegisName: Formless_Inguz_Rune
+    Name: Formless Inguz Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Left_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+        bonus2 bSubRace,RC_Formless,20;
+  - Id: 4054
+    AegisName: Insect_Inguz_Rune
+    Name: Insect Inguz Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Left_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+        bonus2 bSubRace,RC_Insect,20;
+  - Id: 4055
+    AegisName: Plant_Inguz_Rune
+    Name: Plant Inguz Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Left_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+        bonus2 bSubRace,RC_Plant,20;
+  - Id: 4056
+    AegisName: Undead_Inguz_Rune
+    Name: Undead Inguz Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Left_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+        bonus2 bSubRace,RC_Undead,20;
+  - Id: 4057
+    AegisName: Small_Opila_Rune
+    Name: Small Opila Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Left_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+        bonus2 bSubSize,Size_Small,10;
+        bonus2 bMagicSubSize,Size_Small,10;
+  - Id: 4058
+    AegisName: Medium_Opila_Rune
+    Name: Medium Opila Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Left_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+        bonus2 bSubSize,Size_Medium,10;
+        bonus2 bMagicSubSize,Size_Medium,10;
+  - Id: 4059
+    AegisName: Large_Opila_Rune
+    Name: Large Opila Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Left_Hand: true
+    Flags:
+      BuyingStore: true
+    Script: |
+        bonus2 bSubSize,Size_Large,10;
+        bonus2 bMagicSubSize,Size_Large,10;
+  - Id: 4060
+    AegisName: Fire_Tyr_Rune
+    Name: Fire Tyr Rune
     Type: Card
     Buy: 20
     Weight: 10
@@ -1961,50 +747,10 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus bAgi,3;
-      bonus bCritical,1;
-  - Id: 4130
-    AegisName: Scorpion_King_Card
-    Name: Scorpion King Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEle,Ele_Undead,20;
-  - Id: 4131
-    AegisName: Moonlight_Flower_Card
-    Name: Moonlight Flower Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bSpeedRate,25;
-  - Id: 4132
-    AegisName: Mistress_Card
-    Name: Mistress Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bNoGemStone;
-      bonus bUseSPrate,25;
-  - Id: 4133
-    AegisName: Daydric_Card
-    Name: Raydric Card
+      bonus2 bSubEle,Ele_Fire,15;
+  - Id: 4061
+    AegisName: Water_Tyr_Rune
+    Name: Water Tyr Rune
     Type: Card
     Buy: 20
     Weight: 10
@@ -2013,398 +759,10 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus2 bSubEle,Ele_Neutral,20;
-  - Id: 4134
-    AegisName: Dracula_Card
-    Name: Dracula Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSPDrainRate,100,5;
-  - Id: 4135
-    AegisName: Orc_Load_Card
-    Name: Orc Lord Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bShortWeaponDamageReturn,30;
-  - Id: 4136
-    AegisName: Khalitzburg_Card
-    Name: Khalitzburg Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubRace,RC_Demon,30;
-  - Id: 4137
-    AegisName: Drake_Card
-    Name: Drake Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bNoSizeFix;
-  - Id: 4138
-    AegisName: Anubis_Card
-    Name: Anubis Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubRace,RC_Angel,30;
-  - Id: 4139
-    AegisName: Joker_Card
-    Name: Joker Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      skill "SK_TF_STEAL",1;
-  - Id: 4140
-    AegisName: Knight_Of_Abyss_Card
-    Name: Abysmal Knight Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddClass,Class_Boss,25;
-  - Id: 4141
-    AegisName: Evil_Druid_Card
-    Name: Evil Druid Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bDefEle,Ele_Undead;
-      bonus bInt,1;
-      bonus bDef,1;
-  - Id: 4142
-    AegisName: Doppelganger_Card
-    Name: Doppelganger Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bAspdRate,10;
-  - Id: 4143
-    AegisName: Orc_Hero_Card
-    Name: Orc Hero Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bVit,3;
-      bonus2 bResEff,Eff_Stun,10000;
-  - Id: 4144
-    AegisName: Osiris_Card
-    Name: Osiris Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bRestartFullRecover;
-  - Id: 300011
-    AegisName: Holy_Frus_Card
-    Name: Holy Frus Card
-    Type: Card
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bMagicAtkEle,Ele_Holy,10;
-  - Id: 300013
-    AegisName: Reginleif_Card
-    Name: Reginleif Card
-    Type: Card
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus bUnbreakableArmor;
-      bonus bAtkRate,30;
-      bonus bMaxHPrate,-15;
-  - Id: 300014
-    AegisName: Ingrid_Card
-    Name: Ingrid Card
-    Type: Card
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus bUnbreakableArmor;
-      bonus bAtkRate,-15;
-      bonus bMaxHPrate,40;
-      bonus2 bHPLossRate,1000,4000;
-    UnEquipScript: |
-      heal -10000,0;
-  - Id: 300008
-    AegisName: Angelgolt_Card
-    Name: Angelgolt Card
-    Type: Card
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bMagicAddRace,RC_Demon,10;
-  - Id: 300012
-    AegisName: Holy_Skogul_Card
-    Name: Holy Skogul Card
-    Type: Card
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus bHealPower,10;
-  - Id: 4145
-    AegisName: Berzebub_Card
-    Name: Berzebub Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bCastrate,-30;
-  - Id: 4146
-    AegisName: Maya_Card
-    Name: Maya Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bMagicDamageReturn,50;
-  - Id: 4147
-    AegisName: Baphomet_Card
-    Name: Baphomet Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bHit,-10;
-      bonus bSplashRange,1;
-  - Id: 4148
-    AegisName: Pharaoh_Card
-    Name: Pharaoh Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bUseSPrate,-30;
-  - Id: 4149
-    AegisName: Gargoyle_Card
-    Name: Gargoyle Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAddMonsterDropItem,12028,RC_Insect,100;
-  - Id: 4150
-    AegisName: Goat_Card
-    Name: Goat Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      if (getrefine()<6) {
-         bonus bDef,2;
-         bonus bMdef,5;
-      }
-  - Id: 4151
-    AegisName: Gajomart_Card
-    Name: Gajomart Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubRace,RC_Plant,-20;
-      bonus2 bExpAddRace,RC_Plant,10;
-  - Id: 4152
-    AegisName: Galapago_Card
-    Name: Galapago Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddItemGroupHealRate,IG_Juice,50;
-      bonus3 bAddMonsterDropItem,531,RC_Insect,300;
-      bonus3 bAddMonsterDropItem,532,RC_Insect,300;
-      bonus3 bAddMonsterDropItem,534,RC_Insect,300;
-  - Id: 4153
-    AegisName: Crab_Card
-    Name: Crab Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bBaseAtk,5;
-      bonus2 bAddDamageClass,1266,30;
-  - Id: 4154
-    AegisName: Rice_Cake_Boy_Card
-    Name: Dumpling Child Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddItemGroupHealRate,IG_Candy,50;
-      bonus3 bAddMonsterDropItem,529,RC_DemiHuman,300;
-      bonus3 bAddMonsterDropItem,530,RC_DemiHuman,100;
-  - Id: 4155
-    AegisName: Goblin_Leader_Card
-    Name: Goblin Leader Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddRace2,RC2_Goblin,30;
-  - Id: 4156
-    AegisName: Steam_Goblin_Card
-    Name: Goblin Steamrider Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bCritAtkRate,10;
-      bonus2 bCriticalAddRace,RC_Formless,7;
-  - Id: 4157
-    AegisName: Goblin_Archer_Card
-    Name: Goblin Archer Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bCritAtkRate,10;
-      bonus2 bCriticalAddRace,RC_Undead,7;
-  - Id: 4158
-    AegisName: Flying_Deleter_Card
-    Name: Sky Deleter Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bHPrecovRate,-100;
-      bonus bHPGainValue,100;
-  - Id: 4159
-    AegisName: Nine_Tail_Card
-    Name: Nine Tail Card
+      bonus2 bSubEle,Ele_Water,15;
+  - Id: 4062
+    AegisName: Wind_Tyr_Rune
+    Name: Wind Tyr Rune
     Type: Card
     Buy: 20
     Weight: 10
@@ -2413,202 +771,10 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus bAgi,2;
-      if (getrefine()>8)
-         bonus bFlee,20;
-  - Id: 4160
-    AegisName: Antique_Firelock_Card
-    Name: Firelock Soldier Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bStr,2;
-      if (getrefine()>8) {
-         bonus bMaxHPrate,10;
-         bonus bMaxSPrate,10;
-      }
-  - Id: 4161
-    AegisName: Grand_Peco_Card
-    Name: Grand Peco Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAutoSpellWhenHit,"PR_GLORIA",1,50;
-  - Id: 4162
-    AegisName: Grizzly_Card
-    Name: Grizzly Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEffWhenHit,Eff_Blind,300;
-  - Id: 4163
-    AegisName: Gryphon_Card
-    Name: Gryphon Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bFlee,2;
-      bonus bCritical,7;
-      if (BaseClass == Job_Swordman)
-         bonus3 bAutoSpell,"SK_KN_BOWLINGBASH",5,10;
-  - Id: 4164
-    AegisName: Gullinbursti_Card
-    Name: Gullinbursti Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubRace,RC_Fish,-20;
-      bonus2 bExpAddRace,RC_Fish,10;
-  - Id: 4165
-    AegisName: Gig_Card
-    Name: Gig Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSPGainRace,RC_Insect,5;
-    UnEquipScript: |
-      heal 0,-5;
-  - Id: 4166
-    AegisName: Nightmare_Terror_Card
-    Name: Nightmare Terror Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEffWhenHit,Eff_Curse,300;
-  - Id: 4167
-    AegisName: Neraid_Card
-    Name: Nereid Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSPGainRace,RC_Brute,5;
-      bonus2 bSPGainRace,RC_Player_Doram,5;
-    UnEquipScript: |
-      heal 0,-5;
-  - Id: 4168
-    AegisName: Dark_Lord_Card
-    Name: Dark Lord Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAutoSpellWhenHit,"SK_WZ_METEORSTORM",5,100;
-  - Id: 4169
-    AegisName: Dark_Illusion_Card
-    Name: Dark Illusion Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bMaxHPrate,-10;
-      bonus bMaxSPrate,-10;
-      bonus bCastrate,-10;
-  - Id: 4170
-    AegisName: Dark_Frame_Card
-    Name: Dark Frame Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEffWhenHit,Eff_Stone,600;
-  - Id: 4171
-    AegisName: Dark_Priest_Card
-    Name: Dark Priest Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSPVanishRate,50,10;
-      if (BaseJob == Job_Sage)
-         bonus bSPDrainValue,1;
-  - Id: 4172
-    AegisName: The_Paper_Card
-    Name: The Paper Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bCritAtkRate,20;
-      bonus bSPDrainValue,-1;
-  - Id: 4173
-    AegisName: Demon_Pungus_Card
-    Name: Demon Pungus Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEffWhenHit,Eff_Sleep,600;
-  - Id: 4174
-    AegisName: Deviling_Card
-    Name: Deviling Card
+      bonus2 bSubEle,Ele_Wind,15;
+  - Id: 4063
+    AegisName: Earth_Tyr_Rune
+    Name: Earth Tyr Rune
     Type: Card
     Buy: 20
     Weight: 10
@@ -2617,2402 +783,22 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus2 bSubEle,Ele_Neutral,50;
-      bonus2 bSubEle,Ele_Water,-50;
-      bonus2 bSubEle,Ele_Earth,-50;
-      bonus2 bSubEle,Ele_Fire,-50;
-      bonus2 bSubEle,Ele_Wind,-50;
-      bonus2 bSubEle,Ele_Poison,-50;
-      bonus2 bSubEle,Ele_Holy,-50;
-      bonus2 bSubEle,Ele_Dark,-50;
-      bonus2 bSubEle,Ele_Ghost,-50;
-      bonus2 bSubEle,Ele_Undead,-50;
-  - Id: 4175
-    AegisName: Poison_Toad_Card
-    Name: Poisonous Toad Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAutoSpell,"SK_TF_POISONSLASH",1,20;
-      bonus2 bAddSkillBlow,52,5;
-  - Id: 4176
-    AegisName: Dullahan_Card
-    Name: Dullahan Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bCritAtkRate,10;
-      bonus2 bCriticalAddRace,RC_Dragon,7;
-  - Id: 27159
-    AegisName: Uzhas_Card
-    Name: Uzhas Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bMagicAddRace,RC_Demon,(getrefine() >= 9 ? 15 : 10);
-  - Id: 27160
-    AegisName: Vavayaga_Card
-    Name: Vavayaga Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus bFlee,getrefine()*2;
-  - Id: 4177
-    AegisName: Dryad_Card
-    Name: Dryad Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAddMonsterDropItem,993,RC_Plant,100;
-      bonus2 bSubEle,Ele_Earth,10;
-  - Id: 4178
-    AegisName: Dragon_Tail_Card
-    Name: Dragon Tail Card
+      bonus2 bSubEle,Ele_Earth,15;
+  - Id: 4064
+    AegisName: Dark_Tyr_Rune
+    Name: Dark Tyr Rune
     Type: Card
     Buy: 20
     Weight: 10
     Locations:
       Garment: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bAgi,1;
-      bonus bFlee,10;
-      bonus2 bSkillAtk,"SK_AC_DOUBLESTRAFE",5;
-      bonus2 bSkillAtk,"SK_AC_ARROWSHOWER",5;
-  - Id: 4470
-    AegisName: Nepenthes_Card
-    Name: Nepenthes Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bMagicAddRace,RC_Plant,10;
-  - Id: 4179
-    AegisName: Dragon_Fly_Card
-    Name: Dragon Fly Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bAgi,1;
-  - Id: 4180
-    AegisName: Driller_Card
-    Name: Driller Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSPGainRace,RC_Dragon,5;
-    UnEquipScript: |
-      heal 0,-5;
-  - Id: 4181
-    AegisName: Disguise_Card
-    Name: Disguise Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEffWhenHit,Eff_Silence,300+600*(readparam(bVit)>=77);
-  - Id: 4182
-    AegisName: Diabolic_Card
-    Name: Diabolic Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSPGainRace,RC_Demon,5;
-    UnEquipScript: |
-      heal 0,-5;
-  - Id: 4183
-    AegisName: Vagabond_Wolf_Card
-    Name: Vagabond Wolf Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bStr,1;
-  - Id: 4184
-    AegisName: Lava_Golem_Card
-    Name: Lava Golem Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddRace2,RC2_Golem,30;
-  - Id: 4185
-    AegisName: Rideword_Card
-    Name: Rideword Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bInt,1;
-      if (BaseClass == Job_Acolyte) {
-         bonus bInt,1;
-         bonus bMdef,1;
-      }
-  - Id: 4186
-    AegisName: Raggler_Card
-    Name: Raggler Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bStr,1;
-      bonus bVit,1;
-  - Id: 4187
-    AegisName: Raydric_Archer_Card
-    Name: Raydric Archer Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAddMonsterDropItem,12030,RC_Demon,100;
-  - Id: 4188
-    AegisName: Leib_Olmai_Card
-    Name: Leib Olmai Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubEle,Ele_Fire,10;
-      bonus3 bAddMonsterDropItem,990,RC_Brute,100;
-  - Id: 4189
-    AegisName: Wraith_Dead_Card
-    Name: Wraith Dead Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEffWhenHit,Eff_Curse,600;
-  - Id: 4190
-    AegisName: Wraith_Card
-    Name: Wraith Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAddMonsterDropItem,12027,RC_Undead,100;
-  - Id: 4191
-    AegisName: Loli_Ruri_Card
-    Name: Loli Ruri Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAutoSpellWhenHit,"SK_AL_HEAL",3,50;
-  - Id: 4192
-    AegisName: Rotar_Zairo_Card
-    Name: Rotar Zairo Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bCritAtkRate,10;
-      bonus2 bCriticalAddRace,RC_Fish,7;
-  - Id: 4193
-    AegisName: Lude_Card
-    Name: Lude Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      if (BaseJob == Job_Novice || BaseJob == Job_SuperNovice)
-         bonus3 bAutoSpellWhenHit,"SK_BS_ENDURE",1,200;
-  - Id: 4194
-    AegisName: Rybio_Card
-    Name: Rybio Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEffWhenHit,Eff_Stun,300+600*(readparam(bDex)>=77);
-  - Id: 4195
-    AegisName: Leaf_Cat_Card
-    Name: Leaf Cat Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubEle,Ele_Water,10;
-      bonus3 bAddMonsterDropItem,991,RC_Fish,100;
-  - Id: 4196
-    AegisName: Marin_Card
-    Name: Marin Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddMonsterDropItem,909,2000;
-      bonus2 bAddMonsterDropItem,7126,10;
-  - Id: 4197
-    AegisName: Mastering_Card
-    Name: Mastering Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bLuk,1;
-  - Id: 4198
-    AegisName: Maya_Puple_Card
-    Name: Maya Purple Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bIntravision;
-  - Id: 4199
-    AegisName: Merman_Card
-    Name: Merman Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bHPrecovRate,10;
-      bonus bSPrecovRate,10;
-  - Id: 4200
-    AegisName: Megalith_Card
-    Name: Megalith Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      if (getrefine()<6)
-         bonus bMdef,7;
-  - Id: 4201
-    AegisName: Majoruros_Card
-    Name: Majoruros Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEffWhenHit,Eff_Stun,600;
-  - Id: 4202
-    AegisName: Civil_Servant_Card
-    Name: Mao Guai Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEle,Ele_Ghost,20;
-  - Id: 4203
-    AegisName: Mutant_Dragon_Card
-    Name: Mutant Dragonoid Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bBaseAtk,15;
-      bonus3 bAutoSpell,"MG_FIREBALL",3+2*(getskilllv("MG_FIREBALL") == 10),50;
-  - Id: 4204
-    AegisName: Mini_Demon_Card
-    Name: Mini Demon Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubRace,RC_Brute,-20;
-      bonus2 bSubRace,RC_Player_Doram,-20;
-      bonus2 bExpAddRace,RC_Brute,10;
-  - Id: 4205
-    AegisName: Mimic_Card
-    Name: Mimic Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddMonsterDropItem,603,10;
-  - Id: 4206
-    AegisName: Mystcase_Card
-    Name: Myst Case Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddMonsterDropItem,644,30;
-  - Id: 4207
-    AegisName: Mysteltainn_Card
-    Name: Mysteltainn Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubSize,Size_Small,25;
-      bonus bDef,1;
-  - Id: 4208
-    AegisName: Miyabi_Ningyo_Card
-    Name: Miyabi Doll Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bMaxSPrate,10;
-      bonus2 bSkillAtk,"SK_MG_FROSTDIVER",5;
-  - Id: 4209
-    AegisName: Violy_Card
-    Name: Violy Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAutoSpell,"BA_FROSTJOKER",1+4*(getskilllv("BA_FROSTJOKER") == 5),20;
-  - Id: 4210
-    AegisName: Wander_Man_Card
-    Name: Wanderer Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      if (!isequipped(4172,4257,4230,4272))
-         bonus3 bAutoSpell,"RG_INTIMIDATE",1,20;
-      if (BaseClass == Job_Thief)
-         bonus bFlee,20;
-  - Id: 4211
-    AegisName: Vocal_Card
-    Name: Vocal Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bMdef,3;
-  - Id: 4212
-    AegisName: Bon_Gun_Card
-    Name: Bongun Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAutoSpell,"SK_SM_BASH",1,20;
-      bonus2 bAddSkillBlow,"SK_SM_BASH",5;
-      bonus2 bAddDefMonster,1026,-100;
-  - Id: 4213
-    AegisName: Brilight_Card
-    Name: Brilight Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEffWhenHit,Eff_Silence,600;
-  - Id: 4214
-    AegisName: Bloody_Murderer_Card
-    Name: Bloody Murderer Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bCritAtkRate,10;
-      bonus2 bCriticalAddRace,RC_Insect,7;
-  - Id: 4215
-    AegisName: Blazzer_Card
-    Name: Blazer Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddMonsterDropItemGroup,IG_Food,600;
-  - Id: 4216
-    AegisName: Sasquatch_Card
-    Name: Sasquatch Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEffWhenHit,Eff_Freeze,600;
-  - Id: 4217
-    AegisName: Live_Peach_Tree_Card
-    Name: Enchanted Peach Tree Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAutoSpell,"SK_AL_HEAL",1+9*(getskilllv("SK_AL_HEAL") == 10),20;
-  - Id: 4218
-    AegisName: Succubus_Card
-    Name: Succubus Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bVit,-3;
-      bonus bHPrecovRate,-20;
-      bonus bMaxHP,1000;
-  - Id: 27264
-    AegisName: Tower_Shadow_Card
-    Name: Tower Shadow Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bSubEle,Ele_Dark,30;
-      bonus2 bSubEle,Ele_Undead,30;
-      bonus2 bSubEle,Ele_Holy,-30;
-      bonus2 bSubEle,Ele_Fire,-30;
-  - Id: 4219
-    AegisName: Sageworm_Card
-    Name: Sage Worm Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddMonsterDropItem,715,30;
-      bonus2 bAddMonsterDropItem,716,30;
-      bonus2 bAddMonsterDropItem,717,30;
-  - Id: 4220
-    AegisName: Solider_Card
-    Name: Solider Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bDef,2;
-      bonus bMdef,2;
-  - Id: 4627
-    AegisName: Big_Bell_Card
-    Name: Big Bell Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bAddRace,RC_Formless,10;
-      bonus2 bAddRace,RC_Demon,10;
-  - Id: 4626
-    AegisName: Big_Ben_Card
-    Name: Big Ben Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bMagicAddRace,RC_Formless,5;
-      bonus2 bMagicAddRace,RC_Demon,5;
-  - Id: 300278
-    AegisName: Void_Mimic_Card
-    Name: Void Mimic Card
-    Type: Card
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus bCritAtkRate,15;
-  - Id: 27316
-    AegisName: Caput_Card
-    Name: Twin Caput Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bSubEle,Ele_Poison,10;
-  - Id: 300016
-    AegisName: Treasure_Mimic_Card
-    Name: Treasure Mimic Card
-    Type: Card
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus bCritical,5;
-      bonus bFlee,30;
-  - Id: 4631
-    AegisName: Owl_Viscount_Card
-    Name: Owl Viscount Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus bAspdRate,3;
-  - Id: 4632
-    AegisName: Owl_Marquees_Card
-    Name: Owl Marquees Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus5 bAutoSpell,"SK_WZ_MAGICCRASHER",5,20,BF_WEAPON,0;
-  - Id: 4221
-    AegisName: Skeleton_General_Card
-    Name: Skeleton General Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubRace,RC_Insect,-20;
-      bonus2 bExpAddRace,RC_Insect,10;
-  - Id: 4222
-    AegisName: Skel_Prisoner_Card
-    Name: Skeleton Prisoner Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEffWhenHit,Eff_Sleep,300;
-  - Id: 4223
-    AegisName: Stalactic_Golem_Card
-    Name: Stalactic Golem Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bDef,1;
-      bonus2 bResEff,Eff_Stun,2000;
-  - Id: 4224
-    AegisName: Stem_Worm_Card
-    Name: Stem Worm Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAddMonsterDropItem,12032,RC_Brute,100;
-  - Id: 4225
-    AegisName: Stone_Shooter_Card
-    Name: Stone Shooter Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bBaseAtk,10;
-      bonus bHit,10;
-  - Id: 4226
-    AegisName: Sting_Card
-    Name: Sting Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bDef,2;
-      if (getrefine()>8)
-         bonus bMdef,5;
-  - Id: 4227
-    AegisName: Spring_Rabbit_Card
-    Name: Spring Rabbit Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddItemGroupHealRate,IG_Meat,50;
-      bonus3 bAddMonsterDropItem,517,RC_Brute,200;
-      bonus3 bAddMonsterDropItem,528,RC_Brute,200;
-  - Id: 4228
-    AegisName: Sleeper_Card
-    Name: Sleeper Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAddMonsterDropItem,12031,RC_Fish,100;
-  - Id: 4229
-    AegisName: C_Tower_Manager_Card
-    Name: Tower Keeper Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bInt,1;
-      bonus bCastrate,-5;
-  - Id: 4230
-    AegisName: Shinobi_Card
-    Name: Shinobi Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bAgi,1;
-      bonus3 bAutoSpellWhenHit,"SK_AS_CLOAKING",5,100;
-  - Id: 4231
-    AegisName: Increase_Soil_Card
-    Name: Mi Gao Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddDamageClass,1285,-50;
-      bonus2 bAddDamageClass,1286,-50;
-      bonus2 bAddDamageClass,1287,-50;
-      bonus2 bAddDamageClass,1899,-50;
-      bonus2 bAddDamageClass,1900,-50;
-  - Id: 4513
-    AegisName: Angra_Mantis_Card
-    Name: Angra Mantis Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus bCritAtkRate,2;
-      if (BaseClass == Job_Thief) {
-         bonus bCritAtkRate,getrefine()/2;
-      }
-  - Id: 4432
-    AegisName: Magmaring_Card
-    Name: Magmaring Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus bBaseAtk,5;
-      bonus2 bAddEle,Ele_Earth,10;
-      bonus2 bCriticalAddRace,RC_Brute,15;
-      bonus2 bCriticalAddRace,RC_Player_Doram,15;
-      bonus2 bCriticalAddRace,RC_Plant,15;
-  - Id: 4514
-    AegisName: Pom_Spider_Card
-    Name: Pom Spider Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bAddRace,RC_Undead,20;
-  - Id: 4232
-    AegisName: Wild_Ginseng_Card
-    Name: Hermit Plant Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddItemGroupHealRate,IG_Herb,50;
-      bonus3 bAddMonsterDropItem,507,RC_Plant,300;
-      bonus3 bAddMonsterDropItem,508,RC_Plant,200;
-      bonus3 bAddMonsterDropItem,509,RC_Plant,100;
-  - Id: 4233
-    AegisName: Baby_Leopard_Card
-    Name: Baby Leopard Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bLuk,3;
-      if (BaseClass == Job_Merchant)
-         bonus bUnbreakableArmor;
-  - Id: 4234
-    AegisName: Anolian_Card
-    Name: Anolian Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAutoSpellWhenHit,"SK_AC_IMPROVECONCENTRATION",1+9*(getskilllv("SK_AC_IMPROVECONCENTRATION") == 10),30;
-  - Id: 4235
-    AegisName: Cookie_XMAS_Card
-    Name: Christmas Cookie Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubRace,RC_Angel,-20;
-      bonus2 bExpAddRace,RC_Angel,10;
-  - Id: 4236
-    AegisName: Amon_Ra_Card
-    Name: Amon Ra Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bAllStats,1;
-      bonus3 bAutoSpellWhenHit,"SK_PR_KYRIE",10,(30+70*(readparam(bInt)>=99));
-  - Id: 4237
-    AegisName: Owl_Duke_Card
-    Name: Owl Duke Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAutoSpell,"SK_PR_IMPOSITIO",3,3;
-  - Id: 4238
-    AegisName: Owl_Baron_Card
-    Name: Owl Baron Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAutoSpell,"PR_LEXAETERNA",1,30;
-  - Id: 4239
-    AegisName: Iron_Fist_Card
-    Name: Iron Fist Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubRace,RC_Formless,-20;
-      bonus2 bExpAddRace,RC_Formless,10;
-  - Id: 4240
-    AegisName: Arclouse_Card
-    Name: Arclouze Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      if (getrefine()<6) {
-         bonus bDef,2;
-         bonus bMdef,3;
-      }
-  - Id: 4241
-    AegisName: Archangeling_Card
-    Name: Arc Angeling Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bMaxHP,300;
-      if (readparam(bLuk)>=77) {
-         bonus bHPrecovRate,100;
-         bonus bSPrecovRate,100;
-      }
-  - Id: 4242
-    AegisName: Apocalips_Card
-    Name: Apocalipse Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bVit,2;
-      if (getrefine()>8)
-         bonus bMaxHP,800;
-  - Id: 4244
-    AegisName: Alarm_Card
-    Name: Alarm Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAutoSpellWhenHit,"MG_SIGHT",1,200;
-      bonus bMaxHP,300;
-      bonus bVit,1;
-  - Id: 4245
-    AegisName: Am_Mut_Card
-    Name: Am Mut Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubRace,RC_DemiHuman,-20;
-      bonus2 bSubRace,RC_Player_Human,-20;
-      bonus2 bExpAddRace,RC_DemiHuman,10;
-  - Id: 4246
-    AegisName: Assulter_Card
-    Name: Assaulter Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bCritAtkRate,10;
-      bonus2 bCriticalAddRace,RC_DemiHuman,7;
-      bonus2 bCriticalAddRace,RC_Player_Human,7;
-  - Id: 4247
-    AegisName: Aster_Card
-    Name: Aster Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bBaseAtk,5;
-      bonus2 bAddDamageClass,1074,30;
-  - Id: 4248
-    AegisName: Ancient_Mummy_Card
-    Name: Ancient Mummy Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAutoSpellWhenHit,"SK_AL_SIGNUMCRUCIS",5,30;
-  - Id: 4249
-    AegisName: Ancient_Worm_Card
-    Name: Ancient Worm Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubRace,RC_Demon,-20;
-      bonus2 bExpAddRace,RC_Demon,10;
-  - Id: 4250
-    AegisName: Executioner_Card
-    Name: Executioner Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubSize,Size_Large,25;
-      bonus bDef,1;
-  - Id: 4251
-    AegisName: Elder_Card
-    Name: Elder Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddDamageClass,1285,40;
-      bonus2 bAddDamageClass,1286,40;
-      bonus2 bAddDamageClass,1287,40;
-      bonus2 bAddDamageClass,1899,40;
-      bonus2 bAddDamageClass,1900,40;
-  - Id: 4252
-    AegisName: Alligator_Card
-    Name: Alligator Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bLongAtkDef,5;
-  - Id: 4253
-    AegisName: Alice_Card
-    Name: Alice Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubClass,Class_Boss,40;
-      bonus2 bSubClass,Class_Normal,-40;
-  - Id: 27354
-    AegisName: Polluted_Raydric_Card
-    Name: Polluted Raydric Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      DropEffect: CLIENT
-    Script: |
-      bonus bAtkRate,5;
-  - Id: 27355
-    AegisName: Polluted_Ray_A_Card
-    Name: Polluted Raydric Archer Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      DropEffect: CLIENT
-    Script: |
-      bonus bLongAtkRate,10;
-  - Id: 27357
-    AegisName: Mutant_Sting_Card
-    Name: Mutant Sting Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      DropEffect: CLIENT
-    Script: |
-      bonus bDef,100+25*(getrefine()/3);
-  - Id: 4457
-    AegisName: Nahtzigger_Card
-    Name: Naght Sieger Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bMagicAtkEle,Ele_Ghost,30;
-  - Id: 27165
-    AegisName: Faceworm_D_Card
-    Name: Dark Faceworm Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus bVit,-1;
-      bonus bInt,-1;
-      bonus bDelayrate,-3;
-  - Id: 27161
-    AegisName: Mavka_Card
-    Name: Mavka Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bMagicAtkEle,Ele_Fire,20;
-      bonus2 bMagicAtkEle,Ele_Earth,20;
-  - Id: 4458
-    AegisName: Duneirre_Card
-    Name: Duneyrr Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus bBaseAtk,10;
-      autobonus "{ bonus bFlee2,10; }",10,4000,BF_NORMAL,"{ specialeffect2 EF_HASTEUP; }";
-  - Id: 4468
-    AegisName: Cave_Specter_Card
-    Name: Cave Specter Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus bBaseAtk,10;
-      bonus2 bAddMonsterDropItem,7932,10;
-      bonus2 bAddMonsterDropItem,7933,10;
-      bonus2 bAddMonsterDropItem,7934,10;
-      bonus2 bAddMonsterDropItem,7935,10;
-      bonus2 bAddMonsterDropItem,7936,10;
-      bonus2 bAddMonsterDropItem,7937,10;
-  - Id: 4449
-    AegisName: Cave_Shadow_Card
-    Name: Cave Shadow Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bSubEle,Ele_Dark,20;
-      bonus2 bAddEle,Ele_Dark,5;
-  - Id: 27163
-    AegisName: Faceworm_Card
-    Name: Faceworm Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus bAgi,-1;
-      bonus bDex,-1;
-      bonus bAspdRate,3;
-  - Id: 27167
-    AegisName: Faceworm_L_Card
-    Name: Faceworm Larva Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bSubEle,Ele_Neutral,15;
-      bonus2 bMagicAtkEle,Ele_Water,getrefine()*3;
-  - Id: 27361
-    AegisName: Polluted_W_Man_Card
-    Name: Polluted Wanderer Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bAddSize,Size_Large,30;
-      bonus2 bAddSize,Size_Medium,30;
-  - Id: 27314
-    AegisName: Venenum_Card
-    Name: Venenum Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bAddRace,RC_Brute,15;
-      bonus2 bAddRace,RC_Player_Doram,15;
-  - Id: 300253
-    AegisName: Venedi_Card
-    Name: Venedi Card
-    Type: Card
-    Weight: 10
-    Locations:
-      Head_Top: true
-      Head_Mid: true
-      Head_Low: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus bMatk,15;
-      bonus2 bMagicAtkEle,Ele_Poison,7;
-      bonus bUseSPrate,5;
-  - Id: 27315
-    AegisName: Mt_Venenum_Card
-    Name: Mutant Venenum Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bMagicAddRace,RC_Brute,15;
-      bonus2 bMagicAddRace,RC_Player_Doram,15;
-  - Id: 4254
-    AegisName: Tirfing_Card
-    Name: Ogretooth Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubSize,Size_Medium,25;
-      bonus bDef,1;
-  - Id: 4255
-    AegisName: Orc_Lady_Card
-    Name: Orc Lady Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddRace2,3,30;
-  - Id: 4256
-    AegisName: Orc_Archer_Card
-    Name: Orc Archer Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAddMonsterDropItem,12034,RC_DemiHuman,100;
-  - Id: 4257
-    AegisName: Wild_Rose_Card
-    Name: Wild Rose Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bAgi,1;
-      if (BaseClass == Job_Thief)
-         bonus bFlee2,5;
-  - Id: 4258
-    AegisName: Wicked_Nymph_Card
-    Name: Evil Nymph Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bInt,1;
-      bonus bMaxSP,50;
-  - Id: 4259
-    AegisName: Wooden_Golem_Card
-    Name: Wooden Golem Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bDef,1;
-      bonus bHPrecovRate,30;
-  - Id: 4260
-    AegisName: Wootan_Shooter_Card
-    Name: Wootan Shooter Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bDef,1;
-      bonus2 bResEff,Eff_Confusion,2000;
-  - Id: 4261
-    AegisName: Wootan_Fighter_Card
-    Name: Wootan Fighter Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bDef,1;
-      bonus2 bResEff,Eff_Bleeding,2000;
-  - Id: 4262
-    AegisName: Evil_Cloud_Hermit_Card
-    Name: Cloud Hermit Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAddMonsterDropItem,12029,RC_Plant,100;
-  - Id: 4263
-    AegisName: Incant_Samurai_Card
-    Name: Samurai Spector Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bIgnoreDefClass,Class_Normal;
-      bonus bHPrecovRate,-100;
-      bonus2 bHPLossRate,666,10000;
-    UnEquipScript: |
-      if (Hp <= 999 && !getmapflag(strcharinfo(3),mf_pvp) && !getmapflag(strcharinfo(3),mf_pvp_noparty) && !getmapflag(strcharinfo(3),mf_pvp_noguild)) {
-         heal (1-Hp),0;
-      }
-      else {
-         heal -999,0;
-      }
-  - Id: 27360
-    AegisName: Flame_Ghost_Card
-    Name: Flame Ghost Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAutoSpell,"SK_WZ_CRIMSONROCK",3+7*(getskilllv("SK_WZ_CRIMSONROCK") == 10),20;
-  - Id: 27359
-    AegisName: Ice_Ghost_Card
-    Name: Ice Ghost Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAutoSpell,"SK_WZ_ICEBERG",3+7*(getskilllv("SK_WZ_ICEBERG") == 10),20;
-  - Id: 31025
-    AegisName: Sand_Ghost_Card
-    Name: Sand Ghost Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAutoSpell,"SK_WZ_STALAGMITE",3+7*(getskilllv("SK_WZ_STALAGMITE") == 10),20;
-  - Id: 4264
-    AegisName: Wind_Ghost_Card
-    Name: Wind Ghost Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAutoSpell,"SK_WZ_THUNDERSTORM",3+7*(getskilllv("SK_WZ_THUNDERSTORM") == 10),20;
-  - Id: 4265
-    AegisName: Li_Me_Mang_Ryang_Card
-    Name: Jing Guai Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAddMonsterDropItem,12033,RC_Angel,100;
-  - Id: 4266
-    AegisName: Eclipse_Card
-    Name: Eclipse Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bVit,1;
-  - Id: 4267
-    AegisName: Explosion_Card
-    Name: Explosion Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubRace,RC_Dragon,-20;
-      bonus2 bExpAddRace,RC_Dragon,10;
-  - Id: 4268
-    AegisName: Injustice_Card
-    Name: Injustice Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAutoSpell,"SK_AS_SONICBLOW",1,50;
-  - Id: 4269
-    AegisName: Incubus_Card
-    Name: Incubus Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bInt,-3;
-      bonus bSPrecovRate,-20;
-      bonus bMaxSP,150;
-  - Id: 4270
-    AegisName: Giant_Spider_Card
-    Name: Giant Spider Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEffWhenHit,Eff_Poison,600;
-  - Id: 4271
-    AegisName: Giant_Honet_Card
-    Name: Giant Hornet Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubEle,Ele_Wind,10;
-      bonus3 bAddMonsterDropItem,992,RC_Insect,100;
-  - Id: 4272
-    AegisName: Dancing_Dragon_Card
-    Name: Zhu Po Long Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bAgi,1;
-      bonus bCritical,3;
-  - Id: 4273
-    AegisName: Shellfish_Card
-    Name: Shell Fish Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bBaseAtk,5;
-      bonus2 bAddDamageClass,1073,30;
-  - Id: 4274
-    AegisName: Zombie_Master_Card
-    Name: Zombie Master Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSPGainRace,RC_Undead,5;
-    UnEquipScript: |
-      heal 0,-5;
-  - Id: 4275
-    AegisName: Zombie_Prisoner_Card
-    Name: Zombie Prisoner Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubRace,RC_Undead,-20;
-      bonus2 bExpAddRace,RC_Undead,10;
-  - Id: 27123
-    AegisName: Toucan_Card
-    Name: Toucan Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      .@val = 10;
-      if (getrefine() >= 9) {
-         .@val += 5;
-      }
-      bonus2 bMagicAddRace,RC_Insect,.@val;
-  - Id: 27124
-    AegisName: Jaguar_Card
-    Name: Jaguar Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      .@val = 10;
-      if (getrefine() >= 9) {
-         .@val += 5;
-      }
-      bonus2 bMagicAddRace,RC_Brute,.@val;
-  - Id: 4276
-    AegisName: Lord_Of_Death_Card
-    Name: Lord of The Dead Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAddEff,Eff_Stun,500,ATF_SHORT;
-      bonus3 bAddEff,Eff_Curse,500,ATF_SHORT;
-      bonus3 bAddEff,Eff_Silence,500,ATF_SHORT;
-      bonus3 bAddEff,Eff_Poison,500,ATF_SHORT;
-      bonus3 bAddEff,Eff_Bleeding,500,ATF_SHORT;
-      bonus2 bComaClass,Class_Normal,1;
-  - Id: 4277
-    AegisName: Zherlthsh_Card
-    Name: Zealotus Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bLuk,2;
-      bonus2 bSkillAtk,"SK_BA_MELODYSTRIKE",10;
-      bonus2 bSkillAtk,"DC_THROWARROW",10;
-  - Id: 4278
-    AegisName: Gibbet_Card
-    Name: Gibbet Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      if (getrefine()<6)
-         bonus bMdef,5;
-  - Id: 4279
-    AegisName: Deleter_Card
-    Name: Earth Deleter Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bSPrecovRate,-100;
-      bonus bSPGainValue,10;
-    UnEquipScript: |
-      heal 0,-100;
-  - Id: 27162
-    AegisName: Gopinich_Card
-    Name: Gopinich Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bSPDrainValue,5;
-      bonus bUseSPrate,50;
-  - Id: 4280
-    AegisName: Geographer_Card
-    Name: Geographer Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAutoSpellWhenHit,"SK_AL_BLESSING",2+8*(getskilllv("SK_AL_BLESSING") == 10),30;
-  - Id: 4281
-    AegisName: Zipper_Bear_Card
-    Name: Zipper Bear Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bBaseAtk,30;
-      bonus bSPDrainValue,-1;
-      if (BaseClass == Job_Merchant)
-         bonus bUnbreakableWeapon;
-  - Id: 4282
-    AegisName: Tengu_Card
-    Name: Tengu Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddMonsterDropItemGroup,IG_Recovery,600;
-  - Id: 27157
-    AegisName: Wood_Goblin_Card
-    Name: Wood Goblin Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      .@r = getrefine();
-      bonus2 bAddEle,Ele_Water,(.@r >= 9 ? 10 : 5);
-      bonus2 bAddEle,Ele_Earth,(.@r >= 9 ? 10 : 5);
-      bonus2 bSubEle,Ele_Water,-5;
-      bonus2 bSubEle,Ele_Earth,-5;
-  - Id: 27158
-    AegisName: Les_Card
-    Name: Les Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bSubEle,Ele_Wind,30;
-  - Id: 27126
-    AegisName: Boitata_Card
-    Name: Boitata Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bAddEle,Ele_Wind,40;
-      bonus2 bAddEle,Ele_Earth,40;
-      bonus2 bAddRace,RC_Brute,40;
-      bonus2 bAddRace,RC_Player_Doram,40;
-      bonus2 bAddRace,RC_Insect,40;
-  - Id: 4283
-    AegisName: Greatest_General_Card
-    Name: Greatest General Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAutoSpell,"MO_CALLSPIRITS",5,2+18*(BaseClass == Job_Acolyte);
-  - Id: 4284
-    AegisName: Chepet_Card
-    Name: Chepet Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus4 bAutoSpell,"SK_AL_HEAL",5,50,1;
-  - Id: 4285
-    AegisName: Choco_Card
-    Name: Choco Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bFlee2,5;
-      bonus bFlee,10;
-  - Id: 4286
-    AegisName: Karakasa_Card
-    Name: Karakasa Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEffWhenHit,Eff_Confusion,300+600*(readparam(bStr)>=77);
-  - Id: 4287
-    AegisName: Kapha_Card
-    Name: Kapha Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      if (getrefine()<6)
-         bonus bMdef,8;
-  - Id: 4288
-    AegisName: Carat_Card
-    Name: Carat Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bInt,2;
-      if (getrefine()>8)
-         bonus bMaxSP,150;
-  - Id: 4289
-    AegisName: Caterpillar_Card
-    Name: Caterpillar Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSPGainRace,RC_Plant,5;
-    UnEquipScript: |
-      heal 0,-5;
-  - Id: 4290
-    AegisName: Cat_O_Nine_Tail_Card
-    Name: Cat O' Nine Tails Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bMdef,3;
-      bonus bMagicDamageReturn,5;
-  - Id: 4291
-    AegisName: Kobold_Leader_Card
-    Name: Kobold Leader Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddRace2,RC2_Kobold,30;
-  - Id: 4292
-    AegisName: Kobold_Archer_Card
-    Name: Kobold Archer Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bCritAtkRate,10;
-      bonus2 bCriticalAddRace,RC_Plant,7;
-  - Id: 4293
-    AegisName: Cookie_Card
-    Name: Cookie Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bLuk,2;
-      bonus2 bSkillAtk,"SK_AL_HOLYGHOST",10;
-  - Id: 4294
-    AegisName: Quve_Card
-    Name: Quve Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      if (BaseJob == Job_Novice || BaseJob == Job_SuperNovice)
-         bonus3 bAutoSpellWhenHit,"SK_AL_INCREASEAGI",1,100;
-  - Id: 4295
-    AegisName: Kraben_Card
-    Name: Kraben Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEffWhenHit,Eff_Blind,600;
-  - Id: 4296
-    AegisName: Cramp_Card
-    Name: Cramp Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bGetZenyNum,500,1;
-  - Id: 4297
-    AegisName: Cruiser_Card
-    Name: Cruiser Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bCritAtkRate,10;
-      bonus2 bCriticalAddRace,RC_Brute,7;
-      bonus2 bCriticalAddRace,RC_Player_Doram,7;
-  - Id: 4298
-    AegisName: Cremy_Fear_Card
-    Name: Creamy Fear Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEffWhenHit,Eff_Confusion,600;
-  - Id: 4299
-    AegisName: Clock_Card
-    Name: Clock Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAutoSpellWhenHit,"SK_CR_AUTOGUARD",3+7*(getskilllv("SK_CR_AUTOGUARD") == 10),30;
-    UnEquipScript: |
-      sc_end STATUS_AUTOGUARD;
-  - Id: 4300
-    AegisName: Chimera_Card
-    Name: Chimera Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEffWhenHit,Eff_Poison,300+600*(BaseJob == Job_Assassin);
-  - Id: 4301
-    AegisName: Killer_Mantis_Card
-    Name: Killer Mantis Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEffWhenHit,Eff_Bleeding,600;
-  - Id: 4302
-    AegisName: Tao_Gunka_Card
-    Name: Tao Gunka Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bMaxHPrate,100;
-      bonus bDef,-50;
-      bonus bMdef,-50;
-  - Id: 4303
-    AegisName: Whisper_Boss_Card
-    Name: Giant Whisper Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bFlee,10;
-      if (readparam(bStr)>=80) bonus bBaseAtk,20;
-      if (readparam(bVit)>=80) bonus bMaxHPrate,3;
-      if (readparam(bLuk)>=80) bonus bCritical,3;
-  - Id: 4304
-    AegisName: Tamruan_Card
-    Name: Tamruan Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bDef,2;
-      bonus2 bSkillAtk,"SK_CR_SMITE",10;
-      bonus2 bSkillAtk,"SK_CR_SHIELDBOOMERANG",10;
-  - Id: 4305
-    AegisName: Turtle_General_Card
-    Name: Turtle General Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddClass,Class_All,20;
-      bonus3 bAutoSpell,"SK_SM_MAGNUM",10,30;
-  - Id: 4306
-    AegisName: Toad_Card
-    Name: Toad Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bFlee2,1;
-  - Id: 4307
-    AegisName: Kind_Of_Beetle_Card
-    Name: Beetle King Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSPGainRace,RC_Fish,5;
-    UnEquipScript: |
-      heal 0,-5;
-  - Id: 4308
-    AegisName: Tri_Joint_Card
-    Name: Tri Joint Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSPGainRace,RC_Formless,5;
-    UnEquipScript: |
-      heal 0,-5;
-  - Id: 4309
-    AegisName: Parasite_Card
-    Name: Parasite Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bDef,1;
-      bonus2 bSubRace,RC_Formless,5;
-  - Id: 4310
-    AegisName: Panzer_Goblin_Card
-    Name: Panzer Goblin Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bCritAtkRate,10;
-      bonus2 bCriticalAddRace,RC_Demon,7;
-  - Id: 4311
-    AegisName: Permeter_Card
-    Name: Permeter Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
     Flags:
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Dark,15;
-      bonus2 bSubEle,Ele_Undead,15;
-  - Id: 4312
-    AegisName: Fur_Seal_Card
-    Name: Seal Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bFlee,3;
-      bonus bHit,10;
-      if (BaseClass == Job_Acolyte) {
-         bonus2 bCriticalAddRace,RC_Undead,9;
-         bonus2 bCriticalAddRace,RC_Demon,9;
-      }
-  - Id: 4313
-    AegisName: Punk_Card
-    Name: Punk Card
+  - Id: 4065
+    AegisName: Holy_Tyr_Rune
+    Name: Holy Tyr Rune
     Type: Card
     Buy: 20
     Weight: 10
@@ -5021,191 +807,22 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus4 bAutoSpellWhenHit,"SK_MG_QUAGMIRE",1+4*(getskilllv("SK_MG_QUAGMIRE") == 5),50,0;
-  - Id: 4314
-    AegisName: Penomena_Card
-    Name: Penomena Card
+      bonus2 bSubEle,Ele_Holy,15;
+  - Id: 4066
+    AegisName: Ghost_Tyr_Rune
+    Name: Ghost Tyr Rune
     Type: Card
     Buy: 20
     Weight: 10
     Locations:
-      Left_Hand: true
+      Garment: true
     Flags:
       BuyingStore: true
     Script: |
-      bonus2 bSubRace,RC_Formless,30;
-  - Id: 4315
-    AegisName: Pest_Card
-    Name: Pest Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEffWhenHit,Eff_Stone,300+600*(readparam(bInt)>=77);
-  - Id: 4316
-    AegisName: Fake_Angel_Card
-    Name: False Angel Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSPGainRace,RC_Angel,5;
-    UnEquipScript: |
-      heal 0,-5;
-  - Id: 4317
-    AegisName: Mobster_Card
-    Name: Mobster Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bCritAtkRate,15;
-      if (BaseClass == Job_Thief)
-         bonus bCritical,4;
-  - Id: 4318
-    AegisName: Knight_Windstorm_Card
-    Name: Stormy Knight Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAutoSpell,"SK_WZ_STORMGUST",2,20;
-      bonus2 bAddEff,Eff_Freeze,2000;
-  - Id: 4319
-    AegisName: Freezer_Card
-    Name: Freezer Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bMaxHP,300;
-      if (getrefine()>=9)
-         bonus2 bSkillAtk,"SK_SM_BASH",10;
-  - Id: 4320
-    AegisName: Bloody_Knight_Card
-    Name: Bloody Knight Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAutoSpell,"SK_WZ_METEORSTORM",1,20;
-  - Id: 4321
-    AegisName: Hylozoist_Card
-    Name: Hylozoist Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bClassChange,100;
-  - Id: 4322
-    AegisName: High_Orc_Card
-    Name: High Orc Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bDef,1;
-      bonus bShortWeaponDamageReturn,5;
-  - Id: 4323
-    AegisName: Garm_Baby_Card
-    Name: Hatii Babe Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAutoSpell,"SK_MG_FROSTDIVER",3,50;
-  - Id: 4462
-    AegisName: Hardrock_Mommos_Card
-    Name: Hardrock Mammoth Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      .@r = getrefine();
-      bonus bDef,5;
-      if (.@r>=12) {
-         bonus bDef,20;
-         bonus bMaxHPrate,10;
-      }
-      if (.@r>=14) {
-         bonus bMaxHPrate,3;
-      }
-  - Id: 4463
-    AegisName: Tendrilion_Card
-    Name: Tendrilrion Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus bCritical,5;
-      .@r = getrefine();
-      if (.@r>=12) {
-         bonus bBaseAtk,35;
-      }
-      if (.@r>=14) {
-         bonus bCritical,10;
-      }
-  - Id: 4324
-    AegisName: Garm_Card
-    Name: Hatii Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEffWhenHit,Eff_Freeze,5000;
-  - Id: 4325
-    AegisName: Harpy_Card
-    Name: Harpy Card
+      bonus2 bSubEle,Ele_Ghost,15;
+  - Id: 4067
+    AegisName: Neutral_Tyr_Rune
+    Name: Neutral Tyr Rune
     Type: Card
     Buy: 20
     Weight: 10
@@ -5215,38 +832,9 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Neutral,15;
-      bonus2 bSkillAtk,"SK_AL_SACREDWAVE",5;
-  - Id: 4326
-    AegisName: See_Otter_Card
-    Name: Sea-Otter Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddItemGroupHealRate,IG_Fish,50;
-      bonus3 bAddMonsterDropItem,551,RC_Fish,300;
-      bonus3 bAddMonsterDropItem,544,RC_Fish,300;
-  - Id: 4327
-    AegisName: Blood_Butterfly_Card
-    Name: Bloody Butterfly Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bCastrate,30;
-      bonus bNoCastCancel;
-      bonus2 bSkillAtk,"MG_FIREWALL",5;
-  - Id: 4328
-    AegisName: Hyegun_Card
-    Name: Yao Jun Card
+  - Id: 4068
+    AegisName: Poison_Tyr_Rune
+    Name: Poison Tyr Rune
     Type: Card
     Buy: 20
     Weight: 10
@@ -5255,81 +843,10 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus bFlee,15;
-      bonus bCritical,1;
-  - Id: 4329
-    AegisName: Phendark_Card
-    Name: Phendark Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSPGainRace,RC_DemiHuman,5;
-      bonus2 bSPGainRace,RC_Player_Human,5;
-    UnEquipScript: |
-      heal 0,-5;
-  - Id: 4330
-    AegisName: Dark_Snake_Lord_Card
-    Name: Evil Snake Lord Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bInt,3;
-      bonus2 bResEff,Eff_Blind,10000;
-      bonus2 bResEff,Eff_Curse,10000;
-  - Id: 4331
-    AegisName: Heater_Card
-    Name: Heater Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bCritical,3;
-      if (BaseClass == Job_Swordman)
-         bonus bFlee2,3;
-  - Id: 4332
-    AegisName: Waste_Stove_Card
-    Name: Waste Stove Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bBaseAtk,5;
-      bonus bInt,1;
-  - Id: 4333
-    AegisName: Venomous_Card
-    Name: Venomous Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAddEffWhenHit,Eff_Poison,3000,ATF_TARGET|ATF_SELF;
-  - Id: 4334
-    AegisName: Noxious_Card
-    Name: Noxious Card
+      bonus2 bSubEle,Ele_Poison,15;
+  - Id: 4069
+    AegisName: Fire_Ur_Rune
+    Name: Fire Ur Rune
     Type: Card
     Buy: 20
     Weight: 10
@@ -5338,26 +855,310 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus bLongAtkDef,10;
-      bonus2 bSubEle,Ele_Neutral,10;
-  - Id: 4335
-    AegisName: Pitman_Card
-    Name: Pitman Card
+      bonus2 bMagicAtkEle,Ele_Fire,10;
+  - Id: 4070
+    AegisName: Water_Ur_Rune
+    Name: Water Ur Rune
     Type: Card
     Buy: 20
     Weight: 10
     Locations:
-      Right_Hand: true
+      Garment: true
     Flags:
       BuyingStore: true
     Script: |
-      bonus2 bSkillAtk,"SK_WZ_STALAGMITE",5;
-      bonus2 bSkillAtk,"WZ_HEAVENDRIVE",5;
-    UnEquipScript: |
-      heal 0,-50;
-  - Id: 4336
-    AegisName: Ungoliant_Card
-    Name: Ungoliant Card
+      bonus2 bMagicAtkEle,Ele_Water,10;
+  - Id: 4071
+    AegisName: Wind_Ur_Rune
+    Name: Wind Ur Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Garment: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Wind,10;
+  - Id: 4072
+    AegisName: Earth_Ur_Rune
+    Name: Earth Ur Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Garment: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Earth,10;
+  - Id: 4073
+    AegisName: Dark_Ur_Rune
+    Name: Dark Ur Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Garment: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Dark,10;
+  - Id: 4074
+    AegisName: Holy_Ur_Rune
+    Name: Holy Ur Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Garment: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Holy,10;
+  - Id: 4075
+    AegisName: Ghost_Ur_Rune
+    Name: Ghost Ur Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Garment: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Ghost,10;
+  - Id: 4076
+    AegisName: Neutral_Ur_Rune
+    Name: Neutral Ur Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Garment: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Neutral,10;
+  - Id: 4077
+    AegisName: Crit_Biarkan_Rune
+    Name: Biarkan Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Garment: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus bCritical,5;
+  - Id: 4078
+    AegisName: Perc_Biarkan_Rune
+    Name: Rate Biarkan Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Garment: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus bCritAtkRate,10;
+  - Id: 4079
+    AegisName: Long_Yr_Rune
+    Name: Long Yr Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Garment: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus bLongAtkRate,10;
+  - Id: 4080
+    AegisName: Short_Yr_Rune
+    Name: Short Yr Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Garment: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus bShortAtkRate,10;
+  - Id: 4081
+    AegisName: Aspd_Thurs_Rune
+    Name: Speed Thurs Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Shoes: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus bAspd,2;
+  - Id: 4082
+    AegisName: Perc_Thurs_Rune
+    Name: Rate Thurs Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Shoes: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus bAspdRate,5;
+  - Id: 4083
+    AegisName: Movement_Thurs_Rune
+    Name: Movement Thurs Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Shoes: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus bSpeedRate,10;
+  - Id: 4084
+    AegisName: Cast_Ehwaz_Rune
+    Name: Cast Ehwaz Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Shoes: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus bCastrate,-10;
+  - Id: 4085
+    AegisName: Delay_Ehwaz_Rune
+    Name: Delay Ehwaz Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Shoes: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus bDelayRate,-10;
+  - Id: 4086
+    AegisName: Flee_Perp_Rune
+    Name: Flee Perp Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Shoes: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus bFlee,20;
+  - Id: 4087
+    AegisName: Hit_Perp_Rune
+    Name: Hit Perp Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Shoes: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus bHit,20;
+  - Id: 4088
+    AegisName: Lucky_Perp_Rune
+    Name: Lucky Perp Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Shoes: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus bFlee2,20;
+  - Id: 4089
+    AegisName: Str_Iss_Rune
+    Name: Strength Iss Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Both_Accessory: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus bStr,5;
+  - Id: 4090
+    AegisName: Agi_Iss_Rune
+    Name: Agility Iss Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Both_Accessory: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus bAgi,5;
+  - Id: 4091
+    AegisName: Vit_Iss_Rune
+    Name: Vitality Iss Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Both_Accessory: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus bVit,5;
+  - Id: 4092
+    AegisName: Int_Iss_Rune
+    Name: Intelligence Iss Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Both_Accessory: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus bInt,5;
+  - Id: 4093
+    AegisName: Dex_Iss_Rune
+    Name: Dexterity Iss Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Both_Accessory: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus bDex,5;
+  - Id: 4094
+    AegisName: Luk_Iss_Rune
+    Name: Luck Iss Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Both_Accessory: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus bLuk,5;
+  - Id: 4095
+    AegisName: Stun_Fe_Rune
+    Name: Stun Fe Rune
     Type: Card
     Buy: 20
     Weight: 10
@@ -5368,160 +1169,10 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus bHPrecovRate,10;
-      bonus2 bResEff,Eff_Bleeding,10000;
-  - Id: 4337
-    AegisName: Porcellio_Card
-    Name: Porcellio Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bBaseAtk,25;
-      bonus bDef,-5;
-  - Id: 4338
-    AegisName: Obsidian_Card
-    Name: Obsidian Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bVit,readparam(bDex)/18;
-  - Id: 300003
-    AegisName: Constant_Card
-    Name: Constant Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bStr,readparam(bLuk)/18;
-  - Id: 4339
-    AegisName: Mineral_Card
-    Name: Mineral Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bBaseAtk,-25;
-      bonus bDef,3;
-  - Id: 4340
-    AegisName: Teddy_Bear_Card
-    Name: Teddy Bear Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubRace,RC_Undead,30;
-  - Id: 4472
-    AegisName: Bradium_Goram_Card
-    Name: Oridecon Golem Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bMagicAddRace,RC_Brute,10;
-      bonus2 bMagicAddRace,RC_Player_Doram,10;
-  - Id: 300007
-    AegisName: Jungoliant_Card
-    Name: Jeweled Ungoliant Card
-    Type: Card
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bAddEle,Ele_Fire,40;
-      bonus2 bAddEle,Ele_Water,40;
-      bonus2 bAddRace,RC_Formless,40;
-      bonus2 bAddRace,RC_Plant,40;
-  - Id: 27324
-    AegisName: Brinaranea_Card
-    Name: Brinaranea Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bMagicAtkEle,Ele_Water,50;
-  - Id: 300009
-    AegisName: Jewel_Card
-    Name: Jewel Card
-    Type: Card
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      .@r = getequiprefinerycnt(EQI_HAND_R);
-      if (getiteminfo(getequipid(EQI_HAND_R), ITEMINFO_VIEW) == W_STAFF || getiteminfo(getequipid(EQI_HAND_R), ITEMINFO_VIEW) == W_2HSTAFF) {
-         bonus2 bMagicAtkEle,Ele_Ghost,10;
-      }
-      if (.@r>=7) {
-         bonus2 bMagicAtkEle,Ele_Ghost,10;
-      }
-  - Id: 300007
-    AegisName: Jungoliant_Card
-    Name: Jeweled Ungoliant Card
-    Type: Card
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bAddEle,Ele_Fire,20;
-      bonus2 bAddEle,Ele_Water,20;
-      bonus2 bAddRace,RC_Formless,20;
-      bonus2 bAddRace,RC_Plant,20;
-  - Id: 300006
-    AegisName: Jeweliant_Card
-    Name: Jewelry Ant Card
-    Type: Card
-    Weight: 10
-    Locations:
-      Left_Accessory: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus5 bAutoSpell,"SK_WZ_PSYCHICWAVE",1,100,BF_SHORT,1;
-  - Id: 4506
-    AegisName: Dolomedes_Card
-    Name: Dolomedes Card
+      bonus2 bResEff,Eff_Stun,5000;
+  - Id: 4096
+    AegisName: Confusion_Fe_Rune
+    Name: Confusion Fe Rune
     Type: Card
     Buy: 20
     Weight: 10
@@ -5531,27 +1182,67 @@ Body:
       Head_Top: true
     Flags:
       BuyingStore: true
-      DropEffect: CLIENT
     Script: |
-      bonus bDex,2;
-      if (BaseClass == Job_Archer) {
-         bonus bDex,getrefine()/3;
-      }
-  - Id: 4341
-    AegisName: Metaling_Card
-    Name: Metaling Card
+      bonus2 bResEff,Eff_Confusion,5000;
+  - Id: 4097
+    AegisName: Curse_Fe_Rune
+    Name: Curse Fe Rune
     Type: Card
     Buy: 20
     Weight: 10
     Locations:
-      Right_Hand: true
+      Head_Low: true
+      Head_Mid: true
+      Head_Top: true
     Flags:
       BuyingStore: true
     Script: |
-      bonus3 bAutoSpell,"SK_ST_STRIPWEAPON",1,50;
-  - Id: 4342
-    AegisName: Rsx_0806_Card
-    Name: RSX-0806 Card
+      bonus2 bResEff,Eff_Curse,5000;
+  - Id: 4098
+    AegisName: Blind_Fe_Rune
+    Name: Blindness Fe Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Head_Low: true
+      Head_Mid: true
+      Head_Top: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus2 bResEff,Eff_Blind,5000;
+  - Id: 4099
+    AegisName: Freezing_Fe_Rune
+    Name: Freezing Fe Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Head_Low: true
+      Head_Mid: true
+      Head_Top: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus2 bResEff,Eff_Freeze,5000;
+  - Id: 4100
+    AegisName: Poison_Fe_Rune
+    Name: Poison Fe Rune
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Head_Low: true
+      Head_Mid: true
+      Head_Top: true
+    Flags:
+      BuyingStore: true
+    Script: |
+      bonus2 bResEff,Eff_Poison,5000;
+  - Id: 4101
+    AegisName: Armor_Madhr_Rune
+    Name: Armor Madhr Rune
     Type: Card
     Buy: 20
     Weight: 10
@@ -5560,1086 +1251,10 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      bonus bVit,3;
       bonus bUnbreakableArmor;
-      bonus bNoKnockback;
-  - Id: 4343
-    AegisName: Mole_Card
-    Name: Holden Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bLuk,2;
-  - Id: 4344
-    AegisName: Anopheles_Card
-    Name: Anopheles Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAddMonsterDropItem,12058,RC_Insect,50;
-  - Id: 4345
-    AegisName: Hill_Wind_Card
-    Name: Hill Wind Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSkillAtk,"MG_THUNDERSTORM",5;
-      bonus2 bSkillAtk,"WZ_JUPITEL",5;
-      bonus2 bSkillAtk,"SK_WZ_LORDOFVERMILION",5;
-    UnEquipScript: |
-      heal 0,-50;
-  - Id: 4346
-    AegisName: Ygnizem_Card
-    Name: Egnigem Cenia Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bStr,readparam(bInt)/18;
-  - Id: 4347
-    AegisName: Armaia_Card
-    Name: Armeyer Dinze Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAddMonsterDropItem,12053,RC_Fish,50;
-  - Id: 4348
-    AegisName: Whikebain_Card
-    Name: Wickebine Tres Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAutoSpell,"SK_ST_STRIPARMOR",1,50;
-  - Id: 4505
-    AegisName: Scaraba_Card
-    Name: Scaraba Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus bMatk,20;
-      bonus bMaxSPrate,-1;
-  - Id: 4507
-    AegisName: Q_Scaraba_Card
-    Name: Queen Scaraba Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bAddRace2,RC2_SCARABA,30;
-      bonus2 bAddMonsterDropItem,12806,50;
-  - Id: 4349
-    AegisName: Erend_Card
-    Name: Errende Ebecee Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus4 bAutoSpellWhenHit,"AL_PNEUMA",1,50,0;
-  - Id: 4350
-    AegisName: Rawrel_Card
-    Name: Laurell Weinder Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSkillAtk,"WZ_FROSTNOVA",3;
-      bonus2 bSkillAtk,"SK_WZ_STORMGUST",3;
-    UnEquipScript: |
-      heal 0,-50;
-  - Id: 4351
-    AegisName: Kavac_Card
-    Name: Kavach Icarus Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      if (getrefine()<=4) {
-         bonus bFlee,20;
-         bonus bFlee2,1;
-      }
-      else {
-         bonus bFlee,10;
-      }
-  - Id: 4352
-    AegisName: B_Ygnizem_Card
-    Name: General Egnigem Cenia Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bMaxHPrate,10;
-      bonus bMaxSPrate,10;
-      bonus2 bHPRegenRate,50,10000;
-      bonus2 bSPRegenRate,10,10000;
-  - Id: 4353
-    AegisName: Removal_Card
-    Name: Remover Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bMaxHP,800-40*getrefine();
-      bonus bHPrecovRate,10;
-  - Id: 4354
-    AegisName: Gemini_Card
-    Name: Gemini-S58 Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      if (readparam(bAgi)>=90) {
-         bonus2 bResEff,Eff_Silence,3000;
-         bonus2 bResEff,Eff_Stun,3000;
-      }
-      if (readparam(bVit)>=80) {
-         bonus2 bResEff,Eff_Stone,5000;
-         bonus2 bResEff,Eff_Sleep,5000;
-      }
-  - Id: 4355
-    AegisName: Gremlin_Card
-    Name: Gremlin Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAddMonsterDropItem,12043,RC_Brute,50;
-  - Id: 27027
-    AegisName: Fire_Sand_Man_Card
-    Name: Fire Sandman Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus bDef,50;
-      bonus2 bSubEle,Ele_Fire,10;
-  - Id: 4356
-    AegisName: Beholder_Card
-    Name: Beholder Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      skill "SK_MG_CASTCANCEL",3;
-  - Id: 4357
-    AegisName: B_Seyren_Card
-    Name: Lord Knight Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      skill "SK_CM_FRENZY",1;
-      bonus bMaxHPrate,-50;
-  - Id: 4625
-    AegisName: Timeholder_Card
-    Name: Time Holder Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus bMatkRate,20;
-      bonus bUseSPrate,10;
-  - Id: 4638
-    AegisName: Watcher_Card
-    Name: Watcher Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus bBaseAtk,30;
-      bonus bSPDrainValue,-5;
-  - Id: 4358
-    AegisName: Seyren_Card
-    Name: Seyren Windsor Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bStr,getrefine()-6;
-  - Id: 4359
-    AegisName: B_Eremes_Card
-    Name: Assassin Cross Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      skill "SK_AS_CLOAKING",3;
-    UnEquipScript: |
-      sc_end STATUS_CLOAKING;
-  - Id: 4360
-    AegisName: Eremes_Card
-    Name: Eremes Guile Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bCriticalAddRace,RC_DemiHuman,10;
-      bonus2 bCriticalAddRace,RC_Player_Human,10;
-  - Id: 4361
-    AegisName: B_Harword_Card
-    Name: MasterSmith Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bBreakWeaponRate,1000;
-      bonus bBreakArmorRate,700;
-  - Id: 4362
-    AegisName: Harword_Card
-    Name: Howard Alt-Eisen Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bAspdRate,5;
-      bonus bHit,30;
-  - Id: 4363
-    AegisName: B_Magaleta_Card
-    Name: High Priest Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus5 bAutoSpellWhenHit,"SK_BI_ASSUMPTIO",1,50,BF_WEAPON|BF_MAGIC,0;
-  - Id: 4364
-    AegisName: Magaleta_Card
-    Name: Margaretha Sorin Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bInt,1;
-      bonus5 bAutoSpellWhenHit,"SK_SA_SILENCE",5,150,BF_MAGIC,1;
-  - Id: 4365
-    AegisName: B_Katrinn_Card
-    Name: High Wizard Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bIgnoreMdefClassRate,Class_Normal,100;
-      bonus bCastrate,100;
-      bonus bSPrecovRate,-100;
-    UnEquipScript: |
-      heal 0,-2000;
-  - Id: 4366
-    AegisName: Katrinn_Card
-    Name: Kathryne Keyron Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bCastrate,getrefine()*-1;
-      if (getrefine()>=9) {
-         bonus bMatkRate,2;
-      }
-  - Id: 4367
-    AegisName: B_Shecil_Card
-    Name: Sniper Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bHPDrainRate,50,20;
-      bonus bHPrecovRate,-10;
-  - Id: 4368
-    AegisName: Shecil_Card
-    Name: Cecil Damon Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bAspdRate,5;
-      bonus bHit,-30;
-  - Id: 4369
-    AegisName: Venatu_Card
-    Name: Venatu Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bLuk,readparam(bAgi)/18;
-  - Id: 4370
-    AegisName: Dimik_Card
-    Name: Dimik Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bVit,getrefine()-5;
-  - Id: 4371
-    AegisName: Archdam_Card
-    Name: Archdam Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bBaseAtk,10;
-      bonus bCastrate,20;
-  - Id: 4372
-    AegisName: Bacsojin_Card
-    Name: White Lady Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bHealPower,30;
-      bonus bUseSPrate,15;
-  - Id: 4373
-    AegisName: Chung_E_Card
-    Name: Green Maiden Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bLuk,getrefine()-5;
-      bonus bCritical,getrefine();
-  - Id: 4374
-    AegisName: Apocalips_H_Card
-    Name: Vesper Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bDex,2;
-      bonus2 bIgnoreMdefClassRate,Class_Boss,30;
-  - Id: 4375
-    AegisName: Orc_Baby_Card
-    Name: Orc Baby Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      if (getrefine()>=9) {
-         bonus2 bSubEle,Ele_Neutral,15;
-         bonus bFlee,15;
-      }
-      else {
-         bonus2 bSubEle,Ele_Neutral,10;
-         bonus bFlee,10;
-      }
-  - Id: 4376
-    AegisName: Lady_Tanee_Card
-    Name: Lady Tanee Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bMaxHPrate,-40;
-      bonus bMaxSPrate,50;
-      bonus2 bAddMonsterDropItem,513,200;
-      bonus2 bAddItemHealRate,513,100;
-  - Id: 4377
-    AegisName: Green_Iguana_Card
-    Name: Grove Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAddMonsterDropItem,12063,RC_Formless,50;
-  - Id: 4378
-    AegisName: Acidus_Card
-    Name: Gold Acidus Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      if (getrefine()<=4) {
-         bonus bMaxHPrate,8;
-         bonus bMaxSPrate,8;
-         bonus bHPrecovRate,5;
-         bonus bSPrecovRate,5;
-      }
-      else {
-         bonus bMaxHPrate,4;
-         bonus bMaxSPrate,4;
-      }
-  - Id: 4379
-    AegisName: Acidus__Card
-    Name: Blue Acidus Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      if (getrefine()<=4) {
-         bonus bSPrecovRate,5;
-         bonus bMaxSP,80;
-      }
-      else {
-         bonus bMaxSP,40;
-      }
-  - Id: 4380
-    AegisName: Ferus_Card
-    Name: Red Ferus Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSkillAtk,"WZ_FIREPILLAR",5;
-      bonus2 bSkillAtk,"SK_WZ_METEORSTORM",5;
-    UnEquipScript: |
-      heal 0,-50;
-  - Id: 4381
-    AegisName: Ferus__Card
-    Name: Green Ferus Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bVit,1;
-      bonus bMaxHPrate,10;
-  - Id: 4382
-    AegisName: Novus__Card
-    Name: Yellow Novus Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bMaxHP,500;
-      bonus bHPrecovRate,10;
-  - Id: 4383
-    AegisName: Novus_Card
-    Name: Red Novus Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAddEffWhenHit,Eff_Confusion,3000,ATF_TARGET|ATF_SELF;
-  - Id: 4384
-    AegisName: Hydro_Card
-    Name: Hydrolancer Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAutoSpell,"SA_SPELLBREAKER",1,100;
-  - Id: 4385
-    AegisName: Dragon_Egg_Card
-    Name: Dragon Egg Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAddMonsterDropItem,12048,RC_Dragon,50;
-  - Id: 4386
-    AegisName: Detale_Card
-    Name: Detardeurus Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bMdef,-20;
-      bonus2 bResEff,Eff_Freeze,10000;
-      bonus5 bAutoSpellWhenHit,"SK_PF_LANDPROTECTOR",1,70,BF_MAGIC,0;
-  - Id: 4387
-    AegisName: Ancient_Mimic_Card
-    Name: Ancient Mimic Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bAgi,readparam(bLuk)/18;
-  - Id: 4388
-    AegisName: Deathword_Card
-    Name: Death Word Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSkillAtk,"SK_AL_SACREDWAVE",5;
-      bonus2 bSkillAtk,"SK_MG_SOULSTRIKE",5;
-      bonus2 bSkillAtk,"HW_NAPALMVULCAN",5;
-    UnEquipScript: |
-      heal 0,-50;
-  - Id: 4389
-    AegisName: Plasma_Card
-    Name: Plasma Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddMonsterDropItem,12118,50;
-      bonus2 bAddMonsterDropItem,12119,50;
-      bonus2 bAddMonsterDropItem,12120,50;
-      bonus2 bAddMonsterDropItem,12121,50;
-  - Id: 4390
-    AegisName: Breeze_Card
-    Name: Breeze Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bBaseAtk,5;
-      bonus2 bAddEff,Eff_Bleeding,500;
-  - Id: 4391
-    AegisName: Retribution_Card
-    Name: Baroness of Retribution Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAddMonsterDropItem,12068,RC_Angel,50;
-  - Id: 4392
-    AegisName: Observation_Card
-    Name: Dame of Sentinel Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bInt,readparam(bDex)/18;
-  - Id: 4581
-    AegisName: Rudo_Card
-    Name: Rudo Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      autobonus2 "{ bonus bAgi,44; bonus bNoWalkDelay; heal 0,-40; }",50,3000,0,"{ }";
-  - Id: 4469
-    AegisName: Garden_Watcher_Card
-    Name: Garden Watcher Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bDex,readparam(bVit)/18;
-  - Id: 4393
-    AegisName: Shelter_Card
-    Name: Mistress of Shelter Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bInt,readparam(bStr)/18;
-  - Id: 4394
-    AegisName: Solace_Card
-    Name: Lady Solace Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      if (BaseJob == Job_Priest)
-         bonus3 bAutoSpell,"SK_CR_GRANDCROSS",5,20;
-  - Id: 4395
-    AegisName: Tha_Maero_Card
-    Name: Maero of Thanatos Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bBaseAtk,5;
-      bonus3 bAutoSpell,"SK_MO_DECAGI",3,50;
-  - Id: 4396
-    AegisName: Tha_Odium_Card
-    Name: Odium of Thanatos Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bAgi,getrefine()-5;
-  - Id: 4397
-    AegisName: Tha_Despero_Card
-    Name: Despero of Thanatos Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bInt,getrefine()-6;
-  - Id: 4398
-    AegisName: Tha_Dolor_Card
-    Name: Dolor of Thanatos Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bMagicAddRace,RC_Angel,10;
-  - Id: 4399
-    AegisName: Thanatos_Card
-    Name: Memory of Thanatos Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bDefRatioAtkClass,Class_All;
-      bonus bSPDrainValue,-1;
-      bonus bDef,-30;
-      bonus bFlee,-30;
-  - Id: 4400
-    AegisName: Aliza_Card
-    Name: Aliza Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAutoSpellWhenHit,"DC_WINKCHARM",1,50+50*(BaseJob == Job_Dancer);
-  - Id: 4401
-    AegisName: Alicel_Card
-    Name: Alicel Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bFlee,10;
-      bonus bDef,-5;
-  - Id: 300017
-    AegisName: Acidus_B_Card
-    Name: Black Acidus Card
-    Type: Card
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bAddEle,Ele_Dark,25;
-  - Id: 300018
-    AegisName: Acidus_S_Card
-    Name: Silver Acidus Card
-    Type: Card
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bAddEle,Ele_Holy,25;
-  - Id: 300019
-    AegisName: Bone_Ferus_Card
-    Name: Bone Ferus Card
-    Type: Card
-    Weight: 10
-    Locations:
-      Left_Accessory: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bAddRace,RC_Dragon,5;
-  - Id: 300020
-    AegisName: Bone_Acidus_Card
-    Name: Bone Acidus Card
-    Type: Card
-    Weight: 10
-    Locations:
-      Right_Accessory: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bAddRace,RC_Brute,5;
-  - Id: 300015
-    AegisName: Ferus_P_Card
-    Name: Purple Ferus Card
-    Type: Card
-    Weight: 10
-    Locations:
-      Head_Top: true
-      Head_Mid: true
-      Head_Low: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus bAtkRate,3;
-      bonus bMaxHPrate,-5;
-      bonus bMaxSPrate,-5;
-      bonus bAtkRate,(getrefine()/4);
-  - Id: 300001
-    AegisName: Poisonous_Card
-    Name: Poisonous Card
-    Type: Card
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus2 bAddEle,Ele_Poison,25;
-  - Id: 300002
-    AegisName: Toxious_Card
-    Name: Toxious Card
-    Type: Card
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-      DropEffect: CLIENT
-    Script: |
-      bonus bLongAtkDef,5;
-      bonus bMaxHPrate,10;
-  - Id: 4402
-    AegisName: Aliot_Card
-    Name: Aliot Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      if (BaseClass == Job_Swordman || BaseClass == Job_Merchant || BaseClass == Job_Thief) {
-         bonus bStr,2;
-         bonus bMaxHPrate,5;
-      }
-      if (BaseClass == Job_Mage || BaseClass == Job_Archer || BaseClass == Job_Acolyte) {
-         bonus bInt,2;
-         bonus bMaxSPrate,5;
-      }
-  - Id: 4403
-    AegisName: Kiel_Card
-    Name: Kiel-D-01 Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bDelayRate,-30;
-  - Id: 4404
-    AegisName: Skogul_Card
-    Name: Skogul Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAddEffWhenHit,Eff_Bleeding,3000,ATF_TARGET|ATF_SELF;
-  - Id: 4405
-    AegisName: Frus_Card
-    Name: Frus Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bMagicDamageReturn,getrefine()*2;
-      if (BaseClass == Job_Mage)
-         bonus bMdef,3;
-  - Id: 4406
-    AegisName: Skeggiold_Card
-    Name: Skeggiold Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bMagicAddRace,RC_Demon,2;
-  - Id: 4407
-    AegisName: Randgris_Card
-    Name: Randgris Card
+  - Id: 4102
+    AegisName: Weapon_Madhr_Rune
+    Name: Weapon Madhr Rune
     Type: Card
     Buy: 20
     Weight: 10
@@ -6649,642 +1264,3 @@ Body:
       BuyingStore: true
     Script: |
       bonus bUnbreakableWeapon;
-      bonus2 bAddClass,Class_All,10;
-      bonus3 bAutoSpell,"SK_SA_DISPELL",1,50;
-  - Id: 4408
-    AegisName: Gloom_Under_Night_Card
-    Name: Gloom Under Night Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEle,Ele_Holy,40;
-      bonus2 bAddEle,Ele_Dark,40;
-      bonus2 bAddRace,RC_Angel,40;
-      bonus2 bAddRace,RC_Demon,40;
-  - Id: 4409
-    AegisName: Agav_Card
-    Name: Agav Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bMatkRate,5;
-      bonus bDef,-10;
-      if (BaseClass == Job_Mage)
-         bonus bMaxSP,100;
-  - Id: 4410
-    AegisName: Echio_Card
-    Name: Echio Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bBaseAtk,15;
-      if (BaseClass == Job_Swordman)
-         bonus bMaxHP,500;
-  - Id: 4411
-    AegisName: Vanberk_Card
-    Name: Vanberk Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bStr,2;
-      autobonus "{ bonus bCritical,100; }",5,5000,0,"{ specialeffect2 EF_ENHANCE; }";
-  - Id: 4412
-    AegisName: Isilla_Card
-    Name: Isilla Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bInt,2;
-      autobonus "{ bonus bCastrate,-50; bonus bFlee,30; }",50,5000,BF_MAGIC,"{ specialeffect2 EF_SUFFRAGIUM; }";
-  - Id: 4413
-    AegisName: Hodremlin_Card
-    Name: Hodremlin Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubSize,Size_All,15;
-      autobonus2 "{ bonus bFlee2,30; }",3,10000,BF_WEAPON|BF_MAGIC,"{ specialeffect2 EF_WIND; }";
-  - Id: 4414
-    AegisName: Seeker_Card
-    Name: Seeker Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      skill "SK_MG_STONECURSE",1;
-      bonus2 bResEff,Eff_Stone,3000;
-      bonus bMdef,10;
-  - Id: 4415
-    AegisName: Snowier_Card
-    Name: Snowier Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddMonsterDropItem,536,2000;
-      bonus2 bAddItemHealRate,536,100;
-  - Id: 4416
-    AegisName: Siroma_Card
-    Name: Siroma Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSkillAtk,"SK_MG_COLDBOLT",25;
-      bonus2 bCastrate,"SK_MG_COLDBOLT",-25;
-  - Id: 4417
-    AegisName: Ice_Titan_Card
-    Name: Ice Titan Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bVit,2;
-      autobonus2 "{ bonus bDef,10; }",3,10000,BF_WEAPON|BF_MAGIC,"{ specialeffect2 EF_FREEZED; }";
-  - Id: 4418
-    AegisName: Gazeti_Card
-    Name: Gazeti Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAutoSpell,"SK_MG_COLDBOLT",2,100;
-  - Id: 4419
-    AegisName: Ktullanux_Card
-    Name: Ktullanux Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddEle,Ele_Fire,50;
-      bonus5 bAutoSpellWhenHit,"WZ_FROSTNOVA",10,20,BF_WEAPON|BF_MAGIC,0;
-  - Id: 4420
-    AegisName: Muscipular_Card
-    Name: Muscipular Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAutoSpellWhenHit,"SK_AL_HEAL",1,100;
-      bonus3 bAutoSpellWhenHit,"SK_AL_INCREASEAGI",1,100;
-  - Id: 4421
-    AegisName: Drosera_Card
-    Name: Drosera Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bCriticalLong,15;
-  - Id: 4422
-    AegisName: Roween_Card
-    Name: Roween Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bFlee,5;
-      bonus bFlee2,3;
-      bonus2 bAddEle,Ele_Water,10;
-      bonus2 bCriticalAddRace,RC_Fish,15;
-  - Id: 4423
-    AegisName: Galion_Card
-    Name: Galion Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bHit,5;
-      bonus2 bAddEle,Ele_Water,5;
-  - Id: 4424
-    AegisName: Stapo_Card
-    Name: Stapo Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      skill "TF_PICKSTONE",1;
-      skill "SK_TF_THROWSTONE",1;
-  - Id: 4425
-    AegisName: Atroce_Card
-    Name: Atroce Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bBaseAtk,25;
-      autobonus "{ bonus bAspdRate,100; }",5,10000,0,"{ specialeffect2 EF_POTION_BERSERK; }";
-  - Id: 4426
-    AegisName: Byorgue_Card
-    Name: Byorgue Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      if (BaseJob == Job_Rogue) {
-         bonus bMatkRate,10;
-         bonus2 bAddClass,Class_All,10;
-      }
-  - Id: 4427
-    AegisName: Sword_Guardian_Card
-    Name: Sword Guardian Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      if (getiteminfo(getequipid(EQI_HAND_R), ITEMINFO_VIEW) == W_1HSWORD || getiteminfo(getequipid(EQI_HAND_R), ITEMINFO_VIEW) == W_2HSWORD) {
-         bonus bHit,5;
-         bonus bCritical,5;
-         bonus2 bSkillAtk,62,25;
-      }
-  - Id: 4428
-    AegisName: Bow_Guardian_Card
-    Name: Bow Guardian Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      if (getiteminfo(getequipid(EQI_HAND_R), ITEMINFO_VIEW) == W_BOW) {
-         bonus bHit,5;
-         bonus bCritical,5;
-         bonus2 bSkillAtk,47,50;
-      }
-  - Id: 4429
-    AegisName: Salamander_Card
-    Name: Salamander Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSkillAtk,"WZ_FIREPILLAR",40;
-      bonus2 bSkillAtk,"SK_WZ_METEORSTORM",40;
-  - Id: 4430
-    AegisName: Ifrit_Card
-    Name: Ifrit Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bBaseAtk,(JobLevel/10);
-      bonus bCritical,(JobLevel/10);
-      bonus bHit,(JobLevel/10);
-      bonus3 bAutoSpellWhenHit,"NPC_EARTHQUAKE",2,10;
-  - Id: 4431
-    AegisName: Kasa_Card
-    Name: Kasa Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus3 bAutoSpell,"MG_FIREBALL",5,20;
-      bonus3 bAutoSpell,"SK_MG_FIREBOLT",5,20;
-  - Id: 4432
-    AegisName: Magmaring_Card
-    Name: Magmaring Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Garment: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bBaseAtk,5;
-      bonus2 bAddEle,Ele_Earth,10;
-      bonus2 bCriticalAddRace,RC_Brute,15;
-      bonus2 bCriticalAddRace,RC_Player_Doram,15;
-      bonus2 bCriticalAddRace,RC_Plant,15;
-  - Id: 4433
-    AegisName: Imp_Card
-    Name: Imp Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSkillAtk,"SK_MG_FIREBOLT",25;
-      bonus2 bCastrate,"SK_MG_FIREBOLT",-25;
-  - Id: 4434
-    AegisName: Knocker_Card
-    Name: Knocker Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddRace,RC_Formless,5;
-      bonus3 bAddMonsterDropItem,756,RC_Formless,10;
-      bonus3 bAddMonsterDropItem,757,RC_Formless,10;
-  - Id: 4435
-    AegisName: Zombie_Slaughter_Card
-    Name: Zombie Slaughter Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bAddRace,RC_DemiHuman,1;
-      bonus2 bAddRace,RC_Player_Human,1;
-      bonus2 bMagicAddRace,RC_DemiHuman,1;
-      bonus2 bMagicAddRace,RC_Player_Human,1;
-      bonus bHPGainValue,50;
-  - Id: 4436
-    AegisName: Ragged_Zombie_Card
-    Name: Ragged Zombie Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bCriticalAddRace,RC_DemiHuman,5;
-      bonus2 bCriticalAddRace,RC_Player_Human,5;
-      bonus2 bAddRace,RC_DemiHuman,1;
-      bonus2 bAddRace,RC_Player_Human,1;
-      bonus2 bMagicAddRace,RC_DemiHuman,1;
-      bonus2 bMagicAddRace,RC_Player_Human,1;
-      bonus2 bAddEff2,Eff_Bleeding,10;
-  - Id: 4437
-    AegisName: Hell_Poodle_Card
-    Name: Hell Poodle Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Both_Accessory: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bHit,1;
-      bonus2 bAddItemHealRate,517,100;
-      bonus3 bAddEff,Eff_Bleeding,50,ATF_SHORT;
-  - Id: 4438
-    AegisName: Banshee_Card
-    Name: Banshee Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Head_Low: true
-      Head_Mid: true
-      Head_Top: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      if (BaseClass == Job_Mage) {
-         bonus bMaxSP,100;
-         bonus bMaxHP,-100;
-         bonus2 bSkillAtk,"SK_AL_SACREDWAVE",20;
-         bonus2 bSkillAtk,"SK_MG_SOULSTRIKE",20;
-         bonus2 bSkillAtk,"HW_NAPALMVULCAN",20;
-      }
-  - Id: 4439
-    AegisName: Flame_Skull_Card
-    Name: Flame Skull Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bResEff,Eff_Blind,3000;
-      bonus2 bResEff,Eff_Stun,3000;
-      bonus2 bResEff,Eff_Curse,3000;
-      bonus2 bResEff,Eff_Stone,3000;
-      bonus2 bAddEffWhenHit,Eff_Blind,500;
-      bonus2 bAddEffWhenHit,Eff_Stun,500;
-      bonus2 bAddEffWhenHit,Eff_Curse,500;
-      bonus2 bAddEffWhenHit,Eff_Stone,500;
-  - Id: 4440
-    AegisName: Necromancer_Card
-    Name: Necromancer Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      if (getiteminfo(getequipid(EQI_HAND_R), ITEMINFO_VIEW) == W_STAFF) {
-         bonus bInt,1;
-         bonus2 bIgnoreMdefClassRate,Class_Normal,2;
-         bonus2 bIgnoreMdefClassRate,Class_Boss,2;
-      }
-  - Id: 4441
-    AegisName: Fallen_Bishop_Card
-    Name: Fallen Bishop Hibram Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Shoes: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bMatkRate,10;
-      bonus bMaxSPrate,-50;
-      bonus2 bMagicAddRace,RC_Angel,50;
-      bonus2 bMagicAddRace,RC_DemiHuman,50;
-      bonus2 bMagicAddRace,RC_Player_Human,50;
-  - Id: 4442
-    AegisName: Tatacho_Card
-    Name: Tatacho Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubEle,Ele_Neutral,20;
-      bonus2 bAddEle,Ele_Neutral,5;
-  - Id: 4443
-    AegisName: Aqua_Elemental_Card
-    Name: Aqua Elemental Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubEle,Ele_Water,20;
-      bonus2 bAddEle,Ele_Water,5;
-  - Id: 4444
-    AegisName: Draco_Card
-    Name: Draco Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubEle,Ele_Earth,20;
-      bonus2 bAddEle,Ele_Earth,5;
-  - Id: 4445
-    AegisName: Luciola_Vespa_Card
-    Name: Luciola Vespa Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubEle,Ele_Wind,20;
-      bonus2 bAddEle,Ele_Wind,5;
-  - Id: 4447
-    AegisName: Centipede_Card
-    Name: Centipede Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubEle,Ele_Poison,20;
-      bonus2 bAddEle,Ele_Poison,5;
-  - Id: 4448
-    AegisName: Cornus_Card
-    Name: Cornus Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubEle,Ele_Holy,20;
-      bonus2 bAddEle,Ele_Holy,5;
-  - Id: 4449
-    AegisName: Dark_Shadow_Card
-    Name: Dark Shadow Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Left_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus2 bSubEle,Ele_Dark,20;
-      bonus2 bAddEle,Ele_Dark,5;
-  - Id: 4450
-    AegisName: Banshee_Master_Card
-    Name: Banshee Master Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bInt,1;
-      bonus bMatk,10;
-  - Id: 4451
-    AegisName: Ant_Buyanne_Card
-    Name: Entweihen Crothen Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Armor: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bMatk,100;
-  - Id: 4452
-    AegisName: Centipede_Larva_Card
-    Name: Centipede Larva Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bInt,1;
-      bonus bMatk,3;
-  - Id: 4453
-    AegisName: Hilsrion_Card
-    Name: Hillsrion Card
-    Type: Card
-    Buy: 20
-    Weight: 10
-    Locations:
-      Right_Hand: true
-    Flags:
-      BuyingStore: true
-    Script: |
-      bonus bBaseAtk,25;

@@ -300,8 +300,8 @@ Body:
     EquipLevelMin: 70
     Refineable: true
     Script: |
-      bonus bDelayRate,getrefine();
-      bonus bCastrate,getrefine();
+      bonus bDelayRate,-getrefine();
+      bonus bCastrate,-getrefine();
   - Id: 1916
     AegisName: Black_Circle
     Name: Black Circle

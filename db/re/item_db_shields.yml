@@ -135,7 +135,7 @@ Body:
     View: 1
     EquipLevelMin: 55
     Script: |
-      bonus bCastrate,10;
+      bonus bCastrate,-10;
   - Id: 2103
     AegisName: Buckler
     Name: Buckler
@@ -251,7 +251,7 @@ Body:
     View: 2
     EquipLevelMin: 40
     Script: |
-      bonus bDelayRate,10;
+      bonus bDelayRate,-10;
   - Id: 2114
     AegisName: Compact_Buckler
     Name: Compact Buckler

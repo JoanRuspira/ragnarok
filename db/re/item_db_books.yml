@@ -205,8 +205,8 @@ Body:
     EquipLevelMin: 50
     Refineable: true
     Script: |
-      bonus bCastrate,10;
-      bonus bDelayRate,10;
+      bonus bCastrate,-10;
+      bonus bDelayRate,-10;
   - Id: 1560
     AegisName: Boltijin
     Name: Boltijin

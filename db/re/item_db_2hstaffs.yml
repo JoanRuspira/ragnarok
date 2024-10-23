@@ -169,8 +169,8 @@ Body:
     EquipLevelMin: 40
     Refineable: true
     Script: |
-      bonus bDelayRate,getrefine();
-      bonus bCastrate,getrefine();
+      bonus bDelayRate,-getrefine();
+      bonus bCastrate,-getrefine();
   - Id: 1479
     AegisName: Vellum_Arc_Wand_
     Name: Vellum Arc Wand
@@ -195,8 +195,8 @@ Body:
     EquipLevelMin: 40
     Refineable: true
     Script: |
-      bonus bDelayRate,getrefine();
-      bonus bCastrate,getrefine();
+      bonus bDelayRate,-getrefine();
+      bonus bCastrate,-getrefine();
   - Id: 1480
     AegisName: Forest_Staff
     Name: Forest Staff
@@ -348,7 +348,7 @@ Body:
     EquipLevelMin: 65
     Refineable: true
     Script: |
-      bonus bDelayRate,getrefine()*2;
+      bonus bDelayRate,-getrefine()*2;
   - Id: 1487
     AegisName: Staff_Of_Destruction
     Name: Staff of Destruction
@@ -394,7 +394,7 @@ Body:
     EquipLevelMin: 70
     Refineable: true
     Script: |
-      bonus bCastrate,getrefine()*2;
+      bonus bCastrate,-getrefine()*2;
   - Id: 1489
     AegisName: Staff_Of_Destiny
     Name: Staff of Destiny

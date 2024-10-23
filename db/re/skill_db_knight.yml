@@ -73,7 +73,7 @@ Body:
     Requires:
       SpCost: 40
       ItemCost:
-        - Item: Runstone_Turisus
+        - Item: Patriotism_Marks
           Amount: 1
   - Id: 368
     Name: SK_KN_RECKONING
@@ -102,7 +102,7 @@ Body:
     Requires:
       SpCost: 30
       ItemCost:
-        - Item: Runstone_Turisus
+        - Item: Patriotism_Marks
           Amount: 1
       Weapon:
         2hSword: true
@@ -276,7 +276,7 @@ Body:
     Requires:
       SpCost: 50
       ItemCost:
-        - Item: Runstone_Pertz
+        - Item: Patriotism_Marks
           Amount: 1
   - Id: 2002
     Name: SK_KN_SONICWAVE
@@ -345,7 +345,7 @@ Body:
       SpCost: 50
       State: Shield
       ItemCost:
-        - Item: Runstone_Rhydo
+        - Item: Patriotism_Marks
           Amount: 1
   - Id: 61
     Name: SK_KN_COUNTERATTACK

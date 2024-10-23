@@ -26,7 +26,7 @@ Body:
     Requires:
       SpCost: 50
       ItemCost:
-        - Item: Runstone_Turisus
+        - Item: Patriotism_Marks
           Amount: 1
       Weapon:
         2hSword: true
@@ -88,7 +88,7 @@ Body:
         1hSpear: true
         2hSpear: true
       ItemCost:
-        - Item: Runstone_Asir
+        - Item: Patriotism_Marks
           Amount: 1
   - Id: 357
     Name: SK_CM_SPEAR_DYNAMO
@@ -109,7 +109,7 @@ Body:
         1hSpear: true
         2hSpear: true
       ItemCost:
-        - Item: Runstone_Hagalas
+        - Item: Patriotism_Marks
           Amount: 1
   - Id: 2004
     Name: SK_CM_HUNDREDSPEAR
@@ -153,7 +153,7 @@ Body:
         1hSword: true
         1hSpear: true
       ItemCost:
-        - Item: Runstone_Rhydo
+        - Item: Patriotism_Marks
           Amount: 1
   - Id: 5013
     Name: SK_CM_MILLENIUMSHIELDS
@@ -182,7 +182,7 @@ Body:
       SpCost: 100
       State: Shield
       ItemCost:
-        - Item: Runstone_Rhydo
+        - Item: Patriotism_Marks
           Amount: 1
     Unit:
       Id: Kings_Grace
@@ -217,7 +217,7 @@ Body:
     Requires:
       SpCost: 40
       ItemCost:
-        - Item: Runstone_Pertz
+        - Item: Patriotism_Marks
           Amount: 1
   - Id: 2006
     Name: SK_CM_IGNITIONBREAK
@@ -245,7 +245,7 @@ Body:
       Weapon:
         1hSword: true
       ItemCost:
-        - Item: Runstone_Pertz
+        - Item: Patriotism_Marks
           Amount: 1
   - Id: 867
     Name: SK_CM_DUMMY_HUNDREDSPEAR

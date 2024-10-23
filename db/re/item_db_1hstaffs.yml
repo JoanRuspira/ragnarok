@@ -74,7 +74,7 @@ Body:
     Refineable: true
     Script: |
       bonus bInt,5;
-      bonus bDelayRate,getrefine();
+      bonus bDelayRate,-getrefine();
   - Id: 1604
     AegisName: Wand_
     Name: Wand
@@ -100,7 +100,7 @@ Body:
     Refineable: true
     Script: |
       bonus bInt,5;
-      bonus bDelayRate,getrefine();
+      bonus bDelayRate,-getrefine();
   - Id: 1605
     AegisName: Sceptre
     Name: Sceptre
@@ -126,7 +126,7 @@ Body:
     Refineable: true
     Script: |
       bonus bDex,5;
-      bonus bCastrate,getrefine();
+      bonus bCastrate,-getrefine();
   - Id: 1606
     AegisName: Sceptre_
     Name: Sceptre
@@ -152,7 +152,7 @@ Body:
     Refineable: true
     Script: |
       bonus bDex,5;
-      bonus bCastrate,getrefine();
+      bonus bCastrate,-getrefine();
   - Id: 1607
     AegisName: Arc_Wand
     Name: Arc Staff
@@ -247,8 +247,8 @@ Body:
     EquipLevelMin: 60
     Refineable: true
     Script: |
-      bonus bDelayRate,getrefine();
-      bonus bCastrate,getrefine();
+      bonus bDelayRate,-getrefine();
+      bonus bCastrate,-getrefine();
   - Id: 1611
     AegisName: Wand_of_Occult
     Name: Staff Of Occult

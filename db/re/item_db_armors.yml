@@ -120,7 +120,7 @@ Body:
     EquipLevelMin: 25
     Script: |
       bonus bDex,5;
-      bonus bCastrate,getrefine()*3;
+      bonus bCastrate,-getrefine()*3;
   - Id: 2311
     AegisName: Robe_of_Haste
     Name: Robe of Haste
@@ -181,7 +181,7 @@ Body:
     Refineable: true
     EquipLevelMin: 25
     Script: |
-      bonus bDelayRate,getrefine()*3;
+      bonus bDelayRate,-getrefine()*3;
   - Id: 2345
     AegisName: Meditation_Robe
     Name: Meditation Robe
@@ -464,8 +464,8 @@ Body:
     Script: |
       bonus bInt,2;
       bonus bDex,2;
-      bonus bCastrate,getrefine()*2;
-      bonus bDelayRate,getrefine()*2;
+      bonus bCastrate,-getrefine()*2;
+      bonus bDelayRate,-getrefine()*2;
   - Id: 2309
     AegisName: Mantle
     Name: Mantle
@@ -715,7 +715,7 @@ Body:
     Refineable: true
     EquipLevelMin: 60
     Script: |
-      bonus bDelayRate,getrefine()*2;
+      bonus bDelayRate,-getrefine()*2;
       bonus bHealPower,getrefine()*2;
       bonus bMaxSP,250;
   - Id: 2370
@@ -973,7 +973,7 @@ Body:
     EquipLevelMin: 25
     Script: |
       bonus bFlee,15;
-      bonus bDelayRate,getrefine()*2;
+      bonus bDelayRate,-getrefine()*2;
   - Id: 2314
     AegisName: Chain_Mail
     Name: Chain Mail
@@ -1293,7 +1293,7 @@ Body:
     EquipLevelMin: 65
     Script: |
       bonus bDex,5;
-      bonus bCastrate,getrefine()*3;
+      bonus bCastrate,-getrefine()*3;
   - Id: 2396
     AegisName: Armor_of_Punishment
     Name: Armor of Punishment
